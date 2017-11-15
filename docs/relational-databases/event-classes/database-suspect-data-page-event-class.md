@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 404b8a88ae9523573df9eab15f27357a0a494027
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2984420c1a3106b88187af17a9d9babbc106b44b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 이벤트 클래스
   **Database Suspect Data Page** 이벤트 클래스는 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 의 [suspect_pages](../../relational-databases/databases/msdb-database.md)테이블에 페이지가 추가되었음을 나타냅니다. 주의 대상 페이지의 발생을 모니터링하는 추적에 이 이벤트 클래스를 포함합니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 |**EventSequence**|**int**|일괄 처리 내의 이벤트 클래스 순서입니다.|51|아니요|  
 |**SPID**|**int**|주의 대상 페이지가 발생한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태스크의 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 발생한 시간입니다.|14|예|  
-|**Exchange Spill**|**int**|주의 대상 페이지가 포함된 데이터베이스 파일의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **file_id** 열과 같습니다.|22|예|  
+|**ObjectID**|**int**|주의 대상 페이지가 포함된 데이터베이스 파일의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **file_id** 열과 같습니다.|22|예|  
 |**ObjectID2**|**int**|파일 내 주의 대상 페이지의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **page_id** 열과 같습니다.|56|예|  
 |**오류**|**int**|발생한 오류 유형입니다. 이 값은 **suspect_pages** 테이블의 페이지에 대한 **event_type** 값과 같습니다.|31|예|  
   

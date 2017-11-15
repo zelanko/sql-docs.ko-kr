@@ -1,35 +1,33 @@
 ---
 title: "시스템 버전 임시 테이블에서 시스템 버전 관리 중지 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 10/11/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf65c939ca66fa2805e23b98570223f5fb703bc6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 5bdcdcdd9a14ac4a35db8f4b9c52d7fa49478127
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블에서 시스템 버전 관리 중지
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  임시 테이블의 버전 관리를 일시적으로나 영구적으로 중지하려는 경우가 있습니다.   
+  temporal 테이블의 버전 관리를 일시적으로나 영구적으로 중지하려는 경우가 있습니다.   
 **SYSTEM_VERSIONING** 절을 **OFF**로 설정하여 이를 수행할 수 있습니다.  
   
 ## <a name="setting-systemversioning--off"></a>SYSTEM_VERSIONING = OFF로 설정  
- 임시 테이블에 대해 특정 유지 관리 작업을 수행하려는 경우 또는 버전이 있는 테이블이 더 이상 필요하지 않은 경우 시스템 버전 관리를 중지합니다. 이 작업을 수행하면 독립적인 테이블 두 개가 생성됩니다.  
+ temporal 테이블에 대해 특정 유지 관리 작업을 수행하려는 경우 또는 버전이 있는 테이블이 더 이상 필요하지 않은 경우 시스템 버전 관리를 중지합니다. 이 작업을 수행하면 독립적인 테이블 두 개가 생성됩니다.  
   
 -   기간이 정의된 현재 테이블  
   
@@ -96,4 +94,3 @@ COMMIT ;
  [시스템 버전 임시 테이블의 스키마 변경](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)  
   
   
-

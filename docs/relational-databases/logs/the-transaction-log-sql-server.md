@@ -5,8 +5,7 @@ ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-transaction-log
+ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 5a9d2a8533e95c275e62071c37ab44d887ac32c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: 5c2b3a5bd97800d958c04bbc11a509d0db15cdc3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
   각 SQL Server 데이터베이스에는 모든 트랜잭션과 각 트랜잭션에 의해 적용된 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다.
@@ -144,7 +142,7 @@ Always On 가용성 그룹 시나리오에서는 주 복제본인 데이터베�
   
 -   새 데이터를 삽입 또는 추가할 때 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 .WRITE 절을 사용하여 큰 값 데이터 형식을 부분적으로 업데이트하는 작업. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다. 큰 값 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
--   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 및 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 삽입 또는 새 데이터를 추가할 때 문은 **텍스트**, **ntext** 및 **이미지** 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
+-   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 및 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 삽입 또는 새 데이터를 추가할 때 문은 **텍스트**, **ntext**, 및 **이미지** 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
   
     > [!IMPORTANT]
     > WRITETEXT 및 UPDATETEXT 문은 **더 이상 사용되지 않으므로**새 응용 프로그램에서 사용하지 마세요.  
@@ -185,4 +183,3 @@ Always On 가용성 그룹 시나리오에서는 주 복제본인 데이터베�
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
-

@@ -1,29 +1,25 @@
 ---
 title: "5단원: 파일-스냅숏 백업을 사용하여 데이터베이스 백업 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd3226cf6bf52151c94853d87b4de28e54b5d2df
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3b5e0888f00f34fc3d85f6727cc98903c66c2239
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>5단원: 파일-스냅숏 백업을 사용하여 데이터베이스 백업
 이 단원에서는 Azure 스냅숏을 사용하여 거의 즉시 백업을 수행하기 위해 파일-스냅숏 백업을 사용하여 Azure 가상 컴퓨터에서 AdventureWorks2014 데이터베이스를 백업합니다. 파일-스냅숏 백업에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
@@ -85,4 +81,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

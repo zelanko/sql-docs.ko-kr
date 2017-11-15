@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b8b9672e89d5bd0dc1d570aa30d214cda63dbf61
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
   마법사를 사용하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 지도나 지도 계층을 추가한 후 보고서에 지도가 표시되는 모양을 변경할 수 있습니다. 다음을 고려하여 개선할 수 있습니다.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
 -   자세한 정보를 제공하려면 각 계층에서 사용자가 관련 보고서를 열기 위해 클릭할 수 있는 지도 요소에 대한 링크를 추가할 수 있습니다.  
   
- 보고서를 개선하는 방법은 [보고서 계획&#40;보고서 작성기&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)을 참조하세요.  
+ 보고서를 개선하는 방법은 [보고서 계획&#40;보고서 작성기&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)를 참조하세요.  
   
  표시 옵션은 보고서를 볼 때 지도 또는 지도의 일부분이 표시되는 방식에 영향을 줍니다. 일부 옵션은 지도에 표시되는 영역 또는 테두리 및 글꼴과 같은 지도의 모양을 제어합니다. 다른 옵션은 거품 크기, 표식 유형, 레이블, 도구 설명 등 각 계층의 내용을 제어합니다.  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 08/09/2017
   
 -   범례의 내용이나 내용 형식을 변경하려면 계층에 대한 해당 규칙의 범례 옵션을 변경합니다.  
   
- 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)를 참조하세요.  
   
 ##  <a name="Layer"></a> 계층의 옵션 변경  
  지도의 계층을 표시하려면 지도를 클릭하여 선택합니다. 그러면 지도 창이 나타납니다. 계층의 옵션을 변경하려면 계층을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴를 사용합니다.  
@@ -165,11 +164,10 @@ ms.lasthandoff: 08/09/2017
   
 -   계층의 개별 포함된 점, 선 또는 다각형에 대한 옵션을 무시합니다. 변경하는 내용은 영구적입니다. 이러한 변경 내용을 되돌리려면 계층의 데이터를 다시 로드해야 합니다.  
   
- 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)을 참조하세요.  
+ 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [지도 마법사 및 지도 계층 마법사 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
- [지도 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>관련 항목:  
+ [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   
-

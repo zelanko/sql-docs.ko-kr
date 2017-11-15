@@ -10,20 +10,18 @@ editor:
 ms.assetid: 
 ms.service: sql-database
 ms.custom: quick start create, mvc
-ms.workload: data-management
+ms.workload: Inactive
 ms.tgt_pltfrm: portal
 ms.devlang: na
 ms.topic: hero-article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 2789dad4e4a68e96cd957b0aecfb9115588d4fa6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
---- 
-
+ms.openlocfilehash: c0751b8bfca5bbcae4a4802fecb3cf06e8182d05
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
+---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 회전 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -115,4 +113,3 @@ ms.lasthandoff: 08/28/2017
 - 보안 위험이 발생할 경우 잠재적으로 손상된 TDE 보호기를 제거하는 방법 알아보기: [잠재적으로 손상된 키 제거](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) 
 
 - TDE에 대한 Bring Your Own Key 지원 시작: [PowerShell을 사용하고 Key Vault에서 사용자 고유 키를 사용하여 TDE 설정](transparent-data-encryption-byok-azure-sql-configure.md)
-

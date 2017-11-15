@@ -5,24 +5,23 @@ ms.date: 08/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f6310afe6f8909a560fac0b7762c7aa94e3a1f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 410ea9f28ad1a4ec7f48024a6716e5588379af5b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="contained-database-user-model"></a>포함된 데이터베이스 사용자 모델  
  포함된 데이터베이스 사용자 모델에서 master 데이터베이스의 로그인은 존재하지 않습니다. 대신 인증 프로세스가 사용자 데이터베이스에서 일어나며 사용자 데이터베이스에 포함된 데이터베이스 사용자는 master 데이터베이스에 연관된 로그인을 갖지 않습니다. 포함된 데이터베이스 사용자 모델은 Windows 인증 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 지원하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]모두에 사용할 수 있습니다. 포함된 데이터베이스 사용자로 연결하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 인증 프로세스를 관리할 책임이 있는 데이터베이스를 알 수 있도록 연결 문자열은 사용자 데이터베이스에 대한 매개 변수를 항상 포함해야 합니다. 포함된 데이터베이스 사용자의 활동은 데이터베이스 인증으로 제한되기 때문에 포함된 데이터베이스 사용자로 연결하는 경우 데이터베이스 사용자 계정은 반드시 사용자가 필요로 하는 각각의 데이터베이스에 독립적으로 생성되어야 합니다. 데이터베이스를 변경하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용자가 새 연결을 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 포함된 데이터베이스 사용자는 동일한 사용자가 다른 데이터베이스에 존재하면 데이터베이스를 변경할 수 있습니다.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] support Azure Active Directory identities as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인증을 사용하여 포함된 데이터베이스 사용자를 지원하지만 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 그렇지 않습니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. Azure Active Directory 인증을 사용할 경우 Active Directory 유니버설 인증을 사용하여 SSMS에서 연결됩니다.  관리자는 전화 통화, 문자 메시지, PIN을 사용하는 스마트 카드, 모바일 앱 알림을 사용하여 ID를 확인하는 Multi-Factor Authentication이 필요하도록 유니버설 인증을 구성할 수 있습니다. 자세한 내용은 [SQL Database 및 SQL Data Warehouse를 사용한 Azure AD MFA에 대한 SSMS 지원](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)을 참조하세요.  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 포함된 데이터베이스 사용자로 Azure Active Directory ID를 지원합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인증을 사용하여 포함된 데이터베이스 사용자를 지원하지만 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 는 그렇지 않습니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. Azure Active Directory 인증을 사용할 경우 Active Directory 유니버설 인증을 사용하여 SSMS에서 연결됩니다.  관리자는 전화 통화, 문자 메시지, PIN을 사용하는 스마트 카드, 모바일 앱 알림을 사용하여 ID를 확인하는 Multi-Factor Authentication이 필요하도록 유니버설 인증을 구성할 수 있습니다. 자세한 내용은 [SQL Database 및 SQL Data Warehouse를 사용한 Azure AD MFA에 대한 SSMS 지원](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)을 참조하세요.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]의 경우, 연결 문자열에 데이터베이스 이름이 항상 필요하므로 기존 모델에서 포함된 데이터베이스 사용자 모델로 전환 시 연결 문자열을 변경하지 않아도 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결은 데이터베이스 이름이 (이미 존재하지 않는 경우) 연결 문자열에 반드시 추가되어야 합니다.  
   
@@ -98,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   
   
-

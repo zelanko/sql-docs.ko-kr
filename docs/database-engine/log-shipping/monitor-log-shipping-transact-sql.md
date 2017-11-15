@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dad074bfa7a777690f625fa175f631332f94e58b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: d1ed3b2823e6de0f4afe534398c40ec461e59850
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>로그 전달 모니터링(Transact-SQL)
   로그 전달을 구성한 후 모든 로그 전달 서버의 상태에 대한 정보를 모니터링할 수 있습니다. 로그 전달 작업의 기록과 상태는 항상 로그 전달 작업에 의해 로컬에 저장됩니다. 백업 작업의 기록과 상태는 주 서버에 저장되고 복사 및 복원 작업의 기록과 상태는 보조 서버에 저장됩니다. 원격 모니터 서버를 구현한 경우 이 정보는 모니터 서버에도 저장됩니다.  
@@ -69,4 +67,3 @@ ms.lasthandoff: 08/02/2017
  [로그 전달 저장 프로시저 및 테이블](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
-

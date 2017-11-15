@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.addeditfilter.f1
+f1_keywords: sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7647baaaf9e567ada31eb468b6c48844676659f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b488f571aee2fcbe68a228489e078ccdc32e9ba2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-edit-filter"></a>필터 추가 또는 편집
   **필터 추가** 및 **필터 편집** 대화 상자를 사용하여 정적 행 필터 및 매개 변수가 있는 행 필터를 추가 및 편집할 수 있습니다.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  **이 테이블의 데이터를 받을 구독 수를 지정하십시오.**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge replication only. 병합 복제를 사용하면 데이터 및 응용 프로그램에 가장 적합한 파티션 유형을 지정할 수 있습니다. **이 테이블의 행을 단일 구독으로 이동**을 선택하면 병합 복제에서 겹치지 않는 파티션 옵션을 설정합니다. 겹치지 않는 파티션을 사전 계산 파티션과 함께 사용하면 겹치지 않는 파티션이 사전 계산 파티션과 연관된 업로드 비용을 최소화하므로 성능을 향상시킬 수 있습니다. 사용하는 매개 변수가 있는 필터와 조인 필터가 복잡할수록 겹치지 않는 파티션의 성능상 이점이 더욱 분명하게 드러납니다. 이 옵션을 선택하면 행을 둘 이상의 구독자에 복제할 수 없는 방식으로 데이터를 분할해야 합니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전만 해당하며 병합 게시만 사용할 수 있습니다. 병합 복제를 사용하면 데이터 및 응용 프로그램에 가장 적합한 파티션 유형을 지정할 수 있습니다. **이 테이블의 행을 단일 구독으로 이동**을 선택하면 병합 복제에서 겹치지 않는 파티션 옵션을 설정합니다. 겹치지 않는 파티션을 사전 계산 파티션과 함께 사용하면 겹치지 않는 파티션이 사전 계산 파티션과 연관된 업로드 비용을 최소화하므로 성능을 향상시킬 수 있습니다. 사용하는 매개 변수가 있는 필터와 조인 필터가 복잡할수록 겹치지 않는 파티션의 성능상 이점이 더욱 분명하게 드러납니다. 이 옵션을 선택하면 행을 둘 이상의 구독자에 복제할 수 없는 방식으로 데이터를 분할해야 합니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
   
  필터를 추가 또는 편집한 후에는 **확인** 을 클릭하여 변경 내용을 저장하고 대화 상자를 닫습니다. 지정한 필터가 구문 분석되고 SELECT 절의 테이블에 대해 실행됩니다. 필터 문에 구문 오류나 기타 문제가 있으면 알림 메시지가 표시되며 이를 보고 필터 문을 편집할 수 있습니다.  
   

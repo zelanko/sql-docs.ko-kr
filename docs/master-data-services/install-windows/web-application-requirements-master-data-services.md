@@ -1,36 +1,32 @@
 ---
 title: "웹 응용 프로그램 요구 사항(Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 02/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- Master Data Services
+keywords: Master Data Services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e8e0c4a9f925192c79dcb998c159d311c80256c5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 595b8bff3ce11345d3885f887f165a4ad3d66c55
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 응용 프로그램 요구 사항(MDS(Master Data Services))
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IIS(인터넷 정보 서비스)에서 호스트하는 웹 응용 프로그램입니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IE(Internet Explorer) 9 이상에서만 사용할 수 있습니다. IE 8 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.  
 
 **IIS를 설치 및 구성하는 방법에 대한 지침은** [IIS 설치 및 구성](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)을 참조하세요.
   
- [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 웹 응용 프로그램을 만들고 구성하려면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 를 사용합니다. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 는 로컬 컴퓨터에서 IIS를 구성하므로 초기 웹 구성 작업을 수행할 때 가장 적합합니다. 예를 들어 단일 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 응용 프로그램이 있는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 환경을 구성하거나 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]의 확장 배포에서 초기 웹 응용 프로그램을 구성할 수 있습니다. IIS 도구는 확장 배포에서 여러 웹 서버를 구성하는 등 보다 복잡한 태스크를 수행하는 데 사용됩니다.  
+ [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 웹 응용 프로그램을 만들고 구성하려면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 를 사용합니다. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 는 로컬 컴퓨터에서 IIS를 구성하므로 초기 웹 구성 작업을 수행할 때 가장 적합합니다. 예를 들어 단일 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이 있는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 환경을 구성하거나 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]의 스케일 아웃 배포에서 초기 웹 응용 프로그램을 구성할 수 있습니다. IIS 도구는 스케일 아웃 배포에서 여러 웹 서버를 구성하는 등 보다 복잡한 태스크를 수행하는 데 사용됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 의 구성 요소를 설치할 모든 컴퓨터는 사용 허가를 받아야 합니다. 자세한 내용은 EULA(최종 사용자 사용권 계약)를 참조하십시오.  
@@ -87,4 +83,3 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
  [웹 구성 페이지&#40;Master Data Services 구성 마법사&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   
-

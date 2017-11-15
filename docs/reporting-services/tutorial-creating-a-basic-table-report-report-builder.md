@@ -1,27 +1,25 @@
 ---
-title: "자습서: 기본 테이블 보고서 (보고서 작성기) 만들기 | Microsoft Docs"
+title: "자습서: 기본 테이블 보고서 만들기(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 2e4cb3264e001fb07119e4c16a274dd38d80887c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
 이 자습서에서는 예제 판매 데이터를 기반으로 기본 테이블 보고서를 만드는 방법을 배웁니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -359,11 +357,10 @@ SalesDate 값이 월에 해당하는 숫자 대신 월 이름을 표시합니다
 2.  통합 문서 탭의 이름이 **Product Sales Excel**인지 확인합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
-이것으로 기본 테이블 보고서를 만드는 방법에 대한 연습을 마칩니다. 테이블에 대한 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)을 참조하세요.  
+이것으로 기본 테이블 보고서를 만드는 방법에 대한 연습을 마칩니다. 테이블에 대한 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

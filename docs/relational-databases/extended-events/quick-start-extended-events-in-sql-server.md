@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
 
 2. 개체 탐색기에서 **관리** > **확장 이벤트** > **새 세션**을 클릭합니다. 두 개가 서로 비슷하지만 **새 세션 마법사** 보다 **새 세션**대화 상자를 사용하는 것이 좋습니다.
 
-3. 왼쪽 위에서 **일반** 페이지를 클릭합니다. 그런 다음 *세션 이름*입력란에 **YourSession** 또는 원하는 이름을 입력합니다. **확인** 단추는 데모 마지막에 눌러야 하므로 아직 누르지 *마세요*.
+3. 왼쪽 위에서 **일반** 페이지를 클릭합니다. 그런 다음 *세션 이름*입력란에 **YourSession** 또는 원하는 이름을 입력합니다. *확인* 단추는 데모 마지막에 눌러야 하므로 아직 누르지 **마세요** .
 
     ![새 세션 > 일반 > 세션 이름](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -392,7 +392,7 @@ SSMS UI에는 확장 이벤트에서 캡처된 데이터를 보는 데 사용할
 
 SSMS **개체 탐색기**에서 이벤트 세션 노드 아래의 대상 노드를 마우스 오른쪽 단추로 클릭할 수 있습니다. 상황에 맞는 메뉴에서 **대상 데이터 보기**를 클릭합니다. 데이터가 표시됩니다.
 
-이벤트에서 새 데이터가 보고될 때 디스플레이가 업데이트되지 않습니다. 그러나 **대상 데이터 보기**를 다시 클릭할 수 있습니다.
+이벤트에서 새 데이터가 보고될 때 디스플레이가 업데이트되지 않습니다. 그러나 **대상 데이터 보기** 를 다시 클릭할 수 있습니다.
 
 
 ![대상 데이터 보기, SSMS의 관리 > 확장 이벤트 > 세션 > YourSession > package0.event_file, 마우스 오른쪽 단추 클릭](../../relational-databases/extended-events/media/xevents-viewtargetdata-ssms-targetnode-61.png)
@@ -661,6 +661,5 @@ SELECT HAS_PERMS_BY_NAME(
 
 
 - [sys.fn_xe_file_target_read_file(Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
-
 
 

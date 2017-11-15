@@ -5,24 +5,21 @@ ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FILESTREAM [SQL Server], enabling
+helpviewer_keywords: FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
-ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/24/2017
-
+ms.openlocfilehash: 6839f11d9375fad6c2672b760bec3d5edee031d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
   FILESTREAM을 사용하려면 먼저 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 FILESTREAM을 사용하도록 설정해야 합니다. 이 항목에서는 SQL Server 구성 관리자를 사용하여 FILESTREAM을 사용하도록 설정하는 방법에 대해 설명합니다.  
@@ -98,4 +95,3 @@ ms.lasthandoff: 08/24/2017
 -   공간 관리 및 정책은 FILESTREAM에서 직접적으로 지원되지 않습니다. 하지만 각 FILESTREAM 파일 그룹을 개별 볼륨에 지정하고 볼륨의 관리 기능을 사용하는 방법을 통해 간접적으로 공간을 관리하고 정책을 적용할 수 있습니다.  
   
   
-

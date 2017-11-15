@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 9004 (Database Engine error)
+helpviewer_keywords: 9004 (Database Engine error)
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6d2d5cefa8aa83b92f589d939f1c7c53b23b3f1f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8c794316e9995e4a61fd0af55318c411dbcbda61
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver9004"></a>MSSQLSERVER_9004
   
@@ -49,4 +46,3 @@ ms.lasthandoff: 06/22/2017
   
 또한 시스템 이벤트나 오류 로그를 검사하여 문제를 일으킬 수 있는 시스템 내의 문제를 파악하십시오.  
   
-

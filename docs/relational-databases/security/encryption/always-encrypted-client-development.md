@@ -1,28 +1,24 @@
 ---
 title: "상시 암호화(클라이언트 개발) | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- CSharp
+dev_langs: CSharp
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: stevestein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 8cb39d4ae3ff02fffe83e7f0e4646ade1545ce72
-ms.openlocfilehash: f1ad5de594493c65688d5c1ca2d69ac421661770
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 103b3d51f8d9e1a5d809b9202a9808e8a5978bfe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="always-encrypted-client-development"></a>상시 암호화(클라이언트 개발)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,5 +36,4 @@ ms.lasthandoff: 07/31/2017
 ## <a name="see-also"></a>관련 항목:
 
 [상시 암호화(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-
 

@@ -5,8 +5,7 @@ ms.date: 10/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 404dcc9a6be22c8a56c2a2311fb28062c280af64
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 6bdd184af34ba6738fe58b29b648dbe9ff9f6797
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
 
@@ -169,4 +167,3 @@ FILESTREAM 핸들을 사용하여 메모리 매핑된 뷰(메모리 매핑된 I/
 ## <a name="related-content"></a>관련 내용
 
 [FILESTREAM과 기타 SQL Server 기능 간 호환성](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)
-

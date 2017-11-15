@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.approle.general.f1
-helpviewer_keywords:
-- application roles [SQL Server], creating
+f1_keywords: sql13.swb.approle.general.f1
+helpviewer_keywords: application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0778c9ac00e6d9c06161ccc8429e0eb9ae4d846d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 88977240a59120424d656706a3bff6dbf280166b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-an-application-role"></a>응용 프로그램 역할 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 응용 프로그램 역할을 만드는 방법에 대해 설명합니다. 응용 프로그램 역할은 특정 응용 프로그램을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 응용 프로그램 역할에 사용자가 없으므로 **응용 프로그램 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
@@ -102,4 +98,3 @@ ms.lasthandoff: 06/22/2017
  자세한 내용은 [CREATE APPLICATION ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-application-role-transact-sql.md)을 참조하세요.  
   
   
-

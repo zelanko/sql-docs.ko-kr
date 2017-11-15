@@ -1,29 +1,25 @@
 ---
 title: "명시적 계층 이름 변경(Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- explicit hierarchies, changing name
+helpviewer_keywords: explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: be3d09477f5253fea15704e42f4eba23a4ead6de
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 4cea30646444719953d943bed3ecbbde041fb3f0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>명시적 계층 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층의 이름을 변경할 수 있습니다.  
@@ -57,4 +53,3 @@ ms.lasthandoff: 09/07/2017
  [명시적 계층 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
   
   
-

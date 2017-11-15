@@ -1,28 +1,27 @@
 ---
-title: "파생된 계층 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+title: "파생 계층 삭제(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
+caps.latest.revision: "6"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 56f3791ca9a675e97f26d676cc34d3cb77a18fc4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b95bf71e1cc687ffd70fce617fd6629fede7d5c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>파생 계층 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 파생 계층이 더 이상 필요하지 않으면 삭제할 수 있습니다.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 09/01/2017
 6.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [파생된 계층 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [파생된 계층 &#40; Master Data services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+ [파생 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

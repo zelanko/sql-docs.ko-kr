@@ -5,28 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
 - sql13.swb.serverrole.memberships.f1
 - sql13.swb.serverrole.members.f1
-helpviewer_keywords:
-- SERVER ROLE, creating
+helpviewer_keywords: SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be798eb132d37378b94659eda0efc1b586e7110a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9d8091e17c7272e0979afa979f2f5e995ca714e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-server-role"></a>서버 역할 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 새 서버 역할을 만드는 방법에 대해 설명합니다.  
@@ -108,4 +105,3 @@ ms.lasthandoff: 06/22/2017
  자세한 내용은 [CREATE SERVER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)을 참조하세요.  
   
   
-

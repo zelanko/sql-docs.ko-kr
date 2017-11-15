@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- keys [SQL Server], database encryption
+helpviewer_keywords: keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 467e7f36ce088db78184858888070206c8bc1e28
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: ee3fe7a3feeaf400fea2a982d1813f0c9296e0ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 키를 사용하여 데이터, 자격 증명 및 서버 데이터베이스에 저장된 연결 정보의 보안을 유지할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 *대칭* 과 *비대칭*등, 두 종류의 키가 있습니다. 대칭 키는 동일한 암호를 사용하여 데이터를 암호화하고 해독합니다. 비대칭 키는 한 암호를 사용하여 데이터를 암호화하고( *공개* 키라고 함) 다른 암호를 사용하여 데이터를 해독합니다( *개인* 키라고 함).  
@@ -53,7 +50,7 @@ ms.lasthandoff: 08/28/2017
   
 -   키가 노출되는 경우 키를 다시 만들고 데이터를 다시 암호화합니다. 최상의 보안을 위해 키를 주기적으로(예: 몇 달에 한 번씩) 다시 만들어 키 해독을 시도하는 공격으로부터 서버를 보호해야 합니다.  
   
--   여러 서버가 단일 데이터베이스와 해당 데이터베이스에 해독 가능한 암호화를 제공하는 키를 모두 공유하는 서버 확장 배포에서 서버 인스턴스를 추가하거나 제거합니다.  
+-   여러 서버가 단일 데이터베이스와 해당 데이터베이스에 해독 가능한 암호화를 제공하는 키를 모두 공유하는 서버 스케일 아웃 배포에서 서버 인스턴스를 추가하거나 제거합니다.  
   
 ## <a name="important-security-information"></a>중요한 보안 정보  
  서비스 마스터 키로 보안이 설정된 개체에 액세스하려면 이 키를 생성하는 데 사용된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정이나 컴퓨터 계정이 필요합니다. 즉, 컴퓨터는 키가 생성된 시스템에 연결되어 있습니다. 키에 대한 액세스 권한의 상실 없이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정 *또는* 컴퓨터 계정을 변경할 수 있습니다. 그러나 이 두 계정을 모두 변경하면 서비스 마스터 키에 대한 액세스 권한이 상실됩니다. 이러한 두 요소 중 하나가 없어서 서비스 마스터 키에 대한 액세스 권한을 상실한 경우 원래 키를 사용하여 암호화된 개체와 데이터의 암호를 해독할 수 없습니다.  
@@ -105,4 +102,3 @@ ms.lasthandoff: 08/28/2017
  [투명한 데이터 암호화&#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   
-

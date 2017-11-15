@@ -5,24 +5,21 @@ ms.date: 01/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dta.general.f1
+f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4f0b031b0c98dd9f7708aebd13984f22403f3de1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ec52b09547ab5a97d96709c20d8f125956d3c941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스를 분석하고 쿼리 성능을 최적화하는 데 필요한 사항을 권장합니다. 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스 구조나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 구조를 전문적으로 파악하지 못해도 인덱스, 인덱싱된 뷰 또는 테이블 파티션의 최적 집합을 선택 및 작성할 수 있습니다. DTA를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
@@ -130,4 +127,3 @@ ms.lasthandoff: 06/22/2017
 |데이터베이스 튜닝 작업의 결과를 봅니다.<br /><br /> 튜닝 권장 구성을 선택하고 구현합니다.<br /><br /> 작업에 대해 가정(what-if) 탐구 분석을 수행합니다.<br /><br /> 기존 튜닝 세션을 검토하거나, 기존 튜닝 세션에 따라 세션을 복제하거나, <br />추가적인 평가나 구현을 위해 기존 튜닝 권장 구성을 편집합니다.<br /><br /> 데이터베이스 엔진 튜닝 관리자 사용자 인터페이스 옵션에 대한 설명을 봅니다.|[데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   
-

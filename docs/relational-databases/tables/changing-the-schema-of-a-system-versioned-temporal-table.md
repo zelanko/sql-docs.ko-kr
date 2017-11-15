@@ -1,26 +1,24 @@
 ---
 title: "시스템 버전 임시 테이블의 스키마 변경 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97eadf63fb8332ef55d8ccb699241a5e5f0e19d0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3ff12a755871810dbca5350d0a1008dfa95fa15b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블의 스키마 변경
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -28,7 +26,7 @@ ms.lasthandoff: 06/22/2017
   **ALTER TABLE** 문을 사용하여 열을 추가, 변경 또는 제거합니다.  
   
 ## <a name="examples"></a>예  
- 다음은 임시 테이블의 스키마를 변경하는 몇 가지 예입니다.  
+ 다음은 temporal 테이블의 스키마를 변경하는 몇 가지 예입니다.  
   
 ```  
 ALTER TABLE dbo.Department   
@@ -59,7 +57,7 @@ ALTER TABLE dbo.Department
   
 ### <a name="important-remarks"></a>중요한 주의 사항  
   
--   임시 테이블의 스키마를 변경하려면 현재 및 기록 테이블에 대한**CONTROL** 권한이 필요합니다.  
+-   temporal 테이블의 스키마를 변경하려면 현재 및 기록 테이블에 대한**CONTROL** 권한이 필요합니다.  
   
 -   **ALTER TABLE** 작업 중 시스템은 두 테이블에 스키마 잠금을 유지합니다.  
   
@@ -73,7 +71,7 @@ ALTER TABLE dbo.Department
   
 -   새 NOT NULL 열로 테이블을 확장한 후 해당 테이블의 모든 열은 시스템에서 자동으로 채워지므로 기록 테이블에 기본 제약 조건을 삭제하는 것이 좋습니다.  
   
--   시스템 버전 관리 임시 테이블에서는 Online 옵션 (**WITH (ONLINE = ON**)이 **ALTER TABLE ALTER COLUMN** 에 영향을 주지 않습니다. ONLINE 옵션에 지정된 값과 관계없이 열 변경은 온라인으로 수행되지 않습니다.  
+-   시스템 버전 관리 temporal 테이블에서는 Online 옵션 (**WITH (ONLINE = ON**)이 **ALTER TABLE ALTER COLUMN** 에 영향을 주지 않습니다. ONLINE 옵션에 지정된 값과 관계없이 열 변경은 온라인으로 수행되지 않습니다.  
   
 -   **ALTER COLUMN** 을(를) 사용하여 기간 열에 대한 **IsHidden** 속성을 변경할 수 있습니다.  
   
@@ -121,4 +119,3 @@ ALTER TABLE dbo.Department
  [시스템 버전 임시 테이블에서 시스템 버전 관리 중지](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d02273b721b1b75b7bd134c8cd50c94ed2e9848d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 289962e12bcff765908e1fa088ad8caa867a636d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
   이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 -   대량 로드 사용  
   
 ## <a name="type-casting-string-and-binary-instances"></a>문자열 및 이진 인스턴스의 형식 캐스팅  
- 문자열을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**데이터 형식으로 캐스팅(CAST) 또는 변환(CONVERT)하여 [**n**][**var**]**char **,**[n]text **,**varbinary **및**image **와 같은** 문자열 데이터 형식을 **xml** 데이터 형식으로 구문 분석할 수 있습니다. 형식화되지 않은 XML의 형식이 올바른지 확인하기 위해 검사합니다. **xml** 유형과 관련된 스키마가 있을 경우 유효성 검사도 수행됩니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
+ 문자열을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**n**n**][**var**]**char **,**char **,**varbinary **및**image **와 같은** 문자열 데이터 형식을 **와 같은** 데이터 형식으로 구문 분석할 수 있습니다. 형식화되지 않은 XML의 형식이 올바른지 확인하기 위해 검사합니다. **xml** 유형과 관련된 스키마가 있을 경우 유효성 검사도 수행됩니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
  XML 문서는 UTF-8, UTF-16, windows-1252 등과 같은 다른 인코딩 방식으로 인코딩할 수 있습니다. 다음은 문자열 및 이진 원본 유형이 XML 문서 인코딩과 상호 작용하는 방법 및 파서의 동작 방식에 대한 규칙을 대략적으로 설명한 것입니다.  
   

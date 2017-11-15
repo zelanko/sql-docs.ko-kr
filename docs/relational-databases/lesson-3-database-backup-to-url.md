@@ -1,29 +1,25 @@
 ---
 title: "3단원: URL에 데이터베이스 백업 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ec613fcc50ceb8cf712ad4a51b543a686cdb9cfd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-database-backup-to-url"></a>3단원: URL에 데이터베이스 백업
 이 단원에서는 온-프레미스 SQL Server 2016 인스턴스의 AdventureWorks2014 데이터베이스를 [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)에서 만든 Azure 컨테이너에 백업합니다.  
@@ -62,4 +58,3 @@ Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세
   
 [4단원: URL에서 가상 컴퓨터로 데이터베이스 복원](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
-

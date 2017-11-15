@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], resuming
 - pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce0495d6bc7b670cade489806e27aa651a89239e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 285a9cf5c006787b371411c1eb2e1bd5c07ff050
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>데이터베이스 미러링 일시 중지 및 재개(SQL Server)
   데이터베이스 소유자는 데이터베이스 미러링 세션을 일시 중지하고 나중에 언제든지 재개할 수 있습니다. 일시 중지하면 미러링을 일시 중지하는 동안 세션 상태가 유지됩니다. 병목 상태에서 일시 중지는 주 서버의 성능을 높이는 데 유용할 수 있습니다.  
@@ -78,4 +76,3 @@ ms.lasthandoff: 08/02/2017
  [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
   
   
-

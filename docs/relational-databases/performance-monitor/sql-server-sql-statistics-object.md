@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90e7987d1a367ed1c79d34640917cbacebf89ddf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 82c9a520edf0f65e3197d43ad5ef50a8e12b7068
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL Statistics 개체
   **의** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 보낸 컴파일과 요청 유형을 모니터링하는 카운터를 제공합니다. 쿼리 컴파일 및 다시 컴파일 수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 받은 일괄 처리 수를 모니터링하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용자 쿼리를 처리하는 속도와 쿼리 최적화 프로그램이 쿼리를 처리하는 효율을 알 수 있습니다.  

@@ -14,17 +14,16 @@ f1_keywords:
 - "10121"
 - sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: a87f586dfc1846f3224d2e24f566a5575e35965f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>테이블 또는 행렬에 대화형 정렬 추가(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하면 사용자가 테이블 및 행렬에서 행 및 열의 정렬 순서를 변경할 수 있습니다. 이 기능은 HTML처럼 사용자 상호 작용을 지원하는 랜더링 형식에서만 지원됩니다.  
@@ -120,7 +119,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="SortingMultipleRowGroups"></a> 복잡한 그룹 식을 기준으로 행 정렬  
  대화형 정렬 단추를 열 머리글에 추가하면 사용자가 열 머리글을 클릭하고 결합된 부모 및 자식 그룹을 정렬할 수 있습니다. 이러한 결과를 얻으려면 그룹 식을 두 그룹의 복합 형태로 변경해야 합니다. 예를 들어 상점에 대한 행렬에 색 및 크기로 그룹화된 품목의 총 재고량이 표시된다고 가정하겠습니다. 색 및 크기 각각에 대해 별도의 그룹을 만들지 않고 색 및 크기의 조합을 기준으로 행을 정렬하려면 색 및 크기의 조합을 기준으로 그룹을 정의할 수 있습니다. 그룹 식을 정의하는 방법에 대한 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
- 다음 절차에서는 테이블릭스 데이터 영역을 지정하는 방법을 설명합니다. 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)을 참조하세요.  
+ 다음 절차에서는 테이블릭스 데이터 영역을 지정하는 방법을 설명합니다. 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)를 참조하세요.  
   
  일반적으로 여러 그룹을 기반으로 하는 행을 정렬할 때는 열 그룹에 관계없이 정렬된 행에 대한 합계를 보고자 합니다. 이 절차에서는 열 그룹이 사용되지 않습니다. 먼저 행렬을 추가하고 기본 열 그룹을 제거합니다. 또는 테이블을 추가하고 세부 정보 그룹을 제거할 수 있습니다.  
   
@@ -224,10 +223,9 @@ ms.lasthandoff: 08/09/2017
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ## <a name="see-also"></a>관련 항목:  
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [대화형 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
- [데이터 영역 &#40;의 데이터 정렬 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [테이블 릭 스 데이터 영역 &#40; 유연성 살펴보기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [대화형 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
+ [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

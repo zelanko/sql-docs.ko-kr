@@ -1,32 +1,29 @@
 ---
 title: "Microsoft Excel용 Master Data Services 추가 기능 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: db24fe315bbb87b2ae730eca497038763e28d63a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel용 Master Data Services 추가 기능
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 사용하면 MDS의 필터링된 데이터 목록을 Excel에 로드하여 다른 데이터와 같은 방식으로 사용할 수 있습니다. 작업이 끝나면 데이터를 다시 중앙 방식으로 저장되는 MDS에 게시할 수 있습니다. 사용자가 보고 업데이트할 수 있는 데이터는 보안에 따라 결정됩니다.  
   
- 관리자의 경우 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]을 사용하여 엔터티 및 특성을 만들고 데이터와 함께 이를 로드할 수 있습니다. 이렇게 하면 데이터를 모델에 로드하기 위해 다른 도구를 사용할 필요가 없습니다.  
+ 관리자의 경우 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 을 사용하여 엔터티 및 특성을 만들고 데이터와 함께 이를 로드할 수 있습니다. 이렇게 하면 데이터를 모델에 로드하기 위해 다른 도구를 사용할 필요가 없습니다.  
   
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 DQS(Data Quality Services)를 사용하여 데이터를 MDS에 로드하기 전에 일치시킬 수 있습니다. 이렇게 하면 MDS에서 데이터가 중복되지 않도록 방지하는 데 도움이 됩니다.  
 
@@ -39,17 +36,17 @@ ms.lasthandoff: 09/07/2017
 ## <a name="terms"></a>용어  
  추가 기능 사용과 관련해서는 다음과 같은 용어가 사용됩니다. 이러한 개념에 대한 자세한 내용은 [Master Data Services 개요&#40;MDS&#41;](../../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
   
--   *MDS repository*는 모든 마스터 데이터가 저장되는 위치입니다. 이 위치는 MDS 데이터를 저장하도록 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 저장소의 데이터를 사용하기 위해서는 데이터를 Excel에 로드하고, 작업이 끝나면 변경 내용을 다시 저장소에 게시합니다. 관리자는 새로운 엔터티 및 특성을 저장소에 추가할 수 있습니다.  
+-   *MDS repository* 는 모든 마스터 데이터가 저장되는 위치입니다. 이 위치는 MDS 데이터를 저장하도록 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 저장소의 데이터를 사용하기 위해서는 데이터를 Excel에 로드하고, 작업이 끝나면 변경 내용을 다시 저장소에 게시합니다. 관리자는 새로운 엔터티 및 특성을 저장소에 추가할 수 있습니다.  
   
--   *MDS 관리 데이터*는 MDS 리포지토리에 저장되며 데이터가 강조 표시된 행으로 표시되는 Excel에 로드하는 데이터입니다. 비 MDS 관리 데이터를 워크시트에 추가할 수 있으며, 이러한 데이터는 MDS 관리 데이터를 새로 고칠 때 영향을 받지 않습니다.  
+-   *MDS 관리 데이터* 는 MDS 리포지토리에 저장되며 데이터가 강조 표시된 행으로 표시되는 Excel에 로드하는 데이터입니다. 비 MDS 관리 데이터를 워크시트에 추가할 수 있으며, 이러한 데이터는 MDS 관리 데이터를 새로 고칠 때 영향을 받지 않습니다.  
   
--   *model*은 데이터의 컨테이너입니다. 이러한 컨테이너는 여러 버전으로 만들 수 있으며 일반적으로 최신 버전이 가장 최근의 내용을 포함합니다. 자세한 내용은 [모델&#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)을 참조하세요.  
+-   *model* 은 데이터의 컨테이너입니다. 이러한 컨테이너는 여러 버전으로 만들 수 있으며 일반적으로 최신 버전이 가장 최근의 내용을 포함합니다. 자세한 내용은 [모델&#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)을 참조하세요.  
   
--   *entity*는 데이터 목록입니다. 엔터티는 데이터베이스에 있는 테이블로 생각할 수 있습니다. 예를 들어 **Color** 엔터티는 색 목록을 포함할 수 있습니다. 자세한 내용은 [엔터티&#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)를 참조하세요.  
+-   *entity* 는 데이터 목록입니다. 엔터티는 데이터베이스에 있는 테이블로 생각할 수 있습니다. 예를 들어 **Color** 엔터티는 색 목록을 포함할 수 있습니다. 자세한 내용은 [엔터티&#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)를 참조하세요.  
   
 -   *member*는 데이터 행(레코드)입니다. 각 엔터티에는 멤버가 포함되어 있습니다. 멤버의 예로는 **Blue**를 들 수 있습니다. 자세한 내용은 [멤버&#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)를 참조하세요.  
   
--   *attribute*은 데이터의 열입니다. 각 멤버에는 특성이 포함됩니다. 예를 들어 **Blue** 멤버에 대한 **Code** 특성은 **B**입니다. 특성에 대한 자세한 내용은 [특성&#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)을 참조하세요.  
+-   *attribute* 은 데이터의 열입니다. 각 멤버에는 특성이 포함됩니다. 예를 들어 **Blue** 멤버에 대한 **Code** 특성은 **B**입니다. 특성에 대한 자세한 내용은 [특성&#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -89,4 +86,3 @@ ms.lasthandoff: 09/07/2017
 -   [보안&#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
   
   
-

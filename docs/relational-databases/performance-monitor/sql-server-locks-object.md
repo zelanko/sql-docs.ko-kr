@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aca441cd00d9626914117e2f2e60d4786332ba1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d9a60e5e072a0c6b5d9d769aa07b57a921f678c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, Locks 개체
   Microsoft **의** SQLServer:Locks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 개별 리소스 유형에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 정보를 제공합니다. 트랜잭션 동안 읽거나 수정한 행과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에는 잠금이 설정되어 다른 트랜잭션에서 동시에 리소스를 사용하는 것을 방지합니다. 예를 들어 트랜잭션에 의해 테이블에 있는 행에 배타적(X) 잠금이 설정되어 있다면 잠금을 풀기 전까지는 다른 트랜잭션으로 수정할 수 없습니다. 잠금을 최소화하면 동시성을 늘려 성능을 향상시킬 수 있습니다. **Locks** 개체의 여러 인스턴스는 리소스 유형의 잠금을 나타내는 각 인스턴스와 함께 동시 모니터링이 가능합니다.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 |**Average Wait Time(ms)**|대기한 각 잠금 요청에 대한 평균 대기 시간(밀리초)입니다.|  
 |**Average Wait Time Base**|내부용으로만 사용할 수 있습니다.|
 |**Lock Requests/sec**|잠금 관리자에서 요청한 초당 새 잠금 및 잠금 변환 수입니다.|  
-|**Lock Timeouts (timeout &gt; 0)/sec**|시간 초과된 초당 잠금 요청 수입니다. 단, 여기에는 NOWAIT 잠금에 대한 요청이 제외됩니다.|  
+|**Lock Timeouts (timeout > 0)/sec**|시간 초과된 초당 잠금 요청 수입니다. 단, 여기에는 NOWAIT 잠금에 대한 요청이 제외됩니다.|  
 |**Lock Timeouts/sec**|시간 초과된 초당 잠금 요청 수입니다. 여기에는 NOWAIT 잠금에 대한 요청이 포함됩니다.|  
 |**Lock Wait Time(ms)**|마지막 1초 동안의 잠금에 대한 총 대기 시간(밀리초)입니다.|  
 |**Lock Waits/sec**|호출자가 기다려야 하는 초당 잠금 요청 수입니다.|  
@@ -62,4 +60,3 @@ ms.lasthandoff: 06/22/2017
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

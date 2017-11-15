@@ -5,24 +5,21 @@ ms.date: 11/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- index types [SQL Server]
+helpviewer_keywords: index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f4ac3c815fec2e6add64257dd2ae12e7b659f84
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 271ebf1536918dde11e024877b591141a7eadbba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="indexes"></a>인덱스
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 |인덱스 유형|설명|추가 정보|  
 |----------------|-----------------|----------------------------|  
 |Hash|해시 인덱스를 사용하면 메모리의 해시 테이블을 통해 데이터에 액세스할 수 있습니다. 해시 인덱스는 고정된 크기의 메모리를 소모하며, 버킷 수의 함수입니다.|[메모리 액세스에 최적화된 테이블의 인덱스 사용 지침](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)|  
-|메모리 액세스에 최적화된 비클러스터형 인덱스|메모리 액세스에 최적화된 비클러스터형 인덱스의 경우 메모리 사용은 행 개수 및 인덱스 키 열의 크기를 반영합니다.|[메모리 액세스에 최적화된 테이블의 인덱스 사용 지침](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)|  
+|메모리 최적화 비클러스터형 인덱스|메모리 최적화 비클러스터형 인덱스의 경우 메모리 사용은 행 개수 및 인덱스 키 열의 크기를 반영합니다.|[메모리 액세스에 최적화된 테이블의 인덱스 사용 지침](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)|  
 |클러스터형|클러스터형 인덱스는 클러스터형 인덱스 키에 기반하여 테이블 또는 뷰의 데이터 행을 순서대로 정렬 및 저장합니다. 클러스터형 인덱스는 클러스터형 인덱스 키 값에 기반하여 행의 빠른 검색을 지원하는 B-트리 인덱스 구조로 구현됩니다.|[클러스터형 및 비클러스터형 인덱스 소개](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [클러스터형 인덱스 만들기](../../relational-databases/indexes/create-clustered-indexes.md)|  
 |비클러스터형 인덱스|비클러스터형 인덱스는 클러스터형 인덱스가 있는 테이블 또는 뷰에 정의하거나 힙에 정의할 수 있습니다. 비클러스터형 인덱스의 각 인덱스 행에는 비클러스터형 키 값과 행 로케이터가 있습니다. 이 로케이터는 클러스터형 인덱스 또는 키 값이 포함된 힙의 데이터 행을 가리킵니다. 인덱스 행은 인덱스 키 값의 순서대로 저장되지만 해당 테이블에 대해 클러스터형 인덱스를 만들지 않으면 데이터 행이 특정 순서대로 정렬되지 않습니다.|[클러스터형 및 비클러스터형 인덱스 소개](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [비클러스터형 인덱스 만들기](../../relational-databases/indexes/create-nonclustered-indexes.md)|  
 |고유|고유 인덱스는 인덱스 키에 중복 값을 포함할 수 없으므로 테이블 또는 뷰의 모든 행이 고유합니다.<br /><br /> 고유성은 클러스터형 인덱스와 비클러스터형 인덱스의 속성이 될 수 있습니다.|[고유 인덱스 만들기](../../relational-databases/indexes/create-unique-indexes.md)|  
@@ -57,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
  [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)  
   
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [인덱스 DDL 작업의 디스크 공간 요구 사항](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
@@ -69,4 +66,3 @@ ms.lasthandoff: 06/22/2017
  [클러스터형 및 비클러스터형 인덱스 소개](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
   
   
-

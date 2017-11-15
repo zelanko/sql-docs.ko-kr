@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - adding articles
 - articles [SQL Server replication], adding
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a5f9fb102add84a33b08c439cd27cab29c210939
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: b317a0e902d6da830afa6fc17d2c4aa47cca1d37
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-publication"></a>게시 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시를 만드는 방법에 대해 설명합니다.  
@@ -177,30 +176,30 @@ ms.lasthandoff: 06/22/2017
         > [!NOTE]  
         >  **sysadmin** 고정 서버 역할의 멤버가 게시를 만들 때는 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>를 설정할 필요가 없습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
-    -   (선택 사항) SQL Server 인증을 사용하여 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드 또는 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 필드를 설정합니다.  
+    -   (옵션) SQL Server 인증을 사용하여 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> 필드  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A> 메서드를 호출하여 데이터베이스에 대한 로그 판독기 에이전트 작업을 만듭니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만들고 이 개체에 대해 다음 속성을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection>에서 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 에서 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>에 대한 게시 데이터베이스의 이름.  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>에 대한 게시 데이터베이스의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>에 대한 게시의 이름.  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>에 대한 게시의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> 또는 <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>의 <xref:Microsoft.SqlServer.Replication.PublicationType>.  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationType> 또는 <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> 의 <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>  
   
-    -   스냅숏 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드. 이 계정은 스냅숏 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
+    -   스냅숏 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 필드. 이 계정은 스냅숏 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
   
         > [!NOTE]  
         >  **sysadmin** 고정 서버 역할의 멤버가 게시를 만들 때는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>를 설정할 필요가 없습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
-    -   (선택 사항) SQL Server 인증을 사용하여 게시자에 연결할 경우 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드 또는 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 필드.  
+    -   (옵션) SQL Server 인증을 사용하여 게시자에 연결할 경우 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> 필드  
   
-    -   (선택 사항) 포함 논리 OR 연산자(Visual C#에서는 **|**, Visual Basic에서는 **Or**) 및 배타적 논리 OR 연산자(Visual C#에서는 **^**, Visual Basic에서는 **Xor**)를 사용하여 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 값을 설정합니다.  
+    -   (옵션) 포함 논리적 OR 연산자(Visual C#의**|** 및 Visual Basic의 **Or** ) 및 배타적 논리적 OR 연산자(Visual C#의**^** 및 Visual Basic의 **Xor** )를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성의 값을 확인합니다.  
   
-    -   (선택 사항) SQL Server 이외 게시자인 경우 <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A>에 대한 게시자의 이름.  
+    -   (옵션) SQL Server 이외 게시자인 경우 <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> 에 대한 게시자의 이름  
   
 6.  <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 메서드를 호출하여 게시를 만듭니다.  
   
@@ -219,18 +218,18 @@ ms.lasthandoff: 06/22/2017
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 이 개체에 대해 다음 속성을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection>에서 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 에서 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>에 대한 게시 데이터베이스의 이름.  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>에 대한 게시 데이터베이스의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>에 대한 게시의 이름.  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>에 대한 게시의 이름  
   
-    -   스냅숏 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드. 이 계정은 스냅숏 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
+    -   스냅숏 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 필드. 이 계정은 스냅숏 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
   
         > [!NOTE]  
         >  **sysadmin** 고정 서버 역할의 멤버가 게시를 만들 때는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>를 설정할 필요가 없습니다. 자세한 내용은 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
-    -   (선택 사항) 포함 논리 OR 연산자(Visual C#에서는 **|**, Visual Basic에서는 **Or**) 및 배타적 논리 OR 연산자(Visual C#에서는 **^**, Visual Basic에서는 **Xor**)를 사용하여 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 값을 설정합니다.  
+    -   (옵션) 포함 논리적 OR 연산자(Visual C#의**|** 및 Visual Basic의 **Or** ) 및 배타적 논리적 OR 연산자(Visual C#의**^** 및 Visual Basic의 **Xor** )를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성의 값을 확인합니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 메서드를 호출하여 게시를 만듭니다.  
   
@@ -263,4 +262,3 @@ ms.lasthandoff: 06/22/2017
  [게시자 보안 설정](../../../relational-databases/replication/security/secure-the-publisher.md)  
   
   
-

@@ -5,22 +5,20 @@ ms.date: 10/01/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d4cb9317da6bda1e0620a7a98299416999a8394
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: bf47d5d1e22dc6d7c057010508fe0206b430299f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 기술 자료 및 도메인
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 대해 설명합니다. 데이터를 정리하려면 데이터에 대한 지식이 있어야 합니다. 데이터 품질 프로젝트에 대한 지식을 준비하기 위해서는 DQS가 잘못되었거나 부적합한 데이터를 식별하기 위해 사용할 수 있는 KB(기술 자료)를 작성하고 유지 관리해야 합니다. DQS를 사용하면 컴퓨터 기반 프로세스 대화형 프로세스를 모두 사용하여 기술 자료를 만들고, 작성 및 업데이트할 수 있습니다. 기술 자료에서 지식은 도메인에서 유지 관리되며 이러한 각 기술 자료는 특정 데이터 필드와 관련이 있습니다. 기술 자료는 데이터 관련 정보의 리포지토리로서 데이터를 이해하고 데이터의 무결성을 유지하는 데 사용됩니다.  
@@ -158,4 +156,3 @@ ms.lasthandoff: 09/09/2017
 |DQS에 기본 제공되는 기본 DQS 데이터 기술 자료 사용|[DQS 기본 기술 자료 사용](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   
-

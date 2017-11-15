@@ -5,8 +5,7 @@ ms.date: 02/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb81c72c3640df10334bcdb108150e755e49695f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 27c4e397e7cf5dbf6b8a930badf965b293898537
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrading-mirrored-instances"></a>미러된 인스턴스 업그레이드
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 미러된 인스턴스를 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전, 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서비스 팩 또는 누적 업데이트나 새 Windows 서비스 팩 또는 누적 업데이트로 업그레이드하려는 경우 롤링 업그레이드를 수행하여 각 미러된 데이터베이스의 가동 중지 시간을 한 번의 수동 장애 조치(failover)에 걸리는 시간으로 줄일 수 있습니다. 원래 주 서버로 장애 복구(failback)할 때는 수동 장애 조치(failover) 2회에 걸리는 시간이 소요됩니다. 롤링 업그레이드는 가장 단순한 형식으로 수행할 때 현재 미러링 세션에서 미러 서버로 작동 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 업그레이드한 다음 미러된 데이터베이스를 수동으로 장애 조치(failover)하고, 이전의 주 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 업그레이드한 다음 미러링을 다시 시작하는 여러 단계로 이루어진 프로세스입니다. 실제로 수행하는 정확한 프로세스는 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에서 실행되는 미러링 세션의 작동 모드, 수 및 레이아웃에 따라 달라집니다.  
@@ -170,4 +168,3 @@ ms.lasthandoff: 08/02/2017
  [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
-

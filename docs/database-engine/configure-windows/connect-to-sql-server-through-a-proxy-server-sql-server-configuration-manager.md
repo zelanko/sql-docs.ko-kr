@@ -5,8 +5,7 @@ ms.date: 12/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Microsoft Proxy Server [SQL Server]
 - local address tables [SQL Server]
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ccbdfcf1e8a313f87b80f7a10d027ee6c1e68ca1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 3db9fdfc433edc0ab8f8d5bf7361669eb707061c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>프록시 서버를 통해 SQL Server에 연결(SQL Server 구성 관리자)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,6 +43,5 @@ ms.lasthandoff: 08/02/2017
   
 >  [!NOTE]
 >  이 항목은 온-프레미스 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에 적용됩니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]와 관련된 연결 문제의 경우 [Azure SQL Database에 대한 연결 문제 해결](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues)을 참조하세요.  
-
 
 

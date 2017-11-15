@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-ddl
+ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - status information [SQL Server], DDL triggers
 - DDL triggers, metadata
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a0ce4e36a1b396311938b8d57c6d44bf922ca56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7fba9f8dc68a9217375f3dc14fe44bcf501015d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-information-about-ddl-triggers"></a>DDL 트리거에 대한 정보 가져오기
   이 섹션에 나열된 카탈로그 뷰를 사용하여 DDL 트리거에 대한 정보를 가져올 수 있습니다.  
@@ -79,4 +77,3 @@ ms.lasthandoff: 06/22/2017
  [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)  
   
   
-

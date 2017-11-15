@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- HierarchyID
+applies_to: SQL Server 2016
+helpviewer_keywords: HierarchyID
 ms.assetid: d57a1876-3fb3-4d82-8b5c-510b6e0d8a11
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a5479b5082811d3e0997b23bc9c69bc5cf75bd0b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9a0e190e5277b5f662c9a3e4e13957f2e3d6f72c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-4---summary---converting-a-table-to-a-hierarchical-structure"></a>1-4단원 - 요약 - 테이블을 계층 구조로 변환
 **hierarchyid** 데이터 형식은 단순하고 간단한 형식으로 계층 관계를 저장할 수 있습니다. 적절한 인덱스를 사용하면 계층 수준, 계층의 하위 트리 또는 기존의 단일 조회별로 데이터를 효율적으로 반환할 수 있습니다.  
@@ -39,4 +35,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

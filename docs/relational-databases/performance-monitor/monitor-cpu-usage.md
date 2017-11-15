@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9ea3b676f94ee1f2cb90fd2725281d55e432248c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-cpu-usage"></a>CPU 사용량 모니터링
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 정기적으로 모니터링하여 CPU 사용량이 정상 범위에 있는지 확인할 수 있습니다. CPU 사용량이 계속 높게 나타나면 CPU 업그레이드 또는 멀티 프로세서 추가가 필요하거나 응용 프로그램 튜닝 또는 디자인이 적절하지 않다는 의미일 수 있습니다. 응용 프로그램을 최적화하면 CPU 사용률을 낮출 수 있습니다.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  많은 클라이언트 요청이 처리되는 경우 사용률이 100%에 가까우면 프로세스가 큐에 대기하고 프로세서 시간을 기다리고 있으며 병목 상태가 발생할 수 있음을 나타냅니다. 빠른 프로세서를 추가하여 문제를 해결할 수 있습니다.  
   
   
-

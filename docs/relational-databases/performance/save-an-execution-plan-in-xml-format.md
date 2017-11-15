@@ -1,12 +1,11 @@
 ---
-title: "XML 형식으로 실행 계획 저장 | Microsoft Docs"
+title: "XML 형식으로 실행 계획 저장 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - execution plans [SQL Server], saving
 - saving execution plans
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 6fe7ad1d3aedc20aac792831c0d469816979ae7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
-
+ms.openlocfilehash: cc3f2b3a6efd75a97ca8e4198b0b375b55d598fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 형식으로 실행 계획 저장
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 실행 계획을 XML 파일로 저장하고 열어서 볼 수 있습니다.  
@@ -102,4 +100,3 @@ ms.lasthandoff: 08/22/2017
  [SET STATISTICS XML&#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   
   
-

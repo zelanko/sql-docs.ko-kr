@@ -5,24 +5,21 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.mds.configmanager.createsite.f1
+f1_keywords: sql13.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 72b03df097b9951384674abbb984636b8999abf7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 7eafbe20d42ddfcac5037d01655c73b41fa7c806
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>웹 사이트 만들기 대화 상자(Master Data Services 구성 관리자)
   **웹 사이트 만들기** 대화 상자를 사용하여 로컬 컴퓨터에서 새 웹 사이트를 만들 수 있습니다. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 웹 사이트를 만든 경우 해당 사이트는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램으로 구성된 루트 응용 프로그램이 있는 로컬 컴퓨터의 IIS(인터넷 정보 서비스)에 추가됩니다. 또한 새 응용 프로그램 풀이 만들어지고 웹 응용 프로그램이 해당 응용 프로그램 풀에 배치됩니다.  
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/07/2017
  [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   
-

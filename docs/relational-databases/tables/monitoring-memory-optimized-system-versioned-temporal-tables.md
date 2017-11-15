@@ -1,31 +1,29 @@
 ---
 title: "메모리 액세스에 최적화된 시스템 버전 임시 테이블 모니터링 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a998ba89645d568585d475b50037adaab72657c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0469d41e4bab668d3f5d83d67489f79c0a0bad91
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>메모리 액세스에 최적화된 시스템 버전 임시 테이블 모니터링
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  기존 뷰를 사용하여 모든 시스템 버전 메모리 액세스에 최적화된 테이블에 대한 자세하고 요약된 메모리 사용을 추적할 수 있습니다.  
+  기존 뷰를 사용하여 모든 시스템 버전 메모리 최적화 테이블에 대한 자세하고 요약된 메모리 사용을 추적할 수 있습니다.  
   
  자세한 메모리 소비(기본 시스템 버전 및 내부 기록 준비 테이블 분할):  
   
@@ -61,7 +59,7 @@ SELECT
   
 ```  
   
- 메모리 사용 요약(시스템 버전 메모리 액세스에 최적화된 테이블에 대한 총합):  
+ 메모리 사용 요약(시스템 버전 메모리 최적화 테이블에 대한 총합):  
   
 ```  
 --Summary of memory consumption   
@@ -118,4 +116,3 @@ GROUP BY TemporalTableSchema, TemporalTableName ;
  [임시 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

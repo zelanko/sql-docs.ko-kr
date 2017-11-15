@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.internetsynchronization.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.internetsynchronization.f1
 ms.assetid: 8e0198c3-5e4e-418c-9920-78ccbbfc1323
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: 3458af05f6289366c7a9391016327ff9d11c1434
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 39e7279dafbfbcf8f1442c99597817b4f1ce3a92
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>게시 속성, FTP 스냅숏 및 인터넷
   이 페이지에서는 다음 작업을 수행할 수 있습니다.  
@@ -52,4 +49,3 @@ ms.lasthandoff: 07/31/2017
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
-

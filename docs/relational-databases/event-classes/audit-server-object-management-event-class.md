@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Server Object Management event class
+helpviewer_keywords: Audit Server Object Management event class
 ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c04c0c44fe01a39d0435ad06de0e5b2732c32ce
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c60337afceca8e605e35d42a2604a423172f5d27
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management 이벤트 클래스
   **Audit Server Object Management** 이벤트 클래스는 서버 개체에 대한 CREATE, ALTER 또는 DROP이 있는 경우에 발생합니다.  

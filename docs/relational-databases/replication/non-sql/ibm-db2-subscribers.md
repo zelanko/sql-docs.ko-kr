@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 구독자
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      이 문자열의 옵션 대부분은 구성 중인 DB2 서버와만 관련이 있지만 `Process Binary as Character` 및 `Derive Parameters` 옵션은 항상 `False`로 설정해야 합니다. 구독 데이터베이스를 식별하려면 `Initial Catalog` 옵션 값을 지정해야 합니다. 연결 문자열은 구독을 만들 때 새 구독 마법사에서 입력합니다.  
   
-3.  스냅숏 또는 트랜잭션 게시를 만든 후[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 설정한 다음 구독자에 대한 밀어넣기 구독을 만듭니다. 자세한 내용은 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)을 참조하세요.  
+3.  스냅숏 또는 트랜잭션 게시를 만든 후[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 설정한 다음 구독자에 대한 밀어넣기 구독을 만듭니다. 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)을 참조하세요.  
   
 4.  필요에 따라 하나 이상의 아티클에 대해 사용자 지정 생성 스크립트를 지정할 수 있습니다. 테이블이 게시되면 해당 테이블에 대한 `CREATE TABLE` 스크립트가 생성됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자의 경우 이 스크립트는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 언어로 생성된 다음 구독자에서 적용되기 전에 배포 에이전트에서 보다 일반적인 SQL 언어로 번역됩니다. 사용자 지정 생성 스크립트를 지정하려면 기존 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 수정하거나 DB2 SQL 언어를 사용하는 완전한 스크립트를 만듭니다. DB2 스크립트를 만드는 경우에는 **bypass_translation** 지시어를 사용하여 배포 에이전트가 구독자에서 번역 과정 없이 스크립트를 적용하도록 합니다.  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

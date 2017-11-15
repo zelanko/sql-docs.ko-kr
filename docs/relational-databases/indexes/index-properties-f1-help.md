@@ -5,8 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,16 +17,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1b84819194aa25b50259293aaf56ccca9c68b1f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -175,7 +174,7 @@ ms.lasthandoff: 06/22/2017
 >  이 옵션은 XML 인덱스에 대해서는 사용할 수 없으며 인덱스가 비활성화된 클러스터형 인덱스인 경우에도 사용할 수 없습니다.  
   
  **최대 병렬 처리 수준 설정**  
- 병렬 계획 실행 중 사용할 프로세서 수를 제한합니다. 기본값인 0으로 설정하면 사용 가능한 실제 CPU 수를 사용합니다. 값을 1로 설정하면 병렬 계획이 생성되지 않습니다. 값을 1보다 큰 값으로 설정하면 단일 쿼리 실행에서 사용하는 최대 프로세서 수가 제한됩니다. 이 옵션은 대화 상자가 **다시 작성** 또는 **다시 만들기** 상태에 있을 때만 사용할 수 있습니다. 자세한 내용은 [최적 성능을 위해 최대 병렬 처리 수준 옵션 설정](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)을 참조하세요.  
+ 병렬 계획 실행 중 사용할 프로세서 수를 제한합니다. 기본값인 0으로 설정하면 사용 가능한 실제 CPU 수를 사용합니다. 값을 1로 설정하면 병렬 계획이 생성되지 않습니다. 값을 1보다 큰 값으로 설정하면 단일 쿼리 실행에서 사용하는 최대 프로세서 수가 제한됩니다. 이 옵션은 대화 상자가 **다시 작성** 또는 **다시 만들기** 상태에 있을 때만 사용할 수 있습니다. 자세한 내용은 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)을 참조하세요.  
   
 > [!NOTE]  
 >  사용 가능한 CPU 수보다 더 큰 수를 지정하면 사용 가능한 실제 CPU 수가 사용됩니다.  
@@ -216,7 +215,7 @@ ms.lasthandoff: 06/22/2017
  **지리 자동 표**  
  이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에 사용할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 분할을 구현하는 방법은 [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md) 를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 분할을 구현하는 방법은 [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)를 참조하세요.  
   
  **개체당 셀 수**  
  인덱스의 단일 공간 개체에 사용할 수 있는 개체당 공간 분할(tessellation) 셀 수를 나타냅니다. 이 수는 1과 8192(포함) 사이의 정수일 수 있습니다. 기본값은 16이며, 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에는 8입니다.  
@@ -250,4 +249,3 @@ ms.lasthandoff: 06/22/2017
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
-

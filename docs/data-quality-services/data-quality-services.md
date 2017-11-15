@@ -5,22 +5,20 @@ ms.date: 10/12/2013
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b168499c8d7707dbd7798ef7aa8111aa0ff0a9a9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: b0b7ff2c3d35f8110a39271b034edff762d27339
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)](DQS)는 지식 기반 데이터 품질 제품입니다. DQS를 사용하면 기술 자료를 작성한 다음 해당 기술 자료를 사용하여 데이터 수정, 강화, 표준화 및 중복 제거를 포함한 다양한 핵심 데이터 품질 태스크를 수행할 수 있습니다. DQS를 통해 참조 데이터 공급자가 제공하는 클라우드 기반 참조 데이터 서비스를 사용하여 데이터 정리를 수행할 수 있습니다. DQS는 또한 데이터 품질 태스크에 통합된 프로파일링을 제공하여 데이터의 무결성을 분석할 수 있게 해줍니다.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
  [SQL Server 리소스 센터](http://go.microsoft.com/fwlink/?linkID=219676)  
   
   
-

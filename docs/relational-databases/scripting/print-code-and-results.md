@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fdecd02b17ae8fc66bb57a807e7211667666fbd6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 493a87b6a78fbc1918c86852999afbb9bc557be3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-code-and-results"></a>코드 및 결과 인쇄
   쿼리나 파일을 인쇄할 경우 프린터에서 컬러 인쇄를 지원하며 프린터 설정에서 컬러 인쇄가 설정된 경우 컬러 요소는 컬러로 인쇄됩니다.  
@@ -38,4 +36,3 @@ ms.lasthandoff: 06/22/2017
  [글꼴 색상, 크기 및 스타일 변경](../../relational-databases/scripting/change-font-color-size-and-style.md)  
   
   
-

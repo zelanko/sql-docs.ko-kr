@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- User Error Message event class
+helpviewer_keywords: User Error Message event class
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 54afb306687cc2d6a6b503a7543a3eee59a5d4f4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1e0d31b41e2188f4a9eea84f428ed995370e4d4d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 이벤트 클래스
   User Error Message 이벤트 클래스는 오류 또는 예외 발생 시 사용자에게 나타나는 오류 메시지를 표시합니다. 오류 메시지 텍스트는 TextData 필드에 나타납니다.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 |NTDomainName|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |NTUserName|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
 |RequestID|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
-|ServerName|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |Severity|**int**|오류 또는 예외의 심각도 수준입니다.|20|예|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
@@ -60,4 +57,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

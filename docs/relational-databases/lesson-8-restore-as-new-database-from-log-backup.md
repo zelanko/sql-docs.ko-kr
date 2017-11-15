@@ -1,29 +1,25 @@
 ---
 title: "8단원: 로그 백업에서 새 데이터베이스로 복원 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 281259fb737bbc41885a61e62a4fcc83b3001119
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bd973fc07c6849a1e211f77be4a995bdada4b271
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>8단원: 로그 백업에서 새 데이터베이스로 복원
 이 단원에서는 파일-스냅숏 트랜잭션 로그 백업에서 AdventureWorks2014 데이터베이스를 새 데이터베이스로 복원합니다.  
@@ -67,4 +63,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

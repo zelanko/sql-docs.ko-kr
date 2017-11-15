@@ -1,40 +1,37 @@
 ---
 title: "메모리 액세스에 최적화된 테이블 변경 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
-ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: cb499975e6429ac0a54f60cbfca6e72b0290f946
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ALTER TABLE 문을 사용하여 메모리 액세스에 최적화된 테이블에서 스미카 및 인덱스를 변경할 수 있습니다. 메모리 최적화 테이블에 대한 SQL Server 2016 및 Azure SQL Database ALTER TABLE 작업은 오프라인이므로 작업이 진행되는 동안 테이블을 쿼리할 수 없습니다. 데이터베이스 응용 프로그램을 계속 실행할 수 있으며, 수정 프로세스가 완료될 때까지 테이블에 액세스 중인 작업이 차단됩니다. 여러 ADD, DROP 또는 ALTER 작업을 단일 ALTER TABLE 문에 결합할 수 없습니다.
+  ALTER TABLE 문을 사용하여 메모리 최적화 테이블에서 스미카 및 인덱스를 변경할 수 있습니다. 메모리 최적화 테이블에 대한 SQL Server 2016 및 Azure SQL Database ALTER TABLE 작업은 오프라인이므로 작업이 진행되는 동안 테이블을 쿼리할 수 없습니다. 데이터베이스 응용 프로그램을 계속 실행할 수 있으며, 수정 프로세스가 완료될 때까지 테이블에 액세스 중인 작업이 차단됩니다. 여러 ADD, DROP 또는 ALTER 작업을 단일 ALTER TABLE 문에 결합할 수 없습니다.
   
 ## <a name="alter-table"></a>ALTER TABLE  
  
 ALTER TABLE 구문은 테이블 스키마를 변경하거나 인덱스를 추가, 삭제, 다시 빌드하는 데 사용할 수 있습니다. 색인은 테이블 정의의 일부로 간주됩니다.  
   
--   ALTER TABLE ... ADD/DROP/ALTER INDEX 구문은 메모리 액세스에 최적화된 테이블에만 지원됩니다.  
+-   ALTER TABLE ... ADD/DROP/ALTER INDEX 구문은 메모리 최적화 테이블에만 지원됩니다.  
   
--   ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 액세스에 최적화된 테이블의 인덱스로 지원되지 *않습니다* .  
+-   ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 최적화 테이블의 인덱스로 지원되지 *않습니다* .  
   
  다음은 ALTER TABLE 문의 ADD, DROP, ALTER INDEX 절의 구문입니다.  
   
@@ -86,8 +83,8 @@ ALTER TABLE 구문은 테이블 스키마를 변경하거나 인덱스를 추가
   
  예를 들어 고유하게 컴파일된 스키마 바운드 저장 프로시저가 *mytable* 테이블의 *c1*열을 참조하는 경우 *c1* 열을 삭제할 수 없습니다. 마찬가지로, 열 목록 없이 INSERT 문(예: `INSERT INTO dbo.mytable VALUES (...)`)을 사용하는 프로시저가 있는 경우 테이블에서 열을 삭제할 수 없습니다.  
  
-## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 ALTER TABLE 로깅
-대부분 ALTER TABLE 시나리오는 이제 병렬로 실행되고 이를 통해 트랜잭션 로그에 대한 쓰기가 최적화됩니다. 최적화는 메타데이터 변경 내용을 트랜잭션 로그에 기록해야만 가능합니다. 그러나 다음 ALTER TABLE 작업은 단일 스레드를 실행하고 로그에 최적화되지 않습니다.
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>메모리 최적화 테이블에 대한 ALTER TABLE 로깅
+메모리 최적화 테이블에서 대부분 ALTER TABLE 시나리오는 이제 병렬로 실행되고 이를 통해 트랜잭션 로그에 대한 쓰기가 최적화됩니다. 최적화는 메타데이터 변경 내용을 트랜잭션 로그에 기록해야만 가능합니다. 그러나 다음 ALTER TABLE 작업은 단일 스레드를 실행하고 로그에 최적화되지 않습니다.
 
 이 경우 단일 스레드 작업은 변경된 테이블의 전체 내용을 트랜잭션 로그에 기록합니다. 단일 스레드 작업 목록은 다음과 같습니다.
 
@@ -175,5 +172,4 @@ GO
 
 [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
-
 

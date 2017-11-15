@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
+helpviewer_keywords: Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5409025fee4cb80a8f7b64e8946f058635e7551
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 디버거
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 코드의 런타임 동작을 조사하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 오류를 찾을 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 디버그 모드로 설정한 후 코드의 특정 줄에서 실행을 일시 중지하여 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용하거나 반환하는 정보 및 데이터를 검사할 수 있습니다.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="viewing-debugger-information"></a>디버거 정보 보기  
  디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지할 때마다 다음 디버거 창을 사용하여 현재 실행 상태를 볼 수 있습니다.  
   
--   **Locals** and **Watch.** 이 창에서는 현재 할당된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식을 표시합니다. 식은 단일 스칼라 식으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 또는 이름이 @@로 시작하는 기본 제공 함수를 참조하는 식을 볼 수 있습니다. 이 창에서는 식에 현재 할당된 데이터 값도 표시합니다.  
+-   **지역** 및 **조사식** 이 창에서는 현재 할당된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식을 표시합니다. 식은 단일 스칼라 식으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 또는 이름이 @@로 시작하는 기본 제공 함수를 참조하는 식을 볼 수 있습니다. 이 창에서는 식에 현재 할당된 데이터 값도 표시합니다.  
   
 -   **간략한 조사식.** 이 창에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식 값을 표시하고 해당 식을 **조사식** 창에 저장합니다.  
   
@@ -59,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **출력.** 이 창에서는 디버거의 시스템 메시지와 같은 여러 메시지 및 프로그램 데이터를 표시합니다.  
   
--   **Results** and **Messages.** 쿼리 편집기 창의 이러한 탭에서는 이전에 실행한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 결과를 표시합니다.  
+-   **결과** 및 **메시지** 쿼리 편집기 창의 이러한 탭에서는 이전에 실행한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 결과를 표시합니다.  
   
 ## <a name="transact-sql-debugger-tasks"></a>Transact-SQL 디버거 태스크  
   
@@ -74,4 +71,3 @@ ms.lasthandoff: 06/22/2017
  [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

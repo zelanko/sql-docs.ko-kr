@@ -5,28 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 58dd67c03b3df116914c4f03cbb336136b251e3f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>복제 모니터 인터페이스 개요
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor presents a Publisher-focused view or Distributor-focused view of all replication activity in a two pane format. 왼쪽 창에서 모니터에 게시자를 추가하면 오른쪽 창에 게시자, 해당 게시, 게시에 대한 구독 및 다양한 복제 에이전트 정보가 표시됩니다. 복제 토폴로지에 대한 정보를 제공하는 것 외에도 복제 모니터를 사용하여 에이전트 시작 및 중지, 데이터 유효성 검사 등 다양한 태스크를 수행할 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 모든 복제 작업을 게시자 관점 또는 배포자 관점으로 제공합니다. 왼쪽 창에서 모니터에 게시자를 추가하면 오른쪽 창에 게시자, 해당 게시, 게시에 대한 구독 및 다양한 복제 에이전트 정보가 표시됩니다. 복제 토폴로지에 대한 정보를 제공하는 것 외에도 복제 모니터를 사용하여 에이전트 시작 및 중지, 데이터 유효성 검사 등 다양한 태스크를 수행할 수 있습니다.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>전체 토폴로지 정보 보기  
  복제 모니터 화면의 왼쪽 창  
@@ -197,7 +195,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>구독 관련 정보 보기 및 태스크 수행  
  복제 모니터는 많은 탭에 구독 정보를 표시합니다. 세부 정보 창에 있는 이러한 탭에 액세스하려면 복제 모니터에서 구독을 두 번 클릭합니다. 이 모든 탭에서 "에이전트가 실행되지 않는 이유는 무엇인가?"란 질문의 대답을 확인할 수 있습니다. 제공되는 오류 메시지를 통해 에이전트가 실행되지 않는 이유를 자세히 확인할 수 있습니다. 이 오류 메시지는 구독과 연결된 에이전트의 문제 해결을 위한 출발점입니다.  
   
--   **All Subscriptions tab** and **Subscription Watch List tab.**  
+-   **모든 구독** 및 **구독 조사 목록**  
   
      두 탭에 대해서는 이 항목의 앞 부분에서 설명했습니다.  
   
@@ -242,4 +240,3 @@ ms.lasthandoff: 06/22/2017
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

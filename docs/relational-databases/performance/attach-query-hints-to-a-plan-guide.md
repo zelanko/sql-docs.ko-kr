@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cd35ba37fceeee68531e23b2ee2caabae4e81cfc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>계획 지침에 쿼리 힌트 연결
   계획 지침에 모든 올바른 쿼리 힌트 조합을 사용할 수 있습니다. 계획 지침이 쿼리와 일치하면 컴파일 및 최적화하기 전에 계획 지침의 힌트 절에 지정된 OPTION 절이 쿼리에 추가됩니다. 계획 지침에 일치하는 쿼리에 이미 OPTION 절이 있으면 계획 지침에 지정된 쿼리 힌트가 쿼리에서 이를 대체합니다. 그러나 이미 OPTION 절이 있는 쿼리에 계획 지침을 일치시키려면 해당 쿼리 텍스트를 지정할 때 sp_create_plan_guide 문이 쿼리의 OPTION 절을 포함해야 합니다. 계획 지침에 지정한 힌트로 이미 쿼리에 있는 힌트를 대체하는 대신 계획 지침에 지정한 힌트를 이미 쿼리에 있는 힌트에 추가하려면 원래 힌트와 추가 힌트를 모두 계획 지침의 OPTION 절에 지정해야 합니다.  
@@ -34,4 +32,3 @@ ms.lasthandoff: 06/22/2017
  또한 INDEX, FORCESCAN 및 FORCESEEK 테이블 힌트를 쿼리 힌트로 지정할 수도 있습니다. 쿼리 힌트로 지정할 경우 이러한 힌트는 인라인 테이블이나 뷰 힌트처럼 동작합니다. INDEX 힌트는 쿼리 최적화 프로그램이 지정한 인덱스만 사용하여 참조된 테이블이나 뷰에 있는 데이터에 액세스하도록 합니다. FORCESEEK 힌트는 최적화 프로그램이 Index Seek 연산만 사용하여 참조된 테이블이나 뷰에 있는 데이터에 액세스하도록 합니다. 이러한 힌트는 추가 계획 지침 기능을 제공하며 계획 지침을 사용하는 쿼리의 최적화에 보다 많은 영향을 줄 수 있습니다.  
   
   
-

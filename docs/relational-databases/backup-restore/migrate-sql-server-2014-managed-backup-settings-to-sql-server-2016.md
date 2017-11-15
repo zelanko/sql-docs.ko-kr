@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 902ad2ddd95a26f36ff9519e55d7af77ca7e2d8a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6df945737348bf0f8e158b375d6af1ebcbfb6784
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>SQL Server 2014 Managed Backup 설정을 SQL Server 2016으로 마이그레이션
   이 항목에서는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 으로 마이그레이션할 때의 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]관련 마이그레이션 고려 사항에 대해 설명합니다.  
@@ -59,4 +57,3 @@ ms.lasthandoff: 06/22/2017
  [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
-

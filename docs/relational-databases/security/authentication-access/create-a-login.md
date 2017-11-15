@@ -5,8 +5,7 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: fa1d1c3cc20155dd5f53c1e62bc15a96c7f3758c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,10 +150,10 @@ ms.lasthandoff: 06/22/2017
  **기본 스키마**  
  사용자의 기본 스키마를 지정합니다. 사용자를 처음 만들 경우 기본 스키마는 **dbo**입니다. 아직 존재하지 않는 기본 스키마를 지정할 수도 있습니다. Windows 그룹, 인증서 또는 비대칭 키에 매핑된 사용자에 대해서는 기본 스키마를 지정할 수 없습니다.  
   
- **Guest account enabled for:**  *database_name*  
+ **게스트 계정 설정:**  *database_name*  
  선택한 데이터베이스에 게스트 계정이 설정되어 있는지 여부를 나타내는 읽기 전용 특성입니다. 게스트 계정에 대한 **로그인 속성** 대화 상자의 **상태** 페이지를 사용하여 게스트 계정을 설정하거나 해제할 수 있습니다.  
   
- **Database role membership for:**  *database_name*  
+ **데이터베이스 역할 멤버 자격:**  *database_name*  
  지정한 데이터베이스 사용자에 대한 역할을 선택합니다. 모든 사용자는 모든 데이터베이스에서 **public** 역할의 멤버이며 제거할 수 없습니다. 데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
   
 ### <a name="securables"></a>보안 개체  
@@ -276,7 +275,6 @@ ms.lasthandoff: 06/22/2017
 -   로그인에 사용 권한을 부여하려면 [보안 주체에 사용 권한 부여](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

@@ -1,13 +1,11 @@
 ---
-title: "데이터베이스 수준 역할 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "데이터베이스 수준 역할 | Microsoft 문서"
+ms.custom: SQL2016_New_Updated
 ms.date: 06/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -38,17 +36,16 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
-ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 79d5d634cfeb240c096d9ed6d92f16c2e7401e46
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -166,4 +163,3 @@ R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관
  [sp_helprotect&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
   
   
-

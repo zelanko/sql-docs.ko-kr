@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,21 +14,21 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: f5ff052d1d6981fe0383ac75c38fc643565d4430
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔터프라이즈 버전의 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우, 그리고 단순 모델에서 파일 그룹이 읽기 전용인 경우에 대해서만 다룹니다.  
   
- 증분 복원과 메모리 액세스에 최적화된 테이블에 대한 자세한 내용은 [메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)을 참조하세요.  
+ 증분 복원과 메모리 최적화 테이블에 대한 자세한 내용은 [메모리 최적화 테이블이 있는 데이터베이스의 증분 복원](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)을 참조하세요.  
   
  *증분 복원* 을 사용하면 여러 파일 그룹을 포함하는 데이터베이스를 단계별로 복원 및 복구할 수 있습니다. 증분 복원에는 주 파일 그룹에서 시작하여 경우에 따라 하나 이상의 보조 파일 그룹까지 단계별로 복원하는 일련의 복원 순서가 포함됩니다. 증분 복원에서는 데이터베이스가 최종적으로 일관성 있는 상태가 되도록 검사를 유지 관리합니다. 복원 순서가 완료되었을 때 복구된 파일이 유효하고 데이터베이스와 일치하는 경우 이 파일을 즉시 온라인 상태로 만들 수 있습니다.  
   

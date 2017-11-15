@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 12304 (Database Engine error)
+helpviewer_keywords: 12304 (Database Engine error)
 ms.assetid: a2c252c2-e815-4ac8-a101-7af5b32e3233
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 900d97ae3bfb1766884f0201044a9fd4fc255860
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7fc3019b148e9ac0ca278b69f55d2e2c67b33ac0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver12304"></a>MSSQLSERVER_12304
   
@@ -38,9 +35,8 @@ ms.lasthandoff: 06/22/2017
 |메시지 텍스트|열에서 IDENTITY 속성을 사용하는 메모리 액세스에 최적화된 테이블의 사용은 고유하게 컴파일된 저장 프로시저의 컨텍스트 외부에 있는 형식을 사용할 때 지원되지 않습니다.|  
   
 ## <a name="user-action"></a>사용자 동작  
-열에서 IDENTITY 속성을 사용하는 메모리 액세스에 최적화된 테이블 형식을 사용하지 마십시오.  
+열에서 IDENTITY 속성을 사용하는 메모리 최적화 테이블 형식을 사용하지 마세요.  
   
 ## <a name="see-also"></a>관련 항목:  
 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
-

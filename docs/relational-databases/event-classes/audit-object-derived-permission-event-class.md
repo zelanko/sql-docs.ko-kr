@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Object Derived Permission event class
+helpviewer_keywords: Audit Object Derived Permission event class
 ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2df546e2381a0e05b12a1e7ce993f47fb1575f9c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: bec371bcc5f0dcc972a2f612d1c5fa628b6d09bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission 이벤트 클래스
   **Audit Object Derived Permission** 이벤트 클래스는 특정 개체에 대해 CREATE, ALTER 또는 DROP 명령이 실행된 경우 이를 기록합니다. 이 이벤트는 해당 개체에 직접 연결된 권한이나 소유자가 없는 경우에만 발생합니다.  

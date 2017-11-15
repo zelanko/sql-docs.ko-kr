@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:Completed event class
+helpviewer_keywords: SP:Completed event class
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ed4a766035c7fffe237cf4cee20e8fea64ed001
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c32aff7fc0442875971e07d53a805948459747cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 이벤트 클래스
   SP:Completed 이벤트 클래스는 저장 프로시저 실행이 완료되었음을 나타냅니다.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 06/22/2017
 |ObjectType|**int**|호출된 저장 프로시저 유형입니다. 이 값은 sys.objects 카탈로그 뷰의 유형 열과 일치합니다. 값은 [ObjectType 추적 이벤트 열](../../relational-databases/event-classes/objecttype-trace-event-column.md)을 참조하세요.|28|예|  
 |RequestID|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
 |RowCounts|**bigint**|이 저장 프로시저에 속한 모든 문의 행 수입니다.|48|예|  
-|ServerName|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |SourceDatabaseID|**int**|개체가 있는 데이터베이스의 ID입니다.|62|예|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  

@@ -1,28 +1,25 @@
 ---
-title: "기술 참조(복제) | Microsoft Docs"
+title: "기술 참조(복제) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- technical reference [SQL Server replication]
+helpviewer_keywords: technical reference [SQL Server replication]
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29ac4abdca7f7b8b3f77091bf91862471bb1066c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: c40b1a86fd793fe9151d05948b3fe68b19a3a521
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="technical-reference-replication"></a>기술 참조(복제)
   이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 대한 기술 참조 설명서에 연결되는 링크가 들어 있습니다.  
@@ -85,4 +82,3 @@ ms.lasthandoff: 07/31/2017
  [보안 및 보호&#40;복제&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   
-

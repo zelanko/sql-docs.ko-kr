@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Exchange Spill event class
+helpviewer_keywords: Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5920469e3f0ff312ac155011300034b8d8f8de50
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 이벤트 클래스
   **Exchange Spill** 이벤트 클래스는 병렬 쿼리 계획의 통신 버퍼가 **tempdb** 데이터베이스에 임시적으로 기록되었음을 나타냅니다. 이는 매우 드물게 발생하며 쿼리 계획에 다중 범위 검색이 있는 경우에만 발생합니다.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 06/22/2017
 |**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 **master** 데이터베이스의 **syslogins** 테이블에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
-|**Exchange Spill**|**int**|시스템이 할당한 개체의 ID입니다. 실행 계획의 노드 ID와 일치합니다.|22|예|  
+|**ObjectID**|**int**|시스템이 할당한 개체의 ID입니다. 실행 계획의 노드 ID와 일치합니다.|22|예|  
 |**RequestID**|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |**SessionLoginName**|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
@@ -82,4 +80,3 @@ ms.lasthandoff: 06/22/2017
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
-

@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.validate.subscriptions.f1
-helpviewer_keywords:
-- Validate Subscriptions dialog box
+f1_keywords: sql13.rep.validate.subscriptions.f1
+helpviewer_keywords: Validate Subscriptions dialog box
 ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3751c169e73b2c15ffe204221a3ce3db3176506
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 120f98ca1819a1ec28b7bf9e02e55b17b22f4e77
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="validate-subscriptions"></a>구독 유효성 검사
   **구독 유효성 검사** 대화 상자를 사용하여 각 구독에 대한 배포 에이전트가 다음에 실행될 때 트랜잭션 게시에 대한 구독의 유효성을 검사할지 지정할 수 있습니다. 유효성 검사 결과는 복제 모니터에 표시됩니다. 자세한 내용은 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)를 참조하세요.  
@@ -43,4 +39,3 @@ ms.lasthandoff: 06/22/2017
  [복제된 데이터의 유효성 검사](../../relational-databases/replication/validate-replicated-data.md)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data File Auto Shrink event class
+helpviewer_keywords: Data File Auto Shrink event class
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc24c02c1b2c44d13c7b277179c2ae3e77369a2a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b30109dc3f7ea8eed7e819c3fb7654aff5fc9ea1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink 이벤트 클래스
   **Data File Auto Shrink** 이벤트 클래스는 데이터 파일이 축소되었음을 나타냅니다. 이 이벤트는 ALTER DATABASE 문의 명시적인 실행으로 데이터 파일이 축소될 경우에는 트리거되지 않습니다. 데이터 파일 크기 변화를 모니터링하는 추적에 **Data File Auto Shrink** 이벤트 클래스를 포함시키십시오.  

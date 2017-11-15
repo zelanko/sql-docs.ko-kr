@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 418cb013fddfa58783babbee63e00524f411a39c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
   가동 중지와 위험을 최소화하기 위해 이전 릴리스의 SQL Server에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하려는 경우 고려해야 할 몇 가지 방식이 있습니다. 전체 업그레이드를 실행하거나 새 설치로 마이그레이션하거나 롤링 업그레이드를 실행할 수 있습니다. 아래 다이어그램에 따라 적절한 방식을 선택할 수 있습니다. 다이어그램의 각 방식은 아래에서도 설명합니다. 다이어그램의 어느 지점에서 결정해야 하는지 알아보려면 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하십시오.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 -   고가용성(HA) 구성이 없는 개발 환경  
   
--   가동 중시 시간이 허용되고 최근 하드웨어 및 소프트웨어에서 실행되는 중요 업무와 관련 없는 운영 환경 가동 중지 시간은 데이터베이스의 크기와 I/O 하위 시스템의 속도에 따라 달라집니다. 메모리 액세스에 최적화된 테이블을 사용하는 경우 SQL Server 2014를 업그레이드하려면 시간이 다소 더 걸립니다. 자세한 내용은 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하세요.  
+-   가동 중시 시간이 허용되고 최근 하드웨어 및 소프트웨어에서 실행되는 중요 업무와 관련 없는 운영 환경 가동 중지 시간은 데이터베이스의 크기와 I/O 하위 시스템의 속도에 따라 달라집니다. 메모리 최적화 테이블을 사용하는 경우 SQL Server 2014를 업그레이드하려면 시간이 다소 더 걸립니다. 자세한 내용은 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하세요.  
   
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행할 때에는 업그레이드 사전 검사가 실행되는 과정에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 중지된 다음 다시 실행됩니다.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/02/2017
  새   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경의 시스템 개체가 기존 환경과 동일할 경우 기존 시스템의 사용자 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 마이그레이션할 때 기존 시스템의 가동 중시 시간을 최소화해야 합니다. 데이터베이스 마이그레이션은 백업 및 복원을 사용하여 수행하며 SAN 환경인 경우에는 LUN을 변경합니다. 두 방법의 단계는 아래 다이어그램에 나와 있습니다.  
   
 > [!CAUTION]  
->  가동 중지 시간은 데이터베이스의 크기와 I/O 하위 시스템의 속도에 따라 달라집니다. 메모리 액세스에 최적화된 테이블을 사용하는 경우 SQL Server 2014를 업그레이드하려면 시간이 다소 더 걸립니다. 자세한 내용은 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하세요.  
+>  가동 중지 시간은 데이터베이스의 크기와 I/O 하위 시스템의 속도에 따라 달라집니다. 메모리 최적화 테이블을 사용하는 경우 SQL Server 2014를 업그레이드하려면 시간이 다소 더 걸립니다. 자세한 내용은 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하세요.  
   
  사용자 데이터베이스를 마이그레이션한 후에는 다양한 방법 중 하나(예: 서버 이름 변경, DNS 항목 사용, 연결 문자열 수정)를 사용하여 새 사용자가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 가리키도록 합니다.  새 설치 방식에서는 현재 위치 업그레이드에 비해 위험과 가동 중지 시간이 줄어들며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 업그레이드할 때 하드웨어와 운영 체제도 함께 손쉽게 업그레이드할 수 있습니다.  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/02/2017
  [데이터베이스 엔진 업그레이드 완료](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   
-

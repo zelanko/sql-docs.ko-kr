@@ -5,22 +5,20 @@ ms.date: 01/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 96b8e884-8244-425f-b856-72a8ff6895a6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 835e3acd76972eef01b4d286cbc1f6ecf6fac605
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 86700a7247c7a712e03a5b34c6b68e9364d870b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---architecture"></a>Columnstore 인덱스 - 아키텍처
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -136,4 +134,3 @@ columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 �
 
 ## <a name="next-steps"></a>다음 단계
  columnstore 인덱스를 디자인하는 방법에 대한 지침은 [Columnstore 인덱스 - 디자인 지침](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)을 참조하세요.
-

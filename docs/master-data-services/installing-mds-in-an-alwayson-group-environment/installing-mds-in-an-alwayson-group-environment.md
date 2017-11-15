@@ -1,13 +1,11 @@
 ---
 title: "Master Data Services에 대한 고가용성 및 재해 복구 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -16,16 +14,12 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f5cebe2ba32765cc5f4bddc974ee62b3ed3b8915
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: fe2bcae7a0f5694cf744df9c7d44b6fd2253c4b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
-
-
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
 **요약:** 이 문서에서는 AlwaysOn 가용성 그룹 구성에 호스트되는 MDS(Master Data Service)를 위한 솔루션에 대해 설명합니다. 이 문서에서는 SQL 2016 AlwaysOn AG(가용성 그룹)에 SQL 2016 Master Data Services를 설치 및 구성하는 방법을 설명합니다. 이 솔루션은 주로 SQL Server 데이터베이스에 호스트된 MDS 백엔드 데이터의 고가용성 및 재해 복구를 향상하는 데 사용됩니다.
@@ -337,7 +331,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
     그림 18
 
-9.  **데이터 동기화 선택** 페이지에서 **전체**를 클릭하고 모든 노드가 액세스할 수 있는 네트워크 공유를 지정합니다. 계속하려면 **다음**을 클릭합니다. 그림 19를 참조하세요.
+9.  **데이터 동기화 선택** 페이지에서 **전체**를 클릭하고 모든 노드가 액세스할 수 있는 네트워크 공유를 지정합니다. 계속하려면 **다음** 을 클릭합니다. 그림 19를 참조하세요.
 
     이 네트워크 공유는 데이터베이스 백업을 저장하여 보조 복제본을 만드는 데 사용됩니다. 이를 조직에서 사용할 수 없는 경우 다른 데이터 동기화 기본 설정을 선택합니다. 다른 옵션을 사용하여 보조 복제본을 만드는 방법은 [SQL Server 2016 AlwaysOn 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)을 참조하세요. 또한 그림 17에 다른 옵션이 나열되어 있습니다.
 
@@ -345,7 +339,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
     그림 19 
 
-10. **유효성 검사** 페이지에서 모든 유효성 검사를 성공적으로 전달하고 오류를 수정했는지 확인합니다. 계속하려면 **다음**을 클릭합니다.
+10. **유효성 검사** 페이지에서 모든 유효성 검사를 성공적으로 전달하고 오류를 수정했는지 확인합니다. 계속하려면 **다음** 을 클릭합니다.
 
 11. **요약** 페이지에서 모든 구성 설정을 검토하고 **마침**을 클릭합니다. 그러면 가용성 그룹이 만들어지고 구성됩니다.
 
@@ -408,5 +402,4 @@ AlwaysOn 가용성 그룹에 대한 자세한 내용은 [SQL Server 2016 AlwaysO
 이 백서가 도움이 되었습니까? 문서 맨 위에 있는 **주석**을 클릭하여 여러분의 의견을 보내주세요. 
 
 사용자 의견은 배포하는 백서의 품질 향상에 도움이 됩니다. 
-
 

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DTCTransaction event class
+helpviewer_keywords: DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7832dce3ed058f5ddd599fd19abd9703b20ff06
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1141977cd68380ba94848a510a21ccf540bf8889
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 이벤트 클래스
   **DTCTransaction** 이벤트 클래스를 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] DTC(Distributed Transaction Coordinator)를 통해 통합된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트랜잭션의 상태를 모니터링할 수 있습니다. 여기에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 동일 인스턴스에서 둘 이상의 데이터베이스와 관련된 트랜잭션 또는 둘 이상의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스와 관련된 분산 트랜잭션이 있습니다.  

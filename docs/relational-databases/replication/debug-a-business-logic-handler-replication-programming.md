@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6a681d03ae06573a4837ff6b545475980633e3ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>비즈니스 논리 처리기 디버깅(복제 프로그래밍)
   비즈니스 논리 처리기를 사용하여 병합 구독이 동기화될 때 사용자 지정 비즈니스 논리를 호출할 수 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에서 프로그래밍 방식으로 병합 에이전트를 동기적으로 시작하는 RMO(복제 관리 개체) 프로젝트를 만듭니다. 자세한 내용은 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)을 참조하세요.  
   
-4.  비즈니스 논리 처리기 코드에서 디버깅 대상 메서드 또는 클래스 생성자 내에 중단점을 설정합니다. 비즈니스 논리 처리기에 구현할 수 있는 메서드에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 메서드 항목을 참조하세요.  
+4.  비즈니스 논리 처리기 코드에서 디버깅 대상 메서드 또는 클래스 생성자 내에 중단점을 설정합니다. 비즈니스 논리 처리기에 구현할 수 있는 메서드에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 메서드 항목을 참조하십시오.  
   
 5.  비즈니스 논리 처리기를 디버그 모드로 빌드하고 어셈블리와 디버깅 기호 파일(.pdb)을 1단계에서 등록한 위치에 배포합니다.  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  비즈니스 논리 처리기를 만들고 등록합니다. 자세한 내용은 [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요.  
   
-3.  비즈니스 논리 처리기 코드에서 디버깅 대상 메서드 또는 클래스 생성자 내에 중단점을 설정합니다. 비즈니스 논리 처리기에 구현할 수 있는 메서드에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 메서드 항목을 참조하세요.  
+3.  비즈니스 논리 처리기 코드에서 디버깅 대상 메서드 또는 클래스 생성자 내에 중단점을 설정합니다. 비즈니스 논리 처리기에 구현할 수 있는 메서드에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 메서드 항목을 참조하십시오.  
   
 4.  비즈니스 논리 처리기를 디버그 모드로 빌드하고 웹 서버에서 어셈블리와 디버깅 기호 파일(.pdb)을 1단계에서 등록한 위치에 배포합니다.  
   
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   
-

@@ -5,24 +5,23 @@ ms.date: 10/21/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d00e5c97e6c27f3fe40b2066b5e194b8011f6b1e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: db2d067b9daaf0ca015e8069c9e01cab783cfeb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > 사용량이 많고 메모리가 부족한 시스템에서는 쿼리가 비트맵에 필요한 최소 메모리를 얻지 못할 경우 쿼리 계획에 병합 조인, 정렬 및 비트맵이 포함된 쿼리에서 비트맵을 삭제할 수 있습니다. 이 경우 쿼리 성능에 영향을 줄 수 있으며 정렬 프로세스가 메모리에 들어가지 않을 경우 tempdb 데이터베이스의 작업 테이블 사용이 증가하여 tempdb가 확장될 수 있습니다. 이 문제를 해결하려면 실제 메모리를 추가하거나 더 빠른 다른 쿼리 계획을 사용하도록 쿼리를 튜닝합니다.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 최대 메모리 양 제공
+### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진에 다음과 같이 메모리 양을 제공할 수 있습니다. 다음 표에는 이제 사용할 수 없는 32비트 버전의 열이 나와 있습니다.
 
@@ -56,7 +55,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 <sup>1</sup> 32비트 버전은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]부터 사용할 수 없습니다.  
 <sup>2</sup> /3gb는 운영 체제 부팅 매개 변수입니다. 자세한 내용은 MSDN 라이브러리를 참조하세요.  
 <sup>3</sup> WOW64(Windows on Windows 64)는 32비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 64비트 운영 체제에서 실행되는 모드입니다.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition은 운영 체제가 지원하는 최대 크기를 지원합니다.  
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition은 최대 128GB를 지원합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition은 운영 체제가 지원하는 최대 크기를 지원합니다.  
 <sup>5</sup> sp_configure awe enabled 옵션은 64비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있지만 무시됩니다.    
 <sup>6</sup> 32비트에서 AWE 지원에 대해 또는 64비트에서 단독으로 LPIM(메모리의 페이지 잠금) 권한이 부여된 경우 max server memory도 설정하는 것이 좋습니다.
 
@@ -181,5 +180,4 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 NUMA(Non-Un
 ## <a name="see-also"></a>관련 항목:
 [페이지 읽기](../relational-databases/reading-pages.md)   
  [페이지 쓰기](../relational-databases/writing-pages.md)
-
 

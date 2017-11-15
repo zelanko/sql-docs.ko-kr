@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.general.f1
 - sql13.swb.maint.subplanproperties.f1
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8adb2a4c6f1ddbf04d11413284b500629b911d4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e97a88a9ab7a57a41c6a3b8ac2b6ae2c98736d04
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maintenance-plan-subplan-properties"></a>유지 관리 계획(하위 계획 속성)
   **유지 관리 계획(하위 계획 속성)** 대화 상자를 사용하여 유지 관리 계획에 대한 하위 계획의 이름, 설명 및 일정을 지정할 수 있습니다. 유지 관리 계획 **디자인** 탭의 **하위 계획 속성** 을 클릭하거나 디자이너 표에서 하위 계획을 두 번 클릭하여 이 대화 상자를 표시할 수 있습니다.  
@@ -39,7 +37,6 @@ ms.lasthandoff: 06/22/2017
  하위 계획 태스크를 실행할 시기를 지정하려면 일정 아이콘을 클릭하고 기존 하위 계획 일정을 제거하려면 빨간색 x가 있는 일정 아이콘을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [개체 탐색기의](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   
-

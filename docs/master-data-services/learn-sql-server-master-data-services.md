@@ -5,37 +5,34 @@ ms.date: 02/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-keywords:
-- "SQL에 대해 알아보기"
+keywords: "SQL에 대해 알아보기"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 9139c9faeb4d38fe43300d6b97c019ae845567ec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: f181afa6131ca2f15fb82b62bbb1cfe55181f8ba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="learn-sql-server-master-data-services"></a>SQL Server Master Data Services에 대해 알아보기
   
   
 ## <a name="training"></a>학습  
-* [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 도입된 새로운 기능을 살펴보려면 이 [**TechNet 가상 랩**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true)을 확인해 보세요(Microsoft 계정을 사용하여 로그인해야 함).  
-* Excel용 추가 기능 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 사용하여 지리 데이터의 마스터 목록을 저장하고 관리하는 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]솔루션을 개발하려면 이 [**TechNet 가상 랩**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)을 확인해 보세요. 이 가상 랩에서는 엔터티와 계층을 만들고 [!INCLUDE[ssIS_md](../includes/ssis-md.md)]를 사용하여 차원 테이블에 데이터를 입력합니다.  
+* [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 도입된 새로운 기능을 살펴보려면 이 [**TechNet 가상 랩**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) 을 확인해 보세요(Microsoft 계정을 사용하여 로그인해야 함).  
+* Excel용 추가 기능 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 를 사용하여 지리 데이터의 마스터 목록을 저장하고 관리하는 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]솔루션을 개발하려면 이 [**TechNet 가상 랩**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)을 확인해 보세요. 이 가상 랩에서는 엔터티와 계층을 만들고 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 를 사용하여 차원 테이블에 데이터를 입력합니다.  
   
 ## <a name="videos"></a>비디오  
 * [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]릴리스에 포함된 새로운 기능에 대해 알아보려면 [**이 비디오를 시청**](https://www.youtube.com/watch?v=cKA72FpOVxI)하세요.  
   
 ## <a name="samples"></a>샘플  
-* [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에서 모델, 엔터티 및 계층 구조를 사용하여 데이터를 구조화하는 방법을 자세히 알아보려면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치할 때 포함되는 샘플 모델을 확인해 보세요. 샘플을 배포하는 방법에 대한 지침은 [샘플 모델 및 데이터 배포](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)를 참조하세요.   
+* [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 에서 모델, 엔터티 및 계층 구조를 사용하여 데이터를 구조화하는 방법을 자세히 알아보려면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치할 때 포함되는 샘플 모델을 확인해 보세요. 샘플을 배포하는 방법에 대한 지침은 [샘플 모델 및 데이터 배포](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)를 참조하세요.   
   
     샘플 모델의 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 업데이트에 대한 자세한 내용은 [SQL Server 샘플: 모델 배포 패키지](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
   
@@ -60,5 +57,4 @@ ms.lasthandoff: 09/07/2017
   
   
   
-
 

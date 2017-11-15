@@ -5,25 +5,22 @@ ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 5515 (Database Engine error)
+helpviewer_keywords: 5515 (Database Engine error)
 ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee57236f8a05ced8fcd84858e747c6797edfafec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c74321c2099f24018b63f9b6ad88f30395b6ef98
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver5515"></a>MSSQLSERVER_5515
   
@@ -44,4 +41,3 @@ FILESTREAM 파일에 대해 지정된 컨테이너 디렉터리를 열 수 없�
 ## <a name="user-action"></a>사용자 동작  
 오류의 원인은 해당 Windows 상태 코드를 참조하십시오.  
   
-

@@ -1,29 +1,27 @@
 ---
-title: "클러스터형 및 비클러스터형 인덱스 소개 | Microsoft Docs"
+title: "클러스터형 및 비클러스터형 인덱스 소개 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: f548bd0ce192566d6c2340029b9a30323be305a6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>클러스터형 및 비클러스터형 인덱스 소개
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,4 +71,3 @@ ms.lasthandoff: 08/19/2017
  [비클러스터형 인덱스 만들기](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   
-

@@ -1,29 +1,25 @@
 ---
-title: "기본 스키마와 함께 OPENJSON 사용(SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "기본 스키마와 함께 OPENJSON 사용(SQL Server) | Microsoft 문서"
+ms.custom: SQL2016_New_Updated
 ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- OPENJSON, with default schema
+helpviewer_keywords: OPENJSON, with default schema
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: ff76c19a4834cb583779b4ab33d1167780f44b0c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 035a4b887638f64ddc1d7ee4aef0aaa81958047f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>기본 스키마와 함께 OPENJSON 사용(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -115,4 +111,3 @@ CROSS APPLY OPENJSON(SalesReasons)
  [OPENJSON&#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   
   
-

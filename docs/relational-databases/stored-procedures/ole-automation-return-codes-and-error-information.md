@@ -5,8 +5,7 @@ ms.date: 07/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-ole
+ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0db7fd283f74b6235cd771da246006dbba1cdb80
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE 자동화 반환 코드 및 오류 정보
   OLE 자동화 시스템 저장 프로시저는 기본 OLE 자동화 작업에 의해 반환되는 HRESULT를 **int** 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800*nnnnn*과 같은 16진수 형태의 OLE 오류 코드이고, 저장 프로시저 반환 코드에서 **int** 값으로 반환된 경우에는 HRESULT의 형태가 214*nnnnnnn*입니다.  
@@ -121,4 +119,3 @@ GO
  [sp_OAGetErrorInfo&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   
-

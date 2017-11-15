@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.security.DA.f1
-helpviewer_keywords:
-- Distribution Agent Security dialog box
+f1_keywords: sql13.rep.security.DA.f1
+helpviewer_keywords: Distribution Agent Security dialog box
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 44bbfd608ad2511c95a872f07eac657ae7616e6d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 99a7a8bf76bd997b85ff7b44f01733b2928b441d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="distribution-agent-security"></a>배포 에이전트 보안
   **배포 에이전트 보안** 대화 상자를 사용하여 배포 에이전트를 실행하는 Windows 계정을 지정할 수 있습니다. 배포 에이전트는 밀어넣기 구독을 위한 배포자 또는 끌어오기 구독을 위한 구독자에서 실행됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정으로 에이전트 프로세스가 실행되기 때문에 이 계정을 *프로세스 계정*이라고도 합니다. 이 대화 상자에서 사용 가능한 추가 옵션은 대화 상자에 액세스하는 방법에 따라 달라집니다.  
@@ -106,4 +102,3 @@ Persist Security Info=False;Connection Pooling=True;
  [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

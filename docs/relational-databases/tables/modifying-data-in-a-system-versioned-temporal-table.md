@@ -1,34 +1,32 @@
 ---
 title: "시스템 버전 임시 테이블의 데이터 수정 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3f59affdbe29e3dddf777b22322a5503e69caa1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1ed023d0892262a8491cc434048e8932510e0e3b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블의 데이터 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  시스템 버전 임시 테이블의 데이터는 일반 DML 문을 사용하여 수정됩니다. 여기서 한가지 중요한 차이점은 기간 열 데이터를 직접 수정할 수 없다는 것입니다. 데이터가 업데이트되면 버전이 부여되며, 업데이트된 각 행의 이전 버전은 기록 테이블에 삽입됩니다. 데이터가 삭제되는 경우, 논리적으로 삭제되고 행이 현재 테이블에서 기록 테이블로 이동합니다. 영구적으로 삭제되지 않습니다.  
+  시스템 버전 temporal 테이블의 데이터는 일반 DML 문을 사용하여 수정됩니다. 여기서 한가지 중요한 차이점은 기간 열 데이터를 직접 수정할 수 없다는 것입니다. 데이터가 업데이트되면 버전이 부여되며, 업데이트된 각 행의 이전 버전은 기록 테이블에 삽입됩니다. 데이터가 삭제되는 경우, 논리적으로 삭제되고 행이 현재 테이블에서 기록 테이블로 이동합니다. 영구적으로 삭제되지 않습니다.  
   
 ## <a name="inserting-data"></a>데이터 삽입  
- 새 데이터를 삽입하면, **HIDDEN** 이(가) 아니면 **PERIOD**열을 설명해야 합니다. 시스템 버전 임시 테이블로 파티션 전환을 사용할 수도 있습니다.  
+ 새 데이터를 삽입하면, **HIDDEN** 이(가) 아니면 **PERIOD**열을 설명해야 합니다. 시스템 버전 temporal 테이블로 파티션 전환을 사용할 수도 있습니다.  
   
 ### <a name="insert-new-data-with-visible-period-columns"></a>표시되는 기간 열을 사용하여 새 데이터 삽입  
  다음과 같이 표시되는 **PERIOD** 열이 있으면 새 **PERIOD** 열을 설명하기 위해 **INSERT** 문을 구성할 수 있습니다.  
@@ -81,7 +79,7 @@ VALUES  ('Headquarters', 'New York');
   
 ### <a name="inserting-data-using-partition-switch"></a>PARTITION SWITCH를 사용하여 데이터 삽입  
  현재 테이블이 분할되어 있다면 빈 파티션으로 데이터를 로드하거나 여러 파티션에 병렬로 로드하는 효율적인 메커니즘으로 PARTITION SWITCH를 사용할 수 있습니다.   
-시스템 버전 임시 테이블과 함께 **PARTITION SWITCH IN** 문에 사용되는 준비 테이블에는 **SYSTEM_TIME PERIOD** 정의가 필요하지만 시스템 버전 임시 테이블일 필요는 없습니다.    
+시스템 버전 temporal 테이블과 함께 **PARTITION SWITCH IN** 문에 사용되는 준비 테이블에는 **SYSTEM_TIME PERIOD** 정의가 필요하지만 시스템 버전 temporal 테이블일 필요는 없습니다.    
 이렇게 하면 준비 테이블로 데이터를 삽입하거나 미리 채워진 준비 테이블에 SYSTEM_TIME 기간이 추가되는 동안 임시 일관성 검사가 수행되도록 합니다.  
   
 ```  
@@ -168,7 +166,7 @@ AND Department.DeptID = 10 ;
 **SYSTEM_VERSIONING = OFF** 를 설정하고 현재 및 기록 테이블의 행을 삭제합니다. 다만 시스템에 변경 기록이 보존되지 않는다는 것에 유의합니다.   
 현재 테이블 및**SWITCH PARTITION OUT**, **TRUNCATE** , **SWITCH PARTITION OUT** 은 **SYSTEM_VERSIONING = ON**상태에서는 지원되지 않습니다.  
   
-## <a name="using-merge-to-modify-data-in-temporal-table"></a>MERGE를 사용하여 임시 테이블의 데이터 수정  
+## <a name="using-merge-to-modify-data-in-temporal-table"></a>MERGE를 사용하여 temporal 테이블의 데이터 수정  
  **MERGE** 연산은 **PERIOD** 열에 대한 **INSERT** 및 **UPDATE** 문의 제한 사항과 같은 제한 사항으로 지원됩니다.  
   
 ```  
@@ -201,4 +199,3 @@ WHEN NOT MATCHED THEN
  [시스템 버전 임시 테이블에서 시스템 버전 관리 중지](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

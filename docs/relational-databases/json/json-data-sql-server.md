@@ -1,29 +1,27 @@
 ---
-title: "JSON 데이터(SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "JSON 데이터(SQL Server) | Microsoft 문서"
+ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: fed02f20beb9bd84dfd5ac2add3c66daf207e07c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.workload: Active
+ms.openlocfilehash: 3c6b9e4b98863b230c46304c7c8026230c0372ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="json-data-sql-server"></a>JSON 데이터(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환�
 
 **예제**
   
- 다음 예제에서 쿼리는 테이블의 관계형 및 JSON 데이터(`jsonCol` 열에 저장됨)를 모두 사용합니다.  
+ 다음 예제에서 쿼리는 테이블의 관계형 및 JSON 데이터(`jsonCol` 열에 저장됨)를 사용합니다.  
   
 ```sql  
 SELECT Name,Surname,
@@ -173,7 +171,7 @@ FOR JSON PATH
 ## <a name="combine-relational-and-json-data"></a>관계형 및 JSON 데이터 결합
  SQL Server는 표준 Transact-SQL 언어를 사용하여 관계형 및 JSON 데이터를 저장하고 처리할 수 있는 하이브리드 모델을 제공합니다. JSON 문서 컬렉션을 테이블 단위로 구성하고, 둘 간의 관계를 설정하고, 테이블에 저장된 강력한 형식의 스칼라 열을 JSON 열에 저장된 유연한 키/값 쌍과 결합하고, 전체 Transact-SQL을 사용하여 하나 이상의 테이블에서 스칼라 값과 JSON 값을 모두 쿼리할 수 있습니다.
  
-JSON 텍스트는 일반적으로 varchar 또는 nvarchar 열에 저장되며 일반 텍스트 형식으로 인덱싱됩니다. 텍스트를 지원하는 모든 SQL Server 기능 또는 구성 요소는 JSON을 지원하므로 JSON 및 기타 SQL Server 기능 간의 상호 작용에 제한이 거의 없습니다. JSON을 메모리 내 또는 temporal 테이블에 저장할 수 있으며 행 수준 보안 조건자를 JSON 텍스트 등에 적용할 수 있습니다.
+JSON 텍스트는 일반적으로 varchar 또는 nvarchar 열에 저장되며 일반 텍스트 형식으로 인덱싱됩니다. 텍스트를 지원하는 모든 SQL Server 기능 또는 구성 요소는 JSON을 지원하므로 JSON 및 기타 SQL Server 기능 간의 상호 작용에 제한이 거의 없습니다. JSON을 메모리 내 또는 임시 테이블에 저장할 수 있으며 행 수준 보안 조건자를 JSON 텍스트 등에 적용할 수 있습니다.
 
 JSON 문서를 처리하기 위해 사용자 지정된 쿼리 언어를 사용하려는 순수 JSON 워크로드가 있는 경우 Microsoft Azure [DocumentDB](https://azure.microsoft.com/services/documentdb/)를 사용하는 것이 좋습니다.  
   
@@ -340,4 +338,3 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
     -   [JSON_MODIFY&#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)  
   
   
-

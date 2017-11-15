@@ -1,13 +1,11 @@
 ---
 title: "PolyBase 시작하기 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 78
+caps.latest.revision: "78"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: b107ea3ebabbf959ee12b900885612df364dfc12
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/04/2017
-
+ms.openlocfilehash: 2b177dbb77ab41646584c0bd97065fda91f90c2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 시작하기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +154,7 @@ Hadoop은 새 릴리스를 위해 “Major.Minor.Version” 패턴을 따릅니�
   
 4.  계산 노드에서 PolyBase 데이터 이동 서비스를 다시 시작합니다.  
   
- 자세한 내용은 [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  
+ 자세한 내용은 [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  
   
 ## <a name="create-t-sql-objects"></a>T-SQL 개체 만들기  
  외부 데이터 원본, Hadoop 또는 Azure Storage에 따라 개체를 만듭니다.  
@@ -363,15 +360,14 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  SQL Server 2016 RC1에서 RC2 또는 RC3으로 업그레이드한 후 쿼리가 실패할 수 있습니다. 자세한 내용 및 해결 방법은 [SQL Server 2016 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md) 를 참조하고 "PolyBase"를 검색하세요.  
   
 ## <a name="next-steps"></a>다음 단계  
- 확장 기능을 이해하려면 [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  PolyBase를 모니터링하려면 [PolyBase 문제 해결](../../relational-databases/polybase/polybase-troubleshooting.md)을 참조하세요. PolyBase 성능 문제를 해결하려면 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)을(를) 참조하십시오.  
+ 확장 기능을 이해하려면 [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  PolyBase를 모니터링하려면 [PolyBase 문제 해결](../../relational-databases/polybase/polybase-troubleshooting.md)을 참조하세요. PolyBase 성능 문제를 해결하려면 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)을(를) 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
  [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)   
- [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)   
+ [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)   
  [PolyBase 저장 프로시저](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   
  [CREATE EXTERNAL DATA SOURCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   
-

@@ -10,19 +10,18 @@ ms.technology:
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Local Audit
+helpviewer_keywords: Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d6274b8a4a335482b24ab3e5df2ab9baeac61188
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 사용 피드백 모음에 대한 로컬 감사
 ## <a name="introduction"></a>소개
@@ -389,5 +388,4 @@ WHERE queryIdentifier = 'DatabaseProperties.001'
 
 ## <a name="see-also"></a>관련 항목:
 [SSMS 사용 피드백 수집에 대한 로컬 감사](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
-
 

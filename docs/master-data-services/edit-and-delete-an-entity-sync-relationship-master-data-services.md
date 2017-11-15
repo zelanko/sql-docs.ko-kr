@@ -1,27 +1,24 @@
 ---
 title: "엔터티 동기화 관계 편집 및 삭제(Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 68b60fa3d77ae5786419e83dbbdfc9967130cb59
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: e104197ab11555d39651990de1e505bc241c6506
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계 편집 및 삭제(Master Data Services)
   엔터티 동기화는 엔터티 버전 간의 반복 가능한 단방향 동기화입니다. 이는 서로 다른 모델 간에 엔터티 데이터를 공유하는 방법을 제공합니다. 만든 동기화 관계를 편집하고 삭제할 수 있습니다.  
@@ -65,13 +62,13 @@ ms.lasthandoff: 09/07/2017
   
 1.  마스터 데이터 관리자에서 **시스템 관리자**를 클릭합니다.  
   
-2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리**를 가리키고 **엔터티 동기화**를 클릭합니다.  
+2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **엔터티 동기화**를 클릭합니다.  
   
 3.  **엔터티 동기화 유지 관리** 페이지의 표에서 동기화 관계를 선택합니다.  
   
 4.  **편집**을 클릭합니다. 패널은 오른쪽에 표시됩니다.  
   
-5.  **빈도**를 변경합니다. **필요 시 동기화**를 선택하거나 **자동 동기화**를 선택하고 빈도를 설정합니다.  
+5.  **빈도**를 변경합니다. **필요 시 동기화**를 선택하거나 **자동 동기화** 를 선택하고 빈도를 설정합니다.  
   
 6.  **저장**을 클릭합니다.  
   
@@ -79,7 +76,7 @@ ms.lasthandoff: 09/07/2017
   
 1.  마스터 데이터 관리자에서 **시스템 관리자**를 클릭합니다.  
   
-2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리**를 가리키고 **엔터티 동기화**를 클릭합니다.  
+2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **엔터티 동기화**를 클릭합니다.  
   
 3.  **엔터티 동기화 유지 관리** 페이지의 표에서 동기화 관계를 선택합니다.  
   
@@ -92,4 +89,3 @@ ms.lasthandoff: 09/07/2017
  [엔터티 동기화 관계&#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   
-

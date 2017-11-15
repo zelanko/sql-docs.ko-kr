@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe53d84f336f9070246f586aeb5da01941fd0adc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 3e9677ee843fe958aca42ea1f008316383e0d22f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 기능 및 태스크
   데이터 관리자, Data Quality Services 관리자 또는 SQL Server 관리자가 데이터 품질 프로젝트를 준비하고 실행하는 데 필요한 정보를 찾을 수 있습니다.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
  [DQS 보안](../data-quality-services/dqs-security.md)  
   
   
-

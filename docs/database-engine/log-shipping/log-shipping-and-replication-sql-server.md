@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed95df5cd7c02d5c8c6789dbbcf416a40c279460
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: fc7c67f47d535a639f1862cc1bc8be92855f6567
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>로그 전달 및 복제(SQL Server)
   로그 전달에는 일반적으로 서로 다른 컴퓨터에 있는 두 개의 단일 데이터베이스 복사본이 사용됩니다. 클라이언트는 항상 하나의 데이터베이스 복사본만 사용할 수 있습니다. 이 복사본을 주 데이터베이스라고 합니다. 클라이언트가 주 데이터베이스에 업데이트한 내용은 로그 전달을 사용하여 보조 데이터베이스라고 부르는 다른 데이터베이스 복사본에 전달됩니다. 로그 전달에는 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 보조 데이터베이스에 적용하는 작업이 포함됩니다.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="log-shipping-with-transactional-replication"></a>트랜잭션 복제의 로그 전달  
  트랜잭션 복제의 경우 로그 전달의 동작은 **sync with backup** 옵션에 따라 달라집니다. 이 옵션은 게시 데이터베이스 및 배포 데이터베이스에 설정될 수 있으며, 게시자의 로드 전달의 경우에는 게시 데이터베이스의 설정만 관련이 있습니다.  
   
- 게시 데이터베이스에 이 옵션을 설정하면 트랜잭션은 게시 데이터베이스에서 백업될 때까지 배포 데이터베이스로 배달되지 않습니다. 그러면 복원된 게시 데이터베이스에 없는 트랜잭션이 배포 데이터베이스에 있을 수 없으므로 보조 서버에서 마지막 게시 데이터베이스 백업을 복원할 수 있습니다. 이 옵션은 게시자가 보조 서버로 장애 조치되는 경우 게시자, 배포자 및 구독자 간의 일관성이 유지되도록 보장합니다. 트랜잭션이 게시자에서 백업되기 전까지는 배포 데이터베이스로 트랜잭션을 전달할 수 없으므로 지연이 발생하거나 처리량이 줄어들 수 있습니다. 응용 프로그램에서 이러한 지연이 허용되는 경우 게시 데이터베이스에 이 옵션을 설정하는 것이 좋습니다. **sync with backup** 옵션을 설정하지 않으면 보조 서버에서 복구된 데이터베이스에는 포함되지 않는 변경 내용을 구독자가 받을 수 있습니다. 자세한 내용은 [스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)을(를) 참조하세요.  
+ 게시 데이터베이스에 이 옵션을 설정하면 트랜잭션은 게시 데이터베이스에서 백업될 때까지 배포 데이터베이스로 배달되지 않습니다. 그러면 복원된 게시 데이터베이스에 없는 트랜잭션이 배포 데이터베이스에 있을 수 없으므로 보조 서버에서 마지막 게시 데이터베이스 백업을 복원할 수 있습니다. 이 옵션은 게시자가 보조 서버로 장애 조치되는 경우 게시자, 배포자 및 구독자 간의 일관성이 유지되도록 보장합니다. 트랜잭션이 게시자에서 백업되기 전까지는 배포 데이터베이스로 트랜잭션을 전달할 수 없으므로 지연이 발생하거나 처리량이 줄어들 수 있습니다. 응용 프로그램에서 이러한 지연이 허용되는 경우 게시 데이터베이스에 이 옵션을 설정하는 것이 좋습니다. **sync with backup** 옵션을 설정하지 않으면 보조 서버에서 복구된 데이터베이스에는 포함되지 않는 변경 내용을 구독자가 받을 수 있습니다. 자세한 내용은 [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)을(를) 참조하세요.  
   
  **sync with backup 옵션으로 트랜잭션 게시 및 로그 전달을 구성하려면**  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/02/2017
  [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   
-

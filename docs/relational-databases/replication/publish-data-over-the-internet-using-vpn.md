@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Web publishing [SQL Server replication], VPNs
 - Internet [SQL Server replication], VPNs
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff9a1c28aea2f64d58a68d635e07c192aed5d89a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a35f9436c06cf999ec095d79ada16a644c63a516
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>VPN을 사용하여 인터넷을 통해 데이터 게시
   VPN(가상 개인 네트워크) 기술을 사용하면 집, 지점, 원격 클라이언트 및 다른 회사에서 사용자가 인터넷을 통해 회사 네트워크에 연결하여 안전하게 통신할 수 있습니다. 사용자는 LAN(근거리 통신망)에서처럼 Windows 인증을 사용할 수 있습니다. 모든 유형의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제는 VPN을 통해 데이터를 복제할 수 있지만 웹 동기화에는 VPN이 필요하지 않으므로 병합 복제를 사용할 경우 웹 동기화 사용을 고려해야 합니다. 자세한 내용은 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)을 참조하세요.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 06/22/2017
  [인터넷을 통한 복제](../../relational-databases/replication/replication-over-the-internet.md)  
   
   
-

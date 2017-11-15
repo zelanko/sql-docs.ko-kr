@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.advanced.f1
+f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 75f872cc60f59224bf874e9821348efa4bd22729
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---advanced-page"></a>서버 속성 - 고급 페이지
   이 페이지를 사용하여 고급 서버 설정을 확인하거나 수정할 수 있습니다.  

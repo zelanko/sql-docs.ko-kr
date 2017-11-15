@@ -14,17 +14,16 @@ helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 121f98cb4b10c480b2f6e215c9432361f963475c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 요소 경로 구문(SSRS)
   보고서 디자이너에서 대/소문자 구분 요소 경로를 정의하여 XML 데이터 원본에서 보고서에 사용할 데이터를 지정할 수 있습니다. 요소 경로는 XML 데이터 원본의 XML 계층 노드와 해당 특성으로 이동하는 방법을 나타냅니다. 기본 요소 경로를 사용하려면 데이터 집합 쿼리나 XML **ElementPath** 의 XML **Query** 를 비워 둡니다. XML 데이터 원본에서 데이터가 검색될 때 텍스트 값이 있는 요소 노드와 요소 노드 특성은 결과 집합의 열이 됩니다. 쿼리를 실행하면 노드 및 특성 값은 행 데이터가 됩니다. 열은 보고서 데이터 창에 데이터 집합 필드 컬렉션으로 표시됩니다. 이 항목에서는 요소 경로 구문을 설명합니다.  
@@ -36,11 +35,11 @@ ms.lasthandoff: 08/09/2017
   
 |규칙|사용 대상|  
 |----------------|--------------|  
-|**굵게 표시**|표시된 대로 입력해야 하는 텍스트입니다.|  
+|**굵게**|표시된 대로 입력해야 하는 텍스트입니다.|  
 |&#124;(세로 막대)|각 구문 항목을 구분합니다. 항목 중 하나만 선택할 수 있습니다.|  
 |`[ ]`(대괄호)|선택적 구문 항목입니다. 대괄호는 입력하지 않습니다.|  
 |**{ }** (중괄호)|구문 항목의 매개 변수 범위를 지정합니다.|  
-|[**,**...*n*]|앞의 항목이 반복 될 수 나타냅니다  *n*  번입니다. 각 항목은 쉼표로 구분됩니다.|  
+|[**,**...*n*]|앞의 항목이 *n* 번 반복될 수 있음을 나타냅니다. 각 항목은 쉼표로 구분됩니다.|  
   
 ## <a name="syntax"></a>구문  
   
@@ -210,9 +209,8 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [XML 연결 유형 및 &#40;입니다. SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Reporting Services 자습서 및 &#40;입니다. SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [추가, 편집, 보고서 데이터 창 및 &#40;에서 필드 새로 고침 보고서 작성기 및 SSRS & &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Reporting Services 자습서 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
-

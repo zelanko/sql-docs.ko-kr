@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 2347f26d041c15142487420440a470f87a822e3e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: a835146bee758d709d4da7c25182e590f035661f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-index-master-data-services"></a>사용자 지정 인덱스(Master Data Services)
   사용자 지정 인덱스는 엔터티에서 하나의 속성(단일 인덱스) 또는 속성 목록(복합 인덱스)에 대한 비클러스터형 인덱스를 생성합니다. 일반적으로 인덱스는 쿼리 프로세스의 성능을 향상시킵니다. SQL Server 인덱스에 대한 자세한 내용은 [인덱스](../relational-databases/indexes/indexes.md)를 참조하세요.  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/07/2017
 |인덱스 편집 및 삭제|[인덱스 편집 및 삭제&#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)|  
   
   
-

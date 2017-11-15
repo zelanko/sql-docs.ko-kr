@@ -1,29 +1,25 @@
 ---
 title: "6단원: 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8f3ea59fb612ea692b52ab46bb342d8c4031fb71
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ef160e0b0bce71d437e7dd83809a31185ec94767
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>6단원: 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성
 이 단원에서는 AdventureWorks2014 데이터베이스에 작업을 생성하고 파일-스냅숏 백업을 사용하여 정기적으로 트랜잭션 로그 백업을 만듭니다. 파일 스냅숏 백업 사용 방법에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
@@ -105,4 +101,3 @@ AdventureWorks2014 데이터베이스에 작업을 생성하고 파일-스냅숏
   
   
   
-

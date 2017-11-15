@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Database Operation event class
+helpviewer_keywords: Audit Database Operation event class
 ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 407bf2987fb529d2448e603cb541353c7c2cdbf8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a3224a353c2b093cedbe880d9099bd060e228573
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation 이벤트 클래스
   **Audit Database Operation** 이벤트 클래스는 데이터베이스에서 검사점 또는 쿼리 알림 구독과 같은 작업이 수행될 때 발생합니다.  

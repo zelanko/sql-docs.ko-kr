@@ -4,24 +4,21 @@ ms.date: 10/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.portal.DevRef.f1
+f1_keywords: sql13.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cf076244d1a73b543f1907400c26ef0c27695ff9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: cae0c9873a900fc5a5cb180a01e912b9f4dd61cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="developer-guides-for-sql-server"></a>SQL Server용 개발자 가이드
   프로그래밍 모델 및 인터페이스를 사용하여 사용자 지정 코드를 통해 거의 모든 SQL Server 기능을 통합합니다. 각 기능 영역에는 데이터 수집, 데이터 액세스, 서버 관리 또는 데이터 시각화에 사용되는 기본 API 및 관리되는 API가 포함되어 있습니다.  
@@ -54,4 +51,3 @@ ms.lasthandoff: 09/27/2017
  [SQL Server 기술 설명서](../sql-server/sql-server-technical-documentation.md)   
  [SQL Server 자습서](../sql-server/tutorials-for-sql-server-2016.md)  
   
-

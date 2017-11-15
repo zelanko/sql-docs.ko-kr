@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5352e093cf531e4bbacdfb284966b8c9739abf4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d46d8364dafb218035e3e9c7d828833f9c604375
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-change-data-sql-server"></a>변경 데이터 작업(SQL Server)
   변경 데이터는 TVF(테이블 반환 함수)를 통해 변경 데이터 캡처 소비자에게 제공됩니다. 이러한 함수의 모든 쿼리에는 반환된 결과 집합을 개발할 때 고려할 LSN(로그 시퀀스 번호)의 범위를 정의하는 두 매개 변수가 필요합니다. 간격을 한정하는 LSN 하한/상한 값 모두 간격 내에 포함되는 것으로 간주됩니다.  
@@ -139,4 +137,3 @@ ms.lasthandoff: 08/03/2017
  [변경 데이터 캡처 관리 및 모니터링&#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
-

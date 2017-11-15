@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB 파일 공유 저장소를 사용하여 SQL Server 설치
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작해서 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 저장소 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/08/2017
   
  범용 명명 규칙에 대한 자세한 내용은 [UNC](http://msdn.microsoft.com/library/gg465305.aspx)를 참조하세요.  
   
- 루프백 UNC 경로(서버 이름이 localhost, 127.0.0.1또는 로컬 컴퓨터 이름인 UNC 경로)는 지원되지 않습니다. 특별한 경우이기는 하지만 같은 노드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅되는 파일 서버 클러스터를 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행도 지원되지 않습니다. 이러한 상황이 발생하지 않게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 파일 서버 클러스터를 별도의 Windows 클러스터에 만드는 것이 좋습니다.  
+ 루프백 UNC 경로(서버 이름이 localhost, 127.0.0.1또는 로컬 컴퓨터 이름인 UNC 경로)는 지원되지 않습니다. 특별한 경우이기는 하지만 같은 노드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 호스팅되는 파일 서버 클러스터를 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행도 지원되지 않습니다. 이러한 상황이 발생하지 않게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 파일 서버 클러스터를 별도의 Windows 클러스터에 만드는 것이 좋습니다.  
   
  아래 UNC 경로 형식은 지원되지 않습니다.  
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 09/08/2017
   
 -   명령 프롬프트 설치에서 "/INSTALLSQLDATADIR"을 "\\\fileserver1\share1\"로 지정합니다.  
   
-     다음은 SMB 파일 공유 옵션을 사용하여 독립 실행형 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 예제 구문입니다.  
+     다음은 SMB 파일 공유 옵션을 사용하여 독립 실행형 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 예제 구문입니다.  
   
     ```  
     Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="<StrongPassword>" /INSTALLSQLDATADIR="\\FileServer\Share1\" /IACCEPTSQLSERVERLICENSETERMS  

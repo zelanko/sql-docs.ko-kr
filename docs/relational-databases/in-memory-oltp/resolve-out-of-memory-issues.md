@@ -5,21 +5,20 @@ ms.date: 08/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6eef790f729a3270c0ba046d6a60114ae2da8dc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4c56262f4f42370d24c597a668b012fbbf64a81d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_resolveRecoveryFailures"></a> OOM으로 인한 데이터베이스 복원 실패 해결  
  데이터베이스 복원을 시도하면 "'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 *\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다."라는 오류 메시지가 나타날 수 있습니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다.
    
-데이터베이스를 복원할 서버에는 데이터베이스 백업 시 메모리 액세스에 최적화된 테이블에 대해 충분한 사용 가능한 메모리가 있어야 합니다. 그렇지 않으면 데이터베이스가 온라인 상태가 되지 않습니다.  
+데이터베이스를 복원할 서버에는 데이터베이스 백업 시 메모리 최적화 테이블에 대해 충분한 사용 가능한 메모리가 있어야 합니다. 그렇지 않으면 데이터베이스가 온라인 상태가 되지 않습니다.  
   
 서버에 충분한 실제 메모리가 있지만 이 오류가 계속 나타나면 다른 프로세스에서 너무 많은 메모리를 사용하거나, 구성 문제로 복원에 사용할 수 있는 메모리가 충분하지 않을 수 있습니다. 이 문제 유형의 경우 다음 조치를 수행하여 복원 작업에 필요한 메모리를 더 많이 확보하세요. 
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
     ```  
   
-     MAX_MEMORY_PERCENT의 최대값에 대한 자세한 내용은 항목 섹션 [메모리 액세스에 최적화된 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)을 참조하세요.  
+     MAX_MEMORY_PERCENT의 최대값에 대한 자세한 내용은 항목 섹션 [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)을 참조하세요.  
   
 -   **최대 서버 메모리**를 늘립니다.  
     **최대 서버 메모리** 구성에 대한 자세한 내용은 [메모리 구성 옵션을 사용하여 서버 성능 최적화](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)항목을 참조하세요.  
@@ -95,7 +94,7 @@ ms.lasthandoff: 06/22/2017
  메모리 액세스에 최적화된 테이블에서 필수적이지 않은 행을 제거할 수 있습니다. 가비지 수집기는 이러한 행에 사용되는 메모리를 사용 가능한 메모리로 되돌립니다. 와 다른 방법으로 더 많은 메모리를 사용합니다. 메모리 내 OLTP 엔진은 가비지 행을 적극적으로 수집합니다. 그러나 장기 실행 트랜잭션으로 인해 가비지가 수집되지 않을 수 있습니다. 예를 들어, 5분간 실행되는 트랜잭션이 있는 경우 트랜잭션이 활성 상태인 동안 수행되는 업데이트/삭제 작업으로 생성된 모든 행 버전에 대해 가비지 수집이 수행되지 않을 수 있습니다.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>디스크 기반 테이블로 하나 이상의 행 이동  
- 다음 TechNet 문서에는 메모리 액세스에 최적화된 테이블에서 디스크 기반 테이블로 행을 이동하는 방법이 나와 있습니다.  
+ 다음 TechNet 문서에는 메모리 최적화 테이블에서 디스크 기반 테이블로 행을 이동하는 방법이 나와 있습니다.  
   
 -   [응용 프로그램 수준 분할](http://technet.microsoft.com/library/dn296452\(v=sql.120\).aspx)  
   
@@ -133,7 +132,7 @@ GO
   
 ```  
   
- MAX_MEMORY_PERCENT의 최대값에 대한 자세한 내용은 항목 섹션 [메모리 액세스에 최적화된 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)을 참조하세요.  
+ MAX_MEMORY_PERCENT의 최대값에 대한 자세한 내용은 항목 섹션 [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)을 참조하세요.  
   
 ##### <a name="install-additional-memory"></a>추가 메모리 설치  
  가능한 경우 궁극적으로 가장 좋은 해결 방법은 추가 실제 메모리를 설치하는 것입니다. 이렇게 할 경우 [에 더 이상 메모리 부족이 발생하지 않을 것이므로 MAX_MEMORY_PERCENT 값도 늘려서 새로 설치된 메모리 중 전부는 아니라도 대부분을 리소스 풀에 사용하도록 설정할 수 있습니다(하위 항목](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 참조).  
@@ -156,4 +155,3 @@ GO
  [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)  
   
   
-

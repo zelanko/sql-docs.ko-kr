@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - SQL authentication mode
 - Password Expired dialog box
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c13fbf9ffbe2337c1766d7a089c1d8072a17f77
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 9431f2d00cdaa5ef7389fad71a68095b3cf1147f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-an-authentication-mode"></a>인증 모드 선택
   설치 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인증 모드를 선택해야 합니다. Windows 인증 모드 및 혼합 모드의 2가지 유형이 있습니다. Windows 인증 모드는 Windows 인증을 활성화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 비활성화합니다. 혼합 모드는 Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 활성화합니다. Windows 인증은 항상 사용할 수 있으며 비활성화할 수 없습니다.  
@@ -109,4 +107,3 @@ ms.lasthandoff: 04/11/2017
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   
-

@@ -1,13 +1,11 @@
 ---
 title: "대량 가져오기의 최소 로깅을 위한 필수 조건 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server]
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1f64cc4fc8ab747d137777e7a14c17ac796eb9ee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 50e42a9267199f6e7e00b221a548b216625f5f91
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>대량 가져오기의 최소 로깅을 위한 선행 조건
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  대량 가져오기 작업을 최소 로깅으로 수행하는 동안 데이터 삽입은 트랜잭션 로그에 기록되지 않지만 새 익스텐트를 테이블에 할당할 때마다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 익스텐트 할당을 기록합니다.  
   
--   메모리 액세스에 최적화된 테이블이 아닙니다.  
+-   메모리 최적화 테이블이 아닙니다.  
   
  테이블에 대한 최소 로깅의 발생 여부는 다음과 같이 테이블의 인덱싱 여부에 따라 달라지고, 테이블이 인덱싱되는 경우 테이블이 비어 있는지 여부에 따라 달라집니다.  
   

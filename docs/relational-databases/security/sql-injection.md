@@ -1,28 +1,25 @@
 ---
 title: "SQL 삽입 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Injection
+helpviewer_keywords: SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
-caps.latest.revision: 7
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d415833c9a51fd9b7fcde0b2515183ecc4dfb235
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "7"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 58bdc38f3f48ce52f7d67281af89b45e2007be59
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-injection"></a>SQL 인젝션
   SQL 삽입은 문자열에 삽입된 악성 코드가 나중에 구문 분석 및 실행용으로 SQL Server에 전달되는 방식의 공격입니다. SQL Server는 구문상 유효한 모든 수신 쿼리를 실행하므로 SQL 문을 생성하는 모든 프로시저에 삽입과 관련한 취약성이 있는지 확인해야 합니다. 매개 변수가 있는 데이터도 숙련된 전문 공격자에 의해 조작될 수 있습니다.  

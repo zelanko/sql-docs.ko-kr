@@ -1,29 +1,25 @@
 ---
 title: "자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ae1e9aef727303d55c79463d822c4f62d3cdae0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3ee451e1af1df985f99281008c6e5fbf4147e11b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용
 Microsoft Azure Blob Storage 서비스에서 SQL Server 2016 사용 자습서를 시작합니다. 이 자습서는 SQL Server 데이터 파일 및 SQL Server 백업에 Microsoft Azure Blob Storage 서비스를 사용하는 방법을 이해하는 데 도움이 됩니다.  
@@ -83,5 +79,4 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
   
   
   
-
 

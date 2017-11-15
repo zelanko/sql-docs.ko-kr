@@ -10,27 +10,25 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.userroleproperties.f1
+f1_keywords: sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8c75a610f60ff8eca7e64b7fd01d36d0a63344a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-role-properties-management-studio"></a>사용자 역할 속성(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의에 포함된 태스크를 볼 수 있으며 태스크 목록을 변경하거나 역할 설명을 수정할 수 있습니다.  
   
  항목 수준 역할 정의는 특정 항목(폴더, 보고서, 리소스 또는 공유 데이터 원본)에 대해 사용자가 수행하는 태스크의 명명된 모음입니다. 역할 정의는 보고서 관리자에서 역할 할당을 만들기 위해 사용자 또는 그룹에 할당됩니다. 역할 정의의 태스크는 사용자나 그룹이 수행할 수 있는 작업을 나타냅니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용할 수 있는 미리 정의 된 항목 수준의 역할 정의의 수를 포함 합니다. 각 정의의 태스크 목록을 변경하여 역할 정의를 수정할 수 있습니다. 역할 정의를 편집하면 역할 정의를 포함하는 모든 역할 할당에 영향을 줍니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 사용 가능한 미리 정의된 항목 수준의 역할 정의가 다수 포함되어 있습니다. 각 정의의 태스크 목록을 변경하여 역할 정의를 수정할 수 있습니다. 역할 정의를 편집하면 역할 정의를 포함하는 모든 역할 할당에 영향을 줍니다.  
   
 > [!NOTE]  
 >  사용자 역할 할당은 기본 모드로 실행되는 보고서 서버에만 사용됩니다. 보고서 서버가 SharePoint 통합용으로 구성된 경우 이 페이지에는 SharePoint 사이트에 정의된 역할 및 사용 권한 수준에 대한 읽기 전용 정보가 표시됩니다.  
@@ -51,9 +49,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [항목 수준의 태스크](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
  [역할 정의](../../reporting-services/security/role-definitions.md)   
- [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [태스크 및 사용 권한](../../reporting-services/security/tasks-and-permissions.md)   
- [미리 정의 된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)  
+ [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   
+ [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLServer:Batch Resp Statistics
+helpviewer_keywords: SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc35f5f03d3b395fc09765fa8ac5ef8158ad8c51
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7e7dd5d90f7e7b59e6d685f1e2dd4e4c1cdb319e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, 일괄 처리 응답 통계 개체
 **SQLServer:Batch Resp Statistics** 성능 개체는 SQL Server 일괄 처리 응답 시간을 추적하는 카운터를 제공합니다.
@@ -48,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |**Batches >=010000ms & \<020000ms**|응답 시간이 10,000ms보다 크거나 같고 20,000ms보다 작은 SQL 일괄 처리 수|
 |**Batches >=020000ms & \<050000ms**|응답 시간이 20,000ms보다 크거나 같고 50,000ms보다 작은 SQL 일괄 처리 수|
 |**Batches >=050000ms & \<100000ms**|응답 시간이 50,000ms보다 크거나 같고 100,000ms보다 작은 SQL 일괄 처리 수| 
-|**Batches &gt;=100000ms**|응답 시간이 100,000ms보다 크거나 같은 SQL 일괄 처리 수| 
+|**Batches >=100000ms**|응답 시간이 100,000ms보다 크거나 같은 SQL 일괄 처리 수| 
 
 개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
@@ -62,4 +59,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:
 [SQL Server, Plan Cache 개체](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [리소스 사용 모니터링(시스템 모니터)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-

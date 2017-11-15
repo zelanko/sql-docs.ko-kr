@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication], SQL Server Management Studio
 - parameterized filters [SQL Server replication], optimizing
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 891399921dc50cc1a5463f9735462c94ce442df4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 57c6def5557804ef3b08269ca90859a06c8ce12b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="optimize-parameterized-row-filters"></a>매개 변수가 있는 행 필터 최적화
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 행 필터를 최적화하는 방법에 대해 설명합니다.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   매개 변수가 있는 필터를 사용하는 경우 게시를 만들 때 **use partition groups** 옵션 또는 **keep partition changes** 옵션을 지정하여 병합 복제에서 필터가 처리되는 방법을 제어할 수 있습니다. 이러한 옵션은 게시 데이터베이스에 추가 메타데이터를 저장함으로써 필터링된 아티클이 있는 게시의 동기화 성능을 개선합니다. 아티클을 만들 때 **partition options** 를 설정하면 구독자 간에 데이터가 공유되는 방법을 제어할 수 있습니다. 이러한 요구 사항에 대한 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+-   매개 변수가 있는 필터를 사용하는 경우 게시를 만들 때 **use partition groups** 옵션 또는 **keep partition changes** 옵션을 지정하여 병합 복제에서 필터가 처리되는 방법을 제어할 수 있습니다. 이러한 옵션은 게시 데이터베이스에 추가 메타데이터를 저장함으로써 필터링된 아티클이 있는 게시의 동기화 성능을 개선합니다. 아티클을 만들 때 **partition options** 를 설정하면 구독자 간에 데이터가 공유되는 방법을 제어할 수 있습니다. 이러한 요구 사항에 대한 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
   
      삭제가 올바르게 전파되도록 보장하려면 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact 구독자에서 keep_partition_changes를 true로 설정해야 합니다. false로 설정한 경우 구독자에 예상한 것보다 많은 행이 포함될 수 있습니다.  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 06/22/2017
   
     -   **이 테이블의 행을 단일 구독으로 이동**  
   
-     **이 테이블의 행을 단일 구독으로 이동**을 선택하면 병합 복제에서는 보다 작은 메타데이터를 저장하고 처리하여 성능을 최적화할 수 있습니다. 그러나 한 행이 둘 이상의 구독자로 복제될 수 없도록 데이터가 분할되어야 합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
+     **이 테이블의 행을 단일 구독으로 이동**을 선택하면 병합 복제에서는 보다 작은 메타데이터를 저장하고 처리하여 성능을 최적화할 수 있습니다. 그러나 한 행이 둘 이상의 구독자로 복제될 수 없도록 데이터가 분할되어야 합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -146,7 +145,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  게시의 각 아티클에 대해 3단계를 반복합니다.  
   
-5.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
+5.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>기존 게시에 대한 병합 필터 동작을 확인 및 수정하려면  
   

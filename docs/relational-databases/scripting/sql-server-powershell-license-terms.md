@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- powershell
+ms.technology: powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0916924eeb783ae65dd254b4d105a01067a08bd5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b97a7e33924f1ee7b6d6e19c08b020ec0b5c779
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-powershell-license-terms"></a>SQL Server PowerShell 사용 조건
 **MICROSOFT 소프트웨어 사용 조건**
@@ -108,4 +106,3 @@ ms.lasthandoff: 06/22/2017
     - 계약 위반, 보증, 보장 또는 조건의 불이행, 무과실 책임, 과실 또는 관련 법률에서 허용하는 범위 내의 기타 불법 행위 등으로 인한 청구
 
     Microsoft가 그러한 손해의 가능성에 대해 사전에 알고 있었거나 알아야만 했던 경우에도 적용됩니다. 귀하가 거주하고 있는 국가에서 부수적, 파생적 또는 기타 손해의 배제나 제한을 허용하지 않는 경우에는 위의 제한이나 배제가 적용되지 않을 수 있습니다.
-

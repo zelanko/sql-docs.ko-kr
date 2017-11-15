@@ -5,22 +5,20 @@ ms.date: 07/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 531ce97e4da5b580139a6c0de557b3c99becc170
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
 -   비용 이점: 사용한 서비스에 대한 비용만 지불합니다. 오프사이트 및 백업 보관 옵션만큼 비용 효율적일 수 있습니다. 자세한 내용과 링크는 [Microsoft Azure 청구 고려 사항](#Billing) 섹션을 참조하십시오.  
   
-##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
+##  <a name="Billing"></a> Microsoft Azure 청구 고려 사항:  
  Microsoft Azure Storage 비용을 이해하면 Microsoft Azure에서 백업을 만들고 저장하는 데 드는 비용을 예측할 수 있습니다.  
   
  [Microsoft Azure 가격 계산기](http://go.microsoft.com/fwlink/?LinkId=277060) 로 예상 비용을 계산할 수 있습니다.  
@@ -77,4 +75,3 @@ ms.lasthandoff: 06/22/2017
 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: 78
+caps.latest.revision: "78"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 882ea4b4fd7c2954ec3586e78db5c22aa0418e54
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 873b3fe6f7bcfa321f9a6b05473b57b9fb2030cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
   이 섹션에서는 데이터베이스 미러링 모니터 및 **sp_dbmmonitor** 시스템 저장 프로시저를 소개하고 **데이터베이스 미러링 모니터 작업**을 포함하는 데이터베이스 미러링 모니터링의 작동 방법에 대해 설명하며 데이터베이스 미러링 세션에 대한 모니터링 정보를 간단하게 설명합니다. 또한 이 섹션에서는 미리 정의된 데이터베이스 미러링 이벤트 집합에 대해 경고 임계값을 정의하는 방법과 데이터베이스 미러링 이벤트에 대해 경고를 설정하는 방법을 소개합니다.  
@@ -339,4 +337,3 @@ ms.lasthandoff: 08/02/2017
  [서버 이벤트용 WMI 공급자 개념](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   
-

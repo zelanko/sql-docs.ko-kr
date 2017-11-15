@@ -1,29 +1,25 @@
 ---
 title: "쿼리 저장소에 대한 모범 사례 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, best practices
+helpviewer_keywords: Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,8 +33,8 @@ ms.lasthandoff: 10/10/2017
  문제 해결 시나리오에서 쿼리 저장소를 사용하는 방법에 대한 빠른 설명은 [Query Store @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)(Azure 블로그의 쿼리 저장소)를 참조하세요.  
   
 ##  <a name="Insight"></a> Azure SQL Database에서 Query Performance Insight 사용  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 쿼리 저장소를 사용하는 경우 **Query Performance Insight**를 사용하여 시간의 흐름에 따른 DTU 사용을 분석할 수 있습니다.  
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 모든 쿼리(CPU, 메모리, IO 등)에 대한 자세한 리소스 사용을 가져오는 동안 Query Performance Insight에서는 데이터베이스의 전체 DTU 사용에 대한 영향을 빠르고 효율적으로 확인하는 방법을 제공합니다.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 쿼리 저장소를 사용하는 경우 **Query Performance Insight** 를 사용하여 시간의 흐름에 따른 DTU 사용을 분석할 수 있습니다.  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모든 쿼리(CPU, 메모리, IO 등)에 대한 자세한 리소스 사용을 가져오는 동안 Query Performance Insight에서는 데이터베이스의 전체 DTU 사용에 대한 영향을 빠르고 효율적으로 확인하는 방법을 제공합니다.  
 자세한 내용은 [Azure SQL 데이터베이스 Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)를 참조하세요.    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>탄력적 풀 데이터베이스에서 쿼리 저장소 사용
@@ -56,7 +52,7 @@ ms.lasthandoff: 10/10/2017
   
  쿼리 저장소에서 쿼리, 실행 계획 및 통계를 수집하는 동안 이 한도에 도달할 때까지 데이터베이스에서 크기가 증가합니다. 한도에 도달하면 쿼리 저장소는 작업 모드를 자동으로 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다. 즉 성능 분석은 더 이상 정확하지 않게 됩니다.  
   
- 서로 다른 쿼리와 계획을 많이 생성하거나 쿼리 기록을 장기간 유지하려고 할 경우에는 기본값(100MB)이 충분하지 않을 수도 있습니다. 현재 공간 사용을 계속 추적하고 최대 크기(MB)를 늘려 쿼리 저장소가 읽기 전용 모드로 전환되지 않도록 합니다.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하거나 다음 스크립트를 실행하여 쿼리 저장소 크기에 대한 최신 정보를 확인합니다.  
+ 서로 다른 쿼리와 계획을 많이 생성하거나 쿼리 기록을 장기간 유지하려고 할 경우에는 기본값(100MB)이 충분하지 않을 수도 있습니다. 현재 공간 사용을 계속 추적하고 최대 크기(MB)를 늘려 쿼리 저장소가 읽기 전용 모드로 전환되지 않도록 합니다.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하거나 다음 스크립트를 실행하여 쿼리 저장소 크기에 대한 최신 정보를 확인합니다.  
   
 ```tsql 
 USE [QueryStoreDB];  
@@ -119,7 +115,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  ![query-store-troubleshooting](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
   
- 이전 섹션에서 설명한 대로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 쿼리 저장소를 사용하도록 설정하거나 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
+ 이전 섹션에서 설명한 대로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 쿼리 저장소를 사용하도록 설정하거나 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
 ```tsql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
@@ -153,7 +149,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  최적 상태가 아닌 성능의 쿼리를 식별한 경우 수행할 작업은 문제의 성격에 따라 다릅니다.  
   
--   쿼리가 여러 계획으로 실행되고 마지막 계획이 이전 계획보다 훨씬 나쁜 경우 계획 적용 메커니즘을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 향후 실행에 최적 계획을 사용하도록 할 수 있습니다.  
+-   쿼리가 여러 계획으로 실행되고 마지막 계획이 이전 계획보다 훨씬 나쁜 경우 계획 적용 메커니즘을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 향후 실행에 최적 계획을 사용하도록 할 수 있습니다.  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
@@ -294,7 +290,7 @@ FROM sys.database_query_store_options;
   
     -   작업에 서로 다른 쿼리 계획의 수가 적은 경우(예: 고유한 query_hash의 수와 sys.query_store_query에 있는 총 항목 수 사이의 비율이 1 미만일 때) [PARAMETERIZATION 데이터베이스 옵션](../../relational-databases/databases/database-properties-options-page.md#miscellaneous) 명령을 사용하도록 강제 매개 변수화를 구성합니다.  
   
--   **쿼리 캡처 모드**를 AUTO로 설정하여 리소스 사용이 작은 임시 쿼리를 자동으로 필터링하여 제외합니다.  
+-   **쿼리 캡처 모드** 를 AUTO로 설정하여 리소스 사용이 작은 임시 쿼리를 자동으로 필터링하여 제외합니다.  
   
 ##  <a name="Drop"></a> 쿼리에 대해 포함하는 개체를 유지 관리할 경우 DROP 또는 CREATE 패턴 방지  
  쿼리 저장소는 쿼리 항목을 포함하는 개체(저장 프로시저, 함수 및 트리거)에 연결합니다.  포함하는 개체를 다시 만들면 같은 쿼리 텍스트에 대해 새 쿼리 항목이 생성됩니다. 시간이 흐름에 따라 해당 쿼리에 대한 성능 통계를 추적하는 작업이 방지되고 강제 적용 메커니즘이 사용됩니다. 이 문제를 방지하려면 `ALTER <object>` 프로세스를 사용하여 가능할 때마다 포함하는 개체 정의를 변경합니다.  
@@ -337,4 +333,3 @@ WHERE is_forced_plan = 1;
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)  
   
-

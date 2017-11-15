@@ -1,27 +1,24 @@
 ---
 title: "고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 DDL | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6468568f12555425cb038ce6293f8777e0a3689
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6e467fa064651938b649f2f8ebc1cb7d698e1b48
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 DDL
   이 항목에는 저장 프로시저, 스칼라 UDF, 인라인 TVF 및 트리거와 같은 고유하게 컴파일된 T-SQL 모듈에 지원되는 DDL 구문을 나열합니다.  
@@ -64,4 +61,3 @@ ms.lasthandoff: 06/22/2017
  [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

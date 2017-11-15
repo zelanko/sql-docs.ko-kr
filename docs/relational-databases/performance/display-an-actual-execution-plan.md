@@ -1,12 +1,11 @@
 ---
-title: "실제 실행 계획 표시 | Microsoft Docs"
+title: "실제 실행 계획 표시 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - viewing execution plans
 - execution plans [SQL Server], displaying
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: da2e499e231dc55691a9b39929e4ba6589b5e442
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
-
+ms.openlocfilehash: 1a630e54028bb930453ec50503284fc360c878e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-an-actual-execution-plan"></a>실제 실행 계획 표시
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실제 그래픽 실행 계획을 생성하는 방법에 대해 설명합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리가 실행된 후 실제 실행 계획이 실행됩니다. 이 때문에 실제 실행 계획에는 실제 리소스 사용량 메트릭 및 런타임 경고(있는 경우)와 같은 런타임 정보가 포함됩니다. 생성된 실행 계획은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 쿼리를 실행할 때 사용한 실제 쿼리 실행 계획을 표시합니다.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 08/22/2017
  
  > [!NOTE] 
  > 또는 [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)을 사용하여 실행된 각 문에 대한 실행 계획 정보를 반환합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용한 경우 *결과* 탭에 실행 계획을 그래픽 형식으로 여는 링크가 포함됩니다.   
-

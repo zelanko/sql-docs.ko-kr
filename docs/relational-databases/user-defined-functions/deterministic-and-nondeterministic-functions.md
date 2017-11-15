@@ -5,8 +5,7 @@ ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
-ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 0a9aeecbec7487e9d750fabb7e2374366f41678a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>결정적 함수 및 비결정적 함수
   결정적 함수는 데이터베이스의 상태가 같을 경우 특정 입력 값 집합으로 호출될 때마다 항상 동일한 결과를 반환합니다. 비결정적 함수는 액세스하는 데이터베이스의 상태가 동일하게 유지되더라도 특정 입력 값 집합으로 호출될 때마다 다른 결과를 반환할 수 있습니다. 예를 들어 AVG 함수는 항상 위에서 설명된 조건에 따라 동일한 결과를 반환하지만 현재 날짜/시간 값을 반환하는 GETDATE 함수는 항상 다른 결과를 반환합니다.  
@@ -103,4 +101,3 @@ ms.lasthandoff: 10/17/2017
  일괄 처리 또는 저장 프로시저에서 호출하는 경우와 마찬가지로 확장 저장 프로시저는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 가 실행되고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 계정 컨텍스트에서 실행됩니다. 확장 저장 프로시저의 소유자는 다른 사용자에게 프로시저를 실행하는 권한을 부여할 때 이 보안 컨텍스트의 권한을 고려해야 합니다.  
   
   
-

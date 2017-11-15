@@ -1,30 +1,27 @@
 ---
 title: "메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 13b7c99ce7dc82823dec6f518e84b55820fcdc63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 08/03/2017
   
 -   작업을 분석하여 메모리 내 OLTP를 통해 성능 향상이 가능한 핫 스폿을 결정합니다. 트랜잭션 성능 분석 보고서는 메모리 내 OLTP로 변환할 경우 가장 이익이 되는 테이블과 저장 프로시저를 추천합니다.  
   
--   메모리 내 OLTP로 마이그레이션하는 작업을 계획하고 실행하는 데 도움이 됩니다. 디스크 기반 테이블에서 메모리 액세스에 최적화된 테이블로의 마이그레이션 경로는 시간이 많이 걸릴 수 있습니다. 메모리 최적화 관리자를 사용하여 테이블을 메모리 내 OLTP로 이동하기 전에 테이블에서 제거해야 하는 비호환성을 식별할 수 있습니다. 메모리 최적화 관리자는 메모리 액세스에 최적화된 테이블로의 테이블 마이그레이션이 응용 프로그램에 미치는 영향을 이해하는 데도 도움이 됩니다.  
+-   메모리 내 OLTP로 마이그레이션하는 작업을 계획하고 실행하는 데 도움이 됩니다. 디스크 기반 테이블에서 메모리 최적화 테이블로의 마이그레이션 경로는 시간이 많이 걸릴 수 있습니다. 메모리 최적화 관리자를 사용하여 테이블을 메모리 내 OLTP로 이동하기 전에 테이블에서 제거해야 하는 비호환성을 식별할 수 있습니다. 메모리 최적화 관리자는 메모리 액세스에 최적화된 테이블로의 테이블 마이그레이션이 응용 프로그램에 미치는 영향을 이해하는 데도 도움이 됩니다.  
   
      메모리 내 OLTP로 마이그레이션을 계획할 때와 일부 테이블과 저장 프로시저를 메모리 내 OLTP로 마이그레이션하려고 작업할 때마다 메모리 내 OLTP가 응용 프로그램에 도움이 되는지를 확인할 수 있습니다.  
   
@@ -73,13 +70,13 @@ ms.lasthandoff: 08/03/2017
   
 -   마이그레이션 문제 섹션  
   
-     이 섹션에는 이 데이터베이스 테이블을 메모리 액세스에 최적화된 테이블로 변환할 때 발생한 문제를 보여 주는 테이블이 있습니다. 문제 등급이 높을수록 테이블 변환에 문제가 많은 것입니다. 이 데이터베이스 테이블을 변환하는 방법에 대한 자세한 내용을 보려면 메모리 최적화 관리자를 사용하십시오.  
+     이 섹션에는 이 데이터베이스 테이블을 메모리 최적화 테이블로 변환할 때 발생한 문제를 보여 주는 테이블이 있습니다. 문제 등급이 높을수록 테이블 변환에 문제가 많은 것입니다. 이 데이터베이스 테이블을 변환하는 방법에 대한 자세한 내용을 보려면 메모리 최적화 관리자를 사용하십시오.  
   
 테이블 세부 정보 보고서에 대한 검색 및 경합 통계는 sys.dm_db_index_operational_stats(Transact-SQL)에서 수집되고 집계됩니다.  
 
 ### <a name="stored-procedures"></a>저장 프로시저
 
- CPU 시간 대 경과 시간 비율이 높은 저장 프로시저는 마이그레이션 대상으로 적합합니다. 고유하게 컴파일된 저장 프로시저는 메모리 액세스에 최적화된 테이블을 참조만 할 수 있기 때문에 보고서에 모든 테이블 참조가 표시되므로 마이그레이션 비용이 추가될 수 있습니다.  
+ CPU 시간 대 경과 시간 비율이 높은 저장 프로시저는 마이그레이션 대상으로 적합합니다. 고유하게 컴파일된 저장 프로시저는 메모리 최적화 테이블을 참조만 할 수 있기 때문에 보고서에 모든 테이블 참조가 표시되므로 마이그레이션 비용이 추가될 수 있습니다.  
   
  저장 프로시저에 대한 세부 정보 보고서는 다음 두 개의 섹션으로 구성됩니다.  
   
@@ -99,14 +96,14 @@ ms.lasthandoff: 08/03/2017
   
 -   테이블 참조 섹션  
   
-     이 섹션에는 이 저장 프로시저가 참조하는 테이블을 보여 주는 테이블이 있습니다. 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 변환하기 전에 이러한 모든 테이블은 메모리 액세스에 최적화된 테이블로 변환되어야 하며 동일한 서버 및 데이터베이스에 있어야 합니다.  
+     이 섹션에는 이 저장 프로시저가 참조하는 테이블을 보여 주는 테이블이 있습니다. 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 변환하기 전에 이러한 모든 테이블은 메모리 최적화 테이블로 변환되어야 하며 동일한 서버 및 데이터베이스에 있어야 합니다.  
   
  저장 프로시저 세부 정보 보고서에 대한 실행 통계는 sys.dm_exec_procedure_stats(Transact-SQL)에서 수집되고 집계됩니다. 참조는 sys.sql_expression_dependencies(TRANSACT-SQL)에서 가져옵니다.  
   
  저장 프로시저를 고유하게 컴파일된 저장 프로시저로 변환하는 방법을 자세히 알아보려면 네이티브 컴파일 관리자를 사용하십시오.  
   
 ## <a name="generating-in-memory-oltp-migration-checklists"></a>메모리 내 OLTP 마이그레이션 검사 목록 생성  
- 마이그레이션 검사 목록은 메모리 액세스에 최적화된 테이블 또는 고유하게 컴파일된 저장 프로시저에서 지원되지 않는 모든 테이블 또는 저장 프로시저를 식별합니다. 메모리 최적화 및 네이티브 컴파일 관리자는 단일 디스크 기반 테이블 또는 해석된 T-SQL 저장 프로시저에 대한 검사 목록을 생성할 수 있습니다. 또한, 데이터베이스의 여러 테이블 및 저장 프로시저에 대한 마이그레이션 검사 목록을 생성하는 것도 가능합니다.  
+ 마이그레이션 검사 목록은 메모리 최적화 테이블 또는 고유하게 컴파일된 저장 프로시저에서 지원되지 않는 모든 테이블 또는 저장 프로시저를 식별합니다. 메모리 최적화 및 네이티브 컴파일 관리자는 단일 디스크 기반 테이블 또는 해석된 T-SQL 저장 프로시저에 대한 검사 목록을 생성할 수 있습니다. 또한, 데이터베이스의 여러 테이블 및 저장 프로시저에 대한 마이그레이션 검사 목록을 생성하는 것도 가능합니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 메모리 내 OLTP 마이그레이션 검사 목록 생성 **명령 또는 PowerShell을 사용하여** 내에 마이그레이션 검사 목록을 생성할 수 있습니다.  
   
@@ -181,4 +178,3 @@ ms.lasthandoff: 08/03/2017
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

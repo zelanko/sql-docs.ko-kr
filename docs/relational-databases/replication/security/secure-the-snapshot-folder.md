@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- snapshots [SQL Server replication], security
+helpviewer_keywords: snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 190f5cb081710100927ef837a09699cfc6c78f11
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 43c9603e1f3a30ed558d264edb81d81c6d4c1297
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅숏 폴더 보안 설정
   스냅숏 폴더는 스냅숏 파일을 저장하는 디렉터리입니다. 스냅숏 저장 전용 디렉터리를 지정하는 것이 좋습니다. 스냅숏 에이전트에 폴더에 대한 쓰기 권한을 부여하고 병합 에이전트 또는 배포 에이전트가 폴더에 액세스할 때 사용하는 Windows 계정에만 읽기 권한을 부여합니다. 에이전트에 연결된 Windows 계정은 원격 컴퓨터에 있는 스냅숏 폴더에 액세스할 수 있는 도메인 계정이어야 합니다.  

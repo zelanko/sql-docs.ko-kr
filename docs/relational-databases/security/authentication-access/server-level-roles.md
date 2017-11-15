@@ -1,12 +1,11 @@
 ---
-title: "서버 수준 역할 | Microsoft Docs"
+title: "서버 수준 역할 | Microsoft 문서"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 1fb77447fa5eff29fc917569d221a6897fd6106d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -106,4 +104,3 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [서버 역할 만들기](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
   
   
-

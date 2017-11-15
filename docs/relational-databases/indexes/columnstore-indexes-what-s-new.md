@@ -1,27 +1,24 @@
 ---
 title: "Columnstore 인덱스 - 새로운 기능 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
-ms.openlocfilehash: 0a63e3e5641ce513e0d3c30705ac8a7523cbc053
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 919cdbcd48d8773b906ad7e410cb18627fddd8bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +47,7 @@ ms.lasthandoff: 07/31/2017
 |비클러스터형 columnstore 인덱스를 가진 힙 또는 btree에 사용할 수 있는 추가 btree 인덱스입니다.|예|예|예|예|예|예|  
 |업데이트할 수 있는 클러스터형 columnstore 인덱스입니다.||예|예|예|예|예|  
 |클러스터형 columnstore 인덱스에 대한 btree 인덱스입니다.|||예|예|예|예|  
-|메모리 액세스에 최적화된 테이블에 대한 columnstore 인덱스입니다.|||예|예|예|예|  
+|메모리 최적화 테이블에 대한 columnstore 인덱스입니다.|||예|예|예|예|  
 |비클러스터형 columnstore 인덱스 정의는 필터링된 조건 사용을 지원합니다.|||예|예|예|예|  
 |CREATE TABLE 및 ALTER TABLE의 columnstore 인덱스에 대한 압축 지연 옵션입니다.|||예|예|예|예|
 |Columnstore 인덱스에는 비지속형 계산 열이 있을 수 있습니다.||||예|||   
@@ -182,4 +179,3 @@ ms.lasthandoff: 07/31/2017
  [Columnstore 인덱스 조각 모음](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

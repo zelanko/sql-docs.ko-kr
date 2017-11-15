@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Best Practices [Database Engine]
+helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b7b97953af80e1c0628ce61d1663015b56e0190
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 19115eaa47c43ab326067fd8610bf3589406a07b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="storage-system-input-output-time-out"></a>저장소 시스템 입/출력 시간 초과
   이 규칙은 시스템 이벤트 로그에서 EventId 9를 검사합니다. 이 메시지는 저장소 시스템에서 I/O 시간 초과가 발생했음을 나타냅니다.  
@@ -38,4 +35,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server I/O 기본 사항, 2장(SQL Server I/O Basics, Chapter 2)](http://go.microsoft.com/fwlink/?LinkId=69370)  
   
   
-

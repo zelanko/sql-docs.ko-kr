@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - articles [SQL Server replication], defining
 - sp_addmergearticle
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - sp_addarticle
 - articles [SQL Server replication], adding
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3e37e75379dc4fd1722dd660b2c6145c9540732e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 965b8780e4c8f0ae1321170995127670bc0949b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-an-article"></a>아티클 정의
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 아티클을 정의하는 방법에 대해 설명합니다.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 06/22/2017
   
          다른 서버가 배포자의 역할을 하도록 지정한 경우 게시자에서 배포자로 연결할 때 사용할 암호를 **관리 암호** 페이지에 입력해야 합니다. 이 암호는 원격 배포자에서 게시자를 설정할 때 지정한 암호와 일치해야 합니다.  
   
-         자세한 내용은 [배포 구성](../../../relational-databases/replication/configure-distribution.md)을 참조하세요.  
+         자세한 내용은 [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)를 참조하세요.  
   
     -   게시 데이터베이스를 선택합니다.  
   
@@ -96,22 +94,22 @@ ms.lasthandoff: 06/22/2017
   
          \- 구독 업데이트를 허용하는 트랜잭션 게시에 대한 큐 판독기 에이전트  
   
-         자세한 내용은 [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md) 및 [복제 보안을 위한 최선의 구현 방법](../../../relational-databases/replication/security/replication-security-best-practices.md)를 참조하세요.  
+         자세한 내용은 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) 및 [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)를 참조하세요.  
   
-    -   필요에 따라 게시를 스크립팅합니다. 자세한 내용은 [스크립팅 복제](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
+    -   필요에 따라 게시를 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   
     -   게시의 이름을 지정합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- 게시를 만든 후에 복제 저장 프로시저를 사용하여 아티클을 프로그래밍 방식으로 만들 수 있습니다. 아티클을 만드는 데 사용되는 저장 프로시저는 정의하려는 아티클의 게시 유형에 따라 달라집니다. 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+ 게시를 만든 후에 복제 저장 프로시저를 사용하여 아티클을 프로그래밍 방식으로 만들 수 있습니다. 아티클을 만드는 데 사용되는 저장 프로시저는 정의하려는 아티클의 게시 유형에 따라 달라집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)을 참조하세요.  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 아티클을 정의하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@publication**에 아티클이 속한 게시의 이름을, **@article**에 아티클 이름을, **@source_object**에 게시되는 데이터베이스 개체를 지정하고, 그 밖의 선택적 매개 변수를 지정합니다. **dbo**가 아닌 경우 **@source_owner**를 사용하여 개체의 스키마 소유권을 지정합니다. 로그 기반 테이블 아티클이 아닌 경우 **@type**에 아티클 유형을 지정합니다. 자세한 내용은 [아티클 유형 지정&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)을 참조하세요.  
   
-2.  테이블의 행을 행 필터링하거나 아티클을 보려면 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 를 사용하여 필터 절을 정의합니다. 자세한 내용은 [정적 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)을 참조하세요.  
+2.  테이블의 행을 행 필터링하거나 아티클을 보려면 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 를 사용하여 필터 절을 정의합니다. 자세한 내용은 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
-3.  테이블의 열을 열 필터링하거나 아티클을 보려면 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)을 사용합니다. 자세한 내용은 [열 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요.  
+3.  테이블의 열을 열 필터링하거나 아티클을 보려면 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)을 사용합니다. 자세한 내용은 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요.  
   
 4.  아티클이 필터링되었으면 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 를 실행합니다.  
   
@@ -124,11 +122,11 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>병합 게시에 대한 아티클을 정의하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **@publication**에 게시 이름을, **@article**에 아티클 이름을, **@source_object**에 게시되는 개체를 지정합니다. 테이블 행을 행 필터링하려면 **@subset_filterclause**를 참조하세요. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 및 [정적 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)를 참조하세요. 테이블 아티클이 아니라면 **@type**를 참조하세요. 자세한 내용은 [아티클 유형 정의&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)를 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **@publication**에 게시 이름을, **@article**에 아티클 이름을, **@source_object**에 게시되는 개체를 지정합니다. 테이블 행을 행 필터링하려면 **@subset_filterclause**를 참조하세요. 자세한 내용은 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 및 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)를 참조하세요. 테이블 아티클이 아니라면 **@type**를 참조하세요. 자세한 내용은 [아티클 유형 정의&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)를 참조하세요.  
   
-2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
+2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
-3.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 을 실행하여 테이블 열을 필터링합니다. 자세한 내용은 [열 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요.  
+3.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 을 실행하여 테이블 열을 필터링합니다. 자세한 내용은 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 `Product` 테이블을 기반으로 트랜잭션 게시에 대한 아티클을 정의합니다. 여기에서 아티클은 행 및 열 방향으로 필터링됩니다.  
@@ -155,7 +153,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)   
  [복제 시스템 저장 프로시저 개념](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
@@ -164,4 +162,3 @@ ms.lasthandoff: 06/22/2017
  [복제 시스템 저장 프로시저 개념](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   
-

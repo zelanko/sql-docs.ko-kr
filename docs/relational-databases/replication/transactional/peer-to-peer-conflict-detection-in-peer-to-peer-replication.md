@@ -5,25 +5,23 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2b248262e1344a7dc4652ed5d48aefa081a2f40
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9a2c2b23d8fd86531e7a29707f1b0930b3c794f9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>피어 투 피어 - 피어 투 피어 복제에서 충돌 검색
   피어 투 피어 트랜잭션 복제를 사용하면 토폴로지의 모든 노드에서 데이터를 삽입, 업데이트 및 삭제하고 데이터 변경 내용을 다른 노드로 전파할 수 있습니다. 모든 노드에서 데이터를 변경할 수 있으므로 각 노드에서의 변경이 서로 충돌할 수 있습니다. 두 개 이상의 노드에서 행이 수정되면 이 행이 다른 노드에 전파될 때 충돌이 발생하거나 업데이트가 손실될 수 있습니다.  
@@ -108,4 +106,3 @@ ms.lasthandoff: 06/22/2017
  [@loopback_detection](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   
-

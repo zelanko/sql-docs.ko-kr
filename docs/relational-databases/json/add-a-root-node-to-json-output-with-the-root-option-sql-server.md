@@ -1,29 +1,25 @@
 ---
-title: "ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가(SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가(SQL Server) | Microsoft 문서"
+ms.custom: SQL2016_New_Updated
 ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ROOT (FOR JSON)
+helpviewer_keywords: ROOT (FOR JSON)
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 58948fd1977e2094b1469ab92ac1debf0e7f4b2e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: c59601e64d26fb046d4ab477bcfbcf9d6b2d6089
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -164,4 +160,3 @@ SELECT TOP 5
  [FOR 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
   
   
-

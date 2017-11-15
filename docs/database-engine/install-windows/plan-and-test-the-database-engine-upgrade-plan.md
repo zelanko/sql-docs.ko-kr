@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: cbe7bceca06dd5eef19b56433a8054c20d2e88d2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>데이터베이스 엔진 업그레이드 계획 및 테스트
   방법과 상관없이 성공적인 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 업그레이드를 수행하려면 적절한 계획이 필요합니다.  
@@ -69,13 +67,14 @@ ms.lasthandoff: 08/02/2017
   
 -   **시스템 구성 검사기:**  업그레이드를 실제로 예약하기 전에 SQL Server 설치 프로그램이 차단 문제를 검색하는지 여부를 결정하려면 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] SCC(시스템 구성 검사기)를 실행합니다. 자세한 내용은 [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)을 참조하세요.  
   
--   **메모리 액세스에 최적화된 테이블 업그레이드:** 메모리 액세스에 최적화된 테이블이 포함된 SQL Server 2014 데이터베이스 인스턴스를 SQL Server 2016으로 업그레이드하는 경우 메모리 액세스에 최적화된 테이블을 새 디스크상 형식으로 업그레이드하기 위해 업그레이드 프로세스에 추가 시간이 필요하며 이 단계가 수행되는 동안 데이터베이스가 오프라인 상태가 됩니다.   시간의 양은 메모리 액세스에 최적화된 테이블의 크기 및 I/O 하위 시스템의 속도에 따라 달라집니다. 업그레이드를 위해 내부 및 새 설치 업그레이드의 경우 데이터 작업 크기 세 개가 필요합니다(롤링 업그레이드의 경우 1단계가 필요 없지만 2단계와 3단계는 필요함).  
+-   
+            **메모리 최적화 테이블 업그레이드:** 메모리 최적화 테이블이 포함된 SQL Server 2014 데이터베이스 인스턴스를 SQL Server 2016으로 업그레이드하는 경우 메모리 최적화 테이블을 새 디스크상 형식으로 업그레이드하기 위해 업그레이드 프로세스에 추가 시간이 필요하며 이 단계가 수행되는 동안 데이터베이스가 오프라인 상태가 됩니다.   시간의 양은 메모리 최적화 테이블의 크기 및 I/O 하위 시스템의 속도에 따라 달라집니다. 업그레이드를 위해 내부 및 새 설치 업그레이드의 경우 데이터 작업 크기 세 개가 필요합니다(롤링 업그레이드의 경우 1단계가 필요 없지만 2단계와 3단계는 필요함).  
   
-    1.  이전의 디스크상 형식을 사용하여 데이터베이스 복구 실행(메모리 액세스에 최적화된 테이블을 디스크에서 메모리로 로드하는 작업이 포함됨)  
+    1.  이전의 디스크상 형식을 사용하여 데이터베이스 복구 실행(메모리 최적화 테이블을 디스크에서 메모리로 로드하는 작업이 포함됨)  
   
     2.  데이터를 새 디스크상 형식으로 디스크에 직렬화  
   
-    3.  새 형식을 사용하여 데이터베이스 복구 실행(메모리 액세스에 최적화된 테이블을 디스크에서 메모리로 로드하는 작업이 포함됨)  
+    3.  새 형식을 사용하여 데이터베이스 복구 실행(메모리 최적화 테이블을 디스크에서 메모리로 로드하는 작업이 포함됨)  
   
      또한 이 과정 중에 디스크의 공간이 부족하면 복구가 실패합니다. 내부 업그레이드를 수행하기 위해 또는 SQL Server 2014 데이터베이스를 SQL Server 2016 인스턴스에 연결하는 경우 데이터베이스의 MEMORY_OPTIMIZED_DATA 파일 그룹에 있는 컨테이너의 현재 크기와 같은 추가 공간에 기존 데이터베이스를 저장할 공간을 더한 충분한 공간이 디스크에 있는지 확인합니다. 다음 쿼리를 사용하여 MEMORY_OPTIMIZED_DATA 파일 그룹에 현재 필요한 디스크 공간 및 그에 따라 업그레이드가 성공하는 데 필요한 사용 가능 디스크 공간의 양을 결정합니다.  
   
@@ -100,4 +99,3 @@ ms.lasthandoff: 08/02/2017
  [데이터베이스 엔진 업그레이드](../../database-engine/install-windows/upgrade-database-engine.md)  
   
   
-

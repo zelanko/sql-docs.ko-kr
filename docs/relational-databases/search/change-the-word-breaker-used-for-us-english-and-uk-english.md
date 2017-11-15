@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 6e05164fa73d36e4efa96b1f4543feaf31a24fd1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>미국 영어 및 영국 영어에 사용되는 단어 분리기 변경
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 영어용 단어 분리기 및 형태소 분석기의 새 버전(버전 14.0.4999.1038)을 설치하여 이전 버전(버전 12.0.6828.0)의 해당 구성 요소를 대체합니다. 새 구성 요소의 변경된 동작에 대한 자세한 내용은 [전체 텍스트 검색의 동작 변경](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)을 참조하세요. 이 항목에서는 이러한 새 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다. 클러스터 설치의 경우 이러한 변경은 모든 주 노드 및 패시브 노드에서 수행해야 합니다.  
@@ -133,4 +131,3 @@ ms.lasthandoff: 07/31/2017
  [전체 텍스트 검색의 동작 변경](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   
-

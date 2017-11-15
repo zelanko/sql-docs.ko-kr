@@ -9,19 +9,17 @@ ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
-ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/20/2017
-
+ms.openlocfilehash: 335077eef51f479d55526ae47fe9b7bff3144f4e
+ms.sourcegitcommit: 284a64817d5641b5245bc70ddebef2dc51d2e558
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/13/2017
 ---
-
 # <a name="configure-distributed-availability-group"></a>분산 가용성 그룹 구성  
 
 분산 가용성 그룹을 만들려면 각 WSFC(Windows Server 장애 조치 클러스터)에서 가용성 그룹 및 수신기를 만들어야 합니다. 그런 다음 이러한 가용성 그룹을 분산 가용성 그룹으로 결합해야 합니다. 다음 단계는 TRANSACT-SQL에서의 기본 예제를 제공합니다. 이 예제에서는 가용성 그룹 및 수신기를 만드는 데 관련된 자세한 내용을 다루지 않는 대신 주요 요구 사항을 집중적으로 다루고 있습니다. 
@@ -344,4 +342,3 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
-

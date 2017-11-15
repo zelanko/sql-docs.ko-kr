@@ -1,26 +1,24 @@
 ---
-title: "Microsoft Azure에 대한 SQL Server Managed Backup 해제 | Microsoft Docs"
+title: "Microsoft Azure에 대한 SQL Server Managed Backup 해제 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
-ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/24/2017
-
+ms.openlocfilehash: bd210025eb75eceedfbeb31bc485ef0f8b4d37e2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -140,4 +138,3 @@ ms.lasthandoff: 08/24/2017
 - [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   
   
-

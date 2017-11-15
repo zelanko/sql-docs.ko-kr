@@ -5,26 +5,22 @@ ms.date: 07/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "데이터 컬렉션"
-helpviewer_keywords:
-- data collection [SQL Server]
+keywords: "데이터 컬렉션"
+helpviewer_keywords: data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2fd833eaeb6d1473f508967f740ad4ba331ae5e8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d554a001c8375a6ad619f4ed00e362a64fa279b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-collection"></a>데이터 컬렉션
   데이터 수집기는 다양한 데이터 집합을 수집하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소입니다. 데이터 컬렉션은 항상 실행되거나 사용자 정의 일정에 따라 실행됩니다. 데이터 수집기는 관리 데이터 웨어하우스로 알려진 관계형 데이터베이스에 수집한 데이터를 저장합니다.  
@@ -124,5 +120,4 @@ ms.lasthandoff: 06/22/2017
 |SQL Server Profiler의 서버 쪽 추적 기능을 이용하여 일반 SQL 추적 수집기 형식을 사용하는 컬렉션 집합을 만들기 위한 추적 정의를 내보냅니다.| [SQL Server 프로파일러를 사용하여 SQL 추적 컬렉션 집합 만들기(SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
   
   
-
 

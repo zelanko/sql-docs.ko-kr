@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.maint.cleanup.f1
-helpviewer_keywords:
-- Maintenance Cleanup Task dialog box
+f1_keywords: sql13.swb.maint.cleanup.f1
+helpviewer_keywords: Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 47b569e7d8c486de044d9784af2cb6adbab50b4f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3934b29a7067cda0cd74656c2f6fa38f0748e658
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>유지 관리 정리 태스크(유지 관리 계획)
   **유지 관리 정리 태스크** 를 사용하여 유지 관리 계획에서 만든 텍스트 보고서와 데이터베이스 백업 파일을 포함하여 유지 관리 계획과 관련된 오래된 파일을 제거할 수 있습니다.  
@@ -101,7 +97,6 @@ ms.lasthandoff: 06/22/2017
  인증 시 사용할 암호를 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [개체 탐색기의](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   
-

@@ -1,12 +1,11 @@
 ---
-title: "실행 계획 표시 및 저장 | Microsoft Docs"
+title: "실행 계획 표시 및 저장 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], execution plans
 - tuning queries [SQL Server]
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 3eb1056b561e2fea455c29c2d5f72736564c1ffd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
-
+ms.openlocfilehash: 947925cf1f0970fcc543ee577763dab17e4ed964
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-and-save-execution-plans"></a>실행 계획 표시 및 저장
   이 섹션에서는 실행 계획을 표시하는 방법과 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실행 계획을 XML 형식의 파일로 저장하는 방법에 대해 설명합니다.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 08/22/2017
 -   [XML 형식으로 실행 계획 저장](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
-

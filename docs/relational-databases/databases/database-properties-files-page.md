@@ -5,23 +5,21 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.files.f1
+f1_keywords: sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8ecac22fb15ab111571fdfdb8285d30f515bd8e1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-properties-files-page"></a>데이터베이스 속성(파일 페이지)
   이 페이지를 사용하여 새 데이터베이스를 만들 수 있으며 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다. 이 항목은 **새 데이터베이스(일반 페이지)** 와 기존 데이터베이스의 **데이터베이스 속성(파일 페이지)**에 적용됩니다.  
@@ -45,28 +43,28 @@ ms.lasthandoff: 06/22/2017
  **파일 유형**  
  목록에서 파일 유형을 선택합니다. 파일 유형은 **데이터**, **로그**또는 **Filestream 데이터**가 될 수 있습니다. 기존 파일의 파일 유형은 수정할 수 없습니다.  
   
- 메모리 액세스에 최적화된 파일 그룹에 파일(컨테이너)을 추가하려면 **Filestream 데이터** 를 선택합니다.  
+ 메모리 최적화 파일 그룹에 파일(컨테이너)을 추가하려면 **Filestream 데이터** 를 선택합니다.  
   
  Filestream 데이터 파일 그룹에 파일 (컨테이너)을 추가하려면 FILESTREAM을 사용해야 합니다. [서버 속성(고급 페이지)](../../database-engine/configure-windows/server-properties-advanced-page.md) 대화 상자를 사용하여 FILESTREAM을 설정할 수 있습니다.  
   
  **파일 그룹**  
  목록에서 파일이 속한 파일 그룹을 선택합니다. 기본 파일 그룹은 PRIMARY입니다. **\<새 파일 그룹>**을 선택하고 **새 파일 그룹** 대화 상자에 파일 그룹에 대한 정보를 입력하여 새 파일 그룹을 만들 수 있습니다. 새 파일 그룹은 **파일 그룹** 페이지에서도 만들 수 있습니다. 기존 파일의 파일 그룹은 수정할 수 없습니다.  
   
- 메모리 액세스에 최적화된 파일 그룹에 파일(컨테이너)을 추가할 경우 **파일 그룹** 필드에 데이터베이스의 메모리 액세스에 최적화된 파일 그룹 이름이 채워집니다.  
+ 메모리 최적화 파일 그룹에 파일(컨테이너)을 추가할 경우 **파일 그룹** 필드에 데이터베이스의 메모리 최적화 파일 그룹 이름이 채워집니다.  
   
  **처음 크기**  
  파일의 처음 크기를 MB 단위로 입력하거나 수정합니다. 이 값은 기본적으로 **모델** 데이터베이스의 값입니다.  
   
  FILESTREAM 파일의 경우 이 필드가 유효하지 않습니다.  
   
- 메모리 액세스에 최적화된 파일 그룹의 파일에 대해서는 이 필드를 수정할 수 없습니다.  
+ 메모리 최적화 파일 그룹의 파일에 대해서는 이 필드를 수정할 수 없습니다.  
   
  **자동 증가**  
  파일의 자동 증가 속성을 선택하거나 표시합니다. 이러한 속성은 최대 파일 크기에 도달했을 때 파일의 확장 방법을 제어합니다. 자동 증가 값을 편집하려면 원하는 파일의 자동 증가 속성 옆에 있는 편집 단추를 클릭하고 **자동 증가 변경** 대화 상자에서 값을 변경합니다. 이러한 값은 기본적으로 **모델** 데이터베이스의 값입니다.  
   
  FILESTREAM 파일의 경우 이 필드가 유효하지 않습니다.  
   
- 메모리 액세스에 최적화된 파일 그룹의 파일에 대해서는 이 필드가 **제한 없음**이어야 합니다.  
+ 메모리 최적화 파일 그룹의 파일에 대해서는 이 필드가 **제한 없음**이어야 합니다.  
   
  **경로**  
  선택한 파일의 경로를 표시합니다. 새 파일의 경로를 지정하려면 파일 경로 옆에 있는 편집 단추를 클릭하고 대상 폴더로 이동합니다. 기존 파일의 경로는 수정할 수 없습니다.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 06/22/2017
  **파일 이름**  
  파일 이름을 표시합니다.  
   
- 이 필드는 메모리 액세스에 최적화된 파일 그룹의 파일을 포함한 FILESTREAM 파일에 유효하지 않습니다.  
+ 이 필드는 메모리 최적화 파일 그룹의 파일을 포함한 FILESTREAM 파일에 유효하지 않습니다.  
   
  **추가**  
  데이터베이스에 새 파일을 추가합니다.  

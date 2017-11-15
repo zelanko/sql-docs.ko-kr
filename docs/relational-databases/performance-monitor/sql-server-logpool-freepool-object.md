@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLServer:LogPool FreePool
+helpviewer_keywords: SQLServer:LogPool FreePool
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94165b004d209bef5b62727bce5eb4ae4a0bfcb8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4e1431cc4cc311e20daf416e9086acefe2bc6df9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, LogPool FreePool 개체
 **SQLServer:LogPool FreePool** 성능 개체는 로그 풀 내 사용 가능한 풀에 대한 통계 카운터를 제공합니다.
@@ -38,5 +35,4 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="see-also"></a>관련 항목:  
 [리소스 사용 모니터링(시스템 모니터)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
-
 

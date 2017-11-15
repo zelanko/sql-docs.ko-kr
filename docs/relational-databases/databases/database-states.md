@@ -5,12 +5,10 @@ ms.date: 07/14/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.SWB.DATABASESTATES.F1
+f1_keywords: SQL13.SWB.DATABASESTATES.F1
 helpviewer_keywords:
 - emergency database state [SQL Server]
 - verifying database states
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - states [SQL Server]
 - restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62c469f7504615a361025fd56bb4939e02c4d242
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 997df06a840d50669a643dd4d662d00ec896eaa2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-states"></a>데이터베이스 상태
   데이터베이스는 항상 하나의 특정한 상태에 있습니다. 예를 들어 ONLINE, OFFLINE 또는 SUSPECT 상태일 수 있습니다. 데이터베이스의 현재 상태를 확인하려면 **sys.databases** 카탈로그 뷰의 [state_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열이나 **DATABASEPROPERTYEX** 함수의 [Status](../../t-sql/functions/databasepropertyex-transact-sql.md) 속성을 선택합니다.  
@@ -62,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  [파일 상태](../../relational-databases/databases/file-states.md)  
   
   
-

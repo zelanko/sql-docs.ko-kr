@@ -5,25 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], security
 - Configuring Database Mirroring Security Wizard
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 56cfb79fb6490032f9b12eca137ea7a22958f03b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 5d5f46e2ea6356616864c5f60b858caa5ee0c1b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>데이터베이스 미러링 보안 구성 마법사 시작
   데이터베이스 미러링 보안 구성 마법사는 미러링과 관련된 일부 또는 모든 서버 인스턴스에서 보안 설정을 초기 구성하는 데 사용할 수 있습니다. 이 마법사는 **데이터베이스 속성** 대화 상자의 **미러링** 페이지와 함께 작동합니다.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 08/02/2017
  [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
   
-

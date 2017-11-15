@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygrouplistener.addipaddress.f1
+f1_keywords: sql13.swb.availabilitygrouplistener.addipaddress.f1
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d9083c4b210b5de01a7a15b2c7f438a57199e707
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 5dc81d9853fd9d7b1a3b3a12acdba9bf2cc5df7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>IP 주소 추가 대화 상자(SQL Server Management Studio)
   이 F1 도움말 항목에서는 **IP 주소 추가** 대화 상자의 옵션에 대해 설명합니다. 이 대화 상자는 **새 가용성 그룹 수신기** 대화 상자 및 **의** 또는 **의** 복제본 선택 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 페이지에 있는 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]탭에서 액세스합니다.  
@@ -71,4 +68,3 @@ ms.lasthandoff: 08/02/2017
  [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   
   
-

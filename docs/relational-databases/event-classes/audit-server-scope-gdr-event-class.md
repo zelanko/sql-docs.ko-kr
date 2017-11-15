@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Server Scope GDR event class
+helpviewer_keywords: Audit Server Scope GDR event class
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e31d20150fe475d5d4a952bf91426ca67a763ef
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e76dfb8308b5e7da549b7180dc565f9941f38ffb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR 이벤트 클래스
   **Audit Server Scope GDR** 이벤트 클래스는 로그인 생성과 같은 서버 범위의 사용 권한에 대해 GRANT, REVOKE 또는 DENY가 실행될 때 발생합니다.  

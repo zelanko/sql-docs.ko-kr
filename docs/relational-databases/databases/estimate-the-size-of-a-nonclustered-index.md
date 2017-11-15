@@ -5,8 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
-ms.openlocfilehash: 28b5c5dbf4ab85b11818648e2daf62621df64219
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/31/2017
-
+ms.openlocfilehash: f5b51166ff798bf62cbd24c3f9d0c640f0bc6161
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>비클러스터형 인덱스의 크기 예측
   다음 단계에 따라 비클러스터형 인덱스를 저장하는 데 필요한 공간을 예측합니다.  
@@ -91,7 +89,7 @@ ms.lasthandoff: 08/31/2017
   
      위 식의 정수 부분만 사용하고 나머지는 무시해야 합니다.  
   
-     Null을 허용하는 키 열이 없으면 ***Index_Null_Bitmap***을 0으로 설정합니다.  
+     Null을 허용하는 키 열이 없으면 ***Index_Null_Bitmap*** 을 0으로 설정합니다.  
   
 5.  가변 길이 데이터 크기를 계산합니다.  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 08/31/2017
   
      ***Max_Var_Key_Size*** 에 추가된 바이트는 각 변수 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 저장소 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Key_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
-     가변 길이 열이 없는 경우에는 ***Variable_Key_Size***를 0으로 설정합니다.  
+     가변 길이 열이 없는 경우에는 ***Variable_Key_Size*** 를 0으로 설정합니다.  
   
 6.  인덱스 행 크기를 계산합니다.  
   
@@ -182,7 +180,7 @@ ms.lasthandoff: 08/31/2017
   
      ***Max_Var_Key_Size*** 에 추가된 바이트는 각 변수 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 저장소 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Leaf_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
-     가변 길이 열이 없는 경우에는 ***Variable_Leaf_Size***를 0으로 설정합니다.  
+     가변 길이 열이 없는 경우에는 ***Variable_Leaf_Size*** 를 0으로 설정합니다.  
   
 5.  인덱스 행 크기를 계산합니다.  
   
@@ -194,7 +192,7 @@ ms.lasthandoff: 08/31/2017
   
      인덱스 행이 여러 페이지에 걸쳐 배치되지는 않으므로 페이지당 인덱스 행 수는 가장 근사한 정수 값으로 버림하여 계산해야 합니다. 수식에서 값 2는 페이지의 슬롯 배열에서 행의 입력을 위한 것입니다.  
   
-7.  지정한 [채우기 비율](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 기준으로 페이지당 예약된 사용 가능한 행 수를 계산합니다.  
+7.  지정한 [채우기 비율](../../relational-databases/indexes/specify-fill-factor-for-an-index.md) 을 기준으로 페이지당 예약된 사용 가능한 행 수를 계산합니다.  
   
      ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Leaf_Row_Size*** + 2)  
   
@@ -270,4 +268,3 @@ ms.lasthandoff: 08/31/2017
  [데이터베이스 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
   
   
-

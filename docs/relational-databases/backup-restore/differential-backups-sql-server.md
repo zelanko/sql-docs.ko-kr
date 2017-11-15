@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - differential backups
 - differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cd2ac098f25c8d6bd883255c35c42e937ee10190
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: eba06fb9a5537477a0b0ed5ef143ac33f9bd2867
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="differential-backups-sql-server"></a>차등 백업(SQL Server)
   이 백업 및 복원 항목은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관련됩니다.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  복원 시 차등 백업을 복원하기 전에 먼저 기반을 복원해야 합니다. 그런 다음 가장 최근의 차등 백업만 복원하면 데이터베이스를 차등 백업이 생성된 시점까지 복구할 수 있습니다. 일반적으로 가장 최근의 전체 백업을 복원한 후 해당 전체 백업을 기반으로 하는 가장 최근의 차등 백업을 복원합니다.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 차등 백업  
- 차등 백업 및 메모리 액세스에 최적화된 테이블이 있는 데이터베이스에 대한 자세한 내용은 [메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md)을 참조하세요.  
+ 차등 백업 및 메모리 최적화 테이블이 있는 데이터베이스에 대한 자세한 내용은 [메모리 최적화 테이블이 포함된 데이터베이스 백업](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md)을 참조하세요.  
   
 ##  <a name="ReadOnlyDbs"></a> 읽기 전용 데이터베이스의 차등 백업  
  읽기 전용 데이터베이스의 경우 차등 백업과 함께 사용하는 것보다는 전체 백업만 사용하는 것이 관리하기 쉽습니다. 데이터베이스가 읽기 전용일 때는 백업 및 기타 작업을 하더라도 파일에 포함된 메타데이터를 변경할 수 없습니다. 따라서 차등 백업이 시작되는 로그 시퀀스 번호(차등 기반 LSN)와 같이 차등 백업에 필요한 메타데이터는 **master** 데이터베이스에 저장됩니다. 차등 기반은 데이터베이스가 읽기 전용인 경우 수행되며 차등 비트맵은 기반 백업 이후에 실제로 발생되는 변경 내용보다 많은 변경 내용을 나타냅니다. **backupset** 시스템 테이블에 저장된 [differential_base_lsn](../../relational-databases/system-tables/backupset-transact-sql.md) 은 데이터가 실제로 기반 백업 이후에 변경되었는지 여부를 결정하는 데 사용되므로 추가 데이터를 백업에서 읽지만 백업에 쓸 수는 없습니다.  

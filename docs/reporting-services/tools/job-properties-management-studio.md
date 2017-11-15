@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.jobproperties.f1
+f1_keywords: sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 83d8aa2129ec916241436e356d47da56fc0ef055
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="job-properties-management-studio"></a>작업 속성(Management Studio)
   **작업 속성** 페이지를 사용하여 진행 중인 보고서 또는 구독을 취소하기 전에 이에 대한 정보를 볼 수 있습니다.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 기본적으로 작업 설명이 제공되지 않습니다.  
   
  **서버 이름**  
- 작업을 처리 중인 보고서 서버의 이름을 표시합니다. 확장 배포를 구성한 경우 이 값은 작업을 처리 중인 서버를 표시합니다.  
+ 작업을 처리 중인 보고서 서버의 이름을 표시합니다. 스케일 아웃 배포를 구성한 경우 이 값은 작업을 처리 중인 서버를 표시합니다.  
   
  **보고서 이름**  
  보고서 이름을 표시합니다. 구독은 설명으로 확인할 수 있습니다.  
@@ -74,9 +72,8 @@ ms.lasthandoff: 08/09/2017
  사용자가 시작한 프로세스인 경우 이 열에서 사용자 이름을 표시합니다. 시스템 작업의 경우 보고서 서버의 이름입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 08/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], directories
+helpviewer_keywords: FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: eb6e4560f35f1b251ee34f703be9824182bd2909
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
   파일이 FileTable에 저장되는 디렉터리 구조에 대해 설명합니다.  
@@ -97,7 +95,7 @@ GO
   
 ||||  
 |-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**동작**|  
+|*is_directory* **값**|*file_stream* **값**|**동작**|  
 |FALSE|NULL|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
 |FALSE|\<값>|항목은 파일을 나타냅니다.|  
 |TRUE|NULL|항목은 디렉터리를 나타냅니다.|  
@@ -117,4 +115,3 @@ GO
  [파일 입/출력 API를 사용하여 FileTable 액세스](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
-

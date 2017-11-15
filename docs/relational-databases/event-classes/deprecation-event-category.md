@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Deprecation event category
+helpviewer_keywords: Deprecation event category
 ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7851399402ccdb8fa1ed516e1a6b400c4e09e601
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 49d17904bde9efbb1624634260b164ec5789924d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecation-event-category"></a>Deprecation 이벤트 범주
   **Deprecation** 이벤트 범주에는 일반적인 사용 중단 알림 이벤트가 포함됩니다.  
@@ -35,4 +32,3 @@ ms.lasthandoff: 06/22/2017
 |[Deprecation Final Support 이벤트 클래스](../../relational-databases/event-classes/deprecation-final-support-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 번 주요 릴리스에서 해당 기능이 제거된다는 것을 나타냅니다.|  
   
   
-

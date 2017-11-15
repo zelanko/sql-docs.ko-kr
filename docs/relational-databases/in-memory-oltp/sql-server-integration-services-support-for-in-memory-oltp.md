@@ -5,27 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d08caf561e3eb0703f9f21cc607d2100d845cea8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6a36fe2c6a662700e3dd04d3beb891ea9d96cc9a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Integration Services 지원
-  메모리 액세스에 최적화된 테이블, 메모리 액세스에 최적화된 테이블을 참조하는 뷰 또는 고유하게 컴파일된 저장 프로시저를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 패키지의 원본이나 대상으로 사용할 수 있습니다. SSIS의 패키지의 데이터 흐름에서 [ADO NET 원본](../../integration-services/data-flow/ado-net-source.md), [OLE DB 원본](../../integration-services/data-flow/ole-db-source.md)또는 [ODBC 원본](../../integration-services/data-flow/odbc-source.md) 를 사용하고 메모리 액세스에 최적화된 테이블 또는 뷰에서 데이터를 검색하도록 원본 구성 요소를 구성하거나, 고유하게 컴파일된 저장 프로시저를 실행할 SQL 문을 지정할 수 있습니다. 마찬가지로 [ADO NET 대상](../../integration-services/data-flow/ado-net-destination.md), [OLE DB 대상](../../integration-services/data-flow/ole-db-destination.md)또는 [ODBC 대상](../../integration-services/data-flow/odbc-destination.md) 을 사용하여 데이터를 메모리 액세스에 최적화된 테이블에 로드하거나, 고유하게 컴파일된 저장 프로시저를 실행할 SQL 문을 지정할 수 있습니다.  
+  메모리 최적화 테이블, 메모리 최적화 테이블을 참조하는 뷰 또는 고유하게 컴파일된 저장 프로시저를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 패키지의 원본이나 대상으로 사용할 수 있습니다. SSIS의 패키지의 데이터 흐름에서 [ADO NET 원본](../../integration-services/data-flow/ado-net-source.md), [OLE DB 원본](../../integration-services/data-flow/ole-db-source.md)또는 [ODBC 원본](../../integration-services/data-flow/odbc-source.md) 를 사용하고 메모리 최적화 테이블 또는 뷰에서 데이터를 검색하도록 원본 구성 요소를 구성하거나, 고유하게 컴파일된 저장 프로시저를 실행할 SQL 문을 지정할 수 있습니다. 마찬가지로 [ADO NET 대상](../../integration-services/data-flow/ado-net-destination.md), [OLE DB 대상](../../integration-services/data-flow/ole-db-destination.md)또는 [ODBC 대상](../../integration-services/data-flow/odbc-destination.md) 을 사용하여 데이터를 메모리 최적화 테이블에 로드하거나, 고유하게 컴파일된 저장 프로시저를 실행할 SQL 문을 지정할 수 있습니다.  
   
- 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 뷰와 동일한 방법으로 메모리 액세스에 최적화된 테이블 및 뷰에서 읽고 쓰도록 SSIS 패키지에서 위에 언급한 원본 및 대상 구성 요소를 구성할 수 있습니다. 하지만 고유하게 컴파일된 저장 프로시저를 사용할 때는 다음 섹션에서 설명하는 중요한 점에 주의해야 합니다.  
+ 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]테이블 및 뷰와 동일한 방법으로 메모리 최적화 테이블 및 뷰에서 읽고 쓰도록 SSIS 패키지에서 위에 언급한 원본 및 대상 구성 요소를 구성할 수 있습니다. 하지만 고유하게 컴파일된 저장 프로시저를 사용할 때는 다음 섹션에서 설명하는 중요한 점에 주의해야 합니다.  
   
 ## <a name="invoking-a-natively-compiled-stored-procedure-from-an-ssis-package"></a>SSIS 패키지에서 고유하게 컴파일된 저장 프로시저 호출  
  SSIS 패키지에서 고유하게 컴파일된 저장 프로시저를 호출하려면 ODBC 원본이나 ODBC 대상을 **EXEC** 키워드 없는 **\<프로시저 이름>** 형식의 SQL 문으로 사용하는 것이 좋습니다. SQL 문에 EXEC 키워드를 사용하면 ODBC 연결 관리자가 SQL 명령 텍스트를 저장 프로시저 대신 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문으로 해석하고 고유하게 컴파일된 저장 프로시저의 실행에 지원되지 않는 커서를 사용하기 때문에 오류 메시지가 나타납니다. 연결 관리자는 EXEC 키워드 없는 SQL 문을 저장 프로시저 호출로 처리하고 커서를 사용하지 않습니다.  
@@ -36,4 +34,3 @@ ms.lasthandoff: 06/22/2017
  [메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   
-

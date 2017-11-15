@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services에서 SQL server 2016 버전에서 지 원하는 기능 | Microsoft Docs"
+title: "SQL Server 2016 버전에서 지원하는 Reporting Services 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 82a69675cde69283bf74a700bb1bd09ebea4d44b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 버전에서 지원하는 Reporting Services 기능
 
-이 항목에서는 SQL Server 2016의 다양 한 버전에서 지 원하는 기능에 대 한 세부 정보를 제공 합니다.  
+이 항목은 다른 SQL Server 2016 버전에서 지원되는 기능의 세부 정보를 제공합니다.  
   
  SQL Server 평가 버전은 180일 동안 시험용으로 사용할 수 있습니다.  
   
@@ -34,9 +32,9 @@ ms.lasthandoff: 08/09/2017
     
  **SQL Server 2016을 사용해 보세요.**    
     
- > [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**(평가 센터에서 SQL Server 2016 다운로드)    
+ > [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)(SQL Server 2016이 이미 설치된 가상 컴퓨터 실행)**    
+> ![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png) **[이미 설치된SQL Server 2016으로 가상 컴퓨터를 스핀업](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterprise Edition을 참조하세요.
 
@@ -78,7 +76,7 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
 |경고<sup>2</sup>|예||||||예|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|예||||||예|  
   
- <sup>1</sup> 지원 되는 데이터 원본에서 SQL Server 2016 Reporting Services (SSRS)에 대 한 자세한 내용은 참조 하십시오. [Sources Supported by Reporting services&#40; Ssrs&#41; ](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup> SQL Server 2016 Reporting Services(SSRS)에서 지원하는 데이터 원본에 대한 자세한 내용은 [Reporting Services에서 지원하는 데이터 원본 &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)를 참조하세요.  
   
  <sup>2</sup> SharePoint 모드의 Reporting Services가 필요합니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조하세요.  
   
@@ -113,5 +111,4 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
 [SQL Server 2016 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [SQL Server 2016 설치](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

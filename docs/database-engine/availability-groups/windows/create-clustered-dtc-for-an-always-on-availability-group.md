@@ -5,22 +5,20 @@ ms.date: 08/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8bcb2add3c031a774ad768ee9540cc940d82e5be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: d1964cd48c4ab789bb95564a1595e1c6b09aeccb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 만들기
 이 항목에서는 SQL Server Always On 가용성 그룹에 대한 클러스터형 DTC 리소스의 전체 구성에 대해 안내합니다. 전체 구성을 완료하는 데 최대 한 시간이 걸릴 수 있습니다. 
@@ -589,4 +587,3 @@ GO
 
 > [!IMPORTANT]
 > 데이터베이스 컨텍스트가 `USE AG1` 로 설정되도록 `AG1`문을 실행해야 합니다.  그렇지 않으면 "다른 세션에서 트랜잭션 컨텍스트를 사용 중입니다.”라는 오류 메시지가 나타납니다.
-

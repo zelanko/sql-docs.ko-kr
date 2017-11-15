@@ -5,28 +5,26 @@ ms.date: 09/14/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
-ms.openlocfilehash: 4909bc873609a0e6b83f72d1d99a4e4566ca09e7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: d0f5f5a2ca4877d83bfd6479cfab7297f7218497
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>SQL Server 2016용 SQL Server 메모리 내 OLTP 내부
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 **요약:** 흔히 코드명 "Hekaton"으로 불리는 메모리 내 OLTP는 SQL Server 2014에서 도입되었습니다.
-이 강력한 기술을 사용하면 많은 양의 메모리와 수십 개의 코어를 활용하여 OLTP 작업의 성능을 30-40배까지 늘릴 수 있습니다. SQL Server 2016에서는 메모리 내 OLTP에 계속 투자하여 SQL Server 2014에 있던 여러 제한 사항을 없애고 내부 처리 알고리즘을 향상하고 있으므로 메모리 내 OLTP에서 훨씬 향상된 기능을 제공할 수 있습니다. 이 백서에서는 SQL Server 2016 RTM을 기준으로 SQL Server 2016의 메모리 내 OLTP 기술에 대한 구현을 설명합니다. 메모리 내 OLTP를 사용하면 메모리 내 OLTP 기능을 사용할 수 있도록 ‘메모리에 최적화된’ 테이블을 선언할 수 있습니다. 메모리에 최적화된 테이블은 완전히 트랜잭션이 될 수 있고 Transact-SQL을 사용하여 액세스할 수 있습니다. Transact-SQL 저장 프로시저, 트리거 및 스칼라 UDF를 기계어 코드로 컴파일하여 메모리에 최적화된 테이블의 성능을 더 향상할 수 있습니다. 이 엔진은 동시성이 높고 차단이 없도록 설계되었습니다.    
+이 강력한 기술을 사용하면 많은 양의 메모리와 수십 개의 코어를 활용하여 OLTP 작업의 성능을 30-40배까지 늘릴 수 있습니다. SQL Server 2016에서는 메모리 내 OLTP에 계속 투자하여 SQL Server 2014에 있던 여러 제한 사항을 없애고 내부 처리 알고리즘을 향상하고 있으므로 메모리 내 OLTP에서 훨씬 향상된 기능을 제공할 수 있습니다. 이 백서에서는 SQL Server 2016 RTM을 기준으로 SQL Server 2016의 메모리 내 OLTP 기술에 대한 구현을 설명합니다. 메모리 내 OLTP를 사용하면 메모리 내 OLTP 기능을 사용할 수 있도록 ‘메모리에 최적화된’ 테이블을 선언할 수 있습니다. 메모리에 최적화된 테이블은 완전히 트랜잭션이 될 수 있고 Transact-SQL을 사용하여 액세스할 수 있습니다. Transact-SQL 저장 프로시저, 트리거 및 스칼라 UDF를 기계어 코드로 컴파일하여 메모리 최적화 테이블의 성능을 더 향상할 수 있습니다. 이 엔진은 동시성이 높고 차단이 없도록 설계되었습니다.    
   
 **작성자:** Kalen Delaney  
   
@@ -37,4 +35,3 @@ ms.lasthandoff: 07/31/2017
 **적용 대상:** SQL Server 2016  
   
 문서를 검토하려면 [SQL Server In-Memory OLTP Internals for SQL Server 2016](http://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf) (SQL Server 2016용 SQL Server 메모리 내 OLTP 내부) 문서를 다운로드하세요.   
-

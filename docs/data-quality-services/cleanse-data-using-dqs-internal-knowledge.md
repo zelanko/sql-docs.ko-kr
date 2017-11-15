@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,17 +14,16 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8aa5b0fdf2771d83310e503f2fdd8770bf9cf324
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 14478170a919235e9f2ca6f39926ff2f51f31406
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 품질 프로젝트를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. 데이터 정리는 고품질 데이터 집합에 대해 DQS에 기본 제공된 기술 자료를 사용하여 원본 데이터에서 수행됩니다. 자세한 내용은 [기술 자료 구축](../data-quality-services/building-a-knowledge-base.md)을 참조하세요.  
@@ -232,4 +230,3 @@ ms.lasthandoff: 09/09/2017
  프로파일링에 대한 자세한 내용은 [DQS의 데이터 프로파일링 및 알림](../data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
   
   
-

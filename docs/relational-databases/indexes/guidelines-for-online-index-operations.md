@@ -1,5 +1,5 @@
 ---
-title: "온라인 인덱스 작업에 대한 지침 | Microsoft Docs"
+title: "온라인 인덱스 작업에 대한 지침 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2cf2c877207a3dfaf5c3c6ff3aa2cca0da2d9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +38,8 @@ ms.lasthandoff: 07/31/2017
   
 -   테이블에 LOB 데이터 형식이 들어 있는 경우 비고유 비클러스터형 인덱스를 온라인 상태로 만들 수 있지만 이러한 열은 인덱스 정의에 키 또는 키가 아닌 포괄 열로 사용되지 않습니다.  
   
--   로컬 temporal 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 temporal 테이블의 인덱스에는 적용되지 않습니다.
-- 예기치 않은 오류, 데이터베이스 장애 조치(failover) 또는 **PAUSE** 명령 실행 후 중지된 위치에서 인덱스를 다시 시작할 수 있습니다. [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 이 기능은 SQL Server 2017 및 Azure SQL Database에 대한 공용 미리 보기입니다.
+-   로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.
+- 예기치 않은 오류, 데이터베이스 장애 조치(failover) Ehsms **PAUSE** 명령 실행 후 중지된 위치에서 인덱스를 다시 시작할 수 있습니다. [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 
 
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -49,11 +48,11 @@ ms.lasthandoff: 07/31/2017
   
 | 온라인 인덱스 작업 | 제외되는 인덱스 | 기타 제한 사항 |  
 |----------------------------|----------------------|------------------------|  
-|ALTER  INDEX  REBUILD|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> XML 인덱스<br /><br />columnstore 인덱스 <br /><br /> 로컬 temporal 테이블의 인덱스|키워드를 ALL로 지정하면 테이블에 제외된 인덱스가 들어 있는 경우 작업이 실패할 수 있습니다.<br /><br /> 비활성 인덱스를 다시 작성하는 작업에 추가 제한 사항이 적용됩니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.|  
-|CREATE  INDEX|XML 인덱스<br /><br /> 뷰의 초기 고유 클러스터형 인덱스<br /><br /> 로컬 temporal 테이블의 인덱스||  
-|CREATE  INDEX  WITH  DROP_EXISTING|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> 로컬 temporal 테이블의 인덱스<br /><br /> XML 인덱스||  
-|DROP  INDEX|비활성 인덱스<br /><br /> XML 인덱스<br /><br /> 비클러스터형 인덱스<br /><br /> 로컬 temporal 테이블의 인덱스|단일 문에 여러 인덱스를 지정할 수 없습니다.|  
-|ALTER  TABLE  ADD  CONSTRAINT(PRIMARY  KEY  또는 UNIQUE)|로컬 temporal 테이블의 인덱스<br /><br /> 클러스터형 인덱스|한 번에 하나의 하위 절만 허용됩니다. 예를 들어 동일한 ALTER  TABLE  문에서 PRIMARY  KEY  또는 UNIQUE  제약 조건을 추가하거나 삭제할 수 없습니다.|  
+|ALTER  INDEX  REBUILD|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> XML 인덱스<br /><br />columnstore 인덱스 <br /><br /> 로컬 임시 테이블의 인덱스|키워드를 ALL로 지정하면 테이블에 제외된 인덱스가 들어 있는 경우 작업이 실패할 수 있습니다.<br /><br /> 비활성 인덱스를 다시 작성하는 작업에 추가 제한 사항이 적용됩니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.|  
+|CREATE  INDEX|XML 인덱스<br /><br /> 뷰의 초기 고유 클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스||  
+|CREATE  INDEX  WITH  DROP_EXISTING|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> 로컬 임시 테이블의 인덱스<br /><br /> XML 인덱스||  
+|DROP  INDEX|비활성 인덱스<br /><br /> XML 인덱스<br /><br /> 비클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스|단일 문에 여러 인덱스를 지정할 수 없습니다.|  
+|ALTER  TABLE  ADD  CONSTRAINT(PRIMARY  KEY  또는 UNIQUE)|로컬 임시 테이블의 인덱스<br /><br /> 클러스터형 인덱스|한 번에 하나의 하위 절만 허용됩니다. 예를 들어 동일한 ALTER  TABLE  문에서 PRIMARY  KEY  또는 UNIQUE  제약 조건을 추가하거나 삭제할 수 없습니다.|  
 |ALTER TABLE DROP CONSTRAINT(PRIMARY KEY 또는 UNIQUE)|클러스터형 인덱스||  
   
  온라인 인덱스 작업이 진행되는 동안에는 기본 테이블을 수정하거나 자르거나 삭제할 수 없습니다.  
@@ -95,7 +94,7 @@ ms.lasthandoff: 07/31/2017
 ## <a name="resumable-index-rebuild-considerations"></a>다시 시작 가능한 인덱스 다시 작성 시 고려 사항
 
 > [!NOTE]
-> [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 이 기능은 SQL Server 2017 및 Azure SQL Database에 대한 공용 미리 보기입니다.
+> [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 
 >
 
 다시 시작 가능한 온라인 인덱스 다시 작성을 수행할 때 다음 지침이 적용됩니다.
@@ -126,4 +125,3 @@ ms.lasthandoff: 07/31/2017
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

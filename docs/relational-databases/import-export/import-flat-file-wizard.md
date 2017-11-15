@@ -5,22 +5,19 @@ ms.date: 09/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: douglasl
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.importflatfile.f1
+f1_keywords: sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3180456162da02ecef897fd340663500792d4785
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: b19a4d0d4c2e15081b6a890aea4a4f2a9226e9bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기
 > 가져오기 및 내보내기 마법사와 관련된 콘텐츠는 [SQL Server 가져오기 및 내보내기 마법사](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 참조하세요.
@@ -94,5 +91,4 @@ PROSE는 입력 파일의 데이터 패턴을 분석하여 열 이름, 형식, �
 - **다른 원본 가져오기에 대해 자세히 알아봅니다.** 플랫 파일 이외의 항목을 가져오려는 경우 [SQL Server 가져오기 및 내보내기 마법사](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 참조하세요.
 - **플랫 파일 원본에 연결하기에 대해 자세히 알아봅니다.** 플랫 파일 원본에 연결하기에 대한 자세한 내용을 찾는 경우 [플랫 파일 데이터 원본에 연결](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)을 참조하세요.
 - **PROSE에 대해 자세히 알아봅니다.** 이 마법사에서 사용하는 지능형 프레임워크에 대한 개요를 찾는 경우 [PROSE SDK](https://microsoft.github.io/prose/)를 참조하세요.
-
 

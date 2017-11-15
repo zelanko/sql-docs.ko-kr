@@ -1,29 +1,25 @@
 ---
 title: "9단원: 백업 세트 및 파일-스냅숏 백업 관리 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 766a0846-db15-4346-b814-4049039bcbfc
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9747a3c7730db5d3fe1eda6145ece133c7b6d523
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fc4ce7fe2c3648da7923dbb35fbfe252c971b006
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>9단원: 백업 세트 및 파일-스냅숏 백업 관리
 이 단원에서는 [sp_delete_backup&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 시스템 저장 프로시저를 사용하여 백업 세트를 삭제합니다. 이 시스템 저장 프로시저는 이 백업 세트와 연결된 각 데이터베이스 파일에서 백업 파일 및 파일 스냅숏을 삭제합니다.  
@@ -72,5 +68,4 @@ ms.lasthandoff: 06/22/2017
   
   
   
-
 

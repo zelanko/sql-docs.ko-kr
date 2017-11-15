@@ -5,21 +5,19 @@ ms.date: 10/04/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- xevents
+ms.technology: xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 643d3b6f21d5ff42c1117df009f4e08e83793898
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 확장 이벤트의 대상 데이터 고급 보기
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -144,7 +142,7 @@ SSMS UI의 탭 모음으로 .XEL 파일을 끌어서 놓을 수도 있습니다.
 
 
 > [!NOTE] 
-> **대상 데이터 보기**에는 지정된 이벤트 세션의 *여러 .XEL 파일에서 누적된 데이터*가 표시됩니다. 각 **시작**-**중지** 순환은 해당 이름에 나중 시간에서 파생된 정수가 포함된 파일을 만듭니다. 하지만 각 파일에 동일한 루트 이름을 공유합니다.
+> **대상 데이터 보기** 에는 지정된 이벤트 세션의 *여러 .XEL 파일에서 누적된 데이터* 가 표시됩니다. 각 **시작**-**중지** 순환은 해당 이름에 나중 시간에서 파생된 정수가 포함된 파일을 만듭니다. 하지만 각 파일에 동일한 루트 이름을 공유합니다.
 
 
 
@@ -318,6 +316,5 @@ SSMS 표시 필터는 다음과 같습니다.
 
 
 ![하나의 노드에 대한 속성 목록이 있는 쿼리 계획](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
-
 
 

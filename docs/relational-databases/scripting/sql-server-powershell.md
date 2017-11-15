@@ -5,22 +5,20 @@ ms.date: 08/04/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7181877fcc1fa7553b5e11508bc1c9425166ccd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2007b572b659f5fe9371618b667bb27a43bc70c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 관리자와 개발자가 서버 관리 및 응용 프로그램 배포를 자동화할 수 있는 강력한 스크립팅 셸인 Windows PowerShell을 지원합니다. Windows PowerShell 언어는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트보다 더 복잡한 논리를 지원하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자가 강력한 관리 스크립트를 작성할 수 있습니다. 또한 Windows PowerShell 스크립트를 사용하여 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 서버 제품을 관리할 수도 있습니다. 이는 관리자에게 서버 전체에 대한 공용 스크립팅 언어를 제공합니다.  
@@ -54,4 +52,3 @@ ms.lasthandoff: 06/22/2017
 |Windows PowerShell 환경에서 Get-Help를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에 대한 정보를 가져오는 방법을 설명합니다.|[SQL Server PowerShell 도움말 보기](../../relational-databases/scripting/get-help-sql-server-powershell.md)|  
   
   
-

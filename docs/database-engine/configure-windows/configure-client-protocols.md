@@ -5,8 +5,7 @@ ms.date: 07/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +20,18 @@ helpviewer_keywords:
 - protocols [SQL Server], client configuration
 - default protocols, client
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57e27a735c982ab8ed561c7ae8a3d6c875d7e721
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 5cb93e598d20ad1622836579118d664c0e6da279
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# 클라이언트 프로토콜 구성
+# <a name="configure-client-protocols"></a>클라이언트 프로토콜 구성
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 응용 프로그램이 사용하는 클라이언트 프로토콜을 구성하는 방법에 대해 설명합니다. Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TCP/IP 네트워크 프로토콜 및 명명된 파이프 프로토콜을 통한 클라이언트 통신을 지원합니다. 클라이언트가 동일 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하고 있는 경우 공유 메모리 프로토콜도 사용할 수 있습니다. 일반적으로 프로토콜을 선택하는 방법에는 3가지가 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 프로토콜 순서를 설정하여 모든 클라이언트 응용 프로그램이 동일한 네트워크 프로토콜을 사용하도록 구성하십시오.  
@@ -69,8 +67,7 @@ ms.lasthandoff: 08/02/2017
   
  공유 메모리 프로토콜은 **공유 메모리 프로토콜 사용** 확인란을 선택하여 별도로 설정됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [원격 로그인 제한 시간 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
   
   
-

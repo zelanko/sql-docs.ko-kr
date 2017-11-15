@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services 업그레이드
 이 항목에서는 기존 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] DQS(Data Quality Services) 설치를 업그레이드하는 방법에 대해 설명합니다. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality 서버를 업그레이드할 때 DQS 데이터베이스 스키마도 업그레이드해야 합니다.  

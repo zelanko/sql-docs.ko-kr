@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 15404 (Database Engine error)
+helpviewer_keywords: 15404 (Database Engine error)
 ms.assetid: 69677f02-bc81-4e4a-99b8-5c1bd1de36df
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 52499bb75078863b631912935b4ffbbd616c9aae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e4e87d249c4e54267f95b989d8c4f77afdf5ce5e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver15404"></a>MSSQLSERVER_15404
   
@@ -51,4 +48,3 @@ Windows 보안 주체가 존재하고 철자가 잘못되지 않았는지 확인
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정을 사용합니다.  
   
-

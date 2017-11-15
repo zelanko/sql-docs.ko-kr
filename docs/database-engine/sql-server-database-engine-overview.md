@@ -5,25 +5,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Database Engine [SQL Server]
 - SQL Server Database Engine
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 633dcb55603999404697a10dfa7b3b4001a9c131
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
-
+ms.openlocfilehash: 39a96a83d4801fa5cf5342e3383d2e57085b4450
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 응용 프로그램에 대한 요구 사항을 충족하기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다.  
@@ -35,4 +33,3 @@ ms.lasthandoff: 08/16/2017
  [SQL Server 리소스 센터](http://go.microsoft.com/fwlink/?LinkId=219676)  
   
   
-

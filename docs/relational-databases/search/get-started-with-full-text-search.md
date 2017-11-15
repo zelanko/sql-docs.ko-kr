@@ -1,11 +1,10 @@
 ---
-title: "전체 텍스트 검색 시작 | Microsoft Docs"
+title: "전체 텍스트 검색 시작 | Microsoft 문서"
 ms.date: 08/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb839fc8929f20c0ac7ca72dc90f364382bc33d0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 01c9732a26e3e5e717de05a16e4c65b06c9cd358
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
 SQL Server 데이터베이스는 기본적으로 전체 텍스트를 사용하도록 설정되어 있습니다. 하지만 전체 텍스트 쿼리를 실행하려면 먼저 전체 텍스트 카탈로그를 만들고 검색할 테이블 또는 인덱싱된 뷰에서 전체 텍스트 인덱스를 만들어야 합니다.
@@ -129,4 +127,3 @@ GO
 
 ## <a name="next-steps"></a>다음 단계
 SQL Server 전체 텍스트 검색을 설정했으면 전체 텍스트 쿼리를 실행할 준비가 된 것입니다. 자세한 내용은 [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)를 참조하세요.
-

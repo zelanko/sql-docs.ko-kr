@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3630c769c33d4888f384d00ec341503fc47c89cd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b22b667a679c2dee3a87b0348170c793af0c9e1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>병합 테이블 아티클 간의 논리적 레코드 관계 정의
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 테이블 아티클 간 논리적 레코드 관계를 정의하는 방법에 대해 설명합니다.  
@@ -174,7 +173,7 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>에 대한 게시의 이름  
   
-    -   (선택 사항) 아티클이 행 필터링된 경우 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성에 행 필터 절을 지정합니다. 이 속성을 사용하여 정적 또는 매개 변수가 있는 행 필터를 지정합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
+    -   (옵션) 아티클이 행 필터링된 경우 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성에 대해 행 필터 절을 지정합니다. 이 속성을 사용하여 정적 또는 매개 변수가 있는 행 필터를 지정합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
   
      자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
@@ -184,17 +183,17 @@ ms.lasthandoff: 06/22/2017
   
 8.  <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 클래스의 인스턴스를 만들어 아티클 간 논리적 레코드 관계를 정의합니다. 그런 후 다음 속성을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A> 속성에서 논리적 레코드 관계의 자식 아티클 이름  
+    -   <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A> 속성에서 논리적 레코드 관계의 하위 아티클 이름.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A> 속성에서 논리적 레코드 관계의 기존 상위 아티클 이름  
+    -   <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A> 속성에서 논리적 레코드 관계의 기존 상위 아티클 이름.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A> 속성에서 논리적 레코드 관계 이름  
+    -   <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A> 속성에서 논리적 레코드 관계 이름.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> 속성에서 관계를 정의하는 식  
+    -   <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> 속성에서 관계를 정의하는 식.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> 속성에서 <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> 값 논리적 레코드 관계가 조인 필터이기도 한 경우 이 속성에 <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> 값을 지정합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
+    -   <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> 속성에서 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> 값. 논리적 레코드 관계가 조인 필터이기도 한 경우 이 속성에 <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> 값을 지정합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
-9. 관계의 자식 아티클을 나타내는 개체에서 <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> 메서드를 호출합니다. 8단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 전달하여 관계를 정의합니다.  
+9. 관계의 하위 아티클을 나타내는 개체에서 <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> 메서드를 호출합니다. 8단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 전달하여 관계를 정의합니다.  
   
 10. 게시의 나머지 논리적 레코드 관계별로 8단계와 9단계를 반복합니다.  
   
@@ -205,7 +204,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [정적 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   

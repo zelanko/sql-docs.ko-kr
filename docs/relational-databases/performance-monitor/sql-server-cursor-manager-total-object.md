@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Cursor Manager Total
 - Cursor Manager Total object
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3d0bdbe562bdaa5694020780954fc9f9fd68ba67
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8d517376456dd8601203aa423bde7c58417aa728
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server, Cursor Manager Total 개체
   **SQLServer:Cursor Manager Total** 개체는 커서를 모니터링하는 카운터를 제공합니다.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 06/22/2017
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

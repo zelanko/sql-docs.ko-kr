@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,17 +14,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: e69395604574832a56c1b1e778b756b9dca0f200
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
   이 항목에서는 기술 자료 검색을 통해 기술 자료를 구축하는 방법에 대해 설명합니다. 검색 프로세스에서 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )는 컴퓨터 기반 프로세스를 통해 예제 데이터 원본의 데이터를 분석해서 얻은 정보를 기술 자료에 추가합니다. 이러한 정보는 기술 자료 검색 작업의 **도메인 값 관리** 단계 또는 도메인 관리 작업에서 수정하고 개선할 수 있습니다.  
@@ -71,12 +69,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  **매핑** 테이블에서 다음과 같이 기술 자료 검색을 수행할 각 원본 열을 기술 자료의 도메인에 매핑합니다.  
   
-    1.  도메인이 있는 경우 빈 행의 **원본 열** 열에 대한 드롭다운 목록에서 원본 열을 선택한 다음 동일한 행의 **도메인** 열에 대한 드롭다운 목록에서 도메인을 선택하여 매핑을 만듭니다. 도메인이 없는 경우 **도메인 만들기** 또는 **복합 도메인 만들기** 를 클릭하여 도메인을 만듭니다. 자세한 내용은 [도메인 규칙 만들기](../data-quality-services/create-a-domain-rule.md) 또는 [복합 도메인 만들기](../data-quality-services/create-a-composite-domain.md)를 참조하세요.  
+    1.  도메인이 있는 경우 빈 행의 **원본 열** 열에 대한 드롭다운 목록에서 원본 열을 선택한 다음 동일한 행의 **도메인** 열에 대한 드롭다운 목록에서 도메인을 선택하여 매핑을 만듭니다. 도메인이 없는 경우 **도메인 만들기** 또는 **복합 도메인 만들기** 를 클릭하여 도메인을 만듭니다. 자세한 내용은 [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) 또는 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)를 참조하세요.  
   
     2.  각 매핑에 대해 이전 단계를 반복합니다. 테이블의 행 수를 변경하려면 **열 매핑 추가**를 클릭하거나 특정 행을 선택하고 **선택한 열 매핑 제거**를 클릭합니다. 채워진 행이 선택되었을 때 **선택한 열 매핑 제거** 를 클릭하면 채워지지 않은 행이 있는 경우에도 선택된 행이 삭제됩니다.  
   
         > [!NOTE]  
-        >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 데이터 기술 자료 검색을 수행하기 위해 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
+        >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 데이터 기술 자료 검색을 수행하기 위해 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
   
     3.  정의된 복합 도메인을 표시하려면 **복합 도메인 보기/선택** 을 클릭합니다. 복합 도메인이 정의되지 않은 경우 컨트롤을 사용할 수 없습니다.  
   
@@ -291,7 +289,6 @@ ms.lasthandoff: 09/09/2017
   
 -   필드에 유효한 값이 적은 경우 - 필드 내용에 대한 도메인 규칙의 매핑과 관련성을 확인해야 합니다.  
   
- 프로파일링에 대한 자세한 내용은 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
+ 프로파일링에 대한 자세한 내용은 [DQS의 데이터 프로파일링 및 알림](../data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
   
   
-

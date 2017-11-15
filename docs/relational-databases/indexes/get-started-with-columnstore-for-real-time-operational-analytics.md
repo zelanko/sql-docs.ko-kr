@@ -1,26 +1,24 @@
 ---
 title: "실시간 운영 분석을 위한 Columnstore 시작 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a67a7a405fc46996a1db1f3abdee5d948d080f63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  실시간 운영 분석은 운영 워크로드와 분석 워크로드를 둘 다 실행할 수 있는 ERP(전사적 자원 관리) 응용 프로그램과 같은 단일 데이터 원본 시나리오를 대상으로 합니다. 이는 분석 워크로드를 실행하기 전에 여러 원본의 데이터를 통합해야 하거나 큐브와 같은 사전 집계된 데이터의 사용으로 극단적인 분석 성능이 필요한 경우에는 별도 데이터 웨어하우스에 대한 필요성을 대체하지 못합니다.  
   
- 실시간 분석에서는 rowstore 테이블에서 업데이트 가능한 columnstore 인덱스를 사용합니다.  Columnstore 인덱스는 데이터의 복사본을 유지하므로 OLTP 워크로드와 분석 워크로드가 데이터의 개별 복사본에 대해 실행됩니다. 이는 동시에 실행되는 두 워크로드의 성능 영향을 최소화합니다.  SQL Server는 인덱스 변경 내용을 자동으로 유지 관리하므로 OLTP 변경 내용이 분석을 위해 항상 최신 상태로 유지됩니다. 이 디자인에서는 최신 데이터에서 실시간으로 분석을 실행하는 것이 가능하고 유용합니다. 이는 디스크 기반 테이블과 메모리 액세스에 최적화된 테이블 모두에 적용됩니다.  
+ 실시간 분석에서는 rowstore 테이블에서 업데이트 가능한 columnstore 인덱스를 사용합니다.  Columnstore 인덱스는 데이터의 복사본을 유지하므로 OLTP 워크로드와 분석 워크로드가 데이터의 개별 복사본에 대해 실행됩니다. 이는 동시에 실행되는 두 워크로드의 성능 영향을 최소화합니다.  SQL Server는 인덱스 변경 내용을 자동으로 유지 관리하므로 OLTP 변경 내용이 분석을 위해 항상 최신 상태로 유지됩니다. 이 디자인에서는 최신 데이터에서 실시간으로 분석을 실행하는 것이 가능하고 유용합니다. 이는 디스크 기반 테이블과 메모리 최적화 테이블 모두에 적용됩니다.  
   
 ## <a name="get-started-example"></a>시작 예제  
  실시간 분석을 시작하려면  
@@ -107,7 +105,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [압축 지연 - 성능 수치를 사용하여 비클러스터형 columnstore 인덱스 유지 관리의 영향 최소화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
--   [메모리 액세스에 최적화된 테이블을 사용한 실시간 운영 분석](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
+-   
+            [메모리 최적화 테이블을 사용한 실시간 운영 분석](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
   
 -   [Columnstore 인덱스에서 인덱스 조각화 최소화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
   
@@ -121,7 +120,7 @@ ms.lasthandoff: 06/22/2017
  분석 쿼리는 실시간 분석을 제공하는 데 필요한 경우 웜 데이터와 핫 데이터 모두에 투명하게 액세스합니다. 운영 워크로드의 중요한 부분이 '핫' 데이터에 연결되어 있는 경우 이러한 작업에는 columnstore 인덱스의 추가 유지 관리가 필요하지 않습니다. 필터링된 인덱스 정의에 사용된 열에서 rowstore 클러스터형 인덱스를 유지하는 것이 가장 좋습니다.   SQL Server는 클러스터형 인덱스를 사용하여 필터링된 조건을 충족하지 않는 행을 신속하게 검색합니다. 이 클러스터형 인덱스가 없으면 분석 쿼리의 성능을 크게 저하시킬 수 있는 이러한 행을 찾기 위해 rowstore 테이블의 전체 검색을 수행해야 합니다. 클러스터형 인덱스가 없는 경우 필터링된 비클러스터형 btree 보조 인덱스를 만들어 이러한 행을 식별할 수 있지만 비클러스터형 btree 인덱스를 통해 큰 범위의 행에 액세스하는 것은 비용이 많이 들기 때문에 이는 권장되지 않습니다.  
   
 > [!NOTE]  
->  필터링된 비클러스터형 columnstore 인덱스는 디스크 기반 테이블에서만 지원됩니다. 메모리 액세스에 최적화된 테이블에서는 지원되지 않습니다.  
+>  필터링된 비클러스터형 columnstore 인덱스는 디스크 기반 테이블에서만 지원됩니다. 메모리 최적화 테이블에서는 지원되지 않습니다.  
   
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>예제 A: btree 인덱스에서 핫 데이터에 액세스하고, columnstore 인덱스에서 웜 데이터에 액세스  
  이 예제에서는 필터링된 조건(accountkey > 0)을 사용하여 columnstore 인덱스에 포함할 행을 설정합니다. 이는 자주 변경되는 “핫” 데이터는 btree 인덱스에서 액세스하고 보다 안정적인 “웜” 데이터는 columnstore 인덱스에서 액세스하도록 필터링된 조건 및 후속 쿼리를 디자인하기 위한 것입니다.  
@@ -231,4 +230,3 @@ ORDER BY created_time DESC
  [Columnstore 인덱스 조각 모음](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

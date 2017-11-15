@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- master database [SQL Server], restoring
+helpviewer_keywords: master database [SQL Server], restoring
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 36558a8f79b9ad229a90970b5df514a399b68c66
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: c5a3c1c5987ac5e5a59ea858b970a3f9ec42ef01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master 데이터베이스 복원(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  **master**의 전체 데이터베이스 백업을 복원하려면 다음 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
   
-     `RESTORE DATABASE master FROM`  *&lt;backup_device&gt;*  `WITH REPLACE`  
+     `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
      REPLACE 옵션은 동일한 이름을 가진 데이터베이스가 이미 있는 경우에도 지정된 데이터베이스를 복원하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 지시합니다. 이 경우 기존 데이터베이스는 삭제됩니다. 단일 사용자 모드에서는 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)에 RESTORE DATABASE 문을 입력하는 것이 좋습니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   

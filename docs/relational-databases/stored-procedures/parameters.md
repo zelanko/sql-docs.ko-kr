@@ -5,24 +5,23 @@ ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], parameters
 - user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: pmasl
 ms.author: pelopes
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 64617ddd4922e7217ac905e92e5d9dfd6ffff7e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1d4e6260a060152121b7b3ec0ef9ac14b2042c3a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameters"></a>매개 변수
 매개 변수는 저장 프로시저나 함수를 호출하는 도구 또는 응용 프로그램, 함수 및 저장 프로시저 간에 데이터를 교환하는 데 사용됩니다. 

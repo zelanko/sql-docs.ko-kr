@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - passwords [SQL Server replication]
 - security [SQL Server replication], passwords
 ms.assetid: 277759f9-b0da-4524-8abe-0460cdab69ec
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb4fc7fad697f21715df07bccbfaa4a1f407ad33
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9cc7e3877356a9b56082e8be8c061d38ec91ad6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-logins-and-passwords-in-replication"></a>복제의 로그인 및 암호 관리
   복제를 구성할 때 복제 에이전트에 대한 로그인과 암호를 지정합니다. 복제를 구성한 후에는 로그인과 암호를 변경할 수 있습니다. 자세한 내용은 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을(를) 참조하세요. 복제 에이전트에서 사용하는 계정의 암호를 변경하는 경우 [sp_changereplicationserverpasswords&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)를 실행합니다.  

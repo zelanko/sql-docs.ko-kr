@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 632fec019b757d782e7bd54f6854e815ccd2afcf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 33c468cb6c8f2a8437e9922203afb14ae513f2c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extensible-key-management-ekm"></a>EKM(확장 가능 키 관리)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 및 키 생성용 MSCAPI( *Microsoft Cryptographic API* ) 공급자를 사용하여 EKM( *Extensible Key Management* )과 함께 데이터 암호화 기능을 제공합니다. 데이터 및 키 암호화를 위한 암호화 키는 임시 키 컨테이너에서 생성되며 데이터베이스에 저장되기 전에 공급자로부터 내보내져야 합니다. 이 방법을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
@@ -174,4 +172,3 @@ DECRYPTION BY EKM_AKey1
  [두 서버에서 동일한 대칭 키 만들기](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-

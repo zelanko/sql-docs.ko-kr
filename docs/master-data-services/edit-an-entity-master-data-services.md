@@ -1,29 +1,25 @@
 ---
 title: "엔터티 편집(Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- entities [Master Data Services], changing name
+helpviewer_keywords: entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: bd0a151b21d3c8bfb138b4aac457587b84699228
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: a1291375fa927102580631814c3247ac63b0d42f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-an-entity-master-data-services"></a>엔터티 편집(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 엔터티를 편집할 수 있습니다.  
@@ -64,15 +60,15 @@ ms.lasthandoff: 09/07/2017
 ## <a name="status"></a>상태  
  표의 상태 열에는 엔터티에 대한 작업의 상태가 표시됩니다. **엔터티 저장**을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.  
   
- ![상태 업데이트 중에 대한 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 중에 대한 아이콘")  
+ ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘")  
   
  엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.  
   
- ![오류 상태에 대한 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태에 대한 아이콘")  
+ ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")  
   
  엔터티가 정상 상태이면 다음 이미지가 표시됩니다.  
   
- ![확인 상태에 대한 아이콘](../master-data-services/media/mds-statusicon-ok.png "확인 상태에 대한 아이콘")  
+ ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")  
   
 ## <a name="see-also"></a>관련 항목:  
  [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
@@ -80,4 +76,3 @@ ms.lasthandoff: 09/07/2017
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   
-

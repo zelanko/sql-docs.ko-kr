@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-ddl
+ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - DDL event groups
 - DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ccd63253ce183861e0aef4caafe00179bf00051a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ccea01b74a215c298ad5411c7da862f2f7f62a15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ddl-event-groups"></a>DDL 이벤트 그룹
   다음 표에서는 DDL 트리거 또는 이벤트 알림을 실행하는 데 사용할 수 있는 DDL 이벤트 그룹과 해당 그룹에서 처리하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 나열합니다. 이벤트 그룹 포함 특성에 유의하십시오. 예를 들어 FOR DDL_TABLE_EVENTS(10018)를 지정하는 DDL 트리거 또는 이벤트 알림은 CREATE TABLE, ALTER TABLE 및 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리합니다. FOR DDL_TABLE_VIEW_EVENTS(10017)를 지정하는 DDL 트리거 또는 이벤트 알림은 DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS 및 DDL_STATISTICS_EVENTS 유형 아래의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리합니다.  

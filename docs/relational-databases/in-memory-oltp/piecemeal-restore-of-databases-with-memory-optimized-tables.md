@@ -5,31 +5,29 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 670261fb38410ae0b3b78b39d8502fcc4baae674
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원
-  증분 복원은 아래에 설명된 한 가지 제한 사항을 제외하고 메모리 액세스에 최적화된 테이블이 있는 데이터베이스에서 지원됩니다. 증분 백업 및 복원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 및 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)을 참조하세요.  
+  증분 복원은 아래에 설명된 한 가지 제한 사항을 제외하고 메모리 최적화 테이블이 있는 데이터베이스에서 지원됩니다. 증분 백업 및 복원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 및 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)을 참조하세요.  
   
- 메모리 액세스에 최적화된 파일 그룹은 주 파일 그룹과 함께 백업하고 복원해야 합니다.  
+ 메모리 최적화 파일 그룹은 주 파일 그룹과 함께 백업하고 복원해야 합니다.  
   
--   주 파일 그룹을 백업(또는 복원)하는 경우 메모리 액세스에 최적화된 파일 그룹을 지정해야 합니다.  
+-   주 파일 그룹을 백업(또는 복원)하는 경우 메모리 최적화 파일 그룹을 지정해야 합니다.  
   
--   메모리 액세스에 최적화된 파일 그룹을 백업(또는 복원)하는 경우 주 파일 그룹을 지정해야 합니다.  
+-   메모리 최적화 파일 그룹을 백업(또는 복원)하는 경우 주 파일 그룹을 지정해야 합니다.  
   
  증분 백업 및 복원에 대한 주요 시나리오는 다음과 같습니다.  
   
@@ -68,20 +66,20 @@ GO
 ```  
   
 ### <a name="backup"></a>백업  
- 이 예제에서는 주 파일 그룹과 메모리 액세스에 최적화된 파일 그룹을 백업하는 방법을 보여 줍니다. 주 파일 그룹과 메모리 액세스에 최적화된 파일 그룹을 함께 지정해야 합니다.  
+ 이 예제에서는 주 파일 그룹과 메모리 최적화 파일 그룹을 백업하는 방법을 보여 줍니다. 주 파일 그룹과 메모리 최적화 파일 그룹을 함께 지정해야 합니다.  
   
 ```  
 backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\data\imoltp.dmp' with init  
 ```  
   
- 다음 예제에서는 주 파일 그룹과 메모리 액세스에 최적화된 파일 그룹을 제외한 파일 그룹의 백업이 메모리 액세스에 최적화된 테이블이 없는 데이터베이스와 유사하게 수행되는 것을 보여 줍니다. 다음 명령은 보조 파일 그룹을 백업합니다.  
+ 다음 예제에서는 주 파일 그룹과 메모리 최적화 파일 그룹을 제외한 파일 그룹의 백업이 메모리 최적화 테이블이 없는 데이터베이스와 유사하게 수행되는 것을 보여 줍니다. 다음 명령은 보조 파일 그룹을 백업합니다.  
   
 ```  
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
 ### <a name="restore"></a>복원  
- 다음 예제에서는 주 파일 그룹과 메모리 액세스에 최적화된 파일 그룹을 함께 복원하는 방법을 보여 줍니다.  
+ 다음 예제에서는 주 파일 그룹과 메모리 최적화 파일 그룹을 함께 복원하는 방법을 보여 줍니다.  
   
 ```  
 restore database imoltp filegroup = 'primary', filegroup = 'imoltp_mod'   
@@ -92,7 +90,7 @@ from disk='c:\data\imoltp.dmp' with partial, norecovery
 GO  
 ```  
   
- 다음 예제에서는 주 파일 그룹과 메모리 액세스에 최적화된 파일 그룹을 제외한 파일 그룹의 복원이 메모리 액세스에 최적화된 테이블이 없는 데이터베이스와 유사하게 수행되는 것을 보여 줍니다.  
+ 다음 예제에서는 주 파일 그룹과 메모리 최적화 파일 그룹을 제외한 파일 그룹의 복원이 메모리 최적화 테이블이 없는 데이터베이스와 유사하게 수행되는 것을 보여 줍니다.  
   
 ```  
 RESTORE DATABASE [imoltp] FILE = N'imoltp_secondary'   
@@ -104,4 +102,3 @@ GO
  [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   
-

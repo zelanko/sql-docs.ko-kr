@@ -1,12 +1,11 @@
 ---
-title: "데이터 열 암호화 | Microsoft Docs"
+title: "데이터 열 암호화 | Microsoft 문서"
 ms.custom: 
 ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
-ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 1a232d1749c6eebbb4d6ae7160c94cfc6d22686a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="encrypt-a-column-of-data"></a>데이터 열 암호화
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -190,4 +188,3 @@ PASSWORD = '<some strong password>';
 -   [OPEN SYMMETRIC KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
   
   
-

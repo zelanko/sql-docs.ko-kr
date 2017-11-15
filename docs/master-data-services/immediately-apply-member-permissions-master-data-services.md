@@ -1,28 +1,27 @@
 ---
-title: "멤버 권한 (Master Data Services) 즉시 적용 | Microsoft Docs"
+title: "멤버 권한 즉시 적용(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - members [Master Data Services], applying permissions immediately
 - permissions [Master Data Services], applying member permissions immediately
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
-caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
+caps.latest.revision: "6"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f6e82b2c9a6553ac2fd9eaa15b63834511c4232e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1549958a5c84045eccbb52c5fac2f2f2b09d316e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>멤버 권한 즉시 적용(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버 보안이 일정한 간격으로 적용되기를 기다리는 대신 멤버 권한을 즉시 적용할 수 있습니다.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 4.  쿼리를 실행합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [계층 멤버 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [계층 멤버 권한 &#40; Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

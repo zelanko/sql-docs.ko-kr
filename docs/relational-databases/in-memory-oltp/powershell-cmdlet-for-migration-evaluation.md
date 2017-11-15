@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b49962bfce3474269b4d9a91dee74212b0d02234
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 618784e57397aaff751a602ddabab4687e3f229e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>마이그레이션 평가용 PowerShell cmdlet
   Save-SqlMigrationReport cmdlet은 SQL Server 데이터베이스에서 여러 개체의 마이그레이션 적합성을 평가하는 도구입니다. 현재 이 도구에서는 메모리 내 OLTP에 대한 마이그레이션 적합성만 평가할 수 있습니다. 이 cmdlet은 관리자 권한 Windows PowerShell 환경과 sqlps에서 모두 실행할 수 있습니다.  
@@ -47,4 +45,3 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
  -FolderPath 매개 변수에 지정된 폴더에서 Tables 및 Stored Procedures의 두 폴더 이름이 생성됩니다. 대상 개체가 테이블이면 해당 보고서는 Tables 폴더에 저장됩니다. 그렇지 않으면 보고서가 Stored Procedures 폴더에 저장됩니다.  
   
   
-

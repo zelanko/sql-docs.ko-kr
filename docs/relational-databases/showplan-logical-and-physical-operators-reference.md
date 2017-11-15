@@ -5,8 +5,7 @@ ms.date: 10/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -135,17 +134,16 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 12177becd4b5d228cd65562b4da36708c61e70da
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>실행 계획 논리 및 물리 연산자 참조
   연산자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 쿼리 또는 DML(데이터 조작 언어) 문이 실행되는 방식을 설명합니다. 쿼리 최적화 프로그램은 연산자를 사용하여 쿼리 계획을 작성함으로써 쿼리에 지정된 결과를 만들거나 DML 문에 지정된 작업을 수행합니다. 쿼리 계획은 물리 연산자로 구성된 트리입니다. SET SHOWPLAN 문, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 그래픽 실행 계획 옵션 또는 SQL Server Profiler의 Showplan 이벤트 클래스를 사용하여 쿼리 계획을 볼 수 있습니다.  
@@ -288,7 +286,7 @@ ms.lasthandoff: 10/13/2017
 |![Table spool 연산자 아이콘](../relational-databases/media/table-spool-32x.gif "Table spool operator icon")|**Table Spool**|**Table Spool** 연산자는 입력을 검색하고 각 행의 복사본을 숨겨진 스풀 테이블에 배치합니다. 이 스풀 테이블은 [tempdb](../relational-databases/databases/tempdb-database.md) 데이터베이스에 저장되어 쿼리 사용 기간 중에만 존재합니다. 예를 들어 **Nested Loops** 연산자로 연산자를 다시 돌리지만 다시 바인딩할 필요가 없을 경우 입력 사항을 다시 검색하는 대신 스풀된 데이터를 사용합니다. **Table Spool** 은 물리 연산자입니다.|  
 |![Table update 연산자 아이콘](../relational-databases/media/table-update-32x.gif "Table update operator icon")|**Table Update**|**Table Update** 물리 연산자는 쿼리 실행 계획의 **Argument** 열에 지정된 테이블의 입력 행을 업데이트합니다. SET:() 조건자는 각 업데이트된 열의 값을 결정합니다. 이러한 값은 SET 절 또는 이 연산자의 다른 곳과 이 쿼리 내의 다른 곳에서 참조될 수 있습니다.|  
 |![Table-valued function 연산자 아이콘](../relational-databases/media/table-valued-function-32x.gif "Table-valued function operator icon")|**Table-valued Function**|**Table-valued Function** 연산자는 테이블 반환 함수( [!INCLUDE[tsql](../includes/tsql-md.md)] 또는 CLR)를 계산하고 결과 행을 [tempdb](../relational-databases/databases/tempdb-database.md) 데이터베이스에 저장합니다. 부모 반복자에서 행을 요청하면 **테이블 반환 함수** 는 **tempdb**에서 해당 행을 반환합니다.<br /><br /> 테이블 반환 함수를 호출하는 쿼리는 **테이블 반환 함수** 반복자로 쿼리 계획을 생성합니다. 다양한 매개 변수 값으로**테이블 반환 함수** 를 계산할 수 있습니다.<br /><br /> -<br />                    **테이블 반환 함수 XML 판독기** 는 매개 변수로 XML BLOB을 입력하여 XML 문서순으로 정렬된 XML 노드를 나타내는 행 집합을 생성합니다. 다른 입력 매개 변수를 사용하여 XML 문서의 일부만 반환하도록 XML 노드를 제한할 수도 있습니다.<br /><br /> -**XPath 필터가 포함된 테이블 반환 함수 XML 판독기** 는 XPath 식을 만족하는 XML 노드로 출력을 제한하는 특수한 유형의 **XML 판독기 테이블 반환 함수** 입니다.<br /><br /> **테이블 반환 함수** 는 논리/물리 연산자입니다.|  
-|![Top 연산자 아이콘](../relational-databases/media/top-32x.gif "Top operator icon")|**Top**|**Top** 연산자는 입력을 검색하고 정렬 순서 등을 기준으로 행의 지정된 첫째 번호나 백분율만 반환합니다. **Argument** 열에는 타이를 검사할 열 목록이 포함될 수 있습니다. 업데이트 계획에서는 행 개수 제한을 보장하기 위해 **Top** 연산자를 사용합니다. **Top** 은 논리 및 물리 연산자입니다. **Top** 은 논리 및 물리 연산자입니다.|  
+|![Top 연산자 아이콘](../relational-databases/media/top-32x.gif "Top operator icon")|**Top**|**Top** 연산자는 입력을 검색하고 정렬 순서 등을 기준으로 행의 지정된 첫째 번호나 백분율만 반환합니다. **Argument** 열에는 타이를 검사할 열 목록이 포함될 수 있습니다. 업데이트 계획에서는 행 개수 제한을 보장하기 위해 **Top** 연산자를 사용합니다. **Top** 은 논리 및 물리 연산자입니다.|  
 |없음|**Top N Sort**|**Top N Sort** 는 전체 결과 집합이 아니라 첫 번째 **N** 행만 필요하다는 점을 제외하면 *Sort* 반복자와 비슷합니다. *N*의 값이 작으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 실행 엔진이 메모리에서 전체 정렬 작업을 수행하려 하고 *N*의 값이 크면 *N* 을 매개 변수로 사용하지 않는 일반적인 정렬 방법으로 다시 정렬합니다.|  
 |![Extended 연산자(UDX) 아이콘](../relational-databases/media/udx-32x.gif "Extended operator (UDX) icon")|**UDX**|확장 연산자(UDX)는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 여러 XQuery 및 XPath 연산 중 하나를 구현합니다. 모든 UDX 연산자는 논리/물리 연산자입니다.<br /><br /> 확장 연산자(UDX) **FOR XML** 은 XML 표현으로 입력되는 관계형 행 집합을 하나의 BLOB 열에 직렬화하여 한 행으로 출력합니다. 이 연산자는 입력 순서에 따라 결과가 달라지는 XML 집계 연산자입니다.<br /><br /> 확장 연산자(UDX) **XML SERIALIZER** 는 입력 순서에 따라 결과가 달라지는 XML 집계 연산자입니다. 이 연산자는 XML 문서 순서대로 입력된 XML 노드 또는 XQuery 스칼라 행을 하나의 XML BLOB 열로 직렬화하여 한 XML 행으로 출력합니다.<br /><br /> 확장 연산자(UDX) **XML FRAGMENT SERIALIZER** 는 XQuery 삽입 데이터 수정 확장에 삽입되는 XML 조각 입력 행을 처리하는 데 사용되는 특별한 유형의 **XML SERIALIZER** 입니다.<br /><br /> 확장 연산자(UDX) **XQUERY STRING** 은 XML 노드로 입력된 입력 행의 XQuery 문자열 값을 계산합니다. 이 연산자는 입력 순서에 따라 결과가 달라지는 문자열 집계 연산자입니다. 입력된 문자열 값을 포함하는 XQuery 스칼라를 한 행으로 출력합니다.<br /><br /> 확장 연산자(UDX) **XQUERY LIST DECOMPOSER** 는 XQuery 목록 분해 연산자입니다. 이 연산자는 XML 노드를 입력받아 각 행의 입력이 XSD 목록 유형인 경우 목록 요소 값을 포함하는 XQuery 스칼라를 각각 하나 이상의 행으로 생성합니다.<br /><br /> 확장 연산자(UDX) **XQUERY DATA** 는 XML 노드를 입력받아 입력 값에 대한 XQuery fn:data() 함수를 계산합니다. 이 연산자는 입력 순서에 따라 결과가 달라지는 문자열 집계 연산자입니다. **fn:data()**의 결과를 포함하는 XQuery 스칼라를 열로 구성한 하나의 행을 출력합니다.<br /><br /> 확장 연산자(UDX) **XQUERY CONTAINS** 는 XML 노드를 입력받아 입력 값에 대한 XQuery fn:contains() 함수를 계산합니다. 이 연산자는 입력 순서에 따라 결과가 달라지는 문자열 집계 연산자입니다. **fn:contains()**의 결과를 포함하는 XQuery 스칼라를 열로 구성한 하나의 행을 출력합니다.<br /><br /> 확장 연산자 **UPDATE XML NODE** 는 XML 유형에 대한 **modify()** 메서드로 XQuery 대체 데이터 수정 확장의 XML 노드를 업데이트합니다.|  
 |없음|**Union**|**Union** 논리 연산자는 여러 개의 입력을 검색하여 검색된 각 행을 출력하고 중복 요소는 제거합니다. **Union** 은 논리 연산자입니다.|  
@@ -297,4 +295,3 @@ ms.lasthandoff: 10/13/2017
 |![Table spool 연산자 아이콘](../relational-databases/media/table-spool-32x.gif "Table spool operator icon")|**Window Spool**|**Window Spool** 연산자는 각 행을 행과 관련된 창을 나타내는 행 집합으로 확장합니다. 쿼리에서 OVER 절은 쿼리 결과 집합과 창 함수를 포함하는 창을 정의한 다음 창의 각 행에 대한 값을 계산합니다. **Window Spool** 은 논리 및 물리 연산자입니다.|  
   
   
-

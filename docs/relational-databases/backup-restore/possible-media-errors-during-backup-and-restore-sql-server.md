@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - NO_CHECKSUM option
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 750aa24dcfae82a4e44a32de345299a964df0de8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 39ab370ba08f99d15e43ad88429e1cb72946562b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 오류가 검색되면 데이터베이스를 복구할 수 있는 옵션을 제공합니다. 중요한 새 오류 검색 메커니즘을 사용하면 백업 작업으로 만들고 복원 작업으로 유효성을 검사할 수 있는 백업 체크섬을 만들 수 있습니다. 작업에서 오류를 검사할지 여부 및 오류 발생 시 작업을 중지할지 아니면 계속할지를 제어할 수 있습니다. 백업에 백업 체크섬이 들어 있으면 RESTORE 문과 RESTORE VERIFYONLY 문으로 오류를 검사할 수 있습니다.  

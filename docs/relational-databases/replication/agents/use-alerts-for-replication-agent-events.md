@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - displaying alerts
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 67c68cfcba51bcd9bd2dfb8512108766fe1240e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>복제 에이전트 이벤트에 대한 경고 사용
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서는 경고를 사용하여 복제 에이전트 이벤트 등의 이벤트를 모니터링하는 방법을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 경고와 관련된 이벤트에 대한 Windows 응용 프로그램 로그를 모니터링합니다. 이런 이벤트가 발생하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 사용자가 정의한 태스크를 실행하거나 지정된 운영자에게 전자 메일 또는 호출기 메시지를 보내어 자동으로 응답합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 태스크를 실행하거나 운영자에게 알리도록 구성할 수 있는 복제 에이전트에 대한 미리 정의된 경고 집합이 포함되어 있습니다. 실행할 태스크를 정의하는 방법은 이 항목의 "경고에 대한 응답 자동화" 섹션을 참조하십시오.  
@@ -97,4 +95,3 @@ deallocate hc
  [모니터링&#40;복제&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroupproperties.general.f1
+f1_keywords: sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 751d94c5aa3e6c2f7d16b25e3e2fa3b2821cbccf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: a9d2fa593bc36151226c5f345c8e8ac0f9b731dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>가용성 그룹 속성: 새 가용성 그룹(일반 페이지)
   이 항목은 **새 가용성 그룹** 대화 상자 및 **가용성 그룹 속성** 대화 상자의 **일반** 탭에 적용됩니다.  **를 사용하지 않고** 새 가용성 그룹 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]대화 상자를 사용하여 새 가용성 그룹을 만들 수 있으며, **가용성 그룹 속성** 대화 상자를 사용하여 기존 가용성 그룹의 구성을 확인하고 변경할 수 있습니다.  
@@ -118,4 +115,3 @@ ms.lasthandoff: 08/02/2017
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

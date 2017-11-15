@@ -5,29 +5,26 @@ ms.date: 07/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.schemas.general.f1
+f1_keywords: sql13.swb.schemas.general.f1
 helpviewer_keywords:
 - creating schemas with Management Studio
 - CREATE SCHEMA [Management Studio]
 - database schemas
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
-ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: fe8ac92bb4e20d0070cc81e4f58a25babb53a236
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-database-schema"></a>데이터베이스 스키마 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 스키마를 만드는 방법에 대해 설명합니다.  
@@ -118,4 +115,3 @@ ms.lasthandoff: 07/31/2017
  자세한 내용은 [CREATE SCHEMA&#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md)를 참조하세요.  
   
   
-

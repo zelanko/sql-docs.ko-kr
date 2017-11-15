@@ -7,8 +7,7 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 11bf3a52f7c528fca881c7dd3262c5a1ce09589e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
   이 섹션의 항목에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]데이터베이스 엔진을 업그레이드하는 방법을 설명합니다.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 08/02/2017
 5.  [새 SQL Server 기능 활용](http://www.microsoft.com/sql-server/sql-server-2017) 마지막으로 이전 단계를 완료한 후에는 새 데이터베이스 엔진의 특정 향상 기능을 사용해 볼 수 있습니다. 이 항목에서는 이러한 향상 기능 중 몇 가지를 소개하고 자세한 정보를 확인할 수 있는 링크를 제공합니다.  
   
   
-

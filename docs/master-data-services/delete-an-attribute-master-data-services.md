@@ -1,29 +1,27 @@
 ---
-title: "특성 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "특성 삭제(Master Data Services) | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
+caps.latest.revision: "6"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 52bb89a363da04f08bf431b17c3da74c3d5ca64c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d36564680430b7d35c415e23586c7fd0c47e084
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-an-attribute-master-data-services"></a>특성 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 특성 및 연결된 모든 특성 값을 영구적으로 삭제하려는 경우 특성을 삭제할 수 있습니다.  
@@ -63,9 +61,9 @@ ms.lasthandoff: 09/01/2017
 8.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [특성 &#40; Master Data services&#41;](../master-data-services/attributes-master-data-services.md)   
- [도메인 기반 특성 &#40; Master Data services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [만들기 텍스트 특성 &#40; Master Data services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [도메인 기반 특성 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
+ [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

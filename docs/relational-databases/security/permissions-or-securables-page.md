@@ -5,8 +5,7 @@ ms.date: 01/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +15,16 @@ f1_keywords:
 - sql13.swb.availabilitygroupproperties.permission.f1
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d591578ed239e7c6b0279ea923fc18b558d4f252
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="permissions-or-securables-page"></a>사용 권한 또는 보안 개체 페이지
   **사용 권한** 페이지 또는 **보안 개체** 페이지를 사용하여 보안 개체에 대한 사용 권한을 보거나 설정할 수 있습니다. 이 페이지는 여러 위치에서 열 수 있으며 페이지의 내용은 페이지를 연 방법과 페이지에 포함된 항목에 따라 조금씩 다를 수 있습니다. 페이지가 열릴 때 해당 페이지의 위쪽 표는 채워져 있거나 비어 있을 수 있습니다. 상단 표에 항목을 추가하려면 **검색**을 클릭합니다. 상단 표에서 항목을 선택한 다음 **명시적** 탭에서 적절한 사용 권한을 설정합니다. 집계된 사용 권한을 보려면 **유효** 탭을 사용합니다.  
@@ -79,4 +78,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

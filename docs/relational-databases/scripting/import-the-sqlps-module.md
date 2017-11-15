@@ -5,28 +5,27 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 39b5b945994c9531deb3d545dbb438657b1914fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: cbd6691bf8fab45e58b41ad8e78166dd425ba605
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS 모듈 가져오기
   PowerShell에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 관리하는 데 권장되는 방법은 **sqlps** 모듈을 Windows PowerShell 환경으로 가져오는 것입니다. 이 모듈은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅인 및 관리 효율성 어셈블리를 로드하고 등록합니다.  Windows PowerShell 3.0부터 모듈은 명령에서 cmdlet 또는 모듈의 함수를 사용할 경우 자동으로 가져옵니다. 이 기능은 PSModulePath 환경 변수의 값에 포함된 디렉터리에서 모든 모듈에 대해 작동합니다.  자세한 내용은 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)(PowerShell 모듈 가져오기)을 참조하세요.
   
-1.  **Before You Begin:**  [Security](#Security)  
+1.  **시작하기 전에:**  [보안](#Security)  
   
-2.  **To load the module:**  [Load the sqlps Module](#LoadSqlps)  
+2.  **모듈을 로드하려면**  [sqlps 모듈 로드](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  **sqlps** 모듈을 Windows PowerShell로 가져온 후 다음을 수행할 수 있습니다.  
@@ -78,4 +77,3 @@ Get-Module -ListAvailable -Name Sqlps;
  [Import-Module](https://technet.microsoft.com/library/hh849725.aspx)
   
   
-

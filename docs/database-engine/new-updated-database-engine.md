@@ -15,12 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
 ms.author: genemi
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: dc4a5516662b200b4224facbb4c9cf4588c1b42e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>신규 및 최근 업데이트: 데이터베이스 엔진 설명서
 
@@ -161,6 +160,5 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
-
 
 

@@ -5,32 +5,32 @@ ms.date: 04/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5f74f31531f0b3c966235396d91ce12b00428d5c
-ms.openlocfilehash: 922e6a4a0df86f82012670874d49b65e1338b53c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 39f35a44ed05d820352f1b699363c5dddb9cec84
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>테이블과 저장 프로시저의 네이티브 컴파일
 
-메모리 내 OLTP에서는 네이티브 컴파일이라는 개념이 도입됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리 액세스에 최적화된 테이블에 액세스하는 저장 프로시저를 고유하게 컴파일할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 기본적으로 메모리 액세스에 최적화된 테이블을 컴파일할 수도 있습니다. 네이티브 컴파일을 사용하면 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]보다 빠르게 데이터에 액세스할 수 있으며 더 효율적으로 쿼리를 실행할 수 있습니다. 테이블과 저장 프로시저의 네이티브 컴파일은 DLL을 생성합니다.
+메모리 내 OLTP에서는 네이티브 컴파일이라는 개념이 도입됩니다. 
+            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 최적화 테이블에 액세스하는 저장 프로시저를 고유하게 컴파일할 수 있습니다. 
+            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 기본적으로 메모리 최적화 테이블을 컴파일할 수도 있습니다. 네이티브 컴파일을 사용하면 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]보다 빠르게 데이터에 액세스할 수 있으며 더 효율적으로 쿼리를 실행할 수 있습니다. 테이블과 저장 프로시저의 네이티브 컴파일은 DLL을 생성합니다.
 
 메모리 액세스에 최적화된 테이블 형식의 네이티브 컴파일도 지원됩니다. 자세한 내용은 [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)을 참조하세요.
 
 네이티브 컴파일은 추가로 컴파일하거나 해석할 필요 없이 프로세서 명령으로 구성된 네이티브 코드로 프로그래밍 구문을 변환하는 프로세스를 말합니다.
 
-메모리 내 OLTP에서는 메모리 액세스에 최적화된 테이블이 생성되고 고유하게 컴파일된 저장 프로시저가 로드될 때 네이티브 DLL로 컴파일됩니다. 또한 데이터베이스나 서버를 다시 시작한 후에도 DLL이 다시 컴파일됩니다. DLL을 다시 만드는 데 필요한 정보는 데이터베이스 메타데이터에 저장됩니다. DLL은 데이터베이스와 연결되어 있지만 데이터베이스의 일부는 아닙니다. 예를 들어, DLL은 데이터베이스 백업에 포함되지 않습니다.
+메모리 내 OLTP에서는 메모리 최적화 테이블이 생성되고 고유하게 컴파일된 저장 프로시저가 로드될 때 네이티브 DLL로 컴파일됩니다. 또한 데이터베이스나 서버를 다시 시작한 후에도 DLL이 다시 컴파일됩니다. DLL을 다시 만드는 데 필요한 정보는 데이터베이스 메타데이터에 저장됩니다. DLL은 데이터베이스와 연결되어 있지만 데이터베이스의 일부는 아닙니다. 예를 들어, DLL은 데이터베이스 백업에 포함되지 않습니다.
 
 > [!NOTE]
 > 메모리 액세스에 최적화된 테이블은 서버 재시작 중 다시 컴파일됩니다. 데이터베이스 복구 속도를 높이기 위해 고유하게 컴파일된 저장 프로시저는 서버 재시작 중 다시 컴파일되지 않고 첫 번째 실행 시에 컴파일됩니다. 이렇게 지연되는 컴파일의 결과로, 고유하게 컴파일된 저장 프로시저는 첫 번째 실행 후 [sys.dm_os_loaded_modules&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql.md)를 호출할 때만 나타납니다.
@@ -59,9 +59,10 @@ SELECT
 
 ## <a name="native-compilation-of-tables"></a>테이블의 네이티브 컴파일
 
-**CREATE TABLE** 문을 사용하여 메모리 액세스에 최적화된 테이블을 만들면 데이터베이스 메타데이터에 테이블 정보가 기록되고 메모리에 테이블 및 인덱스 구조가 작성됩니다. 또한 테이블이 DLL로 컴파일됩니다.
 
-다음 예제 스크립트에서는 데이터베이스와 메모리 액세스에 최적화된 테이블을 만듭니다.
+            **CREATE TABLE** 문을 사용하여 메모리 최적화 테이블을 만들면 데이터베이스 메타데이터에 테이블 정보가 기록되고 메모리에 테이블 및 인덱스 구조가 작성됩니다. 또한 테이블이 DLL로 컴파일됩니다.
+
+다음 예제 스크립트에서는 데이터베이스와 메모리 최적화 테이블을 만듭니다.
 
 ```tsql
 USE master;
@@ -218,4 +219,3 @@ native_sp에 대한 DLL은 t1에 대한 DLL 및 메모리 내 OLTP 저장소 엔
 [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
-

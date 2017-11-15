@@ -5,8 +5,7 @@ ms.date: 06/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
+caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6d832a7928f8f39b810cfd87a29a10c8c503dad9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 7ca4efe4610487f96b0092cac9a9c070dd3eebb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-version-and-edition-upgrades"></a>지원되는 버전 및 에디션 업그레이드
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 업그레이드할 수 있습니다. 이 항목에서는 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 지원되는 업그레이드 경로 및 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에 대해 지원되는 버전 업그레이드에 대해 설명합니다.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="unsupported-scenarios"></a>지원되지 않는 시나리오  
   
--   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 에서는 버전 간 인스턴스가 지원되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소의 버전 번호는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]인스턴스에서 동일해야 합니다.  
+-   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에서는 버전 간 인스턴스가 지원되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소의 버전 번호는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]인스턴스에서 동일해야 합니다.  
   
 -   SQL Server 2016은 64비트 플랫폼에서만 사용할 수 있습니다. 플랫폼 간 업그레이드는 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 32비트 인스턴스를 네이티브 64비트로 업그레이드할 수 없습니다. 하지만 데이터베이스를 복제에 게시하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 32비트 인스턴스에서 데이터베이스를 분리하거나 백업한 다음 이를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64비트)의 새 인스턴스에 연결하거나 이 인스턴스로 복원할 수 있습니다. master, msdb 및 model 시스템 데이터베이스의 모든 로그인과 기타 사용자 개체를 다시 만들어야 합니다.  
   
@@ -122,7 +120,7 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
   
  위의 목록에 지정되지 않은 모든 시나리오는 지원되지 않습니다. 여기에는 다음이 포함되지만 이에 제한되지 않습니다.  
   
--   동일한 컴퓨터에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 를 함께 설치  
+-   동일한 컴퓨터에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]를 함께 설치  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 인스턴스를 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 인스턴스가 포함된 복제 토폴로지의 멤버로 사용  
   
@@ -165,7 +163,7 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
   
  \*[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Tools 및 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Advanced Services에도 적용됩니다.  
   
- ** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 장애 조치(failover) 클러스터의 버전 변경은 제한됩니다. 다음과 같은 시나리오는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 장애 조치(Failover) 클러스터에서 지원되지 않습니다.  
+ **[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 장애 조치(failover) 클러스터의 버전 변경은 제한됩니다. 다음과 같은 시나리오는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 장애 조치(Failover) 클러스터에서 지원되지 않습니다.  
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise를 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer, Standard 또는 Evaluation으로 변경  
   
@@ -184,4 +182,3 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
  [SQL Server 2016으로 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   
-

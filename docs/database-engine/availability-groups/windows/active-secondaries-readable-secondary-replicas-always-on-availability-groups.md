@@ -5,8 +5,7 @@ ms.date: 06/06/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 184067cec6269692f38b92b71cfc208bfab8256d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 524b80a46a12738928b757e249c01f6d852b86d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.lasthandoff: 08/02/2017
   
 -   디스크 기반 테이블에 대한 읽기 전용 작업에서는 행 버전 관리를 사용하여 보조 데이터베이스에 대한 차단 경합을 제거합니다. 보조 데이터베이스에 대해 실행되는 모든 쿼리는 스냅숏 격리 트랜잭션 수준에 자동으로 매핑되며, 이는 다른 트랜잭션 격리 수준이 명시적으로 설정되어 있는 경우에도 해당됩니다. 또한 모든 잠금 힌트가 무시됩니다. 따라서 읽기/쓰기 경합이 없어집니다.  
   
--   메모리 액세스에 최적화된 지속성 테이블에 대한 읽기 전용 작업은 동일한 트랜잭션 격리 수준 제한이 있는 네이티브 저장 프로시저 또는 SQL 상호 운용성을 사용하여 주 데이터베이스에서 액세스하는 것과 정확히 동일한 방법으로 데이터에 액세스합니다( [데이터베이스 엔진의 격리 수준](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)참조). 주 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 보조 복제본에서 실행할 수 있습니다. 마찬가지로, 보조 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 주 복제본에서 실행할 수 있습니다.  디스크 기반 테이블과 유사하게 보조 데이터베이스에 대해 실행되는 모든 쿼리는 스냅숏 격리 트랜잭션 수준에 자동으로 매핑되며, 이는 다른 트랜잭션 격리 수준이 명시적으로 설정되어 있는 경우에도 해당됩니다.  
+-   메모리 최적화 지속성 테이블에 대한 읽기 전용 작업은 동일한 트랜잭션 격리 수준 제한이 있는 네이티브 저장 프로시저 또는 SQL 상호 운용성을 사용하여 주 데이터베이스에서 액세스하는 것과 정확히 동일한 방법으로 데이터에 액세스합니다( [데이터베이스 엔진의 격리 수준](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)참조). 주 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 보조 복제본에서 실행할 수 있습니다. 마찬가지로, 보조 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 주 복제본에서 실행할 수 있습니다.  디스크 기반 테이블과 유사하게 보조 데이터베이스에 대해 실행되는 모든 쿼리는 스냅숏 격리 트랜잭션 수준에 자동으로 매핑되며, 이는 다른 트랜잭션 격리 수준이 명시적으로 설정되어 있는 경우에도 해당됩니다.  
   
 -   보조 복제본에서는 디스크 기반 및 메모리 액세스에 최적화된 테이블 유형 모두에 대해 테이블 변수에서 DML 작업이 허용됩니다.  
   
@@ -206,7 +204,9 @@ ms.lasthandoff: 08/02/2017
   
 -   접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 따라서 주 데이터베이스에서 통계를 만들 때 이 접미사를 사용할 수 없습니다. 자세한 내용은 [Statistics](../../../relational-databases/statistics/statistics.md)을(를) 참조하세요.  
   
-##  <a name="bkmk_AccessInMemTables"></a> 보조 복제본에서 메모리 액세스에 최적화된 테이블 액세스  
+##  
+            <a name="bkmk_AccessInMemTables">
+            </a> 보조 복제본에서 메모리 최적화 테이블 액세스  
  보조 복제본의 메모리 액세스에 최적화된 테이블에 사용할 수 있는 트랜잭션 격리 수준은 주 복제본의 경우와 동일합니다. 세션 수준 격리 수준을 READ COMMITTED로 설정하고 데이터베이스 수준 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하는 것이 좋습니다. 예를 들어  
   
 ```tsql  
@@ -266,4 +266,3 @@ GO
  [통계](../../../relational-databases/statistics/statistics.md)  
   
   
-

@@ -1,12 +1,11 @@
 ---
-title: "DAC 패키지 유효성 검사 | Microsoft Docs"
+title: "DAC 패키지 유효성 검사 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data-tier application [SQL Server], view
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2b4bf32f3b4b39bbb4437fc61922e4c7ae1e552a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
   DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  
@@ -141,7 +139,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>업그레이드 동작 보기 예(PowerShell)  
  **업그레이드 동작 보기 예(PowerShell)**  
   
- 다음 예제에서는 MyApplication이라는 DAC를 MyApplication2017.dacpac 파일에 정의된 스키마로 업그레이드하기 위해 실행하는 Transact-SQL 문에 대해 보고합니다.  
+ 다음 예에서는 MyApplication이라는 DAC를 MyApplication2017.dacpac 파일에 정의된 스키마로 업그레이드하기 위해 실행하는 Transact-SQL 문에 대해 보고합니다.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -181,4 +179,3 @@ $fileStream.Close()
  [데이터 계층 응용 프로그램 업그레이드](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
   
   
-

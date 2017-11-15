@@ -5,22 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e555edfeba3d68642a581d8342c918a5a7b0ba65
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a8ee66a38a7859499750fcfdd336b874c4c92e7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>계획 지침에 정해진 쿼리 계획 적용
   OBJECT 또는 SQL 유형의 계획 지침에 정해진 쿼리 계획을 적용할 수 있습니다. 정해진 쿼리 계획을 적용하는 계획 지침은 최적화 프로그램에서 특정 쿼리에 대해 선택한 실행 계획보다 더 뛰어난 기존 실행 계획을 알고 있는 경우 유용합니다.  
@@ -50,4 +48,3 @@ GO
 ```  
   
   
-

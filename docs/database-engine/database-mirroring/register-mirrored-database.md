@@ -5,24 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dbmmonitor.registermirroreddb.f1
+f1_keywords: sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abfdb26bd9f05785b8ecffe110d0aba5188e1949
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 54c3b97e6def24984564729293a0b37ff093c044
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-mirrored-database"></a>미러된 데이터베이스 등록
   이 대화 상자를 사용하면 데이터베이스 미러링 모니터에 데이터베이스를 추가하여 지정된 서버 인스턴스에서 하나 이상의 미러된 데이터베이스를 등록할 수 있습니다. 데이터베이스가 추가되면 데이터베이스 미러링 모니터는 데이터베이스, 해당 파트너, 파트너에 연결되는 방법 등에 대한 정보를 로컬로 캐시합니다.  
@@ -72,4 +69,3 @@ ms.lasthandoff: 08/02/2017
  [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
-

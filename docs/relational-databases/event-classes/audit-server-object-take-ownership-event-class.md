@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Server Object Take Ownership event class
+helpviewer_keywords: Audit Server Object Take Ownership event class
 ms.assetid: 780fde57-3970-4063-a634-04879b6ef141
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dcf4e533d8418b36f4a86891efa07fbfe2498b9b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 08eb73672db400903897dfb9cff5f3b9370e6e1d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-server-object-take-ownership-event-class"></a>Audit Server Object Take Ownership 이벤트 클래스
   **Audit Server Object Take Ownership** 이벤트 클래스는 서버 범위에 있는 개체 소유자가 변경될 때 발생합니다.  

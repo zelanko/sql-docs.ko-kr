@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Best Practices [Database Engine]
+helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8e343ee942845bda5c874a3a238a4450ec391aa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 324915644f60d6ca9d5fe15dfce5aa1ab79056a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
   정책 기반 관리를 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 최선의 방법을 모니터링할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 최선의 방법 정책으로 가져와서 인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 포함하는 대상 집합에 대해 정책을 평가할 수 있는 일련의 정책 파일을 제공합니다. 정책을 수동으로 평가하거나, 일정에 따라 대상 집합을 평가하도록 정책을 설정하거나, 이벤트에 따라 대상 집합을 평가하도록 정책을 설정합니다. 정책 기반 관리에 대한 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 |게스트 사용 권한|[사용자 데이터베이스에 대한 게스트 사용 권한](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |마지막으로 성공한 백업 날짜|[오래된 백업](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |Public에는 부여되지 않는 서버 사용 권한|[서버 public 사용 권한](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|SQL Server 64비트 선호도 마스크 겹침|[올바른 선호도 마스크 및 선호도 입/출력 마스크 겹침](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 64비트 선호도 마스크 겹침|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server 선호도 마스크|[선호도 마스크 기본값 유지](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |SQL Server 차단된 프로세스 임계값|[차단된 프로세스 임계값 늘리기 또는 해제](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server 기본 추적|[기본 추적 로그 파일 해제](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  
@@ -64,9 +61,9 @@ ms.lasthandoff: 06/22/2017
 |Windows 이벤트 로그 클러스터 디스크 리소스 손상 오류|[SCSI 호스트 어댑터 문제 검색](../../relational-databases/policy-based-management/detect-scsi-host-adapter-issues.md)|  
 |Windows 이벤트 로그 장치 드라이버 컨트롤 오류|[장치 드라이버 컨트롤 오류](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
 |Windows 이벤트 로그 장치 준비 안 됨 오류|[장치 준비 안 됨 오류](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
-|Windows 이벤트 로그 I/O 요청 실패 오류|[실패한 입력 및 출력 요청 검색](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
-|Windows 이벤트 로그 I/O 지연 경고|[디스크 입/출력 하위 시스템에서 IO 지연 문제 확인](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|Windows 이벤트 로그 하드 페이지 폴트 중 I/O 오류 발생 오류|[하드 페이지 폴트 중 입력 및 출력 오류](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
+|Windows 이벤트 로그 I/O 요청 실패 오류|[Detect Failed Input and Output Requests](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
+|Windows 이벤트 로그 I/O 지연 경고|[Check Disk Input and Output Subsystem for IO Delay Problems](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Windows 이벤트 로그 하드 페이지 폴트 중 I/O 오류 발생 오류|[Input and Output Error During Hard Page Fault](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
 |Windows 이벤트 로그 읽기 다시 시도 오류|[읽기 다시 시도 문제에 대한 디스크 입력-출력 하위 시스템 검사](../../relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Windows 이벤트 로그 저장 시스템 I/O 제한 시간 오류|[저장소 시스템 입/출력 시간 초과](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Windows 이벤트 로그 시스템 실패 오류|[예기치 않은 시스템 오류](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
@@ -75,4 +72,3 @@ ms.lasthandoff: 06/22/2017
  [정책 기반 관리 패싯 작업](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   
-

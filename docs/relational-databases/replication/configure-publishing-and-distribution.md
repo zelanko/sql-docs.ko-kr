@@ -5,8 +5,7 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd4ea4d94bb9986127e4d5ffd2b8801f73528b93
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: cd7a911a8828bf4738df967c8af14a0ee52d2272
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 구성하는 방법에 대해 설명합니다.  
@@ -97,41 +96,41 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 서버 연결을 만듭니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>을 전달합니다.  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 을 전달합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 클래스의 인스턴스를 만듭니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 속성을 데이터베이스 이름으로 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>으로 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 속성을 데이터베이스 이름으로 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출하여 배포자를 설치합니다. 3단계의 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 개체를 전달합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출하여 배포자를 설치합니다. 3단계에서 만든 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 개체를 전달합니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 클래스의 인스턴스를 만듭니다.  
   
 7.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher>의 다음 속성을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 게시자의 이름입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 게시자의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 1단계의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 5단계에서 만든 데이터베이스의 이름입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 5단계에서 만든 데이터베이스 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 스냅숏 파일에 액세스하는 데 사용되는 공유입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 스냅숏 파일에 액세스하는 데 사용되는 공유  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 게시자에 연결할 때 사용되는 보안 모드입니다. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>을 사용하는 것이 좋습니다.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 게시자에 연결할 때 사용되는 보안 모드입니다. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 을 사용하는 것이 좋습니다.  
   
 8.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> 메서드를 호출합니다.  
   
 #### <a name="to-configure-publishing-and-distribution-using-a-remote-distributor"></a>원격 배포자를 사용하여 게시 및 배포를 구성하려면  
   
-1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 원격 배포자 서버 연결을 만듭니다.  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 원격 배포자 서버에 대한 연결을 만듭니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>을 전달합니다.  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 을 전달합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 클래스의 인스턴스를 만듭니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 속성을 데이터베이스 이름으로 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>으로 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 속성을 데이터베이스 이름으로 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출하여 배포자를 설치합니다. 원격 배포자에 연결할 때 게시자에서 사용되는 보안 암호 및 3단계의 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 개체를 지정합니다. 자세한 내용은 [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)을 참조하세요.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출하여 배포자를 설치합니다. 원격 배포자에 연결할 때 게시자에서 사용되는 보안 암호 및 3단계에서 만든 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 개체를 지정합니다. 자세한 내용은 [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)을 참조하세요.  
   
     > **중요!!** 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](http://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
   
@@ -139,21 +138,21 @@ ms.lasthandoff: 06/22/2017
   
 7.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher>의 다음 속성을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 로컬 게시자 서버의 이름입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 로컬 게시자 서버 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 1단계의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 5단계에서 만든 데이터베이스의 이름입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 5단계에서 만든 데이터베이스 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 스냅숏 파일에 액세스하는 데 사용되는 공유입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 스냅숏 파일에 액세스하는 데 사용되는 공유  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 게시자에 연결할 때 사용되는 보안 모드입니다. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>을 사용하는 것이 좋습니다.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 게시자에 연결할 때 사용되는 보안 모드입니다. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 을 사용하는 것이 좋습니다.  
   
 8.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> 메서드를 호출합니다.  
   
-9. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 로컬 게시자 서버 연결을 만듭니다.  
+9. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 로컬 게시자 서버에 대한 연결을 만듭니다.  
   
-10. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 9단계의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>을 전달합니다.  
+10. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 9단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 을 전달합니다.  
   
 11. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출합니다. 5단계에서 지정된 원격 배포자 이름 및 원격 배포자 암호를 전달합니다.  
   
@@ -174,4 +173,3 @@ ms.lasthandoff: 06/22/2017
  [Always On 가용성 그룹에 대한 복제 구성&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
   
-

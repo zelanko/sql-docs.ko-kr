@@ -19,19 +19,17 @@ helpviewer_keywords:
 - upgrading Reporting Services
 - migrating Reporting Services
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 8332575380b41698e6769a7a683b2b90b99a3ec7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 8b6d83cb8261483890c376121b23f1ffca9f6bbf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
@@ -221,13 +219,13 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 
  보고서 서버 웹 서비스 및 웹 포털의 URL을 구성하고 보고서 서버 데이터베이스에 대한 연결을 구성합니다.  
   
- 확장 배포를 마이그레이션하는 경우 모든 보고서 서버 노드를 오프라인으로 만들고 각 서버를 한 번에 하나씩 마이그레이션해야 합니다. 마이그레이션된 첫 번째 보고서 서버가 보고서 서버 데이터베이스에 성공적으로 연결되면 보고서 서버 데이터베이스 버전이 SQL Server 데이터베이스 버전으로 자동 업그레이드됩니다.  
+ 스케일 아웃 배포를 마이그레이션하는 경우 모든 보고서 서버 노드를 오프라인으로 만들고 각 서버를 한 번에 하나씩 마이그레이션해야 합니다. 마이그레이션된 첫 번째 보고서 서버가 보고서 서버 데이터베이스에 성공적으로 연결되면 보고서 서버 데이터베이스 버전이 SQL Server 데이터베이스 버전으로 자동 업그레이드됩니다.  
   
 > [!IMPORTANT]  
->  확장 배포에 있는 보고서 서버 중 일부가 온라인이고 마이그레이션되지 않은 경우 업그레이드된 버전에 연결하면 이전 스키마가 사용되어 rsInvalidReportServerDatabase 예외가 발생할 수 있습니다.  
+>  스케일 아웃 배포에 있는 보고서 서버 중 일부가 온라인이고 마이그레이션되지 않은 경우 업그레이드된 버전에 연결하면 이전 스키마가 사용되어 rsInvalidReportServerDatabase 예외가 발생할 수 있습니다.  
   
 > [!NOTE]  
->  마이그레이션한 보고서 서버가 확장 배포를 위한 공유 데이터베이스로 구성된 경우에는 보고서 서버 서비스를 구성하기 전에 **ReportServer** 데이터베이스의 **Keys** 테이블에서 이전 암호화 키를 삭제해야 합니다. 키를 제거하지 않으면 마이그레이션된 보고서 서버가 확장 배포 모드에서 초기화됩니다. 자세한 내용은 [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) 및 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.  
+>  마이그레이션한 보고서 서버가 스케일 아웃 배포를 위한 공유 데이터베이스로 구성된 경우에는 보고서 서버 서비스를 구성하기 전에 **ReportServer** 데이터베이스의 **Keys** 테이블에서 이전 암호화 키를 삭제해야 합니다. 키를 제거하지 않으면 마이그레이션된 보고서 서버가 스케일 아웃 배포 모드에서 초기화됩니다. 자세한 내용은 [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) 및 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.  
 >   
 >  확장 키는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 삭제할 수 없습니다. SQL Server Management Studio를 사용하여 **Keys** 데이터베이스의 **ReportServer** 테이블에서 이전 키를 삭제해야 합니다. Keys 테이블의 모든 행을 삭제합니다. 그러면 테이블이 지워지므로 다음 단계에서 설명하는 대로 대칭 키만 복원할 수 있습니다.  
 >   
@@ -292,5 +290,4 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 [Reporting Services의 이전 버전과의 호환성](../../reporting-services/reporting-services-backward-compatibility.md)   
 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

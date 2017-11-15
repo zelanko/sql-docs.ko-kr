@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 6a6639138b8ce1c737934310dd33c853927fe227
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 2d09da8720a85513c0998057982f26ccc2748829
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>바로 가기 쿼리 파일을 전자 메일로 보내기(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 사용자가 자신과 동일한 데이터를 사용 중인지 확인하려는 경우 해당 사용자에게 바로 가기 쿼리 파일을 메일로 보낼 수 있습니다. 워크시트를 저장하고 전자 메일로 보내는 대신 쿼리를 공유해야 합니다.  
@@ -40,10 +38,9 @@ ms.lasthandoff: 09/07/2017
   
 ## <a name="next-steps"></a>다음 단계  
   
--   바로 가기 쿼리 파일을 열려면 전자 메일을 받는 사람이 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]을 설치해야 합니다. 받는 사람이 파일을 두 번 클릭하여 열 수 있습니다.  
+-   바로 가기 쿼리 파일을 열려면 전자 메일을 받는 사람이 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 을 설치해야 합니다. 받는 사람이 파일을 두 번 클릭하여 열 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   
-

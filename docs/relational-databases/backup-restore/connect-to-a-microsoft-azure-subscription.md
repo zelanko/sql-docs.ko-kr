@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6db65c242dc6dd9fd1c6c910d583d026f45422c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d975f8d04025f3bcfc07b72a1437d6337f2a0bb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Microsoft Azure 구독에 연결
 **Microsoft 구독에 연결** 을 사용하여 SQL Server의 인스턴스가 포함된 기존 Azure blob 컨테이너를 등록합니다.  대화 상자를 통해 Azure blob 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명을 만든 다음 SQL Server 자격 증명을 만듭니다.  이 대화 상자는 SQL Server Management Studio의 백업 또는 복원 작업 및 URL 장치가 관련된 작업을 사용할 때 표시됩니다.
@@ -49,4 +47,3 @@ ms.lasthandoff: 06/22/2017
 
 **CREATE CREDENTIAL**   
 단추는 저장된 액세스 정책 및 공유 액세스 서명을 생성한 다음 SQL Server 자격 증명을 만듭니다.
-

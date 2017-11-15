@@ -5,22 +5,20 @@ ms.date: 07/31/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8fe15c5c9313fee10edbd7a9ebc3fd282dafa5f8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: d72a65cd051ca0ebd273c66fd2ce957b32d97a5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="building-a-knowledge-base"></a>기술 자료 구축
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료는 데이터 관련 정보의 리포지토리로서 데이터를 이해하고 데이터의 무결성을 유지하는 데 사용됩니다. 기술 자료는 데이터 필드의 데이터를 나타내는 각각의 도메인으로 구성됩니다. 기술 자료는 DQS에서 데이터베이스에 대해 데이터 정리 및 중복 제거를 수행하는 데 사용됩니다. 데이터 정리를 위해 기술 자료를 준비하려면 데이터 샘플에 대한 컴퓨터 기반 분석을 실행하고 도메인의 값을 대화식으로 관리하면 됩니다. DQS를 통해 정보를 가져오고, 규칙 및 관계를 만들고, 데이터 값을 직접 변경하고, 기본 데이터베이스를 활용할 수 있습니다.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 |복합 도메인 만들기 및 단일 도메인에 정보 추가|[복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)|  
   
   
-

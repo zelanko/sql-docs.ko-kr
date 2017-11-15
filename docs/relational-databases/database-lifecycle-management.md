@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,16 +29,16 @@ helpviewer_keywords:
 - Database migration
 - Database connectivity
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b478356451101fe3c72be7f9f3add4ee02dd5ca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ab6e7d5d5876bfb5b05599f31e67473231f741c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-lifecycle-management"></a>데이터베이스 수명 주기 관리
   DLM(데이터베이스 수명 주기 관리)은 정책을 기반으로 하는 데이터베이스 및 데이터 자산 관리 방법입니다. DLM은 제품이 아니지만 데이터베이스 응용 프로그램의 데이터베이스 스키마, 데이터 및 메타데이터를 관리하는 포괄적인 접근 방식입니다. DLM에 대한 신중한 사전 접근 방식을 통해 조직에서는 적절한 수준의 성능, 보고, 가용성 및 비용에 따라 데이터 리소스를 관리할 수 있습니다.  

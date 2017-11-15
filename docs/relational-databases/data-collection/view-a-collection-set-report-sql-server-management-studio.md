@@ -5,26 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dc.reporthistory.calendar.f1
+f1_keywords: sql13.swb.dc.reporthistory.calendar.f1
 helpviewer_keywords:
 - collection sets [SQL Server], viewing reports
 - reports [SQL Server], viewing collection set
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: accee6b8a77439781776f82d179a2260d3aa2895
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a4aa59de594b5f48e300f3a1284ad7f88e280934
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>컬렉션 집합 보고서 보기(SQL Server Management Studio)
   관리 데이터 웨어하우스를 구성한 다음에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 컬렉션 집합 보고서를 볼 수 있습니다. 설치 프로그램 실행 중 설치되는 시스템 데이터 컬렉션 집합에 대해 보고서가 제공됩니다. 보고서에는 다음이 포함됩니다.  

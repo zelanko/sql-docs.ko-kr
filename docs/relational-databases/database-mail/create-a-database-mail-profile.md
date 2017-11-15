@@ -5,8 +5,7 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,26 +13,25 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dfeb39ffa1bba82e4f5782ef30621c8e57529de
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a006eb212a0d53a726397e8591ac99a7c6395a51
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
   **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 공개 프로필 및 개인 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2)을 참조하세요.
   
--   **Before you Begin:** [Prerequisites](#Prerequisites), , [Security](#Security)  
+-   **시작하기 전 주의 사항:** [필수 구성 요소](#Prerequisites), [보안](#Security)  
   
--   **To Create a Database Mail private profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **데이터베이스 메일 개인 프로필을 만드는 데 사용되는 도구:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **To Create a Database Mail public profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **데이터베이스 메일 공용 프로필을 만드는 데 사용되는 도구:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -230,4 +228,3 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ```  
   
   
-

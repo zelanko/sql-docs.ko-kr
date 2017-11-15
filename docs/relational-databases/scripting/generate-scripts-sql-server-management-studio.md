@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9f103708c1720d7a08e2e9690e298701102c17f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성하는 두 가지 메커니즘을 제공합니다. **스크립트 생성 및 게시 마법사**를 사용하여 여러 개체에 대한 스크립트를 만들 수 있습니다. 또한 **개체 탐색기** 에서 **스크립팅**메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성할 수도 있습니다.  
   
-1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
+1.  **방법 선택:**  [스크립트 생성 및 게시 마법사](#GenPubScriptWiz), [개체 탐색기 스크립팅 메뉴](#OEScriptAsMenu)  
   
-2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
+2.  **스크립트를 메뉴로 사용:**  [단일 개체 스크립팅](#ScriptSingleObject), [개체 탐색기를 사용하여 두 개체 스크립팅](#ScriptTwoObjectsOE), [개체 탐색기 정보를 사용하여 두 개체 스크립팅](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  요구 사항에 가장 적합한 메커니즘을 선택합니다.  
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
 7.  선택된 개체 중 하나를 마우스 오른쪽 단추로 클릭하고 **\<개체 유형> 스크립팅**을 선택합니다.  
   
   
-
