@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - logon triggers
 - login triggers
-helpviewer_keywords:
-- triggers [SQL Server], logon
+helpviewer_keywords: triggers [SQL Server], logon
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c55dff4979c50d05293c13abe86b1655027640b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e3176031068ca2c60b678bde49a306bda1e7c31d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="logon-triggers"></a>LOGON 트리거
   LOGON 트리거는 LOGON 이벤트에 대한 응답으로 저장 프로시저를 실행합니다. 이 이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용자 세션이 설정된 경우 발생합니다. LOGON 트리거는 로그인의 인증 단계가 완료되었지만 사용자 세션이 실제로 설정되기 전에 발생합니다. 따라서 오류 메시지 및 PRINT 문의 메시지와 같이 일반적으로 사용자에게 전달되는 모든 트리거 내 발생 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그로 전달됩니다. 인증에 실패할 경우 LOGON 트리거는 실행되지 않습니다.  
@@ -90,4 +87,3 @@ END;
  [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)  
   
   
-

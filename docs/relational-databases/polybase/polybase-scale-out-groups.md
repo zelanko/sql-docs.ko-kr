@@ -1,13 +1,11 @@
 ---
-title: "PolyBase 확장 그룹 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+title: "PolyBase 스케일 아웃 그룹 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 05/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,25 +13,25 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d297ff12aedfdbdf4e5e50c6656c3d208ecb260d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 989b6a52d4a0e26b32f292fad44a5ad1caf0b71b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="polybase-scale-out-groups"></a>PolyBase 확장 그룹
+# <a name="polybase-scale-out-groups"></a>PolyBase 스케일 아웃 그룹
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또는 Azure Blob 저장소에서 대규모 데이터 집합을 처리하는 경우 성능상의 병목 지점이 될 수 있습니다. PolyBase 그룹 기능을 사용하면 SQL Server 인스턴스 클러스터를 만들어 Hadoop 또는 Azure Blob 저장소와 같은 외부 데이터 원본에서 쿼리 성능을 향상하기 위해 스케일 아웃 방식으로 대규모 데이터를 처리할 수 있습니다.  
   
  [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md) 및 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.  
   
- ![PolyBase 확장 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 확장 그룹")  
+ ![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 스케일 아웃 그룹")  
   
 ## <a name="overview"></a>개요  
   
@@ -92,7 +90,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  서버 구성 페이지에서 SQL Server PolyBase에 대한 **도메인 계정** PQTH4A\PolybaseUser 및 SQL Server PolyBase 데이터 이동 서비스를 사용합니다.  
   
-4.  PolyBase 구성 페이지에서 **PolyBase 확장 그룹의 일부로 SQL Server 인스턴스 사용**옵션을 선택합니다. 이 옵션은 PolyBase 서비스로 들어오는 연결을 허용하도록 방화벽을 엽니다.  
+4.  PolyBase 구성 페이지에서 **PolyBase 스케일 아웃 그룹의 일부로 SQL Server 인스턴스 사용**옵션을 선택합니다. 이 옵션은 PolyBase 서비스로 들어오는 연결을 허용하도록 방화벽을 엽니다.  
   
 5.  설치가 완료된 후 **services.msc**를 실행합니다. SQL Server, PolyBase 엔진 및 PolyBase 데이터 이동 서비스가 실행 중인지 확인합니다.  
   
@@ -144,4 +142,3 @@ ms.lasthandoff: 06/22/2017
  [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)  
   
   
-

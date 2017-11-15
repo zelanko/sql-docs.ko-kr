@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - replication [SQL Server], initializing
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 471ff7f62145dd3e6593ab449545f5ddb49612eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>스냅숏 없이 트랜잭션 구독 초기화
   기본적으로 트랜잭션 게시에 대한 구독은 스냅숏 에이전트가 생성하고 배포 에이전트가 적용하는 스냅숏으로 초기화됩니다. 큰 초기 데이터 집합을 다루는 시나리오와 같은 일부 시나리오에서는 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 구독자를 초기화하는 다른 방법은 다음과 같습니다.  
@@ -82,4 +80,3 @@ ms.lasthandoff: 07/31/2017
  [구독 초기화](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
-

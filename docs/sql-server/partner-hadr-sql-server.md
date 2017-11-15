@@ -15,12 +15,11 @@ ms.workload: sql-server
 ms.custom: partners
 ms.date: 09/17/2017
 ms.author: mikeray
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 67af6dfa3063bea37d0ee73678ae5c1b34c7faf7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 고가용성 및 재해 복구 파트너
 SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server를 지원하는 고가용성 및 재해 복구 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.

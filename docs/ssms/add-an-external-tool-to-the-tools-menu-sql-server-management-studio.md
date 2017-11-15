@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - adding external tools
 - Tools menu
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 21d1bab1ac1db414e761dbeba72f3f3db71408ef
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: abb0f69280d9a841ff8374d4e1792546acb4a453
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>외부 도구를 도구 메뉴에 추가(SQL Server Management Studio)
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]에서 모든 [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows 또는 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] 응용 프로그램을 시작할 수 있습니다. 외부 응용 프로그램은 **도구** 메뉴에 추가하여 실행할 수 있습니다.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 06/22/2017
   
 6.  **메뉴 내용** 목록에 도구를 추가하려면 **추가**를 클릭한 다음 **확인**을 클릭합니다.  
   
-

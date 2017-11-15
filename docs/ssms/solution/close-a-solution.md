@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], closing
 - closing solutions
 ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fc7b4a77e92b288bf69995a15aeb6a0a52980d2f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: eded62f65ee87e08eb6c051a628bcedbd8960da0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="close-a-solution"></a>솔루션 닫기
 솔루션을 닫고 솔루션 탐색기에서 제거할 수 있습니다. 솔루션을 닫으면 솔루션 탐색기에서 해당 솔루션을 사용할 수 없게 됩니다.  
@@ -38,4 +36,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>참고 항목  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
   
-

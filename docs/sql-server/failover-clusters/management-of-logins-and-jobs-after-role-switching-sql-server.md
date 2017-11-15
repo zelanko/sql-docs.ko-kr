@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- role switching [SQL Server]
+helpviewer_keywords: role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 61a44b122cc5b8e3015a4b9611f40a26c03aa183
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 9d08e404267babd8fcc17ad6863ebf9c1ca71d93
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>역할 전환 후 로그인 및 작업 관리(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 고가용성 또는 재해 복구 솔루션을 배포하는 경우 **master** 또는 **msdb** 데이터베이스에 해당 데이터베이스에 대해 저장되는 관련 정보를 다시 생성해야 합니다. 대개 관련 정보에는 주 데이터베이스의 작업과 데이터베이스에 연결해야 하는 프로세스 또는 사용자의 로그인이 포함됩니다. 보조/미러 데이터베이스를 호스팅하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 이 정보를 복제해야 합니다. 가능하다면 역할이 전환된 후 새 주 데이터베이스에서 프로그래밍 방식으로 해당 정보를 다시 생성하는 것이 가장 좋습니다.  

@@ -5,8 +5,7 @@ ms.date: 01/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: faf617519fde35e957969a98d2564821ee01e8a2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 42921f4ecb7384ce13b648a67723547c85446d73
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)
   WSFC( *Windows Server 장애 조치(failover) 클러스터링* ) 클러스터는 응용 프로그램 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 WSFC 서비스와 기능을 활용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 지원합니다.  
@@ -108,14 +107,14 @@ ms.lasthandoff: 06/22/2017
   
  항상 단일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스만 가용성 그룹 데이터베이스의 주 복제본을 호스팅할 수 있고 모든 연결된 보조 복제본은 각각 별도의 인스턴스에 위치해야 하며 각 인스턴스는 별도의 실제 노드에 있어야 합니다.  
   
-> **NOTE:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] do not require deployment of a Failover Cluster Instance or use of symmetric shared storage (SAN or SMB).  
+> **참고:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 장애 조치(failover) 클러스터 인스턴스를 배포하거나 대칭 공유 저장소(SAN 또는 SMB)를 사용할 필요가 없습니다.  
 >   
 >  FCI(장애 조치(Failover) 클러스터 인스턴스)를 가용성 그룹과 함께 사용하여 가용성 복제본의 가용성을 높일 수 있습니다. 그러나 WSFC 클러스터에서 잠재적 경합 상태를 방지하기 위해 FCI에 호스팅된 가용성 복제본을 원본 또는 대상으로 하는 가용성 그룹 자동 장애 조치(Failover)는 지원되지 않습니다.  
   
  자세한 내용은 [Always On 가용성 그룹 개요(SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
 ##  <a name="AlwaysOnWsfcHealth"></a> WSFC 상태 모니터링 및 장애 조치(Failover)  
- Always On 솔루션에 대한 고가용성을 위해서는 물리/논리적 WSFC 클러스터 리소스의 상태를 사전에 모니터링하고 중복 하드웨어를 자동으로 장애 조치하고 다시 구성해야 합니다.  또한 시스템 관리자는 가용성 그룹 또는 ** 인스턴스를 다른 노드로 수동 장애 조치(Failover) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 할 수 있습니다.  
+ Always On 솔루션에 대한 고가용성을 위해서는 물리/논리적 WSFC 클러스터 리소스의 상태를 사전에 모니터링하고 중복 하드웨어를 자동으로 장애 조치하고 다시 구성해야 합니다.  또한 시스템 관리자는 가용성 그룹 또는  인스턴스를 다른 노드로 수동 장애 조치(Failover) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 할 수 있습니다.  
   
 ### <a name="failover-policies-for-nodes-failover-cluster-instances-and-availability-groups"></a>노드, 장애 조치(Failover) 클러스터 인스턴스 및 가용성 그룹에 대한 장애 조치(Failover) 정책  
  *장애 조치(failover) 정책* 은 WSFC 클러스터 노드, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(failover) 클러스터 인스턴스) 및 가용성 그룹 수준으로 구성됩니다.  이러한 정책에서는 비정상 클러스터 리소스 상태 및 노드 응답의 심각도, 기간 및 빈도를 기반으로 서비스를 다시 시작하거나 클러스터 리소스를 다른 노드로 *자동 장애 조치(Failover)* 할 수 있습니다. 또는 가용성 그룹 주 복제본을 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 이동할 수 있습니다.  
@@ -197,4 +196,3 @@ ms.lasthandoff: 06/22/2017
  [쿼럼 강제를 통한 WSFC 재해 복구(SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [SQL Server 2016 Supports Windows Server 2016 Storage Spaces Direct](http://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)(SQL Server 2016이 Windows Server 2016 저장소 공간 다이렉트를 지원함)
   
-

@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b19b72a2359af1a08ddaa3d2d01715483fd29533
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b6f0a390c8492d331de1524ed371dddcdf28ebc8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---keyboard-page"></a>옵션(환경 - 키보드 페이지)
 **옵션** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 키보드 구성표를 사용자 지정할 수 있습니다. 이 옵션을 사용하여 키보드 구성표를 선택할 수 있습니다. 이 페이지를 표시하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 폴더를 선택한 다음 **키보드**를 클릭합니다.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 06/22/2017
   
 각 구성표에 있는 바로 가기 키 목록을 보려면 [SQL Server Management Studio 바로 가기 키](http://msdn.microsoft.com/en-us/98baaac4-0727-4ce4-8bfe-c63793ae69b8)를 참조하세요.  
   
-

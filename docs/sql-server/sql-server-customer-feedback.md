@@ -10,14 +10,12 @@ ms.prod: sql-server-2016
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 0b7f3946674d16066526f52684c2e98de8a5c8c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server를 구성하여 Microsoft에 피드백 보내기
 
 ## <a name="summary"></a>요약
@@ -166,4 +164,3 @@ SSMS는 자체 크래시 덤프를 수집하지 않습니다. SSMS와 관련된 
 "서버에서 레지스트리 하위 키 설정" 섹션에 설명된 대로 사용 현황 데이터를 전송하지 않도록 서비스를 구성할 수 있습니다. 그러나 이렇게 해도 서비스 계정은 제거되지 않습니다. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

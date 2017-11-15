@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.security.LRA.f1
-helpviewer_keywords:
-- Log Reader Agent Security dialog box
+f1_keywords: sql13.rep.security.LRA.f1
+helpviewer_keywords: Log Reader Agent Security dialog box
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67f7bfd9eb599250b951f4365d3d6efe6e943a31
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6536d1ae78cfb2fc1e23ff17efafc2a65b121190
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="log-reader-agent-security"></a>로그 판독기 에이전트 보안
   **로그 판독기 에이전트 보안** 대화 상자에서 다음을 지정할 수 있습니다.  
@@ -54,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
  연결에 사용되는 Windows 계정이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제의 로그인 및 암호 관리](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [복제 에이전트 개요](../../relational-databases/replication/agents/replication-agents-overview.md)   

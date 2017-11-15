@@ -5,28 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee981bee7832202a85186216a21f6f3129dfdc0a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a6f1ac20142830ba91edc3835879bead8549f797
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 작업
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 노드에 연결된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 관리 개체에서 메서드 및 속성을 사용하여 작업을 수행하거나 정보를 검색할 수 있습니다.  
   
 1.  [시작하기 전에](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  **경로 노드에서 작업하려면**  [메서드 및 속성 나열](#ListPropMeth), [메서드 및 속성 사용](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 다음 두 가지 동작을 수행할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  특정 개체 또는 개체 클래스에 사용할 수 있는 메서드 및 속성을 보려면 **Get-Member** cmdlet을 사용합니다.  
   
 ### <a name="examples-listing-methods-and-properties"></a>예: 메서드 및 속성 나열  
- 이 예제에서는 Windows PowerShell 변수를 SMO <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스로 설정하고 메서드 및 속성을 나열합니다.  
+ 이 예에서는 Windows PowerShell 변수를 SMO <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스로 설정하고 메서드 및 속성을 나열합니다.  
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  

@@ -1,33 +1,31 @@
 ---
 title: "시스템 버전 임시 테이블의 데이터 쿼리 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 9b9e126587a2c3a6beb34b74f234375de5a4469b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블의 데이터 쿼리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  임시 테이블 데이터의 최신(실제) 상태를 가져오려면, 비임시 테이블 쿼리와 완전히 동일한 방식으로 쿼리할 수 있습니다. PERIOD 열이 숨겨져 있지 않은 경우, 해당 값은 SELECT \* 쿼리에 나타납니다. **PERIOD** 열을 숨김으로 지정하면 해당 값이 SELECT \* 쿼리에 나타나지 않습니다. **PERIOD** 열이 숨겨진 경우 해당 열에 대한 값을 반환하기 위해 특히 SELECT 절의 **PERIOD** 열을 참조합니다.  
+  temporal 테이블 데이터의 최신(실제) 상태를 가져오려면, 비temporal 테이블 쿼리와 완전히 동일한 방식으로 쿼리할 수 있습니다. PERIOD 열이 숨겨져 있지 않은 경우, 해당 값은 SELECT \* 쿼리에 나타납니다. **PERIOD** 열을 숨김으로 지정하면 해당 값이 SELECT \* 쿼리에 나타나지 않습니다. **PERIOD** 열이 숨겨진 경우 해당 열에 대한 값을 반환하기 위해 특히 SELECT 절의 **PERIOD** 열을 참조합니다.  
   
- 모든 유형의 시간 기반 분석을 수행하려면, 4개의 임시 하위 절과 함께 새로운  **FOR SYSTEM_TIME** 절을 사용하여 현재 및 기록 테이블에서 데이터를 쿼리합니다. 이러한 절에 대한 자세한 내용은 [임시 테이블](../../relational-databases/tables/temporal-tables.md) 및 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
+ 모든 유형의 시간 기반 분석을 수행하려면, 4개의 임시 하위 절과 함께 새로운  **FOR SYSTEM_TIME** 절을 사용하여 현재 및 기록 테이블에서 데이터를 쿼리합니다. 이러한 절에 대한 자세한 내용은 [임시 테이블](../../relational-databases/tables/temporal-tables.md) 및 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <날짜_시간>  
   
@@ -74,7 +72,7 @@ AND D_1_Ago.[DeptID] BETWEEN 1 and 5 ;
  복잡한 지정 시간 분석이 필요한 경우 뷰를 사용하면 시나리오에 매우 유용합니다.   
 일반적인 예로는 이전 달의 값으로 오늘 비즈니스 보고서를 생성하는 것을 들 수 있습니다.   
 일반적으로 고객은 외래 키 관계와 다수의 테이블을 포함하는 정규화된 데이터 모델을 갖습니다. 모든 테이블이 각각의 방식으로 독립적으로 변하기 때문에, 정규화된 모델의 데이터가 과거에 어떻게 보였는지에 대한 질문에 답변하는 것은 매우 어려울 수 있습니다.   
-이런 경우, 가장 좋은 방법은 뷰를 만들고 전체 뷰에 **AS OF** 하위 절을 적용하는 것입니다. 이러한 방식을 사용하면 SQL Server가 뷰 정의에 참여하는 모든 임시 테이블에 **AS OF** 절을 투명하게 적용하기 때문에 데이터 액세스 계층의 모델링을 지정 시간 분석에서 분리할 수 있습니다. 또한, 임시 테이블을 비임시 테이블과 동일한 뷰에서 결합할 수 있고, **AS OF** 가 임시 테이블에만 적용됩니다. 뷰가 최소 하나의 임시 테이블을 참조하지 않으면 임시 쿼리 절 적용에 오류가 발생하면서 실패합니다.  
+이런 경우, 가장 좋은 방법은 뷰를 만들고 전체 뷰에 **AS OF** 하위 절을 적용하는 것입니다. 이러한 방식을 사용하면 SQL Server가 뷰 정의에 참여하는 모든 temporal 테이블에 **AS OF** 절을 투명하게 적용하기 때문에 데이터 액세스 계층의 모델링을 지정 시간 분석에서 분리할 수 있습니다. 또한, temporal 테이블을 비temporal 테이블과 동일한 뷰에서 결합할 수 있고, **AS OF** 가 temporal 테이블에만 적용됩니다. 뷰가 최소 하나의 temporal 테이블을 참조하지 않으면 임시 쿼리 절 적용에 오류가 발생하면서 실패합니다.  
   
 ```  
 /* Create view that joins three temporal tables: Department, CompanyLocation, LocationDepartments */   
@@ -149,4 +147,3 @@ ORDER BY [DeptID], [SysStartTime] Desc
  [시스템 버전 임시 테이블에서 시스템 버전 관리 중지](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

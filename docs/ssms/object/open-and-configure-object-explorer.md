@@ -5,22 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13745947a33fbe51bddb69f4bb35165fd26c1867
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 245c775659b064815e64f5f10a0d56314ecb49b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-and-configure-object-explorer"></a>개체 탐색기 열기 및 구성
 **의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]메뉴를 사용하여 개체 탐색기를 엽니다. **도구** 메뉴의 **옵션** 을 사용하여 개체 탐색기 옵션을 구성합니다.  
@@ -38,4 +36,3 @@ ms.lasthandoff: 06/22/2017
 [개체 탐색기 세부 정보 창](../../ssms/object/object-explorer-details-pane.md)  
 [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)  
   
-

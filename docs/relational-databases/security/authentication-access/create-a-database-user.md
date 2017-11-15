@@ -5,8 +5,7 @@ ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,18 +22,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
----   
-
+caps.latest.revision: "31"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: 3459cbe5b6e141af32ba7e8f29f0da6e3a34819d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
+---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -43,7 +41,7 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 데이터베이스 사용자를 만들 수 있습니다.  
   
 ##  <a name="Understanding"></a> 사용자 유형 이해  
- [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서는 데이터베이스 사용자를 만들 때 6가지 옵션을 표시합니다. 다음 그래픽은 녹색 상자에 6가지 옵션을 보여 주고 나타내는 정보를 표시합니다.  
+ [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서는 데이터베이스 사용자를 만들 때 6가지 옵션을 표시합니다. 다음 그래픽은 녹색 상자에 6가지 옵션을 보여 주고 나타내는 정보를 표시합니다.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="Restrictions"></a> 배경  
  사용자는 데이터베이스 수준의 보안 주체입니다. 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자로 매핑해야 합니다. 로그인을 다른 데이터베이스에 다른 사용자로 매핑할 수 있지만 각 데이터베이스에서 한 명의 사용자로만 매핑할 수 있습니다. 부분적으로 포함된 데이터베이스에서는 로그인을 포함하지 않는 사용자를 만들 수 있습니다. 포함된 데이터베이스 사용자에 대한 자세한 내용은 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 데이터베이스에서 게스트 사용자가 설정된 경우 데이터베이스 사용자에 매핑되지 않은 로그인이 게스트 사용자로 데이터베이스에 진입할 수 있습니다.  
   
-> **중요!** 게스트 사용자는 보통 사용하지 않도록 설정됩니다. 반드시 필요한 경우가 아니면 게스트 사용자를 사용하도록 설정하지 마십시오.  
+> **중요!** 게스트 사용자는 보통 사용하지 않도록 설정됩니다. 반드시 필요한 경우가 아니면 게스트 사용자를 사용하도록 설정하지 마세요.  
   
  보안 주체는 사용 권한을 사용자에게 부여할 수 있습니다. 사용자의 범위는 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다.  
   
@@ -96,10 +94,10 @@ ms.lasthandoff: 06/22/2017
 5.  옵션을 선택하면 대화 상자의 나머지 옵션이 변경될 수 있습니다. 일부 옵션은 특정 유형의 데이터베이스 사용자에게만 적용됩니다. 일부 옵션 비워둘 수 있으며 기본값을 사용합니다.  
   
      **사용자 이름**  
-     새 사용자의 이름을 입력합니다. **사용자 유형** 목록에서 **Windows 사용자**를 선택한 경우 줄임표**(…)**를 클릭하여 **사용자 또는 그룹 선택** 대화 상자를 열 수도 있습니다.  
+     새 사용자의 이름을 입력합니다. **사용자 유형** 목록에서 **Windows 사용자** 를 선택한 경우 줄임표 **(…)** 를 클릭하여 **사용자 또는 그룹 선택** 대화 상자를 열 수도 있습니다.  
   
      **로그인 이름**  
-     사용자에 대한 로그인을 입력합니다. 또는 줄임표**(…)**를 클릭하여 **로그인 선택** 대화 상자를 엽니다. **로그인 이름** 은 **사용자 유형** 목록에서 **로그인을 사용하는 SQL 사용자** 또는 **Windows 사용자** 를 선택한 경우 사용할 수 있습니다.  
+     사용자에 대한 로그인을 입력합니다. 또는 줄임표 **(…)** 를 클릭하여 **로그인 선택** 대화 상자를 엽니다. **로그인 이름** 은 **사용자 유형** 목록에서 **로그인을 사용하는 SQL 사용자** 또는 **Windows 사용자** 를 선택한 경우 사용할 수 있습니다.  
   
      **암호** 및 **암호 확인**  
      데이터베이스에서 인증할 사용자의 암호를 입력합니다.  
@@ -108,13 +106,13 @@ ms.lasthandoff: 06/22/2017
      사용자의 기본 언어를 입력합니다.  
   
      **기본 스키마**  
-     이 사용자가 만든 개체를 소유할 스키마를 입력합니다. 또는 줄임표**(…)**를 클릭하여 **스키마 선택** 대화 상자를 엽니다. **기본 스키마** 는 **사용자 유형**목록에서 **로그인을 사용하는 SQL 사용자**, **로그인을 사용하지 않는 SQL 사용자** 또는 **Windows 사용자** 를 선택한 경우 사용할 수 있습니다.  
+     이 사용자가 만든 개체를 소유할 스키마를 입력합니다. 또는 줄임표 **(…)** 를 클릭하여 **스키마 선택** 대화 상자를 엽니다. **기본 스키마** 는 **사용자 유형**목록에서 **로그인을 사용하는 SQL 사용자**, **로그인을 사용하지 않는 SQL 사용자** 또는 **Windows 사용자** 를 선택한 경우 사용할 수 있습니다.  
   
      **인증서 이름**  
-     데이터베이스 사용자에 대해 사용할 인증서를 입력합니다. 또는 줄임표**(…)**를 클릭하여 **인증서 선택** 대화 상자를 엽니다. **인증서 이름** 은 **사용자 유형** 목록에서 **인증서에 매핑된 사용자** 를 선택한 경우 사용할 수 있습니다.  
+     데이터베이스 사용자에 대해 사용할 인증서를 입력합니다. 또는 줄임표 **(…)** 를 클릭하여 **인증서 선택** 대화 상자를 엽니다. **인증서 이름** 은 **사용자 유형** 목록에서 **인증서에 매핑된 사용자** 를 선택한 경우 사용할 수 있습니다.  
   
      **비대칭 키 이름**  
-     데이터베이스 사용자에 대해 사용할 키를 입력합니다. 또는 줄임표**(…)**를 클릭하여 **비대칭 키 선택** 대화 상자를 엽니다. **비대칭 키 이름** 은 **사용자 유형** 목록에서 **비대칭 키에 매핑된 사용자** 를 선택한 경우 사용할 수 있습니다.  
+     데이터베이스 사용자에 대해 사용할 키를 입력합니다. 또는 줄임표 **(…)** 를 클릭하여 **비대칭 키 선택** 대화 상자를 엽니다. **비대칭 키 이름** 은 **사용자 유형** 목록에서 **비대칭 키에 매핑된 사용자** 를 선택한 경우 사용할 수 있습니다.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -139,7 +137,7 @@ ms.lasthandoff: 06/22/2017
      개체의 확장 속성을 확인하거나 지정합니다. 각 확장 속성은 개체에 연결된 메타데이터의 이름/값 쌍으로 이루어져 있습니다.  
   
      **줄임표(...)**  
-     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표 **(...)** 를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](http://msdn.microsoft.com/library/ms189353.aspx)를 참조하십시오.  
+     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표 **(…)** 를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](http://msdn.microsoft.com/library/ms189353.aspx)를 참조하세요.  
   
      **Delete**  
      선택한 확장 속성을 제거합니다.  
@@ -171,4 +169,3 @@ ms.lasthandoff: 06/22/2017
  [CREATE LOGIN&#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
-

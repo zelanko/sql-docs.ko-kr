@@ -15,12 +15,11 @@ ms.devlang: na
 ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: ssdt-sql-server-data-tools
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 3051fd04a8e3377ff93ad560e9bb600d80527d23
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>새로 추가되었거나 최근에 업데이트됨: SSDT(SQL Server Data Tools)
 
@@ -34,7 +33,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *업데이트 날짜 범위:*  &nbsp; **2017-09-11** &nbsp;부터 &nbsp; **2017-09-27**까지
+- *업데이트 날짜 범위:*  &nbsp; **2017-09-11** &nbsp; 부터 &nbsp; **2017-09-27**
 - *주제 영역:* &nbsp; **SSDT(SQL Server Data Tools)**.
 
 
@@ -123,6 +122,5 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
-
 
 

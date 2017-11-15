@@ -5,26 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.summary.new.custom.report.f1
-helpviewer_keywords:
-- SQL Server Management Studio [SQL Server], custom reports
+f1_keywords: sql13.swb.summary.new.custom.report.f1
+helpviewer_keywords: SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1292293885329df9b38dfcf94cd8ee1c5ca5238
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio의 사용자 지정 보고서
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 많은 개체 탐색기 노드에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]에서 만든 표준 보고서 집합이 표시됩니다. 이러한 보고서는 일반적으로 요청되는 서버 정보를 요약합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 서비스 팩 2부터 관리자는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 만든 사용자 지정 보고서를 실행할 수 있습니다.  
@@ -82,4 +78,3 @@ ms.lasthandoff: 06/22/2017
 [사용자 지정 보고서 실행 경고 표시](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   
-

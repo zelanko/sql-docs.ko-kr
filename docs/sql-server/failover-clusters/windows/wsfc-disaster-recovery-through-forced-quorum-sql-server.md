@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,24 +13,23 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8e7009889fba8dd29eb830051523735ee36c31c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
   쿼럼 실패는 일반적으로 시스템 관련 재해나, 지속적인 통신 오류 또는 WSFC 클러스터의 여러 노드와 관련된 잘못된 구성으로 인해 발생합니다.  쿼럼 실패에서 복구하려면 수동 개입이 필요합니다.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
   
--   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
+-   **강제 쿼럼 절차를 통해 WSFC 재해 복구** [강제 쿼럼 절차를 통해 WSFC 재해 복구](#Main)  
   
 -   [관련 태스크](#RelatedTasks)  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
  WSFC 클러스터를 다시 온라인 상태로 전환하려면 기존 구성에서 쿼럼 실패의 근본 원인을 해결하고 필요한 경우 영향을 받은 데이터베이스를 복구해야 하며 실패에서 살아남은 클러스터 토폴로지를 반영하도록 WSFC 클러스터의 나머지 노드를 다시 구성해야 합니다.  
   
- 클러스터를 오프라인 상태로 전환한 보안 장치를 무시하기 위해 WSFC 클러스터 노드에서 *강제 쿼럼* 절차를 수행할 수 있습니다.  이 경우 클러스터에서 쿼럼 투표 검사가 일시 중지되어 클러스터의 모든 노드에서 WSFC 클러스터 리소스 및 SQL ServeR을 다시 온라인 상태로 전환할 수 있습니다.  
+ 클러스터를 오프라인 상태로 전환한 보안 장치를 무시하기 위해 WSFC 클러스터 노드에서 *강제 쿼럼* 절차를 수행할 수 있습니다.  이 경우 클러스터에서 쿼럼 투표 검사가 일시 중지되어 클러스터의 모든 노드에서 WSFC 클러스터 리소스 및 SQL Server를 다시 온라인 상태로 전환할 수 있습니다.  
   
  이 유형의 재해 복구 프로세스에는 다음 단계가 포함됩니다.  
   
@@ -130,4 +128,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

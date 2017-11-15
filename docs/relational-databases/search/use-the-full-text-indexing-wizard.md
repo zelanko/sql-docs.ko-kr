@@ -5,8 +5,7 @@ ms.date: 08/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 98fce836048a343f9eb87b2d987d13a294bce59f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
   SSMS에서 전체 텍스트 인덱싱 마법사는 전체 텍스트 인덱스를 만드는 과정을 단계별로 안내합니다.  
@@ -146,4 +144,3 @@ ms.lasthandoff: 07/31/2017
      모든 작업의 실행이 완료되면 이 단추를 클릭하여 수행된 작업에 대한 보고서에 액세스합니다. 보고서를 확인하거나 파일로 인쇄하거나 클립보드에 복사하거나 전자 메일로 보낼 수 있습니다.  
   
   
-

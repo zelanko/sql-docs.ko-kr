@@ -5,8 +5,7 @@ ms.date: 02/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: e2e028fb7c3c1849bd65495725bcf9edf66c0a81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
   복제 배포 에이전트는 스냅숏(스냅숏 복제 및 트랜잭션 복제의 경우) 및 배포 데이터베이스 테이블에 저장된 트랜잭션(트랜잭션 배포의 경우)을 구독자의 대상 테이블로 이동하는 실행 파일입니다.  
@@ -275,7 +274,7 @@ distrib [-?]
  배포의 구독 유형을 지정합니다. 값 **0** 은 밀어넣기 구독을, 값 **1** 은 끌어오기 구독을, 값 **2** 는 익명 구독을 나타냅니다.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory**에는 제한이 없습니다. See the preceding **–MessageInterval**parameter.  
+ 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory**에는 제한이 없습니다. 앞에 나온 **– MessageInterval**매개 변수를 참조하세요.  
   
  **-UseDTS**  
  데이터 변환을 허용하는 게시의 매개 변수로 지정해야 합니다.  
@@ -303,4 +302,3 @@ distrib [-?]
  [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

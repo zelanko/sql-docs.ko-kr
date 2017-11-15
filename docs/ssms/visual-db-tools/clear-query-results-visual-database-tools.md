@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Results pane
 - clearing query results
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3da9966a033a4cf1ad697c27de5a92a33c02206b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 34c9f0c6283b05a06c0b7671b8aa008899a560c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="clear-query-results-visual-database-tools"></a>쿼리 결과 지우기(Visual Database Tools)
 **쿼리 및 뷰 디자이너**에서 쿼리를 실행한 후에 결과 창을 지울 수 있습니다. 이 프로시저는 개체 탐색기에서 **뷰 열기** 또는 **테이블 열기** 옵션을 사용하여 만든 쿼리에 적용됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 쿼리 편집기에서 쿼리를 실행한 후에는 쿼리 편집기 창을 닫거나 다른 쿼리를 실행하는 경우를 제외하고 결과 창을 지울 수 없습니다.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 08/18/2017
 [쿼리 중지&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
 [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
-

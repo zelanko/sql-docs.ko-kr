@@ -5,23 +5,21 @@ ms.date: 08/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: eff98b4bac895c945e48b19be9ef40131d829662
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 지리적 배경 데이터를 표시하는 데 사용할 수 있는 지도 기능에 대해 알아봅니다. 
@@ -97,7 +95,7 @@ ms.lasthandoff: 08/09/2017
   
     디자인 화면에 지도가 추가됩니다.  
   
-13. “지도 제목” 텍스트를 선택하고 **Sales by Store**를 입력한 후 Enter 키를 누릅니다.  
+13. "지도 제목" 텍스트를 선택하고 **Sales by Store**를 입력한 후 Enter 키를 누릅니다.  
 
 15. 지도를 두 번 클릭하여 **지도 계층**창을 표시합니다. **지도 계층** 창에는 **포함**계층 유형의 다각형 계층인 PolygonLayer1이 표시됩니다. 각 군은 이 계층의 포함된 지도 요소입니다.  
   
@@ -555,5 +553,4 @@ ms.lasthandoff: 08/09/2017
 [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
-
 

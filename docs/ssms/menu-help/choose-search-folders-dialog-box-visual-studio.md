@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.lookin
+f1_keywords: vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12c0849728ab63ccc806e0ca2de2d8b98fd7c110
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>검색 폴더 선택 대화 상자(Visual Studio)
 사용자의 명명된 검색 폴더 집합을 조합, 저장 및 수정할 수 있으며 폴더의 검색 순서를 지정할 수 있습니다. 이 대화 상자를 표시하려면 파일에서 찾기, 파일에서 바꾸기, 찾기 및 바꾸기 창의 **찾는 위치** 드롭다운 목록 옆의 **찾아보기(...)** 단추를 선택합니다.  
@@ -50,10 +47,10 @@ ms.lasthandoff: 06/22/2017
 **Parent**  
 **폴더 목록** 에서 선택한 항목을 폴더 계층 구조의 한 수준 위로 이동합니다.  
   
-**추가(&gt;)**  
+**추가(>)**  
 **폴더 목록** 에서 선택한 폴더를 **선택한 폴더** 목록에 추가합니다.  
   
-**제거(&lt;)**  
+**제거(<)**  
 선택한 폴더를 **선택한 폴더** 목록에서 제거합니다.  
   
 **선택한 폴더**  
@@ -62,4 +59,3 @@ ms.lasthandoff: 06/22/2017
 **적용**  
 **선택한 폴더** 목록에 있는 검색 폴더 집합을 명명된 폴더 집합으로 저장합니다. 이렇게 하면 **찾기 및 바꾸기** 창의 모든 탭에 있는 **찾는 위치** 필드에서 이 폴더 집합을 선택할 수 있습니다. 이 옵션은 검색 폴더 선택 대화 상자를 닫습니다.  
   
-

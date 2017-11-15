@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], projects
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 095f51e1ba4713d13133eac5bb42d8b468a4cada
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 7f9d66e69535af5c4811d9ac6f038d6fa0a2ee78
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="solutions-sql-server-management-studio"></a>솔루션(SQL Server Management Studio)
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 솔루션은 하나 이상의 관련 프로젝트의 모음입니다. 프로젝트는 일반적으로 사용되는 관리 스크립트와 같이 개발자가 관련 파일을 구성하는 데 사용되는 컨테이너입니다.  
@@ -62,4 +60,3 @@ ms.lasthandoff: 08/18/2017
 [프로젝트&#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [솔루션 탐색기 원본 제어](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
-

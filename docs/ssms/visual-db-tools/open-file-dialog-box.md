@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aeb2660571f6eff735bf9936be3d4243fb797149
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-file-dialog-box"></a>파일 열기 대화 상자
 **파일 열기** 대화 상자를 사용하여 디스크에 있는 기존 파일을 열 수 있습니다. 또한 이 대화 상자를 사용하여 다양한 언어 인코딩 옵션을 통해 이미 열린 파일을 열 수 있습니다.  
@@ -103,4 +101,3 @@ ms.lasthandoff: 06/22/2017
 **네트워크 드라이브 연결**  
 **네트워크 드라이브 연결** 대화 상자를 엽니다.  
   
-

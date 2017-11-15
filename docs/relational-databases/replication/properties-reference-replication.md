@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- F1 Help [SQL Server replication]
+helpviewer_keywords: F1 Help [SQL Server replication]
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9c15f108757b6e644251e897290c98956d379117
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3177d3ff20f9b35b17044a1d8144ba17b7013a9c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="properties-reference-replication"></a>속성 참조(복제)
   설명서의 이 섹션에서는 다음 복제 마법사와 대화 상자에 대한 정보를 제공합니다.  
@@ -54,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 -   [SQL Server Management Studio 복제 대화 상자](../../relational-databases/replication/sql-server-management-studio-replication-dialog-boxes.md)  
   
   
-

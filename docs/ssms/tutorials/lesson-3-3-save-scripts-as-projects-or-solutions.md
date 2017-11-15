@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 3772efa6ab55acd4087cd47f897040f782476636
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: f2e8f9470fe28427a78eb74a41c4e76c400f3761
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-3---save-scripts-as-projects-or-solutions"></a>3-3단원 - 스크립트를 프로젝트 또는 솔루션으로 저장
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에 익숙한 개발자라면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 솔루션 탐색기를 쉽게 활용할 수 있을 것입니다. 업무 지원 스크립트를 스크립트 프로젝트로 그룹화하고 스크립트 프로젝트를 하나의 솔루션으로 함께 관리할 수 있습니다. 스크립트 프로젝트와 솔루션에 배치된 스크립트는 하나의 그룹으로 함께 열거나 Visual SourceSafe와 같은 원본 제어 제품에 함께 저장할 수 있습니다. 스크립트 프로젝트에는 스크립트를 제대로 실행하기 위한 연결 정보가 포함되며 지원 텍스트 파일 같이 스크립트가 아닌 파일이 포함될 수 있습니다.  
@@ -74,4 +71,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

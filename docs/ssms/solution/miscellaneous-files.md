@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], files
 - miscellaneous files folder [SQL Server]
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6ea72cab23f488c8330d78dc5c6a1275e043728a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: f90f4430dd8a82cb7c51d3bfb4013f7f192441a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="miscellaneous-files"></a>기타 파일
 프로젝트의 외부에 있는 파일을 *기타 파일*이라고 합니다. 솔루션이 열려 있는 경우 프로젝트와 연관된 기타 파일을 열고 수정할 수 있습니다. 파일 확장명이 프로젝트 코드 편집기와 연결되지 않은 경우 파일은 기타 파일로 분류됩니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스크립트 프로젝트에서는 .txt 또는 .mdx 확장명을 가진 파일이 기타 파일로 간주됩니다. MDX 프로젝트에서는 .txt 또는 .sql 확장명을 가진 파일이 기타 파일로 간주됩니다. 파일 확장명을 코드 편집기에 연결하려면 [방법: 파일 확장명을 코드 편집기에 연결](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)을 참조하세요.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 08/18/2017
 [솔루션&#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [프로젝트&#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
 - replication [SQL Server], synchronization
 ms.assetid: cbe13120-8dd9-4309-88dd-07a801c68f5f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dbd10248c5a6c358e6e8e6c64b0db355fc4ed66d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c03c4e5ac9974003e5be7e7f647d425618d06fd7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="synchronize-subscriptions-replication"></a>구독 동기화(복제)
   구독은 복제 에이전트에 의해 동기화됩니다. 배포 에이전트는 트랜잭션 및 스냅숏 게시에 대한 구독을 동기화하며 병합 에이전트는 병합 게시에 대한 구독을 동기화합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 복제 저장 프로시저 및 RMO(복제 관리 개체)를 사용하여 구독을 동기화하고 동기화 동작을 제어할 수 있습니다. 다음 항목에서는 구독을 동기화하고 동기화 옵션을 지정하는 방법을 설명합니다.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Windows 동기화 관리자를 사용하여 구독 동기화&#40;Windows 동기화 관리자&#41;](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)  
   
--   [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 -   [비즈니스 논리 처리기 디버깅&#40;복제 프로그래밍&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)  
   
@@ -69,4 +67,3 @@ ms.lasthandoff: 06/22/2017
  [데이터 동기화](../../relational-databases/replication/synchronize-data.md)  
   
   
-

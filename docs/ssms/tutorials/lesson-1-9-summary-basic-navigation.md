@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 546a25682e74daa3515e36069fbcb764da7c8dee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: b9f0db357c16b9b3b2347fdd1f1922be9e473827
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-9---summary---basic-navigation"></a>1-9단원 - 요약 - 기본 탐색
 개인적인 취향과 작업 요구 사항에 맞게 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 디자인 화면을 사용자 지정할 수 있습니다.  
@@ -42,4 +39,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

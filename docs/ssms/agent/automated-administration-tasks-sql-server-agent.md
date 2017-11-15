@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +14,19 @@ helpviewer_keywords:
 - SQL Server Agent
 - administering SQL Server, automatically
 ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4aee8b9276d061d4aac4115eda48192279756225
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e1785f0d2bc539452d557ca80ea4c8a82848f9a2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>관리 태스크 자동화(SQL Server 에이전트)
-Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 사용하여 관리 태스크를 자동화할 수 있습니다. 관리를 자동화하려면 예측 가능한 관리 태스크를 정의한 다음 각 태스크를 수행할 조건을 지정합니다. 자동화된 관리를 사용하여 일상적인 태스크와 이벤트를 처리하면 시간이 절약되므로 다른 관리 기능을 수행할 수 있습니다.  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 를 사용하여 관리 태스크를 자동화할 수 있습니다. 관리를 자동화하려면 예측 가능한 관리 태스크를 정의한 다음 각 태스크를 수행할 조건을 지정합니다. 자동화된 관리를 사용하여 일상적인 태스크와 이벤트를 처리하면 시간이 절약되므로 다른 관리 기능을 수행할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  
@@ -39,4 +37,3 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 사용하
   
 [기업 내 관리 자동화](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   
-

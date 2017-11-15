@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ag.jobsreferencingaschedule.f1
 - sql13.ag.job.jobsreferencingaschedule.f1
-helpviewer_keywords:
-- Jobs Referencing a Schedule dialog box
+helpviewer_keywords: Jobs Referencing a Schedule dialog box
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5e5c583a270c36031c69350de7561fee0d670f90
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b8411f688963016cce117b7a30437fb4abbaa04f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="jobs-that-reference-a-schedule"></a>일정 참조 작업
 이 대화 상자를 사용하여 특정 일정을 참조하는 작업에 대한 정보를 확인할 수 있습니다.  
@@ -49,4 +46,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>참고 항목  
 [일정을 만들고 작업에 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
   
-

@@ -5,24 +5,21 @@ ms.date: 03/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "sql server powershell 설치, sql server powershell 다운로드"
+keywords: "sql server powershell 설치, sql server powershell 다운로드"
 ms.assetid: 
-caps.latest.revision: 113
+caps.latest.revision: "113"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 16ca0d08413ba75b7603596e8e4c5340715cb1a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>SQL Server PowerShell 모듈 다운로드
 SQL Server Management Studio의 17.0 릴리스의 일환으로 SQL Server PowerShell 모듈이 이제 PowerShell 갤러리를 통해 제공됩니다.  이 모듈은 더 이상 SSMS 설치 패키지에 포함되지 않습니다. SSMS 17.0 버전 이상에서 PowerShell을 사용하려면 추가 단계로 SQL Server 모듈을 컴퓨터에 설치해야 합니다.
@@ -62,4 +59,3 @@ SQL Server 모듈을 설치하는 PowerShell 명령은 다음과 같습니다.
 > Import-Module SqlServer -Version 21.0.17178
 
 PowerShell 갤러리에 제공되는 SQL Server PowerShell 모듈 버전은 버전 관리를 지원하며 PowerShell 버전 5.0 이상이 필요합니다. [PowerShell 갤러리](https://www.powershellgallery.com/packages/Sqlserver/)에서 SqlServer 모듈을 찾을 수 있습니다. 
-

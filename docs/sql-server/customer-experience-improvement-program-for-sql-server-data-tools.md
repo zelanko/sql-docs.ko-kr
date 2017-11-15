@@ -5,22 +5,20 @@ ms.date: 10/21/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 399dd15292b67f89829576234e0b2c600e5b4e44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: d3ac32a1bded13f7d2411fac6100353f3ec7e2c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools에 대한 사용자 환경 개선 프로그램
   사용자 환경 개선 프로그램(CEIP)이 어떻게 Microsoft가 소프트웨어 개선 방법을 식별하는 데 도움이 되는지 알아 보세요.  언제든지 참여하거나 참여하지 않도록 도구를 구성할 수 있습니다.  
@@ -147,4 +145,3 @@ ms.lasthandoff: 07/31/2017
 -   1은 참여함  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactional replication, propagation methods
+helpviewer_keywords: transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 27553553b3bf900a1a7207711520a2355c997941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>트랜잭션 아티클 - 변경 내용을 전파하는 방법 지정
   트랜잭션 복제를 사용하여 데이터 변경 내용이 게시자에서 구독자로 전파되는 방법을 지정할 수 있습니다. 다음 4가지 중 하나를 사용하여 게시된 각 테이블에 대해 INSERT, UPDATE 또는 DELETE 등의 각 작업이 구독자로 전파되는 방법을 지정할 수 있습니다.  
@@ -37,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
  기본적으로 트랜잭션 복제는 각 구독자에 설치된 저장 프로시저 집합를 통하여 변경 내용을 구독자로 전파합니다. 게시자의 테이블에서 삽입, 업데이트 또는 삭제 작업이 발생하면 이러한 작업은 구독자에서 저장 프로시저에 대한 호출로 변환됩니다. 저장 프로시저에서는 테이블의 열로 매핑하는 매개 변수를 적용하여 이러한 열이 구독자에서 변경되도록 합니다.  
   
- 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하려면 [트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)을 참조하십시오.  
+ 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하려면 [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)을 참조하십시오.  
   
 ## <a name="default-and-custom-stored-procedures"></a>기본 저장 프로시저 및 사용자 지정 저장 프로시저  
  복제 시 각 테이블 아티클에 대해 기본적으로 생성되는 3가지 프로시저는 다음과 같습니다.  
@@ -222,4 +219,3 @@ go
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   
-

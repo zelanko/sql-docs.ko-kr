@@ -1,40 +1,38 @@
 ---
 title: "시스템 버전 임시 테이블 만들기 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a75bde97eddb1b99546ec4d5ff0dbb33340e19e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1507ae227bac2f5b4ef6f04533295f96e8c767b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  기록 테이블을 지정하는 방법과 관련해서 시스템 버전 임시 테이블을 만드는 다음 세 가지 방법이 있습니다.  
+  기록 테이블을 지정하는 방법과 관련해서 시스템 버전 temporal 테이블을 만드는 다음 세 가지 방법이 있습니다.  
   
 -   익명 기록 테이블이 포함된 임시 테이블: 현재 테이블의 스키마를 지정하고 시스템이 자동 생성된 이름으로 해당 기록 테이블을 만들도록 합니다.  
   
 -   기본 기록 테이블이 포함된 임시 테이블: 기록 테이블 스키마 이름 및 테이블 이름을 지정하고 시스템이 해당 스키마에 기록 테이블을 만들도록 합니다.  
   
--   미리 만든 사용자 정의 기록 테이블이 포함된 임시 테이블: 요구에 가장 알맞은 기록 테이블을 만든 다음 임시 테이블을 만드는 동안 해당 테이블을 참조합니다.  
+-   미리 만든 사용자 정의 기록 테이블이 포함된 temporal 테이블: 요구에 가장 알맞은 기록 테이블을 만든 다음 temporal 테이블을 만드는 동안 해당 테이블을 참조합니다.  
   
-## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>익명 기록 테이블이 포함된 임시 테이블 만들기  
- "익명" 기록 테이블이 포함된 임시 테이블 만들기는 특히 프로토타입 및 시험 환경에서 빠른 개체 만들기에 편리한 옵션입니다. 또한 **SYSTEM_VERSIONING** 절에 매개 변수가 필요하지 않으므로 임시 테이블을 만드는 가장 간단한 방법이기도 합니다. 아래 예제에서는 기록 테이블의 이름을 정의하지 않고 시스템 버전 관리를 사용하도록 설정한 상태에서 새 테이블을 만듭니다.  
+## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>익명 기록 테이블이 포함된 temporal 테이블 만들기  
+ "익명" 기록 테이블이 포함된 temporal 테이블 만들기는 특히 프로토타입 및 시험 환경에서 빠른 개체 만들기에 편리한 옵션입니다. 또한 **SYSTEM_VERSIONING** 절에 매개 변수가 필요하지 않으므로 temporal 테이블을 만드는 가장 간단한 방법이기도 합니다. 아래 예제에서는 기록 테이블의 이름을 정의하지 않고 시스템 버전 관리를 사용하도록 설정한 상태에서 새 테이블을 만듭니다.  
   
 ```  
 CREATE TABLE Department   
@@ -53,13 +51,13 @@ WITH (SYSTEM_VERSIONING = ON)
   
 ### <a name="important-remarks"></a>중요한 주의 사항  
   
--   시스템 버전 임시 테이블에는 기본 키가 정의되어 있어야 하며 **PERIOD FOR SYSTEM_TIME** 로 선언된 datetime2 열 두 개를 사용하여 정확히 한 개의 **PERIOD FOR SYSTEM_TIME**을 정의해야 합니다.  
+-   시스템 버전 temporal 테이블에는 기본 키가 정의되어 있어야 하며 **PERIOD FOR SYSTEM_TIME** 로 선언된 datetime2 열 두 개를 사용하여 정확히 한 개의 **PERIOD FOR SYSTEM_TIME**을 정의해야 합니다.  
   
 -   **PERIOD** 열은 null 허용 여부를 지정하지 않은 경우에도 언제나 null을 허용하지 않는다고 가정합니다. **PERIOD** 열을 명시적으로 null 허용으로 정의한 경우 **CREATE TABLE** 문이 실패합니다.  
   
--   기록 테이블은 언제나 열 수, 열 이름, 순서 및 데이터 형식에서 현재 또는 임시 테이블과 스키마를 맞춰야 합니다.  
+-   기록 테이블은 언제나 열 수, 열 이름, 순서 및 데이터 형식에서 현재 또는 temporal 테이블과 스키마를 맞춰야 합니다.  
   
--   익명 기록 테이블은 자동으로 현재 또는 임시 테이블과 같은 스키마에 생성됩니다.  
+-   익명 기록 테이블은 자동으로 현재 또는 temporal 테이블과 같은 스키마에 생성됩니다.  
   
 -   익명 기록 테이블 이름의 형식은 *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]*입니다. 접미사는 선택 사항이며 테이블 이름의 첫 번째 부분이 고유하지 않은 경우에만 추가됩니다.  
   
@@ -67,10 +65,10 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   기본 클러스터형 인덱스는 형식 *IX_<history_table_name>*의 자동 생성된 이름을 가진 기록 테이블에 대해 생성됩니다. 클러스터형 인덱스는 **PERIOD** 열(시작, 종료)을 포함합니다.  
   
--   현재 테이블을 메모리 액세스에 최적화된 테이블로 만들려면 [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)을 참조하세요.  
+-   현재 테이블을 메모리 최적화 테이블로 만들려면 [메모리 최적화 테이블을 포함한 시스템 버전 temporal 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)을 참조하세요.  
   
-## <a name="creating-a-temporal-table-with-a-default-history-table"></a>기본 기록 테이블이 포함된 임시 테이블 만들기  
- 이름 지정은 제어하면서 시스템이 기본 구성을 사용하여 기록 테이블을 만들도록 하려는 경우 기본 기록 테이블이 포함된 임시 테이블을 만들면 편리합니다. 아래 예제에서는 기록 테이블의 이름을 명시적으로 정의하고 시스템 버전 관리를 사용하도록 설정한 상태에서 새 테이블을 만듭니다.  
+## <a name="creating-a-temporal-table-with-a-default-history-table"></a>기본 기록 테이블이 포함된 temporal 테이블 만들기  
+ 이름 지정은 제어하면서 시스템이 기본 구성을 사용하여 기록 테이블을 만들도록 하려는 경우 기본 기록 테이블이 포함된 temporal 테이블을 만들면 편리합니다. 아래 예제에서는 기록 테이블의 이름을 명시적으로 정의하고 시스템 버전 관리를 사용하도록 설정한 상태에서 새 테이블을 만듭니다.  
   
 ```  
 CREATE TABLE Department   
@@ -97,10 +95,11 @@ WITH
   
 -   지정된 스키마가 없는 경우 **CREATE TABLE** 문이 실패합니다.  
   
--   **HISTORY_TABLE** 매개 변수에 의해 지정한 테이블이 이미 있는 경우 [스키마 일관성 및 임시 데이터 일관성](http://msdn.microsoft.com/library/dn935015.aspx)측면에서 새로 생성된 임시 표에 대해 유효성이 검사됩니다. 잘못된 기록 테이블을 지정하면 **CREATE TABLE** 문이 실패합니다.  
+-   
+            **HISTORY_TABLE** 매개 변수에 의해 지정한 테이블이 이미 있는 경우 [스키마 일관성 및 임시 데이터 일관성](http://msdn.microsoft.com/library/dn935015.aspx)측면에서 새로 생성된 temporal 테이블에 대해 유효성이 검사됩니다. 잘못된 기록 테이블을 지정하면 **CREATE TABLE** 문이 실패합니다.  
   
-## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>사용자 정의 기록 테이블이 포함된 임시 테이블 만들기  
- 사용자 정의 기록 테이블이 포함된 임시 테이블 만들기는 특정 저장소 옵션 및 추가 인덱스를 가진 기록 테이블을 지정하려는 경우에 편리한 옵션입니다. 아래 예제에서는 생성될 임시 테이블과 정렬된 스키마를 가진 사용자 정의 기록 테이블을 만듭니다. 이 사용자 정의 기록 테이블에 대해 포인트 조회를 위해 클러스터형 columnstore 인덱스 및 추가 비클러스터형 rowstore(Btree) 인덱스를 만듭니다. 이 사용자 정의 기록 테이블이 생성된 후 사용자 정의 기록 테이블을 기본 기록 테이블로 지정하는 시스템 버전 임시 테이블이 생성됩니다.  
+## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>사용자 정의 기록 테이블이 포함된 temporal 테이블 만들기  
+ 사용자 정의 기록 테이블이 포함된 temporal 테이블 만들기는 특정 저장소 옵션 및 추가 인덱스를 가진 기록 테이블을 지정하려는 경우에 편리한 옵션입니다. 아래 예제에서는 생성될 temporal 테이블과 정렬된 스키마를 가진 사용자 정의 기록 테이블을 만듭니다. 이 사용자 정의 기록 테이블에 대해 포인트 조회를 위해 클러스터형 columnstore 인덱스 및 추가 비클러스터형 rowstore(Btree) 인덱스를 만듭니다. 이 사용자 정의 기록 테이블이 생성된 후 사용자 정의 기록 테이블을 기본 기록 테이블로 지정하는 시스템 버전 temporal 테이블이 생성됩니다.  
   
 ```  
 CREATE TABLE DepartmentHistory   
@@ -154,8 +153,8 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
  기존 테이블을 변환하는 경우 새 열을 처리하도록 설계되지 않은 기존 응용 프로그램에 대한 영향을 피하기 위해 **HIDDEN** 절을 사용하여 새 **PERIOD** 열을 숨기는 것을 고려하세요.  
   
-### <a name="adding-versioning-to-non-temporal-tables"></a>비임시 테이블에 버전 관리 추가  
- 데이터를 포함하는 비임시 테이블에 대해 변경 내용 추적을 시작하려면 **PERIOD** 정의를 추가하고 선택적으로 SQL Server가 만드는 빈 기록 테이블에 대한 이름을 입력해야 합니다.  
+### <a name="adding-versioning-to-non-temporal-tables"></a>비temporal 테이블에 버전 관리 추가  
+ 데이터를 포함하는 비temporal 테이블에 대해 변경 내용 추적을 시작하려면 **PERIOD** 정의를 추가하고 선택적으로 SQL Server가 만드는 빈 기록 테이블에 대한 이름을 입력해야 합니다.  
   
 ```  
 CREATE SCHEMA History;   
@@ -228,4 +227,3 @@ ALTER TABLE ProjectTaskCurrent
  [시스템 버전 임시 테이블에서 시스템 버전 관리 중지](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stored-Procs
+ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +14,24 @@ helpviewer_keywords:
 - viewing stored procedures
 - displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7c47576b90eb7b14738d8612b99f36ed8a5ccb12
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 0ac38b8eb5f225d6b98f5aa1da10935ba46e1b7b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>저장 프로시저의 정의 보기
     
 ##  <a name="Top"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 개체 탐색기 메뉴 옵션을 사용하거나 쿼리 편집기에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저의 정의를 볼 수 있습니다. 이 항목에서는 의 개체 탐색기를 사용하거나 시스템 저장 프로시저, 시스템 함수 및 쿼리 편집기의 개체 카탈로그 뷰를 사용하여 프로시저 정의를 보는 방법에 대해 설명합니다.  
   
--   **Before you begin:**  [Security](#Security)  
+-   **시작하기 전 주의 사항:**  [보안](#Security)  
   
--   **To view the definition of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **프로시저 정의를 보려면:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   

@@ -5,21 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a0a115eba3fbd1afe52c211fe0f93362a989fc2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 311887e58067a4f8ba62973a5df757dde0ef7bb1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성
   Windows Server 2016은 매우 빠르게 I/O(입출력) 작업을 수행할 수 있는 NVDIMM-N 장치를 지원합니다. 이러한 장치를 사용하는 좋은 방법 중 하나는 쓰기 대기 시간을 짧게 하는 쓰기 저장 캐시입니다. 이 항목에서는 SQL Server 트랜잭션 로그를 저장할 가상 드라이브로 미러된 NVDIMM-N 쓰기 저장 캐시를 사용하여 미러된 저장소 공간을 설정하는 방법을 설명합니다. 또한 데이터 테이블 또는 기타 데이터를 저장하는 데 사용하려는 경우 저장소 풀에 더 많은 디스크를 포함하거나 격리가 중요한 경우 여러 풀을 만들 수 있습니다.  

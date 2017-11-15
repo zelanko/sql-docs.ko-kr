@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
   이 항목의 절차는 병합 복제를 위해 웹 동기화를 구성하는 두 번째 단계입니다. 게시를 웹 동기화용으로 설정한 다음 이 단계를 수행합니다. 구성 프로세스에 대한 개요는 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하십시오. 이 항목의 절차를 완료한 다음에는 구독이 웹 동기화를 사용하도록 구성하는 세 번째 단계를 이어서 수행합니다. 세 번째 단계는 다음 항목에서 설명합니다.  
@@ -174,7 +172,7 @@ ms.lasthandoff: 06/22/2017
   
 8.  **디렉터리 액세스** 페이지에서 다음을 수행하십시오.  
   
-    1.  **추가**를 클릭한 다음 **사용자 또는 그룹 선택** 대화 상자에서 구독자가 IIS 연결에 사용할 계정을 추가합니다. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* parameter.  
+    1.  **추가**를 클릭한 다음 **사용자 또는 그룹 선택** 대화 상자에서 구독자가 IIS 연결에 사용할 계정을 추가합니다. 이러한 계정은 새 구독 마법사의 **웹 서버 정보** 페이지에서 지정하거나 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* 매개 변수의 값으로 지정합니다.  
   
 9. **스냅숏 공유 액세스** 페이지에서 스냅숏 공유를 입력합니다. 구독자가 스냅숏 파일에 액세스할 수 있도록 이 공유에는 적절한 사용 권한이 설정되어 있습니다. 공유 사용 권한에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
@@ -362,8 +360,7 @@ ms.lasthandoff: 06/22/2017
   
     2.  진단 모드에서 서버에 연결합니다. 인증서가 제대로 설치된 경우 **보안 경고** 대화 상자가 나타나지 않습니다. 이 대화 상자가 나타나면 병합 에이전트가 IIS를 실행하는 컴퓨터에 연결할 수 없습니다. 액세스하는 서버에 대한 인증서가 구독자의 인증서 저장소에 신뢰할 수 있는 인증서로 추가되었는지 확인합니다. 인증서를 내보내는 방법은 IIS 설명서를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
-

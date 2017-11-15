@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ffb0714b75265db7e2188a39d1e8ada568ef3160
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 35a71754742484b4a1cdf35f5b28526e6e12309b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>자동 페이지 복구(가용성 그룹: 데이터베이스 미러링)
   자동 페이지 복구는 데이터베이스 미러링과 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에서 지원됩니다. 특정 유형의 오류로 인해 페이지가 손상되어 읽을 수 없게 되면 데이터베이스 미러링 파트너(주 파트너 또는 미러 파트너) 또는 가용성 복제본(주 복제본 또는 보조 복제본)이 자동으로 페이지를 복구하려고 시도합니다. 페이지를 읽을 수 없는 파트너 또는 복제본은 해당 파트너나 다른 복제본에 페이지의 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 읽을 수 있는 복사본으로 대체되고 일반적으로 오류가 해결됩니다.  
@@ -114,12 +113,11 @@ ms.lasthandoff: 06/22/2017
      서버 인스턴스의 미러된 데이터베이스에 대한 각 자동 페이지 복구 시도당 하나의 행을 반환합니다.  
   
  
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   
-
 
 

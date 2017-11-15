@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 4a43451046d7cbea498941d867b235a58f56d468
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 제거
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 제거는 제거를 준비하고, 팜에서 기능과 솔루션을 제거하고, 프로그램 파일과 레지스트리 설정을 제거하는 작업으로 구성된 다단계 작업입니다.  
@@ -138,7 +138,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
  PowerShell을 사용하여 팜에서 기능과 솔루션을 제거할 수도 있습니다. 자세한 내용은 [SharePoint용 파워 피벗에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)를 참조하세요.  
   
 ##  <a name="bkmk_uninstall"></a> 3단계: SQL Server 설치 프로그램을 실행하여 로컬 컴퓨터에서 프로그램 제거  
- 프로그램 파일을 삭제하려면 소프트웨어를 제거하기 위해 SQL Server 설치 프로그램을 실행해야 합니다. 제거하면 설치 프로그램에서 생성된 파일과 레지스트리 항목이 모두 제거됩니다. 프로그램 및 기능 페이지를 사용하여 소프트웨어를 제거할 수 있습니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 은 SQL ServeR을 설치할 때 함께 설치됩니다.  
+ 프로그램 파일을 삭제하려면 소프트웨어를 제거하기 위해 SQL Server 설치 프로그램을 실행해야 합니다. 제거하면 설치 프로그램에서 생성된 파일과 레지스트리 항목이 모두 제거됩니다. 프로그램 및 기능 페이지를 사용하여 소프트웨어를 제거할 수 있습니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 은 SQL Server를 설치할 때 함께 설치됩니다.  
   
  이미 설치된 다른 SQL Server 인스턴스(또는 동일한 인스턴스의 기능)에 영향을 주지 않고 설치 일부를 제거할 수 있습니다. 예를 들어 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , 데이터베이스 엔진 등의 다른 인스턴스는 설치된 상태로 두고 SharePoint용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 제거할 수 있습니다.  
   
@@ -197,4 +197,3 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
  [파워 피벗 구성 도구](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
-

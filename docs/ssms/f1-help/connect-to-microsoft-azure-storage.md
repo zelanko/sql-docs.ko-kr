@@ -5,25 +5,23 @@ ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.windowsazurestorage.connect.f1
 - SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1
 ms.assetid: 
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: ea0fbb6f0297dfdbe94974de472c7a48ce8ce831
-ms.openlocfilehash: b673559a735d3b28d6055a1440183861b3db692a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: cbb66aa6f65eb0e1c8b0de50de11a9cc3e090bc5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage에 연결
 **Windows Azure 저장소 연결** 대화 상자를 사용하여 저장소 계정을 지정하고 Windows Azure 연결의 유효성을 검사할 수 있습니다.  
@@ -46,4 +44,3 @@ Windows Azure 계정에 대해 다음 정보를 지정한 후 **다음** 을 클
   
 4.  **계정 키 저장** - 이 옵션은 암호화된 파일에 암호를 저장합니다.  
   
-

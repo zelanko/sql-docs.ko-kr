@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d0ae092f97496460ef45d1b3bfafffe07e40fb31
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bdda055c57486f6f20216b30a3c41e0a8c433e1f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>쿼리를 프로젝트의 연결 정보로 연결
 쿼리를 연결 없이 만들었거나 특정 프로젝트에서 다른 프로젝트로 쿼리를 이동한 경우 해당 쿼리는 현재 프로젝트의 연결에 연결되지 않습니다.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 06/22/2017
 [쿼리와 연관된 연결 변경](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
 [프로젝트의 연결 속성 보기 및 변경](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
-

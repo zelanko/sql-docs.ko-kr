@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.file.close.f1
 - VS.SaveChangesDlg
-helpviewer_keywords:
-- Save Changes dialog box
+helpviewer_keywords: Save Changes dialog box
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f1f2f0c5925c46db4216e665abecd051e7596f2b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dbfd36d42ca6843bf061bf6427554f631ab009d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-changes"></a>변경 내용 저장
 **예**를 클릭하지 않으면 나열된 항목의 변경 내용이 저장되지 않는다는 경고가 표시됩니다.  
@@ -45,4 +42,3 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 > 저장할 때는 스키마 및 개체 이름을 모두 지정하는 것이 아니라 개체 이름만 지정합니다.  
   
-

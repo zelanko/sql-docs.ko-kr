@@ -5,31 +5,30 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7cef5f82996bc541f55bc8ec6560edce2e0d9acf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 58e2a789f09020a6105c2d0ee8a5f4ed4eb76f43
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>쿼럼 없이 WSFC 클러스터 강제 시작
   이 항목에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터 노드를 쿼럼 없이 강제로 시작하는 방법에 대해 설명합니다.  이 기능은 재해 복구 및 다중 서브넷 시나리오에서 데이터를 복구하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 고가용성을 완전히 다시 설정하는 데 필요할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [권장 사항](#Recommendations), [보안](#Security)  
   
--   **사용 하 여 쿼럼 없이 시작 클러스터를 강제로:**  [장애 조치 클러스터 관리자를 사용 하 여](#FailoverClusterManagerProcedure), [를 사용 하 여 Powershell](#PowerShellProcedure), [Net.exe 사용](#CommandPromptProcedure)  
+-   **다음을 사용하여 쿼럼 없이 클러스터를 강제 시작하려면**  [장애 조치(Failover) 클러스터 관리자 사용](#FailoverClusterManagerProcedure), [Powershell 사용](#PowerShellProcedure), [Net.exe 사용](#CommandPromptProcedure)  
   
 -   **후속 작업:**  [후속 작업: 쿼럼 없이 클러스터를 강제로 시작한 후의 작업](#FollowUp)  
   

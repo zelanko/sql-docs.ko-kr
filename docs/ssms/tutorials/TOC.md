@@ -15,7 +15,7 @@
 ## [2단원: Transact-SQL 작성](lesson-2-writing-transact-sql.md)  
 ### [2-1단원: 쿼리 편집기와 연결](lesson-2-1-connecting-with-query-editor.md)  
 ### [2-2단원 - 들여쓰기 추가](lesson-2-2-adding-indentation.md)  
-### [2-3단원 - 쿼리 편집기 화면 크기](lesson-2-3-maximizing-query-editor.md)  
+### [2-3단원 - 쿼리 편집기 창 최대화](lesson-2-3-maximizing-query-editor.md)  
 ### [2-4단원 - 주석 사용](lesson-2-4-using-comments.md)  
 ### [2-5단원 - 코드 창을 표시하는 다른 방법](lesson-2-5-other-ways-of-viewing-the-code-window.md)  
 ### [2-6단원 - 테이블 스크립팅](lesson-2-6-script-a-table.md)  

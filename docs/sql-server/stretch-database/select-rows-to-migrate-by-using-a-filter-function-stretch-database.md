@@ -1,13 +1,11 @@
 ---
 title: "필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database) | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,25 +14,24 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 290d0a17271d7099904eb7f4f50ffd8280fe2264
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  콜드 데이터를 별도 테이블에 저장하는 경우 전체 테이블을 마이그레이션하도록 Stretch Database를 구성할 수 있습니다. 반면, 테이블에 핫 데이터와 콜드 데이터가 모두 포함된 경우 필터 조건자를 지정하여 마이그레이션할 행을 선택할 수 있습니다. 필터 조건자는 인라인 테이블 반환 함수입니다. 이 항목에서는 인라인 테이블 반환 함수를 작성하여 마이그레이션할 행을 선택하는 방법을 설명합니다.  
+  콜드 데이터를 별도 테이블에 저장하는 경우 전체 테이블을 마이그레이션하도록 스트레치 데이터베이스를 구성할 수 있습니다. 반면, 테이블에 핫 데이터와 콜드 데이터가 모두 포함된 경우 필터 조건자를 지정하여 마이그레이션할 행을 선택할 수 있습니다. 필터 조건자는 인라인 테이블 반환 함수입니다. 이 항목에서는 인라인 테이블 반환 함수를 작성하여 마이그레이션할 행을 선택하는 방법을 설명합니다.  
   
 > [!IMPORTANT]
-> 제대로 수행되지 않는 필터 함수를 제공하면 데이터 마이그레이션 성능도 저하됩니다. Stretch Database는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용합니다.  
+> 제대로 수행되지 않는 필터 함수를 제공하면 데이터 마이그레이션 성능도 저하됩니다. 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용합니다.  
   
  필터 함수를 지정하지 않으면 전체 테이블이 마이그레이션됩니다.  
   
@@ -47,7 +44,7 @@ ms.lasthandoff: 04/11/2017
  함수를 추가하기 위한 ALTER TABLE 구문은 이 항목의 뒷부분에 설명되어 있습니다.  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>필터 함수에 대한 기본 요구 사항  
- Stretch Database 필터 조건자에 필요한 인라인 테이블 반환 함수는 다음 예제와 유사합니다.  
+ 스트레치 데이터베이스 필터 조건자에 필요한 인라인 테이블 반환 함수는 다음 예제와 유사합니다.  
   
 ```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
@@ -215,7 +212,7 @@ ALTER TABLE SensorTelemetry
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. 마이그레이션이 완료될 때까지 기다립니다. SQL Server Management Studio의 **Stretch Database 모니터** 에서 상태를 확인하거나 **sys.dm_db_rda_migration_status** 뷰를 쿼리할 수 있습니다. 자세한 내용은 [데이터 마이그레이션 모니터 및 문제 해결](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 또는 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)를 참조하세요.  
+2. 마이그레이션이 완료될 때까지 기다립니다. SQL Server Management Studio의 **스트레치 데이터베이스 모니터** 에서 상태를 확인하거나 **sys.dm_db_rda_migration_status** 뷰를 쿼리할 수 있습니다. 자세한 내용은 [데이터 마이그레이션 모니터 및 문제 해결](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 또는 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)를 참조하세요.  
   
 3. 테이블에 적용할 필터 함수를 만듭니다.  
   
@@ -490,8 +487,8 @@ COMMIT ;
   
     ```  
   
-## <a name="how-stretch-database-applies-the-filter-function"></a>Stretch Database에서 필터 함수를 적용하는 방법  
- Stretch Database는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 예를 들어  
+## <a name="how-stretch-database-applies-the-filter-function"></a>스트레치 데이터베이스에서 필터 함수를 적용하는 방법  
+ 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 예를 들어  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -621,4 +618,3 @@ db_owner 권한이 있는 손상된 계정은 다음 작업을 수행할 수 있
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-

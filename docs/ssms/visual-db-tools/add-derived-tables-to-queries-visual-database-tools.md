@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - table joins [SQL Server]
 - derived tables
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f54dac23686dfedbba3135cac4be5431f2f24300
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 05de452f0e0eefe36cfbbc9794280341a59a59fb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>쿼리에 파생 테이블 추가(Visual Database Tools)
 파생 테이블은 쿼리에서 테이블 원본으로 사용되는 결과 집합입니다. **다이어그램 창**에서 파생 테이블을 쿼리에 추가할 수 있습니다.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 08/18/2017
 [쿼리 열기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  
 [SELECT (Transact-SQL)](http://msdn.microsoft.com/en-us/dc85caea-54d1-49af-b166-f3aa2f3a93d0)  
   
-

@@ -1,37 +1,35 @@
 ---
 title: "임시 테이블 시스템 일관성 검사 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb67454080657b99983e33e4c46858124b735433
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 23f95c019266b97bee574e864adaa7cd70cbd763
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="temporal-table-system-consistency-checks"></a>임시 테이블 시스템 일관성 검사
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  임시 테이블을 사용하는 경우 시스템은 다양한 일관성 검사를 수행하여 스키마가 임시 요구 사항에 따라 컴파일되고 데이터가 일관적이며 일관성을 유지함을 보장할 수 있습니다. 또한, **DBCC CHECKCONSTRAINTS** 문에 임시 검사가 추가되었습니다.  
+  temporal 테이블을 사용하는 경우 시스템은 다양한 일관성 검사를 수행하여 스키마가 임시 요구 사항에 따라 컴파일되고 데이터가 일관적이며 일관성을 유지함을 보장할 수 있습니다. 또한, **DBCC CHECKCONSTRAINTS** 문에 임시 검사가 추가되었습니다.  
   
 ## <a name="system-consistency-checks"></a>시스템 일관성 검사  
  **SYSTEM_VERSIONING** 을 **ON**으로 설정하기 전에 기록 테이블 및 현재 테이블에서 일련의 검사가 수행됩니다. 이러한 검사는 스키마 검사 및 데이터 검사로 그룹화됩니다(기록 테이블이 비어 있지 않은 경우). 또한, 시스템은 런타임 일관성 검사를 수행합니다.  
   
 ### <a name="schema-check"></a>스키마 검사  
- 임시 테이블을 만들거나 테이블을 변경하여 임시 테이블로 변경할 때 시스템은 다음 요구 사항의 충족 여부를 확인합니다.  
+ temporal 테이블을 만들거나 테이블을 변경하여 temporal 테이블로 변경할 때 시스템은 다음 요구 사항의 충족 여부를 확인합니다.  
   
 1.  열 이름 및 개수가 현재 테이블 및 기록 테이블에서 동일합니다.  
   
@@ -78,4 +76,3 @@ ms.lasthandoff: 06/22/2017
  [임시 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

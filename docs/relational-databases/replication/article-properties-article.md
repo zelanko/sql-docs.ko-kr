@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.articleproperties.f1
-helpviewer_keywords:
-- Article Properties dialog box
+f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
+helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d485cf7aface5f33fd4bd30f8c4a3d36707b2d2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
   **아티클 속성** 대화 상자는 새 게시 마법사 및 **게시 속성** 대화 상자에서 사용할 수 있습니다. 이 대화 상자를 사용하여 모든 아티클 유형에 대한 속성을 보고 설정할 수 있습니다. 게시가 생성된 경우에만 설정할 수 있거나 게시에 활성 구독이 없는 경우에만 설정할 수 있는 속성이 있습니다. 설정할 수 없는 속성은 읽기 전용으로 표시됩니다.  
@@ -130,7 +127,7 @@ ms.lasthandoff: 06/22/2017
  **사용자 지정 해결 프로그램 사용(배포자에 등록됨)**  
  아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
- 해결 프로그램에 입력이 필요한 경우 **해결 프로그램에 필요한 정보 입력** 입력란에 필요한 입력을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용자 지정 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md) 을 참조하세요.  
+ 해결 프로그램에 입력이 필요한 경우 **해결 프로그램에 필요한 정보 입력** 입력란에 필요한 입력을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용자 지정 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을 참조하세요.  
   
  **요청 시 동기화 작업 중 구독자가 대화형으로 충돌 해결**  
  대화형으로 충돌을 해결하고 구독자가 요청 시 동기화(병합 복제의 기본값)를 사용하게 하려면 이 옵션을 선택합니다. 새 구독 마법사의 **동기화 일정** 페이지에서 요청 시 동기화를 지정합니다. 충돌을 대화형으로 해결하려면 대화형 해결 프로그램 사용자 인터페이스를 사용합니다. 자세한 내용은 [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  

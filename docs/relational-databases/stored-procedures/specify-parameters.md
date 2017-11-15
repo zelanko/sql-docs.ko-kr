@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stored-Procs
+ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - output parameters [SQL Server]
 - input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: e1b3e7db23ce9435b5d57156f2dcfd920d4d3e11
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 3b2bf91392ea6142dc0bb9ea624437069425a556
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
   프로시저 매개 변수를 지정하여 호출 프로그램이 값을 프로시저 본문에 전달할 수 있습니다. 이러한 값은 프로시저 실행 시 다양한 목적으로 쓰일 수 있습니다. 프로시저 매개 변수는 매개 변수가 OUTPUT 매개 변수로 표시된 경우 호출 프로그램에 값을 반환할 수도 있습니다.  
@@ -211,4 +209,3 @@ These items can be purchased for less than $700.00.
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
-

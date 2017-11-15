@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 53f0f6ea6b12c702cadcacebe8deb87f45b48aa7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-a-trace"></a>추적 필터링
   필터가 설정되면 추적에서 수집하는 이벤트가 제한됩니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 예를 들어 특정 사용자에 대한 추적에서 Windows 사용자 이름을 제한하면 출력 데이터는 해당 사용자만 표시되도록 간략해집니다.  
@@ -111,7 +109,7 @@ ms.lasthandoff: 06/22/2017
 |**NestLevel**|=, <>, >=, <=|  
 |**NTDomainName**|LIKE, NOT LIKE|  
 |**NTUserName**|LIKE, NOT LIKE|  
-|**Exchange Spill**|=, <>, >=, <=|  
+|**ObjectID**|=, <>, >=, <=|  
 |**ObjectID2**|=, <>, >=, <=|  
 |**ObjectName**|LIKE, NOT LIKE|  
 |**ObjectType**|=, <>, >=, <=|  
@@ -187,4 +185,3 @@ ms.lasthandoff: 06/22/2017
  [sp_setapprole&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)  
   
   
-

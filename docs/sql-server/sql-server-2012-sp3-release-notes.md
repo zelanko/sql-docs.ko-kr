@@ -9,16 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: ef40e08f051397ed158d06cb4cc8de71d95f6fa2
-ms.openlocfilehash: dfe0d48b613c7c4d589fb8bc5f9a5a45be6ba019
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a8562a0c6e653822263df58844b3b5093acf8d46
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>SQL Server 2012 SP3 릴리스 정보
 본 릴리스 정보는 SQL Server 2012 서비스 팩 3을 설치하거나 문제를 해결하기 전에 알아두어야 할 문제를 설명합니다. 릴리스 정보는 설치 미디어가 아닌 온라인으로만 제공됩니다. 릴리스 정보는 문제가 발견될 때마다 정기적으로 업데이트됩니다. 개선 사항 및 수정 목록에 대한 자세한 내용은 [SQL Server 2012 Service Pack 3 release information](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)(SQL Server 2012 서비스 팩 3 릴리스 정보)을 참조하세요.  

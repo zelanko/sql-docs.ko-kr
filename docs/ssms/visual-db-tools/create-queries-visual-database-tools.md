@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- queries [SQL Server], creating
+helpviewer_keywords: queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d30a0729357abf0cfc18942d0da6db3f36f11686
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 5b7c219e4ead14c4053dfd481d1fa5559ce257a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-queries-visual-database-tools"></a>쿼리 만들기(Visual Database Tools)
 쿼리를 사용하면 데이터베이스에서 테이블과 뷰의 데이터를 검색할 수 있습니다. 쿼리는 **쿼리 및 뷰 디자이너**에서 만들고 사용합니다. 이 디자이너는 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)및 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)의 네 가지 창으로 구성됩니다.  
@@ -55,4 +52,3 @@ ms.lasthandoff: 08/18/2017
 [쿼리 결과 요약&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

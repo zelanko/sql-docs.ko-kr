@@ -12,17 +12,16 @@ helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: 25aba71ea2c8b7fc8b0944ad5731e6edcb161c37
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: e9a25b50719f315fc9b6ab4683cdb4a75f13d266
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 이 릴리스 정보 문서에서는 Microsoft SQL Server 2008 R2 서비스 팩 2를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 SQL Server 2008 R2 SP2의 모든 버전에 적용되며 온라인으로만 볼 수 있습니다. 문서는 주기적으로 업데이트됩니다.  
@@ -68,4 +67,3 @@ SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추
 ## <a name="see-also"></a>관련 항목:  
 [SQL  Server  버전 및 에디션 확인 방법](http://support.microsoft.com/kb/321185)  
   
-

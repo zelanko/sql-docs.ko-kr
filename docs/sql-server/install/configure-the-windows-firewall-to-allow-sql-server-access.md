@@ -5,8 +5,7 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 672a3204c3bba22efd0d129d384980352ab2ac8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 
 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
   
-방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터에서 방화벽을 구성해야 합니다. 방화벽은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows의 구성 요소입니다. 다른 회사의 방화벽도 설치할 수 있습니다. 이 항목에서는 Windows 방화벽의 구성 방법에 대해 설명하지만 기본 원칙은 다른 방화벽 프로그램에도 적용됩니다.  
+방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요. 방화벽은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows의 구성 요소입니다. 다른 회사의 방화벽도 설치할 수 있습니다. 이 항목에서는 Windows 방화벽의 구성 방법에 대해 설명하지만 기본 원칙은 다른 방화벽 프로그램에도 적용됩니다.  
   
 > [!NOTE]  
 >  이 항목에서는 방화벽 구성의 개요를 제공하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 유용한 정보를 요약하여 설명합니다. 방화벽에 대한 자세한 내용과 권위 있는 방화벽 정보를 보려면 [고급 보안이 설정된 Windows 방화벽 및 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)를 참조하세요.  
@@ -310,7 +309,7 @@ ms.lasthandoff: 06/22/2017
   
     2.  명령 프롬프트에서 **netstat -n -a**를 입력합니다.  
   
-         **-n** 스위치를 지정하면 **netstat**에서 활성 TCP 연결의 주소와 포트 번호를 숫자로 표시합니다. **-a** 스위치를 지정하면 **netstat** 에서 컴퓨터가 수신 대기 중인 TCP 및 UDP 포트를 표시합니다.  
+         제어판에서 **-n** 스위치를 지정하면 **netstat** 에서 활성 TCP 연결의 주소와 포트 번호를 숫자로 표시합니다. **-a** 스위치를 지정하면 **netstat** 에서 컴퓨터가 수신 대기 중인 TCP 및 UDP 포트를 표시합니다.  
   
 -   **PortQry** 유틸리티를 사용하면 TCP/IP 포트 상태를 수신 대기 중, 수신 대기 중 아님 또는 필터링됨으로 보고할 수 있습니다. 필터링됨(filtered) 상태의 경우 포트가 수신 중일 수도 있고 수신 중이 아닐 수도 있습니다. 이 상태는 유틸리티가 포트로부터 응답을 수신하지 못했음을 나타냅니다. **PortQry** 유틸리티는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=28590)에서 다운로드할 수 있습니다.  
   
@@ -319,4 +318,3 @@ ms.lasthandoff: 06/22/2017
  [방법: 방화벽 설정 구성(Azure SQL 데이터베이스)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

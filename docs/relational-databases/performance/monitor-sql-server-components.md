@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c31b1ebaa449c650edfcac6e045770652d7989be
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server 구성 요소 모니터링
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동적 환경에서 서비스를 제공하기 때문에 모니터링이 매우 중요합니다. 응용 프로그램에 있는 데이터가 바뀌고, 사용자가 필요로 하는 액세스 유형이 바뀌고, 사용자가 연결하는 방법이 바뀔 뿐 아니라, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하는 응용 프로그램의 유형도 바뀔 수 있으나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 메모리나 디스크 공간 같은 시스템 수준의 리소스를 자동으로 관리하므로 시스템 수준의 상세한 수동 튜닝의 필요성은 최소한으로 줄일 수 있습니다. 모니터링을 통해 관리자는 성능 추세를 확인하여 변경이 필요한지 파악할 수 있습니다.  
@@ -142,4 +140,3 @@ ms.lasthandoff: 08/03/2017
      이벤트 재생을 사용하면 데이터를 캡처한 데이터베이스 환경의 테스트 복사본을 만들고 캡처한 이벤트를 실제 시스템에서 원래 발생했던 대로 반복할 수 있습니다. 이 기능은 Distributed Replay Utility나 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 통해서만 사용할 수 있습니다. 이벤트 재생 속도는 이벤트가 원래 발생한 속도와 같게 하거나 최대한 빠르게 하거나 한 번에 한 단계씩 재생하여 각 이벤트가 발생한 후 시스템을 분석할 수도 있습니다. 같은 이벤트를 테스트 환경에서 분석하여 프로덕션 시스템에 발생할 수 있는 해로운 상황을 미리 방지할 수 있습니다. 자세한 내용은 [추적 재생](../../tools/sql-server-profiler/replay-traces.md)을 참조하세요.  
   
   
-

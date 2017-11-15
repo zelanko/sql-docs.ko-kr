@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - heterogeneous Subscribers, Oracle
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a7f47f316449b6048dc826dcfbf265c1bc85877e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 Oracle에서 제공하는 Oracle OLE DB 공급자를 통해 Oracle에 밀어넣기 구독을 지원합니다.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
     |네트워크 프로토콜 선택|지원할 적절한 프로토콜을 선택합니다. 대부분의 응용 프로그램은 TCP를 사용합니다.|  
     |데이터베이스 수신기를 식별할 호스트 정보 지정|호스트는 Oracle 수신기가 실행 중인 컴퓨터의 이름이나 DNS 별칭이며, 일반적으로 Oracle 수신기는 데이터베이스가 상주하는 컴퓨터에서 실행됩니다. 일부 프로토콜의 경우 추가 정보를 제공해야 합니다. 예를 들어 TCP를 선택할 경우 수신기가 대상 데이터베이스에 대한 연결 요청을 수신하는 포트를 지정해야 합니다. 기본 TCP 구성은 포트 1521을 사용합니다.|  
   
-3.  스냅숏 또는 트랜잭션 게시를 만든 후[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 설정한 다음 구독자에 대한 밀어넣기 구독을 만듭니다. 자세한 내용은 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)을(를) 참조하세요.  
+3.  스냅숏 또는 트랜잭션 게시를 만든 후[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 설정한 다음 구독자에 대한 밀어넣기 구독을 만듭니다. 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)을 참조하세요.  
   
 ### <a name="setting-directory-permissions"></a>디렉터리 사용 권한 설정  
  배포자에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 Oracle 클라이언트 네트워킹 소프트웨어가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한을 부여해야 합니다.  

@@ -5,31 +5,29 @@ ms.date: 06/14/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dad6f8bb729bb16121648f01ec046bffc33443ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c3bbba100106a64a3d448b8ef06180e834a80d4b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database용 확장 이벤트
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Stretch Database는 문제 해결을 위해 몇 가지 확장 이벤트를 제공합니다.  
+스트레치 데이터베이스는 문제 해결을 위해 몇 가지 확장 이벤트를 제공합니다.  
   
 자세한 내용은 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 참조하세요. 문제 해결을 위해 확장 이벤트 세션을 시작하는 방법은 [확장 이벤트 세션 만들기](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)를 참조하세요.  
   
-## <a name="list-of-extended-events-for-stretch-database"></a>Stretch Database용 확장 이벤트 목록  
+## <a name="list-of-extended-events-for-stretch-database"></a>스트레치 데이터베이스용 확장 이벤트 목록  
   
 이벤트 이름|이벤트 설명   
 ---------|---------  
@@ -87,6 +85,5 @@ stretch_table_validation_error|사용자가 늘이기를 사용하도록 설정�
 stretch_unprovision_table_start|늘이기 테이블 프로비전 해제 시작을 보고합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
-
+[스트레치 데이터베이스 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 

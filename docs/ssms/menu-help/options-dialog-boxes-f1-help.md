@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
 - Options [SQL Server Management Studio]
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 8f3de179a12e96a00f701b6aaa423902c7403886
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-dialog-boxes-f1-help"></a>옵션 대화 상자 F1 도움말
 이 섹션에서는 **의** 도구 **메뉴에서** 옵션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]을 클릭하면 사용할 수 있는 대화 상자에 대한 F1 도움말을 제공합니다.  
@@ -80,4 +78,3 @@ ms.lasthandoff: 08/18/2017
   
 [옵션(텍스트 편집기 - XML - 탭 페이지)](http://msdn.microsoft.com/en-us/13bf5f8c-aba3-4c05-b8bb-eb475797c9bd)  
   
-

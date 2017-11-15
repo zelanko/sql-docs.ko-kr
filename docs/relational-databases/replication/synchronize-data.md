@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 - scripts [SQL Server replication]
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ccda32ba9e85f698a2a642d2dd52773e78ae6d06
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 77cda8dd4c3de7ca4af940cb23fefcc09d51c80b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="synchronize-data"></a>데이터 동기화
   데이터 동기화란 초기 스냅숏이 구독자에 적용된 후 게시자와 구독자 간에 데이터 및 스키마 변경 내용이 전파되는 프로세스를 말합니다. 동기화는 다음과 같은 방식으로 발생할 수 있습니다.  
@@ -56,9 +54,9 @@ ms.lasthandoff: 06/22/2017
   
  밀어넣기 구독을 동기화하려면 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)를 참조하십시오.  
   
- 끌어오기 구독을 동기화하려면 [끌어오기 구독 동기화](../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
+ 끌어오기 구독을 동기화하려면 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
   
- 동기화 일정을 설정하려면 [동기화 일정 지정](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하십시오.  
+ 동기화 일정을 설정하려면 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하십시오.  
   
  **동기화 충돌을 보고 해결하려면**  
   
@@ -77,4 +75,3 @@ ms.lasthandoff: 06/22/2017
  [병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   
-

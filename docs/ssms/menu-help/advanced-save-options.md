@@ -5,26 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.advancedsaveoptions
-helpviewer_keywords:
-- Advanced Save Options dialog box
+f1_keywords: vs.advancedsaveoptions
+helpviewer_keywords: Advanced Save Options dialog box
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6f4ea7bfac8a9f8ed532f35588eecbc0e5761fc7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 400cd101e694e02b7ab883d3db2b4f74ff5e384b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-save-options"></a>저장 고급 옵션
 이 대화 상자를 사용하여 언어 인코딩 스키마를 선택하고 각 줄 끝에 삽입할 문자를 지정할 수 있습니다. **저장 고급 옵션** 대화 상자에 액세스하려면 **파일** 메뉴에서 **.sql** <query name>**저장** 을 클릭하여 **.sql 파일 As** 대화 상자를 열고 **.sql** 단추의 아래쪽 화살표를 클릭한 다음 **.sql with Encoding**을 클릭합니다.  
@@ -36,4 +32,3 @@ ms.lasthandoff: 06/22/2017
 **줄 끝**  
 대상 파일이 특정 운영 체제에서 실행되도록 하기 위해 각 줄 끝에 캐리지 리턴(Macintosh 시스템의 경우)을 표시할지 줄 바꿈(Unix 시스템의 경우)을 표시할지 둘 다( [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 시스템의 경우) 표시할지 선택합니다.  
   
-

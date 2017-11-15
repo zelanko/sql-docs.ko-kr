@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - templates [Transact-SQL]
 - templates [SQL Server], Template Explorer
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e0d0525a7da87f0c2f2363d641fcb07bcd5262ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bfeeaf35898135099c1fb92553bf20f83fd587f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="template-explorer"></a>Template Explorer
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 다양한 템플릿을 제공합니다. 템플릿은 데이터베이스에서 개체를 만드는 데 유용한 SQL 스크립트를 포함하는 상용구 파일입니다. 템플릿 탐색기를 처음으로 열면 템플릿 복사본이 C:\Users 사용자 폴더의 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 아래에 배치됩니다.  
@@ -53,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 |템플릿의 코드를 코드 편집기 창에 통합하는 방법에 대해 설명합니다.|[템플릿 열기](../../ssms/template/open-a-template.md)|  
 |코드 편집기에서 템플릿을 연 후 템플릿 매개 변수 값을 바꾸는 방법에 대해 설명합니다.|[템플릿 매개 변수 바꾸기](../../ssms/template/replace-template-parameters.md)|  
   
-

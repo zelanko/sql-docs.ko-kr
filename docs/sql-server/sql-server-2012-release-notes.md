@@ -8,20 +8,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Release Notes, SQL Server
+helpviewer_keywords: Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 855dc52c2d4ac7a4d28864328536de62e23ced3d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
 이 릴리스 정보 문서에서는 Microsoft SQL Server 2012([다운로드하려면 여기를 클릭](http://go.microsoft.com/fwlink/?LinkId=238647))를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 정기적으로 업데이트되며 온라인으로만 사용할 수 있고 설치 미디어에는 포함되지 않습니다.  
@@ -505,9 +503,9 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
 |SQL Native Client 11.0 OLEDB|아니요|예|예|아니오|아니요|  
-|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|예|예|예|예|예|  
-|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|예|예|예|예|예|  
-|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|예|  
+|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|  
+|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|사용자 계정 컨트롤|예|예|예|예|  
+|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|사용자 계정 컨트롤|  
   
 **\&#42;** .NET Framework 4.0이 있는 ADO.NET용 연결 패치 다운로드: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)  
   
@@ -624,7 +622,7 @@ SQL Server 2012 Reporting Services에서 Microsoft SQL Server PDW Appliance Upda
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsight 2.0을 사용하려면 Microsoft SQL Server 2012 라이선스와 .NET Framework 4.0이 필요합니다. StreamInsight 2;.0에서는 여러 가지 버그를 수정하고 성능을 높였습니다. 자세한 내용은 [Microsoft StreamInsight 2.0 릴리스 정보](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)를 참조하세요. StreamInsight 2.0을 별도로 다운로드하려면 Microsoft 다운로드 센터의 [Microsoft StreamInsight 2.0 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=241593) 를 방문하세요.  
+SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsight 2.0을 사용하려면 Microsoft SQL Server 2012 라이선스와 .NET Framework 4.0이 필요합니다. StreamInsight&2;.0에서는 여러 가지 버그를 수정하고 성능을 높였습니다. 자세한 내용은 [Microsoft StreamInsight 2.0 릴리스 정보](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)를 참조하세요. StreamInsight 2.0을 별도로 다운로드하려면 Microsoft 다운로드 센터의 [Microsoft StreamInsight 2.0 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=241593) 를 방문하세요.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -637,4 +635,3 @@ SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsi
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
-

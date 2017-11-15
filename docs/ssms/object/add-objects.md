@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.addobject.f1
+f1_keywords: sql13.swb.common.addobject.f1
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9a29ea3a44b7566b59e0b995c2e75490e6d68736
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 21762f1398bea69542e78b663adabb91f544cfe6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-objects"></a>개체 추가
 원하는 개체 유형만 개체 선택 대화 상자에 표시되도록 제한합니다.  
@@ -40,4 +37,3 @@ ms.lasthandoff: 06/22/2017
 **스키마에 속하는 모든 개체**  
 **스키마 이름** 상자에 지정된 스키마가 소유하는 모든 개체를 추가합니다. **데이터베이스 사용자 - 신규** 대화 상자와 같은 데이터베이스 범위 대화 상자에만 나타납니다.  
   
-

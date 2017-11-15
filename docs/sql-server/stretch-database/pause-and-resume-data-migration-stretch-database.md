@@ -1,13 +1,11 @@
 ---
 title: "데이터 마이그레이션 일시 중지 및 다시 시작(Stretch Database) | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/14/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - pausing Stretch Database
 - resuming Stretch Database
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0fef9c7f912cb824b3f1fcf8653a82fa99a35561
-ms.openlocfilehash: a291fd543d572fc621e7b59e968e7ca69d79552e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: c02cc2fbc7e06abd1b083c88eda29f6250417979
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>데이터 마이그레이션 일시 중지 및 다시 시작(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +72,7 @@ ALTER TABLE <Stretch-enabled table name>
 ## <a name="check-whether-migration-is-active-or-paused"></a>마이그레이션이 활성 상태인지 또는 일시 중지 상태인지 확인
 
 ### <a name="use-sql-server-management-studio-to-check-whether-migration-is-active-or-paused"></a>SQL Server Management Studio를 사용하여 마이그레이션이 활성 상태인지 또는 일시 중지 상태인지 확인
-SQL Server Management Studio에서 **Stretch Database 모니터** 를 열고 **마이그레이션 상태** 열의 값을 확인합니다. 자세한 내용은 [데이터 마이그레이션 모니터링 및 문제 해결](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)을 참조하세요.
+SQL Server Management Studio에서 **스트레치 데이터베이스 모니터** 를 열고 **마이그레이션 상태** 열의 값을 확인합니다. 자세한 내용은 [데이터 마이그레이션 모니터링 및 문제 해결](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)을 참조하세요.
 
 ### <a name="use-transact-sql-to-check-whether-migration-is-active-or-paused"></a>Transact-SQL을 사용하여 마이그레이션이 활성 상태인지 또는 일시 중지 상태인지 확인
 카탈로그 뷰 **sys.remote_data_archive_tables** 및 **is_migration_paused** 열을 쿼리합니다. 자세한 내용은 [sys.remote_data_archive_tables](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)를 참조하세요.
@@ -84,4 +81,3 @@ SQL Server Management Studio에서 **Stretch Database 모니터** 를 열고 **�
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [데이터 마이그레이션 모니터링 및 문제 해결](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 
   
-

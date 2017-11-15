@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: ed00031d1f55fc6fda2ee1c37fe76f7637e8e891
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: 71bde30cb5cefaf1c60bcbd5a5de08b84b3975b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>SQL Server 2012 SP2 Release Notes
 본 릴리스 정보는 SQL Server 2012 서비스 팩 2를 설치하거나 문제를 해결하기 전에 알아두어야 할 문제를 설명합니다. 릴리스 정보는 설치 미디어가 아닌 온라인으로만 제공됩니다. 릴리스 정보는 문제가 발견될 때마다 정기적으로 업데이트됩니다. 자세한 내용은 [SQL Server 2012 서비스 팩 2에서 수정된 버그](http://support.microsoft.com/KB/2958429) 를 참조하세요.  
@@ -44,4 +43,3 @@ ms.lasthandoff: 09/02/2017
 |64비트 버전의 SQL Server 2012 Management Studio Express|64비트 버전의 SQL Server 2012 SP2 Management Studio Express로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLManagementStudio_** _ [.msi](http://go.microsoft.com/fwlink/?LinkID=401007)|  
 |[Microsoft SQL Server 2012 RTM 기능 팩](http://www.microsoft.com/download/details.aspx?id=29065) 또는 [Microsoft SQL Server 2012 SP1 기능 팩](http://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 64비트 버전 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2012 SP2 Feature Pack으로 도구 업그레이드|Microsoft [SQL Server 2012 SP2 기능 팩 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkID=401008)에 있는 도구 하나 이상|  
   
-
