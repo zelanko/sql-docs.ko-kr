@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - limiting rows returned
 - search criteria [SQL Server], TOP clause
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fd92acc6387cf67dd4b2a75b83e0e69b97a2ed3e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 5eda1f2951cc09dda0b30e203c90703be88d8e5a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>쿼리에 TOP 절 지정(Visual Database Tools)
 TOP 절은 쿼리에서 처음 *n* 개 또는 *n%* 의 행만 반환합니다. TOP 절은 쿼리 결과를 모두 반환하는 데 필요한 리소스를 사용하지 않은 채 쿼리가 의도한 대로 올바르게 작동하는지 확인하기 위해 결과의 일부만 검사하려는 경우에 유용합니다.  
@@ -60,4 +58,3 @@ TOP 절은 쿼리에서 처음 *n* 개 또는 *n%* 의 행만 반환합니다. T
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [쿼리 속성&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
   
-

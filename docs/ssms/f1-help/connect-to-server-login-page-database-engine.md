@@ -1,28 +1,25 @@
 ---
 title: "서버에 연결(로그인 페이지) 데이터베이스 엔진 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.connecttosqlserver.login.f1
+f1_keywords: sql13.swb.connecttosqlserver.login.f1
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 9c2ff0db7548aac98efa15c701bd283368512ea4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/15/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a5d251082f7a98a075593274d34d600556dca1f3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>서버에 연결(로그인 페이지) 데이터베이스 엔진
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]에 연결할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. 대부분의 경우 **서버 이름** 상자에서 데이터베이스 서버의 컴퓨터 이름을 입력한 다음 **연결**을 클릭하여 연결할 수 있습니다. 명명된 인스턴스에 연결하는 경우 컴퓨터 이름, 백슬래시, 인스턴스 이름의 순서로 사용합니다. `mycomputer\myinstance`)을 입력합니다. [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]에 연결하는 경우 컴퓨터 이름과 그 뒤에 **\sqlexpress**를 사용합니다.  
@@ -87,4 +84,3 @@ Azure Active Directory 인증은 Azure AD(Azure Active Directory)에서 ID를 �
 **연결 속성** 및 **추가 연결 매개 변수** 탭을 표시하려면 클릭합니다.  
    
   
-

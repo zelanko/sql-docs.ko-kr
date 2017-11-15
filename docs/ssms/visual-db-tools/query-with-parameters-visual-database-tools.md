@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 - parameters [SQL Server], queries
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dc12e48c23b2e362b972f6d6e6d04f953a8f09c3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 3deb83bf9fdaafd3598080e5889999b2630aaf22
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>매개 변수를 사용하여 쿼리(Visual Database Tools)
 매번 서로 다른 입력으로 응용 프로그램에서 여러 차례 다시 사용할 수 있는 쿼리를 만드는 것이 유용한 경우가 많습니다. 이 섹션에서는 이와 같은 일반적인 목적을 위해 매개 변수 쿼리를 만드는 방법에 대해 설명합니다.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 08/18/2017
 [검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 다양한 검색 방법과 필요한 내용을 검색하는 방법을 다루는 항목에 대한 링크를 제공합니다.  
   
-

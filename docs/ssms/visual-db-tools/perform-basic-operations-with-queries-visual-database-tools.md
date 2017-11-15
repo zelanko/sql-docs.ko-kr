@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 91ba67fc6ea916272470b4df83e6614dd76a2a84
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 7cacb4d0c0425b022f14ab90702fa5508679fd2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>쿼리 관련 기본 작업 수행(Visual Database Tools)
 다음 기본 작업은 거의 모든 쿼리에 적용됩니다.  
@@ -115,4 +113,3 @@ SQL 주석, 매개 변수 목록, Top 사양 등과 같은 속성을 표시하�
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 더 자세한 설명에 대한 링크가 포함된 개요 항목을 나열합니다.  
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - deleting columns
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ef92982f0b86b25fad049f444416ed5afb43fd85
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 7a70cc40a6645cb0341568fc7c2dec702323f3b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>쿼리 결과에서 열 제거(Visual Database Tools)
 선택 쿼리에 사용 중인 열을 결과 집합에 표시하지 않으려는 경우 즉, 쿼리의 선택 목록에 포함하지 않으려는 경우 해당 열을 출력에서 제거할 수 있습니다. 쿼리의 출력에서 열을 제거한 후에도 이 열을 검색 조건에 사용하거나 정렬 필드로 사용할 수 있습니다.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/18/2017
 [쿼리 결과 요약&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

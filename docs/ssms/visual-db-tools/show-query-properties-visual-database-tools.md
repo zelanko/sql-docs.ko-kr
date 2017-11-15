@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - showing query properties
 - queries [SQL Server], properties
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 95cd6dd3a8b04134ea6b2d08252429eac2b80299
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: f4e0fc1013d807d6b0ab6c6c2f32867b86a9fb8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="show-query-properties-visual-database-tools"></a>쿼리 속성 표시(Visual Database Tools)
 쿼리 및 뷰 디자이너의 속성 창에서 쿼리의 속성을 표시할 수 있습니다.  
@@ -39,4 +37,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>참고 항목  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

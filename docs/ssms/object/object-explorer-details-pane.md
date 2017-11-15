@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a6a6ac677e6c084015b0d562f9382b53c2d9b0c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c88f8188f607e5508bf087e230b1e8e70e92aab7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 구성 요소인 개체 탐색기 정보는 서버의 모든 개체를 테이블 형식으로 표시하고 이러한 개체를 관리하기 위한 사용자 인터페이스를 제공합니다. 개체 탐색기의 기능은 서버의 유형에 따라 조금씩 다르지만 일반적으로 데이터베이스를 위한 개발 기능과 모든 서버 유형을 위한 관리 기능을 포함합니다.  
@@ -105,4 +103,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
 [개체 탐색기](../../ssms/object/object-explorer.md)  
   
-

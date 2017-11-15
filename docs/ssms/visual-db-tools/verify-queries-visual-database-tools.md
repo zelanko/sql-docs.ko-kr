@@ -5,28 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdtsql.chm:100644
+f1_keywords: vdtsql.chm:100644
 helpviewer_keywords:
 - verifying queries
 - queries [SQL Server], verifying
 - checking queries
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2aa0172a18bb1b01297caa9dcf4db07888ce083
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 3673b8eee9b40215877fc7b0058bd5bd6f51981f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="verify-queries-visual-database-tools"></a>쿼리 확인(Visual Database Tools)
 문제를 방지하기 위해 작성된 쿼리를 검사하고 구문이 올바른지 확인할 수 있습니다. 이 옵션은 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에 문을 입력할 때 특히 유용합니다.  
@@ -47,4 +44,3 @@ ms.lasthandoff: 08/18/2017
 [쿼리 실행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

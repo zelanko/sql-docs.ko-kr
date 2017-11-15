@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - customizing menus [SQL Server]
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3bcf61e149e5e2a9460709330d72d7ba23023c62
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 34aac044681d6ba558799ed7bcbedbd2fde1411e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
 키보드 액셀러레이터를 사용하면 Alt+*<single letter>*를 눌러 메뉴 명령이나 단추를 선택할 수 있습니다. 예를 들어 **편집** 메뉴를 열려면 Alt+E를 누릅니다. **사용자 지정** 대화 상자를 사용하여 도구 모음 단추, 메뉴 및 메뉴 명령을 다시 정렬하고 수정할 수 있습니다. 여기에서는 마우스를 사용하거나 키보드만 사용하여 설정을 변경하기 위한 지침이 제공됩니다.  
@@ -168,4 +166,3 @@ Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이
 ## <a name="see-also"></a>관련 항목:  
 [SQL Server Management Studio의 기능](../ssms/features-in-sql-server-management-studio.md)  
   
-

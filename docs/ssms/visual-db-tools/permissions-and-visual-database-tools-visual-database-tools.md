@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- multiuser environments [Visual Database Tools]
+helpviewer_keywords: multiuser environments [Visual Database Tools]
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 91683b0358d76a072517e1b5fd5507cf8c6cb57e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 232491b14f93a24416f1d5704b5d627ca6d1358b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>사용 권한 및 Visual Database Tools(Visual Database Tools)
 사용자가 데이터 원본 개체에 액세스하는 데 필요한 사용 권한은 Visual Database Tools가 아니라 데이터 원본에 부여됩니다. 데이터 원본 개체에 부여된 액세스 권한은 설치 환경의 보안 정책을 통해 제어됩니다. 특정 데이터베이스 개체에 액세스할 수 있는 권한이 없는 경우 데이터베이스 관리자에게 문의하십시오.  
@@ -32,4 +29,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>참고 항목  
 [다중 사용자 환경&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
-

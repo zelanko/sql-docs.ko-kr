@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - printing query results
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 7ba40459f019675c3975b31155cbd7f3cfbfa45e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>쿼리 결과 인쇄(Visual Database Tools)
 쿼리 결과를 인쇄하려면 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) 의 내용을 워드 프로세서 프로그램 같은 다른 Windows 프로그램에 복사한 다음 서식을 지정하여 인쇄합니다.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>관련 항목:  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

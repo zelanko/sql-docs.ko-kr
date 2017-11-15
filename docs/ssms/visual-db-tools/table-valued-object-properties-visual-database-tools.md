@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.designers.properties.TVO
+f1_keywords: vdt.designers.properties.TVO
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e1a3aab7fc71e38e5383b8adad799ba3c2a01e4f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b780f2dea124c603e24015149ab2d98b93f711f2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>테이블 반환 개체 속성(Visual Database Tools)
 이러한 속성은 **쿼리 및 뷰 디자이너**에서 테이블 반환 개체를 선택하면 속성 창에 나타납니다. 테이블 반환 개체는 뷰, 동의어, 파생 테이블 또는 테이블 반환 함수일 수 있습니다. 다른 설명이 없는 한 이러한 속성은 **속성** 창에서 읽기 전용입니다.  
@@ -57,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 **매개 변수 목록**  
 선택한 테이블 반환 함수에 대해 정의된 매개 변수를 표시합니다. 매개 변수의 값을 정의하려면 매개 변수 목록을 클릭한 다음 속성의 오른쪽에 있는 줄임표(...)를 클릭합니다. 함수 매개 변수 대화 상자에서 값을 입력합니다. 이 속성은 테이블 반환 함수를 선택한 경우에만 사용할 수 있습니다.  
   
-

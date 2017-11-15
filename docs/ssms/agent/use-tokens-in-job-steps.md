@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
-ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/25/2017
-
+ms.openlocfilehash: a4cef9cc3d5a72bba4b818c89acfe6e15878ebff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 사용하면 [!INCLUDE[tsql](../../includes/tsql_md.md)] 작업 단계 스크립트에 토큰을 사용할 수 있습니다. 작업 단계를 작성할 때 토큰을 사용하면 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성이 있습니다. 작업 단계 스크립트에 토큰을 삽입하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 하위 시스템에서 해당 작업 단계를 실행하기 전에 [!INCLUDE[tsql](../../includes/tsql_md.md)] 에이전트가 런타임 시 토큰을 바꿉니다.  
@@ -147,4 +145,3 @@ WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>
 [작업 구현](../../ssms/agent/implement-jobs.md)  
 [작업 단계 관리](../../ssms/agent/manage-job-steps.md)  
   
-

@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d57d3d1dcd90bfe3af4ef8b630d3f0c0a2e0ff3c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c30d3be19643c13ba0621a948f3cca3b467cb039
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio의 사용자 지원
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]에서는 도움말 메뉴 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 온라인 설명서를 통해 사용자에 대한 지원이 제공됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 의 도움말 메뉴는 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]에 대한 정보를 볼 수 있는 여러 다른 경로를 제공합니다. 또한 이전에 도움말 환경 내에서 사용할 수 없었던 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 커뮤니티 및 MSDN 온라인 리소스에 대한 액세스가 제공됩니다. 이외에도 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 환경 내에서 시작되거나 연관된 고유한 외부 창에서 시작되도록 도움말 환경을 구성할 수 있습니다.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 에서는 도움말 메뉴 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 온라인 설명서를 통해 사용자에 대한 지원이 제공됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 의 도움말 메뉴는 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]에 대한 정보를 볼 수 있는 여러 다른 경로를 제공합니다. 또한 이전에 도움말 환경 내에서 사용할 수 없었던 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 커뮤니티 및 MSDN 온라인 리소스에 대한 액세스가 제공됩니다. 이외에도 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 환경 내에서 시작되거나 연관된 고유한 외부 창에서 시작되도록 도움말 환경을 구성할 수 있습니다.  
   
 ## <a name="the-help-interface"></a>도움말 인터페이스  
 **목차** 및 **인덱스** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 사용자에게 익숙한 기능과 인터페이스를 제공하지만, 다른 옵션은 다음과 같습니다.  
@@ -103,4 +101,3 @@ ms.lasthandoff: 06/22/2017
   
 2.  **다음을 사용하여 도움말 표시** 상자에서 **통합 도움말 뷰어**를 클릭합니다.  
   
-

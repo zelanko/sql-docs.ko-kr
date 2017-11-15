@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.designers.properties.QueryViewColumn
+f1_keywords: vdt.designers.properties.QueryViewColumn
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ddaf4ebdf84b6e269e488457ef5f1d01ec87f848
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 20acb3fa9cb3be515a7677eab69a2c1696f29d82
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>테이블 반환 개체(열) 속성(Visual Database Tools)
 이러한 속성은 쿼리 및 뷰 디자이너의 **다이어그램** 창에서 테이블 반환 개체의 열을 선택하는 경우 표시됩니다.  
@@ -66,4 +63,3 @@ ms.lasthandoff: 06/22/2017
 **크기**  
 열의 데이터 형식에서 허용하는 크기를 바이트 단위로 표시합니다. 예를 들어 nchar 데이터 형식의 경우 길이가 10(문자 수)까지 허용되면 유니코드 문자 집합의 경우에는 크기가 20까지 허용될 수 있습니다.  
   
-

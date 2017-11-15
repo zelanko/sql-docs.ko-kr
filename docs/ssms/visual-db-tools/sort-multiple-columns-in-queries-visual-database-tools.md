@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- multiple query columns
+helpviewer_keywords: multiple query columns
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0671c3815de4c20aca3eab4d30e038a094409f07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 494dc4cc98ee96001c756250a229dd525eb4f0b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>쿼리에서 여러 열 정렬(Visual Database Tools)
 **조건 창** 에서 [정렬 순서](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)열을 사용하면 열이 사용되는 순서를 지정하여 데이터를 정렬할 수 있습니다.  
@@ -39,4 +36,3 @@ ms.lasthandoff: 08/18/2017
 [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [쿼리 결과 요약&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   
-
