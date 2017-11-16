@@ -2,9 +2,12 @@
 title: "중앙 관리에서 파워 피벗 사이트에 대 한 신뢰할 수 있는 위치 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: power-pivot-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular

@@ -2,9 +2,12 @@
 title: "Analysis Services의 SQL Server 2016 버전에서 지 원하는 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - analysis-services/data-mining

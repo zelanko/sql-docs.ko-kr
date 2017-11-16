@@ -2,9 +2,12 @@
 title: "테이블 형식 모델링 (Adventure Works 자습서) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
