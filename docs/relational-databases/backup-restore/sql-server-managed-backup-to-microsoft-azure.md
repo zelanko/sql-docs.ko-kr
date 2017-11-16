@@ -1,27 +1,32 @@
 ---
-title: "Microsoft Azure에 대한 SQL Server Managed Backup 해제 | Microsoft 문서"
+title: "Microsoft Azure에 대한 SQL Server Managed Backup 해제 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd210025eb75eceedfbeb31bc485ef0f8b4d37e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/24/2017
+
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 Microsoft Azure Blob 저장소에 대한 SQL Server 백업을 관리하고 자동화합니다. SQL Server에서 데이터베이스의 트랜잭션 작업에 따라 백업 일정을 결정하도록 선택할 수 있습니다. 또는 고급 옵션을 사용하여 일정을 정의할 수 있습니다. 보존 설정은 백업이 Azure Blob 저장소에 저장되는 기간을 결정합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.  
   
@@ -138,3 +143,4 @@ ms.lasthandoff: 11/09/2017
 - [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   
   
+

@@ -2,26 +2,33 @@
 title: "MSSQLSERVER_1105 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 1105 (Database Engine error)
+helpviewer_keywords:
+- 1105 (Database Engine error)
 ms.assetid: e7f4ad02-8c7f-4bb9-9781-2c86253f2138
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 4a76361f4aa307eeece1e57b8e2b0c9b51c07df0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6351998ecebd4a63c6fff509cb535f6107247513
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver1105"></a>MSSQLSERVER_1105
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
   
@@ -51,3 +58,4 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 > 인덱스가 여러 파일에 있을 때, 파일 중 하나가 가득 차면 **ALTER INDEX REORGANIZE**가 1105 오류를 반환할 수 있습니다. 프로세스에서 가득 찬 파일로 행을 이동하려 하면 재구성 프로세스는 차단됩니다. 이 제한을 해결하려면 **ALTER INDEX REORGANIZE** 대신 **ALTER INDEX REBUILD**를 수행하거나 가득 찬 파일의 파일 증가 제한을 늘립니다.  
   
+

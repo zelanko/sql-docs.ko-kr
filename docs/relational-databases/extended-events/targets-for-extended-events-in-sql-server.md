@@ -2,28 +2,32 @@
 title: "SQL Server에서 확장 이벤트에 대한 대상 | Microsoft 문서"
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 895e4ae07df2c265eeb64532282be51933a5f932
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640fa43bc4db2907f676dadad8688b7cf5a1bef4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 이 문서에서는 SQL Server에서 확장 이벤트에 대한 패키지0 대상을 사용하는 시기와 방법에 대해 설명합니다. 각 대상에 대해 현재 문서에서 설명하는 항목은 다음과 같습니다.
@@ -786,6 +790,7 @@ event_stream 대상은 C#과 같은 언어로 작성 된.NET 프로그램에서 
 - [Microsoft.SqlServer.Management.XEvent 네임스페이스](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Microsoft.SqlServer.XEvent.Linq 네임스페이스](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
+
 
 
 

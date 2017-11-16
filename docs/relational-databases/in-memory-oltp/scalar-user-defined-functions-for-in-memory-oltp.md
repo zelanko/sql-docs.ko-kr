@@ -1,27 +1,32 @@
 ---
 title: "메모리 내 OLTP에 대한 사용자 정의 스칼라 함수 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a6894b71c7bd506b7da1cc0518355c043fa59a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e2bc469930621e79c05435c042240510d7826648
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/08/2017
+
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 사용자 정의 스칼라 함수
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 고유하게 컴파일된 사용자 정의 스칼라 함수를 생성 및 삭제할 수 있습니다. 또한, 이러한 사용자 정의 함수를 변경하는 것도 가능합니다. 네이티브 컴파일을 사용하면 Transact-SQL에서 사용자 정의 함수의 평가 성능을 향상할 수 있습니다.  
   
@@ -108,3 +113,4 @@ END
  [XML 형식으로 실행 계획 저장](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
+

@@ -1,13 +1,13 @@
 ---
 title: "메모리 액세스에 최적화된 테이블의 트랜잭션 | Microsoft 문서"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
+ms.component: in-memory-oltp
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 이 문서에서는 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저에 관련된 트랜잭션의 모든 측면을 설명합니다.  

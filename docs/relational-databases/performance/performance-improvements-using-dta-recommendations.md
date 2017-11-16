@@ -2,27 +2,33 @@
 title: "DTA 권장 사항을 사용하여 성능 향상 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Database Engine Tuning Advisor, performance improvements
+helpviewer_keywords:
+- Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6b14d444ef305a8b652b7dfc7118a4ed5a076c85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7722ff42ebc2e4e4515a3097a6b8d1106f5e1287
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>DTA 권장 사항을 사용하여 성능 향상
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 ---
@@ -66,6 +72,7 @@ SQL Server 2016부터 DTA(데이터베이스 엔진 튜닝 관리자)는 지정�
 [CREATE COLUMNSTORE INDEX(Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 
 [CREATE INDEX(Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+
 
 
 

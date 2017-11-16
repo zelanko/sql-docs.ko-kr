@@ -2,10 +2,14 @@
 title: "자습서: 데이터베이스 엔진 시작 | Microsoft 문서"
 ms.custom: 
 ms.date: 06/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 254a604114f837c864c5580983121b82e562b935
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
+ms.openlocfilehash: 736763496d78fff7ed70dee9a0518c428502024a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>자습서: 데이터베이스 엔진 시작
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDE](../includes/ssde-md.md)] 시작 자습서를 시작합니다. 이 자습서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 처음으로 사용하는 사용자 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]를 설치한 사용자를 위해 작성되었습니다. 이 간단한 자습서를 사용하면 [!INCLUDE[ssDE](../includes/ssde-md.md)]을 처음 사용하는 경우 도움이 됩니다.  
   
@@ -54,4 +59,5 @@ ms.lasthandoff: 11/09/2017
   
   
   
+
 

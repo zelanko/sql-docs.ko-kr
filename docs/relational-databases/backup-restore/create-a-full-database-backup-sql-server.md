@@ -2,10 +2,14 @@
 title: "전체 데이터베이스 백업 만들기(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: "63"
+caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 76660f46a6ff92e80dcf80d23ac1276ed55037bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/11/2017
+
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > SQL Server 2014의 경우 [전체 데이터베이스 백업 만들기(SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)로 이동하세요.
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 전체 데이터베이스 백업을 만드는 방법을 설명합니다.  
@@ -45,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 마치는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 대규모 데이터베이스의 경우 일련의 [differential database backups](../../relational-databases/backup-restore/differential-backups-sql-server.md)로 전체 데이터베이스 백업을 보충해 보세요. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
+-   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 마치는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 대규모 데이터베이스의 경우 일련의 [differential database backups]\(../../relational-databases/backup-restore/differential-backups-sql-server.md)로 전체 데이터베이스 백업을 보충해 보세요. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
   
 -   [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 저장 프로시저를 사용하여 전체 데이터베이스 백업의 크기를 예측합니다.  
   
@@ -400,3 +405,4 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  [전체 데이터베이스 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)  
   
   
+

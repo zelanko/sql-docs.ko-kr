@@ -2,26 +2,33 @@
 title: "MSSQLSERVER_21899 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 21899 (Database Engine error)
+helpviewer_keywords:
+- 21899 (Database Engine error)
 ms.assetid: 32b87a7c-5380-4638-b147-dd78618f6625
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: c1808e704b31bcd8e698b3752bdd63a5da9c3510
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4e4f77f2897eca7edfa072ee4e611d9e13d40d8b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver21899"></a>MSSQLSERVER_21899
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
   
@@ -40,3 +47,4 @@ ms.lasthandoff: 11/09/2017
 ## <a name="user-action"></a>사용자 동작  
 지정된 오류 메시지를 검토하여 실패 원인을 파악하고 적절한 수정 동작을 수행하십시오.  
   
+

@@ -2,26 +2,33 @@
 title: "MSSQLSERVER_8993 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 8993 (Database Engine error)
+helpviewer_keywords:
+- 8993 (Database Engine error)
 ms.assetid: 06aac110-a41c-4853-bc8e-a83e8535b8be
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 0c6da3bfef842fc58fb543060d4f90e744bd5ac5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 524230907b124b3f94a166daa4715f56518cacc5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver8993"></a>MSSQLSERVER_8993
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
   
@@ -60,3 +67,4 @@ REPAIR 절 중 하나를 사용하여 DBCC CHECKDB를 실행해도 문제가 해
 #### <a name="results-of-running-repair-options"></a>REPAIR 옵션의 실행 결과  
 전달 행이 삭제되고 비클러스터형 인덱스가 있을 경우 다시 작성됩니다.  
   
+

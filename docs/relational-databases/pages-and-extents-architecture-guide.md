@@ -3,28 +3,33 @@ title: "페이지 및 익스텐트 아키텍처 가이드 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebc9b8e32bc6848547b8833841876b74ca25cc27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/20/2017
+
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 페이지는 SQL Server의 기본 데이터 저장 단위입니다. 익스텐트는 물리적인 연속 페이지 8개의 모음입니다. 익스텐트는 효과적인 페이지 관리에 도움이 됩니다. 이 가이드에서는 모든 SQL Server 버전에서 페이지 및 익스텐트를 관리하는 데 사용되는 데이터 구조에 대해 설명합니다. 페이지 및 익스텐트의 아키텍처에 대한 이해는 효율적으로 동작하는 데이터베이스를 디자인하고 개발하는 데 있어 중요합니다.
 
@@ -164,3 +169,4 @@ DCM 페이지와 BCM 페이지 사이의 간격은 GAM 페이지와 SGAM 페이�
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

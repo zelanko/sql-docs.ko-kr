@@ -2,28 +2,32 @@
 title: "SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN | Microsoft 문서"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f74637bd0e696ae4fd17d54f3826181e5d2ecf29
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 이 문서에서는 Microsoft SQL Server 및 Azure SQL 데이터베이스 클라우드 서비스의 확장 이벤트와 관련된 두 가지 시스템 뷰 집합에 대해 설명합니다. 문서 내용은 다음과 같습니다.
@@ -118,7 +122,7 @@ ms.lasthandoff: 11/09/2017
 
 SSMS의 **개체 탐색기**에서 **관리** 확장 이벤트 **를 확장한 다음** > **세션**새 세션 **을 마우스 오른쪽 단추로 클릭하면** > **새 세션**대화 상자를 시작할 수 있습니다.
 
-큰 **새 세션** 대화 상자의 첫 번째 섹션인 **일반**레이블이 지정된 섹션에서 옵션이 **서버 시작 시 이벤트 세션 시작**으로 선택된 것을 확인할 수 있습니다.
+큰 **새 세션** 대화 상자의 첫 번째 섹션인 **일반** 레이블이 지정된 섹션에서 옵션이 **서버 시작 시 이벤트 세션 시작**으로 선택된 것을 확인할 수 있습니다.
 
 ![새 세션 > 일반, 서버 시작 시 이벤트 세션 시작](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
@@ -137,7 +141,7 @@ SSMS의 **개체 탐색기**에서 **관리** 확장 이벤트 **를 확장한 �
 ![새 세션 > 이벤트, 필터 조건자 필드(동작)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-**데이터 저장소** 섹션에서는 **event_file** 이 대상으로 선택되어 있습니다. 또한 **파일 롤오버 사용** 옵션이 선택되었습니다.
+**데이터 저장소** 섹션에서는 **event_file**이 대상으로 선택되어 있습니다. 또한 **파일 롤오버 사용** 옵션이 선택되었습니다.
 
 ![새 세션 > 데이터 저장소, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
@@ -920,5 +924,6 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
+
 
 

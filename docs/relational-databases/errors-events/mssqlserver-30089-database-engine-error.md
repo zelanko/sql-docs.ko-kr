@@ -2,26 +2,33 @@
 title: "MSSQLSERVER_30089 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 9992 (Database Engine error)
+helpviewer_keywords:
+- 9992 (Database Engine error)
 ms.assetid: 188e5bde-6865-4740-a2b2-582be8f55c77
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: b20c4c44f34fc7a0a58001fd64642feda0c587bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c42bbbb05ba2cb78628433815effb5ef7ce48132
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver30089"></a>MSSQLSERVER_30089
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
   
@@ -49,3 +56,4 @@ ms.lasthandoff: 11/09/2017
 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
 [검색 필터 구성 및 관리](~/relational-databases/search/configure-and-manage-filters-for-search.md)  
   
+

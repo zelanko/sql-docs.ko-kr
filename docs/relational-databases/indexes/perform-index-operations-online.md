@@ -12,22 +12,24 @@ helpviewer_keywords:
 - online index operations
 - ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.suite: SQL
-ms.prod_service: database-engine, sql-database, sql-data-warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: b4be319efe2dd1b6ecdeca915f3fe1e437782b17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: c2a7e07e2af46446f9271eb82d1dae13f6da2145
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/06/2017
+
 ---
 # <a name="perform-index-operations-online"></a>온라인으로 인덱스 작업 수행
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 온라인으로 인덱스를 만들거나, 다시 작성하거나, 삭제하는 방법에 대해 설명합니다. ONLINE 옵션을 사용하면 여러 사용자가 인덱스 작업 동안 기본 테이블이나 클러스터형 인덱스 데이터 및 모든 관련 비클러스터형 인덱스에 동시에 액세스할 수 있습니다. 예를 들어 특정 사용자가 클러스터형 인덱스를 다시 작성하는 동안 해당 사용자와 다른 사용자가 계속해서 기본 데이터를 업데이트하고 쿼리할 수 있습니다. 클러스터형 인덱스 작성 또는 다시 작성 등의 DDL(데이터 정의 언어) 작업을 오프라인으로 수행할 때 이러한 작업은 기본 데이터와 관련 인덱스에 대해 배타적 잠금을 보유합니다. 이로 인해 해당 인덱스 작업이 완료될 때까지 기본 데이터를 수정하거나 쿼리할 수 없습니다.  
   
@@ -120,3 +122,4 @@ ms.lasthandoff: 11/09/2017
  자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   
   
+

@@ -2,27 +2,35 @@
 title: "MSSQLSERVER_-2 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: "-2"
-helpviewer_keywords: -2 (Database Engine error)
+f1_keywords:
+- "-2"
+helpviewer_keywords:
+- -2 (Database Engine error)
 ms.assetid: f37a7b7d-26e1-4b9e-bcb4-57f7805393d2
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: f689a0aa5e029f57cd1a3c031598b984cdc39516
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b6b67d08a3f8beb88d44499c4b3975d88038feb4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver-2"></a>MSSQLSERVER_-2
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
   
@@ -50,3 +58,4 @@ ms.lasthandoff: 11/09/2017
 [클라이언트 프로토콜 구성](~/database-engine/configure-windows/configure-client-protocols.md)  
 [서버 네트워크 프로토콜 설정 또는 해제](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
+

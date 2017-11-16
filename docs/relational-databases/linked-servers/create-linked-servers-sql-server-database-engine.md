@@ -1,11 +1,15 @@
 ---
 title: "연결된 서버 만들기(SQL Server 데이터베이스 엔진) | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/20/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linked-servers
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,22 +17,24 @@ f1_keywords:
 - sql13.swb.linkedserver.properties.security.f1
 - sql13.swb.linkedserver.properties.provider.f1
 - sql13.swb.linkedserver.properties.options.f1
-helpviewer_keywords: linked servers [SQL Server], creating
+helpviewer_keywords:
+- linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2d897f66e7a1faa5d628442d3dd1153c32825d48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: ccd682b0f193628b900ca2b2baf32691582d993c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
-
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [연결된 서버 만들기(SQL Server 데이터베이스 엔진)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx)합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [연결된 서버 만들기(SQL Server 데이터베이스 엔진)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx)합니다..
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 연결된 서버를 만들고 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터에 액세스하는 방법을 보여 줍니다. 연결된 서버를 만들면 여러 원본의 데이터로 작업할 수 있습니다. 연결된 서버는 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스일 필요는 없지만 이것이 일반적인 시나리오입니다.  
   
@@ -257,3 +263,4 @@ ms.lasthandoff: 11/09/2017
  [sp_serveroption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
+

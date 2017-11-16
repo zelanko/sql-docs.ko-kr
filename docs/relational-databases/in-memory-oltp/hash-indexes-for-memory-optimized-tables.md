@@ -1,13 +1,13 @@
 ---
 title: "메모리 액세스에 최적화된 테이블의 해시 인덱스 | Microsoft 문서"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
+ms.component: in-memory-oltp
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 해시 인덱스
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 이 문서에서는 메모리 액세스에 최적화된 테이블에서 사용할 수 있는 *해시* 형식의 인덱스를 설명합니다. 이 문서에서는 다음 내용을 다룹니다.  

@@ -2,9 +2,12 @@
 title: "쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 SQL Server의 [쿼리 저장소](../../relational-databases/performance/how-query-store-collects-data.md) 기능은 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 이 정보를 데이터베이스에 저장합니다. [DTA(데이터베이스 엔진 튜닝 관리자)](../../relational-databases/performance/database-engine-tuning-advisor.md)는 쿼리 저장소를 사용하여 튜닝하기에 적합한 작업을 자동으로 선택하는 새로운 옵션을 지원합니다. 따라서 많은 사용자가 튜닝을 위한 작업을 명시적으로 수집하지 않아도 됩니다. 이 기능은 데이터베이스에서 쿼리 저장소 기능이 설정된 경우에만 사용할 수 있습니다. 

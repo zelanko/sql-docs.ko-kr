@@ -1,7 +1,7 @@
 ---
 title: DBCC UPDATEUSAGE (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 카탈로그 뷰의 부정확한 페이지와 행 개수를 보고하고 수정합니다. 이러한 부정확성으로 인해 sp_spaceused 시스템 저장 프로시저에서 정확하지 않은 공간 사용 보고서를 반환할 수 있습니다.
   

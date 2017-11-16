@@ -2,10 +2,14 @@
 title: "카디널리티 추정(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 09/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7fc8688959d0ca4c58052b47f2af79c6dd95ee25
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/05/2017
+
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 이 문서에서는 SQL 시스템에 대한 최상의 CE(카디널리티 추정) 구성을 평가 및 선택하는 방법을 보여 줍니다. 대부분의 시스템에서는 가장 정확한 최신 CE를 활용합니다. CE는 쿼리에서 반환될 행 수를 예측합니다. 카디널리티 예측은 쿼리 최적화 프로그램에서 최적의 쿼리 계획을 생성하는 데 사용됩니다. 보다 정확한 추정을 통해 쿼리 최적화 프로그램은 일반적으로 최적의 쿼리 계획을 생성하는 작업을 더 잘 수행할 수 있습니다.  
@@ -272,3 +277,4 @@ SELECT s.ticket, s.customer, r.store
  [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)  
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)
+

@@ -3,25 +3,29 @@ title: "PolyBase 버전 기능 요약 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d6f0d0b4acbbcf7f1c8dc15f0fe4b64e9b1efbd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 버전 기능 요약
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
 SQL Server 제품 및 서비스에 사용할 수 있는 PolyBase 기능 요약입니다.  
   
@@ -61,3 +65,4 @@ SQL Server 및 APS에서 모든 T-SQL 운영자가 hadoop 클러스터로 푸시
  [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)  
   
   
+

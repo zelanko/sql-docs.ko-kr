@@ -2,29 +2,34 @@
 title: "DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Database Engine Tuning Advisor, columnstore index
 - Database Engine Tuning Advisor, columnstore and rowstore indexes
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d2c7a4a2d87fb730ebca3f4804b059471899823
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e465c19541d7577b19eef3b875697ba843cba000
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  
   데이터 웨어하우징 및 분석 워크로드는 기존의 rowstore 인덱스뿐만 아니라 [columnstore 인덱스](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 활용할 수 있습니다. 데이터베이스에 대해 작성할 rowstore 및 columnstore 인덱스 선택은 응용 프로그램의 워크로드에 따라 달라집니다. SQL Server 2016의 [DTA(데이터베이스 엔진 튜닝 관리자)](../../relational-databases/performance/database-engine-tuning-advisor.md)는 워크로드를 분석하고 데이터베이스에 작성할 적절한 rowstore 및 columnstore 인덱스 조합을 권장할 수 있습니다. 
@@ -64,4 +69,5 @@ dta.exe 명령줄 유틸리티에 대한 자세한 내용은 [dta 유틸리티](
 
 
   
+
 

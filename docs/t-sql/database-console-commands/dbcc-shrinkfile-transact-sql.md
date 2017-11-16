@@ -1,7 +1,7 @@
 ---
 title: DBCC SHRINKFILE (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 현재 데이터베이스에 대해 지정한 데이터 또는 로그 파일의 크기를 축소하거나 지정한 파일의 데이터를 같은 파일 그룹의 다른 파일로 이동하여 파일을 비우고 데이터베이스에서 제거할 수 있도록 합니다. 파일을 만들 때 지정한 크기보다 작게 파일을 축소할 수 있습니다. 이 작업은 최소 파일 크기를 새 값으로 다시 설정합니다.
   

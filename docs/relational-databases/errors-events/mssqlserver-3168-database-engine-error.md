@@ -2,26 +2,33 @@
 title: "MSSQLSERVER_3168 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 3168 (Database Engine error)
+helpviewer_keywords:
+- 3168 (Database Engine error)
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 9ee612ae808580661f5c35bb6a177e5e58f26617
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e65ac3a25fa7982dc29bc04873c068392f31e16a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
   
@@ -50,8 +57,9 @@ ms.lasthandoff: 11/09/2017
 -   사용자가 동일한 서버에서 수행한 백업에서 시스템 데이터베이스를 복원하려고 합니다. 그러나 백업을 수행할 당시에는 서버가 다른 빌드를 실행하고 있었습니다. 즉, 백업을 수행한 이후에 서버가 업그레이드되었습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-이 시나리오에는 복원 프로세스가 마지막 수단으로 이미 시도되었습니다. 자세한 내용은 "[You cannot restore system database backups to a different build of SQL Server](http://support.microsoft.com/kb/264474)(시스템 데이터베이스 백업을 SQL Server의 다른 빌드로 복원할 수 없습니다.)"를 참조하세요.  
+이 시나리오에는 복원 프로세스가 마지막 수단으로 이미 시도되었습니다. 자세한 내용은 "[시스템 데이터베이스 백업을 SQL Server의 다른 빌드로 복원할 수 없습니다](http://support.microsoft.com/kb/264474)"를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
+
