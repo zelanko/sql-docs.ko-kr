@@ -1,32 +1,29 @@
 ---
 title: "메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b955ffcf895f5356b77e0d772b3f1ac0cd9780e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 374b0d1eabfd3956d6e6e8aab684203fe4dcac75
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합되어 있으므로 메모리 액세스에 최적화된 테이블과 기존의 디스크 기반 테이블을 모두 같은 데이터베이스에 포함할 수 있습니다. 그러나 메모리 액세스에 최적화된 테이블의 저장소 구조는 디스크 기반 테이블과는 다릅니다.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합되어 있으므로 메모리 액세스에 최적화된 테이블과 기존의 디스크 기반 테이블을 모두 같은 데이터베이스에 포함할 수 있습니다. 그러나 메모리 최적화 테이블의 저장소 구조는 디스크 기반 테이블과는 다릅니다.  
   
  디스크 기반 테이블용 저장소의 주요 특성은 다음과 같습니다.  
   
@@ -38,21 +35,21 @@ ms.lasthandoff: 06/22/2017
   
 -   데이터는 필요에 따라 메모리(버퍼 풀)로 이동되며 수정되거나 새로 생성된 페이지는 디스크에 비동기로 기록되므로 대개 임의의 IO가 생성됩니다.  
   
- 메모리 액세스에 최적화된 테이블용 저장소의 주요 특성은 다음과 같습니다.  
+ 메모리 최적화 테이블용 저장소의 주요 특성은 다음과 같습니다.  
   
--   메모리 액세스에 최적화된 모든 테이블은 메모리 액세스에 최적화된 데이터-파일 그룹에 매핑됩니다. 이 파일 그룹은 파일 스트림과 비슷한 구문과 의미 체계를 사용합니다.  
+-   메모리 최적화 모든 테이블은 메모리 최적화 데이터-파일 그룹에 매핑됩니다. 이 파일 그룹은 파일 스트림과 비슷한 구문과 의미 체계를 사용합니다.  
   
 -   페이지는 없으며 데이터는 행으로 유지됩니다.  
   
--   메모리 액세스에 최적화된 테이블의 모든 변경 내용은 활성 파일에 추가되는 방식으로 저장됩니다. 파일 읽기와 파일에 쓰기는 모두 순차적으로 수행됩니다.  
+-   메모리 최적화 테이블의 모든 변경 내용은 활성 파일에 추가되는 방식으로 저장됩니다. 파일 읽기와 파일에 쓰기는 모두 순차적으로 수행됩니다.  
   
 -   업데이트는 삭제 후 삽입으로 구현됩니다. 삭제된 행은 저장소에서 즉시 제거되지 않으며, 삭제된 행은 [메모리 액세스에 최적화된 테이블에 대한 내구성](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)에서 설명한 대로 정책을 기반으로 하여 MERGE라는 백그라운드 프로세스를 통해 제거됩니다.  
   
--   디스크 기반 테이블과 달리 메모리 액세스에 최적화된 테이블용 저장소는 압축되지 않습니다. 압축된(ROW 또는 PAGE) 디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션할 때는 크기 변경을 고려해야 합니다.  
+-   디스크 기반 테이블과 달리 메모리 최적화 테이블용 저장소는 압축되지 않습니다. 압축된(ROW 또는 PAGE) 디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션할 때는 크기 변경을 고려해야 합니다.  
   
--   메모리 액세스에 최적화된 테이블은 지속형일 수도 있고 그렇지 않을 수도 있습니다. 지속형 메모리 액세스에 최적화된 테이블용 저장소만 구성하면 됩니다.  
+-   메모리 최적화 테이블은 지속형일 수도 있고 그렇지 않을 수도 있습니다. 지속형 메모리 최적화 테이블용 저장소만 구성하면 됩니다.  
   
- 이 섹션에서는 검사점 파일 쌍 외에도 메모리 액세스에 최적화된 테이블의 데이터가 저장되는 방법의 다른 측면에 대해 설명합니다.  
+ 이 섹션에서는 검사점 파일 쌍 외에도 메모리 최적화 테이블의 데이터가 저장되는 방법의 다른 측면에 대해 설명합니다.  
   
  이 섹션의 항목:  
   
@@ -72,4 +69,3 @@ ms.lasthandoff: 06/22/2017
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

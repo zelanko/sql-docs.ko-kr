@@ -5,30 +5,30 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5b936bf52653ea81c579c345d09f4f2d0e76339
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: e08358859b04559b2ed2f010887fd4166ebc6196
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
-  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 에서는 디스크 기반 테이블과 다른 패턴으로 메모리를 사용합니다. 메모리 및 가비지 수집 하위 시스템에 제공되는 DMV 또는 성능 카운터를 사용하여 데이터베이스에 할당된 메모리의 양과 메모리 액세스에 최적화된 테이블 및 인덱스에서 사용하는 메모리의 양을 모니터링할 수 있습니다.  이를 통해 시스템 및 데이터베이스 수준에서 가시성을 확보하고 메모리 부족으로 인한 문제를 방지할 수 있습니다.  
+  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 에서는 디스크 기반 테이블과 다른 패턴으로 메모리를 사용합니다. 메모리 및 가비지 수집 하위 시스템에 제공되는 DMV 또는 성능 카운터를 사용하여 데이터베이스에 할당된 메모리의 양과 메모리 최적화 테이블 및 인덱스에서 사용하는 메모리의 양을 모니터링할 수 있습니다.  이를 통해 시스템 및 데이터베이스 수준에서 가시성을 확보하고 메모리 부족으로 인한 문제를 방지할 수 있습니다.  
   
  이 항목에서는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 사용 모니터링에 대해 다룹니다.  
   
 ## <a name="sections-in-this-topic"></a>이 항목의 단원  
   
--   [메모리 액세스에 최적화된 테이블이 포함된 샘플 데이터베이스 만들기](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
+-   
+            [메모리 최적화 테이블이 포함된 샘플 데이터베이스 만들기](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
   
 -   [메모리 사용 모니터링](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Monitoring)  
   
@@ -36,14 +36,17 @@ ms.lasthandoff: 06/22/2017
   
     -   [DMVs 사용](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_UsingDMVs)  
   
--   [메모리 액세스에 최적화된 개체에서 사용하는 메모리 관리](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
+-   
+            [메모리 최적화 개체에서 사용하는 메모리 관리](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
   
 -   [메모리 문제 해결](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB"></a> 메모리 액세스에 최적화된 테이블이 포함된 샘플 데이터베이스 만들기  
- 메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 이미 만든 경우에는 이 섹션을 건너뛸 수 있습니다.  
+##  
+            <a name="bkmk_CreateDB">
+            </a> 메모리 최적화 테이블이 포함된 샘플 데이터베이스 만들기  
+ 메모리 최적화 테이블이 있는 데이터베이스를 이미 만든 경우에는 이 섹션을 건너뛸 수 있습니다.  
   
- 다음 단계에서는 이 항목의 나머지 부분에서 사용할 수 있는 메모리 액세스에 최적화된 테이블이 3개 있는 데이터베이스를 만듭니다. 이 예제에서는 데이터베이스를 리소스 풀에 매핑하여 메모리 액세스에 최적화된 테이블에서 가져올 수 있는 메모리의 양을 제어할 수 있습니다.  
+ 다음 단계에서는 이 항목의 나머지 부분에서 사용할 수 있는 메모리 최적화 테이블이 3개 있는 데이터베이스를 만듭니다. 이 예제에서는 데이터베이스를 리소스 풀에 매핑하여 메모리 최적화 테이블에서 가져올 수 있는 메모리의 양을 제어할 수 있습니다.  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작합니다.  
   
@@ -130,7 +133,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_Monitoring"></a> 메모리 사용 모니터링  
   
 ###  <a name="bkmk_UsingSSMS"></a> 사용 중 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 액세스에 최적화된 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.  
   
 #### <a name="consumption-at-the-database-level"></a>데이터베이스 수준에서 사용  
  다음과 같이 데이터베이스 수준에서 메모리 사용을 모니터링할 수 있습니다.  
@@ -148,9 +151,9 @@ ms.lasthandoff: 06/22/2017
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="bkmk_UsingDMVs"></a> DMVs 사용  
- 메모리 액세스에 최적화된 테이블, 인덱스, 시스템 개체 및 런타임 구조에서 사용하는 메모리를 모니터링하는 데 사용할 수 있는 다양한 DMV가 있습니다.  
+ 메모리 최적화 테이블, 인덱스, 시스템 개체 및 런타임 구조에서 사용하는 메모리를 모니터링하는 데 사용할 수 있는 다양한 DMV가 있습니다.  
   
-#### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>메모리 액세스에 최적화된 테이블 및 인덱스의 메모리 사용  
+#### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>메모리 최적화 테이블 및 인덱스의 메모리 사용  
  여기 표시된 대로 `sys.dm_db_xtp_table_memory_stats` 를 쿼리하여 모든 사용자 테이블, 인덱스 및 시스템 개체에 대한 메모리 사용을 확인할 수 있습니다.  
   
 ```tsql  
@@ -215,7 +218,7 @@ PGPOOL:  4K               0                    0                    0
   
  자세한 내용은 [sys.dm_xtp_system_memory_consumers&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md)를 참조하세요.  
   
-#### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 액세스할 때 런타임 시 메모리 사용  
+#### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>메모리 최적화 테이블에 액세스할 때 런타임 시 메모리 사용  
  다음 쿼리를 사용하는 프로시저 캐시 등의 런타임 구조에서 사용하는 메모리를 확인할 수 있습니다. 이 쿼리를 실행하여 프로시저 캐시의 경우와 같이 런타임 구조에서 사용하는 메모리를 가져옵니다. 모든 런타임 구조에는 XTP로 태그가 지정됩니다.  
   
 ```tsql  
@@ -274,13 +277,15 @@ MEMORYCLERK_XTP      Default    64             0
   
  자세한 내용은 [sys.dm_os_memory_clerks(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)를 참조하세요.  
   
-##  <a name="bkmk_MemOptObjects"></a> 메모리 액세스에 최적화된 개체에서 사용하는 메모리 관리  
- 메모리 액세스에 최적화된 테이블을 [메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)항목에서 설명된 대로 명명된 리소스 풀에 바인딩하여 사용하는 총 메모리 양을 제어할 수 있습니다.  
+##  
+            <a name="bkmk_MemOptObjects">
+            </a> 메모리 최적화 개체에서 사용하는 메모리 관리  
+ 메모리 최적화 테이블을 [메모리 최적화 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)항목에서 설명된 대로 명명된 리소스 풀에 바인딩하여 사용하는 총 메모리 양을 제어할 수 있습니다.  
   
 ##  <a name="bkmk_Troubleshooting"></a> 메모리 문제 해결  
  다음 3단계 프로세스를 통해 메모리 문제를 해결합니다.  
   
-1.  데이터베이스 또는 인스턴스의 개체에서 사용되는 메모리 양을 파악합니다. 앞서 설명한 대로 메모리 액세스에 최적화된 테이블에 대해 다양한 모니터링 도구를 활용할 수 있습니다.  예를 들어, DMV `sys.dm_db_xtp_table_memory_stats` 또는 `sys.dm_os_memory_clerks`등이 있습니다.  
+1.  데이터베이스 또는 인스턴스의 개체에서 사용되는 메모리 양을 파악합니다. 앞서 설명한 대로 메모리 최적화 테이블에 대해 다양한 모니터링 도구를 활용할 수 있습니다.  예를 들어, DMV `sys.dm_db_xtp_table_memory_stats` 또는 `sys.dm_os_memory_clerks`등이 있습니다.  
   
 2.  메모리 사용 증가량과 남은 공간을 확인합니다. 메모리 사용을 주기적으로 모니터링하여 메모리 사용 증가량을 확인할 수 있습니다. 예를 들어, 데이터베이스를 명명된 리소스 풀에 매핑한 경우 성능 카운터 메모리 사용(KB)을 모니터링하여 메모리 사용량의 증가 정도를 확인할 수 있습니다.  
   

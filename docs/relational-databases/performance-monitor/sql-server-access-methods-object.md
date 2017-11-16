@@ -5,25 +5,23 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d1b594d608fc266567c0a5c86a24f8130c3b6c4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Access Methods 개체
   ****  Access Methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 데이터베이스 내의 논리 페이지에 액세스하는 방법을 모니터링하는 카운터를 제공합니다. 디스크에 있는 데이터베이스 페이지에 대한 실제 액세스는 **Buffer Manager** 카운터를 사용하여 모니터링됩니다. 데이터베이스에 저장된 데이터에 액세스하는 방법을 모니터링하면 인덱스를 추가/수정하거나, 파티션을 추가/이동하거나, 파일 또는 파일 그룹을 추가하거나, 인덱스를 조각 모음하거나, 쿼리를 다시 작성하여 쿼리 성능을 향상시킬 수 있는지 확인하는 데 도움이 됩니다. 또한 **Access Methods** 카운터를 사용하면 데이터베이스에 있는 데이터, 인덱스, 여유 공간의 양을 모니터링하여 각 서버 인스턴스에 대한 데이터 볼륨 및 조각화 상태를 나타낼 수 있습니다. 과도한 인덱스 조각화는 성능을 저하시킬 수 있습니다.  
@@ -99,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

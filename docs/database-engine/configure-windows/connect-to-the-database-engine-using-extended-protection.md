@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2e132f07a9bfa81c2eae226f2ce3d63ba3c65826
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 894f04fe8bf8df95bb288acab897f3274fbacb18
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **** 버전부터는 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. **인증에 대한 확장된 보호** 는 운영 체제에서 구현하는 네트워크 구성 요소의 기능입니다. **확장된 보호** 는 Windows 7 및 Windows Server 2008 R2에서 지원됩니다. **확장된 보호** 는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제의 경우에는 서비스 팩에 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장된 보호 **를 사용하여 연결하면**의 보안이 강화됩니다.  
@@ -112,4 +110,3 @@ ms.lasthandoff: 08/02/2017
  [확장된 보호를 사용하는 Windows 통합 인증(영문)](http://go.microsoft.com/fwlink/?LinkId=179922)  
   
   
-

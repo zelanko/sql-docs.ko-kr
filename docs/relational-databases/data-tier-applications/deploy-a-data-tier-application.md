@@ -5,8 +5,7 @@ ms.date: 01/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - How to [DAC], deploy
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: eeda8a1432ad975caaf74134ce598b0c70c16d29
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 21bcace1cd6c05ac3516095aff955e24ff016967
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 응용 프로그램 배포
   마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 응용 프로그램)를 데이터베이스 엔진 또는 Azure SQL Database의 기존 인스턴스에 배포합니다. 
@@ -183,4 +182,3 @@ $fileStream.Close()
  [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- job steps [Analysis Services]
+helpviewer_keywords: job steps [Analysis Services]
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a1329ecb44429b9f353324c79e032d485f93a8dc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bcfaded951e2f4b574747f74167487e2538d8658
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Analysis Services 명령 및 쿼리를 실행하는 [!INCLUDE[tsql](../../includes/tsql_md.md)] 에이전트 작업 단계를 만들고 정의하는 방법에 대해 설명합니다.  
@@ -178,4 +175,3 @@ ms.lasthandoff: 06/22/2017
   
 선택한 프로그래밍 언어(예: XMLA 또는 MDX)를 사용하여 **JobStep** 클래스를 사용합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](http://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
   
-

@@ -5,34 +5,32 @@ ms.date: 12/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e133c38f2944735282d8a8eca76dbab481538105
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
     
 ## <a name="overview"></a>개요  
- 이 샘플에서는 메모리 내 OLTP 기능을 소개합니다. 이 예제는 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저를 보여 주며, 메모리 내 OLTP의 성능 이점을 설명하는 데 사용할 수 있습니다.  
+ 이 샘플에서는 메모리 내 OLTP 기능을 소개합니다. 이 예제는 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 보여 주며, 메모리 내 OLTP의 성능 이점을 설명하는 데 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 대한 이 항목을 보려면 [메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx)을 참조하세요.  
   
- 또한 AdventureWorks 데이터베이스의 5개 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션하며, 판매 주문 처리용 데모 작업을 포함하고 있습니다. 이 데모 작업을 사용하여 서버에서 메모리 내 OLTP를 사용하는 경우의 성능 이점을 확인할 수 있습니다.  
+ 또한 AdventureWorks 데이터베이스의 5개 테이블을 메모리 최적화 테이블로 마이그레이션하며, 판매 주문 처리용 데모 작업을 포함하고 있습니다. 이 데모 작업을 사용하여 서버에서 메모리 내 OLTP를 사용하는 경우의 성능 이점을 확인할 수 있습니다.  
   
- 샘플에 대한 설명에서는 테이블을 메모리 내 OLTP로 마이그레이션할 때 메모리 액세스에 최적화된 테이블에 아직 지원되지 않는 기능을 보완하기 위해 수행한 절충 작업에 대해 설명합니다.  
+ 샘플에 대한 설명에서는 테이블을 메모리 내 OLTP로 마이그레이션할 때 메모리 최적화 테이블에 아직 지원되지 않는 기능을 보완하기 위해 수행한 절충 작업에 대해 설명합니다.  
   
  이 샘플에 대한 설명서는 다음과 같이 구성되어 있습니다.  
   
@@ -40,13 +38,14 @@ ms.lasthandoff: 06/22/2017
   
 -   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
--   [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – 메모리 내 OLTP 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
+-   
+            [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – 메모리 내 OLTP 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
   
 -   [데모 작업을 사용한 성능 측정](#PerformanceMeasurementsusingtheDemoWorkload) 을 수행하기 위한 지침 – 데모 작업 자체를 실행하기 위한 지침뿐만 아니라 작업을 추진하는 데 사용되는 도구인 ostress를 설치하고 실행하기 위한 지침이 포함되어 있습니다.  
   
 -   [샘플의 메모리 및 디스크 공간 사용률](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> 필수 조건  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -83,12 +82,12 @@ ms.lasthandoff: 06/22/2017
   
 3.  샘플 스크립트와 워크로드를 보려면 로컬 폴더에 SQLServer2016CTP3Samples.zip 파일의 압축을 풉니다. 워크로드 실행에 대한 지침은 In-Memory OLTP\readme.txt 파일을 참조하세요.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> 예제 테이블 및 프로시저에 대한 설명  
  예제에서는 AdventureWorks의 기존 테이블을 기반으로 제품과 판매 주문에 대한 새 테이블을 만듭니다. 새 테이블의 스키마는 아래에 설명된 대로 몇 가지 차이점이 있지만 기존 테이블과 유사합니다.  
   
- 새로운 메모리 액세스에 최적화된 테이블에는 ‘_inmem’ 접미사가 붙습니다. 예제에는 '_ondisk' 접미사가 붙는 해당 테이블도 포함되어 있습니다. 이러한 테이블을 사용하여 시스템에서 메모리 액세스에 최적화된 테이블과 디스크 기반 테이블의 성능을 일 대 일로 비교할 수 있습니다.  
+ 새로운 메모리 최적화 테이블에는 ‘_inmem’ 접미사가 붙습니다. 예제에는 '_ondisk' 접미사가 붙는 해당 테이블도 포함되어 있습니다. 이러한 테이블을 사용하여 시스템에서 메모리 최적화 테이블과 디스크 기반 테이블의 성능을 일 대 일로 비교할 수 있습니다.  
   
- 성능 비교를 위한 작업에서 사용되는 메모리 액세스에 최적화된 테이블은 완전한 내구성을 가지며 모두 기록됩니다. 이러한 테이블은 성능 이점을 얻기 위해 내구성이나 안정성을 희생하지 않습니다.  
+ 성능 비교를 위한 작업에서 사용되는 메모리 최적화 테이블은 완전한 내구성을 가지며 모두 기록됩니다. 이러한 테이블은 성능 이점을 얻기 위해 내구성이나 안정성을 희생하지 않습니다.  
   
  이 예제의 대상 작업은 판매 주문 처리이므로 제품 및 할인에 대한 정보도 고려하며, 이를 위해 SalesOrderHeader, SalesOrderDetail, Product, SpecialOffer 및 SpecialOfferProduct 테이블이 사용됩니다.  
   
@@ -137,32 +136,36 @@ ms.lasthandoff: 06/22/2017
   
 -   Production.Product_ondisk  
   
-#### <a name="differences-between-original-disk-based-and-the-and-new-memory-optimized-tables"></a>원래 디스크 기반 테이블과 새로운 메모리 액세스에 최적화된 테이블 간의 차이점  
+#### <a name="differences-between-original-disk-based-and-the-and-new-memory-optimized-tables"></a>원래 디스크 기반 테이블과 새로운 메모리 최적화 테이블 간의 차이점  
  대부분의 경우 이 예제에서 도입한 새로운 테이블은 원래 테이블과 동일한 열 및 동일한 데이터 형식을 사용하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 변경에 대한 이유는 다음과 같습니다.  
   
  Sales.SalesOrderHeader_inmem  
   
--   *기본 제약 조건* 은 메모리 액세스에 최적화된 테이블에 지원되며 대부분의 기본 제약 조건은 있는 그대로 마이그레이션되었습니다. 그러나 원래 테이블 Sales.SalesOrderHeader에는 OrderDate 및 ModifiedDate 열에 대한 현재 날짜를 검색하는 두 가지 기본 제약 조건이 포함되어 있습니다. 동시 작업과 처리량이 많은 주문 처리 작업에서 전역 리소스는 경합 지점이 될 수 있습니다. 시스템 시간은 이러한 전역 리소스이며 판매 주문을 삽입하는 메모리 내 OLTP 작업을 실행할 때 병목 현상을 발생시킬 수 있다는 사실이 관찰되었습니다. 이는 판매 주문 정보뿐만 아니라 판매 주문 머리글의 여러 열에 대해 시스템 시간을 검색해야 하는 경우 특히 해당하는 사실입니다. 이러한 문제는 이 예제에서 삽입되는 각 판매 주문에 대해 시스템 시간을 한 번만 검색하고 Sales.usp_InsertSalesOrder_inmem 저장 프로시저에서 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem의 datetime 열에 이 값을 사용하여 해결되었습니다.  
+-   
+            *기본 제약 조건* 은 메모리 최적화 테이블에 지원되며 대부분의 기본 제약 조건은 있는 그대로 마이그레이션되었습니다. 그러나 원래 테이블 Sales.SalesOrderHeader에는 OrderDate 및 ModifiedDate 열에 대한 현재 날짜를 검색하는 두 가지 기본 제약 조건이 포함되어 있습니다. 동시 작업과 처리량이 많은 주문 처리 작업에서 전역 리소스는 경합 지점이 될 수 있습니다. 시스템 시간은 이러한 전역 리소스이며 판매 주문을 삽입하는 메모리 내 OLTP 작업을 실행할 때 병목 현상을 발생시킬 수 있다는 사실이 관찰되었습니다. 이는 판매 주문 정보뿐만 아니라 판매 주문 머리글의 여러 열에 대해 시스템 시간을 검색해야 하는 경우 특히 해당하는 사실입니다. 이러한 문제는 이 예제에서 삽입되는 각 판매 주문에 대해 시스템 시간을 한 번만 검색하고 Sales.usp_InsertSalesOrder_inmem 저장 프로시저에서 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem의 datetime 열에 이 값을 사용하여 해결되었습니다.  
   
--   *별칭 UDT* - 원래 테이블은 PurchaseOrderNumber 및 AccountNumber 열에 대해 두 가지 별칭 UDT(사용자 정의 데이터 형식)인 dbo.OrderNumber 및 dbo.AccountNumber를 각각 사용합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 메모리 액세스에 최적화된 테이블에 대한 별칭 UDT를 지원하지 않으므로 새 테이블은 시스템 데이터 형식 nvarchar(25) 및 nvarchar(15)을 각각 사용합니다.  
+-   *별칭 UDT* - 원래 테이블은 PurchaseOrderNumber 및 AccountNumber 열에 대해 두 가지 별칭 UDT(사용자 정의 데이터 형식)인 dbo.OrderNumber 및 dbo.AccountNumber를 각각 사용합니다. 
+            [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 메모리 최적화 테이블에 대한 별칭 UDT를 지원하지 않으므로 새 테이블은 시스템 데이터 형식 nvarchar(25) 및 nvarchar(15)을 각각 사용합니다.  
   
--   *인덱스 키의 Null 허용 열* - 원래 테이블에서 SalesPersonID 열은 Null을 허용하지만 새 테이블에서 이 열은 Null을 허용하지 않으며 값(-1)을 사용하는 기본 제약 조건을 갖습니다. 이는 메모리 액세스에 최적화된 테이블에 대한 인덱스의 경우 인덱스 키에 Null 허용 열이 있을 수 없기 때문이며, 이 경우 -1은 NULL의 대리 값입니다.  
+-   *인덱스 키의 Null 허용 열* - 원래 테이블에서 SalesPersonID 열은 Null을 허용하지만 새 테이블에서 이 열은 Null을 허용하지 않으며 값(-1)을 사용하는 기본 제약 조건을 갖습니다. 이는 메모리 최적화 테이블에 대한 인덱스의 경우 인덱스 키에 Null 허용 열이 있을 수 없기 때문이며, 이 경우 -1은 NULL의 대리 값입니다.  
   
--   *계산 열* - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 메모리 액세스에 최적화된 테이블에서 계산 열을 지원하지 않기 때문에 계산 열 SalesOrderNumber 및 TotalDue가 생략되었습니다. 새로운 뷰 Sales.vSalesOrderHeader_extended_inmem이 SalesOrderNumber 및 TotalDue 열을 반영하므로 이러한 열이 필요한 경우 이 뷰를 사용할 수 있습니다.  
+-   
+            *계산 열* - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 메모리 최적화 테이블에서 계산 열을 지원하지 않기 때문에 계산 열 SalesOrderNumber 및 TotalDue가 생략되었습니다. 새로운 뷰 Sales.vSalesOrderHeader_extended_inmem이 SalesOrderNumber 및 TotalDue 열을 반영하므로 이러한 열이 필요한 경우 이 뷰를 사용할 수 있습니다.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 액세스에 최적화된 테이블 및 인덱스에서 지원됩니다.
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 최적화 테이블 및 인덱스에서 지원됩니다.
 
   
--   *외래 키 제약 조건* 은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 액세스에 최적화된 테이블에 지원되지만 참조된 테이블도 메모리 액세스에 최적화된 경우에만 지원됩니다. 메모리 액세스에 최적화된 테이블로 마이그레이션된 테이블을 참조하는 외래 키는 마이그레이션된 테이블에 유지되지만 다른 외래 키는 생략됩니다.  또한 SalesOrderHeader_inmem은 예제 작업에서 핫 테이블이며, FOREIGN KEY 제약 조건을 지정하려면 모든 DML 작업에 대한 추가 처리가 필요합니다. 이는 이러한 제약 조건에서 참조된 다른 모든 테이블에서 조회가 필요하기 때문입니다. 따라서 응용 프로그램에서 Sales.SalesOrderHeader_inmem 테이블에 대한 참조 무결성을 보장하며 참조 무결성은 행이 삽입될 때 확인되지 않는다고 가정합니다.  
+-   *외래 키 제약 조건* 은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 최적화 테이블에 지원되지만 참조된 테이블도 메모리 최적화 경우에만 지원됩니다. 메모리 최적화 테이블로 마이그레이션된 테이블을 참조하는 외래 키는 마이그레이션된 테이블에 유지되지만 다른 외래 키는 생략됩니다.  또한 SalesOrderHeader_inmem은 예제 작업에서 핫 테이블이며, FOREIGN KEY 제약 조건을 지정하려면 모든 DML 작업에 대한 추가 처리가 필요합니다. 이는 이러한 제약 조건에서 참조된 다른 모든 테이블에서 조회가 필요하기 때문입니다. 따라서 응용 프로그램에서 Sales.SalesOrderHeader_inmem 테이블에 대한 참조 무결성을 보장하며 참조 무결성은 행이 삽입될 때 확인되지 않는다고 가정합니다.  
   
--   *Rowguid* - rowguid 열이 생략되었습니다. uniqueidentifier가 메모리 액세스에 최적화된 테이블에 지원되지만 ROWGUIDCOL 옵션은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 지원되지 않습니다. 이러한 종류의 열은 일반적으로 병합 복제나 filestream 열이 있는 테이블에 사용됩니다. 이 예제에는 둘 다 포함되어 있지 않습니다.  
+-   *Rowguid* - rowguid 열이 생략되었습니다. uniqueidentifier가 메모리 최적화 테이블에 지원되지만 ROWGUIDCOL 옵션은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 지원되지 않습니다. 이러한 종류의 열은 일반적으로 병합 복제나 filestream 열이 있는 테이블에 사용됩니다. 이 예제에는 둘 다 포함되어 있지 않습니다.  
   
  Sales.SalesOrderDetail  
   
 -   *기본 제약 조건* - SalesOrderHeader와 유사하게 시스템 날짜/시간을 필요로 하는 기본 제약 조건은 마이그레이션되지 않으며, 대신 판매 주문을 삽입하는 저장 프로시저가 첫 번째 삽입 시 현재 시스템 날짜/시간을 삽입하는 작업을 처리합니다.  
   
--   *계산 열* - 계산 열이 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 액세스에 최적화된 테이블에 지원되지 않기 때문에 계산 열 LineTotal이 마이그레이션되지 않았습니다. 이 열에 액세스하려면 Sales.vSalesOrderDetail_extended_inmem 뷰를 사용합니다.  
+-   
+            *계산 열* - 계산 열이 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 최적화 테이블에 지원되지 않기 때문에 계산 열 LineTotal이 마이그레이션되지 않았습니다. 이 열에 액세스하려면 Sales.vSalesOrderDetail_extended_inmem 뷰를 사용합니다.  
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. 자세한 내용은 SalesOrderHeader 테이블에 대한 설명을 참조하세요.  
   
@@ -180,8 +183,8 @@ ms.lasthandoff: 06/22/2017
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. 자세한 내용은 SalesOrderHeader 테이블에 대한 설명을 참조하세요.  
   
-#### <a name="considerations-for-indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스에 대한 고려 사항  
- 메모리 액세스에 최적화된 테이블의 기준 인덱스는 포인트 조회(같음 조건자의 인덱스 검색), 범위 검색(같지 않음 조건자의 인덱스 검색), 전체 인덱스 검색 및 정렬된 검색을 지원하는 비클러스터형 인덱스입니다. 또한 비클러스터형 인덱스는 인덱스 키의 선행 열에 대한 검색을 지원합니다. 메모리 액세스에 최적화된 비클러스터형 인덱스는 역방향 검색만 제외하고 디스크 기반 비클러스터형 인덱스가 지원하는 모든 작업을 지원합니다. 따라서 비클러스터형 인덱스의 사용은 인덱스에 선택할 수 있는 안전한 방법입니다.  
+#### <a name="considerations-for-indexes-on-memory-optimized-tables"></a>메모리 최적화 테이블의 인덱스에 대한 고려 사항  
+ 메모리 최적화 테이블의 기준 인덱스는 포인트 조회(같음 조건자의 인덱스 검색), 범위 검색(같지 않음 조건자의 인덱스 검색), 전체 인덱스 검색 및 정렬된 검색을 지원하는 비클러스터형 인덱스입니다. 또한 비클러스터형 인덱스는 인덱스 키의 선행 열에 대한 검색을 지원합니다. 메모리 최적화 비클러스터형 인덱스는 역방향 검색만 제외하고 디스크 기반 비클러스터형 인덱스가 지원하는 모든 작업을 지원합니다. 따라서 비클러스터형 인덱스의 사용은 인덱스에 선택할 수 있는 안전한 방법입니다.  
   
  해시 인덱스를 사용하여 작업을 추가로 최적화할 수 있습니다. 해시 인덱스는 포인트 조회와 행 삽입에 대해 특히 최적화됩니다. 그러나 해시 인덱스가 범위 검색, 정렬된 검색 또는 선행 인덱스 키 열에 대한 검색을 지원하지 않는다는 점을 고려해야 합니다. 따라서 이러한 인덱스를 사용할 때는 주의를 기울여야 합니다. 또한 만들 때 bucket_count를 지정해야 합니다. bucket_count는 일반적으로 인덱스 키 값의 수와 그 두 배 사이에서 설정되어야 하지만 더 많이 추정해도 대개 문제가 되지 않습니다.  
   
@@ -220,7 +223,7 @@ ms.lasthandoff: 06/22/2017
  위에서 일부 bucket_counts의 크기는 과도하게 설정되었지만 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem의 인덱스에 대한 bucket_counts의 크기는 1,000만 개의 판매 주문에 대해서만 설정되었습니다. 이는 사용할 수 있는 메모리가 적은 시스템에 예제를 설치할 수 있도록 하기 위해서입니다. 하지만 이러한 경우에 데모 작업은 메모리 부족으로 실패합니다. 1,000만 개가 훨씬 넘는 판매 주문으로 확장하려는 경우 bucket_counts를 그에 맞게 늘리면 됩니다.  
   
 #### <a name="considerations-for-memory-utilization"></a>메모리 사용률에 대한 고려 사항  
- 데모 작업을 실행하기 전후에 샘플 데이터베이스의 메모리 사용률은 [메모리 액세스에 최적화된 테이블의 메모리 사용률](#Memoryutilizationforthememory-optimizedtables)섹션에 설명되어 있습니다.  
+ 데모 작업을 실행하기 전후에 샘플 데이터베이스의 메모리 사용률은 [메모리 최적화 테이블의 메모리 사용률](#Memoryutilizationforthememory-optimizedtables)섹션에 설명되어 있습니다.  
   
 ### <a name="stored-procedures-added-by-the-sample"></a>예제에서 추가된 저장 프로시저  
  판매 주문을 삽입하고 배송 정보를 업데이트하기 위한 두 가지 주요 저장 프로시저는 다음과 같습니다.  
@@ -285,7 +288,7 @@ ms.lasthandoff: 06/22/2017
   
     -   SalesOrderHeader 및 SalesOrderDetail 테이블을 비우고 초기값을 다시 설정하여 데모를 다시 설정합니다.  
   
- 다음 저장 프로시저는 도메인 및 참조 무결성을 보장하면서 메모리 액세스에 최적화된 테이블에서 삽입하고 삭제하는 데 사용됩니다.  
+ 다음 저장 프로시저는 도메인 및 참조 무결성을 보장하면서 메모리 최적화 테이블에서 삽입하고 삭제하는 데 사용됩니다.  
   
 -   Production.usp_InsertProduct_inmem  
   
@@ -307,7 +310,7 @@ ms.lasthandoff: 06/22/2017
   
     -   이 프로시저는 도우미 프로시저 dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck 및 dbo.GenerateUQCheck에 의존하여 무결성 검사를 수행하는 데 필요한 T-SQL을 생성합니다.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 데모 작업을 사용한 성능 측정  
  Ostress는 Microsoft CSS SQL Server 지원 팀에서 개발한 명령줄 도구입니다. 이 도구는 쿼리를 실행하거나 저장 프로시저를 병렬로 실행하는 데 사용할 수 있습니다. 지정된 T-SQL 문을 병렬로 실행할 스레드 수를 구성할 수 있으며 해당 스레드에서 문이 실행될 횟수를 지정할 수 있습니다. ostress는 스레드를 시작하고 모든 스레드에서 문을 병렬로 실행합니다. 모든 스레드의 실행이 완료된 후 ostress는 모든 스레드의 실행이 완료되는 데 걸린 시간을 보고합니다.  
   
 ### <a name="installing-ostress"></a>ostress 설치  
@@ -347,7 +350,7 @@ ms.lasthandoff: 06/22/2017
   
  ostress 도구는 저장 프로시저 호출을 병렬로 실행하여 판매 주문을 동시에 삽입하는 클라이언트를 시뮬레이트하는 데 사용됩니다.  
   
- ostress 실행이 끝날 때마다 Demo.usp_DemoReset을 실행하여 데모를 다시 설정합니다. 이 프로시저는 메모리 액세스에 최적화된 테이블의 행을 삭제하고, 디스크 기반 테이블을 자르며, 데이터베이스 검사점을 실행합니다.  
+ ostress 실행이 끝날 때마다 Demo.usp_DemoReset을 실행하여 데모를 다시 설정합니다. 이 프로시저는 메모리 최적화 테이블의 행을 삭제하고, 디스크 기반 테이블을 자르며, 데이터베이스 검사점을 실행합니다.  
   
  다음 스크립트는 판매 주문 처리 작업을 시뮬레이트하기 위해 동시에 실행됩니다.  
   
@@ -377,7 +380,7 @@ END
   
  이 스크립트를 사용하면 생성된 각 예제 주문이 WHILE 루프에서 실행되는 20개의 저장 프로시저를 통해 20회 삽입됩니다. 루프는 데이터베이스가 예제 주문을 생성하는 데 사용된다는 사실을 보완하는 데 사용됩니다. 일반적인 프로덕션 환경에서는 중간 계층 응용 프로그램이 삽입될 판매 주문을 생성합니다.  
   
- 위의 스크립트는 판매 주문을 메모리 액세스에 최적화된 테이블에 삽입합니다. 판매 주문을 디스크 기반 테이블에 삽입하는 스크립트는 두 ‘_inmem’을 ‘_ondisk’로 바꿔서 파생됩니다.  
+ 위의 스크립트는 판매 주문을 메모리 최적화 테이블에 삽입합니다. 판매 주문을 디스크 기반 테이블에 삽입하는 스크립트는 두 ‘_inmem’을 ‘_ondisk’로 바꿔서 파생됩니다.  
   
  ostress 도구를 사용하여 여러 동시 연결을 통해 스크립트를 실행할 것입니다. ‘-n’ 매개 변수를 사용하여 연결 수를 제어하고 ‘r’ 매개 변수를 사용하여 스크립트가 각 연결에서 실행되는 횟수를 제어하려고 합니다.  
   
@@ -389,7 +392,7 @@ END
  아래 지침과 측정값에서는 1000만 개의 판매 주문을 삽입하는 작업을 사용합니다. 100만 개의 판매 주문을 삽입하는 축소된 워크로드를 실행하는 지침은 SQLServer2016CTP3Samples.zip 보관 파일의 일부인 'In-Memory OLTP\readme.txt'에 있는 지침을 참조하세요.  
   
 ##### <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블  
- 메모리 액세스에 최적화된 테이블에서 작업을 실행하는 것부터 시작합니다. 다음 명령은 각각 5,000회의 반복을 위해 실행되는 100개의 스레드를 엽니다.  각 반복에서는 별도의 트랜잭션에서 20개의 판매 주문을 삽입합니다. 데이터베이스가 삽입될 데이터를 생성하는 데 사용된다는 사실을 보완하기 위해 반복당 20개의 삽입이 있습니다. 이에 따라 총 20 * 5,000 \* 100 = 10,000,000개의 판매 주문 삽입이 생성됩니다.  
+ 메모리 최적화 테이블에서 작업을 실행하는 것부터 시작합니다. 다음 명령은 각각 5,000회의 반복을 위해 실행되는 100개의 스레드를 엽니다.  각 반복에서는 별도의 트랜잭션에서 20개의 판매 주문을 삽입합니다. 데이터베이스가 삽입될 데이터를 생성하는 데 사용된다는 사실을 보완하기 위해 반복당 20개의 삽입이 있습니다. 이에 따라 총 20 * 5,000 \* 100 = 10,000,000개의 판매 주문 삽입이 생성됩니다.  
   
  RML Cmd Prompt를 열고 다음 명령을 실행합니다.  
   
@@ -416,7 +419,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  물리적 코어가 총 8개(논리적 코어 총 16개)인 테스트 서버에서 이 작업은 41분 25초가 소요되었고, 물리적 코어가 24개(논리적 코어 48개)인 두 번째 테스트 서버에서는 52분 16초가 소요되었습니다.  
   
- 이 테스트에서 메모리 액세스에 최적화된 테이블과 디스크 기반 테이블 간 성능 차이의 주요 요인은 디스크 기반 테이블을 사용하는 경우 SQL Server에서 CPU를 완전히 활용할 수 없다는 사실입니다. 그 이유는 래치 경합 때문입니다. 즉, 동시 트랜잭션이 동일한 데이터 페이지에 쓰려고 합니다. 래치는 한 번에 한 트랜잭션만 페이지에 쓸 수 있도록 하는 데 사용됩니다. 메모리 내 OLTP 엔진은 래치를 사용하지 않으며 데이터 행이 페이지에 구성되지 않습니다. 따라서 동시 트랜잭션이 서로의 삽입을 차단하지 않기 때문에 SQL Server에서 CPU를 완전히 활용할 수 있습니다.  
+ 이 테스트에서 메모리 최적화 테이블과 디스크 기반 테이블 간 성능 차이의 주요 요인은 디스크 기반 테이블을 사용하는 경우 SQL Server에서 CPU를 완전히 활용할 수 없다는 사실입니다. 그 이유는 래치 경합 때문입니다. 즉, 동시 트랜잭션이 동일한 데이터 페이지에 쓰려고 합니다. 래치는 한 번에 한 트랜잭션만 페이지에 쓸 수 있도록 하는 데 사용됩니다. 메모리 내 OLTP 엔진은 래치를 사용하지 않으며 데이터 행이 페이지에 구성되지 않습니다. 따라서 동시 트랜잭션이 서로의 삽입을 차단하지 않기 때문에 SQL Server에서 CPU를 완전히 활용할 수 있습니다.  
   
  작업 관리자 등을 사용하여 작업이 실행되는 동안 CPU 사용률을 관찰할 수 있습니다. 디스크 기반 테이블을 사용하는 경우 CPU 사용률이 100%에 크게 못 미치는 것을 확인할 수 있습니다. 논리적 프로세서가 16개인 테스트 구성에서 사용률은 24% 정도입니다.  
   
@@ -433,7 +436,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  데모 실행이 끝날 때마다 다시 설정하는 것이 좋습니다. 이 작업이 삽입만 수행하기 때문에 각 실행에서 더 많은 메모리가 사용되므로 메모리 부족을 방지하려면 다시 설정해야 합니다. 실행 후 사용되는 메모리 양은 [작업 실행 후 메모리 사용률](#Memoryutilizationafterrunningtheworkload)섹션에 설명되어 있습니다.  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
+###  <a name="Troubleshootingslow-runningtests"></a> 느리게 실행되는 테스트 문제 해결  
  테스트 결과는 일반적으로 하드웨어와 테스트 실행에서 사용되는 동시성 수준에 따라 달라집니다. 결과가 예상과 다른 경우 확인할 몇 가지 사항은 다음과 같습니다.  
   
 -   동시 트랜잭션 수: 단일 스레드에서 작업을 실행할 때 메모리 내 OLTP를 사용한 성능 이점은 두 배보다 적을 수 있습니다. 래치 경합은 동시성 수준이 높은 경우에만 큰 문제가 됩니다.  
@@ -444,12 +447,14 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
 -   로그 드라이브의 속도: 로그 드라이브가 시스템의 트랜잭션 처리량 수준을 유지할 수 없는 경우 작업이 로그 IO에서 병목 상태가 됩니다. 메모리 내 OLTP를 사용하는 경우 로깅이 보다 효율적이지만 로그 IO가 병목 상태인 경우 잠재적인 성능 이점이 제한됩니다.  
   
-    -   증상: 메모리 액세스에 최적화된 테이블에서 작업을 실행할 때 CPU 사용률이 100%에 가깝지 않거나 변동이 심한 경우 로그 IO 병목 상태가 있을 수 있습니다. 이는 리소스 모니터를 열고 로그 드라이브의 큐 길이를 살펴보고 확인할 수 있습니다.  
+    -   증상: 메모리 최적화 테이블에서 작업을 실행할 때 CPU 사용률이 100%에 가깝지 않거나 변동이 심한 경우 로그 IO 병목 상태가 있을 수 있습니다. 이는 리소스 모니터를 열고 로그 드라이브의 큐 길이를 살펴보고 확인할 수 있습니다.  
   
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 샘플의 메모리 및 디스크 공간 사용률  
  아래에서는 예제 데이터베이스의 메모리 및 디스크 공간 사용률 측면에서 기대하는 것에 대해 설명합니다. 또한 논리적 코어가 16개인 테스트 서버에서 관찰한 결과도 보여 줍니다.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Memory utilization for the memory-optimized tables  
+###  
+            <a name="Memoryutilizationforthememory-optimizedtables">
+            </a> 메모리 최적화 테이블의 메모리 사용률  
   
 #### <a name="overall-utilization-of-the-database"></a>데이터베이스의 전체 사용률  
  다음 쿼리를 사용하여 시스템에서 메모리 내 OLTP의 총 메모리 사용률을 얻을 수 있습니다.  
@@ -502,7 +507,7 @@ WHERE t.type='U'
   
  여기에서 눈에 띄는 것은 테이블 데이터의 크기와 비교할 때 인덱스에 할당된 메모리의 크기입니다. 이는 예제에서 해시 인덱스의 크기가 더 큰 데이터 크기에 대해 설정되었기 때문입니다. 해시 인덱스의 크기는 고정되어 있으므로 테이블의 데이터 크기에 따라 커지지 않습니다.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Memory utilization after running the workload  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> 작업 실행 후 메모리 사용률  
  1,000만 개의 판매 주문을 삽입한 후 총 메모리 사용률은 다음과 유사합니다.  
   
 ```  
@@ -520,7 +525,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|기본값|0|  
 |MEMORYCLERK_XTP|기본값|0|  
   
- 보시다시피 SQL Server는 샘플 데이터베이스에서 메모리 액세스에 최적화된 테이블과 인덱스에 8GB보다 조금 작은 크기를 사용하고 있습니다.  
+ 보시다시피 SQL Server는 샘플 데이터베이스에서 메모리 최적화 테이블과 인덱스에 8GB보다 조금 작은 크기를 사용하고 있습니다.  
   
  예제를 한 번 실행한 후 테이블당 자세한 메모리 사용률을 살펴보면 다음과 같습니다.  
   
@@ -549,7 +554,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>데모를 다시 설정한 후  
  저장 프로시저 Demo.usp_DemoReset을 사용하여 데모를 다시 설정할 수 있습니다. 이 프로시저는 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem 테이블의 데이터를 삭제하고 원래 테이블 SalesOrderHeader 및 SalesOrderDetail의 데이터로 초기값을 다시 설정합니다.  
   
- 테이블의 행이 삭제되었더라도 메모리가 즉시 회수되지는 않습니다. SQL Server는 필요에 따라 백그라운드에서 메모리 액세스에 최적화된 테이블의 삭제된 행에서 메모리를 회수합니다. 데모가 다시 설정된 직후에는 시스템에 트랜잭션 작업이 없으므로 삭제된 행의 메모리가 아직 회수되지 않은 것을 확인할 수 있습니다.  
+ 테이블의 행이 삭제되었더라도 메모리가 즉시 회수되지는 않습니다. SQL Server는 필요에 따라 백그라운드에서 메모리 최적화 테이블의 삭제된 행에서 메모리를 회수합니다. 데모가 다시 설정된 직후에는 시스템에 트랜잭션 작업이 없으므로 삭제된 행의 메모리가 아직 회수되지 않은 것을 확인할 수 있습니다.  
   
 ```  
 SELECT type  
@@ -585,7 +590,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|기본값|0|  
 |MEMORYCLERK_XTP|기본값|0|  
   
-### <a name="disk-utilization-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 디스크 사용률  
+### <a name="disk-utilization-for-memory-optimized-tables"></a>메모리 최적화 테이블의 디스크 사용률  
  지정된 시점에서 데이터베이스의 검사점 파일에 대한 전체 디스크 크기는 다음 쿼리를 사용하여 확인할 수 있습니다.  
   
 ```  
@@ -597,7 +602,7 @@ WHERE f.type=N'FX'
 ```  
   
 #### <a name="initial-state"></a>초기 상태  
- 예제 파일 그룹과 예제 메모리 액세스에 최적화된 테이블이 처음에 만들어질 때 많은 검사점 파일이 미리 만들어지고 시스템이 이러한 파일을 채우기 시작합니다. 미리 만들어지는 검사점 파일의 수는 시스템의 논리적 프로세서 수에 따라 달라집니다. 예제는 처음에는 매우 작으므로 미리 만들어진 파일은 처음 만들어진 후 거의 비어 있습니다.  
+ 예제 파일 그룹과 예제 메모리 최적화 테이블이 처음에 만들어질 때 많은 검사점 파일이 미리 만들어지고 시스템이 이러한 파일을 채우기 시작합니다. 미리 만들어지는 검사점 파일의 수는 시스템의 논리적 프로세서 수에 따라 달라집니다. 예제는 처음에는 매우 작으므로 미리 만들어진 파일은 처음 만들어진 후 거의 비어 있습니다.  
   
  논리적 프로세서가 16개인 컴퓨터에서 예제의 초기 디스크 크기는 다음과 같습니다.  
   
@@ -644,7 +649,7 @@ ORDER BY state, file_type
   
  보시다시피 대부분의 공간이 미리 만들어진 데이터 및 델타 파일에서 사용됩니다. SQL Server는 논리적 프로세서당 하나의 (데이터, 델타) 파일 쌍을 미리 만들었습니다. 또한 데이터 파일의 크기는 128MB로, 델타 파일의 크기는 8MB로 미리 지정되므로 이러한 파일에 더욱 효율적으로 데이터를 삽입할 수 있습니다.  
   
- 메모리 액세스에 최적화된 테이블의 실제 데이터는 단일 데이터 파일에 있습니다.  
+ 메모리 최적화 테이블의 실제 데이터는 단일 데이터 파일에 있습니다.  
   
 #### <a name="after-running-the-workload"></a>작업을 실행한 후  
  1,000만 개의 판매 주문을 삽입하는 단일 테스트 실행 후 전체 디스크 크기는 다음과 같습니다(16코어 테스트 서버의 경우).  
@@ -775,5 +780,4 @@ ORDER BY state, file_type
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-
 

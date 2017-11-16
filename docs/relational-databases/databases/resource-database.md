@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - mssqlsystemresource.mdf file
 - Resource database [SQL Server]
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
-caps.latest.revision: 71
+caps.latest.revision: "71"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: efcb8d4f781f634d24c00e0698da746dd3b4efa8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9b4f0692805ac968b52a4a9de05b5a205f03748e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resource-database"></a>Resource 데이터베이스
   Resource 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 시스템 개체가 모두 들어 있는 읽기 전용 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 개체(예: sys.objects)는 실제로는 Resource 데이터베이스에 저장되지만 논리적으로는 모든 데이터베이스의 sys 스키마에 나타납니다. Resource 데이터베이스에는 사용자 데이터 또는 사용자 메타데이터가 없습니다.  
@@ -80,4 +78,3 @@ GO
  [단일 사용자 모드로 SQL Server 시작](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
   
   
-

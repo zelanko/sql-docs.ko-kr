@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - scripts [SQL Server replication]
 - transactional replication, scripting
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9889d43aeed7cf80f5b28b427787519ab06bd84
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 572e3be190b2743cdbb28893796a89c3b4bdac32
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="scripting-replication"></a>복제 스크립팅
   토폴로지의 모든 복제 구성 요소는 재해 복구 계획의 일부로 스크립팅되어야 하며 반복 태스크를 자동화하는 데도 스크립트를 사용할 수 있습니다. 스크립트에는 게시 또는 구독과 같은 스크립팅된 복제 구성 요소를 구현하는 데 필요한 Transact-SQL 시스템 저장 프로시저가 포함되어 있습니다. 구성 요소를 만든 후에 마법사(예: 새 게시 마법사) 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 스크립트를 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 **sqlcmd**를 사용하여 스크립트를 확인, 수정 및 실행할 수 있습니다. 백업 파일과 함께 스크립트를 저장하여 복제 토폴로지를 다시 구성할 때 사용할 수 있습니다.  
@@ -110,4 +108,3 @@ ms.lasthandoff: 06/22/2017
 6.  **확인** 을 클릭한 다음 **닫기**를 클릭합니다.  
   
   
-

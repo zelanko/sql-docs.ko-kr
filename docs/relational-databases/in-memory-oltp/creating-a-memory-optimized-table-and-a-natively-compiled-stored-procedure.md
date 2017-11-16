@@ -1,42 +1,39 @@
 ---
 title: "메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cf291b900f61590446776dab273d2fcc14509234
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 80a65fb9599f613d63b6201242471ca89cbb1080
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기
   이 항목에는 메모리 내 OLTP의 구문을 소개하는 예제가 포함되어 있습니다.  
   
  응용 프로그램에서 메모리 내 OLTP를 사용하려면 다음 태스크를 완료해야 합니다.  
   
--   메모리 액세스에 최적화된 데이터 파일 그룹을 만들고 컨테이너를 파일 그룹에 추가합니다.  
+-   메모리 최적화 데이터 파일 그룹을 만들고 컨테이너를 파일 그룹에 추가합니다.  
   
--   메모리 액세스에 최적화된 테이블과 인덱스를 만듭니다. 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.  
+-   메모리 최적화 테이블과 인덱스를 만듭니다. 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.  
   
--   데이터를 로드한 후 컴파일된 저장 프로시저를 만들기 전에 데이터를 메모리 액세스에 최적화된 테이블에 로드합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 대한 통계](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)를 참조하세요.  
+-   데이터를 로드한 후 컴파일된 저장 프로시저를 만들기 전에 데이터를 메모리 최적화 테이블에 로드합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 대한 통계](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)를 참조하세요.  
   
--   메모리 액세스에 최적화된 테이블의 데이터에 액세스하는 고유하게 컴파일된 저장 프로시저를 만듭니다. 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)를 참조하세요. 메모리 액세스에 최적화된 테이블에서 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용할 수도 있습니다.  
+-   메모리 최적화 테이블의 데이터에 액세스하는 고유하게 컴파일된 저장 프로시저를 만듭니다. 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)를 참조하세요. 메모리 최적화 테이블에서 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용할 수도 있습니다.  
   
--   필요에 따라 기존 테이블에서 메모리 액세스에 최적화된 테이블로 데이터를 마이그레이션합니다.  
+-   필요에 따라 기존 테이블에서 메모리 최적화 테이블로 데이터를 마이그레이션합니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 메모리 액세스에 최적화된 테이블을 만드는 방법에 대한 자세한 내용은 [메모리 내 OLTP에 대한 SQL Server Management Studio 지원](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md)을 참조하세요.  
   
@@ -243,4 +240,3 @@ ORDER BY so.so_id, sod.lineitem_id
  [메모리 내 OLTP 코드 예제](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   
-

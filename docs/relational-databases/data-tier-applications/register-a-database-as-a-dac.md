@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,24 +19,23 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
   **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 스크립트를 사용하여 기존 데이터베이스의 개체를 설명하는 DAC(데이터 계층 응용 프로그램)를 작성하고 이 DAC 정의를 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)])에 등록할 수 있습니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **DAC 업그레이드에 사용되는 도구:**  [데이터 계층 응용 프로그램 등록 마법사](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
  등록 프로세스에서는 데이터베이스의 개체를 정의하는 DAC 정의를 만듭니다. DAC 정의와 데이터베이스의 결합으로 DAC 인스턴스가 형성됩니다. DAC를 데이터베이스 엔진의 관리되는 인스턴스에 DAC로 등록할 경우 등록된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 06/22/2017
  [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>개체 유효성 확인  
- **Checking**  *SchemaName* **.** *ObjectName* **.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. *SchemaName***.***ObjectName* 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
+ **.**  *.* **를 실행할 수 없습니다.** *ObjectName* **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. *SchemaName***.***ObjectName* 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
   
  **< 이전** - 입력한 값을 변경하기 위해 **속성 설정** 페이지로 돌아갑니다.  
   
@@ -185,4 +183,3 @@ $registerunit.Register()
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

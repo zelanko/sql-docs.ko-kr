@@ -1,27 +1,24 @@
 ---
 title: "MDS(Master Data Services)의 새로운 기능 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: 85
+caps.latest.revision: "85"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3ffd4df6e1fa9fc6796818c2a2e8fe8a1c4850eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 32a43f651f20ca257837de0440505b9ac4179708
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -30,7 +27,7 @@ ms.lasthandoff: 09/07/2017
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에서 데이터를 구성하는 방법에 대한 개요는 [Master Data Services 개요](../master-data-services/master-data-services-overview-mds.md)를 참조하세요. 
   
- **Master Data Services를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하려면** MDS(Master Data Services) 개요[](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
+ **Master Data Services를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하려면**  [MDS(Master Data Services) 개요 ](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
   
  **다운로드**  
   
@@ -239,5 +236,4 @@ ms.lasthandoff: 09/07/2017
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

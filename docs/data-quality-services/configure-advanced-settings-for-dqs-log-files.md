@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: caa4e77d52515aa9052dd8db3603db38942988b2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5182c032b4a0c21358631df64f43dc16cdbd9ecf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>DQS 로그 파일에 대한 고급 설정 구성
   이 항목에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일에 대해 로그 파일의 롤링 파일 크기 제한을 설정하거나, 이벤트의 타임스탬프 패턴을 설정하는 등 고급 설정을 구성하는 방법에 대해 설명합니다.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 09/09/2017
 select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
 ```  
   
- 로깅의 구성 설정을 변경하려면 **ServerLogging** 행의 **VALUE** [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 열에서 알맞은 정보를 업데이트해야 합니다. 이 예에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 설정을 업데이트하여 롤링 파일 크기 제한을 25000KB로 설정합니다(기본값은 20000KB).  
+ **** 로깅의 구성 설정을 변경하려면 **ServerLogging** 행의 VALUE [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 열에서 알맞은 정보를 업데이트해야 합니다. 이 예에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 설정을 업데이트하여 롤링 파일 크기 제한을 25000KB로 설정합니다(기본값은 20000KB).  
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
   
@@ -130,4 +128,3 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
  [DQS 로그 파일에 대한 심각도 수준 구성](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   
-

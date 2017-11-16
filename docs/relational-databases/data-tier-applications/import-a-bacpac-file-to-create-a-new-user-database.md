@@ -5,8 +5,7 @@ ms.date: 01/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - Migrate database
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4226b33bd805aca7e38781d5a55eb990f61e4e69
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a919d864464b02da417add79139d532689d43e92
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
   DAC(데이터 계층 응용 프로그램) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 원본 데이터베이스를 데이터와 함께 복사할 수 있습니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
@@ -152,4 +151,3 @@ ms.lasthandoff: 06/22/2017
  [데이터 계층 응용 프로그램 내보내기](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   
-

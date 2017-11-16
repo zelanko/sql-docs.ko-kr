@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0357c3a55855bbc1e9a0b6a86582dcd104de663c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8c0927c53dff6dc6bd14d93029cd49c376ae46bd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-properties-snapshot"></a>게시 속성, 스냅숏
   **게시 속성** 대화 상자의 **스냅숏** 페이지를 사용하여 스냅숏 형식, 스냅숏 폴더 위치 및 스냅숏 적용 전후 실행할 스크립트를 설정할 수 있습니다. 스냅숏 폴더를 공유로 지정해야 하며 파일을 읽고 폴더에 쓰는 에이전트에 대한 충분한 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 06/22/2017
  **스냅숏 형식**  
  스냅숏 형식에 대해 네이티브 모드 또는 문자 모드를 선택합니다.  
   
--   모든 구독자가 **** 인스턴스가 아닌 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 네이티브 스냅숏 형식을 사용할 때 최상의 성능을 제공합니다.  
+-   모든 구독자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 아닌 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 인스턴스인 경우 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 를 선택합니다. 네이티브 스냅숏 형식을 사용할 때 최상의 성능을 제공합니다.  
   
 -   구독자가 **에서 실행되고 있거나** 이외 구독자인 경우 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.  
   
