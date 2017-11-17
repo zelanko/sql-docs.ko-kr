@@ -3,9 +3,11 @@ title: "TABLE AS SELECT (Azure SQL 데이터 웨어하우스) 만들기 | Micros
 ms.custom: 
 ms.date: 10/07/2016
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>TABLE AS SELECT (Azure SQL 데이터 웨어하우스) 만들기
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 만들 테이블 AS 선택 (CTAS에는) 사용할 수 있는 가장 중요 한 T-SQL 기능 중 하나입니다. SELECT 문의 출력에 따라 새 테이블을 만드는 완벽 하 게 병렬화 된 연산입니다. CTAS에는 테이블의 복사본을 만드는 가장 간단 하 고 가장 빠른 방법입니다.   
  

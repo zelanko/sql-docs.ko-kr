@@ -3,8 +3,11 @@ title: "InstanceOf (geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 테스트 하는 메서드는 **기 하 도형** 인스턴스는 지정 된 형식과 동일 합니다. 1을 반환 형식의 **기 하 도형** 인스턴스는 지정된 된 형식으로 동일 또는 지정된 된 형식의 인스턴스 유형의 상위 항목이 면 그렇지 않으면 0을 반환 합니다.
   

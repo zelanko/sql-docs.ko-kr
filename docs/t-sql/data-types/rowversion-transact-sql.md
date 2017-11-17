@@ -3,8 +3,11 @@ title: rowversion (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="rowversion-transact-sql"></a>rowversion(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 데이터베이스 내에서 자동으로 생성된 고유 이진 숫자를 표시하는 데이터 형식입니다. **rowversion** 버전 표시 테이블 행에 대 한 메커니즘으로 일반적으로 사용 됩니다. 저장소 크기는 8바이트입니다. **rowversion** 데이터 형식은 숫자일 뿐 이며 날짜 또는 시간을 유지 하지 않습니다. 날짜 또는 시간을 기록 하려면 사용 하 여 한 **datetime2** 데이터 형식입니다.
   

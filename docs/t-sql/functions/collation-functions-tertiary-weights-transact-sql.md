@@ -3,8 +3,11 @@ title: TERTIARY_WEIGHTS (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>데이터 정렬 함수-TERTIARY_WEIGHTS (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 비유니코드 문자열 식의 각 문자에 대해 SQL 3차 데이터 정렬로 정의된 정렬 조건(weight)을 이진 문자열로 반환합니다.
   

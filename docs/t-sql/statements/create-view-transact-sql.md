@@ -3,8 +3,11 @@ title: CREATE VIEW (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   쿼리에 의해 내용(열과 행)이 정의되는 가상 테이블을 만듭니다. 이 문을 사용하여 데이터베이스에서 하나 이상의 테이블에 있는 데이터의 뷰를 만들 수 있습니다. 예를 들어 뷰는 다음과 같은 용도로 사용할 수 있습니다.  
   

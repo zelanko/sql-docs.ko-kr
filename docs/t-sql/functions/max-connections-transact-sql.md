@@ -3,8 +3,11 @@ title: '@@MAX_CONNECTIONS (Transact SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40maxconnections-transact-sql"></a>& #x 40; & #x 40; MAX_CONNECTIONS (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 허용되는 최대 동시 사용자 연결 수를 반환합니다. 반환된 연결 수는 반드시 현재 구성된 연결 수가 아니어도 됩니다.  
   

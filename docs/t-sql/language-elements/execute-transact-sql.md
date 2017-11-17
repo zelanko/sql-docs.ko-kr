@@ -3,8 +3,11 @@ title: "실행 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="execute-transact-sql"></a>실행-TRANSACT-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 명령 문자열 또는 문자열 내에서 실행 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 다음 모듈 중 하나: 시스템 저장 프로시저, 사용자 정의 저장된 프로시저, CLR 저장 프로시저, 스칼라 반환 사용자 정의 함수 또는 확장 저장된 프로시저입니다. EXECUTE 문은 연결된 서버로 통과 명령을 보내는 데 사용할 수 있습니다. 또한 문자열이나 명령이 실행되는 컨텍스트를 명시적으로 설정할 수도 있습니다. WITH RESULT SETS 옵션을 사용하여 결과 집합에 대한 메타데이터를 정의할 수 있습니다.
   

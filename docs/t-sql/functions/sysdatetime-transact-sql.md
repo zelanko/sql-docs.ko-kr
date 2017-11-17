@@ -3,8 +3,11 @@ title: SYSDATETIME (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   반환 된 **datetime2 (7)** 되는 컴퓨터의 시간과 날짜를 포함 하는 값의 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 되 고 합니다.  
   

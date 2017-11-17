@@ -3,8 +3,11 @@ title: CREATE BROKER PRIORITY (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   우선 순위 수준을 정의하고 우선 순위 수준을 할당할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화를 결정하기 위한 조건 집합을 설정합니다. 계약 및 대화 우선 순위에 지정 된 서비스의 동일한 조합을 사용 하는 모든 대화 끝점에 우선 순위 수준이 할당 됩니다. 우선 순위 값의 범위는 1(낮음)에서 10(높음) 사이입니다. 기본값은 5입니다.  
   

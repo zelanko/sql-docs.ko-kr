@@ -3,8 +3,11 @@ title: "규칙 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   규칙이라는 개체를 만듭니다. 열 또는 별칭 데이터 형식에 바인딩된 경우 규칙은 해당 열에 삽입할 수 있는 값을 지정합니다.  
   

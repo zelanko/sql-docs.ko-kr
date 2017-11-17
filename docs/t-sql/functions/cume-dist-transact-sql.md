@@ -3,8 +3,11 @@ title: CUME_DIST (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 값 그룹에 있는 값의 누적 분포를 계산합니다. 즉, CUME_DIST는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 행에 대해 *r*오름차순으로 정렬의 CUME_DIST 가정 하 고 *r* 보다 값이 있는 행 수의 값 보다 낮은 크거나 *r*행의 수로 나눈, 파티션 또는 쿼리 결과 집합의 계산 합니다. CUME_DIST는 PERCENT_RANK 함수와 비슷합니다.
   

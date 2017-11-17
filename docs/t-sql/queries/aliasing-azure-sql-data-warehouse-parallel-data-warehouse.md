@@ -3,8 +3,11 @@ title: "별칭 (Azure SQL 데이터 웨어하우스, 병렬 데이터 웨어하�
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>별칭 (Azure SQL 데이터 웨어하우스, 병렬 데이터 웨어하우스)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   별칭에 테이블 또는 열 이름 대신 짧고 기억 하기 쉬운 문자열의 임시 대체를 통해 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 쿼리 합니다. 테이블 별칭은 조인 구문을 열을 참조할 때는 정규화 된 개체 이름이 필요 하기 때문에 조인 쿼리에서 자주 사용 됩니다.  
   

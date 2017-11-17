@@ -3,8 +3,11 @@ title: column_constraint (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   사용 하 여 테이블에 추가 된 새 열 정의의 일부인 PRIMARY KEY, FOREIGN KEY, UNIQUE 또는 CHECK 제약 조건의 속성을 지정 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)합니다.  
   

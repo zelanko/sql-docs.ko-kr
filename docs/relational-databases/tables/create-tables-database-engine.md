@@ -2,27 +2,33 @@
 title: "테이블 만들기(데이터베이스 엔진) | Microsoft 문서"
 ms.custom: 
 ms.date: 09/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: table creation [SQL Server], Visual Database Tools
+helpviewer_keywords:
+- table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e5f5d3b826bbac8f4cd7553ca503b2fe276bd73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 6251736a0ba3f21e0dca7f97d32efb03205200d8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/29/2017
+
 ---
 # <a name="create-tables-database-engine"></a>테이블 만들기(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 새 테이블을 만들고, 테이블 이름을 지정하고, 이 테이블을 기존 데이터베이스에 추가할 수 있습니다.  
   
@@ -97,3 +103,4 @@ ms.lasthandoff: 11/09/2017
  더 많은 예제를 보려면 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.  
   
   
+

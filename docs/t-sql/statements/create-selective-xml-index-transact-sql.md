@@ -3,8 +3,11 @@ title: "선택적 XML 인덱스 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   지정한 테이블 및 XML 열에 새 선택적 XML 인덱스를 만듭니다. 선택적 XML 인덱스는 자주 쿼리하는 노드의 하위 집합만 인덱싱하여 XML 인덱싱 및 쿼리의 성능을 향상시킵니다. 또한 보조 선택적 XML 인덱스를 만들 수도 있습니다. 자세한 내용은 참조 [Create, Alter 및 보조 선택적 XML 인덱스 삭제](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)합니다.  
   

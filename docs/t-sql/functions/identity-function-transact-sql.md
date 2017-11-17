@@ -3,8 +3,11 @@ title: "IDENTITY (함수) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY(함수)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   에 INTO SELECT 문에서 사용 됩니다 *테이블* 절을 새 테이블에 id 열을 삽입 합니다. IDENTITY 함수는 CREATE TABLE 및 ALTER TABLE과 함께 사용되는 IDENTITY 속성과 비슷하지만 동일하지는 않습니다.  
   

@@ -3,8 +3,11 @@ title: OPENXML (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   OPENXML은 XML 문서에 대한 행 집합 뷰를 제공합니다. OPENXML이 행 집합 공급자이므로 테이블, 뷰 또는 OPENROWSET 함수 등의 행 집합 공급자가 있을 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 OPENXML을 사용할 수 있습니다.  
   

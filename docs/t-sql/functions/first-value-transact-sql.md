@@ -3,8 +3,11 @@ title: FIRST_VALUE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="firstvalue-transact-sql"></a>FIRST_VALUE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 정렬된 값 집합의 첫 번째 값을 반환합니다.  
   

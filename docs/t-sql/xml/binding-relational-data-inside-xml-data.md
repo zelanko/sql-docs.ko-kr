@@ -3,8 +3,11 @@ title: "XML 데이터 내 관계형 데이터 바인딩 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML 데이터 내 관계형 데이터 바인딩
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   지정할 수 있습니다 [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md) 에 대해는 **xml** 데이터 형식 변수 또는 열입니다. 예를 들어는 [query&#40; &#41; 방법 &#40; xml 데이터 형식 &#41; ](../../t-sql/xml/query-method-xml-data-type.md) XML 인스턴스에 대해 지정된 된 XQuery를 실행 합니다. 이 방식으로 XML을 구성하면 비-XML 유형의 열이나 Transact-SQL 변수로부터 값을 가져올 수 있습니다. 이러한 과정을 XML 내 관계형 데이터 바인딩이라고 합니다.  
   

@@ -1,11 +1,13 @@
 ---
 title: "(Transact SQL)에서 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 DELETE, SELECT, UPDATE 문에 사용되는 테이블, 뷰, 파생된 테이블 문 조인된 테이블을 지정합니다. SELECT 문에서 SELECT 목록에 상수, 변수 및 산술식(열 이름 없이)만 포함되는 경우를 제외하고는 FROM 절이 필요합니다.  
   

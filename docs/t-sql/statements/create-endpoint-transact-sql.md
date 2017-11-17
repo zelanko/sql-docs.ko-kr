@@ -3,8 +3,11 @@ title: "끝점 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -44,7 +47,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   클라이언트 응용 프로그램에 사용할 수 있는 메서드를 포함하여 끝점을 만들고 속성을 정의합니다. 관련된 사용 권한 정보를 참조 하십시오. [GRANT 끝점 사용 권한 &#40; Transact SQL &#41; ](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   

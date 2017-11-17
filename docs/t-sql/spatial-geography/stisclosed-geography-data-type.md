@@ -3,8 +3,11 @@ title: "STIsClosed (geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   경우 1을 반환의 시작점 및 끝점은 주어진 **geography** 인스턴스는 동일 합니다. 에 대 한 1 반환 **geography** 각각 포함 된 경우 컬렉션 형식은 **geography** 인스턴스가 닫혀 있습니다. 인스턴스가 닫혀 있지 않으면 0을 반환합니다.  
   

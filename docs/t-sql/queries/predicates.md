@@ -3,8 +3,11 @@ title: "조건자 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="predicates"></a>조건자
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   TRUE, FALSE 또는 UNKNOWN으로 평가되는 식입니다. 조건자는 검색 조건에 사용 되는 [여기서](../../t-sql/queries/where-transact-sql.md) 절 및 [HAVING](../../t-sql/queries/select-having-transact-sql.md) 절, 조인 조건 [FROM](../../t-sql/queries/from-transact-sql.md) 절 및 부울 값이 있는 기타 구문 필수.  
   

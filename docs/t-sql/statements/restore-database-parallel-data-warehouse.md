@@ -3,8 +3,11 @@ title: "데이터베이스 복원 (병렬 데이터 웨어하우스) | Microsoft
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>(병렬 데이터 웨어하우스) 데이터베이스를 복원 합니다.
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   복원 된 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 사용자 데이터베이스에서 데이터베이스를 백업 하는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 기기입니다. 데이터베이스에서 이전에 만든 백업에서 복원 되는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [데이터베이스 백업 &#40; 병렬 데이터 웨어하우스 &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) 명령입니다. 백업 하 고 복원 작업을 재해 복구 계획을 작성 하거나 다른 한 기기에서 데이터베이스를 이동 합니다.  
   

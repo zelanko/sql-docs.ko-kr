@@ -3,8 +3,11 @@ title: "집계 (Transact SQL)를 만드는 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   구현이 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 어셈블리 클래스에 정의된 사용자 정의 집계 함수를 만듭니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 집계 함수를 해당 구현에 바인딩하려면 CREATE ASSEMBLY 문을 사용하여 먼저 해당 구현이 포함된 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 업로드해야 합니다.  
   

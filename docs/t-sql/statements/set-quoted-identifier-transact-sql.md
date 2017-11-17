@@ -3,8 +3,11 @@ title: SET QUOTED_IDENTIFIER (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/03/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 인용 부호 구분 식별자 및 리터럴 문자열에 관해 ISO 규칙을 따르도록 합니다. 큰따옴표로 구분된 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 예약 키워드이거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙 구문에서 일반적으로 허용하지 않는 문자를 포함할 수 있습니다.  
   

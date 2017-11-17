@@ -3,8 +3,11 @@ title: "(Transact SQL) 설명 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="explain-transact-sql"></a>설명 (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   에 대 한 쿼리 계획을 반환 된 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문을 실행 하지 않고 문입니다. 사용 하 여 **설명** 미리 보기는 작업에는 데이터 이동 필요 하 고 쿼리 작업의 예상된 비용을 볼 수 있습니다.  
   

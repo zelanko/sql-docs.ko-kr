@@ -2,9 +2,12 @@
 title: "테이블 (SQL 그래프) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/04/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -43,9 +46,8 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="create-table-sql-graph"></a>테이블 (SQL 그래프) 만들기
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 새 테이블을 만들고 SQL 그래프로는 `NODE` 또는 `EDGE` 테이블입니다. 
   

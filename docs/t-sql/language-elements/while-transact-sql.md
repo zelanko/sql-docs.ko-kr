@@ -3,8 +3,11 @@ title: "(Transact SQL) 하는 동안 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="while-transact-sql"></a>WHILE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SQL 문 또는 문 블록의 반복 실행을 위한 조건을 설정합니다. 문은 지정된 조건이 true인 한 반복적으로 실행됩니다. WHILE 루프 내의 문 실행은 BREAK와 CONTINUE 키워드를 사용하여 루프 내에서 제어할 수 있습니다.  
   

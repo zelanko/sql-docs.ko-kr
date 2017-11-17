@@ -3,8 +3,11 @@ title: "및 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="and-transact-sql"></a>AND(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   두 부울 식 결합 하 고 반환 **TRUE** 두 식이 모두 경우 **TRUE**합니다. 하나 이상의 논리 연산자 한 문에 사용 되는 경우는 **AND** 연산자가 먼저 계산 됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.  
   

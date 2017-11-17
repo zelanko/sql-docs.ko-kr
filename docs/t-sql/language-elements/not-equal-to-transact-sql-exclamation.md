@@ -3,8 +3,11 @@ title: "! = (같지 않음) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="not-equal-to-transact-sql---exclamation"></a>같지 (Transact SQL)-느낌표
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   식이 다른 식과 같지 않은지 테스트합니다(비교 연산자). 피연산자 중 하나 또는 둘 다가 NULL이면 NULL이 반환됩니다. 동일 하 게 작동는 [(같지) <>](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) 비교 연산자.  
   

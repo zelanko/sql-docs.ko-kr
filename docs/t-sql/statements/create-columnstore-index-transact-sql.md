@@ -1,11 +1,13 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,9 +43,8 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/27/2017
 
 ---
-
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 비클러스터형된 columnstore 인덱스를 만들거나 rowstore 테이블을 클러스터형된 columnstore 인덱스로 변환 합니다. OLTP 워크 로드에서 실시간 운영 분석을 효율적으로 실행 하거나 데이터 웨어하우징 작업에 대 한 데이터 압축 및 쿼리 성능 향상을 위해 columnstore 인덱스를 사용 합니다.  
   

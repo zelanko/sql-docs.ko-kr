@@ -3,8 +3,11 @@ title: "프로시저 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -58,7 +61,7 @@ ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   만듭니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 공용 언어 런타임 (CLR) 저장 프로시저에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 합니다. 저장 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 프로시저와 유사합니다.  
   

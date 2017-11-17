@@ -3,8 +3,11 @@ title: "커서 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="cursors-transact-sql"></a>커서(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문은 완전 한 결과 집합을 만들지만 결과가 가장 좋은 시간은 한 번에 하나의 행을 처리 합니다. 결과 집합에서 커서를 열면 결과 집합을 한 번에 한 행씩 처리할 수 있습니다. 커서 변수 또는 매개 변수를 할당할 수 있습니다는 **커서** 데이터 형식입니다.  
   

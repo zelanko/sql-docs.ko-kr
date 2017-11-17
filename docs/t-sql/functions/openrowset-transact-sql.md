@@ -3,8 +3,11 @@ title: OPENROWSET (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   OLE DB 데이터 원본에서 원격 데이터를 액세스하는 데 필요한 모든 연결 정보를 포함합니다. 이 방법은 OLE DB를 사용하여 원격 데이터에 연결하고 액세스하는 일회성의 임시 방법이며 연결된 서버에서 테이블을 액세스하는 방법의 대안입니다. OLE DB 데이터 원본을 자주 참조하려면 연결된 서버를 사용합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요. `OPENROWSET` 테이블 이름 처럼 쿼리의 FROM 절에 함수를 참조할 수 있습니다. `OPENROWSET` 함수의 대상 테이블로 참조할 수도 있습니다는 `INSERT`, `UPDATE`, 또는 `DELETE` OLE DB 공급자의 기능에 따라 문입니다. 쿼리는 여러 결과 집합을 반환할 수 있지만 `OPENROWSET` 첫 번째 것만 반환 합니다.  
   

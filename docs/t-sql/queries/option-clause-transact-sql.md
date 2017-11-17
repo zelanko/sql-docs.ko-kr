@@ -3,8 +3,11 @@ title: "OPTION 절 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 절(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   지정한 쿼리 힌트가 전체 쿼리에서 사용되도록 지정합니다. 여러 개의 쿼리 힌트가 허용되지만 각 쿼리 힌트는 한 번만 지정할 수 있습니다. 문에서 하나의 OPTION 절만 지정할 수 있습니다.  
   

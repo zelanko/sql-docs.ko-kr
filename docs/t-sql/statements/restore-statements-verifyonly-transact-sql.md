@@ -3,8 +3,11 @@ title: RESTORE VERIFYONLY (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 문-VERIFYONLY (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   백업을 확인하되 복원하지는 않으며, 백업 세트가 완성되었는지와 전체 백업을 읽을 수 있는지를 확인합니다. 그러나 RESTORE VERIFYONLY는 백업 볼륨에 포함된 데이터의 구조를 확인하지는 않습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RESTORE VERIFYONLY 오류 검색의 가능성을 높일 데이터에 대 한 추가 검사를 수행 하도록 향상 되었습니다. 가능한 한 실제에 가깝도록 데이터를 복원하는 것이 목표입니다. 자세한 내용은 주의 섹션을 참조하십시오.  
   

@@ -3,8 +3,11 @@ title: EVENTDATA (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   서버 또는 데이터베이스 이벤트에 대한 정보를 반환합니다. EVENTDATA는 이벤트 알림이 발생할 때 호출되며 결과는 지정된 Service Broker에 반환됩니다. 또한 EVENTDATA는 DDL 또는 LOGON 트리거 본문 내에서 사용할 수 있습니다.  
   

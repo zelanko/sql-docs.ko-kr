@@ -3,8 +3,11 @@ title: GROUP BY (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -44,7 +47,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="select---group-by--transact-sql"></a>선택-그룹 BY-TRANSACT-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 각 그룹에 하나 이상의 집계를 수행 하기 위해 일반적으로 행 그룹으로 쿼리 결과 분할 하는 SELECT 문 절. SELECT 문은 그룹 마다 하나의 행을 반환 합니다.  
   

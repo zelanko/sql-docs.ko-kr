@@ -3,8 +3,11 @@ title: "테이블 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-transact-sql"></a>table(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 나중에 처리하기 위해 결과 집합을 저장하는 데 사용할 수 있는 특별한 데이터 형식입니다. **테이블** 는 주로 테이블 반환 함수의 결과 집합으로 반환 되는 행 집합의 임시 저장에 사용 합니다. 함수 및 변수 형식으로 선언할 수 있습니다 **테이블**합니다. **테이블** 함수, 저장된 프로시저 및 일괄 처리에서 변수를 사용할 수 있습니다. 형식의 변수를 선언 하려면 **테이블**를 사용 하 여 [DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md)합니다.
   

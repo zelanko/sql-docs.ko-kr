@@ -1,27 +1,32 @@
 ---
 title: "임시 테이블을 사용하여 분할 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9f2cebd3c448ed09f3e6362893c2fc6ef8ccee6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: cb93e468300aea6a666ad04e9ce6ad20e1b85fc2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/29/2017
+
 ---
 # <a name="partitioning-with-temporal-tables"></a>임시 테이블을 사용하여 분할
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   현재 및 기록 테이블에서 모두 독립적으로 분할을 사용할 수 있습니다. 그러나 분할은 시스템 버전 관리 없이 데이터의 내용을 변경하는 데 사용할 수 없습니다.  
   
@@ -54,3 +59,4 @@ ms.lasthandoff: 11/09/2017
  [임시 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

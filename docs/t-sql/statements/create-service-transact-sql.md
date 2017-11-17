@@ -3,8 +3,11 @@ title: "서비스 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   새 서비스를 만듭니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스는 특정 태스크나 작업 집합의 이름입니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 이 서비스 이름을 사용하여 메시지를 라우팅하고 데이터베이스 내의 올바른 큐에 메시지를 전달하고 대화에 대한 계약을 적용합니다.  
   

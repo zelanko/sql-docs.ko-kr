@@ -2,9 +2,12 @@
 title: "외부 리소스 풀 (Transact SQL) DROP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP 외부 리소스 풀 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   외부 프로세스에 대 한 리소스를 정의 하는 데 사용 하는 리소스 관리자 외부 리소스 풀을 삭제 합니다. R 서비스에 대 한 외부 풀 제어 `rterm.exe`, `BxlServer.exe`, 및 생성 된 다른 프로세스입니다. 사용 하 여 외부 리소스 풀이 만들어집니다 [외부 리소스 풀 만들기 &#40; Transact SQL &#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 를 사용 하 여 수정할 [ALTER EXTERNAL RESOURCE pool&#40; Transact SQL &#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md).  
   

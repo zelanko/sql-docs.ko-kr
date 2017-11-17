@@ -1,12 +1,14 @@
 ---
 title: "ALTER DATABASE SET 옵션 (Transact SQL) | Microsoft Docs"
 description: "자동 튜닝, 암호화, SQL Server 및 Azure SQL 데이터베이스에서 쿼리 저장소와 같은 데이터베이스 옵션을 설정 하는 방법에 알아보기"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 옵션 설정과 관련된 ALTER DATABASE 구문을 제공합니다. 다른 ALTER DATABASE 구문은 다음 항목을 참조 하십시오.  
   

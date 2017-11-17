@@ -3,8 +3,11 @@ title: table_constraint (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   PRIMARY KEY, UNIQUE, FOREIGN KEY, CHECK 제약 조건 또는 DEFAULT 정의 사용 하 여 테이블에 추가의 속성을 지정 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)합니다.  
   

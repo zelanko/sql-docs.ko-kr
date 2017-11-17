@@ -3,8 +3,11 @@ title: OBJECTPROPERTY (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 데이터베이스의 스키마 범위 개체에 대한 정보를 반환합니다. 목록이 스키마 범위 개체에 대 한 참조 [sys.objects&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). DDL(데이터 정의 언어) 트리거 및 이벤트 알림과 같이 스키마 범위가 아닌 개체에 대해서는 이 함수를 사용할 수 없습니다.  
   

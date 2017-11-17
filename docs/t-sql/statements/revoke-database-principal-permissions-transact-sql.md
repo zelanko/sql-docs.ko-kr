@@ -3,8 +3,11 @@ title: "REVOKE 데이터베이스 보안 주체 사용 권한 (Transact SQL) | M
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 데이터베이스 보안 주체 사용 권한(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스 사용자, 데이터베이스 역할 또는 응용 프로그램 역할에 대해 부여되거나 거부된 사용 권한을 취소합니다.  
   

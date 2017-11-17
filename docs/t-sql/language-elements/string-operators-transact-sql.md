@@ -3,8 +3,11 @@ title: "문자열 연산자 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="string-operators-transact-sql"></a>문자열 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 문자열 연산자를 제공합니다. 문자열 연결 연산자는 둘 이상의 문자나 이진 문자열, 열, 또는 문자열과 열 이름의 조합을 하나의 식으로 결합할 수 있습니다. 와일드카드 문자열 연산자는 LIKE 또는 PATINDEX와 같은 문자열 비교 연산에서 하나 이상의 문자를 가리킬 수 있습니다.  
   

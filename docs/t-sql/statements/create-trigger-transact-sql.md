@@ -1,11 +1,13 @@
 ---
 title: CREATE TRIGGER (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   DML, DDL 또는 LOGON 트리거를 만듭니다. 트리거는 데이터베이스 서버에서 이벤트가 발생하면 자동으로 실행되는 특수한 종류의 저장 프로시저입니다. DML 트리거는 DML(데이터 조작 언어) 이벤트를 통해 데이터를 수정하려는 경우에 실행됩니다. DML 이벤트는 테이블이나 뷰에 대한 INSERT, UPDATE 또는 DELETE 문입니다. 테이블 행이 영향을 받는지 여부에 관계없이 유효한 이벤트가 발생할 때 이러한 트리거가 발생합니다. 자세한 내용은 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)을 참조하세요.  
   

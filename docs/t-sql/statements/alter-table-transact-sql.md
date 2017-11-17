@@ -1,11 +1,13 @@
 ---
 title: ALTER TABLE (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -72,7 +74,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   열과 제약 조건을 변경, 추가 또는 삭제하거나 파티션을 재할당하고 다시 작성하거나 제약 조건과 트리거를 설정 또는 해제하여 테이블 정의를 수정합니다.  
   

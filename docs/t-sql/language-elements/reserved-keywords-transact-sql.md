@@ -3,8 +3,11 @@ title: "예약 된 키워드 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="reserved-keywords-transact-sql"></a>예약 된 키워드-TRANSACT-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스를 정의, 조작 및 액세스할 때 예약된 키워드를 사용합니다. 예약된 키워드는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 일괄 처리를 구문 분석하고 이해하는 데 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 문법의 일부입니다. 구문상으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예약된 키워드를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 식별자와 개체 이름으로 사용할 수 있지만 구분 기호로 분리된 식별자를 사용한 경우에만 가능합니다.  
   

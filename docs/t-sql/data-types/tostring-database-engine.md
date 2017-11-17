@@ -3,8 +3,11 @@ title: "ToString (데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="tostring-database-engine"></a>ToString(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 논리적으로 표현한 문자열을 반환 *이*합니다. ToString 변환 될 때 암시적으로 호출 됩니다 **hierarchyid** 문자열로 형식 발생 합니다. 역할의 반대를 [parse&#40; 데이터베이스 엔진 &#41;](../../t-sql/data-types/parse-database-engine.md)합니다.
   

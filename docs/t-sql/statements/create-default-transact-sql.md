@@ -3,8 +3,11 @@ title: "기본값 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   기본값 개체를 만듭니다. 열이나 별칭 데이터 형식에 기본값을 바인딩하면 삽입 시 값을 명시적으로 제공하지 않을 경우 개체가 바인딩된 열(별칭 데이터 형식의 경우 모든 열)에 값이 삽입되도록 지정됩니다.  
   

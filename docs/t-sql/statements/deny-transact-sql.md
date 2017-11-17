@@ -3,8 +3,11 @@ title: "(Transact SQL) 거부 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="deny-transact-sql"></a>DENY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   보안 주체에 대한 사용 권한을 거부합니다. 보안 주체가 해당 그룹 또는 역할의 멤버 자격을 통해 사용 권한을 상속받는 것을 방지합니다. DENY 보다 우선 모든 사용 권한을 제외 하 고 거부 개체 소유자 또는 sysadmin 고정된 서버 역할의 멤버에 적용 되지 않습니다.
   **보안 정보** 멤버나 sysadmin 고정 서버 역할 및 개체 소유자는 사용 권한을 거부할 수 없습니다. "

@@ -3,8 +3,11 @@ title: "읽기 (데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="read-database-engine"></a>Read(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 읽기의 이진 표현을 읽고 **SqlHierarchyId** 전달 기능에서 **BinaryReader** 설정 하 고는 **SqlHierarchyId** 개체를 해당 값입니다. 읽기를 사용 하 여 호출할 수 없습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. 대신 CAST 또는 CONVERT를 사용합니다.
   

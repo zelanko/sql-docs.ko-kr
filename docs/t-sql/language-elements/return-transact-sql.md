@@ -3,8 +3,11 @@ title: RETURN (TRANSACT-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="return-transact-sql"></a>RETURN(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   쿼리나 프로시저를 무조건 종료합니다. RETURN은 즉각적이고 완전하며 프로시저, 일괄 처리, 문 블록에서 아무 때나 종료하는 데 사용할 수 있습니다. RETURN 다음에 있는 문은 실행되지 않습니다.  
   

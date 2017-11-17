@@ -1,11 +1,13 @@
 ---
 title: "압축 (Transact SQL) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="compress-transact-sql"></a>압축 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 GZIP 알고리즘을 사용 하 여 입력된 식을 압축 합니다. 압축 결과 바이트 배열 형식의 **varbinary (max)**합니다.
   

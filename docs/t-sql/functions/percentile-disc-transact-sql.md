@@ -3,8 +3,11 @@ title: PERCENTILE_DISC (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 전체 행 집합에 정렬된 값 또는 행 집합의 고유 파티션 내에 정렬된 값의 특정 백분위수를 계산합니다. 지정 된 백분위 수 값에 대 한 *P*, PERCENTILE_DISC는 ORDER BY 절에 있는 식의 값을 정렬 하 고 값을 가장 작은 CUME_DIST 값 (동일한 정렬 사양) 보다 큰 반환 또는 같음 *P*합니다. 예를 들어 PERCENTILE_DISC (0.5)는 식의 50번째 백분위수(즉, 중앙값)를 계산합니다. PERCENTILE_DISC는 열 값의 불연속 분포를 기반으로 백분위수를 계산하며 결과는 열의 특정 값과 같습니다.  
   

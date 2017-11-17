@@ -3,8 +3,11 @@ title: xml_schema_namespace (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="xmlschemanamespace"></a>xml_schema_namespace
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정한 XML 스키마 컬렉션에서 모든 스키마 또는 특정 스키마를 다시 만듭니다. 이 함수는 **xml** 데이터 형식을 반환합니다.  
   

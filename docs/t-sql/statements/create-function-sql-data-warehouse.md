@@ -3,8 +3,11 @@ title: "CREATE 함수 (SQL 데이터 웨어하우스) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-function-sql-data-warehouse"></a>함수 (SQL 데이터 웨어하우스) 만들기
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 사용자 정의 함수를 만듭니다. 사용자 정의 함수는 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 루틴 매개 변수를 허용 하는 복잡 한 계산과 같은 동작을 수행 하 고 값으로 해당 작업의 결과 반환 합니다. 반환 값에는 스칼라 (단일) 값 이어야 합니다. 이 문을 사용하여 다음과 같은 상황에서 다시 사용할 수 있는 루틴을 만들 수 있습니다.  
   

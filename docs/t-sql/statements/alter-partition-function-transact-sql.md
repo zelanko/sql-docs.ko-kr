@@ -3,8 +3,11 @@ title: ALTER PARTITION FUNCTION (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   경계 값을 나누거나 병합하여 파티션 함수를 변경합니다. ALTER PARTITION FUNCTION을 실행하여 파티션 함수를 사용하는 테이블 또는 인덱스의 한 파티션을 두 개의 파티션으로 나누거나 두 개의 파티션을 하나의 작은 파티션으로 병합할 수 있습니다.  
   

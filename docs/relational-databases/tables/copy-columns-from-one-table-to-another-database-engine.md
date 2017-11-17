@@ -2,29 +2,34 @@
 title: "한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진) | Microsoft 문서"
 ms.custom: 
 ms.date: 09/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - copying columns
 - columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d5784bfeb4a480dd84ab5c83c7e5b4f9614af23c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 열 정의만 복사하거나 열 정의와 데이터를 모두 복사하여 테이블 간에 열을 복사하는 방법을 설명합니다.  
   
@@ -119,3 +124,4 @@ ms.lasthandoff: 11/09/2017
     ```  
   
   
+

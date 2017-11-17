@@ -3,8 +3,11 @@ title: CLOSE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="close-transact-sql"></a>CLOSE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 결과 집합을 해제하고 커서가 위치한 행에 보유된 커서 잠금을 해제하여 열린 커서를 닫습니다. CLOSE는 데이터 구조를 다시 열 수 있도록 방치하지만 커서를 다시 열 때까지 인출과 위치 지정 업데이트는 허용되지 않습니다. CLOSE는 열려 있는 커서에만 실행할 수 있으며 선언만 되었거나 이미 닫혀 있는 커서에는 사용할 수 없습니다.  
   

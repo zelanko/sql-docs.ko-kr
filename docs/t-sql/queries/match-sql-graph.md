@@ -2,9 +2,12 @@
 title: "일치 항목 (SQL 그래프) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,9 +33,8 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="match-transact-sql"></a>일치 항목 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   그래프에 대 한 검색 조건을 지정합니다. 일치 하는 SELECT 문에서 WHERE 절의 일부로 그래프 노드와 edge 테이블에만 사용할 수 있습니다. 
   

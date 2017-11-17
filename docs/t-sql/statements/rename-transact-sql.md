@@ -3,9 +3,11 @@ title: "이름 바꾸기 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/13/2016
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="rename-transact-sql"></a>이름 바꾸기 (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   사용자가 만든 테이블의 이름을 바꿉니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다. 사용자가 만든 테이블 또는 데이터베이스의 이름을 바꿉니다 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.  
   

@@ -3,8 +3,11 @@ title: "산술 연산자 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="arithmetic-operators-transact-sql"></a>산술 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   산술 연산자는 숫자 데이터 형식 범주에 속하는 둘 이상의 식에 대해 수치 연산을 수행합니다.  데이터 형식 범주에 대 한 자세한 내용은 참조 [TRANSACT-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)합니다.  
   

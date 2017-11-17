@@ -3,8 +3,11 @@ title: TOP (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   쿼리 결과 집합에 반환되는 행을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지정한 행 수 또는 행의 백분율로 제한합니다. 결과 집합은 첫 번째 제한 TOP와 ORDER BY 절과 함께에서 사용할 경우 *N* 첫 번째 반환 순서가 지정 된 행의 수이 고; 그렇지 않으면, *N* 순서에 대 한 행의 수입니다. 이 절을 사용하여 SELECT 문에서 반환되거나 INSERT, UPDATE, MERGE 또는 DELETE 문의 영향을 받는 행 수를 지정할 수 있습니다.  
   

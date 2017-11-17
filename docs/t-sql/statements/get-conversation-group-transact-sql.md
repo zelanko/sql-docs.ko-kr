@@ -3,8 +3,11 @@ title: GET CONVERSATION GROUP (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   다음에 받을 메시지에 대한 대화 그룹 식별자를 반환하고 해당 메시지를 포함하는 대화에 대한 대화 그룹을 잠급니다. 대화 그룹 식별자는 메시지 자체를 받기 전에 대화 상태 정보를 검색하는 데 사용할 수 있습니다.  
   

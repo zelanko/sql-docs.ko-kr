@@ -3,8 +3,11 @@ title: CURSOR_STATUS (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 프로시저가 지정된 매개 변수에 대한 커서 및 결과 집합을 반환하는지 여부를 저장 프로시저 호출자가 확인할 수 있도록 하는 스칼라 함수입니다.
   

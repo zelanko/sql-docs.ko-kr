@@ -3,8 +3,11 @@ title: "수치 연산 함수 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="mathematical-functions-transact-sql"></a>수치 연산 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   다음 스칼라 함수는 일반적으로 인수에 의해 제공되는 입력 값을 기반으로 계산을 수행하고 숫자 값을 반환합니다.  
   

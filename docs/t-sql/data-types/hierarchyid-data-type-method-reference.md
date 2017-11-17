@@ -3,8 +3,11 @@ title: hierarchyid (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 데이터 형식 메서드 참조
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 **hierarchyid** 데이터 형식은 가변 길이의 시스템 데이터 형식입니다. 사용 하 여 **hierarchyid** 계층의 위치를 나타내는입니다. **hierarchyid** 형식의 열은 자동으로 트리를 나타내지 않습니다. 응용 프로그램에 따라 원하는 행 간 관계가 값에 반영되도록 **hierarchyid** 값이 생성되어 할당됩니다.
   

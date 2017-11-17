@@ -3,8 +3,11 @@ title: GRANT (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="grant-transact-sql"></a>GRANT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   보안 주체에 보안 개체에 대한 사용 권한을 부여합니다.  권한 부여를 일반 개념은 \<일부 사용 권한이 > ON \<일부 개체 > TO \<일부 사용자, 로그인 또는 그룹 > 합니다. 사용 권한 일반 논의 알려면 [사용 권한 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/permissions-database-engine.md)합니다.  
   

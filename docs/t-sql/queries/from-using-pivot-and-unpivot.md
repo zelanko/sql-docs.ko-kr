@@ -3,8 +3,11 @@ title: "PIVOT 및 UNPIVOT 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="from---using-pivot-and-unpivot"></a>-PIVOT 및 UNPIVOT 사용
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   사용할 수는 `PIVOT` 및 `UNPIVOT` 테이블 반환 식을 다른 테이블로 변경 하려면 관계 연산자입니다. `PIVOT`출력에서 여러 열에 식에서 한 열에서 고유 값을 설정 하 여 테이블 반환 식을 회전 하 고 최종 출력에서 원하는 모든 남은 열 값에 필요한 위치에 집계를 수행 합니다. `UNPIVOT`열의 열 값에는 테이블 반환 식 회전 하 여 피벗 작업을 수행 합니다.  
   

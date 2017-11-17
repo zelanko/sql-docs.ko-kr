@@ -3,8 +3,11 @@ title: "CAST 및 CONVERT (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 식을 다른 데이터 형식으로 변환합니다.  
 예를 들어 다음 예제에서는 두 개의 다른 데이터 형식, 정밀도 수준이 다른으로 입력된 datatype을 변경 합니다.

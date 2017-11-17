@@ -3,8 +3,11 @@ title: "테이블 값 생성자 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-value-constructor-transact-sql"></a>테이블 값 생성자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   테이블에 생성할 행 값 식의 집합을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하면 단일 DML  문에 여러 데이터 행을 지정할 수 있습니다. 사용에서 INSERT 문의 VALUES 절에서 테이블 값 생성자를 지정할 수 있습니다 \<원본 테이블 > FROM 절의 파생된 테이블의 정의 및 MERGE 문의 절.  
   

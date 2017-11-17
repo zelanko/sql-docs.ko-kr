@@ -3,8 +3,11 @@ title: "선언 @local_variable (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="declare-localvariable-transact-sql"></a>선언 @local_variable (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   DECLARE 문을 사용하여 일괄 처리나 프로시저의 본문에 변수를 선언하고 SET 또는 SELECT 문을 사용하여 값을 할당합니다. 이 문을 사용하여 커서 변수를 선언하고 다른 커서 관련 문과 함께 사용할 수 있습니다. 선언의 일부로 값을 지정하지 않으면 선언 후 모든 변수가 NULL로 초기화됩니다.  
   

@@ -3,8 +3,11 @@ title: "데이터베이스 만들기 (SQL Server Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE(SQL Server Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   새 데이터베이스, 데이터베이스 저장에 사용되는 파일 및 데이터베이스 스냅숏을 만들거나 이전에 만든 데이터베이스의 분리된 파일에서 데이터베이스를 연결합니다.  
   

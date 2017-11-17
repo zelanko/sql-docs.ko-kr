@@ -3,8 +3,11 @@ title: "IDENTITY (속성) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-table-transact-sql-identity-property"></a>테이블 (Transact SQL) IDENTITY (속성) 만들기
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   테이블에 ID 열을 만듭니다. 이 속성은 CREATE TABLE 및 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 사용됩니다.  
   

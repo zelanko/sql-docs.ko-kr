@@ -3,8 +3,11 @@ title: GO (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 유틸리티 문-이동
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]제공 되지 않은 명령 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 인식 되는 **sqlcmd** 및 **osql** 유틸리티 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기. 이러한 명령을 사용하면 일괄 처리 및 스크립트를 쉽게 읽고 실행할 수 있습니다.  
   

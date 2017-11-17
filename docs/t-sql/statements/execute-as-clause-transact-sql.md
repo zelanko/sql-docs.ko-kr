@@ -3,8 +3,11 @@ title: "EXECUTE AS 절 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 정의 모듈인 함수(인라인 테이블 반환 함수 제외), 프로시저, 큐 및 트리거의 실행 컨텍스트를 정의할 수 있습니다.  
   

@@ -3,8 +3,11 @@ title: "계약 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   새 계약을 만듭니다. 계약은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화에 사용되는 메시지 유형을 정의하며 해당 유형의 메시지를 보낼 수 있는 대화 상대도 결정합니다. 각 대화는 계약을 따릅니다. 시작 서비스는 대화가 시작될 때 대화에 대한 계약을 지정합니다. 대상 서비스는 대상 서비스가 받아들이는 대화에 대한 계약을 지정합니다.  
   

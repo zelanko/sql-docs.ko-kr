@@ -3,8 +3,11 @@ title: "기 하 도형 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>공간 형식-geometry (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   평면 공간 데이터 형식인 **geometry**에서 공용 언어 런타임 (CLR) 데이터 형식으로 구현 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 데이터 형식은 유클리드(평면) 좌표 시스템의 데이터를 나타냅니다.  
   

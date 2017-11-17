@@ -3,8 +3,11 @@ title: "TRANSACT-SQL 참조 (데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 참조(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 이 항목을 찾고 Microsoft TRANSACT-SQL (T-SQL) 참조 항목을 사용 하는 방법에 대 한 기본 사항을 제공 합니다. Microsoft SQL 제품 및 서비스를 사용 하 여 집중 T-SQL 됩니다. 모든 도구와 SQL 데이터베이스와 통신 하는 응용 프로그램 이렇게 T-SQL 명령을 전송 됩니다.  
 

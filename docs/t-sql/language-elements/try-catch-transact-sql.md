@@ -3,8 +3,11 @@ title: "시도 중... CATCH (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] Visual C# 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 언어의 예외 처리와 유사한 방식으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 오류 처리를 구현합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 그룹을 TRY 블록으로 묶을 수 있으며 TRY 블록 내에서 오류가 발생하는 경우 CATCH 블록으로 묶은 또 다른 문의 그룹으로 제어가 전달됩니다.  
   

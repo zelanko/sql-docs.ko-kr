@@ -3,8 +3,11 @@ title: "ALTER DATABASE (병렬 데이터 웨어하우스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (병렬 데이터 웨어하우스)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   복제 된 테이블, 분산된 테이블 및에서 트랜잭션 로그에 대 한 최대 데이터베이스 크기 옵션을 수정 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다. 이 문을 사용 하 여 확대 하 되거나 크기를 축소 데이터베이스에 대 한 디스크 공간 할당을 관리 합니다.  
   

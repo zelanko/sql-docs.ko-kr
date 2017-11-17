@@ -3,8 +3,11 @@ title: SET ANSI_NULL_DFLT_OFF (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-ansinulldfltoff-transact-sql"></a>SET ANSI_NULL_DFLT_OFF(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스에 대 한 ANSI null 기본값 옵션이 때 새 열의 기본 null 허용 여부를 재정의 하는 세션의 동작을 변경 **true**합니다. ANSI null 기본값에 대 한 값을 설정 하는 방법에 대 한 자세한 내용은 참조 [ALTER database&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
   

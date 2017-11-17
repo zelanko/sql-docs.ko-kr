@@ -3,9 +3,11 @@ title: DBCC PDW_SHOWSPACEUSED (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 행 개수, 예약 된 디스크 공간 또는 모든 테이블의 특정 테이블에 사용 된 디스크 공간을 표시 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스입니다.
   

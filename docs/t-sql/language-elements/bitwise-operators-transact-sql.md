@@ -3,8 +3,11 @@ title: "비트 연산자 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="bitwise-operators-transact-sql"></a>비트 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   비트 연산자는 두 식 사이의 비트 조작을 수행합니다. 이 때 식에는 정수 데이터 형식에 속하는 모든 데이터 형식을 사용할 수 있습니다.  
   비트 연산자 이진 비트를 두 개의 정수 값을 변환, 수행 AND, OR, 또는 결과 생성 각 비트 NOT 연산을 합니다. 그런 다음 결과 정수로 변환합니다.  

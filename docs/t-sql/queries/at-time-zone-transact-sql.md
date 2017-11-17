@@ -2,8 +2,12 @@
 title: "표준 시간대 (Transact SQL)에서 | Microsoft Docs"
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="at-time-zone-transact-sql"></a>표준시 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   변환는 *inputdate* 해당 요소에 *datetimeoffset* 대상 표준 시간대에는 값입니다. 경우 *inputdate* 함수를 오프셋된 정보 없이 가정 하 고 표준 시간대 오프셋을 적용 하는 제공 된 *inputdate* 대상 표준 시간대에 값을 제공 합니다. 경우 *inputdate* 으로 제공 되는 *datetimeoffset* 값 보다 **AT TIME ZONE** 절 표준 시간대 변환 규칙을 사용 하 여 대상 표준 시간대로 변환 합니다.  
   

@@ -3,8 +3,11 @@ title: "트리거 함수 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="trigger-functions-transact-sql"></a>트리거 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   트리거 정의에서 다음 스칼라 함수를 사용하여 데이터 값이 변경되었는지 테스트하거나 다른 데이터를 반환할 수 있습니다.  
   

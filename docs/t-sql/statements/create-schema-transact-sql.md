@@ -3,8 +3,11 @@ title: CREATE SCHEMA (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/01/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 데이터베이스에 스키마를 만듭니다. CREATE SCHEMA 트랜잭션에서는 새 스키마 내에 테이블과 뷰를 만들고 해당 개체에 대한 GRANT, DENY 또는 REVOKE 권한을 설정할 수도 있습니다.  
   

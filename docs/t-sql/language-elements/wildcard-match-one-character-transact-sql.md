@@ -3,8 +3,11 @@ title: "_ (와일드 카드-문자 하 나와 일치) (Transact SQL) | Microsoft
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (와일드카드 - 문자 하나와 일치)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 밑줄 문자 _를 사용 하 여 패턴 일치와 같은 포함 하는 문자열 비교 작업에서 임의의 단일 문자와 일치 하도록 `LIKE` 및 `PATINDEX`합니다.  
   

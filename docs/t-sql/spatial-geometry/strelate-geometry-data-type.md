@@ -3,8 +3,11 @@ title: "STRelate (geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   1을 반환는 **geometry** 인스턴스는 다른 관련이 **기 하 도형** 관계 Extended 9 Intersection Model (DE 9IM) 패턴 행렬 값으로 정의 되 고, 그렇지 않으면 여기서는 인스턴스 를 0을 반환 합니다.  
   
