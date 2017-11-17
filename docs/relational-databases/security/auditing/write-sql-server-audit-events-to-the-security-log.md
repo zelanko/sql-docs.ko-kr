@@ -2,10 +2,14 @@
 title: "보안 로그에 SQL Server Audit 이벤트 쓰기 | Microsoft 문서"
 ms.custom: 
 ms.date: 09/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - audits [SQL Server], writing to Security Log
 - security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 7c0cedbe24800db112822e05046a60364a679903
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
----
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/21/2017
+
+---  
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기  
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 보안 수준이 높은 환경에서는 Windows 보안 로그에 개체 액세스를 기록하는 이벤트를 쓰는 것이 좋습니다. 다른 감사 위치도 지원되지만 변조될 가능성이 높습니다.  
   
@@ -110,3 +115,4 @@ Windows 감사 정책은 Windows 보안 로그에 기록하도록 구성된 경�
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+

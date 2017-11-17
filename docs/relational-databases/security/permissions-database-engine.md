@@ -1,11 +1,15 @@
 ---
 title: "사용 권한(데이터베이스 엔진) | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: "76"
+caps.latest.revision: 76
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.openlocfilehash: 5e40b4e9abfe5ce59e17c77bab5505978cc62f6f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할에 할당된 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할에 할당된 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 모델은 데이터베이스 권한에 대하여 동일한 시스템을 갖지만 서버 수준 권한은 사용할 수 없습니다. 이 항목에는 전체 권한 목록이 포함됩니다. 권한에 대한 일반적인 구현은 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하십시오.  
   
@@ -467,3 +472,4 @@ GO
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

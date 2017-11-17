@@ -3,28 +3,33 @@ title: "효과적인 데이터베이스 엔진 사용 권한 결정 | Microsoft 
 ms.custom: 
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 70359d3c8b34fabec496ad9fbc165bcc7d1707c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d21efb4495f786b6000fe0b8675fa042b4d2ca6e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 이 항목에서는 SQL Server 데이터베이스 엔진의 다양한 개체에 대한 사용 권한이 있는 사용자를 결정하는 방법을 설명합니다. SQL Server는 데이터베이스 엔진에 대한 두 개의 사용 권한 시스템을 구현합니다. 고정된 역할의 이전 시스템은 사용 권한이 미리 구성되었습니다. SQL Server 2005부터 보다 유연하고 정확한 시스템을 사용할 수 있습니다. (이 항목의 정보는 SQL Server 2005부터 적용됩니다. SQL Server의 일부 버전에서는 일부 사용 권한 유형을 사용할 수 없습니다.)
 
@@ -160,4 +165,5 @@ REVERT;
 
 [데이터베이스 엔진 사용 권한 시작](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [자습서: 데이터베이스 엔진 시작](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+
 

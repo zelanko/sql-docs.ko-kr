@@ -2,27 +2,33 @@
 title: "데이터베이스 엔진 사용 권한 시작 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: permissions [SQL Server], getting started
+helpviewer_keywords:
+- permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 21d6f4a4434b90561216edc72fb25d5f305fa43d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/11/2017
+
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할을 통해 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할을 통해 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 에 대한 모델은 각 데이터베이스 내에서 동일한 시스템을 노출하지만 서버 수준 권한을 사용할 수 없습니다. 이 항목에서는 몇 가지 기본 보안 개념을 검토한 다음 일반적인 권한 구현을 설명합니다.  
   
@@ -244,3 +250,4 @@ JOIN sys.database_principals AS dRole
  [효과적인 데이터베이스 엔진 사용 권한 결정](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
+

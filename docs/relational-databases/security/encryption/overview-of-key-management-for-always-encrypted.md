@@ -2,26 +2,31 @@
 title: "상시 암호화를 위한 키 관리 개요 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-security
+ms.suite: sql
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 313e9c416f29321c38c47b80002b9ca219e36cf8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>상시 암호화를 위한 키 관리 개요
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 [상시 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)는 사용자 데이터를 암호화하는 키와 데이터를 암호화하는 키를 암호화하는 다른 키 등 두 가지 유형의 암호화 키를 사용하여 데이터를 보호합니다. 열 암호화 키는 사용자 데이터를 암호화하고, 열 마스터 키는 열 암호화 키를 암호화합니다. 이 문서에서는 이러한 암호화 키 관리의 개요를 자세히 설명합니다.
@@ -110,6 +115,7 @@ ms.lasthandoff: 11/09/2017
 - [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [상시 암호화 마법사 자습서(Azure 주요 자격 증명 모음)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [상시 암호화 마법사 자습서(Windows 인증서 저장소)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+
 
 
 

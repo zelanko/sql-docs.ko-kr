@@ -2,29 +2,36 @@
 title: "병합 아티클에 대해 삭제가 추적되지 않도록 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conditional delete tracking [SQL Server replication]
 - merge replication [SQL Server replication], conditional delete tracking
 ms.assetid: 0fe330ca-5fb5-422e-ad6f-92fb5d6a3b6c
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 37186bd7f51d2091133b15dbbb3bc88398e9b9cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 285e91369dfc5572b0da94fc110ce8b9e720b8a6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="specify-that-deletes-should-not-be-tracked-for-merge-articles"></a>병합 아티클에 대해 삭제가 추적되지 않도록 지정
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -54,3 +61,4 @@ ms.lasthandoff: 11/09/2017
  [조건부 삭제 추적으로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   
+

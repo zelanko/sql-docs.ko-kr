@@ -2,26 +2,31 @@
 title: "열 마스터 키 만들기 및 저장(Always Encrypted) | Microsoft 문서"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-security
+ms.suite: sql
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a250eaea12b32fb08603efb56a7a5105502fc38
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>열 마스터 키 만들기 및 저장(상시 암호화)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 *열 마스터 키* 는 상시 암호화에서 열 암호화 키를 암호화하는 데 사용되는 키를 보호하는 키입니다. 열 마스터 키는 신뢰할 수 있는 키 저장소에 저장되어야 하며 데이터 암호화 또는 암호 해독이 필요한 응용 프로그램, 그리고 상시 암호화 구성 및 상시 암호화 키 관리용 도구에 액세스할 수 있어야 합니다.
 
@@ -243,4 +248,5 @@ SQL Server Management Studio를 사용하여 상시 암호화 구성의 열 마�
 - [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 응용 프로그램 개발](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [상시 암호화 블로그](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
+
 

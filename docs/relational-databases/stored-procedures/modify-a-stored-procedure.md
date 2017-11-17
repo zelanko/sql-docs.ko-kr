@@ -2,10 +2,14 @@
 title: "저장 프로시저 수정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,24 +17,26 @@ helpviewer_keywords:
 - editing stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 97b30771b16713964816133f5832552e92ac2318
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6eb24cf562396f61af07735fa741e50d447a4b50
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="modify-a-stored-procedure"></a>저장 프로시저 수정
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
 ##  <a name="Top"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 저장 프로시저를 수정하는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **프로시저 변경에 사용되는 도구:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To alter a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -153,3 +159,4 @@ ms.lasthandoff: 11/09/2017
  [ALTER PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
   
   
+

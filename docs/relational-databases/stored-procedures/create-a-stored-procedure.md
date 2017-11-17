@@ -2,10 +2,14 @@
 title: "저장 프로시저 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -13,25 +17,26 @@ helpviewer_keywords:
 - stored procedures [SQL Server], creating
 - creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b22866ca7bba2d8e39765febe76183a81e2f3831
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 85b2194d4535c4edb2d4a27039fde6ca87911871
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-a-stored-procedure"></a>저장 프로시저 만들기
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [저장 프로시저 만들기](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx)합니다.
 
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 방법에 대해 설명합니다.  
   
 ##  <a name="Top"></a>   
--   **시작하기 전에:**  [사용 권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [사용 권한](#Permissions)  
   
 -   **프로시저를 만들려면:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
@@ -139,3 +144,4 @@ ms.lasthandoff: 11/09/2017
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
+

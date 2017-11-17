@@ -2,10 +2,14 @@
 title: "보안 주체(데이터베이스 엔진) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,19 +31,20 @@ helpviewer_keywords:
 - users [SQL Server], principals
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 5359588c62f7100b17641201d27b07cc8d8241f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/13/2017
+
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   *보안 주체* 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 요청할 수 있는 엔터티입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 권한 부여 모델의 다른 구성 요소와 같이 보안 주체는 계층으로 정렬될 수 있습니다. 보안 주체의 영향 범위는 보안 주체의 정의 범위인 Windows, 서버 및 데이터베이스와 보안 주체가 분해 불가능하거나 컬렉션인지 여부에 따라 달라집니다. 분해 불가능한 보안 주체의 예로는 Windows 로그인을 들 수 있으며 Windows 그룹은 컬렉션인 보안 주체입니다. 모든 보안 주체에는 SID(보안 식별자)가 있습니다. 이 항목은 모든 버전의 SQL Server에 적용되지만 SQL Database 또는 SQL Data Warehouse의 서버 수준 보안 주체에는 몇 가지 제한 사항이 있습니다. 
   
@@ -112,3 +117,4 @@ ms.lasthandoff: 11/09/2017
  [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   
+

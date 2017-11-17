@@ -2,24 +2,28 @@
 title: "Microsoft SQL 및 GDPR 요구 사항 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
-ms.prod: sql
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-security
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: barbkess
 ms.author: ronitr
 manager: cguyer
-ms.openlocfilehash: a4c6cba332f595b60e936bbdd03128860b76e4c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: d533818e9498237316dabc08fc538caa2ac31c63
+ms.openlocfilehash: f236ff85204ba08e8c02d5e680a4de43f021b9aa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Microsoft SQL 플랫폼을 사용한 개인 정보 보호 향상 및 GDPR 요구 사항 해결 가이드
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="summary"></a>요약
 2018년 5월 25일에 개인 정보 보호 권한, 보안 및 준수에 대해 전 세계 제재를 새롭게 규정하는 유럽 개인 정보 보호법이 발효될 예정입니다. GDPR(General Data Protection Regulation)은 기본적으로 개인의 개인 정보 보호 권한을 보호하고 지원하기 위한 것으로 개인 데이터를 관리 및 보호하는 방법을 규정하는 동시에 개인의 선택을 존중하는 엄격한 전 세계 개인 정보 보호 요구 사항을 설정합니다. 
@@ -38,3 +42,4 @@ Microsoft SQL 기반 기술에서는 데이터베이스 수준과 그 이상에�
 **적용 대상:** SQL Server(모든 버전), Azure SQL Database, Azure SQL Data Warehouse, Analytics Platform System 
   
 문서를 검토하려면 [Microsoft SQL 플랫폼을 사용한 개인 정보 보호 향상 및 GDPR 요구 사항 해결 가이드](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf) 문서를 다운로드하세요.   
+

@@ -1,13 +1,13 @@
 ---
 title: "SQL Server 데이터베이스 엔진 및 AAzure SQL Database에 대한 보안 센터 | Microsoft 문서"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 09/27/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: 
-ms.suite: 
+ms.component: security
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   이 페이지에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]의 보안 및 보호에 대해 필요한 정보를 찾는 데 도움이 되는 링크를 제공합니다.  
   

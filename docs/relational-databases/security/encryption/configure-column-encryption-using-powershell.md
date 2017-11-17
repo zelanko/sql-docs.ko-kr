@@ -1,27 +1,32 @@
 ---
-title: "PowerShell을 사용하여 열 암호화 구성 | Microsoft 문서"
+title: "PowerShell을 사용하여 열 암호화 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: powershell
+ms.suite: sql
+ms.technology:
+- powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ac535e20c2782c81b34e33e2f1ba1afe325e821
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-column-encryption-using-powershell"></a>PowerShell을 사용하여 열 암호화 구성
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 이 문서에서는 *SqlServer* PowerShell 모듈의 [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet을 사용하여 데이터베이스 열에 대한 대상 상시 암호화 구성을 설정하는 단계를 제공합니다. **Set-SqlColumnEncryption** cmdlet은 대상 데이터베이스의 스키마와 선택한 열에 저장된 데이터를 둘 다 수정합니다. 열에 지정된 대상 암호화 설정과 현재 암호화 구성에 따라 열에 저장된 데이터를 암호화, 다시 암호화 또는 암호 해독할 수 있습니다.
 SqlServer PowerShell 모듈의 Always Encrypted 지원에 대한 자세한 내용은 [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)을 참조하세요.
@@ -40,7 +45,7 @@ SqlServer PowerShell 모듈의 Always Encrypted 지원에 대한 자세한 내�
 
 오프라인 접근 방식을 사용하는 경우 대상 테이블(및 대상 테이블과 관련된 모든 테이블, 예: 대상 테이블과 외래 키 관계가 있는 모든 테이블)을 사용하여 전체 작업 기간 동안 트랜잭션을 작성할 수 없습니다. 외래 키 제약 조건의 의미 체계(**CHECK** 또는 **NOCHECK**)는 오프라인 방법을 사용하는 경우 항상 유지됩니다.
 
-21.x 이상 버전의 SqlServer PowerShell 모듈이 필요한 온라인 접근 방식을 사용하는 경우 데이터를 복사 및 암호화하거나, 암호를 해독하거나, 다시 암호화하는 작업이 증분적으로 수행됩니다. 응용 프로그램이 마지막 반복을 제외하고 전체 데이터 이동 작업에서 대상 테이블에서 데이터를 읽고 쓸 수 있으며, 해당 기간은 사용자가 정의할 수 있는 **MaxDownTimeInSeconds** 매개 변수에 의해 제한됩니다. 데이터가 복사되는 동안 응용 프로그램에서 적용할 수 있는 변경 내용을 검색하고 처리하기 위해 이 cmdlet은 대상 데이터베이스에서 [변경 내용 추적](../../track-changes/enable-and-disable-change-tracking-sql-server.md)을 지원합니다. 따라서 온라인 접근 방식은 오프라인 접근 방식보다 서버 쪽의 리소스를 더 많이 사용할 가능성이 높습니다. 온라인 접근 방식에서는 특히 쓰기 작업이 많은 워크로드가 데이터베이스에 대해 실행되는 경우 작업이 훨씬 오래 걸릴 수도 있습니다. 온라인 접근 방식은 한 번에 하나의 테이블을 암호화하는 데 사용될 수 있으며, 테이블에는 기본 키가 있어야 합니다. 기본적으로 외래 키 제약 조건은 응용 프로그램에 대한 영향을 최소화하기 위해 **NOCHECK** 옵션으로 다시 만들어집니다. **KeepCheckForeignKeyConstraints** 옵션을 지정하여 외래 키 제약 조건의 의미 체계 유지를 적용할 수 있습니다.
+온라인 접근 방식(SqlServer PowerShell 모듈 버전 21.x 이상 필요)을 사용하는 경우, 데이터를 복사 및 암호화, 암호 해독 또는 다시 암호화하는 작업이 증분적으로 수행됩니다. 응용 프로그램이 마지막 반복을 제외하고 전체 데이터 이동 작업에서 대상 테이블에서 데이터를 읽고 쓸 수 있으며, 해당 기간은 사용자가 정의할 수 있는 **MaxDownTimeInSeconds** 매개 변수에 의해 제한됩니다. 데이터가 복사되는 동안 응용 프로그램에서 적용할 수 있는 변경 내용을 검색하고 처리하기 위해 이 cmdlet은 대상 데이터베이스에서 [변경 내용 추적](../../track-changes/enable-and-disable-change-tracking-sql-server.md)을 지원합니다. 따라서 온라인 접근 방식은 오프라인 접근 방식보다 서버 쪽의 리소스를 더 많이 사용할 가능성이 높습니다. 온라인 접근 방식에서는 특히 쓰기 작업이 많은 워크로드가 데이터베이스에 대해 실행되는 경우 작업이 훨씬 오래 걸릴 수도 있습니다. 온라인 접근 방식은 한 번에 하나의 테이블을 암호화하는 데 사용될 수 있으며, 테이블에는 기본 키가 있어야 합니다. 기본적으로 외래 키 제약 조건은 응용 프로그램에 대한 영향을 최소화하기 위해 **NOCHECK** 옵션으로 다시 만들어집니다. **KeepCheckForeignKeyConstraints** 옵션을 지정하여 외래 키 제약 조건의 의미 체계 유지를 적용할 수 있습니다.
 
 다음은 오프라인 접근 방식과 온라인 접근 방식을 선택하는 방법에 대한 지침입니다.
 
@@ -154,6 +159,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>추가 리소스
 - [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+
 
 
 

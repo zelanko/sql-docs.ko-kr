@@ -2,31 +2,37 @@
 title: "SQL Server Management Studio를 사용하여 상시 암호화 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 11/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.COLUMNMASTERKEY.PAGE.F1
 - SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1
 - SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1
-helpviewer_keywords: Always Encrypted, configure with SSMS
+helpviewer_keywords:
+- Always Encrypted, configure with SSMS
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 08f7778ecba3cf55a8bc47d492e410de9e480146
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 상시 암호화 구성
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 이 문서에서는 [SSMS(SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md)를 사용하여 상시 암호화를 구성하고 상시 암호화를 사용하는 데이터베이스를 관리하는 작업에 대해 설명합니다.
 
@@ -472,6 +478,7 @@ BACPAC를 데이터베이스로 가져올 때 BACPAC의 암호화된 데이터�
 - [sys.column_master_keys(Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 - [sys.column_encryption_keys(Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)
 - [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+
 
 
 

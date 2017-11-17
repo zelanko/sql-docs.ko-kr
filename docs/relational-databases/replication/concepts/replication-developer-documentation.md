@@ -1,32 +1,38 @@
 ---
 title: "복제 개발자 설명서 | Microsoft 문서"
-ms.custom: rickbyh
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - developer's guide [SQL Server replication]
 - programming [SQL Server replication]
 - replication [SQL Server], development
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a48640bf095880ec2d72fe560beab7c91555f6dd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b44693e1193670ee6b8f50f6fd7bd8a94181e2be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="replication-developer-documentation"></a>복제 개발자 설명서
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   복제 토폴로지를 프로그래밍 방식으로 구성, 유지 관리 및 모니터링하면 반복되는 복제 태스크를 간소화하고 복제 기반 응용 프로그램의 사용자 환경을 향상시킬 수 있습니다. 복제를 프로그래밍하면 최종 사용자가 복제 저장 프로시저와 복제 에이전트 실행 파일에 대해 잘 알지 못하거나 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 구현된 복제 사용자 인터페이스를 사용하지 않아도 사용자 지정 복제 기능을 사용할 수 있습니다.  
   
@@ -65,3 +71,4 @@ ms.lasthandoff: 11/09/2017
  복제와 관련된 방법 도움말 항목을 제공합니다.  
   
   
+

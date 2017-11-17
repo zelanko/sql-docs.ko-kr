@@ -2,26 +2,31 @@
 title: "PowerShell을 사용하여 Always Encrypted 키 순환 | Microsoft 문서"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-security
+ms.suite: sql
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c3ac81162f54adbbbc5256f622b465cfc08425b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 9bec2f6ad7f48cd881a2de13b14191e9deb2f851
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell을 사용하여 상시 암호화 키 순환
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 이 문서에서는 SqlServer PowerShell 모듈을 사용하여 상시 암호화 키를 순환하는 단계를 제공합니다. 상시 암호화에 SqlServer PowerShell 모듈을 사용 시작하는 방법은 [PowerShell을 사용하여 상시 암호화 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)을 참조하세요.
 
@@ -373,4 +378,5 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 - [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)    
 - [Always Encrypted(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted 블로그](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
 

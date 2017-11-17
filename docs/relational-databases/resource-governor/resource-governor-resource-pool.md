@@ -2,10 +2,14 @@
 title: "리소스 관리자 리소스 풀 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89158a35ab3d535f7530cfb832f99a4a6df9395c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: e016d57148d09109f894269007d613774c4e8263
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/23/2017
+
 ---
 # <a name="resource-governor-resource-pool"></a>리소스 관리자 리소스 풀
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자에서 리소스 풀은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 물리적 리소스의 하위 집합을 나타냅니다. 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다. 각 리소스 풀에는 하나 이상의 작업 그룹이 포함될 수 있습니다. 세션이 시작되면 리소스 관리자 분류자가 세션을 특정 작업 그룹에 할당하고 세션은 작업 그룹에 할당된 리소스를 사용하여 실행해야 합니다.  
   
@@ -134,3 +139,4 @@ CPU 또는 메모리를 구성할 때 모든 풀의 MIN 값의 합은 서버 리
  [리소스 관리자 속성 보기](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

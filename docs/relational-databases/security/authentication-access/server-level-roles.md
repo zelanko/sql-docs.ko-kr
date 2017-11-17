@@ -1,11 +1,15 @@
 ---
-title: "서버 수준 역할 | Microsoft 문서"
+title: "서버 수준 역할 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,19 +25,20 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.openlocfilehash: 1fb77447fa5eff29fc917569d221a6897fd6106d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 서버에 대한 사용 권한을 쉽게 관리할 수 있도록 서버 수준 역할을 제공합니다. 서버 역할은 다른 보안 주체를 그룹화하는 보안 주체입니다. 서버 수준 역할은 서버 측 사용 권한 범위에 속합니다. *역할* 은 Windows 운영 체제의 *그룹* 과 같습니다.  
   
@@ -104,3 +109,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [서버 역할 만들기](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
   
   
+

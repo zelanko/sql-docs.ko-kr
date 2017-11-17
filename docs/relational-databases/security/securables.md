@@ -1,14 +1,19 @@
 ---
 title: "보안 개체 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.roleproperties.selectobject.f1
+f1_keywords:
+- sql13.swb.roleproperties.selectobject.f1
 helpviewer_keywords:
 - securables [SQL Server]
 - schemas [SQL Server], securables
@@ -16,19 +21,20 @@ helpviewer_keywords:
 - hierarchies [SQL Server], securables
 - server securables [SQL Server]
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 2b849807ec2296896526b802a62d73ecc69f59f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51db5d7a36569601e7d21d5fc50d16230b85ea5d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="securables"></a>보안 개체
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   보안 개체는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인증 시스템이 액세스를 조정하는 리소스입니다. 예를 들어, 테이블은 보안 개체입니다. 스스로 보호할 수 있는 "범위"라는 중첩된 계층을 만들면 일부 보안 개체를 다른 보안 개체에 포함시킬 수 있습니다. 보안 개체 범위는 **서버**, **데이터베이스**및 **스키마**입니다.  
   
@@ -127,3 +133,4 @@ ms.lasthandoff: 11/09/2017
  [sys.sql_logins&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)  
   
   
+

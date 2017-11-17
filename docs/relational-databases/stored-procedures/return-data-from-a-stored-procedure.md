@@ -2,29 +2,34 @@
 title: "저장 프로시저에서 데이터 반환 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 14cd1a02c2c4c45fb26de19ed5141143e8587eb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/24/2017
+
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > 이전 버전의 SQL Server와 관련된 콘텐츠 [저장 프로시저에서 데이터 반환](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)을 참조하세요.
 
   결과 집합 또는 데이터를 프로시저에서 호출 프로그램으로 반환하는 두 가지 방법인 출력 매개 변수 및 반환 코드가 있습니다. 이 항목은 두 방법에 대한 자세한 정보를 제공합니다.  
@@ -268,3 +273,4 @@ GO
  [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   
+
