@@ -2,10 +2,14 @@
 title: "INSERT 및 UPDATE 문에서 CHECK 제약 조건 해제 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - disabling constraints
 - constraints [SQL Server], check
 ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eb6260a34f89b1dfe4f270ef82949b9547980bf2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d1f8fd216f5e23f958e2913ffd35f091844cac3f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>INSERT 및 UPDATE 문에서 CHECK 제약 조건 해제
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 INSERT 및 UPDATE 트랜잭션에 대해 CHECK 제약 조건을 해제할 수 있습니다. CHECK 제약 조건을 해제한 후에는 해당 열에 대한 이후 삽입 또는 업데이트 작업의 유효성을 해당 제약 조건에 따라 검사하지 않습니다. 새 데이터가 기존 제약 조건을 위반할지를 알고 있는 경우 또는 제약 조건이 데이터베이스에 이미 있는 데이터에만 적용될 경우 이 옵션을 사용합니다.  
   
@@ -82,3 +87,4 @@ ms.lasthandoff: 11/09/2017
  자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a>  
+

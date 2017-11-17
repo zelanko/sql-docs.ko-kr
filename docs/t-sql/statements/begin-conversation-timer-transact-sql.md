@@ -3,8 +3,11 @@ title: BEGIN CONVERSATION TIMER (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -45,7 +48,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   타이머를 시작합니다. 제한 시간이 만료 되 면 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 유형의 메시지를 넣습니다 `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` 대화에 대 한 로컬 큐에 있습니다.  
   

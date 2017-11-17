@@ -3,8 +3,11 @@ title: "Windows 데이터 정렬 이름 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 COLLATE 절에 Windows 데이터 정렬 이름을 지정합니다. Windows 데이터 정렬 이름은 데이터 정렬 지정자와 비교 스타일로 구성됩니다.  
   

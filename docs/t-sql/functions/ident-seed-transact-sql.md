@@ -3,8 +3,11 @@ title: IDENT_SEED (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   원래 초기값을 반환 합니다 (으로 반환 **숫자**(**@@**MAXPRECISION, 0))는 테이블 또는 뷰에서 id 열을 만들 때 지정한 합니다. DBCC CHECKIDENT를 사용하여 현재 ID 열 값을 변경해도 이 함수에서 반환되는 값은 변경되지 않습니다.  
   

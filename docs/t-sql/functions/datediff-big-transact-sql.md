@@ -1,11 +1,13 @@
 ---
 title: DATEDIFF_BIG (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +36,7 @@ ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 지정 된 수 (부호 있는 큰 정수)를 반환 *datepart* 지정 된 간에 겹쳐지는 *startdate* 및 *enddate*합니다.
   

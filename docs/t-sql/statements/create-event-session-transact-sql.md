@@ -3,8 +3,11 @@ title: "(Transact SQL) 이벤트 세션 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이벤트 원본, 이벤트 세션 대상 및 이벤트 세션 옵션을 식별하는 확장 이벤트 세션을 만듭니다.  
   

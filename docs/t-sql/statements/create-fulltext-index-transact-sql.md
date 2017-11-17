@@ -3,8 +3,11 @@ title: CREATE FULLTEXT INDEX (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 테이블 또는 인덱싱된 뷰에서 전체 텍스트 인덱스를 만듭니다. 테이블 또는 인덱싱된 뷰당 하나의 전체 텍스트 인덱스만 허용되고 각 전체 텍스트 인덱스는 하나의 테이블 또는 인덱싱된 뷰에 적용됩니다. 전체 텍스트 인덱스는 최대 1024개의 열을 포함할 수 있습니다.  
   

@@ -3,8 +3,11 @@ title: "데이터 형식 동의어 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="data-type-synonyms-transact-sql"></a>데이터 형식 동의어 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 데이터 형식 동의어는 ISO 호환성을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되었습니다. 다음 표에서는 동의어 및 동의어가 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식을 나열합니다.
   

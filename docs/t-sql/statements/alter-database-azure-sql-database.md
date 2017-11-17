@@ -1,13 +1,13 @@
 ---
 title: "ALTER DATABASE (Azure SQL 데이터베이스) | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 09/25/2017
 ms.prod: 
+ms.prod_service: sql-database
 ms.reviewer: 
 ms.service: sql-database
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL 데이터베이스)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   수정 된 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다. 데이터베이스, 탄력적 풀, 조인 및 데이터베이스 옵션을 설정 하는 데이터베이스, 버전 및 서비스 목표의 이름을 변경합니다.  
   

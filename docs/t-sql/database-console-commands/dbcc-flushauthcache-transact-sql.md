@@ -1,12 +1,13 @@
 ---
 title: DBCC FLUSHAUTHCACHE (Transact SQL) | Microsoft Docs
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 로그인 및 현재 사용자 데이터베이스에 대 한 방화벽 규칙에 대 한 정보가 포함 된 데이터베이스 인증 캐시를 비웁니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다. 이 문은 master 데이터베이스 로그인 및 방화벽 규칙에 대 한 정보에 대 한 물리적 저장소를 포함 하기 때문에 논리적 master 데이터베이스에 적용 되지 않습니다. 문을 실행 하는 사용자 및 현재 연결 된 다른 사용자가 연결 되어 있습니다. (DBCC FLUSHAUTHCACHE에 대 한 현재 지원 되지 않는 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
  

@@ -3,8 +3,11 @@ title: DBCC OPENTRAN (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 DBCC OPENTRAN은 로그 잘림을 발생하지 못하게 할 수 있는 활성 트랜잭션을 식별하는 데 도움이 됩니다. DBCC OPENTRAN은 지정된 데이터베이스의 트랜잭션 로그 내에서 가장 오래된 활성 트랜잭션과 가장 오래된 분산 및 비분산 복제 트랜잭션에 대한 정보를 표시합니다. 로그에 존재하는 활성 트랜잭션이 있거나 데이터베이스에 복제 정보가 포함된 경우에만 결과가 표시됩니다. 로그에 활성 트랜잭션이 없을 경우 정보 메시지가 표시됩니다.
   

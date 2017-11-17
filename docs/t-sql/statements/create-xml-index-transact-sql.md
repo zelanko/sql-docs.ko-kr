@@ -3,8 +3,11 @@ title: CREATE XML INDEX (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   지정된 테이블에 XML 인덱스를 만듭니다. 인덱스는 테이블에 데이터를 넣기 전에 만들 수 있습니다. 정규화된 데이터베이스 이름을 지정하여 다른 데이터베이스에 있는 테이블에 XML 인덱스를 만들 수도 있습니다.  
   

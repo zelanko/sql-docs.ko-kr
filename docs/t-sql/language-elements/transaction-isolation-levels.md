@@ -3,8 +3,11 @@ title: "트랜잭션 격리 수준 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 카탈로그 뷰, 호환성 뷰, 정보 스키마 뷰, 메타데이터 내보내기 기본 제공 함수를 통해 메타데이터에 액세스하는 쿼리의 잠금 힌트를 인식하지 못할 수도 있습니다.  
   
@@ -61,3 +64,4 @@ ms.lasthandoff: 09/01/2017
 |SERIALIZABLE|아니요|아니요|  
   
   
+

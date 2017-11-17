@@ -3,8 +3,11 @@ title: "어셈블리 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 8/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   클래스 메타데이터와 관리 코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 개체로 포함하는 관리되는 응용 프로그램 모듈을 만듭니다. 이 모듈을 참조하여 데이터베이스에서 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 사용자 정의 집계 및 사용자 정의 형식을 만들 수 있습니다.  
   

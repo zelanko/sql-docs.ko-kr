@@ -3,8 +3,11 @@ title: "NULL 및 알 수 없음 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL 및 알 수 없음 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   NULL 값이 알려진 나타냅니다. Null 값은 빈 또는 0 값과 다릅니다. 2개의 Null 값이 서로 같다고 할 수는 없습니다. 각각의 NULL 값 알 수 없기 때문에 2 개의 null 값 또는 null 값과 다른 값 간의 비교는 알 수 없는 반환 합니다.  
   

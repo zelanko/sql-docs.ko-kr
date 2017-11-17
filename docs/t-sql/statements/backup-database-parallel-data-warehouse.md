@@ -3,8 +3,11 @@ title: "데이터베이스 백업 (병렬 데이터 웨어하우스) | Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>데이터베이스 백업 (병렬 데이터 웨어하우스)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   백업을 만듭니다는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스 하 고 어플라이언스에 오프 백업을 네트워크 사용자가 지정한 위치에 저장 합니다. 이 문을 사용 하 여 [데이터베이스 복원 &#40; 병렬 데이터 웨어하우스 &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) 재해 복구를 위한 또는 한 기기에서 데이터베이스를 다른 위치로 복사 합니다.  
   

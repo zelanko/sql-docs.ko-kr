@@ -3,8 +3,11 @@ title: "query () 메서드 (xml 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="query-method-xml-data-type"></a>query() 메서드(xml 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   인스턴스에 대해 XQuery를 지정 된 **xml** 데이터 형식입니다. 결과 **xml** 유형입니다. 이 메서드는 형식화되지 않은 XML의 인스턴스를 반환합니다.  
   

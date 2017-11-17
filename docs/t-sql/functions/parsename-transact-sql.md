@@ -3,8 +3,11 @@ title: PARSENAME (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   개체 이름에서 지정된 부분을 반환합니다. 검색 가능한 개체의 부분은 개체 이름, 소유자 이름, 데이터베이스 이름 및 서버 이름입니다.  
   

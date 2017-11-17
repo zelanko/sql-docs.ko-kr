@@ -3,8 +3,11 @@ title: TEXTPTR (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>텍스트 및 이미지 함수-TEXTPTR (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   에 해당 하는 값을 반환 텍스트 포인터는 **텍스트**, **ntext**, 또는 **이미지** 열에 **varbinary** 형식입니다. 검색한 텍스트 포인터 값은 READTEXT, WRITETEXT 및 UPDATETEXT 문에서 사용할 수 있습니다.  
   

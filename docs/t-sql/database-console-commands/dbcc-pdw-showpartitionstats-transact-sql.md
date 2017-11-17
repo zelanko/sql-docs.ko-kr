@@ -3,9 +3,11 @@ title: DBCC PDW_SHOWPARTITIONSTATS (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +27,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 크기와 수에 있는 테이블의 각 파티션에 대 한 행의 표시는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스입니다.
   

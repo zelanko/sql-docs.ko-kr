@@ -3,8 +3,11 @@ title: PERCENT_RANK (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="percentrank-transact-sql"></a>PERCENT_RANK(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 행 그룹 내에서 행의 상대 순위를 계산합니다. PERCENT_RANK를 사용하여 쿼리 결과 집합 또는 파티션 내에서 값의 상대 순위를 평가할 수 있습니다. PERCENT_RANK는 CUME_DIST 함수와 유사합니다.  
   

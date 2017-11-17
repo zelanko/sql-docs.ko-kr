@@ -3,8 +3,11 @@ title: '@@ROWCOUNT (Transact SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="x40x40rowcount-transact-sql"></a>& #x 40; & #x 40; 행 개수 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   최근 실행된 문의 영향을 받은 행 수를 반환합니다. 행 수가 2 십억 개 이상의 경우 사용 하 여 [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)합니다.  
   

@@ -3,8 +3,11 @@ title: "(병렬 데이터 웨어하우스) 데이터베이스 만들기 | Micros
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-database-parallel-data-warehouse"></a>(병렬 데이터 웨어하우스) 데이터베이스 만들기
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   에 새 데이터베이스를 만듭니다는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 기기입니다. 어플라이언스 데이터베이스와 관련 된 모든 파일을 만들 수 및 최대 크기 및 데이터베이스 테이블 및 트랜잭션 로그에 대 한 자동 증가 옵션을 설정 하려면이 문을 사용 합니다.  
   

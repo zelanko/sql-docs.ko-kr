@@ -3,8 +3,11 @@ title: "변수 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="variables-transact-sql"></a>변수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Transact SQL 지역 변수는 특정 유형의 단일 데이터 값을 보유할 수 있는 개체입니다. 일괄 처리 및 스크립트에 있는 변수는 일반적으로 다음과 같이 사용될 수 있습니다. 
 

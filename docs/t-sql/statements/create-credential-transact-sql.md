@@ -3,8 +3,11 @@ title: CREATE CREDENTIAL (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버 수준 자격 증명을 만듭니다. 자격 증명은 SQL Server 외부의 리소스에 연결 하는 데 필요한 인증 정보를 포함 하는 레코드입니다. 대부분의 자격 증명에는 Windows 사용자 및 암호가 들어 있습니다. 예를 들어 일부 위치에 데이터베이스 백업을 저장 하면 해당 위치에 액세스할 수 있는 특별 한 자격 증명을 제공 하도록 SQL Server 필요할 수 있습니다. 자세한 내용은 참조 [자격 증명 (데이터베이스 엔진)](../../relational-databases/security/authentication-access/credentials-database-engine.md)합니다.
   

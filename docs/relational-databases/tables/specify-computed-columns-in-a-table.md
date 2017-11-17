@@ -2,27 +2,33 @@
 title: "테이블에서 계산 열 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: computed columns, define
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fe808827aab8b5215d8f42d8d08515cf19112c06
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   계산 열은 해당 열에 PERSISTED 표시가 없는 한 테이블에 물리적으로 저장되지 않는 가상의 열입니다. 계산 열 식에서는 이 식이 속한 열의 값을 계산하기 위해 다른 열의 데이터를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 계산 열의 식을 지정할 수 있습니다.  
   
@@ -140,3 +146,4 @@ ms.lasthandoff: 11/09/2017
      자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a>  
+

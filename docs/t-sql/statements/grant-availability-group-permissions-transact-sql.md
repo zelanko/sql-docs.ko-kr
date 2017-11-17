@@ -3,8 +3,11 @@ title: "GRANT 가용성 그룹 사용 권한 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 부여(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Always On 가용성 그룹에 대 한 권한을 부여합니다.  
   

@@ -3,8 +3,11 @@ title: "백업 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -58,7 +61,7 @@ ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   전체 백업 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 데이터베이스 백업 또는 하나 이상의 파일 또는 파일 그룹 데이터베이스의 파일 백업 (BACKUP DATABASE)를 만들려고 합니다. 또한 전체 복구 모델 또는 대량 로그 복구 모델에서 데이터베이스의 트랜잭션 로그를 백업하여 로그 백업(BACKUP LOG)을 만듭니다.  
   

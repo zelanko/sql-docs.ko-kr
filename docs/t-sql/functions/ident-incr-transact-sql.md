@@ -3,8 +3,11 @@ title: IDENT_INCR (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   증분 값을 반환 합니다 (으로 반환 **숫자** (**@@**MAXPRECISION, 0))는 테이블이 나 뷰의 id 열이 있는 id 열을 만들 때 지정한 합니다.  
   

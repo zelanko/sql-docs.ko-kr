@@ -3,8 +3,11 @@ title: "그룹화 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="grouping-transact-sql"></a>GROUPING(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   GROUP BY 목록에 지정된 열 식이 집계되었는지 여부를 나타냅니다. GROUPING은 집계된 경우 결과 집합에 1을 반환하고 집계되지 않은 경우 0을 반환합니다. SELECT에만 사용할 수 그룹화 \<선택 > 목록, HAVING 및 GROUP BY가 지정 하는 경우 ORDER BY 절.  
   

@@ -3,8 +3,11 @@ title: "슬래시 별모양 주석 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="slash-star-comment-transact-sql"></a>슬래시 별모양 주석 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   사용자가 제공하는 텍스트를 나타냅니다. 사이의 텍스트는 / * 및 \*/ 서버에서 평가 되지 않습니다.  
   

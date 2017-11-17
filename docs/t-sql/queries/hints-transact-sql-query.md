@@ -3,8 +3,11 @@ title: "쿼리 힌트 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -67,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---query"></a>쿼리 힌트 (Transact SQL)-
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   쿼리 힌트는 해당 힌트가 전체 쿼리에 사용해야 하는 힌트임을 나타냅니다. 문의 모든 연산자에 영향을 줍니다. 기본 쿼리에 UNION이 포함된 경우 UNION 연산과 연관된 마지막 쿼리에만 OPTION 절을 포함할 수 있습니다. 쿼리 힌트의 일부로 지정 된 된 [OPTION 절](../../t-sql/queries/option-clause-transact-sql.md)합니다. 하나 이상의 쿼리 힌트로 인해 쿼리 최적화 프로그램에서 유효한 계획을 생성할 수 없는 경우 8622 오류가 발생합니다.  
   

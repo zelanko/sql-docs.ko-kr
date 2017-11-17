@@ -2,9 +2,12 @@
 title: "테이블 만들기 (자습서) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="lesson-1-2---creating-a-table"></a>단원 1-2-테이블 만들기
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 테이블을 만들려면 테이블의 이름과 테이블에 있는 각 열의 이름 및 데이터 형식을 제공해야 합니다. 또한 각 열에서 Null 값이 허용되는지 여부를 나타내는 것이 좋습니다. 테이블을 만들려면 테이블이 포함될 스키마에 대한 `CREATE TABLE` 권한 및 `ALTER SCHEMA` 권한이 있어야 합니다. `db_ddladmin` 고정 데이터베이스 역할에는 이러한 권한이 있습니다.  
   

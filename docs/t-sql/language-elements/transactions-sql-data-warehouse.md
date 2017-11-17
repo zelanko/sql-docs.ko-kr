@@ -3,8 +3,11 @@ title: "트랜잭션 (SQL 데이터 웨어하우스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transactions-sql-data-warehouse"></a>트랜잭션 (SQL 데이터 웨어하우스)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   트랜잭션이 완전히 커밋되거나 롤백 전체적으로 하는 하나 이상의 데이터베이스 문 그룹입니다. 각 트랜잭션에 원자성, 일관성, 격리성 및 내구성 (ACID). 트랜잭션이 성공 하면 그에 속한 모든 문이 커밋됩니다. 트랜잭션이 실패 하면 하에 있으면 그룹에는 문 중 하나 이상 실패 하면 전체 그룹이 롤백됩니다.  
   

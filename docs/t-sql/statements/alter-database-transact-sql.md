@@ -3,8 +3,11 @@ title: ALTER DATABASE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 또는 데이터베이스와 연관된 파일 및 파일 그룹을 수정합니다. 데이터베이스의 파일 및 파일 그룹 추가 또는 제거, 데이터베이스 또는 데이터베이스 내 파일 및 파일 그룹 특성 변경, 데이터베이스 데이터 정렬 변경 및 데이터베이스 옵션 설정을 수행합니다. 데이터베이스 스냅숏은 수정할 수 없습니다. 복제와 관련 된 데이터베이스 옵션을 수정 하려면 사용 하 여 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)합니다.  
    

@@ -1,11 +1,13 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   데이터베이스에 열 마스터 키 메타 데이터 개체를 만듭니다. 보호 하는 데 사용 되는 외부 키 저장소에 저장 된 키를 나타내는 열 마스터 키 메타 데이터 항목 (암호화) 열 암호화 키를 사용 하는 경우는 [상시 암호화 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 기능입니다. 키 회전;에 대 한 여러 열 마스터 키 허용 보안 향상을 위해 키를 주기적으로 변경 합니다. 개체 탐색기를 사용 하 여 키 저장소와 데이터베이스에 해당 메타 데이터 개체에 열 마스터 키를 만들 수 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 PowerShell입니다. 자세한 내용은 참조 [키 관리 개요 상시 암호화를 위한](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)합니다.  
   

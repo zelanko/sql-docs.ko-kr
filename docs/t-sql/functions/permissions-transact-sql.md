@@ -3,8 +3,11 @@ title: "사용 권한 (TRANSACT-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 사용자의 문, 개체 또는 열 사용 권한을 나타내는 비트맵이 포함된 값을 반환합니다.  
   

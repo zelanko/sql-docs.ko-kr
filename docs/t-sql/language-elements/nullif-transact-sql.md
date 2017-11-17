@@ -3,8 +3,11 @@ title: NULLIF (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="nullif-transact-sql"></a>NULLIF(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   지정된 두 식이 같으면 Null 값을 반환합니다. 예를 들어 `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` 두 입력된 값이 동일 하기 때문에 첫 번째 열 (4 및 4)에 대 한 NULL을 반환 합니다. 두 입력된 값이 다르기 때문에 두 번째 열의 첫 번째 값 (5)를 반환 합니다. 
   

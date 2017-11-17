@@ -3,8 +3,11 @@ title: "GRANT 거부 REVOKE Perms-Azure SQL 데이터 및 병렬 데이터 웨�
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE (Azure SQL 데이터 웨어하우스, 병렬 데이터 웨어하우스)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   사용 하 여 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **GRANT** 및 **DENY** 는 권한을 부여 하거나 거부 하는 문을 (같은 **업데이트**) 보안 개체 (예: 데이터베이스, 테이블, 보기에 등입니다.) 보안 주체 (로그인, 데이터베이스 사용자 또는 데이터베이스 역할)에. 사용 하 여 **해지** 를 권한 부여를 제거 하거나 사용 권한 거부 합니다.  
   

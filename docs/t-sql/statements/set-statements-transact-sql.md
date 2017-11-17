@@ -3,8 +3,11 @@ title: "SET 문 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-statements-transact-sql"></a>SET 문(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍 언어는 특정 정보를 처리하는 현재 세션을 변경할 수 있는 몇 가지 SET 문을 제공합니다. SET 문은 다음 표에 표시된 범주별로 그룹화됩니다.  
   

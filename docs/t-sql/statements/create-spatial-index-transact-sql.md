@@ -3,8 +3,11 @@ title: CREATE SPATIAL INDEX (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정한 테이블 및 열에 공간 인덱스를 만듭니다. 인덱스는 테이블에 데이터를 넣기 전에 만들 수 있습니다. 정규화된 데이터베이스 이름을 지정하여 다른 데이터베이스에 있는 테이블이나 뷰에 인덱스를 만들 수도 있습니다. 공간 인덱스를 사용하려면 클러스터형 기본 키를 포함할 테이블이 필요합니다. 공간 인덱스에 대 한 정보를 참조 하십시오. [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)합니다.  
   

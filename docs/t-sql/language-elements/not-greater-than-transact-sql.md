@@ -3,8 +3,11 @@ title: "!&gt; (보다 크지 않음) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (보다 크지 않음) (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   두 식을 비교합니다(비교 연산자).   Null이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크지 않으면 결과는 TRUE이고 그렇지 않으면 결과는 FALSE입니다. =(등가) 비교 연산자와 달리 두 NULL 값에 대한 >= 비교의 결과는 ANSI_NULLS 설정에 따라 달라지지 않습니다.  
   

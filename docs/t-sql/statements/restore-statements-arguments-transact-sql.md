@@ -3,8 +3,11 @@ title: "RESTORE 인수 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문-인수 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 RESTORE {DATABASE|LOG} 문과 관련 보조 문 집합인 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY의 구문 섹션에 설명되어 있는 인수에 대해 설명합니다. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.  
   

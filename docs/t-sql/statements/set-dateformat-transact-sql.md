@@ -3,8 +3,11 @@ title: SET DATEFORMAT (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   이해를 돕기 위해 월, 일 및 연도 날짜 부분의 순서를 설정 **날짜**, **smalldatetime**, **datetime**, **datetime2** 및 **datetimeoffset** 문자열입니다.  
   

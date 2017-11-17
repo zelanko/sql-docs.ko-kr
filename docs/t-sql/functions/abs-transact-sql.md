@@ -3,8 +3,11 @@ title: ABS (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="abs-transact-sql"></a>ABS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 지정한 수식의 절대(양수) 값을 반환하는 수치 연산 함수입니다. (`ABS` 변경 음수 양수 값에는 값입니다. `ABS`0에 영향을 주지 양수 값 또는.)
   

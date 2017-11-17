@@ -3,8 +3,11 @@ title: "ShortestLineTo (geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   반환 된 **LineString** 두 사이의 최단 거리를 나타내는 두 점과 사용 하 여 인스턴스 **geography** 인스턴스. 길이 **LineString** 반환 된 인스턴스는 둘 사이의 거리 **geography** 인스턴스.  
   

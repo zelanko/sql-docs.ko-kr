@@ -3,8 +3,11 @@ title: "비교 연산자 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="comparison-operators-transact-sql"></a>비교 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   비교 연산자는 두 식이 동일한지 여부를 테스트합니다. 비교 연산자의 식 제외한 모든 식에서 사용할 수 있습니다는 **텍스트**, **ntext**, 또는 **이미지** 데이터 형식입니다. 다음 표에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 비교 연산자를 나열합니다.  
   

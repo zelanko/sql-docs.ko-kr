@@ -3,8 +3,11 @@ title: "식 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 단일 데이터 값을 얻기 위해 평가하는 기호와 연산자 조합입니다. 단순 식으로는 단일 상수, 변수, 열 또는 스칼라 함수가 있습니다. 연산자를 사용하면 두 개 이상의 단순 식을 결합하여 복합 식으로 만들 수 있습니다.  
   

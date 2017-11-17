@@ -3,8 +3,11 @@ title: "ALTER DATABASE 파일 및 파일 그룹 옵션 (Transact SQL) | Microsof
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -54,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact SQL) 파일 및 파일 그룹 옵션 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스와 연결된 파일 및 파일 그룹을 수정합니다. 데이터베이스의 파일과 파일 그룹을 추가 또는 제거하고 데이터베이스 또는 해당 파일과 파일 그룹의 특성을 변경합니다. 다른 ALTER DATABASE 옵션을 참조 하세요. [ALTER database&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
   

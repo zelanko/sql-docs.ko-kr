@@ -3,8 +3,11 @@ title: "다음과 같은 경우... ELSE (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. IF 키워드 및 조건 다음에 이어지는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 부울 식이 TRUE를 반환하는 경우 즉, 조건이 만족되는 경우 실행됩니다. ELSE 키워드는 선택적이며 IF 조건이 만족되지 않는 경우 즉, 부울 식이 FALSE를 반환하는 경우 실행될 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동반합니다.  
   

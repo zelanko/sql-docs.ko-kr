@@ -3,8 +3,11 @@ title: "체크섬 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 테이블의 행이나 식 목록에 대해 계산한 체크섬 값을 반환합니다. CHECKSUM 값은 해시 인덱스를 작성하는 데 사용하기 위한 것입니다.
   

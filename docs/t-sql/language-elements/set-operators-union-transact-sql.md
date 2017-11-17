@@ -3,8 +3,11 @@ title: UNION (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-operators---union-transact-sql"></a>집합 연산자-UNION (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   둘 이상의 쿼리 결과를 각 해당 쿼리에 속하는 모든 행이 포함된 하나의 결과 집합으로 결합합니다. UNION 연산은 두 테이블의 열을 결합하는 조인을 사용하는 것과는 다릅니다.  
   

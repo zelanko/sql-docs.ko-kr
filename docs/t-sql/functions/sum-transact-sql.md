@@ -3,8 +3,11 @@ title: SUM (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="sum-transact-sql"></a>SUM(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   식의 모든 값 또는 DISTINCT 값의 합계를 반환합니다. SUM은 숫자 열에서만 사용할 수 있습니다. Null 값은 무시됩니다.  
   

@@ -3,8 +3,11 @@ title: "!&lt; (보다 작지 않음) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt; (보다 작지 않음) (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   두 식을 비교합니다(비교 연산자).   Null이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 작지 않으면 결과는 TRUE이고 그렇지 않으면 결과는 FALSE입니다. 항목을 참조 중 하나 또는 두 개의 피연산자가 NULL 이면 [SET ansi_nulls&#40; Transact SQL &#41; ](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   

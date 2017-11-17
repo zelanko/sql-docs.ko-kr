@@ -1,11 +1,13 @@
 ---
 title: "JSON 함수 (Transact SQL) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -26,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="json-functions-transact-sql"></a>JSON 함수 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 유효성을 검사 하거나 JSON 텍스트를 변경 또는 간단 하거나 복잡 한 값을 추출 하려면이 섹션에 있는 페이지의 설명 하는 함수를 사용 합니다.  
   

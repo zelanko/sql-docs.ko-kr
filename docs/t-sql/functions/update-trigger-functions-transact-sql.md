@@ -3,8 +3,11 @@ title: Update () (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="update---trigger-functions-transact-sql"></a>업데이트-트리거 함수 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   테이블 또는 뷰의 지정된 열에서 INSERT 또는 UPDATE를 시도했는지 여부를 나타내는 부울 값을 반환합니다. UPDATE()는 트리거가 특정 동작을 실행해야 하는지 여부를 테스트하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거 내의 어디서나 사용할 수 있습니다.  
   

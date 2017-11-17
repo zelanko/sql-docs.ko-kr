@@ -3,8 +3,11 @@ title: PWDCOMPARE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   암호를 해시하고 해당 해시를 기존 암호의 해시와 비교합니다. PWDCOMPARE를 사용하여 빈 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호 또는 일반적인 약한 암호를 검색할 수 있습니다.  
   

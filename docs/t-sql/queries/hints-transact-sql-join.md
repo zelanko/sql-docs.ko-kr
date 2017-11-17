@@ -3,8 +3,11 @@ title: "조인 힌트 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---join"></a>조인 힌트 (Transact SQL)-
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   조인 힌트는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 쿼리 최적화 프로그램이 두 테이블 간의 조인 전략을 강제 적용하도록 지정합니다. 조인 및 조인 구문에 대 한 일반 정보를 참조 하십시오. [from&#40; Transact SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
   

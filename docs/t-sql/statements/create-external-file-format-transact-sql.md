@@ -3,8 +3,11 @@ title: "외부 파일 형식 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-external-file-format-transact-sql"></a>외부 파일 형식 (Transact SQL) 만들기
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Hadoop, Azure blob 저장소 또는 Azure 데이터 레이크 저장소에 저장 된 외부 데이터용 PolyBase 외부 파일 형식 정을 만듭니다. 외부 파일 형식 만들기 PolyBase 외부 테이블을 만들기 위한 필수 구성 요소입니다. 외부 파일 형식을 만들어서 여 외부 테이블이 참조 하는 데이터의 실제 레이아웃을 지정 합니다.  
   

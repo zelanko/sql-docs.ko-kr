@@ -3,8 +3,11 @@ title: "ALTER INDEX (선택적 XML 인덱스) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX(선택적 XML 인덱스)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   기존 선택적 XML 인덱스를 수정합니다. ALTER INDEX 문은 다음 항목 중 하나 이상을 변경합니다.  
   

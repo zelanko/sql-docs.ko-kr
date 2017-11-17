@@ -3,8 +3,11 @@ title: CERTPRIVATEKEY (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 인증서의 개인 키를 이진 형식으로 반환합니다. 이 함수는 세 인수를 사용합니다.
 -   인증서 ID  

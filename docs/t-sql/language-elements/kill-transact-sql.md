@@ -3,8 +3,11 @@ title: KILL (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -46,7 +49,7 @@ ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   세션 ID 또는 작업 단위(UOW)를 기반으로 하는 사용자 프로세스를 종료합니다. 지정된 된 세션 ID 또는 UOW에 실행 취소 하려면 얼마나 많은 작업이 경우 KILL 문을 완료, 특히 작업이 많고 긴 트랜잭션을 롤백하는 데 약간의 시간이 걸릴 수 있습니다.  
   

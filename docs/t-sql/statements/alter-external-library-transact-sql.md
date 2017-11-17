@@ -2,9 +2,12 @@
 title: "외부 라이브러리 (Transact SQL) ALTER | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: 
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - r-services
 ms.tgt_pltfrm: 

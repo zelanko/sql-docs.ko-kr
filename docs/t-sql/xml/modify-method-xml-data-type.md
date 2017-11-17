@@ -3,8 +3,11 @@ title: "modify () 메서드 (xml 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="modify-method-xml-data-type"></a>modify() 메서드(xml 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   XML 문서의 내용을 수정합니다. 이 메서드를 사용 하 여의 내용을 수정 하는 **xml** 형식 변수 또는 열입니다. 이 메서드는 XML DML 문을 사용하여 XML 데이터에서 노드를 삽입, 업데이트 또는 삭제합니다. **modify ()** 의 메서드는 **xml** UPDATE 문의 SET 절에서 데이터 형식 에서만 사용할 수 있습니다.  
   

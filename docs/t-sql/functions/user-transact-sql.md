@@ -3,8 +3,11 @@ title: "사용자 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="user-transact-sql"></a>USER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   기본값이 지정되지 않은 경우에 현재 사용자의 데이터베이스 사용자 이름에 대해 시스템이 제공한 값을 테이블에 삽입할 수 있도록 허용합니다.  
   

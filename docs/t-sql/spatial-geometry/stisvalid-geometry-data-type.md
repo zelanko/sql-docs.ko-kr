@@ -3,8 +3,11 @@ title: "STIsValid (geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이면 true를 반환은 **geometry** 인스턴스가 제대로 구성 된 해당 Open Geospatial Consortium (OGC) 형식을 기반으로 합니다. 되었으면 false를 반환 된 **기 하 도형** 인스턴스 형식이 잘못 되었습니다.
   

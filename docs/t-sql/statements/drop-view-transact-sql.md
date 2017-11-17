@@ -1,11 +1,13 @@
 ---
 title: DROP VIEW (TRANSACT-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 데이터베이스에서 하나 이상의 뷰를 제거합니다. DROP VIEW는 인덱싱된 뷰에 대해 실행할 수 있습니다.  
   

@@ -3,8 +3,11 @@ title: DBCC FREEPROCCACHE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
 계획 캐시에서 모든 요소를 제거하거나, 계획 핸들이나 SQL 핸들을 지정하여 계획 캐시에서 특정 계획을 제거하거나, 지정한 리소스 풀에 연결된 모든 캐시 항목을 제거합니다.
 

@@ -3,8 +3,11 @@ title: "트랜잭션 커밋 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   성공적인 암시적 트랜잭션이나 명시적 트랜잭션의 끝을 표시합니다. @ If@TRANCOUNT 1 이면 COMMIT TRANSACTION을 사용 하면 @ 감소 고 트랜잭션에서 보유 한 리소스를 해제 하는 데이터베이스의 영구적인 부분이 트랜잭션이 시작 된 이후로 수행 된 모든 데이터 수정 내용을@TRANCOUNT 0입니다. @ If@TRANCOUNT @ 1 이면 COMMIT TRANSACTION 감소 보다 크면@TRANCOUNT 1과 트랜잭션이 의해서만 활성 상태를 유지 합니다.  
   

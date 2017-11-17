@@ -2,29 +2,34 @@
 title: "열 집합 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/30/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33ffb3b6bce237503e40fc5609f5cc0334d62167
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ae01121fcb9c3cfaf67297fee281979a7ee8627
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="use-column-sets"></a>열 집합 사용
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   스파스 열을 사용하는 테이블에서는 테이블의 모든 스파스 열을 반환하는 열 집합을 지정할 수 있습니다. 열 집합은 구조화된 출력으로 테이블의 모든 스파스 열을 결합하는 형식화되지 않은 XML 표현입니다. 열 집합은 열 집합이 테이블에 물리적으로 저장되지 않는다는 점에서 계산 열과 유사하며, 직접 업데이트할 수 있다는 점에서 계산 열과 다릅니다.  
   
@@ -264,3 +269,4 @@ GO
  [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)  
   
   
+

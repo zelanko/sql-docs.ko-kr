@@ -1,11 +1,13 @@
 ---
 title: CREATE COLUMN ENCRYPTION KEY (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   지정 된 열 마스터 키로 암호화 된 값의 초기 집합 열 암호화 키를 만듭니다. 메타 데이터 작업입니다. CEK는 열 마스터 키 회전을 허용 하는 최대 12 개의 값을 가질 수 있습니다. CEK 만들기 작업은 필요한를 사용 하 여 데이터베이스의 모든 열을 암호화할 수 있습니다는 [상시 암호화 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 기능입니다. CEK의를 사용 하 여 만들 수도 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 사용 하 여는 CMK 정의 해야 하는 CEK를 만들기 전에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 문.  
   

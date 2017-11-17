@@ -3,8 +3,11 @@ title: "DBCC SHRINKLOG (Azure SQL 데이터 웨어하우스) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +27,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL 데이터 웨어하우스)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 트랜잭션 로그의 크기를 줄이는 *기기에서* 현재 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스입니다. 트랜잭션 로그를 축소 하기 위해 데이터 조각화를 방지 합니다. 시간이 지남에 따라 데이터베이스 트랜잭션 로그에는 조각화 하 고 비효율적인 될 수 있습니다. DBCC SHRINKLOG를 사용 하 여 조각화를 줄이고 로그 크기를 줄입니다.
   

@@ -3,8 +3,11 @@ title: "CREATE XML INDEX (선택적 XML 인덱스) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX(선택적 XML 인덱스)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   기존 선택적 XML 인덱스로 이미 인덱싱된 단일 경로에서 새 보조 선택적 XML 인덱스를 만듭니다. 또한 주 선택적 XML 인덱스를 만들 수도 있습니다. 자세한 내용은 참조 [Create, Alter 및 Drop 선택적 XML 인덱스](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)합니다.  
   

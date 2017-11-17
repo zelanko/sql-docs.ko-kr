@@ -3,8 +3,11 @@ title: "복합 연산자 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="compound-operators-transact-sql"></a>복합 연산자(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   복합 연산자는 특정 연산을 실행하고 원래 값을 연산 결과로 설정합니다. 예를 들어 변수 @x 35 일 후 equals @x + = 2는 원래 값의 @x, 2 및 집합 추가 @x 를 새 값 (37)입니다.  
   

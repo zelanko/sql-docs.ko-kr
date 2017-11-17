@@ -1,11 +1,13 @@
 ---
 title: OPENJSON (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -31,7 +33,7 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** JSON 텍스트를 구문 분석 하 고 JSON 입력의 행과 열으로 개체 및 속성을 반환 하는 테이블 반환 함수입니다. 즉, **OPENJSON** JSON 문서를 통해 행 집합 뷰를 제공 합니다. 행 집합 및 열을 채우는 데 사용 되는 JSON 속성 경로에 열을 명시적으로 지정할 수 있습니다. 이후 **OPENJSON** 사용할 수는 행 집합 반환을 **OPENJSON** 에 `FROM` 절은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 처럼 다른 테이블, 뷰 또는 테이블 반환 함수를 사용할 수 있습니다.  
   

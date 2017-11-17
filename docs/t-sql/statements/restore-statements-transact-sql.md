@@ -3,8 +3,11 @@ title: "복원 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -52,7 +55,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   BACKUP 명령을 사용하여 만든 백업을 복원합니다. 이 명령을 사용하면 다음과 같은 복원 시나리오를 수행할 수 있습니다.  
   

@@ -3,8 +3,11 @@ title: "파티션 함수 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 데이터베이스에서 지정된 열 값에 기반하여 테이블 또는 인덱스의 행을 파티션에 매핑하는 함수를 만듭니다. 분할된 테이블 또는 인덱스를 만드는 첫 번째 단계는 CREATE PARTITION FUNCTION을 사용하는 것입니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 테이블이나 인덱스 하나에 파티션을 최대 15,000개까지 포함할 수 있습니다.  
   

@@ -3,8 +3,11 @@ title: "OVER 절 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="select---over-clause-transact-sql"></a>선택-OVER 절 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   관련 창 함수를 적용하기 전에 행 집합의 분할과 순서를 결정합니다. 즉, OVER 절은 쿼리 결과 집합 내의 창 또는 사용자 지정 행 집합을 정의합니다. 그런 다음 창 함수가 창의 각 행에 대한 값을 계산합니다. OVER 절에 함수를 사용하여 이동 평균, 누적 집계, 누계 또는 그룹 결과당 상위 N개 결과 등의 집계된 값을 계산할 수 있습니다.  
   

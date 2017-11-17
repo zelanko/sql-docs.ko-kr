@@ -3,8 +3,11 @@ title: "역할 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 데이터베이스에 새 데이터베이스 역할을 만듭니다.  
   

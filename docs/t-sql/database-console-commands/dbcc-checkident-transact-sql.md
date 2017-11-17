@@ -3,8 +3,11 @@ title: DBCC CHECKIDENT (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지정한 테이블의 현재 ID 값을 검사하고 필요에 따라 변경합니다. DBCC CHECKIDENT를 사용하여 ID 열의 새 현재 ID 값을 수동으로 설정할 수도 있습니다.  
    

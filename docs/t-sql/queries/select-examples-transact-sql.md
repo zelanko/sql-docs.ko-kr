@@ -3,8 +3,11 @@ title: "예제 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 예(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 사용 하는 예제는 [선택](../../t-sql/queries/select-transact-sql.md) 문.  
   

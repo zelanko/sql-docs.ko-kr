@@ -3,8 +3,11 @@ title: "보안 함수 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="security-functions-transact-sql"></a>보안 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   다음 보안 함수는 보안 관리에 유용한 정보를 반환합니다. 추가 기능 아래에 나열 됩니다 [암호화 함수 &#40; Transact SQL &#41; ](../../t-sql/functions/cryptographic-functions-transact-sql.md).  
   

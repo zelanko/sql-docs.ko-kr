@@ -3,8 +3,11 @@ title: '@@CURSOR_ROWS (Transact SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>& #x 40; & #x 40; CURSOR_ROWS (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 현재 연결에 대해 열려 있는 마지막 커서에서 한정하는 행 수를 반환합니다. 성능 향상을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 큰 키 집합과 정적 커서를 비동기식으로 채울 수 있습니다. @@CURSOR_ROWS 커서를 한 정하는 행 수가 @ 시간에 검색 됩니다 확인 하기 위해 호출할 수@CURSOR_ROWS 호출 됩니다.
   

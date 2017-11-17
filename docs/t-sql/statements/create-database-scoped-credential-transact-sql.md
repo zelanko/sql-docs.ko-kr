@@ -3,8 +3,11 @@ title: "데이터베이스 범위 이름 자격 증명 (Transact SQL) 만들기 
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>데이터베이스 범위 이름 자격 증명 (Transact SQL) 만들기
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   데이터베이스 자격 증명을 만듭니다. 데이터베이스 자격 증명은 서버 로그인 또는 데이터베이스 사용자에 매핑되지 않습니다. 자격 증명은 데이터베이스에 대 한 액세스가 필요한 작업을 수행 하 고 언제 든 지 외부 위치에 대 한 액세스를 데이터베이스에서 사용 됩니다.  
   

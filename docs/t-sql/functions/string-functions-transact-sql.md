@@ -3,8 +3,11 @@ title: "문자열 함수 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="string-functions-transact-sql"></a>문자열 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   다음 스칼라 함수는 문자열 입력 값에 대한 작업을 수행하고 문자열 또는 숫자 값을 반환합니다.  
   

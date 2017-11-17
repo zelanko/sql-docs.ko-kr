@@ -3,8 +3,11 @@ title: "추적 플래그 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-추적 플래그 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 추적 플래그는 특정 서버의 특성을 임시로 설정하거나 특정 동작을 중지시키는 데 사용합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때 추적 플래그 3205가 설정되면 테이프 드라이버의 하드웨어 압축을 사용할 수 없습니다. 추적 플래그는 주로 성능 문제를 진단하거나 저장 프로시저 또는 복잡한 컴퓨터 시스템을 디버깅하는 데 사용됩니다.
   

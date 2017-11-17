@@ -3,8 +3,11 @@ title: "SQL Server 데이터 정렬 이름 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 데이터 정렬 이름(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬의 데이터 정렬 이름을 지정하는 단일 문자열입니다.  
   

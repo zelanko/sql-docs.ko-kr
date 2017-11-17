@@ -3,8 +3,11 @@ title: "STNumCurves (geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이 메서드가 반환 있는 곡선 개수는 **기 하 도형** 인스턴스가 1 차원 공간 데이터 형식에 있으면 인스턴스. 1 차원 공간 데이터 형식에는 **LineString**, **CircularString**, 및 **CompoundCurve**합니다. `STNumCurves`(); 단순 형식 에서만 작동 작동 하지 않습니다 **geometry** 컬렉션 같은 **MultiLineString**합니다.
   

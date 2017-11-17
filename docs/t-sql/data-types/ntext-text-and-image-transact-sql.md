@@ -3,8 +3,11 @@ title: "ntext, text 및 image (TRANSACT-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext, text 및 image(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 대용량의 유니코드 및 비유니코드 문자와 이진 데이터를 저장하기 위한 고정 및 가변 길이 데이터 형식입니다. 유니코드 데이터는 UNICODE UCS-2 문자 집합을 사용합니다.
   

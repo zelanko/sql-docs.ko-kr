@@ -3,8 +3,11 @@ title: BEGIN TRANSACTION (TRANSACT-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   명시적 로컬 트랜잭션의 시작 위치를 표시합니다. 명시적 트랜잭션이 BEGIN TRANSACTION 문으로 시작 하 고 COMMIT 또는 ROLLBACK 문을 사용 하 여 종료 합니다.  
 

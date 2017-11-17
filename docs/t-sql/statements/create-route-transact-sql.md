@@ -3,8 +3,11 @@ title: "경로 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스에 대한 라우팅 테이블에 새 경로를 추가합니다. 보내는 메시지에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 로컬 데이터베이스의 라우팅 테이블을 확인하여 라우팅을 결정합니다. 다른 인스턴스에서 나오는 대화에서 메시지를 전달 될 메시지를 포함 하 여 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 에서 경로 확인 **msdb**합니다.  
   

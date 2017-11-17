@@ -3,8 +3,11 @@ title: ROLLBACK TRANSACTION (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   명시적 또는 암시적인 트랜잭션을 트랜잭션의 처음이나 트랜잭션 내의 저장점으로 롤백합니다. ROLLBACK TRANSACTION을 사용하여 트랜잭션의 시작 이후 또는 저장점까지의 모든 데이터 수정 사항을 지울 수 있습니다. 또한 트랜잭션에서 보유한 리소스도 해제합니다.  
   

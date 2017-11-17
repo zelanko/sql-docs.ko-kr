@@ -3,8 +3,11 @@ title: ALTER ASSEMBLY (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   어셈블리의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 속성을 수정하여 어셈블리를 변경합니다. ALTER ASSEMBLY를 새로 고치고 어셈블리의 최신 복사본으로는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 구현을 유지 하 고 추가 하거나 연관 된 파일을 제거 하는 모듈입니다. 어셈블리를 사용 하 여 만들어진 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)합니다.  
 

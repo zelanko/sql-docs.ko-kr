@@ -3,8 +3,11 @@ title: DECLARE CURSOR (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   스크롤 동작, 커서가 작동하는 결과 집합을 구축하는 데 사용되는 쿼리 등 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 특성을 정의합니다. DECLARE CURSOR는 ISO 표준 기반의 구문과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 확장 집합을 사용하는 구문을 모두 허용합니다.  
   

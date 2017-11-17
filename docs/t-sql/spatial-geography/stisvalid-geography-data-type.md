@@ -3,8 +3,11 @@ title: "STIsValid (geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   이면 true를 반환은 **geography** 인스턴스가 잘 구성 되 고 해당 Open Geospatial Consortium (OGC) 형식을 기반으로 올바른 geography 개체로 인식 합니다. 되었으면 false를 반환 된 **geography** 인스턴스 형식이 잘못 되었습니다. 이 메서드는 정확합니다.  
   

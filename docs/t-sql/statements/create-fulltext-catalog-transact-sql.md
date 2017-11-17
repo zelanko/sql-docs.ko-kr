@@ -3,8 +3,11 @@ title: CREATE FULLTEXT CATALOG (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스에 대한 전체 텍스트 카탈로그를 만듭니다. 전체 텍스트 카탈로그 하나에 전체 텍스트 인덱스는 여러 개 있을 수 있지만 각 전체 텍스트 인덱스는 전체 텍스트 카탈로그 하나에만 속할 수 있습니다. 각 데이터베이스에는 전체 텍스트 카탈로그가 없거나 하나 이상 포함될 수 있습니다.  
   

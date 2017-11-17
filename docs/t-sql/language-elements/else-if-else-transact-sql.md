@@ -3,8 +3,11 @@ title: "ELSE (IF... 다른) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 (*sql_statement*) 다음의 *Boolean_expression*면 실행 되는 *Boolean_expression* TRUE로 평가 합니다. 선택적인 ELSE 키워드는는 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 때 실행 *Boolean_expression* FALSE 또는 NULL로 계산 합니다.  
   

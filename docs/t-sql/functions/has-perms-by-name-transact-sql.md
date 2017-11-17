@@ -3,8 +3,11 @@ title: HAS_PERMS_BY_NAME (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   보안 개체에 대한 현재 사용자의 유효 사용 권한을 평가합니다. 관련된 함수는 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)합니다.  
   

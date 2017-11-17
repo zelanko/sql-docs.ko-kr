@@ -3,8 +3,11 @@ title: "AsBinaryZM (geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Open Geospatial Consortium (OGC) wkb (WELL-KNOWN Binary) 표현을 반환는 **geometry** 인스턴스 사용 하 여 보강 된 **Z** (높이) 및 **M** (측정값) 인스턴스에서 얻어진 값입니다.
   

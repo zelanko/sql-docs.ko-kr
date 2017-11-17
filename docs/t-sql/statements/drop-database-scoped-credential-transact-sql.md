@@ -3,8 +3,11 @@ title: "데이터베이스 범위 이름 자격 증명 (Transact SQL) DROP | Mic
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP 데이터베이스 SCOPED 자격 증명 (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   서버에서 데이터베이스 범위 자격 증명을 제거합니다.  
   

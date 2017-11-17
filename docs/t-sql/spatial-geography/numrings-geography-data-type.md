@@ -3,8 +3,11 @@ title: "NumRings (geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="numrings-geography-data-type"></a>NumRings(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   내부 링의 총 수를 반환 된 **다각형** 인스턴스. 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 형식, 외부 및 내부 링이 구분 되지 않습니다 대로 링은 외부 링으로 사용 될 수 있습니다.  
   

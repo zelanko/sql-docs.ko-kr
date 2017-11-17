@@ -3,8 +3,11 @@ title: RECONFIGURE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/20/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 구성 된 값을 업데이트 (고 **config_value** 열에는 **sp_configure** 결과 집합)의 구성 옵션을 사용 하 여 변경는 **sp_configure** 시스템 저장된 프로시저입니다. 일부 구성 옵션에는 서버를 중지 및 현재 실행 중인 값을 업데이트 하기 위해 다시 시작 필요, 때문에 RECONFIGURE 업데이트 되지 않는 항상 현재 실행 중인 값 (의 **run_value** 열에는 **sp_configure**  결과 집합) 변경 된 구성 값에 대 한 합니다.    
     

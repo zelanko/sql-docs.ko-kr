@@ -3,8 +3,11 @@ title: "메시지 유형 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   새 메시지 유형을 만듭니다. 메시지 유형은 메시지의 이름과 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 해당 이름을 가진 메시지에서 수행하는 유효성 검사를 정의합니다. 대화의 양 측면에 동일한 메시지 유형을 정의해야 합니다.  
   

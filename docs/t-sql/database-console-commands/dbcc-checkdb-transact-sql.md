@@ -1,11 +1,13 @@
 ---
 title: DBCC CHECKDB (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -48,7 +50,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   지정한 데이터베이스에서 다음 작업을 수행하여 모든 개체의 논리적 무결성 및 물리적 무결성을 검사합니다.    
     

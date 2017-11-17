@@ -3,8 +3,11 @@ title: READTEXT (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   읽고 **텍스트**, **ntext**, 또는 **이미지** 에서 값을 **텍스트**, **ntext**, 또는 **이미지**  열에서 지정된 된 수의 바이트를 읽고 지정된 된 오프셋에서 시작 합니다.  
   

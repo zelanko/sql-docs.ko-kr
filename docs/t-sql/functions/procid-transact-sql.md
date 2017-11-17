@@ -3,8 +3,11 @@ title: '@@PROCID (Transact SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40procid-transact-sql"></a>& #x 40; & #x 40; PROCID (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈의 개체 식별자(ID)를 반환합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈은 저장 프로시저, 사용자 정의 함수 또는 트리거일 수 있습니다. @@PROCID CLR 모듈 또는 데이터 처리에에 지정할 수 액세스 공급자입니다.  
   

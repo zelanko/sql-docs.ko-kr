@@ -3,8 +3,11 @@ title: "STGeometryN (geography 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN(geography 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   지정 된 반환 **geography** 요소에는 **GeometryCollection** 또는 그 하위 중 하나입니다. 점의의 하위 형식에 사용 되는 경우는 **GeometryCollection**와 같은 **MultiPoint** 또는 **MultiLineString**,이 메서드는 반환 된 **geography**  N = 1을 사용 하 여 호출 하는 경우 인스턴스.  
   

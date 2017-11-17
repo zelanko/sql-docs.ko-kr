@@ -3,8 +3,11 @@ title: OPENQUERY (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정한 연결된 서버에서 지정한 통과 쿼리를 실행합니다. 이 서버는 OLE DB 데이터 원본입니다. OPENQUERY는 테이블 이름처럼 쿼리의 FROM 절에서 참조될 수 있습니다. 또한 OPENQUERY는 INSERT, UPDATE 또는 DELETE 문의 대상 테이블로 참조될 수도 있습니다. 이것은 OLE DB 공급자 기능에 종속됩니다. 쿼리는 여러 결과 집합을 반환할 수 있지만 OPENQUERY는 첫 번째 것만 반환합니다.  
   

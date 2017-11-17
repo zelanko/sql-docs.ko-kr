@@ -3,8 +3,11 @@ title: "테이블 힌트 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---table"></a>테이블 힌트 (Transact SQL)-
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   테이블 힌트는 잠금 메서드, 하나 이상의 인덱스, Table Scan 또는 Index Seek와 같은 쿼리 처리 연산이나 기타 옵션을 지정하여 DML(데이터 조작 언어) 문이 실행되는 동안 쿼리 최적화 프로그램의 기본 동작을 무시합니다. 테이블 힌트는 DML 문의 FROM 절에서 지정하며 해당 절에서 참조되는 테이블이나 뷰에만 영향을 줍니다.  
   

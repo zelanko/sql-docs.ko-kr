@@ -1,11 +1,13 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   데이터베이스를 추가 또는 삭제 된 암호화 된 값에서 열 암호화 키를 변경 합니다. CEK는 해당 열 마스터 키 회전을 허용 하는 최대 12 개의 값을 가질 수 있습니다. CEK는 사용 하 여 열을 암호화할 때 사용 되는 [상시 암호화 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 기능입니다. CEK 값을 추가 하기 전에 사용 하 여 값을 암호화 하는 데 사용 된 열 마스터 키 정의 해야 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 문.  
   

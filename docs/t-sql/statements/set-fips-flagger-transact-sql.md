@@ -3,8 +3,11 @@ title: SET FIPS_FLAGGER (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   FIPS 127-2 표준을 준수하는지 확인하도록 지정합니다. ISO 표준을 기반으로 합니다. SQL Server FIPS 규격에 대 한 정보를 참조 하십시오. [FIPS 140-2-규격 모드에서 SQL Server 2016을 사용 하는 방법을](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode)합니다. 
   

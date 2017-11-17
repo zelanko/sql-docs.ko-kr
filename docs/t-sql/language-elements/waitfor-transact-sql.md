@@ -3,8 +3,11 @@ title: WAITFOR (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   지정된 시간 또는 시간 간격에 도달하거나 지정된 문이 최소 한 행을 수정 또는 반환할 때까지 일괄 처리, 저장 프로시저 또는 트랜잭션의 실행을 차단합니다.  
   

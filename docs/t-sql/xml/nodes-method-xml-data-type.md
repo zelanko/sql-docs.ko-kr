@@ -3,8 +3,11 @@ title: "nodes () 메서드 (xml 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 메서드(xml 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   **nodes ()** 메서드는 조각으로 나눌 때 유용 프로그램 **xml** 데이터 형식 인스턴스를 관계형 데이터입니다. 이 메서드를 사용하면 새로운 행으로 매핑되는 열을 식별할 수 있습니다.  
   

@@ -3,8 +3,11 @@ title: GOTO (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="goto-transact-sql"></a>GOTO(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   실행 흐름을 지정된 레이블로 변경합니다. GOTO 다음에 이어지는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 건너뛰고 지정된 레이블에서 처리를 계속 이어갑니다. GOTO 문과 레이블은 프로시저, 일괄 처리, 문 블록 등 어디에서나 사용할 수 있습니다. GOTO 문은 중첩될 수 있습니다.  
   

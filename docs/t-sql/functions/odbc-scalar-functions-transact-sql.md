@@ -3,8 +3,11 @@ title: "ODBC 스칼라 함수 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -64,7 +67,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   사용할 수 있습니다 [ODBC 스칼라 함수](http://go.microsoft.com/fwlink/?LinkID=88579) 에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문. 이러한 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해석되고, 저장 프로시저 및 사용자 정의 함수에 사용될 수 있습니다. 여기에는 문자열, 숫자, 시간, 날짜, 간격, 시스템 함수가 포함됩니다.  
   

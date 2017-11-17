@@ -3,8 +3,11 @@ title: "복원, 복구, 백업 (T-SQL) 관리에 대 한 RESTORE 문을 | Micros
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>백업 복원, 복구 및 관리를 위한 RESTORE 문(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   이 섹션에서는 백업을 위한 RESTORE 문에 대해 설명합니다. 백업을 복원 및 복구하기 위한 주 RESTORE {DATABASE | LOG} 문 외에도 여러 가지 보조 RESTORE 문을 사용하여 백업을 관리하고 복원 시퀀스를 계획할 수 있습니다. 이 보조 RESTORE 명령에는 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY가 포함됩니다.  
   

@@ -3,8 +3,11 @@ title: "사용 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/28/2016
 ms.prod: sql-non-specified
+ms.prod_service: pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="use-transact-sql"></a>USE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 컨텍스트를 지정된 데이터베이스나 데이터베이스 스냅숏으로 변경합니다.  
   

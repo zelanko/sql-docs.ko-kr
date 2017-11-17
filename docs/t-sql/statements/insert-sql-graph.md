@@ -2,9 +2,13 @@
 title: "INSERT (SQL 그래프) | Microsoft Docs"
 description: "SQL 그래프 노드 또는 edge 테이블에 대 한 구문을 삽입 합니다."
 ms.date: 05/12/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,9 +31,8 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="insert-sql-graph"></a>INSERT (SQL 그래프)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   하나 이상의 행이 추가 `node` 또는 `edge` 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 
 

@@ -1,11 +1,13 @@
 ---
 title: "테이블 삭제 (Transact SQL) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -50,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   하나 이상의 테이블 정의 및 해당 테이블의 모든 데이터, 인덱스, 트리거, 제약 조건 및 권한 지정을 제거합니다. 모든 보기 또는 삭제 된 테이블을 참조 하는 저장된 프로시저를 명시적으로 삭제 해야를 사용 하 여 [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) 또는 [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md)합니다. 테이블에 종속성을 보고를 사용 하 여 [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)합니다.  
   

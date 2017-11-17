@@ -3,8 +3,11 @@ title: "검색 속성 목록 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   새로운 검색 속성 목록을 만듭니다. 검색 속성 목록은 전체 텍스트 인덱스에 포함할 하나 이상의 검색 속성을 지정하는 데 사용됩니다.  
   

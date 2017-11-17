@@ -3,8 +3,11 @@ title: "BufferWithCurves (geometry 데이터 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves(geometry 데이터 형식)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   반환은 **기 하 도형** 모든 세트를 나타내는 인스턴스 호출에서 거리가 가리키는 **기 하 도형** 인스턴스 보다 작거나 같음는 *거리* 매개 변수입니다.  
   

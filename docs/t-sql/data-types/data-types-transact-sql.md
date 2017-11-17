@@ -3,8 +3,11 @@ title: "데이터 형식 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 9/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -27,9 +30,8 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/27/2017
 
 ---
-
 # <a name="data-types-transact-sql"></a>데이터 형식 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 각 열, 지역 변수, 식 및 매개 변수는 관련된 데이터 형식을 가집니다. 데이터 형식은 개체가 보유할 수 있는 정수 데이터, 문자 데이터, 통화 데이터, 날짜 및 시간 데이터, 이진 문자열 등의 데이터 형식을 지정하는 특성입니다.
   

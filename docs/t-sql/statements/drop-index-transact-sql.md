@@ -1,11 +1,13 @@
 ---
 title: DROP INDEX (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -45,7 +47,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 데이터베이스에서 하나 이상의 관계형 인덱스, 공간 인덱스, 필터링된 인덱스 또는 XML 인덱스를 제거합니다. 클러스터형 인덱스를 삭제하고 MOVE TO 옵션을 지정하여 결과 테이블을 단일 트랜잭션으로 다른 파일 그룹이나 파티션 구성표로 이동할 수 있습니다.  
   

@@ -3,8 +3,11 @@ title: SYSUTCDATETIME (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/01/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   반환 된 **datetime2** 되는 컴퓨터의 시간과 날짜를 포함 하는 값의 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 되 고 합니다. 날짜 및 시간이 UTC (협정 세계시) 시간으로 반환 됩니다. 소수 자릿수 초의 전체 자릿수는 1-7자리입니다. 기본 전체 자릿수는 7자리입니다.  
   

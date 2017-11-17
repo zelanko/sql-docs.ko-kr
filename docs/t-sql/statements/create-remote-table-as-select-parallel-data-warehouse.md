@@ -3,9 +3,11 @@ title: "원격 TABLE AS SELECT (병렬 데이터 웨어하우스) 만들기 | Mi
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>원격 TABLE AS SELECT (병렬 데이터 웨어하우스) 만들기
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   데이터를 선택는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스 및 해당 데이터를 새 테이블에는 SMP 복사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원격 서버의 데이터베이스입니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]MPP 쿼리 원격 복사본에 대 한 데이터를 선택 하려면 처리의 모든 이점을 어플라이언스로 사용 합니다. 이 사용 하 여 필요한 시나리오에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능입니다.  
   

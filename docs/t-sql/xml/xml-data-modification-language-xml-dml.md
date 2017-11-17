@@ -3,8 +3,11 @@ title: "XML 데이터 수정 언어 (XML DML) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML(XML 데이터 수정 언어)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XML DML(XML 데이터 수정 언어)은 XQuery 언어의 확장 언어입니다. W3C에 의해 정의된 바와 같이 XQuery 언어에는 DML(데이터 조작 언어) 부분이 부족합니다. 이 항목 및 XQuery 언어에 도입 하는 XML DML 제공 하는 완벽 한 기능의 쿼리 및 데이터 수정 언어에 대해 사용할 수 있는 **xml** 데이터 형식입니다.  
   

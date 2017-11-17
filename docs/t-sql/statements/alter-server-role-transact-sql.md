@@ -3,8 +3,11 @@ title: ALTER SERVER ROLE (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
 
 서버 역할의 멤버 자격을 변경하거나 사용자 정의 서버 역할의 이름을 변경합니다. 고정 서버 역할은 이름을 바꿀 수 없습니다.  
   

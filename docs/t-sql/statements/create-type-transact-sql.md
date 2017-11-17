@@ -3,8 +3,11 @@ title: "유형 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 현재 데이터베이스에 별칭 데이터 형식 또는 사용자 정의 형식을 만듭니다. 별칭 데이터 형식의 구현은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 시스템 형식을 기반으로 합니다. 사용자 정의 형식에 있는 어셈블리의 클래스를 통해 구현 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 공용 언어 런타임 (CLR). 사용자 정의 형식을 구현 바인딩할 형식의 구현을 포함 하는 CLR 어셈블리를 등록 해야에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)합니다.  
   

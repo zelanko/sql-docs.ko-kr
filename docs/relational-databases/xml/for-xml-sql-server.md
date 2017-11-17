@@ -1,11 +1,15 @@
 ---
-title: "FOR XML(SQL Server) | Microsoft 문서"
+title: FOR XML(SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5e5864c3eec13850a803cdad0bffe40afec17ffe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 259b31233d4d5000b67c9a07d0be36c230dc00f9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="for-xml-sql-server"></a>FOR XML(SQL Server)
-
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
  > 이전 버전의 SQL Server와 관련된 콘텐츠는 [FOR XML(SQL Server)](https://msdn.microsoft.com/en-US/library/ms178107(SQL.120).aspx)을 참조하세요.
 
   SELECT 쿼리는 결과를 행 집합으로 반환합니다. 선택적으로 쿼리에서 FOR XML 절을 지정하면 SQL 쿼리의 서식 결과를 XML로 검색할 수 있습니다. FOR XML 절은 최상위 쿼리 및 하위 쿼리에서 사용할 수 있습니다. 최상위 FOR XML 절은 SELECT 문에서만 사용할 수 있습니다. 하위 쿼리에서는 INSERT, UPDATE 및 DELETE 문에서 FOR XML을 사용할 수 있습니다. 또한 대입 문에서도 사용할 수 있습니다.  
@@ -122,3 +127,4 @@ FOR XML AUTO
  [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   
+

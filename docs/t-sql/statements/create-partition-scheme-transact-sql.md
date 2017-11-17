@@ -3,8 +3,11 @@ title: "파티션 구성표 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 데이터베이스에서 분할된 테이블 또는 인덱스의 파티션을 파일 그룹에 매핑하는 구성표를 만듭니다. 분할된 테이블 또는 인덱스의 파티션 수 및 도메인은 파티션 함수에서 결정됩니다. 파티션 함수는 먼저 만들어야는 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) 파티션 구성표를 만들기 전에 문을 합니다.  
   

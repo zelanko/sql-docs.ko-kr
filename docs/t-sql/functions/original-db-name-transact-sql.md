@@ -3,8 +3,11 @@ title: ORIGINAL_DB_NAME (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   사용자가 데이터베이스 연결 문자열에 지정한 데이터베이스 이름을 반환합니다. 이 사용 하 여 지정 된 데이터베이스는 **sqlcmd-d** 옵션 (사용 하 여 *데이터베이스*) 또는 ODBC 데이터 원본 식 (초기 카탈로그 =*databasename*).  
   

@@ -2,10 +2,14 @@
 title: "복제할 때 CHECK 제약 조건 해제 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - disabling constraints
 - constraints [SQL Server], check
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a74fd0c36ce77e610e326419d3c3f71d22624205
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f8ff552993defe940576ea5cf0a35943a417b1b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="disable-check-constraints-for-replication"></a>복제할 때 CHECK 제약 조건 해제
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 CHECK 제약 조건을 비활성화할 수 있습니다. 명시적으로 복제에 대한 CHECK 제약 조건을 비활성화할 수도 있습니다. 이는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 게시하는 경우 유용할 수 있습니다.  
   
@@ -82,3 +87,4 @@ ms.lasthandoff: 11/09/2017
  [스키마 옵션 지정](../../relational-databases/replication/publish/specify-schema-options.md)  
   
   
+

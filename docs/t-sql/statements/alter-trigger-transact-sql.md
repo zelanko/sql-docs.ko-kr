@@ -1,11 +1,13 @@
 ---
 title: ALTER TRIGGER (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이전에 CREATE TRIGGER 문을 사용해 만든 DML, DDL 또는 LOGON 트리거의 정의를 수정합니다. 트리거는 CREATE TRIGGER를 사용하여 만듭니다. 직접 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 만든 어셈블리의 메서드로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 공용 언어 런타임 (CLR)의 인스턴스에 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. ALTER TRIGGER 문에 사용 되는 매개 변수에 대 한 자세한 내용은 참조 [CREATE trigger&#40; Transact SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
   
