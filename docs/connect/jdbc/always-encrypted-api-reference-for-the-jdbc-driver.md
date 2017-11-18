@@ -3,8 +3,11 @@ title: "상시 암호화는 JDBC 드라이버에 대 한 API 참조 | Microsoft 
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
