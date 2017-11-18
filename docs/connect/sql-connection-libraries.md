@@ -3,9 +3,12 @@ title: "Microsoft SQL 데이터베이스에 대 한 연결 라이브러리 | Mic
 description: "다양 한 클라이언트 프로그래밍 언어의 Microsoft SQL Server 및 Azure SQL 데이터베이스에 연결 하는 모듈에 대 한 다운로드 링크를 제공 합니다."
 author: MightyPen
 ms.service: 
-ms.prod: sql-server
+ms.component: connect
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: develop apps
+ms.custom: 
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017

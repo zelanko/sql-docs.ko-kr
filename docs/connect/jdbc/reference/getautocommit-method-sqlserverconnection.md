@@ -3,8 +3,11 @@ title: "getAutoCommit 메서드 (SQLServerConnection) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,28 +30,28 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/09/2017
 
 ---
-# getAutoCommit 메서드 (SQLServerConnection)
+# <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit 메서드 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   이 대 한 현재 자동 커밋 모드를 검색 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 public boolean getAutoCommit()  
 ```  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  **true 이면** 자동 커밋 모드가 사용 될 경우 **false** 없는 경우.  
   
-## 예외  
+## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## 주의  
+## <a name="remarks"></a>주의  
  이 getAutoCommit 메서드는 java.sql.Connection 인터페이스의 getAutoCommit 메서드에 의해 지정 됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 클래스](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

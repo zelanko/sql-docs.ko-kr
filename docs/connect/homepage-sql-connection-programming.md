@@ -4,6 +4,11 @@ description: "다운로드 및 언어와 SQL Server 나 Azure SQL 데이터베�
 author: MightyPen
 ms.date: 09/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: connect
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - drivers
 ms.topic: article

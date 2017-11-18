@@ -3,8 +3,11 @@ title: "2 단계: Ruby 개발에 대 한 SQL 데이터베이스 만들기 | Micr
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ruby
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

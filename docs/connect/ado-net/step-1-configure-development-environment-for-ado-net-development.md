@@ -3,8 +3,11 @@ title: "1 단계: ADO.NET 개발을 위한 개발 환경 구성 | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ado-net
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

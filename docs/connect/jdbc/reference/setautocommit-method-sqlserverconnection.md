@@ -3,8 +3,11 @@ title: "setAutoCommit 메서드 (SQLServerConnection) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,27 +30,27 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/09/2017
 
 ---
-# setAutoCommit 메서드 (SQLServerConnection)
+# <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit 메서드 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   이 대 한 자동 커밋 모드를 설정 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체 지정 된 상태입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 public void setAutoCommit(boolean value)  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *value*  
   
  **true 이면** 자동 커밋 모드에 대 한 연결을 사용할 수 있도록 **false** 사용 하지 않도록 합니다.  
   
-## 예외  
+## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## 주의  
+## <a name="remarks"></a>주의  
  이 setAutoCommit 메서드는 java.sql.Connection 인터페이스의 setAutoCommit 메서드에 의해 지정 됩니다.  
   
  연결이 자동 커밋 모드이면 해당 연결의 모든 SQL 문이 개별 트랜잭션으로 실행되고 커밋됩니다. SQL 문은에 대 한 호출으로 종료 되 트랜잭션으로 그룹화 되어 그렇지 않은 경우는 [커밋](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) 메서드 또는 [롤백](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) 메서드. 기본적으로 새 연결은 자동 커밋 모드로 설정됩니다.  
@@ -59,7 +62,7 @@ public void setAutoCommit(boolean value)
 > [!NOTE]  
 >  트랜잭션 도중에 이 메서드를 호출해도 트랜잭션이 커밋됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 클래스](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
