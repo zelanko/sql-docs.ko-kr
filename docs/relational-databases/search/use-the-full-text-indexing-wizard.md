@@ -29,7 +29,7 @@ manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 98fce836048a343f9eb87b2d987d13a294bce59f
 ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2017
 ---
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/09/2017
      d. **인덱스 파일 그룹 선택**  
      전체 텍스트 인덱스를 만들 파일 그룹을 지정합니다.  
   
-     5. 값 선택:  
+     e. 값 선택:  
       |값|설명|  
       |-----------|-----------------|
       |**<default>**| 테이블이나 뷰가 분할되지 않은 경우 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용하려면 선택합니다. 테이블 또는 뷰가 분할된 경우 기본 파일 그룹이 사용됩니다.|
