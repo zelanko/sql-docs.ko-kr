@@ -2,9 +2,12 @@
 title: ALTER MINING STRUCTURE (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE(DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   기존 마이닝 구조를 기반으로 새 마이닝 모델을 만듭니다.  사용 하는 경우는 **ALTER MINING STRUCTURE** 구조 새 마이닝 모델을 만드는 문을 이미 존재 해야 합니다. 반면, 사용 하는 경우에 문에서 [마이닝 모델 만들기 &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), 모델을 만들고 동시에 해당 기본 마이닝 구조를 자동으로 생성 합니다.  
   

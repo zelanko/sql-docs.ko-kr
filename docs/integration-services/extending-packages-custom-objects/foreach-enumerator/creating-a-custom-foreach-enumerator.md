@@ -2,9 +2,12 @@
 title: "사용자 지정 Foreach 열거자 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 

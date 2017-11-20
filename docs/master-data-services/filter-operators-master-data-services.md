@@ -2,23 +2,28 @@
 title: "필터 연산자(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b634ce55f0ba70614432e6d2b38fe1a08ab66d11
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0d83ee33afcd50635a163a56f977e77fc6e6c68a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="filter-operators-master-data-services"></a>필터 연산자(Master Data Services)
   멤버 목록을 필터링할 때 다음과 같은 연산자를 사용할 수 있습니다.  
@@ -40,9 +45,10 @@ ms.lasthandoff: 11/09/2017
 |**작거나 같음**|지정된 조건보다 작거나 같은 특성 값을 반환합니다. 예를 들어 **3** 이하의 숫자로 시작하는 특성 값을 반환하려면 **3**을 입력합니다.|  
 |**일치**|유사 항목 조회 인덱스를 사용하여 결과를 필터링합니다.<br /><br /> **유사성 수준** 필드를 사용하여 특성 값이 지정된 필터 조건과 어느 정도 일치해야 하는지 지정할 수 있습니다(기본값 30%).<br /><br /> **알고리즘** 목록 상자에서 다음 중 하나를 선택합니다.<br /><br /> **Levenshtein**: 한 문자열을 다른 문자열과 비교하기 위해 걸리는 편집 횟수(예: 추가 또는 삭제)를 기반으로 하는 거리입니다. 기본값입니다. 추가 매개 변수는 필요하지 않습니다.<br /><br /> **Jaccard**: 여러 문자열을 비교할 때 가장 효과적인 인덱스입니다. 이 검색에서는 제약 편차의 추가 매개 변수가 지원됩니다(아래 참조).<br /><br /> **Jaro-Winkler**: 중복된 사용자 이름을 찾는 데 가장 많이 사용되는 거리입니다. 이 방법은 다른 방법보다 많은 결과를 반환합니다. 제약 편차는 지원하지 않습니다.<br /><br /> **Longest Common Subsequence**: 패턴의 문자가 구분되어 있을 수 있더라도 순서대로 표시되는 하위 시퀀스에 따라 작동합니다(예: "MSR"은 "MaSteR"의 하위 시퀀스임). 이 검색에서는 제약 편차의 추가 매개 변수가 지원됩니다(아래 참조).<br /><br /> <br /><br /> 참고: **Jaccard** 또는 **최장 공통 하위 시퀀스** 알고리즘의 경우 **제약 편차**를 추가합니다. 0과 1 사이의 소수 백분율로 제공되는 길이 임계값입니다(기본값 .62). 임계값이 낮으면 반환 가능한 일치 항목 수가 늘어납니다.|  
 |**일치하지 않음**|유사 항목 조회 인덱스를 사용하여 결과를 필터링합니다. **유사성 수준** 필드를 사용하여 특성 값이 지정된 필터 조건과 어느 정도 일치하지 않아야 하는지 지정할 수 있습니다.|  
-|**패턴 포함**|.NET Framework 정규식을 사용하여 지정된 패턴에 대한 결과를 필터링합니다. 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.|  
-|**패턴을 포함하지 않음**|.NET Framework 정규식을 사용하여 지정된 패턴과 일치하지 않는 결과를 필터링합니다. 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.|  
+|**패턴 포함**|.NET Framework 정규식을 사용하여 지정된 패턴에 대한 결과를 필터링합니다. 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=164401)를 참조하십시오.|  
+|**패턴을 포함하지 않음**|.NET Framework 정규식을 사용하여 지정된 패턴과 일치하지 않는 결과를 필터링합니다. 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=164401)를 참조하십시오.|  
 |**NULL**|Null인 특성 값을 반환합니다. **NULL** 연산자를 선택한 경우에는 **조건** 필드가 비활성화됩니다.|  
 |**NULL이 아님**|Null이 아닌 특성 값을 반환합니다. **NULL이 아님** 연산자를 선택한 경우에는 **조건** 필드가 비활성화됩니다.|  
   
   
+

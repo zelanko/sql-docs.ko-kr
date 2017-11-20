@@ -2,9 +2,12 @@
 title: SELECT INTO (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="select-into-dmx"></a>SELECT INTO(DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   기존 마이닝 모델의 마이닝 구조를 기반으로 새 마이닝 모델을 만듭니다. **SELECT INTO** 문은 실제 알고리즘에 관련 된 기타 정보와 스키마를 복사 하 여 새 마이닝 모델을 만듭니다.  
   

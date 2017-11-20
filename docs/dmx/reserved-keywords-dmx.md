@@ -2,9 +2,12 @@
 title: "예약 된 키워드 (DMX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="reserved-keywords-dmx"></a>예약어(DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] 를 배타적으로 사용할은 예약어입니다. 예약어는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 DMX 언어 참조에서 정의한 위치가 아닌 다른 DMX(Data Mining Extensions) 문 위치에서는 사용할 수 없습니다. 이러한 제한된 DMX 키워드에는 다음 멤버가 포함됩니다.  
   

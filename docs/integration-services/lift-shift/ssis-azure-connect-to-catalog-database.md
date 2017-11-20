@@ -2,7 +2,12 @@
 title: "Azure에서 SSISDB 카탈로그 데이터베이스에 연결 | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: lift-shift
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - integration-services
 author: douglaslMS

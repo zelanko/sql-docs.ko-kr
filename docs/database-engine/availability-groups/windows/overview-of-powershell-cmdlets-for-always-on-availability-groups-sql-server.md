@@ -2,10 +2,14 @@
 title: "Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d7cbdbe53539560689cdb3b7f8e4db2b09646b7a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: c9b62d5874c2fbe00a1a9508a865f866578ef1db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/31/2017
+
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell은 시스템 관리를 위해 특별히 설계된 태스크 기반 명령줄 셸이자 스크립팅 언어입니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 배포, 관리 및 모니터링할 수 있도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 PowerShell cmdlet 집합을 제공합니다.  
   
@@ -125,3 +130,4 @@ ms.lasthandoff: 11/09/2017
  [SQL Server PowerShell 도움말 보기](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
   
+

@@ -2,12 +2,14 @@
 title: "데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/21/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,20 @@ helpviewer_keywords:
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 514fe566dd9a26d4a6244e8fb067f97678d2dbc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 SQL Server 2016 및 SQL Server 2017에서는 데이터베이스에 대한 DATABASE_COMPATIBILITY 수준이 변경된 후에만 일부 변경 내용이 활성화됩니다. 이 작업은 여러 가지 이유로 수행되었습니다.  
   
 - 업그레이드는 단방향 작업이므로(파일 형식을 다운그레이드할 수 없음) 데이터베이스 내에서 별도 작업에 대한 새로운 기능의 사용을 분리하는 값이 있습니다.  이전 DATABASE_COMPATIBILITY 수준으로 설정을 되돌릴 수는 있습니다.  새 모델은 중단 창 동안 발생해야 하는 것의 수를 줄입니다.  
@@ -62,3 +67,4 @@ SQL Server 2016 및 SQL Server 2017에서는 데이터베이스에 대한 DATABA
  [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
   
   
+

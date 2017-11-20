@@ -2,27 +2,33 @@
 title: "open objects 서버 구성 옵션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: open objects option
+helpviewer_keywords:
+- open objects option
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0c744f522f3ed900d7da97d8486a99a9288258c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e620443786ae337e78062abc8cf99f0a077fbd99
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="open-objects-server-configuration-option"></a>open objects 서버 구성 옵션
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 옵션의 기능은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해제되었으나 아직 **sp_configure**에는 남아 있습니다(설정의 영향 없음). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 열린 데이터베이스 개체 수는 동적으로 관리되며 사용 가능한 메모리에 따라서만 제한됩니다. **open objects** 옵션은 기존 스크립트와의 호환성을 위해 **sp_configure**에서 사용할 수 있습니다.  
   
@@ -33,3 +39,4 @@ ms.lasthandoff: 11/09/2017
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   
+

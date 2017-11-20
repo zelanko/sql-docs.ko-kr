@@ -2,29 +2,34 @@
 title: "ODBC SQL Server 드라이버 버전 검사(Windows) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - driver version number [ODBC]
 - ODBC drivers, version number
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 18feb04d932c92618136823a9c6c020126786354
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc0d054304aadb3f5c8df795dca4ad327090e5c1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>ODBC SQL Server 드라이버 버전 검사(Windows)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   사용자 컴퓨터에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 나 다른 회사에서 제공하는 다양한 ODBC 드라이버가 사용될 수 있습니다. 이 항목에서는 Windows **ODBC 데이터 원본 관리자** 를 사용하여 설치된 ODBC 드라이버의 버전을 확인하는 방법에 대해 설명합니다.  
   
@@ -45,3 +50,4 @@ ms.lasthandoff: 11/09/2017
  [ODBC 데이터 원본 관리자 열기](../../database-engine/configure-windows/open-the-odbc-data-source-administrator.md)  
   
   
+

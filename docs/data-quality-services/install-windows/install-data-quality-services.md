@@ -2,24 +2,27 @@
 title: "Data Quality Services 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/11/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
+
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS)에는 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 및 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**의 두 가지 구성 요소가 포함됩니다.  
@@ -103,9 +106,9 @@ ms.lasthandoff: 11/09/2017
   
     -   **dqs_kb_operator**  
   
-     기본적으로 사용자 계정이 sysadmin 고정 서버 역할의 멤버인 경우 사용자 계정에게 할당된 DQS 역할이 없더라도 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용하여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 에 로그온할 수 있습니다. 세 가지 DQS 역할에 대한 자세한 내용은 [DQS Security](../../data-quality-services/dqs-security.md)을 참조하십시오.  
+     기본적으로 사용자 계정이 sysadmin 고정 서버 역할의 멤버인 경우 사용자 계정에게 할당된 DQS 역할이 없더라도 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용하여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 에 로그온할 수 있습니다. 세 가지 DQS 역할에 대한 자세한 내용은 [DQS 보안](../../data-quality-services/dqs-security.md)을 참조하십시오.  
   
-     자세한 내용은 [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)를 참조하세요.  
+     자세한 내용은 [사용자에게 DQS 역할 부여](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)를 참조하세요.  
   
     > [!NOTE]  
     >  DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스의 경우 이 세 가지 역할을 사용할 수 없습니다.  
@@ -127,3 +130,4 @@ ms.lasthandoff: 11/09/2017
  [DQS에서 설치 및 구성 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   
+

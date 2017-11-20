@@ -2,26 +2,31 @@
 title: "Always On 가용성 그룹이 포함된 Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e61f61c0814d3b5a6e7691203f9da946fc211db7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d4ba885d49b16d3ef6d4796ddcef420b0dc6c149
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Always On 가용성 그룹은 미리 정의된 SQL Server 관계형 데이터베이스 컬렉션으로, 조건이 한 데이터베이스에서 장애 조치(failover)를 트리거하면 전체 데이터베이스에서 함께 장애 조치가 수행되고, 동일한 가용성 그룹에 있는 다른 인스턴스의 미러된 데이터베이스로 요청을 리디렉션합니다. 가용성 그룹을 고가용성 솔루션으로 사용하는 경우 해당 그룹의 데이터베이스를 Analysis Services 테이블 형식 또는 다차원 솔루션의 데이터 원본으로 사용할 수 있습니다. 가용성 데이터베이스를 사용할 경우 데이터 처리 또는 가져오기, 관계형 데이터 직접 쿼리(ROLAP 저장소 또는 DirectQuery 모드 사용), 쓰기 저장과 같은 모든 Analysis Services 작업이 예상대로 작동합니다.  
   
@@ -238,3 +243,4 @@ ms.lasthandoff: 11/09/2017
  [차원 쓰기 저장(writeback) 설정](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   
+

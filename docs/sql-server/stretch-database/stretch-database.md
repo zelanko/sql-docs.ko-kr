@@ -1,28 +1,34 @@
 ---
 title: "Stretch Database | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/27/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Stretch Database
+helpviewer_keywords:
+- Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f4b92e22ff418924950871820b2c43640821bd0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dab64f6d7c2067eea1c2e5249fc3a7089eda6bc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stretch Database는 콜드 데이터를 Microsoft Azure 클라우드에 투명하고 안전하게 마이그레이션합니다.  
   
@@ -71,8 +77,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="what-kind-of-databases-and-tables-are-candidates-for-stretch-database"></a>Stretch Database에 적합한 데이터베이스 및 테이블 종류  
  Stretch Database는 많은 양의 콜드 데이터가 있고 일반적으로 소수의 테이블에 저장된 트랜잭션 데이터베이스를 대상으로 합니다. 이러한 테이블은 1억 개가 넘는 행을 포함할 수 있습니다.  
   
- 
-            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 temporal 테이블 기능을 사용하는 경우 스트레치 데이터베이스를 사용하여 연결된 기록 테이블의 전부 또는 일부를 Azure의 비용 효율적인 저장소로 마이그레이션할 수 있습니다. 자세한 내용은 [시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 임시 테이블 기능을 사용하는 경우 Stretch Database를 사용하여 연결된 기록 테이블의 전부 또는 일부를 Azure의 비용 효율적인 저장소로 마이그레이션할 수 있습니다. 자세한 내용은 [시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)를 참조하세요.  
   
  SQL Server 2016 업그레이드 관리자의 기능인 Stretch Database 관리자를 사용하여 Stretch Database용 데이터베이스 및 테이블을 식별할 수 있습니다. 자세한 내용은 [Stretch Database 관리자를 실행하여 Stretch Database용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요. 잠재적 차단 문제에 대한 자세한 내용은 [Stretch Database에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 참조하세요.  
 
@@ -83,3 +88,4 @@ ms.lasthandoff: 11/09/2017
  **Stretch Database에 적합한 데이터베이스 및 테이블 식별.** SQL Server 2016 업그레이드 관리자를 다운로드하고 Stretch Database 관리자를 실행하여 Stretch Database의 후보 데이터베이스 및 테이블을 식별할 수 있습니다. Stretch Database 관리자는 차단 문제도 식별합니다. 자세한 내용은 [Stretch Database 관리자를 실행하여 Stretch Database용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요.  
   
   
+

@@ -1,30 +1,35 @@
 ---
 title: "스트레치 사용 데이터베이스 백업(Stretch Database) | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/14/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, backing up
 - backups (Stretch Database)
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3f36d8798e162c2a855c04c01653f6fec33be07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 75460a6396a410f7f61623e2273465a8e138f773
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/29/2017
+
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>스트레치 사용 데이터베이스 백업(Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  데이터베이스 백업은 다양한 유형의 실패, 오류 및 재해로부터 복구하는 데 도움이 됩니다.  
   
@@ -71,3 +76,4 @@ Azure 데이터 백업을 복원한 후 저장 프로시저 [sys.sp_rda_reauthor
    
   
   
+

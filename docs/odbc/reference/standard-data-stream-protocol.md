@@ -3,8 +3,11 @@ title: "표준 데이터 스트림 프로토콜 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -29,6 +32,6 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/09/2017
 
 ---
-# 표준 데이터 스트림 프로토콜
+# <a name="standard-data-stream-protocol"></a>표준 데이터 스트림 프로토콜
 표준 데이터 스트림 프로토콜은 한 가지 방법은 데이터 유형이 다른 Dbms에 액세스할 수 있습니다. 사실, 표준 데이터 스트림을 프로토콜은 이미: ANSI/ISO 원격 데이터베이스 액세스 RDA () 표준 ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615))는 IBM DRDA 분산 관계형 데이터베이스 아키텍처 () 및 ([http:// www.netstoreusa.com/cbbooks/007/0070351384.shtml](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). 두 시스템 프라미스 서 표시, 모두 오늘 구현 광범위 하 게 됩니다.
 

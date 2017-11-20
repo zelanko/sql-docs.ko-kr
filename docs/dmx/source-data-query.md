@@ -2,9 +2,12 @@
 title: "&lt;원본 데이터 쿼리와&gt; | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="ltsource-data-querygt"></a>&lt;원본 데이터 쿼리&gt;
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   데이터 마이닝 모델을 학습 하려면 마이닝 모델에서 예측을 만드는 외부에 있는 데이터에 액세스 해야는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스입니다. 사용 된 \<원본 데이터 쿼리와 > 절에 확장 DMX (Data Mining)이 외부 데이터를 정의 합니다. [INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60; 모델 &#62; 예측 조인 &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md), 및 [선택 FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) 모든 문을 사용 하 여  **\<원본 데이터 쿼리와 >**합니다.  
   
