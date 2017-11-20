@@ -28,6 +28,8 @@
 ## [Azure에서 SSIS 카탈로그에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure에서 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages.md)
 ## [Windows 인증을 사용하여 데이터 원본에 연결](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [파일 및 파일 공유에 연결](lift-shift/ssis-azure-files-file-shares.md)
+
 # [설치 또는 업그레이드](../integration-services/install-windows/install-integration-services.md)
 
 # [개발 및 관리 도구](integration-services-ssis-development-and-management-tools.md)
@@ -169,3 +171,13 @@
 #### [3-1단원 - 배포 번들 복사](lesson-3-1-copying-the-deployment-bundle.md)
 #### [3-2단원 - 패키지 설치 마법사 실행](lesson-3-2-running-the-package-installation-wizard.md)
 #### [3-3단원 - 배포된 패키지 테스트](lesson-3-3-testing-the-deployed-packages.md)
+
+# 리소스
+## 블로그 팔로우
+### [SSIS 팀 블로그](https://blogs.msdn.microsoft.com/ssis/)
+## 도움말 보기
+### [MSDN의 SSIS 포럼](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Stack Overflow의 SSIS 태그](http://stackoverflow.com/questions/tagged/ssis)  
+## 사용자 의견 제공
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [PC의 문서 가져오기](../sql-server/sql-server-help-installation.md)

@@ -153,12 +153,11 @@
 ### [Machine Learning Services의 고급 구성 옵션](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [SQL Server의 R 런타임에 대한 보안 고려 사항](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [SQL Server Machine Learning Services의 사용자 계정 풀 수정](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [기계 학습 확장 구성 및 관리](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [웹 서비스를 사용하여 모델 배포 및 사용](operationalization-with-mrsdeploy.md)
 ### [기계 학습 솔루션 관리 및 모니터링](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning Services를 위한 리소스 거버넌스](r/resource-governance-for-r-services.md)
-### [R에 대한 리소스 풀 만들기](r/how-to-create-a-resource-pool-for-r.md)
+### [기계 학습을 위한 리소스 풀 만들기](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning Services를 위한 확장 이벤트](r/extended-events-for-sql-server-r-services.md)
 
 ### [Machine Learning Services용 DMV](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +179,7 @@
 ### [기존 Azure 가상 컴퓨터에 R 추가](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [sqlBindR.exe를 사용하여 인스턴스 업그레이드](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [명령줄에서 R Server 설치](r/install-microsoft-r-server-from-the-command-line.md)
-### [데이터 과학 가상 컴퓨터 프로비저닝](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [엔터프라이즈 데이터 과학 가상 컴퓨터 프로비전](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [데이터 과학 도구 설정](r/setup-or-configure-r-tools.md)
 ### [데이터 과학 클라이언트 설정](r/set-up-a-data-science-client.md)
 

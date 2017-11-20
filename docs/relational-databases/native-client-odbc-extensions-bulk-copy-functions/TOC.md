@@ -1,4 +1,4 @@
-# [SQL Server 드라이버 확장 대량 복사 함수](sql-server-driver-extensions-bulk-copy-functions.md)
+# [SQL Server 드라이버 확장 - 대량 복사 함수](sql-server-driver-extensions-bulk-copy-functions.md)
 
 # [bcp_batch](bcp-batch.md)
 # [bcp_bind](bcp-bind.md)

@@ -12,6 +12,7 @@
 ## [설치 및 연결 - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [실행 및 연결 - Docker](quickstart-install-connect-docker.md)
 ## [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+## [실행 및 연결 - 클라우드](quickstart-install-connect-clouds.md)
 
 # 자습서
 ## [1_Windows에서 마이그레이션](sql-server-linux-migrate-restore-database.md)
@@ -77,7 +78,7 @@
 ##### [SUSE에서 구성](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Ubuntu에서 구성](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [운영](sql-server-linux-availability-group-failover-ha.md)
-#### [읽기 배율 확대 전용으로 만들기]()
+#### [읽기 배율 전용으로 만들기]()
 ##### [AG 구성](sql-server-linux-availability-group-configure-rs.md)
 
 ## [보안](sql-server-linux-security-overview.md)

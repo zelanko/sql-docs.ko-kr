@@ -1,4 +1,4 @@
-# [SQL Server Express LocalDB 참조-인스턴스 Api](sql-server-express-localdb-reference-instance-apis.md)
+# [SQL Server Express LocalDB 참조 - 인스턴스 API](sql-server-express-localdb-reference-instance-apis.md)
 # [명령줄 관리 도구: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
 # [SQL Server Express LocalDB 헤더 및 버전 정보](sql-server-express-localdb-header-and-version-information.md)
 

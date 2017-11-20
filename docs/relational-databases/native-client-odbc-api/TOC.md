@@ -1,6 +1,6 @@
 # [ODBC API 구현 정보](odbc-api-implementation-details.md)
 
-# 네이티브 클라이언트에 대 한 ODBC Api는 SQL *
+# Native Client용 SQL* ODBC API
 ## [SQLBindCol](sqlbindcol.md)
 ## [SQLBindParameter](sqlbindparameter.md)
 ## [SQLBrowseConnect](sqlbrowseconnect.md)

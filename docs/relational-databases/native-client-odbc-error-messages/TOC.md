@@ -2,5 +2,5 @@
 # [진단 레코드 및 필드](diagnostic-records-and-fields.md)
 # [오류 메시지](error-messages.md)
 # [원시 오류 번호](native-error-numbers.md)
-# [메시지를 생성 하는 문 처리](processing-statements-that-generate-messages.md)
-# [SQLSTATE (ODBC 오류 코드)](sqlstate-odbc-error-codes.md)
+# [메시지를 생성하는 문 처리](processing-statements-that-generate-messages.md)
+# [SQLSTATE(ODBC 오류 코드)](sqlstate-odbc-error-codes.md)
