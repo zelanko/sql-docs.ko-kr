@@ -3,6 +3,7 @@
 # 개요
 ## [Reporting Services의 새로운 기능](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [새로 추가되거나 최근에 업데이트된 문서](new-updated-reporting-services.md)
+## [변경 로그](change-log-sql-server-reporting-services.md)
 ## [Reporting Services 개념(SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services 기능 및 작업](reporting-services-features-and-tasks-ssrs.md)   
 ## [이전 버전과의 호환성](reporting-services-backward-compatibility.md)  
@@ -87,7 +88,8 @@
 ### [CSV 장치 정보 설정](csv-device-information-settings.md)  
 ### [Excel 장치 정보 설정](excel-device-information-settings.md)  
 ### [HTML 장치 정보 설정](html-device-information-settings.md)  
-### [이미지 장치 정보 설정](image-device-information-settings.md)  ### [MHTML 장치 정보 설정](mhtml-device-information-settings.md)  
+### [이미지 장치 정보 설정](image-device-information-settings.md)  
+### [MHTML 장치 정보 설정](mhtml-device-information-settings.md)  
 ### [PDF 장치 정보 설정](pdf-device-information-settings.md)  
 ### [PPTX 장치 정보 설정](pptx-device-information-settings.md)  
 ### [XML 장치 정보 설정](xml-device-information-settings.md)  

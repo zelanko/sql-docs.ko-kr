@@ -1,4 +1,4 @@
-# [ADO.NET에 SQL Server In-process 전용 확장](sql-server-in-process-specific-extensions-to-ado-net.md)
+# [ADO.NET에 대한 SQL Server In-Process 전용 확장](sql-server-in-process-specific-extensions-to-ado-net.md)
 # [SqlContext 개체](sqlcontext-object.md)
 # [SqlDataRecord 개체](sqldatarecord-object.md)
 # [SqlPipe 개체](sqlpipe-object.md)

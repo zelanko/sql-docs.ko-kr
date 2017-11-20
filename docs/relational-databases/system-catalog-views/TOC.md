@@ -1,19 +1,19 @@
 # [개요](catalog-views-transact-sql.md)
 
-# [SQL Server 시스템 카탈로그 FAQ](querying-the-sql-server-system-catalog-faq.md)  
-# [스키마-sys.schemas](schemas-catalog-views-sys-schemas.md)  
-# [오류 메시지-sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
-# [Sys.extended_properties 속성-확장](extended-properties-catalog-views-sys-extended-properties.md)  
+# [SQL Server 시스템 카탈로그 쿼리 FAQ](querying-the-sql-server-system-catalog-faq.md)  
+# [스키마 - sys.schemas](schemas-catalog-views-sys-schemas.md)  
+# [오류 메시지 - sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
+# [확장 속성 - sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
 # 변경 내용 추적
 ## [sys.change_tracking_databases](change-tracking-catalog-views-sys-change-tracking-databases.md)  
 ## [sys.change_tracking_tables](change-tracking-catalog-views-sys-change-tracking-tables.md)  
 
 # 데이터베이스 미러링
-## [데이터베이스 미러링 모니터 서버-sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
+## [Database Mirroring Witness - sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
 
 # 데이터 계층 응용 프로그램
-## [데이터 계층 응용 프로그램 보기-dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
+## [데이터 계층 응용 프로그램 보기 - dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
 
 # [가용성 그룹](always-on-availability-groups-catalog-views-transact-sql.md)  
 ## [가용성 데이터베이스 모니터링](sys-availability-databases-cluster-transact-sql.md)  
@@ -60,7 +60,7 @@
 ## [sys.filegroups](sys-filegroups-transact-sql.md)  
 ## [sys.partition_schemes](sys-partition-schemes-transact-sql.md)  
 
-# [데이터베이스 메일 뷰](database-mail-views-transact-sql.md)  
+# [데이터베이스 메일 보기](database-mail-views-transact-sql.md)  
 ## [sysmail_allitems](sysmail-allitems-transact-sql.md)  
 ## [sysmail_event_log](sysmail-event-log-transact-sql.md)  
 ## [sysmail_faileditems](sysmail-faileditems-transact-sql.md)  
@@ -69,7 +69,7 @@
 ## [sysmail_unsentitems](sysmail-unsentitems-transact-sql.md)  
 
 # [데이터베이스 및 파일](databases-and-files-catalog-views-transact-sql.md)  
-## [이 (가)](sys-backup-devices-transact-sql.md)  
+## [sys.backup_devices](sys-backup-devices-transact-sql.md)  
 ## [sys.databases](sys-databases-transact-sql.md)  
 ## [sys.database_files](sys-database-files-transact-sql.md)  
 ## [sys.database_mirroring](sys-database-mirroring-transact-sql.md)  
@@ -87,11 +87,11 @@
 ## [sys.tcp_endpoints](sys-tcp-endpoints-transact-sql.md)  
 
 # [확장 이벤트](extended-events-catalog-views-transact-sql.md)  
-## [sys.database_event_session_targets (Azure SQL 데이터베이스)](sys-database-event-session-targets-azure-sql-database.md)  
-## [sys.database_event_session_fields (Azure SQL 데이터베이스)](sys-database-event-session-fields-azure-sql-database.md)  
-## [sys.database_event_session_events (Azure SQL 데이터베이스)](sys-database-event-session-events-azure-sql-database.md)  
-## [sys.database_event_session_actions (Azure SQL 데이터베이스)](sys-database-event-session-actions-azure-sql-database.md)  
-## [sys.database_event_sessions (Azure SQL 데이터베이스)](sys-database-event-sessions-azure-sql-database.md)  
+## [sys.database_event_session_targets(Azure SQL Database)](sys-database-event-session-targets-azure-sql-database.md)  
+## [sys.database_event_session_fields(Azure SQL Database)](sys-database-event-session-fields-azure-sql-database.md)  
+## [sys.database_event_session_events(Azure SQL Database)](sys-database-event-session-events-azure-sql-database.md)  
+## [sys.database_event_session_actions(Azure SQL Database)](sys-database-event-session-actions-azure-sql-database.md)  
+## [sys.database_event_sessions(Azure SQL Database)](sys-database-event-sessions-azure-sql-database.md)  
 ## [sys.server_event_sessions](sys-server-event-sessions-transact-sql.md)  
 ## [sys.server_event_session_actions](sys-server-event-session-actions-transact-sql.md)  
 ## [sys.server_event_session_events](sys-server-event-session-events-transact-sql.md)  
@@ -124,7 +124,7 @@
 ## [sys.registered_search_properties](sys-registered-search-properties-transact-sql.md)  
 ## [sys.registered_search_property_lists](sys-registered-search-property-lists-transact-sql.md)  
 
-# [연결 된 서버](linked-servers-catalog-views-transact-sql.md)  
+# [연결된 서버](linked-servers-catalog-views-transact-sql.md)  
 ## [sys.linked_logins](sys-linked-logins-transact-sql.md)  
 ## [sys.remote_logins](sys-remote-logins-transact-sql.md)  
 ## [sys.servers](sys-servers-transact-sql.md)  
@@ -202,7 +202,7 @@
 ## [sys.partition_parameters](sys-partition-parameters-transact-sql.md)  
 ## [sys.partition_range_values](sys-partition-range-values-transact-sql.md)  
 
-# [정책 기반 관리 뷰](policy-based-management-views-transact-sql.md)  
+# [정책 기반 관리 보기](policy-based-management-views-transact-sql.md)  
 ## [syspolicy_conditions](syspolicy-conditions-transact-sql.md)  
 ## [syspolicy_policies](syspolicy-policies-transact-sql.md)  
 ## [syspolicy_policy_execution_history](syspolicy-policy-execution-history-transact-sql.md)  
@@ -227,7 +227,7 @@
 ## [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md) 
 ## [sys.query_store_runtime_stats_interval](sys-query-store-runtime-stats-interval-transact-sql.md)  
 
-# [스칼라 형식](scalar-types-catalog-views-transact-sql.md)  
+# [스칼라 유형](scalar-types-catalog-views-transact-sql.md)  
 ## [sys.assembly_types](sys-assembly-types-transact-sql.md)  
 ## [sys.types](sys-types-transact-sql.md)  
 ## [sys.type_assembly_usages](sys-type-assembly-usages-transact-sql.md)  
@@ -237,7 +237,7 @@
 # [보안](security-catalog-views-transact-sql.md)  
 ## [sys.asymmetric_keys](sys-asymmetric-keys-transact-sql.md)  
 ## [sys.certificates](sys-certificates-transact-sql.md)  
-## [sys.column_encryption_keys](sys-column-encryption-keys-transact-sql.md)  
+## [sys.column_encryption_keys ](sys-column-encryption-keys-transact-sql.md)  
 ## [sys.column_encryption_key_values](sys-column-encryption-key-values-transact-sql.md)  
 ## [sys.column_master_keys](sys-column-master-keys-transact-sql.md)  
 ## [sys.credentials](sys-credentials-transact-sql.md)  
@@ -300,7 +300,7 @@
 ## [sys.spatial_indexes](sys-spatial-indexes-transact-sql.md)  
 ## [sys.spatial_reference_systems](sys-spatial-reference-systems-transact-sql.md)  
 
-# [SQL 데이터 웨어하우스](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+# [SQL Data Warehouse](sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
 ## [sys.pdw_column_distribution_properties](sys-pdw-column-distribution-properties-transact-sql.md)  
 ## [sys.pdw_database_mappings](sys-pdw-database-mappings-transact-sql.md)  
 ## [sys.pdw_diag_event_properties](sys-pdw-diag-event-properties-transact-sql.md)  
@@ -333,7 +333,7 @@
 ## [sys.remote_data_archive_tables](stretch-database-catalog-views-sys-remote-data-archive-tables.md)
 
 
-# [XML 스키마 (XML 유형 시스템)](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+# [XML Schemas(XML Type System)](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
 ## [sys.column_xml_schema_collection_usages](sys-column-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.parameter_xml_schema_collection_usages](sys-parameter-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.selective_xml_index_paths](sys-selective-xml-index-paths-transact-sql.md)  

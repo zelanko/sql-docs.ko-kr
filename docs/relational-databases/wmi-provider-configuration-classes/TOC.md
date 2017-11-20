@@ -1,4 +1,4 @@
-# [구성 관리 클래스에 대 한 WMI 공급자](wmi-provider-for-configuration-management-classes.md)
+# [구성 관리용 WMI 공급자 클래스](wmi-provider-for-configuration-management-classes.md)
 
 # 특정 영역
 ## [ClientNetLibInfo 클래스 +](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)
@@ -16,11 +16,11 @@
 ## [SqlService 클래스 +](../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md)
 ## [SqlServiceAdvancedProperty 클래스 +](../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md)
 
-# [CInstance 클래스-InstanceName 속성](cinstance-class-instancename-property.md)
-# [CInstance 클래스-SetDefaults 메서드](cinstance-class-setdefaults-method.md)
+# [CInstance 클래스 - InstanceName 속성](cinstance-class-instancename-property.md)
+# [CInstance 클래스 - SetDefaults 메서드](cinstance-class-setdefaults-method.md)
 # [CInstance 클래스](cinstance-class.md)
-# [ClientSettings 클래스-InstanceName 속성](clientsettings-class-instancename-property.md)
-# [ClientSettings 클래스-SetDefaults 메서드](clientsettings-class-setdefaults-method.md)
+# [ClientSettings 클래스 - InstanceName 속성](clientsettings-class-instancename-property.md)
+# [ClientSettings 클래스 - SetDefaults 메서드](clientsettings-class-setdefaults-method.md)
 # [ClientSettings 클래스](clientsettings-class.md)
 # [SqlErrorLogEvent 클래스](sqlerrorlogevent-class.md)
 # [SqlErrorLogFile 클래스](sqlerrorlogfile-class.md)

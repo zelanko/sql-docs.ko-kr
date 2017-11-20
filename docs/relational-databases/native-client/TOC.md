@@ -8,5 +8,5 @@
 # [SQL Server Native Client 추가 정보 찾기](finding-more-sql-server-native-client-information.md)
 # [SQL Server Native Client 오류 MSSQLSERVER_50000](sql-server-native-client-error-mssqlserver-50000.md)
 # [SQL Server Native Client](sql-server-native-client.md)
-# [SQL Server Native Client에 대 한 시스템 요구 사항](system-requirements-for-sql-server-native-client.md)
-# [SQL Server Native Client를 사용 하는 경우](when-to-use-sql-server-native-client.md)
+# [SQL Server Native Client의 시스템 요구 사항](system-requirements-for-sql-server-native-client.md)
+# [SQL Server Native Client를 사용하는 경우](when-to-use-sql-server-native-client.md)
