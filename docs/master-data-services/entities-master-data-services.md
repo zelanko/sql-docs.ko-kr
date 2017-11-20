@@ -2,26 +2,31 @@
 title: "엔터티(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 573017dbb0cc08833442d92bab50be1e3bfa8115
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ae0e3ae300d2b896261e7426491448989a5e0f45
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="entities-master-data-services"></a>엔터티(Master Data Services)
   엔터티는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델에 포함된 개체입니다. 각 엔터티에는 관리하는 마스터 데이터의 행인 멤버가 들어 있습니다.  
@@ -46,7 +51,7 @@ ms.lasthandoff: 11/09/2017
  사용자가 엔터티의 멤버에 특성을 할당하는 경우 제한된 값 목록에서 선택하도록 사용자에게 허용할 수 있습니다. 그러려면 엔터티를 사용하여 특성 값 목록을 채웁니다. 이를 도메인 기반 특성이라고 합니다. 자세한 내용은 [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)을 참조하세요.  
   
 ## <a name="base-entities"></a>기준 엔터티  
- 기준 엔터티는 사용자가 모델의 개체를 탐색하는 시작 지점입니다. 기준 엔터티는 사용자가 **탐색기** 기능 영역을 열고 메뉴 모음에서 **탐색기** 를 클릭할 때 표시되는 화면의 레이아웃을 결정합니다. 엔터티를 기준 엔터티로 지정하려면 **시스템 관리** 기능 영역으로 이동합니다. **모델 뷰** 페이지에서 오른쪽 트리 컨트롤의 엔터티를 왼쪽 트리 컨트롤에 있는 모델 이름으로 끌어옵니다.  
+ 기준 엔터티는 사용자가 모델의 개체를 탐색하는 시작 지점입니다. 기준 엔터티는 사용자가 **탐색기** 기능 영역을 열고 메뉴 모음에서 **탐색기**를 클릭할 때 표시되는 화면의 레이아웃을 결정합니다. 엔터티를 기준 엔터티로 지정하려면 **시스템 관리** 기능 영역으로 이동합니다. **모델 뷰** 페이지에서 오른쪽 트리 컨트롤의 엔터티를 왼쪽 트리 컨트롤에 있는 모델 이름으로 끌어옵니다.  
   
 ## <a name="entity-security"></a>엔터티 보안  
  관련 모델 개체를 포함하여 엔터티에 대한 사용 권한을 사용자에게 부여할 수 있습니다. 자세한 내용은 [엔터티 권한&#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)을 참조하세요.  
@@ -81,3 +86,4 @@ ms.lasthandoff: 11/09/2017
 -   [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   
+

@@ -2,23 +2,28 @@
 title: "DQS 데이터베이스 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93d2f6c8f69b9df44212d1d97e9f08329b1505b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 52b592c3f44f64601101cc603e2205c53a56180f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="manage-dqs-databases"></a>DQS 데이터베이스 관리
   이 섹션에서는 백업/복원 또는 분리/연결과 같이 DQS 데이터베이스에서 수행할 수 있는 데이터베이스 관리 작업에 대한 정보를 제공합니다.  
@@ -61,3 +66,4 @@ ms.lasthandoff: 11/09/2017
  [DQS 관리](../data-quality-services/dqs-administration.md)  
   
   
+

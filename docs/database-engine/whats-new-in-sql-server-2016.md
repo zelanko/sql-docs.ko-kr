@@ -1,32 +1,35 @@
 ---
 title: "데이터베이스 엔진의 새로운 기능 - SQL Server 2016 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-- SQL2016_rc1
+ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: "431"
+caps.latest.revision: 431
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 211d0d1d59ac9875fd3c66efb0fc88a453a8deb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/18/2017
+
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]릴리스에서 소개된 향상된 기능을 요약합니다.  새로운 기능과 향상된 기능은 데이터 저장소 시스템을 디자인, 개발 및 유지 관리하는 설계자, 개발자 및 관리자의 작업 효율성과 생산성을 증대시킵니다.
 
@@ -173,7 +176,7 @@ SQL Server 2014의 메모리 액세스에 최적화된 테이블에 지원되지
   - 인덱스 추가 및 삭제 해시 인덱스의 bucket_count를 변경합니다.
   - 스키마 변경합니다(열 추가/삭제/변경, 제약 조건 추가/삭제).
 
-- 이제 메모리 액세스에 최적화된 테이블에 결합된 길이가 8060바이트 페이지의 길이보다 긴 여러 개의 열이 있을 수 있습니다. `nvarchar(4000)`형식의 열이&3;개 있는 테이블이 한 예입니다. 이러한 예에서 일부 열은 이제 행 외부에 저장됩니다. 쿼리에서 열이 행 내부 또는 행 외부에 있는지 알지 못합니다.
+- 이제 메모리 액세스에 최적화된 테이블에 결합된 길이가 8060바이트 페이지의 길이보다 긴 여러 개의 열이 있을 수 있습니다. `nvarchar(4000)`형식의 열이 3 개 있는 테이블이 한 예입니다. 이러한 예에서 일부 열은 이제 행 외부에 저장됩니다. 쿼리에서 열이 행 내부 또는 행 외부에 있는지 알지 못합니다.
 
 - [LOB(Large Object) 형식](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) `varbinary(max)`, `nvarchar(max)`및 `varchar(max)` 는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.
 
@@ -457,6 +460,7 @@ SQL Server 2016 업그레이드 관리자 Preview는 이전 버전의 사용자�
 [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md) 
  
 [SSMS로 SQL Server 관리 도구 설치](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+
 
 
 

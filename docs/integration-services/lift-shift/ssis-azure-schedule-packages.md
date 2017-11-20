@@ -2,7 +2,12 @@
 title: "Azure에서 SSIS 패키지 실행을 예약 합니다. | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: lift-shift
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - integration-services
 author: douglaslMS

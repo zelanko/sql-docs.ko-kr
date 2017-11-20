@@ -2,26 +2,33 @@
 title: "도메인 독립 가용성 그룹(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], domain independent
+helpviewer_keywords:
+- Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 568798a19fac1a40d16d95e4f93e95968630ee0e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="domain-independent-availability-groups"></a>도메인 독립 가용성 그룹
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Always On AG(가용성 그룹)에는 기본 WSFC(Windows Server 장애 조치 클러스터)가 필요합니다. Windows Server 2012 R2를 통해 WSFC를 배포하는 경우 노드라고도 하는 WSFC에 참여하는 서버가 반드시 동일한 도메인에 가입되어야 합니다. AD DS(Active Directory Domain Services)에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)를 참조하세요.
 
@@ -154,3 +161,4 @@ GO
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
 [4]: ./media/diag-successful-dns-suffix.png
+

@@ -2,23 +2,28 @@
 title: "데이터 정리 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0c17b3a503a1ab2f7149c9b5a1ad425e57b2aae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-cleansing"></a>데이터 정리
   데이터 정리는 데이터 원본의 데이터 품질을 분석하고, 시스템의 제안을 수동으로 승인/거부하고, 데이터를 변경하는 프로세스입니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 정리에는 데이터가 기술 자료의 지식을 준수하는 정도를 분석하는 컴퓨터 기반 프로세스이며, 데이터 정리가 정확히 원하는 대로 수행되는지 보장하기 위해 데이터 관리자가 컴퓨터 기반 프로세스 결과를 검토하고 수정할 수 있게 해주는 대화형 프로세스입니다.  
@@ -57,9 +62,9 @@ ms.lasthandoff: 11/09/2017
   
  컴퓨터 기반 프로세스에서는 대화형 정리 프로세스에 사용되는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에 데이터 품질 정보를 표시합니다. 구문 오류 규칙의 준수와는 별도로 DQS에서는 *신뢰 수준*을 사용하여 데이터를 분류하기 위한 고급 알고리즘 및 참조 데이터도 사용됩니다. 신뢰 수준은 수정 내용 또는 제안 내용에 대한 DQS의 확신도를 나타냅니다. 신뢰 수준은 다음 임계값에 따라 결정됩니다.  
   
--   *자동 수정 임계값* 보다 높으면 DQS에서 변경 내용을 제안하고 데이터 관리자가 거부하지 않는 한 이를 적용합니다. **구성** 화면의 **일반 설정** 탭에서 자동 수정 임계값을 지정할 수 있습니다. 자세한 내용은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
+-   *자동 수정 임계값* 보다 높으면 DQS에서 변경 내용을 제안하고 데이터 관리자가 거부하지 않는 한 이를 적용합니다. **구성** 화면의 **일반 설정** 탭에서 자동 수정 임계값을 지정할 수 있습니다. 자세한 내용은 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
--   *자동 제안 임계값* 보다 높고 자동 수정 임계값보다 낮으면 DQS에서 변경 내용을 제안하고 데이터 관리자가 승인할 경우 이를 적용합니다. **구성** 화면의 **일반 설정** 탭에서 자동 제안 임계값을 지정할 수 있습니다. 자세한 내용은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
+-   *자동 제안 임계값* 보다 높고 자동 수정 임계값보다 낮으면 DQS에서 변경 내용을 제안하고 데이터 관리자가 승인할 경우 이를 적용합니다. **구성** 화면의 **일반 설정** 탭에서 자동 제안 임계값을 지정할 수 있습니다. 자세한 내용은 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
  신뢰 수준 값이 자동 제안 임계값보다 낮으면 데이터 관리자가 변경 내용을 지정하지 않은 한 DQS에서 데이터를 현재대로 둡니다.  
   
@@ -111,3 +116,4 @@ ms.lasthandoff: 11/09/2017
  [데이터 일치](../data-quality-services/data-matching.md)  
   
   
+

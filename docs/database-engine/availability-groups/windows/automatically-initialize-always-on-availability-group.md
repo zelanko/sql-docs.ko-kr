@@ -2,27 +2,30 @@
 title: "Always On 가용성 그룹 자동 초기화 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 151aa8876623f8d3cca40a953b318f0c0663f92e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Always On 가용성 그룹 자동 초기화
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2016에서는 가용성 그룹의 자동 시드를 도입했습니다. 자동 시드를 사용하여 가용성 그룹을 만들면 SQL Server가 그룹의 모든 데이터베이스에 대해 보조 복제본을 자동으로 만듭니다. 더 이상 보조 복제본을 수동으로 백업 및 복원할 필요가 없습니다. 자동 시드를 사용하려면 T-SQL로 가용성 그룹을 만들거나 SQL Server Management Studio의 최신 버전을 사용하세요.
 
@@ -285,4 +288,5 @@ SQL Server는 자동 시드를 위해 고정 개수의 스레드를 사용합니
 [CREATE AVAILABILITY GROUP(Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
 [AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
+
 

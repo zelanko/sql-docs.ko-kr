@@ -3,8 +3,11 @@ title: "데이터 소스 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -38,3 +41,4 @@ A *데이터 소스* 데이터의 원본을 하기만 하면 됩니다. 라이�
 -   [데이터 원본 사용](../../odbc/reference/using-data-sources.md)  
   
 -   [데이터 원본 예제](../../odbc/reference/data-source-example.md)
+

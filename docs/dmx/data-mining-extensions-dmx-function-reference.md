@@ -2,9 +2,12 @@
 title: "Data Mining Extensions (DMX) 함수 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>DMX(Data Mining Extensions) 함수 참조
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 DMX(Data Mining Extensions) 언어의 일부 함수를 지원합니다. 이러한 함수는 예측 쿼리의 결과를 확장하여 예측에 대한 더 많은 정보를 제공합니다. 함수는 또한 예측 결과의 반환 방법에 대한 제어 기능도 제공합니다. 다음 표에서는 DMX의 함수를 사용하는 방법을 이해하는 데 도움이 되는 리소스의 링크를 제공합니다.  
   

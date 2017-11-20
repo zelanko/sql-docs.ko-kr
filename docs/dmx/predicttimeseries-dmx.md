@@ -2,9 +2,12 @@
 title: PredictTimeSeries (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   시계열 데이터에 대한 예측 미래 값을 반환합니다. 시계열 데이터는 연속적이며 중첩 테이블이나 사례 테이블에 저장할 수 있습니다. **PredictTimeSeries** 함수는 항상 중첩된 테이블을 반환 합니다.  
   

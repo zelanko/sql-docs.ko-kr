@@ -1,24 +1,29 @@
 ---
 title: "버전 멤버 삭제(Master Data Services) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3df9f832b7e19c394cd8bcbb1c6c2e8903e2deaa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 56cccc3f368f17118dece215275fbe23822e9040
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="purge-version-members-master-data-services"></a>버전 멤버 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 멤버를 삭제해도 멤버가 비활성화(일시 삭제) 상태로만 전환됩니다. 멤버의 데이터는 데이터베이스에 계속 남아 있습니다. 이 항목에서는 모델 버전에서 일시 삭제된 모든 멤버를 영구적으로 삭제하는 방법을 설명합니다.  
@@ -48,3 +53,4 @@ ms.lasthandoff: 11/09/2017
  자세한 내용은 [리프 멤버 준비 테이블&#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)을 참조하세요.  
   
   
+

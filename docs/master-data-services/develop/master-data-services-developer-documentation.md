@@ -2,24 +2,30 @@
 title: "Master Data Services 개발자 설명서 | Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: develop
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b208d088e0d4efb8fd447a3d0e63afd993183e44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a63efdc2a7d0501bcc64f3f2281e0389d013bbaa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 개발자 설명서
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]와 상호 작용하는 방식을 사용자 지정하기 위해 코드를 작성하는 방법에 대한 정보를 찾아볼 수 있습니다. 다음 작업을 수행하는 방법을 배워 보십시오.  
@@ -61,3 +67,4 @@ ms.lasthandoff: 11/09/2017
 |<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 서비스를 통해 호출할 수 있는 작업을 정의하는 인터페이스를 포함합니다.|  
   
   
+

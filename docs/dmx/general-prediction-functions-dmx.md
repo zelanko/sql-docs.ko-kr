@@ -2,9 +2,12 @@
 title: "일반 예측 함수 (DMX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="general-prediction-functions-dmx"></a>일반 예측 함수(DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   사용할 수는 **선택** 에 확장 DMX (Data Mining)를 만드는 다양 한 유형의 쿼리 문입니다. 쿼리는 마이닝 모델 자체에 대한 정보를 반환하거나, 새 예측을 만들거나, 새 데이터로 모델을 학습시켜 모델을 변경하기 위해 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]다양 한 쿼리에서 반환 되는 정보의 유형을 제어 하는 특수 기능을 제공 합니다. 이러한 함수를 DMX 쿼리에 추가하면 추가 통계 또는 데이터 열을 검색할 수 있습니다. 그러나 쿼리 유형과 모델 유형마다 지원되는 함수가 다릅니다.  
   

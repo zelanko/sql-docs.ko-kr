@@ -2,26 +2,31 @@
 title: "Stretch Database와 호환 가능한 SQL Server 기능 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91b1b8854e56ab3fad15eb11cdc132788e0709b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: 8b3ee682de6e27014f403be32849478f9d076c84
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Stretch Database와 호환 가능한 SQL Server 기능 구성
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 간단한 단계를 수행하여 Stretch Database와 작동하는 다음 SQL Server 기능을 구성합니다.
 -   Always On
@@ -46,8 +51,9 @@ Always Encrypted와 Stretch Database를 함께 사용하려면 테이블에서 S
 
 로컬 데이터베이스에서 TDE를 사용하도록 설정되더라도 Stretch Database 원격 끝점에서는 자동으로 사용 설정되지 않습니다. 데이터베이스에서 Stretch를 사용하도록 설정한 후 원격 끝점에서 TDE를 사용하도록 설정해야 합니다.
 
-## <a name="configure-temporal-tables-with-stretch-database"></a>Stretch Database를 사용하여 temporal 테이블 구성
-temporal 테이블을 사용하는 경우에는 현재 테이블이 아닌 기록 테이블에서 Stretch Database를 사용하도록 설정할 수 있습니다.
--   Stretch Database와 temporal 테이블을 사용하는 방법에 대한 지침은 [시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)를 참조하세요.
+## <a name="configure-temporal-tables-with-stretch-database"></a>Stretch Database를 사용하여 임시 테이블 구성
+임시 테이블을 사용하는 경우에는 현재 테이블이 아닌 기록 테이블에서 Stretch Database를 사용하도록 설정할 수 있습니다.
+-   Stretch Database와 임시 테이블을 사용하는 방법에 대한 지침은 [시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)를 참조하세요.
 -   행을 필터링하고 슬라이딩 윈도우를 사용하여 기록 테이블에서 마이그레이션하려면 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요.
 -   테이블이 메모리 액세스에 최적화된 경우 임시 기록 테이블에서 스트레치 데이터베이스를 사용할 수 없습니다. 메모리 액세스에 최적화된 테이블은 지원되지 않습니다.
+
