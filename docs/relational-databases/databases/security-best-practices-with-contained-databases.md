@@ -2,9 +2,12 @@
 title: "포함된 데이터베이스의 보안 모범 사례 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fda4715f323f4183fdbc601f47cbf8c24b7a6623
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-best-practices-with-contained-databases"></a>포함된 데이터베이스의 보안 모범 사례
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   포함된 데이터베이스에는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 관리자가 이해하고 완화해야 하는 고유한 위협 요소가 있습니다. 대부분의 위협 요소는 **수준에서 데이터베이스 수준으로 인증 경계를 이동하는** USER WITH PASSWORD [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인증 프로세스와 관련되어 있습니다.  
   

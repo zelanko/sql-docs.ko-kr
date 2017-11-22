@@ -2,9 +2,12 @@
 title: "시스템 데이터베이스 백업 및 복원(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5b395a8d3a828b107d9b3ba2f1c41e449a8b7a67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2732f2074bb144c5ae0357ef23127e6eba454bc1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>시스템 데이터베이스 백업 및 복원(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버 인스턴스의 작업에 필수적인*시스템 데이터베이스*라는 시스템 수준 데이터베이스의 집합을 유지 관리합니다. 모든 중요한 업데이트 후에는 여러 시스템 데이터베이스를 백업해야 합니다. 항상 백업해야 하는 시스템 데이터베이스에는 **msdb**, **master**및 **model**이 있습니다. 데이터베이스가 서버 인스턴스에서 복제를 사용할 경우 **배포** 시스템 데이터베이스도 백업해야 하며 이러한 시스템 데이터베이스를 백업하면 하드 디스크 손실과 같은 시스템 오류 이벤트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템을 복원 및 복구할 수 있습니다.  
   

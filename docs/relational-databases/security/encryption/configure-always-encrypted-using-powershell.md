@@ -1,5 +1,5 @@
 ---
-title: "PowerShell을 사용하여 상시 암호화 구성 | Microsoft Docs"
+title: "PowerShell을 사용하여 상시 암호화 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 05/17/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ac3904e6dff2383dac9bbaa09621095b9b2ec11f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -159,6 +157,5 @@ $database | Get-SqlColumnMasterKey
 - [상시 암호화를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [.NET Framework Data Provider for SQL Server와 상시 암호화 사용](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [SQL Server Management Studio를 사용하여 상시 암호화 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
 
 

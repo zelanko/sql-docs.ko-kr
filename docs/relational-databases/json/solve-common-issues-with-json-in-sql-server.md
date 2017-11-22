@@ -1,5 +1,5 @@
 ---
-title: "SQL Server에서 JSON으로 일반적인 문제 해결 | Microsoft Docs"
+title: "SQL Server에서 JSON으로 일반적인 문제 해결 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/07/2016
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- JSON, FAQ
+helpviewer_keywords: JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ff6b969cec3da6f3bb6f25e0071f24ed2c68539c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 3c55ec9bc77f499d5c97c7cd75d160547ac681d2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server에서 JSON으로 일반적인 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 07/31/2017
 ### <a name="for-json-path-or-for-json-auto"></a>FOR JSON PATH 또는 FOR JSON AUTO?  
  **질문.** 단일 테이블에서 수행한 간단한 SQL 쿼리의 JSON 텍스트 결과를 만들려고 합니다. FOR JSON PATH 및 FOR JSON AUTO는 동일한 출력을 제공합니다. 이러한 두 옵션 중 어느 옵션을 사용해야 하나요?  
   
- **대답.** FOR JSON PATH 사용 JSON 출력에는 아무런 차이가 없지만 AUTO 모드는 열이 중첩되어야 하는지 여부를 확인하는 일부 추가 논리를 적용합니다. PATH를 기본 옵션으로 고려합니다.  
+ **대답.** FOR JSON PATH 사용 JSON 출력에는 아무런 차이가 없지만 AUTO 모드에서는 열이 중첩되어야 하는지를 확인하는 일부 추가 논리를 적용합니다. PATH를 기본 옵션으로 고려합니다.  
 
 ### <a name="create-a-nested-json-structure"></a>중첩된 JSON 구조 만들기  
  **질문.** 동일한 수준에 여러 배열이 있는 복합 JSON을 작성하려고 합니다. FOR JSON PATH는 경로를 사용하여 중첩된 개체를 만들고 FOR JSON AUTO는 각 테이블에 대한 추가 중첩 수준을 만듭니다. 이러한 두 옵션 모두 원하는 출력을 생성할 수 없습니다. 기존 옵션에서 직접 지원되지 않는 사용자 지정 JSON 형식을 어떻게 만들 수 있나요?  
@@ -80,7 +77,7 @@ FROM tab1
 FOR JSON PATH  
 ```  
   
- 선택적인 두 번째 매개 변수가 없는 JSON_QUERY는 첫 번째 인수만 결과로 반환합니다. JSON_QUERY는 항상 유효한 JSON을 반환하므로 FOR JSON은 이 결과가 이스케이프될 필요가 없다고 인식합니다.
+ 선택적인 두 번째 매개 변수가 없는 JSON_QUERY는 첫 번째 인수만 결과로 반환합니다. JSON_QUERY는 항상 유효한 JSON을 반환하므로 FOR JSON은 이 결과가 이스케이프되지 않아야 한다는 것을 알고 있습니다.
 
 ### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>WITHOUT_ARRAY_WRAPPER 절로 생성된 JSON은 FOR JSON 출력에서 이스케이프됨  
  **질문.** FOR JSON 및 WITHOUT_ARRAY_WRAPPER 옵션을 사용하여 열 식을 포맷하려고 합니다.  
@@ -93,7 +90,7 @@ FOR JSON PATH
   
  FOR JSON 쿼리에서 반환된 텍스트가 일반 텍스트로 이스케이프된 것 같습니다. 이 문제는 WITHOUT_ARRAY_WRAPPER가 지정된 경우에만 발생합니다. 왜 JSON 개체로 처리되지 않고 결과에서 이스케이프되지 않나요?  
   
- **대답.** 내부 `FOR JSON`에 `WITHOUT_ARRAY_WRAPPER` 옵션을 지정하는 경우 결과 JSON 텍스트가 유효한 JSON이 아닐 수 있습니다. 따라서 외부 `FOR JSON`은 이것을 일반 텍스트로 간주하고 문자열을 이스케이프합니다. JSON 출력이 확실히 유효한 경우 다음 예제에서와 같이 `JSON_QUERY` 함수로 래핑하여 적절한 형식의 JSON으로 수준을 올립니다.  
+ **대답.** 내부 `FOR JSON`에 `WITHOUT_ARRAY_WRAPPER` 옵션을 지정하는 경우 결과 JSON 텍스트가 유효한 JSON이 아닐 수 있습니다. 따라서 외부 `FOR JSON`은 이것을 일반 텍스트로 간주하고 문자열을 이스케이프합니다. 다음 예제에서 보이는 것과 같이 JSON 출력이 유효한 경우 `JSON_QUERY` 함수로 래핑하여 적절한 형식의 JSON으로 수준을 올립니다.  
   
 ```sql  
 SELECT 'Text' as myText,  
@@ -153,4 +150,3 @@ WHERE [key] = 'color'
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
 많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.
-

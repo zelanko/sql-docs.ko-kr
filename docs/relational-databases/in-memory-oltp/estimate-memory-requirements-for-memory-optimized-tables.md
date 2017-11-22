@@ -8,46 +8,46 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea8b5ddea3edfbe5d2521bd30e4a51fd62a2b482
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f8eb8029f9824ceaeee061fc829a89d0054e1244
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 메모리 액세스에 최적화된 테이블을 사용하려면 모든 행과 인덱스를 메모리 내에 유지하는 데 충분한 메모리가 있어야 합니다. 메모리는 한정된 리소스이므로 시스템에서 메모리 사용량을 파악하고 관리해야 합니다. 이 섹션의 항목에서는 일반적인 메모리 사용 및 관리 시나리오를 다룹니다.
 
-새로운 메모리 액세스에 최적화된 테이블을 만들든, 아니면 기존 디스크 기반 테이블을 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 액세스에 최적화된 테이블로 마이그레이션하든 간에 충분한 메모리로 서버를 프로비전할 수 있도록 각 테이블에 필요한 메모리를 적절히 예측하는 것이 중요합니다. 이 섹션에서는 메모리 액세스에 최적화된 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
+새로운 메모리 최적화 테이블을 만들든, 아니면 기존 디스크 기반 테이블을 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 최적화 테이블로 마이그레이션하든 간에 충분한 메모리로 서버를 프로비전할 수 있도록 각 테이블에 필요한 메모리를 적절히 예측하는 것이 중요합니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
   
-디스크 기반 테이블에서 메모리 액세스에 최적화된 테이블로 마이그레이션을 고려하는 경우 이 항목을 진행하기 전에 마이그레이션에 가장 적합한 테이블에 대한 지침에 대해 [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 항목을 참조하세요. [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 아래의 모든 항목은 디스크 기반 테이블에서 메모리 액세스에 최적화된 테이블로 마이그레이션하는 지침을 제공합니다. 
+디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션을 고려하는 경우 이 항목을 진행하기 전에 마이그레이션에 가장 적합한 테이블에 대한 지침에 대해 [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 항목을 참조하세요. 
+            [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 아래의 모든 항목은 디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션하는 지침을 제공합니다. 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>메모리 요구 사항을 예측하기 위한 기본 지침
 
-테이블이 메모리에 적합해야 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 메모리 액세스에 최적화된 테이블의 크기에 제한이 없습니다.  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 SCHEMA_AND_DATA 테이블의 경우 지원되는 데이터 크기는 256GB입니다.
+테이블이 메모리에 적합해야 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 메모리 최적화 테이블의 크기에 제한이 없습니다.  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 SCHEMA_AND_DATA 테이블의 경우 지원되는 데이터 크기는 256GB입니다.
 
-메모리 액세스에 최적화된 테이블의 크기는 데이터 크기에 행 머리글에 대한 약간의 오버헤드를 더한 것에 해당합니다. 디스크 기반 테이블을 메모리 액세스에 최적화되도록 마이그레이션하는 경우 메모리 액세스에 최적화된 테이블의 크기는 대략 원래 디스크 기반 테이블의 힙 또는 클러스터형 인덱스 크기에 해당합니다.
+메모리 최적화 테이블의 크기는 데이터 크기에 행 머리글에 대한 약간의 오버헤드를 더한 것에 해당합니다. 디스크 기반 테이블을 메모리 최적화되도록 마이그레이션하는 경우 메모리 최적화 테이블의 크기는 대략 원래 디스크 기반 테이블의 힙 또는 클러스터형 인덱스 크기에 해당합니다.
 
-메모리 액세스에 최적화된 테이블의 인덱스는 디스크 기반 테이블의 비클러스터형 인덱스보다 작은 경우가 많습니다. 비클러스터형 인덱스의 크기는 `[primary key size] * [row count]`순입니다. 해시 인덱스의 크기는 `[bucket count] * 8 bytes`입니다. 
+메모리 최적화 테이블의 인덱스는 디스크 기반 테이블의 비클러스터형 인덱스보다 작은 경우가 많습니다. 비클러스터형 인덱스의 크기는 `[primary key size] * [row count]`순입니다. 해시 인덱스의 크기는 `[bucket count] * 8 bytes`입니다. 
 
-활성 워크로드가 있는 경우 행 버전 관리 및 다양한 작업을 위해 추가 메모리를 고려해야 합니다. 실제로 필요한 메모리 양은 워크로드에 따라 다르지만 안전을 위해 메모리 액세스에 최적화된 테이블 및 인덱스의 예상 크기의 두 배로 시작하여 실제 필요한 메모리 요구 사항을 관측하는 것이 좋습니다. 행 버전 관리에 대한 오버헤드는 항상 워크로드의 특징에 따라 다릅니다. 특히 장기 실행 트랜잭션에서는 오버헤드가 증가합니다. 더 큰 데이터베이스를 사용하는 대부분의 워크로드(예: 100GB 초과)의 경우 오버헤드가 제한됩니다(25% 이하).
+활성 워크로드가 있는 경우 행 버전 관리 및 다양한 작업을 위해 추가 메모리를 고려해야 합니다. 실제로 필요한 메모리 양은 워크로드에 따라 다르지만 안전을 위해 메모리 최적화 테이블 및 인덱스의 예상 크기의 두 배로 시작하여 실제 필요한 메모리 요구 사항을 관측하는 것이 좋습니다. 행 버전 관리에 대한 오버헤드는 항상 워크로드의 특징에 따라 다릅니다. 특히 장기 실행 트랜잭션에서는 오버헤드가 증가합니다. 더 큰 데이터베이스를 사용하는 대부분의 워크로드(예: 100GB 초과)의 경우 오버헤드가 제한됩니다(25% 이하).
 
   
 ## <a name="detailed-computation-of-memory-requirements"></a>메모리 요구 사항의 상세 계산 
   
-- [메모리 액세스에 최적화된 테이블의 예](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_ExampleTable)  
+- 
+            [메모리 최적화 테이블의 예](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_ExampleTable)  
   
 - [테이블에 대한 메모리](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable)  
   
@@ -59,9 +59,11 @@ ms.lasthandoff: 06/22/2017
   
 - [증가에 대한 메모리](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> 메모리 액세스에 최적화된 테이블의 예  
+###  
+            <a name="bkmk_ExampleTable">
+            </a> 메모리 최적화 테이블의 예  
 
-다음 메모리 액세스에 최적화된 테이블 스키마를 살펴봅니다.
+다음 메모리 최적화 테이블 스키마를 살펴봅니다.
   
 ```tsql  
 CREATE TABLE t_hk
@@ -89,11 +91,11 @@ CREATE TABLE t_hk
 GO  
 ```  
 
-위의 스키마를 사용하여 이 메모리 액세스에 최적화된 테이블에 필요한 최소 메모리를 결정할 것입니다.  
+위의 스키마를 사용하여 이 메모리 최적화 테이블에 필요한 최소 메모리를 결정할 것입니다.  
   
 ###  <a name="bkmk_MemoryForTable"></a> 테이블에 대한 메모리  
 
-메모리 액세스에 최적화된 테이블 행은 다음 세 부분으로 구성되어 있습니다.
+메모리 최적화 테이블 행은 다음 세 부분으로 구성되어 있습니다.
   
 - **타임스탬프**   
     행 머리글/타임스탬프 = 24바이트  
@@ -104,11 +106,11 @@ GO
 - **데이터**   
     행의 데이터 부분 크기는 각 데이터 열의 형식 크기를 합하여 결정됩니다.  예제 테이블에는 4바이트 정수 5개, 50바이트 문자 열 3개, 30바이트 문자 열 1개가 있습니다.  따라서 각 행의 데이터 부분은 4 + 4 + 4 + 4 + 4 + 50 + 50 + 50 + 30 또는 200바이트입니다.  
   
-다음은 메모리 액세스에 최적화된 테이블에 있는 5,000,000(5백만)개 행에 대한 크기 계산입니다. 데이터 행에서 사용하는 총 메모리는 다음과 같이 예상됩니다.  
+다음은 메모리 최적화 테이블에 있는 5,000,000(5백만)개 행에 대한 크기 계산입니다. 데이터 행에서 사용하는 총 메모리는 다음과 같이 예상됩니다.  
   
 #### <a name="memory-for-the-tables-rows"></a>테이블의 행에 대한 메모리  
   
-위의 계산에서 메모리 액세스에 최적화된 테이블의 각 행 크기는 24 + 32 + 200 또는 256바이트입니다.  행이 5백만 개이므로 테이블은 5,000,000 * 256바이트 또는 1,280,000,000바이트, 즉 1.28GB 정도를 사용합니다.  
+위의 계산에서 메모리 최적화 테이블의 각 행 크기는 24 + 32 + 200 또는 256바이트입니다.  행이 5백만 개이므로 테이블은 5,000,000 * 256바이트 또는 1,280,000,000바이트, 즉 1.28GB 정도를 사용합니다.  
   
 ###  <a name="bkmk_IndexMeemory"></a> 인덱스에 대한 메모리  
 
@@ -139,7 +141,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 새 테이블을 만드는 경우 배열 크기를 예측하거나 배포 전에 테스트에서 데이터를 수집해야 합니다.  
   
-해시 인덱스가 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 액세스에 최적화된 테이블에서 작동하는 방식에 대한 자세한 내용은 [해시 인덱스](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)를 참조하세요.  
+해시 인덱스가 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 최적화 테이블에서 작동하는 방식에 대한 자세한 내용은 [해시 인덱스](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)를 참조하세요.  
   
 #### <a name="setting-the-hash-index-array-size"></a>해시 인덱스 배열 크기 설정  
   
@@ -185,7 +187,7 @@ SELECT * FRON t_hk
   
 `rowVersions = durationOfLongestTransctoinInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
-유효하지 않은 행에 필요한 메모리는 유효하지 않은 행 수와 메모리 액세스에 최적화된 테이블 행의 크기(위의 [테이블에 대한 메모리](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable) 참조)를 곱하여 예측됩니다.  
+유효하지 않은 행에 필요한 메모리는 유효하지 않은 행 수와 메모리 최적화 테이블 행의 크기(위의 [테이블에 대한 메모리](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable) 참조)를 곱하여 예측됩니다.  
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
@@ -202,5 +204,4 @@ SELECT * FRON t_hk
 ## <a name="see-also"></a>관련 항목:
 
 [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
 

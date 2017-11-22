@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ee66a454da8bfdc23e9beb382c0ac22939268e80
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +143,7 @@ CREATE PROCEDURE 문에서 T-SQL 키워드 NATIVE_COMPILATION은 네이티브 �
 - 네이티브 컴파일 결과를 확인하는 데 해석된 프로시저 기간의 1/100 정도밖에 걸리지 않았습니다.  
   
   
-네이티브 모듈은 메모리 액세스에 최적화된 테이블만 참조할 수 있으며, 디스크 기반 테이블은 참조할 수 없습니다.  
+네이티브 모듈은 메모리 최적화 테이블만 참조할 수 있으며, 디스크 기반 테이블은 참조할 수 없습니다.  
   
 고유하게 컴파일된 모듈에는 다음 세 가지 유형이 있습니다.  
   
@@ -196,9 +194,9 @@ CREATE PROCEDURE 문에서 T-SQL 키워드 NATIVE_COMPILATION은 네이티브 �
 ## <a name="2-elevate-to-snapshot"></a>2. SNAPSHOT으로 권한 상승  
   
   
-트랜잭션에 디스크 기반 테이블과 메모리 액세스에 최적화된 테이블이 모두 포함되어 있을 경우 *컨테이너 간 트랜잭션*이라고 합니다. 이러한 트랜잭션에서 메모리 액세스에 최적화된 트랜잭션 부분은 SNAPSHOT이라고 하는 트랜잭션 격리 수준에서 작동해야 합니다.  
+트랜잭션에 디스크 기반 테이블과 메모리 최적화 테이블이 모두 포함되어 있을 경우 *컨테이너 간 트랜잭션*이라고 합니다. 이러한 트랜잭션에서 메모리 최적화 트랜잭션 부분은 SNAPSHOT이라고 하는 트랜잭션 격리 수준에서 작동해야 합니다.  
   
-컨테이너 간 트랜잭션에서 메모리 액세스에 최적화된 테이블에 대해 이 수준을 안정적으로 적용하려면 다음 T-SQL을 실행하여 [데이터베이스 설정을 변경](../../t-sql/statements/alter-database-transact-sql-set-options.md)합니다.  
+컨테이너 간 트랜잭션에서 메모리 최적화 테이블에 대해 이 수준을 안정적으로 적용하려면 다음 T-SQL을 실행하여 [데이터베이스 설정을 변경](../../t-sql/statements/alter-database-transact-sql-set-options.md)합니다.  
   
   
   
@@ -214,7 +212,7 @@ CREATE PROCEDURE 문에서 T-SQL 키워드 NATIVE_COMPILATION은 네이티브 �
 ## <a name="3-create-an-optimized-filegroup"></a>3. 최적화된 FILEGROUP 만들기  
   
   
-Microsoft SQL Server에서 메모리 액세스에 최적화된 테이블을 만들려면 먼저 CONTAINS MEMORY_OPTIMIZED_DATA를 선언하는 FILEGROUP을 만들어야 합니다. 이렇게 하면 FILEGROUP이 데이터베이스에 할당됩니다. 자세한 내용은 다음을 참조하세요.  
+Microsoft SQL Server에서 메모리 최적화 테이블을 만들려면 먼저 CONTAINS MEMORY_OPTIMIZED_DATA를 선언하는 FILEGROUP을 만들어야 합니다. 이렇게 하면 FILEGROUP이 데이터베이스에 할당됩니다. 자세한 내용은 다음을 참조하세요.  
   
 - [메모리 액세스에 최적화된 FILEGROUP](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)  
   
@@ -227,7 +225,7 @@ MEMORY_OPTIMIZED_DATA 파일 그룹이 포함된 데이터베이스에는 일부
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
-## <a name="4-create-a-memory-optimized-table"></a>4. 메모리 액세스에 최적화된 테이블 만들기  
+## <a name="4-create-a-memory-optimized-table"></a>4. 메모리 최적화 테이블 만들기  
   
 중요한 Transact-SQL 키워드는 MEMORY_OPTIMIZED 키워드입니다.  
   
@@ -248,17 +246,17 @@ MEMORY_OPTIMIZED_DATA 파일 그룹이 포함된 데이터베이스에는 일부
   
   
   
-메모리 액세스에 최적화된 테이블에 대한 Transact-SQL INSERT 및 SELECT 문은 일반 테이블의 경우와 동일합니다.  
+메모리 최적화 테이블에 대한 Transact-SQL INSERT 및 SELECT 문은 일반 테이블의 경우와 동일합니다.  
   
 #### <a name="alter-table-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 ALTER TABLE  
   
-ALTER TABLE... ADD/DROP은 메모리 액세스에 최적화된 테이블 또는 인덱스에서 열을 추가하거나 제거할 수 있습니다.  
+ALTER TABLE... ADD/DROP은 메모리 최적화 테이블 또는 인덱스에서 열을 추가하거나 제거할 수 있습니다.  
   
-- CREATE INDEX 및 DROP INDEX는 메모리 액세스에 최적화된 테이블에 대해 실행할 수 없습니다. 대신 ALTER TABLE ... ADD/DROP INDEX를 사용하세요.  
+- CREATE INDEX 및 DROP INDEX는 메모리 최적화 테이블에 대해 실행할 수 없습니다. 대신 ALTER TABLE ... ADD/DROP INDEX를 사용하세요.  
 - 자세한 내용은 [메모리 액세스에 최적화된 테이블 변경](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)을 참조하세요.  
   
   
-#### <a name="plan-your-memory-optimized-tables-and-indexes"></a>메모리 액세스에 최적화된 테이블과 인덱스 계획  
+#### <a name="plan-your-memory-optimized-tables-and-indexes"></a>메모리 최적화 테이블과 인덱스 계획  
   
   
 - [메모리 액세스에 최적화된 테이블의 인덱스](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -364,21 +362,25 @@ ALTER TABLE... ADD/DROP은 메모리 액세스에 최적화된 테이블 또는 
   
 <a name="how-do-memory-optimized-tables-perform-faster-34q"></a>  
   
-### <a name="how-memory-optimized-tables-perform-faster"></a>메모리 액세스에 최적화된 테이블의 성능이 향상되는 방법  
+### <a name="how-memory-optimized-tables-perform-faster"></a>메모리 최적화 테이블의 성능이 향상되는 방법  
   
   
-**이중 특성:** 메모리 액세스에 최적화된 테이블은 활성 메모리에서 표현되고, 하드 디스크에도 표현되는 이중 특성이 있습니다. 각 트랜잭션은 테이블의 두 표현 방식으로 모두 커밋됩니다. 트랜잭션은 그중 더 빠른 활성 메모리 표현에 대해 작동합니다. 메모리 액세스에 최적화된 테이블은 디스크와 비교할 때 더 빨라진 활성 메모리 속도를 활용합니다. 또한 더 빨라진 활성 메모리로 인해 실제로 속도에 최적화된 고급 테이블 구조가 구현됩니다. 고급 구조는 또한 페이징되지 않아 래치 및 스핀 잠금의 오버헤드와 경합을 방지합니다.  
+
+            **이중 특성:** 메모리 최적화 테이블은 활성 메모리에서 표현되고, 하드 디스크에도 표현되는 이중 특성이 있습니다. 각 트랜잭션은 테이블의 두 표현 방식으로 모두 커밋됩니다. 트랜잭션은 그중 더 빠른 활성 메모리 표현에 대해 작동합니다. 메모리 액세스에 최적화된 테이블은 디스크와 비교할 때 더 빨라진 활성 메모리 속도를 활용합니다. 또한 더 빨라진 활성 메모리로 인해 실제로 속도에 최적화된 고급 테이블 구조가 구현됩니다. 고급 구조는 또한 페이징되지 않아 래치 및 스핀 잠금의 오버헤드와 경합을 방지합니다.  
   
   
-**잠금 없음:** 메모리 액세스에 최적화된 테이블은 데이터 무결성과 동시성 및 높은 처리량 간 경쟁하는 목표에 *최적* 의 접근 방법을 사용합니다. 트랜잭션 중 테이블은 업데이트된 데이터 행의 어떤 버전에도 잠금을 설정하지 않습니다. 이렇게 하면 일부 고용량 시스템의 경합을 크게 줄일 수 있습니다.  
+
+            **잠금 없음:** 메모리 최적화 테이블은 데이터 무결성과 동시성 및 높은 처리량 간 경쟁하는 목표에 *최적*의 접근 방법을 사용합니다. 트랜잭션 중 테이블은 업데이트된 데이터 행의 어떤 버전에도 잠금을 설정하지 않습니다. 이렇게 하면 일부 고용량 시스템의 경합을 크게 줄일 수 있습니다.  
   
   
-**행 버전:** 잠금 대신 메모리 액세스에 최적화된 테이블은 tempdb가 아닌 테이블 자체에 업데이트된 행의 새로운 버전을 추가합니다. 원래 행은 트랜잭션이 커밋될 때까지 유지됩니다. 트랜잭션 중 다른 프로세스에서는 원래 버전의 행을 읽을 수 있습니다.  
+
+            **행 버전:** 잠금 대신 메모리 최적화 테이블은 tempdb가 아닌 테이블 자체에 업데이트된 행의 새로운 버전을 추가합니다. 원래 행은 트랜잭션이 커밋될 때까지 유지됩니다. 트랜잭션 중 다른 프로세스에서는 원래 버전의 행을 읽을 수 있습니다.  
   
 - 디스크 기반 테이블의 경우 행 버전이 여러 개 만들어 지면 행 버전은 tempdb에 임시로 저장됩니다.  
   
   
-**적어진 로깅:** 업데이트된 행의 이전 버전과 이후 버전은 메모리 액세스에 최적화된 테이블에서 유지됩니다. 이러한 행 쌍은 일반적으로 로그 파일에 기록된 정보의 상당 부분을 제공합니다. 이로 인해 시스템에서 기록하는 정보의 양과, 로그에 정보를 기록하는 빈도가 모두 줄어들었습니다. 그럼에도 불구하고 트랜잭션 무결성은 보장됩니다.  
+
+            **적어진 로깅:** 업데이트된 행의 이전 버전과 이후 버전은 메모리 최적화 테이블에서 유지됩니다. 이러한 행 쌍은 일반적으로 로그 파일에 기록된 정보의 상당 부분을 제공합니다. 이로 인해 시스템에서 기록하는 정보의 양과, 로그에 정보를 기록하는 빈도가 모두 줄어들었습니다. 그럼에도 불구하고 트랜잭션 무결성은 보장됩니다.  
   
   
 <a name="how-do-native-procs-perform-faster-35x"></a>  
@@ -401,10 +403,11 @@ ALTER TABLE... ADD/DROP은 메모리 액세스에 최적화된 테이블 또는 
   
 <a name="trade-offs-of-memory-optimized-tables-37d"></a>  
   
-### <a name="trade-offs-of-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 장단점  
+### <a name="trade-offs-of-memory-optimized-tables"></a>메모리 최적화 테이블의 장단점  
   
   
-**메모리 추정:** 메모리 액세스에 최적화된 테이블이 사용하는 활성 메모리 양을 추정할 수 있습니다. 컴퓨터 시스템은 메모리 액세스에 최적화된 테이블을 호스트하는 데 적합한 메모리 용량을 확보해야 합니다. 자세한 내용은 다음을 참조하세요.  
+
+            **메모리 추정:** 메모리 최적화 테이블이 사용하는 활성 메모리 양을 추정할 수 있습니다. 컴퓨터 시스템은 메모리 최적화 테이블을 호스트하는 데 적합한 메모리 용량을 확보해야 합니다. 자세한 내용은 다음을 참조하세요.  
   
 - [메모리 사용량 모니터링 및 문제 해결](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
@@ -422,33 +425,34 @@ ALTER TABLE... ADD/DROP은 메모리 액세스에 최적화된 테이블 또는 
 ### <a name="trade-offs-of-native-procs"></a>기본 프로시저의 상충 관계  
   
   
-- 네이티브 컴파일 저장 프로시저는 디스크 기반 테이블 형식에 액세스할 수 없습니다. 기본 프로시저는 메모리 액세스에 최적화된 테이블에만 액세스할 수 있습니다.  
+- 네이티브 컴파일 저장 프로시저는 디스크 기반 테이블 형식에 액세스할 수 없습니다. 기본 프로시저는 메모리 최적화 테이블에만 액세스할 수 있습니다.  
 - 서버 또는 데이터베이스가 가장 최근에 온라인 상태로 전환되고 난 후 기본 프로시저가 처음으로 실행될 때 기본 프로시저는 한 번 다시 컴파일해야 합니다. 이 작업으로 인해 기본 프로시저 실행이 시작되기 전에 지연이 발생합니다.  
   
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
-## <a name="advanced-considerations-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 고급 고려 사항  
+## <a name="advanced-considerations-for-memory-optimized-tables"></a>메모리 최적화 테이블에 대한 고급 고려 사항  
   
   
 [메모리 액세스에 최적화된 테이블의 인덱스](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) 는 일부 방식에서 기존 디스크 테이블의 인덱스와 다릅니다.  
   
-- [해시 인덱스](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 는 메모리 액세스에 최적화된 테이블에서만 사용할 수 있습니다.  
+- 
+            [해시 인덱스](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 는 메모리 최적화 테이블에서만 사용할 수 있습니다.  
   
   
-계획 중인 메모리 액세스에 최적화된 테이블 및 인덱스에 대해 활성 메모리가 충분한지 확인할 계획을 세워야 합니다. 다음을 참조하십시오.  
+계획 중인 메모리 최적화 테이블 및 인덱스에 대해 활성 메모리가 충분한지 확인할 계획을 세워야 합니다. 다음을 참조하십시오.  
   
 - [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
-DURABILITY = SCHEMA_ONLY를 사용하여 메모리 액세스에 최적화된 테이블을 선언할 수 있습니다.  
+DURABILITY = SCHEMA_ONLY를 사용하여 메모리 최적화 테이블을 선언할 수 있습니다.  
   
-- 이 구문은 데이터베이스가 오프라인 상태가 될 때 메모리 액세스에 최적화된 테이블에서 데이터를 모두 삭제할 것을 시스템에 알려줍니다. 테이블 정의만 유지됩니다.  
-- 데이터베이스가 다시 온라인 상태가 되면 메모리 액세스에 최적화된 테이블은 데이터가 없는 활성 메모리로 다시 로드됩니다.  
+- 이 구문은 데이터베이스가 오프라인 상태가 될 때 메모리 최적화 테이블에서 데이터를 모두 삭제할 것을 시스템에 알려줍니다. 테이블 정의만 유지됩니다.  
+- 데이터베이스가 다시 온라인 상태가 되면 메모리 최적화 테이블은 데이터가 없는 활성 메모리로 다시 로드됩니다.  
 - 수천 개의 행이 관련된 경우 SCHEMA_ONLY 테이블이 tempdb의 [#temporary 테이블](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) 보다 더 효율적일 수 있습니다.  
   
   
-테이블 변수를 메모리 액세스에 최적화된 변수로 선언할 수도 있습니다. 다음을 참조하십시오.  
+테이블 변수를 메모리 최적화 변수로 선언할 수도 있습니다. 다음을 참조하십시오.  
   
 - [메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
@@ -464,7 +468,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
 - 네이티브 컴파일 저장 프로시저(네이티브 프로시저)  
 - 네이티브 컴파일 [스칼라 사용자 정의 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
 - 네이티브 컴파일 트리거(네이티브 트리거)  
-  - 메모리 액세스에 최적화된 테이블에는 고유하게 컴파일되는 트리거만 허용됩니다.  
+  - 메모리 최적화 테이블에는 고유하게 컴파일되는 트리거만 허용됩니다.  
 - 네이티브 컴파일 [테이블 반환 함수](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   - [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
   
@@ -484,21 +488,21 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
-## <a name="documentation-guide-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 설명서 가이드  
+## <a name="documentation-guide-for-memory-optimized-tables"></a>메모리 최적화 테이블에 대한 설명서 가이드  
   
   
-다음은 메모리 액세스에 최적화된 테이블에 대한 특별 고려 사항에 설명하는 다른 문서에 대한 링크입니다.  
+다음은 메모리 최적화 테이블에 대한 특별 고려 사항에 설명하는 다른 문서에 대한 링크입니다.  
   
 - [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - SQL Server Management Studio의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능이 향상될지 평가할 수 있습니다.  
   - [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션 지원   
 - [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  - 메모리 액세스에 최적화된 테이블에서 사용하는 저장소는 메모리의 해당 크기보다 훨씬 클 수 있으며, 이는 데이터베이스 백업의 크기에 영향을 미칩니다.  
+  - 메모리 최적화 테이블에서 사용하는 저장소는 메모리의 해당 크기보다 훨씬 클 수 있으며, 이는 데이터베이스 백업의 크기에 영향을 미칩니다.  
 - [메모리 액세스에 최적화된 테이블의 트랜잭션](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
-  - 메모리 액세스에 최적화된 테이블의 트랜잭션과 관련해서 T-SQL의 재시도 논리에 대한 정보를 포함합니다.  
+  - 메모리 최적화 테이블의 트랜잭션과 관련해서 T-SQL의 재시도 논리에 대한 정보를 포함합니다.  
 - [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
-  - 메모리 액세스에 최적화된 테이블 및 기본 프로시저에 지원되거나 지원되지 않는 T-SQL 및 데이터 형식  
+  - 메모리 최적화 테이블 및 기본 프로시저에 지원되거나 지원되지 않는 T-SQL 및 데이터 형식  
 - [메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)(고급 고려 사항 옵션에 대해 설명)  
   
   
@@ -522,4 +526,3 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   
 - [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
 - [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)(메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
-

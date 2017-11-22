@@ -2,9 +2,12 @@
 title: "빠른 시작: SQL Server의 확장 이벤트 | Microsoft 문서"
 ms.custom: 
 ms.date: 09/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -16,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 이 문서는 확장 이벤트를 사용해 본 적이 없고 몇 분 내에 이벤트 세션을 만들려는 SQL 개발자를 대상으로 합니다. 확장 이벤트를 사용하면 SQL 시스템 및 응용 프로그램의 내부 작업에 대한 세부 정보를 볼 수 있습니다. 확장 이벤트 세션을 만들 때는 다음을 지정합니다.
