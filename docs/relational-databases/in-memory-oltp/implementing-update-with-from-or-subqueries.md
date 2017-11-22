@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5de86bfa68d281e79f77b9578eff2385f20c0958
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>FROM 또는 하위 쿼리를 사용하여 UPDATE 구현
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
 
 이 섹션의 샘플 T-SQL 코드는 좋은 성능을 제공하는 해결 방법을 보여 줍니다. 해결 방법은 고유하게 컴파일된 트리거에서 구현되었습니다. 코드에서 주의해야 할 사항은 다음과 같습니다.  
   
-- 메모리 액세스에 최적화된 테이블 형식인 dbo.Type1 형식  
+- 메모리 최적화 테이블 형식인 dbo.Type1 형식  
 - 트리거의 WHILE 루프.  
   - 루프는 Inserted에서 행을 한 번에 하나씩 검색합니다.  
   
@@ -165,4 +163,3 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
   
   
   
-

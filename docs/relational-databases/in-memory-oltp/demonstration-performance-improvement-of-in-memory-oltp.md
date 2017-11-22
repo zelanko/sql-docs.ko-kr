@@ -8,33 +8,31 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 19c04ed5c67cc2f661ed0774b3941082dec07d81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  이 항목의 코드 예제는 메모리 액세스에 최적화된 테이블의 빠른 성능 향상을 보여줍니다. 이러한 성능 향상은 메모리 액세스에 최적화된 테이블의 데이터가 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 액세스될 때 두드러집니다. 이러한 성능 향상은 메모리 액세스에 최적화된 테이블의 데이터가 고유하게 컴파일된 저장 프로시저(NCSProc)에서 액세스될 때 더욱 커집니다.  
+  이 항목의 코드 예제는 메모리 최적화 테이블의 빠른 성능 향상을 보여줍니다. 이러한 성능 향상은 메모리 최적화 테이블의 데이터가 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 액세스될 때 두드러집니다. 이러한 성능 향상은 메모리 최적화 테이블의 데이터가 고유하게 컴파일된 저장 프로시저(NCSProc)에서 액세스될 때 더욱 커집니다.  
  
 메모리 내 OLTP의 잠재적인 성능 향상에 대한 보다 포괄적인 데모를 보려면 [메모리 내 OLTP 성능 데모 v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)을 참조하세요. 
   
  이 문서의 코드 예제는 단일 스레드이며 메모리 내 OLTP의 동시성 이점을 활용하지 않습니다. 동시성을 사용하는 작업에서는 더 큰 성능 향상이 가능합니다. 코드 예제는 성능 향상의 한 가지 측면인 삽입을 위한 데이터 액세스 효율성만 보여 줍니다.  
   
- 메모리 액세스에 최적화된 테이블로 제공되는 성능 향상은 메모리 액세스에 최적화된 테이블의 데이터가 NCSProc에서 액세스될 때 완벽하게 실현됩니다.  
+ 메모리 최적화 테이블로 제공되는 성능 향상은 메모리 최적화 테이블의 데이터가 NCSProc에서 액세스될 때 완벽하게 실현됩니다.  
   
 ## <a name="code-example"></a>코드 예  
  다음 하위 섹션에서는 각 단계에 대해 설명합니다.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  이름이 **C:\data\\\**인 디렉터리를 수동으로 만듭니다. 샘플 Transact SQL 코드를 위해서는 미리 존재하는 디렉터리가 필요합니다.  
   
-3.  짧은 T-SQL을 실행하여 데이터베이스 및 메모리 액세스에 최적화된 파일 그룹을 생성하십시오.  
+3.  짧은 T-SQL을 실행하여 데이터베이스 및 메모리 최적화 파일 그룹을 생성하세요.  
   
 ```tsql  
 go  
@@ -75,7 +73,7 @@ go
  이를 위해 Azure 포털 사용 지침을 확인하려면 [Azure SQL 데이터베이스 시작](http://azure.microsoft.com/documentation/articles/sql-database-get-started)을 참조하십시오.  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>2단계: 메모리 액세스에 최적화된 테이블과 NCSProc 만들기  
- 이 단계를 통해 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저(NCSProc)를 만들 수 있습니다. 다음을 수행합니다.  
+ 이 단계를 통해 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저(NCSProc)를 만들 수 있습니다. 다음을 수행합니다.  
   
 1.  SSMS.exe를 사용하여 새 데이터베이스에 연결합니다.  
   
@@ -125,7 +123,7 @@ go
 ```  
   
 ### <a name="step-3-run-the-code"></a>3단계: 코드 실행  
- 이제 메모리 액세스에 최적화된 테이블의 성능을 보여주는 쿼리를 실행합니다. 다음을 수행합니다.  
+ 이제 메모리 최적화 테이블의 성능을 보여주는 쿼리를 실행합니다. 다음을 수행합니다.  
   
 1.  SSMS.exe를 사용하여 데이터베이스에서 다음 T-SQL을 실행합니다.  
   
@@ -206,4 +204,3 @@ go
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

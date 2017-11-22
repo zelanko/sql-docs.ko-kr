@@ -8,28 +8,26 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e9fc5c574cc4fee841cfc6598623ec20ae26c504
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 해시 인덱스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
-이 문서에서는 메모리 액세스에 최적화된 테이블에서 사용할 수 있는 *해시* 형식의 인덱스를 설명합니다. 이 문서에서는 다음 내용을 다룹니다.  
+이 문서에서는 메모리 최적화 테이블에서 사용할 수 있는 *해시* 형식의 인덱스를 설명합니다. 이 문서에서는 다음 내용을 다룹니다.  
   
 - TRANSACT-SQL 구문을 보여 주는 짧은 코드 예제를 제공합니다.  
 - 해시 인덱스의 기본 사항에 대해 설명합니다.  
@@ -45,12 +43,12 @@ ms.lasthandoff: 07/31/2017
   
   
   
-## <a name="a-syntax-for-memory-optimized-indexes"></a>1. 메모리 액세스에 최적화된 인덱스 구문  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>1. 메모리 최적화 인덱스 구문  
   
   
 ### <a name="a1-code-sample-for-syntax"></a>A.1 구문에 대한 코드 샘플  
   
-이 하위 섹션에는 메모리 액세스에 최적화된 테이블에 해시 인덱스를 만드는 데 사용할 수 있는 구문을 보여 주는 하는 TRANSACT-SQL 코드 블록이 포함되어 있습니다.  
+이 하위 섹션에는 메모리 최적화 테이블에 해시 인덱스를 만드는 데 사용할 수 있는 구문을 보여 주는 하는 TRANSACT-SQL 코드 블록이 포함되어 있습니다.  
   
 - 샘플에는 해시 인덱스가 CREATE TABLE 문 내에 선언되어 있습니다.  
   - 대신 별도의 [ALTER TABLE...ADD INDEX](#h3-b2-declaration-limitations) 문에 해시 인덱스를 선언할 수 있습니다.  
@@ -97,7 +95,7 @@ ms.lasthandoff: 07/31/2017
   
 ### <a name="b2-declaration-limitations"></a>B.2 선언 제한 사항  
   
-해시 인덱스는 메모리 액세스에 최적화된 테이블에 대해서만 존재할 수 있습니다. 디스크 기반 테이블에는 있을 수 없습니다.  
+해시 인덱스는 메모리 최적화 테이블에 대해서만 존재할 수 있습니다. 디스크 기반 테이블에는 있을 수 없습니다.  
   
 해시 인덱스를 다음으로 선언할 수 있습니다.  
   
@@ -119,7 +117,7 @@ ms.lasthandoff: 07/31/2017
 해시 인덱스는 *버킷* 배열이라고 하는 키 값을 앵커합니다.  
   
 - 각 버킷은 8바이트이며, 키 항목의 링크 목록의 메모리 주소를 저장하는 데 사용됩니다.  
-- 각 항목은 인덱스 키와, 기본 메모리 액세스에 최적화된 테이블에서 해당 행의 주소에 대한 값입니다.  
+- 각 항목은 인덱스 키와, 기본 메모리 최적화 테이블에서 해당 행의 주소에 대한 값입니다.  
   - 각 항목은 항목의 링크 목록에서 현재 버킷에 연결된 그 다음 항목을 가리킵니다.  
   
   
@@ -151,7 +149,7 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
 ### <a name="b4-row-versions-and-garbage-collection"></a>B.4 행 버전 및 가비지 수집  
   
   
-메모리 액세스에 최적화된 테이블에서 행이 SQL UPDATE의 영향을 받을 경우 테이블에서는 행의 업데이트된 버전을 만듭니다. 업데이트 트랜잭션 동안 다른 세션에서는 이전 버전의 행을 읽을 수 있어 행 잠금과 관련 있는 성능 속도가 느려지는 것을 방지할 수 있습니다.  
+메모리 최적화 테이블에서 행이 SQL UPDATE의 영향을 받을 경우 테이블에서는 행의 업데이트된 버전을 만듭니다. 업데이트 트랜잭션 동안 다른 세션에서는 이전 버전의 행을 읽을 수 있어 행 잠금과 관련 있는 성능 속도가 느려지는 것을 방지할 수 있습니다.  
   
 해시 인덱스에는 업데이트를 수용하기 위해 서로 다른 버전의 항목이 있을 수도 있습니다.  
   
@@ -189,7 +187,7 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
   
 **BUCKET_COUNT** 가 기본 범위에서 약간 위에 있거나 약간 아래에 있더라도 해시 인덱스의 성능은 지속할 수 있거나 허용 가능합니다. 문제가 되는 상황은 발생하지 않습니다.  
   
-메모리 액세스에 최적화된 테이블에서 증가할 것으로 예측되는 행 수와 비교적 동일한 **BUCKET_COUNT** 를 해시 인덱스에 지정합니다.  
+메모리 최적화 테이블에서 증가할 것으로 예측되는 행 수와 비교적 동일한 **BUCKET_COUNT**를 해시 인덱스에 지정합니다.  
   
 테이블에서 2백만 개의 행이 있고 계속 증가하고 있다고 가정하면 10배로 수량이 증가할 경우 2천만 개의 행을 예측합니다. 이 경우 테이블의 행 수보다 10배 많은 버킷 수로 시작됩니다. 이렇게 하면 증가하는 행 수를 위한 공간이 확보됩니다.  
   
@@ -273,7 +271,7 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
 다음 T-SQL 코드 블록을 사용하여 `SELECT * FROM sys.dm_db_xtp_hash_index_stats;`을 간편하게 테스트할 수 있습니다. 코드 블록은 1분 내에 완료됩니다. 다음은 아래 코드 블록의 절입니다.  
   
   
-1. 몇 개의 해시 인덱스가 있는 메모리 액세스에 최적화된 테이블을 만듭니다.  
+1. 몇 개의 해시 인덱스가 있는 메모리 최적화 테이블을 만듭니다.  
 2. 수천 개의 행으로 테이블을 채웁니다.  
     1. 모듈로 연산자는 StatusCode 열에서 중복 값의 비율을 구성하는 데 사용됩니다.  
     2. 약 1분 내에 루프에서 행을 262144개 삽입합니다.  
@@ -440,4 +438,3 @@ OLTP는 작업 시 개별 행에 중점을 둡니다. 일반적으로 전체 테
 해시 인덱스는 WHERE 절이 있어야 해당 키의 각 열에 대한 같음 테스트를 지정할 수 있습니다. 그렇지 않으면 해시 인덱스는 최적화 프로그램에 유용하지 않습니다.  
   
 WHERE 절이 인덱스 키의 두 번째 열만 지정하는 경우에는 두 인덱스 유형 모두 유용하지 않습니다.  
-

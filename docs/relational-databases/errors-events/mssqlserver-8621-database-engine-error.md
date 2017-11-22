@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 8621 (Database Engine error)
+helpviewer_keywords: 8621 (Database Engine error)
 ms.assetid: 67f59865-becd-4999-8bb0-90aedd7effbf
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2877d4021c636fdefb0b71ed4ae99cf6c2cd44e5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 052d26f2bdcbfe09e9d71cedd1e99bf85a205805
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver8621"></a>MSSQLSERVER_8621
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,4 +46,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>사용자 동작  
 가장 큰 수치를 기준으로 쿼리를 여러 개로 나누어 단순하게 만듭니다. 먼저 불필요한 쿼리 요소를 제거한 후 임시 테이블을 추가하고 쿼리를 두 개로 분할합니다.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 컴파일러가 이들을 다시 결합하므로 단지 쿼리의 일부를 하위 쿼리, 함수 또는 공통 테이블 식으로 옮기는 것만으로는 부족합니다.  
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: d6049d82cb551c1614f4ea9f76528e53cd29942c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ ms.lasthandoff: 10/11/2017
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 마치는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 대규모 데이터베이스의 경우 일련의 [differential database backups]\(../../relational-databases/backup-restore/differential-backups-sql-server.md)로 전체 데이터베이스 백업을 보충해 보세요. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
+-   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 마치는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 대규모 데이터베이스의 경우 일련의 [differential database backups](../../relational-databases/backup-restore/differential-backups-sql-server.md)로 전체 데이터베이스 백업을 보충해 보세요. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
   
 -   [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 저장 프로시저를 사용하여 전체 데이터베이스 백업의 크기를 예측합니다.  
   
@@ -405,4 +403,3 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  [전체 데이터베이스 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)  
   
   
-

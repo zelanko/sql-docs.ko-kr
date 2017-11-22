@@ -1,10 +1,13 @@
 ---
 title: "상시 암호화되는 암호화 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9708c94a2a0bf21882f887525099e6e826d7bbf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6767e36da99208b872eb5872185e541e4fa902e2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-cryptography"></a>상시 암호화되는 암호화
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 문서에서는 [및](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 상시 암호화 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]기능에서 사용되는 암호화 관련 자료를 유도하기 위한 암호화 알고리즘 및 메커니즘을 설명합니다.  
   
