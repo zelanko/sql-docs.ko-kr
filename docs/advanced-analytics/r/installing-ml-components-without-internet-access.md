@@ -1,42 +1,40 @@
 ---
 title: "인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/0522/2017
-ms.prod: sql-server-2016
+ms.date: 11/30/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 065f66ca4d1e94e021b1d65b379c4a79302b1066
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치
 
-R 및 Python 구성 요소는 SQL Server 2016 및 SQL Server 2017와 함께 제공 되는 오픈 소스 이기 때문에 Microsoft는 기본적으로 Python 또는 R 구성 요소 설치 하지 않습니다.
-
-대신, 관련 된 설치 관리자를 제공 하 고 패키지는 Microsoft 다운로드 센터 및 신뢰할 수 있는 다른 사이트에 편리한으로 제공 됩니다. 적절 한 라이선스에 동의 해야 하 고 SQL Server 설치 프로그램 사용자에 대 한 Python 또는 R 구성 요소를 설치 하는 합니다.
+R 및 Python 구성 요소는 SQL Server 2016 및 SQL Server 2017와 함께 제공 되는 오픈 소스 이기 때문에 Microsoft는 기본적으로 Python 또는 R 구성 요소 설치 하지 않습니다. 대신, 관련 된 설치 관리자를 제공 하 고 패키지는 Microsoft 다운로드 센터 및 신뢰할 수 있는 다른 사이트에 편리한으로 제공 됩니다. 적절 한 라이선스에 동의 해야 하 고 SQL Server 설치 프로그램 사용자에 대 한 Python 또는 R 구성 요소를 설치 하는 합니다.
 
 이 항목에서는 설치 관리자와 오프 라인 설치 프로세스의 개요에 대 한 다운로드 위치를 제공 합니다.
 
-## <a name="installation-process"></a>설치 프로세스
+## <a name="overview-of-the-offline-installation-process"></a>오프 라인 설치 프로세스의 개요
 
 일반적으로 SQL Server 2016 및 SQL Server 2017에서 사용 되는 컴퓨터 구성 요소를 설치할 인터넷 연결이 필요 합니다. 기계 학습 옵션 중 하나를 선택한 경우 SQL Server 설치 프로그램 실행, 설치 확인 Python 또는 R에 대 한 설치 관리자, 다른 모든 필수 구성 요소와 합니다.
 
 + **컴퓨터에 있는 경우 인터넷에 연결**
 
-    SQL Server, 구성 요소를 다운로드 힙이고 설치 하는 동안 설치를 찾습니다. 오픈 소스는 각 구성 요소 (R 또는 Python) 설치에 대해 별도로 사용 조건에 동의 해야 합니다.
+    SQL Server 찾아서 구성 요소를 다운로드 하 고 설치 하는 동안 설치 합니다. 오픈 소스는 각 구성 요소 (R 또는 Python) 설치에 대해 별도로 사용 조건에 동의 합니다.
 
 + **컴퓨터에 인터넷 액세스가 없는 경우**
 
@@ -48,12 +46,21 @@ R 및 Python 구성 요소는 SQL Server 2016 및 SQL Server 2017와 함께 제�
 
 ### <a name="step-1-obtain-additional-installers"></a>1단계. 가져올 추가 설치 관리자
 
-에 대 한 **R** SQL Server 2016 및 SQL Server 2017에서 두 명의 서로 다른 설치 관리자를 가져오려는 필요 합니다. SQL Server 설치 마법사가 올바른 순서 대로 설치 되어 있는지 확인 합니다.
+**R에 대 한**
+
+R 언어는 SQL Server 2016 및 SQL Server 2017 모두에서 지원 됩니다. 두 명의 서로 다른 설치 관리자는 오픈 소스 및 독점 구성 요소에 필요 합니다. SQL Server 설치 마법사가 올바른 순서 대로 설치 되어 있는지 확인 합니다.
 
 + 설치 프로그램의 **SRO** 이름에는 오픈 소스 구성 요소를 제공 합니다.
 + 설치 프로그램의 **SRS** 이름에 데이터베이스 통합에 대 한 포함 하 여 Microsoft에서 제공 하는 구성 요소를 포함 합니다.
 
-에 대 한 **Python** SQL Server 2017 년에 단일 CAB 파일 및 모든 필수 구성 요소를 다운로드 합니다.
+**Python에 대 한**
+
+Python 언어 SQL Server 2017 에서만 지원 됩니다. 다시 다운로드 해야 하는 별도 설치 관리자를 두 가지가 있습니다.
+
++ 설치 프로그램의 **SPO** 이름에는 Microsoft Python Open 및 오픈 소스 구성 요소를 제공 합니다.
++ 설치 프로그램의 **SPS** 이름에 Microsoft Python 서버용 이며 데이터베이스 통합에 대 한 포함 하 여 Microsoft에서 제공 하는 구성 요소를 포함 합니다.
+
+**다운로드 하는 방법**
 
 1. 설치 관리자 다운로드는 [Microsoft 다운로드 센터 사이트](#installerlocs) 실행 하지 않고 설치 프로그램을 저장 하 고 인터넷에 연결 된 컴퓨터에 있습니다.
 2. 시스템 학습 구성 요소를 설치 하려는 컴퓨터에 설치 관리자 (CAB) 파일을 복사 합니다.
@@ -119,10 +126,15 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Microsoft Python 열기     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python 서버    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |prervious 사용|
+Microsoft R Open     |이전에 사용 하 여|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Microsoft Python 열기     |이전에 사용 하 여 |
 Microsoft Python 서버    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+**SQL Server 2017 CU2** |
+Microsoft R Open     |이전에 사용 하 여|
+Microsoft R Server      |이전에 사용 하 여|
+Microsoft Python 열기     |이전에 사용 하 여 |
+Microsoft Python 서버    |이전에 사용 하 여|
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016에 대 한 다운로드
 
@@ -189,7 +201,6 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 [Microsoft Visual C++ 2013 재배포 가능](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
 [Microsoft Visual C++ 2015 재배포 가능](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
 
-
 ## <a name="modslocales"></a>다른 언어 로캘에 대 한 설치
 
 다운로드 하는 경우는 합니다. 설치 마법사에 인터넷 연결 된 컴퓨터에서 SQL Server 설치 프로그램의 일부로 CAB 파일이 로컬 언어를 감지 하 고 자동으로 설치 관리자의 언어를 변경 합니다.
@@ -204,7 +215,7 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 
     > [!IMPORTANT]
     > 이 문제는만 초기 버전을 적용 하 고 이후 릴리스에서 수정 되었습니다.
-    > 설치 관리자의 언어를 설치할 수 없습니다는 메시지를 반환 하는 경우에이 해결 방법을 사용 합니다.
+    > **설치 관리자의 언어를 설치할 수 없습니다는 메시지를 반환 하는 경우에이 해결 방법을 사용 합니다.**
 
 + **SQL server 2017**
 
@@ -220,14 +231,15 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 
 + 있다면 *추가* 에 이러한 구성 요소는 *기존* 설치를 업데이트 된 버전의 SQL Server 설치 관리자를 사용 하 고 해당 버전의 추가 구성 요소를 업데이트 합니다. R 기능이 설치 되도록 상태임을 지정 하면 설치 관리자 구성 요소를 학습 하는 컴퓨터에 대 한 설치 관리자의 일치 하는 버전을 찾습니다.
 
-## <a name="command-line-arguments-for-setup"></a>설치를 위한 명령줄 인수
+## <a name="command-line-arguments-for-specifying-component-locations"></a>구성 요소 위치를 지정 하기 위한 명령줄 인수
 
-무인된 설치를 수행할 때는 다음 명령줄 인수를 제공 해야 합니다. 그러나 필요가 없습니다 추가 필수 구성 요소; 설치 된 추가 플래그를 설정 하려면 .NET core 같은 필수 구성 요소는 기본적으로 자동으로 설치 됩니다.
+명령줄에서 오프 라인 설치를 수행할 때 구성 요소는 미리 다운로드의 위치를 지정 하 고 다음 명령줄 인수를 제공 해야 합니다. 그러나 필요가 없습니다 추가 필수 구성 요소; 설치 된 추가 플래그를 설정 하려면 .NET core 같은 필수 구성 요소는 기본적으로 자동으로 설치 됩니다.
 
 **설치 관리자의 위치**
 
 - `/UPDATESOURCE`SQL Server 업데이트 설치 관리자를 포함 하는 로컬 파일의 위치를 지정 하려면
 - `/MRCACHEDIRECTORY`R 구성 요소 CAB 파일을 포함 하는 폴더를 지정 하려면
+- `/MPYCACHEDIRECTORY`Python 구성 요소 CAB 파일을 포함 하는 폴더를 지정 하려면
 
 **SQL Server 2016의 R 구성 요소**
 
@@ -244,7 +256,7 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 
 - `/ADVANCEDANALYTICS`외부 스크립트에 대 한 엔진 지원
 - `/SQL_INST_MPY`Python을 사용 하려면
-- `/IACCEPTPYTHONLICENSETERMS="True"`별도 R 사용권 계약을 적용 하려면
+- `/IACCEPTPYTHONLICENSETERMS="True"`라이선스 계약을 별도 Python을 적용 하려면
 
 
 > [!NOTE]
@@ -255,4 +267,3 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 [Microsoft R Server 설치](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
 R 서비스 지원 팀에서이 문서에서는 SQL Server 2016의 무인된 설치 또는 R services의 업그레이드를 수행 하는 방법을 보여 줍니다: [인터넷 액세스가 없는 컴퓨터에 R 서비스 배포](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)합니다.
-

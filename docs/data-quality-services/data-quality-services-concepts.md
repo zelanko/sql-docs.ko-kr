@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0ba02d945babd10cca11d07f6aa9e6ac01545661
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 개념
   이 항목에서는 기술 자료 관리, 데이터 품질 프로젝트 및 데이터 품질 관리의 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 개념을 간단히 요약합니다.  
@@ -85,7 +83,7 @@ ms.lasthandoff: 09/09/2017
   
 -   참조 데이터 서비스 설정 구성. 자세한 내용은 [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md)을 참조하세요.  
   
--   정리 및 일치 작업에 대한 임계값 설정. 자세한 내용은 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
+-   정리 및 일치 작업에 대한 임계값 설정. 자세한 내용은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
 -   프로파일링 알림 설정/해제. 자세한 내용은 [DQS에서 프로파일링 알림 설정 또는 해제](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)를 참조하세요.  
   
@@ -101,4 +99,3 @@ ms.lasthandoff: 09/09/2017
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   
-

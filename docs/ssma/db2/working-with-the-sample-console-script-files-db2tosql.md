@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6243c644b6a64aea05bbc826652ea9a09e1d19f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 20583ed71781b093b3195d8dc1f192258a5b569a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>샘플 콘솔 스크립트 파일 (DB2ToSQL) 작업
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품 함께 제공 되었습니다. 이 여기서 쉽게 이러한 스크립트는 최종 사용자의 요구에 맞게 사용자 지정 하는 방법을 설명 합니다.  
@@ -90,4 +88,3 @@ ms.lasthandoff: 08/02/2017
 [서버 연결 파일 &#40; DB2ToSQL &#41; 만들기](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
 [생성할 보고서 &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)  
   
-

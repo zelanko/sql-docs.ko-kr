@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLConfigDataSource function [ODBC], ODBC driver for Oracle
+helpviewer_keywords: SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17d7cfdacb91ff3963a1bf77343c171e8f9d3fec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>SQLConfigDatasource을 with the ODBC Driver for Oracle 사용
 > [!IMPORTANT]  
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|A/N|번역 옵션입니다.|  
 |TxnCap|2|""|A/N|트랜잭션 지원 합니다. 0 인 경우 드라이버는 트랜잭션을 지원 하지 않습니다 보고 합니다. 1 인 경우 드라이버는 트랜잭션을 수행할 수 있다는 것을 보고 합니다.|  
 |UID|30|""|A/N|사용자 이름입니다.|
-

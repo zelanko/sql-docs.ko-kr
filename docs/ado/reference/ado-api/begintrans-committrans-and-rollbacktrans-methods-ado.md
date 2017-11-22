@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - CommitTrans method [ADO]
 - RollbackTrans method [ADO]
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9e8264879c6ac6309f2d1e2f4b6876dcd56617b2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3e973503fcdd7a524bab21364428be6b955017af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO)
 이러한 트랜잭션 메서드 내에서 처리 하는 트랜잭션 관리는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다음과 같이 개체:  
@@ -87,4 +85,3 @@ object.RollbackTrans
  [BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Attributes 속성(ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
-

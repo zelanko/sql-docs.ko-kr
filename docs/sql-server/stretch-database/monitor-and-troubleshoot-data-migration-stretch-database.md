@@ -8,33 +8,31 @@ ms.service: database-engine
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, monitoring
 - monitoring Stretch Database
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91c10b51a3fec9ccc96c3aa23100abdf2a60ba81
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: df04b69d16e0dde05fe2f731972836c1deb5d210
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>데이터 마이그레이션 모니터링 및 문제 해결(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Stretch Database 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 모니터** 를 선택합니다.  
+  스트레치 데이터베이스 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 모니터** 를 선택합니다.  
   
-## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Stretch Database 모니터에서 데이터 마이그레이션 상태 확인  
- Stretch Database 모니터를 열고 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 모니터** 를 선택합니다.  
+## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>스트레치 데이터베이스 모니터에서 데이터 마이그레이션 상태 확인  
+ 스트레치 데이터베이스 모니터를 열고 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 모니터** 를 선택합니다.  
   
 -   모니터의 상단에는 스트레치 사용 SQL Server 데이터베이스 및 원격 Azure 데이터베이스 둘 다에 대한 일반 정보가 표시됩니다.  
   
@@ -63,7 +61,6 @@ ms.lasthandoff: 04/11/2017
  SQL Server가 원격 Azure 서버와 통신할 수 있도록 Azure 서버의 Azure 방화벽 설정에 규칙을 추가해야 할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+ [스트레치 데이터베이스 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
   
-

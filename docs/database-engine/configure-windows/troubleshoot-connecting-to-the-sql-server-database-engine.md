@@ -8,25 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,5 +158,4 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
     1. 클라이언트 컴퓨터에서 SQL Server 구성 관리자를 사용하고 왼쪽 창에서 **SQL Native Client** *version* **구성**을 확장한 다음 **클라이언트 프로토콜**을 선택합니다.
     2. 오른쪽 창에서 TCP/IP를 사용할 수 있는지 확인합니다. TCP/IP를 사용할 수 없는 경우 **TCP/IP** 를 마우스 오른쪽 단추로 클릭한 다음 **사용**을 클릭합니다.
     3. TCP/IP의 프로토콜 순서가 명명된 파이프(또는 이전 버전의 VIA) 프로토콜보다 작은 숫자인지 확인합니다. 일반적으로 공유 메모리를 순서 1, TCP/IP를 순서 2로 유지해야 합니다. 공유 메모리는 클라이언트와 SQL Server가 동일한 컴퓨터에서 실행되는 경우에만 사용됩니다. 동일한 컴퓨터에 대한 연결이 아닐 때 공유 메모리를 건너뛰는 경우를 제외하고 하나가 성공할 때까지 사용 가능한 모든 프로토콜이 순서대로 시도됩니다. 
-
 

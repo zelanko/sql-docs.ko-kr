@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6e1da6abaf639a691c647168f51dfa6130da12f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb50826230e46cc71106a2b17d01914eae024f47
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="current-record-and-size-of-recordset"></a>현재 레코드와 레코드 집합의 크기
 이 섹션에서는 샘플에는 커서의 현재 위치를 찾는 방법을 설명 **레코드 집합** 에 [JScript 코드 예제에서는 레코드 집합을 반환 하려면](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)합니다.  
@@ -56,4 +54,3 @@ oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText
  이 섹션에는 다음 항목 포함 되어 있습니다.  
   
  [레코드 집합의 경계](../../../ado/guide/data/boundaries-of-a-recordset.md)
-

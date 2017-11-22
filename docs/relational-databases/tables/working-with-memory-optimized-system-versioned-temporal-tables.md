@@ -1,10 +1,13 @@
 ---
 title: "메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2b2254b9ee5e3c0e041efe38580b226124c005c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 062d09f13c7d28eb84686a007b9cb9a589f6ac65
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 메모리 최적화 시스템 버전 temporal 테이블로 작업하는 방식과 디스크 기반 시스템 버전 temporal 테이블로 작업하는 방식의 차이점에 대해 설명합니다.  
   

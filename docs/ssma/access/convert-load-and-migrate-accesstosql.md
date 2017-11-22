@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - migrating databases, one-click
 - one-click migration
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2bdc0bbcd65b726990c12767e2169e8b620c0aa5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 06f893943a2e4e43b2faabc4e679c9e1cbb8dee4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>변환, 로드 및 (AccessToSQL) 마이그레이션
 **변환, 로드 및 마이그레이션** 변환, 로드 및 마이그레이션 단추 또는 마이그레이션 마법사를 사용 하는 경우 대화 상자 마이그레이션 상태를 보고 합니다.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 08/02/2017
 [사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
 [마이그레이션 마법사](http://msdn.microsoft.com/en-us/5bab5914-b2ae-4795-8cf5-83e42d64bef2)  
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC SQL grammar, SELECT statement limitations
 - SELECT statement limitations [ODBC]
 ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3015e9f3a0a39d72ed5add2337ac028f6cb61386
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 53b3e18a07e14e6059a9d193d8659a09b87e6c65
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-statement-limitations"></a>SELECT 문의 제한 사항
 SELECT 문에서 비 집계 열과 집계 함수 열을 혼합할 수 없습니다.  
@@ -42,4 +40,3 @@ SELECT 문에서 비 집계 열과 집계 함수 열을 혼합할 수 없습니�
  잘못 된 열 이름이 SELECT 문으로 입력 된 경우 "잘못 된 수의 매개 변수를" 오류를 SQLSTATE 07001 SQLSTATE S0022 오류 대신 "열 찾을 수 없습니다." 반환 됩니다.  
   
  빈 문자열이 null 인 경우 변환 됩니다 Microsoft Excel 드라이버를 사용 하면 빈 문자열은 열에 삽입 하는 경우, 검색 된 SELECT 문의 WHERE 절에는 빈 문자열에서 실행 되는 해당 열에 실패 합니다.
-

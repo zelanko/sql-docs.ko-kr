@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f878719719f1f6cab234294301bbb47922178a98
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e66dd7ed6406287c0fb4e6722d8b5915428f705b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-driver-for-oracle"></a>Oracle에 대 한 ODBC 드라이버
 > [!IMPORTANT]  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 -   [Oracle용 ODBC 드라이버 사용자 가이드](../../odbc/microsoft/odbc-driver-for-oracle-user-s-guide.md)  
   
 -   [Oracle용 ODBC 드라이버 프로그래머 참고 자료](../../odbc/microsoft/odbc-driver-for-oracle-programmer-s-reference.md)
-

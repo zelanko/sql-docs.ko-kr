@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 19e0a4e308d0ac4414bdab9c03389947d9dde28b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 20c2dcbf26307c99830909447eb23679ffd3ac96
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>전역 설정 (테스터) (OracleToSQL)
 테스터 페이지를 사용 하 여 **전역 설정** SSMA 테스터에 대 한 설정을 지정 하려면 대화 상자.  
@@ -68,7 +66,6 @@ ms.lasthandoff: 08/02/2017
   
 2.  아니요  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [완료 테스트 사례 준비 &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-

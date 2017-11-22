@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2574 (Database Engine error)
+helpviewer_keywords: 2574 (Database Engine error)
 ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 113a521e8623253c77548d8ed14c0099b0ef40ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3eb9b7de2f2dca50043a9cc0e760eee3a07818c8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver2574"></a>MSSQLSERVER_2574
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,4 +64,3 @@ REPAIR 절 중 하나를 사용하여 DBCC CHECKDB를 실행해도 문제가 해
 ### <a name="results-of-running-repair-options"></a>REPAIR 옵션의 실행 결과  
 DBCC에서 인덱스를 다시 작성합니다.  
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Unicode [ODBC]
 - Unicode [ODBC], about Unicode
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3e14c37b8246b3ffa541325f079b035424d2ff68
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ec40cc841c073fe66f9537687516f044048a0fc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode"></a>유니코드
 유니코드 문자 여러 언어에 대 한 인코딩을 정의 합니다.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 -   [유니코드 함수 인수](../../../odbc/reference/develop-app/unicode-function-arguments.md)  
   
 -   [유니코드 데이터](../../../odbc/reference/develop-app/unicode-data.md)
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1d3bc3abcd491ce843f0a0b989121aee23f29107
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 919045309d1aaa37c0eeb74c56254681a34de284
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manage-changesets-master-data-services"></a>변경 집합 관리(Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 및 버전별로 모든 변경 내용을 관리할 수 있습니다.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서는 모델 및 버전별로 모든 변경 내용을 관리할 수 있습니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
   
@@ -44,13 +42,12 @@ ms.lasthandoff: 09/07/2017
   
 2.  **변경 집합**을 클릭합니다. 선택한 모델 및 버전에 대해 관리할 수 있는 모든 변경 집합이 표시됩니다.  
   
-3.  변경 집합 세부 정보를 확인하려면 **적용**을 클릭합니다.  
+3.  변경 집합 세부 정보를 확인하려면 **적용** 을 클릭합니다.  
   
-4.  변경 집합을 삭제하려면 **삭제**를 클릭합니다. 보류 중 또는 승인됨 상태가 아닌 변경 집합만 삭제할 수 있습니다.  
+4.  변경 집합을 삭제하려면 **삭제** 를 클릭합니다. 보류 중 또는 승인됨 상태가 아닌 변경 집합만 삭제할 수 있습니다.  
   
-5.  변경 집합을 추가하려면 **추가**를 클릭합니다.  
+5.  변경 집합을 추가하려면 **추가** 를 클릭합니다.  
   
-6.  변경 집합을 편집하려면 **편집**을 클릭합니다.  
+6.  변경 집합을 편집하려면 **편집** 을 클릭합니다.  
   
   
-

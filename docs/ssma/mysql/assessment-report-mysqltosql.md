@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 543197f3c52cd44644061e392fc891665c703f2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 81216f50e9db2e25e4ec1458a0657babc0522bd6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessment-report-mysqltosql"></a>평가 보고서 (MySQLToSQL)
 데이터베이스 개체를 변환의 결과 표시 하는 평가 보고서 창 [!INCLUDE[tsql](../../includes/tsql_md.md)] 구문, 복잡성과 비용이 마이그레이션 프로젝트를 예상할 수 있습니다.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 08/02/2017
 |**대상**|변환의 결과로 만들어진 표시 [!INCLUDE[tsql](../../includes/tsql_md.md)] 변환 되지 않은 코드에 대 한 오류 메시지와 선택한 개체에 대 한 코드입니다. 이 창의 왼쪽된 창에서 코드와 함께 개별 개체를 선택 하는 경우에 표시 됩니다.<br /><br />설정 하거나 책갈피를 지웁니다. 줄 번호를 클릭 합니다. 코드를 통해 탐색 하는 창 맨 위에 있는 단추를 사용 합니다.|  
 |**메시지 창**|오류, 경고 및 평가 보고서를 만드는 동안 생성 된 정보 메시지를 표시 합니다. 메시지 수로 그룹화 됩니다. 이 오류를 발생 시킨 코드를 보려면 클릭 **오류**, **경고**, 또는 **정보**, 메시지, 범주를 확장 한 다음 메시지를 클릭 합니다.|  
   
-

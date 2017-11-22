@@ -19,12 +19,11 @@ ms.date: 09/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: powershell
 ms.author: genemi
+ms.openlocfilehash: 71111642b588c5123b53c58d495fb404e6acb4b7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: d447009539b1091aa88beac48ca2d2e5ae222ddc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>새로 추가되었거나 최근에 업데이트됨: PowerShell 문서
 
@@ -38,7 +37,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *업데이트 날짜 범위:*  &nbsp; **2017-09-11** &nbsp;부터 &nbsp; **2017-09-27**까지
+- *업데이트 날짜 범위:*  &nbsp; **2017-09-11** &nbsp; 부터 &nbsp; **2017-09-27**
 - *주제 영역:* &nbsp; **PowerShell**.
 
 
@@ -127,6 +126,5 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
-
 
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 215
+caps.latest.revision: "215"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ea0efb1cf326d03a2b45ff6a6f2566c93afc500b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |데이터베이스 개체|트리거에서 결과 집합을 반환하는 기능|없음|트리거에서 결과 반환|12|  
 |암호화|RC4 또는 RC4_128을 사용한 암호화는 더 이상 사용되지 않으며 다음 버전에서 제거될 예정입니다. RC4 및 RC4_128 해독은 더 이상 사용되지 않습니다.|AES 등과 같은 다른 암호화 알고리즘을 사용하십시오.|사용되지 않는 암호화 알고리즘|253|  
 |원격 서버|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|연결된 서버를 사용하여 원격 서버를 대체합니다. sp_addserver는 로컬 옵션으로만 사용할 수 있습니다.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|원격 서버|@@remserver |연결된 서버를 사용하여 원격 서버를 대체합니다.|없음|없음|  
+|원격 서버|@@remserver|연결된 서버를 사용하여 원격 서버를 대체합니다.|없음|없음|  
 |원격 서버|SET REMOTE_PROC_TRANSACTIONS|연결된 서버를 사용하여 원격 서버를 대체합니다.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Set 옵션|**SET ROWCOUNT** , **INSERT**및 **UPDATE**문에 대한 **DELETE**|TOP 키워드|SET ROWCOUNT|109|  
 |테이블 힌트|괄호가 없는 HOLDLOCK 테이블 힌트|HOLDLOCK에 괄호를 사용합니다.|괄호가 없는 HOLDLOCK 테이블 힌트|167|  
@@ -159,7 +157,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML 문의 열 이름으로서 ROWGUIDCOL|$rowguid를 사용합니다.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML 문의 열 이름으로서 IDENTITYCOL|$identity를 사용합니다.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|임시 테이블 및 임시 저장 프로시저 이름으로서 # 및 ##의 사용|적어도 하나 이상의 추가 문자를 사용해야 합니다.|임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|@, @@ 또는 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자로서 @@의 사용|@@ 식별자로 시작하는 이름, @@ 또는 @은 사용할 수 없습니다.|' @ ' 및 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자 ' @@ '으로 시작하는 이름|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|@, @@ 또는 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자로서 @@의 사용|@@ 식별자로 시작하는 이름, @@ 또는 @은 사용할 수 없습니다.|'@' 및 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자 '@@'으로 시작하는 이름|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|기본값으로서 DEFAULT 키워드의 사용|DEFAULT라는 단어를 기본값으로 사용하지 마십시오.|기본값으로서 DEFAULT 키워드|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|테이블 힌트 사이의 구분 기호로서 공백의 사용|쉼표를 사용하여 테이블 힌트를 구분합니다.|쉼표가 없는 여러 테이블 힌트|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|인덱싱된 집계 뷰의 SELECT 목록은 90의 호환성 모드에서 COUNT_BIG(*)을 포함해야 합니다.|COUNT_BIG(*)을 사용합니다.|COUNT_BIG(*)이 없는 인덱스 뷰 SELECT 목록|2|  
@@ -178,5 +176,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
-
 

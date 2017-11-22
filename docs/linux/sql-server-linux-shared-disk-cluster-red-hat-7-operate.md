@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
+ms.openlocfilehash: ed87490e0aedfd0953c8c77715ddc7e843aefd2c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5ad4620cf4972aa060844dfc8477e3e9c022ebf2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Red Hat Enterprise Linux 공유 디스크 클러스터 SQL Server에 대 한 작동
 
@@ -84,7 +83,7 @@ sudo crm_mon
    ip addr show
    ```
 
-3. 새 노드는 15 자 하는 한 고유 이름을 지정 해야이 있습니다. Red Hat Linux에서 기본적으로 컴퓨터 이름이 `localhost.localdomain`합니다. 이 기본 이름은 고유 되지 않을 수 있습니다 및 너무 깁니다. 새 노드에 다음 컴퓨터 이름을 설정 합니다. 컴퓨터 이름을 추가 하 여 설정 `/etc/hosts`합니다. 다음 스크립트를 사용 하면 편집할 `/etc/hosts` 와 `vi`합니다. 
+3. 새 노드는 15 자 하는 한 고유 이름을 지정 해야이 있습니다. Red Hat Linux에서 기본적으로 컴퓨터 이름이 `localhost.localdomain`합니다. 이 기본 이름은 고유 되지 않을 수 있습니다 및 너무 깁니다. 새 노드에 다음 컴퓨터 이름을 설정 합니다. 컴퓨터 이름을 추가 하 여 설정 `/etc/hosts`합니다. 다음 스크립트를 사용하면 `/etc/hosts`를 `vi`로 편집할 수 있습니다. 
 
    ```bash
    sudo vi /etc/hosts
@@ -281,5 +280,4 @@ pacemaker: active/enabled
 ## <a name="next-steps"></a>다음 단계
 
 [SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
-
 

@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 531989070a8e3f416fee19af797555284294e7da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: de7909d5b33568c0218b7f9895d36952c7cdd3af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -578,7 +576,6 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 - [상시 암호화(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [상시 암호화 블로그](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL 데이터베이스 자습서: 상시 암호화로 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
 
 
 

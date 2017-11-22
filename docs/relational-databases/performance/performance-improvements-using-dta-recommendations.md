@@ -8,24 +8,21 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Database Engine Tuning Advisor, performance improvements
+helpviewer_keywords: Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7722ff42ebc2e4e4515a3097a6b8d1106f5e1287
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bca7b1d7ce1a0dfeade10654a1f4242b188d5d0a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>DTA 권장 사항을 사용하여 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,6 @@ SQL Server 2016부터 DTA(데이터베이스 엔진 튜닝 관리자)는 지정�
 [CREATE COLUMNSTORE INDEX(Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 
 [CREATE INDEX(Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
-
 
 
 

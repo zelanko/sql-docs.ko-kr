@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0aaccaa65855630a7b08cdae1af41fdfeeba62a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>열 마스터 키 만들기 및 저장(상시 암호화)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -248,5 +246,4 @@ SQL Server Management Studio를 사용하여 상시 암호화 구성의 열 마�
 - [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 응용 프로그램 개발](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [상시 암호화 블로그](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
-
 

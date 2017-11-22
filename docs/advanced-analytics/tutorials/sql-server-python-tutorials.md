@@ -1,29 +1,24 @@
 ---
 title: "SQL Server Python 자습서 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-caps.latest.revision: 1
+applies_to: SQL Server 2017
+dev_langs: Python
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
 ms.openlocfilehash: 70b2ada0c6b2cade444af1f7dde67f0adfd90b35
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 자습서
 
@@ -92,4 +87,3 @@ SQL Server 설치 프로그램을 실행 한 후 이러한 중요 한 단계를 
 ## <a name="see-also"></a>참고 항목
 
 [SQL Server용 R 자습서](sql-server-r-tutorials.md)
-

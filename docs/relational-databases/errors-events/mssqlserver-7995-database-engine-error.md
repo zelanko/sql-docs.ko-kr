@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 7995 (Database Engine error)
+helpviewer_keywords: 7995 (Database Engine error)
 ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 169684afef0c30018ff39f977d34a957a9c65a92
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b0cdc3b17d31ba4e4b2064a70317a54231ba7080
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,4 +72,3 @@ REPAIR 절 중 하나를 사용하여 DBCC CHECKDB를 실행해도 문제가 해
 ### <a name="results-of-running-repair-options"></a>REPAIR 옵션의 실행 결과  
 오류 목록을 검사하여 REPAIR가 각각에 대해 수행할 작업을 확인하십시오.  
   
-

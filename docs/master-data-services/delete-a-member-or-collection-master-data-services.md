@@ -8,8 +8,7 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c5f5df36c6b9afdbdadaba8aac615c331499be7b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f39b7e4c68f20d1a83532145029f51e6cd06e47d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 삭제(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 멤버나 컬렉션이 더 이상 필요하지 않으면 삭제할 수 있습니다. 멤버를 대량으로 삭제하려면 준비 테이블을 대신 사용합니다. 자세한 내용은 [테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)를 참조하세요.  
@@ -56,11 +54,11 @@ ms.lasthandoff: 09/07/2017
   
 4.  삭제하려면  
   
-    -   리프 멤버를 삭제하려면 메뉴 모음에서 **엔터티**를 가리키고 멤버가 포함된 엔터티의 이름을 클릭합니다.  
+    -   리프 멤버를 삭제하려면 메뉴 모음에서 **엔터티** 를 가리키고 멤버가 포함된 엔터티의 이름을 클릭합니다.  
   
-    -   통합 멤버를 삭제하려면 메뉴 모음에서 **계층**을 가리키고 멤버가 포함된 계층의 이름을 클릭합니다. 그런 다음 멤버를 포함하고 있는 계층에서 노드를 클릭합니다.  
+    -   통합 멤버를 삭제하려면 메뉴 모음에서 **계층** 을 가리키고 멤버가 포함된 계층의 이름을 클릭합니다. 그런 다음 멤버를 포함하고 있는 계층에서 노드를 클릭합니다.  
   
-    -   컬렉션을 삭제하려면 메뉴 모음에서 **컬렉션**을 가리키고 컬렉션이 포함된 엔터티의 이름을 클릭합니다.  
+    -   컬렉션을 삭제하려면 메뉴 모음에서 **컬렉션** 을 가리키고 컬렉션이 포함된 엔터티의 이름을 클릭합니다.  
   
 5.  표에서 삭제할 멤버 또는 컬렉션의 행을 선택합니다.  
   
@@ -76,4 +74,3 @@ ms.lasthandoff: 09/07/2017
  [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   
-

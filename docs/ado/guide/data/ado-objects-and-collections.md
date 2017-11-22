@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, objects and collections
+helpviewer_keywords: ADO, objects and collections
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a6796b6511c81dc2a4f9100f656478bef3711b1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ec860c8e4d3766b983e38589418637c1d4eb3cc9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-objects-and-collections"></a>ADO 개체 및 컬렉션
 ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 이루어져 있습니다.  
@@ -48,4 +45,3 @@ ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 이루어져 있습니
   
 ## <a name="see-also"></a>관련 항목:  
  [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)
-

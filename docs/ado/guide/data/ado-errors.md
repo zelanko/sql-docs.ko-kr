@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- errors [ADO]
+helpviewer_keywords: errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73f1b516ebc7f133219764506b340bbf428f8207
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 54a44c69afd01647c5dca1cab97993f890d81c21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-run-time-errors"></a>ADO 런타임 오류
 ADO 오류를 프로그램 실행 시간 오류로 보고 됩니다. 트래핑 하 고 처리 하는 프로그래밍 언어의 오류 트래핑 메커니즘을 사용할 수 있습니다. 예를 들어 Visual Basic에서 사용 하 여는 **On Error** 문. Visual c + +에서 ADO 라이브러리에 액세스 하는 데 사용 하는 방법에 따라 다릅니다. #Import를 사용 하 여 한 **try / catch** 블록입니다. C + + 프로그래머를 명시적으로 호출 하 여 오류 개체를 검색 해야 하는 그렇지 않은 경우 **GetErrorInfo**합니다. 다음 Visual Basic sub 프로시저는 ADO 오류를 트래핑 하는 방법을 보여 줍니다.
@@ -106,4 +103,3 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
  다음 항목 ADO 오류에 대 한 자세한 정보를 제공합니다.
 
 -   [ADO 오류 참조](../../../ado/guide/data/ado-error-reference.md)
-

@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ba887baa7ee43776f1d01688ec1ec29537a4ba4f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4016293e0ef155f5187da8f817cd4e000a087304
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 콘솔 (MySQLToSQL)의 명령줄 옵션
 Microsoft은 SSMA 작업을 제어를 실행 하는 강력한 집합 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다.  
@@ -101,7 +99,7 @@ Microsoft은 SSMA 작업을 제어를 실행 하는 강력한 집합 명령줄 �
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 출력 옵션:-x / xmloutput [xmloutputfile]  
 이 명령은 콘솔 이나 xml 파일에 xml 형식에서 명령 출력 메시지를 출력 하는 중에 사용 됩니다.  
   
-두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz 하십시오..,:  
+두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz.. 하십시오:  
   
 -   Filepath xmloutput 전환 된 후 제공 된 경우 출력 파일에 리디렉션됩니다.  
   
@@ -189,4 +187,3 @@ SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 
   
 -   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40; MySQLToSQL &#41; ](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   
-

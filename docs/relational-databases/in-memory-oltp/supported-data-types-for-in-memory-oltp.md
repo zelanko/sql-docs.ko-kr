@@ -8,29 +8,27 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b959d2dd76d312b64b4a2379a99d04fd5d164aff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 데이터 형식
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 문서에서는 다음 항목의 메모리 내 OLTP 기능에 대해 지원되지 않는 데이터 형식을 소개합니다.  
   
--   메모리 최적화 테이블  
+-   메모리 액세스에 최적화된 테이블  
   
 -   고유하게 컴파일된 T-SQL 모듈  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 07/31/2017
   
 위의 문자열 및 이진 데이터 형식의 경우 SQL Server 2016부터는 다음 사항이 적용됩니다.  
   
-- 개별 메모리 최적화 테이블은 `nvarchar(4000)`등의 긴 열을 여러 개 포함할 수도 있습니다. 이러한 열의 길이로 인해 실제 행 크기가 8060바이트보다 커지더라도 포함이 가능합니다.  
+- 메모리 최적화 개별 테이블은 `nvarchar(4000)` 등의 긴 열을 여러 개 포함할 수도 있습니다. 이러한 열의 길이로 인해 실제 행 크기가 8060바이트보다 커지더라도 포함이 가능합니다.  
   
 - 메모리 최적화 테이블은 `varchar(max)`와 같은 데이터 형식의 이진 열과 최대 길이 문자열을 포함할 수 있습니다.  
 
@@ -90,12 +88,11 @@ SELECT
 
 |기타 유형|참조 항목|  
 |-----------------|--------------------------|  
-|테이블 형식|[메모리 최적화 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
+|테이블 형식|[메모리 액세스에 최적화된 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [메모리 최적화 테이블에서 SQL_VARIANT 구현](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
- [메모리 최적화 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+ [메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-

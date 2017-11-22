@@ -5,29 +5,26 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - MDX [Analysis Services], data manipulation
 - data manipulation [MDX]
 - data definition statements [MDX]
 - Multidimensional Expressions [Analysis Services], data manipulation
 ms.assetid: 1f975d7f-8875-43b6-a571-9d5cd7c70217
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 32371f26e6c4cef2398d505d603dcbca6505a846
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7799b80fd5ba847492247f1d52107da4aaf569a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX 데이터 정의 문(MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +50,9 @@ ms.lasthandoff: 08/02/2017
 |[DROP SUBCUBE 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-drop-subcube.md)|지정한 하위 큐브를 삭제하고 이전에 정의한 큐브나 지정한 이름의 하위 큐브 정의로 돌아갑니다.|  
 |[REFRESH CUBE 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-refresh-cube.md)|큐브에 대한 클라이언트 캐시를 새로 고칩니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX 문 참조 &#40; Mdx&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX 데이터 조작 문 &#40; Mdx&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [MDX 스크립팅 문 &#40; Mdx&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   
-

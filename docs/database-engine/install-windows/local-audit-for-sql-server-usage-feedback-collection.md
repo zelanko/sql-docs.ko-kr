@@ -2,9 +2,12 @@
 title: "SQL Server 사용 피드백 모음에 대한 로컬 감사 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - dbe-security
@@ -17,13 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6274b8a4a335482b24ab3e5df2ab9baeac61188
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 사용 피드백 모음에 대한 로컬 감사
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 ## <a name="introduction"></a>소개
 
 Microsoft SQL Server에는 컴퓨터 또는 장치에 대한 정보("표준 컴퓨터 정보")를 수집하여 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. [SQL Server Usage Feedback collection](http://support.microsoft.com/kb/3153756) (SQL Server 사용 피드백 모음)의 로컬 감사 구성 요소는 서비스에서 수집한 데이터를 지정된 폴더에 기록하여 Microsoft로 보내는 데이터(로그)를 나타냅니다. 로컬 감사의 목적은 고객들이 규정 준수 또는 개인 정보 유효성 검사의 이유로 이 기능을 사용하여 Microsoft에서 수집하는 모든 데이터를 확인하기 위함입니다.  

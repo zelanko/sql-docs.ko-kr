@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17884 (Database Engine error)
+helpviewer_keywords: 17884 (Database Engine error)
 ms.assetid: 8d05ba05-3f71-4dc3-bd81-2ea5ac9fe843
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c175dbfa68647d892c70a0d60f453c626d8d914e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1311779c5ff5bc452c92654231aafc3ce543de84
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver17884"></a>MSSQLSERVER_17884
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,4 +44,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>사용자 동작  
 차단이 발생하고 진행이 이루어지지 않는 원인을 확인하고 상황을 적절히 해결합니다. 프로세스 사용률이 낮으면 다른 프로세스에 의해 발생한 시스템 로드를 확인합니다.  
   
-

@@ -1,24 +1,22 @@
 ---
 title: "Python SQL Server와의 통합에 대 한 구성 요소 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: a23acdc0c39e0325f31050b299b883616912be71
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Python 통합을 지원 하도록 SQL Server의 구성 요소
 
@@ -104,7 +102,7 @@ SQL 위성 windows 확장 이벤트 (Xevent)를 사용 하 여 모니터링할 �
   + 테이블에 데이터를 쓸: 예를 들어 때 저장 결과 테이블
   + 데이터베이스 개체 만들기: 새 저장된 프로시저의 일환으로 외부 스크립트를 저장 하는 경우 등입니다.
 
-  때 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 원격 클라이언트에서 Python 스크립트 실행 하 고 외부 원본에서 데이터를 검색 해야 Python 실행 파일에 대 한 계산 컨텍스트 기호로 사용 하 고, ODBC는 쓰기 저장에 사용 됩니다. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]현재 인스턴스에 대 한 사용자의 id로 원격 명령을 실행 하는 사용자의 id를 매핑한 해당 사용자의 자격 증명을 사용 하 여 ODBC 명령을 실행 합니다. 이 ODBC 호출을 수행하는 데 필요한 연결 문자열은 클라이언트 코드에서 가져옵니다.
+  때 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 원격 클라이언트에서 Python 스크립트 실행 하 고 외부 원본에서 데이터를 검색 해야 Python 실행 파일에 대 한 계산 컨텍스트 기호로 사용 하 고, ODBC는 쓰기 저장에 사용 됩니다. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]현재 인스턴스에 대 한 사용자의 id로 원격 명령을 실행 하는 사용자의 id를 매핑하고 해당 사용자의 자격 증명을 사용 하 여 ODBC 명령을 실행 합니다. 이 ODBC 호출을 수행하는 데 필요한 연결 문자열은 클라이언트 코드에서 가져옵니다.
 
 ## <a name="interaction-of-components"></a>구성 요소와의 상호 작용
 
@@ -116,9 +114,9 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 
 스크립트 저장된 프로시저에 포함 되었으면, 후 저장된 프로시저 호출을 만들 수 있는 모든 응용 프로그램 Python 코드의 실행을 시작할 수 있습니다.  그 후 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 다음 다이어그램에 요약 된 것 처럼 코드 실행을 관리 합니다.
 
-![스크립트에서 db python](../../advanced-analytics/python/media/script-in-db-python.png)
+![스크립트에서 db python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. Python 런타임의 대 한 요청은 매개 변수가 가리키는  _@language'Python' =_ 저장된 프로시저에 전달 합니다. SQL Server 실행 패드 서비스에이 요청을 보냅니다.
+1. Python 런타임의 대 한 요청은 매개 변수가 가리키는 `@language='Python'` 저장된 프로시저에 전달 합니다. SQL Server 실행 패드 서비스에이 요청을 보냅니다.
 2. 실행 패드 서비스 시작 적절 한 실행 프로그램입니다. 이 경우 PythonLauncher입니다.
 3. PythonLauncher 외부 Python35 프로세스를 시작합니다.
 4. BxlServer 데이터 교환 및 작업 결과의 저장소를 관리 하는 Python 런타임의 협력 합니다.
@@ -131,11 +129,11 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 랩톱 등의 원격 컴퓨터에서 Python 스크립트를 실행 하 고 이러한 조건이 충족 될 경우 SQl Server 컴퓨터의 컨텍스트 내에서 실행 되도록 할 수 있습니다.
 
 + 스크립트를 적절 하 게 디자인
-+ 원격 컴퓨터가 컴퓨터 학습 서비스에서 사용 되는 확장성 라이브러리 설치
++ 원격 컴퓨터가 컴퓨터 학습 서비스에서 사용 되는 확장성 라이브러리를 설치 합니다. [revoscalepy](what-is-revoscalepy.md) 패키지는 원격 계산 컨텍스트를 사용 하는 데 필요 합니다.
 
 다음 다이어그램은 원격 컴퓨터에서 스크립트를 보낼 경우 전체 워크플로 요약 합니다.
 
-![python에서 원격 sqlcc](../../advanced-analytics/python/media/remote-sqlcc-from-python2.png)
+![python에서 원격 sqlcc](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. 지원 되는 함수에 대 한 **revoscalepy**는 Python 런타임의 BxlServer를 호출 하는 연결 함수를 호출 합니다.
 2. BxlServer는 컴퓨터 학습 services (In-database) 포함 되어 있으며는 Python 런타임의에서 별도 프로세스로 실행 됩니다.
@@ -150,4 +148,3 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 ## <a name="next-steps"></a>다음 단계
 
 [SQL Server에서 Python에 대 한 아키텍처 개요](architecture-overview-sql-server-python.md)
-

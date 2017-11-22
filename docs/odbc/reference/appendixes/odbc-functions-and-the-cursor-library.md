@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5fe29e8cd03ded1ee2125d2729ede4c66f196838
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6405c2a0890b9a5b43c420960f1b823b39ad9e60
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 함수 및 커서 라이브러리
 > [!IMPORTANT]  
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLSetScrollOptions(커서 라이브러리)](../../../odbc/reference/appendixes/sqlsetscrolloptions-cursor-library.md)  
   
 -   [SQLSetStmtAttr(커서 라이브러리)](../../../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md)
-

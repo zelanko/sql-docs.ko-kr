@@ -8,22 +8,20 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 179bc47090024fe713891ca71dfe4b4542d0ab63
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 87babb2a515e2e3d49019b34de98beb0f0ea8da5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>바로 가기 쿼리 파일(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 바로 가기 쿼리 파일을 사용하여 자주 사용되는 데이터를 신속하게 연결하고 로드할 수 있습니다. 또한 다른 사용자와 MDS 데이터를 공유할 때에도 이를 사용할 수 있습니다. 워크시트를 저장하고 전자 메일로 전송하는 대신 바로 가기 쿼리 파일을 저장하고 이 파일을 대신 전자 메일로 전송해야 합니다. 이렇게 하면 MDS 저장소에 연결하여 최신 파일을 가져올 수 있습니다.  
@@ -65,4 +63,3 @@ ms.lasthandoff: 09/07/2017
 -   [보안&#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
   
   
-

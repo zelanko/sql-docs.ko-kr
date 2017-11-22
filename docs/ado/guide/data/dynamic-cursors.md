@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - cursors [ADO], dynamic
 - dynamic cursors [ADO]
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72bbc7c35ef9f1b3f25336f4608ab70978f704ff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cda6ab3b4609ef4295240050fd1e204845637b02
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dynamic-cursors"></a>동적 커서
 동적 커서는 커서 내부 또는 커서 외부의 다른 사용자가 변경 내용을에서 발생 하는지 여부에 관계 없이 결과 집합의 행에 대 한 모든 변경 내용을 검색 합니다. Insert, update 및 delete 문은 모든 사용자가 수행한 모든 커서를 통해 표시 됩니다. 동적 커서는 변경 내용이 행, 순서 및 커서가 열린 후에 결과 집합의 값을 검색할 수 있습니다. 커밋될 때까지 (아닌 경우 커서 트랜잭션 격리 수준을 "커밋되지 않은"로 설정 됨)에 업데이트 커서 밖에 서 표시 되지 않습니다.  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  [정방향 전용 커서](../../../ado/guide/data/forward-only-cursors.md)   
  [정적 커서](../../../ado/guide/data/static-cursors.md)   
  [키 집합 커서](../../../ado/guide/data/keyset-cursors.md)
-

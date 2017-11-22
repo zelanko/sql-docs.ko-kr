@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
+ms.openlocfilehash: 9cf216249d8e5971eb480e79bf9d97756cb3d948
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 48e2d1ae54100f7ea83bdd677bf4a98859825b67
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux"></a>Linux의 SQL Server
 
@@ -62,4 +61,3 @@ SQL Server에 익숙한 경우 검토는 [릴리스 정보](sql-server-linux-rel
 - [MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 기술 관련 질문
 - [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): 요청 기능 및 버그를 보고 합니다.
 - [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server에 설명
-

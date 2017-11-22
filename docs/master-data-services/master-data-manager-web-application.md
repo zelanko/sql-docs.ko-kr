@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6194ffef0fdf5e94669e84f071d51623458b3395
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 269fbc636345b0313c07812cb8475afb6d1ab238
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="master-data-manager-web-application"></a>마스터 데이터 관리자 웹 응용 프로그램
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램은 주로 관리자가 관리 태스크를 수행하는 데 사용됩니다. 예를 들어 모델, 비즈니스 규칙 또는 여러 버전의 데이터를 만드는 일은 관리자만 수행할 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/07/2017
  [사용자 및 그룹 권한 기능 영역&#40;마스터 데이터 관리자&#41;](../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
   
   
-

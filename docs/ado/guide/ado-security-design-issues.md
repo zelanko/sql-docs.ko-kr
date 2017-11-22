@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, security
+helpviewer_keywords: ADO, security
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fbc093aa095d74831e0f9d75ad78159db2e498e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 51c7e3cf9c99bdd76ce1b84a7c387b1e6e4d2f58
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-security-design-features"></a>ADO 보안 디자인 기능
 다음 섹션에서는 보안 디자인 기능에서 개체 ADO (ActiveX Data) 2.8 이상에 대해 설명 합니다. 보안을 개선 하기 위해 ADO 2.8에서에서 이러한 변경은 수행 했습니다. Windows Vista에서 Windows DAC 6.0에 포함 된 6.0, ADO는 ADO 2.8, Windows XP 및 Windows Server 2003에서 MDAC 2.8에 포함 된 것 같습니다. 이 항목에서는 가장 2.8 이상을 ado 응용 프로그램을 보호 하는 방법에 대 한 정보를 제공 합니다.
@@ -120,4 +118,3 @@ This Website is using your identity to access a data source. If you trust this W
 
 > [!NOTE]
 >  파일 형식 확인이 섹션에 설명 된 대로 적용 됩니다 Windows 2000 이상. 예: Windows 98 이전 Windows 릴리스의에서 ADO 2.8 이상을 실행 되 고 있는 경우에는 적용 되지 않습니다.
-

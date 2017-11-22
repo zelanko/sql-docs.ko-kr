@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 154
+caps.latest.revision: "154"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 387e808d57395db8978611b311f54df441eabc91
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 8a5997cc7692e7cce1459dc64401397cc3b07eaf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문-인수 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +127,7 @@ PAGE
   
  \<backup_device > [ **,**...  *n*  ] 복원 작업에 사용할 논리적 또는 물리적 백업 장치를 지정 합니다.  
   
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
  \<backup_device >:: = 다음과 같이 백업 작업에 사용할 논리적 또는 물리적 백업 장치를 지정 합니다.  
   
@@ -253,7 +250,7 @@ LOADHISTORY
  자세한 내용은 [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
   
 CREDENTIAL  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -283,7 +280,7 @@ RESTART
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 중단된 복원 작업을 다시 시작하도록 지정합니다. RESTART는 복원 작업이 중단된 시점에서 복원 작업을 다시 시작합니다.  
   
 RESTRICTED_USER  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md)합니다.  
   
  멤버에 게 새로 복원된 된 데이터베이스에 대 한 액세스를 제한 된 **db_owner**, **dbcreator**, 또는 **sysadmin** 역할입니다.  RESTRICTED_USER는 DBO_ONLY 옵션 대신 사용됩니다. DBO_ONLY는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 더 이상 사용되지 않습니다.  
   
@@ -293,7 +290,7 @@ RESTRICTED_USER
  이러한 옵션은 복원할 백업이 포함된 백업 세트에서 작동합니다.  
   
 파일  **=** { *backup_set_file_number* | **@***backup_set_file_number* }  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
  복원할 백업 세트를 나타냅니다. 예를 들어 *backup_set_file_number* 가 **1** 인 경우는 백업 미디어의 첫 번째 백업 세트를 나타내고 *backup_set_file_number* 가 **2** 인 경우는 두 번째 백업 세트를 나타냅니다. 백업 세트의 *backup_set_file_number* 는 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 문을 사용하여 가져올 수 없습니다.  
   
@@ -303,7 +300,7 @@ RESTRICTED_USER
 >  이 FILE 옵션은 데이터베이스 파일, 파일을 지정 하는 파일 옵션 상관이 없습니다  **=**  { *logical_file_name_in_backup*  |   **@**  *logical_file_name_in_backup_var* }.  
   
  암호  **=**  { *암호* | **@***password_variable* }  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
  백업 세트에 대한 암호를 제공합니다. 백업 세트 암호는 문자열입니다.  
   
@@ -319,7 +316,7 @@ RESTRICTED_USER
  이러한 옵션은 전체 미디어 세트에서 작동합니다.  
   
  MEDIANAME  **=**  { *media_name* | **@***media_name_variable*}  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
  미디어에 대한 이름을 지정합니다. 제공된 미디어 이름은 백업 볼륨의 미디어 이름과 일치해야 합니다. 그렇지 않으면 복원 작업이 종료됩니다. RESTORE 문에서 미디어 이름을 지정하지 않을 경우에는 백업 볼륨의 미디어 이름과 일치하는지 확인하지 않습니다.  
   
@@ -327,7 +324,7 @@ RESTRICTED_USER
 >  백업과 복원 작업에서 미디어 이름을 항상 사용하면 복원 작업을 위해 선택한 미디어에 대한 추가 안정성 검사를 제공합니다.  
   
  MEDIAPASSWORD  **=**  { *mediapassword* | **@***mediapassword_variable* }  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
  미디어 세트에 대한 암호를 제공합니다. 미디어 세트 암호는 문자열입니다.  
   
@@ -370,7 +367,7 @@ RESTRICTED_USER
  이러한 옵션을 사용 하 여 복원 작업에 대해 백업 체크섬의 설정 여부 및 오류 발생 시 작업을 중지 하는지 여부를 확인할 수 있습니다.    
   
  { CHECKSUM | NO_CHECKSUM }  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
  기본 동작은 체크섬이 있는 경우 체크섬을 확인하고 없는 경우에는 확인하지 않고 계속 진행하는 것입니다.  
   
@@ -388,7 +385,7 @@ RESTRICTED_USER
  복원 작업에서 체크섬 유효성 검사를 명시적으로 비활성화합니다.  
   
  { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
  STOP_ON_ERROR  
  첫 번째 오류가 발생하면 복원 작업이 중지하도록 지정합니다. 기본값으로 CONTINUE_AFTER_ERROR를 사용하는 VERIFYONLY를 제외하면 RESTORE의 기본 동작입니다.  
@@ -423,7 +420,7 @@ RESTRICTED_USER
  이러한 옵션은 테이프 장치에만 사용됩니다. 테이프가 아닌 장치를 사용하는 경우 이 옵션은 무시됩니다.  
   
  REWIND  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), 및 [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이프를 해제한 다음 되감도록 지정합니다. 기본값은 REWIND입니다.  
   
@@ -440,7 +437,7 @@ RESTRICTED_USER
 >  NOREWIND를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 REWIND 또는 UNLOAD 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열려 있는 테이프 목록을 표시 하 고 열려 있는 테이프를 닫고 하는 방법에 대 한 정보를 참조 하십시오. [백업 장치 &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  { **언로드** | NOUNLOAD}  
- **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.    
+ **지 원하는:**[복원](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)합니다.  
   
  이러한 옵션은 테이프 장치에만 사용됩니다. 테이프가 아닌 장치를 사용하는 경우 이 옵션은 무시됩니다.  
   
@@ -493,7 +490,7 @@ RESTRICTED_USER
  데이터베이스에 새 Service Broker 식별자가 할당되도록 지정합니다. 데이터베이스는 새 Service Broker가 될 것으로 간주되기 때문에 데이터베이스 내의 기존 대화는 종료 대화 메시지 없이 즉시 제거됩니다. 이전 Service Broker 식별자를 참조하는 경로는 새 식별자로 다시 만들어야 합니다.  
   
 #### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options >  
- **지 원하는:**[복원 {데이터베이스 | 로그}](../../t-sql/statements/restore-statements-transact-sql.md) 전체 또는 대량 로그 복구 모델에 대해서만 합니다.    
+ **지 원하는:**[복원 {데이터베이스 | 로그}](../../t-sql/statements/restore-statements-transact-sql.md) 전체 또는 대량 로그 복구 모델에 대해서만 합니다.  
   
  STOPAT, STOPATMARK 또는 STOPBEFOREMARK 절에 대상 복구 지점을 지정 데이터베이스를 특정 지정 시간 또는 트랜잭션으로 복원할 수 있습니다. 지정된 시간 또는 트랜잭션은 항상 로그 백업에서 복원됩니다. 복원 순서의 모든 RESTORE LOG 문에서 동일한 STOPAT, STOPATMARK 또는 STOPBEFOREMARK 절에 대상 시간이나 트랜잭션을 지정해야 합니다.  
   
@@ -643,5 +640,4 @@ RESTRICTED_USER
  [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   
   
-
 

@@ -1,10 +1,13 @@
 ---
 title: "실시간 운영 분석을 위한 Columnstore 시작 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -14,14 +17,14 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a67a7a405fc46996a1db1f3abdee5d948d080f63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bee5fd436b1f2e8e493983774b45c70f533a5d77
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   SQL Server 2016에는 분석 워크로드와 OLTP 워크로드를 같은 데이터베이스 테이블에서 동시에 실행하는 기능인 실시간 운영 분석이 도입되었습니다. 분석을 실시간으로 실행하는 것 외에 ETL 및 데이터 웨어하우스에 대한 필요성도 제거할 수 있습니다.  
   

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- hellodata sample application [ADO]
+helpviewer_keywords: hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: adda58b0be044229cc4efc26c65b1af1c4ca3dc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="comments-on-hellodata"></a>HelloData에 대 한 설명
 HelloData 응용 프로그램이 일반적인 ADO 응용 프로그램의 기본 작업을 단계별로: 가져오기, 검사, 편집 및 데이터를 업데이트 합니다. 응용 프로그램을 시작 하는 경우 첫 번째 단추를 클릭 **데이터 가져오기**합니다. 이렇게 하면 실행은 **GetData** 서브루틴 합니다.  
@@ -82,4 +79,3 @@ HelloData 응용 프로그램이 일반적인 ADO 응용 프로그램의 기본 
   
 ## <a name="formunload"></a>Form_Unload  
  **Form_Unload** 서브루틴은 여러 가지 이유로 중요 합니다. 첫째, 샘플 응용 프로그램 이므로 form_unload 응용 프로그램 종료 되기 전에 데이터베이스에 대 한 변경 내용이 있습니다. 둘째, 코드에 표시 된 명령을 열린에서 직접 실행 하는 방법을 **연결** 사용 하 여 개체는 **Execute** 메서드. 마지막으로 실행 데이터 원본에 대해 행을 반환 아닌 쿼리 (업데이트 쿼리) 예제를 보여 줍니다.
-

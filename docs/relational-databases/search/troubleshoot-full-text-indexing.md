@@ -2,9 +2,12 @@
 title: "전체 텍스트 인덱싱 문제 해결 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,13 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4bfb66adb0537edcb173e4b741db058369b0003
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshoot-full-text-indexing"></a>전체 텍스트 인덱싱 문제 해결
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
 ##  <a name="failure"></a> 전체 텍스트 인덱싱 오류 문제 해결  
  전체 텍스트 인덱스를 채우거나 유지 관리하는 동안 전체 텍스트 인덱서는 아래에서 설명하는 이유로 인해 하나 이상의 행을 인덱싱하지 못할 수 있습니다. 이러한 행 수준 오류가 발생해도 채우기는 완료됩니다. 그러나 인덱서가 이러한 행을 건너뛰므로 이러한 행에 포함된 내용은 쿼리할 수 없습니다.  

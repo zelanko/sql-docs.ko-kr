@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET REPROCESS command [ODBC]
+helpviewer_keywords: SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8e907d01b79c314603ba87c8195e56c8710bd10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-reprocess-command"></a>SET 빈도로 명령
 실패 한 잠금 시도 후 파일이 나 레코드를 잠그는 수 시간 또는 방법에 대 한 long을 지정 합니다.  
@@ -62,4 +59,3 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>주의  
  레코드 또는 파일 잠금를 첫 번째 시도가 성공 항상 않습니다. 자주, 레코드 또는 파일을 네트워크에서 다른 사용자에 의해 잠겨 있습니다. 설정 다시 처리 Visual FoxPro 하면 추가 시도가 초기 시도가 성공한 경우 레코드 또는 파일을 잠글 수 있는지 여부를 결정 합니다. 하거나 추가 시도 하거나 기간 시도 대 한 내용이 몇 번 지정할 수 있습니다. ON 오류 루틴 어떻게 실패 한 잠금을 시도 처리 하는 영향을 줍니다.
-

@@ -2,9 +2,12 @@
 title: "포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 caps.latest.revision: "33"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 410ea9f28ad1a4ec7f48024a6716e5588379af5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9bd08b3188bc8b7a968753c01d09dba3ecf49a7e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 이 항목은 포함된 데이터베이스 모델을 사용할 때와 기존의 로그인/사용자 모델 및 Windows 또는 서버 수준 방화벽 규칙을 사용할 때를 비교하여 그 차이점과 장점을 검토합니다. 특정 시나리오의 경우, 관리 효율성 또는 응용 프로그램 비즈니스 논리는 여전히 기존의 로그인/사용자 모델 및 서버 수준 방화벽 규칙을 사용해야 할 수도 있습니다.  
   

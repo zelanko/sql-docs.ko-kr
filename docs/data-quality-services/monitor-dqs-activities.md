@@ -8,27 +8,24 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.administration.activitymonitoring.f1
+f1_keywords: sql13.dqs.administration.activitymonitoring.f1
 helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73bc05ebd57a2e530dd98988824544238e7ba141
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 46c5abb9edd4e854609a1854ab6d6d8d6622b4fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitor-dqs-activities"></a>DQS 작업 모니터링
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료 검색, 도메인 관리, 일치 정책, 데이터 정리, 데이터 일치 및 SSIS 정리 작업을 중앙에서 모니터링하는 방법에 대해 설명합니다.  
@@ -167,4 +164,3 @@ ms.lasthandoff: 09/09/2017
 3.  동작을 확인하는 메시지가 표시됩니다. **예**를 클릭합니다.  
   
   
-

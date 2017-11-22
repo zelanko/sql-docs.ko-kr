@@ -2,9 +2,12 @@
 title: "메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 연결 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25e72cd14e4f8d58e27fb38e041b40f2a2a4dbb5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   리소스 풀은 관리할 수 있는 물리적 리소스의 하위 집합을 나타냅니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 기본 리소스 풀의 리소스에 바인딩되고 이 리소스를 사용합니다. 하나 이상의 메모리 최적화 테이블에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 리소스를 사용하지 않고 다른 메모리 사용자가 메모리 최적화 테이블에 필요한 메모리를 사용하지 않게 하려면 별도의 리소스 풀을 만들어 메모리 최적화 테이블이 있는 데이터베이스의 메모리 사용을 관리해야 합니다.  
   

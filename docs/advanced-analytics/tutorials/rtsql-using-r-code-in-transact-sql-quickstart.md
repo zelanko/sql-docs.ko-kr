@@ -1,31 +1,26 @@
 ---
 title: "R 코드를 사용 하 여 transact-sql (SQL 빠른 시작에서 R) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: d0915986d39aa6fb376063bf6a2a31a5c5953aa9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c023af0a3a9b9c53cb2b6adf7298c18657a60803
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>R 코드를 사용 하 여 transact-sql (SQL 빠른 시작에서 R)
 
@@ -102,4 +97,3 @@ R 스크립트를 포함 하는 SQL 쿼리를 실행 하려면 데이터베이�
 4 단원: [예측 모델 만들기](rtsql-create-a-predictive-model-r.md)
 
 5 단원: [예측 및 플롯 모델에서](rtsql-predict-and-plot-from-model.md)
-

@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Find Databases Wizard
+helpviewer_keywords: Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f23fb0084b9fc0570b5dbc9d551833be171251c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c254ca94d75abd78acabc6c008c5d8350ba30cd2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>데이터베이스 마법사 (선택 위치)를 찾을 (AccessToSQL)
 데이터베이스 검색 마법사의 위치 선택 페이지에서 Access 데이터베이스를 찾기 위한 검색 매개 변수를 입력 합니다.  
@@ -70,4 +67,3 @@ SSMA를 검색 하는 위치를 나열 합니다. 클릭는 **추가** 단추를
 [Access 데이터베이스 파일 추가 및 제거](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
 [사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

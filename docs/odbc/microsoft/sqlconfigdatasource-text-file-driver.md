@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], Text File Driver
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22cbd006c0c499988b5552fb3057e4ce7af67c44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e781871cc8507d10617e1a147fa6d5a7c06ac756
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (텍스트 파일 드라이버)
 > [!NOTE]  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 |FORMAT|FIXEDLENGTH, TABDELIMITED, (쉼표), 여는 CSVDELIMITED 또는 (여는 괄호에 지정 된 특수 문자) DELIMITED() 텍스트 드라이버에 대 한 수 있습니다. 특수 문자 길이가 1 자 이며 문자 10 진수 또는 16 진수 형식 될 수 있습니다.|  
 |MAXSCANROWS|기존 데이터에 따라 열의 데이터 형식을 설정할 때 검사할 행의 수입니다.<br /><br /> 텍스트 드라이버를 입력할 수 있는 숫자 1에서 32767 사이의; 검색할 행 수에 대 한 그러나 값은 기본적으로 항상 25입니다. (제한 벗어나는 숫자 오류가 반환 됩니다.)<br /><br /> 동일한 옵션을 설정 하는이 **검색할 행** 설정 대화 상자에서 합니다.|  
 |READONLY|파일을 만들기 위해 읽기 전용 이면 TRUE False 이면 읽기 전용 파일을 설정 합니다.<br /><br /> 동일한 옵션을 설정 하는이 **읽기 전용** 설정 대화 상자에서 합니다.|
-

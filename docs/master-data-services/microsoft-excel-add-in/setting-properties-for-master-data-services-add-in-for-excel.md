@@ -8,22 +8,20 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 404c939db56bfee93b0db53850bf4cb519e873e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c5055942c39ff3805fcdbdbd47f0b3d8e9e2489d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Excel용 Master Data Services 추가 기능의 속성 설정
   Excel용 Master Data Services 추가 기능 설정은 MDS에서 Excel 추가 기능으로 데이터가 로드되는 방법 및 Excel 추가 기능에서 MDS로 데이터가 게시되는 방법을 결정합니다.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/07/2017
 |데이터: 셀 형식|표시 형식|도메인 기반 특성의 값을 표시하기 위한 기본 형식을 선택합니다. 옵션은 코드 {Name}, 코드 및 이름 {Code}입니다.|  
   
   
-

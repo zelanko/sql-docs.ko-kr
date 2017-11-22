@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
+ms.openlocfilehash: 36411ef9c26155f91956fbe572e60b3490f61b98
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 메일 및 Linux에서 SQL 에이전트와 전자 메일 알림
 
@@ -138,4 +137,3 @@ GO
 
 ## <a name="next-steps"></a>다음 단계
 SQL Server 에이전트를 사용 하 여 일정을 만들고 작업을 실행 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Linux에서 SQL Server 에이전트 작업 실행](sql-server-linux-run-sql-server-agent-job.md)합니다.
-

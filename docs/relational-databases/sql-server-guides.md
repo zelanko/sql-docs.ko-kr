@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 지침 | Microsoft Docs"
+title: "SQL Server 지침 | Microsoft 문서"
 ms.custom: 
 ms.date: 05/03/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide
 - guide, list
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1c80c429cd094c36ec92aa71039e6431e60e73e3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: f854bc49f1543782f0e92067635c77cf53d0cdd2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-guides"></a>SQL Server 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-다음 가이드를 사용할 수 있습니다. 이러한 가이드는 일반적인 개념을 다루며 각 해당 가이드에 다른 설명이 없는 한, 모든 버전의 SQL Server에 적용됩니다. 
+다음 가이드를 사용할 수 있습니다. 이러한 가이드는 해당 가이드에 다른 설명이 없는 한 일반 개념을 다루며 모든 버전의 SQL Server에 적용됩니다. 
 
 [Always On 가용성 그룹 문제 해결 및 모니터링 가이드](http://msdn.microsoft.com/library/dn135328)  
 [인덱스 디자인 가이드](../relational-databases/sql-server-index-design-guide.md)  
@@ -42,4 +40,3 @@ ms.lasthandoff: 07/31/2017
 [SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](https://msdn.microsoft.com/library/jj856598)  
 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
 [스레드 및 태스크 아키텍처 가이드](../relational-databases/thread-and-task-architecture-guide.md)
-

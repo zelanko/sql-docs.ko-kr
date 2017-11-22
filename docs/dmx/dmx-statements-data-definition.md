@@ -13,31 +13,29 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - statements [DMX], data definition statements
 - data definition statements [DMX]
 - DDL
 ms.assetid: a215bbe9-0fc6-4256-b5a1-7ef03493bb3f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d9c4709219dcfc15ff671474deebfebef19f68b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ce131b2d4dc067764d5a5b034a5f0b8cf3a078f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dmx-statements---data-definition"></a>DMX 문을-데이터 정의 
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   다음 표에서는 DMX(Data Mining Extensions)의 데이터 마이닝 DDL(데이터 정의 언어) 문 중 일부를 나열합니다.  
   
-|문|Description|  
+|인수를 제거합니다.|Description|  
 |---------------|-----------------|  
 |[만들기 마이닝 구조 &#40; DMX &#41;](../dmx/create-mining-structure-dmx.md)|데이터베이스에 새 마이닝 구조를 만듭니다.|  
 |[ALTER 마이닝 구조 &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)|기존 마이닝 구조에 마이닝 모델을 추가합니다.|  
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/02/2017
  [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

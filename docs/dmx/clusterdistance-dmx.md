@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ClusterDistance
-dev_langs:
-- DMX
-helpviewer_keywords:
-- ClusterDistance function
+f1_keywords: ClusterDistance
+dev_langs: DMX
+helpviewer_keywords: ClusterDistance function
 ms.assetid: a13152b3-4cd1-4c79-8a3e-207624198330
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 93886f21fcb829d735be8fa00e1a7b446400adb1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ba8bb17dbd5e443a56b4eb218fae814f8fbcff4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -148,4 +144,3 @@ NATURAL PREDICTION JOIN
  [클러스터링 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   
-

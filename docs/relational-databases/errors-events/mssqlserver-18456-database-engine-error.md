@@ -1,5 +1,5 @@
 ---
-title: MSSQLSERVER_18456 | Microsoft Docs
+title: "MSSQLSERVER_18456 | Microsoft 문서"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 18456 (Database Engine error)
+helpviewer_keywords: 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ae32f75a30f38c3f2c86370afbb49bbf6e6031b7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
-ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,4 +122,3 @@ Windows 인증을 사용하여 연결하려고 하는 경우 올바른 도메인
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬로 연결하는 경우 **NT AUTHORITY\NETWORK SERVICE**에서 실행되는 서비스의 연결도 컴퓨터의 정규화된 도메인 이름을 사용하여 인증해야 합니다. 자세한 내용은 [How To: Use the Network Service Account to Access Resources in ASP.NET](http://msdn.microsoft.com/library/ff647402.aspx)(방법: 네트워크 서비스 계정을 사용하여 ASP.NET의 리소스에 액세스)을 참조하세요.  
   
-

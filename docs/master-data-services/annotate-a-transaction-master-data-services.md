@@ -8,24 +8,21 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- annotations [Master Data Services], for transactions
+helpviewer_keywords: annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ec045db7e85912ac6ffd165f5a410396b8fbb36b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 8a737c436fa8db5eb10224d62fc0cb05635f47fa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>트랜잭션에 주석 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 기록 목적으로 트랜잭션에 대한 지원 정보를 제공하려면 트랜잭션에 주석을 추가합니다.  
@@ -76,4 +73,3 @@ ms.lasthandoff: 09/07/2017
  [트랜잭션&#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   
-

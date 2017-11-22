@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>수준 1 인터페이스 규칙
 OLTP 관계형 DBMS에서 일반적으로 사용할 수 있는 트랜잭션과 같은 추가 기능을 포함 하는 핵심 인터페이스 규칙에 따라 수준 기능 수준 1 인터페이스 규칙 수준에 포함 되어 있습니다. 수준 1 드라이버 인터페이스 –와 호환 되는 핵심 인터페이스 규칙 수준에서 기능 외에도 다음을 수행 하는 응용 프로그램 수 있습니다.  
@@ -43,4 +41,3 @@ OLTP 관계형 DBMS에서 일반적으로 사용할 수 있는 트랜잭션과 �
 |107|SQL 문 대신 ODBC 함수를 사용 하 여 특정 데이터베이스 작업을 수행: **SQLSetPos** SQL_POSITION과 SQL_REFRESH 합니다.|  
 |108|호출 하 여 일괄 처리 및 저장된 프로시저에서 생성 된 여러 결과 집합의 내용에 액세스할 **SQLMoreResults**합니다.|  
 |109|완벽 한 원자성 및 SQL_ROLLBACK에서 지정 하는 기능 사용 하 여 몇 가지 ODBC 함수에 걸쳐 있는 트랜잭션을 구분 **SQLEndTran**합니다.|
-

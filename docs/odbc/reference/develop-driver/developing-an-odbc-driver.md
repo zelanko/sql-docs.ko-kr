@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3225a011-5605-46ba-bb74-1ca6106a5271
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb101423ac8b36cbe7d5f4c4c004a3c7182a5f89
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9439904b0f715c1c35b54106113021753abd669b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-an-odbc-driver"></a>ODBC 드라이버를 개발합니다.
 이 섹션에는 ODBC 드라이버를 개발 하는 방법에 설명 하는 항목이 포함 되어 있습니다.  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
 -   [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)  
   
 -   [비동기 함수 완료 알림](../../../odbc/reference/develop-driver/notification-of-asynchronous-function-completion.md)
-

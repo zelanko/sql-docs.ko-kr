@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - mapping functions to query types [DMX]
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], functions
 - Data Mining Extensions [Analysis Services], prediction queries
 ms.assetid: e128159a-0458-43c9-bfe9-129cb6cfbe1c
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: bb62e03f1f151bde68dd2fbc10d64ac32ef9c993
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f63573a32882c40619e28666e2a251794c121621
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="general-prediction-functions-dmx"></a>일반 예측 함수(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -89,7 +87,7 @@ ms.lasthandoff: 08/02/2017
 |[SELECT FROM \<모델 > PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|모델을 만드는 데 사용하는 알고리즘과 관련된 예측 함수|각 모델 유형에 예측 함수 목록은 참조 [데이터 마이닝 쿼리 수](../analysis-services/data-mining/data-mining-queries.md)합니다.|  
 |[SELECT FROM \<모델 >](../dmx/select-from-model-dmx.md)|모델을 만드는 데 사용하는 알고리즘과 관련된 예측 함수|각 모델 유형에 예측 함수 목록은 참조 [데이터 마이닝 쿼리 수](../analysis-services/data-mining/data-mining-queries.md)합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Data Mining Extensions &#40; DMX &#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -100,4 +98,3 @@ ms.lasthandoff: 08/02/2017
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: ruby
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f50042c6ae0233b5bc39ce2879391d1d5340741
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d722d1eed21162d5e076f5dfdfc3a2f18787f42e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>1 단계: Ruby 개발을 위한 개발 환경 구성
 SQL Server에 대 한 Ruby 드라이버를 사용 하 여 응용 프로그램을 개발 하기 위해 필수 구성 요소 개발 환경을 구성 해야 합니다.    
@@ -116,4 +114,3 @@ Mac OS X에 이미 있다고 Ruby 미리 설치 된 운영 체제에 종속성�
 ```  
 > gem install tiny_tds  
 ```
-

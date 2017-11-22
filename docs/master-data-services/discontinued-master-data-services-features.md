@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: smartysanthosh
 ms.author: nagavo
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: cad58416d1177a421c710f00979a9153cb393cdc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 3e4f11a2dd8cc4bc07f359f62daf5d444b0a46d3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="discontinued-master-data-services-features"></a>지원되지 않는 MDS(Master Data Services) 기능
-  이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 더 이상 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기능에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기능에 대해 설명합니다.  
   
 ## <a name="includesscurrentincludessscurrent-mdmd-discontinued-features"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 지원되지 않는 기능  
  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 준비 프로세스는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 제거되었습니다. 준비 프로세스에 기반한 엔터티를 사용하여 데이터를 가져오고 수정해야 합니다. 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/07/2017
  [사용되지 않는 Master Data Services 기능](../master-data-services/deprecated-master-data-services-features.md)  
   
   
-

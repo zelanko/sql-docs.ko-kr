@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sybase Console,Sample Console Script Files
+helpviewer_keywords: Sybase Console,Sample Console Script Files
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6777922c0282df350ed0107dc3a37ef7102ef5d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cb3c0f4f2e9f57b10527b9e524eae10563efebe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>샘플 콘솔 스크립트 파일 (SybaseToSQL) 작업
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품 함께 제공 되었습니다. 이 여기서 쉽게 이러한 스크립트는 최종 사용자의 요구에 맞게 사용자 지정 하는 방법을 설명 합니다.  
@@ -88,7 +85,7 @@ ms.lasthandoff: 08/02/2017
   
     원본 데이터베이스와 대상 스키마의 스키마 매핑.  
   
-    **특성**  
+    **Attribute**  
   
     -   `source-schema:`변환 하는 데 필요한 원본 데이터베이스를 지정 합니다.  
   
@@ -102,7 +99,7 @@ ms.lasthandoff: 08/02/2017
   
     -   사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `convert-schema` 샘플 콘솔 스크립트 파일의 명령의 예제 4입니다.  
   
-    **특성**  
+    **Attribute**  
   
     `object-name`: 원본 데이터베이스를 지정 합니다. / 개체 변환 하는 데 필요한 이름. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는`object-name`  
   
@@ -114,7 +111,7 @@ ms.lasthandoff: 08/02/2017
   
     -   사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `synchronize-target` 샘플 콘솔 스크립트 파일의 명령의 예제 3입니다.  
   
-    **특성**  
+    **Attribute**  
   
     `object-name:`개체를 만들 수 필요로 하는 이름/sql server 데이터베이스를 지정 합니다. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는`object-name`  
   
@@ -126,13 +123,12 @@ ms.lasthandoff: 08/02/2017
   
     -   사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `migrate-data` 예제 콘솔 스크립트 파일의 예 2 명령입니다.  
   
-    **특성**  
+    **Attribute**  
   
     `object-name:`원본 데이터베이스 지정/마이그레이션에 필요한 이름이 테이블. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는`object-name`  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [변수 값 파일 &#40; 만들기 SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
 [서버 연결 파일 &#40; 만들기 SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
 [보고서 &#40; 생성 SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   
-

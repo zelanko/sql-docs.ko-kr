@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 25d639d9d8f7c8e454957f1b309a449951550b26
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 22af55f599bc6adafe6d1c6ea0dcb409033feeb0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>명령 사용 하 여 저장된 프로시저 호출
 저장된 프로시저를 호출 하는 명령을 사용할 수 있습니다. 이 항목의 끝에 있는 코드 샘플 CustOrdersOrders 다음과 같이 정의 된 호출 Northwind 샘플 데이터베이스의 저장된 프로시저를 참조 합니다.  
@@ -142,4 +140,3 @@ End Function
   
 ## <a name="see-also"></a>관련 항목:  
  [기술 자료 문서 117500](http://go.microsoft.com/fwlink/?LinkId=117500)
-

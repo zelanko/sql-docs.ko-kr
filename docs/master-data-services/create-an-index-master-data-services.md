@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 997fc0e59ffe1a545bb0c56f9137711deb0e354f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: ee405ebea31b8ca2a178b2d287a1ba1b8d4e97f8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-an-index-master-data-services"></a>인덱스 만들기(Master Data Services)
   쿼리 성능을 개선하려면 자주 쿼리하는 특성 목록에 대해 사용자 지정 인덱스를 만듭니다.  
@@ -79,4 +77,3 @@ ms.lasthandoff: 09/07/2017
  [사용자 지정 인덱스&#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   
   
-

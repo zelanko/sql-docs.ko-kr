@@ -3,17 +3,18 @@ title: FREETEXT (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FREETEXT
 - FREETEXT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], meaning matches
 - meaning matches [full-text search]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - words in predicate [full-text search]
 - column searches [full-text search]
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9c7475e73cbd5022bf5c243fbd4e7a35dc115cf0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 48c7ce4788a0c5da0b22e80ab1dc366091c25f97
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   사용 되는 조건자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 절](../../t-sql/queries/where-transact-sql.md) 의 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 수행 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색 전체 텍스트 인덱싱된 열의 문자 기반 데이터 형식이 포함 된 합니다. 이 조건자는 검색 조건의 의미와 일치하지만 단어가 정확히 일치하지 않는 값을 검색합니다. FREETEXT를 사용 하는 경우 전체 텍스트 쿼리 엔진이 내부적으로 다음 작업이 수행 된 *freetext_string*각 용어에 가중치를 할당 한 다음 일치 항목을 찾습니다.  
   
@@ -76,7 +76,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  WEIGHT, FORMSOF, 와일드카드, NEAR 및 기타 구문은 사용할 수 없습니다. *freetext_string* 단어가 형태소가 분석 되며 동의어 사전을 통해 전달 합니다.  
   
- *freetext_string* 은 **nvarchar**합니다. 암시적 변환은 다른 문자 데이터 형식이 입력으로 사용될 때 발생합니다. 다음 예에서는 `@SearchWord`로 정의된 `varchar(30)` 변수로 인해 `FREETEXT` 조건자에서 암시적 변환이 발생합니다.  
+ *freetext_string* 은 **nvarchar**합니다. 암시적 변환은 다른 문자 데이터 형식이 입력으로 사용될 때 발생합니다. 큰 문자열 데이터 형식 nvarchar (max) 및 varchar (max)를 사용할 수 없습니다. 다음 예에서는 `@SearchWord`로 정의된 `varchar(30)` 변수로 인해 `FREETEXT` 조건자에서 암시적 변환이 발생합니다.  
   
 ```  
   
@@ -176,4 +176,3 @@ GO
  [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

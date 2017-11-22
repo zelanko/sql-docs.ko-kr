@@ -1,26 +1,24 @@
 ---
 title: "사용자 라이브러리에 설치 된 R 패키지에서 오류를 방지 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f7e5a9e69d98a3e39a66c48b1a7add5a3f0b0e69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0de06ebee16d903b4b00c9d8e4673bf450c485d1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>사용자 라이브러리에 설치 된 R 패키지에서 오류를 방지 합니다.
 
@@ -35,7 +33,7 @@ ms.lasthandoff: 10/10/2017
 예를 들어 일반적인 R 개발 환경에서 사용자가 패키지의 위치에 추가 R 환경 변수 `libPath`, 또는 다음과 같이 전체 패키지 경로 참조 합니다.
 
 ```R
-library("c:/Users/<username>/R/win-library/packagename")  
+library("c:/Users/<username>/R/win-library/packagename")
 ```
 
 그러나이 수 작동 하지 않습니다 SQL Server에서 R 솔루션을 실행 하는 경우 R 패키지는 인스턴스와 연결 된 특정 기본 라이브러리를 설치 해야 하기 때문에 있습니다.
@@ -68,7 +66,6 @@ SQL Server는 여러 패키지 버전을 관리 하 고 사용자가 파일 시�
 
     + 임시 디렉터리 또는 사용자 라이브러리에서가 아니라 기본 라이브러리에서 패키지를 로드 했는지 확인 하는 코드를 편집 합니다.
 
-+ 솔루션의 일부로 임시 패키지를 설치를 하지 마십시오. 또는 설치 되지 않은 패키지를 동적으로 패키지를 설치 하는 코드에 대 한 호출 없는지 확인 하도록 코드를 확인 합니다. 권한이 없는 경우 코드가 실패 하 고 권한이 없는 경우 별도로 설치 해야 패키지를 실행 하려는 다른 코드에서.
++ 솔루션의 일부로 임시 패키지를 설치를 하지 마십시오. 또는 설치 되지 않은 패키지를 동적으로 패키지를 설치 하는 코드에 대 한 호출 없는지 확인 하도록 코드를 확인 합니다. 패키지를 설치할 수 있는 권한이 없는 경우에 코드는 실패 합니다. 사용자에 게 패키지를 설치 하는 권한이, 경우에 실행 하려는 다른 코드에서 있으므로 별도로 수행 해야 합니다.
 
-+ R 패키지 라이브러리에 직접 경로 수정 합니다. 패키지가 기본 라이브러리에 설치되면 다른 라이브러리가 R 코드에 지정되어 있어도 R 런타임이 기본 라이브러리에서 패키지를 로드합니다.
-
++ R 패키지 또는 R 라이브러리에 대 한 경로에 대 한 직접 참조 하도록 코드를 업데이트 합니다. 패키지가 기본 라이브러리에 설치되면 다른 라이브러리가 R 코드에 지정되어 있어도 R 런타임이 기본 라이브러리에서 패키지를 로드합니다.

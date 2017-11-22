@@ -16,17 +16,16 @@ helpviewer_keywords:
 - referencing libraries [ADO]
 - ADO, libraries
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d31004490ec90b92f0ab1cf16c0dc3e56e234d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ff7f2ec4696d14be39a8c492dfbaedbcd5523e9c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="referencing-the-ado-libraries"></a>ADO 라이브러리 참조
 ADO의 최신 버전으로 패키지 *msado15.dll*합니다. 최신 버전의 ADO MD 및 ADOX 패키지 되어 *msadom.dll* 및 *msadox.dll*각각. 이러한 라이브러리에는 기본적으로 설치 됩니다 *$installDir*여기서 *$installDir* 는 ADO 라이브러리에 컴퓨터에 설치 되어 있는 디렉터리의 경로 나타냅니다. 응용 프로그램에서 ADO 라이브러리를 사용 하려면 응용 프로그램 프로젝트에서 명시적으로 참조할 해야 있습니다.  
@@ -36,4 +35,3 @@ ADO의 최신 버전으로 패키지 *msado15.dll*합니다. 최신 버전의 AD
 -   [Visual Basic 응용 프로그램](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
   
 -   [Visual c + + 응용 프로그램에서](../../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md)
-

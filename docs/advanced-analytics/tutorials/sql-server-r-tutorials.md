@@ -1,30 +1,25 @@
 ---
 title: "SQL Server R 자습서 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-caps.latest.revision: 1
+applies_to: SQL Server 2016
+dev_langs: R
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 341ec619ee5976ca7488f3662f010358b4457437
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a313a6f26283b96d138671991438197ae0cc0332
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server R 자습서
 
@@ -118,4 +113,3 @@ SQL Server 설치 프로그램을 실행 한 후 이러한 중요 한 단계를 
 + SQL 로그인 이나 Windows 사용자 계정에 데이터를 읽을 수 및 샘플에 필요한 모든 데이터베이스 개체를 만들려면 서버에 연결 하는 데 필요한 권한이 있는지 확인 하십시오.
 
 문제를 실행 하면 몇 가지 일반적인 문제에 대 한이 문서를 참조 하세요.: [컴퓨터 학습 서비스 문제 해결](../machine-learning-troubleshooting-faq.md)
-

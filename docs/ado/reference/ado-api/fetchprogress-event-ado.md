@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - FetchProgress
 - Recordset::FetchProgress
-helpviewer_keywords:
-- FetchProgress event [ADO]
+helpviewer_keywords: FetchProgress event [ADO]
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 990e5bbe3a203cd48c34c6153a9ee0ca8e678758
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 606e91ca69d981cf4c1396109f0114ce0244dc3b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 이벤트 (ADO)
 **FetchProgress**이벤트에 현재으로 가져온 더 많은 행의 수를 보고 하기 위해 시간이 오래 걸리는 비동기 작업을 하는 동안에 주기적으로 호출 됩니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -63,4 +60,3 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
 ## <a name="see-also"></a>관련 항목:  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)
-

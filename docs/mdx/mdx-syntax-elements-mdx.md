@@ -5,27 +5,24 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], syntax
 - MDX [Analysis Services], syntax
 ms.assetid: f4c16e1a-cf1a-4be0-839a-db018430ff14
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 9a98c63b23da676a8d84adbece9b722f949b13ed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77aab8ddf130fc7f93cecfe762833bbda873c81a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-syntax-elements-mdx"></a>MDX 구문 요소(MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +37,10 @@ ms.lasthandoff: 08/02/2017
 |[연산자](../mdx/operators-mdx-syntax.md)|연산자는 하나 이상의 간단한 MDX 식으로 더 복잡한 MDX 식을 만드는 구문 요소입니다.|  
 |[함수](../mdx/functions-mdx-syntax.md)|함수는 0개 이상의 입력 값을 받고 스칼라 값 또는 개체를 반환하는 구문 요소입니다. 예로 [Sum](../mdx/sum-mdx.md) 여러 값을 추가 하는 것에 대 한 함수는 [멤버](../mdx/members-set-mdx.md) 에서 차원 또는 수준의 멤버 집합을 반환 하기 위한 작동 하 고 있습니다.|  
 |[주석](../mdx/comments-mdx-syntax.md)|주석은 문의 용도를 설명하기 위해 MDX 문 또는 스크립트에 삽입하는 텍스트입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]주석을 실행 하지 않습니다.|  
-|[예약 된 키워드](../mdx/reserved-keywords-mdx-syntax.md)|예약된 키워드는 MDX에서 사용하도록 예약되어 있으며 MDX 문에서 개체 이름으로 사용할 수 없는 단어입니다.|  
+|[예약 키워드](../mdx/reserved-keywords-mdx-syntax.md)|예약된 키워드는 MDX에서 사용하도록 예약되어 있으며 MDX 문에서 개체 이름으로 사용할 수 없는 단어입니다.|  
 |[멤버, 튜플 및 집합](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)|멤버, 튜플 및 집합은 MDX 쿼리를 만들기 전에 이해해야 할 다차원 데이터의 핵심 개념입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [다차원 식 &#40; Mdx&#41; 참조](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

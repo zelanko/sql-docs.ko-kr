@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5c5dba74939ac94e9ce87477ec0952e56c4439c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb5ded86bf30a942aaece3f7d1404df781c24112
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL)에 연결
 사용 하 여 **MySQL에 연결** 마이그레이션할 MySQL 데이터베이스에 연결 하는 대화 상자.  
@@ -78,4 +76,3 @@ MySQL 통해 SSL Secure Socket Layer ()에 대 한 연결을 구성 하는 옵�
 > -   **확인** 필요한 정보를 제공한 경우 단추를 사용할 수 있습니다. 유효 하지 않으면 파일 경로 있는 "확인" 단추가 비활성화 된 상태로 유지 됩니다.  
 > -   **취소** 단추 대화 상자를 닫습니다 및 **해제** 기본 연결 폼에서 SSL 옵션입니다.  
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8a6ffdda65981ec455cd2ef0dda29b32cdda2e82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 76cff17d37d9c4909f6851cd2504f6b9dff31cb9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>파생 계층 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 파생 계층이 더 이상 필요하지 않으면 삭제할 수 있습니다.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 09/07/2017
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  메뉴 모음에서 **관리**를 가리키고 **파생 계층**을 클릭합니다.  
+2.  메뉴 모음에서 **관리** 를 가리키고 **파생 계층**을 클릭합니다.  
   
 3.  **파생 계층 유지 관리** 페이지의 **모델** 목록에서 모델을 선택합니다.  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/07/2017
  [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
-

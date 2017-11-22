@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1505 (Database Engine error)
+helpviewer_keywords: 1505 (Database Engine error)
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8383fd472e054f26db78ab8ec28b4a67e81e7f02
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 95b7a88504af3c97a252bf55aa92cc33805b8f81
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,4 +72,3 @@ SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstN
 [고유 인덱스 만들기](~/relational-databases/indexes/create-unique-indexes.md)  
 [UNIQUE 제약 조건 만들기](~/relational-databases/tables/create-unique-constraints.md)  
   
-

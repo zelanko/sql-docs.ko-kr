@@ -8,29 +8,26 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dqproject.opendqproject.f1
+f1_keywords: sql13.dqs.dqproject.opendqproject.f1
 helpviewer_keywords:
 - data quality project,delete
 - data quality project,rename
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b92dba54db168d503d371c927df66d8e9e8dbf7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eec04917faf24e5e6d9075fd165a45148c9f10b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기 및 삭제
   이 항목에서는 데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기, 삭제 등 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 를 사용하여 데이터 품질 프로젝트를 관리하는 방법에 대해 설명합니다.  
@@ -101,4 +98,3 @@ ms.lasthandoff: 09/09/2017
 4.  확인 메시지가 나타납니다. **예**를 클릭합니다.  
   
   
-

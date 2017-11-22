@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- TestServer element
+dev_langs: XML
+helpviewer_keywords: TestServer element
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a8814a0447b6494adeb58a6de9897cd68137a4b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e41f3ba8bd88de8a3cb1744a29c92be2265fdbb1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="testserver-element-dta"></a>TestServer 요소(DTA)
   프로덕션 서버를 튜닝할 때 사용할 테스트 서버를 지정합니다.  
@@ -51,7 +47,7 @@ ms.lasthandoff: 08/02/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[TuningOptions 요소 &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  
@@ -61,4 +57,3 @@ ms.lasthandoff: 08/02/2017
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "저장 프로시저의 정의 보기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,13 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0ac38b8eb5f225d6b98f5aa1da10935ba46e1b7b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7478f7db8ab7b90806d4019bf62420f596588985
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>저장 프로시저의 정의 보기
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
 ##  <a name="Top"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 개체 탐색기 메뉴 옵션을 사용하거나 쿼리 편집기에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저의 정의를 볼 수 있습니다. 이 항목에서는 의 개체 탐색기를 사용하거나 시스템 저장 프로시저, 시스템 함수 및 쿼리 편집기의 개체 카탈로그 뷰를 사용하여 프로시저 정의를 보는 방법에 대해 설명합니다.  
   

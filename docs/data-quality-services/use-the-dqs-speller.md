@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9389568b31c445d66713b68efea8c312f5df9dec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 맞춤법 검사기는 도메인에서 문자열 값의 구문, 맞춤법 및 문장 구조를 검사합니다. 맞춤법 검사기는 서버 쪽 엔진에 통합되지 않고 현재 흐름이나 상태에 영향을 주지 않는 독립 실행형의 클라이언트 쪽 기능입니다. 맞춤법 검사기는 잠재적 오류로 간주되는 문자열 값을 식별한 다음 사용자가 도메인 값을 수동으로 변경하는 위치와 동일한 위치에 빨간색 밑줄로 표시합니다. 이러한 위치에는 다음이 포함됩니다.  
@@ -81,4 +79,3 @@ ms.lasthandoff: 09/09/2017
  DQS는 **값** 테이블의 **값** 열과 **다음으로 수정** 열 모두에 값 제안을 제공합니다. **값** 열에서 제안을 선택하면 값 유형이 **오류**로 설정되고 사용자가 수동으로 삽입한 것처럼 **다음으로 수정** 열에 제안이 복사됩니다. 기존 수정 사항이 있는 경우 제안이 됩니다. **정리** 작업에서 **결과 관리 및 보기** 페이지의 **다음으로 수정** 열에 있는 제안을 선택하면 DQS가 현재 선택된 값을 선택 항목으로 바꾸고 현재 선택된 값이 제안이 됩니다. **정리** 작업의 **결과 관리 및 보기** 페이지에서 레코드 수준(하단 표)에는 제안이 제공되지 않습니다.  
   
   
-

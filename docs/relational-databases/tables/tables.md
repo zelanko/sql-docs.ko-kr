@@ -2,9 +2,12 @@
 title: "테이블 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 370473bbbace616bde5ebbf1b1994a38e394c62e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 30ba1f01b556fcbb58007b771bb648847ecae8a6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables"></a>테이블
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   테이블은 데이터베이스의 모든 데이터를 포함하는 데이터베이스 개체입니다. 테이블에서 데이터는 스프레드시트와 비슷한 논리적인 행 및 열 형식으로 구성됩니다. 각 행은 고유한 레코드를 나타내며 각 열은 레코드 내의 필드를 나타냅니다. 예를 들어 회사 사원 데이터가 들어 있는 테이블은 각 사원에 대한 행과 사원 번호, 이름, 주소, 직책 및 집 전화번호와 같은 자세한 사원 정보를 나타내는 열로 구성할 수 있습니다.  
   

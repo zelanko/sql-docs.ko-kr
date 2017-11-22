@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: 1
+caps.latest.revision: "1"
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: Inactive
+ms.openlocfilehash: 4c6f936ee92c23f38c78dc219be25ef051e02bb0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd6d86df2ec743376af34ac93d8b746bbe0a6eb3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="custom-keystore-providers"></a>사용자 지정 키 저장소 공급자
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -644,4 +642,3 @@ FoundProv:
 ## <a name="see-also"></a>관련 항목:
 
 [ODBC 드라이버를 사용 하 여 항상 암호화를 사용 하 여](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
-

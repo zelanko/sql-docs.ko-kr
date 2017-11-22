@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: 41d3647796306cb1a9b89f5af47c75416de79c01
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 06dc93bec060f2ceb435fcf17817df9e7a8daee9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>내보내기 및 SSMS 또는 SqlPackage.exe windows와 Linux에서 데이터베이스 가져오기
 
@@ -88,4 +87,3 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 
 ## <a name="see-also"></a>참고 항목
 SSMS를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [사용 하 여 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)합니다. SqlPackage.exe에 자세한 내용은 참조는 [SqlPackage 참조 설명서](https://msdn.microsoft.com/library/hh550080.aspx)합니다.
-

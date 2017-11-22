@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40af606931eb56b518d6435f59885c6260c58264
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 616cc7cb69f6d5e275688dfdf76baa5a8d061508
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-editor-db2tosql"></a>전역 설정 (편집기) (DB2ToSQL)
 편집기 페이지를 사용 하 여 **전역 설정** 코드 편집기 창에 대 한 설정을 지정 하려면 대화 상자.  
@@ -36,4 +34,3 @@ ms.lasthandoff: 08/02/2017
   
 이 설정을 변경 하면 코드 편집기 창을 선택 하는 경우 디스플레이를 업데이트 현재 개체를 다시 선택 해야 합니다.  
   
-

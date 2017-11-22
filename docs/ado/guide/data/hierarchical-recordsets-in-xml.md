@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- hierarchical Recordsets [ADO], in XML
+helpviewer_keywords: hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb5fb67b0572ea7edea1259ac1314706cc883cd8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c5d4a03801d4f126185ba63fe3fb6409947219bf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML에서 계층적 레코드 집합
 ADO는 계층적 레코드 집합 개체의 지 속성을 XML로 수 있습니다. 계층적 Recordset 개체 부모 레코드 집합에에서 있는 필드의 값이 다른 레코드 집합입니다. 이러한 필드는 특성 대신 XML 스트림을에 자식 요소로 표시 됩니다.  
@@ -134,4 +131,3 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 ## <a name="see-also"></a>관련 항목:  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

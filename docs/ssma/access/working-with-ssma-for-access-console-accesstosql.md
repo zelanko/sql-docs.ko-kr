@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: e09d438a0e53eaba4f461cfdf14b7447b85cf4ba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 80b7beb7d7fc10ae73d5bbd724986313cadcee3b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>SSMA 액세스 콘솔 (AccessToSQL)에 대 한 작업
 Microsoft SQL Server Migration Assistant (SSMA) 액세스를 위한 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있는 되었습니다. 스크립트 파일의 명령을 실행 하기 위한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램 SSMA 스크립트 수준 상호 작용, 마이그레이션 주기를 줄일 수 있으며 특정 마이그레이션 작업의 크기를 조정 합니다.  
@@ -34,7 +32,7 @@ Microsoft SQL Server Migration Assistant (SSMA) 액세스를 위한 명령줄에
   
 |||  
 |-|-|  
-|**항목**|**설명**|  
+|**항목**|**Description**|  
 |[SSMA 액세스 콘솔 &#40;에 대 한 시작 AccessToSQL &#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 설명 합니다.|  
 |[SSMA 콘솔 &#40;에서 명령줄 옵션 AccessToSQL &#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|SSMA 콘솔 응용 프로그램을 작동 하도록 명령줄 옵션 및 매개 변수를 설명 합니다.|  
 |[스크립트 파일 &#40; 만들기 AccessToSQL &#41;](../../ssma/access/creating-script-files-accesstosql.md)|스크립트 파일을 만드는 방법에 설명 합니다.|  
@@ -49,4 +47,3 @@ Microsoft SQL Server Migration Assistant (SSMA) 액세스를 위한 명령줄에
 ## <a name="see-also"></a>참고 항목  
 [SSMA 콘솔 액세스에 대 한 시작](http://msdn.microsoft.com/8585ec16-7e0a-483a-b250-adab9b9232a3)  
   
-

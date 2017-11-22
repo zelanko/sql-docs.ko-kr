@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - members [Master Data Services], applying permissions immediately
 - permissions [Master Data Services], applying member permissions immediately
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 724d0de9fa2b68980b25a47738a5fecc1fc53245
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a3ac0d4510b77c5e0c6fe95ff7cbf2c6aae433be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>멤버 권한 즉시 적용(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버 보안이 일정한 간격으로 적용되기를 기다리는 대신 멤버 권한을 즉시 적용할 수 있습니다.  
@@ -38,11 +36,11 @@ ms.lasthandoff: 09/07/2017
   
 ### <a name="to-immediately-apply-hierarchy-member-permissions"></a>계층 멤버 권한을 즉시 적용하려면  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]을(를) 열고 [!INCLUDE[ssDE](../includes/ssde-md.md)] 데이터베이스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 연결합니다.  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 을(를) 열고 [!INCLUDE[ssDE](../includes/ssde-md.md)] 데이터베이스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 연결합니다.  
   
 2.  새 쿼리를 만듭니다.  
   
-3.  다음 텍스트를 입력하여 *database*를 데이터베이스 이름으로 바꾸고 *Model_Name*을 모델 이름으로 바꿉니다.  
+3.  다음 텍스트를 입력하여 *database* 를 데이터베이스 이름으로 바꾸고 *Model_Name* 을 모델 이름으로 바꿉니다.  
   
     ```  
     USE [database];  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/07/2017
  [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   
-

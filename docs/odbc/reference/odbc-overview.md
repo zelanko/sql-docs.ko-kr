@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 607e516c8654631ab032dfc6159a8990d464a023
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20767544a83219c6583eaf03a78e240e15e19be2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-overview"></a>ODBC 개요
 ODBC open Database Connectivity ()은 데이터베이스 액세스를 위해 널리 사용 되는 응용 프로그램 프로그래밍 인터페이스 (API). 데이터베이스 Api에 대 한 Open Group 및 ISO/IEC 호출 수준 인터페이스 (CLI) 사양을 기반으로 하 고 SQL 구조적 쿼리 언어 ()를 사용 하 여 해당 데이터베이스 액세스 언어입니다.  
@@ -40,4 +38,3 @@ ODBC open Database Connectivity ()은 데이터베이스 액세스를 위해 널
 -   [ODBC란?](../../odbc/reference/what-is-odbc.md)  
   
 -   [ODBC 및 표준 CLI](../../odbc/reference/odbc-and-the-standard-cli.md)
-

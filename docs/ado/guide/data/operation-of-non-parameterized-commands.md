@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3a94991dc8f1716186f5fdbcd44ded85926fd4a7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a19b939b0b0eb33d436a3924a04562473b4c06a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="operation-of-non-parameterized-commands"></a>매개 변수가 없는 명령 작업을
 매개 변수가 없는 명령에 대 한 모든 공급자 명령이 실행 됩니다 및 **레코드 집합** 명령 실행 중에 만들어집니다. 이 명령은 동기적으로 실행 되는 경우 모든는 **레코드 집합** 완전히 채울 수 있습니다. 비동기 채우기 모드를 선택한 경우의 채워진된 상태는 **레코드 집합** 채우기 모드와의 크기에 따라 달라 집니다는 **레코드 집합**합니다.  
@@ -53,4 +51,3 @@ SHAPE {SELECT * FROM Customers}
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
-

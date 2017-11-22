@@ -8,28 +8,26 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
 - subscription views [Master Data Services], deleting
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a58292478c1e3f2ba07c83f08c837753908baa0f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c20248b853839aab73fb1fcb098531579ebf0d99
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>구독 뷰 삭제(Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 구독 뷰가 더 이상 필요하지 않으면 삭제할 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 구독 뷰를 삭제하면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 해당 뷰가 제거됩니다. 구독 뷰를 편집할 수도 있습니다.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 구독 뷰가 더 이상 필요하지 않으면 삭제할 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 구독 뷰를 삭제하면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 해당 뷰가 제거됩니다. 구독 뷰를 편집할 수도 있습니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/07/2017
  [개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   
-

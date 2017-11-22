@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - LIKE predicate [ODBC]
 - escape sequences [ODBC], LIKE predicate
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f807bd12056f3c6a8e7a38efee56f0a6b6727066
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 132359972cebd3dded36fb911a2ee8e561e5ca64
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="like-predicate-escape-character"></a>마찬가지로 조건자 이스케이프 문자
 에 **같은** 조건자 백분율 기호 (%) 일치 항목 0 개 이상의 임의 문자 및 밑줄 (_) 하나의 문자를 찾습니다. 실제 백분율 기호는 하거나에 밑줄을 **같은** 조건자에 이스케이프 문자가 앞에 야 백분율 기호 또는 밑줄 합니다. 정의 하는 이스케이프 시퀀스는 **같은** 조건자 이스케이프 문자는:  
@@ -46,4 +44,3 @@ SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'
 ```  
   
  확인 하려면 여부는 **같은** 조건자 이스케이프 문자가 데이터 원본에 의해 지원 되는지, 응용 프로그램이 호출 **SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 옵션을 사용 합니다.
-

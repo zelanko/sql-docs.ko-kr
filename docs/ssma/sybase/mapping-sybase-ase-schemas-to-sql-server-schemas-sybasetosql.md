@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Schema Mapping
+helpviewer_keywords: Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 98b90bb9b511af631f7ae27d969df21576ca6502
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f7b6a20ffcc0325ce3644c0a0667542aa2d3aca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE 스키마를 SQL Server 스키마 (SybaseToSQL)로 매핑
 Sybase 적응형 Server Enterprise (ASE), 각 데이터베이스에 하나 이상의 스키마에 있습니다. 기본적으로 SSMA는 동일한 데이터베이스 및 스키마에 데이터베이스 및 스키마 내의 모든 개체를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 그러나 ASE 간의 매핑을 사용자 지정할 수는 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 및 스키마입니다.  
@@ -75,4 +72,3 @@ Sybase ASE 개체를 변환 하는 과정을 분석 하려면 [!INCLUDE[ssNoVers
 ## <a name="see-also"></a>관련 항목:  
 [Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

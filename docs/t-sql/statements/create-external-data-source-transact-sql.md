@@ -3,36 +3,36 @@ title: "외부 데이터 원본 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
 ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ba34b4411b5c3946bf1bc5cb75bc361cd7929990
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 477d2f682da2c91ba8e4bfd42186c4b1b9735f85
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-data-source-transact-sql"></a>외부 데이터 원본 (Transact SQL) 만들기
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   PolyBase, 탄력적 데이터베이스 쿼리 또는 Azure Blob 저장소에 대 한 외부 데이터 소스를 만듭니다. 시나리오에 따라 구문을 크게 다릅니다. 탄력적 데이터베이스 쿼리에 대 한 만든 PolyBase에 대 한 데이터 소스를 사용할 수 없습니다.  마찬가지로, PolyBase 등에 대해 만든 탄력적 데이터베이스 쿼리에 대 한 데이터 소스를 사용할 수 없습니다. 
   
@@ -418,31 +418,7 @@ WITH (
 
 ## <a name="examples-azure-sql-data-warehouse"></a>예: Azure SQL 데이터 웨어하우스
 
-### <a name="g-create-external-data-source-to-reference-azure-blob-storage"></a>7. Azure blob 저장소를 참조 하는 외부 데이터 원본 만들기
-Azure blob 저장소 컨테이너를 참조 하는 외부 데이터 원본을 만들려면 Azure blob 저장소 URI 및 Azure 저장소 계정 키가 포함 된 데이터베이스 범위 자격 증명을 지정 합니다.
-
-이 예제에서는 외부 데이터 원본은 dailylogs myaccount 라는 Azure 저장소 계정에서 호출 하는 Azure blob 저장소 컨테이너를입니다. Azure 저장소 외부 데이터 원본의 데이터 전송만 되며 조건자 푸시 다운을 지원 하지 않습니다.
-
-이 예제에는 Azure 저장소 인증에 대 한 데이터베이스 범위 자격 증명을 만드는 방법을 보여 줍니다. 데이터베이스 자격 증명 암호에 Azure 저장소 계정 키를 지정 합니다. 모든 문자열에 데이터베이스 범위 자격 증명 id, Azure 저장소 인증에 사용 되지 않습니다 지정 합니다. 그런 다음 자격 증명을 외부 데이터 원본을 만드는 문을에 사용 됩니다.
-
-```tsql
--- Create a database master key if one does not already exist. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage 
-WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
-```
-### <a name="h-create-external-data-source-to-reference-azure-data-lake-store"></a>8. Azure 데이터 레이크 저장소 참조를 외부 데이터 원본 만들기
+### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>7. Azure 데이터 레이크 저장소 참조를 외부 데이터 원본 만들기
 Azure 데이터 레이크 저장소 연결 ADLS URI 및 Azure 활성 디렉터리 응용 프로그램의 서비스 사용자 기반으로 합니다. 이 응용 프로그램 만들기에 대 한 설명서에서 찾을 수 있습니다[Active Directory를 사용 하 여 데이터 레이크 저장소 인증](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)합니다.
 
 ```tsql
@@ -465,18 +441,7 @@ WITH (TYPE = HADOOP,
 
 ## <a name="examples-parallel-data-warehouse"></a>예: 병렬 데이터 웨어하우스
 
-### <a name="i-create-external-data-source-to-reference-hadoop"></a>9. 참조 Hadoop에 외부 데이터 원본 만들기
-Hortonworks 또는 Cloudera Hadoop 클러스터를 참조 하는 외부 데이터 원본을 만들려면 컴퓨터 이름이 나 IP 주소는 Hadoop Namenode 및 포트를 지정 합니다.
-
-```tsql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
-```
-
-### <a name="j-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>10. 푸시 다운을 사용 하도록 설정 참조 Hadoop에 외부 데이터 원본 만들기
+### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>8. 푸시 다운을 사용 하도록 설정 참조 Hadoop에 외부 데이터 원본 만들기
 Polybase에 대 한 Hadoop에 푸시 다운 계산을 사용 하도록 설정 하려면 JOB_TRACKER_LOCATION 옵션을 지정 합니다. 활성화 되 면 PolyBase 비용 기반 결정을 사용 하 여 Hadoop으로 쿼리 계산을 푸시할 또는 모든 데이터가 SQL Server의 쿼리 처리를 설정할지 여부를 결정 합니다. 
 
 ```tsql
@@ -488,7 +453,7 @@ WITH (
 );
 ```
 
-### <a name="k-create-external-data-source-to-reference-azure-blob-storage"></a>11. Azure blob 저장소를 참조 하는 외부 데이터 원본 만들기
+### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>9. Azure blob 저장소를 참조 하는 외부 데이터 원본 만들기
 외부 만들려면 데이터 소스 외부 데이터로 Azure blob 저장소 URI를 지정 Azure blob 저장소 컨테이너를 사용 하 여 참조를 원본 위치입니다. 인증을 위해 PDW site.xml 코어 파일을 Azure 저장소 계정 키를 추가 합니다.
 
 이 예제에서는 외부 데이터 원본은 dailylogs myaccount 라는 Azure 저장소 계정에서 호출 하는 Azure blob 저장소 컨테이너를입니다. Azure 저장소 외부 데이터 원본의 데이터 전송만 되며 조건자 푸시 다운을 지원 하지 않습니다.
@@ -501,7 +466,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```
 
 ## <a name="examples-bulk-operations"></a>예: 대량 작업   
-### <a name="l-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>12. Azure Blob 저장소에서 데이터를 검색 하는 대량 작업에 대 한 외부 데이터 원본을 만듭니다.   
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>10. Azure Blob 저장소에서 데이터를 검색 하는 대량 작업에 대 한 외부 데이터 원본을 만듭니다.   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.   
 사용 하 여 대량 작업에 대 한 다음 데이터 소스를 사용 하 여 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)합니다. 사용 하 여을 사용 하는 자격 증명을 만들어야 `SHARED ACCESS SIGNATURE` id로 합니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.   
 ```tsql
@@ -523,5 +488,4 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 [sys.external_data_sources (Transact SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
-
 

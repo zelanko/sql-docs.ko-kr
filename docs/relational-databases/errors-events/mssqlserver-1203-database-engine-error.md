@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1203 (Database Engine error)
+helpviewer_keywords: 1203 (Database Engine error)
 ms.assetid: 33a35f00-98c8-46c6-b432-544b326b6117
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c30bc5811cf87de4ddc27a0d29835ab1e2e65fac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 67be895813ef4007a83e4e8388d70b15066922e6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver1203"></a>MSSQLSERVER_1203
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 > 인덱스 문제를 해결할 수 없는 REPAIR 절 중 하나를 사용하여 DBCC CHECKDB를 실행 중인 경우, 또는 REPAIR 절을 사용할 때 DBCC CHECKDB가 데이터에 미치는 영향을 확인하려면 이 문을 실행하기 전에 주 지원 공급자에게 문의하십시오.  
   
-

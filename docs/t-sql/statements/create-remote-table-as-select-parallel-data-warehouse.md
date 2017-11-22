@@ -8,22 +8,20 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a0318d108d6dfaaa374af9a1ab8a148ff960dfcd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>원격 TABLE AS SELECT (병렬 데이터 웨어하우스) 만들기
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -90,7 +88,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  최대 일괄 처리당 행 수입니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]대상 서버에 일괄 처리의 행을 보냅니다. *Batch_size* 양의 정수가 > = 0. 기본값은 0입니다.  
   
  와 *common_table_expression*  
- CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  선택 \<select_criteria > 새 원격 테이블을 채울 데이터를 지정 하는 쿼리 조건자입니다. SELECT 문에 대 한 자세한 내용은 참조 하십시오. [select&#40; Transact SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -172,5 +170,4 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 ```  
   
   
-
 

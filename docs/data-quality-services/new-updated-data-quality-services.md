@@ -19,12 +19,11 @@ ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
 ms.author: genemi
 ms.workload: data-quality-services
+ms.openlocfilehash: 40c98b58bb5caf5f59aace35724bbef5b14f07cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 153edd4079a3baa18a590771dc407314d0cd267e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>새로 추가되거나 최근에 업데이트됨: SQL Server용 Data Quality Services
 
@@ -127,6 +126,5 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
-
 
 

@@ -3,17 +3,18 @@ title: "(Transact SQL)를 포함 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINS_TSQL
 - CONTAINS
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - CONTAINS predicate (Transact-SQL)
@@ -34,20 +35,19 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
+caps.latest.revision: "117"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67d85ab09ac28beca984372e3df2bd6a1ca0bfa3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 단어 또는 구와 정확히 일치하거나 비슷하게 일치하는 단어를 검색하거나 서로 근접한 단어를 검색하거나 가중치 검색을 수행합니다. CONTAINS는에서 사용 되는 조건자는 [WHERE 절](../../t-sql/queries/where-transact-sql.md) 의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 수행 하기 위해 SELECT 문의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색 전체 텍스트 인덱싱된 열의 문자 기반 데이터 형식이 포함 합니다.  
   
@@ -178,7 +178,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  검색할 텍스트를 지정 *column_name* 과 일치 하는 항목에 대 한 상태입니다.  
   
-*\<contains_search_condition >* 은 **nvarchar**합니다. 암시적 변환은 다른 문자 데이터 형식이 입력으로 사용될 때 발생합니다. 다음 예에서는 `@SearchWord`로 정의된 `varchar(30)` 변수로 인해 `CONTAINS` 조건자에서 암시적 변환이 발생합니다.
+*\<contains_search_condition >* 은 **nvarchar**합니다. 암시적 변환은 다른 문자 데이터 형식이 입력으로 사용될 때 발생합니다. 큰 문자열 데이터 형식 nvarchar (max) 및 varchar (max)를 사용할 수 없습니다. 다음 예에서는 `@SearchWord`로 정의된 `varchar(30)` 변수로 인해 `CONTAINS` 조건자에서 암시적 변환이 발생합니다.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -288,7 +288,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  내부 용어를 검색 하는 알림 `CC`, 계산 되지 않습니다.  
   
- **최대**  
+ **MAX**  
  지정된 단어 사이의 거리와 관계없이 해당 단어가 포함된 행을 모두 반환합니다. 기본값입니다.  
   
  \<과 >  
@@ -556,4 +556,3 @@ GO
  [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   
-

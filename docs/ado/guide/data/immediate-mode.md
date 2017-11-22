@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 714cbcae65121a92f8a38bbcf93fbb472ada5573
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 072e6f71aca74f4690f26b90887d475a955e3041
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="immediate-mode"></a>직접 실행 모드
 직접 실행 모드 적용 되는 경우는 **LockType** 속성이로 설정 되어 **adLockOptimistic** 또는 **adLockPessimistic**합니다. 직접 실행 모드에서 변경 내용이 레코드에 전파 되는 데이터 소스에 호출 하 여 행에 대 한 작업 완료를 선언 하는 즉시는 **업데이트** 메서드.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  호출 하는 경우 새 행 추가 하는 경우는 **CancelUpdate** 메서드를 현재 행이 이전의 현재 행에서 **AddNew** 호출 합니다.  
   
  현재 행을 변경 하거나 새 행을 추가 하지, 하는 경우 호출 된 **CancelUpdate** 오류가 발생 합니다.
-

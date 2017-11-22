@@ -1,27 +1,24 @@
 ---
 title: "SQL Server 시작 기계 학습 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 12/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 734deaac0381a3c5826038e7b5e133061749319f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea25548e0dfb3aa8a433c0fb014ad44a0f031f07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>SQL Server 시작 기계 학습
 
@@ -135,4 +132,3 @@ R 스크립트 또는 모델이 프로덕션 환경에서 사용할 준비가 �
 ## <a name="solutions"></a>솔루션
 
 자세한 예제에 대 한 업계 비롯 하 여 = 특정 솔루션 템플릿을 참조 [SQL Server 컴퓨터 학습 자습서](../tutorials/machine-learning-services-tutorials.md)합니다.
-

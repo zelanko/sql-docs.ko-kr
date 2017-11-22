@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], attribute
 - attribute conformance levels [ODBC]
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7859fbb5483acd09dd99f4f27be77d5874e7b992
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="attribute-conformance"></a>특성 규칙
 다음 표에서이 잘 정의 된 각 ODBC 환경 특성의 규칙 수준과 보여 줍니다.  
@@ -110,4 +108,3 @@ ms.lasthandoff: 09/09/2017
  [2] 수준 2 인터페이스 규칙에 대 한 드라이버 SQL_CONCUR_READ_ONLY 및 다른 값이 하나 이상 지원 해야 합니다.  
   
  [3] 수준 1 인터페이스 규칙에 대 한 드라이버 SQL_CURSOR_FORWARD_ONLY 및 다른 값이 하나 이상 지원 해야 합니다. 수준 2 인터페이스 규칙에 대 한 드라이버는이 문서에 정의 된 모든 값을 지원 해야 합니다.
-

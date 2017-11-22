@@ -15,14 +15,12 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 36c5b7ccd0cc8c3a56dca700469fb4fd05fa2871
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 229c6a989a4707921eae3046e3c9707b05bb0306
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-Linux에서 SQL Server
 
 이 문서는 Linux에서 SQL Server 장애 조치 클러스터 인스턴스 (FCI)와 관련 된 개념을 설명 합니다. 
@@ -92,4 +90,3 @@ Linux에서 SQL Server와 함께 한 가지 주요 차이점은는 기본 사용
 - [장애 조치 클러스터 인스턴스-iSCSI-Linux에서 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 - [장애 조치 클러스터 인스턴스-NFS-Linux에서 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [SMB-Linux에서 SQL Server 장애 조치 클러스터 인스턴스-를 구성 합니다.](sql-server-linux-shared-disk-cluster-configure-smb.md)
-

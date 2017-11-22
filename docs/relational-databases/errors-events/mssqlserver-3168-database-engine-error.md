@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 3168 (Database Engine error)
+helpviewer_keywords: 3168 (Database Engine error)
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e65ac3a25fa7982dc29bc04873c068392f31e16a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 86fd56370d788ed0fa0ff9dee37e6e6e2bdd135a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +54,8 @@ ms.lasthandoff: 06/22/2017
 -   사용자가 동일한 서버에서 수행한 백업에서 시스템 데이터베이스를 복원하려고 합니다. 그러나 백업을 수행할 당시에는 서버가 다른 빌드를 실행하고 있었습니다. 즉, 백업을 수행한 이후에 서버가 업그레이드되었습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-이 시나리오에는 복원 프로세스가 마지막 수단으로 이미 시도되었습니다. 자세한 내용은 "[시스템 데이터베이스 백업을 SQL Server의 다른 빌드로 복원할 수 없습니다](http://support.microsoft.com/kb/264474)"를 참조하세요.  
+이 시나리오에는 복원 프로세스가 마지막 수단으로 이미 시도되었습니다. 자세한 내용은 "[You cannot restore system database backups to a different build of SQL Server](http://support.microsoft.com/kb/264474)(시스템 데이터베이스 백업을 SQL Server의 다른 빌드로 복원할 수 없습니다.)"를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
-

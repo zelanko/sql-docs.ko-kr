@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 447d53ca968cd17441c359ca782dc212a3435095
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fe9cf1f66a181f252e644a6e610eb102776dc27d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase (SybaseToSQL)에 연결
 사용 하 여는 **Sybase 연결할** 마이그레이션하려는 Sybase 적응형 Server Enterprise (ASE) 인스턴스를 연결 하는 대화 상자.  
@@ -105,4 +103,3 @@ ASE에는 연결에 대 한 전체 연결 문자열을 입력 합니다.
   
 고급 모드 옵션입니다.  
   
-

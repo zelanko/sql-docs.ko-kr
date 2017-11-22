@@ -1,27 +1,24 @@
 ---
 title: "데이터 탐색 및 R을 통한 예측 모델링 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 79f82cbf4cba40a4c4fd2b2683ce3c16913ef315
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 563266ba60fd9ef4a9514d14e7549934b8cebd07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>데이터 탐색 및 R을 통한 예측 모델링
 
@@ -112,4 +109,3 @@ R 솔루션을 개발할 때는 Microsoft R Client를 다운로드 해야 합니
 [기본 R 및 ScaleR 함수 비교](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
 [SQL Server를 사용하기 위한 ScaleR 함수](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
-

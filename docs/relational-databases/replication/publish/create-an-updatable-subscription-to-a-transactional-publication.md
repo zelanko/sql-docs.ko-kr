@@ -8,25 +8,23 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - updatable transactional subscriptions
 - updateable transactional subscriptions, SSMS
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 94a6afee0fbc828b7c3036cfc4d1282b71674384
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 162acf48372b31833fac37915a42a210dc4f8aa7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,5 +107,4 @@ ms.lasthandoff: 06/22/2017
 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
 
 [Transact-SQL을 사용하여 트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) 
-
 

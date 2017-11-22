@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e749491aea64728e8e58aa4bb041e28a3cbc20fd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bd746a4a3eeb4876ad061aed817f03c01d45506e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-sybasetosql"></a>사용자 인터페이스 참조 (SybaseToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) Sybase 용입니다.  
@@ -54,8 +52,7 @@ ms.lasthandoff: 08/02/2017
 |[프로젝트 설정 &#40; 형식 매핑 &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|유형 매핑 페이지를 사용 하 여 **프로젝트 설정** SSMA Sybase 프로젝트에 대 한의 모든 데이터베이스 및 데이터베이스 개체에 대 한 기본 형식 매핑을 지정 하려면 대화 상자.|  
 |[메타 데이터 &#40; 저장 SybaseToSQL &#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|**메타 데이터 저장** 메타 데이터가 없습니다. 프로젝트를 저장할 때 대화 상자가 나타납니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SSMA for Sybase &#40; 시작 SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
 [Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

@@ -1,8 +1,7 @@
 ---
 title: "SQL 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- SQL property [RDS]
+helpviewer_keywords: SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1c6dfe09bf48ca48a9df29d066ef100403f7703
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b16ac51bae59fbb4435f094da6e0ac0e40053e89
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-property"></a>SQL 속성
 검색 하는 데 쿼리 문자열을 나타내고는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -62,6 +59,5 @@ Run time: DataControl.SQL = "QueryString"
  [Query 메서드 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Refresh (RDS) 메서드](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [SubmitChanges 메서드(RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 

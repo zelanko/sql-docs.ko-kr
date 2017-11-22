@@ -8,24 +8,21 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- PolyBase, installation
+helpviewer_keywords: PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 05ac029c0e4ef807a5d6586882f7655753d1bfbd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="polybase-installation"></a>PolyBase 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,23 +65,23 @@ PolyBase를 독립 실행형으로 또는 확장 그룹에 설치한 후에는 �
   
 4.  서버 구성 페이지에서 **SQL Server PolyBase 엔진 서비스** 및 SQL Server PolyBase 데이터 이동 서비스를 구성하여 동일한 계정 하에서 실행합니다.  
   
-    > **중요!** PolyBase 규모 확장 그룹에서 모든 노드의 PolyBase 엔진 및 PolyBase 데이터 이동 서비스를 동일한 도메인 계정 하에서 실행해야 합니다.  
+    > **중요!** PolyBase 스케일 아웃 그룹에서 모든 노드의 PolyBase 엔진 및 PolyBase 데이터 이동 서비스는 동일한 도메인 계정으로 실행되어야 합니다.  
     > PolyBase 규모 확장 참조  
   
-5.  **PolyBase 구성 페이지**에서 다음 옵션 중 하나를 선택합니다. 자세한 내용은 [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md) 을 참조하세요.  
+5.  **PolyBase 구성 페이지**에서 다음 옵션 중 하나를 선택합니다. 자세한 내용은 [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md) 을 참조하세요.  
   
     -   SQL Server 인스턴스를 독립 실행형 PolyBase 사용 인스턴스로 사용합니다.  
   
          이 SQL Server 인스턴스를 독립 실행형 헤드 노드로 사용하려면 이 옵션을 선택합니다.  
   
-    -   SQL Server 인스턴스를 PolyBase 규모 확장 그룹의 일부로 사용합니다.  SQL Server 데이터베이스 엔진, SQL Server PolyBase 엔진, SQL Server PolyBase 데이터 이동 서비스, SQL Browser에 대한 들어오는 연결을 허용하도록 방화벽이 열립니다. 방화벽은 PolyBase 규모 확장 그룹의 다른 노드에서 들어오는 연결을 허용하도록 열립니다.  
+    -   SQL Server 인스턴스를 PolyBase 스케일 아웃 그룹의 일부로 사용합니다.  SQL Server 데이터베이스 엔진, SQL Server PolyBase 엔진, SQL Server PolyBase 데이터 이동 서비스, SQL Browser에 대한 들어오는 연결을 허용하도록 방화벽이 열립니다. 방화벽은 PolyBase 스케일 아웃 그룹의 다른 노드에서 들어오는 연결을 허용하도록 열립니다.  
   
          이 옵션을 선택하면 MSDTC(Microsoft Distributed Transaction Coordinator) 방화벽 연결을 사용하게 되고 MSDTC 레지스트리 설정이 수정됩니다.  
   
 6.  **PolyBase 구성 페이지**에서 6개 이상의 포트로 포트 범위를 지정합니다. SQL Server 설치 프로그램이 해당 범위의 앞쪽에서 사용할 수 있는 6개의 포트를 할당합니다.  
   
 ##  <a name="installing"></a> 명령 프롬프트를 사용하여 설치  
- 이 테이블의 값을 사용하여 설치 스크립트를 만듭니다. 두 개의 서비스, 즉 **SQL Server PolyBase 엔진** 및 **SQL Server PolyBase 데이터 이동 서비스** 를 동일한 계정 하에서 실행해야 합니다. PolyBase 규모 확장 그룹에서 모든 노드의 양쪽 PolyBase 서비스는 동일한 도메인 계정 하에서 실행해야 합니다.  
+ 이 테이블의 값을 사용하여 설치 스크립트를 만듭니다. 두 개의 서비스, 즉 **SQL Server PolyBase 엔진** 및 **SQL Server PolyBase 데이터 이동 서비스** 를 동일한 계정 하에서 실행해야 합니다. PolyBase 스케일 아웃 그룹에서 모든 노드의 양쪽 PolyBase 서비스는 동일한 도메인 계정 하에서 실행해야 합니다.  
   
 |SQL Server 구성 요소(SQL Server component)|매개 변수 및 값|설명|  
 |--------------------------|--------------------------|-----------------|  
@@ -151,4 +148,3 @@ PolyBase 엔진 및 PolyBase 데이터 이동 서비스에 대한 서비스 계�
  [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)을 참조하세요.  
   
   
-

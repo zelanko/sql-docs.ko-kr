@@ -2,9 +2,12 @@
 title: "복원 시퀀스 계획 및 수행(전체 복구 모델) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da3e2c8873fbc1b44ab45698d08c27edfdaf27a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aeaff84574eaa0f535596efe8c03b2b14b640ba1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>복원 시퀀스 계획 및 수행(전체 복구 모델)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 일반적으로 전체 복구 모델을 사용하는 복원 시퀀스를 계획하고 수행하는 방법에 대해 설명합니다. *복원 시퀀스* 는 하나 이상의 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문의 시퀀스입니다. 일반적으로 복원 시퀀스는 복원 중인 데이터베이스, 파일 및/또는 페이지의 내용을 초기화하고(데이터 복사 단계), 기록된 트랜잭션을 롤포워드하고(다시 실행 단계), 커밋되지 않은 트랜잭션을 롤백합니다(실행 취소 단계).  
   

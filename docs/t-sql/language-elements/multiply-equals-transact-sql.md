@@ -1,5 +1,5 @@
 ---
-title: "* = (곱하기 EQUALS) (Transact SQL) | Microsoft Docs"
+title: "* (곱하기 할당) = (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '*=_TSQL'
 - '*='
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators, *=
+- assignment operators, *=
+- augmented operators, *=
 - '*= (multiply equals)'
+- '*= (multiplication assignment)'
 ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d430048203348e4f249d9866d76a5e02964deac5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bb629e9f025a96a8f4272c97557dd2637bd3422a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="-multiply-equals-transact-sql"></a>*=(곱하기 EQUALS)(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-multiplication-assignment-transact-sql"></a>* (곱하기 할당) = (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   두 숫자를 곱하고 값을 연산 결과로 설정합니다. 예를 들어 변수 @x 35 일 후 equals @x * = 2는 원래 값의 @x, 2로 곱하고 설정 @x 를 새 값 (70).  
   
@@ -62,4 +62,3 @@ expression *= expression
  [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

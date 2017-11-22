@@ -8,8 +8,7 @@ ms.service: database-engine
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,25 +17,24 @@ helpviewer_keywords:
 - managing Stretch Database
 - troubleshooting Stretch Database
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: afc8d1aa2ae45c901e3fc3d4050f25e02911af51
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 5cd6de56cac8b9aef94cd5c8bd430db7d5dbe1c7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 관리 및 문제 해결
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Stretch Database를 관리하고 문제를 해결하려면 이 항목에서 설명하는 도구와 방법을 사용하십시오.  
+  스트레치 데이터베이스를 관리하고 문제를 해결하려면 이 항목에서 설명하는 도구와 방법을 사용하십시오.  
 ## <a name="manage-local-data"></a>로컬 데이터 관리  
   
-###  <a name="LocalInfo"></a> Stretch Database에 활성화된 로컬 데이터베이스 및 테이블에 대한 정보 얻기  
+###  <a name="LocalInfo"></a> 스트레치 데이터베이스에 활성화된 로컬 데이터베이스 및 테이블에 대한 정보 얻기  
  카탈로그 뷰 **sys.databases** 및 **sys.tables** 를 열어 스트레치가 활성화된 SQL Server 데이터베이스 및 테이블에 대한 정보를 참조하세요. 자세한 내용은 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 및 [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)를 참조하세요.  
  
  SQL Server에서 스트레치가 활성화된 테이블을 사용하는 공간을 확인하려면 다음 문을 실행합니다.
@@ -51,19 +49,19 @@ GO
 ## <a name="manage-data-migration"></a>데이터 마이그레이션 관리  
   
 ### <a name="check-the-filter-function-applied-to-a-table"></a>테이블에 적용된 필터 함수 확인  
- Stretch Database에서 마이그레이션할 행을 선택하는 데 사용하는 함수를 식별하려면 **sys.remote_data_archive_tables** 카탈로그 뷰를 열고 **filter_predicate** 열의 값을 확인합니다. 값이 null이면 전체 테이블을 마이그레이션할 수 있습니다. 자세한 내용은 [sys.remote_data_archive_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 및 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요.  
+ 스트레치 데이터베이스에서 마이그레이션할 행을 선택하는 데 사용하는 함수를 식별하려면 **sys.remote_data_archive_tables** 카탈로그 뷰를 열고 **filter_predicate** 열의 값을 확인합니다. 값이 null이면 전체 테이블을 마이그레이션할 수 있습니다. 자세한 내용은 [sys.remote_data_archive_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 및 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요.  
   
 ###  <a name="Migration"></a> 데이터 마이그레이션 상태를 확인합니다.  
- Stretch Database 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio 데이터베이스에 대해 **작업 | 스트레치 | 모니터** 를 선택합니다. 자세한 내용은 [데이터 마이그레이션 모니터링 및 문제 해결&#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)를 참조하세요.  
+ 스트레치 데이터베이스 모니터에서 데이터 마이그레이션을 모니터링하려면 SQL Server Management Studio 데이터베이스에 대해 **작업 | 스트레치 | 모니터** 를 선택합니다. 자세한 내용은 [데이터 마이그레이션 모니터링 및 문제 해결&#40;스트레치 데이터베이스&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)를 참조하세요.  
   
  또는 마이그레이션된 데이터의 배치 및 행 수를 보려면 동적 관리 뷰 **sys.dm_db_rda_migration_status** 를 엽니다.  
   
 ###  <a name="Firewall"></a> 데이터 마이그레이션 문제 해결  
- 문제 해결 제안 사항에 대해서는 [데이터 마이그레이션 모니터링 및 문제 해결&#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)를 참조하세요.  
+ 문제 해결 제안 사항에 대해서는 [데이터 마이그레이션 모니터링 및 문제 해결&#40;스트레치 데이터베이스&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)를 참조하세요.  
   
 ## <a name="manage-remote-data"></a>원격 데이터 관리  
   
-###  <a name="RemoteInfo"></a> Stretch Database에서 사용하는 원격 데이터베이스와 테이블에 대한 정보 얻기  
+###  <a name="RemoteInfo"></a> 스트레치 데이터베이스에서 사용하는 원격 데이터베이스와 테이블에 대한 정보 얻기  
  마이그레이션된 데이터가 저장되는 원격 데이터베이스 및 테이블에 대한 정보를 보려면 카탈로그 뷰 **sys.remote_data_archive_databases** 및 **sys.remote_data_archive_tables** 를 엽니다. 자세한 내용은 [sys.remote_data_archive_databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md) 및 [sys.remote_data_archive_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)를 참조하세요.  
  
 Azure에서 스트레치가 활성화된 테이블을 사용하는 공간을 확인하려면 다음 문을 실행합니다.
@@ -81,7 +79,7 @@ Azure에 이미 마이그레이션된 데이터를 삭제하려는 경우 [sys.s
 ## <a name="manage-table-schema"></a>테이블 스키마 관리
 
 ### <a name="dont-change-the-schema-of-the-remote-table"></a>원격 테이블의 스키마를 변경하지 않음  
- Stretch Database에 대해 구성된 SQL Server 테이블과 관련된 원격 Azure 테이블의 스키마를 변경하지 마십시오. 특히 열의 이름 또는 데이터 유형을 수정하지 마십시오. Stretch Database 기능에서는 SQL Server 테이블의 스키마와 관련하여 원격 테이블의 스키마에 대해 다양한 가정을 합니다. 원격 스키마를 변경하는 경우 Stretch Database이 변경된 테이블에 대한 작동을 중지합니다.  
+ 스트레치 데이터베이스에 대해 구성된 SQL Server 테이블과 관련된 원격 Azure 테이블의 스키마를 변경하지 마십시오. 특히 열의 이름 또는 데이터 유형을 수정하지 마십시오. 스트레치 데이터베이스 기능에서는 SQL Server 테이블의 스키마와 관련하여 원격 테이블의 스키마에 대해 다양한 가정을 합니다. 원격 스키마를 변경하는 경우 스트레치 데이터베이스이 변경된 테이블에 대한 작동을 중지합니다.  
 
 ### <a name="reconcile-table-columns"></a>테이블 열 조정  
 원격 테이블의 열을 실수로 삭제한 경우 **sp_rda_reconcile_columns** 를 실행하여 원격 테이블이 아닌 스트레치가 활성화된 SQL Server 테이블에 있는 원격 테이블에 열을 추가합니다. 자세한 내용은 [sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md)를 참조하세요.  
@@ -89,7 +87,7 @@ Azure에 이미 마이그레이션된 데이터를 삭제하려는 경우 [sys.s
   > [!IMPORTANT]
   > **sp_rda_reconcile_columns** 가 원격 테이블에서 실수로 삭제한 열을 다시 만드는 경우 이전에 삭제된 열에 있었던 데이터를 복원하지 않습니다.
   
-**sp_rda_reconcile_columns** 는 스트레치가 활성화된 SQL Server 테이블이 아닌 원격 테이블에 있는 원격 테이블의 열을 삭제하지 않습니다. 원격 Azure 테이블의 열이 스트레치가 활성화된 SQL Server 테이블에 더 이상 존재하지 않는 경우 이러한 추가 열이 있어도 Stretch Database가 정상적으로 작동합니다. 필요에 따라 추가 열을 수동으로 제거할 수 있습니다.  
+**sp_rda_reconcile_columns** 는 스트레치가 활성화된 SQL Server 테이블이 아닌 원격 테이블에 있는 원격 테이블의 열을 삭제하지 않습니다. 원격 Azure 테이블의 열이 스트레치가 활성화된 SQL Server 테이블에 더 이상 존재하지 않는 경우 이러한 추가 열이 있어도 스트레치 데이터베이스가 정상적으로 작동합니다. 필요에 따라 추가 열을 수동으로 제거할 수 있습니다.  
  
 ## <a name="manage-performance-and-costs"></a>성능 및 비용 관리  
   
@@ -101,10 +99,10 @@ Azure에 이미 마이그레이션된 데이터를 삭제하려는 경우 [sys.s
 -   네트워크 상태가 저하되었을 수 있습니다. 네트워크 관리자에게 최근 발생한 문제 또는 중단에 대해 문의하십시오.  
   
 ### <a name="increase-azure-performance-level-for-resource-intensive-operations-such-as-indexing"></a>인덱싱과 같이 리소스를 많이 사용하는 작업의 Azure 성능 수준 향상  
- Stretch Database에 대해 구성된 대형 테이블에 인덱스를 빌드, 다시 빌드 또는 다시 구성하고 이 시간 동안 Azure에서 마이그레이션된 데이터의 쿼리가 많을 것으로 예상되는 경우, 작업 기간 동안 해당 원격 Azure 데이터베이스의 성능 수준을 높여 보세요. 성능 수준 및 가격에 대한 자세한 내용은 [SQL Server Stretch Database 가격](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)을 참조하세요.  
+ 스트레치 데이터베이스에 대해 구성된 대형 테이블에 인덱스를 빌드, 다시 빌드 또는 다시 구성하고 이 시간 동안 Azure에서 마이그레이션된 데이터의 쿼리가 많을 것으로 예상되는 경우, 작업 기간 동안 해당 원격 Azure 데이터베이스의 성능 수준을 높여 보세요. 성능 수준 및 가격에 대한 자세한 내용은 [SQL Server 스트레치 데이터베이스 가격](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)을 참조하세요.  
   
-### <a name="you-cant-pause-the-sql-server-stretch-database-service-on-azure"></a>Azure의 SQL Server Stretch Database 서비스를 일시 중지할 수 없습니다.  
- 적절한 성능 및 가격 수준을 선택하고 있는지 확인합니다. 리소스를 많이 사용하는 작업에 대해 일시적으로 성능 수준을 높인 경우 작업이 완료되면 이전 수준으로 복원하세요. 성능 수준 및 가격에 대한 자세한 내용은 [SQL Server Stretch Database 가격](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)을 참조하세요.  
+### <a name="you-cant-pause-the-sql-server-stretch-database-service-on-azure"></a>Azure의 SQL Server 스트레치 데이터베이스 서비스를 일시 중지할 수 없습니다.  
+ 적절한 성능 및 가격 수준을 선택하고 있는지 확인합니다. 리소스를 많이 사용하는 작업에 대해 일시적으로 성능 수준을 높인 경우 작업이 완료되면 이전 수준으로 복원하세요. 성능 수준 및 가격에 대한 자세한 내용은 [SQL Server 스트레치 데이터베이스 가격](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)을 참조하세요.  
    
  ## <a name="change-the-scope-of-queries"></a>쿼리의 범위 변경  
  스트레치 사용 테이블에 대한 쿼리는 기본적으로 로컬 및 원격 데이터를 반환합니다. 모든 사용자의 모든 쿼리에 대한 쿼리의 범위를 변경하거나 관리자의 단일 쿼리에 대해서만 변경할 수 있습니다.  
@@ -118,7 +116,7 @@ Azure에 이미 마이그레이션된 데이터를 삭제하려는 경우 [sys.s
    
  -   **REMOTE_ONLY** 원격 데이터만 쿼리합니다.  
    
- -   **STAGE_ONLY** Stretch Database가 마이그레이션에 적합한 행을 준비하고 마이그레이션 후 특정 기간 동안 마이그레이션된 행을 유지하는 테이블의 데이터만 쿼리합니다. 이 쿼리 힌트는 준비 테이블을 쿼리하는 유일한 방법입니다.  
+ -   **STAGE_ONLY** 스트레치 데이터베이스가 마이그레이션에 적합한 행을 준비하고 마이그레이션 후 특정 기간 동안 마이그레이션된 행을 유지하는 테이블의 데이터만 쿼리합니다. 이 쿼리 힌트는 준비 테이블을 쿼리하는 유일한 방법입니다.  
   
 예를 들어 다음 쿼리는 로컬 결과만 반환합니다.  
   
@@ -135,12 +133,11 @@ GO
    
  -   **REMOTE_ONLY** 원격 데이터만 업데이트하거나 삭제합니다.  
    
- -   **STAGE_ONLY** Stretch Database가 마이그레이션에 적합한 행을 준비하고 마이그레이션 후 특정 기간 동안 마이그레이션된 행을 유지하는 테이블의 데이터만 업데이트하거나 삭제합니다.  
+ -   **STAGE_ONLY** 스트레치 데이터베이스가 마이그레이션에 적합한 행을 준비하고 마이그레이션 후 특정 기간 동안 마이그레이션된 행을 유지하는 테이블의 데이터만 업데이트하거나 삭제합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 마이그레이션 모니터링 및 문제 해결&#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)   
-[스트레치 사용 데이터베이스 백업(Stretch Database)](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
-[스트레치 사용 데이터베이스 복원(Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
+ [데이터 마이그레이션 모니터링 및 문제 해결&#40;스트레치 데이터베이스&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)   
+[스트레치 사용 데이터베이스 백업(스트레치 데이터베이스)](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
+[스트레치 사용 데이터베이스 복원(스트레치 데이터베이스)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
   
-

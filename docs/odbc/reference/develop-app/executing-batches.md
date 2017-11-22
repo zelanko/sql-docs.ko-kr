@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0ca3a769ca983cae0cb7a2bc629c366b184b067e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3235040d910f2dd9b5bdbf4a81765d25dcd8be1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-batches"></a>실행 중인 일괄 처리
 응용 프로그램이 실행 된 문의 일괄 처리 전에 지원 되는지 여부를 확인 먼저 해야 합니다. 이렇게 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS, 및 SQL_PARAM_ARRAY_SELECTS 옵션을 사용 합니다. 첫 번째 옵션 행 개수 – 생성 하 고 결과 집합 – 생성 문은 명시적 일괄 처리 및 후자 두 옵션에 설정 하는 행 개수 및 결과의 가용성에 대 한 정보를 반환 하는 동안 프로시저에 지원 매개 변수화 여부를 반환 합니다. 실행 합니다.  
@@ -59,4 +57,3 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 ```  
   
  매개 변수에 대 한 자세한 내용은 참조 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)이 섹션의 뒷부분에 나오는 합니다.
-

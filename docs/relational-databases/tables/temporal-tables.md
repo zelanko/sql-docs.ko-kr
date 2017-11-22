@@ -8,22 +8,20 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: e7f2945bcceefdd7613a44a292fa5794554607ce
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
-ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
-ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -64,15 +62,15 @@ ms.lasthandoff: 09/29/2017
   
 -   **비디오:** 임시 테이블에 대한 20분간의 논의는 [SQL Server 2016의 임시 테이블](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)을 참조하세요.  
   
-## <a name="what-is-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블이란?  
- 시스템 버전 임시 테이블은 데이터 변경 내용의 전체 기록을 유지하고 간편한 지정 시간 분석을 허용하도록 설계된 사용자 테이블의 종류입니다. 이 유형의 임시 테이블은 각 행의 유효 기간이 시스템(예: 데이터베이스 엔진)에 의해 관리되기 때문에 시스템 버전 임시 테이블이라고 합니다.  
+## <a name="what-is-a-system-versioned-temporal-table"></a>시스템 버전 temporal 테이블이란?  
+ 시스템 버전 임시 테이블은 데이터 변경 내용의 전체 기록을 유지하고 간편한 지정 시간 분석을 허용하도록 설계된 사용자 테이블의 종류입니다. 이 유형의 temporal 테이블은 각 행의 유효 기간이 시스템(예: 데이터베이스 엔진)에 의해 관리되기 때문에 시스템 버전 temporal 테이블이라고 합니다.  
   
- 모든 임시 테이블에는 명시적으로 정의된 두 개의 열이 있으며, 각 열의 데이터 형식은 **datetime2** 입니다. 이러한 열을 기간 열이라고 합니다. 이러한 기간 열은 행이 수정될 때마다 시스템에서 각 행의 유효 기간을 기록하는 데에만 사용됩니다.  
+ 모든 temporal 테이블에는 명시적으로 정의된 두 개의 열이 있으며, 각 열의 데이터 형식은 **datetime2** 입니다. 이러한 열을 기간 열이라고 합니다. 이러한 기간 열은 행이 수정될 때마다 시스템에서 각 행의 유효 기간을 기록하는 데에만 사용됩니다.  
   
- 이러한 기간 열 외에도 임시 테이블은 미러된 스키마를 사용하는 다른 테이블에 대한 참조를 포함합니다. 시스템에서는 이 테이블을 사용하여 임시 테이블의 행이 업데이트되거나 삭제될 때마다 이전 버전의 행을 자동으로 저장합니다. 이 추가 테이블을 기록 테이블이라고 하며, 현재(실제) 행 버전을 저장하는 주 테이블을 현재 테이블 또는 임시 테이블이라고 합니다. 임시 테이블을 만드는 동안 사용자가 기존 기록 테이블(스키마를 준수해야 함)를 지정하거나 시스템에서 기본 기록 테이블을 만들도록 할 수 있습니다.  
+ 이러한 기간 열 외에도 temporal 테이블은 미러된 스키마를 사용하는 다른 테이블에 대한 참조를 포함합니다. 시스템에서는 이 테이블을 사용하여 temporal 테이블의 행이 업데이트되거나 삭제될 때마다 이전 버전의 행을 자동으로 저장합니다. 이 추가 테이블을 기록 테이블이라고 하며, 현재(실제) 행 버전을 저장하는 주 테이블을 현재 테이블 또는 temporal 테이블이라고 합니다. temporal 테이블을 만드는 동안 사용자가 기존 기록 테이블(스키마를 준수해야 함)를 지정하거나 시스템에서 기본 기록 테이블을 만들도록 할 수 있습니다.  
   
 ## <a name="why-temporal"></a>임시 테이블을 사용하는 이유  
- 실제 데이터 원본은 동적이며, 비즈니스 의사 결정은 분석가가 데이터 진화에서 얻을 수 있는 통찰력에 의존하는 경우가 많습니다. 임시 테이블에 대한 사용 사례는 다음과 같습니다.  
+ 실제 데이터 원본은 동적이며, 비즈니스 의사 결정은 분석가가 데이터 진화에서 얻을 수 있는 통찰력에 의존하는 경우가 많습니다. temporal 테이블에 대한 사용 사례는 다음과 같습니다.  
   
 -   모든 데이터 변경 내용을 감사하고 필요한 경우 데이터 범죄 분석 수행  
   
@@ -125,7 +123,7 @@ CREATE TABLE dbo.Employee
 >  시스템 datetime2 열에 기록되는 시작 시간은 트랜잭션 자체의 시간을 기반으로 합니다. 예를 들어 단일 트랜잭션 내에 삽입된 모든 행은 **SYSTEM_TIME** 기간의 시작에 해당하는 열에 기록된 것과 UTC 시간이 동일합니다.  
   
 ## <a name="how-do-i-query-temporal-data"></a>임시 데이터를 쿼리하는 방법  
- **SELECT** 문 **FROM***\<table>* 절은 5개의 임시 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 테이블 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 임시 테이블 위의 뷰를 통해 전파됩니다.  
+ **SELECT** 문 **FROM***\<table>* 절은 5개의 임시 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 테이블 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 temporal 테이블 위의 뷰를 통해 전파됩니다.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -148,8 +146,8 @@ SELECT * FROM Employee
   
 |식|행 한정|Description|  
 |----------------|---------------------|-----------------|  
-|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|과거의 지정된 시간에 실제(현재)였던 값이 포함된 행이 있는 테이블을 반환합니다. 내부적으로 임시 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간에 유효했던 행의 값을 반환하도록 결과가 *<date_time>* 매개 변수로 필터링됩니다. 행 값은 *system_start_time_column_name* 값이 *<date_time>* 매개 변수 값보다 작거나 같고 *system_end_time_column_name* 값이 *<date_time>* 매개 변수 값보다 큰 경우에 유효한 것으로 간주됩니다.|  
-|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|FROM 인수에 대한 *<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 임시 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 끝점으로 정의된 하위 경계에서 정확히 활동이 중지된 행은 포함되지 않고 TO 끝점으로 정의된 상위 경계에서 정확히 활성화된 레코드도 포함되지 않습니다.|  
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|과거의 지정된 시간에 실제(현재)였던 값이 포함된 행이 있는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간에 유효했던 행의 값을 반환하도록 결과가 *<date_time>* 매개 변수로 필터링됩니다. 행 값은 *system_start_time_column_name* 값이 *<date_time>* 매개 변수 값보다 작거나 같고 *system_end_time_column_name* 값이 *<date_time>* 매개 변수 값보다 큰 경우에 유효한 것으로 간주됩니다.|  
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|FROM 인수에 대한 *<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 끝점으로 정의된 하위 경계에서 정확히 활동이 중지된 행은 포함되지 않고 TO 끝점으로 정의된 상위 경계에서 정확히 활성화된 레코드도 포함되지 않습니다.|  
 |**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|<end_date_time> 끝점으로 정의된 상위 경계에서 활성화된 행이 반환되는 행 테이블에 포함된다는 점을 제외하고는 위의 **FOR SYSTEM_TIME FROM** <start_date_time>**TO** 설명과 같습니다.|  
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|CONTAINED IN 인수에 대한 두 개의 datetime 값으로 정의된 지정된 시간 범위 내에 열리고 닫힌 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 정확히 하위 경계에서 활성화되거나 상위 경계에서 활성 상태가 중단된 행이 포함됩니다.|  
 |**ALL**|모든 행|현재 테이블 및 기록 테이블에 속하는 행의 합집합을 반환합니다.|  
@@ -172,4 +170,3 @@ SELECT * FROM Employee
  [임시 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

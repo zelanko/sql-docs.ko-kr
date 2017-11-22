@@ -1,13 +1,14 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 문을에서 다양 한 데이터베이스 구성 설정을 사용 하면는 **개별 데이터베이스** 수준입니다. 이 문을 모두에서 사용할 수 있는지 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 이러한 설정은 다음과 같습니다.  
   
@@ -135,7 +135,7 @@ PRIMARY
 
 IDENTITY_CACHE  **=**  { **ON** | OFF}  
 
-**적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (기능은 공개 미리 보기 상태에서) 
+**적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 데이터베이스 수준에서 id 캐시를 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 **ON**합니다. Identity 캐싱 id 열이 있는 테이블에서 삽입 성능을 개선 하기 위해 사용 됩니다. 서버가 예기치 않게 다시 시작 하거나 장애 조치 한 보조 서버에 있는 경우에 id 열 값 간의 간격을 방지 하려면 IDENTITY_CACHE 옵션을 사용 하지 않도록 설정 합니다. 이 옵션은 기존 비슷합니다 [추적 플래그 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)한다는 점을 제외 하는 서버 수준 에서만 아니라 데이터베이스 수준에서 설정할 수 있습니다.   
 
@@ -300,4 +300,3 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
  [서버 구성 옵션 &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
-

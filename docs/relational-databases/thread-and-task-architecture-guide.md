@@ -1,5 +1,5 @@
 ---
-title: "스레드 및 태스크 아키텍처 가이드 | Microsoft Docs"
+title: "스레드 및 태스크 아키텍처 가이드 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/26/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a4ee27d7a15dcd93fbeffc60ff8f6f67309efb2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
-ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -102,7 +100,7 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 * 전체 복구 모델의 경우 max degree of parallelism 옵션 값은 8 이하로 설정해야 합니다.   
 * 대량 로그 모델 또는 단순 복구 모델의 경우에는 max degree of parallelism 옵션 값을 8보다 크게 설정하는 것이 좋습니다.   
 * NUMA가 구성된 서버에서는 최대 병렬 처리 수준이 각 NUMA 노드에 할당된 CPU 수를 초과하면 안 됩니다. 이는 쿼리가 1개의 NUMA 노드에서 로컬 메모리를 사용할 가능성이 높고 이 경우 메모리 액세스 시간을 개선할 수 있기 때문입니다.  
-* 하이퍼스레딩을 사용하며 2009년 또는 그 이전(하이퍼스레딩 기능이 개선되기 전)에 제조된 서버의 경우 MAXDOP 값이 논리 프로세서가 아닌 실제 프로세서 수를 초과하면 안 됩니다.
+* 하이퍼스레딩을 사용하며 2009년 이전(하이퍼스레딩 기능이 개선되기 전)에 제조된 서버의 경우 MAXDOP 값이 논리 프로세서가 아닌 실제 프로세서 수를 초과하면 안 됩니다.
 
 최대 병렬 처리 수준 옵션에 대한 자세한 내용은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
 
@@ -133,6 +131,5 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 |SQL Server 에이전트   |Sqlagent.exe   |아니오 |  
 |SQL Server Management Studio   |Ssms.exe   |아니오 |  
 |SQL Server 설치   |Setup.exe  |아니오 |  
-
 
 

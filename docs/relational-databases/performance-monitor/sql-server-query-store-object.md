@@ -2,9 +2,12 @@
 title: "SQL Server, Query Store 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 022f801293cb6ede334e0f4b70deceb37777b482
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3bfa37e7f645148daa38f8e79b8c51aaf1613c0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 쿼리 저장소 개체
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   쿼리 저장소 개체는 저장 프로시저, 임시 및 준비된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문, 트리거 등의 개체에 대한 쿼리 텍스트, 실행 계획 및 런타임 통계를 저장하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 리소스 사용률을 모니터링하는 카운터를 제공합니다.  
   

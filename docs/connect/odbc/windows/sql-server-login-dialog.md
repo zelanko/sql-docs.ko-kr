@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 67aa8fc08a75efbcf77eb839b1999961a17e2a9f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 로그인 대화 상자(ODBC)
 
@@ -112,4 +110,3 @@ SQL Server 시스템 메시지에 사용할 국가별 언어를 지정 합니다
 ## <a name="see-also"></a>관련 항목:
 
 [Windows의 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
-

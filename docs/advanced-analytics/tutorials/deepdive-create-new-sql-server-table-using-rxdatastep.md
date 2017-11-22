@@ -5,26 +5,22 @@ ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 98cead96-6de7-4edf-98b9-a1efb09297b9
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c37cb44bdf2cc30e826ced8e06d47ec64c80f1b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a5a8aaa8df1df4d34216f9d55806ccf5594292a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep"></a>RxDataStep을 사용하여 새 SQL Server 테이블 만들기
 
@@ -128,6 +124,5 @@ XDF 파일을 사용하여 데이터에 대해 몇 가지 간단한 변환을 �
 ## <a name="previous-step"></a>이전 단계
 
 [데이터 rxImport를 사용 하 여 메모리에 로드](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-
 
 

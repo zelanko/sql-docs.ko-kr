@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, technologies
+helpviewer_keywords: ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c17d4b1877ce350e261e0bf671b8fd661409f47d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6d6bbb214c4b5cf5f5ca05621eaada997da3893
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="products-and-technologies-table"></a>제품 및 기술 테이블
 다음 표에서 Microsoft 제품, 도구 및 ADO Programmer's Guide에 설명 된 기술을 나열 합니다. 가능한 경우이 가이드의 관련 항목에 링크를 제공 합니다.
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 |Visual Studio|[부록 D: ADO 샘플](../../ado/guide/appendixes/appendix-d-ado-samples.md)|
 |Windows 2000|[주소록 응용 프로그램에 대한 시스템 요구 사항](../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)<br /><br /> [웹 서버 컴퓨터에 게스트 권한 부여](../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)<br /><br /> [사용자 지정 비즈니스 개체 등록](../../ado/guide/remote-data-service/registering-a-custom-business-object.md)<br /><br /> [RDS 응용 프로그램 보안](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> [Windows 2000에서 RDS 구성](../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)|
 |XML|[XML 형식으로 레코드 유지](../../ado/guide/data/persisting-records-in-xml-format.md)<br /><br /> [레코드 및 스트림](../../ado/guide/data/records-and-streams.md)<br /><br /> [명령 스트림](../../ado/guide/data/command-streams.md)<br /><br /> [스트림으로 결과 집합 검색](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
-

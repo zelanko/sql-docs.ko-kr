@@ -8,39 +8,39 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38b426bdc8e0485bdbada8c9dbd7371b63612465
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 118668a688f14cf725e573cc29f1185088faeeb6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  피어 투 피어 트랜잭션 복제를 제외하고는 스냅숏 및 트랜잭션 복제 구독자 역할을 수행하는 테이블을 메모리 액세스에 최적화된 테이블로 구성할 수 있습니다. 다른 복제 구성은 메모리 액세스에 최적화된 테이블과 호환되지 않습니다. 이 기능은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 사용할 수 있습니다.  
+  피어 투 피어 트랜잭션 복제를 제외하고는 스냅숏 및 트랜잭션 복제 구독자 역할을 수행하는 테이블을 메모리 최적화 테이블로 구성할 수 있습니다. 다른 복제 구성은 메모리 최적화 테이블과 호환되지 않습니다. 이 기능은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 사용할 수 있습니다.  
   
 ## <a name="two-configurations-are-required"></a>필요한 두 가지 구성  
   
--   **메모리 액세스에 최적화된 테이블로의 복제를 지원하도록 구독자 데이터베이스 구성**  
+-   
+            **메모리 최적화 테이블로의 복제를 지원하도록 구독자 데이터베이스 구성**  
   
      [sp_addsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 또는 [sp_changesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)을 사용하여 **@memory_optimized** 속성을 **true**로 설정합니다.  
   
--   **메모리 액세스에 최적화된 테이블로의 복제를 지원하도록 아티클 구성**  
+-   
+            **메모리 최적화 테이블로의 복제를 지원하도록 아티클 구성**  
   
      [sp_addarticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 또는 [sp_changearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 사용하여 아티클의 `@schema_option = 0x40000000000` 옵션을 설정합니다.  
   
-#### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>메모리 액세스에 최적화된 테이블을 구독자로 구성하려면  
+#### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>메모리 최적화 테이블을 구독자로 구성하려면  
   
 1.  트랜잭션 게시를 만듭니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
@@ -81,19 +81,19 @@ ms.lasthandoff: 06/22/2017
   
  메모리 액세스에 최적화된 테이블은 게시할 수 없습니다.  
   
- 배포자의 복제 테이블은 메모리 액세스에 최적화된 테이블로 구성할 수 없습니다.  
+ 배포자의 복제 테이블은 메모리 최적화 테이블로 구성할 수 없습니다.  
   
- 병합 복제는 메모리 액세스에 최적화된 테이블을 포함할 수 없습니다.  
+ 병합 복제는 메모리 최적화 테이블을 포함할 수 없습니다.  
   
- 구독자에서 트랜잭션 복제와 관련된 테이블은 메모리 액세스에 최적화된 테이블로 구성할 수 있지만 구독자 테이블은 메모리 액세스에 최적화된 테이블의 요구 사항을 충족해야 합니다. 여기에는 다음과 같은 제한 사항이 필요합니다.  
+ 구독자에서 트랜잭션 복제와 관련된 테이블은 메모리 최적화 테이블로 구성할 수 있지만 구독자 테이블은 메모리 최적화 테이블의 요구 사항을 충족해야 합니다. 여기에는 다음과 같은 제한 사항이 필요합니다.  
  
--   구독자에서 메모리 액세스에 최적화된 테이블로 복제된 테이블은 메모리 액세스에 최적화된 테이블에 허용된 데이터 형식으로 제한됩니다. 자세한 내용은 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)을 참조하세요.  
+-   구독자에서 메모리 최적화 테이블로 복제된 테이블은 메모리 최적화 테이블에 허용된 데이터 형식으로 제한됩니다. 자세한 내용은 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)을 참조하세요.  
   
--   모든 Transact-SQL 기능이 메모리 액세스에 최적화된 테이블에서 지원되는 것은 아닙니다. 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
+-   모든 Transact-SQL 기능이 메모리 최적화 테이블에서 지원되는 것은 아닙니다. 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
   
 ##  <a name="Schema"></a> 스키마 파일 수정  
   
--   메모리 액세스에 최적화된 테이블 옵션 `DURABILITY = SCHEMA_AND_DATA` 를 사용할 경우 테이블은 비클러스터형 기본 키 인덱스를 포함해야 합니다.  
+-   메모리 최적화 테이블 옵션 `DURABILITY = SCHEMA_AND_DATA`를 사용할 경우 테이블은 비클러스터형 기본 키 인덱스를 포함해야 합니다.  
   
 -   ANSI_PADDING은 ON이어야 합니다.  
   
@@ -101,4 +101,3 @@ ms.lasthandoff: 06/22/2017
  [복제 기능 및 태스크](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   
-

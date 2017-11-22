@@ -6,15 +6,20 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 05/08/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
+ms.workload: On Demand
+ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
@@ -119,6 +124,37 @@ Linux에서 로그 디렉터리에 덤프를 찾습니다. Linux 핵심 덤프 /
 SQL 덤프에 대 한 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
+   ```
+   
+## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>최소 구성에서 또는 단일 사용자 모드로 SQL Server 시작
+
+### <a name="start-sql-server-in-minimal-configuration-mode"></a>최소 구성 모드로 SQL Server를 시작 합니다.
+예를 들어 오버 커밋 메모리 같은 구성 값의 설정 때문에 서버를 시작할 수 없을 경우에 유용합니다.
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### <a name="start-sql-server-in-single-user-mode"></a>단일 사용자 모드로 SQL Server를 시작 합니다.
+특정 상황에서는 시작 옵션-m을 사용 하 여 단일 사용자 모드에서 SQL Server의 인스턴스를 시작할 수 있습니다. 예를 들어 서버 구성 옵션을 변경하거나 손상된 master 데이터베이스 또는 다른 시스템 데이터베이스를 복구하려고 할 수도 있습니다. 예를 들어 서버 구성 옵션을 변경 하거나 손상된 된 master 데이터베이스 또는 다른 시스템 데이터베이스를 복구 하 경우가   
+
+단일 사용자 모드로 SQL Server를 시작 합니다.
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+SQLCMD 통해 단일 사용자 모드로 SQL Server를 시작 합니다.
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+  
+> [!WARNING]  
+>  이후 시작 문제를 방지 하기 위해 "mssql" 사용자와 Linux에서 SQL Server를 시작 합니다. "Sudo-u mssql /opt/mssql/bin/sqlservr [시작 옵션]" 예제 
+
+다른 사용자와 실수로 SQL Server를 시작한 경우에 다시 systemd와 SQL Server를 시작 하기 전에 'mssql' 사용자에 게 SQL Server 데이터베이스 파일의 소유권을 변경 해야 합니다. 예를 들어 'mssql' 사용자에 게 /var/opt/mssql 아래에 있는 모든 데이터베이스 파일의 소유권을 변경 하려면 다음 명령을 실행합니다
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
    ```
 
 ## <a name="common-issues"></a>일반적인 문제

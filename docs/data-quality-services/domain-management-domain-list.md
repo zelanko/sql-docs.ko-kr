@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainlist.f1
+f1_keywords: sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f77595ccf1426d3b1d076f3d6cb7a8b456827ee4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="domain-management-domain-list"></a>도메인 관리: 도메인 목록
   이 항목에서는 DQS( **)에서** 도메인 관리 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 페이지의 도메인 목록에 있는 각 컨트롤을 설명합니다. 이 창에서 관리 작업을 수행할 도메인을 선택할 수 있습니다. **도메인 관리** 페이지의 모든 탭 페이지에도 동일한 창이 사용됩니다.  
@@ -63,4 +60,3 @@ ms.lasthandoff: 09/09/2017
  도메인을.dqs 파일로 내보냅니다. 이 명령은 **데이터 파일로 내보내기** 대화 상자를 표시합니다. 페이지 맨 위에 있는 메뉴 표시줄에서 **내보내기** 메뉴를 클릭하거나 도메인 목록 창에서 마우스 오른쪽 단추를 클릭하면 이 명령을 사용할 수 있습니다. 자세한 내용은 [.dqs 파일로 도메인 내보내기](../data-quality-services/export-a-domain-to-a-dqs-file.md)을 참조하세요.  
   
   
-

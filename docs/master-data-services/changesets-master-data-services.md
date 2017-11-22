@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4ac9a4b15d48f9c5f9ac9a25a932d9acec798e31
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5cfdab0f4b48cbb0f4abaca5f1d8e9e07a71d07b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="changesets-master-data-services"></a>변경 집합(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서는 이제 엔터티에 대해 보류 중인 모든 변경 내용을 변경 집합으로 저장하는 기능을 지원합니다. 이 기능의 두 가지 사용 시나리오가 있습니다.  
@@ -64,4 +62,3 @@ ms.lasthandoff: 09/07/2017
  [변경 집합 관리&#40;Master Data Services&#41;](../master-data-services/manage-changesets-master-data-services.md)  
   
   
-

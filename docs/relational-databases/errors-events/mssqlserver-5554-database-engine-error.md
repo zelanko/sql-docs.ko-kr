@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 5554 (Database Engine error)
+helpviewer_keywords: 5554 (Database Engine error)
 ms.assetid: 7134bbe5-d240-4a98-85ce-b13cc8ae9b0e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 45d6f39467c40af5da0a959e427aacdc30f9d4bb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8f5b8dd08230e8fbb22961dafc4b469acedcac05
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver5554"></a>MSSQLSERVER_5554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,4 +44,3 @@ MARS(Multiple Active Result Set) 또는 트리거 시나리오에서 [!INCLUDE[s
 ## <a name="user-action"></a>사용자 동작  
 동일 트랜잭션의 데이터를 반복해서 업데이트하려 하지 마십시오.  
   
-
