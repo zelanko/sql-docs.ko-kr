@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 6350438d06f574096f78c44af85a298b5003423a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d685be15fb8d0c6fea21d539e3370b3377316324
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle (OracleToSQL)에 연결
 사용 하 여는 **Connect to Oracle** 마이그레이션할 Oracle 데이터베이스에 연결 하는 대화 상자.  
@@ -79,4 +77,3 @@ SSMA는 Oracle 데이터베이스에 연결 하는 데 사용할 사용자 이�
   
 SSMA 연결 문자열에 대해 항상 Provider 매개 변수를 포함 합니다. Oracle에 연결 하는 경우 포트 매개 변수를 포함 되어 있는지 확인 합니다.  
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Catalog
-helpviewer_keywords:
-- Catalog object [ADO MD]
+f1_keywords: Catalog
+helpviewer_keywords: Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e9453642b399283477de7caf7ea84ec5e8e19ff6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d16dd3724980cd399366c871cb24015d4b3ad6da
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="catalog-object-ado-md"></a>카탈로그 개체 (ADO MD)
 다차원 데이터 공급자 (MDP)에 적용 되는 다차원 스키마 정보 (큐브 기본 차원, 계층, 수준 및 멤버)를 포함합니다.  
@@ -50,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  [카탈로그 예제 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs 컬렉션(ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
-

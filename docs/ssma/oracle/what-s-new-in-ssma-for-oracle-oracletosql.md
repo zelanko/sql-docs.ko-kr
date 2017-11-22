@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: 9e1b0d59ec958bdd5abc254ce289df88ea80e04f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL)의 새로운 기능
 이 항목에서는 각 릴리스의 Oracle 변경에 대 한 SSMA를 나열 합니다.  
@@ -206,4 +204,3 @@ Oracle 용 SSMA의 2007 년 8 월 릴리스는 다음과 같은 변경 내용이
   
 ## <a name="april-2007"></a>2007 년 4 월  
 Oracle 용 SSMA의 2007 년 4 월 릴리스가 첫 버전입니다.
-

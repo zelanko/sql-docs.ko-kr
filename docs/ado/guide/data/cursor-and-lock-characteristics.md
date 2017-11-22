@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - adOpenDynamic [ADO]
 - cursors [ADO], characteristics
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84f06591c70a42701ca264c99af00e4f072aadd0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a1313c42582efee8330abb89a03645dc1491217
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursor-and-lock-characteristics"></a>커서와 잠금 특성
 커서의 특징 공급자의 기능에 따라 다르지만, 하는 동안 다음과 같은 장점 및 단점 일반적으로 적용에 다양 한 유형의 커서 및 잠금.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 |**adLockBatchOptimistic**|일괄 처리 업데이트<br />-연결이 끊긴된 시나리오를 허용합니다.<br />-다른 사용자가 데이터에 액세스할 수|여러 사용자가 한 번에 데이터를 변경할 수 있습니다.|  
 |**adLockPessimistic**|잠겨 있는 동안 다른 사용자가 데이터를 변경할 수 없습니다.|-잠겨 있는 동안에 데이터에 액세스 하지 못하도록 다른 사용자가 방지 합니다.|  
 |**adLockOptimistic**|-다른 사용자가 데이터에 액세스할 수|여러 사용자가 한 번에 데이터를 변경할 수 있습니다.|
-

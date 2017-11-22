@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c18d9eb4316473ed78a787aee527083c4973853d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7b6148a96e9846341dd5635333a891576ea74220
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>분석 서버 속성(고급 탭)
   이 서비스는 Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]입니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 08/02/2017
  이 서비스를 사용하는 인스턴스를 나타냅니다.  
   
   
-

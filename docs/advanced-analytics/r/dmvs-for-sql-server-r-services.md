@@ -5,22 +5,20 @@ ms.date: 07/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 49c9e45e32df10b4b2be5b7d47cfeb569e5bf152
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c6846ac36293ae2459c21bc8bd2b99ef144804c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 Dmv
 
@@ -140,5 +138,4 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-steps"></a>다음 단계
 
-[시스템 학습 솔루션 관리 및 모니터링](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
-
+[기계 학습 솔루션 관리 및 모니터링](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)

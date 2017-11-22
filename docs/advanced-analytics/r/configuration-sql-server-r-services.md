@@ -5,22 +5,20 @@ ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f90cb9c8792086352403a6bb937391daf3f338f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c533a35c09842221468764ef2f59e7c9cd7714d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configuration-and-management"></a>구성 및 관리
 
@@ -53,7 +51,7 @@ ms.lasthandoff: 09/01/2017
 
 이러한 항목에는 기본 서비스 아키텍처를 변경 하는 방법 및 확장성 서비스와 연결 된 보안 주체를 관리 하는 방법을 설명 합니다.
 
-+ [보안 고려 사항](security-considerations-for-the-r-runtime-in-sql-server.md)
++ [Security Considerations](security-considerations-for-the-r-runtime-in-sql-server.md)
 + [SQL Server R Services용 사용자 계정 풀 수정](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
 + [고급 분석 확장 구성 및 관리](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)
 + [데이터베이스 역할을 사용 하 여 인스턴스에 대 한 패키지 관리를 사용 하도록 설정](r-package-how-to-enable-or-disable.md)
@@ -75,7 +73,6 @@ ms.lasthandoff: 09/01/2017
 이 항목의 초기 설치 및 구성 관련 추가 도움말을 찾을 수 있습니다.
 
 + [업그레이드 및 설치 FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-+ [보안 고려 사항](../r/security-considerations-for-the-r-runtime-in-sql-server.md)
++ [Security Considerations](../r/security-considerations-for-the-r-runtime-in-sql-server.md)
 + [R 서비스에 대 한 알려진된 문제](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
-
 

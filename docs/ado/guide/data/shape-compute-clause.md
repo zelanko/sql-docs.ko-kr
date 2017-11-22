@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d2fad39eb54af49b9f25b7f5b62073df44afc814
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 부모를 생성 하는 셰이프 COMPUTE 절 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어져 **레코드 집합**선택적 요소 내용이 장, 새로 만들었거나, 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **레코드 집합** 또는 이전에 모양의 **레코드 집합**; 및 모든 열을 자식 **레코드 집합** 에 나열 된 절에 의해 선택 사항입니다.  
@@ -151,4 +149,3 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [일반적으로 shape 명령](../../../ado/guide/data/shape-commands-in-general.md)   
  [Value 속성 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Visual Basic for Applications 기능](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-

@@ -5,22 +5,20 @@ ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f2a1ce-316f-4347-b206-8a1b9eebe90b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cc7c216cb95d10c4158a3ac0998d458cec3d7b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 1dd7e8f1a0054818849b3b9672a5df6286bdabce
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-local-package-repository-using-minicran"></a>MiniCRAN를 사용 하 여 로컬 패키지 리포지토리 만들기
 
@@ -91,8 +89,8 @@ ms.lasthandoff: 10/10/2017
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
-
-2. Optionally, plot the dependency graph, which can be informative and looks cool.
+    ```
+2. 필요에 따라 정보를 제공 수 있으며 쿨 찾습니다 있는 종속성 그래프를 그립니다.
     
     ```R
     plot(makeDepGraph(pkgs_needed))
@@ -199,4 +197,3 @@ MiniCRAN 사용 하지 않을 경우 필요한, 패키지 및 해당 종속성�
 > R 도구를 사용 하 여 패키지를 설치 하는 인스턴스에 대해 전체적으로 설치 됩니다. 
 > 
 > 데이터베이스에 패키지를 설치 하 고 데이터베이스 역할을 사용 하 여 사용자와 패키지를 공유 하려는 경우 외부 라이브러리 만들기 문을 사용 하 여 라이브러리를 업로드 해야 합니다. 참조 [SQL Server의 추가 R 패키지를 설치 합니다.](install-additional-r-packages-on-sql-server.md)
-

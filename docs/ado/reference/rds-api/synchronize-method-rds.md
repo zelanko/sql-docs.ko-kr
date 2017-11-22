@@ -1,8 +1,7 @@
 ---
 title: "Synchronize 메서드 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Synchronize method [ADO]
+helpviewer_keywords: Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c69217abc435fb4b3438975db560b9ce5836ee8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4f6b559b8ad716be403a00d9cf171094286c222f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 메서드 (RDS)
 2.5 이상 ADO에서 사용 하기 위해 연결 문자열에 지정 된 데이터베이스와 지정 된 레코드 집합을 동기화 합니다.  
@@ -73,6 +70,5 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
   
 ## <a name="applies-to"></a>적용 대상  
  [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

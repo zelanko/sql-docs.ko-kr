@@ -1,27 +1,24 @@
 ---
 title: "R 코드 (컴퓨터 학습 서비스)를 운영 화 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f15696b1-2479-4e5f-ac5e-4beaf958a043
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f7084d2634d6cce02fcf0e6f945547a535815b2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d858352ed7dc519dfde9f625ea24cea6a538be5b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>R 코드 (컴퓨터 학습 서비스)를 운영 화
 
@@ -102,5 +99,4 @@ Microsoft R에서 지 원하는 플랫폼에 대 한 자세한 내용은 다음�
 + [R에서 큰 데이터로 컴퓨팅](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)
 
 + [사용자 고유의 병렬 알고리즘을 개발 합니다.](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
-
 

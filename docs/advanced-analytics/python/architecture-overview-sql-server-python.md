@@ -5,20 +5,18 @@ ms.date: 11/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 1dcde96872f391d1be312c5b8ff9bd8c2dd7a479
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1328a346dd9852cba349e38204b49faf32573611
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Python 컴퓨터 학습 서비스에 대 한 아키텍처 개요
 
@@ -56,4 +54,3 @@ SQL Server Enterprise Edition에서 관리 하 고 R 스크립트 및 Python 스
 ## <a name="next-steps"></a>다음 단계
 
 [T-SQL을 사용 하 여 Python 실행](../tutorials/run-python-using-t-sql.md)
-

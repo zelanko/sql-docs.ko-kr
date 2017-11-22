@@ -5,20 +5,18 @@ ms.date: 04/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 136e4b1c7a7f82b416c8e4b6bfceda3e399ddd36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9c1d945831fc77bd003ac17e94d4969164bbe04d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="python"></a>Python
 
@@ -36,6 +34,5 @@ ms.lasthandoff: 09/01/2017
 + [T-SQL에서 Python를 실행 합니다.](../tutorials/run-python-using-t-sql.md)
 + [게시 및 Python 모델 사용](publish-consume-python-code.md)
 + [Revoscalepy를 사용 하 여 모델을 만들려면](../tutorials/use-python-revoscalepy-to-create-model.md)
-
 
 

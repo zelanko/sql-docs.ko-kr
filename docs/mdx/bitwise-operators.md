@@ -5,26 +5,22 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- bitwise operators
+dev_langs: kbMDX
+helpviewer_keywords: bitwise operators
 ms.assetid: 7349167b-f4b3-4344-bd01-b8f5fee4a509
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 78a63892e5bcdbf7cc9c591c6344589492106459
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 73d85cd8e892b6d1f9bfe4f0999e73e4da16f73c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bitwise-operators"></a>비트 연산자
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +31,8 @@ ms.lasthandoff: 08/02/2017
   
 |연산자|Description|  
 |--------------|-----------------|  
-|[및](../mdx/and-mdx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
-|[은](../mdx/is-mdx.md)|두 개체 식에 대해 논리 비교를 수행합니다.|  
+|[AND](../mdx/and-mdx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
+|[IS](../mdx/is-mdx.md)|두 개체 식에 대해 논리 비교를 수행합니다.|  
 |[NOT](../mdx/not-mdx.md)|숫자 식에 논리 부정을 수행합니다.|  
 |[OR](../mdx/or-mdx.md)|두 숫자 식에 논리 분리를 수행합니다.|  
 |[XOR](../mdx/xor-mdx.md)|두 숫자 식에 대해 논리 제외를 수행합니다.|  
@@ -46,4 +42,3 @@ ms.lasthandoff: 08/02/2017
  [연산자 &#40; MDX 구문 &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

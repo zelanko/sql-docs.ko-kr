@@ -5,25 +5,23 @@ ms.date: 08/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0200ade3d3968357841f70ebcb27979fbdb9089a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a84e702b364da8614dd21b8f6adb57e4f2bac487
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>예측 하 고 모델 (SQL 빠른 시작에서 R)에서 출력
 
@@ -184,4 +182,3 @@ R 및 SQL Server를 통합하면 고성능 데이터 처리 및 빠른 R 분석�
 + [MicrosoftML 시작](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
     학습 알고리즘 Microsoft Research에서 신속 하 고 확장 가능한 컴퓨터에 대해 자세히 알아보기
-

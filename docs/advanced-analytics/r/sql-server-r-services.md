@@ -1,27 +1,23 @@
 ---
 title: "SQL Server 컴퓨터 학습 서비스 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: fb770b52f2cacfc527f6bb89955acfbda243c18a
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c384b7fba553175767aaf7c439207771b31e6b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스
 
@@ -39,7 +35,7 @@ SQL Server 설치 프로그램을 통해 서버와 클라이언트 구성 요소
   
     이 기능을 선택 하는 경우 확장 Python 또는 R 작성 된 코드의 실행을 지원 하도록 데이터베이스 엔진에 설치 됩니다. 새 서비스를 만들면는 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], 외부 런타임 간의 통신을 관리 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스.
   
-+ 설치 **Microsoft 컴퓨터 학습 Server (독립 실행형)** SQL Server 계산 컨텍스트를 사용 하는 동안 필요 하지 않으면 별도 컴퓨터에 있습니다. 서버를 학습 하는 컴퓨터에 구성 요소와 mrsdeploy 패키지에 대해 웹 서비스로 컴퓨터 학습 작업의 확장 가능 하 고 분산 실행을 학습 하는 동일한 컴퓨터에 포함 됩니다.
++ 설치 **Microsoft 컴퓨터 학습 Server (독립 실행형)** SQL Server 계산 컨텍스트를 사용 하는 동안 필요 하지 않으면 별도 컴퓨터에 있습니다. 서버를 학습 하는 컴퓨터에는 동일한 컴퓨터 학습 구성 요소와 웹 서비스로 확장 가능 하 고 분산 컴퓨터 학습 작업을 실행 하는 기능 포함 됩니다.
   
 +    설치 [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client) 를 SQL Server 또는 Windows, Linux 또는 Hadoop 컴퓨터 학습 서버를 배포할 수 있는 솔루션을 개발 하는 원격 컴퓨터에 있습니다.
 
@@ -49,7 +45,7 @@ SQL Server 설치 프로그램을 통해 서버와 클라이언트 구성 요소
   
     이 기능을 선택 하면 SQL Server를 사용 하 여 계산 컨텍스트로 써 R 스크립트를 실행 하거나 저장된 프로시저에서 R 스크립트를 실행 하는 기능은 얻게 됩니다.
   
-+   설치 **Microsoft R Server (독립 실행형)** developin R 솔루션을 사용 하는 별도 컴퓨터에 R 구성 요소를 설정 하려면 SQL Server 2016 설치 프로그램에서 합니다.
++   설치 **Microsoft R Server (독립 실행형)** 개발 하거나 R 솔루션을 배포 하는 데 사용할 수 있는 별도 컴퓨터에 R 구성 요소를 설치 하려면 SQL Server 2016 설치 프로그램에서 합니다.
 
 
 ## <a name="which-type-of-machine-learning-service-do-i-need"></a>어떤 유형의 시스템 학습 서비스 필요 합니까?
@@ -75,4 +71,3 @@ SQL Server 설치 프로그램을 통해 서버와 클라이언트 구성 요소
 + [SQL Server R 자습서입니다.](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
     R 코드에서 SQL Server 데이터 원본을 만드는 방법 및 원격 계산 컨텍스트를 사용하는 방법을 알아봅니다. SQL 개발자를 대상으로 하는 다른 자습서에서는 SQL Server에서 R 모델을 배포하고 교육하는 방법을 보여 줍니다.
-

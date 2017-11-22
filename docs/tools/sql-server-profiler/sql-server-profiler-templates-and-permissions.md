@@ -5,28 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
 - SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 34db0eb7ea67123931a67a26e81da37f38bfeb63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d55a2aaf43865897995dea95fd900bf9f6eee422
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 템플릿 및 권한
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 내부적으로 쿼리를 해결하는 방법을 보여 줍니다. 이를 통해 관리자는 어떤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 다차원 식이 서버에 전송되고 해당 서버에서 어떻게 데이터베이스 또는 큐브에 액세스하여 결과 집합을 반환하는지를 정확히 파악할 수 있습니다.  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 내부적으로 쿼리를 해결하는 방법을 보여 줍니다. 이를 통해 관리자는 어떤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 다차원 식이 서버에 전송되고 해당 서버에서 어떻게 데이터베이스 또는 큐브에 액세스하여 결과 집합을 반환하는지를 정확히 파악할 수 있습니다.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 다음을 수행할 수 있습니다.  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 08/02/2017
 |[추적 및 추적 템플릿 저장](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|추적 출력을 저장하고 추적 정의를 템플릿에 저장하는 방법에 대한 정보가 포함됩니다.|  
 |[추적 템플릿 수정](../../tools/sql-server-profiler/modify-trace-templates.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 추적 템플릿을 수정하는 방법에 대해 설명합니다.|  
 |[추적 시작](../../tools/sql-server-profiler/start-a-trace.md)|추적을 시작, 일시 중지 또는 중지할 때 발생하는 사항에 대한 정보가 포함됩니다.|  
-|[추적과 Windows 성능 로그 데이터](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler를 사용하여 Windows 성능 로그 데이터와 추적의 상관 관계를 지정하는 방법에 대한 정보가 포함됩니다.|  
+|[Windows 성능 로그 데이터와 추적의 상관 관계 지정](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler를 사용하여 Windows 성능 로그 데이터와 추적의 상관 관계를 지정하는 방법에 대한 정보가 포함됩니다.|  
 |[SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|추적을 사용하여 데이터의 문제를 해결하고 개체 이름을 추적에 표시하며 추적에서 이벤트를 찾는 방법에 대한 정보가 포함됩니다.|  
 |[SQL Server Profiler를 사용하여 교착 상태 분석](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 교착 상태의 원인을 확인하는 방법에 대한 정보가 포함됩니다.|  
 |[SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 실행 계획 및 실행 계획 통계 결과를 수집하여 표시하는 방법에 대한 정보가 포함됩니다.|  
@@ -62,8 +60,7 @@ ms.lasthandoff: 08/02/2017
 |[추적 재생](../../tools/sql-server-profiler/replay-traces.md)|추적 재생의 의미와 추적 재생에 필요한 사항을 설명하는 정보가 포함됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   
-

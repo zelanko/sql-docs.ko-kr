@@ -5,32 +5,30 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e60e29b36393570b0982c34974b293dfe6d652fb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 15a01b4c3ba36d9c7733e595df6984844dc198c7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="appendix---1-db2tosql"></a>부록-1 (DB2ToSQL)
 SSMA 콘솔 명령줄 옵션의 빠른 보기:  
   
 |Sl 합니다. 아니요.|스위치|필수 여부|인수를 전환 합니다.|허용 되는 값|  
 |-----------|----------|-------------|-------------------|--------------------|  
-|1|-s/스크립트|예|scriptfile|유효한 XML 파일 이름입니다.<br /><br />콘솔 스크립트 정의 파일입니다.|  
+|1.|-s/스크립트|예|scriptfile|유효한 XML 파일 이름입니다.<br /><br />콘솔 스크립트 정의 파일입니다.|  
 |2|-v/변수|아니요|variablevaluefile|유효한 XML 파일 이름입니다.<br /><br />변수는 스크립트 파일 사용 되는 경우이 파일을 지정 해야 합니다.|  
 |3|-c/serverconnection|아니요|serverconnectionfile|유효한 XML 파일 이름입니다.<br /><br />이 파일 서버 연결 정보를 포함합니다.|  
 |4|-x / xmloutput|아니요|xmloutputfile|이 옵션은 XML 형식으로 콘솔 출력을 나타냅니다. 이 옵션을 지정 하지 않으면 기본 출력 텍스트 형태로 표시 됩니다.<br /><br />Xmloutputfile 지정 되지 않은 경우 XML 출력은 STDOUT으로 전송 됩니다.<br /><br />Xmloutputfile에 콘솔 출력을 XML 형식으로 기록 되는 파일의 이름입니다.|  
@@ -42,4 +40,3 @@ SSMA 콘솔 명령줄 옵션의 빠른 보기:
 ## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 실행](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   
-

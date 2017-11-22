@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>단원 1-2-튜닝 권장 구성 보기
 이 태스크에서는 [작업 튜닝](../../tools/dta/lesson-1-1-tuning-a-workload.md)에서 만든 튜닝 세션을 사용합니다. MyScript.sql [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 스크립트를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스를 튜닝하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **권장 구성** 탭에 해당 결과가 표시됩니다. 다음 태스크에서는 **튜닝 관리자 GUI(그래픽 사용자 인터페이스)의** 권장 구성 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 탭을 소개하고 튜닝 세션 결과에 대해 제공된 정보를 탐색하는 과정을 안내합니다.  
@@ -65,4 +61,3 @@ MySession 튜닝 세션에 대한 **권장 구성** 탭의 내용을 보고 새 
   
   
   
-

@@ -5,25 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 및 SQL Server에 대 한 종단 간 데이터 과학 연습
 
@@ -45,8 +41,8 @@ ms.lasthandoff: 09/01/2017
 |항목 목록|예상 시간|
 |-|------------------------------|
 |[R 연습 데이터 준비](../tutorials/walkthrough-prepare-the-data.md) <br /><br />모델 작성에 사용되는 데이터를 가져옵니다. 공용 데이터 집합을 다운로드하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 로드합니다.|30분|
-|[SQL을 사용 하 여 데이터 탐색](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />SQL 도구 및 요약을 사용 하 여 데이터를 이해 합니다.|10분|
-|[R을 사용 하 여 데이터를 요약](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />R을 사용 하 여 데이터를 탐색 하 고 요약을 생성 합니다.|10분|
+|[SQL을 사용하여 데이터 탐색](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />SQL 도구 및 요약을 사용 하 여 데이터를 이해 합니다.|10분|
+|[R을 사용하여 데이터 요약](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />R을 사용 하 여 데이터를 탐색 하 고 요약을 생성 합니다.|10분|
 |[SQL Server에서 R을 사용 하 여 점도 만들기](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />R과 SQL을 혼합 하 여 로컬 및 원격 계산 컨텍스트에서 플롯을 만듭니다.|10분|
 |[R 및 T-SQL을 사용 하 여 데이터 기능을 만들기)](../tutorials/walkthrough-create-data-features.md) <br /><br />R과 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 지정 함수를 사용하여 기능 엔지니어링을 수행합니다. 기능 작업에 대한 R 및 T-SQL의 성능을 비교합니다. |10분|
 |[R 모델을 작성 하 고 SQL Server에 저장](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />예측 모델을 학습 및 튜닝합니다. 모델 성능을 평가합니다. 이 연습에서는 분류 모델을 만듭니다. R을 사용하여 모델의 정확도를 그립니다.|15분|
@@ -71,4 +67,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>다음 단원
 
 [R 연습 데이터 준비](../tutorials/walkthrough-prepare-the-data.md)
-

@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Installing client,Licensing
+helpviewer_keywords: Installing client,Licensing
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ceca393e8c7dc37d181364129d64d5f69bf0791
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eafef1f4a4f16f704b76b31aa77d3c93f84d5821
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>MySQL 클라이언트 (MySQLToSQL) 용 SSMA를 설치합니다.
 다음 작업을 수행 하는 프로그램 파일의 MySQL 클라이언트 용 SSMA 구성 됩니다.  
@@ -90,4 +87,3 @@ SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 참�
 ## <a name="see-also"></a>관련 항목:  
 [Azure SQL DB &#40; SQL Server-MySQL 데이터베이스 마이그레이션 MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

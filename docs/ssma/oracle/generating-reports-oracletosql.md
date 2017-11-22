@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Report Generation in Oracle Console,refresh-from-database
 - Report Generation in Oracle Console,write-summary-report-to
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: f6e37655da9045fef47c483daf0be0c24a215bfe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d82ebc3f1d6a3e88874430419d3a11baf5528695
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generating-reports-oracletosql"></a>보고서 생성 (OracleToSQL)
 명령을 사용 하 여 수행 된 특정 작업 보고서는 개체 트리 수준 SSMA 콘솔에 생성 됩니다.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 08/02/2017
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1|오류 보고 = "false"|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
+    |1.|오류 보고 = "false"|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
     |2|오류 보고 = "true"|자세한 오류 / 경고 / 정보 메시지입니다.|  
   
     > [!NOTE]  
@@ -149,4 +147,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 (Oracle)를 실행합니다.](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   
-
