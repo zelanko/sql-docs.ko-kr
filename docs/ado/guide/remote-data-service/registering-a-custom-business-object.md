@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c121ddf9e271f4dfb67490d77a719267cfa11a3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be54505545b80211ec34216a67596c32ca8ce2b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="registering-a-custom-business-object"></a>사용자 지정 비즈니스 개체를 등록 하는 중
 이 절차에 설명 된 대로 비즈니스 개체의 ProgID (.dll 또는.exe)에 사용자 지정 비즈니스 개체를 통해 웹 서버를 성공적으로 시작 하려면 레지스트리에 입력 해야 합니다. 이 RDS 기능 승인된 실행 파일만 실행 하 여 웹 서버의 보안을 보호 합니다.  
@@ -49,6 +47,5 @@ ms.lasthandoff: 09/09/2017
 4.  선택 된 **ADCLaunch** 키를 한 다음는 **편집**메뉴에서 **새로** 클릭 하 고 **키**합니다.  
   
 5.  사용자 지정 비즈니스 개체의 ProgID를 입력 하 고 클릭 **Enter**합니다. 유지 된 **값** 빈 항목입니다.
-
 
 

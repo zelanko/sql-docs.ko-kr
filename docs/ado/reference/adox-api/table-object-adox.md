@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Table
-helpviewer_keywords:
-- Table object [ADOX]
+f1_keywords: Table
+helpviewer_keywords: Table object [ADOX]
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7d4e461d9f63180f1965a5bfdd3034c0dc9ba2d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 198b59d624b2daa2e2451b8dbb61ae5868f7eb7d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="table-object-adox"></a>Table 개체 (ADOX)
 열, 인덱스 및 키를 포함 하 여 데이터베이스 테이블을 나타냅니다.  
@@ -78,4 +74,3 @@ Dim obj As New Table
  [키 컬렉션 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 011c1527e135a7326d54b0268d9e2fcb070fb6e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-an-olap-mining-structure"></a>OLAP 마이닝 구조 만들기
   OLAP 큐브 또는 다른 다차원 데이터 저장소를 기반으로 데이터 마이닝 모델을 만들면 다음과 같은 여러 가지 이점이 있습니다. OLAP 솔루션에는 잘 정리되고 올바른 형식이 지정된 많은 양의 데이터가 이미 포함되어 있습니다. 하지만 사용자가 임시 탐색을 통해 의미 있는 패턴을 찾을 수 없을 정도로 데이터가 복잡합니다. 데이터 마이닝은 새로운 상관 관계를 발견하고 실현 가능한 통찰력을 제공할 수 있는 기능을 제공합니다.  
@@ -172,7 +171,6 @@ ms.lasthandoff: 09/01/2017
  [마이닝 구조 열](../../analysis-services/data-mining/mining-structure-columns.md)   
  [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)   
  [마이닝 모델 속성](../../analysis-services/data-mining/mining-model-properties.md)   
- [마이닝 구조 및 구조 열에 대 한 속성](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [마이닝 구조 및 구조 열의 속성](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReportFormatParameters Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReportFormatParameters Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReportFormatParameters
-helpviewer_keywords:
-- ReportFormatParameters element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReportFormatParameters
+helpviewer_keywords: ReportFormatParameters element
 ms.assetid: f2e677bf-7b6b-4ce4-b0ec-75a4999306c9
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ea5c18474cbce5e243b1a5aa569b0afee85aacc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3039f088a38a46501f86868fbede780294301f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reportformatparameters-element-assl"></a>ReportFormatParameters 요소(ASSL)
   [ReportAction](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md) 요소에 대한 [ReportFormatParameter](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) 요소의 컬렉션을 포함합니다.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [컬렉션 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

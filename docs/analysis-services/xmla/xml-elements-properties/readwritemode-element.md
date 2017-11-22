@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReadWriteMode command
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d55928ce65b1b40710b662c6d3f5b55b798368a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3075b7834f7e24004811ce3802dd5fcb55b56f6c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 요소
   **ReadWriteMode** 데이터베이스 속성은 데이터베이스가 **ReadWrite** 모드에 있는지 또는 **ReadOnly** 모드에 있는지를 지정합니다. 이 속성 값은 두 가지만 가능합니다.  
@@ -77,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
   
-

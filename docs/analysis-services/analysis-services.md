@@ -8,8 +8,7 @@ ms.component: misc
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8c3a514f91e9af8de54fdbd4d9ef851c72f1911e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-analysis-services"></a>Analysis Services 란?
   Analysis Services는 의사 결정 지원 및 Reporting Services 보고서를 Power BI에서 Excel과 같은 클라이언트 응용 프로그램 및 비즈니스 보고서에 대 한 분석 데이터를 제공 하는 비즈니스 분석 및 기타 데이터 시각화 도구에 사용 되는 분석 데이터 엔진.  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/01/2017
 *  [자습서](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [개발자 설명서](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [기술 참조 (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)
-

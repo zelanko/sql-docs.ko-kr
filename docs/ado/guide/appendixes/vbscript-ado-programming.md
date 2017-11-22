@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - ADO, VBScript
 - VBScript [ADO]
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bc6c05e67582f623b73d9f19882feba36032913f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 프로그래밍
 ## <a name="creating-an-ado-project"></a>ADO 프로젝트 만들기  
@@ -92,4 +89,3 @@ Response.Write("Success!")
 -   사용할 수 없는 **오류 goto에 \<레이블 >** VBScript 내에서.  
   
 -   VBScript와 같은 기본 제공 Visual Basic 함수 중 일부를 지원 **Msgbox**, **날짜**, 및 **IsNumeric**합니다. 그러나 VBScript Visual Basic의 하위 집합 이기 때문에 일부 기본 제공 함수는 지원 됩니다. 예를 들어 VBScript 지원 하지 않습니다는 **형식** 파일 I/O 함수입니다.
-

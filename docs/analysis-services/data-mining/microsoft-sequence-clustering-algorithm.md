@@ -19,17 +19,16 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09d9c1909f093547dedd79823a06d9647f0bd6a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 시퀀스 클러스터링 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 클러스터링과 함께 시퀀스 분석을 결합하는 고유한 알고리즘입니다. 이 알고리즘을 사용하여 *시퀀스*로 연결할 수 있는 이벤트가 들어 있는 데이터를 탐색할 수 있습니다. 이 알고리즘은 가장 일반적인 시퀀스를 찾고 클러스터링을 수행하여 유사한 시퀀스를 찾습니다. 다음 예제에서는 일반적인 문제나 비즈니스 시나리오에 대한 통찰력을 제공하기 위해 기계 학습에 대한 데이터로 캡처할 수 있는 시퀀스의 종류를 보여 줍니다.  
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   
-

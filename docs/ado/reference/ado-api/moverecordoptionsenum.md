@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- MoveRecordOptionsEnum
-helpviewer_keywords:
-- MoveRecordOptionsEnum enumeration [ADO]
+f1_keywords: MoveRecordOptionsEnum
+helpviewer_keywords: MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3d602d52933b6f940131ffbb9cbe9198e6c13699
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dc684d2c38347251c1f7af843a105f13989e5f8a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 동작을 지정 된 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 [범위란](../../../ado/reference/ado-api/moverecord-method-ado.md) 메서드.  
@@ -45,4 +41,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>적용 대상  
  [MoveRecord 메서드(ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-

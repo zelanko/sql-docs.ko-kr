@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ColumnID Element (EventColumn)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ColumnID Element (EventColumn)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ColumnID
-helpviewer_keywords:
-- ColumnID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ColumnID
+helpviewer_keywords: ColumnID element
 ms.assetid: c4f4fbad-9d70-4de2-8cf7-caee80a4a1e4
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 068aee390a3208b55323b31720bb42eeaa39f7d8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38cac2f8ddbe9fd79e14308ff9587099c1991426
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnid-element-eventcolumn-assl"></a>ColumnID 요소(EventColumn)(ASSL)
   일부로 이벤트에 대해 캡처할 정보 열의 식별자 (ID)를 포함 한 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 요소입니다.  
@@ -74,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

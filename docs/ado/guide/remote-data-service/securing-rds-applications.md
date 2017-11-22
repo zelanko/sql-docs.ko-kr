@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS security [ADO]
+helpviewer_keywords: RDS security [ADO]
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a84a52dc353d11a391ff79c5f0975d71540cd08a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72a46915beed5bb65953788b2b1b7283d90cb8e5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="securing-rds-applications"></a>RDS 응용 프로그램 보안
 이 항목.rds 입니다에 대 한 보안 정보를 제공합니다.  
@@ -50,6 +47,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="password-authentication"></a>암호 인증  
  RDS 세 가지 암호 인증 모드 중 하나에서 실행 하는 IIS 웹 서버와 통신할 수: 익명, 기본, 또는 NT Challenge/Response 인증 (Windows 2000에서 Windows 통합 인증 이라고 함). 이러한 설정은 웹 서버는 클라이언트 컴퓨터 NT 웹 서버에 대 한 명시적인 액세스 권한이 요구 하는 등을 통한 액세스를 제어 하는 방법을 정의 합니다.
-
 
 

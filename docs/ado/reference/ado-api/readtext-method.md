@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
 - _Stream::ReadText
-helpviewer_keywords:
-- ReadText method [ADO]
+helpviewer_keywords: ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d3628847bc62ad45781442f227e709e87f52c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b134e064cc3d1dfa06c5d948d74e49f643756bd1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="readtext-method"></a>ReadText 메서드
 지정한 텍스트의 문자 수를 읽습니다 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -61,4 +58,3 @@ String = Stream.ReadText ( NumChars)
   
 ## <a name="see-also"></a>관련 항목:  
  [Read 메서드](../../../ado/reference/ado-api/read-method.md)
-

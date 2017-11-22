@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AllowDuplicateNames Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AllowDuplicateNames Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AllowDuplicateNames
-helpviewer_keywords:
-- AllowDuplicateNames element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AllowDuplicateNames
+helpviewer_keywords: AllowDuplicateNames element
 ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 45beca28a1a17afdf7645d8a42cbab519e51373e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 117ef9ba47fe131fc4d370954106bdb5b5250dae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="allowduplicatenames-element-assl"></a>AllowDuplicateNames 요소(ASSL)
   중복 이름이 허용 되는지 여부를 결정 한 [계층](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) 요소입니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e8ecc3c51619c7f1ebbe5b109f0710500184a27
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services에 대 한 데이터베이스 일관성 검사 (DBCC)
   DBCC는 Analysis Services 인스턴스에서 다차원 및 테이블 형식의 데이터베이스에 대한 주문형 데이터베이스 유효성 검사를 제공합니다. SSMS(SQL Server Management Studio)의 MDX 또는 XMLA 쿼리 창에서 DBCC를 실행하고 SSMS의 SQL Server Profiler 또는 xEvent 세션에서 DBCC 출력을 추적할 수 있습니다.  
@@ -314,4 +313,3 @@ Execution complete
  [Analysis Services에서 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   
-

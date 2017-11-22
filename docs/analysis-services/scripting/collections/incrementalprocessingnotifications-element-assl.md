@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- IncrementalProcessingNotifications Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: IncrementalProcessingNotifications Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- IncrementalProcessingNotifications element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: IncrementalProcessingNotifications element
 ms.assetid: 46f3c9d0-46cc-4833-8f15-7831207f57ce
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4d8603e76e26b9197cbbc17021bb0a254de96abc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 06d6813b9fa86e80e7b291b8f19056e7f6911207
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="incrementalprocessingnotifications-element-assl"></a>IncrementalProcessingNotifications 요소(ASSL)
   컬렉션을 포함 [IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md) 정보를 제공 하는 요소는 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) 의 진행 상태를 확인 하기 위해 실행할 쿼리에 대 한 요소 증분 처리 합니다.  
@@ -72,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [컬렉션 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

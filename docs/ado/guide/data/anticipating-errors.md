@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72dc8972826c149430203b95c14e6b5153620527
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="anticipating-errors"></a>오류 예측
 오류가 발생 하지 않도록은 적어도 오류 처리 중요 합니다. 이 마지막 섹션에는 응용 프로그램 오류가 발생 하기 위해 취할 수 예방 조치의 짧은 목록을 포함 합니다.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  다음 사항을 확인 **레코드 집합** 개체의 경계를 넘어 않습니다는 **레코드 집합** 레코드 포인터를 이동 하기 전에. 하려고 하면 **MoveNext** 때 **EOF** 은 True 또는 **MovePrev** 때 **BOF** 가 True 이면 오류가 발생 합니다. 중 하나를 수행 하는 경우는 **이동** 메서드 때 둘 다 **EOF** 및 **BOF** true, 오류가 생성 됩니다.  
   
  또한 있으면 오류가 발생 합니다와 같은 작업을 수행 하려고 하면 **Seek** 및 **찾을** 빈 **레코드 집합**합니다.
-

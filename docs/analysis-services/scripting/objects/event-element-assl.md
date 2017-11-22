@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Event Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Event Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EVENT
-helpviewer_keywords:
-- Event element
+applies_to: SQL Server 2016 Preview
+f1_keywords: EVENT
+helpviewer_keywords: Event element
 ms.assetid: c7911bcd-e601-4a96-a6d8-20b7c7375ff2
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f21f26b92e2fac6b57457ddfd605abd89f09216a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: af95382e32d013a079a5f808560797b3181a84f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="event-element-assl"></a>Event 요소(ASSL)
   정의 **이벤트** 의 일부로 캡처할는 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 요소입니다.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

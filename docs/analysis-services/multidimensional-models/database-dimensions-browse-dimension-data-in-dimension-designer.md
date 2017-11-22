@@ -8,25 +8,23 @@ ms.service:
 ms.component: multidimensional-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dimensions [Analysis Services], browsing
 - browsing dimensions [Analysis Services]
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 12705a8050d395925dd5345802b9c6b11d9925b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4427b3ed725f091a1e01fa13ba8d6dbbb50e344d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>데이터베이스 차원-차원 디자이너에서 차원 데이터 찾아보기
   **에서 액세스하는 차원 디자이너의** 브라우저 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]뷰를 사용하여 차원에 있는 데이터를 찾아볼 수 있습니다.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [다차원 모델의 차원](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
-

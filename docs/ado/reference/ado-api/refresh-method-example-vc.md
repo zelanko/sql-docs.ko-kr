@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Refresh method [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Refresh method [ADO], VC++ example
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 61dd571d77fc30614a157ef96d986c9408b197ce
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83b6f2f9caac6ec3d10ddd5c224079c25e951c9c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="refresh-method-example-vc"></a>새로 메서드 예제 (VC + +)
 사용 하 여 보여 주는이 예제는 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 를 새로 고치려면 메서드는 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 저장된 프로시저에 대 한 컬렉션 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
@@ -245,4 +241,3 @@ Authors with 25 percent royalty
  [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Refresh 메서드(ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-

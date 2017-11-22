@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Application Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Application Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Application
-helpviewer_keywords:
-- Application element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Application
+helpviewer_keywords: Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ce8773397787599ed8f0df041eea0f683b309d58
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b54a82a6a6dce39de5de1f4f262958dfe8415e90
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="application-element-assl"></a>Application 요소(ASSL)
   와 연결 된 응용 프로그램을 식별 한 [동작](../../../analysis-services/scripting/objects/action-element-assl.md) 요소입니다.  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

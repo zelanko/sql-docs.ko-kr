@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Dimensions
 - CubeDef::Dimensions
-helpviewer_keywords:
-- Dimensions collection [ADO MD]
+helpviewer_keywords: Dimensions collection [ADO MD]
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9cf53e6f085ccf336cabf502c55fe9db8beea1d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e8ed53180b29f3983db76b529d999fc865626cd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensions-collection-ado-md"></a>ADO MD 차원 컬렉션
 포함 된 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 큐브에 구성 하는 개체입니다.  
@@ -51,4 +48,3 @@ ms.lasthandoff: 09/09/2017
  [카탈로그 예제 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [ADO MD CubeDef 개체](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Dimension 개체(ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
-

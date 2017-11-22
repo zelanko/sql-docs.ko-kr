@@ -1,13 +1,14 @@
 ---
 title: "SQL Server 2016 Analysis Services 이전 버전과 호환성 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b7c58d201f40123ab206d02a4b32948c3d976c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f54505056125f11f3843a671a76136288f54b5d1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services 이전 버전과 호환성 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -52,9 +52,9 @@ A *사용 되지 않는 기능* 이후 릴리스의 제품에서 사용 중단 �
 |다차원|세션 큐브. 대체 기능은 없습니다.|  
 |다차원|로컬 큐브. 대체 기능은 없습니다.|  
 |테이블 형식|테이블 형식 모델 1100 및 1103 호환성 수준은 향후 릴리스에서 지원되지 않을 예정입니다. 대신 모델 호환성 수준 1200 이상 설정, 모델 정의 테이블 형식 메타 데이터를 변환할 수 있습니다. [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)을 참조하세요.|  
-|Tools|추적 캡처용 SQL Server Profiler<br /><br /> SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 대신 사용할 수 있습니다.  <br /> [SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)을 참조하세요.|  
+|Tools|추적 캡처용 SQL Server Profiler<br /><br /> SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 대신 사용할 수 있습니다.  <br /> [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)을 참조하세요.|  
 |Tools|추적 재생용 Server Profiler <br />대체 기능 대체 기능은 없습니다.|  
-|추적 관리 개체 및 추적 API|Analysis Services 추적 및 재생 개체용 API를 포함하는 Microsoft.AnalysisServices.Trace 개체. 다음과 같은 여러 부분을 대신 사용할 수 있습니다.<br /><br /> -   추적 구성:  Microsoft.SqlServer.Management.XEvent<br />-   추적 읽기:  Microsoft.SqlServer.XEvent.Linq<br />-   추적 재생: 없음|  
+|추적 관리 개체 및 추적 API|Analysis Services 추적 및 재생 개체용 API를 포함하는 Microsoft.AnalysisServices.Trace 개체. 다음과 같은 여러 부분을 대신 사용할 수 있습니다.<br /><br /> 추적 구성: Microsoft.SqlServer.Management.XEvent<br />추적 읽기: Microsoft.SqlServer.XEvent.Linq<br />-   추적 재생: 없음|  
   
 > [!NOTE]  
 >  이전에 사용이 중단된 기능에 대한 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 의 공지 사항은 계속 적용됩니다. 이러한 기능을 지원하는 코드는 아직 제품에서 삭제되지 않았으므로 이러한 기능 중 대부분은 이 릴리스에도 계속 포함되어 있습니다. 이전에 사용 되지 않는 기능 하는 동안 액세스할 수 있습니다 것으로 간주 되지 않으며 실제로 수에서 제거 될 수 제품 언제 든 지 합니다.  
@@ -129,4 +129,3 @@ using Microsoft.AnalysisServices.Core;
 
 ## <a name="see-also"></a>참고 항목
 [Analysis Services 이전 버전과 호환성 (SQL Server 2017)](analysis-services-backward-compatibility-sql2017.md)
-

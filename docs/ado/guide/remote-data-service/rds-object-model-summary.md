@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - RDS objects [ADO], object model summary
 - RDS object model [ADO]
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b68f17999d9b6c74155463525ca04d6c000cd23f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1c89ea8ccd9875368ea0d279c54a1153bc0cfd3d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-object-model-summary"></a>RDS 개체 모델 요약
 > [!IMPORTANT]
@@ -43,6 +41,5 @@ ms.lasthandoff: 09/09/2017
  [RDS 시나리오](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS 사용량 및 보안](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- InternetTimeout property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: InternetTimeout property [ADO], VC++ example
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: edede12eb4b2244474fed407a04f9449aff86fc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41b7d8dbc90c2cea8eaa198b0caf15aefd8051ba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout 속성 예제 (VC + +)
 > [!IMPORTANT]
@@ -165,6 +161,5 @@ void PrintComError(_com_error &e)
   
 ## <a name="see-also"></a>관련 항목:  
  [InternetTimeout 속성(RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
-
 
 

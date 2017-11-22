@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 624bc851727e9d929c4d83721ac64352669cf643
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3510664e97b64c36b7c1c7b42ca475194b6d01e2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 데이터를 셰이핑 OLE DB 개요에 대 한 서비스
 > [!IMPORTANT]
@@ -70,4 +68,3 @@ cn.Properties("Data Provider") = "MSDASQL"
 
 ## <a name="see-also"></a>관련 항목:
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
-

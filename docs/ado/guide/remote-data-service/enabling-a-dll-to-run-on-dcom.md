@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - DCOM in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 338956898cd000448d547d23f18b649ee36cfe7f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d67a595c97547934b04794f036d58445e8c282
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM에서 실행 하는 DLL을 사용 하도록 설정
 > [!IMPORTANT]
@@ -50,6 +48,5 @@ ms.lasthandoff: 09/09/2017
      .Dll을 동일한 컴퓨터에서 DCOM 및 IIS를 통해 액세스할 수 있도록 구성 요소 서비스 MMC 스냅인에서 구성 요소의 활성화 특성을 설정 해야 합니다. 특성을 설정 후 **작성자의 프로세스에서**, 것을 확인할 수는 **Inproc** 대리.dll을 가리키도록 구성 요소 서비스는 레지스트리의 서버 키가 추가 되었습니다.  
   
  구성 요소 서비스 (또는 Microsoft Transaction 서비스, Windows NT를 사용 하는 경우)에 대 한 자세한 내용은 Microsoft Transaction Server 웹 사이트를 방문 하십시오 이러한 단계를 수행 하는 방법과 합니다.
-
 
 

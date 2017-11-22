@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ceaff43e4f0f5d2b1901c98b026d37af9ba89383
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 729c24cf80e99f6f0e2596c51bfbc8bdf2490d0d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions"></a>파티션
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 SSDT에서 파티션 대화 상자를 사용 하 여 만든 파티션은 모델 작업 영역 데이터베이스에 적용 됩니다. 모델을 배포하면 모델 작업 영역 데이터베이스에 대해 정의된 파티션이 배포된 model 데이터베이스에 복제됩니다. 있습니다 수 추가로 만들고 SSMS에서 파티션 대화 상자를 사용 하 여 배포 된 모델 데이터베이스에 대 한 파티션을 관리 합니다.  이 항목에서 제공 하는 정보는 SSDT에서 파티션 관리자 대화 상자를 사용 하 여 모델 제작 중에 만든 파티션을 설명 합니다. 배포 된 모델에 대 한 파티션을 만들고 관리 하는 방법에 대 한 내용은 [만들기 및 테이블 형식 모델 파티션 관리](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)합니다.  
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [데이터 처리](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   
-

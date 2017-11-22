@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Customizing Project Settings
+helpviewer_keywords: Customizing Project Settings
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 4794b700b471298998650346ee88221577b13c11
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da372976a6ff02b25cd956fcb4eafcd7d957ab2d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>SSMA 프로젝트 (OracleToSQL) 작업
 Oracle 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -105,7 +102,7 @@ Oracle 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLU
   
         메타 데이터를 저장 하면 몇 분 정도 걸릴 수 있습니다. 메타 데이터를 아직 저장 하지 않을 경우 모든 확인란을 선택 하지 마십시오.  
   
-    2.  클릭 하 고 **저장** 단추입니다.  
+    2.  클릭는 **저장** 단추입니다.  
   
         SSMA는 Oracle 스키마를 구문 분석 하 고 프로젝트 파일에 메타 데이터를 저장 합니다.  
   
@@ -132,4 +129,3 @@ Oracle 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLU
 [Oracle 데이터베이스 &#40; OracleToSQL &#41;에 연결](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
 [SQL Server &#40; OracleToSQL &#41;에 연결](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - data updates [ADO], about data updates
 - updating data [ADO], about updating data
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 85a34b6343f5f6251ab6f43f6802acd27bee4a3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8138aeea7e5ea40e659a6fed5f5d5f551b1c69d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updating-data"></a>데이터 업데이트
 Update 동작 및 기능 크게 의존 하는 모드 (잠금 유형), 커서 유형 및 커서 위치를 업데이트 합니다.  
@@ -44,4 +42,3 @@ Update 동작 및 기능 크게 의존 하는 모드 (잠금 유형), 커서 유
 -   [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)  
   
 -   [트랜잭션 처리](../../../ado/guide/data/transaction-processing.md)
-

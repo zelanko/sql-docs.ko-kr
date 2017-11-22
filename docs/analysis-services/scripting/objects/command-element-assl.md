@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Command Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Command Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Command
-helpviewer_keywords:
-- Command element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Command
+helpviewer_keywords: Command element
 ms.assetid: 277598b5-9939-4d7f-8c75-06470c3fabdd
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 78c4e799838d347e99555d25bcbb27bb5f9f7da1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bd3c9638d6c63a7b7a44d201659d666474fbf1c5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-element-assl"></a>Command 요소(ASSL)
   부모 요소 컨텍스트 내에서 사용할 수 있는 명령을 정의 [명령을](../../../analysis-services/scripting/collections/commands-element-assl.md) 컬렉션입니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

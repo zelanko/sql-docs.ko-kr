@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data manipulation [MDX]
 - Multidimensional Expressions [Analysis Services], data manipulation
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 37ee4f05ad916e3fb1d12b2bfb29da183f9ebb47
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8a566a788ba66783ef3eb6dc999303bcb0b0248f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-manipulation---manipulating-data"></a>MDX 데이터 조작-데이터 조작
   MDX를 사용하여 다양한 방법으로 데이터를 조작할 수 있습니다. 다음 항목은 MDX 언어에서 데이터 조작의 보다 발전된 개념 중 일부를 다룬 것입니다.  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

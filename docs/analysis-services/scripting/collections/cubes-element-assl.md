@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Cubes Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Cubes Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Cubes
-helpviewer_keywords:
-- Cubes element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Cubes
+helpviewer_keywords: Cubes element
 ms.assetid: 0eaaaf3f-0c78-4eb4-bc3a-d266579eca56
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f51c3015e924c76cc479d0ca0ffed1c0cc0e4699
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cb099ae4a1e498bc33da4ee17e0c46b8aec1e3d1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubes-element-assl"></a>Cubes 요소(ASSL)
   컬렉션을 포함 [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md) 와 관련 된 요소는 [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md) 요소입니다.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [컬렉션 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1165b694dbbdedb73fded1178bbc568cbcf0a467
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>레코드 집합에서 이동 하는 방법
 다음 네가지 메서드는, 이동 또는 스크롤할에 하는 데 사용 되는 **레코드 집합**: [MoveFirst, MoveLast, MoveNext 및 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)합니다. (이 중에서 사용할 수 없는 정방향 전용 커서입니다.)  
@@ -63,4 +61,3 @@ If oRs.BOF Then oRs.MoveFirst
  또 다른 예로, 가운데 특정 행에 위치 하는 경우는 **레코드 집합** 호출 하면 **삭제** 호출 **MoveNext**, 레코드에 대해 현재 위치는 삭제 된 레코드의 바로 다음 합니다. 하지만 호출 **MovePrevious** 레코드는 삭제 된 레코드를 더 이상의 활성 구성원으로 계산 하므로 현재 레코드를 삭제 하는 한 바로 앞에 **레코드 집합**합니다.  
   
  현재 레코드를 기준으로 이동 하는 방법에 대 한 모든 공급자 일관성 있는 이동 의미 체계를 정의 하기가 특히- **MovePrevious**, **MoveNext**, 및 **이동** -현재 레코드의 데이터를 변경 합니다. 예를 들어, 사용 하는 정렬, 필터링 **레코드 집합**, 및 다른 모든 레코드 앞으로 가도록 있도록 현재 레코드의 데이터를 변경 하지만 변경 된 데이터도 더 이상 일치 필터, where 명확 하지 않습니다는 **MoveNext** 작업 소요 됩니다. 결론적 내에서 해당 상대 이동 되는 **레코드 집합** 은 절대 이동 보다 더 위험 (사용 하는 등 **MoveFirst** 또는 **MoveLast**) 데이터는 경우 변경 레코드를 편집 하는 동안 추가 또는 삭제 합니다. 정렬 및 필터링이 유형의 값을 변경 하지 않아야 하기 때문에 기본 키 또는 ID에 따라 해야 합니다.
-
