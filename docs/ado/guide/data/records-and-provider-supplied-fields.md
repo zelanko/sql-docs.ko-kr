@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 16596d3ffa943f382e6c3a9ec2aa9c2e2e14432f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93b97bce2562604a01c564a376bd093abb9b1b7c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 필드 공급자 제공
 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체가 열릴, 소스에서 현재 열린 행 수 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 절대 URL 또는 열린와 함께에서 상대 URL [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 .  
@@ -87,4 +85,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
-

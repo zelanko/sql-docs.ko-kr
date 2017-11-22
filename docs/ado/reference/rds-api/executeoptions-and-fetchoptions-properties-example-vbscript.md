@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - FetchOptions property [ADO], VBScript example
 - ExecuteOptions property [ADO]
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d71673af9b36aadba70814447c7173545fe46d1d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 88bafc263d5ef4f813b216f6498bd1f6cb534b42
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 및 FetchOptions 속성 예 (VBScript)
 > [!IMPORTANT]
@@ -180,7 +177,6 @@ End Sub
 ## <a name="see-also"></a>관련 항목:  
  [ExecuteOptions 속성 (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions 속성(RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
-
 
 
 

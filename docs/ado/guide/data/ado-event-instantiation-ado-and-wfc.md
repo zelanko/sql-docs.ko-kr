@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ffe0911f2845e7ff7e41cf41fcc4f267f7c0ad66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4d46ec3bdad80879ddc4a931d8668a5298972e58
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 이벤트 인스턴스화: ADO 및 WFC
 ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕으로 하며 단순화 된 응용 프로그램 프로그래밍 인터페이스를 제공 합니다. 일반적으로 ADO/WFC 차단 ADO 이벤트, 이벤트 매개 변수는 단일 이벤트 클래스를 통합 하 고 이벤트 처리기를 호출 합니다.  
@@ -74,4 +72,3 @@ ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕
  [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   
  [이벤트 처리기 함께 작동 하는 방법](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [이벤트 유형](../../../ado/guide/data/types-of-events.md)
-

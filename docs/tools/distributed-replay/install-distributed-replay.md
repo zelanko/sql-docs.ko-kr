@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 429751190eb204503600a09c2ca8aa7ca15713b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-distributed-replay"></a>Distributed Replay 설치
   Distributed Replay는 다음 세 가지 방법 중 하나로 설치할 수 있습니다.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 08/02/2017
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools  
   
-     \- OR-  
+     \- 또는  
   
      \<공유 기능 디렉터리 > \Tools\\(사용자가 입력 한 대체 공유 기능 디렉터리)  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 08/02/2017
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- OR-  
+     \- 또는  
   
      \<공유 기능 디렉터리 (x86) > \Tools\\(사용자가 입력 한 대체 공유 기능 (x86) 디렉터리)  
   
@@ -222,9 +220,8 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay 요구 사항](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [관리 도구 명령줄 옵션 &#40; Distributed Replay utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

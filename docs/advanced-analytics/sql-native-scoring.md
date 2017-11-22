@@ -5,21 +5,18 @@ ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
 ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="native-scoring"></a>기본 점수 매기기
 
 이 항목에서는 SQL Server 2017의 근 실시간에서 기계 학습 모델의 점수 매기기를 제공 하는 기능.
@@ -119,4 +116,3 @@ MicrosoftML에서 모델을 사용 해야 하는 경우 실시간 sp_rxPredict �
 + PMML 모델
 + CRAN 또는 다른 저장소에서 다른 R 라이브러리를 사용 하 여 만든 모델
 + 다른 R 변환을 포함 하는 모델
-

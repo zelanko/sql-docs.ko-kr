@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Customizing order
+helpviewer_keywords: Customizing order
 ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 6d97d7737b71f0b3a5392af750c3df71eee0858e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 304d02d2a15781ebbb66465b5ffa1d0f17a052f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customizing-calls-order-oracletosql"></a>호출 순서 (OracleToSQL) 사용자 지정
 이 단계에서 개체를 테스트를 호출할 수 있는 순서를 선택 합니다.  
@@ -36,4 +33,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>관련 항목:  
 [데이터베이스 개체 &#40; OracleToSQL &#41; 마이그레이션 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

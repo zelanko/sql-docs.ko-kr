@@ -5,29 +5,25 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - expressions [XQuery], arithmetic
 - arithmetic expressions
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0736594cec09f9deb31340ab4d4e3c1fa052496b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ba5c642195f1049f7df59a0fa14ef666eec4bfe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="arithmetic-expressions-xquery"></a>산술 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,4 +62,3 @@ SELECT @x.query('xs:integer(2 div 3)')
 -   에 대 한 작업 **xs: integer** 값 형식의 값을 결과가 **xs: decimal** 대신 **xs: integer**합니다.  
   
   
-

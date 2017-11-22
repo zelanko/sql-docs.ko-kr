@@ -5,26 +5,22 @@ ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: b13058d0-9c6a-44e1-849b-72189d9050ba
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9de0e06c73a91637735f7dc6855a3c14db1c7f10
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 511738cfce795600bcfa06a95de4cdf3d6b503bb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-and-use-compute-contexts"></a>계산 컨텍스트 정의 및 사용
 
@@ -138,6 +134,5 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-step"></a>이전 단계
 
 [쿼리 및 SQL Server 데이터를 수정 합니다.](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
-
 
 

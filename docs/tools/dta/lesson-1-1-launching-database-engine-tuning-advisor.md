@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - tuning databases [SQL Server]
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 427cfbba4191f70541e47d3082c34fa185d92598
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bf2e8cae039c323c9eb8ebd03a0370d171b789f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>단원 1-1-데이터베이스 엔진 튜닝 관리자 시작
 시작하려면 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스)를 엽니다. 처음 사용할 때는 **sysadmin** 고정 서버 역할의 멤버가 데이터베이스 엔진 튜닝 관리자를 시작하여 응용 프로그램을 초기화해야 합니다. 초기화 후에는 **db_owner** 고정 데이터베이스 역할의 멤버가 데이터베이스 엔진 튜닝 관리자를 사용하여 자신이 소유한 데이터베이스를 튜닝할 수 있습니다. 데이터베이스 엔진 튜닝 관리자를 초기화하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
@@ -50,11 +47,10 @@ ms.lasthandoff: 08/02/2017
 -   오른쪽 창에는 **일반** 탭과 **튜닝 옵션** 탭이 있습니다. 이 창에서는 데이터베이스 엔진 튜닝 세션을 정의할 수 있습니다. **일반** 탭에서는 튜닝 세션의 이름을 입력하고 사용할 작업 파일이나 테이블을 지정하며 이 세션에서 튜닝할 데이터베이스와 테이블을 선택합니다. 작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 데이터베이스 엔진 튜닝 관리자에서는 데이터베이스를 튜닝할 때 추적 파일, 추적 테이블, [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 또는 XML 파일을 작업 입력으로 사용합니다. **튜닝 옵션** 탭에서는 데이터베이스 엔진 튜닝 관리자에서 분석하는 동안 고려할 물리적 데이터베이스 디자인 구조(인덱스 또는 인덱싱된 뷰)와 분할 전략을 선택할 수 있습니다. 이 탭에서는 데이터베이스 엔진 튜닝 관리자에서 작업을 튜닝하는 데 걸리는 최대 시간을 지정할 수도 있습니다. 기본적으로 데이터베이스 엔진 튜닝 관리자에서는 한 시간 동안 작업을 튜닝합니다.  
   
 > [!NOTE]  
-> 데이터베이스 엔진 튜닝 관리자 XML 파일 표시 되려면 경우 입력으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 스크립트를 가져올 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기. 자세한 내용은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 엔진 튜닝 관리자 시작 및 사용 [의](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)쿼리 편집기에서 데이터베이스 엔진 튜닝 관리자 시작에 대한 섹션을 참조하세요.  
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스크립트를 가져올 때 데이터베이스 엔진 튜닝 관리자에서 XML 파일을 입력으로 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 엔진 튜닝 관리자 시작 및 사용 [의](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)쿼리 편집기에서 데이터베이스 엔진 튜닝 관리자 시작에 대한 섹션을 참조하세요.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [도구 옵션 및 레이아웃 설정](../../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)  
   
   
   
-

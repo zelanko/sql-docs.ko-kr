@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tuning reports [SQL Server]
+applies_to: SQL Server 2016
+helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a395ca1faceb1465c1ce7dc8fc43215dae31c8be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>단원 1-3-튜닝 보고서 보기
 이 단원의 이전 연습에서 MySession 튜닝 세션의 결과로 생성된 데이터베이스 엔진 튜닝 관리자 구성에서 데이터베이스 개체를 만들거나 삭제하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 보았습니다. MySession 튜닝 세션은 [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md)에서 만들었습니다.  
@@ -53,8 +49,7 @@ ms.lasthandoff: 08/02/2017
 이제 MySession 튜닝 세션에 대한 데이터베이스 엔진 튜닝 관리자 GUI의 **보고서** 탭을 탐색했습니다. 이와 같은 단계를 사용하여 EvaluateMySession 튜닝 세션에 대해 생성된 보고서를 탐색할 수 있습니다. **세션 모니터** 창에서 **EvaluateMySession** 을 두 번 클릭하여 시작합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[3 단원: dta 명령 프롬프트 유틸리티를 사용 하 여](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[3단원: dta 명령 프롬프트 유틸리티 사용](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
   
-

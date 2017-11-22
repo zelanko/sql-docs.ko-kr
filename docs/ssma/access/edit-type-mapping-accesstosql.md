@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 90a03136fcc5a67382cffd99e426f8b8cfa605bd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2cfe289d367eee5d33177f8170e4be2919870ada
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-type-mapping-accesstosql"></a>형식 매핑 (AccessToSQL) 편집
 **형식 매핑 편집** 대화 상자를 사용 하면 원본 및 대상 데이터베이스 개체 간의 형식이 매핑되는 방법을 지정할 수 있습니다.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 08/02/2017
 **Replace with**  
 이 매핑에 대 한 대상 길이 지정 합니다. 예를 들어는 **nvarchar** 데이터 형식으로 입력할 수 있는 지정 된 원본 데이터 형식이에 매핑되고 지정할 수는 20 **nvarchar (20)**합니다.  
   
-

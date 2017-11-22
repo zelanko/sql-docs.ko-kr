@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle Backup Management
 - SQL Server Backup Management
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 18c484436a4d93605ffe98114d7b5c169b7413ce
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 000422d8c11aee89d49e7dc4164549f95c0db74a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-backups-oracletosql"></a>백업 (OracleToSQL) 관리
 백업 및 복원 하기 전에 또는 테스트를 실행 한 후 데이터를 테이블 oracle 백업 관리는 수 있습니다. 백업 내용 관리 대화 상자와 백업 콘텐츠를 관리할 수 있습니다.  
@@ -102,4 +100,3 @@ SQL Server 백업 관리는 테스터 선택 된 위치에 백업 대화 상자�
 ## <a name="see-also"></a>관련 항목:  
 [데이터베이스 개체 &#40; OracleToSQL &#41; 마이그레이션 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

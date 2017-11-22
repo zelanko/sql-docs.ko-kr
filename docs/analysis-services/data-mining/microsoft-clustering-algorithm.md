@@ -24,17 +24,16 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2d569cea784548d1e6869868f3f2e0030927b96e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7210acf3d0fa168c7bea0decd573995e4703b94d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft 클러스터링 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 비슷한 특성을 포함하는 클러스터로 그룹화하는 데이터 집합의 사례를 반복하는 *세그먼트화* 또는 *클러스터링* 알고리즘입니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
@@ -97,4 +96,3 @@ ms.lasthandoff: 09/01/2017
  [클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   
-

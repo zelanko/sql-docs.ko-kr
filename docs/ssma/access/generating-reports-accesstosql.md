@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84298ed11ae25bf533b5916711d3634bddec1b98
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a40cc82e75fe1109ea318cf4d3ab36b5669e8c8d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generating-reports-accesstosql"></a>보고서 생성 (AccessToSQL)
 명령을 사용 하 여 수행 된 특정 작업 보고서는 개체 트리 수준 SSMA 콘솔에 생성 됩니다.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/02/2017
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**Command**|**보고서 제목**|  
-    |1|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
+    |1.|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
     |2|스키마 변환|SchemaConversionReport&lt;n&gt;합니다. XML|  
     |3|데이터 마이그레이션|DataMigrationReport&lt;n&gt;합니다. XML|  
     |4|동기화 대상|TargetSynchronizationReport&lt;n&gt;합니다. XML|  
@@ -153,4 +151,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 (Access)를 실행합니다.](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
-

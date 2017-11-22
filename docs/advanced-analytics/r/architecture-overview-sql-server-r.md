@@ -5,22 +5,20 @@ ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2fb02e5c71ae74afb4dd48e6a02e36a1c7dce9b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 346dd5d2153a9a318e7bc68d73283278b3a13512
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server의 R에 대 한 아키텍처 개요
 
@@ -58,9 +56,8 @@ SQL Server 작업에 대 한 모든 요청을 차단 하 고, 작업 및 Windows
 
 ## <a name="next-steps"></a>다음 단계
 
-[R 통합을 지 원하는 구성 요소](new-components-in-sql-server-to-support-r.md)
+[R 통합을 지원하는 구성 요소](new-components-in-sql-server-to-support-r.md)
 
 [R 상호 운용성](r-interoperability-in-sql-server.md)
 
 [보안 개요](security-overview-sql-server-r.md)
-

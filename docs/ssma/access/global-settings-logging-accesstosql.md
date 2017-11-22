@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a89d3f9b45c4d4e56e80baf915bde76c5aea87d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ceb01feacc5557b9e7a0d1979e4f9c3d79242abe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-logging-accesstosql"></a>전역 설정 (로깅) (AccessToSQL)
 사용 하 여 **전역 설정** SSMA에 대 한 로깅 설정을 지정 하려면 대화 상자. 일반적으로 제품 지원 팀과 작업 하는 경우에 이러한 설정을 변경할 것 있습니다.  
@@ -67,4 +65,3 @@ Kb에서 로그 파일의 최대 크기입니다. 최소 크기는 10KB입니다
 **로그 파일의 총 수**  
 한 로그가 꽉 차면 SSMA 로그 파일 바꾸고 새 시작 됩니다. 이 설정을 사용 하 여 보관할 로그 파일의 최대 수를 지정 합니다. 최소값은 2입니다.  
   
-

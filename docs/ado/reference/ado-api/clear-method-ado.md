@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Errors::raw_Clear
 - Errors::Clear
-helpviewer_keywords:
-- Clear method [ADO]
+helpviewer_keywords: Clear method [ADO]
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e1770a8bbf9fac82dece435a46374876b55d1c14
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 831ec9b295ca4e3d81707cfc2c1cc14169d1527c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clear-method-ado"></a>Clear 메서드 (ADO)
 모든 제거는 [오류](../../../ado/reference/ado-api/error-object.md) 에서 개체는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션입니다.  
@@ -60,4 +57,3 @@ Errors.Clear
  [필터 속성](../../../ado/reference/ado-api/filter-property.md)   
  [Resync 메서드](../../../ado/reference/ado-api/resync-method.md)   
  [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md)
-

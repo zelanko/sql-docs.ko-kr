@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - PageCount property [ADO], VC++ example
 - AbsolutePage property [ADO], VC++ example
 - PageSize property [ADO], VC++ example
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 703979cfbdcd81f36f25f7885365924910025de3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be4eeeffa5d456a0d9a2c04af1f0957988ccccf4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount, 및 PageSize 속성 예제 (VC + +)
 사용 하 여이 예제는 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), 및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 이름을 표시 하 고 고용 날짜에서 속성을는 ***직원*** 테이블을 한 번에 5 개 레코드입니다.  
@@ -191,4 +188,3 @@ void PrintProviderError(_ConnectionPtr pConnection) {
  [PageCount 속성 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize 속성 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

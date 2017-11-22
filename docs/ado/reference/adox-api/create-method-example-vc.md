@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Create method [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: Create method [ADOX], VC++ example
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dba2645f8975d6ada15c85eba9a97743826a7edf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ecbbc0188c71a696e08be138b4ce2d901f0d7634
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-method-example-vc"></a>Create 메서드 예 (VC + +)
 다음 코드에 있는 새 Microsoft Jet 데이터베이스를 만드는 방법을 보여 줍니다는 [만들기](../../../ado/reference/adox-api/create-method-adox.md) 메서드.  
@@ -85,4 +81,3 @@ void CreateDatabaseX() {
   
 ## <a name="see-also"></a>관련 항목:  
  [Create 메서드(ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
-

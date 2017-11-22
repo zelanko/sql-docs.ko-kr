@@ -1,8 +1,7 @@
 ---
 title: "RDS 메서드 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e2a034ccdd85f3c05d3438cd8a589ac47d1aabd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 623b1f814d23ab8a23e87634ba1fe16b647907d0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-methods"></a>RDS 메서드
 > [!IMPORTANT]
@@ -46,6 +44,5 @@ ms.lasthandoff: 09/09/2017
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|보류 중인 변경 내용을 로컬로 캐시 된 및 업데이트할 수 있는 전송 **레코드 집합** 에 지정 된 데이터 원본에는 **연결** 속성입니다.|  
 |[Synchronize 메서드(RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|지정 된 레코드 집합 (사용 하 여 2.5 이상 ado) 연결 문자열에 지정 된 데이터베이스와 동기화 합니다.|  
 |[Synchronize21 메서드(RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|지정 된 레코드 집합 (사용 하 여 ado 2.1에) 대 한 연결 문자열에 지정 된 데이터베이스와 동기화 합니다.|
-
 
 

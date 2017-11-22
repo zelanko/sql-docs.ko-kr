@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 추적에 쿼리 계획 정보를 수집하고 표시하도록 추적 정의에 Showplan 이벤트 클래스를 추가할 수 있습니다. 추적에 수집된 다른 이벤트에서 Showplan 이벤트를 추출하고 이러한 Showplan 이벤트를 별도의 XML 파일에 저장할 수도 있습니다.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 10/24/2017
  [Performance 이벤트 범주](../../relational-databases/event-classes/performance-event-category.md)  
   
   
-
