@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Alter Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Alter Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Alter
 - microsoft.xml.analysis.alter
 - urn:schemas-microsoft-com:xml-analysis#Alter
-helpviewer_keywords:
-- Alter command
+helpviewer_keywords: Alter command
 ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 08bc085a99dcd6f9059f1dbba4355aca368bd219
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70986afb0f916e150ec203e3beb48684d9902f02
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-element-xmla"></a>Alter 요소(XMLA)
   사용 하는 Analysis Services Scripting Language (ASSL) 요소를 포함 된 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 개체의 인스턴스를 변경 하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
@@ -84,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [명령 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

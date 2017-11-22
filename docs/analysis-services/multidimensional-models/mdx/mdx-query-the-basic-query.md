@@ -21,17 +21,16 @@ helpviewer_keywords:
 - SELECT statement [MDX]
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 46373fffaba2935a6faa9efa6deddebd6ce66ceb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8d80527166b6b6a1d49cbd4f3735689c429020e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX 쿼리-기본 쿼리
   기본 MDX 쿼리는 SELECT 문이며 이 문은 MDX에서 가장 자주 사용되는 쿼리입니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
@@ -123,4 +122,3 @@ WHERE ( [Sales Territory].[Southwest] )
  [SELECT 문 &#40; Mdx&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   
-

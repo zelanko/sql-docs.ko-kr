@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c21676293fe0d395a1e0cc5952a3d6fab1951d60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8821ebd2fb20cf32c6b1921c36e45404421f415b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>중간으로 매개 변수화 된 명령을 계산 명령
 일반적으로 매개 변수가 있는 shape APPEND 명령에는 부모 만드는 **레코드 집합** 쿼리 명령 및 절 자식 **레코드 집합** 매개 변수가 있는 쿼리 명령- 즉, 매개 변수 자리 표시자를 포함 하는 명령 (매개 변수 "?"). 명령의 결과로 만들어지는 셰이핑된 **레코드 집합** 부모는 상위 수준 차지 하는 두 개의 수준이 및 자식 하위 수준을 차지 합니다.  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 셰이핑 예제](../../../ado/guide/data/data-shaping-example.md)
-

@@ -13,38 +13,33 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProtocolCapabilities Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProtocolCapabilities Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.protocolcapabilities
 - http://schemas.microsoft.com/analysisservices/2003/engine#ProtocolCapabilities
 - urn:schemas-microsoft-com:xml-analysis#ProtocolCapabilities
-helpviewer_keywords:
-- ProtocolCapabilities element
+helpviewer_keywords: ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42ff93dce6b71f7cfd69ed85d92c4c4f7912faee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5d2ff72b1fdc3a3e3a4b09a046933d3ead88fc78
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
-# ProtocolCapabilities 요소(XMLA)
+# <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 요소(XMLA)
   SOAP 요청 메시지의 SOAP 헤더를 사용 하 여의 인스턴스 간의 프로토콜 기능을 식별 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램 및입니다.  
   
  **Namespace**`http://schemas.microsoft.com/analysisservices/2003/engine`  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```xml  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 </soap:Envelope>  
 ```  
   
-## 요소 특징  
+## <a name="element-characteristics"></a>요소 특징  
   
 |특징|설명|  
 |--------------------|-----------------|  
@@ -70,14 +65,14 @@ ms.lasthandoff: 09/01/2017
 |기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
-## 요소 관계  
+## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|없음|  
 |자식 요소|[기능](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## 주의  
+## <a name="remarks"></a>주의  
  **ProtocolCapabilities** 요소를 사용 하면 클라이언트 응용 프로그램에 이진 XML 또는 압축 지원과 같은 프로토콜 기능 협상 하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 언제 든 지 인스턴스. 프로토콜 협상에는 다음과 같은 단계가 포함됩니다.  
   
 1.  클라이언트 응용 프로그램이 SOAP 헤더의 일부로 **ProtocolCapabilities** 요소를 포함하는 SOAP 요청을 전송하여 해당 프로토콜 기능을 식별합니다.  
@@ -94,9 +89,8 @@ ms.lasthandoff: 09/01/2017
   
  프로토콜 기능은 명시적으로 협상될 필요가 없습니다. 즉 클라이언트 응용 프로그램은 SOAP 요청의 일부로 **ProtocolCapabilities** 요소를 포함하지 않아도 됩니다. SOAP 요청에 포함 되어 있지 않으면는 **ProtocolCapabilities** 요소는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 동일한 형식을 사용 하 여 SOAP 요청에 응답 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [관리 연결 및 세션 &#40; XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [헤더 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   
-

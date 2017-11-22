@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CALC_DEPENDENCIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86f0ed45ced35aba884f05284f886334d250694d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 행 집합
   계산 간 종속성과 해당 계산에서 참조하는 개체에 대한 보고서입니다. 클라이언트 응용 프로그램에 이 정보를 사용하여 복잡한 수식과 관련된 문제를 보고하거나 관련 개체가 삭제 또는 수정될 때 경고할 수 있습니다. 행 집합을 사용하여 측정값 또는 계산 열에 사용된 DAX 식을 추출할 수도 있습니다.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**A S E _**|**DBTYPE_WSTR**|예|종속성 분석이 요청된 개체를 포함하는 데이터베이스 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> 이 열을 사용하여 **DISCOVER_DEPENDENCY_CALC** 행 집합을 제한할 수 있습니다.|  
 |**OBJECT_TYPE**|**DBTYPE_WSTR**|예|종속성 분석이 요청된 개체의 유형을 나타냅니다. 개체의 유형은 다음 중 하나여야 합니다.<br /><br /> **ACTIVE_RELATIONSHIP**: 활성 관계<br /><br /> **CALC_COLUMN**: 계산된 열<br /><br /> **HIERARCHY**: 계층<br /><br /> **MEASURE**: 측정값<br /><br /> **RELATIONSHIP**: 관계<br /><br /> **KPI**: KPI(핵심 성과 지표)<br /><br /> <br /><br /> **DISCOVER_DEPENDENCY_CALC** 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
 |**쿼리**|**DBTYPE_WSTR**|예|[!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]에서 만든 테이블 형식 모델의 경우 해당 쿼리 또는 식에 대한 종속성 그래프를 표시하도록 DAX 쿼리 또는 식을 포함할 수 있습니다. QUERY 제한은 DAX 쿼리에 사용되는 개체를 결정하는 방법을 클라이언트 응용 프로그램에 제공합니다.<br /><br /> **QUERY** 제한은 DMV 쿼리의 XMLA 또는 WHERE 절에 지정할 수 있습니다. 자세한 내용은 "예" 섹션을 참조하십시오.|  
-|**테이블**|**DBTYPE_WSTR**||종속성 정보가 생성된 개체를 포함하는 테이블의 이름입니다.|  
+|**TABLE**|**DBTYPE_WSTR**||종속성 정보가 생성된 개체를 포함하는 테이블의 이름입니다.|  
 |**개체**|**DBTYPE_WSTR**||종속성 정보가 생성된 개체의 이름입니다. 개체가 측정값 또는 계산된 열인 경우 측정값의 이름을 사용합니다. 개체가 관계인 경우 관계에 참가하는 열이 포함된 테이블(또는 큐브 차원)의 이름을 사용합니다.|  
 |**식**|**DBTYPE_WSTR**||종속성을 찾는 개체를 포함하는 수식입니다.|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||참조된 개체에 종속된 개체의 유형을 반환합니다. 반환된 개체의 유형은 다음 중 하나일 수 있습니다.<br /><br /> **CALC_COLUMN**: 계산된 열<br /><br /> **COLUMN**: 데이터 열<br /><br /> **MEASURE**: 측정값<br /><br /> **RELATIONSHIP**: 관계<br /><br /> **KPI**: KPI(핵심 성과 지표)|  
@@ -136,7 +133,6 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services 스키마 행 집합](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [사용 하 여 동적 관리 뷰 & #40; Dmv & #41; Analysis Services를 모니터링 하려면](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [사용 하 여 동적 관리 뷰 &#40; Dmv &#41; Analysis Services를 모니터링 하려면](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
-

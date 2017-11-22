@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
-helpviewer_keywords:
-- Recordset collection [ADO], ADO for Visual C++ syntax
+dev_langs: C++
+helpviewer_keywords: Recordset collection [ADO], ADO for Visual C++ syntax
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 346b682247a495e7f873bc2833309de1f7888b81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7769e3bd54276d32c13c0a867d29584a746acb8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>(Visual c + + 구문에 대 한 ADO) 레코드 집합
 ## <a name="methods"></a>메서드  
@@ -128,4 +124,3 @@ WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRe
   
 ## <a name="see-also"></a>관련 항목:  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

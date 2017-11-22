@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- virtual servers in RDS [ADO]
+helpviewer_keywords: virtual servers in RDS [ADO]
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 085aaafca8390c2c036ea5e67905e194a18401b6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 10edd98f77c0aaeae05d25e76ad76a15b99bc1ed
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>IIS에서 가상 서버를 구성합니다.
 인터넷 정보 서비스 4.0에서 가상 서버를 만들 때 다음 두 가지 추가 단계 RDS를 사용 하도록 가상 서버를 구성 하는 데 필요 합니다.  
@@ -39,6 +36,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 

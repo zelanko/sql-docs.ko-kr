@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- DataTypeEnum
-helpviewer_keywords:
-- DataTypeEnum enumeration [ADO]
+f1_keywords: DataTypeEnum
+helpviewer_keywords: DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a50a4efc0c84e3d18fad287ba31a0ebaf0705dd0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 289d11f586fc1bd583baeb615ce3cff491949ccc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 데이터 형식을 지정 된 [필드](../../../ado/reference/ado-api/field-object.md), [매개 변수](../../../ado/reference/ado-api/parameter-object.md), 또는 [속성](../../../ado/reference/ado-api/property-object-ado.md)합니다. 해당 OLE DB 유형 표시기는 다음 표의 설명 열에 대 한 괄호 안에 표시 됩니다.  
@@ -128,4 +124,3 @@ ms.lasthandoff: 09/09/2017
 |-|-|  
 |[Append 메서드(ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[CreateParameter 메서드(ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
 |[CreateRecordset 메서드(RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
-

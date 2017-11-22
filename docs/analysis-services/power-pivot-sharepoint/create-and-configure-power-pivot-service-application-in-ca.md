@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 27d009450f9bdfac7eeff0f1bc9e1909d8968f01
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 343e3ed597e892e7b9e332d35acb6719e5b27aee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스의 공유 서비스 인스턴스입니다. 각 서비스 응용 프로그램은 고유한 응용 프로그램 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
@@ -166,4 +165,3 @@ ms.lasthandoff: 09/01/2017
  [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

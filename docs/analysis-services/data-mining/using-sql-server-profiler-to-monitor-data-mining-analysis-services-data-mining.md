@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], Analysis Services
+helpviewer_keywords: Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f3a8a59a9bea7f2e11d4ec3d68d5ad2dcd28ec6a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96b5485ebddba8823f262ba6a2229018d82a72fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>SQL Server 프로파일러를 사용하여 데이터 마이닝 모니터링(Analysis Services - 데이터 마이닝)
   필요한 권한이 있는 경우 SQL Server 프로파일러를 사용하여 SQL Server Analysis Services 인스턴스에 보낸 요청으로 실행된 데이터 마이닝 작업을 모니터링할 수 있습니다. 데이터 마이닝 작업에는 모델 또는 구조의 처리, 예측 또는 내용 쿼리, 새 모델 또는 구조의 작성 등이 포함될 수 있습니다.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   
-

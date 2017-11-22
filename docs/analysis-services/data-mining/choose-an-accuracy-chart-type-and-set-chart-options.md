@@ -19,17 +19,16 @@ helpviewer_keywords:
 - classification accuracy [data mining]
 - accuracy testing [data mining]
 ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f440a7cd7770f1412480e19304af4efcf17b1fba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b6e4e67306c225af2ba3d2cd418ceaed2d2541
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>정확도 차트 유형 선택 및 차트 옵션 설정
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 여러 가지 방법으로 마이닝 모델의 유효성을 확인할 수 있습니다. 각 모델 또는 구조에 대해 만들 수 있는 정확도 차트의 유형은 다음 요소에 따라 달라집니다.  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  교차 유효성 검사 보고서의 형식은 모든 모델 유형에서 동일하며 구성할 수 없습니다. 그러나 보고서의 내용은 분석하는 모델의 유형 및 예측 가능한 특성의 데이터 형식에 따라 달라집니다. 보고서의 결과를 클립보드에 복사하고 Excel에서 데이터를 사용할 수도 있습니다.  
   
   
-

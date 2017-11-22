@@ -18,17 +18,16 @@ helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ae21903694c80a5f919374e4e367dc82b4cec09e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c58a338f700785bb338703c72e3b435a7aa22b94
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-database-permissions-analysis-services"></a>데이터베이스 권한 부여(Analysis Services)
   관계형 데이터베이스의 백그라운드에서 Analysis Services 데이터베이스 관리를 수행하려는 경우 알아두어야 할 첫 번째 사항은 데이터 액세스의 측면에서 데이터베이스가 Analysis Services의 기본 보안 개체가 아니라는 점입니다.  
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [처리 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   
-

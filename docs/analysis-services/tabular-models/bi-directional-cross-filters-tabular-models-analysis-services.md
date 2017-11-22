@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98a16bacbaf839d65555b1495e7010d98a88e857
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>양방향 교차 필터-테이블 형식 모델-Analysis Services
   SQL Server 2016의 새로운 기능에는 테이블 형식 모델에서 *양방향 교차 필터* 를 사용하는 기본 제공 접근 방식이 있습니다. 이 방식을 사용하면 테이블 관계에서 필터 컨텍스트를 전파하기 위한 수동 DAX 해결 방법이 필요 없습니다.  
@@ -212,4 +211,3 @@ ms.lasthandoff: 09/01/2017
  [다 대 다 혁명 (SQLBI 블로그)](http://www.sqlbi.com/articles/many2many/)  
   
   
-

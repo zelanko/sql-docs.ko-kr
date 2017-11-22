@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProactiveCachingObjectNotificationBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProactiveCachingObjectNotificationBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ProactiveCachingObjectNotificationBinding data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ProactiveCachingObjectNotificationBinding data type
 ms.assetid: b3cf5fb6-6121-4f25-8de6-f171792c440d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e26d57b3f223d75dc1bbde562ca8ca901eba9b5c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bec4785a97b6bb9cd1f99c3bd4dbda7c91bbfef7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="proactivecachingobjectnotificationbinding-data-type-assl"></a>ProactiveCachingObjectNotificationBinding 데이터 형식(ASSL)
   정보를 나타내는 추상 파생된 데이터 형식을 정의 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) 지정 된 테이블 및 뷰 또는 테이블 및 뷰의 기존 데이터 바인딩을 통해 식별 된 데이터 원본 변경에 대 한 요소 캐시 재작성이 필요한입니다.  
@@ -76,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [스크립팅 언어 XML 데이터 형식 &#40; analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Account Element (ImpersonationInfo)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Account Element (ImpersonationInfo)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Account element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Account element
 ms.assetid: aa3a1281-e42a-4926-875b-e6b81f4599c3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 735d6e652c53b96bd3c74f36e14cf48575f990ce
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e99a3e4bd81c70fd1043465f59f76b2fab60e863
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="account-element-impersonationinfo-assl"></a>Account 요소(ImpersonationInfo)(ASSL)
   에 대 한 사용자 계정의 이름을 포함 된 [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md) 데이터 형식입니다.  
@@ -72,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

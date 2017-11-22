@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1145e4168e41f2014b95e7315a17dd00d764c386
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑
 MySQL 문자 데이터 형식, 식 및 리터럴을 대 한 문자 집합 (문자 집합)을 지정할 수 있습니다.  
@@ -143,4 +141,3 @@ MySQL 문자 데이터 형식, 식 및 리터럴을 대 한 문자 집합 (문�
 > -   MySQL 데이터베이스와 대상 데이터베이스에서 데이터베이스, 범주 및 개체 노드 수준 사이의 문자 집합 매핑, 기본 열에 대 한 루트가 아닌 각 수준에 특정 문자 집합에 대 한 값 **대상 데이터 형식** '상속 되어야'.  
 > -   표에서 값 **Inherited** 를 사용 하 여 접미사로 '(CHAR/VARCHAR)' 또는 '(NCHAR/NVARCHAR)' 따라 어떤 값이 특정 문자 집합으로 부모에서 상속 되었습니다.  
   
-

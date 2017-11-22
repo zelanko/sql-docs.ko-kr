@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Connection15::GetVersion
 - Connection15::Version
 - Connection15::get_Version
-helpviewer_keywords:
-- Version property [ADO]
+helpviewer_keywords: Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9cff8cd7404ae02d4ed6aaafa1dd8155398c1bb0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b896ccc88115e51706295fe8ce81210bf182aeca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="version-property-ado"></a>Version 속성 (ADO)
 ADO 버전 번호를 나타냅니다.  
@@ -49,4 +46,3 @@ ADO 버전 번호를 나타냅니다.
 ## <a name="see-also"></a>관련 항목:  
  [버전 속성 예제 (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Version 속성 예제(VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   
-

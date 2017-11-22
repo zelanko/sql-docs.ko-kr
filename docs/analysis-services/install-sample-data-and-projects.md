@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 0e675845383c3e54c8477a8e0866231ac302cd1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64715dfd607a2216d03f7c0b3dbc1501718c546c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-sample-data-and-projects"></a>샘플 데이터 및 프로젝트 설치 
 이 항목에 제공된 지침과 링크를 사용하여 Analysis Services 자습서에 사용되는 모든 데이터 및 프로젝트 파일을 설치할 수 있습니다.  
@@ -164,4 +161,3 @@ Analysis Services 다차원 모델에서는 관계형 데이터베이스 관리 
   
   
   
-

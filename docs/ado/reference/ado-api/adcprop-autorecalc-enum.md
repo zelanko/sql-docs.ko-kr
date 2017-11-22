@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- ADCPROP_AUTORECALC_ENUM
-helpviewer_keywords:
-- ADCPROP_AUTORECALC_ENUM [ADO]
+f1_keywords: ADCPROP_AUTORECALC_ENUM
+helpviewer_keywords: ADCPROP_AUTORECALC_ENUM [ADO]
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2388e467e4224480fef339b7b3e407458964a692
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f5639a1e86ce6b9e46b3583c8e092e389dfa422e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 시기를 지정 된 [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 공급자는 계층적 레코드 집합에서 집계 및 계산 된 열을 다시 계산 합니다.  
@@ -42,4 +38,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
  이러한 상수는 ADO/wfc 필요가 없습니다.
-

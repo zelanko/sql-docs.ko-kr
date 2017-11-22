@@ -20,17 +20,16 @@ helpviewer_keywords:
 - formats [Analysis Services], Attribute pane
 - modifying Attribute pane format
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 978317c821433458c129a8e9580cc881a8be2889
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17dc52daa9a1644dec6b26e42857d308932add66
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-attributes-in-dimension-designer"></a>차원 디자이너에서 특성 보기
   이 절차에서는 차원 디자이너의 특성 표시 방식을 변경하는 방법을 설명합니다.  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
 4.  **특성 표시 위치**를 가리킨 다음 **트리**, **표**또는 **목록**을 클릭합니다.  
   
   
-

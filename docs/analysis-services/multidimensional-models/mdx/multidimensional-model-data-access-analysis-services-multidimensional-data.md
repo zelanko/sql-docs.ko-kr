@@ -25,17 +25,16 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ff56655be72dd63160bcfdbdb27f3c2a978de367
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b659b4fd581742270fe5d38e5791ef215002757b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>다차원 모델 데이터 액세스(Analysis Services - 다차원 데이터)
   이 항목에서는 네트워크의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 대한 연결을 기본적으로 지원하는 클라이언트 응용 프로그램, 프로그래밍 방법 또는 스크립트를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터에 액세스하는 방법에 대해 설명합니다.  
@@ -112,4 +111,3 @@ ms.lasthandoff: 09/01/2017
  [테이블 형식 모델 데이터 액세스](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   
-

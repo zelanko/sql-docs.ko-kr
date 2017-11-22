@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine Tuning Advisor [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine Tuning Advisor [SQL Server], tutorials
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 56c567fc9015b14e46faa3b29a6347b4b33d752f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1c029783a8d5115c63daacccaba24de0db96d4a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>1단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색
 데이터베이스 엔진 튜닝 관리자를 사용하면 GUI(그래픽 사용자 인터페이스)를 기반으로 튜닝 세션과 튜닝 권장 구성 보고서를 볼 수 있습니다. 이 단원에서는 도구를 시작하는 방법과 도구 화면을 구성하는 방법을 보여 줍니다. 이 세션의 작업을 마치면 도구를 시작하는 여러 방법과 정기적으로 수행하는 튜닝 태스크를 지원하도록 도구 화면을 구성하는 방법을 알게 됩니다.  
@@ -40,4 +36,3 @@ ms.lasthandoff: 08/02/2017
   
   
   
-

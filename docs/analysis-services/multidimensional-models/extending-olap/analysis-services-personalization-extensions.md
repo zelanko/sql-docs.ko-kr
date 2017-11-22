@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e1e10612e9e0f93206299e07271b3795c92962a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8da5ac35a5e9f46fbaedf831555d6b1475b41234
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 개인 설정 확장 프로그램
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램에서 다음을 수행할 수 있도록 하는 기능을 제공 합니다.  
@@ -157,4 +154,3 @@ ms.lasthandoff: 09/01/2017
  MDSCHEMA_KPIS에 scope 열이 추가되었습니다. 범위 값은 다음과 같습니다: MDKPI_SCOPE_GLOBAL = 1, MDKPI_SCOPE_SESSION = 2입니다.  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0a62e3bad1e9bfcae6c929061000ebcc8d3b7af7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4d3e835e6620ed5e4efb551d3e3ebcde7cf3bf8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 로지스틱 회귀 알고리즘
   로지스틱 회귀는 이진 결과 모델링에 사용되는 유명한 통계 기법입니다.  
@@ -93,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [로지스틱 회귀 모델 쿼리 예제](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
   
   
-

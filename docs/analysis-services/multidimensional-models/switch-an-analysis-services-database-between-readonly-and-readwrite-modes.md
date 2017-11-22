@@ -19,17 +19,16 @@ helpviewer_keywords:
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8c153dbc0b85271f175c86b37ee2b165957e926c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 11eaa65564dcd59442bd8b111c0de009b00e8fd4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 관리자는 쿼리 작업을 여러 전용 서버에 배포하는 큰 노력의 일환으로 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경할 수 있습니다.  
@@ -151,4 +150,3 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
  [DbStorageLocation 요소](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   
-

@@ -19,17 +19,16 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83259b46fd10b45e25e032dfdb692fd654c67260
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>큐브, 파티션 및 차원 처리에 대 한 오류 구성
   큐브, 파티션 또는 차원 개체의 오류 구성 속성에 따라 처리 중에 데이터 무결성 오류가 발생하는 경우 서버가 응답하는 방법이 결정됩니다. 일반적으로 키 열의 중복 키, 누락된 키 및 Null 값에 의해 이러한 오류가 트리거되며, 오류의 원인이 되는 레코드가 데이터베이스에 추가되지 않지만 다음에 발생하는 작업을 결정하는 속성을 설정할 수 있습니다. 기본적으로 처리가 중지됩니다. 그러나 큐브를 개발하는 중에 오류가 발생하는 경우 가져온 데이터로 큐브 동작을 테스트할 수 있도록 처리를 계속할 수 있습니다(가져온 데이터가 완전하지 않은 경우 포함).  
@@ -188,11 +187,10 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_next"></a> 다음 단계  
  오류로 인해 처리를 중지할지 오류를 무시할지 결정합니다. 오류만 무시됩니다. 오류를 발생시킨 레코드는 무시되지 않으며 삭제되거나 알 수 없는 멤버로 변환됩니다. 데이터 무결성 규칙을 위반하는 레코드는 데이터베이스에 추가되지 않습니다. 기본적으로 첫 번째 오류가 발생할 때 처리가 중지되지만 오류 제한을 높여서 이를 변경할 수 있습니다. 큐브 개발 시 오류 구성 규칙을 완화하여 테스트할 데이터가 있도록 처리를 계속할 수 있게 허용하는 것이 유용할 수 있습니다.  
   
- 기본 Null 처리 동작을 변경할지 여부를 결정합니다. 기본적으로 숫자 열의 Null은 0으로 처리되는 반면 문자열 열의 Null은 빈 값으로 처리됩니다. 특성에 대한 Null 처리를 설정하는 데 대한 지침은 [알 수 없는 멤버 및 Null 처리 속성 정의](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 를 참조하십시오.  
+ 기본 Null 처리 동작을 변경할지 여부를 결정합니다. 기본적으로 숫자 열의 Null은 0으로 처리되는 반면 문자열 열의 Null은 빈 값으로 처리됩니다. 특성에 대한 Null 처리를 설정하는 데 대한 지침은 [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
  [로그 속성](../../analysis-services/server-properties/log-properties.md)   
  [알 수 없는 멤버 및 Null 처리 속성 정의](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   
-

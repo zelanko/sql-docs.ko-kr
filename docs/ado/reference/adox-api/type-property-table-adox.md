@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - _Table::Type
 - _Table::GetType
 - _Table::get_Type
-helpviewer_keywords:
-- Type property [ADOX]
+helpviewer_keywords: Type property [ADOX]
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6de5f65d892bd9cbf78e1564361dc498ff8d131b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 926de41ebc897235f336eb00cf5754fb0a54e94b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-table-adox"></a>Type 속성 (테이블) (ADOX)
 테이블의 유형을 나타냅니다.  
@@ -50,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  [Type 속성 (열) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Type 속성 (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae57bdc2a1f385e06248ab9486b7ef5fc07f7932
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96e61c207316b216a1706834188a4f6f235cb52e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Restore-ASDatabase cmdlet
 
@@ -204,4 +202,3 @@ PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase –restorefile “\\my
   
  이 명령은 원격 백업 폴더에 있는 암호화된 Analysis Services 백업 파일(testdb.abf)을 원격 Analysis Services 기본 인스턴스에 복원합니다. –StorageLocation 매개 변수는 데이터베이스 파일을 기본 위치 이외의 위치에 저장할 때 사용합니다. 이 경우 restoreDBfiles라는 파일 공유에 저장됩니다.  
   
-

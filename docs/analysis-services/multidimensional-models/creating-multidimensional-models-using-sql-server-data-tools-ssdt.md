@@ -21,17 +21,16 @@ helpviewer_keywords:
 - projects [Analysis Services]
 - solutions [Analysis Services]
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8069e4cb513ca83cd161564c6d9a0b2284890fdc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f6516c119723c537d64481d17692d504df7f651
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)를 사용하여 다차원 모델 만들기
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션 작성, 배포 및 관리를 위해 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]라는 두 가지 다른 환경을 제공합니다. 이러한 환경은 둘 다 프로젝트 시스템을 구현합니다. Visual Studio 프로젝트에 대한 자세한 내용은 MSDN Library의 [프로젝트의 컨테이너 특성(Projects as Containers)](http://go.microsoft.com/fwlink/?LinkId=63960) 을 참조하십시오.  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [다차원 model 데이터베이스&#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
-

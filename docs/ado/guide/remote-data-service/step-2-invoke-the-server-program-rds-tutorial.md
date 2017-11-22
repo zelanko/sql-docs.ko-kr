@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS tutorial [ADO], invoking server program
+helpviewer_keywords: RDS tutorial [ADO], invoking server program
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b2686f9206b49cd193cda9970aad72a10d75c482
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd6ffeef7f178c7823b25fcd9a6b8e1a73c6756b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>2 단계: 서버 프로그램 (RDS 자습서) 호출
 클라이언트에 대 한 메서드를 호출 하는 경우 *프록시*, 서버에서 실제 프로그램 메서드를 실행 합니다. 이 단계에서는 서버에서 쿼리를 실행 합니다.  
@@ -74,4 +71,3 @@ Sub RDSTutorial2B()
 ## <a name="see-also"></a>관련 항목:  
  [3 단계: 서버가 가져옵니다 (RDS 자습서) 레코드 집합을](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

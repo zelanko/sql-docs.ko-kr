@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>데이터 원본 뷰를 사용하여 큐브 만들기
   기존 데이터 원본 뷰를 사용하려는 경우 새 큐브를 생성하는 이 방법을 사용합니다. 이 방법을 사용하여 데이터 원본 뷰를 지정하고 데이터 원본 뷰에서 사용할 팩트 및 차원 테이블을 선택합니다. 그런 다음 큐브에 포함할 차원과 측정값을 선택합니다.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  마법사의 **마법사 완료** 페이지에서 새 큐브에 있는 측정값 그룹, 측정값 및 차원을 볼 수 있습니다. **큐브 이름** 상자에 큐브의 이름을 입력합니다. 그런 다음 큐브가 만족스러우면 **마침**을 클릭합니다. 마법사의 이전 페이지로 돌아가서 변경하려면 **뒤로** 를 클릭합니다.  
   
   
-

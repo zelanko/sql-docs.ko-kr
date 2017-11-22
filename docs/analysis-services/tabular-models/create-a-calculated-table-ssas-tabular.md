@@ -8,22 +8,20 @@ ms.service:
 ms.component: tabular-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: adeaa21b5bf9a70f52dc6442b5e453b99ad6721b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e7db92207b2a518c3d697b997a22ed7c076cd0b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-calculated-table-ssas-tabular"></a>계산 테이블 만들기(SSAS 테이블 형식)
   *계산 테이블* 은 DAX 쿼리 또는 식을 기반으로 계산된 개체이며 같은 모델에 포함된 다른 테이블의 전체 또는 일부에서 파생됩니다.  
@@ -81,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [테이블 형식 모델의 DAX 이해&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   
-

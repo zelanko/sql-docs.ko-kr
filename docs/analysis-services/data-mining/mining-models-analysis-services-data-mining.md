@@ -21,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 91d1787e568c49d528cc030125ffdb73c0e00b28
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
   *마이닝 모델* 은 데이터에 알고리즘을 적용하여 만들지만 단순한 알고리즘 또는 메타데이터 컨테이너가 아니며, 새로운 데이터에 적용하여 예측을 생성하고 관계를 추론할 수 있는 데이터, 통계 및 패턴의 집합입니다.  
@@ -157,4 +156,3 @@ ms.lasthandoff: 09/01/2017
  [데이터베이스 개체&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

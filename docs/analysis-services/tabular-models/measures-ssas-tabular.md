@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures"></a>측정값 그룹
   테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 응용 프로그램에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
@@ -101,7 +100,6 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ## <a name="see-also"></a>관련 항목:  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Kpi 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
- [계산 된 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+ [계산 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
-

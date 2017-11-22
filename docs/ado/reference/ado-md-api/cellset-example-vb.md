@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Cellset object [ADO MD], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 35bcc8eb6068c1e0579d3245e5acc85601ebec49
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ac5cf860d4bacb10e79de25304e950849ff30093
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cellset-example-vb"></a>셀 집합 예제 (VB)
 이 Visual Basic 프로젝트 ADO MD를 사용 하 여 큐브 데이터에 액세스 하는 기본적인 방법을 보여 줍니다. 열 및 행 머리글에 대 한 멤버 캡션을 표시 한 다음 서식 있는 값은 셀 집합 내에서 특정 셀의 표시 합니다.  
@@ -122,4 +118,3 @@ Error_cmdCellSettoDebugWindow_Click:
    Exit Sub  
 End Sub  
 ```
-

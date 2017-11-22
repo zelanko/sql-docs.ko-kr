@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - LineSeparator property [ADO], Visual Basic example
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2672b5d41683313c36d95adac68f33367396864
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af08ca92b0f9a6f20e7b1aa0544ea41361945c9d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS LineSeparator 속성 및 SkipLine 메서드 예제 (VB)
 이 예제에는 한 번에 한 줄씩 텍스트 스트림을 조작 하는 방법을 보여 줍니다. 기본 캐리지 리턴/줄 바꿈에서 선 구분 기호가 변경 결과 (**adCRLF**)을 단순히 줄 바꿈 (**adLF**) 또는 캐리지 리턴 (**adCR**) 표시 됩니다.  
@@ -124,4 +121,3 @@ End Sub
  [EOS 속성](../../../ado/reference/ado-api/eos-property.md)   
  [LineSeparator 속성 (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine 메서드](../../../ado/reference/ado-api/skipline-method.md)
-

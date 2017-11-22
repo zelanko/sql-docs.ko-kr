@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DimensionPermissions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DimensionPermissions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DimensionPermissions
-helpviewer_keywords:
-- DimensionPermissions element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DimensionPermissions
+helpviewer_keywords: DimensionPermissions element
 ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7a3e99a8dc5f0ce6745a224a16bfd97b3c1b1e31
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 23915ccc9ebc496be05c9ae2c0d092961e9db615
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensionpermissions-element-assl"></a>DimensionPermissions 요소(ASSL)
   에 적용 가능한 권한 컬렉션을 포함 한 [차원](../../../analysis-services/scripting/objects/dimension-element-assl.md) 요소 또는 [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md) 요소입니다.  
@@ -79,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [컬렉션 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

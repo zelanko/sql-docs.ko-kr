@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- filtering for updated records [ADO]
+helpviewer_keywords: filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29539dfd62901a2db41e3d282f615a5ce550cb84
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b633f10b4bac5ec6347879510e1867e7d5d14741
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filtering-for-updated-records"></a>업데이트 된 레코드 필터링
 UpdateBatch을 호출 하기 전에 레코드 집합을 연 이후 변경 된 레코드에만 보려는 Recordset Filter 속성 또는 UpdateBatch에 대 한 마지막 호출을 사용할 수 있습니다. 이 작업을 수행 하려면 필터를 그 다음 섹션의 코드 예제에 나와 있는 것 처럼 레코드 수가 업데이트 됩니다 확인 하려면 같음 설정 합니다.  
@@ -64,4 +61,3 @@ UpdateBatch을 호출 하기 전에 레코드 집합을 연 이후 변경 된 �
   
 ## <a name="see-also"></a>관련 항목:  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)
-

@@ -14,22 +14,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.impersonationinfo.f1
-helpviewer_keywords:
-- Impersonation Information dialog box
+f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
+helpviewer_keywords: Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b448d78a897c6e7c6aa6973b6e61b92ff7a9aade
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9dfd1dbf5f4f514136695dc2bb0d776afda99562
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>가장 옵션 설정(SSAS - 다차원)
   Analysis Services 모델에서 **data source** 개체를 만들 때 구성해야 하는 설정 중 하나는 가장 옵션입니다. 이 옵션은 Analysis Services에서 OLE DB 데이터 공급자를 로드하거나 로밍 프로필을 지원하는 환경에서 사용자 프로필 정보를 분석하는 등 연결과 관련된 로컬 작업을 수행할 때 특정 Windows 사용자 계정의 ID를 가장할지 여부를 결정합니다.  
@@ -114,4 +111,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

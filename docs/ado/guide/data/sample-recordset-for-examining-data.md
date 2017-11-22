@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eada9043dfd5ac890fe6e742bcac44d6f13d28c0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: edc5419a18d658d9a0e10dc40b69ceb41c730bd4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sample-recordset-for-examining-data"></a>데이터를 검사 하기 위한 샘플 레코드 집합
 첫째, 살펴보겠습니다는 **레코드 집합** Microsoft SQL Server에서 기본 Northwind 샘플 데이터에 대해 실행에서 다음 SQL 쿼리를 사용 하 여 반환 된 개체입니다.  
@@ -50,4 +48,3 @@ WHERE CategoryID = 7
  이러한 결과 직접 확보 하려는 경우 다음 JScript 예제를 시도해 보십시오.  
   
 -   [레코드 집합을 반환 하려면 JScript 예제](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)
-

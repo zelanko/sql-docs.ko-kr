@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 48fb9c051deb490a2652bda4d8cd39be335c3270
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae47b751e9e62d84188927186f186c6c9d344ce0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="formal-shape-grammar"></a>형식 모양 문법
 다음은 shape 명령을 만드는 정식 문법입니다.  
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/09/2017
  [일반적으로 shape 명령](../../../ado/guide/data/shape-commands-in-general.md)   
  [셰이프 COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md)   
  [Visual Basic for Applications 기능](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-

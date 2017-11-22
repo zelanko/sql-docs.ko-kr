@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>커서 위치의 중요성
 모든 커서는 해당 데이터를 저장할 임시 리소스를 사용 합니다. 이러한 리소스는 메모리, 디스크 페이징 파일, 임시 디스크 파일 또는 데이터베이스의 임시 저장소 될 수 있습니다. 커서 라고는 *클라이언트 쪽* 이러한 리소스는 클라이언트 컴퓨터에 있을 때 커서입니다. 커서 라고는 *서버 쪽* 커서 서버에 이러한 리소스가 있는 경우.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
  서버 쪽 커서는 사실을 알아야 하는 반면-적어도 일시적으로-모든 활성 클라이언트에 대 한 귀중 한 서버 리소스를 사용 합니다. 서버 하드웨어에 모든 활성 클라이언트에서 요청한 서버 쪽 커서를 관리할 수 있도록 적절 하 게 계획 해야 합니다. 또한 서버 쪽 커서가 수만 단일 행으로의 액세스를 제공 하기 때문에 느려질 수-사용할 수 있는 일괄 처리 커서가 없습니다.  
   
  서버 쪽 커서는 삽입, 업데이트 또는 레코드를 삭제 하는 경우에 유용 합니다. 서버 쪽 커서와 동일한 연결에서 다중 활성 문을 수도 있습니다.
-

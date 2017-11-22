@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e2ec11e3b9dc622f254a42f82e24eadc88808400
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d5dac701e82f8d9b979b1d4d289a1e06ba0233c7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>단원 1-1-Analysis Services 프로젝트 만들기
 다음 태스크에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 기반으로 **Analysis Services Tutorial**이라는 새 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만듭니다. *프로젝트* 는 관련된 개체의 모음입니다. 프로젝트는 솔루션 내에 있으며 솔루션은 하나 이상의 프로젝트를 포함합니다. 자세한 내용은 [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)를 참조하세요.  
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

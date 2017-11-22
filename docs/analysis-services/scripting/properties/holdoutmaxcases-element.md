@@ -14,24 +14,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HoldoutMaxCases
-helpviewer_keywords:
-- HoldoutMaxCases element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HoldoutMaxCases
+helpviewer_keywords: HoldoutMaxCases element
 ms.assetid: 58d94d10-e11e-4368-b3b8-dff23e1947cd
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96558785d84797018b6a0ba4cf0d0b370127443e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1e49da22961d21088649b4eda4539e357998049e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="holdoutmaxcases-element"></a>HoldoutMaxCases 요소
   테스트 집합이 들어 있는 홀드 아웃 파티션에 사용 되는 데이터 원본의 최대 사례 수를 지정 된 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) 요소입니다. 데이터 집합의 나머지 사례는 학습에 사용됩니다. 0 값은 테스트 집합으로 홀드아웃할 수 있는 사례 수에 대한 제한이 없음을 나타냅니다.  
@@ -81,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [HoldoutActualSize 요소](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)  
   
   
-

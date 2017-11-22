@@ -27,17 +27,16 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53869c8e03d3b4c289872351e59579d49aa193e2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft 신경망 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 기계 학습을 위해 널리 사용되고 조정 가능한 신경망 아키텍처의 구현입니다.  이 알고리즘은 예측 가능한 특성의 가능한 각 상태에 대해 입력 특성의 가능한 각 상태를 테스트하고 학습 데이터를 기반으로 각 조합의 확률을 계산합니다. 이러한 확률을 분류 또는 회귀 작업에 사용하여 일부 입력 특성을 기반으로 결과를 예측할 수 있습니다. 신경망은 연결 분석에도 사용할 수 있습니다.  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [Microsoft 로지스틱 회귀 알고리즘](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   
   
-

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- StayInSync property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2da59e893ac3af1be2e8567b02c6b023aef9f71c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4c40c6f31f783dfecb4f05f1032521d4f7e7e8c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync 속성 예제 (VC + +)
 이 예제에서는 방법을 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성에 액세스 하는 중 행을 계층적 용이 하 게 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -155,4 +151,3 @@ void PrintComError(_com_error &e) {
  [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync 속성](../../../ado/reference/ado-api/stayinsync-property.md)
-

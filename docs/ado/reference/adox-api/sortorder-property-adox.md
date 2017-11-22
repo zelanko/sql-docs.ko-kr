@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Column::put_SortOrder
 - _Column::get_SortOrder
 - _Column::GetSortOrder
-helpviewer_keywords:
-- SortOrder property [ADOX]
+helpviewer_keywords: SortOrder property [ADOX]
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: afa1d7b930fd17568eb242149d4cc19d7226e37a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6941ae3663d0f87c09f3f97e2c8e7d0adab3aaee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 속성 (ADOX)
 열 (인덱스 열에만 해당)에 대 한 정렬 순서를 나타냅니다.  
@@ -50,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  [SortOrder 속성 예제 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
-

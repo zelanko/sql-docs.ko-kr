@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-incremental-generation"></a>증분 생성 이해
   처음 스키마를 생성한 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 큐브 및 차원 정의를 변경하고 스키마 생성 마법사를 다시 실행할 수 있습니다. 마법사는 주제 영역 데이터베이스 및 연결된 데이터 원본 뷰에서 스키마를 업데이트하여 변경 내용을 반영하고 다시 생성될 테이블의 현재 데이터를 가능한 범위까지 보존합니다. 처음 스키마를 생성한 후 테이블을 변경하면 스키마 생성 마법사가 다음 규칙에 따라 가능한 경우 해당 변경 내용을 유지합니다.  
@@ -98,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [스키마 생성 마법사&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   
-

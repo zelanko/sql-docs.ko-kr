@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EndOfData Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EndOfData Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EndOfData
-helpviewer_keywords:
-- EndOfData element
+applies_to: SQL Server 2016 Preview
+f1_keywords: EndOfData
+helpviewer_keywords: EndOfData element
 ms.assetid: 4cee48bc-d486-4125-9d65-f323c6ec9d09
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e6fa054baa12bbfb93fac8714991cb20f48a4bb3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f02e6da8d99a7c84e30479308625fcc8c0d43769
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="endofdata-element-assl"></a>EndOfData 요소(ASSL)
   받은 데이터의 끝을 나타냅니다.는 [PushedDataSource](../../../analysis-services/scripting/data-type/pusheddatasource-data-type-assl.md) 요소입니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

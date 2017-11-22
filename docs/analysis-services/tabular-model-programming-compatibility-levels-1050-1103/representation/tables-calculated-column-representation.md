@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c1817234c6a3061afc53377053725009babbcc84
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77fa541451cc69fa63baf362f0391f890219f36e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables---calculated-column-representation"></a>테이블-계산된 열 표현
   계산 열은 테이블에 새 열을 만드는 DAX 식이며 구해진 값이 테이블에 저장됩니다. 테이블이 처리될 때마다 계산 열 식이 계산됩니다.  
@@ -116,4 +114,3 @@ private void addCalculatedColumn(
 ```  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - receiving multiple Recordsets [ADO]
 - Recordset object [ADO], receiving multiple Recordsets
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3687e3ee6a2588a5461e48a1f3f26db91d14a8fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ab72906b1f36e22bba58b58ca7917b3399ebc458
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="receiving-multiple-recordsets"></a>다중 레코드 집합 받기
 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) 여러 반환 지원 **레코드 집합** 여러 SQL 문을 포함 하는 단일 명령에 대 한 개체 하나 **레코드 집합**SQL 문당 합니다. 되는 순서는 **레코드 집합**명령 텍스트에 SQL 문이 배치 되는 순서에 따라 반환 됩니다.  
@@ -42,4 +40,3 @@ SELECT ProductID, ProductName, UnitPrice
  사용할 수는 **Recordset.NextRecordset** 메서드 두 개체를 열거 합니다.  
   
  자세한 내용은 참조 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)합니다.
-

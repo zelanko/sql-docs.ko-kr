@@ -18,17 +18,16 @@ helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed842a83a00412da1fce19e7519049d4171baf21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 선형 회귀 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 여러 쌍의 연속 특성을 모델링하는 데 최적화된 특수한 버전의 Microsoft 의사 결정 트리 알고리즘입니다. 이 항목에서는 알고리즘의 구현을 설명하고, 알고리즘 동작을 사용자 지정하는 방법을 설명하며, 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
@@ -99,4 +98,3 @@ ms.lasthandoff: 09/01/2017
  [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

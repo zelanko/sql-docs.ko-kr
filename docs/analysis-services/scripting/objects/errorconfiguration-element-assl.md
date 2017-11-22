@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ErrorConfiguration Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ErrorConfiguration Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ErrorConfiguration
-helpviewer_keywords:
-- ErrorConfiguration element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ErrorConfiguration
+helpviewer_keywords: ErrorConfiguration element
 ms.assetid: e8363ec2-fbbf-48f6-a55d-01793afa759c
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f0e9d89f0d7bec19ac05d86a098d44185b6ccca9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d70307b772b3220752754c63ed2b02afcbd5d126
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="errorconfiguration-element-assl"></a>ErrorConfiguration 요소(ASSL)
   부모 요소가 처리될 때 발생할 수 있는 오류 처리에 대한 설정을 지정합니다.  
@@ -82,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

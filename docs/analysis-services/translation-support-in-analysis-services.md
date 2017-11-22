@@ -8,8 +8,7 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - attribute translations [Analysis Services]
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2f9339fc314e178ec75777d985851da2589a3658
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 27715bc2c9333955931a1bc500a8267c0b1aa954
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services에서의 번역 지원
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 모델에서 캡션 또는 설명의 여러 번역을 포함하여 LCID를 기반으로 한 문화권 관련 문자열을 제공할 수 있습니다. 다차원 모델의 경우 데이터베이스 이름, 큐브 개체 및 데이터베이스 차원 개체에 대한 번역을 추가할 수 있습니다. 테이블 형식 모델의 경우 테이블 및 열 캡션 및 설명을 번역할 수 있습니다.  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [세계화 팁 및 모범 사례 &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, glossary
+helpviewer_keywords: ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da1566fc59ac51e0923392a3cc0bee6d24dd3bfa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-glossary-terms"></a>ADO 용어 설명
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.
@@ -222,4 +219,3 @@ ms.lasthandoff: 09/09/2017
  요소 (노드) 간의 계층 관계를 나타내는 A 트리 구조입니다. 트리 (루트)의 최상위 수준에서 노드 하나 있습니다. 서비스의 루트를 아래에 자식이 여러 개 있을 수 있습니다. 각 자식 트리와 같이 분기 되므로, 다른 하위 항목의 부모 요소일 수 있습니다. 문서 및 기타 폴더가 들어 있는 폴더는 일반적인 예는 트리 구조입니다. 계층, 노드, 루트, 자식, 부모를 참조 하십시오.
 
  웹 서버 웹 서비스 및 인트라넷 및 인터넷 사용자가 페이지를 제공 하는 컴퓨터입니다.
-

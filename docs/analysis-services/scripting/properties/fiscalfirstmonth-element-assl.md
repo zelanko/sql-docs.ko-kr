@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- FiscalFirstMonth Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: FiscalFirstMonth Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- FiscalFirstMonth
-helpviewer_keywords:
-- FiscalFirstMonth element
+applies_to: SQL Server 2016 Preview
+f1_keywords: FiscalFirstMonth
+helpviewer_keywords: FiscalFirstMonth element
 ms.assetid: 30766baa-ebec-4425-93de-7defe4d6e571
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2925cc120ce41b3ce750fe897b4392efb847301e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1e6b4032e2caac1f9156c12e7bae1536f19c18b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fiscalfirstmonth-element-assl"></a>FiscalFirstMonth 요소(ASSL)
   에 대 한 회계 기간의 첫 번째 월을 정의 [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) 요소입니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-processing"></a>트랜잭션 처리
 A *트랜잭션* 일련의 연결을 통해 실행 하는 데이터 액세스 작업의 시작과 끝을 구분 합니다. 데이터 원본에서의 트랜잭션 기능에 따라는 **연결** 개체 또한 트랜잭션을 만들고 관리할 수 있습니다. 예를 들어 Microsoft OLE DB Provider for SQL Server를 사용 하 여 Microsoft SQL Server에서 데이터베이스에 액세스를 실행 하면 명령에 대 한 여러 개의 중첩 된 트랜잭션을 만들 수 있습니다.  
@@ -53,4 +51,3 @@ A *트랜잭션* 일련의 연결을 통해 실행 하는 데이터 액세스 �
   
 ## <a name="nested-transactions"></a>중첩된 트랜잭션  
  호출 중첩된 트랜잭션을 지 원하는 공급자에 대 한는 **BeginTrans** 열려 있는 트랜잭션에서 메서드 새, 중첩 된 트랜잭션을 시작 합니다. 반환 값의 중첩 수준을 나타냅니다: "1"의 반환 값은 최상위 트랜잭션을 연 나타냅니다 (즉, 트랜잭션이 중첩 되지 않은 다른 트랜잭션에서), "2" (a 2-수준 트랜잭션 연 나타냅니다. 트랜잭션 최상위 트랜잭션 내에서 중첩), 등입니다. 호출 **CommitTrans** 또는 **RollbackTrans** 에 영향을 가장 최근에 열어 트랜잭션; 맞춤법 검사기를 닫거나 더 높은 수준의 트랜잭션을 해결할 수 전에 현재 트랜잭션을 롤백합니다.
-

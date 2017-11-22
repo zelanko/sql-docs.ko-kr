@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 81a3c4860c3916753435e2b5c608628650bae255
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40e18de9f96f69472fc3fb7b8720a0abdb27d2fb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>프로젝트 Settings(Synchronization) (OracleToSQL)
 동기화 페이지는 **프로젝트 설정** 대화 상자 SSMA를 로드 하 고 새로 고침 같은 데이터베이스 개체, 테이블 및 저장된 프로시저에 방법을 사용자 지정 하는 설정이 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -103,4 +101,3 @@ SSMA는 개체가 변경 될 때 동기화 대화 상자에서 기본 설정을 
   
 -   선택 하는 경우 **Skip**, SSMA 새로 고침 작업을 수행 하지 것입니다.  
   
-
