@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- NextRecordset method [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f4ad28e324126f0dc7374b6882e727f1052e41d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8876682f825febe1deaf1a00867d543120e83af7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 메서드 예제 (VB)
 사용 하 여이 예제는 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드를 세 개의 개별 이루어진 복합 명령문을 사용 하는 레코드 집합의 데이터를 볼 **선택** 문.  
@@ -105,4 +101,3 @@ End Sub
 ## <a name="see-also"></a>관련 항목:  
  [NextRecordset 메서드 (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

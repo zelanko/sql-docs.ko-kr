@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 79512ded963b6568346c261b69c100b77e03bc74
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: d86b23c7c1b56d7407e0068c2e77e184be1aa36d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-types-supported-in-tabular-models"></a>테이블 형식 모델에서 지원 되는 데이터 형식
 
@@ -172,4 +171,3 @@ ms.lasthandoff: 10/21/2017
   
  특정 함수 또는 연산자에서 공백을 처리하는 방법은 [DAX 함수 참조](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)섹션에서 각 DAX 함수에 대한 항목을 참조하세요.  
   
-

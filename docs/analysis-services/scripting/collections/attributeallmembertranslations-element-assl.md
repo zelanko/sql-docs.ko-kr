@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeAllMemberTranslations Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeAllMemberTranslations Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AttributeAllMemberTranslations
-helpviewer_keywords:
-- AttributeAllMemberTranslations element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AttributeAllMemberTranslations
+helpviewer_keywords: AttributeAllMemberTranslations element
 ms.assetid: 1a0d86ea-d95d-4d93-b321-acd35ed4ac26
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9fc5965546422696501674c5cb807a627241d44a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d3e9208e7b4568a751b3a3a65ab9f17c0919093f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributeallmembertranslations-element-assl"></a>AttributeAllMemberTranslations 요소(ASSL)
   차원에 있는 All 멤버의 캡션에 대한 번역의 컬렉션을 포함합니다.  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [컬렉션 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

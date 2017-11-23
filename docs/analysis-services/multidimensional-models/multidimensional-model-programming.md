@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7435de185c6a8cb54d9fc55ea53d9c8d66214033
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dae8eace8a062bb296e172ce5d547eaf7768fa42
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-programming"></a>다차원 모델 프로그래밍
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 Analysis Services 인스턴스와 사용 가능한 다차원 데이터베이스에 대한 프로그래밍을 위해 사용할 수 있는 여러 API를 제공합니다. 이 섹션에서는 Analysis Services 다차원 솔루션을 사용하여 사용자 지정 응용 프로그램을 만들려는 개발자를 위한 접근 방법을 설명합니다. 이 정보를 활용하여 특정 프로젝트의 요구 사항에 가장 적합한 프로그래밍 인터페이스를 선택할 수 있습니다. Analysis Services 개발 프로젝트는 Windows 플랫폼이나 HTTP 액세스를 지원하는 다른 플랫폼에서 실행되는 관리 또는 비관리 코드를 기반으로 할 수 있습니다.  
@@ -34,11 +32,11 @@ ms.lasthandoff: 09/01/2017
 ## <a name="in-this-section"></a>섹션 내용  
  [Microsoft OLAP 아키텍처 이해](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
- [ADOMD.NET을 사용 하 여 개발](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET을 사용하여 개발](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
  [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
- [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services에서 XMLA를 사용하여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
  [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [데이터 마이닝 프로그래밍](../../analysis-services/data-mining-programming.md)  
   
   
-

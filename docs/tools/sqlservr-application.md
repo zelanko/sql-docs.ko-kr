@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bbf4124c957394d692976eef60d62742741bd949
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0abbf1d371f7fb97547b7e52331c150c7c003ae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlservr-application"></a>sqlservr 응용 프로그램
   **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
@@ -66,7 +64,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 최소 구성으로 시작합니다. 예를 들어 오버 커밋 메모리 같은 구성 값의 설정 때문에 서버를 시작할 수 없을 경우에 유용합니다.  
   
  **-e** *error_log_path*  
- 오류 로그 파일의 정규화된 경로를 나타냅니다. 지정 하지 않으면 기본 위치는  *\<드라이브 >*: files\microsoft SQL server\mssql\log\errorlog이 고 기본 인스턴스에 대 한 및  *\<드라이브 >*: files\microsoft SQL Server\MSSQL$*instance_name*명명 된 인스턴스의 \Log\Errorlog입니다. **-e**와 *error_log_path* 사이에 공백이 없어야 합니다.  
+ 오류 로그 파일의 정규화된 경로를 나타냅니다. 지정 하지 않으면 기본 위치는  *\<드라이브 >*: files\microsoft SQL server\mssql\log\errorlog이 고 기본 인스턴스에 대 한 및  *\<드라이브 >*: files\microsoft SQL Server\MSSQL$*instance_name*명명 된 인스턴스의 \Log\Errorlog입니다. **-e** 와 *error_log_path*사이에 공백이 없어야 합니다.  
   
  **-l** *master_log_path*  
  **master** 데이터베이스 트랜잭션 로그 파일의 정규화된 경로를 나타냅니다. **-l** 와 *master_log_path*사이에 공백이 없어야 합니다.  
@@ -75,7 +73,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 시작하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 시작하면 한 사용자만 연결할 수 있습니다. 디스크 캐시에 있는 완료된 트랜잭션이 정기적으로 데이터베이스 장치에 기록되도록 하는 CHECKPOINT 메커니즘이 시작되지 않았습니다. 대개 시스템 데이터베이스에 문제가 있어서 복구해야 하는 경우 이 옵션을 사용합니다. **sp_configure allow updates** 옵션을 설정합니다. 기본적으로 **allow updates** 는 사용할 수 없습니다.  
   
  **-n**  
- 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. 인스턴스를 시작 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와  **-n**  옵션이 표시 되지 않으면 사용 하는 것이 좋습니다는 **-e** 옵션을 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록 되지 않습니다.  
+ 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. 인스턴스를 시작 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와  **-n**  옵션이 표시 되지 않으면 사용 하는 것이 좋습니다는 **-e** 옵션을 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록 되지 않습니다.  
   
  **-T** *trace#*  
  지정된 추적 플래그( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
@@ -94,18 +92,18 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
  이 옵션을 사용하면 메모리 할당을 튜닝에 도움이 될 수 있으나 실제 메모리가 운영 체제에서 응용 프로그램에 사용할 수 있도록 구성된 가상 메모리 한계보다 큰 경우에만 사용할 수 있습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 메모리 사용 요청이 불규칙하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스의 가상 주소 공간이 전부 사용되는 대량 메모리 구성에서 사용하는 것이 적합합니다. 이 옵션을 제대로 사용하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작할 수 없거나 런타임 오류가 발생할 수도 있습니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 오류 로그에서 다음 경고가 표시되지 않으면 **-g** 매개 변수의 기본값을 사용해야 합니다.  
+ **오류 로그에서 다음 경고가 표시되지 않으면** -g [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 매개 변수의 기본값을 사용해야 합니다.  
   
--   "가상 Allocate 바이트 실패: FAIL_VIRTUAL_RESERVE \<크기 >"  
+-   "실패한 가상 메모리 할당 바이트: FAIL_VIRTUAL_RESERVE \<크기>"  
   
--   "가상 Allocate 바이트 실패: FAIL_VIRTUAL_COMMIT \<크기 >"  
+-   "실패한 가상 메모리 할당 바이트: FAIL_VIRTUAL_COMMIT \<크기>"  
   
- 이 메시지에 따르면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 확장 저장 프로시저 dll 파일이나 OLE 자동화 개체 등의 항목에 필요한 공간을 찾기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 풀의 일부를 없애려고 합니다. 이 경우 **-g**``스위치로 예약되는 메모리 양을 늘려 보세요.  
+ 이 메시지에 따르면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 확장 저장 프로시저 dll 파일이나 OLE 자동화 개체 등의 항목에 필요한 공간을 찾기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 풀의 일부를 없애려고 합니다. 이 경우 **-g**``스위치로 예약되는 메모리 양을 늘려 보세요.  
   
  기본값보다 낮은 값을 사용하면 버퍼 풀과 스레드 스택을 사용할 수 있는 메모리 양을 증가시켜, 확장 저장 프로시저, 분산 쿼리, OLE 자동화 개체 등을 사용하지 않는 시스템에서 메모리 집중형 작업 부하에 대한 성능상의 이점을 제공할 수 있습니다.  
   
 ## <a name="remarks"></a>주의  
- 대부분의 경우 sqlserver.exe 프로그램은 문제 해결이나 주요 유지 관리 작업에만 사용됩니다. sqlservr.exe를 사용하여 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 시작할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 서비스로 실행되지 않으므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **명령을 사용하여** 를 중지할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결할 수 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구에서 서비스 상태를 표시하므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 서비스가 중지되었음을 올바르게 나타냅니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 서버에 연결할 수 있지만 마찬가지로 서비스가 중지되었음을 나타냅니다.  
+ 대부분의 경우 sqlserver.exe 프로그램은 문제 해결이나 주요 유지 관리 작업에만 사용됩니다. sqlservr.exe를 사용하여 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 시작할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 서비스로 실행되지 않으므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **명령을 사용하여** 를 중지할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결할 수 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구에서 서비스 상태를 표시하므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 서비스가 중지되었음을 올바르게 나타냅니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 서버에 연결할 수 있지만 마찬가지로 서비스가 중지되었음을 나타냅니다.  
   
 ## <a name="compatibility-support"></a>호환성 지원  
  **-h**  매개 변수는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 지원되지 않습니다. 이 매개 변수는 이전 버전 32비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 AWE가 설정된 경우 Hot Add 메모리 메타데이터에 대해 가상 주소 공간을 예약하는 데 사용되었습니다. 자세한 내용은 [SQL Server 2016에서 지원되지 않는 SQL Server 기능](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)을 참조하세요.  
@@ -114,4 +112,3 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
-

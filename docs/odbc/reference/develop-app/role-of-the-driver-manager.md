@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a6e0b002c34e8bf35f4f2c9b42dd7b47293ac9b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70c6dba19353cc503dc42b33640c18c4ee72caa9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="role-of-the-driver-manager"></a>드라이버 관리자의 역할
 드라이버 관리자를 생성 하는 상태 레코드를 반환 하는 최종 순서를 결정 합니다. 특히 레코드 가장 높은 순위 개이고 먼저 반환 될 결정 합니다. 드라이버는 상태 레코드 생성 하는 순서를 지정 합니다. 상태 레코드 드라이버 관리자와 드라이버에 게시 하는 경우 드라이버 관리자는 순서를 지정 하는 일을 담당 합니다. 자세한 내용은 참조 [상태 레코드의 시퀀스](../../../odbc/reference/develop-app/sequence-of-status-records.md)합니다.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 -   [일반 오류 검사](../../../odbc/reference/develop-app/general-error-checks.md)  
   
 -   [드라이버 관리자 오류 및 경고 검사](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- RightsEnum
-helpviewer_keywords:
-- RightsEnum enumeration [ADOX]
+f1_keywords: RightsEnum
+helpviewer_keywords: RightsEnum enumeration [ADOX]
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0ff15518703e8e8ec2d2c3ee67df691abb1974ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ac335398b4895e01ece3324488d30bfd670fd140
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rightsenum"></a>RightsEnum
 권한이 나 그룹 또는 사용자에 대 한 사용 권한이 개체에 지정합니다.  
@@ -59,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |||  
 |-|-|  
 |[GetPermissions 메서드(ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|[SetPermissions 메서드(ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
-

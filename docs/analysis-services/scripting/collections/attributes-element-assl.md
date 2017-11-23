@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Attributes Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Attributes Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Attributes
-helpviewer_keywords:
-- Attributes element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Attributes
+helpviewer_keywords: Attributes element
 ms.assetid: d6b545e6-1521-496f-a731-f2c2c44118e4
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4c7469c97b55b253f1ef479fc28091d7ca81b7cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0ba9d7698f23f902935e7fa531c9391a2373a002
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-element-assl"></a>Attributes 요소(ASSL)
   연결된 차원에 대한 특성의 컬렉션을 포함합니다.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [컬렉션 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

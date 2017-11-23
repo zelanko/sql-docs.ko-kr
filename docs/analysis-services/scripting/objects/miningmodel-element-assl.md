@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningModel Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningModel Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningModel
-helpviewer_keywords:
-- MiningModel element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningModel
+helpviewer_keywords: MiningModel element
 ms.assetid: a61d935f-c8f6-457d-ad0c-44f58bb286f5
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7f05427e2fe1be84f8fb5dc42ea90a2819e306a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 691e74eb05498dd0e6a47c5d2bd602d06d299d5f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="miningmodel-element-assl"></a>MiningModel 요소(ASSL)
   단일 데이터 마이닝 모델을 정의합니다.  
@@ -91,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

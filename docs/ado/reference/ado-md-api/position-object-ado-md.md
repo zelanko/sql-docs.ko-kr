@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Position
-helpviewer_keywords:
-- Position object [ADO MD]
+f1_keywords: Position
+helpviewer_keywords: Position object [ADO MD]
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a2ef6f300bee660c3b6c7f5786fb12284650a96
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5c4b64e066a83673df845a3a43dff80fb2acc0e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="position-object-ado-md"></a>ADO MD 위치 개체
 축 상에 지점을 정의 하는 하나 이상의 서로 다른 차원의 멤버의 집합을 나타냅니다.  
@@ -50,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  [ADO MD cell 개체](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [(ADO MD) members 컬렉션](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Positions 컬렉션(ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)
-

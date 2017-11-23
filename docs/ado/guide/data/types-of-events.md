@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f33ed98f367560da7f4b60d5a754d99937319358
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 502c77b55eb0e3a60497fa10bf9fe8c8a412dc4d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="types-of-events"></a>이벤트 유형
 이벤트의 두 기본 유형이 있습니다. "이벤트에 는" 작업이 시작 되기 전에 호출 되는, 일반적으로 이름에 "는"를 포함-예를 들어 **WillChangeRecordset** 또는 **WillConnect**합니다. 이벤트가 완료 된 후 일반적으로 호출 된 이벤트에 이름에 "Complete"는 포함-예를 들어 **RecordChangeComplete** 또는 **ConnectComplete**합니다. 예외가-와 같은 **InfoMessage** -하지만 연결된 작업이 완료 된 후 발생 합니다.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
  [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   
  [이벤트 처리기가 함께 작동하는 방법](../../../ado/guide/data/how-event-handlers-work-together.md)
-

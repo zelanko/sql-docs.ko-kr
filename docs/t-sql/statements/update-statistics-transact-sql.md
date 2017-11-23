@@ -1,39 +1,39 @@
 ---
 title: UPDATE STATISTICS (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE STATISTICS
 - UPDATE_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - updating statistics
 - query optimization statistics [SQL Server], updating
 - UPDATE STATISTICS statement
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-caps.latest.revision: 74
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "74"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 96ace864a1cff7724451b521db4b184323db6d8e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a1b053ddc09876717f0fbf34b2d7c294988162f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   테이블 또는 인덱싱된 뷰에 대한 쿼리 최적화 통계를 업데이트합니다. 기본적으로 쿼리 최적화 통계를 업데이트; 쿼리 계획을 개선 하기 위해 필요에 따라 UPDATE STATISTICS 또는 저장된 프로시저를 사용 하 여 쿼리 성능을 향상 수 하는 경우에 따라 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 기본 업데이트 보다 더 자주 통계를 업데이트 합니다.  
   
@@ -131,7 +131,7 @@ PERSIST_SAMPLE_PERCENT = {ON | OFF}
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 및 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 선택한 통계에 대 한 지속형된 샘플 백분율 값을 표시 합니다.
  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 c u 4입니다.  
+ **에 적용 됩니다**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4)를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
  ON PARTITIONS ({ \<partition_number > | \<범위 >} [, … n]) ] 리프 수준 통계를 다시 계산한 다음 전역 통계 구축 하기 위해 병합 ON PARTITIONS 절에 지정 된 파티션에 적용 되도록 합니다. 서로 다른 샘플링 주기로 작성된 파티션 통계는 병합할 수 없으므로 WITH RESAMPLE이 필요합니다.  
   
@@ -293,10 +293,8 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40; Transact SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
+ [sys.dm_db_stats_properties &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
-  
-
 
 
 

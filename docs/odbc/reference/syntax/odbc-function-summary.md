@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- functions [ODBC], listed by task
+helpviewer_keywords: functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bce96e014e56a783f4f367120f1ba6f911d91ed5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9441a955eaa4a9001b7acd655f7753e32f49e68e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-function-summary"></a>ODBC 함수 요약
 다음 표에서 ODBC 함수를 그룹화 하는 작업의 유형별로 목록과 규칙 지정 및 각 함수의 용도에 대 한 간략 한 설명을 포함 되어 있습니다. 규칙에 따라 지정에 대 한 자세한 내용은 참조 [ODBC 및 표준 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)합니다. 구문 및 각 함수에 대 한 의미 체계에 대 한 자세한 내용은 참조 [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
@@ -89,4 +86,3 @@ ms.lasthandoff: 09/09/2017
 ||[SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|ODBC|문 또는 연결에서 처리를 취소합니다.|  
 ||[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|ISO 92|커밋 또는 트랜잭션을 롤백합니다.|  
 |연결 종료|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|ISO 92<br /><br /> ISO 92|연결을 닫습니다.<br /><br /> 환경, 연결, 문 또는 설명자 핸들을 해제합니다.|
-

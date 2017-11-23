@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, traces
 - XMLA, traces
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d63e2b7e07c01d0f937618cfc521921e9d16dc43
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitoring-traces-xmla"></a>추적 모니터링(XMLA)
   사용할 수는 [Subscribe](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) XML for Analysis (XMLA)의 인스턴스에 정의 된 기존 추적을 모니터링 하려면 명령을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. **Subscribe** 명령 행 집합으로 추적 결과 반환 합니다.  
@@ -83,7 +81,6 @@ ms.lasthandoff: 09/01/2017
 |RequestProperties|문자열|이벤트가 발생한 XMLA 메서드의 속성입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services에서 XMLA를 사용하여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

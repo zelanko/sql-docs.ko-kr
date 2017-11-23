@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - SetPermissions method [ADOX], Visual Basic example
 - GetPermissions method [ADOX], Visual Basic example
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 815c41c39e7355161489afc486ee4db8802e18df
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62317dc1c72da63769b85be83a97663858e57e73
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 및 SetPermissions 메서드 예제 (VB)
 이 예제에서는 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 및 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 메서드. 다음 코드를 관리자로 Orders 테이블에 대 한 전체 액세스를 제공합니다.  
@@ -108,4 +105,3 @@ End Sub
  [SetPermissions 메서드 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
  [사용자 개체 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-

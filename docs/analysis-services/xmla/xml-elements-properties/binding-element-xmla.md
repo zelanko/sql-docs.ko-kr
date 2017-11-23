@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Binding Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Binding Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.binding
 - http://schemas.microsoft.com/analysisservices/2003/engine#Binding
 - urn:schemas-microsoft-com:xml-analysis#Binding
-helpviewer_keywords:
-- Binding element
+helpviewer_keywords: Binding element
 ms.assetid: d5acd8d4-8551-449a-ae30-d0ba828cc02d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c3fb4afd47111911ba067e6f4488b749179cd3ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fc27d3a74abd4dbeb19113bde191fa969f7cd7bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="binding-element-xmla"></a>Binding 요소(XMLA)
   에 대 한 아웃오브 라인 바인딩을 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체, 예: 차원에서 특성에 대 한는 [바인딩](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) 의 컬렉션을 [일괄 처리](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 또는 [ 프로세스](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 명령입니다.  
@@ -79,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

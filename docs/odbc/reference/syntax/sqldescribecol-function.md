@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDescribeCol
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDescribeCol
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDescribeCol
-helpviewer_keywords:
-- SQLDescribeCol function [ODBC]
+f1_keywords: SQLDescribeCol
+helpviewer_keywords: SQLDescribeCol function [ODBC]
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 778b301cad67e6cfaf6205b65a67026ed109eae0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a6fcf834f88a1ecc609b56a0f8f493ee5a3c1ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 함수
 **규칙**  
@@ -150,4 +144,3 @@ SQLRETURN SQLDescribeCol(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>설치 및 배포 하 고 테이블 형식 개체 모델 참조
 
@@ -127,4 +126,3 @@ Microsoft.AnalysisServices.dll Microsoft.AnalysisServices.Tabular.dll, 하지 �
 TOM 및 AMO는 재배포를 통해는 **sql_as_amo.msi** 설치 패키지입니다. AMO 또는 TOM으로 호출 하는 클라이언트 응용 프로그램에 대 한 설치 프로그램을 작성 하는 경우 추가 **sql_as_amo.msi** 실행 파일에 있습니다. TOM 및 AMO 클라이언트 라이브러리를 재배포 하기 위한 유일한 지원 되는 메커니즘입니다.  
   
 패키지 자체 포함 하며 사용자 코드에서 TOM 및 AMO를 호출 하는 데 필요한 모든 어셈블리를 제공 합니다. SQL_AS_OLEDB.msi SQL_AS_ADOMD.msi를 등의 다른 패키지 TOM 프로그래밍 시나리오에 특히 필요 하지 않습니다.
-

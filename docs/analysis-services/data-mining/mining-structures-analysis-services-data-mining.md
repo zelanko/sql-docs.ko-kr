@@ -25,17 +25,16 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d796c274172d6fdc8402c5965b6d281cc8c4e89
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0145d9d7cd222d24294d7aaab389aa5a4bdc28cb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>마이닝 구조(Analysis Services - 데이터 마이닝)
   마이닝 구조는 마이닝 모델을 작성하는 데이터, 즉 원본 데이터 뷰, 열 유형과 수, 학습 및 테스트 집합으로의 선택적 분할을 정의합니다. 하나의 마이닝 구조는 같은 도메인을 공유하는 여러 개의 마이닝 모델을 지원할 수 있습니다. 다음 다이어그램에서는 데이터 마이닝 구조와 이를 구성하는 데이터 마이닝 모델 및 데이터 원본 간의 관계를 보여 줍니다.  
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   
-

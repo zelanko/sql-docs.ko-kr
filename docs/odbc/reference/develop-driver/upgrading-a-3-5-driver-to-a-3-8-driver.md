@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5dc39bf1203a06d571bf188e17e7066e53167415
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 98b9c8e3e2179801a4cb7cd2947939d6f2927a02
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>3.8 드라이버에 3.5 드라이버를 업그레이드합니다.
 이 항목에서는 ODBC 3.8 드라이버에 ODBC 3.5 드라이버 업그레이드 시 고려 사항 및 지침을 제공 합니다.  
@@ -84,4 +82,3 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
  [ODBC 드라이버를 개발합니다.](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft에서 제공 하는 ODBC 드라이버](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [ODBC 3.8의 새로운 기능](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
-

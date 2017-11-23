@@ -18,17 +18,16 @@ helpviewer_keywords:
 - attributes [Analysis Services], relationships
 - relationships [Analysis Services], attributes
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 808b6dbe06968e5c44a4979f20ca07a12ac70be5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a1b74894ea54989ca409c860f8cd95126941e118
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-relationships---define"></a>특성 관계-정의
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성은 차원의 기본 구성 요소입니다. 차원은 특성 관계를 기반으로 구성되는 특성 집합을 포함합니다.  
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [에서 차원 디자이너의](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   
-

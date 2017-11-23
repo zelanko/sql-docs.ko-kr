@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 686684010ff1e72f61b971c2504d5634ee28f269
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-properties"></a>ADO 속성
 |||  
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/09/2017
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|현재 위치가 스트림 끝에 있는지 여부를 나타냅니다.|  
 |[Assert](../../../ado/reference/ado-api/filter-property.md)|데이터에 대 한 필터 나타냅니다는 **레코드 집합**합니다.|  
 |[HelpContext 및 도움말 파일](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|도움말 파일 및 관련 된 항목을 나타냅니다는 **오류** 개체입니다.<br /><br /> **HelpContextID** 로 컨텍스트 ID를 반환는 **긴** 도움말 파일의 항목에 대 한 값입니다.<br /><br /> **HelpFile** 반환는 **문자열** 도움말 파일의 확인 된 경로를 계산 하는 값입니다.|  
-|[인덱스](../../../ado/reference/ado-api/index-property.md)|현재에 적용 된 인덱스의 이름을 표시 한 **레코드 집합** 개체입니다.|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|현재에 적용 된 인덱스의 이름을 표시 한 **레코드 집합** 개체입니다.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|에 대 한 격리 수준을 나타냅니다는 **연결** 개체입니다.|  
 |[항목](../../../ado/reference/ado-api/item-property-ado.md)|이름 또는 서 수는 컬렉션의 특정 멤버를 나타냅니다.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|텍스트에 줄 구분 기호로 사용할 이진 문자 나타냅니다 **스트림** 개체입니다.|  
@@ -113,4 +111,3 @@ ms.lasthandoff: 09/09/2017
  [ADO 메서드](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 개체 및 인터페이스](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)
-

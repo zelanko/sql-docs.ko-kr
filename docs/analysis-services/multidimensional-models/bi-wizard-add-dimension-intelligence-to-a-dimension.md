@@ -20,17 +20,16 @@ helpviewer_keywords:
 - dimension intelligence [Analysis Services]
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da03582649052d24d22bbced266fbfcbc3f74cba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d1d167da0ab38819f016dd4a0c18c2e65ef42da1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 마법사-차원에 차원 인텔리전스 추가
   큐브나 차원에 차원 인텔리전스 기능을 추가하여 차원에 대한 표준 비즈니스 유형을 지정할 수 있습니다. 이 기능은 차원 특성에 해당하는 유형도 지정합니다. 클라이언트 응용 프로그램은 데이터를 분석할 때 이러한 유형 지정을 사용할 수 있습니다.  
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [비즈니스 인텔리전스 마법사를 사용하여 시간 인텔리전스 계산 정의](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   
-

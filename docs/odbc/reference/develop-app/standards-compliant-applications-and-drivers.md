@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], standards-compliant
 - application features are standards-compliant [ODBC]
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c62e19d2d7c2c856b358649955a5b1540a802a12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>표준 호환 응용 프로그램 및 드라이버
 표준 호환 응용 프로그램 또는 드라이버는 준수 하는 Open 그룹 CAE 사양 "데이터 관리:: SQL 호출 수준 인터페이스 (CLI)," 및 ISO/IEC 9075 하나-3:1995 (E) 호출 수준 인터페이스 (SQL/CLI).  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 -   ODBC 3 ISO CLI에 맞춰*.x* 헤더 파일에 대 한 호출에서 사용 되는 정보 종류에 대 한 별칭을 포함 **SQLGetInfo**합니다. 표준 호환 응용 프로그램을 ODBC 3 대신 이러한 별칭을 사용할 수*.x* 정보 유형입니다. 자세한 내용은 다음 항목을 참조 하십시오. [헤더 파일](../../../odbc/reference/develop-app/header-files.md)합니다.  
   
 -   표준 호환 응용 프로그램 작동할지 드라이버에서 지 원하는 지 원하는 모든 기능을 확인 해야 합니다. SQL_ATTR_CURSOR_SCROLLABLE 문 특성을 SQL_SCROLLABLE 설정 설정 SQL_INSENSITIVE 또는 SQL_SENSITIVE SQL_ATTR_CURSOR_SENSITIVITY 문 특성은 표준에 선택적 기능으로 사용할 수 있는 기능 ODBC 3에 포함 되지 않은*.x* 코어 스레드와 수준이 지원 되지 않는 모든 ODBC 3으로*.x* 드라이버입니다. 이러한 기능을 사용 하는 표준 호환 응용 프로그램에서는 작동 하는 드라이버 지원에 확인 해야 것입니다.
-

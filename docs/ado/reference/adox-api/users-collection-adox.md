@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Group::Users
 - Users
 - Catalog::Users
-helpviewer_keywords:
-- Users collection [ADOX]
+helpviewer_keywords: Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ab2952445a0e73b090ab963945f5c3560f6ed2cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9c19df96e66927c6dc5092cd0584f071a3d3b40
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="users-collection-adox"></a>사용자 컬렉션 (ADOX)
 모든 포함 저장 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 의 개체는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 또는 [그룹](../../../ado/reference/adox-api/group-object-adox.md)합니다.  
@@ -63,4 +60,3 @@ ms.lasthandoff: 09/09/2017
  [GetPermissions 및 SetPermissions 메서드 예제 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CubeDimensionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CubeDimensionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CubeDimensionID
-helpviewer_keywords:
-- CubeDimensionID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CubeDimensionID
+helpviewer_keywords: CubeDimensionID element
 ms.assetid: d1341fb2-9afe-40f1-a704-ce548bce48fc
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 67d51f2c5f0bd1fb192cf7d7270c207026d9a5ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3a6ad0abdd0c82e8bd43e71ca5769185a127ccb1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubedimensionid-element-assl"></a>CubeDimensionID 요소(ASSL)
   식별 된 [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md) 부모 요소와 연결 된 요소입니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Algorithm Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Algorithm Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Algorithm
-helpviewer_keywords:
-- Algorithm element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Algorithm
+helpviewer_keywords: Algorithm element
 ms.assetid: 188bf7ce-c5c9-406a-af75-5a026c92a569
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a530e338e039ae4373f6565f46c55f5e9e7b90c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fe1a9caffdff1de0dc62c4ddd696e1ec8b829bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="algorithm-element-assl"></a>Algorithm 요소(ASSL)
   사용 되는 알고리즘 정의 [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) 요소입니다.  
@@ -77,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b3753748a9e76d24dc968983fa358b5d0050f41
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 ADO 또는 RDS 프로그래머가 이상적인 것 모든 데이터에서 원본에서 OLE DB 인터페이스를 제공 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 하지만 점점 더 많은 데이터베이스 공급 업체 OLE DB 인터페이스를 구현 하는 경우 일부 데이터 원본은이 방식으로 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템 ODBC를 통해 액세스할 수 있습니다.
@@ -440,4 +438,3 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 ## <a name="see-also"></a>관련 항목:
  [개체 (ADO) 명령](../../../ado/reference/ado-api/command-object-ado.md) [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [실행 메서드 (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Provider 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [(ADO) 레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md) [메서드 지원](../../../ado/reference/ado-api/supports-method.md)
-

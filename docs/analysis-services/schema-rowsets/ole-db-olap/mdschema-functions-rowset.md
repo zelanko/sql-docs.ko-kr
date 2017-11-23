@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_FUNCTIONS
+apiname: MDSCHEMA_FUNCTIONS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_FUNCTIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_FUNCTIONS rowset
 ms.assetid: 5253fa8c-b1ce-4504-aff6-a246b5e675c7
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 446f89e34824cbb4ebde3d49bb3ceb686b4adafd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e0ce2d79d149e1cf3ba6fbbe0cbe14ed8dffa14
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemafunctions-rowset"></a>MDSCHEMA_FUNCTIONS 행 집합
   데이터베이스에 연결된 클라이언트 응용 프로그램에 사용할 수 있는 함수를 설명합니다.  
@@ -67,7 +63,6 @@ ms.lasthandoff: 09/01/2017
 |**원본**|**DBTYPE_I4**|(선택 사항)|  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLAP 스키마 행 집합 용 OLE DB](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLAP용 OLE DB 스키마 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

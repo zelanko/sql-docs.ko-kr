@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DeniedSet Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DeniedSet Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DeniedSet
-helpviewer_keywords:
-- DeniedSet element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DeniedSet
+helpviewer_keywords: DeniedSet element
 ms.assetid: 898deefb-822d-458b-96d8-880da287b687
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a750f409d45a50fca4c7cc5efbdf1240de74f88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71eda4e182bf13f61df813e9297bbd12c69192fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deniedset-element-assl"></a>DeniedSet 요소(ASSL)
   연관된 특성에 대해 거부된 권한 목록을 정의하는 집합 식을 포함합니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

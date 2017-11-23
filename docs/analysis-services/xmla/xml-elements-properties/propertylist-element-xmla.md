@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PropertyList Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PropertyList Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#PropertyList
 - microsoft.xml.analysis.propertylist
 - urn:schemas-microsoft-com:xml-analysis#PropertyList
-helpviewer_keywords:
-- PropertyList element
+helpviewer_keywords: PropertyList element
 ms.assetid: 58e63bd9-8aac-438d-adba-1868b4d123f5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cc793c573a9044ba4dc711cb8912c589e076ac13
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d780b358d0d8d22ce5f71c5c90e87656a4cebee6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="propertylist-element-xmla"></a>PropertyList 요소(XMLA)
   사용 하는 Analysis (XMLA) 속성에 대 한 XML의 컬렉션을 포함는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 및 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
@@ -97,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

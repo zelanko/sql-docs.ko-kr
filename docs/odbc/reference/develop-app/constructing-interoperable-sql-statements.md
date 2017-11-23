@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f3ce3621c9a6cd709dc008f436fe89fbba14ef3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 070b42e5350471ec86fbc256f2005dd7c0385002
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-interoperable-sql-statements"></a>상호 운용할 수 있는 SQL 문 구성
 이전 섹션에서 설명 했 듯이 상호 운용 가능한 응용 프로그램에서 ODBC SQL 문법을 사용 해야 합니다. 그러나이 문법을 사용 하 여 다음 다양 한 추가 문제 상호 운용 가능한 응용 프로그램에서 직면 됩니다. 예를 들어 응용 프로그램이 수행 하는 모든 데이터 원본에서 지원 되지 않는 외부 조인과 같은 기능을 사용 하려는 경우  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 -   [프로시저 호출의 매개 변수 표식](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
   
 -   [DDL 문](../../../odbc/reference/develop-app/ddl-statements.md)
-

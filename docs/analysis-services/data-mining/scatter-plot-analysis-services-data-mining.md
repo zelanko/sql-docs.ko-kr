@@ -19,17 +19,16 @@ helpviewer_keywords:
 - scatter charts
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 737cb2c584dc25396eafe6e023ff0d3bd8a32c2f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 81f819ad89411bd9acea670ded6abac0b154a7b6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>산점도(Analysis Services - 데이터 마이닝)
   *산점도* 는 모델로 예측되는 값과 데이터의 실제 값을 비교하여 그래프로 표시합니다. 산점도에서 실제 값은 X축을 따라 표시되고 예측 값은 Y축을 따라 표시됩니다. 또한 예측 값과 실제 값이 정확하게 일치하는 완벽한 예측을 보여 주는 선이 표시됩니다. 이 이상적인 45도 각도 선으로부터 점의 거리는 예측의 정확도를 나타냅니다.  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

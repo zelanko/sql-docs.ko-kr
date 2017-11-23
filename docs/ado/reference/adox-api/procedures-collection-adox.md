@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Procedures
 - Catalog::Procedures
-helpviewer_keywords:
-- Procedures collection [ADOX]
+helpviewer_keywords: Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0a3c09cf4c82a12882ab4716830c580f2716fd4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52ea3d1aa490325f3abe4f5fdca80dea6edb5174
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="procedures-collection-adox"></a>프로시저 컬렉션 (ADOX)
 모든 포함 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 카탈로그의 개체가 있습니다.  
@@ -62,4 +59,3 @@ ms.lasthandoff: 09/09/2017
  [프로시저 컬렉션 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
-

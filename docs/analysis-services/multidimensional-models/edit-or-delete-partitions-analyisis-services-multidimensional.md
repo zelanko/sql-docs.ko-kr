@@ -18,17 +18,16 @@ helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7c951e3abb2fffc3882869e31570342e7647bd6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a253d7cc22d90a06369a914b7aec8b4a8ec315f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>파티션 편집 또는 삭제(Analyisis Services - 다차원)
   큐브 파티션은 **에서 큐브 디자이너의** 파티션 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]탭을 사용하여 수정됩니다. **파티션** 탭에서는 큐브에 있는 모든 측정값 그룹의 파티션을 나열합니다. 또한 쓰기 저장(writeback)이 설정된 쓰기 저장 파티션을 나열합니다.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
  대상 파티션에 원본 파티션을 병합하면 파티션이 자동으로 삭제됩니다. 원본으로 지정된 파티션은 병합이 완료된 후 삭제됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 파티션 탭에서 수동으로 파티션을 삭제할 수도 있습니다. 마우스 오른쪽 단추를 클릭한 다음 **삭제**를 선택합니다. 파티션을 삭제하면 데이터와 집계도 삭제됩니다. 예방 조치로, 나중에 이 단계를 되돌려야 하는 경우에 대비하여 데이터베이스의 최신 백업을 가지고 있어야 합니다.  
   
 > [!NOTE]  
->  또는 파티션 빌드, 병합 및 삭제 태스크를 자동화하는 XMLA 스크립트를 사용할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 또는 예약된 태스크로 실행되는 사용자 지정 SSIS 패키지에서 XMLA 스크립트를 만들고 실행할 수 있습니다. 자세한 내용은 [SSIS를 사용하여 Analysis Services 관리 태스크 자동화](../../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md)를 참조하세요.  
+>  또는 파티션 빌드, 병합 및 삭제 태스크를 자동화하는 XMLA 스크립트를 사용할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 또는 예약된 태스크로 실행되는 사용자 지정 SSIS 패키지에서 XMLA 스크립트를 만들고 실행할 수 있습니다. 자세한 내용은 [Automate Analysis Services Administrative Tasks with SSIS](../../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md)를 참조하세요.  
   
 ## <a name="partition-source"></a>파티션 원본  
  파티션의 원본 테이블 또는 명명된 쿼리를 지정합니다. 원본 테이블을 변경하려면 셀을 클릭한 다음 찾아보기 (**...**) 단추를 클릭합니다.  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services의 파티션 병합&#40;SSAS - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
-

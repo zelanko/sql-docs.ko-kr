@@ -19,17 +19,16 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 08431f6a1eb5e2ed7ae82ea732fd2cdb466c6d70
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cross-validation-report"></a>교차 유효성 검사 보고서 만들기
   이 항목에서는 데이터 마이닝 디자이너에서 정확도 차트 탭을 사용하여 교차 유효성 검사 보고서를 만드는 단계를 안내합니다. 교차 유효성 검사 보고서의 표시 형태 및 해당 보고서에 포함되는 통계 측정값에 대한 일반적인 내용은 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   
-

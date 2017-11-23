@@ -8,22 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 41cd394454663f5656684af467b846ae7c32d823
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: bbdc6c5bb35563553e1def5afed307ccc765b447
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>마스터 데이터 관리자 웹 응용 프로그램 만들기(Master Data Services)
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램은 마스터 데이터 작업을 하는 사용자 및 MDS를 구성하고 관리하는 관리자를 위한 인터페이스를 제공합니다.  
@@ -89,4 +87,3 @@ ms.lasthandoff: 09/07/2017
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c0bbe08b13b45b47fecda5143ca419c31dfe82d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="allocating-the-environment-handle"></a>환경 핸들 할당
 모든 ODBC 응용 프로그램에 대 한 첫 번째 작업은 드라이버 관리자; 로드 이 과정은 운영 체제 따라 다릅니다. 예를 들어 Microsoft® Windows NT® 서버/Windows 2000 Server, Windows NT 워크스테이션/Windows 2000 Professional 또는 Microsoft Windows® 95/98을 실행 하는 컴퓨터에서 응용 프로그램 중 하나에 연결 드라이버 관리자 라이브러리 또는 호출  **LoadLibrary** 드라이버 관리자 DLL을 로드할 수 있습니다.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
  때 **SQLFreeHandle** 호출 되는 드라이버 릴리스 구조는 환경에 대 한 정보를 저장 하는 데 사용 합니다. **SQLFreeHandle** 해당 환경 핸들의 모든 연결 핸들 해제 된 후까지 환경 핸들에 대해 호출할 수 없습니다.  
   
  환경 핸들에 대 한 자세한 내용은 참조 [환경 처리](../../../odbc/reference/develop-app/environment-handles.md)합니다.
-

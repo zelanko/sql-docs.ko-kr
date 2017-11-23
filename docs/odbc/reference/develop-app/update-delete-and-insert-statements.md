@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7bfdd769bdea98e21cec4031bf140ca6ee8bdd3d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b150288c113b1aebf92abedbd6f7eabd0b4b7d24
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
 SQL 기반 응용 프로그램을 실행 하 여 테이블에 변경 내용을 확인는 **업데이트**, **삭제**, 및 **삽입** 문. 이러한 문은 최소 SQL 문법의 규칙 수준과의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  
@@ -59,4 +57,3 @@ INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)
 ```  
   
  매개 변수 값 배열을 전달 하 여 이러한 효율성을 늘릴 수 있습니다. 문 매개 변수 및 매개 변수 값의 배열에 대 한 자세한 내용은 참조 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다.
-

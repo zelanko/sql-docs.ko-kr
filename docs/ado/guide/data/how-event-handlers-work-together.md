@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2b826bed21c5fcec7a0e6d957f3b0a03eac858c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a2e603819e2d4c44bf612d62f86f448c560e0828
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="how-event-handlers-work-together"></a>이벤트 처리기 함께 작동 하는 방법
 Visual Basic의 경우에 대 한 모든 이벤트 처리기에서 프로그래밍 하는 경우가 아니면 **연결** 및 **레코드 집합** 여부 실제로 처리의 모든 이벤트에 관계 없이 이벤트에 구현, 되어야 합니다. 구현 작업을 수행 해야 하는 프로그래밍 언어에 따라 다릅니다. 자세한 내용은 참조 [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md)합니다.  
@@ -66,4 +64,3 @@ Visual Basic의 경우에 대 한 모든 이벤트 처리기에서 프로그래�
  [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   
  [이벤트 유형](../../../ado/guide/data/types-of-events.md)
-

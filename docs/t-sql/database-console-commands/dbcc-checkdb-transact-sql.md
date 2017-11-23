@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKDB_TSQL
 - DBCC CHECKDB
 - CHECKDB
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECKDB [DBCC statement]
 - database objects [SQL Server], checking
@@ -37,26 +35,25 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: 144
+caps.latest.revision: "144"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0960e000c4ba1d798228445720e39db0f627f9b1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   지정한 데이터베이스에서 다음 작업을 수행하여 모든 개체의 논리적 무결성 및 물리적 무결성을 검사합니다.    
     
-> **참고:** DBCC CHECKDB는 메모리 액세스에 최적화 된 테이블에 포함 된 데이터베이스에서 지원 되지만 유효성 검사 디스크 기반 테이블 에서만 발생 합니다. 그러나 데이터베이스 백업 및 복구의 일부로 메모리 액세스에 최적화된 파일 그룹의 파일에 대해 CHECKSUM 유효성 검사가 수행됩니다.    
+> **참고:** DBCC CHECKDB는 메모리 액세스에 최적화 된 테이블에 포함 된 데이터베이스에서 지원 되지만 유효성 검사 디스크 기반 테이블 에서만 발생 합니다. 그러나 데이터베이스 백업 및 복구의 일부로 메모리 최적화 파일 그룹의 파일에 대해 CHECKSUM 유효성 검사가 수행됩니다.    
 >     
->  메모리 액세스에 최적화된 테이블에는 DBCC 복구 옵션을 사용할 수 없기 때문에 정기적으로 데이터베이스를 백업하고 백업을 테스트해야 합니다. 메모리 액세스에 최적화된 테이블에서 데이터 무결성 문제가 발생하는 경우 마지막 양호한 백업에서 복원해야 합니다.    
+>  메모리 최적화 테이블에는 DBCC 복구 옵션을 사용할 수 없기 때문에 정기적으로 데이터베이스를 백업하고 백업을 테스트해야 합니다. 메모리 최적화 테이블에서 데이터 무결성 문제가 발생하는 경우 마지막 양호한 백업에서 복원해야 합니다.    
     
 -   실행 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) 데이터베이스에 있습니다.    
     
@@ -180,7 +177,7 @@ DBCC CHECKDB
  MAXDOP  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] s p 2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
     
- 재정의 **x degree of** 구성 옵션의 **sp_configure** 문에 대 한 합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP 리소스 관리자를 구성 된 값을 초과 하는 경우는 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 에 설명 된 리소스 관리자 MAXDOP 값을 사용 하 여 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ 재정의 **x degree of** 구성 옵션의 **sp_configure** 문에 대 한 합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP 리소스 관리자를 구성 된 값을 초과 하는 경우는 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 에 설명 된 리소스 관리자 MAXDOP 값을 사용 하 여 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
  
 > [!WARNING] 
 > MAXDOP를 다음 SQL Server를 0으로 설정 된 경우 사용할 병렬 처리의 최대 수준을 선택 합니다.    
@@ -219,7 +216,7 @@ Microsoft SQL Server 2012 또는 이전 버전의 SQL Server에서 ReFS로 포�
 프로덕션 시스템에서 자주 사용하려면 PHYSICAL_ONLY 옵션을 사용하는 것이 좋습니다. PHYSICAL_ONLY를 사용하면 큰 데이터베이스에 대한 DBCC CHECKDB 실행 시간이 훨씬 단축될 수 있습니다. 또한 옵션을 지정하지 않고 정기적으로 DBCC CHECKDB를 실행하는 것이 좋습니다. 실행 빈도는 개별 비즈니스 및 프로덕션 환경에 따라 달라집니다.
     
 ## <a name="checking-objects-in-parallel"></a>병렬로 개체 검사    
-기본적으로 DBCC CHECKDB는 개체를 병렬로 검사합니다. 병렬 처리 수준은 쿼리 프로세서에 의해 자동으로 결정됩니다. 최대 병렬 처리 수준은 병렬 쿼리와 동일하게 구성됩니다. DBCC 검사에 사용할 수 있는 프로세서의 최대 수를 제한 하기 위해 사용할 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)합니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. 추적 플래그 2528을 사용하면 병렬 검사를 비활성화할 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
+기본적으로 DBCC CHECKDB는 개체를 병렬로 검사합니다. 병렬 처리 수준은 쿼리 프로세서에 의해 자동으로 결정됩니다. 최대 병렬 처리 수준은 병렬 쿼리와 동일하게 구성됩니다. DBCC 검사에 사용할 수 있는 프로세서의 최대 수를 제한 하기 위해 사용할 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. 추적 플래그 2528을 사용하면 병렬 검사를 비활성화할 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
     
 > [!NOTE]
 > 이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 자세한 내용은 참조 병렬 일관성의 RDBMS 관리 섹션에서 [SQL Server 2016 버전에서 지 원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)합니다.    
@@ -406,5 +403,4 @@ GO
 [데이터베이스 스냅숏 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
 [시스템 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-
 

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLColAttributes
 - SQLColAttribute function [ODBC], mapping
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b342337838ced8fd4cb7976f703d9c4e85f985d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d21d1a9a9565ad2c0accbebb716d0b24f18f854d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes 매핑
 응용 프로그램 호출 하는 경우 **SQLColAttributes** ODBC 3*.x* 드라이버에 대 한 호출 **SQLColAttributes** 에 매핑된 **SQLColAttribute** 다음과 같습니다.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  ODBC 3*.x* 모든 ODBC 3을 지원 해야*.x* *FieldIdentifiers* 에 대해 나열 된 **SQLColAttribute**합니다.  
   
  ODBC 3*.x* SQL_COLUMN_PRECISION 및 SQL_DESC_PRECISION, SQL_COLUMN_SCALE SQL_DESC_SCALE, 및 SQL_COLUMN_LENGTH 및 SQL_DESC_LENGTH 드라이버 지원 해야 합니다. 전체 자릿수, 소수 자릿수 및 길이 ODBC 3에서는 다르게 정의 되기 때문에 이러한 값은 다른*.x* 보다 ODBC 2. *x*합니다. 자세한 내용은 참조 [열 크기, 10 진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.
-

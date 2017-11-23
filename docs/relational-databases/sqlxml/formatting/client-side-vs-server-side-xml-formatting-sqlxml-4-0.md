@@ -1,0 +1,226 @@
+---
+title: "클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정 (SQLXML 4.0) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: sqlxml
+ms.reviewer: 
+ms.suite: sql
+ms.technology: dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- NESTED mode
+- FOR XML clause, formatting
+- client-side XML formatting
+- server-side XPath
+- server-side XML formatting
+- AUTO mode
+- client-side XPath
+ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
+caps.latest.revision: "31"
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: e66f9c6503aa52add3de25c35365feeeca488e82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
+---
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정(SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]이 항목에서는 SQLXML에서 XML 서식이 클라이언트 쪽 및 서버 쪽의 일반적인 차이점에 설명 합니다.  
+  
+## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>클라이언트 쪽 서식에서 지원되지 않는 여러 행 집합 쿼리  
+ 클라이언트 쪽 XML 서식을 사용하는 경우 여러 행 집합을 생성하는 쿼리는 지원되지 않습니다. 예를 들어 가상 디렉터리에 클라이언트 쪽 서식을 지정했다고 가정합니다. 고려는 두 개의 SELECT 문이이 예제 서식 파일에는  **\<sql:query >** 블록:  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <sql:query>  
+     SELECT FirstName FROM Person.Contact FOR XML Nested;   
+     SELECT LastName FROM Person.Contact FOR XML Nested    
+  </sql:query>  
+</ROOT>  
+```  
+  
+ 응용 프로그램 코드에서 이 템플릿을 실행할 수 있지만 클라이언트 쪽 XML 서식에서 여러 행 집합의 서식 설정을 지원하지 않기 때문에 오류가 반환됩니다. 두 개의 쿼리를 지정 하는 경우 분리  **\<sql:query >** 블록, 원하는 결과 얻을 수 있습니다.  
+  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>클라이언트 쪽 서식과 서버 쪽 서식에서 서로 다르게 매핑되는 타임스탬프  
+ 서버 쪽 xml 서식에서 데이터베이스 열 **타임 스탬프** (쿼리에 XMLDATA 옵션이 지정 된) 경우 i8 XDR 형식에 매핑됩니다를 입력 합니다.  
+  
+ 클라이언트 쪽 xml 서식에서 데이터베이스 열 **타임 스탬프** 중 하나에 매핑됩니다는 **uri** 또는 **bin.base64** XDR 형식 (인지 여부에 따라 이진 base64 옵션은에 지정 된 쿼리). **bin.base64** XDR 형식은 유용 updategram 및 bulkload 기능을 사용 하는 경우이 형식은 변환 되기 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **타임 스탬프** 유형입니다. 이러한 변환 작업을 통해 삽입, 업데이트 또는 삭제 작업이 성공합니다.  
+  
+## <a name="deep-variants-are-used-in-server-side-formatting"></a>서버 쪽 서식에는 중첩이 많은 VARIANT가 사용됨  
+ 서버 쪽 XML 서식에는 중첩이 많은 VARIANT 형식이 사용됩니다. 클라이언트 쪽 XML 서식을 사용하는 경우 변형은 유니코드 문자열로 변환되고 VARIANT의 하위 유형은 사용되지 않습니다.  
+  
+## <a name="nested-mode-vs-auto-mode"></a>NESTED 모드와 AUTO 모드  
+ 클라이언트 쪽 FOR XML의 NESTED 모드는 서버 쪽 FOR XML의 AUTO 모드와 비슷합니다. 단, 다음 사항은 예외입니다.  
+  
+### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>서버 쪽에서 AUTO 모드를 사용하여 뷰를 쿼리하면 뷰 이름이 결과 XML에 요소 이름으로 반환됩니다.  
+ 예를 들어는 AdventureWorksdatabase의 Person.Contact 테이블에 다음 뷰를 만들었다고 가정 합니다.  
+  
+```  
+CREATE VIEW ContactView AS (SELECT ContactID as CID,  
+                               FirstName  as FName,  
+                               LastName  as LName  
+                        FROM Person.Contact)  
+```  
+  
+ 다음 템플릿에서는 ContactView 뷰에 대해 쿼리를 지정하고 서버 쪽 XML 서식도 지정합니다.  
+  
+```  
+ <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <sql:query client-side-xml="0">  
+    SELECT *  
+    FROM   ContactView  
+    FOR XML AUTO  
+  </sql:query>  
+</ROOT>  
+```  
+  
+ 템플릿을 실행하면 다음 XML이 반환됩니다. 여기에는 결과의 일부분만 나와 있습니다. 이 경우 요소 이름은 쿼리가 실행되는 뷰의 이름입니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <ContactView CID="1" FName="Gustavo" LName="Achong" />   
+  <ContactView CID="2" FName="Catherine" LName="Abel" />   
+...  
+</ROOT>  
+```  
+  
+ 해당 NESTED 모드를 사용하여 클라이언트 쪽 XML 서식을 지정하면 기본 테이블 이름이 결과 XML에 요소 이름으로 반환됩니다. 예를 들어 수정 된 다음 템플릿에서 동일한 SELECT 문을 실행 하지만 XML 서식이 클라이언트 쪽에서 수행 됩니다 (즉, **클라이언트 쪽 xml** 로 설정 된 서식 파일에 true):  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <sql:query client-side-xml="1">  
+    SELECT *  
+    FROM   ContactView  
+    FOR XML NESTED  
+  </sql:query>  
+</ROOT>  
+```  
+  
+ 이 템플릿을 실행하면 다음과 같은 XML이 생성됩니다. 이 경우 요소 이름은 기본 테이블 이름입니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <Person.Contact CID="1" FName="Gustavo" LName="Achong" />   
+  <Person.Contact CID="2" FName="Catherine" LName="Abel" />   
+...  
+</ROOT>  
+```  
+  
+### <a name="when-you-use-auto-mode-of-the-server-side-for-xml-the-table-aliases-specified-in-the-query-are-returned-as-element-names-in-the-resulting-xml"></a>서버 쪽 FOR XML의 AUTO 모드를 사용하는 경우 쿼리에 지정된 테이블 별칭이 결과 XML에 요소 이름으로 반환됩니다.  
+ 예를 들어 다음 템플릿을 참조하십시오.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <sql:query client-side-xml="0">  
+    SELECT FirstName as fname,  
+           LastName as lname  
+    FROM   Person.Contact C  
+    FOR XML AUTO  
+  </sql:query>  
+</ROOT>  
+```  
+  
+ 이 템플릿을 실행하면 다음과 같은 XML이 생성됩니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <C fname="Gustavo" lname="Achong" />   
+  <C fname="Catherine" lname="Abel" />   
+...  
+</ROOT>   
+```  
+  
+ 클라이언트 쪽 FOR XML의 NESTED 모드를 사용하는 경우 테이블 이름이 결과 XML에 요소 이름으로 반환되고 쿼리에 지정된 테이블 별칭은 사용되지 않습니다. 예를 들어 다음 템플릿을 참조하십시오.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <sql:query client-side-xml="1">  
+    SELECT FirstName as fname,  
+           LastName as lname  
+    FROM   Person.Contact C  
+    FOR XML NESTED  
+  </sql:query>  
+</ROOT>  
+```  
+  
+ 이 템플릿을 실행하면 다음과 같은 XML이 생성됩니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <Person.Contact fname="Gustavo" lname="Achong" />   
+  <Person.Contact fname="Catherine" lname="Abel" />   
+...  
+</ROOT>  
+```  
+  
+### <a name="if-you-have-a-query-that-returns-columns-as-dbobject-queries-you-cannot-use-aliases-for-these-columns"></a>쿼리에서 열을 dbobject 쿼리로 반환하는 경우 해당 열의 별칭을 사용할 수 없습니다.  
+ 예를 들어 다음 템플릿을 살펴보겠습니다. 이 템플릿에서는 직원 ID와 사진을 반환하는 쿼리를 실행합니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+<sql:query client-side-xml="1">  
+   SELECT ProductPhotoID, LargePhoto as P  
+   FROM   Production.ProductPhoto  
+   WHERE  ProductPhotoID=5  
+   FOR XML NESTED, elements  
+</sql:query>  
+</ROOT>  
+```  
+  
+ 이 템플릿을 실행하면 Photo 열이 dbobject 쿼리로 반환됩니다. 이 dbobject 쿼리에서 `@P`는 존재하지 않는 열 이름을 나타냅니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <Production.ProductPhoto>  
+    <ProductPhotoID>5</ProductPhotoID>  
+    <LargePhoto>dbobject/Production.ProductPhoto[@ProductPhotoID='5']/@P</LargePhoto>  
+  </Production.ProductPhoto>  
+</ROOT>  
+```  
+  
+ XML 서식이 서버에서 수행 되 면 (**클라이언트 쪽 xml = "0"**), dbobject 쿼리는 실제 테이블 및 열 이름이 반환 됩니다 (있는 경우에 지정 된 별칭)을 반환 하는 열에 대 한 별칭을 사용할 수 있습니다. 예를 들어 다음 템플릿은 쿼리를 실행 하 고 서버에 의해 이루어진다는 XML 서식 지정 (의 **클라이언트 쪽 xml** 옵션이 지정 되지 않은 및 **Run On Client** 에 대 한 옵션을 선택 하지 않으면는 가상 루트)입니다. 또한 이 쿼리는 클라이언트 쪽 NESTED 모드가 아니라 AUTO 모드를 지정합니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+<sql:query   
+   SELECT ProductPhotoID, LargePhoto as P  
+   FROM   Production.ProductPhoto  
+   WHERE  ProductPhotoID=5  
+   FOR XML AUTO, elements  
+</sql:query>  
+</ROOT>  
+```  
+  
+ 이 템플릿을 실행하면 다음 XML 문서가 반환됩니다. 이 경우 LargePhoto 열에 대한 dbobject 쿼리에 별칭이 사용되지 않습니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <Production.ProductPhoto>  
+    <ProductPhotoID>5</ProductPhotoID>  
+    <LargePhoto>dbobject/Production.ProductPhoto[@ProductPhotoID='5']/@LargePhoto</LargePhoto>  
+  </Production.ProductPhoto>  
+</ROOT>  
+```  
+  
+### <a name="client-side-vs-server-side-xpath"></a>클라이언트 쪽 XPath와 서버 쪽 XPath  
+ 클라이언트 쪽 XPath와 서버 쪽 XPath는 다음을 제외하고는 동일하게 작동합니다.  
+  
+-   클라이언트 쪽 XPath 쿼리를 사용할 때 적용되는 데이터 변환은 서버 쪽 XPath 쿼리를 사용할 때 적용되는 데이터 변환과 다릅니다. 클라이언트 쪽 XPath에는 CONVERT 모드 126 대신 CAST가 사용됩니다.  
+  
+-   지정 하는 경우 **클라이언트 쪽 xml = "0"** (false)에서 서식 파일을 요청 하는 서버 쪽 XML 서식 지정 합니다. 따라서 서버에서는 NESTED 옵션이 인식되지 않으므로 FOR XML NESTED를 지정할 수 없습니다. 이렇게 하면 오류가 발생합니다. 서버에서 인식되는 AUTO, RAW 또는 EXPLICIT 모드를 사용해야 합니다.  
+  
+-   지정 하는 경우 **클라이언트 쪽 xml = "1"** (true)에서 서식 파일을 요청 하는 클라이언트 쪽 XML 서식 지정 합니다. 이 경우 FOR XML NESTED를 지정할 수 있습니다. FOR XML AUTO를 지정 하면 XML 서식이 서버 쪽에서 있지만 **클라이언트 쪽 xml = "1"** 서식 파일에 지정 합니다.  
+  
+## <a name="see-also"></a>관련 항목:  
+ [FOR XML 보안 고려 사항 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [클라이언트 쪽 XML 서식 지정 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [서버 쪽 XML 서식 지정 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+  
+  

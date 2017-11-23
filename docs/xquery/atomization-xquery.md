@@ -5,27 +5,24 @@ ms.date: 08/01/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- XML
+dev_langs: XML
 helpviewer_keywords:
 - XQuery, atomization
 - atomization [XQuery]
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b6be2574663ce5b8f2cb51161033799543f4ca2e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5251917c137d6a37b18a47659e66ed3ea9154e36
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="atomization-xquery"></a>원자화(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 암시적 원자화의 다른 예는 산술 연산자를 사용할 경우입니다.  **+**  연산자에 원자 값이 필요 하 고 **data ()** LaborHours 특성의 원자 값을 검색 하는 암시적으로 적용 됩니다. Instructions 열에 대해 쿼리가 지정 됩니다는 **xml** ProductModel 테이블의 유형입니다. 다음 쿼리는 LaborHours 특성을 3번 반환합니다. 쿼리에서 다음에 유의하십시오.  
+ 암시적 원자화의 다른 예는 산술 연산자를 사용할 경우입니다. **+**  연산자에 원자 값이 필요 하 고 **data ()** LaborHours 특성의 원자 값을 검색 하는 암시적으로 적용 됩니다. Instructions 열에 대해 쿼리가 지정 됩니다는 **xml** ProductModel 테이블의 유형입니다. 다음 쿼리는 LaborHours 특성을 3번 반환합니다. 쿼리에서 다음에 유의하십시오.  
   
 -   OrignialLaborHours 특성을 구성할 때 원자화는 (`$WC/@LaborHours`)에서 반환된 단일 시퀀스에 암시적으로 적용됩니다. LaborHours 특성의 유형 값은 OrignialLaborHours에 할당됩니다.  
   
@@ -87,4 +84,3 @@ where ProductModelID=7
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
-

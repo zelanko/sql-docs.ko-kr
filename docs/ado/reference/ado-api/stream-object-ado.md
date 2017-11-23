@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Stream
-helpviewer_keywords:
-- Stream object [ADO]
+f1_keywords: Stream
+helpviewer_keywords: Stream object [ADO]
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 05f40c6060440d1f8535ec4d79b18a6438b766ec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b074a26bdd82bd4356620dbd0b12dc0b7f1c75c7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stream-object-ado"></a>스트림 개체 (ADO)
 텍스트 또는 이진 데이터 스트림을 나타냅니다.  
@@ -86,4 +82,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [레코드 및 스트림](../../../ado/guide/data/records-and-streams.md)
-

@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - locking [XML for Analysis]
 - XML for Analysis, locking
 - XMLA, locking
 - unlocking objects
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7c47c9c9b1b875cd7290df53ab27c59251a56783
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8924b6a21a0bb815ec377072615db2efb4fa2f07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>데이터베이스 잠금 및 잠금 해제(XMLA)
   잠금 및 각각 사용 하는 데이터베이스 잠금 해제, [잠금](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) 및 [잠금 해제](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) xml for Analysis (XMLA) 명령입니다. 일반적으로 다른 XMLA 명령은 실행 중 해당 명령을 수행하는 데 필요할 경우 자동으로 개체를 잠그거나 잠금 해제합니다. 있습니다 수 명시적으로 잠그거나 잠금 해제와 같이 단일 트랜잭션 내에서 여러 명령을 수행 하려면 데이터베이스는 [일괄 처리](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 동안 다른 응용 프로그램에서 데이터베이스에 쓰기 트랜잭션을 커밋하지 명령입니다.  
@@ -57,7 +55,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>관련 항목:  
  [Lock 요소 &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
  [요소 &#40; 잠금 해제 XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
- [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services에서 XMLA를 사용하여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

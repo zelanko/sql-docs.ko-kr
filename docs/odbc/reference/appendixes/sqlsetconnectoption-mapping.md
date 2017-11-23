@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 55ccf421e9db76c570608b4bfc380e0c48dc1f2d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption 매핑
 경우는 ODBC 2. *x* 응용 프로그램 호출 **SQLSetConnectOption** ODBC 3*.x* 드라이버에 대 한 호출  
@@ -67,4 +65,3 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  Odbc 2. *x*, 응용 프로그램에서 호출할 수 **SQLSetConnectOption** 문 옵션을 설정 하려면. 드라이버 문 옵션을 기본값으로 설정 완료 되 면 해당 연결에 할당 된 나중에 문의 합니다. 드라이버-정의 된 여부 드라이버 지정된 연결과 관련 된 모든 기존 문 문 옵션을 설정 합니다.  
   
  ODBC 3에는이 기능을 더 이상 사용 되지*.x*합니다. ODBC 3*.x* 드라이버 설정 ODBC 2를 지원만 필요 합니다. *x* ODBC 2를 사용 하는 경우에 연결 수준 문 특성. *x* 이 작업을 수행 하는 응용 프로그램입니다. ODBC 3*.x* 응용 프로그램 연결 수준에서 문 특성을 설정 해서는 안됩니다. ODBC 3*.x* 연결 특성 및 문 특성 모두에 있으며 수 있는 SQL_ATTR_METADATA_ID 및 SQL_ATTR_ASYNC_ENABLE 특성을 제외 하 고 연결 수준에서 문 특성을 설정할 수 없습니다 연결 수준 또는 문 수준에서 설정 합니다.
-

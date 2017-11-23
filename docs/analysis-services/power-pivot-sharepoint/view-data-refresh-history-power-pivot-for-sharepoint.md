@@ -20,17 +20,16 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 43dce2aa27cfda6251eeca52eba4f74f722f4ced
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bad4593c84946a2957b6b433de359d4857f116ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>데이터 새로 고침 기록 보기(SharePoint용 PowerPivot)
   데이터 새로 고침 기록은 Excel 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 모든 데이터 새로 고침 작업의 레코드입니다. 데이터 새로 고침 작업은 제공된 일정에 따라 SharePoint 팜의 Analysis Services 서버 인스턴스에서 수행됩니다. 기본적으로 데이터 새로 고침 기록은 1년 동안 보존됩니다. 그러나 팜 관리자가 데이터 새로 고침 레코드 보관 기간을 결정하는 사용 및 이벤트 기록에 대한 다른 보존 정책을 지정할 수 있습니다.  
@@ -87,4 +86,3 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot 데이터 새로 고침](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   
-

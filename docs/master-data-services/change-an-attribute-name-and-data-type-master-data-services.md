@@ -8,24 +8,21 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- attributes [Master Data Services], changing name
+helpviewer_keywords: attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: smartysanthosh
 ms.author: nagavo
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a5f5873fe266f484f27af64e7a7833e496cf0696
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: b595042d299890b023edbc604ea0d87bedd0847b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>특성 이름 및 데이터 형식 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성의 이름을 변경할 수 있습니다.  
@@ -69,4 +66,3 @@ ms.lasthandoff: 09/07/2017
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   
-

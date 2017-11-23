@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cfbedd4235f4409df31912df360cf192725f36e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db582bae24d9bfb18cbb9f7b7febf6a1e4da45fb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="drillthrough-on-mining-structures"></a>마이닝 구조에서의 드릴스루
   *드릴스루* 는 마이닝 모델이나 마이닝 구조를 쿼리하고 모델에 노출되지 않는 세부 데이터를 가져오는 기능입니다.  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [마이닝 모델에서의 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
   
-

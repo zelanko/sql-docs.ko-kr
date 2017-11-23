@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - INSERT_TSQL
 - INSERT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - inserting multiple rows
 - user-defined types [SQL Server], inserting values
@@ -34,17 +32,16 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], INSERT statement
 - inserting data
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-caps.latest.revision: 136
+caps.latest.revision: "136"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ef8387c2bbbc109ad7ec325e4faf632a983d96c9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -141,7 +138,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
 ## <a name="arguments"></a>인수  
  와 \<common_table_expression >  
- INSERT 문의 범위 내에 정의되는 임시로 명명된 결과 집합(공통 테이블 식이라고도 함)을 지정합니다. 결과 집합은 SELECT 문에서 파생됩니다. 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ INSERT 문의 범위 내에 정의되는 임시로 명명된 결과 집합(공통 테이블 식이라고도 함)을 지정합니다. 결과 집합은 SELECT 문에서 파생됩니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP (*식*) [%]  
  삽입할 임의 행의 수 또는 비율을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. 자세한 내용은 참조 [top&#40; Transact SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
@@ -1030,7 +1027,6 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN);
  [inserted 및 deleted 테이블 사용](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
   
-
 
 
 

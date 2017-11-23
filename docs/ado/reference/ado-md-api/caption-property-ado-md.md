@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Caption
 - Member::Caption
 - Level::Caption
-helpviewer_keywords:
-- Caption property [ADO MD]
+helpviewer_keywords: Caption property [ADO MD]
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 022d9f750abe10f2a5801c2928c20d8edddf5837
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3d95bfaf5ad7375c406ebfaccb77c584c22edb2e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="caption-property-ado-md"></a>ADO MD caption 속성
 표시할 때 사용할 텍스트 캡션을 나타냅니다는 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 또는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체입니다.  
@@ -47,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Description 속성(ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)
-

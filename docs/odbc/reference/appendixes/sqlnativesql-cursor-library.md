@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLNativeSql function [ODBC], Cursor Library
+helpviewer_keywords: SQLNativeSql function [ODBC], Cursor Library
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1541b22f68dabdc5f5425346fe83da7adf2ee83
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6062933f8f6d144b31da430788e8edd75da2eea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlnativesql-cursor-library"></a>SQLNativeSql (커서 라이브러리)
 > [!IMPORTANT]  
@@ -37,4 +34,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  커서 라이브러리 잘못 반환한 SQLSTATE 34000 (잘못 된 커서 이름) 위치 지정된 업데이트 또는 delete 문에 전달 되는 커서 이름이 유효 하지 않은 *InStatementText* 의 인수 **SQLNativeSql** . **SQLNativeSql** 문 준비 또는 실행 될 경우에 반환 되는 구문 오류를 반환 하기 위한 용도가 아닙니다.
-

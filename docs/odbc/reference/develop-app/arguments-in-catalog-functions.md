@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], about arguments
 - functions [ODBC], catalog functions
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db8463f643763f4dbaa621b5e26549c5523197ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f8939b2e1ae81c3eb171e78753e7fc3b6cc17ae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="arguments-in-catalog-functions"></a>카탈로그 함수에서 인수
 모든 카탈로그 함수는 응용 프로그램 반환 되는 데이터의 범위를 제한 하는 데 수 있는 인수를 수락 합니다. 예를 들어 첫 번째 및 두 번째에 대 한 호출 **SQLTables** 다음 코드에서 세 번째 호출은 Orders 테이블에 대 한 정보를 반환 하는 동안 모든 테이블에 대 한 정보를 포함 한 결과 집합을 반환 합니다.  
@@ -63,4 +61,3 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
 -   [식별자 인수](../../../odbc/reference/develop-app/identifier-arguments.md)  
   
 -   [값 목록 인수](../../../odbc/reference/develop-app/value-list-arguments.md)
-

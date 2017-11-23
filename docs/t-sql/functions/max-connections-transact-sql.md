@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@MAX_CONNECTIONS'
 - '@@MAX_CONNECTIONS_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - simultaneous connections [SQL Server]
 - maximum number of simultaneous user connections
@@ -24,19 +22,18 @@ helpviewer_keywords:
 - connections [SQL Server], simultaneous
 - number of simultaneous user connections
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: de4460e3f5dbc0ff2aba83f4c3794528f9100a2e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 29910f9bc06335c4df10acf7663bfef92edffce2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40maxconnections-transact-sql"></a>& #x 40; & #x 40; MAX_CONNECTIONS (Transact SQL)
+# <a name="x40x40maxconnections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 허용되는 최대 동시 사용자 연결 수를 반환합니다. 반환된 연결 수는 반드시 현재 구성된 연결 수가 아니어도 됩니다.  
@@ -78,4 +75,3 @@ Max Connections
  [user connections 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  
   
   
-

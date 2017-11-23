@@ -21,17 +21,16 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95d4624aab2e35b3e7ec34963aa33c3af8434eb5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 셀 속성-FORMAT_STRING 내용
   **FORMAT_STRING** 셀 속성은 **VALUE** 셀 속성의 형식을 지정하고 **FORMATTED_VALUE** 셀 속성의 값을 만듭니다. **FORMAT_STRING** 셀 속성은 문자열 및 숫자 원시 값을 모두 처리할 수 있으며 값에 형식 지정 식을 적용하여 **FORMATTED_VALUE** 셀 속성에 사용할 형식 지정된 값을 반환합니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  
@@ -165,4 +164,3 @@ ms.lasthandoff: 09/01/2017
  [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

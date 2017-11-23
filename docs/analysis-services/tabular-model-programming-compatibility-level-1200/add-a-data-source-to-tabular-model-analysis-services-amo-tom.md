@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b8f6397f70727173345a41e92704a4277de32ddd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 692de4d83bfef7a61b11079fb31bb395da8771aa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>테이블 형식 모델 (Analysis Services AMO-TOM)에 데이터 소스 추가
 
@@ -142,4 +141,3 @@ namespace TOMSamples
 ## <a name="next-step"></a>다음 단계 
 
 모델 내에서 데이터 원본에서 원본 열을 모델에서 대상 열에 매핑되는 데이터 바인딩을 설정 해야 합니다. 파티션 최소 테이블당 1 데이터를 저장 하는 정의 해야 합니다. 다음 링크를 클릭 하는 방법을 보여 줍니다: [테이블, 파티션 및 열 만들기](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md) 
-

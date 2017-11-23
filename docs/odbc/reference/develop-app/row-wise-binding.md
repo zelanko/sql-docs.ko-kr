@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b5caaab8154951fe771767206ce3755d84314855
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 967d7682c666dd6c413d49e083affeb55721742d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="row-wise-binding"></a>행 단위 바인딩
 행 단위 바인딩은 사용할 경우 응용 프로그램 하나 또는 두 개가 포함 된 구조체를 정의 또는 경우에 따라 3 개의 데이터 반환 되는 각 열에 대 한 요소입니다. 첫 번째 요소는 데이터 값을 보유 하 고 두 번째 요소가 고 길이/표시기 버퍼입니다. 표시기 및 길이 값에에서 저장할 수 별도 버퍼 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드; 있는 다른 값을 설정 하 여 이 도구를 실행 하는 경우 구조는 세 번째 요소를 포함 합니다. 그런 다음 응용 프로그램은 행 집합의 행이 더 많은 요소를 포함 하는 이러한 구조 배열을 할당 합니다.  
@@ -115,4 +113,3 @@ while ((rc = SQLFetchScroll(hstmt,SQL_FETCH_NEXT,0)) != SQL_NO_DATA) {
 // Close the cursor.  
 SQLCloseCursor(hstmt);  
 ```
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4db2f357942eb7bab34a17e8f9c03e442731055
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 192962491095f8c6b8fb212ab7789cb74b609897
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>스크롤 가능 커서 및 트랜잭션 격리
 다음 표에서 변경 내용 표시를 제어 하는 요소를 나열 합니다.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/09/2017
  직렬화 가능 s:  
   
  [b]는 커서를 구현 하는 방법에 따라 달라 집니다. SQL_STATIC_SENSITIVITY 옵션을 통해 보고 되는 커서가 이러한 변경 내용을 검색할 수 있는지 여부 **SQLGetInfo**합니다.
-

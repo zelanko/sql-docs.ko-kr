@@ -14,22 +14,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.datasourceproperties.f1
-helpviewer_keywords:
-- Data Source Properties dialog box
+f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
+helpviewer_keywords: Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d406f4743c47ded117bf93a62bb4eefadb093058
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>데이터 원본 속성 설정(SSAS 다차원)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 원본 개체는 외부 데이터 웨어하우스 또는 다차원 모델에 데이터를 제공하는 관계형 데이터베이스에 대한 연결을 지정합니다. 데이터 원본의 속성에 따라 연결 문자열, 제한 시간 간격, 최대 연결 수 및 트랜잭션 격리 수준이 결정됩니다.  
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   
-

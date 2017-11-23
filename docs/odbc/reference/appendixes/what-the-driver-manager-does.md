@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC driver manager [ODBC]
 - backward compatibility [ODBC], driver manager
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d662370f1e782edfc5f932ad26cdbc38643bcda7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-the-driver-manager-does"></a>드라이버 관리자에서 수행 하는 작업
 다음 표에서 요약 방식을 ODBC 3*.x* 드라이버 관리자 ODBC 2에 대 한 호출을 매핑합니다. *x* 고 ODBC 3*.x* 드라이버입니다.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLFetchScroll**|지정 된 행 집합을 반환 합니다. 다음은 구현 세부 정보:<br /><br /> -응용 프로그램 호출 경우 **SQLFetchScroll** ODBC 2에서. *x* 드라이버에서 ODBC 3*.x* 드라이버 관리자 매핑합니다 **SQLExtendedFetch**합니다. SQL_ATTR_ROW_STATUS_PTR 문 특성에 대 한 캐시 된 값을 사용 하 여는 *RowStatusArray* 인수와 SQL_ATTR_ROWS_FETCHED_PTR 문 특성에 대 한 캐시 된 값은 *RowCountPtr* 인수입니다. 경우는 *FetchOrientation* 인수 **SQLFetchScroll** SQL_FETCH_BOOKMARK은 SQL_ATTR_FETCH_BOOKMARK_PTR 문 특성에 대 한 캐시 된 값을 사용 하 여는 *FetchOffset*  인수 오류를 반환 하 고는 *FetchOffset* 의 인수 **SQLFetchScroll** 는 0이 아닌 합니다.<br />-응용 프로그램 호출 하는 경우이 ODBC 3에서*.x* 드라이버에서 ODBC 3*.x* 드라이버 관리자 드라이버에 대 한 호출을 전달 합니다.|  
 |**SQLSetPos**|다양 한 위치 지정된 작업을 수행합니다. ODBC 3*.x* 드라이버 관리자에 대 한 호출을 전달 **SQLSetPos** 드라이버 버전에 관계 없이 드라이버에 있습니다.|  
 |**SQLSetScrollOptions**|드라이버 관리자에 매핑합니다 **SQLSetScrollOptions** ODBC 3을 사용 하는 응용 프로그램에 대 한*.x* 지원 하지 않는 드라이버 **SQLSetScrollOptions**, 드라이버 관리자 설정 SQL_ROWSET_SIZE 문 옵션 not SQL_ATTR_ROW_ARRAY_SIZE 문 특성에는 *RowsetSize* 인수 **SQLSetScrollOption**합니다. 결과적으로, **SQLSetScrollOptions** 를 호출 하 여 여러 행을 인출할 때 응용 프로그램에서 사용할 수 없습니다 **SQLFetch** 또는 **SQLFetchScroll**합니다. 호출 하 여 행을 가져오는 여러 경우에 사용할 수 있습니다 **SQLExtendedFetch**합니다.|
-

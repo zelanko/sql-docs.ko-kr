@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6d05c82b5e84263f968bcc79554ab64d25559ff5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10d7a7a33b38e23c3cb6b88a3d2b73007daf3e72
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="test-an-action"></a>동작 테스트
   큐브 디자이너의 브라우저 보기를 사용하여 동작을 테스트합니다. 큐브 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후에 동작을 테스트하려면 먼저 큐브를 처리해야 합니다. 자세한 내용은 [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)를 참조하세요.  
@@ -41,4 +40,3 @@ ms.lasthandoff: 09/01/2017
 4.  동작 이름을 클릭하여 동작을 테스트합니다.  
   
   
-

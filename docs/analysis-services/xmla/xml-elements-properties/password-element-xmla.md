@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Password Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Password Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Password
 - urn:schemas-microsoft-com:xml-analysis#Password
 - microsoft.xml.analysis.password
-helpviewer_keywords:
-- Password element
+helpviewer_keywords: Password element
 ms.assetid: 8a0603bd-f6a1-4b86-84f1-c83d0b03951b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0e7d330f5cb2b92223ca897034130a908007afdc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 56090d82d7d91ea7319c7bbe2cf59087de8f6ef0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="password-element-xmla"></a>Password 요소(XMLA)
   부모에 사용할 암호를 결정 [백업](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) 또는 [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) 명령 암호화에 백업 파일 암호 해독 합니다.  
@@ -80,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

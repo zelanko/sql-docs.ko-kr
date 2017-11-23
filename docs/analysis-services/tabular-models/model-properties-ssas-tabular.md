@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.asvs.bidtoolset.wspacedbconfig.f1
 - sql13.asvs.bidtoolset.fileprop.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f0f897572dda34193a87cab649cb3d1b9e155fcb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e0d09f3f0bd09017c73579d3f8b04b27e91cabfb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-properties-ssas-tabular"></a>모델 속성(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델 속성에 대해 설명합니다. 테이블 형식 모델 프로젝트 각각에는 SQL Server 개발 도구에서 제작하는 모델의 빌드 방식, 백업 방식 및 작업 영역 데이터베이스의 저장 방식에 영향을 주는 모델 속성이 있습니다. 여기서 설명하는 모델 속성은 이미 배포된 모델에는 적용되지 않습니다.  
@@ -80,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [프로젝트 속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   
-

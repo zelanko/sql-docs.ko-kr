@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Source property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 953cd75d0924ef2dafdcfda11e8e111411a533f9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95fa9497ce4a8efea8e8b361ade7f484fa01d42c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-property-example-vb"></a>원본 속성 예제 (VB)
 이 예제에서는 [소스](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성 3 개를 열어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 서로 다른 데이터 원본을 기반으로 합니다.  
@@ -137,4 +133,3 @@ End Sub
 ## <a name="see-also"></a>관련 항목:  
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source 속성(ADO 레코드 집합)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0451bf3965e35353d3465cd5bd873954638f2fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb3505a7750bf2b538078139cf84b9e88a7e23bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="text-file-format-text-file-driver"></a>텍스트 파일 형식 (텍스트 파일 드라이버)
 텍스트 ODBC 드라이버에는 구분 되 고 고정 너비 텍스트 파일을 모두 지원합니다. 선택적 헤더 줄과 0 개 이상의 텍스트 줄의 텍스트 파일로 구성 됩니다.  
@@ -129,4 +127,3 @@ fixed-width-null ::= <SPACE>...
   
 > [!NOTE]  
 >  고정 너비 파일에 대 한 NULL 공백으로 표시 됩니다.
-

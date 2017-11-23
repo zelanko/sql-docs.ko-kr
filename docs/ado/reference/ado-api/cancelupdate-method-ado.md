@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::CancelUpdate
-helpviewer_keywords:
-- CancelUpdate method [ADO]
+f1_keywords: Recordset15::CancelUpdate
+helpviewer_keywords: CancelUpdate method [ADO]
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a7a118a37c403d9d50019e72b10f482d7b3f089c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a85b135d743b356f5e4f5bd28e6bb2f2bb1eec0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 메서드 (ADO)
 현재 또는 새 행에 대해 모든 변경 내용을 취소는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체를 호출 하기 전에 [업데이트 ](../../../ado/reference/ado-api/update-method.md) 메서드.  
@@ -68,4 +64,3 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
  [CancelUpdate 메서드 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)   
  [Update 메서드](../../../ado/reference/ado-api/update-method.md)
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Analysis Services deployments, scripts
 - scripts [Analysis Services], deployment
 ms.assetid: a63ebee9-9848-48f1-82ad-64ecf2e47019
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dfd2ebf1f65c607e63d1cb51f2fbd30c2b5711b2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ccc1b2b2861a20de2f02bf118a5abcf14e8ea6b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Analysis Services 배포 스크립트 이해
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 생성하는 XMLA 배포 스크립트는 다음 두 섹션으로 구성됩니다.  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [배포 스크립트를 만드는 데 사용하는 입력 파일 이해](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
   
   
-

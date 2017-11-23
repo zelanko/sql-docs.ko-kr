@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReadDefinition Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReadDefinition Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReadDefinition
-helpviewer_keywords:
-- ReadDefinition element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReadDefinition
+helpviewer_keywords: ReadDefinition element
 ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7596e2bbd2c560f9e3c47f7be3f60ab133ff5714
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 50bf45c70b3c49be547d3c1ff5568acbb6e891e2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="readdefinition-element-assl"></a>ReadDefinition 요소(ASSL)
   멤버가 데이터베이스의 정의 또는 데이터베이스의 개체 정의를 읽을 수 있는지 여부를 결정합니다.  
@@ -82,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

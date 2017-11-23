@@ -6,23 +6,28 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: On Demand
+ms.openlocfilehash: de348a584333eb113cca2e5eb052b21bbc3d1c54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 Always On 가용성 그룹 구성
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 문서에서는 Linux에서 고가용성을 위한 가용성 그룹에 항상 SQL Server를 만드는 방법을 설명 합니다. 가용성 그룹에 대 한 구성 형식은 두 가지가 있습니다. A *고가용성* 구성 클러스터 관리자를 사용 하 여 비즈니스 연속성을 제공 합니다. 이 구성에서 읽기 확장 복제본을 포함할 수도 있습니다. 이 문서에는 가용성 그룹 고가용성 구성을 만드는 방법에 설명 합니다.
+이 문서에서는 Linux에서 고가용성을 위한 가용성 그룹에 항상 SQL Server를 만드는 방법을 설명 합니다. 가용성 그룹에 대 한 구성 형식은 두 가지가 있습니다. A *고가용성* 구성 클러스터 관리자를 사용 하 여 비즈니스 연속성을 제공 합니다. 이 구성은 읽기 확장성이 복제본을 포함할 수도 있습니다. 이 문서에는 가용성 그룹 고가용성 구성을 만드는 방법에 설명 합니다.
 
-만들 수도 있습니다는 *읽기 확장* 클러스터 관리자 없이 가용성 그룹입니다. 이 구성은 성능 확장에 대 한 읽기 전용 복제본을 제공합니다. 고가용성을 제공 하지는 않습니다. 읽기 확장 가용성 그룹을 만들려면 참조 [Linux에서 SQL Server에 대 한 확장 가용성 그룹을 읽기 구성](sql-server-linux-availability-group-configure-rs.md)합니다.
+만들 수도 있습니다는 *읽기 확장성이* 클러스터 관리자 없이 가용성 그룹입니다. 이 구성은 성능 확장에 대 한 읽기 전용 복제본을 제공합니다. 고가용성을 제공 하지는 않습니다. 읽기 확장성이 가용성 그룹을 만들려면 참조 [Linux에서 SQL Server에 대 한 읽기 확장성이 가용성 그룹 구성](sql-server-linux-availability-group-configure-rs.md)합니다.
 
 높은 가용성 및 데이터 보호를 보장 하는 구성 2 또는 3 개의 동기 커밋 복제본 필요 합니다. 세 개의 동기 복제본으로 가용성 그룹 자동으로 복구할 수 하나의 서버를 사용할 수 없는 경우에. 자세한 내용은 참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. 
 
@@ -81,13 +86,19 @@ Linux에서 고가용성을 위한 가용성 그룹을 만듭니다. 사용 하 
 * 주 복제본과 보조 복제본 설정 `FAILOVER_MODE = EXTERNAL`합니다. 
    복제본 Pacemaker 같은 외부 클러스터 관리자와 상호 작용 한다고 지정 합니다. 
 
-다음 TRANSACT-SQL 스크립트 라는 고가용성을 위한 가용성 그룹을 만듭니다 `ag1`합니다. 스크립트는 구성 된 가용성 그룹 복제본 `SEEDING_MODE = AUTOMATIC`합니다. 이렇게이 설정 하면 SQL Server를 자동으로 각 보조 서버에서 데이터베이스를 만듭니다. 사용자 환경에 대 한 다음 스크립트를 업데이트 합니다. 대체는 `**<node1>**`, 및 `**<node2>**` 복제본을 호스팅하는 SQL Server 인스턴스 이름 사용 하 여 값입니다. 대체는 `**<5022>**` 데이터 미러링 끝점에 대해 설정 된 포트입니다. 가용성 그룹을 만들려면 다음 TRANSACT-SQL 주 복제본을 호스팅하는 SQL Server 인스턴스에서 실행 합니다.
+다음 TRANSACT-SQL 스크립트 라는 고가용성을 위한 가용성 그룹을 만듭니다 `ag1`합니다. 스크립트는 구성 된 가용성 그룹 복제본 `SEEDING_MODE = AUTOMATIC`합니다. 이렇게이 설정 하면 SQL Server를 자동으로 각 보조 서버에서 데이터베이스를 만듭니다. 사용자 환경에 대 한 다음 스크립트를 업데이트 합니다. 대체는 `**<node1>**`, `**<node2>**`, 또는 `**<node3>**` 복제본을 호스팅하는 SQL Server 인스턴스 이름 사용 하 여 값입니다. 대체는 `**<5022>**` 데이터 미러링 끝점에 대해 설정 된 포트입니다. 가용성 그룹을 만들려면 다음 TRANSACT-SQL 주 복제본을 호스팅하는 SQL Server 인스턴스에서 실행 합니다.
 
 실행 **하나만** 다음 스크립트 중: 
 
-- 세 개의 동기 복제본으로 가용성 그룹을 만듭니다.
+- [세 개의 동기 복제본으로 가용성 그룹 만들기](#threeSynch)합니다.
+- [2 개의 동기 복제본 및 구성 복제본과 가용성 그룹 만들기](#configOnly)
+- [세 개의 동기 복제본으로 가용성 그룹 만들기](#readScale)합니다.
 
-   ```Transact-SQL
+<a name="threeSynch"></a>
+
+- 세 개의 동기 복제본으로 가용성 그룹 만들기
+
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
        WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
        FOR REPLICA ON
@@ -119,6 +130,33 @@ Linux에서 고가용성을 위한 가용성 그룹을 만듭니다. 사용 하 
    >[!IMPORTANT]
    >세 개의 동기 복제본을 사용 하 여 가용성 그룹을 만들려면 이전 스크립트를 실행 한 후 다음 스크립트를 실행 하지 마십시오.
 
+- 2 개의 동기 복제본 및 구성 복제본과 가용성 그룹을 만듭니다.
+
+   >[!IMPORTANT]
+   >이 구조는 모든 버전의 세 번째 복제본을 호스팅할 SQL Server를 사용 합니다. 예를 들어 SQL Server Enterprise Edition에서 세 번째 복제본을 호스팅할 수 있습니다. Enterprise edition만 유효한 끝점 유형이 `WITNESS`합니다. 
+
+   ```SQL
+   CREATE AVAILABILITY GROUP [ag1] 
+      WITH (CLUSTER_TYPE = EXTERNAL) 
+      FOR REPLICA ON 
+       N'**<node1>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**', 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node2>**' WITH (  
+          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',  
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node3>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+          AVAILABILITY_MODE = CONFIGURATION_ONLY  
+          );
+   ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+   ```
 <a name="readScale"></a>
 
 - 2 개의 동기 복제본으로 가용성 그룹 만들기
@@ -126,9 +164,9 @@ Linux에서 고가용성을 위한 가용성 그룹을 만듭니다. 사용 하 
    동기 가용성 모드와 두 개의 복제본을 포함 합니다. 예를 들어 다음 스크립트 라는 가용성 그룹을 만듭니다 `ag1`합니다. `node1`및 `node2` 동기 모드, 자동 시드 및 자동 장애 조치에에서 대 한 복제본을 호스트 합니다.
 
    >[!IMPORTANT]
-   >만 2 개의 동기 복제본을 사용 하 여 가용성 그룹을 만들려면 다음 스크립트를 실행 합니다. 앞의 스크립트를 실행 한 경우에 다음 스크립트를 실행 하지 마십시오. 
+   >만 2 개의 동기 복제본을 사용 하 여 가용성 그룹을 만들려면 다음 스크립트를 실행 합니다. 위의 스크립트를 실행 한 경우에 다음 스크립트를 실행 하지 마십시오. 
 
-   ```Transact-SQL
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
       WITH (CLUSTER_TYPE = EXTERNAL)
       FOR REPLICA ON
@@ -164,9 +202,9 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->가용성 그룹을 만든 후에 고가용성을 위해 Pacemaker 같은 클러스터 기술로 통합을 구성 해야 합니다. 읽기 확장 구성으로 시작 하는 가용성 그룹을 사용 하 여 [!INCLUDE [SQL Server 버전](..\includes\sssqlv14-md.md)], 필요 하지 않습니다는 클러스터를 설정 합니다.
+>가용성 그룹을 만든 후에 고가용성을 위해 Pacemaker 같은 클러스터 기술로 통합을 구성 해야 합니다. 으로 시작 하는 가용성 그룹을 사용 하 여 읽기 확장성이 구성에 대 한 [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], 필요 하지 않습니다는 클러스터를 설정 합니다.
 
-이 문서의 단계를 따른 경우 가용성 그룹을 아직 클러스터 되지 않은 해야 합니다. 다음 단계에서는 클러스터를 추가 하는 것입니다. 이 구성은 읽기 스케일 아웃/부하 분산 시나리오에 대 한 유효한, 고가용성에 대 한 완료 되지 않았습니다. 고가용성을 위해 클러스터 리소스로 가용성 그룹을 추가 해야 합니다. 참조 [다음 단계](#next-steps) 지침에 대 한 합니다. 
+이 문서의 단계를 따른 경우 가용성 그룹을 아직 클러스터 되지 않은 해야 합니다. 다음 단계에서는 클러스터를 추가 하는 것입니다. 이 구성은 읽기-대규모/부하 분산 시나리오에 대 한 유효한, 고가용성에 대 한 완료 되지 않았습니다. 고가용성을 위해 클러스터 리소스로 가용성 그룹을 추가 해야 합니다. 참조 [다음 단계](#next-steps) 지침에 대 한 합니다. 
 
 ## <a name="notes"></a>참고
 
@@ -184,4 +222,3 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [SQL Server 가용성 그룹 클러스터 리소스에 대 한 SUSE Linux Enterprise Server 클러스터 구성](sql-server-linux-availability-group-cluster-sles.md)
 
 [SQL Server 가용성 그룹 클러스터 리소스에 대 한 Ubuntu 클러스터 구성](sql-server-linux-availability-group-cluster-ubuntu.md)
-

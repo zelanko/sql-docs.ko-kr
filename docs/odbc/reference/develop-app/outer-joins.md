@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 78f943033febb1f60ebfe420a10748af1f4260b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="outer-joins"></a>외부 조인
 ODBC는 sql-92 left, right 및 완전 외부 조인 구문을 지원합니다. 외부 조인에 대 한 이스케이프 시퀀스는  
@@ -54,4 +52,3 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  데이터 소스와 드라이버가 지 원하는 외부 조인의 종류를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** 는 SQL_OJ_CAPABILITIES와 플래그를 지정 합니다. 지원 될 수 있는 외부 조인 유형에 왼쪽, 오른쪽, 전체 또는 중첩 된 외부 조인; 외부 조인에 열 이름에 **ON** 절에서 각 테이블 이름와 순서가 동일 하지 않은 **OUTER JOIN** 절; 외부 조인이; 및 외부 조인을 사용 하 여 함께 내부 조인 모든 ODBC 비교 연산자입니다. SQL_OJ_CAPABILITIES 정보 유형 0을 반환 하면 외부 조인 절 없이 사용할 수 있습니다.
-

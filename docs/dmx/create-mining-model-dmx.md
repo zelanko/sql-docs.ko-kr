@@ -2,9 +2,12 @@
 title: "MINING MODEL (DMX) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -14,8 +17,7 @@ f1_keywords:
 - CREATE MINING MODEL
 - CREATE
 - CREATE_MINING_MODEL
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - RELATED TO column
 - mining models [Analysis Services], creating
@@ -24,19 +26,19 @@ helpviewer_keywords:
 - SESSION clause
 - CREATE MINING MODEL statement
 ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 279d4750f6264cbffb07e26a0d75317a1457cb56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8cdeac4e5da9e232959777278e5b5d0c45d7ac7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL(DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   데이터베이스에 새 마이닝 모델과 마이닝 구조를 만듭니다. 이 문에서 새 모델을 정의하거나 PMML(Predictive Model Markup Language)을 사용하여 모델을 만들 수 있습니다. 두 번째 옵션은 고급 사용자만 사용해야 합니다.  
   
@@ -131,7 +133,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |\<예측 > 절|Description|  
 |---------------------------|-----------------|  
-|**예측**|이 열은 모델에 의해 예측될 수 있으며 다른 예측 가능 열 값을 예측하기 위해 입력 사례에 제공될 수 있습니다.|  
+|**PREDICT**|이 열은 모델에 의해 예측될 수 있으며 다른 예측 가능 열 값을 예측하기 위해 입력 사례에 제공될 수 있습니다.|  
 |**PREDICT_ONLY**|이 열은 모델에 의해 예측될 수 있지만 이 열의 값을 입력 사례에 사용하여 다른 예측 가능 열 값을 예측할 수는 없습니다.|  
   
 ### <a name="parameter-definition-list"></a>매개 변수 정의 목록  
@@ -212,4 +214,3 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

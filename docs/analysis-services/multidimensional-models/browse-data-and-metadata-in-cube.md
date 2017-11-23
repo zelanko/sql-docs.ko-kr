@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 995c0c6426f3014e58d49d61aad9a379ad5bc65e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>큐브에서 데이터 및 메타데이터 찾아보기
   큐브 디자이너의 **브라우저** 탭에서 큐브 데이터를 검색할 수 있습니다. 이 뷰를 사용하여 큐브의 구조를 검토하고 데이터베이스 개체의 데이터, 계산, 형식, 보안을 확인할 수 있습니다. 보고 도구 또는 기타 클라이언트 응용 프로그램에서 최종 사용자에게 큐브가 어떻게 표시되는지 신속하게 검토할 수 있습니다. 큐브 데이터를 검색할 때는 차원별로 데이터를 조회하고, 멤버를 드릴다운하고, 차원을 통해 데이터를 조각화할 수 있습니다.  
@@ -116,4 +115,3 @@ ms.lasthandoff: 09/01/2017
  데이터 창에서 마우스 오른쪽 단추를 클릭한 후 **빈 셀 표시**를 클릭하여 데이터 표의 빈 셀을 숨길 수 있습니다.  
   
   
-

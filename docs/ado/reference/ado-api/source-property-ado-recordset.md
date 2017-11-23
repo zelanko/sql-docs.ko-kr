@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -21,20 +20,18 @@ f1_keywords:
 - Recordset15::GetSource
 - Recordset15::PutRefSource
 - Recordset15::put_Source
-helpviewer_keywords:
-- Source property [ADO Recordset]
+helpviewer_keywords: Source property [ADO Recordset]
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 36180bafb53d72985c2dc671d80147c8ffaa8588
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ea45eae107fa55355adeb195e7e4fc5cf0a3c762
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-property-ado-recordset"></a>Source 속성 (ADO 레코드 집합)
 에 대 한 데이터 원본을 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/09/2017
  [원본 속성 예제 (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Source 속성 (ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source 속성(ADO 레코드)](../../../ado/reference/ado-api/source-property-ado-record.md)
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-cube-schema"></a>큐브 스키마 보기
   **큐브 디자이너** 에서 **큐브 구조** 탭의 **데이터 원본 뷰** 에는 큐브 스키마가 표시됩니다. 이 스키마는 큐브의 측정값과 차원이 파생된 원본 테이블 집합입니다. 모든 큐브 스키마는 해당 큐브의 측정값과 차원의 기반이 되는 하나 이상의 팩트 테이블과 하나 이상의 차원 테이블로 구성됩니다.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
 |데이터 원본 뷰 스키마를 편집합니다.|**데이터 원본 뷰** 메뉴에서 **데이터 원본 뷰 편집**을 클릭합니다.<br /><br /> -또는-<br /><br /> **데이터 원본 뷰** 창의 배경을 마우스 오른쪽 단추로 클릭한 다음 **데이터 원본 뷰 편집**을 클릭합니다.|  
   
   
-

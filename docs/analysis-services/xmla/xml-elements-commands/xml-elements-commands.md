@@ -13,31 +13,29 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - commands [XML for Analysis]
 - XML for Analysis, commands
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 19644de3ba240e417faa3d787360686d7b5c835f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64577ef2799fd56cc4e404a42fc351be8ece6baa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---commands"></a>XML 요소-명령
   이 참조 섹션 내에서 사용할 수 있는 Analysis (XMLA) 요소에 대 한 XML이 포함 되어는 **명령** 중 요소는 **Execute** 메서드를 호출 합니다.  
   
 |요소|Description|  
 |-------------|-----------------|  
-|[Alter 요소 (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|사용 하는 Analysis Services Scripting Language (ASSL) 요소를 포함 된 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 개체의 인스턴스를 변경 하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.|  
+|[Alter 요소(XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|사용 하는 Analysis Services Scripting Language (ASSL) 요소를 포함 된 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 개체의 인스턴스를 변경 하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.|  
 |[Backup 요소](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|백업 하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스를 백업 파일입니다.|  
 |[일괄 처리 요소](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|순차 또는 병렬의 인스턴스에서 Analysis (XMLA) 명령에 대 한 하나 이상의 XML을 일괄 처리 작업으로 수행 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.|  
 |[BeginTransaction 요소](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Analysis Services 인스턴스로 현재 세션에서 트랜잭션을 시작합니다.|  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/01/2017
 |[UpdateCells 요소](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)|쓰기 가능 큐브의 셀을 업데이트합니다.|  
   
   
-

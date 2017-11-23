@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 920de8b36ee55357eebde9ad844bfe569773f74e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="network-database-access"></a>네트워크 데이터베이스 액세스
 네트워크를 통해 데이터베이스에 액세스 하는 여러 독립적인, 각각 및 프로그래밍 인터페이스 아래에 있는 구성 요소 필요 합니다. 이러한 구성 요소는 다음 그림에 표시 됩니다.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 -   **통신 메커니즘의 프로세스 간** (IPC) 프로세스 간 통신 메커니즘은 다른 한 프로세스가 통신 하는 프로세스입니다. 명명 된 파이프, TCP/IP 소켓 및 DECnet 소켓을 예로 들 수 있습니다. IPC 메커니즘 선택은 운영 체제 및 네트워크 사용량에 따라 달라 집니다.  
   
 -   **네트워크 프로토콜** 네트워크 프로토콜은 데이터 스트림이 네트워크를 통해 전송 하는 데 사용 됩니다. 작업을 지 원하는 데이터를 구현 하는 데 사용 되는 IPC 메커니즘 파일 전송과 같은 기본 네트워크 작업 지원 뿐만 아니라 프로토콜, 스트림 및 인쇄 공유 처리를 생각할 수 있습니다. 네트워크 프로토콜 NetBEUI, TCP/IP, DECnet 및 SPX/IPX를 포함 하며 각 네트워크에 고유 합니다.
-

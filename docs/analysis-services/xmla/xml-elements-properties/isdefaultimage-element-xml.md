@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: e29cd137-af82-4753-a681-0d3e705513f3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 57419279e470e9ae5e3bf22a1527e4a889ae79be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed09bbccf5bb5aa399fbab0c9e6a58c7f58c7ecd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="isdefaultimage-element-xml"></a>IsDefaultImage 요소(XML)
   다른 테이블에 대한 이 관계를 탐색하고 IsDefaultImage 특성이 있는 멤버를 인출하여 이 엔터티의 기본 이미지를 가져올 수 있음을 나타냅니다.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  **RelationshipEndVisualizationProperties** 요소의 경우 **IsDefaultImage** 요소는 이 관계의 다른 끝을 탐색하여 이 엔터티의 기본 이미지를 가져올 수 있음을 나타냅니다. 기본값인 **false** 는 가져올 기본 이미지가 없음을 나타냅니다.  
   
   
-

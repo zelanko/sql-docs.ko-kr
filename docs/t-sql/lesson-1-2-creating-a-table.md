@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- creating tables
+helpviewer_keywords: creating tables
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 452150637ddf034ed1b69c2d0a32c9ad4c4e5977
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87c8e97785cc54d9164d7a246384f04c6227c5d2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-2---creating-a-table"></a>단원 1-2-테이블 만들기
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,5 +85,4 @@ ms.lasthandoff: 09/01/2017
   
   
   
-
 

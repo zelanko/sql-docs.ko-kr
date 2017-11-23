@@ -2,32 +2,31 @@
 title: "보기 만들기 및 저장 프로시저 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- creating views and stored procedures
+applies_to: SQL Server 2016
+helpviewer_keywords: creating views and stored procedures
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b246171441ba9eedb213fd2baef55d8dc7668d26
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bc361e589dba1215781adcf951fd419b7dc806f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-3---creating-views-and-stored-procedures"></a>단원 2-3-뷰 만들기 및 저장된 프로시저
-이제 Mary는 **TestData** 데이터베이스에 액세스할 수 있으므로 뷰 및 저장 프로시저와 같은 일부 데이터베이스 개체를 만든 다음 이러한 개체에 대한 액세스 권한을 Mary에게 부여할 수 있습니다. 뷰는 저장된 SELECT 문이며 저장 프로시저는 일괄 처리로 실행되는 하나 이상의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문입니다.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Mary는 액세스할 수 있는 했으므로 **TestData** 데이터베이스를 만들려는 경우 뷰 및 저장된 프로시저와 같은 일부 데이터베이스 개체를 만들고 다음에 Mary에 게 액세스 권한을 부여 합니다. 뷰는 저장된 SELECT 문이며 저장 프로시저는 일괄 처리로 실행되는 하나 이상의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문입니다.  
   
 뷰는 테이블처럼 쿼리되며 매개 변수를 허용하지 않습니다. 저장 프로시저는 뷰보다 복잡합니다. 저장 프로시저는 입력 및 출력 매개 변수를 가질 수 있으며 코드 흐름을 제어하기 위해 IF 및 WHILE 문과 같은 문을 포함할 수 있습니다. 데이터베이스의 모든 반복되는 동작에 저장 프로시저를 사용하는 것이 바람직한 프로그래밍 방식입니다.  
   
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

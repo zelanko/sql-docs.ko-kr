@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DbSchemaName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DbSchemaName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#DbSchemaName
 - microsoft.xml.analysis.dbschemaname
 - http://schemas.microsoft.com/analysisservices/2003/engine#DbSchemaName
-helpviewer_keywords:
-- DbSchemaName element
+helpviewer_keywords: DbSchemaName element
 ms.assetid: 40ca10c9-7597-48fe-a9d9-ee2c7b84d4d1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bfa0ae41571fcd04361801e13571f758afbc44cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3b33f1ed8187c15afc4ce44db1bdbda6f96f9365
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemaname-element-xmla"></a>DbSchemaName 요소(XMLA)
   [DbTableName](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) 요소로 식별된 테이블의 부모 [TableNotification](../../../analysis-services/xmla/xml-elements-properties/dbtablename-element-xmla.md) 요소에서 사용하는 스키마 이름을 포함합니다.  
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], fetching results
 - fetches [ODBC], fetching results
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f706364735794aea773847431a9d42d0a09c8183
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-4a-fetch-the-results"></a>4a 단계: 결과 인출 합니다.
 다음 그림에 나와 있는 것 처럼 결과 인출 하는 다음 단계가입니다.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  결과 검색 하는 자세한 내용은 참조 하십시오. [검색 결과 (기본)](../../../odbc/reference/develop-app/retrieving-results-basic.md) 및 [검색 결과 (고급)](../../../odbc/reference/develop-app/retrieving-results-advanced.md)합니다.  
   
  응용 프로그램을 지금 "단계 3:: 빌드 및 실행 된 SQL 문에" 동일한 트랜잭션에서 다른 문을 실행할 수 반환 또는 "단계 5:: Commit Transaction" 커밋하거나 트랜잭션을로 진행 합니다.
-

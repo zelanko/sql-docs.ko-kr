@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ae3b2c60025f82d3153166a887fea12453443450
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql-example"></a>포함 된 SQL 예제
 다음 코드는 간단한 포함 된 SQL 프로그램을 C 언어로 작성 된 프로그램은 아니지만 많은 중는 포함 된 SQL 기술을 보여 줍니다. 프로그램 주문 번호에 대 한 사용자 요청 하 고, 고객 번호, 영업 사원, 및는 주문 상태를 검색 하 고, 검색 된 정보 화면에 표시 합니다.  
@@ -81,4 +79,3 @@ bad_number:
 -   **오류 처리** The DBMS는 SQL 통신 영역 또는 SQLCA을 통해 응용 프로그램에 런타임에 오류를 보고 합니다. 위의 코드 예제에서는 첫 번째 포함 된 SQL 문이 포함 SQLCA 경우 프로그램에서 SQLCA 구조를 포함 하도록 프리를 인지를 나타냅니다. 프로그램은 DBMS에 의해 반환 되는 오류를 처리할 때마다 이것이 필요 합니다. WHENEVER 중... GOTO 문의 분기를 특정 레이블 때 오류가 발생 하는 오류 처리 코드를 생성 하려면 프리를 지시 합니다.  
   
 -   **단일 선택** 데이터를 반환 하는 데 사용 하는 문을 단일 SELECT 문입니다; 즉, 데이터의 단일 행만을 반환 합니다. 따라서이 코드 예제에서는 선언 않거나 커서를 사용 합니다.
-

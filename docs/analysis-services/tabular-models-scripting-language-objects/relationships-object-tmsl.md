@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 260788cabb01d26215a51f0853b1b8dffc8163d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-object-tmsl"></a>관계 개체 TMSL)
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  모든 개체 이름, 유형, 설명, properties 컬렉션 및 주석을 포함 하 여 속성의 공통 집합을 가집니다. **관계** 개체에는 다음과 같은 속성이 있습니다.  
   
  isActive  
- 관계를 활성 또는 비활성으로 표시 되어 있는지 여부를 나타내는 부울 값입니다. 활성 관계는 자동으로 테이블에서 필터링에 사용 됩니다. USERELATIONSHIP 함수는 DAX 계산에서 비활성 관계를 명시적으로 사용할 수 있습니다.  
+ 관계를 활성 또는 비활성으로 표시 되어 있는지 여부를 나타내는 부울 값입니다. 활성 관계는 테이블에서 필터링하는 데 자동으로 사용됩니다. 비활성 관계는 USERELATIONSHIP 함수를 사용하여 DAX 계산에서 명시적으로 사용될 수 있습니다.  
   
  crossFilteringBehavior  
  관계가 데이터의 필터링에 어떻게 영향을 주는지를 나타냅니다. 참조 [양방향 교차 필터에서 SQL Server 2016 Analysis Services 테이블 형식 모델에 대 한](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 자세한 정보에 대 한 합니다. 유효한 값은 다음과 같습니다.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 -   DatePartOnly (2)-두 개의 날짜 시간 열을 조인할 경우 날짜 부분에만 조인 합니다.  
   
  relyOnReferentialIntegrity  
- 사용 하지 않는; 나중에 사용할 수는 예약 되어 있습니다.  
+ 사용되지 않음; 나중에 사용하도록 예약됩니다.  
   
  securityFilteringBehavior  
  관계 영향을 줄 지는 행 수준 보안 식을 평가할 때 데이터의 필터링 방법을 지정 하는 열거형입니다. 유효한 값은 다음과 같습니다.  
@@ -179,4 +178,3 @@ ms.lasthandoff: 09/01/2017
  [관계 만들기](../../integration-services/data-flow/transformations/create-relationships.md)  
   
   
-

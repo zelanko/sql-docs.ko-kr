@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data sources [ODBC], configuring
+helpviewer_keywords: data sources [ODBC], configuring
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 42f60e7cd5673685a262467e54085a5d0b9ec068
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4609b8ec49a84b4eb5fb44c1be8c8a6a85ccc5f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configuring-data-sources"></a>데이터 소스 구성
 데이터 원본에 대 한 정보는 시스템 레지스트리에 저장 됩니다. 사용자가 관리 프로그램을 통해 데이터 원본 정보를 수정 합니다. 이 ODBC 관리자, ODBC 제어판 장치 또는 응용 프로그램 또는 드라이버 개발자가 작성 하는 관리 프로그램 수 있습니다.  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  이 섹션에는 다음 항목이 포함 됩니다.  
   
 -   [구성 구성 요소](../../../odbc/reference/install/configuration-components.md)
-

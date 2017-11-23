@@ -8,24 +8,21 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Command Events event category
+helpviewer_keywords: Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 56c47bd0dc279176ee56a31a6ee06ae3c6f1ca82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-events-data-columns"></a>Command Events 데이터 열
   다음 표에서는 **Command Events** 이벤트 범주의 각 이벤트 클래스에 대한 데이터 열을 나열합니다.  
@@ -84,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   
-

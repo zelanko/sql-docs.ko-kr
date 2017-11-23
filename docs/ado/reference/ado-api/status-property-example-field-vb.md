@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Status property [ADO Field], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e7034c405798a8583abcf43a6b7830ccdf229cdf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91c3418fea062661ffba94feb791d700301ff097
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="status-property-example-field-vb"></a>상태 속성 예제 (필드) (VB)
 다음 예제에서는 문서를 사용 하 여 읽기/쓰기 폴더에서 열고는 [인터넷 게시 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)합니다. [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 속성은 [필드](../../../ado/reference/ado-api/field-object.md) 의 개체는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 처음으로 설정 됩니다 **adFieldPendingInsert**, 로업데이트한다음**adFieldOk**합니다.  
@@ -103,4 +99,3 @@ Attribute VB_Name = "StatusField"
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status 속성(ADO 필드)](../../../ado/reference/ado-api/status-property-ado-field.md)
-

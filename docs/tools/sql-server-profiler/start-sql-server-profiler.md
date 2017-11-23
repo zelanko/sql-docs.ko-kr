@@ -5,8 +5,7 @@ ms.date: 7/7/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 3ad9d4d4762a085ee63ce142c6998af07b3c018c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9ce18e13fa735921846ea7f564ff53983d0c2dca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler 실행
   실행할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 여러 가지 방법으로 추적 수집을 지원 하기 위해 출력 다양 한 시나리오에서에서 합니다. 시작할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Windows 10에서 **시작** 메뉴에서는 **도구** 메뉴 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 여러 위치에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-steps"></a>다음 단계  
  [SQL Server Profiler 개요](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Management Studio 사용](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-

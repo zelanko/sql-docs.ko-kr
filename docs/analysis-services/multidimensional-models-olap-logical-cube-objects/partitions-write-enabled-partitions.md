@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - write-enabled partitions [Analysis Services]
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e161c0c7b9456101ae4f216a78560b1fec827686
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ca933c004d59a8c2e680d79e9d9499700f7e43
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions---write-enabled-partitions"></a>파티션-쓰기 가능 파티션
   큐브의 데이터는 일반적으로 읽기 전용입니다. 그러나 특정 시나리오에 대해 파티션을 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능 파티션을 사용하면 비즈니스 사용자가 셀 값을 변경하고 큐브 데이터에 대한 이러한 변경의 효과를 분석하여 여러 시나리오를 조사해 볼 수 있습니다. 파티션을 쓰기 가능하도록 설정하면 클라이언트 응용 프로그램에서 파티션의 데이터에 변경 내용을 기록할 수 있습니다. 쓰기 저장(writeback) 데이터라고 하는 이러한 변경 내용은 별도의 테이블에 저장되며 측정값 그룹의 기존 데이터를 덮어쓰지 않습니다. 그러나 큐브 데이터의 일부인 것처럼 쿼리 결과에 포함됩니다.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [쓰기 가능 차원](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- CubeDef
-helpviewer_keywords:
-- CubeDef object [ADO MD]
+f1_keywords: CubeDef
+helpviewer_keywords: CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b2d69c9a59868ee135cc98ec8de61d5be166224
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: acf8f7ad28f56e8eee7dc1a78fb05d6cac99dd39
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubedef-object-ado-md"></a>ADO MD CubeDef 개체
 관련된 차원 집합이 포함 된 다차원 스키마에서 큐브를 나타냅니다.  
@@ -51,7 +47,7 @@ ms.lasthandoff: 09/09/2017
 |CatalogName|이 큐브 속해 있는 카탈로그의 이름입니다.|  
 |CreatedOn|날짜 및 큐브를 만든 시간입니다.|  
 |CubeGUID|큐브 GUID입니다.|  
-|큐브 이름|큐브의 이름입니다.|  
+|CubeName|큐브의 이름입니다.|  
 |CubeType|큐브의 유형입니다.|  
 |DataUpdatedBy|데이터를 마지막으로 업데이트 하는 사람의 사용자 ID입니다.|  
 |Description|큐브의 의미 있는 설명입니다.|  
@@ -69,4 +65,3 @@ ms.lasthandoff: 09/09/2017
  [ADO MD CubeDefs 컬렉션](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
  [ADO MD 차원 컬렉션](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

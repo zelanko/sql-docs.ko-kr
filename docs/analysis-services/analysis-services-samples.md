@@ -19,12 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 097c3ab1c0827b9dd64bdb13a3c88a33cb0411e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a904cc21ff035388a15b9f985b81ec006aead7e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-samples"></a>Analysis Services 예제
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 09/01/2017
   예제 데이터베이스 및 확인 하 고 Analysis Services 솔루션을 테스트할 수 있도록 프로젝트를 찾으려면 여기 정보를 사용 합니다.
   
 
-## <a name="samples-on-github"></a>GitHub의 샘플
+## <a name="samples-on-github"></a>GitHub 샘플
 
 [Analysis Services에 대 한 Git 리포지토리](https://github.com/Microsoft/Analysis-Services) 코드 예제 및 커뮤니티 프로젝트 포함 되어 있습니다.
 
@@ -51,4 +50,3 @@ Wide World Importers 샘플 데이터의 새 컬렉션을 SQL Server 2016에 도
 
   
   
-

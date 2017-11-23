@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - driver manager [ODBC], handles
 - handles [ODBC], about handles
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 499f62ecd8e053ef0776873dcdf4fe20cac1fa96
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05788f48f4a3fdb695fc3064023e52c2a3750c2e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="handles"></a>핸들
 핸들은; 특정 항목을 식별 하는 불투명 한 32 비트 값 odbc에서이 항목에는 환경, 연결, 문 또는 설명자 수 있습니다. 응용 프로그램 호출 하는 경우 **SQLAllocHandle**, 드라이버 또는 드라이버 관리자 지정 된 형식의 새 항목을 만들고 응용 프로그램에 해당 핸들을 반환 합니다. 나중에 응용 프로그램 ODBC 함수를 호출할 때 해당 항목을 식별 하는 핸들을 사용 합니다. 드라이버 관리자와 드라이버 핸들을 사용 하 여 항목에 대 한 정보를 찾을 수 있습니다.  
@@ -100,4 +98,3 @@ SQLCloseCursor(hstmtOrder);
 -   [설명자 핸들](../../../odbc/reference/develop-app/descriptor-handles.md)  
   
 -   [상태 전환](../../../odbc/reference/develop-app/state-transitions.md)
-

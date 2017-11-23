@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], properties
+helpviewer_keywords: mining structures [Analysis Services], properties
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1bd35f96e4748f2e453930e74621edfbcb3aaee4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 908bf89105dbcfc4c61a4018c92a8cee71237fb9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>마이닝 구조 속성 변경
   마이닝 구조에 대한 속성은 두 가지 종류가 있으며 이 두 가지 속성 모두 수정할 수 있습니다.  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

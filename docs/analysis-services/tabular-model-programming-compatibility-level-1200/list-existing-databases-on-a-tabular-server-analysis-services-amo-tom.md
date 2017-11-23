@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ab5eb4b8-6254-442d-a42e-2372c346d260
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 25b6f8ef54de536c47b3a5df4a6d8ed3b6d627de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55587b02262943b06843c504c5ee00b13f914c07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>테이블 형식 서버 (Analysis Services AMO-TOM)에 있는 기존 데이터베이스 목록
 
@@ -128,5 +127,4 @@ switch(obj.ObjectType)
 ## <a name="next-steps"></a>다음 단계
 
 이해 하는 방법 [만들기 빈 데이터베이스를 배포 하 고](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-and-deploy-an-empty-database-analysis-services-amo-tom.md) TOM API를 사용 하 여 합니다.
-
 

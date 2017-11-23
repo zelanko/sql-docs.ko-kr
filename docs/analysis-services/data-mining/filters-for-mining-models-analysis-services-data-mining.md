@@ -20,17 +20,16 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8bf35c6bd8086ba6fc61dce76853308c9cb34e2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db42f50eca097c58afac1ded71d143f8230fd42d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>마이닝 모델에 대한 필터(Analysis Services - 데이터 마이닝)
   데이터 기반 모델 필터링을 사용하면 마이닝 구조에서 데이터의 하위 집합을 사용하는 마이닝 모델을 만들 수 있습니다. 포괄적인 데이터 원본 뷰를 기반으로 단일 마이닝 구조를 만들 수 있으므로 필터링을 사용하면 마이닝 구조 및 데이터 원본을 유연하게 디자인할 수 있습니다. 그런 다음 데이터의 각 하위 집합에 대해 서로 다른 구조 및 관련 모델을 작성하는 대신 다양한 모델의 학습 및 테스트에 해당 데이터의 일부만 사용하기 위한 필터를 만들 수 있습니다.  
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

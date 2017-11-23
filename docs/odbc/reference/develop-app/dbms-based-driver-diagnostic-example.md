@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 913511bdfe8c13ca3366291e373d249197fe402c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0a20af8dc2a35ba451890472ad1af73e01d8688
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>DBMS 기반 드라이버 진단 예제
 DBMS 기반 드라이버 DBMS에 요청을 보내고 드라이버 관리자를 통해 응용 프로그램에 정보를 반환 합니다. 형식 및에 대 한 인수를 반환 합니다. 드라이버가 드라이버 관리자와 교류 하는 구성 요소 이므로 **SQLGetDiagRec**합니다.  
@@ -52,4 +50,3 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
 ```  
   
  데이터 원본에 오류가 발생 드라이버 진단 메시지에 데이터 원본 식별자 ([Rdb])에 대 한 접두사를 추가 합니다. 드라이버는 데이터 원본과 역시 주는 구성 요소, 때문에 진단 메시지를 해당 공급 업체 ([Microsoft]) 및 식별자 ([ODBC Rdb 드라이버])에 대 한 접두사를 추가 합니다.
-

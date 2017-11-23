@@ -17,25 +17,23 @@ f1_keywords:
 - SELECT
 - SELECT_INTO
 - SELECT INTO
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - SELECT INTO statement
 - mining models [Analysis Services], creating
 - copying mining models
 ms.assetid: 31ab9b4c-e20d-41ee-886f-6665c22c6ad5
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 978c1deca02aa60a7a123707de9ac3e95cd68851
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: db4e68e8051e1104ce9ed7ad42d8ac9f86a98274
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-into-dmx"></a>SELECT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -95,10 +93,9 @@ FROM [TM Clustering]
 > [!NOTE]  
 >  이 예와 같이 SELECT INTO 문을 사용하면 사례 테이블에 적용된 필터를 변경할 수 있지만, 원래 모델에 중첩 테이블에 대한 필터가 들어 있는 경우 중첩 테이블 필터는 이 구문을 사용하여 변경하거나 제거할 수 없습니다. 이러한 필터는 원래 모델에서 그대로 복사됩니다. 중첩 테이블에 대해 다른 필터를 사용하여 모델을 만들려면 ALTER STRTUCTURE...ADD MODEL 구문을 사용합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

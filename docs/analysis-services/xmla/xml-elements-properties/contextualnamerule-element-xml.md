@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: eb567ef8-f412-4d34-837a-75e53b88b3ce
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fff68bc1e6cc33a89e8fece5922cb7b50a9d25c3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d5860c69f618cb9c1cb131bf2da377bad405c09b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="contextualnamerule-element-xml"></a>ContextualNameRule 요소(XML)
   특성의 복합 이름을 생성하는 최선의 방법에 힌트를 제공합니다.  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/01/2017
 |*병합*|응용 프로그램 언어의 규칙에 따라 들어오는 관계의 이름 및 특성 이름을 연결합니다.|  
   
   
-

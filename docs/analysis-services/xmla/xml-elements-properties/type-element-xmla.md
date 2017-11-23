@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Type Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Type Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.type
 - http://schemas.microsoft.com/analysisservices/2003/engine#Type
 - urn:schemas-microsoft-com:xml-analysis#Type
-helpviewer_keywords:
-- Type element
+helpviewer_keywords: Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 51a4b4a76054aa5c425533561add9ca8405039e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 40a6b965ed031572b956814e65f95198671af48b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-element-xmla"></a>Type 요소(XMLA)
   수행 될 처리 유형을 결정는 [프로세스](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 요소입니다.  
@@ -90,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

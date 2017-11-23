@@ -9,12 +9,10 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - online database state [SQL Server]
 - database options [SQL Server]
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - automatic tuning
 - SQL plan regression correction
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
+caps.latest.revision: "159"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: b460ca1e3f662ea59c0b7bcd4b1fc0e0e059e236
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5dbb93a69c6f8194c2d17eb982fae1ba15d4a522
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -930,10 +927,10 @@ FEDERATED_SERVICE_ACCOUNT = ON | 해제
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
  ON  
- 트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준(예: READ COMMITTED 또는 READ UNCOMMITTED)으로 설정된 경우 메모리 액세스에 최적화된 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 수행됩니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되었는지에 관계없이 수행됩니다.  
+ 트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준(예: READ COMMITTED 또는 READ UNCOMMITTED)으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 수행됩니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되었는지에 관계없이 수행됩니다.  
   
  OFF  
- 메모리 액세스에 최적화된 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.  
+ 메모리 최적화 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.  
   
  데이터베이스가 OFFLINE인 경우 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT의 상태를 변경할 수 없습니다.  
   
@@ -1284,4 +1281,3 @@ SET QUERY_STORE = ON
  [sys.data_spaces &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CubeDimensionPermission Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CubeDimensionPermission Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CubeDimensionPermission
-helpviewer_keywords:
-- CubeDimensionPermission data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: CubeDimensionPermission
+helpviewer_keywords: CubeDimensionPermission data type
 ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a62d5f6ca15122a2f71f842946e2a964e7740da3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0058f41feb1bf215c6d479492c6303c613ef7b53
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubedimensionpermission-data-type-assl"></a>CubeDimensionPermission 데이터 형식(ASSL)
   큐브의 특정 차원에서 단일 역할에 대한 사용 권한을 나타내는 기본 데이터 형식을 정의합니다.  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [스크립팅 언어 XML 데이터 형식 &#40; analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- multidimensional data [ADO]
+helpviewer_keywords: multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2f0cdb5d3cad2bda529ff2abf5393701c7221a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e14c59fd0620129486408d33339e80624743f02
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
 A *cellset* 은 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일반적으로 4 개 이하의 축 및 보통 두 또는 세 컬렉션을 구성 됩니다. *축* 은 찾거나 큐브에서 특정 값을 필터링 하는 데 사용 되는 하나 이상의 차원에서 멤버의 컬렉션입니다.  
@@ -91,4 +88,3 @@ Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec
  [다차원 스키마 및 데이터 개요](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [ADO MD를 사용한 프로그래밍](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [ADO MD로 ADO 사용](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
-

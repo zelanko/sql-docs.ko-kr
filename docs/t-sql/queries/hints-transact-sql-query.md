@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - NOLOCK_TSQL
 - MAXDOP_TSQL
 - USE_HINT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - REPORT PLAN query hint
 - FORCE ORDER query hint
@@ -57,17 +55,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
+caps.latest.revision: "136"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b866e3ab0ee44c8b65a7b5064f0feb1e4f52aff9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hints-transact-sql---query"></a>쿼리 힌트 (Transact SQL)-
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [병합](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -201,7 +198,7 @@ ms.lasthandoff: 09/01/2017
  MAXDOP *번호*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 재정의 **x degree of** 구성 옵션의 **sp_configure** 및이 옵션을 지정 하는 쿼리에 대 한 리소스 관리자입니다. MAXDOP 쿼리 힌트는 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP 리소스 관리자를 구성 된 값을 초과 하는 경우는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 설명 된 리소스 관리자 MAXDOP 값을 사용 하 여 [ALTER WORKLOAD group&#40; Transact SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). 함께 사용 하는 모든 의미 규칙은 **x degree of** 구성 옵션은 MAXDOP 쿼리 힌트를 사용 하는 경우 적용할 수 있습니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ 재정의 **x degree of** 구성 옵션의 **sp_configure** 및이 옵션을 지정 하는 쿼리에 대 한 리소스 관리자입니다. MAXDOP 쿼리 힌트는 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP 리소스 관리자를 구성 된 값을 초과 하는 경우는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 설명 된 리소스 관리자 MAXDOP 값을 사용 하 여 [ALTER WORKLOAD group&#40; Transact SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). 함께 사용 하는 모든 의미 규칙은 **x degree of** 구성 옵션은 MAXDOP 쿼리 힌트를 사용 하는 경우 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
   
 > [!WARNING]  
 >  MAXDOP가 0으로 설정되면 서버는 최대 병렬 처리 수준을 선택합니다.  
@@ -213,7 +210,7 @@ ms.lasthandoff: 09/01/2017
   
  이 오류로 인해 문의 모든 결과가 롤백됩니다. 문이 SELECT 문인 경우 결과의 일부가 반환되거나 아무런 결과도 반환되지 않을 수 있습니다. 반환된 일부 결과에는 지정한 최대 재귀 수준을 초과한 재귀 수준의 모든 행이 포함되지 않을 수 있습니다.  
   
- 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  NO_PERFORMANCE_SPOOL  
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -563,4 +560,3 @@ GO
  [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   
-

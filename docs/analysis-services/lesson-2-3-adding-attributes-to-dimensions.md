@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9e5a669c1e7db9624aa06ad35c593422dbb88ac0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0642ac7688f86ce5fb23f1af50e9ced776993216
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lesson 2-3-차원에 특성 추가
 이제 차원을 정의했으므로 차원의 각 데이터 요소를 나타내는 특성으로 차원을 채울 수 있습니다. 일반적으로 특성은 데이터 원본 뷰의 필드를 기반으로 합니다. 차원에 특성을 추가할 때 데이터 원본 뷰에 있는 테이블의 필드를 포함할 수 있습니다.  
@@ -140,4 +137,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

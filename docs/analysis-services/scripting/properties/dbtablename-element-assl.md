@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DbTableName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DbTableName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DbTableName
-helpviewer_keywords:
-- DbTableName element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DbTableName
+helpviewer_keywords: DbTableName element
 ms.assetid: 842cae85-ab9c-4c75-ab44-51a4d9b1b943
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 41dfd0fcbe72358be83ab88ca3d781da368a819c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 586a0932e8e7fdd6e7bb0d92b8a3a8fcf950d01b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbtablename-element-assl"></a>DbTableName 요소(ASSL)
   부모 요소가 바인딩된 테이블의 이름을 포함합니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

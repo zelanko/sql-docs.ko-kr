@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Parameter::Type
 - Field20::Type
-helpviewer_keywords:
-- Type property [ADO]
+helpviewer_keywords: Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bdc4aa735c131b800b77086c76902dbe688e9399
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 663a17993b9bd614efd2436ae3050d78d7fd9e73
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-ado"></a>Type 속성 (ADO)
 작업 형식 또는 데이터 형식을 나타내는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md), [필드](../../../ado/reference/ado-api/field-object.md), 또는 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다.  
@@ -53,4 +50,3 @@ ms.lasthandoff: 09/09/2017
  [형식 속성 예제 (속성) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [RecordType 속성 (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type 속성(ADO 스트림)](../../../ado/reference/ado-api/type-property-ado-stream.md)
-

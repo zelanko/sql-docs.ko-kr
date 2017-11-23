@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f5b62cad891d4d02120b3325d57e327e299ef1be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf36253ccc373fb260538fdbc3d78764ce5548f9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 요소(CSDLBI)
   **EntityType** 요소는 데이터 모델에서 고객 또는 주문과 같은 높은 수준의 엔터티 구조를 나타내는 복합 유형입니다. **bi: EntityType** 요소 확장의 정의 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) 에 사용 되는 [엔터티 데이터 프레임 워크](http://msdn.microsoft.com/library/bb399567.aspx)합니다.  
@@ -132,7 +130,6 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [CSDL BI 주석에 대 한 기술 참조](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [CSDL용 BI 주석에 대한 기술 참조](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

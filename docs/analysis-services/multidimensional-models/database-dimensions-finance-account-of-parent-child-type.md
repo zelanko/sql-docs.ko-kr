@@ -20,17 +20,16 @@ helpviewer_keywords:
 - adding account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f622ad3ce2edeb096996340ba7fdb15dbedd2905
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1f4006934f9c92e492a984b02de9e585ec8ee84b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---finance-account-of-parent-child-type"></a>데이터베이스 차원-부모-자식 유형 재무 계정
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 계정 유형 차원은 재무 보고용 계정 차트를 나타내는 특성이 있는 차원입니다.  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [차원 유형](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   
-

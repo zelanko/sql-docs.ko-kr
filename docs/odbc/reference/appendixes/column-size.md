@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13a50475602b7f71a7da33ebaaecb4c09eeaf534
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-size"></a>열 크기
 숫자 데이터 형식의 열 (또는 매개 변수) 크기는 데이터 형식의 열 또는 매개 변수 또는 데이터의 전체 자릿수에 사용 되는 숫자의 최대 수로 정의 됩니다. 이; 데이터의 문자 길이 문자 형식에 대 한 이진 데이터 형식에 대 한 열 크기는 데이터의 길이 (바이트)에서으로 정의 됩니다. 시간, 타임 스탬프 및 모든 간격 데이터 형식의 경우이 데이터의 문자 표시에 있는 문자의 수입니다. 각 간결한 SQL 데이터 형식에 대해 정의 된 열 크기는 다음 표에 표시 됩니다.  
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/09/2017
 |모든 숫자 형식|PRECISION|  
 |모든 날짜/시간 및 간격 유형|LENGTH|  
 |SQL_BIT|LENGTH|
-

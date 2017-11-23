@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - CubeDefs
 - Catalog::CubeDefs
-helpviewer_keywords:
-- CubeDefs collection [ADO MD]
+helpviewer_keywords: CubeDefs collection [ADO MD]
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cc3e8cb29642b4d6c620374852d8059729fa2c33
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a288194bed7e691a1e30e60d5a01e182cb020f09
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubedefs-collection-ado-md"></a>ADO MD CubeDefs 컬렉션
 포함 된 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 다차원 카탈로그에서 큐브를 나타내는 개체입니다.  
@@ -51,4 +48,3 @@ ms.lasthandoff: 09/09/2017
  [카탈로그 예제 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [카탈로그 개체 (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [CubeDef 개체(ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)
-

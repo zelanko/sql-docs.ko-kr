@@ -8,22 +8,20 @@ ms.service:
 ms.component: tabular-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 28ff4ea7472597ae86b426ec0a15de399f56d14f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>테이블 형식 모델 번역(Analysis Services )
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]테이블 형식 모델에 문자열 번역 지원을 추가합니다. 모델 내의 단일 개체는 이름 또는 설명이 여러 개로 번역되어 모델 정의 내에서 다중 언어 버전을 지원할 수 있습니다.  
@@ -123,4 +121,3 @@ ms.lasthandoff: 09/01/2017
  [Excel에서 분석&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   
-

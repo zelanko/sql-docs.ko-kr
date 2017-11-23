@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - calling stored procedures
 - stored procedures [Analysis Services], calling
 - MDX queries [Analysis Services]
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: aa00161709980550644f07a7330198d9369b706e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e2c8656c28db458104a3793175a739d311ac379
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calling-stored-procedures"></a>저장 프로시저 호출
   저장 프로시저는 서버나 클라이언트 응용 프로그램에서 호출할 수 있습니다. 어느 경우에나 저장 프로시저는 항상 서버에서 서버나 데이터베이스의 컨텍스트로 실행됩니다. 저장 프로시저를 실행하는 데 필요한 특별 권한은 없습니다. 어셈블리를 사용하여 서버 또는 데이터베이스 컨텍스트에 저장 프로시저를 추가한 후에는 저장 프로시저에서 수행하는 동작이 허가된 역할의 사용자는 모두 저장 프로시저를 실행할 수 있습니다.  
@@ -97,4 +95,3 @@ CALL(MyVoidFunction)
  [저장 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

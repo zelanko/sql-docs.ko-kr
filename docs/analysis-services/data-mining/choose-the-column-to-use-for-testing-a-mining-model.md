@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], columns
 - predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b5b70b350d54987869c77ced1cebfbd8f7b00ec1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 995738c17a385d26e647a6c650c21a791b872a0e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>마이닝 모델 테스트에 사용할 열 선택
   마이닝 모델의 정확도를 측정하려면 먼저 평가할 결과를 결정해야 합니다. 대부분의 데이터 마이닝 모델에서는 모델을 만들 때 예측 가능한 특성으로 사용할 열을 하나 이상 선택해야 합니다. 따라서 모델의 정확도를 테스트할 때는 일반적으로 테스트할 특성을 선택해야 합니다.  
@@ -65,7 +64,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [모델 테스트 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [정확도 차트 유형 선택 및 집합 차트 옵션](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [정확도 차트 유형 선택 및 차트 옵션 설정](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   
-

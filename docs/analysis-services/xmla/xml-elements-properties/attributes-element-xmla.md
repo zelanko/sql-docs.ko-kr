@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Attributes Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Attributes Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Attributes
 - microsoft.xml.analysis.attributes
 - urn:schemas-microsoft-com:xml-analysis#Attributes
-helpviewer_keywords:
-- Attributes element
+helpviewer_keywords: Attributes element
 ms.assetid: c0393de8-44e8-46de-af78-1fd66c218521
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b0647c088e158d4ccccb42b7e6af5650f5209824
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c1825aa25bbe0b5dac27c40b08424d88b4ab31b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-element-xmla"></a>Attributes 요소(XMLA)
   부모 [Insert](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 또는 [Update](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) 명령이나 부모 [Where](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) 요소에서 사용되는 [Attribute](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) 요소 컬렉션을 포함합니다.  
@@ -76,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

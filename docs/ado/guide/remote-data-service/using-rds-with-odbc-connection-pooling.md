@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connection pooling in RDS [ADO]
+helpviewer_keywords: connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e06c138bc3eec4c9ece503f98b0d4951ffdaea6a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26342c07b2efe10a98a1cef4ff258d7fe5715094
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS를 사용 하 여 ODBC 연결 풀링
 ODBC 데이터 소스를 사용 하는 경우 클라이언트 부하의 처리 성능을 향상 시킬 하의 연결 풀링 인터넷 정보 서비스 (IIS)에서 옵션을 사용할 수 있습니다. 연결 풀링은 자주 사용 되는 연결에서 열려 있는 상태를 유지 관리 연결에 대 한 리소스에 대 한 관리자입니다.  
@@ -133,7 +130,6 @@ ODBC 데이터 소스를 사용 하는 경우 클라이언트 부하의 처리 �
   
 ## <a name="see-also"></a>관련 항목:  
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

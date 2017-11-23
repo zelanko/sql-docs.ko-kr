@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 클라이언트 SDK 사양에서 SQL Server
 
@@ -200,7 +199,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 | |**pCmd** |ClientVirtualDevice::GetCommand에서 이전에 반환 되는 명령의 주소입니다.
 | |**completionCode** |완료 상태를 나타내는 상태 코드입니다. 이 매개 변수는 모든 명령에 대 한 반환 되어야 합니다. 반환 되는 코드는 수행 중인 명령에 적합 해야 합니다. ERROR_SUCCESS 모든 경우에에서 성공적으로 실행 된 명령을 나타내는 데 사용 됩니다. 참조 파일을 가능한 코드의 전체 목록은 vdierror.h 합니다. 각 명령에 대 한 일반적인 상태 코드 목록은이 문서의 뒷부분에 나오는 "명령"에 나타납니다.
 | |**bytesTransferred** |성공적으로 전송 된 바이트 수입니다. 데이터 전송 명령을 읽기 및 쓰기에 대해서만 반환 됩니다.
-| |**position** |이것이 GetPosition 명령에 대 한 응답입니다.
+| |**위치** |이것이 GetPosition 명령에 대 한 응답입니다.
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |
@@ -223,7 +222,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 
 | 매개 변수 | 인수 | 설명
 | ----- | ----- | ------ |
-| |InclusionThresholdSetting | 해당 사항 없음
+| |없음 | 해당 사항 없음
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |
@@ -243,7 +242,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 
 | 매개 변수 | 인수 | 설명
 | ----- | ----- | ------ |
-| |InclusionThresholdSetting |해당 사항 없음
+| |없음 |해당 사항 없음
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |
@@ -330,6 +329,5 @@ Close는 하나 이상의 가상 장치 계속 열려 있는 경우에 호출 �
 | |**VD_E_INVALID** |ppBuffer 잘못 된 핸들입니다.
 
 **주의** 핸들을 제대로 통신 하도록 주의 해야 합니다. 핸들은 단일 가상 장치 집합에 로컬입니다. 핸들을 공유 하는 파트너 프로세스 핸들을 사용 하는 버퍼를 원래 얻어에서 설정할 가상 장치의 범위 내 에서만 해당 버퍼를 확인 해야 합니다.
-
 
 

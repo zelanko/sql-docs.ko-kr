@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
+ms.openlocfilehash: 9ab570753e7bc6cc2b2aded26b2629d00f1bf292
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 1f19074764820bddf2cc2a0e8fe4204120a5041d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
 
@@ -290,4 +289,3 @@ sudo zypper update mssql-server-fts
 ## <a name="next-steps"></a>다음 단계
 
 전체 텍스트 검색에 대 한 정보를 참조 하십시오. [SQL Server 전체 텍스트 검색](../relational-databases/search/full-text-search.md)합니다. 
-

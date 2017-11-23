@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Block Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Block Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Block
-helpviewer_keywords:
-- Block element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Block
+helpviewer_keywords: Block element
 ms.assetid: f45c32ae-e4e0-465a-9564-9ccfb10a858f
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4bed0f3c9cf2a519731cb5103f44070e5f13e6c0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b024e6c27b2fddf8b318b937bec47afc3d584780
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="block-element-assl"></a>Block 요소(ASSL)
   전체 또는 일부의 이진 내용을 포함 한 [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) 요소입니다.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

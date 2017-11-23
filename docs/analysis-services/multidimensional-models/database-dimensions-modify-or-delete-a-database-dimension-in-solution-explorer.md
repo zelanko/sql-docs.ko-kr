@@ -21,17 +21,16 @@ helpviewer_keywords:
 - deleting dimensions
 - removing dimensions
 ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 36a2a8434122e4d3bf649de2358abc2186ea30d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b6505f48c397e021c29eb3dba454cc0575e2d94f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>데이터베이스 차원-솔루션 탐색기에서 데이터베이스 차원 수정 또는 삭제
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 차원 디자이너를 사용하여 차원을 수정하거나 삭제할 수 있습니다. 차원을 수정하는 경우 해당 차원을 처리해야 사용자가 변경 내용을 사용할 수 있습니다. 자세한 내용은 [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)를 참조하세요.  
@@ -52,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [다차원 모델의 차원](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
-

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDataSourceToDriver
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDataSourceToDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDataSourceToDriver
-helpviewer_keywords:
-- SQLDataSourceToDriver function [ODBC]
+f1_keywords: SQLDataSourceToDriver
+helpviewer_keywords: SQLDataSourceToDriver function [ODBC]
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0594551a7bc82eb96208ecb5d8840db0477c4f3a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b6b37e632f4e610ec19cf355e94999135d72781
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 함수
 **SQLDataSourceToDriver** supportstranslations ODBC 드라이버에 대 한 합니다. 이 함수는 ODBC 사용 응용 프로그램; 의해 호출 되지 않습니다. 응용 프로그램 요청 통해 번역 **SQLSetConnectAttr**합니다. 관련 된 드라이버의 *ConnectionHandle* 에 지정 된 **SQLSetConnectAttr** 드라이버에 데이터 원본의 모든 데이터의 번역을 수행 하려면 지정된 된 DLL을 호출 합니다. ODBC 초기화 파일의 기본 변환 DLL을 지정할 수 있습니다.  
@@ -117,4 +111,3 @@ BOOL SQLDataSourceToDriver(
 |데이터 원본에 전송 되는 데이터를 변환 합니다.|[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
 |연결 특성의 설정은 반환|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |연결 특성을 설정합니다.|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
-

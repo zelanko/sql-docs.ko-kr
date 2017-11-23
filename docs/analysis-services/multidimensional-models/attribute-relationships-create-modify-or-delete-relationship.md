@@ -18,17 +18,16 @@ helpviewer_keywords:
 - attributes [Analysis Services], member properties
 - member properties [Analysis Services], creating
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1824a9c8c4632c0875890463b8f44ae2dec93308
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369a8b08529f2238125bee5e9eef861404566d6e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-relationships---create-modify-or-delete-relationship"></a>특성 관계-만들기, 수정 또는 관계 삭제
   **에서 차원 디자이너의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭을 사용하여 차원 특성 간의 특성 관계를 만들거나 수정 또는 삭제할 수 있습니다.  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [에서 차원 디자이너의](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   
-

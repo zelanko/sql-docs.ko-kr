@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- attribute relationships [Analysis Services]
+helpviewer_keywords: attribute relationships [Analysis Services]
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 84b4ffab1a59bd155557b53f0c5a16040096b2da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b42070c64e1e96268ac73fece5bb8d246eb45e21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-relationships---arrange-shapes-in-the-diagram"></a>특성 관계 다이어그램의 셰이프 정렬-
   **의 차원 디자이너에 있는 차원 구조 뷰의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 셰이프의 레이아웃을 변경할 수 있습니다.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/01/2017
  [특성 관계 정의](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   
-

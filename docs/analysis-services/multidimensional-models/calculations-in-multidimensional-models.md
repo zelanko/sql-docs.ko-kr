@@ -26,17 +26,16 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96b296189200416c2c5234597cf8f4e45618b6d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculations-in-multidimensional-models"></a>다차원 모델의 계산
   큐브 디자이너의 **계산** 탭을 사용하여 계산 멤버, 명명된 집합 및 기타 MDX(Multidimensional Expression) 계산을 만들 수 있습니다.  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  기존 계산을 삭제하려면 **스크립트 구성 도우미** 창의 **계산** 탭에서 삭제할 계산을 선택하고 **편집** 메뉴에서 **삭제** 를 클릭하거나 도구 모음에서 **삭제** 아이콘을 클릭합니다. **스크립트 구성 도우미** 창에서 계산을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **삭제** 를 선택할 수도 있습니다.  
   
   
-

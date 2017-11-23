@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>데스크톱 데이터베이스 드라이버 아키텍처
 이러한 드라이버는 사용 하 여 Microsoft Windows 95 이상 또는 Windows NT 4.0 및 Windows 2000 위한 것입니다. Windows 95 이상; 32 비트 응용 프로그램만 지원 됩니다. 16 비트 및 32 비트 응용 프로그램은 Windows NT 4.0 및 Windows 2000에서 지원 됩니다.  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll은 Microsoft Jet API를 기반으로 ODBC 함수를 구현합니다. 그러나 ODBC 및 Microsoft Jet 함수 간의 직접 매핑되지가 않습니다. 커서 모델 및 SQL 매핑을 등 많은 요인 함수는 직접적인 상관 관계가 방지합니다.  
   
  ODBC 드라이버는 ODBC 드라이버 관리자와 Microsoft Jet 엔진 간의 상주합니다. 응용 프로그램에서 호출 하는 일부 ODBC 함수 드라이버 관리자에서 처리 및 드라이버에 전달 되지 않습니다. 이러한 함수에 대 한 Microsoft Jet는 함수 호출에 직접 연결 드라이버 관리자에 없기 때문에 표시 되지 않습니다.
-

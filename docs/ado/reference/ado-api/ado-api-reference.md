@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, reference
+helpviewer_keywords: ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 76618b7bc7a8eef4e9eb77182c94598a62853ad3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-api-reference"></a>ADO API 참조
 ADO 설명서의이 섹션에는 각 ADO 개체, 컬렉션, 속성, 동적 속성, 메서드, 이벤트 및 열거형에 대 한 항목이 포함 되어 있습니다. Windows Foundation 클래스 (WFC) 및 Microsoft Visual c + +에서 사용 되는 ADO 구문 인덱스의 목록이 포함 되어 있습니다.  
@@ -58,4 +55,3 @@ ADO 설명서의이 섹션에는 각 ADO 개체, 컬렉션, 속성, 동적 속�
  [부록 c: ADO를 사용한 프로그래밍](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 기록](../../../ado/guide/ado-history.md)
-

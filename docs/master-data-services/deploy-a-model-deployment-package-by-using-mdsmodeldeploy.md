@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7f6941c1ea7901e8a89eebc64c5c519931cb1c05
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: acf07e21b7d55db10f640ea1086501ed4deadd53
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 배포
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 다음 중 하나를 포함하는 패키지를 배포합니다.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 09/07/2017
  모델 개체만 포함하는 패키지를 배포하려면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 모델 배포 마법사를 대신 사용할 수 있습니다. 자세한 내용은 [Deploy a Model Deployment Package by Using the Wizard](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 배포할 수 있습니다. 따라서 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 만든 패키지는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상에 배포할 수 없습니다.  
+>  패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 배포할 수 있습니다. 따라서 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 에서 만든 패키지는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상에 배포할 수 없습니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
@@ -60,7 +58,7 @@ ms.lasthandoff: 09/07/2017
   
 3.  (선택 사항) 보기 옵션 및 도움말입니다.  
   
-    -   모든 사용 가능한 옵션을 표시하려면 `MDSModelDeploy`를 입력하고 Enter 키를 누릅니다.  
+    -   모든 사용 가능한 옵션을 표시하려면 `MDSModelDeploy` 를 입력하고 Enter 키를 누릅니다.  
   
     -   옵션에 대한 도움말을 표시하려면 *과 같이 입력합니다. 여기서* OptionName `MDSModelDeploy help OptionName`은 옵션의 이름입니다.  
   
@@ -95,13 +93,13 @@ ms.lasthandoff: 09/07/2017
     > [!IMPORTANT]  
     >  MDSModelDeploy 도구를 사용하여 기존 모델 및 해당 데이터를 업데이트하고 패키지에 엔터티, 특성 또는 대상 모델에 있는 멤버를 포함하지 않는 경우 MDSModelDeploy는 모델에서 해당 엔터티, 특성 또는 멤버를 삭제하지 않습니다.  
   
-     여기서 *PackageName*은 패키지 파일(.pkg)의 이름이고, *ModelName*은 새 모델의 이름이고, *VersionName*은 버전 이름이고, *ServiceName*은 이전 단계에서 반환된 서비스의 이름입니다. 모델 및 버전 이름이 대/소문자가 구분되는 이름과 정확하게 일치하는지 확인합니다.  
+     여기서 *PackageName* 은 패키지 파일(.pkg)의 이름이고, *ModelName* 은 새 모델의 이름이고, *VersionName* 은 버전 이름이고, *ServiceName* 은 이전 단계에서 반환된 서비스의 이름입니다. 모델 및 버전 이름이 대/소문자가 구분되는 이름과 정확하게 일치하는지 확인합니다.  
   
 6.  패키지가 성공적으로 배포되면 "MDSModelDeploy 작업이 성공적으로 완료되었습니다."라는 메시지가 표시됩니다.  
   
  **참고:**  
   
--   패키지의 구독 뷰 이름이 기존 모델의 구독 뷰 이름과 동일한 경우 **배포자 구독 보기의 이름이 바뀌었습니다.**라는 경고가 표시되고 뷰가 *modelname.subscriptionviewname*으로 만들어집니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
+-   패키지의 구독 뷰 이름이 기존 모델의 구독 뷰 이름과 동일한 경우 **배포자 구독 보기의 이름이 바뀌었습니다.** 라는 경고가 표시되고 뷰가 *modelname.subscriptionviewname*으로 만들어집니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
   
 -   배포 프로세스는 다음과 같은 4단계로 진행됩니다.  
   
@@ -126,4 +124,3 @@ ms.lasthandoff: 09/07/2017
  [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   
-

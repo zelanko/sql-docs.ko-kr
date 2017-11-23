@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - prepared statements [ODBC]
 - transactions [ODBC], cursors
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b9a66541f3bfa4d51560cfa16f5ab9fc0aaa0f54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>커서 및 준비 된 문을에 트랜잭션이 미치는 영향
 커밋 또는 롤백 트랜잭션이 커서 및 액세스 계획에 다음과 같은 결과가 나타납니다.  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램, 특히 화면 기반 응용 프로그램 사용자는 결과 집합 및 업데이트를 스크롤할 또는 행을 삭제 합니다.이 문제를 해결 하는 코드에 주의 해야 합니다.  
   
  데이터 소스는 트랜잭션이 커밋되거나 롤백될 때 동작 하는 방식을 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_CURSOR_COMMIT_BEHAVIOR 및 SQL_CURSOR_ROLLBACK_BEHAVIOR 옵션입니다.
-

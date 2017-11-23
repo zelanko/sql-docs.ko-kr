@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>보고서 디자인의 CSDLBI 특성
 
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/01/2017
 |**Kpi**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|하위 요소|측정값 요소가 KPI로 사용됨을 나타냅니다. KPI 하위 요소는 KpiGoal 및 KpiStauts 요소를 사용하여 관련된 표시 이미지 및 대상 범위를 정의합니다.|  
   
   
-

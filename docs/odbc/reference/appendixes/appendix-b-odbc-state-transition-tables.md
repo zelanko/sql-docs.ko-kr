@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 775c3d0464443d11b833a230591b94293343086b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>부록 b: ODBC 상태 전환 테이블
 이 부록의 표에서 ODBC 함수 환경, 연결, 문 및 설명자 상태 전환을 발생 하는 방법을 보여줍니다. 환경, 연결, 문 또는 설명자의 상태는 일반적으로 해당 형식의 핸들 (환경, 연결, 문 또는 설명자)를 사용 하는 함수를 호출할 수 있습니다 결정 합니다. 환경, 연결, 문 및 설명자 상태는 다음 그림에 나와 있는 것 처럼 대략 겹칩니다. 예를 들어 연결의 정확한 겹치는 C5 내용과 C6 하 문 S12 통해 S1을 데이터 원본 – 종속 트랜잭션이 서로 다른 데이터 원본에 대해 서로 다른 시간에 시작 하 고 D1i (암시적으로 할당 된 설명자) 설명자 상태에 따라 달라 집니다. 설명자와 관련 된 문의 상태 state D1e (명시적으로 할당 된 설명자)는 모든 문은의 상태와 무관입니다. 각 상태에 대 한 참조 [환경이 전환](../../../odbc/reference/appendixes/environment-transitions.md), [연결 전환](../../../odbc/reference/appendixes/connection-transitions.md), [문을 전환](../../../odbc/reference/appendixes/statement-transitions.md), 및 [설명자 전환 ](../../../odbc/reference/appendixes/descriptor-transitions.md)이 부록의 뒷부분에 나오는 합니다.  
@@ -105,4 +103,3 @@ ms.lasthandoff: 09/09/2017
 -   [문 전환](../../../odbc/reference/appendixes/statement-transitions.md)  
   
 -   [설명자 전환](../../../odbc/reference/appendixes/descriptor-transitions.md)
-

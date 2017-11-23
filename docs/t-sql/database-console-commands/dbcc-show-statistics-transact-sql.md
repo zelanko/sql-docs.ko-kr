@@ -3,10 +3,12 @@ title: DBCC SHOW_STATISTICS (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -32,20 +33,19 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 38abfb552f1bb969c132d5086ca007d36541a76c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS는 테이블 또는 인덱싱된 뷰에 대한 현재 쿼리 최적화 통계를 표시합니다. 쿼리 최적화 프로그램은 통계를 사용하여 쿼리 결과의 카디널리티 또는 행 수를 예상함으로써 고품질의 쿼리 계획을 생성할 수 있습니다. 예를 들어 쿼리 최적화 프로그램은 카디널리티 예상치를 통해 쿼리 계획에서 index scan 연산자 대신 index seek 연산자를 선택하여 리소스가 많이 소요되는 index scan을 피함으로써 쿼리 성능을 개선할 수 있습니다.
   
@@ -149,7 +149,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 쿼리 최적화 프로그램은 통계적 중요성에 따라 히스토그램 단계를 정의합니다. 또한 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 최대 차이 알고리즘을 사용합니다. 최대 단계 수는 200개입니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 예를 들어 100개의 고유 값을 가진 열의 히스토그램에 100개 미만의 경계 지점이 있을 수 있습니다.
   
 ## <a name="density-vector"></a>밀도 벡터  
-쿼리 최적화 프로그램은 같은 테이블 또는 인덱싱된 뷰에서 여러 열을 반환하는 쿼리의 카디널리티 예상치 정확도를 높이기 위해 밀도를 사용합니다. 밀도 벡터는 통계 개체에 있는 각 열 접두사당 한 개의 밀도를 포함합니다. 예를 들어 통계 개체에 CustomerId, ItemId, Price 키 열이 있는 경우 다음의 각 열 접두사에 대해 밀도가 계산됩니다.
+쿼리 최적화 프로그램은 같은 테이블 또는 인덱싱된 뷰에서 여러 열을 반환하는 쿼리의 카디널리티 예상치 정확도를 높이기 위해 밀도를 사용합니다. 밀도 벡터는 통계 개체에 있는 각 열 접두사당 한 개의 밀도를 포함합니다. 예를 들어 통계 개체가 키 열 `CustomerId`, `ItemId` 및 `Price`, 각 열 접두사의 밀도가 계산 됩니다.
   
 |열 접두사|밀도 계산 기준|  
 |---|---|
@@ -163,7 +163,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>에 대 한 권한을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 통계 개체를 보려면 사용자 테이블을 소유 해야 합니다 또는 사용자의 구성원 이어야 합니다.는 `sysadmin` 고정 서버 역할의 `db_owner` 고정 데이터베이스 역할 또는 `db_ddladmin` 고정된 데이터베이스 역할입니다.
   
-SQL Server 2012 SP1에서는 권한 제한을 수정하여 사용자가 SELECT 권한을 통해 이 명령을 사용할 수 있게 되었습니다. 다음 요구 사항에서는 명령을 실행하기 위해 SELECT 권한이 있어야 합니다.
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]S p 1에서는 권한 제한을 수정 하 고이 명령을 사용 하려면 SELECT 권한이 있는 사용자가 허용 합니다. 다음 요구 사항에서는 명령을 실행하기 위해 SELECT 권한이 있어야 합니다.
 -   사용자는 통계 개체의 모든 열에 대해 권한이 있어야 합니다.  
 -   사용자는 필터 조건(있는 경우)에서 모든 열에 대해 권한이 있어야 합니다.  
 -   테이블에 행 수준 보안 정책을 사용할 수 없습니다.  
@@ -227,4 +227,3 @@ GO
 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
-

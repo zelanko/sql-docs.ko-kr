@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- ConnectModeEnum
-helpviewer_keywords:
-- ConnectModeEnum enumeration [ADO]
+f1_keywords: ConnectModeEnum
+helpviewer_keywords: ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fd3a2912bdc0e204bfbbe1c16a878302f181679c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc9a29f1f46ab56a87b318761b4b0809fd76e6fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 데이터 수정에 대 한 사용할 수 있는 사용 권한을 지정는 [연결](../../../ado/reference/ado-api/connection-object-ado.md)열고는 [레코드](../../../ado/reference/ado-api/record-object-ado.md), 또는 대 한 값을 지정 하는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 의 속성은  **레코드** 및 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -66,4 +62,3 @@ ms.lasthandoff: 09/09/2017
 |-|-|  
 |[Mode 속성(ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open 메서드(ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Open 메서드(ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - cursor library [ODBC], searched statements
 - SQL statements [ODBC], searched statements
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7b989547fa41d187ac33efe65050bc09add3a0f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-searched-statements"></a>문을 검색 구성
 > [!IMPORTANT]  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 -   **이진 C 데이터에 null이 아닌 길이 버퍼를 지정 합니다.** 경우에만 해당 캐시에 길이 버퍼를 할당 하는 커서 라이브러리는 *StrLen_or_IndPtr* 인수에 **SQLBindCol** null입니다. 때는 *TargetType* 인수는 SQL_C_BINARY, 커서 라이브러리를 생성 하는 이진 데이터의 길이 필요는 **여기서** 데이터에서 절. SQL_C_BINARY 열 및 응용 프로그램 호출에 대 한 길이 버퍼가 없는 경우 **SQLGetData** 위치 지정된 업데이트 실행 또는 delete 문의 SQL_ERROR 및 SQLSTATE SL014 커서 라이브러리 반환을 시도 하거나 (한 위치 지정 요청을 실행 및 열 개수 필드 중 일부만 버퍼링 된).  
   
 -   **Null 허용 열에 대 한 null이 아닌 길이 버퍼를 지정 합니다.** 경우에만 해당 캐시에 길이 버퍼를 할당 하는 커서 라이브러리는 *StrLen_or_IndPtr* 인수에 **SQLBindCol** null입니다. SQL_NULL_DATA 길이 버퍼에 저장 되므로, 커서 라이브러리는 버퍼 길이 없음에 대 한 지정 된 모든 열은 null을 허용 하지 가정 합니다. 커서 라이브러리 생성에 대해 null 허용 열 길이 열이 지정 하는 경우는 **여기서** 열에 대 한 데이터 값을 사용 하는 절. 이 절은 행을 올바르게 식별 되지 않습니다.
-

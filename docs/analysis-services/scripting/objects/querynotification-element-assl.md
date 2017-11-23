@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- QueryNotification Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: QueryNotification Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- QueryNotification element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: QueryNotification element
 ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ca66700cbe7be59397679201160ee7031ed02330
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 610b18f6c9c02f2ce6cfa8dd33d9eaca53abecd3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="querynotification-element-assl"></a>QueryNotification 요소(ASSL)
   데이터 원본이 수정되었는지 여부를 확인하기 위해 실행할 쿼리에 대한 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) 요소의 정보를 포함합니다.  
@@ -72,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

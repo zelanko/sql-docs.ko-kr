@@ -19,17 +19,16 @@ helpviewer_keywords:
 - connections [Analysis Services]
 - sessions [Analysis Services]
 ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a147bc9deee4d199e2e90d5f0b006ad3317f4f38
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb53b656c14090ada93184d8453ad79ab1ff706c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Analysis Services 서버에서 사용자와 세션 연결 끊기
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 관리자는 작업 관리 중에 사용자 작업을 종료할 수 있습니다. 사용자 작업을 종료하려면 세션 및 연결을 취소합니다. 세션은 쿼리 실행 시(암시적) 또는 관리자가 쿼리 생성 시 이름을 지정하면(명시적) 자동으로 구성될 수 있습니다. 연결은 쿼리를 실행할 수 있는 열린 통로입니다. 세션과 연결 모두 활성 상태에서 종료할 수 있습니다. 예를 들어 관리자는 처리 시간이 너무 오래 걸리거나 실행 중인 명령이 올바르게 작성되었다는 확신이 없을 경우 세션 처리를 종료할 수 있습니다.  
@@ -88,4 +87,3 @@ ms.lasthandoff: 09/01/2017
  [Session 요소 &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
   
   
-

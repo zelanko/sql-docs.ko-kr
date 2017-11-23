@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MeasureGroupAttribute Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MeasureGroupAttribute Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MeasureGroupAttribute
-helpviewer_keywords:
-- MeasureGroupAttribute data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: MeasureGroupAttribute
+helpviewer_keywords: MeasureGroupAttribute data type
 ms.assetid: dc7f71e6-3755-4d99-9fcd-5830e10eb653
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d274c0c10ba9ced0f38ff08f0d008ddc2eb53176
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 334722f0a765e0e1d83a5014a3882552ccf7fa2b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>MeasureGroupAttribute _데이터 형식(ASSL)
   특성과 측정값 그룹 간의 관계를 나타내는 기본 데이터 형식을 정의합니다.  
@@ -74,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [스크립팅 언어 XML 데이터 형식 &#40; analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

@@ -8,12 +8,10 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "Analysis Services 테스트"
+keywords: "Analysis Services 테스트"
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - default languages
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2f1ca64cc2c6a3c3d376b47c660598e05227bf8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 제공하는 언어 및 데이터 정렬을 지원합니다. **Language** 및 **Collation** 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  
@@ -190,4 +187,3 @@ ms.lasthandoff: 09/01/2017
  [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)  
   
   
-

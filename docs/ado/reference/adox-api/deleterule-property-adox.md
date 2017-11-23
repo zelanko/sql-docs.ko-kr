@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Key::GetDeleteRule
 - _Key::PutDeleteRule
 - _Key::get_DeleteRule
-helpviewer_keywords:
-- DeleteRule property [ADOX]
+helpviewer_keywords: DeleteRule property [ADOX]
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c762a5db10cde6d462c4bd0e70fecdd902557e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 84fdcc05f2f7bcc531b3d40e2312ede5d79f55c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 속성 (ADOX)
 기본 키 삭제 될 때 수행 되는 작업을 나타냅니다.  
@@ -48,4 +45,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [DeleteRule 속성 예제(VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)
-

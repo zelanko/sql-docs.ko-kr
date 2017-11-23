@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Connection::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords:
-- ExecuteComplete event [ADO]
+helpviewer_keywords: ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 327eee8b19a0d1b9ad4d67c45c90ccd2c632622a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e612e83e3c550c429b9ebcfe63c0641b61390b95
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 이벤트 (ADO)
 **ExecuteComplete** 이벤트는 명령이 실행이 완료 된 후 호출 됩니다.  
@@ -68,4 +65,3 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
 ## <a name="see-also"></a>관련 항목:  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)
-

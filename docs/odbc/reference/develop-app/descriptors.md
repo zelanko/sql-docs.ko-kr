@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - descriptor handles [ODBC]
 - handles [ODBC], descriptor
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f9a2016a57c9c2b9d105761c65be14809fee8798
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8754e568c166113a0812878ef8bc91a196776100
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptors"></a>설명자
 설명자 핸들 동적 매개 변수 또는 열에 대 한 정보를 포함 하는 데이터 구조를 참조 합니다.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 -   [설명자 할당 및 해제](../../../odbc/reference/develop-app/allocating-and-freeing-descriptors.md)  
   
 -   [설명자 필드 가져오기 및 설정](../../../odbc/reference/develop-app/getting-and-setting-descriptor-fields.md)
-

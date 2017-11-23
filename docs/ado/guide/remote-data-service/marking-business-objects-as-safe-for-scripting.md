@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- business objects in RDS [ADO]
+helpviewer_keywords: business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45f9656022a71deab0cb91a3d9667cbd314c2ffb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05a2131b594d20c4215a2c52422d930c0ac2edfb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>비즈니스 개체 스크립팅에 안전한 것으로 표시합니다.
 > [!IMPORTANT]
@@ -52,6 +49,5 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
  응용 프로그램 설치 마법사는 마지막 단계에서.htm 및.cab 파일을 만듭니다. 다음 대상 컴퓨터에이 두 파일을 복사 하 고 페이지를 로드 하 고 서버를 올바르게 등록 하 고.htm 파일을 두 번 클릭 수 있습니다.  
   
  비즈니스 개체를 설치할 예정 Windows\System32\Occache 디렉터리에 기본적으로 하기 때문에 Windows\System32 디렉터리 이동 하 고 변경 된 **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** 레지스트리 키를 올바른 경로 일치 합니다.
-
 
 

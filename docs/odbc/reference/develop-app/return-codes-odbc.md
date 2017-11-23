@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f51708cf47cf84a33cefee3003e0edb94baaae6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="return-codes-odbc"></a>ODBC 반환 코드
 ODBC에서 각 함수 라고 하는 코드를 반환 합니다. 해당 *코드를 반환* 전반적인 성공 또는 실패는 함수의 나타냅니다. 프로그램 논리는 일반적으로 반환 코드에 기반을 둡니다.  
@@ -61,4 +59,3 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|데이터가 더 이상 사용할 수 없었습니다. 응용 프로그램 호출 **SQLGetDiagRec** 또는 **SQLGetDiagField** 추가 정보를 검색 합니다. 클래스 02xxx에서 하나 이상의 드라이버에서 정의 된 상태 레코드를 반환할 수 있습니다. **참고:** Odbc 2. *x*, 이렇게 하면 코드 SQL_NO_DATA_FOUND 변수의 이름이 반환 합니다.|  
 |SQL_NEED_DATA|더 많은 데이터와 같이 필요한 실행 시 매개 변수 데이터를 보내면 또는 추가 연결 정보가 필요 합니다. 응용 프로그램 호출 **SQLGetDiagRec** 또는 **SQLGetDiagField** 있는 경우 추가 정보를 검색할 수 있습니다.|  
 |SQL_STILL_EXECUTING|비동기적으로 시작 하는 함수는 계속 실행 됩니다. 응용 프로그램 호출 **SQLGetDiagRec** 또는 **SQLGetDiagField** 있는 경우 추가 정보를 검색할 수 있습니다.|
-

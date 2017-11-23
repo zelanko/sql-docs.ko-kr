@@ -20,17 +20,16 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], SQL Server Profiler
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5974fc48206fdac56cd5d6145755a611e4f5a543
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analysis Services 인스턴스 모니터
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 성능 모니터( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **)를 사용하여**의 성능을 모니터할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 추적을 작성 및 관리하고 추적 결과를 분석 및 재생할 수 있습니다. 성능 모니터는 다음 섹션에서 설명하는 것처럼 특정 카운터를 통해 인덱싱된 서버 상태를 보고합니다.  
@@ -52,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [성능 카운터&#40;SSAS&#41;](../../analysis-services/instances/performance-counters-ssas.md)  
   
   
-

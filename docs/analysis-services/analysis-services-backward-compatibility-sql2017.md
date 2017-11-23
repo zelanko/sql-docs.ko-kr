@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2017 Analysis Services 이전 버전과 호환성 | Microsoft Docs"
 ms.date: 07/11/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.custom: 
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,12 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 57a03d325a7415f08fd073ea805e022935f3fce7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
-ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 이전 버전과 호환성 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -62,7 +64,7 @@ A *기능은 지원 되지 않는* 이전 버전에서 사용 되지 않았습�
 |다차원|연결된 차원|
 |Tools|추적 캡처용 SQL Server Profiler<br /><br /> SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 대신 사용할 수 있습니다.  <br /> [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)을 참조하세요.|  
 |Tools|추적 재생용 Server Profiler <br />대체 기능 대체 기능은 없습니다.|  
-|추적 관리 개체 및 추적 API|Analysis Services 추적 및 재생 개체용 API를 포함하는 Microsoft.AnalysisServices.Trace 개체. 다음과 같은 여러 부분을 대신 사용할 수 있습니다.<br /><br /> -   추적 구성:  Microsoft.SqlServer.Management.XEvent<br />-   추적 읽기:  Microsoft.SqlServer.XEvent.Linq<br />-   추적 재생: 없음|  
+|추적 관리 개체 및 추적 API|Analysis Services 추적 및 재생 개체용 API를 포함하는 Microsoft.AnalysisServices.Trace 개체. 다음과 같은 여러 부분을 대신 사용할 수 있습니다.<br /><br /> 추적 구성: Microsoft.SqlServer.Management.XEvent<br />추적 읽기: Microsoft.SqlServer.XEvent.Linq<br />-   추적 재생: 없음|  
 
 ## <a name="breaking-changes"></a>주요 변경 내용
 A *주요 변경 내용* 기능, 데이터 모델, 응용 프로그램 코드 또는 스크립트가 더 이상 작동 현재 버전으로 업그레이드 한 후에 발생 합니다.
@@ -77,4 +79,3 @@ MDSCHEMA_MEASUREGROUP_DIMENSIONS 및 DISCOVER_CALC_DEPENDENCY, 변경 내용에 
 
 ## <a name="see-also"></a>참고 항목
 [Analysis Services 이전 버전과 호환성 (SQL Server 2016)](analysis-services-backward-compatibility.md)
-

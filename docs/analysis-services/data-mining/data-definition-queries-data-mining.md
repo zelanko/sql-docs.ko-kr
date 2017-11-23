@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 04237bba7622a7b6745ff8768ea7a1bc5feda2b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a42d980837958ff2b605eeaac01dd61739bc1078
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-definition-queries-data-mining"></a>데이터 정의 쿼리(데이터 마이닝)
   데이터 마이닝의 *데이터 정의 쿼리* 범주는 다음을 수행하는 DMX 문이나 XMLA 명령을 의미합니다.  
@@ -101,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   
-

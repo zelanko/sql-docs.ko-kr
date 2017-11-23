@@ -19,17 +19,16 @@ helpviewer_keywords:
 - name columns [Analysis Services]
 - attributes [Analysis Services], binding
 ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2866844f0004bc37c7bead147a88dbf009199495
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 16b5b9f2bcb04c11adae59f9b50f4611c157d604
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>특성 속성-이름 열에 특성 바인딩
   이 절차에서는 차원 디자이너의 **특성** 창과 **개체 바인딩** 대화 상자를 사용하여 수동으로 이름 열에 특성을 바인딩하는 방법에 대해 설명합니다.  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 5.  **원본 열** 목록에서 특성이 바인딩될 열을 선택한 다음 **확인**을 클릭합니다.  
   
   
-

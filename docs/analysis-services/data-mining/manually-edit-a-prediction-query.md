@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], modifying prediction queries
 - manual prediction query modification [Analysis Services]
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ab8bb78ceb4bfe411030cf160c84751b6176682a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57f892500d2ef26dc2227b4c0710c4d039dcb34e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manually-edit-a-prediction-query"></a>예측 쿼리 수동 편집
   예측 쿼리 작성기를 사용하여 쿼리를 디자인한 후에는 데이터 마이닝 디자이너의 **마이닝 모델 예측** 의 탭에서 쿼리 텍스트 보기로 전환하여 해당 쿼리를 수정할 수 있습니다. 쿼리 작성기가 만든 쿼리를 표시할 텍스트 편집기가 화면 맨 아래에 나타납니다.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [6단원: 예측 만들기 및 작업&#40;기본 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   
-

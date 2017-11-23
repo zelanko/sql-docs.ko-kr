@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Key::PutUpdateRule
 - _Key::put_UpdateRule
 - _Key::UpdateRule
-helpviewer_keywords:
-- UpdateRule property [ADOX]
+helpviewer_keywords: UpdateRule property [ADOX]
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ded3322bf28cb627ea74573fcef872611918c9b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b4b037edbf6f5acc663e688c2a7cd3a0f7a9561
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 속성 (ADOX)
 작업을 수행할 때 주 나타냅니다 [키](../../../ado/reference/adox-api/key-object-adox.md) 업데이트 됩니다.  
@@ -48,4 +45,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제(VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
-

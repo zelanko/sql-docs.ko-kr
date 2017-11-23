@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_KEYWORDS
+apiname: DISCOVER_KEYWORDS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_KEYWORDS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_KEYWORDS rowset
 ms.assetid: 99945e53-3a1b-4d7b-9aff-712977db8b2d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a3b07baa51b0b7dbfcdbb41a782fe4a4cab2f2cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 232bbcfb4d5cf1dfc181a0c6d8879e4390f61a9e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverkeywords-rowset-xmla"></a>DISCOVER_KEYWORDS 행 집합(XMLA)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자에 예약된 키워드에 대한 정보를 반환합니다.  
@@ -59,4 +55,3 @@ ms.lasthandoff: 09/01/2017
  [DISCOVER_LITERALS 행 집합](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)  
   
   
-

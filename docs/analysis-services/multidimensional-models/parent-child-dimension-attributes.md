@@ -24,17 +24,16 @@ helpviewer_keywords:
 - parent-child dimensions [Analysis Services]
 - MembersWithData property
 ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edadec950e3a3e38ff235bf20d05b5a1e8b15f2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a2e7e84b9951c019440331b829aadeaa615daa9d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parent-child-dimension-attributes"></a>부모-자식 차원 특성
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 차원의 멤버 내용에 대한 일반적인 가정이 있습니다. 즉, 리프 멤버에는 기본 데이터 원본에서 직접 파생되는 데이터가 있고 리프가 아닌 멤버에는 자식 멤버에 대해 수행된 집계에서 파생되는 데이터가 있다고 가정합니다.  
@@ -61,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [부모-자식 차원](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   
-

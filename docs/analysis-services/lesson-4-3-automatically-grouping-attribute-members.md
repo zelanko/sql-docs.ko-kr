@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ee0e07b5154afdcbca46c8c59965c3c374a01f25
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a20c511000cf9489e817ab5f4da4531205a691f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4-3-자동으로 특성 멤버 그룹화
 큐브를 찾아볼 때 일반적으로 한 특성 계층의 멤버 차원은 다른 특성 계층의 멤버별로 구분합니다. 예를 들어 고객 판매를 도시별, 구매 제품별 또는 성별로 그룹화할 수 있습니다. 그러나 특정 특성 유형의 경우에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특성 계층 내의 멤버 배포에 따라 자동으로 특성 멤버를 그룹화하도록 하는 것이 유용합니다. 예를 들어 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 고객의 연간 소득 값 그룹을 만들도록 할 수 있습니다. 이 작업을 수행하면 특성 계층을 찾아보는 사용자는 멤버 자체가 아니라 그룹의 이름과 값을 보게 됩니다. 이렇게 하면 사용자에게 표시되는 수준 수가 제한되므로 분석하는 데 보다 유용합니다.  
@@ -140,4 +137,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

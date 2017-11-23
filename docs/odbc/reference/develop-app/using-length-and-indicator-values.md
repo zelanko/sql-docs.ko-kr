@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-length-and-indicator-values"></a>길이 표시기 값을 사용 하 여
 길이/표시기 버퍼 데이터 버퍼 또는 데이터가 NULL 인지 여부를 나타내는 SQL_NULL_DATA 등 특별 한 표시기에 있는 데이터의 바이트 길이 전달 하는 데 사용 됩니다. 사용 되는 함수에 따라 길이/표시기 버퍼는 SQLINTEGER 또는 SQLSMALLINT 되도록 정의 됩니다. 따라서을 설명 하는 하나의 인수가 필요 합니다. 데이터 버퍼가 nondeferred 입력된 버퍼 경우이 인수 자체 데이터의 바이트 길이 또는 표시기 값을 포함 합니다. 종종 라는 *StrLen_or_Ind* 또는 비슷한 이름입니다. 예를 들어 다음 코드 호출 **SQLPutData** 버퍼를 전달할 데이터의 전체; 바이트 길이 (*ValueLen*) 때문에 직접 전달 데이터 버퍼 (*ValuePtr*)은 입력된 버퍼입니다.  
@@ -79,4 +77,3 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM 합니다. 프로시저 일치 하는 데이터 버퍼에 있는 값 대신 프로시저의 입력된 매개 변수의 기본값을 사용 하는 것입니다.  
   
 -   SQL_COLUMN_IGNORE 합니다. **SQLBulkOperations** 또는 **SQLSetPos** 데이터 버퍼에 값을 무시 하는 것입니다. 호출 하 여 데이터의 행을 업데이트할 때 **SQLBulkOperations** 또는 **SQLSetPos** 열 값이 변경 되지 않습니다. 호출 하 여 데이터의 새 행을 삽입할 때 **SQLBulkOperations**, 열 값은 기본 설정으로 또는 열에 NULL로 기본이 없는 경우.
-

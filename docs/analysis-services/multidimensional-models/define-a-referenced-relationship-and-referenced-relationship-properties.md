@@ -18,17 +18,16 @@ helpviewer_keywords:
 - referenced dimension relationship
 - relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 82aefe81ab4b5229034cb88e0e4648f998373209
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>참조 관계 및 참조 관계 속성 정의
   참조 차원 관계는 큐브 디자이너의 **차원 용도** 탭에서 다음을 지정하여 정의됩니다.  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  참조 차원에서 세분성은 참조 차원과 주 차원 테이블에 해당되는 측정값 그룹 간의 관계를 정의하는 특성을 식별하여 지정됩니다. 여러 참조 차원이 함께 연결될 때는 참조가 가장 바깥쪽 차원에서 측정값 그룹까지의 관계를 정의합니다.  
   
   
-

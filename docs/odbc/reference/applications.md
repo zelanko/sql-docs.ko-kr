@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ea2d2f08fb0d31ed141281b195742462350a5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="applications"></a>응용 프로그램
 *응용 프로그램* 데이터에 액세스 하는 ODBC API를 호출 하는 프로그램입니다. 여러 유형의 응용 프로그램을 사용할 수 있지만 대부분이이 가이드 전체에서 예제로 사용 되는 세 범주로 분류 됩니다.  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/09/2017
 -   데이터 원본에서 연결을 끊는 중입니다.  
   
  대부분의 데이터 액세스 작업은을 완료 한 후 SQL 응용 프로그램을 ODBC를 사용 하는 주 작업 이므로 SQL 문을 제출 하 고 해당 문에 의해 생성 된 결과 (있는 경우)를 검색 합니다. 응용 프로그램을 ODBC를 사용 하는 다른 작업 및 드라이버 기능에 조정 하 고 데이터베이스 카탈로그를 찾아보는 등 합니다.
-

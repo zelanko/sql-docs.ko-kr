@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-object-tmsl"></a>Tables 개체 TMSL)
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
  isHidden  
  테이블은 처리 하는지 여부를 나타내는 Boolean을 클라이언트 시각화 도구에서 숨김 상태로 있습니다.  
-True 이면 테이블은 기호로 처리 숨겨진; 그렇지 않으면 false입니다.  
+테이블이 숨김으로 처리되면 true이고, 그렇지 않으면 false입니다.  
   
  열  
  테이블의 열을 나타냅니다. Table 개체의 자식입니다. 각 열에 다양 한 클라이언트 응용 프로그램 열에서 데이터를 시각화 하는 방법에 영향을 주는 속성이 정의 되어 있습니다.  
@@ -825,4 +824,3 @@ True 이면 테이블은 기호로 처리 숨겨진; 그렇지 않으면 false�
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

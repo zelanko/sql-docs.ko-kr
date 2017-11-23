@@ -1,30 +1,31 @@
 ---
 title: "ETL 워크플로 | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 3b81a6494458f7d9f2e89b120119e402786e21ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85898dfc3a12ee195910bf965f0099b35f95b239
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 워크플로
-WWI_Integration ETL 패키지에서에서 데이터를 마이그레이션하도록 WideWorldImporters 데이터베이스 WideWorldImportersDW 데이터베이스에 데이터 변경 내용으로 사용 됩니다. 패키지를 정기적으로 실행 (가장 일반적으로 매일)입니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WWI_Integration ETL 패키지에서에서 데이터를 마이그레이션하도록 WideWorldImporters 데이터베이스 WideWorldImportersDW 데이터베이스에 데이터 변경 내용으로 사용 됩니다. 패키지를 정기적으로 실행 (가장 일반적으로 매일)입니다.
 
 ## <a name="overview"></a>개요
 
@@ -80,4 +81,3 @@ SSIS 패키지 파일을 다운로드 **매일 ETL.ispac**합니다.
    - 확인 작업을 만들려면 클릭 합니다.
 
 3. 실행 하거나 작업을 예약 합니다.
-

@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_SETS
+apiname: MDSCHEMA_SETS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_SETS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1e197a9d26eb5839425166fde987de22637603f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4820c18992da2aab0ac8e0550a5cadd75ca193bc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS 행 집합
   세션 범위 집합을 비롯하여 데이터베이스에 현재 정의된 집합에 대해 설명합니다.  
@@ -69,7 +65,6 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(선택 사항)<br /><br /> 참고: 계층 하나에 포함 될 수 및 명명 된 집합만 반환 되는 계층이 제한을 정확 하 게 일치 합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLAP 스키마 행 집합 용 OLE DB](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLAP용 OLE DB 스키마 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

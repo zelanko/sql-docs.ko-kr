@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AggregationDesignID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AggregationDesignID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AggregationDesignID
-helpviewer_keywords:
-- AggregationDesignID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AggregationDesignID
+helpviewer_keywords: AggregationDesignID element
 ms.assetid: e7f1f7ae-3169-4c0c-aadb-f7465155d652
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 52035a2ae555767586d0db95d1aa90b094935551
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cc9f80f42ff99cd0f199e746a25ec7cf5595b700
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregationdesignid-element-assl"></a>AggregationDesignID 요소(ASSL)
   식별 된 [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) 요소와 연관 된는 [파티션](../../../analysis-services/scripting/objects/partition-element-assl.md) 요소입니다.  
@@ -74,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

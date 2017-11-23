@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 681e7990c2b93364e9792937cb68e0847de6f303
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d8bc240a84112df29e3b7fe85d16f721c0da5a5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>참여할 수 있 및 범위란 메서드 예제 (VB)
 이 예제에는 복사, 이동, 편집 및 웹 폴더에 게시 하는 텍스트 파일의 내용을 삭제 하는 방법을 보여 줍니다. 다른 속성 및 사용 되는 메서드를 포함 [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [소스](../../../ado/reference/ado-api/source-property-ado-record.md), 및 [플러시](../../../ado/reference/ado-api/flush-method-ado.md)합니다.  
@@ -163,4 +160,3 @@ End Sub
  [범위란 메서드 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [ParentURL 속성 (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
  [Source 속성(ADO 레코드)](../../../ado/reference/ado-api/source-property-ado-record.md)
-

@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - transactions [ADOMD.NET]
 - ADOMD.NET, transactions
 - AdomdTransaction object
 ms.assetid: 7978c28b-c255-43c0-ad05-f38604d4d8fe
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5c78445de3ed3b17805bc458ce6078e0d9587eed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b7fe4d80598e56de50748fd53e651ca1a2b5a48b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Connections in ADOMD.NET에서 트랜잭션 수행
   ADOMD.NET에서는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 개체를 사용하여 지정된 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체의 트랜잭션 컨텍스트를 관리할 수 있습니다. 이 기능을 사용하면 같은 컨텍스트 내에서 여러 명령을 실행할 수 있습니다. 각 명령이 실행되는 동안 읽는 데이터의 변경 없이 각 명령은 같은 데이터를 읽게 됩니다.  
@@ -61,4 +59,3 @@ AdomdTransaction objTransaction = objConnection.BeginTransaction();
  [ADOMD.NET 클라이언트 프로그래밍](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
-

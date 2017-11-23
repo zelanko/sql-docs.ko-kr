@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords:
-- Find method [ADO]
+helpviewer_keywords: Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-method-ado"></a>Find 메서드 (ADO)
 검색 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 지정된 된 조건을 만족 시키는 행에 대 한 합니다. 필요에 따라 검색, 시작 행 및 행 시작에서 오프셋의 방향을 지정할 수 있습니다. 조건이 충족 되 면 검색 된 레코드로; 현재 행의 위치가 설정 됩니다. 그렇지 위치의 끝 (또는 시작)으로 설정 되 고 **레코드 집합**합니다.  
@@ -79,4 +76,3 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  [Index 속성](../../../ado/reference/ado-api/index-property.md)   
  [동적 속성 (ADO)를 최적화 합니다.](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [Seek 메서드](../../../ado/reference/ado-api/seek-method.md)
-

@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IDENTITY_TSQL
 - IDENTITY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - IDENTITY property
 - columns [SQL Server], creating
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: c8ed5f2b2dd8daaf244f9e12ea17a69ff489ae3b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1eb7f960210ec89a66f1307d8476e6d47494861f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql-identity-property"></a>테이블 (Transact SQL) IDENTITY (속성) 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -84,7 +81,7 @@ IDENTITY [ (seed , increment) ]
   
  ID 열은 테이블당 하나만 만들 수 있습니다.  
   
- 메모리 액세스에 최적화된 테이블에서 초기값과 증가값은 둘 다 1,1로 설정되어야 합니다. 시드 또는 증가 하면 다음과 같은 오류가 1 결과 이외의 값으로 설정: 초기값 및 증가값을 사용 하 여 값을 다른 보다 1 메모리 액세스에 최적화 된 테이블에서는 지원 되지 않습니다.  
+ 메모리 최적화 테이블에서 초기값과 증가값은 둘 다 1,1로 설정되어야 합니다. 시드 또는 증가 하면 다음과 같은 오류가 1 결과 이외의 값으로 설정: 초기값 및 증가값을 사용 하 여 값을 다른 보다 1 메모리 액세스에 최적화 된 테이블에서는 지원 되지 않습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -187,4 +184,3 @@ SET IDENTITY_INSERT img OFF;
  [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   
-

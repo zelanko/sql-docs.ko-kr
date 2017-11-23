@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- properties [Analysis Services], measure groups
+helpviewer_keywords: properties [Analysis Services], measure groups
 ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ce67fa290953d89353fb1031fc0ca1ddfd5ea72f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16613e83f5632864fd86ff46067a72ed9dc88539
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-measure-group-properties"></a>측정값 그룹 속성 구성
   측정값 그룹에는 측정값 그룹의 작동 방법을 정의할 수 있는 속성이 있습니다.  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/01/2017
 |**형식**|측정값 그룹의 유형을 지정합니다.|  
   
   
-

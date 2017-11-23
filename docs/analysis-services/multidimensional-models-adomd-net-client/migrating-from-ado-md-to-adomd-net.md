@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ADOMD.NET, migrating to
 - migrating ADO MD to ADOMD.NET
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a4b442d18188a5ba57066d6c9f3b2f1c2bdd18f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f487a18b188dad430c88531e82e747e9edf349f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>ADO MD에서 ADOMD.NET으로 마이그레이션
   ADOMD.NET 라이브러리는 COM(구성 요소 개체 모델) 기반 클라이언트 응용 프로그램의 다차원 데이터에 액세스하는 데 사용되는 ADO(ActiveX Data Objects) 라이브러리의 확장인 ADO MD(ActiveX Data Objects Multidimensional) 라이브러리와 비슷합니다. ADO MD는 C++ 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic과 같은 관리되지 않는 언어의 다차원 데이터에 쉽게 액세스할 수 있은 방법을 제공합니다. ADOMD.NET은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET과 같은 관리되는 언어의 분석(다차원 및 데이터 마이닝) 데이터에 쉽게 액세스할 수 있는 방법을 제공합니다. 또한 향상된 메타데이터 개체 모델도 제공합니다.  
@@ -271,4 +269,3 @@ End Sub
 ```  
   
   
-

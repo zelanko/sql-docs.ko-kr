@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- ExecuteOptions property [ADO], VBScript example
+helpviewer_keywords: ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56e631762097a140f722202a9eba6a304b66c0cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d46a26f7e4a80ae7a22954f388597552a5fb86
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 속성 (RDS)
 비동기 실행을 사용할지 여부를 나타냅니다.  
@@ -58,6 +55,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [ExecuteOptions 및 FetchOptions 속성 예 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel 메서드(RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
 
 

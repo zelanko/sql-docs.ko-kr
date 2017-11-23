@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataSourceView Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataSourceView Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DataSourceView
-helpviewer_keywords:
-- DataSourceView element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DataSourceView
+helpviewer_keywords: DataSourceView element
 ms.assetid: cda26126-8af2-4519-8237-f4a57976a284
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9615a41c43e8ff797d465453096eb9c90f74be67
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e02a3bf0ac061ae4e3a51c16b5bb5e4b8de5c64b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasourceview-element-assl"></a>DataSourceView 요소(ASSL)
   사용 하는 데이터 원본 뷰 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md) 요소입니다.  
@@ -81,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

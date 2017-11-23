@@ -1,33 +1,31 @@
 ---
 title: "컴퓨터 학습 서비스의 알려진 문제 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: d5835b1c79ec1ce26e200b02fa9ba6e03378187b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 63ad249e32f259eca850d5b872d940faa313750c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
 
 이 문서에서는 기계 학습에서 SQL Server 2016 및 SQL Server 2017 옵션으로 제공 되는 구성 요소와 알려진된 문제 또는 제한을 설명 합니다.
 
-구체적으로 지정 되어 있지 않으면 여기 정보는 다음의 모든 적용 됩니다.
+지정 하지 않을 경우이 정보 모든 다음에 적용 됩니다.
 
 * SQL Server 2016
 
@@ -44,13 +42,17 @@ ms.lasthandoff: 10/24/2017
 
 참조에 대 한 프로세스와 관련 된 초기 설치 및 구성과 관련 된 일반적인 질문 설명은 [업그레이드 및 설치 FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)합니다. 업그레이드,-나란히 설치 및 새 Python 또는 R 구성 요소를 설치 하는 방법에 대 한 정보를 포함 합니다.
 
-### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>SQL Server 2017 CTP 2.0 이상 오프 라인 설치에서 Python 구성 요소를 설치할 수 없습니다.
+### <a name="unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>도메인 컨트롤러에 SQL Server 컴퓨터 학습 기능을 설치할 수 없습니다.
 
-인터넷 액세스가 없는 컴퓨터에서 SQL Server 2017의 시험판 버전을 설치 하는 경우 설치 관리자 다운로드 된 Python 구성 요소 위치를 묻는 페이지를 표시 하려면 실패할 수 있습니다. 이러한 상황에서 컴퓨터 학습 서비스 기능을 사용 하지만 Python 구성 요소가 아닌를 설치할 수 있습니다.
+도메인 컨트롤러에 SQL Server 2016 R Services 또는 SQL Server 2017 컴퓨터 학습 서비스를 설치 하려고 하면 이러한 오류와 함께 설치 프로그램이 실패 합니다.
 
-릴리스 버전에서이 문제는 해결 됩니다. 에 대 한 해결책으로이 문제를 발생 하는 경우 설치 프로그램의 기간에 대 한 인터넷 액세스를 일시적으로 사용할 수 있습니다. 오른쪽에 이러한 제한이 적용 되지 않습니다.
+>*"기능 설치 과정에서 오류가 발생 했습니다."*
+> 
+>*"... Id로 그룹을 찾을 수 없습니다"*
+> 
+>*"구성 요소 오류 코드: 0x80131509"*
 
-**적용 대상:** python 2017 SQL Server
+오류는 도메인 컨트롤러에서 서비스에는 기계 학습을 실행 하는 데 필요한 20 로컬 계정을 만들 없기 때문에 발생 합니다. 일반적으로 도메인 컨트롤러에 SQL Server를 설치 하지 않는 것이 좋습니다. 자세한 내용은 참조 [지원 공지 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont)합니다.
 
 ### <a name="install-the-latest-service-release-to-ensure-compatibility-with-microsoft-r-client"></a>Microsoft R 클라이언트와의 호환성을 위해 최신 서비스 릴리스를 설치 합니다.
 
@@ -68,7 +70,13 @@ R 패키지 문제를 방지 하려면 업그레이드할 수 있습니다에 �
 
 **적용 대상:** R server 9.0.0 버전 SQL Server 2016 R Services 또는 이전 버전
 
-### <a name="bkmk_sqlbindr"></a>사용 하 여 클라이언트는 이전 버전의 SQL Server R Services에 연결 하는 경우 호환 되지 않는 버전의 경고[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>SQL Server 2017 CTP 2.0 이상 오프 라인 설치에서 Python 구성 요소를 설치할 수 없습니다.
+
+인터넷 액세스가 없는 컴퓨터에서 SQL Server 2017의 시험판 버전을 설치 하는 경우 설치 관리자 다운로드 된 Python 구성 요소 위치를 묻는 페이지를 표시 하려면 실패할 수 있습니다. 이러한 상황에서 컴퓨터 학습 서비스 기능을 사용 하지만 Python 구성 요소가 아닌를 설치할 수 있습니다.
+
+릴리스 버전에서이 문제는 해결 됩니다. 에 대 한 해결책으로이 문제를 발생 하는 경우 설치 프로그램의 기간에 대 한 인터넷 액세스를 일시적으로 사용할 수 있습니다. 오른쪽에 이러한 제한이 적용 되지 않습니다.
+
+**적용 대상:** Python # # #와 SQL Server 2017 <a name="bkmk_sqlbindr"> </a> 에 연결할 때 이전 버전 SQL Server R Services의 클라이언트에서 사용 하 여 호환 되지 않는 버전의 경고[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 SQL Server 2016 계산 컨텍스트에서 R 코드를 실행할 고 때는 다음과 같은 두 개의 문이 true 인 경우 다음과 같은 오류가 표시 될 수 있습니다.
 * 설치 마법사를 사용 하 여 클라이언트 컴퓨터에 R Server (독립 실행형) 설치 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]합니다.
@@ -120,18 +128,16 @@ Windows 통합 인증을 사용 하 여 원격 데이터 과학 워크스테이�
 
 **적용 대상:** SQL Server 2016 R Services Express Edition
 
-### <a name="performance-limits-when-r-libraries-are-called-from-other-r-tools"></a>R 라이브러리는 기타 R 도구에서 호출 하는 경우 성능이 제한
+### <a name="performance-limits-when-libraries-used-by-sql-server-are-called-from-other-tools"></a>SQL Server에서 사용 되는 라이브러리는 다른 도구에서 호출 하는 경우 성능이 제한
 
-R 도구 및 SQL Server에 대 한 관리자 권한 같은 외부 R 응용 프로그램에서 설치 되는 라이브러리를 호출 하는 것이 불가능 합니다. 새 패키지를 설치할 때 또는 매우 짧은 코드 예제에서 애드혹 테스트를 실행할 때이 호출 유용할 수 있습니다.
+기계 학습에서 관리자 권한 같은 외부 응용 프로그램을 SQL Server에 설치 된 라이브러리를 호출 하는 것이 불가능 합니다. 이렇게 하면 새 패키지를 설치 하거나 매우 짧은 코드 예제에서 애드혹 테스트를 실행 하는 등의 특정 작업을 수행 하는 가장 편리한 방법은 수 있습니다. 그러나 SQL Server 외부의 성능이 제한 될 수 있습니다. 
 
-그러나 수는 SQL Server 외부의 성능이 제한 될 수 있습니다. 예를 들어 SQL Server의 Enterprise Edition을 구매한 경우에 외부 도구를 사용 하 여 R 코드를 실행 하는 경우 단일 스레드 모드에서 R 실행 합니다. 성능이 SQL Server 연결을 초기화 하 고 사용 하 여 R 코드를 실행 하는 경우 더 나은 해야 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), R 라이브러리를 호출 하는 합니다.
+예를 들어 SQL Server의 Enterprise 버전을 사용 하는 경우에 외부 도구를 사용 하 여 R 코드를 실행 하는 경우 단일 스레드 모드에서 R 실행 합니다. SQL Server의 성능 이점을 얻으려면 SQL Server의 연결을 시작 및 사용 하 여 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 를 외부 스크립트 런타임을 호출 합니다.
 
-* R tools 외부에서 SQL Server에서 사용 되는 R 라이브러리를 호출 하지 마십시오.
-* SQL Server를 사용 하지 않고 SQL Server 컴퓨터에 광범위 한 R 코드를 실행 해야 하는 경우 R Microsoft R Client 등의 개별 인스턴스를 설치 하 고 R 개발 도구는 새 라이브러리를 가리키는지 확인 합니다.
++ 일반적으로 기계 학습 외부 도구에서 SQL Server에서 사용 되는 라이브러리를 호출 하지 마십시오.
++ 디버그 R Python 코드를 해야 하는 경우 SQL Server 외부에서 이렇게 하려면 일반적으로 쉽습니다. SQL Server에 있는 동일한 라이브러리를 가져오려면 Microsoft R 클라이언트를 설치할 수 있습니다 또는 [컴퓨터 학습 서버](r/create-a-standalone-r-server.md)합니다.
 
-자세한 내용은 [독립 실행형 R 서버 만들기](r/create-a-standalone-r-server.md)를 참조하세요.
-
-### <a name="the-r-script-is-throttled-due-to-resource-governance-default-values"></a>R 스크립트는 리소스 거 버 넌 스 기본값 인해 조정
+### <a name="external-script-execution-is-throttled-due-to-resource-governance-default-values"></a>외부 스크립트 실행은 리소스 거 버 넌 스 기본값 인해 조정
 
 Enterprise Edition에서 리소스 풀을 사용하여 외부 스크립트 프로세스를 관리할 수 있습니다. 일부 초기 릴리스 빌드에서 R 프로세스에 할당 될 수 있는 최대 메모리는 20% 였습니다. 따라서 서버에 32GB의 RAM이 있으면 R 실행 파일 (예: RTerm.exe, BxlServer.exe) 단일 요청에서 6.4 g B의 최대는 사용할 수 있습니다.
 
@@ -139,11 +145,11 @@ Enterprise Edition에서 리소스 풀을 사용하여 외부 스크립트 프�
 
 **적용 대상:** SQL Server 2016 R 서비스, Enterprise Edition
 
-## <a name="r-code-execution-and-package-or-function-issues"></a>R 코드 실행 및 패키지 또는 함수 문제
+## <a name="r-issues"></a>R 관련 문제
 
 이 섹션에는 RevoScaleR를 포함 하 여 Microsoft에서 게시 하는 도구 및 R 라이브러리에 관련 된 몇 가지 문제 뿐 아니라 SQL Server에서 R을 실행 하는 관련 된 알려진된 문제가 포함 되어 있습니다.
 
-R 솔루션에 영향을 줄 수 있는 기타 알려진된 문제에 대해 알아보려면는 [Microsoft R Server 사이트](https://msdn.microsoft.com/microsoft-r/rserver-known-issues)합니다.
+R 솔루션에 영향을 줄 수 있는 기타 알려진된 문제에 대해 알아보려면는 [Microsoft R Server 사이트](https://docs.microsoft.com/machine-learning-server/resources-known-issues)합니다.
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>R 작업에 대한 프로세서 선호도 제한
 
@@ -175,12 +181,15 @@ SQL Server 테이블에는 모델을 저장 하는 경우 모델을 직렬화 �
 
 더 큰 모델을 사용 해야 하는 경우 다음 해결 방법을 사용할 수 있습니다.
 
-+ 사용 하 여는 [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) SQL Server로 전달 하기 전에 모델의 크기를 줄이기 위해 기본 r에서 함수입니다. 이 옵션은 모델이 2GB 제한에 가까우면 가장 합니다.
-+ 더 큰 모델을 사용 하지 않고 varbinary 열은 모델을 저장할 수를 사용할 수 있습니다는 [FileTable](..\relational-databases\blob\filetables-sql-server.md) SQL Server에서 제공 하는 기능.
++ 모델의 크기를 축소 하는 단계를 수행 합니다. 일부 오픈 소스 R 패키지는 모델 개체에 많은 양의 정보를 포함 하 고 배포에 대 한 이러한 정보를 제거할 수 있습니다. 
++ 기능 선택 사용 하 여 불필요 한 열을 제거 합니다.
++ 오픈 소스 알고리즘을 사용 하는 경우 고려 MicrosoftML 또는 RevoScaleR 해당 알고리즘을 사용 하는 구현 방법이 비슷합니다. 이러한 패키지는 배포 시나리오에 대해 최적화 되었습니다.
++ 한 후 모델 합리화 되었습니다 앞의 단계를 사용 하 여 크기 감소를 참조 하는 경우는 [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) 기본 r에서 함수를 SQL Server로 전달 하기 전에 모델의 크기를 줄이기 위해 사용할 수 있습니다. 이 옵션은 모델이 2GB 제한에 가까우면 가장 합니다.
++ 더 큰 모델에 대 한 SQL Server를 사용할 수 있습니다 [FileTable](..\relational-databases\blob\filetables-sql-server.md) varbinary 열을 사용 하지 않고 모델을 저장 하는 기능입니다.
 
     Filetable을 사용 하려면 SQL server에서는 Filestream 파일 시스템 드라이버에서 Filetable에 저장 된 데이터 관리 되 고 네트워크 파일 액세스를 차단 하는 기본 방화벽 규칙 때문에 방화벽 예외를 추가 해야 합니다. 자세한 내용은 참조 [FileTable에 대 한 필수 구성 요소를 사용 하도록 설정](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)합니다. 
 
-    FileTable을 설정한 후 모델을 작성 하 있습니다 경로 FileTable API를 사용 하 여 SQL에서 가져오고 R 코드에서 해당 위치에 모델을 작성 합니다. 모델 읽이 필요한 경우에 SQL에서 경로 가져옵니다을 다음 R 스크립트에서 경로 사용 하 여 모델을 호출 합니다. 자세한 내용은 참조 [Filetable 액세스 제품 파일 입 / 출력 Api](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)합니다.
+    FileTable을 설정한 후 모델을 작성 하 있습니다 경로 FileTable API를 사용 하 여 SQL에서 가져오고 그런 다음 사용자 코드에서 해당 위치에 모델을 작성 합니다. 모델 읽이 필요한 경우에 SQL에서 경로 가져옵니다을 스크립트에서 경로 사용 하 여 모델을 호출 합니다. 자세한 내용은 참조 [파일 입력 / 출력 Api를 사용 하 여 액세스 Filetable](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)합니다.
 
 ### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>R 코드를 실행 하는 경우 작업 영역을 선택 취소 하지 마십시오.는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 계산 컨텍스트
 
@@ -205,6 +214,16 @@ R 스크립트에서는 다음 유형의 쿼리 결과를 사용할 수 없습�
   
      R 스크립트에서 마스킹된 데이터를 사용해야 하는 경우 가능한 해결 방법은 임시 테이블에 데이터 복사본을 만들고 해당 데이터를 대신 사용하는 것입니다.
 
+### <a name="use-of-strings-as-factors-can-lead-to-performance-degradation"></a>요소에 성능 저하를 발생할 수 있습니다 문자열 사용
+
+문자열 형식 변수를 사용 하 여 처럼 요소에는 R 작업에 사용 되는 메모리 양을 크게 증가할 수 있습니다. 일반적으로 이것은 알려진된 문제 R 사용 하 고 주체에 문서가 많이 있습니다. 예를 들어 참조 [요소 R 블로거에서 John 탑재 하 여 R의 구성 요소가 없는)](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/) 또는 [stringsAsFactors: Roger Peng 여는 무단된 악력](https://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/)합니다. 
+
+이 문제를 SQL Server 관련 하지는 않지만 SQl Server에서 실행 되는 R 코드의 성능에는 영향을 크게 수 있습니다. 문자열은 일반적으로 varchar 또는 nvarchar, 저장 하 고 내부적으로 정수, 문자열 r 다시로 이러한 변환 과정 문자열 데이터의 열에 고유 값이 많은 경우 메모리 할당 오류도 발생할 수 있습니다.
+
+필요 하지 않은 절대적으로 문자열 데이터 형식의 다른 작업에 대 한 숫자 (정수) 문자열 값을 매핑할 데이터 준비의 일부 성능 및 확장성 측면에서 유용한 것 처럼 데이터 형식.
+
+이 문제 및 기타 팁의 논의 알려면 [R Services-데이터 최적화에 대 한 성능](r/r-and-data-optimization-r-services.md)합니다.
+
 ### <a name="arguments-varstokeep-and-varstodrop-are-not-supported-for-sql-server-data-sources"></a>인수 *varsToKeep* 및 *varsToDrop* SQL Server 데이터 원본에 대해 지원 되지 않습니다
 
 RxDataStep 함수를 사용 하 여 테이블에 결과 쓸 때 사용 하는 *varsToKeep* 및 *varsToDrop* 포함 하거나 제외할 작업의 일부로 열을 지정 하는 편리한 방법입니다. 그러나 이러한 인수는 SQL Server 데이터 원본에 대해 지원 되지 않습니다.
@@ -227,7 +246,7 @@ R에 문자열 데이터를 보낼 때 ASCII 표현으로 가능 하면 변환 �
 
 경우는 binary 데이터 형식 (R **원시** 데이터 형식)의 값을 출력 데이터 프레임에서 전송 해야 R에서 반환 됩니다.
 
-데이터 형식 사용 이외의 **원시**, OUTPUT 키워드를 추가 하 여 저장된 프로시저의 결과 함께 매개 변수 값을 반환할 수 있습니다. 자세한 내용은 참조 [출력 매개 변수를 사용 하 여 데이터를 반환할](https://technet.microsoft.com/library/ms187004.aspx)합니다.
+데이터 형식 사용 이외의 **원시**, OUTPUT 키워드를 추가 하 여 저장된 프로시저의 결과 함께 매개 변수 값을 반환할 수 있습니다. 자세한 내용은 참조 [매개 변수](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)합니다.
 
 형식의 값을 포함 하는 여러 출력 집합이 사용 하려는 경우 **원시**, 한 가지 가능한 해결 방안은 저장된 프로시저를 여러 번 호출 하거나 결과 보내려고 다시 원래 대로 설정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ODBC를 사용 하 여 합니다.
 
@@ -248,20 +267,20 @@ R에 문자열 데이터를 보낼 때 ASCII 표현으로 가능 하면 변환 �
 예를 들어
 
 ```r
-f <- function(x) { 2*x * 3 }  
-g <- function(y) {   
-              a <- 10 * y  
-               f(a)  
+f <- function(x) { 2*x * 3 }
+g <- function(y) {
+              a <- 10 * y
+               f(a)
 }
 ```
 
 이 오류를 방지 하려면 다음과 같이 정의 다시 작성 합니다.
 
 ```r
-g <- function(y){  
-              f <- function(x) { 2*x +3}  
-              a <- 10 * y  
-              f(a)  
+g <- function(y){
+              f <- function(x) { 2*x +3}
+              a <- 10 * y
+              f(a)
 }
 ```
 
@@ -301,6 +320,46 @@ RevoIDE.exe /RCommandLine --max-ppsize=500000
 
 순서가 지정된 요소는 `rxDTree`를 제외하고 모든 RevoScaleR 분석 함수의 요소와 동일하게 처리됩니다.
 
+## <a name="python-code-execution-or-python-package-issues"></a>Python 코드 실행 또는 Python 패키지 문제
+
+이 섹션에서는으로 SQL Server, Microsoft에서 게시 Python 패키지에 관련 된 문제에 대해 Python을 실행 하는 관련 된 알려진된 문제가 포함 하 여 [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 및 [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+
+### <a name="call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>미리 학습 된 모델에 호출이 실패 하는 경우 모델의 경로를 너무 깁니다.
+
+컴퓨터 이름 및 인스턴스 이름에 따라 기본 설치에서 미리 학습 된 모델을 설치 하는 경우 학습 된 모델 파일에 결과 전체 경로를 읽을 Python에 대 한 너무 길 수 있습니다. 이 제한 사항은 향후 서비스 릴리스에서 수정 될 예정입니다.
+
+가능한 해결 방법 몇 가지가 있습니다. 
+
++ 미리 학습 된 모델을 설치 하면 사용자 지정 위치를 선택 합니다.
++ 가능 하면 C:\SQL\MSSQL14 등의 사용자 지정 설치 경로에서 SQL Server 인스턴스를 설치 합니다. MSSQLSERVER입니다.
++ Windows 유틸리티를 사용 하 여 [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) 모델 파일을 경로가 더 짧은 매핑되는 하드 링크를 합니다. 
+
+### <a name="failure-to-initialize-a-varbinary-variable-causes-an-error-in-bxlserver"></a>BxlServer에 varbinary 변수 초기화에 실패 하면 오류가 발생
+
+SQL Server를 사용 하 여에서 Python 코드를 실행 하는 경우 `sp_execute_external_script`, 및 코드에 출력 형식 varbinary (max), varchar (max) 또는 유사한 종류의 변수, 변수 또는 초기화 스크립트의 일부로 설정 해야 합니다. 그렇지 않으면 데이터 exchange 구성 요소, BxlServer, 작동을 중지 하 고 오류가 발생 합니다.
+
+이 제한 사항은 향후 서비스 릴리스에서 수정 될 예정입니다. 이 문제를 해결 Python 스크립트 내 변수 초기화 되는지 확인 합니다. 다음 예제와 같이 유효한 값을 사용할 수 있습니다.
+
+```sql
+declare @b varbinary(max);
+exec sp_execute_external_script
+  @language = N'Python'
+  , @script = N'b = 0x0'
+  , @params = N'@b varbinary(max) OUTPUT'
+  , @b = @b OUTPUT;
+go
+```
+
+```sql
+declare @b varchar(30);
+exec sp_execute_external_script
+  @language = N'Python'
+  , @script = N' b = ""  '
+  , @params = N'@b varchar(30) OUTPUT'
+  , @b = @b OUTPUT;
+go
+```
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 및 Microsoft R Open
 
 이 섹션은 R 연결, 개발 및 Revolution Analytics에서 제공 되는 성능 도구 관련 문제를 나열 합니다. 이러한 도구는 이전 시험판 버전의 제공 된 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]합니다.
@@ -323,14 +382,9 @@ RevoIDE.exe /RCommandLine --max-ppsize=500000
 
 SQLite ODBC 드라이버의 수정 버전 0.92는 RevoScaleR과 호환 되지 않습니다. 수정 버전 0.88 ~ 0.91 및 0.93 이상은 및 나중에 호환 가능한 것으로 알려져 있습니다.
 
-## <a name="python-code-execution-or-python-package-issues"></a>Python 코드 실행 또는 Python 패키지 문제
-
-이 섹션에서는으로 SQL Server, Microsoft에서 게시 Python 패키지에 관련 된 문제에 대해 Python을 실행 하는 관련 된 알려진된 문제가 포함 하 여 [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 및 [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
-
 
 ## <a name="see-also"></a>참고 항목
 
 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
 
 [SQL Server의 기계 학습 문제 해결](machine-learning-troubleshooting-faq.md)
-

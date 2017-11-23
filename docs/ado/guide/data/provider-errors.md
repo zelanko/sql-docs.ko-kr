@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-errors"></a>공급자 오류 정보
 공급자 오류가 발생 하는 경우에-2147467259 런타임에 오류가 반환 됩니다. 이 오류를 받으면 확인는 **오류** 활성의 컬렉션 **연결** 하나 이상의 오류가 발생 한 문제를 설명 하는 포함 하는 개체입니다.  
@@ -87,4 +85,3 @@ End Function
  **오류** 개체는 이벤트 관련 오류가 발생 하는 경우에 사용 됩니다. ADO 이벤트를 확인 하 여 발생 하는 프로세스에서 오류가 발생 했는지 확인할 수 있습니다는 **오류** 이벤트 매개 변수로 전달 된 개체입니다.  
   
  이벤트를 발생 시키는 작업을 성공적으로 완료 하는 경우는 *adStatus* 이벤트 처리기의 매개 변수를로 설정 됩니다 *adStatusOK*합니다. 반면에, 이벤트를 발생 시킨 작업에 성공 하면는 *adStatus* 로 설정 된 *adStatusErrorsOccurred*합니다. 이 경우에 *pError* 매개 변수가 포함 됩니다는 **오류** 오류를 설명 하는 개체입니다.
-

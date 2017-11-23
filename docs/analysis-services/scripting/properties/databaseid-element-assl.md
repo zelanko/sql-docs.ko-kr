@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DatabaseID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DatabaseID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DatabaseID element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e112fa75d1995a5d96293e11054f62bb06c1fa32
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 181a86188f90bc881e8af0ba267a00d0fd1fb08c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="databaseid-element-assl"></a>DatabaseID 요소(ASSL)
   식별 된 [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md) 의-라인와 연관 된 요소의 [바인딩](../../../analysis-services/scripting/data-type/binding-data-type-assl.md) 요소입니다.  
@@ -71,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

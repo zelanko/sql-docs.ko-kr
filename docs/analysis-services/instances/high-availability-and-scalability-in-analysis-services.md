@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7d6b6f6fa02735de056b83a3ec0216cd95c84926
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services의 고가용성 및 확장성
   이 문서에서는 Analysis Services 데이터베이스를 항상 사용 가능하고 확장 가능하도록 만드는 가장 일반적으로 사용되는 기술을 설명합니다. 각 목표를 개별적으로 다룰 수 있지만 실제로는 연관된 경우가 많습니다. 대규모 쿼리 또는 처리 워크로드에 대한 확장 가능한 배포는 일반적으로 고가용성에 대한 기대와 함께 제공됩니다.  
@@ -114,4 +112,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 사례 연구: 대규모 상용 솔루션에서 테이블 형식 모델 사용](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   
-

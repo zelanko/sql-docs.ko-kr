@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27a6df2276d2d474137038fdbe0b42fdf2b05e5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>오류 메시지 (Visual FoxPro ODBC 드라이버)
 오류가 발생 하면 Visual FoxPro 드라이버에서 다음 정보를 반환 합니다.  
@@ -62,4 +60,3 @@ ms.lasthandoff: 09/09/2017
  예를 들어, Visual FoxPro ODBC 드라이버를 찾을 수 없는 파일 employee.dbf 하는 경우에 다음과 같은 오류 메시지가 반환할 수 있습니다이:  
   
  "[*Microsoft*] [*ODBC Visual FoxPro 드라이버*] 'employee.dbf' 파일이 존재 하지 않습니다"
-

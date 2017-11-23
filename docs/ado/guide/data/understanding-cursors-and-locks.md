@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 75209516e372612beb8885051fd22882b967894c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 96231e4b76ab2a01f2d817c0fd85aa2d0dca33e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-cursors-and-locks"></a>커서 및 잠금 이해
 응용 프로그램의 데이터 액세스 요구 사항에 대 한 가장 효율적인 커서 유형을 선택할 수 있는 커서의 작동 방법을 이해 하는 것이 유용 합니다. 덜 최적화 커서 구성 매우 느려질 데이터 액세스 작업을 만들 수 있습니다.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 -   [CacheSize 사용](../../../ado/guide/data/using-cachesize.md)  
   
 -   [커서 및 잠금 특성](../../../ado/guide/data/cursor-and-lock-characteristics.md)
-

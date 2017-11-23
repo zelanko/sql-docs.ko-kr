@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLBindParameter function [ODBC], Cursor Library
+helpviewer_keywords: SQLBindParameter function [ODBC], Cursor Library
 ms.assetid: 04c53e4c-cd1d-40b2-9997-684ebe43499f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6011240bb5c69cda4d21005e9cefd20888a9f6d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45b3a0355edb0c9fbd37f7047aa0a1e6ff9a1fe8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbindparameter-cursor-library"></a>SQLBindParameter (커서 라이브러리)
 > [!IMPORTANT]  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  커서 라이브러리 지원 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성 바인딩 오프셋을 사용 하도록 설정 합니다. (**SQLBindParameter** 되려면 리바인딩이 대해 호출할 필요는 없습니다.)  
   
  커서 라이브러리 바인딩 실행 시 데이터 매개 변수를 지원 합니다.
-
