@@ -5,27 +5,24 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f77ac9e6b57d4b904f67cfd5e6bb9d5760c0a3d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 149cafe2595c176bcb3d1f162d1455aa7c4c6616
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>SQL 개발자 (자습서)에 대 한 데이터베이스에서 R 분석
 
@@ -88,4 +85,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>다음 단원
 
 [1 단원: 예제 데이터 다운로드](../tutorials/sqldev-download-the-sample-data.md)
-

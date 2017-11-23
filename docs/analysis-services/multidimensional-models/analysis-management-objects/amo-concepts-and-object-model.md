@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - AMO, classes
 - Analysis Management Objects, classes
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Analysis Management Objects
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 개념 및 개체 모델
   이 항목에서는 정의의 AMO Analysis Management Objects (), 다른 도구와의 아키텍처에 제공 된 라이브러리와 AMO의 관계 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 및 AMO의 모든 주요 개체의 개념을 설명 합니다.  
@@ -87,7 +85,7 @@ ms.lasthandoff: 09/01/2017
 |[AMO OLAP 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 OLAP 개체를 관리하는 데 사용되는 클래스입니다.|  
 |[AMO 데이터 마이닝 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 데이터 마이닝 개체를 관리하는 데 사용되는 클래스입니다.|  
 |[AMO 보안 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|다른 개체에 대한 액세스를 제어하고 보안을 유지하는 데 사용되는 클래스입니다.|  
-|[AMO 다른 클래스와 메서드](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|OLAP 또는 데이터 마이닝 관리자의 일상 업무에 도움이 되는 클래스와 메서드입니다.|  
+|[AMO 기타 클래스 및 메서드](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|OLAP 또는 데이터 마이닝 관리자의 일상 업무에 도움이 되는 클래스와 메서드입니다.|  
   
 ##  <a name="bkmk_UsingAMO"></a>AMO를 사용 하 여  
  AMO는 예를 들어 팩트 테이블의 새 데이터를 기반으로 측정값 그룹에 새 파티션을 만들거나 새 데이터를 기반으로 마이닝 모델을 다시 학습하는 등의 반복적인 태스크를 자동화하는 데 특히 유용합니다. 새 개체를 만드는 이러한 태스크는 일반적으로 월별, 주별 또는 분기별로 수행되며 응용 프로그램에서는 새 데이터를 기반으로 새 개체의 이름을 쉽게 지정할 수 있습니다.  
@@ -127,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  AMO는 데이터를 쿼리하는 데는 사용할 수 없습니다. 큐브 및 마이닝 모델을 포함한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터를 쿼리하려면 사용자 응용 프로그램에서 ADOMD.NET을 사용해야 합니다. 자세한 내용은 참조 [ADOMD.NET을 사용 하 여 개발](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)합니다.  
   
   
-
