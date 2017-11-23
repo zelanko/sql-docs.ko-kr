@@ -30,17 +30,16 @@ helpviewer_keywords:
 - ROLAP
 - medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4610c996aa58fc71090c5a724447cfe733ede5d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8915a2890be20925d739ae03098a2f29a1fab8ef
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>파티션 저장소 설정(Analysis Services - 다차원)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 저장소 모드 및 캐싱 옵션에 대한 여러 가지 표준 저장소 구성을 제공합니다. 이를 통해 업데이트 알림, 대기 시간 및 데이터 다시 작성에 대한 일반적인 구성을 사용할 수 있습니다.  
@@ -91,4 +90,3 @@ ms.lasthandoff: 09/01/2017
  [다차원 모델의 파티션](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   
-

@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Name element
+dev_langs: XML
+helpviewer_keywords: Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9a5db241528d6fbb75a30af055b6a7682d3e465e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 98b9748db2c405491ed94568de25525e208c2ff4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="name-element-for-server-dta"></a>Server의 Name 요소(DTA)
   튜닝할 데이터베이스가 상주하는 서버의 이름을 포함합니다.  
@@ -50,14 +46,13 @@ ms.lasthandoff: 08/02/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Server 요소 &#40; DTA &#41;](../../tools/dta/server-element-dta.md)|  
+|**부모 요소**|[Server 요소&#40;DTA&#41;](../../tools/dta/server-element-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  
- 이 **Name** 요소의 사용 예는 [서버 요소&#40;DTA&#41;](../../tools/dta/server-element-dta.md)를 참조하세요.  
+ 이 **Name** 요소의 사용 예는 [Server 요소&#40;DTA&#41;](../../tools/dta/server-element-dta.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

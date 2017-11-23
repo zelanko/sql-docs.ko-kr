@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Default Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Default Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DEFAULT
-helpviewer_keywords:
-- Default element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DEFAULT
+helpviewer_keywords: Default element
 ms.assetid: 02c1844c-51fb-44fe-aafb-001e53ad293c
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9abb9dddcb16ed4395ccd41ac5cbb675c427a426
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2eb9c10eb6c257c7db6f97311b05360931204698
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="default-element-assl"></a>Default 요소(ASSL)
   결정 여부는 [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) 이 기본 드릴스루 동작 합니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Attributes property [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 69ec8dcfecac32da4d963198298cf94f58edba1c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 555f4545d7d54ce5b7ee37b19aa049461f00c969
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-property-example-vc"></a>특성 속성 예제 (VC + +)
 이 예제에서는 [특성](../../../ado/reference/adox-api/attributes-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 로 설정 **adColNullable** 의 값을 설정할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 을 빈 문자열입니다. 이 경우 사용자는 데이터가 적용 되지 않은 레코드와 위치 데이터 알 수 없는 레코드 구별할 수 있습니다.  
@@ -213,4 +209,3 @@ int main() {
 ## <a name="see-also"></a>관련 항목:  
  [특성 속성 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-

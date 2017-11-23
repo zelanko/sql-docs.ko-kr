@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Record::raw_Open
 - _Record::Open
-helpviewer_keywords:
-- Open method [ADO]
+helpviewer_keywords: Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc5b12e87123af4abc3b92535b87668b7c983f4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7e7f1c5e35ced700818954056b380a44c75570c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-method-ado-record"></a>Open 메서드 (ADO 레코드)
 기존 엽니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 또는 개체를 나타내는 새 항목을 만듭니다는 **레코드**, 예: 파일 또는 디렉터리입니다.  
@@ -89,4 +86,3 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open 메서드 (ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)
-

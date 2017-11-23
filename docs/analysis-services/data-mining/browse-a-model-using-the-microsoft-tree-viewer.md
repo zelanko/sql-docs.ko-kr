@@ -27,17 +27,16 @@ helpviewer_keywords:
 - dependencies [Analysis Services]
 - continuous attributes
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 709a209b6149a38e7bc33d9734c13ae4e9b81dee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cf93bd7a9be8f6de5e4f807730fcaa4bcb60ab5c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Microsoft 트리 뷰어를 사용하여 모델 찾아보기
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 트리 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하여 작성된 의사 결정 트리를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 알고리즘은 분류와 회귀를 둘 다 지원하는 하이브리드 의사 결정 트리 알고리즘입니다. 따라서 이 뷰어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 기반으로 모델을 볼 수도 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 불연속 및 연속 특성 모두의 예측 모델링에 사용됩니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)를 참조하십시오.  
@@ -120,4 +119,3 @@ ms.lasthandoff: 09/01/2017
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
-

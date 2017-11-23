@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7bc1407781d1187a625ec0467ba7ec7047976fe3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6f560bd2106a243752ac424f2e7737579a2a1b76
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-gui-sybasetosql"></a>프로젝트 설정 (GUI) (SybaseToSQL)
 GUI 프로젝트 설정에 나타나는 데이터를 구성할 수 있습니다는 **데이터** 탭과 여부 변환 된 후 평가 보고서를 표시할지 여부입니다.  
@@ -50,4 +48,3 @@ GUI 창도에서 사용할 수는 **프로젝트 설정** 및 **기본 프로젝
   
 **기본**: False  
   
-

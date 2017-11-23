@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 인증 및 권한 부여
   SharePoint 2010 팜에서 실행되는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 SharePoint 서버에서 제공되는 인증 하위 시스템과 권한 부여 모델을 사용합니다. 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관련 콘텐츠는 SharePoint 콘텐츠 데이터베이스에 저장되고 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]관련 작업은 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]공유 서비스에 의해 수행되므로 SharePoint 보안 인프라는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 콘텐츠 및 작업까지 포함합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 통합 문서를 요청하는 사용자는 Windows 사용자 ID를 기반으로 하는 SharePoint 사용자 ID를 사용하여 인증됩니다. 통합 문서에 대한 보기 권한에 따라 요청을 허용할지 여부가 결정됩니다.  
@@ -108,7 +107,7 @@ ms.lasthandoff: 09/01/2017
  Excel 서비스에서 보안 관련 구성 설정은 신뢰할 수 있는 위치, 신뢰할 수 있는 데이터 공급자 및 신뢰할 수 있는 데이터 연결 라이브러리에서 지정됩니다. 다음 표에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 허용하거나 개선하는 설정에 대해 설명합니다. 아래에 나와 있지 않은 설정은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 연결에 영향을 주지 않습니다. 이러한 설정을 단계별로 지정하는 방법에 대한 자세한 내용은 [초기 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)에서 "Excel Services 사용" 섹션을 참조하세요.  
   
 > [!NOTE]  
->  대부분의 보안 관련 설정은 신뢰할 수 있는 위치에 적용됩니다. 기본값을 유지하거나 다른 사이트에 대해 각각 다른 값을 사용하려는 경우에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 사이트에 추가로 신뢰할 수 있는 위치를 만든 다음 해당 사이트에만 다음 설정을 구성할 수 있습니다. 자세한 내용은 [파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
+>  대부분의 보안 관련 설정은 신뢰할 수 있는 위치에 적용됩니다. 기본값을 유지하거나 다른 사이트에 대해 각각 다른 값을 사용하려는 경우에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 사이트에 추가로 신뢰할 수 있는 위치를 만든 다음 해당 사이트에만 다음 설정을 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
   
 |영역|설정|Description|  
 |----------|-------------|-----------------|  
@@ -127,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot 보안 아키텍처](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d074eb99de5c97bb9df38d6f2305fb906370f64a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>사용 현황 데이터 수집 구성(SharePoint용 파워 피벗)
   사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 이 시스템을 사용하고 확장하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
@@ -201,7 +200,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [구성 설정 참조&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Power Pivot 사용 데이터 컬렉션](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
+ [Power Pivot 사용 데이터 수집](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   
-

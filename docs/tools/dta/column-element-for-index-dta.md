@@ -5,26 +5,22 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Column element
+dev_langs: XML
+helpviewer_keywords: Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 557befbb53d96bd0d1b5f862b6df5eeb63670b17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7aaf1a73356f2e5a2732e12e49b7e618c3bf1f0e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="column-element-for-index-dta"></a>Index의 Column 요소(DTA)
   사용자 지정 구성에서 인덱스가 만들어지는 열을 지정합니다.  
@@ -83,14 +79,13 @@ ms.lasthandoff: 08/02/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Index 요소 &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
-|**자식 요소**|[열 &#40; DTA &#41;의 name 요소](../../tools/dta/name-element-for-column-dta.md)|  
+|**부모 요소**|[Index 요소&#40;DTA&#41;](../../tools/dta/index-element-dta.md)|  
+|**자식 요소**|[Column의 Name 요소&#40;DTA&#41;](../../tools/dta/name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>예제  
  이 요소의 사용 예를 보려면 [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

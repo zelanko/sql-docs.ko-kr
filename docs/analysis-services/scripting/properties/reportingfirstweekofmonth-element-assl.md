@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReportingFirstWeekOfMonth Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReportingFirstWeekOfMonth Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReportingFirstWeekOfMonth
-helpviewer_keywords:
-- ReportingFirstWeekOfMonth element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReportingFirstWeekOfMonth
+helpviewer_keywords: ReportingFirstWeekOfMonth element
 ms.assetid: 29818404-ad45-403f-8fd9-3e3246d301ad
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6c771c7747dba88fd6cbf6e6a70e52a8d74b6280
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d0c249accd0f5586e0b112d0efe37e4e6a4fd8c7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reportingfirstweekofmonth-element-assl"></a>ReportingFirstWeekOfMonth 요소(ASSL)
   에 대 한 보고 월의 첫째 주를 정의 고 [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) 요소입니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

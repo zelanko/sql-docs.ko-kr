@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 Always On 가용성 그룹 확장 이벤트를 사용하도록 설정하여 가용성 그룹 문제를 해결할 때 근본적인 원인 진단에 도움을 줄 수도 있습니다. SQL Server의 각 인스턴스에서 다음 명령을 실행합니다. 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ GO
 
 다음 Transact-SQL 스크립트는 `dbm_login`이라는 로그인과 `dbm_user`라는 사용자를 만듭니다. 강력한 암호로 스크립트를 업데이트합니다. 모든 SQL Server 인스턴스에서 다음 명령을 실행하여 데이터베이스 미러링 끝점 사용자를 만듭니다.
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -97,7 +97,7 @@ Linux의 SQL Server 서비스는 인증서를 사용하여 미러링 끝점 간�
 
 다음 Transact-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음 인증서를 백업하고 개인 키로 파일을 보호합니다. 강력한 암호로 스크립트를 업데이트합니다. 기본 SQL Server 인스턴스에 연결하고 다음 Transact-SQL을 실행하여 인증서를 만듭니다.
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -128,7 +128,7 @@ chown mssql:mssql dbm_certificate.*
 
 다음 Transact-SQL 스크립트는 기본 SQL Server 복제본에 대해 만든 백업을 사용하여 마스터 키와 인증서를 만듭니다. 이 명령은 사용자에게 인증서에 액세스할 권한도 부여합니다. 강력한 암호로 스크립트를 업데이트합니다. 해독 암호는 이전 단계에서 .pvk 파일을 만들 때 사용한 암호와 동일합니다. 모든 보조 서버에서 다음 스크립트를 실행하여 인증서를 만듭니다.
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -141,16 +141,13 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>모든 복제본에서 데이터베이스 미러링 끝점 만들기
 
-데이터베이스 미러링 끝점은 TCP(전송 제어 프로토콜)를 사용하여 데이터베이스 미러링 세션에 참여하거나 가용성 복제본을 호스팅하는 서버 인스턴스 간에 메시지를 보내고 받습니다. 데이터베이스 미러링 끝점은 고유의 TCP 포트 번호에서 수신합니다. 
+데이터베이스 미러링 끝점은 TCP(전송 제어 프로토콜)를 사용하여 데이터베이스 미러링 세션에 참여하거나 가용성 복제본을 호스팅하는 서버 인스턴스 간에 메시지를 보내고 받습니다. 데이터베이스 미러링 끝점은 고유의 TCP 포트 번호에서 수신합니다. TCP 수신기 수신기 IP 주소가 필요합니다. 수신기 IP 주소는 IPv4 주소 여야 합니다. 사용할 수도 있습니다 `0.0.0.0`합니다. 
 
 다음 Transact-SQL은 가용성 그룹에 대해 수신하는 끝점 `Hadr_endpoint`를 만듭니다. 이 스크립트는 끝점을 시작하고 만든 사용자에게 연결 권한을 부여합니다. 스크립트를 실행하기 전에 `**< ... >**` 사이의 값을 바꿉니다.
 
->[!NOTE]
->이 릴리스의 경우 수신기 IP에 다른 IP 주소를 사용하지 마세요. 이 문제에 대한 수정을 작업하는 중이지만 현재 허용되는 값은 '0.0.0.0'뿐입니다.
+모든 SQL Server 인스턴스에서 사용자 환경에 대 한 다음 TRANSACT-SQL을 업데이트 합니다. 
 
-모든 SQL Server 인스턴스에서 환경에 대한 다음 Transact-SQL을 업데이트합니다. 
-
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->방화벽의 TCP 포트를 수신기 포트용으로 열어 두어야 합니다.
+>[!NOTE]
+>역할에 대 한 유일한 유효 값은 구성만 복제본을 호스팅할 한 노드에서 SQL Server Express Edition을 사용 하는 경우 `WITNESS`합니다. SQL Server Express Edition에서 다음 스크립트를 실행 합니다.
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->SQL Server 2017 릴리스의 경우 데이터베이스 미러링 끝점에 지원되는 인증 방법은 `CERTIFICATE`뿐입니다. `WINDOWS` 옵션은 향후 릴리스에서 사용할 수 있습니다.
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-자세한 내용은 [데이터베이스 미러링 끝점(SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)을 참조하세요.
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

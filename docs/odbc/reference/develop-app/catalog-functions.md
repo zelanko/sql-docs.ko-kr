@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - catalog functions [ODBC]
 - functions [ODBC], catalog functions
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: beb83e909364bba3a06cfbc17926447364db8ae1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 497676e6b87b6603d4bc6cb1615bb1b133c7acd4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalog-functions"></a>카탈로그 함수
 모든 데이터베이스는 데이터베이스에 데이터가 저장 되는 요약 된 구조가 있습니다. 예를 들어 판매 주문 간단한 데이터베이스에는 ID 열을 사용 하 여 테이블을 연결를 다음 그림에 표시 되는 구조는 있습니다.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 -   [카탈로그 데이터의 용도](../../../odbc/reference/develop-app/uses-of-catalog-data.md)  
   
 -   [ODBC의 카탈로그 함수](../../../odbc/reference/develop-app/catalog-functions-in-odbc.md)
-

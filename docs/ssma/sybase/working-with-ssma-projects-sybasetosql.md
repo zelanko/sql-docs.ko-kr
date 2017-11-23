@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d122e966ec77c7a0d7e8f70dd3145d81bdfbcef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 957f4148fc200fee98b29fed1f28a17bc8661d07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>SSMA 프로젝트 (SybaseToSQL) 작업
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure를 처음 만들면 SSMA 프로젝트. 프로젝트는로 마이그레이션하려는 ASE 데이터베이스에 대 한 메타 데이터가 포함 된 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure로의 대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure에 마이그레이션된 개체 및 데이터를 받을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 연결 정보 및 프로젝트 설정 합니다.  
@@ -105,7 +103,7 @@ ASE 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLUDE[
   
         메타 데이터를 저장 하면 몇 분 정도 걸릴 수 있습니다. 이 시점에서 메타 데이터를 저장 하지 않을 경우 모든 확인란을 선택 하지 마십시오.  
   
-    2.  클릭 하 고 **저장** 단추입니다.  
+    2.  클릭는 **저장** 단추입니다.  
   
         SSMA는 Sybase ASE 스키마를 구문 분석 하 고 프로젝트 파일에 메타 데이터를 저장 합니다.  
   
@@ -133,4 +131,3 @@ ASE 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLUDE[
 [SQL Server &#40;에 연결 SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
 [Azure SQL DB &#40;에 연결 SybaseToSQL &#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
-

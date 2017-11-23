@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c7fe8e5ad97a1955160bf2f8f953c85971f66b09
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculated-columns"></a>계산 열
   테이블 형식 모델에서 계산 된 열을 사용 하 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
@@ -88,4 +87,3 @@ ms.lasthandoff: 10/04/2017
  [계산](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
-

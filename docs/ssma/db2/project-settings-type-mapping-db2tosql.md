@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 267d3e30f61539da24ed22d54c4355945da21999
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b9bc26477c4b43e47588280e2cce74096b810c5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>프로젝트 설정 (형식 매핑) (DB2ToSQL)
 형식 매핑 페이지는 **프로젝트 설정** 대화 상자 SSMA DB2 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
@@ -67,7 +65,7 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
   
 |DB2 데이터 형식|기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식|  
 |-----------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
@@ -87,7 +85,7 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |integer|int|  
 |long|varchar(max)|  
 |긴 원시|varbinary(max)|  
-|긴 원시 [\*...8000]<sup>*</sup>|varbinary [*]|  
+|긴 원시 [\*... 8000]<sup>*</sup>|varbinary [*]|  
 |긴 원시 [8001..\*]<sup>*</sup>|varbinary(max)|  
 |국가별 문자|nvarchar(max)|  
 |다양 한 국가별 문자|nvarchar(max)|  
@@ -95,24 +93,24 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |다양 한 국가별 문자<sup>**</sup>|nvarchar(max)|  
 |다양 한 국가별 문자<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
-|signtype|smallint|  
+|Rowid|uniqueidentifier|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
 |timestamp|datetime2|  
 |현지 표준 시간대 포함 된 타임 스탬프|datetimeoffset|  
 |표준 시간대와 타임 스탬프|datetimeoffset|  
-|urowid|uniqueidentifier|  
+|Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xmltype|xml|  
+|Xmltype|xml|  
   
 <sup>*</sup>값 형식 매핑만 반환에 적용 됩니다.  
   
@@ -123,67 +121,67 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
   
 |DB2 데이터 형식|기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식|  
 |-----------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|다양 한 char [*...\*]|varchar [*]|  
-|char [*...\*]|char [*]|  
+|다양 한 char [*... \*]|varchar [*]|  
+|char [*... \*]|char [*]|  
 |character|char|  
-|다양 한 문자 [*...\*]|varchar [*]|  
-|문자 [*...\*]|char [*]|  
+|다양 한 문자 [*... \*]|varchar [*]|  
+|문자 [*... \*]|char [*]|  
 |Clob|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|dec [*...\*]|dec [*] [0]|  
-|dec [*...\*][\*..\*]|dec[*][\*]|  
+|dec [*... \*]|dec [*] [0]|  
+|dec [*... \*][\*.. \*]|dec[*][\*]|  
 |decimal|decimal [38] [0]|  
-|10 진수 [*...\*]|decimal [*] [0]|  
-|10 진수 [*...\*][\*..\*]|decimal [*] [\*]|  
+|10 진수 [*... \*]|decimal [*] [0]|  
+|10 진수 [*... \*][\*.. \*]|decimal [*] [\*]|  
 |배정밀도|float [53]|  
 |float|float [53]|  
-|float [*...53]|float [*]|  
-|float [54..*]|float [53]|  
+|float [*... 53]|float [*]|  
+|float [54.. *]|float [53]|  
 |int|int|  
 |integer|int|  
 |long|varchar(max)|  
 |긴 원시|varbinary(max)|  
-|긴 원시 [*...8000]|varbinary [*]|  
-|긴 원시 [8001..*]|varbinary(max)|  
+|긴 원시 [*... 8000]|varbinary [*]|  
+|긴 원시 [8001.. *]|varbinary(max)|  
 |long varchar|varchar(max)|  
-|긴 [*...8000]|varchar [*]|  
-|긴 [8001..*]|varchar(max)|  
+|긴 [*... 8000]|varchar [*]|  
+|긴 [8001.. *]|varchar(max)|  
 |국가별 문자|nchar|  
-|다양 한 national char [*...\*]|nvarchar [*]|  
-|national char [*...\*]|nchar [*]|  
+|다양 한 national char [*... \*]|nvarchar [*]|  
+|national char [*... \*]|nchar [*]|  
 |국가별 문자|nchar|  
-|다양 한 국가별 문자 [*...\*]|nvarchar [*]|  
-|국가별 문자 [*...\*]|nchar [*]|  
+|다양 한 국가별 문자 [*... \*]|nvarchar [*]|  
+|국가별 문자 [*... \*]|nchar [*]|  
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
-|숫자 [*...\*]|숫자 [*]|  
-|숫자 [*...\*][\*..\*]|숫자 [*] [\*]|  
+|숫자 [*... \*]|숫자 [*]|  
+|숫자 [*... \*][\*.. \*]|숫자 [*] [\*]|  
 |numeric|numeric|  
-|숫자 [*...\*]|숫자 [*]|  
-|숫자 [*...\*][\*..\*]|숫자 [*] [\*]|  
-|nvarchar2 [*...\*]|nvarchar [*]|  
-|원시 [*...\*]|varbinary [*]|  
+|숫자 [*... \*]|숫자 [*]|  
+|숫자 [*... \*][\*.. \*]|숫자 [*] [\*]|  
+|nvarchar2 [*... \*]|nvarchar [*]|  
+|원시 [*... \*]|varbinary [*]|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
+|Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |현지 표준 시간대 포함 된 타임 스탬프|datetimeoffset|  
-|현지 표준 시간대 포함 된 타임 스탬프 [*...\*]|datetimeoffset [*]|  
+|현지 표준 시간대 포함 된 타임 스탬프 [*... \*]|datetimeoffset [*]|  
 |표준 시간대와 타임 스탬프|datetimeoffset|  
-|타임 스탬프와 표준 시간대 [*...\*]|datetimeoffset [*]|  
-|타임 스탬프 [*...\*]|datetime2 [*]|  
+|타임 스탬프와 표준 시간대 [*... \*]|datetimeoffset [*]|  
+|타임 스탬프 [*... \*]|datetime2 [*]|  
 |Urowid|uniqueidentifier|  
-|urowid [*...\*]|uniqueidentifier|  
-|varchar [*...\*]|varchar [*]|  
-|varchar2 [*...\*]|varchar [*]|  
+|urowid [*... \*]|uniqueidentifier|  
+|varchar [*... \*]|varchar [*]|  
+|varchar2 [*... \*]|varchar [*]|  
 |Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>기본 지역 변수 형식 매핑  
@@ -198,82 +196,81 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
-|다양 한 char [*...8000]|varchar [*]|  
-|다양 한 char [8001..*]|varchar(max)|  
-|char [*...8000]|char [*]|  
-|char [8001..*]|varchar(max)|  
+|다양 한 char [*... 8000]|varchar [*]|  
+|다양 한 char [8001.. *]|varchar(max)|  
+|char [*... 8000]|char [*]|  
+|char [8001.. *]|varchar(max)|  
 |문자|char|  
-|다양 한 문자 [*...8000]|varchar [*]|  
-|다양 한 문자 [8001..*]|varchar(max)|  
-|문자 [*...8000]|char [*]|  
-|문자 [8001..*]|varchar(max)|  
+|다양 한 문자 [*... 8000]|varchar [*]|  
+|다양 한 문자 [8001.. *]|varchar(max)|  
+|문자 [*... 8000]|char [*]|  
+|문자 [8001.. *]|varchar(max)|  
 |Clob|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|dec [*...\*]|dec [*] [0]|  
-|dec [*...\*][\*..\*]|dec[*][\*]|  
+|dec [*... \*]|dec [*] [0]|  
+|dec [*... \*][\*.. \*]|dec[*][\*]|  
 |decimal|decimal [38] [0]|  
-|10 진수 [*...\*]|decimal [*] [0]|  
-|10 진수 [*...\*][\*..\*]|decimal [*] [\*]|  
+|10 진수 [*... \*]|decimal [*] [0]|  
+|10 진수 [*... \*][\*.. \*]|decimal [*] [\*]|  
 |배정밀도|float [53]|  
 |부동|float [53]|  
-|float [*...53]|float [*]|  
-|float [54..*]|float [53]|  
+|float [*... 53]|float [*]|  
+|float [54.. *]|float [53]|  
 |int|int|  
 |정수|int|  
-|정수 [*...\*]|숫자 [*] [0]|  
+|정수 [*... \*]|숫자 [*] [0]|  
 |Long|varchar(max)|  
 |긴 원시|varbinary(max)|  
-|긴 원시 [*...8000]|varbinary [*]|  
-|긴 원시 [8001..*]|varbinary(max)|  
+|긴 원시 [*... 8000]|varbinary [*]|  
+|긴 원시 [8001.. *]|varbinary(max)|  
 |국가별 문자|nchar|  
-|다양 한 national char [*...4000]|nvarchar [*]|  
-|다양 한 national char [4001..*]|nvarchar(max)|  
-|national char [*...4000]|nchar [*]|  
-|national char [4001..*]|nvarchar(max)|  
+|다양 한 national char [*... 4000]|nvarchar [*]|  
+|다양 한 national char [4001.. *]|nvarchar(max)|  
+|national char [*... 4000]|nchar [*]|  
+|national char [4001.. *]|nvarchar(max)|  
 |국가별 문자|nchar|  
-|국가별 문자 [*...4000]|nvarchar [*]|  
-|국가별 문자 [4001..*]|nvarchar(max)|  
-|다양 한 국가별 문자 [*...4000]|nvarchar [*]|  
-|다양 한 국가별 문자 [4001..*]|nvarchar(max)|  
+|국가별 문자 [*... 4000]|nvarchar [*]|  
+|국가별 문자 [4001.. *]|nvarchar(max)|  
+|다양 한 국가별 문자 [*... 4000]|nvarchar [*]|  
+|다양 한 국가별 문자 [4001.. *]|nvarchar(max)|  
 |Nchar|nchar|  
-|nchar [*...4000]|nchar [*]|  
-|nchar [4001..*]|nvarchar(max)|  
-|nchar 다양 한 [*...4000]|nvarchar [*]|  
-|nchar 다양 한 [4001..*]|nvarchar(max)|  
+|nchar [*... 4000]|nchar [*]|  
+|nchar [4001.. *]|nvarchar(max)|  
+|nchar 다양 한 [*... 4000]|nvarchar [*]|  
+|nchar 다양 한 [4001.. *]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |Number|float [53]|  
-|숫자 [*...\*]|숫자 [*]|  
-|숫자 [*...\*][\*..\*]|숫자 [*] [\*]|  
+|숫자 [*... \*]|숫자 [*]|  
+|숫자 [*... \*][\*.. \*]|숫자 [*] [\*]|  
 |숫자|숫자 [38] [0]|  
-|숫자 [*...\*]|숫자 [*]|  
-|숫자 [*...\*][\*..\*]|숫자 [*] [\*]|  
-|nvarchar2 [*...4000]|nvarchar [*]|  
-|nvarchar2 [4001..*]|nvarchar(max)|  
+|숫자 [*... \*]|숫자 [*]|  
+|숫자 [*... \*][\*.. \*]|숫자 [*] [\*]|  
+|nvarchar2 [*... 4000]|nvarchar [*]|  
+|nvarchar2 [4001.. *]|nvarchar(max)|  
 |pls_integer|int|  
-|원시 [*...8000]|varbinary [*]|  
-|원시 [8001..*]|varbinary(max)|  
+|원시 [*... 8000]|varbinary [*]|  
+|원시 [8001.. *]|varbinary(max)|  
 |Real|float [53]|  
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
-|문자열 [*...8000]|varchar [*]|  
-|문자열 [8001..*]|varchar(max)|  
+|문자열 [*... 8000]|varchar [*]|  
+|문자열 [8001.. *]|varchar(max)|  
 |timestamp|datetime2|  
 |현지 표준 시간대 포함 된 타임 스탬프|datetimeoffset|  
 |표준 시간대와 타임 스탬프|datetimeoffset|  
-|현지 표준 시간대 포함 된 타임 스탬프 [*...\*]|datetimeoffset [*]|  
-|타임 스탬프와 표준 시간대 [*...\*]|datetimeoffset [*]|  
-|타임 스탬프 [*...\*]|datetime2 [*]|  
+|현지 표준 시간대 포함 된 타임 스탬프 [*... \*]|datetimeoffset [*]|  
+|타임 스탬프와 표준 시간대 [*... \*]|datetimeoffset [*]|  
+|타임 스탬프 [*... \*]|datetime2 [*]|  
 |Urowid|uniqueidentifier|  
-|urowid [*...\*]|uniqueidentifier|  
-|varchar [*...8000]|varchar [*]|  
-|varchar [8001..*]|varchar(max)|  
-|varchar2 [*...8000]|varchar [*]|  
-|varchar2 [8001..*]|varcha(max)|  
+|urowid [*... \*]|uniqueidentifier|  
+|varchar [*... 8000]|varchar [*]|  
+|varchar [8001.. *]|varchar(max)|  
+|varchar2 [*... 8000]|varchar [*]|  
+|varchar2 [8001.. *]|varcha(max)|  
 |Xmltype|xml|  
   
 ## <a name="see-also"></a>관련 항목:  
 [사용자 인터페이스 참조 &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
-

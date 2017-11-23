@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c27c5db00165b0664e9d3d42fbfe104264cde147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6533ce1774dec4967c9d43ea27902281d5bf756
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>프로젝트 설정 (동기화) (SybaseToSQL)
 동기화 페이지는 **프로젝트 설정** 대화 상자 SSMA에 테이블 및 저장된 프로시저 같은 데이터베이스 개체를 로드 하는 방식을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.  
@@ -67,4 +65,3 @@ SSMA는 개체가 대상 데이터베이스에만 로컬이 아닌 경우 로컬
 선택 하는 경우 **Skip**, SSMA 새로 고침 작업을 수행 하지 것입니다.   
 기본 옵션 집합이 **데이터베이스에서 새로 고침**합니다.  
   
-

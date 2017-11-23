@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DefaultMember Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DefaultMember Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DefaultMember
-helpviewer_keywords:
-- DefaultMember element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DefaultMember
+helpviewer_keywords: DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ae17ef173b78ffecedb4efc01e3de4c75958c05
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 411fbf97001ee719e144edfdd6de685e984da021
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="defaultmember-element-assl"></a>DefaultMember 요소(ASSL)
   부모 요소의 기본 멤버를 식별하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
@@ -79,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

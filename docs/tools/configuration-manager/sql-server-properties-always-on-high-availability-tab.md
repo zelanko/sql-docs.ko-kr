@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1173814896d5510c221083a36249790207d02cfd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 70c8bfca11f0bb57f503d0aa323738753bd59004
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 속성(Always On 고가용성 탭)
   **구성 관리자에서** SQL Server 속성 **대화 상자의** Always On 고가용성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 탭을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 Always On 가용성 그룹을 사용하도록 설정해야 합니다.  
@@ -59,4 +57,3 @@ ms.lasthandoff: 08/02/2017
 >  Always On 가용성 그룹을 사용하지 않도록 설정한 후의 후속 작업과 가용성 그룹을 만들고 구성하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 온라인 설명서를 참조하세요.  
   
   
-

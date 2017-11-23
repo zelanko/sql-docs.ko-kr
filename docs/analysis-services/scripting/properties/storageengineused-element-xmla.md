@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- StorageEngineUsed Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: StorageEngineUsed Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83d79027913faff48098fb7e7d1daaa2fdf407ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 188c9261964839c055b75e2abb4c1e8fc4ec3633
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 요소(XMLA)
   현재 데이터베이스 유형에 대해 설명하는 읽기 전용 값을 포함합니다.  
@@ -101,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  부모에 해당 하는 요소 **StorageEngineUsed** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Database>합니다.  
   
   
-

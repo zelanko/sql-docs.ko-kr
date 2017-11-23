@@ -5,22 +5,20 @@ ms.date: 08/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ea715d618afdd48dc24b05753f2b5dd23477f76
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 652600de9d777f13332509fcaae3985daf9c26fc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>관리 도구 명령줄 옵션(Distributed Replay Utility)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인 **DReplay.exe**는 Distributed Replay Controller와 통신하기 위한 명령줄 도구입니다. 이 관리 도구를 사용하여 컨트롤러에서 작업을 시작, 모니터링 및 취소할 수 있습니다.  
@@ -64,13 +62,13 @@ Usage:
   
  명령 인수 및 예가 포함된 자세한 구문 정보는 다음 항목을 참조하십시오.  
   
--   [전처리 옵션 &#40; Distributed Replay Administration Tool &#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [전처리 옵션&#40;Distributed Replay Utility Administration Tool&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
   
--   [재생 옵션 &#40; Distributed Replay Administration Tool &#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
   
--   [상태 옵션 &#40; Distributed Replay Administration Tool &#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [상태 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
   
--   [취소 옵션 &#40; Distributed Replay Administration Tool &#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [취소 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
   
  RPC는 언어 이벤트가 아닌 RPC로 재생됩니다.  
   
@@ -83,4 +81,3 @@ Usage:
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)  
   
   
-

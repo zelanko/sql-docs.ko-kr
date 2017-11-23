@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- KeyUniquenessGuarantee Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: KeyUniquenessGuarantee Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- KeyUniquenessGuarantee
-helpviewer_keywords:
-- KeyUniquenessGuarantee element
+applies_to: SQL Server 2016 Preview
+f1_keywords: KeyUniquenessGuarantee
+helpviewer_keywords: KeyUniquenessGuarantee element
 ms.assetid: 6e0cf107-dd02-4bbd-94f5-c26d96438d4b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ebeb77c0b03dadc5ab08e69eefed438d3467b910
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5dfd8f3b8efe7650bfb32f103794b80ba1f7350b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keyuniquenessguarantee-element-assl"></a>KeyUniquenessGuarantee 요소(ASSL)
   특성 키와 해당 이름 간의 관계와 관련 특성에 대한 관계가 유효하도록 보장되는지 여부를 나타냅니다.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

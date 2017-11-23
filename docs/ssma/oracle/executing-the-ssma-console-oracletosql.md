@@ -5,28 +5,25 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Oracle SSMA Console
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 16f646303766e8e249e2bd76a336bc5c3ee59049
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>SSMA 콘솔 (OracleToSQL)를 실행합니다.
 Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강력한 집합 제공 합니다. 콘솔 응용 프로그램은이 섹션의 열거형으로 특정 표준 스크립트 파일 명령을 사용합니다.  
@@ -761,4 +758,3 @@ convert sql 문
   
 -   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md)합니다.  
   
-

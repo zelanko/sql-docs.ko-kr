@@ -18,17 +18,16 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services 개체 처리
   처리를 수행하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 유형인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, 큐브, 차원, 측정값 그룹, 파티션, 데이터 마이닝 구조 및 모델이 영향을 받습니다. 각 개체에 대해 개체 처리 수준을 지정하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 최적 처리 수준을 선택하도록 기본값 처리 옵션을 지정할 수 있습니다. 각 개체의 다른 처리 수준에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
@@ -108,4 +107,3 @@ ms.lasthandoff: 09/01/2017
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

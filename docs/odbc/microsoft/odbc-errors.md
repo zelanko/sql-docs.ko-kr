@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- errors (ODBC desktop database drivers)
+helpviewer_keywords: errors (ODBC desktop database drivers)
 ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8081f2987d54b3119f36e72c69395b9c83e90656
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 810742596134c9ffd630ba2060d60aa9f15e50d4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-errors"></a>ODBC 오류
 오류가 발생 하면 Microsoft ODBC 데스크톱 데이터베이스 드라이버는 원시 오류 번호, SQLSTATE (ODBC 오류 코드) 및 오류 메시지를 반환 합니다.  
@@ -39,4 +36,3 @@ ms.lasthandoff: 09/09/2017
 -   [오류 메시지](../../odbc/microsoft/odbc-jet-error-messages.md)  
   
 -   [산술 오류](../../odbc/microsoft/arithmetic-errors.md)
-

@@ -21,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], modifying
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ee11262f468b4163ec90927964798a00a48e728c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a2e730d9e6f183e5311f29ffe87f1c46a73468a4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customize-mining-models-and-structure"></a>마이닝 모델 및 구조 사용자 지정
   비즈니스 요구를 충족하는 알고리즘을 선택한 후 다음과 같은 방법으로 마이닝 모델을 사용자 지정하여 결과를 잠재적으로 향상시킬 수 있습니다.  
@@ -146,4 +145,3 @@ ms.lasthandoff: 09/01/2017
  [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
   
-

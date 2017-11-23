@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>단원 1-2-도구 옵션 및 레이아웃 설정
 시작할 때 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스)에 표시되는 사항, 사용되는 글꼴 및 인터페이스 사용법을 가장 잘 지원하는 기타 도구 기능을 구성하는 옵션을 설정할 수 있습니다. 이 페이지의 연습을 통해 사용자가 설정할 수 있는 옵션과 해당 옵션을 설정하는 방법에 익숙해질 수 있습니다.  
@@ -54,4 +50,3 @@ ms.lasthandoff: 10/24/2017
   
   
   
-

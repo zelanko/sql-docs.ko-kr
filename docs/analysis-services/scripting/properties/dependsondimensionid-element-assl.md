@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DependsOnDimensionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DependsOnDimensionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DependsOnDimensionID
-helpviewer_keywords:
-- DependsOnDimensionID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DependsOnDimensionID
+helpviewer_keywords: DependsOnDimensionID element
 ms.assetid: 66ec20dd-b475-4895-a92c-7ac0e7e1c675
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 642a9391256bc863bcecc9a6ab3a378d9a3fa7ff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ace71b2fe51a5699f18a726576984ceb9e49c127
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dependsondimensionid-element-assl"></a>DependsOnDimensionID 요소(ASSL)
   부모 차원이 종속되는 다른 차원의 ID(식별자)를 포함합니다.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

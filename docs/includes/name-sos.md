@@ -1,0 +1,1 @@
+<Token>Microsoft SQL 작업 Studio (미리 보기)</Token>

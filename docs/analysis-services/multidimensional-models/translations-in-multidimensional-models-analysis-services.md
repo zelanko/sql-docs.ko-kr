@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
+f1_keywords: sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97c2f9950f050c1e737eebfd0f684ad8cd1e5850
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87f826e36a3fb58cfb1adba2b30a1375e3b84e71
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>다차원 모델의 번역(Analysis Services)
   번역할 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 개체에 적절한 디자이너를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 번역을 정의할 수 있습니다. 번역을 정의하면 해당 **개체와 연결된** 개체의 속성에 대해 지정한 언어로 지정한 명시적 리터럴 값을 가진 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Translation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 생성됩니다.  
@@ -134,4 +132,3 @@ ms.lasthandoff: 09/01/2017
  [언어 및 데이터 정렬 &#40; Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   
-

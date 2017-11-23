@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -40,17 +39,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b399910612848033ea927aa8c4d3adc86d048ae0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cd7d907f2c78125a477737299f6aaee28b5ccc7f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>액세스 인벤토리 스키마 (AccessToSQL)
 다음 섹션에서는 액세스 스키마를 내보낼 때 SSMA가 만든 테이블에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -105,7 +103,7 @@ ms.lasthandoff: 08/02/2017
 |**IsNullable**|**bit**|열 null 값이 있으면 수를 지정 합니다. 값이 1 이면 열에 null 값 포함 될 수 있습니다. 값이 0 이면 열 null 값을 포함할 수 없습니다. Note null 값을 방지 하려면에 유효성 검사 규칙 데도 사용할 수 있습니다.|  
 |**DataType**|**nvarchar(4000)**|열에서 데이터 액세스와 같은 유형의 **텍스트** 또는 **긴**합니다.|  
 |**IsAutoIncrement**|**bit**|해당 열 정수 값이 자동으로 증가 하는 경우를 지정 합니다. 값이 1 이면 정수가 자동으로 증가 됩니다.|  
-|**서 수**|**smallint**|0부터 시작 하는 테이블에 있는 열의 순서입니다.|  
+|**Ordinal**|**smallint**|0부터 시작 하는 테이블에 있는 열의 순서입니다.|  
 |**DefaultValue**|**nvarchar(4000)**|열에 대 한 기본값입니다.|  
 |**유효성 검사 규칙**|**nvarchar(4000)**|추가 하거나 업데이트할 열에서 데이터 유효성을 검사 하는 데 사용 되는 규칙입니다.|  
   
@@ -189,6 +187,5 @@ ms.lasthandoff: 08/02/2017
 |**모듈 이름**|**nvarchar(4000)**|모듈의 이름입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
-[액세스 인벤토리 내보내기](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+[Access 인벤토리 내보내기](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   
-

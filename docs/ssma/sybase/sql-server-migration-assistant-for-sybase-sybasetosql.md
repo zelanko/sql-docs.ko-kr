@@ -5,25 +5,23 @@ ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: fc82aa26daa99ef43d009606e2af7031d71f83c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
-ms.openlocfilehash: 7ca9cad19b0a6e9eadb4c369eb6405298a31ac6b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/15/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Sybase (SybaseToSQL)에 대 한 SQL Server Migration Assistant
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA)에 대 한 Sybase 적응형 Server Enterprise (ASE)는 ASE 데이터베이스 마이그레이션에 대 한 도구 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 또는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 또는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 또는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 또는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 또는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 Windows 및 Linux (미리 보기)에서 또는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL DB입니다. SSMA for Sybase ASE 데이터베이스 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 개체에서 이러한 개체를 만들고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL ASE를에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 합니다.  
@@ -42,4 +40,3 @@ SSMA for Sybase 소개 하 고 ASE 데이터베이스 마이그레이션에 대 
 |[SSMA Sybase 콘솔에 대 한 작업](http://msdn.microsoft.com/c465e477-c479-4aa8-918d-58bf30884789)|SSMA 콘솔 응용 프로그램에 대 한 설명서를 포함합니다.|  
 |[SSMA Sybase 지원에 대 한 가져오기](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|추가 도움말에 대 한 정보를 제공 합니다.|  
   
-

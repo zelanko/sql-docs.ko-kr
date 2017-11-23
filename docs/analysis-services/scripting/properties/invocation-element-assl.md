@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Invocation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Invocation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Invocation
-helpviewer_keywords:
-- Invocation element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Invocation
+helpviewer_keywords: Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8e83bb6a69802c2a4aa39108712661d6e7f1c692
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d48dedecabb385ebacd752fff75d6ccec2e1489c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="invocation-element-assl"></a>Invocation 요소(ASSL)
   지정 방법을 [동작](../../../analysis-services/scripting/objects/action-element-assl.md) 를 호출 해야 합니다.  
@@ -80,7 +74,6 @@ ms.lasthandoff: 09/01/2017
  에 대 한 허용된 된 값에 해당 하는 열거형 **호출** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- HierarchyUniqueNameStyle Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: HierarchyUniqueNameStyle Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- HierarchyUniqueNameStyle element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: HierarchyUniqueNameStyle element
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 000764cd0b7670bebe54996f27257a10d3d2cdd1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e19b3e412b7330d6ef735bf269b72080e031b024
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchyuniquenamestyle-element-assl"></a>HierarchyUniqueNameStyle 요소(ASSL)
   얼마나 고유한 이름을 결정에 포함 된 계층에 대해 생성 되는 [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)합니다.  
@@ -80,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

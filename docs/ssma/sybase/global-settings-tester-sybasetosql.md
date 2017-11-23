@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a9ebce7d1345b5d9c5a821347ee53ce89f34d07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21178ca7326678504244658192d7395bab79a9ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-tester-sybasetosql"></a>전역 설정 (테스터) (SybaseToSQL)
 테스터 페이지를 사용 하 여 **전역 설정** SSMA 테스터에 대 한 설정을 지정 하려면 대화 상자.  
@@ -71,7 +69,6 @@ ms.lasthandoff: 08/02/2017
   
 2.  아니요  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [테스트 사례 준비 &#40; 마치는 중 SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   
-

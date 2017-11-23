@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- OrderBy Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: OrderBy Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- OrderBy
-helpviewer_keywords:
-- OrderBy element
+applies_to: SQL Server 2016 Preview
+f1_keywords: OrderBy
+helpviewer_keywords: OrderBy element
 ms.assetid: d7a0564b-430e-44eb-913a-fe1f98917d0f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8fcd65d4c4015a79435404bd9c3fc74e6e04139d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 35479ebb898200c9082a7e08369a3ae5d4c57ac3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="orderby-element-assl"></a>OrderBy 요소(ASSL)
   특성에 포함된 멤버의 정렬 방식을 설명합니다.  
@@ -82,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-
