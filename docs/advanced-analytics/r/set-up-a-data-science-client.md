@@ -1,59 +1,128 @@
 ---
-title: "데이터 과학 클라이언트 설정 | Microsoft 문서"
+title: "SQL Server와 함께 사용 하기 위해 데이터 과학 클라이언트 설정 | Microsoft Docs"
 ms.custom: 
-ms.date: 02/10/2017
+ms.date: 10/31/2017
 ms.prod: r-server
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 791a27f78442cd1ca191a042238769368c7da228
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0661b2fcf9b23d3c81cb0d80f0424d87dbde7ef8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-up--a-data-science-client"></a>데이터 과학 클라이언트 설정
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] R Services(In-Database) **를 설치하여**인스턴스를 구성한 후에는 원격 실행 및 배포를 위해 서버에 연결할 수 있는 R 개발 환경을 설정하는 것이 좋습니다. 
+# <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>SQL Server와 함께 사용 하기 위해 데이터 과학 클라이언트 설정
+
+인스턴스를 구성 하 고 나면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기계 학습을 지원 하려면 원격 실행 및 배포에 대 한 서버에 연결할 수 있는 개발 환경을 설정 해야 합니다.
+
+이 문서에서는 SQL Server에서 R 코드를 실행 하는 무료 Visual Studio Community 버전의 구성을 비롯 한 몇 가지 일반적인 클라이언트 시나리오를 설명 합니다.
+
+## <a name="install-r-libraries-on-the-client"></a>클라이언트에서 R 라이브러리를 설치 합니다.
+
+클라이언트 환경에는 SQL Server에서 R의 분산 실행을 지원하는 추가 RevoScaleR 패키지 및 Microsoft R Open이 포함되어 있어야 합니다. R의 표준 배포에 원격 계산 컨텍스트 또는 R 작업의 병렬 실행을 지 원하는 패키지를 사용할 필요가 없습니다.
+
+이러한 라이브러리를 가져오려면 다음 중 하나를 설치 합니다.
   
-  이 환경에는 ScaleR 패키지가 포함되어야 하고 선택적으로 클라이언트 개발 환경이 포함될 수 있습니다.
-  
- ## <a name="where-to-get-scaler"></a>ScaleR을 가져올 위치 
-  
-  클라이언트 환경에는 SQL Server에서 R의 분산 실행을 지원하는 추가 RevoScaleR 패키지 및 Microsoft R Open이 포함되어 있어야 합니다.  여러 가지 방법으로 이러한 패키지를 설치할 수 있습니다.
-  
-+ [Microsoft R Client](http://aka.ms/rclient/download)를 설치합니다. 추가 설치 지침은 [Get Started with Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started)(Microsoft R Client 시작)를 참조하세요.
-+ Microsoft R Server를 설치합니다. Microsoft R Server는 SQL Server 설치 프로그램에서 가져오거나 새 독립 실행형 Windows Installer를 사용하여 가져올 수 있습니다. 자세한 내용은 [독립 실행형 R 서버 만들기](../../advanced-analytics/r-services/create-a-standalone-r-server.md) 및 [Introduction to R Server](https://msdn.microsoft.com/microsoft-r/rserver)(R Server 소개)를 참조하세요.
++ [Microsoft R Client](http://aka.ms/rclient/download)
 
-R Server 라이선싱 계약이 있는 경우 Microsoft R Server(독립 실행형)를 사용하여 R 처리 스레드 및 메모리 내 데이터에 대한 제한을 피하는 것이 좋습니다.
++ Microsoft R Server (SQL Server 2016) 용
 
+    - SQL Server 설치 프로그램에서 설치 하려면 참조 [독립 실행형 R Server 만들기](../../advanced-analytics/r/create-a-standalone-r-server.md)
 
-## <a name="how-to-set-up-the-r-development-environment"></a>R 개발 환경을 설치하는 방법
+    - 별도 Windows 기반 설치 관리자를 사용 하려면 참조 [Windows 용 컴퓨터 학습 서버 설치](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
-Windows와 호환되는 선택한 R 개발 환경을 사용할 수 있습니다. 
++ (SQL Server 2017) 용 서버를 학습 하는 컴퓨터
 
-+ R Tools for Visual Studio를 Microsoft R Open과 통합할 수 있습니다.
-+ RStudio는 많이 사용되는 무료 환경입니다.  
+    - SQL Server 설치 프로그램에서 설치 하려면 참조 [독립 실행형 R Server 만들기](../../advanced-analytics/r/create-a-standalone-r-server.md)
 
-설치한 후 Microsoft R Open 라이브러리를 기본적으로 사용하도록 환경을 다시 구성해야 합니다. 그렇지 않으면 ScaleR 라이브러리에 액세스할 수 없습니다. 자세한 내용은 [Getting Started with Microsoft R Client](http://msdn.microsoft.com/microsoft-r/r-client-get-started)(Microsoft R Client 시작)를 참조하세요.
+    - 별도 Windows 기반 설치 관리자를 사용 하려면 참조 [Windows 용 R 서버 9.1 설치](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+
+## <a name="install-a-development-environment"></a>개발 환경 설치
+
+기본 R 개발 환경이 없는 경우 다음 중 하나를 권장 합니다.
+
++ R Tools for Visual Studio
+
+    Visual Studio 2015와 함께 작동 합니다.
+
+    설치 정보를 참조 하십시오. [Visual Studio에 대 한 R 도구를 설치 하는 방법을](https://docs.microsoft.com/visualstudio/rtvs/installation)합니다.
  
-## <a name="more-resources"></a>추가 리소스
-  
- R 코드 원격 실행을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 방법을 확인할 수 있는 자세한 연습은 [데이터 과학 심층 분석: RevoScaleR 패키지 사용](../../advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md)자습서를 참조하세요.  
+    RTVS Microsoft R 클라이언트 라이브러리를 사용 하도록 구성 하려면 참조 [Microsoft R Client에 대 한](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
+
++ Visual Studio 2017
+
+    무료 Community Edition도 R, Python 및 F #에 대 한 프로젝트 템플릿을 설치 하는 데이터 과학 작업을 포함 합니다.
+
+    Visual Studio 다운로드 [이 사이트](https://www.visualstudio.com/vs/)합니다. 
+
++ RStudio
+
+    RStudio를 사용하려면 RevoScaleR 라이브러리를 사용하기 위한 몇 가지 추가 단계가 필요합니다.
+
+    - Microsoft R Client 필요한 패키지 및 라이브러리를 설치 합니다.
+    - Microsoft R 런타임을 사용 하기 위해 R 경로 업데이트 합니다.
+
+    자세한 내용은 참조 [R 클라이언트-IDE 구성](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client#step-2-configure-your-ide)합니다.
+
+## <a name="configure-your-ide"></a>IDE 구성
+
++ R Tools for Visual Studio
+
+    참조 [이 사이트](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r) R 도구를 사용 하 여 Visual Studio에 대 한 프로젝트 빌드 및 R을 디버그 하는 방법의 몇 가지 예제입니다. 
+
++ Visual Studio 2017
+
+    Microsoft R 클라이언트나 R Server를 설치 하는 경우 **전에** Visual Studio를 설치, R 서버 라이브러리를 자동으로 감지 하 고 라이브러리 경로에 사용 합니다. RevoScaleR 라이브러리를 설치 하지 않은에서 **R 도구** 메뉴 선택 **R 클라이언트 설치**합니다.
+
+## <a name="run-r-in-sql-server"></a>SQL Server에서 R 실행
+
+이 예제에서는 설치 된 데이터 과학 작업의 Visual Studio 2017 Community Edition을 사용 합니다.
+
+1. **파일** 메뉴 선택 **새로** 선택한 후 **프로젝트**합니다.
+
+2. -손 창에 미리 설치 된 템플릿 목록이 포함 되어 있습니다. 클릭 **R**를 선택 하 고 **R 프로젝트**합니다. 에 **이름** 상자에 입력 합니다 `dbtest` 클릭 **확인**합니다.
+
+3. Visual Studio 새 프로젝트 폴더와 기본 스크립트 파일을 만듭니다 `Script.R`합니다. 
+
+4. 형식 `.libPaths()` 스크립트의 첫 번째 줄에 파일을 선택한 다음 CTRL + ENTER를 누릅니다.
+
+5. 에 현재 R 라이브러리 경로 표시 해야는 **R 대화형** 창. 
+
+6. 클릭는 **R 도구** 메뉴와 선택 **Windows** 작업 영역에 표시할 수 있는 다른 R 관련 창의 목록을 볼 수 있습니다.
  
+    + CTRL + 3 현재 라이브러리의 패키지에서 도움말을 봅니다.
+    + R 변수 참조는 **변수 탐색기**, CTRL + 8입니다.
 
-SQL Server와 함께 Microsoft R Client 및 ScaleR 패키지 사용을 시작하려면 [ScaleR Getting Started](https://msdn.microsoft.com/microsoft-r/scaler-getting-started#)(ScaleR 시작)를 참조하세요.  
-  
-## <a name="see-also"></a>관련 항목:  
- [SQL Server R Services&#40;In-Database&#41; 설치](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)  
-  
-  
+7. SQL Server 인스턴스에 대 한 연결 문자열을 만들고 SQL Server 데이터 원본 개체를 만들 RxInSqlServer 생성자에서 연결 문자열을 사용 합니다. 
 
+    ```r
+    connStr <- "Driver=SQL Server;Server=MyServer;Database=MyTestDB;Uid=;Pwd="
+    sqlShareDir <- paste("C:\\AllShare\\", Sys.getenv("USERNAME"), sep = "")
+    sqlWait <- TRUE
+    sqlConsoleOutput <- FALSE
+    cc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
+    sampleDataQuery <- "SELECT TOP 100 * from [dbo].[MyTestTable]"
+    inDataSource <- RxSqlServerData(sqlQuery = sampleDataQuery, connectionString = connStr, rowsPerRead = 500)
+    ```
+
+    > [!TIP]
+    > 일괄 처리를 실행 하려면 실행 하 고 CTRL + ENTER를 눌러 줄을 선택 합니다.
+
+8. 계산 컨텍스트는 서버를 설정 하 고 데이터에 몇 가지 간단한 R 코드를 실행 하십시오.
+
+    ```r
+    rxSetComputeContext(cc)
+    rxGetVarInfo(data = inDataSource)
+    ```
+
+    결과에 반환 되는 **R 대화형** 창.
+    
+    코드는 SQL Server 인스턴스에서 실행 되 고 있음을 사용자가 직접 보장 하려는 경우 프로파일러 추적을 만드는 데 사용할 수 있습니다.

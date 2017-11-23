@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
+ms.openlocfilehash: 950a02b20e2a99565c235e6be477827a580b142f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c5c7e602ac1beedb028072b4c82578e9948af43d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 가용성 그룹
 
@@ -107,4 +106,3 @@ Use `required_synchronized_secondaries_to_commit`with `CREATE AVAILABILITY GROUP
 [SLES에 가용성 그룹 클러스터 리소스를 추가 합니다.](sql-server-linux-availability-group-cluster-sles.md)
 
 [Ubuntu 가용성 그룹 클러스터 리소스를 추가 합니다.](sql-server-linux-availability-group-cluster-ubuntu.md)
-

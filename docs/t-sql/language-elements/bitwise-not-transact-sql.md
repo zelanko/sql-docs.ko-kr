@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,24 +17,22 @@ f1_keywords:
 - NOT
 - ~
 - Bitwise NOT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - NOT keyword
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6525306bfae5112e1d49a191c52cc0125dfe2e96
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cfe0944a896548bfd0e0e0612b832ac91417016
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="-bitwise-not-transact-sql"></a>~(비트 NOT)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/01/2017
  **비트** 입력된 값이 **비트**합니다.  
   
 ## <a name="remarks"></a>주의  
-  **~**  비트 논리 NOT을 수행 하는 비트 or 연산자에 대 한는 *식*, 각 비트를 차례로 합니다. 경우 *식* 값 0을 결과 집합의 비트가 1로 설정 됩니다; 값 0 결과에서 비트는 해제 하는 그렇지 않은 경우. 즉, 1은 0으로 변경되고 0은 1로 변경됩니다.  
+ **~**  비트 논리 NOT을 수행 하는 비트 or 연산자에 대 한는 *식*, 각 비트를 차례로 합니다. 경우 *식* 값 0을 결과 집합의 비트가 1로 설정 됩니다; 값 0 결과에서 비트는 해제 하는 그렇지 않은 경우. 즉, 1은 0으로 변경되고 0은 1로 변경됩니다.  
   
 > [!IMPORTANT]  
 >  비트 연산을 수행할 때는 연산에 사용되는 식의 저장 길이가 중요합니다. 값을 저장할 때는 동일한 바이트 수를 사용하는 것이 좋습니다. 예를 들어 5로 10 진수 값을 저장 한 **tinyint**, **smallint**, 또는 **int** 함께 바이트 수가 다르게 저장 된 값이 생성: **tinyint** 1 바이트,를 사용 하 여 데이터를 저장 합니다. **smallint** 2 바이트를 사용 하 여 데이터를 저장 하 고 **int** 4 바이트를 사용 하 여 데이터를 저장 합니다. 따라서에 비트 연산을 수행는 **int** 10 진수 값에서 직접 이진 또는 16 진수 변환을 사용 하 여 다른 결과 산출 특히 경우는  **~**  드 ( 비트 NOT) 연산자를 사용 합니다. 비트 NOT 연산은 길이가 짧은 변수에서 발생할 수 있습니다. 이 경우 길이가 짧은 변수를 길이가 긴 데이터 형식 변수로 변환할 때 상위 8비트는 예상된 값으로 설정되지 않을 수 있습니다. 작은 데이터 형식 변수를 큰 데이터 형식 변수로 변환한 다음 그 결과에서 NOT 연산을 수행하는 것이 좋습니다.  
@@ -122,6 +119,5 @@ FROM bitwise;
  [비트 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-
 
 

@@ -8,22 +8,20 @@ ms.service:
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4e41033ffb30801fd388f7816c34c8a7751daa9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>1 단계: Node.js 개발을 위한 개발 환경 구성
 Node.js 드라이버를 사용 하 여 SQL Server에 대 한 응용 프로그램을 개발 하기 위해 필수 구성 요소 개발 환경을 구성 해야 합니다.  가장 일반적인 방법은 번거로운 모듈을 설치 하는 노드 패키지 관리자 (npm)를 사용 하는 것에 직접 번거로운 모듈을 다운로드할 수 있습니다 하지만 [Github](https://github.com/pekim/tedious) 하려는 경우.  
@@ -107,4 +105,3 @@ c. 를 다운로드 한 후 실행 dmg Node.js를 설치 하려면
 > npm install tedious  
 ```  
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- errors [ADO], types
+helpviewer_keywords: errors [ADO], types
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ab5cab79bcf5bb1441e066e27e0edf9552cb10ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 395afb47b153eb0050473963ff7866aa2852e975
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="appendix-b-ado-error-codes"></a>부록 b: ADO 오류 코드
 특정 오류 메시지에 대 한 자세한 내용은 다음 항목을 참조 하십시오.
@@ -40,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 
 ## <a name="see-also"></a>관련 항목:
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md) [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) [ADO 열거형 상수의](../../../ado/reference/ado-api/ado-enumerated-constants.md) [ADO 이벤트](../../../ado/reference/ado-api/ado-events.md) [ADO 메서드](../../../ado/reference/ado-api/ado-methods.md) [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md) [ADO 개체 및 인터페이스](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [ADO 속성](../../../ado/reference/ado-api/ado-properties.md)
-

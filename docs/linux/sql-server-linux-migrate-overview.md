@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: 
 ms.workload: Inactive
+ms.openlocfilehash: dc3182262a297df176e8c8ca28b2e8273cb809ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Linux에서 SQL Server로 데이터베이스와 구조적된 데이터 마이그레이션 
 
@@ -53,4 +52,3 @@ SQL Server 2017 linux를 다른 데이터베이스 시스템에서 데이터베�
 
 - [Bcp 사용 하 여 대량 복사 데이터](sql-server-linux-migrate-bcp.md)
 - [추출, 변환 및 SSIS와 Linux에서 SQL Server에 대 한 데이터를 로드 합니다.](sql-server-linux-migrate-ssis.md) 
-

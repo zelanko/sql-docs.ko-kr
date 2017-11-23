@@ -8,8 +8,7 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 716c0fdaa701865e8d35154cd19068051e0ab017
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>외부 TABLE AS SELECT (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -134,7 +132,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 -   로드 실패 하지 못했습니다 50% 행 200 개의 행을 로드 하려고 시도한 후 지정된 된 30% 제한 보다 큰 합니다.  
   
  와 *common_table_expression*  
- CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  선택 \<select_criteria > SELECT 문에서 결과 함께 새 테이블을 채웁니다. *select_criteria* 데이터를 새 테이블로 복사를 결정 하는 SELECT 문의 본문입니다. SELECT 문에 대 한 정보를 참조 하십시오. [select&#40; Transact SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -186,7 +184,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   파티션 외부 이동  
   
- **적용 대상:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]외부 테이블을 만들기 위한 필수 구성 요소로 기기 관리자 hadoop 연결을 구성 해야 합니다.   자세한 내용은 다운로드할 수 있는 APS 설명서에서 외부 데이터 (분석 플랫폼 시스템)에 대 한 연결을 구성을 참조 [여기](http://www.microsoft.com/download/details.aspx?id=48241)합니다.  
+ **적용 대상:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]외부 테이블을 만들기 위한 필수 구성 요소로 기기 관리자 hadoop 연결을 구성 해야 합니다. 자세한 내용은 다운로드할 수 있는 APS 설명서에서 외부 데이터 (분석 플랫폼 시스템)에 대 한 연결을 구성을 참조 [여기](http://www.microsoft.com/download/details.aspx?id=48241)합니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  외부 테이블 데이터가 있는 데이터베이스 외부에 백업 및 복원 작업은 데이터베이스에 저장 된 데이터 에서만 작동 이후 합니다. 즉, 메타 데이터를 백업 및 복원 됩니다.  
@@ -266,6 +264,5 @@ OPTION ( HASH JOIN );
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
 
 

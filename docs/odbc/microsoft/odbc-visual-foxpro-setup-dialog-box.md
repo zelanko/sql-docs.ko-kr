@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5ca3aa931dc19199913a5f1499c87e89348fa7b7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 22208bd706e7b8966f54a501e9580b35d99a0555
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 설정 대화 상자
 **ODBC Visual FoxPro 설정** 대화 상자를 사용 하면 추가 하거나 Visual FoxPro 데이터 원본을 변경할 수 있습니다.  
@@ -85,4 +83,3 @@ DELETED=YES"
   
  **백그라운드에서 데이터를 인출 합니다.**  
  (점진적 인출) 백그라운드에서 인출 되는 레코드 또는 응용 프로그램 결과 집합의 모든 레코드 인출 될 때까지 기다립니다 있는지 여부를 결정 합니다.
-

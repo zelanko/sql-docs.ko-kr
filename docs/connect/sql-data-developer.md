@@ -8,22 +8,20 @@ ms.service:
 ms.component: connect
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- tools-ssma
+ms.technology: tools-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 10c5b6f36ac8c9c4e60e974ad7f3f25a46e9d02e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b68e218e549ee6bccc716d6f3430774065f9390
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 솔루션을 만드는 데이터 중심 웹 서버, 엔터프라이즈 서버 및 클라우드 데스크톱 및 모바일 장치에서 Microsoft SQL 데이터 플랫폼을 사용 합니다.  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/27/2017
 
 
  
-

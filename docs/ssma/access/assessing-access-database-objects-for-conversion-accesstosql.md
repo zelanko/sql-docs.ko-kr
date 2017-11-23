@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4930467d9753005a0f11faaa4397d7ae455bd5eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61e0ad607f242d6d96f81326621f46df9602c023
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>데이터베이스 개체에 액세스 (AccessToSQL) 변환에 대 한 평가
 개체를 로드 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure 결정 해야 얼마나 또는 마이그레이션 성공적으로 수행 됩니다, 하며 변환 시간 걸릴 수 있습니다. SSMA를 성공적으로 변환 된 개체의 비율을 표시 하는 평가 보고서를 만들 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 마이그레이션을 수행 하기 위한 예상 하는 SQL Azure 구문 및 시간입니다. 또한 SSMA 변환 실패를 발생 시킨 특정 문제를 볼 수 있습니다.  
@@ -66,9 +64,8 @@ SSMA를 선택한 액세스 데이터베이스 개체를 변환 평가 보고서
 평가 보고서를 다시 실행 하거나 스키마를 변환 하기 전에 오류를 수정 해야 합니다. 오류를 찾으려면 클릭는 **오류** 메시지 창 단추를 선택한 다음 오류가 발생 하는 개체의 목록을 볼 수 있는 각 오류를 확장 합니다. 메시지 창에서 개체를 선택 하는 경우 모든 오류와 해당 개체에 대 한 경고 세부 정보 창에 나타납니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[Access 데이터베이스 개체를 변환합니다.](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[Access 데이터베이스 개체 변환](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

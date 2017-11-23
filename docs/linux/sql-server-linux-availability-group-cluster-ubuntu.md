@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
+ms.openlocfilehash: cc6eee565499d696c4f634d6eedc562547bc8253
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7aa90eb3fd0a0ea66ea4b4fa09bd17d3e6887d7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu 클러스터와 가용성 그룹 리소스 구성
 
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/02/2017
    sudo apt-get install pacemaker pcs fence-agents resource-agents
    ```
 
-2. Pacemaker 및 Corosync 패키지를 설치할 때 생성된 기본 사용자의 암호를 설정합니다. 모든 노드에서 동일한 암호를 사용 합니다. 
+2. Pacemaker 및 Corosync 패키지를 설치할 때 생성된 기본 사용자의 암호를 설정합니다. 모든 노드에서 같은 암호를 사용합니다. 
 
    ```bash
    sudo passwd hacluster
@@ -104,7 +103,7 @@ sudo systemctl enable pacemaker
 
    실행 중인 'sudo apt get 설치 pc' pacemaker, corosync, 및 pc를 동시에 설치 하 고 서비스의 모든 3을 실행을 시작 합니다.  템플릿이 생성 corosync 시작 ' / etc/cluster/corosync.conf' 파일입니다.  다음 단계가 성공이 파일에 존재할 수 없는 – pacemaker 중지 하려면이 문제를 해결 하도록 / corosync 삭제 ' / etc/cluster/corosync.conf', 다음 단계 성공적으로 완료 됩니다. 동일한 작업을 수행 pc 클러스터 destroy 하 고 한으로 사용할 수 있습니다 시간 초기 클러스터 설치 단계입니다.
    
-   다음 명령은 기존 클러스터 구성 파일을 제거 하 고 모든 클러스터 서비스를 중지 합니다. 이 클러스터를 영구적으로 제거합니다. 사전 프로덕션 환경에서 첫 번째 단계로 실행 합니다. 참고로 'pc 클러스터 손상' pacemaker 서비스와 다시 활성화할 수 있습니다에 사용할 수 없습니다. 모든 노드에서 다음 명령을 실행 합니다.
+   다음 명령은 기존 클러스터 구성 파일을 제거 하 고 모든 클러스터 서비스를 중지 합니다. 이 클러스터를 영구적으로 제거합니다. 사전 프로덕션 환경에서 첫 번째 단계로 실행 합니다. 참고로 'pc 클러스터 손상' pacemaker 서비스와 다시 활성화할 수 있습니다에 사용할 수 없습니다. 모든 노드에서 다음 명령을 실행합니다.
    
    >[!WARNING]
    >이 명령은 모든 기존 클러스터 리소스 삭제 됩니다.
@@ -124,7 +123,7 @@ sudo systemctl enable pacemaker
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-다음 명령은 세 개 노드 클러스터를 만듭니다. 스크립트를 실행 하기 전에 사이의 값을 대체 `**< ... >**`합니다. 주 노드에서 다음 명령을 실행 합니다. 
+다음 명령은 세 개 노드 클러스터를 만듭니다. 스크립트를 실행하기 전에 `**< ... >**` 사이의 값을 바꿉니다. 주 노드에서 다음 명령을 실행 합니다. 
 
    ```bash
    sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
@@ -165,7 +164,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Pacemaker와 통합에 대 한 SQL Server 리소스 에이전트를 설치 합니다.
 
-모든 노드에서 다음 명령을 실행 합니다. 
+모든 노드에서 다음 명령을 실행합니다. 
 
 ```bash
 sudo apt-get install mssql-server-ha
@@ -234,5 +233,4 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## <a name="next-steps"></a>다음 단계
 
 [HA 가용성 그룹 동작](sql-server-linux-availability-group-failover-ha.md)
-
 

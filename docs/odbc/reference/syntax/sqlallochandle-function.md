@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLAllocHandle
-apilocation:
-- sqlsrv32.dll
+apiname: SQLAllocHandle
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLAllocHandle
-helpviewer_keywords:
-- SQLAllocHandle function [ODBC]
+f1_keywords: SQLAllocHandle
+helpviewer_keywords: SQLAllocHandle function [ODBC]
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e355208a1ddcae70eaea4fd01e7d3193e3b2db47
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 434b3b42c4e48724b42bdb1ed517b11b25e10db7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 함수
 **규칙**  
@@ -199,4 +193,3 @@ SQLRETURN SQLAllocHandle(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

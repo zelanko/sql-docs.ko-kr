@@ -13,24 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], reserved keywords
 - reserved words [DMX]
 - DMX [Analysis Services], reserved keywords
 ms.assetid: d74871b0-d33f-4ee0-b1c7-384817c45e66
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 9d8ed0e79b5f32f1f3c6b6f87ff17aa41c263502
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f394df445ba40050a55c0b1f6a5c714b1ec4d298
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reserved-keywords-dmx"></a>예약어(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,4 +57,3 @@ ms.lasthandoff: 08/02/2017
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,18 +16,16 @@ helpviewer_keywords:
 - registry entries for data sources [ODBC], default subkey
 - subkeys [ODBC], default subkey
 ms.assetid: a2259db8-feb7-4f0a-afc8-88e235d86be7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1d3afd8cdc7f4d482c4bc5f23c775e6c67cdd46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76805b2f2c5bbabfef4fede0c8bad5ba068bff74
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="default-subkey"></a>기본 하위 키
 레지스트리 기본 하위 키를 기본 데이터 원본을 지정할 수 있습니다. 이 하위 키는 특별 한 경우 데이터 원본 사양 하위 키의 있고 다른 데이터 원본 사양 하위 키와 같은 값을 보유 합니다. 유일한 차이점은 ODBC 데이터 원본 하위 키 아래에 있는 값으로 나열 되지 않아서 합니다.
-

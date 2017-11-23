@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - subkeys [ODBC], ODBC subkey
 - ODBC subkey [ODBC]
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3a01cda7280ec0a6a70bca8cf7f9fdec503c92d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c90ca7ef439d1f12df7ddb18e95dea883b7142af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-subkey"></a>ODBC 하위 키
 ODBC 하위 키 아래의 값 ODBC 추적 옵션을 지정합니다. 이 옵션이 설정 하 여 표시 된 ODBC 데이터 원본 관리자 대화 상자의 추적 탭을 통해 **SQLManageDataSources**합니다. ODBC 하위 키 자체는 선택 사항입니다. 다음 표에 나와 있는 것 처럼 이러한 값의 형식은입니다.  
@@ -51,4 +49,3 @@ Trace : REG_SZ : 1
 TraceFile : REG_SZ : C:\ODBC.LOG  
   
 ```
-

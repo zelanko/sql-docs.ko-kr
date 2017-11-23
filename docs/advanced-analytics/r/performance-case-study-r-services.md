@@ -1,26 +1,24 @@
 ---
 title: "R 서비스-결과 및 리소스에 대 한 성능 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/15/2017
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f14e3d744a6d65891f6162bf63e69d682d08a971
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R 서비스에 대 한 성능: 결과 및 리소스
 
@@ -31,7 +29,7 @@ ms.lasthandoff: 09/01/2017
 + 첫 번째 사례 연구 R Services 개발 팀에서 하는 방법을 선택 영향이 측정 되 고 특정 최적화 기법
 + 두 번째 사례 연구는 데이터 과학자 팀로 실험 특정 대량 점수 매기기 시나리오에 대 한 최상의 최적화 효과 확인 하는 여러 메서드.
 
-이 항목에서는 첫 번째 사례 연구의 자세한 결과 보여 줍니다. 두 번째 사례 연구에 대 한 요약 전체 결과 설명합니다. 이 항목의 끝에 있는 모든 스크립트 및 예제 데이터 및 원래 작성자가 사용 되는 리소스 링크를 찾을 수 있습니다.
+이 항목에서는 첫 번째 사례 연구의 자세한 결과 보여 줍니다. 두 번째 사례 연구에 대 한 요약 전체 결과 설명합니다. 이 항목의 끝에는 모든 스크립트 및 샘플 데이터와 원래 작성자가 사용 되는 리소스에 대 한 링크입니다.
 
 ## <a name="performance-case-study-airline-dataset"></a>성능 사례 연구: Airline 데이터 집합
 
@@ -280,13 +278,13 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 테이블에서 로드 하는 학습된 된 모델은 예측을 수행 하는 빠른 방법은입니다. 모델을 만들고 동일한 스크립트에 모든 점수 매기기를 수행 하지 않는 것이 좋습니다.
 
-## <a name="case-study-optimization-for-resume-matching-task"></a>사례 연구: 일치 작업 다시 시작에 대 한 최적화
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>사례 연구: resume 일치 작업에 대 한 최적화
 
-Resume 일치 하는 모델은 Microsoft 데이터 과학자를 SQL Server에서 R 코드의 성능을 테스트 하 고 확장 및 엔터프라이즈 수준의 솔루션을 지원 하기 위해 데이터 과학자를 사용 하려면 Ke Huang가 개발 되었습니다.
+SQL Server의 R 코드의 성능을 테스트 하려면 Ke Huang Microsoft 데이터 과학자가와 너무 도움말 데이터 과학자, 확장 가능한 만들기를 수행 하 여 다시 시작을 일치 하는 모델 개발 되었습니다 엔터프라이즈 수준의 솔루션입니다.
 
 ### <a name="methods"></a>메서드
 
-MicrosoftML와 RevoScaleR 패키지는 큰 데이터 집합과 관련 된 복잡 한 R 솔루션의 예측 모델의 학습에 사용 되었습니다. SQL 쿼리 및 R 코드와 동일한 기능 이었습니다. SQL Server가 설치 된 단일 Azure VM에서 모든 테스트 수행 되었습니다. 그런 다음 작성자와 SQL Server에서 제공 하는 이러한 최적화 없는 점수 매기기 시간을 비교:
+MicrosoftML와 RevoScaleR 패키지는 큰 데이터 집합과 관련 된 복잡 한 R 솔루션의 예측 모델의 학습에 사용 되었습니다. SQL 쿼리 및 R 코드에서 모든 테스트와 동일한 기능 이었습니다. 테스트 설치 된 SQL Server를 사용 하 여 단일 Azure VM에 수행 되었습니다. 그런 다음 작성자와 SQL Server에서 제공 하는 다음과 같은 최적화 없는 점수 매기기 시간을 비교:
 
 - 메모리 내 테이블
 - Soft-NUMA
@@ -328,12 +326,9 @@ CPU affinitization resume 일치 하는 시나리오에서는 R 작업에 미치
 
 -   R 세션에서 사용할 최대 메모리 = 70%입니다.
 
-Resume 일치 하는 모델에 대 한 외부 스크립트 사용 하 여 많은 였으며 다른 데이터베이스 엔진 서비스를 실행 했습니다. 따라서 외부 스크립트에 할당 된 리소스는 스크립트 성능에 대 한 최상의 구성을 이전의 70%로 증가 되었습니다.
+Resume 일치 하는 모델에 대 한 외부 스크립트 사용 하 여 많은 였으며 다른 데이터베이스 엔진 서비스를 실행 했습니다. 따라서 외부 스크립트에 할당 된 리소스 스크립트 성능에 대 한 최상의 구성을 입증 하는 70%로 증가 했습니다.
 
-이 구성 된 값이 서로 다른 실험 하 여에 도착 합니다. 다른 하드웨어 또는 다른 솔루션을 사용 하는 경우에 가장 적합 한 구성 달라질 수 있습니다.
-
-> [!IMPORTANT]
-> 케이스에 대 한 최상의 구성의 찾는 데 실험!
+이 구성 된 값이 서로 다른 실험 하 여에 도착 합니다. 다른 하드웨어 또는 다른 솔루션을 사용 하는 경우에 가장 적합 한 구성 달라질 수 있습니다. 항상 실험을 사용 하 여 상황에 대 한 최상의 구성의 찾을!
 
 최적화 된 솔루션에서는 1.1 백만 행의 데이터 (100 기능)으로 20 코어 컴퓨터에서 8.5 초 이내에 점수가 매겨진 합니다. 최적화에는 점수 매기기 시간을 기준으로 성능이 크게 향상 되었습니다.
 
@@ -342,6 +337,16 @@ Resume 일치 하는 모델에 대 한 외부 스크립트 사용 하 여 많은
 이 블로그 게시물 및에 대 한 자세한 내용은 해당 자습서를 읽는 것이 좋습니다.
 
 -   [SQL Server의 기계 학습을 위한 최적화 팁과 힌트](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+많은 사용자가 처음으로 R (또는 Python) 런타임이 로드 되어와 작은 일시 중지를 기록한 합니다. 이러한 이유로 이러한 테스트에 설명 된 대로 첫 번째 실행에 대 한 시간 자주 측정 이지만 나중에 삭제 됩니다. 후속 캐싱을 첫 번째 간의 주목할 만한 성능 차이 발생할 수 있습니다 및 두 번째 실행 합니다. 이기도 약간의 오버 헤드가 SQL Server와 외부 런타임 간의 데이터를 이동할 때 SQL Server에서 직접 로드 하는 대신 네트워크를 통해 데이터를 전달 하는 경우에 특히 합니다.
+
+이러한 모든 이유로 단일 해결 방법은이 되는 초기 로드 시간을 줄이기 위한으로 성능에 영향을 작업에 따라 크게 달라 집니다. 단일 행; 일괄 처리 점수 매기기에 대 한 캐싱을 수행 예를 들어 따라서 연속 점수 매기기 작업은 훨씬 더 빠르게 하 고 모델도 아니고 R 런타임 다시 로드 됩니다. 사용할 수도 있습니다 [기본 점수 매기기](../sql-native-scoring.md) R 런타임이 완전히 로드 하지 않도록 합니다.
+
+큰 모델을 학습 데이터 또는 큰 일괄 처리 점수 매기기, 오버 헤드가 방지 데이터를 이동 또는에서 스트리밍 및 병렬 처리 향상에 비해 최소한의 될 수 있습니다. 이러한 최근 블로그 및 자세한 성능 지침에 대 한 예제를 참조 하십시오.
+
++ [SQL Server 2016 R Services를 사용 하 여 대출 분류](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [초기 사용자 환경과 R services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [R를 사용 하 여 1 백만 초당 트랜잭션 수에 사기 감지](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>리소스
 
@@ -407,4 +412,3 @@ Resume 일치 하는 모델에 대 한 외부 스크립트 사용 하 여 많은
 [R-R에 대 한 성능 조정 코드 및 데이터 최적화](r-and-data-optimization-r-services.md)
 
 [성능 튜닝-사례 연구 결과](performance-case-study-r-services.md)
-

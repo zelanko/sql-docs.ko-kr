@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDrivers
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDrivers
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDrivers
-helpviewer_keywords:
-- SQLDrivers function [ODBC]
+f1_keywords: SQLDrivers
+helpviewer_keywords: SQLDrivers function [ODBC]
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8528eb498b4c15a3d55aa3b3a09947c85329918b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 39d6aee9cf7260d4bc21cc66d39f8845c3d7df97
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 함수
 **규칙**  
@@ -75,7 +69,7 @@ SQLRETURN SQLDrivers(
  [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *DriverDescription*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength1*에서 드라이버 설명을 \* *DriverDescription* 잘립니다  *BufferLength1* null 종결 문자 길이 뺀 값입니다.  
   
  *DriverAttributes*  
- [출력]\ ("주석" 참조) 드라이버 특성 값 쌍의 목록을 반환 하는 버퍼에 대 한 포인터입니다.  
+ [출력] ("주석" 참조) 드라이버 특성 값 쌍의 목록을 반환 하는 버퍼에 대 한 포인터입니다.  
   
  경우 *DriverAttributes* 이 NULL 이면 *AttributesLengthPtr* 여전히 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 버퍼에서 반환할 수 가 가리키는 *DriverAttributes*합니다.  
   
@@ -132,4 +126,3 @@ FileUsage=1\0FileExtns=*.dbf\0\0
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

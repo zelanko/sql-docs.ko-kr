@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: f8b30f6fcef4a0091871a5a1c4639143671197cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux에 대 한 SQL Server 무인된 설치 스크립트 샘플:
 
@@ -225,4 +224,3 @@ export SQL_INSTALL_AGENT='y'
 ```
 
 Linux에서 SQL Server에 대 한 자세한 내용은 참조 [Linux 개요에서 SQL Server](sql-server-linux-overview.md)합니다.
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], SQLColAttributes
 - SQLColAttribute function [ODBC], Text File Driver
 ms.assetid: 132fd1c0-1921-4a7d-910e-aedf1bff5453
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f08e06e737466977d81ca3771ae760e1fe1e4334
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 811ccdff731e006d1ee112674b47531573778354
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolattributes-text-file-driver"></a>SQLColAttributes (텍스트 파일 드라이버)
 > [!NOTE]  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_OWNER_NAME|빈 문자열 ("") 소유자 이름입니다. 지원 되지 않으므로이 열에 반환 합니다.|  
 |SQL_QUALIFIER_NAME|디렉터리 경로가 반환 됩니다.|  
 |SQL_COLUMN_SEARCHABLE|LONGVARCHAR 및 LONGVARBINARY 열 SQL_UNSEARCHABLE로 보고 됩니다.<br /><br /> 고정 길이 및 가변 길이 이진 및 문자 데이터 형식 LONGVARCHAR 및 LONGVARBINARY 없는 있지만 검색할 수 있는는.|
-

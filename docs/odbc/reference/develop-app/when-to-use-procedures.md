@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="when-to-use-procedures"></a>프로시저를 사용 하는 경우
 모든 프로시저를 사용 하 여 있다는 사실에 기반으로 SQL 문을에서 이동 데이터 원본에 응용 프로그램, 다양 한 프로시저를 사용 하 여 장점이 있습니다. 응용 프로그램에서 남아 상호 운용 가능한 프로시저 호출입니다. 이러한 이점 중 하나:  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
  두 번째 단점은 여러 Dbms 프로시저를 지원 하지 않습니다. 마찬가지로이 다양 한 Dbms 사용 하 여 실행 하도록 설계 세로 응용 프로그램에 문제가 될 가능성이 가장 높은 합니다. 프로시저를 지원 하는지 여부를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_PROCEDURES 옵션을 사용 합니다.  
   
  특히 응용 프로그램 개발 환경에 적용 되는 세 번째 단점은 ODBC 프로시저를 만들기 위한 표준 문법을 정의 하지 않습니다. 즉, 응용 프로그램 interoperably 프로시저를 호출할 수 있으며, 있지만 만들 수는 없습니다 interoperably 합니다.
-

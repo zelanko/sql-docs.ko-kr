@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCloseCursor
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCloseCursor
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCloseCursor
-helpviewer_keywords:
-- SQLCloseCursor function [ODBC]
+f1_keywords: SQLCloseCursor
+helpviewer_keywords: SQLCloseCursor function [ODBC]
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c384f3624b35995158cc46e373c439c8952bdd6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0921de0c8bc117ca86f4aaabd273efff1f09a9e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 함수
 **규칙**  
@@ -93,4 +87,3 @@ SQLRETURN SQLCloseCursor(
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
-

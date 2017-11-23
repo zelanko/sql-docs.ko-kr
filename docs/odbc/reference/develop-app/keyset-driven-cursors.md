@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="keyset-driven-cursors"></a>키 집합 구동 커서
 변경 내용을 검색 하는 기능에는 정적 및 동적 커서 사이 있는 키 집합 커서입니다. 정적 커서와 같은 검색 되지 않으면 항상의 멤버 자격과 결과 집합의 순서를 변경 합니다. 동적 커서 등 결과 (영향 SQL_ATTR_TXN_ISOLATION 연결 특성에서 설정한 대로 트랜잭션의 격리 수준) 집합의 값 행의 변경 내용을 검색지 않습니다 것.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  키 집합 커서는 결과 집합의 각 행에 대 한 키가 포함 된 임시 테이블을 만들어 일반적으로 구현 됩니다. 커서 행 업데이트 되었는지 여부를 결정 해야,이 테이블 열이 행 버전 관리 정보로 일반적으로 포함 됩니다.  
   
  원래 결과 집합에 대해 스크롤해야 키 집합 커서는 임시 테이블에 대해 정적 커서를 엽니다. 따라서 원래 결과 집합의 행을 검색 하려면 커서 먼저 임시 테이블에서 적절 한 키를 검색 하 고 행에 대 한 현재 값을 검색 합니다. 블록 커서를 사용 하는 경우 커서는 여러 개의 키와 행 검색 해야 합니다.
-

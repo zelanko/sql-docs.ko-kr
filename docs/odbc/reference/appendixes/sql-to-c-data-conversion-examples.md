@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], examples
 - converting data from SQL to C types [ODBC], examples
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e2c763d78eb6ea0cf854a455e09fc09b8a7de2c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7dd7b514ce4788a035e6f230f3d0a87a94440f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL에서 C 데이터 변환 예제
 다음 표에 표시 된 예제 드라이버 C 데이터를 SQL 데이터를 변환 하는 방법을 보여 줍니다.  
@@ -54,4 +52,3 @@ SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|1992-12-31 23:45:55.1\0 
  [a] "\0" null 종료 바이트를 나타냅니다. 드라이버는 항상 null로 끝냅니다 SQL_C_CHAR 데이터입니다.  
   
  [이 목록에 있는 b]는 숫자는 TIMESTAMP_STRUCT 구조체의 필드에 저장 된 숫자입니다.
-

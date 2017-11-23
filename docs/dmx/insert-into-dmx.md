@@ -17,8 +17,7 @@ f1_keywords:
 - INSERT INTO
 - INSERT
 - INSERT_INTO
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - SKIP (DMX)
 - mapped model columns element
@@ -30,17 +29,16 @@ helpviewer_keywords:
 - training mining models
 - mining structures [DMX], processing
 ms.assetid: 85eed207-396c-4a95-a74e-2acc1abc7e2c
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6effd75e67a69db182ddaf37388d377b644a17da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eeb42798d1a095ce08a081144d33961c40ee8dd8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +83,7 @@ INSERT INTO [MINING MODEL] <model>
   
  다음 표에서는 개체의 상태에 따라 여러 가지 형식의 문을 실행한 결과를 설명합니다.  
   
-|문|개체의 상태|결과|  
+|인수를 제거합니다.|개체의 상태|결과|  
 |---------------|----------------------|------------|  
 |INSERT INTO MINING MODEL*\<모델 >*|마이닝 구조가 처리됩니다.|마이닝 모델이 처리됩니다.|  
 ||마이닝 구조가 처리되지 않습니다.|마이닝 모델 및 마이닝 구조가 처리됩니다.|  
@@ -152,4 +150,3 @@ AS [Models]
  [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

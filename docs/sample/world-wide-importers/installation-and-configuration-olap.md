@@ -1,30 +1,31 @@
 ---
 title: "설치 및 구성 | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 64149cc79a4c2e4c19c2f93e02c97fcc42865712
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f40894ea8ee3d7b998a8a45170e9833f2e6c763f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 설치 및 구성
-WideWorldImportersDW 데이터베이스에 대 한 설치 및 구성 지침은 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW 데이터베이스에 대 한 설치 및 구성 지침은 합니다.
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (또는 이상) 또는 [Azure SQL 데이터베이스](https://azure.microsoft.com/services/sql-database/)합니다. 이 샘플의 전체 버전을 사용 하려면 SQL Server 평가/개발자/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). 2016 년 6 월 릴리스를 사용 하는 최상의 결과 대 한 이후 버전입니다.
@@ -77,4 +78,3 @@ SQL Server 인스턴스를 백업을 복원 하려면 Management Studio를 사�
 2. 데이터베이스에 PolyBase 사용 하도록 설정 하려면 다음 T-SQL 명령을 실행 합니다.
 
    [응용 프로그램]을 실행 합니다. [Configuration_ApplyPolyBase]
-

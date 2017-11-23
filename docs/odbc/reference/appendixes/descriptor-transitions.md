@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], descriptor
 - descriptor transitions [ODBC]
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 82dd5d9fe22a33c50ac33426f71a25524a2b5c2f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 280d35d8ce03d3d7685441c12d99c05c9ff5f451
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-transitions"></a>설명자 전환
 ODBC 설명자는 다음 세 가지 상태입니다.  
@@ -87,4 +85,3 @@ ODBC 설명자는 다음 세 가지 상태입니다.
 |D0<br /><br /> 할당되지 않음|D1i<br /><br /> Implicit|D1e<br /><br /> Explicit|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|
-

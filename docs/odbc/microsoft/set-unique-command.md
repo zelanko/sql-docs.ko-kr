@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET UNIQUE command [ODBC]
+helpviewer_keywords: SET UNIQUE command [ODBC]
 ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a6c028638a17d5b6ba98b2d0b9cf41de9549484e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bed7fb14102c754d16409259fe7e1f5177652d05
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-unique-command"></a>고유한 명령 집합
 중복 인덱스 키 값을 가진 레코드는 인덱스 파일에서 유지 관리 하는지 여부를 지정 합니다.  
@@ -46,4 +43,3 @@ SET UNIQUE ON | OFF
   
 ## <a name="remarks"></a>주의  
  인덱스 파일 인덱스 다시 작성을 발급 하는 경우 고유 설정 설정을 유지 합니다. 자세한 내용은 참조 [인덱스](../../odbc/microsoft/index-command.md)합니다.
-

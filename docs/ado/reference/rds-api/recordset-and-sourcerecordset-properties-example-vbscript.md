@@ -1,31 +1,28 @@
 ---
 title: "레코드 집합 및 SourceRecordset 속성 예 (VBScript) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Source property [ADO], VBScript example
 - Recordset property [ADO], VBScript example
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bddde66f1e2afa1fe8e37332b282e023e534cea7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76f372b037154024f5a301fa3ee3bcb62c3532cd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>레코드 집합 및 SourceRecordset 속성 예 (VBScript)
 > [!IMPORTANT]
@@ -135,7 +132,6 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 ## <a name="see-also"></a>관련 항목:  
  [DataFactory 개체 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Recordset, SourceRecordset 속성(RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
-
 
 
 

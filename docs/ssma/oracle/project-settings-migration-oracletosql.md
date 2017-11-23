@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: dbe432d2df571eef49610ccb9611e5d88a85d1a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 42d83671531f703e1d604dce5cb4e247767dae83
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-oracletosql"></a>프로젝트 설정 (마이그레이션) (OracleToSQL)
 마이그레이션 페이지는 **프로젝트 설정** 대화 상자 SSMA는 Oracle에서 데이터를 마이그레이션합니다 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -65,4 +63,3 @@ ms.lasthandoff: 08/02/2017
 > [!IMPORTANT]  
 > 경우는 **병렬 데이터 마이그레이션 모드** 옵션이로 설정 되어 **사용자 지정**, 옵션을 설정 하는 새 프로젝트 **스레드 수가** 표시 됩니다. 데이터 마이그레이션에 사용 되는 스레드 수를 지정 합니다.  
   
-

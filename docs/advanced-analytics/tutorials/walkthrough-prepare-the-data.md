@@ -1,30 +1,26 @@
 ---
 title: "PowerShell (연습)를 사용 하 여 데이터를 준비 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 048419d5838a5e7f667f80ccd5fccb5dfa101d0f
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1d85684da36ef69caf9dfa39f155a320def37b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell (연습)를 사용 하 여 데이터를 준비 합니다.
 
@@ -111,7 +107,7 @@ R 워크스테이션 및 서버에서 몇 가지 추가 R 패키지를 설치 �
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 이 예제에서는 R grep 함수를 사용하여 사용 가능한 경로의 벡터를 검색하고 "program files"에서 하나를 찾습니다. 자세한 내용은 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)을 참조하세요.
+    - 이 예제에서는 벡터의 사용 가능한 경로 검색 하 고 "Program Files"를 포함 하는 경로 찾을 R grep 함수를 사용 합니다. 자세한 내용은 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)을 참조하세요.
 
     - 패키지가 이미 설치 되어 있다면 설치 된 패키지 목록을 실행 하 여 확인 `installed.packages()`합니다.
 
@@ -129,7 +125,7 @@ R 워크스테이션 및 서버에서 몇 가지 추가 R 패키지를 설치 �
 
 - 지정한 데이터베이스 이름을 사용하도록 R 스크립트 파일의 인수를 다시 작성합니다.
 
-솔루션을 작성할 수 있는 컴퓨터에이 스크립트를 실행 해야 하면: 예를 들어의 노트북 개발 하 고 R 코드를 테스트 합니다. 데이터 과학 클라이언트를 호출하게 될 이 컴퓨터에서 명명된 파이프 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
+솔루션을 작성할 수 있는 컴퓨터에서이 스크립트 실행: 예를 들어의 노트북 개발 하 고 R 코드를 테스트 합니다. 데이터 과학 클라이언트를 호출하게 될 이 컴퓨터에서 명명된 파이프 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 연결할 수 있어야 합니다.
 
 1. PowerShell 명령줄을 열고 **관리자 권한으로**합니다.
   
@@ -156,7 +152,7 @@ R 워크스테이션 및 서버에서 몇 가지 추가 R 패키지를 설치 �
       > [!WARNING]
       > PowerShell 스크립트에서 프롬프트를 사용 하 여 자격 증명을 제공 하는 경우 암호는 업데이트 된 스크립트 파일에 일반 텍스트로에 기록 됩니다. 필요한 R 개체를 만든 후 즉시 자격 증명을 제거하도록 파일을 편집합니다.
       
-    **csv 파일 경로**: 데이터 파일의 전체 경로를 제공합니다. 기본 경로 및 파일 이름은 `C:\tempR\nyctaxi1pct.csv1`입니다.
+    **csv 파일 경로**: 데이터 파일의 전체 경로를 제공합니다. 기본 경로 및 파일 이름은 `C:\tempR\nyctaxi1pct.csv`입니다.
   
 4.  Enter 키를 눌러 스크립트를 실행합니다.
 
@@ -260,7 +256,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 기존 테이블의 동일한 이름과 동일한 스키마를 데이터베이스에 있으면 **bcp** 덮어쓰기를 기존 데이터 보다는 데이터의 새 복사본을 삽입 합니다.
 
-중복 데이터를 피하려면 스크립트를 다시 실행하기 전에 기존 테이블을 잘라내야 합니다.
+중복 데이터를 방지 하려면 스크립트를 다시 실행 하기 전에 기존 테이블을 자릅니다.
 
 ## <a name="whats-included-in-the-sample"></a>이 샘플에 포함 된 항목
 
@@ -274,7 +270,7 @@ GitHub 리포지토리에서 파일을 다운로드 하는 경우 다음 가져�
 
 ### <a name="bkmk_data"></a>학습 및 데이터 점수 매기기
 
-데이터는 각 여정의 요금 및 지불된 팁 금액을 비롯하여 2013년 17,300만 개별 여정의 레코드를 포함하는 뉴욕시 택시 데이터 집합의 대표 샘플링입니다. 데이터를 쉽게 사용할 수 있도록 Microsoft 데이터 과학 팀은 1%의 데이터만 가져오는 다운 샘플링을 수행했습니다.  이 데이터는 Azure의 공용 Blob Storage 컨테이너에서 .CSV 형식으로 공유되었습니다. 원본 데이터는 350MB 미만의 압축되지 않은 파일입니다.
+데이터는 각 여정의 요금 및 지불된 팁 금액을 비롯하여 2013년 17,300만 개별 여정의 레코드를 포함하는 뉴욕시 택시 데이터 집합의 대표 샘플링입니다. 데이터를 쉽게 사용할 수 있도록 Microsoft 데이터 과학 팀은 1%의 데이터만 가져오는 다운 샘플링을 수행했습니다.  이 데이터는 Azure의 공용 Blob Storage 컨테이너에서 .CSV 형식으로 공유되었습니다. 원본 데이터에는 바로 아래 350MB 압축 되지 않은 파일입니다.
 
 + 공용 데이터 집합: [NYC 택시 및 Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -294,7 +290,7 @@ PowerShell 스크립트가 실행 된 다중 [!INCLUDE[tsql](../../includes/tsql
 
 |SQL 스크립트 파일 이름|Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br /> *nyctaxi_sample*: 교육 데이터(NYC 택시 데이터 집합의 1% 샘플)를 저장하는 테이블입니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다.<br /><br /> *nyc_taxi_models*: 나중에 학습된 분류 모델을 저장하는 데 사용할 빈 테이블입니다.|
+|create-db-tb-upload-data.sql|데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br /> *nyctaxi_sample*: 교육 데이터(NYC 택시 데이터 집합의 1% 샘플)를 저장하는 테이블입니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다.<br /><br /> *nyc_taxi_models*: 이진 형식에서 학습 된 모델을 저장 하는 데 사용 되는 테이블입니다.|
 |PredictTipBatchMode.sql|학습된 모델을 호출하여 새 관찰에 대한 레이블을 예측하는 저장 프로시저를 만듭니다. 쿼리를 입력 매개 변수로 허용합니다.|
 |PredictTipSingleMode.sql|학습된 분류 모델을 호출하여 새 관찰에 대한 레이블을 예측하는 저장 프로시저를 만듭니다. 새 관찰의 변수가 인라인 매개 변수로 전달됩니다.|
 |PersistModel.sql|데이터베이스의 테이블에 분류 모델의 이진 표현을 저장하는 데 도움이 되는 저장 프로시저를 만듭니다.|
@@ -314,5 +310,4 @@ PowerShell 스크립트가 실행 된 다중 [!INCLUDE[tsql](../../includes/tsql
 
 [R 및 SQL Server에 대 한 종단 간 데이터 과학 연습](/walkthrough-data-science-end-to-end-walkthrough.md)
 
-[데이터 과학 연습에 대 한 필수 구성 요소](walkthrough-prerequisites-for-data-science-walkthroughs.md)
-
+[데이터 과학 연습을 위한 필수 조건](walkthrough-prerequisites-for-data-science-walkthroughs.md)

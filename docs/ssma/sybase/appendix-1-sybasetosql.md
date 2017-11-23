@@ -5,34 +5,31 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sybase Console,Appendix
+helpviewer_keywords: Sybase Console,Appendix
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8f2604a4bfa9726d32aeb20f1ef3d064c507bd36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a6121c15131cc42ee064767cd5a25e428e0968cb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="appendix---1-sybasetosql"></a>부록-1 (SybaseToSQL)
 SSMA 콘솔 명령줄 옵션의 빠른 보기:  
   
 |Sl 합니다. 아니요.|스위치|필수 여부|인수를 전환 합니다.|허용 되는 값|  
 |-----------|----------|-------------|-------------------|--------------------|  
-|1|-s/스크립트|예|scriptfile|유효한 XML 파일 이름입니다.<br /><br />콘솔 스크립트 정의 파일입니다.|  
+|1.|-s/스크립트|예|scriptfile|유효한 XML 파일 이름입니다.<br /><br />콘솔 스크립트 정의 파일입니다.|  
 |2|-v/변수|아니요|variablevaluefile|유효한 XML 파일 이름입니다.<br /><br />변수는 스크립트 파일 사용 되는 경우이 파일을 지정 해야 합니다.|  
 |3|-c/serverconnection|아니요|serverconnectionfile|유효한 XML 파일 이름입니다.<br /><br />이 파일 서버 연결 정보를 포함합니다.|  
 |4|-x / xmloutput|아니요|xmloutputfile|이 옵션은 XML 형식으로 콘솔 출력을 나타냅니다. 이 옵션을 지정 하지 않으면 기본 출력 텍스트 형태로 표시 됩니다.<br /><br />Xmloutputfile 지정 되지 않은 경우 XML 출력은 STDOUT으로 전송 됩니다.<br /><br />Xmloutputfile에 콘솔 출력을 XML 형식으로 기록 되는 파일의 이름입니다.|  
@@ -44,4 +41,3 @@ SSMA 콘솔 명령줄 옵션의 빠른 보기:
 ## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 (Sybase)를 실행합니다.](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   
-

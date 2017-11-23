@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34834eb1fb04890361c906a03dd059bad7ccd707
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4885ae2592285cdd1e948810de7c1e786afb9134
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="appendix---1-accesstosql"></a>부록-1 (AccessToSQL)
 SSMA 콘솔 명령줄 옵션의 빠른 보기:  
@@ -39,7 +37,6 @@ SSMA 콘솔 명령줄 옵션의 빠른 보기:
 |7|-p/securepassword|아니요|-a/추가 {< server_id > [, … n] &#124; 모든}-c &#124; serverconnection < 서버 연결 파일 > [-v &#124; 변수 < 변수 값 파일 >] [-o/덮어쓰기]<br /><br />또는<br /><br />-a/추가 {< server_id > [, … n] &#124; 모든} – s &#124; 스크립트 < 스크립트 파일 > [-v &#124; 변수 < 변수 값 파일 >] [-o/덮어쓰기]<br /><br />-r/제거 {< server_id > [, … n] &#124; 모든}<br /><br />-l/목록<br /><br />– e/내보내기 {< 서버 id > [, … n] &#124; 모든} < 암호화 암호-파일 ><br /><br />– i 가져오기 / {< 서버 id > [, … n] &#124; 모든} < 암호화 암호-파일 >|를 지정 하는 경우이 옵션 다른 옵션과 함께 사용할 수 없습니다.<br /><br />서버 id: {string} 서버에 대해 제공 된 고유 ID<br /><br />서버 연결 파일: 서버 정의 파일 (serverconnectionfile 또는 스크립트 파일).<br /><br />변수 값 파일: 변수 정의 파일이 며 서버 연결 파일에 사용 합니다.<br /><br />암호화 암호 – 파일: 서버 암호 파일 사용자 지정 암호를 사용 하 여 암호화 합니다.|  
 |8|-?|아니요|해당 사항 없음|해당 사항 없음|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 (Access)를 실행합니다.](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
-

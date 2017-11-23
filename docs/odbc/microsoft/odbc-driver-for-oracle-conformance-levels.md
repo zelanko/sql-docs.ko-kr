@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], conformance levels
 - conformance levels [ODBC], ODBC driver for Oracle
 ms.assetid: 2ad2ef7a-a86f-4a77-b12c-bbd5a3499dac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 99b1bedfa3ca1f326b37ed02d145e9343d06804b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1e7df0e930dd06bf792fb28e425793055e0d380
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-driver-for-oracle-conformance-levels"></a>Oracle 받는 규칙 수준에 대 한 ODBC 드라이버
 > [!IMPORTANT]  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   [지원 되는 옵션 (oracle ODCB 드라이버)](../../odbc/microsoft/supported-options-odbc-driver-for-oracle.md)  
   
 -   [SQL 받는 규칙 수준 (oracle ODCB 드라이버)](../../odbc/microsoft/sql-conformance-levels-odbc-driver-for-oracle.md)
-

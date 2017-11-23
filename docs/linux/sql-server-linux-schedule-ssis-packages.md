@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 8678d4abd61ca93e53c217b295650c9d3998fe50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 84ee0eaf4743cc4a3b188dd700b1ccbdc4ca42cc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>일정 SQL Server Integration Services 패키지 cron 사용 하 여 Linux에서 실행
 
@@ -79,4 +78,3 @@ Crontab 파일을 저장 하 고 편집기를 종료 합니다.
 부분적으로이 문서의 예제를 설명 하는 데 도움이 되는 출력의 예는 다음과 같습니다.
 
 ![자세한 설명은 부분 crontab 형식](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
-

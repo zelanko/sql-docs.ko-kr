@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
+ms.openlocfilehash: ace4b62046bdb10ab32718d2c941892ef83d0ee8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 14a7f9cb0f9888339140a226d31368deaf7b32f5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf 도구와 함께 Linux에서 SQL Server 구성
 
@@ -459,4 +458,3 @@ traceflag = 3456
 대신 환경 변수를 사용 하 여 이러한 구성 변경의 일부를, 참조 [환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다.
 
 다른 관리 도구 및 시나리오에 대 한 참조 [Linux에서 SQL Server 관리](sql-server-linux-management-overview.md)합니다.
-

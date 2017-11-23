@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f05ca08a88951de138f094fbcac1dd9a31bfdfb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 462f8ea10fc0d4c489de40ddcf0174cb2a82435b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="examining-data"></a>데이터를 검사합니다.
 [데이터 가져오기](../../../ado/guide/data/getting-data.md) 하나 이상의 데이터 원본에서 데이터를 검색 하는 방법을 설명 했습니다 **레코드 집합** 개체입니다. 이 섹션에 설명 합니다 **레코드 집합** 더욱 자세하게에서를 통해 탐색 하는 방법을 포함 하는 **레코드 집합** 있으며 해당 데이터를 볼 합니다.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 -   [데이터를 검사하기 위한 샘플 레코드 집합](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
   
 -   [레코드 집합의 경계](../../../ado/guide/data/boundaries-of-a-recordset.md)
-

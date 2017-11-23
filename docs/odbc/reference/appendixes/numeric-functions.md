@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="numeric-functions"></a>숫자 함수
 다음 표에서 ODBC 스칼라 함수 집합에 포함 된 숫자 함수를 설명 합니다. 호출 하 여 **SQLGetInfo** 와 *정보 유형* SQL_NUMERIC_FUNCTIONS의 응용 프로그램이 드라이버를 통해 지원 되는 숫자 함수 확인할 수 있습니다.  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|제곱근을 반환 *float_exp*합니다.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|탄젠트를 반환 *float_exp*여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
 |**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|반환 *numeric_exp* 잘림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 잘립니다 &#124; *integer_exp*&#124; 소수점의 왼쪽에 위치 합니다.|
-

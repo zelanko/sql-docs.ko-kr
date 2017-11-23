@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: af93a39eb16c45de0e848bc7b41cdf2758bd1ae0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 827257d90042aa1655545edd9fc20d114952f426
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 콘솔 (AccessToSQL)의 명령줄 옵션
 Microsoft는 강력한 집합 실행 및 제어 SSMA 활동 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서는 추가 세부 정보를 제공 합니다.  
@@ -183,4 +181,3 @@ SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 
   
 3.  콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40; AccessToSQL &#41; ](../../ssma/access/troubleshooting-accesstosql.md).  
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d30d7746cb49609154a9b5e82ec7a85b1a1480e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-the-transaction-isolation-level"></a>트랜잭션 격리 수준 설정
 트랜잭션 격리 수준의 설정 하려면 응용 프로그램에서 SQL_ATTR_TXN_ISOLATION 연결 특성을 사용 합니다. 데이터 원본에 요청 된 격리 수준 지원 하지 않으면, 드라이버 또는 데이터 원본을 더 높은 수준을 설정할 수 있습니다. 어떤 트랜잭션 격리 수준으로 데이터 소스를 확인 하려면 지원 하 고 응용 프로그램이 호출 기본 격리 수준이 이면 **SQLGetInfo** SQL_TXN_ISOLATION_OPTION 및 SQL_DEFAULT_TXN_ISOLATION 옵션 각각.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 -   속도가 정확도 및 오류 보다 작은 일 수 있습니다. 예를 들어 회사는 많은 소규모 영업 및 큰 sales 드문 경우를 가정 합니다. 열려 있는 모든 판매액의 합계 값을 예측 하는 트랜잭션이 Read Uncommitted 격리 수준 안전 하 게 사용 될 수 있습니다. 트랜잭션이 열리거나 닫힐 있으며 이후에 주문을 포함 하지만,이 일반적으로 서로 위배 롤백되고 한다는 이러한 주문 발견 될 때마다 차단 되지 않은 트랜잭션이 훨씬 속도가 더 빠를 수는.  
   
  자세한 내용은 참조 [낙관적 동시성](../../../odbc/reference/develop-app/optimistic-concurrency.md)합니다.
-

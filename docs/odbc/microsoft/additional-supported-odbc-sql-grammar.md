@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72efaedb35351454fbf464ed1a2c941239ff9c58
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f021092afb3cf4f404b066a476270feac321869
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>추가 지원 되는 ODBC SQL 문법
 ODBC 드라이버는 핵심 및 확장 ODBC 2.5 문법에 최소 ODBC 2.5 문법 및 다음 절은 완전히 지원합니다. 파일로 이동 하 여 추가 정보를 표시할 수 있습니다는 [ALTER TABLE 문을](../../odbc/microsoft/alter-table-statement.md), [상관 관계 이름을](../../odbc/microsoft/correlation-names.md), 및 [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) 항목입니다.  
@@ -72,4 +70,3 @@ ODBC 드라이버는 핵심 및 확장 ODBC 2.5 문법에 최소 ODBC 2.5 문법
 -   [스칼라 함수](../../odbc/microsoft/scalar-functions.md)  
   
 -   [테이블 이름](../../odbc/microsoft/table-names.md)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getting-long-data"></a>긴 데이터 가져오기
 Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 255 자 같은 특정 크기에 대 한 이진 데이터입니다. 이 데이터 만큼 작지 않아서 몇 천 문자의 파트 설명 등의 단일 버퍼에 저장 될 수 있습니다. 그러나 너무 길어 긴 텍스트 문서 또는 비트맵 처럼 메모리에 저장할 수 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없습니다, 때문에 사용 하 여 파트에서 드라이버에서 검색 된 **SQLGetData** 행의 다른 데이터를 가져온 후 합니다.  
@@ -93,4 +91,3 @@ SQLCloseCursor(hstmt);
  일부 드라이버는 이러한 제한을 적용 하지 않습니다. 상호 운용 가능한 응용 프로그램에는 이러한 없거나 결정 되는 제한을 호출 하 여 적용 되지 않습니다 가정 하거나 해야 **SQLGetInfo** SQL_GETDATA_EXTENSIONS 옵션을 사용 합니다.  
   
  응용 프로그램 문자 또는 이진 데이터 열에 있는 모든 데이터, 필요 하지 않는 경우 문을 실행 하기 전에 SQL_ATTR_MAX_LENGTH 문 특성을 설정 하 여 DBMS 기반 드라이버에서 네트워크 트래픽을 줄일 수 있습니다. 문자 또는 이진 열에 대해 반환 되는 데이터의 바이트 수를 제한 합니다. 예를 들어 열 긴 텍스트 문서에 포함 되어 있다고 가정 합니다. 에서는이 열이 포함 된 테이블을 탐색 하는 응용 프로그램은 각 문서의 첫 번째 페이지에만 표시 해야 할 수 있습니다. 드라이버에서이 문 특성을 시뮬레이션할 수 있지만, 이지만이 작업을 수행할 필요가 없습니다. 특히, 응용 프로그램를 문자 또는 이진 데이터 truncate 하려는 경우 해당 바인딩해야 작은 버퍼의 열에 **SQLBindCol** 드라이버는 데이터가 잘릴 수 있도록 합니다.
-

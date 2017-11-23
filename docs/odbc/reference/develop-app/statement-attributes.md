@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], statement attributes
 - statement attributes [ODBC]
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 36cc6b00223185a5a1e21708109842384c6ecb1e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-attributes"></a>문 특성
 문 특성은 문이의 특성입니다. 예를 들어 설명의 결과 함께 사용할 커서를 설정 및 사용 하 여 책갈피 어떤 종류의 여부는 문 특성입니다.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 3에 도입 된 문 특성의 없음. *x* SQL_ATTR_METADATA_ID) (제외 연결 수준에서 설정할 수 있습니다.  
   
  자세한 내용은 참조는 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 함수 설명 합니다.
-

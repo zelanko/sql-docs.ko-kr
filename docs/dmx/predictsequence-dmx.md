@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictSequence
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictSequence function
+f1_keywords: PredictSequence
+dev_langs: DMX
+helpviewer_keywords: PredictSequence function
 ms.assetid: c2992dfc-b99d-4430-8dcd-21ad3ffd4590
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 45d9652ed84fc8716029748c27d6be322dca57fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e9ddd402be082937ec828a86d82a238d121e55dd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,10 +62,9 @@ From
   [Sequence Clustering]  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

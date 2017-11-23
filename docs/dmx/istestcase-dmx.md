@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IsTestCase
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsTestCase function
+f1_keywords: IsTestCase
+dev_langs: DMX
+helpviewer_keywords: IsTestCase function
 ms.assetid: 7ff4b895-9bb4-4e26-ab1b-c9049cfc2291
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b8a71a8a3c87e8f8b68be68745701b6c8d9249ab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0880841c201e9f25eb4685d0e6368abbb5bca885
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="istestcase-dmx"></a>IsTestCase(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +67,6 @@ WHERE IsTestCase()
 ## <a name="see-also"></a>관련 항목:  
  [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [데이터 마이닝 쿼리](../analysis-services/data-mining/data-mining-queries.md)   
- [학습 및 테스트 데이터 집합](../analysis-services/data-mining/training-and-testing-data-sets.md)  
+ [데이터 집합 학습 및 테스트](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   
   
-

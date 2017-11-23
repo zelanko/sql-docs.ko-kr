@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - EnvelopeCenter
 - EnvelopeCenter_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- EnvelopeCenter method
+dev_langs: TSQL
+helpviewer_keywords: EnvelopeCenter method
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4557189ecd06bca2abe0ce9348f00cc191b66a53
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0638e8793c75ad78aafa12bec1d1f8a3061022c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="envelopecenter-geography-data-type-"></a>EnvelopeCenter(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,4 +71,3 @@ SELECT @g.EnvelopeCenter().ToString();
  [EnvelopeAngle &#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
   
   
-

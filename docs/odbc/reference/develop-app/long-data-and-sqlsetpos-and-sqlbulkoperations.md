@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51662d6540fb8db0eed5456e918313a71ccbccc8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>긴 데이터와 SQLSetPos SQLBulkOperations
 행을 업데이트 하는 경우 긴 데이터를 보낼 수 SQL 문에서 매개 변수가 있는 경우 처럼 **SQLBulkOperations** 또는 **SQLSetPos** 와 행을 삽입할 때 또는 **SQLBulkOperations**. 데이터를 여러 번 호출 된 부분으로 보내집니다 **SQLPutData**합니다. 열을 데이터 전송에 실행 시 라고 *실행 시 데이터 열*합니다.  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 6.  호출 **SQLParamData** 다시 나타내려면 모든 데이터 열에 대 한 전송 않은 것입니다. 드라이버는 SQL_NEED_DATA 및 다음 실행 시 데이터 열에 대 한 고유 값을 반환을 전송 되지 않은 데이터는 실행 시 데이터 열이 있는 경우 응용 프로그램 5 단계를 반환합니다. 모든 실행 시 데이터 열에 대 한 데이터를 전송한 경우 행에 대 한 데이터는 데이터 원본에 전송 됩니다. **SQLParamData** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO 및 수를 반환 하면 모든 SQLSTATE는 다음 **SQLBulkOperations** 또는 **SQLSetPos** 반환할 수 있습니다.  
   
  후 **SQLBulkOperations** 또는 **SQLSetPos** sql_need_data가 반환 되며 데이터가 마지막 실행 시 데이터 열에 대 한 완전히 플러시된 전에 문이에서 필요한 데이터 상태입니다. 이 상태에서는 응용 프로그램이 호출할 수만 **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, 또는 **SQLGetDiagRec**; 다른 모든 함수가 반환 SQLSTATE HY010 (함수 시퀀스 오류). 호출 **SQLCancel** 문 실행을 취소 하 고 이전 상태로 돌아갑니다. 자세한 내용은 참조 [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.
-

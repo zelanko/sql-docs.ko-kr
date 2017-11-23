@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - table name limitations [ODBC]
 - Excel driver [ODBC], table name limitations
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4a9c803701e377bd345ea35b8ba528692eee98f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 690b6242b9e8d38b6a1f26ddbd823215030e2b15
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="table-name-limitations"></a>테이블 이름 제한 사항
 테이블 이름 (예: 공백) 모든 유효한 문자를 포함할 수 있습니다. 테이블 이름은 문자, 숫자 및 밑줄을 제외한 모든 문자가 들어 있으면 이름은 역 따옴표 (')에 포함 하 여 구분 되어야 합니다.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  Microsoft Access 드라이버를 사용 하면 테이블 이름은 64 자로 제한 됩니다.  
   
  DBASE, 3.0 또는 4.0, 텍스트 또는 Paradox, Microsoft Excel 드라이버를 사용 하면 CON, AUX, LPT1, LPT2 특수 MS-DOS 키워드는 테이블 이름으로 사용할 수 없습니다.
-

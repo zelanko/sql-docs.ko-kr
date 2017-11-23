@@ -13,22 +13,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- logical operators [SQL Server], DMX
+dev_langs: DMX
+helpviewer_keywords: logical operators [SQL Server], DMX
 ms.assetid: c57f9ec8-ca24-4d26-b011-7fca382dc4a1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 0187908792a7304977ab10b0d2387422310f3691
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f5c2ea5da5834166f74319dc60cca3b0e43f8824
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operators---logical"></a>연산자-논리
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

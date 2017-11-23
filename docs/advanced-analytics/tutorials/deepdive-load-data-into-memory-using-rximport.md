@@ -5,26 +5,22 @@ ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 85d6174686be113ff9a23985b1d5b5763783c986
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bfea2db1797638da671cb59ffc4cd4954d145199
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="load-data-into-memory-using-rximport"></a>rxImport를 사용하여 메모리에 데이터 로드
 
@@ -102,5 +98,4 @@ RxImport 함수 가져오기 프로세스 동안 열에 변수 이름을 할당 
 ## <a name="see-also"></a>관련 항목:
 
 [기계 학습 자습서](../../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
-
 

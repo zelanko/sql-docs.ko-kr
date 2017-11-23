@@ -7,19 +7,17 @@ ms.service:
 ms.component: php
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
+ms.openlocfilehash: eb13c1a57c63ce013a3b546572994106b8b1ffc0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01d921ebee152924b905fa7a9de8c6d46f41ca64
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용 하 여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -134,4 +132,3 @@ Windows에서는 기본 ODBC 드라이버 지원에 대 한 더 많은 값을 �
 ```
 ## <a name="see-also"></a>관련 항목:  
 [Azure Active Directory를 사용 하 여 ODBC 드라이버](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
-

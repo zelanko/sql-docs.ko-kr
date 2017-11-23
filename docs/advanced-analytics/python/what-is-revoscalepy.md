@@ -5,19 +5,17 @@ ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introducing-revoscalepy"></a>Revoscalepy 소개
 
@@ -125,7 +123,7 @@ Python 용 MicrosoftML도 다양 한 변환 및 도우미 함수를 같은 포�
 
 로컬로 실행 하는 경우 일반적으로 실행 하는 Python 스크립트 명령줄 또는 Python 개발 환경에서 고 지정 중 하나를 사용 하 여 SQL Server 계산 컨텍스트는 **revoscalepy** 함수입니다. 전체 코드에 대 한 또는 개별 함수에 대 한 원격 계산 컨텍스트를 사용할 수 있습니다. 예를 들어 다음 모델을 학습 데이터 이동을 방지 하 고 최신 데이터를 사용 하 여 서버를 오프 로드 하는 것이 좋습니다.
 
-저장 프로시저는 완전 한 Python 스크립트를 설정 하려면 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), 코드 입 / 출력 명확 하 게 정의 단일 함수로 다시 작성 하는 것이 좋습니다. 입 / 출력 해야 **팬더** 데이터 프레임입니다. 이 도구를 실행 하는 경우 T-SQL을 지 원하는 모든 클라이언트에서 저장된 프로시저를 호출, 쉽게 입력으로 SQL 쿼리를 전달 하 고 수 SQL 테이블에 결과 저장 합니다. 예를 들어 참조 [L 개발자를 위한 In-database Python 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)합니다.
+저장 프로시저는 완전 한 Python 스크립트를 설정 하려면 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), 코드 입 / 출력 명확 하 게 정의 단일 함수로 다시 작성 하는 것이 좋습니다. 입 / 출력 해야 **팬더** 데이터 프레임입니다. 이 도구를 실행 하는 경우 T-SQL을 지 원하는 모든 클라이언트에서 저장된 프로시저를 호출, 쉽게 입력으로 SQL 쿼리를 전달 하 고 수 SQL 테이블에 결과 저장 합니다. 예를 들어 참조 [SQL 개발자를 위해 데이터베이스에서 Python 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)합니다.
 
 ### <a name="using-remote-compute-contexts"></a>원격 계산 컨텍스트를 사용 하 여
 

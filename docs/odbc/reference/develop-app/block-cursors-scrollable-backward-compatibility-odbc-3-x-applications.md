@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - cursors [ODBC], compatibility issues
 - SQLFetchScroll function [ODBC], block cursors
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bc3b2fa0e72329300f4fb6aa52c274a0ce0f9b83
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>블록 커서, 스크롤 가능 커서 및 ODBC 3.x 응용 프로그램에 대 한 이전 버전과 호환성
 둘 다의 존재 여부 **SQLFetchScroll** 및 **SQLExtendedFetch** 사이 API 응용 프로그래밍 인터페이스 (), 일련의 함수는 ODBC의 첫 번째 일반 분할 나타냅니다는 호출 응용 프로그램 및 서비스 공급자 인터페이스 (SPI), 일련의 함수는 드라이버 구현 합니다. 이 분할은 ODBC 3에서 요구 사항이 균형을 조정 해야 합니다. *x*를 사용 하 여 **SQLFetchScroll**는 표준을 준수 하 고 ODBC 2와 호환 되어야 합니다. *x*를 사용 하 여 **SQLExtendedFetch**합니다.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 3입니다. *x* 응용 프로그램을 사용 하지 않아야 **SQLExtendedFetch** 또는 SQL_ROWSET_SIZE 문 특성입니다. 대신 사용 해야 **SQLFetchScroll** 및 SQL_ATTR_ROW_ARRAY_SIZE 문 특성입니다. ODBC 3입니다. *x* 응용 프로그램을 사용 하지 않아야 **SQLSetPos** 와 *작업* SQL_ADD의 사용 해야 하지만 **SQLBulkOperations** 는 와*작업* SQL_ADD입니다.
-

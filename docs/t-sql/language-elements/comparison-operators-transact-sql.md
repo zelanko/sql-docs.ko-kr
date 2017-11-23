@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - expressions [SQL Server], testing
 - operators [Transact-SQL], comparison
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 45c0e85b89d542dce815104eb8e831169599227b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 08cdeecc9dc7da123ae94623a30913ed358de93b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="comparison-operators-transact-sql"></a>비교 연산자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
 |연산자|의미|  
 |--------------|-------------|  
-|[= (같음)](../../t-sql/language-elements/equals-transact-sql.md)|같음|  
+|[=(같음)](../../t-sql/language-elements/equals-transact-sql.md)|같음|  
 |[>(보다 큼)](../../t-sql/language-elements/greater-than-transact-sql.md)|보다 큼|  
 |[<(보다 작음)](../../t-sql/language-elements/less-than-transact-sql.md)|보다 작음|  
 |[>=(크거나 같음)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|크거나 같음|  
@@ -74,6 +71,6 @@ IF (@MyProduct <> 0)
   
 ## <a name="see-also"></a>관련 항목:  
  [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

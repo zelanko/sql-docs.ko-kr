@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - cursors [ODBC], key-set driven
 - cursors [ODBC], mixed
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 638cd5288073fa374f81a73273ed999a4697c8b2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mixed-cursors"></a>혼합된 커서
 혼합 커서가 키 집합 커서와 동적 커서입니다. 결과 집합은 너무 커서 합리적으로 전체 결과 집합에 대 한 키를 저장할 때 사용 됩니다. 혼합 된 커서는 전체 결과 집합 보다 작은 하지만 행 집합 보다 큰 키 집합을 만들어 구현 됩니다.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  이제 다른 응용 프로그램 삭제 행 11 및 101를 가정 합니다. 커서를 11 행을 검색 하려고 하는 경우이 발생 하 게 구멍이이 행에 대 한 키를 포함 하지만 행이 없습니다. 키 집합 커서 동작입니다. 커서를 101 행을 검색 하려고 하는 경우 커서 행이 누락 된 행에 대 한 키 없기 때문에 검색 하지 않습니다. 대신, 무엇 이었습니까 행 102 이전에 검색 합니다. 동적 커서 동작입니다.  
   
  키 집합 크기는 결과 집합 크기와 같은 때 혼합 커서가 키 집합 커서와 동일 합니다. 키 집합 크기는 1과 같을 때 혼합 커서가 동적 커서와 동일 합니다.
-

@@ -3,10 +3,12 @@ title: WITH common_table_expression (TRANSACT-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - WITH_TSQL
 - WITH
 - common table expression
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - WITH common_table_expression clause
 - CTEs
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a065ef1f5c21d0fb5a458d55108acd8a9fd0678e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. CTE는 단순 쿼리에서 파생되며 SELECT, INSERT, UPDATE 또는 DELETE 문 하나의 실행 범위 내에서 정의됩니다. 이 절은 정의하는 SELECT 문의 일부로 CREATE VIEW 문 내에서도 사용할 수 있습니다. 공통 테이블 식은 자신에 대한 참조를 포함할 수 있으며 이를 재귀 공통 테이블 식이라 합니다.  
   
@@ -601,48 +601,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-creating-a-simple-common-table-expression"></a>12. 간단한 공통 테이블 식 만들기  
- 다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 보여 줍니다.  
-  
-```  
--- Uses AdventureWorks  
-  
--- Define the CTE expression name and column list.  
-WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
-AS  
--- Define the CTE query.  
-(  
-    SELECT SalesPersonID, SalesOrderID, YEAR(OrderDate) AS SalesYear  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-)  
--- Define the outer query referencing the CTE name.  
-SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear  
-FROM Sales_CTE  
-GROUP BY SalesYear, SalesPersonID  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
-```  
-  
-### <a name="m-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>13. 공통 테이블 식을 사용한 수 제한 및 평균 보고  
- 다음 예에서는 판매 담당자의 모든 연도에 대한 평균 판매 주문 수를 보여 줍니다.  
-  
-```  
-WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
-AS  
-(  
-    SELECT SalesPersonID, COUNT(*)  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-    GROUP BY SalesPersonID  
-)  
-SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
-FROM Sales_CTE;  
-GO  
-```  
-  
-### <a name="n-using-a-common-table-expression-within-a-ctas-statement"></a>14. CTAS에는 문 내에서 공통 테이블 식을 사용 하 여  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>12. CTAS에는 문 내에서 공통 테이블 식을 사용 하 여  
  다음 예에서는 연간 판매 주문의 총 수에서 각 판매 담당자에 대 한 포함 된 새 테이블을 만듭니다 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]합니다.  
   
 ```  
@@ -671,7 +630,7 @@ AS
 GO  
 ```  
   
-### <a name="o-using-a-common-table-expression-within-a-cetas-statement"></a>15. CETAS 문 내에서 공통 테이블 식을 사용 하 여  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>13. CETAS 문 내에서 공통 테이블 식을 사용 하 여  
  다음 예제에서 각 영업 담당자의 판매 주문 연간 총 수를 포함 하는 새 외부 테이블에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]합니다.  
   
 ```  
@@ -701,7 +660,7 @@ AS
 GO  
 ```  
   
-### <a name="p-using-multiple-comma-separated-ctes-in-a-statement"></a>16. 문에서 Cte 구분 된 여러 개의 쉼표를 사용 하 여  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>14. 문에서 Cte 구분 된 여러 개의 쉼표를 사용 하 여  
  다음 예제에서는 두 개의 Cte를 포함 하 여 단일 문에서 하는 방법을 보여 줍니다. Cte 수 없습니다 (재귀 제외)를 중첩 합니다.  
   
 ```  
@@ -728,4 +687,3 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
-

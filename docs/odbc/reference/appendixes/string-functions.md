@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="string-functions"></a>문자열 함수
 다음 표에서 문자열 조작 함수를 나열합니다. 응용 프로그램에서 호출 하 여 드라이버를 통해 지원 되는 문자열 함수를 확인할 수 **SQLGetInfo** 와 *정보 유형* SQL_STRING_FUNCTIONS입니다.  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |**공간 (** *count* **)** (ODBC 2.0)|구성 된 문자열을 반환 *count* 공간입니다.|  
 |**SUBSTRING (** *string_exp*, *시작*, 길이**)** (ODBC 1.0)|파생 된 문자열을 반환 *string_exp*로 지정 된 문자 위치에서 시작, *시작* 에 대 한 *길이* 문자입니다.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|문자열을 반환 *string_exp*, 모든 소문자를 대문자로 변환 합니다.|
-

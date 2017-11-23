@@ -14,14 +14,12 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: d6fb9839ee1ba7f583eca9445599422469212083
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18d40800ee74783b0ce3df4d9d4e0458fbb72ebb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>성능에 대 한 유용한 정보 및 SQL Server 2017 linux에 대 한 구성 지침
 
 이 항목에서는 모범 사례 및 Linux에서 SQL Server에 연결 하는 데이터베이스 응용 프로그램에 대 한 성능을 최대화 하기 위해 권장 사항을 제공 합니다. 이러한 권장 사항은 Linux 플랫폼에서 실행 됩니다. 모든 표준 SQL Server 권장 사항, 같은 인덱스 디자인 계속 적용 됩니다.
@@ -118,4 +116,3 @@ Linux에서 SQL Server를 실행 하는 가상 컴퓨터에는, 경우에 가상
 성능을 향상 시키는 SQL Server 기능에 대 한 자세한 참조 [성능 기능을 시작](sql-server-linux-performance-get-started.md)합니다.
 
 Linux에서 SQL Server에 대 한 자세한 내용은 참조 [linux 개요 SQL Server의](sql-server-linux-overview.md)합니다.
-

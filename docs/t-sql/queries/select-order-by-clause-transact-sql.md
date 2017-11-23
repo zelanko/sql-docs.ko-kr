@@ -3,10 +3,12 @@ title: "ORDER BY 절 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,8 +18,7 @@ f1_keywords:
 - BY_TSQL
 - ORDER
 - ORDER BY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ad-hoc query paging
 - OFFSET clause
@@ -38,20 +39,19 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ba5d93e724e11887397fef9a6e3a6a33426c88c6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3fa84841e573d9bd1a285d24548c2f57ab5b9235
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select---order-by-clause-transact-sql"></a>선택-ORDER BY 절 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 쿼리에서 반환되는 데이터를 정렬합니다. 이 절을 사용하여 다음을 수행할 수 있습니다.  
   
@@ -484,7 +484,25 @@ GO
   
 ```  
   
-### <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+###  <a name="Union"></a>제외 UNION과 함께 ORDER BY를 사용 하 여, 및 INTERSECT  
+ 쿼리에서 UNION, EXCEPT 또는 INTERSECT 연산자를 사용하는 경우 문의 끝 부분에 ORDER BY 절을 지정해야 하며 조합된 쿼리 결과가 정렬됩니다. 다음 예에서는 빨간색 또는 노란색 제품을 모두 반환하고 이 조합된 목록을 `ListPrice` 열을 기준으로 정렬합니다.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Red'  
+-- ORDER BY cannot be specified here.  
+UNION ALL  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Yellow'  
+ORDER BY ListPrice ASC;  
+  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 숫자에 의해 결과 집합의 순서 `EmployeeKey` 열을 오름차순입니다.  
   
 ```  
@@ -525,24 +543,6 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-###  <a name="Union"></a>제외 UNION과 함께 ORDER BY를 사용 하 여, 및 INTERSECT  
- 쿼리에서 UNION, EXCEPT 또는 INTERSECT 연산자를 사용하는 경우 문의 끝 부분에 ORDER BY 절을 지정해야 하며 조합된 쿼리 결과가 정렬됩니다. 다음 예에서는 빨간색 또는 노란색 제품을 모두 반환하고 이 조합된 목록을 `ListPrice` 열을 기준으로 정렬합니다.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Red'  
--- ORDER BY cannot be specified here.  
-UNION ALL  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Yellow'  
-ORDER BY ListPrice ASC;  
-  
-```  
-  
 ## <a name="see-also"></a>관련 항목:  
  [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
@@ -555,5 +555,4 @@ ORDER BY ListPrice ASC;
  [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-
 

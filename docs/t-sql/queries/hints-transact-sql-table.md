@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
 - Table Hint
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - SERIALIZABLE table hint
 - UPDLOCK table hint
@@ -39,17 +37,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 174
+caps.latest.revision: "174"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c87922c612c4da8b1ca6841b0d7ff7c3f191eb50
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hints-transact-sql---table"></a>테이블 힌트 (Transact SQL)-
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [병합](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -350,7 +347,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  SNAPSHOT  
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
   
- 메모리 액세스에 최적화된 테이블은 SNAPSHOT 격리로 액세스됩니다. SNAPSHOT은 메모리 액세스에 최적화된 테이블에서만 사용할 수 있습니다(디스크 기반 테이블에서 사용할 수 없음). 자세한 내용은 참조 [메모리 최적화 된 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)합니다.  
+ 메모리 최적화 테이블은 SNAPSHOT 격리로 액세스됩니다. SNAPSHOT은 메모리 최적화 테이블에서만 사용할 수 있습니다(디스크 기반 테이블에서 사용할 수 없음). 자세한 내용은 참조 [메모리 최적화 된 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)합니다.  
   
 ```  
 SELECT * FROM dbo.Customers AS c   
@@ -508,4 +505,3 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
  [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   
-

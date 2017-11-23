@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], tracing options
 - tracing options [ODBC], ODBC data source administrator
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1a62a03d3bb9e9876ed152bb4ac2cb8fb56ce66
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-tracing-options"></a>추적 옵션 설정
 **추적** 탭은 **ODBC 데이터 원본 관리자** 대화 상자를 사용 하는 ODBC 함수 호출을 추적 하는 방법을 구성할 수 있습니다.  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/09/2017
 >  Visual Studio Analyzer에 대 한 지원 (Visual Studio Analyzer 이전 버전의 Visual Studio에만 포함 되었습니다.) Windows 8 부터는 제거 되었습니다. 다른 방법은 문제 해결 메커니즘 BID 추적을 사용 합니다.  
   
  Visual Studio® 분석기 추적 성능 및 ODBC 계층에 대 한 디버깅 정보를 제공합니다. ODBC 구성 요소에 소요 된 시간에 대 한 가능한 그림을 정확한 것으로 표시 하려면 최상위 인터페이스에서 나가는 모든 이벤트 발생 합니다. Visual Studio Analyzer 추적 소스를 설정할 때 등록 하는 이벤트 소스가 필요 합니다. 이러한 종류의 추적에 대 한 자세한 내용은 Visual Studio 설명서를 참조 합니다.
-

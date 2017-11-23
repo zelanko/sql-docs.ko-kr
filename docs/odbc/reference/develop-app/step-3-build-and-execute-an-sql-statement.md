@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f213203e7601c79f8f5336756462d6ad344aaa8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>작성 하 고 SQL 문을 실행 하는 3 단계:
 다음 그림에 나와 있는 것 처럼 작성 하 고 SQL 문을 실행 하는 세 번째 단계가입니다. 이 단계를 수행 하는 데 메서드는 매우 달라 집니다. 응용 프로그램 사용자 입력에 따라 SQL 문을 작성, SQL 문을 입력 하 라는 하거나 하드 코드 된 SQL 문을 사용 될 수 있습니다. 자세한 내용은 참조 [SQL 문을 생성](../../../odbc/reference/develop-app/constructing-sql-statements.md)합니다.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |**선택** 또는 카탈로그 함수|[4a단계: 결과 페치](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**업데이트**, **삭제**, 또는 **삽입**|[4b단계: 행 수 페치](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |다른 모든 SQL 문|3 단계: 작성 하 고 SQL 문 (이 항목)을 실행 또는 [5 단계: 트랜잭션 커밋](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
-

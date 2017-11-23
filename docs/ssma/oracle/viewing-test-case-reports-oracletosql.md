@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 4aa50b871b50988ecfbfa6c1defa8cc96bcdaa40
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 99ee650698adb2536ebdcadf480ae0ccefda2628
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>테스트 사례 (OracleToSQL) 보고서 보기
 테스트 사례 보고서에서는 테스트 확인 결과 및 일반 테스트 정보를 보여 줍니다. 테스트 실패 시 확인 된 개체의 모든 일치 하지 않는 데이터에 대 한 정보가 표시 됩니다.  
@@ -48,8 +46,7 @@ ms.lasthandoff: 08/02/2017
 **종료**  
 으로 실행의 상태를 표시 **성공** 또는 **오류**합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [실행 중인 테스트 사례 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [데이터베이스 개체 &#40; OracleToSQL &#41; 마이그레이션 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-
