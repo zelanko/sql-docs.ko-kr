@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a35d57aaa00f7f2406b779f987c4dd07e694f737
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45bb604f0226ac05eab0fd99bdbef41704cc8de8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="positioned-update-and-delete-statements"></a>위치 지정된 Update 및 Delete 문은
 응용 프로그램 업데이트 또는 위치 지정된 업데이트 된 결과 집합의 현재 행을 삭제 또는 delete 문의 수 있습니다. 위치 update 및 delete 문이에서 일부 데이터 원본의 경우에 지원 됩니다. 데이터 원본에서 지 원하는 배치 update 및 delete 문 여부를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ 특성을 1 또는 SQL_STATIC_CURSOR_ATTRIBUTES1 *정보 항목* (커서 유형)에 따라 다름. 배치에서 ODBC 커서 라이브러리를 시뮬레이션 하는 참고 update 및 delete 문입니다.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
  **선택** [**모든** &#124; **DISTINCT**] *선택 목록*  
   
- **보낸 사람** *테이블 참조 목록*  
+ **** *테이블 참조 목록*  
   
  [**여기서** *검색 조건*]  
   
@@ -159,4 +157,3 @@ while (GetAction(&Action, &RowNum)) {
 // Close the cursor.  
 SQLCloseCursor(hstmtCust);  
 ```
-
