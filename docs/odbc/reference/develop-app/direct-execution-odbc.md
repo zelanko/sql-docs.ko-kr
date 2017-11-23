@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abce5a1c9f4fceb38420c15159cf89a2430025dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="direct-execution-odbc"></a>ODBC 직접 실행
 직접 실행은 문을 실행 하는 가장 간단한 방법은 합니다. 문이 실행을 위해 전송 되 면 데이터 원본 액세스 계획으로 컴파일합니다 하 고 해당 액세스 계획을 실행 합니다.  
@@ -61,4 +59,3 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   실행에 대 한 데이터 원본에 문과 변환 된 매개 변수 값을 보냅니다.  
   
     -   모든 오류를 반환 합니다. 여기에 시퀀싱 또는 (잘못 된 커서 상태) SQLSTATE 24000 같은 상태 진단, SQLSTATE 42000 (구문 오류 또는 액세스 위반), 예: 구문 오류 및 SQLSTATE 42S02 같은 의미 체계 오류 (기본 테이블 또는 뷰를 찾을 수 없음).
-

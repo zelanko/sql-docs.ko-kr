@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>ODBC 연결 풀링 옵션 설정
 연결 풀링은 사용할 때마다 다시 설정에 필요 하지 않은 연결 풀에서 연결을 사용 하도록 응용 프로그램입니다. 사용할 수는 **연결 풀링** 탭은 **ODBC 데이터 원본 관리자** 대화 상자를 사용 하도록 설정 하 고 성능 모니터링을 사용 하지 않도록 설정 합니다. 연결 제한 시간을 설정 하는 드라이버 이름을 두 번 클릭 합니다.  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 |생성 된 풀|활성 있었으며 제거 됨 풀 포함 하 여 현재 풀 수를 지정 합니다. 이 카운터는 연결 풀에서 연결을 관리 하는 드라이버에 대 한 Windows 8에서 추가 되었습니다. 자세한 내용은 참조 [드라이버 인식 연결 풀링](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)합니다.|  
   
  사용자 고유의 모니터링 매개 변수를 지정 해야 합니다. 성능 모니터링에 대 한 예제는이 버전의 ODBC와 설명 되어 있습니다.
-

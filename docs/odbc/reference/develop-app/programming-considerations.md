@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2cb1af941d23ae7ea03bac265642bd9cbbb152d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce7fa26983200ba8857c44e6d085410e337e8df8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="programming-considerations"></a>프로그래밍 고려 사항
 이 섹션에서는 다양 한 ODBC 응용 프로그램 및 드라이버를 작성 하는 관련 된 항목에 간략하게 설명 합니다.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 -   [이전 버전과의 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)  
   
 -   [Windows의 ODBC](../../../odbc/reference/develop-app/odbc-in-windows.md)
-

@@ -3,17 +3,18 @@ title: ALTER INDEX (Transact SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   인덱스를 비활성화, 다시 작성 또는 다시 구성하거나 인덱스에 대한 옵션을 설정하여 기존 테이블 또는 뷰 인덱스(관계형 또는 XML)를 수정합니다.  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |파티션 재구성 = *partition_number*|분할되지 않은 인덱스, XML 인덱스, 공간 인덱스 또는 비활성 인덱스|  
 |IGNORE_DUP_KEY = ON|XML 인덱스<br /><br /> 공간 인덱스<br /><br /> Columnstore 인덱스: **적용 대상:** Azure SQL 데이터베이스 및 SQL Server (SQL Server 2012부터 시작)입니다.|  
 |ONLINE = ON|XML 인덱스<br /><br /> 공간 인덱스<br /><br /> Columnstore 인덱스: **적용 대상:** Azure SQL 데이터베이스 및 SQL Server (SQL Server 2012부터 시작)입니다.|
-| 다시 시작 가능한 = ON  | 지원 되지 않았으므로 인덱스 **모든** 키워드입니다. <br /><br /> **적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작 |   
+| 다시 시작 가능한 = ON  | 지원 되지 않았으므로 인덱스 **모든** 키워드입니다. <br /><br /> **적용 대상**: 시작 하 고 sql Server 2017 및 Azure SQL 데이터베이스 |   
   
 > [!WARNING]
 >  온라인으로 수행할 수 있는 인덱스 작업에 대 한 정보를 자세한 참조 [온라인 인덱스 작업에 대 한 지침이](../../relational-databases/indexes/guidelines-for-online-index-operations.md)합니다.
@@ -436,7 +436,7 @@ FILLFACTOR = *fillfactor*
 
 다시 시작 가능한  **=**  {ON | **OFF**}
 
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작  
+**적용 대상**: 시작 하 고 sql Server 2017 및 Azure SQL 데이터베이스   
 
  온라인 인덱스 작업은 다시 시작할 수 있는지 여부를 지정 합니다.
 
@@ -446,7 +446,7 @@ FILLFACTOR = *fillfactor*
 
 MAX_DURATION  **=**  *시간* [**분**] 사용한 **다시 시작 가능 = ON** (필요 **에ONLINE=**).
  
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작  
+**적용 대상**: 시작 하 고 sql Server 2017 및 Azure SQL 데이터베이스 
 
 시간을 나타냅니다 (분 단위로 지정 된 정수 값)를 다시 시작 가능한 온라인 인덱스 작업을 일시 중지 하기 전에 실행 됩니다. 
 
@@ -488,7 +488,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}
   
  *max_degree_of_parallelism* 될 수 있습니다.  
   
- 1  
+ 1.  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**적용 대상**: SQL Server 2017 (기능은 공개 미리 보기 상태에서)로 시작
+**적용 대상**: SQL Server 2017로 시작  
 
 수동으로 또는 오류로 인해 일시 중지 하는 인덱스 작업을 다시 시작 합니다.
 
 MAX_DURATION 사용한 **다시 시작 가능 = ON**
 
  
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작
+**적용 대상**: 시작 하 고 sql Server 2017 및 Azure SQL 데이터베이스
 
 시간 (분 단위로 지정 된 정수 값) 다시 시작 후 다시 시작 가능한 온라인 인덱스 작업이 실행 됩니다. 이 시간이 만료 되 면 여전히 실행 되는 경우 다시 시작 될 작업을 일시 중지 됩니다.
 
 WAIT_AT_LOW_PRIORITY 사용한 **다시 시작 가능 = ON** 및 **ONLINE = ON**합니다.  
   
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작
+**적용 대상**: 시작 하 고 sql Server 2017 및 Azure SQL 데이터베이스 
   
  이 테이블에 대 한 차단 작업을 대기 하는 일시 중지 한 후 온라인 인덱스 다시 작성을 다시 시작 합니다. **WAIT_AT_LOW_PRIORITY** 온라인 인덱스 다시 작성 작업은 다른 작업을 온라인 인덱스 작성 작업을 대기 하는 동안 진행할 수 있도록 하는 낮은 우선 순위 잠금을 대기 함을 나타냅니다. 생략 된 **WAIT AT LOW PRIORITY** 옵션은 `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`합니다. 자세한 내용은 참조 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)합니다. 
 
 
 일시 중지
  
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작
+**적용 대상**: 시작 하 고 sql Server 2017 및 Azure SQL 데이터베이스 
   
 다시 시작 가능한 온라인 인덱스 다시 작성 작업을 일시 중지 합니다.
 
 중단
 
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작   
+**적용 대상**: 시작 하 고 sql Server 2017 및 Azure SQL 데이터베이스   
 
 다시 시작 가능 상태로 선언 된 실행 중이거나 일시 중지 된 인덱스 작업을 중단 합니다. 명시적으로 실행 해야는 **중단** 명령이 종료 된 다시 시작 가능한 인덱스 다시 작성 작업 합니다. 오류 또는 다시 시작 가능한 인덱스 작업을 일시 중지;의 실행을 종료 하지 않습니다. 대신, 작업을 무기한 일시 중지 상태로 둡니다.
   
@@ -712,7 +712,7 @@ WAIT_AT_LOW_PRIORITY 사용한 **다시 시작 가능 = ON** 및 **ONLINE = ON**
 
 ### <a name="resumable-index-operations"></a>다시 시작 가능한 인덱스 작업
 
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작
+**적용 대상**: 시작 하 고 sql Server 2017 및 Azure SQL 데이터베이스 
 
 다시 시작 가능을 사용 하 여 다시 시작 가능으로 지정 된 온라인 인덱스 다시 작성 = ON 옵션입니다. 
 -  다시 시작 가능한 옵션에 지정된 된 인덱스에 대 한 메타 데이터는 영구 저장소가 아니며 현재 DDL 문의 기간에만 적용 됩니다. 따라서 다시 시작 가능 = ON 절을 작업 재개를 사용 하도록 설정 하려면 명시적으로 지정 해야 합니다.
@@ -786,7 +786,7 @@ WAIT_AT_LOW_PRIORITY 사용한 **다시 시작 가능 = ON** 및 **ONLINE = ON**
   
 -   Columnstore 인덱스는 SQL Server 2012 이전의 지원 되지 않습니다. 
 
--  다시 시작 가능한 인덱스 작업은 SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 사용할 수 있는 시작 |   
+-  다시 시작 가능한 인덱스 작업은 Azure SQL 데이터베이스 및 SQL Server 2017부터 사용 가능   
   
 ## <a name="basic-syntax-example"></a>기본 구문 예제:   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>10. 다시 시작 가능한 온라인 인덱스 다시 작성
 
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작    
+**적용 대상**: 시작 하 고 sql Server 2017 및 Azure SQL 데이터베이스   
 
  다음 예에서는 다시 시작 가능한 온라인 인덱스 다시 작성을 사용 하는 방법을 보여 줍니다. 
 
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

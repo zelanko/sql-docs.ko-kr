@@ -13,24 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], data types
 - Data Mining Extensions [Analysis Services], data types
 - data types [DMX]
 ms.assetid: 4d81fe82-b187-4f80-b8ea-fe37423123a6
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8a66c05b21a723aaa50de515cb9e686fb85e603c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ca5ce97a712125578507dd9ce13f4241c7fafe3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-types-dmx"></a>데이터 형식(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 08/02/2017
  데이터에 대 한 자세한 내용은 형식에 대해 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지 원하는 참조 [데이터 형식 &#40; 데이터 마이닝 속성 &#41;](../analysis-services/data-mining/data-types-data-mining.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘 &#40; Analysis Services-데이터 마이닝 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Data Mining Extensions &#40; DMX &#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -64,4 +62,3 @@ ms.lasthandoff: 08/02/2017
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

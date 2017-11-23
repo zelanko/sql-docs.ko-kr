@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - dates [SQL Server]
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 05ce8f3240590e1be28722ded5a526ad2dd2d6df
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 7ce3baac7ec87ff3cad771234ab1196fb0a3855e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>날짜 및 시간 데이터 형식 및 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,9 +91,9 @@ ms.lasthandoff: 09/06/2017
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *날짜* )|지정 된을 나타내는 문자열을 반환 *datepart* 지정한 날짜의 합니다.|**nvarchar**|비결정적|  
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *날짜* )|지정 된을 나타내는 정수를 반환 *datepart* 는 지정 된 *날짜*합니다.|**int**|비결정적|  
-|[일](../../t-sql/functions/day-transact-sql.md)|DAY ( *날짜* )|지정 된 날짜 부분을 나타내는 정수를 반환 *날짜*합니다.|**int**|결정적|  
-|[월](../../t-sql/functions/month-transact-sql.md)|월 ( *날짜* )|지정 된의 월 부분을 나타내는 정수를 반환 *날짜*합니다.|**int**|결정적|  
-|[연도](../../t-sql/functions/year-transact-sql.md)|연도 ( *날짜* )|지정 된 연도 부분을 나타내는 정수를 반환 *날짜*합니다.|**int**|결정적|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *날짜* )|지정 된 날짜 부분을 나타내는 정수를 반환 *날짜*합니다.|**int**|결정적|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|월 ( *날짜* )|지정 된의 월 부분을 나타내는 정수를 반환 *날짜*합니다.|**int**|결정적|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|연도 ( *날짜* )|지정 된 연도 부분을 나타내는 정수를 반환 *날짜*합니다.|**int**|결정적|  
   
 ###  <a name="fromParts"></a>해당 부분에서 날짜 및 시간 값 가져오기 함수
   
@@ -149,11 +146,10 @@ ms.lasthandoff: 09/06/2017
 |[CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|문자열 리터럴과 다른 날짜 및 시간 형식 간의 날짜/시간 값 변환에 대한 정보를 제공합니다.|  
 |[국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)|데이터베이스 및 사용 하는 데이터베이스 응용 프로그램의 이식성에 대 한 지침을 제공 [!INCLUDE[tsql](../../includes/tsql-md.md)] 다른 디렉터리로 또는 해당 언어 문을 여러 언어를 지원 합니다.|  
 |[ODBC 스칼라 함수 &#40; Transact SQL &#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|사용할 수 있는 ODBC 스칼라 함수에 대 한 정보를 제공 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문. ODBC 날짜 및 시간 함수가 포함 됩니다.|  
-|[표준 시간대 &AMP; #40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|표준 시간대 변환 기능을 제공 합니다.|  
+|[표준 시간대 &AMP;#40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|표준 시간대 변환 기능을 제공 합니다.|  
   
 ## <a name="see-also"></a>참고 항목
 [함수](../../t-sql/functions/functions.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   
-

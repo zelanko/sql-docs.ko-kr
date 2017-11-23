@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64af89226e917b05c28f0c85500281fa84bc676c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 54a471846953e7afffa74fe910ae7376731e517b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="time-date-and-interval-functions"></a>시간, 날짜 및 간격 함수
 다음 표에서 ODBC 스칼라 함수 집합에 포함 된 날짜 및 시간 함수를 나열 합니다. 응용 프로그램에서 호출 하 여 드라이버를 통해 지원 되는 날짜 및 시간 함수를 확인할 수 **SQLGetInfo** 와 *정보 유형* SQL_TIMEDATE_FUNCTIONS입니다.  
@@ -66,4 +64,3 @@ ms.lasthandoff: 10/05/2017
 |**TIMESTAMPDIFF (** *간격*, *timestamp_exp1*, *timestamp_exp2* **)** (ODBC 2.0)|정수 형식의 간격 수를 반환 *간격* 기준인 *timestamp_exp2* 보다 크면 *timestamp_exp1*합니다. 유효한 값은 *간격* 는 다음 키워드:<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> 여기서 소수 자릿수 초는 billionths 초 단위로 표현 됩니다. 예를 들어 다음 SQL 문은 자신이 이용 되어 년 수와 각 직원의 이름을 반환 합니다.<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> 두 식 중 하나가 타임 스탬프 시간 값이 있으면 및 *간격* 타임 스탬프 간의 차이 계산 하기 전에 현재 날짜로 설정 일, 주, 월, 분기 또는 연도, 해당 타임 스탬프의 날짜 부분을 지정 합니다.<br /><br /> 두 식 중 하나가 타임 스탬프는 날짜 값 이면 및 *간격* 소수 자릿수를 지정 해당 타임 스탬프의 시간 부분 초, 초, 분 또는 시간, 타임 스탬프 간의 차이 계산 하기 전에 0으로 설정 됩니다.<br /><br /> 응용 프로그램 결정 하는 간격을 호출 하 여 데이터 원본 지원 **SQLGetInfo** SQL_TIMEDATE_DIFF_INTERVALS 옵션을 사용 합니다.|  
 |**주 (** *date_exp* **)** (ODBC 1.0)|주 필드에 따라 해당 연도의 주 반환 *date_exp* 1-53 범위의 정수 값으로.|  
 |**연도 (** *date_exp* **)** (ODBC 1.0)|year 필드에 따라 반환 *date_exp* 정수 값으로. 범위는 데이터 소스에 따라 다릅니다.|
-

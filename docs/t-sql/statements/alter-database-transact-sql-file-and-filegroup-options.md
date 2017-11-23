@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
 - ADD_FILE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting files
 - removing files
@@ -44,17 +42,16 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 0672b00cbb7064bdb889908585b4333865ac75c9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fdd1f2aaab4e4aeeced6eb069255adba5b333abf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact SQL) 파일 및 파일 그룹 옵션 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -203,11 +200,11 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  SIZE 및 FILEGROWTH 속성은 FILESTREAM 파일 그룹에 적용되지 않습니다.  
   
  **'** *memory_optimized_data_path* **'**  
- 메모리 액세스에 최적화된 파일 그룹에서 FILENAME은 메모리 액세스에 최적화된 데이터가 저장되는 경로를 나타냅니다. 따라서 마지막 폴더 바로 위의 경로까지 있어야 하고 마지막 폴더 자체는 있으면 안 됩니다. 예를 들어 :\MyFiles\MyData 경로를 지정하는 경우 ALTER DATABASE를 실행하기 전에 C:\MyFiles 경로가 있어야 하지만 MyData 폴더는 있으면 안 됩니다.  
+ 메모리 최적화 파일 그룹에서 FILENAME은 메모리 최적화 데이터가 저장되는 경로를 나타냅니다. 따라서 마지막 폴더 바로 위의 경로까지 있어야 하고 마지막 폴더 자체는 있으면 안 됩니다. 예를 들어 :\MyFiles\MyData 경로를 지정하는 경우 ALTER DATABASE를 실행하기 전에 C:\MyFiles 경로가 있어야 하지만 MyData 폴더는 있으면 안 됩니다.  
   
  파일 그룹과 파일(`<filespec>`)은 같은 문으로 만들어야 합니다.  
   
- SIZE, MAXSIZE 및 FILEGROWTH 속성은 메모리 액세스에 최적화된 파일 그룹에 적용되지 않습니다.  
+ SIZE, MAXSIZE 및 FILEGROWTH 속성은 메모리 최적화 파일 그룹에 적용되지 않습니다.  
   
  크기 *크기*  
  파일 크기를 지정합니다. SIZE는 FILESTREAM 파일 그룹에 적용되지 않습니다.  
@@ -666,4 +663,3 @@ GO
  [sp_filestream_force_garbage_collection&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
   
   
-

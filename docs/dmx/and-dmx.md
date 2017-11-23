@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- AND
-dev_langs:
-- DMX
-helpviewer_keywords:
-- AND, DMX
+f1_keywords: AND
+dev_langs: DMX
+helpviewer_keywords: AND, DMX
 ms.assetid: d337b20c-f80e-48be-9354-371367e53735
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: da1fc2f283afefa21c9b505293656e8ee5de9e37
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bcb67e3b5c16a9bee84271eebc2083a065e924d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="and-dmx"></a>AND(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,10 +60,9 @@ Expression1 AND Expression2
 |FALSE|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [논리 연산자 &#40; DMX &#41;](../dmx/operators-logical.md)   
  [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

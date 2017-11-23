@@ -14,15 +14,13 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords:
-- Linux, encrypted connections
+helpviewer_keywords: Linux, encrypted connections
 ms.workload: Inactive
+ms.openlocfilehash: f2f0792202d3af6be0e24ff8b24532598c8d0c84
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux에서 SQL Server 연결 암호화
 
@@ -138,4 +136,3 @@ TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호
 |대상 보안 주체 이름이 올바르지 않습니다.  |SQL Server의 인증서 일반 이름 필드는 클라이언트의 연결 문자열에 지정 된 서버 이름과 일치 하는지 확인 합니다. |  
 |현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. |클라이언트가 SQL Server에 필요한 TLS 프로토콜 버전을 지원 하지 않습니다이 오류가 발생할 수 있습니다. 예를 들어 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS 1.2 필요, 클라이언트도 TLS 1.2 프로토콜을 지원 하는지 확인 하도록 구성 되어 있습니다. |
 | | |   
-

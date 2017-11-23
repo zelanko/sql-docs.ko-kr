@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d3a33528b7f64bb781e835e3ec0f9bbd563adb35
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1c4c3a857436f9b66d5aed447a6d5b47d59915a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData를 사용 하 여 출력 매개 변수 검색
 ODBC 3.8 하기 전에 응용 프로그램만 바인딩된 출력 버퍼를 사용 하 여 쿼리를 출력 매개 변수를 검색할 수 있습니다. 그러나 매개 변수 값의 크기가 매우 크게 (예: 큰 이미지) 매우 큰 버퍼를 할당 하는 어렵습니다. ODBC 3.8 부분에서 출력 매개 변수를 검색 하는 새로운 방법이 도입 되었습니다. 응용 프로그램이 호출할 수 **SQLGetData** 작은 버퍼로 여러 번 큰 매개 변수 값을 검색 합니다. 큰 열 데이터를 검색 하는 것과 비슷합니다.  
@@ -278,4 +276,3 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
   
 ## <a name="see-also"></a>관련 항목:  
  [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)
-

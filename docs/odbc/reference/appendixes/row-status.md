@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - row status [ODBC]
 - cache [ODBC]
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 60931ff8464478a55828713747ad6f4bb408f10d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8f164b8269e1150cdf7a85e486bcc3fd93a9411f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="row-status"></a>행 상태
 > [!IMPORTANT]  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   성공적으로 사용 하 여 데이터 소스에서 행을 인출할 때 SQL_ROW_SUCCESS **SQLFetch**합니다.  
   
 -   행에 위치 지정된 update 문을 실행할 때 SQL_ROW_UPDATED 합니다.
-

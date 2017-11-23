@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DELETE TAG command [ODBC]
+helpviewer_keywords: DELETE TAG command [ODBC]
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5e31cf41163f512b5450e5452f8e0adff5c0a604
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c10f0daac2f672b40b3bda050401e9873afe6aa8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="delete-tag-command"></a>태그 명령 삭제
 복합 인덱스 (.cdx) 파일에서 태그 또는 태그를 제거합니다.  
@@ -54,4 +51,3 @@ DELETE TAG ALL [OF CDXFileName]
   
 ## <a name="see-also"></a>관련 항목:  
  [INDEX 명령](../../odbc/microsoft/index-command.md)
-

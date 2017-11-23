@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], application types
 - application compatibility issues [ODBC]
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3cca547e091ffdd601550b5cfb4ddb6b078f0900
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-applications"></a>응용 프로그램의 종류
 ODBC 응용 프로그램을 다음과 같이 분류할 수 있습니다.  
@@ -88,4 +86,3 @@ ODBC 응용 프로그램을 다음과 같이 분류할 수 있습니다.
     -   조건부 코드 내 에서만 ODBC의 최신 버전에서 새로운 기능을 사용합니다.  
   
     -   제한적으로 조건부 처리 하는 코드 변경 된 동작 또는 ODBC 응용 프로그램의 이전 버전 되도록 등록 되어 있습니다.
-

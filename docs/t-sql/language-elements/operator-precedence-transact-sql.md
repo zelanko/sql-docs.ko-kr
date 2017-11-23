@@ -8,29 +8,26 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], precedence
 - operator precedence [Transact-SQL]
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c534653bb383fbbfcd069cb98bb72519d3d02987
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db0c7bd10a7d53f4de8fb5aedbe6f1cf3c9be42b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="operator-precedence-transact-sql"></a>연산자 우선 순위(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 |Level|연산자|  
 |-----------|---------------|  
 |1.|~ (비트 NOT)|  
-|2|*(곱하기), /(나누기), %(모듈로)|  
+|2|* (곱하기) / (나누기), % (계수)|  
 |3|+ (양수),-(음수) + (더하기) + (연결),-(빼기), & (비트 AND), ^ (비트 배타적 OR), &#124; (비트 OR)|  
 |4|=, >, \<, > =, < =, <>,! =,! >,! < (비교 연산자)|  
 |5|NOT|  
@@ -95,4 +92,3 @@ SELECT @MyNumber;
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
-

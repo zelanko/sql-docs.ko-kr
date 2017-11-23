@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - SQL grammar [ODBC], create index
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6737ad2bdde9516291863214d3da5dd6087e3ec2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0f6e7525059640e7ffdadd79ec26a62229eabae9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-index-statement"></a>CREATE INDEX 문
 CREATE INDEX 문의 구문은 다음과 같습니다.  
@@ -40,4 +38,3 @@ CREATE INDEX 문의 구문은 다음과 같습니다.
  Paradox 드라이버를 사용 하는 경우 CREATE INDEX 문은 Paradox 기본 키 파일 및 보조 파일을 만듭니다.  
   
  이 문은 Microsoft Excel 또는 텍스트 드라이버에서 지원 되지 않습니다.
-

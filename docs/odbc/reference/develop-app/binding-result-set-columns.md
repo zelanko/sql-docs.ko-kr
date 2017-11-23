@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cafac55eeca169ff83521e945f0f5e76b31f19c8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-result-set-columns"></a>바인딩 결과 집합 열
 응용 프로그램은 모든 열이 없는 바인딩 포함 하 여 결과 선택에 따라 집합의 수가 많거나 적은 열으로 바인딩할 수 있습니다. 데이터 행을 인출할 때 드라이버는 응용 프로그램에 바인딩된 열에 대 한 데이터를 반환 합니다. 응용 프로그램 결과 집합의 모든 열으로 바인딩합니다 되는 여부는 응용 프로그램에 따라 달라 집니다. 예를 들어 일반적으로 보고서를 생성 하는 응용 프로그램을 고정된 형식으로에 이러한 응용 프로그램의 모든 보고서에 사용 되는 열을 포함 하는 결과 집합 및 바인딩할 만들고 모든 이러한 열에 대 한 데이터를 검색 합니다. 경우에 따라 데이터의 전체 화면을 표시 하는 응용 프로그램은 사용자에 게 표시할; 열을 허용 이러한 응용 프로그램 사용자 수를 있지만 바인딩 및 사용자가 선택한 열에 대해서만 데이터를 검색 하는 모든 열을 포함 한 결과 집합을 만듭니다.  
@@ -50,4 +48,3 @@ SELECT * FROM Lines
 ```  
   
  동일한 문 핸들에서 첫 번째 결과 집합에 대 한 열 바인딩은 여전히 문의 구조에 저장 하는 바인딩 되입니다. 대부분의 경우에서 낮은 프로그래밍 관행 이며 피해 야 합니다. 대신, 응용 프로그램을 호출 해야 **SQLFreeStmt** 오래 된 모든 열을 바인딩 해제 하 고 다음 새 캠페인을 바인딩할 SQL_UNBIND 옵션과 함께 합니다.
-

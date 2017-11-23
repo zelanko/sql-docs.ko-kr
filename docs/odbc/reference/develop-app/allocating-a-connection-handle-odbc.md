@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 598ced35301a656baf5fc744785a6fc8aefe1ef4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>ODBC 연결 핸들 할당
 응용 프로그램은 데이터 원본이 나 드라이버에 연결할 수, 먼저 다음과 같이 연결 핸들을 할당 해야 합니다.  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
  연결 핸들을 할당 하는 드라이버 로드와 동일 하 게 하는 것이 유용 합니다. 연결 함수를 호출할 때까지 드라이버가 로드 되지 않습니다. 따라서 연결 핸들을 할당 한 후와 드라이버 또는 데이터 원본에 연결 하기 전에 응용 프로그램 연결 핸들 사용 하 여 호출할 수의 유일한 함수는, **SQLSetConnectAttr**, **SQLGetConnectAttr**, 또는 **SQLGetInfo** SQL_ODBC_VER 옵션을 사용 합니다. 와 같은 연결 핸들을 사용 하 여 다른 함수를 호출 **SQLEndTran**, SQLSTATE 08003 (열려 있지 않습니다. 연결)를 반환 합니다. 자세한 내용은 참조 하십시오. [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
   
  연결 핸들에 대 한 자세한 내용은 참조 [연결 핸들](../../../odbc/reference/develop-app/connection-handles.md)합니다.
-

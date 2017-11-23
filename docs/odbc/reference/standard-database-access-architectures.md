@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2cb4ddb3b51763772b00b7d17691e60109d1d6aa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ff9ebb61d8a0446f4c6015dd5c0ae56c22ebfc45
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="standard-database-access-architectures"></a>표준 데이터베이스 액세스 아키텍처
 이전 섹션에서 설명한 데이터베이스 액세스 구성 요소를 살펴본 것으로 확인 그 중 두-프로그래밍 인터페이스 및 데이터 스트림 프로토콜-표준화 해야 합니다. 다른 두 가지 구성 요소-IPC 메커니즘 및 네트워크 프로토콜-뿐만 아니라 너무 낮은 수준에 있어야 하지만 둘 다 네트워크 및 운영 체제에 따라 달라 집니다. 또한 세 번째 접근는-게이트웨이-제공 하는 기능은 표준화 합니다.  
@@ -35,4 +33,3 @@ ms.lasthandoff: 09/09/2017
 -   [표준 데이터 스트림 프로토콜](../../odbc/reference/standard-data-stream-protocol.md)  
   
 -   [표준 게이트웨이](../../odbc/reference/standard-gateway.md)
-

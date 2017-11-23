@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70bef5a2817b0a7bbdd24b01ca07f357b9c5237d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-timestamp"></a>SQL에서 c: 타임 스탬프
 다음은 timestamp ODBC SQL 데이터 형식에 대 한 식별자가입니다.  
@@ -58,4 +56,3 @@ _C_TYPE_TIMESTAMP|타임 스탬프의 소수 부분 잘리지 [a]<br /><br /> �
  [f] C 데이터 형식에 해당 크기입니다.  
   
  결과 문자열에는 타임 스탬프 SQL 데이터를 C 문자 데이터로 변환 되 면는 "*yyyy*-*mm*-*dd* *hh* :*mm*:*ss*[. *f...* ] "형식, 소수 자릿수 초의 최대 9 자리 숫자를 사용할 수 있는 위치입니다. 이 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다. (소수점 및 소수 자릿수 초를 제외한 전체 형식을 사용 되어야 합니다, 타임 스탬프 SQL 데이터 형식의 전체 자릿수에 관계 없이.)
-

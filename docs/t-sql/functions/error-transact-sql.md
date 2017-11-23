@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@ERROR'
 - '@@ERROR_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - '@@ERROR function'
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 5481957e399f072e400a042825c2966f06d2e782
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ef3f7b2f0b051fd79dd59325af7900aefff95a9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40; 오류 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +54,7 @@ ms.lasthandoff: 09/01/2017
   
  때문에 @@ERROR 의 선택을 취소 하 고 실행 된 각 문에서 다시 설정, 확인 하는 문 바로 다음을 확인 또는 나중에 확인할 수 있는 지역 변수에 저장 합니다.  
   
- TRY...CATCH 구문을 사용하여 오류를 처리하세요. TRY... CATCH 구성 지원 추가 시스템 함수 (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE) 보다 많은 오류 정보를 반환 하는 또한 @@ERROR 합니다. TRY...CATCH는 오류가 발생된 문 바로 다음 문의 오류 번호만 반환하도록 제한되지 않은 ERROR_NUMBER 함수도 지원합니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)를 참조하세요.  
+ TRY...CATCH 구문을 사용하여 오류를 처리하세요. TRY... CATCH 구성 지원 추가 시스템 함수 (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE) @ 보다 많은 오류 정보를 반환 하는 또한@ERROR합니다. TRY...CATCH는 오류가 발생된 문 바로 다음 문의 오류 번호만 반환하도록 제한되지 않은 ERROR_NUMBER 함수도 지원합니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -185,5 +182,4 @@ GO
  [sys.messages &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
-
 

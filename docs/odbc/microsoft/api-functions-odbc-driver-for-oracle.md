@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], functions
 - API functions [ODBC]
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f9508c1c2b6d366e9180a86563c9fa5c45a4b47
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3671b82eaa3281ff682314943209eb50273eb9dd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>API 함수 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 -   [수준 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) 규칙도 추가 기능 트랜잭션과 같은 핵심 수준 인터페이스 기능을 제공 합니다.  
   
 -   [수준 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) 규칙에 따라도로 같은 기능 책갈피, 동적 매개 변수 및 ODBC 함수의 비동기 실행 수준 1 기능을 제공 합니다.
-

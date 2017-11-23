@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 2fcc328140d3812d6000a137c8aabf9294b98de3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2736223d2a333738ca17b3b3307034c6744512d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 고객 의견
 
@@ -145,4 +144,3 @@ Docker에서 로컬 감사를 사용 하도록 설정 하려면 Docker 있어야
 ## <a name="next-steps"></a>다음 단계
 
 Linux에서 SQL Server에 대 한 자세한 내용은 참조는 [linux 개요 SQL Server의](sql-server-linux-overview.md)합니다.
-

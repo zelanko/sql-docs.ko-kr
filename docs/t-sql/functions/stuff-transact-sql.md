@@ -1,19 +1,20 @@
 ---
 title: STUFF (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 11/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STUFF
 - STUFF_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting characters
 - STUFF function
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - characters [SQL Server], replacing
 - inserting data
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: df9a3d019f22ec8a0ba610f2dd694e45a8bd9da3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="stuff-transact-sql"></a>STUFF(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   STUFF 함수는 다른 문자열에 문자열을 삽입합니다. 이 함수는 지정된 시작 위치와 문자 수에 따라 첫 번째 문자열의 문자를 삭제하고 두 번째 문자열을 시작 위치에 삽입합니다.  
   
@@ -53,11 +53,11 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터입니다. *character_expression* 상수, 변수 또는 문자 또는 이진 데이터의 열 수 있습니다.  
   
  *시작*  
- 삭제 및 삽입 시작 위치를 지정하는 정수 값입니다. 경우 *시작* 또는 *길이* 가 음수 이면 null 문자열이 반환 됩니다. 경우 *시작* 첫 번째 보다 긴 *character_expression*, null 문자열이 반환 됩니다. *시작* 유형일 수 **bigint**합니다.  
+ 삭제 및 삽입 시작 위치를 지정하는 정수 값입니다. 경우 *시작* 가 음수 또는 0 이면 null 문자열이 반환 됩니다. 경우 *시작* 첫 번째 보다 긴 *character_expression*, null 문자열이 반환 됩니다. *시작* 유형일 수 **bigint**합니다.  
   
  *length*  
- 삭제할 문자 수를 지정하는 정수입니다. 경우 *길이* 첫 번째 보다 긴 *character_expression*, 문자까지 삭제 마지막으로 다음 시간이 내의 *character_expression*합니다. *길이* 유형일 수 **bigint**합니다.  
-  
+ 삭제할 문자 수를 지정하는 정수입니다. 경우 *길이* 가 음수 이면 null 문자열이 반환 됩니다. 경우 *길이* 첫 번째 보다 긴 *character_expression*, 문자까지 삭제 마지막으로 다음 시간이 내의 *character_expression*합니다.  경우 *길이* 삽입 문자열의 첫 번째 문자가 앞에 오는 0이 됩니다. *길이* 유형일 수 **bigint**합니다.
+
  *replaceWith_expression*  
  이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터입니다. *character_expression* 상수, 변수 또는 문자 또는 이진 데이터의 열 수 있습니다. 이 식은 대체 *길이* 자의 *character_expression* 에서 시작 *시작*합니다. 제공 `NULL` 로 *replaceWith_expression*, 아무 것도 삽입 하지 않고 문자를 제거 합니다.   
   
@@ -92,4 +92,3 @@ aijklmnef
 ## <a name="see-also"></a>관련 항목:  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-

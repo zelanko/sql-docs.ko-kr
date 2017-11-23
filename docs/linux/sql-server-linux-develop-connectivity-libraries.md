@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
+ms.openlocfilehash: 765fb054ab4fb5332df7b2f9d2e202188f621b67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f692639531a133652787dfe818fe25847c0d910b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>연결 라이브러리 및 Microsoft SQL Server에 대 한 프레임 워크
 
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/27/2017
 
 ## <a name="related-links"></a>관련 링크
 - [SQL Server 드라이버](http://msdn.microsoft.com/library/mt654049.aspx) 클라이언트 응용 프로그램에서 연결 하기 위해
-

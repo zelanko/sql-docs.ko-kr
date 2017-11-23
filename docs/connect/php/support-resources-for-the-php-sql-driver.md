@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- support
+helpviewer_keywords: support
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2b2225256554828dfd749280ed5b401fb181972
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b2bda9171fe1aafdcf94bb0601e9a505b0a67341
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="support-resources-for-the-php-sql-driver"></a>PHP SQL 드라이버에 대한 지원 리소스
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,4 +61,3 @@ PHP 설명서 방문 [http://www.php.net/docs.php](http://go.microsoft.com/fwlin
 ## <a name="see-also"></a>참고 항목  
 [PHP SQL 드라이버 개요](../../connect/php/overview-of-the-php-sql-driver.md)
   
-

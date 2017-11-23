@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46f0e525814b648b5f2b1236e1b093321974eb39
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deferred-fields"></a>지연 된 필드
 값 *필드 지연* 시간을 설정 하지만 드라이버는 지연 된 효과 대 한 변수의 주소를 저장 하는 경우에 사용 되지 않습니다. 변수의 내용을에 대 한 호출 시 드라이버는 응용 프로그램 매개 변수 설명자에 대 한 사용 **SQLExecDirect** 또는 **SQLExecute**합니다. 응용 프로그램 행 설명자를 사용 하는 드라이버 변수의 내용을 인출 시간에 사용합니다.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 -   매개 변수는 문자열이 APD의 SQL_DESC_OCTET_LENGTH_PTR 필드에 null 값을 해당 문자열은 null로 끝나는 드라이버 가정 합니다. 이 필드에 null 값을 출력 동적 매개 변수에 대 한 길이 정보를 반환 합니다. 드라이버를 방지 합니다. (SQL_DESC_TYPE 필드는 문자열 매개 변수를 나타내지 않습니다 SQL_DESC_OCTET_LENGTH_PTR 필드는 무시 됩니다.)  
   
  응용 프로그램 하지 할당을 취소 하거나 필드와 함께 연결 시간 및 드라이버를 읽거나 씁니다 시간 간의 지연 된 필드에 대해 사용 되는 변수를 삭제 해야 합니다.
-

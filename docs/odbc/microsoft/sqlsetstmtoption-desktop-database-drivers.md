@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetStmtOption function [ODBC], Desktop Database Drivers
+helpviewer_keywords: SQLSetStmtOption function [ODBC], Desktop Database Drivers
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 09f5e675ca04c801df89d0ab289d6928c6cd1210
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d1f51805413056a06c6cee769920e1ad878abe5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetstmtoption-desktop-database-drivers"></a>SQLSetStmtOption (데스크톱 데이터베이스 드라이버)
 |*fOption*|설명|  
@@ -36,4 +33,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_QUERY_TIMEOUT|지원되지 않습니다.|  
 |SQL_ROW_NUMBER|지원되지 않습니다.|  
 |SQL_SIMULATE_CURSOR|지원되지 않습니다.|
-

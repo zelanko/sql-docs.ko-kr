@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set nullSET NULL
+helpviewer_keywords: set nullSET NULL
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ddc4b8a31a50c2f8ac0da02ffeaf2701a8a3e80
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 14cade223de7014dd4a0c27295d3ff742d18af17
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-null-command"></a>SET NULL 명령
 결정 null 값은 및 지원 되는 ALTER TABLE-SQL, CREATE TABLE-SQL INSERT-방법을 SQL 명령입니다.  
@@ -55,4 +52,3 @@ SET NULL ON | OFF
  [ALTER TABLE-SQL 명령](../../odbc/microsoft/alter-table-sql-command.md)   
  [테이블-SQL 명령을 만들려면](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT - SQL 명령](../../odbc/microsoft/insert-sql-command.md)
-

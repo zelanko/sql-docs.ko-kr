@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7694a2646f8cb62824991d37a01cd49f5291033
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-data"></a>열 데이터
 > [!IMPORTANT]  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 >  커서 라이브러리 경우 열에 대 한 캐시를 업데이트 하지 않습니다 **StrLen_or_IndPtr* 해당 행 집합의 버퍼는 SQL_DATA_AT_EXEC 또는 SQL_LEN_DATA_AT_EXEC 매크로의 결과입니다.  
   
  때 하나의 열, 데이터 원본 blank 패드 고정 길이 문자 데이터 및 필요에 따라 0 패드 고정 길이 이진 데이터 업데이트 합니다. 예를 들어 데이터 원본 "Smith"로 char (10) 열에 "Smith"를 저장합니다. 커서 라이브러리 위치 지정된 update 문을 실행 한 후이 데이터는 캐시를 복사 하는 경우 빈 값 패드 또는 영 (0) 하지 버퍼의에서 데이터는 행 집합을 수행 합니다. 따라서 응용 프로그램 필요한 경우 빈 값을 채우는 또는 0을 채우는 커서 라이브러리의 캐시에 값으로, 다음 조건을 충족 해야 blank 패드 또는 영 (0) 행 집합 버퍼에 값 위치 지정된 update 문을 실행 하기 전에.
-

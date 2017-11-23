@@ -1,19 +1,20 @@
 ---
 title: "선택 (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cebbb09ffbc437ebdb4c0d0f5fdc5cf5a59adea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스에서 행을 검색 하 고 하나 이상의 행 또는 열에서 하나 이상의 테이블을 선택할 수 있게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SELECT 문의 전체 구문은 복잡하지만 주요 절은 다음과 같이 요약할 수 있습니다.  
   
@@ -138,7 +138,12 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. 맨 위로 이동  
-  
+
+> [!WARNING]
+> 위의 순서 일반적으로 그렇습니다. 그러나 특수 한 경우 시퀀스 다 수 있습니다.
+>
+> 예를 들어 클러스터형된 인덱스에는 보기 및 뷰에 일부 테이블 행을 제외가 있고 보기의 SELECT 열 목록에서 데이터 형식을 변경 하는 CONVERT를 사용 하 여 *varchar* 를 *정수*합니다. 이 경우 CONVERT WHERE 절을 실행 하기 전에 실행할 수 있습니다. 일반적이 지 않은 실제로 합니다. 종종 사례에 중요 한 경우 다른 시퀀스를 방지 하기 위해 뷰를 수정 하는 방법이 있습니다. 
+
 ## <a name="permissions"></a>Permissions  
  데이터를 선택하려면 테이블이나 뷰에 대한 **SELECT** 권한이 있어야 합니다. 이 권한은 스키마에 대한 **SELECT** 권한이나 테이블에 대한 **CONTROL** 권한과 같은 상위 범위에서 상속할 수 있습니다. 멤버 자격이 필요 또는 **db_datareader** 또는 **db_owner** 고정 데이터베이스 역할 또는 **sysadmin** 고정된 서버 역할입니다. 사용 하 여 새 테이블 만들기 **SELECTINTO** 둘 다 있어야는 **CREATETABLE** 권한, 및 **ALTERSCHEMA** 새 테이블을 소유 하는 스키마에 대 한 권한이 있습니다.  
   
@@ -266,5 +271,4 @@ ORDER BY OrderDateKey;
  [예제 &#40;를 선택 합니다. Transact SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [힌트 &#40; Transact SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
   
-
 

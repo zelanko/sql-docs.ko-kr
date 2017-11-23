@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5ea639a8bde008d657cff558183220d7e68fe568
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-odbc-3x-drivers"></a>쓰기 ODBC 3.x 드라이버
 다음 표에서 ODBC 3에서 함수 지원을 보여 줍니다. *x* 드라이버 및 ODBC 응용 프로그램 및 ODBC 3에 대해 함수를 호출할 때 드라이버 관리자에 의해 수행 매핑. *x* 드라이버입니다.  
@@ -124,4 +122,3 @@ ms.lasthandoff: 09/09/2017
  [특정 상황에서 5] 드라이버 해야이 기능을 지원 합니다. 자세한 내용은이 함수의 참조 페이지를 참조 하세요.  
   
  [6]의 드라이버 지원 하도록 선택할 수 **SQLGetFunctions** 드라이버에서 지 원하는 기능 집합은 달라 연결에서 연결 하는 경우.
-

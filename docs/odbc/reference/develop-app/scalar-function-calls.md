@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], scalar function calls
+helpviewer_keywords: escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e45b0f8bf4944b1f683245033123b15d76c1befa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3fb62d7c916584da7411f398f66a2acf134bfa24
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scalar-function-calls"></a>스칼라 함수 호출
 스칼라 함수는 각 행에 대 한 값을 반환합니다. 예를 들어 절대 값의 스칼라 함수는 숫자 열을 인수로 사용 하 고 열에 각 값의 절대값을 반환 합니다. 스칼라 함수를 호출 하기 위한 이스케이프 시퀀스는  
@@ -60,4 +57,3 @@ INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)
 ```  
   
  데이터 원본에 의해 지원 되는 스칼라 함수를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS, 및 SQL_TIMEDATE_ 사용 함수 옵션입니다. 변환 작업에서 지원 되는지 확인 하는 **변환** 함수, 응용 프로그램이 호출 **SQLGetInfo** SQL_CONVERT로 시작 하는 옵션을 사용 합니다.
-

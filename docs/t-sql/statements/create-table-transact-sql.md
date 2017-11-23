@@ -1,13 +1,14 @@
 ---
 title: "테이블 (Transact SQL) 만들기 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +20,7 @@ f1_keywords:
 - TABLE_TSQL
 - FILESTREAM_ON
 - FILESTREAM_ON_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECK constraints
 - global temporary tables [SQL Server]
@@ -47,20 +47,19 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
+caps.latest.revision: "256"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0978041b1c2683f6af3f6c531ddc10edc6b9bcbf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   새 테이블을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
   
@@ -979,7 +978,7 @@ CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정할 수 있�
   
  HASH 인덱스가 만들어졌음을 나타냅니다.  
   
- 해시 인덱스는 메모리 액세스에 최적화된 테이블에서만 지원됩니다.  
+ 해시 인덱스는 메모리 최적화 테이블에서만 지원됩니다.  
   
 ## <a name="remarks"></a>주의  
  허용 되는 테이블, 열, 제약 조건 및 인덱스 수에 대 한 정보를 참조 하십시오. [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)합니다.  
@@ -1020,7 +1019,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1030,7 +1029,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1069,7 +1068,7 @@ Azure SQL 데이터베이스도 tempdb에 저장 되 고 데이터베이스 수�
 Azure SQL DB에 대 한 전역 임시 테이블 구문 및 의미 체계를 임시 테이블에 대 한 SQL Server 사용 하 여 동일한 따릅니다.  마찬가지로, 전역 임시 저장된 프로시저에서 데이터베이스 수준에서 Azure SQL DB의 범위 지정도 됩니다. 로컬 임시 테이블 (# 테이블 이름으로 시작) Azure SQL 데이터베이스에 대해 지원 되 고 동일한 구문 및 의미 체계를 SQL Server를 사용 합니다.  위의 섹션을 참조 하십시오 [임시 테이블](#temporary-tables)합니다.  
 
 > [!IMPORTANT]
-> 이 기능은 공개 미리 보기 중 이며 Azure SQL 데이터베이스에 사용할 수 있습니다.
+> 이 기능은 Azure SQL 데이터베이스에 사용할 수만 있습니다.
 >
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Azure SQL DB에 대 한 전역 임시 테이블을 문제 해결 
@@ -1660,6 +1659,5 @@ GO
  [sp_spaceused&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e73a559545a870d83e3d8e2e94dd20f6731f72eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-drivers"></a>유니코드 드라이버
 유니코드 드라이버 또는 ANSI 드라이버는 드라이버 수 있는지 여부를 전적으로의 데이터 소스 특성에 따라 달라 집니다. 데이터 소스에서 유니코드 데이터를 지 원하는 경우 드라이버는 유니코드 드라이버 여야 합니다. 데이터 원본에서만 ANSI 데이터를 지 원하는 경우 드라이버는 ANSI 드라이버를 유지 해야 합니다.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  드라이버 관리자를 호출 합니다 결정할 때 드라이버 유형, **SQLSetConnectAttr** 연결 시 SQL_ATTR_ANSI_APP 특성을 설정 합니다. ANSI Api를 사용 하는 응용 프로그램 SQL_ATTR_ANSI_APP SQL_AA_TRUE, 설정 됩니다 및 SQL_AA_FALSE의 값으로 설정할 수는 유니코드를 사용 합니다. 이 특성은 드라이버 응용 프로그램 형식을 기반으로 하는 다른 동작을 나타낼 수 있도록 사용 됩니다. 특성 응용 프로그램을 직접 설정할 수 없습니다 및에서 지원 하지 않는 **SQLGetConnectAttr**합니다. 드라이버에서는 ANSI 및 유니코드 응용 프로그램에 대해 동일한 동작을 하는 경우이 특성에 대 한 SQL_ERROR를 반환 해야 합니다. 관계 없이 SQL_SUCCESS를 반환 하는 드라이버, 드라이버 관리자는 연결 풀링을 사용 하는 경우 ANSI 및 유니코드 연결을 구분 합니다.
-

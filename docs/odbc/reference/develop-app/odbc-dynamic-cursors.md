@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], dynamic
 - dynamic cursors [ODBC]
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b5d294aaeebab45e0ff0ce36db0fa39b9738571
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 동적 커서
 동적 커서는 해당: 동적입니다. 멤버 자격, 순서 및 커서가 열린 후에 결과 집합의 값에 대 한 변경 내용을 감지할 수 있습니다. 예를 들어 두 개의 행을 인출 하는 동적 커서 및 다른 응용 프로그램에서 다음 행 중 하나를 업데이트 하 고 다른 삭제 합니다. 동적 커서는 행을 다시 인출 하려고 합니다, 삭제 된 행을 찾지 못합니다 이지만 업데이트 된 행에 대 한 새 값을 반환 합니다.  
@@ -51,4 +49,3 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  이 문은 첫 번째 행의 원래 결과 집합의 다음 행 집합은 두 번째 결과 집합을 만듭니다-이 경우 Customers 테이블의 행 집합입니다. 커서는 응용 프로그램에이 행 집합을 반환합니다.  
   
  보면 흥미롭습니다 이런이 방식으로 구현 되는 동적 커서 많은 결과 집합을 생성 하는 실제로 원래 결과 집합에 변경 내용을 검색할 수 있습니다. 이러한 보조 결과 집합이 있는지 식별 되지 응용 프로그램 단순히 커서가 원래 결과 집합에 변경 내용을 검색할 수 있는 처럼 나타납니다.
-

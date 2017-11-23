@@ -31,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>버전 및 SQL Server 2017 linux의 지원 되는 기능
 
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/25/2017
 설치 요구 사항은 사용자의 응용 프로그램 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전별로 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
 
 최신 릴리스 정보 및 새로운 기능 정보는 다음을 참조하세요.
-- [Linux 릴리스 정보에서 SQL Server](sql-server-linux-release-notes.md)
+- [Linux 릴리스 노트의 SQL Server](sql-server-linux-release-notes.md)
 - [Linux에서 SQL Server의 새로운 기능](sql-server-linux-whats-new.md)
 
 목록이 Linux에서 사용할 수 없는 SQL Server 기능에 대 한 참조 [기능 및 서비스를 지원 하지 않는](sql-server-linux-release-notes.md#Unsupported)합니다.
@@ -94,7 +93,8 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |단일 인스턴스에서 사용되는 최대 계산 용량 - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 24개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스당 최대 버퍼 풀 메모리|운영 체제가 지원하는 최대 크기|128GB|64GB|1410MB|
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스당 최대 Columnstore 세그먼트 캐시 메모리|무제한 메모리| 32GB| 16GB| 352MB|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 데이터베이스당 메모리 액세스에 최적화된 데이터의 최대 크기|무제한 메모리| 32GB| 16GB| 352MB|
+|
+            [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 데이터베이스당 메모리 최적화 데이터의 최대 크기|무제한 메모리| 32GB| 16GB| 352MB|
 |최대 관계형 데이터베이스 크기|524PB|524PB|524PB|10GB|  
   
 <sup>1</sup> 서버 + 클라이언트 액세스 라이선스 (CAL) 기반 라이선스가 (새 계약에 사용할 수 없음) Enterprise edition은 SQL Server 인스턴스 당 20 개의 코어의 최대 제한 합니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 참조 [SQL Server의 버전별 계산 용량 제한](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)합니다.  
@@ -121,11 +121,11 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |암호화된 백업|예|예|아니오|아니요|
 |Microsoft Azure에 하이브리드 백업(URL에 백업)|예|예|아니오|아니요|
   
-<sup>1</sup> Enterprise edition의 노드 수는 최대 운영 체제. Standard edition의 두 노드에 대 한 지원이 됩니다. 
+<sup>1</sup> Enterprise edition의 노드 수는 최대 운영 체제. Standard 버전에서는 두 개의 노드가 지원됩니다. 
 
 <sup>2</sup> 에서 Enterprise edition-2 개의 동기 보조 복제본을 포함 하 여 최대 8 개의 보조 복제본에 대 한 지원을 제공 합니다. 
 
-<sup>3</sup> standard edition에서는 기본 가용성 그룹을 지원 합니다. 기본 가용성 그룹에는 하나의 데이터베이스와 두 개의 복제본 지원합니다. 기본 가용성 그룹에 대 한 자세한 내용은 참조 [기본 가용성 그룹](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)합니다.    
+<sup>3</sup> standard edition에서는 기본 가용성 그룹을 지원 합니다. 기본 가용성 그룹은 데이터베이스가 하나인 두 개의 복제본을 지원합니다. 기본 가용성 그룹에 대한 자세한 내용은 [기본 가용성 그룹](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요.    
 
 ##  <a name="RDBMSSP"></a> RDBMS 확장성 및 성능  
   
@@ -229,4 +229,3 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 
   
   
-

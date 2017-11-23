@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7f2085cb49ccab60d942e1098bd7537b5df81192
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b80cb7cbbea13dbc6d491d757f28d44d5fda1ea6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>지원 되는 커서 모델 (Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버는 둘 다 지원 *블록* (*행 집합*) 및 *정적* 커서입니다. 정적 커서는 수준 1 ODBC 규정 준수에 맞는 모든 드라이버에 대 한 지원 됩니다. 드라이버는 동적으로 키 집합 기반 또는 혼합 (키 집합 및 동적)를 지원 하지 않습니다 커서입니다.  
@@ -50,4 +48,3 @@ Visual FoxPro ODBC 드라이버는 둘 다 지원 *블록* (*행 집합*) 및 *�
   
 ## <a name="rowset"></a>행 집합(rowset)  
  데이터 원본에서 검색 된 행 수를 나타내는 커서에 저장 된 데이터를 차단 합니다.
-

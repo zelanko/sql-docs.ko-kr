@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f1592db374d02534121ed75cfe8e07429f1aacac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e11b18afb96c7e5c1dc6ef6c23fc56cd3a75548e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>규칙, 트리거, 기본값 및 저장된 프로시저 (Visual FoxPro ODBC 드라이버)에 대 한 지원
 Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이버를 사용 하 여 저장된 프로시저를 만들 수 없습니다. 그러나 응용 프로그램와 상호 작용할 수도 기존 규칙, 트리거, 기본값 또는 저장된 프로시저를 삽입, 업데이트 또는 삭제는 데이터베이스에 저장 된 Visual FoxPro 데이터 것 처럼 합니다.  
@@ -292,4 +290,3 @@ Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이�
 ||||  
 |-|-|-|  
 |ZAP 명령|||
-

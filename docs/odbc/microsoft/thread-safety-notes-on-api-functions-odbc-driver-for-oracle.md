@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - threading options [ODBC]
 - multiple concurrent statements [ODBC]
 ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6037a11f71d5fc6af4d9f173974fc91c80833fc0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc4a28976342768f5c7b2d1cfe8a1d3be6544306
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="thread-safety-notes-on-api-functions-odbc-driver-for-oracle"></a>API 함수 (ODBC Driver for Oracle)의 스레드 보안 메모
 > [!IMPORTANT]  
@@ -36,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  Microsoft ODBC Driver for Oracle은 스레드로부터 안전 합니다. 그러나 Oracle 단일 연결에 여러 개의 동시 문을 허용 하지 않습니다. 드라이버는이 제한 사항을 적용 합니다. 즉, 다중 스레드 응용 프로그램에서 언제 든 지 Oracle에 대 한 ODBC 드라이버에 모든 스레드에서 호출할 수 있지만 드라이버 차단 다른 스레드가 동일한 연결에서 드라이버에서 원래 스레드가 드라이버를 떠날 때까지 합니다.  
   
  두 개의 서로 다른 연결에서 두 개의 문이 있을 경우 드라이버를 차단 하지 않습니다. 그러나 두 개의 문으로 단일 연결 인 경우 있기 차단 합니다.
-

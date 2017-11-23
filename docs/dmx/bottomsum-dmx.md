@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- BOTTOMSUM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomSum function
+f1_keywords: BOTTOMSUM
+dev_langs: DMX
+helpviewer_keywords: BottomSum function
 ms.assetid: fd4b0418-f814-4d83-b2fe-850117e1beb7
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 49ae28646f7fbe2c2374915d5139ef9f1daef884
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f6d13ccce9bc25f08e1f0f86b026b24ea75d375
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="bottomsum-dmx"></a>BottomSum(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -114,10 +110,9 @@ NATURAL PREDICTION JOIN
   
  **참고** BottomSum의 사용법을 설명 하기 위해이 예제 제공 됩니다. 데이터 집합의 크기에 따라 이 쿼리를 실행하는 데 시간이 오래 걸릴 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)  
   
   
-

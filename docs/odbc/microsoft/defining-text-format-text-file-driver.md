@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 224a4c7f7c2540d78c69dc7c1ed61267db564261
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="defining-text-format-text-file-driver"></a>텍스트 형식 (텍스트 파일 드라이버)를 정의합니다.
 텍스트 드라이버를 사용 하는 경우 사용할 수 있습니다는 **텍스트 서식 정의** 대화 상자에서 선택한 파일 열에 대 한 형식을 정의할 수 있습니다. 이 대화 상자를 사용 하면 각 데이터 테이블에 대 한 스키마를 지정할 수 있습니다. 이 정보는 데이터 원본 디렉터리에 Schema.ini 파일에 기록 됩니다. 별도 Schema.ini 파일은 각 텍스트 데이터 원본 디렉터리에 대해 생성 됩니다.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |**검색할 행**|설치 프로그램 또는 드라이버를 검색 하는 열과 열 데이터 형식을 기존 데이터에 따라 설정할 때는 행의 수입니다.<br /><br /> 검색할 행 수에 대 한 32767 사이의 1에서 숫자를 입력할 수 있습니다. 기본값은 25 if에서 선택한 항목의 형식은 **테이블** 목록이 대화 상자에서 이전에 정의 되지 않았습니다. (제한 벗어나는 숫자 오류가 반환 됩니다.)|  
 |**테이블**|선택한 디렉터리에서 모든 파일의 목록이 들어는 **텍스트 설치** 지정 된 확장의 목록과 일치 하는 대화 상자.<br /><br /> 때 \<기본 >을 선택 하 고 true의 테이블 특성의 값은 다음 중 하나는 **테이블** 그룹 Schema.ini (Schema.ini에 다른 항목이 없습니다. 연결 된)에 기록 됩니다:<br /><br /> -지정된 된 디렉터리에 없는 Schema.ini 없는 경우<br />-Schema.ini 파일이 존재 하지만 디렉터리에 있는 텍스트 파일 (지정 된 확장명) 중 하나에 대 한 Schema.ini 중인 섹션이 없습니다.<br />-텍스트 파일에 대 한 섹션 Schema.ini, 있지만 본문은 비어 있습니다.<br /><br /> 때 \<기본 >을 선택 하면는 **열** 그룹은 비활성화 되어 있습니다.|  
 |**너비**|CHAR 또는 LONGCHAR 열에 대 한 열 너비를 변경할 수 있습니다. 형식에서 선택한 항목의 경우 1로 기본 설정 너비는 **테이블** 목록이 대화 상자에서 이전에 정의 되지 않았습니다.<br /><br /> 다른 데이터 형식에 대 한 너비 컨트롤이 비활성화 되 고 값이 표시 되지 합니다.|
-

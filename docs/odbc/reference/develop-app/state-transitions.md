@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="state-transitions"></a>상태 전환
 ODBC에 정의 되어 불연속 *상태* 각 환경, 각 연결 및 각 문에 대 한 합니다. 예를 들어 환경에 가능한 상태는 세: (할당 되는 환경이)에 할당 되지 않은, 할당 된 (있는 환경 할당 되었지만 연결이 없는 할당) 및 (중인 환경 및 하나 이상의 연결을 연결 할당 됨). 연결 있는 7 가지 가능한 상태입니다. 문은 사항이 13 가능한 상태입니다.  
@@ -45,4 +43,3 @@ ODBC에 정의 되어 불연속 *상태* 각 환경, 각 연결 및 각 문에 �
  응용 프로그램의 관점에서 상태 전환을 일반적으로 간단: 손에서 직접 이동 하는 경향이 법적 상태 전환 잘 작성 된 응용 프로그램의 흐름. 상태 전환 드라이버 관리자와 드라이버에 대 한 보다 복잡 한 되므로의 환경, 각 연결과 각 문의 상태를 추적 해야 합니다. 이 작업의 대부분 드라이버 관리자; 이루어진다는 합니다. 드라이버에서 수행 해야 하는 작업의 대부분 보류 중인 결과와 문과 함께 발생 합니다.  
   
  이 설명서의 파트 1 및 2 ("ODBC 소개" 및 "응용 프로그램 및 드라이버 개발") 명시적으로 언급 되어 상태 전환을 하지 않습니다. 대신,이 개체 함수를 호출 해야 하는 순서를 설명 합니다. 예를 들어, "문 실행" 문을 사용 하 여 준비 해야 하에 따르면 **SQLPrepare** 으로 실행 될 수 **SQLExecute**합니다. 상태 및 상태 전이 어떤 변환에는 드라이버 관리자에서 확인 되 고 드라이버에서 확인 해야 합니다를 비롯 한 자세한 내용은 참조 하십시오. [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.
-

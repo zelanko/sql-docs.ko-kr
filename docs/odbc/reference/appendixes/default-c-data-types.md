@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
 - pseudo-type identifiers [ODBC]
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1ff8e2e111db13f67c80189d225dad5084bfdb6e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83040ffdab8b9715fc8caeb024bec6a9fc05d4d4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="default-c-data-types"></a>기본 C 데이터 형식
 응용 프로그램에서 SQL_C_DEFAULT를 지정 하는 경우 **SQLBindCol**, **SQLGetData**, 또는 **SQLBindParameter**, 드라이버는 출력 또는 입력된 버퍼의 C 데이터 형식을 가정 열 또는 매개 변수 버퍼 바인딩되는 변수의 SQL 데이터 형식에 해당 합니다.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
      SQL_C_DEFAULT 프로그래밍 편의 위해 제공 하기 때문에 실제 C 데이터 형식을 지정 하는 경우 응용 프로그램 기능을 손실 하지 않습니다.  
   
  각 SQL 데이터 형식에 대 한 기본 C 데이터 형식을 표시 하는 테이블에 포함 되어 [SQL에서 C 데이터 형식 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)이 부록의 뒷부분에 나오는 합니다.
-

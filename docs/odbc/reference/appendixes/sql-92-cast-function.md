@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - CAST function [ODBC]
 ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7cc176bcbf4e3d4ee0e79069e21f187ac3c00770
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8389ff0812c91ca5a35007a21d70a2a1ca0baee8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-92-cast-function"></a>S Q l 92 CAST 함수
 **캐스트** s Q l-92에 정의 된 함수는 동일는 **변환** ODBC에 정의 된 함수입니다. 해당 하는 함수의 구문은 다음과 같습니다.  
@@ -44,4 +42,3 @@ CAST (value-exp AS data-type) /* SQL92
 1.  호출 **SQLGetInfo** SQL_SQL_CONFORMANCE 정보 유형을 사용 합니다. 정보 유형에 대 한 반환 값은 SQL_SC_FIPS127_2_TRANSITIONAL, SQL_SC_SQL92_INTERMEDIATE, 또는 SQL_SC_SQL92_FULL, 하는 경우는 **캐스트** 함수는 지원 합니다.  
   
 2.  SQL_SQL_CONFORMANCE 정보 형식의 반환 값 SQL_SC_ENTRY_LEVEL 또는 0 이면 호출 **SQLGetInfo** SQL_SQL92_VALUE_EXPRESSIONS 정보 유형을 사용 합니다. SQL_SVE_CAST 비트가 설정 되 고 **캐스트** 함수는 지원 합니다.
-

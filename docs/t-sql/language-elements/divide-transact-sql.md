@@ -8,34 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - /
 - /_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - / (divide)
 - division [SQL Server]
 - divide operator (/)
 ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a352cb9e3996a1199fd4a4c05f7ece7972cce1ee
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e3e8a94a92ca592ce6a2deb5d13915606f04f984
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="divide-transact-sql"></a>(나누기) (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-division-transact-sql"></a>/ (나누기) (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   숫자를 다른 숫자로 나눕니다(산술 나누기 연산자).  
   
@@ -106,10 +103,9 @@ FROM DimEmployee;
  [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [여기서 &#40; Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [&#40; 나누기 EQUALS &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [/ = &#40; 나누기 대입 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
  [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], adding
 - adding data sources [ODBC], Visual FoxPro ODBC driver
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5e60681b7a3f30a83c2a1227c466b663b1b4d8a7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d158cf38e5755e0e443d6cb47e4053bd05d45287
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 소스 추가
 Visual FoxPro 데이터의 응용 프로그램에 액세스 하려면 데이터 원본에 있어야 합니다. 다음과 같이 데이터 소스를 만들 수 있습니다.  
@@ -57,4 +55,3 @@ Visual FoxPro 데이터의 응용 프로그램에 액세스 하려면 데이터 
      새 데이터 원본 이름은 ODBC 데이터 원본 관리자 대화 상자의 사용자 DSN 탭에서 사용자 데이터 원본 목록에 표시 됩니다.  
   
 6.  새 데이터 원본을 저장 하 여 ODBC 데이터 원본 관리자 대화 상자를 닫습니다 확인을 클릭 합니다.
-

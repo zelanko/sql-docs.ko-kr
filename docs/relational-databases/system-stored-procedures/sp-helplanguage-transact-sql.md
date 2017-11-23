@@ -1,0 +1,99 @@
+---
+title: sp_helplanguage (Transact SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_helplanguage
+- sp_helplanguage_TSQL
+dev_langs: TSQL
+helpviewer_keywords:
+- sp_helplanguage
+- default languages
+ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
+caps.latest.revision: "19"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4f0fc40a5dda8040d253766cc6dadf0bf298ad22
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="sphelplanguage-transact-sql"></a>sp_helplanguage(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 특정 대체 언어 또는 모든 언어에 관한 정보를 보고합니다.  
+  
+||  
+|-|  
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>구문  
+  
+```  
+  
+sp_helplanguage [ [ @language = ] 'language' ]  
+```  
+  
+## <a name="arguments"></a>인수  
+ [  **@language=** ] **'***언어***'**  
+ 정보를 표시할 대체 언어의 이름입니다. *언어* 은 **sysname**, 기본값은 NULL입니다. 경우 *언어* 가 지정 하면 지정된 된 언어에 대 한 정보가 반환 됩니다. 언어를 지정 하지 않으면 경우에서 모든 언어에 대 한 정보는 **sys.syslanguages** 호환성 보기 반환 됩니다.  
+  
+## <a name="return-code-values"></a>반환 코드 값  
+ 0(성공) 또는 1(실패)  
+  
+## <a name="result-sets"></a>결과 집합  
+  
+|열 이름|데이터 형식|Description|  
+|-----------------|---------------|-----------------|  
+|**langid**|**smallint**|언어 ID입니다.|  
+|**dateformat**|**nchar(3)**|날짜의 형식입니다.|  
+|**datefirst**|**tinyint**|첫 번째 요일: 1은 월요일, 화요일, 7은 일요일까지에 대 한 2입니다.|  
+|**업그레이드**|**int**|이 언어에 대한 최신 업그레이드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다.|  
+|**name**|**sysname**|언어 이름입니다.|  
+|**별칭**|**sysname**|언어의 대체 이름입니다.|  
+|**월**|**nvarchar(372)**|월 이름입니다.|  
+|**shortmonths**|**nvarchar(132)**|월의 짧은 이름입니다.|  
+|**(일)**|**nvarchar(217)**|요일 이름입니다.|  
+|**lcid**|**int**|언어의 Windows 로캘 ID입니다.|  
+|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지 그룹 ID입니다.|  
+  
+## <a name="permissions"></a>Permissions  
+ **public** 역할의 멤버 자격이 필요합니다.  
+  
+## <a name="examples"></a>예  
+  
+### <a name="a-returning-information-about-a-single-language"></a>1. 단일 언어에 관한 정보 반환  
+ 다음 예에서는 대체 언어 `French`에 관한 정보를 표시합니다.  
+  
+```  
+sp_helplanguage French;  
+```  
+  
+### <a name="b-returning-information-about-all-languages"></a>2. 모든 언어에 관한 정보 반환  
+ 다음 예에서는 설치된 모든 대체 언어에 관한 정보를 표시합니다.  
+  
+```  
+sp_helplanguage;  
+```  
+  
+## <a name="see-also"></a>관련 항목:  
+ [데이터베이스 엔진 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [@@LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
+ [언어 설정 &#40; Transact SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

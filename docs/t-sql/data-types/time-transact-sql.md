@@ -3,17 +3,18 @@ title: "시간 (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 6/7/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
 - time
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - time [SQL Server]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="time-transact-sql"></a>time(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   시간을 정의합니다. 시간은 표준 시간대를 인식하지 않으며 24시간제를 기준으로 합니다.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 10/05/2017
 |구문|**시간** [(*소수 두 번째 눈금*)]|  
 |사용법|선언 @MyTime **time (7)**<br /><br /> 테이블 Table1 만들기 (Column1 **time (7)** )|  
 |*소수 자릿수 초의*|초의 소수 부분 자릿수를 지정합니다.<br /><br /> 0에서 7 사이의 정수를 지정할 수 있습니다. Informatica에 대 한이 0에서 3 사이의 정수를 수 있습니다.<br /><br /> 기본 소수 자릿수 소수 자릿수는 7 (100ns)입니다.|  
-|기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|h:mm: ss [.nnnnnnn] (h:mm: ss [.nnn] Informatica)<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
+|기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|h:mm: ss [.nnnnnnn] Informatica)<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
 |범위|23:59:59.9999999 (00:00:00.000 23:59:59.999 Informatica에 대 한를 통해)를 통해 이며|  
 |요소 범위|hh는 0에서 23 사이에 속하는 두 자리 숫자로, 시를 나타냅니다.<br /><br /> mm은 0에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 0에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n\*7 자리의 숫자로, 소수 자릿수 초를 나타내는 9999999 사이에 속하는 0에서 사이의 0이 됩니다. Informatica에 대 한 n\* 세 자리 숫자로, 0에서 999 사이의 0이 됩니다.|  
 |문자 길이|최소 8 자리 (hh: mm:)를 최대 16 (hh:mm:ss.nnnnnnn). Informatica에 대 한 최대값은 12 (hh:mm:ss.nnn).|  
@@ -277,4 +277,3 @@ SELECT
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - serialization [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 24abc4dee066853da7b201f19839063aa437d854
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="serializability"></a>순차성
 트랜잭션을 여야 가장 바람직합니다 *직렬화 가능*합니다. 에 트랜잭션을 동시에 실행의 결과 동일한 결과를 직렬로 실행 하는 경우 직렬화 가능 트랜잭션이 있다고-즉, 하나씩 있습니다. 중요 하지 않습니다 트랜잭션 실행 먼저는 결과 트랜잭션의 모든 혼합을 반영 하지 않습니다.  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
  따라서 이유는 순차성 바람직한 무엇입니까? 즉, 이것은 왜 중요 한 해당 트랜잭션 나타나는지 완료 된 다음 트랜잭션이 시작 되기 전에? 다음 문제를 고려해 야 합니다. 영업 사원 청구서를 전송 하는 클럭을 동시에 주문 입력 됩니다. 예를 들어는 영업 사원이 주문을 회사 X에서 했는데 하며 커밋하지 않습니다 영업 사원 란을 대표 하는 회사 X에서 여전히 동작 합니다. 클럭 열려 있는 모든 주문의 목록을 요청 하 고, 회사 X에 대 한 순서를 검색 하 고, 청구서를 보냅니다. 이제 회사 X 담당자는 영업 사원 트랜잭션을 커밋하기 전에 변경의 순서를 변경 하려는 결정 합니다. 회사 X 잘못 청구서를 가져옵니다.  
   
  외판원의 및 담당자 트랜잭션을 직렬화 할 수 인 경우이 문제가 발생 하지 합니다. 쿼리에서 점원이 전송지 않습니다 올바른 청구서의 클럭 트랜잭션이 시작 되기 전에 외판원의 트랜잭션 완료가 또는 쿼리에서 영업 사원 트랜잭션이 시작 전에 클럭 트랜잭션 완료 것 중 하나는 점원은 보내지 청구서 회사 X에 전혀 합니다.
-

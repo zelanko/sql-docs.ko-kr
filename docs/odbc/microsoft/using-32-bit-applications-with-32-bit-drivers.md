@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b04226eeab2adde4a36f93fb5630f3097741a6d6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e37da481e8068edb966b8f8ace4f129989cce990
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 비트 응용 프로그램을 사용 하 여 32 비트 드라이버와
 32 비트 드라이버와 32 비트 응용 프로그램을 실행할 수 있습니다. 32 비트 응용 프로그램 및 32 비트 드라이버 Win32® API를 사용합니다.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |Odbcad32.exe|32 비트 ODBC 관리자 프로그램|  
 |Odbcinst.hlp|설치 관리자 도움말 파일|  
 |Msvcrt40.dll|C 런타임 라이브러리|
-

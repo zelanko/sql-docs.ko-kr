@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConfigDriver
-apilocation:
-- sqlsrv32.dll
+apiname: ConfigDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- ConfigDriver
-helpviewer_keywords:
-- ConfigDriver [ODBC]
+f1_keywords: ConfigDriver
+helpviewer_keywords: ConfigDriver [ODBC]
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d52e818312a12397328854971cdf065f1ef9eb3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configdriver-function"></a>ConfigDriver 함수
 **규칙**  
@@ -106,4 +100,3 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>메시지  
  드라이버 설치 루틴에서 null로 끝나는 문자열로 응용 프로그램에 문자 메시지를 보낼 수는 *lpszMsg* 버퍼입니다. 메시지가 잘릴 수 *cbMsgMax* 뺀 하 여 null 종결 문자는 **ConfigDriver** 보다 크거나 같은 경우에 작동 *cbMsgMax* 문자입니다.
-

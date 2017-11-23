@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 93d3fa89e2e918082f327848a55c6dbd60376984
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3bd82e42daf591e1572536ed0541961f0c41842
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="implementing-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버 구현
 ODBC 데이터 원본 관리자 온라인 도움말의 지침 및 구현 하 고 Microsoft ODBC 데스크톱 데이터베이스 드라이버를 설정 하는 방법에 대 한 기술 정보를 찾을 수 있습니다. 드라이버 설치가 루틴 중이 파일에 액세스할 수는 [Microsoft ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)합니다.  
@@ -57,4 +55,3 @@ ODBC 데이터 원본 관리자 온라인 도움말의 지침 및 구현 하 고
 -   [데스크톱 데이터베이스 드라이버 호환성](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   
 -   [데스크톱 데이터베이스 드라이버 성능 문제](../../odbc/microsoft/desktop-database-driver-performance-issues.md)
-

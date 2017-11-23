@@ -1,30 +1,31 @@
 ---
 title: "SQL Server 기능 및 특성의 사용 | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: f2feaaa999a6010ab493e9f4f73f6ffdef576e82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 90b1cd86f2fcc282922111ac9325470635bcfcad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server 기능 및 기능 사용
-OLTP 데이터베이스의 기능 및 SQL Server 기능의 WideWorldImporters 사용합니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]OLTP 데이터베이스의 기능 및 SQL Server 기능의 WideWorldImporters 사용합니다.
 
 WideWorldImporters는 다양 한 SQL Server 2016에 도입 된 최신 기능을 포함 하 여 SQL Server의 주요 기능을 보여 주기 위해 설계 되었습니다. 다음 목록은 SQL Server 기능 및 기능과 WideWorldImporters에서 사용 되는 방법을 설명 합니다.
 
@@ -51,4 +52,3 @@ WideWorldImporters는 다양 한 SQL Server 2016에 도입 된 최신 기능을 
 |쿼리 저장소|쿼리 저장소 데이터베이스에서 사용 됩니다. 몇 가지 쿼리를 실행 한 후 노드를 데이터베이스에서 사용 중인 쿼리 저장소, Management Studio에서 데이터베이스를 열고, 열고 보고서 쿼리 실행 및 실행 하는 쿼리에 대 한 계획을 보려면 상위 리소스 소비 쿼리를 엽니다.|
 |STRING_SPLIT|열 `DeliveryInstructions` 표에 `Sales.Invoices`STRING_SPLIT 보여 주기 위해 사용할 수 있는 쉼표로 구분 된 값이 있습니다.|
 |감사|데이터베이스에 다음 문을 실행 하 여이 예제 데이터베이스에 대 한 SQL Server Audit은 활성화할 수 있습니다.<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>Azure SQL 데이터베이스에서 감사가 설정 되어 있지만 통해는 [Azure 포털](https://portal.azure.com/)합니다.<br/><br/>보안 연산의 로그인, 역할 및 사용 권한 위치 설정 (standard edition 시스템)는 포함 하는 모든 시스템에 기록 됩니다. 감사는 모든 시스템에서 사용할 수 있으며 추가 권한이 필요 하지 않습니다 때문에 응용 프로그램 로그에 전송 됩니다. 경고 보안을 강화 하기 리디렉션되어야 보안 로그 또는 파일은 안전한 폴더에 있다고 가정 됩니다. 필요한 추가 구성을 설명 하는 링크가 제공 됩니다.<br/><br/>엔터프라이즈 개발자/평가/버전 시스템에 대 한 모든 금융 트랜잭션 데이터에 대 한 액세스 감사 됩니다.|
-

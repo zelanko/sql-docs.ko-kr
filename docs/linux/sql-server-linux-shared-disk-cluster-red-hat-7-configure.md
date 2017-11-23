@@ -6,15 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
 
@@ -108,7 +113,10 @@ ms.lasthandoff: 10/24/2017
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>공유 저장소를 구성 하 고 데이터베이스 파일 이동 
 
-공유 저장소를 제공 하는 솔루션의 여러 가지가 있습니다. 이 연습이 NFS를 사용 하 여 공유 저장소를 구성 하는 방법을 보여 줍니다. 모범 사례를 따르고 NFS를 보호 하기 위해 Kerberos를 사용 하는 것이 좋습니다 (여기에 예제를 찾을 수 있습니다: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 그렇지 않으면 데이터 파일에 액세스할 수 SQL 노드의 IP 주소를 스푸핑 하 고 네트워크에 액세스할 수 있는 모든 사용자. 늘 그렇듯이 위협을 하면 프로덕션 환경에서 사용 하기 전에 시스템을 모델링 해야 합니다. 또 다른 저장소 옵션 SMB 파일 공유를 사용 하는 것입니다.
+공유 저장소를 제공 하는 솔루션의 여러 가지가 있습니다. 이 연습이 NFS를 사용 하 여 공유 저장소를 구성 하는 방법을 보여 줍니다. 모범 사례를 따르고 NFS를 보호 하기 위해 Kerberos를 사용 하는 것이 좋습니다 (여기에 예제를 찾을 수 있습니다: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+
+>[!Warning]
+>NFS를 보호 하지 않으면 모든 사용자가 네트워크에 액세스 하 고 SQL 노드의 IP 주소를 스푸핑할 수 됩니다 데이터 파일에 액세스할 수 있습니다. 늘 그렇듯이 위협을 하면 프로덕션 환경에서 사용 하기 전에 시스템을 모델링 해야 합니다. 또 다른 저장소 옵션 SMB 파일 공유를 사용 하는 것입니다.
 
 ### <a name="configure-shared-storage-with-nfs"></a>Nfs 공유 저장소를 구성 합니다.
 
@@ -391,4 +399,3 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 ## <a name="next-steps"></a>다음 단계
 
 [Red Hat Enterprise Linux 공유 디스크 클러스터에서 SQL Server 동작](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

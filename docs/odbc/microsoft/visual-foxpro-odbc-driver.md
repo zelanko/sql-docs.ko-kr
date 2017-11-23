@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC]
 - FoxPro ODBC driver [ODBC], about FoxPro ODBC driver
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 656919413dd62e701e53736d5f5f044e0bdfd8fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dab3cacffff383170a6403065c555f5ef105f672
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버
 Microsoft Visual FoxPro에 데이터베이스 생성 및 응용 프로그램 개발을 위한 강력한 개체 지향 환경입니다. Microsoft Visual FoxPro ODBC 드라이버 응용 프로그램을을 열고, 쿼리, Visual FoxPro 및 데이터베이스 연결 열기 (ODBC) 인터페이스를 통해 FoxPro의 이전 버전에서 데이터를 업데이트할 수 있습니다.  
@@ -53,4 +51,3 @@ Microsoft Visual FoxPro에 데이터베이스 생성 및 응용 프로그램 개
 |지원 되는 하드웨어 및 소프트웨어의 목록을 보려면|[시스템 요구 사항](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
  다운로드 하 고 Visual FoxPro ODBC 드라이버를 설치 하는 방법에 대 한 정보를 참조 하십시오. [Visual FoxPro ODBC 드라이버](http://go.microsoft.com/fwlink/?LinkId=121318) 에서 MSDN 다운로드 합니다.
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], types
 - functions [ODBC]
 ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a90bbcaa40100f4d0e1f5781a819476e7a6e38d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3daf4c19908bd1d39749c589016e3f0c1704fbd5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="function-summary"></a>함수 요약
 사용 되는 함수를 요약 하는 다음 섹션에서는 ODBC 사용 응용 프로그램 및 관련된 소프트웨어입니다.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 -   [변환 DLL 함수 요약](../../../odbc/reference/syntax/translation-dll-function-summary.md)  
   
 -   [ODBC SPI(Service Provider Interface) 요약](../../../odbc/reference/syntax/odbc-service-provider-interface-summary.md)
-

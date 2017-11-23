@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], reference
+helpviewer_keywords: ODBC [ODBC], reference
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3c5440b6cfc25665156986a0aed99a1fa05e16be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 프로그래머 &#39; s 참조
 *ODBC Programmer's Reference* 다음 섹션이 포함 되어 있습니다.  
@@ -130,4 +127,3 @@ ms.lasthandoff: 09/09/2017
 -   Welch Keith: *ODBC 2를 사용 하 여* (까지의 1994).  
   
 -   Whiting 청구서: *21 일 이내에 ODBC 학습* (Howard W. Sam & 회사, 1994).
-

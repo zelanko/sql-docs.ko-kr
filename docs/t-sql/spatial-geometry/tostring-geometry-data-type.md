@@ -8,28 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ToString (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ToString (geometry Data Type)
+f1_keywords: ToString (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: ToString (geometry Data Type)
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 06bf05558bfefdf679d479429f5e71afcfcb7c6b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ffe70ad712605222a66dc12ba7af4e330dc12c9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tostring-geometry-data-type"></a>ToString(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,8 +59,7 @@ SELECT @g.ToString();
   
 ## <a name="see-also"></a>관련 항목:  
  [Stastext&#40; geometry 데이터 형식 &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
- [Geometry 인스턴스의 확장된 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry 인스턴스의 확장 메서드](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
-
 

@@ -1,5 +1,5 @@
 ---
-title: "슬래시 별모양 주석 (Transact SQL) | Microsoft Docs"
+title: "슬래시 별 (블록 주석) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -8,36 +8,34 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - /*...*/_TSQL
 - Comment
 - /*...*/
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nonexecuting text strings [SQL Server]
 - /*...*/ (comment)
 - remarks [SQL Server]
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 60ae52af725a065a8319a2fde1e87e1b8bb52e02
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e617c6f0108906046d6c6ea983d1bbc26082709
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="slash-star-comment-transact-sql"></a>슬래시 별모양 주석 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="slash-star-block-comment-transact-sql"></a>슬래시 별 (블록 주석) (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 
   사용자가 제공하는 텍스트를 나타냅니다. 사이의 텍스트는 / * 및 \*/ 서버에서 평가 되지 않습니다.  
   
@@ -113,5 +111,4 @@ GO
  [흐름 제어 언어 &#40; Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
-
 

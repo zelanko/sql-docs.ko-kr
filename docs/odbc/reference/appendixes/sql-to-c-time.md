@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - time data type [ODBC]
 - data conversions from SQL to C types [ODBC], time
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9382dbade23b52e077818c0ccd29713f1724fa93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b424acc8e42f94c23e793a8b811b0c2347a313a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-time"></a>SQL에서 c: 시간
 ODBC SQL 데이터 형식은 시간에 대 한 식별자:  
@@ -53,4 +51,3 @@ ODBC SQL 데이터 형식은 시간에 대 한 식별자:
  [d] C 데이터 형식에 해당 크기입니다.  
   
  결과 문자열의 형식이 시간 SQL 데이터를 C 문자 데이터로 변환 되 면는 "*hh*:*mm*:*ss*" 형식입니다. 이 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다.
-

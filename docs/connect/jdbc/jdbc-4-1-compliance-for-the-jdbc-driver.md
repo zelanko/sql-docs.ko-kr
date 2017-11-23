@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a66318e837094f3558cceba29755dff913f3cb3a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.1 준수
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/27/2017
 |이제 새로운 데이터 형식 매핑이 PreparedStatement.setObject() 및 PreparedStatement.setNull() 메서드에서 지원됩니다.|1. 새로운 Java와 JDBC 간 형식 매핑<br /><br /> (a) java.math.BigInteger와 JDBC BIGINT<br /><br /> (b) java.util.Date 및 java.util.Calendar와 JDBC TIMESTAMP<br /><br /> 2. 새로운 데이터 형식 변환:<br /><br /> (a) java.math.BigInteger를 CHAR, VARCHAR, LONGVARCHAR 및 BIGINT로 변환<br /><br /> (b) java.util.Date 및 java.util.Calendar를 CHAR, VARCHAR, LONGVARCHAR, DATE, TIME 및 TIMESTAMP로 변환<br /><br /> 자세한 내용은 JDBC 4.1 사양을 참조하세요.|  
   
   
-

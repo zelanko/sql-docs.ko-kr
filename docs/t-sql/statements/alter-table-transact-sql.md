@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - ALTER TABLE
 - WAIT_AT_LOW_PRIORITY_TSQL
 - ALTER_COLUMN_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - columns [SQL Server], resizing
 - changing column size
@@ -61,17 +59,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
+caps.latest.revision: "281"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cee79406283aa3b75d41b968370f490cb454ea5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -540,7 +537,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *max_degree_of_parallelism*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
   
- 재정의 **x degree of** 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ 재정의 **x degree of** 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
   
  MAXDOP 옵션을 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한합니다. 최대값은 64개입니다.  
   
@@ -871,7 +868,7 @@ WAIT_AT_LOW_PRIORITY
  형식의 열 **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **텍스트**, **ntext**, **이미지**, **hierarchyid**, **geometry**, **geography**, 또는 CLR UDT 수 없습니다. 온라인 작업에 추가할 수 있습니다. 열을 온라인으로 추가할 수 없으며, 온라인으로 추가하면 최대로 가능한 행 크기가 8,060바이트 제한을 초과합니다. 이러한 경우 열은 오프라인 작업으로 추가됩니다.  
   
 ## <a name="parallel-plan-execution"></a>병렬 계획 실행  
- [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 프로세서의 수를 단일 ALTER TABLE ADD (인덱스 기반)를 실행 하는 데 사용 되는 이상 및 CONSTRAINT 또는 DROP (클러스터형된 인덱스) CONSTRAINT 문을 의해 결정 됩니다는 **x degree of** 구성 옵션 및 현재 작업 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시스템에서 진행 중인 작업이 많음을 감지하면 작업의 병렬 처리 수준은 문 실행 시작 전에 자동으로 감소됩니다. MAXDOP 옵션을 지정하여 문을 실행하는 데 사용되는 프로세서 수를 수동으로 구성할 수 있습니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 프로세서의 수를 단일 ALTER TABLE ADD (인덱스 기반)를 실행 하는 데 사용 되는 이상 및 CONSTRAINT 또는 DROP (클러스터형된 인덱스) CONSTRAINT 문을 의해 결정 됩니다는 **x degree of** 구성 옵션 및 현재 작업 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시스템에서 진행 중인 작업이 많음을 감지하면 작업의 병렬 처리 수준은 문 실행 시작 전에 자동으로 감소됩니다. MAXDOP 옵션을 지정하여 문을 실행하는 데 사용되는 프로세서 수를 수동으로 구성할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
   
 ## <a name="partitioned-tables"></a>분할된 테이블  
  ALTER TABLE을 사용하면 분할된 테이블과 관련된 SWITCH 작업을 수행할 수 있을 뿐만 아니라 분할된 테이블의 열, 제약 조건 및 트리거의 상태를 분할되지 않은 테이블에 사용되는 것처럼 변경할 수 있습니다. 그러나 이 문을 사용하여 테이블 자체가 분할되는 방식을 변경할 수는 없습니다. 분할된 된 테이블 다시 분할을 사용 하 여 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 및 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)합니다. 또한 분할된 테이블의 열 데이터 형식을 변경할 수 없습니다.  
@@ -1859,5 +1856,4 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

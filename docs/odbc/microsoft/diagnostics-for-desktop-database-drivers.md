@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], diagnostic information
 - diagnostic information [ODBC], desktop database drivers
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2295462d7ec6e2e11f9eb43ada5617660bf955ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 432d311b1f55ff636e8c0b6fedb28509e3d9e6ed
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버에 대 한 진단
 모든 오류와 경고를 선택 하거나 일부만 드라이버 관리자가 선택 되어 하지 드라이버에 의해 처리 됩니다. 드라이버 매핑됩니다.이 형식은 네이티브 오류 또는 Sqlstate를 데이터 원본에 의해 반환 되는 오류입니다. 에 나열 된 각 함수는 *ODBC Programmer's Reference* 조건 및 메시지를 지정 하는 "진단" 섹션을 포함 합니다.  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_DIAG_SERVER_NAME|지원되지 않음|  
 |SQL_DIAG_SQLSTATE|지원됨|  
 |SQL_DIAG_SUBCLASS_ORIGIN|지원됨|
-

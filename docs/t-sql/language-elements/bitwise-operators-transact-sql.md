@@ -8,28 +8,25 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], bitwise
 - bitwise operators
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f9441cf26142e70340e23212991665f67fb7bf62
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 5d04924a82578040f801864bb68905feebc53e94
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="bitwise-operators-transact-sql"></a>비트 연산자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,13 +44,13 @@ ms.lasthandoff: 09/08/2017
 |NOT  <br> 모든 비트 위치에서 비트 값을 반대로 바꿉니다. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 다음 항목을 참조 합니다.   
-* [& (비트 AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
-* [& = (비트 AND EQUALS)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
-* [&#124; (비트 OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
-* [&#124; = (비트 OR EQUALS)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
-* [^ (비트 배타적 OR)](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
-* [^ = (배타적 비트 OR EQUALS)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
-* [~ (비트 NOT)](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
+* [& &#40; 비트 AND &#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
+* [& = &#40; 비트 AND 대입 &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+* [&#124; &#40; 비트 OR &#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
+* [&#124; = &#40; 비트 OR 할당 &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+* [^ &#40; 비트 배타적 OR &#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
+* [^ = &#40; 비트 배타적 OR 할당 &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
+* [~ &#40; 비트 NOT &#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
  비트 연산자의 피연산자는 정수 또는 이진 문자열 데이터 형식 범주의 데이터 형식 중 하나가 될 수 있습니다 (제외 하 고는 **이미지** 데이터 형식) 제외 하 고 두 피연산자 모두 이진 문자열 데이터 형식 중 하나를 사용할 수 없습니다 데이터 형식 범주입니다. 다음 표에서는 지원되는 피연산자 데이터 형식을 보여 줍니다.  
   
@@ -68,7 +65,6 @@ ms.lasthandoff: 09/08/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+ [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+ [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
-  
-

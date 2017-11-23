@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictHistogram
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictHistogram function
+f1_keywords: PredictHistogram
+dev_langs: DMX
+helpviewer_keywords: PredictHistogram function
 ms.assetid: 85ffc542-96e7-4f58-aaa3-34d76befcedf
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 37e2d03cebd214a7c36074666cd0dcdc9cb32887
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e2e0d45b8169d567bbdc69a916f242b2707f6570
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -100,7 +96,7 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [클러스터 &#40; DMX &#41;](../dmx/cluster-dmx.md)   
  [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
  [PredictAdjustedProbability &#40; DMX &#41;](../dmx/predictadjustedprobability-dmx.md)   
@@ -108,10 +104,9 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40; DMX &#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40; DMX &#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40; DMX &#41;](../dmx/predictvariance-dmx.md)   
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘 &#40; Analysis Services-데이터 마이닝 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

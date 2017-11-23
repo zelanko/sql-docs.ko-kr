@@ -8,24 +8,21 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC data source administrator [ODBC], concepts
+helpviewer_keywords: ODBC data source administrator [ODBC], concepts
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1f62308694c54a62d2cc83669e49e9983bcec4a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="about-drivers-and-data-sources"></a>드라이버 및 데이터 원본에 대 한
 *드라이버* ODBC 요청을 처리 하 고 응용 프로그램에 데이터를 반환 하는 구성 요소입니다. 필요한 경우 드라이버는 데이터 원본에서 인식 하는 형식으로 응용 프로그램의 요청을 수정 합니다. 드라이버의 설치 프로그램을 사용 하 여를 추가 하 여 드라이버를 컴퓨터에서 삭제 해야 합니다.  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  사용자 및 시스템 데이터 원본 이라고 통칭 *컴퓨터* 로컬 컴퓨터에 있기 때문에 데이터 원본입니다.  
   
  이러한 각 데이터 원본에는 탭는 **ODBC 데이터 원본 관리자** 대화 상자. 사용 가능한 데이터 소스에 대한 자세한 내용은 [데이터 소스](../../odbc/reference/data-sources.md)를 참조하세요.
-

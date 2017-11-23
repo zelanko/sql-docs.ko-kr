@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
@@ -34,22 +32,22 @@ ms.lasthandoff: 11/08/2017
 ## <a name="available-features"></a>사용 가능한 기능  
 다음 섹션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ODBC 설명서 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) macOS 및 Linux에서 ODBC 드라이버를 사용할 때은 유효 합니다.  
 
--   [SQL Server (ODBC)와 통신](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [SQL Server와 통신(ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
 -   [연결 및 쿼리 시간 제한 지원](http://msdn.microsoft.com/library/ms130822.aspx)  
 -   [커서](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
 -   [날짜/시간 기능 향상 (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
--   [쿼리 실행 (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
+-   [쿼리 실행(ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
 -   [오류 및 메시지 처리](http://msdn.microsoft.com/library/ms131289.aspx)  
 -   [Kerberos 인증](http://msdn.microsoft.com/library/cc280459.aspx)  
--   [큰 CLR 사용자 정의 형식 (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
+-   [큰 CLR 사용자 정의 형식(ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [트랜잭션 수행 (ODBC) (분산된 트랜잭션 제외)](http://msdn.microsoft.com/library/ms131706.aspx)  
--   [결과 처리 (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
--   [저장된 프로시저 실행](http://msdn.microsoft.com/library/ms131440.aspx)
--   [스파스 열 지원 (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
+-   [결과 처리(ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
+-   [저장 프로시저 실행](http://msdn.microsoft.com/library/ms131440.aspx)
+-   [스파스 열 지원(ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL 암호화](http://msdn.microsoft.com/library/ms131691.aspx)
 -   [테이블 반환된 매개 변수](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [U t F-8과 u t F-16 명령 및 데이터 API에 대 한](http://msdn.microsoft.com/library/ff878241.aspx)
--   [카탈로그 함수를 사용 하 여](http://msdn.microsoft.com/library/ms131490.aspx)  
+-   [카탈로그 함수 사용](http://msdn.microsoft.com/library/ms131490.aspx)  
 
 ## <a name="unsupported-features"></a>지원되지 않는 기능
 
@@ -118,4 +116,3 @@ UTF-8 멀티바이트 문자 또는 UTF-16 서로게이트가 SQLPutData 버퍼�
 [이 버전의 드라이버에서 알려진 문제](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [릴리스 정보](../../../connect/odbc/linux-mac/release-notes.md)
-

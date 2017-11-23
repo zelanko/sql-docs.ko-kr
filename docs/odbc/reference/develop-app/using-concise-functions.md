@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f58efc6ca7f6587ce7d7070bc02ad935efe06bff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-concise-functions"></a>간결 하 게 함수를 사용 하 여
 일부 ODBC 함수 설명자를 암시적으로 액세스할을 수 있습니다. 응용 프로그램 작성자 사실을 알 수 있을 호출 보다 편리 하 게 **SQLSetDescField** 또는 **SQLGetDescField**합니다. 이 함수가 호출 될 *간결한* 다양 한을 설정 하거나 가져오기 설명자 필드를 비롯 한 함수를 수행 하기 때문에 작동 합니다. 일부 간결 하 게 함수를 사용 하는 응용 프로그램을 설정 하거나 단일 함수 호출에서 여러 관련된 설명자 필드를 검색 합니다.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  **SQLSetDescRec** 및 **SQLGetDescRec** 는 간결 하 게 하는 함수를 한 번의 호출으로 데이터 형식 및 열 또는 매개 변수 데이터의 저장소에 영향을 주는 여러 설명자 필드를 가져오거나 설정 합니다. **SQLSetDescRec** 은 한 번에 열 또는 매개 변수 데이터의 바인딩을 변경 하는 효과적인 방법입니다.  
   
  **SQLSetStmtAttr** 및 **SQLGetStmtAttr** 역할 경우에 따라 간결 하 게 기능을 수행 합니다. (참조 [설명자 필드](../../../odbc/reference/develop-app/descriptor-fields.md).)
-

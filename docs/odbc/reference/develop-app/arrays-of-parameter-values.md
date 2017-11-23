@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 814d148b6e542e94254ddd13eebfc7974c4a3ac2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a0bb497044e9800461b60021fc9a6c8db4e9cca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="arrays-of-parameter-values"></a>매개 변수 값의 배열
 종종 응용 프로그램의 매개 변수 배열을 전달 하는 것이 유용 합니다. 예를 들어, 매개 변수 및 매개 변수가 있는 배열을 사용 하 여 **삽입** 문, 응용 프로그램은 행 수를 한 번에 삽입할 수 있습니다. 배열을 사용 하 여 여러 가지 장점이 있습니다. 첫째, (데이터 원본에서는 기본적으로 매개 변수 배열 지원) 하는 경우 단일 패킷을 많은 문에 대 한 데이터 전송 되므로 네트워크 트래픽이 줄어듭니다. 둘째, 일부 데이터 원본에는 동일한 수의 별도 SQL 문 실행할 때 보다 더 빠르게 배열을 사용 하 여 SQL 문을 실행할 수 있습니다. 마지막으로 사용할 경우는 경우 화면 데이터에 대 한 데이터를 배열에 저장 됩니다, 응용 프로그램 바인딩할 수의 모든 행을 단일 호출 하 여 특정 열에 **SQLBindParameter** 단일 문을 실행 하 여 서버를 업데이트 하 고 있습니다.  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
 -   [매개 변수 배열 바인딩](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)  
   
 -   [매개 변수 배열 사용](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)
-

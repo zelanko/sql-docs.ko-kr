@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2af6dc705ad13c12a28203f6dd114afa10f3a31
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f31ab70d00820fc1e0b279754c998c777dc6688
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interface-conformance-levels"></a>인터페이스 받는 규칙 수준
 평준화의 목적은 어떤 기능을 사용할 수에 드라이버에서 응용 프로그램에 알리기 위해 하는 것입니다. 함수 기반 평준화 체계 충분히이 목표를 달성 하지 않습니다. Odbc 3. *x*, 드라이버는 기능을 기반으로 분류 됩니다. 기능을 지 원하는 기능; 포함 될 수 있습니다. 반환 된 정보 유형에 대해 지원 되는 설명자 필드, 문 특성, "Y" 값을 포함할 수 **SQLGetInfo**등입니다.  
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/09/2017
 -   [특성 적합성](../../../odbc/reference/develop-app/attribute-conformance.md)  
   
 -   [설명자 필드 적합성](../../../odbc/reference/develop-app/descriptor-field-conformance.md)
-

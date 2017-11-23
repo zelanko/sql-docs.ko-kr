@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET DELETED command [ODBC]
+helpviewer_keywords: SET DELETED command [ODBC]
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34bcce12665dd3e0bcaa49e4c6e1ff93a807f514
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f3bf1ec522bee6fda19349a71c894ebd98bd75b9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-deleted-command"></a>삭제 된 명령 집합
 삭제 표시 된 레코드가 처리 여부 및 다른 명령에서 사용 하기 위해 사용할 수 있는 여부를 지정 합니다.  
@@ -52,4 +49,3 @@ SET DELETED ON | OFF
   
 ## <a name="see-also"></a>관련 항목:  
  [DELETE - SQL 명령](../../odbc/microsoft/delete-sql-command.md)
-

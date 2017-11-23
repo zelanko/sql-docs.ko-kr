@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MERGE
 - MERGE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - updating data [SQL Server]
 - modifying data [SQL Server], MERGE statement
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: dd8ecb3609dd70516023afe84125252c708ad1ad
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d071a0137d39abb638131df391c72eae75292c08
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -168,7 +165,7 @@ SET
   
 ## <a name="arguments"></a>인수  
  와 \<common_table_expression >  
- MERGE 문의 범위 내에 정의된 임시로 명명된 결과 집합 또는 뷰(공통 테이블 식)를 지정합니다. 결과 집합은 단순 쿼리에서 파생되며 MERGE 문에서 참조됩니다. 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ MERGE 문의 범위 내에 정의된 임시로 명명된 결과 집합 또는 뷰(공통 테이블 식)를 지정합니다. 결과 집합은 단순 쿼리에서 파생되며 MERGE 문에서 참조됩니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP ( *식* ) [%]  
  영향을 받을 행의 개수 또는 비율을 지정합니다. *식* 개수 또는 행의 비율 일 수 있습니다. TOP 식에서 참조하는 행은 어떠한 순서로도 정렬되지 않습니다. 자세한 내용은 참조 [top&#40; Transact SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
@@ -462,5 +459,4 @@ GO
  [테이블 값 생성자 &#40; Transact SQL &#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
   
   
-
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe3088b5a750bd47f4d9a2c8288a1cedbd87be4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a543430479a33953e087fd50c91f7f2a307fc204
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-d-data-types"></a>부록 d: 데이터 형식
 ODBC에는 두 가지 데이터 형식 정의: SQL 데이터 형식 및 C 데이터 형식입니다. SQL 데이터 형식에는 데이터 원본에 저장 된 데이터의 데이터 형식을 나타냅니다. C 데이터 형식에는 응용 프로그램 버퍼에 저장 된 데이터의 데이터 형식을 나타냅니다.  
@@ -67,4 +65,3 @@ ODBC에는 두 가지 데이터 형식 정의: SQL 데이터 형식 및 C 데이
 -   [데이터를 C에서 SQL 데이터 형식으로 변환](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
  에 대 한 설명은 ODBC 데이터 형식 참조 [ODBC의 데이터 형식](../../../odbc/reference/develop-app/data-types-in-odbc.md)합니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX statement limitations [ODBC]
 - ODBC SQL grammar, CREATE INDEX statement limitations
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 38dfc79dcb6d12917368a3566522f7ff86edff66
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-index-statement-limitations"></a>인덱스 문에 제한 만들기
 Microsoft Excel 또는 텍스트 드라이버에 대 한 CREATE INDEX 문이 지원 되지 않습니다.  
@@ -40,4 +38,3 @@ Microsoft Excel 또는 텍스트 드라이버에 대 한 CREATE INDEX 문이 지
  DBASE 드라이버를 사용 하는 CREATE UNIQUE INDEX 문에 의해 생성 된 인덱스 실제로 고유 하지 않으며 인덱싱된 열에 중복 값을 삽입할 수 있습니다. 인덱스에 동일한 키 값을 가진 집합에서 레코드를 하나만 추가할 수 있습니다.  
   
  Paradox 드라이버를 사용할 경우 인접 한 하위 집합의 첫 번째 열을 포함 하는 테이블의 열에 고유 인덱스를 정의 합니다. Borland 데이터베이스 엔진의 구현 없이 Paradox 드라이버를 사용 하거나 테이블에 고유 인덱스가 정의 되어 있지 않으면 Paradox 드라이버에서 테이블을 업데이트할 수 없습니다.
-

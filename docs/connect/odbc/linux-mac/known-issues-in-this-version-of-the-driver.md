@@ -8,23 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- known issues
-caps.latest.revision: 30
+helpviewer_keywords: known issues
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cd6fedeed8955634abfab002bab887c230731707
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 62fd9dd8bf2e11fe39ffaa2e893ded55b214b09c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>이 버전의 드라이버에서 알려진 문제
 
@@ -45,5 +42,4 @@ ms.lasthandoff: 11/08/2017
 ## <a name="see-also"></a>관련 항목:  
 [프로그래밍 지침](../../../connect/odbc/linux-mac/programming-guidelines.md)  
 [릴리스 정보](../../../connect/odbc/linux-mac/release-notes.md)  
-
 

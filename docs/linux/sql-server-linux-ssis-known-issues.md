@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 70b13a0deae8f12715488d81b44fb660f76decd0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eec45efe8fb49afefab418130d05d7a2b82bddd3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux에서 SSIS에 대 한 알려진된 문제 및 제한
 
@@ -130,5 +129,4 @@ SQL Server 로그 공급자는 SQL 인증만 지원 합니다. Windows 인증을
 텍스트 파일, XML 파일 및 SQL Server Profiler 용 SSIS 로그 공급자는 사용자가 지정한 파일에 해당 출력을 씁니다. 파일 경로에 다음 고려 사항이 적용 됩니다.
 -   경로 제공 하지 않으면 로그 공급자는 호스트의 현재 디렉터리에 씁니다. 현재 사용자는 호스트의 현재 디렉터리에 쓸 수 있는 권한이 없으면 로그 공급자에서 오류가 발생 합니다.
 -   파일 경로에 환경 변수를 사용할 수 없습니다. 환경 변수를 지정 하면 지정 하는 리터럴 텍스트 파일 경로에 나타납니다. 예를 들어, 지정 하는 경우 `%TMP%/log.txt`, 로그 공급자에 리터럴 텍스트를 추가 `/%TMP%/log.txt` 현재 호스트 디렉터리에 있습니다.
-
 

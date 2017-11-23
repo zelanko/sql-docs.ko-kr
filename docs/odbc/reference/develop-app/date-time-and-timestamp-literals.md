@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], literals
+helpviewer_keywords: escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8aa042321602332ea016b88c69332dd67a256044
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time 및 Timestamp 리터럴
 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스는  
@@ -97,4 +94,3 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  응용 프로그램이 호출을 드라이버 간격 리터럴에 대 한 ODBC 이스케이프 시퀀스를 지원 하는지 여부를 확인 하려면 **SQLGetTypeInfo**합니다. 데이터 원본에서 날짜/시간 간격 데이터 형식의 지 원하는 경우 또한 해당 이스케이프 시퀀스를 지원 해야 합니다.  
   
  데이터 원본에서 날짜/시간 간격 리터럴에 대 한 ODBC 이스케이프 시퀀스는 ANSI sql-92 사양에 정의 된 날짜/시간 리터럴도 지원할 수 있습니다. 데이터 소스에 ANSI 리터럴을 지원 여부를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 옵션을 사용 합니다.
-

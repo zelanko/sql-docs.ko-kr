@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Driver Manager, installing
+helpviewer_keywords: Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0a866499618569023ba6839148dd73844d0ddaed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ca46eb4fbb6203191a7aace3946daad8361b224
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="installing-the-driver-manager"></a>드라이버 관리자 설치
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -59,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  다음 명령을 실행 하는 경우를 설치할 준비가 되었습니다. 하 고 컴퓨터가 FTP 통해 외부 사이트에 액세스할 수 있습니다: **./build_dm.sh**합니다.
 
-컴퓨터가 FTP 통해 외부 사이트에 액세스할 수 없는 경우 get `unixODBC-2.3.0.tar.gz`합니다. 가져올 수 있습니다 `unixODBC-2.3.0.tar.gz` 에서 [http://www.unixodbc.org](http://www.unixodbc.org/)합니다. 클릭는 **다운로드** 다운로드 페이지로 이동 하는 페이지의 왼쪽에 링크 합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. unixODBC 2.3.1은이 버전의 지원 되지 않습니다는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행: **./build_dm.sh-다운로드 url file://unixODBC-2.3.0.tar.gz =**합니다.  
+컴퓨터가 FTP 통해 외부 사이트에 액세스할 수 없는 경우 get `unixODBC-2.3.0.tar.gz`합니다. 가져올 수 있습니다 `unixODBC-2.3.0.tar.gz` 에서 [http://www.unixodbc.org](http://www.unixodbc.org/)합니다. 클릭는 **다운로드** 다운로드 페이지로 이동 하는 페이지의 왼쪽에 링크 합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. UnixODBC 2.3.1은이 버전의 지원 되지 않습니다는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행: **./build_dm.sh-다운로드 url file://unixODBC-2.3.0.tar.gz =**합니다.  
 
 6.  형식 **예** 파일의 압축 해제를 진행할 수 있습니다. 이 부분의 프로세스를 완료하려면 최대 5분까지 걸릴 수 있습니다.  
 
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/09/2017
 [이 버전의 드라이버에서 알려진 문제](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [릴리스 정보](../../../connect/odbc/linux-mac/release-notes.md)
-

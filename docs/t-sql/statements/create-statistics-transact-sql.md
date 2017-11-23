@@ -3,10 +3,12 @@ title: "통계 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - STATISTICS_TSQL
 - CREATE STATISTICS
 - CREATE_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], creating
 - indexed views [SQL Server], statistics
@@ -25,20 +26,19 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: 105
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "105"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e09604deac2b823243515c10398dc27c75941bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   테이블, 인덱싱된 뷰 또는 외부 테이블의 하나 이상의 열에 쿼리 최적화 통계를 만듭니다. 쿼리 최적화 프로그램은 대부분의 쿼리에 대해 고품질의 쿼리 계획에 필요한 통계를 기본적으로 생성합니다. 따라서 쿼리 성능을 향상시키기 위해 CREATE STATISTICS를 사용하여 추가 통계를 만들거나 쿼리 설계를 수정해야 하는 경우는 드뭅니다.  
   
@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = {ON | OFF}  
  때 **ON**, 통계 샘플링 비율을 명시적으로 지정 하지 않으면 후속 업데이트에 대 한 만들기 샘플링 백분율을 그대로 유지 됩니다. 때 **OFF**, 통계 샘플링 비율 샘플링 비율을 명시적으로 지정 하지 않은 이후의 업데이트에서 기본 샘플링을 다시 설정 될 됩니다. 기본값은 **OFF**합니다. 
  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 c u 4입니다.  
+ **에 적용 됩니다**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4)를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
  STATS_STREAM  **=**  *stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -317,5 +317,4 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;
  [sys.stats_columns &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
-
 

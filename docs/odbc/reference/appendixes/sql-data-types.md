@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9594ce3aa76af66cccc69936677cf2d9aa682a6f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-data-types"></a>SQL 데이터 형식
 각 DBMS 자체 SQL 형식을 정의합니다. 각 ODBC 드라이버 관련된 DBMS 정의 하는 SQL 데이터 유형만 표시 합니다. ODBC 정의 SQL 형식 식별자에 드라이버를 매핑하는 방법에 대 한 정보 DBMS SQL가 입력 하 고 호출을 통해 반환 되는 드라이버 매핑되는 방법을 DBMS SQL 형식 자체 드라이버별 SQL 유형 식별자 **SQLGetTypeInfo**합니다. 열 및 매개 변수를 호출 하 여 데이터 형식을 설명 하는 경우 또한 드라이버 SQL 데이터 형식을 반환 **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  
@@ -104,4 +102,3 @@ _INTERVAL_MINUTE_TO_SECOND [7]|간격은 1 분 (*p*) 두 번째 (*q*)|두 분/�
  이 섹션에서는 다음 예제를 제공 합니다.  
   
 -   [SQLGetTypeInfo 결과 집합의 예](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)
-

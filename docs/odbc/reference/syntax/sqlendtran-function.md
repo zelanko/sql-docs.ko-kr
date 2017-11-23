@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLEndTran
-apilocation:
-- sqlsrv32.dll
+apiname: SQLEndTran
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLEndTran
-helpviewer_keywords:
-- SQLEndTran function [ODBC]
+f1_keywords: SQLEndTran
+helpviewer_keywords: SQLEndTran function [ODBC]
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c85e1102eb259f9ab1df342ab2ca0402fd68fa73
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fcae4699f6effbc0e6605701560dad11acff5281
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 함수(SQLEndTran Function)
 **규칙**  
@@ -164,4 +158,3 @@ SQLRETURN SQLEndTran(
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [비동기 실행(폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-
