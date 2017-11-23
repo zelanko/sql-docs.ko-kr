@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: ffd350a1f77f6e61585c97286fc7e2f86f7a85c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5cb5bdd526addeb11acf0553bbf022ff75415e70
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>프로젝트 설정 (개체에 시스템을 로드 하는 방법) (OracleToSQL)
 시스템 개체를 로드 페이지는 **프로젝트 설정** 대화 상자를 사용 하면 Oracle 시스템 개체 SSMA 변환 및 로드 지정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/02/2017
   
 Oracle 개체 추가 시스템 개체를 참조 하는 경우에 해당 개체를 선택 해야 합니다. Oracle 데이터베이스 개체에서 참조 되는 시스템 개체를 선택 하지 않으면 SSMA 변환 오류를 보고 합니다. 시스템 개체에 없는 경우에 발생 하는 변환 오류를 수신 하는 경우이 대화 상자에서 누락 된 개체를 선택 합니다. 그런 다음 필요에 따라 변환을 반복할 수 있습니다.  
   
-

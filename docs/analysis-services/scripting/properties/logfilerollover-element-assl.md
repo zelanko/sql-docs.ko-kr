@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- LogFileRollover Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: LogFileRollover Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- LogFileRollover
-helpviewer_keywords:
-- LogFileRollover element
+applies_to: SQL Server 2016 Preview
+f1_keywords: LogFileRollover
+helpviewer_keywords: LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 904da9adc727b93c89bc5f2a5e9adaea78735788
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6d3bb2695331fd8dd9d29f25178c8686414a3c4d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="logfilerollover-element-assl"></a>LogFileRollover 요소(ASSL)
   지정의 로깅을 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 해야에 지정 된 최대 로그 파일 크기를 중지할지 또는 출력을 새 파일로 롤오버할 [LogFileSize](../../../analysis-services/scripting/properties/logfilesize-element-assl.md) 에 도달 합니다.  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

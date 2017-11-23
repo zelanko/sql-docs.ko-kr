@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f658ef13ff4bcc9dd96011f3645272ff32cc4b7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62aab281804991cb4951403876d358ac2c2abf12
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-representation-tabular"></a>테이블 표현(테이블 형식)
   테이블 형식 모델에서 테이블은 데이터의 기본 표현입니다.  
@@ -274,4 +272,3 @@ private Boolean CreateTable(
 >  위 코드 조각에는 오류 발생 시 오류 검사 또는 정리 프로시저가 없습니다.  
   
   
-

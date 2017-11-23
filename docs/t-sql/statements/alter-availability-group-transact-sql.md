@@ -1,12 +1,14 @@
 ---
 title: ALTER AVAILABILITY GROUP (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,28 +16,26 @@ f1_keywords:
 - ALTER_AVAILABILITY_TSQL
 - ALTER AVAILABILITY GROUP
 - ALTER AVAILABILITY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - ALTER AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
+caps.latest.revision: "152"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ef1d68317c2e288a13d7b07d559b5de45e29cd28
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   기존 Always On 가용성 그룹을 변경에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대부분의 ALTER AVAILABILITY GROUP 인수는 현재 주 복제본에서만 지원됩니다. 그러나 JOIN, FAILOVER 및 FORCE_FAILOVER_ALLOW_DATA_LOSS 인수는 보조 복제본에서만 지원됩니다.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```SQL  
   
 ALTER AVAILABILITY GROUP group_name   
   {  
@@ -81,7 +81,7 @@ ALTER AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
        FAILOVER_MODE = { AUTOMATIC | MANUAL }   
        [ , <add_replica_option> [ ,...n ] ]  
     )   
@@ -227,7 +227,7 @@ ALTER AVAILABILITY GROUP group_name
 
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- SQL Server 2017 CTP 2.2에서에서 도입 되었습니다. 기본 트랜잭션을 커밋합니다 하기 전에 커밋하는 데 필요한 동기 보조 복제본의 최소 수를 설정 하는 데 사용 합니다. 트랜잭션 로그는 보조 복제본의 최소 수에서 업데이트 될 때까지 SQL Server 트랜잭션이 됩니다 대기 함을 보장 합니다. 기본값은 0으로 SQL Server 2016으로 동일한 동작을 제공 합니다. 최소값은 0입니다. 최대값은 1 뺀 값 복제본의 수입니다. 이 옵션은 동기 커밋 모드에 있는 복제본 관련이 있습니다. 복제본이 동기 커밋 모드에 있는 경우 주 복제본에서 쓰기가 복제본 데이터베이스 트랜잭션 로그에 쓰기 동기 보조 복제본에 커밋됩니다 때까지 기다립니다. 동기 보조 복제본을 호스팅하는 SQL Server 응답 하지 않는 경우에 주 복제본을 호스팅하는 SQL Server 대로 동기화 되지 않은 한 계속 해당 보조 복제본에 표시 됩니다. 응답 하지 않는 데이터베이스를 다시 온라인 상태가 되 면 "동기화 되지 않음" 상태에 됩니다 및 주 수 있도록 동기 다시 될 때까지 복제본이 비정상으로 표시 됩니다. 이 설정은 주 복제본은 최소한 복제본의 커밋된 각 트랜잭션에 될 때까지 진행 되지 않습니다 보장 합니다. 복제본의 최소 수를 사용할 수 없는 경우 주 서버에서 커밋이 실패 합니다. 이 설정은 클러스터 유형 가용성 그룹에 적용 됩니다 `WSFC` 및 `EXTERNAL`합니다. 클러스터 형식에 대 한 `EXTERNAL` 가용성 그룹 클러스터 리소스에 추가 될 때 설정이 변경 됩니다. 참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](../../linux/sql-server-linux-availability-group-ha.md)합니다.
+ SQL Server 2017에서에서 도입 되었습니다. 기본 트랜잭션을 커밋합니다 하기 전에 커밋하는 데 필요한 동기 보조 복제본의 최소 수를 설정 하는 데 사용 합니다. 트랜잭션 로그는 보조 복제본의 최소 수에서 업데이트 될 때까지 SQL Server 트랜잭션이 됩니다 대기 함을 보장 합니다. 기본값은 0으로 SQL Server 2016으로 동일한 동작을 제공 합니다. 최소값은 0입니다. 최대값은 1 뺀 값 복제본의 수입니다. 이 옵션은 동기 커밋 모드에 있는 복제본 관련이 있습니다. 복제본이 동기 커밋 모드에 있는 경우 주 복제본에서 쓰기가 복제본 데이터베이스 트랜잭션 로그에 쓰기 동기 보조 복제본에 커밋됩니다 때까지 기다립니다. 동기 보조 복제본을 호스팅하는 SQL Server 응답 하지 않는 경우에 주 복제본을 호스팅하는 SQL Server 대로 동기화 되지 않은 한 계속 해당 보조 복제본에 표시 됩니다. 응답 하지 않는 데이터베이스를 다시 온라인 상태가 되 면 "동기화 되지 않음" 상태에 됩니다 및 주 수 있도록 동기 다시 될 때까지 복제본이 비정상으로 표시 됩니다. 이 설정은 주 복제본은 최소한 복제본의 커밋된 각 트랜잭션에 될 때까지 진행 되지 않습니다 보장 합니다. 복제본의 최소 수를 사용할 수 없는 경우 주 서버에서 커밋이 실패 합니다. 클러스터 형식에 대 한 `EXTERNAL` 가용성 그룹 클러스터 리소스에 추가 될 때 설정이 변경 됩니다. 참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](../../linux/sql-server-linux-availability-group-ha.md)합니다.
   
  데이터베이스 추가 *database_name*  
  가용성 그룹에 추가할 하나 이상의 사용자 데이터베이스 목록을 지정합니다. 이러한 데이터베이스는 현재 주 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있어야 합니다. 하나의 가용성 그룹에 여러 개의 데이터베이스를 지정할 수 있지만 각 데이터베이스는 하나의 가용성 그룹에만 속할 수 있습니다. 가용성 그룹에서 지원할 수 있는 데이터베이스의 유형에 대 한 정보를 참조 하십시오. [필수 구성 요소, 제한 사항 및 Always On 가용성 그룹 &#40;에 대 한 권장 사항 SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). 로컬 데이터베이스를 가용성 그룹에 이미 속해를 확인 하려면 참조는 **replica_id** 열에는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰.  
@@ -284,7 +284,7 @@ ALTER AVAILABILITY GROUP group_name
  *port*  
  서버 인스턴스(ENDPOINT_URL 옵션의 경우)의 미러링 끝점과 연관된 포트 번호 또는 서버 인스턴스의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용되는 포트 번호(READ_ONLY_ROUTING_URL 옵션의 경우)입니다.  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY}  
  주 복제본이 지정된 주 데이터베이스의 트랜잭션을 커밋하기 전에 보조 복제본이 디스크에 로그 레코드 확정(쓰기)을 확인할 때까지 주 복제본이 기다려야 하는지 여부를 지정합니다. 동일한 주 복제본의 서로 다른 데이터베이스에 있는 트랜잭션을 개별적으로 커밋할 수 있습니다.  
   
  SYNCHRONOUS_COMMIT  
@@ -292,7 +292,16 @@ ALTER AVAILABILITY GROUP group_name
   
  ASYNCHRONOUS_COMMIT  
  이 보조 복제본이 로그를 확정할 때까지 기다리지 않고 주 복제본이 트랜잭션을 커밋하도록 지정합니다(동기-커밋 가용성 모드). 주 복제본을 포함하여 최대 다섯 개의 가용성 복제본에 대해 ASYNCHRONOUS_COMMIT을 지정할 수 있습니다.  
-  
+
+ CONFIGURATION_ONLY 주 복제본이이 복제본에서 master 데이터베이스를 가용성 그룹 구성 메타 데이터를 동기적으로 커밋 있는지를 지정 합니다. 복제 데이터베이스에 사용자 데이터가 포함 되지 않습니다. 이 옵션:
+
+- SQL Server Express Edition의 모든 버전에서 호스팅할 수 있습니다.
+- 미러링 끝점이 형식이 되도록 CONFIGURATION_ONLY 복제본의 데이터를 필요 `WITNESS`합니다.
+- 변경할 수 있습니다.
+- 유효 하지 때 `CLUSTER_TYPE = WSFC`합니다. 
+
+   자세한 내용은 참조 [구성 유일한 복제](../../linux/sql-server-linux-availability-group-ha.md)합니다.
+    
  AVAILABILITY_MODE는 ADD REPLICA ON 절에서는 필수적이고 MODIFY REPLICA ON 절에서는 선택적입니다. 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)을 참조하세요.  
   
  FAILOVER_MODE  **=**  {자동 | 수동}  
@@ -600,7 +609,7 @@ ALTER AVAILABILITY GROUP group_name
 ###  <a name="Join_Secondary_Replica"></a> 1. 가용성 그룹에 보조 복제본 조인  
  다음 예에서는 현재 연결된 보조 복제본을 `AccountsAG` 가용성 그룹에 조인합니다.  
   
-```  
+```SQL  
 ALTER AVAILABILITY GROUP AccountsAG JOIN;  
 GO  
 ```  
@@ -608,7 +617,7 @@ GO
 ###  <a name="Force_Failover"></a> 2. 가용성 그룹 강제 장애 조치(failover)  
  다음 예에서는 `AccountsAG` 가용성 그룹을 연결된 보조 복제본으로 강제로 장애 조치(Failover)합니다.  
   
-```  
+```SQL
 ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
 GO  
 ```  
@@ -624,4 +633,3 @@ GO
  [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, object model
+helpviewer_keywords: ADO, object model
 ms.assetid: 4aca9838-1ec6-4084-bd63-dc2d17d8ab7d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1e2e5e90b533ee62961192c5eba3e99cfae4d48c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 844ccb8f4970bf4147cedfcd05d185a54ab8b6b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-object-model"></a>ADO 개체 모델
 다음 그림은 ADO 개체 및 해당 컬렉션을 보여 줍니다.  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  [ADO 메서드](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 개체 및 인터페이스](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO 속성](../../../ado/reference/ado-api/ado-properties.md)
-

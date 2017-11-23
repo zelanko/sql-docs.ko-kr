@@ -20,17 +20,16 @@ helpviewer_keywords:
 - log score [data mining]
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 306a2c189f4c53a388572d64df7a07c733baca3d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures-in-the-cross-validation-report"></a>교차 유효성 검사 보고서의 측정값
   교차 유효성 검사 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 마이닝 구조의 데이터를 여러 교집합 영역으로 분리한 다음 구조 및 관련 마이닝 모델을 대화식으로 테스트합니다. 이 분석을 기반으로 구조 및 각 모델에 대한 표준 정확도 측정값 집합을 출력합니다.  
@@ -67,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

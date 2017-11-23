@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: a8d39f0b940aaec84b7b731a7f764b2e2e3d72ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 084223d83c3786610dbce145f27a4c18a6409769
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services 설치
   SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버입니다.  
@@ -86,4 +84,3 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
  [테이블 형식 모델링 (SSAS 테이블 형식)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   
-

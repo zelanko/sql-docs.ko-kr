@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO MD code examples
+helpviewer_keywords: ADO MD code examples
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 040fff4e37e2e8f8baec3cef717ab1b9b738079a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ecbd9009cabfa7a9cdcccb152af52f59e3c01ce9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 코드 예제
 ADO MD 개체, 메서드 및 속성을 사용 하는 방법에 알아보려면 다음 코드 예제를 사용 합니다. 이러한 예제는 SQL Server 7.0 용 Microsoft SQL Server OLAP Services와 함께 설치 된 샘플 응용 프로그램의 하위 집합.  
@@ -44,4 +41,3 @@ ADO MD 개체, 메서드 및 속성을 사용 하는 방법에 알아보려면 �
  [ADO MD 개체 모델](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD 개체](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD 속성](../../../ado/reference/ado-md-api/ado-md-properties.md)
-

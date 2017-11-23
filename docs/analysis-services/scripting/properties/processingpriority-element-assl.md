@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProcessingPriority Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProcessingPriority Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ProcessingPriority element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ProcessingPriority element
 ms.assetid: 95d07f1c-ef8d-4e38-9682-ebb7719dbe52
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 09c386528caeeb607493e358201eac7ba18c26aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b7c417953e755171f5baeba30539372f82c0244
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processingpriority-element-assl"></a>ProcessingPriority 요소(ASSL)
   지연 집계, 인덱싱 또는 클러스터링과 같은 백그라운드 작업을 수행하는 동안 부모 개체의 처리 우선 순위를 결정합니다.  
@@ -71,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Parameter Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Parameter Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Parameter
 - microsoft.xml.analysis.parameter
 - http://schemas.microsoft.com/analysisservices/2003/engine#Parameter
-helpviewer_keywords:
-- Parameter element
+helpviewer_keywords: Parameter element
 ms.assetid: fe31ac3d-a3e8-4f60-a81a-c43271ddbed4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9eeead961dda269f0491d8627c75664a27aea5ca
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7b2305957444f451b11d4522c9a4ace1dd1c53f5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameter-element-xmla"></a>Parameter 요소(XMLA)
   [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드에서 사용되는 매개 변수의 이름 및 값을 포함합니다.  
@@ -78,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

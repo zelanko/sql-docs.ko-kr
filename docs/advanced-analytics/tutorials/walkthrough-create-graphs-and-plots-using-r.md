@@ -1,35 +1,29 @@
 ---
 title: "그래프 및 SQL과 R (연습)를 사용 하 여 점도 만들기 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>그래프 및 플롯 SQL과 R (연습)를 사용 하 여 만들기
 
-이 연습 부분에서는 점도 SQL Server 데이터를 R을 사용 하 여 맵을 생성 하는 기술을 설명 합니다. 실습을 위해 간단한 히스토그램을 만들고 더 복잡한 지도 그림을 개발합니다.
+이 연습 부분에서는 점도 SQL Server 데이터를 R을 사용 하 여 맵을 생성 하는 기술을 배웁니다. 일부 연습 하는 간단한 히스토그램을 만들고 보다 복잡 한 맵을 플롯을 개발 합니다.
 
 ### <a name="create-a-histogram"></a>히스토그램을 만듭니다
 
@@ -56,8 +50,6 @@ ms.lasthandoff: 09/01/2017
 ### <a name="create-a-map-plot"></a>지도 점도 만들기
 
 일반적으로 데이터베이스 서버는 인터넷 액세스를 차단 합니다. 이 수 불편할 수 지방 지도나 플롯을 생성 하는 다른 이미지를 다운로드 해야 하는 R 패키지를 사용 하는 경우. 그러나 하면 유용할 수 있는 사용자의 응용 프로그램을 개발 하는 경우 해결 방법이 있습니다. 기본적으로, 클라이언트에서 맵 표현을 생성 하 고 지도에 오버레이 다음 SQL Server 테이블에에서 있는 특성으로 저장 되는 지점입니다.
-
-살펴봅니다 있습니다 것이 단원의 합니다.
 
 1. R 플롯 개체를 만드는 함수를 정의 합니다. 사용자 지정 함수 *mapPlot* 택시 픽업 위치를 사용 되 고 각 위치의 시작 타기의 수를 표시 하는 산 점도 만듭니다. 이미 설치되고 로드되어 있어야 하는 **ggplot2** 및  **ggmap** 패키지를 사용합니다.
 
@@ -117,4 +109,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>이전 단원
 
 [R을 사용 하 여 데이터를 요약 합니다.](/walkthrough-view-and-summarize-data-using-r.md)
-

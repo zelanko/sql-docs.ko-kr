@@ -5,23 +5,20 @@ ms.date: 06/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
-caps.latest.revision: 1
+dev_langs: R
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8a476372f97251ae3cf075e69cf7baf55ba0649
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: b9185b1798c638541a5228d9cbe9e675a8de3427
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>기계 학습에 대 한 데이터 수집 문제 해결
 
@@ -345,4 +342,3 @@ R 런타임 작동 하는 경우 오류를 반환 하는 스크립트는 전용�
 ## <a name="see-also"></a>참고 항목
 
 [SQL Server의 기계 학습 문제 해결](machine-learning-troubleshooting-faq.md)
-

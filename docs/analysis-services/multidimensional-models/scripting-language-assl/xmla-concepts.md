@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- XMLA, concepts
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: XMLA, concepts
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3defefc1088b24e386f797ba4b97b4eacb5cee33
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c8df1713f3015e9319f7a1323b43f697bebb625
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xmla-concepts"></a>XMLA 개념
   XMLA(XML for Analysis) 개방형 표준에서는 World Wide Web에 있는 데이터 원본에 대한 데이터 액세스를 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] XMLA 1.1 사양에 따라 XMLA를 구현 합니다.  
@@ -56,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  XMLA는 UDM(Unified Dimensional Model) 방법론을 채택한 비즈니스 인텔리전스 응용 프로그램에 사용되는 프로토콜입니다.  
   
   
-

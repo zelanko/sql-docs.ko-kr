@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - DefaultDatabase property [ADO], Visual Basic example
 - provider property [ADO], Visual Basic example
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ac4121e3679489e3f0886520212b1541c463bfc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 286b6fa05080d911215e53834a06407147046fcf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>공급자 및 DefaultDatabase 속성 예제 (VB)
 이 예제에서는 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성 3 개를 열어 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다양 한 공급자를 사용 하 여 개체입니다. 또한 사용 하 여는 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) 속성을 Microsoft ODBC 공급자에 대 한 기본 데이터베이스를 설정 합니다.  
@@ -116,4 +113,3 @@ End Sub
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 속성](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider 속성(ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
-

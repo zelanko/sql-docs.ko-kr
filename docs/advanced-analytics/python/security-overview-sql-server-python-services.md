@@ -1,36 +1,34 @@
 ---
-title: "보안 개요(SQL Server R Services) | Microsoft 문서"
+title: "SQL Server에서 Python에 대 한 보안 개요 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/10/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 8e0f7b35f91fa9f62b1ac4ab2e32c56ff0265bdf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ddfc3ccb67d017dc618cfbb7e7680c0164f3a21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="security-overview"></a>보안 개요
+# <a name="security-overview-for-python-in-sql-server"></a>SQL Server에서 Python에 대 한 보안 개요
 
 이 항목에 연결 하는 데 사용 되는 보안 아키텍처에 설명 된 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 데이터베이스 엔진 및 Python 구성 요소입니다. 보안 프로세스의 예는 두 가지 일반적인 시나리오에 대해 제공 됩니다: SQL Server 저장된 프로시저를 사용 하 고 원격 연산 컨텍스트로 SQL Server와 Python 실행에서 Python을 실행 합니다.
 
 ## <a name="security-overview"></a>보안 개요
 
-A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자 계정이 SQL Server에서 Python 스크립트를 실행 하려면 필요 합니다. 로그인 또는 사용자 계정을 식별 하는 *보안 주체*에서 데이터를 검색 하는 데이터베이스에 액세스할 수 있는 권한을 보유 해야 합니다. 여부 Python 스크립트 개체를 새로 만듭니다 또는 새 데이터 기록에 따라 사용자는 테이블을 만들거나 데이터를 쓰는, 사용자 정의 함수 또는 저장된 프로시저를 만들 권한이 필요할 수도 있습니다.
+A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자 계정이 SQL Server에서 Python 스크립트를 실행 하려면 필요 합니다. 이러한 *보안 주체* 인스턴스 및 데이터베이스 수준에서 관리 되 고 데이터베이스에 연결, 읽기 및 데이터를 쓸 수 있는 권한을 가진 사용자를 식별 하거나 테이블 또는 저장된 프로시저와 같은 데이터베이스 개체를 만듭니다. 또한 Python 스크립트를 실행 하는 사용자 데이터베이스 수준에서 외부 스크립트를 실행할 수 있는 권한이 있어야 합니다.
 
-따라서 것이 엄격한 요구 사항이 있는 Python 코드를 실행 하는 각 사용자에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 로그인 또는 데이터베이스의 계정에 매핑되어야 합니다. 이 제한은 스크립트 원격 데이터 과학 클라이언트에서 보낸 여부에 관계 없이 적용 하거나 T-SQL 저장 프로시저를 사용 하 여 시작 합니다.
+Python 코드 in-database 또는 access 데이터베이스 개체와 데이터를 실행 해야 하는 경우 외부 도구에서 Python을 사용 하는 사용자도 로그인 또는 데이터베이스의 계정에 매핑해야 합니다. 동일한 권한은 Python 스크립트의 원격 데이터 과학 클라이언트에서 전송 또는 T-SQL 저장 프로시저를 사용 하 여 시작 여부 필요 합니다.
 
 예를 들어 랩톱에서 실행 되는 Python 스크립트를 생성 하 고 코드를 실행 하려면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]합니다. 다음 조건이 충족되는지 확인해야 합니다.
 
@@ -48,12 +46,11 @@ Python 스크립트를 시작할 때마다 [!INCLUDE[ssNoVersion_md](../../inclu
 
 따라서 원격 클라이언트에서 시작 되는 모든 Python 스크립트를 연결 문자열의 일부로 로그인 또는 사용자 정보를 지정 해야 합니다.
 
-
-## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 보안 및 실행 패드 보안의 상호 작용
+## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>와의 상호 작용 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 보안 및 실행 패드 보안
 
 Python 스크립트의 컨텍스트에서 실행 될 때는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터는 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스 외부 프로세스에 설정 된 작업자 계정의 풀에서 사용 가능한 작업자 계정 (로컬 사용자 계정)를 가져오고 작업자 계정으로 사용 하 여 관련된 태스크를 수행 합니다.
 
-예를 들어, Windows 도메인 자격 증명에서 Python 스크립트를 실행 합니다. SQL Server 자격 증명을 가져오고을 사용할 수 있는 실행 패드 작업자 계정에 같은 매핑 *SQLRUser01*합니다.
+예를 들어, Windows 도메인 자격 증명에서 Python 스크립트를 실행 합니다. SQL Server 자격 증명을 가져오고 등을 사용할 수 있는 실행 패드 작업자 계정에는 작업을 매핑합니다 *SQLRUser01*합니다.
 
 > [!NOTE]
 > 작업자 계정의 그룹 이름은 R, Python 사용 여부에 관계 없이 동일 합니다. 그러나 모든 외부 언어를 사용 하면 각 인스턴스에 대해 별도 그룹이 만들어집니다.
@@ -62,12 +59,17 @@ Python 스크립트의 컨텍스트에서 실행 될 때는 [!INCLUDE[ssNoVersio
 
 모든 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 작업이 완료되면 사용자 작업자 계정은 사용 가능으로 표시되고 풀로 반환됩니다.
 
-에 대 한 자세한 내용은 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], 참조 [Python의 통합을 원하는 SQL Server에서 새 구성 요소](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md)합니다.
+에 대 한 자세한 내용은 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], 참조 [Python 통합을 지원 하도록 SQL Server의 구성 요소](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md)합니다.
 
-> [!NOTE]
-> 실행 패드 작업자 계정을 관리 하 고 실행할 Python 작업, 작업자 계정이 포함 된 그룹에 대 한 *SQLRUserGroup*, "로컬 로그온 허용" 권한을; 있어야 합니다. 그렇지 않은 경우 Python 런타임은 시작 되지 합니다. 기본적으로이 권한은 모든 새 로컬 사용자에 게 제공 됩니다 되지만 일부 조직에서는 그룹 정책을 더 엄격한 수 적용할 수, 근로자 계정을 Python 작업에 SQL Server에 연결 하지 못하도록 방지 하는.
+### <a name="implied-authentication"></a>암시적 인증
 
-## <a name="security-of-worker-accounts"></a>작업자 계정의 보안
+**묵시적된 인증** 라는 용어는 SQL Server 사용자를 가져옵니다는 프로세스에 사용 되는 자격 증명 하 고 다음 사용자 데이터베이스의 올바른 사용 권한이 있는 것으로 가정 하는 사용자를 대신 하 여 모든 외부 스크립트 작업을 실행 합니다. 암시 된 인증이 Python 스크립트 데이터베이스 외부의 SQL Server ODBC 호출 하는 경우에 특히 유용 합니다. 예를 들어 코드 스프레드시트 또는 기타 원본의 요인의 짧은 목록을 검색할 수 있습니다.
+
+성공 하려면 이러한 루프백 호출에 대 한 SQLRUserGroup 작업자 계정이 포함 된 그룹에는 "로컬 로그온 허용" 권한이 있어야 합니다. 기본적으로 모든 새 로컬 사용자에 게이 권한을 제공할지 되지만 일부 조직에서는 더 엄격한 그룹 정책을 강제로 수도 있습니다.
+
+![R에 대 한 묵시적된 인증](media/implied-auth-python2.png)
+
+## <a name="security-of-worker-accounts"></a>작업자 계정 보안
 
 외부 Windows 사용자 또는 작업자 계정에 올바른 SQL 로그인의 매핑을 Python 스크립트를 실행 하는 SQL의 수명을 저장 프로시저에 대해서만 유효 합니다.
 
@@ -75,12 +77,12 @@ Python 스크립트의 컨텍스트에서 실행 될 때는 [!INCLUDE[ssNoVersio
 
 프로세스에 사용 되는 디렉터리에서 관리 되는 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], 및 디렉터리 액세스를 제한 합니다. Python PythonLauncher이이 작업을 수행합니다. 각 개별 작업자 계정을 자체 폴더로 제한 되 고 자체 수준 이상의 폴더에 있는 파일에 액세스할 수 없습니다. 그러나 작업자 수 읽기, 쓰기 또는 생성 된 세션 작업 폴더 아래에 자식을 삭제 합니다.
 
-작업자 계정, 계정 이름 또는 계정 암호 수를 변경하는 방법에 대한 자세한 내용은 [SQL Server R Services용 사용자 계정 풀 수정](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)을 참조하세요.
+작업자 계정, 계정 이름 또는 계정 암호의 수를 변경 하는 방법에 대 한 자세한 내용은 참조 [SQL Server 기계 학습에 대 한 사용자 계정 풀 수정](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)합니다.
 
 
-## <a name="security-isolation-for-multiple-external-scripts"></a>여러 외부 스크립트에 대한 보안 격리
+## <a name="security-isolation-for-multiple-external-scripts"></a>여러 외부 스크립트에 대 한 보안 격리
 
-격리 메커니즘은 실제 사용자 계정을 기반으로 합니다. 특정 위성 런타임에 대한 위성 프로세스가 시작될 때 각 위성 태스크는 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]에서 지정된 작업자 계정을 사용합니다. 태스크에 여러 위성이 필요한 경우(예: 병렬 쿼리) 모든 관련 태스크에 단일 작업자 계정이 사용됩니다.
+격리 메커니즘은 실제 사용자 계정에 기반 합니다. 특정 위성 런타임에 대한 위성 프로세스가 시작될 때 각 위성 태스크는 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]에서 지정된 작업자 계정을 사용합니다. 태스크에 여러 위성이 필요한 경우(예: 병렬 쿼리) 모든 관련 태스크에 단일 작업자 계정이 사용됩니다.
 
 작업자 계정은 다른 작업자 계정이 사용하는 파일을 보거나 조작할 수 있습니다.
 
@@ -89,4 +91,3 @@ Python 스크립트의 컨텍스트에서 실행 될 때는 [!INCLUDE[ssNoVersio
 ## <a name="see-also"></a>관련 항목:
 
 [아키텍처 개요](../../advanced-analytics/python/architecture-overview-sql-server-python.md)
-

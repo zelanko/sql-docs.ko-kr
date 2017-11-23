@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- business objects in RDS [ADO]
+helpviewer_keywords: business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3828dcd05256914b4d640ecf4e0a318d80b08e08
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e293eb58053259dd229656152094763ac31b48a2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>DCOM을 사용 하기 위해 클라이언트에서 비즈니스 개체에 등록
 사용자 지정 비즈니스 개체는 클라이언트 쪽 DCOM을 통해 사용할 수 있는 식별자 (CLSID)를 해당 프로그램 이름 progid (프로그램)를 매핑할 수 있는지 확인 해야 합니다. 이러한 이유로 DCOM 개체의 ProgID 클라이언트 레지스트리에 여야 하며 서버 쪽 비즈니스 개체의 클래스 ID에 매핑됩니다. 다른 지원 되는 프로토콜 (HTTP, HTTPS 및 프로세스)이 필요는 없습니다.  
@@ -39,6 +36,5 @@ ms.lasthandoff: 09/09/2017
 [HKEY_CLASSES_ROOT]  
 \MyBObj\Clsid\(Default) "{00112233-4455-6677-8899-00AABBCCDDEE}"  
 ```
-
 
 

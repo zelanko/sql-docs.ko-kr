@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- UnknownMemberName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: UnknownMemberName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- UnknownMemberName
-helpviewer_keywords:
-- UnknownMemberName element
+applies_to: SQL Server 2016 Preview
+f1_keywords: UnknownMemberName
+helpviewer_keywords: UnknownMemberName element
 ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2248afcd1d75e29368f0d7ca70b44ccba91bae37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6900466f1425aea280f2fbe2e84ed83c6846362f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unknownmembername-element-assl"></a>UnknownMemberName 요소(ASSL)
   차원의 알 수 없는 멤버에 대한 캡션을 차원의 기본 언어로 포함합니다.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

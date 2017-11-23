@@ -8,26 +8,22 @@ ms.service:
 ms.component: data-mining
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- data mining [Analysis Services], designing
+applies_to: SQL Server 2016
+helpviewer_keywords: data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d97b1f305fe41cc1bf67113cdad38fbe14f7f15a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>데이터 마이닝 자습서(Analysis Services)
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 마법사 및 통합 시각화를 사용하여 데이터 마이닝 솔루션을 쉽게 만들 수 있습니다. 특히 Machine Learning을 처음 사용하는 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 도구를 통해 편리하게 데이터 마이닝 모델을 디자인, 학습 및 탐색할 수 있습니다. 모델의 데이터는 큐브, 관계형 데이터베이스 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 지원하는 다른 모든 원본에 저장할 수 있습니다. 모델을 만든 후 모델에 액세스하고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ASP.NET 등 여러 클라이언트의 예측을 통해 예측을 만들어 프로덕션으로 전환할 수 있습니다.  
@@ -50,5 +46,4 @@ ms.lasthandoff: 09/01/2017
   
   
   
-
 

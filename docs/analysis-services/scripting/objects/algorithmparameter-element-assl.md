@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AlgorithmParameter Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AlgorithmParameter Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AlgorithmParameter
-helpviewer_keywords:
-- AlgorithmParameter element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AlgorithmParameter
+helpviewer_keywords: AlgorithmParameter element
 ms.assetid: 73211495-065c-43c6-a486-be6044617263
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 73fd9b4b96ea774eaf352bddf7bab1fb143f1bf4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 33ef60da325d605250b5a429bc3fac14e8da01d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="algorithmparameter-element-assl"></a>AlgorithmParameter 요소(ASSL)
   사용 하는 알고리즘에 대 한 매개 변수 정의 [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) 요소입니다.  
@@ -80,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

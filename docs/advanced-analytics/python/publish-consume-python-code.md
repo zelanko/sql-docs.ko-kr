@@ -1,39 +1,36 @@
 ---
 title: "게시 및 Python 코드를 사용 합니다. | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: b060d27376b17709bd0f3fc8f39b8e01a6702e6b
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="publish-and-consume-python-web-services"></a>게시 및 Python 웹 서비스를 사용 합니다.
 
 Microsoft 학습 서버 컴퓨터의에서 화 기능을 사용 하 여 웹 서비스에 작업 중인 Python 솔루션을 배포할 수 있습니다. 이 항목에서는 성공적으로 게시 한 후 솔루션을 실행 하는 단계를 설명 합니다.
 
-> [!IMPORTANT]
->
-> 이 예제는 학습 Server 컴퓨터 (독립 실행형)는 포함 되며 컴퓨터 학습 서버 9.1.0 버전의에서 기능을 사용 하 여 Python 버전에 대 한 개발 되었습니다.
- > 
- > Microsoft 컴퓨터 학습 서버 9.2.0, 버전의 최신 버전의 기능을 활용 하는 유사한 예를 보려면 컴퓨터 학습 서버 사이트에이 문서를 참조 하세요: [배포에서 Python 웹 서비스를 관리 하 고](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)합니다.
-
 이 문서에 대 한 대상 사용자는 Python 코드 또는 모델 Microsoft 학습 서버 컴퓨터에서에서 호스팅되는 웹 서비스로 게시 하는 방법을 알아 보 려는 데이터 과학자입니다. 설명 하 고 응용 프로그램을 소비할 수 있는 방법의 코드 또는 모델입니다. 이 문서에서는 Python에 능숙 한 한다고 가정 합니다.
 
-**적용 대상: SQL server 2017 기계 Server (독립 실행형) 학습**
+> [!IMPORTANT]
+>
+> 이 예제는 학습 Server 컴퓨터 (독립 실행형)는 포함 되며 컴퓨터 학습 서버 버전의 기능을 사용 하 여 Python 버전에 대 한 개발 되었습니다 **9.1.0**합니다.
+ > 
+ > 학습 서버 컴퓨터에에서는 최신 라이브러리를 사용 하 여 다시 게시 동일한 샘플을 보려면 다음 링크를 클릭 합니다. 참조 [배포에서 Python 웹 서비스를 관리 하 고](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)합니다.
+
+**적용 대상: Microsoft R Server (독립 실행형)**
 
 ## <a name="overview-of-workflow"></a>워크플로 개요
 
@@ -54,7 +51,7 @@ Python 웹 서비스를 사용 하는 데 게시에서 워크플로 다음과 �
 
 이 샘플 코드에서는 충족 하는 [필수 구성 요소](#prereq) 해당 Swagger에서 Python 클라이언트 라이브러리를 생성 하려면 파일 및을 사용한 Autorest 합니다.
 
-코드 블록을 한 후 프로세스에서 각 steo에 대 한 더 자세한 설명을 단계별 연습을 찾을 수 있습니다.
+코드 블록을 한 후 전체 프로세스에 대 한 더 자세한 설명이 포함 된 단계별 연습을 찾을 수 있습니다.
 
 > [!IMPORTANT]
 > 이 예에서는 로컬 `admin` 인증에 대 한 계정입니다. 하지만 자격 증명을 대체 해야 및 [인증 방법을](#python-auth) 관리자를 구성 합니다.
@@ -65,7 +62,12 @@ Python 웹 서비스를 사용 하는 데 게시에서 워크플로 다음과 �
 ##################################################
 
 # Import the generated client library. 
+
 import deployrclient
+
+# This example is intended for use with Microsoft R Server 9.0.1. 
+# If you are using a newer version of Machine Learning Server, 
+# use the mrs_server library instead.
 
 ##################################################
 ##              AUTHENTICATION                  ##
@@ -75,6 +77,7 @@ import deployrclient
 #Create client instance and point it at an R Server. 
 #In this case, R Server is local.
 client = deployrclient.DeployRClient("http://localhost:12800")
+# To use ML Server, replace with mrs_server.MRSServer()
 
 #Define the login request and provide credentials 
 #Update values with the connection parameters from your admin
@@ -88,7 +91,7 @@ token_response = client.login(login_request)
 headers = {"Authorization": "Bearer {0}".format(token_response.access_token)}
 
 #Verify that the server is running.
-#Remember to include `headers` in every request!
+#Remember to include `headers` in all requests!
 status_response = client.status(headers) 
 print(status_response.status_code)
 
@@ -103,7 +106,7 @@ print(status_response.status_code)
 create_session_request = deployrclient.models.CreateSessionRequest("Session 1", runtime_type="Python")
 
 #Make the call to start the session. 
-#Remember to include headers in every method call to the server.
+#Remember to include headers in all method calls to the server.
 #Returns a session ID.
 response = client.create_session(create_session_request, headers) 
    
@@ -151,7 +154,7 @@ else:
 response = client.create_snapshot(session_id, deployrclient.models.CreateSnapshotRequest("Iris Snapshot"), headers)
 #Return the snapshot ID for reference when you publish later.
 response.snapshot_id
-#If you forget the ID, list every snapshot to get the ID again.
+#If you forget the ID, list snapshots to get the ID again.
 for snapshot in client.list_snapshots(headers):
     print(snapshot)
 
@@ -300,30 +303,28 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 3. 전달 하 여 정적으로 생성 하는 클라이언트 라이브러리를 생성 된 `rserver-swagger-<version>.json` Swagger 코드 생성기에 파일을 원하는 언어를 지정 합니다. 이 경우 Python을 지정 해야 합니다.  
 
-   예를 들어 AutoRest Python 클라이언트 라이브러리를 사용 하면 것 같을 수 있습니다, 3 자리 숫자는 R 서버 버전 번호를 나타냅니다.
-   
-   `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
-   
+    예를 들어 AutoRest Python 클라이언트 라이브러리를 사용 하면 것 같을 수 있습니다, 3 자리 숫자는 R 서버 버전 번호를 나타냅니다.
+    
+    `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
 
-   이제 몇 가지 사용자 지정 헤더를 제공 하 고 라이브러리 스텁 생성된 된 클라이언트를 사용 하기 전에 기타 변경 사항을 수 있습니다. 참조는 [명령줄 인터페이스](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) 대 한 다른 구성 옵션 및 네임 스페이스 이름 바꾸기와 같은 기본 설정에 대 한 자세한 내용은 GitHub에 대 한 설명서입니다.
+4. 일부 사용자 지정 헤더를 제공 하 고 다른 변경 생성된 된 클라이언트를 사용 하기 전에 라이브러리 스텁 수도 있습니다. 참조는 [명령줄 인터페이스](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) 대 한 다른 구성 옵션 및 네임 스페이스 이름 바꾸기와 같은 기본 설정에 대 한 자세한 내용은 GitHub에 대 한 설명서입니다.
    
-4. 볼 수 있게 하 여 다양 한 API 호출 수는 핵심 클라이언트 라이브러리를 탐색 합니다. 
+5. 볼 수 있게 하 여 다양 한 API 호출 수는 핵심 클라이언트 라이브러리를 탐색 합니다. 
 
-   예에서 Autorest 일부 디렉터리 및 Python 클라이언트 라이브러리에 대 한 로컬 시스템에서 파일을 생성 했습니다. 기본적으로 네임 스페이스 (및 디렉터리)은 `deployrclient` 및 다음과 같은 형식입니다.
+    예에서 Autorest 일부 디렉터리 및 Python 클라이언트 라이브러리에 대 한 로컬 시스템에서 파일을 생성 했습니다. 기본적으로 네임 스페이스 (및 디렉터리)은 `deployrclient` 및 다음과 같은 형식입니다.
    
    ![Autorest 출력 경로](./media/data-scientist-python-autorest.png)
 
-   이 기본 네임 스페이스에 대 한 클라이언트 라이브러리 자체 라고 `deploy_rclient.py`합니다. 예: Visual Studio IDE에서이 파일을 열면 다음과 같이 나타납니다.
+    이 기본 네임 스페이스에 대 한 클라이언트 라이브러리 자체 라고 `deploy_rclient.py`합니다. 예: Visual Studio IDE에서이 파일을 열면 다음과 같이 나타납니다.
    
    ![Python 클라이언트 라이브러리](./media/data-scientist-python-client-library.png)
-
 
 
 ### <a name="step-2-add-authentication-and-header-logic"></a>2단계. 인증 및 헤더 논리 추가
 
 모든 Api 인증이; 필요 않음을 염두에서에 둬야 API를 사용 하 여 호출을 만들 때 모든 사용자가 인증 해야 따라서는 `POST /login` API 또는 통해 Azure Active Directory (AAD). 
 
-이 프로세스를 간소화 하기 위해 사용자가 모든 단일 호출에 대 한 자격 증명을 제공할 필요가 있도록 전달자 액세스 토큰 발급 됩니다.  이 전달자 토큰은 보호 된 리소스에 대 한 "전달자" 액세스를 부여 하는 경량 보안 토큰:이 경우 서버는 컴퓨터 학습 Api입니다. 사용자가 인증 된 후 응용 프로그램은 의도 한 당사자에 대 한 인증에 성공적으로 확인 하는 사용자의 전달자 토큰을 확인 해야 합니다. 이러한 토큰을 관리 하는 방법에 대 한 자세한 참조 [보안 액세스 토큰](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)합니다.
+이 프로세스를 단순화 하려면 전달자 액세스 토큰을 사용자가 필요한 각 호출에 대 한 자격 증명을 제공 하지 않도록 발급 됩니다.  이 전달자 토큰은 보호 된 리소스에 대 한 "전달자" 액세스를 부여 하는 경량 보안 토큰:이 경우 서버는 컴퓨터 학습 Api입니다. 사용자가 인증 된 후 응용 프로그램은 의도 한 당사자에 대 한 인증에 성공적으로 확인 하는 사용자의 전달자 토큰을 확인 해야 합니다. 이러한 토큰을 관리 하는 방법에 대 한 자세한 참조 [보안 액세스 토큰](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)합니다.
 
 핵심 Api 상호 작용 하기 전에 먼저 인증, 전달자 액세스를 사용 하 여 토큰의 [인증 방법을](https://msdn.microsoft.com/microsoft-r/operationalize/security-authentication) 관리자가 구성 된 한 후 각 후속 요청에 대 한 각 헤더에 포함:
 
@@ -336,11 +337,11 @@ client.delete_web_service_version("Iris","V2.0",headers)
    import deployrclient
    ```
 
-2. 서버를 학습 하는 컴퓨터에 로컬 컴퓨터에서 연결을 정의 자격 증명을 제공, 액세스 토큰을 캡처, 헤더, 해당 토큰을 추가 및 해당 헤더를 사용 하 여 모든 후속 요청에 대 한 응용 프로그램에 인증 논리를 추가 합니다.  관리자가 정의 된 인증 방법을 사용: 기본 관리자 계정, Active Directory/LDAP (AD/LDAP) 또는 Azure Active Directory (AAD).
+2. 서버를 학습 하는 컴퓨터에 로컬 컴퓨터에서 연결을 정의 자격 증명을 제공, 액세스 토큰을 캡처, 해당 토큰 헤더에 추가할 응용 프로그램에 인증 논리를 추가 합니다. 그런 다음 모든 후속 요청에 대 한 해당 헤더를 사용 합니다.  관리자가 정의 된 인증 방법을 사용: 기본 관리자 계정, Active Directory/LDAP (AD/LDAP) 또는 Azure Active Directory (AAD).
 
    **AD/LDAP 또는 `admin` 계정 인증**
 
-   호출 해야 합니다는 `POST /login` 를 인증 하기 위해 API입니다. 에 전달 해야 합니다는 `username` 및 `password` 로컬 관리자에 대 한 하거나 Active Directory를 사용 하는 경우 LDAP 계정 정보를 전달 합니다. 차례로 컴퓨터 학습 서버 발급 됩니다 전달자/액세스 토큰입니다. 인증 된 후 사용자 토큰은 여전히 유효 하 고 헤더는 모든 요청과 함께 전송 자격 증명을 다시 제공 해야 않아도 됩니다. 연결 설정의 알 수 없는 경우 관리자에 게 문의 하십시오.
+   호출 된 `POST /login` 를 인증 하기 위해 API입니다. 전달 된 `username` 및 `password` 로컬 관리자에 대 한 또는 Active Directory를 사용 하는 경우 LDAP 계정 정보를 전달 합니다. 차례로 컴퓨터 학습 서버 전달자/액세스 토큰을 발급합니다. 인증 된 후 사용자 토큰은 여전히 유효 하 고 각 요청과 함께 전송 되는 헤더를 다시 자격 증명을 제공 하도록 더 이상 필요 합니다. 연결 설정의 알 수 없는 경우 관리자에 게 문의 하십시오.
 
    ```python
    #Using client library generated from Autorest
@@ -358,7 +359,7 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
    **Azure Active Directory (AAD) 인증**
 
-   AAD를 전달 해야 자격 증명, 권한 및 클라이언트 id입니다. AAD에서 발생 하는 차례로 [전달자 액세스 토큰](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)합니다. 인증 된 후 사용자 토큰은 여전히 유효 하 고 헤더는 모든 요청과 함께 전송 자격 증명을 다시 제공 해야 않아도 됩니다. 연결 설정의 알 수 없는 경우 관리자에 게 문의 하십시오.
+   AAD 자격 증명, 권한 및 클라이언트 ID를 전달 합니다. AAD 발급 차례로 [전달자 액세스 토큰](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)합니다. 인증 된 후 사용자 토큰은 여전히 유효 하 고 각 요청과 함께 전송 되는 헤더를 다시 자격 증명을 제공 하도록 더 이상 필요 합니다. 연결 설정의 알 수 없는 경우 관리자에 게 문의 하십시오.
 
    ```python
    #Import the AAD authentication library
@@ -397,12 +398,12 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 ### <a name="step-3-prepare-session-and-code"></a>3단계. 세션 및 코드를 준비 합니다.
 
-인증을 받은 후 Python 세션을 시작 하 고 나중에 게시할 모델을 만들 수 있습니다. 웹 서비스에서 모든 Python 코드 또는 모델을 포함할 수 있습니다. 세션 환경을 설정한 후도 저장할 있습니다 것 스냅숏으로 전에 사용 했던 대로 세션을 다시 로드할 수 있습니다. 
+인증을 받은 후 Python 세션을 시작 하 고 나중에 게시에 대 한 모델을 만들 수 있습니다. 웹 서비스에서 모든 Python 코드 또는 모델을 포함할 수 있습니다. 세션 환경을 설정한 후도 저장할 있습니다 것 스냅숏으로 전에 사용 했던 대로 세션을 다시 로드할 수 있습니다. 
 
 > [!IMPORTANT]
 > 포함 하십시오 `headers` 한 모든 요청에 있습니다.
 
-1. R 서버에 Python 세션을 만듭니다. 이름 및 Python 언어를 지정 해야 합니다 (`runtime_type="Python"`).  오른쪽에 기본적으로 런타임 형식을 Python을 설정 하지
+1. R 서버에 Python 세션을 만듭니다. 이름 및 Python 언어를 지정 하십시오 (`runtime_type="Python"`).  오른쪽에 기본적으로 런타임 형식을 Python을 설정 하지
 
    다음은 Autorest에서 생성 된 클라이언트 라이브러리를 사용 하는 예의 연속입니다.
 
@@ -464,10 +465,7 @@ client.delete_web_service_version("Iris","V2.0",headers)
        print (execute_response.error_message)
    ```
 
-3. 스냅숏을 만들고이 Python의이 환경은 웹 서비스에 저장 되 고에서 재현 세션 시간을 소모 합니다. 스냅숏은 특정 라이브러리, 개체, 모델, 파일 및 아티팩트를 포함 하는 준비 환경이 필요할 때 매우 유용 합니다. 스냅숏은 전체 작업 영역 및 작업 디렉터리에 저장합니다. 그러나를 게시할 때 사용자가 만든 스냅숏을 사용할 수 있습니다.
-
-   > [!NOTE] 
-   > 스냅숏은 환경 종속성에 대 한 웹 서비스를 게시 하는 경우에 사용할 수 있습니다, 동안 소비 시간의 성능에 영향을 미칠 수입니다.  최적의 성능을 위해서는 스냅숏의 크기를 신중 하 게 고려 하 고 필요 하 고 나머지 제거 작업 영역 개체로 유지 하는 확인 합니다. 세션에서 Python을 사용할 수 있습니다 `del` 함수 또는 [는 `deleteWorkspaceObject` API 요청](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) 불필요 한 개체를 제거 합니다. 
+3. 스냅숏을 만들고이 Python의이 환경은 웹 서비스에 저장 되 고에서 재현 세션 시간을 소모 합니다. 스냅숏은 특정 라이브러리, 개체, 모델, 파일 및 아티팩트를 포함 하는 준비 환경을 할 때 유용 합니다. 스냅숏은 전체 작업 영역 및 작업 디렉터리에 저장합니다. 그러나를 게시할 때 사용자가 만든 스냅숏을 사용할 수 있습니다.
 
    ```python
    #Create a snapshot of the current session.
@@ -476,27 +474,27 @@ client.delete_web_service_version("Iris","V2.0",headers)
    #Return the snapshot ID for reference when you publish later.
    response.snapshot_id
    
-   #If you forget the ID, list every snapshot to get the ID again.
+   #If you forget the ID, list snapshots to get the ID again.
    for snapshot in client.list_snapshots(headers):
        print(snapshot)
    ```
+
+  > [!NOTE] 
+   > 스냅숏은 환경 종속성에 대 한 웹 서비스를 게시 하는 경우에 사용할 수 있습니다, 동안 소비 시간의 성능에 영향을 미칠 수입니다.  최적의 성능을 위해서는 스냅숏의 크기를 신중 하 게 고려 하 고 필요 하 고 나머지 제거 작업 영역 개체로 유지 하는 확인 합니다. 세션에서 Python을 사용할 수 있습니다 `del` 함수 또는 [는 `deleteWorkspaceObject` API 요청](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) 불필요 한 개체를 제거 합니다. 
 
 ### <a name="step-4-publish-the-model"></a>4단계. 모델 게시 
 
 클라이언트 라이브러리 생성 된 응용 프로그램에 인증 논리를 작성 한 후 핵심 Python 세션을 만들고 모델을 만들 다음 해당 모델을 사용 하 여 웹 서비스를 게시 하는 Api와 상호 작용할 수 있습니다.
 
-> [!NOTE]
-> 사용자를 인증 해야 모든 API 호출을 수행 하기 전에 기억 합니다. 따라서 포함 `headers` 한 모든 요청에 있습니다.
+유의 해야 할 몇 가지 사항:
 
-+ 이 SVM 모델을 학습 서버 컴퓨터에서에서 Python 웹 서비스로 게시 합니다. 이 웹 서비스에 전달 되는 벡터를 점수 됩니다.
++ 모든 API 호출을 수행 하기 전에 사용자를 인증 해야 합니다. 따라서 포함 `headers` 모든 요청에서 합니다.
++ 웹 서비스는 Python 서비스로 등록 되어 있는지를 보장 하려면을 지정 해야 `runtime_type="Python"`합니다. 오른쪽에 기본적으로 런타임 형식을 Python을 설정 하지
++ 점수 매기기 sepal 길이, sepal 너비, 꽃잎 길이 및 꽃잎 너비를 사용 하 여 벡터를 필요
 
-> [!IMPORTANT]
-> 웹 서비스는 Python 서비스로 등록 되어 있는지를 보장 하려면을 지정 해야 `runtime_type="Python"`합니다. 오른쪽에 기본적으로 런타임 형식을 Python을 설정 하지
+다음 코드는 Python 웹 서비스로 SVM 모델을 게시합니다. 이 웹 서비스에 전달 된 값을 기반으로 예측 된 범주를 생성 합니다.
 
 ```python
-   #Define a web service that determines the iris species by scoring 
-   #a vector of sepal length and width, petal length and width
-   
    #Set `flower_data` for the sepal and petal length and width
    flower_data = deployrclient.models.ParameterDefinition(name = "flower_data", type = "vector")
    #Set `iris_species` for the species of iris
@@ -545,22 +543,22 @@ client.delete_web_service_version("Iris","V2.0",headers)
    #Record the R Server endpoint URL hosting the web services you created
    url = "http://localhost:12800"
 
-   #Give the request.Session object the authentication headers 
-   #so you don't have to repeat it with each request.
+   #Include the request.Session object in the authentication headers.
+   #By doing so, you don't need to repeat it with each request.
    s.headers = headers
 
-   # Retrieve the service-specific swagger file using the requests library.
+   # Retrieve the service-specific Swagger file using the requests library.
    swagger_resp = s.get(url+"/api/Iris/V1.0/swagger.json")
 
-   #Either download service-specific swagger file using the json library.
+   #You can download a service-specific Swagger file using the json library.
    with open('iris_swagger.json','w') as f:
       (json.dump(client.get_web_service_swagger("Iris","V1.0",headers),f, indent = 1))
 
-   #Or print just what you need from the Swagger file, 
-   #such as the routing paths for the endpoints to be consumed.
+   #Or, you can print just what you need from the Swagger file. 
+   #This example gets the routing paths for the endpoints to be consumed.
    print(json.dumps(swagger_resp.json()["paths"], indent = 1, sort_keys = True))
 
-   #Or, print input and output parameters as defined in the Swagger.io format
+   #You can also print input and output parameters as defined in the Swagger.io format
    print("Input")
    print(json.dumps(swagger_resp.json()["definitions"]["InputParameters"], indent = 1, sort_keys = True))
    print("Output")
@@ -585,11 +583,11 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 ## <a name="managing-the-services"></a>서비스 관리
 
-웹 서비스를 만들었으므로 이제 업데이트를 삭제 하거나 해당 서비스를 다시 게시할 수 있습니다. 또한 Microsoft 학습 서버 컴퓨터를 사용 하 여 호스트 되는 모든 웹 서비스를 나열할 수 있습니다.
+웹 서비스를 만들었으므로 이제 업데이트를 삭제 하거나 해당 서비스를 다시 게시할 수 있습니다. R 서버 (또는 서버를 학습 하는 컴퓨터)를 사용 하 여 호스트 되는 모든 웹 서비스를 나열할 수 있습니다.
 
 ### <a name="update-a-web-service"></a>웹 서비스를 업데이트 합니다.
 
-코드, 모델, 설명, 입력, 출력을 변경 하려면 웹 서비스를 업데이트할 수 있습니다. 이 예제에서는이 서비스를 사용할 수 있습니다 하는 사람에 게 유용한 설명을 추가 하려면 서비스를 업데이트 했습니다.
+ 이 예제에서는이 서비스를 사용할 수 있습니다 하는 사람에 게 유용한 설명을 추가 하려면 서비스를 업데이트 했습니다.
 
 ```python
 #Define what needs to be updated. Here we add a description.
@@ -600,9 +598,11 @@ update_request = deployrclient.models.PublishWebServiceRequest(
 client.patch_web_service_version("Iris", "V1.0", update_request, headers)
 ```
 
+코드, 모델, 설명, 입력, 출력을 변경 하려면 웹 서비스를 업데이트할 수 있습니다.
+
 ### <a name="publish-another-version"></a>다른 버전을 게시
 
-다른 버전의 웹 서비스를 게시할 수 있습니다. 이 예제에서는 서비스는 이제 반환 Iris 종 문자열 목록으로 대신 문자열입니다.
+이 예제에서는 서비스는 이제 반환 Iris 종 문자열 목록으로 대신 문자열입니다.
 
 ```python
 #Publish another version of the web service, but this time 
@@ -629,9 +629,11 @@ resp = s.post(url+"/api/Iris/V2.0",json={"flower_data":[5.1,3.5,1.4,.2]})
 print(json.dumps(resp.json(), indent = 1, sort_keys = True))
 ```
 
+동일한 웹 서비스의 여러 버전을 게시 하려면이 패턴을 사용할 수 있습니다. 
+
 ### <a name="list-services"></a>서비스 나열
 
-다른 사용자가 또는 다른 언어로 만든를 포함 하 여 모든 웹 서비스의 목록을 가져옵니다.
+이 샘플에는 다른 언어에서 또는 다른 사용자가 만든를 포함 하 여 모든 웹 서비스의 목록을 가져옵니다.
 
 ```python
 #Return the list of all existing web services.
@@ -645,8 +647,6 @@ for service in client.get_all_web_services(headers):
 
 ### <a name="delete-services"></a>서비스 삭제
 
-만든 서비스를 삭제할 수 있습니다. 적절 한 사용 권한을 가진 역할에 할당 된 경우에 다른 사용자의 서비스를 삭제할 수 있습니다.
-
 이 예제에서는 방금 게시 하는 두 번째 웹 서비스 버전을 삭제 합니다.
 
 ```python
@@ -654,3 +654,4 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+만든 모든 서비스를 삭제할 수 있습니다. 적절 한 사용 권한을 가진 역할에 할당 된 경우에 다른 사용자의 서비스를 삭제할 수 있습니다.

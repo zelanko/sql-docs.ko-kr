@@ -5,25 +5,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bf9c1aec8ef4f065ac56e4439cbfbf0c2248727a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73d957b05c9bc964a3da1c7e177d9413e0c73aa9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>예측 모델 (SQL 빠른 시작에서 R) 만들기
 
@@ -159,7 +157,6 @@ SQL 매개 변수 및 변수 R 작업에 대 한 규칙이 `sp_execute_external_
 
 이제 모델이 있으며, 최종 단계로 모델에서 예측을 생성하고 결과를 그림으로 나타내는 방법을 알아보겠습니다.
 
-[예측 하 고 모델에서 출력](../tutorials/rtsql-predict-and-plot-from-model.md)
-
+[모델에서 예측 및 그리기](../tutorials/rtsql-predict-and-plot-from-model.md)
 
 

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - Connection15::put_Provider
 - Connection15::GetProvider
 - Connection15::Provider
-helpviewer_keywords:
-- Provider property [ADO]
+helpviewer_keywords: Provider property [ADO]
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ead9a90e3788efd420251912612de520279b43e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1839d8bc9c954d3f5ceeafca2b604304801f643f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-property-ado"></a>공급자 속성 (ADO)
 에 대 한 공급자의 이름을 표시 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
@@ -53,4 +50,3 @@ ms.lasthandoff: 09/09/2017
  [공급자 및 DefaultDatabase 속성 예제 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
-

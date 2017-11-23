@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Trace Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Trace Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Trace
-helpviewer_keywords:
-- Trace element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Trace
+helpviewer_keywords: Trace element
 ms.assetid: dda9136a-a9c1-44a1-b8d3-b0ec4dc65c87
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d07b7d36a9f6ec6f0efd3b8f24367ab236ba50fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6c35c4bd865cb18ec10922c7ba350c95956349b1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="trace-element-assl"></a>Trace 요소(ASSL)
   쿼리할 수 있는 추적을 정의합니다.  
@@ -106,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

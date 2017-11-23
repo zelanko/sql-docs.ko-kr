@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ModelingFlag Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ModelingFlag Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ModelingFlag
-helpviewer_keywords:
-- ModelingFlag element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ModelingFlag
+helpviewer_keywords: ModelingFlag element
 ms.assetid: c9af1b9a-506f-4cc1-acd7-e57698cb672c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dac2667ffaef9eb231148fa8be8d83b5b1e573ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5b87b9f1bfb882ba7c1bb408e5d0717a8f1b8429
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modelingflag-element-assl"></a>ModelingFlag 요소(ASSL)
   마이닝 구조 또는 마이닝 모델의 열에 대한 모델링 플래그를 포함합니다.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

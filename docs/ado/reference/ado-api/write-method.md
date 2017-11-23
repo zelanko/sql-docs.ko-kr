@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_Write
 - _Stream::Write
-helpviewer_keywords:
-- Write method [ADO]
+helpviewer_keywords: Write method [ADO]
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bd956d5ff536105dc889e89d8f2d80f22db0e9c3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6adf96fa3fd1135727a55a8c7e26351942f886c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="write-method"></a>Write 메서드
 이진 데이터를 쓰는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -60,4 +57,3 @@ Stream.Write Buffer
   
 ## <a name="see-also"></a>관련 항목:  
  [WriteText 메서드](../../../ado/reference/ado-api/writetext-method.md)
-

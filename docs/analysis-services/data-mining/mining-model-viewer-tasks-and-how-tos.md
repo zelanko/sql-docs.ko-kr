@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], how-to topics
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae59c83e386be1eb222a24cd3ef7a9c9b070444f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10136119c29d785b78eec49a5e909ab1254df436
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>마이닝 모델 뷰어 태스크 및 방법
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 데이터 마이닝 디자이너에는 마이닝 모델 탐색에 사용할 수 있는 여러 도구가 있습니다. 다음 항목에서는 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭 사용과 관련하여 태스크를 수행하는 방법에 대한 단계별 지침을 제공합니다.  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [마이닝 모델 뷰어 &#40; 데이터 마이닝 모델 디자이너 &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   
   
-

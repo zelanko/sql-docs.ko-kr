@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: 8ff312fceaee24d32f23ff8135bcc18e09601ddf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for d b 2의에서 새로운 기능 (DB2ToSQL)
 이 항목에서는 각 릴리스의 DB2 변경에 대 한 SSMA를 나열 합니다.  
@@ -111,4 +109,3 @@ D b 2 용 SSMA의 2016 년 1 월 유지 보수 릴리스는 다음과 같은 변
   
 ## <a name="november-2014"></a>2014 년 11 월  
 D b 2 용 SSMA의 2014 년 11 월 릴리스에서 초기 릴리스가 했습니다.
-

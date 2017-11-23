@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-object-tmsl"></a>모델 개체 TMSL)
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/01/2017
  모델을 배치할 디스크의 위치입니다.  
   
  defaultMode  
- 데이터 분할에 사용할 수 있도록는 기본 방법입니다.  
+ 데이터를 파티션에 사용할 수 있도록 하는 기본 메서드입니다.  
   
  defaultDataView  
  DirectQuery 모드에서 모델의 경우이 속성은 모델에 대 한 쿼리를 실행 하는 파티션을 사용 하는 결정 합니다.  유효한 값 전체 및 샘플에 포함 됩니다.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

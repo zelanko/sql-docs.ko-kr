@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - quantitative dimensions [Analysis Services]
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - customers dimensions [Analysis Services]
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5fa77532b4c674c4b5035cf6b591b973008ae6e5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimension-properties---types"></a>데이터베이스 차원 속성 형식
   **형식** 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대 한 정보를 제공 합니다. 일부 경우에는 **형식** 설정은 클라이언트 응용 프로그램에 대 한 지침을 제공 하며 선택적입니다. 다른 경우에서와 같은 **계정** 또는 **시간** 차원은 **형식** 차원과 차원의 특성에 대 한 속성 설정이 특정 서버 기반 동작을 결정 및 큐브의 특정 동작을 구현 해야 할 수 있습니다. 예를 들어는 **형식** 차원의 속성 설정할 수 있습니다 **계정** 표준 차원에 계정 특성이 포함 되어는 클라이언트 응용 프로그램에 알립니다. 시간, 계정 및 통화 차원에 대 한 자세한 내용은 참조 [날짜 유형 차원 만들기](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [부모-자식 유형 차원의 재무 계정 만들기](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), 및 [통화 만들기 차원 입력](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)합니다.  
@@ -76,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [차원&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
-

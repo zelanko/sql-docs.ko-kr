@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EventID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EventID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EventID
-helpviewer_keywords:
-- EventID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: EventID
+helpviewer_keywords: EventID element
 ms.assetid: a6b2ee50-1753-496c-af5c-206d63f2542b
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 24864fb376ebc56f6d7d2f6ce2a5479c41fd181e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f537667b259578c657105a6f4fc192fbbc538c40
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="eventid-element-assl"></a>EventID 요소(ASSL)
   고유 하 게 식별 하는 [이벤트](../../../analysis-services/scripting/objects/event-element-assl.md) 의 일환으로 캡처할 수 있는 요소는 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 요소입니다.  
@@ -74,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

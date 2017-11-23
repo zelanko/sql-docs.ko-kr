@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MembersWithData Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MembersWithData Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MembersWithData
-helpviewer_keywords:
-- MembersWithData element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MembersWithData
+helpviewer_keywords: MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 38c0606c151d2b3da8b0719c66bfe2b41fbe31e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e699a61dafb6f7bf9274fdf76dda5cdc0694c3dd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="memberswithdata-element-assl"></a>MembersWithData 요소(ASSL)
   비-리프 멤버에 대한 데이터 멤버를 부모 특성에 표시할지 여부를 결정합니다.  
@@ -84,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

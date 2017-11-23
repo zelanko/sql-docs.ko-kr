@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/14/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- RDS tutorial [ADO], VBScript
+dev_langs: VB
+helpviewer_keywords: RDS tutorial [ADO], VBScript
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a571546fe81ce0b49efa41ad5b09a7b71b1bad3d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f339f4ce8ab4a0bc536960e63fd53ccbfe08d6b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 자습서 (VBScript)
 Microsoft Visual Basic Scripting Edition로 작성 된 RDS 자습서입니다. 이 자습서의 용도 대 한 참조는 [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)합니다.  
@@ -148,4 +144,3 @@ End Sub
   
 ## <a name="see-also"></a>관련 항목:  
  [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)   
-

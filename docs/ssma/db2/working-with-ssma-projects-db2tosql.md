@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e82224e43147b5812a570f909f9a5a33c5585a6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 548e434c6f14c789c38ac041dd4e6d28369da087
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA 프로젝트 (DB2ToSQL) 작업
 DB2 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -104,7 +102,7 @@ DB2 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLUDE[
   
         메타 데이터를 저장 하면 몇 분 정도 걸릴 수 있습니다. 메타 데이터를 아직 저장 하지 않을 경우 모든 확인란을 선택 하지 마십시오.  
   
-    2.  클릭 하 고 **저장** 단추입니다.  
+    2.  클릭는 **저장** 단추입니다.  
   
         SSMA는 DB2 스키마를 구문 분석 하 고 프로젝트 파일에 메타 데이터를 저장 합니다.  
   
@@ -131,4 +129,3 @@ D b 2에서 및에서 끊어진 프로젝트를 열 때 [!INCLUDE[ssNoVersion](.
 [DB2 데이터베이스 &#40; DB2ToSQL &#41;에 연결](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [SQL Server &#40; DB2eToSQL &#41;에 연결](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - searching data [ADO]
 - navigating data [ADO]
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e787efafcff3b037e686abe0a245afde3a96873e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed33cb6d3690e5dc7bf7f9f9867576f91cd1909a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="navigating-through-data"></a>데이터 탐색
 **레코드 집합** 다양 한 메서드 및 속성 결과 데이터 집합 탐색을 지원 합니다. 이 샘플에는 몇 가지 시나리오를 통해 이동 하 여이 기능을 살펴볼 **레코드 집합** 개체입니다.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 -   [페이지 사용](../../../ado/guide/data/using-pages.md)  
   
 -   [레코드 집합 위치 지정](../../../ado/guide/data/recordset-positioning.md)
-

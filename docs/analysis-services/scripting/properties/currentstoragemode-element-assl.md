@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CurrentStorageMode Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CurrentStorageMode Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CurrentStorageMode
-helpviewer_keywords:
-- CurrentStorageMode element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CurrentStorageMode
+helpviewer_keywords: CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: febe578e4755f1376f7b7fe9fb1e1fb24b4e71aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 24b284deffbf0d7c6902c132a8a87fd0e40abfb8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="currentstoragemode-element-assl"></a>CurrentStorageMode 요소(ASSL)
   부모 요소에 대한 현재 저장소 모드를 결정합니다.  
@@ -81,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

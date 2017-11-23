@@ -15,17 +15,16 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 23ba1090608287b5ce397a160cc103c0b06f8932
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f6c8bb37a6fcf52d6fbdcaba02e21cd7013ae18
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-programming-task-table"></a>ADO 프로그래밍 작업 테이블
 다음 표에서에 포함 된 프로그래밍 작업의 *ADO Programmer's Guide* 하 고 각 작업에 대 한 참조를 제공 합니다. 이러한 참조는 텍스트 설명 또는 코드 예제에서는 작업을 수행 하는 ADO 기능에 대 한 정보를 찾을 수 있습니다 수 있습니다.
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |쿼리 또는 명령 입력에 대 한 XML을 사용 하 여|[명령 스트림](../../ado/guide/data/command-streams.md)|
 |공급자에서 XML 데이터를 반환합니다.|[스트림으로 결과 집합 검색](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
 |IIS에 게시|[인터넷 게시에 ADO 사용](../../ado/guide/data/using-ado-for-internet-publishing.md)|
-

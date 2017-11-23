@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e0eca9ac410156f891f4bd383a7100342c69662c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 21d9575ef237a01b97f4d272abb96e85fd5786f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="named-commands"></a>명명 된 명령
 [만들기 및 실행 하는 간단한 명령](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 명령을 실행 하는 방법을 보여 줍니다. 다른 방법으로: 명명된 된 명령을 확인 하 고 호출 하는이 명령에서 직접 명명 된는 **연결** 개체 (에 할당 된는 **ActiveConnection** 의 속성은 **명령** 개체). 명령 이름 지정에 이름을 할당 의미는 **이름** 속성은 **명령** 개체입니다. 예:  
@@ -99,4 +97,3 @@ ErrHandler:
   
 ## <a name="see-also"></a>관련 항목:  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-

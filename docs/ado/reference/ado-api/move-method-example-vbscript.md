@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Move method, VBScript example
+dev_langs: VB
+helpviewer_keywords: Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 78e54e69d608bd36f26d01fe779c4cca0332528f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce6494fa4a1eea5f0f999cdcbeb3baa818304eb2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="move-method-example-vbscript"></a>Move 메서드 (VBScript) 예제
 사용 하 여이 예제는 [이동](../../../ado/reference/ado-api/move-method-ado.md) 레코드 포인터를 배치 하는 메서드는 사용자 입력에 기반 합니다.  
@@ -193,4 +189,3 @@ End Sub
 ## <a name="see-also"></a>관련 항목:  
  [Move 메서드 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

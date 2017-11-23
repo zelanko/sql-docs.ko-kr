@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- AGGREGATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Aggregate function
+f1_keywords: AGGREGATE
+dev_langs: kbMDX
+helpviewer_keywords: Aggregate function
 ms.assetid: 9d5e0966-74d1-4cc8-b9f9-47e4dc65d165
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 109d8dc31ba0847cd7c1d0ff605e56d18ae13d52
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 894891e8341cc66253e9d4e5b952551b8b91071c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="aggregate-mdx"></a>Aggregate(MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +50,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |집계 연산자|결과|  
 |--------------------------|------------|  
 |합계|집합에서의 값 합계를 반환합니다.|  
-|Count|집합에서의 값 개수를 반환합니다.|  
+|개수|집합에서의 값 개수를 반환합니다.|  
 |최대값|집합에서의 최대값을 반환합니다.|  
 |Min|집합에서의 최소값을 반환합니다.|  
 |반가산적 집계 함수|셰이프를 시간 축으로 나타낸 다음 집합에서의 반가산적 동작의 계산을 반환합니다.|  
@@ -147,4 +142,3 @@ WHERE ([Geography].[State-Province].x,
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

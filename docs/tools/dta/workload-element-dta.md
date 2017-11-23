@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Workload element
+dev_langs: XML
+helpviewer_keywords: Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a2ff19d6a4044a6a3e29cb59592cdd7dd653e79
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cacc7a628f0682938b7db6821e08106a3eeaac3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="workload-element-dta"></a>Workload 요소(DTA)
   튜닝 세션에 사용할 작업을 지정합니다.  
@@ -52,7 +48,7 @@ ms.lasthandoff: 08/02/2017
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**자식 요소**|[File 요소 &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [작업 &#40; DTA &#41;의 database 요소](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 요소 &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**자식 요소**|[File 요소&#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Workload의 Database 요소&#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 요소&#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>주의  
  작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 데이터베이스 엔진 튜닝 관리자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 추적 파일 및 추적 테이블을 작업으로 사용할 수 있습니다.  
@@ -90,4 +86,3 @@ ms.lasthandoff: 08/02/2017
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ServerProperty Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ServerProperty Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- SERVERPROPERTY
-helpviewer_keywords:
-- ServerProperty element
+applies_to: SQL Server 2016 Preview
+f1_keywords: SERVERPROPERTY
+helpviewer_keywords: ServerProperty element
 ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edf7c78a2486d7e09dfb8eeb437b1215bff50bc1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4352648eb41332b57e3d95508a6985982b4509e8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="serverproperty-element-assl"></a>ServerProperty 요소(ASSL)
   와 연결 된 서버 속성을 정의 [서버](../../../analysis-services/scripting/objects/server-element-assl.md) 요소입니다.  
@@ -81,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

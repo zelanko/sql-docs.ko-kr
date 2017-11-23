@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - NumericScale property [ADO], VC++ example
 - Precision property [ADO], VC++ example
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56b6c51dba3bb8c02f90c1d0af485fd8d150049b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 791fac2fa238cd7e6e9b0d07f5dc5b3e1734d5c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 및 전체 자릿수 속성 예 (VC + +)
 사용 하 여이 예제는 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 및 [정밀도](../../../ado/reference/ado-api/precision-property-ado.md) 소수 자릿수 및 필드에 전체 자릿수를 표시 하는 속성의 ***할인*** 목차는  ***Pubs*** 데이터베이스입니다.  
@@ -144,4 +141,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>관련 항목:  
  [NumericScale 속성 (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Precision 속성(ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
-

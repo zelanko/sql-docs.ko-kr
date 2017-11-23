@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DataSourceType Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DataSourceType Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#DataSourceType
 - microsoft.xml.analysis.datasourcetype
 - http://schemas.microsoft.com/analysisservices/2003/engine#DataSourceType
-helpviewer_keywords:
-- DataSourceType element
+helpviewer_keywords: DataSourceType element
 ms.assetid: f5a348b1-911b-4139-832e-4bcb6d80a728
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0474881e6ca90b395bd908a8e152688b8784557b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 998d12b9426eb656c57d56dd4440926a968dffad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasourcetype-element-xmla"></a>DataSourceType 요소(XMLA)
   나타냅니다 여부는 [위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 에 대 한 지정 된 요소는 [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) 또는 [동기화](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 로컬 또는 원격 명령입니다.  
@@ -84,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

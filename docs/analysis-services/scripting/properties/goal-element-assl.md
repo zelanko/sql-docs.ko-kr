@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Goal Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Goal Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Goal
-helpviewer_keywords:
-- Goal element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Goal
+helpviewer_keywords: Goal element
 ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9cc5c6a411b1f874b6f79b8dcdec4ffbec75536f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 31a054da277a8ac5df4bc2de468a71b87fffe0f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="goal-element-assl"></a>Goal 요소(ASSL)
   원하는 목표를 식별 한 [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) 요소입니다.  
@@ -78,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

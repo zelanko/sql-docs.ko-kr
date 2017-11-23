@@ -5,24 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dabce30d55a38f4ecd93a88f3cebf01e53a0335e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 618e2d43d4ae9e9c214084a4da3ab9d1688b3dba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
 
@@ -113,7 +110,6 @@ SQL 저장 프로시저는 해당 하는 경우 및 각 솔루션에는 예제 �
 ## <a name="next-steps"></a>다음 단계
 
 + [SQL Server 컴퓨터 학습 자습서](machine-learning-services-tutorials.md)
-
 
 
 

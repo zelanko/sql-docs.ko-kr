@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services, projects
+helpviewer_keywords: Analysis Services, projects
 ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 26ffb60b07dad8af5d76304b7b58359e11bee8b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c46155050b4772414f2f5e0d706cbca7dd1740db
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-analysis-services-projects-and-databases-in-development"></a>작업을 Analysis Services 프로젝트 및 데이터베이스 개발
   프로젝트 모드나 온라인 모드로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스를 개발할 수 있습니다.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/01/2017
  예를 들어 한 개발자가 프로젝트 모드로 작업 중이며 선택한 개체를 변경한다고 가정합니다. 또한 이 개발자가 변경하는 동안 다른 개발자가 온라인 모드로 배포된 데이터베이스를 변경한다고 가정합니다. 첫 번째 개발자가 수정된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 배포하려고 하면 문제가 발생합니다. 즉, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 배포된 데이터베이스 내의 개체가 변경되었음을 감지하고 개발자에게 전체 데이터베이스를 덮어써서 두 번째 개발자의 변경 내용을 덮어쓸 것인지 묻는 메시지를 표시합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 인스턴스와 덮어쓸 프로젝트 개체 간 변경 내용을 해결할 방법이 없으므로 사실상 첫 번째 개발자는 변경 내용을 모두 삭제하고 현재 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 기반으로 새 프로젝트에서 다시 시작하는 수밖에 없습니다.  
   
   
-

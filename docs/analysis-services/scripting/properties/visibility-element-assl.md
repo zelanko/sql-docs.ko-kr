@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Visibility Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Visibility Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Visibility
-helpviewer_keywords:
-- Visibility element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Visibility
+helpviewer_keywords: Visibility element
 ms.assetid: 59372ebf-af52-4d60-bf9b-bb1644ae9865
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: be5253cc764f29021c9d6faea393afa04055d921
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 61335ffb9e3816d67f89c21b42a5da9ffa88e6f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visibility-element-assl"></a>Visibility 요소(ASSL)
   표시 유형을 정의 [주석](../../../analysis-services/scripting/objects/annotation-element-assl.md) 요소입니다.  
@@ -80,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

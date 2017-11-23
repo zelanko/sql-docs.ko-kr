@@ -20,12 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bc44742d56d744e9d0d4c1f1697d0bcd4e40488c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed695cd15d9e0622ff28ed449395f0684b2cf9f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="object-level-security"></a>개체 수준 보안
 
@@ -103,9 +102,8 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="see-also"></a>관련 항목:  
 [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
-[역할 개체 TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
+[역할 개체(TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
 [TMSL(Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
 [테이블 형식 개체 모델 (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)합니다.
 
   
-

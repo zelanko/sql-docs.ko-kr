@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STUnion (geometry Data Type)
 - STUnion_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STUnion (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STUnion (geometry Data Type)
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bccc4a355b95d023fde64a3ab4b6358a2ade24aa
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c41cbcf144e8772cd17cbfb43da403aea29a353
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -81,8 +77,7 @@ SELECT @g.STUnion(@h).ToString();
  `STUnion()`을 호출한 인스턴스는 원호 세그먼트를 포함하므로 `STUnion()`은 원호 세그먼트를 포함하는 결과를 반환합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [geometry 인스턴스의 OGC 메서드](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

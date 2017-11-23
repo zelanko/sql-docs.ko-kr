@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Unique property [ADOX], VC++ example
 - PrimaryKey property [ADOX], VC++ example
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c9d0fe3600808344f24dc50eb00e3e0b553c63d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b5d85bffe15ae7c9ad93ccad9588542274bba3e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 및 고유한 속성 예 (VC + +)
 이 예제에서는 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) 및 [Unique](../../../ado/reference/adox-api/unique-property-adox.md) 속성의는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드는 두 개의 열이 있는 새 테이블을 만듭니다. **PrimaryKey** 및 **Unique** 속성 중복 값은 허용 되지 않습니다는 기본 키 열이 하나를 확인 하는 데 사용 됩니다.  
@@ -132,4 +129,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

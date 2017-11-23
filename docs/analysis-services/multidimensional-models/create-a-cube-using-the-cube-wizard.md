@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cubes [Analysis Services], creating
+helpviewer_keywords: cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 241ff4df1733939b5e63e5e7bd28d9fa8d644ff4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>큐브 마법사를 사용하여 큐브 만들기
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 큐브 마법사를 사용하여 새 큐브를 만들 수 있습니다.  
@@ -74,4 +72,3 @@ ms.lasthandoff: 09/01/2017
     >  큐브 마법사를 완료한 후 큐브 디자이너를 사용하여 큐브를 구성할 수 있습니다. 또한 차원 디자이너를 사용하여 만든 차원에서 특성과 계층을 추가, 제거 및 구성할 수도 있습니다.  
   
   
-

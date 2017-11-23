@@ -1,5 +1,5 @@
 ---
-title: "(와일드 카드-일치 하지 않는 문자) (Transact SQL) | Microsoft Docs"
+title: "[^] (와일드 카드-일치 하지 않는 문자) (Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -20,26 +19,24 @@ f1_keywords:
 - '[^]_TSQL'
 - '[^]'
 - Not Match
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[^] (wildcard - character(s) not to match)'
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d80ac01fe5fbfcfce5da1a60acc15ab1b76bda70
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96749cb88e4d98b112de2ce1eb9bff4c7e156e42
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="wildcard---characters-not-to-match-transact-sql"></a>(와일드 카드-일치 하지 않는 문자) (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\](와일드 카드-일치 하지 않는 문자) (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   대괄호 사이에 지정된 범위 또는 집합에 없는 하나의 문자에 대응합니다.  
   
@@ -59,8 +56,7 @@ ORDER BY FirstName;
  [마찬가지로 &#40; Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40; Transact SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [% &#40; 와일드 카드-문자 &#40; s &#41; 일치 하는 항목 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; &#93; (와일드 카드-하나 이상의 문자 일치)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [_ (와일드 카드-문자 하 나와 일치)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+  [&#91; &#93; &#40; 와일드 카드-문자 &#40; s &#41; 일치 하는 항목 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [\_&#40; 와일드 카드-문자 하 나와 일치 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   
   
-

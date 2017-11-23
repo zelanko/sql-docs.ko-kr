@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - BEGIN TRY
 - TRY_TSQL
 - BEGIN CATCH
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - BEGIN CATCH statement
 - uncommittable transactions
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - BEGIN TRY statement
 - CATCH block
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 6bf90e58d4956877786dd0d247653e8a99480c67
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
-ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/22/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -356,7 +353,7 @@ GO
  [ERROR_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [Error_state&#40; Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [Error_state &#40; Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [GOTO &#40; Transact SQL &#41;](../../t-sql/language-elements/goto-transact-sql.md)   
@@ -365,5 +362,4 @@ GO
  [SET XACT_ABORT &#40; Transact SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
-
 

@@ -1,33 +1,30 @@
 ---
 title: "ALTER DATABASE (Azure SQL 데이터 웨어하우스) | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse
 ms.reviewer: 
-ms.service: sql-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.service: sql-data-warehouse
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.openlocfilehash: 758f303efd228d806db53075f92cc8dd4664d40b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b5e328da952c853409437f7c3a4993f17022de22
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (Azure SQL 데이터 웨어하우스)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 이름, 최대 크기 또는 데이터베이스에 대 한 서비스 목표를 수정합니다.  
   
@@ -42,8 +39,18 @@ ALTER DATABASE database_name
 | MODIFY ( <edition_option> [, ... n] )  
   
 <edition_option> ::=   
-      MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB  
-    | SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000'}  
+      MAXSIZE = { 
+            250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 
+          | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 
+          | 92160 | 102400 | 153600 | 204800 | 245760 
+      } GB  
+      | SERVICE_OBJECTIVE = { 
+            'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' 
+          | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' 
+          | 'DW3000' | 'DW6000' | 'DW1000c' | 'DW1500c' | 'DW2000c' 
+          | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
+          | 'DW10000c' | 'DW15000c' | 'DW30000c'
+      }  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -54,10 +61,18 @@ MODIFY NAME = *new_database_name*
 로 지정 된 이름의 데이터베이스를 이름을 바꿉니다. *new_database_name*합니다.  
   
 MAXSIZE  
-데이터베이스 최대 크기에 맞춰 늘어날 수 있습니다. 이 값을 설정의 크기 뿐만 아니라 데이터베이스 크기 증가 되지 않습니다. 기본 *MAXSIZE* 10240 g b (10TB)를 지정 하지 않은 경우. 다른 가능한 값의 범위에서 250GB 최대 240 TB입니다.  
+기본값은 10, 240 GB (10TB).  
+
+**적용 대상:** 탄력성 성능 계층에 대해 최적화
+
+데이터베이스에 대 한 최대 허용 크기입니다. 데이터베이스 최대 크기 보다 커질 수 없습니다. 
+
+**적용 대상:** 컴퓨팅 성능 계층에 대해 최적화
+
+Rowstore 데이터는 데이터베이스에 대 한 최대 허용 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터형된 columnstore 인덱스에서 비클러스터형 인덱스에 저장 된 데이터는 MAXSIZE 보다 커질 수 없습니다.  Columnstore 형식으로 압축 된 데이터 크기 제한이 없고 MAXSIZE 제한 되지 않습니다. 
   
 SERVICE_OBJECTIVE  
-성능 수준을 지정합니다. 에 대 한 서비스 목표에 대 한 자세한 내용은 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], 참조 [SQL 데이터 웨어하우스에 대 한 확장성](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-manage-compute-overview/)합니다.  
+성능 수준을 지정합니다. 에 대 한 서비스 목표에 대 한 자세한 내용은 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], 참조 [성능 계층](https://azure.microsoft.com/documentation/articles/performance-tiers/)합니다.  
   
 ## <a name="permissions"></a>Permissions  
 이러한 권한이 필요합니다.  

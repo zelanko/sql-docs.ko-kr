@@ -22,17 +22,16 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15b23f5cbe20fd7833a02cb6cff276680c30c9fb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-query-tools"></a>데이터 마이닝 쿼리 도구
   모든 데이터 마이닝 쿼리는 DMX(Data Mining Extensions) 언어를 사용합니다. DMX는 분류, 위험 분석, 권장 사항 생성 및 선형 회귀를 포함한 모든 종류의 기계 학습 태스크에 대한 모델을 만드는 데 사용할 수 있습니다. 또한 DMX 쿼리를 작성하여 모델을 처리할 때 생성된 패턴 및 통계에 대한 정보를 가져올 수 있습니다.  
@@ -93,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [SQL Server Management Studio에서 DMX 쿼리 만들기](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   
-

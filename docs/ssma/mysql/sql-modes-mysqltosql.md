@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e36f73bd8f62bed52ef13acd4e1491b0d3e894fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 175e135f99f8ed96754ff255cbad7f32cc202479
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 모드 (MySQLToSQL)
 MySQL 용 SSMA 다른 SQL 모드에서 작동할 수 있습니다 및 다른 클라이언트에 대 한 이러한 모드를 다르게 적용할 수 있습니다.  
@@ -85,4 +83,3 @@ MySQL 용 SSMA 다른 SQL 모드에서 작동할 수 있습니다 및 다른 클
   
     3.  명시적으로 설정 하는 유효한 SQL 모드 SQL 모드 상속으로 반영 되지 않으며 마지막으로 개체에 적용 됩니다.  
   
-

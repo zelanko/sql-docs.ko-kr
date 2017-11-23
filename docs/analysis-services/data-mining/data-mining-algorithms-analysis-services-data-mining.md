@@ -25,17 +25,16 @@ helpviewer_keywords:
 - data mining [Analysis Services], algorithms
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85f1333bc1f9674dcdb5274e0b2768c401fd2d7c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>데이터 마이닝 알고리즘(Analysis Services - 데이터 마이닝)
   데이터 마이닝 *알고리즘* (또는 기계 학습)은 데이터로부터 모델을 만드는 추론 및 계산 집합입니다. 모델을 만들기 위해 알고리즘은 제공된 데이터를 분석하여 특정 유형의 패턴 또는 추세를 찾습니다. 알고리즘은 많은 반복을 통해 이 분석 결과를 사용하여 마이닝 모델을 만들기 위한 최적의 매개 변수를 찾습니다. 그런 다음 이러한 매개 변수를 전체 데이터 집합에 적용하여 동작 가능한 패턴과 자세한 통계를 추출합니다.  
@@ -111,4 +110,3 @@ ms.lasthandoff: 09/01/2017
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
-

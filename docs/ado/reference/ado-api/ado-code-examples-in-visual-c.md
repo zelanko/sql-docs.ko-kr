@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- ADO code examples, Visual C++
+dev_langs: C++
+helpviewer_keywords: ADO code examples, Visual C++
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a9dc2f4f129ae14efbc2b2ca23f0af7cc619107c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92465db3866a5af2ba40ee48cbf92e42794fc587
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual c + +에서 ADO 코드 예제
 다음 코드 예제를 사용 하 여 ADO 메서드, 속성 및 Microsoft Visual c + +에서 작성 될 때 이벤트를 사용 하는 방법에 알아봅니다.  
@@ -157,4 +153,3 @@ ms.lasthandoff: 09/09/2017
  [Visual Basic에서 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 코드 예에서는 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [부록 D: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
-

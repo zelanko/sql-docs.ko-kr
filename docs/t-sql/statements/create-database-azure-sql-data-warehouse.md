@@ -1,33 +1,28 @@
 ---
 title: "(Azure SQL 데이터 웨어하우스) 데이터베이스 만들기 | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 03/14/2017
+ms.custom: 
+ms.date: 10/16/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse
 ms.reviewer: 
-ms.service: sql-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.service: sql-data-warehouse
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-ms.assetid: 42819b93-b757-4b2c-8179-d4be3c512c19
-caps.latest.revision: 20
+dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a178756610f0d0e463c21a2a62a287ada6c863a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>(Azure SQL 데이터 웨어하우스) 데이터베이스 만들기
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 새 데이터베이스를 만듭니다.  
   
@@ -36,9 +31,19 @@ ms.lasthandoff: 09/01/2017
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 (  
-    [ MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB ,]  
+    [ MAXSIZE = { 
+          250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 
+        | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 
+        | 153600 | 204800 | 245760 
+      } GB ,
+    ]  
     EDITION = 'datawarehouse',  
-    SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' }  
+    SERVICE_OBJECTIVE = { 
+         'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
+        | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
+        | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
+    }  
 )  
 [;]  
 ```  
@@ -56,10 +61,18 @@ Windows 및 SQL 데이터 정렬 이름에 대 한 자세한 내용은 참조 [C
 데이터베이스의 서비스 계층을 지정합니다. 에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 'datawarehouse'를 사용 합니다.  
   
 *MAXSIZE*  
-데이터베이스 최대 크기에 맞춰 늘어날 수 있습니다. 이 값을 설정의 크기 뿐만 아니라 데이터베이스 크기 증가 되지 않습니다. 기본 *MAXSIZE* 10240 g b (10TB)를 지정 하지 않은 경우.  다른 가능한 값의 범위에서 250GB 최대 240 TB입니다.  
+기본값은 10, 240 GB (10TB).  
+
+**적용 대상:** 탄력성 성능 계층에 대해 최적화
+
+데이터베이스에 대 한 최대 허용 크기입니다. 데이터베이스 최대 크기 보다 커질 수 없습니다. 
+
+**적용 대상:** 컴퓨팅 성능 계층에 대해 최적화
+
+Rowstore 데이터는 데이터베이스에 대 한 최대 허용 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터형된 columnstore 인덱스에서 비클러스터형 인덱스에 저장 된 데이터는 MAXSIZE 보다 커질 수 없습니다.  Columnstore 형식으로 압축 된 데이터 크기 제한이 없고 MAXSIZE 제한 되지 않습니다.
   
 SERVICE_OBJECTIVE  
-성능 수준을 지정합니다. 에 대 한 서비스 목표에 대 한 자세한 내용은 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], 참조 [SQL 데이터 웨어하우스에 대 한 확장성](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-performance-scale/)합니다.  
+성능 수준을 지정합니다. 에 대 한 서비스 목표에 대 한 자세한 내용은 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], 참조 [성능 계층](https://azure.microsoft.com/documentation/articles/performance-tiers/)합니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
 사용 하 여 [DATABASEPROPERTYEX &#40; Transact SQL &#41; ](../../t-sql/functions/databasepropertyex-transact-sql.md) 데이터베이스 속성을 표시 합니다.  
@@ -108,5 +121,4 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
  [테이블 만들기 &#40; Azure SQL 데이터 웨어하우스 &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)  
  [DROP database&#40; Transact SQL &#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
-
 

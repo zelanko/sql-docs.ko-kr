@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Folders Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Folders Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.folders
 - http://schemas.microsoft.com/analysisservices/2003/engine#Folders
 - urn:schemas-microsoft-com:xml-analysis#Folders
-helpviewer_keywords:
-- Folders element
+helpviewer_keywords: Folders element
 ms.assetid: fefb0469-22ea-4804-8dc3-9c49825b32f1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83571bacbbd3779909d79d3f327c4088b9222bb6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66d219274d57cfd8505de2c19e8f0e804f6f9cd1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="folders-element-xmla"></a>Folders 요소(XMLA)
   [Restore](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md) 또는 [Synchronize](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 명령을 실행하는 동안 부모 [Location](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) 요소에서 사용되는 [Folder](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 요소의 컬렉션을 포함합니다.  
@@ -78,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

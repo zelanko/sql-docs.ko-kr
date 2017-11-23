@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ef18607c859ee7894bd61305a47299836774dec9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c4c398dbda7bc898d62ea16122ccfba02ea7d5b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO 데이터 마이닝 개체 프로그래밍
   AMO를 사용하여 데이터 마이닝 개체를 프로그래밍하는 과정은 매우 간단합니다. 첫 번째 단계는 마이닝 프로젝트를 지원하는 데이터 구조 모델을 만드는 것입니다. 그런 다음 데이터 내부의 보이지 않는 관계를 예측하거나 찾는 데 사용할 마이닝 알고리즘을 지원하는 데이터 마이닝 모델을 만듭니다. 구조 및 알고리즘을 포함하여 만든 마이닝 프로젝트를 통해 마이닝 모델을 처리하여 나중에 클라이언트 응용 프로그램에서 쿼리 또는 예측하는 데 사용하는 학습된 모델을 얻을 수 있습니다.  
@@ -156,4 +154,3 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [데이터베이스 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

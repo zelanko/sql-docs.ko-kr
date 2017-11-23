@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9eb2a8ddce4813a0738fc73dd4f54d6b015d30c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-fundamentals"></a>ADO 기본 사항
 ADO 개발자는 강력 하 고 논리 개체 모델 프로그래밍 방식으로 액세스, 편집 및 다양 한 OLE DB 시스템 인터페이스를 통해 데이터 원본에서에서 데이터 업데이트를 제공 합니다. ADO의 가장 일반적인 사용법은 테이블 또는 관계형 데이터베이스 테이블에서에서 쿼리, 검색 및 응용 프로그램에 결과 표시 및 아마도 사용자가 확인 하 고 변경 된 데이터에 저장할 수 있도록 하는 것입니다. 다른 작업은 다음과 같습니다.  
@@ -71,4 +69,3 @@ ADO 개발자는 강력 하 고 논리 개체 모델 프로그래밍 방식으�
 -   [OLE DB 공급자](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [오류](../../../ado/guide/data/errors-ado.md)
-

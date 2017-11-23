@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a1d5da102b2d357b20e08bbb25269ae7ec7ca78c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5c0d2d3ad83249c4e438e01a31a41d9e8e226ce8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-from-database-db2tosql"></a>(DB2ToSQL) 데이터베이스에서 새로 고침
 **데이터베이스에서 새로 고침** 대화 상자에서는 DB2 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에 있는 행은 코딩 된 색 메타 데이터의 상태에 따라:  
@@ -61,4 +59,3 @@ X 단추를 사용 하 여 지정 SSMA에서 선택한 개체에 대 한 메타 
   
 유지 하는 **범례** 대화 상자 맨 위에 **데이터베이스에서 새로 고침** 대화 상자는 **맨 위에 표시** 확인란 합니다.  
   
-

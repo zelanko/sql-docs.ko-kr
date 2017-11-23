@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - single-member tuples [MDX]
 - expressions [MDX], tuples
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - tuples
 - implicit tuples
 ms.assetid: 0b802b76-9123-405e-ae43-d438754724ba
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e4720d4cdf9a03bd3667679e98f18f4989235e6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f0d24279e896bc71faef81c5901d6d52069b717c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-tuple-expressions"></a>튜플 식 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +55,8 @@ ms.lasthandoff: 08/02/2017
 ## <a name="one-member-tuples"></a>단일 멤버 튜플  
  튜플 식에 단 하나의 멤버가 있는 경우 MDX는 식을 평가할 목적으로 이 멤버를 단일 멤버 튜플로 변환합니다. 즉, 튜플 식 대신 `[Measures].[TestMeasure]`라는 멤버 식을 쓰면 `( [Measures].[TestMeasure] ).`라는 튜플 식을 쓰는 것과 기능적으로 동일합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [식 &#40; Mdx&#41;](../mdx/expressions-mdx.md)   
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

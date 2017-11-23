@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 04357499b0ac47f8fa130ceb117946cbeeba1378
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c08bd0a90cc7f5820f2f1e9481f2c58c3b12f131
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Sybase 클라이언트 (SybaseToSQL) 용 SSMA를 설치합니다.
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스 서버와의 인스턴스를 연결 하는 데 사용 되는 프로그램 파일의 SSMA 클라이언트 구성 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 ASE 데이터베이스 개체를 변환, Azure SQL DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는에 개체를 로드 하는 Azure SQL DB 구문 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB, 다음 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQLDB 합니다.  
@@ -73,8 +71,7 @@ SSMA를 설치 하기 전에 최신 버전을 다운로드 한 후의 설치 파
   
 SSMA 프로그램 파일 외에 설치 해야 SSMA for Sybase 확장 팩에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 합니다. 자세한 내용은 참조 [SQL Server &#40; SSMA 구성 요소 설치 SybaseToSQL &#41; ](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md).  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SSMA 구성 요소에 SQL Server &#40; 설치 SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
 [Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

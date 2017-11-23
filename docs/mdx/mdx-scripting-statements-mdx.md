@@ -5,28 +5,25 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - MDX [Analysis Services], scripts
 - scripts [MDX], statements
 - Multidimensional Expressions [Analysis Services], scripts
 ms.assetid: a4e5f377-6f06-4888-9663-91105b205ac1
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 76d57e87a24f034ee1898b0c610b23b3479c48b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9aee6950e5892644b7cc53fc21b751b0b9d5bdaa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 스크립팅 문(MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +41,10 @@ ms.lasthandoff: 08/02/2017
 |[IF 문 &#40; Mdx&#41;](../mdx/mdx-scripting-if.md)|조건이 True인 경우 문을 실행합니다.|  
 |[SCOPE 문 &#40; Mdx&#41;](../mdx/mdx-scripting-scope.md)|지정된 MDX 문의 범위를 지정된 하위 큐브로 제한합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX 문 참조 &#40; Mdx&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [MDX 데이터 조작 문 &#40; Mdx&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [MDX 스크립팅 기본 사항 &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   
-

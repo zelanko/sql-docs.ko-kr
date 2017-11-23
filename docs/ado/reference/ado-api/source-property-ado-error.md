@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Error::get_Source
 - Error::Source
 - Error::GetSource
-helpviewer_keywords:
-- Source property [ADO Error]
+helpviewer_keywords: Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a0f34bfbe5c4d7fa251316658dd76878c7b53c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 86c95ebdbacfffcee3e1be83c33ff3c5261352a6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-property-ado-error"></a>Source 속성 (ADO 오류)
 개체 또는 원래 오류를 생성 한 응용 프로그램의 이름을 나타냅니다.  
@@ -56,4 +53,3 @@ ms.lasthandoff: 09/09/2017
  [Number 속성 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source 속성 (ADO 레코드)](../../../ado/reference/ado-api/source-property-ado-record.md)   
  [Source 속성(ADO 레코드 집합)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-

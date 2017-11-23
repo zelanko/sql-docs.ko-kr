@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DataFactory configuration in RDS [ADO]
+helpviewer_keywords: DataFactory configuration in RDS [ADO]
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e2fa2afbd767d30f2b85514524acbb438adfe06
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 745f6c7408f72ee1df0c5757007588b76fe334fc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>DataFactory 안전 또는 무제한 모드에 대 한 구성
 > [!IMPORTANT]
@@ -48,7 +45,6 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

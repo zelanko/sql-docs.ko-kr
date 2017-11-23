@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ecdb36c546d04421f30573bd4b34ae60467e7f64
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 733fae47c5c74eb120b7f8719dd53675eb5b7e36
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-db2-db2tosql"></a>D b 2에 연결 (DB2ToSQL)
 사용 하 여는 **d b 2에 연결** 마이그레이션할 DB2 데이터베이스에 연결 하는 대화 상자.  
@@ -82,4 +80,3 @@ SSMA는 DB2 데이터베이스에 연결 하는 데 사용할 사용자 이름�
   
 SSMA 연결 문자열에 대해 항상 Provider 매개 변수를 포함 합니다. D b 2에 연결할 때 포트 매개 변수를 포함 되어 있는지 확인 합니다.  
   
-

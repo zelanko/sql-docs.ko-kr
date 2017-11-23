@@ -1,24 +1,22 @@
 ---
 title: "SQL Server의 기계 학습 시작 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: b61de3dcbe239ec1bffdabc734e8e5d624519df6
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09d6e887a8c64c98a1c3f68c78b07c26da6ffb76
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>기계 학습에서 SQL Server 시작
 
@@ -33,9 +31,9 @@ Microsoft은 온-프레미스와 클라우드 모두에 대 한 기계 학습 �
 
 + SQL Server 2017
 
-  Python 추가 되 고 컴퓨터 학습 솔루션의 넓은 범위에 대 한 컴퓨터 학습 Services (In-database) 지원이 반영 되도록 하려면 이름을 변경에 대 한 SQL Server 2017 CTP 2.0에서 지원으로 시작 합니다. 이제 Python 또는 R 코드를 실행할 SQL 도구를 사용 하 여 기계 학습 작업을 자동화할 수 있습니다. 또는와 SQL Server 컴퓨터를 사용 하는 여는 _계산 컨텍스트_ 원격 개발 환경에서 실행 된 작업에 대 한 합니다.
+  SQL Server 2017 부터는 SQL Server에서 Python 코드를 지금 사용할 수 있습니다. 로 변경 되었습니다 (더 포함 된 상태가 될 때까지!), 여러 언어 및 이름을 솔루션에 대 한 광범위 한 지원이 반영 되도록 [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]합니다. 이제 Python 또는 R 코드를 실행할 SQL 도구를 사용 하 여 기계 학습 작업을 자동화할 수 있습니다. 또는와 SQL Server 컴퓨터를 사용 하는 여는 _계산 컨텍스트_ 원격 개발 환경에서 실행 된 작업에 대 한 합니다.
 
-    + [SQL Server에서 Python에 대 한 아키텍처 개요](python/architecture-overview-sql-server-python.md)
+    + [SQL Server에서 Python에 대 한 아키텍처 개요](/python/architecture-overview-sql-server-python.md)
     + [SQL Server R Services 또는 시스템 학습 서비스 설정](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
@@ -49,20 +47,20 @@ Microsoft은 온-프레미스와 클라우드 모두에 대 한 기계 학습 �
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft 기계 서버 (Microsoft R Server)를 학습 합니다.
 
-학습 작업을 분산 하 고 확장 가능한 컴퓨터를 실행 하려는 하지만 사용 하는 등 SQL Server 데이터베이스 엔진과 통합 필요 하지 않습니다는 기업 고객을 지원 하기 위해 SQL Server 2017에 Microsoft 컴퓨터 학습 서버를 설치 하는 옵션 제공 sql 계산 컨텍스트를 선택 합니다.
+설치 하는 옵션 [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] 가 학습 작업을 분산 하 고 확장 가능한 컴퓨터를 실행 하려고 하지만 SQL 계산의 사용과 같이 SQL Server 데이터베이스 엔진과 통합 필요 하지 않습니다는 기업 고객을 지원 하기 위해 SQL Server 2017에서 제공 됩니다 컨텍스트입니다.
 
-SQL Server 2016의 Microsoft R Server를 설치 하는 옵션을 사용 합니다.
+SQL Server 2016에서 설치 하는 옵션을 사용 [!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]합니다.
   
-  + [Introducing Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)(Microsoft R Server 소개)
+  + [기계 학습 서버 시작](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
   
-또한 MSDN에서 사용할 수 있는 플랫폼별 설치 관리자를 통해 R Server를 설치할 수 있습니다.
+설치할 수도 있습니다 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)] 또는 [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] 플랫폼별 설치 관리자를 통해:
 
-  + [R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)(Windows용 R Server)
-  + [R 서버 Linux 용](https://msdn.microsoft.com/microsoft-r/rserver-install-linux-server)
-  + [Hadoop에 대 한 R 서버](https://msdn.microsoft.com/microsoft-r/rserver-install-hadoop)
+  + [Windows에 설치](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+  + [Linux에서 설치](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-linux-install)
+  + [Hadoop에 설치](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-hadoop-install)
 
 > [!IMPORTANT]
-> R 서버를 사용 하 여 Python을 실행 하려는 경우 사용할 최신 버전을 설치 해야 **컴퓨터 학습 서버**, SQL Server 2017 설치를 사용할 때만 사용할 수:
+> R 서버를 사용 하 여 Python을 실행 하려는 경우 사용할 최신 버전을 설치 해야 [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]을 통해서만 사용할 수 [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] 설치:
 > 
 >    + [Microsoft R Server 또는 서버를 학습 하는 컴퓨터 설정](../advanced-analytics/r/create-a-standalone-r-server.md)
 
@@ -82,7 +80,7 @@ SQL Server 2016의 Microsoft R Server를 설치 하는 옵션을 사용 합니�
 
 + [컴퓨터 학습 자습서](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  시작 하려면 SQL Server 2017 및 SQL Server 2017을 사용 하 여 컴퓨터 학습 솔루션에 대 한 학습 모든 리소스의 목록을 찾습니다.
+  시작 하려면 모든 리소스의 목록을 사용 하 여 컴퓨터 학습 솔루션에 대 한 학습 찾을 [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] 또는 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]합니다.
 
 ### <a name="r-tutorials"></a>R 자습서
 
@@ -100,7 +98,7 @@ SQL Server 2016의 Microsoft R Server를 설치 하는 옵션을 사용 합니�
 
 + [SQL Server Python 자습서](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
-  Python SQL Server에서 실행 하는 방법에 알아봅니다. Python을 사용 하 여 모델을 작성 하 고 SQL Server 데이터 점수를 사용 합니다.
+  Python에서 실행 하는 방법을 알아봅니다 [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]합니다. Python을 사용 하 여 모델을 작성 하 고 SQL Server 데이터 점수를 사용 합니다.
 
    SQL 개발자에 대 한 종단 간 솔루션을 Python SQL Server Management Studio에서 실행 해야 하는 모든 코드를 제공 합니다.
 
@@ -127,4 +125,3 @@ Microsoft 데이터 과학 팀에서 솔루션 템플릿을 특정 산업 또는
 [SQL Server 컴퓨터 학습 서비스 시작](../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
 
 [서버를 학습 하는 Microsoft 컴퓨터 시작](../advanced-analytics/r/getting-started-with-microsoft-r-server-standalone.md)
-

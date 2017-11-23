@@ -8,22 +8,20 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 97
+caps.latest.revision: "97"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 212fbb3618bbccc58ea077d59f15dca3c31ca71f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>기능 Analysis Services의 새로운
 SQL Server 2016 Analysis Services는 많은 향상 된 성능, 쉽게 솔루션 작성, 자동화 된 데이터베이스 관리를 제공 하는 향상 된 새로운 기능, 향상 된 관계가 양방향 교차 필터링, 병렬 파티션 처리 및 등 다양 합니다. 이번 릴리스에서 향상된 기능 대부분의 중심에는 테이블 형식 model 데이터베이스에 대한 새로운 호환성 수준 1200이 있습니다.     
@@ -212,5 +210,4 @@ Visual Studio 2015의 코드 보기는 테이블 형식 1200 모델에 대한 JS
 [Analysis Services 팀 블로그](http://blogs.msdn.microsoft.com/analysisservices/)    
 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)    
      
-
 

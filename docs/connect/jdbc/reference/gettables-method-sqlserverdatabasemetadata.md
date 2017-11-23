@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getTables
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getTables
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c469b56d30e93ba96378df87490be5cea83d8c2a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bbf35aeec7b5626b380fc654995d181fe124811
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,7 +75,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**문자열**|테이블 스키마 이름입니다.|  
 |TABLE_NAME|**문자열**|테이블 이름.|  
 |TABLE_TYPE|**문자열**|테이블 형식입니다.|  
-|REMARKS|**문자열**|테이블에 대한 설명입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 이 열에 대 한 값을 반환 하지 않습니다.  |  
+|REMARKS|**문자열**|테이블에 대한 설명입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 이 열에 대 한 값을 반환 하지 않습니다.|  
 |TYPE_CAT|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |TYPE_SCHEM|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |TYPE_NAME|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
@@ -121,4 +117,3 @@ public static void executeGetTables(Connection con) {
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

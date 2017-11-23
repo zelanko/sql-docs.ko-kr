@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::AbsolutePage
-helpviewer_keywords:
-- AbsolutePage property [ADO]
+f1_keywords: Recordset15::AbsolutePage
+helpviewer_keywords: AbsolutePage property [ADO]
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e75be5da366dbda463a05c920192626446c17238
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 54d429f0920da7f68bcea54b72077b96d6d198f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage 속성 (ADO)
 현재 레코드가 있는 페이지를 나타냅니다.  
@@ -58,4 +54,3 @@ ms.lasthandoff: 09/09/2017
  [AbsolutePosition 속성 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [PageCount 속성 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize 속성(ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)
-

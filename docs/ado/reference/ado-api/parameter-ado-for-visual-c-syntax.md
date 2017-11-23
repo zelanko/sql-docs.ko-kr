@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
-helpviewer_keywords:
-- Parameter collection [ADO], ADO for Visual C++ syntax
+dev_langs: C++
+helpviewer_keywords: Parameter collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 446c004d7170b3c6d7f45af590adabac6dc1e2ff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a46bb9cb6387b5531b4d701915deb17fd2a295d0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>매개 변수 (Visual c + + 구문에 대 한 ADO)
 ## <a name="methods"></a>메서드  
@@ -60,4 +56,3 @@ put_Value(VARIANT val)
   
 ## <a name="see-also"></a>관련 항목:  
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)
-

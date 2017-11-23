@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>데이터 원본 뷰를 사용하지 않고 템플릿에서 큐브 만들기
   데이터 원본 뷰를 사용하지 않고 큐브를 만들려면 큐브 마법사의 첫 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성** 을 선택하십시오. 나중에 스키마 생성 마법사를 사용하여 큐브의 구조 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 바탕으로 데이터 원본 뷰에 대한 관계형 스키마를 생성할 수 있습니다. 스키마 생성 방법에 대한 자세한 내용은 [스키마 생성 마법사&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)를 참조하세요.  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  **마법사 완료** 페이지에서 새 큐브의 구조를 검토한 후 **큐브 이름** 상자에 큐브 이름을 입력합니다. 선택 사항으로 **지금 스키마 생성** 확인란을 선택하면 스키마 생성 마법사가 시작됩니다. 대부분의 경우 추가 개체를 만들려면 이 확인란을 선택하지 않아야 합니다. 나중에 큐브 디자이너를 사용하여 스키마를 생성할 수 있습니다.  
   
   
-

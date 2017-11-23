@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - HelpContext property [ADO]
 - HelpFile property [ADO]
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dce4f5513199be2b4c74903741178844c0ecedf6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0474b7b80eebb70e181df58d22f293c388a628bb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext, 도움말 파일 속성
 도움말 파일 및 관련 된 항목을 나타냅니다는 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
  [Description 속성](../../../ado/reference/ado-api/description-property.md)   
  [Number 속성 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source 속성(ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)
-

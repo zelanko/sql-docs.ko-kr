@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DimensionAttributeBinding Data Type (out-of-line)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DimensionAttributeBinding Data Type (out-of-line)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DimensionAttributeBinding data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DimensionAttributeBinding data type
 ms.assetid: d8ec77a9-749f-4b08-8d56-8b6514a70248
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c681e7805cabe50b57a3a9bde4bac0406141ab4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b60ccc402874d2261bd16756a0427e90cac7c22c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensionattributebinding-data-type-out-of-line-assl"></a>DimensionAttributeBinding 데이터 형식(아웃오브 라인)(ASSL)
   차원에 있는 특성의 아웃오브 라인 바인딩을 나타내는 파생 데이터 형식을 정의합니다.  
@@ -75,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [스크립팅 언어 XML 데이터 형식 &#40; analysis Services ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

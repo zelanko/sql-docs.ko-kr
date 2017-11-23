@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 351650e6445c0d8f85751349d243bc8870fd8c2f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1107c5c4aafb0a2e661bbc1307f9aea71b278270
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>계층적 레코드 집합 (예:)의 행에 액세스
 다음 예제에서는 단계 행 하는 데 필요한을 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -77,4 +75,3 @@ End Sub
 
 ## <a name="see-also"></a>관련 항목:
  [데이터 개요 셰이핑](../../../ado/guide/data/data-shaping-overview.md) [개체 필드](../../../ado/reference/ado-api/field-object.md) [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [정식 문법을](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 데이터 서비스에 대 한 모양 지정 OLE DB (ADO 서비스 공급자)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [(ADO) 레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md) [데이터 모양 지정에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md) [APPEND 절 셰이프](../../../ado/guide/data/shape-append-clause.md) [셰이프 일반적 명령](../../../ado/guide/data/shape-commands-in-general.md) [Shape COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md) [응용 프로그램 기능에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-

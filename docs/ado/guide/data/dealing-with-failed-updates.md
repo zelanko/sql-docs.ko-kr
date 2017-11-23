@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- updates [ADO], dealing with failed updates
+helpviewer_keywords: updates [ADO], dealing with failed updates
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e2be023b954040c1c539063c1e1a3d1cf67931ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dc8facd3f93f0c752739c20d61352d8c4ab2f63f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dealing-with-failed-updates"></a>실패 한 업데이트 처리
 오류가 발생 한 업데이트 완료 하는 경우 오류를 해결 하는 방법을 특성 및 오류의 심각도 및 응용 프로그램의 논리에 따라 다릅니다. 그러나 데이터베이스와 공유 하는 다른 사용자가 일반적인 오류를 수행 하기 전에 필드를 수정 다른 사용자는 합니다. 이러한 종류의 오류 충돌을 이라고 합니다. ADO에서이 상황을 감지 하 고 오류를 보고 합니다.  
@@ -46,4 +43,3 @@ Loop
   
 ## <a name="see-also"></a>관련 항목:  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)
-

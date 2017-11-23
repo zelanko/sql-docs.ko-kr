@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2352c6de536981aee960617ad5afc8f2598721e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visual-basic-for-applications-functions"></a>응용 프로그램 기능에 대 한 Visual Basic
 다음 Visual Basic 응용 프로그램 기능에 대 한 데이터 셰이핑 계산 식에에서 사용할 수 있습니다.  
@@ -63,4 +60,3 @@ ms.lasthandoff: 09/09/2017
  [셰이프 APPEND 절](../../../ado/guide/data/shape-append-clause.md)   
  [일반적으로 shape 명령](../../../ado/guide/data/shape-commands-in-general.md)   
  [셰이프 COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md)
-

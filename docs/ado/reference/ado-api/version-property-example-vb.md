@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Version property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Version property [ADO], Visual Basic example
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 143f2dd7021cb3ee1100fe04e93d3058e07c14f2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9eff4d790e78fc96cd9922b29cbcd6248f81e44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="version-property-example-vb"></a>버전 속성 예제 (VB)
 사용 하 여이 예제는 [버전](../../../ado/reference/ado-api/version-property-ado.md) 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 현재 ADO 버전을 표시 하는 개체입니다. 또한 여러 동적 속성을 사용 하 여 보여 줍니다.  
@@ -88,4 +84,3 @@ End Sub
 ## <a name="see-also"></a>관련 항목:  
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version 속성(ADO)](../../../ado/reference/ado-api/version-property-ado.md)
-

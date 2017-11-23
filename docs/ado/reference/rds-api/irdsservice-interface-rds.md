@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- IRDSService interface [ADO]
+helpviewer_keywords: IRDSService interface [ADO]
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eea463bcaf2131605170ccfe10a6c724fb27474b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b20227c5ce92e6f04a251c5be9dadb9ba8fa0b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 인터페이스 (RDS)
 노출 된 [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) 기능이 더 많은 버전의 개체에 요청된 된 인터페이스에 대 한 포인터를 반환 하는 데 사용 되는 메서드.  
@@ -36,6 +33,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [RDS 개체](../../../ado/reference/rds-api/rds-objects.md)
-
 
 

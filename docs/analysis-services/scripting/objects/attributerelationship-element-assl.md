@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeRelationship Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeRelationship Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MemberProperty
-helpviewer_keywords:
-- AttributeRelationship element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MemberProperty
+helpviewer_keywords: AttributeRelationship element
 ms.assetid: 2e786109-b8bf-4295-b0fe-9c1997349993
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ecf44f25f94a461f0aee873877ca3260a5efff9f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: be7aeb23f7b59016fe5d3a55655208ba81a84ccb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributerelationship-element-assl"></a>AttributeRelationship 요소(ASSL)
   두 특성 간의 관계에 대한 세부 정보를 제공합니다.  
@@ -81,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

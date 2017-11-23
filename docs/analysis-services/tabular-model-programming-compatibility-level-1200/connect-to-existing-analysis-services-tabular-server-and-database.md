@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: df4fb2df60cf27c5a2f33676b9e34fdf1b255a34
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 061b37f5b0e8209f896ded915f0259c3253a1439
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>기존 Analysis Services 테이블 형식 서버 및 데이터베이스에 연결
 
@@ -122,4 +121,3 @@ Windows 2012 이상에서는 위임 도메인 간에 전달할 수 있습니다.
 
 - [만들기 및 빈 데이터베이스를 배포 합니다.](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-and-deploy-an-empty-database-analysis-services-amo-tom.md)
 - [기존 데이터베이스를 나열](../../analysis-services/tabular-model-programming-compatibility-level-1200/list-existing-databases-on-a-tabular-server-analysis-services-amo-tom.md)
-

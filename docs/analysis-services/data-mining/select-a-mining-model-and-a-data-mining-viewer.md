@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Viewer [Analysis Services], types
+helpviewer_keywords: Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d97a29fac2a85c1398fa8a994f50a0766bd119d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13296651eb2fd572106c52014ce0a42ac81c9781
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>마이닝 모델 및 데이터 마이닝 뷰어 선택
   데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 있는 뷰어 중 하나를 사용하여 마이닝 모델을 탐색할 수 있습니다. 손쉽게 모델 간에 전환하거나 사용 중인 뷰어를 변경할 수 있습니다.  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

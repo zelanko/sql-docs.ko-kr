@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4803dcc8225400232e52890a2ce55edc80af5e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="receiving-results"></a>결과 받기
 ADO에서 대부분의 명령을 호출자에 게 반환 하는 몇 가지 정보 발생 합니다. 행 집합을 반환 하는 명령에 대 한 결과에서 수신 되는 **레코드 집합** 개체 수는 가장 많이 사용 되는 ADO 개체입니다.  
@@ -48,4 +46,3 @@ ADO에서 대부분의 명령을 호출자에 게 반환 하는 몇 가지 정�
  에 캡슐화 된 각 데이터 집합에 대 한 네트워크를 통해 여러 해야 하는 수단 라운드 트립 둘 이상의 결과 집합을 받을 수는 **레코드 집합** 개체입니다. 느리거나 혼잡 한 네트워크에 대 한 왕복 수를 줄이고 성능을 높일 수 있습니다는 응용 프로그램의 성능입니다. 일부 공급자의 여러 받으려는 지원 제공 따라서 **레코드 집합**s 단일 왕복에서 합니다. 다음 항목에 설명 되어 있음:  
   
 -   [다중 레코드 집합 수신](../../../ado/guide/data/receiving-multiple-recordsets.md)
-

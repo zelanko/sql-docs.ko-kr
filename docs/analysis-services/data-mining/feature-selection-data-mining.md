@@ -25,17 +25,16 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ae50c18dab1894b42e209d2a37762e0fa9e0d57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
   *기능 선택* 은 기계 학습의 중요한 부분입니다. 기능 선택은 처리 및 분석을 위한 입력을 줄이거나 가장 중요한 입력을 찾는 프로세스를 말합니다. 관련 용어인 *기능 엔지니어링* (또는 *기능 추출*)은 기존 데이터에서 유용한 정보나 기능을 추출하는 프로세스를 말합니다.  
@@ -144,4 +143,3 @@ ms.lasthandoff: 09/01/2017
  [마이닝 모델 및 구조 사용자 지정](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   
-

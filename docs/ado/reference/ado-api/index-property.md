@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset21::Index
-helpviewer_keywords:
-- Index property
+f1_keywords: Recordset21::Index
+helpviewer_keywords: Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3fa23448f5942baabf364a0b02f61324d29ec7b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9091e9a65b178806c8695faffa50f11946c6b2ca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-property"></a>Index 속성
 현재에 적용 된 인덱스의 이름을 표시 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -64,4 +60,3 @@ ms.lasthandoff: 09/09/2017
  [메서드 및 속성 예제 (VB) 인덱스 검색](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Index 개체 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek 메서드](../../../ado/reference/ado-api/seek-method.md)
-

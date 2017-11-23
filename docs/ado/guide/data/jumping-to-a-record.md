@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - record jumping [ADO]
 - jumping to record [ADO]
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8612ee07c90c315bf5cc1eceb621082ced03d5a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="jumping-to-a-record"></a>레코드로 이동
 [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하면에서 앞 이나 뒤로 이동할 수는 **레코드 집합** 지정된 된 수의 다음 구문을 사용 하 여 레코드:  
@@ -49,4 +47,3 @@ oRs.Move NumRecords, Start
  책갈피를 전달 하는 경우는 *시작* 인수에이 책갈피와 레코드를 기준으로 이동 가정는 **레코드 집합** 개체 책갈피를 지원 합니다. 책갈피를 사용 하 여 가져온는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성입니다. 지정 하지 않으면 현재 레코드를 기준으로 이동 합니다.  
   
  사용 하는 경우는 **CacheSize** 속성을 전달 공급자에서 레코드를 로컬로 캐시 한 *NumRecords* 캐시 된 레코드의 현재 그룹 외부 레코드 현재 위치를 이동 하는 인수 하면 ADO 대상 레코드부터 시작 하는 레코드의 새 그룹을 검색 합니다. **CacheSize** 새로 검색된 된 그룹의 크기를 결정 하는 속성 및 대상 레코드는 검색 된 첫 번째 레코드입니다.
-

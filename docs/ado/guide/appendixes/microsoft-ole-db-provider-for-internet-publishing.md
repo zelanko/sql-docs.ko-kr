@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bac02557dcc9cf816edfcad5b6cc5d927e42f21a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d466123e7330eb599847225d2b108ec7f80d9ea9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for 인터넷 게시 개요
 Microsoft OLE DB Provider for Internet Publishing Microsoft FrontPage 또는 Microsoft Internet Information Server에 의해 처리 리소스에 액세스 하도록 ADO 수 있습니다. 리소스에는 HTML 파일 또는 Windows 2000 웹 폴더와 같은 웹 원본 파일이 포함 됩니다.
@@ -73,4 +71,3 @@ MSDAIPP.DSO
 
 ## <a name="see-also"></a>관련 항목:
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md) [인터넷 게시에 대 한 OLE DB Provider](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
-

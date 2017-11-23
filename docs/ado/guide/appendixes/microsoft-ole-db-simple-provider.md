@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB simple provider
 - OLE DB simple provider [ADO]
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1159651ab4b7198895f4d5192a1b34701dcaac7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b81dae92dcb8f6493fd6d6c74515750d4e4a0f66
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 공급자 간단한 개요
 Microsoft OLE DB 간단한 공급자 (OSP)는에 대 한 공급자를 썼는지를 사용 하 여 데이터에 액세스할 수는 ADO를 사용 하면는 [OLE DB 간단한 공급자 (OSP) Toolkit](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6)합니다. 간단한 공급자는 메모리 내 배열 또는 XML 문서와 같은 기본만 OLE DB 지원 해야 하는 데이터 원본에 액세스 하는 데 사용 됩니다.
@@ -237,4 +235,3 @@ Sub WalkHier(ByVal iLevel As Integer, ByVal adoRS As ADODB.Recordset)
     iLevel = PriorLevel
 End Sub
 ```
-

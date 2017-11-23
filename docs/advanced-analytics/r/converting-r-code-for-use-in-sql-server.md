@@ -1,29 +1,25 @@
 ---
 title: "R Services에서 사용할 R 코드 변환 | Microsoft 문서"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d403b716d6be6c571f4de76a25ba3f6f7f5c4e8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed5f9052467492fe4bbbfb4ac0682c08a7ba8062
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="converting-r-code-for-use-in-r-services"></a>R Services에서 사용할 R 코드 변환
 
@@ -113,4 +109,3 @@ SQL Server에서 R 코드를 실행할 수 있는 방법의 예를 보려면 다
  + R 코드에서 패키지를 설치하지 마세요. SQL Server에서 패키지를 사전에 설치 해야 합니다.
  
   컴퓨터 학습 서비스에서 사용 하는 기본 패키지 라이브러리에 패키지를 설치 해야 합니다. 자세한 내용은 참조 [SQL Server에 대 한 R 패키지 관리](../r/r-package-management-for-sql-server-r-services.md)
-

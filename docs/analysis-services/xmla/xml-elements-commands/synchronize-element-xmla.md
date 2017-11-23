@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Synchronize Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Synchronize Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.synchronize
 - urn:schemas-microsoft-com:xml-analysis#Synchronize
 - http://schemas.microsoft.com/analysisservices/2003/engine#Synchronize
-helpviewer_keywords:
-- Synchronize command
+helpviewer_keywords: Synchronize command
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e97d23419c9e1a52d11a22b9dbe491906f2d7efa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 82e0186ddaf4c02a2a5a2ce5730c5ac150d5bbda
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="synchronize-element-xmla"></a>Synchronize 요소(XMLA)
   동기화는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 기존의 다른 데이터베이스를 사용 하 여 데이터베이스입니다.  
@@ -94,4 +89,3 @@ ms.lasthandoff: 09/01/2017
  [명령 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

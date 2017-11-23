@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Catalog::Views
 - Views
-helpviewer_keywords:
-- Views collection [ADOX]
+helpviewer_keywords: Views collection [ADOX]
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 11a8bad0bb61e0f0256b31a24eaf3f283d645a45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8c15a8add685bf62faa307fc420f51a8c547776
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="views-collection-adox"></a>뷰 컬렉션 (ADOX)
 모든 포함 [보기](../../../ado/reference/adox-api/view-object-adox.md) 카탈로그의 개체가 있습니다.  
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  [뷰는 메서드 예제를 (VB)를 새로 고칩니다.](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
-

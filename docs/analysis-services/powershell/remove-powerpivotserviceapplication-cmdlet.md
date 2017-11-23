@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1333667175ea137687188c97e3664450586cc21e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11219fe0dd15b594d6c59565226e8f25b8259fe8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Remove-PowerPivotServiceApplication cmdlet
 
@@ -129,4 +127,3 @@ CC:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmn
  이 예에서는 단일 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램과 해당 데이터베이스 및 캐시 파일을 삭제합니다.  
   
   
-

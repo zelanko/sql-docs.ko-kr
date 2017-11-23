@@ -21,17 +21,16 @@ helpviewer_keywords:
 - properties [Analysis Services], attribute relationships
 - rigid relationships (Analysis Services)
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d925529956009a97832235808466c16598a1d344
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b43a3d43e189279b45d5347b746a047f8f76eb88
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-relationships---configure-attribute-properties"></a>특성 관계-특성 속성 구성
   다음 표에서는 특성 관계 속성을 나열하고 설명합니다.  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
 |Visible|특성 관계의 표시 유형을 결정합니다. 사용 가능한 값은 True 또는 False입니다. 기본값은 True입니다.|  
   
   
-

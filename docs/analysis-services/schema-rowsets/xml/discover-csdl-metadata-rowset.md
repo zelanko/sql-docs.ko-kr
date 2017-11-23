@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7221a67fb73c55b0173da2c10826d75003c50e6d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94f4cf7687c8e1469ea5f3a4260b69224e0ddbc0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 행 집합
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 모델(테이블 형식 또는 다차원)에 대한 정보를 반환하여 CSDLBI 형식(BI 포함 개념 스키마 정의 언어 주석)으로 모델의 정의를 제공합니다. CSDLBI는 CSDL을 기반으로 하며, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 클라이언트 간의 통신을 위한 엔터티 데이터 프레임워크에서 사용되는 XML 스키마입니다. BI(비즈니스 인텔리전스) 주석은 테이블 형식 모델과 모델 안의 개체에 대한 메타데이터를 추가로 제공합니다. 테이블 형식 데이터 모델에 대한 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)을 참조하세요.  
@@ -136,4 +134,3 @@ ms.lasthandoff: 09/01/2017
  [Business Intelligence &#40;에 대 한 CSDL 주석 CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   
-

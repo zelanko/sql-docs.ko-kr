@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b0e3fa74aed98e00a64a155a8fb43d2cc6db3e1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 01d737c9c1ac225ca00f4b824567d013673a8f57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>파워 피벗 구성 및 솔루션 배포(SharePoint 2016)
   이 항목에서는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 비롯한 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에 대한 중간 계층 고급 기능을 배포하고 구성하는 방법을 설명합니다. 구체적으로는 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성** 도구를 실행하여 다음 작업을 완료하는 방법을 설명합니다.  
@@ -142,4 +140,3 @@ ms.lasthandoff: 09/01/2017
  구성 도구에 대한 자세한 내용은 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하십시오.  
   
   
-

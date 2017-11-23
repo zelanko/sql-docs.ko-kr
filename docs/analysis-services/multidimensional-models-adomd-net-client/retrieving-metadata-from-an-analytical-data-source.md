@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c7c280b4b4a996d68bb403ea6210322604452e5d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 595b68b37eacf09f6cb4d327190f012207eb4286
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>분석 데이터 원본에서 메타데이터 검색
   메타데이터는 분석 데이터를 검색하고 사용하는 응용 프로그램에 중요합니다. 관계형 데이터 원본에서 데이터를 검색할 때는 데이터의 차원을 예측할 수 있습니다. 이는 중첩된 데이터 집합을 사용하는 경우라도 마찬가지입니다. 관계형 데이터베이스의 결과 집합은 일반적으로 2차원 구조이거나 스칼라 구조이기 때문입니다. 그러나 분석 데이터 원본에서 검색된 데이터는 중첩이 많은 계층 구조로 구성되어 차원이 다양할 수 있습니다.  
@@ -112,4 +110,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 스키마 행 집합](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

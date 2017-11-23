@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, what's new
+helpviewer_keywords: ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 594152a9dd7e6d4fdb4d00668692239d09bdf373
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ace4237c41b4a92b62e958970ebb49dcf2156d0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-features-for-each-release"></a>각 릴리스에 대 한 ADO 기능
 이 항목에서는 ADO, ADO MD 및 ADOX의 각 버전에서 도입 된 새로운 기능을 나열 합니다.
@@ -51,17 +49,17 @@ ms.lasthandoff: 09/09/2017
  *64 비트 플랫폼 지원* ADO 2.7 64 비트 프로세서에 대 한 지원이 도입 되었습니다.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***메서드* ADO 2.6 부터는 ADO MD 개체를 검색할 수에 지정 된 대로 고유한 이름을 사용 하 여 [UniqueName 속성 ADO MD](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)합니다.   부모 개체의 이름을 알면 됩니다 필요 없고 부모 컬렉션 스키마 개체를 가져와 채울 필요는 없습니다. 참조 [GetSchemaObject 메서드 ADO MD](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)합니다.
+ **CubDef.GetSchemaObject***메서드* ADO 2.6 부터는 ADO MD 개체를 검색할 수에 지정 된 대로 고유한 이름을 사용 하 여 [UniqueName 속성 ADO MD](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)합니다. 부모 개체의 이름을 알면 됩니다 필요 없고 부모 컬렉션 스키마 개체를 가져와 채울 필요는 없습니다. 참조 [GetSchemaObject 메서드 ADO MD](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)합니다.
 
  *스트림을 명령* 는 **명령** 개체가 스트림 형태로 표시 명령을 사용 하는 대신 지원는 **CommandText** 속성입니다. [CommandStream 속성 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) 는 XML 서식 파일 또는 updategram으로 지정 하는 데 사용할 수는 **명령** SQL Server 용 Microsoft OLE DB 공급자와 함께 입력 합니다.
 
- **언어***속성* [언어](../../ado/reference/ado-api/dialect-property.md) 구문을 정의 하는 새 속성 및 공급자 문자열 또는 스트림에 구문 분석을 사용 하 여 일반 규칙입니다.  
+ **언어***속성* [언어](../../ado/reference/ado-api/dialect-property.md) 구문을 정의 하는 새 속성 및 공급자 문자열 또는 스트림에 구문 분석을 사용 하 여 일반 규칙입니다.
 
- **Command.Execute***메서드* 는 [Execute 메서드](../../ado/reference/ado-api/execute-method-ado-command.md) ADO의 **명령** 개체 입력 및 출력 스트림을 사용 하도록 향상 되었습니다.  
+ **Command.Execute***메서드* 는 [Execute 메서드](../../ado/reference/ado-api/execute-method-ado-command.md) ADO의 **명령** 개체 입력 및 출력 스트림을 사용 하도록 향상 되었습니다.
 
  *Statusvalues 필드* 사용자 수정 하는 경우에 DB_E_ERRORSOCCURRED 오류가 발생할 경우 한 **필드** 의 **레코드 집합**, ADO를 채울 이제는 **Field.Status**적절 한 상태 정보를 사용 하 여 속성 함으로써 사용자가을 갖도록 무엇이 잘못 되었는지에 대 한 자세한 정보. 참조 [Status 속성 (ADO 필드)](../../ado/reference/ado-api/status-property-ado-field.md)합니다.
 
- **NamedParameters***속성* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) 는의 새로운 속성은 **명령** 공급자 사용 해야 함을 나타내는 개체의 이름은 매개 변수입니다.  
+ **NamedParameters***속성* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) 는의 새로운 속성은 **명령** 공급자 사용 해야 함을 나타내는 개체의 이름은 매개 변수입니다.
 
  *스트림에서 Resultsets* ADO에 있는 데이터 원본의 결과 집합을 반환할 수 있습니다는 **스트림**, 아닌 **레코드 집합** 개체입니다. 최신 버전의 Microsoft OLE DB Provider for SQL Server를 사용 하는 "XML" 쿼리를 실행 하 여 공급자에서 XML 결과 얻을 수 있습니다. A **스트림** 결과 집합을 받는 소스로 "XML" 명령을 사용 하 여 열 수 있습니다. 참조 [스트림으로 결과 집합 검색](../../ado/guide/data/retrieving-resultsets-into-streams.md)합니다.
 
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/09/2017
  *URL 바인딩을* ADO 2.5 URL 사용 하는 연결 문자열 및 명령 텍스트를 데이터 저장소 개체 이름에 대 한 대안을 소개 합니다. URL을 사용 하 여 기존 **연결** 및 **레코드 집합** 개체도 새와 마찬가지로 **레코드** 및 **스트림** 개체입니다.
 
  *URL 바인딩을 지 원하는 데이터 공급자* ADO 2.5 URL 스키마를 인식 하는 OLE DB 공급자를 지원 합니다. 여기에 OLE DB Provider for Internet Publishing, Windows 2000 파일 시스템에 액세스 하 고 기존 HTTP 체계 인식입니다.
-

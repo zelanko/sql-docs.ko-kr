@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Cancel Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Cancel Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cancel
 - http://schemas.microsoft.com/analysisservices/2003/engine#Cancel
 - urn:schemas-microsoft-com:xml-analysis#Cancel
-helpviewer_keywords:
-- Cancel command
+helpviewer_keywords: Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0acdbc4358ff88f49e6b87f8c4cf3924ddedb661
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a12372d43b20395e878e305b036fe5a63f399d2b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cancel-element-xmla"></a>Cancel 요소(XMLA)
   현재 실행 중인 명령을 취소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
@@ -85,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [명령 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

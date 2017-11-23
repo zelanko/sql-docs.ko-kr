@@ -8,24 +8,21 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Notification Events event category
+helpviewer_keywords: Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 29b3b8561d260e17adb78bb944ee32a20b26406b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="notification-events-data-columns"></a>Notification Events 데이터 열
   알림 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]사용자가 직접 발생시키지 않는 이벤트입니다. 예를 들어 사용자가 자동 관리 캐싱을 위해 기본 테이블을 업데이트할 때 알림이 발생합니다.  
@@ -88,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   
-

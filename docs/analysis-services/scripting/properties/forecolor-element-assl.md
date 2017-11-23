@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ForeColor Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ForeColor Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ForeColor
-helpviewer_keywords:
-- ForeColor element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ForeColor
+helpviewer_keywords: ForeColor element
 ms.assetid: 5125520c-3bce-40e6-a722-8d4d47306fed
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0e875e435da36bf31c74c5e0803ad90096921bf1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2d596597df66ba0faf52ec1530322b2c40a5ee87
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="forecolor-element-assl"></a>ForeColor 요소(ASSL)
   색 관련 표시 특성을 설명는 [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) 또는 [측정값](../../../analysis-services/scripting/objects/measure-element-assl.md) 부모 요소입니다.  
@@ -78,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

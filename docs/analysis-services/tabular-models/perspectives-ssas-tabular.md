@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 36e28c1211017a46a66ce7c7ef519eb887248c8f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a9c1ad93e5c4af1736721436f4ce5116ac279934
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectives"></a>큐브 뷰
   테이블 형식 모델에서 큐브 뷰는 모델의 보기 가능한 하위 집합을 정의하는데, 이를 통해 모델을 집중해서 보거나 비즈니스 또는 응용 프로그램의 관점에서 파악할 수 있습니다.  
@@ -46,11 +45,10 @@ ms.lasthandoff: 09/01/2017
   
 |항목|Description|  
 |-----------|-----------------|  
-|[만들기 및 큐브 뷰 관리](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|모델 디자이너의 큐브 뷰 대화 상자를 사용하여 큐브 뷰를 만들고 관리하는 방법에 대해 설명합니다.|  
+|[큐브 뷰 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|모델 디자이너의 큐브 뷰 대화 상자를 사용하여 큐브 뷰를 만들고 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [계층](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   
-

@@ -1,27 +1,25 @@
 ---
 title: "SQL Server에 추가 R 패키지를 설치 합니다. | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/02/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 8c8e95bf2f0715684bb656d2b2de4dd94aea14f8
+ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: a7afdf4230bd27505afff271a6b4782214eedfb3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server에 추가 R 패키지를 설치 합니다.
 
@@ -30,7 +28,8 @@ ms.lasthandoff: 10/10/2017
 > [!IMPORTANT]
 > 새 패키지를 추가 하기 위한 프로세스를 실행 하는 SQL Server 및 사용 하는 도구의 버전에 따라 달라 집니다. 
 
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 기계 학습 서비스
+**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="overview-of-package-installation-process"></a>패키지 설치 프로세스의 개요
 
@@ -40,7 +39,9 @@ ms.lasthandoff: 10/10/2017
 
     패키지 종속성을 확인 하 고 설치 하는 동안 필요할 수 있는 모든 관련된 패키지를 가져올 해야 합니다. 패키지 및 해당 종속성의 컬렉션을 준비 하려면는 [miniCRAN 패키지](#bkmk_packageDependencies)합니다.
 
-3.  서버에 인터넷 액세스를 있는지 여부와 SQL Server 버전에서 패키지 설치 방법에 따라 다릅니다. 권장 되는 프로세스는 다음과 같습니다.
+    다운로드 또는 설치 오류가 발생 하면 다른 미러 사이트를 시도 합니다.
+
+3.  서버에 인터넷 액세스를 있는지 여부와 SQL Server 버전에 의존 패키지를 설치 하는 방법입니다. 권장 되는 프로세스는 다음과 같습니다.
 
     **SQL Server 2016에 대 한 패키지 설치**
     
@@ -62,13 +63,13 @@ ms.lasthandoff: 10/10/2017
 
 ## <a name="install-new-packages"></a>새 패키지 설치
 
-이 섹션에서는 다음 키 패키지 설치 시나리오에 대해 자세히 설명 합니다. 사용할 수 있는 가장 좋은 방법은 이러한 factores에 따라 다릅니다.
+이 섹션에서는 키 패키지 설치 시나리오에 대해 자세히 설명 합니다. 에 따라 최상의 방법을 선택 합니다.
 
 - 사용 하는 SQL Server 버전
 
-- 인스턴스의 유일한 소유자 및 여부 데이터베이스 역할을 사용 하 여 여러 사용자에 대 한 mamaneg 패키지 하려고 합니다.
+- 인스턴스의 유일한 소유자 및 여부 데이터베이스 역할을 사용 하 여 여러 사용자에 대 한 패키지를 관리 하려고 합니다.
 
-- 종속성이 있는 여러 패키지 또는 한 패키지를 설치는 하는지 여부
+- 종속성이 있는 한 패키지 또는 여러 패키지 설치는 하는지 여부
 
 **SQL Server 패키지 관리를 사용 하 여**
 
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/10/2017
 
     [MiniCRAN 리포지토리에서 여러 패키지 설치](#bkmk_minicran)
 
-**기본 R rools 사용**
+**기본 R 도구를 사용 하 여**
 
 이전 버전의 SQL Server R services 사용 하는 경우 기존 R 도구를 사용 하 여 패키지를 설치 하려면 다음이 지침을 따릅니다. 필요에 따라 miniCRAN을 사용 하 여 설치에 대 한 패키지의 컬렉션을 준비 합니다.
 
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/10/2017
 
 4.  패키지를 사용 하려면 데이터베이스에서 실행 된 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 문.
 
-    이 예에서는 사용자 계정에 서버에 새 패키지를 업로드 하 고 데이터베이스에 공유 범위에 설치할 수 있는 권한이 있습니다.
+    이 예에서는 사용자 계정에 서버에 새 패키지를 업로드 하 고 설치 하 여 하도록 할 가정 **공유** 데이터베이스의 범위입니다.
 
     릴리스 버전을 추가 하는 다음 문에서 [zoo](https://cran.r-project.org/web/packages/zoo/index.html) 패키지 로컬 파일 공유에서 현재 데이터베이스 컨텍스트를 합니다.
 
@@ -136,7 +137,7 @@ ms.lasthandoff: 10/10/2017
     library(zoo)'
     ```
 
-    성공 하면는 **메시지** "'zoo' 패키지가 성공적으로 압축을 풀 및 MD5 합계 검사"와 같은 창 메시지를 보고 해야 합니다. 필수 패키지가 이미 설치 되어 설치 프로세스에서 연결 하 고 필요한 패키지를 로드 합니다.
+    성공 하면는 **메시지** "'zoo' 패키지가 성공적으로 압축을 풀 고 MD5 합계 선택 됩니다."와 같은 창 메시지를 보고 해야 필수 패키지가 이미 설치 되어 설치 프로세스에 연결 하 고 필요한 패키지를 로드.
 
     > [!NOTE]
     > 필수 패키지를 사용할 수 없는 경우 오류가 반환 됩니다. "라는 없는 패키지는 \<required_package\>" 합니다. 
@@ -149,7 +150,7 @@ ms.lasthandoff: 10/10/2017
 
 1. 시작 하기 전에 이러한 조건이 충족 되어 있는지 확인 합니다.
 
-    + R 클라이언트가 RevoScale의 최신 버전을 있습니다. 시험판 버전에는 일부 패키지 관리 기능이 포함 되지 않았습니다.
+    + RevoScale에 대 한 업데이트를 포함 하는 Microsoft R Client의 최신 버전을 사용 합니다.
     + 패키지 관리 및 데이터베이스 인스턴스에 대해 사용 하도록 설정 합니다.
     + 데이터베이스 관리 역할 중 하나에 권한이 있습니다.
 
@@ -219,7 +220,7 @@ SQL Server 2016 및 SQL Server 2017 둘 다에 새 패키지를 설치 하려면
 
     미러 사이트에 대 한 메시지가 표시 되 면 사용자의 위치에 편리한 모든 사이트를 선택 합니다.
 
-    대상 패키지가 추가 패키지에 따라 달라지는 경우 R 설치 관리자가 자동으로 종속성을 다운로드하고 설치합니다.
+    대상 패키지가 추가 패키지에 의존 하는 경우 R 설치 관리자 자동으로 종속성을 다운로드 하 고 설치 합니다.
 
     **인터넷에 연결 된 패키지를 수동으로 또는 컴퓨터에 설치**
 
@@ -235,7 +236,7 @@ SQL Server 2016 및 SQL Server 2017 둘 다에 새 패키지를 설치 하려면
 
 ### <a name="bkmk_minicran"></a>MiniCRAN 리포지토리에서 여러 패키지 설치
 
-MiniCRAN 리포지토리에서 패키지를 설치 하는 경우 전반적인 프로세스는 단일 압축 된 파일에서 패키지를 설치와 매우 비슷합니다. 그러나 압축 된 형식으로 개별 패키지를 업로드 하는 대신 miniCRAN 저장소 포함으로 대상 패키지 관련된 필요한 패키지 합니다.
+MiniCRAN 리포지토리에서 패키지를 설치 하는 전체 단일 압축 된 파일에서 패키지를 설치 하는 것과 비슷합니다. 그러나 압축 된 형식으로 개별 패키지를 업로드 하는 대신 miniCRAN 저장소 포함으로 대상 패키지 관련된 필요한 패키지 합니다.
 
 1.  MiniCRAN 저장소를 준비 하 고 압축 된 파일 서버에서 로컬 폴더로 복사 합니다.
 
@@ -259,7 +260,7 @@ MiniCRAN 리포지토리에서 패키지를 설치 하는 경우 전반적인 �
     library(randomForest)'
     ```
 
-    성공 하면는 **메시지** "MD5 요약과 패키지 'randomForest' 압축을 풀 성공적으로 검사"도 "마침 연결 된 실행"와 같은 창 메시지를 보고 해야 합니다.
+    성공 하면는 **메시지** "MD5 요약과 패키지 'randomForest' 압축을 풀 성공적으로 검사" 및 "마침 연결 된 실행"와 같은 창 메시지를 보고 해야 합니다.
 
 ## <a name="package-installation-tips"></a>패키지 설치 팁
 
@@ -267,11 +268,11 @@ MiniCRAN 리포지토리에서 패키지를 설치 하는 경우 전반적인 �
 
 ###  <a name="packageVersion"></a>올바른 패키지 버전 및 형식 가져오기
 
-R 패키지에 대한 여러 출처가 있으며 특히 CRAN 및 Bioconductor가 가장 널리 알려져 있습니다. R 언어 공식 사이트(<https://www.r-project.org/>)에 다양한 리소스가 나와 있습니다. 많은 패키지는 소스 코드를 가져올 수 있는 GitHub에도 게시됩니다. 그러나 회사의 누군가가 개발한 R 패키지가 지정되었을 수도 있습니다.
+R 패키지에 대한 여러 출처가 있으며 특히 CRAN 및 Bioconductor가 가장 널리 알려져 있습니다. R 언어 공식 사이트(<https://www.r-project.org/>)에 다양한 리소스가 나와 있습니다. 많은 패키지는 소스 코드를 가져올 수 있는 GitHub에 게시 됩니다. 그러나 있습니다 수 받은 회사의 누군가가 개발한 R 패키지가 있습니다.
 
 소스에 관계 없이 패키지를 설치 하려면 Windows 플랫폼에 대 한 이진 형식에 있는지 확인 해야 합니다. 그렇지 않은 경우 다운로드 한 패키지는 SQL Server 환경에서 실행할 수 없습니다.
 
-또한 패키지 SQL Server에서 실행 되는 R의 버전과 호환 되는지 여부를 결정 해야 합니다.
+를 다운로드 하기 전에 패키지는 SQL Server에서 실행 되 고 R의 버전과 호환 되는지 여부를 확인 해야 합니다.
 
 ### <a name="bkmk_zipPreparation"></a>압축 된 파일로 패키지를 다운로드 합니다.
 
@@ -287,7 +288,7 @@ R 패키지에 대한 여러 출처가 있으며 특히 CRAN 및 Bioconductor가
 
 이 프로세스는 패키지의 로컬 복사본을 만듭니다. 그런 다음 패키지를 설치 하거나 인터넷에 연결 하지 않은 서버에 압축된 된 패키지를 복사할 수 있습니다.
 
-R 패키지를 만드는 방법 및 zip 파일 형식의 콘텐츠에 대한 자세한 내용은 [Freidrich Leisch: Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)(Freidrich Leisch: R 패키지 만들기) 자습서를 참조하세요. 이 자습서는 R 사이트에서 PDF 형식으로 다운로드할 수 있습니다.
+Zip 파일 형식 및 R 패키지를 만드는 방법의 내용에 대 한 자세한 내용은이 자습서에서는 R 프로젝트 사이트에서 PDF 형식으로 다운로드할 수 있는 권장: [R 패키지를 만드는](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)합니다.
 
 ### <a name="bkmk_packageDependencies"></a>패키지 종속 파일 가져오기
 
@@ -365,4 +366,3 @@ SQL Server 컴퓨터 학습 서비스 외에도 Microsoft 컴퓨터 학습 Serve
 > R_SERVER 라이브러리에 설치 된 패키지 Microsoft R Server 에서만 사용 되 고 SQL Server에서 액세스할 수 없습니다.
 > 
 > 사용 하 여 `R_SERVICES` SQL Server에서 사용 하려는 패키지를 설치할 때 라이브러리입니다.
-

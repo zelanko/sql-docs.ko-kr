@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 0b71248949c16481dca0649fa86722477a46f231
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c351e2be7d1faf77542b68079b4f413e554e54f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>테이블 형식 모델 프로젝트(SSAS 테이블 형식)
   새 테이블 형식 모델을 만들려면 먼저 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새로운 테이블 형식 모델 프로젝트를 만들어야 합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 설치하면 테이블 형식 모델 프로젝트를 만들 수 있는 세 개의 새로운 비즈니스 인텔리전스 프로젝트 템플릿이 제공됩니다. 각 프로젝트 템플릿은 모델 제작을 시작할 수 있는 프레임워크를 제공합니다. 이 섹션의 항목에서는 프로젝트 템플릿을 사용하여 새로운 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다.  
@@ -39,4 +38,3 @@ ms.lasthandoff: 09/01/2017
 |[파워 피벗에서 가져오기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|이 항목에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 파일(.xlsx)에서 메타데이터와 데이터를 추출하여 새로운 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다.|  
   
   
-

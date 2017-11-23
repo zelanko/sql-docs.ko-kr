@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [ADO]
+helpviewer_keywords: connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 38454d8edc91715f5a3e3d5ee55f045d0e55e581
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da71dc67a1fd6a17f75c5aceaf7a88dce7d328ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-a-connection-object"></a>연결 개체를 사용 하 여
 열기 전에 **연결** 개체를 데이터 원본 및 연결의 종류에 대 한 정보를 정의 해야 합니다. 이 정보의 대부분 보유는 *ConnectionString* 의 매개 변수는 [Open 메서드](../../../ado/reference/ado-api/open-method-ado-connection.md) 에 **연결** 개체 또는 [ConnectionString 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 **연결** 개체입니다. 연결 문자열을 작은따옴표 내에 포함 된 값을 가진 세미 콜론으로 구분 된 인수/값 쌍의 목록으로 구성 합니다. 예를 들어  
@@ -72,4 +69,3 @@ oRs.MarshalOptions = adMarshalModifiedOnly
 ' Disconnect the Recordset.  
 Set oRs.ActiveConnection = Nothing  
 ```
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset20::Clone
 - Recordset20::raw_Clone
-helpviewer_keywords:
-- Clone method [ADO]
+helpviewer_keywords: Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34f8e0161fa85ec497ec6a1e6b414691161ff7a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9b7586bef017cd4e5f3a89586b8600abfd183f5a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clone-method-ado"></a>Clone 메서드 (ADO)
 복제를 만들어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기존 개체 **레코드 집합** 개체입니다. 필요에 따라 읽기 전용 복제 되도록 지정 합니다.  
@@ -96,4 +93,3 @@ rsNew.Filter = rsOriginal.Filter
  [Clone 메서드 예제 (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Clone 메서드 예제 (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Clone 메서드 예제(VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- XSLT transformations in ADO
+helpviewer_keywords: XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7fb8a2fc948c7793ed07076f338c230350d6abb1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36b39d14a4856d882add1e9bafdc9457fa3b8bc1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xslt-transformations"></a>XSLT 변환
 XSLT는 다른 형식으로 변환 하는 생성 된 XML에 적용할 수 있습니다. XSLT 템플릿 보다 친숙 한 형식으로 변환할 수 있는 개발에 도움이 ADO의 XML 형식을 이해 합니다.  
@@ -62,4 +59,3 @@ XSLT는 다른 형식으로 변환 하는 생성 된 XML에 적용할 수 있습
   
 ## <a name="see-also"></a>관련 항목:  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

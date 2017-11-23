@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::Requery
 - Recordset15::raw_Requery
-helpviewer_keywords:
-- Requery method [ADO]
+helpviewer_keywords: Requery method [ADO]
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed510a242cee92518b6b4511ffaa51539766e086
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f59d4c6cdcdb3f34be4361969da15e5af117f995
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="requery-method"></a>Requery 메서드
 데이터를 업데이트 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다시 개체의 기반이 되는 쿼리를 실행 하 여 개체입니다.  
@@ -61,4 +58,3 @@ recordset.Requery Options
  [실행, Requery, 및 메서드 (VBScript) 예제를 지웁니다.](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [실행 하 고 다시 쿼리, 메서드 예제 (VC + +)을 선택 취소](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
  [CommandText 속성(ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)
-

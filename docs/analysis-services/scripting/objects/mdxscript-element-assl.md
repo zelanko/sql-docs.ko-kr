@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MdxScript Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MdxScript Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MdxScript
-helpviewer_keywords:
-- MdxScript element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MdxScript
+helpviewer_keywords: MdxScript element
 ms.assetid: 0c59a550-dc95-4d50-948a-bb99348bdd86
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 218edfcdfce4d38cc750a9cc2f10ec5ae41ff00a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 286b149cf158d08d7da1cc247788ce2591d5099e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdxscript-element-assl"></a>MdxScript 요소(ASSL)
   연결 된 MDX (Multidimensional Expressions) 스크립트에 대 한 정보를 포함 한 [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md) 요소입니다.  
@@ -83,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

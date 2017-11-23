@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 02d8617161c4d2a023ea5b91e5e4fc2074c6c07d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 875dd29a77a341e3d40502002488fc0189947c9d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>테이블 형식 모델 스크립팅 언어 (TMSL) 참조
 
@@ -88,4 +87,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 인스턴스의 서버 모드 확인](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

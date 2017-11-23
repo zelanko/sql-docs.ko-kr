@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Files Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Files Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Files
-helpviewer_keywords:
-- Files element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Files
+helpviewer_keywords: Files element
 ms.assetid: 8a1327cb-1f60-42a7-b8ef-213d45a63e55
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f7727da9a239596dfe0e6ffddd5e8bd783a3a64e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4bc56c3401a4e665e0ea62c3d003bfd0b4e75539
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="files-element-assl"></a>Files 요소(ASSL)
   컬렉션을 포함 [파일](../../../analysis-services/scripting/objects/file-element-assl.md) 구성 하는 요소는 [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) 요소입니다.  
@@ -83,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [컬렉션 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

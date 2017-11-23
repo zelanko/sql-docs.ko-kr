@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_INPUT_DATASOURCES
+apiname: MDSCHEMA_INPUT_DATASOURCES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_INPUT_DATASOURCES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_INPUT_DATASOURCES rowset
 ms.assetid: 12482fd5-16e3-4171-9cb0-76d0d4f5308e
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8b5b662ff2397cc845284048a9406e0b01b5aeb4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e105cc8151640f5d5d74d6c7c76cc52edc16a242
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemainputdatasources-rowset"></a>MDSCHEMA_INPUT_DATASOURCES 행 집합
   데이터베이스 내에 정의된 데이터 원본을 설명합니다.  
@@ -63,7 +59,6 @@ ms.lasthandoff: 09/01/2017
 |**DATASOURCE_TYPE**|**DBTYPE_WSTR**|(선택 사항)|  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLAP 스키마 행 집합 용 OLE DB](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLAP용 OLE DB 스키마 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

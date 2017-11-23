@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_COMMAND_OBJECTS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 130ebbaa5453b61e0c473edea40c97eb0b65b0f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cae36b0ff5492555137952c2ad9b19f609c53948
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 행 집합
   참조된 명령에서 사용 중인 개체에 대한 리소스 사용량 및 작업 정보를 제공합니다.  
@@ -41,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**SESSION_SPID**|**DBTYPE_I4**|예|세션 ID입니다.|  
-|**세션 ID**|**DBTYPE_WSTR**|예|GUID와 같은 세션 고유 식별자입니다.|  
+|**SESSION_ID**|**DBTYPE_WSTR**|예|GUID와 같은 세션 고유 식별자입니다.|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||명령 시퀀스 번호입니다.|  
 |**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**|예|현재 개체의 부모에 대한 경로입니다.|  
 |**OBJECT_ID**|**DBTYPE_WSTR**|예|개체를 만들 때 정의된 개체 ID입니다.|  
@@ -74,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis 스키마 행 집합](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Cell::FormattedValue
 - FormattedValue
-helpviewer_keywords:
-- FormattedValue property [ADO MD]
+helpviewer_keywords: FormattedValue property [ADO MD]
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cbf0c7a5fc9fc88cc1962ec3414b293c03a41a25
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 151e3018fa12d3f61cb06f12692f28fa9e5b7a91
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="formattedvalue-property-ado-md"></a>ADO MD FormattedValue 속성
 형식이 지정 된 표시 나타냅니다는 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 값입니다.  
@@ -46,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Value 속성(ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)
-

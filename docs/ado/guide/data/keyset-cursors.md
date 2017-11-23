@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b0366f161e6c2e6639a18ca06c4e82ffbf686d3e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8def959d69c353449c2f862638d6edd54f786624
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keyset-cursors"></a>키 집합 커서
 키 집합 커서는 변경 내용을 검색 하는 기능에는 정적 및 동적 커서 간의 기능을 제공 합니다. 정적 커서와 같은 검색 되지 않으면 항상의 멤버 자격과 결과 집합의 순서를 변경 합니다. 동적 커서와 같은 결과 집합의 값 행의 변경 내용을 검색지 않습니다 것.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  [정방향 전용 커서](../../../ado/guide/data/forward-only-cursors.md)   
  [정적 커서](../../../ado/guide/data/static-cursors.md)   
  [동적 커서](../../../ado/guide/data/dynamic-cursors.md)
-

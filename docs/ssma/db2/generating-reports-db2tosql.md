@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a5ec42216bf7aaad67fcdb40d2462ae069aaf953
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74bb5d6044708b0f31cc5ec7a991ca1644367199
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generating-reports-db2tosql"></a>보고서 생성 (DB2ToSQL)
 명령을 사용 하 여 수행 된 특정 작업 보고서는 개체 트리 수준 SSMA 콘솔에 생성 됩니다.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/02/2017
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**Command**|**보고서 제목**|  
-    |1|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
+    |1.|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
     |2|스키마 변환|SchemaConversionReport&lt;n&gt;합니다. XML|  
     |3|데이터 마이그레이션|DataMigrationReport&lt;n&gt;합니다. XML|  
     |4|convert sql 문|ConvertSQLReport&lt;n&gt;합니다. XML|  
@@ -145,7 +143,6 @@ ms.lasthandoff: 08/02/2017
   
 -   스크립트 실패  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 실행](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   
-

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- MarshalOptions property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: MarshalOptions property [ADO], VC++ example
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7a0d6aea70f2a1ff44e0d9817f436c889992180
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 84fc386ff28e2d6c039600bde35835e69d9bbc96
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="marshaloptions-property-example-vc"></a>마샬링 예제 (VC + +)
 사용 하 여이 예제는 [마샬링](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 속성을 서버에 다시 전송 되는 행 지정할-모든 행 또는 행만 수정 합니다.  
@@ -254,4 +250,3 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>관련 항목:  
  [MarshalOptions 속성(ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
-

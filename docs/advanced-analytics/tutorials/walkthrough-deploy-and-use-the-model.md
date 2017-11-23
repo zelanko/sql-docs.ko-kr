@@ -5,26 +5,22 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>R 모델을 배포 하 고 SQL에서 사용
 
@@ -72,7 +68,7 @@ PowerShell 스크립트를 처음 실행할 때 일괄 처리 점수 매기기�
 
     + SELECT 문을 사용 하 여 SQL 테이블에서 저장 된 모델을 호출 하는 합니다. 모델 테이블에서 검색 됩니다 **varbinary (max)** SQL 변수에 저장 된 데이터를  _@lmodel2_ 를 매개 변수로 전달 하 고 *mod* 저장 시스템에 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다.
 
-    + 점수 매기기 SQL 쿼리로 정의 되 고 있는 SQL 변수에서 문자열로 저장에 대 한 입력으로 사용 되는 데이터  _@input_ 합니다. 를 데이터베이스에서 데이터를 검색할 때 호출 데이터 프레임에서 저장 *InputDataSet*, 입력된 데이터에 대 한 기본 이름만 되는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저; 정의할 수 있습니다 필요한 경우 매개 변수를 사용 하 여 다른 변수 이름을  _@input \_데이터\_1\_이름_합니다.
+    + 점수 매기기 SQL 쿼리로 정의 되 고 있는 SQL 변수에서 문자열로 저장에 대 한 입력으로 사용 되는 데이터  _@input_ 합니다. 를 데이터베이스에서 데이터를 검색할 때 호출 데이터 프레임에서 저장 *InputDataSet*, 입력된 데이터에 대 한 기본 이름만 되는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저; 정의할 수 있습니다 필요한 경우 매개 변수를 사용 하 여 다른 변수 이름을   *_@input_data_1_name_*  합니다.
 
     + 점수를 생성하기 위해 저장 프로시저가 `rxPredict` RevoScaleR **라이브러리에서** 함수를 호출합니다.
 
@@ -229,4 +225,3 @@ PowerShell 스크립트를 처음 실행할 때 일괄 처리 점수 매기기�
 [SQL Server R 자습서](sql-server-r-tutorials.md)
 
 [Sqlrutils를 사용 하 여 저장된 프로시저를 만드는 방법](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 27d4523d7d0e23fbc0043c0ef4b8909285703e31
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 31c6a32198c4a9aa417ec65fcf85a5455ea53c4a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-tabular-models"></a>테이블 형식 모델 만들기
   이 섹션의 각 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 테이블 형식 모델 디자이너를 사용하여 테이블 형식 모델을 제작하는 방법을 설명합니다.  
@@ -72,4 +71,3 @@ ms.lasthandoff: 09/27/2017
  [도구 및 Analysis Services에서 사용 되는 응용 프로그램](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   
-

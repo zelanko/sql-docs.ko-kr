@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS tutorial [ADO], datacontrol made usable
+helpviewer_keywords: RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 93ac89a0007223681f4844c0ecd36e4581414a6c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8f59e167dfad5ddd4b99d784b34e37556a076a2f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>5 단계: DataControl 유용 수행 (RDS 자습서)
 반환 된 **레코드 집합** 개체를 사용 하기 위해 사용할 수 있습니다. 검사, 탐색, 또는 다른 대로 편집할 **레코드 집합**합니다. 으로 수행할 수 있는 **레코드 집합** 사용자 환경에 따라 달라 집니다. Visual Basic 및 Visual c + +를 사용할 수 있는 시각적 컨트롤을 포함 한 **레코드 집합** 직접 또는 간접적으로 제어 데이터를 설정 하는 사용 하 여 합니다.  
@@ -54,4 +51,3 @@ Sub RDSTutorial5()
 ## <a name="see-also"></a>관련 항목:  
  [(RDS 자습서) 서버에 변경 내용이 보내집니다 6 단계:](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-
