@@ -172,7 +172,7 @@ ms.lasthandoff: 11/17/2017
 4.  **localhost에 연결**메시지가 표시되면 사용자 이름 및 암호를 입력하여 계속합니다. 웹 사이트에 대한 기본 페이지가 나타납니다.  
   
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>SQL Server 복제 수신기에 대한 사용 권한 설정  
- 구독자 컴퓨터가 IIS를 실행하는 컴퓨터에 연결되면 IIS 구성 시 지정한 인증 유형을 사용하여 해당 구독자가 인증됩니다. IIS에서는 구독자를 인증한 다음 해당 구독자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 권한을 가지고 있는지 여부를 확인합니다. replisapi.dll에 대한 권한을 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 사용자를 제어합니다. Properly configuring permissions is necessary to prevent unauthorized access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 무단으로 액세스하지 못하도록 하려면 사용 권한을 적절하게 구성해야 합니다.  
+ 구독자 컴퓨터가 IIS를 실행하는 컴퓨터에 연결되면 IIS 구성 시 지정한 인증 유형을 사용하여 해당 구독자가 인증됩니다. IIS에서는 구독자를 인증한 다음 해당 구독자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 권한을 가지고 있는지 여부를 확인합니다. replisapi.dll에 대한 권한을 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 사용자를 제어합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 무단으로 액세스하지 못하도록 하려면 사용 권한을 적절하게 구성해야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기를 실행할 계정에 대해 최소 사용 권한을 구성하려면 다음 절차를 완료합니다. 다음 절차의 단계는 IIS 7.0을 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008에 해당됩니다.  
   
