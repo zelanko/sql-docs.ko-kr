@@ -66,7 +66,7 @@ ms.lasthandoff: 11/22/2017
   
  이 문제를 해결하려면 컴퓨터를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버와 같은 도메인에 가입시키거나 로컬 컴퓨터에 도메인 컨트롤러를 설치합니다. 두 번째 해결 방법인 도메인 컨트롤러 설치를 수행하려면 모든 서비스 및 사용자에 대해 로컬 도메인 계정을 만들어야 합니다. 정의한 계정에 대해 서비스 계정 및 SharePoint 권한을 구성해야 합니다.  
   
- 오프라인 상태로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하려는 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 오프라인으로 사용하는 방법에 대한 자세한 지침은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] http://www.powerpivotgeek.com [에서 "Taking your PowerPivot server off the network"(](http://go.microsoft.com/fwlink/?LinkId=184241)서버를 네트워크에 연결하지 않고 오프라인으로 사용) 블로그 항목을 참조하세요.  
+ 오프라인 상태로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하려는 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 오프라인으로 사용하는 방법에 대한 자세한 지침은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) 에서 "Taking your PowerPivot server off the network"(서버를 네트워크에 연결하지 않고 오프라인으로 사용) 블로그 항목을 참조하세요.  
   
  **시나리오 4: 서버가 불안정한 경우**  
   
