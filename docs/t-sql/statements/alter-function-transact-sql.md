@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
 - ALTER FUNCTION
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ALTER FUNCTION statement
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 4b1008715d9cfd3e48945d0651f454253bc4e4bc
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3da4c3a8e76a48db0eee940e969ddf24dc147149
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -273,7 +270,7 @@ RETURNS return_data_type
  외부 이름 \<method_specifier >*assembly_name.class_name*. *method_name*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 함수와 바인딩할 어셈블리의 메서드를 지정합니다. *assembly_name* 에 있는 기존 어셈블리와 일치 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 표시 유형으로 현재 데이터베이스에 있습니다. *class_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 하며 어셈블리에서 클래스로 존재 해야 합니다. 있는 경우 클래스에 마침표를 사용 하는 정규화 된 네임 스페이스 이름은 (**.**) 네임 스페이스 부분을 구분 하 클래스 이름은 대괄호를 사용 하 여 구분 합니다 (****) 나 따옴표 (**""**). *method_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 하며 지정된 된 클래스에서 정적 메서드로 존재 해야 합니다.  
+ 함수와 바인딩할 어셈블리의 메서드를 지정합니다. *assembly_name* 에 있는 기존 어셈블리와 일치 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 표시 유형으로 현재 데이터베이스에 있습니다. *class_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 하며 어셈블리에서 클래스로 존재 해야 합니다. 있는 경우 클래스에 마침표를 사용 하는 정규화 된 네임 스페이스 이름은 (**.**) 네임 스페이스 부분을 구분 하 클래스 이름은 대괄호를 사용 하 여 구분 합니다 (**[]**) 나 따옴표 (**""**). *method_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 하며 지정된 된 클래스에서 정적 메서드로 존재 해야 합니다.  
   
 > [!NOTE]  
 >  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 만들기, 수정 및 공용 언어 런타임 모듈; 참조 하는 데이터베이스 개체를 삭제 합니다. 그러나 이러한 참조를 실행할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정할 때까지 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)합니다. 옵션을 사용 하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)합니다.  
@@ -451,4 +448,3 @@ RETURNS return_data_type
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

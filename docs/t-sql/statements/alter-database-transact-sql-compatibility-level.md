@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
 - COMPATIBILITY_LEVEL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - 80 compatibility level
 - ALTER DATABASE statement, compatibility levels
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - compatibility levels [SQL Server]
 - 100 compatibility level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 89
+caps.latest.revision: "89"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 49a1adc8e90cbec335030ce630c831822f963903
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7b65511b09f2a94d30c39c1f97ed88cfbfab855b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -221,7 +218,7 @@ SELECT name, compatibility_level FROM sys.databases;
   
  정의된 키워드는 예약된 상태로 유지됩니다. 예를 들어 호환성 수준 90에서 정의된 예약 키워드 PIVOT은 수준 100, 110 및 120에서도 예약되어 있습니다.  
   
- 응용 프로그램이 호환성 수준에 대한 키워드로 예약되어 있는 식별자를 사용할 경우 제대로 실행되지 않습니다. 이 해결 하려면 식별자 중 하나에 있는 대괄호 사이 묶습니다 (****) 나 따옴표 (**""**) 예: 식별자를 사용 하는 응용 프로그램을 업그레이드 하려면 **외부** 호환성 수준 90으로 식별자 중 하나를 변경할 수 있습니다 **[EXTERNAL]** 또는 **"외부"**합니다.  
+ 응용 프로그램이 호환성 수준에 대한 키워드로 예약되어 있는 식별자를 사용할 경우 제대로 실행되지 않습니다. 이 해결 하려면 식별자 중 하나에 있는 대괄호 사이 묶습니다 (**[]**) 나 따옴표 (**""**) 예: 식별자를 사용 하는 응용 프로그램을 업그레이드 하려면 **외부** 호환성 수준 90으로 식별자 중 하나를 변경할 수 있습니다 **[EXTERNAL]** 또는 **"외부"**합니다.  
   
  자세한 내용은 [예약된 키워드&#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)를 참조하세요.  
   
@@ -338,4 +335,3 @@ SELECT @v;
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,25 +16,23 @@ f1_keywords:
 - ALTER_PROC_TSQL
 - ALTER PROC
 - ALTER PROCEDURE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ALTER PROCEDURE statement
 - stored procedure modifications [SQL Server]
 - modifying stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d5970f5dc6a0bf614de4540e7354e23a16f91546
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3dc195d3f6ca908253ff5726c3f336435e7f2bd1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -152,7 +149,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  외부 이름 *assembly_name***.** *class_name***.** *method_name*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 메서드를 지정 된 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리 clr 저장 프로시저가 참조할 합니다. *class_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 하며 어셈블리에서 클래스로 존재 해야 합니다. 정규화 된 네임 스페이스 이름에 마침표가 사용 클래스에 있는 경우 (**.**) 네임 스페이스 부분을 구분 하 클래스 이름은 대괄호를 사용 하 여 구분 합니다 (****) 나 따옴표 (**""**). 지정한 메서드는 해당 클래스의 정적 메서드여야 합니다.  
+ 메서드를 지정 된 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리 clr 저장 프로시저가 참조할 합니다. *class_name* 은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 하며 어셈블리에서 클래스로 존재 해야 합니다. 정규화 된 네임 스페이스 이름에 마침표가 사용 클래스에 있는 경우 (**.**) 네임 스페이스 부분을 구분 하 클래스 이름은 대괄호를 사용 하 여 구분 합니다 (**[]**) 나 따옴표 (**""**). 지정한 메서드는 해당 클래스의 정적 메서드여야 합니다.  
   
  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 만들기, 수정 및 공용 언어 런타임 모듈; 참조 하는 데이터베이스 개체를 삭제 합니다. 그러나 이러한 참조를 실행할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정할 때까지 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)합니다. 옵션을 사용 하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)합니다.  
   
@@ -251,4 +248,3 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
  [sys.procedures &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
   
   
-

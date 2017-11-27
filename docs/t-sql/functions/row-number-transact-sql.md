@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ROW_NUMBER
 - ROW_NUMBER_TSQL
 - ROW_NUMBER()_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ROW_NUMBER function
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 284c184a7e77842ec798dbff6d32c193ce9055f8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 820acddf7de1282501caf2fcaa43dbc757b98b7a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +96,7 @@ ORDER BY name ASC;
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
 
-각 행 앞에 행 번호 열을 추가 하려면 지정 된 열을 추가 `ROW_NUMBER` 함수,이 경우 이름은 `Row#`합니다. ״ ¾ 는 `ORDER BY` 까지 절은 `OVER` 절.
+각 행 앞에 행 번호 열을 추가 하려면 지정 된 열을 추가 `ROW_NUMBER` 함수,이 경우 이름은 `Row#`합니다. `ORDER BY` 절을 `OVER` 절 위로 이동해야합니다.
 
 ```t-sql
 SELECT 
@@ -294,6 +291,5 @@ RowNumber  LastName            Territory  SalesQuota
  [NTILE &#40; Transact SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)  
   
   
-
 
 
