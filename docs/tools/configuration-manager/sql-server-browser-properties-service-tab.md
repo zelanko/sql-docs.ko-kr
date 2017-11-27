@@ -5,22 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 99572d77c3462ff9e64b1e908fe042c9d35c13e1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2013060b53bfb3626d4623b80387904e8ccb15c3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server Browser 속성(서비스 탭)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 프로그램은 서버에서 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/02/2017
  Windows 프로세스 ID를 표시합니다.  
   
  **서비스 유형**  
- 호출 프로세스에 제공되는 서비스의 유형을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 몇 가지 서비스를 설치합니다.  
+ 호출 프로세스에 제공되는 서비스의 유형을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 몇 가지 서비스를 설치합니다.  
   
  **시작 모드**  
  이 서비스를 다음 옵션으로 설정합니다.  
@@ -59,10 +57,9 @@ ms.lasthandoff: 08/02/2017
 -   사용 안 함: 이 서비스를 시작할 수 없습니다.  
   
  **State**  
- 이 서비스가 실행 중인지, 중지되었는지 또는 비활성화되었는지 나타냅니다. "****"는 상태 변경이 보류 중임을 나타냅니다.  
+ 이 서비스가 실행 중인지, 중지되었는지 또는 비활성화되었는지 나타냅니다. "**...**"는 상태 변경이 보류 중임을 나타냅니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server Browser 서비스](../../tools/configuration-manager/sql-server-browser-service.md)  
   
   
-

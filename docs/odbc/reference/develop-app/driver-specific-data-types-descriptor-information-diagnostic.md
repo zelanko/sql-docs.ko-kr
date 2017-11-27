@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,30 +16,29 @@ helpviewer_keywords:
 - diagnostic information [ODBC], driver-specific values
 - ODBC drivers [ODBC], driver-specific diagnostic values
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ccf90b309c6a2355612546e82c2181988879520
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05aaeca12342ec9d037595ff001a0d1edc745818
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>드라이버 관련 데이터 형식, 형식 설명자, 정보 유형, 진단 형식 및 특성
 드라이버는 다음에 대 한 드라이버 관련 값을 할당할 수 있습니다.  
   
--   **SQL 데이터 형식 표시기** 이러한´ *ParameterType* 에 **SQLBindParameter** 및 *DataType* 에 **SQLGetTypeInfo** 반환한 **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  
+-   **SQL 데이터 형식 표시기** 이들은에서 사용된다 *ParameterType* 에 **SQLBindParameter** 및 *DataType* 에 **SQLGetTypeInfo** 반환한 **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  
   
--   **설명자 필드** 이러한 ´ *FieldIdentifier* 에 **SQLColAttribute**, **SQLGetDescField**, 및 **SQLSetDescField** .  
+-   **설명자 필드** 이들은에서 사용된다 *FieldIdentifier* 에 **SQLColAttribute**, **SQLGetDescField**, 및 **SQLSetDescField** .  
   
--   **진단 필드** 이러한 ´ *DiagIdentifier* 에 **SQLGetDiagField** 및 **SQLGetDiagRec**합니다.  
+-   **진단 필드** 이들은에서 사용된다 *DiagIdentifier* 에 **SQLGetDiagField** 및 **SQLGetDiagRec**합니다.  
   
--   **정보 유형이** 이러한 ´ *정보 항목* 에 **SQLGetInfo**합니다.  
+-   **정보 유형이** 이들은에서 사용된다 *정보 항목* 에 **SQLGetInfo**합니다.  
   
--   **연결 및 문 특성** 이러한 ´ *특성* 에 **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, 및 **SQLSetStmtAttr**합니다.  
+-   **연결 및 문 특성** 이들은에서 사용된다 *특성* 에 **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, 및 **SQLSetStmtAttr**합니다.  
   
  각이 항목에는 두 값 집합이: ODBC를 사용 하도록 예약 되어 값과 드라이버에서 사용 하도록 예약 하는 값입니다. 드라이버 관련 값을 구현 하기 전에 드라이버 작성자 Open 그룹에서 각 드라이버 관련 형식, 필드 또는 특성에 대 한 값을 요청 해야 합니다. 새 드라이버 개발을 위해 아래 표에 설명 된 범위를 사용 합니다. ODBC 3.8 드라이버 관리자 알 수 없는 값 아래에 설명 된 범위에 있지 않은 사용 하는 경우 오류가 발생 하지 않습니다. 그러나 이후 버전의 드라이버 관리자에 알 수 없는 값 수신 범위에 있지 않은 경우 오류가 발생할 수 있습니다.  
   
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/09/2017
 ```  
 SQL_DRIVER_DIAGNOSTIC_BASE+0, SQL_DRIVER_DIAGNOSTIC_BASE +1  
 ```
-

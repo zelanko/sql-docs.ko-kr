@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- batches [Analysis Services]
+helpviewer_keywords: batches [Analysis Services]
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d9ed1a3c1c832a1ceb34d96f0df44030da2e33cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7770a5b6f5a6ba26cfa89d1200a776ec55c0942
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="batch-processing-analysis-services"></a>일괄 처리(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 일괄 처리 명령을 사용하여 여러 처리 명령을 단일 요청으로 서버에 보낼 수 있습니다. 일괄 처리를 사용하여 처리할 개체와 처리 순서를 제어할 수 있습니다. 또한 일괄 처리는 일련의 독립 실행형 작업으로 실행되거나 한 프로세스가 실패하면 완료된 일괄 처리가 롤백되는 트랜잭션으로 실행될 수 있습니다.  
@@ -88,4 +86,3 @@ ms.lasthandoff: 09/01/2017
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

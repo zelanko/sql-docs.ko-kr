@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a242628af9898a3a437ec11000de626135e9d79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ddec8b5d5f658e4f6119c1962d785232bf44d985
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-messages"></a>진단 메시지
 각 sqlstate 진단 메시지가 반환 됩니다. 동일한 SQLSTATE 종종 서로 다른 메시지 수가 반환 됩니다. 예를 들어 SQL 구문에서 대부분의 오류에 대 한 SQLSTATE 42000 (구문 오류 또는 액세스 위반) 반환 됩니다. 그러나 각 구문 오류는 서로 다른 메시지에 의해 기술 할 합니다.  
@@ -40,11 +38,11 @@ ms.lasthandoff: 09/09/2017
   
  오류 또는 경고의 원본 구성 요소 자체 이면 진단 메시지가 설명 해야 합니다. 따라서 메시지의 텍스트에는 두 가지 형식입니다. 오류 및 데이터 원본에서 발생 하지 않는 경고에 대 한 진단 메시지에는이 형식을 사용 해야 합니다.  
   
- **[** *공급 업체 식별자* **] [** *ODBC 구성 요소 식별자* **]** * 구성 요소가 제공 된 텍스트*  
+ **[** *공급 업체 식별자* **] [** *ODBC 구성 요소 식별자* **]**  *구성 요소가 제공 된 텍스트*  
   
  오류 및 데이터 원본에서 발생 하는 경고에 대 한 진단 메시지에는이 형식을 사용 해야 합니다.  
   
- **[** *공급 업체 식별자* **] [** *ODBC 구성 요소 식별자* **] [** * 데이터 소스 id* **]** *데이터 소스-제공 된-텍스트*  
+ **[** *공급 업체 식별자* **] [** *ODBC 구성 요소 식별자* **] [**  *데이터 소스 id* **]** *데이터 소스-제공 된-텍스트*  
   
  다음 표에서 각 요소의 의미를 보여 줍니다.  
   
@@ -58,5 +56,4 @@ ms.lasthandoff: 09/09/2017
   
  [1]이 경우 드라이버 역할을 하는 드라이버와 데이터 원본.  
   
- 대괄호 (****) 메시지에 포함 되어야 하며 선택적 항목을 나타내지 않습니다.
-
+ 대괄호 (**[]**) 메시지에 포함 되어야 하며 선택적 항목을 나타내지 않습니다.

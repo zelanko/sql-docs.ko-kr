@@ -14,8 +14,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
+f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
 - dimensions [Analysis Services], security
 - AllowedSet property
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - VisualTotals property
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 42ea70f08c2f051970898fa4e3e9498f7f8c1627
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>차원 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
   큐브에 대한 읽기 권한을 활성화한 후 차원 구성원(큐브에 사용된 모든 측정값을 포함하는 측정값 차원에 포함된 측정값 포함)에 대한 액세스를 명시적으로 허용하거나 거부하는 추가 권한을 설정할 수 있습니다. 예를 들어 여러 범주의 재판매인의 경우, 특정 비즈니스 유형에 대한 데이터를 제외하도록 권한을 설정할 수 있습니다. 다음은 Reseller 차원에서 Warehouse 비즈니스 유형에 대한 액세스 거부의 전후 효과를 설명합니다.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 09/27/2017
 5.  필요에 따라 **고급** 을 클릭하여 이 특성 계층에 대해 **보이는 값 합계** 를 사용합니다. 이 옵션은 역할을 통해 사용 가능한 구성원을 기준으로 집계를 다시 계산합니다.  
   
     > [!NOTE]  
-    >  차원 구성원을 지우는 권한을 적용할 때, 집계된 합계가 자동으로 다시 계산되지 않습니다. 권한이 적용되기 전에 특성 계층의 **All** 구성원이 200을 반환한다고 가정합시다. 일부 구성원에 대한 액세스를 거부하는 권한이 적용된 후, 사용자에게 표시되는 구성원 값이 200보다 훨씬 적음에도 불구하고 **All** 은 계속 200을 반환합니다. 큐브의 소비자가 혼동하지 않도록 **All** 구성원을 특성 계층의 모든 구성원에 대한 집계가 아니라, 역할 구성원에 대한 구성원의 집계로 구성할 수 있습니다. 이 동작을 호출하기 위해 차원 보안을 구성할 때 고급 **Visual Totals** **탭에서** 를 활성화할 수 있습니다. 이 기능을 설정하면 미리 계산된 집계에서 가져오지 않고 쿼리 시 집계가 계산됩니다. 이 기능은 쿼리 성능에 많은 영향을 미칠 수 있으므로 필요한 경우에만 사용하세요.  
+    >  차원 구성원을 지우는 권한을 적용할 때, 집계된 합계가 자동으로 다시 계산되지 않습니다. 권한이 적용되기 전에 특성 계층의 **All** 구성원이 200을 반환한다고 가정합시다. 일부 구성원에 대한 액세스를 거부하는 권한이 적용된 후, 사용자에게 표시되는 구성원 값이 200보다 훨씬 적음에도 불구하고 **All** 은 계속 200을 반환합니다. 큐브의 소비자가 혼동하지 않도록 **All** 구성원을 특성 계층의 모든 구성원에 대한 집계가 아니라, 역할 구성원에 대한 구성원의 집계로 구성할 수 있습니다. 이 동작을 호출하기 위해 차원 보안을 구성할 때 **고급** **Visual Totals** 탭에서 를 활성화할 수 있습니다. 이 기능을 설정하면 미리 계산된 집계에서 가져오지 않고 쿼리 시 집계가 계산됩니다. 이 기능은 쿼리 성능에 많은 영향을 미칠 수 있으므로 필요한 경우에만 사용하세요.  
   
 ## <a name="hiding-measures"></a>측정값 숨기기  
  [Grant custom access to cell data &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)에서는 셀 데이터가 아닌 측정값의 모든 보이는 측면을 완전히 숨기려면 차원 멤버에 대한 권한이 필요하다고 설명했습니다. 이 섹션에서는 측정값의 개체 메타데이터에 대한 액세스를 거부하는 방법을 설명합니다.  
@@ -145,4 +143,3 @@ ms.lasthandoff: 09/27/2017
  [데이터 원본 개체에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   
-

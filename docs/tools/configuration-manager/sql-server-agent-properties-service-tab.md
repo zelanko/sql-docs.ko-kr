@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8a1b994b316606409ce4d41857aec574477ede49
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac155a67f472ad7cf7dcee0f8c5650bb43b21732
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>SQL Server 에이전트 속성(서비스 탭)
   이 서비스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스입니다. 밝은 회색으로 표시된 속성 값은 이 응용 프로그램을 사용하여 변경할 수 없습니다.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 프로세스 ID를 표시합니다.  
   
  **SQL 서비스 유형**  
- 호출 프로세스에 제공되는 서비스의 유형을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 몇 가지 서비스를 설치합니다.  
+ 호출 프로세스에 제공되는 서비스의 유형을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 몇 가지 서비스를 설치합니다.  
   
  **시작 모드**  
  이 서비스를 다음 옵션으로 설정합니다.  
@@ -57,7 +55,6 @@ ms.lasthandoff: 08/02/2017
 -   사용 안 함: 이 서비스를 시작할 수 없습니다.  
   
  **State**  
- 이 서비스가 실행 중인지, 중지되었는지 또는 비활성화되었는지 나타냅니다. "****"는 상태 변경이 보류 중임을 나타냅니다.  
+ 이 서비스가 실행 중인지, 중지되었는지 또는 비활성화되었는지 나타냅니다. "**...**"는 상태 변경이 보류 중임을 나타냅니다.  
   
   
-

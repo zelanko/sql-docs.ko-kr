@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- customization file in RDS [ADO]
+helpviewer_keywords: customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cadf89ac579b11ab829ecd288fec77df81eb0603
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
-사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 (****) 형식 및 매개 변수를 포함 합니다. 4 개의 섹션 형식 리터럴 문자열으로 표시 됩니다 **연결**, **sql**, **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본값, 사용자 지정 식별자 또는 nothing입니다.  
+사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 (**[]**) 형식 및 매개 변수를 포함 합니다. 4 개의 섹션 형식 리터럴 문자열으로 표시 됩니다 **연결**, **sql**, **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본값, 사용자 지정 식별자 또는 nothing입니다.  
   
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소가 더 이상에 포함 Windows 운영 체제 (Windows 8 참조 및 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한 세부 정보에 대 한). RDS 클라이언트 구성 요소는 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 합니다. [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
@@ -70,7 +67,7 @@ identifier
   
 -   A **userlist** 섹션을 사용 하는 경우는 **userlist** 섹션 일치 하는 항목 식별자는 **연결** 섹션 식별자입니다. 내용을 일치 항목이 있는 경우는 **userlist** 섹션에 의해 제어 되는 연결에 적용 되는 **연결** 섹션.  
   
--   연결 나 명령 문자열의 문자열 식별자에서 일치 하지 않으면 **연결** 또는 **sql** 헤더 섹션 고 없습니다 **연결** 또는 **sql ** 아니면 클라이언트 문자열을 사용 하 여 수정 하지 않고 기본 매개 변수를 사용 하는 헤더 섹션.  
+-   연결 나 명령 문자열의 문자열 식별자에서 일치 하지 않으면 **연결** 또는 **sql** 헤더 섹션 고 없습니다 **연결** 또는 **sql**  아니면 클라이언트 문자열을 사용 하 여 수정 하지 않고 기본 매개 변수를 사용 하는 헤더 섹션.  
   
 -   **로그** 섹션을 사용 될 때마다는 **DataFactory** 작업에 포함 되어 있습니다.  
   
@@ -82,7 +79,6 @@ identifier
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [필요한 클라이언트 설정](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [고유한 사용자 지정된 처리기 작성](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 
 

@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: afec632bf85f8e95d370842946fed62e6b8c4111
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17df1facd3c4c3f9035017c0156e6e3aed910d33
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 속성(서비스 탭)
   **MSSQLSERVER 속성**대화 상자의 **서비스** 탭을 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/02/2017
  Windows 프로세스 ID를 표시합니다.  
   
  **서비스 유형**  
- 호출 프로세스에 제공되는 서비스의 유형을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 몇 가지 서비스를 설치합니다.  
+ 호출 프로세스에 제공되는 서비스의 유형을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 몇 가지 서비스를 설치합니다.  
   
  **시작 모드**  
  이 서비스를 다음 옵션으로 설정합니다.  
@@ -57,7 +55,6 @@ ms.lasthandoff: 08/02/2017
 -   사용 안 함: 이 서비스를 시작할 수 없습니다.  
   
  **State**  
- 이 서비스가 실행 중인지, 중지되었는지 또는 비활성화되었는지 나타냅니다. "****"는 상태 변경이 보류 중임을 나타냅니다.  
+ 이 서비스가 실행 중인지, 중지되었는지 또는 비활성화되었는지 나타냅니다. "**...**"는 상태 변경이 보류 중임을 나타냅니다.  
   
   
-

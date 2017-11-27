@@ -5,8 +5,7 @@ ms.date: 07/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,17 +40,16 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c48b3eca23a83669e33c7d31ddb7495176944813
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6075e08d0fd6d5a62c9de00b5f34576459b0ffdc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 대화 상자
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 서버로부터 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 캡처하는 도구입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다. 명령 및의 대화 상자에서 사용할 수 있는 설정에는 다음과 같은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -211,23 +209,23 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 ## <a name="replay-configuration"></a>재생 구성
 ### <a name="basic-replay-options"></a>기본 재생 옵션
 **재생 구성** 대화 상자에서 **기본 재생 옵션** 페이지를 사용하여 추적 파일 또는 테이블을 재생하는 방법을 지정할 수 있습니다.  
-이 창을 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생에 적합한 이벤트가 포함된 추적 파일 또는 테이블을 엽니다. 자세한 내용은 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)을 참조하세요. 추적 파일이나 테이블을 연 상태에서 **재생** 메뉴의 **시작**을 클릭한 다음 추적을 재생할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
+이 창을 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 재생에 적합한 이벤트가 포함된 추적 파일 또는 테이블을 엽니다. 자세한 내용은 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)을 참조하세요. 추적 파일이나 테이블을 연 상태에서 **재생** 메뉴의 **시작**을 클릭한 다음 추적을 재생할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
 |항목|Description
 |---|---
 |**서버 재생**|재생을 위해 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 표시합니다.  
 |**변경...**|다른 서버에 연결하려면 **서버에 연결** 대화 상자를 시작합니다.  
-|**파일에 저장** |재생 결과를 파일에 저장합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]파일을 저장할 위치를 지정할 수 있는 표준 파일 대화 상자를 표시 합니다.  
-|**테이블에 저장**|재생 결과를 테이블에 저장합니다. 그러면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 위치를 지정하여 테이블을 저장할 수 있는 테이블 선택 대화 상자가 표시됩니다.  
+|**파일에 저장** |재생 결과를 파일에 저장합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 위치를 지정하여 파일을 저장할 수 있는 표준 파일 대화 상자가 표시됩니다.  
+|**테이블에 저장**|재생 결과를 테이블에 저장합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 위치를 지정하여 테이블을 저장할 수 있는 테이블 선택 대화 상자가 표시됩니다.  
 |**재생 스레드 수**|동시에 사용할 재생 스레드 수를 지정합니다. 숫자가 높을수록 재생 중 소비되는 리소스가 늘어나지만 재생 속도가 빨라지고 동시성이 향상됩니다.  
 |**추적한 순서대로 이벤트를 재생합니다.**|순차적으로 이벤트를 재생합니다. 디버깅을 위해 추적을 재생할 경우 이 옵션을 사용합니다.  
 |**여러 스레드를 사용하여 이벤트를 재생합니다.** |동시에 이벤트를 재생합니다. 이 옵션을 사용하면 순차적으로 이벤트를 재생하는 것보다 속도가 빨라지지만 디버깅이 해제됩니다. 이벤트는 해당 SPID(시스템 프로세스 ID) 내에서 정렬됩니다.  
 |**재생 결과 표시**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에 재생 결과를 표시합니다. 
 ### <a name="advanced-replay-options"></a>고급 재생 옵션
 **재생 구성** 대화 상자에서 **고급 재생 옵션** 탭을 사용하여 추적 파일 재생 방법을 지정할 수 있습니다.  
-이 창을 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생에 적합한 이벤트가 포함된 추적 파일 또는 테이블을 엽니다. 자세한 내용은 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)을 참조하세요. 추적 파일 또는 테이블이 열려 있는 상태로 **재생** 메뉴에서 **시작**을 클릭하고 추적을 재생할 SQL Server의 인스턴스에 연결한 다음 **고급 재생 옵션** 탭을 클릭합니다.  
+이 창을 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 재생에 적합한 이벤트가 포함된 추적 파일 또는 테이블을 엽니다. 자세한 내용은 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)을 참조하세요. 추적 파일 또는 테이블이 열려 있는 상태로 **재생** 메뉴에서 **시작**을 클릭하고 추적을 재생할 SQL Server의 인스턴스에 연결한 다음 **고급 재생 옵션** 탭을 클릭합니다.  
 |항목|Description
 |---|---
-|**시스템 SPID 재생**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 SPID(시스템 프로세스 식별자)를 재생할지 여부를 지정합니다.  
+|**시스템 SPID 재생**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 SPID(시스템 프로세스 식별자)를 재생할지 여부를 지정합니다.  
 |**한 SPID만 재생**|선택한 SPID와 관련된 원본 추적 파일의 작업만 재생합니다.  
 |**재생할 SPID**|재생할 SPID를 지정합니다.  
 |**날짜 및 시간별 재생 제한**|원본 추적 파일의 일부만 재생하려면 이 옵션을 선택합니다.  
@@ -270,7 +268,7 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
  >문자열 유형 데이터 열의 경우 필터 조건이 LIKE 또는 NOT LIKE 문자열 값으로 표시됩니다.  
 
 ## <a name="select-template-name"></a>템플릿 이름 선택
-**템플릿 이름 선택** 대화 상자를 사용하여 운영 체제의 파일로 내보낼 기존 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 템플릿을 선택할 수 있습니다. 또한 기존 추적 템플릿을 편집하는 경우 이 대화 상자를 사용하여 추적 템플릿을 저장할 다른 이름을 선택하거나 입력할 수 있습니다. 서식 파일을 내보낼 때이 대화 상자에 액세스 하는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**, 클릭 하 고 **템플릿 내보내기**합니다. 템플릿의 이름을 변경하는 경우 이 대화 상자에 액세스하려면 **파일** 메뉴에서 **템플릿**, **템플릿 편집**을 차례로 가리킨 다음 **다른 이름으로 저장**을 클릭합니다.  
+**템플릿 이름 선택** 대화 상자를 사용하여 운영 체제의 파일로 내보낼 기존 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 템플릿을 선택할 수 있습니다. 또한 기존 추적 템플릿을 편집하는 경우 이 대화 상자를 사용하여 추적 템플릿을 저장할 다른 이름을 선택하거나 입력할 수 있습니다. 템플릿을 내보내는 경우 이 대화 상자에 액세스하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Export Template**. 템플릿의 이름을 변경하는 경우 이 대화 상자에 액세스하려면 **파일** 메뉴에서 **템플릿**, **템플릿 편집**을 차례로 가리킨 다음 **다른 이름으로 저장**을 클릭합니다.  
 |항목|Description
 |---|---
 |**서버 유형**|템플릿을 선택할 서버 유형을 선택합니다. 이 옵션은 템플릿을 내보내는 경우에만 사용할 수 있습니다.  
@@ -281,4 +279,3 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 [서버 성능 및 작업 모니터링](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-
