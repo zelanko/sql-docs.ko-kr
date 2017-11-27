@@ -2,30 +2,36 @@
 title: "스칼라 식을 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - scalar expressions
 - expressions [MDX], scalar
 ms.assetid: 4678b675-8fbd-4e5b-a519-d4cd1bb8c46a
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d61b66c0575866e3b57b493d07aa7bdcbe66e7b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 67966680e10b35064c65a91f8b8da22a00fb17c4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-scalar-expressions"></a>스칼라 식 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   MDX에서 스칼라 식은 계산 시 계산 컨텍스트 내에서 단일 값을 반환하는 MDX 구문의 한 요소입니다.  
   
@@ -81,3 +87,4 @@ FROM [Adventure Works]
  [식 &#40; Mdx&#41;](../mdx/expressions-mdx.md)  
   
   
+

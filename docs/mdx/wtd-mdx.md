@@ -2,29 +2,37 @@
 title: Wtd (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: WTD
-dev_langs: kbMDX
-helpviewer_keywords: Wtd function
+f1_keywords:
+- WTD
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Wtd function
 ms.assetid: 41066e1b-e802-4582-be4b-3ed7807b033e
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ef274decb624474873e3efa3f0a8860dfdbfff80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1010b6d7aef59c5bb4eb18e93ba63bc972e8b7fa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="wtd-mdx"></a>Wtd(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정한 멤버와 동일한 수준의 형제 멤버 집합을 반환합니다. 이 집합은 첫 번째 형제 멤버부터 시작하여 지정된 멤버에서 끝나며 Time 차원의 Week 수준에 따라 제한됩니다.  
   
@@ -51,3 +59,4 @@ Wtd( [ Member_Expression ] )
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

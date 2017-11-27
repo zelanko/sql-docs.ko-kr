@@ -2,29 +2,37 @@
 title: LookupCube (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: LOOKUPCUBE
-dev_langs: kbMDX
-helpviewer_keywords: LookupCube function
+f1_keywords:
+- LOOKUPCUBE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- LookupCube function
 ms.assetid: 243fa101-328a-4016-86e0-d8b5977e15a9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ecd1810908dfda4d3e9f4e8c36d4c35ba6e37185
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 41aed2def9e470d39f006b314f51dbb61bf63b47
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="lookupcube-mdx"></a>LookupCube(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   같은 데이터베이스에서 지정된 또 다른 큐브에 대해 계산된 MDX 식의 값을 반환합니다.  
   
@@ -76,3 +84,4 @@ LookupCube(Cube_Name, String_Expression )
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

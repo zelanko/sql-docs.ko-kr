@@ -2,29 +2,37 @@
 title: Lead (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: LEAD
-dev_langs: kbMDX
-helpviewer_keywords: Lead function
+f1_keywords:
+- LEAD
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Lead function
 ms.assetid: f3250092-7b98-40b5-8dca-77e3b50734a0
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 34d8989d5c1084171dc908bf8bded3f89f77a356
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 127c84f38fe85453fa3da7ae2b1c9752b05b6ba7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="lead-mdx"></a>Lead(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   멤버 수준을 따라 지정한 위치 번호만큼 지정한 멤버의 뒤에 있는 멤버를 반환합니다.  
   
@@ -39,7 +47,7 @@ Member_Expression.Lead( Index )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
- *Index*  
+ *인덱스*  
  멤버 위치 번호를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>주의  
@@ -74,3 +82,4 @@ FROM [Adventure Works]
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

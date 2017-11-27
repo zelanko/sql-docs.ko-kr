@@ -2,29 +2,37 @@
 title: UnknownMember (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: UnknownMember
-dev_langs: kbMDX
-helpviewer_keywords: UnknownMember function
+f1_keywords:
+- UnknownMember
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- UnknownMember function
 ms.assetid: 5ae39cbe-65c8-4a59-9548-71b28ecf6eb5
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6d2fc715ad703a32f2ce6a7535cd8706eafe65da
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 131993b1038229138df3e7d084b5d842693b7f0f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   수준 또는 멤버와 연결된 알 수 없는 멤버를 반환합니다.  
   
@@ -87,7 +95,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

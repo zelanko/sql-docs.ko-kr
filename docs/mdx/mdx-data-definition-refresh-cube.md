@@ -2,10 +2,14 @@
 title: "REFRESH CUBE 문 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -13,26 +17,28 @@ f1_keywords:
 - REFRESH CUBE
 - REFRESH_CUBE
 - REFRESH
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - cubes [Analysis Services], cache
 - refreshing cache
 - REFRESH CUBE statement
 - cache [Analysis Services]
 ms.assetid: b8c087fb-5d17-4b13-b7cf-9929e9aab35c
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2656c588a90ce68f916815be28d157f1a51e0e23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ce57b2384e8cf28dae218dec5f09b756b8cd61c6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>MDX 데이터 정의-새로 고침 큐브
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   큐브에 대한 클라이언트 캐시를 새로 고칩니다.  
   
@@ -55,7 +61,8 @@ REFRESH CUBECube_Name
 > [!IMPORTANT]  
 >  서버에 저장된 명명된 집합은 새로 고쳐지지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
+

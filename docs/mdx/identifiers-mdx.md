@@ -2,13 +2,18 @@
 title: "식별자 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - formats [Analysis Services]
 - Multidimensional Expressions [Analysis Services], identifiers
@@ -18,19 +23,20 @@ helpviewer_keywords:
 - regular identifiers [MDX]
 - formats [Analysis Services], identifiers
 ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 00a7afcd3ff4b5c6be42f88bf4f7435ac4c20054
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cd13b81771d319352845a9bc2121a0e17a6e0926
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="identifiers-mdx"></a>식별자(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   식별자의 이름인는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체입니다. 모든 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체는 식별자를 가질 수 있어야만 합니다. 식별자로는 큐브, 차원, 계층, 수준, 멤버 등이 있습니다. MDX 문에서는 개체를 참조하는 개체의 식별자를 사용합니다.  
   
@@ -142,3 +148,4 @@ ms.lasthandoff: 11/09/2017
  [MDX 구문 요소 &#40; Mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
+

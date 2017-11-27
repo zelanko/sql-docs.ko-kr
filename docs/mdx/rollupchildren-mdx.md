@@ -2,29 +2,37 @@
 title: RollupChildren (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: ROLLUPCHILDREN
-dev_langs: kbMDX
-helpviewer_keywords: RollupChildren function
+f1_keywords:
+- ROLLUPCHILDREN
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- RollupChildren function
 ms.assetid: 6f092540-067d-443f-b631-8523836a0d86
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 63479d339b5f1cceb8b85ca1f248193f5a82be52
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b29a351d8425d235adc29b8a5b997915b70de047
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정한 단항 연산자를 통해 지정한 멤버의 자식 항목 값을 롤업하여 생성된 값을 반환합니다.  
   
@@ -71,3 +79,4 @@ RollupChildren
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

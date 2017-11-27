@@ -2,28 +2,35 @@
 title: "멤버 함수를 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: member functions [MDX]
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- member functions [MDX]
 ms.assetid: 094c443f-0daa-4af7-801c-d2e1d686d755
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0411049e6d7f7f7c4db00d6a4692868772127ea3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9354c2e6a83918742f1c2de1dea943be4b21e844
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-member-functions"></a>멤버 함수 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   멤버 함수는 멤버를 반환하는 MDX(Multidimensional Expressions) 함수입니다. 멤버 함수는 튜플 함수 및 집합 함수와 마찬가지로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 사용되는 다차원 구조를 처리하는 데 필수적입니다.  
   
@@ -53,9 +60,10 @@ ms.lasthandoff: 11/09/2017
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [함수 &#40; MDX 구문 &#41;](../mdx/functions-mdx-syntax.md)   
  [튜플 함수 사용](../mdx/using-tuple-functions.md)   
- [집합 함수 사용](../mdx/using-set-functions.md)  
+ [집합 함수를 사용 하 여](../mdx/using-set-functions.md)  
   
   
+

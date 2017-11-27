@@ -2,29 +2,37 @@
 title: Descendants (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: DESCENDANTS
-dev_langs: kbMDX
-helpviewer_keywords: Descendants function
+f1_keywords:
+- DESCENDANTS
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Descendants function
 ms.assetid: d103b0f5-e794-4828-aa57-43f6918a0749
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f5558ba3eee35444027a8f4797dd82b2b722631d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 82ae4fdab005443b03802f443097ddb435342c1a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="descendants-mdx"></a>Descendants(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정한 수준 또는 거리에서 멤버의 하위 항목 집합을 반환합니다. 다른 수준의 하위 항목은 포함하거나 제외할 수 있습니다.  
   
@@ -173,3 +181,4 @@ FROM [Adventure Works]
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

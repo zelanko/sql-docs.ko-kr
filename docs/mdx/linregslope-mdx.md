@@ -2,29 +2,37 @@
 title: LinRegSlope (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: LINREGSLOPE
-dev_langs: kbMDX
-helpviewer_keywords: LinRegSlope function
+f1_keywords:
+- LINREGSLOPE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- LinRegSlope function
 ms.assetid: dc61f941-b25d-4eef-9b25-75e03a1dd6de
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5fa20727d25c908ad663461cf9a0b639ac1e74d5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 225c9be61c4403c9a52f61e89821c97193aa7756
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="linregslope-mdx"></a>LinRegSlope(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   집합의 선형 회귀를 계산 하 고 회귀선의 기울기 값을 반환 y = ax + b 합니다.  
   
@@ -68,3 +76,4 @@ LinRegSlope(LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

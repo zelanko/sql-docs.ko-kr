@@ -2,30 +2,36 @@
 title: "저장된 프로시저 (MDX)를 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - user-defined functions [MDX]
 - stored procedures [MDX]
 ms.assetid: 818fb2ad-f88b-4d0c-9f70-f378aed42e8e
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 187b71551aa1001a777486da08f3f10e171f2302
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2c24641d2be7e4e2130d21881b94a9bcd1698fd7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-stored-procedures-mdx"></a>저장 프로시저 사용(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   .NET 저장 프로시저 또는 사용자 정의 함수를 작성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 MDX(Multidimensional Expressions)의 기능을 확장할 수 있습니다. 자세한 내용은 참조 [ADOMD.NET 서버 프로그래밍](../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
   
@@ -49,7 +55,8 @@ WHERE [Measures].[Reseller Freight Cost]
 > [!NOTE]  
 >  Microsoft VBA(Visual Basic for Applications) COM 어셈블리는 자동으로 등록됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [함수 &#40; MDX 구문 &#41;](../mdx/functions-mdx-syntax.md)  
   
   
+

@@ -2,32 +2,39 @@
 title: "DRILLTHROUGH 문 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: DRILLTHROUGH
-dev_langs: kbMDX
+f1_keywords:
+- DRILLTHROUGH
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
 - data retrieval [MDX]
 ms.assetid: dfa22755-0ed4-4bba-9c31-7ade26d9ebdb
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 47b26d23f9eb36edc7553c496b2143244b3ef0c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6beadd42ec1f41ccec1ce8b0df999897b50568f5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX 데이터 조작 드릴스루
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   큐브에서 지정된 셀을 만드는 데 사용된 기본 테이블 행을 검색합니다.  
   
@@ -111,3 +118,4 @@ RETURN
  [MDX 데이터 조작 문 &#40; Mdx&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   
+

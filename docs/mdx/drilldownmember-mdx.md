@@ -2,29 +2,37 @@
 title: DrilldownMember (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: DRILLDOWNMEMBER
-dev_langs: kbMDX
-helpviewer_keywords: DrilldownMember function
+f1_keywords:
+- DRILLDOWNMEMBER
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- DrilldownMember function
 ms.assetid: 765f2fc7-0baa-428b-864a-22c9f3113083
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 86f45308a4ac749519483c19f4d2b616364247a3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c6c93d916584d3443a4135556c28a2258296fa1f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정된 집합의 멤버 중 두 번째 지정한 집합에 나타나는 멤버를 드릴다운합니다.  
   
@@ -92,3 +100,4 @@ SELECT DrilldownMember
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

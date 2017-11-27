@@ -2,13 +2,18 @@
 title: "MDX 함수 참조 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - member functions [MDX]
 - level functions [MDX]
@@ -24,19 +29,20 @@ helpviewer_keywords:
 - logical functions [MDX]
 - set functions [MDX]
 ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a6c3d086028a7906f540e716308fc9c15ee9287f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 30cd14ab8d2725f559e317f92071a289ab047268
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 함수 참조(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 함수에 MDX (Multidimensional Expressions) 구문 사용할 수 있도록 제공 합니다. 유효한 모든 MDX 문에서 함수를 사용할 수 있으며, 쿼리, 사용자 지정 롤업 정의 및 기타 계산에서도 함수가 자주 사용됩니다. 이 섹션에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 포함된 MDX 함수에 대해 설명합니다.  
   
@@ -243,3 +249,4 @@ ms.lasthandoff: 11/09/2017
  [MDX 언어 참조 &#40; Mdx&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
+

@@ -2,10 +2,14 @@
 title: "CREATE KPI 문 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - CREATE KPI statement
 - key performance indicators [MDX]
 ms.assetid: 87618fef-95e5-4dd0-a650-aeb60ccbddcb
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9e153bf489ab3d06eb55c4226677c4913498b9f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8796fefabf3dc44ef03f7084e164a559e6c17d18
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 데이터 정의-KPI를 만들려면
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   KPI(핵심 성과 지표)를 만듭니다. KPI는 비즈니스 또는 목표 성과를 평가하는 데 사용되는 큐브의 측정값 그룹과 관련된 계산 모음입니다.  
   
@@ -112,3 +117,4 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
+

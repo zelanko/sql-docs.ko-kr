@@ -2,31 +2,38 @@
 title: "-(주석) (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: --
-dev_langs: kbMDX
+f1_keywords:
+- --
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - commenting characters
 - -- (comment character)
 ms.assetid: 02aec133-6809-4829-b9a2-102c376e21da
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8ec94e2553e55d7d4f3806a3ca548e7379f3bdd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 720b1d7c90e65dbfdd365e5cabf5368e27da7ef8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="comment---mdx-operator-reference"></a>메모-MDX 연산자 참조
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   사용자가 제공한 주석 텍스트를 나타냅니다.  
   
@@ -65,8 +72,9 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [설명&#40;MDX&#41;](../mdx/comment-mdx.md)   
+ [설명 &#40; Mdx&#41;](../mdx/comment-mdx.md)   
  [&#40; 설명 &#41; &#40; Mdx&#41;](../mdx/comment-mdx-double-slash.md)   
  [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
+

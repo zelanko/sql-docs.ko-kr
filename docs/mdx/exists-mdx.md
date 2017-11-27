@@ -2,28 +2,35 @@
 title: Exists (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: Exists function
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Exists function
 ms.assetid: 1e1d93b5-5be6-421c-b82b-839538ea50b1
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e84cc419442fdd5435d926b247e5cf9d27c919e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5483a7da135f6e486610d8a53e9dc23078a6cd3b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="exists-mdx"></a>Exists(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정된 첫 번째 집합에 있는 튜플 중 지정된 두 번째 집합에 있는 하나 이상의 튜플과 함께 존재하는 튜플의 집합을 반환합니다. 이 함수는 AUTOEXIST에서 자동으로 수행되는 작업을 수동으로 수행합니다. 에 대 한 자세한 내용은 존재에 대 한 참조 [MDX &#40;의 주요 개념 Analysis Services &#41; ](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
   
@@ -107,3 +114,4 @@ FROM [Adventure Works]
  [IsEmpty &#40; Mdx&#41;](../mdx/isempty-mdx.md)  
   
   
+

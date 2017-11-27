@@ -2,28 +2,35 @@
 title: "문자열 함수를 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: string functions
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- string functions
 ms.assetid: 962e820a-a1f9-49b5-90f0-a05261e6682b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5838cb18091adab8ee4e8b2c0a43042001c530dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 12fc2dca6c7a0eb1c7d126ef0cfdc87df869c878
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-string-functions"></a>문자열 함수 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   문자열 함수는 MDX의 거의 모든 개체에서 사용할 수 있습니다. 문자열 함수는 저장 프로시저에서 개체를 문자열 표현으로 변환하는 데 사용되며 값을 반환하기 위해 개체에 대한 문자열 식을 계산할 때도 사용됩니다.  
   
@@ -107,7 +114,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  **StrToMember** 및 **StrToSet** 주의 하 여 함수를 사용 해야 합니다. 이러한 함수를 계산 정의 내에 사용할 때 쿼리 성능이 저하될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [생성 &#40; Mdx&#41;](../mdx/generate-mdx.md)   
  [이름 &#40; Mdx&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40; Mdx&#41;](../mdx/uniquename-mdx.md)   
@@ -117,3 +124,4 @@ ms.lasthandoff: 11/09/2017
  [StrToSet &#40; Mdx&#41;](../mdx/strtoset-mdx.md)  
   
   
+

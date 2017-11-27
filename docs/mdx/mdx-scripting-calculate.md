@@ -2,29 +2,37 @@
 title: "CALCULATE 문 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: CALCULATE
-dev_langs: kbMDX
-helpviewer_keywords: CALCULATE statement
+f1_keywords:
+- CALCULATE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- CALCULATE statement
 ms.assetid: 41e196a1-d49e-487b-a42a-73e5d441ed1b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7ca169be283c00ab4fcd1532d3328d0d05798dbc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d8e74fd0cd09e050c11d2eb403d31527402f008b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-scripting---calculate"></a>MDX 스크립팅-계산
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   큐브의 각 셀에 집계 값을 채웁니다.  
   
@@ -36,7 +44,7 @@ CALCULATE
 ```  
   
 ## <a name="arguments"></a>인수  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 큐브를 만들면 큐브의 MDX 스크립트에 CALCULATE 문이 첫 번째 문으로 자동으로 포함됩니다. CALCULATE 문은 큐브의 각 셀이 세분성이 보다 낮은 셀에서 집계되도록 지정합니다. 셀이 집계된 후 식을 사용하여 세분성이 낮은 셀을 채우면 세분성이 높은 셀의 집계 값에 영향이 미칩니다. 대부분은 이 집계 방법을 사용하지만 이 문을 제거하거나 이 문보다 다른 문이 먼저 실행되도록 할 수도 있습니다.  
@@ -52,3 +60,4 @@ CALCULATE
  [할당 및 기타 스크립트 명령 정의](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   
+

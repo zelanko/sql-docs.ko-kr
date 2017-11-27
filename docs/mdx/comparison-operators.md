@@ -2,28 +2,35 @@
 title: "비교 연산자 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: comparison operators [MDX]
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- comparison operators [MDX]
 ms.assetid: 4a4bbc76-c6a2-4b19-ae75-6ac3ac14df01
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 295c21b7af5c4c3d1d6b25db84e58f313f1bcc00
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5c022d67e874ebd333d8634e642d17a14d0b577f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="comparison-operators"></a>비교 연산자
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   스칼라 데이터와 함께 비교 연산자를 사용합니다. 어떤 MDX 식에서든 비교 연산자를 사용할 수 있습니다.  
   
@@ -35,15 +42,16 @@ ms.lasthandoff: 11/09/2017
   
 |연산자|Description|  
 |--------------|-----------------|  
-|[=(같음)](../mdx/equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수와 같으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 부울에 TRUE가 포함되는 `0=null` 비교가 수행되지 않으면 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 비교 연산자는 Null 값을 반환합니다.|  
-|[<>(같지 않음)](../mdx/not-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수와 같지 않으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
-|[>(보다 큼)](../mdx/greater-than-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 큰 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
-|[>=(크거나 같음)](../mdx/greater-than-or-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 크거나 같은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
-|[<(보다 작음)](../mdx/less-than-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 작은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
-|[<=(작거나 같음)](../mdx/less-than-or-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 작거나 같은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
+|[= (같음)](../mdx/equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수와 같으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 부울에 TRUE가 포함되는 `0=null` 비교가 수행되지 않으면 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 비교 연산자는 Null 값을 반환합니다.|  
+|[<> (같지 않음)](../mdx/not-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수와 같지 않으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
+|[> (보다 큼)](../mdx/greater-than-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 큰 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
+|[> = (크거나 같음)](../mdx/greater-than-or-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 크거나 같은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
+|[< (보다 작음)](../mdx/less-than-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 작은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
+|[< = (작거나 같음)](../mdx/less-than-or-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 작거나 같은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [연산자 &#40; MDX 구문 &#41;](../mdx/operators-mdx-syntax.md)  
   
   
+

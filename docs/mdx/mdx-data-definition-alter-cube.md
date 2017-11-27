@@ -2,10 +2,14 @@
 title: "ALTER CUBE 문 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -13,25 +17,27 @@ f1_keywords:
 - ALTER_CUBE
 - ALTER CUBE
 - ALTER
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - ALTER CUBE statement
 - cubes [Analysis Services], modifying
 - modifying cubes
 ms.assetid: 2f0af61b-f509-4e1a-990f-20a215d22994
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2733f862156429fcced00fe828d709ed9440c7ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e20832dac862a4a4973c4350c64efdd23a35b461
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 데이터 정의-ALTER 큐브
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   일반적으로 차원 쓰기 저장을 지원하는 데 사용되는 지정한 큐브의 구조를 변경합니다. 응용 프로그램에서 쓰기 저장을 사용 하는 방법에 대 한 자세한 내용은이 블로그 게시물을 참조 하십시오.: [Analysis Services (블로그)로 쓰기 저장 응용 프로그램 빌드](http://go.microsoft.com/fwlink/?LinkId=394977)  
   
@@ -178,7 +184,8 @@ CELL CALCULATION Calculation_Name
 ## <a name="creating-a-cell-calculation"></a>셀 계산 만들기  
  ALTER CUBE 문을 사용 하 여 셀 계산을 만드는 방법에 대 한 자세한 내용은 참조 [DROP CELL CALCULATION 문 &#40; Mdx&#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
+

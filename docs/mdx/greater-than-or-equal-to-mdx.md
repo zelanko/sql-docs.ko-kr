@@ -2,31 +2,38 @@
 title: "&gt;= (크거나 같음) (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: '>='
-dev_langs: kbMDX
+f1_keywords:
+- '>='
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - '>= (greater than or equal to operator)'
 - greater than or equal to (>=)
 ms.assetid: 272f4614-9ba3-46bd-8306-181c26e798f1
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5f35e30a0ffe87e30641f8382728eb2401ac478c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7ccda23b7b48cb9aa4270922bb09e63224e32edc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (크거나 같음) (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   하나의 MDX 식의 값이 다른 MDX 식의 값보다 크거나 같은지 확인하는 비교 연산을 수행합니다.  
   
@@ -70,7 +77,8 @@ WHERE
     ([Measures].[HighGPM])  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
+

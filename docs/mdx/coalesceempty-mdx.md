@@ -2,29 +2,37 @@
 title: CoalesceEmpty (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: COALESCEEMPTY
-dev_langs: kbMDX
-helpviewer_keywords: CoalesceEmpty function
+f1_keywords:
+- COALESCEEMPTY
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- CoalesceEmpty function
 ms.assetid: c00dd739-44bc-4af6-9871-c7e1e3f3e5ba
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 80be2cb4c19ce12965539722d262999e2a0131f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9ce0754611a4662b88d5fba01828e2f0e08e63bd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   빈 셀 값을 비어 있지 않은 특정 셀 값으로 변환합니다. 지정된 셀 값은 숫자이거나 문자열일 수 있습니다.  
   
@@ -89,3 +97,4 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

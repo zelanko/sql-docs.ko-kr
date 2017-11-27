@@ -2,29 +2,37 @@
 title: VisualTotals (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: VisualTotals
-dev_langs: kbMDX
-helpviewer_keywords: VisualTotals function
+f1_keywords:
+- VisualTotals
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- VisualTotals function
 ms.assetid: 8ec529c2-729a-4a5b-892e-750849ab4013
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 15fea625f4c1f19df2cfa30afa1c135145b38c23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c77ceae3fc74974224d0ad2d5320b3983786127f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정된 집합에 있는 자식 멤버의 합계를 동적으로 구하여 생성된 집합을 반환합니다. 결과 집합에서 부모 멤버의 이름에 대한 패턴을 사용할 수도 있습니다.  
   
@@ -39,7 +47,7 @@ VisualTotals(Set_Expression[,Pattern])
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *패턴*  
+ *Pattern*  
  부모 이름의 대체 문자로 별표(*)가 들어 있는 집합의 부모 멤버에 대한 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>주의  
@@ -78,3 +86,4 @@ FROM [Adventure Works]
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

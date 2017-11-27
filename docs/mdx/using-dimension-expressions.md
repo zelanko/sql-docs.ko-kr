@@ -2,30 +2,36 @@
 title: "차원 식을 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - expressions [MDX], dimensions
 - dimensions [Analysis Services], MDX
 ms.assetid: 1d40cffb-e88f-4284-93cf-d62ab4f08395
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c48cf34963f4fb496537cf1573cd4974949a672e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 66a955b547f5760ae1193b541fde5f3dc13d323f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-dimension-expressions"></a>차원 식 사용
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   일반적으로 MDX(Multidimensional Expressions)에서 함수에 매개 변수를 전달할 때 차원 식과 계층 식을 사용하여 계층의 멤버, 집합 또는 튜플을 반환합니다.  
   
@@ -69,7 +75,8 @@ ms.lasthandoff: 11/09/2017
   
  계층 식별자로 표시 *Dimension_Name**.* *Hierarchy_Name* MDX 문을 설명 하는 데 사용 되는 BNF 표기법의 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식 &#40; Mdx&#41;](../mdx/expressions-mdx.md)  
   
   
+

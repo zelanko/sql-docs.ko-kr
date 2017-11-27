@@ -2,31 +2,38 @@
 title: "+ (문자열 연결) (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: +
-dev_langs: kbMDX
+f1_keywords:
+- +
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - string concatenation operators
 - + (string concatenation)
 ms.assetid: d77636b1-2973-4587-af35-54aba5700d9a
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 026618d4a71e2e3c85df12c1994c4c0b6ffd30f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b5c2fd213bffba6a9863f8b96f847e2d46df388e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="-string-concatenation-mdx"></a>+ (문자열 연결)(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   둘 이상의 문자열, 튜플 또는 문자열과 튜플의 조합을 연결하는 문자열 연산을 수행합니다.  
   
@@ -51,3 +58,4 @@ String_Expression + String_Expression
  [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
+

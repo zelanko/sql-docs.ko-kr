@@ -2,29 +2,37 @@
 title: Dimensions (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: Dimensions
-dev_langs: kbMDX
-helpviewer_keywords: Dimensions function
+f1_keywords:
+- Dimensions
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Dimensions function
 ms.assetid: 64f63aa0-ef74-4415-a0c9-8acc6cd81739
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f72a2c998b9bff25494a14bdd35ed6f599b85e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 462ea16745816af3c344af05f24437f370e7ce9e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="dimensions-mdx"></a>Dimensions(MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   숫자 식 또는 문자열 식으로 지정된 계층을 반환합니다.  
   
@@ -90,3 +98,4 @@ FROM [Adventure Works]
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

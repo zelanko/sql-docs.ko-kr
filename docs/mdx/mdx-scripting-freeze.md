@@ -2,31 +2,38 @@
 title: "FREEZE 문 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: FREEZE
-dev_langs: kbMDX
+f1_keywords:
+- FREEZE
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - FREEZE statement
 - locking cell values [MDX]
 ms.assetid: 59f1e860-6f37-41af-97d6-7708bdaac933
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f0be995f39d3498ad8bcfe6a010de0c0b5c8c293
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ff9fab5df513cea71db43f5ca26f08ccae93d553
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-scripting---freeze"></a>MDX 스크립팅-고정
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정한 하위 큐브의 셀 값을 현재 값으로 잠급니다. 셀 값이 잠기면 이 셀은 다른 셀이 변경되어도 영향을 받지 않습니다.  
   
@@ -69,3 +76,4 @@ B = 3
  [MDX 스크립팅 문 &#40; Mdx&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   
+
