@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_addtype"></a> 문서 라이브러리에 콘텐츠 형식 추가  
  콘텐츠 형식을 추가하고 구성하려면 최소한 목록 관리 권한이 있어야 합니다. 이 권한은 디자인 권한 수준 이상에 포함되어 있습니다.  
   
- 문서 라이브러리가 포함된 사이트에서는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에 대한 기능이 활성화되어 있어야 합니다. 자세한 내용은 [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)을(를) 참조하세요.  
+ 문서 라이브러리가 포함된 사이트에서는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에 대한 기능이 활성화되어 있어야 합니다. 자세한 내용은 [중앙 관리에서 사이트 모음에 대해 파워 피벗 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)을(를) 참조하세요.  
   
 1.  BI 의미 체계 모델 연결 콘텐츠 형식을 사용하도록 설정할 문서 라이브러리를 엽니다.  
   
