@@ -4,7 +4,7 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,19 +13,21 @@ ms.component: linux
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: ed4f34bf3e08897ab13cae24f47fc74292ce38bc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/02/2017
+
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Linux에서 SQL Server 용 응용 프로그램 개발을 시작 하는 방법
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 연결 하 고 SQL Server 2017 linux 다양 한 C#, Java, Node.js, PHP, Python, Ruby, 및 c + + 프로그래밍 언어에서에서 사용 하는 응용 프로그램을 만들 수 있습니다. 인기 있는 웹 프레임 워크 및 개체 관계형 매핑 ORM () 프레임 워크를 사용할 수도 있습니다.
+
+> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > 이러한 동일한 개발 옵션 또한을 사용 하면 다른 플랫폼에서 SQL Server를 대상으로 합니다. 응용 프로그램에는 온-프레미스를 실행 중인 SQL Server 대상 수 또는 클라우드에서 Linux, Windows 또는 Docker에서 macOS에서 합니다. 또는 Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 대상으로 지정할 수 있습니다.
@@ -82,3 +84,4 @@ Linux 용 적용 되는 새로운 명령줄 도구를 사용할 수 있습니다
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-ubuntu.md)
+
