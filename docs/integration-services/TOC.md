@@ -27,6 +27,7 @@
 ## [자습서 - Azure에서 패키지를 배포, 실행 및 모니터링](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [Azure에서 SSIS 카탈로그에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure에서 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages.md)
+## [Azure에 배포된 패키지 유효성 검사](lift-shift/ssis-azure-validate-packages.md)
 ## [Windows 인증을 사용하여 데이터 원본에 연결](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [파일 및 파일 공유에 연결](lift-shift/ssis-azure-files-file-shares.md)
 
