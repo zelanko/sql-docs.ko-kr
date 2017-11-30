@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
  [라이브러리에 데이터 피드 콘텐츠 형식 추가](#addtolib)  
   
 ##  <a name="prereq"></a> 필수 구성 요소  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 활성화해야 합니다. 데이터 피드 라이브러리 템플릿 유형을 사용할 수 없는 경우 이 사전 요구 사항이 충족되지 않았을 수 있습니다. 자세한 내용은 [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)을(를) 참조하세요.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 활성화해야 합니다. 데이터 피드 라이브러리 템플릿 유형을 사용할 수 없는 경우 이 사전 요구 사항이 충족되지 않았을 수 있습니다. 자세한 내용은 [중앙 관리에서 사이트 모음에 대해 파워 피벗 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)을(를) 참조하세요.  
   
  라이브러리를 만들려면 사이트 소유자여야 합니다.  
   

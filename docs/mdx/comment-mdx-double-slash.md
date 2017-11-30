@@ -8,29 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- //
-dev_langs:
-- kbMDX
+f1_keywords: //
+dev_langs: kbMDX
 helpviewer_keywords:
 - commenting characters
 - // (comment)
 ms.assetid: 9a3ee822-4689-41a8-9997-8b307850cd68
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 9eb4d21fc2928f7d88ee78ded8444aed3d5459c0
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ee635641e8d6ee4fb2542d106180d8107c79db28
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="comment-mdx-double-slash"></a>주석 MDX 이중 슬래시
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,9 +68,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [설명 &#40; Mdx&#41;](../mdx/comment-mdx.md)   
+ [설명&#40;MDX&#41;](../mdx/comment-mdx.md)   
  [-&#40; 설명 &#41; &#40; Mdx&#41;](../mdx/comment-mdx-operator-reference.md)   
  [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

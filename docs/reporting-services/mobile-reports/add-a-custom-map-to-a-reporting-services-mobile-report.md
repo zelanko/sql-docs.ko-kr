@@ -16,11 +16,11 @@ manager: erikre
 ms.workload: Inactive
 ms.openlocfilehash: 6030bbac7cced5ed1ee60a2a34d505074a4a5f04
 ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Add a custom map to a Reporting Services mobile report
+# <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서의 사용자 지정 지도 추가
 사용자 지정 지도에는 다음과 같은 두 개의 파일이 필요합니다.  
 * 셰이프 기하 도형용 .SHP 파일  
 * 메타데이터용 .DBF 파일  

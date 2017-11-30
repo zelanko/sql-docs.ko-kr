@@ -8,8 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,23 +16,21 @@ f1_keywords:
 - CREATE SUBCUBE
 - CREATE
 - SUBCUBE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - subcubes [MDX]
 - CREATE SUBCUBE statement
 ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: c3d7f30626eb5ae44e779b51973e5b74c734616e
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b7a444247915755ca1e9d002acf868a7d6eecc4f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 데이터 정의-하위 큐브를 만들려면
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -147,11 +144,10 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  [All Products] 및 [All Resellers]의 열 및 행에는 보이는 멤버뿐만 아니라 모든 멤버에 대한 합계가 포함됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX &#40;의 주요 개념 Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX 스크립팅 문 &#40; Mdx&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT 문 &#40; Mdx&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   
-

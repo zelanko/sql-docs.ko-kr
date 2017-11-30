@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f00190c24d06f888767343270f77dfdeea8ee7b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6bb1977fb034f2fd2c682b12b4466bd7914009dd
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/21/2017
   사용 하 여 추가 된 각 데이터베이스 마스터 키 암호에 대 한 행을 반환 된 **sp_control_dbmasterkey_password** 저장 프로시저입니다. 마스터 키를 보호하는 데 사용된 암호는 자격 증명 저장소에 저장됩니다. 증명 자격 증명 이름은: # # DBMKEY_ < database_family_guid > _ < random_password_guid > # #. 암호는 자격 증명 암호로 저장됩니다. 사용 하 여 추가 된 각 암호 **sp_control_dbmasterkey_password**에 행이 **sys.credentials**합니다.  
   
  각 행이이 보기에 표시 되며는 **credential_id** 및 **family_guid** 는 마스터 키에 연결 된 자격 증명 암호로 보호 되는 데이터베이스의 합니다. 조인이 **sys.credentials** 에 **credential_id** 와 같은 유용한 필드가 반환 됩니다는 **create_date** 및 자격 증명 이름입니다.  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

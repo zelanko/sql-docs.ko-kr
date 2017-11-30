@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>데이터 마이닝 구조에 대한 처리 권한 설정  
  데이터 마이닝 구조를 처리할 수 있는 권한을 부여하는 역할을 만들 수 있습니다. 여기에는 모든 마이닝 모델의 처리가 포함됩니다.  
   
- 마이닝 모델 및 구조 검색에 사용되는**드릴스루** 와 **정의 읽기** permissions used for browsing a mining model 와 structure are atomic 와 can be added to the same role, or separated out into a different role.  
+ 마이닝 모델 및 구조 검색에 사용되는 **드릴스루**와 **정의 읽기**는 개별적이므로 동일한 역할에 추가하거나 여러 역할로 분리할 수 있습니다.  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
   

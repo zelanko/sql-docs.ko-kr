@@ -8,26 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- set functions [MDX]
+dev_langs: kbMDX
+helpviewer_keywords: set functions [MDX]
 ms.assetid: b08ddc9d-38f8-41aa-b791-b5352f1a8783
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 71b4201bc3b31571cac04c75752b7b985eeebae4
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5478e5eacc6f99fc2dba889ce5bc189e1a9d63b4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-set-functions"></a>집합 함수 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -234,4 +230,3 @@ ms.lasthandoff: 08/02/2017
  [튜플 함수 사용](../mdx/using-tuple-functions.md)  
   
   
-
