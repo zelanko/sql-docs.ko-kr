@@ -8,29 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- SCOPE
-dev_langs:
-- kbMDX
+f1_keywords: SCOPE
+dev_langs: kbMDX
 helpviewer_keywords:
 - scope [MDX]
 - SCOPE statement
 ms.assetid: ceab459d-b601-4468-b3fc-4f5bb4a1805f
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 9487e1e71916e07232eed6ee7f60c013f9598197
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1548315744f310a1aca8756d14afee92ef8a693e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-scripting---scope"></a>MDX 스크립팅-범위
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -130,8 +126,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX 스크립팅 문 &#40; Mdx&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   
-

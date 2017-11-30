@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cddf1bce487b79892d2efcc0478f3f6c6d00c398
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b711395050bca928f018215eefd953f35389060f
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,6 @@ ms.lasthandoff: 11/17/2017
 >  이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 시스템 테이블은 이전 버전과의 호환성을 위해서만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 뷰로 포함되어 있습니다. 사용 하는 것이 좋습니다 [카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) 대신 합니다.  
   
  지정되어 있는 연결된 서버에 대한 각 사용자 및 암호 매핑마다 한 행을 포함합니다. **sysoledbusers** 에 저장 되는 **마스터** 데이터베이스입니다.  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

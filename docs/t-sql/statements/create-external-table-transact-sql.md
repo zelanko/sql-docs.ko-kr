@@ -1,7 +1,7 @@
 ---
 title: "외부 테이블 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="create-external-table-transact-sql"></a>외부 테이블 (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,8 +142,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  열 정의 외부 파일의 데이터를 데이터 형식 및 열 개수를 포함 하 여 같아야 합니다. 불일치가 있을 경우에 실제 데이터를 쿼리할 때 파일 행 거부 됩니다.  
   
- 외부 데이터 원본에 대 한 파일 참조 하는 외부 테이블에 대 한 열 및 형식 정의가 외부 파일의 정확한 스키마에 매핑해야 합니다. Hadoop/Hive에 저장 된 데이터를 참조 하는 데이터 형식에 정의할 때 하이브 또는 SQL 데이터 형식에서 다음 매핑을 사용 하 고 여기에서 선택 하는 경우 SQL 데이터 형식으로 형식을 캐스팅 합니다. 유형은 별도 설명이 없으면 하이브의 모든 버전을 포함 합니다.  
-  
+ 외부 데이터 원본에 대 한 파일 참조 하는 외부 테이블에 대 한 열 및 형식 정의가 외부 파일의 정확한 스키마에 매핑해야 합니다. Hadoop/Hive에 저장 된 데이터를 참조 하는 데이터 형식에 정의할 때 하이브 또는 SQL 데이터 형식에서 다음 매핑을 사용 하 고 여기에서 선택 하는 경우 SQL 데이터 형식으로 형식을 캐스팅 합니다. 유형은 별도 설명이 없으면 하이브의 모든 버전을 포함 합니다.
+
+> [!NOTE]  
+>  SQL Server는 하이브를 지원 하지 않습니다 _무한대_ 변환의 데이터 값입니다. PolyBase는 데이터 형식 변환 오류와 함께 실패 합니다.
+
+
 |SQL 데이터 형식|.NET 데이터 형식|하이브 데이터 형식|Hadoop/Java 데이터 형식|설명|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|부호 없는 숫자입니다.|  

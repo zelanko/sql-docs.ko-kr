@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a7147621db09dfc1c29077f82cc3eadb39b3c5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85b7db39b03913b735ebde53571675fd9235a7e8
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,6 @@ ms.lasthandoff: 11/17/2017
  이 뷰를 사용하여 전송 대기 중인 메시지 수와 해당 메시지가 메일 큐에 머문 시간을 확인할 수 있습니다. 일반적으로 **보내지 않은** 메시지 줄어들게 됩니다. 정상 작업 중에 벤치마크 테스트를 수행하여 사용자의 작업에 적합한 메시지 큐의 메시지 수를 결정할 수 있습니다.  
   
  데이터베이스 메일이 처리 하는 모든 메시지를 보려면 사용 [sysmail_allitems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). 실패 상태의 메시지만 보려면 [sysmail_faileditems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). 보낸 메시지를 보려면 사용 [sysmail_sentitems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

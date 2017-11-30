@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  CLR 통합의 관리되는 데이터베이스 개체 유형은 다양합니다. 이러한 개체에 대 한 일반 정보를 참조 하십시오. [공용 언어 런타임 (Clr)와 데이터베이스 개체 작성](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)합니다. 이러한 개체가 실행 될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 만듭니다는 **AppDomain** 속한 로드 고 필요한 코드를 실행 합니다. 에 대 한 격리 수준을 **AppDomain** 하나인 **AppDomain** 소유자 마다 데이터베이스당 합니다. 즉, 사용자가 소유한 모든 CLR 개체는 항상 동일한 실행 **AppDomain** 데이터베이스당 (서로 다른 데이터베이스 개체는 다른 응용 프로그램 도메인에서 실행 하는 CLR 데이터베이스에에서 CLR 데이터베이스 개체를 등록 하는 사용자) 하는 경우. **AppDomain** 코드 실행을 끝낸 후 제거 되지 않습니다. 나중에 실행하도록 메모리에 캐시됩니다. 성능이 향상 됩니다.  
   
  자세한 내용은 참조 [응용 프로그램 도메인](http://go.microsoft.com/fwlink/p/?LinkId=299658)합니다.  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299659)).|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

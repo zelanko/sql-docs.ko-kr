@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0abb8eb792b85eed60df52f70a2c13c2e3f920d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba8deb3b11b01cf9f53e02024815150fa4441b6d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/17/2017
   데이터베이스 메일이 처리하는 각 메시지당 한 개의 행을 포함합니다. 모든 메시지의 상태를 확인하고자 할 때 이 뷰를 사용합니다.  
   
  실패 상태의 메시지만 보려면 [sysmail_faileditems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). 보내지 않은 메시지만 보려면를 사용 하 여 [sysmail_unsentitems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). 보낸 메시지를 보려면 사용 [sysmail_sentitems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

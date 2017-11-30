@@ -8,22 +8,20 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: e56f0c499f16242d3dc6332ee62824c3542d9dd1
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 753380839f10fc25c4bafa4ea045c301831361a0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 및 DAX의 VBA 함수
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 08/02/2017
 |[FileAttr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007572&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음||  
 |[FileDateTime](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007573&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음||  
 |[FileLen](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007574&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음||  
-|[필터](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음|**\*\*경고 \* \***  이름이 같은 다른 함수를 구현 하는 MDX; 지정된 된 인수에서 검색 조건에 따라 지정 된 집합을 필터링 결과 집합을 반환 하는 FILTER (Set_Expression, Logical_Expression) 함수<br /><br /> **\*\*경고 \* \***  같은 다른 함수를 구현 하는 DAX 이름; FILTER (\<테이블 >,\<필터 >) 함수를 다른 테이블이 나 지정된 된 인수에서 식의 하위 집합을 표시 하는 테이블 반환|  
+|[Assert](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음|**\*\*경고 \* \***  이름이 같은 다른 함수를 구현 하는 MDX; 지정된 된 인수에서 검색 조건에 따라 지정 된 집합을 필터링 결과 집합을 반환 하는 FILTER (Set_Expression, Logical_Expression) 함수<br /><br /> **\*\*경고 \* \***  같은 다른 함수를 구현 하는 DAX 이름; FILTER (\<테이블 >,\<필터 >) 함수를 다른 테이블이 나 지정된 된 인수에서 식의 하위 집합을 표시 하는 테이블 반환|  
 |[수정 프로그램](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX만||  
 |[형식 (Visual Basic for Applications)](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007576&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
 |[FormatCurrency](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007577&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음||  
@@ -94,7 +92,7 @@ ms.lasthandoff: 08/02/2017
 |[1 시간](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007588&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
 |[Iif](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007589&lcid=1033&NS=EXCEL.DEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX만|**\*\*경고 \* \***  이름의 유사한 기능을 구현 하는 DAX: IF (logical_test, value_if_true, value_if_false) 함수입니다.|  
 |[IMEStatus](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007590&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음||  
-|[Input](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007591&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음||  
+|[입력](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007591&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음||  
 |[InputBox](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007592&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음||  
 |[InStr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007593&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX만||  
 |[InStrRev](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007594&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|지원되지 않음||  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/02/2017
 |[연도](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007670&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
   
   
-

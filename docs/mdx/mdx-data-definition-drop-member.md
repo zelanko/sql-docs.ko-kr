@@ -8,8 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - Member
 - DROP_MEMBER
 - DROP MEMBER
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - deleting calculated members
 - calculated members [MDX]
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - dropping calculated members
 - removing calculated members
 ms.assetid: e9819976-a9ec-4c48-b0b5-3f6938e200f5
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e2f0b9c0dcfc5426ecad421530a2994e8f0748d2
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6f47e1d097dbfd3c264b49f090000c26cd4bf702
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-data-definition---drop-member"></a>MDX 데이터 정의-멤버 삭제
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,4 +62,3 @@ DROP MEMBER
  [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

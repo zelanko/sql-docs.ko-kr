@@ -8,27 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], syntax
 - MDX [Analysis Services], syntax
 ms.assetid: 50a6e723-91c4-407b-a0d5-87d0d4e4e0f6
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8361cd9ed74ce3c3de1d256e0499a44c35bfe5b2
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 522b9ad28f712c52e603a2eaf539bb76f4dd0bd6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>MDX 구문 표기 규칙(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,13 +36,12 @@ ms.lasthandoff: 08/02/2017
 |----------------|-----------|  
 |*기울임꼴*|사용자가 제공하는 MDX 구문의 인수를 나타냅니다.|  
 |&#124;(세로 막대)|대괄호 또는 중괄호 내에서 구문 항목을 구분합니다. 항목 중 하나만 선택할 수 있습니다.|  
-|`[ ]`(괄호)|옵션 구문 항목을 나타냅니다. 대괄호는 입력하지 않습니다.|  
+|`[ ]`(대괄호)|옵션 구문 항목을 나타냅니다. 대괄호는 입력하지 않습니다.|  
 |[,] ...n|앞의 항목이 임의의 횟수만큼 반복될 수 있음을 나타냅니다. 각 항목은 쉼표로 구분되기도 합니다.|  
 |\<레이블 >:: =|구문 블록의 이름을 나타냅니다. 이 규칙은 문에서 한번 이상 사용될 수 있는 긴 구문의 일부 또는 구문 단위를 그룹화하고 레이블을 붙일 때 사용됩니다. 구문 블록이 사용 될 수 있는 각 위치는 꺾쇠 괄호로 묶여 있는 레이블로 표시 됩니다: \<레이블 > 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDX 언어 참조 &#40; Mdx&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
-
 

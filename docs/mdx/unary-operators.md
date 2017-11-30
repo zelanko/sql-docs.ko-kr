@@ -8,26 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- unary operators
+dev_langs: kbMDX
+helpviewer_keywords: unary operators
 ms.assetid: bf1b5518-6040-4484-9ce8-79c0eb4373a9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a2dd50160dbe0185056988cfd866f119d7e330c4
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5b5aea52fb028a9c1d5345e60d4bfa400ecaa735
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="unary-operators"></a>단항 연산자
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 |연산자|Description|  
 |--------------|-----------------|  
 |[-(음수)](../mdx/negative-mdx.md)|숫자 식의 음수 값을 반환합니다.|  
-|[+ (양수)](../mdx/positive-mdx.md)|숫자 식의 양수 값을 반환합니다.|  
+|[+(양수)](../mdx/positive-mdx.md)|숫자 식의 양수 값을 반환합니다.|  
   
  다음 예에서는 음수 측정 값을 반환하는 단항 연산자의 사용 방법을 설명합니다.  
   
@@ -60,4 +56,3 @@ WHERE [Product].[Category].[Bikes]
  [연산자 &#40; MDX 구문 &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

@@ -26,20 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1b6b77613f01605d693d9e2c3961c3278f8d26b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 08224c1f35e0115ba3bb97f88b0a2a51f5e05a6a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   로컬 인스턴스 이름을 정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 때 호스팅하는 컴퓨터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 이름이 바뀌었거나, 사용 하 여 **sp_addserver** 의 인스턴스를 알리기 위해는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 새 컴퓨터 이름입니다. 이 프로시저는 해당 컴퓨터에서 호스팅되는 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 실행해야 합니다. 인스턴스 이름을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 변경할 수 없습니다. 명명된 인스턴스의 인스턴스 이름을 변경하려면 원하는 이름의 새 인스턴스를 설치하고 이전 인스턴스에서 데이터베이스 파일을 분리한 다음 새 인스턴스에 데이터베이스를 연결하고 이전 인스턴스를 삭제합니다. 또는 클라이언트 별칭 이름을 클라이언트 컴퓨터에서 만들어 서버 컴퓨터에서 인스턴스의 이름을 변경하지 않고 다른 서버 및 인스턴스 이름 또는 **서버:포트** 조합으로 연결을 리디렉션할 수 있습니다.  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

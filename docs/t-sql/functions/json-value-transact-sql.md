@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5762af5115dd65b819bc74c3585cfc8275a516b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab4c14769dc51c6d5b97a6ad2fe6f0cb06fad4e0
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -107,10 +107,13 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>예  
   
 ### <a name="example-1"></a>예제 1  
- 다음 예제에서는 JSON 속성의 값을 사용 하 여 `town` 및 `state` 쿼리 결과에 있습니다. 이후 **JSON_VALUE** 결과의 정렬 순서 원본의 데이터 정렬의 데이터 정렬에 의존 하는 전처리는 `jsonInfo` 열입니다.  
+ 다음 예제에서는 JSON 속성의 값을 사용 하 여 `town` 및 `state` 쿼리 결과에 있습니다. 이후 **JSON_VALUE** 결과의 정렬 순서 원본의 데이터 정렬의 데이터 정렬에 의존 하는 전처리는 `jsonInfo` 열입니다. 
+
+> [!NOTE]
+> (이 예에서는 라는 가정 `Person.Person` 포함 한 `jsonInfo` JSON 텍스트의 열과이 열에 lax 모드 및 strict 모드의 토론에서 이전에 표시 되는 구조입니다. AdventureWorks 예제 데이터베이스에는 `Person` 테이블에 실제로 없는 `jsonInfo` 열입니다.)
   
 ```sql  
-SELECT FirstName,LastName,
+SELECT FirstName, LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'

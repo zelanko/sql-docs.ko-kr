@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61acb31edb1183e4d2d5c48c75c9ed7717cb4a52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f9403bdbdfa9a779651ff11c1342a70a63d4445
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="syshashindexes-transact-sql"></a>sys.hash_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   현재 해시 인덱스 및 해시 인덱스 속성을 보여줍니다. 해시 인덱스의 경우에 지원 됩니다 [메모리 내 oltp&#40; 메모리 내 최적화 &#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)합니다.  
   
  Sys.hash_indexes 뷰에 sys.indexes 뷰와 동일한 열과 라는 추가 열 포함 **bucket_count**합니다. Sys.hash_indexes 뷰의 다른 열에 대 한 자세한 내용은 참조 하십시오. [sys.indexes&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

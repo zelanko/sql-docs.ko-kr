@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2bf5afe622a5d21d5b3bacc1be819f0b120719b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f4bcc1bb453783a38c4b23e6526de1a804bde8f1
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +36,6 @@ ms.lasthandoff: 11/17/2017
  통계 컬렉션을 설정하면 성능이 저하됩니다. 한 개나 몇 개의 고유하게 컴파일된 저장 프로시저 문제만 해결하면 되는 경우에는 해당하는 몇 개의 고유하게 컴파일된 저장 프로시저에 대해서만 통계 컬렉션을 설정할 수 있습니다.  
   
  고유 하 게 컴파일된 모든 저장된 프로시저에 대 한 프로시저 수준 통계 컬렉션을 사용 하려면 참조 [sys.sp_xtp_control_proc_exec_stats&#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
-  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)). |  
   
 ## <a name="syntax"></a>구문  
   

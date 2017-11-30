@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ede97a8012bf4dbdbd312f7ae5179bb794378c1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cb5c73dafd26f9ddd4da885b77c8649df13c3d2d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   호스팅된 CLR의 버전 및 상태를 포함하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임) 통합과 관련된 각 속성에 대해 행을 반환합니다. 호스팅된 CLR은를 실행 하 여 초기화는 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md), 또는 [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) 문, 또는 모든 CLR 루틴, 형식 또는 트리거를 실행 하 여 합니다. **sys.dm_clr_properties** 보기에는 서버에서 사용자 CLR 코드 실행을 사용 하는지 여부를 지정 하지 않습니다. 사용자 CLR 코드 실행을 사용 하 여 사용할지는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 함께 저장 프로시저는 [사용 하도록 설정 하는 clr](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) 옵션이 1로 설정 합니다.  
   
  **sys.dm_clr_properties** 뷰에 **이름** 및 **값** 열입니다. 이 뷰의 각 행은 호스팅된 CLR의 속성에 대한 세부 정보를 제공합니다. 이 뷰를 사용하여 CLR 설치 디렉터리, CLR 버전, 호스팅된 CLR의 현재 상태와 같은 호스팅된 CLR에 대한 정보를 수집할 수 있습니다. 이 뷰를 사용하면 서버 컴퓨터에 CLR을 설치할 때 발생하는 문제로 인해 CLR 통합 코드가 작동하지 않고 있는지 확인할 수 있습니다.  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)). [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]을 참조하세요.|  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
