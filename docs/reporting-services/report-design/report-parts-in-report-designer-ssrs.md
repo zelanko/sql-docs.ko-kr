@@ -1,5 +1,5 @@
 ---
-title: "보고서 파트 (SSRS) 보고서 디자이너에서 | Microsoft Docs"
+title: "보고서 디자이너의 보고서 파트(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.components.f1
+f1_keywords: sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 44d4d2ae5bf33c8a35c54659bd89a504e2bb58fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="report-parts-in-report-designer-ssrs"></a>보고서 디자이너의 보고서 파트(SSRS)
 
   보고서 디자이너에서 프로젝트에 테이블, 차트 및 페이지가 매겨진 기타 보고서 항목을 만든 후에는 자신과 다른 사람이 다른 보고서에서 다시 사용할 수 있도록 이들 항목을 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 *보고서 파트* 로 게시할 수 있습니다.  
@@ -82,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  보고서를 배포합니다.  
   
- 보고서를 배포하면 보고서 파트가 SharePoint 사이트 또는 보고서 서버에 게시되어 다른 사람이 보고서 파트를 다시 사용할 수 있게 됩니다. 보고서 파트를 게시 하려면 있어야 연결 하 여 충분 한 권한이 보고서 서버에 보고서를 배포 합니다.  
+ 보고서를 배포하면 보고서 파트가 SharePoint 사이트 또는 보고서 서버에 게시되어 다른 사람이 보고서 파트를 다시 사용할 수 있게 됩니다. 보고서 파트를 게시하려면 보고서를 배포할 때 보고서 서버에 연결되어 있어야 하며 보고서 서버에 대한 권한이 있어야 합니다.  
   
   
 ##  <a name="SearchReuseComponents"></a> 보고서 파트 다시 사용  
@@ -101,5 +98,4 @@ ms.lasthandoff: 08/09/2017
 
 [보고서 파트 관리](../../reporting-services/report-design/managing-report-parts.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

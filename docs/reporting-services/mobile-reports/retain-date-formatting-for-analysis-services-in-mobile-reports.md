@@ -1,26 +1,24 @@
 ---
-title: "Analysis Services에 대 한 모바일 보고서의 서식을 날짜 유지 | Reporting Services | Microsoft Docs"
+title: "모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a4da31bb1ed09024c6278193e8011b5c7981922
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5e0c04239913d5978a77afbbaac24ad4f7c37ecb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지
 보고서 작성기의 공유 데이터 집합에 측정값을 추가하므로 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 데이터 원본의 날짜가 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]의 데이터 형식을 유지합니다.
@@ -45,6 +43,5 @@ ms.lasthandoff: 08/09/2017
    
 ### <a name="see-also"></a>참고 항목
 
--  [Reporting Services 모바일 보고서에 대 한 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Data for Reporting Services mobile reports](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
 -  [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
-

@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d6553ed94b16c1811b4f7b8e8129367acf9c1089
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
   보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  
@@ -54,14 +53,14 @@ ms.lasthandoff: 08/09/2017
   
  보고서 서버 시스템 속성을 설정하려면 Management Studio 또는 스크립트를 사용합니다.  
   
--   Management Studio를 사용하려면 보고서 서버에 연결하고 고급 서버 속성 페이지를 사용하여 **EnableReportDesignClientDownload** 를 **false**로 설정합니다. 이 페이지를 여는 방법에 대 한 자세한 내용은 참조 하세요. [설정할 보고서 서버 속성 &#40; Management studio&#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Management Studio를 사용하려면 보고서 서버에 연결하고 고급 서버 속성 페이지를 사용하여 **EnableReportDesignClientDownload** 를 **false**로 설정합니다. 이 페이지를 여는 방법에 대한 자세한 내용은 [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)를 참조하세요.  
   
 -   보고서 서버 속성을 설정하는 샘플 스크립트를 보려면 [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)을 참조하세요.  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 보고서 작성기 액세스 권한을 부여하는 역할 할당  
  기본 모드 보고서 서버에서 보고서 작성기를 사용하기 위한 태스크를 포함하는 사용자 역할 할당을 만듭니다. 항목 단위 및 사이트 수준에서 역할 정의와 역할 할당을 만들거나 수정하려면 내용 관리자 및 시스템 관리자여야 합니다.  
   
- 다음 지침에서는 사용자가 미리 정의된 역할을 사용한다고 가정합니다. 역할 정의를 수정했거나 SQL Server 2000에서 업그레이드한 경우에는 필요한 태스크가 역할에 포함되어 있는지 확인합니다. 역할 할당을 만드는 방법에 대 한 자세한 내용은 참조 [보고서 서버 &#40;에 대 한 사용자 액세스 권한 부여 보고서 관리자 &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ 다음 지침에서는 사용자가 미리 정의된 역할을 사용한다고 가정합니다. 역할 정의를 수정했거나 SQL Server 2000에서 업그레이드한 경우에는 필요한 태스크가 역할에 포함되어 있는지 확인합니다. 역할 할당 만들기에 대한 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.  
   
  역할 할당을 만들면 사용자에게 다음 작업을 수행할 수 있는 권한이 부여됩니다.  
   
@@ -127,7 +126,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  보고서 작성기 액세스 권한을 구성할 사용자 또는 그룹에 대한 역할 할당이 이미 있는 경우 **편집**을 클릭합니다.  
   
-     그렇지 않으면 **새 역할 할당**을 클릭합니다. 그룹 또는 사용자 입력이 형식에 Windows 도메인 사용자 또는 그룹 계정을: \<도메인 >\\< 계정\>합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
+     그렇지 않으면 **새 역할 할당**을 클릭합니다. 그룹 또는 사용자에 Windows 도메인 사용자 또는 그룹 계정을 \<domain>\\<account\> 형식으로 입력합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
   
 5.  **시스템 사용자**를 선택한 다음 **확인**을 클릭합니다.  
   
@@ -139,7 +138,7 @@ ms.lasthandoff: 08/09/2017
   
 9. 보고서 작성기 액세스 권한을 구성할 사용자 또는 그룹에 대한 역할 할당이 이미 있는 경우 **편집**을 클릭합니다.  
   
-     그렇지 않으면 **새 역할 할당**을 클릭합니다. 그룹 또는 사용자 입력이 형식에 Windows 도메인 사용자 또는 그룹 계정을: \<도메인 >\\< 계정\>합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
+     그렇지 않으면 **새 역할 할당**을 클릭합니다. 그룹 또는 사용자에 Windows 도메인 사용자 또는 그룹 계정을 \<domain>\\<account\> 형식으로 입력합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
   
 10. **보고서 작성기**를 선택한 다음 **적용**을 클릭합니다.  
   
@@ -172,9 +171,8 @@ ms.lasthandoff: 08/09/2017
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)   
- [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [보고서 서버 시스템 속성](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Multilookup 함수 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "Multilookup 함수(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8ddb5eb1fbaf3cdefa3dcef1219e14710fb64797
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2d927faec10cf1e443c6924893ef7964e729e85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---multilookup-function"></a>보고서 작성기 함수-Multilookup 함수
+# <a name="report-builder-functions---multilookup-function"></a>보고서 작성기 함수 - Multilookup 함수
   이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름 집합과 처음 일치하는 값 집합을 반환합니다.  
   
 > [!NOTE]  
@@ -63,7 +62,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   결과 집합을 반환합니다.  
   
- 일 대 일 관계의 이름-값 쌍을 포함하는 데이터 집합에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)를 사용하고, 일 대 다 관계의 이름 값 쌍을 포함하는 데이터 집합에서 이름에 대한 여러 값을 검색하려면 [LookupSet 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)를 사용합니다.  
+ 일 대 일 관계의 이름-값 쌍을 포함하는 데이터 집합에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)를 사용합니다. 일 대 다 관계의 이름-값 쌍을 포함하는 데이터 집합에서 이름에 대한 여러 값을 검색하려면 [LookupSet 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)를 사용합니다.  
   
  다음과 같은 제한 사항이 있습니다.  
   
@@ -129,10 +128,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [식 &#40;의 데이터 형식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션 &#40;에 대 한 식 범위 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

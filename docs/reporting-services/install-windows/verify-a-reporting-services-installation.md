@@ -1,12 +1,11 @@
 ---
-title: "Verify a Reporting Services 설치 | Microsoft Docs"
+title: "Reporting Services 설치 확인 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5849b6240557cd1682d08210f256e0edabfa70b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156fe09f98f0afd9a091821e6f810fdcca6bd31a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services 설치 확인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나로 설치할 수 있습니다. 설치를 확인하기 위해 수행해야 하는 단계는 보고서 서버 모드에 따라 다릅니다.  
@@ -77,9 +75,9 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="reporting-services-samples"></a>Reporting Services 예제  
   
-1.  Reporting Services 자습서 중 하나를 완료합니다. 자세한 내용은 참조 [Reporting Services 자습서 &#40; Ssrs&#41; ](../../reporting-services/reporting-services-tutorials-ssrs.md).  
+1.  Reporting Services 자습서 중 하나를 완료합니다. 자세한 내용은 [Reporting Services 자습서&#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)를 참조하세요.  
   
-2.  Adventure Works 예제 데이터베이스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서를 CodePlex에서 다운로드합니다. 자세한 내용은 [AdventureWorks 보고서 예제](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home)를 참조하세요.  
+2.  Adventure Works 예제 데이터베이스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서를 GitHub에서 다운로드합니다. 자세한 내용은 [AdventureWorks 예제 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 참조하세요.  
   
 ##  <a name="bkmk_nativemode"></a> 기본 모드 설치 확인  
  기본 구성을 사용하여 기본 모드 보고서 서버를 설치하는 경우 설치 프로그램은 서버를 설치하고 배포합니다. 몇 가지 간단한 테스트를 수행하여 보고서 서버의 배포 여부를 확인할 수 있습니다. 이러한 단계를 수행하기 위해서는 로컬 관리자여야 합니다. 다른 사용자가 테스트를 수행할 수 있도록 하려면 해당 사용자에 대한 보고서 서버 액세스 권한을 구성해야 합니다.  
@@ -90,29 +88,28 @@ ms.lasthandoff: 08/09/2017
   
 2.  서비스 콘솔 응용 프로그램을 열고 보고서 서버 서비스가 실행 중인지 확인합니다. 보고서 서버 서비스의 상태를 확인하려면 **시작**을 클릭하고 **제어판**을 가리킨 후 **관리 도구**를 두 번 클릭하고 **서비스**를 두 번 클릭합니다. 서비스 목록이 나타나면 **보고서 서버(MSSQLSERVER)**로 스크롤합니다. 상태가 **시작됨**으로 바뀝니다.  
   
-3.  브라우저를 열고 주소 표시줄에 보고서 서버 URL을 입력합니다. 주소는 설치 중에 보고서 서버에 지정한 서버 이름과 가상 디렉터리 이름으로 구성됩니다. 기본적으로 보고서 서버 가상 디렉터리 이름은 **ReportServer**입니다. 보고서 서버 설치를 확인 하려면 다음 URL을 사용할 수 있습니다: http://*\<컴퓨터 이름 >*/ReportServer*\<_instance 이름 >*합니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 URL이 달라질 수 있습니다. URL 형식에 대 한 자세한 내용은 참조 [보고서 서버 Url 구성 &#40; SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Windows Vista 또는 Windows Server 2008의 로컬 관리자 인 경우 참조 [로컬 관리 &#40; 기본 모드 보고서 서버 구성 Ssrs&#41; ](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  브라우저를 열고 주소 표시줄에 보고서 서버 URL을 입력합니다. 주소는 설치 중에 보고서 서버에 지정한 서버 이름과 가상 디렉터리 이름으로 구성됩니다. 기본적으로 보고서 서버 가상 디렉터리 이름은 **ReportServer**입니다. URL http://*\<컴퓨터 이름>*/ReportServer*\<_instance name>*을 사용하여 보고서 서버 설치를 확인할 수 있습니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 URL이 달라질 수 있습니다. URL 형식에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)을 참조하세요. Windows Vista 또는 Windows Server 2008의 로컬 관리자인 경우 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
-4.  보고서를 실행하여 보고서 서버 작동을 테스트합니다. 이 단계에서는 자습서에서 샘플 보고서를 만들 수 있습니다. 자세한 내용은 참조 [기본 테이블 보고서 &#40; 만들기 SSRS 자습서 &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+4.  보고서를 실행하여 보고서 서버 작동을 테스트합니다. 이 단계에서는 자습서에서 샘플 보고서를 만들 수 있습니다. 자세한 내용은 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요.  
   
 ### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 이 설치되어 실행 중인지 확인하려면  
   
 1.  브라우저를 열고 주소 표시줄에 웹 포털 URL을 입력합니다. 주소는 설치 중에 또는 Reporting Services 구성 도구의 웹 포털 URL 페이지에서 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대해 지정한 서버 이름과 가상 디렉터리 이름으로 구성됩니다. 기본적으로 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 가상 디렉터리는 **Reports**입니다. 다음 URL을 사용하여 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 설치를 확인할 수 있습니다.  
   
-     http://*\<컴퓨터 이름 >*/reports*\<_instance 이름 >*합니다.  
+     http://*\<컴퓨터 이름>*/Reports*\<_instance name>*.  
   
 2.  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에서 새 폴더를 만들거나 파일을 업로드하여 보고서 서버 데이터베이스로 정의가 다시 전달되었는지 여부를 테스트합니다. 이런 작업이 성공적으로 수행되면 연결 기능이 작동합니다.  
   
-     자세한 내용은 참조 [웹 포털 &#40; SSRS 기본 모드 &#41; ](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     자세한 내용은 [웹 포털&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)을 참조하세요.  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>보고서 디자이너가 설치되어 실행 중인지 확인하려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 열고 보고서 서버 프로젝트 유형을 기반으로 새 프로젝트를 만듭니다. 보고서 서버 프로젝트 마법사를 사용 하 여에 대 한 자세한 내용은 참조 하세요. [의 SQL Server 데이터 도구 &#40; Reporting Services SSDT &#41; ](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) SQL Server 온라인 설명서의 합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 열고 보고서 서버 프로젝트 유형을 기반으로 새 프로젝트를 만듭니다. 보고서 서버 프로젝트 마법사를 사용하는 방법은 SQL Server 온라인 설명서의 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요.  
   
 2.  보고서 예제를 설치한 경우 예제 보고서 프로젝트 파일을 열고 해당 보고서를 보고서 서버에 게시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 설치 문제 해결](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [원인 및 reporting Services 오류의 해결 방법](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+ [Reporting Services 오류의 원인 및 해결 방법](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   
-

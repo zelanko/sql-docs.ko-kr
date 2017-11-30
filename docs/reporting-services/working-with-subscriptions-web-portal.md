@@ -1,28 +1,25 @@
 ---
-title: "구독 (웹 포털) 사용 | Microsoft Docs"
+title: "구독 사용(웹 포털) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 131c3a86efc1e3fe2c0e896f726f292ab5e0db55
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-subscriptions-web-portal"></a>구독 작업(웹 포털)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-구독 페이지를 선택 하 여 돌아갈 수 있습니다는 **줄임표 (...)**  보고서 선택 **관리** 선택 하 고 **구독**합니다.  
+보고서의 **줄임표(...)** , **관리** , **구독**을 차례로 선택하면 구독 페이지에 액세스할 수 있습니다.  
   
 구독 페이지에서 **+ 새 구독**을 선택하면 새 구독을 만들 수 있습니다. 기존 구독을 편집하거나 선택한 구독을 삭제할 수도 있습니다.  
   
@@ -93,8 +90,7 @@ ms.lasthandoff: 08/09/2017
 쿼리가 생성된 후 필수 필드에 값을 할당할 수 있습니다. 수동 데이터를 입력하거나 만든 데이터 집합에서 필드를 선택할 수 있습니다.
 
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
-[페이지가 매겨진된 보고서 작업](working-with-paginated-reports-web-portal.md)  
+[페이지를 매긴 보고서 사용](working-with-paginated-reports-web-portal.md)  
 [공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

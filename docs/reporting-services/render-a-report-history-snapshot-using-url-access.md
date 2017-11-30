@@ -1,5 +1,5 @@
 ---
-title: "URL 액세스를 사용 하 여 보고서 기록 스냅숏 렌더링 | Microsoft Docs"
+title: "URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - snapshots [Reporting Services], URL access
 - snapshots [Reporting Services], rendering report history
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38237ef30d403dab78f8fedd00caa97ebdaf0b29
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f52059e27008b5a29bd14f95f6a20d1a1d64d207
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링
   *rs:Snapshot* 매개 변수를 제공하고 이 값을 유효한 스냅숏 ID로 설정하여 보고서 기록 스냅숏을 기반으로 한 보고서를 렌더링할 수 있습니다. 매개 변수 값은 ISO(국제 표준화 기구) 8601 표준을 기반으로 하여 YYYY-MM-DDTHH:MM:SS 형식으로 사용합니다.  
@@ -42,8 +41,7 @@ http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [URL 액세스 &#40; Ssrs&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
   
   
-

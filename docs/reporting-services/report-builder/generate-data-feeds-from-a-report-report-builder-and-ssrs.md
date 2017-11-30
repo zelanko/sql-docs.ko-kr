@@ -1,5 +1,5 @@
 ---
-title: "(보고서 작성기 및 SSRS) 보고서에서 데이터 피드를 생성 | Microsoft Docs"
+title: "보고서에서 데이터 피드 생성(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,28 +11,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8a7c1175f67ba636a71d6afa42679c45b5295ea2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>보고서에서 데이터 피드 생성(보고서 작성기 및 SSRS)
 
-페이지 매긴된 보고서에서 Atom 규격 데이터 피드를 생성 하 고 응용 프로그램에서 같은 파워 피벗 데이터 피드를 사용 하 여 또는 데이터를 사용할 수 있는 Power BI 피드입니다.  
+페이지를 매긴 보고서에서 Atom 규격 데이터 피드를 생성한 다음 데이터 피드를 사용할 수 있는 Power Pivot 또는 Power BI와 같은 응용 프로그램에 데이터 피드를 사용할 수 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 렌더링 확장 프로그램은 보고서에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서를 생성합니다. 이 문서는 보고서의 각 데이터 영역에 대한 데이터 피드를 하나 이상 나열합니다. 데이터 영역의 유형과 데이터 영역에 표시되는 데이터에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 데이터 영역에서 여러 데이터 피드를 생성할 수 있습니다.  
   
  Atom 서비스 문서에는 각 데이터 피드에 대한 고유 식별자가 포함되며 URL에서 이 식별자를 사용하여 데이터 피드의 내용을 볼 수 있습니다.  
   
- 자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
      데이터 피드가 포함된 Atom 문서를 저장하거나 열지 확인하는 메시지가 나타납니다.  
   
-4.  **저장** 을 클릭하여 파일 시스템에 문서를 저장하거나 저장하기 전에 **열기** 를 클릭하여 문서 내용을 봅니다. **기본적으로 브라우저에서 문서가 열립니다.**  
+4.  **저장**을 클릭하여 파일 시스템에 문서를 저장하거나 저장하기 전에 **열기**를 클릭하여 문서 내용을 봅니다. **기본적으로 브라우저에서 문서가 열립니다.**  
   
 5.  문서를 저장할 위치를 찾습니다.  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
      데이터 피드가 포함된 Atom 문서를 저장하거나 열지 확인하는 메시지가 나타납니다.  
   
-4.  **저장** 을 클릭하여 파일 시스템에 문서를 저장하거나 저장하기 전에 **열기** 를 클릭하여 데이터 피드를 봅니다.  
+4.  **저장**을 클릭하여 파일 시스템에 문서를 저장하거나 저장하기 전에 **열기**를 클릭하여 데이터 피드를 봅니다.  
   
 5.  문서를 저장할 위치를 찾습니다.  
   
@@ -93,5 +91,4 @@ ms.lasthandoff: 08/09/2017
 
 [보고서 내보내기](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

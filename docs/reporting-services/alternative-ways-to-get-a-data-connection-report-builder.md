@@ -1,28 +1,25 @@
 ---
-title: "데이터 연결 (보고서 작성기)에 다른 방법 | Microsoft Docs"
+title: "데이터에 연결하는 다른 방법(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 81cebc286a8187b058ac1be3262f968fa6a69299
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>데이터에 연결하는 다른 방법(보고서 작성기)
 데이터 연결은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 일반적으로 데이터 원본 소유자로부터 사용할 자격 증명 유형과 연결 정보를 가져옵니다.  
@@ -82,5 +79,4 @@ ms.lasthandoff: 08/09/2017
 [보고서 데이터 집합&#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 
   
-
 

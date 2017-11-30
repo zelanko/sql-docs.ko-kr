@@ -1,5 +1,5 @@
 ---
-title: "Excel 2003 행 제한을 해결 | Microsoft Docs"
+title: "Excel 2003 행 제한 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 764b6da1c5ea43d02d7b5b950aa056434acf1a12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   이 항목에서는 페이지를 매긴 보고서를 Excel로 내보낼 때 Excel 2003 행 제한을 해결하는 방법을 설명합니다. 테이블만 포함하는 보고서에 대한 해결 방법입니다.  
@@ -35,11 +34,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 엽니다.  
   
-2.  테이블에서 데이터 행을 마우스 오른쪽 단추로 클릭한 다음 **그룹 추가** > **상위 그룹** 을 클릭하여 외부 테이블 그룹을 추가합니다.  
+2.  테이블에서 데이터 행을 마우스 오른쪽 단추로 클릭한 다음 **그룹 추가** > **상위 그룹**을 클릭하여 외부 테이블 그룹을 추가합니다.  
   
      ![부모 그룹 선택](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "부모 그룹 선택")  
   
-3.  **그룹화 방법** 식 상자에 다음 수식을 입력한 다음 **확인** 을 클릭하여 상위 그룹을 추가합니다.  
+3.  **그룹화 방법** 식 상자에 다음 수식을 입력한 다음 **확인**을 클릭하여 상위 그룹을 추가합니다.  
   
      =Int((RowNumber(Nothing)-1)/65000)  
   
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
      ![그룹 열 삭제](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "그룹 열 삭제")  
   
-5.  **행 그룹** 섹션에서 **그룹 1** 을 마우스 오른쪽 단추로 클릭한 다음 **그룹 속성**을 클릭합니다.  
+5.  **행 그룹** 섹션에서 **그룹 1**을 마우스 오른쪽 단추로 클릭한 다음 **그룹 속성**을 클릭합니다.  
   
      ![그룹 속성 보기](../../reporting-services/report-builder/media/groupproperties-updated.png "그룹 속성 보기")  
   
@@ -59,11 +58,10 @@ ms.lasthandoff: 08/09/2017
   
      ![기본 정렬 삭제](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "기본 정렬 삭제")  
   
-7.  **페이지 나누기** 페이지에서 **각 그룹 인스턴스 사이** 를 클릭한 다음 **확인**을 클릭합니다.  
+7.  **페이지 나누기** 페이지에서 **각 그룹 인스턴스 사이**를 클릭한 다음 **확인**을 클릭합니다.  
   
-     ![페이지 나누기를 설정할](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "페이지 나누기를 설정 합니다.")  
+     ![페이지 나누기 설정](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "페이지 나누기 설정")  
   
 8.  보고서를 저장합니다. 보고서를 Excel로 내보내는 경우 여러 워크시트로 내보내고 각 워크시트에는 최대 65000개 행이 포함됩니다.  
   
   
-

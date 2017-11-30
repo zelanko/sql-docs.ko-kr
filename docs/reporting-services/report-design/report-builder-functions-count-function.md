@@ -1,5 +1,5 @@
 ---
-title: "Count 함수 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "Count 함수(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b0bf3f37572551dbd0168ab7c659afd0f00c671c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 22a57181c820458c98afdce4de0b479644a47d08
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---count-function"></a>보고서 작성기 함수-Count 함수
+# <a name="report-builder-functions---count-function"></a>보고서 작성기 함수 - Count 함수
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 값의 개수를 반환합니다.  
   
 > [!NOTE]  
@@ -82,10 +81,9 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [식 &#40;의 데이터 형식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션 &#40;에 대 한 식 범위 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "계기 (보고서 작성기 및 SSRS)의 포인터 서식 지정 | Microsoft Docs"
+title: "계기의 포인터 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87c71f596a77834f3552ddaa6aa382b569a860ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f63b9a51641478df6c3e34bbdcd173d9723f9c9f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>계기의 포인터 서식 지정(보고서 작성기 및 SSRS)
  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 계기 포인터는 계기의 현재 값을 나타냅니다.   
@@ -60,8 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [계기 &#40;의 범위에 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [계기 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [계기에서 범위 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

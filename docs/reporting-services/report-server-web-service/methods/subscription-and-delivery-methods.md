@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - reports [Reporting Services], delivering
 - delivery [Reporting Services]
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 45e772533354fea94bf0bee7f01219622dc09c4f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 7ac0b032199a3ec9878d604e5f7d726af872a830
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscription-and-delivery-methods"></a>구독 및 배달 메서드
   다음 메서드를 사용하여 카탈로그 항목의 구독 및 배달을 만들고 관리할 수 있습니다.  
@@ -46,11 +44,10 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|데이터 기반 구독의 속성 값을 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|구독의 속성 값을 설정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+## <a name="see-also"></a>관련 항목:  
+ [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [기술 참조 &#40; Ssrs&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

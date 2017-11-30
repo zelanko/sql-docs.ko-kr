@@ -1,5 +1,5 @@
 ---
-title: "보고서 기록 (SharePoint 통합된 모드의 Reporting Services) 만들기 | Microsoft Docs"
+title: "보고서 기록 만들기(SharePoint 통합 모드의 Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- report history [Reporting Services], SharePoint
+helpviewer_keywords: report history [Reporting Services], SharePoint
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e1388fba5963d5571d293f2d995c73bb3d83d3b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9f013e1fd6d614e9b4c8767c00feebea1da8ad8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>보고서 기록 만들기(SharePoint 통합 모드의 Reporting Services)
   보고서 기록은 시간에 따라 만든 보고서 스냅숏의 모음입니다. 각 스냅숏은 생성 당시의 상태를 그대로 나타내는 보고서 복사본입니다. 스냅숏 생성 당시의 보고서 레이아웃 및 데이터가 포함됩니다. 렌더링 정보는 스냅숏에 저장되지 않습니다. 보고서 기록의 스냅숏을 열면 보고서 뷰어 웹 파트에 HTML로 열립니다. 렌더링된 후 스냅숏을 다른 응용 프로그램 형식으로 내보낼 수 있습니다.  
@@ -62,4 +60,3 @@ ms.lasthandoff: 08/09/2017
  [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
   
-

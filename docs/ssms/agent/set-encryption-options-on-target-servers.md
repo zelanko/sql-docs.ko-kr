@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - target servers [SQL Server], encryption
 - multiserver environments [SQL Server], setting encryption options on target servers
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 746d0d91d4625c6daad4a4133c0a4481ef85f7d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d2f91c1117333f037d77d146000cf44ba885e292
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-encryption-options-on-target-servers"></a>대상 서버의 암호화 옵션 설정
 마스터 서버와 대상 서버 중 일부 또는 모두 간의 SSL(Secure Sockets Layer) 암호화 통신을 위해 인증서를 사용할 수는 없지만 마스터 서버와 대상 서버 간의 채널을 암호화하려는 경우 대상 서버에서 필요한 보안 수준을 사용하도록 구성합니다.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>참고 항목  
 [방법: 데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)](http://msdn.microsoft.com/en-us/e1e55519-97ec-4404-81ef-881da3b42006)  
   
-

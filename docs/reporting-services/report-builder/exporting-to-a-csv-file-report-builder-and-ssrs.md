@@ -1,5 +1,5 @@
 ---
-title: "(보고서 작성기 및 SSRS) CSV 파일로 내보내기 | Microsoft Docs"
+title: "CSV 파일로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e63d1c2405029118064144d99fc092ec6f4f139a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
   CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 페이지가 매겨진 보고서의 데이터를 결합하여 읽기 쉽고 많은 응용 프로그램과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  장치 정보 설정을 변경하여 필드 구분 기호를 TAB을 비롯한 임의의 문자로 변경할 수 있습니다. 자세한 내용은 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)을 참조하세요.  
   
--   레코드 구분 기호 문자열은 캐리지 리턴 및 줄 바꿈 (\<cr >\<lf >).  
+-   레코드 구분 기호 문자열은 캐리지 리턴 및 줄 바꿈(\<cr>\<lf>)입니다.  
   
 -   텍스트 한정자 문자열은 인용 부호(")입니다.  
   
@@ -150,11 +149,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>관련 항목:  
- [Reporting services&#40;의 페이지 매김 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [렌더링 동작 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램 &#40;에 대 한 대화형 기능 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [보고서 항목 렌더링 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ade1713f239c5933160ac5b33b8453a7ee859b16
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b7d5fa6a7c13d6a10ecd8d21fbff4981260617eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>테이블 만들기 쿼리 만들기(Visual Database Tools)
 테이블 만들기 쿼리를 사용하여 행을 새 테이블에 복사할 수 있습니다. 이 방법은 작업에 사용할 데이터의 하위 집합을 만들거나 한 데이터베이스에서 다른 데이터베이스로 테이블 내용을 복사하는 데 유용합니다. 테이블 만들기 쿼리는 결과 삽입 쿼리와 비슷하지만 행을 복사해 넣을 새 테이블을 만든다는 점에서 차이가 있습니다.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 -   요약 정보만 복사하려는 경우 그룹화 방법 옵션  
   
-예를 들어, 다음 쿼리에서는 `uk`_`customers` 라는 새 테이블을 만들고 `customers` 테이블에서 이 테이블로 정보를 복사합니다.  
+예를 들어, 다음 쿼리에서는 `uk_customers`라는 새 테이블을 만들고 `customers` 테이블에서 이 테이블로 정보를 복사합니다.  
   
 ```  
 SELECT *   
@@ -90,4 +89,3 @@ WHERE country = 'UK'
 [쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [쿼리 형식(Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

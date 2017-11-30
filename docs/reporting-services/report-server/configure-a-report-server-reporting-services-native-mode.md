@@ -1,5 +1,5 @@
 ---
-title: "(Reporting Services 기본 모드) 보고서 서버 구성 | Microsoft Docs"
+title: "보고서 서버(Reporting Services 기본 모드) 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da2a367b582d39ea8cc8dc7ffc281a3515bb2d8b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d8e8d5b90c912d0789cd0af7d97309de8c55931f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>보고서 서버(Reporting Services 기본 모드) 구성
   설치 중에 선택한 옵션에 따라 보고서 서버를 사용하기 전에 추가 구성이 필요할 수 있습니다. 보고서 서버 구성은 최소한 다음과 같은 요소로 구성됩니다.  
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Reporting Services 구성 도구를 시작한 후 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
   
-2.  **웹 서비스 URL** 을 클릭하여 보고서 서버에 대한 URL을 구성하는 페이지를 엽니다. URL을 정의 하는 방법에 지침은 [URL &#40; 구성 합니다. SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2.  **웹 서비스 URL** 을 클릭하여 보고서 서버에 대한 URL을 구성하는 페이지를 엽니다. URL을 정의하는 방법은 [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.  
   
 3.  **데이터베이스** 를 클릭하여 보고서 서버 데이터베이스를 만듭니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
   
@@ -67,9 +66,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
- [로컬 관리 &#40; 기본 모드 보고서 서버를 구성 합니다. Ssrs&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [원격 관리를 위한 보고서 서버를 구성 합니다.](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
- [Reporting Services 구성 관리자 &#40; 기본 모드 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
-

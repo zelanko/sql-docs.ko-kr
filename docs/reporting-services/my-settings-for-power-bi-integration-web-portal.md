@@ -1,11 +1,10 @@
 ---
-title: "Power BI 통합 (웹 포털)을 위한 내 설정 | Microsoft Docs"
+title: "Power BI 통합(웹 포털)을 위한 내 설정 | Microsoft Docs"
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +12,22 @@ f1_keywords:
 - power bi
 - power bi integration
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 8e627f20918a4d6ee5f882677ccc7b2c26616e2f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ade5494f2849c8fd48fe9b81f00e5435dc242195
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>Power BI 통합을 위한 내 설정(웹 포털)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 **내 설정** 페이지는 개별 사용자가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]를 통한 로그인을 관리하는 데 사용됩니다. 보고서 항목을 고정하는 단계를 진행할 때는 로그인하라는 메시지가 자동으로 표시됩니다.  그러나 수동으로 로그인해야 하거나 로그아웃해야 하는 경우 **내 설정** 페이지를 사용할 수 있습니다.  **내 설정** 메뉴 옵션이 표시되지 않는 경우 보고서 서버가  [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 통합되지 않은 것입니다.  자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)를 통한 로그인을 관리하는 데 사용됩니다.  
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 **내 설정** 페이지는 개별 사용자가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]를 통한 로그인을 관리하는 데 사용됩니다. 보고서 항목을 고정하는 단계를 진행할 때는 로그인하라는 메시지가 자동으로 표시됩니다.  그러나 수동으로 로그인해야 하거나 로그아웃해야 하는 경우 **내 설정** 페이지를 사용할 수 있습니다.  **내 설정** 메뉴 옵션이 표시되지 않는 경우 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 통합되지 않은 것입니다.  자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)과 통합해야 합니다.  
   
 ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -52,4 +50,4 @@ ms.lasthandoff: 08/17/2017
 [Power BI의 대시보드](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

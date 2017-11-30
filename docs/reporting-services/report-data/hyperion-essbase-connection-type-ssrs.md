@@ -1,5 +1,5 @@
 ---
-title: "Hyperion Essbase 연결 유형 (SSRS) | Microsoft Docs"
+title: "Hyperion Essbase 연결 형식(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1002bb2ff985a9ee5c2eeaade2377789c136f248
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b04a9b00e87526b4ea030ff6359d0969e84f11cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 연결 유형(SSRS)
+# <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 연결 형식(SSRS)
   보고서에 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]외부 데이터 원본에서 다차원 데이터를 검색할 수 있게 하는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 에 대한 데이터 확장 프로그램을 기반으로 합니다.  
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
@@ -81,7 +80,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>미리 정의된 필드 속성  
- 일반적으로 여러 데이터 공급자에 의해 지원되며 보고서 데이터 집합에 대한 기본 MDX 쿼리에 나타나는 미리 정의된 필드 속성. 예를 들어 MDX 차원 속성 MEMBER_UNIQUE_NAME은 미리 정의된 보고서 데이터 집합 필드 속성 **UniqueName**에 매핑됩니다. 텍스트 상자에 고유한 이름 값을 포함 하려면 식을 사용 하 여 `=Fields!`  *\<FieldName >*`.UniqueName`합니다.  
+ 일반적으로 여러 데이터 공급자에 의해 지원되며 보고서 데이터 집합에 대한 기본 MDX 쿼리에 나타나는 미리 정의된 필드 속성. 예를 들어 MDX 차원 속성 MEMBER_UNIQUE_NAME은 미리 정의된 보고서 데이터 집합 필드 속성 **UniqueName**에 매핑됩니다. 입력란에 고유한 이름 값을 포함하려면 `=Fields!`*\<FieldName>*`.UniqueName` 식을 사용합니다.  
   
  다음 표에서는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 원본에 사용할 수 있는 미리 정의된 필드 속성 목록을 제공합니다.  
   
@@ -98,7 +97,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>사용자 지정 속성  
- 데이터 공급자가 지원하고 보고서 데이터 집합에 대한 기본 MDX 쿼리에 나타나지만 보고서 데이터 집합 창에 해당 데이터 집합 아래의 필드로 표시되지 않는 사용자 지정 필드 속성. 예를 들어 **Long Names** 는 차원 수준에 대해 정의된 멤버 속성입니다. 식을 사용 하면 텍스트 상자에 값을 포함 하려면 `=Fields!`  *\<FieldName >*`("Long Names")`합니다. 식의 필드 이름은 대/소문자를 구분합니다.  
+ 데이터 공급자가 지원하고 보고서 데이터 집합에 대한 기본 MDX 쿼리에 나타나지만 보고서 데이터 집합 창에 해당 데이터 집합 아래의 필드로 표시되지 않는 사용자 지정 필드 속성. 예를 들어 **Long Names** 는 차원 수준에 대해 정의된 멤버 속성입니다. 입력란에 값을 포함하려면 `=Fields!`*\<FieldName>*`("Long Names")` 식을 사용합니다. 식의 필드 이름은 대/소문자를 구분합니다.  
   
  식에서 사용자 지정 확장 속성을 참조하려면 다음 구문을 사용합니다.  
   
@@ -124,7 +123,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [데이터 집합 &#40;에 필터 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> 관련 단원  
@@ -133,26 +132,25 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  보고서의 데이터 액세스에 대한 개요를 제공합니다.  
   
- [데이터 연결, 데이터 원본 및 보고서 작성기의 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
- [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  포함된 데이터 집합 및 공유 데이터 집합에 대한 정보를 제공합니다.  
   
- [데이터 집합 필드 컬렉션 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  데이터 집합 쿼리에 의해 생성되는 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
- [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services를 사용 하 여](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](http://go.microsoft.com/fwlink/?LinkId=81970)  
  이 데이터 확장 프로그램을 사용하는 방법에 대한 자세한 정보를 제공합니다.  
   
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, deploying
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 742e80b96e6887188620b4f2a7ab3808475ceda2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: fdb4225367a54cf9468536ba37b2ee4822aee969
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>방법: 사용자 지정 보고서 항목 배포
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 보고서 항목을 배포하려면 보고서 서버 구성 파일을 수정하고 디자인 타임 및 런타임 구성 요소 어셈블리를 보고서 디자이너와 보고서 서버 양쪽의 적절한 응용 프로그램 폴더로 복사해야 합니다.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>사용자 지정 보고서 항목을 배포하려면  
   
-1.  Rsreportdesigner.config 파일을 편집하여 디자이너에서 사용하도록 사용자 지정 보고서 항목 런타임 및 디자인 타임 구성 요소를 구성합니다. **ReportItemName** 엔트리 일치 해야 합니다는 **CustomReportItemAttribute** 에 사용 된 특성 프로그램 **CustomReportItemDesigner** 클래스입니다. 예를 들어  
+1.  Rsreportdesigner.config 파일을 편집하여 디자이너에서 사용하도록 사용자 지정 보고서 항목 런타임 및 디자인 타임 구성 요소를 구성합니다. **ReportItemName** 항목은 **CustomReportItemDesigner** 클래스의 **CustomReportItemAttribute** 특성과 일치해야 합니다. 예를 들어  
   
     ```  
     <ReportItems>  
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/12/2017
     </ReportItems>  
     ```  
   
-3.  Rsssrvpolicy.config 파일을 편집 추가 **CodeGroup** 사용자 지정 보고서 항목에 적합 한 권한을 부여 하는 합니다. 예를 들어  
+3.  Rsssrvpolicy.config 파일을 편집하여 사용자 지정 보고서 항목에 적절한 권한을 부여하는 **CodeGroup**을 추가합니다. 예를 들어  
   
     ```  
     <CodeGroup   
@@ -73,9 +70,8 @@ ms.lasthandoff: 08/12/2017
   
 5.  사용자 지정 보고서 항목 디자인 타임 구성 요소 DLL을 %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 디렉터리로 복사합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [사용자 지정 보고서 항목 클래스 라이브러리](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   
-

@@ -28,17 +28,16 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 805c1ba338d75d49e6dbd48fb6f1d8af2f5e5701
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 응용 프로그램 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   개별 사용자가 소유한 표준 구독  
   
- 작업을 취소하면 보고서 서버에서 실행 중인 프로세스만 취소됩니다. 보고서 서버는 다른 컴퓨터에서 발생하는 데이터 처리를 관리하지 않으므로 이후에 다른 시스템에서 분리되는 쿼리 프로세스는 수동으로 취소해야 합니다. 실행하는 데 시간이 너무 오래 걸리는 쿼리는 자동으로 종료되도록 쿼리 제한 시간 값을 지정하세요. 자세한 내용은 참조 [보고서 및 공유 데이터 집합 처리 &#40;에 대 한 제한 시간 값 설정 Ssrs&#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). 보고서를 일시적으로 중지하는 방법에 대한 자세한 내용은 [보고서 및 구독 처리 해제 또는 일시 중지](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)를 참조하세요.  
+ 작업을 취소하면 보고서 서버에서 실행 중인 프로세스만 취소됩니다. 보고서 서버는 다른 컴퓨터에서 발생하는 데이터 처리를 관리하지 않으므로 이후에 다른 시스템에서 분리되는 쿼리 프로세스는 수동으로 취소해야 합니다. 실행하는 데 시간이 너무 오래 걸리는 쿼리는 자동으로 종료되도록 쿼리 제한 시간 값을 지정하세요. 자세한 내용은 [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)를 참조하세요. 보고서를 일시적으로 중지하는 방법에 대한 자세한 내용은 [보고서 및 구독 처리 해제 또는 일시 중지](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)를 참조하세요.  
   
 > [!NOTE]  
 >  간혹 프로세스를 취소하기 위해 서버를 다시 시작해야 할 수도 있습니다. SharePoint 모드의 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 호스팅하는 응용 프로그램 풀을 다시 시작해야 할 수 있습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.  
@@ -126,11 +125,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 서버 작업 취소&#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [작업 속성 &#40; Management studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [보고 서비스 구성 파일 수정 &#40; RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [작업 속성&#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [보고서 서버 성능 모니터링](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   
-

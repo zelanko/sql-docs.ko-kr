@@ -1,5 +1,5 @@
 ---
-title: "보고서 서버 웹 서비스 메서드-모델 | Microsoft Docs"
+title: "모델 메서드 - 보고서 서버 웹 서비스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6f95a5e6d379d9f0a998cb58cbf32c00be980884
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: c9730c12ed92d1035238b6836016b0f62e03bba0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="model-methods---report-server-web-service"></a>모델 메서드-보고서 서버 웹 서비스
+# <a name="model-methods---report-server-web-service"></a>모델 메서드 - 보고서 서버 웹 서비스
   다음 메서드를 사용하여 모델을 관리할 수 있습니다.  
   
 |메서드|동작|  
@@ -45,10 +43,9 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|모델 항목에 대한 보안 정책을 설정합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [기술 참조 &#40; Ssrs&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

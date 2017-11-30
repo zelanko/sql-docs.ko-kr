@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - links [Reporting Services], URL access
 - URL access [Reporting Services], Web applications
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b8d7aff6c9afdfa6e6fb322d028b9bccf5cbaaf5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 123e0ff6bbc5a33214e515401ad38f7af5604b5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-url-access---web-application"></a>URL 액세스를 사용 하 여-웹 응용 프로그램, 서비스 보고 통합
+# <a name="integrating-reporting-services-using-url-access---web-application"></a>URL 액세스를 사용하여 Reporting Services 통합 - 웹 응용 프로그램
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 URL 액세스는 네트워크를 통해 개별 보고서에 액세스할 수 있도록 특별히 디자인되었습니다. 이런 유형의 액세스는 보고서 보기와 탐색을 사용자 지정 웹 응용 프로그램으로 통합하는 데 알맞습니다. 웹 응용 프로그램에서 URL 액세스를 사용하려면 다음 작업을 수행할 수 있습니다.  
   
 -   URL을 웹 사이트 또는 포털의 특정 보고서 서버로 지정합니다.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/12/2017
 -   폼 POST 메서드를 사용하고 양식 필드를 사용하여 쿼리 문자열 매개 변수를 보고서 서버 URL에 전달합니다.  
   
 ## <a name="url-access-through-direct-addressing"></a>직접 주소 지정을 통한 URL 액세스  
- URL을 사용하여 보고서 서버 또는 보고서 서버 데이터베이스 항목에 액세스하려면 웹 브라우저나 응용 프로그램 내에서 URL 주소를 제공하기만 하면 됩니다. 또한 액세스할 보고서 또는 리소스의 모양에 영향을 줄 수 있는 매개 변수를 URL에 제공할 수도 있습니다. 웹 브라우저의 주소 표시줄을 통해 보고서 서버는 대상으로 지정할 수는 URL 또는 URL의 원본으로 사용할 수는 **IFrame** 큰 웹 응용 프로그램이 나 포털의 일부인 합니다. 포털의 다양한 웹 페이지에 보고서 하이퍼링크를 포함시키거나 보고서에 대해 특정 프레임을 대상으로 지정하거나 프로세스 도중에 새 브라우저 창을 열 수 있습니다.  
+ URL을 사용하여 보고서 서버 또는 보고서 서버 데이터베이스 항목에 액세스하려면 웹 브라우저나 응용 프로그램 내에서 URL 주소를 제공하기만 하면 됩니다. 또한 액세스할 보고서 또는 리소스의 모양에 영향을 줄 수 있는 매개 변수를 URL에 제공할 수도 있습니다. URL은 웹 브라우저의 주소 표시줄을 통해 보고서 서버를 대상으로 지정할 수 있으며 또는 더 큰 규모의 웹 응용 프로그램이나 포털의 일부인 **IFrame**의 원본이 될 수도 있습니다. 포털의 다양한 웹 페이지에 보고서 하이퍼링크를 포함시키거나 보고서에 대해 특정 프레임을 대상으로 지정하거나 프로세스 도중에 새 브라우저 창을 열 수 있습니다.  
   
  다음 예에서 하이퍼링크는 "main"이라는 프레임을 대상으로 지정하며 이 프레임은 하이퍼링크를 포함하는 프레임과 다를 수 있습니다. 하이퍼링크는 웹 포털의 일부일 수 있습니다.  
   
@@ -51,9 +49,9 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
 </a>  
 ```  
   
- 이전 예에서 장치 정보 설정 **LinkTarget** URL의 쿼리 문자열에 "main" 값으로 전달 됩니다. 그러면 보고서의 드릴스루 하이퍼링크도 이름이 "main"인 프레임을 대상으로 지정합니다.  
+ 위의 예제에서 장치 정보 설정 **LinkTarget**은 URL 쿼리 문자열 내의 "main" 값과 함께 전달됩니다. 그러면 보고서의 드릴스루 하이퍼링크도 이름이 "main"인 프레임을 대상으로 지정합니다.  
   
- 장치 정보 설정에 대 한 자세한 내용은 참조 [장치 정보 설정을 렌더링 확장 프로그램에 전달](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)합니다.  
+ 장치 정보 설정에 대한 자세한 내용은 [장치 정보 설정을 렌더링 확장 프로그램에 전달](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
  상당수의 서버와 브라우저에서는 URL에 허용되는 문자 수를 제한합니다. 일부의 경우 256자 제한이 적용됩니다. 이 제한을 해결하려면 폼 제출을 사용하여 POST 요청을 사용하면 됩니다.  
   
@@ -88,9 +86,8 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
   
 ## <a name="see-also"></a>관련 항목:  
  [응용 프로그램에 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [URL 액세스를 사용 하 여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [URL 액세스를 사용 하 여 Windows 응용 프로그램](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
- [URL 액세스 &#40; Ssrs&#41;](../../reporting-services/url-access-ssrs.md)  
+ [URL 액세스를 사용하여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [Windows 응용 프로그램에서 URL 액세스 사용](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
+ [URL 액세스&#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   
-

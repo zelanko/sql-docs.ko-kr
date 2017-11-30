@@ -1,27 +1,24 @@
 ---
-title: "Reporting Services에서 Kpi 사용 | Microsoft Docs"
+title: "Reporting Services에서 KPI 사용 | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 099142ae9ac45dae0a207fe896f496dc8d4afa6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -75,7 +72,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  선택 된 **줄임표 (...)**  데이터 상자에 있습니다. 그러면 **데이터 집합 선택** 화면이 나타납니다.  
+2.  데이터 상자에서 **줄임표 (...)**를 선택합니다. 그러면 **데이터 집합 선택** 화면이 나타납니다.  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -97,7 +94,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
 KPI를 제거하기 위해 다음을 수행할 수 있습니다.  
   
-1.  선택 된 **줄임표 (...)**  제거 하려는 KPI의 합니다. **관리**를 선택합니다.  
+1.  제거하려는 KPI의 **줄임표(...)**를 선택합니다. **관리**를 선택합니다.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -107,12 +104,11 @@ KPI를 제거하기 위해 다음을 수행할 수 있습니다.
   
 ## <a name="refreshing-a-kpi"></a>KPI 새로 고침  
   
-KPI를 새로 고치려면 공유 데이터 집합에 대 한 캐싱을 구성 해야 합니다. 새로 고침 계획을 캐시에 대 한 자세한 내용은 참조 하십시오. [공유 데이터 집합 작업을](../reporting-services/work-with-shared-datasets-web-portal.md)합니다.  
+KPI를 새로 고치려면 공유 데이터 집합에 대한 캐싱을 구성해야 합니다. 캐시 새로 고침 계획에 관련된 자세한 내용은 [공유 데이터 집합 사용](../reporting-services/work-with-shared-datasets-web-portal.md)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계
   
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
 [공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

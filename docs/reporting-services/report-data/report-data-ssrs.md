@@ -1,5 +1,5 @@
 ---
-title: "보고서 데이터 (SSRS) | Microsoft Docs"
+title: "보고서 데이터(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfa852d24647ae9553ec05167dc8eba58dfd3f73
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d5cac8267c1a38401eee78758a6e34adcbdd06ce
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-data-ssrs"></a>보고서 데이터(SSRS)
   보고서 데이터는 조직의 다양한 데이터 원본에서 가져올 수 있습니다. 보고서 디자인의 첫 단계는 기본 보고서 데이터를 나타내는 데이터 원본 및 데이터 집합을 만드는 것입니다. 각 데이터 원본은 데이터 연결 정보를 포함합니다. 각 데이터 집합은 데이터 원본의 데이터로 사용할 필드 집합을 정의하는 쿼리 명령을 포함합니다. 각 데이터 집합의 데이터를 시각화하려면 테이블, 행렬, 차트 및 지도와 같은 데이터 영역을 추가합니다. 보고서를 처리하면 데이터 원본에 대한 쿼리가 실행되고 각 데이터 영역이 필요에 따라 확장되어 데이터 집합에 대한 쿼리 결과를 표시합니다.  
@@ -63,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **데이터 집합의 데이터 표시** 데이터 집합의 데이터는 일반적으로 테이블 및 차트와 같은 하나 이상의 데이터 영역에 표시됩니다.  
   
--   **여러 데이터 집합의 데이터 표시**  데이터 영역에서 단일 데이터 집합을 기반으로 값을 조회하거나 다른 데이터 집합으로 집계하는 식을 작성할 수 있습니다. 테이블에 단일 데이터 집합을 기반으로 하며 다양한 데이터 원본의 데이터를 표시하는 하위 보고서를 포함할 수 있습니다.  
+-   **여러 데이터 집합의 데이터 표시** 데이터 영역에서 단일 데이터 집합을 기반으로 값을 조회하거나 다른 데이터 집합으로 집계하는 식을 작성할 수 있습니다. 테이블에 단일 데이터 집합을 기반으로 하며 다양한 데이터 원본의 데이터를 표시하는 하위 보고서를 포함할 수 있습니다.  
   
  다음 목록을 사용하여 보고서의 데이터 원본을 정의할 수 있습니다.  
   
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/09/2017
   
 -   데이터 원본 자격 증명은 데이터 원본 유형별로 다르며 보고서를 클라이언트에서 보는지 아니면 보고서 서버 또는 SharePoint 사이트에서 보는지에 따라 다릅니다. 자세한 내용은 [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)의 각 도구에 지정된 자격 증명 정보를 참조하세요.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
  데이터 연결 만들기, 외부 원본과 데이터 집합 및 쿼리에서 가져온 데이터 추가 등과 관련된 태스크입니다.  
   
 |||  
@@ -96,4 +95,3 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="related-content"></a>관련 내용  
   
-

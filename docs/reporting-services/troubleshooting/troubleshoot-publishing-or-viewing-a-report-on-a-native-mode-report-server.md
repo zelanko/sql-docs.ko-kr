@@ -1,5 +1,5 @@
 ---
-title: "기본 모드 보고서 서버에서 보고서를 보거나 게시 문제 해결 | Microsoft Docs"
+title: "기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 723b88c6d0bc077cf47b6a83346c274c0ecbeef5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>게시된 보고서에서 항목을 전환할 때 아무 작업도 수행되지 않는 경우  
   로컬 미리 보기에서 보고서를 표시할 때 보고서의 항목을 전환하여 표시하거나 숨길 수 있습니다. 동일한 보고서를 보고서 서버에 게시한 후 볼 때는 항목을 전환해도 아무 작업도 수행되지 않습니다.   
   
-\<보고서 서버 이름 >에 밑줄 (_)를 포함 합니다.  
+\<보고서 서버 이름> 밑줄(_)이 포함된 경우  
   
 보고서가 오류 없이 실행되었으나 토글 항목이 작동하지 않으면(예: 확장 아이콘(+)을 클릭해도 동작이 발생하지 않는 경우) 보고서 서버를 호스팅하는 컴퓨터의 이름을 확인합니다. 컴퓨터 이름에 밑줄이 있으면 토글 항목이 작동하지 않습니다. 이것은 알려진 문제이며 해결 방법이 없습니다.   
   
@@ -66,5 +65,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

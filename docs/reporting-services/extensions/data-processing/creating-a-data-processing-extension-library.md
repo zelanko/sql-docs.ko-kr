@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - data processing extensions [Reporting Services], namespace assignments
 - library [Reporting Services]
 - assigning namespaces to extensions
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f8b4f2e9254eb34745d36ccbffe36c21fdb0d75d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 71c3ed99c83792c0911376d560ecd3facef6b23c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-data-processing-extension-library"></a>데이터 처리 확장 프로그램 라이브러리 만들기
   만드는 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 고유한 네임스페이스에 할당하고 라이브러리 또는 어셈블리 파일로 만들어야 합니다. 네임스페이스의 정확한 이름은 중요하지 않지만 고유한 이름이어야 하며 다른 확장 프로그램과 공유하면 안 됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 포함되어 있는 데이터 처리 확장 프로그램에 대해 <xref:Microsoft.ReportingServices.DataProcessing> 네임스페이스를 사용합니다. 회사의 데이터 처리 확장 프로그램에 대해 고유한 네임스페이스를 만들어야 합니다.  
@@ -59,7 +57,7 @@ namespace CompanyName.ExtensionName
 csc /t:library /out:CompanyName.ExtensionName.dll *.cs /r:System.dll /r:Microsoft.ReportingServices.Interfaces.dll  
 ```  
   
- 다음 코드 예제에 사용 되는 명령을 보여 줍니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 확장명을 가진 파일. vb.  
+ 다음 코드 예에서는 확장명 .vb인 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 파일에 대해 사용되는 명령을 보여 줍니다.  
   
 ```vb  
 vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll /r:Microsoft.ReportingServices.Interfaces.dll  
@@ -71,7 +69,6 @@ vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll /r:Microsof
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [데이터 처리 확장 프로그램 구현](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 확장 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

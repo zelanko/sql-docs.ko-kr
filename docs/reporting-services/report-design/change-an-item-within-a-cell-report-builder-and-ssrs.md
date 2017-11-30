@@ -1,5 +1,5 @@
 ---
-title: "(보고서 작성기 및 SSRS) 셀 내 항목 변경 | Microsoft Docs"
+title: "셀 내 항목 변경(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f4a345f97fc3b414f6d804b127b625faa8e1204
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cf872e237310d4dfc9c68fd5a6bd25118a626aec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>셀 내 항목 변경(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서는 입력란, 선 또는 이미지와 같은 비컨테이너 항목만 새 보고서 항목으로 대체할 수 있습니다. 예를 들어 테이블을 입력란으로 끌어 테이블로 입력란을 대체할 수 있습니다.  
@@ -41,8 +40,7 @@ ms.lasthandoff: 08/09/2017
 >  이미지 보고서 항목을 끌어서 셀에 놓으면 **이미지 속성** 대화 상자가 열립니다. 이 대화 상자에서 이미지를 셀에 추가하기 전에 이미지 원본 등의 속성을 설정할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [이미지, 입력란, 사각형 및 선 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [이미지, 입력란, 사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

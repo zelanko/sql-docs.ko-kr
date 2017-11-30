@@ -1,5 +1,5 @@
 ---
-title: "보고서 파트 찾아보기 및 기본 폴더 (보고서 작성기 및 SSRS) 설정 | Microsoft Docs"
+title: "보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: 0495d013be21d73c0ea5ae67c4a810c75db4298e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만드는 가장 쉬운 방법은 테이블, 차트 등의 기존 보고서 파트를 보고서 파트 갤러리에서 보고서에 추가하는 것입니다. 보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 보고서 파트는 데이터 집합, 즉 쿼리와 데이터 원본에 대한 연결을 사용합니다. 보고서 파트를 보고서에 추가한 후 필요한 만큼 구성 요소를 수정할 수 있습니다.  
@@ -76,4 +75,3 @@ ms.lasthandoff: 11/07/2017
  [보고서 파트 게시 및 다시 게시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   
-

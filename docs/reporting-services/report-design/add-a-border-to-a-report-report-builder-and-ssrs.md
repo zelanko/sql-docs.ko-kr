@@ -1,5 +1,5 @@
 ---
-title: "(보고서 작성기 및 SSRS) 보고서에 테두리 추가 | Microsoft Docs"
+title: "보고서에 테두리 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 824ca565b87a77add1c547aafb264345a9a63dab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: baeb498889d0698ec955b76edbf06904a5aad650
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>보고서에 테두리 추가(보고서 작성기 및 SSRS)
   선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 테두리를 추가할 수 있습니다.    
@@ -43,4 +42,3 @@ ms.lasthandoff: 08/09/2017
  [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   
-

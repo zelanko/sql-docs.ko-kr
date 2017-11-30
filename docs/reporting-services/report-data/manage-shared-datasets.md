@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a7ff9770deac8363b38390c74a79bfe2a582c164
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6414ac861d66bdacde41575662c7c66fc5014839
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-shared-datasets"></a>공유 데이터 집합 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 공유 데이터 집합은 외부 데이터 원본에 연결되는 공유 데이터 원본에서 데이터를 검색합니다. 공유 데이터 집합을 사용하면 쿼리를 공유하여 여러 보고서에서 일관성 있는 데이터 집합을 제공할 수 있습니다. 데이터 집합 쿼리에는 데이터 집합 매개 변수를 포함할 수 있습니다. 처음 사용할 때 또는 일정을 지정하여 특정 매개 변수 조합에 대해 쿼리 결과를 캐시하도록 공유 데이터 집합을 구성할 수 있습니다. 공유 데이터 집합 캐싱을 보고서 캐싱 및 보고서 데이터 피드와 함께 사용하면 데이터 원본에 대한 액세스를 쉽게 관리할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
  공유 데이터 집합 정의에는 쿼리, 기본값을 포함하는 데이터 집합 매개 변수, 대/소문자 구분과 같은 데이터 옵션 및 데이터 집합 필터가 포함됩니다. 정의에서 설정하는 값은 공유 데이터 집합이 보고서에 포함될 때마다 사용됩니다.  
   
- 보고서에서 공유 데이터 집합을 사용하려면 보고서 작성기와 같은 응용 프로그램을 열고 보고서 서버 또는 SharePoint 사이트로 이동하여 공유 데이터 집합을 선택합니다. 이렇게 하면 보고서에 공유 데이터 집합의 인스턴스가 추가됩니다. 보고서에서 공유 데이터 집합에 대한 쿼리 또는 공유 데이터 원본을 보거나 변경할 수 없습니다. 보고서의 인스턴스에 적용할 일련의 데이터 집합 속성 값을 추가로 지정할 수 있습니다. 예를 들어 필터를 추가하거나 대/소문자 구분과 같은 데이터 옵션을 변경할 수 있습니다. 자세한 내용은 참조 [보고서 포함 된 데이터 집합 및 공유 데이터 집합 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) 에 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494) msdn.microsoft.com 합니다.  
+ 보고서에서 공유 데이터 집합을 사용하려면 보고서 작성기와 같은 응용 프로그램을 열고 보고서 서버 또는 SharePoint 사이트로 이동하여 공유 데이터 집합을 선택합니다. 이렇게 하면 보고서에 공유 데이터 집합의 인스턴스가 추가됩니다. 보고서에서 공유 데이터 집합에 대한 쿼리 또는 공유 데이터 원본을 보거나 변경할 수 없습니다. 보고서의 인스턴스에 적용할 일련의 데이터 집합 속성 값을 추가로 지정할 수 있습니다. 예를 들어 필터를 추가하거나 대/소문자 구분과 같은 데이터 옵션을 변경할 수 있습니다. 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="managing-shared-datasets"></a>공유 데이터 집합 관리  
  게시된 공유 데이터 집합의 속성을 관리하려면 기본 모드 보고서 서버에 대한 보고서 관리자를 사용하거나 보고서 서버를 SharePoint 통합 모드로 배포한 경우 SharePoint 사이트의 응용 프로그램 페이지를 사용할 수 있습니다. 공유 데이터 집합에서 수행할 수 있는 태스크는 역할 할당, 사이트 수준 및 항목 수준 사용 권한(사용 권한 상속이 적용되는 경우에는 폴더에 대한 사용 권한 포함)에 따라 달라집니다. 공유 데이터 집합에 대한 항목 수준 보안은 보고서에 대한 항목 수준 보안과 동일한 모델을 사용합니다. 자세한 내용은 [공유 데이터 집합 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 |-|-|  
 |이름 편집|공유 데이터 집합의 이름을 변경합니다. 종속 항목에서의 참조는 계속 작동합니다.|  
 |설명 편집|공유 데이터 집합에 대한 설명을 변경합니다.|  
-|쿼리 실행 제한 시간 편집|쿼리 실행 제한 시간(초)을 설정합니다. 0초는 시간 제한이 없음을 의미합니다. 데이터 집합 쿼리 시간이 초과되기 전까지의 시간(초)을 결정합니다. 제한 시간 값을 지정하지 않으려면 0을 사용합니다. 자세한 내용은 참조 [보고서 및 공유 데이터 집합 처리 &#40;에 대 한 제한 시간 값 설정 Ssrs&#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|쿼리 실행 제한 시간 편집|쿼리 실행 제한 시간(초)을 설정합니다. 0초는 시간 제한이 없음을 의미합니다. 데이터 집합 쿼리 시간이 초과되기 전까지의 시간(초)을 결정합니다. 제한 시간 값을 지정하지 않으려면 0을 사용합니다. 자세한 내용은 [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)을 참조하세요.|  
 |종속 항목 보기|게시된 보고서 파트, 공유 데이터 원본 및 보고서와 같은 공유 데이터 집합을 사용하는 항목을 볼 수 있습니다.|  
   
  다음과 같은 추가 공유 데이터 집합 속성이 자동으로 구성됩니다.  
@@ -126,6 +126,6 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

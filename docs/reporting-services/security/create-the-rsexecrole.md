@@ -10,21 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RSExecRole
+helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-the-rsexecrole"></a>RSExecRole 만들기
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 **RSExecRole** 이라는 미리 정의된 데이터베이스 역할을 사용하여 보고서 서버 데이터베이스에 대한 보고서 서버 사용 권한을 부여합니다. **RSExecRole** 역할은 보고서 서버 데이터베이스와 함께 자동으로 만들어집니다. 일반적으로 이 역할을 수정하거나 다른 사용자를 이 역할에 할당해서는 안 됩니다. 그러나 보고서 서버 데이터베이스를 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]또는 다른 설치로 이동하는 경우에는 Master 및 MSDB 시스템 데이터베이스에서 해당 역할을 다시 만들어야 합니다.  
@@ -193,11 +190,11 @@ ms.lasthandoff: 08/09/2017
 30. sysjobs 테이블에 대해 반복합니다. 두 테이블 모두에 대해 RSExecRole에 Select 권한을 부여해야 합니다.  
   
 ## <a name="move-the-report-server-database"></a>보고서 서버 데이터베이스 이동  
- 역할을 만든 후에는 보고서 서버 데이터베이스를 새 SQL Server 인스턴스로 이동할 수 있습니다. 자세한 내용은 참조 [보고서 서버 데이터베이스를 다른 컴퓨터로 이동](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)합니다.  
+ 역할을 만든 후에는 보고서 서버 데이터베이스를 새 SQL Server 인스턴스로 이동할 수 있습니다. 자세한 내용은 [다른 컴퓨터로 보고서 서버 데이터베이스 이동](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)을 참조하세요.  
   
- 업그레이드 하는 경우는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] SQL Server 2016으로 업그레이드할 수 있습니다 하기 전이나 후 데이터베이스를 이동 합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 SQL Server 2016으로 업그레이드하는 경우 데이터베이스를 이동하기 전이나 후에 업그레이드할 수 있습니다.  
   
- 보고서 서버에 연결 하는 경우 보고서 서버 데이터베이스를 자동으로 업그레이드 됩니다. 데이터베이스를 업그레이드하는 데 필요한 특별한 단계는 없습니다.  
+ 보고서 서버 데이터베이스는 보고서 서버를 연결할 때 자동으로 업그레이드됩니다. 데이터베이스를 업그레이드하는 데 필요한 특별한 단계는 없습니다.  
   
 ## <a name="restore-encryption-keys-and-verify-your-work"></a>암호화 키 복원 및 작업 확인  
  보고서 서버 데이터베이스를 연결한 후에는 다음 단계를 완료하여 작업을 확인할 수 있습니다.  
@@ -212,7 +209,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  **기존 보고서 서버 데이터베이스 선택**을 클릭합니다.  
   
-5.  데이터베이스 엔진의 서버 이름을 입력합니다. 이 형식으로 인스턴스 이름을 입력 해야 보고서 서버 데이터베이스를 명명 된 인스턴스에 연결할 경우: \<서버 이름 >\\< instancename\>합니다.  
+5.  데이터베이스 엔진의 서버 이름을 입력합니다. 보고서 서버 데이터베이스를 명명된 인스턴스에 연결한 경우 인스턴스 이름을 \<servername>\\<instancename\> 형식으로 입력해야 합니다.  
   
 6.  **연결 테스트**를 클릭합니다.  
   
@@ -241,4 +238,4 @@ ms.lasthandoff: 08/09/2017
 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

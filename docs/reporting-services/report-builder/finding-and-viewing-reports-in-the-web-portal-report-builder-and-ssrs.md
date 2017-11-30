@@ -1,5 +1,5 @@
 ---
-title: "보고서 찾기 및 보기 (보고서 작성기 및 SSRS) 웹 포털에서 | Microsoft Docs"
+title: "웹 포털에서 보고서 찾기 및 보기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85eda9497d17c2e5e7bb7fecf15e1d214d24ca11
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7ee4e423989bca7db3e23d7791b3f089c0ab1721
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>웹 포털에서 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
   보고서 관리자는 보고서 보기 및 관리 기능을 제공하는 웹 기반 도구입니다. 이 도구는 보고서 서버를 설치할 때 함께 설치됩니다. 보고서 관리자를 열려면 브라우저 창에 보고서 관리자 URL을 입력하십시오. 브라우저 요구 사항에 대한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요. 보고서 서버에서 보고서 관리자 URL을 구성하는 방법에 대한 자세한 내용은 시스템 관리자에게 문의하십시오. 자세한 내용은 [보고서 관리자 구성&#40;기본 모드&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)을 참조하세요.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="opening-a-report"></a>보고서 열기  
  보고서를 찾은 다음 보고서 이름을 클릭하면 해당 보고서가 열립니다. 보고서는 HTML로 렌더링되고 보고서 관리자의 내용 페이지에 표시됩니다. 보고서는 항상 브라우저 세션에서 캐시되기 때문에 보고서를 연 경우 **뒤로** 단추를 클릭하여 보고서로 되돌아갈 수 있습니다. 보고서 실행을 위해 사용자 이름과 암호를 입력해야 하는 경우에도 마찬가지입니다. 렌더링된 보고서를 완전히 닫으려면 브라우저를 닫아야 합니다.  
   
- 폴더 계층 구조에 표시되는 보고서 중 일부에는 곧바로 액세스하지 못할 수도 있습니다. 보고서의 데이터 원본에 대한 액세스 권한이 있는지 확인하기 위해 사용자 이름과 암호를 입력해야 하는 경우도 있습니다. 보고서 관리자에서 보고서를 여는 방법에 대 한 자세한 내용은 참조 [열기 및 닫기 보고서 &#40; 보고서 관리자 &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ 폴더 계층 구조에 표시되는 보고서 중 일부에는 곧바로 액세스하지 못할 수도 있습니다. 보고서의 데이터 원본에 대한 액세스 권한이 있는지 확인하기 위해 사용자 이름과 암호를 입력해야 하는 경우도 있습니다. 보고서 관리자에서 보고서 열기에 대한 자세한 내용은 [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
   
  보고서 작성기에서 직접 보고서 서버의 보고서를 탐색하거나 열 수도 있습니다. 자세한 내용은 [보고서 및 기타 항목 검색&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -62,7 +61,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 및 기타 항목 검색&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

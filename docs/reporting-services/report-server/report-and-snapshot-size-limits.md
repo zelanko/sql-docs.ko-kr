@@ -18,17 +18,16 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0016b55ab5b7a72b8e231a943df6db191bf8b6c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-and-snapshot-size-limits"></a>보고서 및 스냅숏 크기 제한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 관리하는 관리자는 이 항목의 정보를 통해 보고서가 보고서 서버에 게시되고, 런타임에 렌더링되고, 파일 시스템에 저장될 때 적용되는 보고서 크기 제한을 이해할 수 있습니다. 이 항목에서는 보고서 서버 데이터베이스의 크기를 측정하는 방법에 대한 지침을 제공하고 스냅숏 크기가 서버 성능에 미치는 영향에 대해 설명합니다.  
@@ -87,8 +86,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
- [보고서 서버 데이터베이스 &#40; SSRS 기본 모드 &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [큰 보고서 처리](../../reporting-services/report-server/process-large-reports.md)  
   
   
-

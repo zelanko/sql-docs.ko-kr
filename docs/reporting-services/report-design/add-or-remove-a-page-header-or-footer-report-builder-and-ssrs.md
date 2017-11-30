@@ -1,5 +1,5 @@
 ---
-title: "페이지 머리글 / 바닥글 (보고서 작성기 및 SSRS) 추가 또는 제거 | Microsoft Docs"
+title: "페이지 머리글/바닥글 추가 또는 제거(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 551fbc941b9d0aaf5c2a4cbd9a7d0b2a7828096e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>페이지 머리글/바닥글 추가 또는 제거(보고서 작성기 및 SSRS)
   페이지 머리글 또는 바닥글에 정적 텍스트, 이미지, 선, 사각형 및 테두리를 추가할 수 있습니다. 머리글 또는 바닥글에 변수나 계산된 데이터를 포함하려면 입력란에 식 및 데이터 바인딩된 이미지를 배치합니다.  
@@ -72,4 +71,3 @@ ms.lasthandoff: 08/09/2017
  [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
-

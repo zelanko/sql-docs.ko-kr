@@ -16,17 +16,16 @@ helpviewer_keywords:
 - editing, alerts
 - updating, alerts
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f2e052aec58464a761713a1a2fd2341415955786
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 74be156217a78fa56212760321c2c62212b93bff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>경고 디자이너에서 데이터 경고 편집
 
@@ -37,11 +36,11 @@ ms.lasthandoff: 08/09/2017
 데이터 경고 관리자에서 편집할 데이터 경고 정의를 엽니다. 경고 정의를 만든 사용자만 해당 정의를 편집할 수 있습니다. 데이터 경고 관리자를 여는 방법은 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
  다음 그림은 데이터 경고 관리자에 있는 데이터 경고의 상황에 맞는 메뉴를 보여 줍니다.  
   
- ![편집을 클릭 하 여 데이터 경고 디자이너 열기](../reporting-services/media/rs-alertmanageriwopendesigner.gif "편집을 클릭 하 여 데이터 경고 디자이너 열기")  
+ ![편집을 클릭하여 데이터 경고 디자이너 열기](../reporting-services/media/rs-alertmanageriwopendesigner.gif "편집을 클릭하여 데이터 경고 디자이너 열기")  
   
  다음 절차에는 데이터 경고 디자이너에서 편집할 경고 정의를 데이터 경고 관리자에서 열기 위한 단계가 포함되어 있습니다.  
   
@@ -61,10 +60,9 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  보고서가 변경되고 보고서에서 생성된 데이터 피드가 변경된 경우 경고 정의가 더 이상 유효하지 않을 수 있습니다. 이러한 예로는 해당 규칙에서 경고 정의가 참조하는 열이 보고서에서 삭제되었거나 데이터 형식을 변경하는 경우 또는 보고서가 삭제 또는 이동되는 경우를 들 수 있습니다. 유효하지 않은 경고 정의를 열 수는 있지만 정의를 작성할 때 사용한 보고서 데이터 피드의 현재 버전을 기준으로 유효한 경고 정의만 다시 저장할 수 있습니다. 보고서에서 데이터 피드를 생성하는 방법은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
-[경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[경고 담당자를 위한 데이터 경고 관리자입니다.](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

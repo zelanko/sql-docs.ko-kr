@@ -1,5 +1,5 @@
 ---
-title: "서버 및 Reporting Services 데이터베이스 연결 문제 해결 | Microsoft Docs"
+title: "Reporting Services의 서버 및 데이터베이스 연결 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b901ec323ee3aa021d9e581cb8a1aedbde3116b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7dddbd58335ffc0ad9d4f44fa6fab633ba4da43
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>서버 및 Reporting services 데이터베이스 연결 문제 해결
+# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
 이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하십시오.  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>데이터 원본 'datasourcename'에 대한 연결을 설정할 수 없습니다. (rsErrorOpeningConnection)  
@@ -63,7 +62,7 @@ ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발�
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Management Studio에서 보고서 서버에 연결할 때의 WMI 오류  
 기본적으로 Management Studio는 Reporting Services WMI(Windows Management Instrumentation) 공급자를 사용하여 보고서 서버에 대한 연결을 구성합니다. WMI 공급자가 올바르게 설치되지 않으면 보고서 서버에 연결할 때 다음 오류가 발생합니다.  
   
-에 연결할 수 없는 \<서버 이름 >. Reporting Services WMI 공급자가 설치되지 않았거나 잘못 구성되었습니다(Microsoft.SqlServer.Management.UI.RSClient).  
+\<your server name>에 연결할 수 없습니다. Reporting Services WMI 공급자가 설치되지 않았거나 잘못 구성되었습니다(Microsoft.SqlServer.Management.UI.RSClient).  
   
 이 오류를 해결하려면 소프트웨어를 다시 설치해야 합니다. 다른 모든 경우에는 임시 해결 방법으로 다음과 같이 SOAP 끝점을 통해 보고서 서버에 연결할 수 있습니다.  
   
@@ -127,5 +126,4 @@ MSCS 클러스터에서 실행되는 가상 SQL Server에 보고서 서버 데�
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

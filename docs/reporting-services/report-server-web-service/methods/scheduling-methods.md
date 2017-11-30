@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - schedules [Reporting Services], methods
 - reports [Reporting Services], scheduling
 - shared schedules [Reporting Services], methods
 - methods [Reporting Services], scheduling
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b72d4a6fb29541232192775a9a25eed34884b211
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: f9babec18539dac85568a4b15461a1c04f768098
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="scheduling-methods"></a>일정 예약 메서드
   이러한 메서드는 보고서 실행 및 전달을 위한 공유 일정을 만들고 관리하는 데 사용할 수 있으며 보고서 서버에서 사용하는 캐시 새로 고침 계획에도 사용할 수 있습니다.  
@@ -51,10 +49,9 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.SetScheduleProperties%2A>|공유 일정의 속성 값을 설정합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [기술 참조 &#40; Ssrs&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

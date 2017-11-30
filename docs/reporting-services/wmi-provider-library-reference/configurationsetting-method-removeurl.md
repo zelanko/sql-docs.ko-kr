@@ -1,5 +1,5 @@
 ---
-title: "RemoveURL 메서드 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "RemoveURL 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RemoveURL method
+helpviewer_keywords: RemoveURL method
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b47933be28aae96673ca6c3b28410874c01394dc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6b96a9374f5f25d07c7ba513ae63615b06fc83ba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---removeurl"></a>RemoveURL ConfigurationSetting 메서드
+# <a name="configurationsetting-method---removeurl"></a>ConfigurationSetting 메서드 - RemoveURL
   보고서 서버용으로 예약된 URL을 제거합니다. 제거할 URL이 여러 개인 경우 이 API를 호출하여 하나씩 수행해야 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -61,9 +59,9 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
 ## <a name="remarks"></a>주의  
- *UrlString*에는 가상 디렉터리 이름이 포함되지 않습니다. 해당 용도로 [SetVirtualDirectory 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md)가 제공됩니다.  
+ *UrlString*에는 가상 디렉터리 이름이 포함되지 않습니다. 해당 용도로 [SetVirtualDirectory 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) 메서드가 제공됩니다.  
   
- [ReserveURL](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md) 메서드를 호출하기 전에 *Application* 매개 변수의 VirtualDirectory 구성 속성에 값을 제공해야 합니다. [SetVirtualDirectory 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md)를 사용하여 VirtualDirectory 속성을 설정할 수 있습니다.  
+ [ReserveURL](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md) 메서드를 호출하기 전에 *Application* 매개 변수의 VirtualDirectory 구성 속성에 값을 제공해야 합니다. [SetVirtualDirectory 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) 메서드를 사용하여 VirtualDirectory 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 제공한 SSL 인증서가 다른 URL에서 더 이상 사용되지 않을 경우 해당 인증서는 제거됩니다.  
   
@@ -76,4 +74,3 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

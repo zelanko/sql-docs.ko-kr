@@ -1,5 +1,5 @@
 ---
-title: "원형 차트 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "원형 차트(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b7f623c58e745f8509f27adc21076c1b15d36f53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>원형 차트(보고서 작성기 및 SSRS)
-  원형 차트와 도넛형 차트는 데이터를 전체에 대한 비율로 표시합니다. 원형 차트는 그룹 간의 비교에 가장 일반적으로 사용됩니다. 원형 및 도넛형 차트는 피라미드형 및 깔때기형 차트와 마찬가지로 셰이프 차트라고 하는 차트 그룹으로 이루어집니다. 셰이프 차트에는 축이 없습니다. 셰이프 차트에 숫자 필드를 배치하면 차트에서 각각의 값이 전체 합계에 대해 차지하는 비율이 계산됩니다. 셰이프 차트에 대 한 자세한 내용은 참조 하십시오. [셰이프 차트 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
+  원형 차트와 도넛형 차트는 데이터를 전체에 대한 비율로 표시합니다. 원형 차트는 그룹 간의 비교에 가장 일반적으로 사용됩니다. 원형 및 도넛형 차트는 피라미드형 및 깔때기형 차트와 마찬가지로 셰이프 차트라고 하는 차트 그룹으로 이루어집니다. 셰이프 차트에는 축이 없습니다. 셰이프 차트에 숫자 필드를 배치하면 차트에서 각각의 값이 전체 합계에 대해 차지하는 비율이 계산됩니다. 셰이프 차트에 대한 자세한 내용은 [셰이프 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 그림에서는 데이터 레이블을 백분율로 서식 지정한 3차원 원형 차트를 보여 줍니다.  범례는 오른쪽 중간에 배치되어 있습니다.  
   
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>원형 차트에 백분율 값 표시  
  다른 셰이프 차트와 마찬가지로 원형 차트는 전체 합계에 대해 각 부분이 차지하는 비율을 표시합니다. 따라서 원형 차트 레이블은 백분율로 서식 지정하는 것이 일반적입니다. 그러나 다른 차트 종류와의 일관성을 유지하기 위해 이 차트에서는 기본적으로 백분율 레이블을 표시하지 않습니다. 차트에서 값을 백분율로 표시하는 방법에 대한 자세한 내용은 [원형 차트에서 백분율 값 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)를 참조하세요. 보고서에서 숫자를 백분율로 서식 지정하는 방법에 대한 자세한 내용은 [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)을 참조하세요.  
   
- ![원형 차트 데이터 요소 레이블을 백분율로](../../reporting-services/report-design/media/rs-piechartpercentages.gif "원형 차트 데이터 요소 레이블을 백분율로")  
+ ![데이터 요소 레이블(백분율)을 포함하는 원형 차트](../../reporting-services/report-design/media/rs-piechartpercentages.gif "데이터 요소 레이블(백분율)을 포함하는 원형 차트")  
   
 ## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>원형 차트에서 레이블 겹침 방지  
  원형 차트에 포함된 데이터 요소가 많으면 데이터 레이블이 겹칠 수 있습니다. 레이블이 겹치지 않도록 하는 데는 여러 가지 방법이 있습니다.  
@@ -93,12 +92,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [원형 차트 외부에 데이터 요소 레이블 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [원형 차트 &#40;에서 작은 조각 수집 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [원형 차트 &#40;에서 백분율 값 표시 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [원형 차트에서 작은 조각 수집&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [원형 차트에서 백분율 값 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [자습서: 보고서에 원형 차트 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [차트 &#40;의 범례 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [빈 데이터 요소 및 Null 데이터 요소에 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

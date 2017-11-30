@@ -1,5 +1,5 @@
 ---
-title: "새 공유 일정 (Management Studio) | Microsoft Docs"
+title: "새 공유 일정(Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.newschedule.f1
+f1_keywords: sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7d6032fde5bdfba4ba74330d162e25da8e5d8f75
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 37e0b1a6b2e64de4d63456050b094113e288c434
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-shared-schedule-management-studio"></a>새 공유 일정(Management Studio)
   이 페이지를 사용하여 게시된 보고서 및 구독의 공유 일정을 만들 수 있습니다. 보고서별 일정 또는 구독별 일정 대신 공유 일정을 사용할 수 있습니다. 공유 일정이 항목별 일정과 구분되는 두 가지 주요 기능은 중앙화된 일정 정보, 그리고 예약된 작업을 일시 중지했다가 재개하는 기능입니다.  
@@ -70,11 +68,10 @@ ms.lasthandoff: 08/09/2017
  특정 날짜 및 시간에 한 번만 실행되는 일정을 만들려면 이 옵션을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [만들기, 수정 및 일정을 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [일정 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [일정](../../reporting-services/subscriptions/schedules.md)   
- [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
-

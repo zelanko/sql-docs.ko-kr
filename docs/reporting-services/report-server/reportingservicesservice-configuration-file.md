@@ -1,5 +1,5 @@
 ---
-title: "ReportingServicesService 구성 파일 | Microsoft Docs"
+title: "ReportingServicesService 구성 파일| Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 437760484aa49e7e4a8f806a2fd7bc64ec405f33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 구성 파일
  ||  
@@ -99,4 +98,3 @@ ReportingServicesService.exe.config 파일에는 추적을 구성하는 설정�
  [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
-

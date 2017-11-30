@@ -1,27 +1,25 @@
 ---
-title: "자습서: 보고서 (보고서 작성기)에 가로 막대형 차트를 추가 | Microsoft Docs"
+title: "자습서: 보고서에 막대 차트 추가(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
  
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버로 이동 하는 방법에 대 한 단계별 지침은 데이터 집합을 만들고 데이터 원본을 선택에 대 한이 시리즈의 첫 번째 자습서를 참조 하십시오: [자습서: 기본 테이블 보고서 &#40; 만들기 보고서 작성기 &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 집합을 만들고, 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
   
 이 자습서에 소요되는 예상 시간: 15분  
   
@@ -220,7 +218,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  차트 아래쪽의 가로 축을 클릭하여 선택합니다.  
   
-3.  에 **홈** 탭 > **번호** 그룹 > **통화**합니다. 가로 축 레이블이 통화로 변경됩니다.  
+3.  **홈** 탭 > **숫자** 그룹 > **통화**를 클릭합니다. 가로 축 레이블이 통화로 변경됩니다.  
   
 3.  (선택 사항) 십진수를 제거합니다. **통화** 단추 주위에 있는 **소수 자릿수 줄이기** 단추를 두 번 클릭합니다.  
   
@@ -308,5 +306,4 @@ ms.lasthandoff: 08/09/2017
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

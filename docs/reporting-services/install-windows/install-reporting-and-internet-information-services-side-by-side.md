@@ -1,37 +1,33 @@
 ---
-title: "Reporting을 설치 하 고 인터넷 정보 서비스 함께 | Microsoft Docs"
+title: "Reporting Services와 인터넷 정보 서비스 함께 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- deploying [Reporting Services], IIS
+helpviewer_keywords: deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d45e32e12a3f9a4e87afd6557a9c292ea1a26b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting을 설치 하 고 인터넷 정보 서비스 함께
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services와 인터넷 정보 서비스 함께 설치
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-설치 하 고 동일한 컴퓨터에서 SQL Server Reporting Services (SSRS) 및 인터넷 정보 서비스 (IIS)를 실행할 수 있습니다. 사용하는 IIS 버전에 따라 해결해야 하는 상호 운용성 문제가 결정됩니다.  
+SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은 컴퓨터에 설치하고 실행할 수 있습니다. 사용하는 IIS 버전에 따라 해결해야 하는 상호 운용성 문제가 결정됩니다.  
   
 |IIS 버전|문제|설명|  
 |-----------------|------------|-----------------|  
@@ -50,32 +46,32 @@ ms.lasthandoff: 08/09/2017
   
 |예제|요청|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|로 전송 된 모든 요청을 받고 `http://123.234.345.456/reports` 또는 `http://\<computername>/reports` 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있는 경우.|  
+|`http://123.234.345.456:80/reports`|도메인 이름 서비스가 해당 호스트 이름에 대한 IP 주소를 확인할 수 있는 경우 `http://123.234.345.456/reports` 또는 `http://\<computername>/reports`로 전송된 모든 요청을 받습니다.|  
 |`http://+:80/reports`|URL에 "reports" 가상 디렉터리 이름이 포함되어 있는 한 해당 컴퓨터에 대해 유효한 IP 주소 또는 호스트 이름으로 전송된 모든 요청을 받습니다.|  
-|`http://123.234.345.456:80`|지정 하는 모든 요청을 받습니다 `http://123.234.345.456` 또는 `http://\<computername>` 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있는 경우.|  
+|`http://123.234.345.456:80`|도메인 이름 서비스가 해당 호스트 이름에 대한 IP 주소를 확인할 수 있는 경우 `http://123.234.345.456` 또는 `http://\<computername>`을 지정하는 모든 요청을 받습니다.|  
 |`http://+:80`|**모두 할당됨**에 매핑된 응용 프로그램 끝점에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
 |`http://*:80`|**모두 할당되지 않음**에 매핑된 응용 프로그램 끝점에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
   
  'System.IO.FileLoadException: 파일이 다른 프로세스에서 사용되고 있으므로 프로세스에서 파일에 액세스할 수 없습니다 (예외가 발생한 HRESULT: 0x80070020)'.라는 오류 메시지가 표시되면 포트 충돌이 발생한 것입니다.  
   
-## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>IIS 8.0, 8.5에 SQL Server Reporting Services에 대 한 URL 예약  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>SQL Server Reporting Services를 사용하여 IIS 8.0, 8.5에 대해 URL 예약  
  이전 섹션에 요약된 우선 순위 규칙을 기반으로 Reporting Services 및 IIS에 대해 정의된 URL 예약이 상호 운용성을 향상시키는 방식을 이해할 수 있습니다. Reporting Services는 해당 응용 프로그램의 가상 디렉터리 이름을 명시적으로 지정하는 요청을 받습니다. IIS는 나머지 요청을 모두 받은 다음 이를 IIS 프로세스 모델 내에서 실행되는 응용 프로그램으로 전송할 수 있습니다.  
   
 |응용 프로그램|URL 예약|설명|요청 수신|  
 |-----------------|---------------------|-----------------|---------------------|  
-|보고서 서버|`http://+:80/ReportServer`|포트 80에서 ReportServer 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 ReportServer 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 서버 웹 서비스 http:// 모든 요청을 받으며\<컴퓨터 이름 > / reportserver입니다.|  
-|웹 포털|`http://+:80/Reports`|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] http:// 모든 요청을 받으며\<컴퓨터 이름 > / r 합니다.|  
+|보고서 서버|`http://+:80/ReportServer`|포트 80에서 ReportServer 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 ReportServer 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 서버 웹 서비스는 http://\<computername>/reportserver에 대한 모든 요청을 받습니다.|  
+|웹 포털|`http://+:80/Reports`|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]는 http://\<computername>/reports에 대한 모든 요청을 받습니다.|  
 |IIS|`http://*:80/`|포트 80의 약한 와일드카드입니다.|포트 80에서 다른 응용 프로그램이 받지 않은 모든 나머지 요청을 받습니다.|  
 
-## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>IIS 8.0, 8.5에서 SQL Server Reporting Services의-병렬 배포
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>IIS 8.0, 8.5에서 SQL Server Reporting Services 함께 배포
 
  IIS와 Reporting Services 간 상호 운용성 문제는 IIS 웹 사이트의 가상 디렉터리 이름이 Reporting Services에 사용되는 가상 디렉터리 이름과 같을 경우 발생합니다. 예를 들어 다음과 같은 구성이 있다고 가정합니다.  
   
 -   포트 80에 할당된 IIS의 웹 사이트 및 "Reports"라는 가상 디렉터리  
   
--   여기서 URL 예약은 포트 80을 지정 하는 기본 구성으로 설치 된 보고서 서버 인스턴스 및 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 응용 프로그램으로도 "Reports" 가상 디렉터리 이름에 대 한 사용 합니다.  
+-   기본 구성으로 설치된 보고서 서버 인스턴스. 여기서 URL 예약은 포트 80을 지정하며 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 응용 프로그램은 가상 디렉터리 이름으로도 "Reports"를 사용합니다.  
   
- 이 구성 http://에 전송 된 요청\<컴퓨터 이름 >: 80/reports에서 수신할는 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]합니다. 더 이상 응용 프로그램 IIS의 Reports 가상 디렉터리를 통해 액세스 되는 보고서 서버 인스턴스가 설치 된 후 요청을 받지 않습니다.  
+ 구성이 이와 같을 때 http://\<computername>:80/reports로 전송된 요청은 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에서 수신됩니다. IIS의 Reports 가상 디렉터리를 통해 액세스되는 응용 프로그램은 보고서 서버 인스턴스가 설치된 후 더 이상 요청을 받지 않습니다.  
   
  이전 버전 및 최신 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]배포를 함께 실행하는 경우 방금 설명한 라우팅 문제가 발생할 가능성이 높습니다. 이는 모든 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 "ReportServer" 및 "Reports"를 보고서 서버 및 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 응용 프로그램의 가상 디렉터리 이름으로 사용하여 IIS에 "reports" 및 "reportserver" 가상 디렉터리가 있을 가능성이 높아지기 때문입니다.  
   
@@ -87,9 +83,8 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>다음 단계
 
-[보고서 서버 Url 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[보고서 서버 URL 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [URL 구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Reporting Services 기본 모드 보고서 서버 설치](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

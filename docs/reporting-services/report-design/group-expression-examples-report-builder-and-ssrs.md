@@ -1,5 +1,5 @@
 ---
-title: "그룹 식 예 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "그룹 식 예(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - expressions [Reporting Services], adding
 - groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbb4f5f3af2a8986fdc7384ad4da1740f2be6638
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ce8b9f9e26b56846aaa2da95533d76ee4c422e8e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>그룹 식 예(보고서 작성기 및 SSRS)
   데이터 영역에서 단일 필드를 기준으로 데이터를 그룹화하거나 그룹화할 데이터를 식별하는 보다 복잡한 식을 만들 수 있습니다. 복잡한 식에는 여러 필드 또는 매개 변수에 대한 참조, 조건문 또는 사용자 지정 코드가 포함됩니다. 데이터 영역에 대해 그룹을 정의할 때 이러한 식을 **그룹** 속성에 추가합니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
@@ -49,9 +48,8 @@ ms.lasthandoff: 08/09/2017
 |많은 나이 범위를 기준으로 그룹화합니다. 이 예에서는 다음 범위에 대한 문자열을 반환하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET으로 작성된 사용자 지정 코드를 보여 줍니다.<br /><br /> 25세 이하<br /><br /> 26-50세<br /><br /> 51 ~ 75<br /><br /> 76세 이상|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> 사용자 지정 코드:<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
   
 ## <a name="see-also"></a>관련 항목:  
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [사용자 지정 코드 및 보고서 디자이너 &#40;의 식에서 어셈블리 참조 Ssrs&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
   
   
-

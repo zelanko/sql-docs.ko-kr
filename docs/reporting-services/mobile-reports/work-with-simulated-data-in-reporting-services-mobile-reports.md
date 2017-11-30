@@ -1,27 +1,24 @@
 ---
-title: "Reporting Services 모바일 보고서에는 시뮬레이션된 데이터 사용 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services 모바일 보고서의 시뮬레이션 데이터 사용 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb83717100f70933d2b1fe00bcd19a8a2901f65
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 84d3282dc887d43798e1bfdb0c0e18554b85d1a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
 디자인 화면에 갤러리 요소를 추가하면 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에서 해당 요소에 대해 시뮬레이션 데이터를 즉시 생성합니다. 이 데이터는 모바일 보고서를 만들 때 다양하고 유용한 목적으로 활용할 수 있습니다.   
@@ -34,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
 시뮬레이션 데이터는 특정 모바일 보고서 디자인의 데이터 요구 사항을 정확히 나타내는 템플릿을 제공합니다.   
   
--  데이터 뷰의 오른쪽 상단에 있는 **모든 데이터 내보내기** 를 클릭합니다.   
+-  데이터 뷰의 오른쪽 상단에 있는 **모든 데이터 내보내기**를 클릭합니다.   
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 는 시뮬레이션 데이터가 포함된 Excel 문서를 생성하여 실제 데이터로 빠르게 대체하고 즉시 내보낼 수 있습니다.   
   
@@ -57,5 +54,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

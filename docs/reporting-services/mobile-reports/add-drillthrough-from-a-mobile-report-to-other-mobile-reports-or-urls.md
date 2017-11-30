@@ -1,31 +1,29 @@
 ---
-title: "다른 모바일 보고서 또는 Url로 모바일 보고서에서 드릴스루를 추가할 | Microsoft Docs"
+title: "모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9133e86862ec5cf234b87e598d152811dced75c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서의 계기, 차트 또는 데이터 표에서 다른 모바일 보고서 또는 사용자 지정 URL로의 드릴스루를 추가할 수 있습니다. 
 
-*드릴스루*  는 다른 대상 보고서나 URL을 여는 원본 보고서의 링크입니다. 대체로 대상 드릴스루 보고서에는 요약 보고서의 일부 항목에 대한 세부 정보가 포함되어 있습니다. 원본 모바일 보고서에 따라 하나 이상의 매개 변수를 대상 모바일 보고서에 전달하거나 사용자 지정 URL에 통합할 수 있습니다.  
+*드릴스루*는 다른 대상 보고서나 URL을 여는 원본 보고서의 링크입니다. 대체로 대상 드릴스루 보고서에는 요약 보고서의 일부 항목에 대한 세부 정보가 포함되어 있습니다. 원본 모바일 보고서에 따라 하나 이상의 매개 변수를 대상 모바일 보고서에 전달하거나 사용자 지정 URL에 통합할 수 있습니다.  
   
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 원본 모바일 보고서를 보고 드릴스루 대상이 있는 요소를 선택하면 다른 모바일 보고서나 URL인 해당 대상으로 이동합니다.  
 
@@ -87,6 +85,5 @@ URL이나 다른 모바일 보고서에 드릴스루 기능이 있는 보고서 
  
 * [Reporting Services 모바일 보고서에 매개 변수 추가](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [웹 포털 (SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)
-
+* [웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)
 

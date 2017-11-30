@@ -1,5 +1,5 @@
 ---
-title: "보고서 파트를 보고서 및 보고서 정의 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4f8368ff8e8b2ce8674a7d74b973474c758717bd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 388fcfa8fcd993428e35308d5070612992851993
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다양한 용어를 사용하여 사용자에게 표시되는 초기 정의, 게시된 보고서 및 표시된 보고서를 비롯한 여러 상태의 페이지가 매겨진 보고서를 설명합니다.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/27/2017
  게시된 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 역할 기반 보안 모델을 사용하여 역할 할당을 통해 보안이 유지됩니다. 게시된 보고서는 URL, SharePoint 웹 파트 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털을 통해 액세스하거나 보고서 작성기에서 해당 보고서를 찾아서 열 수 있습니다.  
   
 ### <a name="report-snapshots"></a>보고서 스냅숏  
- 보고서는 보고서를 처음 실행했을 때의 레이아웃 정보와 데이터가 모두 포함된 스냅숏으로 게시할 수도 있습니다. 보고서 스냅숏은 특정 렌더링 형식으로 저장되지 않으며 사용자나 응용 프로그램이 보고서 스냅숏을 요청할 때만 HTML과 같은 최종 보기 형식으로 렌더링됩니다. 자세한 내용은 참조 [보고서 찾기 및 보기에서 보고서 관리자 &#40; 보고서 작성기 및 SSRS &#41; ](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ 보고서는 보고서를 처음 실행했을 때의 레이아웃 정보와 데이터가 모두 포함된 스냅숏으로 게시할 수도 있습니다. 보고서 스냅숏은 특정 렌더링 형식으로 저장되지 않으며 사용자나 응용 프로그램이 보고서 스냅숏을 요청할 때만 HTML과 같은 최종 보기 형식으로 렌더링됩니다. 자세한 내용은 [보고서 관리자에서 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="rendered-reports"></a>렌더링된 보고서  
  렌더링된 보고서는 데이터와 레이아웃 정보가 HTML과 같은 적합한 표시 형식으로 포함되어 있는 완전히 처리된 보고서입니다. 출력 형식으로 렌더링되지 않은 보고서는 볼 수 없습니다. 다음 중 하나를 수행하여 보고서를 렌더링할 수 있습니다.  
@@ -77,4 +76,3 @@ ms.lasthandoff: 09/27/2017
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

@@ -1,7 +1,6 @@
 ---
-title: "사용 하도록 설정 하 고 Reporting Services에 대 한 클라이언트 쪽 인쇄 기능 사용 안 함 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -17,27 +16,25 @@ helpviewer_keywords:
 - reportviewer
 - toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 633727df8bdb43072ab5780cfca394934c049801
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
 
   보고서 뷰어 도구 모음의 인쇄 단추는 브라우저에 표시된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 클라이언트 쪽 인쇄에 대해 PDF(Portable Document Format) 형식을 사용합니다. 새 원격 인쇄 환경은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 PDF 렌더링 확장을 사용하여 보고서를 PDF 형식으로 렌더링합니다. 보고서의 .PDF 형식을 다운로드하거나 .PDF 파일을 볼 수 있는 응용 프로그램이 설치된 경우 인쇄 버튼을 클릭하여 .PDF 파일의 페이지 크기, 방향 및 미리 보기 등과 같은 페이지의 일반적인 구성 항목에 대한 인쇄 대화 상자를 표시할 수 있습니다. 클라이언트 쪽 인쇄 기능은 기본적으로 설정되어 있지만 이 기능을 사용하지 않으려면 해제할 수 있습니다.  
   
- 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버에서 클라이언트 컴퓨터에 다운로드해야 하는 ActiveX 컨트롤을 사용했습니다. SQL Server 2016으로 보고서 서버를 업그레이드 하는 경우 인쇄 컨트롤이 보고서 서버 또는 클라이언트 컴퓨터에서 제거 되지 않습니다.  
+ 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버에서 클라이언트 컴퓨터에 다운로드해야 하는 ActiveX 컨트롤을 사용했습니다. 보고서 서버를 SQL Server 2016으로 업그레이드하는 경우 인쇄 컨트롤이 보고서 서버 또는 클라이언트 컴퓨터에서 제거되지 않습니다.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> 인쇄 환경  
- 인쇄를 클릭할 때 ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") 보고서 뷰어 도구 모음 단추, 경험 물품에 따라 달라 집니다. PDF 보기 응용 프로그램은 클라이언트 컴퓨터와 어떤에 설치 된 사용 중인 브라우저.   클라이언트 컴퓨터에 따라 PDF 파일을 다운로드하거나 대화 상자에서 인쇄 옵션을 구성하거나 두 가지를 모두 수행할 수 있습니다.  
+ 보고서 뷰어 도구 모음에서 인쇄 ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") 단추를 클릭할 때 환경은 클라이언트 컴퓨터에 설치된 .PDF 보기 응용 프로그램 및 사용 중인 브라우저에 따라 달라집니다.   클라이언트 컴퓨터에 따라 PDF 파일을 다운로드하거나 대화 상자에서 인쇄 옵션을 구성하거나 두 가지를 모두 수행할 수 있습니다.  
   
  ![보고서 도구 모음](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "보고서 도구 모음")  
   
@@ -51,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> 클라이언트 쪽 인쇄 문제 해결  
  보고서 뷰어 도구 모음의 인쇄 버튼이 비활성화된 경우 다음을 확인합니다.  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 보고서 서버에 대한 클라이언트 쪽 인쇄 기능이 비활성화되었습니다. 이 항목에서  [클라이언트 쪽 인쇄 사용 및 사용 안 함](#bkmk_enable) 섹션을 참조하세요.  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 보고서 서버에 대한 클라이언트 쪽 인쇄 기능이 비활성화되었습니다. 이 항목에서 [클라이언트 쪽 인쇄 사용 및 사용 안 함](#bkmk_enable) 섹션을 참조하세요.  
   
 -   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] PDF 렌더링 확장이 사용하지 않도록 설정되었습니다. `<Extension Name="PDF"` rsreportserver.config **파일의** 섹션을 검토합니다.  
   
@@ -94,7 +91,7 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 서버 시스템 속성 **EnableClientPrinting** 을 **false.**로 설정하는 스크립트나 코드를 작성합니다.  
   
- 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. **EnableClientPrinting** 속성을 **False**로 설정하려면 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 코드를 컴파일하고 실행합니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
+ 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 속성을 **EnableClientPrinting** 로 설정하려면 다음 **False**를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
   
 ### <a name="sample-script"></a>예제 스크립트  
   
@@ -121,5 +118,4 @@ Dim rs As New ReportingService()
 End Class 'Sample  
 ```
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

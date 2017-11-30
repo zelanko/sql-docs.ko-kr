@@ -1,5 +1,5 @@
 ---
-title: "보고서 작성기에서 SQL Server 2016 | Microsoft Docs"
+title: "SQL Server 2016의 보고서 작성기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords:
-- "10428"
+f1_keywords: "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bc8ac3d0ed00a6fda642ab09bf2a28e705a6b419
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016의 보고서 작성기
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Visual Studio의 보고서 디자이너를 사용하는 대신 독립 실행형 환경에서 작업하려는 비즈니스 사용자가 페이지를 매긴 보고서를 작성하는 데 사용할 수 있는 도구입니다.  페이지를 매긴 보고서를 디자인할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 지정하는 보고서 정의를 만듭니다. 보고서를 실행하면 보고서 처리기는 지정된 보고서 정의를 가져와 데이터를 검색한 다음 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 에서 보고서를 미리 볼 수 있으며, 기본 모드 또는 SharePoint 통합 모드에서 다른 사람이 보고서를 실행할 수 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 보고서를 게시할 수 있습니다.  
@@ -99,5 +97,4 @@ ms.lasthandoff: 08/09/2017
  [바로 가기 키&#40;보고서 작성기&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]에서 보고서를 탐색 및 디자인하는 데 사용할 수 있는 단축 키에 대해 간단히 설명합니다.  
   
-
 

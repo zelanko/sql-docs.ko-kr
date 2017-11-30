@@ -1,25 +1,24 @@
 ---
-title: "모바일 보고서의 열 이나 행으로 데이터를 그룹화 | Reporting Services | Microsoft Docs"
+title: "모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: de6eddf3b9338ac15f5036c2065df2f82f0c9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]의 많은 차트 종류에서 열 또는 행을 기준으로 데이터를 구성할 수 있습니다. 이 단계별 지침을 따릅니다.
@@ -30,9 +29,9 @@ ms.lasthandoff: 08/09/2017
 
 다음 단계에서는 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 에서 시뮬레이트된 데이터와 비교 합계 테이블을 사용하여 차트의 행 또는 열 기준의 데이터 구조 간의 차이를 설명합니다.  
 
-1. **레이아웃** 탭에서 **비교 합계 차트** 를 디자인 화면으로 끌어 놓고 확장합니다.
+1. **레이아웃** 탭에서 **비교 합계 차트**를 디자인 화면으로 끌어 놓고 확장합니다.
 
-2. **데이터** 탭을 선택합니다. SimulatedTable 테이블에는 **Metric1** 부터 **Metric5** 까지, **Comparison1** 부터 **Comparison5**까지의 열 계열이 있습니다. 
+2. **데이터** 탭을 선택합니다. SimulatedTable 테이블에는 **Metric1**부터 **Metric5**까지, **Comparison1**부터 **Comparison5**까지의 열 계열이 있습니다. 
 
    ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 

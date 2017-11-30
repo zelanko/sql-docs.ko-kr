@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 설치 (SharePoint 모드) 마이그레이션 | Microsoft Docs"
+title: "Reporting Services 설치 마이그레이션(SharePoint 모드) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 75bce56e88ef80a33d13e188ad0ecbf3e8b453ec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 11c9a5f84630fc2f0804422e1e7191f5da8bd454
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services 설치 마이그레이션(SharePoint 모드)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/17/2017
 -   [SharePoint 2013에서 콘텐츠 데이터베이스 이동](http://technet.microsoft.com/library/cc262792.aspx).
   
 ##  <a name="bkmk_prior_versions"></a> SQL Server 2012 이전의 Reporting Services SharePoint 모드 버전에서 마이그레이션  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 서비스 응용 프로그램 데이터베이스 스키마를 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드 아키텍처가 변경되었습니다. 로 마이그레이션하려는 경우 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 이전 버전에서 SharePoint 모드 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 먼저 SharePoint 및 SQL Server 2016 Reporting Services SharePoint 모드를 설치 하 여 새 SharePoint 환경을 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 서비스 응용 프로그램 데이터베이스 스키마를 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드 아키텍처가 변경되었습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전에서 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint 모드로 마이그레이션하려면 먼저 SharePoint 및 SQL Server 2016 Reporting Services SharePoint 모드를 설치하여 새 SharePoint 환경을 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조하세요.  
   
  새 SharePoint 환경이 실행 중이면 콘텐츠 데이터베이스가 포함된 데이터베이스 수준에서 콘텐츠 전용 마이그레이션 또는 전체 마이그레이션을 선택할 수 있습니다.  
   
@@ -63,18 +61,18 @@ ms.lasthandoff: 08/17/2017
 -   **Reporting Services 마이그레이션 도구:** 대부분의 시나리오에서 마이그레이션 도구는 기본 모드 서버에서 SharePoint 모드 서버로 보고서 항목을 복사할 수 있습니다. 자세한 내용은 [Reporting Services 마이그레이션 도구](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560)를 참조하세요.  
   
 ###  <a name="bkmk_full_migration"></a> 전체 마이그레이션  
- **전체 마이그레이션:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스와 함께 SharePoint 콘텐츠 데이터베이스를 새 팜으로 마이그레이션하는 경우 이 항목에 요약되어 있는 일련의 백업 및 복원 옵션을 따르면 됩니다. 백업 단계에서 사용한 도구와 다른 도구를 복원 단계에 사용해야 하는 경우도 있습니다. 사용할 수는 예를 들어 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager에서 백업 암호화 키의 이전 버전에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 하지만 SQL Server 2016 Reporting Services SharePoint 모드 설치에 암호화 키를 복원 하려면 SharePoint 중앙 관리 또는 PowerShell을 사용 해야 합니다.  
+ **전체 마이그레이션:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스와 함께 SharePoint 콘텐츠 데이터베이스를 새 팜으로 마이그레이션하는 경우 이 항목에 요약되어 있는 일련의 백업 및 복원 옵션을 따르면 됩니다. 백업 단계에서 사용한 도구와 다른 도구를 복원 단계에 사용해야 하는 경우도 있습니다. 예를 들어, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 암호화 키를 백업할 수 있지만 암호화 키를 SQL Server 2016 Reporting Services SharePoint 모드 설치로 복원할 때는 SharePoint 중앙 관리 또는 PowerShell을 사용해야 합니다.  
   
 ####  <a name="bkmk_databases"></a> 완료된 마이그레이션에 나타나는 데이터베이스  
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 설치를 성공적으로 마이그레이션한 후의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 관련된 SQL Server에 대해 설명합니다.  
   
 |데이터베이스|이름 예||  
 |--------------|------------------|-|  
-|카탈로그 데이터베이스|[서비스 응용 프로그램 GUID] ReportingService_ **(\*)**|사용자가 마이그레이션합니다.|  
-|임시 데이터베이스|[서비스 응용 프로그램 GUID] ReportingService_ TempDB **(\*)**|사용자가 마이그레이션합니다.|  
+|카탈로그 데이터베이스|ReportingService_[service application GUID] **(\*)**|사용자가 마이그레이션합니다.|  
+|임시 데이터베이스|ReportingService_[service application GUID]TempDB **(\*)**|사용자가 마이그레이션합니다.|  
 |경고 데이터베이스|ReportingService_[service application GUID]_Alerting|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만들 때 만들어집니다.|  
   
- **(\*)** 표에 표시 된 예로 이름은 새 SSRS 서비스 응용 프로그램을 만들 때 SSRS에서 사용 하는 명명 규칙을 따릅니다. 다른 서버에서 마이그레이션하는 경우 카탈로그와 tempDB의 이름은 원래 설치에서와 같습니다.  
+ **(\*)** 위의 표에 예로 나와 있는 이름은 새 SSRS 서비스 응용 프로그램을 만들 때 SSRS에서 사용하는 명명 규칙을 따릅니다. 다른 서버에서 마이그레이션하는 경우 카탈로그와 tempDB의 이름은 원래 설치에서와 같습니다.  
   
 ####  <a name="bkmk_backup_operations"></a> 백업 작업  
  이 섹션에서는 마이그레이션해야 하는 정보 유형과 백업을 완료하는 데 사용하는 도구나 프로세스에 대해 설명합니다.  
@@ -96,7 +94,7 @@ ms.lasthandoff: 08/17/2017
 ||개체|메서드|참고|  
 |-|-------------|------------|-----------|  
 |**1**|SharePoint 콘텐츠 데이터베이스를 새 팜에 복원|SharePoint "데이터베이스 연결 업그레이드" 방법|기본 단계:<br /><br /> 1) 새 서버에서 데이터베이스를 복원합니다.<br /><br /> 2) URL을 지정하여 콘텐츠 데이터베이스를 웹 응용 프로그램에 연결합니다.<br /><br /> 3) Get-SPWebapplication이 모든 웹 응용 프로그램과 URL을 나열합니다.<br /><br /> <br /><br /> [업그레이드 방법 결정(SharePoint Server 2010)(http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)의 "데이터베이스 연결 업그레이드"와 [데이터베이스 연결 및 SharePoint Server 2010으로 업그레이드(http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx)를 참조하세요.|  
-|**2**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스인 SQL Server 데이터베이스(ReportServer) 복원.|SQL 데이터베이스 백업 및 복원<br /><br /> **또는**<br /><br /> SQL Server 데이터베이스 연결 및 분리|데이터베이스를 사용 하 고, 처음으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 2016 환경과 사용할 수 있도록 필요에 따라 데이터베이스 스키마를 업데이트 합니다.|  
+|**2**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스인 SQL Server 데이터베이스(ReportServer) 복원.|SQL 데이터베이스 백업 및 복원<br /><br /> **또는**<br /><br /> SQL Server 데이터베이스 연결 및 분리|데이터베이스를 처음 사용하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 SQL Server 2016 환경에서 사용할 수 있도록 필요에 따라 데이터베이스 스키마를 업데이트합니다.|  
 |**3**|새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 만들기|새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 만들기|새 서비스 응용 프로그램을 만들 때 복사한 보고서 서버 데이터베이스를 사용하도록 구성합니다.<br /><br /> SharePoint 중앙 관리 사용에 대한 자세한 정보는 [Reporting Services SharePoint 모드 설치](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)의 "3단계: Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조하세요.<br /><br /> PowerShell 사용 예제가 필요한 경우 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)(영문)의 "PowerShell을 사용하여 Reporting Services 서비스 응용 프로그램을 만드는 방법" 섹션을 참조하세요.|  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일 복원|단순한 파일 복사|파일 기본 위치의 예: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting|  
 |||||  
@@ -138,5 +136,4 @@ ms.lasthandoff: 08/17/2017
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services 설치 마이그레이션](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "대화형 정렬 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "대화형 정렬(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b5a259bbe965efc86a9f11ad377525455bdfbd5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6aa4a5385bfa8c67d1a1d95bba84e5991026377d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>대화형 정렬(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하여 사용자가 테이블의 행 또는 행렬의 행 및 열에 대해 오름차순 및 내림차순 사이를 전환하도록 할 수 있습니다. 대화형 정렬의 일반적인 용도는 열 머리글마다 정렬 단추를 추가하는 것입니다. 그러면 사용자는 정렬할 기준이 되는 열을 선택할 수 있습니다.  
@@ -64,8 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [테이블 또는 행렬에 대화형 정렬 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   
-

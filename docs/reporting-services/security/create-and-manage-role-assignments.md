@@ -17,16 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-role-assignments"></a>역할 할당 생성 및 관리
   *역할 할당* 은 사용자 또는 그룹이 특정 보고서 서버 항목에 액세스하거나 작업을 수행할 수 있는지 여부를 결정하는 보안 정책입니다. 역할 할당은 단일 사용자 또는 그룹 계정 이름과 하나 이상의 역할 정의로 구성됩니다.  
@@ -69,10 +68,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [수정 하거나 삭제할 역할 할당 &#40; 보고서 관리자 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [역할 할당](../../reporting-services/security/role-assignments.md)   
  [역할 정의](../../reporting-services/security/role-definitions.md)   
- [미리 정의 된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

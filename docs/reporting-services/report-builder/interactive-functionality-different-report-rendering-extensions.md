@@ -1,5 +1,5 @@
 ---
-title: "여러 보고서 렌더링 확장 프로그램의 대화형 기능-| Microsoft Docs"
+title: "대화형 기능 - 여러 보고서 렌더링 확장 프로그램 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e91731abe741a802252475bb054c826454ee2a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="interactive-functionality---different-report-rendering-extensions"></a>여러 보고서 렌더링 확장 프로그램의 대화형 기능-
+# <a name="interactive-functionality---different-report-rendering-extensions"></a>대화형 기능 - 여러 보고서 렌더링 확장 프로그램
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 런타임 시 페이지를 매긴 보고서와 상호 작용하기 위한 기능을 제공합니다. 모든 보고서 렌더링 형식에 대화형 기능을 전부 사용할 수 있는 것은 아닙니다. 다음 표에는 각 대화형 기능이 특정 형식에서 어떻게 작동하는지 이해하는 데 도움이 되는 정보가 나와 있습니다.  
   
 > [!NOTE]  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 |-------------------|-------------------------|  
 |미리 보기/보고서 뷰어, HTML|확장 및 축소 아이콘을 클릭하여 보고서의 섹션을 볼 수 있습니다.|  
 |PDF|보고서 서버에서는 보고서의 현재 표시 또는 숨김 상태를 PDF로 내보냅니다. 대화형 설정/해제는 지원되지 않습니다.|  
-|Excel|설정/해제할 수 있는 항목과 드릴다운 링크는 Excel에서 축소 가능한 윤곽선으로 렌더링됩니다. 보고서의 섹션을 확장하고 축소할 수 있습니다. Excel 관련 제한 사항에 대 한 자세한 내용은 참조 하세요. [Microsoft Excel &#40; 내보내기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|설정/해제할 수 있는 항목과 드릴다운 링크는 Excel에서 축소 가능한 윤곽선으로 렌더링됩니다. 보고서의 섹션을 확장하고 축소할 수 있습니다. Excel 관련 제한 사항에 대한 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.|  
 |Word|보고서 서버에서는 보고서의 현재 표시 또는 숨김 상태를 PDF로 내보냅니다. 대화형 설정/해제는 지원되지 않습니다.|  
 |기타|MHTML, XML 또는 CSV에서는 사용할 수 없습니다. 이미지 형식으로 내보내는 경우 보고서 서버에서는 보고서의 현재 표시 또는 숨김 상태를 PDF로 내보냅니다. 대화형 설정/해제는 지원되지 않습니다.|  
   
@@ -116,10 +115,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [대화형 정렬, 문서 구조 및 연결 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

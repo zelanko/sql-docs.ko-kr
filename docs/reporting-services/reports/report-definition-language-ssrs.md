@@ -1,5 +1,5 @@
 ---
-title: Report Definition Language (SSRS) | Microsoft Docs
+title: "SSRS(보고서 정의 언어) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bdd500541261f3bf9ce5435113aca70f6c93758d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  
@@ -51,14 +50,14 @@ ms.lasthandoff: 08/09/2017
   
  예를 들어 스키마가 복합 유형 **ReportParameters**인 RDL 요소 **ReportParametersType**를 포함합니다. 규칙에 따라 요소의 복합 유형 이름은 요소 이름 뒤에 **Type**이라는 단어를 붙여 만듭니다. **ReportParameters** 요소는 **Report** 요소(복합 형식)에 포함될 수 있고 **ReportParameter** 요소를 포함할 수 있습니다. **ReportParameterType** 은 단순 유형으로 값은 **Boolean**, **DateTime**, **Integer**, **Float**또는 **String**중 하나와 같을 수 있습니다. XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
   
- RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL 통해 보고서 서버에서 사용할 수 이기도: `http://servername/reportserver/reportdefinition.xsd`합니다.  
+ RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다.`http://servername/reportserver/reportdefinition.xsd`  
   
 ##  <a name="bkmk_Creating_RDL"></a> RDL 만들기  
  개방형이고 확장 가능한 RDL의 특성 덕분에 XML 스키마를 기반으로 RDL을 생성하는 다양한 도구와 응용 프로그램을 작성할 수 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RDL 파일을 빌드하는 여러 도구를 제공합니다. 자세한 내용은 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   
- 응용 프로그램에서 RDL을 생성하는 가장 쉬운 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임스페이스 및 <xref:System.Xml> 네임스페이스의 <xref:System.Linq> 클래스를 사용하는 것입니다. 특히 **XmlTextWriter** 클래스는 RDL을 쓰는 데 사용할 수 있습니다. **XmlTextWriter**를 사용하여 전체 보고서 정의를 처음부터 생성하여 임의의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 응용 프로그램에서 완료할 수 있습니다. 개발자는 또한 사용자 지정 속성이 포함된 사용자 지정 보고서 항목을 추가하여 RDL을 확장할 수도 있습니다. 에 대 한 자세한는 **XmlTextWriter** 클래스 및 <xref:System.Xml> 네임 스페이스 참조는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 개발자 가이드입니다. LINQ(Language-Integrated Query)에 대한 자세한 내용은 MSDN에서 "LINQ to XML"을 참조하십시오.  
+ 응용 프로그램에서 RDL을 생성하는 가장 쉬운 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임스페이스 및 <xref:System.Xml> 네임스페이스의 <xref:System.Linq> 클래스를 사용하는 것입니다. 특히 **XmlTextWriter** 클래스는 RDL을 쓰는 데 사용할 수 있습니다. **XmlTextWriter**를 사용하여 전체 보고서 정의를 처음부터 생성하여 임의의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 응용 프로그램에서 완료할 수 있습니다. 개발자는 또한 사용자 지정 속성이 포함된 사용자 지정 보고서 항목을 추가하여 RDL을 확장할 수도 있습니다. **XmlTextWriter** 클래스 및 <xref:System.Xml> 네임스페이스에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 개발자 가이드를 참조하세요. LINQ(Language-Integrated Query)에 대한 자세한 내용은 MSDN에서 "LINQ to XML"을 참조하십시오.  
   
  보고서 정의 파일의 표준 파일 확장명은 .rdl입니다. 확장명이 .rdlc인 클라이언트 보고서 정의 파일을 개발할 수도 있습니다. 두 확장명 모두 MIME 형식은 텍스트/xml입니다. 보고서에 대한 자세한 내용은 [Reporting Services 보고서&#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)를 참조하세요.  
   
@@ -94,8 +93,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
- [보고서에 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [사용자 지정 보고서 항목](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   
-

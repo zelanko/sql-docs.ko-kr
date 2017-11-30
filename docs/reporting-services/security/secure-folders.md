@@ -16,17 +16,16 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0eed722cabb60b072328181e82fe0c55f265d7aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-folders"></a>보안 폴더
   폴더 보안 설정은 보고서 서버의 모든 내용에 보안을 설정하기 위한 기본 토대입니다. 보안 설정은 폴더 구조를 통해 상속되므로 폴더 계층의 큰 부분이나 작은 부분을 지정하여 특정 종류의 액세스를 허용할 수 있습니다.  
@@ -50,8 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)   
- [공유 데이터 원본 항목 보안 설정](../../reporting-services/security/secure-shared-data-source-items.md)   
- [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [공유 데이터 원본 항목 보안](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

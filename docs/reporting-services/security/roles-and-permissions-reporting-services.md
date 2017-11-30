@@ -1,5 +1,5 @@
 ---
-title: "역할 및 사용 권한 (Reporting Services) | Microsoft Docs"
+title: "역할 및 권한(Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - security [Reporting Services], role-based
 - identity [Reporting Services]
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea2b4cba953b6622811b80c7f6c60838ce0a6f91
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9a435aef6c700e5aad9dae7b556c47212eda78bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="roles-and-permissions-reporting-services"></a>역할 및 권한(Reporting Services)
   Reporting Services는 인증 하위 시스템 및 역할 기반 권한 부여 모델을 제공합니다. 인증 및 권한 부여 모델은 보고서 서버가 기본 모드에서 실행되는지, SharePoint 모드에서 실행되는지에 따라 달라집니다. 보고서 서버가 SharePoint 배포에 속하는 경우 SharePoint 권한에 따라 보고서 서버에 액세스할 수 있는 사용자가 결정됩니다.  
@@ -43,15 +42,14 @@ ms.lasthandoff: 08/09/2017
  SharePoint 통합 모드에서 인증 및 권한 부여는 이러한 요청이 보고서 서버에 도달하기 전에 SharePoint 사이트에서 처리됩니다. 인증 구성 방식에 따라 SharePoint 사이트의 요청에 보안 토큰이나 신뢰할 수 있는 사용자 이름이 포함됩니다. SharePoint 사용자 및 그룹에 대해 설정한 사용 권한은 SharePoint 라이브러리에 있는 보고서 서버 항목에 대한 액세스 권한을 부여합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
  내용 및 작업에 대한 액세스 권한을 제공하는 역할 기반 권한 부여 모델에 대해 설명합니다.  
   
- [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  SharePoint 그룹, 사용 권한 수준 및 사용 권한을 사용하여 보고서 서버에 대한 액세스를 제어하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   
- [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

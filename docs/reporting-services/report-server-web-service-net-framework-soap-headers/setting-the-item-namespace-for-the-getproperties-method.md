@@ -1,5 +1,5 @@
 ---
-title: "GetProperties 메서드에 대 한 항목 Namespace를 설정 | Microsoft Docs"
+title: "GetProperties 메서드에 대한 항목 네임스페이스 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - item properties [Reporting Services]
 - ItemNamespaceHeader SOAP header
 - GetProperties method
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6c47c200899dbd25c9685817ea81a391364739c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 4e1506d39a57a6f7f79d77bd61cf45d841ede895
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties 메서드에 대한 항목 네임스페이스 설정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 <xref:ReportService2010.ItemNamespaceHeader> SOAP 헤더를 사용하여 서로 다른 항목 식별자인 항목의 전체 경로 또는 항목의 ID를 기준으로 항목 속성을 검색할 수 있습니다.  
@@ -128,8 +126,7 @@ class Sample
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [보고를 사용 하 여 Services SOAP 헤더](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Reporting Services SOAP 헤더 사용](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

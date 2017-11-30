@@ -1,5 +1,5 @@
 ---
-title: "줄무늬 선 (보고서 작성기 및 SSRS)를 추가 하 여 차트 데이터 강조 표시 | Microsoft Docs"
+title: "줄무늬 선을 추가하여 차트 데이터 강조 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4bfe6d58d3ffc735c47359b94f1c368a1a6c3683
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>줄무늬 선을 추가하여 차트 데이터 강조 표시(보고서 작성기 및 SSRS)
   간단히 줄무늬라고도 하는 줄무늬 선은 차트의 배경에 일정한 간격 또는 사용자 지정 간격으로 음영을 적용하는 수평 또는 수직 범위입니다. 다음과 같은 용도에 줄무늬 선을 사용할 수 있습니다.  
@@ -67,9 +66,8 @@ ms.lasthandoff: 08/09/2017
 >  기본적으로 Interval은 Auto로 설정되며 이는 차트가 사용자 지정 줄무늬 선에 대한 간격을 계산하지 않음을 의미합니다. 차트는 간격 값이 설정된 경우에만 줄무늬 선의 간격을 계산합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트 &#40;의 축 레이블 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [차트 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [차트 &#40; 이동 평균 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [차트에 이동 평균 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   
-

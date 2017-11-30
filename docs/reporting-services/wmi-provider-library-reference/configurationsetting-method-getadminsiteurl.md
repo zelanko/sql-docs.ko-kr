@@ -1,5 +1,5 @@
 ---
-title: "GetAdminSiteUrl 메서드 (WMI) | Microsoft Docs"
+title: "GetAdminSiteUrl 메서드(WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- GetAdminSiteUrl method
+helpviewer_keywords: GetAdminSiteUrl method
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ae40992c6a864a73bb758a3ce336624917a68a96
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 934332c5316c67cca9b84a6a8643012269833c49
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---getadminsiteurl"></a>GetAdminSiteUrl ConfigurationSetting 메서드
+# <a name="configurationsetting-method---getadminsiteurl"></a>ConfigurationSetting 메서드 - GetAdminSiteUrl
   보고서 서버가 통합되어 있는 Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 팜에 대한 중앙 관리 웹 사이트의 절대 URL을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -56,4 +54,3 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  [MSReportServer_ConfigurationSetting 메서드](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "ConfigurationSetting 속성-VirtualDirectoryReportServer | Microsoft Docs"
+title: "ConfigurationSetting 속성 - VirtualDirectoryReportServer | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- VirtualDirectoryReportServer property
+helpviewer_keywords: VirtualDirectoryReportServer property
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 51dad011a884370b009e7bb43e9012079859aca8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 68879d004cae62d22353431666fe920c26f7c0ae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---virtualdirectoryreportserver"></a>VirtualDirectoryReportServer ConfigurationSetting 속성-
+# <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting 속성 - VirtualDirectoryReportServer
   보고서 서버 응용 프로그램에 대한 가상 디렉터리를 반환합니다. 읽기 전용입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -51,4 +49,3 @@ public string VirtualDirectoryReportServer;
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

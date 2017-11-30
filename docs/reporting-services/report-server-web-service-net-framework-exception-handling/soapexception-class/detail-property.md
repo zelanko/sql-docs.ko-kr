@@ -1,5 +1,5 @@
 ---
-title: "속성에 자세히 설명 | Microsoft Docs"
+title: "Detail 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Detail property
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 51b99212acac0029bf246ce1668cd3a8b474fb84
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 0ec158ac41b62beef9f59b6378633e8926e4116a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="detail-property"></a>Detail 속성
-  **세부** 의 속성은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** 클래스에 다음 XML 구조:  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException**클래스의 **Detail** 속성은 다음 XML 구조를 가집니다.  
   
 ## <a name="elements"></a>요소  
- **세부 정보**  
+ **Detail**  
  모든 기타 오류 세부 정보 요소를 포함하는 최상위 요소입니다.  
   
  **ErrorCode**  
@@ -45,34 +43,34 @@ ms.lasthandoff: 08/12/2017
  보고서 서버에서 할당한 오류 메시지 및 오류 코드입니다.  
   
  **HelpLink**  
- 오류에 대한 추가 정보를 찾을 수 있는 웹 사이트에 대한 도움말 링크 URL입니다. 자세한 내용은 참조 [HelpLink 요소](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md)합니다.  
+ 오류에 대한 추가 정보를 찾을 수 있는 웹 사이트에 대한 도움말 링크 URL입니다. 자세한 내용은 [HelpLink 요소](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md)를 참조하세요.  
   
  **LinkID**  
  링크에 할당된 ID입니다.  
   
- **제품 이름**  
- 제품의 이름입니다. 기본값은 **Microsoft SQL Server Reporting Services**합니다.  
+ **ProductName**  
+ 제품의 이름입니다. 기본값은 **Microsoft SQL Server Reporting Services**입니다.  
   
  **ProductVersion**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 버전입니다. 최대 길이는 15자입니다. 버전 번호의 형식은 다음과 같아야: 8.00.0xxx.00 합니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 버전입니다. 최대 길이는 15자입니다. 버전 번호의 형식은 8.00.0xxx.00과 같아야 합니다.  
   
  **ProductLocaleId**  
  응용 프로그램 INTL DLL의 로캘 ID 또는 언어 ID입니다(예: 0x41A).  
   
- **운영 체제**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]가 설치된 운영 체제입니다. 유효한 값은 **0** 독립적 이며 운영 체제에 대 한 **1** 에 대 한 [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)], 및 **16** Windows XP에 대 한 합니다.  
+ **OperatingSystem**  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]가 설치된 운영 체제입니다. 유효한 값은 운영 체제에 대해 독립적인 경우 **0**, [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]의 경우 **1**, Windows XP의 경우 **16**입니다.  
   
  **CountryLocaleId**  
  운영 체제의 로캘 ID 또는 언어 ID입니다. 예를 들어 프랑스어 버전 Windows에 대해 이 값은 0x040c입니다.  
   
- **자세한 내용**  
+ **MoreInformation**  
  메서드 실행 중 발생한 중첩된 예외를 포함하는 XML 문자열입니다.  
   
  **원본**  
- 자식 요소 **MoreInformation**합니다. 오류의 출처입니다.  
+ **MoreInformation**의 자식 요소입니다. 오류의 출처입니다.  
   
  **메시지**  
- 자식 요소 **MoreInformation**합니다. 중첩된 예외의 오류 메시지입니다. 이 요소에 대 한 XML 특성을 포함 **ErrorCode** 및 **HelpLink**합니다.  
+ **MoreInformation**의 자식 요소입니다. 중첩된 예외의 오류 메시지입니다. 이 요소에는 **ErrorCode** 및 **HelpLink**에 대한 XML 요소가 포함됩니다.  
   
  **경고**  
  보고서 처리에서 반환된 경고를 포함하는 XML 문자열입니다.  
@@ -80,7 +78,6 @@ ms.lasthandoff: 08/12/2017
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services의 예외 처리 소개](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 클래스](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
- [Detail 속성을 사용 하 여 특정 오류 처리](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Detail 속성을 사용하여 특정 오류 처리](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   
-

@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.previewview.f1
-helpviewer_keywords:
-- Preview view [Reporting Services]
+f1_keywords: sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords: Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 55771c2f37d8d9d5913ab96a226f108a6e0f709d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preview-view"></a>미리 보기 뷰
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 디자이너에서 **미리 보기** 뷰를 사용하여 렌더링된 보고서를 표시할 수 있습니다. 보고서를 미리 보는 경우 보고서 디자이너가 로컬 컴퓨터에서 보고서를 실행하여 미리 보기에 표시합니다. 미리 보기 모드에서는 보고서 전체를 처리합니다. 보고서에 복잡한 쿼리나 많은 양의 데이터가 있는 경우 처음 볼 때 미리 보기를 완료하는데 몇 분 정도 걸릴 수 있습니다. 보고서의 형식에만 영향을 미치는 후속 변경 내용의 경우 미리 보기 기능에서는 캐시된 데이터를 사용합니다.
@@ -95,4 +92,3 @@ ms.lasthandoff: 08/09/2017
 + [보고서 디자이너 F1 도움말](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
-

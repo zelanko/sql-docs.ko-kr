@@ -1,5 +1,5 @@
 ---
-title: "보고서 작성기를 시작 | Microsoft Docs"
+title: "보고서 작성기 시작 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,36 +16,34 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], starting Report Builder
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 35ea064c1e269af81534a219f093e2f9c47a4a2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="start-report-builder"></a>보고서 작성기 시작
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]독립 실행형 보고서 제작 환경입니다. 보고서 작성기를 사용하면 페이지를 매긴 보고서를 만들어 기본 또는 SharePoint 통합 모드에서 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 게시할 수 있습니다.  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 는 독립 실행형 보고서 제작 환경입니다. 보고서 작성기를 사용하면 페이지를 매긴 보고서를 만들어 기본 또는 SharePoint 통합 모드에서 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 게시할 수 있습니다.  
   
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 웹 포털 또는 SharePoint 통합 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 처음으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하면 Microsoft 다운로드 센터에서 다운로드하라는 메시지가 표시됩니다. 
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 웹 포털 또는 SharePoint 통합 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 처음으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 시작하면 Microsoft 다운로드 센터에서 다운로드하라는 메시지가 표시됩니다. 
  
 ![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  개발자나 관리자는 [Microsoft 다운로드 센터에서 컴퓨터에 보고서 작성기를 설치](http://go.microsoft.com/fwlink/?LinkID=219138)할 수도 있습니다. 자세한 내용은 [보고서 작성기 설치](../../reporting-services/install-windows/install-report-builder.md) 의 "Systems Manager Server를 사용하여 보고서 작성기 설치"를 참조하세요.
  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]SQL Server Reporting Services; 설치할 때 설치 되어 있지 않습니다. 다운로드 하 여 별도로 설치 해야 합니다.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]는 SQL Server Reporting Services를 설치할 때 함께 설치되지 않으므로 별도로 다운로드하여 설치해야 합니다.  
   
- 웹 포털 또는 SharePoint 사이트에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 를 시작할 때 이전 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 버전이 열리면 관리자에게 문의하세요. 그러면 관리자가 웹 포털이나 SharePoint 사이트의 버전을 업데이트할 수 있습니다.  
+ 웹 포털 또는 SharePoint 사이트에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]를 시작할 때 이전 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 버전이 열리면 관리자에게 문의하세요. 그러면 관리자가 웹 포털이나 SharePoint 사이트의 버전을 업데이트할 수 있습니다.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 웹 포털에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하려면  
+## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 웹 포털에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 시작하려면  
   
-1.  웹 브라우저의 주소 표시줄에 보고서 서버의 URL을 입력합니다. 기본적으로이 URL은 http://\<*servername*> / r 합니다.  
+1.  웹 브라우저의 주소 표시줄에 보고서 서버의 URL을 입력합니다. 기본적으로 URL은 http://\<*servername*>/reports입니다.  
   
 2.  웹 포털의 위쪽 막대에서 **새로 만들기** > **페이지를 매긴 보고서**를 선택합니다.  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
      그런 다음 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 가 열립니다. 그러면 페이지를 매긴 보고서를 만들거나 보고서 서버의 보고서를 열 수 있습니다.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 를 시작하려면  
+## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]를 시작하려면  
   
 1.  원하는 라이브러리가 있는 SharePoint 사이트로 이동합니다.  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  **새 문서** 메뉴에서 **보고서 작성기 보고서**를 클릭합니다.  
   
-     이 작업을 처음 수행하면 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 마법사가 시작됩니다. 자세한 내용은 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 를 참조하십시오.  
+     이 작업을 처음 수행하면 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 마법사가 시작됩니다. 자세한 내용은 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)를 참조하십시오.  
   
      [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 가 열립니다. 그러면 페이지를 매긴 보고서를 만들거나 보고서 서버의 보고서를 열 수 있습니다.  
   
@@ -74,7 +72,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>다음 단계
 
 [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
-[보고서 작성기에 대 한 기본 옵션 설정](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
+[보고서 작성기에 대한 기본 옵션 설정](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

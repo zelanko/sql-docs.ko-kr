@@ -1,5 +1,5 @@
 ---
-title: "테이블 릭 스 데이터 영역 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "테이블릭스 데이터 영역(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 49d872c920e735ffa2b1891f09c16e2738518b69
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서 테이블릭스 데이터 영역은 행과 열로 구성된 셀에 페이지를 매긴 보고서 데이터를 표시하는 일반화된 레이아웃 보고서 항목입니다. 보고서 데이터는 데이터 원본에서 검색된 상태 그대로의 정보 데이터이거나 지정한 그룹으로 구성된 집계 정보 데이터일 수 있습니다. 각 테이블릭스 셀에는 입력란이나 이미지 같은 보고서 항목이나 테이블릭스 영역, 차트 또는 계기 같은 다른 데이터 영역이 들어 있을 수 있습니다. 한 셀에 여러 보고서 항목을 추가하려면 먼저 컨테이너 역할을 할 사각형을 추가한 다음 이 사각형에 보고서 항목을 추가합니다.  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
  테이블릭스 모퉁이 영역의 셀은 행 그룹과 열 그룹이 모두 정의될 때 자동으로 생성됩니다. 이 영역의 셀은 레이블을 표시할 수 있으며, 사용자가 셀을 병합하고 제목을 만들 수 있습니다.  
   
- 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="understanding-static-and-dynamic-rows-and-columns"></a>정적 및 동적 행/열 이해  
  테이블릭스 데이터 영역은 셀을 그룹과 연관된 행 및 열로 구성합니다. 행 그룹 및 열의 그룹 구조가 동일하기 때문에 이 예제에서는 행 그룹을 사용하지만 열 그룹에 동일한 개념을 적용할 수 있습니다.  
@@ -84,10 +83,9 @@ ms.lasthandoff: 08/09/2017
  합계 추가 기능은 범위가 그룹으로 한정되는 값을 표시하기 위한 행을 현재 그룹 외부에 자동으로 만듭니다. 정적 및 동적 행을 수동으로 추가할 수도 있습니다. 시각적 표시가 어떤 행이 정적이고 어떤 행이 동적인지를 이해하는 데 도움을 줍니다. 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [동일한 데이터 집합 &#40;에 여러 데이터 영역 연결 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [보고서 페이지 &#40;에서 테이블 릭 스 데이터 영역 표시 제어 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [테이블 릭 스 데이터 영역 &#40; 유연성 살펴보기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "차트 (보고서 작성기 및 SSRS)에 여러 계열을 | Microsoft Docs"
+title: "차트의 여러 계열(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3e3fa82b79529b1e128260f020b8e98225e26fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd942ab8b1aee3047c693f40a99453cd79981dc3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>차트의 여러 계열(보고서 작성기 및 SSRS)
   차트에 여러 개의 계열이 있는 경우에는 계열을 비교할 최선의 방법을 결정해야 합니다. 각 계열의 상대적인 비율을 표시하려면 누적 차트를 사용할 수 있습니다. 공통 범주(x) 축을 공유하는 두 개의 계열만 비교할 때는 보조 축을 사용합니다. 이 방법은 가격과 볼륨, 수입과 세금 같은 두 개의 관련된 데이터 계열을 표시할 때 유용합니다. 차트를 알아보기 어려울 때는 여러 개의 차트 영역을 사용하여 각 계열을 시각적으로 분리하는 방법을 고려하십시오.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="using-chart-areas"></a>차트 영역 사용  
  차트는 외부 테두리, 차트 제목 및 범례를 포함하는 최상위 컨테이너입니다. 기본적으로 차트에는 한 개의 기본 차트 영역이 포함됩니다. 차트 영역은 차트 화면에는 표시되지 않지만 하나 이상 계열에 대한 축 레이블, 축 제목 및 그리기 영역만을 포함하는 컨테이너로 생각할 수 있습니다. 다음 그림에서는 단일 차트 내 차트 영역의 개념을 보여 줍니다.  
   
- ![차트 영역의 다이어그램 표시](../../reporting-services/report-design/media/chartareasdiagram.gif "은 차트 영역의 다이어그램")  
+ ![차트 영역의 다이어그램 표시](../../reporting-services/report-design/media/chartareasdiagram.gif "차트 영역의 다이어그램 표시")  
   
  **차트 영역 속성** 대화 상자를 사용하면 차트 영역에 포함된 모든 계열의 2D 및 3D 방향을 지정하고, 여러 차트 영역을 같은 차트 안에 정렬하고, 그리기 영역의 색에 서식을 지정할 수 있습니다. 기본 차트 영역이 하나만 포함된 차트에서 새 차트 영역을 정의하면 차트 영역에 사용할 수 있는 공간은 가로 방향으로 둘로 나뉘고 새 차트 영역은 첫 번째 차트 영역 아래에 배치됩니다.  
   
@@ -60,9 +59,8 @@ ms.lasthandoff: 08/09/2017
  범위형 차트에는 데이터 요소마다 두 개의 값이 있습니다. 차트에 동일한 범주(x) 축을 공유하는 두 개의 계열이 있는 경우에는 범위형 차트를 사용하여 두 계열 간의 차이를 표시할 수 있습니다. 범위형 차트는 고-저 또는 상-하 정보를 표시할 때 가장 적합합니다. 예를 들어 첫 번째 계열에는 1월의 각 날짜에 대한 최고 판매량이 포함되고 두 번째 계열에는 1월의 각 날짜에 대한 최저 판매량이 포함된 경우, 범위형 차트를 사용하여 각 날짜의 최고 판매량과 최저 판매량 간의 차이를 표시할 수 있습니다. 자세한 내용은 [범위형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [차트 &#40;에 데이터 범위가 여러 개 있는 계열 표시 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [차트 종류 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [차트에 데이터 범위가 여러 개 있는 계열 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "필터 수식 예 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "필터 수식 예(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,19 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- filtering data [Reporting Services], filter equation examples
+helpviewer_keywords: filtering data [Reporting Services], filter equation examples
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 05307903d75abbdc060ba58450259cc91ada8861
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6bbd95ac20afbeb00b331efa13492a0036fff20
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>필터 수식 예(보고서 작성기 및 SSRS)
   필터를 만들려면 하나 이상의 필터 수식을 지정해야 합니다. 필터 수식에는 식, 데이터 형식, 연산자 및 값이 포함됩니다. 이 항목에서는 일반적으로 사용되는 필터의 예를 제공합니다.  
@@ -46,10 +45,10 @@ ms.lasthandoff: 08/09/2017
 |`=LEFT(Fields!Subcat.Value,1)`|**텍스트**|**IN**|`B, C, T`|B, C 또는 T 문자로 시작하는 모든 하위 범주 값입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40; 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [식 &#40;의 데이터 형식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

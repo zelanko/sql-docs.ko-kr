@@ -1,32 +1,32 @@
 ---
 title: "SQL Server 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: 71
+caps.latest.revision: "71"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: 9abddcd8544221c5d6dff0eeb12dc441df632933
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
-ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
-SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 특정 기능 영역의 새로운 기능을 요약하고 추가 세부 정보에 대한 링크를 포함합니다.
+SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 특정 기능 영역의 새로운 기능을 요약하고 추가 세부 정보에 대한 링크를 포함합니다. Linux의 SQL Server에 대한 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)(Linux 기반 SQL Server 설명서)을 참조하세요.
 
 [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [SQL Server 2017 릴리스 다운로드 - 2017년 10월:](http://go.microsoft.com/fwlink/?LinkID=829477).
 
->**Linux에서 SQL Server 실행!** 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)을 참조하세요.
+> [!NOTE]
+> 아래 변경 내용 외에도 누적 업데이트는 GA 릴리스 이후 정기적으로 릴리스됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대한 자세한 내용은 [SQL Server 2017 누적 업데이트](http://aka.ms/sql2017cu)를 참조하세요.
 
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 데이터베이스 엔진
 
@@ -97,9 +97,10 @@ SQL Server Analysis Services 2017에서는 테이블 형식 모델에 대한 여
 자세한 내용은 [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)(SQL Server Analysis Services 2017의 새로운 기능)을 참조하세요.
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services(SSRS)
-CTP 2.1부터 더 이상 SQL Server 설치 프로그램을 통해 SSRS를 설치할 수 없습니다. [Microsoft SQL Server 2017 Reporting Services 릴리스 후보를 다운로드](https://www.microsoft.com/download/details.aspx?id=55252)하려면 Microsoft 다운로드 센터로 이동하세요. 
-- 이제 보고서에서 주석을 사용하여 큐브 뷰를 추가하고 다른 사용자와 공동 작업할 수 있습니다. 주석에 첨부 파일도 포함할 수 있습니다. (CTP 2.1)
+SQL Server 설치 프로그램을 통해 SQL Server Reporting Services를 더 이상 설치할 수 없습니다. [Microsoft SQL Server 2017 Reporting Services를 다운로드](https://www.microsoft.com/download/details.aspx?id=55252)하려면 Microsoft 다운로드 센터로 이동하세요. 
+- 이제 보고서에서 주석을 사용하여 큐브 뷰를 추가하고 다른 사용자와 공동 작업할 수 있습니다. 주석에 첨부 파일도 포함할 수 있습니다.
 - 최신 버전의 보고서 작성기와 SQL Server Data Tools에서 필요한 필드를 쿼리 디자이너로 끌어다 놓아 지원되는 SQL Server Analysis Services 테이블 형식 데이터 모델에 대한 네이티브 DAX 쿼리를 만들 수 있습니다. [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)(Reporting Services 블로그)를 참조하세요.
+- 최신 응용 프로그램 및 사용자 지정 개발을 사용하기 위해 SSRS는 이제 완벽 하게 development 규격 RESTful API를 지원합니다. 전체 API 사양 및 설명서는 이제 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)에서 확인할 수 있습니다.
 
 자세한 내용은 [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)(SSRS(SQL Server Reporting Services)의 새로운 기능)를 참조하세요.
 
@@ -127,3 +128,4 @@ SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오�
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

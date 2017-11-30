@@ -1,5 +1,5 @@
 ---
-title: "ListReportServersInDatabase 메서드 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "ListReportServersInDatabase 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- ListReportServersInDatabase method
+helpviewer_keywords: ListReportServersInDatabase method
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2bdc6ca4ca42bc8c66ebfbb292dff8c022e3cdf2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e59b926264a9ce2f5af9bb4f4e87dbc3747b1e12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---listreportserversindatabase"></a>ListReportServersInDatabase ConfigurationSetting 메서드
+# <a name="configurationsetting-method---listreportserversindatabase"></a>ConfigurationSetting 메서드 - ListReportServersInDatabase
   보고서 서버에 보안 정보에 대한 액세스 권한이 있는지 여부에 관계없이 보고서 서버 데이터베이스에 있는 보고서 서버 설치 목록을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -84,4 +80,3 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

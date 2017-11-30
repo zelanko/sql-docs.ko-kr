@@ -18,17 +18,16 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a7fd4f315f8fe171a6b5e8df47c5e5be5b01fb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-model-query-designer-user-interface"></a>보고서 모델 쿼리 디자이너 사용자 인터페이스
   보고서 디자이너는 보고서에 사용할 보고서 서버 모델 데이터 원본의 데이터를 지정할 수 있는 두 가지 쿼리 디자이너를 제공합니다. 그래픽 쿼리 디자이너를 사용하여 모델 엔터티와 엔터티 필드를 탐색하고 선택할 수 있습니다. 또한 텍스트 기반 쿼리 디자이너를 사용하여 XML 형식으로 SMDL(Semantic Model Definition Language) 사양에서 직접 작업할 수 있습니다.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 |----------|--------------|  
 |탐색기 창|모델의 엔터티 및 엔터티 필드를 그래픽으로 표시합니다. 이 창을 사용하여 엔터티, 관련 엔터티 및 필드를 탐색할 수 있습니다.|  
 |디자인 영역|모델의 필드 목록을 표시합니다. 이 창을 사용하여 선택한 필드의 레이아웃을 정렬할 수 있습니다.|  
-|결과 창|쿼리 결과를 표시합니다. 쿼리를 실행 하려면 아무 창이 마우스 클릭 **실행**, 하거나 클릭 하는 **실행** (![쿼리를 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")) 도구 모음 단추입니다.|  
+|결과 창|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행**(![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")) 단추를 클릭합니다.|  
   
  탐색기 또는 디자인 영역 창에서 정보를 변경하면 **실행**을 클릭했을 때 결과 창의 내용이 영향을 받습니다.  
   
@@ -61,9 +60,9 @@ ms.lasthandoff: 08/09/2017
 |단추|Description|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 보고서 서버 모델 데이터 원본에 대한 쿼리는 XML 형식의 SMQL(Semantic Model Query Language) 사양입니다.|  
-|**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
-|![작업을 실행 취소](../../reporting-services/report-data/media/rsqdicon-undo.gif "동작 실행 취소")|마지막 동작 실행을 취소합니다.|  
-|![작업을 다시 실행](../../reporting-services/report-data/media/rsqdicon-redo.gif "작업을 다시 실행")|마지막 동작을 다시 실행합니다.|  
+|**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.|  
+|![동작 실행 취소](../../reporting-services/report-data/media/rsqdicon-undo.gif "동작 실행 취소")|마지막 동작 실행을 취소합니다.|  
+|![동작 다시 실행](../../reporting-services/report-data/media/rsqdicon-redo.gif "동작 다시 실행")|마지막 동작을 다시 실행합니다.|  
 |![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 결과 창에 결과 행을 표시합니다.|  
 |![선택한 필터 열 옆에 있는 필터 그래픽](../../reporting-services/report-data/media/rsqdicon-filter.gif "선택한 필터 열 옆에 있는 필터 그래픽")|필터링할 데이터를 지정할 수 있는 **데이터 필터링** 대화 상자를 엽니다. 디자인 영역에 있는 데이터와 무관하게 필터를 지정할 수 있습니다.|  
   
@@ -95,8 +94,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [보고서 모델 연결 &#40; Ssrs&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [보고서 모델 연결&#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

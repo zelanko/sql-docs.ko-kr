@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 추적 로그 (ULS)에 대 한 Reporting Services 이벤트 설정 | Microsoft Docs"
+title: "SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: be2f1f7acebd93946e4319b81f4a23b436808702
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
 
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버는 SharePoint ULS(통합 로깅 서비스) 추적 로그에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이벤트를 기록할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관련 범주는 SharePoint 중앙 관리의 모니터링 페이지에서 사용할 수 있습니다.  
@@ -109,7 +107,7 @@ Get-SPDiagnosticConfig
 |로컬 모드 렌더링||  
 |SOAP 클라이언트 프록시||  
 |UI 페이지||  
-|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. Power View, SQL Server Reporting Services 추가 기능에 기능을 포함 하 여 클라이언트 응용 프로그램에서 이러한 항목을 기반으로 됩니다.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역** 의 **범주** 에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 응용 프로그램에 의해 결정됩니다.|  
+|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. 이러한 항목은 SQL Server Reporting Services 추가 기능의 하나인 파워 뷰 등의 클라이언트 응용 프로그램에서 얻습니다.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역** 의 **범주** 에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 응용 프로그램에 의해 결정됩니다.|  
 |보고서 서버 경고 런타임||  
 |보고서 서버 응용 프로그램 도메인 관리자||  
 |보고서 서버 버퍼링 응답||  
@@ -117,7 +115,7 @@ Get-SPDiagnosticConfig
 |보고서 서버 카탈로그||  
 |보고서 서버 청크||  
 |보고서 서버 정리||  
-|보고서 서버 구성 관리자|샘플 항목:<br /><br /> MediumUsing 보고서 서버 내부 url `http://localhost:80/ReportServer`합니다.<br /><br /> UnexpectedMissing 또는 잘못된 ExtendedProtectionLevel 설정|  
+|보고서 서버 구성 관리자|샘플 항목:<br /><br /> MediumUsing 보고서 서버 내부 url `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing 또는 잘못된 ExtendedProtectionLevel 설정|  
 |보고서 서버 암호화||  
 |보고서 서버 데이터 확장 프로그램||  
 |보고서 서버 DB 폴링||  
@@ -147,13 +145,13 @@ Get-SPDiagnosticConfig
 |공유 서비스|샘플 항목:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> 콘텐츠 데이터베이스에 대한 MediumGranting 액세스입니다.<br /><br /> ReportingWebServiceApplication의 MediumProvisioning 인스턴스<br /><br /> ReportingWebServiceApplication에 대한 MediumProcessing 서비스 계정 변경 내용<br /><br /> MediumSetting 데이터베이스 사용 권한입니다.|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell에서 로그 파일 보기  
- ![PowerShell 관련 내용](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용")PowerShell을 사용 하 여 목록을 반환할 수 있습니다는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ULS 로그 파일에서 관련 이벤트입니다. ULS 로그 파일 UESQL11SPOINT-20110606-1530.log 파일에서 "**sql server reporting services**"가 포함된 필터링된 행 목록을 반환하려면 SharePoint 2010 관리 셸에서 다음 명령을 입력합니다.  
+ ![PowerShell 관련 내용](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용")PowerShell을 사용하여 ULS 로그 파일에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관련 이벤트 목록을 반환할 수 있습니다. ULS 로그 파일 UESQL11SPOINT-20110606-1530.log 파일에서 "**sql server reporting services**"가 포함된 필터링된 행 목록을 반환하려면 SharePoint 2010 관리 셸에서 다음 명령을 입력합니다.  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
 ```  
   
- ULS 로그를 읽는 데 사용할 수 있는 다운로드 가능한 많은 도구가 있습니다. 예를 들어 [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) 또는 [SharePoint ULS 로그 뷰어](http://ulsviewer.codeplex.com/workitem/list/basic)를 다운로드할 수 있습니다. 이 두 도구는 Codeplex에서 다운로드할 수 있습니다.  
+ ULS 로그를 읽는 데 사용할 수 있는 다운로드 가능한 도구도 있습니다. 예를 들어 [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer)는 GitHub에서 사용할 수 있습니다. 
   
  PowerShell을 사용하여 로그 데이터를 보는 방법에 대한 자세한 내용은 [진단 로그 보기(SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)를 참조하세요.  
   
@@ -162,5 +160,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  SharePoint 2010 중앙 관리에서 SharePoint 서버에 대해 진단 로깅을 구성하는 방법 및 단계는 [진단 로깅 설정 구성(Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423)을 참조하세요.  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

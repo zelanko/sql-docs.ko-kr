@@ -1,13 +1,11 @@
 ---
 title: "Power BI 대시보드에 Reporting Services 항목 고정 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - powerbi
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd135be2158839966a453cb1fef05aa05d9e56c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI 대시보드에 Reporting Services 항목 고정
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 을 통해 사용자는 보고서 뷰어 도구 모음의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 항목을 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 새 타일로 고정합니다.   고정하려면 먼저 관리자가 보고서 서버를 Azure Active Directory 및 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]과 통합해야 합니다.  
@@ -42,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   고정 된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] t에 보고서 뷰어[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]그 예를 들어 `http://myserver/Reports`합니다.  [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너 또는 보고서 서버 url에서는 고정할 수 없습니다.  예를 들어 `http://myserver/ReportServer`합니다.  
+-   [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 뷰어에서 고정합니다(예: `http://myserver/Reports`).  [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너 또는 보고서 서버 url에서는 고정할 수 없습니다.  예를 들면 `http://myserver/ReportServer`과 같습니다.  
   
 -   브라우저에서 보고서 서버 사이트의 팝업을 허용하도록 구성해야 합니다.  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="bkmk_to_pin"></a> 보고서 항목을 고정하려면  
   
-1. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)](으)로 로그인되었는지 확인합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 메뉴 항목을 선택하고 로그인합니다. 자세한 내용은  [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5) 을 참조하세요.
+1. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)](으)로 로그인되었는지 확인합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 메뉴 항목을 선택하고 로그인합니다. 자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -81,7 +78,7 @@ ms.lasthandoff: 08/09/2017
   
 4. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 고정할 보고서 항목을 선택합니다. 한 번에 한 항목만 고정할 수 있습니다.  보고서 뷰어가 보고서의 음영 처리된 뷰를 표시하며 고정할 수 있는 보고서 항목은 강조 표시되는 반면에 고정할 수 없는 항목은 어둡게 음영 처리되어 표시됩니다.  
   
-    **(1)** 고정할 대시보드가 있는 그룹을 선택하고, **(2)** 항목을 고정할 대시보드를 선택하고 **(3)** 대시보드에서 타일을 업데이트할 빈도를 선택합니다.   ![참고](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 에서 관리 하는 새로 고침 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독 항목이 고정 된 후에 구독을 편집을 서로 다른 새로 고침 일정을 구성할 수 있습니다.  
+    **(1)** 고정할 대시보드가 있는 그룹을 선택하고, **(2)** 항목을 고정할 대시보드를 선택하고 **(3)** 대시보드에서 타일을 업데이트할 빈도를 선택합니다.   ![참고](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 새로 고침은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독에 의해 관리되며 항목이 고정된 후 구독을 편집하고 다른 새로 고침 일정을 구성할 수 있습니다.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -121,7 +118,7 @@ ms.lasthandoff: 08/09/2017
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **만료된 Power BI 자격 증명:**  항목의 고정을 시도하는데 다음과 같은 오류 메시지가 표시됩니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 을 클릭하고 내 설정 페이지에서 **로그인**을 클릭합니다. 자세한 내용은  [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5) 을 참조하세요.  
+-   **만료된 Power BI 자격 증명:** 항목의 고정을 시도하는데 다음과 같은 오류 메시지가 표시됩니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 을 클릭하고 내 설정 페이지에서 **로그인**을 클릭합니다. 자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -136,7 +133,7 @@ ms.lasthandoff: 08/09/2017
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
   
-     또한 구독 속성을 편집하고 **보고서 시각적 이름** 을 적절한 보고서 항목 이름으로 변경할 수 있습니다. ![power bi 새로 고침에 사용 되는 시각적 개체를 변경](../reporting-services/media/ssrs-powerbi-subscription-visual.png "power bi 새로 고침에 사용 되는 시각적 개체를 변경 합니다.")  
+     또한 구독 속성을 편집하고 **보고서 시각적 이름** 을 적절한 보고서 항목 이름으로 변경할 수 있습니다. ![power bi 새로 고침에 사용되는 시각적 개체 변경](../reporting-services/media/ssrs-powerbi-subscription-visual.png "power bi 새로 고침에 사용되는 시각적 개체 변경")  
   
 -   **타일을 삭제**합니다. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에서 타일을 삭제했는데 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 **내 구독**페이지에서 연결된 구독이 삭제되지 않은 경우 다음과 유사한 오류가 표시됩니다. 구독만 삭제할 수 있습니다.  
   
@@ -153,5 +150,4 @@ ms.lasthandoff: 08/09/2017
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

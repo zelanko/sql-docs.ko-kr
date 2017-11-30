@@ -1,5 +1,5 @@
 ---
-title: "StDevP 함수 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "StDevP 함수(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d08852c42526baccae64327db8448f1ace88b20c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fe48569a6be3b59d627f348f12b419e167592573
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---stdevp-function"></a>보고서 작성기 함수-StDevP 함수
+# <a name="report-builder-functions---stdevp-function"></a>보고서 작성기 함수 - StDevP 함수
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 숫자 값의 모집단 표준 편차를 반환합니다.  
   
 > [!NOTE]  
@@ -76,10 +75,9 @@ StDevP(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [식 &#40;의 데이터 형식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션 &#40;에 대 한 식 범위 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

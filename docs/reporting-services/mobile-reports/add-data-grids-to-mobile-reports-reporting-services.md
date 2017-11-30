@@ -1,26 +1,24 @@
 ---
-title: "데이터 표 모바일 보고서에 추가할 | Reporting Services | Microsoft Docs"
+title: "모바일 보고서에 데이터 표 추가 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c51169b12265eea7e6d57e0daa7539322e338851
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ec3aeacbac833427f6aba9042345c7abe3d355b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>모바일 보고서에 데이터 표 추가 | Reporting Services
 경우에 따라 가장 적합한 시각화는 데이터 자체입니다. *에 데이터를 표시하기 위해 다음 세 가지*데이터 표 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]또는 테이블에 대해 알아봅니다.
@@ -70,7 +68,7 @@ ms.lasthandoff: 08/09/2017
 
 2. **열** 창의 **데이터** 탭에서 **차트 열 추가**를 선택합니다. 
 
-3. 기본 데이터 테이블과 필드를 공유하는 두 번째 데이터 테이블을 추가하려면 아직 수행하지 않은 경우 [Excel 또는 공유 데이터 집합의 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) 를 가져옵니다.
+3. 기본 데이터 테이블과 필드를 공유하는 두 번째 데이터 테이블을 추가하려면 아직 수행하지 않은 경우 [Excel 또는 공유 데이터 집합의 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)를 가져옵니다.
 
 4. **데이터 속성**아래 **그리드 뷰에 대한 데이터**에서 기본 데이터 테이블을 선택한 다음 **차트 시각화에 대한 참조 데이터**에서 두 번째 테이블을 선택합니다.
 
@@ -79,9 +77,9 @@ ms.lasthandoff: 08/09/2017
 6. **차트 데이터 필드**, **원본 조회**및 **대상 조회**를 선택합니다. 
    이 세 가지 속성으로 datagrid가 열에서 각 차트에 데이터를 제공하는 방법이 결정됩니다.
    
-   *   **원본 조회** 는 **그리드 뷰에 대한 데이터**에 있는 데이터 테이블의 필드로 설정됩니다. 이 필드는 각 행에 대해 포함된 차트에 데이터를 제공하는 차트 참조 데이터 테이블에 적용된 행 기준 필터 역할을 합니다. 
-   * **대상 조회** 는 **차트 시각화에 대한 참조 데이터**에 있는 데이터 테이블의 필드입니다. 각 행에 있는 차트의 데이터는 이 두 개 필드에 조인됩니다.   
-   * **차트 데이터 필드** 를 통해 각 행에서 차트의 y축 값 또는 계열로 사용할 **차트 시각화를 위한 참조 데이터** 데이터 테이블의 메트릭이 결정됩니다.  
+   *   **원본 조회**는 **그리드 뷰에 대한 데이터**에 있는 데이터 테이블의 필드로 설정됩니다. 이 필드는 각 행에 대해 포함된 차트에 데이터를 제공하는 차트 참조 데이터 테이블에 적용된 행 기준 필터 역할을 합니다. 
+   * **대상 조회**는 **차트 시각화에 대한 참조 데이터**에 있는 데이터 테이블의 필드입니다. 각 행에 있는 차트의 데이터는 이 두 개 필드에 조인됩니다.   
+   * **차트 데이터 필드**를 통해 각 행에서 차트의 y축 값 또는 계열로 사용할 **차트 시각화를 위한 참조 데이터** 데이터 테이블의 메트릭이 결정됩니다.  
 
 ## <a name="see-also"></a>참고 항목 
 * [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
@@ -90,4 +88,3 @@ ms.lasthandoff: 08/09/2017
 * [Reporting Services 모바일 보고서의 계기](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  
  
   
-

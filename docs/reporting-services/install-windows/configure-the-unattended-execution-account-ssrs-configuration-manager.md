@@ -1,12 +1,11 @@
 ---
-title: "무인된 실행 계정 (SSRS 구성 관리자) 구성 | Microsoft Docs"
+title: "무인 실행 계정 구성(SSRS 구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1a5f61d6a94b80b2745f386ab16ff32a4ce0d778
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>무인 실행 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 무인 모드로 보고서를 처리하고 네트워크를 통해 연결 요청을 전송하는 데 사용되는 특수 계정을 제공합니다. 이 계정은 다음과 같은 방법으로 사용됩니다.  
@@ -61,9 +60,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  다음 명령을 입력하여 로컬 보고서 서버 인스턴스에서 계정을 구성합니다.  
   
-     **rsconfig-e-u\<도메인/사용자 이름 >-p\<암호 >**  
+     **rsconfig -e -u\<도메인/사용자 이름> -p\<암호>**  
   
- **rsconfig -e** 는 추가 인수를 지원합니다. 명령 예제를 보려면 및 구문에 대 한 자세한 내용은 참조 [rsconfig 유틸리티 &#40; Ssrs&#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md) SQL Server 온라인 설명서의 합니다.  
+ **rsconfig -e** 는 추가 인수를 지원합니다. 구문에 대한 자세한 내용 및 명령 예제를 보려면 SQL Server 온라인 설명서에서 [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)를 참조하세요.  
   
 ### <a name="how-account-information-is-stored"></a>계정 정보를 저장하는 방법  
  계정을 설정하면 로컬 또는 원격 보고서 서버 인스턴스의 RSreportserver.config 파일에 다음 설정이 암호화된 값으로 지정됩니다.  
@@ -111,4 +110,3 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 구성 관리자(SSRS 기본 모드)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
   
   
-

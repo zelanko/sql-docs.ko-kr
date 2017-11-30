@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services를 사용한 인증에 대 한 보호를 확장 | Microsoft Docs"
+title: "Reporting Services 인증에 대한 확장된 보호 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,35 +11,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 인증에 대한 확장된 보호
 
   확장된 보호는 최신 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에서 향상된 기능 집합입니다. 확장된 보호는 응용 프로그램에서 자격 증명과 인증을 보호하는 방법을 개선합니다. 이 기능 자체는 자격 증명 전달과 같은 특정 공격에 대해 직접적인 보호 기능을 제공하지 않지만 인증에 대해 확장된 보호를 적용할 수 있는 인프라를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 같은 응용 프로그램에 제공합니다.  
   
  확장된 보호에서 주로 향상된 인증 기능은 서비스 바인딩과 채널 바인딩입니다. 채널 바인딩은 CBT(채널 바인딩 토큰)를 사용하여 두 끝점 간에 설정된 채널이 손상되지 않았는지 확인합니다. 서비스 바인딩은 SPN(서비스 사용자 이름)을 사용하여 인증 토큰의 대상이 유효한지 검사합니다. 확장된 보호에 대한 자세한 내용은 [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](http://go.microsoft.com/fwlink/?LinkId=179922)을 참조하십시오.  
   
-지원 하 고 운영 체제에서 사용 되 고 구성 하는 확장 된 보호를 적용 하는 SQL Server Reporting Services (SSRS) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 기본적으로 Negotiate 또는 NTLM 인증을 지정하는 요청을 수락하므로 운영 체제의 확장된 보호 지원 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장된 보호 기능을 활용할 수 있습니다.  
+SSRS(SQL Server Reporting Services)는 운영 체제에서 사용하도록 설정되고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 구성된 확장된 보호를 지원하고 적용합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 기본적으로 Negotiate 또는 NTLM 인증을 지정하는 요청을 수락하므로 운영 체제의 확장된 보호 지원 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장된 보호 기능을 활용할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  Windows에서는 기본적으로 확장된 보호를 사용할 수 없습니다. Windows에서 확장된 보호를 사용하는 방법은 [인증에 대한 확장된 보호](http://go.microsoft.com/fwlink/?LinkID=178431)를 참조하십시오. 운영 체제 및 클라이언트 인증 스택 모두 확장된 보호를 지원해야 인증이 성공합니다. 이전 운영 체제의 경우 확장된 보호를 사용할 수 있도록 컴퓨터가 완전하게 준비되려면 업데이트를 여러 개 설치해야 할 수도 있습니다. 확장된 보호와 관련된 최신 개발 내용은 [확장된 보호에 대한 업데이트된 정보](http://go.microsoft.com/fwlink/?LinkId=183362)를 참조하십시오.  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services 확장된 보호 개요
 
-SSRS를 지원 하 고 운영 체제에서 활성화 되어 있는 확장 된 보호를 적용 합니다. 운영 체제에서 확장된 보호를 지원하지 않거나 해당 기능을 사용하지 않을 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장된 보호 기능으로 인해 인증이 실패합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장된 보호를 사용하려면 SSL 인증서가 필요합니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
+SSRS는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원하고 적용합니다. 운영 체제에서 확장된 보호를 지원하지 않거나 해당 기능을 사용하지 않을 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장된 보호 기능으로 인해 인증이 실패합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장된 보호를 사용하려면 SSL 인증서가 필요합니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 기본적으로 확장된 보호를 사용할 수 없습니다. **rsreportserver.config** 구성 파일을 수정하거나 WMI API를 사용하여 구성 파일을 업데이트하면 이 기능을 사용할 수 있습니다. SSRS 확장 된 보호 설정을 수정 하거나 볼 수 있는 사용자 인터페이스를 제공 하지 않습니다. 자세한 내용은 이 항목의 [구성 설정](#ConfigurationSettings) 섹션을 참조하십시오.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 기본적으로 확장된 보호를 사용할 수 없습니다. **rsreportserver.config** 구성 파일을 수정하거나 WMI API를 사용하여 구성 파일을 업데이트하면 이 기능을 사용할 수 있습니다. SSRS에서는 확장된 보호 설정을 수정하거나 볼 수 있는 사용자 인터페이스를 제공하지 않습니다. 자세한 내용은 이 항목의 [구성 설정](#ConfigurationSettings) 섹션을 참조하십시오.  
   
  확장된 보호 설정의 변경이나 잘못 구성된 설정으로 인해 발생하는 일반적인 문제는 명확한 오류 메시지나 대화 상자 창을 통해 표시되지 않습니다. 확장된 보호 구성 및 호환성과 관련된 문제가 있으면 인증이 실패하고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추적 로그에 오류가 기록됩니다.  
   
@@ -53,7 +51,7 @@ SSRS를 지원 하 고 운영 체제에서 활성화 되어 있는 확장 된 �
   
 ### <a name="upgrade"></a>업그레이드  
   
--   업그레이드는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 값이 있는 구성 설정을 추가 하는 서버에서 SQL Server 2016의 **rsreportserver.config** 파일입니다. SQL Server 2016 설치에서 보존 않는다는 설정이 이미 되었으면는 **rsreportserver.config** 파일입니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버를 SQL Server 2016로 업그레이드하면 기본값이 지정된 구성 설정이 **rsreportserver.config** 파일에 추가됩니다. 설정이 이미 있으면 SQL Server 2016 설치 시 해당 설정이 **rsreportserver.config** 파일에 유지됩니다.  
   
 -   이 구성 설정이 **rsreportserver.config** 구성 파일에 추가될 때 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장된 보호 기능의 기본 동작이 해제되므로 이 항목의 설명에 따라 기능을 사용하도록 설정해야 합니다. 자세한 내용은 이 항목의 [구성 설정](#ConfigurationSettings) 섹션을 참조하십시오.  
   
@@ -179,4 +177,4 @@ SSRS를 지원 하 고 운영 체제에서 활성화 되어 있는 확장 된 �
 [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

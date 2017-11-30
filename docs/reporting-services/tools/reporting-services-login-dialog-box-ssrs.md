@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 로그인 대화 상자 (SSRS) | Microsoft Docs"
+title: "Reporting Services 로그인 대화 상자(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- sql13.rtp.rptdesigner.reportservicelogin.f1
+f1_keywords: sql13.rtp.rptdesigner.reportservicelogin.f1
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f9da76454e0b1fe52499471cbb3a04ada2d896e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: be8bba0ac0dcff7feeb91a9f87560c0c39f13850
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services 로그인 대화 상자(SSRS)
   **Reporting Services 로그인** 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공할 수 있습니다.  
@@ -42,8 +40,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [자격 증명 및 보고서 데이터 원본에 대 한 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [보고서 디자이너 F1 도움말](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
-

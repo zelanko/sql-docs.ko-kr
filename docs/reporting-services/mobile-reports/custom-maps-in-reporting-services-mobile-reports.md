@@ -1,31 +1,29 @@
 ---
-title: "Reporting Services 모바일 보고서의 사용자 지정 지도 | Microsoft Docs"
+title: "Reporting Services 모바일 보고서의 사용자 지정 맵 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 580594ae5766b31bb18cdefc5682bda8e3a5ee15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서의 사용자 지정 맵
-SQL Server 모바일 보고서 게시자의 지리적 지도 라고 하는 형식에 정의 된 *ESRI 셰이프 파일*합니다.  
+SQL Server 모바일 보고서 게시자의 지리적 지도는 *ESRI 셰이프 파일*이라는 형식으로 정의됩니다.  
   
-이 형식은 원래 비공개 기업에서 설계된 것이지만 현재는 대다수의 GIS 응용 프로그램에서 널리 사용되는 반개방식 형식입니다. 이 형식에 따라 모바일 보고서 게시자에는 지도 정의할 때 제공 되는 두 개의 파일이 필요 합니다.  
+이 형식은 원래 비공개 기업에서 설계된 것이지만 현재는 대다수의 GIS 응용 프로그램에서 널리 사용되는 반개방식 형식입니다. 이 형식에 따라 모바일 보고서 게시자에서는 지도를 정의할 때 두 개의 파일을 제공해야 합니다.  
   
 - 셰이프 기하 도형용 .SHP 파일  
 - 메타데이터용 .DBF 파일  
@@ -63,4 +61,3 @@ SQL Server 모바일 보고서 게시자의 지리적 지도 라고 하는 형�
   
   
   
-

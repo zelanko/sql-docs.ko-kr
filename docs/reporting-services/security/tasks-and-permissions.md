@@ -19,17 +19,16 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0d2ea7df496e47ec31b79557d238fd564a4e7128
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tasks-and-permissions"></a>태스크 및 권한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *태스크* 는 사용자 또는 관리자가 수행할 수 있는 동작을 말하며 태스크는 미리 정의됩니다. 태스크는 사용자 지정할 수 없으며 프로그래밍 방식이나 도구를 통해 제공된 태스크를 수정할 수 없습니다. 모두 25가지의 태스크가 있습니다. 이러한 태스크는 역할 기반 보안에서 사용할 수 있는 전체 작업 집합을 구성합니다. "보고서 보기", "보고서 관리", "보고서 서버 속성 관리" 등과 같은 태스크가 있습니다.  
@@ -51,8 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [역할 정의](../../reporting-services/security/role-definitions.md)   
- [미리 정의 된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

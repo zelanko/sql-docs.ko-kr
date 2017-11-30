@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- WindowsServiceIdentityConfigured
-apilocation:
-- reportingservices.mof
+apiname: WindowsServiceIdentityConfigured
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- WindowsServiceIdentityConfigured property
+helpviewer_keywords: WindowsServiceIdentityConfigured property
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd668d2e660d41d2c2881a5500696a988b9a40b8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 664eef6a4740021f6617d08499f8b78b009740d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="windowsserviceidentityconfigured-property"></a>WindowsServiceIdentityConfigured 속성
   보고서 서버 Windows 서비스를 실행하도록 마지막으로 구성된 ID를 반환합니다. 읽기 전용입니다.  
@@ -56,4 +52,3 @@ public string WindowsServiceIdentityConfigured;
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

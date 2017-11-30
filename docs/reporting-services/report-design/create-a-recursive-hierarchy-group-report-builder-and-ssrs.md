@@ -1,5 +1,5 @@
 ---
-title: "(보고서 작성기 및 SSRS) 재귀 계층 구조 그룹 만들기 | Microsoft Docs"
+title: "재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2adde1d53084f92ee16822c5b6d04a886f31fe28
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e61ce0c404a8544ac95b505f40f34d070543908b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 재귀 계층 구조 그룹은 조직 계층의 관리자와 직원 관계에 대한 보고 구조와 같이 여러 계층 수준을 포함하는 단일 보고서 데이터 집합의 데이터를 구성합니다.  
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  속성 창이 표시되지 않으면 **보기** 탭에서 **속성** 을 클릭합니다.  
   
-2.  속성 창에서 확장의 **패딩** 노드를 클릭 하 여 **왼쪽**, 드롭 다운 목록에서 선택  **\<식... >**합니다.  
+2.  속성 창에서 **패딩** 노드를 확장하고 **왼쪽**을 클릭한 다음 드롭다운 목록에서 **\<식…>**을 선택합니다.  
   
 3.  식 창에서 다음 식을 입력합니다.  
   
@@ -69,13 +68,12 @@ ms.lasthandoff: 08/09/2017
      보고서를 실행합니다. 보고서에 그룹화된 데이터의 계층 뷰가 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [재귀 계층 구조 그룹 &#40; 만들기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [집계 함수 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [테이블 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [행렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [행렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

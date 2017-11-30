@@ -1,5 +1,5 @@
 ---
-title: "보고서 파트 및 보고서 작성기에서 데이터 집합 | Microsoft Docs"
+title: "보고서 작성기의 보고서 파트 및 데이터 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a22f1e59a693551ffb1575ffdeb351c58480b96b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>보고서 작성기의 보고서 파트 및 데이터 집합
   보고서 작성기에서 보고서에 데이터를 포함하는 가장 쉬운 방법은 보고서 파트 갤러리에서 보고서 파트를 추가하는 것입니다. 보고서 파트에는 파트가 종속되는 *종속 데이터 집합*이라는 데이터 집합이 들어 있습니다. 종속 데이터 집합은 공유 데이터 원본을 기반으로 하며 포함된 데이터 집합 또는 공유 데이터 집합일 수 있습니다. [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
- 보고서에 데이터를 포함하는 또 다른 쉬운 방법은 공유 데이터 집합을 사용하는 것입니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서에 데이터를 포함하는 또 다른 쉬운 방법은 공유 데이터 집합을 사용하는 것입니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,10 +59,9 @@ ms.lasthandoff: 08/09/2017
 >  자신과 다른 사용자가 공유 데이터 집합의 데이터를 계속 정상적으로 사용하도록 하려면 보고서 항목 보안 관련 원칙을 이해해야 합니다. 자세한 내용은 [공유 데이터 집합 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 디자인 보기 &#40; 보고서 작성기 &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [보안 &#40; 보고서 작성기 &#41;](../../reporting-services/report-builder/security-report-builder.md)   
- [보고서 파트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [보안&#40;보고서 작성기&#41;](../../reporting-services/report-builder/security-report-builder.md)   
+ [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

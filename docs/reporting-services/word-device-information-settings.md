@@ -14,17 +14,16 @@ helpviewer_keywords:
 - Word [Reporting Services]
 - device information settings [Reporting Services], Word
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 491940329df26ba67f447aacb6a32f5d6578c4a5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5ef68b786906627b7673b880e5cabbfd9e1b4ec1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="word-device-information-settings"></a>Word 장치 정보 설정
   다음 표는 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 형식으로 렌더링하기 위한 장치 정보 설정을 나열합니다.  
@@ -41,7 +40,6 @@ ms.lasthandoff: 08/09/2017
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [기술 참조 &#40; Ssrs&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
-

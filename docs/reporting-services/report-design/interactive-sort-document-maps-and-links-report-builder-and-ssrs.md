@@ -1,5 +1,5 @@
 ---
-title: "대화형 정렬, 문서 구조 및 링크 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "대화형 정렬, 문서 구조 및 링크(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 304da15a594fff8a68074b1b1ff172c0b8eac2bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>대화형 정렬, 문서 구조 및 링크(보고서 작성기 및 SSRS)
   웹 기반 환경에서 사용자가 보고서와 상호 작용할 수 있도록 해주는 다양한 기능을 추가할 수 있습니다. 사용자는 보고서 값의 정렬 순서를 변경할 수 있고, 보고서의 항목을 표시하거나 숨길 수 있으며, 다른 보고서나 웹 페이지로 이동하는 링크를 클릭할 수 있습니다. 또한 목차나 문서 구조를 추가할 수 있습니다. 보고서 사용자는 목차나 문서 구조의 항목을 클릭하여 보고서 내의 영역으로 이동할 수 있습니다.  
@@ -42,19 +42,19 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [대화형 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [대화형 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  열 머리글에 대화형 정렬 단추를 추가하는 방법을 설명합니다.  
   
- [문서 구조 &#40; 만들기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [문서 구조 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  목차를 추가하여 큰 보고서에서 탐색을 지원하는 방법을 설명합니다.  
   
- [보고서 &#40;에 책갈피 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [보고서에 책갈피 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  책갈피를 추가하여 보고서 내에 링크를 만드는 방법을 설명합니다.  
   
- [URL을 &#40;에 하이퍼링크 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [URL에 하이퍼링크 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  보고서의 링크를 URL에 추가하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [드릴스루, 드릴 다운, 하위 보고서 및 중첩된 데이터 영역 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

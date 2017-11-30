@@ -1,5 +1,5 @@
 ---
-title: "데이터 바인딩된 이미지 (보고서 작성기 및 SSRS) 추가 | Microsoft Docs"
+title: "데이터 바인딩된 이미지 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 17aa516d14553478e2659b96fe8108d7b985b42e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 253d3abfffae056d6300e2203623e7af023a2476
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>데이터 바인딩된 이미지 추가(보고서 작성기 및 SSRS)
   데이터베이스에 저장된 이미지에 대한 참조를 보고서에 포함할 수 있습니다. 이러한 이미지를 *데이터 바인딩된 이미지*라고 합니다. 제품 목록에서 제품 이름과 함께 표시되는 그림을 예로 들 수 있습니다.  

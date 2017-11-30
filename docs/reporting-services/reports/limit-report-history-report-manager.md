@@ -1,5 +1,5 @@
 ---
-title: "보고서 기록을 (보고서 관리자) 제한 | Microsoft Docs"
+title: "보고서 기록 제한(보고서 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - historical data [Reporting Services]
 - displaying report history
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e1925f7527202ea251a6949a18e2f03af4f5952
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 30b57e9b6d59718f384bcfdbe35efc375f1324ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="limit-report-history-report-manager"></a>보고서 기록 제한(보고서 관리자)
   보고서 기록은 시간에 따라 만든 보고서 스냅숏의 모음입니다. 요청 시 보고서 기록을 만들거나 스냅숏이 만들어져 보고서 기록에 추가되는 빈도를 예약할 수 있습니다.  
@@ -53,8 +52,7 @@ ms.lasthandoff: 08/09/2017
 4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 기록 &#40;에 스냅숏 추가 보고서 관리자 &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   
-

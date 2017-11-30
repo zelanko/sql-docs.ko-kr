@@ -1,5 +1,5 @@
 ---
-title: "카탈로그 항목 삭제 (Management Studio) | Microsoft Docs"
+title: "카탈로그 항목 삭제(Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.deleteitems.f1
+f1_keywords: sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1d530acc7b22cee01e7f8eaf639e08801c38d855
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-catalog-items-management-studio"></a>카탈로그 항목 삭제(Management Studio)
   이 페이지를 사용하여 공유 일정 및 역할 정의를 삭제할 수 있습니다.  
@@ -51,9 +49,8 @@ ms.lasthandoff: 08/09/2017
  항목을 삭제하는 동안 오류가 발생할 경우 오류 코드를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [항목 &#40; 삭제 Management studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
- [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [만들기, 수정 및 일정을 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [항목 삭제&#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
+ [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [일정 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   
-

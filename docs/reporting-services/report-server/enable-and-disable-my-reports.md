@@ -1,5 +1,5 @@
 ---
-title: "내 보고서 설정 및 해제 | Microsoft Docs"
+title: "내 보고서 사용 및 사용 안 함 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c40e45fad4833f89154ea7b0338677251437b7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-and-disable-my-reports"></a>내 보고서 설정 및 해제
   내 보고서 기능은 보고서 서버 데이터베이스에 개인 저장소를 할당하여 해당 사용자가 소유한 보고서를 개인 폴더에 저장할 수 있도록 합니다. 보고서 서버 관리자는 이 기능을 설정 또는 해제하거나 이 작업 영역으로 수행할 수 있는 작업을 제어하는 보안 설정을 수정하여 이 기능의 작동 방식을 변경할 수 있습니다.  
@@ -58,7 +57,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [내 보고서 보안 설정](../../reporting-services/security/secure-my-reports.md)   
- [보고서 서버 내용 관리 &#40; SSRS 기본 모드 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "테이블 릭 스 데이터 영역 셀, 행 및 열 (보고서 작성기) 및 SSRS | Microsoft Docs"
+title: "테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f7fad3b96a6cdcf508e9b485219f533e50e426cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 테이블릭스 데이터 영역의 행 및 열 데이터가 표시되는 방식을 제어하려면 정보 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [행렬](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) 또는 [목록](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)을 참조하세요.  
@@ -46,13 +45,13 @@ ms.lasthandoff: 08/09/2017
   
 |아이콘|Description|  
 |----------|-----------------|  
-|![세부 정보 행에 대해 3 개의 평행선이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "정보 행에 대 한 3 개의 평행선이 있는 행 핸들")|행 그룹 계층에서 유일한 세부 정보 그룹|  
-|![정보 행과 한 개의 외부 그룹에 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "정보 행과 한 개의 외부 그룹에 있는 행 핸들")|한 개의 외부 그룹 및 자식 세부 정보 그룹|  
-|![2 개의 평행 대괄호 중첩 된 그룹을 보여 주는](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "2 개의 평행 대괄호 중첩 된 그룹을 보여 주는")|한 개의 외부 그룹, 한 개의 내부 그룹, 세부 정보 그룹 없음|  
-|![2 개의 대괄호 및 3 개의 누적된 선에 대 한 중첩 및 세부 정보](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "2 개의 대괄호 및 3 개의 누적된 선에 대 한 중첩 및 세부 정보")|한 개의 외부 그룹, 한 개의 내부 그룹 및 자식 세부 정보 그룹|  
-|![바닥글 행이 있는 한 개의 외부 그룹, 한 개의 내부 그룹](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentfooter.gif "바닥글 행이 있는 한 개의 외부 그룹, 한 개의 내부 그룹")|바닥글 행이 있는 한 개의 외부 그룹 및 한 개의 내부 그룹|  
+|![세부 정보 행에 3개의 평행선이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "세부 정보 행에 3개의 평행선이 있는 행 핸들")|행 그룹 계층에서 유일한 세부 정보 그룹|  
+|![세부 정보 행 및 한 개의 외부 그룹이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "세부 정보 행 및 한 개의 외부 그룹이 있는 행 핸들")|한 개의 외부 그룹 및 자식 세부 정보 그룹|  
+|![중첩된 그룹을 보여주는 2개의 평행 대괄호](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "중첩된 그룹을 보여주는 2개의 평행 대괄호")|한 개의 외부 그룹, 한 개의 내부 그룹, 세부 정보 그룹 없음|  
+|![중첩 및 세부 정보에 대한 2개의 대괄호 및 3개의 누적 선](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "중첩 및 세부 정보에 대한 2개의 대괄호 및 3개의 누적 선")|한 개의 외부 그룹, 한 개의 내부 그룹 및 자식 세부 정보 그룹|  
+|![바닥글 행이 있는 1개의 외부 그룹 및 1개의 내부 그룹](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentfooter.gif "바닥글 행이 있는 1개의 외부 그룹 및 1개의 내부 그룹")|바닥글 행이 있는 한 개의 외부 그룹 및 한 개의 내부 그룹|  
 |![외부 그룹 대괄호, 내부 그룹 대괄호, 세부 정보](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "외부 그룹 대괄호, 내부 그룹 대괄호, 세부 정보")|합계에 대한 바닥글 행이 있는 한 개의 외부 그룹, 합계에 대한 바닥글 행이 있는 한 개의 내부 그룹 및 한 개의 정보 행|  
-|![머리글 및 바닥글 및 자식 그룹 부모](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "부모 머리글 및 바닥글 및 자식 그룹")|레이블에 대한 머리글과 합계에 대한 바닥글이 있는 한 개의 외부 그룹, 한 개의 내부 그룹, 자식 그룹 없음|  
+|![부모 헤더와 바닥글 및 자식 그룹](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "부모 헤더와 바닥글 및 자식 그룹")|레이블에 대한 머리글과 합계에 대한 바닥글이 있는 한 개의 외부 그룹, 한 개의 내부 그룹, 자식 그룹 없음|  
   
 ### <a name="group-rows"></a>그룹 행  
  그룹 내부에 있는 행은 고유한 그룹 값마다 한 번씩 반복되며 일반적으로 합계를 집계하는 데 사용됩니다. 그룹 외부에 있는 행은 그룹에 대해 한 번씩 반복되며 레이블이나 부분합을 구하는 데 사용됩니다. 테이블릭스 셀을 선택할 때 테이블릭스 데이터 영역 안의 대괄호와 행 및 열 핸들은 셀이 속하는 그룹을 나타냅니다. 이 그림에서는 다음과 같은 시각적 표시를 보여 줍니다.  
@@ -63,17 +62,17 @@ ms.lasthandoff: 08/09/2017
   
 -   선택된 셀에서 모든 그룹의 멤버 자격을 보여 주는 그룹 표시기  
   
- ![세부 데이터와 중첩된 행 그룹이 있는 테이블](../../reporting-services/report-design/media/rs-tablixrowgroupvisualcues.gif "세부 데이터와 중첩된 행 그룹이 있는 테이블")  
+ ![세부 정보 및 중첩 행 그룹이 있는 테이블](../../reporting-services/report-design/media/rs-tablixrowgroupvisualcues.gif "세부 정보 및 중첩 행 그룹이 있는 테이블")  
   
 ### <a name="total-rows"></a>Total  Rows  
  행 및 열 그룹을 추가한 후 열에 대한 합계를 보여 주는 행과 행에 대한 합계를 보여 주는 열을 추가할 수 있습니다. 다음 그림에서는 행 및 열 그룹과 합계 행 및 열이 모두 있는 행렬을 보여 줍니다.  
   
- ![테이블 릭 스 데이터 영역](../../reporting-services/report-design/media/rs-tablixparts.gif "테이블 릭 스 데이터 영역")  
+ ![테이블릭스 데이터 영역](../../reporting-services/report-design/media/rs-tablixparts.gif "테이블릭스 데이터 영역")  
   
 ### <a name="grouping-pane"></a>그룹화 창  
  그룹화 창에는 디자인 화면에서 현재 선택한 테이블릭스 데이터 영역에 대한 행 그룹과 열 그룹이 표시됩니다. 다음 그림에서는 이러한 테이블릭스 데이터 영역에 대한 그룹화 창을 보여 줍니다.  
   
- ![중첩 된 행 및 열 그룹에 대 한 그룹화 창을](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "중첩된 행 및 열 그룹이 그룹화 창")  
+ ![중첩 행 및 열 그룹에 대한 그룹화 창](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "중첩 행 및 열 그룹에 대한 그룹화 창")  
   
  행 그룹 창에는 부모 그룹인 Category와 자식 그룹인 Subcat이 표시됩니다. 열 그룹 창에는 부모 그룹인 Geography와 자식 그룹인 CountryRegion이 표시되고 Geography 그룹에 대한 인접 그룹인 Year 그룹도 표시됩니다. 행 그룹 창에서 Subcat 그룹을 선택하면 그룹 막대에서 주황색 음영이 진해지고 디자인 화면에서 해당 행 그룹 멤버 셀이 선택됩니다.  
   
@@ -94,7 +93,7 @@ ms.lasthandoff: 08/09/2017
   
  정보 데이터가 표시되는 테이블릭스 데이터 영역에서 세부 정보 그룹은 가장 안쪽에 있는 자식 그룹입니다. 세부 정보 그룹에 추가한 행은 이 테이블릭스 데이터 영역에 연결된 데이터 집합에 대한 쿼리 결과 집합에서 행마다 한 번씩 반복됩니다. 다음 그림에서는 렌더링된 보고서의 마지막 페이지를 보여 줍니다. 이 그림에서 최근 주문에 대한 마지막 정보 행과 부분합 행을 볼 수 있습니다.  
   
- ![미리 보기, 테이블, 그룹 합계와 마지막 행이](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "미리 보기, 테이블, 그룹 합계와 마지막 행")  
+ ![미리 보기, 그룹 합계와 마지막 행이 있는 테이블](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "미리 보기, 그룹 합계와 마지막 행이 있는 테이블")  
   
  테이블릭스 데이터 영역의 각 열에 대해서도 동일한 원칙이 적용됩니다. 예를 들어 열은 각 열 그룹 내부 또는 외부에 있으며 합계를 표시하기 위해 그룹 외부에 열을 추가합니다.  
   
@@ -103,7 +102,7 @@ ms.lasthandoff: 08/09/2017
  행과 열을 추가하거나 삭제하는 방법에 대한 단계별 지침은 [행 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) 및 [열 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="understanding-tablix-cells"></a>테이블릭스 셀 이해  
- 테이블릭스 셀은 테이블릭스 본문, 테이블릭스 행 또는 테이블릭스 열 그룹 영역, 테이블릭스 모퉁이라는 4개의 테이블릭스 영역 중 하나에 속합니다. 각 셀에는 데이터 집합의 값이 표시될 수 있지만 각 셀의 기본 기능은 그 위치에 따라 결정됩니다. 테이블릭스 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)을 참조하세요.  
+ 테이블릭스 셀은 테이블릭스 본문, 테이블릭스 행 또는 테이블릭스 열 그룹 영역, 테이블릭스 모퉁이라는 4개의 테이블릭스 영역 중 하나에 속합니다. 각 셀에는 데이터 집합의 값이 표시될 수 있지만 각 셀의 기본 기능은 그 위치에 따라 결정됩니다. 테이블릭스 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)를 참조하세요.  
   
  기본적으로 테이블릭스 행 및 열 그룹 영역의 셀은 그룹 멤버를 나타냅니다. 그룹 멤버는 보고서 정의의 여러 트리 구조로 구성됩니다. 행 그룹 계층은 가로로 확장되며 열 그룹 구조는 세로로 확장됩니다. 이러한 셀은 그룹을 만들 때 자동으로 추가되며 런타임에 그룹에 대해 고유한 값을 표시합니다.  
   
@@ -121,7 +120,7 @@ ms.lasthandoff: 08/09/2017
   
  테이블릭스 본문 영역에서 셀은 가로로만 병합할 수 있습니다. 세로로 셀을 병합하는 것은 지원되지 않습니다.  
   
- 자세한 내용은 [데이터 영역의 셀 병합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 영역의 셀 병합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
  이전에 병합했던 셀을 분할할 수 있습니다. 셀을 여러 행에 걸쳐 세로로 분할하거나 여러 열에 걸쳐 가로로 분할할 수 있습니다. 셀을 셀 블록으로 분할하려면 먼저 셀을 가로로 분할한 다음 필요한 만큼 세로로 분할합니다.  
   
@@ -129,4 +128,3 @@ ms.lasthandoff: 08/09/2017
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

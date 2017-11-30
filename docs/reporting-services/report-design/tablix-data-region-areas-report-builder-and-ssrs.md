@@ -1,5 +1,5 @@
 ---
-title: "테이블 릭 스 데이터 영역의 영역 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "테이블릭스 데이터 영역(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 61ec2adb507793813554c1ec8c07418354f9e549
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>테이블릭스 데이터 영역(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 테이블릭스 데이터 영역에는 테이블릭스 셀을 포함하는 다음 네 개의 영역이 있습니다.   
@@ -50,17 +49,16 @@ ms.lasthandoff: 08/09/2017
   
  다음 그림에서는 미리 보기에 있는 테이블릭스 데이터 영역을 보여 줍니다.  
   
- ![미리 보기, 테이블 릭 스 모퉁이, 행 및 열 그룹, 본문](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "미리 보기, 테이블 릭 스 모퉁이, 행 및 열 그룹, 본문")  
+ ![미리 보기, 테이블릭스 모퉁이, 행 및 열 그룹, 본문](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "미리 보기, 테이블릭스 모퉁이, 행 및 열 그룹, 본문")  
   
  행 그룹 영역은 Clothing 및 Components의 두 범주 그룹 인스턴스를 표시합니다. 열 그룹은 North America의 지리 그룹 인스턴스를 Canada(CA) 및 United States(US)의 두 중첩된 국가/지역 그룹 인스턴스와 함께 표시합니다. 또한 인접 열은 2003 및 2004의 두 연도 그룹 인스턴스를 표시합니다. Total 열 행은 행 합계를 표시하고, 범주 그룹마다 반복되는 합계 행은 하위 범주 합계를 보여 주고, 총합계 행은 데이터 영역 전체의 범주 합계를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)   
- [테이블 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [행렬 만들기](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [목록을 사용 하 여 송장 및 폼 만들기](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [목록을 사용하여 송장 및 양식 만들기](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

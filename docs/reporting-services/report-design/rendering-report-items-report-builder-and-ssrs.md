@@ -1,5 +1,5 @@
 ---
-title: "렌더링 (보고서 작성기 및 SSRS) 보고서 항목 | Microsoft Docs"
+title: "보고서 항목 렌더링(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a254c48e1639c95b1d93f180f1fdd00326a79ae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 53bce307d8817f538e3ee1a9fd4add0e156b2b1d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>보고서 항목 렌더링(보고서 작성기 및 SSRS)
   보고서 항목의 숫자, 크기 및 위치는 렌더러에서 보고서 본문에 페이지를 매기는 방식에 영향을 줍니다. 아래에는 다양한 보고서 항목이 렌더링되는 방식에 대해 설명되어 있습니다.  
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
  보고서 항목을 렌더링하는 경우 다음과 같은 표시 유형 규칙이 적용됩니다.  
   
--   보고서 항목과 해당 내용이 항상  숨겨져 있는 경우, 즉 식에 의해 숨겨진 경우 또는 다른 보고서 항목을 클릭하여 표시 유형을 전환할 수 있는 경우가 아닐 때, 해당 항목의 오른쪽 또는 아래쪽에 있는 다른 보고서 항목은 이러한 빈 공간을 채우기 위해 이동하지 않습니다. 예를 들어 사각형 및 사각형에 포함된 이미지가 숨겨져 있는 경우 사각형 오른쪽에서 시작되는 보고서 항목이 왼쪽으로 이동하여 빈 공간을 채우지는 않습니다. 사각형이 차지하는 공간은 그대로 보존됩니다.  
+-   보고서 항목과 해당 내용이 항상 숨겨져 있는 경우, 즉 식에 의해 숨겨진 경우 또는 다른 보고서 항목을 클릭하여 표시 유형을 전환할 수 있는 경우가 아닐 때, 해당 항목의 오른쪽 또는 아래쪽에 있는 다른 보고서 항목은 이러한 빈 공간을 채우기 위해 이동하지 않습니다. 예를 들어 사각형 및 사각형에 포함된 이미지가 숨겨져 있는 경우 사각형 오른쪽에서 시작되는 보고서 항목이 왼쪽으로 이동하여 빈 공간을 채우지는 않습니다. 사각형이 차지하는 공간은 그대로 보존됩니다.  
   
 -   보고서 항목과 해당 내용이 조건부로 숨겨져 있는 경우, 즉 식에 의해 조건부로 숨겨진 경우 또는 다른 보고서 항목을 클릭하여 표시 유형을 전환할 수 있는 경우, 항목이 숨겨지면 해당 항목의 오른쪽 또는 아래쪽에 있는 다른 보고서 항목이 왼쪽으로 이동하여 공간을 채웁니다.  
   
@@ -111,10 +110,9 @@ ms.lasthandoff: 08/09/2017
  하위 보고서에 대한 자세한 내용은 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Reporting services&#40;의 페이지 매김 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [렌더링 동작 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램 &#40;에 대 한 대화형 기능 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

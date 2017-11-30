@@ -13,17 +13,16 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80f13a760e8176eb0d0bafbac29cf162f473caf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server용 도움말 뷰어 및 오프라인 콘텐츠
   
@@ -66,7 +65,7 @@ ms.lasthandoff: 09/08/2017
   
    >[!IMPORTANT] 
    >SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 프로세스 중에 도움말 뷰어 응용 프로그램이 중단(정지)될 수 있습니다. 이 문제를 해결하려면 다음을 수행하세요. 이 문제에 대한 자세한 내용은 [Visual Studio 도움말 뷰어가 중단됨](https://msdn.microsoft.com/library/mt654096.aspx)을 참조하세요.  
-   >>메모장에서 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en US.settings 파일을 열고 다음 코드의 날짜를 미래의 날짜로 변경합니다. 이 파일은 Visual Studio를 설치한 경우에만 로컬 컴퓨터에서 사용할 수 있습니다. 
+   >>메모장에서 %LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settings 파일을 열고 다음 코드의 날짜를 미래의 날짜로 변경합니다. 이 파일은 Visual Studio를 설치한 경우에만 로컬 컴퓨터에서 사용할 수 있습니다. 
    >>>Cache LastRefreshed="12/31/2017 00:00:00"  
   
     왼쪽 창의 목차가 자동으로 업데이트되어 추가한 설명서가 포함됩니다.  
@@ -139,7 +138,5 @@ F1 키를 누르면 해당 항목이 온라인으로 표시됩니다. 이 항목
 또한 도움말 뷰어는 프록시 설정을 지원하지 않고 ISO 형식을 지원하지 않습니다. 
 
 ## <a name="additional-information"></a>추가 정보
-[Microsoft 도움말 뷰어 - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Microsoft 도움말 뷰어 - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

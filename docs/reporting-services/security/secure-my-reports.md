@@ -17,30 +17,29 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 162f43fc4f81c228d90839c75d1959d71eff9322
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8c612e899a4ec7be7879d16f03f2a9528addb316
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-my-reports"></a>내 보고서 보안 설정
-  내 보고서 기능은 보고서 작업을 위한 사용자 관리 작업 영역을 제공합니다. 원래 용도대로 사용하려면 내 보고서 폴더는 여러 사용자가 사용할 수 있는 다른 폴더보다 권한 제한이 적어야 합니다. 다른 폴더의 보고서를 보고 실행할 수 있는 권한만 있는 사용자가 내 보고서 폴더와 자신이 소유한 내용을 관리하려면 확장된 권한이 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 이 용도에 맞는 특별한 역할 할당과 역할 정의를 제공합니다.  
+  내 보고서 기능은 보고서 작업을 위한 사용자 관리 작업 영역을 제공합니다. 원래 용도대로 사용하려면 내 보고서 폴더는 여러 사용자가 사용할 수 있는 다른 폴더보다 권한 제한이 적어야 합니다. 다른 폴더의 보고서를 보고 실행할 수 있는 권한만 있는 사용자가 내 보고서 폴더와 자신이 소유한 내용을 관리하려면 확장된 권한이 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 이 용도에 맞는 특별한 역할 할당과 역할 정의를 제공합니다.  
   
 > [!NOTE]  
->  내 보고서는 보고서 관리자에서만 사용할 수 있으며 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
+>  내 보고서는 보고서 관리자에서만 사용할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서는 사용할 수 없습니다.  
   
 ## <a name="role-assignment-for-my-reports"></a>내 보고서에 대한 역할 할당  
  내 보고서에 대한 역할 할당에는 미리 설정된 요소가 있으며 내 보고서 폴더를 활성화하는 각 사용자에 대해 자동으로 생성됩니다. 보고서 서버가 자동으로 보안을 할당하도록 하면 관리자가 각각의 내 보고서 사용자에 대해 액세스할 수 있도록 설정하지 않아도 되므로 내 보고서를 광범위하게 사용하는 조직에 특히 유용합니다.  
   
  **내 보고서** 역할 할당은 다음과 같은 요소로 구성됩니다.  
   
--   사용자의 사용자 폴더에 있는 내 보고서 폴더\\*\<사용자 이름 >*\My 보고서 폴더입니다.  
+-   사용자 폴더\\*\<username>*\내 보고서 폴더에 있는 사용자의 내 보고서 폴더  
   
 -   내 보고서 폴더 활성화 시 결정되는 사용자 계정. 사용자가 보고서 관리자에서 내 보고서 폴더를 클릭하거나 보고서 디자이너에서 내 보고서 폴더에 보고서를 게시할 때 폴더가 활성화됩니다. 이 폴더는 사용자가 내 보고서 링크에 대한 속성을 요청할 때도 활성화됩니다.  
   
@@ -63,7 +62,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)   
  [보안 폴더](../../reporting-services/security/secure-folders.md)   
- [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

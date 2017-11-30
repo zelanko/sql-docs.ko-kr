@@ -1,27 +1,24 @@
 ---
-title: "Reporting Services 모바일 보고서에 대 한 데이터를 준비 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services 모바일 보고서에 대한 데이터 준비 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfde173f8848326fba857808e15448385f8c8322
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5117c3860311eac93b86b51a71f07333155a04da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   
@@ -96,5 +93,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

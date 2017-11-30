@@ -18,20 +18,19 @@ helpviewer_keywords:
 - SAP NetWeaver Business Intelligence [Reporting Services], query designer
 - query designers [Reporting Services]
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0617201275bec8a2ff254d328f8105f18d6a35b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ff3f6d608b7ed0c4013d5a789a91c123b08ec8ae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 SAP NetWeaver  Business Intelligence 데이터 원본을 위한 MDX(Multidimensional Expression) 쿼리를 작성할 수 있는 그래픽 쿼리 디자이너를 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하며 이 창에서는 데이터 원본에 정의된 InfoCube, MultiProvider 또는 웹 사용이 가능한 쿼리에서 멤버를 끌어서 보고서 처리 시 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SAP NetWeaver Business Intelligence 데이터 원본을 위한 MDX(Multidimensional Expression) 쿼리를 작성할 수 있는 그래픽 쿼리 디자이너를 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하며 이 창에서는 데이터 원본에 정의된 InfoCube, MultiProvider 또는 웹 사용이 가능한 쿼리에서 멤버를 끌어서 보고서 처리 시 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  사용자는 쿼리를 작성하고 실행할 때 데이터 원본에 액세스합니다. 데이터 원본에 대해서는 읽기 전용 권한과 같이 최소한의 사용 권한을 부여해야 합니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="graphical-query-designer-in-design-mode"></a>디자인 모드의 그래픽 쿼리 디자이너  
  [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 데이터 원본을 사용하는 데이터 집합 쿼리를 편집할 경우 그래픽 쿼리 디자이너가 디자인 모드에서 열립니다. 다음 그림에서는 디자인 모드에서 표시되는 창을 해당 레이블과 함께 보여 줍니다.  
   
- ![쿼리 디자인 모드에서 MDX를 사용 하 여 디자이너](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "디자인 모드에서 MDX를 사용 하 여 쿼리 디자이너")  
+ ![디자인 모드의 MDX를 사용하는 쿼리 디자이너](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "디자인 모드의 MDX를 사용하는 쿼리 디자이너")  
   
  다음 표에서는 이 모드의 창을 나열합니다.  
   
@@ -62,15 +61,15 @@ ms.lasthandoff: 08/09/2017
 |단추|Description|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 이 데이터 원본 유형에는 사용할 수 없습니다.|  
-|**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
-|![데이터 집합의 필드 새로 고침](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "데이터 집합의 필드 새로 고침")|데이터 원본의 메타데이터를 새로 고칩니다.|  
+|**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.|  
+|![데이터 집합 필드 새로 고침](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "데이터 집합 필드 새로 고침")|데이터 원본의 메타데이터를 새로 고칩니다.|  
 |![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|**계산 멤버 작성기** 대화 상자를 표시합니다.|  
 |![빈 셀 표시 설정/해제](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|  
 |![쿼리 자동 실행](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|데이터 창에서 열을 삭제하는 경우와 같이 변경 내용이 있을 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|  
 |![삭제](../../reporting-services/report-data/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
-|![쿼리 매개 변수 대화 상자에 대 한 아이콘](../../reporting-services/report-data/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자에 대 한 아이콘")|**변수** 대화 상자를 표시합니다. 쿼리 큐브만 변수를 지원하기 때문에 이 단추는 선택한 큐브가 쿼리 큐브인 경우에만 사용할 수 있습니다. 기본값을 변수에 할당할 경우 해당 보고서 매개 변수가 만들어집니다.|  
+|![쿼리 매개 변수 대화 상자 아이콘](../../reporting-services/report-data/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**변수** 대화 상자를 표시합니다. 쿼리 큐브만 변수를 지원하기 때문에 이 단추는 선택한 큐브가 쿼리 큐브인 경우에만 사용할 수 있습니다. 기본값을 변수에 할당할 경우 해당 보고서 매개 변수가 만들어집니다.|  
 |![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|  
-|![쿼리를 취소](../../reporting-services/report-data/media/rsqdicon-cancel.gif "쿼리 취소")|쿼리를 취소합니다.|  
+|![쿼리 취소](../../reporting-services/report-data/media/rsqdicon-cancel.gif "쿼리 취소")|쿼리를 취소합니다.|  
 |![디자인 모드로 전환](../../reporting-services/media/rsqdicon-designmode.gif "디자인 모드로 전환")|디자인 모드와 쿼리 모드 사이를 전환합니다.|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>쿼리 모드의 그래픽 쿼리 디자이너  
@@ -103,15 +102,14 @@ ms.lasthandoff: 08/09/2017
   
 -   **계산 멤버 추가** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **빈 셀 표시** (![빈 셀 표시 설정/해제](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))  
+-   **빈 셀 표시**(![빈 셀 표시 설정/해제](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))  
   
--   **자동 실행** (![쿼리 자동 실행](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "쿼리 자동 실행"))  
+-   **자동 실행**(![쿼리 자동 실행](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "쿼리 자동 실행"))  
   
 -   **삭제** (![삭제](../../reporting-services/report-data/media/rsqdicon-delete.gif "삭제"))  
   
 ## <a name="see-also"></a>관련 항목:  
- [공유 데이터 집합 또는 포함 된 데이터 집합 &#40; 만들기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

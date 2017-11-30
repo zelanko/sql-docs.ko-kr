@@ -1,5 +1,5 @@
 ---
-title: "꺾은선형 차트 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "꺾은선형 차트(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b309753291bfae573be58b124c033d021adb254c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5fd410e360eac7fa3b7bda2a4b63abee459740d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>꺾은선형 차트(보고서 작성기 및 SSRS)
   꺾은선형 차트에서 계열은 단일 선으로 연결된 일련의 점으로 표시됩니다. 꺾은선형 차트는 연속적인 일정 기간 동안 발생하는 많은 양의 데이터를 표시하는 데 사용됩니다. 꺾은선형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **단계별 선형**. 일반적인 선 대신 단계별 선을 사용하는 꺾은선형 차트입니다. 단계별 선형 차트에서는 사다리나 계단의 층과 같은 모양으로 선을 사용하여 점을 연결합니다.  
   
--   **스파크라인 차트**. 테이블 또는 테이블릭스 셀에 선 계열만 표시하는 꺾은선형 차트의 변형입니다. 자세한 내용은 [스파크라인 및 데이터 막대 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
+-   **스파크라인 차트**. 테이블 또는 테이블릭스 셀에 선 계열만 표시하는 꺾은선형 차트의 변형입니다. 자세한 내용은 [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="data-considerations-for-line-charts"></a>꺾은선형 차트의 데이터 고려 사항  
   
@@ -53,12 +52,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [가로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [세로 막대형 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [차트 종류 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [영역형 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)   
- [빈 데이터 요소 및 Null 데이터 요소에 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [영역형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)   
+ [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

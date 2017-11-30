@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - SQL Server Reporting Services, extending
 - extensions [Reporting Services], about extensions
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - Reporting Services, extending
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 92ee52d36b171d76a3c3cb0c6eb73f500c3f506c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 확장 프로그램
-  확장성을 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 모듈식 아키텍처를 디자인했습니다. 다양한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소에서 사용되는 확장 프로그램을 쉽게 개발, 설치 및 관리할 수 있도록 관리 코드 API를 사용할 수 있습니다. 개인 만들 수 있습니다 또는 공유 어셈블리를 사용 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 새로 추가 하 고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개발 중인 비즈니스 요구를 충족 하는 기능입니다.  
+  확장성을 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 모듈식 아키텍처를 디자인했습니다. 다양한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소에서 사용되는 확장 프로그램을 쉽게 개발, 설치 및 관리할 수 있도록 관리 코드 API를 사용할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 전용 또는 공유 어셈블리를 만들 수 있으며 끊임없이 변하는 업무상의 요구에 맞게 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 추가할 수도 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 고유한 확장성 아키텍처를 통해 개발자는 제품 및 해당 구성 요소의 특정 기능을 확장할 수 있습니다. 현재 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 데이터 처리 기능을 확장할 수 있도록 폭넓은 지원이 제공됩니다. 데이터 처리 API에는 개발자가 추가 데이터 처리를 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 구축하는 데 사용할 수 있는 친숙한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 공급자 구문 및 규칙이 포함됩니다. 이러한 데이터 처리 확장 프로그램은 보고서 서버와 보고서 디자이너 모두에 기능을 추가하여 사용자 지정 데이터가 보고서에 완벽하게 통합되도록 합니다.  
   
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/12/2017
  [보안 확장 프로그램 구현](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램을 구현하기 위한 요구 사항 및 단계를 설명합니다.  
   
- [Reporting Services 확장 프로그램 라이브러리](../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 확장 라이브러리](../../reporting-services/extensions/reporting-services-extension-library.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장성 기능용 확장 API 라이브러리에 대한 프로그래밍 참조가 포함되어 있습니다.  
   
   

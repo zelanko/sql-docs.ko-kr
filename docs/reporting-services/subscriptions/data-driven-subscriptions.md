@@ -14,17 +14,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e4ffac2b4342d0f8b3c30a9d76cdc7b0ecf098c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cd7d94c80d9198348f0f91ec39b7296d6602ef02
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-driven-subscriptions"></a>데이터 기반 구독
   데이터 기반 구독을 통해 런타임에 외부 데이터 원본에서 검색되는 동적 구독 데이터를 사용할 수 있습니다. 데이터 기반 구독에서는 구독이 정의될 때 사용자가 지정한 정적 텍스트와 기본값을 사용할 수도 있습니다. 데이터 기반 구독을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
@@ -66,8 +65,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [데이터 기반 구독 페이지 &#40; 만들기 보고서 관리자 &#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
- [캐시 &#40; 미리 로드 보고서 관리자 &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [데이터 기반 구독 만들기 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [캐시 사전 로드&#40;보고서 관리자&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   
-

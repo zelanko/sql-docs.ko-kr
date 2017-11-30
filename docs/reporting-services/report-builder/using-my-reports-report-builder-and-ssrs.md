@@ -1,5 +1,5 @@
 ---
-title: "내 보고서 (보고서 작성기 및 SSRS)를 사용 하 여 | Microsoft Docs"
+title: "내 보고서 사용(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: fc31861f7eef73a2ddb88faa4aa59b1bf289d2ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3f8bf6c65bd022103f50704c35b2bae7556e247c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>내 보고서 사용(보고서 작성기 및 SSRS)
   기본 모드로 구성된 보고서 서버에서 내 보고서 폴더는 소유한 보고서를 저장하고 작업하는 데 사용할 수 있는 개인 작업 영역입니다. 다른 보고서 서버 폴더는 공용 폴더이며 일반적으로 사용자가 폴더 내용을 추가하거나 수정하려면 고급 사용 권한이 있어야 합니다. 이와는 달리 내 보고서 폴더는 사용자 관리 작업 영역입니다. 보고서와 폴더를 추가하거나 제거할 수 있으며 사용자 개인 설정을 사용하여 링크된 보고서를 저장할 수 있습니다.  
   
  개념적으로 내 보고서 폴더는 Windows 파일 시스템의 내 문서 폴더와 비슷합니다. 각 사용자가 내 보고서라는 폴더를 가지고 있더라도 액세스하는 폴더는 모두 다릅니다. 보고서 서버 관리자를 제외한 사용자는 다른 사용자가 소유한 내 보고서 폴더의 내용에 액세스할 수 없습니다.  
   
- 내 보고서 기능은 선택적이며 보고서 서버 관리자가 설정을 해제할 수 있습니다. 이 기능을 설정하면 홈 폴더에 내 보고서 폴더가 나타나며 보고서 관리자나 웹 브라우저를 사용하여 이 폴더에 액세스할 수 있습니다. 자세한 내용은 참조 [보고서 찾기 및 보기에서 보고서 관리자 &#40; 보고서 작성기 및 SSRS &#41; ](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ 내 보고서 기능은 선택적이며 보고서 서버 관리자가 설정을 해제할 수 있습니다. 이 기능을 설정하면 홈 폴더에 내 보고서 폴더가 나타나며 보고서 관리자나 웹 브라우저를 사용하여 이 폴더에 액세스할 수 있습니다. 자세한 내용은 [보고서 관리자에서 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)를 참조하세요.  
   
  SharePoint 통합 모드로 구성된 보고서 서버에는 내 보고서 폴더에 해당하는 폴더가 없습니다. 자세한 내용은 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -40,9 +39,9 @@ ms.lasthandoff: 09/27/2017
   
 -   링크된 개인 보고서를 만들어 내 보고서에 저장합니다. 일부 보고서는 링크로 연결할 수 없습니다. 자세한 내용은 [연결된 보고서 만들기](../../reporting-services/reports/create-a-linked-report.md)를 참조하세요.  
   
--   파일 시스템에서 보고서 정의 파일(.rdl), 보고서 모델 파일(.smdl) 또는 기타 파일을 업로드합니다. 모든 파일을 업로드할 수 있지만 보고서 서버에서는 파일 확장명이 .rdl 또는 .smdl인 보고서 파일만 처리합니다. 자세한 내용은 보고서 정의 "의 참조는 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) SQL Server 온라인 설명서의 및 [을 파일이 나 보고서 &#40; 업로드 보고서 관리자 &#41; ](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
+-   파일 시스템에서 보고서 정의 파일(.rdl), 보고서 모델 파일(.smdl) 또는 기타 파일을 업로드합니다. 모든 파일을 업로드할 수 있지만 보고서 서버에서는 파일 확장명이 .rdl 또는 .smdl인 보고서 파일만 처리합니다. 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 “보고서 정의” 및 [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)를 참조하세요.  
   
--   사용자 보고서를 만들어 내 보고서에 게시합니다. 자세한 내용은 참조 [보고서 디자인 보기 &#40; 보고서 작성기 &#41; ](../../reporting-services/report-builder/report-design-view-report-builder.md).  
+-   사용자 보고서를 만들어 내 보고서에 게시합니다. 자세한 내용은 [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)를 참조하세요.  
   
  일반적으로 내 보고서에 대한 사용 권한으로 폴더를 직접 관리할 수 있습니다. 그러나 사용자가 수행할 수 있는 태스크는 보고서 서버 관리자가 결정합니다. 사용 권한이 부족하여 내 보고서에서 작업할 수 없는 경우 보고서 서버 관리자에게 문의하십시오.  
   
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/27/2017
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

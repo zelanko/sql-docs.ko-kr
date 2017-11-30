@@ -1,5 +1,5 @@
 ---
-title: "PathName 속성 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "PathName 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- PathName Property
-apilocation:
-- reportingservices.mof
+apiname: PathName Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- PathName property
+helpviewer_keywords: PathName property
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7f4204f70941f42c97654f68923ce44b87ddc508
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ee1a853ecf936379331db202493a2560027ac864
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---pathname"></a>경로 이름-ConfigurationSetting 속성
+# <a name="configurationsetting-property---pathname"></a>ConfigurationSetting 속성 - PathName
   보고서 서버 인스턴스의 설치 경로를 지정합니다. 읽기 전용입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -56,4 +52,3 @@ public string PathName;
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

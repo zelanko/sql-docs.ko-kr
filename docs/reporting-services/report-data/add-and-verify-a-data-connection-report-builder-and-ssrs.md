@@ -1,5 +1,5 @@
 ---
-title: "추가 하 고 데이터 연결 (보고서 작성기 및 SSRS)를 확인 합니다. | Microsoft Docs"
+title: "데이터 연결 추가 및 확인(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f50d9023da6fb4498f159c6622ed1d6648ad57a5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 03275d32dab2341fc9e235285e8ff3ac1bff2a18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>데이터 연결 추가 및 확인(보고서 작성기 및 SSRS)
   보고서 작성기에서는 보고서 서버에 있는 공유 데이터 원본을 추가하거나 보고서에 대한 포함된 데이터 원본을 만들 수 있습니다. 보고서 디자이너에서 공유 데이터 원본이나 포함된 데이터 원본을 만들고 보고서 서버에 배포할 수 있습니다.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  이 이름은 로컬 보고서 정의에 저장됩니다. 이 이름은 보고서 서버에 있는 공유 데이터 원본의 이름이 아닙니다.  
   
-3.  **공유 연결 또는 보고서 모델 사용**을 선택합니다. 최근에 사용된 공유 데이터 원본과 보고서 모델의 목록이 나타납니다. 보고서 서버에서 하나를 선택하려면 **찾아보기** 를 클릭하고 공유 데이터 원본을 사용할 수 있는 보고서 서버의 폴더로 이동합니다.  
+3.  **공유 연결 또는 보고서 모델 사용**을 선택합니다. 최근에 사용된 공유 데이터 원본과 보고서 모델의 목록이 나타납니다. 보고서 서버에서 하나를 선택하려면 **찾아보기**를 클릭하고 공유 데이터 원본을 사용할 수 있는 보고서 서버의 폴더로 이동합니다.  
   
 4.  공유 데이터 원본을 선택한 다음 **열기**를 클릭합니다.  
   
@@ -70,9 +69,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [데이터 연결, 데이터 원본 및 보고서 작성기의 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
   
-

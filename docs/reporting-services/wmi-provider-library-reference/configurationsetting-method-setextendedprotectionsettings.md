@@ -1,5 +1,5 @@
 ---
-title: "SetExtendedProtectionSettings 메서드 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "SetExtendedProtectionSettings 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c40a79e943e9021e10eb321a45d3a14c0fce1582
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 89cf8238c21929b820d5d79d9b822ce192f5a7a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setextendedprotectionsettings"></a>SetExtendedProtectionSettings ConfigurationSetting 메서드
+# <a name="configurationsetting-method---setextendedprotectionsettings"></a>ConfigurationSetting 메서드 - SetExtendedProtectionSettings
   SetExtendedProtectionSettings 메서드는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일인 RSReportServer.config에서 RSWindowsExtendedProtectionLevel 및 RSWindowsExtendedProtectionScenario 속성을 설정하는 데 사용됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -67,13 +66,12 @@ public void SetExtendedProtectionSettings(
  ExtendedProtectionLevel을 설정하려면 사용자가 보고서 서버의 BUILTIN\Administrators 그룹의 멤버여야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [RSWindowsExtendedProtectionScenario 속성 &#40; WMI msreportserver_configurationsetting&#41;](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md)   
- [RSWindowsExtendedProtectionLevel 속성 &#40; WMI msreportserver_configurationsetting&#41;](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md)   
- [Reporting Services 인증에 대 한 확장 된 보호](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   
+ [RSWindowsExtendedProtectionScenario 속성&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md)   
+ [RSWindowsExtendedProtectionLevel 속성&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md)   
+ [Reporting Services 인증에 대한 확장된 보호](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

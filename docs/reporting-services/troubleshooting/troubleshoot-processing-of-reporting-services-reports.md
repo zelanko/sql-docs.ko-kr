@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8df3dd891b236ca295a4cc0deebdc5768d06dffa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a22c557ce2289c950edceff045b1c868d60ef677
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Reporting Services 보고서의 처리 문제 해결
 보고서 데이터가 검색되면 보고서 처리기는 데이터와 레이아웃 정보를 조합합니다. 식이 포함된 각 보고서 항목 속성은 조합된 데이터와 레이아웃의 컨텍스트에서 계산됩니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   
@@ -58,5 +57,4 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
 [오류 및 이벤트(Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

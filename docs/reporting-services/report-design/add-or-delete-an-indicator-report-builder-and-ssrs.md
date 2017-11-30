@@ -1,5 +1,5 @@
 ---
-title: "추가 또는 삭제 (보고서 작성기 및 SSRS) 표시기 | Microsoft Docs"
+title: "표시기 추가 또는 삭제(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a5e6007bafae601a4d0c9fad48a6c62af16d261f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>표시기 추가 또는 삭제(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 표시기는 단일 데이터 값의 상태를 한눈에 볼 수 있는 최소 계기입니다. 자세한 내용은 [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)를 참조하세요.  
@@ -80,4 +79,3 @@ ms.lasthandoff: 08/09/2017
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

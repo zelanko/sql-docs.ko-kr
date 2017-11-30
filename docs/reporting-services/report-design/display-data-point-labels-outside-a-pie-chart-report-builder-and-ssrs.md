@@ -1,5 +1,5 @@
 ---
-title: "원형 차트 (보고서 작성기 및 SSRS) 외부 표시 데이터 요소 레이블 | Microsoft Docs"
+title: "원형 차트 외부에 데이터 요소 레이블 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2faa5b4e48f86c331ee45913844dc50c54c89e63
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 199c77966ac02e8a7c293c0b9245b6e0249e3ac7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>원형 차트 외부에 데이터 요소 레이블 표시(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 원형 차트 레이블 지정은 몇 개의 데이터 조각에만 레이블을 표시하도록 최적화되어 있습니다. 원형 차트에 조각이 너무 많을 경우 레이블이 겹쳐서 표시될 수 있습니다. 한 가지 해결 방법은 원형 차트 외부에 레이블을 표시하여 이름이 긴 데이터 레이블에 대한 공간을 더 확보하는 것입니다. 그래도 여전히 레이블이 겹칠 경우 3D를 설정하여 더 많은 공간을 만들 수 있습니다. 이렇게 하면 원형 차트의 지름이 줄어 차트 주위에 더 많은 공간이 확보됩니다.  
@@ -60,9 +59,8 @@ ms.lasthandoff: 08/09/2017
 4.  레이블을 위한 공간을 더 확보하면서 차트를 계속 2차원으로 표시하려면 **회전** 및 **기울기** 속성을 **0**으로 설정합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [원형 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [원형 차트 &#40;에서 작은 조각 수집 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [원형 차트 &#40;에서 백분율 값 표시 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [원형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [원형 차트에서 작은 조각 수집&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [원형 차트에서 백분율 값 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   
-

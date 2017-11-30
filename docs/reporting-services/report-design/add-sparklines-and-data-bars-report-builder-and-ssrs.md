@@ -1,5 +1,5 @@
 ---
-title: "스파크 라인과 데이터 막대 (보고서 작성기 및 SSRS)를 추가 합니다. | Microsoft Docs"
+title: "스파크라인 및 데이터 막대 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9f084fc55a0f3011a40c6f2d8a2cfcdf61dc9f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 211700a96c3b38ed19977a02ba35743eb4eccc48
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>스파크라인 및 데이터 막대 추가(보고서 작성기 및 SSRS)
   스파크라인과 데이터 막대는 불필요한 정보는 거의 없이 많은 정보를 제공하는 작은 여분의 차트입니다. 자세한 내용은 [스파크라인 및 데이터 막대 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
@@ -56,4 +55,3 @@ ms.lasthandoff: 08/09/2017
  [테이블 또는 행렬에서 차트의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   
-

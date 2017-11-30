@@ -1,5 +1,5 @@
 ---
-title: "식 (보고서 작성기 및 SSRS)의 연산자 | Microsoft Docs"
+title: "식의 연산자(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 6444394f781003b7a2c3b508ed1959eb0b565eea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 35e702d0d1944cd5e7f2b7120da07e272f30cf70
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>식의 연산자(보고서 작성기 및 SSRS)
   연산자는 식에서 한 개 이상의 항목에 적용되는 동작을 나타내는 기호입니다. 식에서 지원되는 연산자의 범주는 산술 연산자, 비교 연산자, 연결 연산자, 논리 또는 비트 연산자, 비트 시프트 연산자입니다.  
@@ -85,9 +85,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [식 대화 상자](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
- [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [식 &#40;의 데이터 형식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [식 대화 상자 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
+ [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [식 대화 상자&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
   
   

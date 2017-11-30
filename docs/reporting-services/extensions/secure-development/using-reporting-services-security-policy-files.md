@@ -1,5 +1,5 @@
 ---
-title: "보안 정책 파일을 서비스 보고를 사용 하 여 | Microsoft Docs"
+title: "Reporting Services 보안 정책 파일 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - CodeGroup elements
@@ -21,22 +20,22 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Reporting Services 보안 정책 파일 사용
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 설치 중에 파일 시스템으로 복사되는 세 개의 구성 파일에 구성 요소 보안 정책 정보를 저장합니다. 이러한 구성 파일에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 코드 어셈블리에 대한 내부용 보안 정책과 사용자 정의 보안 정책의 조합이 들어 있을 수 있습니다. 세 개의 구성 파일에서 보안 개체 구성에 해당 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: 보고서 서버 및 Windows 서비스, 보고서 관리자 웹 응용 프로그램 및 보고서 디자이너 미리 보기 창입니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 설치 중에 파일 시스템으로 복사되는 세 개의 구성 파일에 구성 요소 보안 정책 정보를 저장합니다. 이러한 구성 파일에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 코드 어셈블리에 대한 내부용 보안 정책과 사용자 정의 보안 정책의 조합이 들어 있을 수 있습니다. 세 개의 구성 파일은 보고서 서버 및 Windows 서비스, 보고서 관리자 웹 응용 프로그램, 보고서 디자이너 미리 보기 창과 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 세 개 보안 개체 구성 요소에 해당합니다.  
   
 > [!NOTE]  
->  두 개의 모드에 대 한 보고서 디자이너 미리 보기는: 보고서 프로젝트를 시작할 때 실행 되는 팝업 미리 보기 창과 미리 보기 탭 **DebugLocal** 모드입니다. **미리 보기** 탭 보안 개체 구성 요소가 아니며 보안 정책 설정을 적용 하지 않습니다. 미리 보기 창은 보고서 서버 기능을 시뮬레이션하기 위한 것이므로 보고서 디자이너에서 사용자 지정 어셈블리 및 사용자 지정 확장 프로그램을 사용하기 위해 사용자나 관리자가 수정해야 하는 정책 구성 파일을 포함합니다.  
+>  보고서 디자이너에는 보고서 프로젝트를 **DebugLocal** 모드에서 시작할 때 실행되는 팝업 미리 보기 창과 미리 보기 탭이라는 두 개의 미리 보기 모드가 있습니다. **미리 보기** 탭은 보안 개체 구성 요소가 아니며 보안 정책 설정을 적용하지 않습니다. 미리 보기 창은 보고서 서버 기능을 시뮬레이션하기 위한 것이므로 보고서 디자이너에서 사용자 지정 어셈블리 및 사용자 지정 확장 프로그램을 사용하기 위해 사용자나 관리자가 수정해야 하는 정책 구성 파일을 포함합니다.  
   
  보안 정책 구성 파일에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 어셈블리에 대한 보안 클래스 정보, 기본 명명된 권한 집합 및 코드 그룹이 포함되어 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 정책 구성 파일은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 컴퓨터 및 엔터프라이즈 수준 정책과 관련된 코드 그룹 계층 및 권한 집합을 결정하는 Security.config 파일과 유사합니다. 이 파일의 위치는 C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config입니다.  
   
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/12/2017
   
 |파일 이름|위치(기본 설치)|Description|  
 |---------------|---------------------------------------|-----------------|  
-|rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting services\reportserver 폴더|보고서 서버의 정책 구성 파일입니다. 보고서가 보고서 서버에 배포되면 이러한 보안 정책은 주로 보고서 식 및 사용자 지정 어셈블리에 영향을 줍니다. 이 정책 파일은 보고서 서버에 배포된 사용자 지정 데이터, 배달, 렌더링 및 보안 확장 프로그램에도 영향을 줍니다.|  
+|rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|보고서 서버의 정책 구성 파일입니다. 보고서가 보고서 서버에 배포되면 이러한 보안 정책은 주로 보고서 식 및 사용자 지정 어셈블리에 영향을 줍니다. 이 정책 파일은 보고서 서버에 배포된 사용자 지정 데이터, 배달, 렌더링 및 보안 확장 프로그램에도 영향을 줍니다.|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|보고서 관리자의 정책 구성 파일입니다. 이러한 보안 정책은 사용자 지정 배달을 위한 구독 사용자 인터페이스 확장 프로그램과 같이 보고서 관리자를 확장하는 모든 어셈블리에 영향을 줍니다.|  
 |rspreviewpolicy.config|C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies|보고서 디자이너의 독립 실행형 미리 보기 정책 구성 파일입니다. 이러한 보안 정책은 미리 보기 및 개발 중에 보고서에 사용되는 사용자 지정 어셈블리 및 보고서 식에 영향을 줍니다. 이러한 정책은 보고서 디자이너에 배포된 데이터 처리 확장 프로그램과 같은 사용자 지정 확장 프로그램에도 영향을 줍니다.|  
   

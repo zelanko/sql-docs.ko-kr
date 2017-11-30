@@ -1,5 +1,5 @@
 ---
-title: "DataSources 및 DataSets 컬렉션 참조 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "DataSources 및 DataSets 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a1e556a8c6ac712d61d262c4d96993a9ab3ecf11
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 557ea9ee2c43822c699d6c2d855d5ab6c1a980ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>기본 제공 컬렉션-DataSources 및 DataSets 참조 (보고서 작성기)
+# <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>기본 제공 컬렉션 - DataSources 및 데이터 집합 참조(보고서 작성기)
   **DataSources** 컬렉션은 보고서에 사용되는 모든 데이터 원본을 나타냅니다. 마찬가지로 **DataSets** 컬렉션은 보고서의 모든 데이터 원본에 대한 모든 데이터 집합을 나타냅니다. **보고서 데이터** 창을 사용하여 참조하는 데이터 원본 아래에 구성된 보고서 데이터 집합을 계층적으로 볼 수 있습니다. 이러한 컬렉션에 대한 참조를 추가할 경우 보고서를 미리 볼 때 값이 표시되지 않습니다. 이러한 컬렉션은 보고서가 보고서 서버에 게시된 다음에만 사용할 수 있습니다.  
   
 > [!NOTE]  
@@ -49,8 +48,7 @@ ms.lasthandoff: 08/09/2017
  식을 사용하여 데이터 집합에 포함된 쿼리를 정의할 수 있습니다. 이 기능을 사용하면 사용자의 입력, 다른 데이터 집합의 데이터 또는 다른 변수를 기반으로 쿼리가 변경되는 보고서를 디자인할 수 있습니다. 쿼리에 대한 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

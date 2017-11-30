@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 역할 작업 vs. SharePoint 그룹 사용 권한 | Microsoft Docs"
+title: "Reporting Services 역할-작업 vs. SharePoint 그룹-사용 권한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -19,19 +19,18 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: dfd05ee367b083d2e7a159cbd659a94edd743886
 ms.openlocfilehash: b1ac3cd31061a749a035c9f4feb6ceef8bdebcd3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 역할 작업 vs. SharePoint 그룹 사용 권한
+# <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 역할-작업 vs. SharePoint 그룹-사용 권한
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드의 역할 및 태스크 기반 권한 부여 기능과 SharePoint 제품의 보안 기능을 비교해서 보여줍니다. 이 항목에서는 역할, 태스크, SharePoint 그룹, 사용 권한 수준 및 사용 권한의 용어와 특징을 비교합니다.  
   
 ||  
@@ -110,10 +109,9 @@ ms.lasthandoff: 11/07/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대 한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [역할 정의](../../reporting-services/security/role-definitions.md)   
  [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
-

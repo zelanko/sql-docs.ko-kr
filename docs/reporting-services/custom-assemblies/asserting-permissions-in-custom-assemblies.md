@@ -1,5 +1,5 @@
 ---
-title: "사용자 지정 어셈블리에서 권한 어설션 | Microsoft Docs"
+title: "사용자 지정 어셈블리에서 사용 권한 어설션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - secure calls [Reporting Services]
 - custom assemblies [Reporting Services], permissions
@@ -21,30 +20,30 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: dc3e6e84c3f0a70a3c794b5cfd803e228e5dcce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: e98c186e950b5f4186aea4057fb63c0f27eaf1b3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>사용자 지정 어셈블리에서 권한 어설션
-  기본적으로 사용자 지정 어셈블리 코드는 제한 된으로 실행 **실행** 사용 권한 집합입니다. 경우에 따라 보안 시스템 내에서 보호된 리소스(파일, 레지스트리 등)에 대한 보안 호출을 하는 사용자 지정 어셈블리를 구현하고자 할 수 있습니다. 이렇게 하려면 다음 작업을 수행해야 합니다.  
+  기본적으로 사용자 지정 어셈블리 코드는 제한된 **Execution** 권한 집합으로 실행됩니다. 경우에 따라 보안 시스템 내에서 보호된 리소스(파일, 레지스트리 등)에 대한 보안 호출을 하는 사용자 지정 어셈블리를 구현하고자 할 수 있습니다. 이렇게 하려면 다음 작업을 수행해야 합니다.  
   
-1.  코드에서 보안 호출을 하는 데 필요한 정확한 권한을 식별합니다. 이 메서드는 일부의 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 라이브러리에이 정보는 메서드 설명서에 포함 되어야 합니다.  
+1.  코드에서 보안 호출을 하는 데 필요한 정확한 권한을 식별합니다. 이 메서드가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 라이브러리의 일부인 경우 이 정보는 메서드 설명서에 포함되어 있습니다.  
   
-2.  사용자 지정 어셈블리에 필요한 권한을 부여하기 위해 보고서 서버 정책 구성 파일을 수정합니다. 보안 정책 구성 파일에 대 한 자세한 내용은 참조 [를 사용 하 여 Reporting Services 보안 정책 파일](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)합니다.  
+2.  사용자 지정 어셈블리에 필요한 권한을 부여하기 위해 보고서 서버 정책 구성 파일을 수정합니다. 보안 정책 구성 파일에 대한 자세한 내용은 [Reporting Services 보안 정책 파일 사용](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.  
   
-3.  필요한 권한을 보안 호출이 이루어지는 메서드의 일부로 어설션합니다. 보고서 서버에서 호출 하는 사용자 지정 어셈블리 코드를 실행 하는 보고서 식 호스트 어셈블리의 일부인 때문에 이것이 필요 **실행** 기본적으로 사용 권한. **실행** 사용 권한 집합을 사용 하면 코드를 실행 하려면 있지만 보호 된 리소스를 사용할 수는 없습니다.  
+3.  필요한 권한을 보안 호출이 이루어지는 메서드의 일부로 어설션합니다. 보고서 서버에서 호출되는 사용자 지정 어셈블리 코드는 보고서 식 호스트 어셈블리의 일부로서 기본적으로 **Execution** 권한을 사용하여 실행되므로 이 작업이 필요합니다. **Execution** 권한 집합을 통해 코드를 실행할 수 있지만 보호된 리소스는 사용할 수 없습니다.  
   
-4.  사용 하 여 사용자 지정 어셈블리 표시 **AllowPartiallyTrustedCallersAttribute** 강력한 이름의 서명 된 경우. 사용자 지정 어셈블리는 기본적으로 부여 되지 않은 있는 보고서 식 호스트 어셈블리의 일부인 보고서 식에서 호출 되므로이 작업이 필요 **FullTrust**; "부분적으로 신뢰할 수 있는" 호출자 즉 합니다. 자세한 내용은 참조 [이름의 사용자 지정 어셈블리](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md)합니다.  
+4.  강력한 이름으로 서명된 경우 사용자 지정 어셈블리를 **AllowPartiallyTrustedCallersAttribute**로 표시합니다. 사용자 지정 어셈블리는 기본적으로 **FullTrust**가 부여되지 않는(즉, "부분적으로 신뢰할 수 있는" 호출자) 보고서 식 호스트 어셈블리의 일부인 보고서 식에서 호출되므로 이 작업이 필요합니다. 자세한 내용은 [강력한 이름의 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md)을 참조하세요.  
   
 ## <a name="implementing-a-secure-call"></a>보안 호출 구현  
- 정책 구성 파일을 수정하여 어셈블리별 권한을 부여할 수 있습니다. 예를 들어, 통화 변환을 처리하도록 사용자 지정 어셈블리를 작성하는 경우 파일에서 현재 통화 환율을 읽어야 합니다. 환율 정보를 검색 하려면는 추가 보안 권한을 추가 해야 **FileIOPermission**, 권한 집합 어셈블리에 있습니다. 정책 구성 파일에서 다음 추가 항목을 입력할 수 있습니다.  
+ 정책 구성 파일을 수정하여 어셈블리별 권한을 부여할 수 있습니다. 예를 들어, 통화 변환을 처리하도록 사용자 지정 어셈블리를 작성하는 경우 파일에서 현재 통화 환율을 읽어야 합니다. 환율 정보를 검색하려면 어셈블리에 대한 권한 집합에 추가 보안 권한 **FileIOPermission**을 추가해야 합니다. 정책 구성 파일에서 다음 추가 항목을 입력할 수 있습니다.  
   
 ```  
 <PermissionSet class="NamedPermissionSet"  

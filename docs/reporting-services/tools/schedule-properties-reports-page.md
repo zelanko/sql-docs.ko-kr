@@ -1,5 +1,5 @@
 ---
-title: "일정 속성 (보고서 페이지) | Microsoft Docs"
+title: "일정 속성(보고서 페이지) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/30/2016
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.scheduleproperties.reports.f1
+f1_keywords: sql13.swb.reportserver.scheduleproperties.reports.f1
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d71a539f9a04942d10a3ab802b60376bf15c2864
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6069a77360c73574c45cbf3ca2bff04613e8eefa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="schedule-properties-reports-page"></a>일정 속성(보고서 페이지)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 일정 속성 페이지를 사용하여 특정 공유 일정을 사용하는 모든 보고서 목록을 볼 수 있습니다. 일정을 사용하여 보고서 스냅숏을 새로 고치거나, 보고서 기록을 생성하거나, 구독을 트리거하거나, 보고서의 캐시된 복사본을 만료시킬 수 있습니다. 일정 사용 방법을 확인하려면 보고서의 속성 및 구독 정보를 확인하십시오.  
@@ -52,10 +50,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [일정 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [일정](../../reporting-services/subscriptions/schedules.md)   
- [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [보고서 (보고서 관리자)에 대 한 일반 속성 구성](http://msdn.microsoft.com/en-us/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [일반적인 보고서 속성 구성(보고서 관리자)](http://msdn.microsoft.com/en-us/10b941b2-28e6-4408-9ee4-acebc63c8496)  
   
   
-
 

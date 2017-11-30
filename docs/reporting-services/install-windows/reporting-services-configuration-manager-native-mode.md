@@ -1,12 +1,11 @@
 ---
-title: "Reporting Services 구성 관리자 (기본 모드) | Microsoft Docs"
+title: "Reporting Services 구성 관리자(기본 모드) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: e693575acb5c2eef31231a434dc25ee90b3ade36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -46,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   보고서 서버 데이터베이스 만들기 및 구성. 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 내부 저장소로 사용하는 상태 비저장 서버입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 데이터베이스에 대한 연결을 만들고 구성할 수 있습니다. 사용하려는 내용이 이미 포함되어 있는 기존 보고서 서버 데이터베이스를 선택할 수도 있습니다.  
   
--   기본 모드 확장 배포를 구성합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 여러 개의 보고서 서버 인스턴스가 한 개의 공유 보고서 서버 데이터베이스를 사용하도록 허용하는 배포 토폴로지를 지원합니다. 보고서 서버 확장 배포를 구현하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 각 보고서 서버를 공유 보고서 서버 데이터베이스에 연결해야 합니다.  
+-   기본 모드 스케일 아웃 배포를 구성합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 여러 개의 보고서 서버 인스턴스가 한 개의 공유 보고서 서버 데이터베이스를 사용하도록 허용하는 배포 토폴로지를 지원합니다. 보고서 서버 스케일 아웃 배포를 구현하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 각 보고서 서버를 공유 보고서 서버 데이터베이스에 연결해야 합니다.  
   
 -   저장된 연결 문자열과 자격 증명을 암호화하는 데 사용되는 대칭 키 백업, 복원 또는 교체. 서비스 계정을 변경하거나 보고서 서버 데이터베이스를 다른 컴퓨터로 이동하는 경우 대칭 키 백업이 있어야 합니다.  
   
@@ -54,7 +51,7 @@ ms.lasthandoff: 09/21/2017
   
 -   보고서 서버 전자 메일 구성 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 SMTP(Simple Mail Transport Protocol)를 통해 보고서 또는 보고서 처리 알림을 전자 사서함에 배달하는 메일 배달 확장 프로그램이 포함되어 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 네트워크에서 전자 메일 배달에 사용할 SMTP 서버나 게이트웨이를 지정할 수 있습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 내용을 관리하거나 추가 기능을 활성화하거나 서버에 대한 액세스 권한을 부여할 수는 없습니다. 전체 배포도 사용 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 기본값 및 서버에 대 한 사용자 액세스 권한을 부여 하려면 웹 포털을 수정 또는 추가 기능을 사용 하도록 설정 합니다.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 내용을 관리하거나 추가 기능을 활성화하거나 서버에 대한 액세스 권한을 부여할 수는 없습니다. 완전한 배포를 위해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 추가 기능을 활성화하거나 기본값을 수정하고 웹 포털에서 서버에 대한 액세스 권한을 사용자에게 부여할 수 있도록 해야 합니다.
 
 ##  <a name="bkmk_requirements"></a> 요구 사항
 
@@ -70,13 +67,13 @@ ms.lasthandoff: 09/21/2017
 
 - 원격 보고서 서버 인스턴스에 연결하여 구성하기 전에 원격 WMI(Windows Management Instrumentation) 호출이 Windows 방화벽을 통과하도록 설정해야 합니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) 원격 관리를 위한 보고서 서버 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.
 
-Reporting Services 구성 관리자는 SQL Server Reporting Services를 설치할 때 자동으로 설치 됩니다.
+Reporting Services 구성 관리자는 SQL Server Reporting Services를 설치할 때 자동으로 설치됩니다.
 
 ##  <a name="bkmk_start_configuration_manager"></a> Reporting Services 구성 관리자를 시작하려면
 
 1.  사용자의 Microsoft Windows 버전에 적합한 방식으로 다음 단계를 사용합니다.
 
-    - Windows 시작 화면에서 입력 **보고** 선택 **Reporting Services 구성 관리자** earch 결과에서 합니다.
+    - Windows 시작 화면에서 **Reporting**을 입력하고 검색 결과에서 **Reporting Services 구성 관리자**를 선택합니다.
 
     - **시작**을 클릭하고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킵니다.
 
@@ -103,4 +100,3 @@ Reporting Services 구성 관리자는 SQL Server Reporting Services를 설치�
 [보고서 서버 구성 및 관리](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
-

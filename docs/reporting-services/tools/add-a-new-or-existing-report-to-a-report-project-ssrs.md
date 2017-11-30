@@ -1,5 +1,5 @@
 ---
-title: "새로운 또는 기존 보고서 (SSRS) 보고서 프로젝트를 추가 | Microsoft Docs"
+title: "보고서 프로젝트에 새 보고서 또는 기존 보고서 추가(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- reports [Reporting Services], creating
+helpviewer_keywords: reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6edee3df21691e6f9e53a167bb1bd1bce502e76a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>보고서 프로젝트에 새 보고서 또는 기존 보고서 추가(SSRS)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 마법사를 사용하거나 프로젝트에 새 보고서를 추가하여 새 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 추가할 수 있습니다. 기본 보고서를 추가할 수도 있습니다. 보고서를 추가한 후 프로젝트의 **보고서** 폴더 아래에 나열된 보고서 이름을 볼 수 있습니다.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  솔루션 탐색기에서 보고서 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 보고서 추가**를 클릭합니다. **보고서 마법사** 대화 상자가 열립니다.  
   
-     마법사는 데이터 원본 만들기, 쿼리를 사용 하 여 데이터 집합 만들기, 그룹을 정의 레이아웃을 지정 하 고 보고서를 만드는 과정 안내 합니다. 이 단계는 다음과 같습니다.  
+     마법사는 데이터 원본을 만들고, 쿼리를 사용하여 데이터 집합을 만들고, 그룹을 정의하고, 레이아웃을 지정하고, 보고서를 만드는 단계를 안내합니다. 이 단계는 다음과 같습니다.  
   
     -   **데이터 원본 선택.** 보고서를 만드는 첫 번째 단계로 데이터 원본을 정의합니다. 보고서 마법사는 보고서 프로젝트의 전체 공유 데이터 원본 목록뿐만 아니라 새 데이터 원본을 만드는 옵션도 제공합니다.  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-existing-report"></a>기존 보고서를 추가하려면  
   
-1.  **프로젝트** 메뉴에서 **추가**를 클릭한 다음  **기존 항목**을 클릭합니다.  
+1.  **프로젝트** 메뉴에서 **추가**를 클릭한 다음 **기존 항목**을 클릭합니다.  
   
 2.  .rdl 파일의 위치를 찾아서 파일을 선택한 다음 **추가**를 클릭합니다.  
   
@@ -67,7 +65,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- 문의: [Reporting Services 포럼을 시도 하십시오.](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

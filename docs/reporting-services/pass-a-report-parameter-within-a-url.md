@@ -14,17 +14,16 @@ helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d16e5466bbbdd2f15ba36540ba2cde8d0417b1dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
   보고서 매개 변수를 보고서 URL에 포함시켜 보고서에 전달할 수 있습니다. 이러한 URL 매개 변수는 보고서 처리 엔진에 직접 전달되기 때문에 접두사가 붙지 않습니다.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 >   
 >  프록시 구문을 포함하지 않으면 접두사 *rp:*로 매개 변수를 시작해야 합니다.  
   
- 모든 쿼리 매개 변수에는 해당하는 보고서 매개 변수가 있을 수 있습니다. 해당 보고서 매개 변수를 전달하여 보고서에 쿼리 매개 변수를 전달할 수 있습니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 작성&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)을 참조하세요.  
+ 모든 쿼리 매개 변수에는 해당하는 보고서 매개 변수가 있을 수 있습니다. 해당 보고서 매개 변수를 전달하여 보고서에 쿼리 매개 변수를 전달할 수 있습니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 빌드&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  보고서 매개 변수는 대/소문자를 구분합니다.  
@@ -112,8 +111,7 @@ http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [URL 액세스 &#40; Ssrs&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
   
   
-

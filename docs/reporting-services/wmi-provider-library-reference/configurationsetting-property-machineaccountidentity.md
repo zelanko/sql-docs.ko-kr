@@ -1,5 +1,5 @@
 ---
-title: "MachineAccountIdentity 속성 (WMI) | Microsoft Docs"
+title: "MachineAccountIdentity 속성(WMI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MachineAccountIdentity property
+helpviewer_keywords: MachineAccountIdentity property
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: db3f35e539a034d2016de9cd89fb0fe8b7c1d0a7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 01ae3dc0f6a8e0628e1e3b22f60e55135de5f866
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---machineaccountidentity"></a>MachineAccountIdentity ConfigurationSetting 속성-
+# <a name="configurationsetting-property---machineaccountidentity"></a>ConfigurationSetting 속성 - MachineAccountIdentity
   보고서 서버가 설치되어 있는 컴퓨터의 컴퓨터 계정 ID를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -48,4 +46,3 @@ public string MachineAccountIdentity;
  [MSReportServer_ConfigurationSetting 속성](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)  
   
   
-

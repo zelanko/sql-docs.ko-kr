@@ -1,5 +1,5 @@
 ---
-title: "ListReservedURLs 메서드 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "ListReservedURLs 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ListReservedURLs method
+helpviewer_keywords: ListReservedURLs method
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cf6f31340eaba5654e2c5fd125eefba07a39d8e5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e21a068b46b27e02b90217128483bdec15564fc0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---listreservedurls"></a>ListReservedURLs ConfigurationSetting 메서드
+# <a name="configurationsetting-method---listreservedurls"></a>ConfigurationSetting 메서드 - ListReservedURLs
   보고서 서버의 모든 응용 프로그램용으로 예약된 URL을 나열합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -73,4 +71,3 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,28 +1,25 @@
 ---
-title: "구독 설정 및 파일 공유 계정 (구성 관리자) | Microsoft Docs"
+title: "구독 설정 및 파일 공유 계정(구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.subscriptionsettings.F1
+f1_keywords: SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f0f86350f35ccf9843328fc8f8795a0ed2215f7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>구독 설정 및 파일 공유 계정(구성 관리자)
   **구성 관리자의** 구독 설정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 사용하면 기본 모드 보고서 서버 및 파일 공유 구독에 대한 파일 공유 계정을 구성할 수 있습니다. 파일 공유 계정을 사용하면 보고서를 파일 공유로 전달하는 여러 구독에서 단일 자격 증명 집합을 사용할 수 있습니다. 자격 증명을 변경해야 하는 경우 파일 공유 계정에 대한 구성을 변경하면 각각의 개별 구독을 업데이트할 필요가 없습니다.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  다음 그림은 파일 공유 전송을 위해 구성된 구독에서 사용자에게 표시되는 사항을 보여줍니다. 파일 공유 계정이 구성되지 않은 경우 **파일 공유 계정 사용** 이 비활성화됩니다.  
   
- ![configuration manager 파일 공유 계정](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "configuration manager 파일 공유 계정")  
+ ![구성 관리자 파일 공유 계정](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "구성 관리자 파일 공유 계정")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>권한 상승 또는 상승된 권한 방지  
   
@@ -107,4 +104,3 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
  [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   
-

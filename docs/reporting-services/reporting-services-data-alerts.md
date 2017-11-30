@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f2be4b604e088329f719195976903f6dcb516246
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
 
@@ -29,12 +28,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 관심을 있거나 사용자에 게 및 관련 된 시간에 중요 한 보고서 데이터에 대 한 알려야 하는 데 도움이 되는 데이터입니다. 데이터 경고를 사용하면 정보를 자동으로 받아 볼 수 있으므로 더 이상 정보를 직접 찾을 필요가 없습니다.
+SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지고 있거나 사용자에게 중요한 보고서 데이터에 대한 정보를 적절한 시간에 받아 볼 수 있게 해주는 데이터 기반의 경고 솔루션입니다. 데이터 경고를 사용하면 정보를 자동으로 받아 볼 수 있으므로 더 이상 정보를 직접 찾을 필요가 없습니다.
 
 데이터 경고 메시지는 전자 메일로 전송됩니다. 정보의 중요도에 따라 메시지를 자주 보내거나 가끔 보내도록 선택하고 결과가 변경될 경우에만 메시지를 보내도록 선택할 수 있습니다. 전자 메일 받는 사람을 여러 명 지정하고 다른 사람들에게도 정보를 알려 효율성 및 공동 작업을 향상시킬 수 있습니다.
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
 ##  <a name="AlertingWF"></a> 데이터 경고 아키텍처 및 워크플로
 
@@ -88,7 +87,7 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>데이터 경고 정의 및 경고 메타데이터 저장  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치한 경우 SQL Server 경고 데이터베이스가 자동으로 생성됩니다.  
   
- 데이터 경고 정의 및 경고 메타데이터는 경고 데이터베이스에 저장됩니다. 기본적으로이 데이터베이스 ReportingServices 이름은\<GUID > _Alerting 합니다.  
+ 데이터 경고 정의 및 경고 메타데이터는 경고 데이터베이스에 저장됩니다. 기본적으로 이 데이터베이스 이름은 ReportingServices\<GUID>_Alerting으로 지정됩니다.  
   
  데이터 경고 정의를 저장하면 경고 정의에 대한 SQL Server 에이전트 작업이 생성됩니다. 작업에는 작업 일정이 포함됩니다. 일정은 사용자가 경고 정의에 지정하는 되풀이 패턴을 기반으로 합니다. 작업을 실행하면 데이터 경고 정의에 대한 처리가 시작됩니다.  
   
@@ -127,7 +126,7 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
   
  이 항목 앞부분의 다이어그램에 나와 있는 것처럼 데이터 경고에는 SQL Server 에이전트 작업이 사용됩니다. 작업을 만들려면 SQL Server 에이전트가 실행되고 있어야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치할 때 SQL Server 에이전트가 자동으로 시작되도록 구성했을 수 있습니다. 그렇지 않은 경우 SQL Server 에이전트를 수동으로 시작할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 구성](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) 및 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
- SharePoint 중앙 관리의 **구독 및 경고 프로비전** 페이지를 사용하여 SQL Server 에이전트가 실행되고 있는지 알아보고, SQL Server 에이전트에 대한 사용 권한을 부여하기 위해 실행할 사용자 지정 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 만들고 다운로드할 수 있습니다. PowerShell을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 생성할 수도 있습니다. 자세한 내용은 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
+ SharePoint 중앙 관리의 **구독 및 경고 프로비전** 페이지를 사용하여 SQL Server 에이전트가 실행되고 있는지 알아보고, SQL Server 에이전트에 대한 사용 권한을 부여하기 위해 실행할 사용자 지정 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 만들고 다운로드할 수 있습니다. PowerShell을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 생성할 수도 있습니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
 ##  <a name="ConfigAlert"></a> 데이터 경고 구성  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 부터 데이터 경고를 비롯한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대한 설정이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치할 때마다 보고서 서버 구성 파일(rsreportserver.config)과 SharePoint 구성 데이터베이스 간에 배포됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]설치 및 구성 단계의 일환으로 서비스 응용 프로그램을 만들면 SharePoint 구성 데이터베이스가 자동으로 생성됩니다. 자세한 내용은 [RsReportServer.config 구성 파일](../reporting-services/report-server/rsreportserver-config-configuration-file.md) 및 [Reporting Services 구성 파일](../reporting-services/report-server/reporting-services-configuration-files.md)을 참조하세요.  
@@ -174,7 +173,7 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
 |IOException|||||||X|  
 |WebException|||||||X|  
 |SocketException|||||||X|  
-|SMTPException**(\*)**|||||||X|  
+|SMTPException **(\*)**|||||||X|  
   
  **(\*)** 재시도를 발생시키는 SMTP 오류입니다.  
   
@@ -295,7 +294,7 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
   
      사이트의 모든 데이터 경고 관리에 대한 자세한 내용은 [경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md) 및 [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)를 참조하세요.  
   
--   **구독 및 데이터 경고 프로비전** 에서는 Reporting Services가 데이터 경고를 위해 SQL Server 에이전트를 사용하고 SQL Server 에이전트에 대한 액세스를 허용하는 스크립트를 다운로드할 수 있는지 알아봅니다. 자세한 내용은 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
+-   **구독 및 데이터 경고 프로비전** 에서는 Reporting Services가 데이터 경고를 위해 SQL Server 에이전트를 사용하고 SQL Server 에이전트에 대한 액세스를 허용하는 스크립트를 다운로드할 수 있는지 알아봅니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
 ##  <a name="Globalization"></a> 데이터 경고의 세계화  
  아랍어 및 히브리어와 같은 특정 스크립트는 오른쪽에서 왼쪽으로 씁니다. 데이터 경고는 오른쪽에서 왼쪽으로 쓰는 스크립트뿐만 아니라 왼쪽에서 오른쪽으로 쓰는 스크립트도 지원합니다. 데이터 경고는 culture를 감지하고, 이에 따라 데이터 경고 메시지의 레이아웃과 사용자 인터페이스 모양 및 동작을 변경합니다. culture는 사용자 컴퓨터에 있는 운영 체제의 국가별 설정에서 파생됩니다. culture는 사용자가 데이터 경고 정의를 업데이트한 다음 다시 저장할 때마다 저장됩니다.  
@@ -328,5 +327,4 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
 [경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [SharePoint 사용자용 데이터 경고 관리자](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

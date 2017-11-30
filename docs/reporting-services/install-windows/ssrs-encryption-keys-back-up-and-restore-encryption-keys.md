@@ -1,12 +1,11 @@
 ---
-title: "백업 및 복원 Reporting Services 암호화 키 | Microsoft Docs"
+title: "Reporting Services 암호화 키 백업 및 복원 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +14,23 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a4344a31ac18bc128845935fa2dce6223dab5710
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 암호화 키-백업 및 암호화 키 복원
+# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   보고서 서버 구성의 중요한 부분은 중요한 정보의 암호화에 사용되는 대칭 키의 백업 복사본을 만드는 것입니다. 대칭 키의 백업 복사본은 여러 일상 작업에 필요하며 새 설치에서 기존 보고서 서버 데이터베이스를 다시 사용할 수 있도록 합니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
   
  다음 이벤트가 발생할 경우 암호화 키의 백업 복사본을 복원해야 합니다.  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 -   하드웨어 오류로 인한 보고서 서버 설치 복구  
   
- 대칭 키 복사본을 하나만 백업하면 됩니다. 보고서 서버 데이터베이스와 대칭 키 간에는 일 대 일 상관 관계가 있습니다. 따라서 대칭 키 복사본을 1개만 백업하면 되지만 확장 배포 모델에서 여러 보고서 서버를 실행할 경우에는 키를 여러 번 복원해야 할 수 있습니다. 각 보고서 서버 인스턴스는 보고서 서버 데이터베이스의 데이터를 잠그거나 잠금을 해제하기 위해 대칭 키 복사본이 필요합니다.
+ 대칭 키 복사본을 하나만 백업하면 됩니다. 보고서 서버 데이터베이스와 대칭 키 간에는 일 대 일 상관 관계가 있습니다. 따라서 대칭 키 복사본을 1개만 백업하면 되지만 스케일 아웃 배포 모델에서 여러 보고서 서버를 실행할 경우에는 키를 여러 번 복원해야 할 수 있습니다. 각 보고서 서버 인스턴스는 보고서 서버 데이터베이스의 데이터를 잠그거나 잠금을 해제하기 위해 대칭 키 복사본이 필요합니다.
 
  대칭 키를 백업하면 사용자가 지정한 파일에 키가 기록된 후 사용자가 제공한 암호를 사용하여 키가 스크램블됩니다. 대칭 키는 암호화되지 않은 상태로는 저장될 수 없으므로 디스크에 저장할 때 암호를 제공하여 키를 암호화해야 합니다. 파일이 생성되면 해당 파일을 안전한 위치에 저장하고 파일 잠금을 해제하는 데 사용되는 **암호를 기억해야** 합니다. 대칭 키를 백업하려면 다음과 같은 도구를 사용할 수 있습니다.  
   
@@ -115,4 +113,3 @@ ms.lasthandoff: 08/09/2017
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

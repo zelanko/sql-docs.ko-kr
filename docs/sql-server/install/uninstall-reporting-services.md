@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be3ac5ed46a8807d6d78296d142ae36b9eb7664d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fc07c41e5bb9244ecbe5456e7f9944f460a73488
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-reporting-services"></a>Reporting Services 제거
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 제거해도 사용자가 만든 콘텐츠나 수정한 구성은 제거되지 않습니다. 그러나 제거를 완료한 후에도 필요한 콘텐츠가 있는 경우 제거 프로세스를 시작하기 전에 콘텐츠를 복사하는 것이 좋습니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Windows 제어판에서 **프로그램 및 기능**을 클릭합니다.  
   
-2.  **프로그램 및 기능** 에서 **Microsoft SQL Server 2012**를 선택합니다.  
+2.  **프로그램 및 기능**에서 **Microsoft SQL Server 2016**을 선택합니다.  
   
 3.  제거 마법사에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스 기능 **RS**를 포함하는 인스턴스를 선택합니다.  
   

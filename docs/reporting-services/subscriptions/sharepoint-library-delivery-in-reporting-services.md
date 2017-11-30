@@ -15,17 +15,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
   SharePoint 통합용으로 구성된 보고서 서버는 보고서를 SharePoint 라이브러리로 보내는 데 사용할 수 있는 배달 확장 프로그램이 포함되어 있습니다.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
  대상 라이브러리에 있는 보고서의 선택적 **Title** 속성을 지정합니다. 이는 라이브러리에 저장된 모든 항목의 표준 속성입니다. 사용자는 SharePoint 사이트의 라이브러리 내용을 볼 때 이 속성을 표시할지 여부를 지정할 수 있습니다.  
   
  경로  
- SharePoint 웹 응용 프로그램 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어: `http://mySharePointWeb/MySite/MyDocLib`; 여기서 `http://mySharePointWeb` 웹 응용 프로그램을 나타내는 "MySite"는 SharePoint 사이트 및 "MyDocLib"는 보고서가 배달 될 SharePoint 라이브러리입니다.  
+ SharePoint 웹 응용 프로그램 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어 `http://mySharePointWeb/MySite/MyDocLib`에서 `http://mySharePointWeb`은 웹 응용 프로그램을 나타내고 "MySite"는 SharePoint 사이트를 나타내며 "MyDocLib"는 보고서가 배달될 SharePoint 라이브러리를 나타냅니다.  
   
  페이지, 사이트 또는 목록은 지정할 수 없습니다. 대상 컨테이너는 동일한 사이트나 팜에 있는 라이브러리여야 합니다.  
   
@@ -91,9 +90,8 @@ ms.lasthandoff: 08/09/2017
  자동 복사 기능을 사용하여 파일의 최신 버전을 자동으로 여러 위치에 복사하는 경우 **덮어쓰기** 가 설정되어 있으면 파일이 복사됩니다. **자동 증가** 또는 **없음**을 사용하는 경우에는 배달이 실패하고 **rsDeliveryError** 오류가 발생합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SharePoint 모드 보고서 서버에 대 한 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [자격 증명 및 보고서 데이터 원본에 대 한 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [SharePoint 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

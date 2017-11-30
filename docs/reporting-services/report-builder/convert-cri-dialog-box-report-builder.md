@@ -1,5 +1,5 @@
 ---
-title: "CRI 변환 대화 상자 (보고서 작성기) | Microsoft Docs"
+title: "CRI 변환 대화 상자(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- "10008"
+f1_keywords: "10008"
 helpviewer_keywords:
 - CRI
 - custom report items
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37ba742708ded98cd5728a3051a2e7a76b9fa99f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aea5827557571b1b86d4246ce90c984c17d1ec32
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>CRI 변환 대화 상자(보고서 작성기)
   이 보고서에는 지원되지 않는 기능이 있는 CRI(사용자 지정 보고서 항목)가 포함되어 있습니다. CRI는 보고서에 데이터를 표시하는 사용자 지정 개체를 지원하는 RDL(Report Definition Language)에 대한 확장입니다. CRI에는 타사 소프트웨어 공급업체에서 제공하는 디자인 타임 및 런타임 구성 요소가 포함되어 있습니다.  
@@ -36,11 +34,11 @@ ms.lasthandoff: 08/09/2017
   
  일부 CRI를 새 보고서 정의 형식의 보고서 항목으로 변환할 수 있습니다. 보고서를 열면 업그레이드할 것인지 묻는 메시지가 나타납니다. 다음 정보를 사용하여 이 보고서에서 CRI를 변환할지 여부를 결정할 수 있습니다.  
   
--   **예** 가능한 경우 보고서의 모든 CRI를 변환하려면 **예** 를 선택합니다. CRI에서 지원하지 않는 기능은 업그레이드할 수 없으며 보고서 정의 파일에서 제거됩니다. 지원하지 않는 기능 목록은 [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)를 참조하세요. 보고서를 볼 때 CRI가 보고서에 다른 방식으로 표시될 수 있습니다.  
+-   **예** 가능한 경우 보고서의 모든 CRI를 변환하려면 **예**를 선택합니다. CRI에서 지원하지 않는 기능은 업그레이드할 수 없으며 보고서 정의 파일에서 제거됩니다. 지원하지 않는 기능 목록은 [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)를 참조하세요. 보고서를 볼 때 CRI가 보고서에 다른 방식으로 표시될 수 있습니다.  
   
--   **아니요** 보고서에서 CRI를 변환하지 않으려면 **아니요** 를 선택합니다. 이러한 CRI는 현재 버전의 보고서 처리기에서는 표시할 수 없습니다. 시스템 관리자가 새 보고서 정의 형식과 호환되는 타사 소프트웨어 공급업체가 제공하는 새 버전의 CRI를 설치하려는 경우에는 **아니요**를 선택해야 합니다. 새 버전을 사용할 수 있을 때까지 보고서에 CRI가 빨간색 X가 있는 비어 있는 입력란으로 표시됩니다.  
+-   **아니요** 보고서에서 CRI를 변환하지 않으려면 **아니요**를 선택합니다. 이러한 CRI는 현재 버전의 보고서 처리기에서는 표시할 수 없습니다. 시스템 관리자가 새 보고서 정의 형식과 호환되는 타사 소프트웨어 공급업체가 제공하는 새 버전의 CRI를 설치하려는 경우에는 **아니요**를 선택해야 합니다. 새 버전을 사용할 수 있을 때까지 보고서에 CRI가 빨간색 X가 있는 비어 있는 입력란으로 표시됩니다.  
   
- 두 경우 모두 보고서는 새 보고서 정의 형식으로 업그레이드 되며 원래 보고서의 백업 복사본으로 저장 됩니다  *\<보고서 이름 >* `-` Backup.rdl 합니다. 보고서를 보고서 작성 도구에 저장하는 경우 업그레이드된 보고서가 새 보고서 정의 형식으로 저장됩니다. 보고서를 게시하는 경우 보고서는 컴퓨터에 먼저 저장된 다음 보고서 서버에 게시됩니다. 업그레이드된 버전의 보고서가 보고서 서버에 게시됩니다.  
+ 두 경우 모두 보고서는 새 보고서 정의 형식으로 업그레이드되며 원래 보고서의 백업 복사본은 *\<보고서 이름>* `-` Backup.rdl로 저장됩니다. 보고서를 보고서 작성 도구에 저장하는 경우 업그레이드된 보고서가 새 보고서 정의 형식으로 저장됩니다. 보고서를 게시하는 경우 보고서는 컴퓨터에 먼저 저장된 다음 보고서 서버에 게시됩니다. 업그레이드된 버전의 보고서가 보고서 서버에 게시됩니다.  
   
  보고서를 저장하지 않는 경우 원래 보고서가 그대로 유지됩니다. 그러나 이 보고서를 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 의 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 이상 버전 또는 이 보고서 정의 형식을 사용하는 보고서 제작 환경에서 편집할 수는 없습니다. 보고서 관리자를 사용하여 보고서를 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버로 업로드하면 원래 버전의 보고서를 계속 실행할 수 있습니다. 자세한 내용은 [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)를 참조하세요.  
   
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/09/2017
  [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   
-

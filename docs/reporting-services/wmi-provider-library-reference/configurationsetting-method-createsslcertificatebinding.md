@@ -1,5 +1,5 @@
 ---
-title: "CreateSSLCertificateBinding 메서드 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "CreateSSLCertificateBinding 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CreateSSLCertificateBinding
+helpviewer_keywords: CreateSSLCertificateBinding
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1d9a797922bc8d7b39e7b7c43897d4ae5ee5bd28
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 68df063c02108366df07867d51cac029218e16c4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---createsslcertificatebinding"></a>CreateSSLCertificateBinding ConfigurationSetting 메서드
+# <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 메서드 - CreateSSLCertificateBinding
   SSL 인증서 바인딩을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -92,4 +90,3 @@ public void CreateSSLCertificateBinding(string application,
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

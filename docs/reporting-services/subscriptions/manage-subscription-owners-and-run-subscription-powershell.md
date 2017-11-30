@@ -1,5 +1,5 @@
 ---
-title: "구독 소유자를 관리 하 고 구독-PowerShell 실행 | Microsoft Docs"
+title: "구독 소유자 관리 및 구독 실행 - PowerShell | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 103cb28ac4917370c8f116b8de46a27f159261cc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 69906bfdbe7d544efd11ced80afe3c8cc5b1c8c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="manage-subscription-owners-and-run-subscription---powershell"></a>구독 소유자를 관리 하 고 구독-PowerShell 실행
+# <a name="manage-subscription-owners-and-run-subscription---powershell"></a>구독 소유자 관리 및 구독 실행 - PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 부터 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 소유권을 프로그래밍 방식으로 한 사용자에서 다른 사용자에게 전송할 수 있습니다. 이 항목에서는 구독 소유권을 변경하거나 단순히 나열할 수 있는 여러 가지 Windows PowerShell 스크립트를 제공합니다. 각 샘플에는 기본 모드 및 SharePoint 모드에 대한 샘플 구문이 포함됩니다. 구독 소유자를 변경한 후 구독은 새 소유자의 보안 컨텍스트에서 실행되고, 보고서의 User!UserID 필드에 새 소유자 값이 표시됩니다. PowerShell 샘플의 개체 모델에 대한 자세한 내용은 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>를 참조하세요.  
+  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 부터 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 소유권을 프로그래밍 방식으로 한 사용자에서 다른 사용자에게 전송할 수 있습니다. 이 항목에서는 구독 소유권을 변경하거나 단순히 나열할 수 있는 여러 가지 Windows PowerShell 스크립트를 제공합니다. 각 샘플에는 기본 모드 및 SharePoint 모드에 대한 샘플 구문이 포함됩니다. 구독 소유자를 변경한 후 구독은 새 소유자의 보안 컨텍스트에서 실행되고, 보고서의 User!UserID 필드에 새 소유자 값이 표시됩니다. PowerShell 샘플의 개체 모델에 대한 자세한 내용은 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
- ![PowerShell 관련 내용](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용")  
+ ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
 ||  
 |-|  
@@ -398,4 +397,3 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 [ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
   
   
-

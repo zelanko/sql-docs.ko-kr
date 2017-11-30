@@ -1,5 +1,5 @@
 ---
-title: "세로 막대형 차트 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "세로 막대형 차트(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 7a978e4fd6fb181e72db458b49a6d3cc96699d96
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d21586d80d590da2fa227897d7b83215857140b0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>세로 막대형 차트(보고서 작성기 및 SSRS)
   세로 막대형 차트에서 계열은 범주별로 그룹화된 일련의 세로 막대로 표시됩니다. 세로 막대형 차트는 기간에 따라 변경되는 데이터를 표시하거나 항목 간 차이를 설명하는 데 유용하게 사용할 수 있습니다. 일반 세로 막대형 차트는 가로 막대 집합으로 계열을 표시하는 가로 막대형 차트 및 시작점과 끝점이 다양한 세로 막대 집합으로 계열을 표시하는 범위형 세로 막대 차트와 밀접하게 연관되어 있습니다. 자세한 내용은 [가로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) 및 [범위형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)를 참조하세요.  
@@ -55,11 +55,11 @@ ms.lasthandoff: 08/09/2017
 -   세로 막대형 차트에서만 차트를 히스토그램 또는 파레토 차트로 표시할 수 있습니다. 이렇게 하려면 속성 창에서 **Histogram** 또는 **Pareto** 에 대한 ShowColumnAs 속성을 **true**로 설정합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [차트 종류 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [가로 막대형 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [범위 형 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [자습서: 보고서 &#40; 가로 막대형 차트 추가 보고서 작성기 &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [가로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
+ [범위형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [자습서: 보고서에 막대형 차트 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "찾기 및 보기 (보고서 작성기 및 SSRS) 브라우저를 사용 하 여 보고서 | Microsoft Docs"
+title: "브라우저를 사용하여 보고서 찾기 및 보기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 981003ec6e3520053dca8e5467d0c7def217c29a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>브라우저를 사용하여 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
   지원되는 웹 브라우저에서 보고서 서버에 직접 연결하여 보고서를 볼 수 있습니다. 모든 보고서에는 보고서 서버에 대한 URL 주소가 있습니다. 보고서의 웹 주소를 입력하여 웹 응용 프로그램과는 상관없이 브라우저 창에 보고서를 열 수 있습니다. 보고서는 HTML 형식으로 열리고 페이지를 탐색하거나 보고서 내의 데이터 값을 검색하는 데 사용할 수 있는 보고서 도구 모음이 함께 표시됩니다. URL에 매개 변수를 설정하여 도구 모음을 숨기거나 보고서의 출력 형식을 선택할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  보고서의 웹 주소를 모르는 경우 보고서 서버의 웹 주소를 연 다음 보고서 서버의 폴더 계층 구조를 탐색하여 원하는 보고서를 선택하고 표시할 수 있습니다. 다음 다이어그램에서는 브라우저 창에 표시되는 폴더 계층을 보여 줍니다.  
   
- ![브라우저의 폴더](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![브라우저의 폴더](../../reporting-services/report-builder/media/rs-browserfolder.GIF "브라우저의 폴더")  
 브라우저의 폴더  
   
 > [!NOTE]  
@@ -48,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
 -   별도의 표시가 없는 링크는 보고서나 모델입니다.  
   
--   태그 \<ds > 공유 데이터 원본을 나타냅니다.  
+-   \<ds> 태그는 공유 데이터 원본을 나타냅니다.  
   
--   태그 \<dir > 폴더 항목을 나타냅니다.  
+-   \<dir> 태그는 폴더 항목을 나타냅니다.  
   
 -   파일 이름 확장명은 리소스를 나타냅니다. 파일 이름 확장명은 리소스의 MIME 형식을 나타냅니다. 예를 들어 .jpg는 JPEG 형식의 이미지를 나타냅니다.  
   
@@ -64,4 +63,3 @@ ms.lasthandoff: 08/09/2017
  URL을 통해 보고서에 액세스하는 방법은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "URL 액세스(URL Access)"를 참조하십시오.  
   
   
-

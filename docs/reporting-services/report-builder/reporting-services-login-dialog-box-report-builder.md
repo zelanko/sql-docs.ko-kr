@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 로그인 대화 상자 (보고서 작성기) | Microsoft Docs"
+title: "Reporting Services 로그인 대화 상자(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- "10059"
+f1_keywords: "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 551b909cce14da7e6aeb277234a430cace112ed7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1c5243eb2319e1125bdecfaa9ad853553a4c070d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services 로그인 대화 상자(보고서 작성기)
   **Reporting Services 로그인** 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공할 수 있습니다. 이러한 자격 증명과 관련하여 도움을 얻으려면 보고서 서버 관리자에게 문의하십시오.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 08/09/2017
  [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   
-

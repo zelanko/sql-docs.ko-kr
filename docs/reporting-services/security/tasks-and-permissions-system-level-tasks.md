@@ -1,5 +1,5 @@
 ---
-title: "시스템 수준 태스크 | Microsoft Docs"
+title: "시스템 수준 작업 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- system-level tasks [Reporting Services]
+helpviewer_keywords: system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8f8eac1d05b8bdd034879cb2eba1c4fc867fce66
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3c8a3edfbeafe5ab2f417e514e011899c528c283
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="tasks-and-permissions---system-level-tasks"></a>작업 및 사용 권한-시스템 수준 태스크
+# <a name="tasks-and-permissions---system-level-tasks"></a>작업 및 사용 권한 - 시스템 수준의 작업
   시스템 수준 태스크는 보고서 서버 사이트 전체에 적용되는 작업과 관련된 권한의 모음입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 특정 항목에 적용되는 항목 수준의 태스크도 있습니다. 자세한 내용은 [항목 수준의 태스크](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)를 참조하세요. 일반적인 태스크 및 사용 권한에 대한 자세한 내용은 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)을 참조하십시오.  
   
 > [!NOTE]  
->  이러한 작업을 프로그래밍 방식으로 수행하는 경우 시스템 수준 태스크를 지원하는 메서드를 사용해야 합니다. 자세한 내용은 참조 <xref:ReportService2010.ReportingService2010.ListTasks%2A> 및 <xref:ReportService2010.ReportingService2010.ListRoles%2A>합니다.  
+>  이러한 작업을 프로그래밍 방식으로 수행하는 경우 시스템 수준 태스크를 지원하는 메서드를 사용해야 합니다. 자세한 내용은 <xref:ReportService2010.ReportingService2010.ListTasks%2A> 및 <xref:ReportService2010.ReportingService2010.ListRoles%2A>를 참조하세요.  
   
 ## <a name="permissions-in-system-level-tasks"></a>시스템 수준 태스크 사용 권한  
  다음 표에서는 각 시스템 태스크에 대한 사용 권한을 보여 줍니다. 나열된 사용 권한은 각 태스크에서 사용 가능한 기능을 보다 정확하게 설명하기 위한 참고용입니다.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/09/2017
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "외부 데이터 집합을 사용 하 여 Reporting Services를 사용한 | Microsoft Docs"
+title: "Reporting Services에서 외부 데이터 집합 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: add18839976ae919686cbd488385531de3bf684e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services에서 외부 데이터 집합 사용
-  **DataSet** 분산 데이터 시나리오를 연결이 끊긴 개체는 지원 하기 위해 핵심 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]합니다. **DataSet** 개체는 데이터 소스에 관계 없이 일관성 있는 관계형 프로그래밍 모델을 제공 하는 데이터의 메모리 상주 표현입니다. 다양한 데이터 원본 또는 XML 데이터와 함께 사용하거나 응용 프로그램의 로컬 데이터를 관리하는 데 사용할 수 있습니다. **DataSet** 개체 관련된 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 데이터의 전체 집합을 나타냅니다. 때문에 **DataSet** 저장 하 고 표시할 데이터를 데이터에 개체의 다양 한 기능 종종 처리 방식과로 변환 될 수 있습니다는 **데이터 집합** 발생 해당 데이터에 보고 하기 전에 개체입니다.  
+  **DataSet** 개체는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]에서 연결이 끊긴 분산 데이터 시나리오를 지원하는 데 있어 핵심적인 역할을 합니다. **DataSet** 개체는 데이터 원본과 상관없이 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. 다양한 데이터 원본 또는 XML 데이터와 함께 사용하거나 응용 프로그램의 로컬 데이터를 관리하는 데 사용할 수 있습니다. **DataSet** 개체는 관련 테이블, 제약 조건, 테이블 간의 관계 등을 포함한 전체 데이터 집합을 나타냅니다. **DataSet** 개체는 데이터를 유연하게 저장하고 표시할 수 있기 때문에 데이터에 대한 보고가 이루어지기 전에 데이터가 처리되고 **DataSet** 개체로 변환되는 경우도 있습니다.  
   
- 와 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 사용자 지정을 통합할 수 있습니다 **DataSet** 외부 응용 프로그램에서 만들어지는 개체입니다. 에 사용자 지정 데이터 처리 확장 프로그램을 만들면이를 위해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 사이의 다리 처럼 작동 하 여 **데이터 집합** 개체와 보고서 서버. 이 처리 하기 위한 코드의 대부분 **데이터 집합** 개체에 포함 되어는 **DataReader** 만드는 클래스입니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 사용하여 외부 응용 프로그램으로 만든 사용자 지정 **DataSet** 개체를 통합할 수 있습니다. 그러려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 **DataSet** 개체와 보고서 서버를 연결하는 사용자 지정 데이터 처리 확장 프로그램을 만듭니다. 이 **DataSet** 개체를 처리하기 위한 코드의 대부분은 사용자가 만드는 **DataReader** 클래스에 포함됩니다.  
   
- 노출 하는 첫 번째 단계는 프로그램 **데이터 집합** 에서 공급자별 메서드를 구현 하는 개체를 보고서 서버 프로그램 **DataReader** 채울 수 있는 클래스는 **데이터 집합** 개체입니다. 정적 데이터를 로드 하는 방법을 보여 주는 다음 예제는 **DataSet** 에서 공급자별 메서드를 사용 하 여 개체 프로그램 **DataReader** 클래스입니다.  
+ **DataSet** 개체를 보고서 서버에 표시하는 첫 단계는 **DataReader** 클래스에서 **DataSet** 개체를 채울 수 있는 공급자별 메서드를 구현하는 것입니다. 다음 예는 **DataReader** 클래스에서 공급자별 메서드를 사용하여 **DataSet** 개체에 정적 데이터를 로드하는 방법을 보여 줍니다.  
   
 ```vb  
 'Private members of the DataReader class  
@@ -168,12 +166,11 @@ public int GetOrdinal(string name)
 }  
 ```  
   
- 만들거나 데이터 집합을 검색 한 후 사용할 수 있습니다는 **DataSet** 구현에는 개체는 **읽기**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType**, 및 **FieldCount** 의 멤버는 **DataReader** 클래스입니다.  
+ 데이터 집합을 만들거나 검색하면 **DataReader** 클래스의 **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType** 및 **FieldCount** 멤버 구현에서 **DataSet** 개체를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [데이터 처리 확장 프로그램 구현](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 확장 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

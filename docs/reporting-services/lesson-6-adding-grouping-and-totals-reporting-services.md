@@ -1,27 +1,25 @@
 ---
-title: "6 단원: 그룹화 및 합계 (Reporting Services) 추가 | Microsoft Docs"
+title: "6단원: 그룹화 및 합계 추가(Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 742ebc4024e30ca7f18020ef6d4ffc29e3a3c635
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 이 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약합니다.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
     행 핸들 안에 대괄호가 표시되어 그룹임을 나타냅니다. 이제 테이블에 세로 점선의 양쪽에 하나씩 두 개의 Date 열이 있습니다.  
   
-    ![추가 날짜 그룹](../reporting-services/media/rs-basictablegroups1design.png "날짜 그룹이 추가 됨")  
+    ![추가된 날짜 그룹](../reporting-services/media/rs-basictablegroups1design.png "추가된 날짜 그룹")  
   
 4.  **보고서 데이터** 창에서 **Order** 필드를 **행 그룹** 창으로 끌어다 Date 아래, **(자세히)**위에 놓습니다.
 
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  이중선 **오른쪽** 에서 원래 **Date** 및 **Order** 열을 삭제합니다. 그러면 이 개인 레코드 값이 제거되고 그룹 값만 표시됩니다. 두 열의 열 핸들을 선택하고 마우스 오른쪽 단추로 클릭한 다음 **열 삭제**를 클릭합니다.  
   
-    ![삭제할 열 선택](../reporting-services/media/rs-basictablegroupsdeletecols.gif "삭제할 열을 선택 합니다.")  
+    ![삭제할 열 선택](../reporting-services/media/rs-basictablegroupsdeletecols.gif "삭제할 열 선택")  
   
 6.  새 날짜 열에 서식을 지정하려면 `[Date]` 필드 식이 있는 셀을 마우스 오른쪽 단추로 클릭한 다음 **입력란 속성**을 클릭합니다.  
   
@@ -159,12 +157,11 @@ ms.lasthandoff: 08/09/2017
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-* * 완료 했습니다. 만들기 기본 테이블 보고서 tutorial.* *  
+** 기본 테이블 보고서 만들기 자습서를 성공적으로 완료했습니다.**  
   
 ## <a name="see-also"></a>관련 항목:  
 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
-
 

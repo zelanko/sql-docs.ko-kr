@@ -1,5 +1,5 @@
 ---
-title: "데이터 집합 필드 컬렉션 참조 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "데이터 집합 필드 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d9c1c724e1b097e842975de2e8095a34fbbbb2d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>기본 제공 컬렉션-데이터 집합 필드 컬렉션 참조 (보고서 작성기)
+# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>기본 제공 컬렉션 - 데이터 집합 필드 컬렉션 참조(보고서 작성기)
   보고서의 각 데이터 집합에는 Fields 컬렉션이 하나씩 있습니다. Fields 컬렉션은 데이터 집합 쿼리에서 지정하는 필드와 사용자가 만드는 모든 추가 계산 필드의 집합입니다. 데이터 집합을 만든 후 필드 컬렉션이 **보고서 데이터** 창에 표시됩니다.  
   
  식의 단순 필드 참조가 디자인 화면에 단순 식으로 표시됩니다. 예를 들어 보고서 데이터 창의 `Sales` 필드를 디자인 화면의 테이블 셀로 끌어 오면 `[Sales]` 가 표시됩니다. 이는 Value 입력란 속성에 설정된 `=Fields!Sales.Value` 기본 식을 나타냅니다. 보고서를 실행하면 보고서 처리기에서 이 식을 계산하고 테이블 셀의 입력란에 있는 데이터 원본의 실제 데이터를 표시합니다. 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) 및 [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>런타임에 동적 쿼리에 대해 누락된 필드 검색  
- Fields 컬렉션의 항목에는 기본적으로 Value 및 IsMissing 속성이 있습니다. IsMissing 속성은 디자인 타임에 데이터 집합에 대해 정의된 필드가 런타임에 검색되는 필드에 포함되어 있는지 여부를 나타냅니다. 쿼리 수는 입력 매개 변수에 따라 결과 집합이 달라 또는 쿼리 수 저장된 프로시저를 호출 하는 예를 들어 `SELECT * FROM`  *\<테이블 >* 테이블 정의 변경 합니다.  
+ Fields 컬렉션의 항목에는 기본적으로 Value 및 IsMissing 속성이 있습니다. IsMissing 속성은 디자인 타임에 데이터 집합에 대해 정의된 필드가 런타임에 검색되는 필드에 포함되어 있는지 여부를 나타냅니다. 예를 들어 쿼리에서 입력 매개 변수에 따라 결과 집합이 달라지는 저장 프로시저를 호출하거나 쿼리가 테이블 정의가 변경된 `SELECT * FROM` *\<table>*일 수 있습니다.  
   
 > [!NOTE]  
 >  IsMissing은 모든 유형의 데이터 원본에 대해 디자인 타임과 런타임 간의 데이터 집합 스키마 변경을 검색합니다. IsMissing은 다차원 큐브의 빈 멤버를 검색하는 데 사용할 수 없으며 **EMPTY** 및 **NON EMPTY**의 MDX 쿼리 언어 개념과 관련이 없습니다.  
@@ -92,7 +91,7 @@ End Function
  입력란에 지정한 필드 값 또는 텍스트가 표시됩니다.  
   
 ### <a name="using-extended-field-properties"></a>확장 필드 속성 사용  
- 확장 필드 속성은 데이터 집합에 대한 데이터 원본 유형에 의해 결정되는 데이터 처리 확장 프로그램에서 필드에 대해 정의하는 추가 속성입니다. 확장 필드 속성은 미리 정의되거나 데이터 원본 유형 관련 속성입니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
+ 확장 필드 속성은 데이터 집합에 대한 데이터 원본 유형에 의해 결정되는 데이터 처리 확장 프로그램에서 필드에 대해 정의하는 추가 속성입니다. 확장 필드 속성은 미리 정의되거나 데이터 원본 유형 관련 속성입니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
  해당 필드에 지원되지 않는 속성을 지정하는 경우 식이 **null** (**에서** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])로 계산됩니다. 데이터 공급자가 확장 필드 속성을 지원하지 않거나 쿼리가 실행될 때 해당 필드가 없으면 속성 값은 **String** 및**Object** 형식 속성의 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **(** 에서 **Nothing**)이 되고 **Integer**형식 속성의 경우 0이 됩니다. 데이터 처리 확장 프로그램에서는 이 구문이 포함된 쿼리를 최적화하여 미리 정의된 속성을 이용할 수 있습니다.  
   
@@ -101,4 +100,3 @@ End Function
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "기본 모드 보고서 서버에 대 한 구독 만들기 및 관리 | Microsoft Docs"
+title: "기본 모드 보고서 서버 구독 만들기 및 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a7fcc5f8b3d9e64990327a6709b5e36cfd23904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   표준 구독은 전자 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개인이 만든 구독입니다. 이 항목에서는 개별 사용자가 만들고 관리하는 표준 구독에 대한 정보를 제공합니다. 데이터 기반 구독의 경우 다른 요구 사항과 단계가 필요하며 이에 대해서는 별도의 항목에 설명되어 있습니다. 자세한 내용은 [데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)를 참조하세요.  
@@ -72,13 +71,13 @@ ms.lasthandoff: 08/09/2017
   
 7.  **파일을 만들 때 파일 확장명 추가**: 이 옵션은 파일 이름에 3자로 된 파일 확장명을 추가합니다. 파일 확장명은 선택하는 보고서 출력 형식에 따라 결정됩니다.  
   
-8.  **경로**: 보고서를 배달할 기존 폴더를 범용 명명 규칙 (UNC) 경로 입력 (예를 들어 \\ \\< 서버 이름\>\\< myreports\>). 경로의 시작 부분에는 백슬래시 문자를 두 번 넣고 뒷부분에는 백슬래시를 지정하지 마세요.  
+8.  **경로**: 보고서를 배달할 기존 폴더에 대한 UNC(범용 명명 규칙) 경로를 입력합니다(예: \\\\<servername\>\\<myreports\>). 경로의 시작 부분에는 백슬래시 문자를 두 번 넣고 뒷부분에는 백슬래시를 지정하지 마세요.  
   
      ![파일 공유 구독](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "파일 공유 구독")  
   
 9. **렌더링 형식**: 파일 배달에 대한 보고서 출력 형식을 선택합니다. 보고서를 열 때 사용할 데스크톱 응용 프로그램에 맞는 형식을 선택합니다. 보고서를 단일 스트림으로 렌더링하지 않거나 정적 파일(예: HTML 4.0)에서 지원될 수 없는 대화형 작업을 발생시키는 형식은 사용하지 마세요.  
   
-10. **자격 증명**: 파일 공유 계정과 특정 Windows 사용자 자격 증명 중 사용할 자격 증명을 선택합니다. 보고서 관리자가 파일 공유 계정을 구성하지 않은 경우 **파일 공유 계정 사용** 이 비활성화됩니다. 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;연결 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. 에 **사용자 이름** 및 **암호** 형식을 사용 하는 파일 공유에 액세스 하는 데 필요한 자격 증명을 지정 하는 텍스트 상자  *\<도메인 >*\\*\<사용자 이름 >* 사용자 이름에 대 한 합니다.  
+10. **자격 증명**: 파일 공유 계정과 특정 Windows 사용자 자격 증명 중 사용할 자격 증명을 선택합니다. 보고서 관리자가 파일 공유 계정을 구성하지 않은 경우 **파일 공유 계정 사용** 이 비활성화됩니다. 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;연결 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. **사용자 이름** 및 **암호** 입력란에서 파일 공유에 액세스하는 데 필요한 자격 증명을 지정합니다. 사용자 이름에는 *\<domain>*\\*\<user name>* 형식을 사용합니다.  
   
 11. **덮어쓰기 옵션**:  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  사용 권한에 따라 보고서를 배달할 전자 메일 주소를 입력할 수 있습니다. 전자 메일 주소를 여러 개 지정하려면 세미콜론(;)으로 구분합니다. **참조**, **숨은 참조**및 **회신** 입력란에 메일 주소를 추가로 입력할 수도 있습니다. 이 작업을 수행하려면 모든 구독을 관리할 수 있는 권한이 있어야 합니다.  
   
-7.  **제목**: 기본적으로 "@ReportName 에서 실행 된 @ExecutionTime"입니다. 제목을 편집할 수 있지만는 @ReportName 및 @ExecutionTime 에서 지원 되는 유일한 전역 변수는는 **주체** 필드입니다.  
+7.  **제목**: "@ReportName은 @ExecutionTime에서 실행됩니다."가 기본값입니다. 제목을 편집할 수는 있지만 @ReportName 및 @ExecutionTime은 **주체** 필드에 지원되는 유일한 전역 변수입니다.  
   
 8.  다음과 같이 배달 옵션을 선택합니다.  
   
@@ -187,11 +186,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [SharePoint 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [내 구독 &#40;를 사용 하 여 기본 모드 보고서 서버 &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [내 구독 사용&#40;기본 모드 보고서 서버&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   
-

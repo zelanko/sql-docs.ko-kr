@@ -1,5 +1,5 @@
 ---
-title: "IsInitialized 속성 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "IsInitialized 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- IsInitialized
-apilocation:
-- reportingservices.mof
+apiname: IsInitialized
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- IsInitialized property
+helpviewer_keywords: IsInitialized property
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f3dfb46b91687168e0fc91e1faa67a866f9b3998
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3f82859f409b0c1e786c278ba7c8f5390338c5c5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---isinitialized"></a>IsInitialized ConfigurationSetting 속성-
+# <a name="configurationsetting-property---isinitialized"></a>ConfigurationSetting 속성 - IsInitialized
   보고서 서버 인스턴스가 초기화되었는지 여부를 나타냅니다. 읽기 전용입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -56,4 +52,3 @@ public Boolean DatabaseLogonName;
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

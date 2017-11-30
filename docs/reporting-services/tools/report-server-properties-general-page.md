@@ -1,5 +1,5 @@
 ---
-title: "서버 속성 (일반 페이지) | Microsoft Docs"
+title: "서버 속성(일반 페이지) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/08/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.general.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7ca680b434f4b483fb2f3cc3d99df5598a0766f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-server-properties-general-page"></a>보고서 서버 속성 (일반 페이지)
+# <a name="report-server-properties-general-page"></a>보고서 서버 속성(일반 페이지)
   이 페이지를 사용하여 보고서 관리자에 사용된 제목을 보거나 수정하고, 내 보고서를 설정 또는 해제하고, 내 보고서의 보안에 대한 역할 정의를 선택하고 클라이언트 인쇄 컨트롤을 설정 또는 해제할 수 있습니다.  
   
  **이 페이지를 열려면**
@@ -59,12 +57,11 @@ ms.lasthandoff: 08/09/2017
 
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 서버 속성 &#40; 설정 합니다. Management studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [내 보고서 설정 및 해제](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [내 보고서 사용 및 사용 안 함 설정](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [내 보고서 보안](../../reporting-services/security/secure-my-reports.md)  
   
   
-
 

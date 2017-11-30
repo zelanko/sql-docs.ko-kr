@@ -1,5 +1,5 @@
 ---
-title: Customize Rendering Extension Parameters in RSReportServer.Config | Microsoft Docs
+title: "RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a04703eb04c9745fd5a1de0a5378b29210f61b65
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
   RSReportServer 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 보고서의 기본 보고서 렌더링 동작을 재정의할 수 있습니다. 다음과 같은 목적으로 렌더링 확장 프로그램 매개 변수를 수정할 수 있습니다.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **DeviceInfo** XML 구조는 렌더링 확장 프로그램에서 사용하는 장치 정보 설정을 정의합니다. 대부분의 렌더링 확장 프로그램 매개 변수는 장치 정보 설정으로 지정됩니다.  
   
- 이 파일은 텍스트 편집기를 사용하여 수정할 수 있습니다. RSReportServer.config 파일은 \Reporting Services\Report Server\Bin 폴더에 있습니다. 구성 파일을 수정 하는 방법에 대 한 자세한 내용은 참조 [Reporting Services 구성 파일 수정 &#40; RSreportserver.config &#41; ](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ 이 파일은 텍스트 편집기를 사용하여 수정할 수 있습니다. RSReportServer.config 파일은 \Reporting Services\Report Server\Bin 폴더에 있습니다. 구성 파일을 수정하는 방법에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
 ## <a name="changing-the-display-name"></a>표시 이름 변경  
  렌더링 확장 프로그램의 표시 이름은 보고서 도구 모음의 내보내기 목록에 나타납니다. 기본 표시 이름의 예로는 웹 보관 파일, TIFF 파일 및 Acrobat(PDF) 파일이 있습니다. 구성 파일에서 **OverrideNames** 요소를 지정하여 기본 표시 이름을 사용자 지정 값으로 바꿀 수 있습니다. 또한 단일 렌더링 확장 프로그램의 인스턴스를 두 개 정의하는 경우 **OverrideNames** 요소를 사용하여 내보내기 목록의 각 인스턴스를 구별할 수 있습니다.  
@@ -146,4 +145,3 @@ ms.lasthandoff: 08/09/2017
  [XML 장치 정보 설정](../reporting-services/xml-device-information-settings.md)  
   
   
-

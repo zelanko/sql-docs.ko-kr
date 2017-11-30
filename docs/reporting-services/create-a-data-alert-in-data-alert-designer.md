@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3cbf24497be6bc9716678645568850297158c20f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>데이터 경고 디자이너에서 데이터 경고 만들기
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/17/2017
 데이터 경고 디자이너에서 데이터 경고 정의를 만들 수 있습니다. 경고 정의를 저장한 후 데이터 경고 디자이너에서 해당 정의를 다시 열어 편집한 후 다시 저장할 수 있습니다. 경고 정의 편집에 대한 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) 및 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)을 참조하세요.
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
 ## <a name="create-a-data-alert-definition"></a>데이터 경고 정의 만들기
  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/17/2017
   
 4.  필요한 경우 **보고서 데이터 이름** 드롭다운 목록에서 다른 데이터 피드를 선택합니다.  
   
-     보고서에서 데이터 피드가 생성되지 않으면 보고서에 대해 경고 정의를 만들 수 없습니다. 보고서의 레이아웃에 따라 각 데이터 피드의 내용이 결정됩니다. 자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.  
+     보고서에서 데이터 피드가 생성되지 않으면 보고서에 대해 경고 정의를 만들 수 없습니다. 보고서의 레이아웃에 따라 각 데이터 피드의 내용이 결정됩니다. 자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
 5.  필요에 따라 **경고 이름** 텍스트 상자에서 기본 이름을 보다 의미 있는 이름으로 업데이트합니다.  
   
@@ -121,7 +120,7 @@ ms.lasthandoff: 08/17/2017
   
 20. 필요에 따라 **제목** 입력란에서 경고 메시지의 제목 줄을 업데이트합니다.  
   
-     기본 제목은 **데이터에 대 한 경고 \<데이터 경고 이름 >**합니다.  
+     기본 제목은 **데이터 경고 이름>\<에 대한 데이터 경고**입니다.  
   
 21. 필요에 따라 **설명** 입력란에 경고 메시지에 대한 설명을 입력합니다.  
   
@@ -130,8 +129,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="see-also"></a>관련 항목:
 
 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
-[경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[경고 담당자를 위한 데이터 경고 관리자입니다.](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

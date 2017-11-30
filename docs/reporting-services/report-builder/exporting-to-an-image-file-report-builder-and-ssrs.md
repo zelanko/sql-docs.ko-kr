@@ -1,5 +1,5 @@
 ---
-title: "(보고서 작성기 및 SSRS) 이미지 파일로 내보내기 | Microsoft Docs"
+title: "이미지 파일로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bf6d4979db2a3b68c34b05fa96f81b47d8034a0b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c9c702f039a2cdb443ca03eb5e30136b24f0cd04
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>이미지 파일로 내보내기(보고서 작성기 및 SSRS)
   이미지 렌더링 확장 프로그램은 페이지가 매겨진 보고서를 비트맵이나 메타 파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다. 이 항목에서는 이미지 렌더러 관련 정보를 제공하고 렌더링 규칙의 예외를 설명합니다.  
   
- 이미지 렌더링 확장 프로그램은 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]에서 지원하는 BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF 형식으로 파일을 생성할 수 있습니다. TIFF 형식의 경우 기본 스트림의 파일 이름은 *ReportName*.tif입니다. 파일당 한 페이지로 렌더링되는 기타 모든 형식의 경우 파일 이름은 *ReportName_Page.ext* 입니다. 여기서*ext* 는 선택한 형식의 파일 확장명입니다. 다른 이미지 지원 형식으로 파일을 생성하려면 위에 나와 있는 문자열 중 하나를 **OutputFormatDeviceInfo** 설정에 지정합니다.  
+ 이미지 렌더링 확장 프로그램은 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]에서 지원하는 BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF 형식으로 파일을 생성할 수 있습니다. TIFF 형식의 경우 기본 스트림의 파일 이름은 *ReportName*.tif입니다. 파일당 한 페이지로 렌더링되는 기타 모든 형식의 경우 파일 이름은 *ReportName_Page.ext* 입니다. 여기서*ext*는 선택한 형식의 파일 확장명입니다. 다른 이미지 지원 형식으로 파일을 생성하려면 위에 나와 있는 문자열 중 하나를 **OutputFormatDeviceInfo** 설정에 지정합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -72,11 +71,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>관련 항목:  
- [Reporting services&#40;의 페이지 매김 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [렌더링 동작 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램 &#40;에 대 한 대화형 기능 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [보고서 항목 렌더링 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

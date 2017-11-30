@@ -1,5 +1,5 @@
 ---
-title: "SetServiceState 메서드 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "SetServiceState 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetServiceState method
+helpviewer_keywords: SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 85e26f683c03e9b411ae3dc7d17f1b326981740d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setservicestate"></a>SetServiceState ConfigurationSetting 메서드
+# <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting 메서드 - SetServiceState
   보고서 서버 Windows 및 웹 서비스를 설정하거나 해제합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -57,7 +53,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  보고서 관리자의 필요한 상태를 나타내는 **Boolean** 값입니다.
  
  > [!NOTE] 
- > 이 설정은 SQL Server 2016 Reporting Services 누적 업데이트 2부터 사용 되지 합니다. 웹 포털은 항상 사용할 수 있습니다. 값이 무시 됩니다.
+ > 이 설정은 SQL Server 2016 Reporting Services 누적 업데이트 2부터 사용되지 않습니다. 웹 포털은 항상 사용할 수 있습니다. 값이 무시됩니다.
   
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
@@ -74,4 +70,3 @@ public void SetServiceState(Boolean EnableWindowsService,
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,35 +1,32 @@
 ---
-title: "URL (SSRS 구성 관리자) 구성 | Microsoft Docs"
+title: "URL 구성(SSRS 구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- URL access [Reporting Services], syntax
+helpviewer_keywords: URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1c356b28e675e824b1a6b6a4b434f27c4fe81de8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 응용 프로그램에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 응용 프로그램에 대해 URL이 이미 구성되어 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 URL을 구성할 수 있습니다. URL의 모든 부분이 이 도구에 정의되어 있습니다. 이전 릴리스와는 달리 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서는 IIS(인터넷 정보 서비스) 웹 사이트에서 더 이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 응용 프로그램에 액세스할 수 없습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]다른 웹 서비스 및 응용 프로그램과 함께 배포를 포함 한 대부분의 배포 시나리오에서 잘 작동 하는 기본값을 제공 합니다. 기본 URL은 인스턴스 이름을 통합함으로써 같은 컴퓨터에서 보고서 서버 인스턴스를 여러 개 실행하는 경우 URL이 충돌할 위험을 최소화합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 응용 프로그램을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 기본값을 제공합니다. 기본 URL은 인스턴스 이름을 통합함으로써 같은 컴퓨터에서 보고서 서버 인스턴스를 여러 개 실행하는 경우 URL이 충돌할 위험을 최소화합니다.  
   
  이 항목에서는 다음 태스크에 대한 지침을 제공합니다.  
   
@@ -39,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 -   추가 URL을 정의하는 고급 URL 속성 설정  
   
- Url을 저장 및 유지 관리 하는 방식 또는 상호 운용성 문제에 대 한 자세한 내용은 참조 [에 대 한 URL 예약 및 등록 &#40; SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 및 [Reporting Services와 인터넷 정보 서비스-함께 &#40; 설치 SSRS 기본 모드 &#41; ](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
+ URL이 저장되고 유지 관리되는 방식 및 상호 운용성 문제에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 및 [Reporting Services와 인터넷 정보 서비스 함께 설치&#40;SSRS 기본 모드&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)를 참조하세요. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  URL을 만들거나 수정하기 전에 다음 사항을 유념하십시오.  
@@ -76,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
     -   **::1** - IPv6 형식의 루프백 주소입니다.  
   
-    -   특정 IP 주소가 이 목록에 표시될 수도 있습니다. IP 주소는 IPv4 및 IPv6 형식일 수 있습니다. *Nnn.nnn.nnn.nnn*는 컴퓨터에 설치된 네트워크 어댑터 카드의 32비트 IPv4 주소입니다. IPv6 주소는 128 비트 이며 8 개의 4 바이트 필드가 콜론으로 구분 된: \<접두사 >:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   특정 IP 주소가 이 목록에 표시될 수도 있습니다. IP 주소는 IPv4 및 IPv6 형식일 수 있습니다. *Nnn.nnn.nnn.nnn* 는 컴퓨터에 설치된 네트워크 어댑터 카드의 32비트 IPv4 주소입니다. IPv6 주소는 128비트이며 8개의 4바이트 필드가 콜론으로 구분되어 있습니다. \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          카드가 여러 개 있거나 네트워크에서 IPv4와 IPv6 주소를 모두 지원하는 경우 IP 주소가 여러 개 표시됩니다. IP 주소를 한 개만 선택할 경우 선택한 IP 주소(및 도메인 이름 서버가 이 IP 주소에 매핑한 호스트 이름)만 응용 프로그램에 액세스할 수 있습니다. localhost를 사용하여 보고서 서버에 액세스할 수 없으며, 보고서 서버 컴퓨터에 설치된 다른 네트워크 어댑터 카드의 IP 주소를 사용할 수 없습니다. 일반적으로 이 값을 선택하는 경우는 명시적 IP 주소 또는 호스트 이름도 지정하는 URL 예약을 여러 개 구성하고 있기 때문입니다. 예를 들면 한 개는 인트라넷 연결에 사용되는 네트워크 어댑터 카드용으로, 다른 한 개는 익스트라넷 연결에 사용되는 네트워크 어댑터 카드용으로 구성할 수 있습니다.  
   
@@ -159,7 +156,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  **추가**를 클릭합니다.  
   
-3.  IP 주소 또는 호스트 헤더 이름을 클릭합니다. 호스트 헤더를 지정한 경우 DNS 서비스가 확인할 수 있는 이름을 지정해야 합니다. 공개적으로 사용 가능한 도메인 이름의 지정 하는 경우 전체 URL을 포함 포함 하 여 `http://www`합니다.  
+3.  IP 주소 또는 호스트 헤더 이름을 클릭합니다. 호스트 헤더를 지정한 경우 DNS 서비스가 확인할 수 있는 이름을 지정해야 합니다. 공용으로 사용 가능한 도메인 이름을 지정한 경우 `http://www`를 포함한 전체 URL을 포함시킵니다.  
   
 4.  포트를 지정합니다. 사용자 지정 포트를 지정한 경우 응용 프로그램 URL에 항상 포트 번호가 포함되어야 합니다.  
   
@@ -200,6 +197,5 @@ ms.lasthandoff: 08/09/2017
 -   `https://www.adventure-works.com:8080/reports`  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services 구성 관리자 &#40; 기본 모드 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [보고서 서버 Url &#40; 구성 합니다. SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)

@@ -1,5 +1,5 @@
 ---
-title: "보고서에 Office 데이터 연결 (.odc) 사용 | Microsoft Docs"
+title: "보고서에 Office 데이터 연결(.odc) 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 2d6f6fa222bb8d4c5c9cd53a560c093c814ccd01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>보고서에 Office 데이터 연결(.odc) 사용
   제한된 시나리오에서 기존 Office 데이터 연결 파일(.odc)을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 연결 정보를 제공할 수 있습니다. 공유 데이터 원본을 만들 때 .rsds 파일 대신 .odc 파일을 사용할 수 있습니다. 보고서 서버는 .rsds 파일과 같은 방식으로 .odc 파일을 사용합니다. 즉, 이 파일을 읽어 데이터 원본 유형, 연결 문자열 및 자격 증명 정보를 확인합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  .odc 파일에 익숙하지 않을 경우 다음 지침을 사용하여 .odc 파일을 만들고 내보낼 수 있습니다. OLE DB 데이터 원본에 사용할 .odc 파일을 만드는 한 가지 쉬운 방법은 Excel 2007과 데이터 연결 마법사를 사용하는 것입니다. 이때 마법사에서 데이터 원본을 만들지 않으며 이미 정의된 외부 데이터 원본이 있어야 합니다.  
   
- 기존 .odc 파일은 보고서 및 쿼리와 완전히 호환되는 경우에만 사용해야 합니다. 보고서나 .odc 파일을 완전히 수정해야 하는 오류가 발생하면 보고서에 대해 새 .rsds 파일을 만들어야 합니다. .Rsds 파일을 사용 하는 공유 데이터 원본을 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [만들기 및 공유 데이터 원본 관리 &#40; 모드 &#41; 통합 SharePoint의 reporting Services ](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ 기존 .odc 파일은 보고서 및 쿼리와 완전히 호환되는 경우에만 사용해야 합니다. 보고서나 .odc 파일을 완전히 수정해야 하는 오류가 발생하면 보고서에 대해 새 .rsds 파일을 만들어야 합니다. .rsds 파일을 사용하는 공유 데이터 원본을 만드는 방법은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.  
   
 ### <a name="to-create-and-export-an-odc-file"></a>.odc 파일을 만들고 내보내려면  
   

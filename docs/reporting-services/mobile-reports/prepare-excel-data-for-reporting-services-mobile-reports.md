@@ -1,27 +1,24 @@
 ---
-title: "Reporting Services 모바일 보고서에 대 한 Excel 데이터 준비 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services 모바일 보고서에 대한 Excel 데이터 준비 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0403dcd2f622f6bd6c8cbc88d12a4f8a955d8605
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 대한 Excel 데이터 준비
   
@@ -83,7 +80,7 @@ Excel 파일을 모바일 보고서에 대한 데이터 집합으로 준비할 �
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-셀을 변환한 후 셀 또는 전체 열을 선택하고 > **컨텍스트** 메뉴 > **셀 서식**을 선택한 다음  >  **범주** 목록에서 **날짜**를 선택하여 날짜로 서식 지정해야 합니다. 또한 Excel의 텍스트 열 변환 마법사를 사용하여 텍스트 셀을 올바르게 서식 지정된 날짜로 변환할 수 있습니다.  
+셀을 변환한 후 셀 또는 **범주** 목록에서 전체 열 > **컨텍스트** 메뉴 > **셀 서식** > **날짜**를 선택하여 날짜로 서식 지정해야 합니다. 또한 Excel의 텍스트 열 변환 마법사를 사용하여 텍스트 셀을 올바르게 서식 지정된 날짜로 변환할 수 있습니다.  
   
 ## <a name="unsupported"></a>지원되지 않음  
   
@@ -94,7 +91,7 @@ Excel 파일을 모바일 보고서에 대한 데이터 집합으로 준비할 �
 ### <a name="see-also"></a>참고 항목  
 - [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  보기(iOS용 Power BI)  
+-  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports) 보기(iOS용 Power BI)  
 -  [iPhone 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) 보기(iOS용 Power BI)  
   
   
@@ -103,5 +100,4 @@ Excel 파일을 모바일 보고서에 대한 데이터 집합으로 준비할 �
   
   
   
-
 

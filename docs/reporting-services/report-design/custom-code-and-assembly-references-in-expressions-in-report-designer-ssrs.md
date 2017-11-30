@@ -1,5 +1,5 @@
 ---
-title: "사용자 지정 코드 및 어셈블리 참조의 식에서 보고서 디자이너 (SSRS) | Microsoft Docs"
+title: "보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d53894c807b9d9e80be441aa13fb442ea98f5819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS)
   보고서에 포함된 사용자 지정 코드 또는 직접 작성한 사용자 지정 어셈블리에 대한 참조를 추가한 다음 컴퓨터에 저장하고 보고서 서버로 배포할 수 있습니다. 단일 보고서에서 여러 번 사용된 함수, 사용자 지정 상수 또는 복잡한 함수에는 포함 코드를 사용합니다. 코드를 한 위치에서 관리하면서 여러 보고서에서 사용할 수 있도록 공유하려면 사용자 지정 코드 어셈블리를 사용합니다. 사용자 지정 코드에는 새로운 사용자 지정 상수, 변수, 함수 또는 서브루틴이 포함될 수 있습니다. Parameters 컬렉션과 같은 기본 제공 컬렉션에 대한 읽기 전용 참조를 포함할 수 있습니다. 그러나 사용자 지정 함수에 보고서 데이터 값 집합을 전달할 수 없으며 특히 사용자 지정 집계는 지원되지 않습니다.  
@@ -197,12 +196,11 @@ End Function
  *Fields* 및 *ReportItems* 컬렉션의 내용은 런타임에 동적으로 변경될 수 있으므로 사용자 지정 어셈블리에 대한 호출에서(예: 멤버 변수) 해당 컬렉션을 유지해서는 안 됩니다. 일반적으로 모든 기본 제공 컬렉션에 같은 권장 사항이 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 &#40; 코드를 추가 합니다. Ssrs&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [보고서에 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [보고서 &#40;에 대 한 어셈블리 참조를 추가 합니다. Ssrs&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services 자습서 및 &#40;입니다. SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [보고서에 코드 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Reporting Services 자습서 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [보고서 예제(보고서 작성기 및 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   
-

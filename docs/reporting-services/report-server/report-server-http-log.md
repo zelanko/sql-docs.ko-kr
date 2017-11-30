@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- HTTP [Reporting Services]
+helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bea168c6ad15828b44ea5f77f5c7bd3fa05cfb9d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90732a6f209640298ec1776fd5368b26fd2526fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-http-log"></a>보고서 서버 HTTP 로그
   보고서 서버 HTTP 로그 파일은 보고서 서버에서 처리하는 모든 HTTP 요청 및 응답에 대한 기록을 유지합니다. 요청 오버플로 및 제한 시간 오류는 보고서 서버에 도달하지 않으므로 로그 파일에 기록되지 않습니다.  
@@ -35,8 +33,8 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|파일 이름|기본적으로 파일 이름은 ReportServerService_HTTP_\<타임 스탬프 >. 로그입니다. ReportingServicesService.exe.config 파일에서 HttpTraceFileName 특성을 수정하여 파일 이름의 접두사를 사용자 지정할 수 있습니다. 타임스탬프는 UTC(Coordinated Universal Time)를 기반으로 합니다.|  
-|파일 위치|이 파일은 \Microsoft SQL Server에서\\*\<SQL Server 인스턴스 >*services\logfiles입니다.|  
+|파일 이름|기본적으로 파일 이름은 ReportServerService_HTTP_\<timestamp>.log입니다. ReportingServicesService.exe.config 파일에서 HttpTraceFileName 특성을 수정하여 파일 이름의 접두사를 사용자 지정할 수 있습니다. 타임스탬프는 UTC(Coordinated Universal Time)를 기반으로 합니다.|  
+|파일 위치|이 파일은 \Microsoft SQL Server\\*\<SQL Server Instance>*\Reporting Services\LogFiles에 있습니다.|  
 |파일 형식|파일은 EN-US 형식이며 ASCII 텍스트 파일입니다.|  
 |파일 생성 및 보존|HTTP 로그는 구성 파일에서 사용하도록 설정하고, 서비스를 다시 시작하고, 보고서 서버가 HTTP 요청을 처리한 후에 만들어집니다. 설정을 구성했지만 로그 파일이 표시되지 않을 경우 보고서를 열거나 보고서 관리자와 같은 보고서 서버 응용 프로그램을 시작하여 해당 파일을 만들기 위한 HTTP 요청을 생성합니다.<br /><br /> 로그 파일의 새 인스턴스는 각 서비스 다시 시작 작업 및 보고서 서버에 대한 이후 HTTP 요청 후에 만들어집니다.<br /><br /> 기본적으로 추적 로그는 32MB로 제한되며 14일 후 삭제됩니다.|  
   
@@ -90,4 +88,3 @@ ms.lasthandoff: 08/09/2017
  [오류 및 이벤트 참조&#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

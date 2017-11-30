@@ -1,5 +1,5 @@
 ---
-title: "추가, 편집, (보고서 작성기 및 SSRS) 보고서 데이터 창에서 필드 새로 고침 | Microsoft Docs"
+title: "보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: c1c0be54c8cfba5a8cde5e7b79deb6f8ef15f561
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b0085b620ed18da8020b4a3960fe6d27eb6ffce7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기 및 SSRS)
   데이터 집합 필드는 외부 데이터 원본에서 데이터 집합 쿼리를 실행할 때 반환되는 데이터를 나타내는 기본 제공 필드 이름 컬렉션입니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  공유 데이터 집합의 경우 데이터 집합 필드는 보고서에 해당 데이터 집합을 추가했을 때 공유 데이터 집합 정의에 있는 필드입니다. 보고서 서버의 공유 데이터 집합 쿼리가 보고서를 실행할 때 항상 사용되지만 보고서의 데이터 집합 필드 목록은 고정되어 있습니다.  
   
- **필드 새로 고침** 을 사용하여 보고서의 필드 목록을 공유 데이터 집합 쿼리에서의 현재 필드 목록과 일치하도록 업데이트할 수 있습니다. 필드 목록을 새로 고치는 경우 보고서에서 정의하는 계산 필드는 영향을 받지 않습니다.  
+ **필드 새로 고침**을 사용하여 보고서의 필드 목록을 공유 데이터 집합 쿼리에서의 현재 필드 목록과 일치하도록 업데이트할 수 있습니다. 필드 목록을 새로 고치는 경우 보고서에서 정의하는 계산 필드는 영향을 받지 않습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -97,8 +97,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Reporting Services 쿼리 디자이너](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
- [쿼리 디자이너 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

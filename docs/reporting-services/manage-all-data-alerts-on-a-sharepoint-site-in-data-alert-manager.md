@@ -1,5 +1,5 @@
 ---
-title: "데이터 경고 관리자에서 SharePoint 사이트에서 모든 데이터 경고 관리 | Microsoft Docs"
+title: "데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c0451f12b68cd45a387bfca4d94c8cf4f71919ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: c8d04c7c8406b1a1653be71b6e76110e4479fedb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리
 
@@ -32,12 +31,12 @@ ms.lasthandoff: 08/17/2017
 
 SharePoint 경고 관리자는 사이트 사용자가 만든 데이터 경고 목록과 경고에 대한 정보를 볼 수 있습니다. 경고 관리자는 경고를 삭제할 수도 있습니다. 다음 그림에서는 데이터 경고 관리자에서 경고 담당자가 사용할 수 있는 기능을 보여 줍니다.
 
- ![경고 관리자 SharePoin 경고 관리자에 대 한](../reporting-services/media/rs-alertmanagersite.gif "SharePoin 경고 관리자에 대 한 경고 관리자")
+ ![SharePoin 사이트 관리자용 경고 관리자](../reporting-services/media/rs-alertmanagersite.gif "SharePoin 사이트 관리자용 경고 관리자")
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
-## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>사이트 사용자가 만든 경고 목록을 보려면  
+## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>사이트 사용자가 만든 경고 목록 보기  
   
 1.  데이터 경고 정의가 저장된 SharePoint 사이트로 이동합니다.  
   
@@ -49,7 +48,7 @@ SharePoint 경고 관리자는 사이트 사용자가 만든 데이터 경고 �
   
 5.  **사용자 경고 보기** 목록 옆에서 아래쪽 화살표를 클릭하고 보려는 경고를 소유하는 사용자를 선택합니다.  
   
-6.  **보고서 경고 보기** 목록 옆에서 아래쪽 화살표를 클릭하고 보려는 특정 경고를 선택하거나 **모두 표시** 를 클릭하여 선택한 사용자가 만든 모든 경고를 나열합니다.  
+6.  **보고서 경고 보기** 목록 옆에서 아래쪽 화살표를 클릭하고 보려는 특정 경고를 선택하거나 **모두 표시**를 클릭하여 선택한 사용자가 만든 모든 경고를 나열합니다.  
   
      테이블에 이름, 보고서 이름, 데이터 경고를 만든 사용자 이름, 데이터 경고를 보낸 횟수, 데이터 경고 정의가 마지막으로 수정된 시간 및 데이터 경고 상태가 나열됩니다. 데이터 경고를 생성하거나 보낼 수 없으면 상태 열에 오류에 대한 정보가 포함되어 문제를 해결하도록 돕습니다.  
   
@@ -62,8 +61,7 @@ SharePoint 경고 관리자는 사이트 사용자가 만든 데이터 경고 �
 
 ## <a name="see-also"></a>관련 항목:
 
-[경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[경고 담당자를 위한 데이터 경고 관리자입니다.](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

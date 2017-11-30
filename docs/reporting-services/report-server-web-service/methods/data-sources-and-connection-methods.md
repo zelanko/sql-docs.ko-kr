@@ -1,5 +1,5 @@
 ---
-title: "데이터 원본 및 연결 방법 | Microsoft Docs"
+title: "데이터 원본 및 연결 메서드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [Reporting Services], data sources
 - reports [Reporting Services], data
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 922c7fbd680a9d82713db30d8df5f0ae5a40401a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 0160a520275477f829cc0e0d742fd1300c3c9261
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-sources-and-connection-methods"></a>데이터 원본 및 연결 메서드
   이러한 메서드를 사용하여 데이터 원본 연결 및 자격 증명을 설정하고 관리할 수 있습니다.  
@@ -48,10 +46,9 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|데이터 원본에 대한 연결을 테스트합니다. 이 메서드는 보고서나 모델 및 공유 데이터 원본에서 사용하는 게시된 데이터 원본의 테스트를 지원합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [기술 참조 &#40; Ssrs&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "사용자 지정 데이터 처리 확장 프로그램에 대 한 연결 지정 | Microsoft Docs"
+title: "사용자 지정 데이터 처리 확장 프로그램에 대한 연결 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - external data sources [Reporting Services]
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc98f8394e637ea9a627cffd8e40887484462df5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2a24b319e99347c18d45743c74be2b15c9df0a45
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>사용자 지정 데이터 처리 확장 프로그램에 대한 연결 지정
   보고서 서버에서 타사의 사용자 지정 데이터 처리 확장 프로그램을 만들거나 사용하여 지원되는 데이터 원본의 데이터 처리 기능을 향상시키거나 기본 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 사용할 수 없는 추가 형식의 데이터 원본을 지원할 수 있습니다. 연결은 구현에 따라 다르게 처리됩니다. 데이터 처리 확장 프로그램에 사용될 수 있는 구현은 다음과 같습니다.  
@@ -62,7 +61,7 @@ ms.lasthandoff: 08/09/2017
 |자격 증명 사용 안 함|사용자 지정 .NET 데이터 공급자에 자격 증명 사용 안 함 옵션을 사용할 수 있습니다. 무인 실행 계정을 지정하면 연결 문자열에 따라 사용되는 자격 증명이 결정됩니다. 보고서 서버는 무인 실행 계정을 가장하여 연결합니다.<br /><br /> 무인 실행 계정을 정의하지 않은 경우 보고서 서버에서 연결이 실패합니다. 계정을 정의하는 방법에 대한 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.|  
   
 ## <a name="connections-for-idbconnection"></a>IDbConnection에 대한 연결  
- 만 지 원하는 사용자 지정 데이터 처리 확장 프로그램을 사용 하는 경우 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, 다음과 같은 방식으로 연결을 지정 해야 합니다.  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>만 지원하는 사용자 지정 데이터 처리 확장 프로그램을 사용하는 경우 다음과 같은 방법으로 연결을 지정해야 합니다.  
   
 1.  무인 실행 계정을 구성합니다. **IDbConnection**을 사용하여 연결하는 경우 이 계정을 구성해야 합니다. 보고서 서버에서는 연결할 때 계정을 가장합니다.  
   
@@ -73,7 +72,7 @@ ms.lasthandoff: 08/09/2017
  **IDbConnection**을 사용할 때 데이터 서비스는 통합 보안, Windows 사용자 계정, 데이터베이스 자격 증명 등의 자격 증명 유형은 지원되지 않습니다. 데이터 원본 연결이 이러한 옵션을 사용할 경우 보고서 서버에서 연결이 실패합니다.  
   
 ## <a name="connections-for-idbconnectionextension"></a>IDbConnectionExtension에 대한 연결  
- 사용자 지정 데이터 처리 확장 프로그램을 지 원하는 사용 하는 경우 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, 다음과 같은 방법으로 연결을 지정할 수 있습니다.  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>을 지원하는 사용자 지정 데이터 처리 확장 프로그램을 사용하는 경우 다음과 같은 방법으로 연결을 지정할 수 있습니다.  
   
 |자격 증명|연결|  
 |-----------------|-----------------|  
@@ -84,12 +83,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [자격 증명 및 보고서 데이터 원본에 대 한 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [데이터 처리 확장 프로그램 구현](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [만들기, 삭제 또는 공유 데이터 원본 &#40; 수정 보고서 관리자 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [보고서 &#40;에 대 한 데이터 원본 속성 구성 보고서 관리자 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
-

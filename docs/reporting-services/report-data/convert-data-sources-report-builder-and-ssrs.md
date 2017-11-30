@@ -1,5 +1,5 @@
 ---
-title: "데이터 원본 (보고서 작성기 및 SSRS) 변환 | Microsoft Docs"
+title: "데이터 원본 변환(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - data sources [Reporting Services], embedded
 - data sources [Reporting Services], shared
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da3cd9531b90536283153b68642da9de01486a9b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d189fc88b7f6e0ed609e1c54cdc88cbf115bc6b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>데이터 원본 변환(보고서 작성기 및 SSRS)
   보고서 데이터 창의 각 데이터 원본은 보고서에 관련 및 포함되거나 공유됩니다. 보고서 작성기에서 공유 데이터 원본은 보고서 서버 또는 SharePoint 사이트의 게시된 공유 데이터 원본을 가리킵니다. 보고서 디자이너에서 공유 데이터 원본은 솔루션 탐색기의 **공유 데이터 원본** 폴더에 있는 공유 데이터 원본을 가리킵니다.  
@@ -72,4 +71,3 @@ ms.lasthandoff: 08/09/2017
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
-

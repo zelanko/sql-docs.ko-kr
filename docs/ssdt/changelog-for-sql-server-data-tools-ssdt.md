@@ -1,30 +1,61 @@
 ---
 title: "SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft 문서"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 64583be5bd94e71a52b894c5babd3d29107c56dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 다음은 [SSDT(SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md)에 대한 변경 로그입니다.  
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
+
+
+## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>Visual Studio 2017용 SSDT(15.4.0 미리 보기)
+빌드 번호: 14.0.16134.0
+  
+### <a name="whats-new"></a>새로운 기능
+
+이 릴리스에서는 Visual Studio 2017 15.4 이상의 SQL Server Database, Analysis Services, Reporting Services 및 Integration Services 프로젝트에 대한 독립 실행형 웹 설치 관리자를 제공합니다.
+
+### <a name="installer"></a>설치 관리자
+
+- 사용자가 VS2017 인스턴스에 대한 새로운 SSDT를 설치할 때 애칭을 설정하도록 허용합니다.
+- VS 인스턴스가 선택되지 않는 경우 설치 관리자의 기능 선택 확인란을 숨깁니다.
+- 고객 의견에 따라 설치 관리자의 일부 메시지를 구체화합니다.
+- 설치 관리자가 업그레이드를 지원하지 않는 문제를 해결했습니다.
+
+
+### <a name="ssis"></a>SSIS
+
+- Azure 기능 팩을 설치할 때 가져오기/내보내기 마법사에서 데이터 원본을 나열할 수 없는 문제를 해결했습니다.
+- 연결을 변환하는 동안 SSIS Analysis 프로세스 태스크를 편집하면 예외가 throw되는 문제를 해결했습니다.
+- __$command_id 열을 추가하는 SQL 수정 프로그램을 적용한 후 CDC 구성 요소가 손상되는 문제를 해결했습니다.
+- 이전 SQL Server를 대상으로 타사 패키지를 편집 및 실행할 수 없는 문제를 해결했습니다.
+- DTSWizard.exe를 두 번 클릭하고 플랫 파일 원본을 선택하면 플랫 파일 원본 구성 대화 상자가 올바르게 표시되지 않는 문제를 해결했습니다.
+- SQL Server 2017을 대상으로 Azure 기능 팩 태스크/구성 요소가 포함된 패키지를 실행할 수 없는 문제를 해결했습니다.
+
+
+**알려진 문제**
+
+- 설치 프로그램이 지역화되지 않았습니다.
+- SSIS 패키지 실행 태스크는 *ExecuteOutOfProcess*가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>Visual Studio 2015용 SSDT 17.3
 빌드 번호: 14.0.61709.290
@@ -550,4 +581,3 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 [Analysis Services의 새로운 기능](../analysis-services/what-s-new-in-analysis-services.md)  
 [Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
-

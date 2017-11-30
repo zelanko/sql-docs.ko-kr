@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 22270e6f1aa209ef9a6938b92d0252678c2ad7e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 응용 프로그램 관리
 
@@ -27,12 +26,12 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]서비스 응용 프로그램은 SharePoint 중앙 관리에서 관리 됩니다. 관리 및 속성 페이지에서 서비스 응용 프로그램의 구성과 일반 관리 태스크를 업데이트할 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 SharePoint 중앙 관리에서 관리됩니다. 관리 및 속성 페이지에서 서비스 응용 프로그램의 구성과 일반 관리 태스크를 업데이트할 수 있습니다.  
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
-## <a name="open-service-application-properties-page"></a>열린 서비스 응용 프로그램 속성 페이지
+## <a name="open-service-application-properties-page"></a>서비스 응용 프로그램 속성 페이지 열기
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 속성 페이지를 열려면 다음을 완료합니다.  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 10/06/2017
   
  서비스 응용 프로그램 속성에 대한 자세한 내용은 [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)을 참조하세요.  
   
-## <a name="open-service-application-management-pages"></a>열린 서비스 응용 프로그램 관리 페이지
+## <a name="open-service-application-management-pages"></a>서비스 응용 프로그램 관리 페이지 열기
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 관리 페이지를 열려면 다음을 완료합니다.  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 10/06/2017
 |세션 쿠키 사용|기본값은 TRUE입니다.|  
 |EDLX 보고서 제한 시간|기본값은 1800초입니다.|  
   
-### <a name="system-settings-for-logging"></a>로깅에 대 한 시스템 설정
+### <a name="system-settings-for-logging"></a>로깅에 대한 시스템 설정
   
 |설정|설명|  
 |-------------|--------------|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 10/06/2017
 |설정|설명|  
 |-------------|--------------|  
 |보고서 작성기 다운로드 사용|기본값은 TRUE입니다.<br /><br /> 클라이언트가 보고서 작성기 응용 프로그램을 다운로드하기 위한 단추를 볼 수 있는지 여부를 지정합니다.|  
-|보고서 작성기 시작 URL|보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 시작됩니다. 한 번의 클릭으로 보고서 작성기 3.0을 시작 하려면-응용 프로그램을 한 후 다음 값을 입력: http://\<컴퓨터 이름 > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application 합니다.|  
+|보고서 작성기 시작 URL|보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 시작됩니다. 보고서 작성기 3.0을 Click-Once 응용 프로그램으로 시작하려면 http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application 값을 입력합니다.|  
 |클라이언트 인쇄 기능 사용|기본값은 TRUE입니다.<br /><br /> 사용자가 인쇄 옵션을 제공 하는 클라이언트 쪽 컨트롤을 다운로드할 수 있는지 여부를 지정합니다.|  
 |세션 제한 시간 편집|기본값은 7200초입니다.|  
 |세션 캐시 제한 편집|기본값은 5입니다.|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/06/2017
 
  보고서 구독과 데이터 기반 구독에서 만들어진 작업과 같은 실행 중인 작업을 보고 삭제할 수 있습니다. 이 페이지는 구독을 관리하는 데 사용되지 않으며 구독에서 트리거된 작업을 관리하는 데 사용됩니다. 예를 들어 1시간에 한 번 실행되도록 예약된 구독은 **작업 관리** 페이지에 나타나는 작업을 1시간에 한 번 생성합니다.  
   
- ![실행 중인 작업 관리](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "실행 작업 관리")  
+ ![실행 중인 작업 관리](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "실행 중인 작업 관리")  
   
 ## <a name="key-management"></a>키 관리
  다음 표에는 키 관리 페이지가 요약되어 있습니다.  
@@ -152,7 +151,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  계정을 지정하려면 선택합니다.  
   
  **계정**  
- Windows 도메인 사용자 계정을 입력합니다. 이 형식을 사용 하 여:  *\<도메인 >\\< 사용자 계정\>*합니다.  
+ Windows 도메인 사용자 계정을 입력합니다. *\<domain>\\<user account\>* 형식을 사용합니다.  
   
  **암호**  
  암호를 입력합니다.  
@@ -175,7 +174,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  **보낸 사람 주소**  
  생성된 전자 메일의 보낸 사람: 필드에 사용할 전자 메일 주소를 지정합니다. SMTP 서버에서 메일을 보낼 수 있는 권한이 있는 사용자 계정을 지정해야 합니다.  
 
-## <a name="provision-subscriptions-and-alerts"></a>프로 비전 구독 및 경고
+## <a name="provision-subscriptions-and-alerts"></a>구독 및 경고 프로비전
 
  이 페이지를 사용하여 SQL Server 에이전트가 실행 중인지 확인하고 SQL Server 에이전트를 사용하도록 보고 서비스에 대한 액세스를 프로비전합니다. SQL Server 에이전트는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독, 일정 및 데이터 경고에 필요합니다. [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
 
@@ -194,4 +193,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  해당 프록시의 상자를 선택하고 **확인**클릭합니다.  
   
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
-

@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 콘텐츠 형식을 SharePoint 라이브러리에 추가 | Microsoft Docs"
+title: "SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 77b7a28486715b0583fb64a8ae6da169a27507da
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: fe9ffe38667a07a647e5ed23f84cd7039c430f18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Reporting Services 콘텐츠 형식을 SharePoint 라이브러리에 추가
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -32,7 +31,7 @@ ms.lasthandoff: 10/06/2017
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 데이터 원본(.rsds) 파일, 보고서 모델(.smdl) 및 보고서 작성기 보고서 정의(.rdl) 파일을 관리하는 데 사용되는 미리 정의된 SharePoint 콘텐츠 형식을 제공합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다.
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
  라이브러리에 콘텐츠 형식을 추가하려면 사이트 관리자이거나 모든 권한 수준의 사용 권한이 있어야 합니다.  
   
@@ -162,7 +161,7 @@ ms.lasthandoff: 10/06/2017
   
 8.  콘텐츠 형식 추가를 완료하면 **확인**을 클릭합니다.  
   
-##  <a name="bkmk_enable_multiple_sites"></a>콘텐츠 형식 및 여러 BI 사이트에 대 한 콘텐츠 관리를 사용 하도록 설정 하려면  
+##  <a name="bkmk_enable_multiple_sites"></a> 여러 BI 사이트에 대해 콘텐츠 형식 및 콘텐츠 관리를 설정하려면  
   
 1.  SQL Server Reporting Services 2008 및 2008 R2 보고서 서버의 경우 여러 비즈니스 인텔리전스 센터 사이트에 대한 콘텐츠 형식 및 콘텐츠 관리를 설정할 수 있습니다.  
   
@@ -181,4 +180,3 @@ ms.lasthandoff: 10/06/2017
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)  
   
   
-

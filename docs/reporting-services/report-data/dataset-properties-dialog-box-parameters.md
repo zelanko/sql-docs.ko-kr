@@ -15,20 +15,19 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.parameters.f1
 - "10023"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4e4a62f8a01d973063370df81bfef5af1fc929c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a45216068522ad248d850af14224976a8c91cadd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>데이터 집합 속성 대화 상자, 매개 변수
-  **데이터 집합 속성** 대화 상자에서 **매개 변수** 를 선택하여 보고서 매개 변수에 연결되는 쿼리 매개 변수를 비롯한 쿼리 매개 변수를 추가, 변경 및 삭제할 수 있습니다.  
+  **데이터 집합 속성** 대화 상자에서 **매개 변수**를 선택하여 보고서 매개 변수에 연결되는 쿼리 매개 변수를 비롯한 쿼리 매개 변수를 추가, 변경 및 삭제할 수 있습니다.  
   
  쿼리 탭에서 쿼리가 변경될 때마다 쿼리 명령이 구문 분석됩니다. 식별된 각 쿼리 매개 변수에 대해 대/소문자를 구분하는 동일한 이름의 보고서 매개 변수가 작성됩니다. 기본적으로 쿼리 매개 변수는 자동으로 쿼리 매개 변수 목록에 추가되고 해당 보고서 매개 변수에 연결됩니다.  
   
@@ -59,4 +58,3 @@ ms.lasthandoff: 08/09/2017
  [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   
-

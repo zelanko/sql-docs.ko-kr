@@ -1,5 +1,5 @@
 ---
-title: "보고서 및 그룹 변수 컬렉션 참조 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "보고서 및 그룹 변수 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,19 +20,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 99b5b8ec78220064b79795e51b37b22f18a60886
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b04a9bc443ac284afad9153f5f3196a8c9a4fc1a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>기본 제공 컬렉션-보고서 및 그룹 변수 참조 (보고서 작성기)
+# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>기본 제공 컬렉션 - 보고서 및 그룹 변수 참조(보고서 작성기)
   보고서의 식에서 두 번 이상 사용되는 복잡한 계산이 있는 경우 변수를 만들어 사용할 수 있습니다. 보고서 변수 또는 그룹 변수를 만들 수 있습니다. 변수 이름은 보고서에서 고유해야 합니다.  
   
 > [!NOTE]  
@@ -78,9 +77,8 @@ ms.lasthandoff: 08/09/2017
  식에서 변수를 참조하려면 전역 컬렉션 구문을 사용합니다(예: `=Variables!GroupDescription.Value`). 디자인 화면에서 값은 입력란에 `<<Expr>>`로 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [식 &#40;의 기본 제공 컬렉션 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

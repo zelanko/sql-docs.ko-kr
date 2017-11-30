@@ -1,5 +1,5 @@
 ---
-title: "쿼리 (보고서 작성기 및 SSRS)를 모델링 하는 보고서의 수식 | Microsoft Docs"
+title: "보고서 모델 쿼리의 수식(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10151"
+f1_keywords: "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310d2eefcf253371e488f9e6fe5707a89b6f7ab6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>보고서 모델 쿼리의 수식(보고서 작성기 및 SSRS)
   수식은 보고서 모델을 데이터 원본으로 사용하는 보고서의 값에 대해 수행되는 계산입니다. 보고서 모델 데이터 원본의 쿼리를 정의할 때 보고서 모델 쿼리 디자이너의 **수식 정의 대화 상자** 에서 수식을 정의합니다. 수식에는 함수, 연산자, 상수 그리고 필드나 엔터티에 대한 참조가 포함될 수 있습니다. 수식을 사용하면 숫자 데이터 및 텍스트 데이터를 결합, 집계, 필터링 및 계산할 수 있습니다. 수식을 만들어 새 필드로 저장하거나 기존 필드의 수식을 수정할 수 있습니다.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  함수를 사용하여 간단하거나 복잡한 계산을 수행할 수 있습니다. 함수의 구조는 함수 이름으로 시작되고 그 뒤로 여는 괄호, 쉼표로 구분된 함수에 대한 인수, 닫는 괄호로 되어 있습니다.  
   
- ![함수의 예입니다. ] (../../reporting-services/report-design/media/functionexample.gif "는 함수의 예입니다.")  
+ ![함수의 예입니다.](../../reporting-services/report-design/media/functionexample.gif "함수의 예입니다.")  
   
  인수는 필드 참조, 숫자, 텍스트 그리고 **TRUE** 또는 **FALSE**와 같은 논리 값이 될 수 있습니다. 또한 상수, 수식 또는 다른 함수가 될 수도 있습니다. 입력하는 인수는 반드시 그 인수에 대해 유효한 값을 생성해야 합니다. 예를 들어 수식이 두 정수를 곱하는 식인 경우 결과가 텍스트 문자열이 될 수는 없습니다.  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 08/09/2017
 |텍스트 함수|**CONCAT**, **FIND**, **LEFT**, **LENGTH**, **LOWER**, **LTRIM**, **REPLACE**, **RIGHT**, **RTRIM**, **SUBSTRING**, **UPPER**|  
   
   
-

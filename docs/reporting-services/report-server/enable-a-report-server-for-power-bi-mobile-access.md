@@ -1,25 +1,23 @@
 ---
-title: "Power BI Mobile access에 대 한 보고서 서버를 사용 하도록 설정 | Microsoft Docs"
+title: "Power BI Mobile에 액세스할 수 있도록 보고서 서버 사용 | Microsoft Docs"
 ms.date: 12/17/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9c4b3e4ce530f822f28e7a3db52e802c90d492a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ffb3f281925623dac949f42d84a1f6f73588de7b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Power BI Mobile에 액세스할 수 있도록 보고서 서버 활성화
 Power BI Mobile 앱을 사용하여 모바일 보고서를 사용할 수 있습니다. Power BI Mobile 앱을 Reporting Services에 연결하기 위해서는 몇 가지 구성 사항이 있습니다.  
@@ -64,5 +62,4 @@ Windows 방화벽 구성 방법에 대한 자세한 내용은 [보고서 서버�
   
   
   
-
 

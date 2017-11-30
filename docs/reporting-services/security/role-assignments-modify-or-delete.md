@@ -1,5 +1,5 @@
 ---
-title: "역할 할당 (보고서 관리자) 수정 또는 삭제 | Microsoft Docs"
+title: "역할 할당 수정 또는 삭제(보고서 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,19 +17,18 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7d4a89bd4ab25ed62e8add7d6290f0a51954aab3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="role-assignments---modify-or-delete"></a>-역할 할당 수정 또는 삭제
+# <a name="role-assignments---modify-or-delete"></a>역할 할당 - 수정 또는 삭제
   역할 할당은 수행할 수 있는 태스크를 포함하는 미리 정의된 역할 정의에 그룹 또는 사용자 계정을 매핑하며 폴더, 보고서, 모델 또는 기타 내용 유형에 상대적으로 수행할 수 있는 작업 유형을 결정합니다. 역할 할당을 만들거나 수정하거나 삭제하려면 보고서 관리자를 사용합니다. 특정 사용자 또는 그룹에 대한 역할 할당을 만든 후에는 나중에 다른 역할을 선택하여 수정할 수 있습니다. 보고서 서버에 대한 사용 권한을 취소하려면 보고서 서버에서 역할 할당을 삭제합니다.  
   
  목적에 따라 적합한 방법이 다를 수 있습니다. 새 역할 정의 사용자 지정 또는 만들기, Active Directory에서 그룹 계정의 멤버 자격 수정 등의 목적이 있을 수 있습니다.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  **사이트 설정**을 클릭합니다.  
   
-3.  **보안**을 클릭합니다. 서버 또는 확장 배포에 대해 현재 정의된 모든 시스템 수준 역할 할당이 계정 이름별로 나열됩니다.  
+3.  **보안**을 클릭합니다. 서버 또는 스케일 아웃 배포에 대해 현재 정의된 모든 시스템 수준 역할 할당이 계정 이름별로 나열됩니다.  
   
 4.  수정하거나 삭제할 역할 할당을 찾습니다.  
   
@@ -71,8 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [역할 할당](../../reporting-services/security/role-assignments.md)   
- [사이트 설정 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [새 시스템 역할 할당: 시스템 역할 할당 페이지 &#40; 편집 보고서 관리자 &#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [사이트 설정 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [새 시스템 역할 할당: 시스템 역할 할당 편집 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   
-

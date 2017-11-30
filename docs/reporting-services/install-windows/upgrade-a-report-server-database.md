@@ -1,5 +1,5 @@
 ---
-title: "보고서 서버 데이터베이스를 업그레이드 | Microsoft Docs"
+title: "보고서 서버 데이터베이스 업그레이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,26 +15,24 @@ helpviewer_keywords:
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b17eda3ed38778a501f142b56e4f418ec8c21825
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
 
 보고서 서버 데이터베이스는 하나 이상의 보고서 서버 인스턴스를 위한 저장소를 제공합니다. 보고서 서버 데이터베이스 스키마는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 새 릴리스마다 변경될 수 있으므로 데이터베이스 버전과 사용하는 보고서 서버 인스턴스 버전이 일치해야 합니다. 대부분의 경우 보고서 서버 데이터베이스는 사용자가 특별한 동작을 수행하지 않고도 자동으로 업그레이드할 수 있습니다.  
   
  **기본 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 “ReportServer 및 ReportServerTempDB”인 두 개의 데이터베이스로 구성됩니다.  
   
- **SharePoint 모드:** SQL Server 2016 Reporting Services SharePoint 모드 보고서 서버 데이터베이스는 데이터베이스의 각 인스턴스에 대해 만들어진 컬렉션 실제로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.  
+ **SharePoint 모드:** SQL Server 2016 Reporting Services SharePoint 모드에서는 보고서 서버 데이터베이스가 실제로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 각 인스턴스에 대해 만들어진 데이터베이스 컬렉션입니다.  
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>기본 모드 보고서 서버 데이터베이스를 업그레이드하는 방법
 
@@ -81,5 +79,4 @@ ms.lasthandoff: 08/09/2017
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services 설치 마이그레이션](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

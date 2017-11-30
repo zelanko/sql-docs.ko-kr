@@ -1,5 +1,5 @@
 ---
-title: "(보고서 관리자) 캐시를 미리 로드 | Microsoft Docs"
+title: "캐시 사전 로드(보고서 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ce5bc7b1e8016eecf227c24e4751c3dee812474d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preload-the-cache-report-manager"></a>캐시 사전 로드(보고서 관리자)
   공유 데이터 집합에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 집합에 대한 캐시를 미리 로드할 수 있습니다.  
@@ -109,7 +108,7 @@ ms.lasthandoff: 08/09/2017
      그렇지 않고 사용자 지정 일정을 만들려면 **이 구독에 대해 생성된 일정** 을 클릭한 후 **다음**을 클릭합니다. 일정을 구성하고 **마침**을 클릭합니다.  
   
     > [!NOTE]  
-    >  구독자가 최신 보고서를 받도록 하려면 구성하는 일정이 구독자에 대해 정의한 보고서 배달 일정과 일치해야 합니다. 자세한 내용은 참조 [보고서 관리자 &#40; SSRS 기본 모드 &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  구독자가 최신 보고서를 받도록 하려면 구성하는 일정이 구독자에 대해 정의한 보고서 배달 일정과 일치해야 합니다. 자세한 내용은 [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 참조하세요.  
   
 14. 다음과 같이 보고서에 대한 실행 옵션을 구성합니다. 보고서 페이지에서 **속성** 탭을 클릭합니다.  
   
@@ -119,18 +118,17 @@ ms.lasthandoff: 08/09/2017
   
 17. 다음 두 캐시 옵션 중에서 하나를 선택하고 만료 시간을 구성합니다.  
   
-    -   캐시된 복사본이 특정 시간 후에 만료되도록 하려면 **보고서의 임시 복사본을 캐시합니다. 시간 (분) 후 보고서의 복사본을 만료 됩니다.** 보고서 만료 시간(분)을 입력합니다.  
+    -   캐시된 복사본이 특정 시간 후에 만료되도록 하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 분 후에 만료됩니다.**를 클릭합니다. 보고서 만료 시간(분)을 입력합니다.  
   
-    -   캐시 된 복사본이 일정에 따라 만료 되도록 하려면 **보고서의 임시 복사본을 캐시 합니다. 보고서 복사본은 다음 일정으로 만료 됩니다.** 를 클릭합니다. **구성**을 클릭하거나 공유 일정을 선택하여 보고서 만료 일정을 설정합니다.  
+    -   일정에 따라 캐시된 복사본이 만료되도록 하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 일정으로 만료됩니다.**를 클릭합니다.  를 클릭합니다. **구성**을 클릭하거나 공유 일정을 선택하여 보고서 만료 일정을 설정합니다.  
   
 18. **적용**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [성능, 스냅숏, 캐싱 &#40; Reporting services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [성능, 스냅숏, 캐싱&#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
  [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

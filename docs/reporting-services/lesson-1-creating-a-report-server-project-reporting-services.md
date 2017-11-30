@@ -1,30 +1,28 @@
 ---
-title: "1 단원: 보고서 서버 프로젝트 (Reporting Services) 만들기 | Microsoft Docs"
+title: "1단원: 보고서 서버 프로젝트 만들기(Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6292a812cb1456892a6dad78408d0d64ce0b1a9e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3968a5183de7cc1ee81c7ee09faba79d06990884
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>1단원: 보고서 서버 프로젝트 만들기(Reporting Services)
 
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [1 단원: 보고서 서버 프로젝트 (Reporting Services)를 만들어](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx)합니다.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [1단원: 보고서 서버 프로젝트 만들기(Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx)를 참조하세요.
 
 이 섹션에서는Visual Studio 내의 *에서* 보고서 서버 프로젝트 *및* 보고서 정의(.rdl) [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] 파일을 만듭니다. 
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/27/2017
   
 1.  [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)]를 엽니다.  
   
-2.  에 **파일** 메뉴 > **새로** > **프로젝트**합니다.  
+2.  **파일** 메뉴 > **새로 만들기** > **프로젝트**를 클릭합니다.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 09/27/2017
 
 5. **보고서 서버 프로젝트** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png)를 클릭합니다. 
 
-   >**참고**: 표시 되지 않으면는 **Business Intelligence** 또는 **보고서 서버 프로젝트** Business Intelligence 템플릿으로 SSDT를 업데이트 해야 하는 옵션입니다. [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.  
+   >**참고**: **비즈니스 인텔리전스** 또는 **보고서 서버 프로젝트** 옵션이 표시되지 않는 경우 SSDT를 비즈니스 인텔리전스 템플릿으로 업데이트해야 합니다. [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.  
   
 5.  **이름**에 **Tutorial**을 입력합니다.  
 
@@ -56,7 +54,7 @@ ms.lasthandoff: 09/27/2017
     
     ![ssrs-ssdt-01-solution-location](../reporting-services/media/ssrs-ssdt-01-solution-location.png)
   
-6.  **확인** 을 클릭하여 프로젝트를 만듭니다.  
+6.  **확인**을 클릭하여 프로젝트를 만듭니다.  
   
     오른쪽의 솔루션 탐색기 페이지에 Tutorial 프로젝트가 표시됩니다.  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 09/27/2017
   
 2.  **새 항목 추가** 창에서 **보고서** ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png)를 클릭합니다.  
   
-3.  **이름**에 **Sales Orders.rdl** 을 입력한 후 **추가**를 클릭합니다.  
+3.  **이름**에 **Sales Orders.rdl**을 입력한 후 **추가**를 클릭합니다.  
   
     보고서 디자이너가 열리고 새 .rdl 파일이 디자인 뷰에 표시됩니다.  
     
@@ -81,10 +79,9 @@ ms.lasthandoff: 09/27/2017
     **보고서 데이터** 창에서 데이터를 정의합니다. **디자인** 뷰에서는 보고서 레이아웃을 정의합니다. 보고서를 실행하고 **미리 보기** 뷰에서 보고서의 모양을 볼 수 있습니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-"Tutorial" 보고서 프로젝트를 만들고 보고서 정의 파일(.rdl)을 보고서 프로젝트에 추가했습니다. 다음 단원에서는 보고서에 사용할 데이터 원본을 지정합니다. 참조 [2 단원: 연결 정보 &#40;를 지정 합니다. Reporting services&#41; ](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+"Tutorial" 보고서 프로젝트를 만들고 보고서 정의 파일(.rdl)을 보고서 프로젝트에 추가했습니다. 다음 단원에서는 보고서에 사용할 데이터 원본을 지정합니다. [2단원: 연결 정보 지정&#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
-
 

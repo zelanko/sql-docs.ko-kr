@@ -1,5 +1,5 @@
 ---
-title: "Detail 속성을 사용 하 여 특정 오류 처리 | Microsoft Docs"
+title: "Detail 속성을 사용하여 특정 오류 처리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - exceptions [Reporting Services], Detail property
 - Detail property
 - InnerText property
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: cbbaf57ce4726bbb16c8cb722f50ac186fe59d81
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 783d3ded7592f60b39e125215d2b8f08d4c533d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-detail-property-to-handle-specific-errors"></a>Detail 속성을 사용하여 특정 오류 처리
-  예외를 상세하게 분류 하기 위해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 추가 오류 정보를 반환는 **InnerText** SOAP 예외에서 자식 요소의 속성 **세부** 속성입니다. 때문에 **세부** 속성은 한 **XmlNode** 개체의 내부 텍스트에 액세스할 수 있습니다는 **메시지** 다음 코드를 사용 하 여 자식 요소입니다.  
+  예외를 상세하게 분류하기 위해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 SOAP 예외의 **Detail** 속성에서 자식 요소의 **InnerText** 속성으로 추가 오류 정보를 반환합니다. **Detail** 속성은 **XmlNode** 개체이므로 다음 코드를 사용하여 **Message** 자식 요소의 내부 텍스트에 액세스할 수 있습니다.  
   
- 모든 사용 가능한 자식 요소에 포함 된 목록은 **세부** 속성 참조 [Detail 속성](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)합니다. 자세한 내용은의 "Detail 속성" 참조는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서입니다.  
+ **Detail** 속성에 포함된 사용 가능한 모든 자식 요소 목록은 [Detail 속성](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)을 참조하세요. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서의 "Detail 속성(Detail Property)"을 참조하세요.  
   
 ```vb  
 Try  
@@ -96,4 +94,3 @@ Console.WriteLine(ex.Detail["ErrorCode"].InnerXml);
  [SoapException 오류 테이블](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)  
   
   
-

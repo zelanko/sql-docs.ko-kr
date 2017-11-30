@@ -11,24 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e37adf58a9b3c953eedb9b1815d980addbe4b4d1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9c0660a8680dd6b87dacd035d69068764a0b2570
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>차트에 데이터 범위가 여러 개 있는 계열 표시
 
   차트는 최소 계열 값과 최대 계열 값을 사용하여 축 배율을 계산합니다. 차트 계열에 두 개 이상의 데이터 범위가 포함되어 있으면 데이터 요소가 가려지고 몇 개의 데이터 요소만 차트에서 쉽게 볼 수 있습니다. 예를 들어 보고서에서 한 달 간의 하루 총 판매량을 표시한다고 가정합니다.  
   
- ![여러 데이터 범위를 포함 하는 차트](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "데이터 범위가 여러 개 있는 차트")  
+ ![데이터 범위가 여러 개 있는 차트](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "데이터 범위가 여러 개 있는 차트")  
   
  한 달 동안 하루 총 판매량은 대부분 10에서 40 사이에 분포했지만 4월 초의 판매량은 한 주 동안의 진행된 판촉 행사로 급등했습니다. 이러한 판매 데이터 변경으로 인해 데이터 요소가 균일하지 않게 배포되어 차트에 대한 전체 가독성이 떨어집니다.  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-multiple-data-ranges-using-scale-breaks"></a>배율 구분선을 사용하여 여러 데이터 범위 표시  
  배율 구분선을 사용하면 차트 위에서 선을 그릴 위치가 계산됩니다. 배율 구분선을 그리기 위해 범위 사이를 충분히 구분해야 합니다. 기본적으로 차트의 25% 이상의 데이터 범위 사이가 구분되는 경우에만 배율 구분선을 추가할 수 있습니다.  
   
- ![배율 구분선을 포함 하는 차트](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "배율 구분선을 포함 하는 차트")  
+ ![배율 구분선을 포함하는 차트](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "배율 구분선을 포함하는 차트")  
   
 > [!NOTE]  
 >  차트에서 배율 구분선의 배치 위치는 지정할 수 없습니다. 그러나 이 항목의 뒷부분에 설명되어 있는 대로 배율 구분선을 계산하는 방식은 수정할 수 있습니다.  
@@ -66,16 +64,15 @@ ms.lasthandoff: 08/09/2017
   
 -   이 차트 종류가 극좌표형, 방사형, 원형, 도넛형, 깔때기형, 피라미드형 또는 모든 누적 차트입니다.  
   
- 배율 구분선이 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드 하는 방법에 대 한 자세한 내용은 참조 [보고서 작성기 및 보고서 디자이너 예제 보고서](http://go.microsoft.com/fwlink/?LinkId=198283)합니다.  
+ 배율 구분선이 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283).  
 
 ## <a name="next-steps"></a>다음 단계
 
-[차트에 여러 계열](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+[차트의 여러 계열](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
 [차트 서식 지정](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[3D, 빗면 및 기타 효과 차트에](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
+[차트의 3D, 빗면 및 기타 효과](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [차트](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [축 속성 대화 상자, 축 옵션](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
 [원형 차트에서 작은 조각 수집](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

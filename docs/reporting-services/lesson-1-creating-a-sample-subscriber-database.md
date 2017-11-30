@@ -1,35 +1,31 @@
 ---
-title: "1 단원: 예제 구독자 데이터베이스 만들기 | Microsoft Docs"
+title: "1단원: 샘플 구독자 데이터베이스 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0a65cf856e571a25f985846c185c207e59375cc2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
 
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 작은 "구독자" 데이터베이스를 만들어 데이터 기반 구독에서 사용할 구독 데이터를 저장합니다. 구독을 처리할 때 보고서 서버에서는 이 데이터를 검색하여 보고서 출력을 사용자 지정하는 데 사용합니다. 예를 들어 데이터 행에 필터에서 사용할 특정 주문 번호가 있고 보고서를 생성한 파일 형식이 보고서를 만들 때 포함됩니다.  
   
-이 단원에서는 사용 하는 가정 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQL Server 데이터베이스를 만들 수 있습니다.  
+이 단원에서는 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)]를 사용하여 SQL Server 데이터베이스를 만든다고 가정합니다.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>예제 구독자 데이터베이스를 만들려면  
   
@@ -80,5 +76,4 @@ ms.lasthandoff: 08/09/2017
 [데이터베이스 만들기](../relational-databases/databases/create-a-database.md)  
 [기본 테이블 보고서 만들기](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

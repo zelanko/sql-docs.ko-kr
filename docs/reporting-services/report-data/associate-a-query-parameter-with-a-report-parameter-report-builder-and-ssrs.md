@@ -1,5 +1,5 @@
 ---
-title: "Associate a Query Parameter with a Report Parameter (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "보고서 매개 변수와 쿼리 매개 변수 연결(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - queries [Reporting Services], parameters
 - parameters [Reporting Services], queries
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6a1efe67725037c9d47f20209c2831db3faef65e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d682669b2bcf3eb7d9b54bea1f15f3549c274a50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>보고서 매개 변수와 쿼리 매개 변수 연결(보고서 작성기 및 SSRS)
   쿼리 변수가 포함된 데이터 집합 쿼리를 정의할 경우 쿼리 명령이 구문 분석됩니다. 각 쿼리 변수에 대해 해당 데이터 집합 매개 변수 및 보고서 매개 변수가 생성됩니다. 데이터 집합 매개 변수는 보고서 매개 변수를 가리킵니다. 이를 통해 사용자는 쿼리에 직접 전달되는 값을 입력할 수 있습니다. 쿼리 명령을 편집할 때마다 동일한 프로세스가 수행됩니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  보고서 데이터 창에서 데이터 집합을 마우스 오른쪽 단추로 클릭하고 **데이터 집합 속성**을 클릭한 다음 **매개 변수**를 클릭합니다.  
   
-    > **참고:** 보고서 데이터 창이 표시되지 않는 경우 **보기** 메뉴에서 **보고서 데이터** 를 클릭합니다.  
+    > **참고:** 보고서 데이터 창이 표시되지 않는 경우 **보기** 메뉴에서 **보고서 데이터**를 클릭합니다.  
   
 2.  열 **매개 변수 이름**에서 쿼리 매개 변수의 이름을 찾습니다. 매개 변수 이름은 쿼리를 기반으로 자동 채워집니다. 쿼리를 변경할 때마다 새 쿼리 매개 변수가 있는지 확인됩니다. 직접 만드는 쿼리 매개 변수는 쿼리가 변경될 때 변경되지 않습니다.  
   
@@ -54,4 +53,3 @@ ms.lasthandoff: 08/09/2017
 
   
   
-

@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Report Designer [Reporting Services], dialog boxes
+helpviewer_keywords: Report Designer [Reporting Services], dialog boxes
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b896408bc673dfd1d88d9e037b8f1942e23ba01c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a3629ab42cef5cceeaccb8a969b003667808936f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-designer-f1-help"></a>보고서 디자이너 F1 도움말
   이 섹션에서는 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 디자이너 마법사, 뷰 및 대화 상자에 대한 F1 도움말을 설명합니다. 대화 상자에서 작업하는 동안 F1 키를 누르거나 대화 상자에 표시된 도움말 단추를 클릭하여 F1 도움말을 열 수도 있습니다.  
@@ -35,4 +33,3 @@ ms.lasthandoff: 08/09/2017
    
   
   
-

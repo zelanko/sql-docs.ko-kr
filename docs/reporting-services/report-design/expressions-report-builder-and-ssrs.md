@@ -1,5 +1,5 @@
 ---
-title: "식 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "식(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 05e319f4bf6beac579eb768accbc447645277a65
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 326b542108214956c9ef51bc370d7ee36212a40d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>식(보고서 작성기 및 SSRS)
   식은 데이터를 검색, 계산, 표시, 그룹화, 정렬, 필터링, 매개 변수화 및 서식 지정하기 위해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 에서 페이지를 매긴 보고서 전체에서 광범위하게 사용됩니다. 
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **간단한 식** 간단한 식에는 데이터 집합 필드, 매개 변수 또는 기본 제공 필드와 같은 기본 제공 컬렉션에 있는 단일 항목에 대한 참조가 포함됩니다. 디자인 화면에서 간단한 식은 대괄호 안에 나타납니다. 예를 들어 `[FieldName]` 은 기본 식 `=Fields!FieldName.Value`에 해당합니다. 보고서 레이아웃을 만들고 보고서 데이터 창의 항목을 디자인 화면으로 끌어서 놓으면 간단한 식이 자동으로 만들어집니다. 여러 다른 기본 제공 컬렉션을 나타내는 기호에 대한 자세한 내용은 [간단한 식의 접두사 기호 이해](#DisplayText)를 참조하세요.  
   
--   **복잡한 식** 복잡한 식에는 여러 개의 기본 제공 참조, 연산자 및 함수 호출에 대한 참조가 포함됩니다. 복잡 한 식으로 나타나는 <\<Expr >> 식 값의 간단한 참조 이상을 포함 하는 경우. 식을 보려면 식 위로 마우스를 이동하여 도구 설명을 사용합니다. 식을 편집하려면 **식** 대화 상자에서 식을 엽니다.  
+-   **복잡한 식** 복잡한 식에는 여러 개의 기본 제공 참조, 연산자 및 함수 호출에 대한 참조가 포함됩니다. 식 값에 간단한 참조 이상이 포함되어 있으면 복잡한 식이 <\<Expr>>로 나타납니다. 식을 보려면 식 위로 마우스를 이동하여 도구 설명을 사용합니다. 식을 편집하려면 **식** 대화 상자에서 식을 엽니다.  
   
  다음 그림에서는 입력란과 자리 표시자 텍스트 모두에 대한 일반적인 간단한 식과 복잡한 식을 보여 줍니다.  
   
@@ -125,4 +124,3 @@ ms.lasthandoff: 08/09/2017
 -   [자습서: 식 소개](Tutorial:%20Introducing%20Expressions.md)
 -   [보고서 예제(보고서 작성기 및 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
-

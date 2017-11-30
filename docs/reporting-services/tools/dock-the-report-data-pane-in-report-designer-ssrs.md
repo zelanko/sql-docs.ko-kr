@@ -1,5 +1,5 @@
 ---
-title: "(SSRS) 보고서 디자이너에서 보고서 데이터 창 도킹 | Microsoft Docs"
+title: "보고서 디자이너에서 보고서 데이터 창 도킹(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Data pane, docking
+helpviewer_keywords: Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69b608f7c673ccd05826c32c173d5cde014937a3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8739191250029846e3ed4e740cc44a0475fc80d7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>보고서 디자이너에서 보고서 데이터 창 도킹(SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보고서 디자이너에 있는 보고서 데이터 창에는 데이터 원본, 데이터 집합, 필드, 매개 변수 및 이미지를 비롯하여 보고서에 사용할 수 있는 데이터 개체의 계층 뷰가 표시됩니다. 이 뷰의 데이터 원본은 포함된 데이터 원본이거나 솔루션 탐색기에 표시되는 공유 데이터 원본에 대한 참조일 수 있습니다.  
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/09/2017
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
-

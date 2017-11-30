@@ -1,5 +1,5 @@
 ---
-title: "렌더링 동작 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "렌더링 동작(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4cf19162ddf8e94b897de746e311f218a94b9dda
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>렌더링 동작(보고서 작성기 및 SSRS)
   보고서를 렌더링하는 경우 선택한 렌더러에 따라 보고서 본문 및 해당 내용에 특정 규칙이 적용됩니다. 여러 보고서 항목이 한 페이지에 함께 포함되는 방식은 다음과 같은 요소의 조합에 따라 결정됩니다.  
@@ -134,9 +133,8 @@ ms.lasthandoff: 08/09/2017
 -   테이블 또는 행렬 셀의 항목에 대해 정의한 논리적 페이지 나누기는 유지되지 않습니다. 목록의 항목은 이 규칙에서 예외입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [여러 보고서 렌더링 확장 프로그램 &#40;에 대 한 대화형 기능 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [HTML &#40; 렌더링 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [페이지 레이아웃 및 렌더링 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
-

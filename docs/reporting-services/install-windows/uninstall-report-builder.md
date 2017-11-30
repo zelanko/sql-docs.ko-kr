@@ -1,5 +1,5 @@
 ---
-title: "보고서 작성기를 제거 | Microsoft Docs"
+title: "보고서 작성기 제거 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 87d8e248cb143322c06570092ca3afc380827356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="uninstall-report-builder"></a>보고서 작성기 제거
 
 제어판 또는 명령줄에서 독립 실행형 버전의 보고서 작성기를 제거할 수 있습니다.
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  제어판에서 **프로그램 및 기능**을 클릭합니다.  
   
-3.  찾을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 SQL Server 2016 보고서 작성기는 **이름** 나열 하 고 해당 연결을 클릭 합니다.  
+3.  **이름** 목록에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 보고서 작성기를 찾아 클릭합니다.  
   
 4.  **제거**를 클릭합니다.  
   
@@ -65,4 +64,4 @@ ms.lasthandoff: 08/09/2017
 
 [보고서 작성기 설치](../../reporting-services/install-windows/install-report-builder.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

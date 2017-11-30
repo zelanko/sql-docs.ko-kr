@@ -15,17 +15,16 @@ helpviewer_keywords:
 - logs [Reporting Services], Windows application logs
 - application logs [Reporting Services]
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8e1716d9e81043992e5c92f260835cda7742972
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2f34c31f34b79a5e2f40cc88cbf57c35ce582558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="windows-application-log"></a>Windows 응용 프로그램 로그
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 이벤트 메시지를 Windows 응용 프로그램 로그에 기록합니다. 응용 프로그램 로그에 기록된 메시지 정보를 사용하여 로컬 시스템에서 실행되는 보고서 서버 응용 프로그램에서 생성된 이벤트를 확인할 수 있습니다.  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [오류 및 이벤트 참조&#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

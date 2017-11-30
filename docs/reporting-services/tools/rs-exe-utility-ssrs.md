@@ -1,5 +1,5 @@
 ---
-title: "RS.exe 유틸리티 (SSRS) | Microsoft Docs"
+title: "RS.exe 유틸리티(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 8b31796877b7ae964b1d4ec124979d213d9be4b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
   
 > [!NOTE]  

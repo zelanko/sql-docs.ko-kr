@@ -1,27 +1,24 @@
 ---
 title: "SQL Server 모바일 보고서: 종단 간 연습 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/30/2017
+ms.custom: SQL2016_New_Updated
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: dde88a1ef8453a7a45410163e8c79bc20fe2df5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
@@ -38,11 +35,11 @@ ms.lasthandoff: 09/27/2017
 ## <a name="before-we-start"></a>시작하기 전에  
 이러한 단계를 따르려면 다음 제품이 필요합니다.  
   
-* 데이터 원본 및 Kpi를 만들고 데이터 집합 및 모바일 보고서 게시, 하려면에 대 한 액세스는 [! 포함[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)합니다.  
-* [공유 데이터 집합을 만들](../install-windows/install-report-builder.md)합니다.  
+* 데이터 원본 및 KPI를 만들고 데이터 집합 및 모바일 보고서를 게시하려면 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)에 액세스해야 합니다.  
+* [공유 데이터 집합을 만들려면](../install-windows/install-report-builder.md)  
 * 모바일 보고서를 만들려면 [SQL Server 모바일 보고서 게시자를 설치](http://go.microsoft.com/fwlink/?LinkId=717766)합니다.  
-* [AdventureWorks 예제 데이터베이스 및 스크립트](http://msftdbprodsamples.codeplex.com/)  
-*  OR: Wide World Importers 샘플 데이터베이스에서 사용할 수는 [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) 페이지.
+* [AdventureWorks 예제 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)  
+*  또는 [Microsoft SQL Server 예제](../../sample/microsoft-sql-server-samples.md) 페이지에서 제공되는 Wide World Importers 예제 데이터베이스
 * 결과를 보려면 
   *   [Power BI 서비스에 등록](http://go.microsoft.com/fwlink/?LinkID=513879) 합니다.
   *  모바일 장치(iOS, Android 휴대폰 또는 Windows 10 장치)에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
@@ -50,12 +47,12 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="create-a-shared-data-source"></a>공유 데이터 원본 만들기  
   
-Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 보고서에 대한 공유 데이터 원본을 만들 수 있습니다. 참조는 [지원 되는 데이터 원본 목록이](../report-data/data-sources-supported-by-reporting-services-ssrs.md)합니다.  
+Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 보고서에 대한 공유 데이터 원본을 만들 수 있습니다. [지원되는 데이터 원본 목록](../report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **데이터 원본**을 클릭합니다.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. 데이터 원본 정보를 입력 > **확인**합니다.  
+3. 데이터 원본 정보를 입력하고 **확인**을 클릭합니다.  
   
     기본적으로 데이터 원본은 포털에 표시되지 않습니다.    
    
@@ -236,7 +233,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 마스터 레이아웃에서 시각적 개체를 만들었으므로 이제 특별히 휴대폰 사용자용으로 최적화된 레이아웃의 모바일 보고서를 만들 수 있습니다.    
   
-1. 오른쪽 위 모서리에서 캔버스 아이콘을 클릭 > **전화**합니다.  
+1. 오른쪽 위에서 캔버스 아이콘 > **전화**를 클릭합니다.  
   
 2. 레이아웃 탭의 **제어 인스턴스**아래에 사용자가 만든 두 개의 차트가 표시됩니다.   
   
@@ -313,5 +310,4 @@ KPI와 모바일 보고서는 Reporting Services 웹 포털에 있는 것과 동
 -  [Windows 10 장치용 Power BI 앱에서 Reporting Services 보고서 및 KPI 보기](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
-
 

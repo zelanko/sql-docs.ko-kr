@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_Instance Properties
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_Instance Properties
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- MSReportServer_Instance class
+helpviewer_keywords: MSReportServer_Instance class
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c41f22af9e492ed8bf1be8ba159ce84e8cfbc7db
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e280c04857a985b10f14a5009151110630fcf4d7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverinstance-properties"></a>MSReportServer_Instance 속성
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
@@ -48,4 +44,3 @@ ms.lasthandoff: 08/09/2017
  [MSReportServer_Instance 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
-

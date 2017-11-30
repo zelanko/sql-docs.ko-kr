@@ -1,5 +1,5 @@
 ---
-title: "이동 또는 삭제 (보고서 관리자) 항목 | Microsoft Docs"
+title: "항목 이동 또는 삭제(보고서 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6b2c78c1794c54fe116d745ef0561cd93a6339c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>항목 이동 또는 삭제(보고서 관리자)
   보고서 서버에 게시하는 보고서 및 보고서 관련 항목은 폴더에 저장됩니다. 항목을 다른 폴더로 이동할 수 있으며 해당 항목에 대한 참조는 보고서 서버에서 자동으로 유지 관리됩니다. 항목을 삭제하기 전에 해당 항목에 다른 항목이 종속되어 있는지 확인하십시오.  
@@ -79,8 +78,7 @@ ms.lasthandoff: 08/09/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [내용 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

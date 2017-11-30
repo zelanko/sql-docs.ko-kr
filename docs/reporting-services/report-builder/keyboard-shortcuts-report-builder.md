@@ -1,5 +1,5 @@
 ---
-title: "바로 가기 키 (보고서 작성기) | Microsoft Docs"
+title: "바로 가기 키(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f8a493830a49bbd083fdea72aa215bd2d084c9a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
   보고서 작성기에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들고 편집하는 경우 Windows 환경에서 제공하는 모든 바로 가기 키를 탐색에 사용할 수 있습니다. 여러 표준 키보드 매핑 구성표 중에서 선택할 수 있습니다.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [보고서 디자인 보기 &#40; 보고서 작성기 &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [용어 설명 &#40; 보고서 작성기 &#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
+ [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [용어 설명&#40;보고서 작성기&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   

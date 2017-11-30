@@ -1,5 +1,5 @@
 ---
-title: "파일 또는 보고서 업로드 (보고서 관리자) | Microsoft Docs"
+title: "파일 또는 보고서 업로드(보고서 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - uploading files [Reporting Services]
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 227bef646204cd18d2e96a33d398f00a5bbad314
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4c41372d28a94a2e8bf0ea86a750c15ea29b2abd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>파일 또는 보고서 업로드(보고서 관리자)
   보고서 관리자에서는 업로드 기능을 제공하므로 클라이언트 응용 프로그램에서 보고서, 모델 및 기타 파일을 게시하지 않고도 이러한 항목을 보고서 서버에 추가할 수 있습니다. 파일 시스템에서 업로드한 파일은 보고서 서버에 항목으로 저장됩니다. 업로드한 파일 형식은 저장되는 방식에 따라 결정됩니다.  
@@ -55,10 +54,9 @@ ms.lasthandoff: 08/09/2017
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [만들기, 삭제 또는 공유 데이터 원본 &#40; 수정 보고서 관리자 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [업로드 파일 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [파일 업로드 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
   
-

@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- renaming report servers
+helpviewer_keywords: renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 349180bb3cfe2b03bee076dfc2dbb90265118fa4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0f8dbaa44404060878910e8e00652dab378dd202
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rename-a-report-server-computer"></a>보고서 서버 컴퓨터 이름 바꾸기
   컴퓨터 이름을 바꾸면 웹 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 같은 컴퓨터에 있는 경우 이에 해당하는 이름이 변경됩니다. 컴퓨터 이름을 변경한 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 액세스할 수 없는 경우도 있습니다. 컴퓨터 이름을 변경한 다음에는 이 항목의 단계를 사용하여 보고서 서버를 다시 구성합니다.  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 이름 바꾸기  
- 보고서 서버 데이터베이스를 실행하는  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 이름을 바꾸는 경우 다음을 수행하십시오.  
+ 보고서 서버 데이터베이스를 실행하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 이름을 바꾸는 경우 다음을 수행하십시오.  
   
 1.  Reporting Services 구성 도구를 시작한 다음 이름이 바뀐 서버에 있는 보고서 서버 데이터베이스를 사용하는 보고서 서버에 연결합니다.  
   
@@ -53,10 +51,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 구성 관리자 &#40; 기본 모드 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services 보고서 서버 &#40; 기본 모드 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [rsconfig 유틸리티 &#40; Ssrs&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  
+ [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
   
-

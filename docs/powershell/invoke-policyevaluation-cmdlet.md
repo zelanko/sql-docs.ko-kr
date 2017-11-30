@@ -8,8 +8,7 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Invoke-PolicyEvaluation
 - PowerShell [SQL Server], Invoke-PolicyEvaluation
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5adc3571b07e3613514525f286241add73af1a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b06de61335e318438f4e75e694de7c0eb3521bc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation cmdlet
   **Invoke-PolicyEvaluation** 은 SQL Server 개체의 대상 집합이 하나 이상의 정책 기반 관리 정책에 지정된 조건을 준수하는지 여부를 보고하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet입니다.  
@@ -92,9 +90,9 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>대상 집합 지정  
  다음 3개의 매개 변수를 사용하여 대상 개체 집합을 지정할 수 있습니다.  
   
--   **-TargetServerName** 은 대상 개체를 포함하는 SQL Server 인스턴스를 지정합니다. 정보를 <xref:System.Data.SqlClient.SqlConnection> 클래스의 ConnectionString 속성에 대해 정의된 형식을 사용하는 문자열에 지정할 수 있습니다. <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 클래스를 사용하여 올바른 형식의 연결 문자열을 빌드할 수 있습니다. <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> 개체를 만들고 **-TargetServer**에 전달할 수도 있습니다. 서버 이름만 포함하는 문자열을 제공하는 경우 **Invoke-PolicyEvaluation** 에서는 Windows 인증을 사용하여 서버에 연결합니다.  
+-   **-TargetServerName** 은 대상 개체를 포함하는 SQL Server 인스턴스를 지정합니다. 정보를 <xref:System.Data.SqlClient.SqlConnection> 클래스의 ConnectionString 속성에 대해 정의된 형식을 사용하는 문자열에 지정할 수 있습니다. <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 클래스를 사용하여 올바른 형식의 연결 문자열을 작성할 수 있습니다. <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> 개체를 만든 다음 **-TargetServer**에 전달해도 됩니다. 서버 이름만 포함하는 문자열을 제공하는 경우 **Invoke-PolicyEvaluation** 에서는 Windows 인증을 사용하여 서버에 연결합니다.  
   
--   **-TargetObjects** 는 대상 집합의 SQL Server 개체를 나타내는 개체 배열 또는 개체를 가져옵니다. 예를 들어 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스 개체의 배열을 만들어 **-TargetObjects**에 전달할 수 있습니다.  
+-   **-TargetObjects** 는 대상 집합의 SQL Server 개체를 나타내는 개체 배열 또는 개체를 가져옵니다. 예를 들어 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스 개체의 배열을 만들어 **-TargetObjects**에서 사용됩니다.  
   
 -   **-TargetExpressions** 는 대상 집합의 개체를 지정하는 쿼리 식을 포함하는 문자열을 가져옵니다. 쿼리 식은 '/' 문자로 구분된 노드 형식입니다. 각 노드의 형식은 ObjectType[Filter]입니다. 개체 유형은 SMO(SQL Server 관리 개체) 개체 계층의 개체 중 하나입니다. 필터는 해당 노드에 있는 개체에 대해 필터링하는 식입니다. 자세한 내용은 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)을(를) 참조하세요.  
   
@@ -148,4 +146,3 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
  [데이터베이스 엔진 cmdlet 사용](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
   
   
-

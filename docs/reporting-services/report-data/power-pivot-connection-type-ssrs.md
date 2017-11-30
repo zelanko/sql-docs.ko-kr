@@ -1,5 +1,5 @@
 ---
-title: "Power Pivot 연결 유형 (SSRS) | Microsoft Docs"
+title: "파워 피벗 연결 형식(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7a8fe1f1b6dd44f468095502b924c432032cf11d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>파워 피벗 연결 형식(SSRS)
   SQL Server Analysis Services 데이터 처리 확장 프로그램을 사용하면 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 검색할 수 있습니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
  보고서 데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 사용합니다.  
   
 ## <a name="connection-string"></a>연결 문자열  
- 연결 문자열은 URL을 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 SharePoint에 게시 된 통합 문서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 또는 기타 라이브러리 `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`합니다.  
+ 연결 문자열은 SharePoint의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 또는 기타 라이브러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 URL입니다(예: `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`).  
   
 ## <a name="credentials"></a>자격 증명  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 및 SharePoint 사이트에 액세스하는 데 필요한 자격 증명을 지정합니다. 예를 들어 Windows 인증(통합 보안)을 지정합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
@@ -70,7 +69,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

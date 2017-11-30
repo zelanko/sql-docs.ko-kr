@@ -1,5 +1,5 @@
 ---
-title: "데이터 처리 확장 프로그램과.NET Framework 데이터 공급자 (SSRS) | Microsoft Docs"
+title: "데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74e70cd67affe64f31076f362f36e813f3357f82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8cfc1828b859435f924b480ed5ae518e5e5ab1fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치되는 구성 요소로, 특정 유형의 데이터 원본에서 데이터를 검색하고 보고서 디자인 및 보고서 처리를 지원하기 위한 추가 기능을 제공하도록 디자인되었습니다. 먼저 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 유형의 데이터 원본에서 데이터를 검색하고 수정할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] System.Data <xref:System.Data> 또는 타사 제공 구성 요소입니다.  
@@ -54,7 +53,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 처리 확장 프로그램 개요](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)   
- [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

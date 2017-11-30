@@ -1,27 +1,25 @@
 ---
-title: "자습서: 자유 형식 보고서 (보고서 작성기) 만들기 | Microsoft Docs"
+title: "자습서: 자유 형식 보고서 만들기(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: eeb53cfbcf47af7c3580cb75b34acaf0f140810d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 만들기(보고서 작성기)
 이 자습서에서는 뉴스레터 역할을 하는 페이지가 매겨진 보고서를 만듭니다. 각 페이지에는 정적 텍스트, 요약 시각적 개체 및 자세한 샘플 판매 데이터가 표시됩니다.
@@ -60,9 +58,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
-4.  연결 유형이 Microsoft SQL Server 인지 확인 한 다음는 **연결 문자열** 상자에 입력: **데이터 원본 = \<서버 이름 >**  
+4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 **Data Source = \<servername>**을 입력합니다.  
   
-    **\<서버 이름 >**SQL Server 데이터베이스 엔진의 인스턴스로 설치 된 컴퓨터를 지정 하는 예제 Report001에 대 한 합니다. 이 보고서의 데이터는 SQL Server 데이터베이스에서 추출된 것이 아니므로 데이터베이스 이름을 포함하면 안 됩니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데만 사용됩니다.  
+    **\<servername>**(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 보고서의 데이터는 SQL Server 데이터베이스에서 추출된 것이 아니므로 데이터베이스 이름을 포함하면 안 됩니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데만 사용됩니다.  
   
 5.  **자격 증명**을 클릭하고 SQL Server 데이터베이스 엔진의 인스턴스에 연결해야 하는 자격 증명을 입력합니다.  
   
@@ -130,7 +128,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-list"></a>목록을 추가하려면  
   
-1.  에 **삽입** 탭 > **데이터 영역** > **목록**합니다. 
+1.  **삽입** 탭 > **데이터 영역** > **목록**으로 이동합니다. 
 
 2. 보고서 본문(제목 및 바닥글 영역 사이)을 클릭한 다음 마우스를 끌어 목록 상자를 만듭니다. 목록 상자의 높이와 너비를 각각 7인치와 6.25인치로 조정합니다. 정확한 크기를 지정하려면 **속성** 창의 **위치**에서 **너비** 및 **높이** 속성의 값을 입력합니다.
   
@@ -169,7 +167,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  **열만 삭제**를 선택합니다.  
   
-6.  행 그룹 창에서 마우스 오른쪽 단추로 클릭는 **세부 정보** 그룹 > **그룹 삭제**합니다.  
+6.  행 그룹 창에서 **세부 정보** 그룹 > **그룹 삭제**를 마우스 오른쪽 단추로 클릭합니다.  
    
 7.  **그룹만 삭제**를 선택합니다.  
   
@@ -184,7 +182,7 @@ ms.lasthandoff: 08/09/2017
 
 2. 목록의 왼쪽 위를 클릭하고 마우스를 끌어 사각형의 높이와 너비를 각각 7인치와 3.5인치로 조정합니다. 정확한 크기를 지정하려면 **속성** 창의 **위치**에서 **너비** 및 **높이**의 값을 입력합니다.
   
-2.  사각형을 마우스 오른쪽 단추로 클릭 > **사각형 속성**합니다.  
+2.  사각형 > **사각형 속성**을 마우스 오른쪽 단추로 클릭합니다.  
   
 3.  **채우기** 탭을 클릭합니다.  
   
@@ -205,11 +203,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  에 **삽입** 탭 > **입력란**합니다. 이전에 추가한 사각형 안에 있는 목록의 왼쪽 위를 클릭하고 마우스를 끌어 입력란의 너비와 높이를 각각 3.45인치와 5인치로 조정합니다.  
+2.  **삽입** 탭 > **텍스트 상자**로 이동합니다. 이전에 추가한 사각형 안에 있는 목록의 왼쪽 위를 클릭하고 마우스를 끌어 입력란의 너비와 높이를 각각 3.45인치와 5인치로 조정합니다.  
   
 3.  입력란에 커서를 놓고 **Newsletter for** 를 입력합니다. 다음 단계에서 추가할 필드의 텍스트를 구분하기 위해 "for" 단어 뒤에 공백을 포함합니다.   
   
-    ![뉴스레터 머리글 텍스트 추가](../reporting-services/media/tutorial-newsletterfor.png "뉴스레터 머리글 텍스트 추가")  
+    ![뉴스레터 제목 텍스트 추가](../reporting-services/media/tutorial-newsletterfor.png "뉴스레터 제목 텍스트 추가")  
   
 4.  보고서 데이터 창의 ListDataSet에서 `[Territory]` 필드를 입력란으로 끌어 "Newsletter for" 뒤에 놓습니다.  
   
@@ -217,7 +215,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  텍스트와 `[Territory]` 필드를 선택합니다.  
   
-6.  에 **홈** 탭 > **글꼴**을 선택 합니다. 
+6.  **홈** 탭 > **글꼴**에서 다음을 선택합니다. 
   
     *  **Segoe Semibold**.
     *  **20pt**.
@@ -229,7 +227,7 @@ ms.lasthandoff: 08/09/2017
    
 11. 이전 단계에서 추가한 텍스트를 선택합니다.
   
-12. 에 **홈** 탭 > **글꼴**을 선택 합니다. 
+12. **홈** 탭 > **글꼴**에서 다음을 선택합니다. 
   
     *  **Segoe Semibold**.
     *  **16pt**.
@@ -246,7 +244,7 @@ ms.lasthandoff: 08/09/2017
   
 16. 방금 추가한 텍스트를 선택합니다.  
   
-17.  에 **홈** 탭 > **글꼴**을 선택 합니다. 
+17.  **홈** 탭 > **글꼴**에서 다음을 선택합니다. 
   
       *  **맑은 고딕**.
       *  **10pt**.
@@ -258,13 +256,13 @@ ms.lasthandoff: 08/09/2017
 
 25. 방금 추가한 텍스트와 필드를 선택합니다.  
   
-17.  에 **홈** 탭 > **글꼴**을 선택 합니다. 
+17.  **홈** 탭 > **글꼴**에서 다음을 선택합니다. 
   
       *  **Segoe Semibold**.
       *  **16pt**.
       *  **검정**.  
   
-22. 선택 하면 `[Sales]` 필드, 필드를 마우스 오른쪽 단추로 클릭 > **식**합니다.  
+22. `[Sales]` 필드만 선택하고 필드 > **식**을 마우스 오른쪽 단추로 클릭합니다.  
   
 23. **식** 상자에서 다음과 같이 Sum 함수를 포함하도록 식을 변경합니다.  
   
@@ -276,7 +274,7 @@ ms.lasthandoff: 08/09/2017
   
     ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
  
-29. 와 `[Sum(Sales)]` 지지만 선택한 경우에 **홈** 탭 > **번호** 그룹 > **통화**합니다.  
+29. `[Sum(Sales)]`을 선택한 상태로 **홈** 탭 > **숫자** 그룹 > **통화**로 이동합니다.  
   
 30. "제목을 추가하려면 클릭하십시오." 텍스트가 있는 입력란을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
@@ -295,7 +293,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-table"></a>테이블을 추가하려면  
   
-1.  에 **삽입** 탭 > **데이터 영역** 영역 > **테이블** > **테이블 마법사**합니다.  
+1.  **삽입** 탭 > **데이터 영역** 영역 > **테이블** > **테이블 마법사**로 이동합니다.  
   
 2.  **데이터 집합 선택** 페이지에서 **ListDataset** > **다음**을 클릭합니다.  
   
@@ -318,7 +316,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     > 테이블이 목록 상자 안, 회색 사각형 안에 있는지 확인합니다.  
   
-12. 선택한 상태에서 테이블의 **행 그룹** 창 마우스 오른쪽 단추 클릭 **세부 정보** > **합계 추가** > **후**합니다.  
+12. 테이블을 선택한 상태로 **행 그룹** 창에서 **세부 정보** > **합계 추가** > **다음 이후**를 마우스 오른쪽 단추로 클릭합니다.  
   
     ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
   
@@ -326,9 +324,9 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
 
-12. [SalesDate] 필드를 선택합니다. 에 **홈** 탭 > **번호**, 변경 **기본** 를 **날짜**합니다.
+12. [SalesDate] 필드를 선택합니다. **홈** 탭 > **숫자**에서 **기본값**을 **날짜**로 변경합니다.
 
-13. [Sum(Sales)] 필드를 선택합니다. 에 **홈** 탭 > **번호**, 변경 **기본** 를 **통화**합니다.
+13. [Sum(Sales)] 필드를 선택합니다. **홈** 탭 > **숫자**에서 **기본값**을 **통화**로 변경합니다.
 
 **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -374,11 +372,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  에 **삽입** 탭 > **보고서 항목** > **선입니다.**  
+2.  **삽입** 탭 > **보고서 항목** > **선**으로 이동합니다.  
   
 3.  4단원에서 추가한 자유 형식 입력란 아래에 선을 그립니다.  
   
-4.  선을 클릭 및는 **홈** 탭 > **테두리**을 선택 합니다.
+4.  선을 클릭하고 **홈** 탭 > **테두리**에서 다음을 선택합니다.
      * **너비** 를 선택한 다음 **3** pt를 선택합니다.
      * **색** 을 선택한 다음 **토마토**를 선택합니다.  
   
@@ -389,7 +387,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  에 **삽입** 탭 > **보고서 항목** >  **사각형**합니다. 테이블 오른쪽의 목록 상자 안에서 사각형을 끌어 사각형의 너비와 높이를 각각 약 2.25인치와 7.9인치로 조정합니다.  
+2.  **삽입** 탭 > **보고서 항목** >  **사각형**으로 이동합니다. 테이블 오른쪽의 목록 상자 안에서 사각형을 끌어 사각형의 너비와 높이를 각각 약 2.25인치와 7.9인치로 조정합니다.  
   
 3.  새 사각형을 선택한 상태로 속성 창에서 **BorderColor LightGrey**, **BorderStyle 실선**, **BorderWidth 2pt**로 지정합니다. 
 
@@ -397,7 +395,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-a-pie-chart"></a>원형 차트를 추가하려면  
   
-1.  에 **삽입** 탭 > **데이터 시각화** > **차트** > **차트 마법사**합니다.  
+1.  **삽입** 탭 > **데이터 시각화** > **차트** > **차트 마법사**로 이동합니다.  
   
 2.  **데이터 집합 선택** 페이지에서 **ListDataset** > **다음**을 클릭합니다.  
   
@@ -415,12 +413,12 @@ ms.lasthandoff: 08/09/2017
    
 10. 차트 제목을 선택하고 **Product Quantities Sold**를 입력합니다.  
   
-12. 에 **홈** 탭 > **글꼴**, 제목:
+12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **Segoe UI Semibold**을 참조하세요.
     * **크기** **12pt**을 참조하세요.
     * **색** **검정**을 참조하세요.  
 
-13. 범례를 마우스 오른쪽 단추로 클릭 > **범례 속성**합니다.
+13. 범례 > **범례 속성**을 마우스 오른쪽 단추로 클릭합니다.
 
 14. **일반** 탭의 **범례 위치**에서 맨 아래에 있는 가운데 점을 선택합니다. 
   
@@ -432,7 +430,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-a-column-chart"></a>세로 막대형 차트를 추가하려면  
   
-1.  에 **삽입** 탭 > **데이터 시각화** > **차트** > **차트 마법사**합니다.  
+1.  **삽입** 탭 > **데이터 시각화** > **차트** > **차트 마법사**로 이동합니다.  
   
 2.  **데이터 집합 선택** 페이지에서 **ListDataset**을 클릭하고 **다음**을 클릭합니다.  
   
@@ -454,7 +452,7 @@ ms.lasthandoff: 08/09/2017
    
 10. 차트 제목을 선택하고 **Product Sales**를 입력합니다.  
   
-12. 에 **홈** 탭 > **글꼴**, 제목:
+12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **Segoe UI Semibold**을 참조하세요.
     * **크기** **12pt**을 참조하세요.
     * **색** **검정**을 참조하세요.  
@@ -466,7 +464,7 @@ ms.lasthandoff: 08/09/2017
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. 차트 축 선택 및는 *홈** 탭 > **번호** > **통화**합니다.
+12. 차트 축을 선택하고 *홈** 탭 > **숫자** > **통화**로 이동합니다.
 
 13. 숫자에 달러만 표시되고 센트는 표시되지 않도록 **소수 자릿수 줄이기** 를 두 번 선택합니다.      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>차트가 사각형 내에 있는지 확인하려면  
@@ -494,7 +492,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  원형 차트를 선택하고 Ctrl 키를 누른 다음 세로 막대형 차트를 선택합니다.  
   
-2.  차트를 모두 선택한 마우스 오른쪽 단추로 클릭 > **레이아웃** > **같은 너비로**합니다.  
+2.  두 차트를 모두 선택한 상태로 > **레이아웃** > **같은 너비로**를 마우스 오른쪽 단추를 클릭합니다.  
   
     > [!NOTE]  
     > 선택한 모든 항목의 너비는 처음 클릭한 항목의 너비에 따라 결정됩니다.  
@@ -513,10 +511,9 @@ ms.lasthandoff: 08/09/2017
 * [목록을 사용하여 송장 및 양식 만들기](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기&#41; 및 SSRS](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-쿼리 디자이너에 대 한 자세한 내용은 참조 [쿼리 디자이너 &#40; 보고서 작성기 &#41; ](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 및 [텍스트 기반 쿼리 디자이너 사용자 인터페이스 &#40; 보고서 작성기 &#41; ](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+쿼리 디자이너에 대한 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 및 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 
   
-
 

@@ -1,5 +1,5 @@
 ---
-title: "SecureConnectionLevel 속성 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "SecureConnectionLevel 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SecureConnectionLevel
-apilocation:
-- reportingservices.mof
+apiname: SecureConnectionLevel
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SecureConnectionLevel property
+helpviewer_keywords: SecureConnectionLevel property
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 926be7ba1e11f82f6306b8828b84823a91b3d515
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: be620ce014ce7357a23e20b0cbb61df79775a3b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---secureconnectionlevel"></a>SecureConnectionLevel ConfigurationSetting 속성-
+# <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting 속성 - SecureConnectionLevel
   RSReportServer.config 파일에 지정된 보안 연결 수준을 반환합니다. 읽기 전용입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -56,4 +52,3 @@ public Integer SecureConnectionLevel;
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

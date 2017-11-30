@@ -1,5 +1,5 @@
 ---
-title: "입력란 (보고서 작성기 및 SSRS)의 텍스트 서식을 | Microsoft Docs"
+title: "입력란의 텍스트 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cc81cc2f3f19b6ce326d11db6114deeeb907
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab1c264ec07230bd81769ab2886177552095e636
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>입력란의 텍스트 서식 지정(보고서 작성기 및 SSRS)
   입력란에 있는 텍스트 부분의 서식을 개별적으로 지정하고 한 입력란 내에 자리 표시자 텍스트와 정적 텍스트를 함께 사용할 수 있습니다. 여러 서식을 함께 사용하고 자리 표시자 텍스트를 추가하는 이 기능을 통해 보고서의 텍스트에 대한 편지 병합 또는 템플릿을 만들 수 있습니다. 자리 표시자를 사용하여 모든 식을 개별적으로 정의하고 서식을 지정할 수 있습니다.  
@@ -71,12 +71,12 @@ ms.lasthandoff: 08/09/2017
  목록은 필드의 각 값에 대해 한 번씩 반복되고 매번 *FieldName* 은 데이터 집합에 있는 해당 필드의 값으로 바뀝니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [텍스트 상자 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [텍스트 및 자리 표시자 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [보고서 &#40;에 HTML 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [입력란&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [보고서에 HTML 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
   

@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 보고서 데이터 검색 문제 해결 | Microsoft Docs"
+title: "Reporting Services 보고서의 데이터 검색 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8986a6212c34cfcaea56669e96d04384191c2e6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 보고서에서 데이터 검색 문제 해결
 보고서 처리의 첫 번째 단계는 데이터 집합 쿼리를 실행하여 각 데이터 집합에 대한 보고서 데이터를 검색하는 것입니다. 보고서를 로컬로 미리 볼 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 데이터를 컴퓨터로 읽어 들여야 합니다. 보고서 서버에서 보고서를 실행할 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 보고서 서버에서 데이터를 검색해야 합니다. 이 항목을 사용하여 보고서 데이터 검색 관련 문제를 해결할 수 있습니다.   
@@ -73,7 +72,6 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 
 

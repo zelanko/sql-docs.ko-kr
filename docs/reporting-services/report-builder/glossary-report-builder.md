@@ -1,5 +1,5 @@
 ---
-title: "용어 설명 (보고서 작성기) | Microsoft Docs"
+title: "용어 설명(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d58372b901950fa8a7f674a417aa76457e80c466
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="glossary-report-builder"></a>용어 설명(보고서 작성기)
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 |색 규칙(color rules)|지도 계층의 각 지도 요소에 색을 자동으로 할당하는 알고리즘입니다.|  
 |색 눈금(color scale)|지도에 표시된 색을 해석하는 데 사용되는 지도 범례의 한 유형입니다.|  
 |공용 언어 런타임(common language runtime)|관리 코드 실행의 핵심에 있는 엔진입니다. 런타임에서는 관리 코드에 언어 간 통합, 코드 액세스 보안, 개체 수명 관리 및 디버깅과 프로파일링 지원 등의 서비스를 제공합니다.|  
-|복합 식(complex expression)|단일 기본 제공 필드 참조로 표현할 수 없는 고로 디자인 화면에 표시 되는 식입니다 <\<Expr >> 합니다.|  
+|복합 식(complex expression)|단일 기본 제공 필드 참조로 표시할 수 없는 식으로 디자인 화면에 <\<Expr>>로 표시됩니다.|  
 |연결(concatenation)|둘 이상의 문자열이나 식을 단일 문자열이나 식으로 결합하거나 둘 이상의 이진 문자열이나 식을 단일 이진 문자열이나 식으로 결합하는 것을 말합니다.|  
 |동시성|여러 사용자들이 공유 데이터를 동시에 액세스 및 변경할 수 있도록 하는 프로세스입니다. SQL Server는 잠금을 사용하여 여러 사용자들이 충돌 없이 동시에 공유 데이터를 액세스 및 변경할 수 있도록 합니다.|  
 |구성 파일(config file)|다음 용어 참조: 구성 파일(configuration file)|  
@@ -364,7 +363,7 @@ ms.lasthandoff: 08/09/2017
 |사용자 인스턴스(user instance)|사용자 대신 부모 인스턴스에서 생성하는 SQL Server Express 인스턴스입니다.|  
 |값(y) 축(value (y) axis)|차트에서 숫자 데이터 값을 표시하는 축입니다. 일반적으로 세로 축입니다. 예외: 가로 막대형 차트에서는 축이 반대로 바뀌어 y축이 데이터 그룹화를 표시합니다.|  
 |값 식(value expression)|값을 반환하는 MDX(Multidimensional Expressions)입니다. 값 식은 집합, 튜플, 멤버, 수준, 숫자 또는 문자열에 사용될 수 있습니다.|  
-|변수|1. Integration Services에서 열 값 및 패키지 개체의 속성을 설정하기 위해 스크립트, 식 및 속성 식에 사용될 수 있는 값을 저장합니다. <br />2. 값이 할당된 상태로 정의된 엔터티를 말합니다. 지역 변수도 정의 되는 DECLARE@localvariable 문을 선언 될 경우 사용 하 여 SELECT 문이 일괄 처리 내에서 초기 값이 할당 및 또는 SET@localvariable 문.|  
+|변수|1. Integration Services에서 열 값 및 패키지 개체의 속성을 설정하기 위해 스크립트, 식 및 속성 식에 사용될 수 있는 값을 저장합니다. <br />2. 값이 할당된 상태로 정의된 엔터티를 말합니다. 지역 변수는 DECLARE@localvariable 문을 사용하여 정의하며 SELECT 또는 SET@localvariable 문으로 선언될 경우 문 일괄 처리 내에서 초기 값이 할당됩니다.|  
 |가변 간격(variable interval)|차트 너비와 높이에 따라 한 축에 배치할 수 있는 최적의 레이블 수를 자동으로 계산하도록 지정할 수 있는 Reporting Services 차트의 옵션입니다.|  
 |시각화(visualization)|지도, 차트 및 계기에서 사용자가 분석 데이터를 시각화하기 위해 선택하는 방법입니다.|  
 |웹 서비스|Reporting Services에서 HTTP를 통한 SOAP(Simple Object Access Protocol)를 사용하고 클라이언트 프로그램과 보고서 서버 간의 통신 인터페이스로 작동하는 서비스입니다.|  
@@ -379,4 +378,3 @@ ms.lasthandoff: 08/09/2017
  [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
-

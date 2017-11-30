@@ -1,5 +1,5 @@
 ---
-title: "보고서 디자인 보기 (보고서 작성기) | Microsoft Docs"
+title: "보고서 디자인 뷰 (보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 4a5dc89785c680636b7747d26cb2e6a493223c09
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-design-view-report-builder"></a>보고서 디자인 뷰(보고서 작성기)
   보고서 작성기 창은 보고서 리소스를 쉽게 구성하고 필요한 페이지가 매겨진 보고서를 신속하게 작성할 수 있도록 디자인되어 있습니다. 디자인 화면은 창의 가운데에 있고 그 주위에 리본과 창이 있습니다. 디자인 화면에서 보고서 항목을 추가하고 구성합니다. 이 문서에서는 보고서 리소스를 추가, 선택 및 구성하고 보고서 항목 속성을 변경하는 데 사용하는 창에 대해 설명합니다.  
   
- ![보고서 작성기 디자인 보기](../../reporting-services/report-builder/media/ssrb-designview.png "보고서 작성기 디자인 보기")  
+ ![보고서 작성기 디자인 뷰](../../reporting-services/report-builder/media/ssrb-designview.png "보고서 작성기 디자인 뷰")  
   
 1.  리본  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하여 보고서 항목의 속성을 변경할 수 있습니다.  
   
- 키보드를 사용 하 여 디자인 화면에서 항목을 조작 하는 방법에 대 한 정보를 참조 하십시오. [바로 가기 키 &#40; 보고서 작성기 &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ 키보드를 사용하여 디자인 화면의 항목을 조작하는 방법에 대한 자세한 내용은 [바로 가기 키&#40;보고서 작성기&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)를 참조하세요.  
   
 ### <a name="design-surface-size-and-print-area"></a>디자인 화면 크기 및 인쇄 영역  
  디자인 화면의 크기가 보고서 인쇄를 위해 지정한 인쇄 영역의 페이지 크기와 다를 수도 있습니다. 디자인 화면의 크기를 변경해도 보고서의 인쇄 영역은 변경되지 않습니다. 보고서 인쇄 영역으로 설정한 크기에 관계없이 전체 디자인 화면 크기는 변경되지 않습니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
@@ -152,7 +152,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="GroupPane"></a> 그룹화 창(보고서 작성기)  
  그룹은 보고서 데이터를 시각적 계층으로 구성하고 합계를 계산하는 데 사용됩니다. 디자인 화면은 물론 그룹화 창에서도 데이터 영역 내의 행 및 열 그룹을 볼 수 있습니다. 그룹화 창에는 행 그룹과 열 그룹의 두 창이 있습니다. 데이터 영역을 선택하면 해당 데이터 영역 내의 모든 그룹이 계층적 목록으로 그룹화 창에 표시되며, 자식 그룹은 해당 부모 그룹보다 한 수준 아래에 표시됩니다.  
   
- ![보고서 작성기 Rowgroups](../../reporting-services/report-builder/media/ssrb-rowgroups.png "작성기 행 그룹 보고서")  
+ ![보고서 작성기 행 그룹](../../reporting-services/report-builder/media/ssrb-rowgroups.png "보고서 작성기 행 그룹")  
   
  보고서 데이터 창에서 필드를 끌어 디자인 화면이나 그룹화 창에 놓아서 그룹을 만들 수 있습니다. 그룹화 창에서는 부모 그룹, 인접 그룹 및 자식 그룹을 추가하거나 그룹 속성을 변경하거나 그룹을 삭제하는 등의 작업을 수행할 수 있습니다.  
   
@@ -169,7 +169,7 @@ ms.lasthandoff: 08/09/2017
  자세한 내용은 [보고서 작성기에서 보고서 미리 보기](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)를 참조하세요.  
   
 ### <a name="running-a-report-with-parameters"></a>매개 변수가 있는 보고서 실행  
- 보고서를 실행하면 보고서가 자동으로 처리됩니다. 보고서에 매개 변수가 있는 경우 모든 매개 변수에 기본값이 있어야 보고서를 자동으로 실행할 수 있습니다. 매개 변수에 기본값이 없는 경우 보고서를 실행할 때에는 매개 변수 값을 선택한 후 실행 탭에서 **보고서 보기** 를 클릭해야 합니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
+ 보고서를 실행하면 보고서가 자동으로 처리됩니다. 보고서에 매개 변수가 있는 경우 모든 매개 변수에 기본값이 있어야 보고서를 자동으로 실행할 수 있습니다. 매개 변수에 기본값이 없는 경우 보고서를 실행할 때에는 매개 변수 값을 선택한 후 실행 탭에서 **보고서 보기** 를 클릭해야 합니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
 ### <a name="print-preview"></a>인쇄 미리 보기  
  보고서를 실행 모드에서 미리 보면 HTML로 생성된 보고서와 유사하게 표시됩니다. 미리 보기는 HTML 형식은 아니지만 보고서의 레이아웃 및 페이지 매기기는 HTML 출력과 유사합니다. 인쇄 미리 보기 모드로 전환하여 인쇄될 보고서를 표시할 수 있습니다. **실행** 탭에서 **인쇄 미리 보기** 단추를 클릭합니다. 보고서는 실제 인쇄된 페이지처럼 표시되며 이미지 및 PDF 렌더링 확장 프로그램에서 생성된 출력과도 유사합니다. 인쇄 미리 보기는 이미지나 PDF 파일 형식은 아니지만 보고서의 레이아웃 및 페이지 매기기는 해당 형식의 출력과 유사합니다.  

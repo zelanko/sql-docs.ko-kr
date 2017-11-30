@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a8c5f76c0d2cd35f0ef52b77b79b13cc8b5efbe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3828cfd2e56ce5bf6005e6b5e2502c869df06aa8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Reporting Services 보고서 문제 해결
 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 보고서 디자인, 보고서 미리 보기, 기본 모드 또는 SharePoint 모드에서 보고서 서버에 보고서 게시, 보고서 서버에서 보고서 보기 또는 다른 파일 형식으로 보고서 내보내기 등의 작업과 관련된 문제를 해결하는 데 필요한 정보를 제공합니다.  
@@ -67,6 +66,5 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 

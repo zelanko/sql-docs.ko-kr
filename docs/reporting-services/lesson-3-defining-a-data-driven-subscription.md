@@ -1,28 +1,25 @@
 ---
-title: "3 단원: 데이터 기반 구독 정의 | Microsoft Docs"
+title: "3단원: 데이터 기반 구독 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c092a13ee59f483a993810e558be4e11f88c3716
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 집합을 보고서 및 배달 옵션에 매핑합니다.  
@@ -88,7 +85,7 @@ ms.lasthandoff: 08/09/2017
 **렌더링 형식** | 데이터 집합에서 값 가져오기 | 형식
 **쓰기 모드**| 값 입력| 자동 증분    
 **파일 확장명** |값 입력 |True
-**사용자 이름** | 값 입력 | 도메인 사용자 계정을 입력합니다. 이 형식으로 입력: \<도메인 >\\\<계정 > 합니다. 사용자 계정에는 사용자가 구성한 경로에 대한 권한이 있어야 합니다. 
+**사용자 이름** | 값 입력 | 도메인 사용자 계정을 입력합니다. \<domain>\\\<account> 형식으로 입력합니다. 사용자 계정에는 사용자가 구성한 경로에 대한 권한이 있어야 합니다. 
 **암호** | 값 입력 | 암호 입력
 
 ## <a name="report-parameters"></a>보고서 매개 변수
@@ -98,12 +95,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>다음 단계  
 구독을 실행하면 *Subscribers* 데이터 원본의 각 주문에 대해 하나씩 총 4개의 보고서 파일이 사용자가 지정한 파일 공유로 배달됩니다. 각 배달은 데이터(주문별 데이터여야 함), 렌더링 형식 및 파일 형식에 있어 고유해야 합니다. 공유 폴더에서 각 보고서를 열어 각 버전이 사용자가 정의한 구독 옵션을 기반으로 사용자 지정되었는지 확인할 수 있습니다.  
   
-![구독에서 만든 파일 목록이](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "구독에서 만든 파일의 목록")  
+![구독으로 만드는 파일 목록](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "구독으로 만드는 파일 목록")  
   
 웹 포털의 구독 페이지에는 구독의 **마지막 실행** 날짜와 **상태** 가 표시됩니다. 
 **참고:** 업데이트된 정보를 보려면 구독을 실행한 후 페이지를 새로 고칩니다.  
     
-![구독에는 보고서 관리자에서 결과](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "구독 결과 보고서 관리자에서")  
+![보고서 관리자의 구독 결과](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "보고서 관리자의 구독 결과")  
   
 이 단계는 "데이터 기반 구독 정의" 자습서의 마지막 단계입니다.   
   
@@ -115,5 +112,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

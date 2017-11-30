@@ -1,5 +1,5 @@
 ---
-title: "사각형 또는 컨테이너 (보고서 작성기 및 SSRS)를 추가 합니다. | Microsoft Docs"
+title: "사각형 또는 컨테이너 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,19 @@ f1_keywords:
 - "10061"
 - sql13.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: c472b3486dc568f79540f1a6bb8c74209828e772
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b5344d3e5bdd6ded24053452012478d7d1f088f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>사각형 또는 컨테이너 추가(보고서 작성기 및 SSRS)
-  보고서 영역을 구분하거나, 보고서 영역을 강조하거나, 하나 이상의 보고서 항목에 대해 배경을 제공하기 위해 그래픽 요소가 필요한 경우 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 사각형을 추가합니다. 사각형은 보고서에서 데이터 영역이 렌더링되는 방식을 제어하는 데 도움이 되는 컨테이너로도 사용됩니다. 배경색 및 테두리 색과 같은 사각형 속성을 편집하여 사각형의 모양을 사용자 지정할 수 있습니다. 사각형을 컨테이너로 사용 하는 방법에 대 한 자세한 내용은 참조 [사각형 및 선 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) 및 [행렬 및 차트 &#40;에 같은 데이터 표시 보고서 작성기 &#41; ](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).    
+  보고서 영역을 구분하거나, 보고서 영역을 강조하거나, 하나 이상의 보고서 항목에 대해 배경을 제공하기 위해 그래픽 요소가 필요한 경우 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 사각형을 추가합니다. 사각형은 보고서에서 데이터 영역이 렌더링되는 방식을 제어하는 데 도움이 되는 컨테이너로도 사용됩니다. 배경색 및 테두리 색과 같은 사각형 속성을 편집하여 사각형의 모양을 사용자 지정할 수 있습니다. 사각형을 컨테이너로 사용하는 방법은 [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) 및 [행렬 및 차트에 같은 데이터 표시&#40;보고서 작성기&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)를 참조하세요.    
    
 ## <a name="to-add-a-rectangle"></a>사각형을 추가하려면    
     
@@ -52,10 +52,10 @@ ms.lasthandoff: 08/09/2017
 2.  **테두리** 단추 옆의 화살표를 클릭하여 변경할 사각형의 면을 지정합니다.    
     
     > [!NOTE]    
-    >  선 스타일을 **이중선** 으로 설정하고 선 두께를 1 1/2pt 이하로 설정하면 보고서 작성기, 보고서 디자이너 또는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 실행할 때 선이 이중선으로 표시되지 않을 수 있습니다. 보고서를 Microsoft Word 및 Acrobat PDF 같은 다른 형식으로 내보내면 이중선이 표시됩니다.    
+    >  선 스타일을 **이중선**으로 설정하고 선 두께를 1 1/2pt 이하로 설정하면 보고서 작성기, 보고서 디자이너 또는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 실행할 때 선이 이중선으로 표시되지 않을 수 있습니다. 보고서를 Microsoft Word 및 Acrobat PDF 같은 다른 형식으로 내보내면 이중선이 표시됩니다.    
     
 ## <a name="see-also"></a>관련 항목:    
  [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)     
- [렌더링 동작 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)    
+ [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)    
     
   

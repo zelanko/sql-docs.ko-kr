@@ -14,17 +14,16 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1df708ed8e384371ea97b683b97733e0bcacb6e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 기능 설정 또는 해제
   프로덕션 보고서 서버의 공격 노출 영역을 줄이기 위한 잠금 전략의 일환으로 사용하지 않는 보고서 서버 기능을 해제할 수 있습니다. 대부분의 경우에는 여러 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 동시에 실행하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 모든 기능을 사용해야 합니다. 그러나 배포 모델에 따라서는 필요하지 않은 기능을 비활성화할 수 있습니다. 예를 들어 모든 보고서 처리가 예약된 작업으로 구성된 경우 백그라운드 처리만 활성화할 수 있습니다. 마찬가지로 요청 시 실행되는 대화형 보고서만 원하는 경우에는 보고서 서버 웹 서비스만 실행할 수 있습니다.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>구성을 편집하여 보고서 서버 웹 서비스를 설정하거나 해제하려면  
   
-1.  텍스트 편집기에서 `RsReportServer.config` 파일을 엽니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
+1.  텍스트 편집기에서 `RsReportServer.config` 파일을 엽니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)를 참조하세요.  
   
 2.  보고서 서버 웹 서비스를 활성화하려면 **IsWebServiceEnabled** 를 **true**로 설정합니다.  
   
@@ -81,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>구성을 편집하여 예약된 이벤트 및 배달을 설정하거나 해제하려면  
   
-1.  텍스트 편집기에서 RsReportServer.config 파일을 엽니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
+1.  텍스트 편집기에서 RsReportServer.config 파일을 엽니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)를 참조하세요.  
   
 2.  예약된 보고서 처리 및 배달을 활성화하려면 **IsSchedulingService**, **IsNotificationService**및 **IsEventService** 를 **true**로 설정합니다.  
   
@@ -123,9 +122,9 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  백그라운드 처리는 서버 작업에 필요한 유지 관리 기능을 제공하므로 완전히 해제할 수는 없습니다.  
   
-##  <a name="WebPortal"></a>웹 포털
+##  <a name="WebPortal"></a> 웹 포털
   
-이전 버전에서을 설정 하 여 보고서 관리자를 해제할 수 있습니다 **IsReportManagerEnabled** 를 false입니다. **IsReportManagerEnabled** 는 SQL Server 2016 Reporting Services 누적 업데이트 2부터 사용 되지 합니다. 웹 포털은 항상 사용할 수 있습니다.
+이전 버전에서 **IsReportManagerEnabled**를 false로 설정하여 보고서 관리자를 사용하지 않을 수 있습니다. **IsReportManagerEnabled**는 SQL Server 2016 Reporting Services 누적 업데이트 2부터 사용되지 않습니다. 웹 포털은 항상 사용할 수 있습니다.
   
 ##  <a name="ReportBuilder"></a> 보고서 작성기  
   
@@ -161,7 +160,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 구성 관리자(SSRS 기본 모드)](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
- 문의: [Reporting Services 포럼을 시도 하십시오.](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "(보고서 작성기 및 SSRS) 보고서를 스크롤할 때 머리글 계속 표시 | Microsoft Docs"
+title: "보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 92092ffce1c4ae2fcd0c3751eb0dcefc9818de6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS)
   보고서를 렌더링한 다음 스크롤할 때 행 및 열 레이블이 화면에서 사라지지 않도록 하려면 행 또는 열 머리글을 고정할 수 있습니다.  
   
  행과 열을 제어하는 방법은 테이블 또는 행렬이 있는지 여부에 따라 다릅니다. 테이블이 있는 경우 정적 멤버(행 및 열 머리글)가 계속 표시되도록 구성합니다. 행렬이 있는 경우 행 및 열 그룹 머리글이 계속 표시되도록 구성합니다.  
   
- Excel로 보고서를 내보내는 경우 머리글이 자동으로 고정되지 않습니다. Excel에서 창을 고정할 수 있습니다. 자세한 내용은 참조는 **페이지 머리글 및 바닥글** 섹션 [Microsoft Excel &#40; 내보내기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Excel로 보고서를 내보내는 경우 머리글이 자동으로 고정되지 않습니다. Excel에서 창을 고정할 수 있습니다. 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)의 **페이지 머리글 및 바닥글** 섹션을 참조하세요.  
   
 > [!NOTE]  
 >  테이블에 행 및 열 그룹이 있는 경우에도 스크롤하는 동안 이러한 그룹 머리글이 계속 표시되도록 할 수 없습니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
  다음 이미지에서는 행렬을 보여 줍니다.  
   
- ![행렬](../../reporting-services/report-design/media/matrix.png "매트릭스")  
+ ![행렬](../../reporting-services/report-design/media/matrix.png "행렬")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  스크롤하는 동안 계속 표시할 정적 멤버(행 또는 열)를 클릭합니다. 속성 창에 **테이블릭스 멤버** 속성이 표시됩니다.  
   
-     ![테이블 릭 스 멤버 속성](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "테이블 릭 스 멤버 속성")  
+     ![테이블릭스 구성원 속성](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "테이블릭스 구성원 속성")  
   
 4.  속성 창에서 **FixedData** 를 **True**로 설정합니다.  
   
@@ -75,10 +75,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [그룹 &#40; 머리글 및 바닥글 표시 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [여러 페이지 &#40;에 행 및 열 머리글 표시 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
- [그룹화 창 &#40; 보고서 작성기 &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
+ [그룹과 함께 머리글 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [여러 페이지에 행 및 열 머리글 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [그룹화 창&#40;보고서 작성기&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
   
   

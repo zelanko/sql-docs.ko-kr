@@ -1,5 +1,5 @@
 ---
-title: "문제를 해결 Reporting Services 구독 및 배달 | Microsoft Docs"
+title: "Reporting Services 구독 및 배달 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c3031036636e8c2ba2e2a0487ea2092c882c3e0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ab2dfe5e8abdc1cb3f168ae2b5e146e08ed3e5bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services 구독 및 배달 문제 해결
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 Microsoft Windows Server 2003에서 POP3(Post Office Protocol 버전 3)을 사용하여 전자 메일 응용 프로그램을 실행 중이면 로컬 POP3 서버를 통해 보고서를 보내지 못할 수 있습니다. 로컬 POP3 서버를 통해 전자 메일을 보내도록 보고서 서버를 구성하고 보고서를 보내는 구독을 만든 경우 다음과 같은 오류 메시지가 표시될 수 있습니다.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
   
-여기서 \<오류 메시지 >에서 개체 CDO (Collaboration Data)를 반환 하는 추가 오류 메시지 정보로 바뀝니다.  
+여기서 \<error message>는 CDO(Collaboration Data Objects)에서 반환된 추가 오류 메시지로 바뀝니다.  
   
 ### <a name="to-resolve-this-problem"></a>이 문제를 해결하려면  
 * `SendUsing` Rsreportserver.config **파일에서** 요소의 값을 1로 설정합니다.  
@@ -84,5 +83,4 @@ Microsoft Windows Server 2003에서 POP3(Post Office Protocol 버전 3)을 사�
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

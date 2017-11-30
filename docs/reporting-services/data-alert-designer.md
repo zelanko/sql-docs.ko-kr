@@ -18,16 +18,16 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 데이터 경고 디자이너에서 데이터 경고 정의를 만들고 편집할 수 있습니다. 경고 정의는 관심 있는 보고서 데이터, 데이터 경고 인스턴스를 만들고 데이터 경고 메시지를 보내기 위해 보고서 데이터가 충족해야 하는 규칙, 경고 메시지를 받는 사람 등을 비롯한 메타데이터의 컬렉션입니다.  
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
  경고 정의를 만들기 위해서는 다음과 같은 여러 관련 태스크를 수행해야 합니다.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="AlertDesigner"></a> 데이터 경고 디자이너 사용자 인터페이스  
  데이터 경고 디자이너는 각 영역으로 구분됩니다. 이러한 영역에는 보고서 데이터 피드를 선택하는 영역, 조건에 규칙을 추가하여 단순하거나 복잡한 조건을 만드는 영역 등이 있습니다. 다음 그림은 데이터 경고 디자이너의 영역을 보여 줍니다.  
   
- ![경고 디자이너 사용자 인터페이스 내의 영역](../reporting-services/media/rs-alertdesigner.gif "경고 디자이너 사용자 인터페이스 내의 영역")  
+ ![경고 디자이너 사용자 인터페이스 내부 영역](../reporting-services/media/rs-alertdesigner.gif "경고 디자이너 사용자 인터페이스 내부 영역")  
   
   
 ### <a name="alert-data"></a>경고 데이터  
@@ -177,7 +177,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="email-settings"></a>전자 메일 설정  
  **받는 사람** 옵션에서 메일을 통해 데이터 경고 메시지를 받을 사람의 메일 주소를 지정합니다. 전자 메일 주소가 여러 개 있으면 Microsoft Office Outlook 전자 메일 메시지와 마찬가지로 세미콜론으로 구분합니다. 메일 그룹을 받는 사람으로 지정할 수도 있습니다. 이렇게 하면 더 쉽고 효율적인 방식으로 받는 사람 목록을 관리할 수 있습니다. 사용자가 경고 정의를 만들 때 SharePoint에서 사용자의 전자 메일 주소를 확인할 수 있으면 해당 전자 메일 주소가 받는 사람 목록에 자동으로 추가되고, 그렇지 않으면 자신을 받는 사람으로 명시적으로 추가해야 합니다.  
   
- 전자 메일의 기본 제목은 **데이터에 대 한 경고 \<경고 이름 >**합니다. 제목은 필요에 따라 변경할 수 있습니다.  
+ 메일의 기본 제목은 **경고 이름>\<에 대한 데이터 경고**입니다. 제목은 필요에 따라 변경할 수 있습니다.  
   
  **설명** 옵션에서 데이터 경고 메시지에 포함할 설명을 입력할 수도 있습니다. 유사한 여러 데이터 경고가 있는 경우 등에 설명을 포함하면 경고 메시지를 빠르게 구분하고 이해하는 데 도움이 됩니다. 보고서 데이터가 지정된 규칙을 만족하는 경우 전송되는 경고 메시지 외에, 오류 발생 시 모든 받는 사람에게 전송되는 경고 메시지도 있습니다. 자세한 내용은 [Data Alert Messages](../reporting-services/data-alert-messages.md)을 참조하세요.  
   
@@ -205,7 +205,7 @@ ms.lasthandoff: 08/09/2017
   
  데이터 경고 정의를 편집하려면 데이터 경고 관리자에서 해당 정의를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다. 다음 그림은 데이터 경고 관리자에 있는 데이터 경고의 상황에 맞는 메뉴를 보여 줍니다.  
   
- ![편집을 클릭 하 여 데이터 경고 디자이너 열기](../reporting-services/media/rs-alertmanageriwopendesigner.gif "편집을 클릭 하 여 데이터 경고 디자이너 열기")  
+ ![편집을 클릭하여 데이터 경고 디자이너 열기](../reporting-services/media/rs-alertmanageriwopendesigner.gif "편집을 클릭하여 데이터 경고 디자이너 열기")  
   
  자세한 내용은 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
@@ -220,6 +220,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:
 
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)   
-[경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
+[경고 담당자용 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

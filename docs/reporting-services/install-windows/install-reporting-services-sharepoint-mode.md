@@ -1,13 +1,11 @@
 ---
 title: "Reporting Services SharePoint 모드 설치 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - installing Reporting Services, SharePoint integrated mode
 - installation options [Reporting Services]
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 0579de9d264d5b81713fd47b25feeb1fb817b8e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드 설치
 
@@ -33,10 +30,10 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services sharepoint에서를 사용 하면 보고서 만들기 및 문서 라이브러리의 보기 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 전자 메일을 통해 보고서의 구독 배달 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], 데이터 경고 및의 배포에서 모든 보고서 관리 기능을 기반으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 합니다. SharePoint 모드의 기능에 대 한 자세한 내용은 "지원 및 동작 차이 서버 모드별 기능" 섹션을 참조 [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)합니다.
+SharePoint에서 SQL Server Reporting Services를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint에 기반한 모든 배포에서 문서 라이브러리에서 보고서 만들기 및 보기, 전자 메일을 통해 보고서의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 배달, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], 데이터 경고 및 보고서 관리 기능을 사용할 수 있습니다. SharePoint 모드의 기능에 대한 자세한 내용은 [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)의 “서버 모드별 기능 지원 및 동작 차이” 섹션을 참조하세요.
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
 SharePoint 모드에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대해 설치할 두 가지 핵심 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소가 있습니다.  
 
@@ -71,4 +68,3 @@ SharePoint 모드에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
  [경고 담당자용 데이터 경고 관리자](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
-

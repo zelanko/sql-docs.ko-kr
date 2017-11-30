@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Manager [Reporting Services], default delivery extension
+helpviewer_keywords: Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f4eefd89797559f2ea8e6bfbb2b7c2a2b83b70e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e46c81c5c96bc3c71eef8a2ca48a89c177ca1700
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>기본 Reporting Services 배달 확장 프로그램 변경
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 설정을 수정하여 구독 정의 페이지의 **배달 방법** 목록에 표시될 배달 확장 프로그램을 결정할 수 있습니다. 예를 들어, 구성을 수정하여 사용자가 새 구독을 만들었을 때 전자 메일 배달 대신 기본적으로 파일 공유 전달을 선택할 수 있습니다. 또한 배달 확장 프로그램이 사용자 인터페이스에 나열되는 순서를 변경할 수 있습니다.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="default-native-mode-report-server-configuration"></a>기본 모드 보고서 서버 기본 구성  
  보고서 관리자의 **배달 방법** 목록에 표시되는 배달 확장 프로그램의 순서는 **RSReportServer.config** 파일에 배달 확장 프로그램 항목이 표시된 순서를 기반으로 합니다. 예를 들어, 다음 이미지에서는 목록에 전자 메일이 가장 먼저 표시되도록 기본 선택되어 있습니다.  
   
- ![배달 확장 프로그램의 기본 목록을](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "배달 확장 프로그램의 기본 목록")  
+ ![배달 확장 프로그램의 기본 목록](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "배달 확장 프로그램의 기본 목록")  
   
  다음은 기본 전달 확장 프로그램과 보고서 관리자에서의 표시 순서를 제어하는 **RSReportServer.config** 의 기본 섹션입니다. 전자 메일이 파일에 첫 번째로 표시되며 이것이 기본값입니다.  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
      텍스트 편집기에서 RSReportServer.config 파일을 엽니다. 구성 파일에 대한 자세한 내용은 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요. 구성 변경 후에는 UI가 다음 이미지와 유사해 보입니다.  
   
-     ![배달 확장 프로그램의 목록 수정 됨](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "배달 확장 프로그램의 목록 수정 됨")  
+     ![배달 확장 프로그램의 수정된 목록](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "배달 확장 프로그램의 수정된 목록")  
   
 2.  DeliveryUI 섹션이 다음 예시와 유사하게 보이도록 수정하고 주요 변경 사항을 확인합니다.  
   
@@ -125,4 +123,3 @@ ms.lasthandoff: 08/09/2017
  [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

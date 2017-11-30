@@ -1,7 +1,6 @@
 ---
 title: "PPTX 장치 정보 설정 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 09/11/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - pptx
 - export
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3aa67165e961e76569daadff1fc610c4d16a1e63
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 27e5acf9e2c8c234da1b7786a482d049d77c29b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 장치 정보 설정
   다음 표는 PPTX 형식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  
@@ -52,7 +50,6 @@ ms.lasthandoff: 08/09/2017
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [기술 참조 &#40; Ssrs&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
-

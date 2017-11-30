@@ -10,24 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], authentication
 - forms-based authentication [Reporting Services]
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a01267851f882bdafcfced0cee200ff3af01cdcf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6926d7787a715ab9183763939ca78ed192d0e251
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services의 인증
   인증은 사용자의 권한을 ID에 설정하는 과정입니다. 사용자를 인증하는 데 사용할 수 있는 많은 방법이 있습니다. 가장 일반적인 방법은 암호를 사용하는 것입니다. 예를 들어 폼 인증을 구현하는 경우 사용자에게 자격 증명을 요구(대개 로그인 이름과 암호를 요구하는 인터페이스를 통해 이루어짐)한 다음 데이터베이스 테이블이나 구성 파일과 같은 데이터 저장소와 대조하여 사용자를 검사하도록 구현합니다. 자격 증명을 확인할 수 없는 경우 인증 프로세스가 실패하고 사용자는 익명 ID를 가집니다.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/12/2017
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services의 사용자 지정 인증  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 Windows 운영 체제는 통합 보안을 통해 또는 사용자 자격 증명의 명시적인 수신과 검사를 통해 사용자 인증을 처리합니다. 사용자 지정 인증은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 개발하여 추가 인증 체계를 지원할 수 있습니다. 보안 확장 프로그램 인터페이스 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>을 통해 이 작업을 수행할 수 있습니다. 모든 확장 프로그램은 보고서 서버에서 배포되고 사용되는 모든 확장 프로그램에 대한 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 기본 인터페이스에서 상속됩니다. <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>은 <xref:Microsoft.ReportingServices.Interfaces> 네임스페이스의 멤버입니다.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 서버와 대조하여 인증하는 기본적인 방법은 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드입니다. Reporting Services 웹 서비스의 이 멤버는 확인을 위해 사용자 자격 증명을 보고서 서버에 전달하는 데 사용할 수 있습니다. 기본 보안 확장 프로그램 구현 하 **IAuthenticationExtension2.LogonUser** 사용자 지정 인증 코드가 포함 되어 있습니다. 폼 인증 예제에서 **LogonUser**, 데이터베이스에 제공된 된 자격 증명 및 사용자 지정 사용자 저장소에 대해은 인증 검사를 수행 하는입니다. 구현 예 **LogonUser** 다음과 같습니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 서버와 대조하여 인증하는 기본적인 방법은 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드입니다. Reporting Services 웹 서비스의 이 멤버는 확인을 위해 사용자 자격 증명을 보고서 서버에 전달하는 데 사용할 수 있습니다. 기본 보안 확장 프로그램은 사용자 지정 인증 코드를 포함하는 **IAuthenticationExtension2.LogonUser**를 구현합니다. 폼 인증 예제에서는 제공된 자격 증명 및 데이터베이스의 사용자 지정 사용자 저장소와 대조하여 인증 검사를 수행하는 **LogonUser**가 있습니다. **LogonUser**의 구현 예는 다음과 같습니다.  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -103,7 +102,7 @@ internal static bool VerifyPassword(string suppliedUserName,
 ```  
   
 ## <a name="authentication-flow"></a>인증 흐름  
- Reporting Services 웹 서비스 웹 포털 및 보고서 서버에서 폼 인증을 사용 하도록 설정 하려면 사용자 지정 인증 확장 프로그램을 제공 합니다.  
+ Reporting Services 웹 서비스는 보고서 관리자 및 웹 포털에 의한 폼 인증을 사용할 수 있도록 사용자 지정 인증 확장 프로그램을 제공합니다.  
   
  Reporting Services 웹 서비스의 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드는 인증을 위해 자격 증명을 보고서 서버에 제출하는 데 사용됩니다. 웹 서비스에서는 검사된 로그온 요청에 대해 HTTP 헤더를 사용하여 서버에서 클라이언트로 인증 티켓("쿠키"라고 함)을 전달합니다.  
   
@@ -115,7 +114,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  클라이언트 응용 프로그램에서 사용자를 인증하도록 웹 서비스 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
   
-2.  웹 서비스를 호출 하는 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 보안 확장 프로그램의 메서드 특히, 구현 하는 클래스 **IAuthenticationExtension2**합니다.  
+2.  웹 서비스에서 보안 확장 프로그램, 특히 **IAuthenticationExtension2**를 구현하는 클래스의 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
   
 3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> 구현에서 사용자 저장소 또는 보안 기관에 있는 사용자 이름과 암호를 검사합니다.  
   
@@ -153,7 +152,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Windows 인증 또는 사용자 지정 인증으로 사용자를 인증하고 권한을 부여할 수 있으며, 두 가지 인증을 모두 사용할 수는 없습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서는 여러 보안 확장 프로그램을 동시에 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [보안 확장 프로그램 구현](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
   
   

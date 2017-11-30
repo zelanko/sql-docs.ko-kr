@@ -1,33 +1,30 @@
 ---
-title: "보고서 서버 데이터베이스 연결 (SSRS 구성 관리자) 구성 | Microsoft Docs"
+title: "보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 7faf4e41db0b37dddbdc28b33b3abf621ecad24b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: 75e8a98156714dd94582aa5f87daabc8f03d093c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-각 보고서 서버 인스턴스에는 보고서 서버에서 관리하는 보고서, 보고서 모델, 공유 데이터 원본, 리소스 및 메타데이터를 저장하는 보고서 서버 데이터베이스에 대한 연결이 필요합니다. 기본 구성을 설치하는 경우 보고서 서버를 설치하는 동안 초기 연결을 만들 수 있습니다. 대부분의 경우 설치를 완료한 다음에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 구성합니다. 언제라도 연결을 수정하여 계정 유형을 변경하거나 자격 증명을 다시 설정할 수 있습니다. 데이터베이스를 만들고 연결을 구성 하는 방법에 대 한 단계별 지침을 참조 하세요. [기본 모드 보고서 서버 데이터베이스 &#40; 만들기 SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
+각 보고서 서버 인스턴스에는 보고서 서버에서 관리하는 보고서, 보고서 모델, 공유 데이터 원본, 리소스 및 메타데이터를 저장하는 보고서 서버 데이터베이스에 대한 연결이 필요합니다. 기본 구성을 설치하는 경우 보고서 서버를 설치하는 동안 초기 연결을 만들 수 있습니다. 대부분의 경우 설치를 완료한 다음에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 구성합니다. 언제라도 연결을 수정하여 계정 유형을 변경하거나 자격 증명을 다시 설정할 수 있습니다. 데이터베이스를 만들고 연결을 구성하기 위한 단계별 지침은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.
 
  다음과 같은 상황에서 보고서 서버 데이터베이스 연결을 구성해야 합니다.  
   
@@ -37,10 +34,10 @@ ms.lasthandoff: 09/21/2017
   
 -   데이터베이스 연결에 사용되는 사용자 계정 또는 암호 변경. 계정 정보가 RSReportServer.config 파일에 저장되어 있는 경우에는 데이터베이스 연결만 업데이트하면 됩니다. 연결 시 Windows 통합 보안을 자격 증명 유형으로 사용하는 서비스 계정을 사용하는 경우에는 암호가 저장되지 않으므로 연결 정보를 업데이트할 필요가 없습니다. 계정 변경에 대한 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조하세요.  
   
--   보고서 서버 확장 배포 구성. 확장 배포를 구성하려면 보고서 서버 데이터베이스에 대해 다중 연결을 만들어야 합니다. 이러한 다중 단계 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 하세요. [기본 모드 보고서 서버 확장 배포 &#40; 구성 합니다. SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   보고서 서버 스케일 아웃 배포 구성. 스케일 아웃 배포를 구성하려면 보고서 서버 데이터베이스에 대해 다중 연결을 만들어야 합니다. 이러한 다중 단계 작업을 수행하는 방법은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
   
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Reporting Services가 데이터베이스 엔진에 연결되는 방식  
- 보고서 서버 데이터베이스에 대한 보고서 서버 액세스는 자격 증명과 연결 정보, 해당 데이터베이스를 사용하는 보고서 서버 인스턴스에 유효한 암호화 키에 따라 달라집니다. 중요한 데이터를 저장 및 검색하려면 유효한 암호화 키가 있어야 합니다. 암호화 키는 데이터베이스를 처음 구성할 때 자동으로 생성됩니다. 키가 생성된 후 보고서 서버 서비스 ID를 변경하는 경우에는 해당 키를 업데이트해야 합니다. 암호화 키 작업에 대 한 자세한 내용은 참조 하십시오. [구성 및 암호화 키 관리 &#40; SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+ 보고서 서버 데이터베이스에 대한 보고서 서버 액세스는 자격 증명과 연결 정보, 해당 데이터베이스를 사용하는 보고서 서버 인스턴스에 유효한 암호화 키에 따라 달라집니다. 중요한 데이터를 저장 및 검색하려면 유효한 암호화 키가 있어야 합니다. 암호화 키는 데이터베이스를 처음 구성할 때 자동으로 생성됩니다. 키가 생성된 후 보고서 서버 서비스 ID를 변경하는 경우에는 해당 키를 업데이트해야 합니다. 암호화 키 작업에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.  
   
  보고서 서버 데이터베이스는 보고서 서버에 의해서만 액세스되는 내부 구성 요소이므로 보고서 서버 데이터베이스에 대해 지정된 자격 증명과 연결 정보는 보고서 서버에만 사용됩니다. 따라서 보고서를 요청하는 사용자에게는 보고서 서버 데이터베이스에 대한 데이터베이스 권한이나 데이터베이스 로그인이 필요하지 않습니다.  
   
@@ -66,7 +63,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="storing-database-connection-information"></a>데이터베이스 연결 정보 저장  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다음 RSreportserver.config 설정에 연결 정보를 저장 및 암호화합니다. 이러한 설정에 대해 암호화된 값을 만들려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 rsconfig 유틸리티를 사용해야 어야 합니다.  
   
- 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. (즉, 서비스 계정 연결을 만들)에서 기본값을 사용 하 여 연결을 구성 하는 경우 \< **LogonUser**>, \< **LogonDomain**>, 및 \< **LogonCred**>가 비게 됩니다 다음과 같습니다.  
+ 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. 기본값을 사용하여 연결을 구성하는 경우, 즉 서비스 계정을 사용하여 연결을 만드는 경우에는 다음과 같이 \<**LogonUser**>, \<**LogonDomain**> 및 \<**LogonCred**>가 비게 됩니다.  
   
 ```  
 <Dsn></Dsn>  
@@ -121,7 +118,7 @@ ms.lasthandoff: 09/21/2017
  연결 정보를 변경하여 보고서 서버 인스턴스에서 다른 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 프로덕션 보고서 서버를 배포할 때 주로 데이터베이스를 전환합니다. 테스트 보고서 서버 데이터베이스에서 프로덕션 보고서 서버 데이터베이스로 전환하는 작업은 일반적으로 프로덕션 서버를 전달하는 방법입니다. 보고서 서버 데이터베이스를 다른 컴퓨터로 이동할 수도 있습니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) Reporting Services 업그레이드 및 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>여러 보고서 서버에서 동일한 보고서 서버 데이터베이스를 사용하도록 구성  
- 여러 보고서 서버에서 동일한 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 이 배포 구성을 확장 배포라고 합니다. 서버 클러스터에서 보고서 서버를 여러 개 실행하려는 경우 이 구성이 반드시 필요합니다. 그러나 서비스 응용 프로그램을 분할하거나 새 보고서 서버 인스턴스의 설치 및 설정을 테스트한 다음 이를 기존 보고서 서버 설치와 비교하려는 경우에도 이 설정을 사용할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
+ 여러 보고서 서버에서 동일한 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 이 배포 구성을 스케일 아웃 배포라고 합니다. 서버 클러스터에서 보고서 서버를 여러 개 실행하려는 경우 이 구성이 반드시 필요합니다. 그러나 서비스 응용 프로그램을 분할하거나 새 보고서 서버 인스턴스의 설치 및 설정을 테스트한 다음 이를 기존 보고서 서버 설치와 비교하려는 경우에도 이 설정을 사용할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -130,4 +127,3 @@ ms.lasthandoff: 09/21/2017
 [보고서 서버 서비스 계정 구성](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
-

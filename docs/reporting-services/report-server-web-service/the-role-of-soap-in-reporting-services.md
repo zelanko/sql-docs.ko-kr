@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
 - SOAP [Reporting Services], role in Reporting Services
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0d6c14934417d4ece40596c17a7335e09ec1ad78
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: ae2242cc79e7fb3d5719e374a45751d27d5c2b5c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   웹 서버 웹 서비스에서는 SOAP(Simple Object Access Protocol) 메시징을 사용하여 네트워크를 통해 텍스트 기반 명령을 보냅니다. 이러한 명령은 HTTP를 사용하여 World Wide Web을 통해 전송되는 XML 텍스트 형식입니다. SOAP을 통신 프로토콜로 사용하면 보고서 서버 웹 서비스에서는 폭넓게 활용되는 개방형 인프라를 사용하여 응용 프로그램 및 구성 요소와 보고서 서버 간에 데이터 교환이 가능합니다. SOAP 표준은 www.w3.org/TR/SOAP에 정의되어 있습니다.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/12/2017
 </soap:Envelope>  
 ```  
   
- 자체 SOAP 메시지에 배치 될 필요는 **봉투 (envelope)** 요소 내 메시지의 많은 부분을 **본문** 요소입니다. 이 예에서 본문에는 삭제할 항목의 경로를 나타내는 문자열 매개 변수를 가지는 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 메서드 호출이 포함되어 있습니다. 만들 수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모든 SOAP 작업을 메서드로 캡슐화 하는 클라이언트 프록시 클래스입니다. 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 메서드는 위의 SOAP 예를 나타냅니다.  
+ SOAP 자체의 경우 전체 메시지를 **Envelope** 요소 내에 두며 메시지 중 많은 부분을 **Body** 요소에 포함합니다. 이 예에서 본문에는 삭제할 항목의 경로를 나타내는 문자열 매개 변수를 가지는 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 메서드 호출이 포함되어 있습니다. 모든 SOAP 작업을 메서드로 캡슐화하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클라이언트 프록시 클래스를 만들 수 있습니다. 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 메서드는 위의 SOAP 예를 나타냅니다.  
   
 ```  
 public void DeleteItem(string item);  
@@ -68,9 +66,8 @@ public void DeleteItem(string item);
   
 ## <a name="see-also"></a>관련 항목:  
  [SOAP API 액세스](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [보고서 서버 웹 서비스](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

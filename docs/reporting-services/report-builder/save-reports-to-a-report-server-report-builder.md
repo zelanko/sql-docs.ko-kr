@@ -1,5 +1,5 @@
 ---
-title: "보고서 서버 (보고서 작성기)에 보고서 저장 | Microsoft Docs"
+title: "보고서 서버에 보고서 저장(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d2a1b09aefaf3baf454edd419e3d1edd8aa575f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 568999bbde67c627167ece4260fdc3365b1ba8ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>보고서 서버에 보고서 저장(보고서 작성기)
   보고서 작성기에서는 보고서 정의를 보고서 서버에 저장할 수 있습니다(보고서 게시라고도 함). 보고서를 보고서 서버에 저장하면 다른 사용자가 보고서를 볼 수 있습니다. 게시된 보고서를 실행할 때마다 최신 데이터를 검색하게 됩니다. 렌더링된 보고서의 정적 복사본을 저장하려면 보고서를 다른 파일 형식으로 내보내고 저장하거나, 보고서 기록 기능을 사용하여 렌더링된 보고서의 여러 버전을 저장합니다.  
@@ -31,12 +30,12 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-save-a-report-to-a-report-server"></a>보고서 서버에 보고서를 저장하려면  
   
-1.  보고서 작성기 단추에서 **저장**을 클릭합니다. **다른 이름으로 저장***\<보고서 항목 >* 대화 상자가 열립니다.  
+1.  보고서 작성기 단추에서 **저장**을 클릭합니다. **\<Report Item>으로 저장** 대화 상자가 열립니다.  
   
     > [!NOTE]  
     >  보고서를 다시 저장하는 경우 보고서가 이전 위치에 자동으로 다시 저장됩니다. 다른 이름으로 저장 옵션을 사용하여 위치를 변경할 수 있습니다.  
   
-2.  필요한 경우 **최근에 사용한 사이트 및 서버** 를 클릭하여 최근에 사용한 보고서 서버와 SharePoint 사이트의 목록을 표시합니다.  
+2.  필요한 경우 **최근에 사용한 사이트 및 서버**를 클릭하여 최근에 사용한 보고서 서버와 SharePoint 사이트의 목록을 표시합니다.  
   
 3.  보고서를 저장할 보고서 서버 위치로 이동합니다.  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-save-a-report-as-a-different-name"></a>보고서를 다른 이름으로 저장하려면  
   
-1.  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다. **다른 이름으로 저장***\<보고서 항목 >* 대화 상자가 열립니다.  
+1.  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다. **\<Report Item>으로 저장** 대화 상자가 열립니다.  
   
 2.  보고서를 저장할 보고서 서버 위치 또는 파일 공유로 이동합니다.  
   
@@ -58,7 +57,6 @@ ms.lasthandoff: 08/09/2017
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [보고서 저장&#40;보고서 작성기&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [다른 파일 형식 &#40;으로 보고서 내보내기 보고서 작성기 및 SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   
-

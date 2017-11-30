@@ -2,11 +2,13 @@
 title: "분리된 사용자 문제 해결(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: 
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +20,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 53342ad62ae05d614acee18c2bbace0b2feaae6b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>분리된 사용자 문제 해결(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 분리된 사용자는 데이터베이스 사용자가 **마스터** 데이터베이스의 로그인을 기반으로 하지만 해당 로그인이 **마스터**에 더 이상 존재하지 않는 경우 발생합니다. 이는 로그인이 삭제되었거나 데이터베이스가 로그인이 존재하지 않는 다른 서버로 이동된 경우에 발생할 수 있습니다. 이 항목에서는 분리된 사용자를 찾아서 로그인에 다시 매핑하는 방법을 설명합니다.  
   
@@ -135,8 +137,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sp_grantlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_password&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)   
  [sys.sysusers&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md)   
- [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)
- [sys.syslogins&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
+ [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) [sys.syslogins &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "머리글 및 바닥글 (보고서 작성기 및 SSRS) 그룹과 표시 | Microsoft Docs"
+title: "그룹과 함께 머리글 및 바닥글 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,29 +11,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 5c1004a59c0cda51fb5cf9230b81a18945765005
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>그룹과 함께 머리글 및 바닥글 표시(보고서 작성기 및 SSRS)
   그룹 머리글 또는 바닥글 같은 정적 행을 테이블릭스 데이터 영역의 그룹과 연결된 동적 행과 함께 렌더링할지 여부를 제어할 수 있습니다.  
   
- 모든 열 머리글 또는 행 머리글을 여러 페이지에서 반복하려면 테이블릭스 데이터 영역에 대해 속성을 설정할 수 있습니다. 자세한 내용은 참조 [행 및 열 머리글을 여러 페이지 (보고서 작성기 및 SSRS)에 표시](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)합니다.  
+ 모든 열 머리글 또는 행 머리글을 여러 페이지에서 반복하려면 테이블릭스 데이터 영역에 대해 속성을 설정할 수 있습니다. 자세한 내용은 [여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)를 참조하세요.  
   
- 중첩된 그룹에 연결된 동적 행 및 열 또는 레이블이나 부분합과 연결된 정적 행 및 열의 렌더링 동작을 제어하려면 테이블릭스 멤버에 대해 속성을 설정해야 합니다. 테이블릭스 멤버는 정적이거나 동적인 행 또는 열을 나타냅니다. 정적 멤버는 한 번씩 반복되는 멤버로, 총합계 행을 예로 들 수 있습니다. 동적 멤버는 그룹 인스턴스당 한 번씩 반복됩니다. 예를 들어 그룹 식 [Territory]가 있는 그룹과 연결된 행은 해당 지역의 각 고유 값에 대해 한 번씩 반복됩니다. 테이블 릭 스 멤버에 대 한 자세한 내용은 참조 [테이블 릭 스 데이터 영역 셀, 행 및 열 &#40; 보고서 작성기 &#41; 와 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)합니다.  
+ 중첩된 그룹에 연결된 동적 행 및 열 또는 레이블이나 부분합과 연결된 정적 행 및 열의 렌더링 동작을 제어하려면 테이블릭스 멤버에 대해 속성을 설정해야 합니다. 테이블릭스 멤버는 정적이거나 동적인 행 또는 열을 나타냅니다. 정적 멤버는 한 번씩 반복되는 멤버로, 총합계 행을 예로 들 수 있습니다. 동적 멤버는 그룹 인스턴스당 한 번씩 반복됩니다. 예를 들어 그룹 식 [Territory]가 있는 그룹과 연결된 행은 해당 지역의 각 고유 값에 대해 한 번씩 반복됩니다. 테이블릭스 멤버에 대한 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)을 참조하세요.  
   
  그룹화 창에서 테이블릭스 멤버를 선택하고 속성 창에서 **KeepWithGroup**, **KeepTogether**및 **RepeatOnNewPage** 속성을 설정할 수 있습니다. 그룹 머리글 및 바닥글이 그룹과 같은 페이지에 표시되도록 하려면 **KeepWithGroup** 을 사용합니다. 정적 멤버가 그룹의 행이나 열과 함께 표시되도록 하려면 **KeepTogether** 를 사용합니다. **KeepWithGroup** 값으로 지정된 행 그룹 멤버의 전체 인스턴스를 적어도 하나 이상 표시하는 모든 페이지에서 그룹 머리글 또는 바닥글을 반복하려면 **RepeatOnNewPage** 를 사용합니다. 열 그룹 멤버에 대해서는**RepeatOnNewPage** 가 지원되지 않습니다.  
   
 > [!NOTE]  
->  **KeepWithGroup**, **KeepTogether**, 및 **RepeatOnNewPage** 를 사용 하 여 설정할 수 있는 그룹 멤버 속성은는 **고급 모드** 그룹화 창의 합니다. 자세한 내용은 참조 [그룹화 창 &#40; 보고서 작성기 &#41; ](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+>  **KeepWithGroup**, **KeepTogether** 및 **RepeatOnNewPage**는 그룹화 창의 **고급 모드**를 사용하여 설정할 수 있는 그룹 멤버 속성입니다. 자세한 내용은 [그룹화 창&#40;보고서 작성기#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -75,8 +74,7 @@ ms.lasthandoff: 09/27/2017
 5.  (옵션) 보고서를 미리 봅니다. 가능한 경우, 보고서는 이 멤버를 지정된 열 그룹 멤버와 함께 렌더링합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테이블 릭 스 데이터 영역 셀, 행 및 열 (보고서 작성기) 및 SSRS](tablix-data-region-report-builder-and-ssrs.md)   
+ [테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   
-

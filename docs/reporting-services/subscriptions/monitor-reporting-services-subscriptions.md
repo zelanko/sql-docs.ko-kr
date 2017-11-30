@@ -1,5 +1,5 @@
 ---
-title: "모니터 Reporting Services 구독 | Microsoft Docs"
+title: "Reporting Services 구독 모니터링 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 388c564367a3eaeb3f7e0f58f07997079322040d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d1d01e4c59bba393ddc713c24f7ba829b3420b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
   사용자 인터페이스, Windows PowerShell 또는 로그 파일을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 모니터링할 수 있습니다. 모니터링에 사용할 수 있는 옵션은 실행 중인 보고서 서버의 모드에 따라 달라집니다.  
@@ -55,17 +54,17 @@ ms.lasthandoff: 08/09/2017
 |------------|-----------------|  
 |새 구독|구독을 처음 만들 때 나타납니다.|  
 |비활성|구독을 처리할 수 없을 때 나타납니다. 자세한 내용은 이 항목의 뒷부분에 있는 "비활성 구독 관리"를 참고하십시오.|  
-|완료: \< *번호*>으로 처리 \< *번호*> 총; \< *번호*> 오류입니다.|데이터 기반 구독 실행 상태를 나타냅니다. 이 메시지는 일정 예약 및 배달 프로세서에서 제공합니다.|  
-|\<*번호*> 처리|일정 예약 및 배달 프로세서에서 성공적으로 배달했거나 더 이상 배달하지 않는 알림의 수입니다. 데이터 기반 배달이 완료되면 처리된 알림 수가 생성된 알림의 총 수와 같아야 합니다.|  
-|\<*번호*> 총|구독의 마지막 배달에 대해 생성된 알림의 총 수입니다.|  
-|\<*번호*> 오류|일정 예약 및 배달 프로세서에서 배달하지 못했거나 더 이상 배달하지 않는 알림의 수입니다.|  
-|메일 전송 실패: 서버에 연결하지 못해 전송하지 못했습니다.|보고서 서버가 메일 서버에 연결하지 못했음을 나타냅니다. 이 메시지는 전자 메일 배달 확장 프로그램에서 제공합니다. |  
-|파일 \< *filename*>에 기록 된 \<경로 >.|파일 공유 위치에 성공적으로 배달했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
+|완료: 총 \<*number*>개 중 \<*number*>개가 처리되었으며 \<*number*>개의 오류가 발생했습니다.|데이터 기반 구독 실행 상태를 나타냅니다. 이 메시지는 일정 예약 및 배달 프로세서에서 제공합니다.|  
+|\<*number*>개가 처리됨|일정 예약 및 배달 프로세서에서 성공적으로 배달했거나 더 이상 배달하지 않는 알림의 수입니다. 데이터 기반 배달이 완료되면 처리된 알림 수가 생성된 알림의 총 수와 같아야 합니다.|  
+|총 \<*number*>개|구독의 마지막 배달에 대해 생성된 알림의 총 수입니다.|  
+|\<*number*>개의 오류|일정 예약 및 배달 프로세서에서 배달하지 못했거나 더 이상 배달하지 않는 알림의 수입니다.|  
+|메일 전송 실패: 서버에 연결하지 못해 전송하지 못했습니다.|보고서 서버가 메일 서버에 연결하지 못했음을 나타냅니다. 이 메시지는 전자 메일 배달 확장 프로그램에서 제공합니다.|  
+|\<*filename*> 파일을 \<path>에 썼습니다.|파일 공유 위치에 성공적으로 배달했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
 |파일에 쓰는 동안 알 수 없는 오류가 발생했습니다.|파일 공유 위치에 배달하지 못했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
-|대상 폴더에 연결 하지 못했습니다 \<경로 >. 대상 폴더가 있거나 파일이 공유되어 있는지 확인하십시오.|지정한 폴더를 찾을 수 없음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
-|파일 \<파일 이름 >에 쓰지 못했습니다 \<경로 >. 다시 시도하는 중입니다.|파일을 새 버전으로 업데이트할 수 없음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
-|파일에 쓰지 못했습니다 \<파일 이름 >: \<메시지 >|파일 공유 위치에 배달하지 못했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
-|\<사용자 지정 상태 메시지 >|배달 확장 프로그램에서 제공하는 배달 성공 및 실패에 대한 상태 메시지입니다. 타사 또는 사용자 지정 배달 확장 프로그램을 사용할 경우 추가 상태 메시지가 제공될 수 있습니다.|  
+|대상 폴더 \<path>에 연결하지 못했습니다. 대상 폴더가 있거나 파일이 공유되어 있는지 확인하십시오.|지정한 폴더를 찾을 수 없음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
+|\<filename> 파일을 \<path>에 쓸 수 없습니다. 다시 시도하는 중입니다.|파일을 새 버전으로 업데이트할 수 없음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
+|\<filename>: \<message> 파일에 쓰지 못했습니다.|파일 공유 위치에 배달하지 못했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
+|\<custom status messages>|배달 확장 프로그램에서 제공하는 배달 성공 및 실패에 대한 상태 메시지입니다. 타사 또는 사용자 지정 배달 확장 프로그램을 사용할 경우 추가 상태 메시지가 제공될 수 있습니다.|  
   
  또한, 보고서 서버 관리자는 현재 처리 중인 표준 구독을 모니터링할 수 있습니다. 데이터 기반 구독은 모니터링할 수 없습니다. 자세한 내용은 [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)를 참조하세요.  
   
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="native-mode-log-files"></a>기본 모드 로그 파일  
  배달 중에 오류가 발생하면 보고서 서버 추적 로그에 항목이 하나 생성됩니다.  
   
- 보고서 서버 관리자는 **reportserverservice_\*.log** 파일을 검토하여 구독 배달 상태를 확인할 수 있습니다. 전자 메일 배달의 경우 보고서 서버 로그 파일에 처리 및 특정 전자 메일 계정으로 배달 레코드가 포함됩니다.  다음은 로그 파일의 기본 위치입니다.  
+ 보고서 서버 관리자는 **reportserverservice_\*.log** 파일을 검토하여 구독 배달 상태를 확인할 수 있습니다. 전자 메일 배달의 경우 보고서 서버 로그 파일에 처리 및 특정 전자 메일 계정으로 배달 레코드가 포함됩니다. 다음은 로그 파일의 기본 위치입니다.  
   
  `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
   
@@ -100,7 +99,7 @@ ms.lasthandoff: 08/09/2017
 4.  **구독 관리**를 선택합니다.  
   
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS 로그 파일  
- 구독 관련 정보는 SharePoint ULS 로그에 기록됩니다. ULS 로그에 대한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이벤트를 구성하는 방법에 대한 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)을 참조하세요.  다음은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독과 관련된 ULS 로그 항목의 예입니다.  
+ 구독 관련 정보는 SharePoint ULS 로그에 기록됩니다. ULS 로그에 대한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이벤트를 구성하는 방법에 대한 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)를 참조하세요.  다음은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독과 관련된 ULS 로그 항목의 예입니다.  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
@@ -127,7 +126,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [기존_기본 모드 보고서 서버 구독 만들기 및 관리](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

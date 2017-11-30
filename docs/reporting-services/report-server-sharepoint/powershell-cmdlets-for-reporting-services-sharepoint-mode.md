@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5ab2078266bb130e80b0919c2a4f19e8cf45a671
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: be7fe550a03d527e3189adf029f183bbb3af517b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
 
@@ -27,20 +26,20 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SQL Server 2016 Reporting Services SharePoint 모드를 설치 하면 SharePoint 모드의 보고서 서버를 지원 하기 위해 PowerShell cmdlet 설치 됩니다. cmdlet은 세 가지 범주의 기능을 포함합니다.  
+SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 SharePoint 모드에서 보고서 서버를 지원하기 위해 PowerShell cmdlet이 설치됩니다. cmdlet은 세 가지 범주의 기능을 포함합니다.  
   
--   설치의 Reporting Services SharePoint 공유 서비스 및 프록시입니다.  
+-   Reporting Services SharePoint 공유 서비스 및 프록시 설치  
   
--   프로 비전 및 관리의 Reporting Services 서비스 응용 프로그램과 관련된 프록시입니다.  
+-   Reporting Services 서비스 응용 프로그램과 연결된 프록시의 프로비전 및 관리  
   
--   Reporting Services 기능 예제 확장 및 암호화 키에 대 한 관리 합니다.  
+-   Reporting Services 기능(예: 확장 및 암호화 키) 관리  
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
 ## <a name="cmdlet-summary"></a>Cmdlet 요약
 
- cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)**를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx)를 사용할 수도 있습니다. 다음 cmdlet 요약에서 서비스 응용 프로그램 '데이터베이스'에 대 한 참조는 모든 Reporting Services 서비스 응용 프로그램에서 만들고 사용 데이터베이스를 참조 하십시오. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
+ cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)**를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx)를 사용할 수도 있습니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 Reporting Services 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
   
  PowerShell 예제를 입력할 때 다음과 비슷한 오류 메시지가 표시됩니다.  
   
@@ -49,7 +48,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치 하면 SharePoint
   
  다음 문제 중 하나가 발생합니다.  
   
--   Reporting Services SharePoint 모드 설치 되어 있지 않습니다 및 따라서 Reporting Services cmdlet이 설치 되지 않습니다.  
+-   Reporting Services SharePoint 모드가 설치되어 있지 않으므로 Reporting Services cmdlet이 설치되지 않았습니다.  
   
 -   SharePoint 관리 셸 대신 Windows PowerShell 또는 Windows PowerShell ISE에서 PowerShell 명령을 실행했습니다. SharePoint 관리 셸을 사용하거나 다음 명령을 사용하여 Windows PowerShell 창에 SharePoint 스냅인을 추가합니다.  
   
@@ -59,7 +58,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치 하면 SharePoint
   
  자세한 내용은 [Windows PowerShell을 사용하여 SharePoint 2013 관리](http://technet.microsoft.com/library/ee806878.aspx)를 사용할 수도 있습니다.  
   
-### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 관리 셸을 열고 cmdlet을 실행
+### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 관리 셸 열기 및 cmdlet 실행
   
 1.  **시작** 단추를 클릭합니다.  
   
@@ -71,20 +70,20 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치 하면 SharePoint
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
-##  <a name="shared-service-and-proxy-cmdlets"></a>공유 서비스 및 프록시 cmdlet
+##  <a name="shared-service-and-proxy-cmdlets"></a>공유 서비스 및 프록시 Cmdlet
 
- 다음 표에서 Reporting Services SharePoint 공유 서비스에 대 한 PowerShell cmdlet이 포함 되어 있습니다.  
+ 다음 표에는 Reporting Services SharePoint 공유 서비스에 대한 PowerShell cmdlet이 나와 있습니다.  
   
 |Cmdlet|Description|  
 |------------|-----------------|  
-|Install-SPRSService|설치 및 등록 또는 Reporting Services 공유 서비스를 제거 합니다. SQL Server Reporting services SharePoint 모드에서 설치 된 컴퓨터에만이 작업을 수행할 수 있습니다. 설치 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -Reporting Services 서비스가 팜의에 설치 됩니다.<br /><br /> -Reporting Services 서비스 인스턴스가 현재 컴퓨터에 설치 됩니다.<br /><br /> 제거 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -Reporting Services 서비스가 현재 시스템에서 제거 됩니다.<br /><br /> -Reporting Services 서비스가 팜에서 제거 됩니다.<br /><br /> <br /><br /> 설치 된 Reporting Services 서비스가 팜의 다른 시스템 경우 Reporting Services 서비스 응용 프로그램은 팜에서 실행 중인 사항이 경고 메시지가 표시 됩니다.|  
+|Install-SPRSService|Reporting Services 공유 서비스를 설치 및 등록하거나 제거합니다. 이 작업은 SharePoint 모드에서 SQL Server Reporting Services가 설치된 시스템에서만 수행할 수 있습니다. 설치 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -팜에 Reporting Services 서비스가 설치됩니다.<br /><br /> -현재 시스템에 Reporting Services 서비스 인스턴스가 설치됩니다.<br /><br /> 제거 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -현재 시스템에서 Reporting Services 서비스가 제거됩니다.<br /><br /> -팜에서 Reporting Services 서비스가 제거됩니다.<br /><br /> <br /><br /> 팜 내 다른 시스템에 Reporting Services 서비스가 설치되어 있거나 팜에서 Reporting Services 서비스 응용 프로그램이 실행되고 있는 경우 경고 메시지가 표시됩니다.|  
 |Install-SPRSServiceProxy|SharePoint 팜에 Reporting Services 서비스 프록시를 설치 및 등록 또는 제거합니다.|  
 |Get-SPRSProxyUrl|Reporting Services 서비스에 액세스하기 위한 URL을 가져옵니다.|  
-|Get-SPRSServiceApplicationServers|로컬 SharePoint 팜 내 Reporting Services 공유 서비스가 설치된 모든 서버를 가져옵니다. 이 cmdlet은 Reporting Services 업그레이드 시 서버를 공유 서비스를 실행 하므로 업그레이드 해야 할 결정 하는 데 유용 합니다.|  
+|Get-SPRSServiceApplicationServers|로컬 SharePoint 팜 내 Reporting Services 공유 서비스가 설치된 모든 서버를 가져옵니다. 이 cmdlet은 Reporting Services 업그레이드 시 공유 서비스를 실행하여 업그레이드할 서버를 확인하는 데 유용합니다.|  
   
-## <a name="service-application-and-proxy-cmdlets"></a>서비스 응용 프로그램 및 프록시 cmdlet
+## <a name="service-application-and-proxy-cmdlets"></a>서비스 응용 프로그램 및 프록시 Cmdlet
 
- 다음 표에서 Reporting Services 서비스 응용 프로그램 및 프로그램과 관련된 프록시에 대 한 PowerShell cmdlet이 포함 되어 있습니다.  
+ 다음 표에는 Reporting Services 서비스 응용 프로그램과 관련 프록시에 대한 PowerShell cmdlet이 포함됩니다.  
   
 |cmdlet|Description|  
 |------------|-----------------|  
@@ -94,17 +93,17 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치 하면 SharePoint
 |Set-SPRSServiceApplication|기존 Reporting Services 서비스 응용 프로그램의 속성을 편집합니다.|  
 |New-SPRSServiceApplicationProxy|새 Reporting Services 서비스 응용 프로그램 프록시를 만듭니다.|  
 |Get-SPRSServiceApplicationProxy|하나 이상의 Reporting Services 서비스 응용 프로그램 프록시를 가져옵니다.|  
-|Dismount-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 대 한 서비스 응용 프로그램 데이터베이스를 분리합니다.|  
-|Remove-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 대 한 서비스 응용 프로그램 데이터베이스를 제거 합니다.|  
-|Set-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 연결 된 데이터베이스의 속성을 설정 합니다.|  
+|Dismount-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 대한 서비스 응용 프로그램 데이터베이스를 분리합니다.|  
+|Remove-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 대한 서비스 응용 프로그램 데이터베이스를 제거합니다.|  
+|Set-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 연결된 데이터베이스의 속성을 설정합니다.|  
 |Mount-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 데이터베이스를 탑재합니다.|  
-|New-SPRSDatabase|지정된 된 Reporting Services 서비스 응용 프로그램에 대 한 새 서비스 응용 프로그램 데이터베이스를 만듭니다.|  
-|Get-SPRSDatabaseCreationScript|Reporting Services 서비스 응용 프로그램에 대 한 화면에 데이터베이스 생성 스크립트를 출력합니다. 그런 다음 SQL Server Management Studio에서 스크립트를 실행할 수 있습니다.|  
+|New-SPRSDatabase|지정된 Reporting Services 서비스 응용 프로그램에 대해 새 서비스 응용 프로그램 데이터베이스를 만듭니다.|  
+|Get-SPRSDatabaseCreationScript|Reporting Services 서비스 응용 프로그램의 화면에 데이터베이스 생성 스크립트를 출력합니다. 그런 다음 SQL Server Management Studio에서 스크립트를 실행할 수 있습니다.|  
 |Get-SPRSDatabase|하나 이상의 Reporting Services 서비스 응용 프로그램 데이터베이스를 가져옵니다. 이 명령을 사용하여 서비스 응용 프로그램 데이터베이스의 ID를 가져오므로, Set-SPRSDatabase comdlet을 사용하여 속성(예: `querytimeout`)을 수정할 수 있습니다. [보고 서비스 응용 프로그램 데이터베이스의 속성 가져오기 및 설정](#bkmk_example_db_properties)항목의 예제를 참조하세요.|  
-|Get-SPRSDatabaseRightsScript|Reporting Services 서비스 응용 프로그램에 대 한 화면에 데이터베이스 권한 스크립트를 출력합니다. 원하는 사용자에 대한 프롬프트를 표시한 후 데이터베이스에서 사용 권한을 수정하기 위해 실행할 수 있는 Transact-SQL을 반환합니다. 그런 다음 SQL Server Management Studio에서 이 스크립트를 실행할 수 있습니다.|  
-|Get-SPRSDatabaseUpgradeScript|화면에 데이터베이스 업그레이드 스크립트를 출력합니다. 스크립트는 Reporting Services 서비스 응용 프로그램 데이터베이스를 현재 Reporting Services 설치의 데이터베이스 버전으로 업그레이드 됩니다.|  
+|Get-SPRSDatabaseRightsScript|Reporting Services 서비스 응용 프로그램의 화면에 데이터베이스 권한 스크립트를 출력합니다. 원하는 사용자에 대한 프롬프트를 표시한 후 데이터베이스에서 사용 권한을 수정하기 위해 실행할 수 있는 Transact-SQL을 반환합니다. 그런 다음 SQL Server Management Studio에서 이 스크립트를 실행할 수 있습니다.|  
+|Get-SPRSDatabaseUpgradeScript|화면에 데이터베이스 업그레이드 스크립트를 출력합니다. 이 스크립트는 Reporting Services 서비스 응용 프로그램 데이터베이스를 현재 설치하는 Reporting Services의 데이터베이스 버전으로 업그레이드합니다.|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services 사용자 지정 runctionality cmdlet
+## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services 사용자 지정 기능 Cmdlet
   
 |Cmdlet|Description|  
 |------------|-----------------|  
@@ -118,9 +117,9 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치 하면 SharePoint
 |Get-SPRSExtension|Reporting Services 서비스 응용 프로그램에 대한 하나 이상의 Reporting Services 확장 프로그램을 가져옵니다.<br /><br /> 유효한 값은<br /><br /> <br /><br /> 배달<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> 데이터<br /><br /> 보안<br /><br /> 인증<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 디자이너<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|"ReportingService" 기능 사용 여부에 따라 SharePoint 사이트를 가져옵니다. 기본적으로 "ReportingService" 기능이 설정되어 있는 사이트가 반환됩니다.|  
   
-## <a name="basic-samples"></a>기본 예제
+## <a name="basic-samples"></a>기본 샘플
 
- 이름에 'SPRS'가 포함된 cmdlet 목록을 반환합니다. Reporting Services cmdlet의 전체 목록이 됩니다.  
+ 이름에 'SPRS'가 포함된 cmdlet 목록을 반환합니다. Reporting Services cmdlet의 전체 목록입니다.  
   
 ```  
 Get-command –noun *SPRS*  
@@ -132,7 +131,7 @@ Get-command –noun *SPRS*
 Get-command -noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
 ```  
   
- Reporting Services SharePoint 서비스 및 서비스 프록시를 설치 합니다.  
+ Reporting Services SharePoint Service 및 서비스 프록시를 설치합니다.  
   
 ```  
 Install-SPRSService  
@@ -154,7 +153,7 @@ get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | 
 Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
 ```  
   
-## <a name="detailed-samples"></a>자세한 예제
+## <a name="detailed-samples"></a>자세한 샘플
 
  다음 샘플 외에도, [Windows PowerShell script for Steps 1–4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script)항목의 "Windows PowerShell 스크립트" 섹션을 참조하세요.  
   
@@ -166,7 +165,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  기본 프록시 그룹에 프록시 추가  
   
-3.  포트 80 웹 응용 프로그램의 콘텐츠 데이터베이스에 대한 서비스 응용 프로그램 액세스를 허용합니다. 스크립트 가정 사이트 `http://sitename` 이미 있습니다.  
+3.  포트 80 웹 응용 프로그램의 콘텐츠 데이터베이스에 대한 서비스 응용 프로그램 액세스를 허용합니다. 이 스크립트에서는 `http://sitename` 사이트가 이미 있다고 가정합니다.  
   
 ```  
 # Create service application and service application proxy  
@@ -254,7 +253,7 @@ Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, q
   
 ### <a name="list-reporting-services-data-extensions"></a>Reporting Services 데이터 확장 프로그램 나열
 
- 다음 예에서는 각 Reporting Services 서비스 응용 프로그램을 반복 하 고 각각에 대 한 현재 데이터 확장을 나열 합니다.  
+ 다음 예제는 각 Reporting Services 서비스 응용 프로그램을 반복하고 각각에 대한 현재 데이터 확장을 나열합니다.  
   
 ```  
 $apps = Get-SPRSServiceApplication  
@@ -291,13 +290,12 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
   
 ### <a name="change-and-list-reporting-services-subscription-owners"></a>Reporting Services 구독 소유자 변경 및 나열
 
- 참조 [변경, Reporting Services 구독 소유자를 나열 및 구독을 실행 하려면 PowerShell을 사용 하 여](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)합니다.  
+ [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계
 
-[PowerShell을 사용 하 여 변경, Reporting Services 구독 소유자를 나열 및 구독을 실행 하려면](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[SharePoint 용 파워 피벗을 확인 하려면 PowerShell를 사용 하 여 검사 목록:](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[SQL Server PowerShell 도움말 얻기](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[검사 목록: PowerShell을 사용하여 SharePoint용 Power Pivot 확인](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[SQL Server PowerShell 도움말](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
-

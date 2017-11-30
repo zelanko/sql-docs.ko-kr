@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 83cdd4165f745bd6f2e42e65c8638328c1d41bd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="identifying-execution-state"></a>실행 상태 식별
   HTTP(Hypertext Transfer Protocol)는 연결 없는 상태 비저장 프로토콜이므로 다양한 요청이 동일한 클라이언트에서 나온 것인지 여부 또는 단일 브라우저 인스턴스에서 페이지나 사이트를 계속 사용 중인지 여부를 자동으로 나타내지 않습니다. 다수의 세션에서 논리적 연결이 만들어져 서버와 클라이언트 간의 상태가 HTTP를 통해 유지됩니다. 특정 세션과 관련된 사용자별 정보를 세션 상태라고 합니다.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
  다음 다이어그램은 보고서에 대한 처리 및 렌더링 경로를 보여 줍니다.  
   
- ![보고서 처리/렌더링 경로](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "처리/렌더링 경로 보고 합니다.")  
+ ![보고서 처리/렌더링 경로](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "보고서 처리/렌더링 경로")  
   
  위에 나타난 함수를 지원하기 위해 현재 SOAP Render 메서드는 실행 초기화, 처리 및 렌더링 단계를 포함한 여러 메서드로 분할되었습니다.  
   
@@ -67,8 +65,7 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>관련 항목:  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [보고를 사용 하 여 Services SOAP 헤더](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Reporting Services SOAP 헤더 사용](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "차트 (보고서 작성기 및 SSRS)에 빈 요소 추가 | Microsoft Docs"
+title: "차트에 빈 요소 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 79a8609cf5030c6c5fb259d56e561c7cd026b26c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: acc67d54c387097785317456b70a5936abf05d43
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>Add Empty Points to a Chart (Report Builder and SSRS)
 Null 값은 차트에서 계열의 데이터 요소 사이에 있는 빈 공간 또는 간격으로 표시됩니다. 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 빈 요소는 Null 값에 의해 만들어진 빈 공간에 삽입될 수 있는 데이터 요소입니다.  
@@ -56,9 +56,9 @@ Null 값은 차트에서 계열의 데이터 요소 사이에 있는 빈 공간 
     2.  EmptyPointValue 속성을 설정합니다. 이전 및 다음 데이터 요소의 평균 지점에서 빈 요소를 삽입하려면 **Average**를 선택합니다. 0 지점에서 빈 요소를 삽입하려면 **Zero**를 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40; 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [차트 종류 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [차트 &#40;에 배율 구분선 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [차트에 배율 구분선 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

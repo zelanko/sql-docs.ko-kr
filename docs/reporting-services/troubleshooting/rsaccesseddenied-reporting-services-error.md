@@ -1,5 +1,5 @@
 ---
-title: "rsAccessedDenied-Reporting Services 오류 | Microsoft Docs"
+title: "rsAccessedDenied - Reporting Services 오류 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,25 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsAccessDenied error
+helpviewer_keywords: rsAccessDenied error
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ece42006b7022bd3fa031cd95ef97767055ad53
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 79da3a4b52b559e4eecbf8722ca248f39090ba90
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Reporting Services 오류
   사용자가 작업을 수행할 수 있는 권한이 없는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 오류 **rsAccessedDenied** 가 발생합니다. 예를 들어 보고서를 열 수 있는 역할 할당이 없거나 필요한 사용 권한으로 브라우저를 열지 않았습니다.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 &#124; SharePoint 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 &#124; SharePoint 모드|  
   
 -   URL을 통해 보고서 서버에 직접 액세스하는 동안 오류가 발생한 경우 예외가 HTTP 401 오류에 매핑됩니다.  
   
@@ -51,12 +49,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="user-action"></a>사용자 동작  
  보고서 서버 내용 및 작업에 액세스하는 사용 권한은 역할 할당을 통해 부여됩니다. 새로 설치하는 경우 로컬 관리자만 보고서 서버에 액세스할 수 있습니다. 다른 사용자에게 액세스 권한을 부여하려면 로컬 관리자는 도메인 사용자나 그룹 계정을 지정하는 역할 할당, 사용자가 수행할 수 있는 태스크를 정의하는 하나 이상의 역할 그리고 범위(일반적으로 홈 폴더나 보고서 서버 폴더 계층의 루트 노드)를 만들어야 합니다. 보고서 관리자를 사용하여 역할 할당을 만들 수 있습니다. 자세한 내용을 보려면 SQL Server 온라인 설명서에서 "역할 할당"을 검색하세요.  
   
- 또한 이 오류는 보고서 서버의 로컬 관리로 인해서도 발생합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
+ 또한 이 오류는 보고서 서버의 로컬 관리로 인해서도 발생합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
  [역할 할당](../../reporting-services/security/role-assignments.md)   
- [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [역할 및 사용 권한 &#40; Reporting services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
+ [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
   
-

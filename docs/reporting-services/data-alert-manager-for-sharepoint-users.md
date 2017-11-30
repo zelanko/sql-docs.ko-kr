@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 사용자 용 데이터 경고 관리자 | Microsoft Docs"
+title: "SharePoint 사용자용 데이터 경고 관리자 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,31 +14,29 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 65e857b83f1f9821601492542ef87aa9fa57fddb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 사용자용 데이터 경고 관리자
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]데이터 경고를 관리 하는 SharePoint 정보 근로자를 위한 데이터 경고 관리자를 제공 합니다. SharePoint 정보 근로자는 자신이 만든 경고에 대한 정보를 보고, 경고를 삭제하고, 경고 정의를 열어서 편집하고, 요청 시 경고를 실행할 수 있습니다. 또한 단일 보고서에 대한 경고만 보거나 모든 보고서에 대한 경고를 보도록 선택할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 정보 근로자에게 제공되는 기능들을 보여 줍니다.
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 데이터 경고를 관리할 수 있도록 SharePoint 정보 근로자를 위한 데이터 경고 관리자가 제공됩니다. SharePoint 정보 근로자는 자신이 만든 경고에 대한 정보를 보고, 경고를 삭제하고, 경고 정의를 열어서 편집하고, 요청 시 경고를 실행할 수 있습니다. 또한 단일 보고서에 대한 경고만 보거나 모든 보고서에 대한 경고를 보도록 선택할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 정보 근로자에게 제공되는 기능들을 보여 줍니다.
 
-![SharePoint 사용자 용 경고 관리자 기능](../reporting-services/media/rs-alertmanageriw.gif "SharePoint 사용자를 위한 경고 관리자 기능")  
+![SharePoint 사용자용 경고 관리자 기능](../reporting-services/media/rs-alertmanageriw.gif "SharePoint 사용자용 경고 관리자 기능")  
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
 SharePoint 사이트가 데이터 경고 기능을 사용하도록 설정된 경우 MyDataAlerts.aspx 및 SiteDataAlerts.aspx라는 두 SharePoint 페이지가 만들어지고 SharePoint 사이트에 추가됩니다. MyDataAlerts.aspx는 SharePoint 정보 근로자를 위한 데이터 경고 관리자입니다. 정보 근로자는 자신이 경고를 만든 보고서에서 오른쪽 클릭 메뉴를 사용하여 데이터 경고 관리자를 열 수 있습니다.  
 
@@ -79,7 +77,7 @@ SharePoint 사이트가 데이터 경고 기능을 사용하도록 설정된 경
  데이터 경고 관리자에는 경고 서비스에서 데이터 경고 정의를 마지막으로 처리한 시간 및 데이터 경고 메시지를 보낸 횟수에 대한 정보가 포함되어 있습니다. 예약된 시간까지 기다리지 않고 경고 메시지를 즉시 실행하여 보낼 수 있습니다. 데이터 경고 관리자에서 경고를 실행하면 경고 일정을 덮어쓰며 보고서를 실행하는 데 필요한 시간과 경고를 실행하도록 선택한 시간의 보고서 서버 사용량에 따라 1-5분 이내에 경고 정의를 처리하기 시작합니다. 결과가 변경된 경우에만 메시지를 보내도록 지정했지만 결과가 변경되지 않은 경우에는 메시지를 만들거나 보내지 않습니다. 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.  
   
 > [!NOTE]  
->  **실행**  옵션을 클릭하면 몇 초 후에 **상태** 열의 값이 업데이트되어 경고가 처리 중임을 나타냅니다. **실행**  옵션을 여러 번 클릭하면 경고가 여러 번 처리됩니다. 그러면 보고서 서버의 리소스가 불필요하게 소비되어 보고서 서버의 성능에 영향을 줄 수 있습니다. 경고에 대해 업데이트된 정보를 보려면 웹 브라우저의 새로 고침 단추를 클릭하여 상태 업데이트와 경고에 대한 다른 정보를 확인합니다.  
+>  **실행** 옵션을 클릭하면 몇 초 후에 **상태** 열의 값이 업데이트되어 경고가 처리 중임을 나타냅니다. **실행** 옵션을 여러 번 클릭하면 경고가 여러 번 처리됩니다. 그러면 보고서 서버의 리소스가 불필요하게 소비되어 보고서 서버의 성능에 영향을 줄 수 있습니다. 경고에 대해 업데이트된 정보를 보려면 웹 브라우저의 새로 고침 단추를 클릭하여 상태 업데이트와 경고에 대한 다른 정보를 확인합니다.  
   
   
 ##  <a name="HowTo"></a> 관련 작업  
@@ -96,5 +94,4 @@ SharePoint 사이트가 데이터 경고 기능을 사용하도록 설정된 경
 [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "포함 된 데이터 원본 만들기 및 수정 | Microsoft Docs"
+title: "포함된 데이터 원본 만들기 및 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: 50ec28d3a5080187c0bd844dcba364295bcdef35
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>포함된 데이터 원본 만들기 및 수정
   포함된 데이터 원본은 보고서 정의에서 정의되고 해당 보고서에서만 사용됩니다.  
@@ -41,13 +40,13 @@ ms.lasthandoff: 11/07/2017
   
     2.  다음 대체 방법 중 하나를 사용하여 연결 문자열을 지정합니다.  
   
-        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예 목록은 참조 [데이터 연결, 데이터 원본 및 보고서 작성기의 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 또는 [데이터 연결, 데이터 원본 및 연결 문자열 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예제 목록은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 또는 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
         -   식 단추(**fx** )를 클릭하여 연결 문자열로 계산되는 식을 만듭니다. **식** 대화 상자의 식 창에 식을 입력합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
         -   2단계에서 선택한 데이터 원본 유형에 대해 **편집** 을 클릭하여 **연결 속성** 대화 상자를 엽니다.  
   
-             **연결 속성** 대화 상자의 필드에 데이터 원본 유형에 대해 적합한 항목을 입력합니다. 연결 속성에는 데이터 원본 유형, 데이터 원본 이름 및 사용할 자격 증명이 포함됩니다. 이 대화 상자에서 값을 지정한 후 **연결 테스트** 를 클릭하여 데이터 원본이 사용 가능한지와 지정한 자격 증명이 올바른지 확인합니다. 특정 데이터 원본 유형에 대 한 자세한 내용은 참조 항목에서는 [외부 데이터 원본 &#40;에서 데이터 추가 Ssrs&#41; ](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
+             **연결 속성** 대화 상자의 필드에 데이터 원본 유형에 대해 적합한 항목을 입력합니다. 연결 속성에는 데이터 원본 유형, 데이터 원본 이름 및 사용할 자격 증명이 포함됩니다. 이 대화 상자에서 값을 지정한 후 **연결 테스트** 를 클릭하여 데이터 원본이 사용 가능한지와 지정한 자격 증명이 올바른지 확인합니다. 특정 데이터 원본 유형에 대한 자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)의 항목을 참조하세요.  
   
     3.  **자격 증명**을 클릭합니다.  
   
@@ -88,4 +87,3 @@ ms.lasthandoff: 11/07/2017
  [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
   
-

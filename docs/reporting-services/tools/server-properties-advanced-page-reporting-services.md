@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 80f962efa995f8f6a5d422f8b470826acddbab58
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 이 페이지를 사용하여 보고서 서버의 시스템 속성을 설정할 수 있습니다. 시스템 속성을 설정하는 데에는 여러 가지 방법이 있습니다. 이 도구는 그래픽 사용자 인터페이스를 제공하므로 코드를 작성하지 않고도 속성을 설정할 수 있습니다.
 
-이 페이지를 열려면 SQL Server Management Studio를 시작, 보고서 서버 인스턴스에 연결, 보고서 서버 이름 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 선택 **고급** 이 페이지를 엽니다.
+이 페이지를 열려면 SQL Server Management Studio를 시작하고, 보고서 서버 인스턴스에 연결한 다음, 보고서 서버 이름을 마우스 오른쪽 단추로 클릭하고, **속성**을 선택합니다. **고급**을 선택하여 이 페이지를 엽니다.
 
 ## <a name="options"></a>옵션
 
@@ -80,9 +77,9 @@ ms.lasthandoff: 08/28/2017
 
 |값|Description|
 |---------|---------|
-|**SQL**|보고서 서버 데이터베이스에 저장 될 때 스냅숏이 압축 됩니다. 이것은 현재 동작입니다.|
-|**없음**|스냅숏이 압축 되지 않습니다.|
-|**모두**|보고서 서버 데이터베이스 또는 파일 시스템을 포함 하는 모든 저장소 옵션에 대해 스냅숏이 압축 됩니다.|
+|**SQL**|보고서 서버 데이터베이스에 저장될 때 스냅숏이 압축됩니다. 이것은 현재 동작입니다.|
+|**없음**|스냅숏이 압축되지 않습니다.|
+|**모두**|보고서 서버 데이터베이스, 파일 시스템을 포함한 모든 저장소 옵션에 대해 스냅숏이 압축됩니다.|
 
 **SystemReportTimeout**  
 보고서 서버 네임스페이스에서 관리되는 모든 보고서에 대한 기본 보고서 처리 제한 시간 값(초)입니다. 이 값은 보고서 수준에서 무시할 수 있습니다. 이 속성을 설정하면 지정된 시간이 만료될 경우 보고서 서버가 보고서 처리를 중지합니다. 유효한 값은 **-1** 에서 **2**까지,**147**,**483**,**647**입니다. 값이 **-1**이면 네임스페이스의 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 기본값은 **1800**입니다.  
@@ -95,8 +92,8 @@ ms.lasthandoff: 08/28/2017
 
 |값|Description|
 |---------|---------|
-|**True**|Windows 통합된 보안이 사용 됩니다.|
-|**False**|Windows 통합된 보안 사용 되지 않습니다. Windows 통합 보안을 사용하도록 구성된 보고서 데이터 원본은 실행되지 않습니다.|
+|**True**|Windows 통합 보안이 사용됩니다.|
+|**False**|Windows 통합 보안이 사용되지 않습니다. Windows 통합 보안을 사용하도록 구성된 보고서 데이터 원본은 실행되지 않습니다.|
 
 **EnableLoadReportDefinition**  
 이 옵션을 선택하면 사용자가 보고서 작성기 보고서에서 임시 보고서 실행을 수행할 수 있는지 여부를 지정할 수 있습니다. 이 옵션 설정에 따라 보고서 서버의 **EnableLoadReportDefinition** 속성 값이 결정됩니다.  
@@ -117,31 +114,34 @@ ms.lasthandoff: 08/28/2017
 **EditSessionTimeout**  
 보고서 편집 세션이 시간 초과될 때까지 걸리는 시간(초)을 지정합니다. 기본값은 7200초(2시간)입니다.  
 
-**EnableCustomVisuals** ***(Power BI 보고서 서버 전용)***  
-PowerBI ReportServer PowerBI 사용자 지정 시각적 개체의 표시를 사용 해야 합니다. 값은 True, false를 반환 합니다.  기본값은 True입니다.  
+**EnableCustomVisuals** ***(Power BI Report Server 전용)***  
+Power BI Report Server는 Power BI 사용자 지정 시각적 개체를 표시해야 합니다. 사용 가능한 값은 True 또는 False입니다.  기본값은 True입니다.  
 
-**EnablePowerBIReportExportData** ***(Power BI 보고서 서버 전용)***  
-PowerBI ReportServer PowerBI 시각적 개체에서 데이터 내보내기 사용 하도록 설정 해야 합니다. 값은 True, false를 반환 합니다.  기본값은 True입니다.  
+**EnablePowerBIReportExportData** ***(Power BI Report Server 전용)***  
+PowerBI Report Server는 Power BI 시각적 개체에서 데이터 내보내기를 사용해야 합니다. 사용 가능한 값은 True 또는 False입니다.  기본값은 True입니다.  
+
+**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server 전용)***  
+포함된 AS 모델을 사용하여 Power BI 보고서에 예약된 새로 고침의 데이터 새로 고침 제한 시간(분)입니다. 기본값은 120분입니다.
 
 **EnableTestConnectionDetailedErrors**  
 사용자가 보고서 서버를 사용하여 데이터 원본 연결을 테스트할 때 클라이언트 컴퓨터로 자세한 오류 메시지를 보낼지 여부를 나타냅니다. 기본값은 **true**입니다. 이 옵션이 **false**로 설정되어 있으면 일반 오류 메시지만 보냅니다.
 
 **AccessControlAllowCredentials**  
-클라이언트 요청에 대 한 응답 '자격 증명' 플래그가 설정 되 면 노출 될 수 있는지 여부를 나타냅니다. true로 합니다. 기본값은 **false**입니다.
+'자격 증명' 플래그가 true로 설정되면 클라이언트 요청에 대한 응답이 노출될 수 있는지를 나타냅니다. 기본값은 **false**입니다.
 
-**AccessControlAllowHeaders** 클라이언트 요청을 하면 서버에서 허용 하는 헤더의 쉼표로 구분 된 목록입니다. 이 속성에는 빈 문자열일 수 지정 * 모든 헤더를 허용 합니다.
+**AccessControlAllowHeaders** 클라이언트가 요청하면 서버에서 허용하는 헤더의 쉼표로 구분된 목록입니다. 이 속성은 빈 문자열일 수 있고 *를 지정하면 모든 헤더를 허용합니다.
 
-**AccessControlAllowMethods** 클라이언트 요청을 하면 서버에서 허용 하는 HTTP 메서드의 쉼표로 구분 된 목록입니다. 기본값은 (GET, PUT, POST, PATCH, DELETE)을 지정 하 * 모든 메서드를 허용 합니다.
+**AccessControlAllowMethods** 클라이언트가 요청하면 서버에서 허용하는 HTTP 메서드의 쉼표로 구분된 목록입니다. 기본값은 (GET, PUT, POST, PATCH, DELETE)이며 *를 지정하면 모든 메서드를 허용합니다.
 
-**AccessControlAllowOrigin** 는 원본 서버에서 클라이언트 요청을 하면 허용 하는 쉼표로 구분 된 목록입니다. 기본값은 빈 지정 하는 모든 요청을 방지 하는 * 때 자격 증명이 설정 되지 않으면 모든 원본을 허용 됩니다 origin의 자세한 목록을 지정 해야 자격 증명을 지정 합니다.
+**AccessControlAllowOrigin** 클라이언트가 요청하면 서버에서 허용하는 원본의 쉼표로 구분된 목록입니다. 기본값이 비어 있어서 모든 요청을 방지하며, *를 지정하면 자격 증명이 설정되지 않은 경우 모든 원본을 허용합니다. 자격 증명이 지정된 경우 원본의 자세한 목록을 지정해야 합니다.
 
-**AccessControlExposeHeaders** 서버는 클라이언트에 노출 하는 헤더의 쉼표로 구분 된 목록입니다. 기본값은 공백입니다.
+**AccessControlExposeHeaders** 서버가 클라이언트에 노출하는 헤더의 쉼표로 구분된 목록입니다. 기본값은 공백입니다.
 
-**AccessControlMaxAge** 실행 전 요청의 결과 캐시할 수 있습니다 (초)을 지정 합니다. 기본값은 600 (10 분).
+**AccessControlMaxAge** 실행 전 요청 결과를 캐시할 수 있는 시간(초)을 지정합니다. 기본값은 600초(10분)입니다.
 
 ## <a name="see-also"></a>관련 항목:
 
-[보고서 서버 속성 &#40; 설정 합니다. Management studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+[보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
 [Reporting Services 속성](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
 [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
@@ -149,5 +149,4 @@ PowerBI ReportServer PowerBI 시각적 개체에서 데이터 내보내기 사�
 [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [내 보고서 사용 및 사용 안 함 설정](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

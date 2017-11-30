@@ -1,28 +1,25 @@
 ---
-title: "페이지 매긴된 보고서 (웹 포털) 사용 | Microsoft Docs"
+title: "페이지를 매긴 보고서 사용(웹 포털) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62c2bbf3279d4c9f6303a394cc83c95e6418005c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>페이지를 매긴 보고서 사용(웹 포털)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -50,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 > 페이지를 매긴 보고서가 폴더에 표시되지 않으면 페이지를 매긴 보고서를 보고 있는지 확인합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **페이지를 매긴 보고서** 가 선택되어 있는지 확인합니다.  
   
-1.  선택 된 **줄임표 (...)**  관리 하려는 데이터 집합에 대 한 합니다.  
+1.  관리하려는 데이터 집합의 **줄임표(…)**를 선택합니다.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -127,12 +124,12 @@ ms.lasthandoff: 08/09/2017
 이 옵션을 사용하려면 보고서 서버를 위한 무인 실행 계정을 먼저 구성해야 합니다. 무인 실행 계정은 다른 자격 증명 과정을 사용할 수 없는 경우 외부 데이터 원본에 연결하는 데 사용됩니다. 이 옵션을 지정하고 계정을 구성하지 않으면 보고서 데이터 원본에 연결하지 못하고 보고서가 처리되지 않습니다. 이 계정에 대한 자세한 내용은 [무인 실행 계정 구성(SSRS 구성 관리자)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
 ## <a name="subscriptions"></a>구독  
-Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다. 자세한 내용은 참조 [구독 작업](working-with-subscriptions-web-portal.md)합니다.
+Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다. 자세한 내용은 [구독 사용](working-with-subscriptions-web-portal.md)을 참조하세요.
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>종속 항목  
-종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 그런 다음 선택할 수는 **줄임표 (...)**  이러한 항목을 관리 하려면 각 항목에 추가 합니다.  
+종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 각 항목에서 **줄임표(...)**를 선택하여 이러한 항목을 나중에 관리할 수 있습니다.  
   
 ## <a name="caching"></a>캐싱  
 페이지를 매긴 보고서의 데이터 캐싱에 대한 옵션도 제공됩니다. 간단한 선택부터 시작할 수 있습니다.  
@@ -149,7 +146,7 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
-자세한 내용은 참조 [스냅샷 작업](working-with-snapshots-web-portal.md)합니다.
+자세한 내용은 [스냅숏 사용](working-with-snapshots-web-portal.md)을 참조하세요.
   
 ### <a name="cache-expiration"></a>캐시 만료  
   
@@ -201,5 +198,4 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
 [공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

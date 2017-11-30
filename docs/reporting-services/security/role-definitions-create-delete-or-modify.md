@@ -1,5 +1,5 @@
 ---
-title: "만들기, 삭제 또는 수정 역할 (Management Studio) | Microsoft Docs"
+title: "역할 만들기, 삭제 또는 수정(Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,24 +19,23 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 42f66d05b179ee5f00c3322a2eb2943439936bcb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7b5b8d11868d108447e1a3109bff28abcef2de33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="role-definitions---create-delete-or-modify"></a>-역할 정의 만들기, 삭제 또는 수정
+# <a name="role-definitions---create-delete-or-modify"></a>역할 정의 - 만들기, 삭제 또는 수정
   Reporting Services에서는 보고서 서버에 대한 액세스 수준을 정의한 미리 정의된 역할을 제공합니다. 보고서 서버에 액세스해야 하는 사용자나 그룹은 수행할 수 있는 태스크를 설명하는 역할을 통해 액세스합니다. 역할은 보고서 서버 전체에 대해 정의됩니다. 보고서 서버의 특정 부분에 대한 역할 정의를 다르게 하거나 환경에 따라 다르게 역할을 사용하도록 지정할 수 없습니다.  
   
  역할을 생성, 수정 또는 삭제하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용합니다. 사용되지 않은 역할만 삭제할 수 있습니다.  
   
- 만든 역할에 사용자나 그룹을 할당하려면 보고서 관리자를 사용합니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.  
+ 만든 역할에 사용자나 그룹을 할당하려면 보고서 관리자를 사용합니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)을 참조하세요.  
   
 > [!NOTE]  
 >  보고서 서버가 SharePoint 통합 모드용으로 구성되고 보고서 서버가 통합된 SharePoint 사이트에 연결된 경우 보고서 서버 내용 및 작업에 대한 액세스를 제어하는 사용 권한 수준을 보고 수정할 수 있습니다.  
@@ -84,7 +83,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Reporting Services SQL Server Management Studio에서 &#40; Ssrs&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [SQL Server Management Studio의 Reporting Services&#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
-

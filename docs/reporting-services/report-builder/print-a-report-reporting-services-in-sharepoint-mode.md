@@ -1,5 +1,5 @@
 ---
-title: "(SharePoint 모드의 Reporting Services) 보고서를 인쇄 | Microsoft Docs"
+title: "보고서 인쇄(SharePoint 모드의 Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,31 +14,30 @@ helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a2f14906a5c3333c480de32fbcb34a8aaf7e2e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>보고서 인쇄(SharePoint 모드의 Reporting Services)
   SharePoint 모드에서 실행되는 보고서 서버의 경우 다음 세 가지 방법으로 SharePoint 웹 응용 프로그램에서 보고서를 인쇄할 수 있습니다.  
   
--   **SharePoint 사이트** 보고서를 열 때 보고서 도구 모음에 나타나는 **동작** 메뉴에서 **인쇄** 를 선택합니다. 그러면 프린터 선택, 페이지 및 여백 지정, 보고서 미리 보기에 사용되는 표준 **인쇄** 대화 상자가 포함된 Reporting Services 인쇄 기능이 제공됩니다. 브라우저의 파일 메뉴에 있는 인쇄 명령 대신 이 인쇄 기능을 사용할 수 있습니다. 이러한 방식으로 보고서를 인쇄하면 웹 페이지 인쇄 결과물에 나타나는 추가 요소 없이 보고서가 디자인된 그대로 인쇄됩니다.  
+-   **SharePoint 사이트** 보고서를 열 때 보고서 도구 모음에 나타나는 **동작** 메뉴에서 **인쇄**를 선택합니다. 그러면 프린터 선택, 페이지 및 여백 지정, 보고서 미리 보기에 사용되는 표준 **인쇄** 대화 상자가 포함된 Reporting Services 인쇄 기능이 제공됩니다. 브라우저의 파일 메뉴에 있는 인쇄 명령 대신 이 인쇄 기능을 사용할 수 있습니다. 이러한 방식으로 보고서를 인쇄하면 웹 페이지 인쇄 결과물에 나타나는 추가 요소 없이 보고서가 디자인된 그대로 인쇄됩니다.  
   
 -   **브라우저** 브라우저의 인쇄 기능은 단일 페이지에 맞는 HTML 보고서에 대해 가장 잘 작동합니다. 일반적으로 브라우저에서 인쇄하는 페이지에는 웹 페이지의 모든 시각적 요소뿐만 아니라 페이지나 웹 사이트를 식별하는 머리글 및 바닥글 정보가 포함됩니다. 브라우저에서 인쇄하면 현재 창의 내용만 인쇄됩니다. 보고서가 길 경우 브라우저에서는 보고서의 일부(일반적으로 첫 페이지)만 인쇄합니다.  
   
--   **대상 응용 프로그램** 보고서를 내보내 Microsoft Office Excel 또는 Adobe Acrobat Reader와 같은 대상 응용 프로그램의 인쇄 기능을 사용할 수 있습니다. 여러 페이지로 구성된 보고서를 인쇄할 경우 TIFF 또는 PDF와 같은 일부 응용 프로그램 형식이 적합합니다. 보고서를 데스크톱 응용 프로그램으로 내보낼 경우 해당 응용 프로그램이 제공하는 모든 특수 인쇄 기능을 사용할 수 있습니다. 보고서를 내보내려면 보고서를 열 때 보고서 도구 모음에 나타나는 **동작** 메뉴에서 **내보내기** 를 선택합니다.  
+-   **대상 응용 프로그램** 보고서를 내보내 Microsoft Office Excel 또는 Adobe Acrobat Reader와 같은 대상 응용 프로그램의 인쇄 기능을 사용할 수 있습니다. 여러 페이지로 구성된 보고서를 인쇄할 경우 TIFF 또는 PDF와 같은 일부 응용 프로그램 형식이 적합합니다. 보고서를 데스크톱 응용 프로그램으로 내보낼 경우 해당 응용 프로그램이 제공하는 모든 특수 인쇄 기능을 사용할 수 있습니다. 보고서를 내보내려면 보고서를 열 때 보고서 도구 모음에 나타나는 **동작** 메뉴에서 **내보내기**를 선택합니다.  
   
 > [!NOTE]  
 >  보고서를 인쇄하려면 보고서를 볼 권한이 있어야 합니다.  
   
- 웹 페이지에서 보고서를 인쇄할 때 최상의 결과를 얻으려면 **동작** 메뉴의 **인쇄** 를 사용하는 것이 좋습니다. **인쇄** 동작은 보고서 서버에서 다운로드되는 클라이언트 인쇄 컨트롤에 연결되어 있습니다. 다운로드는 처음 **인쇄**를 선택할 때 한 번 수행됩니다.  
+ 웹 페이지에서 보고서를 인쇄할 때 최상의 결과를 얻으려면 **동작** 메뉴의 **인쇄**를 사용하는 것이 좋습니다. **인쇄** 동작은 보고서 서버에서 다운로드되는 클라이언트 인쇄 컨트롤에 연결되어 있습니다. 다운로드는 처음 **인쇄**를 선택할 때 한 번 수행됩니다.  
   
  보고서 작성자는 인쇄 결과물이나 특정 응용 프로그램 형식에 맞게 특별히 보고서를 디자인할 수 있습니다. 여러 응용 프로그램 형식에 대해 페이지 매김이 구현되는 방식으로 인해 일부 내보내기 형식의 보고서에서는 최적의 인쇄 결과물을 얻지 못할 수 있습니다. 인쇄 결과물에 맞게 디자인되는 보고서와 달리 화면에 나타나는 보고서 페이지는 데이터 양의 변화에 따라 크기가 적절하게 조정되도록 디자인됩니다. 예를 들어 행렬을 포함하는 보고서의 경우 행과 열을 확장하는 방식에 따라 페이지가 가로와 세로 방향으로 모두 늘어날 수 있습니다. 가변 크기 보고서를 인쇄하는 경우 행렬을 확장하지 않는 사용자에게는 행렬을 확장하는 사용자와는 다른 인쇄 결과가 나타납니다. 내보낸 보고서 인쇄물에는 대부분 사용자가 컴퓨터 모니터에서 볼 때 보고서에 표시되는 항목이 모두 포함됩니다.  
   
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   
-

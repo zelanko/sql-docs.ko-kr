@@ -1,5 +1,5 @@
 ---
-title: "원격 오류 (Reporting Services) 사용 | Microsoft Docs"
+title: "원격 오류 활성화(Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1d409aa01ca3d060068fa9045b0a1fafec8bf3fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-remote-errors-reporting-services"></a>원격 오류 활성화(Reporting Services)
   원격 서버에서 발생되는 오류 조건에 대한 추가 정보를 반환하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 서버 속성을 설정할 수 있습니다. 오류 메시지에 "이 오류에 대한 자세한 내용을 보려면 로컬 서버 컴퓨터의 보고서 서버를 탐색하거나 원격 오류를 활성화하십시오"라는 텍스트가 포함되어 있으면 문제 해결에 도움이 되는 추가 정보에 액세스할 수 있도록 **EnableRemoteErrors** 속성을 설정할 수 있습니다. 자세한 내용은 [온라인 설명서에서](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 보고서 서버 시스템 속성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
@@ -120,4 +119,3 @@ ms.lasthandoff: 08/09/2017
     >  보고서 서버 데이터베이스의 **ConfigurationInfo** 테이블을 편집하여 **EnableRemoteErrors** 를 **True**로 설정할 수 있지만 보고서 서버가 현재 사용 중인 경우 SQL Server Management Studio 또는 스크립트를 사용하여 설정을 수정해야 합니다. 데이터베이스에서 이 설정을 수정하는 경우 변경 내용을 적용하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
   
   
-

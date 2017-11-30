@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Reporting Services 보고서 서버를 관리 및 구성 | Microsoft Docs"
+title: "SQL Server Reporting Services 보고서 서버의 구성 및 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: fe898a9401340f80884fa15f3ea1ce45108fbbc6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>구성 및 관리의 SQL Server Reporting Services 보고서 서버
+# <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>SQL Server Reporting Services 보고서 서버의 구성 및 관리
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -30,9 +29,9 @@ ms.lasthandoff: 10/06/2017
 SQL Server Reporting Services는 조직에서 사용할 보고서를 작성, 배포 및 관리하는 데 도움이 되는 다양하고 간편한 도구와 서비스뿐만 아니라 보고 기능을 확장하고 사용자 지정할 수 있는 프로그래밍 기능도 제공하는 서버 기반 보고 플랫폼입니다. 보고 환경을 SharePoint 제품과 통합하면 SharePoint 사이트에서 제공하는 공동 작업 환경을 사용하는 이점을 얻을 수 있습니다.
 
 > [!NOTE]
-> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
-다음 섹션에서는 사용 하 여 개념, 배포 시나리오, 절차 및 Reporting Services 환경의 SharePoint 제품 또는 기술과 통합 하는 데 더 잘 이해할 수 있습니다.  
+다음 섹션을 통해 Reporting Services 환경과 SharePoint 제품 또는 기술의 통합에 대한 개념, 배포 시나리오, 절차 등을 더 잘 이해할 수 있습니다.  
   
 -   SharePoint 문서 라이브러리의 메뉴 옵션  
   
@@ -66,7 +65,6 @@ SQL Server Reporting Services는 조직에서 사용할 보고서를 작성, 배
   
 -   [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- Reporting Services에 대 한 자세한 내용은 참조 하십시오. [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소, 도구 및 리소스에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../sql-server/sql-server-technical-documentation.md)를 참조하십시오.  
+ Reporting Services에 대한 일반적인 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)를 참조하세요. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소, 도구 및 리소스에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../sql-server/sql-server-technical-documentation.md)를 참조하십시오.  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
-

@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- searching reports
+helpviewer_keywords: searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 75e9c44d9cb75cef338ff2cd684c38969aa1751f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a486b11b5b64244e5e68086ee9290c634215839
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>보고서에서 텍스트, 숫자 또는 날짜 찾기
   찾을 단어나 구(검색 단어는 최대 256자까지 입력 가능)를 입력하여 보고서 내용을 검색할 수 있습니다. 검색은 보고서에서 일치하는 값을 찾아 해당 값이 포함된 보고서 부분에 중점을 두는 탐색 기술입니다.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/09/2017
  [웹 페이지에 보고서 뷰어 웹 파트 추가&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   
-

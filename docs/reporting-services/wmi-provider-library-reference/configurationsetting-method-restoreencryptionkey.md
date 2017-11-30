@@ -1,5 +1,5 @@
 ---
-title: "RestoreEncryptionKey 메서드 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "RestoreEncryptionKey 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- RestoreEncryptionKey method
+helpviewer_keywords: RestoreEncryptionKey method
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 38352086b908fe064ce3e16d7502094ba0c13d50
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5769d9821db108f132417adb1cefc8347013bd74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---restoreencryptionkey"></a>RestoreEncryptionKey ConfigurationSetting 메서드
+# <a name="configurationsetting-method---restoreencryptionkey"></a>ConfigurationSetting 메서드 - RestoreEncryptionKey
   지정된 암호화 키를 보고서 서버 데이터베이스에 다시 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -77,4 +73,3 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

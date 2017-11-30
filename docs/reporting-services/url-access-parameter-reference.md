@@ -1,7 +1,6 @@
 ---
-title: URL Access Parameter Reference | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: "URL 액세스 매개 변수 참조 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/09/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c66dbaaaadcfc00cf52520f19f341ab7cd3b3c2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 장치 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 장치별 매개 변수에 대한 자세한 내용은 [URL에 장치 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
@@ -233,7 +231,7 @@ ms.lasthandoff: 08/09/2017
   
      기본값은 **HTML5**입니다. 자세한 내용은 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)를 참조하세요.  
   
-     전체 목록을 보려면를 참조 하십시오.는  **\<렌더링 >** 보고서 서버 rsreportserver.config 파일의 확장명 섹션.  파일을 찾을 위치는 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
+     전체 목록은 보고서 서버 rsreportserver.config 파일의 **\<Render>** 확장 섹션을 참조하세요.  파일을 찾을 위치는 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
      예를 들어 **Native** 모드 보고서 서버에서 직접 보고서 PDF 복사본을 가져오는 경우 다음을 사용:  
   
@@ -381,7 +379,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL 액세스를 사용 하 여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)  
+ [URL 액세스를 사용하여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)  
   
   
-

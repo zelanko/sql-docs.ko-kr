@@ -1,5 +1,5 @@
 ---
-title: "데이터 영역 (보고서 작성기 및 SSRS)에 데이터를 정렬 | Microsoft Docs"
+title: "데이터 영역의 데이터 정렬(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1bd8061755f4dbacdf16106ecca5e7a22b1101e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역의 데이터 정렬(보고서 작성기 및 SSRS)
   보고서를 처음 실행할 때 데이터 영역에 있는 데이터의 정렬 순서를 변경하려면 데이터 영역 또는 그룹에서 정렬 식을 설정해야 합니다. 기본적으로 그룹의 정렬 식은 그룹 식과 같은 값으로 자동으로 설정됩니다.  
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
 -   계기 데이터 영역에서는 범위에 상대적인 단일 값이 계기에 표시되므로 일반적으로 데이터를 정렬하지 않아도 됩니다. 계기에서 데이터를 정렬해야 하는 경우 그룹을 먼저 정의한 다음 그룹에 대한 정렬 식을 설정해야 합니다.  
   
- 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   
  테이블릭스 데이터 영역의 경우 열 머리글 위쪽에 대화형 정렬 단추를 추가하면 사용자가 그룹 또는 정보 행의 정렬 순서를 변경할 수 있습니다. 자세한 내용은 [대화형 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -125,17 +124,16 @@ ms.lasthandoff: 08/09/2017
   
     2.  그룹화 필드와 일치하는 식을 선택합니다. **그룹화**를 클릭하여 그룹화 필드에 대한 식을 확인할 수 있습니다.  
   
-    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z** 를 선택하면 식이 오름차순으로 정렬되고 **Z-A**를 선택하면 식이 내림차순으로 정렬됩니다.  
+    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z** 를 선택하면 식이 오름차순으로 정렬되고 **Z-A** 를 선택하면 식이 내림차순으로 정렬됩니다.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  계기에서 데이터를 그룹화하는 방법에 대한 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [차트 &#40;의 축 레이블 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [여러 셰이프 차트 &#40; 일관 된 색 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
+ [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
   
-

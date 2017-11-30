@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 보고서 디자인 문제 해결 | Microsoft Docs"
+title: "Reporting Services의 보고서 디자인 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d9a5cbd4b8065a7344eeec2d7cd495e656ec941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Reporting Services의 보고서 디자인 문제 해결
 보고서 디자인 문제는 보고서 제작 응용 프로그램의 디자인 뷰에서 보고서 레이아웃을 만들 때 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   
@@ -68,5 +67,4 @@ PageNumber 및 TotalPages는 페이지 머리글 및 페이지 바닥글에서�
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

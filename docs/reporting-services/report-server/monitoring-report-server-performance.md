@@ -19,17 +19,16 @@ helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e9aed18a938de82189349d9e3eaa4dcb8e720b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c128a907232f734195944219aa358bae4c3514db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-report-server-performance"></a>보고서 서버 성능 모니터링
   성능 모니터링 도구를 통해 보고서 서버 성능을 모니터링하여 서버 작업을 평가하고, 추세를 살피고, 시스템 병목 현상을 진단하고, 현재 시스템 구성이 충분한지 여부를 결정하는 데 도움이 되는 데이터를 수집할 수 있습니다. 서버 성능을 튜닝하기 위해 보고서 서버 응용 프로그램 도메인의 재활용 빈도를 지정할 수 있습니다. 자세한 내용은 [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
@@ -99,8 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
- [Reporting Services 보고서 서버 &#40; 기본 모드 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)  
   
   
-

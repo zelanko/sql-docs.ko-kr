@@ -1,5 +1,5 @@
 ---
-title: "만들기, 삭제 또는 수정 (보고서 관리자) 폴더 | Microsoft Docs"
+title: "폴더 만들기, 삭제 또는 수정(보고서 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - folders [Reporting Services], deleting
 - folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: ccd70a1bc31ab800142fa57aa0f21a469ed1cbfe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>폴더 만들기, 삭제 또는 수정(보고서 관리자)
   폴더를 만들어 보고서 서버에 게시하는 항목을 구성하고 관리할 수 있습니다. 폴더를 만들면 관심 있는 보고서를 찾는 데 도움이 될 수 있습니다. 내용 관리자의 경우 폴더는 사용 권한을 적용하는 프레임워크를 제공합니다. 개발 중인 보고서나 배포되면 안 되는 보고서에 대한 액세스를 제한하기 위해 특정 폴더에 역할 할당을 만들 수 있습니다.  
@@ -85,4 +84,3 @@ ms.lasthandoff: 11/07/2017
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

@@ -1,13 +1,11 @@
 ---
-title: "Power BI 보고서 서버 통합 (구성 관리자) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Power BI 보고서 서버 통합(구성 관리자) | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,14 +16,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 6a99f3051cb4f4cae12c525204387906fbf3d8b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 보고서 서버 통합(구성 관리자)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -36,9 +32,9 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 서비스로 이동할 수 있는 활성 인터넷 연결 외에 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]통합을 완료하기 위한 다음 요구 사항이 있습니다.
 
-- **Azure Active Directory:** 조직에서 Azure 서비스 및 웹 응용 프로그램에 대한 디렉터리 및 ID 관리를 제공하는 Azure Active Directory를 사용해야 합니다. 자세한 내용은 참조 [Azure Active Directory 란?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory:** 조직에서 Azure 서비스 및 웹 응용 프로그램에 대한 디렉터리 및 ID 관리를 제공하는 Azure Active Directory를 사용해야 합니다. 자세한 내용은 [Azure Active Directory란?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)을 참조하세요.
 
-- **관리되는 테넌트:** 보고서 항목을 고정할 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 대시보드는 Azure AD 관리되는 테넌트에 속해야 합니다.  관리되는 테넌트는 Office 365 및 Microsoft Intune과 같은 Azure 서비스를 처음으로 구독할 때 자동으로 만들어집니다.   바 이럴 테 넌 트는 현재 지원 되지 않습니다.  자세한 내용은 [Azure AD 디렉터리란?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)에서 "Azure AD 테넌트란" 및 "Azure AD 디렉터리를 가져오는 방법" 섹션을 참조하세요.
+- **관리되는 테넌트:** 보고서 항목을 고정할 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 대시보드는 Azure AD 관리되는 테넌트에 속해야 합니다.  관리되는 테넌트는 Office 365 및 Microsoft Intune과 같은 Azure 서비스를 처음으로 구독할 때 자동으로 만들어집니다.   바이럴 테넌트는 현재 지원되지 않습니다.  자세한 내용은 [Azure AD 디렉터리란?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)에서 "Azure AD 테넌트란" 및 "Azure AD 디렉터리를 가져오는 방법" 섹션을 참조하세요.
 
 - [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 통합을 수행하는 사용자는 Azure AD 테넌트의 멤버이고, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 시스템 관리자이며, ReportServer 카탈로그 데이터베이스의 시스템 관리자여야 합니다.
 
@@ -48,9 +44,9 @@ ms.lasthandoff: 10/06/2017
 
         PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
 
-섹션을 참조 하십시오 자격 증명을 저장 하는 방법에 대 한 자세한 내용은 "구성에서 저장 된 보고서별 데이터 원본에 대 한 자격 증명" [Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)합니다.
+자격 증명을 저장하는 방법은 [Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)에서 "보고서별 데이터 원본에 대한 저장된 자격 증명 구성" 섹션을 참조하세요.
 
-관리자는  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에서 자세한 내용을 검토할 수 있습니다.  다음과 유사한 메시지가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일을 검토하고 모니터링하는 유용한 방법은 파일에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 파워 쿼리를 사용하는 것입니다.  자세한 내용 및 간단한 비디오는 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.
+관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에서 자세한 내용을 검토할 수 있습니다.  다음과 유사한 메시지가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일을 검토하고 모니터링하는 유용한 방법은 파일에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 파워 쿼리를 사용하는 것입니다.  자세한 내용 및 간단한 비디오는 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.
 
     subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
@@ -58,7 +54,7 @@ ms.lasthandoff: 10/06/2017
 
 ##  <a name="bkmk_steps2integrate"></a> 보고서 서버를 통합하고 등록하려면
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 다음 단계를 완료합니다. 자세한 내용은 참조 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)합니다.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 다음 단계를 완료합니다. 자세한 내용은 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.
 
 1. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 통합 페이지를 선택합니다.
 
@@ -74,7 +70,7 @@ ms.lasthandoff: 10/06/2017
 
 **등록 취소:** Azure Active Directory에서 보고서 서버의 등록을 취소하면 다음과 같은 상황이 발생합니다.
 
-- **내 설정** 링크 더 이상 웹 포털 메뉴 모음에서 표시 되지 것입니다.
+- **내 설정** 링크가 웹 포털 메뉴 모음에 더 이상 표시되지 않습니다.
 
 - 이미 고정된 보고서 항목은 대시보드에 계속 고정되지만 대시보드의 타일은 더 이상 업데이트되지 않습니다.
 
@@ -112,9 +108,9 @@ ms.lasthandoff: 10/06/2017
 
 3. Azure Active Directory 내에서 관리되는 테넌트는 Power BI 클라이언트 앱을 만들 위치입니다.
 
-4. 등록에는 사용자가 보고서 서버에서 로그인할 때 사용되는 리디렉션 URL이 포함됩니다.  앱 ID 및 URL은 ReportServer 데이터베이스에 저장됩니다. 리디렉션 URL은 호출이 보고서 서버에 반환될 수 있도록 Azure에 인증 호출 시 사용됩니다. 예를 들어 사용자가 로그인 하거나 대시보드에 항목을 고정 합니다.
+4. 등록에는 사용자가 보고서 서버에서 로그인할 때 사용되는 리디렉션 URL이 포함됩니다.  앱 ID 및 URL은 ReportServer 데이터베이스에 저장됩니다. 리디렉션 URL은 호출이 보고서 서버에 반환될 수 있도록 Azure에 인증 호출 시 사용됩니다. 예를 들어, 사용자가 로그인하거나 대시보드에 항목을 고정하는 경우가 여기에 해당합니다.
 
-5. 앱 ID와 URL에는 Configuration Manager에 표시 됩니다.
+5. 앱 ID와 URL이 구성 관리자에 표시됩니다.
 
  ![ssrs_pbiflow_integration](../../reporting-services/install-windows/media/ssrs-pbiflow-integration.png "ssrs_pbiflow_integration")
 
@@ -134,7 +130,7 @@ ms.lasthandoff: 10/06/2017
 
 7. 대시보드 타일에서 보고서 항목의 예약된 새로 고침을 관리하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독이 만들어집니다. 이 구독에서는 사용자가 로그인할 때 생성된 보안 토큰을 사용합니다.
 
-     토큰에 대 한 좋은 **90 일 동안**, 이후에 사용자가 새 사용자 토큰을 만드는 다시 로그인 합니다. 토큰이 만료된 경우 고정된 타일은 대시보드에 계속 표시되지만 데이터가 더 이상 새로 고쳐지지 않습니다.  새 사용자 토큰이 만들어질 때까지 고정된 항목에 사용된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 오류가 발생합니다. 참조 [Power BI 통합 &#40; 웹 포털 &#41;에 대 한 내 설정](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)합니다. 을 참조하십시오.
+     토큰은 **90일**동안 유효합니다. 이후에는 사용자가 다시 로그인하여 새 사용자 토큰을 만들어야 합니다. 토큰이 만료된 경우 고정된 타일은 대시보드에 계속 표시되지만 데이터가 더 이상 새로 고쳐지지 않습니다.  새 사용자 토큰이 만들어질 때까지 고정된 항목에 사용된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 오류가 발생합니다. [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요. 을 참조하십시오.
 
 사용자가 두 번째로 항목을 고정하는 경우에는 1~4단계를 건너뛰고 대신 앱 ID와 URL이 ReportServer 데이터베이스에서 검색되며 5단계로 진행됩니다.
 
@@ -163,4 +159,3 @@ ms.lasthandoff: 10/06/2017
 [Power BI의 대시보드](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
-

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 라이브러리에 공유 데이터 원본을 게시 | Microsoft Docs"
+title: "SharePoint 라이브러리에 공유 데이터 원본 게시 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6fc6dc084a6434a8c0524136ca589a40c4adba41
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9446eee0c8c36cb9a962de16da272c6ba5829891
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint 라이브러리에 공유 데이터 원본 게시
   SharePoint 통합 모드에서 실행 중인 보고서 서버에 공유 데이터 원본을 게시하려면 보고서 디자이너에서 보고서 프로젝트 속성을 설정해야 합니다. 프로젝트 속성에서 서버, 보고서 및 공유 데이터 원본에 대한 모든 참조는 정규화된 URL이어야 합니다.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 기존 또는 새로운 보고서 서버 프로젝트를 엽니다.  
   
-2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다.  *\<프로젝트 >***속성 페이지** 대화 상자가 열립니다.  
+2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다. *\<프로젝트>***속성 페이지** 대화 상자가 열립니다.  
   
 3.  SharePoint 사이트에 게시하는 데 사용할 **구성** 을 선택합니다(예:  
   
@@ -63,7 +62,6 @@ ms.lasthandoff: 08/09/2017
  [프로젝트 속성 페이지 대화 상자](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [보고서 서버에 보고서 게시](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [Office 데이터 연결 &#40;를 사용 합니다. odc &#41; 보고서 &#40; 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [보고서에 Office 데이터 연결&#40;.odc&#41; 사용&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   
-

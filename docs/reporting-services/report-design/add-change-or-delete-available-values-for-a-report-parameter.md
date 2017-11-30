@@ -1,5 +1,5 @@
 ---
-title: "추가, 변경 또는 보고서 매개 변수의 사용 가능한 값을 삭제 | Microsoft Docs"
+title: "보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 17df333a21a99d3f25c98cab94a0af7199ecf3a7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 49059743233ab5f2f3ba2162b646e1f4013d174a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제
   보고서 매개 변수를 만든 다음에는 사용자에게 표시할 사용 가능한 값 목록을 지정할 수 있습니다. 사용 가능한 값 목록은 사용자가 매개 변수에 적합한 값만 선택할 수 있도록 제한합니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 보고서를 게시한 후에는 보고서 서버에서 매개 변수 속성 값을 설정하여 보고서 제작 도구에서 보고서에 정의한 사용 가능한 값을 재정의할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
+ 보고서를 게시한 후에는 보고서 서버에서 매개 변수 속성 값을 설정하여 보고서 제작 도구에서 보고서에 정의한 사용 가능한 값을 재정의할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>보고서 매개 변수에 대한 사용 가능한 값을 추가 또는 변경하려면  
   
@@ -82,13 +81,12 @@ ms.lasthandoff: 08/09/2017
      보고서를 미리 볼 때 매개 변수에 대한 사용 가능한 값의 드롭다운 목록이 더 이상 나타나지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 매개 변수 &#40;의 순서를 변경 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [추가, 변경 또는 보고서 매개 변수 &#40; 삭제 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [보고서 &#40; 연계 매개 변수 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [추가, 변경 또는 보고서 매개 변수 &#40;에 대 한 기본값 삭제 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
- [매개 변수 컬렉션 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [자습서: 보고서 &#40; 매개 변수 추가 보고서 작성기 &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [보고서 매개 변수의 기본값 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

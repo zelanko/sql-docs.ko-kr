@@ -1,5 +1,5 @@
 ---
-title: "추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 | Microsoft Docs"
+title: "데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ed3e111ebce37b58c5a76a0dcb56a5a87d6c8810
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 집합, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 집합을 사용하는 경우와 같이 데이터 집합 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  
@@ -105,8 +104,7 @@ ms.lasthandoff: 08/09/2017
  맨 위로 이동  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

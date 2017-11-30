@@ -1,27 +1,25 @@
 ---
-title: "9 단원: 빌드 및 응용 프로그램을 실행 | Microsoft Docs"
+title: "9단원: 응용 프로그램 빌드 및 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: cc78414cb237f2be394106274628cca2e00ad95f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3e9d3ca3b3b708105bf428508ff52c021bd5dd0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
 데이터 테이블에 대한 데이터 필터를 만든 후에는 웹 사이트 응용 프로그램을 빌드하고 실행합니다.  
@@ -44,5 +42,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

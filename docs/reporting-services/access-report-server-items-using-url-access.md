@@ -1,5 +1,5 @@
 ---
-title: "URL 액세스를 사용 하 여 보고서 서버 항목에 액세스 | Microsoft Docs"
+title: "URL 액세스를 사용하여 보고서 서버 항목 액세스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 010d16c1114ea7b8d7a1c7c0274aba2ecd44b8d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 475435073cef3f748e26a2a71c31a55fa7e6304d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL 액세스를 사용하여 보고서 서버 항목 액세스
-  이 항목에서는 방법을 보고서에서 여러 형식의 카탈로그 항목에 액세스 하려면 서버 데이터베이스 또는 SharePoint 사이트를 사용 하 여 설명 *rs: 명령*=*값*합니다. 이 매개 변수 문자열을 실제로 추가할 필요는 없습니다. 이 문자열을 생략한 경우 보고서 서버에서 항목 형식을 평가하고 알맞은 매개 변수 값을 자동으로 선택합니다. 그러나 URL에서 *rs:Command*=*Value* 문자열을 사용하면 보고서 서버의 성능이 향상됩니다.  
+  이 항목에서는 *rs:Command*=*Value*를 사용하여 보고서 서버 데이터베이스 또는 SharePoint 사이트에서 여러 형식의 카탈로그 항목에 액세스하는 방법에 대해 설명합니다. 이 매개 변수 문자열을 실제로 추가할 필요는 없습니다. 이 문자열을 생략한 경우 보고서 서버에서 항목 형식을 평가하고 알맞은 매개 변수 값을 자동으로 선택합니다. 그러나 URL에서 *rs:Command*=*Value* 문자열을 사용하면 보고서 서버의 성능이 향상됩니다.  
   
  아래 예의 `_vti_bin` 프록시 구문을 참고하십시오. 프록시 구문을 사용하는 방법에 대한 자세한 내용은 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)를 참조하십시오.  
   
@@ -79,6 +79,5 @@ ms.lasthandoff: 08/09/2017
  표시되는 사용자 인터페이스는 [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS(Internet Information Server)에서 사용되는 디렉터리 탐색 모드와 유사합니다. 빌드 번호를 포함한 보고서 서버의 버전 번호도 폴더 목록 아래에 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [URL 액세스 &#40; Ssrs&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md) 
-

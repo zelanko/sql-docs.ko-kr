@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- authorization [Reporting Services]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: bd7ecdc8e792fe11810affa362ff681bfdf267f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 10fbded684af5a1d17a6491d28a3524acbb2759a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services의 권한 부여
-  권한 부여는 보고서 서버 데이터베이스의 지정된 리소스에 대해 요청된 유형의 액세스 권한을 ID에 부여해야 하는지 여부를 결정하는 과정입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 응용 프로그램에 대한 사용자의 역할 할당을 기준으로 지정된 리소스에 대한 액세스 권한을 사용자에게 부여하는 역할 기반 권한 부여 아키텍처입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 대한 보안 확장 프로그램에는 사용자가 보고서 서버에서 인증되면 사용자에게 액세스 권한을 부여하는 데 사용되는 권한 부여 구성 요소의 구현이 포함됩니다. 권한 부여는 사용자가 SOAP API 및 URL 액세스를 통해 시스템 또는 보고서 서버 항목에 대한 작업을 수행하려고 시도할 때 호출됩니다. 이 가능 보안 확장 프로그램 인터페이스를 통해 **IAuthorizationExtension2**합니다. 앞에서 언급한 대로 모든 확장 프로그램은 배포되는 모든 확장 프로그램에 대한 **IExtension** 기본 인터페이스에서 상속됩니다. **IExtension** 및 **IAuthorizationExtension2** 의 멤버인는 **Microsoft.ReportingServices.Interfaces** 네임 스페이스입니다.  
+  권한 부여는 보고서 서버 데이터베이스의 지정된 리소스에 대해 요청된 유형의 액세스 권한을 ID에 부여해야 하는지 여부를 결정하는 과정입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 응용 프로그램에 대한 사용자의 역할 할당을 기준으로 지정된 리소스에 대한 액세스 권한을 사용자에게 부여하는 역할 기반 권한 부여 아키텍처입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 대한 보안 확장 프로그램에는 사용자가 보고서 서버에서 인증되면 사용자에게 액세스 권한을 부여하는 데 사용되는 권한 부여 구성 요소의 구현이 포함됩니다. 권한 부여는 사용자가 SOAP API 및 URL 액세스를 통해 시스템 또는 보고서 서버 항목에 대한 작업을 수행하려고 시도할 때 호출됩니다. 보안 확장 프로그램 인터페이스 **IAuthorizationExtension2**을 통해 이 작업을 수행할 수 있습니다. 앞에서 언급한 대로 모든 확장 프로그램은 배포되는 모든 확장 프로그램에 대한 **IExtension** 기본 인터페이스에서 상속됩니다. **IExtension** 및 **IAuthorizationExtension2**는 **Microsoft.ReportingServices.Interfaces** 네임스페이스의 멤버입니다.  
   
 ## <a name="checking-access"></a>액세스 권한 확인  
  권한 부여에서 사용자 지정 보안 구현의 핵심은 액세스 권한 확인으로, 이 동작은 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 메서드에 구현됩니다. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>는 사용자가 보고서 서버에서 작업을 시도할 때마다 호출됩니다. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 메서드는 각 작업 유형에 대해 오버로드됩니다. 폴더 작업의 경우 액세스 권한 확인의 예는 다음과 같습니다.  
@@ -77,7 +75,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>권한 부여 흐름  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 권한 부여는 현재 서버에서 실행되도록 구성된 보안 확장 프로그램에서 제어됩니다. 권한 부여는 역할 기반으로 이루어지며 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 아키텍처에서 제공되는 권한과 작업으로 제한됩니다. 다음 다이어그램은 사용자가 보고서 서버 데이터베이스의 항목에 대해 작업을 수행할 수 있도록 권한을 부여하는 과정을 나타냅니다.  
   
- ![Reporting Services 보안 권한 부여 흐름](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services 보안 인증 흐름")  
+ ![Reporting Services 보안 인증 흐름](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services 보안 인증 흐름")  
   
  이 다이어그램에 나타난 대로 권한 부여는 다음 순서를 따릅니다.  
   

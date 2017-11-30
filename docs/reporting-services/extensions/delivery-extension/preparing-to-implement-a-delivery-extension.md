@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - delivery extensions [Reporting Services], implementing
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 7bbaf0976e9b145df33e04eea93a5d2ae0408c11
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 0c6131647a38abb2eddf8856b5a86bfff2287e86
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>배달 확장 프로그램 구현 준비
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 구현하기 전에 먼저 구현할 인터페이스를 정의해야 합니다. 우선 배달 확장 프로그램을 사용할 방식, 배달 확장 프로그램에 필요한 설정, 보고서 알림을 배달하기 위해 구현할 특정 기능 등을 결정해야 합니다.  
@@ -56,10 +54,9 @@ ms.lasthandoff: 08/12/2017
 |<xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 클래스|렌더링 확장 프로그램의 출력을 나타냅니다. <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 개체에는 렌더링 확장 프로그램에서 반환된 스트림을 처리하기 위해 배달 확장 프로그램에서 요구되는 연관 파일 이름 및 형식 정보가 포함됩니다.|  
 |<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 인터페이스|보고서 관리자에서 사용자로부터 전자 메일 주소나 파일 공유 경로 등과 같은 배달 확장 프로그램별 구독 정보를 검색할 수 있는 방법을 나타내는 사용자 컨트롤입니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [배달 확장 프로그램 구현](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 확장 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "데이터 집합 속성 대화 상자, 옵션 (보고서 작성기) | Microsoft Docs"
+title: "데이터 집합 속성 대화 상자, 옵션(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,16 +15,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.options.f1
 - "10130"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 0425449331af8a4bb6d26203447bcb1fed0aaac2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8eea917788cfd0811750a1ffb59888fa7e2a156a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>데이터 집합 속성 대화 상자, 옵션(보고서 작성기)
   **데이터 집합속성** 대화 상자에서 **옵션** 을 선택하여 데이터 정렬 옵션 및 부분합을 세부 데이터로 처리하는 옵션 등 쿼리에 대한 데이터 옵션을 변경할 수 있습니다. 데이터 정렬에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/collations/collation-and-unicode-support.md) 에서 [데이터 정렬 및 유니코드 지원](http://go.microsoft.com/fwlink/?linkid=98335)을 참조하세요.  
@@ -56,9 +56,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [집계 함수 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
- [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [데이터 집합 속성 대화 상자, 쿼리 &#40; 보고서 작성기 &#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  
+ [Aggregate 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [데이터 집합 속성 대화 상자, 쿼리&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  
   
   

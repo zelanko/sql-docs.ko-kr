@@ -1,5 +1,5 @@
 ---
-title: "분산형 차트 (보고서 작성기 및 SSRS) | Microsoft Docs"
+title: "분산형 차트(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2b035836c2357feecf8f0a3763c9a3b2ba566b6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5eb49311bbab2bd0cdade3f1541507581ad860d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>분산형 차트(보고서 작성기 및 SSRS)
-  분산형 차트에서 계열은 일련의 점으로 표시됩니다. 값은 차트에서 점의 위치로 표시됩니다. 범주는 차트에서 여러 가지 표식으로 표시됩니다. 분산형 차트는 일반적으로 범주 간 집계 데이터를 비교하는 데 사용됩니다. 분산형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+  분산형 차트에서 계열은 일련의 점으로 표시됩니다. 값은 차트에서 점의 위치로 표시됩니다. 범주는 차트에서 여러 가지 표식으로 표시됩니다. 분산형 차트는 일반적으로 범주 간 집계 데이터를 비교하는 데 사용됩니다. 분산형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
  다음 그림에서는 분산형 차트의 예를 보여 줍니다.  
   
@@ -52,10 +51,9 @@ ms.lasthandoff: 08/09/2017
 -   기본적으로 분산형 차트에서는 데이터 요소가 원으로 표시됩니다. 분산형 차트에 여러 계열이 있는 경우에는 각 요소의 표식 모양을 사각형, 삼각형, 다이아몬드 등으로 바꾸어 보십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [차트 종류 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [차트 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [꺾은선형 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)  
   
   
-
