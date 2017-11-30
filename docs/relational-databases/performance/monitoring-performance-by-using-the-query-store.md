@@ -1,47 +1,47 @@
 ---
 title: "쿼리 저장소를 사용하여 성능 모니터링 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 11/28/2016
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 10/26/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
-ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소 기능을 통해 사용자는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 쿼리 저장소는 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 사용자 검토를 위해 보관합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 옵션을 사용하여 구성할 수 있습니다. 
   
- Azure SQL 데이터베이스의 쿼리 저장소 작업에 대한 자세한 내용은 [Azure SQL 데이터베이스에서 쿼리 저장소 작업](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)을 참조하세요.  
+ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 쿼리 저장소 작업에 대한 자세한 내용은 [Azure SQL Database에서 쿼리 저장소 작업](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)을 참조하세요.  
   
 ##  <a name="Enabling"></a> 쿼리 저장소 사용  
  새 데이터베이스에서는 기본적으로 쿼리 저장소가 활성 상태가 아닙니다.  
   
-#### <a name="use-the-query-store-page-in-management-studio"></a>Management Studio에서 쿼리 저장소 페이지 사용  
+#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 저장소 페이지를 사용합니다.  
   
 1.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
     > [!NOTE]  
-    >  최소한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 의 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]버전이 필요합니다.  
+    >  최소한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 버전 16이 필요합니다.  
   
 2.  **데이터베이스 속성** 대화 상자에서 **쿼리 저장소** 페이지를 선택합니다.  
   
@@ -83,10 +83,10 @@ ms.lasthandoff: 08/03/2017
   
 쿼리 저장소에는 다음 3개의 저장소가 있습니다.
 - **계획 저장소** - 실행 계획 정보 유지
-- **런타임 통계 저장소** - 실행 통계 정보 유지 
+- **런타임 통계 저장소** - 실행 통계 정보 유지
 - **대기 통계 저장소** - 대기 통계 정보 유지
  
- 쿼리 저장소에서 쿼리에 대해 저장할 수 있는 고유한 계획의 수는 **max_plans_per_query** 구성 옵션으로 제한됩니다. 성능 향상을 위해 두 저장소에 비동기적으로 정보가 기록됩니다. 공간 사용을 최소화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이러한 저장소의 정보는 쿼리 저장소 카탈로그 뷰를 쿼리하여 볼 수 있습니다.  
+ 쿼리 저장소에서 쿼리에 대해 저장할 수 있는 고유한 계획의 수는 **max_plans_per_query** 구성 옵션으로 제한됩니다. 성능 향상을 위해 저장소에 비동기적으로 정보가 기록됩니다. 공간 사용을 최소화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이러한 저장소의 정보는 쿼리 저장소 카탈로그 뷰를 쿼리하여 볼 수 있습니다.  
   
  다음 쿼리는 쿼리 저장소의 쿼리 및 계획에 대한 정보를 반환합니다.  
   
@@ -123,37 +123,38 @@ SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고�
 |데이터베이스당 높은 RESOURCE_SEMAPHORE 대기|특정 쿼리에 대한 쿼리 저장소의 높은 메모리 대기|쿼리 저장소에서 상위 메모리 소비 쿼리를 찾습니다. 이러한 쿼리는 영향을 받는 쿼리의 추가 진행을 지연합니다. 해당 쿼리 또는 영향을 받는 쿼리에 대해 MAX_GRANT_PERCENT 쿼리 힌트를 사용하는 것이 좋습니다.|
 |데이터베이스당 높은 LCK_M_X 대기|특정 쿼리에 대한 쿼리 저장소의 높은 잠금 대기|영향을 받는 쿼리에 대한 쿼리 텍스트를 확인하고 대상 엔터티를 식별합니다. 자주 실행되며 기간이 높은, 동일한 엔터티를 수정하는 다른 쿼리를 쿼리 저장소에서 찾습니다. 이러한 쿼리를 식별한 후 응용 프로그램 논리를 변경하여 동시성을 개선하거나 덜 제한적인 격리 수준을 사용하는 것이 좋습니다.|
 |데이터베이스당 높은 PAGEIOLATCH_SH 대기|특정 쿼리에 대한 쿼리 저장소의 높은 버퍼 IO 대기|쿼리 저장소에서 물리적 읽기 수가 높은 쿼리를 찾습니다. IO 대기가 높은 쿼리와 일치하는 경우 검색 대신 찾기를 수행하여 쿼리의 IO 오버헤드를 최소화하기 위해 기본 엔터티에 대한 인덱스를 도입하는 것이 좋습니다.|
-|데이터베이스당 높은 SOS_SCHEDULER_YIELD 대기|특정 쿼리에 대한 쿼리 저장소의 높은 CPU 대기|쿼리 저장소에서 상위 CPU 소비 쿼리를 찾습니다. 그중에서 높은 CPU 추세가 영향을 받는 쿼리에 대한 높은 CPU 대기와 상호 연결하는 쿼리를 식별합니다. 이러한 쿼리 최적화에 집중하세요. 계획 회귀 또는 누락된 인덱스가 있을 수 있습니다.| 
+|데이터베이스당 높은 SOS_SCHEDULER_YIELD 대기|특정 쿼리에 대한 쿼리 저장소의 높은 CPU 대기|쿼리 저장소에서 상위 CPU 소비 쿼리를 찾습니다. 그중에서 높은 CPU 추세가 영향을 받는 쿼리에 대한 높은 CPU 대기와 상호 연결하는 쿼리를 식별합니다. 이러한 쿼리 최적화에 집중하세요. 계획 회귀 또는 누락된 인덱스가 있을 수 있습니다.|
+
 ##  <a name="Options"></a> 구성 옵션 
 
 다음 옵션을 사용하여 쿼리 저장소 매개 변수를 구성할 수 있습니다.
 
  `OPERATION_MODE`  
- READ_WRITE(기본값) 또는 READ_ONLY일 수 있습니다.  
+ **READ_WRITE**(기본값) 또는 READ_ONLY일 수 있습니다.  
   
  `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
- STALE_QUERY_THRESHOLD_DAYS 인수를 구성하여 쿼리 저장소에 데이터를 보존할 일수를 지정합니다. 기본값은 30입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 7일입니다.
+ STALE_QUERY_THRESHOLD_DAYS 인수를 구성하여 쿼리 저장소에 데이터를 보존할 일수를 지정합니다. 기본값은 30입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 **7**일입니다.
   
  `DATA_FLUSH_INTERVAL_SECONDS`  
- 쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 이 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS를 통해 구성됩니다. 기본값은 900(15분)입니다.  
+ 쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 이 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS를 통해 구성됩니다. 기본값은 **900**(15분)입니다.  
   
  `MAX_STORAGE_SIZE_MB`  
- 쿼리 저장소의 최대 크기를 구성합니다. 쿼리 저장소의 데이터가 MAX_STORAGE_SIZE_MB 제한에 도달하는 경우 쿼리 저장소에서는 자동으로 상태를 읽기/쓰기에서 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다.  기본값은 100Mb입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 1Gb이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 10Mb입니다.
+ 쿼리 저장소의 최대 크기를 구성합니다. 쿼리 저장소의 데이터가 MAX_STORAGE_SIZE_MB 제한에 도달하는 경우 쿼리 저장소에서는 자동으로 상태를 읽기/쓰기에서 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다.  기본값은 100Mb입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 **1GB**이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 **10MB**입니다.
   
  `INTERVAL_LENGTH_MINUTES`  
- 런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이 고정된 기간은 INTERVAL_LENGTH_MINUTES를 통해 구성됩니다. 기본값은 60입니다. 
+ 런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이 고정된 기간은 INTERVAL_LENGTH_MINUTES를 통해 구성됩니다. 기본값은 **60**입니다. 
   
  `SIZE_BASED_CLEANUP_MODE`  
- 총 데이터 양이 최대 크기에 가까워졌을 때 정리 프로세스를 자동으로 활성화할지의 여부를 제어합니다. AUTO(기본값) 또는 OFF일 수 있습니다.  
+ 총 데이터 양이 최대 크기에 가까워졌을 때 정리 프로세스를 자동으로 활성화할지의 여부를 제어합니다. **AUTO**(기본값) 또는 OFF일 수 있습니다.  
   
  `QUERY_CAPTURE_MODE`  
- 쿼리 저장소가 모든 쿼리 또는 실행 횟수 및 리소스 소비량에 따른 관련 쿼리를 캡처하거나 새 쿼리 추가 및 현재 쿼리 추적을 중지할지의 여부를 지정합니다. ALL(모든 쿼리 캡처), AUTO(자주 발생하지 않은 쿼리 및 컴파일/실행 기간이 의미 없는 쿼리 무시) 또는 NONE(새 쿼리 캡처 중지)일 수 있습니다. Azure SQL 데이터베이스에서 AUTO인 동안 SQL Server 2016의 기본값은 ALL입니다.
+ 쿼리 저장소가 모든 쿼리 또는 실행 횟수 및 리소스 소비량에 따른 관련 쿼리를 캡처하거나 새 쿼리 추가 및 현재 쿼리 추적을 중지할지의 여부를 지정합니다. ALL(모든 쿼리 캡처), AUTO(자주 발생하지 않은 쿼리 및 컴파일/실행 기간이 의미 없는 쿼리 무시) 또는 NONE(새 쿼리 캡처 중지)일 수 있습니다. Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 AUTO인 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본값([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)은 **ALL**입니다.
   
  `MAX_PLANS_PER_QUERY`  
- 각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 200입니다.  
+ 각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 **200**입니다.  
  
  `WAIT_STATS_CAPTURE_MODE`  
- 쿼리 저장소에서 대기 통계 정보를 캡처할지 여부를 제어합니다. OFF = 0 또는 ON = 1(기본값)일 수 있습니다.  
+ 쿼리 저장소에서 대기 통계 정보를 캡처할지 여부를 제어합니다. OFF 또는 **ON**(기본값)일 수 있습니다.  
  
  **sys.database_query_store_options** 뷰를 쿼리하여 쿼리 저장소의 현재 옵션을 확인할 수 있습니다. 값에 대한 자세한 내용은 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)를 참조하세요.  
   
@@ -162,6 +163,9 @@ SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고�
 ##  <a name="Related"></a> 관련된 뷰, 함수 및 프로시저  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 을(를) 통해 또는 다음 뷰 및 프로시저를 사용하여 쿼리 저장소를 보고 관리할 수 있습니다.  
 
+### <a name="query-store-functions"></a>쿼리 저장소 함수  
+ 함수를 통해 쿼리 저장소에서 작업할 수 있습니다. 
+ 
 ||| 
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
@@ -346,7 +350,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **지난 시간 내에 평균 실행 시간이 가장 긴 쿼리 수는 몇 개입니까?**  
+ **지난&1;시간 내에 평균 실행 시간이 가장 긴 쿼리 수는 몇 개입니까?**  
   
 ```tsql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -585,4 +589,3 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
  [sys.database_query_store_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
  [Azure SQL 데이터베이스에서 쿼리 저장소 작업](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
   
-

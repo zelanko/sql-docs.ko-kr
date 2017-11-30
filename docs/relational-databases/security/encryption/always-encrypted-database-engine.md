@@ -1,13 +1,14 @@
 ---
-title: "상시 암호화(데이터베이스 엔진) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "상시 암호화(데이터베이스 엔진) | Microsoft 문서"
+ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,19 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![상시 암호화](../../../relational-databases/security/encryption/media/always-encrypted.png "상시 암호화")  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 07/31/2017
 
 그런 다음, 드라이버는 암호화된 열 암호화 키 값의 암호를 해독하기 위해 열 마스터 키를 포함하는 키 저장소에 연결하고 일반 텍스트 열 암호화 키를 사용하여 매개 변수를 암호화합니다. 결과로 생성된 일반 텍스트 열 암호화 키는 이후에 동일한 열 암호화 키를 사용할 때 키 저장소로의 왕복 횟수를 줄이기 위해 캐시됩니다. 드라이버는 암호화된 열을 대상으로 하는 매개 변수의 일반 텍스트 값을 해당 암호화된 값으로 대체하고 처리를 위해 서버에 쿼리를 보냅니다.
 
-서버가 결과 집합을 계산하고, 드라이버에서 결과 집합의 암호화된 includes에 대해 암호화 알고리즘 및 해당 키에 대한 정보를 비롯한 열의 암호화 메타데이터를 연결합니다. 드라이버는 먼저 로컬 캐시에서 일반 텍스트 열 암호화 키를 찾으려고 시도하며, 캐시에서 키를 찾을 수 없는 경우에만 열 마스터 키로 왕복합니다. 그런 다음 드라이버에서 결과 암호를 해독하고 응용 프로그램에 일반 텍스트 값을 반환합니다.
+서버가 결과 집합을 계산하고, 드라이버는 결과 집합에 포함된 암호화된 열에 대해, 암호화 알고리즘 및 해당 키에 대한 정보를 비롯한 열의 암호화 메타데이터를 연결합니다. 드라이버는 먼저 로컬 캐시에서 일반 텍스트 열 암호화 키를 찾으려고 시도하며, 캐시에서 키를 찾을 수 없는 경우에만 열 마스터 키로 왕복합니다. 그런 다음 드라이버에서 결과 암호를 해독하고 응용 프로그램에 일반 텍스트 값을 반환합니다.
 
  클라이언트 드라이버는 열 마스터 키가 포함된 키 저장소를 캡슐화하는 클라이언트 쪽 소프트웨어 구성 요소인 열 마스터 키 저장소 공급자를 사용하여 열 마스터 키가 포함된 키 저장소와 상호 작용합니다. 일반적인 유형의 키 저장소 공급자는 Microsoft의 클라이언트 쪽 드라이버 라이브러리에서 제공되거나 독립 실행형 다운로드로 제공됩니다. 또한 사용자 고유의 공급자를 구현할 수 있습니다. 기본 제공 열 마스터 키 저장소 공급자를 포함하여 상시 암호화 기능은 드라이버 라이브러리와 해당 버전에 따라 다릅니다. 
 
@@ -254,4 +254,3 @@ GO
 [sp_refresh_parameter_encryption&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

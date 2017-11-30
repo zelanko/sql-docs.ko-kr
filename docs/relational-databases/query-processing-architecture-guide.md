@@ -1,32 +1,33 @@
 ---
 title: "쿼리 처리 아키텍처 가이드 | Microsoft 문서"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 로컬 테이블, 분할된 테이블 및 여러 서버에 분산된 테이블과 같은 다양한 데이터 저장소 아키텍처의 쿼리를 처리합니다. 다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 계획 캐싱을 통해 쿼리를 처리하고 쿼리 재사용을 최적화하는 방법에 대해 설명합니다.
 
@@ -38,7 +39,9 @@ ms.lasthandoff: 10/13/2017
 
 `SELECT` 문은 프로시저를 통하지 않습니다. 즉, 데이터베이스 서버가 요청한 데이터를 검색하는 데 사용해야 하는 정확한 단계를 지정하고 있지 않습니다. 이는 데이터베이스 서버가 문을 분석하여 요청한 데이터를 추출하는 가장 효율적인 방법을 판단해야 함을 의미합니다. 이것을 `SELECT` 문 최적화라고 하며 이를 위한 구성 요소를 쿼리 최적화 프로그램이라고 합니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 그냥 계획이라고도 합니다. 쿼리 계획의 내용은 이 항목의 뒷부분에서 보다 자세히 설명됩니다.
 
-다음 도표는 단일 `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다. ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+다음 도표는 단일 `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다.
+
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 문은 다음 사항만 정의합니다.  
 * 결과 집합의 서식. 대부분 SELECT 목록에 지정됩니다. 하지만 `ORDER BY` 및 `GROUP BY` 와 같은 다른 절도 결과 집합의 최종 서식에 영향을 줍니다.
@@ -619,7 +622,7 @@ WHERE ProductID = 63;
   각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
 
 3. 실행한 쿼리 또는 인덱스 작업의 유형  
-  병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 응용 프로그램에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 권장되지는 않지만 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
+  병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 응용 프로그램에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
 
 4. 처리할 행 수가 충분한지 여부  
   쿼리 최적화 프로그램에서 행 수가 부족하다고 판단하는 경우 행을 배포하기 위해 교환 연산자를 사용하지 않습니다. 결과적으로 연산자는 직렬로 실행됩니다. 시작, 배포 및 조정 비용이 병렬 연산자 실행으로 얻은 이익보다 큰 경우 연산자를 직렬 계획으로 실행하면 이 시나리오를 피할 수 있습니다.
@@ -716,9 +719,9 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) DOP가 4이고 두 테이블의 조인을 포함하는 쿼리 계획
+아래 그림은 병렬 처리 수준이 4로 실행되고 두 개의 테이블 조인을 포함하는 쿼리 최적화 프로그램 계획을 보여 줍니다.
 
-위 명령에서는 병렬 처리 수준이 4로 실행되고 두 개의 테이블 조인을 포함하는 쿼리 최적화 프로그램 계획을 보여 줍니다.
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 이 병렬 계획에는 세 개의 Parallelism 연산자가 포함됩니다. `o_datkey_ptr` 인덱스의 Index Seek 연산자와 `l_order_dates_idx` 인덱스의 Index Scan 연산자가 모두 병렬로 처리됩니다. 몇 개의 배타적 스트림이 생성됩니다. 이것은 각각 Index Scan 및 Index Seek 연산자 위의 가장 가까운 Parallelism 연산자에서 결정될 수 있습니다. 두 연산자는 모두 교환 유형을 다시 분할합니다. 즉, 입력 스트림 수와 동일한 수의 출력 스트림을 생성하는 스트림 사이에서 단지 데이터의 순서를 섞는 것입니다. 이 스트림 수는 병렬 처리 수준과 같습니다.
 
@@ -727,6 +730,8 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 Index Seek 연산자 위의 Parallelism 연산자는 `O_ORDERKEY` 값을 사용하여 입력 스트림을 다시 분할합니다. 이 입력은 `O_ORDERKEY` 열 값을 기준으로 정렬되지 않았으며 `Merge Join` 연산자를 통한 조인 열이므로 Parallelism 연산자와 Merge Join 연산자 사이에 있는 Sort 연산자가 `Merge Join` 연산자에 대한 입력을 조인 열을 기준으로 정렬합니다. `Sort` 연산자는 Merge Join 연산자처럼 병렬로 처리됩니다.
 
 최상위 Parallelism 연산자는 여러 스트림의 결과를 단일 스트림으로 수집합니다. 그런 다음 Parallelism 연산자 아래의 Stream Aggregate 연산자에서 수행하는 부분 집계는 Parallelism 연산자 위의 Stream Aggregate 연산자의 서로 다른 각각의 `O_ORDERPRIORITY` 값에 대해 단일 `SUM` 값으로 누적됩니다. 이 계획에는 병렬 처리 수준이 4인 두 개의 교환 세그먼트가 있으므로 8개의 작업자 스레드가 사용됩니다.
+
+이 예에 사용된 연산자에 대한 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)를 참조하세요.
 
 ### <a name="parallel-index-operations"></a>병렬 인덱스 작업
 
@@ -1040,4 +1045,3 @@ GO
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [카디널리티 추정](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)
-

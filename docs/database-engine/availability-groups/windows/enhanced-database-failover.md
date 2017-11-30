@@ -2,11 +2,13 @@
 title: "가용성 그룹에 확장된 데이터베이스 장애 조치 추가(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
+ms.reviewer: mikeray
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +20,14 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>가용성 그룹에 확장된 데이터베이스 장애 조치 추가(SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2012 및 2014에서 주 복제본의 가용성 그룹에 참여하는 데이터베이스에서 트랜잭션을 쓸 수 있는 기능이 손실되면, 복제본이 동기화되고 자동 장애 조치를 수행하도록 구성되어 있어도 장애 조치가 트리거되지 않습니다.
 
@@ -44,7 +45,7 @@ SQL Server 2016에서는 마법사 또는 Transact-SQL을 사용하여 설정할
 
 가용성 그룹은 DB1과 DB2라는 두 개의 데이터베이스를 포함하여 인스턴스 A와 인스턴스 B 간에 구성됩니다. 가용성 모드는 자동 장애 조치 모드가 포함된 동기 커밋으로 설정되며, 확장된 데이터베이스 장애 조치를 사용하도록 설정됩니다. DB2의 데이터와 트랜잭션 로그 파일을 포함한 디스크에 대한 액세스가 손실됩니다. 문제가 검색되면 가용성 그룹에서 자동으로 인스턴스 B로 장애 조치합니다.
 
-## <a name="configuring-and-viewing-the-enhanced-database-failover-option"></a>확장된 데이터베이스 장애 조치 옵션 구성 및 보기
+## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>확장된 데이터베이스 장애 조치 옵션 구성 및 보기
 
 확장된 데이터베이스 장애 조치는 SQL Server Management Studio 또는 Transact-SQL을 사용하여 구성할 수 있습니다. PowerShell cmdlet에는 현재 이 기능이 없습니다. 확장된 데이터베이스 장애 조치는 기본적으로 사용하지 않도록 설정됩니다.
 
@@ -63,17 +64,18 @@ SQL Server Management Studio를 사용하여 내게 필요한 옵션 그룹을 �
 ### <a name="transact-sql"></a>Transact-SQL
 
 가용성 그룹을 만드는 중에 확장된 데이터베이스 장애 조치 동작을 구성하려면 다음과 같이 DB_FAILOVER를 ON으로 설정해야 합니다.
-```
+
+```SQL
 CREATE AVAILABILITY GROUP [AGNAME]
 WITH ( DB_FAILOVER = ON)
 ...
 ```
 가용성 그룹을 구성한 후 이 동작을 추가하려면 다음 ALTER AVAILABILITY GROUP 명령을 사용합니다.
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ```
 이 동작을 사용하지 않으려면 다음 ALTER AVAILABILITY GROUP 명령을 실행합니다.
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>동적 관리 뷰
@@ -88,5 +90,4 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 - [새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Transact-SQL을 사용하여 가용성 그룹 만들기](create-an-availability-group-transact-sql.md)
-
 

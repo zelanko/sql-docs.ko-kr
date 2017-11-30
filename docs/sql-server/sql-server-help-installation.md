@@ -2,10 +2,13 @@
 title: "SQL Server용 도움말 뷰어 및 오프라인 콘텐츠 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -18,13 +21,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 80f13a760e8176eb0d0bafbac29cf162f473caf4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1a5e7fb01cd74ccafb3a324dbd79bd849bef0bca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server용 도움말 뷰어 및 오프라인 콘텐츠
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   
   

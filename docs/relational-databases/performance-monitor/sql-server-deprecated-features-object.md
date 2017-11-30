@@ -2,11 +2,13 @@
 title: "SQL Server, Deprecated Features 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 SQLServer:Deprecated Features 개체는 사용되지 않는 기능으로 지정된 기능을 모니터링하는 카운터를 제공합니다. 이 카운터는 경우에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 마지막으로 시작된 이후로 사용되지 않는 기능이 발견된 횟수를 나열하는 사용 카운트를 제공합니다.  
   
@@ -96,7 +98,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |EXT_soap_endpoints|sys.soap_endpoints가 발견되었습니다. 네이티브 XML 웹 서비스는 사용되지 않습니다. 대신 WCF(Windows Communications Foundation) 또는 ASP.NET을 사용해야 합니다.|  
 |EXTPROP_LEVEL0TYPE|level0type에서 TYPE이 발견되었습니다. SCHEMA를 level0type으로 사용하고 TYPE을 level1type으로 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |EXTPROP_LEVEL0USER|level1type이 지정된 경우 level0type USER입니다. 사용자에 대한 직접 확장 속성에 대해서만 USER를 level0type으로 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|FASTFIRSTROW|FASTFIRSTROW 구문이 발견되었습니다. OPTION(FAST *n*) 구문을 사용하도록 문을 다시 작성하세요. 컴파일마다 한 번씩 발생합니다.|  
+|FASTFIRSTROW|FASTFIRSTROW 구문이 발견되었습니다. OPTION(FAST *n*) 구문을 사용하도록 문을 다시 작성합니다. 컴파일마다 한 번씩 발생합니다.|  
 |FILE_ID|FILE_ID 구문이 발견되었습니다. FILE_IDEX를 사용하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |fn_get_sql|fn_get_sql 함수가 컴파일되었습니다. sys.dm_exec_sql_text를 대신 사용하십시오. 컴파일마다 한 번씩 발생합니다.|  
 |fn_servershareddrives|fn_servershareddrives 함수가 컴파일되었습니다. 대신 sys.dm_io_cluster_shared_drives를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -114,7 +116,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |힌디어|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 응용 프로그램은 수정해야 합니다. 대신 Indic_General_90을 사용해야 합니다.|  
 |괄호가 없는 HOLDLOCK 테이블 힌트||  
 |IDENTITYCOL|INDENTITYCOL 구문이 발견되었습니다. $identity 구문을 사용하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|COUNT_BIG(*)이 없는 인덱스 뷰 SELECT 목록|인덱싱된 집계 뷰의 SELECT 목록은 COUNT_BIG(*)을 포함해야 합니다.|  
+|COUNT_BIG(\*)이 없는 인덱스 뷰 SELECT 목록|인덱싱된 집계 뷰의 SELECT 목록은 COUNT_BIG(\*)을 포함해야 합니다.|  
 |INDEX_OPTION|옵션 주위에 괄호가 없는 CREATE TABLE, ALTER TABLE 또는 CREATE INDEX 구문이 발견되었습니다. 현재 구문을 사용하도록 문을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |INDEXKEY_PROPERTY|INDEXKEY_PROPERTY 구문이 발견되었습니다. sys.index_columns를 쿼리하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |간접 TVF 힌트|뷰를 통해 다중 문 TVF(테이블 반환 함수)를 호출하는 테이블 힌트의 간접 적용은 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거됩니다.|  
@@ -292,4 +294,3 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

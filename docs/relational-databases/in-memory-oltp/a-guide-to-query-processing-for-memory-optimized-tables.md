@@ -8,37 +8,35 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a09967430cc92c19a48d7559b3f0783a71f4bb6e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저를 도입합니다. 이 문서에서는 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 모두의 쿼리 처리에 대한 개요를 제공합니다.  
+  메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 도입합니다. 이 문서에서는 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 모두의 쿼리 처리에 대한 개요를 제공합니다.  
   
- 이 문서에서는 다음 내용을 포함하여 메모리 액세스에 최적화된 테이블에 대한 쿼리를 컴파일하고 실행하는 방법에 대해 설명합니다.  
+ 이 문서에서는 다음 내용을 포함하여 메모리 최적화 테이블에 대한 쿼리를 컴파일하고 실행하는 방법에 대해 설명합니다.  
   
 -   디스크 기반 테이블에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 쿼리 처리 파이프라인입니다.  
   
--   쿼리 최적화: 메모리 액세스에 최적화된 테이블에 대한 통계의 역할 및 잘못된 쿼리 계획의 문제 해결을 위한 지침  
+-   쿼리 최적화: 메모리 최적화 테이블에 대한 통계의 역할 및 잘못된 쿼리 계획의 문제 해결을 위한 지침  
   
--   메모리 액세스에 최적화된 테이블에 액세스하기 위한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용입니다.  
+-   메모리 최적화 테이블에 액세스하기 위한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용입니다.  
   
--   메모리 액세스에 최적화된 테이블 액세스를 위한 쿼리 최적화 관련 고려 사항  
+-   메모리 최적화 테이블 액세스를 위한 쿼리 최적화 관련 고려 사항  
   
 -   고유하게 컴파일된 저장 프로시저 컴파일 및 처리  
   
@@ -80,7 +78,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 표시되는 예상 실행 계획은 다음과 같습니다.  
   
- ![디스크 기반 테이블 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![디스크 기반 테이블의 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "디스크 기반 테이블의 조인을 위한 쿼리 계획.")  
 디스크 기반 테이블 조인을 위한 쿼리 계획.  
   
  이 쿼리 계획 정보:  
@@ -99,7 +97,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  이 쿼리의 예상 계획은 다음과 같습니다.  
   
- ![디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
+ ![디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.")  
 디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.  
   
  이 쿼리에서 Order 테이블의 행은 클러스터형 인덱스를 사용해서 검색됩니다. **Hash Match** 물리 연산자는 이제 **Inner Join**에 사용됩니다. Order에 대한 클러스터형 인덱스가 CustomerID로 정렬되지 않았으므로 **Merge Join** 을 위해 sort 연산자가 필요하지만, 이는 성능에 영향을 줄 수 있습니다. 이전 예제에서 **Merge Join** 연산자의 비용(46%)에 대비해서 **Hash Match** 연산자의 상대적 비용(75%)에 주의하세요. 이전 예에서 최적화 프로그램에는 **Hash Match** 연산자도 고려되었겠지만 **Merge Join** 연산자가 더 나은 성능을 제공하는 것으로 결정되었습니다.  
@@ -107,7 +105,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 기반 테이블에 대한 쿼리 처리  
  다음 다이어그램에서는 임시 쿼리를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 쿼리 처리 흐름을 간단히 보여줍니다.  
   
- ![SQL Server 쿼리 처리 파이프라인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![SQL Server 쿼리 처리 파이프라인.] (../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server 쿼리 처리 파이프라인.")  
 SQL Server 쿼리 처리 파이프라인.  
   
  시나리오 내용:  
@@ -129,10 +127,10 @@ SQL Server 쿼리 처리 파이프라인.
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 임시 일괄 처리 및 저장 프로시저는 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]이라고도 부릅니다. 해석되었다는 용어는 쿼리 실행 엔진에서 쿼리 계획의 각 연산자에 대해 쿼리 계획이 해석되었음을 의미합니다. 실행 엔진은 연산자 및 해당 매개 변수를 읽고 작업을 수행합니다.  
   
- 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하면 메모리 액세스에 최적화된 테이블 및 디스크 기반 테이블에 모두 액세스할 수 있습니다. 다음 그림에서는 메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스를 위한 쿼리 처리를 보여 줍니다.  
+ 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하면 메모리 최적화 테이블 및 디스크 기반 테이블에 모두 액세스할 수 있습니다. 다음 그림에서는 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스를 위한 쿼리 처리를 보여 줍니다.  
   
- ![해석된 tsql을 위한 쿼리 처리 파이프라인](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
-메모리 액세스에 최적화된 테이블에 대한 해석된 Transact-SQL 액세스를 위한 쿼리 처리 파이프라인  
+ ![해석된 tsql을 위한 쿼리 처리 파이프라인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "해석된 tsql을 위한 쿼리 처리 파이프라인.")  
+메모리 최적화 테이블에 대한 해석된 Transact-SQL 액세스를 위한 쿼리 처리 파이프라인  
   
  그림에 표시된 것처럼 쿼리 처리 파이프라인은 대부분 변경되지 않은 상태로 유지됩니다.  
   
@@ -142,9 +140,9 @@ SQL Server 쿼리 처리 파이프라인.
   
 -   쿼리 실행 엔진이 실행 계획을 해석합니다.  
   
- 기존의 쿼리 처리 파이프라인(그림 2)과 기본적으로 다른 점은 메모리 액세스에 최적화된 테이블의 행이 Access Methods를 사용하여 버퍼 풀에서 검색되지 않는다는 것입니다. 대신 메모리 내 OLTP 엔진을 통해 메모리 내 데이터 구조에서 행이 검색됩니다. 데이터 구조의 차이점으로 인해 다음 예에 표시된 것처럼 경우에 따라 최적화 프로그램이 서로 다른 계획을 선택하게 됩니다.  
+ 기존의 쿼리 처리 파이프라인(그림 2)과 기본적으로 다른 점은 메모리 최적화 테이블의 행이 Access Methods를 사용하여 버퍼 풀에서 검색되지 않는다는 것입니다. 대신 메모리 내 OLTP 엔진을 통해 메모리 내 데이터 구조에서 행이 검색됩니다. 데이터 구조의 차이점으로 인해 다음 예에 표시된 것처럼 경우에 따라 최적화 프로그램이 서로 다른 계획을 선택하게 됩니다.  
   
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에는 해시 인덱스를 사용하는 Order 및 Customer 테이블의 메모리 액세스에 최적화된 버전이 포함됩니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에는 해시 인덱스를 사용하는 Order 및 Customer 테이블의 메모리 최적화 버전이 포함됩니다.  
   
 ```tsql  
 CREATE TABLE dbo.[Customer] (  
@@ -161,7 +159,7 @@ CREATE TABLE dbo.[Order] (
 GO  
 ```  
   
- 다음과 같이 메모리 액세스에 최적화된 테이블에서 동일한 쿼리를 실행한다고 가정해보십시오.  
+ 다음과 같이 메모리 최적화 테이블에서 동일한 쿼리를 실행한다고 가정해보세요.  
   
 ```tsql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
@@ -169,8 +167,8 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  예상 계획은 다음과 같습니다.  
   
- ![메모리 액세스에 최적화된 테이블의 조인을 위한 쿼리 계획](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
-메모리 액세스에 최적화된 테이블의 조인을 위한 쿼리 계획  
+ ![메모리 최적화 테이블의 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "메모리 최적화 테이블의 조인을 위한 쿼리 계획.")  
+메모리 최적화 테이블의 조인을 위한 쿼리 계획  
   
  디스크 기반 테이블에서 동일한 쿼리를 계획에 사용해서 다음과 같은 차이점을 관찰합니다(그림 1).  
   
@@ -178,7 +176,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   테이블 정의에는 클러스터형 인덱스가 포함되지 않습니다.  
   
-    -   클러스터형 인덱스는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 대신 메모리 액세스에 최적화된 모든 테이블에 적어도 하나 이상의 비클러스터형 인덱스가 있어야 하고 메모리 액세스에 최적화된 테이블의 모든 인덱스는 인덱스에 행을 저장하거나 클러스터형 인덱스를 참조할 필요 없이 테이블의 모든 열에 효율적으로 액세스할 수 있습니다.  
+    -   클러스터형 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다. 대신 메모리 최적화 모든 테이블에 적어도 하나 이상의 비클러스터형 인덱스가 있어야 하고 메모리 최적화 테이블의 모든 인덱스는 인덱스에 행을 저장하거나 클러스터형 인덱스를 참조할 필요 없이 테이블의 모든 열에 효율적으로 액세스할 수 있습니다.  
   
 -   이 계획에는 **Hash Match** 이 아니라 **Merge Join**가 포함됩니다. Order 및 Customer 테이블에 모두 있는 인덱스는 해시 인덱스이므로 정렬되지 않습니다. **Merge Join** 을 사용하기 위해서는 성능 저하가 발생하는 sort 연산자가 필요합니다.  
   
@@ -210,7 +208,7 @@ END
 ### <a name="compilation-and-query-processing"></a>컴파일 및 쿼리 처리  
  다음 다이어그램은 고유하게 컴파일된 저장 프로시저의 컴파일 프로세스를 보여줍니다.  
   
- ![저장 프로시저의 고유 컴파일](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![저장 프로시저의 네이티브 컴파일.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "저장 프로시저의 네이티브 컴파일.")  
 저장 프로시저의 고유 컴파일  
   
  프로세스에 대한 설명은 다음과 같습니다.  
@@ -227,7 +225,7 @@ END
   
  고유하게 컴파일된 저장 프로시저의 호출은 DLL의 함수 호출과 같습니다.  
   
- ![고유하게 컴파일된 저장 프로시저의 실행](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![고유하게 컴파일된 저장 프로시저의 실행.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "고유하게 컴파일된 저장 프로시저의 실행.")  
 고유하게 컴파일된 저장 프로시저의 실행  
   
  고유하게 컴파일된 저장 프로시저의 호출에 대한 설명은 다음과 같습니다.  
@@ -279,7 +277,7 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Hash Match 연산자는 집계가 지원되지 않습니다. 따라서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 동일 쿼리에 대한 계획에 Hash Match 연산자가 사용되더라도 고유하게 컴파일된 저장 프로시저의 모든 집계에는 Stream Aggregate 연산자가 사용됩니다.|  
   
 ## <a name="column-statistics-and-joins"></a>열 통계 및 조인  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 index scan 및 index seek와 같은 특정 작업의 비용을 예측할 수 있도록 인덱스 키 열에 값 통계를 유지 관리합니다. (인덱스가 아닌 키 열을 사용자가 명시적으로 만들거나 쿼리 최적화 프로그램에서 조건자가 있는 쿼리에 대한 응답으로 만드는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 그에 대한 통계도 만듭니다.) 비용 예측의 기본 메트릭은 단일 연산자에서 처리되는 행 수입니다. 디스크 기반 테이블의 경우에는 특정 연산자에서 액세스되는 페이지 수가 비용 예측에서 중요한 요소입니다. 하지만 메모리 액세스에 최적화된 테이블의 경우에는 페이지 수가 항상 0이므로 중요하지 않습니다. 이 문서에서는 행 수에 대해 중점적으로 설명합니다. 예측은 계획에서 index seek 및 scan 연산자로 시작해서 조인 연산자와 같은 다른 연산자를 포함하도록 확장됩니다. 조인 연산자에서 처리될 것으로 예상되는 행 수는 기본 index, seek 및 scan 연산자의 예측을 기반으로 결정됩니다. 메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스의 경우 실제 실행 계획을 관찰하면 계획에서 연산자에 대한 예측 및 실제 행 수 간의 차이를 볼 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 index scan 및 index seek와 같은 특정 작업의 비용을 예측할 수 있도록 인덱스 키 열에 값 통계를 유지 관리합니다. (인덱스가 아닌 키 열을 사용자가 명시적으로 만들거나 쿼리 최적화 프로그램에서 조건자가 있는 쿼리에 대한 응답으로 만드는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 그에 대한 통계도 만듭니다.) 비용 예측의 기본 메트릭은 단일 연산자에서 처리되는 행 수입니다. 디스크 기반 테이블의 경우에는 특정 연산자에서 액세스되는 페이지 수가 비용 예측에서 중요한 요소입니다. 하지만 메모리 최적화 테이블의 경우에는 페이지 수가 항상 0이므로 중요하지 않습니다. 이 문서에서는 행 수에 대해 중점적으로 설명합니다. 예측은 계획에서 index seek 및 scan 연산자로 시작해서 조인 연산자와 같은 다른 연산자를 포함하도록 확장됩니다. 조인 연산자에서 처리될 것으로 예상되는 행 수는 기본 index, seek 및 scan 연산자의 예측을 기반으로 결정됩니다. 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스의 경우 실제 실행 계획을 관찰하면 계획에서 연산자에 대한 예측 및 실제 행 수 간의 차이를 볼 수 있습니다.  
   
  그림 1 예의 경우,  
   
@@ -313,4 +311,3 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-
