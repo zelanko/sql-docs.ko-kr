@@ -1,31 +1,28 @@
 ---
-title: "기본 모드 보고서 서버 데이터베이스 (SSRS 구성 관리자) 만들기 | Microsoft Docs"
+title: "기본 모드 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-native-mode-report-server-database"></a>기본 모드 보고서 서버 데이터베이스 만들기
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -88,7 +85,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  보고서 서버 데이터베이스를 만들고 호스팅하는 데 사용할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
-    1.  사용할 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스를 입력합니다. 사용 가능한 경우 기본 인스턴스로 실행되는 로컬 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 표시됩니다. 그렇지 않으면 사용할 서버와 인스턴스를 입력해야 합니다. 이 형식으로 지정 된 명명 된 인스턴스: \<서버 이름 >\\< instancename\>합니다.  
+    1.  사용할 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스를 입력합니다. 사용 가능한 경우 기본 인스턴스로 실행되는 로컬 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 표시됩니다. 그렇지 않으면 사용할 서버와 인스턴스를 입력해야 합니다. 명명된 인스턴스는 \<servername>\\<instancename\> 형식으로 지정합니다.  
   
     2.  보고서 서버 데이터베이스를 만들기 위해 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 대한 일회성 연결에 사용되는 자격 증명을 입력합니다. 이 자격 증명이 사용되는 방식은 이 항목에 포함된 [시작하기 전에](#rsdbrequirements) 를 참조하십시오.  
   
@@ -110,7 +107,7 @@ ms.lasthandoff: 08/09/2017
   
     1.  인증 유형을 지정합니다.  
   
-         이미 정의된 **** 데이터베이스 로그인을 사용하여 연결하려면 데이터베이스 자격 증명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
+         이미 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하여 연결하려면 **데이터베이스 자격 증명**을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
   
          컴퓨터와 보고서 서버에 대한 로그온 권한을 가진 최소 권한 도메인 사용자 계정이 있는 경우에는 **Windows 자격 증명** 을 선택합니다.  
   
@@ -142,7 +139,7 @@ ms.lasthandoff: 08/09/2017
   
     1.  인증 유형을 지정합니다.  
   
-         이미 정의된 **** 데이터베이스 로그인을 사용하여 연결하려면 데이터베이스 자격 증명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
+         이미 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하여 연결하려면 **데이터베이스 자격 증명**을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
   
          컴퓨터와 보고서 서버에 대한 로그온 권한을 가진 최소 권한 도메인 사용자 계정이 있는 경우에는 **Windows 자격 증명** 을 선택합니다.  
   
@@ -160,5 +157,4 @@ ms.lasthandoff: 08/09/2017
 [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

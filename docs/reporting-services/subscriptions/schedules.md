@@ -18,17 +18,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c4e737163256ada2f5b9188b31deb2671eeb5a6b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="schedules"></a>일정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서의 처리와 배포를 쉽게 제어할 수 있도록 **공유 일정** 과 **보고서별 일정** 을 제공합니다. 이 두 일정 유형의 차이점은 일정의 정의, 저장 및 관리 방법에 있습니다. 두 일정 유형의 내부 구조는 동일합니다. 모든 일정은 되풀이 유형을 월별, 주별 또는 일별로 지정할 수 있습니다. 되풀이 유형 내에서 이벤트 발생 빈도에 대한 간격과 범위를 설정하세요. 되풀이 패턴의 유형과 되풀이 패턴이 지정되는 방식은 공유 일정을 만드는지 아니면 보고서별 일정을 만드는지 여부에 관계없이 동일합니다.
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_how_scheduling_works"></a> 일정 예약 및 배달 프로세스 작동 방식  
  일정 예약 및 배달 프로세서는 다음 기능을 제공합니다.  
   
--   보고서 서버 데이터베이스의 이벤트 및 알림 큐를 유지 관리합니다. 확장 배포에서는 배포의 모든 보고서 서버에서 큐가 공유됩니다.  
+-   보고서 서버 데이터베이스의 이벤트 및 알림 큐를 유지 관리합니다. 스케일 아웃 배포에서는 배포의 모든 보고서 서버에서 큐가 공유됩니다.  
   
 -   보고서 프로세서를 호출하여 보고서를 실행하거나 구독을 처리하거나 캐시된 보고서를 지웁니다. 일정 이벤트의 결과로 발생하는 모든 보고서 처리는 백그라운드 프로세스로 수행됩니다. SharePoint 모드는 타이머 작업을 사용합니다.  
   
@@ -127,7 +126,7 @@ ms.lasthandoff: 08/09/2017
  일정 예약 및 배달 프로세서를 사용하려면 보고서 서버 서비스와 SQL Server 에이전트를 시작해야 합니다. 일정 예약 및 배달 처리 기능은 정책 기반 관리에 있는 **Reporting Services에 대한 노출 영역 구성** 패싯의 **ScheduleEventsAndReportDeliveryEnabled** 속성을 통해 설정해야 합니다. 예약된 작업이 수행되려면 SQL Server 에이전트와 보고서 서버 서비스가 모두 실행 중이어야 합니다.  
   
 > [!NOTE]  
->  **Reporting Services에 대한 노출 영역 구성** 패싯을 사용하여 일시적 또는 영구적으로 예약된 작업을 중지할 수 있습니다. 사용자 지정 배달 확장 프로그램을 만들어 배포할 수는 있지만 일정 예약 및 배달 프로세서만 단독으로 확장할 수는 없습니다. 따라서 이벤트 및 알림이 관리되는 방식을 변경할 수 없습니다. 기능 해제에 대한 자세한 내용은 **** 의 예약된 이벤트 및 배달 [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)섹션을 참조하세요.  
+>  **Reporting Services에 대한 노출 영역 구성** 패싯을 사용하여 일시적 또는 영구적으로 예약된 작업을 중지할 수 있습니다. 사용자 지정 배달 확장 프로그램을 만들어 배포할 수는 있지만 일정 예약 및 배달 프로세서만 단독으로 확장할 수는 없습니다. 따라서 이벤트 및 알림이 관리되는 방식을 변경할 수 없습니다. 기능 해제에 대한 자세한 내용은 **의 예약된 이벤트 및 배달** [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)섹션을 참조하세요.  
   
 ###  <a name="bkmk_stoppingagent"></a> SQL Server 에이전트를 중지할 때의 결과  
  예약된 보고서 처리는 기본적으로 SQL Server 에이전트를 사용합니다. 이 서비스를 중지하면 <xref:ReportService2010.ReportingService2010.FireEvent%2A> 메서드를 통해 프로그래밍 방식으로 큐에 처리 요청을 추가할 때까지 큐에 새로운 처리 요청이 추가되지 않습니다. 서비스를 다시 시작하면 보고서 처리 요청을 만드는 작업이 다시 시작됩니다. SQL Server 에이전트가 오프라인 상태일 때 보고서 서버는 과거에 발생했을 수 있는 보고서 처리 작업을 다시 만들려고 하지 않습니다. 따라서 1주일 동안 SQL Server 에이전트를 중지하면 해당 주간에 예약된 모든 작업이 손실됩니다.  
@@ -140,11 +139,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 기록에서 스냅숏 만들기, 수정 및 삭제](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [보고서 &#40; 캐싱 Ssrs&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [공유 데이터 집합 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
-
