@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bc157565f86eaa3490240cb6c1e71523741ff23
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 587578e7b9133b5323557b6cd1b5246a148bcb6e
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,6 @@ ms.lasthandoff: 11/21/2017
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]DEFAULT 키워드를 사용 하 여 기본 정의 만드는 것이 좋습니다는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 문 대신 합니다.  
-  
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +51,7 @@ sp_unbindrule [ @objname = ] 'object_name'
  바인딩이 해제된 규칙이 있는 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 은 **nvarchar(776)**, 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하는 경우 같은 규칙을 가진 데이터 형식의 열 또한 바인딩 해제됩니다. 규칙이 직접 바인딩된 이 데이터 형식의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
->  *object_name* 괄호를 사용할 수 있습니다 **** 구분 식별자 문자로 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
+>  *object_name* 괄호를 사용할 수 있습니다 **[]** 구분 식별자 문자로 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
  [  **@futureonly=** ] **'***futureonly_flag***'**  
  별칭 데이터 형식에서 규칙의 바인딩을 해제하는 경우에만 사용됩니다. *futureonly_flag* 은 **varchar(15)**, 기본값은 NULL입니다. 때 *futureonly_flag* 은 **futureonly**, 해당 데이터 형식의 기존 열에 지정된 된 규칙 손실 되지 않습니다.  
