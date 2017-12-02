@@ -177,7 +177,7 @@
 ## 블로그 팔로우
 ### [SSIS 팀 블로그](https://blogs.msdn.microsoft.com/ssis/)
 ## 도움말 보기
-### [MSDN의 SSIS 포럼](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [MSDN의 SSIS 포럼](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Stack Overflow의 SSIS 태그](http://stackoverflow.com/questions/tagged/ssis)  
 ## 사용자 의견 제공
 ### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
