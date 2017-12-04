@@ -22,7 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>Add Empty Points to a Chart (Report Builder and SSRS)
+# <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>차트에 빈 요소 추가(보고서 작성기 및 SSRS)
 Null 값은 차트에서 계열의 데이터 요소 사이에 있는 빈 공간 또는 간격으로 표시됩니다. 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 빈 요소는 Null 값에 의해 만들어진 빈 공간에 삽입될 수 있는 데이터 요소입니다.  
   
  기본적으로 빈 요소는 값을 포함하는 이전 및 다음 데이터 요소의 평균을 사용하여 계산됩니다. 모든 빈 요소가 0 지점에서 삽입되도록 이를 변경할 수 있습니다.  

@@ -95,7 +95,7 @@ ms.lasthandoff: 11/09/2017
 |사용자 정의 구독에서 보고서별 일정 만들기, 수정 또는 삭제|개별 구독 관리|브라우저, 보고서 작성기, 내 보고서, 내용 관리자|방문자, 멤버|  
 |예약된 다른 모든 작업의 보고서별 일정 만들기, 수정 또는 삭제|보고서 기록 관리, 모든 구독 관리, 보고서 관리|내용 관리자|소유자|  
   
- 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 보안에 대한 자세한 내용은 [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md), [기본 모드 보고서 서버에 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 및 [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)을 참조하세요. SharePoint 모드의 경우 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)를 참조하세요.  
+ 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 보안에 대한 자세한 내용은 [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md), [기본 모드 보고서 서버에 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 및 [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)을 참조하세요. SharePoint 모드의 경우 [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)를 참조하세요.  
   
 ##  <a name="bkmk_how_scheduling_works"></a> 일정 예약 및 배달 프로세스 작동 방식  
  일정 예약 및 배달 프로세서는 다음 기능을 제공합니다.  
