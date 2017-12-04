@@ -20,16 +20,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0e71ab1057f1147ce34d049494aa313967daa114
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="json-data-sql-server"></a>JSON 데이터(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환하는 데 사용되는 일반적인 텍스트 데이터 형식입니다. 로그 파일 또는 Microsoft Azure DocumentDB와 같은 NoSQL 데이터베이스에 구조화되지 않은 데이터를 저장하는 데에도 사용됩니다. 많은 REST 웹 서비스에서 JSON 텍스트로 형식이 지정된 결과를 반환하거나 JSON으로 형식이 지정된 데이터를 허용합니다. 예를 들어 Azure Search, Azure Storage, Azure DocumentDb 등 대부분의 Azure 서비스에는 JSON을 반환하거나 사용하는 REST 끝점이 있습니다. 또한 JSON은 AJAX 호출을 사용하여 웹 페이지와 웹 서버 간에 데이터를 교환하는 기본 형식입니다.  
+JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환하는 데 사용되는 일반적인 텍스트 데이터 형식입니다. JSON은 로그 파일 또는 Microsoft Azure Cosmos DB와 같은 NoSQL 데이터베이스에 구조화되지 않은 데이터를 저장하는 데에도 사용됩니다. 많은 REST 웹 서비스에서 JSON 텍스트로 형식이 지정된 결과를 반환하거나 JSON으로 형식이 지정된 데이터를 허용합니다. 예를 들어 Azure Search, Azure Storage, Azure Cosmos DB 등 대부분의 Azure 서비스에는 JSON을 반환하거나 사용하는 REST 끝점이 있습니다. 또한 JSON은 AJAX 호출을 사용하여 웹 페이지와 웹 서버 간에 데이터를 교환하는 기본 형식입니다.  
   
  JSON 텍스트의 예는 다음과 같습니다.  
   
@@ -176,7 +176,7 @@ FOR JSON PATH
  
 JSON 텍스트는 일반적으로 varchar 또는 nvarchar 열에 저장되며 일반 텍스트 형식으로 인덱싱됩니다. 텍스트를 지원하는 모든 SQL Server 기능 또는 구성 요소는 JSON을 지원하므로 JSON 및 기타 SQL Server 기능 간의 상호 작용에 제한이 거의 없습니다. JSON을 메모리 내 또는 임시 테이블에 저장할 수 있으며 행 수준 보안 조건자를 JSON 텍스트 등에 적용할 수 있습니다.
 
-JSON 문서를 처리하기 위해 사용자 지정된 쿼리 언어를 사용하려는 순수 JSON 워크로드가 있는 경우 Microsoft Azure [DocumentDB](https://azure.microsoft.com/services/documentdb/)를 사용하는 것이 좋습니다.  
+JSON 문서를 처리하기 위해 사용자 지정된 쿼리 언어를 사용하려는 순수 JSON 워크로드가 있는 경우 Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)를 사용하는 것이 좋습니다.  
   
  다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기본 제공 JSON 지원을 사용하는 방법을 보여 주는 몇 가지 사용 사례입니다.  
   

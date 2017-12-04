@@ -1,7 +1,7 @@
 ---
 title: "index create memory 서버 구성 옵션 구성 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c9e2a10cd21015fa56a2081e359baf3b9198064
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8aab31080adfc6235d6110aa0ad21159996bfcff
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인덱스 생성 메모리 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **인덱스 생성 메모리** 옵션은 인덱스를 만들기 위해 처음으로 할당되는 최대 메모리 양을 제어합니다. 이 옵션의 기본값은 0(자체 구성)입니다. 나중에 인덱스 생성에 메모리가 더 필요하고 해당 메모리를 사용할 수 있는 경우 서버가 이 옵션의 설정 값을 초과하여 메모리를 사용하게 됩니다. 추가 메모리를 사용할 수 없는 경우 이미 할당된 메모리를 계속 사용하여 인덱스가 생성됩니다.  
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인덱스 생성 메모리 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **인덱스 생성 메모리** 옵션은 인덱스를 만들 때 정렬 작업을 위해 처음으로 할당되는 최대 메모리 양을 제어합니다. 이 옵션의 기본값은 0(자체 구성)입니다. 나중에 인덱스 생성에 메모리가 더 필요하고 해당 메모리를 사용할 수 있는 경우 서버가 이 옵션의 설정 값을 초과하여 메모리를 사용하게 됩니다. 추가 메모리를 사용할 수 없는 경우 이미 할당된 메모리를 계속 사용하여 인덱스가 생성됩니다.  
   
  **항목 내용**  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   **쿼리당 최소 메모리** 옵션의 설정이 **인덱스 생성 메모리** 옵션보다 우선합니다. 두 옵션을 변경할 때 **인덱스 생성 메모리** 가 **쿼리당 최소 메모리**보다 적은 경우 경고 메시지가 나타나지만 값은 설정됩니다. 쿼리를 실행하는 동안 유사한 경고가 발생합니다.  
+-   **[쿼리당 최소 메모리](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 옵션의 설정이 **인덱스 생성 메모리** 옵션보다 우선합니다. 두 옵션을 변경할 때 **인덱스 생성 메모리** 가 **쿼리당 최소 메모리**보다 적은 경우 경고 메시지가 나타나지만 값은 설정됩니다. 쿼리를 실행하는 동안 유사한 경고가 발생합니다.  
   
 -   분할된 테이블 및 인덱스를 사용할 때 분할된 인덱스가 정렬되지 않았고 병렬 처리 수준이 높은 경우 인덱스를 만드는 데 필요한 최소 메모리 요구 사항이 상당히 증가될 수 있습니다. 이 옵션에 따라 단일 인덱스 생성 작업에서 모든 인덱스 파티션에 할당된 초기 총 메모리 양이 결정됩니다. 이 옵션으로 설정된 양이 쿼리 실행에 필요한 최소 양보다 적은 경우 오류 메시지가 나타나면서 쿼리가 종료됩니다.  
   
@@ -62,6 +62,8 @@ ms.lasthandoff: 11/20/2017
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
   
 -   **index create memory** 옵션은 자체 구성되므로 대부분 조정이 필요하지 않습니다. 그러나 인덱스를 만드는 데 문제가 있으면 이 옵션의 값을 변경합니다.  
+
+-   프로덕션 시스템에 인덱스를 만드는 작업은 자주 수행되지 않는 태스크이므로 사용량이 많지 않은 시간에 실행되도록 예약되는 경우가 많습니다. 따라서 인덱스 생성을 사용량이 많지 않은 시간에 가끔씩 수행하는 경우 이 **index create memory**를 늘리면 인덱스 만들기 성능이 향상될 수 있습니다. 그러나 요청된 모든 메모리를 사용할 수 없는 상황이라도 인덱스 생성 작업이 시작될 수 있게 하려면 **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 구성 옵션을 낮은 수치로 유지해야 합니다.
   
 ###  <a name="Security"></a> 보안  
   
