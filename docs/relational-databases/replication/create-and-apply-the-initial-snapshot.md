@@ -2,30 +2,32 @@
 title: "초기 스냅숏 만들기 및 적용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 807e2b855264f77959faa4699d761739af3e5137
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6d9be4d647441a82413c908a5207adec8efdf3e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>초기 스냅숏 만들기 및 적용
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 초기 스냅숏을 만들고 적용하는 방법에 대해 설명합니다. 매개 변수가 있는 필터를 사용하는 병합 게시에는 두 부분으로 구성된 스냅숏이 필요합니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 초기 스냅숏을 만들고 적용하는 방법에 대해 설명합니다. 매개 변수가 있는 필터를 사용하는 병합 게시에는 두 부분으로 구성된 스냅숏이 필요합니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
  **항목 내용**  
   
@@ -173,11 +175,11 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅숏을 생성하는 에이전트 작업을 시작합니다.  
   
-6.  (선택 사항) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 값이 **true**이면 구독자에서 스냅숏을 사용할 수 있습니다.  
+6.  (옵션) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 의 값이 **true**이면 구독자에서 스냅숏을 사용할 수 있습니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>스냅숏 에이전트를 실행하여 스냅숏 또는 트랜잭션 게시에 대한 초기 스냅숏을 생성하려면(동기)  
   
@@ -191,11 +193,11 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 배포자의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 게시자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>의 값, 게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>의 값이나 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A>의 값. Windows 인증을 사용하는 것이 좋습니다.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 게시자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 배포자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>의 값, 배포자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>의 값과 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A>의 값. Windows 인증을 사용하는 것이 좋습니다.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 배포자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 배포자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>에 <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> 또는 <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> 값을 설정합니다.  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> 에 <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> 또는 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>값을 설정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> 메서드를 호출합니다.  
   
@@ -207,11 +209,11 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅숏을 생성하는 에이전트 작업을 시작합니다.  
   
-6.  (선택 사항) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 값이 **true**이면 구독자에서 스냅숏을 사용할 수 있습니다.  
+6.  (옵션) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 의 값이 **true**이면 구독자에서 스냅숏을 사용할 수 있습니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>스냅숏 에이전트를 실행하여 병합 게시에 대한 초기 스냅숏을 생성하려면(동기)  
   
@@ -225,11 +227,11 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 배포자의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 게시자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>의 값, 게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>의 값이나 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A>의 값. Windows 인증을 사용하는 것이 좋습니다.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 게시자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 배포자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>의 값, 배포자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>의 값과 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A>의 값. Windows 인증을 사용하는 것이 좋습니다.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 배포자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 배포자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge>에 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A> 값을 설정합니다.  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> 에 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>값을 설정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> 메서드를 호출합니다.  
   

@@ -2,31 +2,32 @@
 title: "리소스 관리자 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b1d9225d46e1331a4dfc62ef20fcd91a6e0f52ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor"></a>리소스 관리자
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다.  
   
 ## <a name="benefits-of-resource-governor"></a>리소스 관리자의 이점  
  리소스 관리자를 사용하여 리소스 소비량에 대한 제한을 들어오는 요청별로 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업과 리소스를 관리할 수 있습니다. 리소스 관리자 컨텍스트에서 작업이란 단일 엔터티로 취급해야 하거나 취급할 수 있는 비슷한 크기의 쿼리 또는 요청 집합입니다. 반드시 그래야 하는 것은 아니지만 작업의 리소스 사용 패턴이 균일할수록 리소스 관리자를 통해 얻을 수 있는 이점이 많아집니다. 리소스 제한은 실행 중인 작업에 미치는 영향을 최소화하면서 실시간으로 다시 구성할 수 있습니다.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
  리소스 관리자의 컨텍스트에서는 위의 개념이 구성 요소로 간주될 수 있습니다. 다음 그림에서는 이러한 구성 요소와 이러한 구성 요소가 데이터베이스 엔진 환경에 있을 때 서로 어떤 관계가 있는지를 보여 줍니다. 처리 측면에서 이 흐름은 다음과 같이 요약할 수 있습니다.  
   
--   세션에 대한 들어오는 연결(세션 1/ *n*)이 있습니다.  
+-   세션에 대한 들어오는 연결(세션 1/*n*)이 있습니다.  
   
 -   세션이 분류됩니다(분류).  
   
@@ -98,4 +99,3 @@ ms.lasthandoff: 06/22/2017
  [데이터베이스 엔진 인스턴스&#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   
-

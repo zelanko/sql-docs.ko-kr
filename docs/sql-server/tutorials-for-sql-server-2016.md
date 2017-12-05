@@ -2,9 +2,12 @@
 title: "SQL Server 자습서 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9e7eec3322fecf2df16624ce63f0188c526108d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 자습서
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서는 새로운 기술과 기능을 알아볼 수 있는 자습서를 제공합니다. 대개 이전 버전용 자습서를 최신 버전에서도 사용할 수 있습니다. 자습서에서 최신 기능을 설명할 때는 자습서를 완료하는 데 필요한 최소 버전이 표시됩니다.  
      
 -   자습서에서 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 데이터베이스 중 하나를 사용하는 경우에는 CodePlex에서 최신 버전을 다운로드하여 사용해야 합니다. 자세한 내용은 [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)(SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트)을 참조하세요.    

@@ -2,9 +2,12 @@
 title: "SQL Server 2017 릴리스 정보 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/30/2017
-ms.prod: sql-server-2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,14 +16,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fe3554aa067ef7e7fd0c1ffa2e8ac3adc5aaaa07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0cc5502883bd349f8a2586f901d5088c4edacf65
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
-이 문서에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] 이 문서에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
 - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
 - 최신 CU(누적 업데이트) 릴리스에 대한 자세한 내용: [SQL Server 2017 누적 업데이트](http://aka.ms/sql2017cu)

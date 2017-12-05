@@ -2,11 +2,13 @@
 title: "복제 보안 설정 보기 및 수정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - viewing replication security settings
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4e8eb9804660085223e0845adeb093511871316
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1982ed9a207dad495d6e9e8555785a9260498cc6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-and-modify-replication-security-settings"></a>복제 보안 설정 보기 및 수정
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 복제 보안 설정을 보고 수정하는 방법에 대해 설명합니다. 예를 들어 게시자에 대한 로그 판독기 에이전트의 연결을 SQL Server 인증에서 Windows 통합 인증으로 변경해야 하거나 Windows 계정 암호가 변경되었을 때 에이전트 작업을 실행하는 데 사용된 자격 증명을 변경해야 할 경우가 있습니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 복제 보안 설정을 보고 수정하는 방법에 대해 설명합니다. 예를 들어 게시자에 대한 로그 판독기 에이전트의 연결을 SQL Server 인증에서 Windows 통합 인증으로 변경해야 하거나 Windows 계정 암호가 변경되었을 때 에이전트 작업을 실행하는 데 사용된 자격 증명을 변경해야 할 경우가 있습니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
  **항목 내용**  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 06/22/2017
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
--   **Follow Up:**  [After you modify replication security settings](#FollowUp)  
+-   **후속 작업:**  [복제 보안 설정 수정 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -429,7 +431,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeReplicationServerPasswords%2A> 메서드를 호출합니다. 다음 매개 변수를 지정합니다.  
   
-    -   *security_mode* - 모든 암호 인스턴스가 변경되는 인증 형식을 지정하는 <xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode> 값  
+    -   *security_mode* - 모든 암호 인스턴스를 변경할 때 사용할 인증 유형을 지정하는 <xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode> 값  
   
     -   *login* - 변경 중인 암호의 모든 인스턴스에 대한 로그인  
   
@@ -449,22 +451,22 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.TransSubscription> 클래스의 인스턴스를 만듭니다.  
   
-3.  구독에 대한 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 및 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 속성을 설정하고, 1단계에서 만든 연결을 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 설정합니다.  
+3.  구독에 대한 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>및 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 속성을 설정하고, 1단계에서 만든 연결을 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 설정합니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 구독 속성이 올바르게 정의되지 않았거나 구독이 없는 것입니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.TransSubscription> 인스턴스의 다음 보안 속성 중 하나 이상을 설정합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.TransSubscription>인스턴스의 다음 보안 속성 중 하나 이상을 설정합니다.  
   
-    -   에이전트가 실행되는 Windows 계정에 대한 자격 증명을 변경하려면 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드를 설정합니다.  
+    -   에이전트가 실행되는 Windows 계정에 대한 자격 증명을 변경하려면 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>필드를 설정합니다.  
   
-    -   구독자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **true**로 설정합니다.  
+    -   구독자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 필드를 **true**를 참조하세요.  
   
-    -   구독자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 구독자 로그인 자격 증명을 지정합니다.  
+    -   구독자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 구독자 로그인 자격 증명을 지정합니다.  
   
         > [!NOTE]  
         >  에이전트는 항상 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>에 지정된 Windows 자격 증명을 사용하여 배포자에 연결합니다. 이 계정은 Windows 인증을 사용하여 원격 연결을 만들 때도 사용됩니다.  
   
-6.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **true**값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
+6.  (옵션) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 값도 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값(기본값)을 지정했으면 변경 내용이 즉시 서버로 전송됩니다.  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독의 배포 에이전트 보안 설정을 변경하려면  
   
@@ -472,22 +474,22 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 클래스의 인스턴스를 만듭니다.  
   
-3.  구독에 대한 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A> 및 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 속성을 설정하고, 1단계에서 만든 연결을 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 설정합니다.  
+3.  구독에 대한 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>및 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 속성을 설정하고, 1단계에서 만든 연결을 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 설정합니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 구독 속성이 올바르게 정의되지 않았거나 구독이 없는 것입니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 인스턴스의 다음 보안 속성 중 하나 이상을 설정합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription>인스턴스의 다음 보안 속성 중 하나 이상을 설정합니다.  
   
-    -   에이전트가 실행되는 Windows 계정에 대한 자격 증명을 변경하려면 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드를 설정합니다.  
+    -   에이전트가 실행되는 Windows 계정에 대한 자격 증명을 변경하려면 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>필드를 설정합니다.  
   
-    -   배포자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **true**로 설정합니다.  
+    -   배포자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 필드를 **true**를 참조하세요.  
   
-    -   배포자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 대한 배포자 로그인 자격 증명을 지정합니다.  
+    -   배포자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 구독자 로그인 자격 증명을 지정합니다.  
   
         > [!NOTE]  
         >  에이전트는 항상 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>에 지정된 Windows 자격 증명을 사용하여 구독자에 연결합니다. 이 계정은 Windows 인증을 사용하여 원격 연결을 만들 때도 사용됩니다.  
   
-6.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **true**값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
+6.  (옵션) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 값도 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값(기본값)을 지정했으면 변경 내용이 즉시 서버로 전송됩니다.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독의 병합 에이전트 보안 설정을 변경하려면  
   
@@ -495,26 +497,26 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 클래스의 인스턴스를 만듭니다.  
   
-3.  구독에 대한 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A> 및 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 속성을 설정하고, 1단계에서 만든 연결을 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 설정합니다.  
+3.  구독에 대한 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>및 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 속성을 설정하고, 1단계에서 만든 연결을 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 설정합니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 구독 속성이 올바르게 정의되지 않았거나 구독이 없는 것입니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 인스턴스의 다음 보안 속성 중 하나 이상을 설정합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription>인스턴스의 다음 보안 속성 중 하나 이상을 설정합니다.  
   
-    -   에이전트가 실행되는 Windows 계정에 대한 자격 증명을 변경하려면 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드를 설정합니다.  
+    -   에이전트가 실행되는 Windows 계정에 대한 자격 증명을 변경하려면 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>필드를 설정합니다.  
   
-    -   배포자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **true**로 설정합니다.  
+    -   배포자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 필드를 **true**를 참조하세요.  
   
-    -   배포자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 대한 배포자 로그인 자격 증명을 지정합니다.  
+    -   배포자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 구독자 로그인 자격 증명을 지정합니다.  
   
-    -   게시자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **true**로 설정합니다.  
+    -   게시자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 필드를 **true**를 참조하세요.  
   
-    -   게시자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 게시자 로그인 자격 증명을 지정합니다.  
+    -   게시자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 구독자 로그인 자격 증명을 지정합니다.  
   
         > [!NOTE]  
         >  에이전트는 항상 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>에 지정된 Windows 자격 증명을 사용하여 구독자에 연결합니다. 이 계정은 Windows 인증을 사용하여 원격 연결을 만들 때도 사용됩니다.  
   
-6.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **true**값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
+6.  (옵션) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 값도 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값(기본값)을 지정했으면 변경 내용이 즉시 서버로 전송됩니다.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독의 병합 에이전트 보안 설정을 변경하려면  
   
@@ -522,36 +524,36 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.MergeSubscription> 클래스의 인스턴스를 만듭니다.  
   
-3.  구독에 대한 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 및 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 속성을 설정하고, 1단계에서 만든 연결을 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 설정합니다.  
+3.  구독에 대한 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>및 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 속성을 설정하고, 1단계에서 만든 연결을 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 설정합니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 구독 속성이 올바르게 정의되지 않았거나 구독이 없는 것입니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.MergeSubscription> 인스턴스의 다음 보안 속성 중 하나 이상을 설정합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.MergeSubscription>인스턴스의 다음 보안 속성 중 하나 이상을 설정합니다.  
   
-    -   에이전트가 실행되는 Windows 계정에 대한 자격 증명을 변경하려면 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드를 설정합니다.  
+    -   에이전트가 실행되는 Windows 계정에 대한 자격 증명을 변경하려면 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>필드를 설정합니다.  
   
-    -   구독자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **true**로 설정합니다.  
+    -   구독자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 필드를 **true**를 참조하세요.  
   
-    -   구독자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 구독자 로그인 자격 증명을 지정합니다.  
+    -   구독자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드에 구독자 로그인 자격 증명을 지정합니다.  
   
-    -   게시자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **true**로 설정합니다.  
+    -   게시자에 연결할 때 에이전트가 사용하는 인증 유형으로 Windows 통합 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 필드를 **true**를 참조하세요.  
   
-    -   게시자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 속성의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> 필드에 게시자 로그인 자격 증명을 지정합니다.  
+    -   게시자에 연결할 때 에이전트가 사용하는 인증 유형으로 SQL Server 인증을 지정하려면 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 속성의 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 필드를 **false**로 설정하고 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> 필드에 구독자 로그인 자격 증명을 지정합니다.  
   
         > [!NOTE]  
         >  에이전트는 항상 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>에 지정된 Windows 자격 증명을 사용하여 배포자에 연결합니다. 이 계정은 Windows 인증을 사용하여 원격 연결을 만들 때도 사용됩니다.  
   
-6.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **true**값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
+6.  (옵션) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 값도 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값(기본값)을 지정했으면 변경 내용이 즉시 서버로 전송됩니다.  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>트랜잭션 게시자에 연결할 때 즉시 업데이트 구독자에서 사용하는 로그인 정보를 변경하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 구독자 연결을 만듭니다.  
   
-2.  구독 데이터베이스에 대한 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A>을 지정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>을 지정합니다.  
+2.  구독 데이터베이스에 대한 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> 을 지정하고 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 에 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>을 지정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 데이터베이스 속성이 잘못 정의되었거나 구독 데이터베이스가 없는 것입니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> 메서드를 호출하고 다음 매개 변수를 전달합니다.  
+4.  다음 매개 변수를 전달하는 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> 메서드를 호출합니다.  
   
     -   *Publisher* - 게시자 이름  
   
@@ -561,7 +563,7 @@ ms.lasthandoff: 06/22/2017
   
     -   *Distributor* - 배포자 이름  
   
-    -   *PublisherSecurity* - 게시자에 연결할 때 즉시 업데이트 구독자가 사용하는 보안 모드 유형 및 연결 시 사용하는 로그인 자격 증명을 지정하는 <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> 개체  
+    -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> 개체  
   
 ###  <a name="PShellExample"></a> 예(RMO)  
  이 예에서는 제공된 로그인 값을 확인하고 서버에서 복제로 저장된 SQL Server 로그인 또는 제공된 Windows 로그인의 모든 암호를 변경합니다.  

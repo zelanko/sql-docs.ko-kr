@@ -2,11 +2,13 @@
 title: "데이터 및 데이터베이스 개체 게시 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publish-data-and-database-objects"></a>데이터 및 데이터베이스 개체 게시
-  게시를 만들 때 게시할 테이블 및 다른 데이터베이스 개체를 선택할 수 있습니다. 복제를 사용하여 다음 데이터베이스 개체를 게시할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 게시를 만들 때 게시할 테이블 및 다른 데이터베이스 개체를 선택할 수 있습니다. 복제를 사용하여 다음 데이터베이스 개체를 게시할 수 있습니다.  
   
 |데이터베이스 개체|스냅숏 복제 및 트랜잭션 복제|병합 복제|  
 |---------------------|--------------------------------------------------------|-----------------------|  
@@ -262,4 +264,3 @@ ms.lasthandoff: 06/22/2017
  [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7492b1c26c21a2cbc831c2bed39be165310bf51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
-  이 항목에서는 SQL Server에서 계속 제공되지만 더 이상 사용되지 않는 전체 텍스트 검색 기능에 대해 설명합니다. 이러한 기능은 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에서 사용되지 않는 기능은 사용하지 마세요.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 SQL Server에서 계속 제공되지만 더 이상 사용되지 않는 전체 텍스트 검색 기능에 대해 설명합니다. 이러한 기능은 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에서 사용되지 않는 기능은 사용하지 마세요.  
   
 **SQL Server:Deprecated Features** 개체 성능 카운터 및 추적 이벤트를 통해 더 이상 사용되지 않는 기능의 사용을 모니터합니다. 자세한 내용은 [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)을 참조하세요.  
   
@@ -62,4 +63,3 @@ ms.lasthandoff: 06/22/2017
  ***SQL Server:Deprecated Features** 개체는 CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*의 발생을 모니터링하지 않습니다.  
   
   
-

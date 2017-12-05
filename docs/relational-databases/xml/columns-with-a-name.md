@@ -2,30 +2,30 @@
 title: "이름이 있는 열 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-xml
+ms.suite: sql
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- names [SQL Server], columns with
+helpviewer_keywords: names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7153d16bd547d5fc596037c17e31f69eaf0881fe
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
-ms.sourcegitcommit: b4b9a8774565dd0e31caf940cf3e8254b0987205
-ms.openlocfilehash: 3a2651e6e67cceb648049f99ab9588a44b7f3fb0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columns-with-a-name"></a>이름이 있는 열
-  다음은 이름이 있는 행 집합 열이 대/소문자를 구분하여 결과 XML에 매핑되는 특정 조건입니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 다음은 이름이 있는 행 집합 열이 대/소문자를 구분하여 결과 XML에 매핑되는 특정 조건입니다.  
   
 -   열 이름이 @ 기호로 시작하는 경우  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/08/2017
 -   하나의 열에 다른 이름이 있는 경우  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>열 이름이 @ 기호로 시작하는 경우  
- 열 이름으로 시작 하는 경우는 at 기호 (@)의 특성 슬래시 기호 (/)를 포함 하지 않는 및는 `row` 해당 열 값을 갖는 요소가 생성 됩니다. 예를 들어 다음 쿼리는 2개의 열(@PmId, Name)로 구성된 행 집합을 반환합니다. 결과 XML에는 **PmId** 특성이 해당 요소에 추가 됩니다 `row` 요소 고 ProductModelID의 값이 여기에 할당 됩니다.  
+ 열 이름이 @ 기호로 시작하고 슬래시 기호(/)를 포함하지 않는 경우 해당 열 값을 갖는 `row` 요소의 특성이 만들어집니다. 예를 들어 다음 쿼리는 2개의 열(@PmId, Name)로 구성된 행 집합을 반환합니다. 결과 XML에서 **PmId** 특성이 해당 `row` 요소에 추가되고 ProductModelID의 값이 여기에 할당됩니다.  
   
 ```  
   
@@ -71,9 +71,9 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>열 이름이 @ 기호로 시작하지 않는 경우  
- 열 이름으로 시작 되지 않으면는 at 기호 (@) XPath 노드 테스트 중 하나가 아니며 슬래시 기호 (/), 행 요소의 하위 요소인 XML 요소는 `row` 기본적으로 생성 됩니다.  
+ 열 이름이 @ 기호로 시작하지 않고 XPath 노드 테스트 중 하나가 아니며 슬래시 기호(/)를 포함하지 않는 경우 기본적으로 `row` 행 요소의 하위 요소인 XML 요소가 생성됩니다.  
   
- 다음 쿼리는 결과인 열 이름을 지정합니다. 따라서 한 `result` 요소 자식에 추가 되는 `row` 요소입니다.  
+ 다음 쿼리는 결과인 열 이름을 지정합니다. 따라서 `result` 요소 자식이 `row` 요소에 추가됩니다.  
   
 ```  
 SELECT 2+2 as result  
@@ -88,7 +88,7 @@ for xml PATH
 </row>  
 ```  
   
- 다음 쿼리는 **xml** 유형의 Instructions 열에 대해 지정된 XQuery에서 반환하는 XML에 대해 열 이름 ManuWorkCenterInformation을 지정합니다. 따라서 한 `ManuWorkCenterInformation` 요소가 자식으로 추가 되는 `row` 요소입니다.  
+ 다음 쿼리는 **xml** 유형의 Instructions 열에 대해 지정된 XQuery에서 반환하는 XML에 대해 열 이름 ManuWorkCenterInformation을 지정합니다. 따라서 `ManuWorkCenterInformation` 요소가 `row` 요소의 자식으로 추가됩니다.  
   
 ```  
 SELECT   
@@ -133,7 +133,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- PATH 모드에서 XML을 생성할 때 열 이름이 경로로 사용됩니다. 직원 ID 값을 포함 하는 열 이름으로 시작 '\@'. 따라서 특성 **EmpID**에 추가 되는 `row` 요소입니다. 다른 모든 열에는 계층을 나타내는 열 이름에 슬래시 기호('/')가 있습니다. 결과 XML은 갖습니다는 `EmpName` 자식 노드로 `row` 요소 및 `EmpName` 자식 갖습니다 `First`, `Middle` 및 `Last` 요소 자식을 합니다.  
+ PATH 모드에서 XML을 생성할 때 열 이름이 경로로 사용됩니다. 직원 ID 값을 포함하는 열 이름이 '\@'로 시작하므로 **EmpID** 특성이 `row` 요소에 추가됩니다. 다른 모든 열에는 계층을 나타내는 열 이름에 슬래시 기호('/')가 있습니다. 결과 XML은 `row` 요소 아래에 `EmpName` 자식을 포함하고 `EmpName` 자식은 `First`, `Middle` 및 `Last` 요소 자식을 갖습니다.  
   
 ```  
 <row EmpID="1">  
@@ -172,7 +172,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  기본적으로 PATH 모드는 요소 중심의 XML을 생성하므로 PATH 모드 쿼리에 ELEMENTS 지시어를 지정하면 아무 영향도 미치지 않습니다. 그러나 이전 예에서와 같이 ELEMENTS 지시어를 XSINIL과 함께 사용하면 Null 값에 대한 요소를 생성하는 데 유용합니다.  
   
- 다음 쿼리에서는 ID와 이름 외에 직원 주소를 검색합니다. 주소 열에 대 한 열 이름에 있는 각 경로 `Address` 요소 자식에 추가 되는 `row` 요소 및 주소 세부 정보 요소 자식으로 추가 됩니다는 `Address` 요소입니다.  
+ 다음 쿼리에서는 ID와 이름 외에 직원 주소를 검색합니다. 주소 열에 대한 열 이름에 있는 각 경로대로 `Address` 요소 자식이 `row` 요소에 추가되고 주소 정보가 `Address` 요소의 요소 자식으로 추가됩니다.  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -205,7 +205,7 @@ FOR XML PATH
 ```  
   
 ## <a name="several-columns-share-the-same-path-prefix"></a>여러 열이 같은 경로 접두사를 공유하는 경우  
- 이어지는 여러 열이 같은 경로 접두사를 공유할 경우 같은 이름으로 함께 그룹화됩니다. 다른 네임스페이스 접두사가 사용되면 같은 네임스페이스로 바인딩되더라도 경로가 다르다고 간주됩니다. 이전 쿼리에서 FirstName, MiddleName 및 LastName 열은 동일한 EmpName 접두사를 공유합니다. 따라서 자식으로 추가 되는 `EmpName` 요소입니다. 이것은 경우에도 만들 때는 `Address` 이전 예제에서 요소입니다.  
+ 이어지는 여러 열이 같은 경로 접두사를 공유할 경우 같은 이름으로 함께 그룹화됩니다. 다른 네임스페이스 접두사가 사용되면 같은 네임스페이스로 바인딩되더라도 경로가 다르다고 간주됩니다. 이전 쿼리에서 FirstName, MiddleName 및 LastName 열은 동일한 EmpName 접두사를 공유하므로 `EmpName` 요소의 자식으로 추가됩니다. 이전 예제에서 `Address` 요소를 만들던 것도 이와 같은 경우입니다.  
   
 ## <a name="one-column-has-a-different-name"></a>하나의 열에 다른 이름이 있는 경우  
  이름이 다른 열이 중간에 나타나면 다음의 수정된 쿼리에서와 같이 그룹화가 해제됩니다. 쿼리는 FirstName 열과 MiddleName 열 사이에 주소 열을 추가하여 이전 쿼리에 지정된 대로 FirstName, MiddleName 및 LastName의 그룹화를 해제합니다.  
@@ -225,7 +225,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 따라서 쿼리에서는 두 개의 `EmpName` 요소입니다. 첫 번째 `EmpName` 요소에는 `FirstName` 자식 요소 및 두 번째 `EmpName` 요소에는 `MiddleName` 및 `LastName` 요소 자식이 있습니다.  
+ 그 결과 쿼리는 두 개의 `EmpName` 요소를 생성합니다. 첫 번째 `EmpName` 요소는 `FirstName` 요소 자식을 포함하고 두 번째 `EmpName` 요소는 `MiddleName` 및 `LastName` 요소 자식을 포함합니다.  
   
  다음은 결과입니다.  
   
@@ -248,4 +248,3 @@ FOR XML PATH
  [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   
-

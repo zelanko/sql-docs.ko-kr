@@ -2,29 +2,30 @@
 title: "파일 입/출력 API를 사용하여 FileTable 액세스 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-blob
+ms.suite: sql
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], accessing files with file APIs
+helpviewer_keywords: FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 726ad4c57ce295c4317132333f50867d9466151a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
-  FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
   
 ##  <a name="accessing"></a> FileTable에서 파일 I/O API 사용 시작  
  FileTable은 대개 Windows 파일 시스템 및 파일 I/O API를 통해 사용합니다. FileTable은 다양한 사용 가능한 파일 I/O API를 통한 비트랜잭션 액세스를 지원합니다.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> FileTable의 파일 및 디렉터리 삭제  
  모든 Windows 파일 I/O API 의미 체계는 파일 또는 디렉터리를 삭제하면 적용됩니다.  
   
--   디렉터리에 파일 하위 디렉터리가 있는 경우 디렉터리가 삭제되지 않습니다.  
+-   디렉터리에 파일 또는 하위 디렉터리가 있는 경우 디렉터리가 삭제되지 않습니다.  
   
 -   파일 또는 디렉터리를 삭제하면 FileTable에서 해당 행이 제거됩니다. 이 작업은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업을 통해 해당 행을 삭제하는 것과 같습니다.  
   
@@ -131,9 +132,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [FileTable로 파일 로드](../../relational-databases/blob/load-files-into-filetables.md)   
- [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [FileTable에서 디렉터리 및 경로 작업](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Transact-SQL을 사용하여 FileTable에 액세스](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [FileTable DDL, 함수, 저장 프로시저 및 뷰](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

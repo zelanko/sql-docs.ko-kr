@@ -1,37 +1,35 @@
 ---
 title: "데이터베이스 엔진 업그레이드 완료 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/21/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- server-general
+ms.suite: sql
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: f02ff71df24b1e1a8f6c17fd8c6edbdfa02c60a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 581e8cd7a43dd1e4c878cc56b49644e51d7a3a79
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="complete-the-database-engine-upgrade"></a>데이터베이스 엔진 업그레이드 완료
-
-SQL Server 업그레이드가 완료된 후에 추가로 수행해야 할 여러 단계가 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 업그레이드가 완료된 후에 추가로 수행해야 할 여러 단계가 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
   
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드한 후에 다음 태스크를 완료하세요.  
   
 - **데이터베이스 백업:** 각 데이터베이스의 전체 백업을 수행합니다.  
 
-- **새 기능 사용:** SQL Server 2016 및 SQL Server 2017에서는 데이터베이스에 대한 DATABASE_COMPATIBILITY 수준이 130 이상으로 변경된 경우에만 일부 변경 내용을 사용할 수 있습니다.  자세한 내용 및 권장되는 워크플로는 [데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)을 참조하세요.  
+- **새 기능 사용:** SQL Server 2016 및 SQL Server 2017에서는 데이터베이스에 대한 DATABASE_COMPATIBILITY 수준이 130 이상으로 변경된 경우에만 일부 변경 내용을 사용할 수 있습니다.  자세한 내용 및 권장되는 워크플로는 [데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)을 참조하세요. 데이터베이스에 SQL Server 2014에서 만든 메모리 최적화 테이블이 있는 경우 [메모리 최적화 테이블에 대한 통계](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)를 검토합니다.
   
 - **Integration Services:**  
   
@@ -45,4 +43,3 @@ SQL Server 업그레이드가 완료된 후에 추가로 수행해야 할 여러
   
 - **전체 텍스트 검색:** 쿼리 결과의 의미 일관성을 유지하기 위해 전체 텍스트 카탈로그를 다시 채웁니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.  
   
-
