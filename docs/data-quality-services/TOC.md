@@ -1,5 +1,5 @@
 # [개요](data-quality-services.md)  
-# [새로 추가되거나 최근에 업데이트된 문서](new-updated-data-quality-services.md)
+# [새로운 또는 업데이트 된 문서](new-updated-data-quality-services.md)
 
 # 개념 및 기능
 ## [Data Quality Services 소개](introduction-to-data-quality-services.md)  

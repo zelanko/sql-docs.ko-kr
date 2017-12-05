@@ -15,7 +15,7 @@
 #### [관리](partner-management-sql-server.md)
 #### [개발](partner-dev-sql-server.md)
 
-# [SQL Server에 대 한 문서를 최근에 업데이트](sql-server-new-updated-sql-docs-pr.md)
+# [새로운 또는 업데이트 된 문서](new-updated-sql-server.md)
 
 # 릴리스 정보
 

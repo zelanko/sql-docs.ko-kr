@@ -2,7 +2,7 @@
 
 # 개요
 ## [MDS(Master Data Services)의 새로운 기능](what-s-new-in-master-data-services-mds.md)  
-## [새로 추가되거나 최근에 업데이트된 문서](new-updated-master-data-services.md)
+## [새로운 또는 업데이트 된 문서](new-updated-master-data-services.md)
 ## [SQL Server Master Data Services에 대해 알아보기](learn-sql-server-master-data-services.md)  
 ## [SQL Server 샘플: 모델 배포 패키지(MDS)](sql-server-samples-model-deployment-packages-mds.md)  
 ## [SQL Server 2016 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](master-data-services-and-data-quality-services-features-support.md)  

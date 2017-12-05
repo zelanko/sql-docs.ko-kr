@@ -3,7 +3,7 @@
 # 개요
 ## [릴리스 정보](sql-server-linux-release-notes.md)
 ## [이 릴리스의 새로운 기능](sql-server-linux-whats-new.md)
-## [새로 추가되거나 최근에 업데이트된 문서](new-updated-linux.md)
+## [새로운 또는 업데이트 된 문서](new-updated-linux.md)
 ## [버전 및 지원되는 기능](sql-server-linux-editions-and-components-2017.md)
 
 # 빠른 시작

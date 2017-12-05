@@ -3,7 +3,7 @@
 # 개요
 ## [SQL Server Analysis Services 2016의 새로운 기능](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017의 새로운 기능](what-s-new-in-sql-server-analysis-services-2017.md) 
-## [새로 추가되거나 최근에 업데이트된 문서](new-updated-analysis-services.md)
+## [새로운 또는 업데이트 된 문서](new-updated-analysis-services.md)
 ## [도구 및 응용 프로그램](tools-and-applications-used-in-analysis-services.md)   
 ## [테이블 형식 및 다차원 솔루션 비교](comparing-tabular-and-multidimensional-solutions-ssas.md)  
 ## [SQL Server 2016 버전에서 지원하는 Analysis Services 기능](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   

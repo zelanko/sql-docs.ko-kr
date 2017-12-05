@@ -1,5 +1,5 @@
 # [개요](xquery-language-reference-sql-server.md)  
-# [새로 추가되거나 최근에 업데이트된 문서](new-updated-xquery.md)
+# [새로운 또는 업데이트 된 문서](new-updated-xquery.md)
 # [모듈 및 프롤로그 - XQuery 프롤로그](modules-and-prologs-xquery-prolog.md)  
 
 # [XQuery 기초](xquery-basics.md)  
