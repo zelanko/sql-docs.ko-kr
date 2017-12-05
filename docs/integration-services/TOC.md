@@ -3,7 +3,7 @@
 # 개요
 ## [SQL Server 2016 Integration Services의 새로운 기능](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [SQL Server 2017 Integration Services의 새로운 기능](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [새로 추가되거나 최근에 업데이트된 문서](new-updated-integration-services.md)
+## [새로운 또는 업데이트 된 문서](new-updated-integration-services.md)
 ## [SQL Server 버전에서 지원하는 Integration Services 기능](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services의 이전 버전과의 호환성](integration-services-backward-compatibility.md)
 

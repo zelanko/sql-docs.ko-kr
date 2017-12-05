@@ -1,5 +1,5 @@
 # [개요](database-features.md)
-# [새로 추가되거나 최근에 업데이트된 문서](new-updated-relational-databases.md)
+# [새로운 또는 업데이트 된 문서](new-updated-relational-databases.md)
 
 # [SQL Server 지침](sql-server-guides.md)
 ## Always On 가용성 그룹 문제 해결 및 모니터링 가이드

@@ -1,5 +1,5 @@
 # [개요](analysis-services-language-reference.md)  
-# [새로 추가되거나 최근에 업데이트된 문서](new-updated-mdx.md)
+# [새로운 또는 업데이트 된 문서](new-updated-mdx.md)
 
 # [MDX(Multidimensional Expressions) 참조](multidimensional-expressions-mdx-reference.md)  
 ## [MDX 구문 요소](mdx-syntax-elements-mdx.md)  

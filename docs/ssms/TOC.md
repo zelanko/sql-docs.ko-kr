@@ -4,7 +4,7 @@
 # 새로운 기능
 ## [SSMS 변경 로그 및 이전 릴리스](sql-server-management-studio-changelog-ssms.md)
 ## [릴리스 정보](download-sql-server-management-studio-ssms.md#release-notes)
-## [새로 추가되거나 최근에 업데이트된 문서](new-updated-ssms.md)
+## [새로운 또는 업데이트 된 문서](new-updated-ssms.md)
 
 # [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)
 
