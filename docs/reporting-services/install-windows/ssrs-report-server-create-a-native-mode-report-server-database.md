@@ -2,9 +2,12 @@
 title: "기본 모드 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4ff8ecdb60017ffdcc579b7f9bb6e19523d175a7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-native-mode-report-server-database"></a>기본 모드 보고서 서버 데이터베이스 만들기
 
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/09/2017
   
     1.  인증 유형을 지정합니다.  
   
-         이미 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하여 연결하려면 **데이터베이스 자격 증명**을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
+         이미 정의된 데이터베이스 로그인을 사용하여 연결하려면 **데이터베이스 자격 증명** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
   
          컴퓨터와 보고서 서버에 대한 로그온 권한을 가진 최소 권한 도메인 사용자 계정이 있는 경우에는 **Windows 자격 증명** 을 선택합니다.  
   
@@ -139,7 +142,7 @@ ms.lasthandoff: 11/09/2017
   
     1.  인증 유형을 지정합니다.  
   
-         이미 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하여 연결하려면 **데이터베이스 자격 증명**을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
+         이미 정의된 데이터베이스 로그인을 사용하여 연결하려면 **데이터베이스 자격 증명** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
   
          컴퓨터와 보고서 서버에 대한 로그온 권한을 가진 최소 권한 도메인 사용자 계정이 있는 경우에는 **Windows 자격 증명** 을 선택합니다.  
   

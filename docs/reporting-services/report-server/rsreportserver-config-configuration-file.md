@@ -2,9 +2,12 @@
 title: "RsReportServer.config 구성 파일 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 68a812ca454de6c9ee1784d33cfb5e0730957fbd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5f01391991a8e57d09da1888c541183962e488e5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 구성 파일
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 파일은 보고서 서버 웹 서비스 및 백그라운드 처리에 사용되는 설정을 저장합니다. 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램은 RSReportServer.config 파일에 저장된 구성 설정을 읽는 단일 프로세스 내에서 실행됩니다. 기본 모드 및 SharePoint 모드 보고서 서버에는 모두 RSReportServer.config가 사용되지만 두 모드가 구성 파일에서 모두 동일한 설정을 사용하지는 않습니다. 이 파일의 SharePoint 모드 버전은 SharePoint 모드의 설정 대부분이 파일이 아니라 SharePoint 구성 데이터베이스에 저장되기 때문에 더 작습니다. 이 항목에서는 기본 모드 및 SharePoint 모드에서 설치되는 기본 구성 파일과 구성 파일을 통해 제어되는 일부 중요한 설정 및 동작에 대해 설명합니다.  
@@ -86,7 +89,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**RunningRequestsScavengerCycle**|분리 및 만료 요청 취소 간격을 지정합니다. 이 값은 초 단위로 지정됩니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 60입니다.|N,S|  
 |**RunningRequestsDbCycle**|보고서 서버에서 실행 중인 작업을 평가하는 간격을 지정하여, 이러한 작업이 보고서 실행 제한 시간을 초과했는지와 웹 포털의 [작업 관리] 페이지에 실행 중인 작업 정보를 표시하는 시점을 확인합니다. 이 값은 초 단위로 지정됩니다. 유효한 값은 0에서 2147483647 사이입니다. 기본값은 60입니다.|N,S|  
 |**RunningRequestsAge**|실행 중인 작업의 상태를 "신규"에서 "실행 중"으로 변경할 시간 간격(초)을 지정합니다. 유효한 값은 0에서 2147483647 사이입니다. 기본값은 30입니다.|N,S|  
-|**MaxScheduleWait**|**다음 실행 시간**이 요청되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 일정을 업데이트하는 동안 보고서 서버 Windows 서비스가 대기하는 시간(초)을 지정합니다. 유효한 값은 1에서 60 사이입니다.<br /><br /> 기본 구성 파일에서는 MaxScheduleWait가 **5**로 설정되어 있습니다.<br /><br /> 보고서 서버에서 구성 파일을 찾지 못하거나 읽을 수 없는 경우 서버 기본값 MaxScheduleWait를 1로 설정합니다.|N,S|  
+|**MaxScheduleWait**|다음 실행 시간 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **이 요청되는 경우** 에이전트 서비스가 일정을 업데이트하는 동안 보고서 서버 Windows 서비스가 대기하는 시간(초)을 지정합니다. 유효한 값은 1에서 60 사이입니다.<br /><br /> 기본 구성 파일에서는 MaxScheduleWait가 **5**로 설정되어 있습니다.<br /><br /> 보고서 서버에서 구성 파일을 찾지 못하거나 읽을 수 없는 경우 서버 기본값 MaxScheduleWait를 1로 설정합니다.|N,S|  
 |**DisplayErrorLink**|오류 발생 시 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 도움말 및 지원 사이트에 대한 링크를 표시할지 여부를 나타냅니다. 이 링크는 오류 메시지에 나타납니다. 사용자는 링크를 클릭하여 해당 사이트에 대한 업데이트된 오류 메시지 내용을 열 수 있습니다. 유효한 값은 **True** (기본값) 및 **False**입니다.|N,S|  
 |**WebServiceuseFileShareStorage**|사용자 세션 동안 보고서 서버 웹 서비스에서 만든 캐시된 보고서와 임시 스냅숏을 파일 시스템에 저장할지 여부를 지정합니다. 유효한 값은 **True** 및 **False** (기본값)입니다. 이 값을 false로 설정하면 임시 데이터가 reportservertempdb 데이터베이스에 저장됩니다.|N,S|  
 |**WatsonFlags**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]에 보고되는 오류 조건에 대해 기록되는 정보의 양을 지정합니다.<br /><br /> 0x0430 = 전체 덤프<br /><br /> 0x0428 = 미니 덤프<br /><br /> 0x0002 = 덤프 없음|N,S|  

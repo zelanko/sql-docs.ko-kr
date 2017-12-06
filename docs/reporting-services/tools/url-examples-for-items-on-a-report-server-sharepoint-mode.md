@@ -2,9 +2,12 @@
 title: "보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d2dc3f1680651e6bcd0f4e4b714f567d1347e0c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7e74c53736485e3ee7745937e9e9dbd1de1b75e2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  
@@ -103,9 +106,9 @@ ms.lasthandoff: 11/09/2017
 |------------|-----------------|  
 |SharePoint 서버|`http://TestServer`|  
 |SharePoint 서버 사이트 또는 하위 사이트|`http://TestServer/toplevelsite/subsite`|  
-|**** 또는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 배포의 공유 문서 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 에 있는 Company Sales 예제 보고서|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|**또는** [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 배포의 공유 문서 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 에 있는 Company Sales 예제 보고서|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
 |**또는** 인스턴스의 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 폴더에 있는 Company Sales 샘플 보고서|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|**** 또는 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 인스턴스의 보고서 센터 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 에 있는 Company Sales 예제 보고서|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|**또는** [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 인스턴스의 보고서 센터 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 에 있는 Company Sales 예제 보고서|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> 제작 도구에서 SharePoint 라이브러리로 게시  
  보고서 제작 도구를 사용하여 보고서 및 관련 파일을 라이브러리에 게시하는 경우 파일은 추가되기 전에 유효한지 검사됩니다. SharePoint 라이브러리의 **업로드** 동작을 사용하여 보고서 및 관련 파일을 업로드하면 유효성 검사가 수행되지 않습니다. 보고서에 액세스하여 관리, 편집 또는 실행할 때까지 파일이 올바른지 여부를 확인할 수 없습니다.  
