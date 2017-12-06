@@ -2,9 +2,12 @@
 title: "데이터 원본 자격 증명 입력 대화 상자(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fcf572779105c0b6a8801a309cb50d012eb20f56
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f138527af00fdc334b316feb07071c356da840a8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>데이터 원본 자격 증명 입력 대화 상자(보고서 작성기)
   **데이터 원본 자격 증명 입력** 대화 상자를 사용하여 데이터 원본에서 데이터를 가져오기 위한 자격 증명을 제공할 수 있습니다.  

@@ -2,9 +2,12 @@
 title: "모바일 보고서에 계기 추가 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0702ee29dfab00296971fe36f2397720fd63ee28
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>모바일 보고서에 계기 추가 | Reporting Services
 계기는 모바일 보고서에서 가장 기본적이고 가장 널리 사용되는 시각화 개체입니다. 데이터 집합의 단일 값을 표시합니다. 값만 표시하거나 목표와 비교하여 값을 표시합니다.
@@ -41,11 +44,11 @@ SQL Server 모바일 보고서 게시자의 모든 계기에는 하나 이상의
 
 2. [Excel 또는 공유 데이터 집합의 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)를 가져옵니다.
 
-3. **데이터** 탭을 선택하고 **데이터 속성** 창의 **주 값**에서 데이터 테이블과 숫자 필드를 선택합니다.
+3. **데이터** 탭을 선택하고 **데이터 속성** 창의 **주 값** 에서 데이터 테이블과 숫자 필드를 선택합니다.
 
-3. 숫자 계기를 제외한 계기의 경우 **데이터 속성** 창의 **비교 값**에서 데이터 테이블과 숫자 필드를 선택합니다.
+3. 숫자 계기를 제외한 계기의 경우 **데이터 속성** 창의 **비교 값** 에서 데이터 테이블과 숫자 필드를 선택합니다.
 
-4. [옵션] 집계를 변경하려면 **옵션**을 선택한 후 다른 집계를 선택합니다.
+4. [옵션] 집계를 변경하려면 **옵션** 을 선택한 후 다른 집계를 선택합니다.
    
    >**참고**: 주 값에 대한 집계를 변경하는 경우 비교 값에 대한 집계도 변경하는 것이 좋습니다. 여러 집계 방법을 함께 사용할 수도 있습니다.  
 
@@ -64,7 +67,7 @@ SQL Server 모바일 보고서 게시자의 모든 계기에는 하나 이상의
 계기 요소를 데이터 필드에 연결하는 데이터 속성과 더불어 많은 기능 및 시각적 속성을 사용자 지정할 수도 있습니다. 
 
 ### <a name="set-value-direction-high-or-low-is-better"></a>값 방향(값이 높을수록 좋음 또는 값이 낮을수록 좋음) 설정
-* 계기를 선택한 다음 **시각적 속성** 창의 **레이아웃** 탭에서 **값 방향**을 **값이 높을수록 좋음** 또는 **값이 낮을수록 좋음**으로 설정합니다. 
+* 계기를 선택한 다음 **시각적 속성** 창의 **레이아웃** 탭에서 **값 방향** 을 **값이 높을수록 좋음** 또는 **값이 낮을수록 좋음**으로 설정합니다. 
 
 **값이 높을수록 좋음** 에서는 양수 값을 녹색으로 지정하여 바람직한 방향으로 변경된 사항을 나타낼지, 낮은 값을 빨간색으로 지정하여 바람직하지 않은 방향으로 변경된 사항을 나타낼지 결정합니다. 
 

@@ -2,9 +2,12 @@
 title: "암호화된 보고서 서버 데이터 저장(SSRS 구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,17 +24,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0727e4e4fa6290396d08bedbd1404722c18e6807
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f7ede2f08bd7f09eb4a3dd0be273225dc5ba6b8d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 암호화 키 - 암호화된 보고서 서버 데이터 저장
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 암호화된 값을 보고서 서버 데이터베이스와 구성 파일에 저장합니다. 암호화된 대부분의 값은 보고서에 데이터를 제공하는 외부 데이터 원본에 액세스하기 위한 자격 증명입니다. 이 항목에서는 암호화된 값, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용되는 암호화 기능 및 사용자가 알아야 할 기타 저장되는 기밀 데이터 유형에 대해 설명합니다.  
   
 ## <a name="encrypted-values"></a>암호화된 값  
- 다음 목록에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 설치할 때 저장되는 값에 대해 설명합니다.  
+ 다음 목록에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치할 때 저장되는 값에 대해 설명합니다.  
   
 -   내부 서버 데이터를 저장하는 보고서 서버 데이터베이스에 연결하기 위해 보고서 서버에서 사용하는 연결 정보 및 자격 증명  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
 -   보고서에 데이터를 제공하는 외부 데이터 원본에 연결하기 위해 보고서 서버에서 사용하는 저장된 자격 증명  
   
-     이러한 값은 보고서에 대한 데이터 원본 정보를 구성할 때 정의된 후 보고서 서버 데이터베이스에 암호화된 값으로 저장됩니다. 보고서 서버는 대칭 키를 사용하여 이 데이터를 암호화 및 해독합니다. 저장 프로시저에 대한 자세한 내용은 [온라인 설명서의](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 참조하세요.  
+     이러한 값은 보고서에 대한 데이터 원본 정보를 구성할 때 정의된 후 보고서 서버 데이터베이스에 암호화된 값으로 저장됩니다. 보고서 서버는 대칭 키를 사용하여 이 데이터를 암호화 및 해독합니다. 저장 프로시저에 대한 자세한 내용은 [온라인 설명서의](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 -   보고서에 사용되는 외부 이미지 파일이나 외부 데이터를 검색하기 위해 보고서 서버에서 다른 컴퓨터에 연결하는 데 사용하는 무인 사용자 계정  
   

@@ -2,9 +2,12 @@
 title: "보고서에 다중 값 매개 변수 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: dd7b6d4607b86ec03f2c84fe1f7f8a05d1035885
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 432b672062ff2267473f519fd32e1b039d05afe4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>보고서에 다중 값 매개 변수 추가
   사용자가 매개 변수에 둘 이상의 값을 선택할 수 있는 보고서에 매개 변수를 추가할 수 있습니다.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  보고서 데이터 집합을 마우스 오른쪽 단추로 클릭한 다음 **데이터 집합 속성**을 클릭합니다.  
   
-3.  **쿼리** 상자에서 쿼리 텍스트를 편집하거나 쿼리 디자이너를 사용하여 필터를 추가하여 변수를 데이터 집합에 추가합니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 작성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)을 참조하세요.  
+3.  **쿼리** 상자에서 쿼리 텍스트를 편집하거나 쿼리 디자이너를 사용하여 필터를 추가하여 변수를 데이터 집합에 추가합니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 빌드&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)를 참조하세요.  
   
     ```  
     WHERE  

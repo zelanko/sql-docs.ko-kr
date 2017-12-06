@@ -2,9 +2,12 @@
 title: "사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 829a00acf7b22870fe185cd6c2c0a37338dee938
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 746ca3586d58f561278eb25ad9459e6102b8b55a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기
   사용자 지정 보고서 항목 디자인 타임 구성 요소는 Visual Studio 보고서 디자이너 환경에서 사용할 수 있는 컨트롤입니다. 사용자 지정 보고서 항목 디자인 타임 구성 요소는 끌어서 놓기 작업이 가능하고 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 속성 브라우저와 통합되고 사용자 지정 속성 편집기를 제공하는 활성화된 디자인 화면을 제공합니다.  
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  사용자 지정 보고서 항목 디자인 타임 구성 요소는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현됩니다. 이 문서에서는 사용자 지정 보고서 항목 디자인 타임 구성 요소와 관련된 구현 세부 사항을 설명합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 구성 요소를 개발하는 방법은 MSDN 라이브러리에서 [Visual Studio의 구성 요소](http://go.microsoft.com/fwlink/?LinkId=116576)를 참조하십시오.  
   
- 완전히 구현된 사용자 지정 보고서 항목 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
+ 완전히 구현된 사용자 지정 보고서 항목 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="implementing-a-design-time-component"></a>디자인 타임 구성 요소 구현  
  사용자 지정 보고서 항목 디자인 타임 구성 요소의 주 클래스는 **Microsoft.ReportDesigner.CustomReportItemDesigner** 클래스에서 상속됩니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 컨트롤에 사용된 표준 특성 외에, 구성 요소 클래스에서 **CustomReportItem** 특성을 정의해야 합니다. 이 특성은 reportserver.config 파일에 정의된 사용자 지정 보고서 항목의 이름과 일치해야 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 특성 목록은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 설명서에서 "특성(Attributes)"을 참조하십시오.  

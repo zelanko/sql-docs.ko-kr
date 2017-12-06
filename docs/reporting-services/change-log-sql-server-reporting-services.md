@@ -2,7 +2,7 @@
 title: "SQL Server Reporting Services의 변경 로그 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/07/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,11 +14,11 @@ author: casualoak
 ms.author: deliant
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 267476e515fb91399d313bb3b334f490dfcbcad2
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: ef823d2e633438262bd0f2dbbe19337d0e1fa4ef
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>SQL Server Reporting Services의 변경 로그
 
@@ -33,6 +33,7 @@ ms.lasthandoff: 11/11/2017
 
   - *버전 14.0.600.451, 릴리스됨: 2017년 9월 30일* 
     - 초기 릴리스
+
 ## <a name="next-steps"></a>다음 단계
 
 [Reporting Services(SSRS)의 새로운 기능](what-s-new-in-sql-server-reporting-services-ssrs.md)   

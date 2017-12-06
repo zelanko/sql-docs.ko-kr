@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 224731f2d3c4bfa4b1bfd9884a3daf374d813bb5
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="json-data-sql-server"></a>JSON 데이터(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -279,7 +279,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 -   행으로 구분된 JSON 파일이 Azure Blob 저장소 또는 Hadoop 파일 시스템에 저장된 경우 Polybase를 사용하여 JSON 텍스트를 로드하고 Transact-SQL 코드에서 구문 분석한 후 테이블에 로드할 수 있습니다.  
   
 ## <a name="test-drive-built-in-json-support"></a>기본 제공 JSON 지원 시험 사용  
- **AdventureWorks 예제 데이터베이스를 사용하여 드라이브 기본 제공 JSON 지원을 시험 사용합니다.** AdventureWorks 예제 데이터베이스를 가져오려면 [여기](https://www.microsoft.com/en-us/download/details.aspx?id=49502). 예제 데이터베이스를 SQL Server 2016 인스턴스로 복원한 후 예제 파일의 압축을 풀고 JSON 폴더에서 "JSON Sample Queries procedures views and indexes.sql" 파일을 엽니다. 이 파일의 스크립트를 실행하여 일부 기존 데이터의 서식을 JSON 데이터로 다시 지정하고, JSON 데이터에 대한 쿼리 및 보고서를 실행하고, JSON 데이터를 인덱싱하고, JSON을 가져오고 내보냅니다.  
+ **AdventureWorks 예제 데이터베이스를 사용하여 드라이브 기본 제공 JSON 지원을 시험 사용합니다.** AdventureWorks 예제 데이터베이스를 가져오려면 [여기](https://www.microsoft.com/download/details.aspx?id=49502). 예제 데이터베이스를 SQL Server 2016 인스턴스로 복원한 후 예제 파일의 압축을 풀고 JSON 폴더에서 "JSON Sample Queries procedures views and indexes.sql" 파일을 엽니다. 이 파일의 스크립트를 실행하여 일부 기존 데이터의 서식을 JSON 데이터로 다시 지정하고, JSON 데이터에 대한 쿼리 및 보고서를 실행하고, JSON 데이터를 인덱싱하고, JSON을 가져오고 내보냅니다.  
   
  파일에 포함된 스크립트를 통해 수행할 수 있는 작업은 다음과 같습니다.  
   

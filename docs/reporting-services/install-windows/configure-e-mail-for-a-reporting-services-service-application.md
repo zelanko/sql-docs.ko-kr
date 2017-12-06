@@ -2,9 +2,12 @@
 title: "Reporting Services 서비스 응용 프로그램에 대한 전자 메일 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ad03be92870b2b6829d42d92a2faebc0ff9fe4e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c5793b034bb69eeb35328de952736a5420889fa7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Reporting Services 서비스 응용 프로그램에 대한 전자 메일 구성
 
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  **이름** 목록에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 클릭합니다.  
   
-4.  **Reporting Services 응용 프로그램 관리** 페이지에서 **메일 설정**을 클릭합니다.  
+4.  **Reporting Services 응용 프로그램 관리** 페이지에서 **메일 설정** 을 클릭합니다.  
   
 5.  **SMTP 서버 사용**을 선택합니다.  
   
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
     -   메일 전송 실패: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 클라이언트가 인증되지 않았습니다. 메일이 다시 전송되지 않습니다.  
   
-     "2" 값을 사용하도록 **SMTP 인증**을 변경합니다. 이 값은 사용자 인터페이스에서 변경할 수 없습니다. 다음 PowerShell 스크립트 예에서 "SSRS_TESTAPPLICATION" 서비스 응용 프로그램에 대해 보고서 서버 전자 메일 배달 확장 프로그램의 전체 구성을 업데이트합니다. 또한 예를 들어 "보낸 사람" 주소와 같이 스크립트에 나열된 일부 노드는 사용자 인터페이스에서 설정할 수 있습니다.  
+     "2" 값을 사용하도록 **SMTP 인증** 을 변경합니다. 이 값은 사용자 인터페이스에서 변경할 수 없습니다. 다음 PowerShell 스크립트 예에서 "SSRS_TESTAPPLICATION" 서비스 응용 프로그램에 대해 보고서 서버 전자 메일 배달 확장 프로그램의 전체 구성을 업데이트합니다. 또한 예를 들어 "보낸 사람" 주소와 같이 스크립트에 나열된 일부 노드는 사용자 인터페이스에서 설정할 수 있습니다.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  

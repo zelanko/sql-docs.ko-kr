@@ -2,9 +2,12 @@
 title: "5단원: 보고서 마법사를 사용하여 하위 보고서 디자인 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b84722749ad94251c057a43858e2da98b37d2adb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c5b77256ba8316c5e8a30e507aed89e5de14e073
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>5단원: 보고서 마법사를 사용하여 자식 보고서 디자인
 자식 보고서에 대한 데이터 테이블 및 데이터 연결을 만든 후에는 보고서 디자이너의 보고서 마법사를 사용하여 자식 보고서를 디자인합니다. 보고서 디자이너에 대한 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  
@@ -42,21 +45,21 @@ ms.lasthandoff: 11/09/2017
   
 6.  **필드 정렬** 페이지에서 다음을 수행합니다.  
   
-    1.  **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**및 **StockedQty**를 **사용 가능한 필드** 에서 **값** 상자로 끌어옵니다.  
+    1.  **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**및 **StockedQty** 를 **사용 가능한 필드** 에서 **값** 상자로 끌어옵니다.  
   
-    2.  **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)** 및 **Sum(StockedQty)** 옆에 있는 화살표를 선택하고 **합계** 선택을 취소합니다.  
+    2.  **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)**및 **Sum(StockedQty)** 옆에 있는 화살표를 선택하고 **합계** 선택을 취소합니다.  
   
-7.  **다음**을 두 번 선택한 다음 **마침**을 선택하여 **보고서 마법사**를 닫습니다.  
+7.  **다음** 을 두 번 선택한 다음 **마침** 을 선택하여 **보고서 마법사**를 닫습니다.  
   
     이제 .rdlc 파일을 만드는 작업을 마쳤습니다. 보고서 디자이너에서 파일이 열립니다. 디자인한 테이블릭스가 이제 디자인 화면에 표시됩니다.  
   
 8.  .rdlc 파일이 열려 있는 상태에서 다음을 수행하여 매개 변수를 추가합니다.  
   
-    1.  **보고서 데이터** 창의 **매개 변수**를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 추가**를 선택합니다.  
+    1.  **보고서 데이터** 창의 **매개 변수** 를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 추가**를 선택합니다.  
   
-    2.  **이름** 상자에 **productid**를 입력합니다.  
+    2.  **이름** 상자에 **productid** 를 입력합니다.  
   
-    3.  **데이터 형식** 목록 상자에서 **정수**를 선택했는지 확인합니다.  
+    3.  **데이터 형식** 목록 상자에서 **정수** 를 선택했는지 확인합니다.  
   
     4.  **확인**을 클릭합니다.  
   

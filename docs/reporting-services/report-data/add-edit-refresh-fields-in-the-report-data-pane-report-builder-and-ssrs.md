@@ -2,9 +2,12 @@
 title: "보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: c1c0be54c8cfba5a8cde5e7b79deb6f8ef15f561
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d281817c0f02cf04c76b5680c8bff26b09bcc6bc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기 및 SSRS)
   데이터 집합 필드는 외부 데이터 원본에서 데이터 집합 쿼리를 실행할 때 반환되는 데이터를 나타내는 기본 제공 필드 이름 컬렉션입니다.  
@@ -29,7 +32,7 @@ ms.lasthandoff: 11/09/2017
   
  공유 데이터 집합의 경우 데이터 집합 필드는 보고서에 해당 데이터 집합을 추가했을 때 공유 데이터 집합 정의에 있는 필드입니다. 보고서 서버의 공유 데이터 집합 쿼리가 보고서를 실행할 때 항상 사용되지만 보고서의 데이터 집합 필드 목록은 고정되어 있습니다.  
   
- **필드 새로 고침**을 사용하여 보고서의 필드 목록을 공유 데이터 집합 쿼리에서의 현재 필드 목록과 일치하도록 업데이트할 수 있습니다. 필드 목록을 새로 고치는 경우 보고서에서 정의하는 계산 필드는 영향을 받지 않습니다.  
+ **필드 새로 고침** 을 사용하여 보고서의 필드 목록을 공유 데이터 집합 쿼리에서의 현재 필드 목록과 일치하도록 업데이트할 수 있습니다. 필드 목록을 새로 고치는 경우 보고서에서 정의하는 계산 필드는 영향을 받지 않습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

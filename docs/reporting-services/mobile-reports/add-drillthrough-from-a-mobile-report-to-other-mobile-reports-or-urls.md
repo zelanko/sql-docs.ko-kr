@@ -2,9 +2,12 @@
 title: "모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9133e86862ec5cf234b87e598d152811dced75c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4f0e806151dc625d25b159b064fbc84edf0a4b94
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서의 계기, 차트 또는 데이터 표에서 다른 모바일 보고서 또는 사용자 지정 URL로의 드릴스루를 추가할 수 있습니다. 
 
-*드릴스루*는 다른 대상 보고서나 URL을 여는 원본 보고서의 링크입니다. 대체로 대상 드릴스루 보고서에는 요약 보고서의 일부 항목에 대한 세부 정보가 포함되어 있습니다. 원본 모바일 보고서에 따라 하나 이상의 매개 변수를 대상 모바일 보고서에 전달하거나 사용자 지정 URL에 통합할 수 있습니다.  
+*드릴스루*  는 다른 대상 보고서나 URL을 여는 원본 보고서의 링크입니다. 대체로 대상 드릴스루 보고서에는 요약 보고서의 일부 항목에 대한 세부 정보가 포함되어 있습니다. 원본 모바일 보고서에 따라 하나 이상의 매개 변수를 대상 모바일 보고서에 전달하거나 사용자 지정 URL에 통합할 수 있습니다.  
   
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 원본 모바일 보고서를 보고 드릴스루 대상이 있는 요소를 선택하면 다른 모바일 보고서나 URL인 해당 대상으로 이동합니다.  
 

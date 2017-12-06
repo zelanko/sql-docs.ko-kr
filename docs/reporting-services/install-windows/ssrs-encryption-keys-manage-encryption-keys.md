@@ -2,9 +2,12 @@
 title: "암호화 키 구성 및 관리(SSRS 구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 798344004af25af275625a88f4569acca84c8eb6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b19b3aa513ed38faa40439b256c83607574aef89
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 암호화 키를 사용하여 보고서 서버 데이터베이스에 저장된 연결 정보 및 자격 증명을 보호합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 암호화는 중요한 데이터를 보호하는 데 사용되는 공개 키, 개인 키 및 대칭 키의 조합을 통해 지원됩니다. 대칭 키는 보고서 서버의 설치 또는 구성 과정에서 보고서 서버를 초기화하는 동안 생성되며, 보고서 서버에서 이 서버에 저장된 중요한 데이터를 암호화하는 데 사용됩니다. 공개 키 및 개인 키는 운영 체제에서 생성되며 대칭 키를 보호하는 데 사용됩니다. 보고서 서버 데이터베이스의 중요한 데이터를 저장하는 각 보고서 서버 인스턴스당 하나의 공개 키 및 개인 키 쌍이 생성됩니다.  

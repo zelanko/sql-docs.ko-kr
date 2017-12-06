@@ -2,9 +2,12 @@
 title: "5단원: 보고서 서식 지정(Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a59d1082e60e358e1447838997192791950c41ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a83a6615e75b3051793318f71d8bb84c427b360e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 이제 Sales Orders 보고서에 데이터 영역과 일부 필드를 추가했으므로 날짜 및 통화 필드와 열 머리글의 서식을 지정할 수 있습니다.  
@@ -77,13 +80,13 @@ ms.lasthandoff: 11/09/2017
 2.  열 핸들 사이의 선에 커서를 두면 커서가 양방향 화살표로 바뀝니다. 이 상태에서 열을 끌어 크기를 원하는 대로 조정합니다.
  ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)   
   
-3.  열 머리글 레이블이 있는 행을 선택하고 **서식** 메뉴에서 **글꼴**을 가리킨 다음 **굵게**를 클릭합니다.  
+3.  열 머리글 레이블이 있는 행을 선택하고 **서식** 메뉴에서 **글꼴** 을 가리킨 다음 **굵게**를 클릭합니다.  
   
 4.  보고서를 미리 보려면 **미리 보기** 탭을 클릭합니다. 다음과 비슷합니다.  
   
-    ![열 머리글이 굵게 설정된 테이블의 미리 보기](../reporting-services/media/rs-basictabledetailsformattedpreview.png "열 머리글이 굵게 설정된 테이블의 미리 보기")  
+    ![열 헤더가 굵게 설정된 테이블의 미리 보기](../reporting-services/media/rs-basictabledetailsformattedpreview.png "열 헤더가 굵게 설정된 테이블의 미리 보기")  
   
-5.  **파일** 메뉴에서 **모두 저장**을 클릭하여 보고서를 저장합니다.  
+5.  **파일** 메뉴에서 **모두 저장** 을 클릭하여 보고서를 저장합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
 열 머리글과 날짜 및 통화 값의 서식을 성공적으로 지정했습니다. 그 다음은 보고서에 그룹화 및 합계를 추가하는 단계입니다. [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)를 참조하세요.  

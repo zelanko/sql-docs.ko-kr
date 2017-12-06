@@ -2,9 +2,12 @@
 title: "차트에 테두리 프레임 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cd04a33dda250309bb7f4463bca2f91eb5bd6861
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 199653df3e60e7c13c8fe96b011903e2daf0cf19
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>차트에 테두리 프레임 추가(보고서 작성기 및 SSRS)
   차트에 시각적 효과를 주려면 차트 바깥쪽 둘레에 테두리 프레임을 사용해 보십시오. **차트 속성** 대화 상자를 사용하거나 속성 창을 사용하여 테두리 프레임을 선택할 수 있습니다. 차트 테두리 프레임은 다른 데이터 영역에 적용할 수 없습니다.  
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/09/2017
 1.  차트의 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **차트 속성**을 선택합니다.  
   
     > [!NOTE]  
-    >  **차트 속성**이 표시되지 않는 경우 바로 가기 메뉴에서 **차트**를 가리키고 **차트 속성**을 선택하세요.  
+    >  **차트 속성**이 표시되지 않는 경우 바로 가기 메뉴에서 **차트** 를 가리키고 **차트 속성**을 선택하세요.  
   
 2.  **테두리**를 선택하고 차트에 적용할 테두리 유형을 클릭합니다.  
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 4.  차트 둘레에 테두리로 그려질 선의 색을 지정합니다(옵션).  
   
     > [!NOTE]  
-    >  **선 색** 목록에는 일반적이 색이 포함되어 있습니다. 다른 색 목록에서 선택하려면 목록에서 **다른 색**을 클릭하거나 목록 옆의 식 단추 (**fx**)를 클릭하여 **식** 편집기를 엽니다.  
+    >  **선 색** 목록에는 일반적이 색이 포함되어 있습니다. 다른 색 목록에서 선택하려면 목록에서 **다른 색** 을 클릭하거나 목록 옆의 식 단추 (**fx**)를 클릭하여 **식** 편집기를 엽니다.  
   
 5.  테두리의 두께를 지정합니다(옵션). 유효한 값은 0.25-20pt입니다. 최상의 시각 효과를 위해 테두리 크기를 1-3pt로 유지하십시오.  
   

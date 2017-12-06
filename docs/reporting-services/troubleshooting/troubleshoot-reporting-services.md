@@ -2,9 +2,12 @@
 title: "Reporting Services 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/25/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2604d4a97574fa0c8860c338b625a87f5a9d2b30
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c6c2421f29b750a5616f1f86ef69fc197566e0cb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services 문제 해결
   이 섹션의 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 관련된 문제를 식별하고 해결하는 데 도움이 됩니다.  

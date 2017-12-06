@@ -2,9 +2,12 @@
 title: "공유 데이터 집합 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a7ff9770deac8363b38390c74a79bfe2a582c164
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 946210d52bfd883e4cf26e2664fef9254f7e6086
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-shared-datasets"></a>공유 데이터 집합 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 공유 데이터 집합은 외부 데이터 원본에 연결되는 공유 데이터 원본에서 데이터를 검색합니다. 공유 데이터 집합을 사용하면 쿼리를 공유하여 여러 보고서에서 일관성 있는 데이터 집합을 제공할 수 있습니다. 데이터 집합 쿼리에는 데이터 집합 매개 변수를 포함할 수 있습니다. 처음 사용할 때 또는 일정을 지정하여 특정 매개 변수 조합에 대해 쿼리 결과를 캐시하도록 공유 데이터 집합을 구성할 수 있습니다. 공유 데이터 집합 캐싱을 보고서 캐싱 및 보고서 데이터 피드와 함께 사용하면 데이터 원본에 대한 액세스를 쉽게 관리할 수 있습니다.  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/09/2017
 |-|-|  
 |이름 편집|공유 데이터 집합의 이름을 변경합니다. 종속 항목에서의 참조는 계속 작동합니다.|  
 |설명 편집|공유 데이터 집합에 대한 설명을 변경합니다.|  
-|쿼리 실행 제한 시간 편집|쿼리 실행 제한 시간(초)을 설정합니다. 0초는 시간 제한이 없음을 의미합니다. 데이터 집합 쿼리 시간이 초과되기 전까지의 시간(초)을 결정합니다. 제한 시간 값을 지정하지 않으려면 0을 사용합니다. 자세한 내용은 [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)을 참조하세요.|  
+|쿼리 실행 제한 시간 편집|쿼리 실행 제한 시간(초)을 설정합니다. 0초는 시간 제한이 없음을 의미합니다. 데이터 집합 쿼리 시간이 초과되기 전까지의 시간(초)을 결정합니다. 제한 시간 값을 지정하지 않으려면 0을 사용합니다. 자세한 내용은 [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)를 참조하세요.|  
 |종속 항목 보기|게시된 보고서 파트, 공유 데이터 원본 및 보고서와 같은 공유 데이터 집합을 사용하는 항목을 볼 수 있습니다.|  
   
  다음과 같은 추가 공유 데이터 집합 속성이 자동으로 구성됩니다.  

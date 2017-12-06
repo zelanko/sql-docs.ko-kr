@@ -2,9 +2,12 @@
 title: "보고서 작성기 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/22/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 03ea560675e5b89228ab3faa99a9d2c37586b4b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a38071816dbd945ce1b18336feedc28c5d91e73
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-report-builder"></a>보고서 작성기 설치
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 는 사용자나 관리자가 컴퓨터에 설치하는 독립 실행형 앱입니다. 이 응용 프로그램은 Microsoft 다운로드 센터, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 설치할 수 있습니다.  
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  [Microsoft 다운로드 센의 보고서 작성기 페이지](http://go.microsoft.com/fwlink/?LinkID=734968) 에서 **다운로드**를 클릭합니다.  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 에서 다운로드를 마치면 **실행**을 클릭합니다.  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 에서 다운로드를 마치면  **실행**을 클릭합니다.  
   
      그러면 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 마법사가 실행됩니다.  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  [Microsoft 다운로드 센의 보고서 작성기 페이지](http://go.microsoft.com/fwlink/?LinkID=734968)에서 **다운로드**를 클릭합니다.  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 에서 다운로드를 마치면 **저장**을 클릭합니다.  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 에서 다운로드를 마치면  **저장**을 클릭합니다.  
   
 3.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   

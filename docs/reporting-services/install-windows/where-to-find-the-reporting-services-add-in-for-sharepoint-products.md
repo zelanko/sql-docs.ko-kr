@@ -1,10 +1,13 @@
 ---
 title: "SharePoint 제품용 Reporting Services 추가 기능 검색 위치 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/30/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,15 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 950b4a8752cacb863b8e345d2e7d96efe6d28b83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8eb8487f5088021efac775582be855b25af72201
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
 
-SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]) 추가 기능(rssharepoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.  
+SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ) 추가 기능(rssharepoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.  
   
 > [!IMPORTANT]  
 >  지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능, 보고서 서버 및 SharePoint 조합의 목록은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능 조합&#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)을 참조하세요.  

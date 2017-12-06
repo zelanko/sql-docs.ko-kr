@@ -2,9 +2,12 @@
 title: "Excel 2003 행 제한 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 764b6da1c5ea43d02d7b5b950aa056434acf1a12
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0d072af55bef63a0c7813bf6c3593a9bfc0af1a5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   이 항목에서는 페이지를 매긴 보고서를 Excel로 내보낼 때 Excel 2003 행 제한을 해결하는 방법을 설명합니다. 테이블만 포함하는 보고서에 대한 해결 방법입니다.  
@@ -34,11 +37,11 @@ ms.lasthandoff: 11/09/2017
   
 1.  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 엽니다.  
   
-2.  테이블에서 데이터 행을 마우스 오른쪽 단추로 클릭한 다음 **그룹 추가** > **상위 그룹**을 클릭하여 외부 테이블 그룹을 추가합니다.  
+2.  테이블에서 데이터 행을 마우스 오른쪽 단추로 클릭한 다음 **그룹 추가** > **상위 그룹** 을 클릭하여 외부 테이블 그룹을 추가합니다.  
   
      ![부모 그룹 선택](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "부모 그룹 선택")  
   
-3.  **그룹화 방법** 식 상자에 다음 수식을 입력한 다음 **확인**을 클릭하여 상위 그룹을 추가합니다.  
+3.  **그룹화 방법** 식 상자에 다음 수식을 입력한 다음 **확인** 을 클릭하여 상위 그룹을 추가합니다.  
   
      =Int((RowNumber(Nothing)-1)/65000)  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
      ![그룹 열 삭제](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "그룹 열 삭제")  
   
-5.  **행 그룹** 섹션에서 **그룹 1**을 마우스 오른쪽 단추로 클릭한 다음 **그룹 속성**을 클릭합니다.  
+5.  **행 그룹** 섹션에서 **그룹 1** 을 마우스 오른쪽 단추로 클릭한 다음 **그룹 속성**을 클릭합니다.  
   
      ![그룹 속성 보기](../../reporting-services/report-builder/media/groupproperties-updated.png "그룹 속성 보기")  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
   
      ![기본 정렬 삭제](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "기본 정렬 삭제")  
   
-7.  **페이지 나누기** 페이지에서 **각 그룹 인스턴스 사이**를 클릭한 다음 **확인**을 클릭합니다.  
+7.  **페이지 나누기** 페이지에서 **각 그룹 인스턴스 사이** 를 클릭한 다음 **확인**을 클릭합니다.  
   
      ![페이지 나누기 설정](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "페이지 나누기 설정")  
   

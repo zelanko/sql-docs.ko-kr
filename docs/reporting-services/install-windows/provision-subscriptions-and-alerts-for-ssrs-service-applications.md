@@ -2,9 +2,12 @@
 title: "SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/03/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a96245405f8f13de983215100cde3b189e2b0f17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f6a21d71f31380543a74db37bd70061a3fe848a0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 데이터 경고에는 SQL Server 에이전트가 필요하며 SQL Server 에이전트에 대한 사용 권한 구성이 필요합니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트하거나 확인해야 합니다. 이 항목의 범위는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이며, 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 사용하여 SQL Server 에이전트의 사용 권한을 업데이트하는 세 가지 방법에 대해 설명합니다. 이 항목의 단계에 사용하는 자격 증명에는 서비스 응용 프로그램, msdb 및 master 데이터베이스의 개체를 위한 RSExecRole에 실행 권한을 부여하기에 충분한 사용 권한이 있어야 합니다.  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  **상태 보기** 영역에서 SQL Server 에이전트가 실행되고 있는지 확인하십시오.  
   
-5.  **스크립트 다운로드**를 클릭하여 SQL Server Management Studio에서 권한 부여를 위해 실행할 수 있는 Transact-SQL 스크립트를 다운로드합니다. 만들어진 스크립트 파일 이름에는 Reporting Services 서비스 응용 프로그램의 이름이 포함됩니다(예: **[서비스 응용 프로그램 이름]-GrantRights.sql**).  
+5.  **스크립트 다운로드** 를 클릭하여 SQL Server Management Studio에서 권한 부여를 위해 실행할 수 있는 Transact-SQL 스크립트를 다운로드합니다. 만들어진 스크립트 파일 이름에는 Reporting Services 서비스 응용 프로그램의 이름이 포함됩니다(예: **[서비스 응용 프로그램 이름]-GrantRights.sql**).  
   
 ### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>PowerShell을 사용하여 Transact-SQL 문을 만들려면  
   
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  **시작** 메뉴에서 **모든 프로그램**을 클릭합니다.  
   
-3.  **Microsoft SharePoint 2016 제품**을 확장하고 **Microsoft SharePoint 2016 관리 셸**을 클릭합니다.
+3.  **Microsoft SharePoint 2016 제품** 을 확장하고 **Microsoft SharePoint 2016 관리 셸**을 클릭합니다.
   
 4.  보고서 서버 데이터베이스, 응용 프로그램 풀 계정 및 문 경로의 이름을 바꾸어 다음 PowerShell cmdlet을 업데이트합니다.  
   
@@ -93,7 +96,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Transact-SQL 스크립트를 로드하려면  
   
-1.  SQL Server Management Studio를 열려면 **시작** 메뉴에서 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]을(를) 클릭하고 **SQL Server Management Studio**를 클릭합니다.  
+1.  SQL Server Management Studio를 열려면 **시작** 메뉴에서 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 을(를) 클릭하고 **SQL Server Management Studio**를 클릭합니다.  
   
 2.  **서버에 연결** 대화 상자에서 다음 옵션을 설정합니다.  
   

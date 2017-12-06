@@ -2,9 +2,12 @@
 title: "보고서에서 데이터 피드 생성(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8a7c1175f67ba636a71d6afa42679c45b5295ea2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 964f98b29cde97604f312808e9c31fdc5712689f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>보고서에서 데이터 피드 생성(보고서 작성기 및 SSRS)
 
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
      데이터 피드가 포함된 Atom 문서를 저장하거나 열지 확인하는 메시지가 나타납니다.  
   
-4.  **저장**을 클릭하여 파일 시스템에 문서를 저장하거나 저장하기 전에 **열기**를 클릭하여 문서 내용을 봅니다. **기본적으로 브라우저에서 문서가 열립니다.**  
+4.  **저장** 을 클릭하여 파일 시스템에 문서를 저장하거나 저장하기 전에 **열기** 를 클릭하여 문서 내용을 봅니다. **기본적으로 브라우저에서 문서가 열립니다.**  
   
 5.  문서를 저장할 위치를 찾습니다.  
   
@@ -74,7 +77,7 @@ ms.lasthandoff: 11/09/2017
   
      데이터 피드가 포함된 Atom 문서를 저장하거나 열지 확인하는 메시지가 나타납니다.  
   
-4.  **저장**을 클릭하여 파일 시스템에 문서를 저장하거나 저장하기 전에 **열기**를 클릭하여 데이터 피드를 봅니다.  
+4.  **저장** 을 클릭하여 파일 시스템에 문서를 저장하거나 저장하기 전에 **열기** 를 클릭하여 데이터 피드를 봅니다.  
   
 5.  문서를 저장할 위치를 찾습니다.  
   

@@ -2,9 +2,12 @@
 title: "모바일 보고서에 매개 변수 추가 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2acc30da2fa25f1cfedb1f07bcdadc4f9be9d295
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 120d86d046a3be19e179b9b27edc20ba3b044a9e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>모바일 보고서에 매개 변수 추가 | Reporting Services
 작성자와 보고서를 읽는 사람이 보고서를 필터링할 수 있도록 매개 변수가 있는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서를 작성할 수 있습니다. 매개 변수가 있는 보고서는 [원본 보고서에서 드릴스루](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)의 대상이 될 수도 있습니다. 
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
    ![SSMRP_SetParam](../../reporting-services/mobile-reports/media/ssmrp-setparam.png)  
      
-8. **미리 보기**를 선택하면 보고서가 표시되는 모양을 확인할 수 있습니다. 이 보고서에서 선택 목록은 범주 매개 변수를 사용합니다.
+8. **미리 보기** 를 선택하면 보고서가 표시되는 모양을 확인할 수 있습니다. 이 보고서에서 선택 목록은 범주 매개 변수를 사용합니다.
 
    ![sql-server-mobile-report-publisher-Selection-List-View-No-Selection](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
    

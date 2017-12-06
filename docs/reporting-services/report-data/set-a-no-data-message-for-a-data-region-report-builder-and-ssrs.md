@@ -2,9 +2,12 @@
 title: "데이터 영역에 대한 데이터 없음 메시지 설정(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7fdb370afe8d06b33d6e69bc0b2b1fc52c30c195
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e3c047bf57cea728e1a4c27695bb0fde35612da1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>데이터 영역에 대한 데이터 없음 메시지 설정(보고서 작성기 및 SSRS)
   렌더링된 보고서에서 데이터가 없는 데이터 영역의 자리에 텍스트가 표시되도록 지정하려면 테이블, 행렬 또는 목록 데이터 영역에 대해 NoRowsMessage 속성을 설정하거나 차트 데이터 영역에 대해 NoDataMessage를 설정하거나, 지도의 색 눈금에 대해 NoDataText를 설정합니다. 보고서 처리기는 런타임에 보고서의 각 데이터 집합에 대한 쿼리를 실행하며 해당 데이터 집합 쿼리에서 결과 집합이 생성되지 않을 수 있습니다. 빈 데이터 집합에 바인딩된 데이터 영역의 경우 빈 데이터 영역을 표시하는 대신 텍스트를 지정하여 표시할 수 있습니다. 또한 런타임에, 하위 보고서의 데이터 집합에 데이터가 없는 경우 하위 보고서의 NoRowsMessage 속성을 설정할 수 있습니다.  
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  속성 창에서 **NoRowsMessage** 속성 필드에 메시지로 표시할 텍스트를 입력합니다.  
   
-     또는 드롭다운 목록에서 **식**을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
+     또는 드롭다운 목록에서 **식** 을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
   
 ### <a name="to-set-the-nodatamessage-property-for-a-chart"></a>차트에 대해 NoDataMessage 속성을 설정하려면  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  **NoDataMessage**속성 필드에 메시지로 표시할 텍스트를 **캡션** 에 입력합니다.  
   
-     또는 드롭다운 목록에서 **식**을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
+     또는 드롭다운 목록에서 **식** 을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
   
 ### <a name="to-set-the-norowsmessage-for-a-subreport"></a>하위 보고서에 대해 NoRowsMessage를 설정하려면  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  속성 창에서 **NoRowsMessage** 속성 필드에 메시지로 표시할 텍스트를 입력합니다.  
   
-     또는 드롭다운 목록에서 **식**을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
+     또는 드롭다운 목록에서 **식** 을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
   
 ### <a name="to-set-the-nodatatext-property-for-a-color-scale-for-a-map"></a>지도의 색 눈금에 NoDataText 속성을 설정하려면  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  속성 창의 **NoDataText**에 데이터 값이 없는 색의 레이블로 표시할 텍스트를 입력합니다.  
   
-     또는 드롭다운 목록에서 **식**을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
+     또는 드롭다운 목록에서 **식** 을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   

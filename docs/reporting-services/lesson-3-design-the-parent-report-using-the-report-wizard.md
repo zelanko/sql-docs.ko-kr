@@ -2,9 +2,12 @@
 title: "3단원: 보고서 마법사를 사용하여 부모 보고서 디자인 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f07184dd7763bcfd710b1fd1f521665cca3785b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4b04f289e0505feb397b193f20077a8f91451a86
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>3단원: 보고서 마법사를 사용하여 부모 보고서 디자인
 부모 보고서에 대한 데이터 테이블 및 데이터 연결을 만든 후에는 보고서 디자이너의 보고서 마법사를 사용하여 부모 보고서를 디자인합니다. 보고서 디자이너에 대한 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  
@@ -36,17 +39,17 @@ ms.lasthandoff: 11/09/2017
   
 4.  **데이터 집합 속성** 페이지의 **데이터 원본** 상자에서, **2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의** 에서 만든 [DataSet1](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)을 선택합니다.  
   
-    **사용 가능한 데이터 집합** 상자가 위에서 만든 **DataTable**로 자동 업데이트됩니다.  
+    **사용 가능한 데이터 집합** 상자가 위에서 만든 **DataTable** 로 자동 업데이트됩니다.  
   
 5.  **다음**을 선택합니다.  
   
 6.  **필드 정렬** 페이지에서 다음을 수행합니다.  
   
-    1.  **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel** 및 **ReorderLevel**을 **사용 가능한 필드** 에서 **값** 상자로 끌어옵니다.  
+    1.  **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**및 **ReorderLevel** 을 **사용 가능한 필드** 에서 **값** 상자로 끌어옵니다.  
   
     2.  **Sum(ProductID)**, **Sum(SafetyStockLevel)**, **Sum(ReorderLevel)** 옆에 있는 화살표를 선택하고 **합계** 선택을 취소합니다.  
   
-7.  **다음**을 두 번 선택한 다음 **마침**을 선택하여 **보고서 마법사**를 닫습니다.  
+7.  **다음** 을 두 번 선택한 다음 **마침** 을 선택하여 **보고서 마법사**를 닫습니다.  
   
     이제 .rdlc 파일을 만드는 작업을 마쳤습니다. 보고서 디자이너에서 파일이 열립니다. 디자인한 테이블릭스가 이제 디자인 화면에 표시됩니다.  
   

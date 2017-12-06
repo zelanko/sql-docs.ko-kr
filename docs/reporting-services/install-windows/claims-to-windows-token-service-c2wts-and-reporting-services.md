@@ -1,10 +1,13 @@
 ---
 title: "c2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services | Microsoft Docs"
-ms.custom: The Claims to Windows Token Service (C2WTS) is used by SharePoint and needs to be configured for Kerberos constrained delegation to work with SQL Server Reporting Services properly.
+ms.custom: 
 ms.date: 09/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7c5c7adfdfc1774da8f8b2a9d89e712f4902e4d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 26cd4774a97365950e28bc1011d3a0203886659f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
 
@@ -67,7 +70,7 @@ C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한�
         * **지정한 서비스에 대한 위임용으로만 이 사용자 트러스트** 선택
         * **모든 인증 프로토콜 사용** 선택
 
-    * **추가**를 선택하여 위임할 서비스를 추가합니다.
+    * **추가** 를 선택하여 위임할 서비스를 추가합니다.
 
     * **사용자 또는 컴퓨터...***를 선택하고 서비스를 호스트하는 계정을 입력합니다. 예를 들어 *sqlservice*라는 계정으로 SQL Server를 실행 중이면 `sqlservice`를 입력합니다. 
 

@@ -2,9 +2,12 @@
 title: "SharePoint 사용자용 데이터 경고 관리자 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 65e857b83f1f9821601492542ef87aa9fa57fddb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9be2f3ce93ac00a6a721a0be90ed571961f2a2fa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 사용자용 데이터 경고 관리자
 
@@ -77,7 +80,7 @@ SharePoint 사이트가 데이터 경고 기능을 사용하도록 설정된 경
  데이터 경고 관리자에는 경고 서비스에서 데이터 경고 정의를 마지막으로 처리한 시간 및 데이터 경고 메시지를 보낸 횟수에 대한 정보가 포함되어 있습니다. 예약된 시간까지 기다리지 않고 경고 메시지를 즉시 실행하여 보낼 수 있습니다. 데이터 경고 관리자에서 경고를 실행하면 경고 일정을 덮어쓰며 보고서를 실행하는 데 필요한 시간과 경고를 실행하도록 선택한 시간의 보고서 서버 사용량에 따라 1-5분 이내에 경고 정의를 처리하기 시작합니다. 결과가 변경된 경우에만 메시지를 보내도록 지정했지만 결과가 변경되지 않은 경우에는 메시지를 만들거나 보내지 않습니다. 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.  
   
 > [!NOTE]  
->  **실행** 옵션을 클릭하면 몇 초 후에 **상태** 열의 값이 업데이트되어 경고가 처리 중임을 나타냅니다. **실행** 옵션을 여러 번 클릭하면 경고가 여러 번 처리됩니다. 그러면 보고서 서버의 리소스가 불필요하게 소비되어 보고서 서버의 성능에 영향을 줄 수 있습니다. 경고에 대해 업데이트된 정보를 보려면 웹 브라우저의 새로 고침 단추를 클릭하여 상태 업데이트와 경고에 대한 다른 정보를 확인합니다.  
+>  **실행**  옵션을 클릭하면 몇 초 후에 **상태** 열의 값이 업데이트되어 경고가 처리 중임을 나타냅니다. **실행**  옵션을 여러 번 클릭하면 경고가 여러 번 처리됩니다. 그러면 보고서 서버의 리소스가 불필요하게 소비되어 보고서 서버의 성능에 영향을 줄 수 있습니다. 경고에 대해 업데이트된 정보를 보려면 웹 브라우저의 새로 고침 단추를 클릭하여 상태 업데이트와 경고에 대한 다른 정보를 확인합니다.  
   
   
 ##  <a name="HowTo"></a> 관련 작업  

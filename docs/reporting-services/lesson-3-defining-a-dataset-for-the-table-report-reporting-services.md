@@ -2,9 +2,12 @@
 title: "3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 8fc3a1ba59c5b795720813a6018c50672ef1d66e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c610c2cba4f004a35d1d90aceb9288b995587c74
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
 데이터 원본을 정의한 후에는 데이터 집합을 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 집합에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/09/2017
 3.  **내 보고서에 포함된 데이터 집합 사용**을 클릭합니다.  
   
 4.  이전 단원인 [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]에서 만든 데이터 원본을 선택합니다.   
-5. **쿼리 유형**으로 **텍스트**를 선택합니다.  
+5. **쿼리 유형** 으로 **텍스트**를 선택합니다.  
   
 6.  다음 Transact-SQL 쿼리를 **쿼리** 상자에 입력하거나, 복사하여 붙여넣습니다.  
   
@@ -66,9 +69,9 @@ ms.lasthandoff: 11/09/2017
   
     [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 데이터베이스에서 네 가지 테이블의 여섯 필드에 있는 데이터를 봅니다. 쿼리는 Transact-SQL 기능을 별칭으로 사용합니다. 예를 들어 SalesOrderHeader 테이블을 *soh*라고 합니다.  
   
-8.  **확인**을 클릭하여 쿼리 디자이너를 종료합니다.  
+8.  **확인** 을 클릭하여 쿼리 디자이너를 종료합니다.  
   
-9.  **확인**을 클릭하여 **데이터 집합 속성** 대화 상자를 종료합니다.  
+9.  **확인** 을 클릭하여 **데이터 집합 속성** 대화 상자를 종료합니다.  
   
     **AdventureWorksDataset** 데이터 집합 및 필드가 보고서 데이터 창에 나타납니다.  
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  

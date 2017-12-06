@@ -2,9 +2,12 @@
 title: "권한 부여 메서드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 567a67c801ceb2613f9cd5068c05bd79cb693850
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 91d3763a199950bb11d1c7c066a07ba16dfed6e3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="authorization-methods"></a>권한 부여 메서드
   다음 메서드를 사용하여 보고서 서버에서 태스크, 역할 및 정책을 관리할 수 있습니다.  
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
 |<xref:ReportService2010.ReportingService2010.CreateRole%2A>|보고서 서버 데이터베이스에 새 역할을 추가합니다. 이 메서드는 기본 모드에만 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.DeleteRole%2A>|보고서 서버 데이터베이스에서 역할을 삭제합니다. 이 메서드는 기본 모드에만 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.GetPermissions%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리의 특정 항목과 연결된 사용자 권한을 반환합니다.|  
-|<xref:ReportService2010.ReportingService2010.GetPolicies%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리의 특정 항목과 연결된 정책을 반환합니다.|  
+|<xref:ReportService2010.ReportingService2010.GetPolicies%2A>|보고서 서버 데이터베이스 또는 또는 SharePoint 라이브러리의 특정 항목과 연결된 정책을 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|역할 메타데이터 속성 및 관련 태스크 모음을 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemPermissions%2A>|사용자의 시스템 사용 권한을 반환합니다. 이 메서드는 기본 모드에만 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|연결된 그룹 및 역할을 포함한 시스템 정책을 반환합니다. 이 메서드는 기본 모드에만 적용됩니다.|  

@@ -2,9 +2,12 @@
 title: "보고서에 책갈피 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6b1596b50f62a3e42ce592d3bc675cf19165ee46
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d08c5ede8ad95a151dc5a4d0e721d386490f3fa0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>보고서에 책갈피 추가(보고서 작성기 및 SSRS)
   사용자 지정된 목차를 제공하거나 보고서의 사용자 지정된 내부 탐색 링크를 제공하려는 경우 보고서에 책갈피 또는 책갈피 링크를 추가합니다. 일반적으로 각 테이블 또는 차트나 테이블 또는 행렬에 표시된 고유한 그룹 값 등 사용자를 안내하려는 보고서 위치에 책갈피를 추가합니다. 사용자 고유의 문자열을 만들어 책갈피로 사용하거나 그룹의 경우 책갈피를 그룹 식으로 설정할 수 있습니다.  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  보고서 디자인 뷰에서 책갈피를 추가할 입력란, 이미지, 차트 또는 기타 보고서 항목을 선택합니다. 선택한 항목의 속성이 속성 창에 나타납니다.  
   
-2.  **책갈피**옆의 입력란에 이 책갈피의 레이블인 문자열을 입력합니다. 예를 들어 **BikePhoto**를 보고서의 이미지에 대한 책갈피로 입력할 수 있습니다. 또는 식(**fx**) 단추를 클릭하여 열리는 **식** 대화 상자에서 레이블을 반환하는 식을 지정합니다. 그룹의 경우 입력하는 식이 그룹 식이어야 합니다.  
+2.  **책갈피**옆의 입력란에 이 책갈피의 레이블인 문자열을 입력합니다. 예를 들어 **BikePhoto** 를 보고서의 이미지에 대한 책갈피로 입력할 수 있습니다. 또는 식(**fx**) 단추를 클릭하여 열리는 **식** 대화 상자에서 레이블을 반환하는 식을 지정합니다. 그룹의 경우 입력하는 식이 그룹 식이어야 합니다.  
   
     > [!NOTE]  
     >  책갈피는 모든 문자열일 수 있지만 보고서에서 고유해야 합니다. 책갈피가 고유하지 않으면 해당 책갈피 링크 클릭 시 일치하는 첫 번째 책갈피가 사용됩니다.  
@@ -51,13 +54,13 @@ ms.lasthandoff: 11/09/2017
   
 3.  **책갈피로 이동**을 선택합니다. 이 옵션에 대한 추가 섹션이 대화 상자에 나타납니다.  
   
-4.  **책갈피 선택** 상자에서 책갈피 또는 책갈피를 반환하는 식을 입력하거나 선택합니다. 앞의 예제를 사용할 경우 **BikePhoto**를 입력하여 보고서의 이미지에 대한 링크를 만듭니다.  
+4.  **책갈피 선택** 상자에서 책갈피 또는 책갈피를 반환하는 식을 입력하거나 선택합니다. 앞의 예제를 사용할 경우 **BikePhoto** 를 입력하여 보고서의 이미지에 대한 링크를 만듭니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 6.  (옵션) 텍스트가 자동으로 링크와 비슷하게 서식이 지정되지는 않습니다. 텍스트의 경우 텍스트가 링크임을 나타내기 위해 텍스트 색과 효과를 변경하는 것이 좋습니다. 예를 들어 리본 메뉴의 홈 탭에 있는 **글꼴** 섹션에서 색을 파란색으로 변경하고 효과를 밑줄로 변경합니다.  
   
-7.  링크를 테스트하려면 **실행**을 클릭하여 보고서를 미리 본 다음, 이 링크를 설정한 보고서 항목을 클릭합니다.  
+7.  링크를 테스트하려면 **실행** 을 클릭하여 보고서를 미리 본 다음, 이 링크를 설정한 보고서 항목을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

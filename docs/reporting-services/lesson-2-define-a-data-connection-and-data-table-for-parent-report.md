@@ -2,9 +2,12 @@
 title: "2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29ff53a0c766ca791b2ca0e845fed7779e7c1e05
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 96f9e2414135a31481b866fe340138c7304fe409
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의
 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만든 후에는 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2014 데이터베이스에 대한 연결입니다.  
@@ -28,7 +31,7 @@ Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 �
   
 1.  **웹 사이트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-2.  **새 항목 추가** 대화 상자에서 **DataSet**을 선택한 다음 **추가**를 선택합니다. 메시지가 표시되면 **예**를 선택하여 **App_Code**폴더에 항목을 추가해야 합니다.  
+2.  **새 항목 추가** 대화 상자에서 **DataSet** 을 선택한 다음 **추가**를 선택합니다. 메시지가 표시되면 **예** 를 선택하여 **App_Code**폴더에 항목을 추가해야 합니다.  
   
     그러면 프로젝트에 새 XSD 파일 **DataSet1.xsd** 가 추가되고 데이터 집합 디자이너가 열립니다.  
   
@@ -50,7 +53,7 @@ Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 �
   
     4.  **확인**선택하고 **다음**을 선택합니다.  
   
-7.  6단계 (b)에서 **SQL Server 인증 사용**을 선택한 경우 문자열에 중요한 데이터를 포함할지 응용 프로그램 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
+7.  6단계 (b)에서 **SQL Server 인증 사용** 을 선택한 경우 문자열에 중요한 데이터를 포함할지 응용 프로그램 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
   
 8.  **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 연결 문자열의 이름을 입력하거나 기본값 **AdventureWorks2014ConnectionString**을 적용합니다. **다음**을 선택합니다.  
   
@@ -73,7 +76,7 @@ Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 �
   
 12. 파일을 저장합니다.  
   
-13. 데이터를 미리 보려면 **데이터** 메뉴에서 **데이터 미리 보기**를 선택한 다음 **미리 보기**를 선택합니다.  
+13. 데이터를 미리 보려면 **데이터** 메뉴에서 **데이터 미리 보기** 를 선택한 다음 **미리 보기**를 선택합니다.  
   
 ## <a name="next-task"></a>다음 태스크  
 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 성공적으로 만들었습니다. 이제 보고서 마법사를 사용하여 부모 보고서를 디자인합니다. [3단원: 보고서 마법사를 사용하여 부모 보고서 디자인](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)을 참조하세요.  

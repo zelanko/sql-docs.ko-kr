@@ -2,9 +2,12 @@
 title: "URL 액세스를 사용하여 Reporting Services 통합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e0e4d5c1ade93a1b14f4a365e2af542570a201b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1706d9ad033ccb1517e73ebee6d13f0d749b9f9e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>URL 액세스를 사용하여 Reporting Services 통합
   URL 액세스를 사용하여 보고서 서버 URL을 통해 보고서에 액세스할 수 있습니다. URL 요청을 통해 특정 보고서 서버는 물론 보고서 서버 데이터베이스의 보고서, 리소스 및 기타 항목에 액세스할 수 있습니다. 또한 사용자를 위해 보고서 보기 및 탐색 환경을 사용자 지정할 수도 있습니다. URL의 쿼리 문자열에는 장치 정보 설정, 보고서를 대상으로 하는 보고서 매개 변수 및 선택한 렌더링 출력이 포함됩니다. 보고서 서버에서 URL 요청을 처리하는 방법은 매개 변수, 매개 변수 접두사, URL을 통해 액세스하는 항목의 형식 등에 따라 다릅니다.  

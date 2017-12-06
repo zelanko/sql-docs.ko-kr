@@ -2,9 +2,12 @@
 title: "보고서 데이터(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: d5cac8267c1a38401eee78758a6e34adcbdd06ce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d1581775de3bf36ecfd3153918ff4457b8d6dde7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-data-ssrs"></a>보고서 데이터(SSRS)
   보고서 데이터는 조직의 다양한 데이터 원본에서 가져올 수 있습니다. 보고서 디자인의 첫 단계는 기본 보고서 데이터를 나타내는 데이터 원본 및 데이터 집합을 만드는 것입니다. 각 데이터 원본은 데이터 연결 정보를 포함합니다. 각 데이터 집합은 데이터 원본의 데이터로 사용할 필드 집합을 정의하는 쿼리 명령을 포함합니다. 각 데이터 집합의 데이터를 시각화하려면 테이블, 행렬, 차트 및 지도와 같은 데이터 영역을 추가합니다. 보고서를 처리하면 데이터 원본에 대한 쿼리가 실행되고 각 데이터 영역이 필요에 따라 확장되어 데이터 집합에 대한 쿼리 결과를 표시합니다.  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/09/2017
   
 -   **데이터 집합의 데이터 표시** 데이터 집합의 데이터는 일반적으로 테이블 및 차트와 같은 하나 이상의 데이터 영역에 표시됩니다.  
   
--   **여러 데이터 집합의 데이터 표시** 데이터 영역에서 단일 데이터 집합을 기반으로 값을 조회하거나 다른 데이터 집합으로 집계하는 식을 작성할 수 있습니다. 테이블에 단일 데이터 집합을 기반으로 하며 다양한 데이터 원본의 데이터를 표시하는 하위 보고서를 포함할 수 있습니다.  
+-   **여러 데이터 집합의 데이터 표시**  데이터 영역에서 단일 데이터 집합을 기반으로 값을 조회하거나 다른 데이터 집합으로 집계하는 식을 작성할 수 있습니다. 테이블에 단일 데이터 집합을 기반으로 하며 다양한 데이터 원본의 데이터를 표시하는 하위 보고서를 포함할 수 있습니다.  
   
  다음 목록을 사용하여 보고서의 데이터 원본을 정의할 수 있습니다.  
   

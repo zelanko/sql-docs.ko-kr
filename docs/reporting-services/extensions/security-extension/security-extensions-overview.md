@@ -2,9 +2,12 @@
 title: "보안 확장 프로그램 개요 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d56cfaf647b8f54b7535416ead02fcfaa7c3fbac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 978410874f598656c9c7e7108c0e1c56b1dc36f2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="security-extensions-overview"></a>보안 확장 프로그램 개요
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램은 사용자 또는 그룹에 대한 인증 및 권한 부여를 제공합니다. 즉, 여러 사용자들이 보고서 서버에 로그온한 다음 각자의 ID에 준하여 서로 다른 태스크나 작업을 수행할 수 있습니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Windows 계정 프로토콜을 사용하여 시스템에 계정을 보유하고 있다고 주장하는 사용자의 신원을 확인하는 방식의 Windows 기반 인증 확장 프로그램을 사용합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 역할 기반 보안 시스템을 사용하여 사용자에게 권한을 부여합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 역할 기반 보안 모델은 다른 기술의 역할 기반 보안 모델과 비슷합니다.  

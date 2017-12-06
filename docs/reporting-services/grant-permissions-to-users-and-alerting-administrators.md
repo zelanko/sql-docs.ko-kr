@@ -2,9 +2,12 @@
 title: "사용자 및 경고 관리자에게 사용 권한 부여 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 939400cecf41e9da66cff3a369fa963419d8908f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b0b0f5e8b8f0a7cba50f8fb225dccc4d9d6f79c8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>사용자 및 경고 담당자에게 권한 부여
 
@@ -41,7 +44,7 @@ SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수
   
 1.  사용 권한을 부여할 SharePoint 사이트로 이동합니다.  
   
-2.  도구 모음에서 **사이트 작업**을 클릭한 후 **사이트 사용 권한**을 클릭합니다.  
+2.  도구 모음에서 **사이트 작업** 을 클릭한 후 **사이트 사용 권한**을 클릭합니다.  
   
      이 옵션이 나타나지 않으면 다른 사람에게 권한을 부여할 권한이 없는 것입니다.  
   
@@ -49,7 +52,7 @@ SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수
   
 4.  **사용자/그룹**에서 권한을 부여할 대상의 사용자 이름, 그룹 이름 또는 메일 주소를 입력합니다.  
   
-5.  **SharePoint 그룹에 사용자 추가** 또는 **사용자에게 사용 권한 직접 부여** 옵션을 선택합니다. **SharePoint 그룹에 사용자 추가**를 선택했는지, 아니면 **사용자에게 사용 권한 직접 부여**를 선택했는지에 따라 다음 중 하나를 수행합니다.  
+5.  **SharePoint 그룹에 사용자 추가** 또는 **사용자에게 사용 권한 직접 부여** 옵션을 선택합니다. **SharePoint 그룹에 사용자 추가** 를 선택했는지, 아니면 **사용자에게 사용 권한 직접 부여** 를 선택했는지에 따라 다음 중 하나를 수행합니다.  
   
     -   **SharePoint 그룹에 사용자 추가**를 선택한 경우 드롭다운 목록에서 권한 수준을 선택합니다.  
   

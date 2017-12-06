@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4482935894f2aa785814c1af430065920afe25b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 59b8b667a9a895b9e95388ac781ec6bb46923920
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ END
         pages_i int, author nvarchar(100)) AS book
     ```
 
-Azure File Storage에 대한 자세한 내용은 [파일 저장소](https://azure.microsoft.com/en-us/services/storage/files/)를 참조하세요.
+Azure File Storage에 대한 자세한 내용은 [파일 저장소](https://azure.microsoft.com/services/storage/files/)를 참조하세요.
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Azure Blob Storage에서 JSON 문서 가져오기
 

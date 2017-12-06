@@ -2,9 +2,12 @@
 title: "ReportViewer 컨트롤 2016에서 데이터 수집 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b2f5f4743b838598aeb5f74271fa063af9bb60f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6249d0a0b8b13c47479130c1f981b6756989c4c7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 데이터 수집
 기본적으로 ReportViewer 컨트롤은 Microsoft에서 고객이 컨트롤을 사용하는 방식을 더 잘 이해할 수 있도록 익명의 사용 정보를 수집합니다. 고객이 Viewer Control을 배포하고 사용하는 방법을 더 잘 이해하도록 함으로써 향후 개발 시 고객에게 최고의 가치를 제공하는 개선에 초점을 맞출 수 있습니다.
