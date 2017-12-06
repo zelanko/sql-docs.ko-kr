@@ -2,9 +2,12 @@
 title: SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7d17e24ef7a815a77a4a7cfc338a8d87369d7e81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8194b34b1e07abaedabe5c4ee685f645470fce70
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-profiler"></a>SQL Server 프로파일러
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]작성 하 고 추적을 관리 하 고 분석 및 추적 결과 재생 인터페이스가입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 인터페이스로을 생성 하 고 추적을 관리, 분석 및 추적 결과 재생 합니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
   
 >**중요!!**  
 > Microsoft는 향후 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 캡처 및 추적 재생에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 사용하지 않을 것임을 발표하고 있습니다. 이러한 **기능은** SQL Server 2016에서 사용할 수 있지만 이후 버전에서 제거됩니다.

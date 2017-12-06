@@ -2,9 +2,12 @@
 title: "I p v 6을 사용 하 여 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7d6f507497d79bbf3bb71f7c0d6f406a37402da
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a832ed4aeebc246e6fa612436848e36aa77edd0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connecting-using-ipv6"></a>IPv6을 사용하여 연결
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 인터넷 프로토콜 버전 4(IPv4)와 인터넷 프로토콜 버전 6(IPv6)을 둘 다 지원합니다. Windows가 IPv6 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 구성되어 있으면 구성 요소가 자동으로 IPv6을 인식합니다. 특별한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성은 필요하지 않습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 인터넷 프로토콜 버전 4 (IPv4)와 인터넷 프로토콜 버전 6 (IPv6)에 완벽 하 게 지원 합니다. Windows가 IPv6 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 구성되어 있으면 구성 요소가 자동으로 IPv6을 인식합니다. 특별한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성은 필요하지 않습니다.  
   
  지원은 다음을 포함하지만 이에 제한되지 않습니다.  
   

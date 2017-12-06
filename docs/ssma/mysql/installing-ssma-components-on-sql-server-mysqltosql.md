@@ -1,10 +1,13 @@
 ---
 title: "SQL Server (MySQLToSql)에 SSMA 구성 요소 설치 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 190c3cfcb9d41af357bfffe2a247aa353e2676e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9e191282cdba94d3c3e48db0a59b7b6d90b6d5b6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>SQL Server (MySQLToSql)에 SSMA 구성 요소 설치
 SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 이러한 구성 요소는 데이터 마이그레이션 및 서버 간 연결을 사용 하도록 설정 하려면 MySQL 공급자를 지 원하는 SSMA 확장 팩을 포함 합니다.  

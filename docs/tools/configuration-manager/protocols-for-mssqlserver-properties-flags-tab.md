@@ -2,9 +2,12 @@
 title: "MSSQLSERVER 속성 (플래그 탭)에 대 한 프로토콜 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbc638b0c74469f41d5f8c60d5401115cfbd3ea6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a04a6eb74cbdf0f66896653b369f26e4065dca42
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(플래그 탭)
-  서버에 인증서가 설치되어 있으면 **MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **플래그** 탭을 사용하여 프로토콜 암호화를 확인 또는 지정할 수 있으며 인스턴스 옵션을 숨길 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정을 활성화하거나 비활성화하려면 **ForceEncryption** 를 다시 시작해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]인증서가 서버에 설치를 사용 하 여는 **플래그** 탭에 **MSSQLSERVER 속성에 대 한 프로토콜** 대화 상자를 확인 하거나 프로토콜 암호화를 지정할 수 있으며 인스턴스 옵션을 숨길입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정을 활성화하거나 비활성화하려면 **ForceEncryption** 를 다시 시작해야 합니다.  
   
  연결을 암호화하려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 인증서를 제공해야 합니다. 인증서를 설치하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 인스턴스가 시작될 때 자체 서명된 인증서를 생성합니다. 자체 서명된 이 인증서는 신뢰할 수 있는 인증 기관의 인증서 대신 사용될 수 있지만 인증이나 거부할 수 없음 기능을 제공하지 않습니다.  
   

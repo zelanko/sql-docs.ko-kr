@@ -3,8 +3,11 @@ title: "테스트 사례 (SybaseToSQL) 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20b74e4908f57c0fab89cbfbea295f2442cedde1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 686e7701014a85e141fed9d4f9bbcecdb029f015
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>테스트 사례 (SybaseToSQL) 실행
 SSMA 테스터는 테스트 사례를 실행 하면 테스트를 위해 선택한 개체를 실행 하 고 확인 결과 대 한 보고서를 만듭니다. 결과 두 플랫폼 모두에서 동일한 경우에 테스트에 성공 합니다. Sybase 사이 개체의 관계 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 현재 SSMA 프로젝트에 대 한 스키마 매핑이 설정에 따라 결정 됩니다.  

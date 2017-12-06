@@ -1,10 +1,13 @@
 ---
 title: "SQL Server (DB2eToSQL)에 연결 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de9a7af8f191f3c979075de204e4a887128b9c1d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a82af41f512e07be900866d857677995f43f48ef
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>SQL Server (DB2eToSQL)에 연결
 DB2 데이터베이스를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 이러한 대상 인스턴스 중 하나에 연결 해야 하는 2014 또는 Azure SQL DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. SSMA는 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오며 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서 데이터베이스 메타 데이터를 표시 하 고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다. SSMA는의 인스턴스에 대 한 정보를 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 연결 되어 있지만 암호를 저장 하지 않습니다.  

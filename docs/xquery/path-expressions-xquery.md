@@ -3,8 +3,11 @@ title: "경로 식 (XQuery) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef1984885b5b35d93fa680d677321287d6daf33
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a611a904ab2c969060e6d756a20bcf635ce2100
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="path-expressions-xquery"></a>경로 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery 경로 식은 문서에서 요소, 특성 및 텍스트 노드와 같은 노드를 찾습니다. 경로 식의 결과는 항상 결과 시퀀스에 중복 노드 없이 문서 순서에 따라 발생합니다. 경로를 지정할 때 비축약형 또는 축약형 구문을 사용할 수 있습니다. 다음은 비축약형 구문에 대한 내용입니다. 축약형 구문에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   

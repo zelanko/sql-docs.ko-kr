@@ -2,9 +2,12 @@
 title: "SQL Server 속성 (고급 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0ff03aeddf8e8072d479ef13a14c68080d5d3df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 570471b64b257bda598f72015e6b9a7767a4e5ba
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 속성(고급 탭)
-  다음 속성은 기본적으로 **고급** 탭에 나타납니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 다음 속성이 표시는 **고급** 기본적으로 탭 합니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
   
 ## <a name="options"></a>옵션  
  **클러스터형**  

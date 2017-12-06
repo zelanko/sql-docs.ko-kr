@@ -3,8 +3,11 @@ title: "SAP ASE (SybaseToSQL) 용 SSMA 시작 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4cc7553ec5936efeafdde72f87b19c9656a699e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e25e89ba868ca867a57bed89b6d85be790280ca7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA 시작
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) SAP ASE 사용 하면 신속 하 게에 대 한 변환 SAP 적응형 Server Enterprise (ASE) 데이터베이스 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 데이터베이스 스키마 결과 스키마 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 데이터베이스에서 데이터 및 마이그레이션 SAP ASE를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 데이터베이스입니다.  

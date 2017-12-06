@@ -2,9 +2,12 @@
 title: "Database 요소 (DTA) 작업에 대 한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a016251fd0cf1d9e6e3a9d3e5b62d126f35d4d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c80a0f807c4ae011428f8d5acb0783b555388762
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="database-element-for-workload-dta"></a>Workload의 Database 요소(DTA)
-  작업 추적 테이블이 위치하는 데이터베이스를 지정합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]작업 추적 테이블이 있는 데이터베이스를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   

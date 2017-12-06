@@ -34,17 +34,20 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 993a96a957d617a53b008a6929522ab468bc3e1e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c97264457e575aa076e6b10f3454f0d8cf6e2d7
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 데이터베이스에서 분할된 테이블 또는 인덱스의 파티션을 파일 그룹에 매핑하는 구성표를 만듭니다. 분할된 테이블 또는 인덱스의 파티션 수 및 도메인은 파티션 함수에서 결정됩니다. 파티션 함수는 먼저 만들어야는 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) 파티션 구성표를 만들기 전에 문을 합니다.  
-  
+
+[!NOTE]
+Azure SQL 데이터베이스의 primary 파일 그룹에만 사용할 수 있습니다.  
+
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  

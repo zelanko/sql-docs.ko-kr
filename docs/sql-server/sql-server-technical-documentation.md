@@ -2,8 +2,12 @@
 title: "SQL Server 설명서 | Microsoft Docs"
 ms.date: 10/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +26,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4e0f1f726de8ebde526376c213348a7a14597689
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 15e4d0a993dbc4b97413f94ccdb2620fc2baf24a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
 

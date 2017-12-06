@@ -1,10 +1,13 @@
 ---
 title: "샘플 콘솔 스크립트 파일 (OracleToSQL) 작업 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 0f5b0bf819c5e4097e14bddedaee2efb8ce63c6e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e993cf8f65f533bed6644a4e630f71f405739569
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>샘플 콘솔 스크립트 파일 (OracleToSQL) 작업
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품 함께 제공 되었습니다. 이 여기서 쉽게 이러한 스크립트는 최종 사용자의 요구에 맞게 사용자 지정 하는 방법을 설명 합니다.  

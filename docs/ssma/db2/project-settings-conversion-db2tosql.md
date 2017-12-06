@@ -1,10 +1,13 @@
 ---
 title: "프로젝트 설정 (변환) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02cc7f58c47138b7da063151f0d8e9df08762ae0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e40e6f4d56f3c246516de617dbdc4a7c9516db9c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-conversion-db2tosql"></a>프로젝트 설정 (변환) (DB2ToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA를 DB2 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문입니다.  

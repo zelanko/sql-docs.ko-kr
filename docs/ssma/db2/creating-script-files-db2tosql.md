@@ -1,10 +1,13 @@
 ---
 title: "스크립트 파일 (DB2ToSQL) 만들기 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b4dc7653b7e78dc51bd5d52c28bad60168a0a2f9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0a000d3a8530100b1bcb4d077940b432a8b207a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-script-files-db2tosql"></a>스크립트 파일 (DB2ToSQL) 만들기
 첫 번째 스크립트 파일을 만드는 것 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일을 필요한 경우 단계입니다.  

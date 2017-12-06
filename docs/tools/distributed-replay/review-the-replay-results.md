@@ -2,9 +2,12 @@
 title: "재생 결과 검토 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44e055d7a3da857a1be798ae5b5222a4a8a35713
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이후에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 캡처하여 각 클라이언트에서 결과 추적 파일에 저장 된 각 클라이언트에 대 한 재생 작업 수, Distributed Replay 기능이 분산된 재생을 완료 합니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
  결과 추적 파일이 저장되는 위치는 각 클라이언트에 있는 클라이언트 구성 파일 `<ResultDirectory>`의 `DReplayClient.xml` XML 요소에 지정됩니다. 클라이언트 결과 디렉터리의 추적 파일은 각 재생 시 덮어씁니다.  
   

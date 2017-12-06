@@ -1,10 +1,13 @@
 ---
 title: "메뉴 명령 및 기타 바로 가기 키 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b451623a525def6b15942e70eb10397d9b7173de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 717559cfc0e3acd1d64bd7c80243e3d21e2d257b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>메뉴 명령 및 기타 바로 가기 키 (DB2ToSQL)
 다음 섹션에서는 메뉴 명령 및 DB2 응용 프로그램에 대 한 SSMA의 다양 한 대화 상자에 사용 된 다른 바로 가기 키에 액세스 하는 바로 가기 키에 설명 합니다.  

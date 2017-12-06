@@ -3,8 +3,11 @@ title: "프로젝트 설정 (Azure SQL DB) (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 90b621fef119395185a79c68300faa0a800104a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3dde8b0d823c805baf69fef6b580c8dc988e1316
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>프로젝트 설정 (Azure SQL DB) (SybaseToSQL)
 Azure SQL DB 프로젝트 설정에 연결 대화 상자에 추가 되 고 또한 Azure SQL DB 연결에서 하트 비트 메커니즘을 구현할 수 있게 하려면 Azure SQL DB 데이터베이스 접미사를 구성할 수 있습니다.  

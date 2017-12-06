@@ -1,10 +1,13 @@
 ---
 title: "매핑 DB2 및 SQL Server 데이터 형식 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59b9367b5d6171f1c5692e278fc99cef0fcbce19
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ce0e2311d040705713b51bf007b9334bccaa69ff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 및 SQL Server 데이터 형식 (DB2ToSQL) 매핑
 DB2 데이터베이스 형식에서 다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 유형입니다. DB2 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체를 d b 2에서 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 기본 데이터 형식 매핑을 사용할 수도 있고 다음 섹션에 나와 있는 것 처럼 매핑을 사용자 지정할 수 있습니다.  

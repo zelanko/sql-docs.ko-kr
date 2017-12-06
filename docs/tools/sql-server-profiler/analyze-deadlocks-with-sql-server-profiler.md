@@ -2,9 +2,12 @@
 title: "SQL Server Profiler로 교착 상태 분석 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 71f9af15e8cfeaccabc87be787172fed44246967
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c0de1737702872b1d692a5489afbd4c64eba499
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 교착 상태 분석
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 교착 상태의 원인을 확인할 수 있습니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 교착 상태의 원인을 확인 합니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  
   
  교착 상태 이벤트를 추적하려면 **Deadlock graph** 이벤트 클래스를 추적에 추가합니다. 이 이벤트 클래스는 교착 상태와 관련된 프로세스 및 개체에 대한 XML 데이터로 추적 시 **TextData** 데이터 열을 채웁니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 XML 문서를 교착 상태 XML(.xdl) 파일로 추출할 수 있습니다. 이 XML 파일은 나중에 SQL Server Management Studio에서 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 구성하여 모든 **Deadlock graph** 이벤트가 포함되어 있는 단일 파일로 **Deadlock graph** 이벤트를 추출하거나 개별 파일로 추출할 수도 있습니다. 다음과 같은 방법으로 추출할 수 있습니다.  
   

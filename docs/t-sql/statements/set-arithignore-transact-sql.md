@@ -1,7 +1,7 @@
 ---
 title: SET ARITHIGNORE (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c42787eeb8132da21344b87411f781a8456942f0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8229ccdae1e3074bf8f726a9dfdfcc4e52b8df5e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,19 +44,17 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>구문  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-SET ARITHIGNORE { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
+-- Syntax for SQL Server and Azure SQL Database
+
+SET ARITHIGNORE { ON | OFF }
+```
+
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHIGNORE OFF   
-[ ; ]  
-```  
-  
+
+SET ARITHIGNORE OFF
+```
+
 ## <a name="remarks"></a>주의  
  SET ARITHIGNORE 설정은 오류 메시지 반환 여부만 제어합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 설정에 관계없이 오버플로 또는 0으로 나누기 오류와 연관된 계산에서 NULL을 반환합니다. SET ARITHABORT 설정을 사용하여 쿼리 종료 여부를 결정할 수 있습니다. 그러나 이 설정은 INSERT, UPDATE, DELETE 문 실행 중에 발생한 오류에는 영향을 주지 않습니다.  
   

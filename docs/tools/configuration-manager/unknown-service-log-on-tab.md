@@ -2,9 +2,12 @@
 title: "알 수 없는 서비스 (로그온 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c8fedc613289421e51967890e0508c44812e73b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 71ffe463ebe463bddc8408048539264106dcface
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="unknown-service-log-on-tab"></a>알 수 없는 서비스(로그온 탭)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가 이 서비스를 식별할 수 없습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가이 서비스를 식별할 수 없습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 서비스가 실행되는 컴퓨터의 WMI 공급자로부터 서비스 정보를 받습니다. 서비스 속성을 읽는 동안 오류가 발생했거나 서비스 속성이 완전하지 않습니다. 이 문제를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫은 후 다시 열거나 서비스가 실행되는 컴퓨터의 WMI 공급자를 확인하십시오.  
   

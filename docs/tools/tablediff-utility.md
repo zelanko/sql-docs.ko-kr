@@ -2,9 +2,12 @@
 title: "tablediff 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: tabledif
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1d424e7c3b7e59d0bd80f4c02a020ffea7f62024
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
-  **tablediff** 유틸리티는 두 테이블에 포함된 데이터의 불일치 여부를 비교하는 데 사용되며, 복제 토폴로지의 데이터 불일치 문제를 해결하는 데 특히 유용합니다. 명령 프롬프트나 배치 파일에서 이 유틸리티를 사용하여 다음 태스크를 수행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**tablediff** 유틸리티 불일치가 대 한 두 테이블의 데이터를 비교 하는 데 사용 되 고의 복제 토폴로지의 데이터 불일치 문제를 해결 하는 데 특히 유용 합니다. 명령 프롬프트나 배치 파일에서 이 유틸리티를 사용하여 다음 태스크를 수행할 수 있습니다.  
   
 -   복제 게시자 역할을 하는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 있는 원본 테이블과 복제 구독자 역할을 하는 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 있는 대상 테이블을 행 단위로 비교할 수 있습니다.  
   

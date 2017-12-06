@@ -2,9 +2,12 @@
 title: "SQL Server 프로파일러 실행에 필요한 권한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f7fd787af4d874b8c0d6d7fc23aa58227f4c58e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2ad771af23debc0bb70cf0a2ce8870ba18aac1bc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server 프로파일러 실행에 필요한 권한
-  기본적으로 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 실행하려면 추적 작성에 사용된 Transact-SQL 저장 프로시저와 같은 동일한 사용자 권한이 있어야 합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하려면 사용자에게 ALTER TRACE 권한이 있어야 합니다. 자세한 내용은 [GRANT 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]기본적으로 실행 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 작성에 사용 되는 TRANSACT-SQL 저장 프로시저와 같은 사용자 권한이 필요 합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하려면 사용자에게 ALTER TRACE 권한이 있어야 합니다. 자세한 내용은 [GRANT 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  SHOWPLAN, ALTER TRACE 또는 VIEW SERVER STATE 권한이 있는 사용자는 실행 계획 출력에 캡처된 쿼리를 볼 수 있습니다. 이러한 쿼리에는 암호 같은 중요한 정보가 포함되어 있을 수 있습니다. 따라서 db_owner 고정 데이터베이스 역할의 멤버나 sysadmin 고정 서버 역할의 멤버 같이 중요한 정보를 볼 지위에 있는 사용자에게만 이러한 권한을 부여하는 것이 좋습니다. 또한 실행 계획 파일을 저장하거나 실행 계획 관련 이벤트가 포함된 파일을 추적할 때는 NTFS 파일 시스템이 적용된 위치만 사용하고 중요한 정보를 볼 지위에 있는 사용자에게만 해당 위치에 대한 액세스 권한을 부여하는 것이 좋습니다.  

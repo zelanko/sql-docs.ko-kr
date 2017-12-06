@@ -2,9 +2,12 @@
 title: "XML 입력 파일 예제 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cbe4b41965cd682b7d3540b2d2baa9b85a4963a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9d152397ce3dd0000d6086030b5b4c8e7142c92d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-input-file-samples-dta"></a>XML 입력 파일 예제(DTA)
-  이 섹션에는 **dta** 명령줄 도구에서 사용할 수 있는 예제 XML 입력 파일이 포함되어 있습니다. 이 도구는 향상된 쿼리 성능을 위해 데이터베이스를 튜닝하는 데 사용할 수 있는 도구인 데이터베이스 엔진 튜닝 관리자의 사용자 인터페이스 중 하나입니다. 데이터베이스 엔진 튜닝 관리자는 특정 또는 여러 데이터베이스에 대해 작업의 효과를 분석합니다. 작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 작업 효과의 분석이 끝나면 데이터베이스 엔진 튜닝 관리자는 데이터베이스에서 쿼리 성능을 향상시키는 인덱스, 인덱싱된 뷰 또는 분할 전략을 추가하기 위한 권장 구성을 만듭니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 섹션에는 함께 사용할 수 있는 예제 XML 입력된 파일이 포함 되어는 **dta** 명령줄 도구입니다. 이 도구는 향상된 쿼리 성능을 위해 데이터베이스를 튜닝하는 데 사용할 수 있는 도구인 데이터베이스 엔진 튜닝 관리자의 사용자 인터페이스 중 하나입니다. 데이터베이스 엔진 튜닝 관리자는 특정 또는 여러 데이터베이스에 대해 작업의 효과를 분석합니다. 작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 작업 효과의 분석이 끝나면 데이터베이스 엔진 튜닝 관리자는 데이터베이스에서 쿼리 성능을 향상시키는 인덱스, 인덱싱된 뷰 또는 분할 전략을 추가하기 위한 권장 구성을 만듭니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

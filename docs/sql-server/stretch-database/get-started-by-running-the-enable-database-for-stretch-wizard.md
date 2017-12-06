@@ -2,10 +2,10 @@
 title: "Stretch에 데이터베이스 사용 마법사를 실행하여 시작 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-stretch
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2ccd1b0f7c5b3c15d0871d53690b81465d21063
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -2,9 +2,12 @@
 title: "추적 및 추적 템플릿 저장 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 515c034ba96c93101ea8346dd0207e17143d2e80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 613946c9986edf5cbb2cb95f9e483bdb5bed50e6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-traces-and-trace-templates"></a>추적 및 추적 템플릿 저장
-  추적 파일의 저장과 추적 템플릿의 저장을 구분하는 것은 중요합니다. 추적 파일 저장은 캡처된 데이터를 지정한 장소로 저장하는 것이며 추적 템플릿 저장은 지정한 데이터 열, 이벤트 클래스 또는 필터 등의 추적 정의를 저장하는 것입니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]추적 파일의 추적 템플릿 저장과 구분 하는 것이 유용 합니다. 추적 파일 저장은 캡처된 데이터를 지정한 장소로 저장하는 것이며 추적 템플릿 저장은 지정한 데이터 열, 이벤트 클래스 또는 필터 등의 추적 정의를 저장하는 것입니다.  
   
 ## <a name="saving-traces"></a>추적 저장  
  캡처한 데이터를 나중에 분석하거나 재생해야 하는 경우 캡처한 이벤트 데이터를 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블에 저장합니다. 추적 파일을 사용하여 다음을 수행할 수 있습니다.  

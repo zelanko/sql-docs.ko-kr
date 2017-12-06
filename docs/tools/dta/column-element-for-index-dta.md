@@ -2,9 +2,12 @@
 title: "Column 요소 (DTA) 인덱스에 대 한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 557befbb53d96bd0d1b5f862b6df5eeb63670b17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a72dfe214581db4f3ede0286ac361a212891812
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="column-element-for-index-dta"></a>Index의 Column 요소(DTA)
-  사용자 지정 구성에서 인덱스가 만들어지는 열을 지정합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 사용자 지정 구성에서 인덱스가 만들어지는 열을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   

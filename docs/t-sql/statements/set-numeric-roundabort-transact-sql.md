@@ -1,7 +1,7 @@
 ---
 title: SET NUMERIC_ROUNDABORT (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a78c81a9990b2a9c895776c5f51fe9046b2eb5d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a4f5a5369321999a980835a502a730bfe383aefd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,20 +41,13 @@ ms.lasthandoff: 11/21/2017
   식의 반올림에서 정밀도가 손실될 경우 생성되는 오류 보고의 수준을 지정합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>구문  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET NUMERIC_ROUNDABORT { ON | OFF }   
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET NUMERIC_ROUNDABORT ON;  
-```  
+
+## <a name="syntax"></a>구문
+
+```
+
+SET NUMERIC_ROUNDABORT { ON | OFF }
+```
   
 ## <a name="remarks"></a>주의  
  SET NUMERIC_ROUNDABORT 옵션을 ON으로 설정하면 식에서 정밀도 손실이 발생할 경우 오류가 생성됩니다. OFF로 설정하면 정밀도 손실이 발생해도 오류 메시지가 생성되지 않으며 결과가 열 또는 결과를 저장한 변수의 정밀도로 반올림됩니다.  
@@ -63,16 +56,16 @@ SET NUMERIC_ROUNDABORT ON;
   
  SET NUMERIC_ROUNDABORT 옵션을 ON으로 설정하면 SET ARITHABORT 옵션이 생성되는 오류의 심각도를 결정합니다. 다음 표에서는 정밀도 손실이 발생할 때 두 가지 설정의 결과를 보여 줍니다.  
   
-|설정|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|  
-|-------------|--------------------------------|---------------------------------|  
+|설정|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|
+|-------------|--------------------------------|---------------------------------|
 |SET ARITHABORT ON|오류가 생성되고, 결과 집합이 반환되지 않습니다.|오류나 경고가 생성되지 않고, 결과가 반올림됩니다.|  
 |SET ARITHABORT OFF|경고가 반환되고, 식이 NULL을 반환합니다.|오류나 경고가 생성되지 않고, 결과가 반올림됩니다.|  
+
+ SET NUMERIC_ROUNDABORT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.
+
+ 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET NUMERIC_ROUNDABORT 옵션을 OFF로 설정해야 합니다. SET NUMERIC_ROUNDABORT 옵션이 ON 이면 만들기, 계산된 열 이나 인덱싱된 뷰에서에 인덱스가 있는 테이블에 UPDATE, INSERT 및 DELETE 문이 실패 합니다. 계산된 열에 인덱스 및 인덱싱된 뷰에 필요한 SET 옵션 설정에 대 한 자세한 내용은 "고려 사항 때 설정 문 사용"의 참조 [SET 문 &#40; Transact SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).
   
- SET NUMERIC_ROUNDABORT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
-  
- 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET NUMERIC_ROUNDABORT 옵션을 OFF로 설정해야 합니다. SET NUMERIC_ROUNDABORT 옵션이 ON이면 계산 열에 인덱스가 있는 테이블이나 인덱싱된 뷰에서의 CREATE, UPDATE, INSERT, DELETE 문이 실패합니다. 계산된 열에 인덱스 및 인덱싱된 뷰에 필요한 SET 옵션 설정에 대 한 자세한 내용은 "고려 사항 때 설정 문 사용"의 참조 [SET 문 &#40; Transact SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
-  
- 이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.  
+ 이 설정에 대 한 현재 설정을 보려면 다음 쿼리를 실행 합니다.
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  

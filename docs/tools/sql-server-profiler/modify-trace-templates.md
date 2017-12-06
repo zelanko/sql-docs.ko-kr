@@ -2,9 +2,12 @@
 title: "추적 템플릿 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a4a1623a6b5920ae849afc17a4079da12efe450
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 872dd7b9d873aa650e3d45d6610a498bf774cf05
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="modify-trace-templates"></a>추적 템플릿 수정
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 실행 중인 로컬 컴퓨터에서 파일에 저장된 템플릿을 수정할 수 있습니다. 이런 파일에서 파생된 템플릿도 수정할 수 있습니다. 기존 템플릿을 수정할 때 **추적 속성** 대화 상자의 **이벤트 선택** 탭에서 속성이 원래 설정된 순서와 동일한 순서대로 이벤트 클래스나 데이터 열 같은 템플릿 속성을 편집합니다. 이벤트 클래스 및 데이터 열을 추가 또는 제거할 수도 있고 필터도 같은 방법으로 변경할 수 있습니다. 템플릿을 수정하면 사용자 특정 템플릿이 만들어지고 원래 시스템 템플릿은 그대로 남습니다. 자세한 내용은 [추적 및 추적 템플릿 저장](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 로컬 컴퓨터의 파일에 저장 된 템플릿을 수정할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 실행 합니다. 이런 파일에서 파생된 템플릿도 수정할 수 있습니다. 기존 템플릿을 수정할 때 **추적 속성** 대화 상자의 **이벤트 선택** 탭에서 속성이 원래 설정된 순서와 동일한 순서대로 이벤트 클래스나 데이터 열 같은 템플릿 속성을 편집합니다. 이벤트 클래스 및 데이터 열을 추가 또는 제거할 수도 있고 필터도 같은 방법으로 변경할 수 있습니다. 템플릿을 수정하면 사용자 특정 템플릿이 만들어지고 원래 시스템 템플릿은 그대로 남습니다. 자세한 내용은 [추적 및 추적 템플릿 저장](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)을 참조하세요.  
   
  추적을 만들 때 사용한 원래 템플릿을 기억할 수 없거나 나중에 같은 추적을 실행하려는 경우 기존 추적 파일에서 템플릿을 파생해야 합니다. 기존의 추적으로 작업하면 속성을 볼 수는 있지만 수정할 수는 없습니다. 속성을 수정하려면 추적을 시작하거나 일시 중지하십시오. 자세한 내용은 [추적 파일 또는 추적 테이블에서 템플릿 파생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md) 및 [실행 중인 추적으로부터 템플릿 파생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)을 참조하세요.  
   

@@ -1,8 +1,8 @@
 ---
 title: "Azure SQL 데이터베이스에서 R을 사용 하 여 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2017
-ms.prod: sql-server-2017
+ms.date: 12/04/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,20 +13,20 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 4562dc3490f4790a31b4b32e06b9e5133a151c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ef6573ca1d682ae4b4f4336ad6f809f1e094e9fc
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-r-in-azure-sql-database"></a>Azure SQL 데이터베이스에서 R을 사용 하 여
 
-2017 년 1 월에서에서 SQL Server 개발 팀은 R 코드에서-데이터베이스의 SQL Server 2016에서 R 서비스와 비슷한 저장된 프로시저를 사용 하 여 실행을 지원 하려면 계획을 발표 했습니다.
+2017 년 1 월에서에서 SQL Server 개발 팀은 R 코드에서-데이터베이스의 SQL Server 2016에서 R 서비스와 비슷한 저장된 프로시저를 사용 하 여 실행을 지원 하려면 계획을 발표 했습니다. 이 기능은 아직 개발 중인 있습니다.
+
+최신 공개 릴리스 일정 및 예정 된 이벤트를 유지 하려면 참조는 [SQL Server 블로그](https://blogs.technet.microsoft.com/dataplatforminsider/) 또는 [Microsoft R Server 블로그](https://blogs.msdn.microsoft.com/rserver/)합니다.
 
 > [!IMPORTANT]
-> 초기 미리 보기 릴리스를 발표 된 테스트 및 탐색만 되어있습니다. 기능은 현재 **비활성화** 추가 개발을 지 원하는 Azure SQL 데이터베이스에 있습니다. 
-
-최신 상태로 유지 하는 공용 릴리스 일정 및 예정 된 이벤트, 참조는 [SQL Server 블로그](https://blogs.technet.microsoft.com/dataplatforminsider/) 또는 [Microsoft R Server 블로그](https://blogs.msdn.microsoft.com/rserver/)합니다.
+> 초기 미리 보기 릴리스를 발표 된 테스트 및 탐색만 되어있습니다. 현재 기능은을 제한 된 영역에 Azure SQL 데이터베이스에서 사용할 수와 기능이 2017 또는 SQL Server 2016에서 지원 되는 기능에 비해 제한 됩니다.
 
 **Azure 리소스**
 

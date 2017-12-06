@@ -2,9 +2,12 @@
 title: "XML 입력 파일 샘플을 사용자 지정 구성 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1650b5ccfc752cc07e97647c3e1cced118b3bb7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0a8f6fb06e3e587410321dbe3a205df08f421356
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>사용자 지정 구성이 포함된 XML 입력 파일 예제(DTA)
-  **Configuration** 요소를 사용하여 사용자 지정 구성을 지정하는 이 XML 입력 파일 예제를 복사하여 좋아하는 XML 편집기나 텍스트 편집기에 붙여넣습니다. 이렇게 하면 "가정(what-if)" 분석을 수행할 수 있습니다. "가정(what-if)" 분석에는 **Configuration** 요소를 사용하여 튜닝할 데이터베이스에 대한 가상 실제 디자인 구조 집합을 지정하는 것이 포함됩니다. 그런 다음 데이터베이스 엔진 튜닝 관리자를 사용하여 이 가상 구성에 대해 작업을 실행하는 것의 효과를 분석하여 쿼리 처리 성능을 향상시키는지 여부를 확인합니다. 이 분석 유형은 실제 구현 시 오버헤드를 발생시키지 않고 새 구성을 평가하는 이점이 있습니다. 가상 구성이 원하는 성능 향상을 제공하지 않을 경우 필요한 결과를 달성하는 구성에 도달할 때까지 가상 구성을 쉽게 변경하여 다시 분석할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]복사 및 붙여넣기 사용 되는 사용자 지정 구성을 지정 하는 XML 입력된 파일의이 예제는 **구성** 좋아하는 XML 편집기나 텍스트 편집기에는 요소입니다. 이렇게 하면 "가정(what-if)" 분석을 수행할 수 있습니다. "가정(what-if)" 분석에는 **Configuration** 요소를 사용하여 튜닝할 데이터베이스에 대한 가상 실제 디자인 구조 집합을 지정하는 것이 포함됩니다. 그런 다음 데이터베이스 엔진 튜닝 관리자를 사용하여 이 가상 구성에 대해 작업을 실행하는 것의 효과를 분석하여 쿼리 처리 성능을 향상시키는지 여부를 확인합니다. 이 분석 유형은 실제 구현 시 오버헤드를 발생시키지 않고 새 구성을 평가하는 이점이 있습니다. 가상 구성이 원하는 성능 향상을 제공하지 않을 경우 필요한 결과를 달성하는 구성에 도달할 때까지 가상 구성을 쉽게 변경하여 다시 분석할 수 있습니다.  
   
  이 예제를 편집 도구에 복사한 후에 **Server**, **Database**, **Schema**, **Table**, **Workload**, **TuningOptions**및 **Configuration** 요소에 지정된 값을 특정 튜닝 세션에 대한 값으로 바꿉니다. 이러한 요소에 사용할 수 있는 모든 특성 및 자식 요소에 대한 자세한 내용은 [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)를 참조하세요. 다음 예에서는 사용 가능한 특성 및 자식 요소 옵션의 하위 집합만 사용합니다.  
   

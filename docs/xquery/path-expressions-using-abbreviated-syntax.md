@@ -3,8 +3,11 @@ title: "경로 식의 구문을 약어를 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2e158dfbb80aabf882c178f22e87497a0834408
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c35582819216c79bc33173920808d01bfae10dc7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>경로 식에서 축약형된 구문 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   모든 예 [xquery에서 경로 식 이해](../xquery/path-expressions-xquery.md) 경로 식에 대해 축약 하지 않은 구문을 사용 합니다. 경로 식의 축 단계에 대해 축약하지 않은 구문은 축 이름과 노드 테스트를 포함하고 두 개의 콜론으로 분리되며 뒤에 0개 이상의 단계 한정자가 옵니다.  
   

@@ -27,18 +27,22 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16b15945c8e6f56621516f16707d61be908e9972
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: df341bb5d66c8f88e5090e31014a5db5a1ff75c0
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  파티션 구성표에 파일 그룹을 추가하거나 파티션 구성표의 NEXT USED 파일 그룹 지정을 변경합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  파티션 구성표에 파일 그룹을 추가하거나 파티션 구성표의 NEXT USED 파일 그룹 지정을 변경합니다. 
+
+[!NOTE]
+Azure SQL 데이터베이스의 primary 파일 그룹에만 사용할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [TRANSACT-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +69,7 @@ NEXT USED [ filegroup_name ] [ ; ]
  ALTER PARTITION SCHEME가 적용되는 모든 파일 그룹은 온라인 상태여야 합니다.  
   
 ## <a name="permissions"></a>Permissions  
- 다음 권한을 사용하여 ALTER PARTITION SCHEME를 실행할 수 있습니다.  
+ 다음 사용 권한을 통해 ALTER PARTITION SCHEME을 실행할 수 있습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
   

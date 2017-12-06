@@ -27,14 +27,14 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bd6d0d21ce398784c2baf047bef81282f59465e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 127a240e1619200f758e528acc363a733d33da53
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 데이터베이스에서 파티션 함수를 제거합니다. CREATE PARTITION FUNCTION으로 파티션 함수를 만들고 ALTER PARTITION FUNCTION으로 파티션 함수를 수정할 수 있습니다.  
   

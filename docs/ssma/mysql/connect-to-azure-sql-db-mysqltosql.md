@@ -1,10 +1,13 @@
 ---
 title: "Azure SQL DB (MySQLToSQL)에 연결 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 743b17ae379d4b4b4f0a040f8035d80ced230cf0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dadd18eb9f5f2af55b2d68ad69f69fb3c54709fc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB (MySQLToSQL)에 연결
 SQL Azure 대화 상자에 연결을 사용 하 여 마이그레이션할 SQL Azure 데이터베이스에 연결 합니다.  

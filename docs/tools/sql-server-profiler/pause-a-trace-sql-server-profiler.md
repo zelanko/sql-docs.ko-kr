@@ -2,9 +2,12 @@
 title: "(SQL Server Profiler) 추적을 일시 중지 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f416ead2192c379f43a97aa386ca21589fd1385c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 07c66a2907d0e0d6b75e413959256133156b67a6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>추적 일시 중지(SQL Server Profiler)
-  추적을 일시 중지하면 다시 시작할 때까지는 이벤트 데이터가 더 이상 캡처되지 않습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]추적 일시 중지 하면 추가 이벤트 데이터 추적이 다시 시작 될 때까지 캡처가 합니다.  
   
  추적을 일시 중지하면 다시 시작할 때까지는 이벤트 데이터가 더 이상 캡처되지 않습니다. 추적을 다시 시작하면 추적 작업이 재개됩니다. 다시 시작한 후 이전에 캡처한 데이터는 손실되지 않으며 추적이 다시 시작되면 데이터 캡처는 일시 중지되었던 시점부터 재개됩니다. 추적이 일시 중지된 동안 이름, 이벤트, 열 및 필터를 변경할 수 있습니다. 하지만 추적 데이터를 보낼 대상을 변경하거나 서버 연결을 변경할 수 없습니다.  
   

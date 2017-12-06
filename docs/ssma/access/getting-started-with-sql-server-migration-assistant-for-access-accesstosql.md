@@ -1,10 +1,13 @@
 ---
 title: "SQL Server Migration Assistant for Access 시작 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: 5a2959f1904fb878f497eecfc6fe93802bee0941
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a862dae4fc4c6aafd5be1bebaabd028560de96b7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) 시작
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 액세스를 위해을 사용 하면 Access 데이터베이스 개체를 신속 하 게 변환할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 개체에 결과 개체의 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB에 대 한 액세스에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB 합니다. 하는 경우 필요에 따라 연결할 수도 있습니다 액세스 테이블을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 와 기존 Access 프런트 엔드 응용 프로그램을 사용 하도록 계속할 수 있도록 Azure SQL DB 테이블 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다.  

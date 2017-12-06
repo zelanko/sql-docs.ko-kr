@@ -2,9 +2,12 @@
 title: "추적과 Windows 성능 로그 데이터 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e76ba8035c6bfd6bb21a46ef2471c9ab20ccf66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef4781a05da3e06bc1d098dacce544dd599d647b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>Windows 성능 로그 데이터와 추적 상호 연결
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 Microsoft Windows 성능 로그를 열고 추적과의 상관 관계를 지정할 카운터를 선택한 다음 선택한 성능 카운터를 추적과 함께 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 그래픽 사용자 인터페이스에 표시할 수 있습니다. 추적 창에서 이벤트를 선택하면 선택한 추적 이벤트와 상관 관계가 있는 성능 로그 데이터가 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 의 시스템 모니터 데이터 창에서 빨간 세로 막대로 표시됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], Microsoft Windows 성능 로그를 열고, 추적과, 카운터를 선택한 및 다음 선택한 성능 카운터를 추적과 함께 표시는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 그래픽 사용자 인터페이스입니다. 추적 창에서 이벤트를 선택하면 선택한 추적 이벤트와 상관 관계가 있는 성능 로그 데이터가 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 의 시스템 모니터 데이터 창에서 빨간 세로 막대로 표시됩니다.  
   
  추적과 성능 카운터의 상관 관계를 지정하려면 **StartTime** 및 **EndTime** 데이터 열을 포함하는 추적 파일이나 테이블을 연 다음 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**파일** 메뉴에서 **성능 데이터 가져오기**를 클릭합니다. 그러면 성능 로그를 열고 추적과의 상관 관계를 지정할 시스템 모니터 개체와 카운터를 선택할 수 있습니다.  
   

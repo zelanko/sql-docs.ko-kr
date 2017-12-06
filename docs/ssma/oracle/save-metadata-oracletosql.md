@@ -1,10 +1,13 @@
 ---
 title: "메타 데이터 (OracleToSQL) 저장 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: a05d0fe7b8e458e5e4eaa2af7963dc4ae89c44e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f2c16ccca8371f88985da3841e0c5b5fd6a0a672
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-metadata--oracletosql"></a>메타 데이터 (OracleToSQL)를 저장 합니다.
 **메타 데이터 저장** SSMA 프로젝트에 저장 하기 전에 메타 데이터를 로드 하 라는 대화 상자가 표시 됩니다. 이 게 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사용자에 게 보낼 수 있는 전체 프로젝트 파일을 제공 합니다.  

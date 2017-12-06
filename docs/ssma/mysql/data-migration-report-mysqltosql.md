@@ -1,10 +1,13 @@
 ---
 title: "데이터 마이그레이션 보고서 (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc2d41edf4cc7e3425207de550a4793865ff9afb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90f8bc1e1985e48f07603bebab9431c0c7c1e05b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-migration-report--mysqltosql"></a>데이터 마이그레이션 보고서 (MySQLToSQL)
 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  

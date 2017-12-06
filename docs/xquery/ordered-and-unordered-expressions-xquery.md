@@ -3,8 +3,11 @@ title: "정렬 및 식 (XQuery) 순서 없이 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db51f8e41a3b8f186d542ebbb01687742b2faced
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f00040200f39fdc1f6b61703fdd12aab02f4e51c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>순차 식 및 비순차 식(XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   기본적으로의 모든 작업에 대 한 정렬 모드 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 은 **정렬**합니다. 따라서 노드 시퀀스에서 반환 된 경로 식 및 FLWOR 식 없이 **를 기준으로 정렬** 절 순서는 문서입니다.  
   

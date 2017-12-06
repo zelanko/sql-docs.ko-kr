@@ -2,9 +2,12 @@
 title: "(SQL Server Profiler) 추적을 중지 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8b605d80549ef3ca5fcccfa77ed01e19fe3eb2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 16eabbfd71cb37fead35013cd53871e1f8b9ca32
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>추적 중지(SQL Server Profiler)
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 실행 중인 추적을 중지하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 사용 하 여 실행 추적을 중지 하는 방법을 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
   
  추적을 중지하면 데이터 캡처가 중지됩니다. 추적을 중지한 후에 추적을 다시 시작하면 이전에 캡처한 데이터가 손실됩니다. 단, 데이터를 추적 파일 또는 추적 테이블로 캡처해 두었던 경우에는 그렇지 않습니다. 또한 추적을 중지한 후 수집된 데이터를 테이블이나 파일에 저장할 수 있습니다. 추적이 중지될 때 이전에 선택한 모든 추적 속성은 보관됩니다. 추적이 중지되면 이름, 이벤트, 열 및 필터를 변경할 수 있습니다.  
   

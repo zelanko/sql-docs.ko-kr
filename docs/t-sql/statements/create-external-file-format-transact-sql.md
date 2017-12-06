@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 037f9e0da637b872298d3859499858620570bc41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6db9730d5e0905d464a57151365a9413f61a86eb
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-external-file-format-transact-sql"></a>외부 파일 형식 (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -158,7 +158,7 @@ WITH (
 -   STRING_DELIMITER 두 tildas ' 0x7E0x7E'-= (예: ~ ~)
   
  DATE_FORMAT = *datetime_format*  
- 구분 기호로 분리 된 텍스트 파일에 표시 될 수 있는 모든 날짜 및 시간 데이터에 대 한 사용자 지정 형식을 지정 합니다. 소스 파일에서 기본 datefime 형식을 사용 하는 경우에이 옵션이 필요 하지 않습니다. 파일 당 하나의 사용자 지정 날짜/시간 형식이 허용 됩니다. 각 파일에 대해 여러 사용자 지정 날짜/시간 형식을 지정할 수 없습니다. 그러나 각 값은 외부 테이블 정의 각 데이터 형식에 대 한 기본 형식 하는 경우 여러 날짜/시간 형식을 사용할 수 있습니다.
+ 구분 기호로 분리 된 텍스트 파일에 표시 될 수 있는 모든 날짜 및 시간 데이터에 대 한 사용자 지정 형식을 지정 합니다. 기본 날짜/시간 형식을 사용 하는 소스 파일,이 옵션은 필요 하지 않습니다. 파일 당 하나의 사용자 지정 날짜/시간 형식이 허용 됩니다. 각 파일에 대해 여러 사용자 지정 날짜/시간 형식을 지정할 수 없습니다. 그러나 각 값은 외부 테이블 정의 각 데이터 형식에 대 한 기본 형식 하는 경우 여러 날짜/시간 형식을 사용할 수 있습니다.
  
  
 PolyBase는 데이터를 가져오기 위한 사용자 지정 날짜 형식을 사용 합니다. 외부 파일에 데이터를 쓰기 위한 사용자 지정 형식을 사용 하지 않습니다.

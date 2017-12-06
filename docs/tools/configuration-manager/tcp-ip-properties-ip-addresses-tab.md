@@ -2,9 +2,12 @@
 title: "TCP/IP 속성 (IP 주소 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 495e934aacbe30c4692a242bc44a10f809122c29
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 018d6474b242e80cfb483fc4ebea76d777af77e0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 속성(IP 주소 탭)
-  **TCP/IP 속성(IP 주소 탭)** 대화 상자를 사용하여 특정 IP 주소에 대한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **TCP/IP 속성 (IP 주소 탭)** 대화 상자를 특정 IP 주소에 대 한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
   
  변경 내용은 SQL Server를 다시 시작할 때 적용됩니다. SQL Server Browser 서비스를 시작 및 중지하는 방법은 [SQL Server Browser 서비스 시작 및 중지](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)를 참조하세요.  
   

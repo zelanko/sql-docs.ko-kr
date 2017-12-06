@@ -3,8 +3,11 @@ title: "SQL Server Management Studio - 사용 조건 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c35f596a096c84d8d55ca4d0db08c4c1ca8ef34a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d65a55f580dc91ed96f72986222ee8c0d0e85a75
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - 사용권 계약서
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>사용 가능한 언어:  
 [중국어(중국)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [중국어(대만)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [영어(미국)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [프랑스어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [독일어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [이탈리아어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [일본어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [한국어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [포르투갈어(브라질)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [러시아어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [스페인어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  

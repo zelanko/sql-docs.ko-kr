@@ -1,10 +1,13 @@
 ---
 title: "SSMA MySQL 콘솔 (MySQLToSQL)에 대 한 작업 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 08/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77eab5b93bdbf5de9866f16de49267db1490d6dd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1722db6c7325c10099cd293e6b8c102c38874692
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>SSMA MySQL 콘솔 (MySQLToSQL)에 대 한 작업
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) MySQL에 대 한 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있는 되었습니다. 스크립트 파일의 명령을 실행 하기 위한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램 SSMA 스크립트 수준 상호 작용, 마이그레이션 주기를 줄일 수 있으며 특정 마이그레이션 작업의 크기를 조정 합니다.  

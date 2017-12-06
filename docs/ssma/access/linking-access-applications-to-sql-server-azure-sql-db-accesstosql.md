@@ -1,10 +1,13 @@
 ---
 title: "SQL Server-Azure SQL DB에 대 한 액세스 응용 프로그램 연결 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,11 +33,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: 0cb77274631be10896e3b6dc13c3b36f0e75a0e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b4ac30b2c0275de85f7ebab7cb8c7d0876f3142f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server-Azure SQL DB (AccessToSQL)에 대 한 액세스 응용 프로그램 연결
 기존 Access 응용 프로그램을 사용 하려는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 원래 Access 테이블을 마이그레이션된 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 테이블입니다. 연결을 수정 하 Access 데이터베이스에서 데이터를 사용 하는 쿼리, 폼, 보고서 및 데이터 액세스 페이지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Access 데이터베이스의 데이터 대신 SQL Azure 데이터베이스입니다.  

@@ -1,10 +1,13 @@
 ---
 title: "프로젝트 설정 (변환) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19c450dbb2f30c4cb7dd571305c25084e964d02f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5c40fe3bcc95b062b188c041477011358d60fba2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>프로젝트 설정 (변환) (MySQLToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA MySQL 구문을 SQL Server 또는 SQL Azure 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  

@@ -2,9 +2,12 @@
 title: "SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 347b5128bb87f455b662bdd5266422948a316af6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b1d08c7596e3ded97a7ef1dddf0b84bd3470bbab
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진)
-  명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업을 스크립트로 작성할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 명령 프롬프트 유틸리티를 보여 줍니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]명령 프롬프트 유틸리티를 사용 하면 스크립트에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업 합니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 명령 프롬프트 유틸리티를 보여 줍니다.  
   
 |**유틸리티**|**설명**|**설치 위치**|  
 |-----------------|---------------------|----------------------|  

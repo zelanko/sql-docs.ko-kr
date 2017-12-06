@@ -2,9 +2,12 @@
 title: "ssbdiagnose 유틸리티 (Service Broker) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssbdiagnose
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1649bfe2e52102242f8850b343c1e5616666c0f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 601de096e50a39b13113ff09e86965187701b327
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
-  **ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**ssbdiagnose** 유틸리티의 문제는 보고 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화를 구성 하거나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스입니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -1,10 +1,13 @@
 ---
 title: "프로젝트 설정 (Azure SQL DB) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4b44146ab059c818de9e46a2941682cc15568e7a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 945d5584c82ccf52970e5590e5a36fa81a8f8c54
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>프로젝트 설정 (Azure SQL DB) (MySQLToSQL)
 SQL Azure 프로젝트 설정에 연결 대화 상자에 추가 하 고 SQL Azure 연결에서 하트 비트 메커니즘을 구현 허용할 SQL Azure 데이터베이스 접미사를 구성할 수 있습니다.  

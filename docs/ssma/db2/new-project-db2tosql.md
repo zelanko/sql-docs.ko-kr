@@ -1,10 +1,13 @@
 ---
 title: "새 프로젝트 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cf7feaf28c44c742bc42d1af5459399a8482c348
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cab4c08c52237d180ef9d1b76c4e68d76f471de7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="new-project-db2tosql"></a>새 프로젝트 (DB2ToSQL)
 사용 하 여는 **새 프로젝트** 대화 상자를 새 SSMA 프로젝트를 만듭니다. 에 액세스 하려면는 **새 프로젝트** 대화 상자의 **파일** 메뉴를 클릭 하 여 **새 프로젝트**합니다.  

@@ -3,8 +3,11 @@ title: "Xml 데이터 형식에 대 한 XQuery 함수 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -20,14 +23,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: db7579e4281ef0b4351f9aa0a95a4248a9c720ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a9f6887894745f737cce1eb134b4076339861af
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml 데이터 형식에 대한 XQuery 함수
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   이 항목 및 하위 항목 설명에 대해 XQuery를 지정 하는 경우 사용할 수 있는 함수는 **xml** 데이터 형식입니다. W3C 사양에 대 한 참조 [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](http://go.microsoft.com/fwlink/?LinkId=4873)합니다.  
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/09/2017
 ||[합계](../xquery/aggregate-functions-sum.md)|  
 |[생성자 함수 &#40; XQuery &#41;](../xquery/constructor-functions-xquery.md)|[생성자 함수](../xquery/constructor-functions-xquery.md)|  
 |[데이터 접근자 함수](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
-||[데이터](../xquery/data-accessor-functions-data-xquery.md)|  
+||[data](../xquery/data-accessor-functions-data-xquery.md)|  
 |[부울 생성자 함수 &#40; XQuery &#41;](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 함수 (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[false 함수 (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[Qname &#40; 관련 함수 XQuery &#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[확장 된 QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  

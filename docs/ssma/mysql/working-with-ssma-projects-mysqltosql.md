@@ -1,10 +1,13 @@
 ---
 title: "SSMA 프로젝트 (MySQLToSQL) 사용 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94cb62f1a2c1088ce8666f3e58722016330badd9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4b75762e5e0355a11e0287936508d6cc352d7b26
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA 프로젝트 (MySQLToSQL) 작업
 MySQL 데이터베이스를 SQL Server 또는 SQL Azure에 마이그레이션하려면 SSMA 프로젝트를 먼저 만들어야 할 합니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  

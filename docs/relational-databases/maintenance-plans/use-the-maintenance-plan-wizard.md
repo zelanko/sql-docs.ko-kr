@@ -1,9 +1,13 @@
 ---
 title: "유지 관리 계획 마법사 사용 | Microsoft 문서"
 ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -37,14 +41,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 64d2ad2fb4f75d69244ffad6e76c3cef6274309d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 21c05a6f8d841bc32cbcebd0830042c8b17c2421
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
     
  
 ##  <a name="Restrictions"></a> 제한 사항  
@@ -158,7 +162,7 @@ ms.lasthandoff: 11/09/2017
   
  -  **모든 데이터베이스**  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 제외한 모든 **[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]**에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다.  
+**tempdb** 를 제외한 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다.  
   
 **시스템 데이터베이스**  
   

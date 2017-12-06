@@ -2,10 +2,10 @@
 title: "SQL Server 2017 릴리스 정보 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/30/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.technology: server-general
@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc5502883bd349f8a2586f901d5088c4edacf65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69f0db3da6a75c64aa331a0050be39274e01dad3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] 이 문서에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.

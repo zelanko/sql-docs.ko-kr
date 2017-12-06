@@ -2,9 +2,12 @@
 title: "SQL Server Profiler 대화 상자 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/07/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -45,14 +48,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c48b3eca23a83669e33c7d31ddb7495176944813
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e27d4133d4115d3313dcb7b9f0e9e834b60645d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 대화 상자
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 서버로부터 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 캡처하는 도구입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다. 명령 및의 대화 상자에서 사용할 수 있는 설정에는 다음과 같은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 을 캡처하는 도구는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버에서 이벤트입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다. 명령 및의 대화 상자에서 사용할 수 있는 설정에는 다음과 같은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
 ## <a name="trace-properties"></a>추적 속성
 ### <a name="general-tab"></a>일반 탭
 **추적 속성** 대화 상자의 **일반** 탭을 사용하여 추적의 속성을 확인하거나 지정할 수 있습니다.  

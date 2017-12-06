@@ -1,10 +1,13 @@
 ---
 title: "프로젝트 설정 (형식 매핑) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,11 +27,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43b1e632293658300a3ca8c242a57507e31ffb5c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1d82b431499de3986f0358074ad96e4acc69fb41
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>프로젝트 설정 (형식 매핑) (AccessToSQL)
 프로젝트 유형 매핑 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다. 또한 개별 데이터베이스 개체에 대 한 형식 매핑을 지정할 수 있습니다. 자세한 내용은 참조 [매핑 소스 및 대상 데이터 형식](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)합니다.  

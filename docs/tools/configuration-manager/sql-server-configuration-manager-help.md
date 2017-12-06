@@ -2,9 +2,12 @@
 title: "SQL Server 구성 관리자 도움말 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46fae234aa78b30fcb3f16bc4d7cf0db40228f8e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 06fa3ef8d6b7f34f31b21685a1ba5b543f0fb6a6
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 구성 관리자 도움말
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스와 네트워크 연결을 구성할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용하면 데이터베이스 개체를 만들거나 관리하고, 보안을 구성하고, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리를 작성할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 및 네트워크 연결을 구성 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용하면 데이터베이스 개체를 만들거나 관리하고, 보안을 구성하고, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리를 작성할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
   
  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 대화 상자에 대한 F1 도움말 항목을 제공합니다.  
   
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/09/2017
   
  **에 액세스 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 사용 하 여[!INCLUDE[win8](../../includes/win8-md.md)]**  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[win8](../../includes/win8-md.md)]을(를) 실행할 때 응용 프로그램으로 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **검색** 참의 **앱**아래에 **SQLServerManager12.msc** ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 또는 **SQLServerManager11.msc** ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])를 입력한 다음 **Enter**키를 누릅니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[win8](../../includes/win8-md.md)]을(를) 실행할 때 응용 프로그램으로 표시되지 않습니다. 열려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에는 **검색** 참의 **앱**, 형식 **SQLServerManager12.msc** (에 대 한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 또는  **SQLServerManager11.msc** (에 대 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])를 누르고 **Enter**합니다.  
   
 
 ## <a name="see-also"></a>관련 항목:  

@@ -2,9 +2,12 @@
 title: "bcp 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: bcp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -31,14 +34,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b08d2a27a911c625c8d2b8ad5aa4e27fa8841bd6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 18d7ba613fe4b98adc94bcf099e9576fd0550e6d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [bcp 유틸리티](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)합니다.
 

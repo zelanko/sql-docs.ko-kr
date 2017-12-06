@@ -3,8 +3,11 @@ title: "Sybase (SybaseToSQL)에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 447d53ca968cd17441c359ca782dc212a3435095
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4f565c0acba658142e0542ce2a1806d0216f4f8b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase (SybaseToSQL)에 연결
 사용 하 여는 **Sybase 연결할** 마이그레이션하려는 Sybase 적응형 Server Enterprise (ASE) 인스턴스를 연결 하는 대화 상자.  

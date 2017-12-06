@@ -2,9 +2,12 @@
 title: "osql 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: osql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="osql-utility"></a>osql 유틸리티
-  **osql** 유틸리티를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**osql** 유틸리티 입력할 수 있습니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일입니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 버전에서는 이 기능이 제거됩니다. 향후 개발 작업에서는 이 기능을 사용하지 않도록 하고 현재 이 기능을 사용하는 응용 프로그램은 수정하십시오. 대신 **sqlcmd** 을 사용합니다. 자세한 내용은 [sqlcmd Utility](../tools/sqlcmd-utility.md)을(를) 참조하십시오.  

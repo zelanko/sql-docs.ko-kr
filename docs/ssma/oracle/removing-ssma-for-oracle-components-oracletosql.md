@@ -1,10 +1,13 @@
 ---
 title: "SSMA Oracle 구성 요소 (OracleToSQL)에 대 한 제거 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: e0dea581d93f996f710a64bf35c8d208740b1d17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef4562dfbb3551edcb921cf4850ed002c55db978
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>SSMA Oracle 구성 요소 (OracleToSQL)에 대 한 제거
 완료 했을 때 Oracle에서 데이터베이스를 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 구성 요소를 제거 해야 할 경우가 있습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있습니다. 그러나 제거해 서는 안에서 확장 팩 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 마이그레이션된 데이터베이스의 함수를 더 이상 사용 하지 않는 한는 **ssma_oracle** 의 스키마는 **sysdb** 데이터베이스입니다.  

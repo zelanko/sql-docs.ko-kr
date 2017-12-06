@@ -2,9 +2,12 @@
 title: "SQL Server 속성 (시작 매개 변수 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc88c227ddad0cabd100e78d4424375399aa5fb6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 속성(시작 매개 변수 탭)
-  이 대화 상자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 시작 매개 변수를 추가하거나 제거할 수 있습니다. 시작 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 성능에 많은 영향을 미칠 수 있습니다. 시작 매개 변수를 추가하거나 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목을 참조하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 대화 상자를 사용 하 여 추가 또는 제거에 대 한 시작 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 시작 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 성능에 많은 영향을 미칠 수 있습니다. 시작 매개 변수를 추가하거나 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목을 참조하십시오.  
   
 ## <a name="options"></a>옵션  
  **시작 매개 변수 지정**  

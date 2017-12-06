@@ -1,10 +1,13 @@
 ---
 title: "Oracle 클라이언트 (OracleToSQL) 용 SSMA를 설치 합니다. | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: b8673a22cb3c26beeb4fe118bdc403ac62464fa8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f9fcb6b5b332b603c44d5bf62114e6137b5c99ec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Oracle 클라이언트 (OracleToSQL) 용 SSMA를 설치합니다.
 다음 작업을 수행 하는 프로그램 파일의 SSMA 클라이언트 구성 됩니다.  

@@ -2,9 +2,12 @@
 title: "작업 튜닝 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 287b45c3cf54cb043e111fd62e1d6fa286f9c9a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 56041b15a6fa78bc88d62c409f0df958d0dd862a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>단원 1-1-작업 튜닝
-데이터베이스 엔진 튜닝 관리자를 사용하여 튜닝하려고 선택한 데이터베이스와 테이블의 쿼리 성능에 가장 적합한 물리적 데이터베이스 디자인을 찾을 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터베이스 엔진 튜닝 관리자는 데이터베이스와 튜닝 하려고 선택한 테이블의 쿼리 성능에 대 한 최상의 물리적 데이터베이스 디자인을 찾는 데 사용할 수 있습니다.  
   
 이 태스크에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 예제 데이터베이스를 설치하려면 [SQL Server 예제 및 예제 데이터베이스](http://sqlserversamples.codeplex.com)를 참조하세요.  
   

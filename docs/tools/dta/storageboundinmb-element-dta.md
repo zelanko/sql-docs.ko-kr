@@ -2,9 +2,12 @@
 title: "StorageBoundInMB 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ab0965888661501f8a9a9b0f31a7edd6cb7e3bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d7377acefc270c6e497a1a8890ab6bea41a92fd1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 요소(DTA)
-  데이터베이스 엔진 튜닝 관리자 튜닝 권장 구성(인덱스 및 분할 집합)에 사용될 수 있는 최대 공간(MB)을 지정합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)](메가바이트) 데이터베이스 엔진 튜닝 관리자 튜닝 권장 구성 (인덱스 및 분할 집합)에 사용할 수 있는 최대 공간을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   

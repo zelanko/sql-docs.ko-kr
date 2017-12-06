@@ -2,9 +2,12 @@
 title: "(SQL Server Profiler) 필터를 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a08a25142455ef526a903107604e25588b2f0aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 741d1558f4d3efae9cf0d4742ee0fcce6d15d6c2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>필터 수정(SQL Server Profiler)
-  추적 정의가 포함된 추적 템플릿에 필터를 추가하여 추적에서 수집하는 이벤트의 수를 제한할 수 있습니다. 수집된 이벤트의 수를 제한하면 추적의 성능 효과가 저하될 수 있습니다. 추적 템플릿에 필터를 설정했고 추적에서 필요한 유형의 정보를 수집하고 있지 않는 것을 확인하는 경우 해당 필터를 편집할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 추적에서 수집 하는 이벤트의 수를 제한 하려면 추적 정의가 포함 된 추적 템플릿에 필터를 추가 합니다. 수집된 이벤트의 수를 제한하면 추적의 성능 효과가 저하될 수 있습니다. 추적 템플릿에 필터를 설정했고 추적에서 필요한 유형의 정보를 수집하고 있지 않는 것을 확인하는 경우 해당 필터를 편집할 수 있습니다.  
   
 ### <a name="to-modify-a-filter"></a>필터를 수정하려면  
   

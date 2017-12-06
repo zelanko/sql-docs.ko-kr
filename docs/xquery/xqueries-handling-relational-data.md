@@ -3,8 +3,11 @@ title: "관계형 데이터를 처리 하는 XQueries | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7a14ed2b176f65b379f9e09a7f920094a16b2f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 447ffa853f8a5b6a257cc7e2918feaddcbde8a0f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xqueries-handling-relational-data"></a>관계형 데이터에 대한 XQuery 처리
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   에 대해 XQuery를 지정 하는 **xml** 유형 열 또는 변수 중 하나를 사용 하 여는 [XML 데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md)합니다. 여기에 **query ()**, **value ()**, **exist ()**, 또는 **modify ()**합니다. XQuery는 XML을 생성하는 쿼리에서 식별된 XML 인스턴스에 대해 실행됩니다.  
   

@@ -3,8 +3,11 @@ title: "정렬 포함 XQueries | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4aaddc6a3809a65300784786ece895695266d43c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 553e7168b0a977eb1c7d1f24e1c50c8fb8876247
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xqueries-involving-order"></a>정렬 포함 XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   관계형 데이터베이스에는 시퀀스 개념이 없습니다. 예를 들어 "데이터베이스에서 첫 번째 고객 가져오기"와 같은 요청은 수행할 수 없습니다. 그러나 XML 문서를 쿼리 하 고 첫 번째 검색 수 \<고객 > 요소입니다. 그런 다음에는 항상 같은 고객을 검색할 수 있습니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: "트랜잭션 격리 수준을 (Transact SQL) 설정 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32948fdc6c6c24de0331be45678dc89561de69de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cde588fed7aad439e90c97de99ba89633a1df2c5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,29 +44,27 @@ ms.lasthandoff: 11/21/2017
   [!INCLUDE[tsql](../../includes/tsql-md.md)]에 연결하여 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문의 잠금 및 행 버전 관리 기능을 제어합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>구문
+
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-## <a name="syntax"></a>구문  
+SET TRANSACTION ISOLATION LEVEL
+    { READ UNCOMMITTED
+    | READ COMMITTED
+    | REPEATABLE READ
+    | SNAPSHOT
+    | SERIALIZABLE
+    }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET TRANSACTION ISOLATION LEVEL  
-    { READ UNCOMMITTED  
-    | READ COMMITTED  
-    | REPEATABLE READ  
-    | SNAPSHOT  
-    | SERIALIZABLE  
-    }  
-[ ; ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED  
-[ ; ]  
-```  
-  
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+```
+
 ## <a name="arguments"></a>인수  
  READ UNCOMMITTED  
  다른 트랜잭션에 의해 수정되었지만 아직 커밋되지 않은 행을 문이 읽을 수 있도록 지정합니다.  

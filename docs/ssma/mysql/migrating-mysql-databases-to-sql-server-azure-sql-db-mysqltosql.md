@@ -1,10 +1,13 @@
 ---
 title: "MySQL 데이터베이스를 SQL Server-SQL Azure DB로 마이그레이션 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c58cd08cddd34bccaabdfe35004a768c4ad85a2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e39721870b2fc9637037e4dcf7b24924e5e5c052
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>SQL Server-Azure SQL DB (MySQLToSql) MySQL 데이터베이스 마이그레이션
 SQL Server Migration Assistant (SSMA) MySQL 용 SQL Server 또는 SQL Azure에 MySQL 데이터베이스를 신속 하 게 마이그레이션할 수 있는 통합 환경을입니다. MySQL 용 SSMA를 사용해 있습니다 수 데이터베이스 개체와 데이터를 검토 평가 마이그레이션할 데이터베이스, SQL Server 또는 SQL Azure에 데이터베이스 개체를 마이그레이션할 하 고, 다음 SQL Server 또는 SQL Azure에 데이터를 마이그레이션합니다.  

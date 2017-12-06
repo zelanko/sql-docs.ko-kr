@@ -1,10 +1,13 @@
 ---
 title: "데이터베이스 마법사 (Select 파일)를 찾을 (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9f9283dddd98208c1eb25990fa228e2287793615
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 98f799138330399da6b4f96bbf10574b3878763d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>데이터베이스 마법사 (Select 파일)를 찾을 (AccessToSQL)
 데이터베이스 검색 마법사의 파일 선택 페이지는 검색 하는 동안 발견 된 파일을 나열 합니다. SSMA에 추가할 파일을 선택 하려면 파일 이름을 포함 하는 행을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 선택 확인 페이지를 볼 수 있습니다.  
