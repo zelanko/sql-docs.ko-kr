@@ -2,9 +2,12 @@
 title: "Microsoft Word로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,15 +19,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: fa120c78f7b443eb0dc6078a5444b79b20bbda8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a42bdc5a9d8a0f19958d6537de027d815b3ca8d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 
-  Word 렌더링 확장 프로그램은 페이지가 매겨진 보고서를 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 형식(.docx)으로 렌더링합니다. 형식은 Office Open XML입니다.  
+  Word 렌더링 확장 프로그램은 페이지가 매겨진 보고서를  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 형식(.docx)으로 렌더링합니다. 형식은 Office Open XML입니다.  
   
  이 렌더러에 의해 생성된 파일의 콘텐츠 형식은 **application/vnd.openxmlformats-officedocument.wordprocessingml.document** 이고 파일 확장명은 .docx입니다.  
   
@@ -77,9 +80,9 @@ ms.lasthandoff: 11/09/2017
   
  이는 Word 렌더러가 **PageNumber** 및 **TotalPages** 등의 페이지 매김과 관련된 필드에 대해 보고서를 구문 분석하며, 함수를 호출하는 것이 아니라 단순 참조만 처리하기 때문입니다. 이 경우 식에서는 **ToString** 함수를 호출합니다. 다음 두 식은 동일하며, 보고서를 보고서 작성기 또는 보고서 디자이너에서 미리 보거나 게시된 보고서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 라이브러리에서 렌더링할 때 두 식 모두 올바르게 렌더링됩니다. 그러나 Word 렌더러는 두 번째 식만 올바르게 구문 분석하여 올바른 페이지 번호를 렌더링합니다.  
   
--   **복합 식:** 식은 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **복합 식:**  식은 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **텍스트 실행을 사용하는 식:** 텍스트, **평균 판매**와 식, `=Avg(Fields!YTDPurchase.Value, "Sales)`및 텍스트, **페이지 번호**와 식 `=Globals!PageNumber`  
+-   **텍스트 실행을 사용하는 식:** 텍스트, **평균 판매**와 식,  `=Avg(Fields!YTDPurchase.Value, "Sales)`및 텍스트, **페이지 번호**와 식 `=Globals!PageNumber`  
   
  이러한 문제를 방지하려면 머리글 및 바닥글에서 식을 사용할 때 하나의 복합 식 대신 여러 텍스트를 사용해 실행하세요. 다음은 이와 동등한 두 가지 식입니다. 첫 번째 식은 복합식이고 두 번째 식은 텍스트 실행을 사용합니다. Word 렌더러는 두 번째 식만 성공적으로 구문 분석합니다.  
   

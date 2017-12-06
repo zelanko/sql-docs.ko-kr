@@ -2,10 +2,10 @@
 title: "SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/01/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4cc4c589c9b30d3ae05ec4c273e5376da29dbcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48d80ca9c0e939f0d70cac411014b41cc1e777b4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 새 버전, 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 팩 또는 누적 업데이트로 업그레이드할 수 있습니다. 또한 모든 장애 조치(Failover) 클러스터 노드에서 새 Windows 서비스 팩 또는 누적 업데이트를 별도로 설치하여 업그레이드할 때는 가동 중지 시간을 수동 장애 조치(Failover) 1회에 걸리는 시간으로 제한할 수 있습니다. 원래 주 서버로 장애 복구(failback)할 때는 수동 장애 조치(Failover) 2회에 걸리는 시간이 소요됩니다.  

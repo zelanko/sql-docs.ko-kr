@@ -2,9 +2,12 @@
 title: "보고서 서버 HTTP 로그 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 90732a6f209640298ec1776fd5368b26fd2526fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e7e004056a630e55ef90112c909b77ca7e801c4d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-http-log"></a>보고서 서버 HTTP 로그
   보고서 서버 HTTP 로그 파일은 보고서 서버에서 처리하는 모든 HTTP 요청 및 응답에 대한 기록을 유지합니다. 요청 오버플로 및 제한 시간 오류는 보고서 서버에 도달하지 않으므로 로그 파일에 기록되지 않습니다.  

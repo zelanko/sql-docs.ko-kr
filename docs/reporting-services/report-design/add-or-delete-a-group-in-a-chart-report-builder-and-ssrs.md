@@ -2,9 +2,12 @@
 title: "차트에서 그룹 추가 또는 삭제(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5828189294b51d10f36c4d0250f6a7b5aa5f2151
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 573874566d91bdc732bf4e1919f85927a92fceb0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>차트에서 그룹 추가 또는 삭제(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에서 차트 데이터 영역을 클릭하여 **차트 데이터** 창을 표시합니다. 데이터 집합 필드를 **범주 그룹** 및 **계열 그룹** 영역으로 끌어서 그룹을 만듭니다. 중첩된 그룹을 추가하려면 영역에 여러 필드를 추가합니다.  

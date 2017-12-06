@@ -2,9 +2,12 @@
 title: "자습서: 맵 보고서(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: eff98b4bac895c945e48b19be9ef40131d829662
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2250158376315b0eb05dc0b95bc7cd78a333aec9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 지리적 배경 데이터를 표시하는 데 사용할 수 있는 지도 기능에 대해 알아봅니다. 

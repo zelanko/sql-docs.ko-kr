@@ -2,9 +2,12 @@
 title: "차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -32,11 +35,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7cc9e4800d6fd00cd0934bc2c1eeac04f7a68fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: af8006697c18785e110a4b88b1549b6587e71ba1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
   좌표 기반 차트 종류(세로 막대형, 가로 막대형, 영역형, 점, 꺾은선형 및 범위형)에는 데이터 관계를 범주화하고 표시하는 데 사용되는 두 개의 축이 있습니다. 각 축에는 다양한 유형의 서식이 지정됩니다.  

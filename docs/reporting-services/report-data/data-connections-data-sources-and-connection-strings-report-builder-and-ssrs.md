@@ -2,9 +2,12 @@
 title: "데이터 연결, 데이터 원본, 연결 문자열-보고서 작성기-SSRS | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: da4de81a8839049df0b5005a7d38f21e166ce3d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e1f5b27d158714d5e379617e935a2b152a343278
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>데이터 연결, 데이터 원본 및 연결 문자열(보고서 작성기 및 SSRS)
 
@@ -26,7 +29,7 @@ ms.lasthandoff: 11/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에 데이터를 포함하려면 먼저 *데이터 원본* 및 *데이터 집합*을 만들어야 합니다. 이 항목에서는 데이터 원본의 유형, 데이터 원본을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 데이터 원본에는 포함된 데이터 원본과 공유 데이터 원본의 두 가지 유형이 있습니다. 포함된 데이터 원본은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 보고서와 독립적으로 정의되며 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 및  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에 데이터를 포함하려면 먼저 *데이터 원본* 및 *데이터 집합*을 만들어야 합니다. 이 항목에서는 데이터 원본의 유형, 데이터 원본을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 데이터 원본에는 포함된 데이터 원본과 공유 데이터 원본의 두 가지 유형이 있습니다. 포함된 데이터 원본은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 보고서와 독립적으로 정의되며 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
  포함된 데이터 원본은 보고서 정의에 저장되는 데이터 연결입니다. 포함된 데이터 원본 연결 정보는 해당 정보가 포함된 보고서에서만 사용될 수 있습니다. 포함된 데이터 원본을 정의하고 관리하려면 보고서의 **데이터 원본 속성** 대화 상자를 사용합니다.  
   
- 포함된 데이터 원본과 공유 데이터 원본은 작성, 저장 및 관리되는 방법이 다릅니다.  
+ 포함된 데이터 원본과 공유 데이터 원본은 작성,  저장 및 관리되는 방법이 다릅니다.  
   
 -   보고서 디자이너에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트의 일부분으로 포함된 데이터 원본 또는 공유 데이터 원본을 만듭니다. 이러한 데이터 원본을 미리 보기용으로 로컬에서 사용할지 아니면 프로젝트의 일부분으로 보고서 서버 또는 SharePoint 사이트에 배포할지를 제어할 수 있습니다. 보고서를 배포하는 보고서 서버 또는 SharePoint 사이트와 사용 중인 컴퓨터에 설치한 사용자 지정 데이터 확장 프로그램을 사용할 수 있습니다.  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  **데이터 확장 프로그램/데이터 공급자** 여러 데이터 액세스 계층을 통해 데이터에 연결할 수 있습니다.  
   
-6.  **외부 데이터 원본** 관계형 데이터베이스, 다차원 데이터베이스, SharePoint 목록, 웹 서비스 또는 보고서 모델에서 데이터를 검색합니다.  
+6.  **외부 데이터 원본** 관계형 데이터베이스,  다차원 데이터베이스,  SharePoint  목록,  웹 서비스 또는 보고서 모델에서 데이터를 검색합니다.  
   
 ##  <a name="bkmk_connection_examples"></a> 자주 사용하는 연결 문자열 예  
  연결 문자열은 데이터 공급자에 대한 연결 속성의 텍스트 표현입니다. 다음 표에서는 다양한 데이터 연결 형식에 대한 연결 문자열의 예를 보여 줍니다.  

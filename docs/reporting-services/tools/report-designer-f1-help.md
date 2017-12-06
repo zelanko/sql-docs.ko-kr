@@ -2,9 +2,12 @@
 title: "보고서 디자이너 F1 도움말 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a3629ab42cef5cceeaccb8a969b003667808936f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a283102f53802dabef95b289f7dcab6a96af6c34
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-designer-f1-help"></a>보고서 디자이너 F1 도움말
   이 섹션에서는 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 디자이너 마법사, 뷰 및 대화 상자에 대한 F1 도움말을 설명합니다. 대화 상자에서 작업하는 동안 F1 키를 누르거나 대화 상자에 표시된 도움말 단추를 클릭하여 F1 도움말을 열 수도 있습니다.  

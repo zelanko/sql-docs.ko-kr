@@ -2,9 +2,12 @@
 title: "데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -25,11 +28,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: e9e31e800ebadc67463c8b209ad16a592e85027c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f765c32963d149c42bda40849f67e9206a1ff3b2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
   보고서에서 식은 보고서 데이터를 제어, 구성 및 정렬하는 데 사용됩니다. 기본적으로 데이터 집합을 만들고 보고서 레이아웃을 디자인하면 보고서 항목의 속성이 데이터 집합 필드, 매개 변수 및 보고서 데이터 창에 표시되는 기타 항목을 기반으로 자동으로 식에 설정됩니다. 또한 테이블 또는 행렬 셀에 대화형 정렬 단추를 추가하여 사용자가 그룹의 행 정렬 순서 또는 그룹 내 행을 대화형으로 변경하도록 할 수 있습니다.  

@@ -2,9 +2,12 @@
 title: "Reporting Services 오류의 원인 및 해결 방법 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0f13ebef237e353886dac2b66d6f1547433e093a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3a628528072e711b0fdb7f3266313b2961a630e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 오류의 원인 및 해결 방법
   이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련한 몇 가지 오류의 원인 및 해결 방법 정보가 포함되어 있습니다. 이 섹션의 오류 메시지 항목에서는 오류 메시지, 가능한 원인 및 문제 해결을 위해 수행할 수 있는 동작에 대해 설명합니다.  

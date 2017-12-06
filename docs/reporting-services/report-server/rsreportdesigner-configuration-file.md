@@ -2,9 +2,12 @@
 title: "RSReportDesigner 구성 파일 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: debdd3bfd68c202222fcdd153c366b3ff6d70367
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6b23c29de71985635eaf98720bb3e6f32dae3edf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 구성 파일
   RSReportDesigner.config 파일에는 보고서 디자이너에 사용할 수 있는 렌더링 및 데이터 처리 확장 프로그램에 대한 설정이 저장됩니다. 데이터 처리 확장 프로그램 정보는 **Data** 요소에 저장됩니다. 렌더링 확장 프로그램 정보는 **Render** 요소에 저장됩니다. **Designer** 요소는 보고서 디자이너에 사용된 쿼리 작성기를 열거합니다.  

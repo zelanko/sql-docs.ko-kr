@@ -2,9 +2,12 @@
 title: "보고서 서버 데이터베이스 관리(SSRS 기본 모드) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 3fc4f3adeac32e917b5b218548906ca6a9cb664d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e8fe9877ea3e30466652a1cd4db8f4af53ba396
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포는 두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 내부 저장소로 사용합니다. 기본적으로 데이터베이스 이름은 각각 ReportServer와 ReportServerTempdb입니다. ReportServerTempdb는 기본 보고서 서버 데이터베이스로 생성되며 임시 데이터, 세션 정보 및 캐시된 보고서를 저장하는 데 사용됩니다.  

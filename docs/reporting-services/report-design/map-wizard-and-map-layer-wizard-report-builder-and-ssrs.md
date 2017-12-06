@@ -2,9 +2,12 @@
 title: "지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ef6a44a6fedf7815e6a7ad5304cf8ee840a52894
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d810c44d790b73cb9bd8050370487e25ea6870eb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 지도 마법사 및 지도 계층 마법사는 지도를 만들거나 지도 계층을 추가하거나 기존 계층의 지도 계층 옵션을 변경하는 태스크를 자동화합니다.  

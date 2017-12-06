@@ -2,9 +2,12 @@
 title: "데이터 집합 필드 컬렉션(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dfd2de97c1ed49e559ae4b991b6fc1b6ecfc05ff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 집합 필드 컬렉션(보고서 작성기 및 SSRS)
   데이터 집합 필드는 데이터 연결의 데이터를 나타냅니다. 필드는 숫자 데이터나 숫자가 아닌 데이터를 나타낼 수 있습니다. 예로는 판매액, 총 판매액, 고객 이름, 데이터베이스 식별자, URL, 이미지, 공간 데이터, 전자 메일 주소 등이 있습니다. 디자인 화면에서 필드는 입력란, 테이블 및 차트와 같은 보고서 항목에서 식으로 나타납니다.  

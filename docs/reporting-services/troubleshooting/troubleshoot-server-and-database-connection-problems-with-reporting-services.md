@@ -2,9 +2,12 @@
 title: "Reporting Services의 서버 및 데이터베이스 연결 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7dddbd58335ffc0ad9d4f44fa6fab633ba4da43
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5dd30097deb23e911e43789e10e81685f1ce0743
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
 이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하십시오.  

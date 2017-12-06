@@ -1,10 +1,13 @@
 ---
 title: "Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 633727df8bdb43072ab5780cfca394934c049801
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 52f17abe22cbfef7c627600081c6afb7e772de73
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
 
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> 클라이언트 쪽 인쇄 문제 해결  
  보고서 뷰어 도구 모음의 인쇄 버튼이 비활성화된 경우 다음을 확인합니다.  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 보고서 서버에 대한 클라이언트 쪽 인쇄 기능이 비활성화되었습니다. 이 항목에서 [클라이언트 쪽 인쇄 사용 및 사용 안 함](#bkmk_enable) 섹션을 참조하세요.  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 보고서 서버에 대한 클라이언트 쪽 인쇄 기능이 비활성화되었습니다. 이 항목에서  [클라이언트 쪽 인쇄 사용 및 사용 안 함](#bkmk_enable) 섹션을 참조하세요.  
   
 -   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] PDF 렌더링 확장이 사용하지 않도록 설정되었습니다. `<Extension Name="PDF"` rsreportserver.config **파일의** 섹션을 검토합니다.  
   

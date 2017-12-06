@@ -2,9 +2,12 @@
 title: "보고서 캐시(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 79a60b96277352c51ce19d24d9504735e5fdb91f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 31a4eb9c303fe2c7d676cca535de3c64272f0caa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="caching-reports-ssrs"></a>보고서 캐시(SSRS)
   보고서 서버는 처리된 보고서의 복사본을 캐시했다가 사용자가 보고서를 열면 해당 복사본을 반환할 수 있습니다. 사용자는 보고서가 실행된 날짜와 시간을 통해서만 보고서가 캐시된 복사본인지 여부를 알 수 있습니다. 보고서의 날짜 또는 시간이 현재가 아니고 보고서가 스냅숏이 아니라면 캐시에서 가져온 보고서입니다.  

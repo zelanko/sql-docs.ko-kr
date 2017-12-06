@@ -2,9 +2,12 @@
 title: "스파크라인 및 데이터 막대(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 231a738dac853548fe12d2762aedba651f379828
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c0af6c5e35a50e1ce26b1511ce97b7ac1978a732
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>스파크라인 및 데이터 막대(보고서 작성기 및 SSRS)
   스파크라인과 데이터 막대는 작은 공간에 많은 정보가 포함되어 있는 작고 간단한 차트로, 보통 텍스트와 인라인으로 표시됩니다.   

@@ -2,9 +2,12 @@
 title: "공유 데이터 집합 캐시(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cdaf429e989b54bafff0a2423a75ebfc93395897
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 75e58c48bd6e1c0801e2d75c5ec4cd89149b91b7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="cache-shared-datasets-ssrs"></a>공유 데이터 집합 캐시(SSRS)
   공유 데이터 집합에 대한 쿼리 결과를 캐시로 복사하여 여러 보고서에 일관성 있는 데이터를 제공하고 데이터 집합 쿼리에 대한 응답 시간을 향상시킬 수 있습니다. 보고서와 마찬가지로 공유 데이터 집합을 처음 사용할 때 또는 일정을 지정하여 공유 데이터 집합이 캐시되도록 구성할 수 있습니다.  

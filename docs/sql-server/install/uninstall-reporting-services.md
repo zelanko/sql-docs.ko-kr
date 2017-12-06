@@ -2,10 +2,10 @@
 title: "Reporting Services 제거 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: d21cf4566e5a2266c85d0a82bc8519abef5bf062
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bc1a63bdee67c094d21c05f23e9ae2da32af7fbe
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="uninstall-reporting-services"></a>Reporting Services 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제거해도 사용자가 만든 콘텐츠나 수정한 구성은 제거되지 않습니다. 그러나 제거를 완료한 후에도 필요한 콘텐츠가 있는 경우 제거 프로세스를 시작하기 전에 콘텐츠를 복사하는 것이 좋습니다.  

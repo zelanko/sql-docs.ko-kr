@@ -2,9 +2,12 @@
 title: "Reporting Services 업그레이드 및 마이그레이션 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: af94ddd1515281c0e6efefce3d3e6e329c8292c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 13b4723a9d481f9372b73619ffd9900f278b1910
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Reporting Services 업그레이드 및 마이그레이션
 
@@ -173,7 +176,7 @@ ms.lasthandoff: 11/09/2017
   
  **종료 환경:** SQL Server Reporting Services, SharePoint 2013 또는 SharePoint 2016.   
   
--   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**됩니다.
+-   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013/2016 팜으로 마이그레이션할 수 있습니다.  
   
@@ -182,7 +185,7 @@ ms.lasthandoff: 11/09/2017
   
  **종료 환경:** SQL Server Reporting Services, SharePoint 2013 또는 SharePoint 2016.   
   
--   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**됩니다.
+-   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013/2016 팜으로 마이그레이션할 수 있습니다.  
   
@@ -191,7 +194,7 @@ ms.lasthandoff: 11/09/2017
   
  **종료 환경:** SQL Server Reporting Services, SharePoint 2013 또는 SharePoint 2016.  
  
--   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**됩니다.
+-   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
 
     Reporting Services를 업그레이드하기 전에 먼저 SharePoint를 마이그레이션해야 합니다.
   

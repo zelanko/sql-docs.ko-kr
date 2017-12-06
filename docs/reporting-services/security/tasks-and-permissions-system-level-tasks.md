@@ -2,9 +2,12 @@
 title: "시스템 수준 작업 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3c8a3edfbeafe5ab2f417e514e011899c528c283
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fcfb30e90a7e5e387b6a7e244a842a41c8ce7012
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>작업 및 사용 권한 - 시스템 수준의 작업
   시스템 수준 태스크는 보고서 서버 사이트 전체에 적용되는 작업과 관련된 권한의 모음입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 특정 항목에 적용되는 항목 수준의 태스크도 있습니다. 자세한 내용은 [항목 수준의 태스크](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)를 참조하세요. 일반적인 태스크 및 사용 권한에 대한 자세한 내용은 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)을 참조하십시오.  

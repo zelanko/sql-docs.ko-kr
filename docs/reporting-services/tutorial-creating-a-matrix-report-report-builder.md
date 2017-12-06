@@ -2,9 +2,12 @@
 title: "자습서: 행렬 보고서 만들기(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ee61088e30c0c2be4caa7a6989e56812c77fe0e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5148e4416998d69822fb7aea96304c92b8c2a1e1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
 이 자습서에서는 중첩된 행 및 열 그룹의 샘플 판매 데이터 행렬을 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만드는 방법을 설명합니다. 

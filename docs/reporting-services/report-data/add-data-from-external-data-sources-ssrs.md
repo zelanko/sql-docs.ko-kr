@@ -2,9 +2,12 @@
 title: "외부 데이터 소스에서 데이터 추가(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1506234bc04698bc613f38570e19f5184e54c887
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 11b9cf94deb2f686939beec038d241c4b868928a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>외부 데이터 원본의 데이터 추가(SSRS)
   외부 데이터 원본에서 데이터를 검색하려면 데이터 연결을 사용합니다. 일반적으로 데이터 연결 정보는 사용 권한을 부여하고 사용할 자격 증명 유형을 지정하는 외부 데이터 원본의 소유자가 제공합니다. 데이터 연결 정보는 보고서 데이터 원본으로 저장됩니다. 데이터 원본 유형에 따라 데이터를 검색하는 데 사용할 데이터 확장 프로그램이 결정됩니다.  
@@ -108,7 +111,7 @@ ms.lasthandoff: 11/09/2017
 |[보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|포함된 데이터 집합 및 공유 데이터 집합에 대한 정보를 제공합니다.|  
 |[데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.|  
-|[[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](http://go.microsoft.com/fwlink/?linkid=121312)을 참조하십시오.|고급 사용자를 위해 데이터 확장 프로그램에 대한 자세한 정보를 제공합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [데이터 처리 확장 프로그램 개요](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)를 참조하세요.|고급 사용자를 위해 데이터 확장 프로그램에 대한 자세한 정보를 제공합니다.|  
   
   
 ## <a name="see-also"></a>관련 항목:  

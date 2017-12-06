@@ -2,9 +2,12 @@
 title: "보고서 페이지에서 테이블릭스 데이터 영역 표시 제어 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: ea832d4470d5a7cdca520cd568baf8df32fa390c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b1035ac44b6ba21706ccb1194525d6022d71915
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>보고서 페이지에서 테이블릭스 데이터 영역 표시 제어
 보고서를 볼 때 나타나는 방식을 변경하려면 테이블, 행렬 또는 목록 데이터 영역에 대해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 설정할 수 있는 속성을 참조하세요.  
@@ -32,13 +35,13 @@ ms.lasthandoff: 11/09/2017
   
 -   **식 작성**. 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
--   **정렬 순서 제어**. 정렬 순서를 제어하려면 데이터 영역에서 정렬 식을 정의합니다. 그룹에 연결된 행 및 열에 대한 정렬 순서를 제어하려면 세부 정보 그룹을 포함한 그룹에서 정렬 식을 정의합니다. 대화형 정렬 단추를 추가하면 사용자가 테이블릭스 데이터 영역이나 해당 그룹을 정렬할 수 있습니다. 자세한 내용은 [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
+-   **정렬 순서 제어**. 정렬 순서를 제어하려면 데이터 영역에서 정렬 식을 정의합니다. 그룹에 연결된 행 및 열에 대한 정렬 순서를 제어하려면 세부 정보 그룹을 포함한 그룹에서 정렬 식을 정의합니다. 대화형 정렬 단추를 추가하면 사용자가 테이블릭스 데이터 영역이나 해당 그룹을 정렬할 수 있습니다. 자세한 내용은 [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   **데이터가 없을 때 메시지 표시**. 런타임에 보고서 데이터 집합에 대한 데이터가 없을 때 데이터 영역에 표시할 고유의 메시지를 작성할 수 있습니다. 자세한 내용은 [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   **조건에 따라 데이터 숨기기**. 데이터 영역이나 데이터 영역의 일부를 표시할지 여부를 조건부로 제어하려면 Hidden 속성을 **True** 또는 식으로 설정합니다. 식에는 보고서 매개 변수에 대한 참조를 포함할 수 있습니다. 토글 항목을 지정하면 사용자가 정보 데이터를 표시할지를 결정할 수도 있습니다. 자세한 내용은 [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)을 참조하세요.  
   
--   **셀 병합.** 테이블 내의 여러 연속 셀을 하나의 셀로 병합할 수 있습니다. 이를 열 확장 또는 셀 병합이라고 합니다. 셀은 가로 또는 세로로만 결합할 수 있습니다. 셀을 병합하면 첫 번째 셀의 데이터만 유지됩니다. 다른 셀의 데이터는 제거됩니다. 병합된 셀은 원래 열로 나눌 수 있습니다. 자세한 내용은 [데이터 영역의 셀 병합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
+-   **셀 병합.** 테이블 내의 여러 연속 셀을 하나의 셀로 병합할 수 있습니다. 이를 열 확장 또는 셀 병합이라고 합니다. 셀은 가로 또는 세로로만 결합할 수 있습니다. 셀을 병합하면 첫 번째 셀의 데이터만 유지됩니다. 다른 셀의 데이터는 제거됩니다. 병합된 셀은 원래 열로 나눌 수 있습니다. 자세한 내용은 [데이터 영역의 셀 병합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="controlling-tablix-data-region-position-and-expansion-on-a-page"></a>페이지에서 테이블릭스 데이터 영역 위치 및 확장 제어  
  다음 기능을 사용하여 테이블릭스 데이터 영역이 렌더링된 보고서에 표시되는 방법을 제어할 수 있습니다.  

@@ -2,9 +2,12 @@
 title: "클릭 방문 보고서(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d38ad40a53843dbc1a1c636e37d3e4d9ada21b40
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ae47a5218c2854f6fde35eb1f6c15ac65feb12d4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="clickthrough-reports-ssrs"></a>클릭 광고 보고서(SSRS)
   클릭 광고 보고서는 주 보고서 내에 포함되어 있는 데이터에 대한 세부 정보를 제공하는 보고서입니다. 클릭 광고 보고서는 사용자가 주 보고서에 나타나는 대화형 데이터를 클릭할 때 표시됩니다. 이러한 보고서는 보고서 서버에 의해 자동으로 생성됩니다. 모델 디자이너는 보고서 모델의 엔터티에 할당하는 **DefaultDetailAttribute** 및 **DefaultAggregateAttribute** 속성을 설정하여 클릭 광고 보고서에 표시될 내용을 결정합니다.  

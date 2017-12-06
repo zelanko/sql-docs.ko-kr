@@ -2,9 +2,12 @@
 title: "Reporting Services의 SharePoint 라이브러리 배달 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00e9a1ecf0d4af2348d6c23dc2810140d714e5e3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
   SharePoint 통합용으로 구성된 보고서 서버는 보고서를 SharePoint 라이브러리로 보내는 데 사용할 수 있는 배달 확장 프로그램이 포함되어 있습니다.  

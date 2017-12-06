@@ -2,9 +2,12 @@
 title: "구독 및 배달(Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 4eaaff0f98fb1aa8ee29b2019efbad2f52843610
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 403303e6820196353b8365975d83ed8368d8e372
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>구독 및 배달(Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다.  

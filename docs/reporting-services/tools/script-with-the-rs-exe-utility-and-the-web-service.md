@@ -2,9 +2,12 @@
 title: "rs.exe 유틸리티 및 웹 서비스를 사용한 스크립트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f6c01ecec4f909ff4e5cbe445b1685b6dd07a750
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d5417fb473850fc0e2b97790d83af88474e930dc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅
   개발자와 보고서 서버 관리자는 **rs** 유틸리티(RS.exe)를 사용하여 보고서 서버 작업을 수행할 수 있습니다. 이 유틸리티를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 작성한 스크립트를 사용하여 보고서 서버를 프로그래밍 방식으로 관리할 수 있습니다.  

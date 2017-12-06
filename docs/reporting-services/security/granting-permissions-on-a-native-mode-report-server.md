@@ -2,9 +2,12 @@
 title: "기본 모드 보고서 서버에 대한 사용 권한 부여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 254e3311ee8f54ab80a722ca753de9c99d376b57
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2075a15c7c179a6a3b81da4f139536282505f663
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에 대한 사용 권한 부여
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 권한 부여 및 인증 하위 시스템을 통해 보고서 서버에서 작업을 수행하거나 항목에 액세스할 수 있는 사용자를 지정합니다. 역할 기반 권한 부여는 사용자 또는 그룹이 수행할 수 있는 동작을 역할별로 분류합니다. 인증은 기본 제공 Windows 인증이나 사용자가 제공하는 사용자 지정 인증 모듈을 기반으로 합니다. 이러한 인증 유형 중 하나에 미리 정의된 역할이나 사용자 지정 역할을 사용할 수 있습니다.  

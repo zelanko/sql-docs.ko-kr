@@ -2,9 +2,12 @@
 title: "보고서 서버의 기본 인증 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2972097a7cc52ee5c73ec05d684de19b56cd1fd6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>보고서 서버의 기본 인증 구성
   기본적으로 Reporting Services는 Negotiate 및 NTLM 인증을 지정하는 요청을 수락합니다. 현재 배포에 기본 인증을 사용하는 클라이언트 응용 프로그램 또는 브라우저가 포함된 경우 지원되는 유형 목록에 기본 인증을 추가해야 합니다. 또한 보고서 작성기를 사용하려면 보고서 작성기 파일에 대한 익명 액세스를 설정해야 합니다.  

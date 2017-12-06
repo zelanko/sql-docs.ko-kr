@@ -2,9 +2,12 @@
 title: "보고서 데이터 집합(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,16 +19,16 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e55933fa73a87f99231eecb4d1520af4039829c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b455aded926c073e3992165a35fb6b938b66e2de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-datasets-ssrs"></a>보고서 데이터 집합(SSRS)
   보고서에 데이터를 추가하려면 데이터 집합을 만듭니다. 각 데이터 집합은 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 집합에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 집합을 검색하는 데 필요한 정보가 포함됩니다.  
   
- 데이터 집합에는 포함된 데이터 집합과 공유 데이터 집합의 두 가지 유형이 있습니다. 포함된 데이터 집합은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 집합은 보고서 서버 또는 SharePoint 사이트에서 정의되고 여러 보고서에서 사용될 수 있습니다. 보고서 작성기에서는 공유 데이터 집합 모드로 공유 데이터 집합을 만들거나, 보고서 디자이너 모드로 포함된 데이터 집합을 만들 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서는 프로젝트의 일부로 공유 데이터 집합을 만들거나, 보고서의 일부로 포함된 데이터 집합을 만들 수 있습니다.  
+ 데이터 집합에는  포함된 데이터 집합과 공유 데이터 집합의 두 가지 유형이 있습니다. 포함된 데이터 집합은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 집합은 보고서 서버 또는 SharePoint 사이트에서 정의되고 여러 보고서에서 사용될 수 있습니다. 보고서 작성기에서는 공유 데이터 집합 모드로 공유 데이터 집합을 만들거나, 보고서 디자이너 모드로 포함된 데이터 집합을 만들 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서는 프로젝트의 일부로 공유 데이터 집합을 만들거나, 보고서의 일부로 포함된 데이터 집합을 만들 수 있습니다.  
   
 -   **포함된 데이터 집합** 워크시트에서 직접 데이터에 대해 작업을 수행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 등의 응용 프로그램과 달리 보고서 작성기나 보고서 디자이너에서는 보고서가 처리될 때 검색될 데이터를 나타내는 메타데이터에 대해 작업을 수행합니다. 포함된 데이터 집합을 만들려면 데이터 원본을 선택하고 쿼리를 지정합니다. 데이터 집합을 만든 후에는 보고서 데이터 창을 사용하여 필드 컬렉션을 봅니다. 데이터 집합의 데이터를 테이블 또는 차트와 같은 데이터 영역에 표시할 수 있습니다. 또한 각 데이터 영역에서 데이터를 그룹화, 필터링 및 정렬하여 데이터를 구성할 수 있습니다. 보고서 레이아웃을 디자인한 후에 보고서를 실행하여 실제 데이터를 확인합니다.  
   

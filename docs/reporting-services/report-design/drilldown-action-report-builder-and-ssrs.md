@@ -2,9 +2,12 @@
 title: "드릴다운 작업(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -46,11 +49,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 546f4fda3c98349fd20fc261f7405d19e2f94d74
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a86800bbbf7b92a55aa6da83175c5017571f4feb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>드릴다운 동작(보고서 작성기 및 SSRS)
   입력란에 더하기 또는 빼기 아이콘을 제공하면 사용자가 항목을 대화식으로 숨기거나 표시할 수 있습니다. 이를 *드릴다운* 동작이라고 합니다. 테이블 또는 행렬에 대해서는 정적 행과 열 또는 그룹과 연결된 행과 열을 표시하거나 숨길 수 있습니다.  
@@ -64,7 +67,7 @@ ms.lasthandoff: 11/09/2017
  사용자가 항목을 확장 또는 축소할 수 있도록 하려면 해당 항목에 표시 유형 속성을 설정합니다.  
   
 > [!NOTE]  
->  드릴다운 동작이 있는 보고서를 만드는 경우에는 표시 유형 정보를 행이나 열의 단일 입력란이 아닌 숨기려는 그룹, 열 또는 행에서 설정해야 합니다. 또한 토글에 사용하는 입력란은 표시하거나 숨기려는 항목을 제어하는 포함 범위에 있어야 합니다.  
+>  드릴다운 동작이 있는 보고서를 만드는 경우에는 표시 유형 정보를 행이나 열의 단일 입력란이 아닌 숨기려는 그룹,  열 또는 행에서 설정해야 합니다. 또한 토글에 사용하는 입력란은 표시하거나 숨기려는 항목을 제어하는 포함 범위에 있어야 합니다.  
 >   
 >  예를 들어 중첩된 그룹에 연결된 행을 숨기려면 입력란이 포함 계층 구조에서 부모 그룹 이상의 그룹과 연결된 행에 있어야 합니다.  
 >   
@@ -79,13 +82,13 @@ ms.lasthandoff: 11/09/2017
  드릴다운 보고서에서 사용자는 더하기 또는 빼기 단추를 클릭하여 보고서의 섹션을 확장 또는 축소함으로써 해당 위치의 세부 데이터를 표시합니다. 드릴스루 보고서에서 사용자는 요약 값 링크를 클릭하여 별도의 관련 보고서를 열고 세부 데이터를 볼 수 있습니다. 세부 데이터는 세부 정보 보고서가 실행될 때만 검색됩니다. 일반적으로 드릴스루 보고서는 드릴다운 보고서보다 필요한 리소스가 적습니다. 자세한 내용은 [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)을 참조하세요.  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>숨겨진 보고서 항목에 대한 렌더링 확장 프로그램별 지원 기능  
- 보고서 항목의 표시/숨기기 토글 기능은 사용자 상호 작용을 지원하는 렌더링 확장 프로그램(예: 보고서 작성기 및 보고서 관리자에서 보고서를 실행할 때 사용되는 HTML 렌더링 확장 프로그램)에서만 지원되며, 다른 렌더링 확장 프로그램은 숨겨진 항목을 표시합니다. 아래에서는 조건부 표시 유형이 적용된 보고서 항목에 대한 지원을 설명합니다.  
+ 보고서 항목의 표시/숨기기 토글 기능은 사용자 상호 작용을 지원하는 렌더링 확장 프로그램(예:  보고서 작성기 및 보고서 관리자에서 보고서를 실행할 때 사용되는 HTML  렌더링 확장 프로그램)에서만 지원되며, 다른 렌더링 확장 프로그램은 숨겨진 항목을 표시합니다. 아래에서는 조건부 표시 유형이 적용된 보고서 항목에 대한 지원을 설명합니다.  
   
--   HTML에서 숨겨진 항목은 HTML 원본에 표시되지 않습니다.  
+-   HTML에서 숨겨진 항목은 HTML  원본에 표시되지 않습니다.  
   
--   XML 렌더링 확장 프로그램은 숨김 여부에 관계없이 모든 보고서 항목을 표시합니다.  
+-   XML  렌더링 확장 프로그램은 숨김 여부에 관계없이 모든 보고서 항목을 표시합니다.  
   
--   Excel 렌더링 확장 프로그램은 테이블, 행렬 또는 목록에 대해 숨겨진 행과 열을 표시하고 확장합니다. 행과 열이 모두 표시됩니다.  
+-   Excel  렌더링 확장 프로그램은 테이블,  행렬 또는 목록에 대해 숨겨진 행과 열을 표시하고 확장합니다. 행과 열이 모두 표시됩니다.  
   
  자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   

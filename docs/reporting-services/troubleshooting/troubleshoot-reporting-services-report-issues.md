@@ -2,9 +2,12 @@
 title: "Reporting Services 보고서 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3828cfd2e56ce5bf6005e6b5e2502c869df06aa8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7f74bae865a6d2fe3ec5fbd86c77b24af2284ff7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Reporting Services 보고서 문제 해결
 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 보고서 디자인, 보고서 미리 보기, 기본 모드 또는 SharePoint 모드에서 보고서 서버에 보고서 게시, 보고서 서버에서 보고서 보기 또는 다른 파일 형식으로 보고서 내보내기 등의 작업과 관련된 문제를 해결하는 데 필요한 정보를 제공합니다.  

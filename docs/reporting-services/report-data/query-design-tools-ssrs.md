@@ -2,9 +2,12 @@
 title: "쿼리 디자인 도구(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -26,11 +29,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f185e21b61d68b2f3e5c66ff355fcea54a5a1d0f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d03df72054bea9d175c26b04867c686457c222eb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-design-tools-ssrs"></a>쿼리 디자인 도구(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 디자이너에서 데이터 집합 쿼리를 만드는 데 사용할 수 있는 다양한 쿼리 디자인 도구를 제공합니다. 일부 쿼리 디자이너에서는 비주얼 모드로 작업할지 쿼리 언어로 직접 작업할지 선택할 수 있도록 대체 모드를 제공합니다. 이 항목에서는 각 도구를 소개하고 각 도구가 지원하는 데이터 원본 유형에 대해 설명합니다. 이 항목에서 설명하는 도구는 다음과 같습니다.  

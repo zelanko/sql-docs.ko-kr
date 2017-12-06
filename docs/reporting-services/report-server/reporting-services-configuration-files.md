@@ -2,9 +2,12 @@
 title: "Reporting Services 구성 파일 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f20cdac077445eb60da9d309cfa7c371aaada0c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 381a030d442f4fca6eeb05cf2271c3379ff6f783
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 구성 파일
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 설치 중에 파일 시스템으로 복사되는 구성 파일과 레지스트리에 구성 요소 정보를 저장합니다. 구성 파일에는 내부 전용 값과 사용자 정의 값의 조합이 들어 있습니다. 사용자 정의 값은 설치 프로그램, 구성 도구, 명령줄 유틸리티를 통해 지정하거나 구성 파일을 수동으로 편집하여 지정합니다.  

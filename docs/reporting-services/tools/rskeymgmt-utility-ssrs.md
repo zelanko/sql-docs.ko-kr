@@ -2,9 +2,12 @@
 title: "rskeymgmt 유틸리티(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5e71c6c5cb692355df51b2d9b7e2caa8c330f5b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f6d98e612a8f2033cb72ab59caa6eaab94ed5754
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
   중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. 

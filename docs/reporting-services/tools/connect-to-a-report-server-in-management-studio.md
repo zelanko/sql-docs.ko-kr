@@ -2,9 +2,12 @@
 title: "Management Studio에서 보고서 서버에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -26,11 +29,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 339328c6ab47ee4d61ff2f7d887736813fac1133
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b6a12b85b69cb6bb8ae1b5bc138a47d1a58c1a0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio에서 보고서 서버에 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품군의 모든 서버에 연결하고 해당 내용을 그래픽 방식으로 찾아볼 수 있는 개체 탐색기를 제공합니다. Reporting Services의 경우 개체 탐색기를 사용하여 다음을 수행할 수 있습니다.  

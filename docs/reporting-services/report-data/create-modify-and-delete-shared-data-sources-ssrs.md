@@ -2,9 +2,12 @@
 title: "공유 데이터 원본 만들기, 수정 및 삭제(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: fa6fb63a3766dc5f4f40a1a3891119c867b8aaf7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2bb9f43c7a19513edfa469779e6de9a53ce3b1be
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>공유 데이터 원본 만들기, 수정 및 삭제(SSRS)
   공유 데이터 원본은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 여러 보고서, 모델 및 데이터 기반 구독에서 참조할 수 있는 데이터 원본 연결 속성의 집합입니다.  공유 데이터 원본을 사용하면 시간이 지나면서 자주 변경되는 데이터 원본 속성을 쉽게 관리할 수 있습니다. 사용자 계정 또는 암호가 변경되거나 데이터베이스를 다른 서버로 이동하는 경우 한 위치에서 연결 정보를 업데이트할 수 있습니다.  

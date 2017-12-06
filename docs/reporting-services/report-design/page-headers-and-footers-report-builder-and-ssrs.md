@@ -2,9 +2,12 @@
 title: "페이지 헤더 및 바닥글(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -29,11 +32,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a5b230522d04db42f66884acfcd110e1f1594df5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에서 각기 실행되는 머리글과 바닥글을 포함할 수 있습니다. 머리글과 바닥글에는 정적 텍스트, 이미지, 선, 사각형, 테두리, 배경색, 배경 이미지 및 식이 들어갈 수 있습니다. 식에는 단 하나의 데이터 집합과 데이터 집합을 범위로 포함하는 집계 함수 호출이 있는 보고서용 데이터 집합 필드 참조가 포함됩니다.  

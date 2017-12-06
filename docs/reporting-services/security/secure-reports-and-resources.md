@@ -2,9 +2,12 @@
 title: "보고서 및 리소스 보안 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 27a166e56c39fcaef49913838e44e32506a11d49
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="secure-reports-and-resources"></a>보고서 및 리소스 보안
   개별 보고서 및 리소스에 보안을 설정하여 사용자가 해당 항목에 대해 갖는 액세스 수준을 제어할 수 있습니다. 기본적으로 **Administrators** 기본 제공 그룹의 멤버인 사용자만 보고서 실행, 리소스 보기, 속성 수정, 항목 삭제 등의 작업을 수행할 수 있습니다. 다른 모든 사용자는 보고서나 리소스에 대한 액세스를 허용하는 역할 할당이 만들어져 있어야 합니다.  

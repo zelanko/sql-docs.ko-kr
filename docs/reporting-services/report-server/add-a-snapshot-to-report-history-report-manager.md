@@ -2,9 +2,12 @@
 title: "보고서 기록에 스냅숏 추가(보고서 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e0a70aba28016a7649a6b793581fe653649aef96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9f98aa2f856f8db03b751db35433b4bf341b819a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>보고서 기록에 스냅숏 추가(보고서 관리자)
   보고서 기록은 시간에 따라 만든 보고서 스냅숏의 모음입니다. 보고서 스냅숏은 레이아웃 정보 및 특정 시점에 검색된 쿼리 결과가 들어 있는 보고서입니다. 보고서를 선택할 때 최신 쿼리 결과를 얻을 수 있는 요청 시 실행 보고서와 달리 보고서 스냅숏은 예약된 시간에 처리되고 보고서 서버에 저장됩니다. 표시할 보고서 스냅숏을 선택하면 보고서 서버가 보고서 서버 데이터베이스에서 저장된 보고서를 검색하고 스냅숏이 만들어진 시점에 따른 보고서의 현재 데이터 및 레이아웃을 표시합니다.  

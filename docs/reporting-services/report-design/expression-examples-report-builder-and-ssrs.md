@@ -2,9 +2,12 @@
 title: "식 예(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -31,11 +34,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: e76028d17363d05047531dd11da6021d766d59bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 860bf17283de6fc522c956ed0c9f4ee26497be8b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
 식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 형식에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
@@ -240,7 +243,7 @@ ms.lasthandoff: 11/09/2017
   
     ```  
   
--   날짜 처리에 **[!INCLUDE[dnprdnshort](../Token/dnprdnshort_md.md)]** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 함수는 전화 번호 서식을 지정하는 등 기존 문자열의 서식을 변경하는 데 유용합니다. 다음 식에서는 **Replace** 함수를 사용하여 필드의 10자리 전화 번호 서식을 "*nnn*-*nnn*-*nnnn*"에서 "(*nnn*) *nnn*-*nnnn*"으로 변경합니다.  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>의 **Regex** 함수는 전화 번호 형식을 지정하는 등 기존 문자열의 형식을 변경하는 데 유용합니다. 다음 식에서는 **Replace** 함수를 사용하여 필드의 10자리 전화 번호 서식을 "*nnn*-*nnn*-*nnnn*"에서 "(*nnn*) *nnn*-*nnnn*"으로 변경합니다.  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  

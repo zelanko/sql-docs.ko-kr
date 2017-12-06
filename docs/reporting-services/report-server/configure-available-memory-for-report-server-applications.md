@@ -2,9 +2,12 @@
 title: "보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4291b3defc7fede8059bfb70f66406c87e9f804f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f444ed7b1c875ed523a690d0a13629a1b190f381
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 모든 사용 가능한 메모리를 사용할 수 있지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 응용 프로그램에 할당되는 총 메모리 리소스 양에 대한 상한값을 구성하여 기본 동작을 재정의할 수 있습니다. 메모리 가중 정도가 낮은지, 보통인지, 높은지에 따라 보고서 서버가 요청의 우선 순위를 정하고 해당 요청을 처리하는 방법을 변경하도록 하는 임계값을 설정할 수도 있습니다. 메모리 가중 정도가 낮은 수준에서 보고서 서버는 대화형 또는 요청 시 실행 보고서 처리에 약간 더 높은 우선 순위를 부여하여 응답합니다. 메모리 가중 정도가 높은 수준에서 보고서 서버는 사용 가능한 제한된 리소스를 통해 여러 기술을 사용하여 작동 상태를 유지합니다.  

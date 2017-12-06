@@ -2,9 +2,12 @@
 title: "새 사용자 역할(Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4a763b291ffa0edfd25007c4db74c02789215305
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 237b79ef21a6fe9f190054b9996d644e6f069ade
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="new-user-role-management-studio"></a>새 사용자 역할(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의를 만들 수 있습니다. 항목 수준의 역할 정의란 폴더, 보고서, 모델, 리소스 및 공유 데이터 원본과 관련하여 사용자가 수행할 수 있는 태스크를 열거하는 작업의 명명된 모음입니다. 항목 수준의 역할 정의의 예로 보고서 최종 사용자가 폴더를 이동하고 보고서를 보는 데 필요한 동작 종류를 식별하는 미리 정의된 브라우저 역할을 들 수 있습니다.  

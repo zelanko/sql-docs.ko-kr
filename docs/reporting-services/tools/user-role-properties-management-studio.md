@@ -2,9 +2,12 @@
 title: "사용자 역할 속성(Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8c75a610f60ff8eca7e64b7fd01d36d0a63344a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2c6aac4f204d63b6b07a0f84615bb2a37669a781
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="user-role-properties-management-studio"></a>사용자 역할 속성(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의에 포함된 태스크를 볼 수 있으며 태스크 목록을 변경하거나 역할 설명을 수정할 수 있습니다.  

@@ -2,9 +2,12 @@
 title: "Reporting Services 보고서의 처리 문제 해결 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a22c557ce2289c950edceff045b1c868d60ef677
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b379a4a9cb342c96e23be750ff4c8c1df08a6dff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Reporting Services 보고서의 처리 문제 해결
 보고서 데이터가 검색되면 보고서 처리기는 데이터와 레이아웃 정보를 조합합니다. 식이 포함된 각 보고서 항목 속성은 조합된 데이터와 레이아웃의 컨텍스트에서 계산됩니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   

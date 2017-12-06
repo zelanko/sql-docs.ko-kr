@@ -2,9 +2,12 @@
 title: "로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: dbaadf539f26d12d8e68a3640de2bd6aa6386f7b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0d47b170b22f25ff8c9752a5b7a4aa9034f6284
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
   보고서 서버 인스턴스를 로컬로 관리하려는 경우 다음 운영 체제 중 하나에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 배포하려면 추가 구성 단계가 필요합니다. 이 항목에서는 로컬 관리를 위한 보고서 서버를 구성하는 방법을 설명합니다. 보고서 서버를 설치 또는 구성하지 않은 경우 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 및 [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)를 참조하세요.  

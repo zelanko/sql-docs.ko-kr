@@ -2,9 +2,12 @@
 title: "그룹 이해(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 51a3e06f0a4c3ab0dfd26af525a11b52c2d84afb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f7985d8c28074d08c53da69e448593433f2709d3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>그룹 이해(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 그룹은 데이터 영역에 바인딩된 보고서 데이터 집합의 명명된 데이터 집합입니다. 기본적으로 그룹은 보고서 데이터 집합의 뷰를 구성합니다. 데이터 영역의 모든 그룹은 같은 보고서 데이터 집합의 서로 다른 뷰를 지정합니다.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
  그룹은 각 데이터 영역에 대한 하나 이상 계층의 멤버로 내부적으로 구성됩니다. 그룹 계층에는 중첩된 부모/자식 그룹이 포함되어 있으며 인접 그룹을 포함할 수 있습니다.  
   
- 부모/자식 그룹을 트리 구조로 생각하는 경우 각 그룹 계층은 트리 구조의 포리스트입니다. 테이블릭스 데이터 영역에는 행 그룹 계층과 열 그룹 계층이 포함됩니다. 행 그룹 멤버와 연결된 데이터는 페이지에서 가로 방향으로 확장되며 열 그룹 멤버와 연결된 데이터는 페이지에서 세로 방향으로 확장됩니다. 그룹화 창에는 디자인 화면에서 현재 선택한 테이블릭스 데이터 영역에 대한 행 그룹과 열 그룹 멤버가 표시됩니다. 자세한 내용은 [그룹화 창&#40;보고서 작성기#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)를 참조하세요.  
+ 부모/자식 그룹을 트리 구조로 생각하는 경우 각 그룹 계층은 트리 구조의 포리스트입니다. 테이블릭스 데이터 영역에는 행 그룹 계층과 열 그룹 계층이 포함됩니다. 행 그룹 멤버와 연결된 데이터는 페이지에서 가로 방향으로 확장되며 열 그룹 멤버와 연결된 데이터는 페이지에서 세로 방향으로 확장됩니다. 그룹화 창에는 디자인 화면에서 현재 선택한 테이블릭스 데이터 영역에 대한 행 그룹과 열 그룹 멤버가 표시됩니다. 자세한 내용은 [그룹화 창&#40;보고서 작성기#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)을 참조하세요.  
   
  차트 데이터 영역에는 범주 그룹 계층과 계열 그룹 계층이 포함됩니다. 범주 그룹 멤버는 범주 축에 표시되고 계열 그룹 멤버는 계열 축에 표시됩니다.  
   
@@ -94,7 +97,7 @@ ms.lasthandoff: 11/09/2017
   
 -   **목록** 기본적으로 세부 정보 그룹을 지원합니다. 일반적으로는 한 가지 수준의 그룹화를 지원하는 데 사용됩니다. 데이터 집합 필드를 선택한 목록의 그룹화 창으로 끌어 그룹을 추가합니다.  
   
- 그룹을 추가한 후에는 데이터 영역의 행 및 열 핸들이 그룹 멤버 자격에 따라 변경됩니다. 그룹을 삭제한 후에는 그룹 정의만 삭제하거나 그룹과 그룹에 연결된 모든 행 및 열을 삭제할 수 있습니다. 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)를 참조하세요.  
+ 그룹을 추가한 후에는 데이터 영역의 행 및 열 핸들이 그룹 멤버 자격에 따라 변경됩니다. 그룹을 삭제한 후에는 그룹 정의만 삭제하거나 그룹과 그룹에 연결된 모든 행 및 열을 삭제할 수 있습니다. 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)을 참조하세요.  
   
  정보 또는 그룹 데이터의 계산에 표시하거나 사용할 데이터를 제한하려면 그룹에서 필터를 설정합니다. 자세한 내용은 [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)를 참조하세요.  
   

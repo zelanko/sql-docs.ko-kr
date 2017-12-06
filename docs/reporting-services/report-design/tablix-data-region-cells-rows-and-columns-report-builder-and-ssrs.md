@@ -2,9 +2,12 @@
 title: "테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f7fad3b96a6cdcf508e9b485219f533e50e426cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 456f5fe95d2b5899360efaf0f2ab1d2ba492c228
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 테이블릭스 데이터 영역의 행 및 열 데이터가 표시되는 방식을 제어하려면 정보 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [행렬](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) 또는 [목록](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)을 참조하세요.  
@@ -120,7 +123,7 @@ ms.lasthandoff: 11/09/2017
   
  테이블릭스 본문 영역에서 셀은 가로로만 병합할 수 있습니다. 세로로 셀을 병합하는 것은 지원되지 않습니다.  
   
- 자세한 내용은 [데이터 영역의 셀 병합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
+ 자세한 내용은 [데이터 영역의 셀 병합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
  이전에 병합했던 셀을 분할할 수 있습니다. 셀을 여러 행에 걸쳐 세로로 분할하거나 여러 열에 걸쳐 가로로 분할할 수 있습니다. 셀을 셀 블록으로 분할하려면 먼저 셀을 가로로 분할한 다음 필요한 만큼 세로로 분할합니다.  
   

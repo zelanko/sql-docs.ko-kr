@@ -7,8 +7,8 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: database-engine
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -16,14 +16,14 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: 
 ms.date: 11/02/2017
-ms.prod: sql-server
-ms.prod_service: sql-non-specified
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 2ca2610369beb92f557656c2cee88e87d5ebeb77
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ddac5bf809c836c194e7b0f187a24e4ed060abe
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 모니터링 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 중에서 선택합니다. 이 문서에서는 Microsoft SQL Server를 지원하는 모니터링 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.

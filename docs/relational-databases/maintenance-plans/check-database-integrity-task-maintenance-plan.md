@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **모든 데이터베이스**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 제외한 모든 **[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]**데이터베이스에 대해 유지 관리 태스크를 실행하는 유지 관리 계획을 생성합니다.  
+     **tempdb** 를 제외한 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 유지 관리 태스크를 실행하는 유지 관리 계획을 생성합니다.  
   
 -   **모든 시스템 데이터베이스**  
   

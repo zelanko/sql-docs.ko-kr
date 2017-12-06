@@ -2,9 +2,12 @@
 title: "내 구독 사용(기본 모드 보고서 서버) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2c79c95756003d4b019834ca99a8800eb57034da
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e6482fde0811b8dac118be7385b49733d757e689
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>내 구독 사용(기본 모드 보고서 서버)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에는 하나의 위치에서 모든 구독을 구성하는 **내 구독** 페이지가 포함되어 있습니다. *내 구독* 을 사용하여 기존 구독을 보고, 수정하고, 삭제할 수 있습니다. 하지만 내 구독을 사용하여 구독을 만들 수는 없습니다.  내 구독에는 사용자가 만든 구독만 표시됩니다. 다른 사용자의 구독에 구독자로 추가되더라도 다른 사용자 소유의 구독은 나열되지 않으며 데이터 기반 구독도 표시되지 않습니다.

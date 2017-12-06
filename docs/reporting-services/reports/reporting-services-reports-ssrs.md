@@ -2,9 +2,12 @@
 title: "Reporting Services 보고서(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f640177e14ec4b8fd2435c49d7d003eb2b3489a2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b5d023c1f2fa7c8795f83e610c49e03f50f38032
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 보고서(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서는 보고서 데이터 및 보고서 레이아웃 요소가 포함된 XML 기반 보고서 정의입니다. 보고서 정의는 .rdl 확장자로 클라이언트 파일 시스템에 저장됩니다. 페이지가 매겨진 보고서를 게시한 후에는 보고서 서버 또는 SharePoint 사이트에 저장된 보고서 항목이 됩니다. 페이지가 매겨진 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 서버 기반 보고 플랫폼의 일부입니다. [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)도 가능합니다.  

@@ -1,10 +1,13 @@
 ---
 title: "SharePoint 모드에서 첫 번째 보고서 서버 설치 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 83a4392c267f4981ec79ff3b1b7d7febfeab9572
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f282b9aacc253620a2f90da67cd5738702acd0ee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 
@@ -250,7 +253,7 @@ ms.lasthandoff: 11/09/2017
   
 7.  **데이터베이스 이름** 에서 기본값은 `ReportingService_<guid>`이고 고유한 데이터베이스 이름입니다. 새 값을 입력하는 경우 고유한 값을 입력합니다. 이 데이터베이스는 서비스 응용 프로그램용으로 새로 만든 것입니다.  
   
-8.  **데이터베이스 인증**에서 기본값은 Windows 인증입니다. **SQL 인증**을 선택하는 경우 SharePoint 배포에서 이 인증 유형을 사용하는 최선의 구현 방법은 SharePoint 설명서를 참조하세요.  
+8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL 인증**을 선택하는 경우 SharePoint 배포에서 이 인증 유형을 사용하는 최선의 구현 방법은 SharePoint 설명서를 참조하세요.  
   
 9. **웹 응용 프로그램 연결** 섹션에서 현재 Reporting Services 서비스 응용 프로그램에 의해 액세스하기 위해 프로비전 대상 웹 응용 프로그램을 선택합니다. 하나의 Reporting Services 서비스 응용 프로그램을 하나의 웹 응용 프로그램에 연결할 수 있습니다. 모든 현재 웹 응용 프로그램이 이미 Reporting Services 서비스 응용 프로그램에 연결된 경우 경고 메시지가 표시됩니다.  
   

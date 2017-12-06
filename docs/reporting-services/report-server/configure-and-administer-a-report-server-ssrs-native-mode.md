@@ -2,9 +2,12 @@
 title: "보고서 서버 구성 및 관리(SSRS 기본 모드) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5e86690f19f706ea6c1a499677ff7e7db302ad80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 11918b76e1d54f60652e5ee2e5c882ccc7df3522
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>보고서 서버 구성 및 관리(SSRS 기본 모드)
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성하는 데 사용할 수 있는 방식을 요약하여 설명합니다. 또한 여기에는 특정 구성 요소, 기능 또는 서버 기능의 구성 방법을 설명하는 항목의 목록도 포함되어 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성하기 위해 다음 작업을 수행할 수 있습니다.  

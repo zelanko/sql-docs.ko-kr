@@ -2,9 +2,12 @@
 title: "매개 변수 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b944ac913b24c1da4eb5af6db5fe1f9c1eef4241
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b4b5fa050cbb69944039c143f3140086851a68ab
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>기본 제공 컬렉션 - 매개 변수 컬렉션 참조(보고서 작성기)
   보고서 매개 변수는 식에서 참조할 수 있는 기본 제공 컬렉션 중 하나입니다. 식에 매개 변수를 포함하면 사용자의 선택에 따라 보고서 데이터와 모양을 사용자 지정할 수 있습니다. 식은 (*Fx*) 또는 \<**Expression**> 옵션을 제공하는 모든 보고서 항목 속성 또는 입력란 속성에 사용할 수 있습니다. 식은 보고서의 내용과 모양을 다른 방법으로 제어하는 데도 사용됩니다. 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)를 참조하세요.  

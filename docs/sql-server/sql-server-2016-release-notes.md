@@ -1,10 +1,10 @@
 ---
 title: "SQL Server 2016 릴리스 정보 | Microsoft 문서"
 ms.date: 10/30/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
@@ -20,11 +20,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 216ae6b44bcfe3166a1b5eb0f989886cc18eaead
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3979b28e6b530ba08641731f811e259168975004
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] 이 문서에서는 SQL Server 2016 릴리스 관련 제한 사항 및 문제에 대해 설명합니다.    

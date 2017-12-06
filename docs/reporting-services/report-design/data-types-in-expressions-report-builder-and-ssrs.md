@@ -2,9 +2,12 @@
 title: "식의 데이터 형식(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: efd0b42180aa54a60c572c6c149aa53bd9ee852c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 51b8f1249bb257d3aea3752b6b593e470ae8c775
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
   데이터 형식은 여러 종류의 데이터를 나타낼 때 이를 효율적으로 저장하고 처리할 수 있도록 합니다. 일반적인 데이터 형식으로는 텍스트(문자열이라고도 함), 소수 자릿수가 있거나 없는 숫자, 날짜 및 시간, 이미지 등이 있습니다. 보고서의 값은 RDL(Report Definition Language) 데이터 형식이어야 합니다. 보고서에서 값을 표시할 때 원하는 대로 값의 형식을 지정할 수 있습니다. 예를 들어 통화를 나타내는 필드는 보고서 정의에 부동 소수점 숫자로 저장되지만 이를 표시할 때는 사용자가 선택한 형식 속성에 따라 다양한 형식을 사용할 수 있습니다.  

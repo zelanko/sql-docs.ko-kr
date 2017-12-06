@@ -2,9 +2,12 @@
 title: "보고서 파트 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
   보고서 파트는 여러 사용자가 다시 사용하고 페이지가 매겨진 보고서 및 여러 보고서에서 다시 사용할 수 있습니다. 사용자는 서버에서 보고서 파트를 검색하여 보고서에 추가할 수 있습니다.  또한 사용자에게 서버의 보고서 파트에 대한 업데이트를 알리고 보고서 파트의 새 버전을 다시 게시할 수 있습니다. 이러한 보고서 제작 동작은 Reporting Services 보안 권한에 의해 제어되고 이의 영향을 받습니다.  이 항목에서는 서버에 게시된 보고서 파트 속성 및 동작을 검토합니다.  

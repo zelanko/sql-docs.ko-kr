@@ -2,9 +2,12 @@
 title: "보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 0bf93b5fc051df1784ed19656b3650f4b494258a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 41f7f0b36b5889772bde8fbdc39840061bdf88fb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
   이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RS.exe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
@@ -100,7 +103,7 @@ ms.lasthandoff: 11/09/2017
 |기록|**아니오**|**아니오**||  
 |기록 설정|예|예|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
 |일정|예|예|일정을 마이그레이션하려면 대상 서버에서 SQL Server 에이전트가 실행 중이어야 합니다. SQL Server 에이전트가 대상에서 실행 중이 아니면 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|역할 및 시스템 정책|예|예|기본적으로 스크립트에서는 서버 사이에 사용자 지정 권한 스키마가 복사되지 않습니다. 기본 동작에 따르면 '부모 권한 상속' 플래그가 TRUE로 설정된 항목이 대상 서버로 복사됩니다. 스크립트가 개별 항목의 권한을 복사하도록 하려면 SECURITY 스위치를 사용합니다.<br /><br /> 원본 및 대상 서버가 **동일한 보고서 서버 모드가 아니고**(예: 기본 모드에서 SharePoint 모드로), SECURITY 스위치를 사용하는 경우, 스크립트는 [Reporting Services의 역할 및 작업과 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)항목에 설명된 비교 방법을 기준으로 기본 역할 및 그룹을 매핑하려고 시도합니다. 사용자 지정 역할 및 그룹은 대상 서버로 복사되지 않습니다.<br /><br /> **동일한 모드**의 서버 사이에 스크립트를 복사하고 SECURITY 스위치를 사용하는 경우에는 스크립트가 새 역할(기본 모드) 또는 그룹(SharePoint 모드)을 대상 서버에 만듭니다.<br /><br /> 역할이 대상 서버에 이미 있을 경우 스크립트는 다음과 비슷한 "오류" 메시지를 만들고 다른 항목의 마이그레이션을 계속 수행합니다. 스크립트가 완료되면 대상 서버의 역할이 사용자 요구에 맞게 구성되었는지 확인합니다. 마이그레이션 역할: 8개 항목이 발견되었습니다.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.<br /><br /> **참고:** 원본 서버에 있는 사용자가 대상 서버에 없을 경우 스크립트가 역할 지정을 대상 서버에 적용할 수 없고, SECURITY 스위치가 사용되었어도 스크립트가 역할 지정을 적용할 수 없습니다.|  
+|역할 및 시스템 정책|예|예|기본적으로 스크립트에서는 서버 사이에 사용자 지정 권한 스키마가 복사되지 않습니다. 기본 동작에 따르면 '부모 권한 상속' 플래그가 TRUE로 설정된 항목이 대상 서버로 복사됩니다. 스크립트가 개별 항목의 권한을 복사하도록 하려면 SECURITY 스위치를 사용합니다.<br /><br /> 원본 및 대상 서버가 **동일한 보고서 서버 모드가 아니고**(예: 기본 모드에서 SharePoint 모드로), SECURITY 스위치를 사용하는 경우, 스크립트는 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)항목에 설명된 비교 방법을 기준으로 기본 역할 및 그룹을 매핑하려고 시도합니다. 사용자 지정 역할 및 그룹은 대상 서버로 복사되지 않습니다.<br /><br /> **동일한 모드**의 서버 사이에 스크립트를 복사하고 SECURITY 스위치를 사용하는 경우에는 스크립트가 새 역할(기본 모드) 또는 그룹(SharePoint 모드)을 대상 서버에 만듭니다.<br /><br /> 역할이 대상 서버에 이미 있을 경우 스크립트는 다음과 비슷한 "오류" 메시지를 만들고 다른 항목의 마이그레이션을 계속 수행합니다. 스크립트가 완료되면 대상 서버의 역할이 사용자 요구에 맞게 구성되었는지 확인합니다. 마이그레이션 역할: 8개 항목이 발견되었습니다.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.<br /><br /> **참고:** 원본 서버에 있는 사용자가 대상 서버에 없을 경우 스크립트가 역할 지정을 대상 서버에 적용할 수 없고, SECURITY 스위치가 사용되었어도 스크립트가 역할 지정을 적용할 수 없습니다.|  
 |공유 데이터 원본|예|예|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 자격 증명이 데이터 원본의 일부로서 복사되지 **않습니다** . 콘텐츠 항목이 마이그레이션된 다음에는 대상 서버에서 자격 증명 정보를 업데이트합니다.|  
 |공유 데이터 집합|예|예||  
 |Folder|예|예|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  

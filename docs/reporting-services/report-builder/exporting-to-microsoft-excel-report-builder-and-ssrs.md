@@ -2,9 +2,12 @@
 title: "Microsoft Excel로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 74bec215687c17d121e0c77b23fbdef2e482f9db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d8013c5673a63c80f037ffab76064193db21a36
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 렌더링 확장 프로그램은 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 형식(.xlsx)으로 렌더링합니다. Excel 렌더링 확장 프로그램에서는 Excel의 열 너비는 보고서의 열 너비를 보다 정확하게 반영합니다.  
@@ -140,7 +143,7 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 렌더링 확장 프로그램은 더 이상 사용되지 않습니다. 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 지원되지 않는 기능](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)을 참조하세요.  
   
- Excel 2003과 호환되는 이전 버전의 Excel 렌더러는 이제 이름이 Excel 2003으로 지정되어 해당 이름을 사용하여 메뉴에 나열됩니다. 이 렌더러를 통해 생성되는 파일의 콘텐츠 형식은 **application/vnd.ms-excel** 이고 파일 이름 확장명은 .xls입니다.  
+ Excel 2003과 호환되는 이전 버전의 Excel 렌더러는 이제 이름이 Excel 2003으로 지정되어 해당 이름을 사용하여 메뉴에 나열됩니다. 이 렌더러을 통해 생성되는 파일의 콘텐츠 형식은 **application/vnd.ms-excel** 이고 파일 이름 확장명은 .xls입니다.  
   
  기본적으로 **Excel 2003** 메뉴 옵션은 표시되지 않습니다. 관리자가 RSReportServer 구성 파일을 업데이트하여 특정 상황에서 표시되도록 설정할 수 있습니다. Excel 2003 렌더러를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 내보내려면 RSReportDesigner 구성 파일을 업데이트합니다.  
   

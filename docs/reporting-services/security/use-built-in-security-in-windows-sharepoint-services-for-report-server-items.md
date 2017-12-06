@@ -2,9 +2,12 @@
 title: "보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: be121a1676947f3e878c660aecc15f1ea82e0e11
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5c213a3cf52c65b83609bb5f7a0a1acc1cbbc906
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용
   SharePoint는 SharePoint 사이트와 라이브러리에서 보고서 서버 항목에 액세스하는 데 사용할 수 있는 기본 제공 보안 기능을 제공합니다. 이미 사용자에게 사이트 및 목록 사용 권한을 할당한 경우 SharePoint와 보고서 서버 간의 통합 설정을 구성하면 즉시 해당 사용자가 보고서 서버 항목과 작업에 액세스할 수 있습니다.  

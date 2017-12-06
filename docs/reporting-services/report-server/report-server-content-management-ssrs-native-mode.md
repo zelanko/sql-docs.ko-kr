@@ -1,10 +1,13 @@
 ---
 title: "보고서 서버 콘텐츠 관리(SSRS 기본 모드) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 67bae5bc2158db5a03272aa2756f5a15dd47fdbc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 21bafd5c07350c38ee14f7de27aaeab265f22e59
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2부터  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털을 사용할 수 있습니다. 이 문서에서는 보고서 관리자 및 새로운 웹 포털 환경에 대해 설명합니다.  

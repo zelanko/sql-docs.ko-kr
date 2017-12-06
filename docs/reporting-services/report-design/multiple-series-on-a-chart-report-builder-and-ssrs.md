@@ -2,9 +2,12 @@
 title: "차트의 여러 계열(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: dd942ab8b1aee3047c693f40a99453cd79981dc3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 16a279d3927c4bc5241b8316bc9c740fc8a07c8f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>차트의 여러 계열(보고서 작성기 및 SSRS)
   차트에 여러 개의 계열이 있는 경우에는 계열을 비교할 최선의 방법을 결정해야 합니다. 각 계열의 상대적인 비율을 표시하려면 누적 차트를 사용할 수 있습니다. 공통 범주(x) 축을 공유하는 두 개의 계열만 비교할 때는 보조 축을 사용합니다. 이 방법은 가격과 볼륨, 수입과 세금 같은 두 개의 관련된 데이터 계열을 표시할 때 유용합니다. 차트를 알아보기 어려울 때는 여러 개의 차트 영역을 사용하여 각 계열을 시각적으로 분리하는 방법을 고려하십시오.  

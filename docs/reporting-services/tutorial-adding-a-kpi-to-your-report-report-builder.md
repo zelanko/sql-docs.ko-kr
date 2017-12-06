@@ -2,9 +2,12 @@
 title: "자습서: 보고서에 KPI 추가(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0ba9911d41a851ed51150d83e96b61c2e7ec2c2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7e3e6194d510371b5a7aed8cad4f2efe5d188687
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: 보고서에 KPI 추가(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 KPI(핵심 성과 지표)를 추가합니다.  

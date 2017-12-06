@@ -2,9 +2,12 @@
 title: "보고서 및 그룹 변수 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -25,11 +28,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b04a9bc443ac284afad9153f5f3196a8c9a4fc1a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 423768a2a0381377a3d780e632399a41ecf11e5a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>기본 제공 컬렉션 - 보고서 및 그룹 변수 참조(보고서 작성기)
   보고서의 식에서 두 번 이상 사용되는 복잡한 계산이 있는 경우 변수를 만들어 사용할 수 있습니다. 보고서 변수 또는 그룹 변수를 만들 수 있습니다. 변수 이름은 보고서에서 고유해야 합니다.  

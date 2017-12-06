@@ -2,9 +2,12 @@
 title: "보고서 항목 렌더링(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 53bce307d8817f538e3ee1a9fd4add0e156b2b1d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2a54547fe33ecf99952ab4ee9f3d25cbcdb091f3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>보고서 항목 렌더링(보고서 작성기 및 SSRS)
   보고서 항목의 숫자, 크기 및 위치는 렌더러에서 보고서 본문에 페이지를 매기는 방식에 영향을 줍니다. 아래에는 다양한 보고서 항목이 렌더링되는 방식에 대해 설명되어 있습니다.  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
  보고서 항목을 렌더링하는 경우 다음과 같은 표시 유형 규칙이 적용됩니다.  
   
--   보고서 항목과 해당 내용이 항상 숨겨져 있는 경우, 즉 식에 의해 숨겨진 경우 또는 다른 보고서 항목을 클릭하여 표시 유형을 전환할 수 있는 경우가 아닐 때, 해당 항목의 오른쪽 또는 아래쪽에 있는 다른 보고서 항목은 이러한 빈 공간을 채우기 위해 이동하지 않습니다. 예를 들어 사각형 및 사각형에 포함된 이미지가 숨겨져 있는 경우 사각형 오른쪽에서 시작되는 보고서 항목이 왼쪽으로 이동하여 빈 공간을 채우지는 않습니다. 사각형이 차지하는 공간은 그대로 보존됩니다.  
+-   보고서 항목과 해당 내용이 항상  숨겨져 있는 경우, 즉 식에 의해 숨겨진 경우 또는 다른 보고서 항목을 클릭하여 표시 유형을 전환할 수 있는 경우가 아닐 때, 해당 항목의 오른쪽 또는 아래쪽에 있는 다른 보고서 항목은 이러한 빈 공간을 채우기 위해 이동하지 않습니다. 예를 들어 사각형 및 사각형에 포함된 이미지가 숨겨져 있는 경우 사각형 오른쪽에서 시작되는 보고서 항목이 왼쪽으로 이동하여 빈 공간을 채우지는 않습니다. 사각형이 차지하는 공간은 그대로 보존됩니다.  
   
 -   보고서 항목과 해당 내용이 조건부로 숨겨져 있는 경우, 즉 식에 의해 조건부로 숨겨진 경우 또는 다른 보고서 항목을 클릭하여 표시 유형을 전환할 수 있는 경우, 항목이 숨겨지면 해당 항목의 오른쪽 또는 아래쪽에 있는 다른 보고서 항목이 왼쪽으로 이동하여 공간을 채웁니다.  
   

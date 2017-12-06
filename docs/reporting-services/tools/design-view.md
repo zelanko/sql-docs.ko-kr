@@ -2,9 +2,12 @@
 title: "디자인 뷰 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 461e68458cc754355a172e607bfa638ae1eb2eb0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6d683ce26988ec3edda4706f3fa6903bb52ca556
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="design-view"></a>디자인 뷰
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 디자이너에서 디자인 뷰를 사용하여 보고서에 보고서 항목을 배치할 수 있습니다. 디자인 뷰는 디자인 화면 또는 레이아웃 뷰라고도 합니다.  

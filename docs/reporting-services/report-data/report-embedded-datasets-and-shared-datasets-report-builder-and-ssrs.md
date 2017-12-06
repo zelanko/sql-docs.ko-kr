@@ -2,9 +2,12 @@
 title: "보고서 포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b58eb34183d3ec9c1aaafaacb802a4507395d262
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f135c5a6221af8c169c59e65f5ff47a64ac3d430
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS)
   데이터 집합은 데이터 연결에서 사용할 데이터를 지정합니다. 데이터 집합은 포함된 데이터 원본 또는 보고서 서버의 공유 데이터 원본에 대한 참조로 보고서에 저장된 데이터 연결을 기반으로 합니다. 데이터 집합은 필드 집합을 지정하는 쿼리를 포함합니다. 이러한 필드를 디자인 화면으로 끌면 보고서를 실행할 때 실제 데이터를 계산하는 식이 만들어집니다.  

@@ -2,9 +2,12 @@
 title: "보안 개체 항목 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7cd3e8b8d3e1a623a7bcc10022da6081dca330cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f3345eedb8d1d8fa933deb6ac5f543fdb6e82f51
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="securable-items"></a>보안 개체 항목
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 보안을 사용하여 보고서 서버에 저장되어 있는 항목에 대한 액세스를 제어합니다. 사용자에게 보고서 서버 액세스 권한을 부여할 때는 일반적으로 다음과 같이 역할 할당 쌍을 만듭니다.  

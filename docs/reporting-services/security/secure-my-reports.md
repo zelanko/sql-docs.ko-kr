@@ -2,9 +2,12 @@
 title: "내 보고서 보안 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8c612e899a4ec7be7879d16f03f2a9528addb316
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff08b3c8e78fb337a97cbdf491a745157d52fd53
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="secure-my-reports"></a>내 보고서 보안 설정
   내 보고서 기능은 보고서 작업을 위한 사용자 관리 작업 영역을 제공합니다. 원래 용도대로 사용하려면 내 보고서 폴더는 여러 사용자가 사용할 수 있는 다른 폴더보다 권한 제한이 적어야 합니다. 다른 폴더의 보고서를 보고 실행할 수 있는 권한만 있는 사용자가 내 보고서 폴더와 자신이 소유한 내용을 관리하려면 확장된 권한이 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 이 용도에 맞는 특별한 역할 할당과 역할 정의를 제공합니다.  

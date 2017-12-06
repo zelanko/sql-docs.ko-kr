@@ -2,9 +2,12 @@
 title: "보고서에 코드 추가(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: dad6a1b0a3be940cd3f0d6ecf9a5e62193ee9960
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3461dad497cef85d930e7cbb160066f28b9779c6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-code-to-a-report-ssrs"></a>보고서에 코드 추가(SSRS)
   모든 식에서 고유한 사용자 지정 코드를 호출할 수 있습니다. 다음과 같은 두 가지 방법으로 코드를 제공할 수 있습니다.  

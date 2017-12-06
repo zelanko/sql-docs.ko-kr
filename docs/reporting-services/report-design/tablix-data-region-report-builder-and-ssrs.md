@@ -2,9 +2,12 @@
 title: "테이블릭스 데이터 영역(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 49d872c920e735ffa2b1891f09c16e2738518b69
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90f52e1c600c0f866eb6a2754c486d0c4e5af08a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서 테이블릭스 데이터 영역은 행과 열로 구성된 셀에 페이지를 매긴 보고서 데이터를 표시하는 일반화된 레이아웃 보고서 항목입니다. 보고서 데이터는 데이터 원본에서 검색된 상태 그대로의 정보 데이터이거나 지정한 그룹으로 구성된 집계 정보 데이터일 수 있습니다. 각 테이블릭스 셀에는 입력란이나 이미지 같은 보고서 항목이나 테이블릭스 영역, 차트 또는 계기 같은 다른 데이터 영역이 들어 있을 수 있습니다. 한 셀에 여러 보고서 항목을 추가하려면 먼저 컨테이너 역할을 할 사각형을 추가한 다음 이 사각형에 보고서 항목을 추가합니다.  

@@ -1,10 +1,13 @@
 ---
 title: "Reporting Services 기본 모드 보고서 서버 설치 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 15a6372f34d1490499880d89e32ac8f0804b0fb8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9feeb8c3f7e9d2c1d365e8d6ad7f327e20d80b4f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 설치
 
@@ -102,7 +105,7 @@ ms.lasthandoff: 11/09/2017
 -   `http://+:80/reports`, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에 대한 액세스를 제공합니다.
   
 ##  <a name="bkmk_installwithwizard"></a> SQL Server 설치 마법사로 기본 모드 설치  
- 다음 목록에서는 SQL Server 설치 마법사에서 선택하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 특정 단계와 옵션에 대해 설명합니다. 설치 마법사에 표시될 각 페이지가 아니라 기본 모드 설치에 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관련 페이지에 대해서만 설명합니다.  
+ 다음 목록에서는 SQL Server 설치 마법사에서 선택하는  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 특정 단계와 옵션에 대해 설명합니다. 설치 마법사에 표시될 각 페이지가 아니라 기본 모드 설치에 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관련 페이지에 대해서만 설명합니다.  
   
 1.  SQL Server 설치 마법사(setup.exe)를 실행하고 다음 예비 페이지를 단계별로 실행합니다.  
   
@@ -161,7 +164,7 @@ ms.lasthandoff: 11/09/2017
   
     -   **관리자 권한을 가진** 브라우저를 열고 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에 연결합니다. 예를 들어 `http://localhost/Reports`입니다.  
   
-    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 페이지에 연결합니다. 예: `http://localhost/ReportServer`  
+    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 페이지에 연결합니다. 예:  `http://localhost/ReportServer`  
   
  자세한 내용은 다음 두 항목의 기본 섹션을 참조하세요.  
   

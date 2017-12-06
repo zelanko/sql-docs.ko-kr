@@ -1,10 +1,13 @@
 ---
 title: "보고서 서버 액세스를 위한 방화벽 구성 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/14/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9954ce3ea11c4925dc5c99f13ccafd12e602d5c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3104355f8b60f2c570ddcdea6226f355c9798a56
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>보고서 서버 액세스를 위한 방화벽 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 응용 프로그램과 게시된 보고서는 IP 주소, 포트 및 가상 디렉터리를 지정하는 URL을 통해 액세스할 수 있습니다. Windows 방화벽을 켜면 보고서 서버에서 사용하도록 구성된 포트는 대부분 닫혀 있습니다. 원격 클라이언트 컴퓨터에서 **보고서 관리자** 를 열었을 때 빈 페이지가 나타나거나 보고서를 요청한 후 빈 웹 페이지가 나타나면 포트가 닫힌 것입니다.  

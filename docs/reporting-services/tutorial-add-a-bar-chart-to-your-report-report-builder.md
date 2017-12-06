@@ -2,9 +2,12 @@
 title: "자습서: 보고서에 막대 차트 추가(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6039892e8cdd711102c2c3f647b0a201723b0eef
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 

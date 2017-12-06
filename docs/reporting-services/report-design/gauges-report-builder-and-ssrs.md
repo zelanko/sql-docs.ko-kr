@@ -2,9 +2,12 @@
 title: "계기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -164,11 +167,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5c0b12e57fd5917ee91a4191d87c3e354248928a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f7368c5ab7fb528862d12ab79aa0e4f90365a4ed
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서의 계기 데이터 영역에는 데이터 집합의 단일 값이 표시됩니다. 개별 계기는 항상 자식 또는 인접 계기를 추가할 수 있는 계기 패널 안에 배치됩니다. 필터링, 그룹화, 정렬 등 일반적인 기능을 공유하는 여러 계기를 한 계기 패널 안에 만들 수 있습니다.  

@@ -2,9 +2,12 @@
 title: "보고서 서버 컴퓨터 이름 바꾸기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,17 +20,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 0f8dbaa44404060878910e8e00652dab378dd202
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc624e7b6e8d4268e6d407aec0adcb38759fe9b6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rename-a-report-server-computer"></a>보고서 서버 컴퓨터 이름 바꾸기
   컴퓨터 이름을 바꾸면 웹 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 같은 컴퓨터에 있는 경우 이에 해당하는 이름이 변경됩니다. 컴퓨터 이름을 변경한 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 액세스할 수 없는 경우도 있습니다. 컴퓨터 이름을 변경한 다음에는 이 항목의 단계를 사용하여 보고서 서버를 다시 구성합니다.  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 이름 바꾸기  
- 보고서 서버 데이터베이스를 실행하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 이름을 바꾸는 경우 다음을 수행하십시오.  
+ 보고서 서버 데이터베이스를 실행하는  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 이름을 바꾸는 경우 다음을 수행하십시오.  
   
 1.  Reporting Services 구성 도구를 시작한 다음 이름이 바뀐 서버에 있는 보고서 서버 데이터베이스를 사용하는 보고서 서버에 연결합니다.  
   

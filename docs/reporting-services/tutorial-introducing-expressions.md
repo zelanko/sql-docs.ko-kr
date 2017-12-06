@@ -2,9 +2,12 @@
 title: "자습서: 식 소개 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f0b2c4899bb9b1e5755ad4d2e7b65cfd3078b77f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9d74e5d7e56704515bb6f1c97e26e47802583279
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 일반적인 함수 및 연산자와 함께 식을 사용하여 강력하고 유연한 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 

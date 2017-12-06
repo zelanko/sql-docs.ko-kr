@@ -2,9 +2,12 @@
 title: "렌더링 동작(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4cf19162ddf8e94b897de746e311f218a94b9dda
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a053cd0065c28b3bbad3a46b25c68aad46bea6b9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>렌더링 동작(보고서 작성기 및 SSRS)
   보고서를 렌더링하는 경우 선택한 렌더러에 따라 보고서 본문 및 해당 내용에 특정 규칙이 적용됩니다. 여러 보고서 항목이 한 페이지에 함께 포함되는 방식은 다음과 같은 요소의 조합에 따라 결정됩니다.  

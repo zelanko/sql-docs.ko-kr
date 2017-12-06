@@ -2,9 +2,12 @@
 title: "CSV 파일로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e63d1c2405029118064144d99fc092ec6f4f139a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a41d99b7087463d5583e9cbb194175118dcab583
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
   CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 페이지가 매겨진 보고서의 데이터를 결합하여 읽기 쉽고 많은 응용 프로그램과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.  

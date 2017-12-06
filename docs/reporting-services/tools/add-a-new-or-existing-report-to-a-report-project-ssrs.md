@@ -2,9 +2,12 @@
 title: "보고서 프로젝트에 새 보고서 또는 기존 보고서 추가(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6edee3df21691e6f9e53a167bb1bd1bce502e76a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a78b23feb1ca7bcb8cb7ad9ded16c43c8034c395
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>보고서 프로젝트에 새 보고서 또는 기존 보고서 추가(SSRS)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 마법사를 사용하거나 프로젝트에 새 보고서를 추가하여 새 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 추가할 수 있습니다. 기본 보고서를 추가할 수도 있습니다. 보고서를 추가한 후 프로젝트의 **보고서** 폴더 아래에 나열된 보고서 이름을 볼 수 있습니다.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="to-add-an-existing-report"></a>기존 보고서를 추가하려면  
   
-1.  **프로젝트** 메뉴에서 **추가**를 클릭한 다음 **기존 항목**을 클릭합니다.  
+1.  **프로젝트** 메뉴에서 **추가**를 클릭한 다음  **기존 항목**을 클릭합니다.  
   
 2.  .rdl 파일의 위치를 찾아서 파일을 선택한 다음 **추가**를 클릭합니다.  
   

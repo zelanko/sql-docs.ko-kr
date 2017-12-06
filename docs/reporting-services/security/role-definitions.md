@@ -2,9 +2,12 @@
 title: "역할 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 53968d85370c60720f4d6caf72054a869348b27d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d30bd923a2a88d4438c2700073cf8430966e0d2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="role-definitions"></a>역할 정의
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *역할**정의* 는 보고서 서버에서 사용할 수 있는 작업을 정의하는 명명된 태스크 모음입니다. 역할 정의는 보고서 서버가 보안을 강화하기 위해 사용하는 규칙을 제공합니다. 사용자가 보고서 게시와 같은 태스크를 수행하려고 하면 보고서 서버가 사용자의 역할 할당을 검사하여 이 태스크가 해당 역할 정의에 포함되어 있는지 여부를 확인합니다. 해당 태스크가 역할 정의에 포함되어 있으면 요청이 제출됩니다.  
