@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a9253b744e337a69a86e6562156806d59b8f66a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4235f142dbe0a0022ba8b6af4fb2d3c981fae709
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server에 대 한 SQL Server 무인된 설치 스크립트 샘플:
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- 최소 3.25 g B 메모리 Linux에서 SQL Server를 실행 해야 합니다.
+- 최소 2GB의 메모리 Linux에서 SQL Server를 실행 해야 합니다.
 - 파일 시스템을 해야 **XFS** 또는 **EXT4**합니다. 와 같은 다른 파일 시스템, **BTRFS**, 지원 되지 않습니다.
 - 다른 시스템 요구 사항에 대 한 참조 [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
 

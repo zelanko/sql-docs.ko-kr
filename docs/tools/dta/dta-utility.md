@@ -2,9 +2,12 @@
 title: "dta 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3600ea7d01e3dfd7963198433c37ad05a9b68315
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dta-utility"></a>dta 유틸리티
-  **dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
  데이터베이스 엔진 튜닝 관리자와 마찬가지로 **dta** 유틸리티는 작업을 분석하고 이 작업에 대해 서버 성능을 향상시키기 위한 물리적 디자인 구조를 제안합니다. 작업은 계획 캐시, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 파일이나 테이블 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트일 수 있습니다. 물리적 디자인 구조에는 인덱스, 인덱싱된 뷰 및 분할이 포함됩니다. 작업을 분석한 후 **dta** 유틸리티는 실제 데이터베이스 디자인을 제안하며 이 제안 사항을 구현하는 데 필요한 스크립트를 생성할 수 있습니다. 명령 프롬프트에서 **-if** 또는 **-it** 인수를 사용하여 작업을 지정할 수 있습니다. 또한 명령 프롬프트에서 **-ix** 인수를 사용하여 XML 입력 파일을 지정할 수도 있습니다. 이러한 경우 작업은 XML 입력 파일에서 지정됩니다.  
   

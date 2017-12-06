@@ -5,7 +5,7 @@ ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cacdf2de6c6e85c8afd0723f4dae21feab0c71cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호
 
@@ -161,7 +161,7 @@ SQL Server 2017 CTP 1.4 추가 `sequence_number` 를 `sys.availability_groups` P
 
 기본 동작을 재정의 하 고 설정에서 가용성 그룹 리소스를 방지 하도록 선택할 수 있습니다 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 자동으로 합니다.
 
-다음 스크립트 집합 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 이라는 가용성 그룹에 있는 0에 `<**ag1**>`합니다. Replace를 실행 하기 전에 `<**ag1**>` 가용성 그룹의 이름으로 합니다.
+다음 스크립트 집합 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 이라는 가용성 그룹에 있는 0에 `<**ag1**>`합니다. 실행하기 전에 `<**ag1**>`을 가용성 그룹의 이름으로 바꿉니다.
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

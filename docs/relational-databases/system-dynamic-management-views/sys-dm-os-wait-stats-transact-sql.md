@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b171317170d9144edb71dfb29b36940ce6d7ee31
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -282,12 +282,12 @@ GO
 |FT_RESTART_CRAWL |임시 오류로부터 복구하기 위해 마지막으로 알려진 양호 지점부터 전체 텍스트 탐색을 다시 시작해야 하는 경우에 발생합니다. 이 대기를 사용하면 해당 채우기에서 현재 작동 중인 작업자 태스크가 현재 단계를 완료하거나 종료할 수 있습니다.| 
 |FULLTEXT GATHERER |전체 텍스트 작업을 동기화하는 경우에 발생합니다.| 
 |GDMA_GET_RESOURCE_OWNER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |GHOSTCLEANUPSYNCMGR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|GLOBAL_QUERY_CANCEL |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|GLOBAL_QUERY_CANCEL |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |GLOBAL_QUERY_CLOSE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|GLOBAL_QUERY_CONSUMER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
-|GLOBAL_QUERY_PRODUCER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|GLOBAL_QUERY_CONSUMER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|GLOBAL_QUERY_PRODUCER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |GLOBAL_TRAN_CREATE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |GLOBAL_TRAN_UCS_SESSION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |GUARDIAN |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
@@ -346,9 +346,9 @@ GO
 |HADR_TDS_LISTENER_SYNC |내부 Alwayson 시스템 또는 WSFC 클러스터가 수신기 시작 되거나 중지를 요청 합니다. 이 요청의 처리는 항상 비동기이며 중복 요청을 제거하는 메커니즘이 있습니다. 또한 구성 변경으로 인해 이 프로세스가 일시 중단 되는 순간이 있습니다. 이 수신기 동기화 메커니즘과 관련된 모든 대기는 이 대기 유형을 사용합니다. 내부 전용입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |시작 하거나 anavailability 그룹 수신기를 중지 해야 하는 항상에 TRANSACT-SQL 문의 끝에 사용 됩니다. 시작/중지 작업은 비동기적으로 수행 하 고, 이후 사용자 스레드 알려져 있는 수신기의 상황이 될 때까지이 대기 유형을 사용 하 여 차단 됩니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
-|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
-|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_TIMER_TASK |타이머 태스크 개체에 대한 잠금을 가져올 때까지 기다리며, 작업이 수행되는 시간 사이의 실제 대기에도 사용됩니다. 예를 들어 10 초 마다 하나의 실행 후 실행 되는 작업에 대 한 Always On 가용성 그룹 약 10 초는 작업 일정을 변경 하려면 잠시 기다린 후 대기가 여기 포함 됩니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_TRANSPORT_DBRLIST |전송 계층의 데이터베이스 복제본 목록에 대한 액세스를 기다립니다. 에 대 한 액세스 권한을 부여 하는 spinlock에 사용 되는., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_TRANSPORT_FLOW_CONTROL |처리 중인 승인 되지 않은 Always On 메시지의 수를 out 위로 가져갈 때 대기 플로 제어 임계값입니다. (데이터베이스에 데이터베이스에 기반)에 없는 가용성 복제본-기준입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -471,9 +471,9 @@ GO
 |MD_AGENT_YIELD |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |MD_LAZYCACHE_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |MEMORY_ALLOCATION_EXT |내부 SQL Server 메모리 풀 또는 운영 체제에서 메모리를 할당 하는 동안 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|MEMORY_GRANT_UPDATE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|MEMORY_GRANT_UPDATE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |METADATA_LAZYCACHE_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 만 합니다. |  
-|MIGRATIONBUFFER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|MIGRATIONBUFFER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |MISCELLANEOUS |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |MISCELLANEOUS |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |MSQL_DQ |분산 쿼리 작업이 완료될 때까지 태스크가 대기하는 경우에 발생합니다. 발생 가능한 MARS(Multiple Active Result Set) 응용 프로그램 교착 상태를 감지하는 데 사용됩니다. 대기는 분산 쿼리 호출이 완료될 때 끝납니다.| 
@@ -733,12 +733,12 @@ GO
 |PWAIT_MD_RELATION_CACHE |테이블 또는 인덱스에서 메타 데이터의 내부 동기화 중에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_MD_SERVER_CACHE |연결 된 서버에서 메타 데이터의 내부 동기화 중에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_MD_UPGRADE_CONFIG |업그레이드 서버 수준 구성의 내부 동기화 중에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_PREEMPTIVE_AUDIT_ACCESS_WINDOWSLOG |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_QRY_BPMEMORY |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_REPLICA_ONLINE_INIT_MUTEX |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|PWAIT_SBS_FILE_OPERATION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|PWAIT_SBS_FILE_OPERATION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_XTP_FSSTORAGE_MAINTENANCE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |PWAIT_XTP_HOST_STORAGE_WAIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |QDS_ASYNC_CHECK_CONSISTENCY_TASK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -752,7 +752,7 @@ GO
 |QDS_DB_DISK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |QDS_DYN_VECTOR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |QDS_EXCLUSIVE_ACCESS |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|QDS_HOST_INIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|QDS_HOST_INIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |QDS_LOADDB |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |QDS_PERSIST_TASK_MAIN_LOOP_SLEEP |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |QDS_QDS_CAPTURE_INIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -777,12 +777,12 @@ GO
 |QUERY_OPTIMIZER_PRINT_MUTEX |쿼리 최적화 프로그램의 진단 출력 생성 동기화 중에 발생합니다. 이 대기 유형은 진단 설정이 Microsoft 기술 지원 서비스의 지시 대로 설정 된 경우에 발생 합니다.| 
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |QUERY_TRACEOUT |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|RBIO_WAIT_VLF |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|RBIO_WAIT_VLF |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |RECOVER_CHANGEDB |웜 대기 데이터베이스의 데이터베이스 상태 동기화 중에 발생합니다.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |REDO_THREAD_SYNC |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|REMOTE_BLOCK_IO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|REMOTE_BLOCK_IO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |REMOTE_DATA_ARCHIVE_MIGRATION_DMV |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_DMV |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -812,12 +812,12 @@ GO
 |SATELLITE_CARGO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SATELLITE_SERVICE_SETUP |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SATELLITE_TASK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|SBS_DISPATCH |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
-|SBS_RECEIVE_TRANSPORT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
-|SBS_TRANSPORT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|SBS_DISPATCH |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|SBS_RECEIVE_TRANSPORT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|SBS_TRANSPORT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SCAN_CHAR_HASH_ARRAY_INITIALIZATION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SEC_DROP_TEMP_KEY |임시 보안 키 삭제 시도가 실패한 후 다시 시도하기 전에 발생합니다.| 
-|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SECURITY_CRYPTO_CONTEXT_MUTEX |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SECURITY_DBE_STATE_MUTEX |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SECURITY_KEYRING_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -852,7 +852,7 @@ GO
 |SNI_HTTP_WAITFOR_0_DISCON |처리 중인 HTTP 연결이 종료 될 때까지 기다리는 동안 SQL Server 종료 하는 동안 발생 합니다.| 
 |SNI_LISTENER_ACCESS |NUMA(비균일 메모리 액세스) 노드의 상태 변경 업데이트 작업을 대기하는 동안 발생합니다. 상태 변경에 대한 액세스는 직렬화됩니다.| 
 |SNI_TASK_COMPLETION |NUMA 노드 상태 변경 동안 모든 태스크가 완료될 때까지 대기하는 중에 발생합니다.| 
-|SNI_WRITE_ASYNC |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|SNI_WRITE_ASYNC |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SOAP_READ |HTTP 네트워크 읽기가 완료될 때까지 대기하는 동안 발생합니다.| 
 |SOAP_WRITE |HTTP 네트워크 쓰기가 완료될 때까지 대기하는 동안 발생합니다.| 
 |SOCKETDUPLICATEQUEUE_CLEANUP |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -903,7 +903,7 @@ GO
 |TDS_INIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |TDS_PROXY_CONTAINER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |TEMPOBJ |임시 개체 삭제가 동기화되는 경우에 발생합니다. 이 대기는 드물게 발생하며 태스크가 temp 테이블 삭제에 대한 액세스를 과도하게 요청한 경우에만 발생합니다.| 
-|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |TERMINATE_LISTENER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |THREADPOOL |태스크가 작업자가 실행될 때까지 대기하는 경우에 발생합니다. 이는 최대 작업자 설정이 너무 낮거나 해당 일괄 처리 실행이 비정상적으로 오래 수행되어 다른 일괄 처리에 사용할 수 있는 작업자 수가 감소한 것입니다.| 
 |TIMEPRIV_TIMEPERIOD |확장 이벤트 타이머의 내부 동기화 중에 발생합니다.| 
@@ -933,13 +933,13 @@ GO
 |WAIT_FOR_RESULTS |쿼리 알림이 트리거될 때까지 대기하는 경우에 발생합니다.| 
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|WAIT_XLOGREAD_SIGNAL |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|WAIT_XLOGREAD_SIGNAL |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_ASYNC_TX_COMPLETION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_CKPT_AGENT_WAKEUP |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_CKPT_CLOSE |검사점이 완료 될 때까지 기다리는 경우 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_CKPT_ENABLED |검사점 작성은 대기 하는 사용 되지 않는 검사점을 사용 하도록 설정 하는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_CKPT_STATE_LOCK |검사점 상태 확인을 동기화 할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.| 
 |WAIT_XTP_GUEST |데이터베이스의 메모리 할당자에서 메모리 부족 알림 수신을 중지할 할 때 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_HOST_WAIT |대기 데이터베이스 엔진에 의해 트리거되는 및 호스트에서 구현 하는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -947,7 +947,7 @@ GO
 |WAIT_XTP_OFFLINE_CKPT_NEW_LOG |새 로그 레코드를 검색에 대 한 오프 라인 검사점 대기 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_PROCEDURE_ENTRY |삭제 프로시저 대기에 대 한 모든 현재 실행 프로시저가 완료 될 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_RECOVERY |데이터베이스 복구 완료 하는 메모리 액세스에 최적화 된 개체의 복구를 위해 대기 하는 경우에 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_SWITCH_TO_INACTIVE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_TASK_SHUTDOWN |메모리 내 oltp 네트워크 읽기가 완료 될 때까지 기다리는 경우 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XTP_TRAN_DEPENDENCY |트랜잭션 종속성을 기다리는 경우 발생 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -996,10 +996,10 @@ GO
 |XE_TIMER_TASK_DONE |TBD| 
 |XIO_CREDENTIAL_MGR_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |XIO_CREDENTIAL_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|XIO_EDS_MGR_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
-|XIO_EDS_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
-|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
-|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 현재 통해 합니다.| 
+|XIO_EDS_MGR_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|XIO_EDS_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |XIO_LEASE_RENEW_MGR_RWLOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |XTP_HOST_DB_COLLECTION |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |XTP_HOST_LOG_ACTIVITY |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 

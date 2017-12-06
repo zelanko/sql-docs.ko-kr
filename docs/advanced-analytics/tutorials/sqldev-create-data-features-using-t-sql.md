@@ -2,7 +2,7 @@
 title: "4 단원: T-SQL을 사용 하 여 데이터 기능 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f77e853d87c82cd6f2bd2a64e387ea3286eccfc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: de9ecff479210f27bc93c306bdd96a163e6bb307
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-4-create-data-features-using-t-sql"></a>4 단원: T-SQL을 사용 하 여 데이터 기능 만들기
 

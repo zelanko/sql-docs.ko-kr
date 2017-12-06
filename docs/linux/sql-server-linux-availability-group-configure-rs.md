@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 84fe8851a6ff3ad71e9ad9007bddc8715efc8829
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: 96be9d968286f44b23748041b2beeb1383f63964
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="configure-a-read-scale-availability-group-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 읽기 확장성이 가용성 그룹을 구성 합니다.
 
@@ -80,7 +80,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 * [읽기 가능한 보조 복제본](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
 * [읽기 전용 라우팅](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
 
-## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>장애 조치 읽기 확장성이 가용성 그룹에 주 복제본
+## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>읽기 확장 가용성 그룹에서 주 복제본 장애 조치
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 

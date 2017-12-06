@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
+ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="create-external-table-transact-sql"></a>외부 테이블 (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -295,6 +295,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE 및 DROP TABLE  
   
 -   CREATE STATISTICS 및 통계 삭제  
+참고: 만들기 및 Azure SQL 데이터베이스에서 외부 테이블에서 DROP STATISTICS를 사용할 수 없습니다. 
   
 -   보기 만들기 및 DROP VIEW  
   

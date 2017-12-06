@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: c69d708c793b2a7a3513a5885d84f7f534e03e6b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: decf9cf88ef38264900c129c2626761718065739
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server에서 데이터베이스를 만들고 SQL Server 설치
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-와 SLES v12 SP2 시스템이 있어야 **3.25 GB 이상** 메모리입니다. 파일 시스템을 해야 **XFS** 또는 **EXT4**합니다. 와 같은 다른 파일 시스템, **BTRFS**, 지원 되지 않습니다.
+SLES v12 SP2 시스템 있어야 **최소 2GB** 메모리입니다. 파일 시스템을 해야 **XFS** 또는 **EXT4**합니다. 와 같은 다른 파일 시스템, **BTRFS**, 지원 되지 않습니다.
 
 SUSE Linux Enterprise Server를 사용자의 컴퓨터에 설치 하려면로 이동 [https://www.suse.com/products/server](https://www.suse.com/products/server)합니다. 또한 Azure에서 SLES 가상 컴퓨터를 만들 수 있습니다. 참조 [만들기 및 Azure CLI Linux Vm 관리](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 사용 하 여 `--image SLES` 에 대 한 호출에서 `az vm create`합니다.
 

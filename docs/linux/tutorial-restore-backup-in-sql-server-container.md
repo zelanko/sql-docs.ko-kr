@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a1b63756bbf257709b1888caf2af7bad2ddf5e74
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35a8e5ef7b08530b54d751636c122c6455971faf
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
 
@@ -36,12 +36,9 @@ ms.lasthandoff: 11/20/2017
 ## <a name="prerequisites"></a>필수 구성 요소
 
 * docker 엔진 1.8 + Mac/창에 Linux 배포 또는 Docker를 지원 합니다. 자세한 내용은 참조 [설치 Docker](https://docs.docker.com/engine/installation/)합니다.
-* 최소 4GB의 디스크 공간
-* 최소 4GB의 RAM
+* 최소 2GB의 디스크 공간
+* 2GB ram 이상
 * [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
-
-> [!IMPORTANT]
-> Mac 용 Docker 및 Windows 용 Docker에 대 한 기본값 Moby VM에 대 한 2GB 이므로 4GB로 변경 해야 합니다. Mac 또는 Windows에서 실행 하는 경우 메모리 설정을 사용 하 여 증가 된 [Docker 빠른 시작의 지침에](quickstart-install-connect-docker.md)합니다.
 
 ## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 실행 하 고 끌어오기
 

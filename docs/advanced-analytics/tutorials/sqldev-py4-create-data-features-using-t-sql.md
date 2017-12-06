@@ -2,7 +2,7 @@
 title: "4단계: T-SQL을 사용하여 데이터 기능 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -17,11 +17,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: df714b03de08a3ed1f149df3f7fc7b40e9b8c270
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>4단계: T-SQL을 사용하여 데이터 기능 만들기
 

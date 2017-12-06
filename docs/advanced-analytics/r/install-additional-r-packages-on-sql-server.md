@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8c8e95bf2f0715684bb656d2b2de4dd94aea14f8
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: f8d20c5b5b687a6d9d94cd97605f294cead27215
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>SQL Server에 추가 R 패키지를 설치 합니다.
 
@@ -158,8 +158,9 @@ ms.lasthandoff: 11/16/2017
 
     ```R
     packageList <- c("e1071")
-
-3. Define a connection string to the instance and database where package management is enabled, and use the connection string to create a SQL Server compute context.
+    ```
+    
+3. 인스턴스 및 패키지 관리를 사용할 수 있는 데이터베이스 연결 문자열을 정의 하 고 SQL Server 계산 컨텍스트를 만드는 연결 문자열을 사용 합니다.
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)

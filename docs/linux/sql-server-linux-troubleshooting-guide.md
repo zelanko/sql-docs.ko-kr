@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
@@ -149,7 +149,7 @@ SQLCMD 통해 단일 사용자 모드로 SQL Server를 시작 합니다.
    ```
   
 > [!WARNING]  
->  이후 시작 문제를 방지 하기 위해 "mssql" 사용자와 Linux에서 SQL Server를 시작 합니다. "Sudo-u mssql /opt/mssql/bin/sqlservr [시작 옵션]" 예제 
+>  "mssql" 사용자와 함께 Linux에서 SQL Server를 시작하여 향후 시작 문제를 방지합니다. "sudo -u mssql /opt/mssql/bin/sqlservr [시작 옵션]" 예제 
 
 다른 사용자와 실수로 SQL Server를 시작한 경우에 다시 systemd와 SQL Server를 시작 하기 전에 'mssql' 사용자에 게 SQL Server 데이터베이스 파일의 소유권을 변경 해야 합니다. 예를 들어 'mssql' 사용자에 게 /var/opt/mssql 아래에 있는 모든 데이터베이스 파일의 소유권을 변경 하려면 다음 명령을 실행합니다
 

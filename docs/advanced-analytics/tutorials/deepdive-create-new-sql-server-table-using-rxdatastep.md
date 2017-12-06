@@ -2,7 +2,7 @@
 title: "RxDataStep를 사용 하 여 새 SQL Server 테이블 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c37cb44bdf2cc30e826ced8e06d47ec64c80f1b1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8f276a09ea785da6b31a54693a6f5d758bb77b43
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep"></a>RxDataStep을 사용하여 새 SQL Server 테이블 만들기
 

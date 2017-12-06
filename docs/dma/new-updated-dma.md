@@ -1,6 +1,6 @@
 ---
-title: "업데이트 됨-SQL Server 문서에 대 한 ADO | Microsoft Docs"
-description: "코드 조각에 대 한 개체 ADO (ActiveX Data) Microsoft SQL server에서 최근에 변경된 된 설명서에 대 한 업데이트 된 콘텐츠를 표시 합니다."
+title: "업데이트 됨-SQL Server 문서에 대 한 DMA | Microsoft Docs"
+description: "코드 조각에 대 한 데이터 마이그레이션 길잡이 (DMA) Microsoft SQL server에서 최근에 변경된 된 설명서에 대 한 업데이트 된 콘텐츠를 표시 합니다."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -14,14 +14,14 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: ado-activex-data-objects
-ms.openlocfilehash: 9285c2f40b72151bddd5b5fefd2a2ec870b91ef4
+ms.workload: dma-data-migration-assistant
+ms.openlocfilehash: 3d542535f92107266e841f72168257cc9a64a9b4
 ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/04/2017
 ---
-# <a name="new-and-recently-updated-activex-data-objects-ado-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server에 대 한 ActiveX Data Objects (ADO)
+# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server에 대 한 데이터 마이그레이션 길잡이 (DMA)
 
 
 
@@ -34,7 +34,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 - *날짜 범위 업데이트:* &nbsp; **2017-09-28** &nbsp; 을 아래와 같이 &nbsp; **2017-12-02**
-- *주제 영역:* &nbsp; **ADO ActiveX Data Objects () for SQL Server**합니다.
+- *주제 영역:* &nbsp; **데이터 마이그레이션 길잡이 (DMA) for SQL Server**합니다.
 
 
 

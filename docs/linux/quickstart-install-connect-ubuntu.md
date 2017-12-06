@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 3cf5b554da4a01fd52aa2ae0766b1379bab1acfb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d708c0711c1b1fd4ccf79d9c4bfbd382c8d97486
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Ubuntu에서 데이터베이스를 만들고 SQL Server 설치
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-와 Ubuntu 16.04 시스템이 있어야 **3.25 GB 이상** 메모리입니다.
+사용 하는 Ubuntu 16.04 컴퓨터가 있어야 **최소 2GB** 메모리입니다.
 
 Ubuntu을 사용자의 컴퓨터에 설치 하려면로 이동 [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)합니다. 또한 Azure의 Ubuntu 가상 컴퓨터를 만들 수 있습니다. 참조 [만들기 및 관리 Azure CLI 된 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)합니다.
 

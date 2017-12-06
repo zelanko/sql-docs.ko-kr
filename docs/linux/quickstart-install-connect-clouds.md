@@ -6,14 +6,16 @@ ms.author: annashres
 manager: jhubbard
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 0bc304b50930f8c8de5d244ea0b606add5f24d2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a7ea24d7563a7256c93dbfaa052bfb4041f9aa0
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>SQL Server 2017은 클라우드에서 실행
 
@@ -25,7 +27,7 @@ ms.lasthandoff: 11/09/2017
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
 
 ## <a name="amazon-web-services"></a>Amazon 웹 서비스
-1.  Linux a m I 3.25 g B 이상의 시장에서 메모리를 사용 하 여 만들기 
+1.  Linux a m I 최소 2GB의 마켓플레이스에서 메모리를 사용 하 여 만들기 
     * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/09/2017
     
 ## <a name="digital-ocean"></a>디지털 Ocean
 1. 로그인에는 [제어판](https://cloud.digitalocean.com/login) 드롭릿 만들기 클릭
-1. Ubuntu 16.04 드롭릿 3.25 g b 이상 메모리를 선택 합니다.
+1. 최소 2GB의 메모리와 Ubuntu 16.04 드롭릿 선택
 1. 에 연결 된 드롭릿 ssh
 1. 수행 된 [Ubuntu 퀵 스타트](quickstart-install-connect-ubuntu.md)
 1. 원격 연결에 대해 구성 합니다.
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/09/2017
     * SQL Server (기본 TCP 포트 (1433)는 수신 포트의 트래픽을 허용 하는 인바운드 규칙 추가
     
 ## <a name="google-cloud-platform"></a>Google 클라우드 플랫폼
-1.  3.25 g B 이상의 클라우드 실행 프로그램의 메모리와 Linux 이미지를 만들려면 
+1.  최소 2GB의 메모리 클라우드 시작 관리자와 Linux 이미지를 만들려면 
     * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)

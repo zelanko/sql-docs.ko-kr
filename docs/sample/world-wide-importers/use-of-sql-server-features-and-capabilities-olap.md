@@ -1,9 +1,9 @@
 ---
 title: "SQL Server 기능 및 특성의 사용 | Microsoft Docs"
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 1f879ed08d00acf0556c364a94162719b8906434
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9179b95331ddcad4a704feadae2aa3f9211f8dff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server 기능 및 특성의 WideWorldImportersDW 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW는 다양 한 데이터 웨어하우스 및 분석에 적합 한 SQL Server의 주요 기능을 보여 주기 위해 설계 되었습니다. 다음 목록은 SQL Server 기능 및 기능과 WideWorldImportersDW에서 사용 되는 방법을 설명 합니다.

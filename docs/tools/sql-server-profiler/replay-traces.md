@@ -2,9 +2,12 @@
 title: "추적 재생 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ade3c7015160e8fc38340eb64337f2877f9f520
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6b747698f3269fcde8a8aa4272190d7ac9e417ab
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="replay-traces"></a>추적 재생
-  재생은 추적에 캡처된 작업을 재현하는 기능입니다. 추적을 만들거나 편집할 때 추적을 파일에 저장하면 나중에 재생할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 단일 컴퓨터의 추적 작업만 재생할 수 있습니다. 대규모 작업의 경우 Distributed Replay Utility를 사용하면 여러 컴퓨터의 추적 데이터를 재생할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]재생은 추적에 캡처된 작업을 재현 하는 기능입니다. 추적을 만들거나 편집할 때 추적을 파일에 저장하면 나중에 재생할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 단일 컴퓨터의 추적 작업만 재생할 수 있습니다. 대규모 작업의 경우 Distributed Replay Utility를 사용하면 여러 컴퓨터의 추적 데이터를 재생할 수 있습니다.  
   
  이 섹션에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 재생 기능을 사용하는 방법에 대해 설명합니다. Distributed Replay Utility에 대한 자세한 내용은 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)을 참조하십시오.  
   

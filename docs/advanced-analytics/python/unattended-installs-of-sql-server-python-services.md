@@ -2,7 +2,7 @@
 title: "Python 컴퓨터 학습 services (In-database) 무인된 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d7cba7c74eaef9e627b75972d3b6dd34ee5a6f1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 77d9a8fcaca2aa8161d6763cda74239754da41d5
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Python 컴퓨터 학습 services (In-database) 무인된 설치
 

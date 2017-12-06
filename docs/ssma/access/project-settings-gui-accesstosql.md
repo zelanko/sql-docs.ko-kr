@@ -1,10 +1,13 @@
 ---
 title: "프로젝트 설정 (GUI) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c7a5fcb384b354166220cd5bdc6462952c3b620
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a14554ff988ab2daa6aa54c3a7e50a2e4d7cfb7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="project-settings-gui-accesstosql"></a>프로젝트 설정 (GUI) (AccessToSQL)
 GUI 프로젝트 설정에 나타나는 데이터를 구성할 수 있습니다는 **데이터** 탭과 평가 보고서를 사용 하 여 데이터 보고서를 포함 하도록 합니다.  

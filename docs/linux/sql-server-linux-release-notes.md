@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: f625cbf53c25dd097efb6619a47069be7873320f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
-ms.translationtype: HT
+ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/29/2017
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <a name="how-to-install-cumulative-updates"></a>누적 업데이트를 설치 하는 방법
+## <a id="cuinstall"></a>누적 업데이트를 설치 하는 방법
 
 구성한 경우 누적 업데이트 저장소에서는 최신 누적 업데이트 패키지를 SQL Server의 새 설치를 수행할 때 발생 합니다. 누적 업데이트 저장소에는 Linux에서 SQL Server에 대 한 모든 패키지 설치 아티클에 대 한 기본값입니다. 저장소 구성에 대 한 자세한 내용은 참조 [리포지토리 소스](sql-server-linux-setup.md#repositories)합니다.
 

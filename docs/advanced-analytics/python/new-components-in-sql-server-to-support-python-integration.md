@@ -2,7 +2,7 @@
 title: "Python SQL Server와의 통합에 대 한 구성 요소 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -12,11 +12,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a23acdc0c39e0325f31050b299b883616912be71
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: fafccf5c47d5b1681bed554b7c7c9b1fb8569a0c
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Python 통합을 지원 하도록 SQL Server의 구성 요소
 

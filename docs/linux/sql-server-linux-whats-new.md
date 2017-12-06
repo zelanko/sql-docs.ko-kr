@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: cdc32cffd67c794f5ec2d04ac7410892475f4f7f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
+ms.openlocfilehash: 3e4a3e19fd9d03d3f6e4dd4a68a5a15b922f348d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 새로운 기능
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 11/29/2017
 이 문서에서는 SQL Server 2017 Linux에서 실행 중인에 대 한 주요 기능 및 서비스를 사용할 수 있는 설명입니다.
 
 > [!NOTE]
-> 이 문서에서 이러한 기능을 외에도 누적 업데이트는 GA 릴리스에서 정기적으로 해제 됩니다. 이러한 누적 업데이트는 다양 한 개선 기능과 픽스를 제공합니다. 최신 CU 릴리스에 대 한 자세한 내용은 참조 하십시오. [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)합니다. 패키지 다운로드 및 알려진된 문제에 대 한 참조는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
+> 이 문서에서 이러한 기능을 외에도 누적 업데이트는 GA 릴리스에서 정기적으로 해제 됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대 한 자세한 내용은 참조 하십시오. [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)합니다. 패키지 다운로드 및 알려진된 문제에 대 한 참조는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
 
 ## <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진
 

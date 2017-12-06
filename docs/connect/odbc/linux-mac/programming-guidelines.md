@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
@@ -75,21 +75,36 @@ MacOS 및 Linux에서 ODBC 드라이버의이 릴리스에서 제대로 작동 �
 
 ## <a name="character-set-support"></a>문자 집합 지원
 
-인코딩 클라이언트는 다음 중 하나일 수 있습니다.
+다음 문자 집합 중 하나에 SQLCHAR 데이터는 드라이버에서 사용할 수 있습니다.
+
   -  UTF-8
-  -  ISO 8859-1
-  -  ISO 8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO 8859-1 / CP1252
+  -  ISO 8859-2 / CP1250
   -  ISO 8859-3
   -  ISO 8859-4
   -  ISO-8859-5
   -  ISO 8859-6
   -  ISO 8859-7
-  -  ISO-8859-8
-  -  ISO-8859-9
+  -  ISO-8859-8 / CP1255
+  -  ISO-8859-9 / CP1254
   -  ISO 8859-13
   -  -8859-15
-  
-SQLCHAR 데이터는 지원 되는 문자 집합 중 하나 여야 합니다. SQLWCHAR 데이터는 UTF-16LE(Little Endian)이어야 합니다.  
+
+연결 시 드라이버에서 로드 되는 프로세스의 현재 로캘을 검색 합니다. 위의 지원 되는 인코딩 중 하나 인지, 하는 경우 드라이버 SQLCHAR (좁은 문자) 데이터;이 인코딩을 사용 합니다. 그렇지 않으면 u t F-8로 기본 설정 합니다. 모든 프로세스 기본적으로 "C" 로캘에서 시작 (및 따라서 u t F-8로 인해 기본값으로 드라이버가) 이후 사용 해야 응용 프로그램을 위의 인코딩 중 하나를 사용 하는 경우는 **setlocale** 로캘을 하기 전에 적절 하 게 설정 하는 함수 연결 합니다. 원하는 로캘을 명시적으로 지정 하거나 예: 빈 문자열을 사용 하 여 `setlocale(LC_ALL, "")`환경의 로캘 설정을 사용 하도록 합니다.
+
+SQLWCHAR 데이터는 UTF-16LE(Little Endian)이어야 합니다.
 
 SQLDescribeParameter가 서버에서 SQL 형식을 지정하지 않는 경우 드라이버에서는 SQLBindParameter의 *ParameterType* 매개 변수에 지정된 SQL 형식을 사용합니다. SQL_VARCHAR 같은 반각 문자 SQL 형식이 SQLBindParameter에서 지정 된, 드라이버 변환 제공 된 데이터를 클라이언트 코드 페이지에서 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 코드 페이지입니다. (기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 코드 페이지는 보통 1252입니다.) 클라이언트 코드 페이지 지원 되지 않는 경우 u t F-8로 설정 됩니다. 이 경우 드라이버는 다음의 기본 코드 페이지에 u t F-8 데이터를 변환합니다. 그러나 데이터 손실이 발생할 수 있습니다. 코드 페이지 1252가 문자를 나타낼 수 없는 경우 드라이버에서 해당 문자를 물음표('?')로 변환합니다. 이 데이터 손실을 방지하려면 SQLBindParameter에서 유니코드 SQL 문자 형식(예: SQL_NVARCHAR)을 지정합니다. 이 경우 드라이버는 데이터의 손실 없이 u t F-16 인코딩을 u t F-8에서 제공 된 유니코드 데이터를 변환 합니다.
 

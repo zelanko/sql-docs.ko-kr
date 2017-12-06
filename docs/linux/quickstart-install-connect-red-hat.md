@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 213cabec248c9f293944904a1909f51484fcdf4a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42bcabc32c3a47c09bc8c3dd116403163faa2071
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Red Hat에서 데이터베이스를 만들고 SQL Server 설치
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-RHEL 7.3 또는 7.4 컴퓨터 있어야 **3.25 GB 이상** 메모리입니다.
+RHEL 7.3 또는 7.4 컴퓨터 있어야 **최소 2GB** 메모리입니다.
 
 Red Hat Enterprise Linux을 사용자의 컴퓨터에 설치 하려면로 이동 [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)합니다. 또한 Azure에서 RHEL 가상 컴퓨터를 만들 수 있습니다. 참조 [만들기 및 Azure CLI Linux Vm 관리](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 사용 하 여 `--image RHEL` 에 대 한 호출에서 `az vm create`합니다.
 
