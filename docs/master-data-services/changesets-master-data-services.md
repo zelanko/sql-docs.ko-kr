@@ -34,11 +34,11 @@ ms.lasthandoff: 11/20/2017
   
     1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다. [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [변경 집합 적용 및 업데이트&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)를 참조하세요.  
   
-    3.  승인을 위해 엔터티 관리자에게 변경 집합을 제출합니다. 변경 집합은 보류 중 상태입니다. [Commit or Submit a Changeset &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+    3.  승인을 위해 엔터티 관리자에게 변경 집합을 제출합니다. 변경 집합은 보류 중 상태입니다. [변경 집합 커밋 또는 제출&#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)을 참조하세요.  
   
-    4.  엔터티 관리자가 변경 집합이 승인 대기 중이라는 메일 알림을 받습니다. 엔터티 관리자가 변경 집합을 승인할 경우 변경 집합은 승인됨 상태입니다. [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+    4.  엔터티 관리자가 변경 집합이 승인 대기 중이라는 메일 알림을 받습니다. 엔터티 관리자가 변경 집합을 승인할 경우 변경 집합은 승인됨 상태입니다. [변경 집합 승인 또는 거부&#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)를 참조하세요.  
   
     5.  승인된 변경 집합은 자동으로 커밋됩니다. 변경 내용이 성공적으로 커밋되면 변경 집합은 커밋됨 상태입니다.  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 11/20/2017
   
     1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다. [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [변경 집합 적용 및 업데이트&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)를 참조하세요.  
   
-    3.  준비가 되면 변경 집합을 커밋합니다. [Commit or Submit a Changeset &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+    3.  준비가 되면 변경 집합을 커밋합니다. [변경 집합 커밋 또는 제출&#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
  [변경 집합 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
