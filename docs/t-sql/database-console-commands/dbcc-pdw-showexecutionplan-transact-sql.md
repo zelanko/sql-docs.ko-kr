@@ -64,7 +64,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>예제:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
 ### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>1. 상태가 아니므로 DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
- 실행 되는 경우는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 인스턴스를 위의 쿼리는 distribution_id ± ֳ ֵ를 수정 합니다.  
+ 실행 되는 경우는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 인스턴스를 위의 쿼리는 distribution_id 를 수정 합니다.  
   
 ```sql
 SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start_time], [end_time], [status], [distribution_id]  

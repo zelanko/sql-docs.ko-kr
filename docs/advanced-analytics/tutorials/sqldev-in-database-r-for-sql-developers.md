@@ -30,7 +30,7 @@ ms.lasthandoff: 12/01/2017
 
 > [!NOTE]
 > 
-> Python에서 동일한 솔루션 ´ ù입니다. SQL Server 2017가 필요 합니다. 참조 [in-database 분석 Python 개발자에 대 한](../tutorials/sqldev-in-database-python-for-sql-developers.md)
+> Python에서 동일한 솔루션 입니다. SQL Server 2017가 필요 합니다. 참조 [in-database 분석 Python 개발자에 대 한](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 ## <a name="overview"></a>개요
 
