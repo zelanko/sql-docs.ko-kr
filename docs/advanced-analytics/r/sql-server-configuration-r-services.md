@@ -2,7 +2,7 @@
 title: "SQL Server 구성(R Services) | Microsoft 문서"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bb91c23d7890fdd92cbe949e468cbad5d1dc143
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R로 사용 하기 위한 SQL Server 구성
 
@@ -70,7 +70,7 @@ Windows 운영 체제에서는 페이징 파일을 사용하여 크래시 덤프
 
 페이지 파일이 저장된 디스크의 속도가 성능에 영향을 미칠 수도 있습니다. 페이지 파일을 SSD에 저장하거나 여러 SSD에 걸쳐 여러 페이지 파일을 사용하면 성능이 향상될 수 있습니다.
 
-참조 페이지 파일 크기 조정에 대 한 내용은 [64 비트 버전의 Windows에 대 한 적절 한 페이지 파일 크기를 결정 하는 방법을](https://support.microsoft.com/en-us/kb/2860880)합니다.
+참조 페이지 파일 크기 조정에 대 한 내용은 [64 비트 버전의 Windows에 대 한 적절 한 페이지 파일 크기를 결정 하는 방법을](https://support.microsoft.com/kb/2860880)합니다.
 
 ## <a name="optimizations-at-instance-or-database-level"></a>인스턴스 또는 데이터베이스 수준에서 최적화
 
@@ -167,7 +167,7 @@ SQL Server를; 노드를 자동으로 관리 소프트 NUMA를 사용 하는 경
 
 **다른 리소스:**
 
-+ [SQL Server에서 소프트 NUMA](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [SQL Server에서 소프트 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Cpu에 소프트 NUMA 노드를 매핑하는 방법
 
@@ -207,7 +207,7 @@ SQL Server의 이점 중 하나는 많은 양의 행 병렬에서 처리 기능�
 
 이; resume 일치 하는 시나리오에서 사용 하는 방법 그러나 SQL Server에서 리소스 관리를이 접근 방식을 구현 해야 합니다. 외부 스크립트 작업에 대 한 작업 그룹을 설정 하 여 서로 다른 프로세서 그룹에 작업 점수 매기기 R 라우팅하고 더 빠른 처리량을 달성 합니다.
 
-리소스 관리를 할당할 수 있습니다 (CPU 및 메모리)의 경쟁을 작업 부하를 최소화 하기 위해 서버에서 사용 가능한 리소스를 나눕니다. R 작업의 서로 다른 유형을 구분 하기 위해 분류자 함수를 설정할 수 있습니다: 예를 들어 판단할 수 있습니다는 항상 응용 프로그램에서 호출 하는 점수 매기기, 낮은 우선 순위를 보유 하는 재교육 작업 합니다. 잠재적으로 이러한 리소스 격리 실행 시간을 향상 되 고 예측 가능성이 더욱 뛰어난 성능을 제공할 수 있습니다.
+리소스 관리를 할당할 수 있습니다 (CPU 및 메모리)의 경쟁을 작업 부하를 최소화 하기 위해 서버에서 사용 가능한 리소스를 나눕니다. R 작업의 여러 유형을 구분하기 위해 분류 자 기능을 설정할 수 있습니다. 예를 들어, 재교육 작업은 우선 순위가 낮은 반면 응용 프로그램에서 호출 된 점수는 항상 우선 순위로 결정할 수 있습니다. 잠재적으로 이러한 리소스 격리 실행 시간을 향상 되 고 예측 가능성이 더욱 뛰어난 성능을 제공할 수 있습니다.
 
 ### <a name="concurrent-scoring-using-powershell"></a>PowerShell을 사용 하 여 동시 점수 매기기
 
