@@ -1,11 +1,9 @@
-# [SSMS 다운로드](download-sql-server-management-studio-ssms.md)
 # [SSMS란 무엇인가요?](sql-server-management-studio-ssms.md)
-
-# 새로운 기능
+# [SSMS 다운로드](download-sql-server-management-studio-ssms.md)
 ## [SSMS 변경 로그 및 이전 릴리스](sql-server-management-studio-changelog-ssms.md)
 ## [릴리스 정보](download-sql-server-management-studio-ssms.md#release-notes)
+## [영어 이외의 SSMS 설치](install-other-languages.md)
 ## [새로운 또는 업데이트 된 문서](new-updated-ssms.md)
-
 # [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)
 
 # [SQL Server 에이전트 +](../ssms/agent/sql-server-agent.md)
