@@ -2,12 +2,12 @@
 title: "요소 (CSDLBI) 측정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83dc8a37899d510205659b9a017dd6246c9ca695
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0dbdaee8077ccfeb374f1ef360d397fa194dbfca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measure-element-csdlbi"></a>Measure 요소(CSDLBI)
-  Measure 요소는 CSDL Property 요소를 기반으로 하는 복합 유형입니다. CSDLBI 주석은 비즈니스 인텔리전스 데이터 모델에서 사용할 복합 수식의 정의를 지원하는 특성을 추가합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Measure 요소는 CSDL Property 요소를 기반으로 하는 복합 유형입니다. CSDLBI 주석은 비즈니스 인텔리전스 데이터 모델에서 사용할 복합 수식의 정의를 지원하는 특성을 추가합니다.  
   
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표에서는 Measure 요소를 정의하는 특성과 해당 요소 및 Property 요소에 적용 가능한 모든 특성을 설명합니다.  

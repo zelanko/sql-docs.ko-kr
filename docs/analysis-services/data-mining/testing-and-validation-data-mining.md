@@ -2,12 +2,12 @@
 title: "테스트 및 유효성 검사 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38ef15322528bfae0dbd1b134d80fb7d1a56a734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e20e18e5f2a41150a74b54575b582fd4e9dc3492
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="testing-and-validation-data-mining"></a>테스트 및 유효성 검사(데이터 마이닝)
-  유효성 검사는 실제 데이터에 대한 마이닝 모델의 성능을 평가하는 프로세스입니다. 마이닝 모델을 프로덕션 환경으로 배포하기 전에 품질과 특징을 이해하여 마이닝 모델의 유효성을 검사하는 것이 중요합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]유효성 검사는 프로세스의 실제 데이터에 대 한 마이닝 모델 성능을 얼마나 잘 평가 합니다. 마이닝 모델을 프로덕션 환경으로 배포하기 전에 품질과 특징을 이해하여 마이닝 모델의 유효성을 검사하는 것이 중요합니다.  
   
  이 섹션에서는 모델 품질과 관련된 몇 가지 기본 개념을 소개하고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 제공된 모델 유효성 검사를 위한 전략을 설명합니다. 대규모 데이터 마이닝 프로세스에서 모델 유효성 검사를 수행하는 방법에 대한 개요는 [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)을 참조하세요.  
   

@@ -2,12 +2,12 @@
 title: "마이닝 모델에서 필터를 삭제 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 36eec0622aa30b2ece9eac7ff3ee3b4e6403d252
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f39a61be641cf10e7cc3753e7e4c169013076f20
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>마이닝 모델에서 필터 삭제
-  마이닝 모델에 대한 필터를 정의할 때 데이터 원본 뷰에서 데이터의 하위 집합에 대한 모델을 만들 수 있습니다. 필터는 원래 데이터의 하위 집합에 대한 모델의 정확도를 테스트하는 데에도 유용합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 모델에서 필터를 만들 때 데이터 원본 뷰에서 데이터의 하위 집합에서 모델을 만들 수 있습니다. 필터는 원래 데이터의 하위 집합에 대한 모델의 정확도를 테스트하는 데에도 유용합니다.  
   
  그러나 전체 사례 집합을 다시 보려면 필터를 삭제해야 합니다. 이 절차에서는 필터에서 조건을 제거하거나 필터를 완전히 삭제하는 방법에 대해 설명합니다.  
   

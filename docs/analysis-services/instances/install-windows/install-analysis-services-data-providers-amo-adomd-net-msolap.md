@@ -2,12 +2,12 @@
 title: "Analysis Services 데이터 공급자 (AMO, ADOMD.NET, MSOLAP) 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 63ce2b423f04ef4199bbb32b5349c26c25fe2199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7cd7f4a950335557e3fb65d3d504f79af0801de0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>Analysis Services 데이터 공급자(AMO, ADOMD.NET, MSOLAP) 설치
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 은(는) ADOMD.Net, AMO 및 MSOLAP로 구성된 Analysis Services 데이터 공급자의 버전 업데이트입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 은 ADOMD.Net, AMO 및 MSOLAP로 구성 된 Analysis Services 데이터 공급자의 버전 업데이트입니다.  
   
  대부분의 쿼리 기반 데이터 액세스 시나리오의 경우 클라이언트 시스템에 이미 설치된 기존 이전 버전의 데이터 공급자를 사용하여 SQL Server 2016 전용 기능을 사용하는 테이블 형식 모델을 포함하는 SQL Server 2016 Analysis Services 인스턴스의 테이블 형식 및 다차원 모델에 액세스할 수 있습니다. 일반 규칙으로 Excel, Reporting Services 또는 Tableau와 같은 쿼리를 생성하는 클라이언트 응용 프로그램은 Analysis Services 모델에 액세스할 때 최신 데이터 공급자를 요구하면 안 됩니다.  
   

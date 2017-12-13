@@ -2,12 +2,12 @@
 title: "Microsoft OLAP 아키텍처 이해 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77fae4f9fd4b057a5388029b1544aa72842d91ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c0158fb2175ff279e1a405b580c6add273a72b1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP 아키텍처 이해
-  다음 항목을 통해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터베이스를 더 잘 이해하고 비즈니스 인텔리전스 솔루션에서 다차원 데이터베이스를 구현하는 방법을 계획할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이러한 항목을 사용 하 여 더 잘 이해 하려면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터베이스 및 계획 비즈니스 인텔리전스 솔루션에서 다차원 데이터베이스를 구현 하는 방법입니다.  
   
  ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **논리 아키텍처**  
  [서버 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  

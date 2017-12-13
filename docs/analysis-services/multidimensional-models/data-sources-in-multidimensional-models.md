@@ -2,12 +2,12 @@
 title: "다차원 모델의 데이터 원본 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7be6a20c985f7af2f6560856f0e2b361e22949ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8c8da4c13bdddd0994ec67548ce2666d7b06fea8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-sources-in-multidimensional-models"></a>다차원 모델의 데이터 원본
-  다차원 모델로 가져오거나 로드하는 모든 데이터는 외부 데이터 원본에서 생성됩니다. 일반적으로 원본 데이터는 보고용으로 디자인된 데이터 웨어하우스의 데이터이지만 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지와 같은 매개자를 통해 직접 또는 간접으로 액세스되는 관계형 데이터베이스의 데이터일 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]가져오거나를 다차원 모델에 로드 하는 모든 데이터는 외부 데이터 원본에서 생성 됩니다. 일반적으로 원본 데이터는 보고용으로 디자인된 데이터 웨어하우스의 데이터이지만 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지와 같은 매개자를 통해 직접 또는 간접으로 액세스되는 관계형 데이터베이스의 데이터일 수도 있습니다.  
   
  **의** 데이터 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체는 외부 데이터 원본에 대한 직접 연결을 지정합니다. 물리적 위치 외에 데이터 원본 개체는 연결 문자열, 데이터 공급자, 자격 증명 및 연결 동작을 제어하는 기타 속성도 지정합니다.  
   

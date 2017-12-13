@@ -2,12 +2,12 @@
 title: "DISCOVER_MEMORYUSAGE 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d5fbb9282e35ff9d6c4a2e18b155f5a884a8f538
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7d1f0c2dd179e54760eeff4254c19265105e08f3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 행 집합
-  서버에 의해 할당된 다양한 개체에 대한 DISCOVER_MEMORYUSAGE 통계를 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버에 의해 할당 된 다양 한 개체에 대 한 DISCOVER_MEMORYUSAGE 통계를 반환 합니다.  
   
 > [!WARNING]  
 >  이 행 집합은 대량의 결과 집합을 생성할 수 있습니다. SQL Server Management Studio가 허용하는 것보다 많은 표시 메모리가 필요해 결과를 표시할 수 없는 경우 다음과 같은 기본 위치의 임시 파일에 결과가 기록됩니다.  

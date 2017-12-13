@@ -2,12 +2,12 @@
 title: "보기 및 예측 쿼리의 결과 저장 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c930bb5890fe78d46da5d8711ffbdcfb43c7e36a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5fe6c937fef1f2c14678993155ff15b529c8dce6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>예측 쿼리 결과 보기 및 저장
-  예측 쿼리 작성기를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 쿼리를 정의한 후에는 쿼리를 실행하고 쿼리 결과 보기로 전환하여 해당 결과를 확인할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]쿼리를 정의한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예측 쿼리 작성기를 사용 하 여 쿼리 실행 하 고 쿼리 결과 뷰로 전환 하 여 결과 볼 수 있습니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 정의하는 모든 데이터 원본의 테이블에 예측 쿼리 결과를 저장할 수 있습니다. 새 테이블을 만들거나 기존 테이블에 쿼리 결과를 저장할 수 있습니다. 기존 테이블에 결과를 저장할 경우 테이블에 현재 저장되어 있는 데이터를 덮어쓰도록 선택할 수 있습니다. 덮어쓰도록 선택하지 않으면 테이블의 기존 데이터에 쿼리 결과가 추가됩니다.  
   

@@ -2,12 +2,12 @@
 title: "Members (MDX) 계산 된 세션 범위 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c8eadd09ca4946db6618f30e48907d97147b80d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7b922b07e830c7cf87345e434f6667e5b0e53a82
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-calculated-members---session-scoped-calculated-members"></a>MDX 계산 멤버-세션 범위 계산된 멤버
-  MDX 세션 전체에서 사용할 수 있는 계산 멤버를 만들려면 [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) 문을 사용합니다. CREATE MEMBER 문을 사용하여 만든 계산 멤버는 MDX 세션이 닫힌 후까지 제거되지 않습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) 세션에서 사용할 수 있는 계산된 멤버를 만들려면 사용 하는 [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) 문. CREATE MEMBER 문을 사용하여 만든 계산 멤버는 MDX 세션이 닫힌 후까지 제거되지 않습니다.  
   
  이 항목에서 설명한 바와 같이 CREATE MEMBER 문의 구문은 간단하고 사용하기 쉽습니다.  
   

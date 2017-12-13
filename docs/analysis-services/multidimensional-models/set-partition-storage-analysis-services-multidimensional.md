@@ -2,12 +2,12 @@
 title: "파티션 저장소 (Analysis Services-다차원) 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4610c996aa58fc71090c5a724447cfe733ede5d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 82b81fb4ee7b4c9df136b519922807fdf94cfa77
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>파티션 저장소 설정(Analysis Services - 다차원)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 저장소 모드 및 캐싱 옵션에 대한 여러 가지 표준 저장소 구성을 제공합니다. 이를 통해 업데이트 알림, 대기 시간 및 데이터 다시 작성에 대한 일반적인 구성을 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 캐싱 옵션 선택 저장소 모드에 대 한 여러 가지 표준 저장소 구성을 제공 합니다. 이를 통해 업데이트 알림, 대기 시간 및 데이터 다시 작성에 대한 일반적인 구성을 사용할 수 있습니다.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 큐브 파티션 탭 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 파티션 속성 페이지에서 파티션 저장소를 지정할 수 있습니다.  
   

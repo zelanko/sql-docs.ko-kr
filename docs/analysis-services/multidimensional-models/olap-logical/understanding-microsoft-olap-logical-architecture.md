@@ -2,12 +2,12 @@
 title: "논리적 아키텍처 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 454dddc6914853bf202376c47a1c929a0df4a6ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6a53a33d7a2c86498864321e1f1d85cf9a1d9d3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-microsoft-olap-logical-architecture"></a>논리 Microsoft OLAP 아키텍처 이해
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 클라이언트 구성 요소를 사용 하 여 온라인 분석 처리 (OLAP) 및 비즈니스 인텔리전스 응용 프로그램에 대 한 데이터 마이닝 기능을 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 클라이언트 구성 요소를 사용 하 여 온라인 분석 처리 (OLAP) 및 비즈니스 인텔리전스 응용 프로그램에 대 한 데이터 마이닝 기능을 제공 합니다.  
   
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 서버 구성 요소는 Microsoft Windows 서비스로 구현됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 각 인스턴스와 함께 동일한 컴퓨터에 여러 인스턴스를 지원 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 별도 Windows 서비스 인스턴스로 구현 합니다.  
   

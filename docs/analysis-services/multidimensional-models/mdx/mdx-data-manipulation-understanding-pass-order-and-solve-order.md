@@ -2,12 +2,12 @@
 title: "패스 순서 및 계산 순서 (MDX) 이해 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9c3b028eb658f2f75d6e70ec9057f3f156ca5f05
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 데이터 조작-이해 패스 순서 및 계산 순서
-  MDX 스크립트 결과로 계산될 때 큐브는 사용되는 여러 계산 관련 기능에 따라 여러 계산 단계를 거칠 수 있습니다. 이러한 각 단계를 계산 패스라고 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]큐브는 MDX 스크립트 결과로 계산 필드 상태로 여러 가지 다양 한 계산 관련 기능 사용에 따라 계산 단계를 통해 않을 수 있습니다. 이러한 각 단계를 계산 패스라고 합니다.  
   
  계산 패스는 계산 패스 번호라는 서수 위치로 참조될 수 있습니다. 큐브의 모든 셀 계산을 완전히 마치는 데 필요한 계산 패스 개수를 큐브의 계산 패스 깊이라고 합니다.  
   

@@ -2,12 +2,12 @@
 title: "Analysis Services 기능 및 태스크 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 82a302c5d7ef97038ae7d15e8478a9551189e416
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 72bf28a40f2314ec696eae6ce8b758010a0ad78e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services 기능 및 태스크
-  Analysis Services 기본 설명서는 설치된 모드에서 사용 가능한 도구, 태스크 및 기능에만 사용자가 전념할 수 있도록 모델 유형 및 서버 모드별로 구성됩니다. 인스턴스 관리에서 여러 모드에 걸쳐 있는 서버 관리 태스크를 찾을 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Analysis Services 기본 설명서는 도구, 작업 및 설치 된 모드에서 사용할 수 있는 기능 방금에 집중할 수 있도록 모델 유형 및 서버 모드 별로 구성 됩니다. 인스턴스 관리에서 여러 모드에 걸쳐 있는 서버 관리 태스크를 찾을 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [테이블 형식 및 다차원 솔루션 비교 &#40;SSAS&#41;](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  

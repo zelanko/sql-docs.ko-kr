@@ -2,12 +2,12 @@
 title: "Members, Tuples, and Sets (MDX) 작업 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 56f991716d78e8b4638ab57e7dc981c5942d81b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 63b558fadebc2598da0969e13eac04d75aa4ef94
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>멤버, 튜플 및 집합 작업(MDX)
-  MDX는 하나 이상의 멤버, 튜플 또는 집합을 반환하거나 멤버, 튜플 또는 집합에 대해 실행되는 다양한 함수를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX는 하나 이상의 멤버, 튜플 또는 집합을 반환 하는 다양 한 기능 제공. 이거나 멤버, 튜플, 작업 또는 설정 합니다.  
   
 ## <a name="member-functions"></a>멤버 함수  
  MDX는 차원, 수준, 집합 또는 튜플 등의 다른 MDX 엔터티에서 멤버를 검색할 수 있는 여러 함수를 제공합니다. 예를 들어 [FirstChild](../../../mdx/firstchild-mdx.md) 함수는 멤버에 대해 실행되고 멤버를 반환하는 함수입니다.  

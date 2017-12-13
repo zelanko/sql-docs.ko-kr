@@ -2,12 +2,12 @@
 title: "InvalidXmlCharacters 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9a13652a928b850db2891f9e11c684a53ac1010
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 315c4cc6a4b48ebe0d8ce0a3d6bc11ef8bd6e34d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="invalidxmlcharacters-element-assl"></a>InvalidXmlCharacters 요소(ASSL)
-  원본 데이터에 있는 잘못된 XML 문자에 대한 처리 방식을 지정합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]유효 하지 않은 원본 데이터의 XML 문자에 대 한 처리 방식을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   

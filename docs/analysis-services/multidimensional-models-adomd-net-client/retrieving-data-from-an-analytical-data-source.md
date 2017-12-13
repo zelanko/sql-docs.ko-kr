@@ -2,12 +2,12 @@
 title: "분석 데이터 원본에서 데이터를 검색할 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e2dbd10be43b0d0e64b4068e6f93c0bba2457d4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f8d2c400fc82852333b64d9bd89b2e7c74190061
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>분석 데이터 원본에서 데이터 검색
-  연결을 설정하고 쿼리를 만든 후에는 데이터를 검색할 수 있습니다. Adomd.net에서는 세 가지 다른 개체를 사용 하 여 데이터를 검색할 수 있습니다 (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, 및 <xref:System.Xml.XmlReader>) 중 하나를 호출 하 여는 **Execute** 의 메서드는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]연결을 설정 하 고 쿼리를 작성 한 후에 모든 데이터를 검색할 수 있습니다. Adomd.net에서는 세 가지 다른 개체를 사용 하 여 데이터를 검색할 수 있습니다 (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, 및 <xref:System.Xml.XmlReader>) 중 하나를 호출 하 여는 **Execute** 의 메서드는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체입니다.  
   
  이러한 세 개체는 각각 다음과 같이 상호 작용과 오버헤드의 균형을 조정합니다.  
   

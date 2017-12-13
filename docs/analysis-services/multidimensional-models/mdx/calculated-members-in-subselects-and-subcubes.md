@@ -2,12 +2,12 @@
 title: "계산 멤버를 하위 Select 및 하위 큐브 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a2dc70e91783283b2b57fe6737c558375bb47f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버
-  계산 멤버는 값을 런타임 시 식에서 계산하는 차원 멤버이며 하위 SELECT 및 하위 큐브에서 사용하여 보다 정확하게 쿼리의 cubespace를 정의할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]계산된 멤버는 차원 멤버 값을 갖는 런타임 시 식에서 계산 이며 하위 select에서 사용할 수 있습니다 및 하위 큐브를 보다 정확 하 게 쿼리의 cubespace를 정의할 합니다.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>하위 공간에서 계산 멤버 사용  
  **하위 쿼리** 의 연결 문자열 속성이 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 **DBPROPMSMDSUBQUERIES** 속성 [지원 XMLA 속성 &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 하위 큐브 또는 하위 select에 동작이 나 허용 되는 계산된 멤버 또는 계산된 집합을 정의 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  

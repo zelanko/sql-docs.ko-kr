@@ -2,12 +2,12 @@
 title: "Microsoft Naive Bayes 알고리즘 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b5a187447c2e2c222996fd59b5b673a8a68974e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3ec33ea83457850aed338c46534ca3cb85d53c61
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 Bayes 정리를 기반으로 하는 분류 알고리즘으로, 설명 및 예측 모델링 둘 다에 사용할 수 있습니다. Naïve Bayes라는 이름의 naïve는 이 알고리즘이 Bayes 기술을 사용하지만 있을 수 있는 종속성을 고려하지 않는다는 사실에서 비롯된 것입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 Bayes 정리에 따라 분류 알고리즘 및 예비 및 예측 모델링에 사용할 수 있습니다. Naïve Bayes라는 이름의 naïve는 이 알고리즘이 Bayes 기술을 사용하지만 있을 수 있는 종속성을 고려하지 않는다는 사실에서 비롯된 것입니다.  
   
  이 알고리즘은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘보다 계산 과정이 단순하여 입력 열과 예측 가능한 열 간의 관계를 검색하는 마이닝 모델을 신속하게 생성하는 데 유용합니다. 이 알고리즘을 사용하여 초기 데이터 탐색을 수행한 후 나중에 그 결과를 적용하여 보다 복잡하고 정확한 다른 알고리즘으로 추가 마이닝 모델을 만들 수 있습니다.  
   

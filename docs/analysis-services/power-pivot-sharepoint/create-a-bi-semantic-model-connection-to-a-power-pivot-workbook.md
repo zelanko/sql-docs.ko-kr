@@ -2,12 +2,12 @@
 title: "파워 피벗 통합 문서에는 BI 의미 체계 모델 연결 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 111dd53e993bc5797e8fae34ee9b02eee707aa3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71a0b7e14adc41efb70470ad3e2d825590fe2e50
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>파워 피벗 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
-  이 항목의 정보를 참조하여 동일한 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로 리디렉션되는 BI 의미 체계 모델 연결을 설정할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목의 정보를 사용 하 여 리디렉션하는 BI 의미 체계 모델 연결을 설정 하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 같은 팜에 합니다.  
   
  BI 의미 체계 모델 연결을 만들고 SharePoint 사용 권한을 구성한 후에는 이 연결을 Excel 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 데이터 원본으로 사용할 수 있습니다.  
   

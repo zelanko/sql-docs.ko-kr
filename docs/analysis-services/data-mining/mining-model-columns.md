@@ -2,12 +2,12 @@
 title: "마이닝 모델 열 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d248c8c2e0394a73ff815730ced125176a23893
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0acbc12c9aa0d553bfee5e9e11dcb098547288c7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-columns"></a>마이닝 모델 열
-  데이터 마이닝 모델은 마이닝 구조가 나타나는 데이터에 마이닝 모델 알고리즘을 적용합니다. 마이닝 구조와 마찬가지로 마이닝 모델에는 열이 포함됩니다. 마이닝 모델은 마이닝 구조 내에 포함되며 마이닝 구조에서 정의한 속성의 모든 값을 상속받습니다. 모델은 마이닝 구조에 포함된 모든 열이나 이 열의 하위 집합을 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델을 마이닝 구조가 나타나는 데이터에 마이닝 모델 알고리즘을 적용 합니다. 마이닝 구조와 마찬가지로 마이닝 모델에는 열이 포함됩니다. 마이닝 모델은 마이닝 구조 내에 포함되며 마이닝 구조에서 정의한 속성의 모든 값을 상속받습니다. 모델은 마이닝 구조에 포함된 모든 열이나 이 열의 하위 집합을 사용할 수 있습니다.  
   
  마이닝 모델 열에는 사용법 및 모델링 플래그 정보를 추가로 정의할 수 있습니다.  
   

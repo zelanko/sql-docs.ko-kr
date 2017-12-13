@@ -2,12 +2,12 @@
 title: "기본 MDX 스크립트 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5c97c821496ed4d81539c7b6f3659734f70ab21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6a045281cf1d089ce46909d29d22cdd107747035
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="the-basic-mdx-script-mdx"></a>기본 MDX 스크립트(MDX)
-  MDX(Multidimensional Expressions) 스크립트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 있는 큐브에 대한 계산 프로세스를 정의합니다. 다음과 같은 두 가지 유형의 MDX 스크립트가 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) 스크립트에 있는 큐브에 대해 계산 프로세스 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 다음과 같은 두 가지 유형의 MDX 스크립트가 있습니다.  
   
  **기본 MDX 스크립트**  
  큐브를 만드는 시점에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 해당 큐브에 대해 기본 MDX 스크립트를 만듭니다. 이 스크립트는 전체 큐브에 대한 계산 패스를 정의합니다.  

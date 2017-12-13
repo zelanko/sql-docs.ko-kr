@@ -2,12 +2,12 @@
 title: "ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c153dbc0b85271f175c86b37ee2b165957e926c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e38e3ac4af9df6a512ee26809dedf1d4fc21d839
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 관리자는 쿼리 작업을 여러 전용 서버에 배포하는 큰 노력의 일환으로 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 관리자는 쿼리 작업을 여러 전용 서버에 배포 하는 큰 노력의 일환으로 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경할 수 있습니다.  
   
  데이터베이스 모드는 여러 가지 방법으로 전환할 수 있습니다. 이 문서에서는 다음과 같은 일반적인 시나리오에 대해 설명합니다.  
   

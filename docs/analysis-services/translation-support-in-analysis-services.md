@@ -2,12 +2,12 @@
 title: "Analysis Services에서의 번역 지원 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f9339fc314e178ec75777d985851da2589a3658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffebab4d2702f914cdf43ba4acdff916b1f54e57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services에서의 번역 지원
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 모델에서 캡션 또는 설명의 여러 번역을 포함하여 LCID를 기반으로 한 문화권 관련 문자열을 제공할 수 있습니다. 다차원 모델의 경우 데이터베이스 이름, 큐브 개체 및 데이터베이스 차원 개체에 대한 번역을 추가할 수 있습니다. 테이블 형식 모델의 경우 테이블 및 열 캡션 및 설명을 번역할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 모델, 캡션 또는 LCID에 따라 문화권 관련 문자열을 제공할 설명의 여러 번역을 포함할 수 있습니다. 다차원 모델의 경우 데이터베이스 이름, 큐브 개체 및 데이터베이스 차원 개체에 대한 번역을 추가할 수 있습니다. 테이블 형식 모델의 경우 테이블 및 열 캡션 및 설명을 번역할 수 있습니다.  
   
  번역을 정의하면 모델 내부에 메타데이터와 번역된 캡션이 생성되지만 클라이언트 응용 프로그램에서 지역화된 문자열을 렌더링하려면 개체에서 **Language** 속성을 설정하거나 연결 문자열에서 **Culture** 또는 **Locale Identifier** 매개 변수를 전달해야 합니다(예를 들어 프랑스어 문자열을 반환하려면 `LocaleIdentifier=1036` 설정).  
   

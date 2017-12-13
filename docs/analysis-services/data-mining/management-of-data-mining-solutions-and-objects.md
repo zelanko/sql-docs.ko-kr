@@ -2,12 +2,12 @@
 title: "데이터 마이닝 솔루션 및 개체 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41239f58ecdcea9f5d60e1ebdd83bc010b2c3bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>데이터 마이닝 솔루션 및 개체 관리
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기존 마이닝 구조와 마이닝 모델을 관리하는 데 활용할 수 있는 클라이언트 도구를 제공합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기존 마이닝 구조 및 마이닝 모델을 관리 하는 데 사용할 수 있는 클라이언트 도구를 제공 합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
   
  이러한 도구 외에도 AMO를 사용하여 프로그래밍 방식으로 데이터 마이닝 개체를 관리하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2007용 데이터 마이닝 추가 기능과 같이 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 데이터베이스에 연결되는 다른 클라이언트를 사용할 수 있습니다.  
   

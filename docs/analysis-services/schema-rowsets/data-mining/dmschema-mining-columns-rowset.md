@@ -2,12 +2,12 @@
 title: "DMSCHEMA_MINING_COLUMNS 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62c211c66076a48261abb39599dfcc47499f6f38
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 967951f1e8eef13fd3d7862d39dc546f2bc15ca5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS 행 집합
-  모든 데이터 마이닝 모델의 개별 열에 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이 행 집합은 현재 카탈로그로 제한됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]모든 데이터 마이닝 모델의 개별 열에 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이 행 집합은 현재 카탈로그로 제한됩니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DMSCHEMA_MINING_COLUMNS** 행 집합에는 다음 열이 포함되어 있습니다.  

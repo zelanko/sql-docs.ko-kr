@@ -2,12 +2,12 @@
 title: "마이닝 모델을 만드는 사용 되는 매개 변수 쿼리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 701f440bb015f1de1fbe20dbf60cd09d21343527
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e3cc7c1a84556874c25d50514d2f7c16403e629
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>마이닝 모델을 만드는 데 사용한 매개 변수 쿼리
-  마이닝 모델의 컴퍼지션은 학습 사례의 영향을 받을 뿐만 아니라 모델을 만들 때 설정한 매개 변수의 영향도 받습니다. 따라서 기존 모델의 매개 변수 설정을 검색하면 모델의 동작을 보다 잘 이해할 수 있습니다. 매개 변수 검색은 해당 모델의 특정 버전을 문서화하는 데도 유용합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 모델의 컴퍼지션은 학습 사례의 뿐 아니라 모델을 만들 때 설정 했던 매개 변수에 의해에 영향이 있습니다. 따라서 기존 모델의 매개 변수 설정을 검색하면 모델의 동작을 보다 잘 이해할 수 있습니다. 매개 변수 검색은 해당 모델의 특정 버전을 문서화하는 데도 유용합니다.  
   
  모델을 만들 때 사용한 매개 변수를 찾으려면 마이닝 모델 스키마 행 집합 중 하나에 대한 쿼리를 만듭니다. 이러한 스키마 행 집합은 TRANSACT-SQL 구문을 사용 하 여 쉽게 쿼리할 수 있는 시스템 뷰 집합으로 노출 됩니다. 이 절차에서는 지정된 마이닝 모델을 만드는 데 사용한 매개 변수를 반환하는 쿼리를 만드는 방법에 대해 설명합니다.  
   

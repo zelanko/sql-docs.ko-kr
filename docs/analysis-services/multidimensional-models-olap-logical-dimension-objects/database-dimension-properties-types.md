@@ -2,12 +2,12 @@
 title: "차원 유형 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bab78f642342cd070ecde62a37d65972a17a109f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimension-properties---types"></a>데이터베이스 차원 속성 형식
-  **형식** 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대 한 정보를 제공 합니다. 일부 경우에는 **형식** 설정은 클라이언트 응용 프로그램에 대 한 지침을 제공 하며 선택적입니다. 다른 경우에서와 같은 **계정** 또는 **시간** 차원은 **형식** 차원과 차원의 특성에 대 한 속성 설정이 특정 서버 기반 동작을 결정 및 큐브의 특정 동작을 구현 해야 할 수 있습니다. 예를 들어는 **형식** 차원의 속성 설정할 수 있습니다 **계정** 표준 차원에 계정 특성이 포함 되어는 클라이언트 응용 프로그램에 알립니다. 시간, 계정 및 통화 차원에 대 한 자세한 내용은 참조 [날짜 유형 차원 만들기](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [부모-자식 유형 차원의 재무 계정 만들기](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), 및 [통화 만들기 차원 입력](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**형식** 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대 한 정보를 제공 합니다. 일부 경우에는 **형식** 설정은 클라이언트 응용 프로그램에 대 한 지침을 제공 하며 선택적입니다. 다른 경우에서와 같은 **계정** 또는 **시간** 차원은 **형식** 차원과 차원의 특성에 대 한 속성 설정이 특정 서버 기반 동작을 결정 및 큐브의 특정 동작을 구현 해야 할 수 있습니다. 예를 들어는 **형식** 차원의 속성 설정할 수 있습니다 **계정** 표준 차원에 계정 특성이 포함 되어는 클라이언트 응용 프로그램에 알립니다. 시간, 계정 및 통화 차원에 대 한 자세한 내용은 참조 [날짜 유형 차원 만들기](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [부모-자식 유형 차원의 재무 계정 만들기](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), 및 [통화 만들기 차원 입력](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)합니다.  
   
  기본 설정은 차원 유형은 **일반**, 차원의 내용에 대해 정확히 수 있게 해줍니다. 이 모든 차원에 대 한 기본 설정을 지정 하지 않는 한 차원을 처음 정의할 때 **시간** 차원 마법사를 사용 하 여 차원을 정의할 때. 유지 해야 **일반** 차원 마법사가 차원 유형에 대 한 적절 한 유형을 나열 하지 않는 경우 차원 유형으로 합니다.  
   

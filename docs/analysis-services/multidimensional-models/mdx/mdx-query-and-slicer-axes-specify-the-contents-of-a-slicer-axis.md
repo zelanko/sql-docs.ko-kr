@@ -2,12 +2,12 @@
 title: "(MDX) Slicer 축의 내용 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c88d724873a7e2a7e811a4a28c9b76b5c9b12ccd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX 쿼리 및 Slicer 축-Slicer 축의 내용 지정
-  slicer 축은 지정된 멤버와 교차되는 데이터만 반환되도록 반환 데이터를 제한하여 MDX SELECT 문에 의해 반환된 데이터를 필터링합니다. slicer 축은 표시되지 않는 쿼리의 추가 축으로 간주할 수 있으며 MDX에서 SELECT 문의 WHERE 절에 정의됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Slicer 축에 반환 된 데이터를 제한 하 여 지정된 된 멤버와 교차 되는 유일한 데이터를 반환할 수 있도록 MDX (Multidimensional Expressions) SELECT 문에 의해 반환 된 데이터 필터링 합니다. slicer 축은 표시되지 않는 쿼리의 추가 축으로 간주할 수 있으며 MDX에서 SELECT 문의 WHERE 절에 정의됩니다.  
   
 ## <a name="slicer-axis-syntax"></a>Slicer 축 구문  
  slicer 축을 명시적으로 지정하려면 다음 구문에 설명된 것과 같이 MDX에서 `<SELECT slicer axis clause>` 를 사용합니다.  

@@ -2,12 +2,12 @@
 title: "Kpi (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c3c91a755b50ffc1dc51d305589f17322584854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2e5c74ba7ae5a96646364ffebf4895af1999319b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="kpis"></a>KPI
-  테이블 형식 모델에서 *KPI* (핵심 성과 지표)는 측정값 또는 절대값으로 정의된 *대상* 값에 대해 *기본* 측정값으로 정의된 값의 성능을 측정하는 데 사용됩니다. 이 항목은 테이블 형식 모델 작성자에게 테이블 형식 모델에서 KPI에 대한 기본적인 이해를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A *KPI* (핵심 성과 지표) 테이블 형식 모델에는 정의 된 값의 성능을 측정는 *자료* 측정값에 대해는 *대상* 하 여 정의 된은 측정값 또는 절대값 합니다. 이 항목은 테이블 형식 모델 작성자에게 테이블 형식 모델에서 KPI에 대한 기본적인 이해를 제공합니다.  
   
 ##  <a name="bkmk_benefits"></a> 이점  
  비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 목표를 평가하기 위한 정량 측정값입니다. KPI는 주로 시간에 따라 평가됩니다. 예를 들어 조직의 영업부에서는 KPI를 사용하여 월별 예상 매출 총 이익 대비 매출 총 이익을 계산할 수 있습니다. 회계부에서는 월별 수익 대비 지출을 계산하여 비용을 평가하고, 인사부에서는 분기별 직원 전직률을 계산할 수 있습니다. 각각은 KPI의 예에 해당합니다. 경영진은 비즈니스 성과표에 그룹화된 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 정확한 요약 정보를 얻거나 추세를 확인합니다.  

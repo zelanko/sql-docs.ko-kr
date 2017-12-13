@@ -2,12 +2,12 @@
 title: "오류 및 이벤트 참조 (SharePoint 용 파워 피벗) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b10a354a4d806b7a0d996e0662ade697f1adcf5c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9984bef616c5993ab57892bd5fa2266105d0495
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="errors-and-events-reference-power-pivot-for-sharepoint"></a>오류 및 이벤트 참조(SharePoint용 파워 피벗)
-  이 섹션에서는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 오류 및 이벤트에 대해 설명합니다. 이 섹션의 오류는 로그 또는 오류 창에 표시되는 오류 메시지 텍스트로 식별됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 오류 및 이벤트에 대 한 설명 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint에 대 한 합니다. 이 섹션의 오류는 로그 또는 오류 창에 표시되는 오류 메시지 텍스트로 식별됩니다.  
   
  이 섹션에 설명된 오류 메시지 목록을 보려면 온라인 설명서의 내용 창을 사용합니다.  
   

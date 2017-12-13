@@ -2,12 +2,12 @@
 title: "DAX 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: HeidiSteen
 ms.author: heidist
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a48b3f89da00437cec8781e1ea35b6ea87f0c300
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a8a94cb71ab8625a2a546e62f5dc828b605aeaa2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dax-properties"></a>DAX 속성
-   msmdsrv.ini의 DAX 섹션에는 DAX 쿼리 결과 집합에 반환되는 행 수의 상한값과 같이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특정 쿼리 동작을 제어하는 데 사용되는 설정이 포함되어 있습니다. 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Msmdsrv.ini의 DAX 섹션에서 특정 쿼리 동작을 제어 하는 데 사용 하는 설정이 포함 되어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]DAX 쿼리 결과 집합에 반환 된 행 수에 상한값 등입니다. 
   
   DirectQuery 모델에서 반환된 행 집합과 같이 매우 큰 행 집합의 경우 기본값 백만 개의 행은 부족할 수 있습니다. "The result set of a query to external data source has exceeded the maximum allowed size of '1000000' rows.(외부 데이터 원본에 대한 쿼리의 결과 집합이 '1000000'개 행에 허용되는 최대 크기를 초과했습니다.)"라는 오류가 표시되면 한도를 조정해야 하는지 여부를 알 수 있습니다.
  

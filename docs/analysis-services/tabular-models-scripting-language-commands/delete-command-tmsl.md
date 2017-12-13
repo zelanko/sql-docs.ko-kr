@@ -2,12 +2,12 @@
 title: "Delete 명령을 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef079032f26d5aa287b6e6ce30c87e7d1d1392a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6e07f6f79849de4a64198bb78804f184eec1f277
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="delete-command-tmsl"></a>Delete 명령을 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  데이터베이스 또는 현재 데이터베이스에 있는 개체를 삭제합니다.   
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터베이스 또는 현재 데이터베이스에 있는 개체를 삭제합니다.   
 지정된 된 개체 및 모든 자식 개체 및 컬렉션을 삭제합니다. 개체가 없으면 명령에서 오류가 발생 합니다.  
   
 ## <a name="request"></a>요청  

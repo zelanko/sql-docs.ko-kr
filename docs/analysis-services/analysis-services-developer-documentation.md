@@ -2,12 +2,12 @@
 title: "Analysis Services 개발자 설명서 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 개발자 설명서
-Analysis Services에서 거의 모든 개체 및 작업은 프로그래밍이 가능 하며 종종 둘 이상의 접근 방식을 선택할 수 있습니다.  옵션에는 관리 코드 작성, 스크립트 또는.NET framework를 사용 하 여 솔루션 요구 사항을 배제 하는 경우에 MSOLAP 등 XMLA 개방형 표준을 사용 하 여 포함 됩니다.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services에서 거의 모든 개체 및 작업은 프로그래밍이 가능 하며 종종 둘 이상의 접근 방식을 선택할 수 있습니다.  옵션에는 관리 코드 작성, 스크립트 또는.NET framework를 사용 하 여 솔루션 요구 사항을 배제 하는 경우에 MSOLAP 등 XMLA 개방형 표준을 사용 하 여 포함 됩니다.
 
 ## <a name="what-you-can-accomplish-in-code"></a>코드에서 수행할 수 있는 작업
 일반적인 프로그래밍 시나리오에는 서버 및 데이터베이스를 배포, 관리, 모델 및 데이터베이스 만들기 및 사용자 지정 응용 프로그램 및 Analysis Services 데이터를 사용 하는 보고서에서 데이터 액세스 포함 됩니다. 이러한 모든 시나리오에 공통적으로 적용은 고정된 아키텍처 및 개체 정의 계층을 데이터 정의 처리 및 쿼리 워크 로드에 걸쳐 있는 잘 이해 하기 쉬운 작업.

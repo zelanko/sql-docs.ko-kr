@@ -2,12 +2,12 @@
 title: "구조에 마이닝 모델 추가 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 074fab70ac5818aeb825691d63aa511f01698c1d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>구조에 마이닝 모델 추가(Analysis Services - 데이터 마이닝)
-  마이닝 구조는 여러 마이닝 모델을 지원하도록 설계되었습니다. 따라서 마법사를 완료한 후 구조를 열고 새 마이닝 모델을 추가할 수 있습니다. 모델을 만들 때마다 다른 알고리즘을 사용하거나 매개 변수를 변경하거나 필터를 적용하여 다른 데이터 하위 집합을 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 구조는 여러 마이닝 모델을 지원 하기 위해 설계 되었습니다. 따라서 마법사를 완료한 후 구조를 열고 새 마이닝 모델을 추가할 수 있습니다. 모델을 만들 때마다 다른 알고리즘을 사용하거나 매개 변수를 변경하거나 필터를 적용하여 다른 데이터 하위 집합을 사용할 수 있습니다.  
   
 ## <a name="adding-new-mining-models"></a>새 마이닝 모델 추가  
  데이터 마이닝 마법사를 사용하여 새 마이닝 모델을 만드는 경우 항상 기본적으로 먼저 마이닝 구조를 만들어야 합니다. 그러면 마법사에서 구조에 초기 모델을 추가할 수 있는 옵션을 제공합니다. 하지만 모델은 바로 만들 필요가 없습니다. 구조만 만들 경우 예측 가능한 특성으로 사용할 열이나 특정 모델에서 데이터를 사용하는 방법을 결정할 필요가 없습니다. 대신 나중에 사용할 일반 데이터 구조만 설정하고 나중에 [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) 에서 해당 구조를 기반으로 하는 새 마이닝 모델을 추가할 수 있습니다.  

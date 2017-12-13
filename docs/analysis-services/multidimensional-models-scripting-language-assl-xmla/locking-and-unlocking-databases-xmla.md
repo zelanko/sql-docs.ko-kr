@@ -2,12 +2,12 @@
 title: "잠금 및 데이터베이스 (XMLA)를 잠금 해제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c47c9c9b1b875cd7290df53ab27c59251a56783
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 47b88aa52aba52f2919d41cba462323e5b061bdf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>데이터베이스 잠금 및 잠금 해제(XMLA)
-  잠금 및 각각 사용 하는 데이터베이스 잠금 해제, [잠금](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) 및 [잠금 해제](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) xml for Analysis (XMLA) 명령입니다. 일반적으로 다른 XMLA 명령은 실행 중 해당 명령을 수행하는 데 필요할 경우 자동으로 개체를 잠그거나 잠금 해제합니다. 있습니다 수 명시적으로 잠그거나 잠금 해제와 같이 단일 트랜잭션 내에서 여러 명령을 수행 하려면 데이터베이스는 [일괄 처리](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 동안 다른 응용 프로그램에서 데이터베이스에 쓰기 트랜잭션을 커밋하지 명령입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]잠금 및 각각 사용 하는 데이터베이스 잠금 해제, [잠금](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) 및 [잠금 해제](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) xml for Analysis (XMLA) 명령입니다. 일반적으로 다른 XMLA 명령은 실행 중 해당 명령을 수행하는 데 필요할 경우 자동으로 개체를 잠그거나 잠금 해제합니다. 있습니다 수 명시적으로 잠그거나 잠금 해제와 같이 단일 트랜잭션 내에서 여러 명령을 수행 하려면 데이터베이스는 [일괄 처리](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 동안 다른 응용 프로그램에서 데이터베이스에 쓰기 트랜잭션을 커밋하지 명령입니다.  
   
 ## <a name="locking-databases"></a>데이터베이스 잠금  
  **Lock** 명령은 현재 활성 트랜잭션 컨텍스트 내에서 공유되거나 배타적으로 사용되는 개체를 잠급니다. 개체가 잠겨 있으면 잠금을 해제할 때까지 트랜잭션을 커밋할 수 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 두 가지 잠금, 공유 잠금과 배타적 잠금 유형을 지원 합니다. 지 원하는 잠금 유형에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 참조 [Mode 요소 &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  

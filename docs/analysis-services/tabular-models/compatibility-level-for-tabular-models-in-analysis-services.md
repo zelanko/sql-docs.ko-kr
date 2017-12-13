@@ -2,12 +2,12 @@
 title: "Analysis Services 테이블 형식 모델에 호환성 수준이 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 385d9a062dfa723e4e73317ffca6984b18f22c47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d194cdfa2771b96f2ae1880f474b8a0107e0b67c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 테이블 형식 모델에 대 한 호환성 수준
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   *호환성 수준이* Analysis Services 엔진의 릴리스 관련 동작을 가리킵니다. 예를 들어 DirectQuery 및 테이블 형식 개체 메타 데이터는 서로 다른 구현이 호환성 수준에 따라 합니다. 일반에 서버에서 지 원하는 최신 호환성 수준을 선택 해야 합니다.
 

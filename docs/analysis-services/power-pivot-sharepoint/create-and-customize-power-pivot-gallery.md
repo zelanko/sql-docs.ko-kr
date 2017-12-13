@@ -2,12 +2,12 @@
 title: "만들기 및 파워 피벗 갤러리에 사용자 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3443f25a3a929f9bad6cbe394a4fe60b38785b65
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Power Pivot 갤러리 만들기 및 사용자 지정
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 포함하는 게시된 Excel 통합 문서 및 Reporting Services 보고서에 대해 유용한 미리 보기와 문서 관리 기능을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 특수 한 유형의 SharePoint 문서 라이브러리에 게시 된 Excel 통합 문서에 대 한 풍부한 미리 보기와 문서 관리 기능을 제공 하 고 포함 하는 Reporting Services 보고서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터입니다.  
   
 ##  <a name="bkmk_top"></a> 항목 내용  
   

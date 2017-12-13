@@ -2,12 +2,12 @@
 title: "VisualTotals 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd8c90eaa6b34f0f4e73f63fb4294daf10cf9d16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 83b969da423d46d241cbd6af4ca8f1574010c20a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="visualtotals-element-assl"></a>VisualTotals 요소(ASSL)
-  이 특성 멤버에 대한 보이는 값 합계를 표시할 것인지 여부를 결정하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 특성의 멤버에 대해 보이는 값 합계 표시 되는지 여부를 결정 하는 MDX (Multidimensional Expressions) 식을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   

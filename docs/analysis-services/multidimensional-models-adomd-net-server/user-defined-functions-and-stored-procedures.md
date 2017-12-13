@@ -2,12 +2,12 @@
 title: "사용자 정의 함수 및 저장 프로시저 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a642e610eca4abaa6bbb76a802fdf5be129262e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 276cd08888f734a25c771109a1543e71d09fbb19
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>사용자 정의 함수 및 저장 프로시저
-  ADOMD.NET 서버 개체를 만들 수 있습니다 (UDF) 사용자 정의 함수 또는 저장된 프로시저에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 메타 데이터 및 서버에서 데이터 상호 작용 하는 합니다. 이러한 in-process 메서드는 MDX(Multidimensional Expressions) 또는 DMX(Data Mining Extensions) 문을 통해 호출되어 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET 서버 개체를 만들 수 있습니다 (UDF) 사용자 정의 함수 또는 저장된 프로시저에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 메타 데이터 및 서버에서 데이터 상호 작용 하는 합니다. 이러한 in-process 메서드는 MDX(Multidimensional Expressions) 또는 DMX(Data Mining Extensions) 문을 통해 호출되어 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공합니다.  
   
 ## <a name="udf-examples"></a>UDF 예  
  UDF는 MDX 또는 DMX 문의 컨텍스트 내에서 호출할 수 있는 메서드로, 사용 가능한 매개 변수 수와 반환하는 데이터 형식에 제한이 없습니다.  

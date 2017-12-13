@@ -2,12 +2,12 @@
 title: "마이닝 구조 및 구조 열에 대 한 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>마이닝 구조 및 구조 열의 속성
-  데이터 마이닝 디자이너의 **마이닝 구조** 탭을 사용하여 마이닝 구조 및 마이닝 구조의 관련 열과 중첩 테이블의 속성을 설정하거나 변경할 수 있습니다. 이 탭에서 설정하는 속성은 해당 구조와 연결된 각 마이닝 모델로 전파됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]설정 하거나 사용 하 여 마이닝 구조에 대 한 및 관련된 열과 중첩된 테이블에 대 한 속성을 변경할 수 있습니다는 **마이닝 구조** 데이터 마이닝 디자이너의 탭 합니다. 이 탭에서 설정하는 속성은 해당 구조와 연결된 각 마이닝 모델로 전파됩니다.  
   
 > [!NOTE]  
 >  마이닝 구조에서 속성의 값을 변경하는 경우 이름이나 설명과 같은 메타데이터, 마이닝 구조 및 해당 모델도 다시 처리해야 모델을 보거나 쿼리할 수 있습니다.  

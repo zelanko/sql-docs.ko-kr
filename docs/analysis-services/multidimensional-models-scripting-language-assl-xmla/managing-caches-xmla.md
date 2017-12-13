@@ -2,12 +2,12 @@
 title: "캐시 관리 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4b2768ddfae98cf1b505df9d938a3ac382998d5c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6dad9f3bb8c577ea8fb975d4f8ba4eac054f0a3e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="managing-caches-xmla"></a>캐시 관리(XMLA)
-  사용할 수는 [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) 명령을 XML for Analysis (XMLA) 지정 된 차원 또는 파티션의 캐시를 지웁니다. 캐시를 지우면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 해당 개체에 대 한 캐시를 다시 작성 해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용할 수는 [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) 명령을 XML for Analysis (XMLA) 지정 된 차원 또는 파티션의 캐시를 지웁니다. 캐시를 지우면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 해당 개체에 대 한 캐시를 다시 작성 해야 합니다.  
   
 ## <a name="specifying-objects"></a>개체 지정  
  [개체](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) 의 속성은 **ClearCache** 명령은 개체 참조에는 다음과 같은 개체 중 하나에 대해서만 포함 될 수 있습니다. 따라서 다음 개체 이외의 다른 개체에 대한 개체 참조인 경우 오류가 발생합니다.  

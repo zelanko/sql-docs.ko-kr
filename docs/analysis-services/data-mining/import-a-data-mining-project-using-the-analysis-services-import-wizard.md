@@ -2,12 +2,12 @@
 title: "Analysis Services 가져오기 마법사를 사용 하 여 데이터 마이닝 프로젝트 가져오기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5111073e53da22a27edfe9d3f3c13985236c0b15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b90ffa3645d844d066542e0c2cd8ac7e6999250d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기
-  이 항목에서는 **의**서버에서 가져오기(다차원 및 데이터 마이닝) 프로젝트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]템플릿을 사용하여 다른 서버의 기존 데이터 마이닝 프로젝트에서 메타데이터를 가져와 새로운 데이터 마이닝 프로젝트를 만드는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 서식 파일을 사용 하는 다른 서버에서 기존 데이터 마이닝 프로젝트에서 메타 데이터를 가져와서 새 데이터 마이닝 프로젝트를 만드는 방법을 설명 **(다차원 및 데이터 마이닝) 서버에서에서 가져오기 프로젝트**, 에서[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>기존 데이터 마이닝 프로젝트에서 데이터 원본, 마이닝 구조 및 마이닝 모델 가져오기  
  **서버에서 가져오기(다차원 및 데이터 마이닝) 프로젝트**템플릿을 사용하면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 새 데이터 마이닝 프로젝트를 만든 다음 지정된 데이터 마이닝 프로젝트에서 메타데이터를 복사합니다. 새 프로젝트에는 가져온 ssASnoversion 데이터베이스와 동일한 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델이 포함됩니다. 그러나 프로젝트를 사용하려면 먼저 아래 설명된 대로 특정 속성을 업데이트하고 개체를 처리해야 합니다.  

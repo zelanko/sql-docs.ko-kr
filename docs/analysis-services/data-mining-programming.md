@@ -2,12 +2,12 @@
 title: "데이터 마이닝 프로그래밍 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 93e263ee6ed7e8b3eb5bdf0f6596f5ddf636f199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7deb7ccd395a6dda75ac443f17f4e2b516b99c11
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-programming"></a>데이터 마이닝 프로그래밍
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 기본 제공 도구 및 뷰어가 사용자의 요구 사항을 충족시키지 못할 경우 사용자 고유의 확장을 코딩하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 기능을 확장할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]알게 하는 기본 제공 도구 및 뷰어가 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 요구 사항을 충족 하지 않으면의 기능을 확장할 수 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개발자 고유의 확장을 코딩 하 여 합니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
   
 -   **XMLA**  
   

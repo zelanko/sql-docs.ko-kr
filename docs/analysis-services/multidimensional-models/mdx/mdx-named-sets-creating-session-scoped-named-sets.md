@@ -2,12 +2,12 @@
 title: "명명 된 집합 (MDX) 세션 범위 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 87be5fc0a7e1c1afd663d70371342035ac0d1d1b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b3970440812f0866d08e99bb195308a1780afbc6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>명명 된 집합에서 만드는 세션 범위 MDX 명명 된 집합
-  MDX 세션에서 사용할 수 있는 명명된 집합을 만들려면 [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) 문을 사용하세요. CREATE SET 문으로 작성한 명명된 집합은 MDX 세션이 종료된 뒤에도 제거되지 않습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) 세션에서 사용할 수 있는 명명된 된 집합을 만들려면 사용 하는 [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) 문. CREATE SET 문으로 작성한 명명된 집합은 MDX 세션이 종료된 뒤에도 제거되지 않습니다.  
   
  이 항목에서 설명되겠지만 WITH 키워드의 구문은 간단하며 사용하기 쉽습니다.  
   

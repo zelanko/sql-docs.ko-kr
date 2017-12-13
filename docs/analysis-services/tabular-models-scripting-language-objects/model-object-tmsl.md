@@ -2,12 +2,12 @@
 title: "모델 개체 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e2ba45e7f346fc597e579ce7dd7d7d0369fd94de
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="model-object-tmsl"></a>모델 개체 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  테이블 형식 모델을 정의합니다. 데이터베이스 및 지정한 명령에 지정할 수 하나의 데이터베이스에 하나의 모델만이 있습니다. 데이터베이스 개체에는 부모 개체가입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델을 정의합니다. 데이터베이스 및 지정한 명령에 지정할 수 하나의 데이터베이스에 하나의 모델만이 있습니다. 데이터베이스 개체에는 부모 개체가입니다.  
   
  모델 정의 너무 커서 한 항목의 전체 구문을 재현 합니다. 이러한 이유로 자식 개체에 대 한 링크가 있는 주요 부분을 강조 표시 하는 부분 구문 아래 찾을 수 있습니다.  
   

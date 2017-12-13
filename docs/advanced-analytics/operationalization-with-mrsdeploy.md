@@ -3,8 +3,11 @@ title: "배포 하 고 분석 mrsdeploy를 사용 하 여 사용할 | Microsoft 
 ms.custom: 
 ms.date: 08/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: r-services
+ms.service: 
+ms.component: advanced-analytics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2bc4b09d02f5058a466a18823ae8bfb70b3f625b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 82ad5ef341edd218c950adf83641825d465c24a4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>배포 및 mrsdeploy를 사용 하 여 분석 사용
 

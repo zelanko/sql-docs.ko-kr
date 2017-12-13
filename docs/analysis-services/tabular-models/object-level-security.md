@@ -2,12 +2,12 @@
 title: "테이블 형식 모델 개체 수준 보안 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc44742d56d744e9d0d4c1f1697d0bcd4e40488c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d86f5ce95ce359f5955e974f7f57012721c3dcb5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-level-security"></a>개체 수준 보안
-
-[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
-
-데이터 모델 보안을 효과적으로 구현 하 여 시작 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md) 및 행 수준 필터를 데이터 모델 개체 및 데이터에 사용자 권한을 정의 합니다. 테이블 형식 1400 모델 부터는 정의할 수도 있습니다 테이블 수준 보안 및 열 수준 보안을 포함 하는 개체 수준 보안은 [역할 개체](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)합니다.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터 모델 보안을 효과적으로 구현 하 여 시작 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md) 및 행 수준 필터를 데이터 모델 개체 및 데이터에 사용자 권한을 정의 합니다. 테이블 형식 1400 모델 부터는 정의할 수도 있습니다 테이블 수준 보안 및 열 수준 보안을 포함 하는 개체 수준 보안은 [역할 개체](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)합니다.
 
 ## <a name="table-level-security"></a>테이블 수준 보안
 

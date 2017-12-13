@@ -2,12 +2,12 @@
 title: "ComAssembly 데이터 형식 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd2c0101a6dcdc35c2834dddb8df6aa295e2f8d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 24d01efc0a4f810a7bcce289f9cc698e082458d1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="comassembly-data-type-assl"></a>ComAssembly 데이터 형식(ASSL)
-  연결 된 COM 라이브러리를 나타내는 파생된 데이터 형식을 정의 [서버](../../../analysis-services/scripting/objects/server-element-assl.md) 또는 [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]연결 된 COM 라이브러리를 나타내는 파생된 데이터 형식을 정의 [서버](../../../analysis-services/scripting/objects/server-element-assl.md) 또는 [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md) 요소입니다.  
   
 > [!IMPORTANT]  
 >  COM 어셈블리는 보안 위험을 내포할 수 있습니다. 이러한 위험 및 기타 고려 사항으로 인해 COM 어셈블리는 [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]에서 더 이상 사용되지 않습니다. COM 어셈블리는 후속 릴리스에서 지원되지 않을 수 있습니다.  

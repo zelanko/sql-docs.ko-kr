@@ -2,12 +2,12 @@
 title: "기본 멤버 속성 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 95f89f7681777d6d65f9d385521c9cfb911ff1b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf5daff8843fab7cdf1aed4acd0fec0dec84e5ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 멤버 속성-기본 멤버 속성
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 차원 멤버의 기본 속성을 표시합니다. 이러한 기본 속성을 쿼리에 포함하면 사용자 지정 응용 프로그램에 사용할 추가 데이터 또는 메타데이터를 반환하거나 모델을 간편하게 검토 또는 생성할 수 있습니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 쿼리는 사용자 지정 응용 프로그램에 추가 데이터 또는 메타 데이터 사용에 대 한 반환 하거나 모델 검토 또는 생성할 간편 하 게에 포함할 수 있는 차원 멤버에 대 한 기본 속성을 노출 합니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
   
  기본 속성으로는 모든 멤버가 모든 수준에서 표시하는 **ID**, **KEY**, **KEYx**및 **NAME**이 있습니다. 특히 **LEVEL_NUMBER** 또는 **PARENT_UNIQUE_NAME**과 같은 위치 정보를 반환할 수도 있습니다.  
   

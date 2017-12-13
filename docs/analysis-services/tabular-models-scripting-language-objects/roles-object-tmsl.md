@@ -2,12 +2,12 @@
 title: "역할 개체 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d8db20290efa59425ff28d0ab3ff0b816abf6709
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 46bc8ff36d396cc0b95f0b2364c8e049e26a9319
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="roles-object-tmsl"></a>역할 개체 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  사용 권한 컬렉션을 지정 하는 모델에는 역할을 정의 합니다. Windows 보안 주체 역할 멤버 자격으로 구성 됩니다. 특정 개체에 대 한 액세스를 제한 하려면 역할에서 필터를 설정할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]사용 권한 컬렉션을 지정 하는 모델에는 역할을 정의 합니다. Windows 보안 주체 역할 멤버 자격으로 구성 됩니다. 특정 개체에 대 한 액세스를 제한 하려면 역할에서 필터를 설정할 수 있습니다.  
   
 ## <a name="object-definition"></a>개체 정의  
  모든 개체 이름, 유형, 설명, properties 컬렉션 및 주석을 포함 하 여 속성의 공통 집합을 가집니다. **역할** 개체에는 다음과 같은 속성이 있습니다.  

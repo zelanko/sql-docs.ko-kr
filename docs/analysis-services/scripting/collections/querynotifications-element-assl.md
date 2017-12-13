@@ -2,12 +2,12 @@
 title: "QueryNotifications 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47c6e735cb0485c488ba136c8a3afcc3d274529d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8eaf78e9ea72fa5727fdb167f2f3bc0d6684fe2a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="querynotifications-element-assl"></a>QueryNotifications 요소(ASSL)
-  컬렉션을 포함 [QueryNotification](../../../analysis-services/scripting/objects/querynotification-element-assl.md) 정보를 제공 하는 요소는 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) 데이터 원본이 수정 되었는지 여부를 확인 하기 위해 실행할 쿼리에 대 한 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]컬렉션을 포함 [QueryNotification](../../../analysis-services/scripting/objects/querynotification-element-assl.md) 정보를 제공 하는 요소는 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) 데이터 원본이 수정 되었는지 여부를 확인 하기 위해 실행할 쿼리에 대 한 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

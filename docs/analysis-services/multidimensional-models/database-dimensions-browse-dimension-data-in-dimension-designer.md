@@ -2,12 +2,12 @@
 title: "차원 디자이너에서 차원 데이터 찾아보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12705a8050d395925dd5345802b9c6b11d9925b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5c0793ab5c70b7003e936961bf527e8642ca58d9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>데이터베이스 차원-차원 디자이너에서 차원 데이터 찾아보기
-  **에서 액세스하는 차원 디자이너의** 브라우저 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]뷰를 사용하여 차원에 있는 데이터를 찾아볼 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하 여 차원에 데이터를 찾아볼 수는 **브라우저** 보기에 액세스 하는 차원 디자이너에서에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
   
  **브라우저** 뷰에 차원 데이터를 표시하려면 해당 차원이 처리된 상태에 있어야 합니다. 자세한 내용은 [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)를 참조하세요.  
   

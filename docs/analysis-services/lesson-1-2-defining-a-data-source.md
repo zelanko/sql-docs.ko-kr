@@ -2,12 +2,12 @@
 title: "데이터 원본 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d54f8f04c4e67a81fc1da4c47c6e995ac98ff84d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c6d92c514cb38f1277efeedaa4172968f8e150ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>단원 1-2-데이터 원본 정의
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만든 후 일반적으로 프로젝트에 사용할 하나 이상의 데이터 원본을 정의하여 프로젝트 작업을 시작합니다. 데이터 원본을 정의하면 데이터 원본에 연결하는 데 사용할 연결 문자열 정보가 정의됩니다. 자세한 내용은 [데이터 원본 만들기&#40;SSAS 다차원&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]만든 후는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서는 일반적으로 작업을 시작할 프로젝트 하나 이상의 데이터 원본을 정의 하 여 프로젝트를 사용 합니다. 데이터 원본을 정의하면 데이터 원본에 연결하는 데 사용할 연결 문자열 정보가 정의됩니다. 자세한 내용은 [데이터 원본 만들기&#40;SSAS 다차원&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)를 참조하세요.  
   
 다음 태스크에서는 AdventureWorksDWSQLServer2012 예제 데이터베이스를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 데이터 원본으로 정의합니다. 이 자습서에서는 이 데이터베이스가 로컬 컴퓨터에 있지만 원본 데이터베이스는 대부분 하나 이상의 원격 컴퓨터에서 호스팅됩니다.  
   

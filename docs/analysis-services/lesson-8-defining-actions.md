@@ -2,12 +2,12 @@
 title: "8 단원: 동작 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 556766b328f7af4086643235f126ea3c5a459332
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 605c4ae52c6e6f51ff03eb5ff161603b9fb082e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-8-defining-actions"></a>8단원: 동작 정의
-이 단원에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 동작을 정의하는 방법을 알아봅니다. 동작은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 저장되며 클라이언트 응용 프로그램에 통합되고 사용자가 시작할 수 있는 MDX(Multidimensional Expressions) 문입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 단원에서는 배웁니다의 동작을 정의 하 여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트. 동작은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 저장되며 클라이언트 응용 프로그램에 통합되고 사용자가 시작할 수 있는 MDX(Multidimensional Expressions) 문입니다.  
   
 > [!NOTE]  
 > 이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 제공되는 샘플 프로젝트를 다운로드하려면[여기를 클릭](http://go.microsoft.com/fwlink/?LinkID=221866) 하십시오.  

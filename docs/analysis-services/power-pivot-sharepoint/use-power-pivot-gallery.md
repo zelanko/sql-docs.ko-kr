@@ -2,12 +2,12 @@
 title: "파워 피벗 갤러리 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2baeb4233fc9c8c8121e468c7d9111a52a66ba7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e56bbb1285683d0328b9ca64092d075406ccabf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-power-pivot-gallery"></a>파워 피벗 갤러리 사용
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 포함하는 게시된 Excel 통합 문서 및 Reporting Services 보고서에 대해 유용한 미리 보기와 문서 관리 기능을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 게시 된 Excel 통합 문서에 대 한 풍부한 미리 보기와 문서 관리 기능을 제공 하는 특별 한 SharePoint 문서 라이브러리 및 포함 하는 Reporting Services 보고서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터입니다.  
   
 > [!NOTE]  
 >  해당 서버를 구성하는 방법에 따라 특정 문서에 대한 미리 보기 영역에서 경고 또는 오류 메시지가 표시될 수 있습니다. Excel 통합 문서를 열 때마다 해당 데이터를 자동으로 새로 고치도록 설정한 경우 메시지가 표시될 수 있습니다. Excel 서비스가 새로 고칠 때 경고 오류 메시지를 표시하도록 구성되어 있으면 데이터 새로 고침 경고 메시지가 미리 보기 이미지로 나타납니다. 팜 또는 서비스 관리자는 구성 설정을 수정하여 실제 워크시트의 미리 보기가 나타나도록 허용할 수 있습니다. 자세한 내용은 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  

@@ -2,12 +2,12 @@
 title: "측정값 (SSAS 테이블 형식) 만들기 및 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3314afb5a5351b541e29d403ac4a41d98ec27263
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0f4139b090b70ec3f76dc5613abfe3dfabb77cc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>측정값 만들기 및 관리(SSAS 테이블 형식)
-  측정값은 보고서나 Excel 피벗 테이블 또는 피벗 차트에 사용하기 위해 만드는 수식입니다. COUNT 또는 SUM과 같은 표준 집계 함수를 기반으로 측정값을 만들거나 DAX를 사용하여 고유한 수식을 정의할 수 있습니다. 이 항목의 태스크에서는 테이블의 측정값 표를 사용하여 측정값을 만들고 관리하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]측정값은 보고서 또는 Excel 피벗 테이블 (또는 피벗 차트)에 사용 하기 위해 만들어지는 수식입니다. COUNT 또는 SUM과 같은 표준 집계 함수를 기반으로 측정값을 만들거나 DAX를 사용하여 고유한 수식을 정의할 수 있습니다. 이 항목의 태스크에서는 테이블의 측정값 표를 사용하여 측정값을 만들고 관리하는 방법을 설명합니다.  
   
  이 항목에는 다음 태스크가 포함됩니다.  
   

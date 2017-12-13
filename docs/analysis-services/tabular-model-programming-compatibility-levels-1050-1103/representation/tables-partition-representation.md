@@ -2,12 +2,12 @@
 title: "파티션 표현 (테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a1478d3a38081dffefef764ffe15c4cd13b09b0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4fa1b2fea26b7b1d7d4efd08afd5f32e0e9eeae7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---partition-representation"></a>테이블-파티션 표현
-  원활한 운영을 위해 테이블 하나를 여러 개의 행 하위 집합으로 나눌 수 있습니다. 이 행들이 결합하여 테이블을 구성하며 각각의 하위 집합은 테이블의 파티션입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]원활한 운영을 위해 테이블을 나눌 있습니다 행의 여러 하위 집합에 결합 하 함께 구성에 테이블이 있습니다. 각각의 하위 집합은 테이블의 파티션입니다.  
   
 ## <a name="partition-representation"></a>파티션 표현  
  AMO 개체를 기준으로 파티션 표현은 <xref:Microsoft.AnalysisServices.Partition>과 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다.  

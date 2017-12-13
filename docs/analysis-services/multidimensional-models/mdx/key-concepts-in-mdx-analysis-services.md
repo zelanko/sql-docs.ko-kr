@@ -2,12 +2,12 @@
 title: "주요 개념 (Analysis Services) mdx에서 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6f9969a793d33ba203ba1f93d87b1a235a896f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX의 주요 개념(Analysis Services)
-  MDX(Multidimensional Expressions)를 사용하여 다차원 데이터를 쿼리하거나 큐브 내에 MDX 식을 만들기 전에 다차원의 개념과 용어를 이해하는 것이 도움이 됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) 사용 하 여 다차원 데이터를 쿼리하거나 큐브 내에서 MDX 식을 만들 수 있습니다, 전에 다차원의 개념과 용어를 이해 수 있습니다.  
   
  이미 알고 있는 데이터 요약 예제를 사용하여 시작한 다음 MDX가 어떻게 관련되는지 확인하는 것이 좋습니다. 여기에 Excel에서 생성되고 Analysis Services 샘플 큐브의 데이터로 채워진 피벗 테이블이 있습니다.  
   

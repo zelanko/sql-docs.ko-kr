@@ -2,12 +2,12 @@
 title: "DatabasePermissions 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8d6bce09b1a9fa48161f746557f0b1cb94416b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b72d1de3108d0209c4d9a45818d13d27e09c5663
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="databasepermissions-element-assl"></a>DatabasePermissions 요소(ASSL)
-  컬렉션을 포함 [DatabasePermission](../../../analysis-services/scripting/objects/databasepermission-element-assl.md) 와 관련 된 요소는 [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]컬렉션을 포함 [DatabasePermission](../../../analysis-services/scripting/objects/databasepermission-element-assl.md) 와 관련 된 요소는 [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

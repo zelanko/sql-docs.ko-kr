@@ -2,12 +2,12 @@
 title: "데이터 새로 고침 예약 및 데이터 소스에 Windows 인증 안 함 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c165409874271ef7ab60428976f74212a3b3f431
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>데이터 새로 고침 예약 및 데이터 소스에 Windows 인증 없음
-  이 항목에서는 Windows 인증을 지원하지 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 않는 **데이터 원본을 사용할 수 있는 SharePoint용** 데이터 새로 고침 예약 워크플로에 대해 설명합니다. 예를 들어 Oracle 또는 IDM DB2 데이터 원본의 경우입니다. 이 항목의 그림 및 단계는 Oracle 데이터 원본을 참조하지만 동일한 워크플로가 다른 데이터 원본에도 적용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목의 워크플로에 대해 설명 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint에 대 한 데이터 새로 고침 예약 데이터를 사용할 수 있는 원본을 **하지** Windows 인증을 지원 합니다. 예를 들어 Oracle 또는 IDM DB2 데이터 원본의 경우입니다. 이 항목의 그림 및 단계는 Oracle 데이터 원본을 참조하지만 동일한 워크플로가 다른 데이터 원본에도 적용됩니다.  
   
 ||  
 |-|  

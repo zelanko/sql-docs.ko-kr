@@ -2,12 +2,12 @@
 title: "DISCOVER_TRACE_COLUMNS 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cc5ed402e99327c42b5673e6b1333ac0a413f6e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9cdeebfead1e664db65d9a08112497199442ca1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovertracecolumns-rowset"></a>DISCOVER_TRACE_COLUMNS 행 집합
-  추적에 사용할 수 있는 열을 설명하는 XML 문서를 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]추적에 사용할 수 있는 열을 설명 하는 XML 문서를 반환 합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   

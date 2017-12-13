@@ -2,12 +2,12 @@
 title: "다차원 모델 데이터 액세스 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff56655be72dd63160bcfdbdb27f3c2a978de367
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>다차원 모델 데이터 액세스(Analysis Services - 다차원 데이터)
-  이 항목에서는 네트워크의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 대한 연결을 기본적으로 지원하는 클라이언트 응용 프로그램, 프로그래밍 방법 또는 스크립트를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터에 액세스하는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목의 정보를 사용 하 여 액세스 하는 방법을 알아보려면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 프로그래밍 방식이, 스크립트 또는 연결에 대 한 기본 제공 지원을 포함 하는 클라이언트 응용 프로그램을 사용 하 여 다차원 데이터는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 네트워크 상의 서버에 있습니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   

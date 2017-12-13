@@ -2,12 +2,12 @@
 title: "계산된 테이블 (SSAS 테이블 형식) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: adeaa21b5bf9a70f52dc6442b5e453b99ad6721b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 61ad9b1d13918bd6d172c7670b20b127d0713b67
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-calculated-table-ssas-tabular"></a>계산 테이블 만들기(SSAS 테이블 형식)
-  *계산 테이블* 은 DAX 쿼리 또는 식을 기반으로 계산된 개체이며 같은 모델에 포함된 다른 테이블의 전체 또는 일부에서 파생됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A *계산 된 테이블* 은 동일한 모델의 다른 테이블의 일부나 전부에서 파생 된 DAX 쿼리 또는 식에 따라 계산된 된 개체입니다.  
   
  계산 테이블이 해결할 수 있는 일반적인 디자인 문제는 클라이언트 응용 프로그램의 쿼리 구조로 노출할 수 있도록 특정 컨텍스트에서 롤플레잉 차원을 겉으로 드러내는 것입니다.  롤플레잉 차원은 여러 컨텍스트에 표면화되는 테이블입니다. 전형적인 예에는 외래 키 관계에 따라서 OrderDate, ShipDate, 또는 DueDate으로 표시되는 날짜 테이블이 있습니다. ShipDate의 계산 테이블을 명시적으로 만들면, 쿼리에 사용할 수 있는 다른 테이블처럼 완벽하게 작동되는 독립 실행형 테이블을 갖게 됩니다.  
   

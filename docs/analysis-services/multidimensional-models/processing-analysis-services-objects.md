@@ -2,12 +2,12 @@
 title: "Analysis Services 개체 처리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14559d9f5b7581c406df31aee9782019a580bc31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services 개체 처리
-  처리를 수행하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 유형인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, 큐브, 차원, 측정값 그룹, 파티션, 데이터 마이닝 구조 및 모델이 영향을 받습니다. 각 개체에 대해 개체 처리 수준을 지정하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 최적 처리 수준을 선택하도록 기본값 처리 옵션을 지정할 수 있습니다. 각 개체의 다른 처리 수준에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]처리 다음 영향을 미칩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 유형: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, 큐브, 차원, 측정값 그룹, 파티션 및 데이터 마이닝 구조 및 모델입니다. 각 개체에 대해 개체 처리 수준을 지정하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 최적 처리 수준을 선택하도록 기본값 처리 옵션을 지정할 수 있습니다. 각 개체의 다른 처리 수준에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
   
  부정적인 영향을 최소화하기 위해 처리 작업의 결과를 파악해야 합니다. 예를 들어 차원을 전체 처리하면 해당 차원에 종속되는 모든 파티션이 처리되지 않은 상태로 자동 설정됩니다. 이렇게 되면 종속 파티션이 처리될 때까지 쿼리에 영향을 받는 큐브를 사용할 수 없습니다.  
   

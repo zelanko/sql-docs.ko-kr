@@ -2,12 +2,12 @@
 title: "모델링 플래그 (데이터 마이닝) 확인 또는 변경 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98ec1ace5b819a123fd4a8949c92caa5e3be4e5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8403832c9a88002512ceaf67ce841f48c23fbdd8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>모델링 플래그 확인 또는 변경(데이터 마이닝)
-  모델링 플래그는 알고리즘이 분석 중에 데이터를 처리하는 방법을 제어하기 위해 마이닝 구조 열이나 마이닝 모델 열에 대해 설정하는 속성입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모델링 플래그는 마이닝 구조에서 설정한 속성에 열 이나 마이닝 모델 열 알고리즘 분석 하는 동안 데이터를 처리 하는 방법을 제어할 수 있습니다.  
   
  데이터 마이닝 디자이너에서 구조 또는 모델의 속성을 확인하여 마이닝 구조 또는 마이닝 열과 관련된 모델링 플래그를 확인하고 수정할 수 있습니다. DMX, AMO 또는 XMLA를 사용하여 모델링 플래그를 설정할 수도 있습니다.  
   

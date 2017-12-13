@@ -2,12 +2,12 @@
 title: "플러그 인 알고리즘 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6af94e43b03b75765f7e84903dbadee1341d31a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e2006e4d91906311b16e51b1b0b25d577c89387
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="plugin-algorithms"></a>플러그 인 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 외에 여러 가지 알고리즘을 데이터 마이닝에 사용할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘의 모든 기능이 포함되어 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]알고리즘 외에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝에 사용할 수 있는 여러 다른 알고리즘을 제공 합니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘의 모든 기능이 포함되어 있습니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 플러그 인 알고리즘과 통신하는 데 사용하는 인터페이스에 대한 전체 설명을 보려면 [CodePlex](http://go.microsoft.com/fwlink/?LinkID=87843) 웹 사이트에 게시된 사용자 지정 알고리즘 및 사용자 지정 모델 뷰어를 만드는 예제를 참조하십시오.  
   

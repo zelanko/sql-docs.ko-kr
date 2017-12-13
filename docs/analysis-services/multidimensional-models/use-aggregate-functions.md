@@ -2,12 +2,12 @@
 title: "집계 함수를 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-aggregate-functions"></a>집계 함수 사용
-  차원을 사용하여 측정값을 분할하는 경우 측정값은 해당 차원에 포함된 계층에서 요약됩니다. 이러한 요약 동작은 측정값에 대해 지정된 집계 함수에 따라 달라집니다. 숫자 데이터가 포함된 대부분 측정값의 경우 집계 함수는 **Sum**입니다. 측정값은 활성 상태인 계층의 수준에 따라 다른 금액으로 합계됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]차원을 사용 하 여 측정값을 분할 하, 하는 경우 측정값은 해당 차원에 포함 된 계층에서 요약 됩니다. 이러한 요약 동작은 측정값에 대해 지정된 집계 함수에 따라 달라집니다. 숫자 데이터가 포함된 대부분 측정값의 경우 집계 함수는 **Sum**입니다. 측정값은 활성 상태인 계층의 수준에 따라 다른 금액으로 합계됩니다.  
   
  Analysis Services에서 만드는 모든 측정값은 측정값의 연산을 결정하는 집계 함수에 의해 지원됩니다. 미리 정의된 집계 유형으로는 **합계**, **최소값**, **최대값**, **개수**, **고유 카운트**및 몇 가지 기타 추가 특수 함수가 있습니다. 또는 복잡한 수식이나 사용자 지정 수식을 기반으로 한 집계가 필요한 경우 미리 작성된 집계 함수를 사용하는 대신 MDX 계산을 작성할 수 있습니다. 예를 들어 백분율 값에 대한 측정값을 정의하려는 경우 MDX에서 계산된 측정값을 사용하여 정의할 수 있습니다. [CREATE MEMBER 문&#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md)을 참조하세요.  
   

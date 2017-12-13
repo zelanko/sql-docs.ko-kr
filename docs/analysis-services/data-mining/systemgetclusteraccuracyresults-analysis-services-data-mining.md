@@ -2,12 +2,12 @@
 title: "SystemGetClusterAccuracyResults (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 592500d3ab749c6ba07a82b0ff650dc7ff282dc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6ad7e0e0cbb1cf265a9944b81989b59b110602e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults(Analysis Services - 데이터 마이닝)
-  마이닝 구조 및 관련된 클러스터링 모델에 대한 교차 유효성 검사 정확도 메트릭을 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 구조와 관련 된 클러스터링 모델에 대 한 교차 유효성 검사 정확도 메트릭을 반환합니다.  
   
  이 저장 프로시저는 전체 데이터 집합에 대한 메트릭을 하나의 파티션으로 반환합니다. 데이터 집합을 교집합 영역으로 분할하여 각 파티션에 대한 메트릭을 반환하려면 [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)를 사용합니다.  
   

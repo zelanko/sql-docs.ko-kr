@@ -2,12 +2,12 @@
 title: "명명 된 집합에서 MDX (MDX)을 빌딩 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 382c4f44f40ad89266a26695109111a185719b2d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5aa8755be532ef44d36b89a790d05e0ee8e77713
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-named-sets---building-named-sets"></a>명명 된 집합-명명 된 집합 작성 MDX
-  식 집합은 길고 복잡한 선언이 될 수 있으므로 이해하기 어려울 수 있습니다. 또는 식 집합이 너무 자주 사용되어 반복적으로 집합을 정의하는 작업이 부담이 될 수 있습니다. 이렇게 길고, 복잡하며, 일상적으로 사용되는 식을 쉽게 만들기 위해 MDX에서는 *명명된 집합*이라는 식을 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]집합 식 길고 복잡 한 선언이 되며 따라서를 이해 하기 어려울 수 있습니다. 또는 식 집합이 너무 자주 사용되어 반복적으로 집합을 정의하는 작업이 부담이 될 수 있습니다. 이렇게 길고, 복잡하며, 일상적으로 사용되는 식을 쉽게 만들기 위해 MDX에서는 *명명된 집합*이라는 식을 사용할 수 있습니다.  
   
  기본적으로 명명된 집합은 별칭이 할당된 집합 식입니다. 명명된 집합은 일반적으로 통합이 가능한 멤버나 함수를 집합으로 통합할 수 있습니다. MDX는 명명된 집합 별칭을 집합 식으로 취급하기 때문에 집합 식이 사용되는 모든 곳에 이러한 별칭을 사용할 수 있습니다.  
   

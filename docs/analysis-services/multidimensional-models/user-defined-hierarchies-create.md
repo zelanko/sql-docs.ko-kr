@@ -2,12 +2,12 @@
 title: "사용자 정의 계층 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 28210f8ed93af087c1eb4bdf20c54fbdf842139e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a188eb62eb80e23ef5f20bc054653891958377f6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-defined-hierarchies---create"></a>사용자 정의 계층-만들기
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 사용자 정의 계층 구조를 만들 수 있습니다. 계층은 특성을 기반으로 하는 수준 모음입니다. 예를 들어 시간 계층에는 년, 분기, 월, 주 및 일 수준이 포함될 수 있습니다. 각 멤버 특성이 상위 멤버 특성을 고유하게 내재하고 있는 계층도 있는데 이를 자연 계층이라고 합니다. 최종 사용자가 계층을 사용하여 큐브 데이터를 검색할 수 있습니다. 계층은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 차원 디자이너의 계층 창을 사용하여 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용자 정의 계층을 만들 수 있습니다. 계층은 특성을 기반으로 하는 수준 모음입니다. 예를 들어 시간 계층에는 년, 분기, 월, 주 및 일 수준이 포함될 수 있습니다. 각 멤버 특성이 상위 멤버 특성을 고유하게 내재하고 있는 계층도 있는데 이를 자연 계층이라고 합니다. 최종 사용자가 계층을 사용하여 큐브 데이터를 검색할 수 있습니다. 계층은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 차원 디자이너의 계층 창을 사용하여 정의합니다.  
   
  사용자 정의 계층 구조를 만들 때 *비정형*계층 구조가 될 수 있습니다. 비정형 계층에서는 최소한 한 멤버의 논리적 부모 멤버가 해당 멤버 바로 위 수준에 있지 않습니다. 비정형 계층일 경우 누락된 멤버 표시 여부와 누락된 멤버 표시 방법을 제어하는 설정이 있습니다. 자세한 내용은 [비정형 계층 구조](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)를 참조하세요.  
   

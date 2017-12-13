@@ -2,12 +2,12 @@
 title: "만들기 및 SQL Server Data Tools에서 MDX 스크립트 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8f496189909d7f6b7801c642eea2e4830ce239f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 097d318ddf841e09f53ca90b0266bbd3806f59dc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>SQL Server Data Tools에서 MDX 스크립트 만들기 및 실행
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 MDX 스크립트를 만들고 실행하려면 큐브를 미리 만들고 편집할 준비가 된 상태로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 있어야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]만들고 MDX 스크립트를 실행 하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 포함 되도록 해야 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 이미 만든 큐브 및 편집을 위해 준비 합니다.  
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>MDX(Multidimensional Expressions) 스크립트를 만들려면  
   

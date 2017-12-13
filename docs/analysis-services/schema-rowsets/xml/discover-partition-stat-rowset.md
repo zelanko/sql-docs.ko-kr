@@ -2,12 +2,12 @@
 title: "DISCOVER_PARTITION_STAT 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbb28e83139c6318d235b3876b64e95e949cb4b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0660deb042e8b3d0c665152779fc6900833b26d9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverpartitionstat-rowset"></a>DISCOVER_PARTITION_STAT 행 집합
-  특정 파티션의 집계에 대한 통계를 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특정 파티션의 집계에에서 대 한 통계를 반환합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   

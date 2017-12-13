@@ -2,12 +2,12 @@
 title: "차원 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffb3b3a3ef069be26ff6d3812d52ff4d18a7dc9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9f876ad9e6b7627b22322604d406a189b6c03834
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>차원(Analysis Services - 다차원 데이터)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 차원은 큐브의 기본 구성 요소입니다. 고객, 대리점 또는 직원 등 사용자의 관심 영역과 관련된 데이터를 구성합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원에는 차원 테이블의 열에 해당하는 특성이 포함되어 있습니다. 이러한 특성은 특성 계층으로 표시되며 사용자 정의 계층에 구성하거나 기본 차원 테이블의 열을 기반으로 하여 부모-자식 계층으로 정의할 수 있습니다. 계층을 사용하여 큐브에 포함되어 있는 측정값을 구성할 수 있습니다. 다음 항목에서는 차원, 특성 및 계층의 개요를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 차원은 큐브의 기본 구성 요소입니다. 고객, 대리점 또는 직원 등 사용자의 관심 영역과 관련된 데이터를 구성합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원에는 차원 테이블의 열에 해당하는 특성이 포함되어 있습니다. 이러한 특성은 특성 계층으로 표시되며 사용자 정의 계층에 구성하거나 기본 차원 테이블의 열을 기반으로 하여 부모-자식 계층으로 정의할 수 있습니다. 계층을 사용하여 큐브에 포함되어 있는 측정값을 구성할 수 있습니다. 다음 항목에서는 차원, 특성 및 계층의 개요를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

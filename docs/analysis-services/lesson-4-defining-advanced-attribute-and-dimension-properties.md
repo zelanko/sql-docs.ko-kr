@@ -2,12 +2,12 @@
 title: "4 단원: 정의 고급 특성 및 차원 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4a649addc2a2ab676856076fa64ed352f48cf4e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2ed7b1d026369b249b1acfc7da23242efcc22b26
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>4단원: 고급 특성 및 차원 속성 정의
-이 단원에서는 특성의 일부 고급 속성, 특성 계층 및 차원 속성을 사용하는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 단원에서는 특성, 특성 계층 및 차원 속성의 고급 속성 중 일부를 사용 하는 방법에 설명 합니다.  
   
 > [!NOTE]  
 > 이 단원은 본 자습서의 1 - 3단원에서 작성한 향상된 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 사용합니다. 이 단원의 첫 번째 태스크에서는 단원에 사용할 적절한 예제 프로젝트를 찾을 위치 및 이 프로젝트와 1 - 3단원에서 만든 프로젝트 간 차이점에 대해 설명합니다.  

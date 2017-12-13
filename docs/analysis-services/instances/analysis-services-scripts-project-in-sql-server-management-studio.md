@@ -2,12 +2,12 @@
 title: "Analysis Services SQL Server Management Studio에서 스크립트 프로젝트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c974474663bf17f49f235ef57983a61196054d16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e849993eeda199ad134f21b80872828993803d14
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio의 Analysis Services 스크립트 프로젝트
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 분석 서버 스크립트 프로젝트를 만들어 개발, 관리 및 원본 제어를 위해 관련 스크립트를 그룹화할 수 있습니다. 현재 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 솔루션이 로드되어 있지 않은 경우 새 분석 서버 스크립트 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 그렇지 않은 경우 새 분석 서버 스크립트 프로젝트를 기존 솔루션에 추가하거나 새 솔루션에 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 분석 서버 스크립트 프로젝트를 만들 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 관련 스크립트 함께 개발, 관리 및 원본 제어를 위해. 현재 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 솔루션이 로드되어 있지 않은 경우 새 분석 서버 스크립트 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 그렇지 않은 경우 새 분석 서버 스크립트 프로젝트를 기존 솔루션에 추가하거나 새 솔루션에 만들 수 있습니다.  
   
  다음 기본 단계를 수행하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 분석 서버 스크립트 프로젝트를 만들 수 있습니다.  
   

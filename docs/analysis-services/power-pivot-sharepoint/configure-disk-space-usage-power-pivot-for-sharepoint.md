@@ -2,12 +2,12 @@
 title: "디스크 공간 사용 (SharePoint 용 파워 피벗) 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f279adc22305b40d0207b6256e29d42b9b32ef65
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>디스크 공간 사용 구성(SharePoint용 Power Pivot)
-  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 더욱 빠르게 다시 로드하기 위해 호스트 컴퓨터의 디스크 공간을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스를 캐시합니다. 메모리에 로드되는 각 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 이후에 새 요청을 처리하기 위해 신속하게 다시 로드될 수 있도록 디스크에 먼저 캐시됩니다. 기본적으로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 사용 가능한 모든 디스크 공간을 사용하여 해당 데이터베이스를 캐시하지만 사용되는 디스크 공간 크기를 제한하는 속성을 설정하여 이 동작을 수정할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 배포를 사용 하 여 호스트 컴퓨터의 디스크 공간이 캐시 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 더욱 빠르게 다시 로드에 대 한 데이터베이스입니다. 메모리에 로드되는 각 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 이후에 새 요청을 처리하기 위해 신속하게 다시 로드될 수 있도록 디스크에 먼저 캐시됩니다. 기본적으로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 사용 가능한 모든 디스크 공간을 사용하여 해당 데이터베이스를 캐시하지만 사용되는 디스크 공간 크기를 제한하는 속성을 설정하여 이 동작을 수정할 수 있습니다.  
   
  이 항목에서는 디스크 공간 사용량에 대한 제한을 설정하는 방법에 대해 설명합니다.  
   

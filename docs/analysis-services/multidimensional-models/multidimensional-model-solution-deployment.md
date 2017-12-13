@@ -2,12 +2,12 @@
 title: "다차원 모델 솔루션 배포 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cba427cba20a443179621758dabc8d56b1104152
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4ea62c1e36451be1c18362073bd917e2376e1e51
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-solution-deployment"></a>다차원 모델 솔루션 배포
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개발을 완료했으면 Analysis Services 서버에 데이터베이스를 배포할 수 있습니다. Analysis Services는 데이터베이스를 테스트 서버나 프로덕션 서버로 이동하는 데 사용할 수 있는 6가지의 배포 방법을 제공합니다. 메소드를 이점이 많은 순서에 따라 나열하면 AMO 자동화, XMLA, 배포 마법사, 배포 유틸리티, 동기화 마법사, 백업 및 복원과 같습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]개발을 완료 한 후 프로그램 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 Analysis Services 서버에 데이터베이스를 배포할 수 있습니다. Analysis Services는 데이터베이스를 테스트 서버나 프로덕션 서버로 이동하는 데 사용할 수 있는 6가지의 배포 방법을 제공합니다. 메소드를 이점이 많은 순서에 따라 나열하면 AMO 자동화, XMLA, 배포 마법사, 배포 유틸리티, 동기화 마법사, 백업 및 복원과 같습니다.  
   
  이 항목은 다음과 같은 섹션으로 구성됩니다.  
   

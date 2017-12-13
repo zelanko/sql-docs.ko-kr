@@ -2,12 +2,12 @@
 title: "HierarchyInfo 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25659220c3a65b3741e3859e2e92f3047c8d6d56
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b1be8931a404d682e1f3007aaa1e0535b91c1552
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchyinfo-element-xmla"></a>HierarchyInfo 요소(XMLA)
-  부모 [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) 요소에 포함된 단일 계층을 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]부모에 포함 된 단일 계층을 나타냅니다 [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

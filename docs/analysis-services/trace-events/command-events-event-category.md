@@ -2,12 +2,12 @@
 title: "Command Events 이벤트 범주 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 256c60111f88a31ac8bd6827ac0cc9e01441ec4f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5114896e9303ee67a8f37d919644837432935231
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="command-events-event-category"></a>Command Events 이벤트 범주
-  Command Events 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Command Events 이벤트 범주에는 다음 표에 설명 된 이벤트 클래스가 있습니다.  
   
 |Event Class|이벤트 ID|Description|  
 |-----------------|--------------|-----------------|  

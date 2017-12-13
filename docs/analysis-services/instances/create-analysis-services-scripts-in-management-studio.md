@@ -2,12 +2,12 @@
 title: "Management Studio에서 Analysis Services 스크립트 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 22811448d173c9f55229557dfed64e16ead18706
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55f3f1485ba2e684371444ec6f40696b3f853fcd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Management Studio에서 Analysis Services 스크립트 만들기
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 Analysis Services 개체 및 태스크를 스크립팅하는 데 사용할 수 있는 스크립트 생성 기능, 템플릿 및 편집기가 포함되어 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스크립트 생성 기능, 템플릿 및 Analysis Services 개체 및 태스크를 스크립팅 하는 데 사용할 수 있는 편집기를 포함 합니다.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Management Studio에서 Analysis Services 태스크 스크립팅  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 태스크 지향 대화 상자에서 스크립트 옵션 중 하나를 클릭하여 태스크를 스크립팅합니다. 데이터베이스 백업 또는 복원, 개체 처리, 집계 디자인과 같은 태스크를 수행하는 데 사용하는 모든 대화 상자에는 맨 위에 스크립트 옵션이 포함되어 있습니다. 이러한 옵션 중 하나를 선택하면 대화 상자의 정보 및 설정을 기반으로 XMLA 스크립트가 생성됩니다.  

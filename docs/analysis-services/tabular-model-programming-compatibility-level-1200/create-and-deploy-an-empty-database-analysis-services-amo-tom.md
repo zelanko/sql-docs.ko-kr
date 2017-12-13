@@ -2,12 +2,12 @@
 title: "만들기 및 배포 (Analysis Services AMO-TOM) 빈 데이터베이스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fd42cdbd8eae5bada2c169a601c801a6e619afe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9581f7eb39fe0a6f8979ce09fde4233e800bef8d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>만들기 및 배포 (Analysis Services AMO-TOM) 빈 데이터베이스
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-일반적인 프로그래밍 시나리오에 AMO TOM 데이터베이스 및 모델 즉석에서 생성 하는 것입니다. 이 문서에서는 데이터베이스를 만드는 과정을 안내 합니다. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]일반적인 프로그래밍 시나리오에 AMO TOM 데이터베이스 및 모델 즉석에서 생성 하는 것입니다. 이 문서에서는 데이터베이스를 만드는 과정을 안내 합니다. 
 
 테이블 형식 솔루션에 대 한 데이터베이스와 데이터베이스 마다 하나의 모델로 모델 간의 한 일 대응이 됩니다. 하나 또는 다른 일반적으로 지정 하 고 엔진에서 누락 된 개체를 유추 합니다. 
 

@@ -2,12 +2,12 @@
 title: "다차원 모델 (Analysis Services)의 번역 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97c2f9950f050c1e737eebfd0f684ad8cd1e5850
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 07e038b7f959df1a7b3f53c5a1de6360b47a2b4b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>다차원 모델의 번역(Analysis Services)
-  번역할 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 개체에 적절한 디자이너를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 번역을 정의할 수 있습니다. 번역을 정의하면 해당 **개체와 연결된** 개체의 속성에 대해 지정한 언어로 지정한 명시적 리터럴 값을 가진 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Translation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 생성됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]번역을 정의할 수 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 대 한 적절 한 디자이너를 사용 하 여는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 변환 해야 하는 개체입니다. 번역을 정의하면 해당 **개체와 연결된** 개체의 속성에 대해 지정한 언어로 지정한 명시적 리터럴 값을 가진 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Translation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 생성됩니다.  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>다국어 데이터 모델의 요소  
  다국어 솔루션에 사용되는 데이터 모델에서는 번역된 레이블(필드 이름 및 설명) 이상의 것들이 필요합니다. 또한 다양한 언어 스크립트에 명시되는 데이터 값도 제공해야 합니다. 다국어 솔루션을 만들려면 개별 특성이 데이터를 반환하는 외부 데이터베이스의 열에 바인딩되어야 합니다.  

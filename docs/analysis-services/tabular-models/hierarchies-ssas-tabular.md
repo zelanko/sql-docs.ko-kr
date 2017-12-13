@@ -2,12 +2,12 @@
 title: "계층 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7604fe65427b5744cb0b34689a98f7fc6cd809b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 11112104f624c3594a99e867d03bfaaab28ac37c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchies"></a>계층 구조
-  테이블 형식 모델에서 계층은 테이블에서 두 개 이상의 열 간의 관계를 정의하는 메타데이터입니다. 계층은 보고 클라이언트 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델에서 계층 하는 메타 데이터 테이블에 두 개 이상의 열 간의 관계를 정의 합니다. 계층은 보고 클라이언트 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다.  
   
 ##  <a name="bkmk_benefits"></a> 이점  
  테이블에는 비정상적인 열 이름을 갖는 수십 또는 수백 개의 열이 일정한 순서 없이 포함될 수 있습니다. 따라서 보고 클라이언트 필드 목록이 순서 없이 표시되므로 사용자가 데이터를 찾아서 보고서에 포함하기가 어려울 수 있습니다. 계층을 통해 복잡한 데이터 구조를 간단하고 직관적으로 볼 수 있습니다.  

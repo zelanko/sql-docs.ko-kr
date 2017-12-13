@@ -2,12 +2,12 @@
 title: "반 가산적 동작 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2881b5fbfa0fef9b17e1e86d2bf83f2599995108
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 92207d751d305fba91bb3e5a2762918cf2451272
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
-  다양한 비즈니스 시나리오에서 모든 차원에 대해 균일하게 집계되지 않는 반가산적 측정값이 있는 경우가 많습니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 응용 프로그램에서 이러한 스냅숏을 찾을 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모든 차원에서 균일 하 게 집계 되지 않는, 반 가산적 측정값은 다양 한 비즈니스 시나리오에서 매우 흔히입니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 응용 프로그램에서 이러한 스냅숏을 찾을 수 있습니다.  
   
  큐브에 반가산적 동작을 추가하여 개별 측정값이나 해당 계정 유형 특성의 멤버에 대한 집계 방법을 정의합니다. 큐브에 계정 차원이 포함되는 경우 해당 계정 유형 기반의 반가산적 동작을 자동으로 설정할 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "OLE DB 스키마 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 스키마 행 집합
-  다음 OLE DB 스키마 행 집합은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자가 지원합니다. 사용 하 여는 **DISCOVER_ENUMERATORS** 포함 된 행 집합의 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 특정 데이터 원본 공급자가 행 집합을 지원 하는지 여부를 확인 하는 메서드.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]다음 OLE DB 스키마 행 집합에서 지원 되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 공급자입니다. 사용 하 여는 **DISCOVER_ENUMERATORS** 포함 된 행 집합의 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 특정 데이터 원본 공급자가 행 집합을 지원 하는지 여부를 확인 하는 메서드.  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 웹 사이트에 있는 MSDN  Library의 OLE DB Programmer's Reference 부분에서 "Schema Rowsets" 항목을 검색하여 이러한 행 집합에 대한 자세한 정보를 찾을 수도 있습니다.  
   

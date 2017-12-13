@@ -2,12 +2,12 @@
 title: "테스트 및 유효성 검사 태스크 및 방법 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4dff2bccc2c56f35152c2959ee4b9699eaf9821b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c6b24aa2810e572df92ae8c0a1203761adf46003
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>테스트 및 유효성 검사 태스크 및 방법(데이터 마이닝)
-  **에서 데이터 마이닝 디자이너의** 마이닝 정확도 차트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭을 사용하여 마이닝 구조에 있는 마이닝 모델의 예측 정확도를 비교할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용할 수 있습니다는 **마이닝 정확도 차트** 데이터 마이닝 디자이너의 탭 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 마이닝 구조에 마이닝 모델의 예측 정확도 비교 합니다.  
   
  다음 4개의 차트를 만들 수 있습니다.  
   

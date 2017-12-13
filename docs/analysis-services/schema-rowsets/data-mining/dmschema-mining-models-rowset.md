@@ -2,12 +2,12 @@
 title: "DMSCHEMA_MINING_MODELS 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae35f0d1de25ed1551b4368009c4be28e2ea3ea5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 275be85ca3a85147767166ac49cd1d1ee288cf5e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS 행 집합
-  현재 카탈로그의 데이터 마이닝 모델을 열거합니다. **DMSCHEMA_MINING_MODELS** 행 집합에는 모델 이름, 처리 날짜 및 각 마이닝 모델에 연결 된 마이닝 알고리즘 같은 정보가 포함 됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]현재 카탈로그의 데이터 마이닝 모델을 열거합니다. **DMSCHEMA_MINING_MODELS** 행 집합에는 모델 이름, 처리 날짜 및 각 마이닝 모델에 연결 된 마이닝 알고리즘 같은 정보가 포함 됩니다.  
   
  의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. **DMSCHEMA_MINING_MODELS** 스키마 행 집합은 매우 비슷합니다는 [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) 스키마 행 집합 동일한 방식으로 사용할 수 있습니다.  
   

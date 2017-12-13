@@ -2,12 +2,12 @@
 title: "마이닝 구조에서 드릴스루 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfbedd4235f4409df31912df360cf192725f36e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 96d9e924f914822b7eb26b4242c1120113da7c3b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="drillthrough-on-mining-structures"></a>마이닝 구조에서의 드릴스루
-  *드릴스루* 는 마이닝 모델이나 마이닝 구조를 쿼리하고 모델에 노출되지 않는 세부 데이터를 가져오는 기능입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*드릴스루* 모델에 마이닝 모델이 나 마이닝 구조를 쿼리 하 여 세부 데이터를 가져오는 기능을 노출 되지 않는 합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 사례 데이터로 드릴스루하는 두 가지 옵션을 제공합니다. 마이닝 모델을 작성하는 데 사용된 데이터로 드릴스루하거나 마이닝 구조의 원본 데이터로 드릴스루할 수 있습니다.  
   

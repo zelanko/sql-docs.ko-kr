@@ -2,12 +2,12 @@
 title: "Analysis Services 인스턴스 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7768246432f2711f7e3d99c046493e39b7e4ecf9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6bdd35da02c1679607ce89002a6a2c3edc569c0c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services 인스턴스 관리
-  Analysis Services 인스턴스는 운영 체제 서비스로 실행되는 **msmdsrv.exe** 실행 파일의 복사본입니다. 각 인스턴스는 동일한 서버에서 완전히 독립적이며 고유한 구성 설정, 사용 권한, 포트, 시작 계정, 파일 저장소 및 서버 모드 속성을 가지고 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services의 인스턴스는의 복사본은 **msmdsrv.exe** 운영 체제 서비스로 실행 되는 실행 파일입니다. 각 인스턴스는 동일한 서버에서 완전히 독립적이며 고유한 구성 설정, 사용 권한, 포트, 시작 계정, 파일 저장소 및 서버 모드 속성을 가지고 있습니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 각 인스턴스는 정의된 로그온 계정의 보안 컨텍스트에서 Windows 서비스인 Msmdsrv.exe로 실행됩니다.  
   

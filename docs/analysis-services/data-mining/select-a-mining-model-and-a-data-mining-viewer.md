@@ -2,12 +2,12 @@
 title: "마이닝 모델 및 데이터 마이닝 뷰어 선택 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d97a29fac2a85c1398fa8a994f50a0766bd119d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 712e8e501d3f1a8a37b2627d2356ff542af8bd08
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>마이닝 모델 및 데이터 마이닝 뷰어 선택
-  데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 있는 뷰어 중 하나를 사용하여 마이닝 모델을 탐색할 수 있습니다. 손쉽게 모델 간에 전환하거나 사용 중인 뷰어를 변경할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에 있는 뷰어 중 하나를 사용 하 여 마이닝 모델을 탐색할 수 있습니다는 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. 손쉽게 모델 간에 전환하거나 사용 중인 뷰어를 변경할 수 있습니다.  
   
 -   **에서 데이터 마이닝 디자이너의** 마이닝 모델 뷰어 **탭에 있는** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 드롭다운 목록 상자에는 현재 마이닝 구조에 포함된 모든 마이닝 모델이 나열되어 있습니다.  
   

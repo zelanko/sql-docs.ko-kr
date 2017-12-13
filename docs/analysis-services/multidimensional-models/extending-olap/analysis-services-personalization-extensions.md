@@ -2,12 +2,12 @@
 title: "Analysis Services 개인 설정 확장 프로그램 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3e1e10612e9e0f93206299e07271b3795c92962a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bcc21da9d0f0297bf5db834d3ec66acdb3be397a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 개인 설정 확장 프로그램
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램에서 다음을 수행할 수 있도록 하는 기능을 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램에서 다음을 수행할 수 있도록 하는 기능을 제공 합니다.  
   
 -   **동적 디자인 및 배포** 디자인 및 배포 후 즉시 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램 사용자 개체와 기능에 대 한 액세스는 다음 번 사용자 세션의 시작 부분에 있어야 합니다.  
   

@@ -2,12 +2,12 @@
 title: "차원 특성에 대 한 사용자 지정 멤버 수식 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f6cd6ca41dab2aa9d213281de94882c03f50db2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10b6f8e3daf8a5b13bee1bef87454dfc40096804
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>BI 마법사-차원에서 특성에 대 한 사용자 지정 멤버 수식
-  큐브나 차원에 사용자 지정 멤버 수식 기능을 추가하여 차원 멤버와 연결된 기본 집계를 MDX(Multidimensional Expression) 식의 결과로 바꿀 수 있습니다. 이 기능은 차원에서 지정한 특성에 대한 **CustomRollupColumn** 속성을 설정합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 또는 차원 멤버는 MDX (Multidimensional Expressions) 식의 결과 연결 된 기본 집계를 바꾸려면 차원에 사용자 지정 멤버 수식 기능을 추가 합니다. 이 기능은 차원에서 지정한 특성에 대한 **CustomRollupColumn** 속성을 설정합니다.  
   
 > [!NOTE]  
 >  사용자 지정 멤버 수식은 기존 데이터 원본을 기반으로 하는 차원에만 사용할 수 있습니다. 데이터 원본을 사용하지 않고 만든 차원의 경우에는 사용자 지정 멤버 수식을 추가하기 전에 스키마 생성 마법사를 실행하여 데이터 원본 뷰를 만들어야 합니다.  

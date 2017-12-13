@@ -2,12 +2,12 @@
 title: "다차원 모델 어셈블리 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62bd92bbfc8c0bf4cb3278186ee27a55e8e6aea0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 73dfb81f267fea0d246ff1f7c7e48abb8d1dcccc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-assemblies-management"></a>다차원 모델 어셈블리 관리
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 MDX(Multidimensional Expressions) 및 DMX(Data Mining Extensions) 언어에 사용할 수 있는 다양한 내장 함수를 제공합니다. 이러한 함수를 사용하여 표준 통계 계산을 비롯하여 계층에서의 멤버 이동에 이르는 모든 작업을 수행할 수 있습니다. 그러나 복잡하고 강력한 다른 제품에서도 그렇듯이 제품의 기능을 더 확장할 필요성은 언제나 있기 마련입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 많이 이르기까지 다양 한 표준 통계 계산을 수행 하기 위해 디자인 된 MDX (Multidimensional Expressions) 및 확장 DMX (Data Mining) 언어와 함께 사용할 내장 함수를 제공 합니다. 계층의 멤버를 통과 합니다. 그러나 복잡하고 강력한 다른 제품에서도 그렇듯이 제품의 기능을 더 확장할 필요성은 언제나 있기 마련입니다.  
   
  따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 데이터베이스에 어셈블리를 추가할 수 있습니다. 어셈블리를 사용하면 Microsoft Visual Basic .NET 또는 Microsoft Visual C#과 같은 CLR(공용 언어 런타임) 언어를 사용하여 사용자 정의 외부 함수를 만들 수 있습니다. 또한 Microsoft Visual Basic 또는 Microsoft Visual C++와 같은 COM(구성 요소 개체 모델) 자동화 언어도 사용할 수 있습니다.  
   

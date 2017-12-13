@@ -2,12 +2,12 @@
 title: "데이터 마이닝 자습서 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -19,14 +19,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f7375fc22170ffa3f0f11455af619d62f42df50c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>데이터 마이닝 자습서(Analysis Services)
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 마법사 및 통합 시각화를 사용하여 데이터 마이닝 솔루션을 쉽게 만들 수 있습니다. 특히 Machine Learning을 처음 사용하는 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 도구를 통해 편리하게 데이터 마이닝 모델을 디자인, 학습 및 탐색할 수 있습니다. 모델의 데이터는 큐브, 관계형 데이터베이스 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 지원하는 다른 모든 원본에 저장할 수 있습니다. 모델을 만든 후 모델에 액세스하고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ASP.NET 등 여러 클라이언트의 예측을 통해 예측을 만들어 프로덕션으로 전환할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쉽게 마법사와 통합 된 시각화를 사용 하 여 데이터 마이닝 솔루션을 만들 수 있습니다. 특히 Machine Learning을 처음 사용하는 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 도구를 통해 편리하게 데이터 마이닝 모델을 디자인, 학습 및 탐색할 수 있습니다. 모델의 데이터는 큐브, 관계형 데이터베이스 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 지원하는 다른 모든 원본에 저장할 수 있습니다. 모델을 만든 후 모델에 액세스하고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ASP.NET 등 여러 클라이언트의 예측을 통해 예측을 만들어 프로덕션으로 전환할 수 있습니다.  
   
 > [!NOTE]  
 >여기에서 설명하는 자습서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대해 업데이트되지 않았습니다. SQL Server 2014용으로 작성된 자습서를 사용할 수 있습니다. 기능적으로 데이터 마이닝 기능에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대해 변경된 내용은 없습니다. 단계가 동일합니다.  

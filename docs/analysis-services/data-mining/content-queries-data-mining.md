@@ -2,12 +2,12 @@
 title: "내용 쿼리 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45a912354d122eadb7008c2ff260366fa46770fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c32111e19274ecd744f968c7ce128a924487f22c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-queries-data-mining"></a>내용 쿼리(데이터 마이닝)
-  내용 쿼리는 마이닝 모델의 내부 통계와 구조에 대한 정보를 추출하는 한 방법입니다. 내용 쿼리는 때때로 뷰어에서 쉽게 사용할 수 없는 세부 정보를 제공할 수 있습니다. 내용 쿼리의 결과를 사용하여 다른 용도로 사용할 정보를 프로그래밍 방식으로 추출할 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]내용 쿼리는 방법은 내부 통계 및 마이닝 모델의 구조에 대 한 정보를 추출 합니다. 내용 쿼리는 때때로 뷰어에서 쉽게 사용할 수 없는 세부 정보를 제공할 수 있습니다. 내용 쿼리의 결과를 사용하여 다른 용도로 사용할 정보를 프로그래밍 방식으로 추출할 수도 있습니다.  
   
  이 섹션에서는 내용 쿼리 및 내용 쿼리에 대한 일반 DMX 구문을 사용하여 검색할 수 있는 정보의 유형에 대한 일반적인 정보를 제공합니다.  
   

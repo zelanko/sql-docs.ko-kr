@@ -2,12 +2,12 @@
 title: "필터 규칙에 연결 규칙 모델 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 778e0ea8664cce55473c8cbd9963f4c25f32c4e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a7f0a74cc5f14d268b5854781786608ee9e4fc4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>연결 규칙 모델에서 규칙 필터링
-  연결 모델에 필터링을 사용하여 보고자 하는 연결로만 결과를 제한할 수 있습니다. 예를 들어 특정 제품이 포함된 규칙만 표시하도록 규칙을 필터링할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]결과를 제한할 관심 있는 및 연결은 연결 모델에 필터링을 사용할 수 있습니다. 예를 들어 특정 제품이 포함된 규칙만 표시하도록 규칙을 필터링할 수 있습니다.  
   
  데이터 마이닝 디자이너에서는 **연결 규칙 뷰어의** 규칙 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 탭의 컨트롤을 사용하여 표시되는 규칙을 필터링할 수 있습니다.  또한 모델에 쿼리를 만들어 특정 값이 포함된 항목 집합만 표시할 수 있습니다.  
   

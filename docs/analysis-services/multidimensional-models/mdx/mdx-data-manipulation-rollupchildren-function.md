@@ -2,12 +2,12 @@
 title: "RollupChildren 함수 (MDX) 작업 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2b5133c23454a8281e028a848403e18f5d89eae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c913406650e267cb715267f4a2a91235b6259b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX 데이터 조작 RollupChildren 함수
-  MDX [RollupChildren](../../../mdx/rollupchildren-mdx.md) 함수는 멤버의 자식을 롤업하여 각각의 자식에 다른 단항 연산자를 적용하고 이 롤업 값을 멤버로 반환합니다. 자식 멤버와 관련된 멤버 속성에서 단항 연산자를 제공하거나 함수에 직접 제공되는 문자열 식이 단항 연산자가 될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) 함수는 각 자식에 다른 단항 연산자를 적용 하는 멤버의 자식을를 롤업 하 고이 롤업 값을 반환 합니다. 자식 멤버와 관련된 멤버 속성에서 단항 연산자를 제공하거나 함수에 직접 제공되는 문자열 식이 단항 연산자가 될 수 있습니다.  
   
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 함수 예  
  MDX 문에서 **RollupChildren** 함수를 사용하는 방법을 설명하기는 쉽지만 MDX 쿼리에 미치는 이 함수의 효과는 매우 다양할 수 있습니다.  

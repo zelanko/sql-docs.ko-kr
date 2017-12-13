@@ -2,12 +2,12 @@
 title: "DataSourceType 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0474881e6ca90b395bd908a8e152688b8784557b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 82f56e57b6576bd94c4ba2f88c53895efcc187c3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="datasourcetype-element-xmla"></a>DataSourceType 요소(XMLA)
-  나타냅니다 여부는 [위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 에 대 한 지정 된 요소는 [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) 또는 [동기화](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 로컬 또는 원격 명령입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]나타냅니다 여부는 [위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 에 대 한 지정 된 요소는 [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) 또는 [동기화](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 로컬 또는 원격 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   

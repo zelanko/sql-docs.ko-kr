@@ -2,12 +2,12 @@
 title: "데이터 형식 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 380a7208eceb9468e4bca2490f04c79149d4665d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 275fddacc7d5d24be9581613863e81d2a061c92d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-types-data-mining"></a>데이터 형식(데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 마이닝 모델 또는 마이닝 구조를 만들 때는 마이닝 구조의 각 열에 대한 데이터 형식을 정의해야 합니다. 데이터 형식은 분석 엔진에 데이터 원본의 데이터가 숫자인지 또는 텍스트인지 여부와 데이터 처리 방법을 알려 줍니다. 예를 들어 원본 데이터에 숫자 데이터가 포함되어 있는 경우 숫자를 정수로 처리할지, 아니면 소수 자릿수를 사용하여 처리할지 여부를 지정할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 모델 또는 마이닝 구조에 만들 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 마이닝 구조에 열이 각각에 대 한 데이터 형식을 정의 해야 합니다. 데이터 형식은 분석 엔진에 데이터 원본의 데이터가 숫자인지 또는 텍스트인지 여부와 데이터 처리 방법을 알려 줍니다. 예를 들어 원본 데이터에 숫자 데이터가 포함되어 있는 경우 숫자를 정수로 처리할지, 아니면 소수 자릿수를 사용하여 처리할지 여부를 지정할 수 있습니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 구조 열에 대해 다음과 같은 데이터 형식을 지원합니다.  
   

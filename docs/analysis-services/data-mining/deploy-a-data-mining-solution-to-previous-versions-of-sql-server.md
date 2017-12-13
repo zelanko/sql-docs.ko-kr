@@ -2,12 +2,12 @@
 title: "이전 버전의 SQL Server 데이터 마이닝 솔루션을 배포 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6abe08512e8ff66299a7d50e0fcc90b7355a54ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 834b8ceae72e00eea7bf989ea9583068551bfc92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포
-  이 섹션에서는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 인스턴스에서 만든 데이터 마이닝 모델이나 데이터 마이닝 구조를 SQL Server 2005 Analysis Services를 사용하는 데이터베이스에 배포하려고 하거나 SQL Server 2005에서 만든 모델을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 배포할 때 발생할 수 있는 알려진 호환성 문제에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 데이터 마이닝 모델 또는의 인스턴스에서 만든 데이터 마이닝 구조에 배포 하려고 할 때 발생할 수 있는 알려진된 호환성 문제를 설명 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] SQL Server 2005 Analysis Services를 사용 하는 데이터베이스를 배포 하는 경우 또는 인스턴스를 SQL Server 2005에서 만든 모델 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
   
  SQL Server 2000 Analysis Services 인스턴스로의 배포는 지원되지 않습니다.  
   

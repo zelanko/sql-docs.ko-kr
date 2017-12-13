@@ -2,12 +2,12 @@
 title: "테이블 형식 모델 (Analysis Services AMO-TOM)에 데이터 원본을 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8f6397f70727173345a41e92704a4277de32ddd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8aac5145c520ac61fda5689a4ba40b882bb554da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>테이블 형식 모델 (Analysis Services AMO-TOM)에 데이터 소스 추가
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-**DataSource** Microsoft.AnalysisServices.Tabular 네임 스페이스의 클래스 값은 데이터 새로 고침 작업 중 유형을 지정 하는 테이블 형식 모델의 데이터 원본에 대 한 추상화 및 가져온된 데이터의 위치입니다. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**DataSource** Microsoft.AnalysisServices.Tabular 네임 스페이스의 클래스 값은 데이터 새로 고침 작업 중 유형을 지정 하는 테이블 형식 모델의 데이터 원본에 대 한 추상화 및 가져온된 데이터의 위치입니다. 
 
 파생 된 클래스의 개체를 인스턴스화하고 테이블 형식 모델에 데이터 소스를 추가할 수 있습니다 **DataSource**, 다음에 추가 하는 **DataSources** 모델 개체의 컬렉션입니다. 호출 서버에 변경 내용을 커밋 **Model.SaveChanges()** 또는 **Database.Update(UpdateOptions.ExpandFull)**합니다. 
 

@@ -2,12 +2,12 @@
 title: "관계 삭제 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c17aa3e6662d37dfb3863756597dd95022f7f02
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4ab9e8b9845b77601b2ea1a5d39cd7f81a48e326
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="delete-relationships-ssas-tabular"></a>관계 삭제(SSAS 테이블 형식)
-  다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 기존 관계를 삭제할 수 있습니다. 테이블 형식 모델에서 관계를 사용하는 방법에 대한 자세한 내용은 [관계&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]다이어그램 뷰에서 모델 디자이너를 사용 하 여 또는 관계 관리 대화 상자를 사용 하 여 기존 관계를 삭제할 수 있습니다. 테이블 형식 모델에서 관계를 사용하는 방법에 대한 자세한 내용은 [관계&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)를 참조하세요.  
   
 ## <a name="considerations-for-deleting-relationships"></a>관계 삭제 시 고려 사항  
  관계를 삭제할지 여부를 결정할 때 다음 사항에 유의하십시오.  

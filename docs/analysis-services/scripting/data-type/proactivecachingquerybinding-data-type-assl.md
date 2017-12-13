@@ -2,12 +2,12 @@
 title: "ProactiveCachingQueryBinding 데이터 형식 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd4c81b77bb08d8918f842400e68b2324cc99979
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2c365146ac64d791af9742f44c714f15b02ee2e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="proactivecachingquerybinding-data-type-assl"></a>ProactiveCachingQueryBinding 데이터 형식(ASSL)
-  정보를 나타내는 파생된 데이터 형식을 정의 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) 테이블 및 뷰의 캐시 재작성이 필요한 지정된 된 쿼리의 실행을 통해 식별 된 데이터 원본 변경 내용에 대 한 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]정보를 나타내는 파생된 데이터 형식을 정의 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) 테이블 및 뷰의 캐시 재작성이 필요한 지정된 된 쿼리의 실행을 통해 식별 된 데이터 원본 변경 내용에 대 한 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

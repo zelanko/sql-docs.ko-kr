@@ -2,12 +2,12 @@
 title: "만들기 명령 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae07d8b17fc659bb8a8bc2bef1cdcb6421606c29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc53ca0e029bd4873ea5ff408ed30472640c9959
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-command-tmsl"></a>만들기 명령 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  지정된 된 개체와 모든 지정 된 하위 개체를 만듭니다. 개체가 이미 존재 하는 경우 명령에서 오류가 발생 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]지정된 된 개체와 모든 지정 된 하위 개체를 만듭니다. 개체가 이미 존재 하는 경우 명령에서 오류가 발생 합니다.  
   
 ## <a name="request"></a>요청  
  요청의 구조 개체에 따라 다릅니다. 부모와 형제의 전체 개체 정의 필요 없지만 부모인 개체 해당 자식을 모두 포함 해야 합니다.  

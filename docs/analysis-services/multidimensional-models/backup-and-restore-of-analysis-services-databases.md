@@ -2,12 +2,12 @@
 title: "Analysis Services 데이터베이스의 백업 및 복원 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6f5db5fe3911767be37930fb7d195efffb826042
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f750fc5c1c991b8cf4392d427855f583c478c028
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services 데이터베이스 백업 및 복원
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터베이스와 해당 개체를 특정 시점에서 복구할 수 있도록 백업 및 복원이 포함되어 있습니다. 백업 및 복원은 데이터베이스를 업그레이드한 서버에 마이그레이션하거나 서버 간에 데이터베이스를 이동하거나 데이터베이스를 프로덕션 서버에 배포하는 데 사용할 수 있는 기술이기도 합니다. 중요한 데이터에 대한 백업 계획이 없는 경우 데이터 복구를 위해 가능한 한 빨리 계획을 수립하고 구현해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하면 복구할 수 있도록 데이터베이스 및 해당 개체를 특정 지정에서 시간에서 백업 및 복원이 포함 되어 있습니다. 백업 및 복원은 데이터베이스를 업그레이드한 서버에 마이그레이션하거나 서버 간에 데이터베이스를 이동하거나 데이터베이스를 프로덕션 서버에 배포하는 데 사용할 수 있는 기술이기도 합니다. 중요한 데이터에 대한 백업 계획이 없는 경우 데이터 복구를 위해 가능한 한 빨리 계획을 수립하고 구현해야 합니다.  
   
  백업 및 복원 명령은 배포된 Analysis Services 데이터베이스에서 수행됩니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 프로젝트 및 솔루션에 대해 원본 제어를 사용하여 특정 버전의 원본 파일을 복구한 다음 사용하고 있는 원본 제어 시스템의 리포지토리에 대한 데이터 복구 계획을 만들어야 합니다.  
   

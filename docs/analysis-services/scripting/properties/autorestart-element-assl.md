@@ -2,12 +2,12 @@
 title: "AutoRestart 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 128defdc7641fe84fbe4f1b253f464ea647a72be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7d4ca72166c6c2ce6edcab021416701d6889a0b3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="autorestart-element-assl"></a>AutoRestart 요소(ASSL)
-  결정 여부는 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 요소는 경우 자동으로 다시 시작 해야는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서비스가 중지 되었다가 다시 시작 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]결정 여부는 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 요소는 경우 자동으로 다시 시작 해야는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서비스가 중지 되었다가 다시 시작 합니다.  
   
 ## <a name="syntax"></a>구문  
   

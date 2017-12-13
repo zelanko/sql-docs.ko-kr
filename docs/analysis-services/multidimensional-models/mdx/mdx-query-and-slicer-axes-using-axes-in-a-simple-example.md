@@ -2,12 +2,12 @@
 title: "(MDX) 간단한 예에서 쿼리 및 Slicer 축 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e27b8a961e692a9b1757573e4c735949fc537153
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9759826389cef8eb16f5330036a008723e27dc7b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>MDX 쿼리 및 Slicer 축-축을 사용 하 여 간단한 예제
-  이 항목에 제시된 예에서는 쿼리 및 slicer 축을 지정 및 사용하는 기본적인 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에 제시 된 간단한 예제를 지정 하 고 쿼리 및 slicer 축을 사용 하는 기본적인 방법을 설명 합니다.  
   
 ## <a name="the-cube"></a>큐브  
  Route 및 Time이라는 두 개의 간단한 차원을 가진 TestCube라는 이름의 큐브가 있는 경우 각 차원은 Route 및 Time으로 명명된 한 개의 사용자 계층만 가집니다. 큐브의 측정값은 Measures 차원의 일부이므로 이 큐브에는 모두 3개의 차원이 있습니다.  

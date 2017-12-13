@@ -2,12 +2,12 @@
 title: "Audit 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e2098b1ce63dc80bea5da3f203e704ff71bee8d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 06b0bffdf05553931ee4a44a937b1d80fb589ea7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="audit-element-assl"></a>Audit 요소(ASSL)
-  지정 하는 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 요소 서버의 성능이 저하 되는 경우에 이벤트를 삭제할 수 없습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]지정 하는 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 요소 서버의 성능이 저하 되는 경우에 이벤트를 삭제할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   

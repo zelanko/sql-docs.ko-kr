@@ -2,12 +2,12 @@
 title: "파워 피벗 구성 도구 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 093e9a77dccdf8b01383152601ceadcdff816db9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 51bfbb7fa3cbfad5c8415fcda1fab0e54643ec62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-configuration-tools"></a>파워 피벗 구성 도구
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 구성, 복구 또는 제거합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]구성, 복구 또는 제거는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 와 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구입니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 설치하지 않습니다. 향후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]릴리스에서는 구성 도구가 다운로드로 제공될 예정입니다.  
   

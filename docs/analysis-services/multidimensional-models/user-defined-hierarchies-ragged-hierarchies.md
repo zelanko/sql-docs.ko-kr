@@ -2,12 +2,12 @@
 title: "비정형 계층 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: df06dbfc368310427d1359f78de557c910b94af9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4b3ffa23cdd185c57a86bc34921c3e489870cd2d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>사용자 정의 계층-비정형된 계층 구조
-  비정형 계층은 균일하지 않은 수준 수가 있는 사용자 정의 계층입니다. 일반적인 예로 계정 차트, 고위 관리자가 부서 관리자와 비관리자를 부하 직원으로 둔 조직 차트, Washington D.C., Vatican City 또는 New Delhi와 같이 부모 State 또는 Province가 없이 Country-Region-City로 구성된 지역 계층 등이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]비정형된 계층은 수준의 균일 하지 않을 수 있는 사용자 정의 계층입니다. 일반적인 예로 계정 차트, 고위 관리자가 부서 관리자와 비관리자를 부하 직원으로 둔 조직 차트, Washington D.C., Vatican City 또는 New Delhi와 같이 부모 State 또는 Province가 없이 Country-Region-City로 구성된 지역 계층 등이 있습니다.  
   
  차원의 대부분의 계층에서는 각 수준 위에 동일한 수준의 다른 멤버와 같은 수의 멤버가 있습니다. 비정형 계층에서는 최소한 한 멤버의 논리적 부모 멤버가 해당 멤버 바로 위 수준에 있지 않다는 점이 다릅니다. 이러한 경우 계층이 여러 드릴다운 경로에 대한 서로 다른 수준으로 이어집니다. 클라이언트 응용 프로그램에서 이로 인해 드릴다운 경로가 불필요하게 복잡해질 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "마이닝 모델에 내용 쿼리 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cff8211d13fe5ddf5fd1128f0fd53a0ab013ae1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecd15e1d0fd84c1a359d49c70f736b6c44856c1e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>마이닝 모델에 내용 쿼리 만들기
-  AMO 또는 XML/A를 사용하여 프로그래밍 방식으로 마이닝 모델 콘텐츠를 쿼리할 수 있지만 DMX를 사용하여 쿼리를 만드는 편이 더 쉽습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]AMO 또는 XML을 사용 하 여 마이닝 모델 콘텐츠를 프로그래밍 방식으로 쿼리할 수/A를 있지만 DMX를 사용 하 여 쿼리를 만드는 쉽습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
   
  다음 절차에서는 DMX를 사용하여 마이닝 모델에 대한 쿼리를 만드는 방법과 데이터 마이닝 스키마 행 집합을 쿼리하는 방법을 보여 줍니다.  
   

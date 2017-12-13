@@ -2,12 +2,12 @@
 title: "Microsoft 연결 규칙 뷰어를 사용 하 여 모델 찾아보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41ef2091d63d1a4e5f2f3bf294e590be5cd173e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a30bdbe56a78d1bb9b09f0ff179646496bb4afdd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 규칙 뷰어에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하여 작성된 마이닝 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 장바구니 분석에 사용할 수 있는 데이터 마이닝 모델을 만드는 데 사용하는 연결 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)를 참조하십시오.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 뷰어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 하 여 만든 마이닝 모델 표시는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 장바구니 분석에 사용할 수 있는 데이터 마이닝 모델을 만드는 데 사용하는 연결 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)를 참조하십시오.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하는 주된 이유는 다음과 같습니다.  
   

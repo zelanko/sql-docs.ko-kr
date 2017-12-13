@@ -2,12 +2,12 @@
 title: "Notification Events 이벤트 범주 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83fd0f1ac0d191cf1be87f448e0b6f0f0562a2c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 151b180138ef1197429b0e2a7ac2c34cd2ffeaac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="notification-events-event-category"></a>Notification Events 이벤트 범주
-  Notification Events 이벤트 범주에는 다음 표에서 설명하는 이벤트 클래스가 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Notification Events 이벤트 범주에는 다음 표에 설명 된 이벤트 클래스가 있습니다.  
   
 |Event Class|이벤트 ID|Description|  
 |-----------------|--------------|-----------------|  

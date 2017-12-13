@@ -2,12 +2,12 @@
 title: "기본 데이터 모델링 및 배포 속성 (SSAS 테이블 형식) 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 704a719e3f2d509b5a949f7e44dd86cdcea7b183
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f37da1066d505f36b6863dd65d401d689ccdedf5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>기본 데이터 모델링 및 배포 속성 구성(SSAS 테이블 형식)
-  이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 만든 각각의 새로운 테이블 형식 모델 프로젝트에 대해 미리 정의될 수 있는 기본 호환성 수준, 배포 및 작업 영역 데이터베이스 속성 설정을 구성하는 방법에 대해 설명합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 기본 호환성 모드를 구성 하는 방법을 설명, 배포 및 각각의 새 테이블 형식 모델 프로젝트에 대 한 미리 정의 될 수 있는 작업 영역 데이터베이스 속성 설정에서 만드는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>새 모델 프로젝트의 기본 호환성 수준 속성 설정을 구성하려면  
   

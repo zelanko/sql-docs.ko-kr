@@ -6,7 +6,9 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: 
+ms.suite: pro-bi
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
@@ -14,15 +16,17 @@ ms.workload: analysis-services
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.author: genemi
-ms.openlocfilehash: 6de674b8fb63908964538339410a66db6918a16a
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
-ms.translationtype: HT
+ms.openlocfilehash: cdd23d500e664253926cec6567e4da674897d033
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL server Analysis Services
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
 
 Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/) 설명서 웹 사이트에서 기존 문서 일부를 업데이트합니다. 이 문서에는 최근 업데이트된 문서에서 발췌한 내용이 표시됩니다. 새 문서로 연결되는 링크도 나열될 수 있습니다.

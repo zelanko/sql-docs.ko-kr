@@ -2,12 +2,12 @@
 title: "Analysis Services에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 45b056f7b2d109396a114a7d8459bcc4db95c1ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683474e873b45eca2fc39d0b8f254da06d205cf2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-analysis-services"></a>Analysis Services에 연결
-  이 섹션의 정보를 참조하여 연결 문자열 속성, 연결에 사용되는 클라이언트 라이브러리, Analysis Services에서 지원하는 인증 방법, 서버가 오프라인 상태가 되기 전에 연결을 설정 또는 해제하는 방법 등을 알아봅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]연결 문자열 속성을 설정 또는 서버를 오프 라인 상태로 전환 하기 전에 연결을 해제 하는 방법과 Analysis Services에서는 인증 방법을 지 원하는 연결에 사용 되는 클라이언트 라이브러리에 대 한 자세한 내용은이 섹션의 정보를 사용 합니다.  
   
 ## <a name="analysis-services-connections"></a>Analysis Services 연결  
  Analysis Services는 TCP를 네트워크 프로토콜로 사용하고 XMLA(XML for Analysis)를 통신 프로토콜로 사용합니다. 가장 낮은 수준에서 Analysis Services와 함께 제공되는 모든 클라이언트 라이브러리는 XMLA-over-TCP를 구현합니다. 원시 XMLA를 기반으로 응용 프로그램을 작성할 수 있지만 대부분의 응용 프로그램과 응용 프로그램 개발자는 클라이언트 라이브러리를 사용하여 개체 모델을 활용하고 개체 모델이 제공하는 코딩 효율성을 이용합니다. 클라이언트를 Analysis Services에 연결하려는 경우 스택 간에 TCP를 사용할 수 없으면 IIS를 중간 연결로 사용할 수 있습니다. IIS를 통해 HTTP 액세스를 사용할 때의 한 가지 이점은 연결 문자열에서 자격 증명을 전달하는 응용 프로그램에서 연결할 수 있다는 것입니다.  

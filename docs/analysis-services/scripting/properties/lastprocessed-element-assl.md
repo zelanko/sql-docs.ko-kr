@@ -2,12 +2,12 @@
 title: "LastProcessed 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfb97c53960e13c6d1df6d9ca9769408cd8ead9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a1161545446b341ec5fe3763fc929167079e93d7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lastprocessed-element-assl"></a>LastProcessed 요소(ASSL)
-  부모 요소를 포함하는 데이터베이스가 마지막으로 처리된 시간을 나타내는 읽기 전용 타임스탬프를 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소를 포함 하는 데이터베이스에 마지막으로 처리를 나타내는 읽기 전용 타임 스탬프를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   

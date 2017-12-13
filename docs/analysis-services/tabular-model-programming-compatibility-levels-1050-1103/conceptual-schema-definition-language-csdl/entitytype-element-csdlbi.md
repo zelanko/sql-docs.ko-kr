@@ -2,12 +2,12 @@
 title: "EntityType 요소 (CSDLBI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5b62cad891d4d02120b3325d57e327e299ef1be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 303f09187528dd7fa2c897fea5fd86ec6d7f23d9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 요소(CSDLBI)
-  **EntityType** 요소는 데이터 모델에서 고객 또는 주문과 같은 높은 수준의 엔터티 구조를 나타내는 복합 유형입니다. **bi: EntityType** 요소 확장의 정의 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) 에 사용 되는 [엔터티 데이터 프레임 워크](http://msdn.microsoft.com/library/bb399567.aspx)합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**EntityType** 요소는 고객 또는 데이터 모델의 순서와 같은 높은 수준의 엔터티 구조를 나타내는 복합 유형입니다. **bi: EntityType** 요소 확장의 정의 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) 에 사용 되는 [엔터티 데이터 프레임 워크](http://msdn.microsoft.com/library/bb399567.aspx)합니다.  
   
  데이터 모델에 포함된 엔터티별로 EntityType 요소를 지정해야 합니다. EntityType의 하위 요소는 테이블의 열 및 측정값을 설명합니다. 테이블 간의 관계는 **EntityContainer**에 포함됩니다.  
   

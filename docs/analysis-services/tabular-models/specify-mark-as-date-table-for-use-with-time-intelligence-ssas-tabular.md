@@ -2,12 +2,12 @@
 title: "날짜 테이블로 표시 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b8d4a4ab8b48b8d18a32023902b24132831b97c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d9a37e946ba4a660b205b948a7f52d2dc84e6f39
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>시간 인텔리전스에 사용할 날짜 테이블로 표시 지정
-  DAX 수식에서 시간 인텔리전스 함수를 사용 하려면 날짜 테이블 및 날짜 데이터 형식의 고유 식별자 (datetime) 열을 지정 해야 합니다. 날짜 테이블의 열을 고유 식별자로 지정한 후에는 날짜 테이블과 임의의 팩트 테이블에 있는 열 간에 관계를 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]DAX 수식에서 시간 인텔리전스 함수를 사용 하려면 날짜 테이블 및 날짜 데이터 형식의 고유 식별자 (datetime) 열을 지정 해야 합니다. 날짜 테이블의 열을 고유 식별자로 지정한 후에는 날짜 테이블과 임의의 팩트 테이블에 있는 열 간에 관계를 만들 수 있습니다.  
   
  시간 인텔리전스 함수를 사용할 때는 다음 규칙이 적용 됩니다.  
   

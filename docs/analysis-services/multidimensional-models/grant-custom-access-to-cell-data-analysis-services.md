@@ -2,12 +2,12 @@
 title: "셀 데이터 (Analysis Services)에 대 한 사용자 지정 액세스 부여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f199fb9b23b2837c4d886c2c5721c6cd762b7fad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0089b0257e4e3291375aee7baad1f304412f2a20
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>셀 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
-  셀 보안은 큐브 내 측정값 데이터에 대한 액세스를 허용하거나 거부하는 데 사용됩니다. 다음 그림은 특정 측정값에 대한 액세스만 허용된 사용자로 연결했을 때 피벗 테이블에서 허용된 측정값과 거부된 측정값의 조합을 보여 줍니다. 이 예제에서 **재판매인 판매액** 및 **재판매인 총 제품 원가** 는 이 역할을 통해 사용할 수 있는 유일한 측정값입니다. 다른 모든 측정값은 암시적으로 거부됩니다. 이 결과를 얻는 데 사용한 단계는 아래의 다음 섹션인 "특정 측정값에 대한 액세스 허용"에 나와 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]셀 보안은 큐브 내 측정값 데이터에 액세스를 허용 하거나 거부할 사용 됩니다. 다음 그림은 특정 측정값에 대한 액세스만 허용된 사용자로 연결했을 때 피벗 테이블에서 허용된 측정값과 거부된 측정값의 조합을 보여 줍니다. 이 예제에서 **재판매인 판매액** 및 **재판매인 총 제품 원가** 는 이 역할을 통해 사용할 수 있는 유일한 측정값입니다. 다른 모든 측정값은 암시적으로 거부됩니다. 이 결과를 얻는 데 사용한 단계는 아래의 다음 섹션인 "특정 측정값에 대한 액세스 허용"에 나와 있습니다.  
   
  ![허용 및 거부 된 셀을 보여 주는 피벗 테이블](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "허용 및 거부 된 셀을 보여 주는 피벗 테이블")  
   

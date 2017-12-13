@@ -2,12 +2,12 @@
 title: "변경 테이블, 열 또는 행 필터 매핑 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a88238ef377de669f3100852272c9cdbee8987c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 055b4415c1b7c60a1f22047d8e7ac95c7bc0e8cb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>테이블, 열 또는 행 필터 매핑 변경(SSAS 테이블 형식)
-  이 항목에서는 **에서** 테이블 속성 편집 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]대화 상자를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]사용 하 여 테이블, 열 또는 행 필터 매핑을 변경 하는 방법에 설명 된 **테이블 속성 편집** 대화 상자에서 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]합니다.  
   
  **테이블 속성 편집** 대화 상자의 옵션은 원래 데이터를 가져올 때 목록에서 테이블을 선택하는 방법을 사용했는지 아니면 SQL 쿼리를 사용하는 방법을 사용했는지에 따라 다릅니다. 목록에서 선택하여 데이터를 가져온 경우 **테이블 속성 편집** 대화 상자에 테이블 미리 보기 모드가 표시됩니다. 이 모드에서는 원본 테이블의 첫 50개 행으로 제한된 하위 집합만 표시됩니다. SQL 문을 사용하여 데이터를 가져온 경우 **테이블 속성 편집** 대화 상자에 SQL 문만 표시됩니다. SQL 쿼리 문을 사용하면 필터를 디자인하거나 SQL 문을 직접 편집하여 행의 일부만 검색할 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: XML for Analysis Schema Rowsets | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0f3527abc7fcd12757b4fdc4abd02d97c79d2ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f5cb613a916f2cff4ec8aca3bb67fc9c14d1b10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 서버 상태, 작업 및 개체에 대한 메타데이터를 반환하는 스키마 행 집합을 포함합니다. 구조와 특성이 가변적인 Analysis Services 모델에 연결하는 클라이언트 응용 프로그램을 개발하려는 경우 메타데이터 검색이 필요합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 공급자 서버 상태, 작업 및 개체에 대 한 메타 데이터를 반환 하는 스키마 행 집합을 포함 합니다. 구조와 특성이 가변적인 Analysis Services 모델에 연결하는 클라이언트 응용 프로그램을 개발하려는 경우 메타데이터 검색이 필요합니다.  
   
  스키마 행 집합은 서버를 모니터링하고 문제를 해결하는 데 도움이 되는 내부 프로세스 및 작업에 대한 정보를 제공합니다. 임시 관리 태스크를 더욱 잘 지원하기 위해 대부분의 스키마 행 집합에 대해 DMV(동적 관리 뷰) 쿼리를 실행할 수 있습니다. DMV 쿼리는 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 볼 수 있는 읽기 가능한 테이블 형식으로 결과를 반환됩니다.  
   

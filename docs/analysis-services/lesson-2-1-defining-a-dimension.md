@@ -2,12 +2,12 @@
 title: "차원을 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2680567f182012a93348f4a118a0844298cb6107
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 125908516823730701e0502398d4c8346d093edb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>단원 2-1-차원 정의
-다음 태스크에서는 차원 마법사를 사용하여 Date 차원을 구축합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]다음 태스크에서는 Date 차원을 구축을 차원 마법사를 사용 합니다.  
   
 > [!NOTE]  
 > 이 단원을 수행하려면 1단원의 모든 절차를 완료해야 합니다.  

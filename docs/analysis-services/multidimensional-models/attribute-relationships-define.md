@@ -2,12 +2,12 @@
 title: "특성 관계를 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 808b6dbe06968e5c44a4979f20ca07a12ac70be5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fd9bce97f6df5c602ce549dc3549ddaf6739f975
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-relationships---define"></a>특성 관계-정의
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성은 차원의 기본 구성 요소입니다. 차원은 특성 관계를 기반으로 구성되는 특성 집합을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 특성은 차원의 기본 빌딩 블록입니다. 차원은 특성 관계를 기반으로 구성되는 특성 집합을 포함합니다.  
   
  차원에 포함된 테이블마다 테이블의 키 특성을 해당 테이블의 다른 특성과 연결하는 특성 관계가 있습니다. 이 관계는 차원을 만들 때 만들 수 있습니다.  
   

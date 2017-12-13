@@ -2,12 +2,12 @@
 title: "데이터 마이닝 개체 처리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06346679653136a2efa0fc228405e3282078b279
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b25fae3fd5c17b93cc17ce2a3f7ea6d6059aa0fe
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-data-mining-objects"></a>데이터 마이닝 개체 처리
-  데이터 마이닝 개체는 처리되기 전까지는 단순히 빈 컨테이너입니다. 데이터 마이닝 모델을*처리* 하는 작업을 *학습*이라고도 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]가 처리 될 때까지 데이터 마이닝 개체는 단순히 빈 컨테이너입니다. 데이터 마이닝 모델을*처리* 하는 작업을 *학습*이라고도 합니다.  
   
  **마이닝 구조 처리:** 마이닝 구조는 외부 데이터 원본에서 열 바인딩 및 사용법 메타데이터에 의해 정의된 데이터를 가져와서 읽습니다. 이 데이터 전체를 읽은 다음 분석하여 다양한 통계를 추출합니다. Analysis Services에서는 데이터 마이닝 알고리즘으로 분석하는 데 적합한 데이터의 압축된 표현을 로컬 캐시에 저장합니다. 이 캐시는 보관하거나 모델 처리 후 제거할 수 있습니다. 기본적으로 캐시는 저장됩니다. 자세한 내용은 [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md)를 참조하세요.  
   

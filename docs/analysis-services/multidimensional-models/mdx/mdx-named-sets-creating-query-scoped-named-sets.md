@@ -2,12 +2,12 @@
 title: "명명 된 집합 (MDX) 쿼리 범위 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a05d52185020b6906469f3244e3ae1a6b1fc7a2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 29e5f201c0cb07527083985d8de46a2ac3f8431b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>명명 된 집합-쿼리 범위를 만드는 MDX 명명 된 집합
-  단일 MDX 쿼리에만 명명된 집합이 필요한 경우 WITH 키워드를 사용하여 해당 명명된 집합을 정의할 수 있습니다. WITH 키워드를 사용하여 만든 명명된 집합은 쿼리 실행이 종료된 다음에는 더 이상 존재하지 않습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]명명된 된 집합은만 하는 경우 필요한 단일 MDX (Multidimensional Expressions) 쿼리를 정의할 수 있습니다 WITH 키워드를 사용 하 여 명명 된 집합입니다. WITH 키워드를 사용하여 만든 명명된 집합은 쿼리 실행이 종료된 다음에는 더 이상 존재하지 않습니다.  
   
  이 항목의 설명에서와 같이 WITH 키워드의 구문은 매우 유연하기 때문에 명명된 집합을 정의하는 함수를 사용할 수도 있습니다.  
   

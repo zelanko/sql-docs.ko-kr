@@ -2,8 +2,8 @@
 title: "Ubuntu에서 SQL Server에 대 한 자동된 설치 | Microsoft Docs"
 description: "SQL Server 스크립트 샘플 ubuntu 무인된 설치"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 29da4f824b83a09ed839e469a4788ce42e7d92a4
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 507d136d24a9c9b7b68435a46952b79aecb1f688
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu 용 SQL Server 무인된 설치 스크립트 샘플:
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/01/2017
 ## <a name="sample-script"></a>샘플 스크립트
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

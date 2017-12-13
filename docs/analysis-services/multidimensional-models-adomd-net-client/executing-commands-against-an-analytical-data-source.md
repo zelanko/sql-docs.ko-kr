@@ -2,12 +2,12 @@
 title: "분석 데이터 원본에 대해 명령을 실행 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 450d3553509ee3358711705bbc3f5e8a10874820
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 810c6e8bd489bac42a3f4d90d4dbe9990f5ca038
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>분석 데이터 원본에 대한 명령 실행
-  분석 데이터 원본에 대한 연결을 설정한 후 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체를 사용하여 해당 데이터 원본에 대한 명령을 실행하고 결과를 반환할 수 있습니다. 이러한 명령은 MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 또는 제한된 SQL 구문을 사용하여 데이터를 검색할 수 있습니다. 또한 ASSL(Analysis Services Scripting Language) 명령을 사용하여 기본 데이터베이스를 수정할 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]분석 데이터 원본에 대 한 연결을 만든 다음 사용할 수 있습니다는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체에 대해 명령을 실행 하 고 해당 데이터 원본에서 결과 반환 합니다. 이러한 명령은 MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 또는 제한된 SQL 구문을 사용하여 데이터를 검색할 수 있습니다. 또한 ASSL(Analysis Services Scripting Language) 명령을 사용하여 기본 데이터베이스를 수정할 수도 있습니다.  
   
 ## <a name="creating-a-command"></a>명령 만들기  
  명령을 실행하려면 먼저 명령을 만들어야 합니다. 다음 두 가지 방법 중 하나를 사용하여 명령을 만들 수 있습니다.  

@@ -2,12 +2,12 @@
 title: "RelationshipType 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d93ac8d20a63e5815d388652e35e6d606502492
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c6253b67d4ba55e6ed316ebfd92ca8eb891ce0e8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="relationshiptype-element-assl"></a>RelationshipType 요소(ASSL)
-  나타냅니다 여부에 대 한 멤버 관계는 [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) 변경할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]나타냅니다 여부에 대 한 멤버 관계는 [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) 변경할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

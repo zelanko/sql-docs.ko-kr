@@ -2,12 +2,12 @@
 title: "데이터 마이닝 솔루션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d296518a6a41af88d194e8cb23b2abc371b497b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4b806912f80b6e95a455456a992979953113a330
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-solutions"></a>데이터 마이닝 솔루션
-  데이터 마이닝 솔루션은 하나 이상의 데이터 마이닝 프로젝트가 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 솔루션은 한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하나 이상의 데이터 마이닝 프로젝트가 포함 된 솔루션입니다.  
   
  이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 통합 데이터 마이닝 솔루션을 디자인하고 구현하는 방법에 대해 설명합니다. 데이터 마이닝 디자인 프로세스와 관련 도구에 대한 개요는 [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md)를 참조하십시오.  
   

@@ -2,12 +2,12 @@
 title: "파티션 및 역할 배포 옵션 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e4b152723aae849c2e46683fa2ea969e2cf09171
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0238b79f7510aa0f7e86726dcfa2712824302403
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>배포 스크립트 파일에서 파티션 및 역할 배포 옵션
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 파티션 및 역할 배포 옵션을 읽습니다는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]때 사용 하 여 파티션 및 역할 배포 옵션의 현재 프로젝트는 \< *프로젝트 이름을*>.deploymentoptions 파일이 만들어집니다. 이러한 구성 설정에 대한 자세한 내용은 [Understanding the Input Files Used to Create the Deployment Script](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)를 참조하십시오.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 파티션 및 역할 배포 옵션을 읽습니다는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]때 사용 하 여 파티션 및 역할 배포 옵션의 현재 프로젝트는 \< *프로젝트 이름을*>.deploymentoptions 파일이 만들어집니다. 이러한 구성 설정에 대한 자세한 내용은 [Understanding the Input Files Used to Create the Deployment Script](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)를 참조하십시오.  
   
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>파티션 및 역할 배포 옵션 검토  
  배포 옵션에 \< *프로젝트 이름을*>.deploymentoptions 파일은 다음과 같습니다.  

@@ -2,12 +2,12 @@
 title: "MiningModelingFlag 데이터 형식 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25af1e51f0cdc29180aa35076fc84968c6e6d5a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9dd5c51e85fa0f07ca2e7f8314c78ea0d6bd2e3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="miningmodelingflag-data-type-assl"></a>MiningModelingFlag 데이터 형식(ASSL)
-  사용 가능한 모델링 플래그를 나타내는 기본 데이터 형식을 정의 [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]사용 가능한 모델링 플래그를 나타내는 기본 데이터 형식을 정의 [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -2,12 +2,12 @@
 title: "모델 테스트 데이터 선택 및 매핑 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0fc3ae78de1d40004dc1d99cd465cf043e1fa334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-model-testing-data"></a>모델 테스트 데이터 선택 및 매핑
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 정확도 차트를 만들려면 모델을 테스트하는 데 사용할 데이터를 선택하고 데이터를 모델에 매핑해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]정확도 차트를 만들려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 모델, 테스트에 사용 되 고 데이터를 모델에 매핑해야 하는 데이터를 선택 해야 합니다.  
   
  마이닝 구조를 작성할 때 홀드아웃 데이터 집합을 만든 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 기본적으로 마이닝 모델 테스트 데이터가 사용됩니다. 홀드아웃 테스트 집합은 열 이름 및 데이터 형식이 항상 모델과 일치하고 데이터 분포도 유사하므로 홀드아웃 테스트 집합을 만드는 것은 동일한 마이닝 구조를 기반으로 하는 모델을 테스트하는 가장 쉬운 방법입니다. 또한 디자이너에서는 입력 열과 모델 열 간의 관계를 자동으로 만듭니다.  
   

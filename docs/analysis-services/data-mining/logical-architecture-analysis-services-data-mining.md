@@ -2,12 +2,12 @@
 title: "논리적 아키텍처 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ccd3748b3190fc3d2ff55c850ae94f2244738dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 67c8c404bfcf499957fefd0470d7cc3f9caeeb9d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>논리적 아키텍처(Analysis Services - 데이터 마이닝)
-  데이터 마이닝은 여러 구성 요소와의 상호 작용을 수반하는 프로세스입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝은 여러 구성 요소와의 상호 작용 수 반하는 프로세스입니다.  
   
 -   우선 학습, 테스트 및 예측에 사용하기 위해 SQL Server 데이터베이스나 기타 데이터 원본에 있는 데이터의 원본에 액세스해야 합니다.  
   

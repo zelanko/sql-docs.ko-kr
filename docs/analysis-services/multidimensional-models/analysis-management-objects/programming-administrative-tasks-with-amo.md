@@ -2,12 +2,12 @@
 title: "AMO로 관리 태스크 프로그래밍 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e585db13b3c3562cd454ef41fdbb7d60bbd94c26
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 72c1e8f8b21dbdaed355bd72fe89dc9976a49137
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>AMO로 관리 태스크 프로그래밍
-  AMO(Analysis Management Objects)는 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 관리하는 데 사용되는 프로그래밍 라이브러리입니다. 이 섹션에서는 AMO 개체를 사용하여 프로그래밍하는 방법을 배웁니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Management Objects (AMO)는 관리 클라이언트 응용 프로그램에서 사용 하는 프로그래밍 라이브러리 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이 섹션에서는 AMO 개체를 사용하여 프로그래밍하는 방법을 배웁니다.  
   
  AMO 라이브러리는 특정 태스크를 수행하는 데 사용되는 논리적으로 관련된 개체 그룹이라고 생각할 수 있습니다.  
   

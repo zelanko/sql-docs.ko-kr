@@ -2,12 +2,12 @@
 title: "정확도 차트 유형 선택 및 집합 차트 옵션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f440a7cd7770f1412480e19304af4efcf17b1fba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9c31d9d409e3dee18e7121dcc42e9d9546235294
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>정확도 차트 유형 선택 및 차트 옵션 설정
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 여러 가지 방법으로 마이닝 모델의 유효성을 확인할 수 있습니다. 각 모델 또는 구조에 대해 만들 수 있는 정확도 차트의 유형은 다음 요소에 따라 달라집니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마이닝 모델의 유효성을 확인 하기 위한 여러 가지 방법을 제공 합니다. 각 모델 또는 구조에 대해 만들 수 있는 정확도 차트의 유형은 다음 요소에 따라 달라집니다.  
   
 -   모델을 만드는 데 사용된 알고리즘 유형  
   

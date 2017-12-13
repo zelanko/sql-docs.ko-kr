@@ -2,12 +2,12 @@
 title: "데이터 마이닝 개체 내보내기 및 가져오기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 494f808919d4cc82ecdb91536e79b60976e74565
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d62dc8db6debd9b930c81abb4130a45543010e41
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="export-and-import-data-mining-objects"></a>데이터 마이닝 개체 내보내기 및 가져오기
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 솔루션 백업, 복원 및 마이그레이션 기능 이외에도 SQL Server 데이터 마이닝을 통해 DMX(Data Mining Extensions)를 사용하여 서로 다른 서버 간에 데이터 마이닝 구조 및 모델을 빠르게 전송할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]제공 하는 기능 외에도 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SQL Server 데이터 마이닝을 백업, 복원 및 마이그레이션 솔루션을 신속 하 게 데이터 마이닝을 사용 하 여 다른 서버 간에 데이터 마이닝 구조 및 모델을 전송 하는 기능을 제공 합니다 Extensions (DMX)입니다.  
   
  데이터 마이닝 솔루션에 다차원 데이터베이스 대신 관계형 데이터가 사용된 경우, 데이터베이스 복원을 사용하거나 전체 솔루션을 배포하는 방법보다 **EXPORT** 및 **IMPORT** 를 사용하여 모델을 전송하는 방법이 훨씬 손쉽고 빠릅니다.  
   

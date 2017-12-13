@@ -2,12 +2,12 @@
 title: "기존 마이닝 구조에 마이닝 모델 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07a1f5deb7fc82fbe6021691417addf00414b3a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79d2c8b506cd42bd04ae4fb95f28fa2b3a07f613
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>기존 마이닝 구조에 마이닝 모델 추가
-  초기 모델을 추가한 후 마이닝 구조에 마이닝 모델을 더 추가할 수 있습니다. 각 모델에 구조에 있는 열이 포함되어야 하지만 마이닝 모델마다 다르게 열 용도를 정의할 수 있습니다. 마이닝 모델 열을 정의하는 방법은 [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]초기 모델을 추가한 후 마이닝 구조에 마이닝 모델을 더 추가할 수 있습니다. 각 모델에 구조에 있는 열이 포함되어야 하지만 마이닝 모델마다 다르게 열 용도를 정의할 수 있습니다. 마이닝 모델 열을 정의하는 방법은 [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)을 참조하세요.  
   
 ### <a name="to-add-a-mining-model-to-the-structure"></a>구조에 마이닝 모델을 추가하려면  
   

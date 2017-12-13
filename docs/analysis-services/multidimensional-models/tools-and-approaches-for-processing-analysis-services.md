@@ -2,12 +2,12 @@
 title: "도구 및 처리 접근 방법 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 597c60a56702d8c7726957e26e02055f85b3b49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ad1cff7114e6891af5cdf54cfc29b658213c6bb4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>도구 및 처리 접근 방법(Analysis Services)
-  처리는 Analysis Services가 관계형 데이터 원본을 쿼리하고 해당 데이터를 사용하여 Analysis Services 개체를 채우는 작업입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]처리는 Analysis Services가 관계형 데이터 원본을 쿼리하여 및 해당 데이터를 사용 하 여 Analysis Services 개체를 채우는 작업입니다.  
   
  Analysis Services 시스템 관리자는 다음과 같은 방법을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 처리를 실행하고 모니터링할 수 있습니다.  
   

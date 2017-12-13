@@ -2,12 +2,12 @@
 title: "데이터 원본 뷰 (Analysis Services)에서 논리적 기본 키 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6ba2ab3a2fb37400a47b9d54981d48190f7f0e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d38773feb45ada119da338ccf022630b4a781b8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 논리적 기본 키 정의(Analysis Services)
-  데이터 원본 뷰 마법사와 데이터 원본 뷰 디자이너는 기본 데이터베이스 테이블을 기반으로 데이터 원본 뷰에 추가되는 테이블의 기본 키를 자동으로 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 원본 뷰 마법사와 데이터 원본 뷰 디자이너에는 자동으로 기본 데이터베이스 테이블을 기반으로 하는 데이터 원본 뷰에 추가 되는 테이블에 대 한 기본 키를 정의 합니다.  
   
  하지만 때로는 데이터 원본 뷰에서 수동으로 기본 키를 정의해야 할 수도 있습니다. 예를 들어 성능 또는 디자인상의 이유로 데이터 원본의 테이블이 기본 키 열을 명시적으로 정의하지 않았을 수 있습니다. 명명된 쿼리 및 뷰에서 테이블의 기본 키 열을 생략할 수도 있습니다. 테이블, 뷰 또는 명명된 쿼리에 물리적 기본 키가 정의되어 있지 않으면 데이터 원본 뷰 디자이너에서 테이블, 뷰 또는 명명된 쿼리에 대해 수동으로 논리적 기본 키를 정의할 수 있습니다.  
   

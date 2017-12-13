@@ -2,12 +2,12 @@
 title: "DisplayFolder 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 613965e2f518fbc64fb8e01b525119b9666c8a2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 554ec64c87e5d60e1c462635898f3491bf494e05
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="displayfolder-element-assl"></a>DisplayFolder 요소(ASSL)
-  부모 요소를 나열할 폴더를 지정합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 응용 프로그램 개발자와 관리자에 대 한 여러 요소를 시각적으로 범주화 표시 폴더의 사용을 지원 될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소를 나열할 폴더를 지정 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 응용 프로그램 개발자와 관리자에 대 한 여러 요소를 시각적으로 범주화 표시 폴더의 사용을 지원 될 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

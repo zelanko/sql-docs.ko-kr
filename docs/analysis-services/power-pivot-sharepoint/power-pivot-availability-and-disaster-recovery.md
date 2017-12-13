@@ -2,12 +2,12 @@
 title: "Power Pivot 가용성 및 재해 복구 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa0bd590b7eeea51fa12627488215067cb46ecf6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7b2cfe66cc530881a848d7f3d8850c62c0af1486
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 가용성 및 재해 복구
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에 대한 가용성 및 재해 복구 계획은 주로 SharePoint 팜 디자인, 다른 구성 요소에 허용되는 작동 중단 시간 및 SharePoint 가용성에 구현하는 도구 및 최선의 방법에 따라 달라집니다. 이 항목에서는 기술을 요약하고 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 대한 가용성 및 재해 복구를 계획할 때 고려할 예제 토폴로지 다이어그램을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]가용성 및 재해 복구 계획에 대 한 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 주로 SharePoint 팜, 서로 다른 구성 요소에 대 한 허용 가능한 가동 중지 시간의 도구 및 SharePoint 가용성에 구현 하는 모범 사례 디자인에 따라 달라 집니다. 이 항목에서는 기술을 요약하고 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 대한 가용성 및 재해 복구를 계획할 때 고려할 예제 토폴로지 다이어그램을 포함합니다.  
   
 ||  
 |-|  

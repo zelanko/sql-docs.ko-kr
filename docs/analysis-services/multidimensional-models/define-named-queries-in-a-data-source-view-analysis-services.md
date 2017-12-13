@@ -2,12 +2,12 @@
 title: "데이터 원본 뷰 (Analysis Services)에서 명명 된 쿼리 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a6db35f9ab119025bf5b7d60aed0b27747adaa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6d83f1264b7eb9f3b306c4540dca9f1407eff0b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 쿼리 정의(Analysis Services)
-  명명된 쿼리는 테이블로 표현된 SQL 식입니다. 명명된 쿼리에 SQL 식을 지정하여 하나 이상의 데이터 원본에 있는 하나 이상의 테이블에서 반환된 행 및 열을 선택할 수 있습니다. 식을 기반으로 한다는 점을 제외하면 명명된 쿼리는 관계 및 행이 있는 데이터 원본 뷰(DSV)의 다른 테이블과 같습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]명명 된 쿼리는 테이블로 표현 된 SQL 식입니다. 명명된 쿼리에 SQL 식을 지정하여 하나 이상의 데이터 원본에 있는 하나 이상의 테이블에서 반환된 행 및 열을 선택할 수 있습니다. 식을 기반으로 한다는 점을 제외하면 명명된 쿼리는 관계 및 행이 있는 데이터 원본 뷰(DSV)의 다른 테이블과 같습니다.  
   
  명명된 쿼리를 사용하면 기본 데이터 원본을 수정하지 않고 DSV에 있는 기존 테이블의 관계형 스키마를 확장할 수 있습니다. 예를 들어 일련의 명명된 쿼리를 사용하여 복잡한 차원 테이블을 데이터베이스 차원에서 사용할 수 있도록 더 작고 간단한 차원 테이블로 분할할 수 있습니다. 명명된 쿼리를 사용하여 하나 이상의 데이터 원본의 여러 데이터베이스 테이블을 하나의 데이터 원본 뷰 테이블로 조인할 수도 있습니다.  
   

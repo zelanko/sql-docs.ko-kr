@@ -2,12 +2,12 @@
 title: "특성의 KeyColumn 속성 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 350266c9c21a5ab117f8e334ec5be63a581c94ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d661563b794e205b554d3f11bcd2eb495d7d3a08
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---modify-the-keycolumn-property"></a>속성을 특성-KeyColumn 속성 수정
-  특성의 **KeyColumns** 속성을 수정할 수 있습니다. 예를 들어 단일 키 대신 복합 키를 특성 키로 지정할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]수정할 수는 **KeyColumns** 특성의 속성입니다. 예를 들어 단일 키 대신 복합 키를 특성 키로 지정할 수 있습니다.  
   
 ### <a name="to-modify-the-keycolumns-property-of-an-attribute"></a>특성의 KeyColumns 속성을 수정하려면  
   

@@ -2,12 +2,12 @@
 title: "Microsoft Naive Bayes 알고리즘 기술 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 812ca4b26ed14645bbd84094077f24f44d8784cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f467621594b3ed81793d0925b600650dfa1e3599
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes 알고리즘 기술 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 예측 모델링용 분류 알고리즘입니다. 이 알고리즘은 입력 열과 예측 가능한 열 간의 조건부 확률을 계산하며 열이 서로 독립적이라고 가정합니다. 이와 같은 독립성 가정으로 인해 Naive Bayes라는 이름이 붙었습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 분류 알고리즘에서 제공 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예측 모델링에 사용 합니다. 이 알고리즘은 입력 열과 예측 가능한 열 간의 조건부 확률을 계산하며 열이 서로 독립적이라고 가정합니다. 이와 같은 독립성 가정으로 인해 Naive Bayes라는 이름이 붙었습니다.  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes 알고리즘 구현  
  이 알고리즘은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘보다 계산 과정이 단순하여 입력 열과 예측 가능한 열 간의 관계를 검색하는 마이닝 모델을 신속하게 생성하는 데 유용합니다. 이 알고리즘은 입력 특성 값과 출력 특성 값의 각 쌍을 고려합니다.  

@@ -2,12 +2,12 @@
 title: "마이닝 모델의 복사본을 만듭니다 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef19138a03ca98b74cfb53703219f6db15875dec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41293698d331f6b315e4d2eae668ba6274800532
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>마이닝 모델 복사본 만들기
-  마이닝 모델의 복사본을 만들면 동일한 데이터를 기반으로 여러 마이닝 모델을 빠르게 만들 때 유용합니다. 모델을 복사한 후 매개 변수를 변경하거나 필터를 추가하여 새 복사본을 편집할 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 모델의 복사본을 만들고 신속 하 게 동일한 데이터를 기반으로 하는 여러 마이닝 모델을 만들 때 유용 합니다. 모델을 복사한 후 매개 변수를 변경하거나 필터를 추가하여 새 복사본을 편집할 수도 있습니다.  
   
  예를 들어 구매 테이블에 연결된 Customers 테이블이 있는 경우 나이 또는 지역과 같은 특성을 기준으로 필터링하여 각 고객 인구 통계에 대한 별도의 마이닝 모델을 생성하도록 복사본을 만들 수 있습니다.  
   

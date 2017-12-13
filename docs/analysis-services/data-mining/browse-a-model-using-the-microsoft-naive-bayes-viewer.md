@@ -2,12 +2,12 @@
 title: "Microsoft Naive Bayes 뷰어를 사용 하 여 모델 찾아보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0dd79b27089f73b537969889cf78f1d86ba57526
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0a36102a6075f3382fa8e285b5e753765ab09d63
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 모델링 태스크에 매우 적응력이 뛰어난 분류 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)를 참조하십시오.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 하 여 만든 마이닝 모델 표시는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 모델링 태스크에 매우 적응력이 뛰어난 분류 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)를 참조하십시오.  
   
  Naive Bayes 모델의 주 목적 중 하나는 데이터 집합의 데이터를 빨리 탐색하는 방법을 제공하는 것이기 때문에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어는 예측 가능한 특성과 입력 특성 간의 상호 작용을 표시하는 여러 가지 방법을 제공합니다.  
   

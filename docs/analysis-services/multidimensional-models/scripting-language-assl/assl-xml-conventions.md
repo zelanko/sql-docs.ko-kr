@@ -2,12 +2,12 @@
 title: "ASSL XML 표기 규칙 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -34,14 +34,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62f735a95a8ad5dfb694f1ca4eeaa604c7cc86f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9627648fa47b750f4b9b98b45b5878cea0806961
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
-  ASSL(Analysis Services Scripting Language)은 개체의 계층을 요소 유형의 집합으로 나타내며, 각 요소 유형은 포함할 수 있는 자식 요소를 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services Scripting Language (ASSL) 자식 요소를 포함할 수 정의 하는 요소 유형의 집합으로 개체의 계층 구조를 나타냅니다.  
   
  개체 계층을 나타내기 위해 ASSL에서는 다음과 같은 XML 표기 규칙을 사용합니다.  
   

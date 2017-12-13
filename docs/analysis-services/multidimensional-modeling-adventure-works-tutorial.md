@@ -2,12 +2,12 @@
 title: "다차원 모델링 (Adventure Works 자습서) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: a288cb2c30cc1e5146291c62e4a3aca4dc5af5ce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e19abcab353fd70636f552348d2488738ba203a7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>다차원 모델링(Adventure Works 자습서)
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서입니다. 이 자습서의 모든 예에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 가상 회사에서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 프로젝트를 개발 및 배포하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]시작 된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서입니다. 이 자습서의 모든 예에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 가상 회사에서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 프로젝트를 개발 및 배포하는 방법을 설명합니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
 이 자습서에서는 다음 항목을 배웁니다.  

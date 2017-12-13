@@ -2,12 +2,12 @@
 title: "AggregationPrefix 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 17af449791b93438d6418f0d8f88f8855dc94e0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3a5681f6defdd1c18702d0e00300c9c6309825a2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="aggregationprefix-element-assl"></a>AggregationPrefix 요소(ASSL)
-  관련 부모 요소 전체에서 집계 이름에 사용할 공통 접두사를 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]관련된 부모 요소 전체에서 집계 이름에 사용할 공통 접두사를 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   

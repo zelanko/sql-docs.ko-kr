@@ -2,12 +2,12 @@
 title: "ScalarMiningStructureColumn 데이터 형식 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e08026e7a45f5cd76ef6912f5273495cc9fea0f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b72991de0262a10700918dcd5205d0d15640b043
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>ScalarMiningStructureColumn 데이터 형식(ASSL)
-  나타내는 파생된 데이터 형식을 정의 [MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md) 요소와 연결 된 중첩된 테이블과 달리 스칼라 값을 포함 하는 [TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md) 요소 중첩된 테이블이 들어 있는입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]나타내는 파생된 데이터 형식을 정의 [MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md) 요소와 연결 된 중첩된 테이블과 달리 스칼라 값을 포함 하는 [TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md) 요소 중첩된 테이블이 들어 있는입니다.  
   
 ## <a name="syntax"></a>구문  
   

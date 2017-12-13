@@ -2,12 +2,12 @@
 title: "데이터 마이닝 개체 이동 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39ff7c19d4bb069149e56ae2d4939225d57a8223
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 162991baf2c6e5a1a83f5db69a354b0b7d085e33
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="moving-data-mining-objects"></a>데이터 마이닝 개체 이동
-  데이터 마이닝 개체를 이동하기 위한 가장 일반적인 시나리오는 테스트 또는 분석 환경에서 프로덕션 환경으로 모델을 배포하거나 다른 사용자와 모델을 공유하는 것입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 개체를 이동 하기 위한 가장 일반적인 시나리오에는 프로덕션 환경에는 테스트 또는 분석 환경에서 모델을 배포 하거나 다른 사용자와 모델을 공유할 수는 있습니다.  
   
  이 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 도구와 스크립트 언어를 사용하여 데이터 마이닝 개체를 이동하는 방법에 대해 설명합니다.  
   

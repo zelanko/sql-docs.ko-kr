@@ -2,12 +2,12 @@
 title: "Actions (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8880e5f1dd0f2d2163fecbf33d08fb5162c7ddc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23021f365a349e226194326ed2d4d43acb2e7af8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>동작(Analysis Services - 다차원 데이터)
-  동작에는 여러 유형이 있을 수 있으므로 동작을 만들려면 이러한 유형을 고려해야 합니다. 다음과 같은 유형의 동작이 있을 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]동작은 다른 형식의 수 및 필요한 것은 적절 하 게 만들 수 있습니다. 다음과 같은 유형의 동작이 있을 수 있습니다.  
   
 -   동작이 발생하는 큐브에서 선택된 셀에 대한 기본 데이터를 나타내는 행 집합을 반환하는 드릴스루 동작  
   

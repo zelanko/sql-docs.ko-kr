@@ -2,12 +2,12 @@
 title: "Member 요소 (CSDLBI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a97b171f1205b2718b5786ae92fce826c2c6316c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 351cd8c622454626b8caa7547a4e8c73c4c49438
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="member-element-csdlbi"></a>Member 요소(CSDLBI)
-  멤버 요소는 다른 요소에 대해 기준 역할을 하는 복합 유형입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]멤버 요소는 다른 요소에 대해 기준 역할을 하는 복합 유형입니다.  
   
  이 요소의 특성은 열, 측정값, 탐색 속성, 계층 및 수준에 나타날 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "Analysis Services 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: a8d39f0b940aaec84b7b731a7f764b2e2e3d72ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c988142d87edfe702fa9a0346331c7a1b3b71c95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services 설치
-  SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버입니다.  
   
  Analysis Services는 다중 인스턴스는 단일 컴퓨터에 복사본 여러 개 설치 하거나 신규 버전과 기존 버전-side-by-side 실행 수를 의미 합니다. 설치한 모든 인스턴스는 설치 도중 결정된 세 가지 모드(다차원 및 데이터 마이닝, 테이블 형식 또는 SharePoint) 중 하나로 실행됩니다. 다중 모드를 사용하려면 각 모드에 대한 별도의 인스턴스가 필요합니다.  
   

@@ -2,12 +2,12 @@
 title: "메모리 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3c8b8f8e94f95174b2d4038454d834b1427cb56c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bcf950fc7219996bfc60f56797f52a5ed6d49fc8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="memory-properties"></a>메모리 속성
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은 요청을 즉시 처리할 수 있도록 시작 시 적절한 메모리 양을 사전 할당합니다. 쿼리 및 처리 작업이 증가함에 따라 추가 메모리가 할당됩니다. 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 요청을 즉시 처리 될 수 있도록 구성의 시작 부분에 메모리는 많지 않은 preallocates 합니다. 쿼리 및 처리 작업이 증가함에 따라 추가 메모리가 할당됩니다. 
   
   구성 설정을 지정하여 메모리가 해제되는 임계값을 제어할 수 있습니다. 예를 들어 **HardMemoryLimit** 설정은 더 많은 리소스를 사용할 수 있을 때까지 새로운 요청이 완전히 거부되는 자체 부과된 메모리 부족 조건을 지정합니다(기본적으로 이 임계값은 사용되지 않음).
   

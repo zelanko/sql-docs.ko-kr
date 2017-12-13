@@ -1,12 +1,12 @@
 ---
 title: "Analysis Services 자습서 (SSAS) | Microsoft Docs"
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 69e97b3571679a523bbd1033ce33fd2491a20ecc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f0a5c233e9789f8f4228f90f85b71c5bfe3b8cbc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services 자습서(SSAS)
-이 섹션에는 SQL Server Analysis Services에 대 한 자습서가 포함 되어 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 섹션에는 SQL Server Analysis Services에 대 한 자습서가 포함 되어 있습니다.  
   
 [테이블 형식 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 이 자습서는 SQL Server Data Tools (SSDT)를 사용 하 여 Adventure Works 라는 가상 회사, 기본 Analysis Services 테이블 형식 모델을 제작 하는 방법에 단원을 제공 합니다.  

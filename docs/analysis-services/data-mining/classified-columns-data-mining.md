@@ -2,12 +2,12 @@
 title: "분류 열 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 32b46928378a30daa9d998090d61b9a3ef19438c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81c6e3adf33c4dda330eb7ba6a72264eb55c1289
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="classified-columns-data-mining"></a>분류된 열(데이터 마이닝)
-  분류된 열을 정의할 경우 마이닝 구조의 현재 열과 다른 열 간에 관계를 생성하게 됩니다. 분류된 열로 지정한 마이닝 구조 열의 데이터에는 마이닝 구조의 다른 열의 값을 설명하는 범주 정보가 포함됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]분류 된 열을 정의할 경우 마이닝 구조의 현재 열과 다른 열 간에 관계를 만듭니다. 분류된 열로 지정한 마이닝 구조 열의 데이터에는 마이닝 구조의 다른 열의 값을 설명하는 범주 정보가 포함됩니다.  
   
  예를 들어 숫자 데이터를 포함하는 두 개의 열이 있다고 가정합니다. [Yearly Purchases] 열에는 특정 달력 연도의 고객당 연간 총 구매액에 들어 있고, 다른 열인 [Standard Deviations] 열에는 그러한 값에 대한 표준 편차가 들어 있습니다. 이 경우 [Yearly Purchases] 열을 분류된 열로 지정할 수 있으며 그러면 모델에서 분석에 이 관계를 사용할 수 있습니다.  
   

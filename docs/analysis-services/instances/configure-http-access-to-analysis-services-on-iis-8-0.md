@@ -2,12 +2,12 @@
 title: "IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 02c1e956d40ed9a4b69e0606f5a273ecab814e83
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2926b71ccc00d178c9a60aa5c8fc9856e6c8a81
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성
-  이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 끝점을 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 문서에서는 Analysis Services 인스턴스에 액세스 하기 위한 HTTP 끝점을 설정 하는 방법에 설명 합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
   
 -   클라이언트 액세스가 인터넷 또는 엑스트라넷 연결을 통해 이루어집니다(설정할 수 있는 포트에 대한 제한 사항 있음)  
   

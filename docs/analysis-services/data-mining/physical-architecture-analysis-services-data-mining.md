@@ -2,12 +2,12 @@
 title: "물리적 아키텍처 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 772d9a4b58c199ce34a6b85b710519c344fd8deb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc6dcc6e4383e22a3b1695cc03cd40bd6acf8fb2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>물리적 아키텍처(Analysis Services - 데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 서버 및 클라이언트 구성 요소를 모두 사용하여 비즈니스 인텔리전스 응용 프로그램에 데이터 마이닝 기능을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버와 클라이언트 구성 요소를 사용 하 여 비즈니스 인텔리전스 응용 프로그램에 대 한 데이터 마이닝 기능을 제공 합니다.  
   
 -   서버 구성 요소는 Microsoft Windows 서비스로 구현됩니다. 동일한 컴퓨터에서 각각 별개의 Windows 서비스 인스턴스로 구현된 여러 개의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 유지할 수 있습니다.  
   

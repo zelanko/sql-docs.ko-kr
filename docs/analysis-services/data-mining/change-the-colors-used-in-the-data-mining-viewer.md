@@ -2,12 +2,12 @@
 title: "데이터 마이닝 뷰어에서 사용 되는 색 변경 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b20e6017b116f716309627caa50e1821a7e7d981
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f2cbde3cff67fc89cdedd4dab37183389f5796d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>데이터 마이닝 뷰어에서 사용되는 색 변경
-  데이터 마이닝 뷰어에서 데이터 계열, 노드 또는 클러스터를 표시하는 데 사용되는 색을 변경할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 옵션을 설정하여 이 작업을 수행할 수 있습니다. 설정을 변경한 후에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 보는 모든 모델에 색 선택이 적용되지만 새 색을 보기 위해서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 닫고 뷰어에서 모델을 다시 열어야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 계열, 노드 또는 클러스터를 표시 하려면 데이터 마이닝 뷰어에서 사용 되는 색을 변경할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 옵션을 설정하여 이 작업을 수행할 수 있습니다. 설정을 변경한 후에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 보는 모든 모델에 색 선택이 적용되지만 새 색을 보기 위해서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 닫고 뷰어에서 모델을 다시 열어야 합니다.  
   
 ### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>데이터 마이닝 뷰어에서 사용되는 색을 변경하려면  
   

@@ -2,12 +2,12 @@
 title: "차원에 사용자 지정 집계 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63ad6f1d9e72fae70997c87aca194f7437c62d07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dbc1152fa705c8b470165feee3aa936e0c61a76c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 마법사-차원에 사용자 지정 집계 추가
-  큐브나 차원에 향상된 사용자 지정 집계 기능을 추가하여 차원 멤버와 연결되는 기본 집계를 다른 단항 연산자로 바꿀 수 있습니다. 이 향상된 기능은 부모-자식 계층의 멤버에 대한 롤업을 정의하는 차원 테이블에 단항 연산자 열을 지정합니다. 단항 연산자는 부모-자식 계층의 부모 특성에 대해 실행됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 또는 다른 단항 연산자를 사용 하 여 차원 멤버와 연결 된 기본 집계의 이름을 바꾸려면 차원에 사용자 지정 집계 기능을 추가 합니다. 이 향상된 기능은 부모-자식 계층의 멤버에 대한 롤업을 정의하는 차원 테이블에 단항 연산자 열을 지정합니다. 단항 연산자는 부모-자식 계층의 부모 특성에 대해 실행됩니다.  
   
 > [!NOTE]  
 >  사용자 지정 집계는 기존 데이터 원본 기반의 차원에서만 사용할 수 있습니다. 데이터 원본을 사용하지 않고 만든 차원의 경우 스키마 생성 마법사를 실행하여 사용자 지정 집계를 추가하기 전에 데이터 원본 뷰를 만들어야 합니다.  

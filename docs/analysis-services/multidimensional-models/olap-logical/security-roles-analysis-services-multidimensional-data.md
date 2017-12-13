@@ -2,12 +2,12 @@
 title: "보안 역할 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01525ae36d9efed7df054d4100c7a4b79340a2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5bb382b53436e7567df3b970a77c75e7e3fe2be0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>보안 역할(Analysis Services - 다차원 데이터)
-  역할에 사용 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 대 한 보안을 관리할 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체와 데이터입니다. 기술적으로 역할의 특정 액세스 권한 및의 인스턴스에 의해 관리 되는 개체에 대해 정의 된 사용 권한이 있는 Microsoft Windows 사용자 및 그룹 보안 식별자 (Sid)를 연결 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 두 가지 유형의 역할에 제공 됩니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]역할에 사용 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 대 한 보안을 관리할 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체와 데이터입니다. 기술적으로 역할의 특정 액세스 권한 및의 인스턴스에 의해 관리 되는 개체에 대해 정의 된 사용 권한이 있는 Microsoft Windows 사용자 및 그룹 보안 식별자 (Sid)를 연결 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 두 가지 유형의 역할에 제공 됩니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   서버 역할 - 관리자에게 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]인스턴스에 대한 액세스 권한을 제공하는 고정 역할  
   

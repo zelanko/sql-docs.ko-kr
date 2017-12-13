@@ -2,12 +2,12 @@
 title: "솔루션 탐색기에서 데이터베이스 차원 수정 또는 삭제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 36a2a8434122e4d3bf649de2358abc2186ea30d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 39f474112a5823835ba2f6800aeca01916d7997a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>데이터베이스 차원-솔루션 탐색기에서 데이터베이스 차원 수정 또는 삭제
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 차원 디자이너를 사용하여 차원을 수정하거나 삭제할 수 있습니다. 차원을 수정하는 경우 해당 차원을 처리해야 사용자가 변경 내용을 사용할 수 있습니다. 자세한 내용은 [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]수정 하거나 차원 디자이너를 사용 하 여 차원을 삭제 수 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 차원을 수정하는 경우 해당 차원을 처리해야 사용자가 변경 내용을 사용할 수 있습니다. 자세한 내용은 [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)를 참조하세요.  
   
 ### <a name="to-modify-a-dimension-in-sql-server-data-tools"></a>SQL Server Data Tools에서 차원을 수정하려면  
   

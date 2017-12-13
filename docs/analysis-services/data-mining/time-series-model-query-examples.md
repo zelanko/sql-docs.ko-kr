@@ -2,12 +2,12 @@
 title: "시계열 모델 쿼리 예제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd37cd530af23d04f98866eebcaaad824a66f150
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e72bec5f3ff9a0dbc14912fb2bba656744a678d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="time-series-model-query-examples"></a>시계열 모델 쿼리 예제
-  데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 시계열 모델에 대한 내용 쿼리는 검색된 주기 구조에 대한 추가 세부 정보를 제공할 수 있고 예측 쿼리는 다음 5-10개의 시간 조각에 대한 예측을 제공할 수 있습니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델에 대 한 쿼리를 만들 때 내용 쿼리, 분석 시 발견 된 패턴에 대 한 세부 정보에 제공 하는 만들 수 있습니다 또는 패턴을 사용 하는 모델에 새 데이터에 대 한 예측을 만드는 예측 쿼리를 만들 수 있습니다. 예를 들어 시계열 모델에 대한 내용 쿼리는 검색된 주기 구조에 대한 추가 세부 정보를 제공할 수 있고 예측 쿼리는 다음 5-10개의 시간 조각에 대한 예측을 제공할 수 있습니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  이 섹션에서는 Microsoft 시계열 알고리즘을 기반으로 하는 모델에 대해 이러한 두 종류의 쿼리를 만드는 방법에 대해 설명합니다.  
   

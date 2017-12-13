@@ -2,12 +2,12 @@
 title: "기본 MDX 쿼리 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 46373fffaba2935a6faa9efa6deddebd6ce66ceb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 91f450be525f7ec0d019a3f17f28ee25886c44aa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX 쿼리-기본 쿼리
-  기본 MDX 쿼리는 SELECT 문이며 이 문은 MDX에서 가장 자주 사용되는 쿼리입니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]기본 MDX (Multidimensional Expressions) 쿼리는 SELECT 문-MDX에서 가장 자주 사용 하는 쿼리 합니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
   
 ## <a name="specifying-a-result-set"></a>결과 집합 지정  
  MDX에서 SELECT 문은 큐브로부터 반환된 다차원 데이터의 하위 집합이 포함되는 결과 집합을 지정합니다. 결과 집합을 지정하려면 MDX 쿼리에 다음과 같은 정보가 포함되어야 합니다.  

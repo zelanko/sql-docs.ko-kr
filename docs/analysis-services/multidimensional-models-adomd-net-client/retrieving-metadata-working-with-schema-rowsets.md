@@ -2,12 +2,12 @@
 title: Working with Schema Rowsets in ADOMD.NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7086db056d4d5ac61349546b8748cdd19ee318c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4045c7b677129bcc7b72b8ed46fa84aed95e49f5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>스키마 행 집합 작업-모든 메타 데이터 검색
-  ADOMD.NET 개체 모델에서 사용할 수 있는 메타데이터보다 많은 메타데이터가 필요한 경우 ADOMD.NET에서는 모든 범위의 XMLA (XML for Analysis), OLE DB, OLAP용 OLE DB 및 데이터 마이닝용 OLE DB 스키마 행 집합을 검색할 수 있는 기능을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET 개체 모델에서 사용할 수 있는 것 보다 더 많은 메타 데이터를 필요한 경우 ADOMD.NET에서는 Analysis (XMLA), OLE DB, OLAP 용 OLE DB 및 데이터 마이닝 스키마 행 집합 용 OLE DB에 대 한 전체 XML 범위를 검색할 수 있는 기능을 제공 합니다.  
   
  **XML for Analysis 메타 데이터**  
  XML for Analysis 스키마 행 집합에서는 하위 수준의 서버 정보를 검색할 수 있는 방법을 제공합니다. 사용할 수 있는 정보에는 서버에서 사용 가능한 데이터 원본, 공급자에 예약된 키워드, 공급자가 지원하는 리터럴 등이 있습니다. XML for Analysis 스키마 행 집합을 사용하여 공급자가 지원하는 모든 스키마 행 집합을 검색할 수도 있습니다.  

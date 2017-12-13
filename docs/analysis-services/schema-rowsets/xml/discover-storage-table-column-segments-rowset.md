@@ -2,12 +2,12 @@
 title: "DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21fdb446b1d2c8475969cbc89050260d0e09f6b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 66d86e3583b81069f2c1f77a616dac91a022ff9c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합
-  테이블 형식에서 실행 되는 Analysis Services 데이터베이스에서 사용 되는 저장소 테이블에 대 한 열 및 세그먼트 수준 정보를 제공 하거나 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모드입니다. 이 행 집합은 주로 문제 해결 및 분석을 위해 사용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]테이블 형식에서 실행 되는 Analysis Services 데이터베이스에서 사용 되는 저장소 테이블에 대 한 열 및 세그먼트 수준 정보를 제공 하거나 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모드입니다. 이 행 집합은 주로 문제 해결 및 분석을 위해 사용됩니다.  
   
  **다음에 적용:** 테이블 형식 모델  
   

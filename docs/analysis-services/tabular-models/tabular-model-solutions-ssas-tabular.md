@@ -1,12 +1,12 @@
 ---
 title: "테이블 형식 모델 솔루션 (SSAS 테이블 형식) | Microsoft Docs"
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 27d4523d7d0e23fbc0043c0ef4b8909285703e31
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 147f0b4f37d0b24e78ad8c314e9cdff12e85459e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="creating-tabular-models"></a>테이블 형식 모델 만들기
-  이 섹션의 각 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 테이블 형식 모델 디자이너를 사용하여 테이블 형식 모델을 제작하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 섹션의에서 항목에서는 테이블 형식 모델 디자이너를 사용 하 여 테이블 형식 모델을 제작 하는 방법에 대 한 정보를 제공 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [테이블 형식 모델 디자이너](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)  

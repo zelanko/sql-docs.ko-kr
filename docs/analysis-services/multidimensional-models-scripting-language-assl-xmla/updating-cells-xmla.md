@@ -2,12 +2,12 @@
 title: "셀 업데이트 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e42a91f18c11dc8ece840d5d77024e550fc3e88
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f35a02cdbc620801bc7d999a8dbb74b02918db56
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="updating-cells-xmla"></a>셀 업데이트(XMLA)
-  사용할 수는 [UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) 명령은 큐브 쓰기 저장에 대 한 가능한 큐브의 여러 셀의 값을 변경할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 업데이트할 셀이 포함 된 각 파티션에 대 한 별도 쓰기 저장 테이블에 업데이트 된 정보를 저장 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용할 수는 [UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) 명령은 큐브 쓰기 저장에 대 한 가능한 큐브의 여러 셀의 값을 변경할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 업데이트할 셀이 포함 된 각 파티션에 대 한 별도 쓰기 저장 테이블에 업데이트 된 정보를 저장 합니다.  
   
 > [!NOTE]  
 >  **UpdateCells** 명령은 큐브 쓰기 저장 하는 동안 할당을 지원 하지 않습니다. 할당 된 쓰기 저장을 사용 하려면 사용할지는 [문을](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) 명령은 MDX (Multidimensional Expressions) UPDATE 문을 보내야 합니다. 자세한 내용은 참조 [UPDATE CUBE 문을 &#40; Mdx&#41; ](../../mdx/mdx-data-manipulation-update-cube.md).  

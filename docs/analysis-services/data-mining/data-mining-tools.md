@@ -2,12 +2,12 @@
 title: "데이터 마이닝 도구 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,16 +24,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a39d648c6e9a7abb24c1c5a936fa1908b4ddd91a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d47b9015ba7635a7392639fbc8a7e1ca5ff73d13
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-tools"></a>데이터 마이닝 도구
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터 마이닝 솔루션을 만드는 데 사용할 수 있는 다음 도구가 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 솔루션을 만드는 데 사용할 수 있는 다음 도구가 있습니다.  
   
--   **** 의 데이터 마이닝 마법사 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 관계형 데이터 원본이나 큐브의 다차원 데이터를 사용하여 마이닝 구조와 마이닝 모델을 쉽게 만들 수 있도록 합니다.  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **데이터 마이닝 마법사**는 관계형 데이터 원본이나 큐브의 다차원 데이터를 사용하여 마이닝 구조와 마이닝 모델을 쉽게 만들 수 있도록 합니다.  
   
      이 마법사에서 사용할 데이터를 선택한 다음 클러스터링, 신경망 또는 시계열 모델링과 같은 특정 데이터 마이닝 기술을 적용할 수 있습니다.  
   

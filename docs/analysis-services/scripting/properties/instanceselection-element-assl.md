@@ -2,12 +2,12 @@
 title: "InstanceSelection 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd380986bf21d773dc9726b17eff816bf45af0ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 539c7259235437b39690f7c5241b63bd0b18a2f7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="instanceselection-element-assl"></a>InstanceSelection 요소(ASSL)
-  목록의 예상 항목 수를 기반으로 항목 목록의 표시 방법을 제안하는 힌트를 클라이언트 응용 프로그램에 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]목록에 있는 항목의 예상된 개수에 따라 항목 목록이 방법을 제안 하는 클라이언트 응용 프로그램에 힌트를 표시할지를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   

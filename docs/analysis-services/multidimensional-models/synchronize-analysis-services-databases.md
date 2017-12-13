@@ -2,12 +2,12 @@
 title: "Analysis Services 데이터베이스 동기화 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53478ba4aace42f97beb00eb50d5f48fc7aecb6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8824ea31de1d2dc2774f57ac70af05a30f442408
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 원본 서버의 데이터베이스에 있는 데이터와 메타데이터를 대상 서버의 데이터베이스로 복사하여 두 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 동일하게 만드는 데이터베이스 동기화 기능이 포함되어 있습니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 두 있도록 데이터베이스 동기화 기능이 포함 되어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 대상 서버에서 데이터베이스에 있는 데이터와 메타 데이터는 원본 서버에서 데이터베이스를 복사 하 여 동일 합니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  
   
 -   준비 서버에서 프로덕션 서버로 데이터베이스를 배포합니다.  
   

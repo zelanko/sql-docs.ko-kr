@@ -2,12 +2,12 @@
 title: "리프트 차트, 수익 차트 또는 분류표 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 651223b9903c231f15ab4232c180b7432411e726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4b4e29848a830cde36521967265eba3de8b9929c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>리프트 차트, 수익 차트 또는 분류표 만들기
-  다음과 같은 기본적인 다섯 단계로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 모델에 대한 정확도 차트를 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에 대 한 정확도 차트를 만들 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기본 5 단계에서 데이터 마이닝 모델:  
   
 -   비교할 마이닝 모델을 포함하는 마이닝 구조를 선택합니다.  
   

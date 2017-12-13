@@ -2,12 +2,12 @@
 title: "만들기 또는 데이터 피드 라이브러리 (SharePoint 용 파워 피벗)를 사용자 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678847e195c1b75744569088049cb957dacc46fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4304b6b25595bab37df01bdada4a046411cc3f4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>데이터 피드 라이브러리 만들기 또는 사용자 지정(SharePoint용 Power Pivot)
-  *데이터 피드 라이브러리* 는 Atom 데이터 서비스 문서(.atomsvc)를 등록 및 공유할 수 있도록 해 주는 특수 용도의 SharePoint 라이브러리입니다. 이러한 문서는 Atom 데이터 피드 형식을 지원하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서나 기타 클라이언트 응용 프로그램에 XML 데이터 피드를 제공합니다. 데이터 피드 라이브러리는 다음과 같은 기능을 제공하므로 다른 SharePoint 라이브러리와 다릅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *데이터 피드 라이브러리* 는 특수 한 용도의 SharePoint 라이브러리로 등록 및 Atom 데이터 서비스 문서 (.atomsvc)를 공유할 수 있도록 합니다. 이러한 문서는 Atom 데이터 피드 형식을 지원하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서나 기타 클라이언트 응용 프로그램에 XML 데이터 피드를 제공합니다. 데이터 피드 라이브러리는 다음과 같은 기능을 제공하므로 다른 SharePoint 라이브러리와 다릅니다.  
   
 -   특정 피드에 대한 HTTP 연결을 지정하는 데 사용되는 *데이터 서비스 문서*만들기 또는 편집  
   

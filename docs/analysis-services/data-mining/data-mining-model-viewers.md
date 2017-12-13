@@ -2,12 +2,12 @@
 title: "데이터 마이닝 모델 뷰어 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d511fe97903969218f9f052132fc0521baa976b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b065a7c059cf4c3e7ba79c0c03ef7b96d4928bf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-model-viewers"></a>데이터 마이닝 모델 뷰어
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 마이닝 모델의 성향을 습득한 후 모델에서 관심 있는 추세를 탐색할 수 있습니다. 마이닝 모델의 결과는 복잡하며 원시 형식으로 이해하기 어려울 수 있으므로 데이터를 시각적으로 조사하는 것이 데이터 내에서 알고리즘으로 찾은 규칙과 관계를 가장 쉽게 이해하는 방법일 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델을 학습 한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 관심 있는 추세에 대 한 모델을 탐색할 수 있습니다. 마이닝 모델의 결과는 복잡하며 원시 형식으로 이해하기 어려울 수 있으므로 데이터를 시각적으로 조사하는 것이 데이터 내에서 알고리즘으로 찾은 규칙과 관계를 가장 쉽게 이해하는 방법일 수 있습니다.  
   
  모델 작성 시 사용하는 알고리즘에 따라 다른 유형의 결과가 반환됩니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 각 알고리즘에 대해 별개의 뷰어를 제공합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 마이닝 모델을 찾으면 해당 모델의 적절한 뷰어를 사용하여 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 해당 모델이 표시됩니다.  
   

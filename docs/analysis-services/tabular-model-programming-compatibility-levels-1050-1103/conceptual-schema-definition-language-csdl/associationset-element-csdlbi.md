@@ -2,12 +2,12 @@
 title: "AssociationSet 요소 (CSDLBI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae30edd006aa425ddd4f574ceb67f0534674f93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 요소(CSDLBI)
-  **AssociationSet** 요소는 연결을 정의하는 복합 유형입니다. CSDLBI 데이터 모델에서 연결은 두 테이블 간의 관계입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**AssociationSet** 요소는 연결을 정의 하는 복합 유형입니다. CSDLBI 데이터 모델에서 연결은 두 테이블 간의 관계입니다.  
   
  모델의 고유 관계별로 **AssociationSet** 를 지정해야 합니다. **AssociationSet** 는 **Association** 요소를 사용하여 끝점을 정의합니다. 또한 **AssociationSet** 요소는 데이터 모델에서 관계와 사용법에 대한 메타데이터도 정의합니다.  
   

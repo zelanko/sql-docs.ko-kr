@@ -2,12 +2,12 @@
 title: "데이터 피드 (SharePoint 용 파워 피벗) 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>데이터 피드 사용(SharePoint용 PowerPivot)
-  데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 응용 프로그램으로 스트리밍되는 하나 이상의 데이터 스트림입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel을 사용 중인 경우 데이터 피드를 통해 임의 데이터 원본의 기존 회사 또는 비즈니스 데이터를 Excel 2010 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 창으로 쉽게 가져올 수 있습니다. 통합 문서로 데이터 피드를 가져온 후 SharePoint 서버에서 예약한 데이터 새로 고침 작업에서 나중에 참조할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 피드는 온라인 데이터 원본에서 생성 되어 대상 문서 또는 응용 프로그램으로 스트리밍되는 하나 이상의 데이터 스트림입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel을 사용 중인 경우 데이터 피드를 통해 임의 데이터 원본의 기존 회사 또는 비즈니스 데이터를 Excel 2010 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 창으로 쉽게 가져올 수 있습니다. 통합 문서로 데이터 피드를 가져온 후 SharePoint 서버에서 예약한 데이터 새로 고침 작업에서 나중에 참조할 수 있습니다.  
   
  데이터 피드의 사용 방법은 Atom 데이터 피드를 지원하는 응용 프로그램의 기본 내보내기 기능을 사용하는지 또는 사용자 지정 데이터 서비스를 만들어 사용하는지에 따라 달라집니다. Atom XML 데이터를 게시하고 읽을 수 있는 응용 프로그램은 데이터 피드 및 데이터 서비스의 메커니즘을 사용자에게 숨기는 원활한 데이터 전송 기능을 제공합니다. 사용자는 단순히 한 응용 프로그램에서 다른 응용 프로그램으로 데이터를 이동하기만 하면 됩니다.  
   

@@ -2,12 +2,12 @@
 title: "데이터 마이닝 아키텍처 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be637286bda9a3d2a6f39115357603bf03eec81c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-architecture"></a>데이터 마이닝 아키텍처
-  이 섹션에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에서 호스팅되는 데이터 마이닝 솔루션의 아키텍처에 대해 설명합니다. 이 섹션의 항목에서는 데이터 마이닝을 지원하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 논리적 아키텍처와 물리적 아키텍처에 대해 설명하고, 데이터 마이닝 서버와 통신하는 데 사용하고 데이터 마이닝 개체에 대해 로컬 또는 원격으로 작업하는 데 사용할 수 있는 프로토콜, 클라이언트 및 공급자에 대한 정보를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션의 인스턴스에서 호스트 되는 데이터 마이닝 솔루션의 아키텍처를 설명 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이 섹션의 항목에서는 데이터 마이닝을 지원하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 논리적 아키텍처와 물리적 아키텍처에 대해 설명하고, 데이터 마이닝 서버와 통신하는 데 사용하고 데이터 마이닝 개체에 대해 로컬 또는 원격으로 작업하는 데 사용할 수 있는 프로토콜, 클라이언트 및 공급자에 대한 정보를 제공합니다.  
   
  일반적으로 SQL Server 데이터 마이닝은 다차원 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 일부로 제공되는 서비스로 작동하기 때문에 온라인 설명서에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 솔루션의 작업, 유지 관리 및 구성에 대해 설명하는 다음과 같은 섹션도 검토하는 것이 좋습니다.  
   

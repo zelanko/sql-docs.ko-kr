@@ -2,12 +2,12 @@
 title: "Analysis Services 자습서 시나리오 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: deb268dde13782f6ffe6d3481e004d6b8cae17b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 332b9e9e84ac25637186655de533624449ac3a01
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services Tutorial 시나리오
-이 자습서는 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 기반으로 합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 북미, 유럽 및 아시아 시장에서 금속 및 합성 소재 자전거를 생산하고 판매하는 대규모 다국적 제조 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 자습서에 따라 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], 가상의 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 북미, 유럽 및 아시아 시장에서 금속 및 합성 소재 자전거를 생산하고 판매하는 대규모 다국적 제조 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
   
 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 최근에 멕시코에 위치한 소규모 제조업체인 Importadores Neptuno를 인수했습니다. Importadores Neptuno는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 제품 라인에서 중요한 여러 가지 하위 구성 요소를 제조합니다. 이러한 하위 구성 요소는 Bothell로 운송된 후 최종 제품 조립에 사용됩니다. 2005년에 Importadores Neptuno는 여행용 자전거 제품 그룹의 유일한 제조업체이자 유통업체가 되었습니다.  
   

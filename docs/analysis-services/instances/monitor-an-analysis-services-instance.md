@@ -2,12 +2,12 @@
 title: "Analysis Services 인스턴스 모니터 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69cc17afa5a35844a76f838993630cecf49b0bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analysis Services 인스턴스 모니터
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 성능 모니터( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **)를 사용하여**의 성능을 모니터할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 추적을 작성 및 관리하고 추적 결과를 분석 및 재생할 수 있습니다. 성능 모니터는 다음 섹션에서 설명하는 것처럼 특정 카운터를 통해 인덱싱된 서버 상태를 보고합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]성능을 모니터링할 수 있습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용 하 여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 또는 라고도 하는 응용 프로그램 성능 모니터 **PerfMon**합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 추적을 작성 및 관리하고 추적 결과를 분석 및 재생할 수 있습니다. 성능 모니터는 다음 섹션에서 설명하는 것처럼 특정 카운터를 통해 인덱싱된 서버 상태를 보고합니다.  
   
 > [!NOTE]  
 >  모니터링에 대한 자세한 내용은 [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(SQL Server 2008 R2 작업 가이드)를 참조하세요.  

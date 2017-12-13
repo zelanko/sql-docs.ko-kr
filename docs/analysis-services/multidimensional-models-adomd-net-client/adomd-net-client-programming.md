@@ -2,12 +2,12 @@
 title: "ADOMD.NET 클라이언트 프로그래밍 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad5dc8c4f260156ef8fec7d52197f2a9137894de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f6ed705a9cd5f4084dcf6e09b619431479a23826
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 클라이언트 프로그래밍
-  ADOMD.NET 클라이언트 구성 요소 내에 있는 **Microsoft.AnalysisServices.AdomdClient** 네임 스페이스 (microsoft.analysisservices.adomdclient.dll). 이러한 클라이언트 구성 요소가 클라이언트에 대 한 기능 및 중간 계층 응용 프로그램을 쉽게 쿼리 데이터와 메타 데이터는 분석 데이터 저장소에서 제공와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET 클라이언트 구성 요소 내에 있는 **Microsoft.AnalysisServices.AdomdClient** 네임 스페이스 (microsoft.analysisservices.adomdclient.dll). 이러한 클라이언트 구성 요소가 클라이언트에 대 한 기능 및 중간 계층 응용 프로그램을 쉽게 쿼리 데이터와 메타 데이터는 분석 데이터 저장소에서 제공와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
   
 ## <a name="using-the-adomdnet-client-objects"></a>ADOMD.NET 클라이언트 개체 사용  
  분석 데이터 원본을 쿼리할 경우 일반적인 일련의 태스크를 수행해야 합니다. 다음 표에서는 쿼리 수행과 같이 ADOMD.NET 클라이언트 개체를 사용할 때 필요한 일반적인 태스크를 보여 줍니다.  

@@ -2,12 +2,12 @@
 title: "SharePoint에 Powerpivot 솔루션 배포 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 206b31adec86e7ea2213746687d535d56ca3b617
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 685e5d9b0586d0c97fa686507bc1934f8fb31c1e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>SharePoint에 PowerPivot 솔루션 배포
-  다음 지침을 사용하여 SharePoint Server 2010 환경에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능을 추가하는 두 개의 솔루션 패키지를 수동으로 배포할 수 있습니다. 솔루션 배포는 SharePoint 2010 서버에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을(를) 구성하기 위한 필수 단계입니다. 필수 단계의 전체 목록을 보려면 [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]수동으로 추가 하는 두 개의 솔루션 패키지를 배포 하려면 다음 지침을 사용 하 여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint Server 2010 환경에는 기능입니다. 솔루션 배포는 SharePoint 2010 서버에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을(를) 구성하기 위한 필수 단계입니다. 필수 단계의 전체 목록을 보려면 [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)을 참조하세요.  
   
  또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 솔루션을 배포할 수 있습니다. 구성 도구를 사용하는 방법은 단일 서버 설치의 경우 더 쉽고 효율적인 방법이지만 친숙한 도구를 사용하고 싶거나 동시에 여러 기능을 구성하려는 경우 중앙 관리 및 Powershell을 사용할 수도 있습니다. 구성 도구 사용에 대한 자세한 내용은 [파워 피벗 구성 도구](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하세요.  
   

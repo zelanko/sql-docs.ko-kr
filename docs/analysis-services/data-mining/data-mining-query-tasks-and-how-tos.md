@@ -2,12 +2,12 @@
 title: "데이터 마이닝 쿼리 태스크 및 방법 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ffbdae6e1ffbd491d1191df8543e8b3f831921d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2be13f6662ad2ed4d3cdae60eb1cc7ac458f62a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>데이터 마이닝 쿼리 태스크 및 방법
-  데이터 마이닝 모델을 사용하려는 경우 쿼리를 만드는 능력이 중요합니다. 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 제공된 도구를 사용하여 데이터 마이닝 모델에 대한 쿼리를 만드는 방법의 예를 보여 주는 링크를 제공합니다. 데이터 마이닝 쿼리가 무엇인지 또는 만들 수 있는 다양한 쿼리 유형에 대한 자세한 내용은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]쿼리를 만들 수 있는 기능은 확인 하려는 경우 중요 한 데이터 마이닝 모델을 사용 합니다. 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 제공된 도구를 사용하여 데이터 마이닝 모델에 대한 쿼리를 만드는 방법의 예를 보여 주는 링크를 제공합니다. 데이터 마이닝 쿼리가 무엇인지 또는 만들 수 있는 다양한 쿼리 유형에 대한 자세한 내용은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요.  
   
 ## <a name="creating-queries-with-prediction-query-builder"></a>예측 쿼리 작성기를 사용하여 쿼리 만들기  
  예측 쿼리 작성기는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 데이터 마이닝 모델에 대해 그래픽을 통해 쿼리를 작성하는 방법으로 제공됩니다. 다음 항목에서는 모델을 선택하고 데이터 원본을 지정하고 예측을 사용자 지정하고 출력을 저장하는 방법에 대해 설명합니다.  

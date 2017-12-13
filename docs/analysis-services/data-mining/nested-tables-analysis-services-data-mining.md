@@ -2,12 +2,12 @@
 title: "중첩 테이블 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
-ms.translationtype: HT
+ms.openlocfilehash: e561111342531d5e390111282d1ca64f0b05fe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>중첩 테이블(Analysis Services - 데이터 마이닝)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터가 사례 테이블에 포함된 일련의 사례로 데이터 마이닝 알고리즘에 공급되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 *중첩 테이블*을 사용하여 이러한 사례를 처리하는 고유한 방법을 제공합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 데이터를 일련의 사례 테이블에 포함 되어 있는 경우 데이터 마이닝 알고리즘에 공급 되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 *중첩 테이블*을 사용하여 이러한 사례를 처리하는 고유한 방법을 제공합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
   
  ![중첩된 테이블을 사용 하 여 두 테이블 결합](../../analysis-services/data-mining/media/nested-tables.gif "중첩된 테이블을 사용 하 여 두 테이블 결합")  
   

@@ -2,12 +2,12 @@
 title: "FoldingParameters 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d6565a5898f5f41898d82a1d70d3748f8b2883c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bd4618d59aaddf6cb36dabdcdbdd45e66b12172a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="foldingparameters-element-assl"></a>FoldingParameters 요소(ASSL)
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에서 마이닝 모델의 교차 유효성 검사를 수행할 때 사용하는 매개 변수를 지정합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]사용 하는 매개 변수를 지정 된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 마이닝 모델의 교차 유효성 검사를 수행 하는 경우에 서버입니다.  
   
 > [!NOTE]  
 >  이러한 매개 변수는 내부에서 사용하기 위한 것입니다. 여기에 제공된 정보는 참조용일 뿐입니다.  

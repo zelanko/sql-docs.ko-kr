@@ -2,12 +2,12 @@
 title: "ADO MD에서 ADOMD.NET으로 마이그레이션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a4b442d18188a5ba57066d6c9f3b2f1c2bdd18f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a67be24e9b9b9abeb2fb3c09d11e60cc4c18597c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>ADO MD에서 ADOMD.NET으로 마이그레이션
-  ADOMD.NET 라이브러리는 COM(구성 요소 개체 모델) 기반 클라이언트 응용 프로그램의 다차원 데이터에 액세스하는 데 사용되는 ADO(ActiveX Data Objects) 라이브러리의 확장인 ADO MD(ActiveX Data Objects Multidimensional) 라이브러리와 비슷합니다. ADO MD는 C++ 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic과 같은 관리되지 않는 언어의 다차원 데이터에 쉽게 액세스할 수 있은 방법을 제공합니다. ADOMD.NET은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET과 같은 관리되는 언어의 분석(다차원 및 데이터 마이닝) 데이터에 쉽게 액세스할 수 있는 방법을 제공합니다. 또한 향상된 메타데이터 개체 모델도 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET 라이브러리는 COM 구성 요소 개체 모델 기반 클라이언트 응용 프로그램에서 다차원 데이터에 액세스 하는 데 사용 되는 ADO ActiveX Data Objects () 라이브러리의 확장인 ActiveX Data Objects Multidimensional ADO MD 라이브러리와 비슷합니다. ADO MD는 C++ 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic과 같은 관리되지 않는 언어의 다차원 데이터에 쉽게 액세스할 수 있은 방법을 제공합니다. ADOMD.NET은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET과 같은 관리되는 언어의 분석(다차원 및 데이터 마이닝) 데이터에 쉽게 액세스할 수 있는 방법을 제공합니다. 또한 향상된 메타데이터 개체 모델도 제공합니다.  
   
  기존 클라이언트 응용 프로그램을 ADO MD에서 ADOMD.NET으로 마이그레이션하는 과정은 간단하지만 마이그레이션과 관련하여 몇 가지 중요한 차이점이 있습니다.  
   

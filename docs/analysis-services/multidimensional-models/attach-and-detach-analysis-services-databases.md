@@ -2,12 +2,12 @@
 title: "Analysis Services 데이터베이스 연결 및 분리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f7cc88be76e8ad64d81465543ab4f463c98687e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f882dfe4979beeb7fa162c7bc649fd01440291d1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services 데이터베이스 연결 및 분리
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)는 종종 일정 기간 동안 데이터베이스를 오프라인 상태로 유지하다가 동일한 서버 인스턴스 또는 다른 서버 인스턴스에서 해당 데이터베이스를 다시 온라인 상태로 되돌려야 하는 경우가 있습니다. 이러한 경우는 보다 나은 성능, 데이터베이스 확장에 따른 공간 확보, 또는 제품 업그레이드를 위해 데이터베이스를 다른 디스크로 이동하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다. 이러한 모든 상황은 물론 다른 상황에서도 **DBA는** Attach **및** Detach [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명령을 사용하여 아주 간단히 데이터베이스를 오프라인 상태로 유지하다가 다시 온라인 상태로 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]종종 때는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 관리자 (dba)가 기간에 오프 라인 데이터베이스를 수행 하 고 다른 컴퓨터나 동일한 서버 인스턴스에서 해당 데이터베이스를 다시 온라인 상태로 해야 합니다. 이러한 경우는 보다 나은 성능, 데이터베이스 확장에 따른 공간 확보, 또는 제품 업그레이드를 위해 데이터베이스를 다른 디스크로 이동하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다. 이러한 모든 상황은 물론 다른 상황에서도 **DBA는** Attach **및** Detach [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명령을 사용하여 아주 간단히 데이터베이스를 오프라인 상태로 유지하다가 다시 온라인 상태로 만들 수 있습니다.  
   
 ## <a name="attach-and-detach-commands"></a>Attach 및 Detach 명령  
  **Attach** 명령을 사용하면 오프라인 상태였던 데이터베이스를 온라인 상태로 만들 수 있습니다. 데이터베이스를 원래 서버 인스턴스나 다른 인스턴스에 연결할 수 있습니다. 데이터베이스를 연결하면 사용자가 데이터베이스에 대해 **ReadWriteMode** 설정을 지정할 수 있습니다. **Detach** 명령을 사용하면 데이터베이스를 서버로부터 오프라인 상태로 만들 수 있습니다.  

@@ -2,12 +2,12 @@
 title: "데이터 마이닝 스키마 행 집합 (SSAs) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afa0eedc469956d5b3e8886775feaf8f61a36328
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23f8b63c593e1269624905caf8809ac5afefd1d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>데이터 마이닝 스키마 행 집합(SSAS)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 기존 OLE DB 데이터 마이닝 스키마 행 집합 대부분이 DMX(Data Mining Extensions) 문을 사용하여 쿼리할 수 있는 시스템 테이블 집합으로 노출됩니다. 데이터 마이닝 스키마 행 집합을 대상으로 쿼리를 작성하면 사용할 수 있는 서비스를 식별하고, 모델과 구조의 상태에 대한 업데이트를 가져오고, 모델 콘텐츠나 매개 변수에 대한 정보를 찾을 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 설명은 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)을 참조하십시오.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]행 집합은 마이닝 DMX (Data Extensions) 문을 사용 하 여 쿼리할 수 있는 시스템 테이블 집합으로 표시는 기존 OLE DB 데이터 마이닝 스키마의 여러 합니다. 데이터 마이닝 스키마 행 집합을 대상으로 쿼리를 작성하면 사용할 수 있는 서비스를 식별하고, 모델과 구조의 상태에 대한 업데이트를 가져오고, 모델 콘텐츠나 매개 변수에 대한 정보를 찾을 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 설명은 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)을 참조하십시오.  
   
 > [!NOTE]  
 >  XMLA를 사용하여 데이터 마이닝 스키마 행 집합을 쿼리할 수도 있습니다. SQL Server Management Studio에서 이 작업을 수행하는 방법에 대한 자세한 내용은 [XMLA를 사용하여 데이터 마이닝 쿼리 만들기](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)를 참조하세요.  

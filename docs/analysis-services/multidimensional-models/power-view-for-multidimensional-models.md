@@ -2,12 +2,12 @@
 title: "Power View를 다차원 모델에 대 한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfffc05ea7d77676825f1533b9ecb42d36f5d0ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6b7249bfd3c5af42098e613afe9098501f45c57f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰
-  Microsoft SQL Server 2016 Analysis Services 다차원 모델은 Microsoft 파워 뷰를 사용하여 임시 데이터 분석, 탐색 및 시각화를 지원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Microsoft SQL Server 2016 Analysis Services 다차원 모델 Microsoft Power View를 사용 하 여 임시 데이터 분석, 탐색 및 시각화를 지원 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

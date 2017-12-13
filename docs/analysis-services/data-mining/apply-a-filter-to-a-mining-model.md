@@ -2,12 +2,12 @@
 title: "마이닝 모델에 필터를 적용 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/19/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3beab78045a254a30e398928cd262785703df4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85bbd59ae0e5de9dea2fb042fc0c67610864ec0f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>마이닝 모델에 필터 적용
-  마이닝 구조에 중첩 테이블이 포함된 경우 사례 테이블, 중첩 테이블 또는 두 테이블 모두에 필터를 적용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 구조에 중첩된 테이블이 포함 된 경우 사례 테이블, 중첩된 테이블 또는 둘 다에 필터를 적용할 수 있습니다.  
   
  다음 절차에서는 사례 필터 및 중첩 테이블 행의 필터와 같은 두 종류의 필터를 만드는 방법을 보여 줍니다.  
   
@@ -106,7 +106,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  **값** 상자를 클릭한 다음 **(…)** 단추를 클릭하여 식을 작성합니다.  
   
-     **\<이름 > 필터** 대화 상자가 열립니다. 이 대화 상자에서는 현재 테이블의 조건만 설정할 수 있습니다. 이 사례에서 현재 테이블은 중첩 테이블입니다.  
+      **\<이름 > 필터** 대화 상자가 열립니다. 이 대화 상자에서는 현재 테이블의 조건만 설정할 수 있습니다. 이 사례에서 현재 테이블은 중첩 테이블입니다.  
   
 5.  **마이닝 구조 열** 상자를 클릭하고 중첩 테이블 열의 드롭다운 목록에서 열 이름을 선택합니다.  
   

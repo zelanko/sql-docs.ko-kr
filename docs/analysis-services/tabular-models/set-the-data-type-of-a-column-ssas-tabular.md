@@ -2,12 +2,12 @@
 title: "데이터 형식의 열 (SSAS 테이블 형식)를 설정 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff4bf9de4a232561d813ae304aa3ae660ff9041
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca2bd5f49f3d8a756e213f9e8ae46dcd5a25f6a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>열 데이터 형식 설정(SSAS 테이블 형식)
-  모델에 데이터를 가져오거나 붙여넣을 때 모델 디자이너에서 자동으로 데이터 형식을 감지하고 적용합니다. 모델에 데이터를 추가한 후 열의 데이터 형식을 수동으로 수정하여 데이터가 저장되는 방법을 변경할 수 있습니다. 원하는 경우 데이터 저장 방식은 변경하지 않고 데이터 표시 방식의 형식만 변경할 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터를 가져오거나 데이터 모델에 붙여 넣을 때 모델 디자이너는 자동으로 검색 및 데이터 형식을 적용 합니다. 모델에 데이터를 추가한 후 열의 데이터 형식을 수동으로 수정하여 데이터가 저장되는 방법을 변경할 수 있습니다. 원하는 경우 데이터 저장 방식은 변경하지 않고 데이터 표시 방식의 형식만 변경할 수도 있습니다.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>열의 데이터 형식 또는 표시 형식을 변경하려면  
   

@@ -2,12 +2,12 @@
 title: "차원 쓰기 저장을 사용 하도록 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 015ecb28286589516d78476caf0f12938980ad5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f8f2ddac65e4ffbb24118a498f96dad83c2c138d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>BI 마법사-Enable 차원 쓰기 저장
-  큐브나 차원에 차원 쓰기 저장 기능을 추가하면 수동으로 차원 구조와 멤버를 수정할 수 있습니다. 쓰기 가능 차원에 대한 업데이트는 차원 테이블에 직접 기록됩니다. 이 기능은 차원의 **WriteEnabled** 속성 설정을 변경합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용자가 수동으로 차원 구조와 멤버를 수정할 수 있도록 차원에 차원 쓰기 저장 기능을 추가 합니다. 쓰기 가능 차원에 대한 업데이트는 차원 테이블에 직접 기록됩니다. 이 기능은 차원의 **WriteEnabled** 속성 설정을 변경합니다.  
   
  차원에 쓰기 저장 기능을 추가하려면 비즈니스 인텔리전스 마법사의 **기능 선택** 페이지에서 **차원 쓰기 저장(writeback) 설정** 옵션을 선택합니다. 그런 다음 마법사의 안내를 따라 차원 쓰기 저장을 적용할 차원을 선택하고 선택한 차원에 대해 이 옵션을 설정합니다.  
   

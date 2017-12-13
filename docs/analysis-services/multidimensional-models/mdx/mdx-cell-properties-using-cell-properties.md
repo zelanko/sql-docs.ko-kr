@@ -2,12 +2,12 @@
 title: "셀 속성 사용 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52ef98613eceec0356317f1cd578ac63506d6815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81d09a847b9bb405cd028eaa8cd1b4cb9feac9a1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>셀 속성을 사용 하 여 MDX 셀 속성-
-  MDX의 셀 속성은 큐브와 같은 다차원 데이터 원본의 셀 내용 및 형식에 대한 정보를 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]셀 속성에 MDX (Multidimensional Expressions) 내용 및 큐브와 같은 다차원 데이터 원본에 있는 셀의 형식에 대 한 정보를 포함 합니다.  
   
  MDX SELECT 문에서 CELL PROPERTIES 키워드를 사용하여 기본 셀 속성을 검색할 수 있습니다. 기본 셀 속성은 일반적으로 셀 데이터의 시각적 표현을 돕는 데 자주 사용됩니다.  
   

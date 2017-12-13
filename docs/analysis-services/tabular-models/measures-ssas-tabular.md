@@ -2,12 +2,12 @@
 title: "측정값 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures"></a>측정값 그룹
-  테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 응용 프로그램에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델에서 측정값은 보고 클라이언트에서 사용 하기 위해 DAX 수식을 사용 하 여 만든 계산입니다. 측정값은 보고 클라이언트 응용 프로그램에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
   
 ##  <a name="bkmk_understanding"></a> 이점  
  AVERAGE, COUNT 또는 SUM과 같은 표준 집계 함수를 기반으로 측정값을 만들거나 DAX를 사용하여 고유한 수식을 정의할 수 있습니다. 각 측정값에는 수식 외에 이름, 테이블 세부 정보, 형식, 소수 자릿수와 같은 측정값 데이터 형식으로 정의된 속성이 있습니다.  

@@ -2,12 +2,12 @@
 title: "AMO 기본 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5323ecb7ac5acc40964357e57ce86f6538313ea9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0ffdb76b0fa396430c913cfb081e7ca5f6f27b0b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-fundamental-classes"></a>AMO 기본 클래스
-  AMO(Analysis Management Objects) 작업은 기본 클래스에서 시작합니다. 이러한 클래스를 통해 응용 프로그램에 사용할 나머지 개체의 환경을 설정합니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]기본 클래스는 Analysis Management Objects (AMO)와 작업에 대 한 시작 지점입니다. 이러한 클래스를 통해 응용 프로그램에 사용할 나머지 개체의 환경을 설정합니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다.  
   
  다음 그림에서는 이 항목에 설명된 클래스의 관계를 보여 줍니다.  
   

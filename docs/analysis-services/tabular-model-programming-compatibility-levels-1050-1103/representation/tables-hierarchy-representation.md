@@ -2,12 +2,12 @@
 title: "계층 표현 (테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 843a0f870ad9b30ad4746bbe9913de845bfc30e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 58ee908dc3dbf745a15c8dfa5f44d711f91c392b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---hierarchy-representation"></a>테이블-계층 표현
-  테이블 형식 모델에서 계층은 사용자가 선택한 값을 기준으로 한 특성에서 다른 특성으로의 탐색 경로를 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]테이블 형식 모델에서 계층은 사용자가 선택한 값을 기반으로 다른 한 특성의 탐색 경로 사용 합니다.  
   
 ## <a name="hierarchy-representation"></a>계층 표현  
   

@@ -2,12 +2,12 @@
 title: "호출 ProcessASDatabase | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72c96cddc1d505906164aa3d634871ba0ae30072
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 711ab57846b862479c946dae4ad50402a5876f48
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  기본 메타데이터 유형에 따라 특정 **ProcessType** 또는 **RefreshType** 으로 지정된 **Database** 에서 **Process** 연산을 수행합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]수행 하는 **프로세스** 연산이 지정된 된 **데이터베이스** 특정 **ProcessType** 또는 **RefreshType** 에 따라는 내부 메타 데이터 형식입니다.  
   
  다차원 메타데이터를 데이터베이스의 **ProcessType** 에 사용합니다.(여기에는 호환성 수준이 1050, 1100 또는 1103인 테이블 형식 데이터베이스가 포함됩니다.)  
   

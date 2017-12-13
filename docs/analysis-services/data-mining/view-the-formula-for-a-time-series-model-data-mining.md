@@ -2,12 +2,12 @@
 title: "시계열에 대 한 수식을 보려면 모델 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a84f9cefb4793cd03536b228c52db3452d7937b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb044b96eecbbb5c6eb18dcc33eae1807b2fe8b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>시계열 모델에 대한 수식 보기(데이터 마이닝)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝을 사용하여 시계열 모델을 만든 경우 모든 상수를 읽을 수 있는 형식으로 제공하는 **Microsoft 시계열 뷰어** 의 [마이닝 범례](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)를 사용하면 모델에 대한 회귀 수식을 가장 쉽게 확인할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하 여 시간 시계열 모델을 만든 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝을 사용 하는 것은 모델에 대 한 회귀 수식을 볼 수는 가장 쉬운 방법은 **마이닝 범례** 의 [Microsoft 시계열 뷰어](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)이며 읽을 수 있는 형식으로 모든 상수를 제공 합니다.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>시계열 모델의 ARTXP 회귀 수식을 보려면  
   

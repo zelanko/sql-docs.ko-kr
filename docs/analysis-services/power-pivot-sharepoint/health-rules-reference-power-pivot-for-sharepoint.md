@@ -2,12 +2,12 @@
 title: "상태 규칙 참조 (SharePoint 용 Power Pivot) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e1e98142c2234fc680daa8311cf35cbd8057bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>상태 규칙 참조(SharePoint용 Power Pivot)
-  이 참조 항목에서는 SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 설치 시 추가되는 SharePoint 상태 규칙에 대해 설명합니다. 이러한 규칙은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 응용 프로그램 또는 연결된 해당 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 구성,  가용성 또는 서버 상태에 대한 문제를 보고하는 데 사용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 참조 항목으로 추가 되는 SharePoint 상태 규칙에 설명 된 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 설치 합니다. 이러한 규칙은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 응용 프로그램 또는 연결된 해당 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 구성,  가용성 또는 서버 상태에 대한 문제를 보고하는 데 사용됩니다.  
   
  다음 표에는 SharePoint  중앙 관리의 상태 분석기 규칙 정의 페이지에 표시되는 순서대로 규칙이 나열되어 있습니다. 구성 가능한 규칙은 규칙이 트리거되는 임계값을 변경할 수 있는 규칙입니다. 자세한 내용은 [파워 피벗 상태 규칙 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)을 참조하세요. 자동 복구는 문제 보고서 페이지 내에서 클릭하여 문제를 해결할 수 있는 기본 제공 해결 방법이 있음을 나타냅니다.  
   

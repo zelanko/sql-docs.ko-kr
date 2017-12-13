@@ -2,12 +2,12 @@
 title: "파티션 개체 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ea3c1f7486caa923bcf5cfc07d83a65e76578e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a6725ed37b909b80393a2760df26ba25b6f5148f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-object-tmsl"></a>파티션 개체 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  파티션 또는 테이블 행 집합의 논리적 조각화를 정의합니다. 모델링 환경에서 또는 DirectQuery 통해 통과 쿼리 실행을 통해 전체 데이터 쿼리로 샘플 데이터에 대 한 데이터를 가져오는 데 사용 되는 SQL 쿼리는 파티션 구성 됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]파티션 또는 테이블 행 집합의 논리적 조각화를 정의합니다. 모델링 환경에서 또는 DirectQuery 통해 통과 쿼리 실행을 통해 전체 데이터 쿼리로 샘플 데이터에 대 한 데이터를 가져오는 데 사용 되는 SQL 쿼리는 파티션 구성 됩니다.  
   
  파티션에 속성 테이블에 대 한 데이터를 원본으로 방법을 결정 합니다.  개체 계층 구조에서 부모 개체는 파티션의 테이블 개체가입니다.  
   

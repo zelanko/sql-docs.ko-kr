@@ -2,12 +2,12 @@
 title: "(Analysis Services) 기본적으로 해제 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eb06cb663a0a94a0611d95532e80f15e5df2da7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 644101b1010028ac88066f44f2b4427776ca983f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="features-off-by-default-analysis-services"></a>기본적으로 해제되어 있는 기능(Analysis Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 기본적으로 보안되도록 디자인되었습니다. 따라서 보안을 손상시킬 수 있는 기능은 기본적으로 비활성화됩니다. 다음 기능은 기본적으로 비활성화된 상태로 설치되며 이러한 기능을 사용하려면 별도로 활성화해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]인스턴스 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기본적으로 안전 하도록 설계 되었습니다. 따라서 보안을 손상시킬 수 있는 기능은 기본적으로 비활성화됩니다. 다음 기능은 기본적으로 비활성화된 상태로 설치되며 이러한 기능을 사용하려면 별도로 활성화해야 합니다.  
   
 ## <a name="feature-list"></a>기능 목록  
  다음 기능을 활성화하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 연결합니다. 인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 **패싯**을 선택합니다. 또는 다음 섹션에 설명된 것처럼 서버 속성을 통해 이러한 기능을 활성화할 수 있습니다.  

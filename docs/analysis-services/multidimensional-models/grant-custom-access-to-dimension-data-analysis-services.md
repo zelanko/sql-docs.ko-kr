@@ -2,12 +2,12 @@
 title: "차원 데이터 (Analysis Services)에 대 한 사용자 지정 액세스 부여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>차원 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
-  큐브에 대한 읽기 권한을 활성화한 후 차원 구성원(큐브에 사용된 모든 측정값을 포함하는 측정값 차원에 포함된 측정값 포함)에 대한 액세스를 명시적으로 허용하거나 거부하는 추가 권한을 설정할 수 있습니다. 예를 들어 여러 범주의 재판매인의 경우, 특정 비즈니스 유형에 대한 데이터를 제외하도록 권한을 설정할 수 있습니다. 다음은 Reseller 차원에서 Warehouse 비즈니스 유형에 대한 액세스 거부의 전후 효과를 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브에 대 한 읽기 액세스를 설정한 후 명시적으로 허용 하거나 차원 구성원 (큐브에 사용 되는 측정값의 모든 포함 된 측정값 차원에 포함 된 측정값 포함)에 대 한 액세스를 거부 하는 추가 권한을 설정할 수 있습니다. 예를 들어 여러 범주의 재판매인의 경우, 특정 비즈니스 유형에 대한 데이터를 제외하도록 권한을 설정할 수 있습니다. 다음은 Reseller 차원에서 Warehouse 비즈니스 유형에 대한 액세스 거부의 전후 효과를 설명합니다.  
   
  ![피벗 테이블 및 차원 구성원이 없는](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "와 차원 구성원이 없는 피벗 테이블")  
   

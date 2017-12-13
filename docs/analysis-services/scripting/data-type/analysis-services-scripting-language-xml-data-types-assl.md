@@ -2,12 +2,12 @@
 title: "Analysis Services 스크립팅 언어 XML 데이터 형식 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b15c0ffee8bc0217ec119d6d66ef446f7897c0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c4f046379f48724876223ea5248f4aff58bb637
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>ASSL(Analysis Services Scripting Language) XML 데이터 형식
-  이 참조 섹션에서는 ASSL(Analysis Services Scripting Language) 스키마에서 유형으로 사용되는 각 요소에 대한 구문 및 사용 정보를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 참조 섹션에서 Analysis Services Scripting Language (ASSL) 스키마 형식으로 사용 되는 각 요소에 대 한 구문 및 사용법 정보를 포함 합니다.  
   
  ASSL 스키마는 개발자의 관점에서 XML 요소만 포함 하지만이 섹션에 설명 된 요소에 해당 형식, 같은 **바인딩** 및 **권한**, 하는 데 사용 되는 자식 요소 및 다른 개체의 속성을 정의 합니다.  
   

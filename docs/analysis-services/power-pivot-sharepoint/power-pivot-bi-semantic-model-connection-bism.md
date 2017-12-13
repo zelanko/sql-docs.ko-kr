@@ -2,12 +2,12 @@
 title: "전원 피벗 BI 의미 체계 모델 연결 (.bism) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 48c902ba8427101083d1f9e6d012fb15a86d9491
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3cfc29f3a8c23252afdbcee1a1487f32c2aa88f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>파워 피벗 BI 의미 체계 모델 연결(.bism)
-  BI 의미 체계 모델 연결(.bism)은 Excel 또는 파워 뷰 보고서를 Analysis Services 테이블 형식 model 데이터베이스 또는 다차원 모드의 Analysis Services 인스턴스에 연결하는 이식 가능한 연결입니다. Office 데이터 연결(.odc) 파일에 대해 잘 알고 있다면 .bism 연결 파일을 정의하여 사용하는 것이 얼마나 간편한지를 알 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]BI 의미 체계 모델 연결 (.bism)은 Excel를 연결 하는 이식 가능한 연결 또는 Power View 보고서를 Analysis Services 테이블 형식 모델 데이터베이스 또는 다차원 모드에서 Analysis Services 인스턴스로. Office 데이터 연결(.odc) 파일에 대해 잘 알고 있다면 .bism 연결 파일을 정의하여 사용하는 것이 얼마나 간편한지를 알 수 있습니다.  
   
  BI 의미 체계 모델 연결은 SharePoint를 통해 만들고 액세스합니다. BI 의미 체계 모델 연결을 만들면 라이브러리에서 BI 의미 체계 모델 연결에 대한 빠른 시작 명령을 사용할 수 있습니다. 빠른 시작 명령은 새 Excel 통합 문서 또는 연결 파일 편집 옵션을 엽니다. Reporting Services가 설치되어 있는 경우 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서를 만드는 명령도 표시됩니다.  
   

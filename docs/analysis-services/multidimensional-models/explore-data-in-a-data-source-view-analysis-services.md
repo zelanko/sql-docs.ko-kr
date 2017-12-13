@@ -2,12 +2,12 @@
 title: "데이터 원본 뷰 (Analysis Services)의 데이터를 탐색 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 93d6fedcfe7b1e94d8a46b98ade2c73c637612e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0d6788ac8b59b9f962e32cadaa3312372732aa3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 데이터 탐색(Analysis Services)
-  **의 데이터 원본 뷰 디자이너에 있는** 데이터 탐색 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 DSV(데이터 원본 뷰)에서 테이블, 뷰 또는 명명된 쿼리의 데이터를 찾아볼 수 있습니다. 데이터 원본 뷰 디자이너에서 데이터를 탐색하면 선택한 테이블, 뷰 또는 명명된 쿼리에 있는 각 데이터 열의 내용을 볼 수 있습니다. 실제 내용을 보면 모든 열이 필요한지 여부, 사용자에게 친숙함과 유용성을 높이기 위해 명명된 계산이 필요한지 여부 및 기존의 명명된 계산이나 명명된 쿼리에서 예상된 값을 반환하는지 여부를 확인할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용할 수 있습니다는 **데이터 탐색** 대화 상자에서 데이터 원본 뷰 디자이너에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 뷰 또는 명명 된 쿼리를 데이터 원본 뷰 (DSV) 테이블에 대 한 데이터를 찾아볼 수 있습니다. 데이터 원본 뷰 디자이너에서 데이터를 탐색하면 선택한 테이블, 뷰 또는 명명된 쿼리에 있는 각 데이터 열의 내용을 볼 수 있습니다. 실제 내용을 보면 모든 열이 필요한지 여부, 사용자에게 친숙함과 유용성을 높이기 위해 명명된 계산이 필요한지 여부 및 기존의 명명된 계산이나 명명된 쿼리에서 예상된 값을 반환하는지 여부를 확인할 수 있습니다.  
   
  데이터를 보려면 DSV에서 선택한 개체의 데이터 원본에 대한 활성 연결이 있어야 합니다. 테이블에 있는 모든 명명된 계산도 쿼리에서 전송됩니다.  
   

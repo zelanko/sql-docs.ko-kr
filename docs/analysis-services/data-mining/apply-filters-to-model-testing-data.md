@@ -2,12 +2,12 @@
 title: "테스트 데이터를 모델에 필터 적용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39d35b7421b9d3ddeff5cede6e1539b34b7012c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0a9ffaeaeaffb9a93e36f865a6b3e7a0647befa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-filters-to-model-testing-data"></a>모델 테스트 데이터에 필터 적용
-  모델을 테스트하는 데 사용할 외부 데이터 원본을 지정할 경우 필요에 따라 입력 데이터를 제한하기 위한 필터를 적용할 수 있습니다. 예를 들어 특별히 특정 수입 범위 내의 고객에 대해 예측하기 위해 모델을 테스트하려고 할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모델 테스트에 사용할 외부 데이터 소스를 지정 하는 경우 필요에 따라 입력된 데이터를 제한 하는 필터를 적용할 수 있습니다. 예를 들어 특별히 특정 수입 범위 내의 고객에 대해 예측하기 위해 모델을 테스트하려고 할 수 있습니다.  
   
  예를 들어 Adventure Works의 대상인 메일링 시나리오에서 테스트 데이터가 포함된 테이블인 ProspectiveBuyer에 다음과 같은 필터 식을 만들고 사례를 수입 범위별로 테스트하도록 제한할 수 있습니다.  
   

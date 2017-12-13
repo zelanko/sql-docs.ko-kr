@@ -2,12 +2,12 @@
 title: "Readwritemode 데이터베이스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f91af75c3ecd493ec781e7c5a8e0e45cca075202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b7c48381d6f4cc1c7c92802f2028c73f8afb402d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-readwritemodes"></a>ReadWriteMode 데이터베이스
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)는 읽기/쓰기 데이터베이스를 읽기 전용 데이터베이스로, 또는 이와 반대로 변경해야 하는 경우가 종종 있습니다. 이러한 상황은 솔루션 확장 및 성능 개선을 위해 여러 서버에서 동일한 데이터베이스 폴더를 공유하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다. 이 경우 **DBA는** ReadWriteMode [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 속성을 사용하여 데이터베이스 운영 모드를 손쉽게 변경할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]종종 때는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 관리자 (dba)가 읽기 전용 데이터베이스를 읽기/쓰기 데이터베이스를 변경 해야 하거나 그 반대로 합니다. 이러한 상황은 솔루션 확장 및 성능 개선을 위해 여러 서버에서 동일한 데이터베이스 폴더를 공유하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다. 이 경우 **DBA는** ReadWriteMode [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 속성을 사용하여 데이터베이스 운영 모드를 손쉽게 변경할 수 있습니다.  
   
 ## <a name="readwritemode-database-property"></a>ReadWriteMode 데이터베이스 속성  
  **ReadWriteMode** 데이터베이스 속성은 데이터베이스가 읽기/쓰기 모드에 있는지 또는 읽기 전용 모드에 있는지를 지정합니다. 이 속성 값은 두 가지만 가능합니다. 데이터베이스가 읽기 전용 모드인 경우 변경 사항이나 업데이트 내용을 데이터베이스에 적용할 수 없습니다. 하지만 데이터베이스가 읽기/쓰기 모드인 경우에는 변경 및 업데이트가 가능합니다. **ReadWriteMode** 데이터베이스 속성은 읽기 전용 속성으로 정의되며 **Attach** 명령을 통해서만 설정할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |백그라운드 작업|데이터베이스를 수정하는 백그라운드 작업은 사용할 수 없습니다. 여기에는 지연 처리, 자동 관리 캐싱 등이 포함됩니다.|  
   
 ## <a name="readwritemode-usage"></a>ReadWriteMode 사용법  
- **ReadWriteMode** 데이터베이스 속성은 **Attach** 데이터베이스 명령의 일부로 사용됩니다. **Attach** 명령을 사용하여 데이터베이스 속성을 **ReadWrite** 또는 **ReadOnly**중 하나로 설정할 수 있습니다. **ReadWriteMode** 데이터베이스 속성은 읽기 전용으로 정의되어 있으므로 이 속성 값을 직접 업데이트할 수 없습니다. **ReadWriteMode** 속성이 **ReadWrite**로 설정된 경우에 데이터베이스를 만들 수 있습니다.. 읽기 전용 모드에서는 데이터베이스를 만들 수 없습니다.  
+ **ReadWriteMode** 데이터베이스 속성은 **Attach** 데이터베이스 명령의 일부로 사용됩니다. **Attach** 명령을 사용하여 데이터베이스 속성을 **ReadWrite** 또는 **ReadOnly**중 하나로 설정할 수 있습니다. **ReadWriteMode** 데이터베이스 속성은 읽기 전용으로 정의되어 있으므로 이 속성 값을 직접 업데이트할 수 없습니다. **ReadWriteMode** 속성이 **ReadWrite**로 설정된 경우에 데이터베이스를 만들 수 있습니다. 읽기 전용 모드에서는 데이터베이스를 만들 수 없습니다.  
   
  **ReadWriteMode** 데이터베이스 속성을 **ReadWrite** 와 **ReadOnly**간에 전환하려면 **Detach/Attach** 명령 시퀀스를 실행해야 합니다.  
   

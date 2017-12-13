@@ -2,12 +2,12 @@
 title: "차원에서 특성 제거 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e9c4bcca48bbd02d572cf8a695730c898273ea0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bba401df8092f349ae3bb192733736225d5952ad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---remove-an-attribute-from-a-dimension"></a>속성을 특성-차원에서 특성 제거
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원에서 특성을 제거하려면 **의 차원 디자이너에 있는** 차원 구조 **탭의** 특성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]창에서 특성을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다. **개체 삭제** 대화 상자에서 **확인**을 클릭합니다. 이렇게 하면 차원에서 특성이 제거되지만 차원의 데이터 원본 뷰에는 영향을 미치지 않습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]차원에서 특성을 제거 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 있는 특성을 마우스 오른쪽 단추로 클릭는 **특성** 의 창은 **차원 구조** 차원 탭 디자이너 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 클릭 하 고 **삭제**합니다. **개체 삭제** 대화 상자에서 **확인**을 클릭합니다. 이렇게 하면 차원에서 특성이 제거되지만 차원의 데이터 원본 뷰에는 영향을 미치지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 차원](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)   

@@ -2,12 +2,12 @@
 title: "서버 모드의 Analysis Services 인스턴스의 확인 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 05e11407da93e269ca8766d94df4820e54e43ecc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7242643ec7ac3869f245b069218205ad425692a8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
-  다차원 및 데이터 마이닝(기본값), SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 테이블 형식이라는 세 가지 서버 모드 중 하나에 Analysis Services를 설치할 수 있습니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]세 가지 서버 모드 중 하나에 analysis Services를 설치할 수 있습니다: 다차원 및 데이터 마이닝 (기본값) 이면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 및 테이블 형식에 대 한 합니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
   
  서버 모드에 따라 만들어서 배포하는 솔루션 유형이 결정됩니다. 서버 소프트웨어를 설치하지 않은 경우 서버가 설치된 모드를 확인하려면 이 항목의 정보를 사용할 수 있습니다. 특정 모드의 기능 가용성에 대한 자세한 내용은 [테이블 형식 및 다차원 솔루션 비교&#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)를 참조하세요.  
   

@@ -2,12 +2,12 @@
 title: "SQL Server Analysis Services 테이블 형식 모델에서 지원 되는 데이터 원본 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,16 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ca1c382b9bebbb30cc320ceb0896b45b605f506b
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
-ms.translationtype: HT
+ms.openlocfilehash: ac5c3ca68f52a946195797e64ea650d82b1cde7f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-sources-supported-in-tabular-models"></a>테이블 형식 모델에서 지원 되는 데이터 원본
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]   
-Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지원 되는 데이터 원본](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)합니다.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지원 되는 데이터 원본](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)합니다.
 
   이 항목에서는 테이블 형식 모델에서 사용할 수 있는 데이터 원본의 유형에 대해 설명합니다.  
   

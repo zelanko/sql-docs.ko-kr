@@ -2,12 +2,12 @@
 title: "스키마 생성 마법사 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4c43ae5e0b38aab494f21237986b958286d7b9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5bd04de3519739a08ba65b5ecf2e27e0b5915254
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>스키마 생성 마법사(Analysis Services)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 OLAP 개체를 정의할 때 두 가지 관계형 스키마 작업 방법을 지원합니다. 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 데이터 원본 뷰에 생성된 논리적 데이터 모델을 기반으로 OLAP 개체를 정의합니다. 이 데이터 원본 뷰는 데이터 원본 뷰에 사용자 지정된 대로 하나 이상의 관계형 데이터 원본의 스키마 요소를 기반으로 정의됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 내에서 개체를 OLAP를 정의할 때 관계형 스키마 작업의 두 가지 방법을 지원는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 데이터베이스입니다. 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 데이터 원본 뷰에 생성된 논리적 데이터 모델을 기반으로 OLAP 개체를 정의합니다. 이 데이터 원본 뷰는 데이터 원본 뷰에 사용자 지정된 대로 하나 이상의 관계형 데이터 원본의 스키마 요소를 기반으로 정의됩니다.  
   
  또는 OLAP 개체를 먼저 정의한 다음 데이터 원본 뷰 및 데이터 원본과, 해당 OLAP 개체를 지원하는 기본 관계형 데이터베이스 스키마를 생성할 수도 있습니다. 이러한 관계형 데이터베이스를 주제 영역 데이터베이스라고 합니다.  
   

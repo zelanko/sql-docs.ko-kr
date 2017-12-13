@@ -2,12 +2,12 @@
 title: "배포 마법사 Services 분석 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 56a144c05d62207b0e738b56d452dca523dce020
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9a647f65ebbd482fa7f279732685f132d57fcc09
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Analysis Services 배포 마법사 실행
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 배포하는 경우 다음과 같은 방법으로 마법사를 실행할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하는 경우는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 하려면 배포 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 다음과 같은 방법으로 마법사를 실행할 수 있습니다.  
   
 -   **대화형으로** 대화형으로 실행 하면는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 사용자 입력에 따라 변경 되는 입력된 파일을 기반으로 배포 스크립트를 생성 합니다. 모든 사용자 수정 내용은 배포 스크립트에만 적용됩니다. 마법사가 입력 파일을 수정하지는 않습니다. 입력 파일에 대한 자세한 내용은 [배포 스크립트를 만드는 데 사용하는 입력 파일 이해](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)를 참조하세요.  
   

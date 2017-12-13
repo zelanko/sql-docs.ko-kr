@@ -2,12 +2,12 @@
 title: "설치 후 구성 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a87a4995e5b7776012e81f9cf908949dbc9339a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c35dfdbf2dd4eb9e9cae0c99bfc405fbca27380
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="post-install-configuration-analysis-services"></a>설치 후 구성(Analysis Services)
-  Analysis Services를 설치한 후 추가 구성을 수행하여 서버가 완전히 작동하고 일반 용도로 사용 가능하도록 설정해야 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)참조).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services를 설치한 후 추가 구성 하도록 설정 해야 서버를 완전히 작동 하 고 일반 용도로 사용 가능 하 게 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)참조).  
   
  이후에 데이터베이스를 배포할 준비가 되면 추가 작업이 필요합니다. 즉, 데이터베이스에서 역할 멤버 자격을 구성하여 데이터 액세스 권한을 사용자에게 부여해야 하며 데이터베이스 백업 및 복구 전략을 디자인하고 데이터를 정기적으로 새로 고칠 수 있도록 예약된 처리 작업이 필요한지 여부를 결정해야 합니다. 데이터베이스 배포 및 관리에 대한 자세한 내용은 [다차원 model 데이터베이스&#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) 및 [테이블 형식 model 데이터베이스&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md) 링크에서 찾을 수 있습니다.  
   

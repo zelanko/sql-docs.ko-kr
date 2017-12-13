@@ -2,12 +2,12 @@
 title: "Power Pivot 서버 관리 및 중앙 관리의 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a414e1d07c7a8789ed0c91db91cc3af4009c417b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dff0e2f3dda0e4fc568f04787c4056ab27611a18
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>중앙 관리에서 파워 피벗 서버 관리 및 구성
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 관리 및 구성을 수행합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 관리 및 구성은 SharePoint 서비스 응용 프로그램 관리자, SharePoint 중앙 관리를 사용 하 여 수행 됩니다.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 먼저 구성해야 사용할 수 있습니다. SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 SQL Server 설치 프로그램을 사용하여 설치한 후 다음 중 원하는 방식으로 구성할 수 있습니다.  
   

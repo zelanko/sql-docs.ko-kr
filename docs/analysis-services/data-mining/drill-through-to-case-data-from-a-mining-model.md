@@ -2,12 +2,12 @@
 title: "마이닝 모델에서 사례 데이터로 드릴스루 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7b636ccf4c39f90a356e8b7289453afb61bbac7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3c8baf27751f67ee124acc1736dc91cb1724ce7c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>마이닝 모델에서 사례 데이터로 드릴스루
-  모델 사례로 드릴스루할 수 있도록 마이닝 모델을 구성한 경우 모델을 찾을 때 모델을 만드는 데 사용된 사례에 대한 세부 정보를 검색할 수 있습니다. 또한 구조 사례로의 드릴스루를 허용하도록 기본 마이닝 구조를 구성했으며 적절한 권한이 있는 경우 마이닝 구조에서 정보를 반환할 수 있습니다. 여기에는 마이닝 모델에 포함되지 않은 열이 포함될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 모델을 구성한 경우에 모델을 검색 하는 경우 모델 사례로 드릴스루할 수 있도록, 모델을 만드는 데 사용 된 사례에 대 한 자세한 정보를 검색할 수 있습니다. 또한 구조 사례로의 드릴스루를 허용하도록 기본 마이닝 구조를 구성했으며 적절한 권한이 있는 경우 마이닝 구조에서 정보를 반환할 수 있습니다. 여기에는 마이닝 모델에 포함되지 않은 열이 포함될 수 있습니다.  
   
  기본 데이터로의 드릴스루가 마이닝 구조에서는 허용되지 않지만 마이닝 모델에서는 허용되는 경우 마이닝 구조가 아닌 모델 사례에서 정보를 볼 수 있습니다.  
   

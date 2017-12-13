@@ -2,12 +2,12 @@
 title: "DISCOVER_ENUMERATORS 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eda9b5a7563ff6d368d651f62c3ea6ab4a2d7630
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 46ccb72897d628a0f2b4587e60421f4e6bf76b5c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverenumerators-rowset"></a>DISCOVER_ENUMERATORS 행 집합
-  특정 데이터 원본에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자에서 지원하는 열거자의 이름, 데이터 형식 및 열거 값 목록을 반환합니다. XMLA 공급자는 인식된 모든 열거 상수를 게시합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이름, 데이터 형식 및에서 지 원하는 열거자의 열거 값의 목록을 반환 하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 공급자는 특정 데이터 원본에 대 한 합니다. XMLA 공급자는 인식된 모든 열거 상수를 게시합니다.  
   
  호출 하는 경우는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드는 **DISCOVER_ENUMERATORS** 열거 값은 [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 요소는 **Discover** 메서드가 반환 되는 **DISCOVER_ENUMERATORS** 스키마 행 집합입니다.  
   

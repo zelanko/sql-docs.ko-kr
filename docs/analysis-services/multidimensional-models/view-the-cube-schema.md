@@ -2,12 +2,12 @@
 title: "큐브 스키마 보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2489ce5465afcbbb42ffaa9403d75a7d42d68ca4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-cube-schema"></a>큐브 스키마 보기
-  **큐브 디자이너** 에서 **큐브 구조** 탭의 **데이터 원본 뷰** 에는 큐브 스키마가 표시됩니다. 이 스키마는 큐브의 측정값과 차원이 파생된 원본 테이블 집합입니다. 모든 큐브 스키마는 해당 큐브의 측정값과 차원의 기반이 되는 하나 이상의 팩트 테이블과 하나 이상의 차원 테이블로 구성됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**데이터 원본 뷰** 의 창 고 **큐브 구조** 탭에서 **큐브 디자이너** 큐브 스키마가 표시 됩니다. 이 스키마는 큐브의 측정값과 차원이 파생된 원본 테이블 집합입니다. 모든 큐브 스키마는 해당 큐브의 측정값과 차원의 기반이 되는 하나 이상의 팩트 테이블과 하나 이상의 차원 테이블로 구성됩니다.  
   
  **큐브 구조** 탭의 **데이터 원본 뷰** 창에는 큐브의 기반이 되는 데이터 원본 뷰의 다이어그램이 표시됩니다. 이 다이어그램은 데이터 원본 뷰의 주 다이어그램의 하위 집합입니다. **데이터 원본 뷰** 창에서 테이블을 숨기고 표시할 수 있으며, 기존 다이어그램을 볼 수 있습니다. 하지만 새 관계나 명명된 쿼리를 추가하는 등의 기본 스키마를 변경하는 작업은 할 수 없습니다. 스키마를 변경하려면 데이터 원본 뷰 디자이너를 사용합니다.  
   

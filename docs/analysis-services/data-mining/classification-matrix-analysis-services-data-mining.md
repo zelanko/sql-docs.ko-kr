@@ -2,12 +2,12 @@
 title: "분류 행렬 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8882fb1235b4d8beeb819833c76c872f1a4df76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>분류 행렬(Analysis Services - 데이터 마이닝)
-  *분류 행렬* 은 예측된 값이 실제 값과 일치하는지 여부에 따라 모델의 모든 사례를 해당 범주로 분류합니다. 그런 다음 각 범주의 모든 사례 수가 계산되고 행렬에 합계가 표시됩니다. 분류 행렬은 통계 모델을 평가하기 위한 표준 도구로 *혼동 행렬*이라고도 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *분류 행렬* 범주 예측된 값의 실제 값과 일치 하는지 여부를 확인 하 여 모델의 모든 사례를 정렬 합니다. 그런 다음 각 범주의 모든 사례 수가 계산되고 행렬에 합계가 표시됩니다. 분류 행렬은 통계 모델을 평가하기 위한 표준 도구로 *혼동 행렬*이라고도 합니다.  
   
  **분류 행렬** 옵션을 선택하면 생성되는 차트는 지정된 예측 상태별로 실제 값과 예측된 값을 비교합니다. 행렬에 대한 행은 모델의 예측 값을 나타내고 열은 실제 값을 나타냅니다. 분석에는 *거짓 긍정*, *참 긍정*, *거짓 부정*및 *참 부정*의 4가지 범주가 사용됩니다.  
   

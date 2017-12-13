@@ -1,12 +1,12 @@
 ---
 title: "NullProcessing 요소 (ASSL) | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3caf2e1beb730048c4fb0bc55d3b37430e7670a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8b5f63a3b5813dc053bc9323b1317a98f92b3303
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="nullprocessing-element-assl"></a>NullProcessing Element (ASSL)
-  Null 값이 처리되는 방식을 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]방법을 null 값이 정의 되어 처리 됩니다.  
   
 ## <a name="syntax"></a>구문  
   

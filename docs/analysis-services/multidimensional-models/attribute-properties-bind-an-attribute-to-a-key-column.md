@@ -2,12 +2,12 @@
 title: "키 열에 특성 바인딩 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4f19e7ee6c46ff06cbfc8005252bab2ec1115eb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6288f1323e76c5efa43a05e97a30b23f86de7559
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>속성을 특성-키 열에 특성 바인딩
-  이 절차에서는 차원에서 특성의 **Name** 속성 설정을 변경하는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 절차에 대 한 설정을 변경 하는 방법에 설명 된 **이름** 차원에서 특성의 속성입니다.  
   
 ### <a name="to-bind-an-attribute-to-a-key-column"></a>키 열에 특성을 바인딩하려면  
   

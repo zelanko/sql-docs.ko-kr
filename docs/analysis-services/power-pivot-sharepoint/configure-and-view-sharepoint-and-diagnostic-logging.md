@@ -2,12 +2,12 @@
 title: "구성 및 SharePoint와 진단 로깅 보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2ca4cda21f2cb76f2f46e13be5f87765a73d665d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8c9c9e933c57a17e8b64846e25d6e9fe80f8f61d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>구성 하 고 SharePoint 및 진단 로깅 확인
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 작업, 이벤트 및 메시지가 SharePoint 로그 파일에 기록됩니다. 로깅 수준을 구성하고 로그 파일 정보를 보려면 이 항목의 정보를 사용합니다. 파일에 기록되는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 이벤트를 제어할 수 있습니다. 또한 기록되는 메시지의 심각도를 제어할 수 있습니다. 자세한 내용은 [사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 작업, 이벤트 및 메시지가 SharePoint 로그 파일에 기록 됩니다. 로깅 수준을 구성하고 로그 파일 정보를 보려면 이 항목의 정보를 사용합니다. 파일에 기록되는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 이벤트를 제어할 수 있습니다. 또한 기록되는 메시지의 심각도를 제어할 수 있습니다. 자세한 내용은 [사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 참조하세요.  
   
  항목 내용  
   

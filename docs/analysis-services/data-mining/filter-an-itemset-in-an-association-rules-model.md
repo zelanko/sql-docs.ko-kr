@@ -2,12 +2,12 @@
 title: "필터 항목 집합에 연결 규칙 모델 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7fcdaa6136f9ec36d34c10e5b10ed5889aeea27e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8c50de050c9641a15c54da20ad46bc9e7656bc57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>연결 규칙 모델에서 항목 집합 필터링
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 **연결 규칙 뷰어의** 항목 집합 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 탭에 표시되는 항목 집합을 필터링할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 표시 되는 항목 집합을 필터링 할 수 있습니다는 **항목 집합** 탭은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 뷰어.  
   
 ### <a name="to-filter-an-itemset"></a>항목 집합을 필터링하려면  
   

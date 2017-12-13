@@ -2,12 +2,12 @@
 title: "모델 뷰어에서 드릴스루 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 548c2c51dc0df576e5334dba2f7b17a838b19cb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb23accde5d3711a97d67aab6750a6a16a6a8b3d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>모델 뷰어에서 드릴스루 사용
-  모델 유형에 따라 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 있는 브라우저 뷰어에서 드릴스루를 사용하여 마이닝 모델에 사용된 사례를 탐색하거나 마이닝 구조의 추가 열을 볼 수 있습니다. 모델의 패턴은 특정 사례에 직접 연결할 수 없으므로 대부분의 모델 유형에서 드릴스루를 지원하지 않지만 다음 모델 유형에서는 드릴스루를 지원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모델 유형에 따라에 브라우저 뷰어에서 드릴스루를에서 사용할 수는 **마이닝 모델 뷰어** 를 마이닝 모델에 사용 된 사례를 탐색 하거나 마이닝 구조의 추가 열을 볼 데이터 마이닝 디자이너의 탭 합니다. 모델의 패턴은 특정 사례에 직접 연결할 수 없으므로 대부분의 모델 유형에서 드릴스루를 지원하지 않지만 다음 모델 유형에서는 드릴스루를 지원합니다.  
   
  모델에 드릴스루가 사용하도록 설정되어 있고 사용자에게 적절한 사용 권한이 있어야 합니다. 또한 모델이 현재 처리되지 않은 상태인 경우에는 모델이 이전에 처리되었고 모델에 내용이 있는지 여부에 관계없이 드릴스루 옵션이 사용하지 않도록 설정될 수도 있습니다. 드릴스루를 사용하여 모델 사례 데이터를 검색하려면 구조 및 모델의 캐시가 최신 상태여야 합니다.  
   

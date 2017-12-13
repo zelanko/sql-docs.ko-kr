@@ -2,12 +2,12 @@
 title: "솔루션 탐색기 (SSAS 다차원)에서 데이터 원본을 삭제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e3a98d8d962d3f0bdbe3a818d8496ecdb8a1a94
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 38f16616652f18c8db3d5f7895f3994a10e3179c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>솔루션 탐색기에서 데이터 원본 삭제(SSAS 다차원)
-  데이터 원본 개체를 삭제하여 Analysis Services 다차원 모델 프로젝트에서 해당 개체를 영구적으로 제거할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services 다차원 모델 프로젝트에서 영구적으로 제거 하는 데이터 원본 개체를 삭제할 수 있습니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 원본은 데이터 원본 뷰의 생성 기반을 제공하며 데이터 원본 뷰는 다시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스의 차원, 큐브 및 마이닝 구조를 정의하는 데 사용됩니다. 따라서 데이터 원본을 삭제하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 무효화될 수 있습니다. 항상 개체를 삭제하기 전에 제공되는 종속 개체의 목록을 검토해야 합니다.  
   

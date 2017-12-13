@@ -2,12 +2,12 @@
 title: "수익 차트 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 445c65775a59a1fb9490d947246b22f4adeded2d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ddde9150e2e748e75cef8fb25f16377c9dcea4b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>수익 차트(Analysis Services - 데이터 마이닝)
-  수익 차트는 마이닝 모델 사용과 관련된 예상 수익성을 표시합니다. 예를 들어 비즈니스 시나리오에서 회사가 어떤 고객에게 연락해야 하는지 예측하는 모델을 가정하겠습니다. 이 경우 수익 차트 정보에 타겟 메일링 캠페인 수행 비용을 추가합니다. 그런 다음 완성된 차트에서 고객에게 무작위로 연락하는 시나리오와 비교하여 고객을 올바르게 타게팅할 때 예상되는 수익을 확인할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]수익 차트는 마이닝 모델 사용과 관련 된 예상된 수익성을 표시 합니다. 예를 들어 비즈니스 시나리오에서 회사가 어떤 고객에게 연락해야 하는지 예측하는 모델을 가정하겠습니다. 이 경우 수익 차트 정보에 타겟 메일링 캠페인 수행 비용을 추가합니다. 그런 다음 완성된 차트에서 고객에게 무작위로 연락하는 시나리오와 비교하여 고객을 올바르게 타게팅할 때 예상되는 수익을 확인할 수 있습니다.  
   
 ## <a name="build-a-profit-chart"></a>수익 차트 작성  
  수익 차트는 리프트 차트와 비슷합니다. 가장 먼저 리프트 차트를 만든 다음 비용 및 수익 정보를 추가합니다.  

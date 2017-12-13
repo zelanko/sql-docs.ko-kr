@@ -2,12 +2,12 @@
 title: "마이닝 구조 태스크 및 방법 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7bf40cbc33a3f20110e135f2f67c8a6a06d0489e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db7f8b700505c6bf34caadee3642d709962c2228
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>마이닝 구조 태스크 및 방법
-  **에서 데이터 마이닝 디자이너의** 마이닝 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭에 있는 도구를 사용하여 마이닝 구조를 만들고 편집하고 처리할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**마이닝 구조** 데이터 마이닝 디자이너의 탭 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 만들기, 편집 및 마이닝 구조를 처리 하는 데 사용할 수 있는 도구가 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

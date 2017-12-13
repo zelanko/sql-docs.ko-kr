@@ -2,12 +2,12 @@
 title: "테이블 형식 서버 (Analysis Services AMO-TOM)에 있는 기존 데이터베이스 목록 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25b6f8ef54de536c47b3a5df4a6d8ed3b6d627de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79563e4a6bcbcbf5aa52e903b81cb9c3fcb9639c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>테이블 형식 서버 (Analysis Services AMO-TOM)에 있는 기존 데이터베이스 목록
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-있는 경우는 **서버** 되는 개체를 Analysis Services 인스턴스에 연결을 반복할 수 있습니다 **Server.Databases** Anlaysis 서비스 인스턴스에 의해 호스트 되는 모든 데이터베이스를 나열 하는 컬렉션입니다. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]있는 경우는 **서버** 되는 개체를 Analysis Services 인스턴스에 연결을 반복할 수 있습니다 **Server.Databases** Anlaysis 서비스 인스턴스에 의해 호스트 되는 모든 데이터베이스를 나열 하는 컬렉션입니다. 
 
 **Server.Databases** 컬렉션을 포함 하나 **데이터베이스** 서버 모드 (다차원 또는 테이블 형식) 또는 데이터베이스 유형 (다차원에 관계 없이 서버에서 호스팅되는 모든 데이터베이스에 대 한 개체 테이블 형식 사전 1200 또는 테이블 형식 1200 이상)입니다. 
 

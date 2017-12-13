@@ -2,12 +2,12 @@
 title: "ForceRebuildInterval 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 905e9151bd389cd33d4cb0ef212e83c58b11a5df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 30bb9a2d2d1110859c65aa6b27effa50e7acc25c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="forcerebuildinterval-element-assl"></a>ForceRebuildInterval 요소(ASSL)
-  새로운 MOLAP(다차원 OLAP) 이미지가 사용 가능해질 때부터 MOLAP 이미징이 무조건 시작되기 전까지의 기간을 결정합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Molap 이미징이 무조건 시작 되기 전 까지의 새로운 다차원 MOLAP (OLAP) 이미지가 사용할 수 있게 하는 경우 시작 되는 시점을 결정 합니다.  
   
 ## <a name="syntax"></a>구문  
   

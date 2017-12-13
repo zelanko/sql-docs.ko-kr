@@ -2,12 +2,12 @@
 title: "DMSCHEMA_MINING_SERVICE_PARAMETERS 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c84d263a312318be40c65c37a168bf11fdc97cfc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c078da4fa3ef4dd9f17ef6a1fa75e81dcc2e48e8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingserviceparameters-rowset"></a>DMSCHEMA_MINING_SERVICE_PARAMETERS 행 집합
-  서버의 알고리즘 매개 변수에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버의 알고리즘에 대 한 매개 변수를 설명 합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DMSCHEMA_MINING_SERVICE_PARAMETERS** 행 집합에는 다음 열이 포함되어 있습니다.  

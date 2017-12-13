@@ -2,12 +2,12 @@
 title: "배포 된 큐브 찾아보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5ac15a2a9f2cb4f572e797b54b44194958c8d024
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7961b1702d278e776ee1768d9ddde9a3d743d9d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-5---browsing-the-deployed-cube"></a>단원 3-5-배포 된 큐브 찾아보기
-다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브를 찾아봅니다. 분석할 때 여러 차원 간에 측정값을 비교하므로 Excel 피벗 테이블을 사용하여 데이터를 찾습니다. 피벗 테이블을 사용하면 Internet Sales가 특정 기간, 고객 인구 통계 및 제품 라인에 표시될 때 어떻게 변경되는지 볼 수 있도록 고객, 날짜 및 제품 정보를 각각 다른 축에 배치할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]다음 태스크를 찾아봅니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브. 분석할 때 여러 차원 간에 측정값을 비교하므로 Excel 피벗 테이블을 사용하여 데이터를 찾습니다. 피벗 테이블을 사용하면 Internet Sales가 특정 기간, 고객 인구 통계 및 제품 라인에 표시될 때 어떻게 변경되는지 볼 수 있도록 고객, 날짜 및 제품 정보를 각각 다른 축에 배치할 수 있습니다.  
   
 ### <a name="to-browse-the-deployed-cube"></a>배포된 큐브를 찾아보려면  
   

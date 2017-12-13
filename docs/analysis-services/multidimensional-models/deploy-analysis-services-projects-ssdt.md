@@ -2,12 +2,12 @@
 title: "Analysis Services 프로젝트 배포 (SSDT) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f84ef36d858da491beb9b3d4f1130a7ef66eafd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 177f7144c1373c5fa8270a82895273264adb5e89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-analysis-services-projects-ssdt"></a>Analysis Services 프로젝트 배포(SSDT)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 개발하는 동안 프로젝트에서 정의된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 만들기 위해 개발 서버에 자주 프로젝트를 배포합니다. 큐브에서 셀을 찾아보거나 차원 멤버를 찾아보거나 KPI(핵심 성과 지표) 수식을 확인하는 등 프로젝트를 테스트하려면 이 작업을 수행해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]개발 하는 동안는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 자주 프로젝트를 배포 개발 서버를 만들기 위해는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 정의 된 데이터베이스입니다. 큐브에서 셀을 찾아보거나 차원 멤버를 찾아보거나 KPI(핵심 성과 지표) 수식을 확인하는 등 프로젝트를 테스트하려면 이 작업을 수행해야 합니다.  
   
 ## <a name="deploying-a-project"></a>프로젝트 배포  
  독립적으로 프로젝트를 배포하거나 솔루션 내의 모든 프로젝트를 배포할 수 있습니다. 프로젝트를 배포하면 여러 작업이 순서대로 수행됩니다. 먼저 프로젝트가 작성됩니다. 이 단계에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 해당 요소 개체를 정의하는 출력 파일을 만듭니다. 다음에는 대상 서버의 유효성이 확인됩니다. 마지막으로 대상 데이터베이스와 해당 개체가 대상 서버에 생성됩니다. 배포 중에 배포 엔진은 이전 배포 시 프로젝트에서 해당 개체를 만들지 않은 경우 기존 데이터베이스를 프로젝트의 내용으로 모두 바꿉니다.  

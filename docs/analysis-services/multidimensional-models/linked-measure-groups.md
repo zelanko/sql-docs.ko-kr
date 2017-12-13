@@ -2,12 +2,12 @@
 title: "측정값 그룹 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d83878543d1c749757b2603a3fe3001fb6b1581
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cc306874fed195a649dd0cc18d43db4a426cefa4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="linked-measure-groups"></a>연결된 측정값 그룹
-  연결된 측정값 그룹은 동일한 데이터베이스 또는 다른 Analysis Services 데이터베이스 내에 있는 다른 큐브의 또 다른 측정값 그룹을 기반으로 합니다. 측정값 집합을 다시 사용하려는 경우 여러 큐브에서 연결된 측정값 그룹과 해당 데이터 값을 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]연결된 된 측정값 그룹은 동일한 데이터베이스 또는 다른 Analysis Services 데이터베이스 내에서 다른 큐브에 있는 또 다른 측정값 그룹을 기반으로 합니다. 측정값 집합을 다시 사용하려는 경우 여러 큐브에서 연결된 측정값 그룹과 해당 데이터 값을 사용할 수 있습니다.  
   
  원본 측정값 그룹과 연결된 측정값 그룹은 동일한 서버에서 실행되는 솔루션에 상주하는 것이 좋습니다. 원격 서버의 측정값 그룹에 연결하는 기능은 이후 릴리스에서 사용 중단될 예정입니다( [SQL Server 2016에서 사용되지 않는 Analysis Services 기능](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)참조).  
   

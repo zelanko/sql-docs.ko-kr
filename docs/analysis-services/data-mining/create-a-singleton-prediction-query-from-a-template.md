@@ -2,12 +2,12 @@
 title: "템플릿에서 단일 예측 쿼리 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b455a9f4c8996ec2dd9e6d255f4e9f282d58df4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ddcf7a176fd619ffb3140b8bbeea390b3532b2e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>템플릿에서 단일 예측 쿼리 작성
-  단일 쿼리는 예측에 사용하려는 모델이 있지만 이 모델을 외부 입력 데이터 집합에 매핑하거나 대량 예측을 수행하지는 않으려는 경우에 유용합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]단일 쿼리는 모델을 예측에 사용 하려고 하지만 외부 입력된 데이터 집합에 매핑하거나 대량 예측을 수행 하지 않으려는 경우에 유용 합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  
   
  예를 들어 다음 DMX 쿼리는 타겟 메일링 모델인 TM_Decision_Tree에 대한 단일 쿼리를 나타냅니다.  
   

@@ -2,12 +2,12 @@
 title: "기존 Analysis Services 테이블 형식 서버 및 데이터베이스에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df4fb2df60cf27c5a2f33676b9e34fdf1b255a34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e34cc306126acc431048fd93b7eab99049bc2414
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>기존 Analysis Services 테이블 형식 서버 및 데이터베이스에 연결
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-SQL Server 2016 Analysis Services Management Objects (AMO) 서버 연결을 설정 하는 데 사용할 수 있는 몇 가지 네임 스페이스를 포함 합니다. 이 문서에서는 모델 및 1200에서 생성 된 데이터베이스에 대 한 Microsoft.AnalysisServices.Tabular 네임 스페이스를 사용 하 여 서버 연결을 설정 하는 방법 또는 더 높은 호환성 수준을 설명 합니다. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]SQL Server 2016 Analysis Services Management Objects (AMO) 서버 연결을 설정 하는 데 사용할 수 있는 몇 가지 네임 스페이스를 포함 합니다. 이 문서에서는 모델 및 1200에서 생성 된 데이터베이스에 대 한 Microsoft.AnalysisServices.Tabular 네임 스페이스를 사용 하 여 서버 연결을 설정 하는 방법 또는 더 높은 호환성 수준을 설명 합니다. 
 
 Analysis Services 서버에 연결할 코드는 서버 개체를 인스턴스화할 하 고에 Connect 메서드를 호출 해야 합니다. 연결 되 면 서버 개체의 속성에는 현재 Analysis Services 인스턴스의 설정이 반영 됩니다. 
 

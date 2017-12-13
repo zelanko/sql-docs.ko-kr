@@ -2,12 +2,12 @@
 title: "Microsoft 일반 콘텐츠 트리 뷰어를 사용 하 여 모델 찾아보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 32b4ed8b3b8c440fc6f8ca276c4f0e27d5fbc5d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dde53f8f124ece496278cb77229f740344e1f06a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 마이닝 모델 콘텐츠 뷰어는 마이닝 알고리즘을 통해 발견된 패턴에 대한 자세한 정보를 제공하며, 분석 프로세스 중에 생성된 다양한 통계에 대한 액세스도 제공합니다. 정보의 양과 유형은 사용된 알고리즘에 따라 다르지만 다음과 같은 범주가 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 마이닝 모델 콘텐츠 뷰어는 마이닝 알고리즘에서 발견 된 패턴에 대 한 자세한 정보를 제공 하 고 분석 프로세스 중 생성 된 다양 한 통계에 대 한 액세스도 제공 합니다. 정보의 양과 유형은 사용된 알고리즘에 따라 다르지만 다음과 같은 범주가 있습니다.  
   
 -   데이터 세그먼트 및 특징  
   

@@ -2,12 +2,12 @@
 title: "저장된 프로시저 디자인 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e768747452fbdae3d4e839c48bd52954528b6559
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4fa8e3b4bf7a5fcd7817a662a5e4c4d6b5db59cc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-stored-procedures"></a>저장 프로시저 디자인
-  저장 프로시저에서 관리 개체 모델 AMO(Analysis Management Objects) 및 클라이언트 기반 개체 모델 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ADO MD(ActiveX  Data Objects Multidimensional)를 모두 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]관리 개체 모델 Analysis Management Objects (AMO) 및 클라이언트 기반된 개체 모델 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® Data Objects (다차원) ADO MD는 저장된 프로시저에서 사용할 수 있습니다.  
   
  저장 프로시저는 호출할 MDX(Multidimensional Expressions) 수준에 표시되는 범위(서버 또는 데이터베이스)에 있어야 합니다. 그러나 저장 프로시저를 호출한 후에는 범위가 저장 프로시저의 부모 동작으로 제한되지 않습니다. 저장 프로시저는 저장 프로시저를 호출한 사용자 프로세스의 보안 제한 사항이나 저장 프로시저가 작동 중인 트랜잭션의 제한 사항을 위반하지 않는 한 서버의 모든 범위에서 변경 또는 수정 작업을 수행할 수 있습니다.  
   

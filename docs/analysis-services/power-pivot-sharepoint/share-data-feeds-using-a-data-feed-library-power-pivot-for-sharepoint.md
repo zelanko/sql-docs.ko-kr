@@ -2,12 +2,12 @@
 title: "데이터 피드 라이브러리 (SharePoint 용 파워 피벗)를 사용 하 여 데이터 피드 공유 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b345b289e396d62565f9fee76a72c0cf9cb9d04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 70d102f069894aec4e6286e3bdc590f41fcdbbea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>데이터 피드 라이브러리를 사용하여 데이터 피드 공유(SharePoint용 PowerPivot)
-  데이터 피드는 Atom 연결 형식으로 데이터를 노출하는 서비스 또는 응용 프로그램에서 생성되는 XML 데이터 스트림입니다. 데이터 피드는 응용 프로그램 간에 데이터를 전송하고 클라이언트측 뷰어에게 데이터를 전송하는 데 점점 더 많이 사용되고 있습니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서 데이터 피드는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 Atom 인식 응용 프로그램 또는 서비스의 데이터를 채우는 데 사용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 피드는 서비스 또는 Atom 연결 형식에 대 한 데이터를 노출 하는 응용 프로그램에서 생성 되는 XML 데이터 스트림입니다. 데이터 피드는 응용 프로그램 간에 데이터를 전송하고 클라이언트측 뷰어에게 데이터를 전송하는 데 점점 더 많이 사용되고 있습니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서 데이터 피드는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 Atom 인식 응용 프로그램 또는 서비스의 데이터를 채우는 데 사용됩니다.  
   
  이미 Atom 인식 응용 프로그램 조합을 사용하고 있는 경우 응용 프로그램 간의 데이터 전송이 완벽하게 수행되므로 피드가 어떻게 생성되고 사용되는지를 알 필요가 없습니다. 그러나 사용자 지정 솔루션을 사용하여 Atom 피드를 게시하는 조직에서는 정보 근로자가 피드를 사용할 수 있도록 해야 합니다. 이렇게 하는 한 가지 방법은 피드를 생성하는 온라인 원본에 대한 연결을 제공하는 데이터 서비스 문서(.atomsvc) 파일을 만들어 공유하는 것입니다. 데이터 피드 라이브러리라는 특수 용도의 라이브러리는 SharePoint 웹 응용 프로그램에서 데이터 서비스 문서 만들기와 공유를 지원합니다.  
   

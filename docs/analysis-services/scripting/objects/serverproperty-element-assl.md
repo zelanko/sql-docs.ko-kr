@@ -2,12 +2,12 @@
 title: "ServerProperty 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: edf7c78a2486d7e09dfb8eeb437b1215bff50bc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0235ff0306cdc22249f1be7b2a93a4eb93ccc37e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="serverproperty-element-assl"></a>ServerProperty 요소(ASSL)
-  와 연결 된 서버 속성을 정의 [서버](../../../analysis-services/scripting/objects/server-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]와 연결 된 서버 속성을 정의 [서버](../../../analysis-services/scripting/objects/server-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

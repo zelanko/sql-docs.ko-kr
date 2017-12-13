@@ -2,12 +2,12 @@
 title: "Power Pivot 데이터 새로 고침 SharePoint 2013 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d81e977d4396111d478e1457c26479061cf97862
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5fefda98d12920fb3f7ae2cb03c52f932f371602
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013에서 파워 피벗 데이터 새로 고침
-  SharePoint 2013에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 새로 고치기 위한 디자인에서는 Excel Services를 기본 구성 요소로 사용하여 SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 데이터 모델을 로드하고 새로 고칩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버는 SharePoint 팜 외부에서 실행됩니다. SharePoint 2013 Excel Services의 아키텍처는 **대화형 데이터 새로 고침** 과 **예약된 데이터 새로 고침**을 모두 지원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]새로 고침을 위해 디자인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 2013에서 데이터 모델에는 사용 하 여 Excel 서비스를 로드 하 고 인스턴스의 데이터 모델을 새로 고칠 기본 구성 요소로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SharePoint 모드에서 실행 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버는 SharePoint 팜 외부에서 실행됩니다. SharePoint 2013 Excel Services의 아키텍처는 **대화형 데이터 새로 고침** 과 **예약된 데이터 새로 고침**을 모두 지원합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   

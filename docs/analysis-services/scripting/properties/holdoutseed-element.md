@@ -2,12 +2,12 @@
 title: "HoldoutSeed 요소 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 751e18d05897651d0996232f8b4c5c590985a5b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c018e11960726554b2f02a0ec7aaa537d599a6d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 요소
-  테스트 집합을 포함 하는 반복 가능한 홀드 아웃 파티션의 초기값을 지정 된 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) 요소입니다. 이 초기값은 다시 처리하는 동안 모델 내용이 동일하게 유지되도록 합니다. 지정 되지 않았거나 0으로 설정 하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 마이닝 구조의 이름에 해시 알고리즘을 사용 하 여 초기값을 만듭니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]테스트 집합을 포함 하는 반복 가능한 홀드 아웃 파티션의 초기값을 지정 된 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) 요소입니다. 이 초기값은 다시 처리하는 동안 모델 내용이 동일하게 유지되도록 합니다. 지정 되지 않았거나 0으로 설정 하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 마이닝 구조의 이름에 해시 알고리즘을 사용 하 여 초기값을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   

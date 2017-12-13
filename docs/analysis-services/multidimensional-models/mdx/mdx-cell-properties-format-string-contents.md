@@ -2,12 +2,12 @@
 title: "FORMAT_STRING 내용 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 셀 속성-FORMAT_STRING 내용
-  **FORMAT_STRING** 셀 속성은 **VALUE** 셀 속성의 형식을 지정하고 **FORMATTED_VALUE** 셀 속성의 값을 만듭니다. **FORMAT_STRING** 셀 속성은 문자열 및 숫자 원시 값을 모두 처리할 수 있으며 값에 형식 지정 식을 적용하여 **FORMATTED_VALUE** 셀 속성에 사용할 형식 지정된 값을 반환합니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING** 속성 형식 셀는 **값** 셀 속성에 대 한 값의 **FORMATTED_VALUE** 셀 속성입니다. **FORMAT_STRING** 셀 속성은 문자열 및 숫자 원시 값을 모두 처리할 수 있으며 값에 형식 지정 식을 적용하여 **FORMATTED_VALUE** 셀 속성에 사용할 형식 지정된 값을 반환합니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  
   
 ## <a name="string-values"></a>문자열 값  
  문자열에 사용할 형식 지정 식에는 한 개의 절 또는 세미콜론(;)으로 구분되는 두 개의 절을 사용할 수 있습니다.  

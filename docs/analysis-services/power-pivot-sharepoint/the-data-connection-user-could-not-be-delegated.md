@@ -2,12 +2,12 @@
 title: "데이터 연결 사용자를 위임할 수 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c302fa36eee6aba2364421182988f1d492a9f991
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fe36637d98e02507383ecb592e199176a5e300ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="the-data-connection-user-could-not-be-delegated"></a>데이터 연결 사용자를 위임할 수 없습니다.
-  Excel 서비스는 SharePoint의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 인스턴스에 연결할 수 없는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]포함 된 Excel 통합 문서에 대 한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 Excel 서비스에 연결할 수 없으면이 오류를 반환 된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint의 서버 인스턴스에 있습니다.  
   
 ## <a name="details"></a>세부 정보  
   

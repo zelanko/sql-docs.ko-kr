@@ -3,8 +3,11 @@ title: "문제 해결 및 SQL Server의 기계 학습에 대 한 FAQ | Microsoft
 ms.custom: 
 ms.date: 06/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: r-services
+ms.service: 
+ms.component: advanced-analytics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b3cc19a6e2be6ef8cfecb267becf14a06e5a8fd3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 90bfb7b193523abe573c25d52ba3e6110434c186
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="troubleshoot-machine-learning"></a>기계 학습 문제 해결
 

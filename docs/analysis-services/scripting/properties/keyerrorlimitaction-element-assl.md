@@ -2,12 +2,12 @@
 title: "KeyErrorLimitAction 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a41842fe6ffbf2df18b9ecf4ef234f78d16f887b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a6256163988bf6833cd0acf80388f196e4a92f0d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="keyerrorlimitaction-element-assl"></a>KeyErrorLimitAction 요소(ASSL)
-  작업을 지정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 지정 된 키 오류 수 하는 경우는 [KeyErrorLimit](../../../analysis-services/scripting/properties/keyerrorlimit-element-assl.md) 요소에 도달할 때.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]작업을 지정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 지정 된 키 오류 수 하는 경우는 [KeyErrorLimit](../../../analysis-services/scripting/properties/keyerrorlimit-element-assl.md) 요소에 도달할 때.  
   
 ## <a name="syntax"></a>구문  
   

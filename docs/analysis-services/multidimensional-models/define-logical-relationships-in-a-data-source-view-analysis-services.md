@@ -2,12 +2,12 @@
 title: "데이터 원본 뷰 (Analysis Services)에서 논리적 관계 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a255b5449ec7abc9ff8d78ce376a8f456053ceff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7ebf28e254d90e0d617c2b3319770e91c54e9a16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 논리적 관계 정의(Analysis Services)
-  데이터 원본 뷰 마법사와 데이터 원본 뷰 디자이너에서는 기본 데이터베이스 관계 또는 지정한 이름 일치 조건을 기반으로 데이터 원본 뷰(DSV)에 추가된 테이블 간의 관계를 자동으로 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 원본 뷰 마법사와 데이터 원본 뷰 디자이너에는 자동으로 기본 데이터베이스 관계 또는 이름 일치 조건 지정에 따라 데이터 원본 뷰 (DSV)에 추가 된 테이블 간의 관계를 정의 합니다.  
   
  여러 데이터 원본의 데이터를 사용하여 작업할 경우 자동으로 정의되는 관계를 보완하기 위해 DSV에서 수동으로 논리적 관계를 정의해야 할 수도 있습니다. 관계는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 팩트 테이블과 차원 테이블을 식별하고, 기본 데이터 원본에서 데이터 및 메타데이터를 검색할 쿼리를 작성하며, 고급 비즈니스 인텔리전스 기능을 사용하는 데 필요합니다.  
   

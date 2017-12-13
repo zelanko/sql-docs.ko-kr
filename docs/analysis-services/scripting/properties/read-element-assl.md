@@ -2,12 +2,12 @@
 title: "읽을 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d03601b2544740e8b93515dae38368ea0d144505
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 832f89d5586bd86351604aa9b58cd1c94068a09e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="read-element-assl"></a>Read 요소(ASSL)
-  데이터 또는 메타 데이터에 대 한 읽을 수 있는지 여부를 결정 한 주어진 [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md) 또는 [권한](../../../analysis-services/scripting/data-type/permission-data-type-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]데이터 또는 메타 데이터에 대 한 읽을 수 있는지 여부를 결정 한 주어진 [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md) 또는 [권한](../../../analysis-services/scripting/data-type/permission-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

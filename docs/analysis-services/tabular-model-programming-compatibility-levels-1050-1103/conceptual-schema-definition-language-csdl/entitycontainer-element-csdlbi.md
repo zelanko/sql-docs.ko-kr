@@ -2,12 +2,12 @@
 title: "EntityContainer 요소 (CSDLBI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5328a9c360fa4465e0bcf53bd0f017447c7c113
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 요소(CSDLBI)
-  EntityContainer 요소는 단일 데이터 모델 내의 엔터티 컬렉션을 정의하는 EntityContainer라는 CSDL 유형을 기반으로 하는 복합 유형입니다. 비즈니스 인텔리전스 응용 프로그램에서 EntityContainer가 나타내는 데이터 모델은 관계로 연결된 열은 물론 계산, 측정값, KPI로 연결된 열이 있는 여러 테이블을 포함할 수 있습니다. 이 요소는 개념상 데이터베이스 또는 데이터 원본과 비슷합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]EntityContainer 요소는 단일 데이터 모델 내의 엔터티 컬렉션을 정의 하는 EntityContainer CSDL 유형을 기반으로 하는 복합 유형을 합니다. 비즈니스 인텔리전스 응용 프로그램에서 EntityContainer가 나타내는 데이터 모델은 관계로 연결된 열은 물론 계산, 측정값, KPI로 연결된 열이 있는 여러 테이블을 포함할 수 있습니다. 이 요소는 개념상 데이터베이스 또는 데이터 원본과 비슷합니다.  
   
  EntityContainer는 테이블 및 관계를 포함하여 데이터 모델에 포함된 각 엔터티 유형을 지정해야 합니다. 이러한 모델 엔터티에 대한 정보는 해당 형식, 즉 Entity 요소의 자식 엔터티를 나열하여 지정됩니다. 자세한 내용은 [EntityType 요소&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md)를 참조하세요.  
   

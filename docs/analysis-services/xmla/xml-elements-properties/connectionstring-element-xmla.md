@@ -2,12 +2,12 @@
 title: "ConnectionString 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 435d5d141652c4f043043fd26c85b9cb9a29f040
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7784d1a1976bee9ea76f3f9f9346e945072398de
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connectionstring-element-xmla"></a>ConnectionString 요소(XMLA)
-  부모에서 사용 하는 연결 문자열이 들어 [위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 또는 [소스](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]부모에서 사용 하는 연결 문자열이 들어 [위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 또는 [소스](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

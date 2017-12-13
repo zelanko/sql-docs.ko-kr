@@ -2,12 +2,12 @@
 title: "컬렉션 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68be246ab77c93a910a4d37b40808a42adecb8ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be1fe8952758379ec471b22e60c2c643f87013c4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="collections-assl"></a>컬렉션(ASSL)
-  이 참조 섹션에서는 ASSL(Analysis Services Scripting Language) 스키마에서 컬렉션으로 사용되는 각 요소에 대한 구문 및 사용 정보를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 참조 섹션에서는 Analysis Services Scripting Language (ASSL) 스키마의 컬렉션으로 사용 되는 각 요소에 대 한 구문 및 사용법 정보입니다.  
   
  ASSL 스키마는 개발자의 관점에서 XML 요소만 포함 하지만이 섹션에 설명 된 요소에 해당 개체의 컬렉션 등의 **차원** 및 **큐브** 컬렉션입니다.  
   

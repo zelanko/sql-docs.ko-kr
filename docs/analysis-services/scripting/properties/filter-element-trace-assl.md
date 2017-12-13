@@ -2,12 +2,12 @@
 title: "Filter 요소 (추적) (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4c9782c112a6c46f6a6203ad186e792d68f55fcb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3c87df474885fba7977df2b0ddfa4136ba44d7b8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="filter-element-trace-assl"></a>Filter 요소(추적)(ASSL)
-  설명 하는 XML 문서 부분을 포함 된 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 필터입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]설명 하는 XML 문서 부분을 포함 된 [추적](../../../analysis-services/scripting/objects/trace-element-assl.md) 필터입니다.  
   
 ## <a name="syntax"></a>구문  
   

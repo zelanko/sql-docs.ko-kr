@@ -2,12 +2,12 @@
 title: "Analysis Services Scripting Language (ASSL XMLA에 대 한) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 334cf0d3a09ed7313f8e1b51a7c8023c5b5d2349
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bbc3abc3e29109a5d41dd60d799e7418c26efa43
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripting-language-assl-for-xmla"></a>Analysis Services Scripting Language (ASSL xmla)
-  응용 프로그램 통신할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML 명령 및 개체 설명을 사용 합니다. ASSL(Analysis Services Scripting Language)은 이 XML 언어의 개체 정의 언어 부분을 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]응용 프로그램 통신할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML 명령 및 개체 설명을 사용 합니다. ASSL(Analysis Services Scripting Language)은 이 XML 언어의 개체 정의 언어 부분을 나타냅니다.  
   
  이 참조 섹션에서는 ASSL 스키마에 있는 각 요소의 구문 및 사용법을 다룹니다.  
   

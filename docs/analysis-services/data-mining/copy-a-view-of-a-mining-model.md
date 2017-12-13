@@ -2,12 +2,12 @@
 title: "마이닝 모델의 뷰 복사 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77e2e0228532d7a0ef9c379200ef063fc84b8430
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0f4d5524b18bd55b689b16062effb99dc21d6b9a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>마이닝 모델의 뷰 복사
-  **데이터 마이닝 디자이너의** 마이닝 모델 뷰어 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭에서는 마이닝 모델 유형마다 별도의 뷰어가 사용됩니다. 이 중 몇몇 뷰어에는 내용을 클립보드로 복사하고 문서나 이미지 조작 소프트웨어에 붙여넣을 수 있는 구성 요소가 있습니다. 다음 구성 요소에서 이 기능을 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 마이닝 모델의 각 유형에 대해 별개의 뷰어를 사용 합니다. 이 중 몇몇 뷰어에는 내용을 클립보드로 복사하고 문서나 이미지 조작 소프트웨어에 붙여넣을 수 있는 구성 요소가 있습니다. 다음 구성 요소에서 이 기능을 사용할 수 있습니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터 뷰어와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터 뷰어의 클러스터 다이어그램  
   

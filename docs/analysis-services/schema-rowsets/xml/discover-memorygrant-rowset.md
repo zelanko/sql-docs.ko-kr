@@ -2,12 +2,12 @@
 title: "DISCOVER_MEMORYGRANT 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68bbbbcebe6c3f47f8b3868ba7a67b79f75503cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 38eb6dae47c01758b3ca3b5c04794014b247b495
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 행 집합
-  서버에서 현재 실행 중인 작업에 의해 사용되는 내부 메모리 할당량 부여 목록을 반환합니다. 서버에서 작업이 실행되고 있는지 여부를 확인하려면 `Select * from $System.Discover_Jobs`를 사용합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버에서 현재 실행 중인 작업에 의해 수행 된 할당량 부여 목록을 내부 메모리를 반환 합니다. 서버에서 작업이 실행되고 있는지 여부를 확인하려면 `Select * from $System.Discover_Jobs`를 사용합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   

@@ -2,12 +2,12 @@
 title: "작업 영역 데이터베이스 (SSAS 테이블 형식)에서 파티션을 처리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ca775614b38765ce52616ac69d98631885715df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d6c238fcd6f1255b09901887f4452b2541cb8851
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="process-partitions-in-the-workspace-databse-ssas-tabular"></a>작업 영역 데이터베이스에서 파티션 처리(SSAS 테이블 형식)
-  파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 이 항목의 태스크에서는 **의** 파티션 처리 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]대화 상자를 사용하여 모델 작업 영역 데이터베이스에서 파티션을 처리하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 이 항목의 태스크에서는 **의** 파티션 처리 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]대화 상자를 사용하여 모델 작업 영역 데이터베이스에서 파티션을 처리하는 방법을 설명합니다.  
   
  다른 Analysis Services 인스턴스로 모델을 배포한 후 데이터베이스 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 스크립트 또는 IS 패키지를 사용하여 (배포된) 모델에서 파티션을 만들고 관리할 수 있습니다. 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  
   

@@ -2,12 +2,12 @@
 title: "예측 쿼리 작성기를 사용 하 여 예측 쿼리 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e788f53ac41de8cdecdfbc88f61afacc0bfbad16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c7d6511a36b9a59e20908feffdb0f61a907377ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>예측 쿼리 작성기를 사용하여 예측 쿼리 만들기
-  BI Development Studio에서 데이터 마이닝 솔루션을 작성하는 동안이나 SQL Server Management Studio에서 기존 마이닝 모델을 마우스 오른쪽 단추로 클릭한 다음 **예측 쿼리 작성**옵션을 선택하여 예측 쿼리를 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]BI Development Studio 또는 SQL Server Management Studio에서 기존 마이닝 모델을 마우스 오른쪽 단추로 클릭 하는 옵션을 선택 하 여 데이터 마이닝 솔루션을 빌드하는 동안 예측 쿼리를 하거나 만들 수 있습니다 **예측쿼리작성**.  
   
  **예측 쿼리 작성기** 에는 다음과 같은 세 가지 디자인 모드가 있습니다. 모드는 왼쪽 위 모퉁이에 있는 아이콘을 클릭하여 전환할 수 있습니다.  
   

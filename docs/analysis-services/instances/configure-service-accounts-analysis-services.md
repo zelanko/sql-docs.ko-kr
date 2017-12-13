@@ -2,12 +2,12 @@
 title: "서비스 계정 구성 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 43be205737ddf16cd329598646cb60a8cebbe8e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2109157a401082febbaadb2a42f607aba22ee73
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
-  제품 전체의 계정 프로비전은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)에 자세히 설명되어 있으며, 이 항목에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 비롯한 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]서비스에 대한 포괄적인 서비스 계정 정보를 제공합니다. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에 설명 되어 제품 전체의 계정 프로 비전 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), 모든에 대 한 포괄적인 서비스 계정 정보를 제공 하는 항목 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 포함한서비스를[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  
   
  이 항목에서는 테이블 형식 및 클러스터형 설치에 필요한 추가 사용 권한을 비롯하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 추가 정보를 제공합니다. 또한 서버 작업을 지원하는 데 필요한 사용 권한도 다룹니다. 예를 들어 처리 및 쿼리 작업이 서비스 계정에서 실행되도록 구성할 수 있습니다. 이렇게 하려면 추가 사용 권한을 부여해야 합니다.  
   

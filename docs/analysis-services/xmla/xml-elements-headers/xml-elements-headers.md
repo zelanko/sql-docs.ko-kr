@@ -2,12 +2,12 @@
 title: "헤더 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 854d879b85ad5e70c21bd87240215b343aab96e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d335f4709532c1af18d099a5c1415fdee5c84a76
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-elements---headers"></a>XML 요소-헤더
-  XMLA(XML for Analysis) 프로토콜은 SOAP 헤더 내의 XML 요소를 사용하여 프로토콜 수준의 기능(예: 세션 지원, 지원 기능 협상)을 관리합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]XML for Analysis (XMLA) 프로토콜은 SOAP 헤더 내의 XML 요소를 사용 하 여 예: 세션 지원 지원된 기능 협상 프로토콜 수준의 기능을 관리 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서 설명 하 여 구현 되는 XMLA 헤더 요소 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  

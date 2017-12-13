@@ -2,12 +2,12 @@
 title: "SilenceOverrideInterval 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e90c0a3d3758dd1627b49cde03fea5e045741bc2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f3d8518b695b25dd6dc4913acabfdc2607408475
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="silenceoverrideinterval-element-assl"></a>SilenceOverrideInterval 요소(ASSL)
-  MOLAP(다차원 OLAP) 이미징을 무조건 시작하기 전에 초기 알림을 받은 후 경과해야 하는 시간을 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]다차원 MOLAP (OLAP) 이미징을 무조건 시작 하기 전에 초기 알림을 받은 후 경과 해야 하는 시간을 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   

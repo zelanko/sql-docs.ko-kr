@@ -2,12 +2,12 @@
 title: "테이블 및 열 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 205dce73a6fb5940be83c5082b730ddbd753ce3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 26bae76004b344b15f8f2be3605eb8c600c31039
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
-  테이블 가져오기 마법사를 사용하여 테이블과 데이터를 모델에 추가한 후에는 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장하는 계산 정의, 보기 쉽게 테이블의 데이터 필터링 및 정렬 등을 수행하여 테이블 작업을 시작할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 및 데이터를 모델에 테이블 가져오기 마법사를 사용 하 여를 추가한 후 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장 하는 계산 정의 및 필터링 및 데이터를 정렬 하 여 테이블 작업을 시작할 수 있습니다. 보기 쉽게 테이블입니다.  
   
  이 항목의 섹션:  
   

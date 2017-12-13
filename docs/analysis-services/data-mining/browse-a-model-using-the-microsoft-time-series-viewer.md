@@ -2,12 +2,12 @@
 title: "Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0e68da2956ad2b507b3212569c32e33dcb876de9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 649539e20bab921b7bfef3903cf53f9920fdbbde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Microsoft 시계열 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시계열 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘으로 작성한 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 예측 시나리오에서 제품 판매량과 같은 연속 열을 예측하기 위해 데이터 마이닝 모델을 만드는 회귀 알고리즘입니다. 이 시계열 모델은 다음과 같이 다른 알고리즘을 기반으로 한 정보를 포함할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어에 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 하 여 만든 마이닝 모델 표시는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 예측 시나리오에서 제품 판매량과 같은 연속 열을 예측하기 위해 데이터 마이닝 모델을 만드는 회귀 알고리즘입니다. 이 시계열 모델은 다음과 같이 다른 알고리즘을 기반으로 한 정보를 포함할 수 있습니다.  
   
 -   단기 예측에 대해 최적화되어 있는 ARIxp 알고리즘  
   

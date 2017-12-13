@@ -2,12 +2,12 @@
 title: "Power Pivot 사용 데이터 컬렉션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5fab455ddd2ea659f2269512a81c93df2962df2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7f443e4ecb0d6bb16eaf582c89b98af9eb35a25a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-usage-data-collection"></a>Power Pivot 사용 데이터 컬렉션
-  사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 이 시스템을 사용하고 확장하여 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 현황 데이터 수집 팜 수준의 SharePoint 기능입니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 이 시스템을 사용하고 확장하여 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드의 사용 현황 데이터에 대한 자세한 내용은 [파워 피벗 관리 대시보드 및 사용 현황 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하세요.  
   

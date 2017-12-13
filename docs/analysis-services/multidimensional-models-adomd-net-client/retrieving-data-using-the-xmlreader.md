@@ -2,12 +2,12 @@
 title: "XmlReader를 사용 하 여 데이터를 검색 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb85566c9ed1533e35e2f108dd61f50dc20a5a23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dbcce4f4a75d2aa8aefedfff4c3b8b8de81d1fe6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>XmlReader를 사용하여 데이터 검색
-  **XmlReader** 클래스의 일부는 **System.Xml** Microsoft.NET Framework 클래스 라이브러리에 대 한 네임 스페이스는 비슷합니다는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 하는 클래스는 **XmlReader**클래스도 빠르고, 캐시 되지 않은 앞 으로만 이동 가능한 데이터 액세스를 제공 합니다. 필요 하지는 메모리 내 분석 뷰가 사용 하 여 데이터의 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 **XmlReader** 개체는 특히 많은 양의 데이터에 대 한 XML 데이터 검색에 대 한 완벽 한 합니다. 때문에 **XmlReader** 데이터를 스트리밍 **XmlReader** 검색 한 경우 것 처럼 호출자에 게 데이터를 제공 하기 전에 모든 데이터를 캐시 하는 없는 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 변환에 사용 된 개체는 XML for Analysis 응답을 분석 개체 모델 표현으로 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**XmlReader** 클래스의 일부는 **System.Xml** Microsoft.NET Framework 클래스 라이브러리에 대 한 네임 스페이스는 비슷합니다는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 하는 클래스는 **XmlReader**클래스도 빠르고, 캐시 되지 않은 앞 으로만 이동 가능한 데이터 액세스를 제공 합니다. 필요 하지는 메모리 내 분석 뷰가 사용 하 여 데이터의 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 **XmlReader** 개체는 특히 많은 양의 데이터에 대 한 XML 데이터 검색에 대 한 완벽 한 합니다. 때문에 **XmlReader** 데이터를 스트리밍 **XmlReader** 검색 한 경우 것 처럼 호출자에 게 데이터를 제공 하기 전에 모든 데이터를 캐시 하는 없는 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 변환에 사용 된 개체는 XML for Analysis 응답을 분석 개체 모델 표현으로 합니다.  
   
  **XmlReader** 클래스는 ADOMD.NET에서 받은 Analysis 응답에 대 한 XML에 대 한 직접 액세스를 제공 때는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> 의 메서드는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체를 호출 합니다. 검색된 데이터는 원시 XML이므로 데이터와 메타데이터를 수동으로 구문 분석해야 합니다. 데이터가 검색 되는 즉시는 **XmlReader** 개체를 닫아야 합니다.  
   

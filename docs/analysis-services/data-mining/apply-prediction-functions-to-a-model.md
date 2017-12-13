@@ -2,12 +2,12 @@
 title: "모델에 예측 함수 적용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c36ab1bbdb5f2f11b81ddc43fb79b5f073ec9b9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>모델에 예측 함수 적용
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에서 예측 쿼리를 만들려면 먼저 쿼리의 기반이 될 마이닝 모델을 선택해야 합니다. 현재 프로젝트에 있는 모든 마이닝 모델을 선택할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]예측 쿼리를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝을 먼저 선택 해야 쿼리 기반이 될 마이닝 모델입니다. 현재 프로젝트에 있는 모든 마이닝 모델을 선택할 수 있습니다.  
   
  모델을 선택한 후에는 쿼리에 *예측 함수* 를 추가합니다. 예측 함수는 예측을 가져오는 데 사용할 수 있지만 예측 값의 확률 또는 예측을 생성하는 데 사용된 정보 등 관련된 통계를 반환하는 예측 함수를 추가할 수도 있습니다.  
   

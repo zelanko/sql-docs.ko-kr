@@ -2,12 +2,12 @@
 title: "Analysis Services (SSAS-다차원 데이터)의 파티션 병합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d4e5ae92e7352d3b7a37516d57bb34e70388542
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6eb1eaef5274537720663a67bfb4521dfc94ec9d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services의 파티션 병합(SSAS - 다차원 데이터)
-  기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 파티션을 병합하여 같은 측정값 그룹의 여러 파티션에 있는 팩트 데이터를 통합할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]기존 파티션을 병합할 수 있습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 같은 측정값 그룹의 여러 파티션의 팩트 데이터를 통합 합니다.  
   
  [일반적인 시나리오](#bkmk_Scenario)  
   

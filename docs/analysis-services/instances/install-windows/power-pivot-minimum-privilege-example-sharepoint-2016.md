@@ -2,12 +2,12 @@
 title: "Power Pivot 최소 권한 예-SharePoint 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae8b2b882204fa6940a5e4827ca3a5a0b1344dbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f86e52576c3a145042741c1a1ecc012b7c4941f3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot 최소 권한 예-SharePoint 2016
-  이 항목에서는 최소 권한을 사용하는 SharePoint 2016용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 예제에 대해 설명합니다. 이 구성은 세 가지 구성 요소 각각에 대해 다른 계정을 사용하며 계정마다 취소 수준의 권한이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 예제를 설명 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 최소 권한 사용한 SharePoint 2016 구성에 대 한 합니다. 이 구성은 세 가지 구성 요소 각각에 대해 다른 계정을 사용하며 계정마다 취소 수준의 권한이 있습니다.  
   
 ||  
 |-|  

@@ -2,12 +2,12 @@
 title: "DMSCHEMA_MINING_STRUCTURES 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: beaf272e97b8e7f49539311f5f635dd544b88347
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0c7b170ca376598dba93d1f586ebea2c60f4f101
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingstructures-rowset"></a>DMSCHEMA_MINING_STRUCTURES 행 집합
-  현재 카탈로그의 마이닝 구조에 대한 정보를 열거합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]현재 카탈로그의 마이닝 구조에 대 한 정보를 열거합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DMSCHEMA_MINING_STRUCTURES** 행 집합에는 다음 열이 포함되어 있습니다.  

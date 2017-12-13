@@ -2,12 +2,12 @@
 title: "프로젝트 속성 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66a5bfd14d877229f51a257c4775cf9873b854db
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: aeddf6f4c7739f86bf7d5c597684d084a7227848
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="project-properties-ssas-tabular"></a>프로젝트 속성(SSAS 테이블 형식)
-  이 항목에서는 모델 프로젝트 속성에 대해 설명합니다. 각 테이블 형식 모델 프로젝트에는 배포 옵션 및 배포 서버 속성이 제공되어 프로젝트 및 모델의 배포 방식을 지정할 수 있습니다. 예를 들어 모델이 배포될 서버와 배포될 모델 데이터베이스 이름을 지정할 수 있습니다. 이러한 설정은 모델 작업 영역 데이터베이스에 영향을 주는 모델 속성과 다릅니다. 여기에서 설명하는 프로젝트 속성은 모달 속성 대화 상자에 있습니다. 이 대화 상자는 다른 유형의 속성을 표시하는 데 사용되는 속성 창과 다릅니다. 모달 프로젝트 속성을 표시하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 모델 프로젝트 속성에 설명 합니다. 각 테이블 형식 모델 프로젝트에는 배포 옵션 및 배포 서버 속성이 제공되어 프로젝트 및 모델의 배포 방식을 지정할 수 있습니다. 예를 들어 모델이 배포될 서버와 배포될 모델 데이터베이스 이름을 지정할 수 있습니다. 이러한 설정은 모델 작업 영역 데이터베이스에 영향을 주는 모델 속성과 다릅니다. 여기에서 설명하는 프로젝트 속성은 모달 속성 대화 상자에 있습니다. 이 대화 상자는 다른 유형의 속성을 표시하는 데 사용되는 속성 창과 다릅니다. 모달 프로젝트 속성을 표시하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
  이 항목의 섹션:  
   

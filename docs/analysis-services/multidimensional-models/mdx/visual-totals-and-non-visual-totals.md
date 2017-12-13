@@ -2,12 +2,12 @@
 title: "보이는 값 합계 및 보이지 않는 값 합계 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 822e1f7e496b3c6fb74fff558b37b244e2b41512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f966f4108f3ad029b6c069216cd7713f3b4ac7e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>보이는 값 합계 및 보이지 않는 값 합계
-  보이는 값 합계는 열이나 행에서 볼 수 있는 모든 항목이 더해지는 열이나 행의 끝에 있는 합계입니다. 이 동작은 표시된 대부분의 테이블에서 기본 동작입니다. 그러나 사용자가 테이블의 특정 열만 표시하고 표시되지 않은 열을 포함하여 전체 행에 대한 합계를 유지하려는 경우가 있습니다. 이러한 경우를 **보이지 않는 값 합계**라고 하는데 이는 보이는 값과 보이지 않는 값 모두에서 합계가 제공되기 때문입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]보이는 값 합계는 모든 열 이나 행에 표시 되는 항목을 추가 하는 열 이나 행의 끝에 합계입니다. 이 동작은 표시된 대부분의 테이블에서 기본 동작입니다. 그러나 사용자가 테이블의 특정 열만 표시하고 표시되지 않은 열을 포함하여 전체 행에 대한 합계를 유지하려는 경우가 있습니다. 이러한 경우를 **보이지 않는 값 합계**라고 하는데 이는 보이는 값과 보이지 않는 값 모두에서 합계가 제공되기 때문입니다.  
   
  다음 시나리오에서는 보이지 않는 값 합계의 동작을 보여 줍니다. 첫 번째 단계에서는 보이는 값 합계의 기본 동작을 보여 줍니다.  
   

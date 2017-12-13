@@ -2,12 +2,12 @@
 title: "모델에서 회귀 변수로 사용할 열을 지정 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f818532f51fa5fbbec6b6688709173849eae063
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d21033d8d839a11f4c511d7913f94b809a64881f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>모델에서 회귀 변수로 사용할 열 지정
-  선형 회귀 모델은 데이터를 예상 회귀선에 가능한 한 근접하게 맞추는 방식으로 입력을 조합하는 수식의 결과로 예측 가능한 특성 값을 나타냅니다. 알고리즘은 숫자 값만 입력으로 받으며 가장 적합한 입력을 자동으로 검색합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]선형 회귀 모델 데이터를 가능한 한 밀접 하 게 맞추는 방식으로 입력을 조합 하는 수식의 결과로 예측 가능한 특성의 값을 나타내는 예상된 회귀선에 있습니다. 알고리즘은 숫자 값만 입력으로 받으며 가장 적합한 입력을 자동으로 검색합니다.  
   
  그러나 FORCE_REGRESSOR 매개 변수를 모델에 추가하고 사용할 회귀 변수를 지정하여 열을 회귀 변수로 포함하도록 지정할 수 있습니다. 효과가 너무 작아 모델에서 검색할 수 없어도 특성이 의미를 가지는 경우 또는 특성을 수식에 포함해야 할 경우 이 작업을 원할 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "PowerPivot을 배포 하 고 Power View-다층 계층 SharePoint 2016 팜에서 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 290c8d09fbb59ec8b7c6db580946fa7ee6f45806
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e17d5872e57af56e895f5879d9b8dd194576cd3e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>PowerPivot을 배포 하 고 Power View-다층 계층 SharePoint 2016 팜에서
-  **요약:** 이 백서에서는 SharePoint Server 2016, Office Online Server 및 SharePoint 2016용 SQL Server 2016 BI 스택의 Preview 릴리스를 기준으로 하여 서버가 여러 대 포함되어 있는 SharePoint 팜에서 Microsoft BI 데모 환경을 배포하고 구성하는 자세한 단계별 지침을 SharePoint 관리자와 설계자에게 제공합니다. 여기서는 먼저 중요한 아키텍처 변경 내용과 해당하는 시스템 종속성을 간략하게 소개한 다음, 소프트웨어 및 구성 요구 사항과 3가지 주요 단계를 통해 BI 기능을 사용하도록 설정하고 확인하기 위한 권장 배포 경로를 대략적으로 설명합니다. 또한 이 백서에서는 SharePoint Server 2016 베타 2, Office Online Server Preview 및 SQL Server 2016 CTP 3.1 릴리스의 알려진 문제에 대해 설명하고 적합한 해결 방법을 제안합니다. 최종 제품 버전에서는 이러한 해결 방법을 더 이상 사용할 필요가 없습니다. RTM 릴리스를 배포할 때는 이 백서의 업데이트된 버전을 확인하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**요약:** 요약:이 백서에서는 SharePoint 관리자와 설계자 배포 하 고 여러 서버와 SharePoint 팜에서 Microsoft BI 데모 환경을 구성 하기 위한 자세한 단계별 지침을 제공 SharePoint Server 2016, Office Online Server 및 SharePoint 2016 용 SQL Server 2016 BI 스택의 Preview 릴리스를 기반으로 합니다. 여기서는 먼저 중요한 아키텍처 변경 내용과 해당하는 시스템 종속성을 간략하게 소개한 다음, 소프트웨어 및 구성 요구 사항과 3가지 주요 단계를 통해 BI 기능을 사용하도록 설정하고 확인하기 위한 권장 배포 경로를 대략적으로 설명합니다. 또한 이 백서에서는 SharePoint Server 2016 베타 2, Office Online Server Preview 및 SQL Server 2016 CTP 3.1 릴리스의 알려진 문제에 대해 설명하고 적합한 해결 방법을 제안합니다. 최종 제품 버전에서는 이러한 해결 방법을 더 이상 사용할 필요가 없습니다. RTM 릴리스를 배포할 때는 이 백서의 업데이트된 버전을 확인하세요.  
   
  **작성자:**Kay Unkroth, Jason Haak  
   

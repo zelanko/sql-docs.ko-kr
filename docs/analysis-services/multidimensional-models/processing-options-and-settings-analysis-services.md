@@ -2,12 +2,12 @@
 title: "처리 옵션 및 설정 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>처리 옵션 및 설정(Analysis Services)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리하는 경우 각 개체에 대해 발생하는 처리 유형을 제어하는 처리 옵션을 선택할 수 있습니다. 처리 유형은 개체마다 다르며 마지막으로 처리되어 개체에 변경된 내용에 따라서도 다릅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]개체를 처리할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 각 개체에 대해 발생 하는 처리 유형을 제어 하는 처리 옵션을 선택할 수 있습니다. 처리 유형은 개체마다 다르며 마지막으로 처리되어 개체에 변경된 내용에 따라서도 다릅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다.  
   
  처리 설정을 지정하면 처리되는 개체 및 이러한 개체를 처리하는 데 사용되는 방법을 제어할 수 있습니다. 일부 처리 설정은 배치 처리 작업에 주로 사용됩니다. 일괄 처리에 대한 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)를 참조하세요.  
   

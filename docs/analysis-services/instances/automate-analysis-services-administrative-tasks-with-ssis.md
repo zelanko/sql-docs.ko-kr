@@ -2,12 +2,12 @@
 title: "SSIS와 Analysis Services 관리 태스크 자동화 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43277dfa53b449da914ec32f35f1263f3082f9b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9303a84fe9bd7b26434d869ec4c2d6216f0938f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>SSIS를 사용하여 Analysis Services 관리 태스크 자동화
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하여 DDL 스크립트 실행, 큐브 및 마이닝 모델 처리 태스크, 데이터 마이닝 쿼리 태스크를 자동화할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 순차 및 병렬 데이터 처리 작업을 구성하기 위해 연결할 수 있는 제어 흐름 및 유지 관리 태스크의 모음으로 생각할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DDL 스크립트, 큐브 및 마이닝 모델 처리 태스크, 데이터 마이닝 쿼리 태스크의 실행을 자동화할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 순차 및 병렬 데이터 처리 작업을 구성하기 위해 연결할 수 있는 제어 흐름 및 유지 관리 태스크의 모음으로 생각할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 처리 태스크 중에 데이터 정리 작업을 수행하고 여러 다른 데이터 원본의 데이터를 결합하도록 디자인되었습니다. 큐브 및 마이닝 모델 작업 시에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 숫자가 아닌 데이터를 숫자 데이터로 변환할 수 있으며 데이터 값이 예상 범위 안에 포함되도록 만들어 팩트 테이블 및 차원을 채울 무결한 데이터를 만들 수 있습니다.  
   

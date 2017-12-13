@@ -2,12 +2,12 @@
 title: "연결 및 세션 (XMLA) 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52392cf2a1af25e0f67634286e371fb2bef408f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bf118b3eb709ffffd67d5e984b0303bdfa21d149
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
-  *상태 저장* id와 컨텍스트 메서드 호출 간에 클라이언트의 서버에서 유지 하는 조건입니다. *상태 비저장* 는 서버 기억 하지 id와 클라이언트의 컨텍스트 메서드 호출이 완료 된 후 상태입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*상태 저장* id와 컨텍스트 메서드 호출 간에 클라이언트의 서버에서 유지 하는 조건입니다. *상태 비저장* 는 서버 기억 하지 id와 클라이언트의 컨텍스트 메서드 호출이 완료 된 후 상태입니다.  
   
  XML for Analysis (XMLA)은 상태 저장을 제공 하려면 다음을 지원 합니다. *세션* 일련의 문 함께 수행할 수 있도록 합니다. 예를 들어, 이러한 일련의 문을 사용하여 후속 쿼리에서 사용할 계산 멤버를 만들 수 있습니다.  
   

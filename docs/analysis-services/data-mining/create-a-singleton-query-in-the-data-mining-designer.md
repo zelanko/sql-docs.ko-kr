@@ -2,12 +2,12 @@
 title: "데이터 마이닝 디자이너에서 단일 쿼리를 작성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd960d2d0f0628e2c8a8c568cf7e5bb065caa2a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a311450bae77c533860c09c06f53497dbba4035e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>데이터 마이닝 디자이너에서 단일 쿼리 작성
-  단일 쿼리는 단일 사례에 대한 예측을 만들려는 경우 유용합니다. 단일 쿼리에 대한 자세한 내용은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]단일 쿼리는 단일 사례에 대 한 예측을 만들려는 경우에 유용 합니다. 단일 쿼리에 대한 자세한 내용은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요.  
   
  데이터 마이닝 디자이너의 **마이닝 모델 예측** 탭에서 많은 다양한 쿼리 유형을 만들 수 있습니다. 디자이너를 사용하거나 DMX(Data Mining Extensions) 문을 입력하여 쿼리를 만들 수 있습니다. 디자이너로 시작한 다음  DMX 문을 변경하거나 WHERE 또는 ORDER BY 절을 추가하여 디자이너에서 만든 쿼리를 수정할 수도 있습니다.  
   

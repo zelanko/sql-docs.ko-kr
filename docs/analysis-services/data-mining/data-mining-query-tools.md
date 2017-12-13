@@ -2,12 +2,12 @@
 title: "데이터 마이닝 쿼리 도구 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3979e01644bbec77b71a93b7a20cfc9bc4276402
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tools"></a>데이터 마이닝 쿼리 도구
-  모든 데이터 마이닝 쿼리는 DMX(Data Mining Extensions) 언어를 사용합니다. DMX는 분류, 위험 분석, 권장 사항 생성 및 선형 회귀를 포함한 모든 종류의 기계 학습 태스크에 대한 모델을 만드는 데 사용할 수 있습니다. 또한 DMX 쿼리를 작성하여 모델을 처리할 때 생성된 패턴 및 통계에 대한 정보를 가져올 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모든 데이터 마이닝 쿼리는 데이터 마이닝 DMX (Extensions) 언어를 사용합니다. DMX는 분류, 위험 분석, 권장 사항 생성 및 선형 회귀를 포함한 모든 종류의 기계 학습 태스크에 대한 모델을 만드는 데 사용할 수 있습니다. 또한 DMX 쿼리를 작성하여 모델을 처리할 때 생성된 패턴 및 통계에 대한 정보를 가져올 수 있습니다.  
   
  직접 DMX를 작성하거나, **예측 쿼리 작성기** 와 같은 도구를 사용하여 기본 DMX를 작성한 다음 수정할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 모두 DMX 예측 쿼리 작성에 도움이 되는 도구를 제공합니다. 이 항목에서는 이러한 도구를 사용하여 데이터 마이닝 쿼리를 만들고 실행하는 방법을 설명합니다.  
   

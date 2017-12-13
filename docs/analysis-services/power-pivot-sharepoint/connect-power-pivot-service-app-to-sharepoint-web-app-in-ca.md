@@ -2,12 +2,12 @@
 title: "CA의 SharePoint 웹 앱에 Power Pivot 서비스 응용 프로그램 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 673a35deddae2b67e6dfcdee51ecb1d9ca666cdc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7eacb900494941994ff38fd01f8b58e8939c1ebf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>CA의 SharePoint 웹 앱에 Power Pivot 서비스 응용 프로그램 연결
-  팜의 여러 SharePoint 웹 응용 프로그램에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있도록 하려면 서비스 연결 목록에 해당 응용 프로그램을 추가합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 개수에 관계 없이 팜의 SharePoint 웹 응용 프로그램에서 서비스 응용 프로그램을 사용할 수 있습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있도록 하려면 서비스 연결 목록에 해당 응용 프로그램을 추가합니다.  
   
 > [!IMPORTANT]  
 >  기본 그룹에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 하나 있어야 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드가 제대로 작동합니다. 기본 그룹에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 둘 이상 추가하지 마세요. 같은 서비스 응용 프로그램 유형의 여러 항목을 추가하는 구성은 지원되지 않으며 오류가 발생할 수 있습니다. 추가 서비스 응용 프로그램을 만들 경우 사용자 지정 목록에 추가하십시오.  

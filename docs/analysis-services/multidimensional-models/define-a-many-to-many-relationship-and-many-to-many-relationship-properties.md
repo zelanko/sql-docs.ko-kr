@@ -2,12 +2,12 @@
 title: "다 대 다 관계 및 다 대 다 관계 속성 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f9f9807ecfe195dc38d1d953092775e1b648adb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>다 대 다 관계 및 다 대 다 관계 속성 정의
-  이 항목에서는 Analysis Services의 다 대 다 차원에 대해 설명하고 이러한 차원을 사용하는 경우와 만드는 방법도 살펴봅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목을 만드는 방법과 사용 시기를 포함 한 Analysis Services의 다 대 다 차원에 설명 합니다.  
   
 ## <a name="introduction"></a>소개  
  Analysis Services는 다 대 다 차원을 지원하여 표준 별모양 스키마에서 설명할 수 있는 것보다 복잡한 분석을 가능하게 합니다. 표준 별모양 스키마에서는 모든 차원이 팩트 테이블과 일 대 다 관계를 맺고 있습니다. 각 팩트는 하나의 차원 멤버에 조인되고 단일 차원 멤버는 여러 팩트와 연결됩니다.  

@@ -2,12 +2,12 @@
 title: "Microsoft 선형 회귀 알고리즘 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 455b2434c80491024b4e04ae5a807b3b2aa28b1c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 07588cbc2548028565db1f0d6da706d48bf0540b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 선형 회귀 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 종속 변수와 독립 변수 간의 선형 관계를 계산하고 이 관계를 예측에 사용하는 데 도움이 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘의 변형입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 변형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 종속 및 독립 변수 간의 선형 관계를 계산 하 고 다음 해당 관계를 사용 하 여 예측에 대 한 의사 결정 트리 알고리즘입니다.  
   
  이 관계는 데이터 계열을 가장 잘 나타내는 선에 대한 수식 형식을 사용합니다. 예를 들어 다음 다이어그램의 선은 데이터를 가장 잘 나타내는 선형 표시입니다.  
   

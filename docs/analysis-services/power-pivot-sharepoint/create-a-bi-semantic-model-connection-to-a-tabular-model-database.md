@@ -2,12 +2,12 @@
 title: "테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cad58c850f42e42791bbd57c010b48234e5640e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: feb8740550ba5488ff07425ce20036140d84e3dc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기
-  SharePoint 팜 외부의 Analysis Services 인스턴스에서 실행되는 테이블 형식 model 데이터베이스로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 참조합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목의 정보를 사용 하 여 SharePoint 팜 외부의 Analysis Services 인스턴스에서 실행 되는 테이블 형식 모델 데이터베이스로 리디렉션하는 BI 의미 체계 모델 연결을 설정 합니다.  
   
  BI 의미 체계 모델 연결을 만들고 SharePoint 및 Analysis Services 사용 권한을 구성한 후에는 이 연결을 Excel 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 데이터 원본으로 사용할 수 있습니다.  
   

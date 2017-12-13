@@ -2,12 +2,12 @@
 title: "OLAP 스키마 행 집합 용 OLE DB | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f06af3341034ccc9ddebe1ac6a130be705bdd0cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ef17308efb95b03a96a37089d3870e97d1bd7dad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLAP용 OLE DB 스키마 행 집합
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 다음과 같은 OLAP용 OLE DB 스키마 행 집합을 지원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 공급자는 OLAP 스키마 행 집합에 대 한 다음 OLE DB를 지원 합니다.  
   
 > [!NOTE]  
 >  에 특정 데이터 원본 공급자가 행 집합을 지원 하는지 여부를 확인 하려면 사용는 **DISCOVER_ENUMERATIONS** 포함 된 행 집합의 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드.  

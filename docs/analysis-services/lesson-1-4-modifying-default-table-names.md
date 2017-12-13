@@ -2,12 +2,12 @@
 title: "기본 테이블 이름 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e575b698fcb22480fc6dbcbd073f62254095bbee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37923455444f171842e84349a2ce6fc71cd7fd57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>단원 1-4-기본 테이블 이름 수정
-데이터 원본 뷰에서 개체에 대한 **FriendlyName** 속성의 값을 변경하여 알아보기 쉽고 사용이 간편한 이름을 지정할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]값을 변경할 수는 **FriendlyName** 을 쉽게 확인 하 고 사용 하 여 데이터 원본 뷰에서 개체에 대 한 속성입니다.  
   
 아래의 태스크에서 데이터 원본 뷰에 있는 각 테이블의 이름에서 "**Dim**" 및 "**Fact**" 접두사를 제거하여 테이블의 이름을 변경합니다. 이렇게 하면 다음 단원에서 정의하게 될 큐브 및 차원 개체를 알아보기 쉽고 사용이 간편하게 만들 수 있습니다.  
   

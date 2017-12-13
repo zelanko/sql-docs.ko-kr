@@ -2,12 +2,12 @@
 title: "산 점도 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 737cb2c584dc25396eafe6e023ff0d3bd8a32c2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7c5c5f6bc7f49d931e33b66f96e299a2a21559c1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>산점도(Analysis Services - 데이터 마이닝)
-  *산점도* 는 모델로 예측되는 값과 데이터의 실제 값을 비교하여 그래프로 표시합니다. 산점도에서 실제 값은 X축을 따라 표시되고 예측 값은 Y축을 따라 표시됩니다. 또한 예측 값과 실제 값이 정확하게 일치하는 완벽한 예측을 보여 주는 선이 표시됩니다. 이 이상적인 45도 각도 선으로부터 점의 거리는 예측의 정확도를 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *산 점도* 모델에서 예측 된 값과 데이터의 실제 값을 그래프로 표시 합니다. 산점도에서 실제 값은 X축을 따라 표시되고 예측 값은 Y축을 따라 표시됩니다. 또한 예측 값과 실제 값이 정확하게 일치하는 완벽한 예측을 보여 주는 선이 표시됩니다. 이 이상적인 45도 각도 선으로부터 점의 거리는 예측의 정확도를 나타냅니다.  
   
 ## <a name="understanding-the-scatter-plot"></a>산점도 이해  
  마케팅 부서에서 발송된 홍보 전자 메일에 포함된 링크가 클릭된 횟수를 기반으로 일일 판매를 예측하는 모델이 있다고 가정합니다. 클릭 횟수와 판매량 모두 연속적인 숫자 값이므로 클릭 횟수를 독립 변수로 사용하고 판매를 종속 변수로 사용하여 해당 값을 그래프로 표시할 수 있습니다. 이렇게 하면 직선으로 예상 선형 관계가 표시되고 해당 선 주위에 흩어져 있는 점으로 실제 데이터와 예상 데이터의 차이가 표시됩니다. 이 분석을 통해 사용자는 결과 집합과 특정 입력 간의 상관 관계 및 이상적인 모델과의 편차를 한 눈에 확인할 수 있습니다.  

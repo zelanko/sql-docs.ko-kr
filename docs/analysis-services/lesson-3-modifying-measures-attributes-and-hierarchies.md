@@ -2,12 +2,12 @@
 title: "3 단원: 측정값, 특성 및 계층 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a4d500a76930c46f15b36f352787edf4e01199f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a65107e5281bfa85e92a1c1ca27f9213fdd69ded
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>3단원: 측정값, 특성 및 계층 수정
-처음 큐브를 정의한 후에는 큐브를 보다 유용하고 친숙하게 사용할 수 있습니다. 이렇게 하려면 다양한 수준에서 탐색 및 집계를 지원하는 계층을 추가하고 특정 측정값에 형식을 적용하고 계산 및 관계를 정의해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]처음 큐브를 정의한 후 준비가 유용성 고 큐브의 친숙 합니다. 이렇게 하려면 다양한 수준에서 탐색 및 집계를 지원하는 계층을 추가하고 특정 측정값에 형식을 적용하고 계산 및 관계를 정의해야 합니다.  
   
 > [!NOTE]  
 > 이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 제공되는 샘플 프로젝트를 다운로드하려면[여기를 클릭](http://go.microsoft.com/fwlink/?LinkID=221866) 하십시오.  

@@ -2,12 +2,12 @@
 title: "ADOMD.NET 클라이언트 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4573834d025c7afb066c4e363c476e8fb18c4ab7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8010335c897b279ead050e34a25b2f2833d63021
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 클라이언트 기능
-  ADOMD.NET은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 데이터 공급자와 마찬가지로 응용 프로그램과 데이터 원본을 연결하는 데 사용됩니다. 하지만 ADOMD.NET은 다른 .NET Framework 데이터 공급자와는 달리 분석 데이터에 사용됩니다. 분석 데이터에 대한 작업을 수행하기 위해 ADOMD.NET에서는 다른 .NET Framework 데이터 공급자와는 매우 다른 기능을 지원합니다. ADOMD.NET을 사용하면 데이터를 검색할 수 있을 뿐 아니라 메타데이터를 검색하고 분석 데이터 저장소의 구조를 변경할 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET에서는 다른와 마찬가지로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 데이터 공급자, 응용 프로그램 및 데이터 원본 사이 연결 하는 데 사용 합니다. 하지만 ADOMD.NET은 다른 .NET Framework 데이터 공급자와는 달리 분석 데이터에 사용됩니다. 분석 데이터에 대한 작업을 수행하기 위해 ADOMD.NET에서는 다른 .NET Framework 데이터 공급자와는 매우 다른 기능을 지원합니다. ADOMD.NET을 사용하면 데이터를 검색할 수 있을 뿐 아니라 메타데이터를 검색하고 분석 데이터 저장소의 구조를 변경할 수도 있습니다.  
   
  **메타 데이터 검색**  
  응용 프로그램에서는 스키마 행 집합이나 개체 모델을 사용한 메타데이터 검색을 통해 데이터 원본에서 검색할 수 있는 데이터에 대한 추가 정보를 확인할 수 있습니다. 사용 가능한 각 KPI(핵심 성과 지표)의 유형, 큐브의 차원, 마이닝 모델에 필요한 매개 변수 등의 정보를 모두 검색할 수 있습니다. 메타 데이터는 가장 중요 한 *동적* 형식, 깊이, 및 데이터의 범위를 검색할 수를 결정 하는 사용자 입력을 요구 하는 응용 프로그램입니다. 이러한 응용 프로그램의 예로는 쿼리 분석기, Microsoft Excel 및 기타 쿼리 도구가 있습니다. 메타 데이터는 비교적 중요 하지 *정적* 미리 정의 된 일련의 작업을 수행 하는 응용 프로그램입니다.  

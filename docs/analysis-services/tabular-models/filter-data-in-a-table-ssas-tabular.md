@@ -2,12 +2,12 @@
 title: "테이블 (SSAS 테이블 형식)의 데이터를 필터링 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8277af2c5fb41ae2ae1ad97ab05f9da7c7ce9b84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 775a79fb6130bd8504efa7f05778b2690afb5803
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>테이블의 데이터 필터링(SSAS 테이블 형식)
-  데이터를 가져올 때 필터를 적용하여 테이블에 로드되는 행을 제어할 수 있습니다. 데이터를 가져온 후에는 개별 행을 삭제할 수 없습니다. 그러나 사용자 지정 필터를 적용하여 행이 표시되는 방식을 제어할 수 있습니다. 필터링 조건을 충족하지 않는 행은 숨겨집니다. 하나 이상의 열을 기준으로 필터링할 수 있습니다. 필터는 가산적이므로 현재 필터를 기준으로 필터를 추가할 때마다 데이터의 하위 집합이 줄어듭니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블에 로드 하는 행을 제어 하는 데이터를 가져올 때 필터를 적용할 수 있습니다. 데이터를 가져온 후에는 개별 행을 삭제할 수 없습니다. 그러나 사용자 지정 필터를 적용하여 행이 표시되는 방식을 제어할 수 있습니다. 필터링 조건을 충족하지 않는 행은 숨겨집니다. 하나 이상의 열을 기준으로 필터링할 수 있습니다. 필터는 가산적이므로 현재 필터를 기준으로 필터를 추가할 때마다 데이터의 하위 집합이 줄어듭니다.  
   
 > [!NOTE]  
 >  필터 미리 보기 창에서는 표시되는 서로 다른 값의 수가 제한됩니다. 제한을 초과하는 경우 메시지가 표시됩니다.  

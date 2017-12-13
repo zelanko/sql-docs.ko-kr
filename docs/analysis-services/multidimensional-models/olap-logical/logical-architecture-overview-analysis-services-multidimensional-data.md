@@ -2,12 +2,12 @@
 title: "논리적 아키텍처 개요 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 356eff5190638e3ac2086b1839649b99dc788699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
-  Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로 설치 된 Analysis Services의 인스턴스를 참조 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint에 로드 하 고 Excel 쿼리 사용 또는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 데이터 모델입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services는 다양 한 유형의 Analysis Services 모델에서 사용 하는 메모리 아키텍처 및 런타임 환경을 결정 하는 서버 배포 모드에서 작동 합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로 설치 된 Analysis Services의 인스턴스를 참조 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint에 로드 하 고 Excel 쿼리 사용 또는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 데이터 모델입니다.  
   
  이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 참조 하세요. [테이블 형식 모델링 &#40; Ssas&#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) 및 [테이블 형식 및 다차원 솔루션 &#40; 비교 Ssas&#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

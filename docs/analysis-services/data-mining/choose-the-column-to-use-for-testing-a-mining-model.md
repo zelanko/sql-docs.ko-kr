@@ -2,12 +2,12 @@
 title: "마이닝 모델 테스트에 사용할 열 선택 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b5b70b350d54987869c77ced1cebfbd8f7b00ec1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dfefbe59b4adc99b675f2735b86346062b172315
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>마이닝 모델 테스트에 사용할 열 선택
-  마이닝 모델의 정확도를 측정하려면 먼저 평가할 결과를 결정해야 합니다. 대부분의 데이터 마이닝 모델에서는 모델을 만들 때 예측 가능한 특성으로 사용할 열을 하나 이상 선택해야 합니다. 따라서 모델의 정확도를 테스트할 때는 일반적으로 테스트할 특성을 선택해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 모델의 정확도 측정 하려면 먼저 평가 하려는 결과 결정 해야 합니다. 대부분의 데이터 마이닝 모델에서는 모델을 만들 때 예측 가능한 특성으로 사용할 열을 하나 이상 선택해야 합니다. 따라서 모델의 정확도를 테스트할 때는 일반적으로 테스트할 특성을 선택해야 합니다.  
   
  다음 목록에서는 테스트에 사용할 예측 가능한 특성을 선택할 때 추가적으로 고려할 사항에 대해 설명합니다.  
   

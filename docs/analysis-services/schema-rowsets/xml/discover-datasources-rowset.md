@@ -2,12 +2,12 @@
 title: "DISCOVER_DATASOURCES 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 88fede87c305afd15819a9379999806ec39eeb49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 행 집합
-  서버 또는 웹 서비스에서 사용할 수 있는 XMLA(XML for Analysis) 공급자 데이터 원본의 목록을 반환합니다. 게시된 데이터 원본은 응용 프로그램 웹 서버의 URL에서 반환됩니다. 이 목록의 데이터 원본 중 하나에 클라이언트를 연결할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA) 서버 또는 웹 서비스에서 사용할 수 있는 공급자 데이터 원본 목록을 반환 합니다. 게시된 데이터 원본은 응용 프로그램 웹 서버의 URL에서 반환됩니다. 이 목록의 데이터 원본 중 하나에 클라이언트를 연결할 수 있습니다.  
   
  호출 하는 경우는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드는 **DISCOVER_DATASOURCES** 열거 값은 [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 요소는 **Discover** 메서드가 반환 되는 **DISCOVER_DATASOURCES** 행 집합입니다.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||게시자가 입력한 데이터 원본에 대한 설명입니다.<br /><br /> **NULL**을 반환할 수 있습니다.|  
 |**URL**|**DBTYPE_WSTR**|예|해당 데이터 원본에 대해 XMLA(XML for Analysis) 메서드를 호출할 위치를 보여 주는 고유 경로입니다.<br /><br /> **NULL**을 반환할 수 있습니다.|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||데이터 원본에 연결하는 데 필요한 추가 정보가 들어 있는 문자열입니다.<br /><br /> **NULL**을 반환할 수 있습니다.|  
-|**ProviderName**|**DBTYPE_WSTR**|예|데이터 원본의 공급자 이름입니다.<br /><br /> 예:`"MSOLAP"`<br /><br /> **NULL**을 반환할 수 있습니다.|  
+|**ProviderName**|**DBTYPE_WSTR**|예|데이터 원본의 공급자 이름입니다.<br /><br /> 예: `"MSOLAP"`<br /><br /> **NULL**을 반환할 수 있습니다.|  
 |**ProviderType**|**DBTYPE_WSTR**|예|공급자에서 지원되는 데이터 형식입니다. 이 배열에는 다음 형식 중 하나 이상이 포함될 수 있습니다.<br /><br /> **MDP**: 다차원 데이터 공급자입니다.<br /><br /> **TDP**: 표 형식 데이터 공급자입니다.<br /><br /> **DMP**: 데이터 마이닝 공급자 (구현 하는 OLE db for Data Mining 사양).|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|예|데이터 원본에서 사용되는 보안 모드 형식의 사양입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **인증 되지 않은**: 전송 되는 사용자 ID 또는 암호가 없습니다.<br /><br /> **인증 된**: 사용자 ID와 암호가 데이터 원본에 연결 하는 데 필요한 정보에 포함 되어야 합니다.<br /><br /> **통합**: 데이터 원본에서 제공 하는 통합 보안과 같은 권한 부여를 확인 하려면 기본 보안 사용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인터넷 정보 서비스 (IIS).|  
   

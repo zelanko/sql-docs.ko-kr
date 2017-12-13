@@ -2,12 +2,12 @@
 title: "KeyUniquenessGuarantee 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ebeb77c0b03dadc5ab08e69eefed438d3467b910
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 967f3aa847d68ba6941ed17216d721c98908c2c9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="keyuniquenessguarantee-element-assl"></a>KeyUniquenessGuarantee 요소(ASSL)
-  특성 키와 해당 이름 간의 관계와 관련 특성에 대한 관계가 유효하도록 보장되는지 여부를 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특성 키와 해당 이름 및 관련된 특성에 대 한 관계의 관계 유효 하도록 보장 되는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   

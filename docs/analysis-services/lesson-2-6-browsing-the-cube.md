@@ -2,12 +2,12 @@
 title: "큐브를 찾아볼 때 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 00dee701e3bea7e30924352e136c6202d6a10ced
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0dbee75cc8ac8550df25d47265796d4526442787
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>단원 2-6-큐브 찾아보기
-큐브를 배포하면 큐브 디자이너의 **브라우저** 탭에 큐브 데이터가 표시되고 차원 디자이너의 **브라우저** 탭에 차원 데이터가 표시됩니다. 큐브 및 차원 데이터 검색을 통해 작업을 증분 확인할 수 있습니다. 개체가 처리된 후 속성, 관계 및 기타 개체에 대한 약간의 변경으로 원하는 결과를 얻었는지 확인할 수 있습니다. 브라우저 탭을 사용하여 큐브 데이터와 차원 데이터 모두를 확인할 수 있지만 이 탭에서는 검색하려는 개체에 따라 다른 기능을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]큐브를 배포 하면 큐브 데이터에 표시 되는 **브라우저** 큐브 디자이너 및 차원 데이터 탭에 표시 되는 **브라우저** 차원 디자이너에서 탭 합니다. 큐브 및 차원 데이터 검색을 통해 작업을 증분 확인할 수 있습니다. 개체가 처리된 후 속성, 관계 및 기타 개체에 대한 약간의 변경으로 원하는 결과를 얻었는지 확인할 수 있습니다. 브라우저 탭을 사용하여 큐브 데이터와 차원 데이터 모두를 확인할 수 있지만 이 탭에서는 검색하려는 개체에 따라 다른 기능을 제공합니다.  
   
 차원의 경우 브라우저 탭은 리프 노드까지 모두 계층을 탐색하거나 멤버를 볼 수 있는 방법을 제공합니다. 모델에 번역을 추가한 경우 여러 다른 언어로 차원 데이터를 검색할 수 있습니다.  
   

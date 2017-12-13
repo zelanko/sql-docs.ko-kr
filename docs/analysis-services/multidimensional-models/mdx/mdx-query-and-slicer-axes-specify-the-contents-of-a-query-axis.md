@@ -2,12 +2,12 @@
 title: "MDX 쿼리 축의 내용 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c58b048b5452719382c45c9c160293d5d7b6918f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9b7100066015b84fafb6ed11428b318ef79fc78d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>MDX 쿼리 및 Slicer 축-쿼리 축의 내용 지정
-  쿼리 축은 MDX SELECT 문에 의해 반환되는 열 집합의 가장자리를 지정합니다. 열 집합의 가장자리를 지정하면 클라이언트에 표시되는 반환 데이터를 제한할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]쿼리 축 MDX (Multidimensional Expressions) SELECT 문에 의해 반환 된 셀 집합의 가장자리를 지정 합니다. 열 집합의 가장자리를 지정하면 클라이언트에 표시되는 반환 데이터를 제한할 수 있습니다.  
   
  쿼리 축을 지정하려면 `<SELECT query axis clause>` 를 사용하여 집합을 특정 쿼리 축에 할당합니다. 각 `<SELECT query axis clause>` 값은 하나의 쿼리 축을 정의합니다. 데이터 집합의 축 수는 SELECT 문의 `<SELECT query axis clause>` 값의 개수와 동일합니다.  
   

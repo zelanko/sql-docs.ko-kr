@@ -2,12 +2,12 @@
 title: "차원에 차원 인텔리전스를 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da03582649052d24d22bbced266fbfcbc3f74cba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4109707f30b6569c9d67bf6259e61958ff1a6251
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 마법사-차원에 차원 인텔리전스 추가
-  큐브나 차원에 차원 인텔리전스 기능을 추가하여 차원에 대한 표준 비즈니스 유형을 지정할 수 있습니다. 이 기능은 차원 특성에 해당하는 유형도 지정합니다. 클라이언트 응용 프로그램은 데이터를 분석할 때 이러한 유형 지정을 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브나 차원에 대 한 표준 비즈니스 유형을 지정 하는 차원에 차원 인텔리전스 기능을 추가 합니다. 이 기능은 차원 특성에 해당하는 유형도 지정합니다. 클라이언트 응용 프로그램은 데이터를 분석할 때 이러한 유형 지정을 사용할 수 있습니다.  
   
  차원 인텔리전스를 추가하려면 비즈니스 인텔리전스 마법사의 **기능 선택** 페이지에서 **차원 인텔리전스 정의** 옵션을 선택합니다. 그런 다음 마법사의 안내를 따라 차원 인텔리전스를 적용할 차원을 선택하고 선택한 차원에 대한 특성을 식별합니다.  
   

@@ -2,12 +2,12 @@
 title: "AggregationInstanceSource 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 490cb6ca76549def68d5a1d6605d0d8edb7f4b00
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1ef3dbc1c9459e0655e746afa2ba039b1a1a21e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="aggregationinstancesource-element-assl"></a>AggregationInstanceSource 요소(ASSL)
-  소스에 바인딩된 사용자 정의 집계 인스턴스의 데이터를 식별 한 [파티션](../../../analysis-services/scripting/objects/partition-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]소스에 바인딩된 사용자 정의 집계 인스턴스의 데이터를 식별 한 [파티션](../../../analysis-services/scripting/objects/partition-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

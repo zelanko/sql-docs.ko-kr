@@ -2,12 +2,12 @@
 title: "SQL Server Management Studio에서 DMX 쿼리 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f0fcdbb9bb97d895572ac37332b7af9bf5c9fae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2d11cb84c3b348f1fdc219f662624d408aa7f93a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>SQL Server Management Studio에서 DMX 쿼리 만들기
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 마이닝 모델 및 마이닝 구조에 대해 예측 쿼리, 내용 쿼리 및 데이터 정의 쿼리를 작성하는 데 유용한 기능 집합이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예측 쿼리, 내용 쿼리 및 마이닝 모델과 마이닝 구조에 대 한 데이터 정의 쿼리를 만드는 데 도움이 되는 기능 집합을 제공 합니다.  
   
 -   그래픽 예측 쿼리 작성기는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 예측 쿼리를 작성하고 데이터 집합을 모델에 매핑하는 프로세스를 간소화하는 데 사용됩니다.  
   

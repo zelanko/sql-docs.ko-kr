@@ -2,12 +2,12 @@
 title: "6 단원: 계산 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 124ccfaa310ac6bc356cfaf30a7dc5c331b563a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6ad53ac85c3ea996714684d4cc0fb114f5317697
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-defining-calculations"></a>6단원: 계산 정의
-이 단원에서는 MDX(Multidimensional Expressions) 식 또는 스크립트에 해당하는 계산을 정의하는 방법을 배웁니다. 계산을 사용하면 계산 멤버와 명명된 집합을 정의하고 기타 스크립트 명령을 실행하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브의 기능을 확장할 수 있습니다. 예를 들어 스크립트 명령을 실행하여 하위 큐브를 정의한 다음 하위 큐브의 셀에 계산을 할당할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 단원에서는 MDX (Multidimensional Expressions) 식 또는 스크립트는 계산을 정의 배웁니다. 계산을 사용하면 계산 멤버와 명명된 집합을 정의하고 기타 스크립트 명령을 실행하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브의 기능을 확장할 수 있습니다. 예를 들어 스크립트 명령을 실행하여 하위 큐브를 정의한 다음 하위 큐브의 셀에 계산을 할당할 수 있습니다.  
   
 큐브 디자이너에서 새 계산을 정의하면 큐브 디자이너의 **계산** 탭에 있는 **스크립트 구성 도우미** 창에 해당 계산이 추가되며 **계산 식** 창의 계산 폼에 특정 계산 유형에 대한 필드가 표시됩니다. 계산은 **스크립트 구성 도우미** 창에 나열된 순서대로 실행됩니다. 특정 계산을 마우스 오른쪽 단추로 클릭한 후 **위로 이동** 또는 **아래로 이동**을 선택하거나 특정 계산을 클릭한 후 **계산** 탭 도구 모음에 있는 **위로 이동** 또는 **아래로 이동** 아이콘을 사용하여 계산 순서를 다시 지정할 수 있습니다.  
   

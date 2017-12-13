@@ -2,12 +2,12 @@
 title: "큐브 및 차원 속성 검토 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73dea5a137a6ae685d36f06a4e4497e976133819
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0831f70668a453f811b2b330e6593d6ac23dd1f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>단원 2-4-검토 큐브 및 차원 속성
-큐브를 정의한 후에는 큐브 디자이너를 사용하여 결과를 검토할 수 있습니다. 다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 큐브 구조를 검토합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]큐브를 정의 하면 큐브 디자이너를 사용 하 여 결과 검토할 수 있습니다. 다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 큐브 구조를 검토합니다.  
   
 ### <a name="to-review-cube-and-dimension-properties-in-cube-designer"></a>큐브 디자이너에서 큐브 및 차원 속성을 검토하려면  
   

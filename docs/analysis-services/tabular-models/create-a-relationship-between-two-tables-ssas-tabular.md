@@ -2,12 +2,12 @@
 title: "(SSAS 테이블 형식)의 두 테이블 간에 관계 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7580e80413bc84d67ae6cc65c9a6c3d86f3f1603
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79aa7bc1e5dff61693c4d7f5a671bffa49416bf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>두 테이블 간에 관계 만들기(SSAS 테이블 형식)
-  데이터 원본의 테이블에 기존 관계가 없거나 새 테이블을 추가하는 경우 모델 디자이너의 도구를 사용하여 새 관계를 만들 수 있습니다. 테이블 형식 모델에서 관계를 사용하는 방법에 대한 자세한 내용은 [관계&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터 원본의 테이블에에서 기존 관계가 없는 경우 또는 새 테이블을 추가 하는 경우에 새 관계를 만들 모델 디자이너에서 도구를 사용할 수 있습니다. 테이블 형식 모델에서 관계를 사용하는 방법에 대한 자세한 내용은 [관계&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)를 참조하세요.  
   
 ## <a name="create-a-relationship-between-two-tables"></a>두 테이블 간에 관계 만들기  
   

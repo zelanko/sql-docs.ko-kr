@@ -2,12 +2,12 @@
 title: "Microsoft 선형 회귀 알고리즘 기술 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6e68aa664039d9fa7531c6563025c108687c2868
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 선형 회귀 알고리즘 기술 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 여러 쌍의 연속 특성을 모델링하는 데 최적화된 특수한 버전의 Microsoft 의사 결정 트리 알고리즘입니다. 이 항목에서는 알고리즘의 구현을 설명하고, 알고리즘 동작을 사용자 지정하는 방법을 설명하며, 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 여러 쌍의 연속 특성을 모델링에 최적화 된 Microsoft 의사 결정 트리 알고리즘의 특수 버전입니다. 이 항목에서는 알고리즘의 구현을 설명하고, 알고리즘 동작을 사용자 지정하는 방법을 설명하며, 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>선형 회귀 알고리즘 구현  
  Microsoft 의사 결정 트리 알고리즘은 선형 회귀, 분류, 연결 분석 등의 많은 태스크에 사용할 수 있습니다. 선형 회귀용으로 이 알고리즘을 구현하기 위해 알고리즘의 매개 변수가 제어되어 트리의 증가를 제한하며 모델의 모든 데이터는 단일 노드에 보관됩니다. 즉, 선형 회귀는 의사 결정 트리를 기반으로 하더라도 트리에는 단일 루트만 포함되고 분기는 포함되지 않습니다. 모든 데이터는 루트 노드에 있습니다.  

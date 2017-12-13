@@ -1,7 +1,7 @@
 ---
 title: DATABASE Compatibility LEVEL (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62a9e4eec99073e63d53c2d610a7527fbe5f9c91
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,15 +102,7 @@ SELECT name, compatibility_level FROM sys.databases;
  기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램의 사용 중인 버전에서 동작의 차이 영향 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 새 호환성 모드와 매끄럽게 작동 하도록 응용 프로그램으로 변환 합니다. 다음 사용 하 여 **ALTER DATABASE** 을 호환성 수준을 130으로 변경 합니다. 데이터베이스에 대 한 새로운 호환성 설정은 하면 적용 됩니다는 **USE Database** 발급 기본 데이터베이스와 해당 데이터베이스를 새 로그인 처리 합니다.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
- 사용자가 데이터베이스에 연결되어 있는 동안 호환성 수준을 변경하면 활성 쿼리에 대해 잘못된 결과 집합이 생성될 수 있습니다. 예를 들어 쿼리 계획을 컴파일하는 동안 호환성 수준이 변경되면 컴파일된 계획이 이전 호환성 수준과 새 호환성 수준을 모두 사용할 수 있으므로 잘못된 계획이 생성되고 결과가 정확하지 않을 수 있습니다. 또한 계획을 계획 캐시에 저장하고 후속 쿼리에 다시 사용하는 경우 문제가 복잡해질 수 있습니다. 잘못된 쿼리 결과를 방지하려면 다음 절차에 따라 데이터베이스의 호환성 수준을 변경하는 것이 좋습니다.  
-  
-1.  ALTER DATABASE SET SINGLE_USER를 사용하여 데이터베이스를 단일 사용자 액세스 모드로 설정합니다.  
-  
-2.  데이터베이스의 호환성 수준을 변경합니다.  
-  
-3.  ALTER DATABASE SET MULTI_USER를 사용하여 데이터베이스를 다중 사용자 액세스 모드로 설정합니다.  
-  
-4.  데이터베이스의 액세스 모드를 설정 하는 방법에 대 한 자세한 내용은 참조 [ALTER database&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+호환성 수준을 업그레이드에 대 한 권장된 워크플로 참조 하십시오. [데이터베이스 호환성 모드 변경 및 쿼리 저장소를 사용 하 여](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)합니다.  
   
 ## <a name="compatibility-levels-and-stored-procedures"></a>호환성 수준 및 저장 프로시저  
  저장 프로시저가 실행될 때 저장 프로시저는 정의된 데이터베이스의 현재 호환성 수준을 사용합니다. 데이터베이스의 호환성 설정이 변경되면 모든 저장 프로시저도 그에 맞게 자동으로 다시 컴파일됩니다.  

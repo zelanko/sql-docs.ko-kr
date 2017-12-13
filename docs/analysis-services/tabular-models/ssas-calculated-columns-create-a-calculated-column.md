@@ -2,12 +2,12 @@
 title: "계산된 열 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98b426c49d86a3bb54a5fdaa1736c2c92990ad29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2ab67c3c9e10312cd220013787619e15a8c1f89d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-calculated-column"></a>계산 열 만들기
-  계산 열을 사용하면 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 유효한 수식을 만든 다음 ENTER 키를 누르면 계산 열의 각 행에서 값이 계산되어 채워집니다. 그런 다음 다른 데이터 열과 마찬가지로 보고 또는 분석 응용 프로그램에 계산 열을 추가할 수 있습니다. 이 항목에서는 모델 디자이너의 DAX 수식 입력줄을 사용하여 새 계산 열을 만드는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]계산된 열을 사용 하 여 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 유효한 수식을 만든 다음 ENTER 키를 누르면 계산 열의 각 행에서 값이 계산되어 채워집니다. 그런 다음 다른 데이터 열과 마찬가지로 보고 또는 분석 응용 프로그램에 계산 열을 추가할 수 있습니다. 이 항목에서는 모델 디자이너의 DAX 수식 입력줄을 사용하여 새 계산 열을 만드는 방법에 대해 설명합니다.  
   
 #### <a name="to-create-a-new-calculated-column"></a>새 계산 열을 만들려면  
   

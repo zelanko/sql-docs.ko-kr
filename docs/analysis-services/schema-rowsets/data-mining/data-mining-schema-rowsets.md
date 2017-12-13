@@ -2,12 +2,12 @@
 title: "데이터 마이닝 스키마 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35f4df3e7e01a8f0987e955a180842efde5793e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcde375ccb8186f0ef5d38dca2c7f88aefaaf4b7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-schema-rowsets"></a>Data Mining Schema Rowsets
-  실행 중인 서버 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 데이터 마이닝 스키마 행 집합을 지원 합니다. 에 특정 XML/A 공급자가 특정 행 집합을 지원 하는지 여부를 확인 하려면 사용는 [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) 포함 된 행 집합의 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]실행 중인 서버 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 데이터 마이닝 스키마 행 집합을 지원 합니다. 에 특정 XML/A 공급자가 특정 행 집합을 지원 하는지 여부를 확인 하려면 사용는 [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) 포함 된 행 집합의 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드.  
   
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서는 데이터 마이닝 스키마 행 집합이 $SYSTEM 스키마에 Transact-SQL 언어로 된 테이블로 표시됩니다. 예를 들어 Analysis Services 인스턴스에 대한 다음 쿼리는 현재 인스턴스에서 사용할 수 있는 스키마 목록을 반환합니다.  
   

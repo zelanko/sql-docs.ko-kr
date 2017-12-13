@@ -2,12 +2,12 @@
 title: "Power Pivot 서비스 계정 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aae3f818de4936974dd53f14c2b3fdbbea0b369f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Power Pivot 서비스 계정 구성
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]설치에는 서버 작업을 지원하는 두 서비스가 포함됩니다. **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 서비스는 응용 프로그램 서버에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 처리 및 쿼리 지원을 제공하는 Windows 서비스입니다. 이 서비스의 로그인 계정은 항상 SQL Server 설치 중 SharePoint 통합 모드의 Analysis Services를 설치할 때 지정됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]설치에 서버 작업을 지 원하는 두 서비스가 포함 됩니다. **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 서비스는 응용 프로그램 서버에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 처리 및 쿼리 지원을 제공하는 Windows 서비스입니다. 이 서비스의 로그인 계정은 항상 SQL Server 설치 중 SharePoint 통합 모드의 Analysis Services를 설치할 때 지정됩니다.  
   
  SharePoint 팜에서 응용 프로그램 풀 ID로 실행되는 공유 웹 서비스인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 대해 두 번째 계정을 지정해야 합니다. 이 계정은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]구성 도구 또는 PowerShell을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치를 구성할 때 지정합니다.  
   

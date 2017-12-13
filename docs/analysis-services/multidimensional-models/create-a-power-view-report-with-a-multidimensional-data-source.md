@@ -2,12 +2,12 @@
 title: "다차원 데이터 원본과 Power View 보고서 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffbac3cbba343bdaa966c6018cfa8add822e3869
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5f216f4fc9938938fedc9a8b02b943784fd44535
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>다차원 데이터 원본이 포함된 파워 뷰 보고서 만들기
-  다차원 모델을 기반으로 파워 뷰 보고서를 만드는 것은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서나 Analysis Services 테이블 형식 모델을 기반으로 보고서를 만드는 것과 같습니다. 파워 뷰 보고서는 SharePoint 라이브러리의 보고서 데이터 원본 연결 파일(.rsds)에서 만들어집니다. .rsds를 만드는 방법에 대한 자세한 내용은 [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md)를 참조하십시오.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Power view는 다차원 모델에 따라 보고서에 따라 보고서를 만들 때 보다 다르지 않습니다.는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서나 Analysis Services 테이블 형식 모델입니다. 파워 뷰 보고서는 SharePoint 라이브러리의 보고서 데이터 원본 연결 파일(.rsds)에서 만들어집니다. .rsds를 만드는 방법에 대한 자세한 내용은 [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md)를 참조하십시오.  
   
  시작하기 전에 다음을 알아야 합니다.  
   

@@ -2,12 +2,12 @@
 title: "큐브 뷰 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a892a571a70b3f5bff5fb16496c2fee5d18f151
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 21b3d6af2d4a6248926773e78dbf366b6c6d9ee5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives"></a>큐브 뷰
-  큐브 뷰는 큐브를 보다 간단하게 표시할 수 있는 정의로, 큐브 기능의 하위 집합입니다. 큐브 뷰를 사용하면 관리자가 큐브 뷰를 만들어 사용자가 가장 관련 있는 데이터에 집중하도록 할 수 있습니다. 큐브 뷰에는 모든 큐브 개체의 하위 집합이 포함됩니다. 그러나 상위 큐브에 정의되지 않은 요소는 큐브 뷰에 포함될 수 없습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 뷰는 사용자가 간단한 방식으로 큐브를 볼 수 있는 정의 합니다. 큐브 기능의 하위 집합입니다. 큐브 뷰를 사용하면 관리자가 큐브 뷰를 만들어 사용자가 가장 관련 있는 데이터에 집중하도록 할 수 있습니다. 큐브 뷰에는 모든 큐브 개체의 하위 집합이 포함됩니다. 그러나 상위 큐브에 정의되지 않은 요소는 큐브 뷰에 포함될 수 없습니다.  
   
  단순 <xref:Microsoft.AnalysisServices.Perspective> 개체는 기본 정보, 차원, 측정값 그룹, 계산, KPI 및 동작으로 구성되어 있습니다. 기본 정보에는 큐브 뷰의 이름과 기본 측정값이 포함됩니다. 차원은 큐브 차원의 하위 집합입니다. 측정값 그룹은 큐브 측정값 그룹의 하위 집합입니다. 계산은 큐브 계산의 하위 집합입니다. KPI는 큐브 KPI의 하위 집합입니다. 동작은 큐브 동작의 하위 집합입니다.  
   

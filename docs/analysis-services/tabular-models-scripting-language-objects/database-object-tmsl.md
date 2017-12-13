@@ -2,12 +2,12 @@
 title: "데이터베이스 개체 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 239c6e21a7c0e05f52fa00c17d11c5ff81d8a216
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c8506cdf1917fb803c701ca0acd9f1bf1f25b141
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-object-tmsl"></a>데이터베이스 개체 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  동일한 수준 모델을 기반으로 한 호환성 수준 1200 이상에서 테이블 형식 데이터베이스를 정의 합니다. 이 항목의 생성, 변경, 삭제 및 데이터베이스 관리 작업을 수행 하는 요청에 대 한 페이로드를 제공 하는 데이터베이스 개체 정의 설명 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]동일한 수준 모델을 기반으로 한 호환성 수준 1200 이상에서 테이블 형식 데이터베이스를 정의 합니다. 이 항목의 생성, 변경, 삭제 및 데이터베이스 관리 작업을 수행 하는 요청에 대 한 페이로드를 제공 하는 데이터베이스 개체 정의 설명 합니다.  
   
 > [!NOTE]  
 >  모든 스크립트에서 시간에 데이터베이스를 하나만 참조할 수 있습니다. 자체 데이터베이스 이외의 개체, 데이터베이스 속성은 모델을 지정 하는 경우 선택 사항입니다. 모델 및 데이터베이스 이름을 명시적으로 제공 되는 경우 추론 하도록 사용할 수 있는 데이터베이스 간에 일대일 매핑이 있습니다.   

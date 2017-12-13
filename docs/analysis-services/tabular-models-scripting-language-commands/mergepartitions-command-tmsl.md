@@ -2,12 +2,12 @@
 title: "MergePartitions 명령 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d83ab2bae56fb7d38bf5c091ae57e6ddf592e3af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e8ea1e0ea3614926c05c50374dd9b00a527cec0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mergepartitions-command-tmsl"></a>MergePartitions 명령 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  하나 이상의 원본 파티션의 데이터를 대상 파티션에 병합 한 다음 원본 파티션을 삭제 합니다. 대상 파티션의 SQL 쿼리 병합의 일환으로 업데이트 되지 않습니다. 파티션의 후속 처리의 모든 데이터 검색 되도록, 하려면 병합 된 파티션의 데이터를 모두 선택 되도록 쿼리를 수정 해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]하나 이상의 원본 파티션의 데이터를 대상 파티션에 병합 한 다음 원본 파티션을 삭제 합니다. 대상 파티션의 SQL 쿼리 병합의 일환으로 업데이트 되지 않습니다. 파티션의 후속 처리의 모든 데이터 검색 되도록, 하려면 병합 된 파티션의 데이터를 모두 선택 되도록 쿼리를 수정 해야 합니다.  
   
 ## <a name="request"></a>요청  
  데이터베이스, 테이블 및 원본 파티션과 대상 파티션의 지정 해야 합니다. 만 동일한 테이블에서 파티션을 병합할 수 있습니다.  

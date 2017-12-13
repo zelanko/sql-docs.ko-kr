@@ -2,12 +2,12 @@
 title: "데이터 원본 속성 (SSAS 다차원) 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 654337a578f1852e2e2fcdb452d62bfbe46747f9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>데이터 원본 속성 설정(SSAS 다차원)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 원본 개체는 외부 데이터 웨어하우스 또는 다차원 모델에 데이터를 제공하는 관계형 데이터베이스에 대한 연결을 지정합니다. 데이터 원본의 속성에 따라 연결 문자열, 제한 시간 간격, 최대 연결 수 및 트랜잭션 격리 수준이 결정됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 데이터 원본 개체는 외부 데이터 웨어하우스 또는 다차원 모델에 데이터를 제공 하는 관계형 데이터베이스에 대 한 연결을 지정 합니다. 데이터 원본의 속성에 따라 연결 문자열, 제한 시간 간격, 최대 연결 수 및 트랜잭션 격리 수준이 결정됩니다.  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>SQL Server Data Tools에서 데이터 원본 속성 설정  
   

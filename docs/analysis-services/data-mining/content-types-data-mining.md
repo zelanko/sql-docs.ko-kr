@@ -2,12 +2,12 @@
 title: "콘텐츠 형식 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-types-data-mining"></a>내용 유형(데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 마이닝 구조의 열에 대한 실제 데이터 형식과 모델에 사용된 열에 대한 논리적 내용 유형을 모두 정의할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]을 두는 실제 데이터 형식과 열에 대 한 마이닝 구조 및 모델에 사용 된 열에 대 한 논리적 내용 유형을 정의할 수 있습니다  
   
  *데이터 형식* 은 마이닝 모델을 만들 때 알고리즘이 이 열의 데이터를 처리하는 방법을 결정합니다. 열의 데이터 형식을 정의하면 열의 데이터 처리 방법 및 해당 데이터 형식에 대한 알고리즘 정보를 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 각 데이터 형식은 데이터 마이닝에 대해 하나 이상의 내용 유형을 지원합니다.  
   

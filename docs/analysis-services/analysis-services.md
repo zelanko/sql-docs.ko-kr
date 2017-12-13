@@ -1,12 +1,12 @@
 ---
 title: Analysis Services | Microsoft Docs
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d31d430fdaf5276b52a3f90efacf4a9a56576a35
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what-is-analysis-services"></a>Analysis Services 란?
-  Analysis Services는 의사 결정 지원 및 Reporting Services 보고서를 Power BI에서 Excel과 같은 클라이언트 응용 프로그램 및 비즈니스 보고서에 대 한 분석 데이터를 제공 하는 비즈니스 분석 및 기타 데이터 시각화 도구에 사용 되는 분석 데이터 엔진.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services는 의사 결정 지원 및 Reporting Services 보고서를 Power BI에서 Excel과 같은 클라이언트 응용 프로그램 및 비즈니스 보고서에 대 한 분석 데이터를 제공 하는 비즈니스 분석 및 기타 데이터 시각화 도구에 사용 되는 분석 데이터 엔진.  
   
  온-프레미스 Azure Analysis Services 또는 SQL Server Analysis Services 서버 인스턴스에 데이터베이스로 모델을 배포, 되풀이 데이터 처리를 설정 및 할당 하는 다차원 또는 테이블 형식 데이터 모델을 제작 하는 일반적인 워크플로 포함 최종 사용자가 데이터 액세스할 수 있도록 권한입니다. 준비 완료 되었을 때 의미 체계 데이터 모델을 데이터 소스로 Analysis Services를 지 원하는 모든 클라이언트 응용 프로그램에서 액세스할 수 있습니다.  
  

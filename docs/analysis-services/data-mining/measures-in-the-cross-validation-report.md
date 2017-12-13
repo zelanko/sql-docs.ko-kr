@@ -2,12 +2,12 @@
 title: "교차 유효성 검사 보고서의 측정값 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 306a2c189f4c53a388572d64df7a07c733baca3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 52d3932d577ed93c3c1ab4122323a04a1c27771e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-in-the-cross-validation-report"></a>교차 유효성 검사 보고서의 측정값
-  교차 유효성 검사 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 마이닝 구조의 데이터를 여러 교집합 영역으로 분리한 다음 구조 및 관련 마이닝 모델을 대화식으로 테스트합니다. 이 분석을 기반으로 구조 및 각 모델에 대한 표준 정확도 측정값 집합을 출력합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]교차 유효성 검사 중 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마이닝 구조의 데이터를에서 여러 교집합 영역으로 분할 하 고 구조 및 관련된 마이닝 모델 다음 반복적으로 테스트 합니다. 이 분석을 기반으로 구조 및 각 모델에 대한 표준 정확도 측정값 집합을 출력합니다.  
   
  보고서에는 데이터의 접기 수 및 각 접기의 데이터 양에 대한 기본 정보와, 데이터 분포를 설명하는 일반 메트릭 집합이 포함됩니다. 각 교집합 영역에 대한 일반 메트릭을 비교하여 구조 또는 모델의 안정성을 평가할 수 있습니다.  
   

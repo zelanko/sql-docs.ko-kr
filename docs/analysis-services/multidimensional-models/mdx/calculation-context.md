@@ -2,12 +2,12 @@
 title: "계산 컨텍스트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 961f989f2b1973c162f08a89d083c947e56871de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fe1f8809fc966d9801a17dee7cd7960116fa331
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculation-context"></a>계산 컨텍스트
-  계산 컨텍스트는 식이 계산되고 모든 좌표가 명시적으로 알려지거나 식에서 파생될 수 있는 큐브의 알려진 하위 공간입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]계산 컨텍스트는 식이 계산 되 고 있는 모든 좌표가 명시적으로 알려지거나 식에서 파생 될 수는 큐브의 알려진된 하위 공간입니다.  
   
 ## <a name="determining-the-calculation-context"></a>계산 컨텍스트 확인  
  모든 집합, 멤버, 튜플, 또는 숫자 함수는 MDX 식 또는 문 전체의 컨텍스트에서 실행됩니다. 튜플과 같은 인수가 함수에 전달될 때는 큐브 공간의 일부 좌표만 명시적으로 제공됩니다. 다른 좌표는 현재 계산 컨텍스트에 따라 얻습니다.  

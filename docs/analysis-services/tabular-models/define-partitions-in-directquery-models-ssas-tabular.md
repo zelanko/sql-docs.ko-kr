@@ -2,12 +2,12 @@
 title: "(SSAS 테이블 형식) DirectQuery 모델에서 파티션 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b680877b5ac907e143222b029d5d717145d3c2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2af8137f3063c4403c728e229c1836d5111bc927
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-partitions-in-directquery-models"></a>DirectQuery 모델에서 파티션 정의
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  이 섹션에서는 DirectQuery 모델에서 파티션을 사용하는 방법에 대해 설명합니다. 테이블 형식 모델의 파티션에 대한 일반적인 정보는 [파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 섹션에서는 DirectQuery 모델에서 파티션을 사용 하는 방법을 설명 합니다. 테이블 형식 모델의 파티션에 대한 일반적인 정보는 [파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
   
 > [!NOTE]  
 >  테이블 하나가 여러 파티션을 포함할 수는 있지만 DirectQuery 모드에서는 파티션 중 하나만 쿼리 실행에 사용하도록 지정할 수 있습니다. 단일 파티션 요구 사항이 모든 호환성 수준에서 DirectQuery 모델에 적용됩니다.  

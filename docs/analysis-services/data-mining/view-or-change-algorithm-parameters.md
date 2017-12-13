@@ -2,12 +2,12 @@
 title: "보기 또는 변경 알고리즘 매개 변수 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5bd20ff4beddb94831f634304f1a9628f21025a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9f547511bc918c4b55693207aaf1181da7378c43
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-or-change-algorithm-parameters"></a>알고리즘 매개 변수 확인 또는 변경
-  데이터 마이닝 모델을 작성하여 모델 결과를 사용자 지정하는 데 사용하는 알고리즘과 함께 제공되는 매개 변수를 변경할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모델의 결과 사용자 지정 데이터 마이닝 모델 작성 시 사용 하는 알고리즘과 함께 제공 된 매개 변수를 변경할 수 있습니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 매개 변수는 모델에 대한 속성보다 훨씬 더 많으며, 이 매개 변수는 데이터의 처리, 그룹화 및 표시 방법을 근본적으로 변경하는 데 사용할 수 있습니다. 예를 들어 알고리즘 매개 변수를 사용하여 다음을 수행할 수 있습니다.  
   

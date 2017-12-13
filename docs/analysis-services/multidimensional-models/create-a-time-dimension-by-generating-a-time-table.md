@@ -2,12 +2,12 @@
 title: "시간 테이블을 생성 하 여 시간 차원 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 023c54c55fde8b75af335f29c20d9d0135c905c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: efd1341424c3be0bfd3aad5cf7c216c5303e250b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>시간 테이블을 생성하여 시간 차원 만들기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 원본 데이터베이스에 사용 가능한 시간 테이블이 없을 때 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 시간 차원을 만들 수 있습니다. 이렇게 하려면 **생성 방법 선택** 페이지에서 다음 옵션 중 하나를 선택하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 마법사를 사용할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 원본 데이터베이스에 사용 가능한 시간 테이블이 없을 때 시간 차원을 만들 수 있습니다. 이렇게 하려면 **생성 방법 선택** 페이지에서 다음 옵션 중 하나를 선택하세요.  
   
 -   **데이터 원본에 시간 테이블 생성** 기본 데이터 원본에 개체를 만들 수 있는 권한이 있으면 이 옵션을 선택합니다. 그러면 마법사가 시간 테이블을 생성하고 이 시간 테이블을 데이터 원본에 저장한 다음 이 시간 테이블을 기반으로 시간 차원을 만듭니다.  
   

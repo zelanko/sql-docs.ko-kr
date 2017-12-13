@@ -2,12 +2,12 @@
 title: "Power Pivot 구성 Windows PowerShell을 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff0decfe7bfe8ba1d93c4b722fecbc50c0d86ed1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf814ab826f373ff4266206e6e4c0becda187bca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>Windows PowerShell을 사용하여 파워 피벗 구성
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]의 설치를 구성하는 데 사용할 수 있는 Windows PowerShell cmdlet이 포함되어 있습니다. PowerShell을 사용하여 설치를 완전히 구성하려면 SharePoint cmdlet과 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlet을 모두 사용해야 합니다. 대부분의 구성은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 도구 중 하나를 사용하여 완료할 수 있습니다. 도구에 대한 자세한 내용은 [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하십시오.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 설치를 구성 하는 데 사용할 수 있는 Windows PowerShell cmdlet이 포함 되어 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]합니다. PowerShell을 사용하여 설치를 완전히 구성하려면 SharePoint cmdlet과 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlet을 모두 사용해야 합니다. 대부분의 구성은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 도구 중 하나를 사용하여 완료할 수 있습니다. 도구에 대한 자세한 내용은 [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하십시오.  
   
 > [!IMPORTANT]  
 >  SharePoint 2010 팜의 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 서버를 사용하는 SharePoint 팜이나 SharePoint용 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 을 구성하려면 먼저 SharePoint 2010 SP1을 설치해야 합니다. 서비스 팩을 아직 설치하지 않았으면 서버를 구성하기 전에 설치합니다.  

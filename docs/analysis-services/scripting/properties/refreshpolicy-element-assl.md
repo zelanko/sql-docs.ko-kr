@@ -2,12 +2,12 @@
 title: "RefreshPolicy 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 84fcc378f14364c5728e78fc9ee866ecca2dad8b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fe18ffe7b7453c0591591acb8f92d37cd545724f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="refreshpolicy-element-assl"></a>RefreshPolicy 요소(ASSL)
-  빈도 결정 차원 또는 측정값 그룹의 동적 부분 (에 지정 된 대로 [지 속성](../../../analysis-services/scripting/properties/persistence-element-assl.md) 요소)의 변경 사항을 검사 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]빈도 결정 차원 또는 측정값 그룹의 동적 부분 (에 지정 된 대로 [지 속성](../../../analysis-services/scripting/properties/persistence-element-assl.md) 요소)의 변경 사항을 검사 합니다.  
   
 ## <a name="syntax"></a>구문  
   

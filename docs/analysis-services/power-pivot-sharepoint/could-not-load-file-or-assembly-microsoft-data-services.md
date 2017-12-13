@@ -2,12 +2,12 @@
 title: "파일 또는 Microsoft 데이터 액세스 서비스 어셈블리를 로드할 수 없습니다 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 175e7b5645a022dd7c840ae3065b4569bdf7a10f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1ee173d82bbc6ebe40475868c8771c5609c7a5ba
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>파일 또는 Microsoft 데이터 액세스 서비스 어셈블리를 로드할 수 없습니다.
-  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이 설치된 SharePoint 2010 환경에서는 데이터 피드 내보내기를 시도할 때 시스템에 필요한 Microsoft ADO.NET Data Services 버전이 없으면 이 오류가 발생합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]설치 된 SharePoint 2010 환경에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint에 대 한 데이터 피드 내보내기를 시도할 시스템에 필요한 버전의 Microsoft ADO.NET Data Services 없습니다. 없으면이 오류가 발생 합니다.  
   
 ## <a name="details"></a>세부 정보  
   
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 |적용 대상|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
 |제품 버전|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |원인|ADO.NET Data Services 3.5 SP1이 없습니다.|  
-|메시지 텍스트|파일이나 어셈블리 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다.. 시스템에서 지정한 파일을 찾을 수 없습니다.|  
+|메시지 텍스트|파일이나 어셈블리 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 시스템에서 지정한 파일을 찾을 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
  SharePoint 2010에는 SharePoint 목록을 XML 데이터 피드로 내보내는 데 사용할 수 있는 데이터 피드로 내보내기 단추가 포함되어 있습니다. 또한 SharePoint 모드의 Reporting Services와 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 모두 ADO.NET Data Services가 필요한 데이터 피드 기능을 지원합니다.  

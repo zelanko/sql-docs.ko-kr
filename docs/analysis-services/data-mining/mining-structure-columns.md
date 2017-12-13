@@ -2,12 +2,12 @@
 title: "마이닝 구조 열 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11ccfc309d772d3b26a5a0e72a77c094e2624282
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 47ad74a70236b156db230ed229d2022cd6e057b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-structure-columns"></a>마이닝 구조 열
-  마이닝 구조를 만들 때 외부 데이터 열을 선택한 다음 데이터가 모델링에 사용되는 방법을 지정하여 마이닝 구조의 열을 정의합니다. 따라서 마이닝 구조 열이 데이터 원본의 데이터 복사본보다 많으며 마이닝 구조 열에 따라 원본 데이터가 마이닝 모델에 사용되는 방법이 정의됩니다. 데이터를 분할하는 방법을 결정하는 속성과 데이터 값을 분산하는 방법을 설명하는 속성을 할당할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]외부 데이터 열을 선택 하 고 다음 데이터가 모델링에 사용 하는 하는 방법을 지정 하 여 마이닝 구조를 만들 때 마이닝 구조에 열을 정의 합니다. 따라서 마이닝 구조 열이 데이터 원본의 데이터 복사본보다 많으며 마이닝 구조 열에 따라 원본 데이터가 마이닝 모델에 사용되는 방법이 정의됩니다. 데이터를 분할하는 방법을 결정하는 속성과 데이터 값을 분산하는 방법을 설명하는 속성을 할당할 수 있습니다.  
   
  마이닝 모델 작성 시 사용하는 각 알고리즘이 구조의 여러 열을 사용하여 데이터를 해석할 수 있기 때문에 마이닝 구조 열은 유연성이 있고 확장 가능합니다. 각 모델에 대해 하나의 데이터 집합을 포함하는 대신 단일 마이닝 구조를 사용하고 해당 구조의 열을 사용하여 데이터를 각 모델에 맞게 사용자 지정할 수 있습니다.  
   
