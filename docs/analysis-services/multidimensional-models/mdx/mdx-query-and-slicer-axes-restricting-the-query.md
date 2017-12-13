@@ -2,12 +2,12 @@
 title: "쿼리 및 Slicer Axis (MDX)으로 쿼리 제한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eae3ee8aa4ea2c47aafbf4f6a881395fa24a5484
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2ae437951601f639cc114fcde470d97fa1685eb7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---restricting-the-query"></a>MDX 쿼리 및 Slicer 축-쿼리 제한
-  MDX(Multidimensional Expressions) SELECT 쿼리를 구성할 때 응용 프로그램에서는 일반적으로 큐브를 검토하고 계층 집합을 다음과 같이 두 개의 하위 집합으로 나눕니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) SELECT 문을 작성 하는 작업, 응용 프로그램가 일반적으로 큐브를 검사 하 고 두 하위 집합으로 계층의 집합을 나눕니다.  
   
 -   **Query 축**- 여러 멤버에 대해 데이터가 검색되는 계층 집합입니다. 쿼리 축에 대한 자세한 내용은 [쿼리 축의 내용 지정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)을 참조하세요.  
   

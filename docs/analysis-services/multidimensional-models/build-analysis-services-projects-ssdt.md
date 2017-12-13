@@ -2,12 +2,12 @@
 title: "Analysis Services 프로젝트 빌드 (SSDT) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 70af992dc3b712536efd55053465096a6b477509
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6a8e6a7d40efc5c2b6a6dc6a5e7721c2cf999c17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services 프로젝트 빌드(SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 Visual Studio에서 프로그래밍 개체를 빌드하는 것과 유사한 방식으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 빌드할 수 있습니다. 프로젝트를 빌드하면 출력 디렉터리에 XML 파일 집합이 생성됩니다. 이러한 XML 파일은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 비롯한 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들거나 수정하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 통신하는 데 사용하는 XML 언어인 ASSL(Analysis Services Scripting Language)을 사용합니다. XML 파일은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 정의를 지정한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하는 데 사용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 작성 한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Visual Studio에서 프로그래밍 개체를 빌드 같은 많은 프로젝트. 프로젝트를 빌드하면 출력 디렉터리에 XML 파일 집합이 생성됩니다. 이러한 XML 파일은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 비롯한 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들거나 수정하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 통신하는 데 사용하는 XML 언어인 ASSL(Analysis Services Scripting Language)을 사용합니다. XML 파일은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 정의를 지정한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하는 데 사용됩니다.  
   
 ## <a name="building-a-project"></a>프로젝트 빌드  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 빌드하면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 프로젝트의 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 개체를 작성하는 데 필요한 모든 ASSL 명령을 비롯한 전체 XML 파일 집합을 출력 폴더에 작성합니다. 프로젝트가 이전에 빌드되었으며 활성 구성에 증분 배포가 지정되어 있으면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 배포된 개체에 대한 증분 업데이트를 수행하는 ASSL 명령이 포함된 XML 파일도 작성합니다. 이 XML 파일은 프로젝트의 ..\obj\\<활성 구성\> 폴더에 기록됩니다. 증분 빌드를 사용하면 대규모 프로젝트나 데이터베이스를 배포 및 처리할 때 시간을 절약할 수 있습니다.  

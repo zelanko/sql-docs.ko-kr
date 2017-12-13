@@ -2,12 +2,12 @@
 title: "Kpi 정의 및 찾아보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 786633c9ef5ff8c1814b1622b1349734286b2312
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8361308afe6ffabf33fd152f308ad12c9bedd479
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>단원 7-1-Kpi 정의 및 찾아보기
-KPI(핵심 성과 지표)를 정의하려면 먼저 KPI 이름 및 KPI와 연관된 측정값 그룹을 정의합니다. KPI는 모든 측정값 그룹 또는 단일 측정값 그룹과 연관될 수 있습니다. 그런 후 KPI의 다음 요소를 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]핵심 성과 지표 (Kpi)를 정의 하려면 먼저 KPI 이름 및 KPI가 연결 된 측정값 그룹을 정의 합니다. KPI는 모든 측정값 그룹 또는 단일 측정값 그룹과 연관될 수 있습니다. 그런 후 KPI의 다음 요소를 정의합니다.  
   
 -   값 식  
   

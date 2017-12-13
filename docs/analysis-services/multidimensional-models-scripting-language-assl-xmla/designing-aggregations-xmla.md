@@ -2,12 +2,12 @@
 title: "집계 디자인 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da7a6639d68c6b97725fea152d4d7f8be1224273
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-aggregations-xmla"></a>집계 디자인(XMLA)
-  집계 디자인은 특정 측정값 그룹의 파티션과 연결되어 해당 파티션에서 집계를 저장할 때 동일한 구조를 사용하도록 합니다. 동일한 저장 구조를 사용 하 여 파티션에 대 한을 사용 하면 사용 하 여 나중에 병합할 수 있는 파티션을 쉽게 정의할 수는 [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다. 집계 디자인에 대 한 자세한 내용은 참조 [집계 및 집계 디자인](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]집계 디자인은 파티션을 집계를 저장할 때 동일한 구조를 사용 하는 특정 측정값 그룹의 파티션과 연관 됩니다. 동일한 저장 구조를 사용 하 여 파티션에 대 한을 사용 하면 사용 하 여 나중에 병합할 수 있는 파티션을 쉽게 정의할 수는 [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다. 집계 디자인에 대 한 자세한 내용은 참조 [집계 및 집계 디자인](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  
   
  집계 디자인에 대 한 집계를 정의 하려면 사용할 수 있습니다는 [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) xml for Analysis (XMLA) 명령입니다. **DesignAggregations** 명령에 대 한 참조 및 해당 참조에 따라 디자인 프로세스를 제어 하는 방법으로 사용 하는 집계 디자인을 식별 하는 속성이 있습니다. 사용 하는 **DesignAggregations** 명령과 해당 속성을 반복적으로 또는 일괄 처리에서 집계를 디자인 하 고 다음 디자인 프로세스를 평가 하려면 결과 디자인 통계를 볼 수 있습니다.  
   

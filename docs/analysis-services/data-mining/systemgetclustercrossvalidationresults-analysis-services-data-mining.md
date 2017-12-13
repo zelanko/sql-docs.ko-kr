@@ -2,12 +2,12 @@
 title: "SystemGetClusterCrossValidationResults (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a741805b22296232bffdc881ba4105243ea92506
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 54b91c7abf3f9abe366d45d2579818aee1c121a5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults(Analysis Services - 데이터 마이닝)
-  마이닝 구조를 지정된 수의 교집합 영역으로 분할하고 각 파티션의 모델을 학습한 다음 각 파티션의 정확도 메트릭을 반환합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]지정 된 수의 교집합 영역으로 마이닝 구조 각 파티션에 대 한 모델을 학습 파티션과 각 파티션에 대 한 정확도 메트릭을 반환 합니다.  
   
  **참고** 이 저장 프로시저는 클러스터링 모델이 적어도 하나 포함되어 있는 마이닝 구조에만 사용할 수 있습니다. 클러스터링 이외의 모델에 대해 교차 유효성 검사를 실행하려면 [SystemGetCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)를 사용해야 합니다.  
   

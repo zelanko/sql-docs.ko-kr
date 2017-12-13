@@ -31,11 +31,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a3a252fced11410718d1bcdbc82d9bb199585745
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9c6489bd5ca7b8b82b7211bc77414335e6e62bd7
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>인수  
  *savepoint_name*  
- 저장점에 할당된 이름입니다. 저장점 이름은 식별자에 적용되는 규칙을 준수해야 하지만 길이는 32자로 제한됩니다. *transaction_name* 항상 대/소문자 구분, 경우에 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대/소문자를 무시 합니다.  
+ 저장점에 할당된 이름입니다. 저장점 이름은 식별자에 적용되는 규칙을 준수해야 하지만 길이는 32자로 제한됩니다. *savepoint_name* 항상 대/소문자 구분, 경우에 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대/소문자를 무시 합니다.  
   
  @*savepoint_variable*  
  유효한 저장점 이름이 포함된 사용자 정의 변수의 이름입니다. 변수를 사용 하 여 선언 해야 합니다는 **char**, **varchar**, **nchar**, 또는 **nvarchar** 데이터 형식입니다. 변수에 32자 이상 전달할 수 있지만 전달된 문자의 처음부터 32자까지만 사용됩니다.  

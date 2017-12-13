@@ -2,12 +2,12 @@
 title: "샘플 데이터 및 프로젝트 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0e675845383c3e54c8477a8e0866231ac302cd1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-sample-data-and-projects"></a>샘플 데이터 및 프로젝트 설치 
-이 항목에 제공된 지침과 링크를 사용하여 Analysis Services 자습서에 사용되는 모든 데이터 및 프로젝트 파일을 설치할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]지침 및이 항목에서 제공 하는 링크를 사용 하 여 모든 Analysis Services 자습서에 사용 되는 데이터 및 프로젝트 파일을 설치할 수 있습니다.  
   
 ## <a name="step-1-install-sql-server-software"></a>1단계: SQL Server 소프트웨어 설치  
 이 자습서의 단원에서는 다음 소프트웨어가 설치되어 있다고 가정합니다. 다음 소프트웨어는 모두 SQL Server 설치 미디어를 사용하여 설치됩니다. 배포를 간단하게 하기 위해 모든 기능을 단일 컴퓨터에 설치할 수도 있습니다. 이러한 기능을 설치하려면 SQL Server 설치 프로그램을 실행하고 기능 선택 페이지에서 해당 기능을 선택합니다. 자세한 내용은 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요.  

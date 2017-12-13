@@ -2,12 +2,12 @@
 title: "날짜 유형 차원 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38a9c9d9a1fc035d652525b9ec0564977ac691bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b3be92a4572e464d23c24c0f7152a7a106e1932c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>데이터베이스 차원-날짜 유형 차원 만들기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 시간 차원은 년, 반기, 분기, 월, 일 등의 기간을 나타내는 특성이 포함된 차원 유형입니다. 분석 및 보고와 관련하여 시간 차원의 기간은 시간을 기준으로 세분화됩니다. 특성은 계층으로 구성되며 시간 차원 세분성은 주로 기록 데이터에 대한 비즈니스 및 보고 요구 사항에 따라 결정됩니다. 예를 들어 비즈니스 인텔리전스 응용 프로그램의 재무 데이터와 영업 데이터에는 대부분 월별 또는 분기별 세분성이 사용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 시간 차원은 년, 반기, 분기, 월 및 일 등의 기간을 나타내는 특성이 포함 된 차원 유형입니다. 분석 및 보고와 관련하여 시간 차원의 기간은 시간을 기준으로 세분화됩니다. 특성은 계층으로 구성되며 시간 차원 세분성은 주로 기록 데이터에 대한 비즈니스 및 보고 요구 사항에 따라 결정됩니다. 예를 들어 비즈니스 인텔리전스 응용 프로그램의 재무 데이터와 영업 데이터에는 대부분 월별 또는 분기별 세분성이 사용됩니다.  
   
  일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 큐브는 시간 차원을 한 형식이나 다른 형식으로 포함합니다. 데이터의 세분성과 보고 요구 사항에 따라 큐브는 둘 이상의 시간 차원이나 동일한 시간 차원의 여러 계층을 포함할 수 있습니다. 그러나 모든 큐브에 시간 차원이 필요한 것은 아닙니다. 작업 기준 차원에서의 비용 계산은 시간이 아닌 작업을 기준으로 하기 때문에 작업 기준 비용 계산과 같은 일부 OLAP 응용 프로그램에는 시간 차원이 필요하지 않습니다.  
   

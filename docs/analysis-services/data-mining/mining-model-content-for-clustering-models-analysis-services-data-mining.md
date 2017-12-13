@@ -2,12 +2,12 @@
 title: "클러스터링 모델에 대 한 마이닝 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f2c7c1437e46e950672880d30c49abeb8ff44734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d8ce27412abf931efcc0b18de246b921afc2e4fe
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>클러스터링 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-  이 항목에서는 Microsoft 클러스터링 알고리즘을 사용하는 모델에만 적용되는 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 Microsoft 클러스터링 알고리즘을 사용 하는 모델에만 적용 되는 마이닝 모델 콘텐츠를 설명 합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>클러스터링 모델 구조에 대한 이해  
  클러스터링 모델의 구조는 간단합니다. 각 모델에는 모델과 메타데이터를 나타내는 부모 노드가 한 개 있고 각 부모 노드에는 클러스터 기본 목록이 있습니다(NODE_TYPE = 5). 이 구조는 다음 이미지와 같습니다.  

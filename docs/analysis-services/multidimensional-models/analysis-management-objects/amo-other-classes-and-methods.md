@@ -2,12 +2,12 @@
 title: "AMO 다른 클래스와 메서드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d201ea38ed360b35b5b19daf945cc11ffe45f849
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 기타 클래스 및 메서드
-  이 섹션에서는 OLAP 또는 데이터 마이닝과 관련 되지 않은 하 고 관리 하거나 개체를 관리 하는 데 유용한 일반적인 클래스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이러한 클래스에서는 저장 프로시저, 추적, 예외, 백업 및 복원 등의 기능을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 OLAP 또는 데이터 마이닝과 관련 되지 않은 하 고 관리 하거나 개체를 관리 하는 데 유용한 일반적인 클래스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이러한 클래스에서는 저장 프로시저, 추적, 예외, 백업 및 복원 등의 기능을 제공합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   

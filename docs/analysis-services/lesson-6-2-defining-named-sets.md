@@ -2,12 +2,12 @@
 title: "명명 된 집합 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d14d16deabb83c9eedc448e9b8e063aa56b662cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 68f500896e8dffa6982c2f15ac3e431bebc4df87
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>단원 2-6-명명 된 집합 정의
-명명된 집합은 차원 멤버 집합을 반환하는 MDX(Multidimensional Expressions) 식입니다. 명명된 집합을 정의한 후 큐브 정의의 일부로 저장할 수 있습니다. 또한 클라이언트 응용 프로그램에서도 명명된 집합을 만들 수 있습니다. 큐브 데이터, 산술 연산자, 숫자 및 함수를 조합하여 명명된 집합을 만들 수 있습니다. 명명된 집합을 클라이언트 응용 프로그램의 MDX 쿼리에서 사용할 수 있으며 하위 큐브의 집합을 정의하는 데도 사용할 수 있습니다. 하위 큐브는 큐브 공간을 후속 문에 대해 정의된 하위 공간으로 제한하는 크로스 조인된 집합 컬렉션입니다. 제한된 큐브 공간을 정의하는 것은 MDX 스크립팅에 대한 기본 개념에 해당합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]명명된 된 집합에는 차원 멤버의 집합을 반환 하는 MDX (Multidimensional Expressions) 식입니다. 명명된 집합을 정의한 후 큐브 정의의 일부로 저장할 수 있습니다. 또한 클라이언트 응용 프로그램에서도 명명된 집합을 만들 수 있습니다. 큐브 데이터, 산술 연산자, 숫자 및 함수를 조합하여 명명된 집합을 만들 수 있습니다. 명명된 집합을 클라이언트 응용 프로그램의 MDX 쿼리에서 사용할 수 있으며 하위 큐브의 집합을 정의하는 데도 사용할 수 있습니다. 하위 큐브는 큐브 공간을 후속 문에 대해 정의된 하위 공간으로 제한하는 크로스 조인된 집합 컬렉션입니다. 제한된 큐브 공간을 정의하는 것은 MDX 스크립팅에 대한 기본 개념에 해당합니다.  
   
 명명된 집합은 MDX 쿼리를 단순화하며 일반적으로 사용되는 복합 집합 식에 대한 유용한 별칭을 제공합니다. 예를 들어 가장 많은 직원이 포함된 멤버 집합이 들어 있는 대형 대리점이라는 명명된 집합을 대리점 차원에 정의할 수 있습니다. 그러면 최종 사용자가 쿼리에서 대형 대리점의 명명된 집합을 사용하거나, 이 명명된 집합을 사용하여 하위 큐브의 집합을 정의할 수 있습니다. 명명된 집합 정의는 큐브 에저장되지만, 값은 메모리에만 존재합니다. 명명된 집합을 만들려면 큐브 디자이너의 **계산** 탭에 있는 **새 명명된 집합** 명령을 사용합니다. 자세한 내용은 [계산](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [명명된 집합 만들기](../analysis-services/multidimensional-models/create-named-sets.md)를 참조하세요.  
   

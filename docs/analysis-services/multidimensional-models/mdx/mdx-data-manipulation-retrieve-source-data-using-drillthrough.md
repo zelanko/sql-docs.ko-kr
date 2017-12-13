@@ -2,12 +2,12 @@
 title: "DRILLTHROUGH를 사용 하 여 원본 데이터 검색 (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d7eecd743e66ad33e029e5d575b9ab4a8b2a988
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 30587e46a4ac54d2ac2825649f25cb321c05eba4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>MDX 데이터 조작 드릴스루를 사용 하 여 원본 데이터 검색
-  MDX(Multidimensional Expressions)는 [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)문을 사용하여 큐브 셀의 원본 데이터에서 행 집합을 검색합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]사용 하 여 MDX (multidimensional Expressions)는 [드릴스루](../../../mdx/mdx-data-manipulation-drillthrough.md)큐브 셀에 대 한 원본 데이터에서 행 집합을 검색 하는 문입니다.  
   
  큐브에서 **DRILLTHROUGH** 문을 실행하려면 해당 큐브에 대한 드릴스루 동작을 정의해야 합니다. 드릴스루 동작을 정의하려면 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 큐브 디자이너에서 **동작** 창의 도구 모음에서 **새 드릴스루 동작**을 클릭하십시오. 새 드릴스루 동작에서 동작 이름, 대상, 조건 및 **DRILLTHROUGH** 문이 반환하는 열을 지정하십시오.  
   

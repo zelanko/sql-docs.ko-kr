@@ -2,12 +2,12 @@
 title: "SharePoint 2013으로 파워 피벗 마이그레이션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,13 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2bc5973a5718f75f28e5df0e3e514d1b892431ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 107e251257157fc029447c6ba08e907335bcf73f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>SharePoint 2013으로 파워 피벗 마이그레이션
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   
   
  SharePoint 2013에서는 전체 업그레이드를 지원하지 않습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**됩니다. 동작은 전체 업그레이드 및 데이터베이스 연결 업그레이드의 두 가지 기본 업그레이드 방법 중 고객이 선택할 수 있는 SharePoint 2010으로 업그레이드와 다릅니다.  

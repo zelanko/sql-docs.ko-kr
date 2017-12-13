@@ -2,12 +2,12 @@
 title: "누락 값 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1c2b1b598989965af2be43ad62c02ae4017fd42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>누락 값(Analysis Services - 데이터 마이닝)
-  *누락 값* 을 올바르게 처리하는 것은 효과적인 모델링을 위해 매우 중요합니다. 이 섹션에서는 누락 값의 정의를 알아보고, 데이터 마이닝 구조와 마이닝 모델을 빌드할 때 누락 값을 처리하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기능을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]처리 *누락 값* 올바르게은 효과적인 모델링의 중요 한 부분입니다. 이 섹션에서는 누락 값의 정의를 알아보고, 데이터 마이닝 구조와 마이닝 모델을 빌드할 때 누락 값을 처리하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기능을 설명합니다.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>데이터 마이닝에서 누락 값의 정의  
  누락 값은 다양한 경우를 의미할 수 있습니다. 필드를 적용할 수 없었거나, 이벤트가 발생하지 않았거나, 데이터를 사용할 수 없었던 경우일 수 있습니다. 데이터를 입력한 사람이 올바른 값을 몰랐거나, 필드에 데이터가 채워졌는지 확인하지 않았을 수도 있습니다.  

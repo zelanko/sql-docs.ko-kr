@@ -2,12 +2,12 @@
 title: "분석 구성 서비스 및 Kerberos 제한 위임 (KCD) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae2cafe597e5540a58cc89e28cee87516942d021
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Analysis Services 및 KCD(Kerberos 제한 위임) 구성
-  KCD(Kerberos 제한 위임)는 Windows 인증 시 사용자 환경 전체에서 서비스 간에 클라이언트 자격 증명을 위임하도록 구성할 수 있는 인증 프로토콜입니다. KCD에는 추가 인프라(예: 도메인 컨트롤러) 및 사용자 환경의 추가 구성이 필요합니다. KCD는 SharePoint 2016에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터와 관련된 일부 시나리오의 요구 사항입니다. SharePoint 2016에서는 Excel Services가 SharePoint 팜에서 별도의 새로운 서버인 **Office Online Server**로 이동되었습니다. Office Online Server는 별도의 서버이므로 두 가지 홉 시나리오에서 클라이언트 자격 증명을 위임할 방법이 필요합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kerberos 제한 위임 KCD ()는 Windows 인증에서 클라이언트 자격 증명을 위임할 구성할 수는 인증 프로토콜 환경 전체에서 서비스에는 서비스입니다. KCD에는 추가 인프라(예: 도메인 컨트롤러) 및 사용자 환경의 추가 구성이 필요합니다. KCD는 SharePoint 2016에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터와 관련된 일부 시나리오의 요구 사항입니다. SharePoint 2016에서는 Excel Services가 SharePoint 팜에서 별도의 새로운 서버인 **Office Online Server**로 이동되었습니다. Office Online Server는 별도의 서버이므로 두 가지 홉 시나리오에서 클라이언트 자격 증명을 위임할 방법이 필요합니다.  
   
 ||  
 |-|  

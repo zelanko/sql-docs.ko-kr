@@ -2,12 +2,12 @@
 title: "오류 및 경고 처리 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: febb20820f7ca8be5c0994ae8bbee8070be559d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>오류 및 경고 처리(XMLA)
-  오류 처리는 필요한 경우 XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) 또는 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 호출이 실행 되지 않습니다, 성공적으로 실행 하지만 오류 또는 경고를 생성 또는 성공적으로 실행 되지만 결과 반환 오류가 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]오류 처리는 필요한 경우 XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) 또는 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 호출이 실행 되지 않습니다, 성공적으로 실행 하지만 오류 또는 경고를 생성 또는 성공적으로 실행 되지만 결과 반환 오류가 있습니다.  
   
 |오류|보고|  
 |-----------|---------------|  

@@ -2,12 +2,12 @@
 title: "Analysis Services의 세계화 시나리오 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c18f5e2ab55d1cae1f57ad67d157fc3f109949b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81fd021deaed75731aa79f48a5a3ef8669e4c18a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services의 세계화 시나리오
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 테이블 형식 데이터 모델과 다차원 데이터 모델 둘 다의 다국어 데이터와 메타데이터를 저장 및 조작합니다. 데이터 저장소는 유니코드 인코딩을 사용하는 문자 집합으로 된 유니코드(UTF-16)입니다. 데이터 모델에 ANSI 데이터를 로드하는 경우 문자는 유니코드 해당 코드 포인트를 사용하여 저장됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다국어 데이터와 테이블 형식 및 다차원 데이터 모델 모두에 대 한 메타 데이터 저장 및 조작 합니다. 데이터 저장소는 유니코드 인코딩을 사용하는 문자 집합으로 된 유니코드(UTF-16)입니다. 데이터 모델에 ANSI 데이터를 로드하는 경우 문자는 유니코드 해당 코드 포인트를 사용하여 저장됩니다.  
   
  유니코드를 지원한다는 것은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 Windows 클라이언트 및 서버 운영 체제가 지원하는 언어를 사용하여 데이터를 저장하여, Windows 컴퓨터에 사용된 문자 집합으로 데이터를 읽고, 쓰고, 정렬하고 비교할 수 있음을 의미합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터를 사용하는 BI 클라이언트 응용 프로그램에서는 데이터가 모델에서 해당 언어로 존재한다고 가정하여 데이터를 사용자가 선택한 언어로 나타낼 수 있습니다.  
   

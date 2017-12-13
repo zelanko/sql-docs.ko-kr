@@ -2,12 +2,12 @@
 title: "튜플 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4720db7c001c17a99016e9d81b32ee46d990e06f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 15dfc7f0ef9690acb208acd17eb6c4b5f27778bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tuples"></a>튜플
-  튜플은 큐브의 데이터 조각을 고유하게 식별합니다. 동일한 계층에 속하는 둘 이상의 멤버가 없는 경우 튜플은 차원 멤버의 조합으로 구성됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]튜플은 큐브의 데이터 조각을 고유 하 게 식별 합니다. 동일한 계층에 속하는 둘 이상의 멤버가 없는 경우 튜플은 차원 멤버의 조합으로 구성됩니다.  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>튜플의 암시적 또는 기본 특성 멤버  
  MDX 쿼리 또는 식에서 튜플을 정의할 때 각 특성 계층의 특성 멤버를 명시적으로 포함할 필요는 없습니다. 쿼리나 식에 특성 계층의 멤버가 명시적으로 포함되어 있지 않으면 해당 특성 계층의 기본 멤버가 암시적으로 튜플에 포함됩니다. 큐브에 명시적으로 달리 정의되어 있지 않고 (All) 멤버가 있는 경우 모든 특성 계층의 기본 멤버는 (All) 멤버입니다. 특성 계층 내에 (All) 멤버가 없는 경우 기본 멤버는 해당 특성 계층의 최상위 수준 멤버입니다. 또한 기본 측정값이 명시적으로 정의되지 않은 경우 큐브에 지정된 첫 번째 측정값이 기본 측정값이 됩니다. 자세한 내용은 [기본 멤버 정의](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md) 및 [DefaultMember&#40;MDX&#41;](../../../mdx/defaultmember-mdx.md)를 참조하세요.  

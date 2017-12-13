@@ -2,12 +2,12 @@
 title: "LANGUAGE 및 FORMAT_STRING FORMATTED_VALUE에서 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 757e4e6dd284117d0e686e7908c7c71e1ba28636
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23c043a3c35dd63927596c5bba0d9b8cf8d76bf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>MDX 셀 속성-FORMATTED_VALUE 속성
-  FORMATTED_VALUE 속성은 셀의 VALUE, FORMAT_STRING 속성 및 LANGUAGE 속성의 상호 작용을 기반으로 합니다. 이 항목에서는 이러한 속성이 상호 작용하여 FORMATTED_VALUE 속성을 작성하는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]FORMATTED_VALUE 속성은 셀의 VALUE, FORMAT_STRING 및 언어 속성의 상호 작용을 기반으로 합니다. 이 항목에서는 이러한 속성이 상호 작용하여 FORMATTED_VALUE 속성을 작성하는 방법에 대해 설명합니다.  
   
 ## <a name="value-formatstring-language-properties"></a>VALUE, FORMAT_STRING, LANGUAGE 속성  
  다음 표에서는 이러한 속성에 대해 설명합니다. 사용자는 이 내용을 통해 이러한 속성을 조합하여 사용하는 방법을 알 수 있습니다.  

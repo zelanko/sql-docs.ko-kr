@@ -2,12 +2,12 @@
 title: "정의 데이터 원본 뷰 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7fa2ed565479de8dfc127ce74d769da7540ba140
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb0297f91f6a7b3cac69e262eac707cdc59040bd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>단원 1-3-데이터 원본 뷰 정의
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 사용할 데이터 원본을 정의한 후 수행해야 할 다음 단계는 일반적으로 프로젝트에 대한 데이터 원본 뷰를 정의하는 것입니다. 데이터 원본 뷰는 프로젝트에서 데이터 원본에 의해 정의되는 뷰와 지정된 테이블의 메타데이터에 대한 단일 통합 뷰입니다. 메타데이터를 데이터 원본 뷰로 저장하면 기본 데이터 원본에 대한 연결이 열려 있지 않아도 개발 중에 메타데이터를 사용할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]사용할 데이터 원본을 정의한 후는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서 다음 단계는 일반적으로 프로젝트에 대 한 데이터 원본 뷰를 정의 하 합니다. 데이터 원본 뷰는 프로젝트에서 데이터 원본에 의해 정의되는 뷰와 지정된 테이블의 메타데이터에 대한 단일 통합 뷰입니다. 메타데이터를 데이터 원본 뷰로 저장하면 기본 데이터 원본에 대한 연결이 열려 있지 않아도 개발 중에 메타데이터를 사용할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
   
 다음 태스크에서는 **AdventureWorksDW2012** 데이터 원본의 테이블이 5개 포함된 데이터 원본 뷰를 정의합니다.  
   

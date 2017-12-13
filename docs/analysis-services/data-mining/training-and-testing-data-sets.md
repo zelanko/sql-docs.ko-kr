@@ -2,12 +2,12 @@
 title: "학습 및 테스트 데이터 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="training-and-testing-data-sets"></a>데이터 집합 학습 및 테스트
-  데이터를 학습 집합과 테스트 집합으로 분할하는 작업은 데이터 마이닝 모델 평가의 중요한 부분입니다. 데이터 집합을 학습 집합과 테스트 집합으로 분리할 경우 일반적으로 대부분의 데이터가 학습에 사용되고 나머지 데이터가 테스트에 사용되지만, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 테스트 및 학습 집합의 크기가 비슷하게 되도록 데이터를 무작위로 샘플링합니다. 학습 및 테스트에 유사한 데이터를 사용하면 데이터 불일치의 영향을 최소화하고 모델의 특징을 보다 잘 이해할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터를 학습 집합과 테스트 집합으로 데이터 마이닝 모델 평가의 중요 한 부분이입니다. 데이터 집합을 학습 집합과 테스트 집합으로 분리할 경우 일반적으로 대부분의 데이터가 학습에 사용되고 나머지 데이터가 테스트에 사용되지만, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 테스트 및 학습 집합의 크기가 비슷하게 되도록 데이터를 무작위로 샘플링합니다. 학습 및 테스트에 유사한 데이터를 사용하면 데이터 불일치의 영향을 최소화하고 모델의 특징을 보다 잘 이해할 수 있습니다.  
   
  학습 집합을 사용하여 모델을 처리한 후에는 테스트 집합에 대한 예측을 만들어 모델을 테스트합니다. 테스트 집합의 데이터에는 예측할 특성의 알려진 값이 이미 포함되어 있으므로 모델의 예측이 올바른지 여부를 쉽게 확인할 수 있습니다.  
   

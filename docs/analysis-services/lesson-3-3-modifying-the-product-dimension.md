@@ -2,12 +2,12 @@
 title: "Product 차원 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd334585da2a88fd8dbdbd5fdad9ba2d8f403cb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a6ff0c5e509a40c84850e281d2ab9f41246c4880
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>단원 3-3-Product 차원 수정
-이 항목의 태스크에서는 명명된 계산을 사용하여 제품 라인에 대해 보다 설명적인 이름을 제공하고 Product 차원에 계층을 정의하고 계층에 대해 (All) 멤버 이름을 지정합니다. 또한 특성을 표시 폴더로 그룹화합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 항목의 태스크를 사용 하 여 명명된 된 계산, 제품 라인에 대 한 보다 설명적인 이름을 제공 하 고, Product 차원에 계층 구조를 정의 하 고, 계층의 (All) 멤버 이름을 지정 합니다. 또한 특성을 표시 폴더로 그룹화합니다.  
   
 ## <a name="adding-a-named-calculation"></a>명명된 계산 추가  
 데이터 원본 뷰에서 테이블에 명명된 계산을 추가할 수 있습니다. 다음 태스크에서는 전체 제품 라인 이름을 표시하는 명명된 계산을 만듭니다.  

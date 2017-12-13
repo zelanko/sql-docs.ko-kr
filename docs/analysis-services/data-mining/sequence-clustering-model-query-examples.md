@@ -2,12 +2,12 @@
 title: "시퀀스 클러스터링 모델 쿼리 예제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>시퀀스 클러스터링 모델 쿼리 예제
-  데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 저장된 정보에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 사용자가 제공한 새 데이터를 기반으로 예측을 만드는 예측 쿼리를 만들 수 있습니다. 시퀀스 클러스터링 모델의 경우 내용 쿼리는 일반적으로 발견된 클러스터나 해당 클러스터 내의 전환에 대한 추가 정보를 제공합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델에 대 한 쿼리를 만들 때 내용 쿼리를 모델에 저장 된 정보에 대 한 세부 정보에 제공 하는 만들 수 있습니다. 또는 패턴을 사용 하는 모델에 새 데이터를 기반으로 예측을 만드는 예측 쿼리를 만들 수 있습니다. 제공 해야 합니다. 시퀀스 클러스터링 모델의 경우 내용 쿼리는 일반적으로 발견된 클러스터나 해당 클러스터 내의 전환에 대한 추가 정보를 제공합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  시퀀스 클러스터링 모델에 대한 예측 쿼리는 일반적으로 시퀀스와 전환, 모델에 포함된 비시퀀스 특성, 또는 시퀀스 특성과 비시퀀스 특성의 조합 중 하나에 따라 권장 구성을 생성합니다.  
   

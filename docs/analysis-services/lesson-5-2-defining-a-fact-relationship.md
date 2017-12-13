@@ -2,12 +2,12 @@
 title: "팩트 관계 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fb3d67744b5616a031beee8ec3f329ed02f73c48
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0223be3eb321aee4ecae975fe77a776082ed495f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lesson 5-2-팩트 관계 정의
-사용자는 팩트 테이블에 있는 데이터 항목별로 측정값 차원을 구분하거나 특정 판매 팩트에 관련된 송장 번호나 구매 주문 번호와 같은 특정 추가 관련 정보를 팩트 테이블에서 쿼리할 수 있습니다. 이러한 팩트 테이블 항목을 기반으로 차원을 정의할 경우 이 차원을 *팩트 차원*이라고 합니다. 팩트 차원은 중복 제거 차원이라고도 합니다. 팩트 차원은 특정 송장 번호에 관련된 모든 행과 같은 관련 팩트 테이블 행을 함께 그룹화하는 데 유용합니다. 이 정보를 관계형 데이터베이스에 있는 별도의 차원 테이블에 넣을 수 있는데도 정보에 대한 별도의 차원 테이블을 만들면 차원 테이블이 팩트 테이블과 같은 속도로 커지고 중복 데이터가 발생하며 과도하게 복잡해지기 때문에 좋지 않습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]사용자가 팩트 테이블에 있는 데이터 항목별로 측정값 차원 구분 되도록 하거나 송장 번호와 같은 특정 추가 관련된 정보에 대 한 팩트 테이블을 쿼리하거나 구매 주문 번호와 관련 된 특정 판매 팩트를 경우가. 이러한 팩트 테이블 항목을 기반으로 차원을 정의할 경우 이 차원을 *팩트 차원*이라고 합니다. 팩트 차원은 중복 제거 차원이라고도 합니다. 팩트 차원은 특정 송장 번호에 관련된 모든 행과 같은 관련 팩트 테이블 행을 함께 그룹화하는 데 유용합니다. 이 정보를 관계형 데이터베이스에 있는 별도의 차원 테이블에 넣을 수 있는데도 정보에 대한 별도의 차원 테이블을 만들면 차원 테이블이 팩트 테이블과 같은 속도로 커지고 중복 데이터가 발생하며 과도하게 복잡해지기 때문에 좋지 않습니다.  
   
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 쿼리 성능 향상을 위해 팩트 차원 데이터를 MOLAP 차원 구조로 복제할지 또는 쿼리 성능을 향상시키는 대신 저장 공간을 절약하기 위해 팩트 차원을 ROLAP 차원으로 정의할지 결정할 수 있습니다. MOLAP 저장소 모드를 사용하여 차원을 저장하면 모든 차원 멤버는 측정값 그룹의 파티션에 저장될 뿐만 아니라 고도로 압축된 MOLAP 구조로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 저장됩니다. ROLAP 저장소 모드를 사용하여 차원을 저장하면 차원 정의만 MOLAP 구조로 저장되고 차원 멤버 자체는 쿼리 시에 기본 관계형 팩트 테이블에서 쿼리됩니다. 팩트 차원의 쿼리 빈도, 표준 쿼리에서 반환된 행 수, 쿼리 성능 및 처리 비용에 따라 적절한 저장소 모드를 결정하십시오. 차원을 ROLAP으로 정의한다고 해서 해당 차원을 사용하는 모든 큐브도 ROLAP 저장소 모드를 사용하여 저장해야 하는 것은 아닙니다. 각 차원에 대한 저장소 모드는 독립적으로 구성될 수 있습니다.  
   

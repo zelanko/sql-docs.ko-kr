@@ -2,12 +2,12 @@
 title: "리프트 차트 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bc351c7439eac3a6714181b05257bef284915f95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>리프트 차트(Analysis Services - 데이터 마이닝)
-  A *리프트 chart* 는 임의 추측에 대해 비교할 때 마이닝 모델이 제공하는 향상률을 그래픽으로 나타내며 *리프트* 점수를 기준으로 변화를 측정합니다. 서로 다른 모델에 대한 리프트 점수를 비교하여 가장 적합한 모델을 확인할 수 있습니다. 또한 모델의 예측이 유용하지 않은 지점을 확인할 수 있습니다. 예를 들어 리프트 차트를 검토하면 프로모션 캠페인이 30%의 고객에게만 효과적임을 파악하고 해당 수치를 사용하여 캠페인의 범위를 제한할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *리프트 차트* 임의 추측에 대해 비교할 때 마이닝 모델을 제공 하는 향상률을 나타냅니다 그래픽과 변경의 측면에서 측정 한 *리프트* 점수입니다. 서로 다른 모델에 대한 리프트 점수를 비교하여 가장 적합한 모델을 확인할 수 있습니다. 또한 모델의 예측이 유용하지 않은 지점을 확인할 수 있습니다. 예를 들어 리프트 차트를 검토하면 프로모션 캠페인이 30%의 고객에게만 효과적임을 파악하고 해당 수치를 사용하여 캠페인의 범위를 제한할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에서는 리프트 차트를 사용하여 동일한 예측 가능한 특성이 있는 여러 모델의 정확도를 비교할 수 있습니다. 단일 결과(예측 가능한 특성의 단일 값)에 대해 또는 모든 결과(지정된 특성의 모든 값)에 대해 예측의 정확도를 평가할 수도 있습니다.  
   

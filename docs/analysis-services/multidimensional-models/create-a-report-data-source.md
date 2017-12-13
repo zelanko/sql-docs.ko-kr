@@ -2,12 +2,12 @@
 title: "보고서 데이터 원본 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f30b38b27a56bf3af10c4f39681b160feec34fd5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e8bac4005982e113a765b59557ae4380610b03b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-report-data-source"></a>보고서 데이터 원본 만들기
-  파워 뷰를 다차원 모델에 연결하려면 SharePoint 라이브러리에서 .rsds 파일이라는 공유 보고서 데이터 원본 정의를 만들어야 합니다. .rsds 파일은 다차원 모델에 연결하는 데 사용되는 Analysis Services 서버 인스턴스의 이름, 연결 형식, 연결 문자열 및 자격 증명을 지정합니다. 사용자가 .rsds를 클릭하면 비어 있는 새 파워 뷰 보고서(.rdlx 파일)가 브라우저에 열립니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Power view를 다차원 모델에 연결 하려면 순서로 공유 보고서 데이터 원본 정의 SharePoint 라이브러리에서.rsds 파일 라고도 만들어야 합니다. .rsds 파일은 다차원 모델에 연결하는 데 사용되는 Analysis Services 서버 인스턴스의 이름, 연결 형식, 연결 문자열 및 자격 증명을 지정합니다. 사용자가 .rsds를 클릭하면 비어 있는 새 파워 뷰 보고서(.rdlx 파일)가 브라우저에 열립니다.  
   
  .rsds 연결을 만들려면 SQL Server 2012 이상의 Reporting Services와 SharePoint 2010 또는 SharePoint 2013용 Reporting Services 추가 기능을 설치해야 합니다.  
   

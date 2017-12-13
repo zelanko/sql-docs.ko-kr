@@ -2,12 +2,12 @@
 title: "최대 용량 사양 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39c69ad1c26b30eda9244d192e6199903249ff40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f0ababa5bb354b91df756bd5998967fb9b6ddf3a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>최대 용량 사양 (Analysis Services)
-  다음 표에서는 여러 다른 서버 배포 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 요소에 정의된 다양한 개체의 최대 크기 및 개수를 보여 줍니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]다음 표에서 최대 크기 및 수의 다양 한 개체에 정의 된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다른 서버 배포 모드에서 구성 요소입니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   

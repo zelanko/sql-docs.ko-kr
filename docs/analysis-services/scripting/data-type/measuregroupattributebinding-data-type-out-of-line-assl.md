@@ -2,12 +2,12 @@
 title: "MeasureGroupAttributeBinding 데이터 형식 (아웃-아웃오브 라인) (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 472d395f4c075da9c73a97bc09137e25a5bf3f6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e112f0cfbbdb873015022cb6fc47d7dafc191153
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measuregroupattributebinding-data-type-out-of-line-assl"></a>MeasureGroupAttributeBinding 데이터 형식(아웃오브 라인)(ASSL)
-  측정값 그룹에 포함된 차원에 있는 특성의 아웃오브 라인 바인딩을 나타내는 파생 데이터 형식을 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]측정값 그룹에 포함 된 차원에서 특성에 대 한 아웃오브 라인 바인딩을 나타내는 파생된 데이터 형식을 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   

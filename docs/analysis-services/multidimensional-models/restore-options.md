@@ -2,12 +2,12 @@
 title: "복원 옵션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23b028bc2e8819d63fafe0a8f915238492088fc4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e47fb9f30ca2a6f3156d3ef4fb70565f31183a65
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="restore-options"></a>복원 옵션
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 여러 가지 방법으로 복원할 수 있으며 어떤 방법에서든 서버 컴퓨터 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 관리자 권한이 필요합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 복원할 경우 **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 열고 적합한 옵션 구성을 선택한 다음 대화 상자에서 복원을 실행할 수 있습니다. 또는 파일에 이미 지정된 설정을 사용하는 스크립트를 만들어 저장하고 필요할 때마다 스크립트를 실행할 수 있습니다. 이 방식으로 다음 섹션에 설명된 것과 같이 XMLA를 사용하여 복원을 완료합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]여러 가지 방법으로 복원 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 든 서버 컴퓨터에 대 한 관리자 권한이 필요한 중 일부는 데이터베이스 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 복원할 경우 **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 열고 적합한 옵션 구성을 선택한 다음 대화 상자에서 복원을 실행할 수 있습니다. 또는 파일에 이미 지정된 설정을 사용하는 스크립트를 만들어 저장하고 필요할 때마다 스크립트를 실행할 수 있습니다. 이 방식으로 다음 섹션에 설명된 것과 같이 XMLA를 사용하여 복원을 완료합니다.  
   
 ## <a name="restoring-databases-using-xmla"></a>XMLA를 사용하여 데이터베이스 복원  
  XMLA 복원 명령은 .abf 파일을 기반으로 복원을 실행하여 복원 프로세스를 자동화하기 위한 방법입니다. 복원 명령에는 보안 정의, 원격 파티션을 저장할 위치 및 관계형 OLAP(ROLAP) 개체의 재할당을 지정하도록 설정할 수 있는 여러 속성이 있습니다. 자세한 내용은 [Restore 요소&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)를 참조하세요.  

@@ -2,12 +2,12 @@
 title: "Analysis Services 스키마 행 집합 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0d6e87251e1ab08a87929cd3dba78a584e7c62fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ed5393a6406aa031f141d6a635f0690983626dd5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-schema-rowsets"></a>Analysis Services 스키마 행 집합
-  스키마 행 집합은 데이터베이스 스키마, 활성 세션, 연결, 명령 및 서버에서 실행 중인 작업을 비롯한 Analysis Services 개체 및 서버 상태에 대한 정보를 포함하는 미리 정의된 테이블입니다. SQL Server Management Studio의 XML/A 스크립트 창에서 스키마 행 집합 테이블을 쿼리하거나, 스키마 행 집합에 대해 DMV 쿼리를 실행하거나, 스키마 행 집합 정보를 포함하는 사용자 지정 응용 프로그램(예: 보고서를 만드는 데 사용할 수 있는 사용 가능한 차원의 목록을 검색하는 보고 응용 프로그램)을 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]스키마 행 집합은 Analysis Services 개체 및 데이터베이스 스키마, 활성 세션, 연결, 명령 및 서버에서 실행 중인 작업을 포함 하 여 서버 상태에 대 한 정보를 포함 하는 미리 정의 된 테이블입니다. SQL Server Management Studio의 XML/A 스크립트 창에서 스키마 행 집합 테이블을 쿼리하거나, 스키마 행 집합에 대해 DMV 쿼리를 실행하거나, 스키마 행 집합 정보를 포함하는 사용자 지정 응용 프로그램(예: 보고서를 만드는 데 사용할 수 있는 사용 가능한 차원의 목록을 검색하는 보고 응용 프로그램)을 만들 수 있습니다.  
   
 > [!NOTE]  
 >  XML/A에서 스키마 행 집합을 사용 하는 경우 스크립트에서 반환 되는 정보는 *결과* 의 매개 변수는 [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드는이 설명 하는 행 집합 열 레이아웃에 따라 구성 됩니다 단원을 참조 하십시오입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 XML for Analysis 사양에 필요한 행 집합을 지원합니다. 또한 XMLA 공급자는 OLE DB, OLAP용 OLE DB, 데이터 마이닝용 OLE DB 데이터 원본 공급자에 대한 표준 스키마 행 집합도 일부 지원합니다. 다음 항목에서는 지원되는 행 집합에 대해 설명합니다.  

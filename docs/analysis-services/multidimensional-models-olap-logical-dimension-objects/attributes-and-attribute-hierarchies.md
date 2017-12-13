@@ -2,12 +2,12 @@
 title: "특성 및 특성 계층 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a86eb2f15fe0109a2e5b2492a61ca7102e662e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18621eba78a2e4c95de6373485044b5f88e1f744
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>특성 및 특성 계층
-  차원은 데이터 원본 뷰의 테이블이나 뷰에 있는 하나 이상의 열에 바인딩되는 특성의 모음입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]차원은 데이터 원본 뷰의 뷰나 테이블의 하나 이상의 열에 바인딩되는 특성의 컬렉션입니다.  
   
 ## <a name="key-attribute"></a>키 특성  
  각 차원에는 키 특성이 포함되어 있습니다. 각 특성은 차원 테이블의 하나 이상의 열에 바인딩됩니다. 키 특성은 차원에서 팩트 테이블과의 외래 키 관계에 사용되는 차원 주 테이블의 열을 나타내는 특성입니다. 일반적으로 키 특성은 차원 테이블의 기본 키 열을 나타냅니다. 기본 데이터 원본에 물리적 기본 키가 없는 데이터 원본 뷰의 테이블에 논리적 기본 키를 정의할 수 있습니다. **자세한 내용은**, 참조 [데이터 원본 뷰 &#40;에서 논리적 기본 키 정의 Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). 키 특성을 정의할 때 큐브 마법사와 차원 마법사는 데이터 원본 뷰에 있는 차원 테이블의 기본 키 열을 사용하려고 합니다. 차원 테이블에 논리적 또는 물리적 기본 키가 정의되어 있지 않으면 마법사는 차원에 대한 키 특성을 제대로 정의할 수 없습니다.  

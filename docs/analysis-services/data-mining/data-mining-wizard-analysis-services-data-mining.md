@@ -2,12 +2,12 @@
 title: "데이터 마이닝 마법사 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ad9dd40bb7f7f8da0820d9ccbefafed9079650b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffd9987c39cdffda3052ed075cb3abb137e4d1b2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>데이터 마이닝 마법사(Analysis Services - 데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 마법사에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작 합니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
   
  마법사의 마지막 단계에서는 원하는 경우 데이터를 학습 및 테스트 집합으로 나누고 드릴스루와 같은 기능을 사용하도록 설정할 수 있습니다.  
   

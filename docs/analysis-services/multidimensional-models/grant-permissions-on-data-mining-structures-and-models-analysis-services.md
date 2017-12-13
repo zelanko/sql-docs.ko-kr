@@ -2,12 +2,12 @@
 title: "데이터 마이닝 구조 및 모델 (Analysis Services)에 대 한 권한 부여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 148b66a74967d773837720d377257ad6624c03f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 44204be410e5d4e716f30f5f0775f8c62d152a55
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>데이터 마이닝 구조 및 모델에 대한 권한 부여(Analysis Services)
-  기본적으로 Analysis Services 서버 관리자만 데이터베이스의 데이터 마이닝 구조 또는 마이닝 모델을 볼 수 있습니다. 관리자가 아닌 사용자에게 권한을 부여하려면 아래 지침을 따르세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]기본적으로 Analysis Services 서버 관리자만 데이터베이스에 데이터 마이닝 구조 또는 마이닝 모델을 볼 수 있는 권한이 있습니다. 관리자가 아닌 사용자에게 권한을 부여하려면 아래 지침을 따르세요.  
   
 ## <a name="set-permissions-to-access-a-mining-structure"></a>마이닝 구조에 대한 액세스 권한 설정  
   

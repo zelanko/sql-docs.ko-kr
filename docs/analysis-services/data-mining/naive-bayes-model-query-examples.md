@@ -2,12 +2,12 @@
 title: "Naive Bayes 모델 쿼리 예제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 622eaa381d4507cb75d66a93916743af40e73932
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5efdf95cb4a87acd7c2b1e626dd20d3105aa1f6b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes 모델 쿼리 예제
-  데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다. 이 섹션에서는 Microsoft Naive Bayes 알고리즘을 기반으로 하는 모델에 대해 이러한 쿼리를 만드는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델에 대 한 쿼리를 만들 때 내용 쿼리, 분석 시 발견 된 패턴에 대 한 세부 정보에 제공 하는 만들 수 있습니다 또는 패턴을 사용 하는 모델에 새 데이터에 대 한 예측을 만드는 예측 쿼리를 만들 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다. 이 섹션에서는 Microsoft Naive Bayes 알고리즘을 기반으로 하는 모델에 대해 이러한 쿼리를 만드는 방법을 설명합니다.  
   
  **내용 쿼리**  
   

@@ -2,12 +2,12 @@
 title: "통합 문서 및 예약 된 데이터 새로 고침 (SharePoint 2013) 업그레이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffec3fb3ec6abd9d6fd1779ae8e8f434894e68b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
-  이 항목은 이전 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경에서 사용자의 통합 문서 환경과 이 릴리스에 새로 도입된 기능을 이용할 수 있도록 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서를 업그레이드 하는 방법에 대해 설명합니다. 새 기능에 대한 자세한 내용은 [PowerPivot의 새로운 기능](http://go.microsoft.com/fwlink/?LinkID=203917)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 이전에 만든 통합 문서 사용자 환경을 설명 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경 및 업그레이드 하는 방법 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서를이 릴리스에 도입 된 새로운 기능을 취할 수 있습니다. 새 기능에 대한 자세한 내용은 [PowerPivot의 새로운 기능](http://go.microsoft.com/fwlink/?LinkID=203917)을 참조하세요.  
   
 > [!WARNING]  
 >  서버에서 자동으로 업그레이드된 통합 문서에 대한 업그레이드를 롤백할 수는 없습니다. 업그레이드된 통합 문서는 업그레이드된 상태로 유지됩니다. 이전 버전을 사용하려면 이전 통합 문서를 SharePoint에 다시 게시하거나 이전 버전을 복원하거나 통합 문서를 재활용합니다. SharePoint에서 문서를 복원하거나 재활용하는 방법은 [휴지통 및 버전 관리를 사용한 콘텐츠 보호 계획](http://go.microsoft.com/fwlink/?LinkId=238669)을 참조하세요.  

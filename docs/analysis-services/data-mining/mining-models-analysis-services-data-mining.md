@@ -2,12 +2,12 @@
 title: "마이닝 모델 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 91d1787e568c49d528cc030125ffdb73c0e00b28
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 36c55916f0f1b403ddf248c975151b638a7ccb86
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
-  *마이닝 모델* 은 데이터에 알고리즘을 적용하여 만들지만 단순한 알고리즘 또는 메타데이터 컨테이너가 아니며, 새로운 데이터에 적용하여 예측을 생성하고 관계를 추론할 수 있는 데이터, 통계 및 패턴의 집합입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *마이닝 모델* 알고리즘은 데이터를을 적용 단순한 알고리즘 또는 메타 데이터 컨테이너가 만들어집니다: 데이터, 통계 및 새 데이터를 예측을 생성 하 고 추론에 적용할 수 있는 패턴의 집합이 에 대 한 관계.  
   
  이 섹션에서는 데이터 마이닝 모델의 정의와 용도에 대해 설명합니다. 즉, 모델 및 구조의 기본 아키텍처, 마이닝 모델의 속성, 마이닝 모델을 만들고 사용하는 방법에 대해 설명합니다.  
   

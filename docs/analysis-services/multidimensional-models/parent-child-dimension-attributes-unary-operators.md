@@ -2,12 +2,12 @@
 title: "부모-자식 차원의 단항 연산자 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ceea7fc4a5d84d571a45c00f2e6291405544f3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae826437d790e807998d223f9c8999582311fe7a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>부모-자식 차원 특성 단항 연산자
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 부모-자식 관계가 포함된 차원에서 부모 특성의 모든 계산되지 않은 멤버에 대한 사용자 지정 롤업을 결정하는 단항(또는 사용자 지정 롤업) 연산자 열을 지정하세요. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]부모-자식 관계를 포함 하는 차원에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 단항 (또는 사용자 지정 롤업)을 지정 하면 부모 특성의 모든 계산 되지 않는 멤버에 대 한 사용자 지정 롤업을 결정 하는 연산자 열. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
   
  데이터 원본 뷰의 차원 테이블에서 명명된 계산을 만들고 단항 연산자 열로 지정할 수 있습니다. '+'와 같은 단순한 식은 모든 멤버에 동일한 연산자를 반환합니다. 그러나 모든 멤버에 연산자를 반환하기만 하면 어떤 식도 사용할 수 있습니다.  
   

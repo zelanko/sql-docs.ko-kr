@@ -2,12 +2,12 @@
 title: "ADOMD.NET에서 연결 및 세션 작업 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 061a51539b40630874e36096cc59557ac375c671
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2a384fc1f08cd6a60132d7d99cf3072973e3add8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Connections in ADOMD.NET-연결 및 세션 작업
-  XMLA(XML for Analysis)에서 세션은 분석 데이터 액세스 동안 상태 저장 작업에 필요한 지원을 제공합니다. 세션은 분석 데이터 원본에 대한 명령 및 트랜잭션의 범위와 컨텍스트를 지정합니다. 세션 관리에 사용되는 XMLA 요소로는 [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)및 [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA), 세션 상태 저장 작업에 대 한 지원 분석 데이터에 액세스 하는 동안 제공합니다. 세션은 분석 데이터 원본에 대한 명령 및 트랜잭션의 범위와 컨텍스트를 지정합니다. 세션 관리에 사용되는 XMLA 요소로는 [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)및 [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)이 있습니다.  
   
  ADOMD.NET에서는 이러한 세 XMLA 세션 요소를 사용하여 세션을 시작하고, 세션 도중 쿼리를 수행하거나 데이터를 검색하고, 세션을 닫을 수 있습니다.  
   

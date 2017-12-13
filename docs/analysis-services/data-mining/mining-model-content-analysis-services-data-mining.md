@@ -2,12 +2,12 @@
 title: "마이닝 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52e0108a90e47ae9868b450375be26ffdf563c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-  기본 마이닝 구조의 데이터를 사용하여 마이닝 모델을 디자인하고 처리하고 나면 마이닝 모델이 완성되고 마이닝 모델에 *마이닝 모델 콘텐츠*가 포함됩니다. 이 콘텐츠를 사용하여 예측을 만들거나 데이터를 분석할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]디자인 하 고 기본 마이닝 구조에서 데이터를 사용 하 여 마이닝 모델 처리 후 마이닝 모델 완료 되 고이 포함 하는 *마이닝 모델 콘텐츠*합니다. 이 콘텐츠를 사용하여 예측을 만들거나 데이터를 분석할 수 있습니다.  
   
  마이닝 모델 콘텐츠에는 모델에 대한 메타데이터, 데이터에 대한 통계 및 마이닝 알고리즘을 통해 발견한 패턴이 포함됩니다. 사용된 알고리즘에 따라 모델 콘텐츠에는 회귀 수식, 규칙 및 항목 집합의 정의, 가중치 또는 기타 통계가 포함될 수 있습니다.  
   

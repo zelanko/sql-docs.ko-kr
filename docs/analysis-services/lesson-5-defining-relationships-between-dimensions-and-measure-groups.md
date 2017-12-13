@@ -2,12 +2,12 @@
 title: "5 단원: 차원 및 측정값 그룹 간의 관계를 정의 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a36c57ed912ec93c52d0f3316d0ac7ba421e4966
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>5단원: 차원과 측정값 그룹의 관계 정의
-이 자습서의 이전 단원에서는 큐브에 추가한 데이터베이스 차원을 하나 이상의 큐브 차원에 대한 기준으로 사용하는 방법에 대해 설명했습니다. 이 단원에서는 큐브 차원과 측정값 그룹 간에 서로 다른 유형의 관계를 정의하고 이 관계의 속성을 지정하는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 자습서의 이전 단원에서는 하나 이상의 큐브 차원에 대 한 큐브에 추가한 데이터베이스 차원을 기반으로 사용할 수 있습니다 배웠습니다. 이 단원에서는 큐브 차원과 측정값 그룹 간에 서로 다른 유형의 관계를 정의하고 이 관계의 속성을 지정하는 방법에 대해 설명합니다.  
   
 자세한 내용은 [차원 관계](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)를 참조하세요.  
   

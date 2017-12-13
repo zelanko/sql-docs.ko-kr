@@ -2,12 +2,12 @@
 title: "Microsoft 시퀀스 클러스터링 알고리즘 기술 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c624a1c14614d62c200e1f3afdfe5623a318853
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 993c4005015b18b1ee6f6106e13fae8429ddcaec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 시퀀스 클러스터링 알고리즘 기술 참조
-  Microsoft 시퀀스 클러스터링 알고리즘은 Markov 체인 분석을 사용하여 정렬된 시퀀스를 식별하고, 이 분석 결과를 클러스터링 기술과 결합하여 모델의 시퀀스 및 기타 특성에 따라 클러스터를 생성하는 하이브리드 알고리즘입니다. 이 항목에서는 알고리즘의 구현, 알고리즘을 사용자 지정하는 방법 및 시퀀스 클러스터링 모델에 대한 특수한 요구 사항을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Microsoft 시퀀스 클러스터링 알고리즘은 Markov 체인 분석을 사용 하 여 정렬 된 시퀀스를 식별 하 고, 시퀀스 및 기타 특성에 따라 클러스터 생성 방법으로 클러스터링과 함께이 분석 결과 결합 하는 하이브리드 알고리즘 모델입니다. 이 항목에서는 알고리즘의 구현, 알고리즘을 사용자 지정하는 방법 및 시퀀스 클러스터링 모델에 대한 특수한 요구 사항을 설명합니다.  
   
  시퀀스 클러스터링 모델을 찾아보고 쿼리하는 방법을 비롯하여 알고리즘에 대한 자세한 내용은 [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)을 참조하십시오.  
   

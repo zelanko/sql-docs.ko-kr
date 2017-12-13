@@ -2,12 +2,12 @@
 title: "Tutorial 프로젝트를 Services 분석의 수정된 된 버전을 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd789a871d90169a726cbb1709e5de1f9275fa16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>단원 4-1-Analysis Services Tutorial 프로젝트의 수정된 된 버전을 사용 하 여
-이 자습서의 나머지 단원은 처음 세 단원에서 완료한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 향상된 버전을 기반으로 합니다. 추가 테이블과 명명된 계산이 **Adventure Works DW 2012** 데이터 원본 뷰에 추가되고 추가 차원이 프로젝트에 추가되었으며 이러한 새 차원이 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 추가되었습니다. 또한 두 번째 팩트 테이블에서 가져온 측정값을 포함하는 두 번째 측정값 그룹이 추가되었습니다. 이 향상된 프로젝트를 사용하면 이미 배운 기술을 반복하지 않아도 비즈니스 인텔리전스 응용 프로그램에 기능을 추가하는 방법을 계속 익힐 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 자습서의 나머지 단원은 기반의 향상된 된 버전으로는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 처음 세 단원에서 완료 합니다. 추가 테이블과 명명된 계산이 **Adventure Works DW 2012** 데이터 원본 뷰에 추가되고 추가 차원이 프로젝트에 추가되었으며 이러한 새 차원이 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 추가되었습니다. 또한 두 번째 팩트 테이블에서 가져온 측정값을 포함하는 두 번째 측정값 그룹이 추가되었습니다. 이 향상된 프로젝트를 사용하면 이미 배운 기술을 반복하지 않아도 비즈니스 인텔리전스 응용 프로그램에 기능을 추가하는 방법을 계속 익힐 수 있습니다.  
   
 자습서를 계속 진행하려면 먼저 향상된 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 다운로드하고 압축을 풀고 로드하고 처리해야 합니다.  이 단원의 지침을 사용하여 모든 단계를 수행했는지 확인합니다.  
   

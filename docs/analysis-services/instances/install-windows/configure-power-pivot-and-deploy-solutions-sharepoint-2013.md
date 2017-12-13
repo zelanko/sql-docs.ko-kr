@@ -2,12 +2,12 @@
 title: "파워 피벗 구성 및 솔루션 배포 (SharePoint 2013) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: power-view
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: abdb6547c70842f0aa223aee2d35755a2a22e69b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>파워 피벗 구성 및 솔루션 배포(SharePoint 2013)
-  이 항목에서는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 비롯한 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에 대한 중간 계층 고급 기능을 배포하고 구성하는 방법을 설명합니다. 구체적으로는 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성** 도구를 실행하여 다음 작업을 완료하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에 배포 하 고 중간 계층 고급 기능을 구성에 설명 된 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에서 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 포함 하 여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 일정 데이터 새로 고침, 관리 대시보드 및 데이터 공급자. 구체적으로는 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성** 도구를 실행하여 다음 작업을 완료하는 방법을 설명합니다.  
   
 -   SharePoint 솔루션 파일 배포  
   

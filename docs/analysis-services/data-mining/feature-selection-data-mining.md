@@ -2,12 +2,12 @@
 title: "기능 선택 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 851262d2141413487aafe45456cba7748440fde6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
-  *기능 선택* 은 기계 학습의 중요한 부분입니다. 기능 선택은 처리 및 분석을 위한 입력을 줄이거나 가장 중요한 입력을 찾는 프로세스를 말합니다. 관련 용어인 *기능 엔지니어링* (또는 *기능 추출*)은 기존 데이터에서 유용한 정보나 기능을 추출하는 프로세스를 말합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*기능 선택* 기계 학습의 중요 한 부분입니다. 기능 선택은 처리 및 분석을 위한 입력을 줄이거나 가장 중요한 입력을 찾는 프로세스를 말합니다. 관련 용어인 *기능 엔지니어링* (또는 *기능 추출*)은 기존 데이터에서 유용한 정보나 기능을 추출하는 프로세스를 말합니다.  
   
 ## <a name="why-do-feature-selection"></a>기능 선택을 수행하는 이유  
  기능 선택은 적합한 모델을 작성하는 데 여러 이유로 중요합니다. 그중 한 가지 이유는 기능 선택이 모델을 작성할 때 고려할 수 있는 특성의 수에 대한 제한을 적용하는 어느 정도의 *카디널리티 축소*를 의미하기 때문입니다. 데이터에는 모델을 작성하는 데 필요한 것보다 더 많은 정보 또는 잘못된 종류의 정보가 자주 포함됩니다. 예를 들어 데이터 집합에 고객의 특성을 설명하는 열이 500개 있지만, 일부 열의 데이터가 매우 드물 경우 해당 열을 모델에 추가하여 얻는 이점이 거의 없으며 일부 열이 서로 중복된 경우 중복된 열을 모두 사용하면 모델에 영향을 줄 수 있습니다.  

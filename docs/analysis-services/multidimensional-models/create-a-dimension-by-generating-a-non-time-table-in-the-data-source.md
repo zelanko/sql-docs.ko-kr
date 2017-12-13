@@ -2,12 +2,12 @@
 title: "데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c9ceffb0bf846992b020722a2a47ebd7106634
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 데이터 원본 없이 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본에 시간이 아닌 테이블 생성** 옵션을 선택합니다. 기본 데이터 원본에 새 차원 테이블을 만들려면 기본 데이터 원본에 개체를 만들 수 있는 권한이 있어야 합니다. 미리 정의된 데이터 원본 뷰 없이 차원을 정의하는 경우 완전히 새로 차원을 정의하거나 차원 템플릿을 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 마법사를 사용할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 기존 데이터 원본을 사용 하지 않고 차원을 만드는 합니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본에 시간이 아닌 테이블 생성** 옵션을 선택합니다. 기본 데이터 원본에 새 차원 테이블을 만들려면 기본 데이터 원본에 개체를 만들 수 있는 권한이 있어야 합니다. 미리 정의된 데이터 원본 뷰 없이 차원을 정의하는 경우 완전히 새로 차원을 정의하거나 차원 템플릿을 사용할 수 있습니다.  
   
  차원 마법사에서는 일반적인 차원 유형을 작성할 수 있는 예제 차원 템플릿을 제공합니다. 다음 차원 유형 중에서 선택할 수 있습니다.  
   

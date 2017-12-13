@@ -2,12 +2,12 @@
 title: "Microsoft 연결 알고리즘 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -39,14 +39,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 연결 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 추천 엔진에 자주 사용되는 알고리즘입니다. 추천 엔진은 고객이 이미 구입한 항목 또는 관심을 나타낸 항목을 바탕으로 고객에게 항목을 추천합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 시장 바구니 분석에도 유용합니다.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 추천 엔진에 주로 사용 되는 알고리즘입니다. 추천 엔진은 고객이 이미 구입한 항목 또는 관심을 나타낸 항목을 바탕으로 고객에게 항목을 추천합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 시장 바구니 분석에도 유용합니다.   
   
  연결 모델은 개별 사례 및 사례에 포함된 항목 모두에 대한 식별자를 포함하는 데이터 집합을 기반으로 작성됩니다. 사례에 포함된 항목 그룹을 *항목 집합*이라고 합니다. 연결 모델은 일련의 항목 집합과 이러한 항목이 사례 내에서 그룹화되는 방법을 설명하는 규칙으로 구성됩니다. 알고리즘이 식별하는 규칙은 고객의 쇼핑 카트에 이미 들어 있는 항목을 바탕으로 고객의 향후 구매 항목을 예측하는 데 사용할 수 있습니다. 다음 다이어그램에서는 항목 집합에 포함된 일련의 규칙을 보여 줍니다.  
   

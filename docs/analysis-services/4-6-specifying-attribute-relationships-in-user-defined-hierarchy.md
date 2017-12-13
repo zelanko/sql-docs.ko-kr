@@ -2,12 +2,12 @@
 title: "사용자 정의 계층의 특성 관계 4-6 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8db9cd243cb27505bfda4eb2342802b8bb588ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>사용자 정의 계층의 특성 관계 4-6 지정
-이 자습서에서 이미 설명한 대로 특성 계층을 사용자 계층 안에 수준으로 구성하여 큐브 사용자를 위한 탐색 경로를 제공할 수 있습니다. 사용자 계층은 구/군/시, 시/도 및 국가와 같은 자연 계층을 나타내거나 직원 이름, 직책 및 부서 이름과 같은 탐색 경로를 나타낼 수 있습니다. 계층을 탐색하는 사용자에게는 이 두 가지 유형의 사용자 계층이 동일합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 자습서에서 이미 설명한, 대로 탐색 경로를 제공할 큐브의 사용자에 대 한 사용자 계층 안에 수준으로 특성 계층을 구성할 수 있습니다. 사용자 계층은 구/군/시, 시/도 및 국가와 같은 자연 계층을 나타내거나 직원 이름, 직책 및 부서 이름과 같은 탐색 경로를 나타낼 수 있습니다. 계층을 탐색하는 사용자에게는 이 두 가지 유형의 사용자 계층이 동일합니다.  
   
 자연 계층에서는 수준을 구성하는 특성 간의 특성 관계를 정의하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특정한 특성의 집계를 사용하여 관련 특성에서 결과를 가져올 수 있습니다. 특성 간에 정의된 관계가 없으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 가 키 특성에서 키가 아닌 특성을 모두 집계합니다. 따라서 기본 데이터가 특성 관계를 지원하는 경우 특성 간의 특성 관계를 정의해야 합니다. 특성 관계를 정의하면 차원, 파티션 및 쿼리 처리 성능이 개선됩니다. 자세한 내용은 [특성 관계 정의](../analysis-services/multidimensional-models/attribute-relationships-define.md) 및 [특성 관계](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)를 참조하세요.  
   

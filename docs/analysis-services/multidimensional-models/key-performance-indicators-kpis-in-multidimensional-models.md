@@ -2,12 +2,12 @@
 title: "핵심 성과 지표 (Kpi) 다차원 모델의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 326f2bd9d1ca70ff025e0b9cdf27ce167474d7be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>다차원 모델의 KPI(핵심 성과 지표)
-  비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 성취도를 평가하기 위한 정량 측정값을 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]비즈니스 용어는 KPI 핵심 성과 지표 ()는 비즈니스 성취도 평가 하기 위한 정량 측정값을 합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 KPI는 큐브의 비즈니스 성취도 평가에 사용되는 큐브의 측정값 그룹과 관련된 계산의 모음입니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 또는 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 응용 프로그램의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
   

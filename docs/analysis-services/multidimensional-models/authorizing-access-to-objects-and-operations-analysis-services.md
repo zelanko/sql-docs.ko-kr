@@ -2,12 +2,12 @@
 title: "개체 및 작업 (Analysis Services)에 대 한 액세스 권한을 부여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cff9bdcefc19729ed8f29a1fe8f04267e03ddf4a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>개체 및 작업에 대한 액세스 승인(Analysis Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 큐브, 차원 및 마이닝 모델에 대한 비관리자 사용자 액세스는 하나 이상의 데이터베이스 역할의 구성원 자격을 통해 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자는 이러한 데이터베이스 역할을 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 읽기 또는 읽기/쓰기 권한을 부여한 다음 각 역할에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 및 그룹을 추가합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브, 차원 및 마이닝 모델 내에 대 한 비관리자 사용자 액세스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 하나 이상의 데이터베이스 역할의 멤버 자격이 부여 됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자는 이러한 데이터베이스 역할을 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 읽기 또는 읽기/쓰기 권한을 부여한 다음 각 역할에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 및 그룹을 추가합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 사용자나 그룹이 속한 각 데이터베이스 역할과 연관된 사용 권한을 결합하여 특정 Windows 사용자나 그룹에 대한 유효 사용 권한을 결정합니다. 따라서 한 데이터베이스 역할은 사용자나 그룹에 차원, 측정값 또는 특성을 볼 수 있는 사용 권한을 부여하지 않지만 다른 데이터베이스 역할이 이 사용자나 그룹에 사용 권한을 부여하는 경우 해당 사용자나 그룹은 개체를 볼 수 있게 됩니다.  
   

@@ -2,12 +2,12 @@
 title: "데이터 마이닝 알고리즘 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 092ec27d421f91a1dc4484298139783df1695594
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>데이터 마이닝 알고리즘(Analysis Services - 데이터 마이닝)
-  데이터 마이닝 *알고리즘* (또는 기계 학습)은 데이터로부터 모델을 만드는 추론 및 계산 집합입니다. 모델을 만들기 위해 알고리즘은 제공된 데이터를 분석하여 특정 유형의 패턴 또는 추세를 찾습니다. 알고리즘은 많은 반복을 통해 이 분석 결과를 사용하여 마이닝 모델을 만들기 위한 최적의 매개 변수를 찾습니다. 그런 다음 이러한 매개 변수를 전체 데이터 집합에 적용하여 동작 가능한 패턴과 자세한 통계를 추출합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*알고리즘* 데이터 마이닝 (또는 기계 학습)는 데이터 로부터 모델을 만드는 추론 및 계산의 집합입니다. 모델을 만들기 위해 알고리즘은 제공된 데이터를 분석하여 특정 유형의 패턴 또는 추세를 찾습니다. 알고리즘은 많은 반복을 통해 이 분석 결과를 사용하여 마이닝 모델을 만들기 위한 최적의 매개 변수를 찾습니다. 그런 다음 이러한 매개 변수를 전체 데이터 집합에 적용하여 동작 가능한 패턴과 자세한 통계를 추출합니다.  
   
  알고리즘이 데이터로부터 만드는 마이닝 모델은 다음과 같은 다양한 형태가 될 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "분석 데이터 원본에서 메타 데이터 검색 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7c280b4b4a996d68bb403ea6210322604452e5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c432c699cd0a924b0624d98b0e7f97323718f3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>분석 데이터 원본에서 메타데이터 검색
-  메타데이터는 분석 데이터를 검색하고 사용하는 응용 프로그램에 중요합니다. 관계형 데이터 원본에서 데이터를 검색할 때는 데이터의 차원을 예측할 수 있습니다. 이는 중첩된 데이터 집합을 사용하는 경우라도 마찬가지입니다. 관계형 데이터베이스의 결과 집합은 일반적으로 2차원 구조이거나 스칼라 구조이기 때문입니다. 그러나 분석 데이터 원본에서 검색된 데이터는 중첩이 많은 계층 구조로 구성되어 차원이 다양할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]메타 데이터 검색 및 분석 데이터를 사용 하는 응용 프로그램에 유용 합니다. 관계형 데이터 원본에서 데이터를 검색할 때는 데이터의 차원을 예측할 수 있습니다. 이는 중첩된 데이터 집합을 사용하는 경우라도 마찬가지입니다. 관계형 데이터베이스의 결과 집합은 일반적으로 2차원 구조이거나 스칼라 구조이기 때문입니다. 그러나 분석 데이터 원본에서 검색된 데이터는 중첩이 많은 계층 구조로 구성되어 차원이 다양할 수 있습니다.  
   
  분석 데이터 원본에서 메타데이터를 검색할 때의 복잡한 문제를 처리하기 위해 ADOMD.NET에서는 다음과 같은 두 가지의 메타데이터 검색 형식을 제공합니다.  
   

@@ -2,12 +2,12 @@
 title: "OLAP 기능 확장 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7ba26b786b4f7cd99970bc9f5254dbac5da4f1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a502afc3be82d238dc20077c526a9f94ac47689
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="extending-olap-functionality"></a>OLAP 기능 확장
-  프로그래머는 여러 데이터베이스 응용 프로그램에서의 사용 및 용도 변경 기능을 제공하는 어셈블리, 개인 설정 확장 프로그램 및 저장 프로시저를 작성하여 Analysis Services를 확장할 수 있습니다. 어셈블리는 새 프로시저와 함수를 MDX 언어에 추가하거나 개인 설정 추가 기능을 사용하여 다차원 모델 기능을 확장하는 데 사용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]프로그래머는 어셈블리, 개인 설정된 확장 프로그램 및 기능을 사용 하 고 여러 데이터베이스 응용 프로그램의 용도 변경 하려는 제공 하는 저장된 프로시저를 작성 하 여 Analysis Services를 확장할 수 있습니다. 어셈블리는 새 프로시저와 함수를 MDX 언어에 추가하거나 개인 설정 추가 기능을 사용하여 다차원 모델 기능을 확장하는 데 사용됩니다.  
   
  저장 프로시저를 사용하면 공통 코드를 한 번 개발하고 단일 위치에 저장할 수 있으므로 Analysis Services 데이터베이스 개발 및 구현을 간소화하여 외부 루틴을 호출할 수 있습니다. 또한 MDX의 기본 기능에서 제공하지 않는 비즈니스 기능을 응용 프로그램에 추가할 수 있습니다.  
   

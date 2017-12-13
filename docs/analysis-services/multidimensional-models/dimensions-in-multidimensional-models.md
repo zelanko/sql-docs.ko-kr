@@ -2,12 +2,12 @@
 title: "다차원 모델의 차원 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73d367008bc1b3be6f4e3f6f5885adf79437f4c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 33c9c09cdcfae67f469585fa69fda626696f1856
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions-in-multidimensional-models"></a>다차원 모델의 차원
-  데이터베이스 차원은 하나 이상의 큐브 내 팩트 데이터에 대한 정보를 제공하는 데 사용할 수 있는 특성이라는 관련 개체의 모음입니다. 예를 들어 제품 차원의 일반적인 특성은 제품 이름, 제품 범주, 제품 라인, 제품 크기 및 제품 가격이 될 수 있습니다. 이러한 개체는 데이터 원본 뷰에 있는 하나 이상의 테이블의 하나 이상의 열에 바인딩됩니다. 기본적으로 이러한 특성은 특성 계층으로 표시되며 큐브의 팩트 데이터를 확인하는 데 사용할 수 있습니다. 특성은 큐브의 데이터를 검색할 때 사용자를 지원할 탐색 경로를 제공하는 사용자 정의 계층으로 구성될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터베이스 차원은 하나 이상의 큐브 내에서 팩트 데이터에 대 한 정보를 제공 하는 데 사용할 수 있는 특성 이라는 관련된 개체의 컬렉션입니다. 예를 들어 제품 차원의 일반적인 특성은 제품 이름, 제품 범주, 제품 라인, 제품 크기 및 제품 가격이 될 수 있습니다. 이러한 개체는 데이터 원본 뷰에 있는 하나 이상의 테이블의 하나 이상의 열에 바인딩됩니다. 기본적으로 이러한 특성은 특성 계층으로 표시되며 큐브의 팩트 데이터를 확인하는 데 사용할 수 있습니다. 특성은 큐브의 데이터를 검색할 때 사용자를 지원할 탐색 경로를 제공하는 사용자 정의 계층으로 구성될 수 있습니다.  
   
  큐브에는 사용자가 팩트 데이터 분석을 기반으로 사용하는 모든 차원이 들어 있습니다. 큐브의 데이터베이스 차원 인스턴스를 큐브 차원이라고 하며 이 인스턴스는 큐브에 있는 하나 이상의 측정값 그룹과 관련되어 있습니다. 데이터베이스 차원은 큐브에서 여러 번 사용될 수 있습니다. 예를 들어 팩트 테이블에 여러 개의 시간 관련 팩트가 있을 수 있고 각 시간 관련 팩트 분석을 지원하기 위해 별도의 큐브 차원을 정의할 수 있습니다. 그러나 시간 관련 데이터베이스 차원은 한 개만 있어야 하므로 여러 개의 시간 기반 큐브 차원을 지원하는 시간 관련 관계형 데이터베이스 테이블도 한 개만 있어야 합니다.  
   

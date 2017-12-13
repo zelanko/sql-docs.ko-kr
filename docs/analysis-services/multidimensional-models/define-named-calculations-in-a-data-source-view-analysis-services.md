@@ -2,12 +2,12 @@
 title: "데이터 원본 뷰 (Analysis Services)에서 명명 된 계산을 정의 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7459e3a65eb93aba62719d9357daa2d4b1c3ea65
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c26c579a59d101f36907599b29ea31d6624b09b2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 계산 정의(Analysis Services)
-  명명된 계산은 계산 열로 표시된 SQL 식입니다. 이 식은 테이블의 열과 같이 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블이나 뷰를 수정하지 않고 데이터 원본 뷰에 있는 기존 테이블이나 뷰의 관계형 스키마를 확장할 수 있습니다. 다음 예를 살펴봅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]명명된 된 계산에는 계산된 열으로 표시 하는 SQL 식입니다. 이 식은 테이블의 열과 같이 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블이나 뷰를 수정하지 않고 데이터 원본 뷰에 있는 기존 테이블이나 뷰의 관계형 스키마를 확장할 수 있습니다. 다음 예를 살펴봅니다.  
   
 -   팩트 테이블의 여러 열로부터 파생되는 단일 명명된 계산을 만듭니다. 예를 들어 세율에 소매 가격을 곱해서 Tax Amount를 만듭니다.  
   

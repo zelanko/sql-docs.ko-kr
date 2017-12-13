@@ -2,12 +2,12 @@
 title: "트리, 목록 또는 차원 디자이너에서 표 형태로 특성 보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 978317c821433458c129a8e9580cc881a8be2889
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 931dd94ffd2a82974628207ffcf7437f6dc75310
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-attributes-in-dimension-designer"></a>차원 디자이너에서 특성 보기
-  이 절차에서는 차원 디자이너의 특성 표시 방식을 변경하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 절차에서는 특성에 차원 디자이너에서에서 표시 되는 방식을 변경 하는 방법을 설명 합니다.  
   
 ### <a name="to-change-the-format-of-the-attributes-pane-in-dimension-designer"></a>차원 디자이너에서 특성 창의 형식을 변경하려면  
   

@@ -2,12 +2,12 @@
 title: "Kerberos 제한 위임에 대해 Analysis Services 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 60e56d6d5643afee56cf5d30a548a90ebd5ff7f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 992175bef13c947a11ed738a135df14d226fa05b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 제한 위임에 대해 Analysis Services 구성
-  Kerberos 인증에 대해 Analysis Services를 구성하는 경우 데이터를 쿼리할 때 Analysis Services에서 사용자 ID를 가장하도록 하거나 Analysis Services에서 하위 서비스에 사용자 ID를 위임하도록 하는 데 관심을 갖고 있을 가능성이 높습니다. 각 시나리오에는 약간 다른 구성 요구 사항이 필요합니다. 두 시나리오에 공통적으로 필요한 것은 구성이 제대로 수행되었는지 확인하는 작업입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]다음 결과 중 하나 이상을 구현에 Kerberos 인증에 대 한 Analysis Services를 구성할 때: Analysis Services 데이터를 쿼리할 때 사용자 id를 가장 하지 하도록 하거나 Analysis Services 하위 서비스에 사용자 id 위임 합니다. 각 시나리오에는 약간 다른 구성 요구 사항이 필요합니다. 두 시나리오에 공통적으로 필요한 것은 구성이 제대로 수행되었는지 확인하는 작업입니다.  
   
 > [!TIP]  
 >  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](http://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  

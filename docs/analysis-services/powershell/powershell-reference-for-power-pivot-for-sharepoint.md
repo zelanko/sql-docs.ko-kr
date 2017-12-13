@@ -2,12 +2,12 @@
 title: "SharePoint 용 파워 피벗에 대 한 PowerShell 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 538992c846ed5dd7bfe9fdd8ab0aaf0ec47009ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dcfee1ec7fa7ad9933ec81fc6d0a1c8f5187e99a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>SharePoint용 파워 피벗에 대한 PowerShell 참조
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  이 섹션에는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치를 구성하거나 관리하는 데 사용하는 PowerShell cmdlet이 나열되어 있습니다. cmdlet 사용 및 기본 제공 도움말 보기에 대한 자세한 내용은 [Windows PowerShell을 사용하여 파워 피벗 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 구성 하거나 관리 하는 데 사용 되는 PowerShell cmdlet을 나열는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 합니다. cmdlet 사용 및 기본 제공 도움말 보기에 대한 자세한 내용은 [Windows PowerShell을 사용하여 파워 피벗 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)을 참조하세요.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.

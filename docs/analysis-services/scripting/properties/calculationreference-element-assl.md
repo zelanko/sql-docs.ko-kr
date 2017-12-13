@@ -2,12 +2,12 @@
 title: "CalculationReference 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63cd18baa021f06c7bc1ede593ede2d0050b1765
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4517d93a810d3e736e3db67f4269de8e62aac559
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculationreference-element-assl"></a>CalculationReference 요소(ASSL)
-  명명 된 집합 또는 계산된 셀에서 참조의 이름이 고 [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]명명 된 집합 또는 계산된 셀에서 참조의 이름이 고 [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   

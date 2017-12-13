@@ -2,12 +2,12 @@
 title: "파워 피벗 데이터 피드 라이브러리 삭제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f1151f0b20e0da5fbdacc6ea0a025245430405ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca9fd712c42fa3cd2c39371172c1a948341d7b52
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>Power Pivot 데이터 피드 라이브러리 삭제
-  데이터 피드 라이브러리를 삭제하려면 사이트 소유자여야 합니다. 라이브러리에 항목이 포함되어 있는 경우 이 항목도 라이브러리와 함께 삭제됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 피드 라이브러리를 삭제 하려면 사이트 소유자 여야 합니다. 라이브러리에 항목이 포함되어 있는 경우 이 항목도 라이브러리와 함께 삭제됩니다.  
   
  삭제할 데이터 피드 라이브러리의 이름을 알아야 합니다.  
   

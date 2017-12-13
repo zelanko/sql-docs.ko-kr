@@ -2,12 +2,12 @@
 title: "지원 되는 데이터 원본 (SSAS-다차원) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 69f1519d6b3c03294469707a7e1485955f864a2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 774c6a7a3de377c9bfa6073b26e8ce45d7b3477e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>지원되는 데이터 원본(SSAS - 다차원)
-  이 항목에서는 다차원 모델에서 사용할 수 있는 데이터 원본 유형에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 다차원 모델에서 사용할 수 있는 데이터 소스 형식을 설명 합니다.  
   
 ##  <a name="bkmk_supported_ds"></a> 지원되는 데이터 원본  
  다음 표에 나와 있는 데이터 원본에서 데이터를 검색할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치할 경우 각 데이터 원본에 대해 나열된 공급자는 설치되지 않습니다. 일부 공급자는 컴퓨터의 다른 응용 프로그램과 함께 이미 설치되어 있을 수 있습니다. 그렇지 않은 경우에는 공급자를 다운로드하여 설치해야 합니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|-|  
 |원본|버전|파일 유형|공급자*|  
 |Access 데이터베이스|Microsoft Access 2010, 2013, 2016|.accdb 또는 .mdb|Microsoft Jet 4.0 OLE DB Provider|  
-|SQL Server 관계형 데이터베이스*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] , Microsoft Analytics Platform System(APS)<br /><br /> <br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 자세한 내용은 [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)을 참조하세요.<br /><br /> 참고: Analytics Platform System(APS)의 이전 명칭은 SQL Server Parallel Datawarehouse(PDW)였습니다. 원래는 PDW에서 Analysis Services에 연결하려면 특수한 데이터 공급자가 필요했습니다. 이 공급자는 SQL Server 2012에서 바뀌었습니다. SQL Server 2012부터는 PDW/APS에 대한 연결에 SQL Server Native Client가 사용됩니다. APS에 대한 자세한 내용은 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)웹 사이트를 참조하세요.|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 11.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
+|SQL Server 관계형 데이터베이스*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Azure SQL 데이터 웨어하우스, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 자세한 내용은 [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)을 참조하세요.<br /><br /> 참고: Analytics Platform System (APS)의 이전 명칭은 SQL Server 병렬 데이터 웨어하우스 (PDW). 원래는 PDW에서 Analysis Services에 연결하려면 특수한 데이터 공급자가 필요했습니다. 이 공급자는 SQL Server 2012에서 바뀌었습니다. SQL Server 2012부터는 PDW/APS에 대한 연결에 SQL Server Native Client가 사용됩니다. APS에 대한 자세한 내용은 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)웹 사이트를 참조하세요.|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 11.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle 관계형 데이터베이스|Oracle 9i, 10g, 11g, 12g|(해당 사항 없음)|Oracle OLE DB 공급자<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 관계형 데이터베이스|Teradata V2R6, V12|(해당 사항 없음)|TDOLEDB OLE DB 공급자<br /><br /> .Net Data Provider for Teradata|  
 |Informix 관계형 데이터베이스|V11.10|(해당 사항 없음)|Informix OLE DB 공급자|  

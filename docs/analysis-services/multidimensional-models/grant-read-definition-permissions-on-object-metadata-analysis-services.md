@@ -2,12 +2,12 @@
 title: "정의 읽기 권한 부여 (Analysis Services) 개체 메타 데이터에 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54ecfb3c65f3ab31caf318f6760c653db16ecb78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 02027bfdd00a6808ec3511d85fae0fd158fa70c8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>개체 메타데이터에 대한 정의 읽기 권한 부여(Analysis Services)
-  선택한 개체에 대한 개체 정의 또는 메타데이터를 읽을 수 있는 권한을 통해 관리자는 개체 정의를 수정하거나 개체 구조를 수정하거나 개체에 대한 실제 데이터를 볼 수 있는 권한을 부여하지 않고도 개체 정보를 볼 수 있는 권한을 부여할 수 있습니다. **정의 읽기** 권한은 데이터베이스, 데이터 원본, 차원, 마이닝 구조 및 마이닝 모델 수준에서 부여할 수 있습니다. 큐브에 대한 **정의 읽기** 권한이 필요한 경우 데이터베이스에 대한 **정의 읽기** 를 사용하도록 설정해야 합니다. 권한은 부가적입니다. 예를 들어 한 역할이 큐브에 대한 메타데이터를 읽을 수 있는 권한을 부여하고 두 번째 역할은 동일한 사용자에게 차원에 대한 메타데이터를 읽을 수 있는 권한을 부여합니다. 이 경우 두 역할의 사용 권한이 결합하여 사용자는 큐브에 대한 메타데이터와 해당 데이터베이스 내의 차원에 대한 메타데이터를 읽을 수 있는 권한을 동시에 부여받습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]수 있는 권한을 개체 정의 또는 메타 데이터를 읽을 선택한 개체에는 관리자가 수 있도록 개체의 정의 수정, 개체의 구조를 수정 하거나, 실제 볼 수 있는 권한을 부여 하지 않고 개체 정보를 볼 수 있는 권한을 부여합니다 개체에 대 한 데이터입니다. **정의 읽기** 권한은 데이터베이스, 데이터 원본, 차원, 마이닝 구조 및 마이닝 모델 수준에서 부여할 수 있습니다. 큐브에 대한 **정의 읽기** 권한이 필요한 경우 데이터베이스에 대한 **정의 읽기** 를 사용하도록 설정해야 합니다. 권한은 부가적입니다. 예를 들어 한 역할이 큐브에 대한 메타데이터를 읽을 수 있는 권한을 부여하고 두 번째 역할은 동일한 사용자에게 차원에 대한 메타데이터를 읽을 수 있는 권한을 부여합니다. 이 경우 두 역할의 사용 권한이 결합하여 사용자는 큐브에 대한 메타데이터와 해당 데이터베이스 내의 차원에 대한 메타데이터를 읽을 수 있는 권한을 동시에 부여받습니다.  
   
 > [!NOTE]  
 >  데이터베이스의 메타데이터를 읽을 수 있는 권한은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]데이터베이스에 연결하는 데 필요한 최소 사용 권한입니다. 메타데이터를 읽을 권한이 있는 사용자는 DISCOVER_XML_METADATA 스키마 행 집합을 사용하여 개체를 쿼리하고 해당 메타데이터를 볼 수도 있습니다. 자세한 내용은 [DISCOVER_XML_METADATA 행 집합](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md)을 참조하세요.  

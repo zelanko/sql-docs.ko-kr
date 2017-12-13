@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -241,7 +241,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  *index_name*  
  인덱스의 이름입니다. 인덱스 이름은 테이블이나 뷰에서 고유해야 하지만 데이터베이스 내에서 고유할 필요는 없습니다. 인덱스 이름은의 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
   
- *열*  
+ *column*  
  인덱스의 기준이 되는 열입니다. 지정된 열에 있는 결합된 값에 복합 인덱스를 만들려면 두 개 이상의 열 이름을 지정합니다. 다음의 괄호 안에 정렬 우선 순위 순서로 복합 인덱스에 포함할 열을 나열 *table_or_view_name*합니다.  
   
  단일 복합 인덱스 키에 최대 32 개의 열을 결합할 수 있습니다. 복합 인덱스 키의 모든 열은 동일한 테이블 또는 뷰에 있어야 합니다. 복합된 인덱스 값의 허용 되는 최대 크기에 클러스터형된 인덱스에 대 한 900 바이트 인지 1,700 비클러스터형된 인덱스에 대 한 합니다. 한도 16 열과 이전 버전의 경우 900 바이트 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다.  
@@ -422,17 +422,11 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  파티션별 통계가 지원되지 않는 경우에는 이 옵션이 무시되고 경고가 생성됩니다. 다음 통계 유형에 대해서는 증분 통계가 지원되지 않습니다.  
   
 -   기본 테이블을 기준으로 파티션 정렬되지 않은 인덱스를 사용하여 작성된 통계입니다.  
-  
 -   Always On 읽기 가능한 보조 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   읽기 전용 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   필터링된 인덱스에 대해 작성된 통계입니다.  
-  
 -   뷰에 대해 작성된 통계입니다.  
-  
 -   내부 테이블에 대해 작성된 통계입니다.  
-  
 -   공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계입니다.  
   
  DROP_EXISTING = {ON | **OFF** }  
@@ -473,15 +467,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  전역 임시 테이블의 인덱스를 포함한 인덱스는 다음 예외의 경우를 제외하고 온라인 상태로 만들 수 있습니다.  
   
 -   XML 인덱스  
-  
 -   로컬 임시 테이블의 인덱스  
-  
 -   뷰의 초기 고유 클러스터형 인덱스  
-  
 -   해제된 클러스터형 인덱스  
-  
 -   기본 테이블에 LOB 데이터 형식이 포함 된 경우 클러스터형된 인덱스: **이미지**, **ntext**, **텍스트**, 및 공간 형식입니다.  
-  
 -   **varchar (max)** 및 **varbinary (max)** 열은 인덱스의 일부일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]테이블을 포함 하는 경우 **varchar (max)** 또는 **varbinary (max)** 열을 다른 열을 포함 하는 클러스터형된 인덱스 수 작성 또는 사용 하 여 다시 작성은 **온라인** 옵션입니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]허용 하지 않습니다는 **온라인** 옵션 기본 테이블을 포함 하는 경우 **varchar (max)** 또는 **varbinary (max)** 열입니다.  
   
  자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
@@ -511,7 +500,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  MAXDOP = *max_degree_of_parallelism*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
   
- 재정의 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 인덱스 작업의 기간에 대 한 구성 옵션입니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
+ 재정의 **x degree of** 인덱스 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
  *max_degree_of_parallelism* 될 수 있습니다.  
   

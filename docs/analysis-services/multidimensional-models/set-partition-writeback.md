@@ -2,12 +2,12 @@
 title: "파티션 쓰기 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-partition-writeback"></a>파티션 쓰기 저장 설정
-  측정값을 쓰기 가능하게 설정하면 최종 사용자가 큐브 데이터를 검색하는 동안 변경할 수 있으며, 변경 내용은 큐브 데이터 또는 원본 데이터가 아닌 쓰기 저장 테이블이라는 별도의 테이블에 저장됩니다. 쓰기 가능한 파티션을 검색하는 최종 사용자에게 해당 파티션에 대한 쓰기 저장 테이블의 모든 변경 내용에 대한 최종 결과가 표시됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]경우 쓰기 가능 측정값 그룹, 최종 사용자가 큐브 데이터, 원본 데이터의 쓰기 저장 테이블 이라는 개별 테이블의 변경 내용을 저장 위치를 검색 하는 동안 큐브 데이터를 변경할 수 있습니다. 쓰기 가능한 파티션을 검색하는 최종 사용자에게 해당 파티션에 대한 쓰기 저장 테이블의 모든 변경 내용에 대한 최종 결과가 표시됩니다.  
   
  쓰기 저장 데이터를 찾아보거나 삭제할 수 있으며 쓰기 저장 데이터를 파티션으로 변환할 수도 있습니다. 쓰기 가능한 파티션의 경우 큐브 역할을 사용하여 사용자 및 사용자 그룹에 읽기/쓰기 권한을 부여하고 파티션의 특정 셀 또는 셀 그룹에 대한 액세스를 제한할 수 있습니다.  
   

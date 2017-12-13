@@ -2,12 +2,12 @@
 title: "부모-자식 차원 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6835612c0b7ea9a6e42217366e8d745897300bfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 982fbe970e85718c943ab0c8e31077f90d291606
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension"></a>부모-자식 차원
-  부모-자식 계층은 부모 특성이 포함된 표준 차원의 계층입니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층의 멤버 위치는 부모 특성의 **KeyColumns** 및 **RootMemberIf** 속성에 따라 결정되지만 한 수준의 멤버 위치는 부모 특성의 **OrderBy** 속성에 따라 결정됩니다. 특성 속성에 대한 자세한 내용은 [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]부모-자식 계층은 부모 특성이 포함 된 표준 차원의 계층입니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층의 멤버 위치는 부모 특성의 **KeyColumns** 및 **RootMemberIf** 속성에 따라 결정되지만 한 수준의 멤버 위치는 부모 특성의 **OrderBy** 속성에 따라 결정됩니다. 특성 속성에 대한 자세한 내용은 [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
   
  부모-자식 계층의 수준 간 부모-자식 관계로 인해 일부 리프가 아닌 멤버는 자식 멤버에서 집계한 데이터뿐만 아니라 기본 데이터 원본에서 파생된 데이터를 가질 수도 있습니다.  
   

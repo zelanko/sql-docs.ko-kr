@@ -2,12 +2,12 @@
 title: "AMO 데이터 마이닝 개체 프로그래밍 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef18607c859ee7894bd61305a47299836774dec9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5729dfd1411ae533c359bfdbc9867b2c453ebc1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO 데이터 마이닝 개체 프로그래밍
-  AMO를 사용하여 데이터 마이닝 개체를 프로그래밍하는 과정은 매우 간단합니다. 첫 번째 단계는 마이닝 프로젝트를 지원하는 데이터 구조 모델을 만드는 것입니다. 그런 다음 데이터 내부의 보이지 않는 관계를 예측하거나 찾는 데 사용할 마이닝 알고리즘을 지원하는 데이터 마이닝 모델을 만듭니다. 구조 및 알고리즘을 포함하여 만든 마이닝 프로젝트를 통해 마이닝 모델을 처리하여 나중에 클라이언트 응용 프로그램에서 쿼리 또는 예측하는 데 사용하는 학습된 모델을 얻을 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]AMO를 사용 하 여 데이터 마이닝 개체를 프로그래밍 하는 것은 간단 합니다. 첫 번째 단계는 마이닝 프로젝트를 지원하는 데이터 구조 모델을 만드는 것입니다. 그런 다음 데이터 내부의 보이지 않는 관계를 예측하거나 찾는 데 사용할 마이닝 알고리즘을 지원하는 데이터 마이닝 모델을 만듭니다. 구조 및 알고리즘을 포함하여 만든 마이닝 프로젝트를 통해 마이닝 모델을 처리하여 나중에 클라이언트 응용 프로그램에서 쿼리 또는 예측하는 데 사용하는 학습된 모델을 얻을 수 있습니다.  
   
  한 가지 기억할 것은 AMO의 목적은 쿼리가 아니라 마이닝 구조 및 모델 관리라는 점입니다. 사용 데이터를 쿼리하려면 [ADOMD.NET을 사용 하 여 개발](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)합니다.  
   

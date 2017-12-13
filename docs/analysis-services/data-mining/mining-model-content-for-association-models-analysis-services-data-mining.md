@@ -2,12 +2,12 @@
 title: "마이닝 연결 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec958a3d197bec1574d1264ff78c886cf746d3a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0da3079620f64d2c2b1def8225f359b6cb0d4454
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>연결 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘을 사용하는 모델에만 적용되는 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 설명 하는 사용 하는 모델만 마이닝 모델 콘텐츠에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘입니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>연결 모델의 구조 이해  
  연결 모델의 구조는 간단합니다. 각 모델에는 모델과 메타데이터를 나타내는 부모 노드가 한 개 있고 각 부모 노드에는 항목 집합과 규칙에 대한 기본 목록이 있습니다. 항목 집합과 규칙은 트리로 구성되어 있지 않으며 다음 다이어그램에서와 같이 항목 집합 및 규칙 순으로 정렬됩니다.  

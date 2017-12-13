@@ -2,12 +2,12 @@
 title: "쓰기 가능한 파티션을 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e161c0c7b9456101ae4f216a78560b1fec827686
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 512e5321c0be221e06988dfc1991409a044166bb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions---write-enabled-partitions"></a>파티션-쓰기 가능 파티션
-  큐브의 데이터는 일반적으로 읽기 전용입니다. 그러나 특정 시나리오에 대해 파티션을 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능 파티션을 사용하면 비즈니스 사용자가 셀 값을 변경하고 큐브 데이터에 대한 이러한 변경의 효과를 분석하여 여러 시나리오를 조사해 볼 수 있습니다. 파티션을 쓰기 가능하도록 설정하면 클라이언트 응용 프로그램에서 파티션의 데이터에 변경 내용을 기록할 수 있습니다. 쓰기 저장(writeback) 데이터라고 하는 이러한 변경 내용은 별도의 테이블에 저장되며 측정값 그룹의 기존 데이터를 덮어쓰지 않습니다. 그러나 큐브 데이터의 일부인 것처럼 쿼리 결과에 포함됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브에서 데이터에는 일반적으로 읽기 전용는입니다. 그러나 특정 시나리오에 대해 파티션을 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능 파티션을 사용하면 비즈니스 사용자가 셀 값을 변경하고 큐브 데이터에 대한 이러한 변경의 효과를 분석하여 여러 시나리오를 조사해 볼 수 있습니다. 파티션을 쓰기 가능하도록 설정하면 클라이언트 응용 프로그램에서 파티션의 데이터에 변경 내용을 기록할 수 있습니다. 쓰기 저장(writeback) 데이터라고 하는 이러한 변경 내용은 별도의 테이블에 저장되며 측정값 그룹의 기존 데이터를 덮어쓰지 않습니다. 그러나 큐브 데이터의 일부인 것처럼 쿼리 결과에 포함됩니다.  
   
  전체 큐브나 큐브의 특정 파티션만 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능 차원은 각기 다르지만 서로 보완됩니다. 쓰기 가능 파티션을 사용하면 사용자가 파티션 셀을 업데이트할 수 있고 쓰기 가능 차원을 사용하면 사용자가 차원 멤버를 업데이트할 수 있습니다. 이러한 두 기능을 조합하여 사용할 수도 있습니다. 예를 들어 쓰기 가능 큐브나 쓰기 가능 파티션에 쓰기 가능 차원이 포함되지 않아도 됩니다. **관련된 항목:**[쓰기 가능한 차원](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  
   

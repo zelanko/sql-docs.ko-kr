@@ -2,12 +2,12 @@
 title: "Microsoft 의사 결정 트리 알고리즘 기술 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81dd23b543d8791f9e68a15cfc8feaf58aade127
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 397c5e27b3dcf096fa3707d94d3e5e8d049e8f36
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 의사 결정 트리 알고리즘 기술 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리를 만드는 여러 방법을 통합하며 회귀, 분류, 연결 등의 여러 분석 태스크를 지원하는 하이브리드 알고리즘입니다. Microsoft 의사 결정 트리 알고리즘은 불연속 특성과 연속 특성 모두의 모델링을 지원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리를 만드는 여러 방법을 통합 하며 회귀, 분류, 연결 등의 여러 분석 태스크를 지 원하는 하는 하이브리드 알고리즘입니다. Microsoft 의사 결정 트리 알고리즘은 불연속 특성과 연속 특성 모두의 모델링을 지원합니다.  
   
  이 항목에서는 알고리즘의 구현을 설명하고, 여러 태스크에 대한 알고리즘 동작을 사용자 지정하는 방법을 설명하며, 의사 결정 트리 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: HAVING (TRANSACT-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,16 +26,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f8ca5c21dfaf767009218b220d26520f178eb3a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf99ee7aece979c973d2d162062ac2bae7aac296
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="select---having-transact-sql"></a>선택-것 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  그룹 또는 집계에 대한 검색 조건을 지정합니다. HAVING은 SELECT 문하고만 사용될 수 있으며 일반적으로 GROUP BY 절에 사용됩니다. GROUP BY가 사용되지 않으면 HAVING은 WHERE 절처럼 작동합니다.  
+  그룹 또는 집계에 대한 검색 조건을 지정합니다. HAVING은 SELECT 문하고만 사용될 수 있으며 HAVING은 일반적으로 GROUP BY 절과 함께 사용 됩니다. GROUP BY를 사용 하지 않는 경우 암시적 단일, 집계 된 그룹입니다.   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>인수  
-\<c h _ c >에 맞게는 그룹이 나 집계에 대 한 검색 조건을 지정 합니다.  
+\<c h _ c > 그룹 및/또는 집계에 맞게에 대 한 하나 이상의 조건자를 지정 합니다. 검색 조건과 조건자에 대 한 자세한 내용은 참조 [검색 조건 &#40; Transact SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
  **텍스트**, **이미지**, 및 **ntext** 데이터 형식은 HAVING 절에 사용할 수 없습니다.  
   

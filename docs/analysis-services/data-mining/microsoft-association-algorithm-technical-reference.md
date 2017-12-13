@@ -2,12 +2,12 @@
 title: "Microsoft 연결 알고리즘 기술 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e639fac7981f92f91b2beef0b57c190ce834f14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c1fcc5b1089397672226b526654f611147e81e99
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 연결 알고리즘 기술 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 잘 알려진 Apriori 알고리즘을 간단하게 구현한 것입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 잘 알려진 Apriori 알고리즘의 간단한 구현입니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 둘 다 연결을 분석하는 데 사용할 수 있지만 각 알고리즘에서 발견되는 규칙은 서로 다를 수 있습니다. 의사 결정 트리 모델에서 특정 규칙을 생성하는 분류는 정보 획득량을 기반으로 하는 반면 연결 모델에서 규칙은 전적으로 신뢰도를 기반으로 합니다. 따라서 연결 모델에서 강력한 규칙 또는 신뢰도가 높은 규칙은 새로운 정보를 제공하지 않기 때문에 반드시 유용한 것은 아닙니다.  
   

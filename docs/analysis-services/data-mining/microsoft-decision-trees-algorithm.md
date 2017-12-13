@@ -2,12 +2,12 @@
 title: "Microsoft 의사 결정 트리 알고리즘 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 60e78baa62709d39d61fb1592eab794dbccb458d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5b1fd05f99d361aabc8e5f340cd3d013475203d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 의사 결정 트리 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 불연속 특성 및 연속 특성 모두의 예측 모델링에 사용하기 위해 분류 및 회귀 알고리즘입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 불연속 및 연속 특성의 예측 모델링 용 분류 및 회귀 알고리즘입니다.  
   
  불연속 특성의 경우 알고리즘은 데이터 집합 내 입력 열 간의 관계를 기반으로 예측합니다. 이 알고리즘은 해당 열의 값인 상태를 사용하여 사용자가 예측 가능으로 지정하는 열의 상태를 예측합니다. 특히 알고리즘은 예측 가능한 열과 상관 관계에 있는 입력 열을 식별합니다. 예를 들어 자전거를 구입할 가능성이 높은 고객을 예측하는 시나리오에서 청년층 고객의 경우 10명 중 9명이 자전거를 구입한 반면 중장년층 고객의 경우 10명 중 2명만이 자전거를 구입했다면 알고리즘은 자전거 구입에 있어 연령이 좋은 지표가 될 수 있음을 유추합니다. 의사 결정 트리에서는 이러한 경향을 기반으로 특정 결과를 예측합니다.  
   

@@ -2,12 +2,12 @@
 title: "배포 스크립트를 서비스의 분석을 이해 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dfd2ebf1f65c607e63d1cb51f2fbd30c2b5711b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9b5850dafa57e967da3c79146424023b25f9fd33
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Analysis Services 배포 스크립트 이해
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 생성하는 XMLA 배포 스크립트는 다음 두 섹션으로 구성됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에 의해 생성 된 XMLA 배포 스크립트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 두 개의 섹션으로 구성 됩니다.  
   
 -   배포 스크립트의 첫 번째 부분에는 대상 데이터베이스에서 적절한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 만들거나 변경하거나 삭제하는 데 필요한 명령이 포함되어 있습니다. 기본적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 생성한 입력 파일은 증분 배포를 기반으로 합니다. 따라서 XMLA 배포 스크립트는 변경되거나 삭제된 개체에만 영향을 줍니다.  
   

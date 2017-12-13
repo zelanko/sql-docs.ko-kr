@@ -2,12 +2,12 @@
 title: "사용자 지정 멤버 수식 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f2d802623b470077ba46326c7650e30013d07534
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e82a27d94e0a964921bc54918e4d0e54a9eba35f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>특성 속성-사용자 지정 멤버 수식 정의
-  사용자 지정 멤버 수식이라고 하는 MDX(Multidimensional Expression) 식을 정의하여 지정된 특성의 멤버에 값을 제공할 수 있습니다. 데이터 원본 뷰의 테이블 열은 특성의 각 멤버에 값을 지정하는 데 사용되는 식을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]지정된 된 특성의 멤버에 대 한 값을 제공 하는 사용자 지정 멤버 수식을 호출 하는 MDX (Multidimensional Expressions) 식을 정의할 수 있습니다. 데이터 원본 뷰의 테이블 열은 특성의 각 멤버에 값을 지정하는 데 사용되는 식을 제공합니다.  
   
  사용자 지정 멤버 수식은 멤버에 연결되는 셀 값을 결정하고 측정값의 집계 함수를 무시합니다. 사용자 지정 멤버 수식은 MDX로 작성됩니다. 각각의 사용자 지정 멤버 수식은 단일 멤버에 적용됩니다. 사용자 지정 멤버 수식은 차원 테이블이나 해당 차원 테이블과 외래 키 관계에 있는 다른 테이블에 저장됩니다.  
   

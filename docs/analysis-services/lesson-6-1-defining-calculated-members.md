@@ -2,12 +2,12 @@
 title: "계산 멤버 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77732f0ad13e3373e073038587e819ed2617eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>단원 6-1-정의 계산 멤버
-계산 멤버는 큐브 데이터, 산술 연산자, 숫자 및 함수 조합을 기반으로 정의되는 차원 또는 측정값 그룹의 멤버입니다. 예를 들어 큐브에 있는 두 개의 물리적 측정값 합계를 계산하는 계산 멤버를 만들 수 있습니다. 계산 멤버 정의는 큐브에 저장되지만 해당 값은 쿼리 시간에 계산됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]계산된 멤버는 차원 멤버 또는 큐브 데이터, 산술 연산자, 숫자 및 함수 조합에 따라 정의 된 측정값 그룹입니다. 예를 들어 큐브에 있는 두 개의 물리적 측정값 합계를 계산하는 계산 멤버를 만들 수 있습니다. 계산 멤버 정의는 큐브에 저장되지만 해당 값은 쿼리 시간에 계산됩니다.  
   
 계산 멤버를 만들려면 큐브 디자이너의 **계산 탭** 에 있는 **새 계산 멤버** 명령을 사용합니다. 측정값 차원을 비롯하여 모든 차원 내에서 계산 멤버를 만들 수 있습니다. 또한 **계산 속성** 대화 상자에서 표시 폴더 안에 계산 멤버를 둘 수 있습니다. 자세한 내용은 [계산](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [다차원 모델의 계산](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)및 [계산 멤버 만들기](../analysis-services/multidimensional-models/create-calculated-members.md)를 참조하세요.  
   

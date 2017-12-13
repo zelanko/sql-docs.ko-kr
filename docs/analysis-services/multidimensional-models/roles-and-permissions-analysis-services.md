@@ -2,12 +2,12 @@
 title: "역할 및 사용 권한 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c9205b1908bbb4be6678d752fa0808cb2676d5f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8805e05d7de99419d1e4f6515f4aae6ecdf7785c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="roles-and-permissions-analysis-services"></a>역할 및 권한(Analysis Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 작업, 개체 및 데이터에 대한 액세스 권한을 부여하는 역할 기준 권한 부여 모델을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 데이터베이스에 액세스하는 모든 사용자는 역할 컨텍스트 내에서 이를 수행해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 작업, 개체 및 데이터에 대 한 액세스 권한을 부여 하는 역할 기반 권한 부여 모델을 제공 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 데이터베이스에 액세스하는 모든 사용자는 역할 컨텍스트 내에서 이를 수행해야 합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시스템 관리자는 **서버 관리자 역할** 에 서버의 작업에 무제한 액세스할 수 있는 멤버 자격을 부여해야 합니다. 이 역할은 사용 권한이 고정되며 사용자 지정할 수 없습니다. 기본적으로 로컬 관리자 그룹의 멤버는 자동으로 Analysis Services 시스템 관리자가 됩니다.  
   

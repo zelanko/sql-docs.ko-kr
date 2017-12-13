@@ -2,12 +2,12 @@
 title: "Members (MDX) 계산 된 쿼리 범위 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8a621061e7b9b04dfea37443c631ae611ee031ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 727a5b86e983d499e63c07a30392363e89046c7b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX 계산 멤버-쿼리 범위 계산된 멤버
-  단일 MDX 쿼리에만 계산 멤버가 필요한 경우 WITH 키워드를 사용하여 해당 계산 멤버를 정의할 수 있습니다. WITH 키워드를 사용하여 만든 계산 멤버는 쿼리 실행이 종료된 다음에는 더 이상 존재하지 않습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]계산된 된 구성원만이 단일 MDX (Multidimensional Expressions) 쿼리에 필요한, 정의한 해당 계산된 멤버 WITH 키워드를 사용 하 여 합니다. WITH 키워드를 사용하여 만든 계산 멤버는 쿼리 실행이 종료된 다음에는 더 이상 존재하지 않습니다.  
   
  이 항목의 설명에서와 같이 WITH 키워드의 구문은 매우 유연하기 때문에 다른 계산 멤버를 기반으로 계산 멤버를 만들 수도 있습니다.  
   

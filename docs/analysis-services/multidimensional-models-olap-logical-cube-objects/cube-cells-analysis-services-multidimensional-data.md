@@ -2,12 +2,12 @@
 title: "큐브 셀 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -36,14 +36,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96d7b596c1434dce62dfd9013f277b182f5ff4c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b00c3a74eaf73e19a1665080e5ab7bc91e3b6375
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>큐브 셀(Analysis Services - 다차원 데이터)
-  큐브는 셀로 이루어져 있으며 셀은 측정값 그룹과 차원으로 구성됩니다. 셀은 큐브의 모든 차원에서 한 멤버 큐브의 고유한 논리적 교집합을 나타냅니다. 예를 들어 아래 다이어그램의 큐브는 Source, Route 및 Time이라는 세 차원으로 이루어지며 두 측정값을 갖는 측정값 그룹을 하나 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 셀, 측정값 그룹 및 차원 별로 구성 됩니다. 셀은 큐브의 모든 차원에서 한 멤버 큐브의 고유한 논리적 교집합을 나타냅니다. 예를 들어 아래 다이어그램의 큐브는 Source, Route 및 Time이라는 세 차원으로 이루어지며 두 측정값을 갖는 측정값 그룹을 하나 포함합니다.  
   
  ![단일 셀을 식별 하는 큐브 다이어그램](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro5.gif "단일 셀을 식별 하는 큐브 다이어그램")  
   

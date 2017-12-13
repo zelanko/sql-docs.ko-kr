@@ -2,12 +2,12 @@
 title: "Power Pivot 데이터 피드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4703cf8f6ac0af1d45c4fcfb4129b40fd52ecb9a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6e845c632a44b4d74a7b12eeaf2ed80e85ffbb02
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-data-feeds"></a>파워 피벗 데이터 피드
-  데이터 피드는 요청에 따라 온라인 데이터 원본에서 클라이언트 응용 프로그램으로 데이터 스트림을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 피드를 사용하여 Atom 인식 웹 서비스나 응용 프로그램의 데이터를 Excel 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 추가할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 피드는 클라이언트 응용 프로그램에는 온라인 데이터 원본에서 필요에 따라 데이터 스트림을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 피드를 사용하여 Atom 인식 웹 서비스나 응용 프로그램의 데이터를 Excel 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 추가할 수 있습니다.  
   
  이 섹션에서는 데이터 피드를 사용하여 기존 회사 또는 작업 그룹 데이터를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로 효율적으로 가져오는 데 도움이 되는 정보를 제공합니다. 또한 조직의 다른 사용자와 데이터 피드를 공유하는 방법과 문제를 해결하는 데 필요한 경우에 데이터 피드를 구성하여 사용하는 방법에 대한 정보를 제공합니다.  
   

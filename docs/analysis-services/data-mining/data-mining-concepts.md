@@ -2,12 +2,12 @@
 title: "데이터 마이닝 개념 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 167d150c65f8fcdfb16417c204eebac22f2ddc40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 905a45d6852a7e5e1ed469e65f6082f0282de985
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-concepts"></a>데이터 마이닝 개념
-  데이터 마이닝은 큰 데이터 집합에서 동작 가능한 정보를 찾는 프로세스입니다. 데이터 마이닝에서는 수학적 분석을 사용하여 데이터에 있는 패턴 및 추세를 찾습니다. 일반적으로는 관계가 너무 복잡하거나 데이터가 너무 많아서 전통적인 데이터 탐색으로는 이러한 패턴을 찾을 수 없습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝은 큰 데이터 집합에서 동작 가능한 정보를 찾는 프로세스입니다. 데이터 마이닝에서는 수학적 분석을 사용하여 데이터에 있는 패턴 및 추세를 찾습니다. 일반적으로는 관계가 너무 복잡하거나 데이터가 너무 많아서 전통적인 데이터 탐색으로는 이러한 패턴을 찾을 수 없습니다.  
   
  이러한 패턴과 추세를 수집하여 *데이터 마이닝 모델*로 정의할 수 있습니다. 마이닝 모델은 다음과 같은 특정 시나리오에 적용할 수 있습니다.  
   

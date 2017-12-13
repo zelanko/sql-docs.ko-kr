@@ -2,12 +2,12 @@
 title: "모델 필터 구문 및 예 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b487f4e00d8ae1aa3dd644eadef07516fcbfb45b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fd0525c4b4381cc553f3e6aca9e0bf2522ef87e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>모델 필터 구문 및 예(Analysis Services - 데이터 마이닝)
-  이 섹션에서는 샘플 식과 함께 모델 필터 구문에 대한 자세한 정보를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 샘플 식 함께 모델 필터 구문에 대 한 자세한 정보를 제공 합니다.  
   
  [필터 구문](#bkmk_Syntax)  
   

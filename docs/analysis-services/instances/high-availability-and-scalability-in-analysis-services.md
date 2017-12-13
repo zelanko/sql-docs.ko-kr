@@ -2,12 +2,12 @@
 title: "고가용성 및 Analysis Services의 확장성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6b6f6fa02735de056b83a3ec0216cd95c84926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1a1f8208a30e1ff24e76465fd9210a60ef1ec849
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services의 고가용성 및 확장성
-  이 문서에서는 Analysis Services 데이터베이스를 항상 사용 가능하고 확장 가능하도록 만드는 가장 일반적으로 사용되는 기술을 설명합니다. 각 목표를 개별적으로 다룰 수 있지만 실제로는 연관된 경우가 많습니다. 대규모 쿼리 또는 처리 워크로드에 대한 확장 가능한 배포는 일반적으로 고가용성에 대한 기대와 함께 제공됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 문서에서는 Analysis Services 데이터베이스를 항상를 만들기 위한 가장 일반적으로 사용 되는 기술을 설명 가용성과 확장성이 있습니다. 각 목표를 개별적으로 다룰 수 있지만 실제로는 연관된 경우가 많습니다. 대규모 쿼리 또는 처리 워크로드에 대한 확장 가능한 배포는 일반적으로 고가용성에 대한 기대와 함께 제공됩니다.  
   
  그러나 반대의 경우는 그렇지 않을 때도 있습니다. 업무에 중요하지만 적절한 규모의 쿼리 워크로드에 대해 엄격한 서비스 수준 계약이 존재하는 경우에는 확장 없이 고가용성이 단독 목표일 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "보조 특성을 기준으로 특성 멤버 정렬 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55680946738ce1317a0c71397d7a0fe90c959e01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>단원 4-5-보조 특성에 따라 특성 멤버 정렬
-3단원에서는 이름이나 키 값을 기준으로 특성 멤버를 정렬하는 방법과 복합 멤버 키를 사용하여 특성 멤버와 정렬 순서를 조정하는 방법에 대해 배웠습니다. 자세한 내용은 [Date 차원 수정](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)을 참조하세요. 그러나 특성의 키나 이름으로는 원하는 정렬 순서를 얻을 수 없는 경우 보조 특성을 사용하여 필요한 순서에 따라 정렬할 수 있습니다. 특성 간의 관계를 정의함으로써 두 번째 특성을 사용하여 첫 번째 특성의 멤버를 정렬할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]3 단원에서는 이름이 나 키 값에 따라 특성 멤버를 정렬 하는 방법을 배웠습니다. 복합 멤버 키를 사용하여 특성 멤버와 정렬 순서를 조정하는 방법에 대해 배웠습니다. 자세한 내용은 [Date 차원 수정](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)을 참조하세요. 그러나 특성의 키나 이름으로는 원하는 정렬 순서를 얻을 수 없는 경우 보조 특성을 사용하여 필요한 순서에 따라 정렬할 수 있습니다. 특성 간의 관계를 정의함으로써 두 번째 특성을 사용하여 첫 번째 특성의 멤버를 정렬할 수 있습니다.  
   
 특성 관계는 특성 간의 관계나 종속성을 정의합니다. 하나의 관계형 테이블을 기준으로 하는 차원에서는 일반적으로 모든 특성이 키 특성을 통해 서로 연결됩니다. 이는 차원에 대한 모든 특성이 차원의 키 특성으로 각 관련 측정값 그룹의 팩트 테이블에 있는 팩트에 연결된 멤버에 대한 정보를 제공하기 때문입니다. 여러 테이블을 기준으로 하는 차원에서는 일반적으로 특성이 테이블 간의 조인 키를 기준으로 연결됩니다. 기본 데이터에서 지원하는 경우 관련 특성을 사용하여 정렬 순서를 지정할 수 있습니다. 예를 들어, 관련 특성에 대한 정렬 논리를 제공하는 새 특성을 만들 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "Microsoft 클러스터링 알고리즘 기술 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fbf3b08a21782434702dad4383a797293156593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffca0c4aa4879d5732831113308c26a9032a7dff
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 클러스터링 알고리즘 기술 참조
-  이 섹션에서는 클러스터링 모델의 동작을 제어하는 데 사용할 수 있는 매개 변수를 비롯한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘 구현에 대해 설명합니다. 또한 클러스터링 모델을 만들고 처리할 때 성능을 향상시킬 수 있는 방법도 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션의 구현에 설명 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘, 클러스터링 모델의 동작을 제어 하는 데 사용할 수 있는 매개 변수를 포함 합니다. 또한 클러스터링 모델을 만들고 처리할 때 성능을 향상시킬 수 있는 방법도 제공합니다.  
   
  클러스터링 모델 사용 방법은 다음 항목을 참조하십시오.  
   

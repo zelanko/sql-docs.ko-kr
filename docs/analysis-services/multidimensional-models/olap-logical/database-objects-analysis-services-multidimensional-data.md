@@ -2,12 +2,12 @@
 title: "데이터베이스 개체 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a08640468d5c510ede73de29d1a0248278f70192
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ace461fd29f5c1a1176ddab2f41056df939592e8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>데이터베이스 개체(Analysis Services - 다차원 데이터)
-  A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 데이터베이스 개체 및 온라인 분석 처리 (OLAP) 및 데이터 마이닝에 사용할 어셈블리를 포함 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 데이터베이스 개체 및 온라인 분석 처리 (OLAP) 및 데이터 마이닝에 사용할 어셈블리를 포함 합니다.  
   
 -   데이터베이스에는 OLAP와 데이터 원본, 데이터 원본 뷰, 큐브, 측정값, 측정값 그룹, 차원, 특성, 계층, 마이닝 구조, 마이닝 모델 및 역할과 같은 데이터 마이닝 개체가 포함됩니다.  
   

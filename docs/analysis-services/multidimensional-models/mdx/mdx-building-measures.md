@@ -2,12 +2,12 @@
 title: "MDX로 측정값 작성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bf06631323bde8dc8c73bf716f5e0da858f19e71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5d1e4e637d3cee754573c2d59776d7241c89d2bf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-building-measures"></a>측정값 MDX 만들기
-  MDX에서 측정값은 테이블 형식 모델의 값을 반환하기 위해 식을 계산하여 확인되는 명명된 DAX 식입니다. 이러한 정의에는 놀랄 만한 개념이 포함되어 있습니다. MDX 쿼리에서 측정값을 구성하고 사용할 수 있으면 테이블 형식 데이터에 대한 상당한 조작 기능을 활용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions), 측정값은 테이블 형식 모델에 값을 반환 하도록 식을 계산 하 여 확인 되는 명명 된 DAX 식입니다. 이러한 정의에는 놀랄 만한 개념이 포함되어 있습니다. MDX 쿼리에서 측정값을 구성하고 사용할 수 있으면 테이블 형식 데이터에 대한 상당한 조작 기능을 활용할 수 있습니다.  
   
 > [!WARNING]  
 >  측정값은 테이블 형식 모델에서만 정의할 수 있습니다. 데이터베이스가 다차원 모드로 설정된 경우 측정값을 만들면 오류가 생성됩니다.  

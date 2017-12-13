@@ -2,12 +2,12 @@
 title: "테이블 형식 및 다차원 솔루션 (SSAS) 비교 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: b4ebbabc5925f42a377be5b54ff9d5c5c5605c49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>테이블 형식 및 다차원 솔루션 비교
-  SQL Server Analysis Services는 비즈니스 인텔리전스 의미 체계 모델을 만들기 위한 여러 가지 방식: 테이블 형식, 다차원 및 Powerpivot for SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services는 비즈니스 인텔리전스 의미 체계 모델을 만들기 위한 여러 가지 방식: 테이블 형식, 다차원 및 Powerpivot for SharePoint.
   
  둘 이상의 접근 방식을 사용하면 다양한 비즈니스 및 사용자 요구 사항에 맞게 모델링 환경을 조정할 수 있습니다. 다차원은 다양한 BI 소프트웨어 공급업체에서 수용하는 개방형 표준 기반의 완성도 높은 기술이지만 습득하기 어려울 수 있습니다. 테이블 형식은 많은 개발자에게 보다 직관적인 관계형 모델링 접근 방식을 제공합니다. 파워 피벗은 훨씬 간단한 접근 방식으로, SharePoint를 통해 제공되는 서버 지원과 더불어 Excel에서 시각적 데이터 모델링을 제공합니다.  
   

@@ -2,12 +2,12 @@
 title: "AMO 기본 개체 프로그래밍 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6eda664b7dbe009d5f82e0daffe0b428b26098d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 82ab6322367b9aaac757e9444d98a30401d42b06
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 기본 개체 프로그래밍
-  기본 개체는 일반적으로 단순하고 간단한 개체입니다. 이러한 개체는 대개 만들어지고 인스턴스화된 후 더 이상 필요하지 않게 되면 사용자가 개체와의 연결을 끊습니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다. AMO 기본 개체 중 유일하게 복잡한 개체는 <xref:Microsoft.AnalysisServices.DataSourceView>로, 이 개체는 세부 정보가 있어야 데이터 원본 뷰를 나타내는 추상 모델을 빌드할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]기본 개체는 일반적으로 단순 하 고 간단한 개체입니다. 이러한 개체는 대개 만들어지고 인스턴스화된 후 더 이상 필요하지 않게 되면 사용자가 개체와의 연결을 끊습니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다. AMO 기본 개체 중 유일하게 복잡한 개체는 <xref:Microsoft.AnalysisServices.DataSourceView>로, 이 개체는 세부 정보가 있어야 데이터 원본 뷰를 나타내는 추상 모델을 빌드할 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.Server> 및 <xref:Microsoft.AnalysisServices.Database> 개체는 일반적으로 포함된 개체를 OLAP 개체나 데이터 마이닝 개체로 사용하는 데 필요합니다.  
   

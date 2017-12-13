@@ -2,12 +2,12 @@
 title: "특성 유형 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60ccef2ddc36c4a8dda691526cb3209eb6737c6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>속성을 특성-특성 유형 구성
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성 유형은 업무 기능에 따라 특성을 분류하는 데 유용합니다. 다양한 특성 유형이 있으며 이들 대부분은 클라이언트 응용 프로그램에서 특성을 표시하거나 지원하는 용도로 사용됩니다. 하지만 일부 특성 유형이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 특정한 의미를 지니기도 합니다. 예를 들어 일부 특성 유형은 시간 차원에 대한 다양한 달력의 기간을 나타내는 특성을 식별합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 특성 유형은 업무 기능에 따라 특성을 분류 데 유용 합니다. 다양한 특성 유형이 있으며 이들 대부분은 클라이언트 응용 프로그램에서 특성을 표시하거나 지원하는 용도로 사용됩니다. 하지만 일부 특성 유형이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 특정한 의미를 지니기도 합니다. 예를 들어 일부 특성 유형은 시간 차원에 대한 다양한 달력의 기간을 나타내는 특성을 식별합니다.  
   
 ##  <a name="setting_attibute_types"></a> 특성 유형 설정  
  특성에 대한 **Type** 속성의 값이 해당 특성에 대한 특성 유형을 결정합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 여러 마법사는 차원이나 특성을 정의할 때 특성 유형을 설정합니다. 이러한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마법사는 차원에 기능을 추가할 때도 특성 유형을 설정합니다. 예를 들어 비즈니스 인텔리전스 마법사는 차원에 있는 계정의 이름, 코드, 번호 및 구조가 포함된 특성을 식별하기 위해 계정 인텔리전스를 추가할 때 차원의 특성에 여러 특성 유형을 적용합니다. 비즈니스 인텔리전스 마법사에서도 통화 변환 등에 특성 유형을 사용합니다. 자세한 내용은 [통화 유형 차원 만들기](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)를 참조하세요.  

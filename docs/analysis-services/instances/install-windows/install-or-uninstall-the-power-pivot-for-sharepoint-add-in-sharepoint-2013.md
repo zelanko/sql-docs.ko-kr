@@ -2,12 +2,12 @@
 title: "설치 또는 파워 피벗에 대 한 SharePoint 추가 기능을 제거 (SharePoint 2013) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a94b1c1aceedeba319b4d3ededc34d8de7f38c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f5f899bb9902c06d1288db8d94d719c27c250112
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>SharePoint용 파워 피벗 추가 기능 설치 또는 제거(SharePoint 2013)
-  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 팜에서 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 데이터 액세스를 제공하는 응용 프로그램 서버 구성 요소 및 백 엔드 서비스의 컬렉션입니다. SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 추가 기능(**spPowerpivot.msi**)은 응용 프로그램 서버 구성 요소를 설치하는 데 사용되는 설치 관리자 패키지입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 응용 프로그램 서버 구성 요소 및 제공 하는 백 엔드 서비스의 컬렉션인 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스는 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 팜 합니다. SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 추가 기능(**spPowerpivot.msi**)은 응용 프로그램 서버 구성 요소를 설치하는 데 사용되는 설치 관리자 패키지입니다.  
   
 -   이 추가 기능은 SharePoint 2010 배포에 필수적 요소가 아닙니다.  
   

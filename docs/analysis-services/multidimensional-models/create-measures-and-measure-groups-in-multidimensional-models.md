@@ -2,12 +2,12 @@
 title: "다차원 모델의 측정값 및 측정값 그룹 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f10c201d936a3580ca02846f43e3592ebfbacebf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa140461d48e1059c4eed74a3308b0b70a1e6c10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>다차원 모델의 측정값 및 측정값 그룹 만들기
-  *측정값* 은 합계, 개수, 최소값, 최대값, 평균 또는 사용자가 만드는 사용자 지정 MDX 식과 같은 숫자 데이터 값의 집계입니다. *측정값 그룹* 은 하나 이상의 측정이 포함된 컨테이너입니다. 모든 측정값은 측정값이 하나만 있더라도 측정값 그룹에 포함됩니다. 큐브는 하나 이상의 측정값과 측정값 그룹을 포함해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *측정값* 합계, 개수, 최소, 최대, 평균 또는 사용자 지정 MDX 식을 만드는 등의 숫자 데이터 값의 집계 됩니다. *측정값 그룹* 은 하나 이상의 측정이 포함된 컨테이너입니다. 모든 측정값은 측정값이 하나만 있더라도 측정값 그룹에 포함됩니다. 큐브는 하나 이상의 측정값과 측정값 그룹을 포함해야 합니다.  
   
  이 항목은 다음과 같은 섹션으로 구성됩니다.  
   

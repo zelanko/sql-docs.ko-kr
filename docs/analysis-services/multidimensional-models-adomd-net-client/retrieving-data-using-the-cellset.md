@@ -2,12 +2,12 @@
 title: "셀 집합을 사용 하 여 데이터를 검색 합니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60ed3598bd03977ae56eb159afd01955e109275e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3252672f1188bd72ab51c6ad3aa44ddb2b281b90
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-cellset"></a>CellSet을 사용하여 데이터 검색
-  <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체에서는 분석 데이터 검색에 필요한 상호 작용 기능과 유연성을 제공합니다. <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 데이터의 원래 차원을 유지하는 기록 데이터 및 메타데이터의 메모리 내 캐시입니다. 또한 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 연결된 상태뿐 아니라 연결이 끊어진 상태에서도 이동할 수 있습니다. 연결이 끊어진 상태에서도 이동할 수 있으므로 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 순서에 상관 없이 데이터와 메타데이터를 보는 데 사용할 수 있으며 가장 종합적인 데이터 검색 개체 모델을 제공합니다. 이에 반해 연결이 끊어진 상태에서 이동하는 기능 때문에 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 오버헤드가 많아서 가장 느리게 채워지는 ADOMD.NET 데이터 검색 개체 모델입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]분석 데이터를 검색할 때의 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체 상호 작용 가장 및 유연성을 제공 합니다. <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 데이터의 원래 차원을 유지하는 기록 데이터 및 메타데이터의 메모리 내 캐시입니다. 또한 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 연결된 상태뿐 아니라 연결이 끊어진 상태에서도 이동할 수 있습니다. 연결이 끊어진 상태에서도 이동할 수 있으므로 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 순서에 상관 없이 데이터와 메타데이터를 보는 데 사용할 수 있으며 가장 종합적인 데이터 검색 개체 모델을 제공합니다. 이에 반해 연결이 끊어진 상태에서 이동하는 기능 때문에 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 오버헤드가 많아서 가장 느리게 채워지는 ADOMD.NET 데이터 검색 개체 모델입니다.  
   
 ## <a name="retrieving-data-in-a-connected-state"></a>연결된 상태에서 데이터 검색  
  <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체를 사용하여 데이터를 검색하려면 다음 단계를 수행하십시오.  

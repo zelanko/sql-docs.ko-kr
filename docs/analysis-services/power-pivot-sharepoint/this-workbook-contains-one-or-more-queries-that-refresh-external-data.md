@@ -2,12 +2,12 @@
 title: "이 통합 문서를 외부 데이터를 새로 고치는 쿼리가 하나 이상 포함 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 882a0dca2f6c2c443507bc5b4d54820711e55ae7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3ceac22e878f93a5c7b8c9a1545d60f513684805
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>이 통합 문서를 외부 데이터를 새로 고치는 쿼리가 하나 이상 포함
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 포함하는 Excel 통합 문서의 경우 Excel Services는 연결 정보가 검색되면 이 경고를 표시하고 이 통합 문서에 대해 쿼리를 사용할지 여부를 묻는 메시지를 표시합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]포함 된 Excel 통합 문서에 대 한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 Excel 서비스 연결 정보를 검색 하 고이 통합 문서에 대 한 쿼리를 사용할지 여부를 묻는 메시지를 표시 하는 경우이 경고를 표시 합니다.  
   
 ## <a name="details"></a>세부 정보  
   

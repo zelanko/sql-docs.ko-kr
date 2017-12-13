@@ -2,12 +2,12 @@
 title: "연결을 설정 하는 동안 오류가 발생 했습니다. | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbc70ccf710772ba1b32abe5b65858d95ef2b38e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0f5cf8de15fdbb9eed6fae4cf4ccd17c3d99e56d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection"></a>연결을 설정 하는 동안 오류가 발생 했습니다.
-  이 오류는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이 설치되어 있지 않은 서버에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 쿼리하면 발생합니다. 또한 SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 서비스가 중지되었거나 이전 버전에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 보려는 경우에도 발생합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 오류는 쿼리 하는 경우 발생 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 하지 않은 서버에서 데이터를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint가 설치에 대 한 합니다. 또한 SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 서비스가 중지되었거나 이전 버전에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 보려는 경우에도 발생합니다.  
   
 ## <a name="details"></a>세부 정보  
   

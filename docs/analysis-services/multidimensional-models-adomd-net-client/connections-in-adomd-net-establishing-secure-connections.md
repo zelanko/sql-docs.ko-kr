@@ -2,12 +2,12 @@
 title: "ADOMD.NET에서 보안 연결 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a4545dc84372ae73ba90ac0c90a8586e92afe8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 192686dd747d307163e4530c55459e2c2d814cc4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connections in ADOMD.NET-보안 연결 설정
-  연결에 사용 되는 보안 메서드는 값에 따라 ADOMD.NET에서 연결을 사용 하는 경우는 **ProtectionLevel** 호출할 때 사용 하는 연결 문자열의 속성은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> 메서드는 의<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]연결에 사용 되는 보안 메서드는 값에 따라 ADOMD.NET에서 연결을 사용 하는 경우는 **ProtectionLevel** 호출할 때 사용 하는 연결 문자열의 속성은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> 메서드는 의<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  **ProtectionLevel** 속성은 네 가지 보안 수준을: 인증 되지 않은, 인증, 서명 및 암호화 합니다. 다음 표에서는 이러한 여러 보안 수준에 대해 설명합니다.  
   

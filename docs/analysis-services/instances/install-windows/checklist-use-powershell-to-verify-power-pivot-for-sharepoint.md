@@ -2,12 +2,12 @@
 title: "검사 목록: PowerShell을 사용 하 여 SharePoint 용 파워 피벗 확인 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +17,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c782994144077979f52eaa732618277b57c42ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 98c99d91fcbd0452f0873c32e2ef6f4fbe7d356d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>검사 목록: PowerShell을 사용하여 SharePoint용 파워 피벗 확인
-  서비스 및 데이터가 작동하는지 확인하는 견고한 확인 테스트에 성공하지 않으면 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치 또는 복구 작업이 완료되지 않습니다. 이 문서에서는 Windows PowerShell을 사용하여 이러한 단계를 수행하는 방법을 보여줍니다. 각 단계를 고유한 섹션에 포함하여 특정 태스크로 바로 이동할 수 있습니다. 예를 들어 유지 관리 또는 백업에 서비스 응용 프로그램 및 콘텐츠 데이터베이스를 예약하려면 이 항목의 [데이터베이스](#bkmk_databases) 섹션에서 스크립트를 실행하여 이름을 확인합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]더 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치 또는 복구 작업이 서비스를 확인 하는 견고한 확인 테스트 성공 하지 않고 완료 되 고 데이터 모두 제대로 작동 합니다. 이 문서에서는 Windows PowerShell을 사용하여 이러한 단계를 수행하는 방법을 보여줍니다. 각 단계를 고유한 섹션에 포함하여 특정 태스크로 바로 이동할 수 있습니다. 예를 들어 유지 관리 또는 백업에 서비스 응용 프로그램 및 콘텐츠 데이터베이스를 예약하려면 이 항목의 [데이터베이스](#bkmk_databases) 섹션에서 스크립트를 실행하여 이름을 확인합니다.  
   
 |||  
 |-|-|  
-|![PowerShell 관련 내용](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용")|전체 PowerShell 스크립트가 항목 맨 아래에 포함되어 있습니다. 전체 스크립트를 시작점으로 사용하여 전체 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 배포를 제작하는 데 사용자 지정 스크립트를 만듭니다.|  
+|![PowerShell 관련 콘텐츠](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")|전체 PowerShell 스크립트가 항목 맨 아래에 포함되어 있습니다. 전체 스크립트를 시작점으로 사용하여 전체 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 배포를 제작하는 데 사용자 지정 스크립트를 만듭니다.|  
   
 ||  
 |-|  

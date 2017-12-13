@@ -2,12 +2,12 @@
 title: "관계형 마이닝 구조 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 77b40db70cf3758f76d8e1773e6388fd6a833c49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-relational-mining-structure"></a>관계형 마이닝 구조 만들기
-  대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  
   
  관계형 마이닝 구조는 서로 다른 원본에서 데이터를 가져올 수 있습니다. 데이터를 데이터 원본 뷰의 일부로 정의할 수 있는 경우 원시 데이터를 테이블, 파일 또는 관계형 데이터베이스 시스템에 저장할 수 있습니다. 예를 들어 데이터가 Excel, SQL Server 데이터 웨어하우스 또는 SQL Server 보고 데이터베이스에 있거나 OLE DB 또는 ODBC 공급자를 통해 액세스하는 외부 원본에 있는 경우 관계형 마이닝 구조를 사용해야 합니다.  
   

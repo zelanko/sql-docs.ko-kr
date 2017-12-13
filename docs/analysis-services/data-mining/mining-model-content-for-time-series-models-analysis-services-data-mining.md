@@ -2,12 +2,12 @@
 title: "마이닝 시계열 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8878d03ca3690fbd13d46decadc2dc9f48755db6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>시계열 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-  모든 마이닝 모델은 동일한 구조를 사용하여 콘텐츠를 저장합니다. 이 구조는 데이터 마이닝 콘텐츠 스키마 행 집합에 따라 정의됩니다. 그러나 해당 표준 구조 내에서 정보를 포함하는 노드는 다양한 종류의 트리를 나타내기 위해 서로 다른 방법으로 정렬됩니다. 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 기반으로 하는 마이닝 모델에 대해 노드가 구성되는 방법과 각 노드의 의미에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모든 마이닝 모델 콘텐츠를 저장 하는 동일한 구조를 사용 합니다. 이 구조는 데이터 마이닝 콘텐츠 스키마 행 집합에 따라 정의됩니다. 그러나 해당 표준 구조 내에서 정보를 포함하는 노드는 다양한 종류의 트리를 나타내기 위해 서로 다른 방법으로 정렬됩니다. 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 기반으로 하는 마이닝 모델에 대해 노드가 구성되는 방법과 각 노드의 의미에 대해 설명합니다.  
   
  모든 모델 유형에 적용되는 일반 마이닝 모델 콘텐츠에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   

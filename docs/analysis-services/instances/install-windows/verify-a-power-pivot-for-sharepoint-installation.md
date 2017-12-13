@@ -2,12 +2,12 @@
 title: "Verify a Power Pivot for SharePoint 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ab5b1730f6244f81fc9e59c7565080eb72fba66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4f3ff72bc10a222ddd5d5ed8ee8a7748fcaa2d47
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>SharePoint용 파워 피벗 설치 확인
-  SharePoint 팜에 설치하는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 인스턴스는 SharePoint 중앙 관리를 통해 관리됩니다. 최소한 중앙 관리와 SharePoint 사이트에서 페이지를 검사하여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버 구성 요소 및 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서가 있어야 합니다. 테스트를 위해 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터가 포함되어 있는 샘플 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 인스턴스는 SharePoint 팜에 설치 하는 SharePoint 중앙 관리를 통해 관리 됩니다. 최소한 중앙 관리와 SharePoint 사이트에서 페이지를 검사하여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버 구성 요소 및 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서가 있어야 합니다. 테스트를 위해 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터가 포함되어 있는 샘플 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
   
 ||  
 |-|  

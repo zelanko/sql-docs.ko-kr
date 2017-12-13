@@ -2,12 +2,12 @@
 title: "Analysis Services 프로젝트 속성 구성 (SSDT) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 310906f7fa8ddc07f5643121e5120acf1135cb39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Analysis Services 프로젝트 속성 구성(SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 작성 및 배포에 영향을 미치는 몇 가지 기본 속성과 함께 정의됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 빌드 및 배포에 영향을 주는 특정 기본 속성으로 정의 된는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트.  
   
  프로젝트 속성을 변경하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개체를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 또는 프로젝트 메뉴에서 **속성** 을 클릭해도 됩니다.  
   

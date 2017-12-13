@@ -2,12 +2,12 @@
 title: "파티션 저장소 모드 및 처리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 66d7906862ef10fe5e2f9aa93a143d0655c84971
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: eab4af44192304701687c7796448407eaacdaa96
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>파티션-파티션 저장소 모드 및 처리
-  파티션의 저장소 모드는 파티션과 해당 부모 측정값 그룹 및 큐브의 쿼리 및 처리 성능, 저장소 요구 사항, 저장소 위치 등에 영향을 줍니다. 선택한 저장소 모드는 처리 선택 사항에도 영향을 줍니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]파티션의 저장소 모드는 쿼리 및 처리 성능과 저장 요구 사항 파티션의 부모 측정값 그룹 및 큐브의 저장소 위치에 영향을 줍니다. 선택한 저장소 모드는 처리 선택 사항에도 영향을 줍니다.  
   
  파티션에는 다음 3가지 기본 저장소 모드 중 하나를 사용할 수 있습니다.  
   

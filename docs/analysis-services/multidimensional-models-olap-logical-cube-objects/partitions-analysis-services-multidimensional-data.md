@@ -2,12 +2,12 @@
 title: "파티션 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eeeec758905021bfb1b352fb325810f096e3292d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dab66f2e60e602f163f3c0986719655b6f89f3a5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>파티션(Analysis Services - 다차원 데이터)
-  파티션은 측정값 그룹 데이터 부분의 컨테이너입니다. MDX 쿼리는 파티션을 표시하지 않으므로 측정값 그룹에 대해 정의된 파티션 수에 관계없이 모든 MDX 쿼리는 측정값 그룹의 전체 콘텐츠를 반영합니다. 파티션의 데이터 콘텐츠는 파티션의 쿼리 바인딩과 조각화 식에 의해 정의됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]파티션은은 측정값 그룹 데이터 부분의 컨테이너입니다. MDX 쿼리는 파티션을 표시하지 않으므로 측정값 그룹에 대해 정의된 파티션 수에 관계없이 모든 MDX 쿼리는 측정값 그룹의 전체 콘텐츠를 반영합니다. 파티션의 데이터 콘텐츠는 파티션의 쿼리 바인딩과 조각화 식에 의해 정의됩니다.  
   
  단순 <xref:Microsoft.AnalysisServices.Partition> 개체는 기본 정보, 조각화 정의, 집계 디자인 등으로 구성되어 있습니다. 기본 정보에는 파티션의 이름, 저장소 모드, 처리 모드 등이 포함됩니다. 조각화 정의는 튜플 또는 집합을 지정하는 MDX 식입니다. 조각화 정의에는 StrToSet MDX 함수와 동일한 제한 사항이 있습니다. 조각화 정의는 CONSTRAINED 매개 변수와 함께 큐브의 차원, 계층, 수준, 멤버 이름, 키, 고유 이름 또는 기타 명명된 개체는 사용할 수 있지만 MDX 함수는 사용할 수 없습니다. 집계 디자인은 여러 파티션에서 공유할 수 있는 집계 정의의 컬렉션입니다. 기본값은 부모 큐브의 집계 디자인에서 가져옵니다.  
   

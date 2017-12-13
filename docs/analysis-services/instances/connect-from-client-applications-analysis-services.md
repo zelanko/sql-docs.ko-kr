@@ -2,12 +2,12 @@
 title: "클라이언트 응용 프로그램 (Analysis Services)에서 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0310a1012153fae8ecb364e63a270ce0846af277
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>클라이언트 응용 프로그램에서 연결(Analysis Services)
-  Analysis Services를 처음 접하는 경우 이 항목의 정보를 사용하여 일반 도구 및 응용 프로그램을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기존 인스턴스에 연결할 수 있습니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services를 처음 접하는 경우의 정보를 사용이 항목의 기존 인스턴스에 연결 하는 데 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 일반 도구 및 응용 프로그램을 사용 하 여 합니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
   
 -   [SQL Server Management Studio를 사용하여 연결(SSMS)](#bkmk_SSMS)  
   

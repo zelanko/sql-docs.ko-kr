@@ -2,12 +2,12 @@
 title: "연결 문자열 속성 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connection-string-properties-analysis-services"></a>연결 문자열 속성(Analysis Services) 
-  이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정하거나 Analysis Services 데이터에 연결하고 쿼리하는 클라이언트 응용 프로그램에 의해 작성된 연결 문자열에 표시될 수 있는 연결 문자열 속성에 대해 설명합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정 하거나, 쿼리 Analysis Services 데이터에 연결 하는 클라이언트 응용 프로그램에서 작성 된 연결 문자열에 표시 될 수 연결 문자열 속성에 설명 합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.  
   
  응용 프로그램 코드에서 사용자 지정 연결 문자열을 작성하는 개발자는 ADOMD.NET 클라이언트에 대한 API 설명서를 검토하여 더 자세한 목록( <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   

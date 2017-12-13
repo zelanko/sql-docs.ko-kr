@@ -2,12 +2,12 @@
 title: "Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d1edb8853dcc8faa1ff632ea9379f937881c9886
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50841f276b204ed30de97636c5d3c5cccd7204e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services 액세스를 허용하도록 Windows 방화벽 구성
-  네트워크에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 사용할 수 있도록 만드는 데 필수적인 첫 번째 단계는 방화벽에서 포트를 차단 해제해야 할지 여부를 결정하는 것입니다. 대부분 설치의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 연결을 허용하는 하나 이상의 인바운드 방화벽 규칙을 만들어야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]있도록 만드는 데 필수적인 첫 번째 단계 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 방화벽의 포트 차단을 해제 해야 할지 여부를 결정 하는 네트워크에서 사용할 수 있는 것입니다. 대부분 설치의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 연결을 허용하는 하나 이상의 인바운드 방화벽 규칙을 만들어야 합니다.  
   
  방화벽 구성에 대한 요구 사항은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치한 방법에 따라 다릅니다.  
   

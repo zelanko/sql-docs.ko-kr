@@ -2,12 +2,12 @@
 title: "AMO OLAP 고급 개체 프로그래밍 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b58d475dfab97de8076bf058bfdd1171ddb37f35
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 924f2a618b029d3724a2435fa1a27287d454247e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 고급 개체 프로그래밍
-  이 항목에서는 AMO(Analysis Management Objects) OLAP 고급 개체를 프로그래밍하는 방법에 대해 자세히 설명합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 분석 관리 개체 (AMO) OLAP의 세부 정보를 프로그래밍 고급 개체에 설명 합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 -   [동작 개체](#Action)  
   

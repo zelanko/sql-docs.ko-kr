@@ -2,12 +2,12 @@
 title: "Microsoft 시계열 알고리즘 기술 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -36,14 +36,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1109ae6cf12199d9e38d231497b8126b8fa0ebe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a38c2585e2da3c1086ce15f220e13741bd7e9e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 시계열 알고리즘 기술 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘에는 시계열을 분석하기 위한 두 가지 알고리즘이 포함되어 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘 시계열 분석에 대 한 별도 두 가지 알고리즘을 포함 합니다.  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 소개된 ARTXP 알고리즘은 계열의 적절한 다음 값을 예측하도록 최적화되어 있습니다.  
   

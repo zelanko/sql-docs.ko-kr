@@ -2,12 +2,12 @@
 title: "정의 하 고 드릴스루 동작을 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d516ff89abaf74f340737d470094d84add1f101c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cc03641e5c0757aba32964077e7ec72307abe3d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>8-1-정의 하 고 드릴스루 동작을 사용 하 여 단원
-쿼리가 반환하는 데이터를 올바르게 필터링하지 않고 팩트 차원별로 팩트 데이터의 차원을 지정하면 쿼리 성능이 느려집니다. 이 문제를 방지하려면 반환되는 전체 행 수를 제한하는 드릴스루 동작을 정의하면 됩니다. 이렇게 하면 쿼리 성능이 대폭 향상됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]팩트 차원을 통해 팩트 데이터를 쿼리 성능이 저하 될 수는 쿼리에서 반환 하는 데이터를 올바르게 필터링 하지 않고 차원 지정 합니다. 이 문제를 방지하려면 반환되는 전체 행 수를 제한하는 드릴스루 동작을 정의하면 됩니다. 이렇게 하면 쿼리 성능이 대폭 향상됩니다.  
   
 이 항목의 태스크에서는 인터넷을 통한 판매에 대한 세부 주문 정보를 반환하는 드릴스루 동작을 정의합니다.  
   

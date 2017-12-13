@@ -2,12 +2,12 @@
 title: "원격 파티션 (Analysis Services) 만들기 및 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbcff2fe14716ebb2af74430538573706f8c2475
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>원격 파티션 만들기 및 관리(Analysis Services)
-  측정값 그룹을 분할할 때 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보조 데이터베이스를 파티션 저장소로 구성할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]측정값 그룹을 분할할 때 원격 보조 데이터베이스를 구성할 수 있습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파티션 저장소로 인스턴스.  
   
  master 데이터베이스라는 큐브의 원격 파티션은 보조 데이터베이스라는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 원격 인스턴스에 있는 전용 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장됩니다.  
   

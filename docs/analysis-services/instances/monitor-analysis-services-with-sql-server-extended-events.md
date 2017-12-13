@@ -2,12 +2,12 @@
 title: "SQL Server 확장 이벤트와 Analysis Services 모니터링 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7857edc132bbf7e82b749b752fafa72c78e9e890
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0fc2147822a5377f3ff3a3d60475225cf0e80c03
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링
-  확장 이벤트(*xEvents*)는 매우 적은 시스템 리소스를 사용하는 경량 추적 및 성능 모니터링 시스템으로 제품 및 테스트 서버 모두에서 문제를 진단하는 데 이상적인 도구입니다. 또한, 확장성이 뛰어나고 구성 가능하며 SQL Server 2016에서는 새롭게 기본적으로 제공되는 도구 지원을 통해 쉽게 사용할 수 있습니다. SQL Server Management Studio의 Analysis Services 인스턴스에 연결에서 SQL Server Profiler를 사용하는 방식과 유사하게 실시간 추적을 구성, 실행 및 모니터링할 수 있습니다. 향상된 도구가 추가되어 SQL Server Profiler에서 xEvent를 좀 더 적절하게 교체하고 데이터베이스 엔진 및 Analysis Services 작업에서 문제를 좀 더 대칭적으로 진단할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]확장 이벤트 (*xEvents*)은 경량 추적 및 성능 모니터링 매우 적은 시스템 리소스를 사용 하 여 시스템을는 프로덕션 및 테스트 서버에서 문제를 진단 하는 데 이상적인 도구입니다. 또한, 확장성이 뛰어나고 구성 가능하며 SQL Server 2016에서는 새롭게 기본적으로 제공되는 도구 지원을 통해 쉽게 사용할 수 있습니다. SQL Server Management Studio의 Analysis Services 인스턴스에 연결에서 SQL Server Profiler를 사용하는 방식과 유사하게 실시간 추적을 구성, 실행 및 모니터링할 수 있습니다. 향상된 도구가 추가되어 SQL Server Profiler에서 xEvent를 좀 더 적절하게 교체하고 데이터베이스 엔진 및 Analysis Services 작업에서 문제를 좀 더 대칭적으로 진단할 수 있습니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]뿐만 아니라, 이전 릴리스도 지원되기 때문에 XMLA 스크립팅을 통해  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 확장 이벤트 세션을 기존 방식으로 구성할 수도 있습니다.  
   

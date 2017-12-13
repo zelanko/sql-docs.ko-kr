@@ -2,12 +2,12 @@
 title: "개체 명명 규칙 (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1493d5236d4c44fe4a496a67a2c435aab703daa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
-  이 항목에서는 개체 명명 규칙과 함께 개체 이름 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트에 사용할 수 없는 예약어 및 예약 문자에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]예약 된 단어 뿐만 아니라 개체 명명 규칙에 설명 하는이 항목에 사용할 수 없는 코드에서 이름 개체 또는 스크립트 및 문자에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
 ##  <a name="bkmk_Names"></a>명명 규칙  
  모든 개체에는 부모 컬렉션 범위 내에 고유해야 하는 **Name** 및 **ID** 속성이 있습니다. 예를 들어 두 차원은 각각이 다른 데이터베이스에 상주하는 한 같은 이름을 가질 수 있습니다.  

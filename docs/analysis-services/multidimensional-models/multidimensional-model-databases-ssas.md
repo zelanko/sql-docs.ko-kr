@@ -2,12 +2,12 @@
 title: "다차원 모델 데이터베이스 (SSAS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dae9c7f18acbf630b7b8780498e06465085822b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c3e78f2941cd7729576647eb96bf21c717664fcf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-databases-ssas"></a>다차원 model 데이터베이스(SSAS)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 데이터 원본, 데이터 원본 뷰, 큐브, 차원 및 역할의 모음입니다. 필요에 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에는 데이터 마이닝 구조 및 데이터베이스에 사용자 정의 기능을 추가하기 위한 방법을 제공하는 사용자 지정 어셈블리가 포함될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 데이터 원본, 데이터 원본 뷰, 큐브, 차원 및 역할의 모음입니다. 필요에 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에는 데이터 마이닝 구조 및 데이터베이스에 사용자 정의 기능을 추가하기 위한 방법을 제공하는 사용자 지정 어셈블리가 포함될 수 있습니다.  
   
  큐브는 Analysis Services의 기본 쿼리 개체입니다. 클라이언트 응용 프로그램을 통해 Analysis Services 데이터베이스에 연결하면 해당 데이터베이스 내의 큐브에 연결됩니다. 차원, 어셈블리, 역할 또는 마이닝 구조를 여러 컨텍스트에서 다시 사용할 경우 데이터베이스에 여러 개의 큐브가 있을 수 있습니다.  
   

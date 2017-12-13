@@ -2,12 +2,12 @@
 title: "부모-자식 차원의 사용자 지정 롤업 연산자 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d731ba3666e4569a45b6ab3e9254a1eaafdda35
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bf4f123a7c2026fde28f9556957de20905330741
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>부모-자식 차원 특성 사용자 지정 롤업 연산자
-  사용자 지정 롤업 연산자는 부모-자식 계층에서 멤버 값이 부모 값으로 롤업되는 방식을 제어할 수 있는 간단한 방법을 제공합니다. 부모-자식 관계를 포함하는 차원에서 부모 특성의 모든 계산되지 않는 멤버에 대한 롤업을 지정하는 단항 연산자가 있는 열을 지정합니다. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용자 지정 롤업 연산자는 멤버 값이 부모-자식 계층의 부모 값으로 롤업되는 방식을 제어 하는 간단한 방법을 제공 합니다. 부모-자식 관계를 포함하는 차원에서 부모 특성의 모든 계산되지 않는 멤버에 대한 롤업을 지정하는 단항 연산자가 있는 열을 지정합니다. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다.  
   
  단항 연산자는 부모 특성의 **UnaryOperatorColumn** 속성으로 정의되는 열에 저장되며 특성의 각 멤버에 적용됩니다. 이 속성으로 지정한 열은 차원 테이블에 있거나 차원 테이블의 외부 키로 차원 테이블과 관련된 테이블에 있을 수 있습니다.  
   

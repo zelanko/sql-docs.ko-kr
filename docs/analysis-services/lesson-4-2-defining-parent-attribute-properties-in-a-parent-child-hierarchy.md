@@ -2,12 +2,12 @@
 title: "부모-자식 계층에서 부모 특성 속성 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e742a280ac4828cd708a3702545e9168cf8b0f73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7d8a8e45d9785d9eb4b449ad36689aadd8e454c6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lesson 4-2-부모-자식 계층에서 부모 특성 속성 정의
-부모-자식 계층은 두 개의 테이블 열을 기반으로 하는 차원의 계층입니다. 이 두 열은 차원의 멤버 간 계층 관계를 정의합니다. *멤버 키 열*이라는 첫 번째 열은 각 차원 멤버를 식별합니다. *부모 열*이라는 다른 하나의 열은 각 차원 멤버의 부모를 식별합니다. 부모 특성의 **NamingTemplate** 속성은 부모-자식 계층의 각 수준 이름을 지정하고 **MembersWithData** 속성은 부모 멤버의 데이터 표시 여부를 지정합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]부모-자식 계층은 두 개의 테이블 열을 기반으로 하는 차원의 계층입니다. 이 두 열은 차원의 멤버 간 계층 관계를 정의합니다. *멤버 키 열*이라는 첫 번째 열은 각 차원 멤버를 식별합니다. *부모 열*이라는 다른 하나의 열은 각 차원 멤버의 부모를 식별합니다. 부모 특성의 **NamingTemplate** 속성은 부모-자식 계층의 각 수준 이름을 지정하고 **MembersWithData** 속성은 부모 멤버의 데이터 표시 여부를 지정합니다.  
   
 자세한 내용은 [부모-자식 차원](../analysis-services/multidimensional-models/parent-child-dimension.md), [부모-자식 계층의 특성](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)을 참조하세요.  
   

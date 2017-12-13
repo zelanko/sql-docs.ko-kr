@@ -2,12 +2,12 @@
 title: "비즈니스 인텔리전스 마법사를 사용 하 여 시간 인텔리전스 계산 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d40605d85444307073de84d7fb8c8e4bbeea163d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c0a46098b9f1793309ae31417f29f2b23772de0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>비즈니스 인텔리전스 마법사를 사용하여 시간 인텔리전스 계산 정의
-  시간 인텔리전스 기능은 선택한 계층에 시간 계산(또는 시간 보기)을 추가하는 큐브 기능입니다. 이 기능은 다음과 같은 계산 범주를 지원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]시간 인텔리전스 기능의 경우 선택한 계층 시간 계산 (또는 시간 보기) 추가 하는 큐브 기능 이 기능은 다음과 같은 계산 범주를 지원합니다.  
   
 -   월간 누계  
   

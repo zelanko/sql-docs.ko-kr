@@ -2,12 +2,12 @@
 title: "측정값 및 측정값 그룹 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a800041d5a0f98760e1359c5eee93c706859e020
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-and-measure-groups"></a>측정값 및 측정값 그룹
-  큐브에는 *측정값 그룹* 의 *측정값*, 비즈니스 논리 및 측정값이 제공하는 숫자 데이터를 평가하기 위한 컨텍스트를 제공하는 차원 컬렉션이 포함됩니다. 측정값과 측정값 그룹은 둘 다 큐브의 필수 구성 요소입니다. 큐브는 최소 하나의 측정값과 측정값 그룹 없이는 존재할 수 없습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브에 포함 *측정값* 에 *측정값 그룹*, 비즈니스 논리 및 측정값이 제공 하는 숫자 데이터를 평가 하기 위한 컨텍스트를 제공 하는 차원 컬렉션이 있습니다. 측정값과 측정값 그룹은 둘 다 큐브의 필수 구성 요소입니다. 큐브는 최소 하나의 측정값과 측정값 그룹 없이는 존재할 수 없습니다.  
   
  이 항목에서는 [Measures](#bkmk_measure) 및 [Measure Groups](#bkmk_mg)에 대해 설명합니다. 또한 측정값 및 측정값 그룹을 만들고 구성하는 절차 단계에 대한 링크가 들어 있는 다음 표도 제공됩니다.  
   

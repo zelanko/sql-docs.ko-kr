@@ -2,12 +2,12 @@
 title: "작업을 Analysis Services 프로젝트 및 개발에서 데이터베이스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 26ffb60b07dad8af5d76304b7b58359e11bee8b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e68023a30e23c1a34d6dab36d9cbc7265a73469f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="work-with-analysis-services-projects-and-databases-in-development"></a>작업을 Analysis Services 프로젝트 및 데이터베이스 개발
-  프로젝트 모드나 온라인 모드로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스를 개발할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]개발할 수 있습니다는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 하 여 데이터베이스 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트 모드나 온라인 모드에 있습니다.  
   
 ## <a name="single-developer"></a>단일 개발자  
  단일 개발자가 전체 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 및 모든 요소 개체를 개발하는 경우 이 개발자는 비즈니스 인텔리전스 솔루션의 수명 주기 동안 언제든지 프로젝트 모드나 온라인 모드로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용할 수 있습니다. 단일 개발자의 경우 모드 선택은 별로 중요하지 않습니다. 원본 제어 시스템과 통합된 상태로 오프라인 프로젝트 파일을 유지 관리하면 보관 및 롤백과 같은 많은 이점이 있습니다. 단일 개발자의 경우에는 다른 개발자와 변경 작업에 관해 통신할 필요가 없습니다.  

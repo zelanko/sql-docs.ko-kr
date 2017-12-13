@@ -2,12 +2,12 @@
 title: "데이터 원본 뷰를 사용 하지 않고 템플릿에서 큐브 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>데이터 원본 뷰를 사용하지 않고 템플릿에서 큐브 만들기
-  데이터 원본 뷰를 사용하지 않고 큐브를 만들려면 큐브 마법사의 첫 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성** 을 선택하십시오. 나중에 스키마 생성 마법사를 사용하여 큐브의 구조 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 바탕으로 데이터 원본 뷰에 대한 관계형 스키마를 생성할 수 있습니다. 스키마 생성 방법에 대한 자세한 내용은 [스키마 생성 마법사&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]선택 **데이터 원본을 사용 하지 않고 큐브 생성** 데이터 원본 뷰를 사용 하지 않고 큐브를 만들려면 큐브 마법사의 첫 페이지에 있습니다. 나중에 스키마 생성 마법사를 사용하여 큐브의 구조 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 바탕으로 데이터 원본 뷰에 대한 관계형 스키마를 생성할 수 있습니다. 스키마 생성 방법에 대한 자세한 내용은 [스키마 생성 마법사&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)를 참조하세요.  
   
 ## <a name="selecting-the-build-method"></a>생성 방법 선택  
  큐브 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성**을 클릭합니다. 기존 큐브 템플릿을 사용하여 큐브를 생성하려면 **큐브 템플릿 사용** 확인란을 선택합니다. 를 참조하세요. 템플릿을 사용하지 않으면 수동으로 옵션을 설정해야 합니다.  

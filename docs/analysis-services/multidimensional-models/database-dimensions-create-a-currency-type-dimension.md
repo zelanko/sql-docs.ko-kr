@@ -2,12 +2,12 @@
 title: "통화 유형 차원 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1f52b2f83599e0da143bec573c21567347421127
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9f94776235df7717712840218d811fdc08f9de09
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---create-a-currency-type-dimension"></a>데이터베이스 차원-통화 유형 차원 만들기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 통화 유형 차원은 재무 보고용 통화 목록을 나타내는 특성이 있는 차원입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 통화 유형 차원은 재무 보고용 통화 목록을 나타내는 특성이 포함 차원 인지 합니다.  
   
  통화 차원을 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 통화 변환 기능을 큐브에 추가할 수 있습니다. 통화 변환 기능을 큐브에 추가하려면 비즈니스 인텔리전스 마법사를 사용하여 통화 측정값을 클라이언트 응용 프로그램의 로캘에 알맞은 값으로 변환하는 MDX(Multidimensional Expressions) 스크립트 명령을 정의합니다. 이 MDX 스크립트를 만들려면 비즈니스 인텔리전스 마법사에 다음 정보가 필요합니다.  
   

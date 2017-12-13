@@ -2,12 +2,12 @@
 title: "성능 카운터 (SSAS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7da59897426d459371d44b637dfda97183cca3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="performance-counters-ssas"></a>성능 카운터(SSAS)
-  성능 모니터를 사용하면 성능 카운터를 사용하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 성능을 모니터링할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]성능 모니터를 사용 하 여 성능 카운터를 사용 하 여 Microsoft SQL Server Analysis Services (SSAS) 인스턴스의 성능을 모니터링할 수 있습니다.  
   
  성능 모니터는 리소스 사용을 추적하는 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management  Control)  스냅인입니다. 이 MMC 스냅인은 명령 프롬프트에 **PerfMon** 을 입력하거나 제어판에서 **관리 도구**, **성능 모니터**를 차례로 클릭하여 시작할 수 있습니다. 성능 모니터를 사용하면 미리 정의한 개체 및 카운터를 사용하여 서버와 프로세스 성능 및 작업을 추적하고 사용자 정의 카운터를 사용하여 이벤트를 모니터링할 수 있습니다. 성능 모니터는 이벤트에 대한 데이터(예: 메모리 사용량, 활성 트랜잭션 수 또는 CPU 작업) 대신에 개수를 수집합니다. 특정 카운터에 대해 운영자에게 경고 메시지를 보내도록 임계값을 설정할 수도 있습니다.  
   

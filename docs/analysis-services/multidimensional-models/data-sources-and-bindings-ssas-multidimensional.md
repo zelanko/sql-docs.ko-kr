@@ -2,12 +2,12 @@
 title: "데이터 원본 및 바인딩 (SSAS 다차원) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -43,14 +43,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64aee5ba79973ea7ceca7020a4ee7dda04a12637
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9140c9870866538b4f9b192300e41278fdddd8a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>데이터 원본 및 바인딩(SSAS 다차원)
-  큐브, 차원 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체는 데이터 원본에 바인딩될 수 있습니다. 데이터 원본은 다음 개체 중 하나일 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브, 차원 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 데이터 소스에 바인딩할 수 있습니다. 데이터 원본은 다음 개체 중 하나일 수 있습니다.  
   
 -   관계형 데이터 원본.  
   

@@ -2,12 +2,12 @@
 title: "연결 된 차원 정의 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 261ba3bea0256789df5f6ad72cff553c6ed253f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4d3f3148837cd2e511ffd6d8fc539c32db362c88
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-linked-dimensions"></a>연결된 차원 정의
-  연결된 차원은 동일한 버전 및 호환성 수준의 다른 Analysis Services 데이터베이스에서 만들어지고 저장된 차원을 기반으로 합니다. 연결된 차원을 통해 하나의 데이터베이스에 차원을 만들고 저장하고 유지 관리할 수 있으며 이와 동시에 여러 데이터베이스의 사용자가 이 차원을 사용하도록 할 수 있습니다. 연결된 차원은 사용자에게 다른 차원과 동일하게 나타납니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]연결 된 차원은 동일한 버전 및 호환성 수준의 다른 Analysis Services 데이터베이스에서 만들어지고 저장 된 차원을 기반으로 합니다. 연결된 차원을 통해 하나의 데이터베이스에 차원을 만들고 저장하고 유지 관리할 수 있으며 이와 동시에 여러 데이터베이스의 사용자가 이 차원을 사용하도록 할 수 있습니다. 연결된 차원은 사용자에게 다른 차원과 동일하게 나타납니다.  
   
  연결된 차원은 읽기 전용입니다. 차원을 수정하거나 새로운 관계를 만들려는 경우 원본 차원을 변경한 다음 연결된 차원 및 해당 관계를 삭제하고 다시 만들어야 합니다. 연결된 차원을 새로 고쳐서 원본 개체의 변경 내용을 적용할 수 없습니다.  
   

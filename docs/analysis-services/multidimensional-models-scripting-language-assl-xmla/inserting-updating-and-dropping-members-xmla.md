@@ -2,12 +2,12 @@
 title: "삽입, 업데이트 및 삭제 (XMLA) 멤버 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d98ad262e92a1da61c6ac3dda67aaac871dabd1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e7a4600dc6a3a0a9b32db40d0d9111907510768
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>멤버 삽입, 업데이트 및 삭제(XMLA)
-  사용할 수는 [삽입](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [업데이트](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), 및 [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 명령은 xml에서 for Analysis (XMLA)를 삽입, 업데이트 또는 쓰기 가능 차원에서 멤버를 삭제 합니다. 쓰기 가능 차원에 대 한 자세한 내용은 참조 [쓰기 가능한 차원](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용할 수는 [삽입](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [업데이트](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), 및 [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 명령은 xml에서 for Analysis (XMLA)를 삽입, 업데이트 또는 쓰기 가능 차원에서 멤버를 삭제 합니다. 쓰기 가능 차원에 대 한 자세한 내용은 참조 [쓰기 가능한 차원](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  
   
 ## <a name="inserting-new-members"></a>새 멤버 삽입  
  **삽입** 명령에서는 쓰기 가능 차원에서 지정 된 특성에 새 멤버를 삽입 합니다.  

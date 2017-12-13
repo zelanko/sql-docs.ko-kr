@@ -73,6 +73,7 @@
 # [패키지 배포](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
+# [카탈로그 및 서버](catalog/integration-services-ssis-server-and-catalog.md)
 # [서비스(레거시)](../integration-services/service/integration-services-service-ssis-service.md)
 # [보안](../integration-services/security/security-overview-integration-services.md)
 # [성능](../integration-services/performance/monitor-running-packages-and-other-operations.md)

@@ -2,12 +2,12 @@
 title: "집계 디자인 (Analysis Services-다차원) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: efa41383ba0e5ba5032b4763dc069fd83d03e489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 139ad1c8585dbed61b4881b2a171c18b686bbf37
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>집계 디자인(Analysis Services - 다차원)
-  집계는 큐브 데이터의 미리 계산된 요약으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 신속한 쿼리 응답을 제공할 수 있도록 도와 줍니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]집계는 사용 하도록 설정 하는 데 도움이 되는 큐브 데이터의 미리 계산 된 요약 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 신속한 쿼리 응답 수 있도록 합니다.  
   
  집계 디자인 마법사를 사용하여 파티션에 대한 저장소 옵션을 설정하고 집계를 디자인할 수 있습니다. 이 마법사는 한 번에 개별 측정값 그룹의 단일 파티션에 대해 실행되므로 각 파티션마다 다른 옵션과 디자인을 선택할 수 있습니다. 저장소 디자인 마법사는 파티션에 대한 저장소를 구성하고 집계를 디자인하는 단계로 이루어져 있습니다. 저장소를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오.  
   

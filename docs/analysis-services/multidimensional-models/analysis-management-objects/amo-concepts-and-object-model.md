@@ -2,12 +2,12 @@
 title: "AMO 개념 및 개체 모델 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c61b7e481b68e7aec256d81a391089f07963509f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 개념 및 개체 모델
-  이 항목에서는 정의의 AMO Analysis Management Objects (), 다른 도구와의 아키텍처에 제공 된 라이브러리와 AMO의 관계 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 및 AMO의 모든 주요 개체의 개념을 설명 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 정의의 AMO Analysis Management Objects (), 다른 도구와의 아키텍처에 제공 된 라이브러리와 AMO의 관계 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 및 AMO의 모든 주요 개체의 개념을 설명 합니다.  
   
  AMO는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]용 관리 클래스를 모두 포함하는 컬렉션으로, 관리되는 환경의 <xref:Microsoft.AnalysisServices> 네임스페이스에서 프로그래밍 방식으로 사용할 수 있습니다. 일반적으로 위치에서 액세스할 수 있는 AnalysisServices.dll 파일에 포함 된 클래스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 폴더 \100\SDK\Assemblies에서 파일이 설치\\합니다. AMO 클래스를 사용하려면 이 어셈블리에 대한 참조를 프로젝트에 포함합니다.  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
  데이터 마이닝 고급 사용자의 경우 AMO는 정기적으로 다시 학습해야 하는 모델 집합이 매우 많을 때 가장 유용합니다.  
   
 ##  <a name="AutomatingAdministrativeTaskswithAMO"></a>AMO로 관리 태스크 자동화  
- 대부분의 반복적인 태스크는 개발자가 선택한 언어를 사용하여 응용 프로그램으로 개발된 경우보다 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]를 사용하여 개발된 경우에 가장 적절하게 디자인, 배포 및 유지 관리됩니다. 하지만 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]를 사용하여 자동화할 수 없는 반복적 태스크의 경우에는 AMO를 사용할 수 있습니다.. AMO는 또한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 사용하여 비즈니스 인텔리전스를 위한 특수화된 응용 프로그램을 개발하려는 경우에도 유용합니다.  
+ 대부분의 반복적인 태스크는 개발자가 선택한 언어를 사용하여 응용 프로그램으로 개발된 경우보다 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]를 사용하여 개발된 경우에 가장 적절하게 디자인, 배포 및 유지 관리됩니다. 하지만 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]를 사용하여 자동화할 수 없는 반복적 태스크의 경우에는 AMO를 사용할 수 있습니다. AMO는 또한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 사용하여 비즈니스 인텔리전스를 위한 특수화된 응용 프로그램을 개발하려는 경우에도 유용합니다.  
   
 ##### <a name="automatic-object-management"></a>자동 개체 관리  
  AMO를 사용하면 사용자 입력 또는 새로 받은 데이터를 기반으로 <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MiningStructure>, <xref:Microsoft.AnalysisServices.MiningModel> 또는 <xref:Microsoft.AnalysisServices.Role>과 같은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 만들거나 업데이트하거나 삭제하기가 매우 쉽습니다. AMO는 개발된 솔루션을 ISV(Independent Software Vendor)부터 최종 고객에게까지 배포해야 하는 설치 응용 프로그램에 이상적입니다. 설치 응용 프로그램에서는 이전 버전이 있는지 확인하고, 구조를 업데이트하고, 더 이상 유용하지 않은 개체를 제거하고, 새 개체를 만들 수 있습니다. 이전 버전이 없으면 모든 항목을 처음부터 새로 만들 수 있습니다.  

@@ -2,12 +2,12 @@
 title: "표준 동작 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed8e041cef62cb1782d0f00a90fe5c09986c7d81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 542b50ce2d0e9f3bee53fd6fa5290a152dd03edd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-standard-action"></a>표준 동작 추가
-  큐브 디자이너의 동작 뷰를 사용하여 데이터베이스에 동작을 추가합니다. 이 뷰는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후 관련 큐브를 다시 처리하면 사용자가 동작을 사용할 수 있게 됩니다. 자세한 내용은 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)을 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 디자이너의 [작업] 보기를 사용 하 여 데이터베이스에 동작을 추가 합니다. 이 뷰는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후 관련 큐브를 다시 처리하면 사용자가 동작을 사용할 수 있게 됩니다. 자세한 내용은 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)을 참조하세요.  
   
 ### <a name="to-create-an-action"></a>동작을 만들려면  
   

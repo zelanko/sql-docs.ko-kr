@@ -2,12 +2,12 @@
 title: "마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1fc5e735cff3a4fc79f73cf2905cf0fa28732ded
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cb289289301d3837ff2f82848b6fd183354b7e56
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>선형 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 설명 하는 사용 하는 모델만 마이닝 모델 콘텐츠에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘입니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>선형 회귀 모델의 구조 이해  
  선형 회귀 모델의 구조는 매우 단순합니다. 각 모델에는 모델과 해당 메타데이터를 나타내는 단일 부모 노드와 예측 가능한 각 특성의 회귀 수식이 포함된 회귀 트리 노드(NODE_TYPE = 25)가 있습니다.  

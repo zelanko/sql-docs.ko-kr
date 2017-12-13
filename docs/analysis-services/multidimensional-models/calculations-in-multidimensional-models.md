@@ -2,12 +2,12 @@
 title: "다차원 모델의 계산 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96b296189200416c2c5234597cf8f4e45618b6d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b1941a129b0348b9939100de46334ce7be676e4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculations-in-multidimensional-models"></a>다차원 모델의 계산
-  큐브 디자이너의 **계산** 탭을 사용하여 계산 멤버, 명명된 집합 및 기타 MDX(Multidimensional Expression) 계산을 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하 여 **계산** 계산된 멤버, 명명 된 집합 및 기타 MDX (Multidimensional Expressions) 계산을 만들려면 큐브 디자이너의 탭 합니다.  
   
  **계산** 탭에는 다음과 같은 세 개의 창이 있습니다.  
   

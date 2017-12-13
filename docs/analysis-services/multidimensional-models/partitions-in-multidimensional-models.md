@@ -2,12 +2,12 @@
 title: "다차원 모델의 파티션 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>다차원 모델의 파티션
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 *파티션* 은 로드된 팩트 데이터의 실제 저장소를 측정값 그룹에 제공합니다. 각 측정값 그룹에 대해 단일 파티션이 자동으로 만들어지지만 더욱 효율적으로 처리하고 쿼리 성능이 빨라지도록 데이터를 추가로 분할하는 추가 파티션을 만드는 것이 일반적입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], *파티션* 를 측정값 그룹에 로드 된 팩트 데이터의 물리적 저장소를 제공 합니다. 각 측정값 그룹에 대해 단일 파티션이 자동으로 만들어지지만 더욱 효율적으로 처리하고 쿼리 성능이 빨라지도록 데이터를 추가로 분할하는 추가 파티션을 만드는 것이 일반적입니다.  
   
  파티션을 하나 이상의 서버에서 독립적으로 병렬 처리할 수 있기 때문에 더 효율적으로 처리됩니다. 저장소 모드와 집계 최적화를 사용하여 응답 시간이 짧아지도록 각 파티션을 구성할 수 있기 때문에 쿼리가 더 빨리 실행됩니다. 예를 들어 최신 데이터를 포함하는 파티션에 대해 MOLAP 저장소를 선택하는 것이 ROLAP를 선택하는 경우보다 일반적으로 빠릅니다. 마찬가지로, 날짜별로 분할하는 경우 최신 데이터가 들어 있는 파티션의 최적화가 액세스 빈도가 낮은 오래된 데이터가 들어 있는 파티션의 최적화보다 더 많을 수 있습니다. 파티션을 통해 저장소 및 집계 디자인이 바뀌면 앞으로의 병합 작업에 부정적인 영향을 줍니다. 개별 파티션을 최적화하기 전에 병합이 파티션 관리 전략의 필수 구성 요소인지 여부를 고려해야 합니다.  
   

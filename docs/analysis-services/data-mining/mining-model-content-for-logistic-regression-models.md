@@ -2,12 +2,12 @@
 title: "마이닝 모델 콘텐츠 로지스틱 회귀 모델에 대 한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c49ae086aba41c6b023a1cbd395e6ddd8fc8f29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>로지스틱 회귀 모델에 대한 모델 콘텐츠
-  이 항목에서는 Microsoft 로지스틱 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 하는 Microsoft 로지스틱 회귀 알고리즘을 사용 하는 모델만 마이닝 모델 콘텐츠에 대해 설명 합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>로지스틱 회귀 모델의 구조 이해  
  로지스틱 회귀 모델은 Microsoft 신경망 알고리즘과 숨겨진 노드를 제거하도록 모델을 제한하는 매개 변수를 사용하여 만듭니다. 따라서 로지스틱 회귀 모델의 전체 구조는 신경망 모델의 구조와 거의 동일합니다. 즉, 각 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드와 모델에 사용된 입력에 대한 기술 통계를 제공하는 특수한 한계 통계 노드(NODE_TYPE = 24)가 있습니다.  

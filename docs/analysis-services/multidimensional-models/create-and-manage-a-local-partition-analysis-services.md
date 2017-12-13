@@ -2,12 +2,12 @@
 title: "로컬 파티션 (Analysis Services) 만들기 및 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2e5047564e2001f87691d622a736c9ad28b87c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf08f0031c6e805b5677a0e551a20c941d0dce34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>로컬 파티션 만들기 및 관리(Analysis Services)
-  처리 성능 향상을 위해 측정값 그룹에 대한 추가 파티션을 만들 수 있습니다. 여러 개의 파티션이 있으면 로컬 서버뿐만 아니라 원격 서버의 해당하는 개수의 실제 데이터 파일에 팩트 데이터를 할당할 수 있습니다. Analysis Services에서는 파티션을 독립적으로 병렬 처리할 수 있어 서버에서 작업을 처리할 때 더 세부적으로 제어할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]측정값 그룹 처리 성능을 향상 시키기 위한 추가 파티션을 만들 수 있습니다. 여러 개의 파티션이 있으면 로컬 서버뿐만 아니라 원격 서버의 해당하는 개수의 실제 데이터 파일에 팩트 데이터를 할당할 수 있습니다. Analysis Services에서는 파티션을 독립적으로 병렬 처리할 수 있어 서버에서 작업을 처리할 때 더 세부적으로 제어할 수 있습니다.  
   
  모델을 디자인할 때 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 나 XMLA를 사용하여 솔루션을 배포한 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 파티션을 만들 수 있습니다. 한 가지 방법만 선택하는 것이 좋습니다. 도구를 번갈아 사용하면 이후에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 솔루션을 다시 배포할 때 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 배포된 데이터베이스에 대한 변경 내용이 덮어쓰기될 수도 있습니다.  
   

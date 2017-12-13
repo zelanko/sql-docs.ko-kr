@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8aa36adac3f7be50105a387dc3d39fca208eaba8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>성능에 대 한 유용한 정보 및 SQL Server 2017 linux에 대 한 구성 지침
 
@@ -55,7 +55,6 @@ Linux 응용 프로그램에 대 한 최상의 성능을 얻으려면 SQL Server
 다음과 같은 Linux 운영 체제 구성 설정을 사용 하 여 SQL Server 설치에 대 한 최상의 성능을 경험할 수 하는 것이 좋습니다.
 
 ### <a name="kernel-settings-for-high-performance"></a>고성능에 대 한 커널 설정
-
 이들은 권장 Linux 운영 체제 설정 높은 관련 된 성능 및 SQL Server 설치에 대 한 처리량입니다. 이러한 설정을 구성 하는 프로세스에 대 한 Linux 운영 체제 설명서를 참조 하십시오.
 
 
@@ -92,7 +91,7 @@ sysctl -w kernel.numa_balancing=0
 기본 설정은 **vm.max_map_count** (65536은)는 SQL Server 설치 수 있을 정도로 충분히 높은 수 없습니다. 256 K입니다 (즉, 상한값)이이 값을 변경 합니다.
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>마지막으로 액세스 한 날짜/시간에서 파일 시스템에 SQL Server 데이터 및 로그 파일에 대 한 사용 안 함

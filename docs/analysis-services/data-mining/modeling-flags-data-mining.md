@@ -2,12 +2,12 @@
 title: "모델링 플래그 (데이터 마이닝) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ce08e6cf57aa2ca49aea8834b96a69aa69362e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbe2029742ba4df3c390820effa565055159f7dd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="modeling-flags-data-mining"></a>모델링 플래그(데이터 마이닝)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 데이터 마이닝 알고리즘에 추가 정보를 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에서는 모델링 플래그를 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사례 테이블에 정의 된 데이터에 대 한 데이터 마이닝 알고리즘에 추가 정보를 제공 합니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
   
  마이닝 구조 수준에서 정의되는 모델링 플래그도 있고 마이닝 모델 열 수준에서 정의되는 모델링 플래그도 있습니다. 예를 들어 **NOT NULL** 모델링 플래그는 마이닝 구조 열에 사용됩니다. 모델을 만드는 데 사용하는 알고리즘에 따라 마이닝 모델 열에 추가 모델링 플래그를 정의할 수 있습니다.  
   

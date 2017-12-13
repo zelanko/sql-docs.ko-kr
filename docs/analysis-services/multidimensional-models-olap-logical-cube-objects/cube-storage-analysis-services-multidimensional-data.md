@@ -2,12 +2,12 @@
 title: "큐브 저장소 (Analysis Services-다차원 데이터) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 082e54f8ebaf83609c8f90b37e41657cb26da1f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 83762a6da2ee3b67c388fdd7b1b3ac5ffc144573
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>큐브 저장소(Analysis Services - 다차원 데이터)
-  저장소에는 큐브 메타데이터만 포함되거나, 측정값 그룹과 관련된 차원으로 정의한 집계 및 팩트 테이블의 모든 원본 데이터가 포함될 수 있습니다. 저장되는 데이터 양은 선택한 저장소 모드와 집계 수에 따라 달라집니다. 저장되는 데이터 양은 쿼리 성능에 직접적인 영향을 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브 데이터 및 집계 저장소에 필요한 공간을 최소화 하기 위한 여러 가지 기술을 사용 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]저장소는 큐브 메타 데이터만 포함 되거나 측정값 그룹에 관련 차원으로 정의한 집계 및 팩트 테이블에서 원본 데이터를 모두 포함 될 수 있습니다. 저장되는 데이터 양은 선택한 저장소 모드와 집계 수에 따라 달라집니다. 저장되는 데이터 양은 쿼리 성능에 직접적인 영향을 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브 데이터 및 집계 저장소에 필요한 공간을 최소화 하기 위한 여러 가지 기술을 사용 합니다.  
   
 -   저장소 옵션을 사용하여 큐브 데이터에 가장 적합한 저장소 모드 및 위치를 선택할 수 있습니다.  
   
