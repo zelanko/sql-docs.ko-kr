@@ -3,8 +3,11 @@ title: "테이블 반환 개체 속성(Visual Database Tools) | Microsoft 문서
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b780f2dea124c603e24015149ab2d98b93f711f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a9ee522227473617b98b60691599b42ec7f8d35c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>테이블 반환 개체 속성(Visual Database Tools)
-이러한 속성은 **쿼리 및 뷰 디자이너**에서 테이블 반환 개체를 선택하면 속성 창에 나타납니다. 테이블 반환 개체는 뷰, 동의어, 파생 테이블 또는 테이블 반환 함수일 수 있습니다. 다른 설명이 없는 한 이러한 속성은 **속성** 창에서 읽기 전용입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이러한 속성은 **쿼리 및 뷰 디자이너**에서 테이블 반환 개체를 선택하면 속성 창에 나타납니다. 테이블 반환 개체는 뷰, 동의어, 파생 테이블 또는 테이블 반환 함수일 수 있습니다. 다른 설명이 없는 한 이러한 속성은 **속성** 창에서 읽기 전용입니다.  
   
 > [!NOTE]  
 > 이 항목의 속성은 사전순 대신 범주별로 정렬됩니다.  

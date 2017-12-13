@@ -2,12 +2,12 @@
 title: "요소 (XMLA) 결과 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e75b40b624d2f39fb718efdd55e1888cafaf9358
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 06fc0651d4475d612bf2821bcca97c93c17d8633
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="results-element-xmla"></a>results 요소(XMLA)
-  [Batch](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 명령을 사용하여 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드에 의해 반환되는 [root](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 요소의 컬렉션을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]컬렉션을 포함 [루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 반환 하는 요소는 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드를 사용 하는 [일괄 처리](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 명령입니다.  
   
  **Namespace**`http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults`  
   

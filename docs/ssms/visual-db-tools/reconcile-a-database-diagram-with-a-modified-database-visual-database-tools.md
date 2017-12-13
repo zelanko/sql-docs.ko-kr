@@ -3,8 +3,11 @@ title: "수정된 데이터베이스와 데이터베이스 다이어그램 일�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 209fa6d5ef826179443242733ee4a9e317ac9019
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3a9356639a5334bb350a0d391487baa81897e031
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>수정된 데이터베이스와 데이터베이스 다이어그램 일치(Visual Database Tools)
-다이어그램에 일치하도록 데이터베이스를 업데이트할 준비가 되면 데이터베이스 다이어그램을 저장합니다. 그러나 다이어그램을 연 이후에 다른 사용자가 이미 데이터베이스를 업데이트한 경우에는 다른 사용자의 변경 내용이 현재 사용자의 다이어그램에 영향을 줄 수 있습니다. 그 반대의 경우도 마찬가지입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다이어그램에 일치하도록 데이터베이스를 업데이트할 준비가 되면 데이터베이스 다이어그램을 저장합니다. 그러나 다이어그램을 연 이후에 다른 사용자가 이미 데이터베이스를 업데이트한 경우에는 다른 사용자의 변경 내용이 현재 사용자의 다이어그램에 영향을 줄 수 있습니다. 그 반대의 경우도 마찬가지입니다.  
   
 이 상태에서 다이어그램을 저장하면 데이터베이스가 현재 사용자의 다이어그램에 일치하도록 조정됩니다. 즉, 다른 사용자의 변경 내용을 덮어쓰게 됩니다.  
   

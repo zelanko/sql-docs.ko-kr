@@ -3,8 +3,11 @@ title: "테이블 만들기 대화 상자(Visual Database Tools) | Microsoft 문
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 813c9846bd0662a454df2a197192da90dcc17ae4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a50332021cd0c3a3b4c789ced8b02d0c2ca9d34c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>테이블 만들기 대화 상자(Visual Database Tools)
-이 대화 상자를 사용하면 행을 복사하려는 대상 테이블을 만들고 이름을 지정할 수 있습니다. 이 대화 상자는 쿼리 형식을 MAKE TABLE 쿼리로 변경하면 나타납니다. 쿼리 형식을 변경하려면 **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **테이블 만들기**를 클릭합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 행을 복사하려는 대상 테이블을 만들고 이름을 지정할 수 있습니다. 이 대화 상자는 쿼리 형식을 MAKE TABLE 쿼리로 변경하면 나타납니다. 쿼리 형식을 변경하려면 **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **테이블 만들기**를 클릭합니다.  
   
 ## <a name="options"></a>옵션  
 **테이블 이름**  

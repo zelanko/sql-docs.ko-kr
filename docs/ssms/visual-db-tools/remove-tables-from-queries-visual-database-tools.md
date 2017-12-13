@@ -3,8 +3,11 @@ title: "쿼리에서 테이블 제거(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7781169f982f76021de26e06302d956c3237461
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2d40f8288708e4e9d8c89b46522a1ef6087a98d7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>쿼리에서 테이블 제거(Visual Database Tools)
-쿼리에서 테이블이나 임의의 테이블 반환 개체를 제거할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리에서 테이블이나 임의의 테이블 반환 개체를 제거할 수 있습니다.  
   
 > [!NOTE]  
 > 테이블이나 테이블 반환 개체를 제거해도 데이터베이스에서 실제로 삭제되는 항목은 없으며 현재 쿼리에서 해당 항목이 제거될 뿐입니다. 데이터베이스에서 테이블을 제거하는 방법에 대한 자세한 내용은 [방법: 데이터베이스에서 테이블 삭제(Visual Database Tools)](http://msdn.microsoft.com/en-us/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)를 참조하세요.  

@@ -3,8 +3,11 @@ title: "파일 열기 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-file-dialog-box"></a>파일 열기 대화 상자
-**파일 열기** 대화 상자를 사용하여 디스크에 있는 기존 파일을 열 수 있습니다. 또한 이 대화 상자를 사용하여 다양한 언어 인코딩 옵션을 통해 이미 열린 파일을 열 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **파일 열기** 대화 상자를 사용하여 디스크에 있는 기존 파일을 열 수 있습니다. 또한 이 대화 상자를 사용하여 다양한 언어 인코딩 옵션을 통해 이미 열린 파일을 열 수 있습니다.  
   
 이 대화 상자에 액세스하려면 **파일** 메뉴에서 **열기** 를 선택한 다음 **파일**을 선택합니다. 이 대화 상자는 **외부 도구** 대화 상자와 같은 다른 요소에서 파일을 열 때도 나타납니다. **파일** 메뉴에서 **열기**를 선택한 다음 **프로젝트/솔루션** 을 선택하여 **프로젝트 열기** 대화 상자를 열 수 있습니다.  
   

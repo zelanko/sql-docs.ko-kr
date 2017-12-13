@@ -3,8 +3,11 @@ title: "쿼리 확인(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3673b8eee9b40215877fc7b0058bd5bd6f51981f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0353c23f4a47d8a4e432736e703b3115124bd7e2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="verify-queries-visual-database-tools"></a>쿼리 확인(Visual Database Tools)
-문제를 방지하기 위해 작성된 쿼리를 검사하고 구문이 올바른지 확인할 수 있습니다. 이 옵션은 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에 문을 입력할 때 특히 유용합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 문제를 방지하기 위해 작성된 쿼리를 검사하고 구문이 올바른지 확인할 수 있습니다. 이 옵션은 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에 문을 입력할 때 특히 유용합니다.  
   
 쿼리를 확인할 때는 다음과 같은 사항을 염두에 두어야 합니다.  
   

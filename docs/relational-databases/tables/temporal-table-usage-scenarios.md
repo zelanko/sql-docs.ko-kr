@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 881cdb2e9fc9d7faf8423574efa944c4149ded22
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7f779d776439646ddce36575a97531cf251ef45
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="temporal-table-usage-scenarios"></a>임시 테이블 사용 시나리오
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -467,7 +467,7 @@ ALTER TABLE DimLocation ADD PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo);
 ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLocationHistory));  
 ```  
   
- Nno 추가 코드는 SCD를 만들고 난 후 데이터 웨어하우스 로드 프로세스 중 SCD를 유지할 때 필요합니다.  
+ 데이터웨어 하우스 로딩 프로세스 중에 SCD를 유지 관리하기 위해 추가 코드가 필요하지 않습니다.  
   
  다음 그림에서는 SCD 2개(DimLocation과 DimProduct)와 팩트 테이블 1개가 포함된 간단한 시나리오에서 임시 테이블을 사용하는 방법에 대해 보여 줍니다.  
   

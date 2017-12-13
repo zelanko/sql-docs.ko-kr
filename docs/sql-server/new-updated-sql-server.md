@@ -6,27 +6,27 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: BYHAM
-ms.service: database-engine
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: 
+ms.custom: UpdArt.exe
 ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-server
-ms.prod_service: sql-non-specified
+ms.date: 12/02/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: genemi
-ms.openlocfilehash: c72e806a33cc47b3cd2f0ba4688852c7e3cb9863
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 77a97d94d005b43bf4c1a313a15a501cbe74a216
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>새로 추가되었거나 최근에 업데이트됨: SQL Server 문서
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 
 
 Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/) 설명서 웹 사이트에서 기존 문서 일부를 업데이트합니다. 이 문서에는 최근 업데이트된 문서에서 발췌한 내용이 표시됩니다. 새 문서로 연결되는 링크도 나열될 수 있습니다.
@@ -37,7 +37,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *업데이트 날짜 범위:*  &nbsp; **2017-09-11** &nbsp; 부터 &nbsp; **2017-09-27**
+- *업데이트 날짜 범위:*  &nbsp; **2017-09-28** &nbsp;부터 &nbsp; **2017-12-02**
 - *주제 영역:* &nbsp; **SQL Server**
 
 
@@ -50,7 +50,11 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-***지금은 나열할 새 문서가 없습니다.***
+1. [SQL Server 개발 파트너](partner-dev-sql-server.md)
+2. [SQL Server 고가용성 및 재해 복구 파트너](partner-hadr-sql-server.md)
+3. [SQL Server 관리 파트너](partner-management-sql-server.md)
+4. [SQL Server 모니터링 파트너](partner-monitor-sql-server.md)
+5. [SQL Server 2012 SP4 릴리스 정보](sql-server-2012-sp4-release-notes.md)
 
 
 
@@ -76,13 +80,56 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
+1. [SQL Server 2017 릴리스 정보](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-***지금은 이 영역에서 최근에 업데이트된 문서가 없습니다.***
+&nbsp;
+
+<a name="TitleNum_1"/>
+
+### <a name="1-nbsp-sql-server-2017-release-notessql-server-2017-release-notesmd"></a>1. &nbsp; [SQL Server 2017 릴리스 정보](sql-server-2017-release-notes.md)
+
+*업데이트됨: 2017-11-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!-- Source markdown line 37.  ms.author= "craigg".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 c9ac7e027e32b17bb9b54a4a878f70a70404f1cb 5b1aa8dc715fbb08d82b241f1e47f6e443b3e2fc  (PR=4032  ,  Filename=sql-server-2017-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
+
+
+
+- **해결 방법:** 먼저 컴퓨터를 재부팅하고 FILESTREAM 네트워크 공유를 사용할 수 있는지 확인합니다. 공유를 여전히 사용할 수 없으면 다음 단계를 완료합니다.
+
+    1. SQL Server 구성 관리자에서 SQL Server 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.
+    2. **FILESTREAM** 탭에서 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 선택 취소한 후 **적용**을 클릭합니다.
+    3. 원본 공유 이름으로 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 다시 선택하고 **적용**을 클릭합니다.
+
+**MDS(Master Data Services)**
+
+- **문제 및 고객에게 미치는 영향:** 사용자 권한 페이지에서 엔터티 트리 뷰의 루트 수준에 대한 권한을 부여할 때 다음 오류가 표시됩니다. `"The model permission cannot be saved. The object guid is not valid"`
+
+- **해결 방법:**
+  - 루트 수준이 아니라 트리 뷰의 하위 노드에 대한 권한을 부여합니다.
+  - 또는
+  - MDS 팀 블로그 [error applying permission on entity level(엔터티 수준에서 사용 권한 적용 오류)](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)에 설명된 스크립트를 실행합니다.
+
+**Analysis Services**
+
+- **문제 및 고객에게 미치는 영향:** 다음 원본에 대한 데이터 커넥터는 1400 호환성 수준의 표 형식 모델에서는 아직 사용할 수 없습니다.
+  - Amazon Redshift
+  - IBM Netezza
+  - Impala
+- **해결 방법:** 없습니다.
+
+- **문제 및 고객에게 미치는 영향:** 큐브 뷰를 포함하는 1400 호환성 수준의 직접 쿼리 모델은 메타데이터 쿼리 또는 검색에 실패할 수 있습니다.
+- **해결 방법:** 큐브 뷰를 제거하고 다시 배포합니다.
+
 
 
 
@@ -94,36 +141,40 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
     Then run Run-533-*.BAT
+    2017-12-02  23:00pm
 -->
 
 이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새로 추가되었거나 업데이트됨(0+1): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
-- [새로 추가되었거나 업데이트됨(4+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(17+0): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새로 추가되었거나 업데이트됨(3+0): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(1+1): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(3+14): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(1+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(87 + 0): **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [새로 추가되었거나 업데이트됨(5+4): **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(2+2): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(10+9): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(2+4): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(4+2): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새로 추가되었거나 업데이트됨(21+0): **SQL 작업 Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새로 추가되었거나 업데이트됨(5+1): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(1+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(0+1): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새로 추가되었거나 업데이트됨(0+2): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMA(Data Migration Assistant)** 문서](../dma/new-updated-dma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL에 연결** 문서](../connect/new-updated-connect.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
-- [새로 추가되었거나 업데이트됨(0+0): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 

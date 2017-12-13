@@ -2,12 +2,12 @@
 title: "HelpFile 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffaf04b7e71e993d926e151aa4855c4872698df2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7296a011a7bd02110a5ad7702a24dfdac704a918
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="helpfile-element-xmla"></a>HelpFile 요소(XMLA)
-  부모 [Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) 요소를 설명하는 도움말 파일 또는 항목의 경로 및 URL을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]경로 및 URL 도움말 파일이 나 부모를 설명 하는 항목을 포함 [오류](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

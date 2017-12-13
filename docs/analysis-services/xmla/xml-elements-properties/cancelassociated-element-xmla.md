@@ -2,12 +2,12 @@
 title: "CancelAssociated 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 65d60344142e10f0912c81fdb7062f30b740a9ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e7acf63471a2714808559829f31b3dcf2f4e7e2e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cancelassociated-element-xmla"></a>CancelAssociated 요소(XMLA)
-  부모 [Cancel](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) 요소가 연결된 모든 명령을 취소해야 할지 여부를 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]나타냅니다 여부 부모 [취소](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) 요소가 연결 된 모든 명령을 취소 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   

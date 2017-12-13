@@ -3,8 +3,11 @@ title: "다이어그램에 텍스트 주석 추가(Visual Database Tools) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fa9460c29b35522acdd052bf6d5414e8119f158
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2bf2ee6e692782bfd6bcddc4e8a70d758e002416
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>다이어그램에 텍스트 주석 추가(Visual Database Tools)
-다이어그램에 메모나 설명을 만들어 텍스트 주석을 추가할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다이어그램에 메모나 설명을 만들어 텍스트 주석을 추가할 수 있습니다.  
   
 ### <a name="to-add-text-annotations-to-diagrams"></a>다이어그램에 텍스트 주석을 추가하려면  
   

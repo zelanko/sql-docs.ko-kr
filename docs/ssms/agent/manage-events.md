@@ -3,8 +3,11 @@ title: "이벤트 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef565c7b6ad04d504ac7b861e8610664d0d916a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 816b06ef6e3e55147f3e9681fdc50065124461f7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-events"></a>이벤트 관리
-특정 오류 심각도에 도달하거나 넘어선 모든 이벤트 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 전달할 수 있습니다. 이를 *이벤트 전달*이라고 합니다. 전달 서버는 마스터 서버의 역할도 할 수 있는 전용 서버입니다. 이벤트 전달을 사용하면 서버 그룹에 대한 경고 관리를 중앙 집중화함으로써 많이 사용되는 서버의 작업을 줄일 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 특정 오류 심각도에 도달하거나 넘어선 모든 이벤트 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 전달할 수 있습니다. 이를 *이벤트 전달*이라고 합니다. 전달 서버는 마스터 서버의 역할도 할 수 있는 전용 서버입니다. 이벤트 전달을 사용하면 서버 그룹에 대한 경고 관리를 중앙 집중화함으로써 많이 사용되는 서버의 작업을 줄일 수 있습니다.  
   
 한 대의 서버가 다른 서버 그룹에 대한 이벤트를 받을 때 이벤트를 받는 서버를 *경고 관리 서버*라고 합니다. 다중 서버 환경에서는 마스터 서버를 경고 관리 서버로 지정합니다.  
   

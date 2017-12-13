@@ -3,8 +3,11 @@ title: "SQL Server 에이전트 F1 도움말 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c7b58afe13b1de3b8adcc7eccac595372563368
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d18bec6ccb6b538bc00022b8e844dda578104815
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-agent-f1-help"></a>SQL Server 에이전트 F1 도움말
-이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에 대한 F1 도움말을 제공합니다. 이러한 항목은 F1 키를 누르거나 대화 상자에서 도움말을 클릭하여 사용자 인터페이스를 통해 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에 대한 F1 도움말을 제공합니다. 이러한 항목은 F1 키를 누르거나 대화 상자에서 도움말을 클릭하여 사용자 인터페이스를 통해 볼 수 있습니다.  
   

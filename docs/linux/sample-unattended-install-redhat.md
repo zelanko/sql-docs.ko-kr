@@ -2,8 +2,8 @@
 title: "Red Hat Enterprise Linux에서 SQL Server에 대 한 자동된 설치 | Microsoft Docs"
 description: "SQL Server 스크립트 샘플-Red Hat Enterprise Linux에서 무인된 설치"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8f352dcf0f646cd259a1163a5c752f233ed16393
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux에 대 한 SQL Server 무인된 설치 스크립트 샘플:
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/01/2017
 샘플 스크립트를 파일에 저장 한 다음이 사용자 지정 하려면 스크립트에서 변수 값을 바꿉니다. 설정할 수도 있습니다 스크립팅 변수의 환경 변수로으로 스크립트 파일에서 제거 합니다.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

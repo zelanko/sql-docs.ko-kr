@@ -1,6 +1,6 @@
 ---
 title: "Linux에서 SQL Server Integration Services를 설치 합니다. | Microsoft Docs"
-description: "이 항목에서는 Linux에서 SQL Server Integration Services (SSIS)를 설치 하는 방법에 설명 합니다."
+description: "이 문서에서는 Linux에서 SQL Server Integration Services (SSIS)를 설치 하는 방법을 설명 합니다."
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 851d8dc5121eb12b7d754a95db73494adcc632b4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux에서 SQL Server Integration Services (SSIS)를 설치 합니다.
 
@@ -117,21 +117,11 @@ sudo yum update mssql-server-is
 ### <a name="remove-ssis"></a>SSIS를 제거 합니다.
 제거 하려면 `mssql-server-is`, 다음 명령을 실행할 수 있습니다.
 ```bash
-sudo yum remove msssql-server-is
+sudo yum remove mssql-server-is
 ```
-
-
-
-
-## <a name="run-a-package"></a>패키지 실행
-Linux 컴퓨터에 SSIS 패키지를 복사 합니다. 다음 명령을 사용 하 여 다음 패키지를 실행 합니다.
-
-```bash
-dtexec /F <package name> /DE <protection password>
-```
-
-
 
 ## <a name="next-steps"></a>다음 단계
 
-Linux에서 SSIS를 사용 하 여를 추출, 변환 및 데이터를 로드 하는 방법에 대 한 자세한 내용은 참조 [추출, 변환 및 SSIS와 Linux에서 SQL Server에 대 한 데이터를 로드](sql-server-linux-migrate-ssis.md)합니다.
+SSIS 패키지에서 Linux를 실행 하려면 참조 [추출, 변환 및 SSIS와 Linux에서 SQL Server에 대 한 데이터 로드](sql-server-linux-migrate-ssis.md)합니다.
+
+Linux에서 추가 SSIS 설정을 구성 하려면 참조 [ssis conf와 Linux에서 SQL Server Integration Services 구성](sql-server-linux-configure-ssis.md)합니다.

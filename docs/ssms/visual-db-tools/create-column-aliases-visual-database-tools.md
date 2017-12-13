@@ -3,8 +3,11 @@ title: "열 별칭 만들기(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e45b703dcc7a0fb756bc5288bce0615956658fd1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b29d46b7d9fe25eb74f3dbc4bc599399a14868dc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>열 별칭 만들기(Visual Database Tools)
-열 이름에 대한 별칭을 만들면 열 이름, 계산 및 요약 값에 대한 작업을 좀 더 쉽게 수행할 수 있습니다. 예를 들어, 열 별칭을 만들어 다음 작업을 수행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 열 이름에 대한 별칭을 만들면 열 이름, 계산 및 요약 값에 대한 작업을 좀 더 쉽게 수행할 수 있습니다. 예를 들어, 열 별칭을 만들어 다음 작업을 수행할 수 있습니다.  
   
 -   `(quantity * unit_price)` 같은 식이나 집계 함수에 대해 "Total Amount" 같은 열 이름을 만들 수 있습니다.  
   

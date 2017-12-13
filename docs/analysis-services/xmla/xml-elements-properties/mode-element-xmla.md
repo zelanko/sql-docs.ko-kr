@@ -2,12 +2,12 @@
 title: "Mode 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3e2047c923e6c205990c58602e1694f645ef97c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4435e7cf6957eba3ddc6ab0828a5026f59f56a92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mode-element-xmla"></a>Mode 요소(XMLA)
-  부모에서 사용할 모드를 식별 [잠금](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) 지정된 된 개체에서 잠금을 만들 때의 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]부모에서 사용할 모드를 식별 [잠금](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) 지정된 된 개체에서 잠금을 만들 때의 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

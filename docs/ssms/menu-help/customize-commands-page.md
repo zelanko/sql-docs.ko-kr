@@ -3,8 +3,11 @@ title: "사용자 지정(명령 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: adcb678da9ce46a261aa288085339e820137d616
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7fec4dfbfc43e1b0ef8716af253278192bf82747
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-commands-page"></a>사용자 지정(명령 페이지)
-이 대화 상자를 사용하여 도구 모음과 메뉴에서 명령을 추가하거나 제거할 수 있을 뿐만 아니라 도구 모음 단추 또는 메뉴 명령에 사용되는 이미지를 변경할 수 있습니다. **도구** 메뉴에서 **사용자 지정** 을 클릭한 다음 **명령** 을 클릭하면 **명령**페이지에 액세스할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 도구 모음과 메뉴에서 명령을 추가하거나 제거할 수 있을 뿐만 아니라 도구 모음 단추 또는 메뉴 명령에 사용되는 이미지를 변경할 수 있습니다. **도구** 메뉴에서 **사용자 지정** 을 클릭한 다음 **명령** 을 클릭하면 **명령**페이지에 액세스할 수 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
 **범주**  

@@ -3,8 +3,11 @@ title: "옵션(환경 - 글꼴 및 색 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 522dd3d6c6428c722ced50d677543ae91ef545b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ae02d8e4c6639555fe79ceca82ca46361648ddee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>옵션(환경 - 글꼴 및 색 페이지)
-**옵션** 대화 상자를 통해 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 여러 사용자 인터페이스 요소에 사용되는 사용자 지정 글꼴 및 색 구성표를 설정할 수 있습니다. **도구** 메뉴에서 **옵션** 을 클릭하고 **환경** 폴더를 확장한 다음 **글꼴 및 색**을 선택합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **옵션** 대화 상자를 통해 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 여러 사용자 인터페이스 요소에 사용되는 사용자 지정 글꼴 및 색 구성표를 설정할 수 있습니다. **도구** 메뉴에서 **옵션** 을 클릭하고 **환경** 폴더를 확장한 다음 **글꼴 및 색**을 선택합니다.  
   
 색 구성표 변경 내용은 설정을 변경하는 세션 동안에는 적용되지 않습니다. 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 인스턴스를 열고 변경 내용이 적용될 만한 상황을 만들어 색 변경 내용을 평가할 수 있습니다.  
   

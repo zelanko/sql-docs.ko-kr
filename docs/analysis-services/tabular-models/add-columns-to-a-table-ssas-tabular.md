@@ -2,12 +2,12 @@
 title: "테이블 (SSAS 테이블 형식)에 열 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef9aaa80dba9212e9fb22af7a1701bb6b3f17eb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>테이블에 열 추가(SSAS 테이블 형식)
-  이 항목에서는 기존 테이블에 열을 추가하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 기존 테이블에 열을 추가 하는 방법에 설명 합니다.  
   
 ## <a name="add-columns-from-the-data-source"></a>데이터 원본의 열 추가  
  데이터 원본 테이블에서 데이터를 가져오기 위해 테이블 가져오기 마법사를 사용할 경우 원본 테이블의 모든 열을 포함하거나 미리 보기 및 필터 기능을 사용하여 특정 열을 필터링하여 제외하도록 선택한 경우 해당 열 및 선택한 필터링된 데이터를 포함하는 새 테이블이 모델에서 만들어집니다. 가져올 특정 열만 지정하는 SQL 쿼리를 작성할 수도 있습니다. 그러나 나중에 추가로 원본 테이블의 다른 열을 모델 테이블에 가져오거나 DAX 수식에서 값을 유추하는 계산 열을 추가할 수 있습니다.  

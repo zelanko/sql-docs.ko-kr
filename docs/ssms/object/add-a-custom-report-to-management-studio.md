@@ -3,8 +3,11 @@ title: "Management Studio에 사용자 지정 보고서 추가 | Microsoft 문�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a46f60b50eee6f24c9f9cd20571a9954c9630560
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99bdd9671b2cea32f88b3904b3d67f698c50d085
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio에 사용자 지정 보고서 추가
-이 항목에서는 .rdl 파일로 저장되는 간단한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] 보고서를 만든 다음 이 rdl 파일을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 에 사용자 지정 보고서로 추가하는 방법에 대해 설명합니다. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 다양한 고급 보고서를 만들 수 있습니다. 이 항목을 사용하여 보고서를 만들려면 컴퓨터에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 가 설치되어 있어야 합니다. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 를 사용하여 사용자 지정 보고서를 실행하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]를 설치할 필요는 없습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 .rdl 파일로 저장되는 간단한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] 보고서를 만든 다음 이 rdl 파일을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에 사용자 지정 보고서로 추가하는 방법에 대해 설명합니다. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 다양한 고급 보고서를 만들 수 있습니다. 이 항목을 사용하여 보고서를 만들려면 컴퓨터에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 가 설치되어 있어야 합니다. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] 를 사용하여 사용자 지정 보고서를 실행하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]를 설치할 필요는 없습니다.  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>.rdl 파일로 저장되는 간단한 보고서를 만들려면  

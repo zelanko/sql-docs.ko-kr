@@ -2,12 +2,12 @@
 title: "Tables 개체 (TMSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85e0d667cc7ad89533dd9df7ced0a68e6e7ae8a7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables-object-tmsl"></a>Tables 개체 TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  모델에 포함 된 테이블을 정의 합니다. 모델 테이블에에서 있는 데이터를 가져오거나 쿼리, 외부 데이터베이스의 테이블 또는 계산된 하는 DAX 식에서 생성 된 테이블에 하거나 바인딩됩니다. 하나 이상의 테이블 내에서 **파티션** 개체 데이터 소스를 설명 합니다.  테이블 간에 **관계** 카디널리티, 필터 방향 및 관계의 다른 속성을 지정 하는 개체입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]모델에 포함 된 테이블을 정의 합니다. 모델 테이블에에서 있는 데이터를 가져오거나 쿼리, 외부 데이터베이스의 테이블 또는 계산된 하는 DAX 식에서 생성 된 테이블에 하거나 바인딩됩니다. 하나 이상의 테이블 내에서 **파티션** 개체 데이터 소스를 설명 합니다.  테이블 간에 **관계** 카디널리티, 필터 방향 및 관계의 다른 속성을 지정 하는 개체입니다.  
   
 ## <a name="object-definition"></a>개체 정의  
  모든 개체 이름, 유형, 설명, properties 컬렉션 및 주석을 포함 하 여 속성의 공통 집합을 가집니다. **테이블** 개체에는 다음과 같은 속성이 있습니다.  

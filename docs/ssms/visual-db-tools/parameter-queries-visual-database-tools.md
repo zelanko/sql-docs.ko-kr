@@ -3,8 +3,11 @@ title: "매개 변수 쿼리(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e27bce5dd7beddbe1ed41881c311be47aaff4c78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0a076e12d307e39188ca4d462fc1f65221066e8f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="parameter-queries-visual-database-tools"></a>매개 변수 쿼리(Visual Database Tools)
-경우에 따라 매번 다른 값으로 여러 번 사용할 수 있는 쿼리를 만들 필요가 있습니다. 예를 들어, 한 명의 저자가 저술한 책의 `title_ids` 를 모두 찾기 위해 쿼리하는 경우가 종종 있습니다. 각 요청에 대해 매번 저자의 ID 또는 이름만 다른 동일한 쿼리를 실행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 경우에 따라 매번 다른 값으로 여러 번 사용할 수 있는 쿼리를 만들 필요가 있습니다. 예를 들어, 한 명의 저자가 저술한 책의 `title_ids` 를 모두 찾기 위해 쿼리하는 경우가 종종 있습니다. 각 요청에 대해 매번 저자의 ID 또는 이름만 다른 동일한 쿼리를 실행할 수 있습니다.  
   
 매번 다른 값을 가질 수 있는 쿼리를 만들려면 쿼리에 매개 변수를 사용합니다. 매개 변수는 쿼리를 실행할 때 제공되는 값에 대한 자리 표시자입니다. 매개 변수를 사용하는 SQL 문은 다음과 같습니다. 여기에서 "?"는 저자의 ID에 대한 매개 변수입니다.  
   

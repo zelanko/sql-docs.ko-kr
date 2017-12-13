@@ -2,12 +2,12 @@
 title: "Business Intelligence (CSDLBI)에 대 한 CSDL 주석 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cf3fd7bb1f6e5bf907e6550fe48a3e87c6be5af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4f41d6d697299ad964912fe1df86db9b0581cdda
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>비즈니스 인텔리전스에 대한 CSDL 주석(CSDLBI)
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 CSDLBI(비즈니스 인텔리전스 포함 개념 스키마 정의 언어) 주석이라는 XML 형식으로 테이블 형식 모델 정의를 표현할 수 있도록 합니다. 이 항목에서는 CSDLBI의 개요와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델에서 CSDLBI를 사용하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Business Intelligence 주석 (CSDLBI)를 사용 하 여 개념 스키마 정의 언어를 호출 하는 XML 형식으로 테이블 형식 모델 정의의 표시를 지원 합니다. 이 항목에서는 CSDLBI의 개요와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델에서 CSDLBI를 사용하는 방법을 설명합니다.  
   
 ## <a name="understanding-the-role-of-csdl"></a>CSDL의 역할 이해  
  CSDL(개념 스키마 데이터 언어)은 엔터티, 관계 및 함수를 설명하는 XML 기반 언어입니다. CSDL은 엔터티 데이터 프레임워크의 일부로 정의됩니다. BI 주석은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 데이터 모델링을 지원하도록 설계된 확장 프로그램입니다.  

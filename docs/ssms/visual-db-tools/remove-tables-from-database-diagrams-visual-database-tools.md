@@ -3,8 +3,11 @@ title: "데이터베이스 다이어그램에서 테이블 제거(Visual Databas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 376a4251ebf017f657da06551f51d88acf4581aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 37d59a52e7845e464175870d6c725fb2e1f5a539
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools)
-데이터베이스 다이어그램에서 테이블을 제거할 수 있습니다. 테이블을 제거한 경우에도 데이터베이스는 바뀌지 않습니다. 제거한 테이블 및 해당 테이블과 다른 테이블의 관계는 데이터베이스에 계속 남아 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램에서 테이블을 제거할 수 있습니다. 테이블을 제거한 경우에도 데이터베이스는 바뀌지 않습니다. 제거한 테이블 및 해당 테이블과 다른 테이블의 관계는 데이터베이스에 계속 남아 있습니다.  
   
 ### <a name="to-remove-a-table-from-a-database-diagram"></a>데이터베이스 다이어그램에서 테이블을 제거하려면  
   

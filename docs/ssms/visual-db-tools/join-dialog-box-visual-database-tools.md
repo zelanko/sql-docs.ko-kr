@@ -3,8 +3,11 @@ title: "조인 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33fea037e80f2baf12d3b4ded38b1d9e989a4403
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3d463f00d5c86368858f18d2dfc3d72f989de88e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>조인 대화 상자(Visual Database Tools)
-이 대화 상자를 사용하면 테이블을 조인하기 위한 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **디자인** 창에서 조인 선을 선택합니다. 그런 다음 **속성** 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 테이블을 조인하기 위한 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **디자인** 창에서 조인 선을 선택합니다. 그런 다음 **속성** 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
   
 기본적으로 관련 테이블은 조인 열의 일치하는 정보를 포함하는 행에 기반하여 결과 집합을 만드는 내부 조인을 사용하여 조인됩니다. **조인** 대화 상자에서 옵션을 설정하여 다른 연산자를 기반으로 하는 조인을 지정하거나 외부 조인을 지정할 수 있습니다.  
   

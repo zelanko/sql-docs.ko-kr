@@ -3,8 +3,11 @@ title: "쿼리 결과 요약(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5eebba84a544f1b8bf426337a7413e7f51131c5d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1e53feeedbed3359c525507de49e1e41caec621d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>쿼리 결과 요약(Visual Database Tools)
-집계 쿼리를 만들 때 특정 논리 원칙이 적용됩니다. 예를 들어, 요약 쿼리에서는 개별 행의 내용을 표시할 수 없습니다. 쿼리 및 뷰 디자이너를 사용하면 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 및 [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 의 동작에 따라 이러한 원칙을 준수할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 집계 쿼리를 만들 때 특정 논리 원칙이 적용됩니다. 예를 들어, 요약 쿼리에서는 개별 행의 내용을 표시할 수 없습니다. 쿼리 및 뷰 디자이너를 사용하면 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 및 [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) 의 동작에 따라 이러한 원칙을 준수할 수 있습니다.  
   
 집계 쿼리의 원칙과 쿼리 및 뷰 디자이너의 동작을 이해하면 논리적으로 올바른 집계 쿼리를 만들 수 있습니다. 가장 우선하는 원칙은 집계 쿼리를 사용하면 요약 정보만 만들어진다는 것입니다. 따라서 나머지 대부분의 원칙은 집계 쿼리 내의 개별 데이터 열을 참조할 수 있는 방법에 대해 설명합니다.  
   

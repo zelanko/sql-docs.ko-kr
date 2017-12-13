@@ -2,9 +2,12 @@
 title: "템플릿을 사용하여 스크립트 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fc7fd3fbed4069c45382c404fe1a8b65b81f366f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e042e4083d3e62543cee463e2d8456f162b945aa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-3-1---create-scripts-using-templates"></a>3-1단원 - 템플릿을 사용하여 스크립트 만들기
-Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 많은 일반 태스크에 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하는 스크립트 템플릿을 다수 제공합니다. 이러한 템플릿에는 테이블 이름과 같이 사용자가 제공한 값에 대한 매개 변수가 포함됩니다. 매개 변수를 사용하면 이름을 한 번 입력한 다음 스크립트 내에서 필요한 모든 위치에 자동으로 복사할 수 있습니다. 사용자 지정 템플릿을 직접 작성하여 가장 자주 작성하는 스크립트를 지원할 수 있습니다. 템플릿을 이동하거나 템플릿을 보관할 새 폴더를 만들어 템플릿 트리를 다시 구성할 수도 있습니다. 다음 연습에서는 데이터 정렬 템플릿을 지정하여 템플릿으로 데이터베이스를 만듭니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 많은 일반 태스크에 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하는 스크립트 템플릿을 다수 제공합니다. 이러한 템플릿에는 테이블 이름과 같이 사용자가 제공한 값에 대한 매개 변수가 포함됩니다. 매개 변수를 사용하면 이름을 한 번 입력한 다음 스크립트 내에서 필요한 모든 위치에 자동으로 복사할 수 있습니다. 사용자 지정 템플릿을 직접 작성하여 가장 자주 작성하는 스크립트를 지원할 수 있습니다. 템플릿을 이동하거나 템플릿을 보관할 새 폴더를 만들어 템플릿 트리를 다시 구성할 수도 있습니다. 다음 연습에서는 데이터 정렬 템플릿을 지정하여 템플릿으로 데이터베이스를 만듭니다.  
   
 ## <a name="using-templates"></a>템플릿 사용  
   

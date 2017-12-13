@@ -3,8 +3,11 @@ title: "쿼리 열기(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b9780d3afacfb73a9eabe244206117311029ff9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c2efbc1e30f7cd67529e0df143e4ac47c5ada294
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-queries-visual-database-tools"></a>쿼리 열기(Visual Database Tools)
-**열기** 명령을 사용하여 쿼리 및 뷰 디자이너에서 기존 쿼리를 열 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **열기** 명령을 사용하여 쿼리 및 뷰 디자이너에서 기존 쿼리를 열 수 있습니다.  
   
 ### <a name="to-open-a-query-in-all-panes"></a>모든 창에서 쿼리를 열려면  
   

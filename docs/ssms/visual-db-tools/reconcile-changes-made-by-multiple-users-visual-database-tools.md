@@ -3,8 +3,11 @@ title: "여러 사용자가 변경한 내용 조정(Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00eeab1dbe74e77189136b200b4f1ddfe50e218b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>여러 사용자가 변경한 내용 조정(Visual Database Tools)
-다중 사용자 환경에서는 동일한 개체를 여러 사용자가 동시에 변경할 수 있습니다. 이러한 상황은 테이블 또는 데이터베이스 다이어그램 디자이너에서 개체 구조에 대한 작업을 수행 중일 때 발생할 수도 있고, 쿼리 및 뷰 디자이너의 결과 창에 반환된 결과의 값에 대해 발생할 수도 있습니다. 이 경우 충돌이 발생할 수 있으므로 적절한 해결책이 필요합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다중 사용자 환경에서는 동일한 개체를 여러 사용자가 동시에 변경할 수 있습니다. 이러한 상황은 테이블 또는 데이터베이스 다이어그램 디자이너에서 개체 구조에 대한 작업을 수행 중일 때 발생할 수도 있고, 쿼리 및 뷰 디자이너의 결과 창에 반환된 결과의 값에 대해 발생할 수도 있습니다. 이 경우 충돌이 발생할 수 있으므로 적절한 해결책이 필요합니다.  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>테이블 또는 데이터베이스 다이어그램 디자이너의 충돌  
 예를 들어, 테이블 디자이너에서 현재 사용자가 작업 중인 것과 동일한 테이블이나 관련 테이블을 다른 사용자가 삭제하거나 이름을 변경할 수 있습니다. 테이블을 저장하려고 하면 [데이터베이스 변경 감지 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) 가 표시되어 사용자가 테이블을 연 이후 데이터베이스가 업데이트되었음을 알려 줍니다.  

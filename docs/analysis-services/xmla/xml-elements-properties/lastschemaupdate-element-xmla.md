@@ -2,12 +2,12 @@
 title: "LastSchemaUpdate 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a880dfaa3a5349cd3c528856acd99afdb38557ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c2826cf2aaf9b175ee70c03de79deda645a754c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lastschemaupdate-element-xmla"></a>LastSchemaUpdate 요소(XMLA)
-  부모 [Cube](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md) 요소가 나타내는 큐브의 메타데이터가 마지막으로 업데이트된 날짜 및 시간을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]날짜와 부모 시간을 나타내는 큐브의 메타 데이터가 들어 [큐브](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md) 요소를 마지막으로 업데이트 합니다.  
   
 ## <a name="syntax"></a>구문  
   

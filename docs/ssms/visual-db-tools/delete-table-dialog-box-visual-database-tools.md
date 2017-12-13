@@ -3,8 +3,11 @@ title: "테이블 삭제 대화 상자(Visual Database Tools) | Microsoft 문서
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c937c391ddcb9008e9ff04b64e9a37780b6c3b5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fa3d15fc0837ede02c35858bbd4ae5125fb050bb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>테이블 삭제 대화 상자(Visual Database Tools)
-이 대화 상자를 사용하면 레코드를 삭제할 테이블을 지정할 수 있습니다. 이 대화 상자는 다이어그램 창에 두 개 이상의 테이블이 표시되어 있는 상태에서 쿼리 형식을 DELETE 쿼리로 변경하는 경우에 나타납니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 레코드를 삭제할 테이블을 지정할 수 있습니다. 이 대화 상자는 다이어그램 창에 두 개 이상의 테이블이 표시되어 있는 상태에서 쿼리 형식을 DELETE 쿼리로 변경하는 경우에 나타납니다.  
   
 레코드를 삭제하려는 테이블을 선택한 다음 **확인**을 선택합니다.  
   

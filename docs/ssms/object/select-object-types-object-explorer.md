@@ -3,8 +3,11 @@ title: "개체 유형 선택(개체 탐색기) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 932bc1a37dc6ab60b8ac23c55ea14cbad7628a8e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65b606b3665606450d1e45b2b5e81f850b8a2b53
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-object-types-object-explorer"></a>개체 유형 선택(개체 탐색기)
-이 대화 상자를 사용하여 **개체 선택** 대화 상자에 나타나는 개체 유형을 지정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 **개체 선택** 대화 상자에 나타나는 개체 유형을 지정할 수 있습니다.  
   
 ## <a name="select-the-types-of-objects-to-find"></a>찾을 개체 유형 선택  
 **개체 유형** 목록에서 항목을 선택합니다. 목록에는 해당 동작 유형에 사용할 수 있는 항목만 포함됩니다. 예를 들어 새 개체의 소유자를 선택하면 **로그인** 만 나타납니다.  

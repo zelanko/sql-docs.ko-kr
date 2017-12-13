@@ -2,12 +2,12 @@
 title: "큐브 뷰 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 36e28c1211017a46a66ce7c7ef519eb887248c8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fdbede4868884656f3dbf9e7ff8d37e3019ed12
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives"></a>큐브 뷰
-  테이블 형식 모델에서 큐브 뷰는 모델의 보기 가능한 하위 집합을 정의하는데, 이를 통해 모델을 집중해서 보거나 비즈니스 또는 응용 프로그램의 관점에서 파악할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]큐브 뷰, 테이블 형식 모델에서 모델의 포커스가 있는, 비즈니스 또는 응용 프로그램별 뷰포인트를 제공 하는 모델의 볼 수 있는 하위 집합을 정의 합니다.  
   
 ##  <a name="bkmk_understanding"></a> 이점  
  테이블 형식 모델은 너무 복잡해서 사용자가 탐색하기 어려울 수 있습니다. 단일 모델이 여러 개의 테이블, 측정값 및 차원을 포함하는 전체 데이터 웨어하우스의 내용을 나타낼 수 있습니다. 이러한 복잡성은 주로 비즈니스 인텔리전스 및 보고 요구 사항을 충족하기 위해 모델의 일부만 사용하는 사용자에게는 부담이 될 수 있습니다.  

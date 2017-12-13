@@ -2,12 +2,12 @@
 title: E Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 51a4b4a76054aa5c425533561add9ca8405039e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db9aa989278b0bcdc94ccd3fa31de9cb46d58030
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="type-element-xmla"></a>Type 요소(XMLA)
-  수행 될 처리 유형을 결정는 [프로세스](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]수행 될 처리 유형을 결정는 [프로세스](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

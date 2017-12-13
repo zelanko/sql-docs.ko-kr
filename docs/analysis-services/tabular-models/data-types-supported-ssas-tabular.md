@@ -2,12 +2,12 @@
 title: "Analysis Services 테이블 형식 모델에서 지원 되는 데이터 형식 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79512ded963b6568346c261b69c100b77e03bc74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-types-supported-in-tabular-models"></a>테이블 형식 모델에서 지원 되는 데이터 형식
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  이 문서에서는 테이블 형식 모델에서 사용할 수 있는 데이터 형식에 대해 설명하고 DAX(Data Analysis Expressions) 수식에서 데이터를 계산하거나 사용할 때 암시적으로 수행되는 데이터 형식 변환에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 문서 테이블 형식 모델에서 사용할 수 있는 데이터 형식을 설명 하 고 데이터를 계산 하거나 분석 DAX (Data Expressions) 수식에서 사용 하는 경우 데이터 형식의 암시적 변환에 설명 합니다.  
 
   
 ##  <a name="bkmk_data_types"></a>테이블 형식 모델에서 사용 되는 데이터 형식  

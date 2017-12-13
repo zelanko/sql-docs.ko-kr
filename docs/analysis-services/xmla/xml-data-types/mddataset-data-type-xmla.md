@@ -2,12 +2,12 @@
 title: "MDDataSet 데이터 형식 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d6daeb5202c0f1078eabd1a5b820514b25de712c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5fe67716b8c818e5a5784ea6599b1a045e7f8a44
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet 데이터 형식(XMLA)
-  반환 된 다차원 데이터를 나타내는 파생된 데이터 형식을 정의 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]반환 된 다차원 데이터를 나타내는 파생된 데이터 형식을 정의 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
   
  **Namespace** :-microsoft-com:xml-분석: mddataset  
   

@@ -3,8 +3,11 @@ title: "쿼리 및 뷰 디자이너 창 표시(Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c0030d21dc3e2c73702d708964b57cec4fa08a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 14268591a142263a159d879ea821a8a395d33c1f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>쿼리 및 뷰 디자이너 창 표시(Visual Database Tools)
-쿼리 및 뷰 디자이너는 다이어그램 창, 조건 창, SQL 창, 결과 창이라는 네 개의 별도 창으로 구성되어 있습니다. 일반적으로 뷰를 열거나 새 쿼리를 만들 때는 네 개의 창이 모두 열리지만 쿼리 및 뷰 디자이너가 열려 있는 상태에서 이러한 창을 임의로 선택하여 열 수도 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 및 뷰 디자이너는 다이어그램 창, 조건 창, SQL 창, 결과 창이라는 네 개의 별도 창으로 구성되어 있습니다. 일반적으로 뷰를 열거나 새 쿼리를 만들 때는 네 개의 창이 모두 열리지만 쿼리 및 뷰 디자이너가 열려 있는 상태에서 이러한 창을 임의로 선택하여 열 수도 있습니다.  
   
 ### <a name="to-display-query-and-view-designer-panes"></a>쿼리 및 뷰 디자이너 창을 표시하려면  
   

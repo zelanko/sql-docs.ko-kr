@@ -3,8 +3,11 @@ title: "SQL Server Management Studio 환경 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e590f12bafa1c027487ab7a096b1ff6d4a5cf44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 084ad027bbf4bf66f3883cedfdd2346cd720e4e3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 환경
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]에서 쿼리를 관리 및 개발하기 위한 풍부한 환경을 제공합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]에서 쿼리를 관리 및 개발하기 위한 풍부한 환경을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [일반 사용자 인터페이스 요소](../ssms/general-user-interface-elements.md)  

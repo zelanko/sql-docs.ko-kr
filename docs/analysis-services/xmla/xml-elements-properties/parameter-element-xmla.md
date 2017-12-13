@@ -2,12 +2,12 @@
 title: "Parameter 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9eeead961dda269f0491d8627c75664a27aea5ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 999d825ac5e0edc0ee205533670552aafbede151
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parameter-element-xmla"></a>Parameter 요소(XMLA)
-  [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드에서 사용되는 매개 변수의 이름 및 값을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]이름 및에서 사용 하는 매개 변수 값을 포함 된 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   

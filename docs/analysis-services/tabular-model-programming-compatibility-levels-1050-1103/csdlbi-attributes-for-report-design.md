@@ -2,12 +2,12 @@
 title: "보고서 디자인의 CSDLBI 특성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>보고서 디자인의 CSDLBI 특성
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  이 섹션에서는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 쿼리 디자인에 영향을 주는 테이블 형식 모델링의 CSDL 확장에 있는 특성에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 영향을 주는 테이블 형식 모델링 하기 위한 CSDL 확장에의 특성을 설명 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 쿼리 디자인.  
   
 ## <a name="model-attributes"></a>Model Attributes  
  이러한 특성은 CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) 요소의 하위 요소에 정의됩니다.  
@@ -71,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**맞춤**|Enum|테이블 형식 프레젠테이션에서 필드 값을 정렬하는 방법을 나타내는 값입니다. 가능한 값은 **Default**, **Center**, **Left**, **Right**입니다. 생략하면 기본값이 필드의 데이터 형식에 따라 맞춤을 결정합니다.|  
 |**FormatString**|텍스트|기본적으로 필드 값의 서식을 지정하는 방법을 나타내는 .NET 형식입니다. 생략하면 다음 형식이 사용됩니다.<br /><br /> -날짜/시간 필드: 국가별 짧은 날짜 또는 "d"<br /><br /> -집계 함수 부동 소수점 필드 및 기본 정수 필드: 국가별 숫자 또는 "n"<br /><br /> -집계 함수가 없는 기본 정수: 국가별 10 진수 또는 "d"<br /><br /> 다른 모든 유형의 필드에는 형식 문자열이 적용되지 않습니다.|  
 |**단위**|텍스트|단위를 표현하기 위해 필드 값에 적용되는 기호입니다. 생략하면 단위는 알 수 없는 것으로 간주됩니다.|  
-|**너비**|정수|테이블 형식 프레젠테이션에서 필드 값을 표시하기 위해 예약해야 하는 기본 설정 너비(문자 수)입니다. 생략하면 기본 너비는 필드의 데이터 형식을 기반으로 합니다.|  
+|**Width**|정수|테이블 형식 프레젠테이션에서 필드 값을 표시하기 위해 예약해야 하는 기본 설정 너비(문자 수)입니다. 생략하면 기본 너비는 필드의 데이터 형식을 기반으로 합니다.|  
 |**SortDirection**|Enum|필드 값이 일반적으로 정렬되는 방법을 나타내는 값입니다. 가능한 값은 **Default**, **Ascending**, **Descending**입니다. 생략하면 정렬 방향을 할당하는 기본값은 필드의 데이터 형식을 기반으로 합니다.|  
 |**IsRightToLeft**|Boolean|필드에 오른쪽에서 왼쪽으로 읽어야 하는 텍스트가 포함되는지 여부를 나타냅니다. 생략하면 모델 설정이 사용됩니다.|  
 |**OrderBy**|MemberRef|이 필드 값의 정렬 순서를 정의하는 모델 내 다른 필드에 대한 참조입니다. 두 필드의 값이 1:1 매핑을 가지거나 정렬 동작이 정의되지 않습니다. 생략하면 필드는 필드 고유 값에 따라 정렬됩니다.|  

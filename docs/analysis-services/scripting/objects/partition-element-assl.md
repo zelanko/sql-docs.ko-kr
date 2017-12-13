@@ -2,12 +2,12 @@
 title: "Partition 요소 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e8ab9845b93fe0b4e3ea8afdd9ec1bc4aaa2c0ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 44ef7ac50896139d23317d3f387439470dc22b62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partition-element-assl"></a>Partition 요소(ASSL)
-  파티션을 정의 [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) 요소 또는의-라인 파티션 바인딩을 [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]파티션을 정의 [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) 요소 또는의-라인 파티션 바인딩을 [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

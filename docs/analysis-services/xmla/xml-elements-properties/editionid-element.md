@@ -2,12 +2,12 @@
 title: "EditionId 요소 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fc0e945c284cf0263f6822cb79d0d9d81dab2c3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a54cd75773afa2af6c378ba30da251351995547
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="editionid-element"></a>EditionId 요소
-  부모의 숫자 버전 식별자 코드를 포함 [서버 요소 (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]부모의 숫자 버전 식별자 코드를 포함 [서버 요소 (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

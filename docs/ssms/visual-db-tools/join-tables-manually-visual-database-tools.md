@@ -3,8 +3,11 @@ title: "테이블 수동 조인(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b73ed044ca4610040bfb31e6108ebd2b51a47c67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f9fe3b4dd3fc65924ef308ca5ce817c9a008fc1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>테이블 수동 조인(Visual Database Tools)
-쿼리에 둘 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 데이터베이스에 저장된 테이블 관계 정보나 공용 데이터를 기반으로 테이블을 조인합니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)을 참조하세요. 하지만 쿼리 및 뷰 디자이너가 테이블을 자동으로 조인하지 않은 경우나 테이블간에 추가로 조인 조건을 만들려는 경우에는 테이블을 수동으로 조인하면 됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리에 둘 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 데이터베이스에 저장된 테이블 관계 정보나 공용 데이터를 기반으로 테이블을 조인합니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)을 참조하세요. 하지만 쿼리 및 뷰 디자이너가 테이블을 자동으로 조인하지 않은 경우나 테이블간에 추가로 조인 조건을 만들려는 경우에는 테이블을 수동으로 조인하면 됩니다.  
   
 같은 정보를 포함하는 열뿐만 아니라 임의의 두 열을 서로 비교하여 조인을 만들 수 있습니다. 데이터베이스에 `titles` 와 `roysched`라는 두 개의 테이블이 있는 경우 `ytd_sales` 테이블에 있는 `titles` 열의 값을 `lorange` 테이블에 있는 `hirange` 및 `roysched` 열의 값과 비교할 수 있습니다. 이 조인을 만들면 연간 매출 누계가 사용료 지급액의 최고/최저 범위 사이에 있는 제목을 찾을 수 있습니다.  
   

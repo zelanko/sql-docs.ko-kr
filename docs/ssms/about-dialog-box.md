@@ -3,8 +3,11 @@ title: "정보 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 168e3d0313a2bd94538f06d1fdca7fd95758bb51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e3a56399db397a6415a96b887b007504a063c738
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="about-dialog-box"></a>정보 대화 상자
-**정보** 대화 상자에는 제품 정보가 제공되며 이 대화 상자에서 제품을 실행 중인 시스템에 대한 정보를 액세스할 수 있습니다. 평가본의 경우 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 항목은 설치가 만료되기 전까지 남은 일 수를 나열합니다. 이 대화 상자는 **도움말** 메뉴에서 사용할 수 있습니다.  
+# <a name="about-dialog-box"></a>대화 상자 정보
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **정보** 대화 상자에는 제품 정보가 제공되며 이 대화 상자에서 제품을 실행 중인 시스템에 대한 정보를 액세스할 수 있습니다. 평가본의 경우 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 항목은 설치가 만료되기 전까지 남은 일 수를 나열합니다. 이 대화 상자는 **도움말** 메뉴에서 사용할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
 **구성 요소 이름**  

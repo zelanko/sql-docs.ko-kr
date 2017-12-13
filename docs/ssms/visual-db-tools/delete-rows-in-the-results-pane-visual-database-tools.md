@@ -3,8 +3,11 @@ title: "결과 창에서 행 삭제(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 806a4af5df592567fbcec5ed087f7e1bdf15104e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3084fd3358aa359ddd16a20c344078a5933dabd3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 행 삭제(Visual Database Tools)
-데이터베이스에서 레코드를 삭제하려면 결과 창에서 행을 삭제합니다. 삭제 쿼리를 사용하면 행 전체를 삭제할 수 있습니다. 자세한 내용은 [삭제 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)를 참조하세요. 결과 창에서 행을 제거만 하려면 쿼리 조건을 변경합니다. 자세한 내용은 [검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스에서 레코드를 삭제하려면 결과 창에서 행을 삭제합니다. 삭제 쿼리를 사용하면 행 전체를 삭제할 수 있습니다. 자세한 내용은 [삭제 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)를 참조하세요. 결과 창에서 행을 제거만 하려면 쿼리 조건을 변경합니다. 자세한 내용은 [검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)를 참조하세요.  
   
 ### <a name="to-delete-a-row-or-rows"></a>하나 이상의 행을 삭제하려면  
   

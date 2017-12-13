@@ -3,8 +3,11 @@ title: "SQL Server Management Studio 웹 브라우저 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc45f6a01ced1d9f7c8c0ec26f29f57a925f4e6c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f2b2fef9625075583b267404da82567d7a562e21
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio-web-browser"></a>SQL Server Management Studio 웹 브라우저
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 는 [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer 버전을 호스팅합니다. 이 웹 브라우저를 사용하면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]에 있으면서 URL을 탐색하고 MSDN Library 도움말 항목을 볼 수 있습니다. **보기** 메뉴에서 **웹 브라우저** 를 가리킨 다음 **브라우저 표시**를 클릭하여 웹 브라우저에 액세스할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]는 [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer 버전을 호스팅합니다. 이 웹 브라우저를 사용하면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]에 있으면서 URL을 탐색하고 MSDN Library 도움말 항목을 볼 수 있습니다. **보기** 메뉴에서 **웹 브라우저** 를 가리킨 다음 **브라우저 표시**를 클릭하여 웹 브라우저에 액세스할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [일반 사용자 인터페이스 요소](../ssms/general-user-interface-elements.md)  

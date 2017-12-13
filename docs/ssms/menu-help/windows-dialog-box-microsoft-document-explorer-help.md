@@ -3,8 +3,11 @@ title: "창 대화 상자(Microsoft Document Explorer 도움말) | Microsoft 문
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b84b957abb58629d8d722dcae65cb934cab969a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2078ea79f44f7dbc8a1072497a6c9aea9538db6c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>창 대화 상자(Microsoft Document Explorer 도움말)
-이 대화 상자를 사용하여 편집기와 디자이너에서 열리는 문서를 표시하고 닫으며 정렬할 수 있습니다. **창** 메뉴에서 **창** 을 클릭하여 이 대화 상자를 표시할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 편집기와 디자이너에서 열리는 문서를 표시하고 닫으며 정렬할 수 있습니다. **창** 메뉴에서 **창** 을 클릭하여 이 대화 상자를 표시할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
 **이름**  

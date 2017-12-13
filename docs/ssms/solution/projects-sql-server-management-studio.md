@@ -3,8 +3,11 @@ title: "프로젝트(SQL Server Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57d972b2af70f5ffa7b7d2682ea235f062fa27c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 485a950448f582f332af028eaa2edb69fb065043
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="projects-sql-server-management-studio"></a>프로젝트(SQL Server Management Studio)
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 프로젝트는 데이터베이스 관리 및 개발을 위해 함께 저장할 수 있는 논리적으로 연관된 스크립트 및 파일 모음입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 프로젝트는 데이터베이스 관리 및 개발을 위해 함께 저장할 수 있는 논리적으로 연관된 스크립트 및 파일 모음입니다.  
   
 ## <a name="script-project-overview"></a>스크립트 프로젝트 개요  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스크립트 프로젝트는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]의 솔루션 탐색기 구성 요소에 표시됩니다. 스크립트 프로젝트는 없거나 1개 이상의 프로젝트 파일을 포함할 수 있습니다. 프로젝트를 솔루션에 추가하거나 솔루션 내에서 둘 이상의 프로젝트를 결합할 수 있습니다.  

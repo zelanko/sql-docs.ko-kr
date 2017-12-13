@@ -3,8 +3,11 @@ title: "저장 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a568b3dae2f510365d1db4a838ae58a02eb177a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ecfaae0da3917b08db87173dfc2b7842e2972ae0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>저장 대화 상자(Visual Database Tools)
-이 대화 상자는 테이블 디자이너에서 다른 테이블에도 영향을 주는 작업 내용을 저장할 때 나타납니다. 이 대화 상자를 사용하면 저장되는 테이블을 확인할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자는 테이블 디자이너에서 다른 테이블에도 영향을 주는 작업 내용을 저장할 때 나타납니다. 이 대화 상자를 사용하면 저장되는 테이블을 확인할 수 있습니다.  
   
 > [!NOTE]  
 > 테이블 디자이너에서 테이블에 대해 변경한 내용을 데이터베이스에 커밋하려면 테이블을 저장해야 합니다. 테이블을 저장한 후에는 변경 내용을 취소할 수 없습니다. 저장되지 않은 변경 내용을 취소하려면 열려 있는 모든 테이블을 저장하지 않은 채 닫습니다.  

@@ -3,8 +3,11 @@ title: "찾을 수 없는 이름 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0739f7cecd65a4cfec914c0531af070535582829
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d8e728ad8a8c65010cdd3f04298bd3d6d33ecd22
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="name-not-found-dialog-box"></a>찾을 수 없는 이름 대화 상자
-대화 상자에 있는 개체 이름 중 하나 이상을 찾을 수 없습니다. 계속하려면 옵션을 선택합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 대화 상자에 있는 개체 이름 중 하나 이상을 찾을 수 없습니다. 계속하려면 옵션을 선택합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
 **정보를 수정하고 다시 검색합니다.**  

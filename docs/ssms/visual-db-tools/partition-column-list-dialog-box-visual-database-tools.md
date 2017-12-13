@@ -3,8 +3,11 @@ title: "분할 열 목록 대화 상자(Visual Database Tools) | Microsoft 문�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a23fcd46b6f3619695e6e192376214591925786c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bf4032ba86ee8cdb2b2ee32d787f8aa505f34a60
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>분할 열 목록 대화 상자(Visual Database Tools)
-테이블에 관련된 분할 구성표가 있으면 이 대화 상자를 사용하여 분할 함수를 적용할 열을 선택할 수 있습니다. 함수가 작동하기 위해서는 전환한 열의 데이터 형식이 분할 함수에 정의되어 있는 열의 데이터 형식과 동일해야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 테이블에 관련된 분할 구성표가 있으면 이 대화 상자를 사용하여 분할 함수를 적용할 열을 선택할 수 있습니다. 함수가 작동하기 위해서는 전환한 열의 데이터 형식이 분할 함수에 정의되어 있는 열의 데이터 형식과 동일해야 합니다.  
   
 분할 구성표와 함수에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.  
   

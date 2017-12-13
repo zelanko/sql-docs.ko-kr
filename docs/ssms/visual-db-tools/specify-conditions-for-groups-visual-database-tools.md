@@ -3,8 +3,11 @@ title: "그룹 조건 지정(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb01fbc4f3824fa8f064e5b99b22fc7c82ba1e1d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 83c0a7bd21d7af608a3d8f31a2eeb9e08554d20b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>그룹 조건 지정(Visual Database Tools)
-HAVING 절에서 그룹 전체에 적용되는 조건을 지정하여 쿼리에 표시되는 그룹을 제한할 수 있습니다. 데이터를 그룹화하고 집계한 후에 HAVING 절의 조건이 적용됩니다. 쿼리에는 이 조건에 맞는 그룹만 표시됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] HAVING 절에서 그룹 전체에 적용되는 조건을 지정하여 쿼리에 표시되는 그룹을 제한할 수 있습니다. 데이터를 그룹화하고 집계한 후에 HAVING 절의 조건이 적용됩니다. 쿼리에는 이 조건에 맞는 그룹만 표시됩니다.  
   
 예를 들어, `titles` 테이블의 각 출판사에서 발행한 모든 도서의 평균 가격 중에서 $10.00를 초과하는 평균 가격만 표시할 수 있습니다. 이 경우, `AVG(price) > 10`과 같은 조건을 사용하여 HAVING 절을 지정합니다.  
   

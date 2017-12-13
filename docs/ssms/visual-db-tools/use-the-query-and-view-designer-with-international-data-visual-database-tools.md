@@ -3,8 +3,11 @@ title: "쿼리 및 뷰 디자이너에 국가별 데이터 사용 | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 96713730d6dadca1681e571200db51cee8f30af4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0b88c7cbc8f2976c79017ebca218eb79cbfcc588
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>쿼리 및 뷰 디자이너에 국가별 데이터 사용(Visual Database Tools)
-[쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 는 모든 언어 및 모든 Windows 운영 체제 버전에서 사용할 수 있습니다. 다음 지침은 이러한 상황에서 나타나는 차이점을 요약한 것이며, 국가별 응용 프로그램에서 데이터를 관리하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 모든 언어 및 모든 Windows 운영 체제 버전에서 사용할 수 있습니다. 다음 지침은 이러한 상황에서 나타나는 차이점을 요약한 것이며, 국가별 응용 프로그램에서 데이터를 관리하는 방법에 대해 설명합니다.  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>조건 창 및 SQL 창의 지역화 정보  
 조건 창을 사용하여 쿼리를 만드는 경우 사용자의 컴퓨터에 설정된 Windows 국가별 설정에 맞는 형식으로 정보를 입력할 수 있습니다. 예를 들어, 날짜를 검색하는 경우 아래 사항을 제외하고는 편의에 따라 어떤 형식으로든 조건 열에 날짜를 입력할 수 있습니다.  

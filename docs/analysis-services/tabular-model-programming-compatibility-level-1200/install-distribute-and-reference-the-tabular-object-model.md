@@ -2,12 +2,12 @@
 title: "설치 및 배포 하 고 테이블 형식 개체 모델 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>설치 및 배포 하 고 테이블 형식 개체 모델 참조
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-이 문서를 다운로드, 참조 및 Analysis Services 테이블 형식 개체 모델 (TOM) 만들기 및 관리 코드에서 데이터베이스 및 테이블 형식 모델 관리에 대 한 C# 라이브러리를 재배포 하는 방법을 설명 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 문서를 다운로드, 참조 및 Analysis Services 테이블 형식 개체 모델 (TOM) 만들기 및 관리 코드에서 데이터베이스 및 테이블 형식 모델 관리에 대 한 C# 라이브러리를 재배포 하는 방법을 설명 합니다.  
   
 TOM에 SQL Server 2016와 함께 제공 되는 AMO 클라이언트 라이브러리 (Microsoft.AnalysisServices.dll)의 확장입니다. SQL Server 2016 버전에서 테이블 형식 메타 데이터 엔진을 대상으로 하는 테이블 형식 모델과 함께 작동 합니다. TOM를 사용 하려면 해당 모델과 데이터베이스는 호환성 수준 1200 이상 이어야 합니다.  
 

@@ -3,8 +3,11 @@ title: "쿼리 형식(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19546151155392376a2c86195e3c77e9a0832f73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f5172dd65f727d4829dd92b1aa5f54ce0f8bea89
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="types-of-queries-visual-database-tools"></a>쿼리 형식(Visual Database Tools)
-쿼리 및 뷰 디자이너에서는 선택, 결과 삽입, 값 삽입, 업데이트, 삭제 및 테이블 만들기 쿼리 형식에 대한 기본적인 기능을 제공하고 UNION 쿼리, 전체 텍스트 검색 쿼리 및 CASE 식 쿼리도 지원합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 및 뷰 디자이너에서는 선택, 결과 삽입, 값 삽입, 업데이트, 삭제 및 테이블 만들기 쿼리 형식에 대한 기본적인 기능을 제공하고 UNION 쿼리, 전체 텍스트 검색 쿼리 및 CASE 식 쿼리도 지원합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [지원되는 쿼리 형식&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  

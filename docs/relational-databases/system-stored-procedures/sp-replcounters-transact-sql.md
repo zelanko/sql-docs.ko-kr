@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3383f50142e04966a24515adcf08efbc4c5c60bc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 64ce16cd3b23c1c0bf0526619f90c7028ff80df6
+ms.sourcegitcommit: 0431de135547f5aff48d6cad57090717f27bc063
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_replcounters
 |**복제 속도 trans/sec**|**float**|배포 데이터베이스로 전달된 초 당 평균 트랜잭션 수입니다.|  
 |**복제 대기 시간**|**float**|트랜잭션이 배포되기 전에 로그 내에 머무는 평균 시간을 초 단위로 표시한 것입니다.|  
 |**Replbeginlsn**|**binary(10)**|로그에서 현재 잘라낼 지점의 LSN(로그 시퀀스 번호)입니다.|  
-|**Replendlsn**|**binary(10)**|배포 데이터베이스로 전달되기 위해 대기하고 있는 다음 커밋 레코드의 LSN입니다.|  
+|**Replnextlsn**|**binary(10)**|배포 데이터베이스로 전달되기 위해 대기하고 있는 다음 커밋 레코드의 LSN입니다.|  
   
 ## <a name="remarks"></a>주의  
  **sp_replcounters** 트랜잭션 복제에 사용 됩니다.  

@@ -3,8 +3,11 @@ title: "작업 범주 속성 - 새 작업 범주 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b26f1ff05b93b81aed61a7ee0ea0aa7beece47fb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 622a0451534174884d44259a329702cabaff2528
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="job-categories-properties---new-job-category"></a>작업 범주 속성 - 새 작업 범주
-하나의 작업 범주 또는 모든 작업 범주에 속해 있는 작업이 나열되며 새 작업 범주를 추가할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 하나의 작업 범주 또는 모든 작업 범주에 속해 있는 작업이 나열되며 새 작업 범주를 추가할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
 **이름**  

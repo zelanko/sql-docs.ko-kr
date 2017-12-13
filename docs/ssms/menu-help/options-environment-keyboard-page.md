@@ -3,8 +3,11 @@ title: "옵션(환경 - 키보드 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6f0a390c8492d331de1524ed371dddcdf28ebc8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 27217dad35a1fc323c92cd0db69c867fcbc7a766
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---keyboard-page"></a>옵션(환경 - 키보드 페이지)
-**옵션** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 키보드 구성표를 사용자 지정할 수 있습니다. 이 옵션을 사용하여 키보드 구성표를 선택할 수 있습니다. 이 페이지를 표시하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 폴더를 선택한 다음 **키보드**를 클릭합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **옵션** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 키보드 구성표를 사용자 지정할 수 있습니다. 이 옵션을 사용하여 키보드 구성표를 선택할 수 있습니다. 이 페이지를 표시하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 폴더를 선택한 다음 **키보드**를 클릭합니다.  
   
 **키보드 구성표** 드롭다운 목록에 사용 가능한 바로 가기 키 모음이 표시됩니다. 특정 구성표를 로드하려면 목록에서 선택합니다. **옵션** 대화 상자를 닫으려면 **확인**을 클릭합니다. 선택한 구성표가 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]로 로드됩니다.  
   

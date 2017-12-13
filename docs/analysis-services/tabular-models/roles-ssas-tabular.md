@@ -2,12 +2,12 @@
 title: "역할 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6bdb45605383bb567f8b3f1b313f5ac9b7600b81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="roles"></a>역할
-  테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델에서 역할을 모델에 대 한 멤버 권한을 정의 합니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다. 
   
  SQL Server Analysis Services에 대 한 역할에 Windows 사용자 이름 또는 Windows 그룹 및 사용 권한 (읽기, 프로세스, 관리자)을 통해 사용자 멤버가 포함 됩니다. Azure Analysis Services에 대 한 사용자가 Azure Active Directory와 사용자 이름 이어야 하며 조직 메일 주소 또는 UPN으로 지정 된 그룹 이어야 합니다. 
   

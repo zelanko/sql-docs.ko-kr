@@ -4,7 +4,7 @@ description: "이 항목 릴리스 정보를 포함 하 고 SQL Server 2017 Linu
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 11/28/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
 
@@ -148,7 +148,7 @@ SQL Server 2017의 GA (일반 공급) 릴리스입니다. 이 릴리스에 대 �
 
 ### <a name="known-issues"></a>알려진 문제
 
-다음 섹션에서는 Linux에서 SQL Server 2017 일반 가용성 (GA) 릴리스의 알려진된 문제에 설명 합니다.
+다음 섹션에서는 Linux에서 SQL Server 2017의 GA (일반 공급) 릴리스의 알려진된 문제에 설명 합니다.
 
 #### <a name="general"></a>일반
 
@@ -178,7 +178,7 @@ SQL Server 2017의 GA (일반 공급) 릴리스입니다. 이 릴리스에 대 �
 
 - Windows에서 SQL Server에서 백업 된 데이터베이스를 복원할 때 사용 해야는 **WITH MOVE** Transact SQL 문 절.
 
-- Microsoft Distributed Transaction Coordinator 서비스를 필요로 하는 분산 트랜잭션 Linux에서 실행 중인 SQL Server에서 지원 되지 않습니다. SQL Server를 SQL Server 분산된 트랜잭션이 지원 됩니다.
+- Microsoft Distributed Transaction Coordinator 서비스를 필요로 하는 분산 트랜잭션 Linux에서 실행 중인 SQL Server에서 지원 되지 않습니다. SQL Server 연결 된 서버에 SQL Server에서 DTC를 포함 하지 않는 한 사용할 수 있습니다. 자세한 내용은 참조 [Linux에서 실행 중인 SQL Server에서 Microsoft Distributed Transaction Coordinator 서비스를 필요로 하는 분산 트랜잭션 지원 되지 않습니다](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)합니다.
 
 - (암호 그룹)에 대 한 보안 TLS (전송 계층) 일부 알고리즘은 Linux에서 SQL Server에서는 제대로 작동 하지 않습니다. 그러면 연결 오류가 SQL Server에 연결 하려고 할 때 뿐만 아니라 문제가 높은 가용성 그룹의 복제본 간의 연결을 설정 합니다.
 

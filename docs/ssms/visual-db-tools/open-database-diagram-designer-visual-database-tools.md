@@ -3,8 +3,11 @@ title: "데이터베이스 다이어그램 디자이너 열기(Visual Database T
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: be41a077b7c0f0e484adc67642b31c4c005ca38d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5303f21c4cb7b5e95d8c23b75f7b606eaf299175
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너 열기(Visual Database Tools)
-데이터베이스 다이어그램 디자이너는 연결할 데이터베이스를 디자인하고 시각화할 수 있게 하는 비주얼 도구입니다. 데이터베이스를 디자인할 때 데이터베이스 디자이너를 사용하여 테이블, 열, 키, 인덱스, 관계, 제약 조건 등을 만들거나 편집하거나 삭제할 수 있습니다. 데이터베이스를 시각화하기 위해 테이블, 열, 키, 관계의 일부 또는 전부를 표시하는 다이어그램을 하나 이상 만들 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램 디자이너는 연결할 데이터베이스를 디자인하고 시각화할 수 있게 하는 비주얼 도구입니다. 데이터베이스를 디자인할 때 데이터베이스 디자이너를 사용하여 테이블, 열, 키, 인덱스, 관계, 제약 조건 등을 만들거나 편집하거나 삭제할 수 있습니다. 데이터베이스를 시각화하기 위해 테이블, 열, 키, 관계의 일부 또는 전부를 표시하는 다이어그램을 하나 이상 만들 수 있습니다.  
   
 새 다이어그램이나 기존 다이어그램을 열어 데이터베이스 다이어그램 디자이너를 열 수 있습니다.  
   

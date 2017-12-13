@@ -2,9 +2,12 @@
 title: "개체 탐색기 정보 페이지 표시 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cd84b6f12a797177d11bda12c4998eec4473ff41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9dcd0a63047fdb9a5bb1398b996b3aac85ca4c97
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-5---show-the-object-explorer-details-page"></a>1-5단원 - 개체 탐색기 정보 페이지 표시
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 개체 탐색기에서 선택한 개체마다 보고서를 표시할 수 있습니다. 개체 탐색기 정보 페이지라고 하는 이 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성되며 문서 창으로 열립니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 개체 탐색기에서 선택한 개체마다 보고서를 표시할 수 있습니다. 개체 탐색기 정보 페이지라고 하는 이 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성되며 문서 창으로 열립니다.  
   
 ## <a name="showing-the-object-explorer-details-page"></a>개체 탐색기 정보 페이지 표시  
   

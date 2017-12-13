@@ -1,12 +1,12 @@
 ---
 title: "테이블 형식 모델 디자이너 | Microsoft Docs"
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>테이블 형식 모델 디자이너(SSAS)
-테이블 형식 모델 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 일부로 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에 통합되어 있으며, 전문적인 테이블 형식의 모델 솔루션을 개발하기 위한 추가 프로젝트 형식 템플릿이 함께 제공됩니다.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 무료 웹 다운로드로 설치됩니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델 디자이너의 일부인 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Microsoft와 통합 된 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], 전문적인 테이블 형식의 모델 솔루션을 개발 하기 위한 추가 프로젝트 형식 템플릿이 함께 제공 합니다.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 무료 웹 다운로드로 설치됩니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.    
   
 ##  <a name="bkmk_benefits"></a> 이점  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치하면 테이블 형식의 모델을 만들기 위한 새 프로젝트 템플릿이 사용 가능한 프로젝트 형식에 추가됩니다. 이 템플릿 중 하나를 사용하여 테이블 형식의 새 모델 프로젝트를 만든 다음 테이블 형식 모델 디자이너 도구와 마법사를 사용하여 모델 제작을 시작할 수 있습니다.  

@@ -2,12 +2,12 @@
 title: "작업 영역 데이터베이스 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0d10c2fab9cb3a613446015e8bd3dbe3dbdce868
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae2e26606a2f84abea1caed7032a80d2e2de7e45
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="workspace-database-ssas-tabular"></a>작업 영역 데이터베이스(SSAS 테이블 형식)
-  모델을 제작하는 동안 사용되는 테이블 형식 모델 작업 영역 데이터베이스는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 테이블 형식 모델 프로젝트를 만들 때 만들어집니다.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]모델 제작 중 사용 하는 테이블 형식 모델 작업 영역 데이터베이스에서 새로운 테이블 형식 모델 프로젝트를 만들 때 함께 생성은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.
   
 ## <a name="specifying-a-workspace-instance"></a>작업 영역 인스턴스 지정  
   SSDT에서 새 테이블 형식 모델 프로젝트를 만들 때 프로젝트를 제작하는 동안 사용할 Analysis Services 인스턴스를 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 2016년 9월 릴리스(14.0.60918.0)부터 새 테이블 형식 모델 프로젝트를 만들 때 작업 영역 인스턴스를 지정하기 위한 두 가지 모드가 도입됩니다. 

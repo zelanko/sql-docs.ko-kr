@@ -3,8 +3,11 @@ title: "필터 설정(개체 탐색기 및 유틸리티 탐색기) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17bccb5ad0fe065699f2aed56d276568473ea56b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fa2f9375b9fe2883e4dbc2fd69a42f163a6fe386
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>필터 설정(개체 탐색기 및 유틸리티 탐색기)
-이 대화 상자를 사용하여 필터를 지정할 수 있습니다. 필터를 사용하면 특정 조건에 맞는 항목만 표시하도록 개체 탐색기 및 유틸리티 탐색기를 구성할 수 있습니다. 예를 들어 필터를 사용하여 이름에 "Maintenance"라는 단어가 포함된 작업만 표시할 수 있습니다. **필터 설정** 대화 상자의 머리글에는 서버 이름이나 데이터베이스 이름이 포함될 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 필터를 지정할 수 있습니다. 필터를 사용하면 특정 조건에 맞는 항목만 표시하도록 개체 탐색기 및 유틸리티 탐색기를 구성할 수 있습니다. 예를 들어 필터를 사용하여 이름에 "Maintenance"라는 단어가 포함된 작업만 표시할 수 있습니다. **필터 설정** 대화 상자의 머리글에는 서버 이름이나 데이터베이스 이름이 포함될 수 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
 **속성**  

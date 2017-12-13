@@ -3,8 +3,11 @@ title: "조건 창의 검색 조건 결합 규칙 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b40c9f61780760655373d160e3c6c9ee52545d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7b0d8e0ec4d73c564b9cd9db14fac961c310f48
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>조건 창의 검색 조건 결합 규칙(Visual Database Tools)
-AND와 OR 연산자를 여러 개 연결하여 다수의 검색 조건을 포함하는 쿼리를 만들 수 있습니다. AND 절과 OR 절을 조합하여 만든 쿼리는 복잡할 수 있으므로 쿼리 실행 시 쿼리를 해석하는 방법 및 [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)과 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에서 쿼리를 나타내는 방법을 이해하면 도움이 됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] AND와 OR 연산자를 여러 개 연결하여 다수의 검색 조건을 포함하는 쿼리를 만들 수 있습니다. AND 절과 OR 절을 조합하여 만든 쿼리는 복잡할 수 있으므로 쿼리 실행 시 쿼리를 해석하는 방법 및 [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)과 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에서 쿼리를 나타내는 방법을 이해하면 도움이 됩니다.  
   
 > [!NOTE]  
 > AND 또는 OR 연산자가 하나만 포함된 검색 조건에 대한 자세한 내용은 [한 열에 여러 검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) 및 [여러 열에 여러 검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md)을 참조하세요.  

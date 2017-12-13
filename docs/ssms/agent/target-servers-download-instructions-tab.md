@@ -3,8 +3,11 @@ title: "대상 서버(다운로드 명령 탭) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c0970096232b11b1a63fa3a5bee8a9fae846c9d5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 17c67093de57f58f810315050a8b48009e306f7b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="target-servers-download-instructions-tab"></a>대상 서버(다운로드 명령 탭)
-이 페이지를 사용하여 하나 이상의 대상 서버에 대한 다운로드 명령을 표시하고 업데이트할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 하나 이상의 대상 서버에 대한 다운로드 명령을 표시하고 업데이트할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
 **대상 서버**  

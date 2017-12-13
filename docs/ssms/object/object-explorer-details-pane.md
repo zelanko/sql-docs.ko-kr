@@ -3,8 +3,11 @@ title: "개체 탐색기 세부 정보 창 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c88f8188f607e5508bf087e230b1e8e70e92aab7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 523ea1b976fc5769cd400e9bbe32f380956421df
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 구성 요소인 개체 탐색기 정보는 서버의 모든 개체를 테이블 형식으로 표시하고 이러한 개체를 관리하기 위한 사용자 인터페이스를 제공합니다. 개체 탐색기의 기능은 서버의 유형에 따라 조금씩 다르지만 일반적으로 데이터베이스를 위한 개발 기능과 모든 서버 유형을 위한 관리 기능을 포함합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 구성 요소인 개체 탐색기 정보는 서버의 모든 개체를 테이블 형식으로 표시하고 이러한 개체를 관리하기 위한 사용자 인터페이스를 제공합니다. 개체 탐색기의 기능은 서버의 유형에 따라 조금씩 다르지만 일반적으로 데이터베이스를 위한 개발 기능과 모든 서버 유형을 위한 관리 기능을 포함합니다.  
   
 개체 탐색기 정보 창은 기본적으로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 에 표시됩니다. 개체 탐색기가 표시되지 않으면 **보기** 메뉴에서 **개체 탐색기 정보** 를 클릭하거나 **F7**키를 누릅니다.  
   

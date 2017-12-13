@@ -3,8 +3,11 @@ title: "개체 탐색기 열기 및 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 245c775659b064815e64f5f10a0d56314ecb49b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5a3731819860d5936242f6db45383117f503c448
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-and-configure-object-explorer"></a>개체 탐색기 열기 및 구성
-**의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]메뉴를 사용하여 개체 탐색기를 엽니다. **도구** 메뉴의 **옵션** 을 사용하여 개체 탐색기 옵션을 구성합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 **보기** 메뉴를 사용하여 개체 탐색기를 엽니다. **도구** 메뉴의 **옵션** 을 사용하여 개체 탐색기 옵션을 구성합니다.  
   
 ## <a name="viewing-object-explorer"></a>개체 탐색기 보기  
 개체 탐색기는 기본적으로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 에서 볼 수 있습니다. 개체 탐색기를 볼 수 없는 경우 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  

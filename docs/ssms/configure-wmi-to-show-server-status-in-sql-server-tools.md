@@ -3,8 +3,11 @@ title: "WMI를 구성하여 SQL Server 도구에 서버 상태 표시 | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 815543cbeba319cbe188f0d767e5a044a9cfae4e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fb411e0e31fb57cf86c3dc3331b153c3c6b3ee6e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>WMI를 구성하여 SQL Server 도구에 서버 상태 표시
-이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent_md.md)]의 SQL Server 도구에 서버 상태를 표시하기 위해 WMI를 구성하는 방법에 대해 설명합니다. 서버에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]구성 관리자와 함께 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 의 등록된 서버와 개체 탐색기 구성 요소는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] (MSSQLSERVER) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 에이전트 서비스의 상태를 확인할 수 있습니다. 서비스의 상태를 표시하려면 사용자가 WMI 개체에 원격으로 액세스할 수 있는 권한이 있어야 합니다. 서버에는 이 사용 권한을 구성할 수 있도록 WMI가 설치되어 있어야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent_md.md)]의 SQL Server 도구에 서버 상태를 표시하기 위해 WMI를 구성하는 방법에 대해 설명합니다. 서버에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]구성 관리자와 함께 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 의 등록된 서버와 개체 탐색기 구성 요소는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] (MSSQLSERVER) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 에이전트 서비스의 상태를 확인할 수 있습니다. 서비스의 상태를 표시하려면 사용자가 WMI 개체에 원격으로 액세스할 수 있는 권한이 있어야 합니다. 서버에는 이 사용 권한을 구성할 수 있도록 WMI가 설치되어 있어야 합니다.  
   
 ## <a name="SSMSProcedure"></a>WMI 사용 권한을 구성하려면  
   

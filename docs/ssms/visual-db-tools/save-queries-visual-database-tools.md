@@ -3,8 +3,11 @@ title: "쿼리 저장(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d935d9d79d2c83ef42c8631a0f8e163682f0a3c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c12821b95b599bbd48ddb60083bd051e930ecfaf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-queries-visual-database-tools"></a>쿼리 저장(Visual Database Tools)
-나중에 다시 사용할 수 있도록 쿼리를 저장합니다. 쿼리를 실행해도 변경 내용은 저장되지 않습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 나중에 다시 사용할 수 있도록 쿼리를 저장합니다. 쿼리를 실행해도 변경 내용은 저장되지 않습니다.  
   
 ### <a name="to-save-a-query"></a>쿼리를 저장하려면  
   

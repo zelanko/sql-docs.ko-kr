@@ -2,12 +2,12 @@
 title: "테이블 형식 모델 데이터 액세스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6b535c1eba06e7f023ef9a1f7b00476e7be39eb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-data-access"></a>테이블 형식 모델 데이터 액세스
-  Analysis Services의 테이블 형식 model 데이터베이스에는 다차원 모델에서 데이터 또는 메타데이터를 검색하는 데 사용하는 것과 동일한 대부분의 클라이언트, 인터페이스 및 언어로 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]대부분의 동일한 클라이언트, 인터페이스 및 언어는 다차원 모델에서 데이터 또는 메타 데이터를 검색 하는 데 사용 하 여 Analysis Services 테이블 형식 모델 데이터베이스에에서 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  이 항목에서는 테이블 형식 모델에서 사용할 수 있는 클라이언트, 쿼리 언어 및 프로그래밍 인터페이스에 대해 설명합니다.  
   

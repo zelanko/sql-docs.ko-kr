@@ -3,8 +3,11 @@ title: "옵션(SQL Server 개체 탐색기 - 스크립팅 페이지) | Microsoft
 ms.custom: 
 ms.date: 08/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd98889c12d8a292e0f1fe64d390fc9f51578ce5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b49bce06a339326d1458827f2712130c725453d3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)
-이 페이지를 사용하여 **개체 탐색기**의 개체 컨텍스트 메뉴에서 다음 명령에 적용되는 스크립팅 옵션을 설정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 페이지를 사용하여 **개체 탐색기**의 개체 컨텍스트 메뉴에서 다음 명령에 적용되는 스크립팅 옵션을 설정할 수 있습니다.  
   
 -   사용자 테이블 및 뷰에 대한 **편집** 명령  
   

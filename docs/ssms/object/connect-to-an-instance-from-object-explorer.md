@@ -3,8 +3,11 @@ title: "SQL Server 또는 Azure SQL Database에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fbf96ce171fbcbe2eeb54729fc9f543011bcf07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c9f1f7bc813e3b22007c9a7ef58ce373e57fbe0c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server 또는 Azure SQL Database에 연결
-
-서버 및 데이터베이스를 사용하려면 먼저 서버에 연결해야 합니다. 여러 서버에 동시에 연결할 수 있습니다.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 서버 및 데이터베이스를 사용하려면 먼저 서버에 연결해야 합니다. 여러 서버에 동시에 연결할 수 있습니다.
 
 [SSMS(SQL Server Management Studio)](../download-sql-server-management-studio-ssms.md)는 여러 유형의 연결을 지원합니다. 이 문서에서는 SQL Server 및 Azure SQL Database에 연결(SQL Azure 논리 서버에 연결)에 대한 세부 정보를 제공합니다. 다른 연결 옵션에 대한 내용은 이 페이지 하단의 [링크](#see-also)를 참조하세요.
   

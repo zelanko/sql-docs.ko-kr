@@ -2,12 +2,12 @@
 title: "관계 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="relationships-ssas-tabular"></a>관계(SSAS 테이블 형식)
-  테이블 형식 모델에서 관계는 두 데이터 테이블 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다. 예를 들어 Customers 테이블과 Orders 테이블을 연결하여 각 주문에 연결된 고객 이름을 표시할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델에서 관계는 두 테이블 데이터 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다. 예를 들어 Customers 테이블과 Orders 테이블을 연결하여 각 주문에 연결된 고객 이름을 표시할 수 있습니다.  
   
  테이블 가져오기 마법사를 사용하여 동일한 데이터 원본에서 가져오기를 수행할 경우 가져오기로 선택한 테이블(데이터 원본에서)에 이미 있는 관계가 모델에 다시 만들어집니다. 다이어그램 뷰의 모델 디자이너 또는 관계 관리 대화 상자를 사용하여 자동으로 검색된 관계와 다시 만들어진 관계를 볼 수 있습니다. 또한 다이어그램 뷰의 모델 디자이너나 관계 만들기 또는 관계 관리 대화 상자를 사용하여 수동으로 테이블 간에 새로운 관계를 만들 수도 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "DataSourceID 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fc7845f5cbd36d3e8696a7ad24ed834975de87e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81e8c66464f12a746821539976215250af758b6c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="datasourceid-element-xmla"></a>DataSourceID 요소(XMLA)
-  사용 하는 데이터 소스를 식별 한 [위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 중 요소는 [백업](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), 또는 [동기화](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 명령입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]사용 하는 데이터 소스를 식별 한 [위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 중 요소는 [백업](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), 또는 [동기화](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,11 +66,11 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>주의  
  **DataSourceID** 요소에 있는 원격 파티션 정보가 백업, 복원 또는 동기화는 원격 인스턴스를 식별 하는 원본 인스턴스에 데이터 원본의 이름을 포함 합니다.  
   
- 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, 및 데이터베이스 동기화 &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, 및 데이터베이스 동기화 & #40; XMLA & #41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>관련 항목:  
- [ConnectionString 요소 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)   
- [DataSourceType 요소 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md)   
- [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [ConnectionString 요소 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)   
+ [DataSourceType 요소 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md)   
+ [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -2,12 +2,12 @@
 title: "기능 Analysis Services의 새로운 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>기능 Analysis Services의 새로운
-SQL Server 2016 Analysis Services는 많은 향상 된 성능, 쉽게 솔루션 작성, 자동화 된 데이터베이스 관리를 제공 하는 향상 된 새로운 기능, 향상 된 관계가 양방향 교차 필터링, 병렬 파티션 처리 및 등 다양 합니다. 이번 릴리스에서 향상된 기능 대부분의 중심에는 테이블 형식 model 데이터베이스에 대한 새로운 호환성 수준 1200이 있습니다.     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services는 많은 향상 된 성능, 쉽게 솔루션 작성, 자동화 된 데이터베이스 관리를 제공 하는 향상 된 새로운 기능, 향상 된 관계가 양방향 교차 필터링, 병렬 파티션 처리 및 등 다양 합니다. 이번 릴리스에서 향상된 기능 대부분의 중심에는 테이블 형식 model 데이터베이스에 대한 새로운 호환성 수준 1200이 있습니다.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 2016 SQL PASS Conference에서 발표된 Analysis Services를 이제 클라우드에서 Azure 서비스로 사용할 수 있습니다. **Azure Analysis Services** 이상은 1200 호환성 수준의 테이블 형식 모델을 지원 합니다. DirectQuery, 파티션, 행 수준 보안, 양방향 관계, 변환이 모두 지원됩니다. 자세한 내용을 알아보고 무료 시험 버전을 사용하려면 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)를 참조하세요. 

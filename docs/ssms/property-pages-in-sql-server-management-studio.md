@@ -3,8 +3,11 @@ title: "SQL Server Management Studio의 속성 페이지 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94c531a2fa9fd1c654329c6120906dda1abe7c46
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c4c23da504c70c1139705c514d3b95631fa1ac0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio의 속성 페이지
-[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 의 모든 속성 페이지 대화 상자는 확대 및 축소 범주가 포함된 정보를 표시하는 공통된 형식을 사용합니다. 표시되는 필드는 특정 속성에 따라 달라집니다. 회색으로 표시된 속성은 읽기 전용입니다. 각 속성 페이지의 맨 위 근처에는 범주별 및 사전순 단추가 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]의 모든 속성 페이지 대화 상자는 확대 및 축소 범주가 포함된 정보를 표시하는 공통된 형식을 사용합니다. 표시되는 필드는 특정 속성에 따라 달라집니다. 회색으로 표시된 속성은 읽기 전용입니다. 각 속성 페이지의 맨 위 근처에는 범주별 및 사전순 단추가 있습니다.  
   
 다음 표에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 속성 페이지 대화 상자의 공통 요소를 설명합니다.  
   

@@ -2,12 +2,12 @@
 title: "양방향 교차 필터는 Analysis Services-테이블 형식 모델-| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>양방향 교차 필터-테이블 형식 모델-Analysis Services
-  SQL Server 2016의 새로운 기능에는 테이블 형식 모델에서 *양방향 교차 필터* 를 사용하는 기본 제공 접근 방식이 있습니다. 이 방식을 사용하면 테이블 관계에서 필터 컨텍스트를 전파하기 위한 수동 DAX 해결 방법이 필요 없습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]새 SQL Server 2016에는 기본 제공 접근 방식을 수 있도록 *양방향 교차 필터* 테이블 형식 모델에서 테이블 관계에서 필터 컨텍스트를 전파 하기 위한 수동 DAX 해결 방법에 대 한 필요성을 제거 합니다.  
   
  개념을 해당 구성 요소로 세분화해 보겠습니다. *교차 필터링* 은 관련 테이블의 값에 따라 테이블에 대한 필터 컨텍스트를 설정하는 기능이고, *양방향* 은 테이블 관계의 반대편에 있는 두 번째 관련 테이블로 필터 컨텍스트를 전달하는 것입니다. 이름에서 알 수 있듯이 한 방향이 아니라 관계의 양방향으로 분할할 수 있습니다.  내부적으로 양방향 필터링은 필터 컨텍스트를 확장하여 데이터의 상위 집합을 쿼리합니다.  
   

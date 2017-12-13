@@ -3,8 +3,11 @@ title: "조인을 사용한 쿼리(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c22ecdbe76b036bbf78810db4d2a18729b184757
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a4d46c668c5654155783c3cc70a1ad23b33c5c82
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-with-joins-visual-database-tools"></a>조인을 사용한 쿼리(Visual Database Tools)
-쿼리 결과에 여러 테이블 또는 테이블 반환 개체의 데이터가 포함될 수 있습니다. 여러 테이블 반환 개체에 있는 데이터를 조합하려면 SQL에서 JOIN 연산을 사용합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 결과에 여러 테이블 또는 테이블 반환 개체의 데이터가 포함될 수 있습니다. 여러 테이블 반환 개체에 있는 데이터를 조합하려면 SQL에서 JOIN 연산을 사용합니다.  
   
 여러 테이블을 사용하는 쿼리를 작성하는 방법은 다음 항목을 참조하십시오.  
   

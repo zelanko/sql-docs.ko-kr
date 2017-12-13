@@ -3,8 +3,11 @@ title: "테이블 외의 항목을 사용하여 쿼리 만들기 | Microsoft 문
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca9ab6532c1a83be15b1b9a80c0e96ef051fac27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 10e634170ad1d21ec5094032dbe0b63395b40eb8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>테이블 외의 항목을 사용하여 쿼리 만들기(Visual Database Tools)
-검색 쿼리를 작성할 때마다 원하는 열과 행, 쿼리 프로세서가 원래 데이터를 찾는 위치 등을 분명히 설정해야 합니다. 일반적으로 이 원래 데이터는 하나의 테이블 또는 함께 조인된 여러 테이블로 구성됩니다. 그러나 원래 데이터를 테이블 이외의 원본에서 가져올 수 있습니다. 실제로 테이블을 반환하는 사용자 정의 함수나 뷰, 쿼리 또는 동의어에서 가져올 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 검색 쿼리를 작성할 때마다 원하는 열과 행, 쿼리 프로세서가 원래 데이터를 찾는 위치 등을 분명히 설정해야 합니다. 일반적으로 이 원래 데이터는 하나의 테이블 또는 함께 조인된 여러 테이블로 구성됩니다. 그러나 원래 데이터를 테이블 이외의 원본에서 가져올 수 있습니다. 실제로 테이블을 반환하는 사용자 정의 함수나 뷰, 쿼리 또는 동의어에서 가져올 수 있습니다.  
   
 ## <a name="using-a-view-in-place-of-a-table"></a>테이블 대신 뷰 사용  
 뷰에서 행을 선택할 수 있습니다. 예를 들어, 각 행에 가격이 $19.99가 넘는 책의 제목을 나타내는 "ExpensiveBooks"라는 뷰가 데이터베이스에 포함되어 있다고 가정하는 경우 뷰 정의는 다음과 같습니다.  

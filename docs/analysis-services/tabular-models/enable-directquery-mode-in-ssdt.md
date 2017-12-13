@@ -2,12 +2,12 @@
 title: "SSDT에서 DirectQuery 모드를 사용 하도록 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3b43ff386936e76091c64d8db1f73bda587f23b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1866cd3c6194edf7065ebb2929cc77f8cc4acc3a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>SSDT에서 DirectQuery 모드를 사용하도록 설정
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-이 항목에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 테이블 형식 모델 프로젝트에 대해 DirectQuery 모드를 사용하도록 설정하는 방법을 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 테이블 형식 모델 프로젝트에 대 한 DirectQuery 모드를 사용 하는 방법을 설명 합니다 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]합니다.  
   
 SSDT에서 디자인 중인 테이블 형식 모델에 대해 DirectQuery 모드를 사용하도록 설정할 경우
 -   DirectQuery 모드와 호환되지 않는 기능을 사용할 수 없습니다.  

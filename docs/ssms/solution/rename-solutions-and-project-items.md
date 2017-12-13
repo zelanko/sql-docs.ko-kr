@@ -3,8 +3,11 @@ title: "솔루션 및 프로젝트 항목의 이름 바꾸기 | Microsoft 문서
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 950ee0f9e231b6776b644edf613bbd52f28a7142
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4134566cd32c4bfecc3428aff1c9a4eb2c95f9c8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rename-solutions-and-project-items"></a>솔루션 및 프로젝트 항목의 이름 바꾸기
-솔루션 탐색기에서 솔루션과 해당 프로젝트 항목의 이름을 바꿀 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 솔루션 탐색기에서 솔루션과 해당 프로젝트 항목의 이름을 바꿀 수 있습니다.  
   
 > [!NOTE]  
 > 프로젝트와 연결의 이름은 바꿀 수 없습니다.  

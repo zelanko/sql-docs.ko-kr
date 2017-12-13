@@ -3,8 +3,11 @@ title: "행 그룹 축소(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11ab34e9c5651be1dc771d71a738f49bb230262a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c6afdaa463c3a7e1ac427af43156343e7ab7dcee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>행 그룹 축소(Visual Database Tools)
-쿼리 결과의 각 결과 행이 원본 데이터의 전체 행 그룹에 대응하는 쿼리 결과를 만들 수 있습니다. 행을 축소하는 경우 다음 사항에 유의해야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 결과의 각 결과 행이 원본 데이터의 전체 행 그룹에 대응하는 쿼리 결과를 만들 수 있습니다. 행을 축소하는 경우 다음 사항에 유의해야 합니다.  
   
 -   **중복 행을 제거할 수 있습니다.** 일부 쿼리의 경우 동일한 행이 여러 개 나타나는 결과 집합을 만들 수 있습니다. 예를 들어, 각 행에 저자가 있는 도시의 이름과 주 이름이 있는 결과 집합을 만들 수 있습니다. 그러나 한 도시에 저자가 여러 명인 경우 똑같은 행이 여러 개 생깁니다. 결과 SQL은 다음과 같습니다.  
   

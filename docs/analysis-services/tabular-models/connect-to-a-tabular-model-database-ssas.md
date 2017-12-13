@@ -2,12 +2,12 @@
 title: "테이블 형식 모델 데이터베이스 (SSAS)에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 69878a319fb5b061e712bcf96e094356b558553e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b4848d36fffe5d7b6e70b5be937874bbfe6537cb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>테이블 형식 모델 데이터베이스에 연결(SSAS)
-  테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 응용 프로그램에서 사용할 수 있도록 권한을 설정해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 응용 프로그램에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델을 작성 하 고 Analysis Services 테이블 형식 모드 서버에 배포 후에 클라이언트 응용 프로그램에 사용할 수 있도록 권한을 설정 해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 응용 프로그램에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
 >  기본적으로 방화벽을 구성해야만 Analysis Services에 대한 원격 연결을 사용할 수 있습니다. 클라이언트 연결에 대해 명명된 인스턴스 또는 기본 인스턴스를 구성하는 경우 적절한 포트를 열어야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  

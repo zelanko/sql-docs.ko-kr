@@ -15,17 +15,17 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2b09251cae6b89dd742d685f9405155a7b674a3d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>추출, 변환 및 SSIS와 Linux에서 데이터 로드
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 항목에서는 Linux에서 SQL Server Integration Services (SSIS) 패키지를 실행 하는 방법에 설명 합니다. 여러 소스 및 형식 중에서 데이터를 추출 하 여 복잡 한 데이터 통합 문제를 해결 하는 SSIS 변환 및 데이터를 정리 하 고 여러 대상에 데이터를 로드 합니다. 
+이 문서에서는 Linux에서 SQL Server Integration Services (SSIS) 패키지를 실행 하는 방법을 설명 합니다. 여러 소스 및 형식 중에서 데이터를 추출 하 여 복잡 한 데이터 통합 문제를 해결 하는 SSIS 변환 및 데이터를 정리 하 고 여러 대상에 데이터를 로드 합니다. 
 
 Linux에서 실행 되는 SSIS 패키지는 linux 또는 Docker에서 클라우드에서 또는 Windows 온-프레미스에서 실행 중인 Microsoft SQL Server에 연결할 수 있습니다. 또한 Azure SQL 데이터베이스, Azure SQL 데이터 웨어하우스, ODBC 데이터 원본, 플랫 파일 및 ADO.NET 원본, XML 파일 및 OData 서비스 등의 다른 데이터 원본에 연결할 수 있습니다.
 
@@ -47,17 +47,17 @@ Linux 컴퓨터에서 SSIS 패키지를 실행 하려면 다음 작업을 수행
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="other-common-ssis-tasks"></a>다른 일반적인 SSIS 작업
+## <a name="design-packages"></a>패키지 디자인
 
--   **패키지를 디자인**합니다.
+**ODBC 데이터 원본에 연결**합니다. 이상 Linux CTP 2.1 새로 고침에서 SSIS, SSIS 패키지는 Linux 기반 ODBC 연결 사용할 수 있습니다. 이 기능은 SQL Server 및 MySQL ODBC 드라이버와 함께 테스트 되었습니다 하지만 또한 ODBC 사양을 따르는 모든 유니코드 ODBC 드라이버와 함께 사용 해야 합니다. 디자인 타임에 ODBC 데이터;에 연결 하는 DSN 또는 연결 문자열 중 하나를 제공할 수 있습니다. 또한 Windows 인증을 사용할 수 있습니다. 자세한 내용은 참조는 [블로그 게시물 Linux ODBC 지원 발표](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)합니다.
 
-    -   **ODBC 데이터 원본에 연결**합니다. 이상 Linux CTP 2.1 새로 고침에서 SSIS, SSIS 패키지는 Linux 기반 ODBC 연결 사용할 수 있습니다. 이 기능은 SQL Server 및 MySQL ODBC 드라이버와 함께 테스트 되었습니다 하지만 또한 ODBC 사양을 따르는 모든 유니코드 ODBC 드라이버와 함께 사용 해야 합니다. 디자인 타임에 ODBC 데이터;에 연결 하는 DSN 또는 연결 문자열 중 하나를 제공할 수 있습니다. 또한 Windows 인증을 사용할 수 있습니다. 자세한 내용은 참조는 [블로그 게시물 Linux ODBC 지원 발표](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)합니다.
+**경로**합니다. SSIS 패키지에서 Windows 스타일 경로 제공 합니다. SSIS Linux에서 Linux 스타일 경로의 지원 하지 않지만 실행 시 Windows 스타일 경로의 Linux 스타일 경로에 매핑합니다. 그런 다음, 예를 들어 매핑합니다 Windows 스타일 경로 Linux에서 SSIS `C:\test` Linux 스타일 경로에 `/test`합니다.
 
-    -   **경로**합니다. SSIS 패키지에서 Windows 스타일 경로 제공 합니다. SSIS Linux에서 Linux 스타일 경로의 지원 하지 않지만 실행 시 Windows 스타일 경로의 Linux 스타일 경로에 매핑합니다. 그런 다음, 예를 들어 매핑합니다 Windows 스타일 경로 Linux에서 SSIS `C:\test` Linux 스타일 경로에 `/test`합니다.
+## <a name="deploy-packages"></a>패키지 배포
+이 릴리스에서 Linux에서 파일 시스템에만 패키지를 저장할 수 있습니다. SSIS 카탈로그 데이터베이스와 레거시 SSIS 서비스 패키지 배포 및 저장을 위해 Linux에서 사용할 수 없는 경우
 
--   **패키지 배포**합니다. 이 릴리스에서 Linux에서 파일 시스템에만 패키지를 저장할 수 있습니다. SSIS 카탈로그 데이터베이스와 레거시 SSIS 서비스 패키지 배포 및 저장을 위해 Linux에서 사용할 수 없는 경우
-
--   **패키지 예약**합니다. 일정 도구와 같은 Linux 시스템을 사용 하면 `cron` 패키지를 예약 하 합니다. 이 릴리스에서 패키지 실행을 예약 Linux에서 SQL 에이전트를 사용할 수 없습니다. 자세한 내용은 참조 하십시오. [cron 사용 하 여 Linux에서 일정 SSIS 패키지](sql-server-linux-schedule-ssis-packages.md)합니다.
+## <a name="schedule-packages"></a>일정 패키지
+일정 도구와 같은 Linux 시스템을 사용 하면 `cron` 패키지를 예약 하 합니다. 이 릴리스에서 패키지 실행을 예약 Linux에서 SQL 에이전트를 사용할 수 없습니다. 자세한 내용은 참조 하십시오. [cron 사용 하 여 Linux에서 일정 SSIS 패키지](sql-server-linux-schedule-ssis-packages.md)합니다.
 
 ## <a name="limitations-and-known-issues"></a>제한 사항 및 알려진된 문제
 

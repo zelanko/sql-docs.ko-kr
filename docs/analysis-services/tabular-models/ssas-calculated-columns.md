@@ -2,12 +2,12 @@
 title: "계산 열 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c7fe8e5ad97a1955160bf2f8f953c85971f66b09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcd2e415214ca310f2f53a71f04e58306bec4a63
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculated-columns"></a>계산 열
-  테이블 형식 모델에서 계산 된 열을 사용 하 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델에서 계산 된 열을 사용 하 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
  
   
   

@@ -3,8 +3,11 @@ title: "운영자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 465ec6d532e4ee46a7c4158475b2890eccf1b0be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0580a64735d39032c56ea052233e78049e7fabd2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="operators"></a>연산자
-운영자는 작업이 완료되거나 경고가 발생할 때 전자 메일 알림을 받을 수 있는 사람이나 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스는 운영자를 통해 관리자 알림을 지원합니다. 운영자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트의 알림 및 모니터링 기능을 사용하도록 설정합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 운영자는 작업이 완료되거나 경고가 발생할 때 전자 메일 알림을 받을 수 있는 사람이나 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스는 운영자를 통해 관리자 알림을 지원합니다. 운영자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트의 알림 및 모니터링 기능을 사용하도록 설정합니다.  
   
 ## <a name="operator-attributes-and-concepts"></a>운영자 특성 및 개념  
 운영자의 기본 특성은 다음과 같습니다.  

@@ -2,9 +2,12 @@
 title: "사용자 지정 템플릿 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7ad5f6304eb8d3e5957cf1d92cfc5a446023137a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bbbc449ac3f9ce37723146932a67120a6911b7ab
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>3-2단원 - 사용자 지정 템플릿 만들기
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 함께 많은 일반 태스크에 사용할 템플릿이 제공되지만 템플릿의 진정한 힘은 자주 만들어야 할 복잡한 스크립트의 사용자 지정 템플릿을 만드는 기능에 있습니다. 이 연습에서 소수의 매개 변수가 있는 단순 스크립트를 만들지만 템플릿은 반복되는 긴 스크립트에도 유용합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]와 함께 많은 일반 태스크에 사용할 템플릿이 제공되지만 템플릿의 진정한 힘은 자주 만들어야 할 복잡한 스크립트의 사용자 지정 템플릿을 만드는 기능에 있습니다. 이 연습에서 소수의 매개 변수가 있는 단순 스크립트를 만들지만 템플릿은 반복되는 긴 스크립트에도 유용합니다.  
   
 ## <a name="using-custom-templates"></a>사용자 지정 템플릿 사용  
   

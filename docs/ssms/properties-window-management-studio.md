@@ -3,8 +3,11 @@ title: "속성 창(Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d07665d3efb0e44d7d8314bc9be01276dbebb6e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f31c5197f6b4767c91c85b042caf418c4c2b2ad7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="properties-window-management-studio"></a>속성 창(Management Studio)
-이 창을 사용하여 선택한 요소의 속성을 볼 수 있습니다. 또한 속성 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. **보기** 메뉴에서 **속성 창** 을 클릭하면 속성 창이 활성화됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 창을 사용하여 선택한 요소의 속성을 볼 수 있습니다. 또한 속성 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. **보기** 메뉴에서 **속성 창** 을 클릭하면 속성 창이 활성화됩니다.  
   
 속성 창에는 특정 속성의 필요 여부에 따라 다른 유형의 편집 필드가 표시됩니다. 회색으로 표시된 속성은 읽기 전용입니다.  
   

@@ -3,8 +3,11 @@ title: "새 솔루션 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08c16387a7b73b26a2c9448623e9a2799c04e476
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8e0e4034f71fa1a6a6c4a9fbad967fd0bc419af9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-new-solution"></a>새 솔루션 만들기
-프로젝트를 만들 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 는 해당 프로젝트를 포함하는 솔루션을 만듭니다. 공간 인덱스는 한 번에 하나씩만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 프로젝트 내에서 폴더를 만드는 것이 허용되지 않습니다. 작업을 구성하려면 여러 프로젝트를 만듭니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 프로젝트를 만들 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]는 해당 프로젝트를 포함하는 솔루션을 만듭니다. 공간 인덱스는 한 번에 하나씩만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 프로젝트 내에서 폴더를 만드는 것이 허용되지 않습니다. 작업을 구성하려면 여러 프로젝트를 만듭니다.  
   
 솔루션 탐색기에 액세스하려면 **보기** 메뉴에서 **솔루션 탐색기** 를 클릭합니다.  
   

@@ -3,8 +3,11 @@ title: "출력 열 다시 정렬(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d8dd69fc1b112e9dc3261d0b52c2ad740de3a21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 770e918f8f61679a69dd474975672652124fd2d3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>출력 열 다시 정렬(Visual Database Tools)
-출력 열이 결과에 표시되는 순서는 선택 쿼리에 데이터 열을 추가하는 순서에 따라 결정됩니다. 쿼리에 추가하는 첫 번째 열은 결과의 가장 왼쪽에 나타나고 두 번째 열은 그 다음에 나타나는 방식입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 출력 열이 결과에 표시되는 순서는 선택 쿼리에 데이터 열을 추가하는 순서에 따라 결정됩니다. 쿼리에 추가하는 첫 번째 열은 결과의 가장 왼쪽에 나타나고 두 번째 열은 그 다음에 나타나는 방식입니다.  
   
 업데이트 쿼리나 삽입 쿼리를 만드는 경우 열을 추가하는 순서는 데이터가 처리되는 순서에 영향을 줍니다.  
   

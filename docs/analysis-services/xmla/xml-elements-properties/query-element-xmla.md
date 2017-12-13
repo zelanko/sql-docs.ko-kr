@@ -2,12 +2,12 @@
 title: Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8502824a41e2193a31e0e2b34b41e9ffb3515eaa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8de04cb54ec0fe9a28c41bcb9fed2f4362a5b7b7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="query-element-xmla"></a>Query 요소(XMLA)
-  내에서 쿼리를 포함는 [쿼리](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) 사용 하는 컬렉션의 [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) 사용 빈도 기반 최적화 중 명령입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]내에서 쿼리를 포함는 [쿼리](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) 사용 하는 컬렉션의 [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) 사용 빈도 기반 최적화 중 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   

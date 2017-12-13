@@ -3,8 +3,11 @@ title: "조인 연산자 수정(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebec4a0b9106152a8a7914263a70a7ddf0399679
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 62763186119afe111ee2a191a577db19178be896
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>조인 연산자 수정(Visual Database Tools)
-[쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 는 기본적으로 두 조인 열의 값을 일치시키는 등호(동등 조인)를 사용하여 테이블을 조인합니다. 필요한 경우 조인 열의 값을 비교하는 데 사용되는 연산자를 변경할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 기본적으로 두 조인 열의 값을 일치시키는 등호(동등 조인)를 사용하여 테이블을 조인합니다. 필요한 경우 조인 열의 값을 비교하는 데 사용되는 연산자를 변경할 수 있습니다.  
   
 ### <a name="to-modify-join-operators"></a>조인 연산자를 수정하려면  
   

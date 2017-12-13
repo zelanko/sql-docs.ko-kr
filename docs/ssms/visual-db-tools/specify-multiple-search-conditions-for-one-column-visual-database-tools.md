@@ -3,8 +3,11 @@ title: "한 열에 여러 검색 조건 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a98f6dac943e9383be789a82e9e6e1e656f03a2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7c369f2d9dd68a45e103dd891e7a04b6a13bae1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>한 열에 여러 검색 조건 지정(Visual Database Tools)
-동일한 데이터 열에 여러 개의 검색 조건을 적용해야 하는 경우가 있습니다. 예를 들면 다음과 같습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 동일한 데이터 열에 여러 개의 검색 조건을 적용해야 하는 경우가 있습니다. 예를 들면 다음과 같습니다.  
   
 -   `employee` 테이블에서 여러 개의 다른 이름을 검색하는 경우 또는 급여가 서로 다른 직원을 검색하는 경우. 이런 형식의 검색에는 OR 조건이 필요합니다.  
   

@@ -2,9 +2,12 @@
 title: "연결된 서버 등록(SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 520992cd863dcd5fcdc9b265ef168cd171b8aa27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 66d6bf38a5500017012c3eabb466b11d2d28ad49
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>연결된 서버 등록(SQL Server Management Studio)
-  이 항목에서는 SSMS( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] )를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 연결된 서버를 등록하는 방법에 대해 설명합니다. 서버를 등록하면 자주 액세스하는 서버에 대한 연결 정보를 저장할 수 있습니다. 개체 탐색기에서 연결하기 전이나 연결할 때 서버를 등록할 수 있습니다.  메뉴에서 **보기**\\**등록된 서버** 로 이동하여 SSMS에서 등록된 서버를 볼 수 있습니다.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 연결된 서버를 등록하는 방법에 대해 설명합니다. 서버를 등록하면 자주 액세스하는 서버에 대한 연결 정보를 저장할 수 있습니다. 개체 탐색기에서 연결하기 전이나 연결할 때 서버를 등록할 수 있습니다.  메뉴에서 **보기**\\**등록된 서버** 로 이동하여 SSMS에서 등록된 서버를 볼 수 있습니다.
   
  **항목 내용**  
   

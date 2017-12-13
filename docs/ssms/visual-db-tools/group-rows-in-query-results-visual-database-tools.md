@@ -3,8 +3,11 @@ title: "쿼리 결과 행 그룹화(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a879bdc95cda0812fcc7d3f43f4d7e99c183337f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bff62f024fd85b326213197f7f79ea43ed0a0f37
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>쿼리 결과 행 그룹화(Visual Database Tools)
-부분합을 계산하거나 테이블의 하위 집합에 대한 다른 요약 정보를 표시하려면 집계 쿼리를 사용하여 그룹을 만듭니다. 각 그룹은 테이블에서 값이 동일한 모든 행의 데이터를 요약하는 데 사용됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 부분합을 계산하거나 테이블의 하위 집합에 대한 다른 요약 정보를 표시하려면 집계 쿼리를 사용하여 그룹을 만듭니다. 각 그룹은 테이블에서 값이 동일한 모든 행의 데이터를 요약하는 데 사용됩니다.  
   
 예를 들어, `titles` 테이블에서 출판사별로 구분된 도서 평균 가격 결과를 확인해야 할 수도 있습니다. 이 경우 출판사별로 쿼리를 그룹화할 수 있습니다(예: `pub_id`). 다음과 같은 쿼리 결과가 만들어집니다.  
   

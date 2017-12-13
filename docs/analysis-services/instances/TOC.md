@@ -15,7 +15,7 @@
 ## [Kerberos 인증](configure-analysis-services-for-kerberos-constrained-delegation.md)  
 ## [SPN 등록](spn-registration-for-an-analysis-services-instance.md)  
 ## [HTTP 액세스](configure-http-access-to-analysis-services-on-iis-8-0.md)  
-## [데이터 공급자](data-providers-used-for-analysis-services-connections.md)  
+## [클라이언트 라이브러리(데이터 공급자)](data-providers-used-for-analysis-services-connections.md)  
 ## [사용자 및 세션 연결 끊기](disconnect-users-and-sessions-on-analysis-services-server.md)  
 # [Analysis Services 인스턴스 모니터링](monitor-an-analysis-services-instance.md)  
 ## [SQL Server 프로파일러](use-sql-server-profiler-to-monitor-analysis-services.md)  

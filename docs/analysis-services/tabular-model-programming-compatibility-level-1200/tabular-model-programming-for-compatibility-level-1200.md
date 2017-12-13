@@ -2,12 +2,12 @@
 title: "1200 호환성 수준의 테이블 형식 모델 프로그래밍 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2a2b814f4944c0e135c345d8f78970a1d08c8918
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5c7a0c3c69a8d4c834cf6a44cd3e588faed2593f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>테이블 형식 모델 프로그래밍에 대 한 호환성 수준 1200 이상
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-부터 호환성 수준이 1200, 테이블 형식 메타 데이터 모델 구조, 테이블 형식 모델 개체에 대 한 설명자도 기록 다차원 메타 데이터를 교체 설명 하는 데 사용 됩니다. 테이블, 열 및 관계에 대 한 메타 데이터는 테이블, 열 및 관계를 아닌 (차원 및 특성) 해당 하는 다차원 항목입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]부터 호환성 수준이 1200, 테이블 형식 메타 데이터 모델 구조, 테이블 형식 모델 개체에 대 한 설명자도 기록 다차원 메타 데이터를 교체 설명 하는 데 사용 됩니다. 테이블, 열 및 관계에 대 한 메타 데이터는 테이블, 열 및 관계를 아닌 (차원 및 특성) 해당 하는 다차원 항목입니다.  
   
 또는 만들 수 있습니다 새 모델 호환성 수준 1200 이상의 최신 버전의 SQL Server 데이터 도구 (SSDT), Microsoft.AnalysisServices.Tabular Api를 사용 하 여 변경 하 여는 **CompatibilityLevel** 의 기존 테이블 형식 모델 업그레이드 (SSDT에서 수행)입니다. 이렇게 최신 버전의 서버, 도구 및 프로그래밍 인터페이스에 모델을 바인딩합니다.   
   

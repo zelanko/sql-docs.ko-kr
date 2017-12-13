@@ -3,8 +3,11 @@ title: "쿼리 변경 내용 취소(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc3552f3c45f41b828b4027dc25b98fc332262f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 507ef93ff1bae87aea60ef746d2e9c578f6b63e4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>쿼리 변경 내용 취소(Visual Database Tools)
-쿼리 정의에 대한 변경 내용을 저장하기 전에 취소할 수 있습니다. 이러한 변경 내용을 저장한 후에는 이전 상태로 되돌릴 수 없습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 정의에 대한 변경 내용을 저장하기 전에 취소할 수 있습니다. 이러한 변경 내용을 저장한 후에는 이전 상태로 되돌릴 수 없습니다.  
   
 > [!NOTE]  
 > 결과 창에서 값에 대해 변경한 내용을 실행 취소하려면 레코드에서 포커스를 옮기기 전에 Esc 키를 누릅니다. 레코드에서 포커스를 옮길 때 변경 내용이 데이터베이스에 커밋되지 않는다는 메시지가 표시되는 경우에도 Esc 키를 눌러 이전 값을 복원할 수 있습니다.  

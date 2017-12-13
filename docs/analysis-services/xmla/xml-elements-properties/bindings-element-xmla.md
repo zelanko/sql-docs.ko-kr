@@ -2,12 +2,12 @@
 title: "Bindings 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddf92b4ddff00a0b5a74d22efcf8d66a989bc0d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dca8212ff215707f6fca0a724ba63cf90ea93e30
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bindings-element-xmla"></a>Bindings 요소(XMLA)
-  부모 [Batch](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md) 또는 [Process](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 요소의 [Binding](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 요소 컬렉션을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]컬렉션을 포함 [바인딩](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md) 부모 [일괄 처리](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 또는 [프로세스](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -3,8 +3,11 @@ title: "행 포함 또는 제외(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a989f2ed661ecf6528b1ede1993522d3014255f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fe150d5eb288d26fec9f75028b2066896c82bd31
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>행 포함 또는 제외(Visual Database Tools)
-선택 쿼리가 반환할 행 수를 제한하려면 검색 조건 또는 필터링 기준을 만듭니다. SQL에서 검색 조건은 문의 WHERE 절에 나타나거나 집계 쿼리를 만들 경우 HAVING 절에 나타납니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SELECT 쿼리가 반환할 행 수를 제한하려면 검색 조건 또는 필터링 기준을 만듭니다. SQL에서 검색 조건은 문의 WHERE 절에 나타나거나 집계 쿼리를 만들 경우 HAVING 절에 나타납니다.  
   
 > [!NOTE]  
 > 검색 조건을 사용하여 업데이트, 결과 삽입, 값 삽입, 삭제 또는 테이블 만들기 쿼리의 영향을 받는 행을 표시할 수도 있습니다.  

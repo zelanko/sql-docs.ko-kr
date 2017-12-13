@@ -3,8 +3,11 @@ title: "검색 조건 지정(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cf5249d181909e5b4c2473c0dc33d4ad1340eb2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 617b996bbd6142dd14f5307ae39f13cc058a6c53
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)
-검색 기준을 사용하여 쿼리가 반환하는 행의 수를 제한할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 검색 기준을 사용하여 쿼리가 반환하는 행의 수를 제한할 수 있습니다.  
   
 검색 기준을 만드는 특정 단계에 대한 자세한 내용은 다음 표에 나열된 항목을 참조하십시오.  
   

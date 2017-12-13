@@ -2,9 +2,12 @@
 title: "등록된 서버 또는 등록된 서버 그룹 이름 변경 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8578fdd494cf3e67000dfce53afcb28a8da5e932
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 76b0c8fb0f6ef95348200c04c65b6c3838c33d80
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>등록된 서버 또는 등록된 서버 그룹 이름 변경
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 등록된 서버 또는 서버 그룹의 이름을 변경하는 방법에 대해 설명합니다. 이 이름은 언제든지 변경할 수 있습니다. 등록된 서버의 서버 이름을 변경하면 이름이 표시되는 방식만 변경됩니다. 다른 서버에 연결하려면 등록된 서버의 연결 속성을 편집해야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹의 이름을 변경하는 방법에 대해 설명합니다. 이 이름은 언제든지 변경할 수 있습니다. 등록된 서버의 서버 이름을 변경하면 이름이 표시되는 방식만 변경됩니다. 다른 서버에 연결하려면 등록된 서버의 연결 속성을 편집해야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
 메뉴에서 **보기\\등록된 서버**로 이동하여 **등록된 서버** 창을 엽니다.  

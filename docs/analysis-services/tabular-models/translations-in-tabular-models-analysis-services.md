@@ -2,12 +2,12 @@
 title: "테이블 형식 모델 (Analysis Services)에서 번역 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>테이블 형식 모델 번역(Analysis Services )
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]테이블 형식 모델에 문자열 번역 지원을 추가합니다. 모델 내의 단일 개체는 이름 또는 설명이 여러 개로 번역되어 모델 정의 내에서 다중 언어 버전을 지원할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 테이블 형식 모델에 문자열 번역 지원을 추가 합니다. 모델 내의 단일 개체는 이름 또는 설명이 여러 개로 번역되어 모델 정의 내에서 다중 언어 버전을 지원할 수 있습니다.  
   
  번역된 문자열은 Excel PivotTable 목록과 같이 클라이언트 도구에 표시되는 개체 메타데이터용(테이블 및 열의 이름 및 설명)으로만 사용됩니다.  번역된 문자열을 사용하려면 클라이언트 연결에 문화권을 지정합니다. **Excel에서 분석** 기능의 드롭다운 목록에서 언어를 선택할 수 있습니다. 다른 도구의 경우 연결 문자열에서 문화권을 지정해야 할 수 있습니다.  
   

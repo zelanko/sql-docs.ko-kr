@@ -3,8 +3,11 @@ title: "템플릿 탐색기 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-templates
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bfeeaf35898135099c1fb92553bf20f83fd587f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b0ce99cc0777cc7be973fb4cf67f10ffe5ada4f3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="template-explorer"></a>Template Explorer
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 다양한 템플릿을 제공합니다. 템플릿은 데이터베이스에서 개체를 만드는 데 유용한 SQL 스크립트를 포함하는 상용구 파일입니다. 템플릿 탐색기를 처음으로 열면 템플릿 복사본이 C:\Users 사용자 폴더의 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 아래에 배치됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 다양한 템플릿을 제공합니다. 템플릿은 데이터베이스에서 개체를 만드는 데 유용한 SQL 스크립트를 포함하는 상용구 파일입니다. 템플릿 탐색기를 처음으로 열면 템플릿 복사본이 C:\Users 사용자 폴더의 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 아래에 배치됩니다.  
   
 템플릿 탐색기에서 사용 가능한 템플릿을 찾은 다음 열어서 코드를 코드 편집기 창에 통합할 수 있습니다. 사용자 지정 템플릿을 만들 수도 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "Power Pivot (SSAS 테이블 형식)에서 가져오기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddea709433a76faae800615c0a974ad14d153c8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 66ca9811b808ac3ef6b282479972482e78a083e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-from-power-pivot-ssas-tabular"></a>파워 피벗에서 가져오기(SSAS 테이블 형식)
-  이 항목에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 가져오기 프로젝트 템플릿을 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]통합 문서에서 메타데이터와 데이터를 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 메타 데이터와 데이터를 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 방법을 설명는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 가져오기-를 사용 하 여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 프로젝트 템플릿을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Power Pivot for Excel 파일에서 새 테이블 형식 모델 만들기  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 경우 통합 문서의 구조를 정의하는 메타데이터를 사용하여 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 테이블 형식 모델 프로젝트의 구조를 만들고 정의합니다. 테이블, 열, 측정값 및 관계와 같은 개체는 그대로 유지되며 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 표시되는 것과 같이 테이블 형식 모델 프로젝트에 표시됩니다. .xlsx 통합 문서 파일은 변경되지 않습니다.  

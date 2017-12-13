@@ -3,8 +3,11 @@ title: "다이어그램에 표시된 정보의 양 사용자 지정 | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4650285a2b6070bf057f114235550591f557a85c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b4e05f53f40655a5bf269db9022abd9e6e40eb09
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>다이어그램에 표시된 정보의 양 사용자 지정(Visual Database Tools)
-데이터베이스 다이어그램에 테이블을 추가하면 일정한 수의 속성이 표시됩니다. 표시할 정보의 양을 메뉴에서 각기 다르게 선택하거나 사용자 지정 속성 집합을 만들 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램에 테이블을 추가하면 일정한 수의 속성이 표시됩니다. 표시할 정보의 양을 메뉴에서 각기 다르게 선택하거나 사용자 지정 속성 집합을 만들 수 있습니다.  
   
 선택 사항은 다음과 같습니다.  
   

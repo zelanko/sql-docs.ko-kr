@@ -3,8 +3,11 @@ title: "쿼리 및 뷰 디자이너 도구(Visual Database Tools) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b7c1e9721c938395e7df9dc10dbe617c3e95f12
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e5e890d0a453291ba71ab06b0489fb3d0c8c216a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>쿼리 및 뷰 디자이너 도구(Visual Database Tools)
-쿼리, 뷰, 인라인 함수 또는 단일 문 저장 프로시저를 디자인할 때 사용하는 디자이너는 다이어그램 창, 조건 창, SQL 창 및 결과 창으로 구성됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리, 뷰, 인라인 함수 또는 단일 문 저장 프로시저를 디자인할 때 사용하는 디자이너는 다이어그램 창, 조건 창, SQL 창 및 결과 창으로 구성됩니다.  
   
 ![쿼리 디자이너](../../ssms/visual-db-tools/media/vs_queryviewdsgpanes.gif "쿼리 디자이너")  
   

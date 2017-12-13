@@ -2,12 +2,12 @@
 title: "테이블 형식 모델 솔루션 배포 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5766323ffd6f50fff6f6b73bddf52e665f9bcab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>테이블 형식 모델 솔루션 배포(SSAS 테이블 형식)
-  테이블 형식 모델 프로젝트를 제작한 후에는 사용자가 보고 클라이언트 응용 프로그램을 사용하여 모델을 찾아볼 수 있도록 프로젝트를 배포해야 합니다. 이 항목에서는 사용자 환경에서 테이블 형식 모델 솔루션을 배포할 때 사용할 수 있는 다양한 속성과 메서드에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델 프로젝트를 작성 한 후 사용자가 보고 클라이언트 응용 프로그램을 사용 하 여 모델을 검색할 배포 해야 합니다. 이 항목에서는 사용자 환경에서 테이블 형식 모델 솔루션을 배포할 때 사용할 수 있는 다양한 속성과 메서드에 대해 설명합니다.  
   
  이 항목의 섹션:  
   

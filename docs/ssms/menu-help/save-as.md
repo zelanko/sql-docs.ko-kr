@@ -3,8 +3,11 @@ title: "다른 이름으로 저장 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9feab44925e6c973b712e0d85e07912c00f91cd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2f86afead1c6eca201a6669e8f64e89425f0cb1c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-as"></a>다른 이름으로 저장
-지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장하는 데 사용됩니다. **파일** *<file>* ****  **저장** ( *<file>* 은 현재 항목의 이름)을 클릭하거나 코드 편집기에서 Alt+F, A를 누릅니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장하는 데 사용됩니다. **파일** *<file>* ****  **저장** ( *<file>* 은 현재 항목의 이름)을 클릭하거나 코드 편집기에서 Alt+F, A를 누릅니다.  
   
 ## <a name="central-panel"></a>중앙 창  
 **저장 위치**  

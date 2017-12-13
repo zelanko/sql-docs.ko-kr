@@ -2,12 +2,12 @@
 title: "DirectQuery 모드 (SSAS 2016)에서 DAX 수식 호환성 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,16 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ab540d2806d6afb75eab3890fdad605a7b34a71c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ba414696dffec7b1477487e19b0ff4e45f6213e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery 모드에서의 DAX 수식 호환성 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-테이블 형식 1200 이상 모델에 DirectQuery 모드에서 이전 버전에서 많은 기능 제한 사항이 더 이상 적용 됩니다. 특히 DAX 수식에서:
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 1200 이상 모델에 DirectQuery 모드에서 이전 버전에서 많은 기능 제한 사항이 더 이상 적용 됩니다. 특히 DAX 수식에서:
 
 - 이제 DirectQuery에서 더 단순한 쿼리를 생성하고 향상된 성능을 제공합니다.
 - 행 수준 보안 (RLS)은 이제 DirectQuery 모드에서 지원 됩니다.

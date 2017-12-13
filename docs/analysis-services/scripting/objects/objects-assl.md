@@ -2,12 +2,12 @@
 title: "개체 (ASSL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678eabca49558ed4ff9a933433a97f5ed308dcb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e05ba70d4d1593e444cd8735196ddb04e4ef7ae7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="objects-assl"></a>개체(ASSL)
-  이 참조 섹션에서는 ASSL(Analysis Services Scripting Language) 스키마에서 개체로 사용되는 각 요소에 대한 구문 및 사용 정보를 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 참조 섹션에서는 Analysis Services Scripting Language (ASSL) 스키마에서 개체로 사용 되는 각 요소에 대 한 구문 및 사용법 정보입니다.  
   
  ASSL 스키마는 개발자의 관점에서 XML 요소만 포함 하지만이 섹션에 설명 된 요소에 해당 개체와 같은 **데이터베이스**, **큐브**, 및  **차원** 의 인스턴스에서 포함 된 개체의 계층 구조에서 개체 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   

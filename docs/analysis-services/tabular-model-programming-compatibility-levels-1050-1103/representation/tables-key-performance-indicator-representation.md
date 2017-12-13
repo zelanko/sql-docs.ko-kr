@@ -2,12 +2,12 @@
 title: "주요 성능 지표 표현 (테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0dc4f526fa88d678305afdf5c21623b19aaa5190
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 42c48fb77362c07e31bf73517bb72ad82954d8cc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---key-performance-indicator-representation"></a>테이블-핵심 성과 지표 표시
-  KPI는 기본 측정값으로 정의된 값을 대상 값과 비교하여 값 성과를 측정하는 데 사용됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]KPI는 대상 값에 대 한 기본 측정값으로 정의 된 값의 성능을 측정 하는 데 사용 됩니다.  
   
 ## <a name="key-performance-indicator-representation"></a>KPI(핵심 성과 지표) 표현  
  테이블 형식 개체 모델에서 KPI(핵심 성과 지표)는 클라이언트 응용 프로그램에 대한 추가 정보를 그래픽으로 나타내는 측정값입니다. KPI에는 대개 달성해야 할 목표, 목표 대비 측정값의 상태 및 상태를 그래픽으로 보여 주는 방법을 제공하는 클라이언트 도구에 대한 정보가 포함되어 있습니다.  

@@ -2,9 +2,12 @@
 title: "중앙 관리 서버 및 서버 그룹 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 712440c9f508da793757ba2f4097eef46426df91
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 03053923b6cb9ec0515131f45b1bd36a9aa50854
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>중앙 관리 서버 및 서버 그룹 만들기
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스를 중앙 관리 서버로 지정하는 방법에 대해 설명합니다. 중앙 관리 서버는 하나 이상의 중앙 관리 서버 그룹으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스 목록을 저장합니다. 중앙 관리 서버 그룹을 사용하여 수행되는 동작은 서버 그룹의 모든 서버에 적용됩니다. 여기에는 개체 탐색기를 사용하여 서버에 연결하는 동작 및 여러 서버에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 정책 기반 관리 정책을 동시에 실행하는 동작이 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 중앙 관리 서버로 지정하는 방법에 대해 설명합니다. 중앙 관리 서버는 하나 이상의 중앙 관리 서버 그룹으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스 목록을 저장합니다. 중앙 관리 서버 그룹을 사용하여 수행되는 동작은 서버 그룹의 모든 서버에 적용됩니다. 여기에는 개체 탐색기를 사용하여 서버에 연결하는 동작 및 여러 서버에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 정책 기반 관리 정책을 동시에 실행하는 동작이 포함됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 버전은 중앙 관리 서버로 지정할 수 없습니다.  

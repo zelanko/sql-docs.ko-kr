@@ -2,8 +2,12 @@
 title: "SSMS(SQL Server Management Studio) | Microsoft 문서"
 ms.date: 02/02/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 027258a4da555e2874b6a6e041d703edbe1cb743
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 381f25f48dbbf367b81ba7fdf95cc75f4665cff4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)](SSMS)는 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)], Azure SQL Database 및 SQL Data Warehouse의 모든 구성 요소에 액세스하고, 이를 관리 및 개발할 수 있습니다. SSMS는 기술 수준에 상관없이 모든 개발자와 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]에 액세스할 수 있도록 수많은 서식 있는 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하는 포괄적인 단일 유틸리티를 제공합니다.
 
 

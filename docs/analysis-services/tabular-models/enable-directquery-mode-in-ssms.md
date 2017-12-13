@@ -2,12 +2,12 @@
 title: "SSMS에서 DirectQuery 모드를 사용 하도록 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 209ab16c43e8d90e47dd9c4758c45af9d7eb8b62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS에서 DirectQuery 모드를 사용하도록 설정
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  이미 배포된 테이블 형식 모델의 데이터 액세스 속성을 변경하여 메모리 내 상주하는 캐시된 데이터가 아닌 백 엔드 관계형 데이터 원본에 대해 쿼리가 실행되는 DirectQuery 모드를 사용하도록 설정합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]여기서 쿼리 실행 데이터는 백엔드 관계형 데이터 원본에 대해 해당 캐시 되지 않고 데이터 메모리 내 상주 DirectQuery 모드를 사용 하면 이미 배포 된 테이블 형식 모델의 데이터 액세스 속성 변경할 수 있습니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 DirectQuery 구성 단계는 모델의 호환성 수준에 따라 다릅니다. 아래에서 모든 호환성 수준에 대해 해당하는 단계를 찾을 수 있습니다.  
   

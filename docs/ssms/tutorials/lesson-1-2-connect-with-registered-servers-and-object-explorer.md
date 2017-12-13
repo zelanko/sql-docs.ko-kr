@@ -2,9 +2,12 @@
 title: "등록된 서버 및 개체 탐색기와 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0077010615a2859b1b76f79fd1302d0f0ec8e7df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f280ca05701c1497843a1dd8caf78e166a1b98f5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-2---connect-with-registered-servers-and-object-explorer"></a>1-2단원 - 등록된 서버 및 개체 탐색기와 연결
-이 자습서에서는 등록된 서버와 개체 탐색기를 사용하는 방법을 보여 줍니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 자습서에서는 등록된 서버와 개체 탐색기를 사용하는 방법을 보여 줍니다.  
   
 이 자습서에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 자세한 정보는 [SQL Server 예제 및 예제 데이터베이스 설치](http://sqlserversamples.codeplex.com)를 참조하십시오.  
   

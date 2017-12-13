@@ -3,8 +3,11 @@ title: "개체 선택(개체 탐색기) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-objects-object-explorer"></a>개체 선택(개체 탐색기)
-**개체 선택** 대화 상자를 사용하여 다른 대화 상자에 있는 목록에 개체를 추가할 수 있습니다. 대화 상자 제목과 대화 상자에서 사용할 수 있는 옵션은 대화 상자를 연 방법에 따라 다릅니다. 사용 가능한 옵션만 나타납니다. 예를 들어 새 개체의 소유자를 선택하는 경우에는 로그인만 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **개체 선택** 대화 상자를 사용하여 다른 대화 상자에 있는 목록에 개체를 추가할 수 있습니다. 대화 상자 제목과 대화 상자에서 사용할 수 있는 옵션은 대화 상자를 연 방법에 따라 다릅니다. 사용 가능한 옵션만 나타납니다. 예를 들어 새 개체의 소유자를 선택하는 경우에는 로그인만 사용할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
 **개체 유형 선택**  

@@ -3,8 +3,11 @@ title: "OR에 우선 순위가 있는 조건 조합(Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56714e86553346cc53125ad90d2140df502179e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f8852df6a617323c69741eebd7c9c1475f4f054
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR에 우선 순위가 있는 조건 조합(Visual Database Tools)
-조건을 OR로 연결하고 AND로 연결된 조건보다 높은 우선 순위를 부여하려면 각 OR 조건에 대하여 AND 조건을 반복해야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 조건을 OR로 연결하고 AND로 연결된 조건보다 높은 우선 순위를 부여하려면 각 OR 조건에 대하여 AND 조건을 반복해야 합니다.  
   
 예를 들어, 근무 연수가 5년이 넘는 직원 중 직급이 낮거나 퇴직한 직원을 모두 찾는다고 가정합니다. 이 쿼리에는 세 개의 조건이 필요하며 하나의 조건이 두 개의 추가 조건과 AND로 연결되어 있어야 합니다.  
   

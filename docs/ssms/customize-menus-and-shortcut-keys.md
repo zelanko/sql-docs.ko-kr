@@ -3,8 +3,11 @@ title: "메뉴 및 바로 가기 키 사용자 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34aac044681d6ba558799ed7bcbedbd2fde1411e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
-키보드 액셀러레이터를 사용하면 Alt+*<single letter>*를 눌러 메뉴 명령이나 단추를 선택할 수 있습니다. 예를 들어 **편집** 메뉴를 열려면 Alt+E를 누릅니다. **사용자 지정** 대화 상자를 사용하여 도구 모음 단추, 메뉴 및 메뉴 명령을 다시 정렬하고 수정할 수 있습니다. 여기에서는 마우스를 사용하거나 키보드만 사용하여 설정을 변경하기 위한 지침이 제공됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 키보드 액셀러레이터를 사용하면 Alt+*<single letter>*를 눌러 메뉴 명령이나 단추를 선택할 수 있습니다. 예를 들어 **편집** 메뉴를 열려면 Alt+E를 누릅니다. **사용자 지정** 대화 상자를 사용하여 도구 모음 단추, 메뉴 및 메뉴 명령을 다시 정렬하고 수정할 수 있습니다. 여기에서는 마우스를 사용하거나 키보드만 사용하여 설정을 변경하기 위한 지침이 제공됩니다.  
   
 Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이터는 **도구** 옵션 **대화 상자의**/**키보드** 페이지에서 만들 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: "특성을 요소 (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0647c088e158d4ccccb42b7e6af5650f5209824
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ac450f0143b934412e47321e357e7256e8d10074
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attributes-element-xmla"></a>Attributes 요소(XMLA)
-  부모 [Insert](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 또는 [Update](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) 명령이나 부모 [Where](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) 요소에서 사용되는 [Attribute](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) 요소 컬렉션을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]컬렉션을 포함 [특성](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 부모에 의해 사용 되는 요소 [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) 또는 [업데이트](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) 명령이 나 부모 [여기서](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

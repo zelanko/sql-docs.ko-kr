@@ -2,9 +2,12 @@
 title: "등록된 서버에서 연결 끊기(SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c58749042bd06cf3a45593108ed383f977dd89a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99df68ba2dbcfb4cd36160c025bc2d609f917cf6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>등록된 서버에서 연결 끊기(SQL Server Management Studio)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 서버에 대한 개체 탐색기의 연결을 끊는 방법에 대해 설명합니다. 개체 탐색기의 연결을 끊어도 SQL 편집기 같은 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 구성 요소의 연결은 끊어지지 않습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 서버에 대한 개체 탐색기의 연결을 끊는 방법에 대해 설명합니다. 개체 탐색기의 연결을 끊어도 SQL 편집기 같은 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 구성 요소의 연결은 끊어지지 않습니다.  
   
 ##  <a name="SSMSProcedure"></a>  
   

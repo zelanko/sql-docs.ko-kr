@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cff5b201eee23cad7d5f8a6d6fe7748e4441f400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 256a8f2456c5d5f728322e80d03629c75d921161
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |호환성 수준|데이터베이스 호환성 수준 110 및 120|이후 릴리스로 데이터베이스 및 응용 프로그램을 업그레이드하도록 계획합니다.|데이터베이스 호환성 수준 110<br /><br /> 데이터베이스 호환성 수준 120||  
 |XML|인라인 XDR 스키마 생성|XMLDATA 지시어에 FOR XML 옵션은 더 이상 사용되지 않습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용하세요. EXPLICT 모드의 XMLDATA 지시어의 경우에는 대체할 옵션이 없습니다.|XMLDATA|181|  
 |Backup 및 Restore 메서드|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 또는 LOG TO TAPE|235|  
-|Backup 및 Restore 메서드|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|Backup 및 Restore 메서드|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |Backup 및 Restore 메서드|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |데이터 정렬|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|없음 이러한 데이터 정렬은 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 지원되기는 하지만 fn_helpcollations를 통해 볼 수는 없습니다.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |데이터 정렬|힌디어<br /><br /> 마케도니아어|이러한 데이터 정렬은 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 이상에서 지원되기는 하지만 fn_helpcollations를 통해 볼 수는 없습니다. 대신 Macedonian_FYROM_90 및 Indic_General_90을 사용하십시오.|힌디어<br /><br /> 마케도니아어|190<br /><br /> 193|  

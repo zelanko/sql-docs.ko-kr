@@ -3,8 +3,11 @@ title: "데이터 형식 변경 필요 대화 상자(Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e04f93f6a54a5d90c49a934ec1c814e5a4557229
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 629cd7c93550345eccd5c3b56dafebe91c56aff1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>데이터 형식 변경 필요 대화 상자(Visual Database Tools)
-이 대화 상자는 관계에 참여하고 있는 열의 데이터 형식, 길이, 소수 자릿수, 전체 자릿수 또는 데이터 정렬을 변경하는 경우에 나타납니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자는 관계에 참여하고 있는 열의 데이터 형식, 길이, 소수 자릿수, 전체 자릿수 또는 데이터 정렬을 변경하는 경우에 나타납니다.  
   
 ## <a name="options"></a>옵션  
 **예**  

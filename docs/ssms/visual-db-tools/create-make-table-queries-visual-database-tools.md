@@ -3,8 +3,11 @@ title: "테이블 만들기 쿼리 만들기(Visual Database Tools) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7d5fa6a7c13d6a10ecd8d21fbff4981260617eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3062cf684505e7c67c5b65a8e296ff75deb3610b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>테이블 만들기 쿼리 만들기(Visual Database Tools)
-테이블 만들기 쿼리를 사용하여 행을 새 테이블에 복사할 수 있습니다. 이 방법은 작업에 사용할 데이터의 하위 집합을 만들거나 한 데이터베이스에서 다른 데이터베이스로 테이블 내용을 복사하는 데 유용합니다. 테이블 만들기 쿼리는 결과 삽입 쿼리와 비슷하지만 행을 복사해 넣을 새 테이블을 만든다는 점에서 차이가 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 테이블 만들기 쿼리를 사용하여 행을 새 테이블에 복사할 수 있습니다. 이 방법은 작업에 사용할 데이터의 하위 집합을 만들거나 한 데이터베이스에서 다른 데이터베이스로 테이블 내용을 복사하는 데 유용합니다. 테이블 만들기 쿼리는 결과 삽입 쿼리와 비슷하지만 행을 복사해 넣을 새 테이블을 만든다는 점에서 차이가 있습니다.  
   
 테이블 만들기 쿼리를 만들려면 다음 항목을 지정합니다.  
   

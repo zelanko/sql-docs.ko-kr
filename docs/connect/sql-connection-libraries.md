@@ -13,11 +13,11 @@ ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: fceff06b2a35fbcc5621f08883ece0a126723f6b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d289af96467634c144c7d0bc5ee362968c646333
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 데이터베이스에 대 한 연결 모듈
 
@@ -58,9 +58,9 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | :------- | :---------------------- |
 | C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Ubuntu Linux에 대 한.NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core를 MacOS](https://www.microsoft.com/net/core#macos)<br />[Windows 용.NET core](https://www.microsoft.com/net/core) |
 | C++      | [ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Java     | [JDBC](http://go.microsoft.com/fwlink/?LinkId=245496)<br />[6.2를 다운로드 합니다.](http://www.microsoft.com/download/details.aspx?id=55539) |
+| Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Node.js 드라이버, 설치 지침](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *운영 체제:*<br /><br />[Windows PHP driver](http://www.microsoft.com/download/details.aspx?id=20098)<br />[Github에서 Ubuntu 또는 MacOS PHP 드라이버](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *운영 체제:*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Github에서 Ubuntu 또는 MacOS PHP 드라이버](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
 | Python   | [pyodbc, 설치 지침](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[ODBC 13.1 다운로드](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Ruby 드라이버, 설치 지침](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby 다운로드 페이지](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |

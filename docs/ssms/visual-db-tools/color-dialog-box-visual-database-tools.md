@@ -3,8 +3,11 @@ title: "색 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b81457423c340118548bcc22b66504469ad5fa4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7380a1f338e519517fee09cda3c7419b1ac4817b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>색 대화 상자(Visual Database Tools)
-**색 대화 상자** 에서는 사용자가 선택한 색의 RGB 값을 반환합니다. 사용자는 디스플레이 드라이버에 의해 결정된 기본 색 집합이나 사용자 지정 색 집합에서 선택할 수 있습니다. 기본 색에서 선택하거나 사용자 지정 색을 만듭니다. 색 매트릭스에서 클릭하거나 **색상**, **채도**, **명도**, **빨강**, **녹색**및 **파랑** 상자에 입력하여 색을 정의합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **색 대화 상자**에서는 사용자가 선택한 색의 RGB 값을 반환합니다. 사용자는 디스플레이 드라이버에 의해 결정된 기본 색 집합이나 사용자 지정 색 집합에서 선택할 수 있습니다. 기본 색에서 선택하거나 사용자 지정 색을 만듭니다. 색 매트릭스에서 클릭하거나 **색상**, **채도**, **명도**, **빨강**, **녹색**및 **파랑** 상자에 입력하여 색을 정의합니다.  
   
 ## <a name="options"></a>옵션  
 **기본 색**  

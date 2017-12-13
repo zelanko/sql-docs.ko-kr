@@ -3,8 +3,11 @@ title: "SQL Server Management Studio 정보 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6cfc37d86a22f9da3584f77f0515eae3c699c2ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a6159dfe1ef26fd91fbd1407d8a8ad7da6676148
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="about-sql-server-management-studio"></a>SQL Server Management Studio 정보
-이 대화 상자를 사용하여 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에 대한 정보를 확인하거나 복사할 수 있습니다. 평가 버전은 제품 사용 만료일까지 남은 일 수를 표시합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에 대한 정보를 확인하거나 복사할 수 있습니다. 평가 버전은 제품 사용 만료일까지 남은 일 수를 표시합니다.  
   
 ## <a name="options"></a>옵션  
 **구성 요소 이름**  

@@ -3,8 +3,11 @@ title: "SQL Server 에이전트 고정 데이터베이스 역할 | Microsoft 문
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a8b2d1ccf779150f478702870689c359af4b0182
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc6c25e52402bcf7e4d1a3a9899e9b3ce6449b73
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 관리자에게 **에이전트에 대한 보다 세부적인 액세스 제어 기능을 제공하는 다음과 같은** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 고정 데이터베이스 역할을 제공합니다. 다음 역할은 액세스 권한이 적은 것부터 순서대로 나열되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]는 관리자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에 대한 보다 세부적인 액세스 제어 기능을 제공하는 다음과 같은 **msdb** 데이터베이스 고정 데이터베이스 역할을 제공합니다. 다음 역할은 액세스 권한이 적은 것부터 순서대로 나열되어 있습니다.  
   
 -   **SQLAgentUserRole**  
   

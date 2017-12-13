@@ -2,12 +2,12 @@
 title: "테이블 형식 모델 스크립팅 언어 (TMSL) 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 02d8617161c4d2a023ea5b91e5e4fc2074c6c07d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6a897c2cc561d5a313f2f7c7b30d987c5ad21d01
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>테이블 형식 모델 스크립팅 언어 (TMSL) 참조
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  스크립팅 언어 TMSL (tabular Model)은 호환성 수준 1200 이상에서 Analysis Services 테이블 형식 모델 데이터베이스에 대 한 명령 및 개체 모델 정의 구문입니다. TMSL, XMLA 프로토콜을 통해 Analysis Services에 통신 합니다. 여기서는 [XMLA 합니다. 실행](../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 둘 다 받습니다 JSON 기반 **문을** 에서 기존 XML 기반 스크립트 뿐만 아니라 TMSL 스크립트 [Analysis Services Scripting Language &#40; ASSL XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]스크립팅 언어 TMSL (tabular Model)은 호환성 수준 1200 이상에서 Analysis Services 테이블 형식 모델 데이터베이스에 대 한 명령 및 개체 모델 정의 구문입니다. TMSL, XMLA 프로토콜을 통해 Analysis Services에 통신 합니다. 여기서는 [XMLA 합니다. 실행](../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 둘 다 받습니다 JSON 기반 **문을** 에서 기존 XML 기반 스크립트 뿐만 아니라 TMSL 스크립트 [Analysis Services Scripting Language &#40; ASSL XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  TMSL의 주요 요소는 다음과 같습니다.  
   

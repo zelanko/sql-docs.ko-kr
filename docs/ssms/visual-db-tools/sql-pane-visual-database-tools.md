@@ -3,8 +3,11 @@ title: "SQL 창(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9936c62e610b454b38f4ca5eac2e18ce30f256cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b5ec778110af1238b0bb703b5ff91c2086097cbc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL Visual Database Tools)
-SQL 창을 사용하여 고유한 SQL 문을 만들거나 조건 창 및 다이어그램 창을 사용하여 문을 만들 수 있습니다. 조건 창이나 다이어그램 창을 사용해도 SQL 문은 SQL 창에 작성됩니다. 쿼리를 작성할 때 SQL 창은 자동으로 업데이트되고 읽기 쉽도록 서식이 다시 지정됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL 창을 사용하여 고유한 SQL 문을 만들거나 조건 창 및 다이어그램 창을 사용하여 문을 만들 수 있습니다. 조건 창이나 다이어그램 창을 사용해도 SQL 문은 SQL 창에 작성됩니다. 쿼리를 작성할 때 SQL 창은 자동으로 업데이트되고 읽기 쉽도록 서식이 다시 지정됩니다.  
   
 SQL 창을 열려면 먼저 **데이터베이스** 메뉴에서 **새 쿼리**를 클릭하여 서버 탐색기에서 데이터베이스 개체를 선택한 상태로 쿼리 및 뷰 디자이너를 엽니다. 그런 다음 **쿼리 디자이너** 메뉴에서 **창** 을 가리키고 **SQL**을 클릭합니다.  
   

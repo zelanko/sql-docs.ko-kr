@@ -3,8 +3,11 @@ title: "전체 텍스트 인덱스 대화 상자(Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a87fcc5e4ca8ba7646a727333f74a95ed06eb7b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 612d6cb328d1c93ed3f215c34ea243e1c6ff5a45
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
-이 대화 상자를 사용하면 전체 텍스트 인덱스를 만들어 데이터베이스 테이블에서 텍스트 기반 열에 대해 전체 텍스트 검색을 수행할 수 있습니다. 전체 텍스트 인덱스는 일반 인덱스를 기반으로 하므로 먼저 일반 인덱스를 만들어야 합니다. 일반 인덱스는 null이 아닌 단일 열에 대해 작성해야 하며, 값이 큰 열보다 값이 작은 열을 선택하는 것이 좋습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 전체 텍스트 인덱스를 만들어 데이터베이스 테이블에서 텍스트 기반 열에 대해 전체 텍스트 검색을 수행할 수 있습니다. 전체 텍스트 인덱스는 일반 인덱스를 기반으로 하므로 먼저 일반 인덱스를 만들어야 합니다. 일반 인덱스는 null이 아닌 단일 열에 대해 작성해야 하며, 값이 큰 열보다 값이 작은 열을 선택하는 것이 좋습니다.  
   
 > [!NOTE]  
 > 전체 텍스트 인덱스를 만들려면 우선 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 나 엔터프라이즈 관리자와 같은 외부 도구를 사용하여 데이터베이스의 전체 텍스트 카탈로그를 만들어야 합니다.  

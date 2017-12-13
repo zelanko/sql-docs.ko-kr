@@ -17,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba7958a1b5b9398dec3cb07630ee84b72970d2ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7662fe90dc6f90c4437f200086e4d96b486a20b
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 도구 및 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>쿼리를 실행 하 고 데이터베이스 관리 도구  
@@ -37,7 +36,12 @@ ms.lasthandoff: 12/05/2017
 | [SSDT(SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스에 대 한 강력한 개발 환경으로 Visual Studio를 설정 합니다. **Windows에서 실행 되는 SSDT**합니다.|
 | [Visual Studio 코드](https://code.visualstudio.com/)| Visual Studio Code를 설치 하면 설치 여 [확장명이 mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) Microsoft SQL Server, Azure SQL 데이터베이스 및 SQL 데이터 웨어하우스를 개발 하기 위한 합니다. **Visual Studio 코드 창, macOS 등 및 Linux에서 실행**합니다.|
 
+## <a name="which-tool-should-i-choose"></a>도구를 선택 해야 합니까?
 
+- SQL Server 인스턴스 또는 데이터베이스에서 Windows, Linux 또는 Mac에서 간단한 편집기에서 관리 하 시겠습니까? 선택[[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
+- SQL Server 인스턴스 또는 전체 GUI 지 원하는 Windows에서 데이터베이스를 관리 하 시겠습니까? 선택 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- 만들거나 데이터베이스 코드를 컴파일 타임 유효성 검사를 포함 하 여 유지 관리 하려는 리팩터링 및 디자이너를 Windows에서 지원? 선택 [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- Windows, Linux 또는 Mac에서 간단한 편집기에서 T-SQL 스크립트를 작성 하 시겠습니까? 선택 [Visual Studio Code](https://code.visualstudio.com/) 및 [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>추가 도구
 

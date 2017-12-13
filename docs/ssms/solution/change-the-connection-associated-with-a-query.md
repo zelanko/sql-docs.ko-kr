@@ -3,8 +3,11 @@ title: "쿼리와 연관된 연결 변경 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e9e34fcbb4dde3f61350653ac07a3abb2ca70c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 32e6d29195ec503dc549ffc15da7aaca3a28ec2b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>쿼리와 연관된 연결 변경
-쿼리에 사용되는 연결을 변경하여 다른 여러 개의 서버나 데이터베이스에 대해 쿼리를 실행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리에 사용되는 연결을 변경하여 다른 여러 개의 서버나 데이터베이스에 대해 쿼리를 실행할 수 있습니다.  
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>쿼리와 연관된 연결을 변경하려면  
   

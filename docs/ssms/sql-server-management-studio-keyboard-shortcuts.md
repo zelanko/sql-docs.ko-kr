@@ -2,9 +2,12 @@
 title: "SQL Server Management Studio 바로 가기 키 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b42d5ff8c209d4df06abbf8c85b0edee8883a868
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fc409c7b1028a2e8b34eecc1485bffb0b53c023
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 구성표가 사용됩니다. 또한 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표를 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 구성표가 사용됩니다. 또한 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표를 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  
   
 > [!NOTE]  
 >  이 페이지 상단의 **모두 축소** 를 클릭하면 제목만 표시됩니다.  

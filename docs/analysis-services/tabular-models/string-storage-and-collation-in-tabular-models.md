@@ -2,12 +2,12 @@
 title: "문자열 저장소 및 테이블 형식 모델에서 데이터 정렬 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 421606292e30977064f96bf5e77efca396b90032
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 90b110552e0ea5469258581c1d1e26d4ebd86d36
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>테이블 형식 모델의 문자열 저장소 및 데이터 정렬
-  테이블 형식 모델에서 문자열(텍스트 값)은 고도로 압축된 형식으로 저장되며, 이러한 압축으로 인해 전체 또는 부분 문자열을 검색할 때 예기치 않은 결과를 얻게 될 수 있습니다. 또한 문자열 로캘 및 데이터 정렬은 가장 가까운 부모 개체에서 계층적으로 상속되므로 문자열 언어가 명시적으로 정의되어 있지 않은 경우 각 문자열이 저장되는 방식과 문자열이 고유한지 아니면 부모 데이터 정렬에 의해 정의된 유사 문자열과 혼합되는지는 부모의 로캘 및 데이터 정렬에 따라 달라질 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]문자열 (텍스트 값) 테이블 형식 모델;의 고도로 압축 된 형식으로 저장 됩니다. 이 압축으로 인해 전체 또는 부분 문자열을 검색 하는 경우 예기치 않은 결과 얻을 수 있습니다. 또한 문자열 로캘 및 데이터 정렬은 가장 가까운 부모 개체에서 계층적으로 상속되므로 문자열 언어가 명시적으로 정의되어 있지 않은 경우 각 문자열이 저장되는 방식과 문자열이 고유한지 아니면 부모 데이터 정렬에 의해 정의된 유사 문자열과 혼합되는지는 부모의 로캘 및 데이터 정렬에 따라 달라질 수 있습니다.  
   
  이 항목에서는 문자열 압축 및 저장 메커니즘에 대해 설명하고 테이블 형식 모델에서 데이터 정렬 및 언어가 텍스트 수식 결과에 미치는 영향을 보여 주는 예를 제공합니다.  
   

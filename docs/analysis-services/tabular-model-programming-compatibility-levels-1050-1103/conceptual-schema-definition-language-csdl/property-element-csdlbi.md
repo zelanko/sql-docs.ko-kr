@@ -2,12 +2,12 @@
 title: "Property 요소 (CSDLBI) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b71657fa8ff566b36e93b8c2bacfe3fb05630d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ff62bf4280fb1e01c6df47e2f748038ec92378fd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="property-element-csdlbi"></a>Property 요소(CSDLBI)
-  CSDLBI의 Property 요소는 비즈니스 인텔리전스 데이터 모델을 지원하여 CSDL Property 요소에 대한 추가 기능을 제공하는 복합 유형입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]CSDLBI의 Property 요소는 비즈니스 인텔리전스 데이터 모델을 지원 하기 위해 CSDL Property 요소에 대 한 추가 제공 하는 복합 유형입니다.  
   
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 CSDLBI Property 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  

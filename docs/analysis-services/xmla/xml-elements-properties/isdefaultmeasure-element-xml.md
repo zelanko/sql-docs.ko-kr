@@ -2,12 +2,12 @@
 title: "IsDefaultMeasure 요소 (XML) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1246b698fc9f7943ef4e1fbe5b41307d12a72813
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f904c9185c98adc0965f735bbd4e36e0aa93ae12
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="isdefaultmeasure-element-xml"></a>IsDefaultMeasure 요소(XML)
-  다른 테이블에 대한 이 관계를 탐색하고 DefaultMeasure 특성이 있는 멤버를 인출하여 이 엔터티의 기본 측정값을 가져올 수 있음을 나타냅니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]나타내고 다른 테이블에이 관계를 탐색 하 여이 엔터티의 기본 측정값을 가져올 수는 DefaultMeasure 특성이 있는 멤버를 인출 합니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -2,9 +2,12 @@
 title: "등록된 서버 정보 내보내기(SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e58cdf697a3bc2dc1f34eb4c3a486afcf33820e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95c412ae01c469a19bf5548c20c441c18957639a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 내보내기(SQL Server Management Studio)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 정보를 저장하여 내보내고 그 정보를 다른 사용자나 서버로 배포하는 방법에 대해 설명합니다. 이러한 내보내기 기능을 사용하면 여러 대의 컴퓨터에서 일관된 사용자 인터페이스를 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 정보를 저장하여 내보내고 그 정보를 다른 사용자나 서버로 배포하는 방법에 대해 설명합니다. 이러한 내보내기 기능을 사용하면 여러 대의 컴퓨터에서 일관된 사용자 인터페이스를 사용할 수 있습니다.  
   
  등록된 서버 파일을 내보냈다가 다시 가져오면 등록된 서버에 있는 동일한 서버로 여러 컴퓨터를 쉽게 구성할 수 있습니다. 이 작업은 여러 곳에 위치한 컴퓨터에서 다수의 서버를 관리할 때나 경험이 적은 사용자를 위해 기본 연결 설정을 구성하려는 경우에 유용합니다.  
   

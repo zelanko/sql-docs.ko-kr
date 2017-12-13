@@ -3,8 +3,11 @@ title: "SQL Server Management Studio - 원격 분석(SSMS) | Microsoft 문서"
 ms.custom: 
 ms.date: 02/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd49e14d6a19d1ac81a5cb17494988ce05c40e80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: db59123cfd2f78bc069bdb2b688dc2daec8e6830
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 사용 현황 피드백 수집에 대한 로컬 감사
-
-SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함됩니다. SSMS는 표준 컴퓨터 정보 및 Microsoft로 전송되어 SSMS의 품질, 보안 및 안정성 개선의 목적으로 분석될 수 있는 사용 및 성능에 대한 정보를 수집할 수 있습니다. 사용자 이름, 주소 또는 기타 개인 정보는 수집하지 않습니다. 자세한 내용은 [SQL Server 개인정보처리방침](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)을 참조하세요.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함됩니다. SSMS는 표준 컴퓨터 정보 및 Microsoft로 전송되어 SSMS의 품질, 보안 및 안정성 개선의 목적으로 분석될 수 있는 사용 및 성능에 대한 정보를 수집할 수 있습니다. 사용자 이름, 주소 또는 기타 개인 정보는 수집하지 않습니다. 자세한 내용은 [SQL Server 개인정보처리방침](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)을 참조하세요.
 
 ## <a name="audit-feature-usage-data"></a>기능 사용 현황 데이터 감사
 

@@ -3,8 +3,11 @@ title: "결과 삽입 쿼리 만들기(Visual Database Tools) | Microsoft 문서
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7728baf26863015b323cd3841b0f9dfb898ea897
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ddef4fd36ca72c473b480c31e7cd46c7e710d295
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>결과 삽입 쿼리 만들기(Visual Database Tools)
-결과 삽입 쿼리를 사용하여 테이블 내에서 또는 한 테이블에서 다른 테이블로 행을 복사할 수 있습니다. 예를 들어 `titles` 테이블에서 결과 삽입 쿼리를 사용하여 한 출판사의 모든 도서 제목에 대한 정보를 두 번째 테이블로 복사하고 이 테이블을 해당 출판사에서 사용하도록 만들 수 있습니다. 결과 삽입 쿼리는 테이블 만들기 쿼리와 비슷하지만 행을 기존 테이블에 복사한다는 점에서 차이가 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 결과 삽입 쿼리를 사용하여 테이블 내에서 또는 한 테이블에서 다른 테이블로 행을 복사할 수 있습니다. 예를 들어 `titles` 테이블에서 결과 삽입 쿼리를 사용하여 한 출판사의 모든 도서 제목에 대한 정보를 두 번째 테이블로 복사하고 이 테이블을 해당 출판사에서 사용하도록 만들 수 있습니다. 결과 삽입 쿼리는 테이블 만들기 쿼리와 비슷하지만 행을 기존 테이블에 복사한다는 점에서 차이가 있습니다.  
   
 > [!TIP]  
 > 잘라내기와 붙여넣기를 사용하여 한 테이블에서 다른 테이블로 행을 복사할 수도 있습니다. 각 테이블에 대한 쿼리를 만들고 쿼리를 실행합니다. 한 결과 표에서 다른 결과 표로 행을 복사합니다.  

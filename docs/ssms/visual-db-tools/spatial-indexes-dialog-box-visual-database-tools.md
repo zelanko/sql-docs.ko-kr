@@ -3,8 +3,11 @@ title: "공간 인덱스 대화 상자(Visual Database Tools) | Microsoft 문서
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a3e6df8d3ffcae88b1a89c5c4551d0a8a5b8b8e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
-**공간 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 **기하 도형** 또는*지리*데이터 형식의 열( **공간 열** )에 대한 인덱스를 만들 수 없습니다. 각 공간 열에는 둘 이상의 공간 인덱스가 있을 수 있으며, 이러한 공간 인덱스는 한 번에 하나씩 만들어야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **공간 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 **기하 도형** 또는 **지리** 데이터 형식의 열(*공간 열*)에 대한 인덱스를 만들 수 없습니다. 각 공간 열에는 둘 이상의 공간 인덱스가 있을 수 있으며, 이러한 공간 인덱스는 한 번에 하나씩 만들어야 합니다.  
   
 공간 인덱스 만들기의 제한 사항에 대한 자세한 내용은 [공간 인덱스 개요](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)를 참조하세요.  
   

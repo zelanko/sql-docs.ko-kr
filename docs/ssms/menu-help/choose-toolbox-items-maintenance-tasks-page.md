@@ -3,8 +3,11 @@ title: "도구 상자 항목 선택(유지 관리 태스크 페이지) | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3b661fc344ca48b1cb1d44a40cec9f9731cafec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cb904c376444eeaf7ad7cfe217d3d202d4d3e59
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>도구 상자 항목 선택(유지 관리 태스크 페이지)
-**도구 상자 사용자 지정** 대화 상자의 이 탭에는 컴퓨터에 등록되어 있는 모든 유지 관리 태스크 구성 요소의 목록이 표시되며 이 탭을 사용하여 도구 상자에 표시되는 구성 요소를 변경할 수 있습니다. **도구 상자 사용자 지정** 대화 상자는 **도구** 메뉴에서 열 수 있습니다. 구성 요소 목록을 정렬하려면 열 머리글 중 하나를 선택합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **도구 상자 사용자 지정** 대화 상자의 이 탭에는 컴퓨터에 등록되어 있는 모든 유지 관리 태스크 구성 요소의 목록이 표시되며 이 탭을 사용하여 도구 상자에 표시되는 구성 요소를 변경할 수 있습니다. **도구 상자 사용자 지정** 대화 상자는 **도구** 메뉴에서 열 수 있습니다. 구성 요소 목록을 정렬하려면 열 머리글 중 하나를 선택합니다.  
   
 ## <a name="options"></a>옵션  
 **유지 관리 태스크** 탭에는 다음 정보 열이 포함되어 있습니다.  

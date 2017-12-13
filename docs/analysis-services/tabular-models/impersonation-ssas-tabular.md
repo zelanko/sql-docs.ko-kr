@@ -2,12 +2,12 @@
 title: "Analysis Services 테이블 형식 모델에서 가장 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ad8bc6b19ab93a75a62134b8b8b9ec51cdb5fdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="impersonation"></a>가장 
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  이 항목에서는 테이블 형식 모델 작성자 사용 하는 방법 로그온 자격 증명은 Analysis Services에서 데이터 원본에 연결할 때를 가져오고 데이터 처리 (새로 고침) 이해를 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 테이블 형식 모델 작성자 사용 하는 방법 로그온 자격 증명은 Analysis Services에서 데이터 원본에 연결할 때를 가져오고 데이터 처리 (새로 고침) 이해를 제공 합니다.  
 
 ##  <a name="bkmk_conf_imp_info"></a>가장 구성  
  모델이 있는 위치 및 컨텍스트에 가장 정보를 구성 하는 방법을 결정 합니다. 새 모델 프로젝트를 만들 때에 가장 데이터를 가져오는 데이터 원본에 연결할 때 SQL Server Data Tools (SSDT)에 구성 됩니다. 모델을 배포한 후 SQL Server Management Studio (SSMS)를 사용 하 여 모델 데이터베이스 연결 문자열 속성의 가장을 구성할 수 있습니다. Azure Analysis Services에서 테이블 형식 모델에 대 한 SSMS를 사용할 수 있습니다 또는 **로 볼: 스크립트** json에서 Model.bim 파일을 편집 하려면 브라우저 기반 디자이너의 모드입니다.

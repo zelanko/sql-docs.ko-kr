@@ -2,12 +2,12 @@
 title: "테이블 형식 모델 (SSAS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1d770b114a708301f884de76d7c6a4cc39227195
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 569cd3ff914f7b758fb1cfaf1a8c631e8c3d9c4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-modeling-ssas"></a>테이블 형식 모델링(SSAS)
-  테이블 형식 모델은 메모리 내에서 또는 DirectQuery 모드에서 실행되어 백 엔드 관계형 데이터 원본에서 데이터에 직접 액세스하는 Analysis Services 데이터베이스입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델은 메모리 내 또는 백 엔드 관계형 데이터 원본에서 데이터에 직접 액세스 하는 DirectQuery 모드에서 실행 되는 Analysis Services 데이터베이스입니다.  
   
  이 모델은 기본적으로 메모리 내에서 실행됩니다. 최첨단 비교 알고리즘과 다중 쿼리 프로세서를 사용하는 메모리 내 분석 엔진을 사용하면 Microsoft Excel 및 Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]등의 보고 클라이언트 응용 프로그램을 통해 테이블 형식 모델 개체와 데이터에 신속하게 액세스할 수 있습니다.  
   

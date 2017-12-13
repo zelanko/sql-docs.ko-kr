@@ -2,12 +2,12 @@
 title: "열 속성 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 909733f4c7c9973d4812c8d3bc2f46f81e2788d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ce23f4ec3f28ed2057ac2433615b1ab4fb98938a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="column-properties-ssas-tabular"></a>열 속성(SSAS 테이블 형식)
-  이 항목에서는 테이블 형식 모델 열 속성에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 테이블 형식 모델 열 속성을 설명 합니다.  
   
 >  [!NOTE]  
 >  일부 속성은 모든 호환성 수준에서 지원 되지 않습니다.    
