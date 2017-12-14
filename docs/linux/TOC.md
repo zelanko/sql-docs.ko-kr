@@ -24,6 +24,8 @@
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+## [7_Pacemaker 클러스터 배포](sql-server-linux-deploy-pacemaker-cluster.md)
+## [8_가용성 그룹 생성 및 구성](sql-server-linux-create-availability-group.md)
 
 # 개념
 ## Install
@@ -51,6 +53,7 @@
 ### [PowerShell을 사용하여 관리](sql-server-linux-manage-powershell.md)
 ### [로그 전달 사용](sql-server-linux-use-log-shipping.md)
 ### [DB 메일 및 메일 알림 사용](sql-server-linux-db-mail-sql-agent.md)
+### [가용성을 위해 다중 서브넷 구성](sql-server-linux-configure-multiple-subnet.md)
 
 ## [마이그레이션](sql-server-linux-migrate-overview.md)
 ### [Windows에서 BACPAC 내보내기 및 가져오기](sql-server-linux-migrate-ssms.md)
@@ -63,19 +66,20 @@
 ### [SSIS 패키지 예약](sql-server-linux-schedule-ssis-packages.md)
 
 ## [비즈니스 연속성 구성](sql-server-linux-business-continuity-dr.md)
+### [가용성 기본 사항](sql-server-linux-ha-basics.md)
 ### [백업 및 복원](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
 ### [장애 조치(Failover) 클러스터 인스턴스](sql-server-linux-shared-disk-cluster-concepts.md)
-#### [Red Hat Enterprise Linux]()
+#### [Red Hat Enterprise Linux(RHEL)]()
 ##### [구성(HA 추가 기능)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [운영(HA 추가 기능)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-#### [SUSE Linux Enterprise Server]()
+#### [SUSE Linux Enterprise Server(SLES)]()
 ##### [구성(HA 추가 기능)](sql-server-linux-shared-disk-cluster-sles-configure.md)
 ### [가용성 그룹](sql-server-linux-availability-group-overview.md)
 #### [고가용성을 위해 만들기](sql-server-linux-availability-group-ha.md)
 ##### [AG 구성](sql-server-linux-availability-group-configure-ha.md)
 ##### [RHEL에서 구성](sql-server-linux-availability-group-cluster-rhel.md)
-##### [SUSE에서 구성](sql-server-linux-availability-group-cluster-sles.md)
+##### [SLES에서 구성](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Ubuntu에서 구성](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [운영](sql-server-linux-availability-group-failover-ha.md)
 #### [읽기 배율 전용으로 만들기]()
@@ -91,8 +95,8 @@
 
 # 샘플
 ## 무인 설치
-### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
-### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+### [Red Hat Enterprise Linux(RHEL)](sample-unattended-install-redhat.md)
+### [SUSE Linux Enterprise Server(SLES)](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # 리소스
