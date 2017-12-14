@@ -2,9 +2,12 @@
 title: "네트워크 프로토콜 및 네트워크 라이브러리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,23 +28,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 657134dd5c6c7fe7c4ee81050c570dc14e9d23d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cbd032edc776aa19873a4615ba6a16c7ff8ce9aa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
-# 네트워크 프로토콜 및 네트워크 라이브러리
-  서버는 한 번에 여러 네트워크 프로토콜을 수신하거나 모니터링할 수 있습니다. 이때 각각의 프로토콜을 구성해야 합니다. 특정 프로토콜을 구성하지 않으면 서버가 해당 프로토콜에서 수신할 수 없습니다. 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 프로토콜 구성을 변경할 수 있습니다.  
+# <a name="network-protocols-and-network-libraries"></a>네트워크 프로토콜 및 네트워크 라이브러리
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 서버는 한 번에 여러 네트워크 프로토콜을 수신하거나 모니터링할 수 있습니다. 이때 각각의 프로토콜을 구성해야 합니다. 특정 프로토콜을 구성하지 않으면 서버가 해당 프로토콜에서 수신할 수 없습니다. 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 프로토콜 구성을 변경할 수 있습니다.  
   
-## 기본 SQL Server 네트워크 구성  
+## <a name="default-sql-server-network-configuration"></a>기본 SQL Server 네트워크 구성  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스는 TCP/IP 포트 1433 및 명명된 파이프 \\\\.\pipe\sql\query에 대해 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스는 포트 번호가 운영 체제에서 할당되는 TCP 동적 포트로 구성됩니다.  
   
  예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 특정 포트 주소를 통과하도록 구성된 방화벽 서버를 통과해야 하는 경우와 같이 동적 포트 주소를 사용할 수 없는 경우에는 할당되지 않은 포트 번호를 선택합니다. 포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 이 목록은 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)에서 볼 수 있습니다.  
   
  보안을 향상시키기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치될 때 네트워크 연결이 부분적으로만 설정됩니다. 설치가 완료된 후 네트워크 프로토콜을 설정, 해제 및 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성 영역을 사용합니다.  
   
-## 서버 메시지 블록 프로토콜  
+## <a name="server-message-block-protocol"></a>서버 메시지 블록 프로토콜  
  경계 네트워크에 연결된 서버는 SMB(서버 메시지 블록)를 포함해 불필요한 모든 프로토콜을 비활성화해야 합니다. 웹 서버 및 DNS(Domain Name System) 서버에는 SMB가 필요 없습니다. 이 프로토콜은 사용자 목록 노출 위협에 대비하여 비활성화되어야 합니다.  
   
 > [!WARNING]  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
 > -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 SMB 파일 공유를 데이터 디렉터리로 지정  
 > -   SMB 파일 공유에 데이터베이스 파일 만들기  
   
-#### SMB를 비활성화하려면  
+#### <a name="to-disable-smb"></a>SMB를 비활성화하려면  
   
 1.  **시작** 메뉴에서 **설정**을 가리킨 다음 **네트워크 및 전화 접속 연결**을 클릭합니다.  
   
@@ -65,11 +68,11 @@ ms.lasthandoff: 11/09/2017
   
 5.  제거 단계를 따릅니다.  
   
-#### 인터넷에서 액세스 가능한 서버의 SMB를 비활성화하려면  
+#### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>인터넷에서 액세스 가능한 서버의 SMB를 비활성화하려면  
   
 -   로컬 영역 연결 속성에서 **인터넷 프로토콜(TCP/IP) 속성** 대화 상자를 사용하여 **Microsoft 네트워크용 파일 및 프린터 공유** 및 **Microsoft 네트워크용 클라이언트**를 제거합니다.  
   
-## 끝점  
+## <a name="endpoints"></a>끝점  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대한 새로운 개념이 도입되었습니다. 즉, 연결이 서버 끝에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]*끝점*으로 표시됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 끝점에 대해 사용 권한을 부여, 취소 및 거부할 수 있습니다. 기본적으로 모든 사용자는 sysadmin 그룹의 멤버나 끝점 소유자에 의해 사용 권한이 거부 또는 취소되지 않은 한 끝점에 액세스할 권한이 있습니다. GRANT, REVOKE 및 DENY ENDPOINT 구문에는 관리자가 끝점의 카탈로그 뷰에서 가져와야 하는 끝점 ID가 사용됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 지원되는 모든 네트워크 프로토콜뿐만 아니라 관리자 전용 연결에 대해서도 [!INCLUDE[tsql](../../includes/tsql-md.md)] 끝점을 만듭니다.  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [서버 네트워크 구성](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [노출 영역 구성](../../relational-databases/security/surface-area-configuration.md)   
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)  

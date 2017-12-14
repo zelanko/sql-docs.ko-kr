@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5266703e8a7644a36ebf7eeeaccde1456ce735e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
   이 절차에서는 CDC 상태가 저장되는 패키지 변수를 정의하는 방법을 설명합니다.  
@@ -38,16 +36,16 @@ ms.lasthandoff: 08/03/2017
 |---------------|-----------------|  
 |**\<상태 이름 >**|현재 CDC 상태의 이름입니다.|  
 |**CS**|이렇게 하면 현재 처리 범위 시작점(현재 시작)이 표시됩니다.|  
-|**\<cs lsn >**|이전 CDC 실행 시 마지막으로 처리된 LSN(로그 시퀀스 번호)입니다.|  
+|**\<cs-lsn>**|이전 CDC 실행 시 마지막으로 처리된 LSN(로그 시퀀스 번호)입니다.|  
 |**CE**|이렇게 하면 현재 처리 범위 끝점(현재 끝)이 표시됩니다. CDC 상태에 CE 구성 요소가 있으면 CDC 패키지가 현재 처리 중이거나 해당 CDC 패키지에서 CDC 처리 범위를 완전히 처리하기 전에 실패했음을 나타냅니다.|  
-|**\<ce lsn >**|현재 CDC 실행 시 마지막으로 처리된 LSN입니다. 항상 처리할 마지막 시퀀스 번호를 최대값(0xFFF…)으로 가정합니다.|  
+|**\<ce-lsn>**|현재 CDC 실행 시 마지막으로 처리된 LSN입니다. 항상 처리할 마지막 시퀀스 번호를 최대값(0xFFF…)으로 가정합니다.|  
 |**IR**|이렇게 하면 초기 처리 범위가 표시됩니다.|  
-|**\<ir 시작 >**|초기 로드가 시작되기 직전 변경 내용의 LSN입니다.|  
-|**\<ir 간 >**|초기 로드가 끝난 직후 변경 내용의 LSN입니다.|  
+|**\<ir-start>**|초기 로드가 시작되기 직전 변경 내용의 LSN입니다.|  
+|**\<ir-end>**|초기 로드가 끝난 직후 변경 내용의 LSN입니다.|  
 |**TS**|이렇게 하면 마지막 CDC 상태 업데이트의 타임 스탬프가 표시됩니다.|  
-|**\<타임 스탬프 >**|System.DateTime.UtcNow 속성인 64비트의 10진수 표현입니다.|  
+|**\<timestamp>**|System.DateTime.UtcNow 속성인 64비트의 10진수 표현입니다.|  
 |**ER**|마지막 작업이 실패했을 때 표시되며 오류의 원인에 대한 간단한 설명이 포함되어 있습니다. 이 구성 요소가 있으면 항상 마지막에 표시됩니다.|  
-|**\<간단한 오류 텍스트 >**|간단한 오류 설명입니다.|  
+|**\<short-error-text>**|간단한 오류 설명입니다.|  
   
  LSN 및 시퀀스 번호는 LSN 값을 Binary(10)로 표현하는 최대 20자리의 16진수 문자열로 각각 인코딩됩니다.  
   
@@ -93,8 +91,7 @@ ms.lasthandoff: 08/03/2017
  자동 상태 지속과 함께 CDC 제어 태스크를 사용하지 않는 경우에는 패키지가 마지막으로 실행되었을 때 변수 값이 저장된 영구 저장소에서 해당 값을 로드하고 현재 처리 범위에 대한 처리가 완료될 때 영구 저장소에 다시 써야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [CDC 제어 태스크](../../integration-services/control-flow/cdc-control-task.md)   
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC 제어 태스크 편집기](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

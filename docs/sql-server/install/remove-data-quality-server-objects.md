@@ -2,9 +2,12 @@
 title: "Data Quality 서버 개체 제거 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3521e36d5001823c0700e2b13a17d20898f2049
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 966a649d7dc0a4d54e008132764c313f9db9f6b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="remove-data-quality-server-objects"></a>Data Quality 서버 개체 제거
-  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 있는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 의 인스턴스를 완전히 제거해도 DQS 데이터베이스 등의 일부 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 개체는 삭제되지 않습니다. 이로 인해 사용자가 SQL Server 설치 프로그램을 사용하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 제거할 때 DQS 데이터가 삭제되지 않습니다. 제거 프로세스가 완료된 후 이러한 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 개체를 수동으로 삭제해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거하거나 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]가 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 완전히 제거해도 DQS 데이터베이스 등의 일부 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 개체는 삭제되지 않습니다. 이로 인해 사용자가 SQL Server 설치 프로그램을 사용하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 제거할 때 DQS 데이터가 삭제되지 않습니다. 제거 프로세스가 완료된 후 이러한 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 개체를 수동으로 삭제해야 합니다.  
   
 > [!NOTE]  
 >  -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거하기 전에 기존의 모든 기술 자료를 .dqsb 파일로 내보내서 백업하는 것이 좋습니다. 이 파일은 나중에 모든 기술 자료를 다시 새 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치로 가져오는 데 사용할 수 있습니다. 모든 DQS 기술 자료를 내보내고 가져오는 작업은 명령 프롬프트에서 적합한 명령줄 매개 변수와 함께 DQSInstaller.exe를 실행해서만 수행할 수 있습니다. 자세한 내용은 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)을(를) 참조하세요.  

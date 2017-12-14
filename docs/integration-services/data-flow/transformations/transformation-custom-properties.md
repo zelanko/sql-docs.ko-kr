@@ -2,11 +2,13 @@
 title: "변환 사용자 지정 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -41,16 +43,16 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transformation-custom-properties"></a>변환 사용자 지정 속성
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
@@ -264,7 +266,7 @@ ms.lasthandoff: 08/03/2017
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|Delimiters|문자열|변환에서 사용하는 토큰 구분 기호입니다. 기본 구분 기호는 문자는 포함: 공백 (), 쉼표 (,), 마침표 (.), 세미콜론 (;), 콜론 (:), 하이픈 (-), 곧은 따옴표 ("), 단일 곧은 따옴표 (') 두 번 앰퍼샌드 (&), 슬래시 기호 (/), 백슬래시 (\\), at 기호 (@), 느낌표 (!), 괄호 ((), 닫는 괄호 ())를 열어 물음표 (?) 미만 (\<), 보다 큼 (>), 여는 대괄호 (), 닫는 대괄호 (]), 여는 중괄호 ({}), 닫는 중괄호 (}), 파이프 (&#124;), 숫자 기호 (#), 별표 (*), 캐럿 (^) 및 백분율 (%).|  
+|Delimiters|문자열|변환에서 사용하는 토큰 구분 기호입니다. 기본 구분 기호에는 공백( ), 쉼표(,), 마침표(.), 세미콜론(;), 콜론(:), 하이픈(-), 큰따옴표("), 작은따옴표('), 앰퍼샌드(&), 슬래시 기호(/), 백슬래시(\\), @ 기호, 느낌표(!), 물음표(?), 여는 괄호((), 닫는 괄호()), 보다 작음(\<), 보다 큼(>), 여는 대괄호([), 닫는 대괄호(]), 여는 중괄호({), 닫는 중괄호(}), 파이프(&#124;), 숫자 기호(#), 별표(*), 캐럿(^) 및 백분율(%) 문자가 포함됩니다.|  
 |Exhaustive|Boolean|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 **True** 는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
 |MaxMemoryUsage|정수|변환에서 사용할 최대 메모리 양입니다. 이 속성의 기본값은 동적 메모리 사용을 가능하게 하는 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
 |MinSimilarity|Double|중복을 식별하기 위해 변환에서 사용하는 유사성 임계값으로, 0에서 1 사이의 값으로 나타납니다.  이 속성의 기본값은 0.8입니다.|  
@@ -298,7 +300,7 @@ ms.lasthandoff: 08/03/2017
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|유사 항목 조회 인덱스 생성 및 후속 조회를 위해 참조 테이블의 복사본을 만들지 여부를 지정합니다. 이 속성의 기본값은 **True**입니다.|  
-|Delimiters|문자열|변환에서 열 값을 토큰화하는 데 사용하는 구분 기호입니다. 다음 문자를 포함 하는 기본 구분 기호는: 공백 (), 쉼표 (,), 마침표 (.) 세미콜론 (;), 콜론 (:) 하이픈 (-), 곧은 따옴표 ("), 단일 곧은 따옴표 (')를 두 번 앰퍼샌드 (&), 슬래시 기호 (/), 백슬래시 (\\), at 기호 (@), 느낌표 (!), 물음표 (?), 닫는 괄호 ()), 여는 괄호 (() 보다 작은 (\<), 보다 큼 (>), 여는 대괄호 (), 닫는 대괄호 (]), 여는 중괄호 ({}), 닫는 중괄호 (}), 파이프 (&#124;). 숫자 기호(#), 별표(*), 캐럿(^) 및 백분율(%) 문자가 포함됩니다.|  
+|Delimiters|문자열|변환에서 열 값을 토큰화하는 데 사용하는 구분 기호입니다. 기본 구분 기호에는 공백( ), 쉼표(,), 마침표(.), 세미콜론(;), 콜론(:), 하이픈(-), 큰따옴표("), 작은따옴표('), 앰퍼샌드(&), 슬래시 기호(/), 백슬래시(\\), @ 기호, 느낌표(!), 물음표(?), 여는 괄호((), 닫는 괄호()), 보다 작음(\<), 보다 큼(>), 여는 대괄호([), 닫는 대괄호(]), 여는 중괄호({), 닫는 중괄호(}), 파이프(&#124;) 문자가 포함됩니다. 숫자 기호(#), 별표(*), 캐럿(^) 및 백분율(%) 문자가 포함됩니다.|  
 |DropExistingMatchIndex|Boolean|MatchIndexOptions가 ReuseExistingIndex로 설정되지 않은 경우 MatchIndexName에 지정된 일치 인덱스가 삭제되는지 여부를 지정하는 값입니다. 이 속성의 기본값은 **True**입니다.|  
 |Exhaustive|Boolean|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 **True** 는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
 |MatchIndexName|문자열|일치 인덱스의 이름입니다. 일치 인덱스는 변환에서 만들어 사용 인덱스를 저장하는 테이블입니다. 일치 인덱스가 다시 사용되는 경우 MatchIndexName에서 다시 사용할 인덱스를 지정합니다. MatchIndexName은 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이름이어야 합니다. 예를 들어 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.|  
@@ -367,7 +369,7 @@ ms.lasthandoff: 08/03/2017
   
  조회 변환의 입력 및 출력에는 사용자 지정 속성이 없습니다.  
   
- 자세한 내용은 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)을(를) 참조하세요.  
+ 자세한 내용은 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)을 참조하세요.  
   
 ##  <a name="mjoin"></a> 병합 조인 변환 사용자 지정 속성  
  병합 조인 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -491,7 +493,7 @@ ms.lasthandoff: 08/03/2017
   
  행 샘플링 변환의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   
- 자세한 내용은 [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)을(를) 참조하세요.  
+ 자세한 내용은 [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)을 참조하세요.  
   
 ##  <a name="script"></a> 스크립트 구성 요소 사용자 지정 속성  
  스크립트 구성 요소에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다. 스크립트 구성 요소가 원본, 변환, 대상 중 어느 것으로 사용되는지 여부에 관계없이 같은 사용자 지정 속성을 사용할 수 있습니다.  
@@ -634,6 +636,6 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [경로 속성](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [식을 사용 하 여 설정할 수 있는 데이터 흐름 속성](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [식을 사용하여 설정할 수 있는 데이터 흐름 속성](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

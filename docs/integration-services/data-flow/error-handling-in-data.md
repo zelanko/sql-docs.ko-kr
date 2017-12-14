@@ -8,12 +8,10 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.configureerroroutput.f1
+f1_keywords: sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb565db8a68cb12e8c8a0ab5976c37ea76e183ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling-in-data"></a>데이터 오류 처리
   데이터 흐름 구성 요소가 열 데이터에 변환을 적용하거나, 원본에서 데이터를 추출하거나, 데이터를 대상으로 로드할 때 오류가 발생할 수 있습니다. 오류는 주로 예기치 않은 데이터 값으로 인해 발생합니다. 예를 들어 열에 숫자 대신 문자열이 포함되었기 때문에 데이터 변환이 실패하거나, 열의 데이터 형식은 숫자인데 데이터가 날짜여서 데이터베이스 열에 대한 삽입 작업이 실패하거나, 열 값이 0이어서 식 계산이 실패하고 잘못된 수치 연산이 발생할 수 있습니다.  
@@ -57,11 +54,11 @@ ms.lasthandoff: 09/26/2017
   
  다음 다이어그램에서는 오류 출력이 포함된 간단한 데이터 흐름을 보여 줍니다.  
   
- ![오류 출력을 사용 하 여 데이터 흐름](../../integration-services/data-flow/media/mw-dts-11.gif "오류 출력을 데이터 흐름")  
+ ![오류 출력이 있는 데이터 흐름](../../integration-services/data-flow/media/mw-dts-11.gif "오류 출력이 있는 데이터 흐름")  
   
  자세한 내용은 [데이터 흐름](../../integration-services/data-flow/data-flow.md) 및 [Integration Services 경로](../../integration-services/data-flow/integration-services-paths.md)를 참조하세요.  
 
-## <a name="configure-error-output-dialog-box"></a>구성 오류 출력 대화 상자
+## <a name="configure-error-output-dialog-box"></a>오류 출력 구성 대화 상자
 **오류 출력 구성** 대화 상자를 사용하여 오류 출력을 지원하는 데이터 흐름 변환에 대한 오류 처리 옵션을 구성할 수 있습니다.  
   
  오류 출력 작업 방법에 대한 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
@@ -146,18 +143,17 @@ ms.lasthandoff: 09/26/2017
   
 -   Script 구성 요소를 사용하여 오류 출력의 추가 열에 오류 설명 및 열 이름을 포함할 수도 있습니다. 예제는 [스크립트 구성 요소를 사용하여 오류 출력 향상](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조하세요.  
   
-    -   호출 하는 단일 스크립트 줄을 사용 하 여 오류 설명을 추가 열에 포함 된 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 의 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스.  
+    -   <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 메서드를 호출하는 단일 스크립트 줄을 사용하여 추가 열에 오류 설명을 포함합니다.  
   
-    -   호출 하는 단일 스크립트 줄을 사용 하 여 추가 열에 열 이름을 포함 된 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> 의 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스입니다.  
+    -   <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> 메서드를 호출하는 단일 스크립트 줄을 사용하여 추가 열에 열 이름을 포함합니다.  
   
      오류를 캡처할 데이터 흐름 구성 요소에서 임의의 다운스트림 위치에 있는 데이터 흐름의 오류 세그먼트에 Script 구성 요소를 추가할 수 있습니다. 일반적으로는 오류 행이 대상에 기록되기 직전에 Script 구성 요소를 배치합니다. 이렇게 하면 스크립트가 설명에서 기록된 오류 행만 조회합니다. 데이터 흐름의 오류 세그먼트가 일부 오류를 수정하고 해당 행을 오류 대상에 기록하지 않을 수도 있습니다.  
 
 ## <a name="see-also"></a>관련 항목:  
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)   
- [변환 사용 하 여 데이터를 변환 합니다.](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
+ [변환을 사용하여 데이터 변환](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [경로에 구성 요소 연결](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [데이터 흐름 태스크](../../integration-services/control-flow/data-flow-task.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
   
   
-

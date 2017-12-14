@@ -7,22 +7,26 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: sql-server
+ms.service: database-engine
+ms.component: 
+ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: 
 ms.date: 17/09/2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
 ms.author: mikeray
-ms.openlocfilehash: e07cf9de9a3526d018e3ce552bf40e21971bdd72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 037864b77e9b807d593a3d9d2425acf507b3c11f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 개발 파트너
-SQL Server 데이터베이스 솔루션 개발을 지원하기 위해 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server에 대한 개발 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 데이터베이스 솔루션 개발을 지원하기 위해 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server에 대한 개발 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 ## <a name="our-development-partners"></a>개발 파트너
 | 파트너 | Description | 링크 |

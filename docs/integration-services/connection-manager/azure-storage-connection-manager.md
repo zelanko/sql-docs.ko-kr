@@ -1,5 +1,5 @@
 ---
-title: "Azure 저장소 연결 관리자 | Microsoft Docs"
+title: "Azure Storage 연결 관리자 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpstorageconn.f1
 - sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 848b0f0e3e639d31fa739e8d744fc4b80839a5fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cc320994dba6dc2b6f2207d5a6aad9e9c193d515
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 저장소 연결 관리자
   SSIS 패키지는 **Azure 저장소 연결 관리자** 를 통해 속성으로 지정된 값(저장소 계정 이름 및 계정 키)을 사용하여 Azure 저장소 계정에 연결할 수 있습니다.  
    
- **Azure 저장소 연결 관리자** 의 구성 요소는 [Azure에 대 한 SQL Server Integration Services (SSIS) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)합니다. 
+ **Azure Storage 연결 관리자**는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다. 
   
 1.  **SSIS 연결 관리자 추가** 대화 상자에서 **AzureStorage**를 선택하고 **추가**를 클릭합니다.  
   
@@ -48,4 +46,3 @@ ms.lasthandoff: 08/03/2017
 5.  작성한 연결 관리자의 속성은 **속성** 창에서 확인할 수 있습니다.  
   
   
-

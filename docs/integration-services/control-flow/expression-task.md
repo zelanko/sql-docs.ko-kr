@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
+f1_keywords: sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be307c3568b28ecf30e590d32e02748e494caf4e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7cd191799c66267eb9a0fae14729412168aa61df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expression-task"></a>식 태스크
   식 태스크는 식 작성기를 사용하여 런타임에 변수 값을 설정하는 식을 만들고 평가합니다. 태스크를 편집하면 [Expression Builder](../../integration-services/expressions/expression-builder.md) 가 시작됩니다.  
@@ -44,4 +41,3 @@ ms.lasthandoff: 08/03/2017
  pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](http://go.microsoft.com/fwlink/?LinkId=746575)  
   
   
-

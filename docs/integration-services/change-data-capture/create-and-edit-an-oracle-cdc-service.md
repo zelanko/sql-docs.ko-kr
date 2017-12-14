@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- createSrv
+f1_keywords: createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
   CDC Service 구성 콘솔에서 새 Oracle CDC Windows 서비스를 만들고 편집합니다.  
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
  새 Oracle CDC Windows 서비스 대화 상자 또는 CDC Service 속성 대화 상자에 다음 정보를 입력합니다.  
   
-* * 서비스 이름 * *  
+** 서비스 이름**  
  새 Oracle CDC Windows 서비스의 이름을 입력합니다. 가급적이면 긴 이름을 사용하지 마십시오. / 및 \ 문자는 서비스 이름에 사용할 수 없습니다.  
   
 > [!NOTE]  
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
      로컬 또는 도메인 Windows 계정을 서비스 계정에 사용할 수 있습니다. 이 경우 해당 계정의 **암호** 를 입력해야 합니다. 이 계정은 로컬 호스트 또는 도메인 계정에 사용할 수 있습니다. 암호를 변경할 경우 Windows 제어판에서 로컬 서비스를 사용하여 암호를 업데이트해야 합니다.  
   
- **서버 이름**: 대상을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결할 인스턴스 (예를 들어  **\\ \\< 컴퓨터 이름 >\\< c e _ >**). 마지막으로 연결한 서버 인스턴스가 기본적으로 표시됩니다.  
+ **서버 이름**: 연결할 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택합니다(예: **\\\\<computer_name>\\<instance_name>**). 마지막으로 연결한 서버 인스턴스가 기본적으로 표시됩니다.  
   
  **인증**  
  다음 중 하나를 선택합니다.  
@@ -99,4 +96,3 @@ ms.lasthandoff: 09/26/2017
  [CDC Service를 만들고 편집하는 방법](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
-

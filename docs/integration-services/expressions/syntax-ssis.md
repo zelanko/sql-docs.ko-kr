@@ -1,5 +1,5 @@
 ---
-title: "구문 (SSIS) | Microsoft Docs"
+title: "구문(SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 298c94c7a016e3df8bd89a11281d571f1c5b669d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 89de000e168f3b781c24662cd24928f095aed33a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="syntax-ssis"></a>구문(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 구문은 C 언어와 C# 언어에서 사용하는 구문과 유사합니다. 식별자(열과 변수), 리터럴, 연산자, 함수 등의 요소가 식에 포함됩니다. 이 항목에서는 각 식 요소에 적용되는 식 계산기 구문의 고유 요구 사항을 요약해서 보여 줍니다.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="identifiers"></a>식별자  
  식은 열 식별자와 변수 식별자를 포함할 수 있습니다. 열은 데이터 원본에서 시작되거나 데이터 흐름에서 변환으로 만들어질 수 있습니다. 식은 계보 식별자를 사용하여 열을 참조할 수 있습니다. 계보 식별자는 패키지 요소를 고유하게 식별하는 번호입니다. 식에서 참조된 계보 식별자는 파운드(#) 접두사를 포함해야 합니다. 예를 들어 계보 식별자 138은 #138을 사용하여 참조합니다.  
   
- 식은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 제공하는 시스템 변수와 사용자 지정 변수를 포함할 수 있습니다. 식에서 참조된 변수는 @ 접두사를 포함해야 합니다. 예를 들어는 `Counter` 변수를 사용 하는 참조 @Counter합니다. @ 문자는 변수 이름의 일부가 아니라 식 계산기에 해당 변수를 식별하는 역할만 합니다. 자세한 내용은 [식별자&#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)를 참조하세요.  
+ 식은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 제공하는 시스템 변수와 사용자 지정 변수를 포함할 수 있습니다. 식에서 참조된 변수는 @ 접두사를 포함해야 합니다. 예를 들어 `Counter` 변수는 using @Counter로 참조됩니다. @ 문자는 변수 이름의 일부가 아니라 식 계산기에 해당 변수를 식별하는 역할만 합니다. 자세한 내용은 [식별자&#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)를 참조하세요.  
   
 ## <a name="literals"></a>리터럴  
  식은 숫자, 문자열 및 부울 리터럴을 포함할 수 있습니다. 식에 사용된 문자열 리터럴은 따옴표로 묶어야 합니다. 숫자 및 부울 리터럴은 따옴표를 사용하지 않습니다. 식 언어에는 자주 이스케이프되는 문자에 대한 이스케이프 시퀀스가 포함되어 있습니다. 자세한 내용은 [리터럴&#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md)을 참조하세요.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 08/03/2017
   
  자세한 내용은 [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)를 참조하세요.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
  [데이터 흐름 구성 요소에서 식 사용](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>관련 내용  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/03/2017
 -   social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](http://go.microsoft.com/fwlink/?LinkId=220761)  
   
   
-

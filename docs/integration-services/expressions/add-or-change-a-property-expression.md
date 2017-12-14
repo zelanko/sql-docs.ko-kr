@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e9f115f318366e743e0a933239b55ccda16b5171
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d3be6cd239d59bbed67e335ddc7f828567535c2e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-change-a-property-expression"></a>속성 식 추가 또는 변경
   패키지, 태스크, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너, 이벤트 처리기, 패키지 및 프로젝트 수준의 연결 관리자 및 로그 공급자에 속성 식을 만들 수 있습니다.  
@@ -73,14 +71,13 @@ ms.lasthandoff: 08/03/2017
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [Integration Services &#40; Ssis&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40; Ssis&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services 컨테이너](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services &#40; Ssis&#41; 이벤트 처리기](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40; Ssis&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Integration Services &#40; Ssis&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services&#40;SSIS&#41; 이벤트 처리기](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: d53ac25527e482ae043adeef1c56e5024cb78eb1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-source"></a>CDC 원본
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 08/17/2017
   
 -   CDC 처리 범위 결정의 기준이 되는 CDC 상태 패키지 변수의 이름. CDC 원본은 해당 변수를 수정하지 않습니다.  
   
- CDC 원본에 의해 반환 되는 데이터에서 반환 하는 것과 같습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 함수 **cdc.fn_cdc_get_all_changes_\<캡처 인스턴스 이름 >** 또는 **cdc.fn_cdc_get_net_changes_\<캡처 인스턴스 이름 >** (가능한 경우). 현재 처리 범위가 테이블의 초기 로드와 겹칠 수 있는지 여부를 나타내는 **__$initial_processing** 열만 선택적으로 추가될 수 있습니다. 초기 처리에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.  
+ CDC 원본에 의해 반환되는 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 함수인 **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** 또는 **cdc.fn_cdc_get_net_changes_\<capture-instance-name>**(사용 가능한 경우)에 의해 반환되는 데이터와 같습니다. 현재 처리 범위가 테이블의 초기 로드와 겹칠 수 있는지 여부를 나타내는 **__$initial_processing** 열만 선택적으로 추가될 수 있습니다. 초기 처리에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.  
   
  CDC 원본에는 하나의 일반 출력과 하나의 오류 출력이 있습니다.  
   
@@ -86,20 +84,20 @@ use <cdc-enabled-database-name>
   
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
--   \<cdc-설정-데이터베이스-이름 >의 이름인는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 테이블이 포함 된 데이터베이스입니다.  
+-   \<cdc-enabled-database-name>은 변경 테이블을 포함하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름입니다.  
   
--   \<값에서-e-c s >는 CDC 상태 변수 CS로 표시 된 값은 /\<값에서-e-c s > / (CS는 의미 처리 범위 시작 현재)입니다.  
+-   \<value-from-state-cs>는 CDC 상태 변수에 CS/\<value-from-state-cs>/로 나타나는 값입니다. CS는 현재 처리 범위 시작을 의미합니다.  
   
--   \<값에서 상태 ce > CE로 CDC 상태 변수에 나타나는 값은 /\<값에서-e-c s > / (CE는 의미 처리 범위 끝 현재)입니다.  
+-   \<value-from-state-ce>는 CDC 상태 변수에 CE/\<value-from-state-cs>/로 나타나는 값입니다. CE는 현재 처리 범위 끝을 의미합니다.  
   
--   \<모드 >는 CDC 처리 모드입니다. 처리 모드에는 **모두**, **이전 값이 포함된 모두**, **순**, **업데이트 마스크를 사용한 순 변경 내용**, **병합을 사용한 순 변경 내용**중 하나의 값이 지정됩니다.  
+-   \<mode>는 CDC 처리 모드입니다. 처리 모드에는 **모두**, **이전 값이 포함된 모두**, **순**, **업데이트 마스크를 사용한 순 변경 내용**, **병합을 사용한 순 변경 내용**중 하나의 값이 지정됩니다.  
   
  이 스크립트는 오류를 식별하고 재현하기가 쉬운 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 문제를 재현하여 문제를 격리하는 데 도움이 됩니다.  
   
 #### <a name="sql-server-error-message"></a>SQL Server 오류 메시지  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 메시지가 반환될 수 있습니다.  
   
- **프로시저 또는 함수 cdc.fn_cdc_get_net_changes_에 대 한 제공 된 인수 개수가 부족\<... >.**  
+ **프로시저 또는 함수 cdc.fn_cdc_get_net_changes_\<..>**에 제공된 인수 개수가 부족합니다.  
   
  이 오류는 인수가 누락되었음을 나타내지 않습니다. 대신 CDC 상태 변수의 시작 또는 끝 LSN 값이 잘못되었음을 의미합니다.  
   
@@ -110,7 +108,7 @@ use <cdc-enabled-database-name>
   
 -   [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [CDC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
@@ -155,7 +153,7 @@ use <cdc-enabled-database-name>
  **캡처 인스턴스**  
  읽을 CDC 테이블이 있는 CDC 캡처 인스턴스의 이름을 선택하거나 입력합니다.  
   
- 캡처된 원본 테이블에는 스키마 변경을 통해 테이블 정의의 원활한 전환을 처리하도록 하나 또는 두 개의 캡처된 인스턴스가 포함되어 있을 수 있습니다. 캡처할 원본 테이블에 대해 두 개 이상의 캡처 인스턴스가 정의되어 있으면 여기에서 사용할 캡처 인스턴스를 선택합니다. 테이블 [schema]에 대 한 기본 캡처 인스턴스 이름입니다. [table] \<스키마 > _\<테이블 > 했지만 해당 사용 중인 실제 캡처 인스턴스 이름은 다를 수 있습니다. 읽은 실제 테이블은 CDC 테이블인 **cdc.\< 캡처 인스턴스 > _CT**합니다.  
+ 캡처된 원본 테이블에는 스키마 변경을 통해 테이블 정의의 원활한 전환을 처리하도록 하나 또는 두 개의 캡처된 인스턴스가 포함되어 있을 수 있습니다. 캡처할 원본 테이블에 대해 두 개 이상의 캡처 인스턴스가 정의되어 있으면 여기에서 사용할 캡처 인스턴스를 선택합니다. [schema].[table] 테이블의 기본 캡처 인스턴스 이름은 \<schema>_\<table>이지만 실제로 사용 중인 캡처 인스턴스 이름은 다를 수 있습니다. 실제로 읽어 올 테이블은 CDC 테이블 **cdc .\<capture-instance>_CT**입니다.  
   
  **CDC 처리 모드**  
  처리 요구를 처리할 최적의 처리 모드를 선택합니다. 가능한 옵션은 아래와 같습니다.  
@@ -166,7 +164,7 @@ use <cdc-enabled-database-name>
   
 -   **순 변경 내용**: 현재 CDC 처리 범위에서 수정된 원본 행당 하나의 변경 행만 반환합니다. 원본 행이 여러 번 업데이트된 경우에는 결합된 변경 내용이 생성됩니다. 예를 들어 삽입+업데이트는 단일 업데이트로 생성되고 업데이트+삭제는 단일 삭제로 생성됩니다. 순 변경 내용 처리 모드에서 작업할 경우 단일 원본 행이 두 개 이상의 출력에 나타나므로 변경 내용을 삭제, 삽입 및 업데이트 출력으로 분할하고 해당 출력을 병렬로 처리할 수 있습니다.  
   
--   **업데이트 마스크를 사용한 순**:이 모드는 일반 Net 모드와 유사 하지만 이름 패턴이 인 부울 열도 추가 **__ $\<열 이름 >\__Changed** 행을 변경 하는 현재에서 변경 된 열을 나타내는입니다.  
+-   **업데이트 마스크를 사용한 순 변경 내용**: 이 모드는 일반적인 순 변경 내용 모드와 비슷하지만 현재 변경 행에서 변경된 열을 나타내고 이름 패턴이 **__$\<column-name>\__Changed**인 부울 열도 추가합니다.  
   
 -   **병합을 사용한 순 변경 내용**: 이 모드는 일반적인 순 변경 내용 모드와 비슷하지만 삽입 및 업데이트 작업을 사용할 경우 단일 병합 작업으로 병합됩니다(UPSERT).  
   
@@ -256,4 +254,3 @@ use <cdc-enabled-database-name>
 -   mattmasson.com의 블로그 항목 - [CDC 원본 처리 모드](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)  
   
   
-

@@ -8,29 +8,26 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.msmqconnectionmanager.f1
+f1_keywords: sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ae3af4dcc8937acc481e773d3af3a9ead0cf775
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 연결 관리자
   MSMQ 연결 관리자를 사용하면 패키지에서 MSMQ(메시지 큐)를 사용하는 메시지 큐에 연결할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 메시지 큐 태스크에서는 MSMQ 연결 관리자가 사용됩니다.  
@@ -47,8 +44,8 @@ ms.lasthandoff: 08/09/2017
   
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
-|공개|\<컴퓨터 이름 >\\< 큐 이름\>|  
-|Private|\<컴퓨터 이름 > \Private$\\< 큐 이름\>|  
+|공개|\<컴퓨터 이름>\\<큐 이름\>|  
+|Private|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
   
  마침표(.)를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
   
@@ -79,8 +76,8 @@ ms.lasthandoff: 08/09/2017
   
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
-|공개|\<컴퓨터 이름 >\\< 큐 이름\>|  
-|Private|\<컴퓨터 이름 > \Private$\\< 큐 이름\>|  
+|공개|\<컴퓨터 이름>\\<큐 이름\>|  
+|Private|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
   
  "."를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
   
@@ -89,7 +86,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [메시지 큐 태스크](../../integration-services/control-flow/message-queue-task.md)   
- [Integration Services &#40; Ssis&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

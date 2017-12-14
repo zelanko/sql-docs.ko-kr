@@ -1,5 +1,5 @@
 ---
-title: "UPPER (SSIS 식) | Microsoft Docs"
+title: "UPPER(SSIS 식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1764b39b0242ce7e23d56c9c74f7b953f45009b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 737d3ee312d1b9cea65be4807f375923d60ca9d9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upper-ssis-expression"></a>UPPER(SSIS 식)
   소문자를 대문자로 변환한 후에 문자 식을 반환합니다.  
@@ -72,8 +70,7 @@ UPPER(@PostalCode)
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [아래 &#40; SSIS 식 &#41;](../../integration-services/expressions/lower-ssis-expression.md)   
- [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [LOWER&#40;SSIS 식&#41;](../../integration-services/expressions/lower-ssis-expression.md)   
+ [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "REPLICATE (SSIS 식) | Microsoft Docs"
+title: "REPLICATE(SSIS 식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- REPLICATE function
+helpviewer_keywords: REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c94e5f4221251b3b931ebabc5076620ba6ab0e7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 551f512e5094a44255da8f5baf4217909ef70a02
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE(SSIS 식)
   지정한 횟수만큼 복제된 문자 식을 반환합니다. *times* 인수는 정수여야 합니다.  
@@ -81,7 +78,6 @@ REPLICATE(@Name, (DT_I4(Times))
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

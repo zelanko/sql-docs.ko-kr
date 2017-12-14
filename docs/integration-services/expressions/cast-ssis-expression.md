@@ -1,5 +1,5 @@
 ---
-title: "캐스트 (SSIS 식) | Microsoft Docs"
+title: "캐스트(SSIS 식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a4954ea582309732be9b911abc4a272a379a2227
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cast-ssis-expression"></a>캐스트(SSIS 식)
   식의 데이터 형식을 다른 데이터 형식으로 명시적으로 변환합니다. 캐스트 연산자는 잘라내기 연산자로 실행될 수도 있습니다.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="remarks"></a>주의  
  다음 다이어그램에서는 유효한 캐스트 연산을 보여 줍니다.  
   
- ![데이터 형식 간 캐스트 법률 및 유효 하지 않은](../../integration-services/expressions/media/data-conversion.gif "데이터 형식 간 올바른 및 유효 하지 않은 캐스트")  
+ ![데이터 형식 간 유효한 캐스트 및 유효하지 않은 캐스트](../../integration-services/expressions/media/data-conversion.gif "데이터 형식 간 유효한 캐스트 및 유효하지 않은 캐스트")  
   
  일부 데이터 형식으로의 캐스트는 매개 변수가 필요합니다. 다음 표에서는 이러한 데이터 형식과 해당 매개 변수를 보여 줍니다.  
   
@@ -151,10 +149,9 @@ ms.lasthandoff: 08/03/2017
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [연산자 우선순위 및 결합성](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [연산자 &#40; SSIS 식 &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Integration Services &#40; Ssis&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Integration Services 식의 데이터 형식](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [식에서의 Integration Services 데이터 형식](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   
-

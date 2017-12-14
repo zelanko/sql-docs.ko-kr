@@ -1,5 +1,5 @@
 ---
-title: "식별자 (SSIS) | Microsoft Docs"
+title: "식별자(SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc690b6318c3e9fea27fbbba74b1f1b7289a3d32
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 819dc582a8c30c4758399c3d7d07184a65b72b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifiers-ssis"></a>식별자(SSIS)
   식에서 식별자는 연산에 사용할 수 있는 열과 변수입니다. 식은 일반 식별자와 정규화된 식별자를 사용할 수 있습니다.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 08/03/2017
 >  점 표기법에서 두 요소가 한 쌍의 대괄호로 묶여 있으면 식 계산기는 이 쌍을 원본-열 조합이 아닌 단일 식별자로 해석합니다.  
   
 ## <a name="variables-in-expressions"></a>식의 변수  
- 식에서 참조된 변수는 @ 접두사를 포함해야 합니다. 예를 들어는 **카운터** 변수는 사용 하 여 참조 @Counter합니다. @ 문자는 변수 이름의 일부가 아니라 식 계산기에 해당 변수를 식별하는 역할만 합니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 제공하는 대화 상자를 사용하여 식을 작성하면 변수 이름에 @ 문자가 자동으로 추가됩니다. @ 문자와 변수 이름 사이에는 공백을 넣을 수 없습니다.  
+ 식에서 참조된 변수는 @ 접두사를 포함해야 합니다. 예를 들어 **Counter** 변수는 @Counter를 사용하여 참조합니다. @ 문자는 변수 이름의 일부가 아니라 식 계산기에 해당 변수를 식별하는 역할만 합니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 제공하는 대화 상자를 사용하여 식을 작성하면 변수 이름에 @ 문자가 자동으로 추가됩니다. @ 문자와 변수 이름 사이에는 공백을 넣을 수 없습니다.  
   
  변수 이름은 다른 일반 식별자의 이름과 동일한 규칙을 따라야 합니다.  
   
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/03/2017
  pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](http://go.microsoft.com/fwlink/?LinkId=746575)  
   
   
-

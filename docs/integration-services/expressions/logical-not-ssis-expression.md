@@ -1,5 +1,5 @@
 ---
-title: "! (논리적 Not) (SSIS 식) | Microsoft Docs"
+title: "! (논리적 Not)(SSIS 식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 003e0fcc98a267342aaf7c77bf344cdfdc71880b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d8c6c84a9efe60ffc7d9ebda818ddeabf833d05a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="-logical-not-ssis-expression"></a>! (논리적 Not)(SSIS 식)
   부울 피연산자를 부정합니다.  
@@ -72,8 +70,7 @@ ms.lasthandoff: 08/03/2017
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [연산자 우선순위 및 결합성](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [연산자 &#40; SSIS 식 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

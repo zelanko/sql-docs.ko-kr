@@ -1,35 +1,35 @@
 ---
 title: "데이터 스트리밍 대상 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
+f1_keywords: SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b2a918e3460d23f33f432ea0925d722f9aefde78
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f6b5a6b41776010d957f149a28cd74d51a3b35b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
   **데이터 스트리밍 대상[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]은 **SSIS용 OLE DB 공급자**가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (SSIS) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  
   
  다음 예제의 쿼리는 SSIS 카탈로그 Power BI 폴더에 있는 SSISPackagePublishing 프로젝트의 Package.dtsx 패키지에서 출력을 반환합니다. 이 쿼리는 연결된 서버 이름[Integration Services의 기본 연결 서버]을 사용하며, 이 이름은 새로운 SSIS용 OLE DB 공급자를 사용합니다. 쿼리에는 SSIS 카탈로그의 폴더 이름, 프로젝트 이름, 패키지 이름이 포함됩니다. SSIS용 OLE DB 공급자는 쿼리에 지정된 패키지를 실행하고 탭 형식의 결과 집합을 반환합니다.  
   
-```  
+```sql
 SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Folder=Power BI;Project=SSISPackagePublishing;Package=Package.dtsx')  
   
 ```  
@@ -84,7 +84,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="input-output-properties-tab"></a>입력 및 출력 속성 탭  
  이 탭에서는 입력 열 탭에서와 비슷한 방식으로 출력 열의 이름을 변경할 수 있습니다. 왼쪽 트리 뷰에서 **데이터 스트리밍 대상 입력** 과 **입력 열**을 차례로 확장합니다. 입력 열 이름을 클릭하고 오른쪽 창에서 출력 열 이름을 변경합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SSIS 패키지를 OData 피드 원본으로 게시](http://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

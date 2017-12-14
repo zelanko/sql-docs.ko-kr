@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- finish
+f1_keywords: finish
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad32e59fc7003e16db64ff13520b3dbb02d742b8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a52d3f03e80ad095b46f91d8d77a4237f19f6218
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="finish"></a>마침
   **마침** 페이지에서는 마법사 프로세스를 요약합니다. **마침** 를 클릭하여 마법사를 닫고 CDC 인스턴스 만들기 마법사에서 정의한 모든 테이블을 생성합니다.  
@@ -35,4 +32,3 @@ ms.lasthandoff: 08/03/2017
  [새 인스턴스 마법사 사용](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

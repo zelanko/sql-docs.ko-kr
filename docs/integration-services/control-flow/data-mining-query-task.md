@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 72ed17f506e2da78c972c54e19e98c8deacc287c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query-task"></a>데이터 마이닝 쿼리 태스크
   데이터 마이닝 쿼리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 작성된 데이터 마이닝 모델을 기반으로 예측 쿼리를 실행합니다. 예측 쿼리는 마이닝 모델을 사용하여 새 데이터에 대한 예측을 만듭니다. 예를 들어 예측 쿼리는 여름 기간 동안 판매될 요트 수를 예측하거나 요트를 구매할 잠재 고객 목록을 생성할 수 있습니다.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  태스크 이름은 패키지 내에서 고유해야 합니다.  
   
- **설명**  
+ **Description**  
  데이터 마이닝 쿼리 태스크에 대한 설명을 입력합니다.  
   
 ### <a name="mining-model-tab-options"></a>마이닝 모델 탭 옵션  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  태스크 이름은 패키지 내에서 고유해야 합니다.  
   
- **설명**  
+ **Description**  
  데이터 마이닝 쿼리 태스크에 대한 설명을 입력합니다.  
   
 ### <a name="build-query-tab-options"></a>쿼리 작성 탭 옵션  
@@ -172,20 +170,19 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  태스크 이름은 패키지 내에서 고유해야 합니다.  
   
- **설명**  
+ **Description**  
  데이터 마이닝 쿼리 태스크에 대한 설명을 입력합니다.  
   
 ### <a name="output-tab-options"></a>출력 탭 옵션  
  **연결**  
  목록에서 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
- **새로운 내용**  
+ **새로 만들기**  
  새 연결 관리자를 만듭니다. ADO.NET 및 OLE DB 연결 관리자 유형만 사용할 수 있습니다.  
   
  **출력 테이블**  
  예측 쿼리가 결과를 작성할 테이블을 지정합니다.  
   
- **삭제 및 다시 출력 테이블 만들기**  
+ **출력 테이블을 삭제하고 다시 만들기**  
  테이블을 삭제한 다음 다시 만들어 예측 쿼리가 대상 테이블의 내용을 덮어쓸지 여부를 나타냅니다.  
   
-

@@ -3,8 +3,11 @@ title: "데이터베이스 상태 검색 장애 조치 옵션 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>가용성 그룹 데이터베이스 수준의 상태 검색 장애 조치 옵션
-
-SQL Server 2016부터는 Always On 가용성 그룹을 구성할 때 데이터베이스 수준 상태 검색(DB_FAILOVER) 옵션을 사용할 수 있습니다. 데이터베이스가 더 이상 온라인 상태가 아니거나 문제가 발생하면 데이터베이스 수준 상태 검색에서 해당 상태를 알려주고 가용성 그룹의 자동 장애 조치를 트리거합니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 2016부터는 Always On 가용성 그룹을 구성할 때 데이터베이스 수준 상태 검색(DB_FAILOVER) 옵션을 사용할 수 있습니다. 데이터베이스가 더 이상 온라인 상태가 아니거나 문제가 발생하면 데이터베이스 수준 상태 검색에서 해당 상태를 알려주고 가용성 그룹의 자동 장애 조치를 트리거합니다. 
 
 가용성 그룹 전체에 대해 데이터베이스 수준 상태 검색을 사용하도록 설정되므로 데이터베이스 수준 상태 검색은 가용성 그룹의 모든 데이터베이스를 모니터링합니다. 가용성 그룹의 특정 데이터베이스에 대해 선택적으로 사용하도록 설정될 수는 없습니다. 
 

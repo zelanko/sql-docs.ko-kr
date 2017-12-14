@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db156f59fe1e77bd3abb50be85ecca1f693a0b73
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ab96ff3e8139846d4af88a0bddc9f6dc36e705e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC 인스턴스를 만드는 방법에 대해 설명합니다.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 08/03/2017
 5.  새 인스턴스 마법사에 필요한 정보를 입력하여 새 인스턴스를 만듭니다. 이 마법사에 필요한 정보에 대한 자세한 내용은 [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)을 참조하십시오.  
   
   
-

@@ -2,11 +2,12 @@
 title: "데이터베이스 엔진 업그레이드 계획 및 테스트 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/20/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: cbe7bceca06dd5eef19b56433a8054c20d2e88d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef0de3c547ac843807bf9e8e906ea19fa1e3a5b5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>데이터베이스 엔진 업그레이드 계획 및 테스트
-  방법과 상관없이 성공적인 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 업그레이드를 수행하려면 적절한 계획이 필요합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 방법과 상관없이 성공적인 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 업그레이드를 수행하려면 적절한 계획이 필요합니다.  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>릴리스 정보 및 알려진 업그레이드 문제  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하기 전에 다음 항목을 검토하세요.

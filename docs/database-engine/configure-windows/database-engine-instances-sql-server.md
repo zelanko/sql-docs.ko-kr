@@ -2,9 +2,12 @@
 title: "데이터베이스 엔진 인스턴스(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 418e09ffb86563d22b145c2fba9f7ce61ad0c746
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스(SQL Server)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 운영 체제 서비스로 실행되는 **sqlservr.exe** 실행 파일의 복사본입니다. 각 인스턴스는 여러 시스템 데이터베이스와 하나 이상의 사용자 데이터베이스를 관리합니다. 각 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스를 실행할 수 있습니다. 응용 프로그램은 인스턴스가 관리하는 데이터베이스에서 작업을 수행하기 위해 인스턴스에 연결합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 운영 체제 서비스로 실행되는 **sqlservr.exe** 실행 파일의 복사본입니다. 각 인스턴스는 여러 시스템 데이터베이스와 하나 이상의 사용자 데이터베이스를 관리합니다. 각 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스를 실행할 수 있습니다. 응용 프로그램은 인스턴스가 관리하는 데이터베이스에서 작업을 수행하기 위해 인스턴스에 연결합니다.  
   
 ## <a name="instances"></a>인스턴스  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 해당 인스턴스에서 관리하는 데이터베이스에 있는 데이터에 대한 응용 프로그램의 모든 작업 요청을 처리하는 서비스로 작동되며, 응용 프로그램에서 보내는 연결 요청 (로그인)의 대상이 됩니다. 응용 프로그램과 인스턴스가 개별 컴퓨터에 있는 경우 연결은 네트워크 연결을 통해 실행됩니다. 응용 프로그램과 인스턴스가 동일한 컴퓨터에 있는 경우 SQL Server 연결은 네트워크 연결 또는 메모리 내 연결로 실행될 수 있습니다. 연결이 완료되면 응용 프로그램은 해당 연결을 통해 인스턴스에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 보냅니다. 인스턴스는 데이터베이스의 데이터 및 개체를 기준으로 작업에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 확인한 후 로그인 자격 증명에 필요한 권한이 부여되어 있는 경우 작업을 수행합니다. 모든 검색된 데이터는 오류 메시지 등과 함께 응용 프로그램에 반환됩니다.  

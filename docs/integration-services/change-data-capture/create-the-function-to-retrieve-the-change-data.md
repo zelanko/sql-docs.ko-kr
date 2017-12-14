@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],creating function
+helpviewer_keywords: incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3d7a5305d9b8c5c094f27b02bdcbd9c1c7bbb4a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름을 완료한 후 다음 태스크는 변경 데이터를 검색하는 테이블 반환 함수를 만드는 것입니다. 첫 번째 증분 로드 전에 이 함수를 한 번만 만들면 됩니다.  
@@ -124,9 +121,9 @@ deallocate #hfunctions
   
  생성된 래퍼 함수에서는 변경 테이블의 모든 행을 간단히 쿼리할 수 있도록 다음과 같은 규칙도 지원합니다.  
   
--   경우는 @start_time 매개 변수가 null 이면 래퍼 함수는 캡처 인스턴스에서 가장 낮은 LSN 값 쿼리의 하 한으로 사용 합니다.  
+-   @start_time 매개 변수가 null이면 래퍼 함수는 캡처 인스턴스에서 가장 낮은 LSN 값을 쿼리의 하한으로 사용합니다.  
   
--   경우는 @end_time 매개 변수가 null 이면 래퍼 함수는 캡처 인스턴스에서 쿼리의 상한으로 가장 높은 LSN 값을 사용 합니다.  
+-   @end_time 매개 변수가 null이면 래퍼 함수는 캡처 인스턴스에서 가장 높은 LSN 값을 쿼리의 상한으로 사용합니다.  
   
  대부분의 사용자는 **sys.sp_cdc_generate_wrapper_function** 시스템 저장 프로시저에서 만드는 래퍼 함수를 수정하지 않고 그대로 사용할 수 있습니다. 그러나 래퍼 함수를 사용자 지정하려면 CREATE 스크립트를 사용자 지정한 다음 실행해야 합니다.  
   
@@ -220,7 +217,7 @@ go
 |**__$seqval**|**binary(10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
 |**__$operation**|**int**|변경과 연관된 DML(데이터 조작 언어) 작업입니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(업데이트 작업 전의 값)<br /><br /> 4 = 업데이트(업데이트 작업 후의 값)|  
 |**__$update_mask**|**varbinary(128)**|변경된 열을 식별하는 변경 테이블의 열 서수를 기준으로 하는 비트 마스크입니다. 변경된 열을 확인해야 하는 경우 이 값을 검토할 수 있습니다.|  
-|**\<캡처된 원본 테이블 열 >**|다양함|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 열이 원래 지정되어 있지 않은 경우 원본 테이블의 모든 열이 반환됩니다.|  
+|**\<captured source table columns>**|다양함|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 열이 원래 지정되어 있지 않은 경우 원본 테이블의 모든 열이 반환됩니다.|  
   
  자세한 내용은 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)를 참조하세요.  
   
@@ -230,4 +227,3 @@ go
  **다음 항목:** [변경 데이터 검색 및 이해](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
-

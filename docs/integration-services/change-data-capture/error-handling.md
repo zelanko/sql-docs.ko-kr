@@ -8,21 +8,19 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling"></a>오류 처리
   Oracle CDC 인스턴스는 단일 Oracle 원본 데이터베이스에서 변경 사항을 마이닝하고(Oracle RAC 클러스터가 단일 데이터베이스로 간주됨) 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 CDC 데이터베이스에 있는 변경 테이블에 커밋된 변경 내용을 기록합니다.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
 -   MSXDBCDC.dbo.xdbcdc_trace 테이블: Oracle CDC Service 주 프로세스의 일반 로깅 및 추적에 사용됩니다.  
   
--   \<cdc 데이터베이스 >. e 테이블: Oracle CDC 인스턴스의 일반 로깅 및 추적에 사용 되는 합니다. 특정 Oracle CDC 인스턴스 관련 오류가 해당 인스턴스의 추적 테이블에 기록된다는 것을 의미합니다.  
+-   \<cdc-database>.cdc.xdbcdc_trace 테이블: Oracle CDC 인스턴스의 일반 로깅 및 추적에 사용됩니다. 특정 Oracle CDC 인스턴스 관련 오류가 해당 인스턴스의 추적 테이블에 기록된다는 것을 의미합니다.  
   
  다음과 같은 경우에 Oracle CDC Service에 의해 정보가 기록됩니다.  
   
@@ -120,8 +118,7 @@ ms.lasthandoff: 08/03/2017
  Oracle CDC Service는 CDC 인스턴스 하위 프로세스를 모니터링합니다. CDC 인스턴스 하위 프로세스가 중단되면 CDC Service는 MSXDBCDC.dbo.xdbcdc_databases 테이블에서 해당 프로세스를 비활성화하고 cdc.xdbcdc_state 상태를 ABORTED로 업데이트합니다. 이 경우 표준 Windows 오류 보고 대화 상자는 추가 분석을 위해 이 오류를 보고하는 데 사용됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [변경 데이터 캡처 Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC 인스턴스](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.packagepublishwizard.f1
+f1_keywords: sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f0e5fa598ce47a95aafe11fd3f05c82eca79c064
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
   이 연습에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 SSIS 패키지를 SQL 뷰로 게시하는 자세한 단계를 제공합니다.  
@@ -77,7 +74,7 @@ ms.lasthandoff: 09/27/2017
   
     5.  **TestDB** 데이터베이스의 **Employee** 테이블에서 데이터를 추출하도록 구성 요소를 구성합니다. **OLE DB 연결 관리자** 에서 **(local).TestDB**, **데이터 액세스 모드** 에서 **테이블 또는 뷰**, **테이블 또는 뷰 이름** 에서 **[dbo].[Employee]**를 선택합니다.  
   
-         ![데이터 스트리밍 대상-OLE DB 연결](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "데이터 스트리밍 대상-OLE DB 연결")  
+         ![데이터 스트리밍 대상 - OLE DB 연결](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "데이터 스트리밍 대상 - OLE DB 연결")  
   
 6.  이제 도구 상자에서 데이터 흐름으로 **데이터 스트리밍 대상** 을 끌어 옵니다. 도구 상자의 일반 섹션에서 이 구성 요소를 찾아야 합니다.  
   
@@ -100,17 +97,17 @@ ms.lasthandoff: 09/27/2017
   
 2.  **소개** 페이지에서 **다음** 을 클릭합니다.  
   
-     ![데이터 피드 게시 마법사-소개 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "데이터 피드 게시 마법사-소개 페이지")  
+     ![데이터 피드 게시 마법사 - 소개 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "데이터 피드 게시 마법사 - 소개 페이지")  
   
 3.  **패키지 설정** 페이지에서 다음 작업을 수행합니다.  
   
     1.  SSIS 카탈로그를 포함하는 SQL Server 인스턴스의 **이름** 을 입력하거나, **찾아보기** 를 클릭하여 서버를 선택합니다.  
   
-         ![데이터 피드 게시 마법사-패키지 설정 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "데이터 피드 게시 마법사-패키지 설정 페이지")  
+         ![데이터 피드 게시 마법사 - 패키지 설정 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "데이터 피드 게시 마법사 - 패키지 설정 페이지")  
   
     2.  경로 필드 옆의 **찾아보기** 를 클릭하고 SSIS 카탈로그로 이동하여 게시할 SSIS 패키지를 선택(예: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**)한 다음 **확인**을 클릭합니다.  
   
-         ![데이터 피드 게시 마법사-패키지 찾아보기](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "데이터 피드 게시 마법사-패키지 찾아보기")  
+         ![데이터 피드 게시 마법사 - 패키지 찾아보기](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "데이터 피드 게시 마법사 - 패키지 찾아보기")  
   
     3.  페이지 아래쪽에 있는 패키지 매개 변수, 프로젝트 매개 변수 및 연결 관리자 탭을 사용하여 패키지 매개 변수, 프로젝트 매개 변수 또는 패키지에 대한 연결 관리자 설정 값을 입력합니다. 패키지 실행에 사용되는 환경 참조를 지정하고 프로젝트/패키지 매개 변수를 환경 변수에 바인딩할 수도 있습니다.  
   
@@ -122,7 +119,7 @@ ms.lasthandoff: 09/27/2017
   
     1.  뷰를 만들 **데이터베이스** 를 선택합니다.  
   
-         ![데이터 피드 게시 마법사-게시 설정 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "데이터 피드 게시 마법사-게시 설정 페이지")  
+         ![데이터 피드 게시 마법사 - 게시 설정 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "데이터 피드 게시 마법사 - 게시 설정 페이지")  
   
     2.  **뷰** **이름**을 입력합니다. 드롭다운 목록에서 기존 뷰를 선택할 수도 있습니다.  
   
@@ -144,7 +141,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  **유효성 검사** 페이지에서 모든 설정 값의 유효성 검사 결과를 검토합니다. 다음 예제에서는 연결된 서버 존재에 대한 **경고** 를 볼 수 있습니다. 선택한 SQL Server 인스턴스에 연결된 서버가 없기 때문입니다. **결과** 에 **오류**가 표시되는 경우 **오류** 위로 마우스를 가져가면 오류에 대한 세부 정보가 표시됩니다. 예를 들어 SSISOLEDB 공급자에 대한 Inprocess 허용 옵션을 활성화하지 않은 경우 연결된 서버 구성 작업에서 오류가 발생합니다.  
   
-     ![데이터 피드 게시 마법사-유효성 검사 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "데이터 피드 게시 마법사-유효성 검사 페이지")  
+     ![데이터 피드 게시 마법사 - 유효성 검사 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "데이터 피드 게시 마법사 - 유효성 검사 페이지")  
   
 6.  이 보고서를 XML 파일로 저장하려면 보고서 저장을 클릭합니다.  
   
@@ -152,7 +149,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  **요약** 페이지에서 선택 항목을 검토하고 **게시** 를 클릭하여 게시 프로세스를 시작합니다. 이 프로세스는 연결된 서버를 만든 다음(서버에 연결된 서버가 없는 경우) 연결된 서버를 사용하여 뷰를 만듭니다.  
   
-     ![데이터 피드 게시 마법사-요약 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "데이터 피드 게시 마법사-요약 페이지")  
+     ![데이터 피드 게시 마법사 - 요약 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "데이터 피드 게시 마법사 - 요약 페이지")  
   
      이제 TestDB 데이터베이스에 대해 SELECT * FROM [SSISPackageView] SQL 문을 실행하여 패키지의 출력 데이터를 쿼리할 수 있습니다.  
   
@@ -168,9 +165,9 @@ ms.lasthandoff: 09/27/2017
   
 1.  SQL Server Management Studio를 실행합니다.  
   
-2.  확장 \< **컴퓨터 이름**>, **데이터베이스**, \< **마법사에서 선택한 데이터베이스**>, 및 **뷰**합니다.  
+2.  \<**컴퓨터 이름**>, **데이터베이스**, \<**마법사에서 선택한 데이터베이스**> 및 **뷰**를 확장합니다.  
   
-3.  마우스 오른쪽 단추로 클릭는 \< **보기 마법사에서 만든**>을 클릭 하 여 마법사에서 만든 **상위 1000 개 행 선택**합니다.  
+3.  마법사에서 만든 \<**마법사에서 만든 뷰**>를 마우스 오른쪽 단추로 클릭하고 **상위 1000개 행 선택**을 클릭합니다.  
   
 4.  SSIS 패키지의 결과가 표시되는지 확인합니다.  
   
@@ -278,4 +275,3 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
  [데이터 스트리밍 대상 구성](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   
-

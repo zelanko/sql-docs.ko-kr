@@ -1,5 +1,5 @@
 ---
-title: "&gt;= (크거나 같음) (SSIS 식) | Microsoft Docs"
+title: "&gt;=(크거나 같음)(SSIS 식) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8739ef9b5147a2019d71ee5ffa06274dea29d53
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 86e4fb934f5f583314e5d3bc69a9275d911e5dfe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (크거나 같음) (SSIS 식)
+# <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;=(크거나 같음)(SSIS 식)
   첫 번째 식이 두 번째 식보다 크거나 같은지 비교합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  
   
 > [!NOTE]  
@@ -111,11 +109,10 @@ ListPrice >= 500
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [&#62; &#40; 보다 큰 &#41; &#40; SSIS 식 &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#60; &#40; 보다 작거나 &#41; &#40; SSIS 식 &#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#60; = &#40; 보다 작거나 같으면 &#41; &#40; SSIS 식 &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
- [연산자 우선순위 및 결합성](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [연산자 &#40; SSIS 식 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [&#62;&#40;보다 큼&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [&#60;&#40;보다 작음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
+ [&#60;=&#40;작거나 같음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

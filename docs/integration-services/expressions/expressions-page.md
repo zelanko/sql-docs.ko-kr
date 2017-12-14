@@ -8,26 +8,22 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.expressionspage.f1
-helpviewer_keywords:
-- Expressions Page dialog box
+f1_keywords: sql13.dts.designer.expressionspage.f1
+helpviewer_keywords: Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2517f3b049261614a219d64698a99bd82e14915d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8ea1c1154819e58814a0c2f83c8f246e0588e967
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expressions-page"></a>식 페이지
   **식** 페이지를 사용하여 속성 식을 편집하고 **속성 식 편집기** 및 **식 작성기** 대화 상자에 액세스할 수 있습니다.  
@@ -40,13 +36,12 @@ ms.lasthandoff: 08/03/2017
  **식(...)**  
  **속성 식 편집기** 대화 상자를 열려면 줄임표를 클릭합니다. 자세한 내용은 [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md)를 참조하세요.  
   
- **\<속성 이름 >**  
+ **\<속성 이름>**  
  **식 작성기** 대화 상자를 열려면 줄임표를 클릭합니다. 자세한 내용은 [Expression Builder](../../integration-services/expressions/expression-builder.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)   
  [시스템 변수](../../integration-services/system-variables.md)   
- [Integration Services &#40; Ssis&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

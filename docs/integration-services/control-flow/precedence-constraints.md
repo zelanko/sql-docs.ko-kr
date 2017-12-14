@@ -8,12 +8,10 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.precedenceconstraint.f1
+f1_keywords: sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -22,24 +20,23 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 380c7e4c06b4baec2efcbad54000a009a93b93e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="precedence-constraints"></a>선행 제약 조건
   선행 제약 조건은 패키지에 있는 실행 개체, 컨테이너 및 태스크를 제어 흐름으로 연결하고 실행 개체의 실행 여부를 결정하는 조건을 지정합니다. 실행 개체는 For 루프, Foreach 루프 또는 시퀀스 컨테이너나 태스크 또는 이벤트 처리기일 수 있습니다. 또한 이벤트 처리기에서는 해당 실행 개체를 제어 흐름으로 연결하기 위해 선행 제약 조건이 사용됩니다.  
   
  선행 제약 조건은 선행 실행 개체 및 제약 조건이 지정된 실행 개체의 두 실행 개체를 연결합니다. 선행 실행 개체는 제약 조건이 지정된 실행 개체 전에 실행되며, 선행 실행 개체의 실행 결과로 제약 조건이 지정된 실행 개체의 실행 여부가 결정될 수 있습니다. 다음 다이어그램에서는 선행 제약 조건으로 연결된 두 개의 실행 개체를 보여 줍니다.  
   
- ![선행 제약 조건으로 연결 된 실행 파일](../../integration-services/control-flow/media/ssis-pcsimple.gif "선행 제약 조건으로 연결 된 실행 파일")  
+ ![선행 제약 조건에 의해 연결되는 실행 개체](../../integration-services/control-flow/media/ssis-pcsimple.gif "선행 제약 조건에 의해 연결되는 실행 개체")  
   
  분기가 없는 선형 제어 흐름에서 선행 제약 조건은 태스크가 실행되는 시퀀스를 단독으로 제어합니다. 제어 흐름이 분기되는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임 엔진은 해당 분기의 바로 다음에 오는 태스크 및 컨테이너에서의 실행 순서를 결정합니다. 런타임 엔진은 또한 제어 흐름에서 연결되지 않은 워크플로 사이의 실행 순서를 결정합니다.  
   
@@ -86,7 +83,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  같은 **Precedence Constraint** 컬렉션의 멤버인 선행 제약 조건만 논리적 AND 조건으로 그룹화할 수 있습니다. 예를 들어 두 개의 Foreach 루프 컨테이너의 선행 제약 조건은 조합할 수 없습니다.  
   
-## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>선행 제약 조건 편집기를 사용 하 여 선행 제약 조건의 속성 설정  
+## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>선행 제약 조건 편집기를 사용하여 선행 제약 조건의 속성 설정  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -168,7 +165,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
-## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>바로 가기 메뉴가 있는 선행 제약 조건 값 설정  
+## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>바로 가기 메뉴를 사용하여 선행 제약 조건 값 설정  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -187,7 +184,7 @@ ms.lasthandoff: 09/26/2017
   
  다음 그림에서 태스크 A와 태스크 B는 실행 결과와 식을 사용하는 선행 제약 조건으로 연결되어 있습니다. 제약 조건 값은 **Success** 로 설정되고 식은  `@X >== @Z`입니다. 제약 조건이 지정된 태스크 B는 태스크 A가 성공적으로 완료되고 변수 **X** 의 값이 변수 **Z**의 값보다 크거나 같은 경우에만 실행됩니다.  
   
- ![두 태스크 간의 선행 제약 조건](../../integration-services/control-flow/media/mw-dts-03.gif "두 태스크 간의 선행 제약 조건")  
+ ![두 태스크 간 선행 제약 조건](../../integration-services/control-flow/media/mw-dts-03.gif "두 태스크 간 선행 제약 조건")  
   
  실행 개체는 또한 여러 식이 포함된 여러 선행 제약 조건을 사용하여 연결될 수 있습니다. 예를 들어 다음 그림에서 태스크 B와 C는 실행 결과와 식을 사용하는 선행 제약 조건에 의해 태스크 A에 연결됩니다. 두 제약 조건 값은 모두 **Success**로 설정됩니다. 하나의 선행 제약 조건에는 `@X >== @Z`식이 포함되고 다른 선행 제약 조건에는 `@X < @Z`식이 포함됩니다. 변수 **X** 와 변수 **Z**의 값에 따라 태스크 C 또는 태스크 B가 실행됩니다.  
   
@@ -197,7 +194,7 @@ ms.lasthandoff: 09/26/2017
   
  선행 제약 조건에 식이 포함되는 경우 **제어 흐름** 탭의 디자인 화면에서 선행 제약 조건 옆에 아이콘이 표시되고 아이콘의 도구 설명에 해당 식이 표시됩니다.  
 
-### <a name="add-an-expression-to-a-precedence-constraint"></a>선행 제약 조건에 식을 추가합니다  
+### <a name="add-an-expression-to-a-precedence-constraint"></a>선행 제약 조건에 식 추가  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -234,19 +231,19 @@ ms.lasthandoff: 09/26/2017
 |제약 조건 또는 식|False|False|False|  
 
 
-## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>여러 선행 제약 조건 사용 하는 복잡 한 제약 조건 시나리오 
+## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>여러 선행 제약 조건을 사용하는 복잡한 제약 조건 시나리오 
 선행 제약 조건은 두 개의 태스크, 두 개의 컨테이너 또는 각 태스크와 컨테이너를 하나씩 선택하여 두 개의 실행 개체를 참조합니다. 선행 제약 조건을 선행 실행 개체 및 제약 조건이 지정된 실행 개체라고 합니다. 제약 조건이 지정된 실행 개체에는 여러 선행 제약 조건이 포함될 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을 참조하세요.  
   
  제약 조건을 그룹화하여 복잡한 제약 조건 시나리오를 조합하면 패키지에 복잡한 제어 흐름을 구현할 수 있습니다. 예를 들어 다음 그림에서 태스크 D는 **Success** 제약 조건에 의해 태스크 A에 연결되며 태스크 D는 다시 **Failure** 제약 조건에 의해 태스크 B에 연결되고, 태스크 D는 **Success** 제약 조건에 의해 태스크 C에 연결됩니다. 태스크 D와 태스크 A 사이의 선행 제약 조건, 태스크 D와 태스크 B 사이의 선행 제약 조건 및 태스크 D와 태스크 C 사이의 선행 제약 조건은 논리적 *AND* 관계에 있습니다. 따라서 태스크 D를 실행하려면 태스크 A와 태스크 C는 성공적으로 실행되어야 하고 태스크 B는 실패해야 합니다.  
   
- ![선행 제약 조건으로 연결 하는 작업](../../integration-services/control-flow/media/precedenceconstraints.gif "작업 선행 제약 조건으로 연결 됩니다.")  
+ ![선행 제약 조건으로 연결된 태스크](../../integration-services/control-flow/media/precedenceconstraints.gif "선행 제약 조건으로 연결된 태스크")  
   
 ### <a name="logicaland-property"></a>LogicalAnd 속성  
  태스크 또는 컨테이너에 여러 제약 조건이 있는 경우 **LogicalAnd** 속성은 선행 제약 조건이 그 자체로만 평가되는지 또는 다른 제약 조건과 함께 평가되는지 여부를 지정합니다.  
   
  **LogicalAnd** 속성은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 제공하는 속성 창에서 **선행 제약 조건 편집기**를 사용하여 설정할 수 있습니다.  
 
-## <a name="set-the-default-value-for-precedence-constraints"></a>선행 제약 조건에 대 한 기본값 설정  
+## <a name="set-the-default-value-for-precedence-constraints"></a>선행 제약 조건에 대한 기본값 설정  
 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 처음 사용할 때 선행 제약 조건의 기본값은 **Success**입니다. 다음 단계에 따라 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 구성하고 선행 제약 조건에 대해 다른 기본값을 사용하십시오.
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 엽니다.  
@@ -261,7 +258,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  **확인**을 클릭합니다.  
   
-## <a name="create-a-default-precedence-constraint"></a>기본 선행 제약 조건을 만들려면  
+## <a name="create-a-default-precedence-constraint"></a>기본 선행 제약 조건 만들기  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -272,4 +269,3 @@ ms.lasthandoff: 09/26/2017
 4.  **제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 클릭하고 선행 제약 조건을 적용하려는 실행 개체에 해당 연결선을 끌어 옵니다.  
   
 5.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
-

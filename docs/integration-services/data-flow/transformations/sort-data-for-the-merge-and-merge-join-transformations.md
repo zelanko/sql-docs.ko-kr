@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75bcc0fbc667921debf0fa27d7cc95103fa4860c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>병합 및 병합 조인 변환을 위한 데이터 정렬
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 병합 및 병합 조인 변환에는 정렬된 데이터를 입력해야 합니다. 입력 데이터는 물리적으로 정렬되어야 하며 출력 및 원본의 출력 열 또는 업스트림 변환에 정렬 옵션이 설정되어야 합니다. 정렬 옵션은 데이터가 정렬되었음을 나타내지만 데이터가 실제로 정렬되지 않은 경우에는 병합 또는 병합 조인 작업의 결과를 예측할 수 없습니다.  
@@ -79,7 +77,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  **입/출력 속성** 탭을 클릭합니다.  
   
-6.  클릭  **\<구성 요소 이름 > 출력**를 설정 하 고는 **IsSorted** 속성을 **True**합니다.  
+6.  **\<component name> 출력**을 클릭하고 **IsSorted** 속성을 **True**로 설정합니다.  
   
     > [!NOTE]  
     >  수동으로 출력의 **IsSorted** 속성을 **True** 로 설정했지만 데이터가 정렬되지 않았다면 패키지를 실행할 때 다운스트림 병합 또는 병합 조인 변환에 데이터가 누락되었거나 데이터 비교가 잘못되었기 때문일 수 있습니다.  
@@ -122,4 +120,3 @@ ms.lasthandoff: 08/03/2017
  [데이터 흐름 태스크](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

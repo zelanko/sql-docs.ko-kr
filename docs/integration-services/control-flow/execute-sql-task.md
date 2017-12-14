@@ -1,13 +1,14 @@
 ---
 title: "SQL 실행 태스크 | Microsoft Docs"
-ms.custom:
-- ssisdev020617
+ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: 115
+caps.latest.revision: "115"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c6e8206cfceb0fe643fc537fa4e343731e7c21cb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Active
+ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  SQL 실행 태스크는 **RecognizeAll** ParseMode 열거형 값을 사용합니다. 자세한 내용은 [ManagedBatchParser 네임스페이스](http://go.microsoft.com/fwlink/?LinkId=223617)를 참조하십시오.  
   
-## <a name="send-multiple-statements-in-a-batch"></a>여러 개의 문을 일괄 처리 보내기  
+## <a name="send-multiple-statements-in-a-batch"></a>여러 개의 문을 일괄 처리로 전송  
  SQL 실행 태스크에 여러 개의 문이 포함된 경우 문을 그룹화하여 일괄 처리로 실행할 수 있습니다. 일괄 처리의 마지막을 알리려면 GO 명령을 사용합니다. 두 GO 명령 사이의 모든 SQL 문은 일괄 처리로 실행되도록 OLE DB Provider에 전송됩니다. SQL 명령은 GO 명령으로 구분된 여러 개의 일괄 처리를 포함할 수 있습니다.  
   
  일괄 처리로 그룹화할 수 있는 SQL 문의 종류에는 제한이 있습니다. 자세한 내용은 [Batches of Statements](../../relational-databases/native-client-odbc-queries/executing-statements/batches-of-statements.md)을 참조하세요.  
@@ -113,7 +114,7 @@ ms.lasthandoff: 08/03/2017
   
  프로그래밍 방식을 통해 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 속성을 설정할 수 있습니다.  
 
-## <a name="general-page---execute-sql-task-editor"></a>일반 페이지-SQL 실행 태스크 편집기
+## <a name="general-page---execute-sql-task-editor"></a>일반 페이지 - SQL 실행 태스크 편집기
  **SQL 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 SQL 실행 태스크를 구성하고 해당 태스크에서 실행할 SQL 문을 제공할 수 있습니다.  
 
 Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
@@ -125,7 +126,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **Description**  
  SQL 실행 태스크를 설명합니다. 해당 태스크의 용도를 설명하여 패키지를 이해하기 쉽고 유지 관리하기 편하도록 만드는 것이 가장 좋습니다.  
   
- **제한 시간**  
+ **TimeOut**  
  태스크 제한 시간이 초과될 때까지 걸리는 최대 시간(초)을 지정합니다. 값 0은 제한 시간이 없음을 의미합니다. 기본값은 0입니다.  
   
 > [!NOTE]  
@@ -140,7 +141,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **TypeConversionMode**  
  이 속성을 **Allowed**로 설정하면 SQL 실행 태스크는 출력 매개 변수와 쿼리 결과를 결과가 할당되는 변수의 데이터 형식으로 변환합니다. 이는 **단일 행** 결과 집합 유형에 적용됩니다.  
   
- **결과 집합**  
+ **ResultSet**  
  실행 중인 SQL 문에서 예상하는 결과 유형을 지정합니다. **단일 행**, **전체 결과 집합**, **XML**또는 **없음**중에서 선택합니다.  
   
  **ConnectionType**  
@@ -149,7 +150,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **관련 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md), [ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **연결**  
- 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 만들려면 선택 \< **새 연결...** >.  
+ 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 설정하려면 \<**새 연결...**>을 선택합니다.  
   
  **SQLSourceType**  
  태스크에서 실행하는 SQL 문의 원본 유형을 선택합니다.  
@@ -191,26 +192,26 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 파일 연결  
  **FileConnection**  
- 기존 파일 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
+ 기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = 변수  
  **SourceVariable**  
- 기존 변수를 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
+ 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
-## <a name="parameter-mapping-page---execute-sql-task-editor"></a>매개 변수 매핑 페이지-SQL 실행 태스크 편집기
+## <a name="parameter-mapping-page---execute-sql-task-editor"></a>매개 변수 매핑 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
  **변수 이름**  
- 클릭 하 여 매개 변수 매핑을 추가한 다음 **추가**를 목록에서 시스템 또는 사용자 정의 변수를 선택 하거나 클릭 \< **새 변수...** >를 사용 하 여 새 변수를 추가 하는 **변수 추가** 대화 상자.  
+ **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 추가합니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)  
   
- **방향**  
+ **Direction**  
  매개 변수의 방향을 선택합니다. 각 변수를 입력 매개 변수, 출력 매개 변수 또는 반환 코드에 매핑합니다.  
   
  **데이터 형식**  
@@ -219,9 +220,9 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **매개 변수 이름**  
  매개 변수 이름을 입력합니다.  
   
- 태스크에서 사용하는 연결 관리자 유형에 따라 숫자 또는 매개 변수 이름을 사용해야 합니다. 일부 연결 관리자 유형의 사용 하려면 매개 변수 이름의 첫 번째 문자는 @ 기호와 같은 특정 이름을 @Param1, 또는 매개 변수 이름으로 열 이름입니다.  
+ 태스크에서 사용하는 연결 관리자 유형에 따라 숫자 또는 매개 변수 이름을 사용해야 합니다. 일부 연결 관리자 유형의 경우 매개 변수 이름의 첫 문자가 @ 기호여야 하거나, 이름이 @Param1과 같은 특정 이름이어야 하거나, 열 이름을 매개 변수 이름으로 지정해야 합니다.  
   
- **매개 변수 크기 늘리기**  
+ **매개 변수 크기**  
  문자열 및 이진 필드와 같은 가변 길이를 가지는 매개 변수의 크기를 제공합니다.  
   
  이 설정을 사용하면 공급자에서 가변 길이 매개 변수 값에 대해 충분한 공간을 할당합니다.  
@@ -232,7 +233,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **제거**  
  목록에서 매개 변수 매핑을 선택한 다음 **제거**를 클릭합니다.  
  
-## <a name="result-set-page---execute-sql-task-editor"></a>결과 집합 페이지-SQL 실행 태스크 편집기
+## <a name="result-set-page---execute-sql-task-editor"></a>결과 집합 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **결과 집합** 페이지를 사용하여 SQL 문의 결과를 새 변수 또는 기존 변수로 매핑할 수 있습니다. 일반 페이지의 **ResultSet** 을 **없음**으로 설정한 경우에는 이 대화 상자의 옵션을 사용할 수 없습니다.  
   
 ### <a name="options"></a>옵션  
@@ -245,7 +246,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  
   
  **변수 이름**  
- 결과 집합을 변수에 변수 또는 클릭을 선택 하 여 \< **새 변수...** >를 사용 하 여 새 변수를 추가 하는 **변수 추가** 대화 상자.  
+ 변수를 선택하여 결과 집합을 변수로 매핑하거나 \<**새 변수...**>를 클릭하여 **변수 추가** 대화 상자를 사용하여 새 변수를 추가합니다.  
   
  **추가**  
  결과 집합 매핑을 추가하려면 클릭합니다.  
@@ -253,7 +254,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **제거**  
  목록에서 결과 집합 매핑을 선택한 다음 **제거**를 클릭합니다.  
  
-## <a name="parameters-in-the-execute-sql-task"></a>매개 변수는 SQL 실행 태스크
+## <a name="parameters-in-the-execute-sql-task"></a>SQL 실행 태스크의 매개 변수
 SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수, **output** 매개 변수 및 반환 코드를 사용합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 SQL 실행 태스크는 **Input**, **Output**및 **ReturnValue** 매개 변수 유형을 지원합니다. 입력 매개 변수에는 **Input** 유형, 출력 매개 변수에는 **Output** 유형, 반환 코드에는 **ReturnValue** 유형을 사용합니다.  
   
 > [!NOTE]  
@@ -265,16 +266,16 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 -   [매개 변수 이름 및 표식 사용](#Parameter_names_and_markers)  
   
--   [매개 변수를 사용 하 여 날짜 및 시간 데이터 형식](#Date_and_time_data_types)  
+-   [날짜 및 시간 데이터 형식의 매개 변수 사용](#Date_and_time_data_types)  
   
 -   [WHERE 절에 매개 변수 사용](#WHERE_clauses)  
   
--   [저장된 프로시저의 매개 변수 사용](#Stored_procedures)  
+-   [저장 프로시저에 매개 변수 사용](#Stored_procedures)  
   
 -   [반환 코드 값 가져오기](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a>매개 변수 이름 및 표식  
- SQL 실행 태스크가 사용하는 연결 형식에 따라 SQL 명령 구문이 사용하는 매개 변수 표식이 달라집니다. 예를 들어는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 유형을 사용 하려면 SQL 명령 매개 변수 표식을 사용 하 여 형식에서  **@varParameter** 하지만 OLE DB 연결 유형에 물음표 (?) 매개 변수 표식입니다.  
+###  <a name="Parameter_names_and_markers"></a> 매개 변수 이름 및 표식  
+ SQL 실행 태스크가 사용하는 연결 형식에 따라 SQL 명령 구문이 사용하는 매개 변수 표식이 달라집니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 유형을 사용하려면 SQL 명령에 **@varParameter** 형식의 매개 변수 표식을 사용해야 하지만 OLE DB 연결 유형에는 물음표(?) 매개 변수 표식을 사용해야 합니다.  
   
  변수와 매개 변수 간 매핑에 매개 변수 이름으로 사용할 수 있는 이름도 연결 관리자 유형에 따라 달라집니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 유형에는 @ 접두사가 있는 사용자 정의 이름을 사용하지만 OLE DB 연결 관리자 유형에는 0부터 시작하는 서수의 숫자 값을 매개 변수 이름으로 사용해야 합니다.  
   
@@ -283,34 +284,34 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |연결 형식|매개 변수 표식|매개 변수 이름|SQL 명령 예|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<매개 변수 이름 >|@\<매개 변수 이름 >|선택 Person.Contact에서 제목 FirstName, LastName, 여기서 ContactID =@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<매개 변수 이름>|@\<매개 변수 이름>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 및 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
-#### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 및 ADO 연결 관리자 매개 변수를 사용 합니다.  
- [!INCLUDE[vstecado](../../includes/vstecado-md.md)]및 ADO 연결 관리자 매개 변수를 사용 하는 SQL 명령에 대 한 특정 요구 사항이 있습니다.  
+#### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 및 ADO 연결 관리자의 매개 변수 사용  
+ [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 및 ADO 연결 관리자에는 매개 변수를 사용하는 SQL 명령에 대한 특별한 요구 사항이 있습니다.  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]연결 관리자 SQL 명령에 매개 변수 이름을 매개 변수 표식으로 사용 해야 합니다. 즉, 변수를 매개 변수에 직접 매핑할 수 있습니다. 예를 들어 `@varName` 변수는 `@parName` 이라는 매개 변수에 매핑되고 `@parName`매개 변수에 값을 제공합니다.  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하려면 SQL 명령에 매개 변수 이름을 매개 변수 표식으로 사용해야 합니다. 즉, 변수를 매개 변수에 직접 매핑할 수 있습니다. 예를 들어 `@varName` 변수는 `@parName` 이라는 매개 변수에 매핑되고 `@parName`매개 변수에 값을 제공합니다.  
   
 -   ADO 연결 관리자를 사용하려면 SQL 명령에 물음표(?)를 매개 변수 표식으로 사용해야 합니다. 그러나 정수 값을 제외한 모든 사용자 정의 이름을 매개 변수 이름으로 사용할 수 있습니다.  
   
  매개 변수에 값을 제공하기 위해 변수는 매개 변수 이름에 매핑됩니다. 그런 다음 SQL 실행 태스크에서 매개 변수 목록에 있는 매개 변수 이름의 서수 값을 사용하여 변수의 값을 매개 변수에 로드합니다.  
   
-#### <a name="use-parameters-with-excel-odbc-and-ole-db-connection-managers"></a>EXCEL, ODBC, OLE DB 연결 관리자와 매개 변수를 사용 합니다.  
+#### <a name="use-parameters-with-excel-odbc-and-ole-db-connection-managers"></a>EXCEL, ODBC 및 OLE DB 연결 관리자의 매개 변수 사용  
  EXCEL, ODBC 및 OLE DB 연결 관리자를 사용하려면 SQL 명령에 물음표(?)를 매개 변수 표식으로 사용하고 0 또는 1부터 시작하는 숫자 값을 매개 변수 이름으로 사용해야 합니다. SQL 실행 태스크에서 ODBC 연결 관리자를 사용하면 쿼리의 첫 번째 매개 변수에 매핑되는 매개 변수 이름이 1이고, 그렇지 않으면 이 매개 변수 이름이 0입니다. 후속 매개 변수의 경우에도 매개 변수 이름의 숫자 값이 SQL 명령에서 매개 변수 이름이 매핑되는 매개 변수를 나타냅니다. 예를 들어 이름이 3인 매개 변수는 세 번째 매개 변수에 매핑되며 SQL 명령에서 세 번째 물음표(?)로 표현됩니다.  
   
  매개 변수에 값을 제공하기 위해 변수가 매개 변수 이름에 매핑되고 SQL 실행 태스크에서 매개 변수 이름의 서수 값을 사용하여 변수 값을 매개 변수에 로드합니다.  
   
  연결 관리자에서 사용하는 공급자에 따라 일부 OLE DB 데이터 형식이 지원되지 않을 수 있습니다. 예를 들어 Excel 드라이버는 제한된 데이터 형식 집합만 인식합니다. Excel 드라이버를 사용하는 Jet 공급자의 동작에 대한 자세한 내용은 [Excel Source](../../integration-services/data-flow/excel-source.md)을 참조하십시오.  
   
-#### <a name="use-parameters-with-ole-db-connection-managers"></a>매개 변수를 사용 하 여 OLE DB 연결 관리자 사용  
+#### <a name="use-parameters-with-ole-db-connection-managers"></a>OLE DB 연결 관리자의 매개 변수 사용  
  SQL 실행 태스크에서 OLE DB 연결 관리자를 사용할 때는 태스크의 BypassPrepare 속성을 사용할 수 있습니다. SQL 실행 태스크에서 매개 변수가 있는 SQL 문을 사용하는 경우 이 속성을 **true** 로 설정해야 합니다.  
   
  OLE DB 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 OLE DB Provider를 통해 매개 변수 정보를 파생할 수 없으므로 매개 변수가 있는 하위 쿼리를 사용할 수 없습니다. 그러나 식을 사용하여 매개 변수 값을 쿼리 문자열로 연결하고 태스크의 SqlStatementSource 속성을 설정할 수 있습니다.  
   
-###  <a name="Date_and_time_data_types"></a>매개 변수를 사용 하 여 날짜 및 시간 데이터 형식  
+###  <a name="Date_and_time_data_types"></a> 날짜 및 시간 데이터 형식의 매개 변수 사용  
   
-#### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>날짜 및 시간 매개 변수를 사용 하 여 ADO.NET 및 ADO 연결 관리자  
+#### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 및 ADO 연결 관리자의 날짜 및 시간 매개 변수 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식인 **time** 및 **datetimeoffset** 데이터를 읽을 때는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 또는 ADO 연결 관리자를 사용하는 SQL 실행 태스크에 다음과 같은 요구 사항이 추가로 적용됩니다.  
   
 -   **time** 데이터의 경우 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하려면 매개 변수 유형이 **Input** 또는 **Output**이고 데이터 형식이 **string**인 매개 변수에 이 데이터를 저장해야 합니다.  
@@ -325,7 +326,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 매핑하는 방법에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) 및 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-#### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>날짜 및 시간 매개 변수를 사용 하 여 OLE DB 연결 관리자 사용  
+#### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>OLE DB 연결 관리자의 날짜 및 시간 매개 변수 사용  
  OLE DB 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 **date**, **time**, **datetime**, **datetime2** 및 **datetimeoffset** 형식의 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
   
 -   NVARCHAR 데이터 형식의 입력 매개 변수  
@@ -341,7 +342,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
  적절한 입력 또는 출력 매개 변수에 데이터가 저장되지 않으면 패키지가 실패합니다.  
   
-#### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>날짜 및 시간 매개 변수를 사용 하 여 ODBC 연결 관리자 사용  
+#### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>ODBC 연결 관리자의 날짜 및 시간 매개 변수 사용  
  ODBC 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 **date**, **time**, **datetime**, **datetime2** 또는 **datetimeoffset** 중 한 형식의 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
   
 -   SQL_WVARCHAR 데이터 형식의 **input** 매개 변수  
@@ -357,7 +358,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
  적절한 입력 또는 출력 매개 변수에 데이터가 저장되지 않으면 패키지가 실패합니다.  
   
-###  <a name="WHERE_clauses"></a>WHERE 절에 매개 변수를 사용 합니다.  
+###  <a name="WHERE_clauses"></a> WHERE 절에 매개 변수 사용  
  원본 테이블의 각 행이 SQL 명령에 적합하도록 만들기 위해 만족시켜야 할 조건을 정의하는 필터를 지정하기 위해 SELECT, INSERT, UPDATE 및 DELETE 명령에 WHERE 절을 포함하는 경우가 많습니다. 매개 변수는 WHERE 절에 필터 값을 제공합니다.  
   
  매개 변수 표식을 사용하여 매개 변수 값을 동적으로 제공할 수 있습니다. SQL 문에 사용할 수 있는 매개 변수 표식 및 매개 변수 이름에 대한 규칙은 SQL 실행이 사용하는 연결 관리자 유형에 따라 달라집니다.  
@@ -376,9 +377,9 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 -   ADO 연결 형식에서는 Param1 및 Param2와 같은 임의의 두 매개 변수 이름을 사용할 수 있지만 이러한 매개 변수는 매개 변수 목록에서의 서수 위치에 따라 매핑되어야 합니다.  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 유형 매개 변수 이름을 사용 하 여 @parmMinProductID 및 @parmMaxProductID합니다.  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 유형은 매개 변수 이름 @parmMinProductID 및 @parmMaxProductID를 사용합니다.  
   
-###  <a name="Stored_procedures"></a>저장된 프로시저와 함께 매개 변수를 사용 합니다.  
+###  <a name="Stored_procedures"></a> 저장 프로시저에 매개 변수 사용  
  저장 프로시저를 실행하는 SQL 명령도 매개 변수 매핑을 사용할 수 있습니다. 매개 변수 표식 및 매개 변수 이름 사용 방법에 대한 규칙은 매개 변수가 있는 쿼리에 대한 규칙에서와 마찬가지로 SQL 실행이 사용하는 연결 관리자 유형에 따라 달라집니다.  
   
  다음 표에서는 연결 관리자 유형별 EXEC 명령의 예를 나열합니다. 이 예에서는 **의** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]저장 프로시저를 실행합니다. 이 저장 프로시저는 `@StartProductID` 및 `@CheckDate` **input** 매개 변수를 사용합니다.  
@@ -387,15 +388,15 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](http://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
-|ADO|IsQueryStoredProcedure로 설정 되어 있으면 **False**,`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure로 설정 되어 있으면 **True**,`uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|IsQueryStoredProcedure로 설정 되어 있으면 **False**,`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure로 설정 되어 있으면 **True**,`uspGetBillOfMaterials`|  
+|ADO|IsQueryStoredProcedure가 **False**로 설정된 경우 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure가 **True**로 설정된 경우 `uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|IsQueryStoredProcedure가 **False**로 설정된 경우 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure가 **True**로 설정된 경우 `uspGetBillOfMaterials`|  
   
  출력 매개 변수를 사용하려면 구문에서 각 매개 변수 표식 다음에 OUTPUT 키워드가 와야 합니다. 올바른 출력 매개 변수 구문의 예로 `EXEC myStoredProcedure ? OUTPUT`을 들 수 있습니다.  
   
  Transact-SQL 저장 프로시저에서 입력 및 출력 매개 변수 사용에 대한 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)를 참조하세요.  
  
-### <a name="map-query-parameters-to-variables"></a>쿼리 매개 변수 변수 매핑
-이 섹션에는 SQL 실행 태스크에서 매개 변수가 있는 SQL 문을 사용 하 고 SQL 문의 변수와 매개 변수 간 매핑을 만드는 방법을 설명 합니다.  
+### <a name="map-query-parameters-to-variables"></a>변수에 매개 변수 매핑
+이 섹션에서는 SQL 실행 태스크에서 매개 변수가 있는 SQL 문을 사용하는 방법과 SQL 문의 변수와 매개 변수 간 매핑을 만드는 방법에 대해 설명합니다.  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 작업하려는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
   
@@ -422,7 +423,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
     |연결 형식|매개 변수 표식|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름 >|  
+    |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름>|  
     |ODBC|?|  
     |EXCEL 및 OLE DB|?|  
   
@@ -445,7 +446,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
     |연결 형식|매개 변수 이름|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름 >|  
+    |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL 및 OLE DB|0, 1, 2, 3, …|  
   
@@ -465,7 +466,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 14. **확인**을 클릭합니다.  
 
-##  <a name="Return_codes"></a>반환 코드 값 가져오기  
+##  <a name="Return_codes"></a> 반환 코드 값 가져오기  
  저장 프로시저는 반환 코드라고 하는 정수 값을 반환하여 프로시저의 실행 상태를 나타낼 수 있습니다. SQL 실행 태스크에 반환 코드를 구현하려면 **ReturnValue** 유형의 매개 변수를 사용합니다.  
   
  다음 표에서는 반환 코드를 구현하는 EXEC 명령의 몇 가지 예를 연결 형식별로 나열합니다. 모든 예에서는 **input** 매개 변수를 사용합니다. 매개 변수 표식과 매개 변수 이름을 사용하는 방법에 대한 규칙은**Input**, **Output**, **ReturnValue**등의 모든 매개 변수 유형에 대해 동일합니다.  
@@ -476,7 +477,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](http://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
-|ADO|IsQueryStoreProcedure로 설정 되어 있으면 **False**,`EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure로 설정 되어 있으면 **True**,`myStoredProcedure`|  
+|ADO|IsQueryStoreProcedure가 **False**로 설정된 경우 `EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure가 **True**로 설정된 경우 `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Set IsQueryStoreProcedure가 **True**로 설정됩니다.<br /><br /> `myStoredProcedure`|  
   
  위의 표에 나와 있는 구문에서 SQL 실행 태스크는 **직접 입력** 원본 유형을 사용하여 저장 프로시저를 실행합니다. 이 SQL 실행 태스크는 **파일 연결** 원본 유형을 사용하여 저장 프로시저를 실행할 수도 있습니다. SQL 실행 태스크에서 **직접 입력** 또는 **파일 연결** 원본 유형 중 어느 것을 사용하든 간에 **ReturnValue** 유형의 매개 변수를 사용하여 반환 코드를 구현합니다.
@@ -494,7 +495,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 -   [결과 집합으로 변수 채우기](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a>결과 집합 유형 지정  
+###  <a name="Result_set_type"></a> 결과 집합 유형 지정  
  SQL 실행 태스크는 다음 유형의 결과 집합을 지원합니다.  
   
 -   **없음** 결과 집합은 쿼리에서 결과가 반환되지 않을 때 사용합니다. 예를 들어 이 결과 집합은 테이블에서 레코드를 추가, 변경 및 삭제하는 쿼리에 사용됩니다.  
@@ -507,12 +508,12 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
  SQL 실행 태스크가 **전체 결과 집합** 결과 집합을 사용하고 쿼리가 여러 행 집합을 반환하는 경우 작업은 첫 번째 행 집합만 반환합니다. 이 행 집합에서 오류가 발생하는 경우 태스크에서 오류를 보고합니다. 다른 행 집합에서 오류가 발생하는 경우 태스크에서 오류를 보고하지 않습니다.  
   
-###  <a name="Populate_variable_with_result_set"></a>결과 집합으로 변수 채우기  
+###  <a name="Populate_variable_with_result_set"></a> 결과 집합으로 변수 채우기  
  결과 집합 유형이 단일 행, 행 집합 또는 XML일 경우 쿼리에서 반환된 결과 집합을 사용자 정의 변수에 바인딩할 수 있습니다.  
   
  결과 집합 유형이 **단일 행**인 경우 열 이름을 결과 집합 이름으로 사용하여 반환 결과의 열을 변수에 바인딩하거나 열 목록의 열의 서수 위치를 결과 집합 이름으로 사용할 수 있습니다. 예를 들어 `SELECT Color FROM Production.Product WHERE ProductID = ?` 쿼리에 대한 결과 집합 이름은 **Color** 또는 **0**일 수 있습니다. 쿼리에서 여러 열을 반환하고 모든 열의 값에 액세스하려는 경우 각 열을 다른 변수에 바인딩해야 합니다. 번호를 결과 집합 이름으로 사용하여 열을 변수에 매핑하면 열이 쿼리의 열 목록에 표시되는 순서가 번호로 적용됩니다. 예를 들어 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`쿼리에서 **Color** 열에 대해 0을 사용하고 **ListPrice** 열에 대해 1을 사용할 수 있습니다. 열 이름을 결과 집합 이름으로 사용하는 기능은 태스크에서 사용하도록 구성된 공급자에 따라 달라집니다. 일부 공급자만 열 이름을 사용할 수 있습니다.  
   
- 단일 값을 반환하는 일부 쿼리에는 열 이름이 포함되지 않을 수 있습니다. 예를 들어 `SELECT COUNT (*) FROM Production.Product` 문은 열 이름을 반환하지 않습니다. 서수 위치인 0을 결과 이름으로 사용하여 반환 결과에 액세스할 수 있습니다. 반환 결과 열 이름으로 액세스 하려면 쿼리에 AS 포함 해야 \<별칭 이름 > 절에 열 이름을 지정 합니다. `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`문은 **CountOfProduct** 열을 제공합니다. **CountOfProduct** 열 이름 또는 서수 위치 0을 사용하여 반환 결과 열에 액세스할 수 있습니다.  
+ 단일 값을 반환하는 일부 쿼리에는 열 이름이 포함되지 않을 수 있습니다. 예를 들어 `SELECT COUNT (*) FROM Production.Product` 문은 열 이름을 반환하지 않습니다. 서수 위치인 0을 결과 이름으로 사용하여 반환 결과에 액세스할 수 있습니다. 열 이름별로 반환 결과에 액세스하려면 쿼리에 AS \<alias name> 절을 포함하여 열 이름을 제공해야 합니다. `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`문은 **CountOfProduct** 열을 제공합니다. **CountOfProduct** 열 이름 또는 서수 위치 0을 사용하여 반환 결과 열에 액세스할 수 있습니다.  
   
  결과 집합 유형이 **전체 결과 집합** 이나 **XML**이면 결과 집합 이름으로 0을 사용해야 합니다.  
   
@@ -540,7 +541,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 -   변환에서 데이터 잘림이 발생하지 않은 경우  
   
 ## <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>결과 집합을 SQL 실행 태스크의 변수에 매핑
-이 섹션에는 SQL 실행 태스크의 결과 집합과 변수 간 매핑을 만드는 방법을 설명 합니다. 결과 집합을 변수에 매핑하면 결과 집합을 패키지의 다른 요소에서 사용할 수 있습니다. 예를 들어 스크립트 태스크의 스크립트는 변수를 읽은 다음 결과 집합의 값을 사용할 수 있으며 XML 원본은 변수에 저장된 결과 집합을 사용할 수 있습니다. 부모 패키지에서 결과 집합을 생성하는 경우 결과 집합을 부모 패키지의 변수에 매핑한 다음 부모 변수 값을 저장할 자식 패키지의 부모 패키지 변수 구성을 만들어 패키지 실행 태스크로 호출하는 자식 패키지에서 결과 집합을 사용할 수 있습니다.  
+이 섹션에서는 결과 집합과 SQL 실행 태스크의 변수 간 매핑을 만드는 방법에 대해 설명합니다. 결과 집합을 변수에 매핑하면 결과 집합을 패키지의 다른 요소에서 사용할 수 있습니다. 예를 들어 스크립트 태스크의 스크립트는 변수를 읽은 다음 결과 집합의 값을 사용할 수 있으며 XML 원본은 변수에 저장된 결과 집합을 사용할 수 있습니다. 부모 패키지에서 결과 집합을 생성하는 경우 결과 집합을 부모 패키지의 변수에 매핑한 다음 부모 변수 값을 저장할 자식 패키지의 부모 패키지 변수 구성을 만들어 패키지 실행 태스크로 호출하는 자식 패키지에서 결과 집합을 사용할 수 있습니다.  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -581,5 +582,4 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |로그 항목|Description|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|SQL 문의 실행 단계에 대한 정보를 제공합니다. 로그 항목은 태스크에서 데이터베이스에 대한 연결을 설정할 때, 태스크에서 SQL 문 준비를 시작할 때 또는 SQL 문 실행이 완료된 후에 기록됩니다. 준비 단계에 대한 로그 항목은 태스크에서 사용하는 SQL 문을 포함합니다.|  
-
 

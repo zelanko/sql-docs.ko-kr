@@ -2,9 +2,12 @@
 title: "Invoke-Sqlcmd cmdlet | Microsoft 문서"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7afb1a8a23055df89c0a446e2d4be3255311b5b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 XQuery 언어로 된 문과[!INCLUDE[tsql](../includes/tsql-md.md)] sqlcmd **유틸리티에서 지원되는 명령이 포함된 스크립트를 실행하는** cmdlet입니다.  
@@ -114,14 +117,14 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 로그인 ID|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 암호|-P|-Password|  
 |변수 정의|-v|-Variable|  
-|쿼리 제한 시간 간격|-t|-QueryTimeout|  
+|쿼리 제한 시간 간격(초)|-t|-QueryTimeout|  
 |오류 발생 시 실행 중지|-b|-AbortOnError|  
 |관리자 전용 연결|-A|-DedicatedAdministratorConnection|  
 |대화형 명령, 시작 스크립트 및 환경 변수를 사용하지 않음|-X|-DisableCommands|  
 |변수 대체를 사용하지 않음|-X|-DisableVariables|  
 |보고할 최소 심각도 수준|-v|-SeverityLevel|  
 |보고할 최소 오류 수준|-m|-ErrorLevel|  
-|로그인 제한 시간 간격|-l|-ConnectionTimeout|  
+|로그인 제한 시간 간격(초)|-l|-ConnectionTimeout|  
 |호스트 이름|-H|-HostName|  
 |암호 변경 후 종료|-Z|-NewPassword|  
 |쿼리가 포함된 입력 파일|-i|-InputFile|  

@@ -1,5 +1,5 @@
 ---
-title: "변경 데이터 캡처 Designer for Oracle by Attunity F1 도움말 참조 | Microsoft Docs"
+title: "Attunity Oracle CDC Designer F1 도움말 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- f1Help
+f1_keywords: f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da92c9619f8bfbfbe732fd349cac195bc4c89926
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e7ee7e2cd15592db9013ca38ecf71dc3750eaf78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Attunity Oracle CDC Designer F1 도움말 참조
   Attunity Oracle CDC Designer는 Oracle CDC 인스턴스를 만들고 관리하는 데 사용됩니다. 이 섹션의 항목에서는 CDC Designer 콘솔에서 사용할 수 있는 태스크를 수행하는 방법에 설명합니다.  
@@ -50,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
     -   [변경 내용을 캡처할 Oracle 테이블 선택](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
-    -   [변경을 캡처하도록 선택한 테이블에 변경 내용 확인](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+    -   [변경 캡처를 위해 선택된 테이블 변경](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
     -   [보완 로깅 스크립트 생성 및 실행](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
@@ -73,4 +70,3 @@ ms.lasthandoff: 08/03/2017
     -   [고급 속성 편집](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "태스크 또는 컨테이너는 제어 흐름에 추가 또는 삭제 | Microsoft Docs"
+title: "제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f7502275ff31671bd8726dec5ecb42a299d3f17c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
   제어 흐름 디자이너에서 작업 중일 때 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 도구 상자에는 패키지의 제어 흐름을 작성하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 태스크가 나열됩니다. 도구 상자에 대한 자세한 내용은 [SSIS Toolbox](../../integration-services/ssis-toolbox.md)를 참조하십시오.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>제어 흐름에서 태스크 또는 컨테이너를 삭제 합니다.  
+## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>데이터 흐름에서 태스크 또는 컨테이너 삭제  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
  다음 절차에서는 **속성** 창이나 해당 태스크 또는 컨테이너 편집기를 사용하여 태스크 또는 컨테이너의 속성을 설정하는 방법에 대해 설명합니다.  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>태스크 또는 속성 창 사용 하 여 컨테이너의 속성 설정  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>속성 창을 사용하여 태스크 또는 컨테이너의 속성 설정  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>태스크 또는 태스크 또는 컨테이너 편집기를 사용 하 여 컨테이너의 속성 설정  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>태스크 또는 컨테이너 편집기를 사용하여 태스크 또는 컨테이너의 속성 설정  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 09/26/2017
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
   
   
-

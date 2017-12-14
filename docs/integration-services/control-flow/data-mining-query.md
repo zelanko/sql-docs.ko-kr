@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataminingquery.f1
+f1_keywords: sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4509a3b7838e112bbd002c7efe4b6782a772f7d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query"></a>데이터 마이닝 쿼리
   디자인 창에는 데이터 마이닝 예측 쿼리를 작성할 때 사용할 수 있는 데이터 마이닝 예측 쿼리 작성기가 포함되어 있습니다. 입력 테이블을 기반으로 하는 예측 쿼리를 디자인하거나 단일 예측 쿼리를 디자인할 수 있습니다. 쿼리를 실행하고 결과를 보려면 결과 뷰로 전환합니다. 쿼리 뷰에서는 예측 쿼리 작성기로 만든 DMX(Data Mining Extensions) 쿼리를 표시합니다.  
@@ -34,9 +31,9 @@ ms.lasthandoff: 08/03/2017
  뷰 전환 단추  
  디자인 창과 쿼리 창 사이를 전환하려면 아이콘을 클릭합니다. 기본적으로 디자인 창이 열립니다.  
   
- 디자인 창으로 전환 하려면는 ![디자인 아이콘](../../integration-services/control-flow/media/ssis-designicon.gif "디자인 아이콘") 아이콘입니다.  
+ 디자인 창으로 전환하려면 ![디자인 아이콘](../../integration-services/control-flow/media/ssis-designicon.gif "디자인 아이콘") 아이콘을 클릭합니다.  
   
- 쿼리 창으로 전환 하려면는 ![SQL 아이콘](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL 아이콘") 아이콘입니다.  
+ 쿼리 창으로 전환하려면 ![SQL 아이콘](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL 아이콘") 아이콘을 클릭합니다.  
   
  **마이닝 모델**  
  예측의 기반으로 하려고 선택한 마이닝 모델을 표시합니다.  
@@ -72,7 +69,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

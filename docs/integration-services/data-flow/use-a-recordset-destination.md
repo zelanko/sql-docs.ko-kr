@@ -1,5 +1,5 @@
 ---
-title: "레코드 집합 대상을 사용 하 여 | Microsoft Docs"
+title: "레코드 집합 대상 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset destination
+helpviewer_keywords: Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f7cf8f2ed8875856da5756288c8e3fb707f1a397
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
   레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 레코드 집합 대상은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **데이터 형식의** 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
@@ -182,4 +179,3 @@ ms.lasthandoff: 08/03/2017
      올바른 SMTP 서버를 지정하고 자신의 전자 메일 주소를 입력한 경우 메일 보내기 태스크를 통해 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 가상 판매 직원에게 메시지를 보내면 해당 수신인에게 메시지를 배달할 수 없다는 내용의 메시지가 반환됩니다.  
   
   
-

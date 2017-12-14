@@ -1,5 +1,5 @@
 ---
-title: "열 패턴 프로필 요청 옵션 (데이터 프로 파일링 태스크) | Microsoft Docs"
+title: "열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: f51bdacbe57674f10f2dc7ea1c20d1ab64b0c229
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 패턴 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 패턴 프로필은 문자열 열에서 지정된 값의 비율을 포괄하는 정규식 집합을 보고합니다. 이 프로필을 사용하면 잘못된 문자열과 같은 데이터 문제를 식별하는 데 도움이 되며 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식을 제안 받을 수 있습니다. 예를 들어 미국 우편 번호 열의 패턴 프로필이 \d{5}-\d{4}, \d{5} 및 \d{9} 정규식을 생성할 수 있습니다. 다른 정규식이 보이면 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있을 가능성이 높습니다.  
@@ -40,7 +37,7 @@ ms.lasthandoff: 10/05/2017
   
 -   **Delimiters** 기본적으로 Delimiters 목록에는 공백 문자, 가로 탭 문자(\t), 줄 바꿈 문자(\n) 및 캐리지 리턴 문자(\r)가 포함됩니다. 추가 구분 기호를 지정할 수 있지만 기본 구분 기호는 제거할 수 없습니다.  
   
--   **기호** 기본적으로 목록 **기호** 문자 포함: `,.;:-"'~=&/@!?()<>[]{}|#*^%` 눈금 표시와 합니다. 예를 들어 기호가 "`()-`"인 경우 값 "(425) 123-4567"은 ["(", "425", ")", "123", "-", "4567", ")"]로 토큰화됩니다.  
+-   **Symbols** 기본적으로 **Symbols** 목록에는 `,.;:-"'~=&/@!?()<>[]{}|#*^%` 및 눈금과 같은 문자가 포함됩니다. 예를 들어 기호가 "`()-`"인 경우 값 "(425) 123-4567"은 ["(", "425", ")", "123", "-", "4567", ")"]로 토큰화됩니다.  
   
  한 문자가 동시에 구분 기호이면서 기호일 수는 없습니다.  
   
@@ -136,7 +133,7 @@ ms.lasthandoff: 10/05/2017
  자세한 내용은 이 항목의 앞부분에 나오는 "구분 기호 및 기호 사용 이해"를 참조하십시오.  
   
  **Symbols**  
- 패턴의 일부로 유지할 기호를 나열합니다. 이러한 기호에는 날짜의 "/", 시간의 ":" 및 전자 메일 주소의 " @ "이 포함될 수 있습니다. 기본적으로 목록 **기호** 문자 포함: `,.;:-"'~=&/@!?()<>[]{}|#*^%`합니다.  
+ 패턴의 일부로 유지할 기호를 나열합니다. 이러한 기호에는 날짜의 "/", 시간의 ":" 및 전자 메일 주소의 "@"이 포함될 수 있습니다. 기본적으로 **Symbols** 목록에는 `,.;:-"'~=&/@!?()<>[]{}|#*^%`와 같은 문자가 포함됩니다.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "구분 기호 및 기호 사용 이해"를 참조하십시오.  
   
@@ -152,7 +149,6 @@ ms.lasthandoff: 10/05/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [단일 테이블 빠른 프로필 형식 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

@@ -8,29 +8,26 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - PerformUpgrade method
 - custom data flow components [Integration Services], upgrading version
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 65e38600b0974d75f5509a4231f6ebb0a15ba19a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d93362af894bb395123b5b18dc5b8ac60a418a0e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 버전 업그레이드
   이전 버전의 구성 요소를 사용하여 만든 패키지에는 더 이상 유효하지 않은 메타데이터가 들어 있을 수 있습니다. 예를 들어 최신 버전의 구성 요소에서 사용법이 수정된 사용자 지정 속성이 이러한 메타데이터에 해당합니다. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 기본 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드를 재정의하여 이전 패키지에 이미 저장된 메타데이터를 현재 구성 요소 속성에 맞게 업데이트할 수 있습니다.  
@@ -54,9 +51,9 @@ ms.lasthandoff: 08/03/2017
 -   버전 메타데이터를 현재 구성 요소 버전으로 설정합니다.  
   
 > [!NOTE]  
->  데이터 흐름 엔진에 고유의 버전 번호를 전달 된 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 에서 메서드는 *pipelineVersion* 매개 변수입니다. 이 매개 변수는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 버전 1.0에서는 유용하지 않지만 이후 버전에서는 유용할 수 있습니다.  
+>  데이터 흐름 엔진에서는 해당 엔진의 버전 번호를 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 메서드에 *pipelineVersion* 매개 변수로 전달합니다. 이 매개 변수는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 버전 1.0에서는 유용하지 않지만 이후 버전에서는 유용할 수 있습니다.  
   
- 예제 코드에서는 사용자 지정 속성의 이전 부울 값에 직접 매핑하는 두 개의 열거형 값만 사용합니다. 하지만 고급 편집기에서 또는 프로그래밍 방식으로 구성 요소의 사용자 지정 사용자 인터페이스를 사용하여 사용 가능한 다른 열거형 값을 선택할 수도 있습니다. 고급 편집기에서 사용자 지정 속성에 대 한 열거형 값을 표시에 대 한 내용은의 "사용자 지정 속성 만들기"를 참조 [데이터 흐름 구성 요소의 디자인 타임 메서드](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)합니다.  
+ 예제 코드에서는 사용자 지정 속성의 이전 부울 값에 직접 매핑하는 두 개의 열거형 값만 사용합니다. 하지만 고급 편집기에서 또는 프로그래밍 방식으로 구성 요소의 사용자 지정 사용자 인터페이스를 사용하여 사용 가능한 다른 열거형 값을 선택할 수도 있습니다. 고급 편집기에서 사용자 지정 속성의 열거형 값을 표시하는 방법은 [데이터 흐름 구성 요소의 디자인 타임 메서드](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)의 "사용자 지정 속성 만들기"를 참조하세요.  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  
@@ -188,4 +185,3 @@ public class PerformUpgradeCS :
   
 }  
 ```
-

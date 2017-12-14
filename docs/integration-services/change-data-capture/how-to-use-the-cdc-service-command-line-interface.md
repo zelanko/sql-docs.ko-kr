@@ -1,5 +1,5 @@
 ---
-title: "CDC Service 명령줄 인터페이스를 사용 하는 방법 | Microsoft Docs"
+title: "CDC Service 명령줄 인터페이스를 사용하는 방법 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b1f69b32824d88f2e5be131dde2043414c2f9e8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e814f258c24a5637d52594b8754af0a4c50868da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>CDC Service 명령줄 인터페이스를 사용하는 방법
   Oracle CDC Service 프로그램인 xdbcdcsvc.exe는 일반적으로 Oracle CDC Windows 서비스를 실행하지만 명령줄에서 직접 이 프로그램을 호출하여 Oracle CDC Windows 서비스를 만들거나 삭제할 수 있습니다.  
@@ -37,4 +35,3 @@ ms.lasthandoff: 08/03/2017
 3.  가능한 태스크 중 하나를 수행하는 데 필요한 명령을 입력합니다.  
   
   
-

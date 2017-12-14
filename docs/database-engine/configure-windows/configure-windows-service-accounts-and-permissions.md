@@ -1,10 +1,13 @@
 ---
 title: "Windows 서비스 계정 및 권한 구성 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/24/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -51,17 +54,17 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: "207"
 author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+ms.author: BYHAM
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b93f57717cea30367f212020d73684a3fe55b796
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 665144f239aab08583a1444e48e851965262bf97
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 이전 버전의 SQL Server와 관련된 내용은 [Windows 서비스 계정 및 권한 구성](https://msdn.microsoft.com/en-US/library/ms143504(SQL.120).aspx)을 참조하세요.
 
 
@@ -76,9 +79,7 @@ ms.lasthandoff: 11/09/2017
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
- 
- 
-  
+
 ##  <a name="Service_Details"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 설치되는 서비스  
  사용자가 설치하도록 선택한 구성 요소에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 다음 서비스를 설치합니다.  
   
@@ -96,20 +97,24 @@ ms.lasthandoff: 11/09/2017
   
 -   **전체 텍스트 검색** - 구조화 또는 반구조화된 데이터의 내용 및 속성에 대한 전체 텍스트 인덱스를 생성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 문서 필터링 및 단어 분리를 제공합니다.  
   
--   **SQL 기록기** - 백업 및 복원 응용 프로그램이 VSS(볼륨 섀도 복사본 서비스) 프레임워크에서 작동할 수 있도록 합니다.  
+-   **SQL 기록기** - 백업 및 복원 응용 프로그램이 VSS(볼륨 섀도 복사본 서비스) 프레임워크에서 작동할 수 있도록 합니다.
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** - 여러 Distributed Replay Client 컴퓨터 간의 추적 재생 오케스트레이션을 제공합니다.  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** - [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에 대해 동시 작업을 시뮬레이션하기 위해 Distributed Replay Controller와 함께 작동하는 하나 이상의 Distributed Replay Client 컴퓨터입니다.  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 일부분으로 설치되는 R 런타임과 같이 Microsoft에서 제공하는 외부 실행 파일을 호스트하는 신뢰할 수 있는 서비스입니다. 위성 프로세스는 실행 패드 프로세스를 통해 시작할 수 있지만 해당 리소스는 개별 인스턴스의 구성에 따라 제어됩니다. 실행 패드 서비스는 자체 사용자 계정에서 실행되며 등록된 특정 런타임에 대한 각 위성 프로세스는 실행 패드의 사용자 계정을 상속합니다. 위성 프로세스는 실행 시간 동안 요청 시에 생성되고 소멸됩니다.  
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 일부분으로 설치되는 R 런타임과 같이 Microsoft에서 제공하는 외부 실행 파일을 호스트하는 신뢰할 수 있는 서비스입니다. 위성 프로세스는 실행 패드 프로세스를 통해 시작할 수 있지만 해당 리소스는 개별 인스턴스의 구성에 따라 제어됩니다. 실행 패드 서비스는 자체 사용자 계정에서 실행되며 등록된 특정 런타임에 대한 각 위성 프로세스는 실행 패드의 사용자 계정을 상속합니다. 위성 프로세스는 실행 시간 동안 요청 시에 생성되고 소멸됩니다.
+
+    실행 패드는 도메인 컨트롤러로도 사용되는 컴퓨터에 SQL Server를 설치하는 경우 사용하는 계정을 만들 수 없습니다. 따라서 R Services(데이터베이스 내) 또는 Machine Learning Services(데이터베이스 내)의 설치는 도메인 컨트롤러에서 실패합니다.
+
   
  - **SQL Server PolyBase 엔진** - 외부 데이터 원본에 분산 쿼리 기능을 제공합니다.
  
  - **SQL Server Polybase 데이터 이동 서비스** - PolyBase 스케일 아웃 그룹의 SQL Server와 외부 데이터 원본 간에 데이터 이동을 가능하게 합니다.
   
-##  <a name="Serv_Prop"></a> 서비스 속성 및 구성  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하고 실행하는 데 사용되는 시작 계정은 [도메인 사용자 계정](#Domain_User), [로컬 사용자 계정](#Local_User), [관리 서비스 계정](#MSA), [가상 계정](#VA_Desc)또는 [기본 제공 시스템 계정](#Local_Service)일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 서비스를 시작하고 실행하려면 설치 중에 구성된 시작 계정이 있어야 합니다.  
+##  <a name="Serv_Prop"></a> 서비스 속성 및 구성
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하고 실행하는 데 사용되는 시작 계정은 [도메인 사용자 계정](#Domain_User), [로컬 사용자 계정](#Local_User), [관리 서비스 계정](#MSA), [가상 계정](#VA_Desc)또는 [기본 제공 시스템 계정](#Local_Service)일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 서비스를 시작하고 실행하려면 설치 중에 구성된 시작 계정이 있어야 합니다.
   
  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 시작하기 위해 구성할 수 있는 계정, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 사용되는 기본값, 서비스별 SID의 개념, 시작 옵션, 방화벽 구성에 대해 설명합니다.  
   
@@ -121,10 +126,11 @@ ms.lasthandoff: 11/09/2017
   
 -   [방화벽 포트](#Firewall)  
   
-###  <a name="Default_Accts"></a> 기본 서비스 계정  
- 다음 표에서는 모든 구성 요소를 설치할 때 설치 프로그램에서 사용되는 기본 서비스 계정을 보여 줍니다. 나열된 기본 계정은 특별한 설명이 있는 경우를 제외하고는 권장되는 계정입니다.  
+###  <a name="Default_Accts"></a> 기본 서비스 계정
+
+다음 표에서는 모든 구성 요소를 설치할 때 설치 프로그램에서 사용되는 기본 서비스 계정을 보여 줍니다. 나열된 기본 계정은 특별한 설명이 있는 경우를 제외하고는 권장되는 계정입니다.
   
- **독립 실행형 서버 또는 도메인 컨트롤러**  
+ **독립 실행형 서버 또는 도메인 컨트롤러**
   
 |구성 요소|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 이상|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
@@ -144,7 +150,7 @@ ms.lasthandoff: 11/09/2017
   
  * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 대한 외부 리소스가 필요한 경우에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 권장 사항에 따라 필요한 최소 권한으로 구성된 MSA(관리 서비스 계정)를 사용하는 것이 좋습니다.  
   
- **SQL Server 장애 조치(Failover) 클러스터 인스턴스**  
+ **SQL Server 장애 조치(Failover) 클러스터 인스턴스**
   
 |구성 요소|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2|  
 |---------------|------------------------------------|---------------------------------------|  
@@ -156,8 +162,8 @@ ms.lasthandoff: 11/09/2017
 |전체 텍스트 검색 FD 표시 아이콘|[로컬 서비스](#Local_Service)|[가상 계정](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저|[로컬 서비스](#Local_Service)|[로컬 서비스](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[로컬 시스템](#Local_System)|[로컬 시스템](#Local_System)|  
-  
-####  <a name="Changing_Accounts"></a> 계정 속성 변경  
+
+####  <a name="Changing_Accounts"></a> 계정 속성 변경
   
 > [!IMPORTANT]  
 >  -   항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 사용되는 계정을 변경하거나 계정의 암호를 변경할 수 있습니다. 계정 이름을 변경하는 것 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 서비스 마스터 키를 보호하는 Windows 로컬 보안 저장소 업데이트와 같은 추가 구성을 수행합니다. Windows 서비스 제어 관리자와 같은 다른 도구를 사용하면 계정 이름을 변경할 수 있지만 모든 필수 설정을 변경할 수 없습니다.  
@@ -206,8 +212,9 @@ ms.lasthandoff: 11/09/2017
   
  **보안 정보:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 가능하다면 [MSA](#MSA) 또는 [virtual account](#VA_Desc) 을 사용하세요. MSA 및 가상 계정을 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 공유 계정 대신 권한이 낮은 특정 사용자 계정 또는 도메인 계정을 사용하십시오. 서로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해서는 각각 별도의 계정을 사용하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 서비스 그룹에 추가 권한을 부여하지 마세요. 권한은 그룹 멤버 자격을 통해 부여되거나 서비스 SID에 직접 부여됩니다(서비스 SID가 지원되는 경우).  
   
-###  <a name="Auto_Start"></a> 자동 시작  
- 모든 서비스에는 사용자 계정 외에 다음과 같이 사용자가 제어할 수 있는 3가지 시작 상태가 있습니다.  
+###  <a name="Auto_Start"></a> 자동 시작
+
+모든 서비스에는 사용자 계정 외에 다음과 같이 사용자가 제어할 수 있는 3가지 시작 상태가 있습니다.
   
 -   **사용 안 함** 서비스가 설치되어 있지만 현재 실행되지 않습니다.  
   
@@ -217,8 +224,9 @@ ms.lasthandoff: 11/09/2017
   
  설치하는 동안 시작 상태가 선택됩니다. 명명된 인스턴스를 설치할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 자동으로 시작되도록 설정해야 합니다.  
   
-###  <a name="Configure_services"></a> 무인 설치 중 서비스 구성  
- 다음 표에서는 설치 중에 구성할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 보여 줍니다. 무인 설치의 경우 구성 파일 또는 명령 프롬프트에서 스위치를 사용할 수 있습니다.  
+###  <a name="Configure_services"></a> 무인 설치 중 서비스 구성
+
+다음 표에서는 설치 중에 구성할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 보여 줍니다. 무인 설치의 경우 구성 파일 또는 명령 프롬프트에서 스위치를 사용할 수 있습니다.  
   
 |SQL Server 서비스 이름|무인 설치용 스위치*|  
 |-----------------------------|---------------------------------------------|  
@@ -229,18 +237,22 @@ ms.lasthandoff: 11/09/2017
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS|
+|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS***|
 |PolyBase 엔진| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  *무인 설치에 대한 자세한 내용과 샘플 구문은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
- ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 인스턴스에서 사용할 수 없습니다.  
+ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 인스턴스에서 사용할 수 없습니다.
+
+ ***스위치를 통한 실행 패드에 대한 계정 설정은 현재 지원되지 않습니다. SQL Server 구성 관리자를 사용하여 계정 및 다른 서비스 설정을 변경합니다.
+
+###  <a name="Firewall"></a> 방화벽 포트
+
+대부분의 경우 처음 설치할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 동일한 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 도구를 사용하여 연결할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 Windows 방화벽의 포트를 열지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 TCP 포트에서 수신 대기하도록 구성하고 Windows 방화벽에서 적합한 연결 포트를 열지 않으면 다른 컴퓨터에서 연결할 수 없습니다. 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
-###  <a name="Firewall"></a> 방화벽 포트  
- 대부분의 경우 처음 설치할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 동일한 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 도구를 사용하여 연결할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 Windows 방화벽의 포트를 열지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 TCP 포트에서 수신 대기하도록 구성하고 Windows 방화벽에서 적합한 연결 포트를 열지 않으면 다른 컴퓨터에서 연결할 수 없습니다. 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
-  
-##  <a name="Serv_Perm"></a> 서비스 권한  
- 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 서비스별 SID에 대해 구성하는 사용 권한에 대해 설명합니다.  
+##  <a name="Serv_Perm"></a> 서비스 권한
+
+이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 서비스별 SID에 대해 구성하는 사용 권한에 대해 설명합니다.  
   
 -   [서비스 구성 및 액세스 제어](#Serv_SID)  
   
@@ -260,27 +272,28 @@ ms.lasthandoff: 11/09/2017
   
 -   [명명된 파이프](#Pipes)  
   
-###  <a name="Serv_SID"></a> 서비스 구성 및 액세스 제어  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 대한 서비스 SID는 **NT Service\MSSQL$***\<InstanceName>*일 수 있습니다. 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.  
+###  <a name="Serv_SID"></a> 서비스 구성 및 액세스 제어
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 대한 서비스 SID는 **NT Service\MSSQL$***\<InstanceName>*일 수 있습니다. 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.
   
 > [!NOTE]  
->  Windows 7 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2(이후 버전)에서 서비스별 SID는 서비스에서 사용되는 가상 계정일 수 있습니다.  
+>  Windows 7 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2(이후 버전)에서 서비스별 SID는 서비스에서 사용되는 가상 계정일 수 있습니다.
   
- 대부분의 구성 요소에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서비스별 계정에 대한 ACL을 직접 구성하므로 리소스 ACL 프로세스를 반복할 필요 없이 서비스 계정 변경을 수행할 수 있습니다.  
+ 대부분의 구성 요소에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서비스별 계정에 대한 ACL을 직접 구성하므로 리소스 ACL 프로세스를 반복할 필요 없이 서비스 계정 변경을 수행할 수 있습니다.
   
- [!INCLUDE[ssAS](../../includes/ssas-md.md)]를 설치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스에 대한 서비스별 SID가 만들어집니다. 로컬 Windows 그룹은 **SQLServerMSASUser$***computer_name***$***instance_name*형식의 이름으로 만들어집니다. 서비스별 SID **NT SERVICE\MSSQLServerOLAPService** 에 로컬 Windows 그룹의 멤버 자격이 부여되고 로컬 Windows 그룹에는 ACL의 적합한 권한이 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스를 시작하는 데 사용된 계정이 변경된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가 일부 Windows 사용 권한(예: 서비스로 로그온 권한 등)을 변경해야 하지만 로컬 Windows 그룹에 부여된 사용 권한은 서비스별 SID가 변경되지 않았기 때문에 업데이트 없이도 계속 사용할 수 있습니다. 이 방식에 따라 업그레이드 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 이름을 바꿀 수 있습니다.  
+ [!INCLUDE[ssAS](../../includes/ssas-md.md)]를 설치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스에 대한 서비스별 SID가 만들어집니다. 로컬 Windows 그룹은 **SQLServerMSASUser$***computer_name***$***instance_name*형식의 이름으로 만들어집니다. 서비스별 SID **NT SERVICE\MSSQLServerOLAPService** 에 로컬 Windows 그룹의 멤버 자격이 부여되고 로컬 Windows 그룹에는 ACL의 적합한 권한이 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스를 시작하는 데 사용된 계정이 변경된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가 일부 Windows 사용 권한(예: 서비스로 로그온 권한 등)을 변경해야 하지만 로컬 Windows 그룹에 부여된 사용 권한은 서비스별 SID가 변경되지 않았기 때문에 업데이트 없이도 계속 사용할 수 있습니다. 이 방식에 따라 업그레이드 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 이름을 바꿀 수 있습니다.
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에 대한 로컬 Windows 그룹을 만듭니다. 이러한 서비스에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 로컬 Windows 그룹에 대한 ACL을 구성합니다.  
   
- 서비스 구성에 따라 설치 또는 업그레이드 중 서비스 또는 서비스 SID에 대한 서비스 계정이 서비스 그룹의 멤버로 추가됩니다.  
+ 서비스 구성에 따라 설치 또는 업그레이드 중 서비스 또는 서비스 SID에 대한 서비스 계정이 서비스 그룹의 멤버로 추가됩니다.
   
 ###  <a name="Windows"></a> Windows 사용 권한 및 권한  
- 서비스를 시작하도록 할당된 계정은 해당 서비스에 대해 **시작, 중지 및 일시 중지 권한** 이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이를 자동으로 할당합니다.  먼저 RSAT(원격 서버 관리 도구)를 설치하세요. [Windows 7 원격 서버 관리 도구](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)를 참조하세요.  
+ 서비스를 시작하도록 할당된 계정은 해당 서비스에 대해 **시작, 중지 및 일시 중지 권한** 이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이를 자동으로 할당합니다.  먼저 RSAT(원격 서버 관리 도구)를 설치하세요. [Windows 7 원격 서버 관리 도구](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)를 참조하세요.
   
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용된 서비스별 SID 또는 Windows 그룹에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 요청하는 사용 권한을 보여 줍니다.  
+ 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용된 서비스별 SID 또는 Windows 그룹에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 요청하는 사용 권한을 보여 줍니다.
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 부여된 사용 권한|  
-|---------------------------------------|------------------------------------------------------------|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 부여된 사용 권한|
+|---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT SERVICE\MSSQL$**InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** \*<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$***ComputerName***$***PowerPivot*)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)<br /><br /> **메모리의 페이지 잠금** (SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
@@ -388,7 +401,8 @@ ms.lasthandoff: 11/09/2017
  데이터베이스 파일이 사용자 정의 위치에 저장된 경우 해당 위치에 대한 서비스별 SID 액세스 권한을 부여해야 합니다. 서비스별 SID에 파일 시스템 권한 부여에 대한 자세한 내용은 [데이터베이스 엔진 액세스에 대한 파일 시스템 사용 권한 구성](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)을 참조하세요.  
   
 ###  <a name="File_System_Other"></a> 다른 Windows 사용자 계정 또는 그룹에 부여된 파일 시스템 권한  
- 기본 제공 계정 또는 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 일부 액세스 제어 권한을 부여해야 할 수도 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 설정하는 추가 ACL을 보여 줍니다.  
+
+기본 제공 계정 또는 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 일부 액세스 제어 권한을 부여해야 할 수도 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 설정하는 추가 ACL을 보여 줍니다.  
   
 |요구 구성 요소|계정|리소스|사용 권한|  
 |--------------------------|-------------|--------------|-----------------|  
@@ -414,7 +428,8 @@ ms.lasthandoff: 11/09/2017
  *WMI 공급자 네임스페이스입니다.  
   
 ###  <a name="Unusual_Locations"></a> 비정상적인 디스크 위치와 관련된 파일 시스템 권한  
- 설치 위치에 대한 기본 드라이브는 일반적으로 C 드라이브인 **시스템 드라이브**입니다. tempdb 또는 사용자 데이터베이스는 다음과 같은 드라이브에 설치됩니다.  
+
+설치 위치에 대한 기본 드라이브는 일반적으로 C 드라이브인 **시스템 드라이브**입니다. 이 섹션은 tempdb 또는 사용자 데이터베이스가 비정상적인 위치에 설치되었을 때 추가 고려 사항을 설명합니다.  
   
  **기본이 아닌 드라이브**  
   
@@ -428,7 +443,8 @@ ms.lasthandoff: 11/09/2017
 >  가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. *<domain_name>***\\***<computer_name>***$** 형식으로 시스템 계정을 프로비전합니다.  
   
 ###  <a name="Review_additional_considerations"></a> 추가 고려 사항 검토  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에서 추가 기능을 제공하는 데 필요한 권한을 보여 줍니다.  
+
+다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에서 추가 기능을 제공하는 데 필요한 권한을 보여 줍니다.  
   
 |서비스/응용 프로그램|기능|필요한 권한|  
 |--------------------------|-------------------|-------------------------|  
@@ -458,7 +474,8 @@ ms.lasthandoff: 11/09/2017
 -   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\Instance Names\RS] "InstanceName"="MSRSSQL13"**  
   
 ###  <a name="WMI"></a> WMI  
- WMI(Windows Management Instrumentation)에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결할 수 있어야 합니다. 이를 지원하기 위해 Windows WMI 공급자의 서비스별 SID(**NT SERVICE\winmgmt**)가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 프로비전됩니다.  
+
+WMI(Windows Management Instrumentation)에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결할 수 있어야 합니다. 이를 지원하기 위해 Windows WMI 공급자의 서비스별 SID(**NT SERVICE\winmgmt**)가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 프로비전됩니다.  
   
  SQL WMI 공급자에는 다음과 같은 사용 권한이 필요합니다.  
   
@@ -473,7 +490,8 @@ ms.lasthandoff: 11/09/2017
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 SQL WMI 네임스페이스를 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 SID에 읽기 권한을 부여합니다.  
   
 ###  <a name="Pipes"></a> 명명된 파이프  
- 모든 설치에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 로컬 명명된 파이프인 공유 메모리 프로토콜을 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 대한 액세스 권한을 제공합니다.  
+
+모든 설치에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 로컬 명명된 파이프인 공유 메모리 프로토콜을 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 대한 액세스 권한을 제공합니다.  
   
 ##  <a name="Provisioning"></a> 프로비전  
  이 섹션에서는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 내에서 계정이 프로비전되는 방법에 대해 설명합니다.  

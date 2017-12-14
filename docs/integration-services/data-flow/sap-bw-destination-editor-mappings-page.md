@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 대상 편집기 (매핑 페이지) | Microsoft Docs"
+title: "SAP BW 대상 편집기(매핑 페이지) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwdestination.columns.f1
+f1_keywords: sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 245ff83f84ff1a60a08f4a73d24ee76179b31e2b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 285474f7ac773bef181487099409bc4c2e93dfc8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 대상 편집기(매핑 페이지)
   **SAP BW 대상 편집기** 의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
@@ -81,16 +78,15 @@ ms.lasthandoff: 08/03/2017
  **입력 열**  
  선택한 입력 열을 표시합니다.  
   
- 다른 입력 열을 동일한 대상 열에 매핑하려면 목록에서 다른 입력 열을 선택합니다. 매핑을 제거 하려면 선택  **\<무시 >** 출력에서 입력된 열을 제외 합니다.  
+ 다른 입력 열을 동일한 대상 열에 매핑하려면 목록에서 다른 입력 열을 선택합니다. 매핑을 제거하려면 **\<무시>**를 선택하여 해당 입력 열을 출력에서 제외합니다.  
   
  **대상 열**  
  열의 매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SAP BW 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [SAP BW 대상 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [SAP BW 대상 편집기 &#40; 고급 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 대상 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [SAP BW 대상 편집기&#40;고급 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

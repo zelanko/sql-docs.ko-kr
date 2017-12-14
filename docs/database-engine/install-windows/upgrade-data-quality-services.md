@@ -2,11 +2,12 @@
 title: "Data Quality Services 업그레이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bc1b70a3c4707976539d13222b088bd744e2d436
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services 업그레이드
-이 항목에서는 기존 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] DQS(Data Quality Services) 설치를 업그레이드하는 방법에 대해 설명합니다. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality 서버를 업그레이드할 때 DQS 데이터베이스 스키마도 업그레이드해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 기존 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] DQS(Data Quality Services) 설치를 업그레이드하는 방법에 대해 설명합니다. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality 서버를 업그레이드할 때 DQS 데이터베이스 스키마도 업그레이드해야 합니다.  
   
 > [!IMPORTANT]  
 >  -   스키마 업그레이드 중에 데이터 손실을 방지하기 위해 DQS를 업그레이드하기 전에 DQS 데이터베이스를 백업해야 합니다. DQS 데이터베이스 백업에 대한 자세한 내용은 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)을 참조하십시오.  

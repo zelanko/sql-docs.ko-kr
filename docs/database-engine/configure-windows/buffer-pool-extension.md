@@ -2,9 +2,12 @@
 title: "버퍼 풀 확장 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9bd32bd87a5cc458e1054555b8616db78957e27f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 63567e05218f3b5a042ef4d2aa41c9aa358433de
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="buffer-pool-extension"></a>버퍼 풀 확장
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 도입된 버퍼 풀 확장은 I/O 처리량을 크게 향상하기 위해 비휘발성 RAM(즉, 반도체 드라이브) 확장을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다. 버퍼 풀 확장은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 제공됩니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 도입된 버퍼 풀 확장은 I/O 처리량을 크게 향상하기 위해 비휘발성 RAM(즉, 반도체 드라이브) 확장을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다. 버퍼 풀 확장은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 제공됩니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>버퍼 풀 확장의 이점  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 주 목적은 데이터 저장 및 검색이므로 데이터베이스 엔진의 핵심 특성은 집중형 디스크 I/O입니다. 디스크 I/O 작업은 많은 리소스를 소비하며 완료하는 데 비교적 오랜 시간이 걸리므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 I/O의 효율성을 높이는 데 주안점을 둡니다. 버퍼 풀은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 주 메모리 할당 원본으로 사용됩니다. 버퍼 관리는 이러한 효율성을 얻기 위한 핵심 구성 요소입니다. 버퍼 관리 구성 요소는 데이터베이스 페이지에 액세스하고 업데이트하기 위한 버퍼 관리자와 데이터베이스 파일 I/O를 줄이기 위한 버퍼 풀의 두 가지 메커니즘으로 구성되어 있습니다.  

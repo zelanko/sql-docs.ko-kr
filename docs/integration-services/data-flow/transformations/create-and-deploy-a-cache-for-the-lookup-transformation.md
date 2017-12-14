@@ -1,5 +1,5 @@
 ---
-title: "캐시 만들기 및 배포는 조회 변환에 대 한 | Microsoft Docs"
+title: "조회 변환에 대한 캐시 만들기 및 배포 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b859cc7f282c2e1ef5ed095ee8c7326cb7dcf382
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>조회 변환에 대한 캐시 만들기 및 배포
   조회 변환에 대한 캐시 파일(.caw)을 만들고 배포할 수 있습니다. 참조 데이터 집합은 캐시 파일에 저장됩니다.  
@@ -94,12 +92,11 @@ ms.lasthandoff: 08/03/2017
   
 4.  배치 유틸리티를 만들도록 프로젝트를 구성한 다음 프로젝트를 빌드합니다. 자세한 내용은 [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)를 참조하세요.  
   
-     매니페스트 파일인 \< *프로젝트 이름을*> 합니다. X m l 프로젝트, 패키지 및 패키지 구성에 기타 파일을 나열 하는 생성 됩니다.  
+     매니페스트 파일인 \<*프로젝트 이름*>.SSISDeploymentManifest.xml이 만들어집니다. 이 파일은 프로젝트, 패키지 및 패키지 구성에 기타 파일을 나열합니다.  
   
 5.  파일 시스템에 패키지를 배포합니다. 자세한 내용은 [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [배포 유틸리티 만들기](../../../integration-services/packages/create-a-deployment-utility.md)  
+ [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   
-

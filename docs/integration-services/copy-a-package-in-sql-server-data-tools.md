@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - regenerating package GUID
 - updating package properties
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 59a001e0aa360183e5e393faedc613cfabda0f02
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8f75a2f7d59a1c0fff49179020f37420f24149ed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 복사
   이 항목에서는 기존 패키지를 복사하여 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만드는 방법과 새 패키지의 **Name** 및 **GUID** 속성을 업데이트하는 방법에 대해 설명합니다.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  복사할 패키지를 솔루션 탐색기에서 선택했는지 또는 패키지가 포함된 SSIS 디자이너의 탭이 활성 상태인지 확인합니다.  
   
-4.  에 **파일** 메뉴를 클릭 하 여 **저장 \<패키지 이름 >으로**합니다.  
+4.  **파일** 메뉴에서 **다른 이름으로 \<패지키 이름> 저장**을 클릭합니다.  
   
     > [!NOTE]  
     >  SSIS 디자이너에서 패키지를 열어야 **파일** 메뉴에 **다른 이름으로 저장** 옵션이 표시됩니다.  
@@ -56,14 +54,13 @@ ms.lasthandoff: 08/03/2017
   
 9. 필요에 따라 **제어 흐름** 탭의 배경을 클릭하고 **속성**을 클릭합니다.  
   
-10. 속성 창에서 ID 속성을 선택한 다음 드롭다운 목록에서 값을 클릭  **\<새 ID 만들기 >**합니다.  
+10. 속성 창에서 ID 속성 값을 클릭한 다음 드롭다운 목록에서 **\<새 ID 만들기>**를 클릭합니다.  
   
 11. **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 새 패키지를 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [패키지의 복사본 저장](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
  [SQL Server Data Tools에서 패키지 만들기](../integration-services/create-packages-in-sql-server-data-tools.md)   
- [Integration Services &#40; Ssis&#41; 패키지](../integration-services/integration-services-ssis-packages.md)  
+ [Integration Services&#40;SSIS&#41; 패키지](../integration-services/integration-services-ssis-packages.md)  
   
   
-

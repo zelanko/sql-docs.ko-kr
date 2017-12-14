@@ -1,5 +1,5 @@
 ---
-title: "변경 데이터 캡처 Designer for Oracle by Attunity | Microsoft Docs"
+title: Attunity Oracle CDC Designer | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- desCons
+f1_keywords: desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dd65ef848696254aa8badb47e41196106401e100
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 64cc7301033e061d85f5c39d2b3e498f6c218d8f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity Oracle에 대 한 변경 데이터 캡처 디자이너
+# <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer for Oracle by Attunity
   CDC Designer 콘솔은 Oracle CDC 인스턴스를 개발하고 유지 관리하는 데 사용됩니다. CDC Designer 콘솔은 다음 요소를 포함하는 Microsoft 관리 콘솔 스냅인입니다.  
   
 -   새 인스턴스 마법사: 이 마법사는 새 Oracle CDC 인스턴스를 만듭니다. 새 인스턴스 마법사를 사용하는 방법은 [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)을 참조하십시오.  
@@ -50,21 +47,20 @@ ms.lasthandoff: 08/03/2017
   
 -   [Oracle CDC 데이터베이스](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Designer for Oracle by Attunity F1 도움말 참조](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Attunity Oracle CDC Designer F1 도움말 참조](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
--   [Designer for Oracle by Attunity 방법 가이드](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
+-   [Attunity Oracle CDC Designer 방법 가이드](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+-   [인스턴스를 만들기 위한 SQL Server 연결](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
 -   [고급 연결 속성](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   
--   [스크립트 실행을 위한 oracle 자격 증명](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+-   [스크립트 실행을 위한 Oracle 자격 증명](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
 -   [Oracle 보완 로깅 스크립트](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
   
 -   [CDC 인스턴스 배포 스크립트](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [SQL Server 연결 CDC 디자이너에 필요한 권한](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [SQL Server 연결을 위해 CDC Designer에 대해 필요한 권한](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c4c5abcb4e12074bc1f0c23d404d0e4c2d69c732
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC 원본 사용자 지정 속성
   다음 표에서는 ODBC 원본의 사용자 지정 속성을 설명합니다. 모든 속성은 SSIS 속성 식에서 설정할 수 있습니다.  
@@ -45,8 +43,7 @@ ms.lasthandoff: 08/03/2017
 ||||  
   
 ## <a name="see-also"></a>관련 항목:  
- [ODBC 원본](../../integration-services/data-flow/odbc-source.md)   
- [ODBC 원본 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+ [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
+ [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   
-

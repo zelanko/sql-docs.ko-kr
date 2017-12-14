@@ -1,5 +1,5 @@
 ---
-title: "CDC Designer 콘솔에서 CDC Service를 관리 하는 방법 | Microsoft Docs"
+title: "CDC Designer 콘솔에서 CDC Service를 관리하는 방법 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d160c771e78e05622bb86fc61f16088f8d76e04f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC Designer 콘솔에서 CDC Service를 관리하는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC Service를 관리하는 방법에 대해 설명합니다.  
@@ -51,4 +49,3 @@ ms.lasthandoff: 08/03/2017
  다른 CDC Service 태스크는 CDC Service 구성 콘솔을 사용하여 수행합니다. 서비스 구성 콘솔에서 수행할 수 있는 태스크에 대한 자세한 내용은 서비스 구성 콘솔에 포함된 온라인 도움말을 참조하십시오.  
   
   
-

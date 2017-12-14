@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 대상 편집기 (오류 출력 페이지) | Microsoft Docs"
+title: "SAP BW 대상 편집기(오류 출력 페이지) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwdestination.erroroutput.f1
+f1_keywords: sql13.dts.designer.sapbwdestination.erroroutput.f1
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1b243b6fae68be78e20bbb87a18c16cb78d24f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: de016a81587a3e3e593a697492b3defa553874da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 대상 편집기(오류 출력 페이지)
   **SAP BW 대상 편집기** 의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
@@ -70,10 +67,9 @@ ms.lasthandoff: 08/03/2017
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SAP BW 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [SAP BW 대상 편집기 &#40; 매핑 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [SAP BW 대상 편집기 &#40; 고급 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 대상 편집기&#40;매핑 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 대상 편집기&#40;고급 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

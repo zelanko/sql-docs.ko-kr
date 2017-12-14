@@ -2,11 +2,12 @@
 title: "Analysis Services 업그레이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +26,14 @@ caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services 업그레이드
-  Analysis Services 인스턴스는 [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)에서 설명한 대로 현재 릴리스에 도입된 기능을 활용하기 위해 동일한 서버 모드의 SQL Server 버전으로 업그레이드할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Analysis Services 인스턴스는 [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)에서 설명한 대로 현재 릴리스에 도입된 기능을 활용하기 위해 동일한 서버 모드의 SQL Server 버전으로 업그레이드할 수 있습니다.  
   
  동일한 하드웨어에서 실행 중인 다른 인스턴스와 독립적으로 각 인스턴스 내부를 업그레이드할 수 있습니다. 그러나 대부분의 관리자는 프로덕션 작업을 새 서버로 전송하기 전에 응용 프로그램 테스트에 대한 새 버전의 새 인스턴스를 설치하도록 선택합니다. 하지만 개발 또는 테스트 서버의 경우 내부 업그레이드가 더 편리할 수 있습니다.  
   

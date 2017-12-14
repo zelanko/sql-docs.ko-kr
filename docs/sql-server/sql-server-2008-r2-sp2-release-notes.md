@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2008 R2 SP2 릴리스 정보 | Microsoft 문서"
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,14 +20,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9a25b50719f315fc9b6ab4683cdb4a75f13d266
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 274eacb496ce91ca2171c467e9265acad5ce4b79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-이 릴리스 정보 문서에서는 Microsoft SQL Server 2008 R2 서비스 팩 2를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 SQL Server 2008 R2 SP2의 모든 버전에 적용되며 온라인으로만 볼 수 있습니다. 문서는 주기적으로 업데이트됩니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 릴리스 정보 문서에서는 Microsoft SQL Server 2008 R2 서비스 팩 2를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 SQL Server 2008 R2 SP2의 모든 버전에 적용되며 온라인으로만 볼 수 있습니다. 문서는 주기적으로 업데이트됩니다.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 서비스 팩 2의 새로운 기능  
 DMV(동적 관리 뷰) **sys.dm_db_stats_properties**. 이 DMV를 사용하여 지정된 테이블 또는 현재 데이터베이스에 있는 인덱싱된 뷰에 대한 통계 속성을 반환할 수 있습니다. 예를 들어, 이 DMV는 샘플링된 행 수와 히스토그램에 있는 단계 수를 반환합니다.  

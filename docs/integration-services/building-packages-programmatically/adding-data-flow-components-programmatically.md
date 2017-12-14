@@ -1,5 +1,5 @@
 ---
-title: "데이터 흐름 구성 요소를 프로그래밍 방식으로 추가 | Microsoft Docs"
+title: "프로그래밍 방식으로 데이터 흐름 구성 요소 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,30 +20,29 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 8bd642d31e0a6a813b239935f3fb091003b682fc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cef868a3eef5413777e8bd05101311931df9e191
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 추가
-  데이터 흐름을 작성할 때는 먼저 구성 요소를 추가합니다. 그런 다음 해당 구성 요소를 구성하고 서로 연결하여 런타임에 데이터의 흐름을 구성합니다. 이 섹션에서는 데이터 흐름 태스크에 구성 요소를 추가하고 해당 구성 요소의 디자인 타임 인스턴스를 만든 다음 구성 요소를 구성하는 방법을 설명합니다. 구성 요소를 연결 하는 방법에 대 한 정보를 참조 하십시오. [연결 데이터 흐름 구성 요소 프로그래밍 방식으로](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)합니다.  
+  데이터 흐름을 작성할 때는 먼저 구성 요소를 추가합니다. 그런 다음 해당 구성 요소를 구성하고 서로 연결하여 런타임에 데이터의 흐름을 구성합니다. 이 섹션에서는 데이터 흐름 태스크에 구성 요소를 추가하고 해당 구성 요소의 디자인 타임 인스턴스를 만든 다음 구성 요소를 구성하는 방법을 설명합니다. 구성 요소를 연결하는 방법에 대한 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)을 참조하세요.  
   
 ## <a name="adding-a-component"></a>구성 요소 추가  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaDataCollection100.New%2A> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.ComponentMetaDataCollection%2A> 메서드를 호출하여 새 구성 요소를 만들고 이를 데이터 흐름 태스크에 추가할 수 있습니다. 이 메서드는 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스를 반환합니다. 하지만 이 시점에서 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>에는 구성 요소와 관련된 정보가 들어 있지 않습니다. 구성 요소의 형식을 식별하려면 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 속성을 설정합니다. 데이터 흐름 태스크에서는 런타임에 이 속성 값을 사용하여 구성 요소의 인스턴스를 만듭니다.  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 속성에 지정된 값은 CLSID, PROGID 또는 구성 요소의 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> 속성일 수 있습니다. CLSID는 일반적으로 속성 창에서 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 속성 값으로 표시됩니다. 이 속성 및 기타 사용 가능한 구성 요소 속성을 가져오는 방법은 참조 하십시오. [검색 데이터 흐름 구성 요소 프로그래밍 방식으로](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)합니다.  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 속성에 지정된 값은 CLSID, PROGID 또는 구성 요소의 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> 속성일 수 있습니다. CLSID는 일반적으로 속성 창에서 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 속성 값으로 표시됩니다. 이 속성과 사용 가능한 구성 요소의 다른 속성을 가져오는 방법은 [프로그래밍 방식으로 데이터 흐름 구성 요소 검색](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)을 참조하세요.  
   
 ## <a name="adding-a-managed-component"></a>관리되는 구성 요소 추가  
- CLSID나 PROGID는 구성 요소 자체가 아니라 래퍼를 가리키므로 이러한 값을 사용하여 데이터 흐름에 관리되는 데이터 흐름 구성 요소를 추가할 수는 없습니다. 대신 사용할 수 있습니다는 **CreationName** 속성 또는 **AssemblyQualifiedName** 속성은 다음 예에서 같이 합니다.  
+ CLSID나 PROGID는 구성 요소 자체가 아니라 래퍼를 가리키므로 이러한 값을 사용하여 데이터 흐름에 관리되는 데이터 흐름 구성 요소를 추가할 수는 없습니다. 대신 다음 예제에 표시된 대로 **CreationName** 속성이나 **AssemblyQualifiedName** 속성을 사용할 수 있습니다.  
   
- 사용 하려는 경우는 **AssemblyQualifiedName** 속성을 다음에 대 한 참조를 추가 해야 프로그램 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 관리 되는 구성 요소를 포함 하는 어셈블리에 대 한 프로젝트입니다. 이러한 어셈블리는.NET 탭에 표시 되지 않습니다는 **참조 추가** 대화 상자. 에 어셈블리를 찾는 찾아보기 해야 하는 일반적으로 **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** 폴더입니다.  
+ **AssemblyQualifiedName** 속성을 사용하려면 관리되는 구성 요소가 들어 있는 어셈블리에 대한 참조를 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트에 추가해야 합니다. 이러한 어셈블리는 **참조 추가** 대화 상자의 .NET 탭에 표시되지 않습니다. 일반적으로 **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** 폴더의 어셈블리를 찾도록 이동해야 합니다.  
   
  기본 제공되는 관리되는 데이터 흐름 구성 요소에는 다음이 포함됩니다.  
   
@@ -55,7 +52,7 @@ ms.lasthandoff: 08/03/2017
   
 -   DataReader 대상  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 대상  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 대상  
   
 -   스크립트 구성 요소  
   
@@ -145,7 +142,7 @@ End Module
  가능하면 항상 구성 요소 메타데이터를 직접 수정하는 대신 디자인 타임 인스턴스의 메서드를 사용하여 구성 요소를 수정해야 합니다. 메타데이터에는 연결과 같이 직접 설정해야 하는 항목도 있지만 일반적으로 메타데이터를 직접 수정할 경우에는 구성 요소의 변경 내용 모니터링 및 유효성 검사 기능을 사용할 수 없으므로 이 방법은 권장되지 않습니다.  
   
 ## <a name="assigning-connections"></a>연결 할당  
- OLE DB 원본 구성 요소와 같은 일부 구성 요소에서는 외부 데이터에 연결해야 하며 이 용도로 패키지의 기존 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용합니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 속성은 구성 요소에 필요한 런타임 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체의 수를 나타냅니다. 이 수가 0보다 크면 해당 구성 요소에는 연결이 필요합니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A>에 있는 첫 번째 연결의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 속성을 지정하면 패키지의 연결 관리자를 구성 요소에 할당할 수 있습니다. 런타임 연결 컬렉션에서 연결 관리자의 이름을 패키지에서 연결 managerreferenced의 이름과 일치 해야 하는 참고 합니다.  
+ OLE DB 원본 구성 요소와 같은 일부 구성 요소에서는 외부 데이터에 연결해야 하며 이 용도로 패키지의 기존 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용합니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 속성은 구성 요소에 필요한 런타임 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체의 수를 나타냅니다. 이 수가 0보다 크면 해당 구성 요소에는 연결이 필요합니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A>에 있는 첫 번째 연결의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 속성을 지정하면 패키지의 연결 관리자를 구성 요소에 할당할 수 있습니다. 런타임 연결 컬렉션에 있는 연결 관리자의 이름은 패키지에서 참조하는 연결 관리자의 이름과 일치해야 합니다.  
   
 ## <a name="setting-the-values-of-custom-properties"></a>사용자 지정 속성 값 설정  
  구성 요소의 디자인 타임 인스턴스를 만든 후에는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A> 메서드를 호출합니다. 이 메서드는 사용자 지정 속성과 입력 및 출력 개체를 만들어 새로 만든 구성 요소를 초기화하므로 생성자와 비슷합니다. 한 구성 요소에 대해 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A>를 두 번 이상 호출하면 구성 요소가 다시 설정되고 이전의 메타데이터 수정 내용을 잃을 수 있으므로 이 메서드는 한 번만 호출해야 합니다.  
@@ -158,7 +155,7 @@ End Module
  원본 구성 요소의 출력에 있는 열을 초기화하려면 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> 메서드를 호출합니다. 구성 요소에서는 외부 데이터 원본에 자동으로 연결하지 않으므로 구성 요소에서 외부 데이터 원본에 액세스하고 해당 열 메타데이터를 채울 수 있도록 하려면 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> 메서드를 호출해야 합니다. 마지막으로 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A> 메서드를 호출하여 연결을 해제합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- 추가 구성 요소를 구성 하는 후 다음 단계에서에서 설명 하는 항목, 구성 요소 간의 경로를 만드는 것 [는 경로 간의 두 구성 요소를 만드는](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)합니다.  
+ 구성 요소를 추가하고 구성한 다음에는 구성 요소 간의 경로를 만들어야 합니다. 이 단계에 대한 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md) 항목에서 설명합니다.  
   
 ## <a name="sample"></a>예제  
  다음 코드 예제에서는 데이터 흐름 태스크에 OLE DB 원본 구성 요소를 추가하고 해당 구성 요소의 디자인 타임 인스턴스를 만든 다음 구성 요소의 속성을 구성합니다. 이 예에는 Microsoft.SqlServer.DTSRuntimeWrap 어셈블리에 대한 참조가 필요합니다.  
@@ -290,10 +287,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>외부 리소스  
- 블로그 항목- [EzAPI – SQL Server 2012에 대 한 업데이트](http://go.microsoft.com/fwlink/?LinkId=243223), blogs.msdn.com에서 합니다.  
+ blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](http://go.microsoft.com/fwlink/?LinkId=243223)  
 
 ## <a name="see-also"></a>관련 항목:  
- [데이터 흐름 구성 요소를 프로그래밍 방식으로 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
+ [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   
-

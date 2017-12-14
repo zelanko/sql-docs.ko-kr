@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hadoopfiletask.f1
+f1_keywords: sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e86c35bf891b0e83a74c6e9b7cd30295b5e52d5f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9cc77b27b5e2b53b8790cdbd99324166f4ca659
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 파일 시스템 태스크
   Hadoop 파일 시스템 태스크에서는 SSIS 패키지가 Hadoop 클러스터에서/클러스터로/클러스터 내에서 파일을 복사할 수 있습니다.  
@@ -52,4 +49,3 @@ ms.lasthandoff: 08/03/2017
  [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)  
   
   
-

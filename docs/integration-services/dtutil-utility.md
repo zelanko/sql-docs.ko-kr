@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 114
+caps.latest.revision: "114"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 15315ffd796662bb814060c62bc0fb3872c9190a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7a5cf2737ac465c5d216a0d9a27a3c3e6e5836e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dtutil-utility"></a>dtutil 유틸리티
   **dtutil** 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리합니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 이러한 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 저장소 유형은 **/SQL**, **/FILE**및 **/DTS** 옵션으로 식별됩니다.  
@@ -70,18 +68,18 @@ ms.lasthandoff: 08/03/2017
   
  64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 64비트 버전의 **dtexec** 유틸리티(dtexec.exe) 및 **dtutil** 유틸리티(dtutil.exe)를 설치합니다. 이러한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 도구의 32비트 버전을 설치하려면 설치 도중 클라이언트 도구 또는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 선택해야 합니다.  
   
- 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. (일반적으로 32 비트 디렉터리 경로  *\<드라이브 >*: 파일 (x86) \Microsoft SQL Server\130\DTS\Binn, 64 비트 디렉터리 경로 \Program  *\<드라이브 >*: files\microsoft SQL Server\130\DTS\Binn입니다.)  
+ 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. (일반적으로 32비트 디렉터리 경로는 *\<drive>*:\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn이고, 64비트 디렉터리 경로는 *\<drive>*:\Program Files\Microsoft SQL Server\130\DTS\Binn입니다.)  
   
 > [!NOTE]  
 >  SQL Server 에이전트를 사용하여 유틸리티를 실행하는 경우 SQL Server 에이전트는 64비트 버전의 유틸리티를 자동으로 사용합니다. SQL Server 에이전트는 PATH 환경 변수가 아닌 레지스트리를 사용하여 유틸리티에 대한 올바른 실행 파일을 찾습니다.  
   
  명령 프롬프트에서 64비트 버전의 유틸리티를 실행하기 위해 다음 동작 중 하나를 수행할 수 있습니다.  
   
--   명령 프롬프트 창을 열고 64 비트 버전의 유틸리티가 포함 된 디렉터리로 변경, *(\<드라이브 >*: files\microsoft SQL Server\130\DTS\Binn), 다음 해당 위치에서 유틸리티를 실행 합니다.  
+-   명령 프롬프트 창을 열고 64비트 버전의 유틸리티가 포함되어 있는 디렉터리(*\<drive>*:\Program Files\Microsoft SQL Server\130\DTS\Binn)로 변경한 다음 해당 위치에서 유틸리티를 실행합니다.  
   
--   전체 경로 입력 하 여 명령 프롬프트 유틸리티를 실행 (*\<드라이브 >*: files\microsoft SQL Server\130\DTS\Binn) 64 비트 버전의 유틸리티에 있습니다.  
+-   명령 프롬프트에서 64비트 버전의 유틸리티에 대한 전체 경로(*\<drive>*:\Program Files\Microsoft SQL Server\130\DTS\Binn)를 입력하여 유틸리티를 실행합니다.  
   
--   64 비트 경로 배치 하 여 PATH 환경 변수에서의 경로 순서를 영구적으로 변경 (*\<드라이브 >*: files\microsoft SQL Server\130\DTS\Binn) 앞의 32 비트 경로 (*\<드라이브 >*: \ \ 프로그램 파일 (x86) \Microsoft SQL Server\130\DTS\Binn) 변수에 합니다.  
+-   변수에서 32비트 경로(*\<drive>*:\Program Files\Microsoft SQL Server\130\DTS\Binn) 앞에 64비트 경로(*\<drive>*:\ Program Files(x86)\Microsoft SQL Server\130\DTS\Binn)를 배치하여 PATH 환경 변수에서의 경로 순서를 영구적으로 변경합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -100,7 +98,7 @@ dtutil /option [value] [/option [value]]...
 |/DestP[assword] *password*|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 대상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하기 위해 SQL 옵션에 사용할 암호를 지정합니다. *DESTPASSWORD* 옵션이 포함되지 않은 명령줄에서 *DTSUSER* 를 지정하면 오류가 생성됩니다.<br /><br /> 참고: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].|  
 |/DestS[erver] *server_instance*|대상이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 저장되도록 하는 모든 동작에 사용할 서버 이름을 지정합니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 저장할 때 로컬 서버나 기본 서버가 아닌 서버를 식별하는 데 사용됩니다. *와 관련된 동작이 없는 명령줄에서* DESTSERVER [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 지정하면 오류가 발생합니다. 이 옵션과 조합하여 사용할 수 있는 적합한 명령에는 *SIGN SQL*, *COPY SQL*또는 *MOVE SQL* 옵션과 같은 동작이 있습니다.<br /><br /> 서버 이름에 백슬래시 및 인스턴스 이름을 추가하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 이름을 지정할 수 있습니다.|  
 |/DestU[ser] *username*|*인증을 사용하는*인스턴스에 연결하기 위해 *SIGN SQL*, *COPY SQL* 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] MOVE SQL [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 옵션에 사용할 사용자 이름을 지정합니다. *DESTUSER* , *SIGN SQL*또는 *COPY SQL*옵션이 포함되지 않은 명령줄에서 *MOVE SQL* 를 지정하면 오류가 발생합니다.|  
-|/Dump *process ID*|선택 사항이며, 이 옵션을 선택할 경우 지정된 프로세스 **dtexec** 유틸리티 또는 **dtsDebugHost.exe** 프로세스가 일시 중지되고 디버그 덤프 파일 .mdmp 및 .tmp가 만들어집니다.<br /><br /> 참고: **/Dump**옵션을 사용하려면 디버그 프로그램 사용자 권한(SeDebugPrivilege)을 할당받아야 합니다.<br /><br /> 일시 중지할 프로세스의 *process ID* 를 찾으려면 Windows 작업 관리자를 사용합니다.<br /><br /> 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 폴더에서 디버그 덤프 파일을 저장  *\<드라이브 >*: files\microsoft SQL Server\130\Shared\ErrorDumps 합니다.<br /><br /> **dtexec** 유틸리티 **dtsDebugHost.exe** 프로세스에 대한 자세한 내용은 [dtexec Utility](../integration-services/packages/dtexec-utility.md) 및 [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)을 참조하십시오.<br /><br /> 디버그 덤프 파일에 대한 자세한 내용은 [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하십시오.<br /><br /> 참고: 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. ACL(액세스 제어 목록)을 사용하여 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다.|  
+|/Dump *process ID*|선택 사항이며, 이 옵션을 선택할 경우 지정된 프로세스 **dtexec** 유틸리티 또는 **dtsDebugHost.exe** 프로세스가 일시 중지되고 디버그 덤프 파일 .mdmp 및 .tmp가 만들어집니다.<br /><br /> 참고: **/Dump**옵션을 사용하려면 디버그 프로그램 사용자 권한(SeDebugPrivilege)을 할당받아야 합니다.<br /><br /> 일시 중지할 프로세스의 *process ID* 를 찾으려면 Windows 작업 관리자를 사용합니다.<br /><br /> 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 디버그 덤프 파일을 *\<drive>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps 폴더에 저장합니다.<br /><br /> **dtexec** 유틸리티 **dtsDebugHost.exe** 프로세스에 대한 자세한 내용은 [dtexec Utility](../integration-services/packages/dtexec-utility.md) 및 [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)을 참조하십시오.<br /><br /> 디버그 덤프 파일에 대한 자세한 내용은 [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하십시오.<br /><br /> 참고: 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. ACL(액세스 제어 목록)을 사용하여 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다.|  
 |/DT[S] *filespec*|사용할 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지가 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 있음을 지정합니다. *filespec* 인수는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 루트에서 시작하는 폴더 경로를 포함해야 합니다. 기본적으로 구성 파일에서 루트 폴더의 이름은 "MSDB" 및 "File System"입니다. 공백이 포함된 경로는 큰따옴표를 사용하여 구분해야 합니다.<br /><br /> 다음 옵션을 지정한 것과 동일한 명령줄에서 DT[S] 옵션을 지정하면 DTEXEC_DTEXECERROR가 반환됩니다.<br /><br /> **FILE**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
 |/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|선택 사항입니다. 로드된 패키지를 지정된 보호 수준과 암호를 사용하여 암호화하고 *Path*에 지정된 위치에 저장합니다. *ProtectionLevel* 은 암호가 필요한지 여부를 결정합니다.<br /><br /> *SQL* - 경로는 대상 패키지 이름입니다.<br /><br /> *FILE* - 경로는 패키지의 정규화된 경로 및 파일 이름입니다.<br /><br /> *DTS* - 현재 이 옵션은 지원되지 않습니다.<br /><br /> *ProtectionLevel* 옵션:<br /><br /> 수준 0: 중요한 정보를 따로 암호화하지 않습니다.<br /><br /> 수준 1: 로컬 사용자 자격 증명을 사용하여 중요한 정보를 암호화합니다.<br /><br /> 수준 2: 필수 암호를 사용하여 중요한 정보를 암호화합니다.<br /><br /> 수준 3: 필수 암호를 사용하여 패키지를 암호화합니다.<br /><br /> 수준 4: 로컬 사용자 자격 증명을 사용하여 패키지를 암호화합니다.<br /><br /> 수준 5: 패키지에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 저장소 암호화를 사용합니다.|  
 |/Ex[ists]|선택 사항입니다. 패키지가 있는지 여부를 확인하는 데 사용됩니다. **dtutil** 은 *SQL*, *DTS* 또는 *FILE* 옵션을 사용하여 지정된 패키지를 찾으려고 시도합니다. **dtutil**에서 지정된 패키지를 찾지 못할 경우 DTEXEC_DTEXECERROR가 반환됩니다.|  
@@ -284,4 +282,3 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [Integration Services(SSIS) 패키지 실행](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
-
