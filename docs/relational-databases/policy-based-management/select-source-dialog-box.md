@@ -2,9 +2,12 @@
 title: "원본 선택 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b6c950ffee0e282194659b3640abad24617f519
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1dba73f7bbfa6cb1ffee7d24a9f283e29e4649b0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-source-dialog-box"></a>원본 선택 대화 상자
-  이 대화 상자를 사용하여 실행할 정책의 원본을 선택할 수 있습니다. 정책이 포함된 하나 이상의 XML 파일을 선택하려면 **파일**을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 있는 정책을 실행하려면 **서버**를 선택합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 실행할 정책의 원본을 선택할 수 있습니다. 정책이 포함된 하나 이상의 XML 파일을 선택하려면 **파일**을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 있는 정책을 실행하려면 **서버**를 선택합니다.  
   
  이 대화 상자는 여러 가지 방법으로 열 수 있습니다.  
   

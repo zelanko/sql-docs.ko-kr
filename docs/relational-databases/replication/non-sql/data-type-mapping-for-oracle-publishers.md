@@ -2,9 +2,12 @@
 title: "Oracle 게시자에 대한 데이터 형식 매핑 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d692a102043f78c7c62674843bed4228445ba7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c754c1796f76236b5efeda3f53bb785c8daf76f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
-  Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
   
  다음 표에서는 Oracle 게시자에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자로 데이터 이동 시 Oracle과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간에 데이터 형식이 기본적으로 매핑되는 방법을 보여 줍니다. 대체 형식 열은 대체 매핑을 사용할 수 있는지 여부를 나타냅니다.  
   

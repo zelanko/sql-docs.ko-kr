@@ -2,9 +2,12 @@
 title: "여러 행의 데이터를 처리하기 위한 DML 트리거 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 55a772a063a33749af39f43d6a070bfdf8216796
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9b20cb4324e252d3de3c15ceb67e5f6ac7b1dd4e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
-  DML 트리거 코드를 작성할 때는 트리거를 실행시키는 단일 문이 여러 행의 데이터에 영향을 줄 수 있다는 점을 고려해야 합니다. 이 동작은 여러 행에 영향을 줄 수 있는 UPDATE 및 DELETE 트리거의 경우에 일반적입니다. 기본 INSERT 문은 한 행만 추가하기 때문에 INSERT 트리거의 경우에는 일반적이지 않습니다. 그러나 INSERT INTO (*table_name*) SELECT 문으로 INSERT 트리거를 실행할 수 있기 때문에 여러 행을 삽입하는 경우 단일 트리거를 호출할 수도 있습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] DML 트리거 코드를 작성할 때는 트리거를 실행시키는 단일 문이 여러 행의 데이터에 영향을 줄 수 있다는 점을 고려해야 합니다. 이 동작은 여러 행에 영향을 줄 수 있는 UPDATE 및 DELETE 트리거의 경우에 일반적입니다. 기본 INSERT 문은 한 행만 추가하기 때문에 INSERT 트리거의 경우에는 일반적이지 않습니다. 그러나 INSERT INTO (*table_name*) SELECT 문으로 INSERT 트리거를 실행할 수 있기 때문에 여러 행을 삽입하는 경우 단일 트리거를 호출할 수도 있습니다.  
   
  DML 트리거 함수가 한 테이블의 요약 값을 자동으로 다시 계산하여 계속 계산하기 위해 그 결과를 다른 테이블에 저장하는 경우 특히 다중 행을 고려해야 합니다.  
   

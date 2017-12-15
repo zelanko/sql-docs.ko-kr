@@ -2,9 +2,12 @@
 title: "TSQL 디버거를 실행하기 전에 방화벽 규칙 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 43a0926518f6a5f1f8751389db274f27c9da6993
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 072d92452d554a439ab05010d62f5fcf624f2c4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>Transact-SQL 디버거 구성  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 서버 쪽 구성 요소와 클라이언트 쪽 구성 요소를 모두 포함합니다. 서버 쪽 디버거 구성 요소는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2(서비스 팩 2) 이상의 각 데이터베이스 엔진 인스턴스와 함께 설치됩니다. 클라이언트 쪽 디버거 구성 요소는 다음과 같은 경우에 설치됩니다.  

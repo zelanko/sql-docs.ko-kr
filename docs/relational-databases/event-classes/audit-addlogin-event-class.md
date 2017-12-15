@@ -2,9 +2,12 @@
 title: "Audit Addlogin 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc3d44794da0bd73739c168e1d4e340773141ffc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c4c6d06152cd2d13da39aa2e7da0688d856a0dea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 이벤트 클래스
-  **Audit Addlogin** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가되거나 제거될 때 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Addlogin** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가되거나 제거될 때 발생합니다.  
   
  로그인이 추가될 때 기본 데이터베이스 같은 추가 속성을 설정하면 이러한 속성에 대한 정보가 이 이벤트의 **TextData** 열에 나타나게 됩니다. 로그인을 추가하는 동안 이러한 속성을 설정하면 **Audit Login Change Property 이벤트** 가 발생합니다.  
   

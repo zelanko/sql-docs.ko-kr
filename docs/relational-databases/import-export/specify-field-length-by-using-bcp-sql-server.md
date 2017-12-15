@@ -2,9 +2,12 @@
 title: "bcp를 사용하여 필드 길이 지정(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 213f03b9f8b3fe55daa28dbc131067fca581aa31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp를 사용하여 필드 길이 지정(SQL Server)
-  필드 길이는 데이터를 문자 형식으로 표시하는 데 필요한 최대 문자 수를 나타냅니다. 데이터가 네이티브 형식으로 저장된 경우에는 필드 길이를 쉽게 알 수 있습니다. 예를 들어 **int** 데이터 형식의 길이는 4바이트입니다. 접두사 길이로 0을 지정한 경우 **bcp** 명령을 사용하면 필드 길이, 기본 필드 길이, **char** 데이터가 포함된 데이터 파일에서 필드 길이가 데이터 저장소에 미치는 영향을 입력해야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 필드 길이는 데이터를 문자 형식으로 표시하는 데 필요한 최대 문자 수를 나타냅니다. 데이터가 네이티브 형식으로 저장된 경우에는 필드 길이를 쉽게 알 수 있습니다. 예를 들어 **int** 데이터 형식의 길이는 4바이트입니다. 접두사 길이로 0을 지정한 경우 **bcp** 명령을 사용하면 필드 길이, 기본 필드 길이, **char** 데이터가 포함된 데이터 파일에서 필드 길이가 데이터 저장소에 미치는 영향을 입력해야 합니다.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>필드 길이에 대한 bcp 프롬프트  
  대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 포함된 경우 서식 파일 스위치(**-f**) 또는 데이터 형식 스위치(**-n**, **-c**, **-w**또는 **-N**)가 없으면 다음과 같이 각 데이터 필드의 필드 길이를 지정하라는 메시지가 표시됩니다.  

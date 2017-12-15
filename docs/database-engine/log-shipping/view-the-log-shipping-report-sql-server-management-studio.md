@@ -2,9 +2,12 @@
 title: "로그 전달 보고서 보기(SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81bbc3925d2330f7578e31854d8024377ae1fac8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: de1ec0766f78a6008f0f0fabcae9870e5f67c762
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>로그 전달 보고서 보기(SQL Server Management Studio)
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 트랜잭션 로그 전달 상태 보고서를 보는 방법을 설명합니다. 모니터 서버, 주 서버 또는 보조 서버에서 상태 보고서를 실행할 수 있습니다. 로그 전달 구성에 대해 가장 완전한 정보를 보려면 모니터 서버 인스턴스에서 보고서를 보십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 트랜잭션 로그 전달 상태 보고서를 보는 방법을 설명합니다. 모니터 서버, 주 서버 또는 보조 서버에서 상태 보고서를 실행할 수 있습니다. 로그 전달 구성에 대해 가장 완전한 정보를 보려면 모니터 서버 인스턴스에서 보고서를 보십시오.  
   
  이 보고서에는 모든 로그 전달 작업의 상태가 표시됩니다. 상태는 연결된 서버 인스턴스에서 제공됩니다. 한 데이터베이스에 대해서는 모니터 서버 역할을 하고 다른 데이터베이스에 대해서는 보조 서버 역할을 하는 등 서버 인스턴스가 다양한 역할로 여러 가지 구성과 관련되어 있으면 각 역할과 연관된 모든 구성 정보가 결과에 표시됩니다. 저장 프로시저가 특정한 로그 전달 구성을 위해 모니터 서버 인스턴스에 연결할 수 있으면 보고서에 해당 구성의 추가 상태가 표시됩니다.  
   

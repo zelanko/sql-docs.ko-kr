@@ -1,6 +1,8 @@
 
 # [SQL Server 도구 및 유틸리티 개요](../tools/overview-sql-tools.md)
-# [새로 추가되거나 최근에 업데이트된 문서](new-updated-tools.md)
+# [새로운 또는 업데이트 된 문서](new-updated-tools.md)
+
+# [SQL Operations Studio(미리 보기)](../sql-operations-studio/what-is.md)
 
 # [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)
 

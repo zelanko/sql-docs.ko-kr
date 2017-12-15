@@ -2,9 +2,12 @@
 title: "게시 및 아티클 속성 변경 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5afcb14260648ba416360d26e94466e730b13c64
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d43da2c0314c2b724a7d5b04db3a56ff5ceb664f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
-  게시 생성 후 대부분의 게시 및 아티클 속성을 변경할 수 있지만 일부 속성을 변경하려면 스냅숏을 다시 생성하거나 구독을 다시 초기화해야 합니다. 이 항목에서는 변경 시 이러한 두 가지 동작 중 하나 또는 모두가 필요한 모든 속성에 대한 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 게시 생성 후 대부분의 게시 및 아티클 속성을 변경할 수 있지만 일부 속성을 변경하려면 스냅숏을 다시 생성하거나 구독을 다시 초기화해야 합니다. 이 항목에서는 변경 시 이러한 두 가지 동작 중 하나 또는 모두가 필요한 모든 속성에 대한 정보를 제공합니다.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제에 대한 게시 속성  
   

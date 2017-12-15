@@ -2,9 +2,12 @@
 title: "Audit Schema Object Access 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 50f501d1b1bb707d7fdbd74cd80189164a204023
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8e461161f2d54a96802f6a062de0866a1ae9a18e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access 이벤트 클래스
-  **Audit Schema Object Access** 이벤트 클래스는 SELECT 등의 개체 사용 권한이 사용되는 경우에 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Schema Object Access** 이벤트 클래스는 SELECT 등의 개체 사용 권한이 사용되는 경우에 발생합니다.  
   
 ## <a name="audit-schema-object-access-event-class-data-columns"></a>Audit Schema Object Access 이벤트 클래스 데이터 열  
   

@@ -2,9 +2,12 @@
 title: "OLEDB DataRead 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 475009bfb14dfdca4cd7ab9eed1decfa8b747e3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cf914267c6cd1e859d7f2ab5fed7c02895f879e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead 이벤트 클래스
-  OLEDB DataRead 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 분산 쿼리 및 원격 저장 프로시저 실행을 위해 OLE DB 공급자를 호출할 때 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 언제 OLE DB 공급자에 데이터 요청 호출을 하는지 모니터링하는 추적에 이 이벤트 클래스를 포함시키십시오.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] OLEDB DataRead 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 분산 쿼리 및 원격 저장 프로시저 실행을 위해 OLE DB 공급자를 호출할 때 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 언제 OLE DB 공급자에 데이터 요청 호출을 하는지 모니터링하는 추적에 이 이벤트 클래스를 포함시키십시오.  
   
  OLEDB DataRead 클래스가 추적에 포함되면 발생하는 오버헤드의 양이 늘어납니다. 따라서 짧은 시간 동안 특정 문제를 모니터링하는 추적에 대해 이 이벤트 클래스의 사용을 제한하는 것이 좋습니다.  
   

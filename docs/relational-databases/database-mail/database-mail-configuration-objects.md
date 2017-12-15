@@ -2,9 +2,12 @@
 title: "데이터베이스 메일 구성 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -36,14 +39,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ac7e0e7080ac55f1c871499b7c43b8e0a3d0d3d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8664182f87bb5f276b3fde4b8b0d1d60c01bd8ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-mail-configuration-objects"></a>데이터베이스 메일 구성 개체
-  데이터베이스 메일에는 두 가지 구성 개체가 있습니다. 데이터베이스 구성 개체를 사용하면 데이터베이스 응용 프로그램 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 전자 메일을 보낼 때 데이터베이스 모델에서 사용할 설정을 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 메일에는 두 가지 구성 개체가 있습니다. 데이터베이스 구성 개체를 사용하면 데이터베이스 응용 프로그램 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 전자 메일을 보낼 때 데이터베이스 모델에서 사용할 설정을 구성할 수 있습니다.  
   
 -   데이터베이스 메일 계정  
   

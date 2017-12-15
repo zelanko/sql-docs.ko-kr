@@ -2,9 +2,12 @@
 title: "Transact-SQL의 OLE 자동화 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7946a30f2d87cbbee4dd1f71e7fac192469052f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 45a3d8533f8f56d0cf2f143780b86f9bd68e8707
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL의 OLE 자동화 개체
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 트리거를 통해 OLE 자동화 개체를 참조할 수 있도록 하는 몇 가지 시스템 저장 프로시저가 포함됩니다. 이러한 시스템 저장 프로시저는 확장 저장 프로시저처럼 실행되며 저장 프로시저를 통해 실행되는 OLE 자동화 개체는 확장 저장 프로시저와 같은 방식으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 주소 공간에서 실행됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 트리거를 통해 OLE 자동화 개체를 참조할 수 있도록 하는 몇 가지 시스템 저장 프로시저가 포함됩니다. 이러한 시스템 저장 프로시저는 확장 저장 프로시저처럼 실행되며 저장 프로시저를 통해 실행되는 OLE 자동화 개체는 확장 저장 프로시저와 같은 방식으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 주소 공간에서 실행됩니다.  
   
  OLE 자동화 저장 프로시저를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에서 **IDispatch** 인터페이스를 제공하는 개체와 같은 사용자 지정 OLE 자동화 개체와 SQL-DMO 개체를 참조할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 를 사용하여 만들어진 사용자 지정 종속 프로세스 OLE 서버에는 **On Error GoTo** 및 **On Error GoTo** 서브루틴에 대한 오류 처리기( **On Error GoTo** 문으로 지정)가 있어야 합니다. **Class_Initialize** 및 **Class_Terminate** 서브루틴의 오류가 처리되지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 액세스 위반과 같은 예상치 못한 오류가 발생할 수 있습니다. 또한 다른 서브루틴에 대한 오류 처리기도 권장됩니다.  
   

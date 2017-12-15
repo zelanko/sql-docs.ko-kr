@@ -2,9 +2,12 @@
 title: "2단원: 계층적 테이블의 데이터 만들기 및 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 36428e80f9a3b6378bc9d95c20eae0fbf64a9218
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9c72f77d11dbc52f29d503b03624e2d3503cc616
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>2단원: 계층적 테이블의 데이터 만들기 및 관리
-1단원에서는 **hierarchyid** 데이터 형식을 사용하여 기존 테이블을 수정한 다음 기존 데이터 표현으로 **hierarchyid** 열을 채웠습니다. 이 단원에서는 계층 메서드를 사용하여 새 테이블에 처음부터 데이터를 삽입합니다. 그런 다음 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 1단원에서는 **hierarchyid** 데이터 형식을 사용하여 기존 테이블을 수정한 다음 기존 데이터 표현으로 **hierarchyid** 열을 채웠습니다. 이 단원에서는 계층 메서드를 사용하여 새 테이블에 처음부터 데이터를 삽입합니다. 그런 다음 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다.  
   
 이 단원에서는 다음 항목을 다룹니다.  
   

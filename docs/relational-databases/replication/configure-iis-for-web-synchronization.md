@@ -2,9 +2,12 @@
 title: "웹 동기화를 위한 IIS 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e5c661e39ca7e011e185b68867be5955e2cfc280
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
-  이 항목의 절차는 병합 복제를 위해 웹 동기화를 구성하는 두 번째 단계입니다. 게시를 웹 동기화용으로 설정한 다음 이 단계를 수행합니다. 구성 프로세스에 대한 개요는 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하십시오. 이 항목의 절차를 완료한 다음에는 구독이 웹 동기화를 사용하도록 구성하는 세 번째 단계를 이어서 수행합니다. 세 번째 단계는 다음 항목에서 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목의 절차는 병합 복제를 위해 웹 동기화를 구성하는 두 번째 단계입니다. 게시를 웹 동기화용으로 설정한 다음 이 단계를 수행합니다. 구성 프로세스에 대한 개요는 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하십시오. 이 항목의 절차를 완료한 다음에는 구독이 웹 동기화를 사용하도록 구성하는 세 번째 단계를 이어서 수행합니다. 세 번째 단계는 다음 항목에서 설명합니다.  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [방법: 구독에서 웹 동기화를 사용하도록 구성\(SQL Server Management Studio)\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   

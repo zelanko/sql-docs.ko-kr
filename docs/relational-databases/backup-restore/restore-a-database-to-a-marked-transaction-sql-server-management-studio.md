@@ -2,9 +2,12 @@
 title: "데이터베이스를 표시된 트랜잭션으로 복원(SQL Server Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7753a99c8e02a66b95509fd8124976a484490c48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: de1f189ac1868be1e2e4bcdbd49d9966a1f94dfb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>데이터베이스를 표시된 트랜잭션으로 복원(SQL Server Management Studio)
-  데이터베이스가 복원 상태인 경우 **트랜잭션 로그 복원** 대화 상자를 사용하여 사용 가능한 로그 백업에서 데이터베이스를 표시된 트랜잭션으로 복원할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스가 복원 상태인 경우 **트랜잭션 로그 복원** 대화 상자를 사용하여 사용 가능한 로그 백업에서 데이터베이스를 표시된 트랜잭션으로 복원할 수 있습니다.  
   
 > [!NOTE]  
 >  자세한 내용은 [표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) 및 [표시된 트랜잭션을 포함하는 관련 데이터베이스 복구](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)를 참조하세요.  

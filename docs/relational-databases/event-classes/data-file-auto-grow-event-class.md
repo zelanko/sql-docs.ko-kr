@@ -2,9 +2,12 @@
 title: "Data File Auto Grow 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2b2de5dae7a9c00ecc2e51b1c277da7f0181822
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4db8b0d9d12f763f78fb530d3bc914190cc907ae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow 이벤트 클래스
-  **Data File Auto Grow** 이벤트 클래스는 데이터 파일 크기가 자동으로 증가했음을 나타냅니다. 데이터 파일이 ALTER DATABASE 문을 통해 명시적으로 증가하는 경우에는 이 이벤트가 트리거되지 않습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Data File Auto Grow** 이벤트 클래스는 데이터 파일 크기가 자동으로 증가했음을 나타냅니다. 데이터 파일이 ALTER DATABASE 문을 통해 명시적으로 증가하는 경우에는 이 이벤트가 트리거되지 않습니다.  
   
  데이터 파일의 증가를 모니터링하는 추적에 **Data File Auto Grow** 이벤트 클래스를 포함합니다.  
   

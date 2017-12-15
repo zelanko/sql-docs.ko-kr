@@ -2,9 +2,12 @@
 title: "Transact-SQL 디버거 정보 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 디버거 - 정보
-  디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지할 때마다 여러 디버거 창을 사용하여 현재 실행 상태를 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지할 때마다 여러 디버거 창을 사용하여 현재 실행 상태를 볼 수 있습니다.  
   
 ## <a name="debugger-windows"></a>디버거 창  
  디버거 모드에서 디버거가 주 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 창 아래쪽에 두 개의 창을 엽니다. 디버거는 이 두 창에 해당 정보를 모두 표시합니다. 각 디버거 창에는 창에 표시되는 정보 집합을 제어하기 위해 선택할 수 있는 탭이 있습니다. 왼쪽 디버거 창에는 **지역**, **조사식1**, **조사식2**, **조사식3**및 **조사식4** 탭이 있습니다. 오른쪽 디버거 창에는 **호출 스택**, **스레드**, **중단점**, **명령 창**및 **출력** 탭이 있습니다.  

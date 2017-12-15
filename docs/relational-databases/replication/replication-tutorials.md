@@ -2,9 +2,12 @@
 title: "복제 자습서 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 84c864082da2c0a224b8ef42cea768c677534d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 501582405c40f5688514c9ce5fbcfe06ca2952c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-tutorials"></a>복제 자습서
-복제에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 복제 토폴로지를 설정 및 실행하는 방법을 배우는 데 사용할 수 있는 자습서가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 복제 토폴로지를 설정 및 실행하는 방법을 배우는 데 사용할 수 있는 자습서가 포함되어 있습니다.  
   
 복제 자습서에서 "게시자"는 복제되고 있는 원본 데이터가 있는 서버를 가리키며 "구독자"는 대상 서버를 가리킵니다. 게시자와 구독자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 같은 인스턴스를 공유할 수 있지만 반드시 이렇게 해야 하는 것은 아닙니다. 자세한 내용은 [복제 게시 모델 개요](../../relational-databases/replication/publish/replication-publishing-model-overview.md)를 참조하세요.  
   

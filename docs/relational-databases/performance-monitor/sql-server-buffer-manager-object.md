@@ -2,9 +2,12 @@
 title: "SQL Server, Buffer Manager 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: af96b6c77c41c0e39a487218f14f4632f090ac8f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5e2ac02420b0ca701c1de5a70b54a1cedc628bec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, Buffer Manager 개체
-  **Buffer Manager** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다음 항목을 어떻게 사용하는지 모니터링하는 카운터를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Buffer Manager** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다음 항목을 어떻게 사용하는지 모니터링하는 카운터를 제공합니다.  
   
 -   데이터 페이지를 저장하기 위한 메모리  
   

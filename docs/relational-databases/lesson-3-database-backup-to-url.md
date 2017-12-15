@@ -1,10 +1,13 @@
 ---
 title: "3단원: URL에 데이터베이스 백업 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec613fcc50ceb8cf712ad4a51b543a686cdb9cfd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f63e84d8c22b5c88214cc4d85a6bebf572c41430
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-database-backup-to-url"></a>3단원: URL에 데이터베이스 백업
-이 단원에서는 온-프레미스 SQL Server 2016 인스턴스의 AdventureWorks2014 데이터베이스를 [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)에서 만든 Azure 컨테이너에 백업합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 단원에서는 온-프레미스 SQL Server 2016 인스턴스의 AdventureWorks2014 데이터베이스를 [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)에서 만든 Azure 컨테이너에 백업합니다.  
   
 > [!NOTE]  
 > SQL Server 2012 SP1 CU2 이상 데이터베이스 또는 SQL Server 2014 데이터베이스를 이 Azure 컨테이너에 백업하려는 경우 [여기](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) 에 문서화된 사용되지 않는 구문을 통해 WITH CREDENTIAL 구문을 사용하여 URL에 백업할 수 있습니다.  

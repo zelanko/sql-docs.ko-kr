@@ -2,9 +2,12 @@
 title: "OLEDB Call 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0d6544c97f10b3132e69ffbfa89023e1e1bf12c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 52b44fe50eac1dfbab29aeeebe9cc5f82107bcd5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 이벤트 클래스
-  **OLEDB Call** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB 공급자를 호출할 때 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **OLEDB Call** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB 공급자를 호출할 때 발생합니다.  
   
  **OLEDB Call** 이벤트 클래스는 데이터를 요청하지 않는 호출이나 **QueryInterface** 메서드를 사용하지 않는 호출을 모니터링 할 때만 추적에 포함시키십시오. **OLEDB Call** 이벤트 클래스를 추적에 포함할 때 발생하는 오버헤드의 정도는 추적 중 데이터베이스에 대한 OLE DB 호출의 빈도에 따라 달라집니다. 호출이 자주 발생할 경우 추적으로 인해 성능이 심각하게 저하될 수도 있습니다.  
   

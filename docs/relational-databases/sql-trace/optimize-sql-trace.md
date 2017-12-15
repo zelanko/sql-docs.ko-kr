@@ -2,9 +2,12 @@
 title: "SQL 추적 최적화 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 385a5a642b5554f42d4d40bea712bfd6181ee18b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b8994a4c12de53e82ff45dd5c587b00390a4ac0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimize-sql-trace"></a>SQL 추적 최적화
-  SQL 추적을 실행하면 데이터 수집을 위해 시스템 리소스가 사용되기 때문에 성능 비용이 발생하지만 여러 가지 방법으로 이 비용을 최소화할 수 있습니다. 추적으로 인한 성능 비용을 최적화하려면 다음을 시도하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL 추적을 실행하면 데이터 수집을 위해 시스템 리소스가 사용되기 때문에 성능 비용이 발생하지만 여러 가지 방법으로 이 비용을 최소화할 수 있습니다. 추적으로 인한 성능 비용을 최적화하려면 다음을 시도하십시오.  
   
 -   명령 프롬프트를 사용하여 추적을 실행해 봅니다. 그래픽 사용자 인터페이스를 사용하면 성능이 저하됩니다. 자세한 내용은 [sp_trace_create&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)를 참조하세요.  
   

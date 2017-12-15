@@ -2,9 +2,12 @@
 title: "계층적 데이터(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 09/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a353346cd6cf9abe094f839b1396bdadac93c7e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2127532c0e60feba9cff8f2f986260ac8179e6d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
-  기본 제공 **hierarchyid** 데이터 형식을 사용하면 계층적 데이터를 더 쉽게 저장하고 쿼리할 수 있습니다. **hierarchyid** 는 계층적 데이터의 가장 일반적인 유형인 트리를 표시하는 데 최적화되어 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 기본 제공 **hierarchyid** 데이터 형식을 사용하면 계층적 데이터를 더 쉽게 저장하고 쿼리할 수 있습니다. **hierarchyid** 는 계층적 데이터의 가장 일반적인 유형인 트리를 표시하는 데 최적화되어 있습니다.  
   
  계층적 데이터는 계층 관계를 통해 서로 관련된 데이터 항목 집합으로 정의됩니다. 계층 관계는 데이터의 한 항목이 다른 항목의 부모인 관계입니다. 데이터베이스에 일반적으로 저장되는 계층적 데이터는 다음과 같습니다.  
   

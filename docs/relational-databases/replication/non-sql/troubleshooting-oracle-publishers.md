@@ -2,9 +2,12 @@
 title: "Oracle 게시자 문제 해결 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2796e5af63fb0fcce047baab1895a4ac58a64f65
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1878b377957022e672dfec13f51e8f54e009c36b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 게시자 문제 해결
-  이 항목에서는 Oracle 게시자를 구성 및 사용할 때 발생할 수 있는 여러 가지 문제를 나열합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 Oracle 게시자를 구성 및 사용할 때 발생할 수 있는 여러 가지 문제를 나열합니다.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Oracle 클라이언트 및 네트워킹 소프트웨어와 관련된 오류가 발생했습니다.  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 배포자에서 실행되는 계정에는 Oracle 클라이언트 네트워킹 소프트웨어가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 부여되어야 합니다. 사용 권한이 부여되지 않거나 Oracle 클라이언트 구성 요소가 제대로 설치되지 않으면 다음과 같은 오류 메시지가 표시됩니다.  

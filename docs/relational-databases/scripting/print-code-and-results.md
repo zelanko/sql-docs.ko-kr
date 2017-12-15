@@ -2,9 +2,12 @@
 title: "코드 및 결과 인쇄 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 493a87b6a78fbc1918c86852999afbb9bc557be3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e90994acf92b6c2a3ba44d04ec62266f364a2dcc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="print-code-and-results"></a>코드 및 결과 인쇄
-  쿼리나 파일을 인쇄할 경우 프린터에서 컬러 인쇄를 지원하며 프린터 설정에서 컬러 인쇄가 설정된 경우 컬러 요소는 컬러로 인쇄됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리나 파일을 인쇄할 경우 프린터에서 컬러 인쇄를 지원하며 프린터 설정에서 컬러 인쇄가 설정된 경우 컬러 요소는 컬러로 인쇄됩니다.  
   
  그러나 편집기의 텍스트 글꼴 및 색과 해당 텍스트가 프린터에서 인쇄되는 방식이 다를 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**아래에서 **글꼴 및 색**을 클릭한 다음 편집기에 표시할 항목에 대한 글꼴 및 색과 인쇄 시에 적용할 글꼴 및 색을 선택합니다. 이러한 설정이 다르기 때문에 편집기에 표시된 것과 출력이 다를 수 있습니다.  
   

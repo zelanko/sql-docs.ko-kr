@@ -2,9 +2,12 @@
 title: "전체 텍스트 검색을 사용한 쿼리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bfded7d067ded1dacaffede2f36f261451cd59c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-with-full-text-search"></a>전체 텍스트 검색을 사용한 쿼리
-
-전체 텍스트 조건자 **CONTAINS** 및 **FREETEXT**와 **SELECT** 문에서 행 집합 반환 함수 **CONTAINSTABLE** 및 **FREETEXTTABLE**을 사용하여 전체 텍스트 쿼리를 작성합니다. 이 항목에서는 각 조건자 및 함수의 예제를 제공하여 최적의 사용 방법을 선택할 수 있습니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 전체 텍스트 조건자 **CONTAINS** 및 **FREETEXT**와 **SELECT** 문에서 행 집합 반환 함수 **CONTAINSTABLE** 및 **FREETEXTTABLE**을 사용하여 전체 텍스트 쿼리를 작성합니다. 이 항목에서는 각 조건자 및 함수의 예제를 제공하여 최적의 사용 방법을 선택할 수 있습니다.
 
 -   단어 및 구를 일치시키려면 **CONTAINS** 및 **CONTAINSTABLE**을 사용합니다.
 -   정확한 단어가 아닌 의미를 일치시키려면 **FREETEXT** 및 **FREETEXTTABLE**을 사용합니다.

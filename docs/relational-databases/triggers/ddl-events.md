@@ -2,9 +2,12 @@
 title: "DDL 이벤트 | Microsoft 문서"
 ms.custom: 
 ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3da22dbb1f2887bf25690ea96fd0dcfcdf3cb8a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1a9d0788789ff16b6f3fad859c13d690f87220a9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ddl-events"></a>DDL 이벤트
-  다음 표에서는 DDL 트리거 또는 이벤트 알림을 실행하는 데 사용할 수 있는 DDL 이벤트를 나열합니다. 각 이벤트는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 저장 프로시저에 해당하며 키워드 사이에 밑줄(_)을 포함하도록 문 구문이 수정됩니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 다음 표에서는 DDL 트리거 또는 이벤트 알림을 실행하는 데 사용할 수 있는 DDL 이벤트를 나열합니다. 각 이벤트는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 저장 프로시저에 해당하며 키워드 사이에 밑줄(_)을 포함하도록 문 구문이 수정됩니다.  
   
 > [!IMPORTANT]  
 >  DDL과 같은 작업을 수행하는 시스템 저장 프로시저에서 DDL 트리거 및 이벤트 알림이 발생할 수도 있습니다. DDL 트리거와 이벤트 알림을 테스트하여 실행된 시스템 저장 프로시저에 대한 응답을 확인하십시오. 예를 들어 CREATE TYPE 문과 **sp_addtype** 저장 프로시저를 사용하면 CREATE_TYPE 이벤트에서 생성되는 DDL 트리거 또는 이벤트 알림이 발생합니다.  

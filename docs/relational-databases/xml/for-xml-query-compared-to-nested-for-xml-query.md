@@ -2,9 +2,12 @@
 title: "FOR XML 쿼리와 중첩 FOR XML 쿼리 비교 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 26e2fb52bc52ff9f00fb70f20385533104cb8924
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c58715813c4369258d5244e517e2e1753a9046c7
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 쿼리와 중첩 FOR XML 쿼리 비교
-  이 항목에서는 단일 수준 FOR XML 쿼리를 중첩 FOR XML 쿼리와 비교합니다. 중첩 FOR XML 쿼리를 사용할 때의 이점 중 하나는 쿼리 결과에 특성 중심 및 요소 중심의 XML을 조합하여 지정할 수 있다는 점입니다. 다음 예에서는 이러한 이점을 보여 줍니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목에서는 단일 수준 FOR XML 쿼리를 중첩 FOR XML 쿼리와 비교합니다. 중첩 FOR XML 쿼리를 사용할 때의 이점 중 하나는 쿼리 결과에 특성 중심 및 요소 중심의 XML을 조합하여 지정할 수 있다는 점입니다. 다음 예에서는 이러한 이점을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
  다음 `SELECT` 쿼리는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 제품 범주와 하위 범주 정보를 검색합니다. 쿼리에는 중첩 FOR XML이 없습니다.  

@@ -2,9 +2,12 @@
 title: "&lt;AgentName&gt; 에이전트 보안 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 659d4902e802f91b7086ee982798554d7e52c828
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aa977bc32f0b033032c837c3a8eda36635e8da61
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;AgentName&gt; 에이전트 보안
-  **\<AgentName> 에이전트 보안** 페이지를 사용하여 배포 에이전트(트랜잭션 및 스냅숏 복제의 경우) 또는 병합 에이전트(병합 복제의 경우)를 실행하고 복제 토폴로지의 컴퓨터에 연결하는 계정을 지정할 수 있습니다. 에이전트에 필요한 사용 권한 및 복제 보안을 위한 최선의 구현 방법은 [Replication Agent Security Model(복제 에이전트 보안 모델)](../../relational-databases/replication/security/replication-agent-security-model.md) 및 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)(복제 보안 모범 사례)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **\<AgentName> 에이전트 보안** 페이지를 사용하여 배포 에이전트(트랜잭션 및 스냅숏 복제의 경우) 또는 병합 에이전트(병합 복제의 경우)를 실행하고 복제 토폴로지의 컴퓨터에 연결하는 계정을 지정할 수 있습니다. 에이전트에 필요한 사용 권한 및 복제 보안을 위한 최선의 구현 방법은 [Replication Agent Security Model(복제 에이전트 보안 모델)](../../relational-databases/replication/security/replication-agent-security-model.md) 및 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)(복제 보안 모범 사례)를 참조하세요.  
   
 ## <a name="options"></a>옵션  
  각 구독자에 대한 행의 속성 단추 (**...**)를 클릭하여 **배포 에이전트 보안** 또는 **병합 에이전트 보안** 대화 상자에 액세스합니다. 해당 에이전트에서 사용하는 계정에 필요한 사용 권한에 대한 자세한 내용을 보려면 대화 상자에서 **도움말** 을 클릭합니다.  

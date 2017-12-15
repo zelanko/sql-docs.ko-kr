@@ -2,9 +2,12 @@
 title: "Broker:Corrupted Message 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec1e4e2b0f1375221ac2ffba5e180da7aa7d6ff7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6d580eb7c2e4dcde3a7d063d4f0e5bf0a292d555
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 이벤트 클래스
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Service Broker가 손상된 메시지를 수신할 때 **Broker:Corrupted Message** 이벤트를 발생시킵니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Service Broker가 손상된 메시지를 수신할 때 **Broker:Corrupted Message** 이벤트를 발생시킵니다.  
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Broker:Corrupted Message 이벤트 클래스 데이터 열  
   

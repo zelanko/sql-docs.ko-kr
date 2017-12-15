@@ -2,9 +2,12 @@
 title: "SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d65ee56f4f18237ee9289dade6ebe5698ba77f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ad1a28975d20c9fbf47e5788ef30e8d897c0c4a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 **bcp** 를 사용하면 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-V [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]스위치를 통해 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , **또는** 에서 원시 및 문자 형식 데이터를 가져올 수 있습니다. **-V[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스위치를 사용하면** 에서 지정된 이전 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 데이터 형식이 사용되며, 데이터 파일 형식은 해당 이전 버전의 형식과 동일합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 **bcp**를 사용하면 **-V** 스위치를 통해 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 원시 및 문자 형식 데이터를 가져올 수 있습니다. **-V[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스위치를 사용하면** 에서 지정된 이전 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 데이터 형식이 사용되며, 데이터 파일 형식은 해당 이전 버전의 형식과 동일합니다.  
   
  데이터 파일에 대해 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 지정하려면 다음 한정자 중 하나와 함께 **-V** 스위치를 사용합니다.  
   

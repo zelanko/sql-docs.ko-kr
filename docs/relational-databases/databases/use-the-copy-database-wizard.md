@@ -2,9 +2,12 @@
 title: "데이터베이스 복사 마법사 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7e53c91fb8462fb26fd5a94e20c7a6ba7e2f54d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
-데이터베이스 복사 마법사는 서버 가동을 중지시키지 않고 데이터베이스 및 특정 서버 개체를 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 다른 인스턴스로 이동하거나 복사합니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 복사 마법사는 서버 가동을 중지시키지 않고 데이터베이스 및 특정 서버 개체를 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 다른 인스턴스로 이동하거나 복사합니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다. 
   
 -   원본 서버 및 대상 서버 선택  
   

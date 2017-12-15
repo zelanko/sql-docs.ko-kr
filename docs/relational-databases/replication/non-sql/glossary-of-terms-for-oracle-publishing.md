@@ -2,9 +2,12 @@
 title: "Oracle 게시를 위한 용어 설명 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b0a29acf37c9e6508b244c531a4f7bb6a048b39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cd8bced4b90589b56f5aa64c67efd842af68aba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 게시를 위한 용어 설명
-  Oracle 게시를 구성 및 관리할 때 다음 Oracle 용어에 익숙해야 합니다. 전체 Oracle 용어 목록은 Oracle 온라인 설명서를 참조하십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oracle 게시를 구성 및 관리할 때 다음 Oracle 용어에 익숙해야 합니다. 전체 Oracle 용어 목록은 Oracle 온라인 설명서를 참조하십시오.  
   
  IOT(인덱스 구성 테이블)  
  인덱스 순서대로 데이터가 물리적으로 디스크에 저장되는 테이블로, 클러스터형 인덱스가 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블과 유사합니다. IOT는 클러스터형 인덱스가 있는 테이블로 구독자에 복제됩니다.  

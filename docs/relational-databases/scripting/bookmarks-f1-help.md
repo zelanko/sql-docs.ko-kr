@@ -2,9 +2,12 @@
 title: "책갈피 F1 도움말 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bad8557480b7991751ea9a7fa616743884551570
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c9adc6d51a5594868fedd941d7e74596179f69e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bookmarks-f1-help"></a>책갈피 F1 도움말
-  이 섹션에서는 **의** 책갈피 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]페이지에 대한 F1 도움말을 제공합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **책갈피** 페이지에 대한 F1 도움말을 제공합니다.  
   
  [책갈피 관리](../../relational-databases/scripting/manage-bookmarks.md)  
   

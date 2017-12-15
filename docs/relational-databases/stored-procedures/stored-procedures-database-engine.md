@@ -2,9 +2,12 @@
 title: "저장 프로시저(데이터베이스 엔진) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44d4e3c81bdf4e6bfb7f4dea74047dba6e9f4efd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd0517fa69865cd3a4d3180071be0551606a5090
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stored-procedures-database-engine"></a>저장 프로시저(데이터베이스 엔진)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 저장 프로시저는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹이거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 메서드에 대한 참조입니다. 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 구문과 유사합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 저장 프로시저는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹이거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 메서드에 대한 참조입니다. 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 구문과 유사합니다.  
   
 -   입력 매개 변수를 받아 여러 값을 출력 매개 변수의 형태로 호출하는 프로그램에 반환합니다.  
   

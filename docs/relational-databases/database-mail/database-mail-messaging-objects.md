@@ -2,9 +2,12 @@
 title: "데이터베이스 메일 메시징 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09a2cf5e1516b6783ae82226766919ce32391f57
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2bf2a7485e9769fe478c3f10e85d4b61b958d45b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-mail-messaging-objects"></a>데이터베이스 메일 메시징 개체
-  **msdb** 데이터베이스는 데이터베이스 메일 호스트 데이터베이스입니다. 이 데이터베이스에는 데이터베이스 메일 지원을 위한 저장 프로시저와 메시징 개체가 있습니다. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 데이터베이스 메일을 사용하고 프로필과 계정을 만들어 관리하고 데이터베이스 메일 옵션을 구성하기 위한 데이터베이스 메일 구성 마법사가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **msdb** 데이터베이스는 데이터베이스 메일 호스트 데이터베이스입니다. 이 데이터베이스에는 데이터베이스 메일 지원을 위한 저장 프로시저와 메시징 개체가 있습니다. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 데이터베이스 메일을 사용하고 프로필과 계정을 만들어 관리하고 데이터베이스 메일 옵션을 구성하기 위한 데이터베이스 메일 구성 마법사가 포함되어 있습니다.  
   
 ##  <a name="ComponentsAndConcepts"></a>**msdb** 데이터베이스의 개체  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 **msdb** 데이터베이스에서 사용할 수 있어야 합니다. 그러나 데이터베이스 메일은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 네트워킹을 사용하지 않습니다. 따라서 사용자는 데이터베이스 메일을 사용하기 위해 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 끝점을 만들 필요가 없습니다. 외부 데이터베이스 메일 프로세스는 표준 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 통신합니다.  

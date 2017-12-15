@@ -1,7 +1,7 @@
 ---
 title: "SSMS(SQL Server Management Studio) 다운로드 | Microsoft 문서"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 550f91939f2ab6b8e16455a6a5dea2a4ac519c5d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90ffdbc2b636c360fd145c83847704f9860d6c37
+ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SSMS는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS는 SQL의 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. SSMS를 사용하면 응용 프로그램에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드하고 쿼리 및 스크립트를 작성할 수 있습니다.
@@ -45,9 +45,9 @@ ms.lasthandoff: 12/05/2017
 
 SSMS 17.X는 *SQL Server Management Studio*의 최신 세대이며 SQL Server 2017을 지원합니다.
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.3 다운로드](https://go.microsoft.com/fwlink/?linkid=858904)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.4 다운로드](https://go.microsoft.com/fwlink/?linkid=864329)**
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.3 업그레이드 패키지 다운로드(17.x에서 17.3으로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=858906)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.4 업그레이드 패키지 다운로드(17.x에서 17.4로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=864331)**
 
 SSMS 17.x 설치는 SSMS 16.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 17.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다.
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 *Microsoft SQL Server Management Studio 17* 레이블이 지정되며 새 아이콘이 추가됩니다. 
@@ -55,37 +55,74 @@ SSMS 17.x 설치는 SSMS 16.x 이전 버전을 업그레이드 또는 대체하�
    ![SSMS 17.x](media/download-sql-server-management-studio-ssms/version-icons.png)
 
 
-> [!NOTE]
-> SQL Server PowerShell 모듈은 이제 PowerShell 갤러리를 통해 별도로 설치됩니다.  자세한 내용은 [다운로드 지침](download-sql-server-ps-module.md)을 참조하세요.
+## <a name="available-languages"></a>사용 가능한 언어
 
+> [!NOTE]
+> 영어 이외의 지역화된 SSMS 릴리스는 Windows 8, Windows 7, Windows Server 2012 및 Windows Server 2008 R2에 설치하는 경우 [KB 2862966 보안 업데이트 패키지](https://support.microsoft.com/en-us/kb/2862966) 가 필요합니다.
+
+
+이 SSMS 릴리스는 다음 언어로 설치할 수 있습니다.
+
+SQL Server Management Studio 17.4:<br>
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
+SQL Server Management Studio 17.4 업그레이드 패키지(17.x에서 17.4로 업그레이드):<br>
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40a)
+
+> [!NOTE]
+> SQL Server PowerShell 모듈은 이제 PowerShell 갤러리를 통해 별도로 설치됩니다. 자세한 내용은 [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)를 참조하세요.
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 **버전 정보**
 
-릴리스 번호: 17.3
+릴리스 번호: 17.4
 
-이 릴리스에 대한 빌드 번호: 14.0.17199.0
+이 릴리스에 대한 빌드 번호: 14.0.17213.0
+
+릴리스 날짜: 2017년 12월 7일
 
 ## <a name="new-in-this-release"></a>이 릴리스의 새로운 기능
 
-SSMS 17.3은 최신 버전의 SQL Server Management Studio입니다. 17.X 세대의 SSMS는 SQL Server 2017을 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다. 버전 17.x는 SQL Analysis Service PaaS도 지원합니다.
+SSMS 17.4는 최신 버전의 SQL Server Management Studio입니다. 17.X 세대의 SSMS는 SQL Server 2017을 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다. 버전 17.x는 SQL Analysis Service PaaS도 지원합니다.
 
-17.3 버전에는 다음이 포함됩니다.
+17.4 버전에는 다음이 포함됩니다.
 
-- 최소한의 사용자 간섭 또는 특수화된 도메인 지식을 요구하는 지능형 프레임워크로 CSV 파일의 가져오기 작업을 단순화하기 위해 새 "플랫 파일 가져오기" 마법사가 추가되었습니다. 자세한 내용은 [SQL 마법사로 플랫 파일 가져오기](../relational-databases/import-export/import-flat-file-wizard.md)를 참조하세요.
-- 개체 탐색기에 "XEvent Profiler" 노드가 추가되었습니다. 자세한 내용은 [SSMS XEvent Profiler 사용](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)을 참조하세요.
-- 성능 대시보드 기록 대기 작업 보고서에 대기 작업 필터링 및 분류가 업데이트되었습니다.
-- "Predict" 함수의 구문 검사가 추가되었습니다.
-- 외부 라이브러리 관리 쿼리의 구문 검사가 추가되었습니다.
-- 외부 라이브러리 관리에 대한 SMO 지원이 추가되었습니다.
-- "등록된 서버" 창에 "PowerShell 시작" 지원이 추가되었습니다(새 SQL PowerShell 모듈 필요).
-- Always On: 가용성 그룹에 대한 [읽기 전용 라우팅 지원](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)이 추가되었습니다.
-- "Active Directory - MFA 지원을 포함한 유니버설 인증" 로그인에 대한 출력 창에 상세 내용 추적을 전송하는 옵션이 추가되었습니다(기본적으로 꺼짐. "도구 > 옵션 > Azure 서비스 > Azure 클라우드 > ADAL 출력 창 추적 수준" 아래의 사용자 설정에서 켜야 함). 
-- 쿼리 저장소: 
-  - 쿼리 저장소 UI는 QDS가 모든 데이터를 기록하는 한 QDS가 OFF인 경우에도 액세스할 수 있습니다.
-  - 이제 쿼리 저장소 UI는 모든 기존 보고서의 대기 분류를 노출합니다. 이를 통해 고객은 상위 대기 중인 쿼리 등의 시나리오를 잠금 해제할 수 있습니다.
-- 스크립팅 매개 변수 헤더 옵션을 포함했습니다(기본적으로 꺼짐. "도구 > 옵션 > SQL Server 개체 탐색기 > 스크립팅 > 스크립팅 매개 변수 헤더 포함" 아래의 사용자 설정에서 활성화될 수 있음). - [연결 항목 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)
-- "RC" 브랜딩이 제거되었습니다.
+취약성 평가:
+- 데이터베이스를 검색하여 구성 오류, 과도한 사용 권한, 중요한 데이터 노출 등의 잠재적 취약성 및 모범 사례와의 차이점을 발견하는 새로운 SQL Vulnerability Assessment 서비스가 추가되었습니다. 
+- 평가 결과에는 각 문제를 해결하는 실행 가능한 단계와 사용자 정의 재구성 스크립트(해당하는 경우)가 포함됩니다. 평가 보고서는 각 환경에 맞게 사용자 지정하고 특정 요구 사항에 맞게 조정할 수 있습니다. [SQL Vulnerability Assessment](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)에서 자세히 알아보세요.
+
+SMO:
+- *HasMemoryOptimizedObjects*가 Azure에서 예외를 throw하는 문제를 수정했습니다.
+- 새로운 CATALOG_COLLATION 기능에 대한 지원이 추가되었습니다.
+
+Always On 대시보드:
+- 가용성 그룹의 대기 시간 분석 기능이 향상되었습니다.
+- 두 개의 새 보고서 *AlwaysOn\_대기 시간\_기본* 및 *AlwaysOn\_대기 시간\_보조* 보고서가 추가되었습니다.
+
+실행 계획:
+- 올바른 설명서를 가리키도록 링크가 업데이트되었습니다.
+- 생성된 실제 계획에서 바로 단일 계획 분석을 수행할 수 있습니다.
+- 새 아이콘 집합이 추가되었습니다.
+- GbApply, InnerApply처럼 "논리 연산자 적용"을 인식하는 지원이 추가되었습니다.
+        
+XE 프로파일러:
+- 이름이 XEvent 프로파일러로 변경되었습니다.
+- 이제 중지/시작 메뉴가 기본적으로 세션을 중지/시작합니다.
+- 바로 가기 키를 사용할 수 있습니다(예: CTRL + F 키를 누르면 검색).
+- XEvent 프로파일러 세션의 적절한 이벤트에 데이터베이스\_이름 및 클라이언트\_호스트 이름 작업이 추가되었습니다. 변경 내용을 적용하려면 서버에서 기존 QuickSessionStandard 또는 QuickSessionTSQL 세션 인스턴스를 삭제해야 할 수도 있습니다 - [3142981 연결](https://connect.microsoft.com/SQLServer/feedback/details/3142981).
+
+명령줄:
+- SSMS가 Active Directory 인증('통합' 또는 '암호')을 사용하여 자동으로 서버/데이터베이스에 연결하도록 하는 새로운 명령줄 옵션("-G")이 추가되었습니다. 자세한 내용은 [Ssms 유틸리티](ssms-utility.md)를 참조하세요.
+
+플랫 파일 가져오기 마법사:
+- 테이블을 만들 때 기본값("dbo")이 아닌 스키마 이름을 선택하는 방법이 추가되었습니다.
+
+쿼리 저장소:
+- 쿼리 저장소 사용 가능 보고서 목록을 확장할 때 "회귀된 쿼리" 보고서가 복원되었습니다.
+
+**IS(Integration Services)**
+- 사용자가 Azure SSIS IR에서 지원되지 않는 SSIS 패키지 내부 구성 요소를 파악하는 데 도움을 주는 패키지 유효성 검사 함수가 배포 마법사에 추가되었습니다.
+
 
 전체 변경 내용 목록을 보려면 [SQL Server Management Studio - 변경 로그(SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md)를 참조하세요.
 
@@ -124,36 +161,12 @@ SSMS 17.3은 최신 버전의 SQL Server Management Studio입니다. 17.X 세대
 
 * 알려진 문제 및 해결 방법 목록을 보려면 [SQL Server Management Studio - 릴리스 정보](../ssms/sql-server-management-studio-release-notes.md)를 참조하세요.
 
-## <a name="available-languages"></a>사용 가능한 언어
-
-> [!NOTE]
-> 영어 이외의 지역화된 SSMS 릴리스는 Windows 8, Windows 7, Windows Server 2012 및 Windows Server 2008 R2에 설치하는 경우 [KB 2862966 보안 업데이트 패키지](https://support.microsoft.com/en-us/kb/2862966) 가 필요합니다.
-
-이 SSMS 릴리스는 다음 언어로 설치할 수 있습니다.
-
-SQL Server Management Studio 17.3:<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
-
-SQL Server Management Studio 17.3 업그레이드 패키지(17.x에서 17.3으로 업그레이드):<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40a)
 
 ## <a name="release-notes"></a>릴리스 정보
 
-다음은 이 17.3 릴리스의 문제 및 제한 사항입니다.
+다음은 이 17.4 릴리스의 문제 및 제한 사항입니다.
 
-**일반 SSMS**
-
-- MFA를 지원하는 UA를 사용하는 Azure AD 인증에는 다른 SSMS 기능이 지원되지 않습니다.
-   - 데이터베이스 엔진 튜닝 관리자는 Azure AD 인증에 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 유용하지 않은 알려진 문제가 있습니다. "예상과는 달리 파일 또는 어셈블리 'Microsoft.IdentityModel.Clients.ActiveDirectory,...를 로드할 수 없습니다." "데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database를 지원하지 않습니다. (DTAClient)".
-- 오류의 DTA 결과에서 쿼리 분석 시도: "개체는 IConvertible을 구현해야 합니다. (mscorlib)".
-- *재발된 쿼리*가 개체 탐색기에서 보고서의 쿼리 저장소 목록에서 누락되었습니다.
-   - 해결 방법: 마우스 오른쪽 단추로 **쿼리 저장소** 노드를 클릭하고 **재발된 쿼리 보기**를 선택합니다.
-
-**IS(Integration Services)**
-
-- [catalog].[event_messagea]에서 [execution_path]가 Scale Out에서 패키지 실행에 대해 올바르지 않습니다. [execution_path]는 패키지 실행 파일의 개체 이름 대신 "\Package"로 시작합니다. SSMS에서 패키지 실행의 개요 보고서를 볼 때 실행 개요에서 "실행 경로"의 링크는 작동하지 않습니다. 해결 방법은 개요 보고서에서 "메시지 보기"를 클릭하여 모든 이벤트 메시지를 확인하는 것입니다.
-
-
+현재는 알려진 문제가 없습니다.
 
 ## <a name="previous-releases"></a>이전 릴리스
 
@@ -162,6 +175,9 @@ SQL Server Management Studio 17.3 업그레이드 패키지(17.x에서 17.3으�
 ## <a name="feedback"></a>피드백
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Microsoft Connect에 문제 또는 제안을 기록하세요](https://connect.microsoft.com/SQLServer/Feedback)
+
+
+
 
 ## <a name="see-also"></a>관련 항목:
 

@@ -2,9 +2,12 @@
 title: "구독 속성 - &lt;Subscription&gt; | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59ab8e4fd557d3c87ae891865df72da9af9d9db9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f1d9da63f72d99df307223307c2759a9dc6d1657
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-properties---ltsubscriptiongt"></a>구독 속성 - &lt;Subscription&gt;
-  이 섹션에서는 **구독 속성** 대화 상자에 대한 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 섹션에서는 **구독 속성** 대화 상자에 대한 정보를 제공합니다.  
   
 -   [구독 속성 - Subscriber](../../relational-databases/replication/subscription-properties-subscriber.md)는 구독자에서 사용할 수 있는 구독 속성에 대해 설명합니다(끌어오기 구독에만 해당).  
   

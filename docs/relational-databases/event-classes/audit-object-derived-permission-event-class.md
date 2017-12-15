@@ -2,9 +2,12 @@
 title: "Audit Object Derived Permission 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bec371bcc5f0dcc972a2f612d1c5fa628b6d09bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 50db4ef7828f6b564c56b3512ff2f1223544b330
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission 이벤트 클래스
-  **Audit Object Derived Permission** 이벤트 클래스는 특정 개체에 대해 CREATE, ALTER 또는 DROP 명령이 실행된 경우 이를 기록합니다. 이 이벤트는 해당 개체에 직접 연결된 권한이나 소유자가 없는 경우에만 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Object Derived Permission** 이벤트 클래스는 특정 개체에 대해 CREATE, ALTER 또는 DROP 명령이 실행된 경우 이를 기록합니다. 이 이벤트는 해당 개체에 직접 연결된 권한이나 소유자가 없는 경우에만 발생합니다.  
   
  이 이벤트 클래스는 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 수 있으므로 대신 **Audit Schema Object Management** 이벤트 클래스를 사용하는 것이 좋습니다.  
   

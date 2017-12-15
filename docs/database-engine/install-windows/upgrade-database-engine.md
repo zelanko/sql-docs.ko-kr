@@ -2,11 +2,12 @@
 title: "데이터베이스 엔진 업그레이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +20,14 @@ caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 11bf3a52f7c528fca881c7dd3262c5a1ce09589e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 49b515f9a46e0d6196762181f19500d2d06e4b33
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
-  이 섹션의 항목에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]데이터베이스 엔진을 업그레이드하는 방법을 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션의 항목에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진을 업그레이드하는 방법을 설명합니다.  
   
 1.  [데이터베이스 엔진 업그레이드 방법 선택](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) 업그레이드를 시작하기 전에 다양한 업그레이드 방법을 이해해야 합니다. 이 항목에서는 업그레이드 방법 및 각 업그레이드 방법에서 수행하는 단계를 설명합니다.  
   

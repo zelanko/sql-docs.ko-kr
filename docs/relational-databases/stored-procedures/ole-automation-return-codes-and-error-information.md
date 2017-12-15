@@ -2,9 +2,12 @@
 title: "OLE 자동화 반환 코드 및 오류 정보 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0db7fd283f74b6235cd771da246006dbba1cdb80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f51c1f609a1ab0556e3ba0494e23dc18cb4c9aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE 자동화 반환 코드 및 오류 정보
-  OLE 자동화 시스템 저장 프로시저는 기본 OLE 자동화 작업에 의해 반환되는 HRESULT를 **int** 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800*nnnnn*과 같은 16진수 형태의 OLE 오류 코드이고, 저장 프로시저 반환 코드에서 **int** 값으로 반환된 경우에는 HRESULT의 형태가 214*nnnnnnn*입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] OLE 자동화 시스템 저장 프로시저는 기본 OLE 자동화 작업에 의해 반환되는 HRESULT를 **int** 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800*nnnnn*과 같은 16진수 형태의 OLE 오류 코드이고, 저장 프로시저 반환 코드에서 **int** 값으로 반환된 경우에는 HRESULT의 형태가 214*nnnnnnn*입니다.  
   
  예를 들어 잘못된 개체 이름(SQLDMO.Xyzzy)을 sp_OACreate에 전달하면 프로시저는 16진수로 0x800401f3인 2147221005의 **int** HRESULT를 반환합니다.  
   

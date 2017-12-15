@@ -2,9 +2,12 @@
 title: "CLR 이벤트 범주 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2db22c7db02b28fd3b281a1d901ea3e910ad2dab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 48f2d0be0235dfce085e5bc8304e2b022423a46c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clr-event-category"></a>CLR 이벤트 범주
-  **CLR** 이벤트 범주에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR(공용 언어 런타임) 개체를 실행하여 만들어지는 이벤트 클래스가 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CLR** 이벤트 범주에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 개체를 실행하여 만들어지는 이벤트 클래스가 포함됩니다.  
  
  ## <a name="assembly-load-event-class"></a>Assembly Load 이벤트 클래스 
   **Assembly Load** 이벤트 클래스는 어셈블리 로드 요청을 실행할 때 발생합니다.  

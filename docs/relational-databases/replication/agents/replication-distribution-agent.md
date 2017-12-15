@@ -2,9 +2,12 @@
 title: "복제 배포 에이전트 | Microsoft 문서"
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2e028fb7c3c1849bd65495725bcf9edf66c0a81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 32e48df7831764259bd9f05d53a2d8b4e3ca29d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
-  복제 배포 에이전트는 스냅숏(스냅숏 복제 및 트랜잭션 복제의 경우) 및 배포 데이터베이스 테이블에 저장된 트랜잭션(트랜잭션 배포의 경우)을 구독자의 대상 테이블로 이동하는 실행 파일입니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 배포 에이전트는 스냅숏(스냅숏 복제 및 트랜잭션 복제의 경우) 및 배포 데이터베이스 테이블에 저장된 트랜잭션(트랜잭션 배포의 경우)을 구독자의 대상 테이블로 이동하는 실행 파일입니다.  
   
 > [!NOTE]  
 >  매개 변수는 지정되는 순서에 제한을 받지 않습니다. 선택적 매개 변수가 지정되지 않은 경우 로컬 컴퓨터의 미리 정의된 레지스트리 설정 값이 사용됩니다.  

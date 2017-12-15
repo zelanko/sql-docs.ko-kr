@@ -2,9 +2,12 @@
 title: "병합 복제 성능 향상 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6589d1fc212f1169fa645fdb9c02ac9627597ef7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7c9b6f552ef52af748dcce74977bfc74806c9546
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enhance-merge-replication-performance"></a>병합 복제 성능 향상
-  [일반적인 복제 성능 향상](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)에서 설명하는 일반적인 성능 팁을 고려한 후 병합 복제에 대한 다음 영역을 추가로 고려해 보십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [일반적인 복제 성능 향상](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)에서 설명하는 일반적인 성능 팁을 고려한 후 병합 복제에 대한 다음 영역을 추가로 고려해 보십시오.  
   
 ## <a name="database-design"></a>데이터베이스 디자인  
   

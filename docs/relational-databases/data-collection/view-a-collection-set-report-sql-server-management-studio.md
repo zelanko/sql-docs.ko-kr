@@ -2,9 +2,12 @@
 title: "컬렉션 집합 보고서 보기(SQL Server Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4aa59de594b5f48e300f3a1284ad7f88e280934
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6c69ab26114e9029be54fd7084a650832f9ee522
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>컬렉션 집합 보고서 보기(SQL Server Management Studio)
-  관리 데이터 웨어하우스를 구성한 다음에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 컬렉션 집합 보고서를 볼 수 있습니다. 설치 프로그램 실행 중 설치되는 시스템 데이터 컬렉션 집합에 대해 보고서가 제공됩니다. 보고서에는 다음이 포함됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 관리 데이터 웨어하우스를 구성한 다음에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 컬렉션 집합 보고서를 볼 수 있습니다. 설치 프로그램 실행 중 설치되는 시스템 데이터 컬렉션 집합에 대해 보고서가 제공됩니다. 보고서에는 다음이 포함됩니다.  
   
 -   디스크 사용 요약  
   

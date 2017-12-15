@@ -2,9 +2,12 @@
 title: "Transact-SQL 코드 조각 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d3c7b87cbf1ee3a61fa783a8f113b87fcb5d5cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 03d2fac305ec83d34d6f070aac71620f8b5cc055
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 코드 조각
-  [!INCLUDE[tsql](../../includes/tsql-md.md)].code 코드 조각은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 블록의 기본 구조가 포함된 템플릿입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 문을 추가할 때 코드 조각을 시작 지점으로 사용할 수 있습니다. SQL Server와 함께 제공되는 미리 정의된 코드 조각을 삽입하거나 고유의 코드 조각을 만들 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)].code 코드 조각은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 블록의 기본 구조가 포함된 템플릿입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 문을 추가할 때 코드 조각을 시작 지점으로 사용할 수 있습니다. SQL Server와 함께 제공되는 미리 정의된 코드 조각을 삽입하거나 고유의 코드 조각을 만들 수 있습니다.  
   
 ## <a name="transact-sql-code-snippet-tasks"></a>Transact-SQL 코드 조각 태스크  
   

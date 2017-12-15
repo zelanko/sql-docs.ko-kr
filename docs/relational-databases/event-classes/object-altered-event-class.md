@@ -2,9 +2,12 @@
 title: "Object:Altered 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd36a75d1672a25cd2a8571d0b9d6c240088065f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8a7c43fda5f0543e51a835f70dbee5be6b94ad1a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 이벤트 클래스
-  Object:Altered 이벤트 클래스는 ALTER INDEX, ALTER TABLE 또는 ALTER DATABASE 문 등에 의해 개체가 변경되었음을 나타냅니다. 이 이벤트 클래스는 개체가 변경되었는지 확인하는 데 사용할 수 있습니다. 예를 들어 임시 저장 프로시저를 자주 만드는 ODBC 응용 프로그램의 경우 개체가 자주 변경될 수 있으므로 이 이벤트 클래스를 사용하면 유용합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Object:Altered 이벤트 클래스는 ALTER INDEX, ALTER TABLE 또는 ALTER DATABASE 문 등에 의해 개체가 변경되었음을 나타냅니다. 이 이벤트 클래스는 개체가 변경되었는지 확인하는 데 사용할 수 있습니다. 예를 들어 임시 저장 프로시저를 자주 만드는 ODBC 응용 프로그램의 경우 개체가 자주 변경될 수 있으므로 이 이벤트 클래스를 사용하면 유용합니다.  
   
  Object:Altered 이벤트 클래스는 항상 두 이벤트로 발생합니다. 첫 번째 이벤트는 시작 단계를 나타내며 두 번째 이벤트는 롤백 또는 커밋 단계를 나타냅니다.  
   

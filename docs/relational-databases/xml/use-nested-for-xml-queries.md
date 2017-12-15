@@ -2,9 +2,12 @@
 title: "중첩 FOR XML 쿼리 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53864aece4894c0aa72bf886f087ef76d5b4f9c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: decd82111d3cb541af7aaaf61bb516582b31cfb0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
-  **xml** 데이터 형식 및 [FOR XML 쿼리의 TYPE 지시어](../../relational-databases/xml/type-directive-in-for-xml-queries.md) 를 사용하여 FOR XML 쿼리로 반환되는 XML을 클라이언트는 물론 서버에서도 처리할 수 있습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **xml** 데이터 형식 및 [FOR XML 쿼리의 TYPE 지시어](../../relational-databases/xml/type-directive-in-for-xml-queries.md)를 사용하여 FOR XML 쿼리로 반환되는 XML을 클라이언트는 물론 서버에서도 처리할 수 있습니다.  
   
 ## <a name="processing-with-xml-type-variables"></a>xml 유형 변수를 사용하여 처리  
  FOR XML 쿼리 결과를 **xml** 유형의 변수에 할당하거나 XQuery를 사용하여 결과를 쿼리하고 추가 처리를 위해 이 결과를 **xml** 유형의 변수에 할당할 수 있습니다.  

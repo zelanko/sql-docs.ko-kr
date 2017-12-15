@@ -2,9 +2,12 @@
 title: "게시 속성- &lt;Publication&gt; | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e2746522285557ff444d2da9b1e5d71b7ecf3661
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6a8f9dc462f54554e9a2d5fea626230ba691b37d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties----ltpublicationgt"></a>게시 속성 - &lt;Publication&gt;
-  이 섹션에서는 **게시 속성** 대화 상자의 모든 페이지에 대한 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 **게시 속성** 대화 상자의 모든 페이지에 대한 정보를 제공합니다.  
   
 -   [게시 속성, 일반](../../relational-databases/replication/publication-properties-general.md)  
   

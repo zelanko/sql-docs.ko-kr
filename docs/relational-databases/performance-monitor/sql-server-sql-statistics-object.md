@@ -2,9 +2,12 @@
 title: "SQL Server, SQL Statistics 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82c9a520edf0f65e3197d43ad5ef50a8e12b7068
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL Statistics 개체
-  **의** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 보낸 컴파일과 요청 유형을 모니터링하는 카운터를 제공합니다. 쿼리 컴파일 및 다시 컴파일 수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 받은 일괄 처리 수를 모니터링하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용자 쿼리를 처리하는 속도와 쿼리 최적화 프로그램이 쿼리를 처리하는 효율을 알 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **SQLServer:SQL Statistics** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보낸 컴파일과 요청 유형을 모니터링하는 카운터를 제공합니다. 쿼리 컴파일 및 다시 컴파일 수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 받은 일괄 처리 수를 모니터링하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용자 쿼리를 처리하는 속도와 쿼리 최적화 프로그램이 쿼리를 처리하는 효율을 알 수 있습니다.  
   
  컴파일은 쿼리 반환 시간의 중요한 부분을 차지합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 컴파일 비용을 줄이기 위해 컴파일된 쿼리 계획을 쿼리 캐시에 보관합니다. 캐시의 목적은 컴파일된 쿼리를 다시 사용할 수 있도록 보관하여 컴파일 작업을 줄이고 다음 쿼리를 실행할 때 다시 컴파일할 필요를 없애는 것입니다. 그러나 각각의 고유한 쿼리는 적어도 한 번은 컴파일해야 합니다. 다음 요인이 발생하면 쿼리를 다시 컴파일해야 합니다.  
   

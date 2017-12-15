@@ -2,9 +2,12 @@
 title: "결과 자세히 보기 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08577691b503c3d5b013593980d599744d5f224d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: df78363c57e6ba59b4ff2878144c4e99b221e0a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="results-detailed-view-dialog-box"></a>결과 자세히 보기 대화 상자
-  **정책 실행** 대화 상자를 사용하여 정책을 실행하고 **실행**을 클릭하면 정책 평가 결과가 이 대화 상자에 표시됩니다. 이 대화 상자는 읽기 전용이며 속성 식에서 실패할 수 있는 부분을 이해하는 데 도움이 됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **정책 평가** 대화 상자를 사용하여 정책을 실행하고 **평가**를 클릭하면 정책 평가 결과가 이 대화 상자에 표시됩니다. 이 대화 상자는 읽기 전용이며 속성 식에서 실패할 수 있는 부분을 이해하는 데 도움이 됩니다.  
   
 ## <a name="options"></a>옵션  
  **AndOr**  

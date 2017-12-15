@@ -2,9 +2,12 @@
 title: "포함된 데이터베이스 데이터 정렬 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a064d177390a6e9037f02cb7ab4c05364122273
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 514b16de05b03b43f8187f66e06cf6ff9f94209c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="contained-database-collations"></a>포함된 데이터베이스 데이터 정렬
-  여러 가지 속성이 대/소문자 구분, 악센트 구분 및 사용되는 기본 언어를 비롯한 텍스트 데이터의 같음 의미 체계 및 정렬 순서에 영향을 줍니다. 이러한 사항은 데이터에 대한 데이터 정렬 선택을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전달됩니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 여러 가지 속성이 대/소문자 구분, 악센트 구분 및 사용되는 기본 언어를 비롯한 텍스트 데이터의 같음 의미 체계 및 정렬 순서에 영향을 줍니다. 이러한 사항은 데이터에 대한 데이터 정렬 선택을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전달됩니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
  데이터 정렬은 사용자 테이블에 저장된 데이터에 적용될 뿐만 아니라 메타데이터, 임시 개체, 변수 이름 등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 처리하는 모든 텍스트에 적용됩니다. 이러한 항목의 처리 방식은 포함되지 않은 데이터베이스인지 여부에 따라 다릅니다. 이러한 변경 내용은 대부분의 사용자에게는 영향을 미치지 않지만 인스턴스 독립 및 일관성을 제공하는 데 도움이 됩니다. 하지만 이로 인해 일부 혼란이 발생할 수도 있고 포함된 데이터베이스와 포함되지 않은 데이터베이스에 모두 액세스하는 세션의 경우에는 문제가 될 수도 있습니다.  
   

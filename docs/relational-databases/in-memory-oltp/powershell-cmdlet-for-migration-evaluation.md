@@ -2,9 +2,12 @@
 title: "마이그레이션 평가용 PowerShell cmdlet | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 618784e57397aaff751a602ddabab4687e3f229e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ca4150da0217a5669c2a7d68f4fde6a231716c05
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>마이그레이션 평가용 PowerShell cmdlet
-  Save-SqlMigrationReport cmdlet은 SQL Server 데이터베이스에서 여러 개체의 마이그레이션 적합성을 평가하는 도구입니다. 현재 이 도구에서는 메모리 내 OLTP에 대한 마이그레이션 적합성만 평가할 수 있습니다. 이 cmdlet은 관리자 권한 Windows PowerShell 환경과 sqlps에서 모두 실행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Save-SqlMigrationReport cmdlet은 SQL Server 데이터베이스에서 여러 개체의 마이그레이션 적합성을 평가하는 도구입니다. 현재 이 도구에서는 메모리 내 OLTP에 대한 마이그레이션 적합성만 평가할 수 있습니다. 이 cmdlet은 관리자 권한 Windows PowerShell 환경과 sqlps에서 모두 실행할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

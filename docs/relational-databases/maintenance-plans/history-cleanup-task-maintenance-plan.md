@@ -2,9 +2,12 @@
 title: "기록 정리 태스크(유지 관리 계획) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc83d234dd463f352fde14e3fb56422e7bcbc1cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4d88b3e5b54b2ede47272d58717b7088f0e0825f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>기록 정리 태스크(유지 관리 계획)
-  **기록 정리 태스크** 대화 상자를 사용하여 msdb 데이터베이스의 테이블에서 오래된 기록 정보를 삭제할 수 있습니다. 이 태스크는 백업 및 복원 기록, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 및 유지 관리 계획 기록의 삭제를 지원합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **기록 정리 태스크** 대화 상자를 사용하여 msdb 데이터베이스의 테이블에서 오래된 기록 정보를 삭제할 수 있습니다. 이 태스크는 백업 및 복원 기록, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 및 유지 관리 계획 기록의 삭제를 지원합니다.  
   
  이 문은 **sp_purge_jobhistory** 문과 **sp_delete_backuphistory** 문을 사용합니다.  
   

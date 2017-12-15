@@ -2,9 +2,12 @@
 title: "Blocked Process Report 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea1519e09402020d9ee6daccfbe34b3de5dffe67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e9b92c3ed426d733243916372a15df601d3c01e0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 이벤트 클래스
-  **Blocked Process Report** 이벤트 클래스는 태스크가 지정된 시간보다 오래 차단되어 있음을 나타냅니다. 이 이벤트 클래스는 교착 상태를 감지할 수 없는 리소스에서 대기하는 작업 또는 시스템 태스크는 포함하지 않습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Blocked Process Report** 이벤트 클래스는 태스크가 지정된 시간보다 오래 차단되어 있음을 나타냅니다. 이 이벤트 클래스는 교착 상태를 감지할 수 없는 리소스에서 대기하는 작업 또는 시스템 태스크는 포함하지 않습니다.  
   
  보고서 생성의 임계값 및 빈도를 구성하려면 **sp_configure** 명령을 사용하여 **blocked process threshold** 옵션을 초 단위로 구성하세요. 기본적으로 차단된 프로세스 보고서는 생성되지 않습니다. **차단된 프로세스 임계값** 설정 옵션에 대한 자세한 내용은 [차단된 프로세스 임계값 서버 구성 옵션](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)을 참조하세요.  
   

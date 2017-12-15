@@ -2,9 +2,12 @@
 title: "데이터베이스 복원(옵션 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9b4290a3e3a3a43e09dc4837542185e7256962ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 83d6c271c6d346881f7d1e7fdc7a0c3e4e0a5c25
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
-  **데이터베이스 복원** 대화 상자의 **옵션** 페이지를 사용하여 복원 작업의 동작 및 결과를 수정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **데이터베이스 복원** 대화 상자의 **옵션** 페이지를 사용하여 복원 작업의 동작 및 결과를 수정할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 백업을 복원하려면**  
   

@@ -2,9 +2,12 @@
 title: "SQL:FullTextQuery 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 37a8e60840cd645e6d97229bdb426d0dc17c68a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 67e62208027e8fe048e37a163bb84f2408e509f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 이벤트 클래스
-  SQL:FullTextQuery 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 전체 텍스트 쿼리를 실행할 때 발생합니다. 이 이벤트 클래스를 추적에 포함하여 전체 텍스트 카탈로그와 연결된 문제를 모니터링할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SQL:FullTextQuery 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 전체 텍스트 쿼리를 실행할 때 발생합니다. 이 이벤트 클래스를 추적에 포함하여 전체 텍스트 카탈로그와 연결된 문제를 모니터링할 수 있습니다.  
   
  SQL:FullTextQuery 이벤트 클래스를 포함할 경우 오버헤드 양이 증가됩니다. 이런 이벤트가 자주 발생할 경우 추적으로 인해 성능이 심각하게 저하될 수도 있습니다. 이러한 오버헤드를 최소화하려면 짧은 기간 동안 특정 문제를 모니터링하는 추적에 대해 이 이벤트 클래스의 사용을 제한해야 합니다.  
   

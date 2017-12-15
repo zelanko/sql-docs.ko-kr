@@ -2,9 +2,12 @@
 title: "정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 324915644f60d6ca9d5fe15dfce5aa1ab79056a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 31cd1294590d81c25a0a09d67a7746ea7dee49ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
-  정책 기반 관리를 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 최선의 방법을 모니터링할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 최선의 방법 정책으로 가져와서 인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 포함하는 대상 집합에 대해 정책을 평가할 수 있는 일련의 정책 파일을 제공합니다. 정책을 수동으로 평가하거나, 일정에 따라 대상 집합을 평가하도록 정책을 설정하거나, 이벤트에 따라 대상 집합을 평가하도록 정책을 설정합니다. 정책 기반 관리에 대한 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 정책 기반 관리를 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 최선의 방법을 모니터링할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 최선의 방법 정책으로 가져와서 인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 포함하는 대상 집합에 대해 정책을 평가할 수 있는 일련의 정책 파일을 제공합니다. 정책을 수동으로 평가하거나, 일정에 따라 대상 집합을 평가하도록 정책을 설정하거나, 이벤트에 따라 대상 집합을 평가하도록 정책을 설정합니다. 정책 기반 관리에 대한 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
   
 ## <a name="policy-and-rules-for-database-engine"></a>데이터베이스 엔진에 대한 정책 및 규칙  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 포함되는 정책 목록을 보여 주고 각 정책이 평가하는 최선의 방법 규칙에 대한 정보를 제공합니다. 정책은 XML 파일로 저장되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져와야 합니다. 정책을 가져오는 방법은 [정책 기반 관리 정책 가져오기](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)를 참조하세요.  

@@ -2,9 +2,12 @@
 title: "OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79b38894d27f78edf353dd251549c3c6fee6cbf8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7952076c536818d8a272a6eed35566c3e413ed21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스
-  OpenSqlFilestream API는 파일 시스템에 저장된 FILESTREAM BLOB(Binary Large Object)에 대한 Win32 호환 파일 핸들을 가져옵니다. 핸들이 [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)또는 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)의 Win32 API 중 하나로 전달될 수 있습니다. 이 핸들을 다른 Win32 API에 전달하면 ERROR_ACCESS_DENIED 오류가 반환됩니다. 핸들은 트랜잭션이 커밋 또는 롤백되기 전에 Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API에 전달하는 방식으로 닫아야 합니다. 핸들을 닫지 못하면 서버 쪽 리소스 노출이 발생합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] OpenSqlFilestream API는 파일 시스템에 저장된 FILESTREAM BLOB(Binary Large Object)에 대한 Win32 호환 파일 핸들을 가져옵니다. 핸들이 [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)또는 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)의 Win32 API 중 하나로 전달될 수 있습니다. 이 핸들을 다른 Win32 API에 전달하면 ERROR_ACCESS_DENIED 오류가 반환됩니다. 핸들은 트랜잭션이 커밋 또는 롤백되기 전에 Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API에 전달하는 방식으로 닫아야 합니다. 핸들을 닫지 못하면 서버 쪽 리소스 노출이 발생합니다.  
   
  모든 FILESTREAM 데이터 컨테이너 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션에서 수행해야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문도 동일한 트랜잭션에서 실행할 수 있습니다. 이를 통해 SQL 데이터와 FILESTREAM BLOB 데이터 간의 일관성을 유지 관리할 수 있습니다.  
   

@@ -2,9 +2,12 @@
 title: "스냅숏 폴더 보안 설정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43c9603e1f3a30ed558d264edb81d81c6d4c1297
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c7bfea98b84a87b9bd35a06f4ce2ae49a69a0105
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅숏 폴더 보안 설정
-  스냅숏 폴더는 스냅숏 파일을 저장하는 디렉터리입니다. 스냅숏 저장 전용 디렉터리를 지정하는 것이 좋습니다. 스냅숏 에이전트에 폴더에 대한 쓰기 권한을 부여하고 병합 에이전트 또는 배포 에이전트가 폴더에 액세스할 때 사용하는 Windows 계정에만 읽기 권한을 부여합니다. 에이전트에 연결된 Windows 계정은 원격 컴퓨터에 있는 스냅숏 폴더에 액세스할 수 있는 도메인 계정이어야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 스냅숏 폴더는 스냅숏 파일을 저장하는 디렉터리입니다. 스냅숏 저장 전용 디렉터리를 지정하는 것이 좋습니다. 스냅숏 에이전트에 폴더에 대한 쓰기 권한을 부여하고 병합 에이전트 또는 배포 에이전트가 폴더에 액세스할 때 사용하는 Windows 계정에만 읽기 권한을 부여합니다. 에이전트에 연결된 Windows 계정은 원격 컴퓨터에 있는 스냅숏 폴더에 액세스할 수 있는 도메인 계정이어야 합니다.  
   
 > [!NOTE]  
 >  UAC(사용자 계정 컨트롤)는 관리자가 승격된 사용자 권한( *권한*이라고도 함)을 관리하는 데 유용합니다. UAC를 사용하도록 설정된 운영 체제에서 실행할 때는 관리자가 해당 관리자 권한을 사용하지 않습니다. 대신 대부분의 동작을 관리 권한이 없는 일반 사용자로 수행하며 필요한 경우에만 임시로 해당 관리자 권한을 사용합니다. UAC에서는 스냅숏 공유에 대한 관리 액세스를 거부할 수 있습니다. 따라서 스냅숏 에이전트, 배포 에이전트 및 병합 에이전트에서 사용하는 Windows 계정에 스냅숏 공유 권한을 명시적으로 부여해야 합니다. Windows 계정이 Administrators 그룹의 멤버인 경우에도 이 작업을 수행해야 합니다.  

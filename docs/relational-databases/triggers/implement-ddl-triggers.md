@@ -2,9 +2,12 @@
 title: "DDL 트리거 구현 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5def307824891a2560d9b49ccc3b7b5bab03fcc6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b300e398f618d5f6f147282045beef3926f1cf15
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="implement-ddl-triggers"></a>DDL 트리거 구현
-  이 항목에서는 DDL 트리거 생성, DDL 트리거 수정, DDL 트리거 해제 또는 삭제 방법에 대한 정보를 제공합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 이 항목에서는 DDL 트리거 생성, DDL 트리거 수정, DDL 트리거 해제 또는 삭제 방법에 대한 정보를 제공합니다.  
   
 ## <a name="creating-ddl-triggers"></a>DDL 트리거 만들기  
  DDL 트리거는 DDL 트리거에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER 문을 사용하여 만듭니다.  

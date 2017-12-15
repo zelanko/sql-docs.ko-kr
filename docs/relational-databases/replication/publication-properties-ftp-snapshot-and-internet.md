@@ -2,9 +2,12 @@
 title: "게시 속성, FTP 스냅숏 및 인터넷 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39e7279dafbfbcf8f1442c99597817b4f1ce3a92
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c0b26714f4f8c95e8e92cec71662ef3f46aff37f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>게시 속성, FTP 스냅숏 및 인터넷
-  이 페이지에서는 다음 작업을 수행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지에서는 다음 작업을 수행할 수 있습니다.  
   
 -   FTP(파일 전송 프로토콜)를 통해 스냅숏을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/transfer-snapshots-through-ftp.md)을 참조하세요. FTP를 사용하여 스냅숏을 배달하려면 FTP 서버를 설정해야 합니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 설명서를 참조하십시오.  
   

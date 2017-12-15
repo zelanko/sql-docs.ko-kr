@@ -2,9 +2,12 @@
 title: "주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 422bd4f0108d26c3e68a226af38cab16d84e83a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1db9a711e770bc21c3917816010e3810da240d9a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경(SQL Server)
-  보조 서버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에 대해 장애 조치(Failover)를 수행한 후에 주 데이터베이스로 작동하도록 보조 데이터베이스를 구성할 수 있습니다. 그러면 필요할 때 주 데이터베이스와 보조 데이터베이스를 바꿀 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 보조 서버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에 대해 장애 조치(Failover)를 수행한 후에 주 데이터베이스로 작동하도록 보조 데이터베이스를 구성할 수 있습니다. 그러면 필요할 때 주 데이터베이스와 보조 데이터베이스를 바꿀 수 있습니다.  
   
 ## <a name="performing-the-initial-role-change"></a>초기 역할 변경 수행  
  처음으로 보조 데이터베이스로 장애 조치(Failover)를 하고 이 데이터베이스를 새로운 주 데이터베이스로 만들 때 일련의 단계를 수행해야 합니다. 이러한 초기 단계를 수행한 후에는 주 데이터베이스와 보조 데이터베이스의 역할을 쉽게 바꿀 수 있습니다.  

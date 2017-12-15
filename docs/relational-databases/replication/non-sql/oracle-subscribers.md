@@ -2,9 +2,12 @@
 title: "Oracle 구독자 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7f47f316449b6048dc826dcfbf265c1bc85877e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bf0e6a1e37e76dcb968d92a39c62e12d3e1c1938
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 Oracle에서 제공하는 Oracle OLE DB 공급자를 통해 Oracle에 밀어넣기 구독을 지원합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 Oracle에서 제공하는 Oracle OLE DB 공급자를 통해 Oracle에 밀어넣기 구독을 지원합니다.  
   
 ## <a name="configuring-an-oracle-subscriber"></a>Oracle 구독자 구성  
  Oracle 구독자를 구성하려면 다음 단계를 수행하십시오.  

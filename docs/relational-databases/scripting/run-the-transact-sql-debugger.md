@@ -2,9 +2,12 @@
 title: "Transact-SQL 디버거 실행 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d633d2f9a2e1a9ab407384338b4e9e0da34557b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e081ce40af97789870b1ed63ff705db8113fb809
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL 디버거 실행
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창을 연 후에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버거를 시작할 수 있습니다. 그러면 디버거를 중지할 때까지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 디버그 모드에서 실행할 수 있습니다. 옵션을 설정하여 디버거 실행 방식을 사용자 지정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 연 후에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 시작할 수 있습니다. 그러면 디버거를 중지할 때까지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 디버그 모드에서 실행할 수 있습니다. 옵션을 설정하여 디버거 실행 방식을 사용자 지정할 수 있습니다.  
   
 ## <a name="starting-and-stopping-the-debugger"></a>디버거 시작 및 중지  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 시작하기 위한 요구 사항은 다음과 같습니다.  

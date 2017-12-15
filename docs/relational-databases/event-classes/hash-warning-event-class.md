@@ -2,9 +2,12 @@
 title: "Hash Warning 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8743fe8a2905eeff25a806d08e6dd7e076c3c60
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0e96888456d728f0ac572e526fdc00218d6e3b7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 이벤트 클래스
-  Hash Warning 이벤트 클래스는 해시 연산 중 해시 재귀 또는 해시 중단(해시 재귀 한도 초과) 발생을 모니터링하는데 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Hash Warning 이벤트 클래스는 해시 연산 중 해시 재귀 또는 해시 중단(해시 재귀 한도 초과) 발생을 모니터링하는 데 사용할 수 있습니다.  
   
  해시 재귀는 빌드 입력이 사용할 수 있는 메모리를 초과하여 여러 개의 파티션으로 분할되어 개별적으로 처리되는 경우 발생합니다. 분할된 파티션 중 여전히 사용할 수 있는 메모리를 초과하는 파티션이 있으면 이는 다시 하위 파티션으로 분할되어 개별적으로 처리됩니다. 이러한 분할 프로세스는 각 파티션이 사용할 수 있는 메모리에 모두 맞거나 최대 재귀 수준에 도달할 때까지 계속됩니다(IntegerData 데이터 열에 표시됨).  
   

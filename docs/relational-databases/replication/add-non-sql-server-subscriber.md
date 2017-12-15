@@ -2,9 +2,12 @@
 title: "SQL Server 이외 구독자 추가 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46c2d0a3fcd7422543c5fe9561afdb83b9e5ea1f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 477107d3314678c01a045e874bb88a0a5e996922
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-non-sql-server-subscriber"></a>SQL Server 이외 구독자 추가
-  복제에서는 Oracle 및 IBM DB2 구독자의 스냅숏 및 트랜잭션 게시에 대한 밀어넣기 구독 생성을 지원합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제에서는 Oracle 및 IBM DB2 구독자의 스냅숏 및 트랜잭션 게시에 대한 밀어넣기 구독 생성을 지원합니다.  
   
 ## <a name="options"></a>옵션  
  **추가할 구독자 유형**  

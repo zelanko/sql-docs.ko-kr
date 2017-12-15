@@ -2,9 +2,12 @@
 title: "테이블 행 필터 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6dcb77e0afba0aaf1947ec7d5d150c9c2281370
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8b78b311ea716abd5ca52a1f561f648a29a27199
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-table-rows"></a>테이블 행 필터
-  **테이블 행 필터** 페이지를 사용하여 다음 작업을 수행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **테이블 행 필터** 페이지를 사용하여 다음 작업을 수행할 수 있습니다.  
   
 -   스냅숏, 트랜잭션 및 병합 게시의 테이블 아티클에 정적 행 필터를 적용합니다.  
   

@@ -2,9 +2,12 @@
 title: "첫 번째 및 마지막 트리거 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f0fd2be01cabd9758e5378270594d2a5827bb88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f49fe67e3a8663f9ef56941de33a6d918084febf
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-first-and-last-triggers"></a>첫 번째 및 마지막 트리거 지정
-  테이블과 연결된 AFTER 트리거 중 하나를 각 INSERT, DELETE 및 UPDATE 트리거 동작에 대한 첫 번째 AFTER 트리거나 마지막 AFTER 트리거로 지정할 수 있습니다. 첫 번째 트리거와 마지막 트리거 사이에 실행되는 AFTER 트리거는 정의되지 않은 순서로 실행됩니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 테이블과 연결된 AFTER 트리거 중 하나를 각 INSERT, DELETE 및 UPDATE 트리거 동작에 대한 첫 번째 AFTER 트리거나 마지막 AFTER 트리거로 지정할 수 있습니다. 첫 번째 트리거와 마지막 트리거 사이에 실행되는 AFTER 트리거는 정의되지 않은 순서로 실행됩니다.  
   
  AFTER 트리거의 순서를 지정하려면 **sp_settriggerorder** 저장 프로시저를 사용합니다. **sp_settriggerorder** 에는 다음과 같은 옵션이 있습니다.  
   

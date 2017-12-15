@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -17,17 +17,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dde2d7831a7bc75f9873efedcddb0bf6134669d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6046e57ec48ace2795c65879d00ad563d81fd0d6
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
 
 
-## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+일반 공급 | 빌드 번호: 14.0.17213.0
+
+### <a name="whats-new"></a>새로운 기능
+
+**일반 SSMS**
+
+취약성 평가:
+- 데이터베이스를 검색하여 구성 오류, 과도한 사용 권한, 중요한 데이터 노출 등의 잠재적 취약성 및 모범 사례와의 차이점을 발견하는 새로운 SQL Vulnerability Assessment 서비스가 추가되었습니다. 
+- 평가 결과에는 각 문제를 해결하는 실행 가능한 단계와 사용자 정의 재구성 스크립트(해당하는 경우)가 포함됩니다. 평가 보고서는 각 환경에 맞게 사용자 지정하고 특정 요구 사항에 맞게 조정할 수 있습니다. [SQL Vulnerability Assessment](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)에서 자세히 알아보세요.
+
+SMO:
+- *HasMemoryOptimizedObjects*가 Azure에서 예외를 throw하는 문제를 수정했습니다.
+- 새로운 CATALOG_COLLATION 기능에 대한 지원이 추가되었습니다.
+
+Always On 대시보드:
+- 가용성 그룹의 대기 시간 분석 기능이 향상되었습니다.
+- 두 개의 새 보고서 *AlwaysOn\_대기 시간\_기본* 및 *AlwaysOn\_대기 시간\_보조* 보고서가 추가되었습니다.
+
+실행 계획:
+- 올바른 설명서를 가리키도록 링크가 업데이트되었습니다.
+- 생성된 실제 계획에서 바로 단일 계획 분석을 수행할 수 있습니다.
+- 새 아이콘 집합이 추가되었습니다.
+- GbApply, InnerApply처럼 "논리 연산자 적용"을 인식하는 지원이 추가되었습니다.
+        
+XE 프로파일러:
+- 이름이 XEvent 프로파일러로 변경되었습니다.
+- 이제 중지/시작 메뉴가 기본적으로 세션을 중지/시작합니다.
+- 바로 가기 키를 사용할 수 있습니다(예: CTRL + F 키를 누르면 검색).
+- XEvent 프로파일러 세션의 적절한 이벤트에 데이터베이스\_이름 및 클라이언트\_호스트 이름 작업이 추가되었습니다. 변경 내용을 적용하려면 서버에서 기존 QuickSessionStandard 또는 QuickSessionTSQL 세션 인스턴스를 삭제해야 할 수도 있습니다 - [3142981 연결](https://connect.microsoft.com/SQLServer/feedback/details/3142981).
+
+명령줄:
+- SSMS가 Active Directory 인증('통합' 또는 '암호')을 사용하여 자동으로 서버/데이터베이스에 연결하도록 하는 새로운 명령줄 옵션("-G")이 추가되었습니다. 자세한 내용은 [Ssms 유틸리티](ssms-utility.md)를 참조하세요.
+
+플랫 파일 가져오기 마법사:
+- 테이블을 만들 때 기본값("dbo")이 아닌 스키마 이름을 선택하는 방법이 추가되었습니다.
+
+쿼리 저장소:
+- 쿼리 저장소 사용 가능 보고서 목록을 확장할 때 "회귀된 쿼리" 보고서가 복원되었습니다.
+
+**IS(Integration Services)**
+- 사용자가 Azure SSIS IR에서 지원되지 않는 SSIS 패키지 내부 구성 요소를 파악하는 데 도움을 주는 패키지 유효성 검사 함수가 배포 마법사에 추가되었습니다.
+
+### <a name="bug-fixes"></a>버그 수정
+
+**일반 SSMS**
+
+- 개체 탐색기:
+    - 데이터베이스 스냅숏에 대해 테이블 반환 함수 노드가 표시되지 않는 문제를 수정했습니다 - [연결 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161).
+    - 서버가 데이터베이스를 자동으로 닫을 때 *데이터베이스* 노드를 확장하는 성능이 개선되었습니다.
+- 쿼리 편집기:
+    - master 데이터베이스에 액세스할 수 없는 사용자에 대해 IntelliSense가 실패하는 문제를 수정했습니다.
+    - 원격 컴퓨터에 대한 연결이 닫히면 SSMS 크래시가 발생하는 문제를 수정했습니다 - [연결 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557).
+- XEvent Viewer:
+    - XEL을 내보내는 기능을 다시 사용할 수 있게 되었습니다.
+    - 사용자가 전체 XEL 파일을 로드할 수 없는 문제를 수정했습니다.
+- XEvent 프로파일러:
+    - 사용자에게 *VIEW SERVER STATE* 권한이 없는 경우 SSMS 크래시가 발생하는 문제를 수정했습니다.
+    - XE 프로파일러 라이브 데이터 창을 닫아도 기본 세션이 중지되지 않는 문제를 수정했습니다.
+- 등록된 서버:
+    - "Move To…" 명령이 멈추는 문제를 수정했습니다 - [연결 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 및 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
+- SMO:
+    - 전송 개체의 TransferData 메서드가 작동하지 않는 문제를 수정했습니다.
+    - 일시 중지된 SQL DW 데이터베이스에 대해 서버 데이터베이스가 예외를 throw하는 문제를 수정했습니다.
+    - SQL DW에 대해 SQL 데이터베이스를 스크립팅하면 잘못된 T-SQL 매개 변수 값이 생성되는 문제를 수정했습니다.
+    - 확대된 DB를 스크립팅하면 *데이터\_압축* 옵션을 잘못 내보내는 문제를 수정했습니다.
+- 작업 활동 모니터:
+    - 사용자가 범주를 기준으로 필터링하려고 할 때 "인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다. 
+        매개 변수 이름: 인덱스(System.Windows.Forms)" 오류가 발생하는 문제를 수정했습니다 - [연결 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691).
+- 연결 대화 상자:
+    - 읽기/쓰기 도메인 컨트롤러에 액세스할 수 없는 도메인 사용자가 SQL 인증을 사용하여 SQL Server에 로그인할 수 없는 문제를 수정했습니다 - [연결 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381).
+- 복제:
+    - SQL Server에서 끌어오기 구독의 속성을 볼 때 "ServerInstance 속성에 'null' 값을 적용할 수 없습니다"와 비슷한 오류가 표시되는 문제를 수정했습니다.
+- SSMS 설치:
+    - SSMS를 설치하면 컴퓨터에 설치된 모든 제품이 다시 구성되는 문제를 수정했습니다.
+- 사용자 설정:
+   - 이 픽스를 설치하면 US Government 소버린 클라우드 사용자는 유니버설 인증 및 Azure Active Directory 로그인을 통해 SSMS를 사용하여 Azure SQL Database 및 ARM 리소스에 중단 없이 액세스할 수 있습니다.  이전 버전의 SSMS 사용자는 도구|옵션|Azure Services를 열고 리소스 관리 아래에서 "Active Directory 기관" 속성의 구성을 https://login.microsoftonline.us로 변경해야 합니다.
+
+**AS(Analysis Services)**
+
+- 프로파일러: Azure AS에 대해 Window 인증을 사용하여 연결할 때 발생하는 문제를 수정했습니다.
+- 1400 모델에 대한 연결 세부 정보를 취소할 때 크래시를 일으킬 수 있는 문제를 수정했습니다.
+- 자격 증명을 새로 고치는 동안 연결 속성 대화 상자에서 Azure BLOB 키를 설정할 때 이제는 키가 시각적으로 마스킹됩니다.
+- 검색할 때 개체 ID 대신 응용 프로그램 ID를 표시하도록 Azure Analysis Services 사용자 선택 대화 상자의 문제를 수정했습니다.
+- 아이콘이 일부 단추에 올바르지 않게 매핑되는 문제를 일으키는 데이터베이스 찾아보기\MDX 쿼리 디자이너 도구 모음 문제를 수정했습니다.
+- msmdpump IIS http/https 주소를 사용하여 SSAS에 연결할 수 없는 문제를 수정했습니다.
+- 이제 Azure Analysis Services 사용자 선택 대화 상자의 여러 문자열이 추가 언어로 번역되었습니다.
+- 이제 MaxConnections 속성이 테이블 형식 모델의 데이터 원본에 대해 표시됩니다.
+- 이제 배포 마법사가 Azure AS 역할 멤버에 대한 올바른 JSON 정의를 생성합니다.
+- Azure AS에 대해 Windows 인증을 선택해도 로그인 메시지가 계속 표시되는 SQL 프로파일러 문제를 수정했습니다.
+
+
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
+
+## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>[SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 14.0.17199.0
 
 ### <a name="enhancements"></a>개선 사항
@@ -117,10 +213,6 @@ ms.lasthandoff: 12/05/2017
 
 - [catalog].[event_messagea]에서 [execution_path]가 Scale Out에서 패키지 실행에 대해 올바르지 않습니다. [execution_path]는 패키지 실행 파일의 개체 이름 대신 "\Package"로 시작합니다. SSMS에서 패키지 실행의 개요 보고서를 볼 때 실행 개요에서 "실행 경로"의 링크는 작동하지 않습니다. 해결 방법은 개요 보고서에서 "메시지 보기"를 클릭하여 모든 이벤트 메시지를 확인하는 것입니다.
 
-
-## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
-
-다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>[SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 14.0.17177.0

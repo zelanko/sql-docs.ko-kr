@@ -2,9 +2,12 @@
 title: "차단된 프로세스 임계값 늘리기 또는 해제 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 624fc53530880e625cd76276443ff4d4db5fe6a5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 01454bfb5bf11f0ed6136bd4caca4937f198ba0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="increase-or-disable-blocked-process-threshold"></a>차단된 프로세스 임계값 늘리기 또는 해제
-  이 규칙은 blocked process threshold 옵션이 0(해제)으로 설정되거나 5 이상의 값(초)으로 설정되어 있는지 검사합니다. blocked process threshold 옵션을 1에서 4 사이의 값으로 설정하면 교착 상태 모니터가 계속해서 실행될 수 있습니다. 1에서 4 사이의 값은 문제 해결 용도로만 사용해야 하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 서비스 지원 센터의 도움 없이 장기적으로 사용하거나 프로덕션 환경에서 사용하면 안 됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 규칙은 blocked process threshold 옵션이 0(해제)으로 설정되거나 5 이상의 값(초)으로 설정되어 있는지 검사합니다. blocked process threshold 옵션을 1에서 4 사이의 값으로 설정하면 교착 상태 모니터가 계속해서 실행될 수 있습니다. 1에서 4 사이의 값은 문제 해결 용도로만 사용해야 하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 서비스 지원 센터의 도움 없이 장기적으로 사용하거나 프로덕션 환경에서 사용하면 안 됩니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  
  이 문제를 해결하려면 blocked process threshold 옵션의 값을 5(초) 이상으로 설정하거나 값을 0으로 설정하여 blocked process threshold를 해제합니다. blocked process threshold를 `5` 초로 설정하려면 다음 문을 실행합니다.  

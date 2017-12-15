@@ -2,9 +2,12 @@
 title: "등록된 필터와 단어 분리기 보기 및 변경 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 278100271fafdafa631d981bc43cc2460706df71
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 729af34517307b898b665285681d6bfb69e2c683
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>등록된 필터와 단어 분리기 보기 및 변경
-  시스템에 단어 분리기 또는 필터를 설치하거나 제거한 후 이러한 변경이 자동적으로 서버 인스턴스에 적용되지는 않습니다. 이 항목에서는 현재 등록되어 있는 단어 분리기 또는 필터를 보는 방법과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 새로 설치한 단어 분리기 및 필터를 등록하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 시스템에 단어 분리기 또는 필터를 설치하거나 제거한 후 이러한 변경이 자동적으로 서버 인스턴스에 적용되지는 않습니다. 이 항목에서는 현재 등록되어 있는 단어 분리기 또는 필터를 보는 방법과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 새로 설치한 단어 분리기 및 필터를 등록하는 방법에 대해 설명합니다.  
   
 ### <a name="to-view-a-list-of-languages-whose-word-breakers-are-currently-registered"></a>현재 등록된 단어 분리기의 언어 목록을 보려면  
   

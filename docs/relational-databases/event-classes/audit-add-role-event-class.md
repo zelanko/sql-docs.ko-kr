@@ -2,9 +2,12 @@
 title: "Audit Add Role 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99f91cb628e60b2646b39091f4ac53cd8d4c9a21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9b4cbc6c52d893a90251ef785f878efccf11e36b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 이벤트 클래스
-  **Audit Add Role** 이벤트 클래스는 데이터베이스에서 데이터베이스 역할이 추가되거나 제거될 때 발생합니다. 이 이벤트 클래스는 **sp_addrole** 및 **sp_droprole** 저장 프로시저에서 사용됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Add Role** 이벤트 클래스는 데이터베이스에서 데이터베이스 역할이 추가되거나 제거될 때 발생합니다. 이 이벤트 클래스는 **sp_addrole** 및 **sp_droprole** 저장 프로시저에서 사용됩니다.  
   
  이 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 수도 있습니다. **Audit Database Principal Management** 이벤트 클래스를 대신 사용하는 것이 좋습니다.  
   

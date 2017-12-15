@@ -2,9 +2,12 @@
 title: "SQL Server, Broker - DBM Transport 개체 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 96497478567c2901a753cb129374f220dba2d347
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b910314a3320a242f696876e875025a7f85da5a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server, Broker - DBM Transport 개체
-  **Broker / DBM Transport** 성능 개체에는 Service Broker 및 데이터베이스 미러링에 대한 네트워킹 정보를 보고하는 성능 카운터가 들어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Broker / DBM Transport** 성능 개체에는 Service Broker 및 데이터베이스 미러링에 대한 네트워킹 정보를 보고하는 성능 카운터가 들어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
 |SQL Server Broker / DBM Transport 카운터|설명|  
 |------------------------------------------------|-----------------|  

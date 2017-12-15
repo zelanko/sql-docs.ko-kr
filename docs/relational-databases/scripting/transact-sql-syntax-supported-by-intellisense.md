@@ -2,9 +2,12 @@
 title: "IntelliSense에서 지원되는 Transact-SQL 구문 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fa116b3ef7a86697f053a653c14aad0e86f1535
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bec5a6542bc3095df0414c77af09acbb2ec05020
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
-  이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 IntelliSense에서 지원하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문 및 구문 요소에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 IntelliSense에서 지원하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 구문 요소에 대해 설명합니다.  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense에서 지원하는 문  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 IntelliSense는 가장 일반적으로 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문만 지원합니다. 일부 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 조건으로 인해 IntelliSense가 제대로 작동하지 않을 수 있습니다. 자세한 내용은 [IntelliSense 문제 해결&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md)을 참조하세요.  

@@ -2,9 +2,12 @@
 title: "압축 스냅숏 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13f3bde8699bb77fd733604d81ddf65000cc55ca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 83920f660f6899419cb11aca4b80e6f0839916f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="compressed-snapshots"></a>압축 스냅숏
-  스냅숏을 느린 네트워크를 통해 전송하거나 이동식 미디어에 저장할 때 압축하지 않은 스냅숏이 너무 커서 해당 미디어에 모두 저장할 수 없는 경우 스냅숏 파일을 압축하는 것이 좋습니다. 위와 같은 상황에서는 스냅숏 파일을 압축하는 것이 유용하지만 압축으로 인해 스냅숏 생성과 적용에 더 많은 시간이 걸립니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 스냅숏을 느린 네트워크를 통해 전송하거나 이동식 미디어에 저장할 때 압축하지 않은 스냅숏이 너무 커서 해당 미디어에 모두 저장할 수 없는 경우 스냅숏 파일을 압축하는 것이 좋습니다. 위와 같은 상황에서는 스냅숏 파일을 압축하는 것이 유용하지만 압축으로 인해 스냅숏 생성과 적용에 더 많은 시간이 걸립니다.  
   
  압축 스냅숏 파일은 2GB 이하의 파일만 압축할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 파일 형식으로 작성됩니다. 스냅숏 파일이 2GB보다 크면 압축할 수 없습니다. 파일을 압축하려면 해당 파일을 대체 스냅숏 폴더에 기록해야 합니다. 기본 스냅숏 폴더에 기록한 파일은 압축할 수 없습니다. 대체 스냅숏 폴더에 대한 자세한 내용은 [대체 스냅숏 폴더 위치](../../relational-databases/replication/alternate-snapshot-folder-locations.md)를 참조하세요.  
   

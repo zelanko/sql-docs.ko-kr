@@ -2,9 +2,12 @@
 title: "전체 텍스트 인덱스 성능 향상 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b90d942aa6c056a6a656b1bc2c835e51f468f676
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
-이 항목에서는 전체 텍스트 인덱스 및 쿼리 성능 저하의 몇 가지 일반적인 원인에 대해 설명합니다. 또한 이러한 문제를 완화하고 성능을 향상시킬 수 있는 몇 가지 제안 사항도 제공합니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 전체 텍스트 인덱스 및 쿼리 성능 저하의 몇 가지 일반적인 원인에 대해 설명합니다. 또한 이러한 문제를 완화하고 성능을 향상시킬 수 있는 몇 가지 제안 사항도 제공합니다.
   
 ##  <a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>하드웨어 리소스 문제

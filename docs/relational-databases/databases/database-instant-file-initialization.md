@@ -1,10 +1,13 @@
 ---
 title: "데이터베이스 즉시 파일 초기화 | Microsoft 문서"
 ms.custom: 
-ms.date: 08/15/2017
-ms.prod: sql-server-2016
+ms.date: 11/17/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,36 +22,36 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5d1ed7065cdbf710888c6b455fc1a059ecaebbfe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c1e3fb032916c235cff2dfaf9b0bf8a88d4dec82
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-instant-file-initialization"></a>데이터베이스 즉시 파일 초기화
-  데이터 및 로그 파일이 초기화되어 이전에 삭제한 파일의 디스크에 남아 있는 기존 데이터를 덮어씁니다. 데이터 및 로그 파일은 사용자가 다음 작업 중 하나를 수행할 때 0으로 채워져 초기화됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터 및 로그 파일이 초기화되어 이전에 삭제한 파일의 디스크에 남아 있는 기존 데이터를 덮어씁니다. 데이터 및 로그 파일은 사용자가 다음 작업 중 하나를 수행할 때 0으로 채워져 초기화됩니다.  
   
--   데이터베이스를 만듭니다.  
+- 데이터베이스를 만듭니다.  
   
--   기존 데이터베이스에 데이터 또는 로그 파일을 추가합니다.  
+- 기존 데이터베이스에 데이터 또는 로그 파일을 추가합니다.  
   
--   기존 파일의 크기를 늘립니다(자동 증가 작업 포함).  
+- 기존 파일의 크기를 늘립니다(자동 증가 작업 포함).  
   
--   데이터베이스 또는 파일 그룹을 복원합니다.  
+- 데이터베이스 또는 파일 그룹을 복원합니다.  
   
- 파일 초기화는 이러한 작업의 수행 시간을 더 오래 만듭니다. 그러나 데이터를 처음으로 파일에 기록할 때 운영 체제는 0으로 파일을 채울 수 없습니다.  
+파일 초기화는 이러한 작업의 수행 시간을 더 오래 만듭니다. 그러나 데이터를 처음으로 파일에 기록할 때 운영 체제는 0으로 파일을 채울 수 없습니다.  
   
 ## <a name="instant-file-initialization"></a>즉시 파일 초기화  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터 파일을 즉시 초기화할 수 있습니다. 인스턴트 파일 초기화를 통해 이전에 언급한 파일 작업을 빠르게 실행할 수 있습니다. 즉시 파일 초기화는 디스크 공간을 0으로 채우지 않고 디스크 공간을 회수합니다. 대신, 새 데이터를 파일에 기록할 때 디스크 내용을 덮어씁니다. 로그 파일은 즉시 초기화할 수 없습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터 파일을 즉시 초기화할 수 있습니다. 인스턴트 파일 초기화를 통해 이전에 언급한 파일 작업을 빠르게 실행할 수 있습니다. 즉시 파일 초기화는 디스크 공간을 0으로 채우지 않고 디스크 공간을 회수합니다. 대신, 새 데이터를 파일에 기록할 때 디스크 내용을 덮어씁니다. 로그 파일은 즉시 초기화할 수 없습니다.  
   
 > [!NOTE]  
 >  인스턴트 파일 초기화는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] 또는 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 이상 버전에서만 사용할 수 있습니다.  
   
- 즉시 파일 초기화는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) 서비스 계정에 SE_MANAGE_VOLUME_NAME을 부여받은 경우에만 사용할 수 있습니다. Windows Administrator 그룹의 구성원은 이 권한을 가지고 있으며 다른 사용자에게 **볼륨 유지 관리 작업 수행** 보안 정책을 추가하여 이 권한을 부여할 수 있습니다. 사용자 권한 할당에 대한 자세한 내용은 Windows 설명서를 참조하세요.  
+즉시 파일 초기화는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) 서비스 계정에 SE_MANAGE_VOLUME_NAME을 부여받은 경우에만 사용할 수 있습니다. Windows Administrator 그룹의 구성원은 이 권한을 가지고 있으며 다른 사용자에게 **볼륨 유지 관리 작업 수행** 보안 정책을 추가하여 이 권한을 부여할 수 있습니다. 사용자 권한 할당에 대한 자세한 내용은 Windows 설명서를 참조하세요.  
   
-TDE와 같은 일부 조건은 인스턴트 파일 초기화를 막을 수 있습니다.  
+[TDE](../../relational-databases/security/encryption/transparent-data-encryption.md)와 같은 일부 기능은 인스턴트 파일 초기화를 막을 수 있습니다.  
   
- 계정에 `Perform volume maintenance tasks` 권한을 부여하려면  
+계정에 `Perform volume maintenance tasks` 권한을 부여하려면  
   
 1.  백업 파일을 생성할 컴퓨터에서 **로컬 보안 정책** 응용 프로그램(`secpol.msc`)을 엽니다.  
   
@@ -65,9 +68,9 @@ TDE와 같은 일부 조건은 인스턴트 파일 초기화를 막을 수 있�
   
  삭제된 내용의 공개 가능성이 우려된다면 다음 작업 중 하나 또는 둘 다를 수행해야 합니다.  
   
--   분리된 데이터 파일 및 백업 파일에 제한적인 DACL이 있는지 항상 확인합니다.  
+- 분리된 데이터 파일 및 백업 파일에 제한적인 DACL이 있는지 항상 확인합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에서 SE_MANAGE_VOLUME_NAME을 취소하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 즉시 파일 초기화를 해제합니다.  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에서 SE_MANAGE_VOLUME_NAME을 취소하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 즉시 파일 초기화를 해제합니다.  
   
 > [!NOTE]  
 >  즉시 파일 초기화 해제는 사용자 권한이 취소된 후 생성되거나 크기를 늘린 파일에만 영향을 미칩니다.  

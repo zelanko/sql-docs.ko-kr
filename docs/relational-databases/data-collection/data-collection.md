@@ -2,9 +2,12 @@
 title: "데이터 컬렉션 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d554a001c8375a6ad619f4ed00e362a64fa279b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e2ba0a8ac11577590da78a5975a9447f3478709b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-collection"></a>데이터 컬렉션
-  데이터 수집기는 다양한 데이터 집합을 수집하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소입니다. 데이터 컬렉션은 항상 실행되거나 사용자 정의 일정에 따라 실행됩니다. 데이터 수집기는 관리 데이터 웨어하우스로 알려진 관계형 데이터베이스에 수집한 데이터를 저장합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터 수집기는 다양한 데이터 집합을 수집하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소입니다. 데이터 컬렉션은 항상 실행되거나 사용자 정의 일정에 따라 실행됩니다. 데이터 수집기는 관리 데이터 웨어하우스로 알려진 관계형 데이터베이스에 수집한 데이터를 저장합니다.  
   
 ## <a name="what-is-data-collector"></a>데이터 수집기란? 
  데이터 수집기는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공하는 도구와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 위한 데이터 컬렉션 플랫폼의 핵심 구성 요소입니다. 데이터 수집기는 데이터베이스 서버 및 응용 프로그램 전체에서 데이터 컬렉션에 대한 단일 중심점을 제공합니다. 이 컬렉션 지점을 통해 SQL 추적과 달리 성능 데이터로만 제한되지 않고 다양한 원본으로부터 데이터를 가져올 수 있습니다.  

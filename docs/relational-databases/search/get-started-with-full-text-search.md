@@ -1,9 +1,13 @@
 ---
 title: "전체 텍스트 검색 시작 | Microsoft 문서"
 ms.date: 08/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 01c9732a26e3e5e717de05a16e4c65b06c9cd358
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65e7b1e15e55604eb6f92d0aed96d3be7dc54ad1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
-SQL Server 데이터베이스는 기본적으로 전체 텍스트를 사용하도록 설정되어 있습니다. 하지만 전체 텍스트 쿼리를 실행하려면 먼저 전체 텍스트 카탈로그를 만들고 검색할 테이블 또는 인덱싱된 뷰에서 전체 텍스트 인덱스를 만들어야 합니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SQL Server 데이터베이스는 기본적으로 전체 텍스트를 사용하도록 설정되어 있습니다. 하지만 전체 텍스트 쿼리를 실행하려면 먼저 전체 텍스트 카탈로그를 만들고 검색할 테이블 또는 인덱싱된 뷰에서 전체 텍스트 인덱스를 만들어야 합니다.
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>두 단계로 전체 텍스트 검색 설정
 전체 텍스트 검색을 설정하는 두 가지 기본 단계는 다음과 같습니다.  

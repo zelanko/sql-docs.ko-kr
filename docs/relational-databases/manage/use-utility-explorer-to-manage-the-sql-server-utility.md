@@ -2,9 +2,12 @@
 title: "유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c14be83d174694f31f5a8cc42fea054b250daf10
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2f586f008a1a646698e01e75f3175f7b56f8a311
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 구성 요소인 유틸리티 탐색기는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 모든 개체를 트리 방식으로 표시합니다. 유틸리티 탐색기 내용 창에서는 다양한 방법을 사용하여 SQL Server의 관리되는 인스턴스 상태에 대한 요약 및 자세한 데이터를 통해 볼 수 있습니다. 또한 유틸리티 탐색기는 정책 정의를 보고 관리하기 위한 사용자 인터페이스를 제공합니다. 유틸리티 탐색기의 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 있는 개체에 따라 조금씩 다르지만 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 개체, 데이터 및 정책을 포함합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 구성 요소인 유틸리티 탐색기는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 모든 개체를 트리 방식으로 표시합니다. 유틸리티 탐색기 내용 창에서는 다양한 방법을 사용하여 SQL Server의 관리되는 인스턴스 상태에 대한 요약 및 자세한 데이터를 통해 볼 수 있습니다. 또한 유틸리티 탐색기는 정책 정의를 보고 관리하기 위한 사용자 인터페이스를 제공합니다. 유틸리티 탐색기의 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 있는 개체에 따라 조금씩 다르지만 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 개체, 데이터 및 정책을 포함합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
 ## <a name="create-utility-control-point"></a>유틸리티 제어 지점 만들기  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용하려면 먼저 유틸리티 제어 지점을 만들어야 합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md) 또는 [SQL Server 유틸리티 제어 지점 만들기&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)를 참조하세요.  

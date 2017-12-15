@@ -2,9 +2,12 @@
 title: "Lock:Timeout 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db75a1766177f5aa96600249289f1eb97dd9c19c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2523de44f225c1429453362067c7a859e6a17b56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout 이벤트 클래스
-  Lock:Timeout 이벤트 클래스는 페이지 등의 특정 리소스에 대해 다른 트랜잭션이 차단 잠금을 보유 중이기 때문에 해당 리소스에 대한 잠금 요청 시간이 초과되었음을 나타냅니다. 제한 시간은 @@LOCK_TIMEOUT 시스템 함수에 의해 결정되며 SET LOCK_TIMEOUT 문을 사용하여 설정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Lock:Timeout 이벤트 클래스는 페이지 등의 특정 리소스에 대해 다른 트랜잭션이 차단 잠금을 보유 중이기 때문에 해당 리소스에 대한 잠금 요청 시간이 초과되었음을 나타냅니다. 제한 시간은 @@LOCK_TIMEOUT 시스템 함수에 의해 결정되며 SET LOCK_TIMEOUT 문을 사용하여 설정할 수 있습니다.  
   
  Lock:Timeout 이벤트 클래스를 사용하여 제한 시간 조건이 발생하는 경우를 모니터링할 수 있습니다. 이 정보는 제한 시간이 응용 프로그램 성능에 큰 영향을 주는지 여부와 관련 개체를 확인하는 데 유용하게 사용됩니다. 이러한 개체를 수정하는 응용 프로그램 코드를 검사하여 제한 시간을 최소화하도록 변경할 수 있는지 확인할 수 있습니다.  
   

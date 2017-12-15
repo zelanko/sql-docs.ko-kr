@@ -2,9 +2,12 @@
 title: "변경 데이터 작업(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d46d8364dafb218035e3e9c7d828833f9c604375
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4a6407cbe969ff2d5e016849acbcd148e540a69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-change-data-sql-server"></a>변경 데이터 작업(SQL Server)
-  변경 데이터는 TVF(테이블 반환 함수)를 통해 변경 데이터 캡처 소비자에게 제공됩니다. 이러한 함수의 모든 쿼리에는 반환된 결과 집합을 개발할 때 고려할 LSN(로그 시퀀스 번호)의 범위를 정의하는 두 매개 변수가 필요합니다. 간격을 한정하는 LSN 하한/상한 값 모두 간격 내에 포함되는 것으로 간주됩니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 변경 데이터는 TVF(테이블 반환 함수)를 통해 변경 데이터 캡처 소비자에게 제공됩니다. 이러한 함수의 모든 쿼리에는 반환된 결과 집합을 개발할 때 고려할 LSN(로그 시퀀스 번호)의 범위를 정의하는 두 매개 변수가 필요합니다. 간격을 한정하는 LSN 하한/상한 값 모두 간격 내에 포함되는 것으로 간주됩니다.  
   
  TVF 쿼리에 적합한 LSN 값을 결정하는 데 유용한 여러 함수가 제공됩니다. [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 함수는 캡처 인스턴스 유효성 간격과 관련된 가장 작은 LSN을 반환합니다. 유효성 간격은 현재 해당 캡처 인스턴스에 변경 데이터를 사용할 수 있는 시간 간격입니다. [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 함수는 유효성 간격의 가장 큰 LSN을 반환합니다. [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 및 [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 함수를 사용하여 LSN 값을 기존 시간대에 배치할 수 있습니다. 변경 데이터 캡처는 제한된 쿼리 간격을 사용하므로 연속적인 쿼리 창에서 변경 내용이 중복되지 않도록 시퀀스의 다음 LSN 값을 생성해야 하는 경우도 있습니다. LSN 값에 대한 증분 조정이 필요할 경우 [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) 및 [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) 함수가 유용합니다.  
   

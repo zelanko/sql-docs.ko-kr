@@ -2,9 +2,12 @@
 title: "추적 필터링 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53f0f6ea6b12c702cadcacebe8deb87f45b48aa7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 49755f29a54164f008e19bc542a9ca650e54b37b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-a-trace"></a>추적 필터링
-  필터가 설정되면 추적에서 수집하는 이벤트가 제한됩니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 예를 들어 특정 사용자에 대한 추적에서 Windows 사용자 이름을 제한하면 출력 데이터는 해당 사용자만 표시되도록 간략해집니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 필터가 설정되면 추적에서 수집하는 이벤트가 제한됩니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 예를 들어 특정 사용자에 대한 추적에서 Windows 사용자 이름을 제한하면 출력 데이터는 해당 사용자만 표시되도록 간략해집니다.  
   
  반드시 추적에 대한 필터를 설정해야 하는 것은 아닙니다. 그러나 필터는 추적하는 동안 발생하는 오버헤드를 최소화합니다. 필터는 포커스가 있는 데이터를 반환하므로 성능 분석과 감사를 편리하게 해 줍니다.  
   

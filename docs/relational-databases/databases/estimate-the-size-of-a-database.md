@@ -2,9 +2,12 @@
 title: "데이터베이스 크기 예측 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ffb0542fd31fdd85077dff3827c6494041ea1042
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: babdffb8ddb8bddcb017b65a713b0cfd5aaf0964
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="estimate-the-size-of-a-database"></a>데이터베이스 크기 예측
-  데이터베이스를 디자인할 때는 데이터베이스가 데이터로 가득 찰 때 얼마나 커질 수 있는지를 추정해야 합니다. 데이터베이스의 크기를 추정하면 다음을 수행하는 데 필요한 하드웨어 구성을 결정하는 데 도움이 됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스를 디자인할 때는 데이터베이스가 데이터로 가득 찰 때 얼마나 커질 수 있는지를 추정해야 합니다. 데이터베이스의 크기를 추정하면 다음을 수행하는 데 필요한 하드웨어 구성을 결정하는 데 도움이 됩니다.  
   
 -   응용 프로그램에서 필요한 성능을 확보합니다.  
   

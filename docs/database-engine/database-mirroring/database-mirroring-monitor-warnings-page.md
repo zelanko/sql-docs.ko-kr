@@ -2,9 +2,12 @@
 title: "데이터베이스 미러링 모니터(경고 페이지) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da1fb8bd1af9fee7be317e940eae7fc9bc2db455
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c99baee0acea3b6a05f15b5c2ae33cdb347ee1bb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>데이터베이스 미러링 모니터(경고 페이지)
-  데이터베이스 미러링 이벤트에서 지원되는 경고와 지정된 경고 임계값(사용 가능한 경우)의 읽기 전용 목록을 표시합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 미러링 이벤트에서 지원되는 경고와 지정된 경고 임계값(사용 가능한 경우)의 읽기 전용 목록을 표시합니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 모니터링하려면**  
   

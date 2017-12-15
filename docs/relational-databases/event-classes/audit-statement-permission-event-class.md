@@ -2,9 +2,12 @@
 title: "Audit Statement Permission 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a69f0458f567004a108bc94e6e75aad3468d130
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 52413975715c122017d32d4a1d6901a044d606f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission 이벤트 클래스
-  **Audit Statement Permission** 이벤트 클래스는 문 사용 권한(예: CREATE TABLE)이 사용될 때마다 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Statement Permission** 이벤트 클래스는 문 사용 권한(예: CREATE TABLE)이 사용될 때마다 발생합니다.  
   
  **Audit Statement Permission** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 수 있습니다. 대신 **Audit Schema Object Management** 이벤트 클래스를 사용하는 것이 좋습니다.  
   

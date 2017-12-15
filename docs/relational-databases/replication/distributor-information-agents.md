@@ -2,9 +2,12 @@
 title: "배포자 정보, 에이전트 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 732843c1a3d3e659b08ab5e88bca333aa7e804d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c2b4b54ae1494a72bf86d56f50ace2da6b0a5e0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="distributor-information-agents"></a>배포자 정보, 에이전트
-  **에이전트** 탭에는 게시자 및 구독자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **에이전트** 탭에는 게시자 및 구독자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  
   
  배포자 뷰의 배포자에 대한 **에이전트** 탭에서 사용할 수 있는 에이전트에는 게시자에 대한 **에이전트** 탭에서 사용할 수 있는 모든 에이전트가 포함됩니다. 그러나 배포자 뷰의 배포자에 대한 **에이전트** 탭에는 배포자 에이전트와 병합 에이전트도 포함됩니다.  
   

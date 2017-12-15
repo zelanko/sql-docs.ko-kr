@@ -2,9 +2,12 @@
 title: "XML 인덱스 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9024ed3eb27f71fbb212c8d2fe5660e618ecdbf1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dab406cf9b7288bfde5f4d98486b1fcd6b81d065
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-xml-indexes"></a>XML 인덱스 만들기
-  이 항목에서는 기본 및 보조 XML 인덱스를 만드는 방법에 대해 설명합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목에서는 기본 및 보조 XML 인덱스를 만드는 방법에 대해 설명합니다.  
   
 ## <a name="creating-a-primary-xml-index"></a>기본 XML 인덱스 만들기  
  기본 XML 인덱스를 만들려면 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문을 사용합니다. 비-XML 인덱스에 대해 사용 가능한 옵션이 XML 인덱스에서 모두 지원되는 것은 아닙니다.  

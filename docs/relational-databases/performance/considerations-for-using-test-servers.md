@@ -2,9 +2,12 @@
 title: "테스트 서버 사용 시 고려 사항 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31ae5e4f32eb2a6a2a5bd1e017b46937d70e8ef0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e8fddc2009fba8e86f0d9ebfdffcf476d90e747d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="considerations-for-using-test-servers"></a>테스트 서버 사용 시 고려 사항
-  테스트 서버를 사용하여 프로덕션 서버의 데이터베이스를 튜닝하는 것은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 중요한 장점입니다. 이 기능을 사용하여 프로덕션 서버의 실제 데이터를 테스트 서버로 복사하지 않고도 튜닝 오버헤드를 테스트 서버에 오프로드할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 테스트 서버를 사용하여 프로덕션 서버의 데이터베이스를 튜닝하는 것은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 중요한 장점입니다. 이 기능을 사용하여 프로덕션 서버의 실제 데이터를 테스트 서버로 복사하지 않고도 튜닝 오버헤드를 테스트 서버에 오프로드할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 GUI(그래픽 사용자 인터페이스)에서는 테스트 서버 튜닝 기능이 지원되지 않습니다.  

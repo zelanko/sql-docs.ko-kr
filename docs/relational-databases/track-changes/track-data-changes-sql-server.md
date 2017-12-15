@@ -2,9 +2,12 @@
 title: "데이터 변경 내용 추적(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6b0846e43315062143d462a82e2c588db00b1169
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: acb1b3a650c43652dd6a2b46e52ce84690173f6d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 데이터베이스에서 데이터에 대한 변경 내용을 추적하는 [변경 데이터 캡처](#Capture) 및 [변경 내용 추적](#Tracking)과 같은 두 가지 기능을 제공합니다. 이러한 기능은 데이터베이스의 사용자 테이블에 적용된 DML 변경 내용(삽입, 업데이트 및 삭제 작업)을 응용 프로그램에서 확인할 수 있게 해줍니다. 변경 데이터 캡처 및 변경 추적은 동일한 데이터베이스에서 설정할 수 있으며 특별한 고려 사항은 필요하지 않습니다. 변경 데이터 캡처 및 변경 내용 추적을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서는 변경 내용 추적 기능이 지원됩니다.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]은 데이터베이스에서 데이터에 대한 변경 내용을 추적하는 [변경 데이터 캡처](#Capture) 및 [변경 내용 추적](#Tracking)과 같은 두 가지 기능을 제공합니다. 이러한 기능은 데이터베이스의 사용자 테이블에 적용된 DML 변경 내용(삽입, 업데이트 및 삭제 작업)을 응용 프로그램에서 확인할 수 있게 해줍니다. 변경 데이터 캡처 및 변경 추적은 동일한 데이터베이스에서 설정할 수 있으며 특별한 고려 사항은 필요하지 않습니다. 변경 데이터 캡처 및 변경 내용 추적을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서는 변경 내용 추적 기능이 지원됩니다.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>변경 데이터 캡처 또는 변경 추적 사용의 이점  
  데이터베이스에서 변경된 데이터를 쿼리하는 기능은 일부 응용 프로그램의 효율성을 위한 중요한 요구 사항입니다. 일반적으로 응용 프로그램 개발자는 데이터 변경을 확인하기 위해 응용 프로그램에서 트리거, 타임스탬프, 열 및 추가 테이블의 조합으로 사용자 지정 추적 방법을 구현해야 합니다. 이러한 응용 프로그램을 만들기 위해서는 많은 구현 작업과 스키마 업데이트가 필요하며 높은 성능 오버헤드가 수반되는 경우도 많습니다.  

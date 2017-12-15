@@ -2,9 +2,12 @@
 title: "OLEDB QueryInterface 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a675719a1c034127bce3afc1bee730cc2221dd53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 54ea634acb632f76d6d74aa192fb89e4b3f8af94
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 이벤트 클래스
-  **OLEDB QueryInterface** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB **QueryInterface** 를 호출할 때 발생합니다. 분산 쿼리 및 원격 저장 프로시저와 관련된 문제를 모니터링하는 추적에 이 이벤트 클래스를 포함시킵니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **OLEDB QueryInterface** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB **QueryInterface**를 호출할 때 발생합니다. 분산 쿼리 및 원격 저장 프로시저와 관련된 문제를 모니터링하는 추적에 이 이벤트 클래스를 포함시킵니다.  
   
  **OLEDB QueryInterface** 이벤트 클래스가 포함되면 오버헤드 양이 많아집니다. 이런 이벤트가 자주 발생할 경우 추적으로 인해 성능이 심각하게 저하될 수도 있습니다. 오버헤드 발생을 최소화하려면 단기간 동안 특정 문제를 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  
   

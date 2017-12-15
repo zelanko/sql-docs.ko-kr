@@ -2,9 +2,12 @@
 title: "OLEDB Provider Information 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 51a72f6c28d36e67542b65022f8281b4ee418678
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 47fb7bc4b716676d1970dfd78f9c4cf36ecb6b45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information 이벤트 클래스
-  **OLEDB Provider Information** 이벤트 클래스는 분산 쿼리가 실행되어 공급자 연결에 해당하는 정보를 수집할 때 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **OLEDB Provider Information** 이벤트 클래스는 분산 쿼리가 실행되어 공급자 연결에 해당하는 정보를 수집할 때 발생합니다.  
   
  이 이벤트 클래스는 원격 공급자로부터 수집한 모든 속성을 다음에 열거한 항목을 포함하여 다수의 속성 집합으로 포함합니다.  
   

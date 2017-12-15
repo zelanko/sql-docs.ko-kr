@@ -2,9 +2,12 @@
 title: "백업 장치(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2decbc706e1bbc8ee6bb1057684ae0e643f129c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8efae7715dcb9d5b182360e074f87cc5c7b2f067
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-devices-sql-server"></a>백업 장치(SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 장치에 기록됩니다. 이 물리적 백업 장치는 미디어 세트의 첫 번째 백업을 장치에 기록할 때 초기화됩니다. 하나 이상의 백업 장치 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 장치에 기록됩니다. 이 물리적 백업 장치는 미디어 세트의 첫 번째 백업을 장치에 기록할 때 초기화됩니다. 하나 이상의 백업 장치 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
    
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
  백업 디스크  

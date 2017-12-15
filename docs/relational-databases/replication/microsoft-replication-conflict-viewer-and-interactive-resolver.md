@@ -2,9 +2,12 @@
 title: "Microsoft 복제 충돌 뷰어 및 대화형 해결 프로그램 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ca832d1e5cb5be685746e46b021e4bad3bba316
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: de21819630240112cfcbfb5425dbb10460eda3a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 복제 충돌 뷰어 및 대화형 해결 프로그램
-  이 섹션에는 병합 복제 및 트랜잭션 복제에 대한 복제 충돌 뷰어의 정보와 병합 복제에 대한 대화형 해결 프로그램의 정보가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에는 병합 복제 및 트랜잭션 복제에 대한 복제 충돌 뷰어의 정보와 병합 복제에 대한 대화형 해결 프로그램의 정보가 포함되어 있습니다.  
   
 -   [Microsoft 복제 충돌 뷰어&#40;병합 복제&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  
   

@@ -2,9 +2,12 @@
 title: "가용성 그룹 속성: 새 가용성 그룹(일반 페이지) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a9d2fa593bc36151226c5f345c8e8ac0f9b731dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 49b34cb2867b26be38f9d6c9086f5ea038d8cbdc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>가용성 그룹 속성: 새 가용성 그룹(일반 페이지)
-  이 항목은 **새 가용성 그룹** 대화 상자 및 **가용성 그룹 속성** 대화 상자의 **일반** 탭에 적용됩니다.  **를 사용하지 않고** 새 가용성 그룹 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]대화 상자를 사용하여 새 가용성 그룹을 만들 수 있으며, **가용성 그룹 속성** 대화 상자를 사용하여 기존 가용성 그룹의 구성을 확인하고 변경할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목은 **새 가용성 그룹** 대화 상자 및 **가용성 그룹 속성** 대화 상자의 **일반** 탭에 적용됩니다.  **를 사용하지 않고** 새 가용성 그룹 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]대화 상자를 사용하여 새 가용성 그룹을 만들 수 있으며, **가용성 그룹 속성** 대화 상자를 사용하여 기존 가용성 그룹의 구성을 확인하고 변경할 수 있습니다.  
   
  **가용성 그룹 속성을 보려면**  
   

@@ -2,9 +2,12 @@
 title: "유지 관리 계획 노드(개체 탐색기) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00502cbf9c14756b27e92a1f41b6a5d984495f06
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0e0af57edb8225fd1b9b72d71c7be6ed946c02e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-plans-node-object-explorer"></a>유지 관리 계획 노드(개체 탐색기)
-  이 섹션에서는 **개체 탐색기의** 유지 관리 계획 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에 대한 F1 도움말을 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기의 **유지 관리 계획** 노드에 대한 F1 도움말을 제공합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

@@ -2,9 +2,12 @@
 title: "Audit Database Object Access 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70a8262bd1520d61c20e8c860df286ed14329be9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 83167fa58ad37859e109a9bad85d90906cd5d062
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access 이벤트 클래스
-  **Audit Database Object Access** 이벤트 클래스는 스키마 등의 데이터베이스 개체에 액세스하면 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Database Object Access** 이벤트 클래스는 스키마 등의 데이터베이스 개체에 액세스하면 발생합니다.  
   
 ## <a name="audit-database-object-access-event-class-data-columns"></a>Audit Database Object Access 이벤트 클래스 데이터 열  
   

@@ -2,9 +2,12 @@
 title: "CursorRecompile 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 42c861d46916e0991388d3580877fb2b01ac22af
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cd2b83791010c63f85da51e81aee2779c8ac32fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile 이벤트 클래스
-  **CursorRecompile** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 다시 컴파일 이벤트를 나타냅니다. CursorRecompile 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 스키마 변경으로 인해 Transact-SQL 커서를 다시 컴파일할 때 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CursorRecompile** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 다시 컴파일 이벤트를 나타냅니다. CursorRecompile 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 스키마 변경으로 인해 Transact-SQL 커서를 다시 컴파일할 때 발생합니다.  
   
  커서의 성능을 기록하는 추적에 **CursorRecompile** 이벤트 클래스를 포함시키십시오. **CursorRecompile** 이벤트 클래스를 추적에 포함하는 경우 발생되는 오버헤드의 양은 추적 중 데이터베이스에 대해 커서가 사용되는 빈도에 따라 달라집니다. 커서를 광범위하게 사용할 경우 추적을 수행하면 성능이 크게 저하될 수 있습니다.  
   

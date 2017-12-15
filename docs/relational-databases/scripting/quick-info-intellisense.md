@@ -2,9 +2,12 @@
 title: "요약 정보(IntelliSense) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6b50e007d1d338ff5bd7302e34041acbf0b4c27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1ecd0b206a381b8bc467ebd704bcfd9a6dc5ae5f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="quick-info-intellisense"></a>요약 정보(IntelliSense)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **요약 정보** 옵션은 코드의 모든 식별자에 대한 완전한 선언을 표시합니다. 마우스 포인터를 식별자 위로 이동하면 노란색 팝업 창에 해당 선언이 표시됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **요약 정보** 는 데이터베이스 엔진 및 XML 쿼리 편집기에서 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **요약 정보** 옵션은 코드의 모든 식별자에 대한 완전한 선언을 표시합니다. 마우스 포인터를 식별자 위로 이동하면 노란색 팝업 창에 해당 선언이 표시됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **요약 정보** 는 데이터베이스 엔진 및 XML 쿼리 편집기에서 사용할 수 있습니다.  
   
 ## <a name="transact-sql-quick-info"></a>Transact-SQL 요약 정보  
  **쿼리 편집기의** 요약 정보 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에는 두 가지 유형의 정보가 표시됩니다. 디버그 모드가 아닐 때는 **요약 정보** 에 식 선언이 표시됩니다. 디버그 모드일 때는 **요약 정보** 에 식 이름과 식의 현재 값이 표시됩니다.  

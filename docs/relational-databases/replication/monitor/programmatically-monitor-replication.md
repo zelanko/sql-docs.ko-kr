@@ -2,9 +2,12 @@
 title: "프로그래밍 방식으로 복제 모니터링 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -31,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ab76000d3986678af0be8b85303a6b2df89ea34
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: caa7d7966fee784794884d7e840f0802c4a7774d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programmatically-monitor-replication"></a>프로그래밍 방식으로 복제 모니터링
-  복제 모니터는 복제 토폴로지를 모니터링하는 데 사용할 수 있는 그래픽 도구입니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 복제 저장 프로시저 또는 RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 동일한 모니터링 데이터에 액세스할 수 있습니다. 이러한 개체를 사용하면 다음 태스크를 프로그래밍할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 모니터는 복제 토폴로지를 모니터링하는 데 사용할 수 있는 그래픽 도구입니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 복제 저장 프로시저 또는 RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 동일한 모니터링 데이터에 액세스할 수 있습니다. 이러한 개체를 사용하면 다음 태스크를 프로그래밍할 수 있습니다.  
   
 -   게시자, 게시 및 구독의 상태 모니터링  
   

@@ -2,9 +2,12 @@
 title: "병합 아티클의 처리 순서 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5b620fc73c704b30d87c9e95a10763ab27500cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1cb9d8b566766e23bfb17bc93b53d9d222fa3895
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>병합 아티클의 처리 순서 지정
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 병합 게시에 대한 아티클의 기본 처리 순서를 덮어쓸 수 있게 되었습니다. 트리거를 통해 참조 무결성을 정의하고 이러한 트리거가 특정 순서로 발생해야 할 경우 이러한 작업이 유용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 병합 게시에 대한 아티클의 기본 처리 순서를 덮어쓸 수 있게 되었습니다. 트리거를 통해 참조 무결성을 정의하고 이러한 트리거가 특정 순서로 발생해야 할 경우 이러한 작업이 유용할 수 있습니다.  
   
  **아티클의 처리 순서를 지정하려면**  
   

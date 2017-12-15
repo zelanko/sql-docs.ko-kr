@@ -2,9 +2,12 @@
 title: "예제: EXPLICIT 모드를 사용하여 형제 생성 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6889b92094b8f9767930506a6e32da07c60b92ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8288f4c535ab583ae154d18a76faac42b8fc4c62
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>예: EXPLICIT 모드를 사용하여 형제 생성
-  판매 주문 정보를 제공하는 XML을 생성한다고 가정해 보십시오. <`SalesPerson`> 및 <`OrderDetail`> 요소는 형제입니다. 각 Order에는 <`OrderHeader`> 요소 및 <`SalesPerson`> 요소가 하나씩 있고 하나 이상의 <`OrderDetail`> 요소가 있습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 판매 주문 정보를 제공하는 XML을 생성한다고 가정해 보십시오. <`SalesPerson`> 및 <`OrderDetail`> 요소는 형제입니다. 각 Order에는 <`OrderHeader`> 요소 및 <`SalesPerson`> 요소가 하나씩 있고 하나 이상의 <`OrderDetail`> 요소가 있습니다.  
   
 ```  
 <OrderHeader SalesOrderID=... OrderDate=... CustomerID=... >  

@@ -2,9 +2,12 @@
 title: "통계 업데이트 태스크(유지 관리 계획) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f8f8e5ff41a47d8c0b09e570f69e0d8a3532c3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 74685382e97db6911db1b45ca778099c921c562a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>통계 업데이트 태스크(유지 관리 계획)
-  **통계 업데이트 태스크** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 인덱스 데이터 정보를 업데이트할 수 있습니다. 데이터베이스의 사용자 테이블에 작성된 각 인덱스의 배포 통계를 다시 샘플링합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 배포 통계는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리하는 동안 테이블 탐색을 최적화합니다. 배포 통계를 자동으로 구축하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 각 인덱스에 대한 해당 테이블에서 데이터를 주기적으로 샘플링합니다. 샘플링하는 양은 테이블의 행 수와 데이터 수정 빈도를 기초로 정해집니다. 테이블에서 지정한 비율의 데이터를 사용하여 추가 샘플링을 수행하려면 이 옵션을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 정보를 사용하여 보다 향상된 쿼리 계획을 만듭니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **통계 업데이트 태스크** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 테이블 및 인덱스 데이터 정보를 업데이트할 수 있습니다. 데이터베이스의 사용자 테이블에 작성된 각 인덱스의 배포 통계를 다시 샘플링합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 배포 통계는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리하는 동안 테이블 탐색을 최적화합니다. 배포 통계를 자동으로 구축하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 각 인덱스에 대한 해당 테이블에서 데이터를 주기적으로 샘플링합니다. 샘플링하는 양은 테이블의 행 수와 데이터 수정 빈도를 기초로 정해집니다. 테이블에서 지정한 비율의 데이터를 사용하여 추가 샘플링을 수행하려면 이 옵션을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 정보를 사용하여 보다 향상된 쿼리 계획을 만듭니다.  
   
  이 태스크는 UPDATE STATISTICS 문을 실행합니다.  
   

@@ -2,9 +2,12 @@
 title: "온라인 복원(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f17516a1a1ac2d07da67ee4688703ef0a5ee5611
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8a92b8a183c2975e219ef5774cd110e5f53e483a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="online-restore-sql-server"></a>온라인 복원(SQL Server)
-  온라인 복원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서만 지원됩니다. 이 버전에서 기본적으로 파일, 페이지 또는 증분 복원은 온라인 상태입니다. 이 항목에서는 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우 및 단순 복구 모델에서 데이터베이스에 읽기 전용 파일 그룹만 있는 경우와 관련된 내용을 다룹니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 온라인 복원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서만 지원됩니다. 이 버전에서 기본적으로 파일, 페이지 또는 증분 복원은 온라인 상태입니다. 이 항목에서는 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우 및 단순 복구 모델에서 데이터베이스에 읽기 전용 파일 그룹만 있는 경우와 관련된 내용을 다룹니다.  
   
  데이터베이스가 온라인 상태인 데이터 복원을 *온라인 복원*이라고 합니다. 데이터베이스는 주 파일 그룹이 온라인 상태일 때마다 하나 이상의 보조 파일 그룹이 오프라인 상태일 경우에도 온라인 상태로 간주됩니다. 복구 모델에서는 데이터베이스가 온라인 상태일 때 오프라인인 파일을 복원할 수 있습니다. 전체 복구 모델에서도 데이터베이스가 온라인 상태일 때 페이지를 복원할 수 있습니다.  
   

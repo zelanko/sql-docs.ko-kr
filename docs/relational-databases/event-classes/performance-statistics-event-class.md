@@ -2,9 +2,12 @@
 title: "Performance Statistics 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1822de581220e2544ab14622b8a5784cc9cabc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 952bad5b2f70ce0d1c22579ea50708cd48e6b9a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 이벤트 클래스
-  Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프로시저 및 트리거의 성능을 모니터링하는 데 사용할 수 있습니다. 6개의 각 이벤트 하위 클래스는 시스템 내의 쿼리, 저장 프로시저 및 트리거의 유효 기간에 있는 이벤트를 나타냅니다. 이 이벤트 하위 클래스 및 관련 sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats 동적 관리 뷰를 조합하여 사용하면 지정된 쿼리, 저장 프로시저 또는 트리거의 성능 기록을 다시 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프로시저 및 트리거의 성능을 모니터링하는 데 사용할 수 있습니다. 6개의 각 이벤트 하위 클래스는 시스템 내의 쿼리, 저장 프로시저 및 트리거의 유효 기간에 있는 이벤트를 나타냅니다. 이 이벤트 하위 클래스 및 관련 sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats 동적 관리 뷰를 조합하여 사용하면 지정된 쿼리, 저장 프로시저 또는 트리거의 성능 기록을 다시 구성할 수 있습니다.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics 이벤트 클래스 데이터 열  
  다음 표에서는 EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 및 EventSubClass 5와 같은 각 이벤트 하위 클래스와 관련된 이벤트 클래스 데이터 열에 대해 설명합니다.  

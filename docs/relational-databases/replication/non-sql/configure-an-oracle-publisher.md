@@ -2,9 +2,12 @@
 title: "Oracle 게시자 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 66977f7eeb747d77d8f0db82b76b307e1aff2cca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 57b1971bbd25071242b35f32b25ffebbaf4fe6f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
-  Oracle 게시자에서의 게시는 일반 스냅숏 및 트랜잭션 게시가 만들어지는 것과 같은 방식으로 만들어지지만 Oracle 게시자에서 게시를 만들려면 먼저 다음 단계(1, 3, 4단계는 이 항목에서 자세히 설명)를 수행해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oracle 게시자에서의 게시는 일반 스냅숏 및 트랜잭션 게시가 만들어지는 것과 같은 방식으로 만들어지지만 Oracle 게시자에서 게시를 만들려면 먼저 다음 단계(1, 3, 4단계는 이 항목에서 자세히 설명)를 수행해야 합니다.  
   
 1.  제공된 스크립트를 사용하여 Oracle 데이터베이스 내에 복제 관리 사용자를 만듭니다.  
   

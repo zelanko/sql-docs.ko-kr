@@ -2,9 +2,12 @@
 title: "Audit Change Database Owner 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0d8f16a3377d07a17378a2264b3a1f38e70b713
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 27ed23d677fb77a47e12d6ebf14a5f95ff334dfc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner 이벤트 클래스
-  **Audit Change Database Owner** 이벤트 클래스는 ALTER AUTHORIZATION 문을 사용하여 데이터베이스 소유자를 변경하고 이 작업에 필요한 사용 권한이 확인된 경우 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Change Database Owner** 이벤트 클래스는 ALTER AUTHORIZATION 문을 사용하여 데이터베이스 소유자를 변경하고 이 작업에 필요한 사용 권한이 확인된 경우 발생합니다.  
   
 ## <a name="audit-change-database-owner-event-class-data-columns"></a>Audit Change Database Owner 이벤트 클래스 데이터 열  
   

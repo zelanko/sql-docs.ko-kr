@@ -2,9 +2,12 @@
 title: "역할 전환 중 서비스 중단 예측(데이터베이스 미러링) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86103fe23292df96c1ef11dafd0e3b5d70196e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2083d1c82e4557e4de96cd8841ce043563b25f90
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>역할 전환 중 서비스 중단 예측(데이터베이스 미러링)
-  역할 전환 중에 데이터베이스 미러링의 서비스가 중단되는 시간은 역할 전환의 유형 및 원인에 따라 달라집니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 역할 전환 중에 데이터베이스 미러링의 서비스가 중단되는 시간은 역할 전환의 유형 및 원인에 따라 달라집니다.  
   
 -   자동 장애 조치(Failover)의 경우 서비스 중단 시간은 미러 서버에서 주 서버 인스턴스의 실패를 인식하는 데 필요한 시간(오류 검색)과 데이터베이스 장애 조치에 필요한 시간(장애 조치 시간)에 의해 결정됩니다.  
   

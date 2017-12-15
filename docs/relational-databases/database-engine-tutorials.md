@@ -2,9 +2,12 @@
 title: "데이터베이스 엔진 자습서 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 618716ff9a9c6515945c3b93827136cba85d8470
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 613bff65995857827043bca80e968dfafe42a3b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
-이 섹션에는 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]에 대한 자습서가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 섹션에는 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]에 대한 자습서가 포함되어 있습니다.  
   
 [자습서: 데이터베이스 엔진 시작](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 이 자습서에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 인스턴스에 연결하는 방법에 대해 설명합니다.  

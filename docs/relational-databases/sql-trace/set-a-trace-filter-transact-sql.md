@@ -2,9 +2,12 @@
 title: "추적 필터 설정(Transact-SQL) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe092dd82ffd0ebadc9c8a2a79db62d3f8855009
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e2c3d67f34b0863731f76a647e43949e7a7a71ff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>추적 필터 설정(Transact-SQL)
-  이 항목에서는 추적 중인 이벤트에 필요한 정보만 검색하도록 필터를 만드는 데 저장 프로시저를 사용하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 추적 중인 이벤트에 필요한 정보만 검색하도록 필터를 만드는 데 저장 프로시저를 사용하는 방법에 대해 설명합니다.  
   
 ### <a name="to-set-a-trace-filter"></a>추적 필터를 설정하려면  
   

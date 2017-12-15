@@ -2,9 +2,12 @@
 title: "사용자 정의 함수 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 08c5ebad818f4a3f3c29396e6a60b84d36c86c00
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8ebc45dd380367954a9ad55d35b7543b49156779
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-defined-functions"></a>사용자 정의 함수
-  프로그래밍 언어의 함수처럼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 함수는 매개 변수를 받아들이고 복잡한 계산과 같은 동작을 수행하며 해당 작업의 결과를 값으로 반환합니다. 반환 값은 단일 스칼라 값이나 결과 집합일 수 있습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 프로그래밍 언어의 함수처럼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 함수는 매개 변수를 받아들이고 복잡한 계산과 같은 동작을 수행하며 해당 작업의 결과를 값으로 반환합니다. 반환 값은 단일 스칼라 값이나 결과 집합일 수 있습니다.  
    
 ##  <a name="Benefits"></a> 사용자 정의 함수  
 사용하는 이유 

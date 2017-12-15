@@ -2,9 +2,12 @@
 title: "결정적 함수 및 비결정적 함수 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0a9aeecbec7487e9d750fabb7e2374366f41678a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5001421d7cc477ea02ba128396796683f2a8b44b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>결정적 함수 및 비결정적 함수
-  결정적 함수는 데이터베이스의 상태가 같을 경우 특정 입력 값 집합으로 호출될 때마다 항상 동일한 결과를 반환합니다. 비결정적 함수는 액세스하는 데이터베이스의 상태가 동일하게 유지되더라도 특정 입력 값 집합으로 호출될 때마다 다른 결과를 반환할 수 있습니다. 예를 들어 AVG 함수는 항상 위에서 설명된 조건에 따라 동일한 결과를 반환하지만 현재 날짜/시간 값을 반환하는 GETDATE 함수는 항상 다른 결과를 반환합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 결정적 함수는 데이터베이스의 상태가 같을 경우 특정 입력 값 집합으로 호출될 때마다 항상 동일한 결과를 반환합니다. 비결정적 함수는 액세스하는 데이터베이스의 상태가 동일하게 유지되더라도 특정 입력 값 집합으로 호출될 때마다 다른 결과를 반환할 수 있습니다. 예를 들어 AVG 함수는 항상 위에서 설명된 조건에 따라 동일한 결과를 반환하지만 현재 날짜/시간 값을 반환하는 GETDATE 함수는 항상 다른 결과를 반환합니다.  
   
  사용자 정의 함수에는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 함수를 호출하는 계산 열의 인덱스를 통해 또는 함수를 참조하는 인덱싱된 뷰를 통해 함수의 결과를 인덱싱할 수 있는지 여부를 결정하는 여러 가지 속성이 있습니다. 함수의 결정성이 이러한 속성 중 하나입니다. 예를 들어 뷰에서 비결정적 함수를 참조하면 뷰에 클러스터형 인덱스를 만들 수 없습니다. 결정성을 비롯한 함수 속성에 대한 자세한 내용은 [사용자 정의 함수](../../relational-databases/user-defined-functions/user-defined-functions.md)를 참조하세요.  
   

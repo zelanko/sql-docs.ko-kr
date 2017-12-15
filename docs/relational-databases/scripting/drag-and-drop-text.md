@@ -2,9 +2,12 @@
 title: "텍스트 끌어다 놓기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 286ad84499dec5341ed3757d00eb7badcb56732c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9b55cb9cab0176d4d6e58870c087e75d2626822a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="drag-and-drop-text"></a>텍스트 끌어다 놓기
-  텍스트를 선택한 다음 다른 위치에 끌어 놓을 수 있습니다. 다음과 같이 텍스트를 끌어 놓을 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 텍스트를 선택한 다음 다른 위치에 끌어 놓을 수 있습니다. 다음과 같이 텍스트를 끌어 놓을 수 있습니다.  
   
 -   쿼리를 만들기 위해 개체 탐색기에서 편집기로  
   

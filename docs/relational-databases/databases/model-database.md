@@ -2,9 +2,12 @@
 title: "model 데이터베이스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8a4023cf2ac4d0176d421a262f13b9a4603fcc5a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0f012597cacaf7058b8463183c5c20c1fa042a37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-database"></a>model 데이터베이스
-  **model** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 생성된 모든 데이터베이스에 대한 템플릿으로 사용됩니다. **을(를) 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 생성되기 때문에 **model** 데이터베이스는 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 있어야 합니다. 데이터베이스 옵션을 포함한 **model** 데이터베이스의 전체 내용이 새 데이터베이스에 복사됩니다. 또한 **model** 의 일부 설정이 시작되는 동안 새 **tempdb** 를 만드는 데 사용되므로 **시스템에 항상** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 있어야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **model** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 생성된 모든 데이터베이스에 대한 템플릿으로 사용됩니다. **을(를) 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 생성되기 때문에 **model** 데이터베이스는 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 있어야 합니다. 데이터베이스 옵션을 포함한 **model** 데이터베이스의 전체 내용이 새 데이터베이스에 복사됩니다. 또한 **model** 의 일부 설정이 시작되는 동안 새 **tempdb** 를 만드는 데 사용되므로 **시스템에 항상** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 있어야 합니다.  
   
  새로 만든 사용자 데이터베이스는 model 데이터베이스와 같은 [복구 모델](../../relational-databases/backup-restore/recovery-models-sql-server.md) 을 사용합니다. 기본값은 사용자 구성입니다. 모델의 현재 복구 모델에 대한 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
   

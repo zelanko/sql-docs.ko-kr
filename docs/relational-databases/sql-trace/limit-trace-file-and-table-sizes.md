@@ -2,9 +2,12 @@
 title: "추적 파일 및 테이블 크기 제한 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9827287ecea08ca547c2b371c8e0696e37c7d02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cb3a4845d48fb24d5ca97823b2844e1c3ca369cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>추적 파일 및 테이블 크기 제한
-  SQL 추적 파일의 크기는 추적에 포함된 이벤트 클래스와 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 사용되는 방식에 따라 달라집니다. 자주 발생하는 이벤트 클래스를 추적하는 경우 최대 파일 크기나 최대 행 수를 설정하여 추적을 통해 수집되는 데이터의 양을 최소화할 수 있습니다. 최대 파일 크기나 최대 행 수를 지정하면 추적 파일이나 테이블의 크기가 지정된 한도를 초과하지 않습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL 추적 파일의 크기는 추적에 포함된 이벤트 클래스와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 사용되는 방식에 따라 달라집니다. 자주 발생하는 이벤트 클래스를 추적하는 경우 최대 파일 크기나 최대 행 수를 설정하여 추적을 통해 수집되는 데이터의 양을 최소화할 수 있습니다. 최대 파일 크기나 최대 행 수를 지정하면 추적 파일이나 테이블의 크기가 지정된 한도를 초과하지 않습니다.  
   
 > [!NOTE]  
 >  추적 데이터를 기존 파일에 저장할 때는 데이터를 파일 끝에 추가하거나 기존 파일을 덮어쓸 수 있습니다. 데이터를 파일에 추가할 때 추적 파일이 지정된 최대 크기에 도달하거나 이 크기를 넘어서면 최대 파일 크기를 늘리거나 새 파일을 지정할 수 있습니다. 추적 테이블에서도 마찬가지입니다.  

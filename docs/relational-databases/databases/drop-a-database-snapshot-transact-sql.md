@@ -2,9 +2,12 @@
 title: "데이터베이스 스냅숏 삭제(Transact-SQL) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f37382bdb42a1fe7e7023c1d8a44e0626ce498dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2a86dbd8133febc11c103a97515fe486a79726de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 삭제(Transact-SQL)
-  데이터베이스 스냅숏을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 스냅숏이 삭제되고 스냅숏에 사용된 스파스 파일도 삭제됩니다. 또한 데이터베이스 스냅숏에 대한 모든 사용자 연결이 종료됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 스냅숏을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 스냅숏이 삭제되고 스냅숏에 사용된 스파스 파일도 삭제됩니다. 또한 데이터베이스 스냅숏에 대한 모든 사용자 연결이 종료됩니다.  
   
 ## <a name="security"></a>보안  
   

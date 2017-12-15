@@ -2,9 +2,12 @@
 title: "SQL Server 데이터베이스 엔진 이전 버전과의 호환성 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2049c634c40201e111d1d5875f83103cd43e1b19
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b457c021a4692a2e29becf690b684215f860c77d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server 데이터베이스 엔진의 이전 버전과의 호환성
-  이전 버전과의 호환성 섹션 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전 간의 동작 변경 내용에 대해 설명합니다.  
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] 이전 버전과의 호환성 섹션 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 간의 동작 변경 내용에 대해 설명합니다.  
   
 |항목|Description|  
 |-----------|-----------------|  

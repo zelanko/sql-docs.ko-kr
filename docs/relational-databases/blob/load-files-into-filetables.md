@@ -2,9 +2,12 @@
 title: "FileTable로 파일 로드 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fb882532e2c368c085b3834a0332e3c716ffd1c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b9c1a12ddc536837a805d1d6b9da117e5a2d7087
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="load-files-into-filetables"></a>FileTable로 파일 로드
-  파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
   
 ##  <a name="BasicsLoadNew"></a> FileTable로 파일 로드 또는 마이그레이션  
  FileTable로 파일을 로드하거나 마이그레이션하기 위해 선택하는 방법은 파일이 현재 저장된 위치에 따라 달라집니다.  

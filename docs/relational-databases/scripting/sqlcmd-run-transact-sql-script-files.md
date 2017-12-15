@@ -2,9 +2,12 @@
 title: "sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/15/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fdb3188dfd164ff5bd72dcd60be58d7a5c609923
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 29c0d2c346777e0f5add0c1b4fd03517f5e9c587
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Transact-SQL 스크립트 파일 실행
- **sqlcmd** 를 사용하여 Transact-SQL 스크립트 파일을 실행합니다. Transact-SQL 스크립트 파일은 Transact-SQL 문, **sqlcmd** 명령 및 스크립팅 변수의 조합을 포함할 수 있는 텍스트 파일입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **sqlcmd**를 사용하여 Transact-SQL 스크립트 파일을 실행합니다. Transact-SQL 스크립트 파일은 Transact-SQL 문, **sqlcmd** 명령 및 스크립팅 변수의 조합을 포함할 수 있는 텍스트 파일입니다.  
 
 ## <a name="create-a-script-file"></a>스크립트 파일 만들기  
  메모장을 사용하여 간단한 Transact-SQL 스크립트 파일을 만들려면 다음 단계를 따르세요.  

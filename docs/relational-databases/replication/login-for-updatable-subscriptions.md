@@ -2,9 +2,12 @@
 title: "업데이트할 수 있는 구독에 대한 로그인 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 906d464c7e3f345c21034cffcd51e1494c0724c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0ae8beff6dc6f55ea6db9ce23c9f582e1fa108be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="login-for-updatable-subscriptions"></a>업데이트할 수 있는 구독에 대한 로그인
-  즉시 업데이트를 위해 이 마법사의 **업데이트할 수 있는 구독** 페이지에서 **복제**를 선택한 경우 게시자에 연결할 때 사용할 구독자로 계정을 지정해야 합니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 즉시 업데이트를 위해 이 마법사의 **업데이트할 수 있는 구독** 페이지에서 **복제**를 선택한 경우 게시자에 연결할 때 사용할 구독자로 계정을 지정해야 합니다. 
   
  이 연결은 구독자에서 발생되는 트리거에 사용되고 게시자로 변경 내용을 전파합니다. 이 계정은 **업데이트할 수 있는 구독** 페이지에서 **변경 내용 대기 및 가능 시 커밋**을 선택한 경우에도 필요합니다. 기본적으로 새 구독 마법사는 필요한 경우 즉시 업데이트로 전환할 수 있는 기능으로 지연 업데이트를 구성합니다.  
   

@@ -2,9 +2,12 @@
 title: "User Error Message 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e0d31b41e2188f4a9eea84f428ed995370e4d4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 30fd7468f8cfddf8bd614dfdddf270891dcc6f1c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 이벤트 클래스
-  User Error Message 이벤트 클래스는 오류 또는 예외 발생 시 사용자에게 나타나는 오류 메시지를 표시합니다. 오류 메시지 텍스트는 TextData 필드에 나타납니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] User Error Message 이벤트 클래스는 오류 또는 예외 발생 시 사용자에게 나타나는 오류 메시지를 표시합니다. 오류 메시지 텍스트는 TextData 필드에 나타납니다.  
   
 ## <a name="user-error-message-event-class-data-columns"></a>User Error Message 이벤트 클래스 데이터 열  
   

@@ -2,9 +2,12 @@
 title: "Audit Database Principal Management 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c73c2f34b86240f270b1e3170237ec6cbe5d6891
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 390c9b67cfc5746de4a124cc229ff074f743e177
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management 이벤트 클래스
-  **Audit Database Principal Management** 이벤트 클래스는 데이터베이스에서 사용자 같은 보안 주체를 만들고 변경하거나 삭제할 때 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Database Principal Management** 이벤트 클래스는 데이터베이스에서 사용자 같은 보안 주체를 만들고 변경하거나 삭제할 때 발생합니다.  
   
 ## <a name="audit-database-principal-management-event-class-data-columns"></a>Audit Database Principal Management 이벤트 클래스 데이터 열  
   

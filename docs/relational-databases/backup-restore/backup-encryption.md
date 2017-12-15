@@ -2,9 +2,12 @@
 title: "백업 암호화 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aef0a3ecd56079d7dd23e7501e0bca8d342c8842
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c58756989760d56c2f7906c0493cefb2b30d2b0d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-encryption"></a>백업 암호화
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 암호화 옵션에 대해 간략하게 설명합니다. 여기에서는 백업 중의 암호화에 대한 사용법, 이점 및 권장 방법을 살펴봅니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 암호화 옵션에 대해 간략하게 설명합니다. 여기에서는 백업 중의 암호화에 대한 사용법, 이점 및 권장 방법을 살펴봅니다.  
   
   
 ##  <a name="Overview"></a> 개요  

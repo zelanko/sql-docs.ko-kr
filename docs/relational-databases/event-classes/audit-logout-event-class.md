@@ -2,9 +2,12 @@
 title: "Audit Logout 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8434d544c02f720277db5526ccc5854cf3d9dc68
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fbf12181cfe5ba30133df2ba05a9e5769642d6e3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout 이벤트 클래스
-  **Audit Logout** 이벤트 클래스는 사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로그아웃(로그오프)했음을 나타냅니다. 이 이벤트 클래스는 연결 풀에서 다시 사용된 연결 또는 새 연결에 의해 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Logout** 이벤트 클래스는 사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로그아웃(로그오프)했음을 나타냅니다. 이 이벤트 클래스는 연결 풀에서 다시 사용된 연결 또는 새 연결에 의해 발생합니다.  
   
 ## <a name="audit-logout-event-class-data-columns"></a>Audit Logout 이벤트 클래스 데이터 열  
   

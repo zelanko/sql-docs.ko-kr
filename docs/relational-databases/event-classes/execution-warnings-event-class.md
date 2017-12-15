@@ -2,9 +2,12 @@
 title: "Execution Warnings 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a0f3903f3bcf19915b962f95e413ccee492ae34c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 이벤트 클래스
-  Execution Warnings 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문이나 저장 프로시저를 실행하는 동안 발생한 메모리 부여 경고를 나타냅니다. 이 이벤트 클래스를 모니터링하여 계속하기 전에 쿼리가 1초 이상 메모리를 기다려야 하는지 또는 메모리를 가져오려는 초기 시도가 실패했는지 여부를 확인할 수 있습니다. 쿼리 대기 기간에 대한 정보를 통해 성능에 영향을 미칠 수 있는 시스템이 경합 문제를 확인할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Execution Warnings 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문이나 저장 프로시저를 실행하는 동안 발생한 메모리 부여 경고를 나타냅니다. 이 이벤트 클래스를 모니터링하여 계속하기 전에 쿼리가 1초 이상 메모리를 기다려야 하는지 또는 메모리를 가져오려는 초기 시도가 실패했는지 여부를 확인할 수 있습니다. 쿼리 대기 기간에 대한 정보를 통해 성능에 영향을 미칠 수 있는 시스템이 경합 문제를 확인할 수 있습니다.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Execution Warnings 이벤트 클래스 데이터 열  
   

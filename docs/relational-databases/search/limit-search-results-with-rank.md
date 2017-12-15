@@ -2,9 +2,12 @@
 title: "RANK를 사용하여 검색 결과 제한 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f82c1bfe30401d60de557c79ad7fd95be78496c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aec9bea3dabdf53867f6346ac10ee42d7b2e297a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="limit-search-results-with-rank"></a>RANK를 사용하여 검색 결과 제한
-  [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 함수는 0부터 1000까지의 서수 값(순위 값)이 포함된 RANK라는 열을 반환합니다. 이러한 값은 반환된 행이 선택 조건에 얼마나 일치하는지에 따라 순위를 매기는 데 사용됩니다. 순위 값은 결과 집합에 포함된 행의 관련성을 나타내는 상대적 순서일 뿐이며 값이 작을수록 관련이 없는 것입니다. 실제 값은 중요하지 않으며 일반적으로 쿼리가 실행될 때마다 달라집니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 함수는 0부터 1000까지의 서수 값(순위 값)이 포함된 RANK라는 열을 반환합니다. 이러한 값은 반환된 행이 선택 조건에 얼마나 일치하는지에 따라 순위를 매기는 데 사용됩니다. 순위 값은 결과 집합에 포함된 행의 관련성을 나타내는 상대적 순서일 뿐이며 값이 작을수록 관련이 없는 것입니다. 실제 값은 중요하지 않으며 일반적으로 쿼리가 실행될 때마다 달라집니다.  
   
 > [!NOTE]  
 >  CONTAINS 및 FREETEXT 조건자는 순위 값을 반환하지 않습니다.  

@@ -2,9 +2,12 @@
 title: "데이터베이스 엔진 cmdlet 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f73610b00bc4c7dd6e68128f841a3c7a1e6ed691
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3833567185c16097983cfce99fca2e33d61d88e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-database-engine-cmdlets"></a>데이터베이스 엔진 cmdlet 사용
-  Windows PowerShell cmdlet은 **Get-Help** 또는 **Set-MachineName**과 같이 일반적으로 동사-명사 명명 규칙을 사용하는 단일 함수 명령입니다. Windows PowerShell의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 cmdlet을 제공합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Windows PowerShell cmdlet은 **Get-Help** 또는 **Set-MachineName**과 같이 일반적으로 동사-명사 명명 규칙을 사용하는 단일 함수 명령입니다. Windows PowerShell의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 cmdlet을 제공합니다.  
   
 ## <a name="database-engine-cmdlets"></a>데이터베이스 엔진 cmdlet  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 적은 수의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]cmdlet을 구현합니다. 이러한 cmdlet은 새 PowerShell 스크립트에서 기존 Transact-SQL 스크립트를 실행하고 정책 기반 관리 정책을 평가하며 SQL Server 공급자 경로에서 SQL Server 식별자 지정을 지원하는 데 주로 사용됩니다.  

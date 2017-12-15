@@ -2,9 +2,12 @@
 title: "리소스 관리자 분류자 함수 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01c1a57ade59d9bf46c4c1f2f71a5b8c61fd61b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a47914e36079c04040e1ccc23228278396154fbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor-classifier-function"></a>리소스 관리자 분류자 함수
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자 분류 프로세스는 세션 특징에 기초하여 들어오는 세션을 작업 그룹에 할당합니다. 분류자 함수라고 하는 사용자 정의 함수를 작성하여 원하는 분류 논리를 지정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자 분류 프로세스는 세션 특징에 기초하여 들어오는 세션을 작업 그룹에 할당합니다. 분류자 함수라고 하는 사용자 정의 함수를 작성하여 원하는 분류 논리를 지정할 수 있습니다.  
   
 ## <a name="classification"></a>분류  
  리소스 관리자는 들어오는 세션의 분류를 지원합니다. 분류는 함수에 포함된 사용자 작성 조건 집합을 기준으로 합니다. 함수 논리의 결과는 리소스 관리자가 세션을 기존 작업 그룹으로 분류할 수 있도록 합니다.  

@@ -2,9 +2,12 @@
 title: "Database Mirroring State Change 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c9c5f47027665959d5c4a3de973b5d2d9906323d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 121371d0836b3cdfa47eb5d0e9efd4363b7eba23
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 이벤트 클래스
-  **Database Mirroring State Change** 이벤트 클래스는 미러된 데이터베이스의 상태가 변경되는 시기를 나타냅니다. 미러된 데이터베이스의 상태를 모니터링하는 추적에 이 이벤트 클래스를 포함시키십시오.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Database Mirroring State Change** 이벤트 클래스는 미러된 데이터베이스의 상태가 변경되는 시기를 나타냅니다. 미러된 데이터베이스의 상태를 모니터링하는 추적에 이 이벤트 클래스를 포함시키십시오.  
   
  **Database Mirroring State Change** 이벤트 클래스가 추적에 포함되면 상대적인 오버헤드가 줄어듭니다. 오버헤드는 미러된 데이터베이스의 상태가 증가하면 커질 수 있습니다.  
   

@@ -2,9 +2,12 @@
 title: "Log File Auto Grow 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06f40386c647c7ade6a7e5c1ecf6e520e1baf35a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4db9822ea9dc2c9d748f4bb25e5543cc62f6cb52
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow 이벤트 클래스
-  **Log File Auto Grow** 이벤트 클래스는 로그 파일이 자동으로 증가했음을 나타냅니다. 이 이벤트는 ALTER DATABASE 문의 명시적인 실행으로 로그 파일이 증가하는 경우에는 트리거되지 않습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Log File Auto Grow** 이벤트 클래스는 로그 파일이 자동으로 증가했음을 나타냅니다. 이 이벤트는 ALTER DATABASE 문의 명시적인 실행으로 로그 파일이 증가하는 경우에는 트리거되지 않습니다.  
   
  로그 파일 증가를 모니터링하는 추적에 **Log File Auto Grow** 이벤트 클래스를 포함시키십시오. 추적에 이 이벤트 클래스를 포함시켜도 로그 파일이 자동으로 자주 증가하지 않는 이상 발생하는 오버헤드의 양은 적습니다.  
   

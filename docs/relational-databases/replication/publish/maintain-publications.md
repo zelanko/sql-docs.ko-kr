@@ -2,9 +2,12 @@
 title: "게시 유지 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d59c127b40a58b9220a3d688f3a582afe995bab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 53e7f5b47fbe23aa1604c3e37ea2a03866622463
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintain-publications"></a>게시 유지 관리
-  게시를 만든 후에 아티클을 추가 또는 삭제하거나 게시 및 아티클 속성을 변경해야 할 수 있습니다. 게시가 생성된 후에는 대부분의 변경이 허용되지만 일부 경우에 게시에 대한 스냅숏을 새로 생성하거나 게시에 대한 구독을 다시 초기화해야 합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 게시를 만든 후에 아티클을 추가 또는 삭제하거나 게시 및 아티클 속성을 변경해야 할 수 있습니다. 게시가 생성된 후에는 대부분의 변경이 허용되지만 일부 경우에 게시에 대한 스냅숏을 새로 생성하거나 게시에 대한 구독을 다시 초기화해야 합니다.

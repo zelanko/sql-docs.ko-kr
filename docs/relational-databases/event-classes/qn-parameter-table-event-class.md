@@ -2,9 +2,12 @@
 title: "QN:Parameter Table 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e19fa279cda3a65a610d0de8d08129f27e3ab0e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dc1ebd3985e0620cf72bb23bdfad2ff6c068008e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 이벤트 클래스
-  QN:Parameter table 이벤트는 매개 변수 테이블에 대한 참조 수를 만들고 보관하며 매개 변수 정보를 저장하는 내부 테이블을 삭제하는 데 필요한 작업에 대한 정보를 보고합니다. 이 이벤트는 또한 매개 변수 테이블에 대한 사용 개수를 다시 설정하기 위한 내부 작업도 보고합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] QN:Parameter table 이벤트는 매개 변수 테이블에 대한 참조 수를 만들고 보관하며 매개 변수 정보를 저장하는 내부 테이블을 삭제하는 데 필요한 작업에 대한 정보를 보고합니다. 이 이벤트는 또한 매개 변수 테이블에 대한 사용 개수를 다시 설정하기 위한 내부 작업도 보고합니다.  
   
 ## <a name="qnparameter-table-event-class-data-columns"></a>QN:Parameter table 이벤트 클래스 데이터 열  
   

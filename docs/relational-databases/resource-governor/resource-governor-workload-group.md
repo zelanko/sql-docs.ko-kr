@@ -2,9 +2,12 @@
 title: "리소스 관리자 작업 그룹 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f137c0861604399a5dba67b0575184a52580f6f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c4082e1620729a964eafad177bedca55ce6506a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor-workload-group"></a>리소스 관리자 작업 그룹
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자에서 작업 그룹은 분류 기준이 유사한 세션 요청에 대한 컨테이너의 역할을 합니다. 작업 그룹을 사용하면 세션의 집계 모니터링이 가능하며 작업 그룹으로 세션의 정책을 정의할 수 있습니다. 각 작업 그룹은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 물리적 리소스의 하위 집합을 나타내는 리소스 풀에 있습니다. 세션이 시작되면 리소스 관리자 분류자가 세션을 특정 작업 그룹에 할당하고, 세션은 작업 그룹에 할당된 정책 및 리소스 풀에 정의된 리소스를 사용하여 실행해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자에서 작업 그룹은 분류 기준이 유사한 세션 요청에 대한 컨테이너의 역할을 합니다. 작업 그룹을 사용하면 세션의 집계 모니터링이 가능하며 작업 그룹으로 세션의 정책을 정의할 수 있습니다. 각 작업 그룹은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 물리적 리소스의 하위 집합을 나타내는 리소스 풀에 있습니다. 세션이 시작되면 리소스 관리자 분류자가 세션을 특정 작업 그룹에 할당하고, 세션은 작업 그룹에 할당된 정책 및 리소스 풀에 정의된 리소스를 사용하여 실행해야 합니다.  
   
 ## <a name="workload-group-concepts"></a>작업 그룹 개념  
  작업 그룹은 각 요청에 적용되는 분류 조건에 따라 유사한 세션 요청의 컨테이너 역할을 수행합니다. 작업 그룹을 사용하면 리소스 소비에 대해 집계 모니터링을 수행하고 그룹에 있는 모든 요청에 단일 정책을 적용할 수 있습니다. 그룹은 해당 멤버에 대한 정책을 정의합니다.  

@@ -2,9 +2,12 @@
 title: "시간 기반 행 필터에 대한 모범 사례 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 80f52f422d5804a14dc3fbac86ac40a2d3a143ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e69e6e0cd9c17b7fdd8f47480e5f47f3611b0bc6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법
-  응용 프로그램 사용자가 테이블의 시간 기반 데이터 하위 집합을 필요로 하는 경우가 종종 있습니다. 예를 들어 영업 사원이 지난 주의 주문 데이터를 필요로 하거나, 행사 계획자가 다음 주의 행사 데이터를 필요로 할 수 있습니다. 대부분의 경우 응용 프로그램에서는 **GETDATE()** 함수가 들어 있는 쿼리를 사용하여 이 작업을 수행합니다. 예를 들어 다음과 같은 행 필터 문을 사용한다고 가정합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 응용 프로그램 사용자가 테이블의 시간 기반 데이터 하위 집합을 필요로 하는 경우가 종종 있습니다. 예를 들어 영업 사원이 지난 주의 주문 데이터를 필요로 하거나, 행사 계획자가 다음 주의 행사 데이터를 필요로 할 수 있습니다. 대부분의 경우 응용 프로그램에서는 **GETDATE()** 함수가 들어 있는 쿼리를 사용하여 이 작업을 수행합니다. 예를 들어 다음과 같은 행 필터 문을 사용한다고 가정합니다.  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  

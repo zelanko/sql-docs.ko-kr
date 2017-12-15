@@ -2,9 +2,12 @@
 title: "아티클 속성 - &lt;Article&gt; | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e023115d959322e0e870d6ef43c7ffcdcc82f21f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
-  **아티클 속성** 대화 상자는 새 게시 마법사 및 **게시 속성** 대화 상자에서 사용할 수 있습니다. 이 대화 상자를 사용하여 모든 아티클 유형에 대한 속성을 보고 설정할 수 있습니다. 게시가 생성된 경우에만 설정할 수 있거나 게시에 활성 구독이 없는 경우에만 설정할 수 있는 속성이 있습니다. 설정할 수 없는 속성은 읽기 전용으로 표시됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **아티클 속성** 대화 상자는 새 게시 마법사 및 **게시 속성** 대화 상자에서 사용할 수 있습니다. 이 대화 상자를 사용하여 모든 아티클 유형에 대한 속성을 보고 설정할 수 있습니다. 게시가 생성된 경우에만 설정할 수 있거나 게시에 활성 구독이 없는 경우에만 설정할 수 있는 속성이 있습니다. 설정할 수 없는 속성은 읽기 전용으로 표시됩니다.  
   
 > [!NOTE]  
 >  게시가 생성되면 일부 속성 변경으로 인해 새 스냅숏이 필요합니다. 게시에 구독이 있는 경우에는 이러한 변경 내용으로 인해 모든 구독도 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  

@@ -2,9 +2,12 @@
 title: "미러링 모니터 서버 포함(데이터베이스 미러링 보안 구성 마법사) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5baeadde58fe5564521da27eda4de21e3c8642ae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 119702366eacff14a92941dba0c76ea1e3927149
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>미러링 모니터 서버 포함(데이터베이스 미러링 보안 구성 마법사)
-  이 페이지를 사용하여 데이터베이스 미러링에 대한 보안 구성에 미러링 모니터 서버를 포함할지 여부를 지정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 데이터베이스 미러링에 대한 보안 구성에 미러링 모니터 서버를 포함할지 여부를 지정할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 구성하려면**  
   

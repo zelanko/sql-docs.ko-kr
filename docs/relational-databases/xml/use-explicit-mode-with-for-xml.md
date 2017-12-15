@@ -2,9 +2,12 @@
 title: "FOR XML에서 EXPLICIT 모드 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4972860dbfc2eaa8d0b04da88f304a95b17a4bd6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eb42524c0b75942739eef545b01caab76d21c3f4
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
-  [FOR XML을 사용하는 XML 생성](../../relational-databases/xml/for-xml-sql-server.md)항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [FOR XML을 사용하는 XML 생성](../../relational-databases/xml/for-xml-sql-server.md) 항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
   
  XML에 예상되는 중첩과 같은 필수 XML에 대한 추가 정보는 쿼리의 일부로 명시적으로 지정하는 방식으로 EXPLICIT 모드 쿼리를 작성해야 합니다. 요청한 XML에 따라 EXPLICIT 모드 쿼리를 작성하는 작업은 복잡할 수 있습니다. EXPLICIT 모드 쿼리를 작성하는 것보다는 [PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md) 의 설명에 따라 중첩을 사용하는 것이 더 간단합니다.  
   

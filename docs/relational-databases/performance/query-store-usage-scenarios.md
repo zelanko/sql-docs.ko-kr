@@ -1,31 +1,27 @@
 ---
 title: "쿼리 저장소 사용 시나리오 | Microsoft 문서"
 ms.custom: 
-ms.date: 04/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, usage scenarios
+helpviewer_keywords: Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ ms.lasthandoff: 09/27/2017
   
 4.  최신 데이터베이스 호환성 수준으로 이동: 워크로드를 최신 쿼리 최적화 프로그램 변경 내용에 노출하여 잠재적으로 새 계획을 만들 수 있도록 합니다.  
   
-5.  분석 및 회귀 수정에 쿼리 저장소 사용: 대부분의 경우 새 쿼리 최적화 프로그램 변경 내용은 향상된 계획을 생성합니다. 그러나 쿼리 저장소는 계획 선택 회귀를 식별하고 계획 강제 적용 메커니즘을 사용하여 수정하는 간편한 방법을 제공합니다.  
+5.  분석 및 회귀 수정에 쿼리 저장소 사용: 대부분의 경우 새 쿼리 최적화 프로그램 변경 내용은 향상된 계획을 생성합니다. 그러나 쿼리 저장소는 계획 선택 회귀를 식별하고 계획 강제 적용 메커니즘을 사용하여 수정하는 간편한 방법을 제공합니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터는 [자동 계획 수정](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) 기능을 사용할 때 이 단계가 자동화됩니다.  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>임시 워크로드 식별 및 개선  
  일부 워크로드에는 전체 응용 프로그램 성능을 개선하기 위해 조정할 수 있는 주요 쿼리가 없습니다. 이러한 워크로드는 일반적으로 각각 시스템 리소스의 일부를 사용하는 비교적 다수의 쿼리가 있는 것이 특징입니다. 이러한 쿼리는 거의 실행되지 않으므로(일반적으로 한 번만 실행되므로 임시 쿼리라고 함) 해당 런타임 소비는 중요하지 않습니다. 반면, 응용 프로그램이 항상 완전히 새로운 쿼리를 생성하는 경우에는 시스템 리소스의 상당 부분이 최적화되지 않은 쿼리 컴파일에 소비됩니다. 이는 많은 수의 쿼리와 계획이 예약된 공간을 차지하는 경우 쿼리 저장소에 이상적인 상황이 아닙니다. 즉, 쿼리 저장소가 매우 빠르게 읽기 전용 모드로 전환될 수 있습니다. **크기 기반 정리 정책** (쿼리 저장소를 항상 실행되도록 유지하는 데[매우 권장됨](best-practice-with-the-query-store.md) )을 활성화한 경우 백그라운드 프로세스에서 쿼리 저장소 구조를 정리하므로 대부분의 시간 동안 상당한 시스템 리소스가 소비됩니다.  
@@ -229,4 +225,3 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   
-

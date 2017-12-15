@@ -2,9 +2,12 @@
 title: "Degree of Parallelism(7.0 Insert) 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95729129949c05a1432930f370f97303400671cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3d3e4fa041793a60425121fa9abd2a920d9eab35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 이벤트 클래스
-  **Degree of Parallelism (7.0 Insert)** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SELECT, INSERT, UPDATE 또는 DELETE 문을 각각 실행할 때 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Degree of Parallelism (7.0 Insert)** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SELECT, INSERT, UPDATE 또는 DELETE 문을 각각 실행할 때 발생합니다.  
   
  이 이벤트 클래스가 추적에 포함되면 이러한 이벤트가 자주 발생할 경우 수반되는 오버헤드의 크기로 인해 성능이 크게 저하될 수 있습니다. 오버헤드 발생을 최소화하려면 특정 문제를 간단히 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  
   

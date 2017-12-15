@@ -2,9 +2,12 @@
 title: "Audit Schema Object Take Ownership 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3eb6eca99cfcfd182ac71a942136bca3586ac052
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d33b405c83a983f428b9f231cd7f6086a75a7916
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership 이벤트 클래스
-  **Audit Schema Object Take Ownership** 이벤트 클래스는 테이블, 프로시저 또는 함수와 같은 스키마 개체의 소유자 변경 권한이 확인된 경우 발생합니다. 이 이벤트 클래스는 ALTER AUTHORIZATION 문을 사용하여 개체에 소유자를 할당할 때 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Schema Object Take Ownership** 이벤트 클래스는 테이블, 프로시저 또는 함수와 같은 스키마 개체의 소유자 변경 권한이 확인된 경우 발생합니다. 이 이벤트 클래스는 ALTER AUTHORIZATION 문을 사용하여 개체에 소유자를 할당할 때 발생합니다.  
   
 ## <a name="audit-schema-object-take-ownership-event-class-data-columns"></a>Audit Schema Object Take Ownership 이벤트 클래스 데이터 열  
   

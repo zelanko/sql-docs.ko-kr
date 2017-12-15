@@ -1,10 +1,13 @@
 ---
 title: "쿼리 저장소에 대한 모범 사례 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 작업에 쿼리 저장소를 사용하는 모범 사례에 대해 설명합니다.  
   
-##  <a name="SSMS"></a> 최신 SQL Server Management Studio 사용  
+##  <a name="SSMS"></a> 최신 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 사용  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 작업에 대해 수집된 데이터를 사용할 뿐 아니라 쿼리 저장소를 구성하기 위해 디자인된 사용자 인터페이스 집합이 있습니다.  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 최신 버전은 [여기](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)에서 다운로드하세요.  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 개체 탐색기의 데이터베이스 노드 아래에서 쿼리 저장소 하위 폴더로 이동하여 특정 시나리오에 대한 문제 해결 보기를 엽니다.   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 쿼리 저장소 보기는 실행 메트릭 집합을 사용하여 동작하며 각 메트릭은 다음 통계 함수 중 하나로 표현됩니다.  
   
-|실행 메트릭|통계 함수|  
-|----------------------|------------------------|  
-|CPU 시간, 기간, 실행 수, 논리적 읽기 수, 논리적 쓰기, 메모리 사용 및 물리적 읽기|평균, 최대값, 최소값, 표준 편차, 합계|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전|실행 메트릭|통계 함수|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU 시간, 기간, 실행 수, 논리적 읽기, 논리적 쓰기, 메모리 사용, 물리적 읽기, CLR 시간, DOP(병렬 처리 수준) 및 행 개수|평균, 최대값, 최소값, 표준 편차, 합계|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU 시간, 기간, 실행 수, 논리적 읽기, 논리적 쓰기, 메모리 사용, 물리적 읽기, CLR 시간, DOP(병렬 처리 수준), 행 개수, 로그 메모리, TempDB 메모리 및 대기 시간|평균, 최대값, 최소값, 표준 편차, 합계|
   
  다음 그림은 쿼리 저장소 보기를 찾는 방법을 보여 줍니다.  
   
@@ -200,7 +204,7 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- 명시적으로 작업 모드를 읽기-쓰기로 변경하는 다음 문을 실행하여 위 단계 중 하나 또는 모두를 적용할 수 있습니다.  
+명시적으로 작업 모드를 읽기-쓰기로 변경하는 다음 문을 실행하여 위 단계 중 하나 또는 모두를 적용할 수 있습니다.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

@@ -2,9 +2,12 @@
 title: "지연 업데이트 충돌 감지 및 해결 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30768bae36208218fc5529c64744abc7e1b12a44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b48c692d0f4992c46bcf27ffa80e2d1bf0740c39
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>업데이트할 수 있는 구독 - 지연 업데이트 충돌 해결
-  지연 업데이트 구독으로 여러 위치에서 같은 데이터를 수정할 수 있기 때문에 데이터를 게시자에 동기화할 때 충돌이 발생할 수 있습니다. 복제는 변경 내용이 게시자와 동기화될 때 충돌을 감지하고 게시를 만들 때 선택한 해결 정책을 사용하여 이러한 충돌을 해결합니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 지연 업데이트 구독으로 여러 위치에서 같은 데이터를 수정할 수 있기 때문에 데이터를 게시자에 동기화할 때 충돌이 발생할 수 있습니다. 복제는 변경 내용이 게시자와 동기화될 때 충돌을 감지하고 게시를 만들 때 선택한 해결 정책을 사용하여 이러한 충돌을 해결합니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  
   
 -   업데이트 및 삽입 충돌. 이러한 충돌은 같은 데이터를 두 위치에서 변경할 때 발생합니다. 이 경우 한 가지 변경 내용만 적용됩니다.  
   

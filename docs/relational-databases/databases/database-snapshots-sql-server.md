@@ -2,9 +2,12 @@
 title: "데이터베이스 스냅숏(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 69680a68ba3656f3bbbaa0515da33cd602d1473f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6c8389b3c37b71df9e49a75c45b667cc4575192c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-snapshots-sql-server"></a>데이터베이스 스냅숏(SQL Server)
-  데이터베이스 스냅숏은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스(*원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅숏은 스냅숏을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅숏은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 원본 데이터베이스가 업데이트되면 데이터베이스 스냅숏도 업데이트됩니다. 따라서 데이터베이스 스냅숏을 오래 보관할수록 사용 가능한 공간이 소모될 가능성이 높습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 스냅숏은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스(*원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅숏은 스냅숏을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅숏은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 원본 데이터베이스가 업데이트되면 데이터베이스 스냅숏도 업데이트됩니다. 따라서 데이터베이스 스냅숏을 오래 보관할수록 사용 가능한 공간이 소모될 가능성이 높습니다.  
   
  지정된 원본 데이터베이스에 스냅숏이 여러 개 있을 수 있습니다. 각 데이터베이스 스냅숏은 데이터베이스 소유자가 명시적으로 삭제하기 전까지 유지됩니다.  
   

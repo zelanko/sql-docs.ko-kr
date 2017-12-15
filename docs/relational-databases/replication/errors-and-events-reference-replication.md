@@ -2,9 +2,12 @@
 title: "오류 및 이벤트 참조(복제) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20e7e616a30c61840899c0bd168d72dbaabe99ce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 86ba007fa8d7827a62f664e31cd80a8efeebed69
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="errors-and-events-reference-replication"></a>오류 및 이벤트 참조(복제)
-  설명서의 이 섹션에는 복제와 관련된 다양한 오류의 원인 및 해결 방법에 대한 정보가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 설명서의 이 섹션에는 복제와 관련된 다양한 오류의 원인 및 해결 방법에 대한 정보가 포함되어 있습니다.  
   
 |오류|메시지|  
 |-----------|-------------|  

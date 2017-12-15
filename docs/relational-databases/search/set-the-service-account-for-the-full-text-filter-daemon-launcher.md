@@ -2,9 +2,12 @@
 title: "전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f25dd338c1492afe66bdb4ecb0bf98e0b92a2da7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dea4f2872a3d60bc49b9cd028a3c19b32f7e3ce7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
- 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스(MSSQLFDLauncher)에 대한 서비스 계정을 설정하거나 변경하는 방법에 대해 설명합니다. SQL Server 설치 프로그램에서 사용하는 기본 서비스 계정은 `NT Service\MSSQLFDLauncher`입니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스(MSSQLFDLauncher)에 대한 서비스 계정을 설정하거나 변경하는 방법에 대해 설명합니다. SQL Server 설치 프로그램에서 사용하는 기본 서비스 계정은 `NT Service\MSSQLFDLauncher`입니다.
   
   
 ## <a name="about-the-sql-full-text-filter-daemon-launcher-service"></a>SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 정보

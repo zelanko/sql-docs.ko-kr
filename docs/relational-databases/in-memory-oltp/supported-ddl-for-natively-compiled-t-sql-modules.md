@@ -1,10 +1,13 @@
 ---
 title: "고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 DDL | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e467fa064651938b649f2f8ebc1cb7d698e1b48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: efb5a60bcced519b46264537e7cc9c712b738476
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 DDL
-  이 항목에는 저장 프로시저, 스칼라 UDF, 인라인 TVF 및 트리거와 같은 고유하게 컴파일된 T-SQL 모듈에 지원되는 DDL 구문을 나열합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에는 저장 프로시저, 스칼라 UDF, 인라인 TVF 및 트리거와 같은 고유하게 컴파일된 T-SQL 모듈에 지원되는 DDL 구문을 나열합니다.  
   
  고유하게 컴파일된 T-SQL 모듈의 일부로 사용할 수 있는 기능 및 T-SQL 노출 영역에 대한 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.  
   

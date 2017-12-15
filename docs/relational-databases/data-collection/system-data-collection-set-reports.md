@@ -2,9 +2,12 @@
 title: "시스템 데이터 컬렉션 집합 보고서 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e89dca7a25fa6a6a0e89c2fe4983ff3c1dc9a50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="system-data-collection-set-reports"></a>시스템 데이터 컬렉션 집합 보고서
-  데이터 수집기는 각 시스템 데이터 컬렉션 집합에 대한 기록 보고서를 제공합니다. 다음 보고서 각각은 관리 데이터 웨어하우스에 저장된 데이터를 사용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터 수집기는 각 시스템 데이터 컬렉션 집합에 대한 기록 보고서를 제공합니다. 다음 보고서 각각은 관리 데이터 웨어하우스에 저장된 데이터를 사용합니다.  
   
 -   [디스크 사용 요약](#Disk)  
   

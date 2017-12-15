@@ -2,9 +2,12 @@
 title: "공간 인덱스 개요 | Microsoft 문서"
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae93cf0e3211b9068de0b3dc512f7a59a3f0fd9c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d312b518c0dd48cbdf2a536ee02391ba77ba447f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 공간 데이터 및 공간 인덱스를 지원합니다. *공간 인덱스* 는 공간 열을 인덱싱할 수 있는 확장된 인덱스의 유형입니다. 공간 열은 **기하 도형** 또는 **지리**와 같은 공간 데이터 형식의 데이터를 포함하는 테이블 열입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 공간 데이터 및 공간 인덱스를 지원합니다. *공간 인덱스* 는 공간 열을 인덱싱할 수 있는 확장된 인덱스의 유형입니다. 공간 열은 **기하 도형** 또는 **지리**와 같은 공간 데이터 형식의 데이터를 포함하는 테이블 열입니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 공간 기능에 대한 자세한 설명 및 예와 공간 인덱스에 영향을 주는 기능에 대한 정보를 보려면 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  

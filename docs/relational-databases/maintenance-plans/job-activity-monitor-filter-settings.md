@@ -2,9 +2,12 @@
 title: "작업 활동 모니터(필터 설정) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6bafbf3db207d6ef185a6866de2b66015236c0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7ff338e1a2fd9fa170d880d6f7719ce3a08ac599
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="job-activity-monitor-filter-settings"></a>작업 활동 모니터(필터 설정)
-  이 페이지를 사용하여 작업 활동 모니터에 표시되는 행 수를 줄일 수 있습니다. 하나 또는 여러 개의 사용 가능한 상자에 조건을 입력하여 지정한 값을 만족하는 행만 표시합니다. **상태** 또는 **차단 유형** 과 같은 일부 상자에서는 드롭다운 목록으로 한정된 수의 가능한 값을 제공합니다. **응용 프로그램** 과 같은 기타 상자에서는 어떤 값이든 원하는 만큼 쉼표로 구분된 목록으로 입력할 수 있습니다. 도구 모음 아이콘을 사용하면 범주별 또는 사전순으로 사용 가능한 상자를 정렬할 수 있습니다. 각각에 대해 간단한 설명을 표시할 조건을 클릭합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 작업 활동 모니터에 표시되는 행 수를 줄일 수 있습니다. 하나 또는 여러 개의 사용 가능한 상자에 조건을 입력하여 지정한 값을 만족하는 행만 표시합니다. **상태** 또는 **차단 유형** 과 같은 일부 상자에서는 드롭다운 목록으로 한정된 수의 가능한 값을 제공합니다. **응용 프로그램** 과 같은 기타 상자에서는 어떤 값이든 원하는 만큼 쉼표로 구분된 목록으로 입력할 수 있습니다. 도구 모음 아이콘을 사용하면 범주별 또는 사전순으로 사용 가능한 상자를 정렬할 수 있습니다. 각각에 대해 간단한 설명을 표시할 조건을 클릭합니다.  
   
  작업 활동 모니터를 필터링하려면 원하는 개수만큼 필터 조건을 제공하고 **필터 적용**을 클릭한 다음 **확인**을 클릭합니다.  
   

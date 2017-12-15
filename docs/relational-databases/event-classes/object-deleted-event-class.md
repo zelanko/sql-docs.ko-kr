@@ -2,9 +2,12 @@
 title: "Object:Deleted 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c43e82f21e7b29d84ad7b758992b47e38af98ecf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c7b0dda763f7b24c8ad45b816b5d12ad50fddc4a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 이벤트 클래스
-  Object:Deleted 이벤트 클래스는 DROP INDEX 및 DROP TABLE 문 등에 의해 개체가 삭제되었음을 나타냅니다. 이 이벤트 클래스를 사용하면 임시 저장 프로시저를 자주 만드는 ODBC 응용 프로그램 등에 의해 개체가 삭제되었는지 파악할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Object:Deleted 이벤트 클래스는 DROP INDEX 및 DROP TABLE 문 등에 의해 개체가 삭제되었음을 나타냅니다. 이 이벤트 클래스를 사용하면 임시 저장 프로시저를 자주 만드는 ODBC 응용 프로그램 등에 의해 개체가 삭제되었는지 파악할 수 있습니다.  
   
  Objects 이벤트 클래스와 함께 LoginName 및 NTUserName 기본 데이터 열을 모니터링하여 개체를 작성, 삭제, 액세스하는 사용자 이름을 파악할 수 있습니다.  
   

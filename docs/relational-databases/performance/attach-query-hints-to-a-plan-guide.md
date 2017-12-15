@@ -2,9 +2,12 @@
 title: "계획 지침에 쿼리 힌트 연결 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd35ba37fceeee68531e23b2ee2caabae4e81cfc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3f5704e1b8ec2f45d178bc4327006c8a9278798a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>계획 지침에 쿼리 힌트 연결
-  계획 지침에 모든 올바른 쿼리 힌트 조합을 사용할 수 있습니다. 계획 지침이 쿼리와 일치하면 컴파일 및 최적화하기 전에 계획 지침의 힌트 절에 지정된 OPTION 절이 쿼리에 추가됩니다. 계획 지침에 일치하는 쿼리에 이미 OPTION 절이 있으면 계획 지침에 지정된 쿼리 힌트가 쿼리에서 이를 대체합니다. 그러나 이미 OPTION 절이 있는 쿼리에 계획 지침을 일치시키려면 해당 쿼리 텍스트를 지정할 때 sp_create_plan_guide 문이 쿼리의 OPTION 절을 포함해야 합니다. 계획 지침에 지정한 힌트로 이미 쿼리에 있는 힌트를 대체하는 대신 계획 지침에 지정한 힌트를 이미 쿼리에 있는 힌트에 추가하려면 원래 힌트와 추가 힌트를 모두 계획 지침의 OPTION 절에 지정해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 계획 지침에 모든 올바른 쿼리 힌트 조합을 사용할 수 있습니다. 계획 지침이 쿼리와 일치하면 컴파일 및 최적화하기 전에 계획 지침의 힌트 절에 지정된 OPTION 절이 쿼리에 추가됩니다. 계획 지침에 일치하는 쿼리에 이미 OPTION 절이 있으면 계획 지침에 지정된 쿼리 힌트가 쿼리에서 이를 대체합니다. 그러나 이미 OPTION 절이 있는 쿼리에 계획 지침을 일치시키려면 해당 쿼리 텍스트를 지정할 때 sp_create_plan_guide 문이 쿼리의 OPTION 절을 포함해야 합니다. 계획 지침에 지정한 힌트로 이미 쿼리에 있는 힌트를 대체하는 대신 계획 지침에 지정한 힌트를 이미 쿼리에 있는 힌트에 추가하려면 원래 힌트와 추가 힌트를 모두 계획 지침의 OPTION 절에 지정해야 합니다.  
   
 > [!CAUTION]  
 >  쿼리 힌트를 오용하는 계획 지침을 사용하면 컴파일, 실행 또는 성능 문제가 발생할 수 있습니다. 계획 지침은 숙련된 개발자와 데이터베이스 관리자만 사용해야 합니다.  

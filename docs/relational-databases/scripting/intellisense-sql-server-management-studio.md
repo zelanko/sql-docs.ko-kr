@@ -2,9 +2,12 @@
 title: "IntelliSense(SQL Server Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b749035286507e3ee2a8a05af82d9da9d1e7b4c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c9b1806be022d0391cb19cc03a81a039927e923
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense(SQL Server Management Studio)
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 편집기는 입력을 축소하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션을 지원하거나, 구문 정보에 대한 빠른 액세스를 제공하거나, 복잡한 식의 구분 기호를 쉽게 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 편집기는 입력을 축소하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션을 지원하거나, 구문 정보에 대한 빠른 액세스를 제공하거나, 복잡한 식의 구분 기호를 쉽게 볼 수 있습니다.  
   
 ## <a name="benefits-of-intellisense"></a>IntelliSense의 이점  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense는 언어 참조에 쉽게 액세스할 수 있게 만드는 일련의 옵션을 제공합니다. 코딩 시에 편집기에 그대로 있으면서 언어 요소를 검색할 수 있습니다. 컨텍스트를 유지하고 필요한 정보를 찾을 수 있으며 언어 요소를 코드에 직접 삽입할 수 있을 뿐만 아니라 IntelliSense가 사용자를 대신하여 입력을 수행하도록 할 수 있습니다.  

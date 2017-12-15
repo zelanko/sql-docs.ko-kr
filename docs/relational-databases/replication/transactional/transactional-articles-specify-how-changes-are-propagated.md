@@ -2,9 +2,12 @@
 title: "트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27553553b3bf900a1a7207711520a2355c997941
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9cee636f1b2188ddf72d63feeaedc7b955446ea3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>트랜잭션 아티클 - 변경 내용을 전파하는 방법 지정
-  트랜잭션 복제를 사용하여 데이터 변경 내용이 게시자에서 구독자로 전파되는 방법을 지정할 수 있습니다. 다음 4가지 중 하나를 사용하여 게시된 각 테이블에 대해 INSERT, UPDATE 또는 DELETE 등의 각 작업이 구독자로 전파되는 방법을 지정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 트랜잭션 복제를 사용하여 데이터 변경 내용이 게시자에서 구독자로 전파되는 방법을 지정할 수 있습니다. 다음 4가지 중 하나를 사용하여 게시된 각 테이블에 대해 INSERT, UPDATE 또는 DELETE 등의 각 작업이 구독자로 전파되는 방법을 지정할 수 있습니다.  
   
 -   트랜잭션 복제가 저장 프로시저를 스크립팅한 후 저장 프로시저를 호출하여 변경 내용을 구독자로 전파하도록 지정합니다(기본값).  
   

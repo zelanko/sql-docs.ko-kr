@@ -2,9 +2,12 @@
 title: "다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -38,14 +41,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 40cf09270cb121e7d88b2828aeb6bbc680839bf5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e1385db80093f2304ac998d6c6f1834aedf3ff31
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
-  이 항목에는 다음과 관련된 내용이 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에는 다음과 관련된 내용이 포함되어 있습니다.  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 그룹의 가용성 복제본을 구성하는 경우  
   

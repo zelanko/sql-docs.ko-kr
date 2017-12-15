@@ -2,9 +2,12 @@
 title: "관리 암호 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 592f3db3d5340f29832c29e1fcca7a2d46a7033f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e197fb3bcaee9bba96de0dc6dd6519a01e5a13b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administrative-password"></a>관리 암호
-  이 마법사의 **배포자** 페이지에서 이 게시자에 대한 원격 배포자를 선택한 경우 복제에서 **distributor_admin** 로그인을 사용하여 게시자와 배포자 간에 설정한 연결에 대한 암호를 입력해야 합니다. 입력하는 암호는 배포 구성 마법사의 **배포자 암호** 페이지 또는 **배포자 속성** 대화 상자의 **게시자** 페이지에서 지정한 암호와 일치해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 마법사의 **배포자** 페이지에서 이 게시자에 대한 원격 배포자를 선택한 경우 복제에서 **distributor_admin** 로그인을 사용하여 게시자와 배포자 간에 설정한 연결에 대한 암호를 입력해야 합니다. 입력하는 암호는 배포 구성 마법사의 **배포자 암호** 페이지 또는 **배포자 속성** 대화 상자의 **게시자** 페이지에서 지정한 암호와 일치해야 합니다.  
   
 ## <a name="options"></a>옵션  
  **암호**  

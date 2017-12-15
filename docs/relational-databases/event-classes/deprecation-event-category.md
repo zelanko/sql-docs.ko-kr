@@ -2,9 +2,12 @@
 title: "Deprecation 이벤트 범주 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49d17904bde9efbb1624634260b164ec5789924d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: efd91f992dd1b3b9038b47af8890249b3a55a777
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecation-event-category"></a>Deprecation 이벤트 범주
-  **Deprecation** 이벤트 범주에는 일반적인 사용 중단 알림 이벤트가 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Deprecation** 이벤트 범주에는 일반적인 사용 중단 알림 이벤트가 포함됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

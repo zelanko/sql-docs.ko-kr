@@ -2,9 +2,12 @@
 title: "장치 드라이버 컨트롤 오류 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 36f3952128e8c2b0476a3b5647263410d395561e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ecbad1be7c89fb6ec99fd99df0b6b23aa6e20ca8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="device-driver-control-error"></a>장치 드라이버 컨트롤 오류
-  이 규칙은 시스템 이벤트 로그에서 EventId 11을 검사합니다. 이 오류는 손상된 장치 드라이버, 하드웨어 문제, 잘못된 케이블 연결 또는 기타 연결 문제로 인해 발생할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 규칙은 시스템 이벤트 로그에서 EventId 11을 검사합니다. 이 오류는 손상된 장치 드라이버, 하드웨어 문제, 잘못된 케이블 연결 또는 기타 연결 문제로 인해 발생할 수 있습니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  
  이 오류를 해결하는 방법은 다음 Microsoft 기술 자료 문서를 참조하십시오.  

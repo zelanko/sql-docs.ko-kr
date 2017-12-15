@@ -2,9 +2,12 @@
 title: "장치 내용(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8323c69a4d919f4e4e82eca5ff038733e29f041f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 208c0d03e893fa50c33ae28e5533163af75a3ff9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="device-contents-sql-server"></a>장치 내용(SQL Server)
-  이 대화 상자를 사용하여 백업 정보를 확인할 수 있습니다. 이 정보에는 장치, 미디어, 미디어 세트 및 백업 세트에 대한 설명이 포함됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 백업 정보를 확인할 수 있습니다. 이 정보에는 장치, 미디어, 미디어 세트 및 백업 세트에 대한 설명이 포함됩니다.  
   
  **SQL Server Management Studio를 사용하여 백업 장치의 내용을 보려면**  
   

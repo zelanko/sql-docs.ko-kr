@@ -2,9 +2,12 @@
 title: "적중 횟수 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40fba06f1f95499ef60c312ae60c81146d61b28f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 83f12d3d5a0d0c26ae145d3f2c91540efee7b889
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-a-hit-count"></a>적중 횟수 지정
-  중단점 적중 횟수는 중단점에 도달할 때마다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 증가시키는 카운터입니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 중단점 적중 횟수는 중단점에 도달할 때마다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 증가시키는 카운터입니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.  
   
 ## <a name="hit-count-considerations"></a>적중 횟수 고려 사항  
  기본적으로 중단점에 도달할 때마다 실행이 중단됩니다. 다음 옵션 중에서 선택할 수 있습니다.  

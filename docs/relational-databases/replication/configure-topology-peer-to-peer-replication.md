@@ -2,9 +2,12 @@
 title: "토폴로지 구성(피어 투 피어 복제) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ac55f8620b7be677223f34d3d14d23007e49d2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc8f91a4da3bfa31f6eab0bcb492e16c9bccba0d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>토폴로지 구성(피어 투 피어 복제)
-  **토폴로지 구성** 페이지를 사용하여 새 노드 추가, 노드 삭제, 기존 노드 간 새 연결 추가와 같은 일반적인 구성 태스크를 수행할 수 있습니다. 이 마법사의 **게시** 페이지에서 선택한 노드는 디자인 화면에 표시됩니다. 구성 옵션을 지정하려면 노드, 연결 또는 디자인 화면을 마우스 오른쪽 단추로 클릭합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **토폴로지 구성** 페이지를 사용하여 새 노드 추가, 노드 삭제, 기존 노드 간 새 연결 추가와 같은 일반적인 구성 태스크를 수행할 수 있습니다. 이 마법사의 **게시** 페이지에서 선택한 노드는 디자인 화면에 표시됩니다. 구성 옵션을 지정하려면 노드, 연결 또는 디자인 화면을 마우스 오른쪽 단추로 클릭합니다.  
   
 > [!NOTE]  
 >  피어 투 피어 토폴로지 구성 마법사는 닫힐 때 토폴로지 정보를 요청합니다. 모든 노드가 이 정보 요청에 응답하기 전에 마법사가 닫혔다가 다시 열리면 마법사에 부분 네트워크가 표시될 수 있습니다.  

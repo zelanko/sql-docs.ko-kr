@@ -2,9 +2,12 @@
 title: "SQL Server PowerShell 도움말 보기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0a1c7d0f50f672bedd2f3c4d375bfef983f7a5e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 815fab8fa577dad6ee4ef34388c65a1ed3c4b63d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-help-sql-server-powershell"></a>SQL Server PowerShell 도움말 보기
-  Windows PowerShell의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자 및 cmdlet 사용에 대한 정보를 얻을 수 있는 몇 가지 도움말이 있습니다. 여기서는 Windows PowerShell 환경에서 사용 가능한 도움말에 대해 알아봅니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Windows PowerShell의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자 및 cmdlet 사용에 대한 정보를 얻을 수 있는 몇 가지 도움말이 있습니다. 여기서는 Windows PowerShell 환경에서 사용 가능한 도움말에 대해 알아봅니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  Windows PowerShell에 대한 자세한 내용은 [Windows PowerShell 시작 가이드](http://go.microsoft.com/fwlink/?LinkId=217083)를 참조하십시오.  

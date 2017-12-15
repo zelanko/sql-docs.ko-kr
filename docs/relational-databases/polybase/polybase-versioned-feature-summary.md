@@ -8,26 +8,23 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70725ec64b79f538b4129993de83dfd97772a667
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 버전 기능 요약
-
-SQL Server 제품 및 서비스에 사용할 수 있는 PolyBase 기능 요약입니다.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 제품 및 서비스에 사용할 수 있는 PolyBase 기능 요약입니다.  
   
 ## <a name="feature-summary-for-product-releases"></a>제품 릴리스에 대한 기능 요약  
  이 표에서는 PolyBase 및 이를 사용할 수 있는 제품에 대한 주요 기능을 요약합니다.  
@@ -65,4 +62,3 @@ SQL Server 및 APS에서 모든 T-SQL 운영자가 hadoop 클러스터로 푸시
  [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)  
   
   
-

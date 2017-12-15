@@ -2,9 +2,12 @@
 title: "열 데이터 정렬 설정 또는 변경 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3d16e4c40ceb37e5d4b54a8c5baec0605704ae60
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 83ee5eb3d4513aba3a8ed126b766a0ee0a91c7f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-or-change-the-column-collation"></a>열 데이터 정렬 설정 또는 변경
-  특정 테이블의 열에 대해 다른 데이터 정렬을 지정하고 다음 중 하나를 사용하여 **char**, **varchar**, **text**, **nchar**, **nvarchar**및 **ntext** 데이터의 데이터베이스 데이터 정렬을 재정의할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 특정 테이블의 열에 대해 다른 데이터 정렬을 지정하고 다음 중 하나를 사용하여 **char**, **varchar**, **text**, **nchar**, **nvarchar** 및 **ntext** 데이터의 데이터베이스 데이터 정렬을 재정의할 수 있습니다.  
   
 -   [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 COLLATE 절 예를 들어  
   

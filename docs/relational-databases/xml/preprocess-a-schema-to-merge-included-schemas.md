@@ -2,9 +2,12 @@
 title: "포함된 스키마를 병합하기 위해 스키마 전처리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08a839ccc5aae2426af36dc5bcef27e33406a343
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d74cb58d143170bcef3c0e976ef786d87e92d1f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>포함된 스키마를 병합하기 위해 스키마 전처리
-  W3C XSD **include** 요소는 XML 스키마를 두 개 이상의 실제 파일로 분할할 수 있는 스키마 모듈화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 이 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] W3C XSD **include** 요소는 XML 스키마를 두 개 이상의 실제 파일로 분할할 수 있는 스키마 모듈화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 이 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  
   
  이러한 문제를 해결하기 위해 \<xsd:include> 지시어를 포함하고 있는 XML 스키마는 전처리하여 포함된 모든 스키마의 내용을 하나의 스키마로 복사 및 병합해서 서버에 업로드할 수 있습니다. 다음 C# 코드는 전처리에 사용될 수 있습니다. 코드의 초기 부분에 있는 설명은 코드를 사용하는 방법에 대한 정보를 제공합니다.  
   

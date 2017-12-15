@@ -2,9 +2,12 @@
 title: "서버 속성(메모리 페이지) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e8f2099ebff05085188514503c11abef5f8159c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4b9ae03362f1dfb89aaebc09aabfed60c327a9d3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="server-properties---memory-page"></a>서버 속성 - 메모리 페이지
-  이 페이지를 사용하여 서버 메모리 옵션을 확인하거나 수정할 수 있습니다. **최소 서버 메모리** 를 0으로 설정하고 **최대 서버 메모리** 를 2147483647MB로 설정하면 운영 체제 및 기타 응용 프로그램에서 현재 사용하고 있는 메모리에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 메모리가 항상 최적화됩니다. 컴퓨터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로드가 변경됨에 따라 할당되는 메모리도 달라집니다. 아래에 지정된 최소값과 최대값을 설정하여 이 동적 메모리 할당을 추가로 제한할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 서버 메모리 옵션을 확인하거나 수정할 수 있습니다. **최소 서버 메모리** 를 0으로 설정하고 **최대 서버 메모리** 를 2147483647MB로 설정하면 운영 체제 및 기타 응용 프로그램에서 현재 사용하고 있는 메모리에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 메모리가 항상 최적화됩니다. 컴퓨터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로드가 변경됨에 따라 할당되는 메모리도 달라집니다. 아래에 지정된 최소값과 최대값을 설정하여 이 동적 메모리 할당을 추가로 제한할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **최소 서버 메모리(MB)**  

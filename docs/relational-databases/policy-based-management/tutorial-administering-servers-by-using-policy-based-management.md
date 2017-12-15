@@ -2,9 +2,12 @@
 title: "자습서: 정책 기반 관리를 사용하여 서버 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a58c12e4a33510f2fc9242f0d762dfb877b84750
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4bda7d7ffbd562dc27acad4ee8eb5d427d3f542f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>자습서: 정책 기반 관리를 사용하여 서버 관리
-정책 기반 관리 정책을 사용하여 서버 관리 자습서를 시작합니다. 이 자습서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 익숙하지만 정책 기반 관리에는 경험이 없는 사용자를 대상으로 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 정책 기반 관리 정책을 사용하여 서버 관리 자습서를 시작합니다. 이 자습서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 익숙하지만 정책 기반 관리에는 경험이 없는 사용자를 대상으로 합니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
 이 자습서에서는 서버를 관리하기 위한 정책과 단일 데이터베이스에 적용되는 정책을 만듭니다. 한 정책은 준수 여부 테스트를 위해 요청 시 실행되고 다른 정책은 앞으로 정책이 준수되도록 합니다.  

@@ -2,9 +2,12 @@
 title: "데이터베이스 미러링 및 전체 텍스트 카탈로그(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 494ff79e56bda5b4b1415f527d9b829aa45d9a3f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5de8d84f2eb6f370f7b14a84cfd7d544a07f07af
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>데이터베이스 미러링 및 전체 텍스트 카탈로그(SQL Server)
-  전체 텍스트 카탈로그가 있는 데이터베이스를 미러링하려면 일반적인 백업을 사용하여 주 데이터베이스의 전체 데이터베이스 백업을 만든 다음 백업을 복원하여 데이터베이스를 미러 서버로 복사합니다. 자세한 내용은 [미러 데이터베이스에서 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 전체 텍스트 카탈로그가 있는 데이터베이스를 미러링하려면 일반적인 백업을 사용하여 주 데이터베이스의 전체 데이터베이스 백업을 만든 다음 백업을 복원하여 데이터베이스를 미러 서버로 복사합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
 ## <a name="full-text-catalog-and-indexes-before-failover"></a>장애 조치(Failover) 이전의 전체 텍스트 카탈로그 및 인덱스  
  새로 생성된 미러 데이터베이스에서 전체 텍스트 카탈로그는 데이터베이스가 백업될 때와 동일합니다. 데이터베이스 미러링이 시작된 후 CREATE FULLTEXT CATALOG, ALTER FULLTEXT CATALOG, DROP FULLTEXT CATALOG 등과 같은 DDL 문으로 적용된 모든 카탈로그 수준 변경 내용은 기록되고 미러 서버로 전송되어 미러 데이터베이스에서 재생됩니다. 그러나 인덱스 수준 변경 내용은 주 서버에 기록되지 않으므로 미러 데이터베이스에서 재현되지 않습니다. 따라서 미러 데이터베이스의 전체 텍스트 카탈로그 내용은 주 데이터베이스의 전체 텍스트 카탈로그 내용이 변경됨에 따라 동기화되지 않습니다.  

@@ -2,9 +2,12 @@
 title: "암호화된 열의 데이터 복제(SQL Server Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a79d1b73f6bcd621f2b4e67215cca20187c204d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4b3c900a757a6d298194866d1f7d59d95585cc70
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>암호화된 열의 데이터 복제(SQL Server Management Studio)
-  복제를 사용하여 암호화된 열 데이터를 게시할 수 있습니다. 구독자에서 이 데이터를 해독하고 사용하려면 게시자에서 데이터 암호화에 사용된 키가 구독자에도 있어야 합니다. 복제에서는 암호화 키를 전송하는 보안 메커니즘을 제공하지 않습니다. 구독자에서 직접 암호화 키를 다시 만들어야 합니다. 이 항목에서는 게시자에서 열을 암호화하고 구독자에서 암호화 키를 사용할 수 있게 하는 방법을 보여 줍니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제를 사용하여 암호화된 열 데이터를 게시할 수 있습니다. 구독자에서 이 데이터를 해독하고 사용하려면 게시자에서 데이터 암호화에 사용된 키가 구독자에도 있어야 합니다. 복제에서는 암호화 키를 전송하는 보안 메커니즘을 제공하지 않습니다. 구독자에서 직접 암호화 키를 다시 만들어야 합니다. 이 항목에서는 게시자에서 열을 암호화하고 구독자에서 암호화 키를 사용할 수 있게 하는 방법을 보여 줍니다.  
   
  기본 단계는 다음과 같습니다.  
   

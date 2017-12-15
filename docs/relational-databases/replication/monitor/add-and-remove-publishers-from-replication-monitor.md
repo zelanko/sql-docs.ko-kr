@@ -2,9 +2,12 @@
 title: "복제 모니터에서 게시자 추가 및 제거 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fd06f71bd65e1731ab53924e03e756044e505ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e36b7c4ca6eeb4ab5ec74407dfd0bd3ba4d6f745
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>복제 모니터에서 게시자 추가 및 제거
-  복제 모니터를 실행하는 서버가 게시자인 경우 자동으로 모니터에 추가됩니다. **게시자 추가** 대화 상자를 통해 게시자를 추가할 수 있습니다. 게시자를 추가하면 게시자는 모니터의 왼쪽 창에 있는 그룹에 표시됩니다. **내 게시자** 그룹이 기본적으로 포함되지만 새 그룹을 만들어 하나 이상의 복제 토폴로지를 관리할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 모니터를 실행하는 서버가 게시자인 경우 자동으로 모니터에 추가됩니다. **게시자 추가** 대화 상자를 통해 게시자를 추가할 수 있습니다. 게시자를 추가하면 게시자는 모니터의 왼쪽 창에 있는 그룹에 표시됩니다. **내 게시자** 그룹이 기본적으로 포함되지만 새 그룹을 만들어 하나 이상의 복제 토폴로지를 관리할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
   
 ### <a name="to-add-a-sql-server-publisher"></a>SQL Server 게시자를 추가하려면  
   

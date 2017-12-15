@@ -2,9 +2,12 @@
 title: "사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59067f9e47c7bff8a41326da8e095e2d8d9fe94a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7bb142518ea996d1344c71aed46e06645fb0d957
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>매개 변수가 있는 필터 - 사전 계산된 파티션에 최적화
-  사전 계산 파티션을 필터링된 병합 게시에 사용하여 성능을 최적화할 수 있습니다. 또한 사전 계산 파티션은 필터링된 게시에서 논리 레코드를 사용하기 위한 요구 사항입니다. 논리적 레코드에 대한 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 사전 계산 파티션을 필터링된 병합 게시에 사용하여 성능을 최적화할 수 있습니다. 또한 사전 계산 파티션은 필터링된 게시에서 논리 레코드를 사용하기 위한 요구 사항입니다. 논리적 레코드에 대한 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
  구독자가 게시자와 동기화되면 게시자는 구독자의 필터를 평가하여 그 구독자의 파티션이나 데이터 집합에 속하는 행을 확인해야 합니다. 게시자에서 필터링된 데이터 집합을 수신하는 각 구독자에 대한 변경 내용의 파티션 멤버 자격을 결정하는 이 과정을 *파티션 평가*라고 합니다. 사전 계산 파티션을 사용하지 않을 경우 특정 구독자에 대해 병합 에이전트를 마지막으로 실행한 이후에 게시자에서 필터링된 열의 각 변경 내용에 대해 파티션 평가를 수행해야 합니다. 게시자와 동기화하는 모든 구독자에 대해 이 프로세스를 반복합니다.  
   

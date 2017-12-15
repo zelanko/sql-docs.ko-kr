@@ -2,9 +2,12 @@
 title: "Transact-SQL 코드 조각 삽입 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd2463b84505c7dbbd617e4a700725147e01c336
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8b37ab2c15e2d1770f2dd0f8c861fb8c2e0f3144
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL 코드 조각 삽입
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 작성할 때 시작 지점으로 사용할 수 있는 템플릿입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 새 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 작성할 때 시작 지점으로 사용할 수 있는 템플릿입니다.  
   
 ## <a name="inserting-snippets"></a>조각 삽입  
  **조각 삽입** 메뉴를 사용하여 범주별로 분류된 조각 목록을 열고 이 목록에서 조각을 선택할 수 있습니다.  

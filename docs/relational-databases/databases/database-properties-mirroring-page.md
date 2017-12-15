@@ -2,9 +2,12 @@
 title: "데이터베이스 속성(미러링 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47f75acd0677fb838304de87cd9216671d019131
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 267091bc845fdcbfa1c2eafd49bca20c673f966b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-properties-mirroring-page"></a>데이터베이스 속성(미러링 페이지)
-  주 데이터베이스에서 이 페이지에 액세스한 다음 이 페이지를 사용하여 데이터베이스의 데이터베이스 미러링 속성을 구성하고 수정할 수 있습니다. 또한 이 페이지를 사용하여 데이터베이스 미러링 보안 구성 마법사를 시작하면 미러링 세션의 상태를 보거나 데이터베이스 미러링 세션을 일시 중지 또는 제거할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 주 데이터베이스에서 이 페이지에 액세스한 다음 이 페이지를 사용하여 데이터베이스의 데이터베이스 미러링 속성을 구성하고 수정할 수 있습니다. 또한 이 페이지를 사용하여 데이터베이스 미러링 보안 구성 마법사를 시작하면 미러링 세션의 상태를 보거나 데이터베이스 미러링 세션을 일시 중지 또는 제거할 수 있습니다.  
   
 > **중요** 보안을 구성해야 미러링을 시작할 수 있습니다. 미러링이 시작되지 않은 경우 마법사를 사용하여 시작해야 합니다. 마법사를 완료할 때까지 **미러링** 페이지 입력란은 사용할 수 없습니다.  
   

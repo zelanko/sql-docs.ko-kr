@@ -2,9 +2,12 @@
 title: "SQL:BatchCompleted 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fd29d4941493185d181a6e44273db11d6b76c4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 27d81d35cbf12b5315ad05bca3122285fe4394bd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted 이벤트 클래스
-  SQL:BatchCompleted 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 완료되었음을 나타냅니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] SQL:BatchCompleted 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 완료되었음을 나타냅니다.  
   
 ## <a name="sqlbatchcompleted-event-class-data-columns"></a>SQL:BatchCompleted 이벤트 클래스 데이터 열  
   

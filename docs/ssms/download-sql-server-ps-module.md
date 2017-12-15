@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 16ca0d08413ba75b7603596e8e4c5340715cb1a3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f6ab758ecd32d4d9bdb39d9157cbba9b38e73ba
+ms.sourcegitcommit: b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>SQL Server PowerShell 모듈 다운로드
 SQL Server Management Studio의 17.0 릴리스의 일환으로 SQL Server PowerShell 모듈이 이제 PowerShell 갤러리를 통해 제공됩니다.  이 모듈은 더 이상 SSMS 설치 패키지에 포함되지 않습니다. SSMS 17.0 버전 이상에서 PowerShell을 사용하려면 추가 단계로 SQL Server 모듈을 컴퓨터에 설치해야 합니다.

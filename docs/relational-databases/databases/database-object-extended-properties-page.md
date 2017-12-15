@@ -2,9 +2,12 @@
 title: "데이터베이스 개체(확장 속성 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 398d3c8ac57fa0ffa8e66d5075b44d2363ebba66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ada959607aff6c1482194b19e91284cf1aaef67e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-object-extended-properties-page"></a>데이터베이스 개체(확장 속성 페이지)
-  확장 속성을 사용하여 데이터베이스 개체에 사용자 지정 속성을 추가할 수 있습니다. 이 페이지를 사용하여 선택한 개체의 확장 속성을 확인하거나 수정할 수 있습니다. 모든 데이터베이스 개체 유형의 **확장 속성** 페이지는 동일합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 확장 속성을 사용하여 데이터베이스 개체에 사용자 지정 속성을 추가할 수 있습니다. 이 페이지를 사용하여 선택한 개체의 확장 속성을 확인하거나 수정할 수 있습니다. 모든 데이터베이스 개체 유형의 **확장 속성** 페이지는 동일합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **데이터베이스**  

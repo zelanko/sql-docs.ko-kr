@@ -2,9 +2,12 @@
 title: "ID 열 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25ddfbedda3781d3ac92d91e234a0172d34d044b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 69355e8a2908efc77cba9fd4e12b1156fb5dbea3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-identity-columns"></a>ID 열 관리
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 ID 열을 관리하는 방법에 대해 설명합니다. 구독자 삽입이 게시자로 복제되는 경우 구독자와 게시자 모두에 동일한 ID 값이 할당되지 않도록 ID 열을 관리해야 합니다. 복제는 ID 범위를 자동으로 관리할 수 있으며, 사용자가 ID 범위 관리를 수동으로 처리하도록 선택할 수도 있습니다.  복제에서 제공하는 ID 범위 관리 옵션에 대한 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 ID 열을 관리하는 방법에 대해 설명합니다. 구독자 삽입이 게시자로 복제되는 경우 구독자와 게시자 모두에 동일한 ID 값이 할당되지 않도록 ID 열을 관리해야 합니다. 복제는 ID 범위를 자동으로 관리할 수 있으며, 사용자가 ID 범위 관리를 수동으로 처리하도록 선택할 수도 있습니다.  복제에서 제공하는 ID 범위 관리 옵션에 대한 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
   
  **항목 내용**  
   

@@ -1,7 +1,7 @@
 ---
 title: "Ssms 유틸리티 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e308a64f82ddb822bc5535c6cae7dc076265d212
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 867317119ffb1b58aeac049f4a1e64162368ff08
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="ssms-utility"></a>Ssms 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **Ssms**유틸리티는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다. **Ssms** 를 지정하면 서버 연결도 설정되며 쿼리, 스크립트, 파일, 프로젝트 및 솔루션이 열립니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 Ssms  
     [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-U username] [-P password]   
+    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
     [-E] [-nosplash] [-log [filename]?] [-?]  
 ```  
   
@@ -58,27 +58,34 @@ Ssms
  열려는 솔루션을 지정합니다. 매개 변수에 솔루션 파일의 전체 경로가 포함되어야 합니다.  
   
  [**-S** *servername*]  
- 서버 이름  
+  서버 이름  
   
  [**-d** *databasename*]  
- 데이터베이스 이름  
+  데이터베이스 이름  
+
+ [**-G**] Active Directory 인증을 사용하여 연결. **-P** 및/또는 **-U**의 포함 여부에 따라 연결 형식이 결정됩니다.
+ - **-U** 및 **-P**가 포함되지 *않으면* **Active Directory - 통합**이 사용되고 대화 상자가 표시되지 않습니다.
+ - **-U** 및 **-P**가 둘 다 포함되면 **Active Directory - 암호**가 사용됩니다. 이 옵션을 사용하면 명령줄에서 일반 텍스트 암호를 지정해야 하는데, 매우 번거로운 일이므로 이 옵션을 **사용하지 않는 것이 좋습니다**.
+ - **-U**는 포함되고 **-P**는 포함되지 않으면 인증 대화 상자가 나타나지만, 모든 로그인 시도가 실패합니다. 
+
+  **Active Directory - MFA 지원을 포함한 유니버설 인증**은 현재 지원되지 않습니다. 
   
- [**-U** *username*]  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 연결할 때 사용하는 사용자 이름입니다.  
+[**-U** *username*]  
+ 'SQL 인증' 또는 'Active Directory - 암호'와 연결할 때의 사용자 이름  
   
- [**-P** *password*]  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 연결할 때 사용하는 암호입니다.  
+[**-P** *password*]  
+ 'SQL 인증' 또는 'Active Directory - 암호'와 연결할 때의 암호
   
- [**-E**]  
+[**-E**]  
  Windows 인증을 사용하여 연결  
   
- [**-nosplash**]  
+[**-nosplash**]  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 여는 동안 시작 화면을 표시하지 않습니다. 대역폭이 제한된 연결에서 터미널 서비스를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 실행하는 컴퓨터에 연결할 때 이 옵션을 사용합니다. 이 인수는 대/소문자를 구분하지 않으며 다른 인수 앞이나 뒤에 나타날 수 있습니다.  
   
- [**-log***[filename]?*]  
+[**-log***[filename]?*]  
  문제 해결을 위해 지정된 파일에 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 작업을 기록합니다.  
   
- [**-?**]  
+[**-?**]  
  명령줄 도움말을 표시합니다.  
   
 ## <a name="remarks"></a>주의  
@@ -103,13 +110,21 @@ Ssms
   
 ```  
   
+ 다음은 *Active Directory - 통합*을 사용하여 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
+  
+```  
+Ssms.exe -S servername.database.windows.net -G
+  
+``` 
+
+
  다음 스크립트는 명령 프롬프트에서 Windows 인증을 사용하여 시작 화면을 표시하지 않고 코드 편집기를 서버 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 로 설정한 상태로 `ACCTG and the database AdventureWorks2012,` 를 엽니다.  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
   
 ```  
-  
+
  다음 스크립트는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 열고 MonthEndQuery 스크립트를 엽니다.  
   
 ```  
@@ -130,7 +145,10 @@ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
   
 ```  
-  
+ 
+
+
+
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Management Studio 사용](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   

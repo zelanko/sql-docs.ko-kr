@@ -2,9 +2,12 @@
 title: "NewOrg 테이블 최적화 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7765d8f8a4953f428cae4843d0f89aaa92678a8a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1bef7b50cb8f67baeca6e17c9406fc542a8e73fd
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-3---optimizing-the-neworg-table"></a>1-3단원 - NewOrg 테이블 최적화
-**기존 계층적 데이터로 테이블 채우기** 태스크에서 만든 [NewOrd](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 테이블은 모든 직원 정보를 포함하며 **hierarchyid** 데이터 형식을 사용하여 계층 구조를 나타냅니다. 이 태스크에서는 새 인덱스를 추가하여 **hierarchyid** 열의 검색을 지원합니다.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] [기존 계층적 데이터로 테이블 채우기](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 태스크에서 만든 **NewOrd** 테이블은 모든 직원 정보를 포함하며 **hierarchyid** 데이터 형식을 사용하여 계층 구조를 나타냅니다. 이 태스크에서는 새 인덱스를 추가하여 **hierarchyid** 열의 검색을 지원합니다.  
   
 ## <a name="clustered-index"></a>클러스터형 인덱스  
 **hierarchyid** 열(**OrgNode**)은 **NewOrg** 테이블의 기본 키입니다. 테이블을 만들 때 **OrgNode** 열의 고유성을 적용하기 위해 이 열에 **PK_NewOrg_OrgNode** 라는 클러스터형 인덱스가 포함되었습니다. 이 클러스터형 인덱스는 테이블의 깊이 우선 검색도 지원합니다.  

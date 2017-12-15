@@ -2,9 +2,12 @@
 title: "파일에 추적 결과 저장 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a5aae35c87ae1910735b06703bcc52fc87690b06
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 730984103195c15827899abf0f1387b8ad7d5669
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="save-trace-results-to-a-file"></a>파일에 추적 결과 저장
-  추적 결과를 파일에 저장할 수 있습니다. 추적 파일은 추적 결과가 기록된 파일입니다. 추적 파일은 로컬 디렉터리(예: C:\\*foldername*\\*filename.trc*) 또는 네트워크 디렉터리(예: \\\computername\sharename\filename.trc)에서 찾을 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 추적 결과를 파일에 저장할 수 있습니다. 추적 파일은 추적 결과가 기록된 파일입니다. 추적 파일은 로컬 디렉터리(예: C:\\*foldername*\\*filename.trc*) 또는 네트워크 디렉터리(예: \\\computername\sharename\filename.trc)에서 찾을 수 있습니다.  
   
  추적 파일을 사용하여 다음 작업을 할 수 있습니다.  
   

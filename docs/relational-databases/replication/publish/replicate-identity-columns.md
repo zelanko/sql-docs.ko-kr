@@ -2,9 +2,12 @@
 title: "ID 열 복제 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a41807f24128f40c645f9f75993524eacbd6d042
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3c4e1d9a170eecea88a5e929bcc21f84f2074714
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
-  열에 IDENTITY 속성을 할당하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 ID 열을 포함하는 테이블에 순차적 개수대로 삽입되는 새 행을 자동으로 생성합니다. 자세한 내용은 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)를 참조하세요. ID 열은 기본 키의 일부분으로 포함될 수 있으므로 ID 열에 중복 값을 사용하지 않아야 합니다. 둘 이상의 노드에서 업데이트된 ID 열을 복제 토폴로지에서 사용하려면 복제 토폴로지의 각 노드가 다른 범위의 ID 값을 사용해야 중복이 발생하지 않습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 열에 IDENTITY 속성을 할당하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 ID 열을 포함하는 테이블에 순차적 개수대로 삽입되는 새 행을 자동으로 생성합니다. 자세한 내용은 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)를 참조하세요. ID 열은 기본 키의 일부분으로 포함될 수 있으므로 ID 열에 중복 값을 사용하지 않아야 합니다. 둘 이상의 노드에서 업데이트된 ID 열을 복제 토폴로지에서 사용하려면 복제 토폴로지의 각 노드가 다른 범위의 ID 값을 사용해야 중복이 발생하지 않습니다.  
   
  예를 들어 게시자에 1-100 범위, 구독자 A에 101-200 범위, 그리고 구독자 B에 201-300 범위를 할당할 수 있습니다. 예를 들어 게시자에 행이 삽입되고 ID 값이 65라면 이 값이 각 구독자에 복제됩니다. 복제가 각 구독자에 데이터를 삽입할 때 구독자 테이블의 ID 열 값을 증가시키지는 않습니다. 대신 리터럴 값 65가 삽입됩니다. 복제 에이전트 삽입이 아닌 사용자 삽입만 ID 열 값을 증가시킵니다.  
   

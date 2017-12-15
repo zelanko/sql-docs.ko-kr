@@ -2,9 +2,12 @@
 title: "데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81d67f47cddfe48575758ec7ff3b5949a4c6f1f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 554065f8cd2eee3667eaf93ced5e6fe1c99f9517
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하는 스크립트를 만들고 실행할 수 있습니다. 또한 편집기는 **sqlcmd** 명령을 포함하는 스크립트 실행을 지원합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하는 스크립트를 만들고 실행할 수 있습니다. 또한 편집기는 **sqlcmd** 명령을 포함하는 스크립트 실행을 지원합니다.  
   
 ## <a name="transact-sql-f1-help"></a>Transact-SQL F1 도움말  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기는 F1 키를 선택할 때 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 참조 항목을 연결할 수 있습니다. 이렇게 하려면 Transact-SQL 문의 이름을 강조 표시하고 F1 키를 선택합니다. 그러면 도움말 검색 엔진에서 강조 표시된 문자열과 일치하는 F1 도움말 특성을 가진 항목을 검색합니다.  

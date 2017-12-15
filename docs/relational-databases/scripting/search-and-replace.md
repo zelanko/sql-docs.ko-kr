@@ -2,9 +2,12 @@
 title: "찾기 및 바꾸기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -32,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a63f867c56f4801f44d497e7f3271a86f724870
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 07e3ed14cb96bc26d5aa0c53ee04fbdb9131bb0e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="search-and-replace"></a>찾기 및 바꾸기
-  텍스트를 찾아서 바꾸는 방법에는 여러 가지가 있습니다. **편집** 메뉴에서 **찾기 및 바꾸기** 는 **빠른 찾기**, **빠른 바꾸기**, **파일에서 찾기**또는 **파일에서 바꾸기**의 네 가지 선택 사항을 제공합니다. 이러한 각 항목은 해당 버전의 **찾기 및 바꾸기** 대화 상자를 엽니다. 또한 증분 검색 바로 가기 키를 사용하여 대화 상자 없이 검색을 수행할 수 있습니다. 이러한 기술을 사용하면 찾기 및 바꾸기의 범위를 제어하고 검색 조건과 일치하는 항목 및 바꾼 항목을 검토하는 방법을 선택할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 텍스트를 찾아서 바꾸는 방법에는 여러 가지가 있습니다. **편집** 메뉴에서 **찾기 및 바꾸기** 는 **빠른 찾기**, **빠른 바꾸기**, **파일에서 찾기**또는 **파일에서 바꾸기**의 네 가지 선택 사항을 제공합니다. 이러한 각 항목은 해당 버전의 **찾기 및 바꾸기** 대화 상자를 엽니다. 또한 증분 검색 바로 가기 키를 사용하여 대화 상자 없이 검색을 수행할 수 있습니다. 이러한 기술을 사용하면 찾기 및 바꾸기의 범위를 제어하고 검색 조건과 일치하는 항목 및 바꾼 항목을 검토하는 방법을 선택할 수 있습니다.  
   
  텍스트를 검색하고 바꿀 경우에는 다음 사항을 살펴 보십시오.  
   

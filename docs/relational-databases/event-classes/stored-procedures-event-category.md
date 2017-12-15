@@ -2,9 +2,12 @@
 title: "Stored Procedures 이벤트 범주 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee7d5e0c170fc0ad5df22bca0e5c48d26a6305d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cd92c647ab35396dc36f3065605b6e0071964e49
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 이벤트 범주
-  **Stored Procedures** 이벤트 범주는 일반 저장 프로시저 이벤트를 포함합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Stored Procedures** 이벤트 범주는 일반 저장 프로시저 이벤트를 포함합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

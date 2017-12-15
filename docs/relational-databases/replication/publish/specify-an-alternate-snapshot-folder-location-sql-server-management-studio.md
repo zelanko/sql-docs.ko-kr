@@ -2,9 +2,12 @@
 title: "대체 스냅숏 폴더 위치 지정(SQL Server Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 78ea481b543fe74e8efb6231c75cd68822b5ee25
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9229cda32cf6d4074a969713452c5c084b9d4d63
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-an-alternate-snapshot-folder-location-sql-server-management-studio"></a>대체 스냅숏 폴더 위치 지정(SQL Server Management Studio)
-  **게시 속성 - \<Publication>** 대화 상자의 **스냅숏** 페이지에 대체 스냅숏 위치를 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **게시 속성 - \<Publication>** 대화 상자의 **스냅숏** 페이지에 대체 스냅숏 위치를 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="to-specify-an-alternate-snapshot-location"></a>대체 스냅숏 위치를 지정하려면  
   

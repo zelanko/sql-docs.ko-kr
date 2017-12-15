@@ -2,9 +2,12 @@
 title: "1단원: 테이블을 계층 구조로 변환 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3b9cc640084b608b3826788cc0b41e79da40d8e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2a0435c35cbf2d4f3907e44dffe01676694ba32
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>1단원: 테이블을 계층 구조로 변환
-자체 조인을 사용하여 계층 관계를 나타내는 테이블을 보유하고 있는 경우 이 단원의 내용을 참조하여 해당 테이블을 계층 구조로 변환할 수 있습니다. 이 표현을 **hierarchyid**를 사용하는 표현으로 마이그레이션하는 작업은 비교적 쉽습니다. 마이그레이션하면 간단하고 이해하기 쉬운 계층적 표현이 완성되며 효율적인 쿼리를 위해 여러 가지 방법으로 인덱싱할 수 있습니다.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 자체 조인을 사용하여 계층 관계를 나타내는 테이블을 보유하고 있는 경우 이 단원의 내용을 참조하여 해당 테이블을 계층 구조로 변환할 수 있습니다. 이 표현을 **hierarchyid**를 사용하는 표현으로 마이그레이션하는 작업은 비교적 쉽습니다. 마이그레이션하면 간단하고 이해하기 쉬운 계층적 표현이 완성되며 효율적인 쿼리를 위해 여러 가지 방법으로 인덱싱할 수 있습니다.  
   
 이 단원에서는 기존 테이블을 검토하고, **hierarchyid** 열이 포함된 새 테이블을 만들고, 원본 테이블의 데이터로 이 테이블을 채운 다음 인덱싱 방법 3가지를 보여 줍니다. 이 단원에서는 다음 항목을 다룹니다.  
   

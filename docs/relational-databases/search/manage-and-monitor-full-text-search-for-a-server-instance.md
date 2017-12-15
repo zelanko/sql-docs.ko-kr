@@ -1,10 +1,13 @@
 ---
 title: "서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d6f184f66b02ef2f92c9593001edc3364f4d62a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d5d37441c773b2934b544734889a9d7c86cbdfa2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
-  서버 인스턴스의 전체 텍스트 관리에는 다음이 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 서버 인스턴스의 전체 텍스트 관리에는 다음이 포함됩니다.  
   
 -   FDHOST Launcher 서비스(MSSQLFDLauncher) 관리, 서비스 계정 자격 증명을 변경하는 경우 필터 데몬 호스트 프로세스 다시 시작, 서버 차원의 전체 텍스트 속성 구성, 전체 텍스트 카탈로그 백업 등의 시스템 관리 태스크. 예를 들어 서버 수준에서 전반적으로 서버 인스턴스의 기본 언어와 다른 기본 전체 텍스트 언어를 지정할 수 있습니다.  
   

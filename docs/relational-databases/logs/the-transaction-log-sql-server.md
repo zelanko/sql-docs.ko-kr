@@ -2,9 +2,12 @@
 title: "트랜잭션 로그(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 10/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5c2b3a5bd97800d958c04bbc11a509d0db15cdc3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4126d98d24184164618bad5601c3c6301ce77d2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
-  각 SQL Server 데이터베이스에는 모든 트랜잭션과 각 트랜잭션에 의해 적용된 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 각 SQL Server 데이터베이스에는 모든 트랜잭션과 각 트랜잭션에 의해 적용된 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다.
   
 트랜잭션 로그는 데이터베이스의 중요한 구성 요소입니다. 시스템 오류가 발생한 경우 데이터베이스를 일관된 상태로 다시 전환하려면 이 로그가 필요합니다. 
 

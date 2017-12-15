@@ -2,9 +2,12 @@
 title: "Showplan Text (Unencoded) 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdbd698b1ee7ac3273a2ecc4c52e0c8b5659e41a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8b5d4d061f83114b9b1d5eb31f1a09e6901f565f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) 이벤트 클래스
-  Showplan Text (Unencoded) 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. 이 이벤트 클래스는 Showplan Text 이벤트 클래스와 동일하지만 해당 이벤트 정보의 형식이 이진 데이터가 아닌 문자열입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Showplan Text (Unencoded) 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SQL 문을 실행할 때 발생합니다. 이 이벤트 클래스는 Showplan Text 이벤트 클래스와 동일하지만 해당 이벤트 정보의 형식이 이진 데이터가 아닌 문자열입니다.  
   
  Showplan All, Showplan XML 또는 Showplan XML Statistics Profile 이벤트 클래스에서 사용할 수 있는 정보의 일부만 포함되어 있습니다.  
   

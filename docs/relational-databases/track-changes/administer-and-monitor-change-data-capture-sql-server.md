@@ -2,9 +2,12 @@
 title: "변경 데이터 캡처 관리 및 모니터링(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eeb22b42fa171fe644e6fa01e1be107bc1917afa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0528c9fb9751aadc11f7896347538d5a200b0290
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
-  이 항목에서는 변경 데이터 캡처를 관리 및 모니터링하는 방법에 대해 설명합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목에서는 변경 데이터 캡처를 관리 및 모니터링하는 방법에 대해 설명합니다.  
   
 ##  <a name="Capture"></a> 캡처 작업  
  캡처 작업은 매개 변수가 없는 저장 프로시저인 **sp_MScdc_capture_job**을 실행하여 시작됩니다. 이 저장 프로시저는 먼저 msdb.dbo.cdc_jobs의 캡처 작업을 위해 *maxtrans*, *maxscans*, *continuous*및 *pollinginterval* 의 구성 값을 추출합니다. 그런 다음 이러한 구성 값은 **sp_cdc_scan**저장 프로시저에 매개 변수로 전달되고 로그 검색을 수행하기 위해 **sp_replcmds** 를 호출하는 데 사용됩니다.  

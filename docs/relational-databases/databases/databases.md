@@ -2,9 +2,12 @@
 title: "데이터베이스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8610ef88d11d41536ad2cca8f3eb9ab9418692b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 013855b3dee3d610a34ec3171c98bdae03ccc1d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="databases"></a>데이터베이스
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터베이스는 구조화된 데이터의 특정 집합이 저장되는 테이블 모음으로 구성됩니다. 테이블에는 행과 열의 모음이 들어 있습니다. 행은 레코드나 튜플이라고도 하고 열은 특성이라고도 합니다. 테이블의 각 열에는 날짜, 이름, 달러 금액 및 숫자와 같은 특정 유형의 정보가 저장됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스는 구조화된 데이터의 특정 집합이 저장되는 테이블 모음으로 구성됩니다. 테이블에는 행과 열의 모음이 들어 있습니다. 행은 레코드나 튜플이라고도 하고 열은 특성이라고도 합니다. 테이블의 각 열에는 날짜, 이름, 달러 금액 및 숫자와 같은 특정 유형의 정보가 저장됩니다.  
   
 ## <a name="basic-information-about-databases"></a>데이터베이스에 대한 기본 정보  
  컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스가 하나 이상 설치될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스는 하나 이상의 데이터베이스를 포함할 수 있습니다.  데이터베이스 내에 스키마라는 하나 이상의 개체 소유권 그룹이 있습니다. 각 스키마에는 테이블, 뷰, 저장 프로시저와 같은 데이터베이스 개체가 있습니다. 인증서 및 비대칭 키와 같은 일부 개체는 데이터베이스에는 포함되지만 스키마에는 포함되지 않습니다. 테이블을 만드는 방법은 [Tables](../../relational-databases/tables/tables.md)을 참조하십시오.  

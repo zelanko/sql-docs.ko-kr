@@ -2,9 +2,12 @@
 title: "차등 백업(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eba06fb9a5537477a0b0ed5ef143ac33f9bd2867
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 127eed1b2970254accdfc83a795e3b0a66d9f08a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="differential-backups-sql-server"></a>차등 백업(SQL Server)
-  이 백업 및 복원 항목은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관련됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 백업 및 복원 항목은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관련됩니다.  
   
  차등 백업은 가장 최근에 수행한 이전의 전체 데이터 백업을 기반으로 합니다. 차등 백업은 전체 백업 이후 변경된 데이터만 캡처합니다. 차등 백업의 기반이 되는 전체 백업을 차등의 *기반* 이라고 합니다. 복사 전용 백업을 제외한 전체 백업은 데이터베이스 백업, 부분 백업 및 파일 백업을 포함한 일련의 차등 백업에 대한 기반으로 사용할 수 있습니다. 파일 차등 백업에 대한 기반 백업은 전체 백업, 파일 백업 또는 부분 백업에 포함될 수 있습니다.  
   

@@ -2,9 +2,12 @@
 title: "예제: ID 및 IDREFS 지시어 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b3d3a336797c486b533f5ca0869e5676d6ec23d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 889780ede86e06d81145609b30949e33d602664a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>예제: ID 및 IDREFS 지시어 지정
-  요소 특성을 **ID** 유형의 특성으로 지정한 다음 **IDREFS** 특성을 사용하여 이 특성을 참조할 수 있습니다. 이러한 방식은 문서 간 연결을 설정하며 관계형 데이터베이스의 기본 키 및 외래 키 관계와 비슷합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 요소 특성을 **ID** 유형의 특성으로 지정한 다음 **IDREFS** 특성을 사용하여 이 특성을 참조할 수 있습니다. 이러한 방식은 문서 간 연결을 설정하며 관계형 데이터베이스의 기본 키 및 외래 키 관계와 비슷합니다.  
   
  이 예에서는 **ID** 및 **IDREFS** 지시어를 사용하여 **ID** 및 **IDREFS** 유형의 특성을 만드는 방법을 보여 줍니다. ID는 정수 값일 수 없기 때문에 이 예에서는 ID 값이 변환됩니다. 즉, 다른 유형으로 캐스팅됩니다. ID 값에는 접두사가 사용됩니다.  
   

@@ -2,9 +2,12 @@
 title: "복제 토폴로지 보안 설정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c7637dd9fb2e9f827c1d0d0f5d222ce8b7bbf5c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7e832901034529888457e021d753e0c3fb2e11a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="secure-a-replication-topology"></a>복제 토폴로지 보안 설정
-  복제에 필요한 보안 계정, 로그인 및 암호는 복제가 구성될 때와 게시 및 구독이 생성될 때 제공됩니다. 이러한 보안 설정은 나중에 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], 복제 저장 프로시저 및 RMO(복제 관리 개체)를 사용하여 변경할 수 있습니다. 다음 항목에서는 복제 보안 설정을 수정하는 방법을 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제에 필요한 보안 계정, 로그인 및 암호는 복제가 구성될 때와 게시 및 구독이 생성될 때 제공됩니다. 이러한 보안 설정은 나중에 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], 복제 저장 프로시저 및 RMO(복제 관리 개체)를 사용하여 변경할 수 있습니다. 다음 항목에서는 복제 보안 설정을 수정하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

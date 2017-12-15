@@ -2,9 +2,12 @@
 title: "인덱스 디스크 공간 예 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34ea623f3e64833c73f23a5be78fd3cf9ef9722b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3a9fb062940b786528ea4e0f19395391a2b84b19
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-disk-space-example"></a>인덱스 디스크 공간 예
-  인덱스를 생성하거나, 다시 작성하거나, 삭제할 때마다 해당 파일 및 파일 그룹에서 이전(원본) 및 새(대상) 구조 모두에 대한 디스크 공간이 필요합니다. 기존 구조는 인덱스 생성 트랜잭션이 커밋된 후 할당 취소됩니다. 또한 분류 작업을 위한 임시 디스크 공간도 추가로 필요할 수 있습니다. 자세한 내용은 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 인덱스를 생성하거나, 다시 작성하거나, 삭제할 때마다 해당 파일 및 파일 그룹에서 이전(원본) 및 새(대상) 구조 모두에 대한 디스크 공간이 필요합니다. 기존 구조는 인덱스 생성 트랜잭션이 커밋된 후 할당 취소됩니다. 또한 분류 작업을 위한 임시 디스크 공간도 추가로 필요할 수 있습니다. 자세한 내용은 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)을 참조하세요.  
   
  다음 예에서는 클러스터형 인덱스를 만들기 위한 디스크 공간 요구 사항을 확인합니다.  
   

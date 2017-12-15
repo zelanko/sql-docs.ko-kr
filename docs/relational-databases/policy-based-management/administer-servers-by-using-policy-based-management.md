@@ -2,9 +2,12 @@
 title: "정책 기반 관리를 사용하여 서버 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f980a3c0022592582d9df62fd81b179a7f1dc7a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c8ed9f06fc87d159af34b32ebeb061a872eb9429
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 서버 관리
-   정책 기반 관리는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 관리하는 정책 기반 시스템입니다. 조건 식을 포함하는 조건을 만들 때 사용합니다. 그런 다음 조건을 데이터베이스 대상 개체에 적용하는 정책을 만듭니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 정책 기반 관리는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 관리하는 정책 기반 시스템입니다. 조건 식을 포함하는 조건을 만들 때 사용합니다. 그런 다음 조건을 데이터베이스 대상 개체에 적용하는 정책을 만듭니다.  
 
 예를 들어 데이터베이스 관리자 권한으로 특정 서버에서 데이터베이스 메일을 사용하도록 설정되지 않도록 서버 옵션을 설정하는 조건과 정책을 만들 수 있습니다. 
    

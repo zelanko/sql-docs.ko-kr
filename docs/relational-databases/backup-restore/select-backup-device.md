@@ -2,9 +2,12 @@
 title: "백업 장치 선택 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd3728537a840869617ac7a2e28e774411014cab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f06de3366d9363baf3c5a126bd89379f7af298e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-backup-device"></a>백업 장치 선택
-  **백업 장치 선택** 대화 상자를 사용하여 복원 작업에 사용할 논리적 백업 장치를 선택할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **백업 장치 선택** 대화 상자를 사용하여 복원 작업에 사용할 논리적 백업 장치를 선택할 수 있습니다.  
   
  논리적 백업 장치는 운영 체제가 제공하는 물리적 장치인 테이프 드라이브 또는 디스크 드라이브에 해당하는 사용자 정의된 논리적 장치입니다.  
   

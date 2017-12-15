@@ -2,9 +2,12 @@
 title: "Off By Default 정책 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09e14b3302594f7829a72786dc1f13b42fcb2c51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 10de1655781e7e19db0b5468294221da4ef11d93
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-1---create-the-off-by-default-policy"></a>1-1단원 - Off By Default 정책 만들기
-이 태스크에서는 노출 영역 구성 패싯을 기반으로 하는 Mail Off라는 조건을 만듭니다. 그리고 나서 Off By Default라는 정책을 만듭니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 태스크에서는 노출 영역 구성 패싯을 기반으로 하는 Mail Off라는 조건을 만듭니다. 그리고 나서 Off By Default라는 정책을 만듭니다.  
   
 ### <a name="to-create-the-mail-off-condition"></a>Mail Off 조건을 만들려면  
   

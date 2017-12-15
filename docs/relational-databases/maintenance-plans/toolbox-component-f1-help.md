@@ -2,9 +2,12 @@
 title: "도구 상자 구성 요소 F1 도움말 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6ee1d17314517b3115f594d36f781bd778585e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7d1295c3b760386380c626e1afde9b98401ef3bd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="toolbox-component-f1-help"></a>도구 상자 구성 요소 F1 도움말
-  **도구 상자** 에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트에 사용할 다양한 항목이 표시됩니다. **도구 상자** 는 **보기** 메뉴에서 열 수 있으며 원하는 경우 이 창을 도킹할 수 있습니다. 창을 도킹하면 **도구 상자** 를 열린 채로 고정하거나 **자동 숨기기** 를 설정하여 사용하지 않을 때 숨길 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **도구 상자**에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트에 사용할 다양한 항목이 표시됩니다. **도구 상자** 는 **보기** 메뉴에서 열 수 있으며 원하는 경우 이 창을 도킹할 수 있습니다. 창을 도킹하면 **도구 상자** 를 열린 채로 고정하거나 **자동 숨기기** 를 설정하여 사용하지 않을 때 숨길 수 있습니다.  
   
  **도구 상자** 항목은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 코드 편집기 또는 디자인 보기로 끌어 놓거나 복사하여 붙여 넣을 수 있습니다.  
   

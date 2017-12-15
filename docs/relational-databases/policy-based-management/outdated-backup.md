@@ -2,9 +2,12 @@
 title: "오래된 백업 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 536102a3b33e9e851f3c900cb4b1e81676c9efb0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ce4d4891a2d48bd59dbd94025d55204540efc94c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="outdated-backup"></a>오래된 백업
-  이 규칙은 최근 데이터베이스 백업이 있는지 검사합니다. 여러 가지 오류로 인한 데이터 손실로부터 데이터베이스를 보호하기 위해서는 정기적인 백업을 예약하는 것이 중요합니다. 적절한 데이터 백업 빈도는 데이터베이스의 복구 모델, 가능한 데이터 손실에 대한 비즈니스 요구 사항 및 데이터베이스 업데이트 빈도에 따라 달라집니다. 자주 업데이트되는 데이터베이스의 경우 백업 사이의 작업 손실 가능성이 빠르게 증가합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 규칙은 최근 데이터베이스 백업이 있는지 검사합니다. 여러 가지 오류로 인한 데이터 손실로부터 데이터베이스를 보호하기 위해서는 정기적인 백업을 예약하는 것이 중요합니다. 적절한 데이터 백업 빈도는 데이터베이스의 복구 모델, 가능한 데이터 손실에 대한 비즈니스 요구 사항 및 데이터베이스 업데이트 빈도에 따라 달라집니다. 자주 업데이트되는 데이터베이스의 경우 백업 사이의 작업 손실 가능성이 빠르게 증가합니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  
  데이터 손실로부터 데이터베이스를 보호하는 데 충분한 빈도로 백업을 수행하는 것이 좋습니다.  

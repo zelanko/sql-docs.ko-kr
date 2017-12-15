@@ -2,9 +2,12 @@
 title: "필터 추가 또는 편집 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b488f571aee2fcbe68a228489e078ccdc32e9ba2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a859ba6929e849ea753b3cf5c86c428afbaaadfb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-or-edit-filter"></a>필터 추가 또는 편집
-  **필터 추가** 및 **필터 편집** 대화 상자를 사용하여 정적 행 필터 및 매개 변수가 있는 행 필터를 추가 및 편집할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **필터 추가** 및 **필터 편집** 대화 상자를 사용하여 정적 행 필터 및 매개 변수가 있는 행 필터를 추가 및 편집할 수 있습니다.  
   
 > [!NOTE]  
 >  기존 게시에서 필터를 편집하려면 해당 게시에 대한 새 스냅숏이 필요합니다. 게시에 구독이 있으면 해당 구독을 다시 초기화해야 합니다. 속성 변경에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  

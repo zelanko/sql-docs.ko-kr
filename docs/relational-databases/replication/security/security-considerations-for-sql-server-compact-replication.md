@@ -2,9 +2,12 @@
 title: "SQL Server Compact 복제의 보안 고려 사항 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed93760e86efa73c2d3c14b6a94799736b761f6e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4aaf58d17b0a3b5f53a9251e811c8b58775e48c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>SQL Server Compact 복제의 보안 고려 사항
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 엔진 인스턴스와 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 간에 보안 연결을 제공하려면 Microsoft IIS(인터넷 정보 서비스)와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 보안을 모두 제대로 구성해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 엔진 인스턴스와 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 간에 보안 연결을 제공하려면 Microsoft IIS(인터넷 정보 서비스)와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 보안을 모두 제대로 구성해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [보안 및 보호&#40;복제&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
  [복제 보안을 위한 최선의 구현 방법](../../../relational-databases/replication/security/replication-security-best-practices.md)  
   

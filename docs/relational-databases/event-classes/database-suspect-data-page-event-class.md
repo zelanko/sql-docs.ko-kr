@@ -2,9 +2,12 @@
 title: "Database Suspect Data Page 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2984420c1a3106b88187af17a9d9babbc106b44b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5b6882a854d3cb6ea7f4febf7d66ecf09f20e9e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 이벤트 클래스
-  **Database Suspect Data Page** 이벤트 클래스는 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 의 [suspect_pages](../../relational-databases/databases/msdb-database.md)테이블에 페이지가 추가되었음을 나타냅니다. 주의 대상 페이지의 발생을 모니터링하는 추적에 이 이벤트 클래스를 포함합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Database Suspect Data Page** 이벤트 클래스는 [msdb](../../relational-databases/databases/msdb-database.md)의 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 테이블에 페이지가 추가되었음을 나타냅니다. 주의 대상 페이지의 발생을 모니터링하는 추적에 이 이벤트 클래스를 포함합니다.  
   
 > [!NOTE]  
 >  이 이벤트는 해당 행을 **suspect_pages** 테이블에 삽입하면 비동기적으로 생성됩니다. 따라서 이 이벤트를 수신하는 작업이 해당 **suspect_pages** 항목을 바로 찾지 못할 수 있습니다.  

@@ -2,9 +2,12 @@
 title: "안전한 배포(복제) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 24d325ec91abebba16dc39ee28f8c1a45ae8e03b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0740e86a27b4da29a54b90b45d4264ecf7ba88a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="secure-deployment-replication"></a>안전한 배포(복제)
-  이 섹션에서는 복제를 보다 안전하게 유지하는 데 유용한 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 복제를 보다 안전하게 유지하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [배포자 보안 설정](../../../relational-databases/replication/security/secure-the-distributor.md)  

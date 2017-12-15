@@ -2,9 +2,12 @@
 title: "DAC 패키지 유효성 검사 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b4bf32f3b4b39bbb4437fc61922e4c7ae1e552a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1a5824fa73a1c869eb1376fca9b9d0d11ecfb223
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
-  DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  
   
 1.  **시작하기 전에:**  [필수 구성 요소](#Prerequisites)  
   

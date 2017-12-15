@@ -2,9 +2,12 @@
 title: "클라이언트 네트워크 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 86acaf42c34d0d3e190f80fd6d5cdd234300e944
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: da5be764397fd6a2542676235af6276636bdadbb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="client-network-configuration"></a>클라이언트 네트워크 구성
-  클라이언트 소프트웨어를 사용하면 클라이언트 컴퓨터를 네트워크상에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. "클라이언트"는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 서버에서 제공하는 서비스를 사용하는 프런트 엔드 응용 프로그램입니다. 이 응용 프로그램을 호스팅하는 컴퓨터를 *클라이언트 컴퓨터*라고 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 클라이언트 소프트웨어를 사용하면 클라이언트 컴퓨터를 네트워크상에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. "클라이언트"는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 서버에서 제공하는 서비스를 사용하는 프런트 엔드 응용 프로그램입니다. 이 응용 프로그램을 호스팅하는 컴퓨터를 *클라이언트 컴퓨터*라고 합니다.  
   
  가장 간단한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 동일한 시스템에 있을 수 있습니다. 그러나 대개 클라이언트는 네트워크를 통해 하나 이상의 원격 서버에 연결합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 클라이언트/서버 아키텍처를 사용하여 네트워크 상의 여러 클라이언트 및 서버를 원활하게 관리할 수 있습니다. 대부분의 상황에서는 기본 클라이언트 구성으로 충분합니다.  
   

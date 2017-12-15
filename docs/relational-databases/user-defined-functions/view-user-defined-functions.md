@@ -2,9 +2,12 @@
 title: "사용자 정의 함수 보기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2efd88ad0a4b88d24a929b0e79e0e53333b2c1e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6a71d45d8d304c52592b8ee693525950c3bfed28
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-user-defined-functions"></a>사용자 정의 함수 보기
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 사용자 정의 함수의 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 함수 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 함수에서 정의한 데이터를 볼 수 있습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용자 정의 함수의 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 함수 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 함수에서 정의한 데이터를 볼 수 있습니다.  
   
 > [!IMPORTANT]  
 >  함수가 참조하는 개체의 이름을 변경하려면 함수를 수정하여 함수의 텍스트에 새 이름이 적용되도록 해야 합니다. 따라서 개체 이름을 바꾸기 전에 먼저 개체의 종속성을 표시하여 영향을 받는 함수가 있는지 확인해야 합니다.  

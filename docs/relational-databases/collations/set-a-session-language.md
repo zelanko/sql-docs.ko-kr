@@ -2,9 +2,12 @@
 title: "세션 언어 설정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 451c5703624cc9268b7d0fe14a5ba534363ac869
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0279f313616beadedaf37eb4a833ec73614ee37b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-a-session-language"></a>세션 언어 설정
-  세션 언어를 사용하여 언어 및 문화 기본 설정을 기반으로 다음과 같은 요소가 서버에 표시되는 방식을 설정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 세션 언어를 사용하여 언어 및 문화 기본 설정을 기반으로 다음과 같은 요소가 서버에 표시되는 방식을 설정할 수 있습니다.  
   
 -   오류 및 기타 시스템 메시지에 사용될 언어입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 지역화된 모든 언어로 모든 시스템 오류 문자열 및 메시지의 복사본을 여러 개 만들 수 있습니다. 이러한 메시지는 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 카탈로그 뷰를 사용하여 볼 수 있습니다. 해당 언어 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하면 이러한 시스템 메시지가 해당 언어로 변환됩니다. 기본적으로 이러한 메시지의 영어(미국) 집합이 포함됩니다. 또한 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)를 사용하여 특정 언어의 사용자 정의 메시지를 추가할 수 있습니다.  
   

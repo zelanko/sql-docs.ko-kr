@@ -2,9 +2,12 @@
 title: "실행 계획 논리 및 물리 연산자 참조 | Microsoft 문서"
 ms.custom: 
 ms.date: 10/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -139,14 +142,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 85c04a4e1322476be6181e09e6c3a6873955ec37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>실행 계획 논리 및 물리 연산자 참조
-  연산자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 쿼리 또는 DML(데이터 조작 언어) 문이 실행되는 방식을 설명합니다. 쿼리 최적화 프로그램은 연산자를 사용하여 쿼리 계획을 작성함으로써 쿼리에 지정된 결과를 만들거나 DML 문에 지정된 작업을 수행합니다. 쿼리 계획은 물리 연산자로 구성된 트리입니다. SET SHOWPLAN 문, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 그래픽 실행 계획 옵션 또는 SQL Server Profiler의 Showplan 이벤트 클래스를 사용하여 쿼리 계획을 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 연산자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리 또는 DML(데이터 조작 언어) 문이 실행되는 방식을 설명합니다. 쿼리 최적화 프로그램은 연산자를 사용하여 쿼리 계획을 작성함으로써 쿼리에 지정된 결과를 만들거나 DML 문에 지정된 작업을 수행합니다. 쿼리 계획은 물리 연산자로 구성된 트리입니다. SET SHOWPLAN 문, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 그래픽 실행 계획 옵션 또는 SQL Server Profiler의 Showplan 이벤트 클래스를 사용하여 쿼리 계획을 볼 수 있습니다.  
   
  연산자는 논리 연산자와 물리 연산자로 분류됩니다.  
   

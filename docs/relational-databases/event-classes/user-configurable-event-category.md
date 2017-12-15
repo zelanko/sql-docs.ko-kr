@@ -2,9 +2,12 @@
 title: "User-Configurable 이벤트 범주 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 007185d17963e7704fd698a119d87797832380de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7bd3c5e554f597dacb589e536e83d49ddcf1e097
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-configurable-event-category"></a>User-Configurable 이벤트 범주
-  **User-Configurable** 이벤트 범주에 **User-Configurable** 이벤트 클래스가 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **User-Configurable** 이벤트 범주에는 **User-Configurable** 이벤트 클래스가 포함됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -2,9 +2,12 @@
 title: "URN을 SQL Server 공급자 경로로 변환 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: faef6d3756049ae24d2c48e5c7cbd1e73a267565
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6d74b81da835b5ce9791123be2ada5d9316ae23e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>URN을 SQL Server 공급자 경로로 변환
-  SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) 모델은 개체의 URN(Uniform Resource Names)을 작성합니다. 각 URN은 SMO 개체를 고유하게 식별하며 **Convert-UrnToPath** cmdlet을 사용하여 SQL Server PowerShell 공급자 경로로 변환될 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) 모델은 개체의 URN(Uniform Resource Names)을 작성합니다. 각 URN은 SMO 개체를 고유하게 식별하며 **Convert-UrnToPath** cmdlet을 사용하여 SQL Server PowerShell 공급자 경로로 변환될 수 있습니다.  
   
 ## <a name="converting-urns-to-paths"></a>URN을 경로로 변환  
  각 URN에는 개체에 대한 경로와 동일한 정보가 다른 형식으로 존재합니다. 예를 들어 테이블에 대한 경로는 다음과 같습니다.  

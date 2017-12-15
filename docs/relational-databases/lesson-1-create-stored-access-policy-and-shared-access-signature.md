@@ -1,10 +1,13 @@
 ---
 title: "1단원: 저장된 액세스 정책 및 공유 액세스 서명 만들기 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 327c2ac79a2aa2870cf11b637befba789a4ecc15
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b9b0560be6980577dcedbe147ff856a18b032f03
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>1단원: 저장된 액세스 정책 및 공유 액세스 서명 만들기
-이 단원에서는 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 스크립트를 사용하여 저장된 액세스 정책을 통해 Azure Blob 컨테이너에 공유 액세스 서명을 만듭니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 단원에서는 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 스크립트를 사용하여 저장된 액세스 정책을 통해 Azure Blob 컨테이너에 공유 액세스 서명을 만듭니다.  
   
 > [!NOTE]  
 > 이 스크립트는 Azure PowerShell 5.0.10586을 사용하여 작성되었습니다.  

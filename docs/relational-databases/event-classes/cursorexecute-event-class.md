@@ -2,9 +2,12 @@
 title: "CursorExecute 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6756b69213e3c9cd9d8f27eeab02f662445751c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3c6c48706f855065e96ebcd6c254dd2856c3e15d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 이벤트 클래스
-  **CursorExecute** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 실행 이벤트를 설명합니다. 커서 실행 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 커서 준비 이벤트로 만들어진 실행 계획의 커서를 만들고 채울 때 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CursorExecute** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 실행 이벤트를 설명합니다. 커서 실행 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 커서 준비 이벤트로 만들어진 실행 계획의 커서를 만들고 채울 때 발생합니다.  
   
  커서 성능을 기록하는 추적에 **CursorExecute** 이벤트 클래스를 포함합니다. 추적에 **CursorExecute** 이벤트 클래스가 포함될 경우 발생하는 오버헤드 양은 추적 중에 데이터베이스에 사용되는 커서 빈도에 따라 달라집니다. 커서를 광범위하게 사용할 경우 추적을 수행하면 성능이 크게 저하될 수 있습니다.  
   

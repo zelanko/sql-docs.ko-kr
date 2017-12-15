@@ -2,9 +2,12 @@
 title: "배포자 설정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dfd2c4bad135aaf87e9a9ce34c07dd1facb0f7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 70367b69beb543b6d43b28ebbd6e5e15891b074e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="distributor-settings"></a>배포자 설정
-  **배포자 설정** 대화 상자에서는 복제 모니터의 왼쪽 창에 추가된 배포자에 대한 설정을 변경할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **배포자 설정** 대화 상자에서는 복제 모니터의 왼쪽 창에 추가된 배포자에 대한 설정을 변경할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **복제 모니터가 시작될 때 자동으로 연결**  

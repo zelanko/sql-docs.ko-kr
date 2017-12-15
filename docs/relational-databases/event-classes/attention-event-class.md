@@ -2,9 +2,12 @@
 title: "Attention 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b16f6c0ade71ebbfc39784342308ccd640042004
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e254e957aeda52e7a73e7b866d402bb0c32f18b0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attention-event-class"></a>Attention 이벤트 클래스
-  **Attention** 이벤트 클래스는 취소, 클라이언트 인터럽트 요청, 클라이언트 연결 끊어짐 등의 attention 이벤트가 발생했음을 나타냅니다. 취소 작업은 데이터 액세스 드라이버 제한 시간 구현의 일부라고 할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Attention** 이벤트 클래스는 취소, 클라이언트 인터럽트 요청, 클라이언트 연결 끊어짐 등의 attention 이벤트가 발생했음을 나타냅니다. 취소 작업은 데이터 액세스 드라이버 제한 시간 구현의 일부라고 할 수 있습니다.  
   
 ## <a name="attention-event-class-data-columns"></a>Attention 이벤트 클래스 데이터 열  
   

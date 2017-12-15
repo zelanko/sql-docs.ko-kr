@@ -2,9 +2,12 @@
 title: "증분 복원(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f5ff052d1d6981fe0383ac75c38fc643565d4430
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 74cd98740e15437e44fc782cf71389daccd1beea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔터프라이즈 버전의 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우, 그리고 단순 모델에서 파일 그룹이 읽기 전용인 경우에 대해서만 다룹니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔터프라이즈 버전의 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우, 그리고 단순 모델에서 파일 그룹이 읽기 전용인 경우에 대해서만 다룹니다.  
   
  증분 복원과 메모리 최적화 테이블에 대한 자세한 내용은 [메모리 최적화 테이블이 있는 데이터베이스의 증분 복원](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)을 참조하세요.  
   

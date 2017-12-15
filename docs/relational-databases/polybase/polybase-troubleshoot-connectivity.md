@@ -20,15 +20,14 @@ ms.date: 07/19/2017"
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
+ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 423ce5e7a0f686c6b97abfe20050de22ef785e70
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
-PolyBase에 기본 제공된 대화형 진단 도구를 사용하면 Kerberos 보안 Hadoop 클러스터에 대해 PolyBase를 사용할 때 인증 문제를 해결할 수 있습니다. 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase에 기본 제공된 대화형 진단 도구를 사용하면 Kerberos 보안 Hadoop 클러스터에 대해 PolyBase를 사용할 때 인증 문제를 해결할 수 있습니다. 
 
 이 문서는 이 도구를 활용하여 이러한 문제의 디버깅 프로세스를 살펴보기 위한 가이드입니다.
 
@@ -208,6 +207,5 @@ Active Directory에서는 [제어판] > [Active Directory 사용자 및 컴퓨�
 [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)(CDH의 Kerberos 설정에 대한 Cloudera 가이드)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)(HDP의 Kerberos 설정에 대한 Hortonworks 가이드)  
 [PolyBase 문제 해결](polybase-troubleshooting.md)
-
 
 

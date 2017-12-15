@@ -2,9 +2,12 @@
 title: "가용성 복제본 간의 세션 동안 발생 가능한 오류(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dea241da7685b1091704416c3a4a658198cfc4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fde99df0bca010b8920267b1b41de87fbe38e2bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>가용성 복제본 간의 세션 동안 발생 가능한 오류(SQL Server)
-물리적 문제, 운영 체제 문제 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문제로 인해 두 가용성 복제본 사이의 세션에서 오류가 발생할 수 있습니다. 가용성 복제본은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지 아니면 실패했는지 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 자체적으로 세션 제한 시간 메커니즘을 구현합니다. 세션 제한 시간(초)을 지정합니다. 이 제한 시간은 서버 인스턴스가 다른 인스턴스로부터 PING 메시지를 받기까지 기다리는 최대 시간으로, 이 시간이 경과하면 해당 인스턴스의 연결이 끊어진 것으로 간주됩니다. 두 가용성 복제본 사이에서 세션 제한 시간이 발생하면 가용성 복제본은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 물리적 문제, 운영 체제 문제 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문제로 인해 두 가용성 복제본 사이의 세션에서 오류가 발생할 수 있습니다. 가용성 복제본은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지 아니면 실패했는지 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 자체적으로 세션 제한 시간 메커니즘을 구현합니다. 세션 제한 시간(초)을 지정합니다. 이 제한 시간은 서버 인스턴스가 다른 인스턴스로부터 PING 메시지를 받기까지 기다리는 최대 시간으로, 이 시간이 경과하면 해당 인스턴스의 연결이 끊어진 것으로 간주됩니다. 두 가용성 복제본 사이에서 세션 제한 시간이 발생하면 가용성 복제본은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다.  
   
 > [!IMPORTANT]  
 >  주 데이터베이스가 아닌 다른 데이터베이스의 오류는 감지되지 않습니다. 또한 데이터베이스가 데이터 디스크 오류로 인해 다시 시작되지 않는 한 데이터 디스크 오류도 감지되지 않습니다.  

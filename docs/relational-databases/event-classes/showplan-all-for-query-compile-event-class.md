@@ -2,9 +2,12 @@
 title: "Showplan All for Query Compile 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ae3b7c3f1711ff1987628ef7bf4f9f0a8513451
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c57d6ba87f0333b8436ad7135d1c789c460a65d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile 이벤트 클래스
-  Showplan All for Query Compile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 컴파일할 때 발생합니다. 실행 계획 연산자를 식별하려면 이 이벤트 클래스를 포함합니다. 여기서 설명하는 내용은 Showplan XML For Query Compile 이벤트 클래스에서 사용할 수 있는 정보의 일부입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Showplan All for Query Compile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SQL 문을 컴파일할 때 발생합니다. 실행 계획 연산자를 식별하려면 이 이벤트 클래스를 포함합니다. 여기서 설명하는 내용은 Showplan XML For Query Compile 이벤트 클래스에서 사용할 수 있는 정보의 일부입니다.  
   
  Showplan All for Query Compile 이벤트 클래스는 완전한 컴파일 시간 데이터를 표시하므로 추적에 Showplan All for Query Compile을 포함시키면 상당한 성능 오버헤드가 발생할 수 있습니다. 이 문제를 최소화하려면 단기간 동안 특정 문제를 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  
   

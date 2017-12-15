@@ -2,9 +2,12 @@
 title: "메모리 내 OLTP 가비지 수집 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7afe19b74f6ee1d36767fca1fe44b0ace0a6820f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65212125bf5ad0d8b0908a23bd399d524de5d078
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>메모리 내 OLTP 가비지 수집
-  데이터 행은 더 이상 활성화되지 않는 트랜잭션에서 삭제된 경우 유효하지 않은 것으로 간주됩니다. 유효하지 않은 행에는 가비지 수집을 수행할 수 있습니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]에서 가비지 수집의 특성은 다음과 같습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 데이터 행은 더 이상 활성화되지 않는 트랜잭션에서 삭제된 경우 유효하지 않은 것으로 간주됩니다. 유효하지 않은 행에는 가비지 수집을 수행할 수 있습니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]에서 가비지 수집의 특성은 다음과 같습니다.  
   
 -   비중단. 가비지 수집은 시간이 지남에 따라 작업에 미치는 영향을 최소화하면서 배포됩니다.  
   

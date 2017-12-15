@@ -122,6 +122,7 @@
 
 ### [R에 대한 사용자 패키지 라이브러리의 오류 방지](r/packages-installed-in-user-libraries.md)
 
+### [SQLRUserGroup을 데이터베이스 사용자로 추가](r/add-sqlrusergroup-to-database.md)
 
 ## 데이터 탐색 및 모델링
 

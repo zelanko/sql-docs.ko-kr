@@ -2,9 +2,12 @@
 title: "Lock:Deadlock Chain 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d7edf2d9fc188d897dfd3142a184b01980fa16f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f2719ef1fde703553617170a99f57f31897484e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain 이벤트 클래스
-  Lock:Deadlock Chain 이벤트 클래스는 교착 상태의 각 참가자에 대해 생성됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Lock:Deadlock Chain 이벤트 클래스는 교착 상태의 각 참가자에 대해 생성됩니다.  
   
  Lock:Deadlock Chain 이벤트 클래스를 사용하여 교착 상태 조건이 발생하는 시점을 모니터링할 수 있습니다. 이 정보는 교착 상태가 응용 프로그램의 성능에 큰 영향을 미치는지 여부와 어떤 개체가 관련되어 있는지 확인하는 데 유용합니다. 이러한 개체를 수정하는 응용 프로그램 코드를 검사하여 교착 상태를 최소화하도록 변경될 수 있는지 확인할 수 있습니다.  
   

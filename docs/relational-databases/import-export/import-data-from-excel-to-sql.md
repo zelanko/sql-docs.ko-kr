@@ -2,9 +2,12 @@
 title: "Excel에서 SQL로 데이터 가져오기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,14 +15,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3541efebe50e19ce56e528dc575084c2c5bb1d07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: efa9c31464572543c67edde5fa6a740d659d4d48
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
-Excel 파일에서 SQL Server 또는 Azure SQL Database로 데이터를 가져오는 여러 가지 방법이 있습니다. 이 문서에서는 이러한 각 옵션을 대해 요약하고 자세한 지침에 대한 링크를 제공합니다.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Excel 파일에서 SQL Server 또는 Azure SQL Database로 데이터를 가져오는 여러 가지 방법이 있습니다. 이 문서에서는 이러한 각 옵션을 대해 요약하고 자세한 지침에 대한 링크를 제공합니다.
 -   다음 도구 중 하나를 사용하여 Excel에서 SQL로 한 단계만 거쳐 데이터를 가져올 수 있습니다.
     -   SQL Server 가져오기 및 내보내기 마법사
     -   SSIS(SQL Server Integration Services)

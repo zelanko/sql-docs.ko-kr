@@ -2,9 +2,12 @@
 title: "계층적 메서드를 사용하여 계층적 테이블 채우기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d102ce8d0d2e33829961ff95834be20128828624
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e5af8385d5968daba091c05ae41cff780be8f47b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-2---populating-a-hierarchical-table-using-hierarchical-methods"></a>2-2단원 - 계층적 메서드를 사용하여 계층적 테이블 채우기
-[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 의 마케팅 부서에는 8명의 직원이 근무하고 있습니다. 직원 계층은 다음과 같습니다.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 마케팅 부서에는 8명의 직원이 근무하고 있습니다. 직원 계층은 다음과 같습니다.  
   
 **EmployeeID**가 6인 **David** 는 Marketing Manager입니다. 다음과 같은 3명의 Marketing Specialist가 **David**에게 보고합니다.  
   

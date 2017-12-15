@@ -2,9 +2,12 @@
 title: "데이터베이스 분리 및 연결(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -31,14 +34,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dca7ad5e8c2ad26d16b41f4e719dfe585a4a512f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: df36f7e602f85000e2254b1bffa3d240ab7321a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
-  데이터베이스의 데이터 및 트랜잭션 로그 파일은 분리할 수 있으며 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다. 데이터베이스 분리 및 연결은 데이터베이스를 같은 컴퓨터의 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 변경하거나 데이터베이스를 이동하는 경우 유용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터베이스의 데이터 및 트랜잭션 로그 파일은 분리할 수 있으며 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다. 데이터베이스 분리 및 연결은 데이터베이스를 같은 컴퓨터의 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 변경하거나 데이터베이스를 이동하는 경우 유용합니다.  
   
   
 ##  <a name="Security"></a> 보안  

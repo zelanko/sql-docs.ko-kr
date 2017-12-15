@@ -2,9 +2,12 @@
 title: "새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34a5db01040ddfa38fc310011602edab09385533
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c03db3581e9a01f23eb81c7d4c2a706785abcbb7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지
-  이 대화 상자를 사용하여 새 정책 기반 관리 정책을 만들거나 기존 정책을 수정할 수 있습니다. **적용 대상** 및 **서버 제한** 영역을 필터로 사용하여 정책을 사용 가능한 모든 대상의 하위 집합으로 제한할 수 있습니다. 조건을 대상 필터로 사용하려면 조건이 물리적 패싯에 대해 정의되어야 하며 함수를 포함하지 않아야 하고 Like 연산자를 포함하지 않아야 합니다. 시스템에서 정책에 대한 개체 집합을 계산할 때 기본적으로 시스템 개체가 제외됩니다.  예를 들어, 정책의 개체 집합이 모든 테이블을 참조할 경우 시스템 테이블에 정책이 적용되지 않습니다. 사용자가 시스템 개체에 대해 정책을 평가하려면 개체 집합에 시스템 개체를 명시적으로 추가합니다. 그러나 모든 정책이 **일정 검사** 평가 모드에 대해 지원되더라도 성능상의 이유로 임의 개체 집합의 모든 정책이 **변경 내용 검사** 평가 모드에 대해 지원되지는 않습니다. 자세한 내용은 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 새 정책 기반 관리 정책을 만들거나 기존 정책을 수정할 수 있습니다. **적용 대상** 및 **서버 제한** 영역을 필터로 사용하여 정책을 사용 가능한 모든 대상의 하위 집합으로 제한할 수 있습니다. 조건을 대상 필터로 사용하려면 조건이 물리적 패싯에 대해 정의되어야 하며 함수를 포함하지 않아야 하고 Like 연산자를 포함하지 않아야 합니다. 시스템에서 정책에 대한 개체 집합을 계산할 때 기본적으로 시스템 개체가 제외됩니다.  예를 들어, 정책의 개체 집합이 모든 테이블을 참조할 경우 시스템 테이블에 정책이 적용되지 않습니다. 사용자가 시스템 개체에 대해 정책을 평가하려면 개체 집합에 시스템 개체를 명시적으로 추가합니다. 그러나 모든 정책이 **일정 검사** 평가 모드에 대해 지원되더라도 성능상의 이유로 임의 개체 집합의 모든 정책이 **변경 내용 검사** 평가 모드에 대해 지원되지는 않습니다. 자세한 내용은 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)를 참조하세요.  
   
 ## <a name="options"></a>옵션  
  **이름**  

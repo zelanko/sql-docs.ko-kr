@@ -2,9 +2,12 @@
 title: "QN:Dynamics 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1eb7fec0864c49a646261b1881cda825f5884a7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0bfd4e0a9a27173b5242c999bd85d17d9a9ec55f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics 이벤트 클래스
-  QN:Dynamics 이벤트 클래스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 쿼리 알림을 지원하기 위해 수행하는 백그라운드 작업에 대한 정보를 보고합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]내에서 백그라운드 스레드는 구독 제한 시간, 시작될 보류 중인 구독 및 매개 변수 테이블 소멸을 모니터링합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] QN:Dynamics 이벤트 클래스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 쿼리 알림을 지원하기 위해 수행하는 백그라운드 작업에 대한 정보를 보고합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]내에서 백그라운드 스레드는 구독 제한 시간, 시작될 보류 중인 구독 및 매개 변수 테이블 소멸을 모니터링합니다.  
   
 ## <a name="qndynamics-event-class-data-columns"></a>QN:Dynamics 이벤트 클래스 데이터 열  
   

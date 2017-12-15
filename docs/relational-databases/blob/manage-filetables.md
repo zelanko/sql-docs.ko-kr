@@ -2,9 +2,12 @@
 title: "FileTable 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 22af72edfc8fb5e3f17544de3f30d1b1e3aa09c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1ced8ec91d40a47b40a5ac44afcab9967a0c7008
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-filetables"></a>FileTable 관리
-  FileTable을 관리하는 데 사용되는 일반적인 관리 태스크에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] FileTable을 관리하는 데 사용되는 일반적인 관리 태스크에 대해 설명합니다.  
   
 ##  <a name="HowToEnumerate"></a> 방법: FileTable 및 관련 개체 목록 가져오기  
  FileTable 목록을 가져오려면 다음 카탈로그 뷰 중 하나를 쿼리합니다.  

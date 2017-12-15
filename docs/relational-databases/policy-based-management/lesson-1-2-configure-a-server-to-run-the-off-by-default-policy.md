@@ -2,9 +2,12 @@
 title: "Off By Default 정책을 실행하도록 서버 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebc24ef97d0dc3bce65b4f9e9e0dd419d7ffa524
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d9e3f4d7f7fae2b4bf0f03d5dc138a318de8af1b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-2---configure-a-server-to-run-the-off-by-default-policy"></a>1-2단원 - Off By Default 정책을 실행하도록 서버 구성
-이제 Off By Default라는 정책이 만들어졌습니다. 이 태스크에서는 서버가 이 정책의 요구 사항을 준수하는지 여부를 확인합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이제 Off By Default라는 정책이 만들어졌습니다. 이 태스크에서는 서버가 이 정책의 요구 사항을 준수하는지 여부를 확인합니다.  
   
 ### <a name="to-run-the-off-by-default-policy"></a>Off By Default 정책을 실행하려면  
   

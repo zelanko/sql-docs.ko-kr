@@ -2,9 +2,12 @@
 title: "복제의 이전 버전과의 호환성 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 92770f531048f6697e2904f1399c74f88022be53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4031251e251a40014cdcbf41727876bf85f08efd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-backward-compatibility"></a>복제의 이전 버전과의 호환성
-  이전 버전과의 호환성 섹션의 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 버전 간에 기능 변경 내용을 설명합니다. 업그레이드를 계획 중이거나 복제 토폴로지에 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 있는 경우 이전 버전과의 호환성을 이해하는 것이 중요합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이전 버전과의 호환성 섹션의 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 버전 간에 기능 변경 내용을 설명합니다. 업그레이드를 계획 중이거나 복제 토폴로지에 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 있는 경우 이전 버전과의 호환성을 이해하는 것이 중요합니다.  
   
  [SQL Server 복제에서 사용되지 않는 기능](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
  이전 버전과의 호환성을 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 유지되었지만 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 복제 기능  

@@ -2,9 +2,12 @@
 title: "해결 프로그램 선택 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cba1ee9c5659d84f4fbe5a1c6ac5957794df0a88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 02e8f1043c8b3337953dd300c67ad0d94343eb88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>고급 병합 복제 충돌 - 해결 프로그램 선택
-  해결 프로그램을 선택할 때는 응용 프로그램에서 충돌 해결의 중요성을 고려하고 우선 순위를 기반으로 하는 기본 충돌 해결 프로그램을 사용할 수 있는지 또는 아티클 해결 프로그램을 사용해야 하는지 여부를 고려해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 해결 프로그램을 선택할 때는 응용 프로그램에서 충돌 해결의 중요성을 고려하고 우선 순위를 기반으로 하는 기본 충돌 해결 프로그램을 사용할 수 있는지 또는 아티클 해결 프로그램을 사용해야 하는지 여부를 고려해야 합니다.  
   
  같은 파티션에 기록하는 여러 사용자가 없는 상황에서 데이터가 분할되고 복제 토폴로지가 상대적으로 간단한 경우에는(단일 게시자 및 소수의 구독자) 충돌이 드물게 발생하거나 아예 발생하지 않을 것입니다. 이러한 환경에서는 복잡한 충돌 해결 전략이 필요하지 않습니다. 따라서 충돌 해결에 기본 설정을 사용하는 전략과 클라이언트 구독자 및 최초 변경 내용을 적용하는 정책을 사용하는 것이 좋습니다. 토폴로지가 재게시 구독자를 사용하는 경우와 같이 복잡한 경우에는 서버 구독에 우선 순위를 지정하는 것이 더 적합할 수 있습니다.  
   

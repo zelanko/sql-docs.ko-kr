@@ -2,9 +2,12 @@
 title: "중앙 관리 서버를 사용하여 여러 서버 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0e8ba0f062efccbb9e55df5385993afbc90afe1e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 96c7ee447ddb7b353bebaa67d20f134bcb222d6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>중앙 관리 서버를 사용하여 여러 서버 관리
-  중앙 관리 서버를 지정하고 서버 그룹을 만들어 여러 서버를 관리할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 중앙 관리 서버를 지정하고 서버 그룹을 만들어 여러 서버를 관리할 수 있습니다.  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>중앙 관리 서버와 서버 그룹이란?  
  중앙 관리 서버로 지정된 SQL Server 인스턴스는 하나 이상의 인스턴스에 대한 연결 정보를 포함하는 서버 그룹을 유지 관리합니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 정책 기반 관리 정책을 서버 그룹에 대해 동시에 실행할 수 있습니다. 중앙 관리 서버를 통해 관리되는 인스턴스에서 로그 파일을 볼 수도 있습니다. 

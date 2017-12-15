@@ -2,9 +2,12 @@
 title: "CursorUnprepare 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e14b95896487273bac6e2c4bcc28b9c582c8e6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef10f0eee4c9c710f68c5dcea60cabcdf5c9d51a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 이벤트 클래스
-  **CursorUnprepare** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 준비 취소 이벤트에 대한 정보를 제공합니다. 커서 준비 취소 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 실행 계획을 삭제할 때 발생합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CursorUnprepare** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 준비 취소 이벤트에 대한 정보를 제공합니다. 커서 준비 취소 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 실행 계획을 삭제할 때 발생합니다.  
   
  커서 성능을 기록하는 추적에 **CursorUnprepare** 이벤트 클래스를 포함합니다. 추적에 **CursorUnprepare** 이벤트 클래스가 포함되면 발생한 오버헤드 양은 추적하는 동안 데이터베이스에 대한 커서 사용 빈도에 따라 결정됩니다. 커서가 광범위하게 사용되는 경우에는 추적으로 인해 성능이 상당히 저하될 수 있습니다.  
   

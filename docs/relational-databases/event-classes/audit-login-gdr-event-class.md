@@ -2,9 +2,12 @@
 title: "Audit Login GDR 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddbf4afa06c6905780327a66510e035c12b66f8d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c552201bc9a0a73691ec9fca79c90f9f2a06857e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR 이벤트 클래스
-  **Audit Login GDR** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인 권한이 추가되거나 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantlogin**, **sp_revokelogin**및 **sp_denylogin** 저장 프로시저에서 사용됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Audit Login GDR** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인 권한이 추가되거나 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantlogin**, **sp_revokelogin**및 **sp_denylogin** 저장 프로시저에서 사용됩니다.  
   
  이 이벤트 클래스는 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 수 있으므로 대신 **Audit Server Principal Management** 이벤트 클래스를 사용하는 것이 좋습니다.  
   

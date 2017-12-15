@@ -2,9 +2,12 @@
 title: "데이터베이스 엔진이 설치 및 시작되었는지 확인 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7c44c520498ca4e542739bdee87712a18c0f3ce9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7056f7f04b56b2414ab1b03c8753b5dee7fe6ffc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determine-whether-the-database-engine-is-installed-and-started"></a>데이터베이스 엔진이 설치 및 시작되었는지 확인
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치에 성공하면 파일 시스템에 파일이 설치되고 레지스트리에 항목이 생성되며 여러 가지 도구가 설치됩니다. 이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 설치 및 시작되었는지 여부를 확인하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치에 성공하면 파일 시스템에 파일이 설치되고 레지스트리에 항목이 생성되며 여러 가지 도구가 설치됩니다. 이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 설치 및 시작되었는지 여부를 확인하는 방법에 대해 설명합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   

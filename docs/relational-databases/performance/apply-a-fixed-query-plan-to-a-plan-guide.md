@@ -2,9 +2,12 @@
 title: "계획 지침에 정해진 쿼리 계획 적용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8ee66a38a7859499750fcfdd336b874c4c92e7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f81b0d8ea6fb5fa3b6ae954f6d2b2a67cea6fd7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>계획 지침에 정해진 쿼리 계획 적용
-  OBJECT 또는 SQL 유형의 계획 지침에 정해진 쿼리 계획을 적용할 수 있습니다. 정해진 쿼리 계획을 적용하는 계획 지침은 최적화 프로그램에서 특정 쿼리에 대해 선택한 실행 계획보다 더 뛰어난 기존 실행 계획을 알고 있는 경우 유용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] OBJECT 또는 SQL 유형의 계획 지침에 정해진 쿼리 계획을 적용할 수 있습니다. 정해진 쿼리 계획을 적용하는 계획 지침은 최적화 프로그램에서 특정 쿼리에 대해 선택한 실행 계획보다 더 뛰어난 기존 실행 계획을 알고 있는 경우 유용합니다.  
   
  다음 예에서는 간단한 임시 SQL 문에 대한 계획 지침을 만듭니다. `@hints` 매개 변수에 직접 쿼리에 대한 XML 실행 계획을 지정하여 이 문에 대해 원하는 쿼리 계획을 계획 지침에 제공합니다. 예에서는 먼저 SQL 문을 실행하여 계획 캐시에 계획을 생성합니다. 이 예를 위해 생성된 계획이 원하는 계획이며 추가 쿼리 튜닝이 필요하지 않다고 가정합니다. 쿼리에 대한 XML 실행 계획은 `sys.dm_exec_query_stats`, `sys.dm_exec_sql_text`및 `sys.dm_exec_text_query_plan` 동적 관리 뷰를 쿼리하여 가져오고 `@xml_showplan` 변수에 할당됩니다. 그런 다음 `@xml_showplan` 변수는 `sp_create_plan_guide` 매개 변수의 `@hints` 문에 전달됩니다. 또는 [sp_create_plan_guide_from_handle](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md) 저장 프로시저를 사용하여 계획 캐시의 쿼리 계획에서 계획 지침을 만들 수 있습니다.  
   

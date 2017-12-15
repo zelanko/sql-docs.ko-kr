@@ -2,9 +2,12 @@
 title: "OPENXML에서 value() 및 nodes() 메서드 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8179f3147e201b6ab0f99c1177a6dbe0905ab6b4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 82e2e1da18b277dc23ab249505e27907ab8d39e0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML에서 value() 및 nodes() 사용
-  **SELECT** 절에서 **xml** 데이터 형식에 여러 **value()** 메서드를 사용하여 추출된 값의 행 집합을 생성할 수 있습니다. **nodes()** 메서드는 추가 쿼리에 사용할 수 있는 선택된 각 노드에 대해 내부 참조를 생성합니다. **nodes()** 메서드와 **value()** 메서드를 조합하면 일부 행이 있고 해당 생성 시 사용된 경로 식이 복잡한 경우 행 집합을 더욱 효율적으로 생성할 수 있습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] **SELECT** 절에서 **xml** 데이터 형식에 여러 **value()** 메서드를 사용하여 추출된 값의 행 집합을 생성할 수 있습니다. **nodes()** 메서드는 추가 쿼리에 사용할 수 있는 선택된 각 노드에 대해 내부 참조를 생성합니다. **nodes()** 메서드와 **value()** 메서드를 조합하면 일부 행이 있고 해당 생성 시 사용된 경로 식이 복잡한 경우 행 집합을 더욱 효율적으로 생성할 수 있습니다.  
   
  **nodes()** 메서드는 특수한 **xml** 데이터 형식의 인스턴스를 생성하며 각 인스턴스에는 서로 다른 선택 노드에 대한 컨텍스트 집합이 있습니다. 이러한 종류의 XML 인스턴스는 **query()**, **value()**, **nodes()** 및 **exist()** 메서드를 지원하며 **count(\*)** 집계에 사용될 수 있습니다. 다른 용도로 사용하면 오류가 발생합니다.  
   

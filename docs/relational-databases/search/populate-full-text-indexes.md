@@ -2,9 +2,12 @@
 title: "전체 텍스트 인덱스 채우기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,14 +31,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2c1d56c9d50735bb3a97bbfc150359ae06941dc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aa5d1392d5dd90cd5b783ae8e96a47b0fdf4d5be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
-  전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기*(*탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
   
 ##  <a name="types"></a> Types of population  
 전체 텍스트 인덱스는 다음 유형의 채우기를 지원합니다.

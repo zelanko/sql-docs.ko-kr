@@ -2,9 +2,12 @@
 title: "병합 아티클 사이에서 조인 필터 정의 및 수정 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65c7fde3566d62aa6a37f0e74f106d59d77214cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4ae484c85f4b28bc56195d075caf4248893d3862
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>병합 아티클 사이에서 조인 필터 정의 및 수정
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 아티클 간의 조인 필터를 정의하고 수정하는 방법에 대해 설명합니다. 병합 복제는 조인 필터를 지원합니다. 조인 필터는 일반적으로 테이블 파티션을 다른 관련 테이블 아티클로 확장하기 위해 매개 변수가 있는 필터와 함께 사용됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 병합 아티클 간의 조인 필터를 정의하고 수정하는 방법에 대해 설명합니다. 병합 복제는 조인 필터를 지원합니다. 조인 필터는 일반적으로 테이블 파티션을 다른 관련 테이블 아티클로 확장하기 위해 매개 변수가 있는 필터와 함께 사용됩니다.  
   
  **항목 내용**  
   

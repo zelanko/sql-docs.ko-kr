@@ -2,9 +2,12 @@
 title: "네트워크 유무에 관계없이 SQL Server 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 17f40cdf4abb8ed1877ed0d893af5bc416d6b22c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e53720f00ff6233f5decabb681dcb588946db412
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>네트워크에서 또는 네트워크 없이 SQL Server 실행
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 네트워크에서 또는 네트워크 없이 작동할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 네트워크에서 또는 네트워크 없이 작동할 수 있습니다.  
   
 ## <a name="running-sql-server-on-a-network"></a>네트워크에서 SQL Server 실행  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 네트워크에서 통신하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행 중이어야 합니다. 기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows는 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 자동으로 시작합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 시작 여부를 확인하려면 명령 프롬프트에서 다음을 입력합니다.  

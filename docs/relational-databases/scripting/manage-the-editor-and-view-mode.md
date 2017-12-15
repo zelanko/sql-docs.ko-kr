@@ -2,9 +2,12 @@
 title: "편집기 및 보기 모드 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 20b9724db826018521d68f44e42447112921027c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3058e6ca6902a5b91368724763ab53f82bc982b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-the-editor-and-view-mode"></a>편집기 및 보기 모드 관리
-  편집기에서 여러 가지 방법으로 코드 보기를 제어할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 편집기에서 여러 가지 방법으로 코드 보기를 제어할 수 있습니다.  
   
 ## <a name="changing-the-view-mode"></a>보기 모드 변경  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 **탭 문서**라는 보기 모드가 있는데 이 기능을 사용하면 여러 개의 편집기와 문서를 동시에 열어서 편집기 상단 탭을 통해 액세스할 수 있습니다. 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 MDI(다중 문서 인터페이스) 모드로 열 수도 있습니다. 이 모드에서는 탭이 없는 창을 여러 개 열어 바둑판식으로 배열하거나 창 크기를 최소화할 수도 있습니다.  

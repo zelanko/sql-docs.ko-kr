@@ -1,0 +1,28 @@
+# [SQL Operations Studio(미리 보기)](what-is.md)
+# [설치](download.md)
+# 빠른 시작
+## [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
+## [Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
+## [Azure SQL Data Warehouse 연결 및 쿼리](quickstart-sql-dw.md)
+# 자습서
+## [T-SQL 편집기](tutorial-sql-editor.md) 
+## [샘플 정보: 느린 쿼리](tutorial-qds-sql-server.md)
+## [샘플 정보: 테이블 공간 사용량](tutorial-table-space-sql-server.md)
+## [사용자 지정 정보 빌드](tutorial-build-custom-insight-sql-server.md) 
+## [백업 및 복원](tutorial-backup-restore-sql-server.md)
+# 방법 가이드
+## [대시보드 및 정보 위젯](insight-widgets.md)
+## [코드 조각](code-snippets.md)
+## [통합된 터미널(PowerShell, Bash)](integrated-terminal.md)
+## [바로 가기 키](keyboard-shortcuts.md)
+## [서버 그룹](server-groups.md)
+## [원본 제어](source-control.md)
+## [작업 영역 및 사용자 설정](settings.md)
+## [Windows 인증(Kerberos)](enable-kerberos.md)
+## [사용 데이터 수집](usage-data-collection.md)
+# 리소스
+## [Transact-SQL 참조](../t-sql/language-reference.md)
+## [SQL Operations Studio(미리 보기) GitHub 리포지토리](https://www.github.com/Microsoft/SqlOpsStudio)
+## [SQL Server 블로그](https://blogs.technet.microsoft.com/dataplatforminsider/)
+# [FAQ](faq.md)
+# [문제 보고 및 제안](https://github.com/microsoft/sqlopsstudio/issues)

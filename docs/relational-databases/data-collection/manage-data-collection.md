@@ -2,9 +2,12 @@
 title: "데이터 컬렉션 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8dcd3e25ca8172c1cfc55e234f188495ac2322d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 82d9d1e74c0419f9ea685dc9ae9c243c9bba2840
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-data-collection"></a>데이터 컬렉션 관리
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 및 함수를 사용하여 데이터 컬렉션 사용 또는 사용 안 함, 컬렉션 집합 구성 변경, 관리 데이터 웨어하우스에서 데이터 보기와 같은 데이터 컬렉션의 다양한 기능을 관리할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 및 함수를 사용하여 데이터 컬렉션 사용 또는 사용 안 함, 컬렉션 집합 구성 변경, 관리 데이터 웨어하우스에서 데이터 보기와 같은 데이터 컬렉션의 다양한 기능을 관리할 수 있습니다.  
   
 ## <a name="manage-data-collection-using-ssms"></a>SSMS를 사용하여 데이터 컬렉션 관리  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 사용하여 다음과 같은 데이터 수집기 관련 태스크를 수행합니다.  

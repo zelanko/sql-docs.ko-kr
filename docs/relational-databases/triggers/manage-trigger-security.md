@@ -2,9 +2,12 @@
 title: "트리거 보안 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: edc234ca0770cd639ab3fc5d0bf7ca65f3cb0ed2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ba64e3958c9bd8bb9873dec29016c56bb718e94c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-trigger-security"></a>트리거 보안 관리
-  기본적으로 두 DML 및 DDL 트리거는 트리거를 호출하는 사용자의 컨텍스트에서 모두 실행됩니다. 트리거 호출자는 트리거를 실행시키는 문을 실행하는 사용자입니다. 예를 들어 **Mary** 라는 사용자가 DML 트리거 **DML_trigMary** 를 실행시키는 DELETE 문을 실행하면 **DML_trigMary** 내에 있는 코드는 **Mary**에 대한 사용자 권한 컨텍스트에서 실행됩니다. 이러한 기본 동작은 데이터베이스나 서버 인스턴스에 악의적인 코드를 침투시키려는 사용자가 이용할 수 있습니다. 예를 들어 다음 DDL 트리거는 `JohnDoe`라는 사용자가 만든 것입니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 기본적으로 두 DML 및 DDL 트리거는 트리거를 호출하는 사용자의 컨텍스트에서 모두 실행됩니다. 트리거 호출자는 트리거를 실행시키는 문을 실행하는 사용자입니다. 예를 들어 **Mary** 라는 사용자가 DML 트리거 **DML_trigMary** 를 실행시키는 DELETE 문을 실행하면 **DML_trigMary** 내에 있는 코드는 **Mary**에 대한 사용자 권한 컨텍스트에서 실행됩니다. 이러한 기본 동작은 데이터베이스나 서버 인스턴스에 악의적인 코드를 침투시키려는 사용자가 이용할 수 있습니다. 예를 들어 다음 DDL 트리거는 `JohnDoe`라는 사용자가 만든 것입니다.  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
   

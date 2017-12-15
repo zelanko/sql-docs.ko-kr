@@ -2,9 +2,12 @@
 title: "전체 데이터베이스 백업(SQL Server) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 653666e22bf7c6c2bd46a0d4672f613184f1108b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 358eb04cb27e1fb0ecc893e04413c30bbc602a25
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="full-database-backups-sql-server"></a>전체 데이터베이스 백업(SQL Server)
-  전체 데이터베이스 백업은 전체 데이터베이스를 백업합니다. 이 백업은 전체 데이터베이스 백업이 복원된 후 전체 데이터베이스가 복구될 수 있도록 트랜잭션 로그의 일부를 포함합니다. 전체 데이터베이스 백업은 백업 완료 시점의 데이터베이스를 나타냅니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 전체 데이터베이스 백업은 전체 데이터베이스를 백업합니다. 이 백업은 전체 데이터베이스 백업이 복원된 후 전체 데이터베이스가 복구될 수 있도록 트랜잭션 로그의 일부를 포함합니다. 전체 데이터베이스 백업은 백업 완료 시점의 데이터베이스를 나타냅니다.  
   
 > [!TIP]  
 >  데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 완료하는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 따라서 큰 데이터베이스의 경우 *차등 데이터베이스 백업*으로 전체 데이터베이스 백업을 보완할 수 있습니다. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  

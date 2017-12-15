@@ -2,9 +2,12 @@
 title: "CPU 사용 정책에서 노이즈 줄이기(SQL Server 유틸리티) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1c076cc3e503a1417cec2fd9704cae29e0bb8a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bb9460eb2dee21369bac8920dcc77a64e98b9857
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>CPU 사용 정책에서 노이즈 줄이기(SQL Server 유틸리티)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 리소스 사용 정책에서 노이즈 및 원치 않는 위반이 보고되는 것을 줄이려면 다음 정책을 사용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 리소스 사용 정책에서 노이즈 및 원치 않는 위반이 보고되는 것을 줄이려면 다음 정책을 사용합니다.  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>프로세서 사용이 얼마나 자주 위반되면 사용 과다로 보고됩니까?  
  평가 기간 및 위반 비율 허용 오차는 모두 유틸리티 탐색기의 **유틸리티 관리** 노드에 있는 **정책** 탭 설정에서 구성할 수 있습니다. 정책을 변경하려면 정책 설명 오른쪽에 있는 슬라이더 컨트롤을 사용한 다음 **적용**을 클릭합니다. 아래쪽에 있는 단추를 사용하여 기본값으로 복원하거나 변경을 취소할 수도 있습니다.  

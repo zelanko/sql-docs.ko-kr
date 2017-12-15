@@ -2,9 +2,12 @@
 title: "Transact-SQL 코드 조각 추가 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: be592feef35a8cf875d9dce783f5843979d4f835
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd782cbd60c23d139a980bbf943b158cb38561b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL 코드 조각 추가
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 미리 정의된 코드 조각 집합에 사용자 고유의 Transact-SQL 코드 조각을 추가할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 미리 정의된 코드 조각 집합에 사용자 고유의 Transact-SQL 코드 조각을 추가할 수 있습니다.  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>Transact-SQL 코드 조각 파일 만들기  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 만드는 첫 번째 단계는 사용자 코드 조각의 텍스트가 포함된 XML 파일을 만드는 것입니다. 이 파일은 파일 확장명이 .snippet이고 [코드 조각 스키마](http://go.microsoft.com/fwlink/?LinkId=207504)의 요구 사항을 충족해야 합니다. 코드 조각 언어는 SQL로 설정합니다.  

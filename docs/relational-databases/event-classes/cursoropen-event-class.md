@@ -2,9 +2,12 @@
 title: "CursorOpen 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef99bb8938a8a565d98fe624567a08502a2d2f0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 276c1b736886099672a38b85e48f982291e8ae1e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 이벤트 클래스
-  **CursorOpen** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 열기 이벤트를 설명합니다. 커서 열기 이벤트는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 SQL 문을 커서 및 커서 옵션과 연결되도록 정의할 때 발생하여 커서를 채웁니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CursorOpen** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 열기 이벤트를 설명합니다. 커서 열기 이벤트는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 SQL 문을 커서 및 커서 옵션과 연결되도록 정의할 때 발생하여 커서를 채웁니다.  
   
  커서 성능을 기록하는 추적에 **CursorOpen** 이벤트 클래스를 포함시키십시오. **CursorOpen** 이벤트 클래스가 추적에 포함되는 경우 발생하는 오버헤드의 양은 추적 중 데이터베이스에 대해 커서가 사용된 빈도에 따라 달라집니다. 커서를 광범위하게 사용할 경우 추적을 수행하면 성능이 크게 저하될 수 있습니다.  
   

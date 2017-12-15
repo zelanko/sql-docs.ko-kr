@@ -7,11 +7,11 @@ author: barbkess
 ms.author: barbkess
 ms.topic: article
 ms.technology: database-engine
-ms.openlocfilehash: 99100b0d7451ba9829fed689e3b2c36b2e3a4727
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f9a888d52c31ca2c5133b70a00e8d25f6e04c29e
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/29/2017
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -71,12 +71,12 @@ ms.lasthandoff: 11/09/2017
                                                 <h3 class="bgdAccent1" style="padding:20px;">개발</h3>
                                                 <h4>디자인</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/connect/sql-connection-libraries">클라이언트 응용 프로그램을 사용하여 연결</a></li>
+                                                    <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">클라이언트 응용 프로그램을 사용하여 연결</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/database-features">관계형 데이터베이스 개념</a></li>
                                                 </ul>
                                                 <h4>Tools</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SSMS(SQL Server Management Studio)</a></li>
+                                                    <li><a class="barLink" href="/sql/sql-operations-studio/download">SQL Operations Studio<sup>미리 보기</sup></a></li>   <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SSMS(SQL Server Management Studio)</a></li>
                                                     <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SSDT(SQL Server Data Tools)</a></li>
                                                     <li><a class="barLink" href="/sql/tools/overview-sql-tools">모든 SQL 도구 보기</a></li>
                                                 </ul>

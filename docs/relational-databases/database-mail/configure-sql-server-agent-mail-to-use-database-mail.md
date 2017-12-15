@@ -2,9 +2,12 @@
 title: "데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15fafd5b18011c54aee21daeaf9bc4ae295ea205
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d568bd30597377e0d8fdd8affea3c0212977ada6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하여 데이터베이스 메일로 알림 및 경고를 보내도록 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에이전트를 구성하는 방법에 대해 설명합니다.  데이터베이스 메일을 사용하도록 설정하고 구성하는 방법은 [데이터베이스 메일 구성](../../relational-databases/database-mail/configure-database-mail.md)을 참조하세요.  [!INCLUDE[tsql](../../includes/tsql-md.md)]사용에 대한 예제는 [데이터베이스 메일 프로필 만들기](../../relational-databases/database-mail/create-a-database-mail-profile.md)를 참조하세요.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 데이터베이스 메일로 알림 및 경고를 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성하는 방법에 대해 설명합니다.  데이터베이스 메일을 사용하도록 설정하고 구성하는 방법은 [데이터베이스 메일 구성](../../relational-databases/database-mail/configure-database-mail.md)을 참조하세요.  [!INCLUDE[tsql](../../includes/tsql-md.md)]사용에 대한 예제는 [데이터베이스 메일 프로필 만들기](../../relational-databases/database-mail/create-a-database-mail-profile.md)를 참조하세요.
   
 -   **시작하기 전에:**  
   

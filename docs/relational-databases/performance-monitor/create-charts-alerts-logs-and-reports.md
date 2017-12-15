@@ -2,9 +2,12 @@
 title: "차트, 경고, 로그 및 보고서 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14e449b64d959cd6f877b27871f329b231038955
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c9bfe93f96bc9c5b4b2c887e3935916fc2fad01b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>차트, 경고, 로그 및 보고서 만들기
-  시스템 모니터를 사용하면 차트, 경고, 로그 및 보고서를 만들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 모니터링할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 시스템 모니터를 사용하면 차트, 경고, 로그 및 보고서를 만들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 모니터링할 수 있습니다.  
   
 ## <a name="charts"></a>차트  
  차트를 사용하면 선택된 개체 및 카운터의 현재 성능(CPU 사용량 또는 디스크 I/O)을 모니터링할 수 있습니다. 차트에 여러 가지 시스템 모니터 개체 및 카운터 조합을 추가할 수 있습니다. 또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 개체 및 카운터도 차트에 추가할 수 있습니다.  

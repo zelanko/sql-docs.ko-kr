@@ -2,9 +2,12 @@
 title: "Audit Broker Conversation 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d600a639c4b6f340c75efa48bd091bf3e072c8a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b0255dd19ca58c79f48c136f33bd9d0a46754a59
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 이벤트 클래스
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Broker Conversation** 이벤트를 만들어 Service Broker 대화 보안과 관련된 감사 메시지를 보고합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **Audit Broker Conversation** 이벤트를 만들어 Service Broker 대화 보안과 관련된 감사 메시지를 보고합니다.  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker Conversation 이벤트 클래스 데이터 열  
   

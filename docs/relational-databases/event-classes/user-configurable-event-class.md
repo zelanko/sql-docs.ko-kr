@@ -2,9 +2,12 @@
 title: "User-Configurable 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff6cce49cb06cf6d102be1cf7c5dc93abff1fc2c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 76c62dfdfecf2aa657d64f6bc6209749ea8bff35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable 이벤트 클래스
-  User-Configurable 이벤트 범주를 사용하여 사용자 정의 이벤트를 모니터링할 수 있습니다. 다른 이벤트 범주의 시스템 제공 이벤트 클래스에서 모니터링할 수 없는 이벤트를 모니터링하도록 사용자 정의 이벤트 클래스를 만듭니다. 예를 들어 테스트 중인 응용 프로그램의 진행률을 모니터링하도록 사용자 정의 이벤트를 만들 수 있습니다. 응용 프로그램이 실행될 때 미리 정의한 지점에서 이벤트를 생성하여 응용 프로그램의 현재 실행 지점을 판단하도록 할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] User-Configurable 이벤트 범주를 사용하여 사용자 정의 이벤트를 모니터링할 수 있습니다. 다른 이벤트 범주의 시스템 제공 이벤트 클래스에서 모니터링할 수 없는 이벤트를 모니터링하도록 사용자 정의 이벤트 클래스를 만듭니다. 예를 들어 테스트 중인 응용 프로그램의 진행률을 모니터링하도록 사용자 정의 이벤트를 만들 수 있습니다. 응용 프로그램이 실행될 때 미리 정의한 지점에서 이벤트를 생성하여 응용 프로그램의 현재 실행 지점을 판단하도록 할 수 있습니다.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>User-Configurable 이벤트 클래스 데이터 열  
   

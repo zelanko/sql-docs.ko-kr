@@ -2,9 +2,12 @@
 title: "저장된 XML 스키마 컬렉션 보기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c460246b6849a83ac096c8f37c001f2d9a1e83f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 60d143e53c01fb90e4c8c73c42f20463739d185c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>저장된 XML 스키마 컬렉션 보기
-  [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)을 사용하여 XML 스키마 컬렉션을 가져오면 스키마 구성 요소가 메타데이터에 저장됩니다. [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)내장 함수를 사용하여 XML 스키마 컬렉션을 다시 만들 수 있습니다. 이 함수는 **xml** 데이터 형식을 반환합니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)을 사용하여 XML 스키마 컬렉션을 가져오면 스키마 구성 요소가 메타데이터에 저장됩니다. [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)내장 함수를 사용하여 XML 스키마 컬렉션을 다시 만들 수 있습니다. 이 함수는 **xml** 데이터 형식을 반환합니다.  
   
  예를 들어 다음 쿼리는`ProductDescriptionSchemaCollection`데이터베이스의 프로덕션 관계형 스키마에서 XML 스키마 컬렉션( [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] )을 검색합니다.  
   

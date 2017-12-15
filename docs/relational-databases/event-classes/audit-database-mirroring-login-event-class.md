@@ -2,9 +2,12 @@
 title: "Audit Database Mirroring Login 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3b55548e0d222d08045fbecbe70e3d4048f4065
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d845ba23a517b6afd3e74d9d807dc3cac3f3a794
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 이벤트 클래스
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Database Mirroring Login** 이벤트를 만들어 데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **Audit Database Mirroring Login** 이벤트를 만들어 데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다.  
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login 이벤트 클래스 데이터 열  
   

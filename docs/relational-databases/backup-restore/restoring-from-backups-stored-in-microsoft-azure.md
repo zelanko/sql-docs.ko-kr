@@ -2,9 +2,12 @@
 title: "Microsoft Azure에 저장된 백업에서 복원 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 78d2478bd6946134cad847c653c7cdfe35e4326f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2ec144412cdbf8207ad318b39aefcbe2a39fcba4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Microsoft Azure에 저장된 백업에서 복원
-  이 항목에서는 Windows Azure Blob 저장소 서비스에 저장된 백업을 사용하여 데이터베이스를 복원할 때의 고려 사항에 대해 간단히 설명합니다. 이 내용은 URL에 대한 SQL Server 백업이나 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 만들어진 백업에 적용됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 Windows Azure Blob 저장소 서비스에 저장된 백업을 사용하여 데이터베이스를 복원할 때의 고려 사항에 대해 간단히 설명합니다. 이 내용은 URL에 대한 SQL Server 백업이나 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 만들어진 백업에 적용됩니다.  
   
  복원할 계획인 Windows Azure Blob 저장소 서비스에 저장된 백업이 있고 온-프레미스 백업과 Azure 백업 모두에 대해 동일한 데이터베이스를 복원하는 방법에 대한 단계를 설명하는 항목을 검토하는 경우 이 항목을 검토하는 것이 좋습니다.  
   

@@ -2,9 +2,12 @@
 title: "Sort Warnings 이벤트 클래스 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0f67e978040b0efbb440b1d31055ff4058c53e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d24e294e048d5673e9ed4e51cfb20fce153e9e67
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 이벤트 클래스
-  Sort Warnings 이벤트 클래스는 정렬 작업이 메모리에 맞지 않음을 나타냅니다. 여기에는 인덱스 만들기와 관련된 정렬 작업이 포함되지 않으며 SELECT 문에 사용된 ORDER BY 절과 같은 쿼리 내의 정렬 작업만 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Sort Warnings 이벤트 클래스는 정렬 작업이 메모리에 맞지 않음을 나타냅니다. 여기에는 인덱스 만들기와 관련된 정렬 작업이 포함되지 않으며 SELECT 문에 사용된 ORDER BY 절과 같은 쿼리 내의 정렬 작업만 포함됩니다.  
   
  정렬 작업을 포함하는 쿼리에서 EventSubClass 데이터 열 값이 2인 Sort Warnings 이벤트 클래스를 생성하면 데이터를 정렬할 때 데이터에 대한 패스가 여러 개 필요하기 때문에 쿼리 성능이 저하될 수 있습니다. 쿼리를 자세히 조사하여 정렬 작업을 제거할 수 있는지 확인하십시오.  
   

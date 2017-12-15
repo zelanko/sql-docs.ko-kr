@@ -2,9 +2,12 @@
 title: "SQL Server PowerShell | Microsoft 문서"
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2007b572b659f5fe9371618b667bb27a43bc70c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 20bdab1b97f3806cea8b8cb3b526a3d4a057f6fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 관리자와 개발자가 서버 관리 및 응용 프로그램 배포를 자동화할 수 있는 강력한 스크립팅 셸인 Windows PowerShell을 지원합니다. Windows PowerShell 언어는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트보다 더 복잡한 논리를 지원하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자가 강력한 관리 스크립트를 작성할 수 있습니다. 또한 Windows PowerShell 스크립트를 사용하여 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 서버 제품을 관리할 수도 있습니다. 이는 관리자에게 서버 전체에 대한 공용 스크립팅 언어를 제공합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 관리자와 개발자가 서버 관리 및 응용 프로그램 배포를 자동화할 수 있는 강력한 스크립팅 셸인 Windows PowerShell을 지원합니다. Windows PowerShell 언어는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트보다 더 복잡한 논리를 지원하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자가 강력한 관리 스크립트를 작성할 수 있습니다. 또한 Windows PowerShell 스크립트를 사용하여 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 서버 제품을 관리할 수도 있습니다. 이는 관리자에게 서버 전체에 대한 공용 스크립팅 언어를 제공합니다.  
   
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell 구성 요소  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **구성 요소를 Windows PowerShell 환경 또는 스크립트로 가져오는 데 사용되는** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 라는 Windows PowerShell 모듈을 제공합니다. **sqlps** 모듈은 다음을 구현하는 두 개의 Windows PowerShell 스냅인을 로드합니다.  
