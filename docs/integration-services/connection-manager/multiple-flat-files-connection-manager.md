@@ -8,8 +8,7 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: f9069538cef2a85ed3e23e9ae3505a9fbfef01ae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 619bd2c1cfb6336b97ea9226deb184ef070e317e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="multiple-flat-files-connection-manager"></a>다중 플랫 파일 연결 관리자
   다중 플랫 파일 연결 관리자를 사용하면 패키지에서 다중 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 데이터 흐름 태스크가 For 루프 컨테이너와 같은 루프 컨테이너 내부에 있는 경우 플랫 파일 원본에서 다중 플랫 파일 연결 관리자를 사용할 수 있습니다. 각 컨테이너 루프에서 플랫 파일 원본은 다중 플랫 파일 연결 관리자가 제공하는 다음 파일 이름에서 데이터를 로드합니다.  
@@ -117,7 +115,7 @@ ms.lasthandoff: 08/09/2017
  **머리글 행 구분 기호**  
  구분 기호 목록에서 머리글 행 구분 기호를 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|설명|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|머리글 행을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
 |**{CR}**|머리글 행을 캐리지 리턴으로 구분합니다.|  
@@ -152,7 +150,7 @@ ms.lasthandoff: 08/09/2017
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|설명|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -166,7 +164,7 @@ ms.lasthandoff: 08/09/2017
  **열 구분 기호**  
  사용 가능한 열 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|설명|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|열이 캐리지 리턴으로 구분됩니다.|  
@@ -207,7 +205,7 @@ ms.lasthandoff: 08/09/2017
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|설명|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -230,7 +228,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="options"></a>옵션  
  **연결 관리자 이름**  
- 워크플로에서의 다중 플랫 파일 연결 관리자에 대한 고유 이름을 지정합니다. 제공한 이름은 **** 디자이너의 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에 표시됩니다.  
+ 워크플로에서의 다중 플랫 파일 연결 관리자에 대한 고유 이름을 지정합니다. 제공한 이름은 **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에 표시됩니다.  
   
  **Description**  
  연결 관리자에 대한 설명을 입력합니다. 설명에 해당 연결 관리자의 용도를 정의하면 패키지를 이해하기 쉬우며 유지 관리가 간편합니다.  
@@ -272,7 +270,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="options"></a>옵션  
  **연결 관리자 이름**  
- 워크플로에서의 다중 플랫 파일 연결에 대한 고유 이름을 지정합니다. 제공한 이름은 **** 디자이너의 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에 표시됩니다.  
+ 워크플로에서의 다중 플랫 파일 연결에 대한 고유 이름을 지정합니다. 제공한 이름은 **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에 표시됩니다.  
   
  **Description**  
  연결에 대한 설명을 입력합니다. 해당 연결의 용도를 설명하여 패키지를 이해하기 쉽고 유지 관리하기 편하도록 만드는 것이 가장 좋습니다.  
@@ -286,7 +284,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [플랫 파일 원본](../../integration-services/data-flow/flat-file-source.md)   
  [플랫 파일 대상](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40; Ssis&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

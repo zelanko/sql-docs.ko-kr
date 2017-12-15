@@ -2,9 +2,12 @@
 title: "SharePoint용 파워 피벗 업그레이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b75ca97fc91e1637b082a44240d7fd4f61a2b6e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9f4ff9921b0965fdd57620a29298688f4604b0f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 업그레이드
-  이 항목에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 특정 단계는 사용자 환경에서 실행 중인 SharePoint 버전에 따라 다르며 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능(**spPowerPivot.msi**)을 포함합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 특정 단계는 사용자 환경에서 실행 중인 SharePoint 버전에 따라 다르며 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능(**spPowerPivot.msi**)을 포함합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   

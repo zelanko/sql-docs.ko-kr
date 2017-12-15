@@ -2,9 +2,12 @@
 title: "확장된 보호를 사용하여 데이터베이스 엔진에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e132f07a9bfa81c2eae226f2ce3d63ba3c65826
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0cdc286f5ab945e2897e69dcfe7f1a98dec1c4b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **** 버전부터는 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. **인증에 대한 확장된 보호** 는 운영 체제에서 구현하는 네트워크 구성 요소의 기능입니다. **확장된 보호** 는 Windows 7 및 Windows Server 2008 R2에서 지원됩니다. **확장된 보호** 는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제의 경우에는 서비스 팩에 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장된 보호 **를 사용하여 연결하면**의 보안이 강화됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전부터는 **확장된 보호**가 지원됩니다. **인증에 대한 확장된 보호** 는 운영 체제에서 구현하는 네트워크 구성 요소의 기능입니다. **확장된 보호** 는 Windows 7 및 Windows Server 2008 R2에서 지원됩니다. **확장된 보호** 는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제의 경우에는 서비스 팩에 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장된 보호 **를 사용하여 연결하면**의 보안이 강화됩니다.  
   
 > [!IMPORTANT]  
 >  Windows에서는 기본적으로 **확장된 보호** 를 사용할 수 없습니다. Windows에서 **확장된 보호** 를 사용하는 방법은 [인증에 대한 확장된 보호](http://support.microsoft.com/kb/968389)를 참조하십시오.  

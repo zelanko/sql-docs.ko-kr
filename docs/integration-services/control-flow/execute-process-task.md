@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
 - sql13.dts.designer.executeprocesstask.general.f1
 - sql13.dts.designer.executeprocesstask.process.f1
-helpviewer_keywords:
-- Execute Process task [Integration Services]
+helpviewer_keywords: Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 8beda5fb308ad93d4582bdcf947c1a1a8a9f2f71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-process-task"></a>프로세스 실행 태스크
   프로세스 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 응용 프로그램이나 배치 파일을 실행합니다. 프로세스 실행 태스크를 사용하여 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 또는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]와 같은 모든 표준 응용 프로그램을 열 수 있지만 이 태스크는 일반적으로 데이터 원본에 대해 작동하는 비즈니스 응용 프로그램이나 배치 파일을 실행하는 데 사용됩니다. 예를 들어 프로세스 실행 태스크를 사용하여 압축된 텍스트 파일을 확장할 수 있습니다. 패키지는 이 텍스트 파일을 패키지의 데이터 흐름에 대한 데이터 원본으로 사용할 수 있습니다. 예를 들어 프로세스 실행 태스크를 사용하여 일일 판매 보고서를 생성하는 사용자 지정 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 응용 프로그램을 실행할 수도 있습니다. 그런 다음 이 보고서를 메일 보내기 태스크에 첨부하여 메일 그룹에 전달할 수 있습니다.  
@@ -75,7 +72,7 @@ ms.lasthandoff: 08/11/2017
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     자세한 내용은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]참조에서[My.Application.CommandLineArgs 속성](http://go.microsoft.com/fwlink/?LinkId=129200) 항목을 참조하십시오.  
+     자세한 내용은 [참조에서](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs 속성 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 항목을 참조하십시오.  
   
 -   Microsoft Visual C#을 사용하여 응용 프로그램을 작성하는 경우 **Main** 메서드를 사용합니다.  
   
@@ -120,15 +117,15 @@ ms.lasthandoff: 08/11/2017
  실행 파일이 들어 있는 폴더의 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하고 해당 폴더를 찾습니다.  
   
  **StandardInputVariable**  
- 프로세스에 대 한 입력을 제공 하거나 클릭 하 여 변수를 선택 \< **새 변수...** > 새 변수를 만들려면:  
+ 프로세스에 입력을 제공할 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- 변수를 누르거나, 프로세스의 출력을 캡처할 선택 \< **새 변수...** > 새 변수를 만듭니다.  
+ 프로세스 출력을 캡처할 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
  **StandardErrorVariable**  
- 변수를 누르거나 프로세서의 오류 출력을 캡처할 선택 \< **새 변수...** > 새 변수를 만듭니다.  
+ 프로세서의 오류 출력을 캡처할 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  프로세스 종료 코드가 **SuccessValue**에 지정한 값과 다른 경우 태스크 실패 여부를 나타냅니다.  
@@ -150,4 +147,3 @@ ms.lasthandoff: 08/11/2017
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
   
   
-
