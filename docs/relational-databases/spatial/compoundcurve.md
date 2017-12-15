@@ -2,9 +2,12 @@
 title: "CompoundCurve | Microsoft 문서"
 ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00541c3148c16abb1db9af3f9fdb63bdaa317894
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8b7c1727022b049923f06225c667b4a9d0438402
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="compoundcurve"></a>CompoundCurve
-  **CompoundCurve** 는 geometry 또는 geography 유형의 연속적인 **CircularString** 또는 **LineString** 인스턴스가 하나 이상 포함된 컬렉션입니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CompoundCurve**는 geometry 또는 geography 유형의 연속적인 **CircularString** 또는 **LineString** 인스턴스가 0개 이상 포함된 컬렉션입니다.  
   
 > [!IMPORTANT]  
 >  **CompoundCurve** 하위 유형을 포함하여 이 릴리스의 새로운 공간 기능에 대한 자세한 설명 및 예제를 보려면 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
