@@ -2,9 +2,12 @@
 title: "정규식을 사용한 텍스트 검색 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 11ac36bd42257b0be9a0b03166132f658d62431e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d9837053135c6c0783d69d9544c84efd35cc5efe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
-  정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **** 찾기 및 바꾸기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **** 찾기 및 바꾸기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
   
 #### <a name="to-find-using-regular-expressions"></a>정규식을 사용하여 검색하려면  
   

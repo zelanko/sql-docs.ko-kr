@@ -2,9 +2,12 @@
 title: "데이터 계층 응용 프로그램 배포 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 21bcace1cd6c05ac3516095aff955e24ff016967
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d65afb41e160671afa9466f648a08e49937e3b6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 응용 프로그램 배포
-  마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 응용 프로그램)를 데이터베이스 엔진 또는 Azure SQL Database의 기존 인스턴스에 배포합니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 응용 프로그램)를 데이터베이스 엔진 또는 Azure SQL Database의 기존 인스턴스에 배포합니다. 
   
  배포 프로세스에서는 **msdb** 시스템 데이터베이스([!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 **master**)에 DAC 정의를 저장하여 DAC 인스턴스를 등록하고 데이터베이스를 만든 다음 DAC에 정의된 모든 데이터베이스 개체로 해당 데이터베이스를 채웁니다.  
  
