@@ -2,10 +2,10 @@
 title: "SQL Server 2016의 새로운 기능"
 ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.technology: server-general
@@ -23,11 +23,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7f4f6bc0101c4cd05a9ec301b3e46b083250d08f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] SQL Server 2016을 사용하면 메모리 내 성능 및 고급 보안부터 데이터베이스 내 분석까지 모든 기능이 기본 제공된 확장 가능한 하이브리드 데이터베이스 플랫폼을 사용하여 지능형 중요 업무용 응용 프로그램을 빌드할 수 있습니다. SQL Server 2016 릴리스에는 다양한 개선 사항 및 향상된 기능과 함께 새로운 보안 기능, 쿼리 기능, Hadoop 및 클라우드 통합, R 분석 등이 추가되어 있습니다. 

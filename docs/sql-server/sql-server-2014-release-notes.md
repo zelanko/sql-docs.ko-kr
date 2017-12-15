@@ -2,10 +2,10 @@
 title: "SQL Server 2014 릴리스 정보 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.reviewer: 
 ms.suite: sql
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b147cc3121dae17a8c5cffe1162a2d998567cdd8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] 이 릴리스 정보 문서에서는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]을 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다.  

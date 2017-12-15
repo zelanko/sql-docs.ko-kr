@@ -1,9 +1,9 @@
 ---
 title: "SQL Server 2012 SP4 릴리스 정보 | Microsoft Docs"
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 10/05/2017
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 562c03dfc873adeaca8f8486f1ecb4c66c3c4d14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7aed12a3e687ab4c8b42b8f07c29d252e0d6acad
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>SQL Server 2012 SP4 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 이 항목에서는 SQL Server 2012 SP4에 포함된 향상된 기능을 요약합니다. 또한 SP4를 설치하고 설치 문제를 해결하기 전에 검토해야 하는 문제를 설명합니다. 릴리스 정보는 설치 미디어가 아닌 온라인으로만 제공됩니다. 이 항목은 문제가 발견될 때마다 정기적으로 업데이트됩니다. SP4에 대한 수정 사항의 자세한 목록은 [SQL Server 2012 SP4 릴리스](https://go.microsoft.com/fwlink/?linkid=846937)를 참조하세요.  
