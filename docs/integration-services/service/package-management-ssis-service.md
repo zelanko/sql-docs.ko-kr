@@ -1,5 +1,5 @@
 ---
-title: "관리 (SSIS 서비스) 패키지 | Microsoft Docs"
+title: "패키지 관리(SSIS 서비스) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,31 +29,30 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51d6e32f04d470c7f4ddfc8d3c4b6d994e0bd764
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
-  패키지 관리에 모니터링, 관리, 패키지 가져오기 및 내보내기에 포함 됩니다.  
+  패키지 관리에는 모니터링, 관리, 패키지 가져오기 및 내보내기가 포함됩니다.  
  
  ## <a name="package-store"></a>패키지 저장소  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]패키지에 액세스 하기 위한 두 개의 최상위 폴더를 제공 합니다. 
- - **패키지 실행** 
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 다음 패키지 액세스를 위해 두 개의 최상위 폴더를 제공합니다. 
+ - **실행 중인 패키지** 
  - **저장된 패키지**
 
  **실행 중인 패키지** 폴더에는 서버에서 현재 실행 중인 패키지가 나열됩니다. **저장된 패키지** 폴더에는 패키지 저장소에 저장된 패키지가 나열됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서는 이 폴더에 나열된 패키지만 관리합니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 구성 파일에 나열된 msdb 데이터베이스나 파일 시스템 폴더 중 하나 또는 둘 다로 구성될 수 있습니다. 이 구성 파일에는 관리할 msdb와 파일 시스템 폴더가 지정되어 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 관리하지 않는 파일 시스템의 다른 위치에 패키지가 저장되어 있을 수도 있습니다.  
   
- Msdb에 저장 된 패키지는 sysssispackages 테이블에 저장 됩니다. 패키지를 msdb에 저장 하면 논리적 폴더로 그룹화 할 수 있습니다. 논리적 폴더를 사용 하 여 유용 목적으로 하 여 패키지를 구성 하거나 sysssispackages 테이블에 대 한 패키지를 필터링 합니다. 에 새 논리적 폴더를 만들고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 기본적으로 msdb에 추가하는 논리적 폴더는 자동으로 패키지 저장소에 포함됩니다.  
+ msdb에 저장하는 패키지는 sysssispackages라는 테이블에 저장됩니다. msdb에 패키지를 저장할 때 패키지를 논리적 폴더로 그룹화할 수 있습니다. 논리적 폴더를 사용하면 패키지를 용도별로 정리하거나 sysssispackages 테이블의 패키지를 필터링하는 데 유용합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 새 논리적 폴더를 만듭니다. 기본적으로 msdb에 추가하는 논리적 폴더는 자동으로 패키지 저장소에 포함됩니다.  
   
- 만들면 논리적 폴더는 msdb에서 sysssispackagefolders 테이블의 행으로 표현 됩니다. sysssispackagefolders의 folderid 및 parentfolderid 열은 폴더 계층 구조를 정의합니다. Msdb의 논리적 루트 폴더는 parentfolderid 열에 null 값을 가진 sysssispackagefolders의 행입니다. 자세한 내용은 참조 [sysssispackages &#40; Transact SQL &#41; ](../../relational-databases/system-tables/sysssispackages-transact-sql.md) 및 [sysssispackagefolders (Transact SQL &)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)합니다.  
+ 사용자가 만드는 논리적 폴더는 msdb의 sysssispackagefolders 테이블에서 행으로 표시됩니다. sysssispackagefolders의 folderid 및 parentfolderid 열은 폴더 계층 구조를 정의합니다. msdb의 논리적 루트 폴더는 sysssispackagefolders에서 parentfolderid 열에 Null 값이 있는 행입니다. 자세한 내용은 [sysssispackages&#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysssispackages-transact-sql.md) 및 [sysssispackagefolders(Transact-SQL&)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)를 참조하세요.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 열고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 연결하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 관리하는 msdb 폴더가 저장된 패키지 폴더 내에 표시됩니다. 구성 파일에 루트 파일 시스템 폴더가 지정되어 있으면 저장된 패키지 폴더에는 파일 시스템의 해당 폴더와 모든 하위 폴더에 저장된 패키지도 나열됩니다.  
   
@@ -67,11 +65,11 @@ ms.lasthandoff: 08/03/2017
  패키지 저장소의 패키지 목록을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 열고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 연결해야 합니다.  
   
 ## <a name="monitor-running-packages"></a>실행 중인 패키지 모니터링  
- **실행 중인 패키지** 폴더는 현재 실행 중인 패키지를 나열 합니다. **의** 요약 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]페이지에서 현재 패키지에 대한 정보를 보려면 **실행 중인 패키지** 폴더를 클릭합니다. **요약** 페이지에 실행 중인 패키지의 실행 시간과 같은 정보가 나열됩니다. 필요에 따라 최신 정보를 표시하려면 폴더의 내용을 새로 고칩니다.  
+ **실행 중인 패키지** 폴더에는 현재 실행 중인 패키지가 나열됩니다. **의** 요약 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]페이지에서 현재 패키지에 대한 정보를 보려면 **실행 중인 패키지** 폴더를 클릭합니다. **요약** 페이지에 실행 중인 패키지의 실행 시간과 같은 정보가 나열됩니다. 필요에 따라 최신 정보를 표시하려면 폴더의 내용을 새로 고칩니다.  
   
  **요약** 페이지에서 실행 중인 단일 패키지에 대한 정보를 보려면 해당 패키지를 클릭합니다. **요약** 페이지에 패키지의 버전 및 설명과 같은 정보가 표시됩니다.  
   
-실행 중인 패키지 중지는 **실행 중인 패키지** 패키지를 마우스 오른쪽 단추로 클릭 한 다음 클릭 하 여 폴더 **중지**합니다.  
+**실행 중인 패키지** 폴더에서 패키지를 마우스 오른쪽 단추로 클릭한 다음 **중지**를 클릭하여 실행 중인 패키지를 중지합니다.  
   
 ## <a name="view-packages-in-ssms"></a>SSMS에서 패키지 보기
     
@@ -86,7 +84,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 연결할 수 없으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 실행되고 있지 않는 것일 수 있습니다. 이 서비스의 상태를 확인하려면 **시작**을 클릭하고 **모든 프로그램**, **Microsoft SQL Server**, **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다. 왼쪽 창에서 **SQL Server 서비스**를 클릭하고 오른쪽 창에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 찾습니다. 서비스가 실행되지 않았으면 서비스를 시작합니다.  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]엽니다. 기본적으로 SQL Server Management Studio의 왼쪽 아래에는 개체 탐색기 창이 열립니다. 개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기** 를 클릭합니다.  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 가 열립니다. 기본적으로 SQL Server Management Studio의 왼쪽 아래에는 개체 탐색기 창이 열립니다. 개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기** 를 클릭합니다.  
   
 ### <a name="to-view-the-packages-that-integration-services-service-manages"></a>Integration Services 서비스에서 관리하는 패키지를 보려면  
   
@@ -108,7 +106,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 데이터베이스  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]통해 패키지를 가져오고 내보낼 수 있으며 이렇게 하면 패키지의 위치 및 저장소 형식을 변경 합니다. 가져오기 및 내보내기 기능을 사용하여 파일 시스템, 패키지 저장소 또는 msdb 데이터베이스에 패키지를 추가할 수 있으며 하나의 저장소 형식에서 다른 저장소 형식으로 패키지를 복사할 수 있습니다. 예를 들어 msdb에 저장된 패키지를 파일 시스템으로 복사할 수 있으며 반대의 경우도 가능합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하면 패키지를 가져오고 내보낼 수 있으며 이렇게 하면 패키지의 위치 및 저장소 형식을 변경할 수 있습니다. 가져오기 및 내보내기 기능을 사용하여 파일 시스템, 패키지 저장소 또는 msdb 데이터베이스에 패키지를 추가할 수 있으며 하나의 저장소 형식에서 다른 저장소 형식으로 패키지를 복사할 수 있습니다. 예를 들어 msdb에 저장된 패키지를 파일 시스템으로 복사할 수 있으며 반대의 경우도 가능합니다.  
   
  **dtutil** 명령 프롬프트 유틸리티(dtutil.exe)를 사용하여 패키지를 다른 형식으로 복사할 수 있습니다. 자세한 내용은 [dtutil Utility](../../integration-services/dtutil-utility.md)를 참조하세요.  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **서버 유형** 상자에서 **Integration Services**를 선택합니다.  
   
-    -   에 **서버 이름** 상자에 서버 이름을 제공 하거나 클릭  **\<더 찾아보기... >** 사용할 서버를 찾습니다.  
+    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<더 찾아보기…>**를 클릭하여 사용할 서버를 찾습니다.  
   
 3.  개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
@@ -170,7 +168,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **서버 유형** 상자에서 **Integration Services**를 선택합니다.  
   
-    -   에 **서버 이름** 상자에 서버 이름을 제공 하거나 클릭  **\<더 찾아보기... >** 사용할 서버를 찾습니다.  
+    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<더 찾아보기…>**를 클릭하여 사용할 서버를 찾습니다.  
   
 3.  개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
@@ -273,7 +271,7 @@ ms.lasthandoff: 08/03/2017
  **보호 수준**  
  찾아보기 단추 **(...)** 를 클릭한 다음 **패키지 보호 수준** 대화 상자에서 보호 수준을 업데이트합니다. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)를 참조하세요.  
 
-## <a name="back-up-and-restore-packages"></a>백업 하 고 패키지를 복원
+## <a name="back-up-and-restore-packages"></a>패키지 백업 및 복원
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 파일 시스템, msdb 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터베이스에 저장할 수 있습니다. msdb에 저장한 패키지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 기능을 사용하여 백업하거나 복원할 수 있습니다.  
   
@@ -295,4 +293,3 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   
-

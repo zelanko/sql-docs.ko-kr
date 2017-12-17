@@ -1,5 +1,5 @@
 ---
-title: "레거시 패키지 배포 (SSIS) | Microsoft Docs"
+title: "레거시 패키지 배포(SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,17 +33,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
@@ -153,7 +151,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="registry-entry"></a>레지스트리 항목  
  레지스트리 항목을 사용하여 구성을 저장하려면 기존 키를 사용하거나 HKEY_CURRENT_USER에서 새 키를 만들 수 있습니다. **Value**값이 있는 레지스트리 키를 사용해야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.  
   
- **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키 >입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용 하려면 형식을 사용 \<레지스트리 키 키\\... > 키를 식별 합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 **SSISPackages\MyPackage**를 입력합니다.  
+ **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 **SSISPackages\MyPackage**를 입력합니다.  
   
 #### <a name="sql-server"></a>SQL Server  
  **SQL Server** 구성 유형을 선택한 경우 구성을 저장할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결을 지정하십시오. 기존 테이블에 구성을 저장하거나 지정한 데이터베이스에 새 테이블을 만들 수 있습니다.  
@@ -364,7 +362,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |Value|Description|  
 |-----------|-----------------|  
-|**레지스트리 항목**|구성 정보를 포함하는 레지스트리 키를 입력합니다. 형식은 \<레지스트리 키 >입니다.<br /><br /> 레지스트리 키가 HKEY_CURRENT_USER에 이미 있어야 하고 Value라고 지정된 값을 가져야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.<br /><br /> HKEY_CURRENT_USER의 루트에 키가 레지스트리를 사용 하려는 경우 형식을 사용 \<레지스트리 키 키\\... > 키를 식별 합니다.|  
+|**레지스트리 항목**|구성 정보를 포함하는 레지스트리 키를 입력합니다. 형식은 \<레지스트리 키>입니다.<br /><br /> 레지스트리 키가 HKEY_CURRENT_USER에 이미 있어야 하고 Value라고 지정된 값을 가져야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.<br /><br /> HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
@@ -431,7 +429,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **마침**  
  구성을 만든 다음 **패키지 구성 마법사**를 종료합니다.  
 
-## <a name="child"></a>자식 패키지에서 변수 및 매개 변수의 값을 사용 합니다.
+## <a name="child"></a> 자식 패키지에서 변수 및 매개 변수의 값 사용
   이 절차에서는 부모 변수 구성 유형을 사용하는 패키지 구성을 만드는 방법에 대해 설명합니다. 이 구성 유형을 사용하여 부모 패키지에서 실행되는 자식 패키지가 부모 변수에 액세스하도록 설정할 수 있습니다.  
   
 > [!NOTE]  
@@ -492,7 +490,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|프로젝트를 빌드할 때 패키지 배포 유틸리티를 만들지 여부를 지정하는 값입니다. 배포 유틸리티를 만들려면 이 속성을 **True** 로 설정합니다.|  
 |DeploymentOutputPath|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트와 관련된 배포 유틸리티의 위치입니다.|  
   
- 작성 하는 경우는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트, 매니페스트 파일 \<프로젝트 이름 >. X m l 만들어지고 프로젝트 패키지와 프로젝트의 bin\Deployment 폴더 또는 DeploymentOutputPath 속성에 지정 된 위치에 같은 패키지 종속 파일의 복사본과 함께 추가 됩니다. 매니페스트 파일은 프로젝트의 패키지, 패키지 구성 및 모든 기타 파일을 나열합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 빌드하면 매니페스트 파일인 \<project name>.SSISDeploymentManifest.xml이 패키지 종속 관계 및 패키지의 복사본과 함께 프로젝트의 bin\Deployment 폴더 또는 DeploymentOutputPath 속성에서 지정한 위치에 만들어지고 추가됩니다. 매니페스트 파일은 프로젝트의 패키지, 패키지 구성 및 모든 기타 파일을 나열합니다.  
   
  배포 폴더의 내용은 프로젝트를 작성할 때마다 새로 고쳐집니다. 즉, 배포 폴더에 저장되었지만 빌드 프로세스로 폴더에 다시 복사되지 않은 파일은 모두 삭제됩니다. 예를 들어 배포 폴더에 저장된 패키지 구성 파일은 삭제되지 않습니다.  
   
@@ -502,7 +500,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  에  **\<프로젝트 이름 > 속성 페이지** 대화 상자를 클릭 **배포 유틸리티**합니다.  
+3.  **\<프로젝트 이름> 속성 페이지** 대화 상자에서 **배포 유틸리티**를 클릭합니다.  
   
 4.  패키지를 배포할 때 패키지 구성을 업데이트하려면 **AllowConfigurationChanges** 를 **True**로 설정합니다.  
   
@@ -521,7 +519,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  배포 폴더의 경로는 배포 유틸리티를 만든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 DeploymentOutputPath 속성에 지정됩니다. 기본 경로는 bin\Deployment이며 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 상대적입니다. 자세한 내용은 [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md)를 참조하세요.  
   
- 패키지 설치 마법사를 사용하여 패키지를 설치합니다. 마법사를 시작하려면 배포 폴더를 서버로 복사한 다음 배포 유틸리티 파일을 두 번 클릭합니다. 이 파일 이름은 \<프로젝트 이름 >. SSISDeploymentManifest, 대상 컴퓨터에 배포 폴더에서 찾을 수 있습니다.  
+ 패키지 설치 마법사를 사용하여 패키지를 설치합니다. 마법사를 시작하려면 배포 폴더를 서버로 복사한 다음 배포 유틸리티 파일을 두 번 클릭합니다. 이 파일의 이름은 \<프로젝트 이름>.SSISDeploymentManifest이며 대상 컴퓨터의 배포 폴더에 있습니다.  
   
 > [!NOTE]  
 >  배포하는 패키지의 버전에 따라 여러 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 함께 설치할 경우 오류가 발생할 수 있습니다. 이 오류는 .SSISDeploymentManifest 파일 이름 확장명이 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]버전에서 동일하기 때문에 발생할 수 있습니다. 파일을 두 번 클릭하면 가장 최근에 설치된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]버전의 설치 관리자가 호출되며 이 버전이 배포 유틸리티 파일과 동일한 버전이 아닐 수 있습니다. 이 문제를 해결하려면 명령줄에서 정확한 버전의 dtsinstall.exe를 실행한 후 배포 유틸리티 파일의 경로를 입력합니다.  
@@ -544,7 +542,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  대상 컴퓨터에서 배포 폴더를 엽니다.  
   
-2.  매니페스트 파일을 두 번 \<프로젝트 이름 >. SSISDeploymentManifest 패키지 설치 마법사를 시작 합니다.  
+2.  매니페스트 파일 \<프로젝트 이름>.SSISDeploymentManifest를 두 번 클릭하여 패키지 설치 마법사를 시작합니다.  
   
 3.  **SSIS 패키지 배포** 페이지에서 **SQL Server 배포** 옵션을 선택합니다.  
   
@@ -705,5 +703,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **마침**  
  **마침**을 클릭하여 마법사를 종료합니다.  
-
 

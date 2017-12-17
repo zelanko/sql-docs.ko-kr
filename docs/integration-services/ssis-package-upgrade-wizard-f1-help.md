@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,20 +20,19 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0e9c1eccc9a14c580ba733fc3c4f63e88db92d60
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 패키지 업그레이드 마법사 F1 도움말
-  SSIS 패키지 업그레이드 마법사를 사용 하 여 이전 버전의에서 만든 패키지를 업그레이드할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 현재 릴리스에 대 한 패키지 형식으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]합니다.  
+  SSIS 패키지 업그레이드 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](으)로 만든 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 현재 릴리스에 대한 패키지 형식으로 업그레이드할 수 있습니다.  
   
  **SSIS 패키지 업그레이드 마법사를 실행하려면**  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/26/2017
  **이 페이지를 다시 표시 안 함**  
  다음에 마법사를 열 때 시작 페이지를 표시하지 않습니다.  
  
-## <a name="select-source-location-page"></a>원본 위치 페이지를 선택 합니다.
+## <a name="select-source-location-page"></a>[원본 위치 선택] 페이지
  **원본 위치 선택** 페이지를 사용하여 패키지를 업그레이드할 원본을 지정할 수 있습니다.  
   
 > [!NOTE]  
@@ -90,7 +88,7 @@ ms.lasthandoff: 09/26/2017
  **암호**  
  서버에 연결할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증에 사용할 암호를 입력합니다.  
  
-## <a name="select-destination-location-page"></a>대상 위치 페이지를 선택 합니다.
+## <a name="select-destination-location-page"></a>[대상 위치 선택] 페이지
  **대상 위치 선택** 페이지를 사용하여 업그레이드된 패키지를 저장할 대상을 지정할 수 있습니다.  
   
 > [!NOTE]  
@@ -142,7 +140,7 @@ ms.lasthandoff: 09/26/2017
  **암호**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 서버에 연결할 때 사용할 암호를 입력합니다.  
  
-## <a name="select-package-management-options-page"></a>패키지 관리 옵션 선택 페이지
+## <a name="select-package-management-options-page"></a>[패키지 관리 옵션 선택] 페이지
   **패키지 관리 옵션 선택** 페이지를 사용하여 패키지 업그레이드 옵션을 지정할 수 있습니다.  
   
  **SSIS 패키지 업그레이드 마법사를 실행하려면**  
@@ -153,7 +151,7 @@ ms.lasthandoff: 09/26/2017
  **새 공급자 이름을 사용하도록 연결 문자열 업데이트**  
  연결 문자열이 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]현재 버전의 다음 공급자에 대해 다음 이름을 사용하도록 업데이트합니다.  
   
--   에 대 한 OLE DB 공급자[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   OLE DB Provider for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
@@ -166,7 +164,7 @@ ms.lasthandoff: 09/26/2017
   
  유효성 검사로 인해 업그레이드 프로세스의 소요 시간이 늘어납니다. 성공적으로 업그레이드될 가능성이 높은 큰 패키지의 경우에는 이 옵션을 선택하지 않는 것이 좋습니다.  
   
- **새 패키지 Id 만들기**  
+ **새 패키지 ID 만들기**  
  업그레이드 패키지의 새 패키지 ID를 만듭니다.  
   
  **패키지 업그레이드 실패 시 업그레이드 프로세스 계속**  
@@ -195,7 +193,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  이 옵션은 원래 패키지 및 업그레이드된 패키지가 파일 시스템의 동일한 폴더에 저장되도록 지정한 경우에만 사용할 수 있습니다.  
 
-## <a name="select-packages-page"></a>패키지 페이지를 선택 합니다.
+## <a name="select-packages-page"></a>[패키지 선택] 페이지
   **패키지 선택** 페이지를 사용하여 업그레이드할 패키지를 선택할 수 있습니다. 이 페이지에는 마법사의 **원본 위치 선택** 페이지에서 지정한 위치에 저장된 패키지가 나열됩니다.  
   
 ### <a name="options"></a>옵션  
@@ -214,14 +212,14 @@ ms.lasthandoff: 09/26/2017
  **선택 항목에 적용**  
  선택한 업그레이드 패키지의 암호를 해독하기 위해 지정한 암호를 적용합니다.  
  
-## <a name="complete-the-wizard-page"></a>마법사 완료 페이지
+## <a name="complete-the-wizard-page"></a>[마법사 완료] 페이지
   **마법사 완료** 페이지를 사용하여 선택한 패키지 업그레이드 옵션을 검토하고 확인할 수 있습니다. 이는 뒤로 돌아가 이 마법사 세션의 옵션을 변경할 수 있는 마지막 마법사 페이지입니다.  
   
 ### <a name="options"></a>옵션  
  **옵션 요약**  
  마법사에서 선택한 업그레이드 옵션을 검토합니다. 옵션을 변경하려면 **뒤로** 를 클릭하여 이전 마법사 페이지로 돌아갑니다.
  
-## <a name="upgrading-the-packages-page"></a>패키지 업그레이드 페이지
+## <a name="upgrading-the-packages-page"></a>[패키지 업그레이드] 페이지
   **패키지 업그레이드** 페이지를 사용하여 패키지 업그레이드의 진행률을 보고 업그레이드 프로세스를 중단할 수 있습니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 업그레이드 마법사는 선택된 패키지를 하나씩 업그레이드합니다.  
   
 ### <a name="options"></a>옵션  
@@ -251,12 +249,12 @@ ms.lasthandoff: 09/26/2017
   
 -   보고서를 전자 메일 메시지로 보냅니다.  
 
-## <a name="view-upgraded-packages"></a>업그레이드 된 패키지를 보려면
-### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>패키지 저장소 또는 SQL Server 데이터베이스에 저장 된 업그레이드 된 패키지를 보려면
+## <a name="view-upgraded-packages"></a>업그레이드된 패키지 보기
+### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>SQL Server 데이터베이스 또는 패키지 저장소에 저장된 업그레이드된 패키지 보기
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]의 개체 탐색기에서 로컬 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]인스턴스에 연결한 다음 **저장된 패키지** 노드를 확장하여 업그레이드된 패키지를 확인합니다.  
   
-### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>SQL Server Data Tools에서 업그레이드 된 업그레이드 된 패키지를 보려면  
+### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>SQL Server Data Tools에서 업그레이드된 패키지 보기  
   
 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 연 다음 **SSIS 패키지** 노드를 확장하여 업그레이드된 패키지를 확인합니다.  
   
@@ -264,4 +262,3 @@ ms.lasthandoff: 09/26/2017
  [Integration Services 패키지 업그레이드](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 패키지를 완성 및 배포한 후 실행할 때 패키지 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **트랜잭션을 사용하여 데이터 무결성 유지** 자세한 내용은 [Integration Services 트랜잭션](../../integration-services/integration-services-transactions.md)을 참조하세요.  
   
--   **검사점을 사용하여 실패한 지점에서 패키지 다시 시작** 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+-   **검사점을 사용하여 실패한 지점에서 패키지 다시 시작** 자세한 내용은 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>이벤트 처리기를 사용하여 패키지 오류 파악 및 처리  
  이벤트 처리기를 사용하여 패키지 및 패키지의 개체에서 발생한 여러 이벤트에 대응할 수 있습니다.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **오류 출력에 정보 추가** 오류 출력에 제공되는 두 개의 숫자 식별자 외에 오류 메시지 및 열 이름을 추가하여 오류 출력을 분석하기 쉽게 만들 수 있습니다. 스크립트를 사용하여 이러한 두 개의 추가 열을 추가하는 방법에 대한 예는 [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조하세요.  
   
--   **또는 DiagnosticEx 이벤트를 로깅하여 열 이름을 가져옵니다**. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다.  자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하십시오.  
+-   **또는 DiagnosticEx 이벤트를 로깅하여 열 이름을 가져옵니다**. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다.  자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
   
      **DiagnosticEx** 에 대한 메시지 열 값은 XML 텍스트입니다. 패키지 실행에 대한 메시지 텍스트를 보려면 [catalog.operation_messages&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) 뷰를 쿼리합니다. **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다.  
   
@@ -99,7 +97,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **패키지가 로드될 때 유효하지 않은 패키지 요소의 DelayValidation 속성 구성** 구성이 유효하지 않은 패키지 요소의 **DelayValidation** 을 **True** 로 설정하여 패키지가 로드될 때 유효성 검사 오류를 방지할 수 있습니다. 예를 들어 런타임에 SQL 실행 작업을 통해 테이블이 만들어지기 전까지는 존재하지 않는 대상 테이블을 사용하는 데이터 흐름 태스크가 있을 수 있습니다. **DelayValidation** 속성은 패키지 수준 또는 패키지에 포함된 개별 태스크 및 컨테이너 수준에서 설정할 수 있습니다.  
   
-     **DelayValidation** 속성은 데이터 흐름 태스크에만 설정할 수 있고 개별 데이터 흐름 구성 요소에는 설정할 수 없습니다. 개별 데이터 흐름 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 **false**을 참조하세요. 그러나 이 속성 값이 **false**이면 구성 요소에서 외부 데이터 원본의 메타데이터에 대한 변경 내용을 인식하지 못하게 됩니다. 로 설정 하면 **true**, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성 패키지 트랜잭션을 사용 하는 경우에 특히 데이터베이스의 잠금으로 인 한 차단 문제를 방지 하는 데 도움이 될 수 있습니다.  
+     **DelayValidation** 속성은 데이터 흐름 태스크에만 설정할 수 있고 개별 데이터 흐름 구성 요소에는 설정할 수 없습니다. 개별 데이터 흐름 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 **false**을 참조하세요. 그러나 이 속성 값이 **false**이면 구성 요소에서 외부 데이터 원본의 메타데이터에 대한 변경 내용을 인식하지 못하게 됩니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 **true**로 설정하면 데이터베이스의 잠금으로 인한 차단 문제를 방지할 수 있습니다. 특히 패키지에서 트랜잭션을 사용하는 경우에 유용합니다.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>런타임 권한 문제 해결  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 배포된 패키지를 실행하려고 할 때 오류가 발생하면 에이전트에서 사용하는 계정에 필요한 권한이 없는 것일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에서 실행한 패키지의 문제를 해결하는 방법은 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](http://support.microsoft.com/kb/918760)를 참조하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에서 패키지를 실행하는 방법은 [패키지에 대한 SQL Server 에이전트 작업](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.  
@@ -118,4 +116,3 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="related-content"></a>관련 내용  
  dougbert.com의 블로그 항목, [오류 출력에 오류 열 이름 추가](http://go.microsoft.com/fwlink/?LinkId=261546)  
-

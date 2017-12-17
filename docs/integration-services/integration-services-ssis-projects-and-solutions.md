@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 프로젝트 및 솔루션 | Microsoft Docs"
+title: "Integration Services(SSIS) 프로젝트 및 솔루션 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.importprojectwizard.f1
+f1_keywords: sql13.ssis.importprojectwizard.f1
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 246a6df702e323d57d21e9e014aa059db31b300e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services(SSIS) 프로젝트 및 솔루션
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 패키지 개발을 위해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 제공합니다.  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]패키지는 프로젝트에 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 사용하려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 환경을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../integration-services/install-windows/install-integration-services.md)를 참조하세요.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지는 프로젝트에 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 사용하려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 환경을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../integration-services/install-windows/install-integration-services.md)를 참조하세요.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 새 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]프로젝트를 만들 때는 **새 프로젝트** 대화 상자에 **Integration Services 프로젝트** 템플릿이 있습니다. 이 프로젝트 템플릿은 하나의 패키지가 포함되어 있는 새 프로젝트를 만듭니다.  
   
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/26/2017
  프로젝트는 솔루션에 저장됩니다. 솔루션을 먼저 만든 다음 솔루션에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 추가할 수 있습니다. 솔루션이 없으면 프로젝트를 만들 때 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 솔루션이 자동으로 생성됩니다. 솔루션에는 여러 형식의 프로젝트가 포함될 수 있습니다.  
   
 > [!TIP]  
->  새 프로젝트를 만들 때 기본적으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에 솔루션이 표시 되지 않으면 **솔루션 탐색기** 창. 이 기본 동작을 변경하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장한 다음 **일반**을 선택합니다. **일반** 페이지에서 **솔루션 항상 표시**를 선택합니다.  
+>  기본적으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 새 프로젝트를 만들 때는 **솔루션 탐색기** 창에 솔루션이 표시되지 않습니다. 이 기본 동작을 변경하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장한 다음 **일반**을 선택합니다. **일반** 페이지에서 **솔루션 항상 표시**를 선택합니다.  
 
 ## <a name="solutions-contain-projects"></a>솔루션은 프로젝트를 포함합니다.  
  솔루션은 종단 간 비즈니스 솔루션을 개발할 때 사용되는 프로젝트를 그룹화 및 관리하는 컨테이너입니다. 솔루션을 사용하면 여러 프로젝트를 하나의 단위로 취급하고 비즈니스 솔루션에 관련된 하나 이상의 관련 프로젝트를 하나로 묶을 수 있습니다.  
@@ -92,7 +89,7 @@ ms.lasthandoff: 09/26/2017
   
  솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 프로젝트에 대한 속성 페이지를 엽니다. **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
   
- ![프로젝트 속성 대화 상자에서 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자에서 TargetServerVersion 속성")  
+ ![프로젝트 속성 대화 상자의 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자의 TargetServerVersion 속성")  
  
 ## <a name="create-a-new-integration-services-project"></a>새 Integration Services 프로젝트 만들기  
   
@@ -124,7 +121,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
   
-     ![프로젝트 속성 대화 상자에서 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자에서 TargetServerVersion 속성")  
+     ![프로젝트 속성 대화 상자의 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자의 TargetServerVersion 속성")  
   
  SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로하는 패키지를 만들고, 유지 관리하고 실행할 수 있습니다.  
 
@@ -189,7 +186,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  **솔루션 탐색기**의 솔루션 폴더에 프로젝트가 추가됩니다.  
   
-## <a name="remove-a-project-from-a-solution"></a>솔루션에서 프로젝트를 제거 합니다.
+## <a name="remove-a-project-from-a-solution"></a>솔루션에서 프로젝트 제거
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 솔루션을 볼 수 있는 경우에만 해당 솔루션에서 프로젝트를 제거할 수 있습니다. 솔루션이 표시되면 한 프로젝트를 제외한 나머지 프로젝트를 모두 제거할 수 있습니다. 프로젝트가 한 개만 남으면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에 더 이상 해당 솔루션 폴더가 표시되지 않으므로 마지막 프로젝트를 제거할 수 없습니다.  
    
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 제거하려는 솔루션을 엽니다.  
@@ -198,7 +195,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  **확인** 을 클릭하여 제거를 확인합니다.  
 
-## <a name="add-an-item-to-a-project"></a>프로젝트에 항목을 추가 합니다.  
+## <a name="add-an-item-to-a-project"></a>프로젝트에 항목 추가  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 항목을 추가할 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트가 들어 있는 솔루션을 엽니다.  
   
@@ -211,7 +208,7 @@ ms.lasthandoff: 09/26/2017
 3.  솔루션 탐색기의 해당 폴더에 새 항목이 표시됩니다.  
 
 ## <a name="copy-project-items"></a>프로젝트 항목 복사  
-내에서 개체를 복사할 수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 사이 또는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트. 또한 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 다른 유형 간에 개체를 복사할 수도 있습니다. 프로젝트 간에 복사하려면 프로젝트가 같은 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 솔루션의 일부여야 합니다.
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 내 또는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 간에 개체를 복사할 수 있습니다. 또한 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 다른 유형 간에 개체를 복사할 수도 있습니다. 프로젝트 간에 복사하려면 프로젝트가 같은 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 솔루션의 일부여야 합니다.
 
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업할 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 또는 솔루션을 엽니다.  
   
@@ -223,4 +220,3 @@ ms.lasthandoff: 09/26/2017
   
      항목은 올바른 폴더에 자동으로 복사됩니다. 패키지가 아닌 항목을 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 복사하려는 경우 항목이 **기타** 폴더로 복사됩니다.  
      
-

@@ -2,9 +2,12 @@
 title: "SQL 암호화 기능을 통해 SQL Server 커넥터 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,16 @@ ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abf7e20335fd15fc4e06971558d8ec32b5620f41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e93230571a231e1746eeff928d894c02fffd57ad
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 암호화 기능을 통해 SQL Server 커넥터 사용
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
-  Azure 주요 자격 증명 모음으로 보호되는 비대칭 키를 사용하는 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 작업에는 다음 세 가지 영역이 포함됩니다.  
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] Azure Key Vault로 보호되는 비대칭 키를 사용하는 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 작업에는 다음 세 가지 영역이 포함됩니다.  
   
 -   Azure 주요 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화  
   

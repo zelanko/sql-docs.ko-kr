@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1780b770f45bd53f8f0735c092f2859593f9fa5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-data-flow"></a>데이터 흐름 디버깅
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함됩니다.  
@@ -176,7 +174,7 @@ order by source_component_name desc
   
 4.  구성하려는 오류 출력 열이 있는 구성 요소를 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 클릭합니다.  
   
-5.  클릭는 **입 / 출력 속성** 탭을 확장 하 고  **\<구성 요소 이름 > 오류 출력** 펼친 다음 **출력 열**합니다.  
+5.  **입/출력 속성** 탭을 클릭하고 **\<구성 요소 이름> 오류 출력**을 확장한 다음 **출력 열**을 확장합니다.  
   
 6.  열을 클릭하고 속성을 업데이트합니다.  
   
@@ -253,7 +251,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap 저장 프로시저의 dataflow_path_id_string 매개 변수는 데이터 탭을 추가할 데이터 흐름 경로의 IdentificationString 속성에 해당합니다. dataflow_path_id_string을 가져오려면 데이터 흐름 경로(데이터 흐름의 태스크 사이에 있는 화살표)를 클릭하고 속성 창에서 **IdentificationString** 속성 값을 확인합니다.  
   
- 스크립트를 실행 하면 출력 파일에 저장 됩니다 \<프로그램 파일 > \Microsoft SQL Server\110\DTS\DataDumps 합니다. 해당 이름을 가진 파일이 이미 있으면 접미사(예: output[1].txt)로 새 파일이 만들어집니다.  
+ 스크립트를 실행하면 출력 파일은 \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps에 저장됩니다. 해당 이름을 가진 파일이 이미 있으면 접미사(예: output[1].txt)로 새 파일이 만들어집니다.  
   
  앞에서 설명한 대로 add_data_tap 저장 프로시저를 사용하는 대신 [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)저장 프로시저를 사용할 수도 있습니다. 이 저장 프로시저는 task_package_path 대신 데이터 흐름 태스크의 ID를 매개 변수로 사용합니다. Visual Studio의 속성 창에서 데이터 흐름 태스크의 ID를 가져올 수 있습니다.  
   
@@ -279,8 +277,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ### <a name="video"></a>비디오  
  이 [TechNet 비디오](http://technet.microsoft.com/sqlserver/dn600163) 에서는 프로그래밍 방식으로 패키지를 디버깅하고 런타임에 일부 결과를 캡처하는 데 도움이 되도록 SQL Server 2012 SSISDB 카탈로그에 데이터 탭을 추가/사용하는 방법을 보여 줍니다. 이러한 데이터 탭을 나열/제거하는 방법과 함께 SSIS 패키지의 데이터 탭을 사용하기 위한 최선의 구현 방법에 대해서도 설명합니다.  
  
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

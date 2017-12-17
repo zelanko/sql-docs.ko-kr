@@ -1,10 +1,13 @@
 ---
 title: "통계 | Microsoft 문서"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,21 +30,63 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b64fe249a6fb8d1c619f9e63ecb2cd7af4494c17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 39ed8dd07bab5c83f60eaee420bb0e494f5dda85
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="statistics"></a>통계
-  쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상하는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상하는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
   
 ##  <a name="DefinitionQOStatistics"></a> 구성 요소 및 개념  
 ### <a name="statistics"></a>통계  
  쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용하여 쿼리 결과에서 *카디널리티* 또는 행 수를 계산합니다. 쿼리 최적화 프로그램은 이러한 *카디널리티 예상치*를 통해 고품질의 쿼리 계획을 만듭니다. 예를 들어 조건자에 따라 쿼리 최적화 프로그램은 카디널리티 예상치를 사용하여 리소스를 많이 사용하는 Index Scan 연산자 대신 Index Seek 연산자를 선택할 수 있으며 이렇게 하면 쿼리 성능이 향상됩니다.  
   
- 각 통계 개체는 하나 이상의 테이블 열 목록에 대해 작성되며 첫 번째 열의 값 분포를 나타내는 히스토그램을 포함합니다. 여러 열에 대한 통계 개체는 또한 열 사이의 값의 상관 관계에 대한 통계 정보도 저장합니다. 이러한 상관 관계 통계 또는 *밀도*는 열 값의 개별 행 수에서 생성됩니다. 통계 개체에 대한 자세한 내용은 [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)를 참조하세요.  
+ 각 통계 개체는 하나 이상의 테이블 열 목록에 대해 작성되며 첫 번째 열의 값 분포를 나타내는 *히스토그램*을 포함합니다. 여러 열에 대한 통계 개체는 또한 열 사이의 값의 상관 관계에 대한 통계 정보도 저장합니다. 이러한 상관 관계 통계 또는 *밀도*는 열 값의 개별 행 수에서 생성됩니다. 
+
+#### <a name="histogram"></a>히스토그램  
+**히스토그램**은 데이터 집합에서 각 고유 값의 발생 빈도를 측정합니다. 쿼리 최적화 프로그램은 행을 통계적으로 샘플링하거나 테이블 또는 뷰의 모든 행에 대해 전체 검색을 수행하는 방법으로 열 값을 선택하여 통계 개체의 첫 번째 키 열에 있는 열 값에 대한 히스토그램을 계산합니다. 샘플링된 행 집합으로 히스토그램을 만드는 경우 저장된 행 수의 합계와 고유 값의 수는 예상치이며 정수일 필요가 없습니다.
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 히스토그램은 통계 개체의 키 열 집합에 있는 첫 번째 열의 단일 열에 대해서만 빌드됩니다.
   
+쿼리 최적화 프로그램에서는 히스토그램을 만들기 위해 열 값을 정렬하고 고유한 각 열 값과 일치하는 값의 수를 계산한 다음 열 값을 최대 200개의 연속적인 히스토그램 단계로 집계합니다. 각 히스토그램 단계의 범위는 열 값에서 상한 열 값까지입니다. 범위는 경계 값 자체를 제외하고 경계 값 사이의 모든 가능한 열 값을 포함합니다. 정렬된 열 값 중 가장 낮은 값은 첫 번째 히스토그램 단계의 상한 값입니다.
+
+자세히 살펴보면, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다음과 같은 세 단계로 정렬된 열 값 집합에서 **히스토그램**을 만듭니다.
+
+- **히스토그램 초기화**: 첫 번째 단계에서 정렬된 집합의 시작 부분에서 시작하는 일련의 값이 처리되고 *range_high_key*, *equal_rows*, *range_rows* 및 *distinct_range_rows*의 최대 200개 값이 수집됩니다(이 단계에서 *range_rows* 및 *distinct_range_rows*는 항상 0임). 모든 입력이 모두 소모되거나 200개의 값이 발견되면 첫 번째 단계가 종료됩니다. 이에 대한 자세한 내용은 [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)을 참조하세요. 
+- **버킷 병합으로 스캔**: 통계 키의 맨 앞줄에 있는 각 추가 값은 두 번째 단계에서 정렬된 순서로 처리됩니다. 각 연속 값은 마지막 범위에 추가되거나 끝에 있는 새 범위가 작성됩니다(입력 값이 정렬되어 있기 때문에 가능합니다). 새 범위가 만들어지면 한 쌍의 기존 인접 범위가 단일 범위로 축소됩니다. 이러한 범위 쌍은 정보 손실을 최소화하기 위해 선택됩니다. 이 메서드는 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 *최대 차이* 알고리즘을 사용합니다. 범위를 축소한 후 단계 수는 이 단계에서 200으로 유지됩니다.
+- **히스토그램 통합**: 세 번째 단계에서는 상당한 양의 정보가 손실되지 않은 경우 더 많은 범위가 축소될 수 있습니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 따라서 열이 200개가 넘는 고유 값을 가진 경우 히스토그램 단계 수는 200단계 미만일 수 있습니다. 고유 값만으로 구성된 열인 경우 통합된 히스토그램은 최소 세 단계를 포함하게 됩니다.
+
+> [!NOTE]
+> 히스토그램이 fullscan이 아닌 샘플을 사용하여 작성된 경우 *equal_rows*, *range_rows*, *distinct_range_rows* 및 *average_range_rows* 값이 예측되므로 정수일 필요는 없습니다.
+
+다음 다이어그램에서는 6단계의 히스토그램을 보여 줍니다. 첫 번째 상한 값 왼쪽의 영역이 1단계입니다.
+  
+![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+  
+위의 각 히스토그램 단계를 살펴보면 다음과 같습니다.
+-   굵은 선은 상한 값(*range_high_key*)과 발생한 횟수(*equal_rows*)를 나타냅니다.  
+  
+-   *range_high_key* 왼쪽의 채워진 영역은 열 값의 범위와 각 열 값이 발생한 평균 횟수(*average_range_rows*)를 나타냅니다. 첫 번째 히스토그램 단계의 *average_range_rows*는 항상 0입니다.  
+  
+-   점선은 범위 내 고유 값의 총 개수(*distinct_range_rows*) 및 범위 내 값의 총 개수(*range_rows*)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 *range_rows* 및 *distinct_range_rows*를 사용하여 *average_range_rows*를 계산하며 샘플링된 값은 저장하지 않습니다.   
+  
+#### <a name="density-vector"></a>밀도 벡터  
+**밀도**는 주어진 열 또는 열의 조합에서 중복 수에 대한 정보이며 1/(고유 값 수)로 계산됩니다. 쿼리 최적화 프로그램은 같은 테이블 또는 인덱싱된 뷰에서 여러 열을 반환하는 쿼리의 카디널리티 예상치 정확도를 높이기 위해 밀도를 사용합니다. 밀도 벡터는 통계 개체에 있는 각 열 접두사당 한 개의 밀도를 포함합니다. 
+
+> [!NOTE]
+> 빈도는 통계 개체의 첫 번째 키 열에서 각 고유 값의 항목에 대한 정보이며, 행 수 * 밀도로 계산됩니다. 최대 빈도 1은 고유 값이 있는 열에서 찾을 수 있습니다.
+
+예를 들어 통계 개체에 `CustomerId`, `ItemId`, `Price` 키 열이 있는 경우 다음의 각 열 접두사에 대해 밀도가 계산됩니다.
+  
+|열 접두사|밀도 계산 기준|  
+|---|---|
+|(CustomerId)|CustomerId의 값이 일치하는 행|  
+|(CustomerId, ItemId)|CustomerId 및 ItemId의 값이 일치하는 행|  
+|(CustomerId, ItemId, Price)|CustomerId, ItemId 및 Price의 값이 일치하는 행| 
+
 ### <a name="filtered-statistics"></a>필터링된 통계  
  필터링된 통계는 잘 정의된 데이터의 하위 집합에서 선택하는 쿼리에 대한 쿼리 성능을 높일 수 있습니다. 또한 필터 조건자를 사용하여 통계에 포함되는 데이터의 하위 집합을 선택할 수 있습니다. 잘 디자인된 필터링된 통계는 전체 테이블 통계에 비해 쿼리 실행 계획을 향상시킬 수 있습니다. 필터 조건자에 대한 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요. 필터링된 통계를 작성하는 시기에 대한 자세한 내용은 이 항목의 [통계 작성 시기](#CreateStatistics) 섹션을 참조하십시오.  
   
@@ -53,7 +98,7 @@ ms.lasthandoff: 11/09/2017
   
  쿼리 최적화 프로그램이 AUTO_CREATE_STATISTICS 옵션 사용 결과로 통계를 작성하면 통계 이름이 `_WA`로 시작합니다. 다음 쿼리를 사용하여 쿼리 최적화 프로그램이 쿼리 조건자 열에 대한 통계를 작성했는지 확인할 수 있습니다.  
   
-```tsql  
+```t-sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -147,7 +192,7 @@ CREATE STATISTICS 문으로 통계를 만들 때 쿼리 최적화 프로그램�
   
  카디널리티 예상치에 유용한 밀도를 만들려면 쿼리 조건자의 열이 통계 개체 정의에 있는 열의 접두사 중 하나와 일치해야 합니다. 다음 예에서는 `LastName`, `MiddleName`, 및 `FirstName`열에 대한 여러 열 통계 개체를 만듭니다.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -174,7 +219,7 @@ GO
   
  쿼리 최적화 프로그램은 `BikeWeights`로 필터링된 통계를 사용하여 `25`보다 가중치가 높은 모든 자전거를 선택하는 다음 쿼리의 쿼리 계획을 향상합니다.  
   
-```tsql  
+```t-sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -268,7 +313,7 @@ GO
   
      예를 들어 `@date`가 NULL인 경우 다음 `Sales.GetRecentSales` 저장 프로시저에서는 `@date` 매개 변수의 값을 변경합니다.  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -287,7 +332,7 @@ GO
   
      `Sales.GetRecentSales` 저장 프로시저에 대한 첫 번째 호출에서 NULL을 `@date` 매개 변수에 전달하면 쿼리 조건자가 `@date = NULL`과 함께 호출되지 않은 경우에도 쿼리 최적화 프로그램에서 `@date = NULL`에 대한 카디널리티 예상치와 함께 저장 프로시저를 컴파일합니다. 실제 쿼리 결과에서 이 카디널리티 예상치는 행 수와 많이 다를 수 있습니다. 그 결과 쿼리 최적화 프로그램에서 만족스럽지 못한 쿼리 계획을 선택할 수 있습니다. 이를 방지하기 위해 다음과 같이 저장 프로시저를 두 개의 프로시저로 다시 작성할 수 있습니다.  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -317,7 +362,7 @@ GO
   
  일부 응용 프로그램의 경우 쿼리를 실행할 때마다 다시 컴파일하는 데 너무 많은 시간이 걸릴 수 있습니다. `RECOMPILE` 옵션을 사용하지 않는 경우에도 `OPTIMIZE FOR` 쿼리 힌트가 도움이 될 수 있습니다. 예를 들어 특정 날짜를 지정하기 위해 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 저장 프로시저에 추가할 수 있습니다. 다음 예에서는 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 프로시저에 추가합니다.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -349,6 +394,6 @@ GO
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)   
- [SQL Server의 Autostat(AUTO_UPDATE_STATISTICS) 동작 제어](http://support.microsoft.com/help/2754171)
-  
+ [SQL Server의 Autostat(AUTO_UPDATE_STATISTICS) 동작 제어](http://support.microsoft.com/help/2754171) [STATS_DATE&#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
+ [sys.dm_db_stats_properties&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  

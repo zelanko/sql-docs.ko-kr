@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [버전](#Version)  
   
- 에 설정할 수 없는 추가 패키지 속성에 대 한 내용은 **속성** 창 참조 <xref:Microsoft.SqlServer.Dts.Runtime.Package>합니다.  
+ **속성** 창에서 설정할 수 없는 추가 패키지 속성에 대한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.Package>를 참조하세요.  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>속성 창에서 패키지 속성을 설정하려면  
   
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |**CreatorComputerName**|패키지를 만든 컴퓨터의 이름입니다.|  
 |**CreatorName**|패키지를 만든 사용자의 이름입니다.|  
 |**Description**|패키지 기능에 대한 설명입니다.|  
-|**ID**|패키지를 만들 때 할당된 패키지 GUID입니다. 이 속성은 읽기 전용입니다. 에 대 한 새로운 임의 값을 생성 하는 **ID** 속성을 선택  **\<새 ID 만들기\>**  드롭 다운 목록에 있습니다.|  
+|**ID**|패키지를 만들 때 할당된 패키지 GUID입니다. 이 속성은 읽기 전용입니다. **ID** 속성의 새 임의 값을 생성하려면 드롭다운 목록에서 **\<새 ID 생성\>**을 선택합니다.|  
 |**이름**|패키지의 이름입니다.|  
 |**PackageType**|패키지 유형입니다. 가능한 값은 **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**및 **SQLReplication**입니다. 이 속성의 기본값은 **Default**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>를 참조하세요.|  
   
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 업데이트된 패키지를 저장합니다.  
   
-

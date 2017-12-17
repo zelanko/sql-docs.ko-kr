@@ -1,5 +1,5 @@
 ---
-title: "보안 개요 (Integration Services) | Microsoft Docs"
+title: "보안 개요(Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: adc486a9655f8ddf394a371efa9da793e2fa4728
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b40010fd76da5b1f040ab5e5311ac655d111d660
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 보안은 풍부하고 유연한 보안 환경을 제공하는 여러 계층으로 구성되어 있습니다. 이러한 보안 계층에서는 디지털 서명, 패키지 속성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할 및 운영 체제 권한을 사용합니다. 이러한 보안 기능은 대부분 ID 및 액세스 제어라는 범주에 해당합니다.  
@@ -139,7 +137,7 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스, 특히 원격 폴더를 열거할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행하는 컴퓨터에 대한 액세스를 제한하는 것이 중요합니다. 허가 받은 사용자는 패키지의 열거를 요청할 수 있습니다. 서비스에서 패키지를 찾지 못하더라도 서비스는 폴더를 열거합니다. 이 폴더 이름은 악의적인 사용자에 의해 악용될 수 있습니다. 관리자가 원격 컴퓨터에서 폴더를 열거하도록 서비스를 구성한 경우 사용자는 일반적으로 볼 수 없는 폴더 이름도 볼 수 있습니다.  
 
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
  다음 목록에는 보안과 관련된 특정 태스크를 수행하는 방법을 보여 주는 항목에 대한 링크가 나와 있습니다.  
   
 -   [사용자 정의 역할 만들기](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
@@ -151,4 +149,3 @@ ms.lasthandoff: 08/03/2017
 -   [디지털 인증서를 사용하여 패키지 서명](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
 -   [패키지 보호 수준 설정 또는 변경](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
-

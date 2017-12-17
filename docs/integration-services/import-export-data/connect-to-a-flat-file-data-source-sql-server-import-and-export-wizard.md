@@ -1,5 +1,5 @@
 ---
-title: "플랫 파일 데이터 원본 (SQL Server 가져오기 및 내보내기 마법사)에 연결 | Microsoft Docs"
+title: "플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -8,78 +8,76 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 9fa0b3192455d022288100f2997309598dae774b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>플랫 파일 데이터 원본 (SQL Server 가져오기 및 내보내기 마법사)에 연결
-이 항목에 연결 하는 방법을 보여 줍니다.는 **플랫 파일** (텍스트 파일) 데이터 원본에서 **데이터 원본을 선택** 또는 **대상 선택** SQL Server 가져오기 및 내보내기 페이지 마법사입니다. 플랫 파일에 대 한 이러한 두 페이지는 마법사의이 항목 플랫 파일 원본 및 플랫 파일 대상에서는 별도로 설명 하므로 다른, 옵션 집합을 제공 합니다.
+# <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
+이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **플랫 파일**(텍스트 파일) 데이터 원본에 연결하는 방법을 보여 줍니다. 플랫 파일의 경우, 마법사의 이 두 페이지는 다양한 옵션 집합을 제시하므로 이 항목에서는 플랫 파일 원본과 플랫 파일 대상을 별도로 설명합니다.
 
-## <a name="an-alternative-for-simple-text-import"></a>간단한 텍스트 가져오기에 대 한 대안
-SQL Server로 텍스트 파일을 가져와야 하는 경우 가져오기 및 내보내기 마법사에서 사용할 수 있는 모든 구성 옵션이 필요 하지 않습니다는 것이 좋습니다를 사용 하는 **플랫 파일 가져오기 마법사** SQL Server Management Studio (SSMS). 자세한 내용은 다음 문서를 참조하세요.
+## <a name="an-alternative-for-simple-text-import"></a>간단한 텍스트 가져오기를 위한 대안
+텍스트 파일을 SQL Server로 가져와야 하고 가져오기 및 내보내기 마법사에서 사용 가능한 모든 구성 옵션이 필요하지 않은 경우 SSMS(SQL Server Management Studio)의 **플랫 파일 가져오기 마법사**를 사용하는 것이 좋습니다. 자세한 내용은 다음 문서를 참조하세요.
 - [SQL Server Management Studio 17.3의 새로운 기능](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [SSMS 17.3의 새로운 플랫 파일 가져오기 마법사 소개](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ## <a name="connect-to-a-flat-file-source"></a>플랫 파일 원본에 연결
  
- 플랫 파일 데이터 원본에 대 한 옵션의 4 페이지 있습니다. 페이지의 많은 하죠. 하지만 각 페이지에 시간이 오래 걸리는 필요가 없습니다. 다음은 고려해 야 하는 작업입니다.
+ 플랫 파일 데이터 원본에 대한 4개의 옵션 페이지가 있습니다. 페이지가 많습니다. 하지만 각 페이지에서 시간을 오래 끌지 않아도 됩니다. 다음은 고려해야 하는 태스크입니다.
  
 호출|권장  |형식  
 ----|---------|---------
-**일반**|옵션을 업데이트 해야는 **형식** 섹션.|권장    
-**열**|(구분 기호로 분리 된 파일)에 대 한 열 및 행 구분 기호를 확인 하거나 (고정 폭 인 파일)에 대 한 열 표시에 있는지 확인 합니다.|권장
-**고급**|필요에 따라 데이터 형식 및 열에는 기본적으로 할당 된 다른 속성을 확인 합니다.|선택 사항
-**미리 보기**|필요에 따라 사용자가 지정한 설정을 사용 하 여 데이터의 샘플을 미리 봅니다.|선택 사항
+**일반**|**형식** 섹션에서 옵션을 업데이트했는지 확인합니다.|권장    
+**열**|행 및 열 구분 기호를 확인(구분된 파일)하거나 열을 표시(고정 폭 파일)했는지 확인합니다.|권장
+**고급**|필요에 따라, 데이터 형식 및 기타 속성이 기본적으로 열에 할당되었는지 확인합니다.|선택 사항
+**미리 보기**|필요에 따라, 사용자가 지정한 설정을 사용하여 데이터의 샘플을 미리 봅니다.|선택 사항
 
-## <a name="general-page-source"></a>일반 페이지 (원본)
+## <a name="general-page-source"></a>일반 페이지(원본)
  **일반** 페이지에서 파일을 검색하여 선택한 다음 **형식** 섹션에서 설정을 확인합니다.
  
  ![플랫 파일 연결 일반](../../integration-services/import-export-data/media/flat-file-connection-general.png)  
 
-### <a name="options-to-specify-general-page"></a>지정 하는 옵션 (**일반** 페이지)
+### <a name="options-to-specify-general-page"></a>지정할 옵션(**일반** 페이지)
 
  **파일 이름**  
- 플랫 파일의 경로 파일 이름을 입력 합니다.  
+ 플랫 파일의 경로와 파일 이름을 입력합니다.  
   
  **찾아보기**  
  플랫 파일을 찾습니다.  
   
  **로캘**  
- 날짜 및 시간 형식 및 정렬에 대 한 언어별 정보를 제공 하는 로캘을 지정 합니다.  
+ 정렬과 날짜 및 시간 형식에 사용할 언어별 정보를 제공하는 로캘을 지정합니다.  
   
  **유니코드**  
- 파일은 유니코드를 사용 하는지 여부를 지정 합니다. 유니코드를 사용 하면 코드 페이지를 지정할 수 없습니다.  
+ 파일에서 유니코드 사용 여부를 지정합니다. 유니코드를 사용하면 코드 페이지를 지정할 수 없습니다.  
   
  **코드 페이지**  
  비유니코드 텍스트에 대한 코드 페이지를 지정합니다.  
   
  **형식**  
- 구분 기호로 분리 됨, 고정 폭 또는 왼쪽 오른쪽 서식 파일 사용 하는지 여부를 선택 합니다.  
+ 구분 기호로 분리됨, 고정 폭, 왼쪽 정렬 중 어떤 형식을 사용할지를 선택합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|구분 기호로 분리됨|열 구분 기호로 구분 됩니다. 에 구분 기호를 지정 하면는 **열** 페이지.|  
+|구분 기호로 분리됨|열이 구분 기호로 구분됩니다. **열** 페이지에서 구분 기호를 지정합니다.|  
 |고정 폭|열에 고정 폭이 지정됩니다.|  
 |왼쪽 정렬|왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.|  
   
  **텍스트 한정자**  
- 파일에서 사용 하는 경우 텍스트 한정자를 지정 합니다. 예를 들어 텍스트 필드를 따옴표로 묶도록 지정할 수 있습니다. (이 속성에만 적용 구분 기호로 분리 된 파일입니다.) 
+ 파일에서 사용하는 경우 텍스트 한정자를 지정합니다. 예를 들어 텍스트 필드를 따옴표로 묶도록 지정할 수 있습니다. (이 속성은 구분된 파일에만 적용됩니다.) 
   
 > [!NOTE]
-> 다시 선택할 수 없습니다 텍스트 한정자를 선택한 후는 **None** 옵션입니다. 텍스트 한정자의 선택을 취소하려면 **없음** 을 입력합니다.  
+> 텍스트 한정자를 선택한 후에는 **없음** 옵션을 다시 선택할 수 없습니다. 텍스트 한정자의 선택을 취소하려면 **없음** 을 입력합니다.  
   
  **머리글 행 구분 기호**  
  구분 기호 목록에서 머리글 행 구분 기호를 선택하거나 구분 기호 텍스트를 입력합니다.  
@@ -96,17 +94,17 @@ SQL Server로 텍스트 파일을 가져와야 하는 경우 가져오기 및 �
 |**세로 막대{&#124;}**|머리글 행을 세로 막대로 구분합니다.|  
   
  **건너뛸 머리글 행**  
- 있는 경우에 파일의 위쪽에서 건너뛸 행 수를 지정 합니다.  
+ 파일 맨 위에서 건너뛸 행 수를 지정합니다(있는 경우).  
   
  **첫 번째 데이터 행의 열 이름**  
- 건너뛴된 행) (이후 첫 번째 행에 열 이름을 포함할지 여부를 지정 합니다.
+ 첫 번째 행(건너뛴 행 다음)이 열 이름을 포함할지 여부를 지정합니다.
 
-## <a name="columns-page---format--delimited-source"></a>열 페이지-형식 = 구분 기호로 분리 됨 (원본)
- **열** 페이지에서는 마법사가 식별한 구분 기호 및 열 목록을 확인합니다. 다음 스크린 샷에서 선택한 경우에 페이지를 보여 줍니다 **구분 기호로 분리 됨** 플랫 파일 형식으로.
+## <a name="columns-page---format--delimited-source"></a>열 페이지 - 형식 = 구분 기호로 분리 됨 (원본)
+ **열** 페이지에서는 마법사가 식별한 구분 기호 및 열 목록을 확인합니다. 다음 스크린 샷은 플랫 파일 형식으로 **구분 기호로 분리됨**을 선택한 경우 페이지를 보여 줍니다.
  
-![플랫 파일 구분 열 페이지](../../integration-services/import-export-data/media/flat-file-delimited-columns-page.jpg)
+![플랫 파일, 구분 기호로 분리됨, 열 페이지](../../integration-services/import-export-data/media/flat-file-delimited-columns-page.jpg)
 
-### <a name="options-to-specify-columns-page---format--delimited"></a>지정 하는 옵션 (**열** 페이지-형식을 = 구분 기호로 분리 됨)
+### <a name="options-to-specify-columns-page---format--delimited"></a>지정할 옵션(**열** 페이지 - 형식 = 구분 기호로 분리됨)
 
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
@@ -143,14 +141,14 @@ SQL Server로 텍스트 파일을 가져와야 하는 경우 가져오기 및 �
  **새로 고침**을 클릭하여 건너뛸 구분 기호의 변경 결과를 검토합니다. 이 단추는 다른 연결 옵션을 변경한 후에만 표시됩니다.  
   
  **열 다시 설정**  
- 원래 열을 복원 합니다.  
+ 원래 열을 복원합니다.  
 
-## <a name="columns-page---format--fixed-width-source"></a>열 페이지-형식 = 고정 폭 (원본)
-**열** 페이지에서는 마법사가 식별한 구분 기호 및 열 목록을 확인합니다. 다음 스크린 샷에서 선택한 경우에 페이지를 보여 줍니다 **고정 폭** 플랫 파일 형식으로.
+## <a name="columns-page---format--fixed-width-source"></a>열 페이지 - 형식 = 고정 폭(원본)
+**열** 페이지에서는 마법사가 식별한 구분 기호 및 열 목록을 확인합니다. 다음 스크린 샷은 플랫 파일 형식으로 **고정 폭**을 선택한 경우 페이지를 보여 줍니다.
   
-![플랫 파일, 고정 폭 열 페이지](../../integration-services/import-export-data/media/flat-file-fixed-width-columns-page.jpg)
+![플랫 파일, 고정 폭, 열 페이지](../../integration-services/import-export-data/media/flat-file-fixed-width-columns-page.jpg)
 
-### <a name="options-to-specify-columns-page---format--fixed-width"></a>지정 하는 옵션 (**열** 페이지-형식을 = 고정 폭)
+### <a name="options-to-specify-columns-page---format--fixed-width"></a>지정할 옵션(**열** 페이지 - 형식 = 고정 폭)
 
  **글꼴**  
  미리 보기 데이터를 표시할 글꼴을 선택합니다.  
@@ -162,17 +160,17 @@ SQL Server로 텍스트 파일을 가져와야 하는 경우 가져오기 및 �
  개별 열의 구분 기호를 추가하기 전에 행 길이를 지정합니다. 또는 미리 보기 창에서 빨간색 세로줄을 끌어 행의 끝을 표시합니다. 행 너비 값이 자동으로 업데이트됩니다.  
   
  **열 다시 설정**  
- 원래 열을 복원 합니다.  
+ 원래 열을 복원합니다.  
   
-## <a name="columns-page---format--ragged-right-source"></a>열 페이지-형식 = 왼쪽 정렬 (원본)
-**열** 페이지에서는 마법사가 식별한 구분 기호 및 열 목록을 확인합니다. 다음 스크린 샷에서 선택한 경우에 페이지를 보여 줍니다 **왼쪽 정렬** 플랫 파일 형식으로.
+## <a name="columns-page---format--ragged-right-source"></a>열 페이지 - 형식 = 왼쪽 정렬(원본)
+**열** 페이지에서는 마법사가 식별한 구분 기호 및 열 목록을 확인합니다. 다음 스크린 샷은 플랫 파일 형식으로 **왼쪽 정렬**을 선택한 경우 페이지를 보여 줍니다.
 
 > [!NOTE]
 > 왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.  
  
-![왼쪽 정렬 하는 플랫 파일, 열 페이지](../../integration-services/import-export-data/media/flat-file-ragged-right-columns-page.jpg)
+![플랫 파일, 왼쪽 정렬, 열 페이지](../../integration-services/import-export-data/media/flat-file-ragged-right-columns-page.jpg)
 
-### <a name="options-to-specify-columns-page---format--ragged-right"></a>지정 하는 옵션 (**열** 페이지-형식을 = 왼쪽 정렬)
+### <a name="options-to-specify-columns-page---format--ragged-right"></a>지정할 옵션(**열** 페이지 - 형식 = 왼쪽 정렬)
    
  **글꼴**  
  미리 보기 데이터를 표시할 글꼴을 선택합니다.  
@@ -195,26 +193,26 @@ SQL Server로 텍스트 파일을 가져와야 하는 경우 가져오기 및 �
 |**세로 막대{&#124;}**|행이 세로 막대로 구분됩니다.|  
   
  **열 다시 설정**  
- 원래 열을 복원 합니다.  
+ 원래 열을 복원합니다.  
 
-## <a name="advanced-page-source"></a>고급 페이지 (원본)
-**고급** 페이지에는 데이터 형식 및 크기를 비롯하여 데이터 원본의 각 열에 대한 자세한 정보가 표시됩니다. 다음 스크린샷에 표시 된 **고급** 구분 기호로 분리 된 플랫 파일의 첫 번째 열에 대 한 페이지입니다.
+## <a name="advanced-page-source"></a>고급 페이지(원본)
+**고급** 페이지에는 데이터 형식 및 크기를 비롯하여 데이터 원본의 각 열에 대한 자세한 정보가 표시됩니다. 다음 스크린 샷은 구분 기호로 분리된 플랫 파일의 첫 번째 열에 대한 **고급** 페이지를 보여 줍니다.
 
-![구분 하는 플랫 파일, 고급 페이지](../../integration-services/import-export-data/media/flat-file-delimited-advanced-page.jpg)
+![플랫 파일, 구분 기호로 분리됨, 고급 페이지](../../integration-services/import-export-data/media/flat-file-delimited-advanced-page.jpg)
 
-스크린 샷을, 알 수 있듯이 **id** 열 번호는 최초 문자열 데이터 형식이 포함 되어 있습니다.
+다음 스크린샷에서는 숫자를 포함하는 **id** 열의 데이터 형식이 처음에 문자열로 지정되어 있음을 보여 줍니다.
 
-### <a name="options-to-specify-advanced-page"></a>지정 하는 옵션 (**고급** 페이지)
+### <a name="options-to-specify-advanced-page"></a>지정할 옵션(**고급** 페이지)
 
  **각 열의 속성을 구성하십시오.**  
- 왼쪽 창에서 열을 선택하면 오른쪽 창에 해당 속성이 표시됩니다. 열 속성에 대 한 설명 다음 표를 참조 하십시오. 나열 된 속성의 일부는 특정 데이터 형식의 열에 대 한 및 특정 플랫 파일 형식에 대해서만 구성할 수 있습니다.  
+ 왼쪽 창에서 열을 선택하면 오른쪽 창에 해당 속성이 표시됩니다. 열 속성에 대한 설명은 다음 표를 참조하세요. 나열된 속성의 일부는 특정 플랫 파일 형식 및 특정 데이터 형식 열에 대해서만 구성할 수 있습니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
-|**이름**|설명 열 이름을 지정합니다. 이름, 입력 하지 않으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 형식 열 0, 열 1 등과 이름을 자동으로 만듭니다.|
+|**이름**|설명 열 이름을 지정합니다. 이름을 입력하지 않으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 자동으로 열 0, 열 1 등과 같은 형식으로 이름을 만듭니다.|
 |**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}**. 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}**. 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}**. 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}**. 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}**. 열이 콜론으로 구분됩니다.<br /><br /> **쉼표{,}**. 열이 쉼표로 구분됩니다.<br /><br /> **탭 {t}**. 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}**. 열이 세로 막대로 구분됩니다.|
 |**ColumnType**|열 유형이 구분 기호로 분리됨, 고정 폭 또는 왼쪽 정렬 중 어떤 것인지를 나타냅니다. 이 속성은 읽기 전용입니다. 왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.|  
-|**InputColumnWidth**|바이트 수로 저장할 수 있는 값을 지정 합니다. 유니코드 파일의 경우이 값은 문자 수입니다. 구분 기호로 분리된 열에 대해서는 이 값이 무시됩니다.<br /><br /> **참고** 개체 모델에서 이 속성의 이름은 ColumnWidth입니다.|
+|**InputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 이 값은 문자 수입니다. 구분 기호로 분리된 열에 대해서는 이 값이 무시됩니다.<br /><br /> **참고** 개체 모델에서 이 속성의 이름은 ColumnWidth입니다.|
 |**DataPrecision**|숫자 데이터의 전체 자릿수를 지정합니다. 전체 자릿수란 숫자의 자릿수를 말합니다.|
 |**DataScale**|숫자 데이터의 소수 자릿수를 지정합니다. 소수 자릿수란 소수점 이하 자릿수를 말합니다.|
 |**DataType**|사용 가능한 데이터 형식의 목록에서 선택합니다.<br/>자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|
@@ -238,23 +236,23 @@ SQL Server로 텍스트 파일을 가져와야 하는 경우 가져오기 및 �
  
 **유형 제안**을 클릭하면 **열 유형 제안** 대화 상자가 표시됩니다. 
 
-![플랫 파일 연결 유형 선택 대화 상자를 제안 합니다.](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![플랫 파일 연결 제안 형식 대화 상자](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
-옵션을 선택한 후는 **열 유형 제안** 대화 상자와 클릭 **확인**, 마법사의 일부 열 데이터 형식이 변경 될 수 있습니다.
+**열 유형 제안** 대화 상자에서 옵션을 선택하고 **확인**을 클릭하면 마법사에서 열 일부의 데이터 형식이 변경될 수 있습니다.
 
-클릭 한 후 다음 스크린 샷에 표시 하는, **유형 제안**, 마법사에서 인식 하는 **id** 데이터 원본의 열 실제로 숫자 및 텍스트 문자열이 아닌 이며의 데이터 형식 변경 문자열에서 정수로 열입니다.
+다음 스크린샷에서는 **제안 형식**을 클릭한 후 마법사가 데이터 원본의 **id** 열이 텍스트 문자열이 아니고 숫자임을 인식하여 열의 데이터 형식을 문자열에서 정수로 변경한 것을 보여 줍니다.
 
 ![플랫 파일 연결 고급 후](../../integration-services/import-export-data/media/flat-file-connection-advanced-after.png)
 
-자세한 내용은 참조 하십시오. [열 형식 대화 상자 UI 참조 제안](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)합니다.
+자세한 내용은 [열 유형 제안 대화 상자 UI 참조](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)를 참조하세요.
 
-## <a name="preview-page-source"></a>미리 보기 페이지 (원본)
+## <a name="preview-page-source"></a>미리 보기 페이지(원본)
 
 **미리 보기** 페이지에서 열 목록과 예제 데이터가 예상대로 있는지 확인합니다.
 
 ![플랫 파일, 미리 보기 페이지](../../integration-services/import-export-data/media/flat-file-preview-page.jpg)
 
-### <a name="options-to-specify-preview-page"></a>지정 하는 옵션 (**미리 보기** 페이지)
+### <a name="options-to-specify-preview-page"></a>지정할 옵션(**미리 보기** 페이지)
 
  **건너뛸 데이터 행**  
  플랫 파일의 시작 부분에서 건너뛸 행 수를 지정합니다.  
@@ -268,44 +266,43 @@ SQL Server로 텍스트 파일을 가져와야 하는 경우 가져오기 및 �
 **미리 보기** 페이지에 대한 자세한 내용은 Integration Services 참조 페이지 - [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)를 참조하세요.
 
 ## <a name="connect-to-a-flat-file-destination"></a>플랫 파일 대상에 연결
-플랫 파일 대상에 대 한 경우 옵션을 단일 페이지에만 다음 스크린 샷에 표시 된 것 처럼 다음 설정을 확인 한 다음 찾아보기 파일을 선택 하는 **형식** 섹션.
+플랫 파일 대상의 경우, 다음 스크린 샷과 같이 옵션 페이지는 하나뿐입니다. 파일을 검색하여 선택한 다음 **형식** 섹션에서 설정을 확인합니다.
 
 ![플랫 파일 대상에 연결](../../integration-services/import-export-data/media/connect-to-flat-file-destination.jpg)
 
-### <a name="options-to-specify-choose-a-destination-page"></a>지정 하는 옵션 (**대상 선택** 페이지)
+### <a name="options-to-specify-choose-a-destination-page"></a>지정할 옵션(**대상 선택** 페이지)
 
  **파일 이름**  
- 플랫 파일의 경로 파일 이름을 입력 합니다.  
+ 플랫 파일의 경로와 파일 이름을 입력합니다.  
   
  **찾아보기**  
  플랫 파일을 찾습니다.  
   
  **로캘**  
- 날짜 및 시간 형식 및 정렬에 대 한 언어별 정보를 제공 하는 로캘을 지정 합니다.  
+ 정렬과 날짜 및 시간 형식에 사용할 언어별 정보를 제공하는 로캘을 지정합니다.  
   
  **유니코드**  
- 파일은 유니코드를 사용 하는지 여부를 지정 합니다. 유니코드를 사용 하면 코드 페이지를 지정할 수 없습니다.  
+ 파일에서 유니코드 사용 여부를 지정합니다. 유니코드를 사용하면 코드 페이지를 지정할 수 없습니다.  
   
  **코드 페이지**  
  비유니코드 텍스트에 대한 코드 페이지를 지정합니다.  
   
  **형식**  
- 구분 기호로 분리 됨, 고정 폭 또는 왼쪽 오른쪽 서식 파일 사용 하는지 여부를 선택 합니다.  
+ 구분 기호로 분리됨, 고정 폭, 왼쪽 정렬 중 어떤 형식을 사용할지를 선택합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|구분 기호로 분리됨|열 구분 기호로 구분 됩니다. 에 구분 기호를 지정 하면는 **열** 페이지.|  
+|구분 기호로 분리됨|열이 구분 기호로 구분됩니다. **열** 페이지에서 구분 기호를 지정합니다.|  
 |고정 폭|열에 고정 폭이 지정됩니다.|  
 |왼쪽 정렬|왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.|  
   
  **텍스트 한정자**  
- 파일에서 사용 하는 경우 텍스트 한정자를 지정 합니다. 예를 들어 텍스트 필드를 따옴표로 묶도록 지정할 수 있습니다. (이 속성에만 적용 구분 기호로 분리 된 파일입니다.) 
+ 파일에서 사용하는 경우 텍스트 한정자를 지정합니다. 예를 들어 텍스트 필드를 따옴표로 묶도록 지정할 수 있습니다. (이 속성은 구분된 파일에만 적용됩니다.) 
   
 > [!NOTE] 
-> 다시 선택할 수 없는 텍스트 한정자를 선택한 후는 **None** 옵션입니다. 텍스트 한정자의 선택을 취소하려면 **없음** 을 입력합니다.  
+> 텍스트 한정자를 선택한 후에는 **없음** 옵션을 다시 선택할 수 없습니다. 텍스트 한정자의 선택을 취소하려면 **없음** 을 입력합니다.  
 
 ## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 

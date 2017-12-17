@@ -1,12 +1,14 @@
 ---
-title: "배포할 Integration Services (SSIS) 프로젝트 및 패키지 | Microsoft Docs"
+title: "Integration Services(SSIS) 프로젝트 및 패키지 배포 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +20,16 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 프로젝트 배포 모델 및 레거시 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/27/2017
 레거시 패키지 배포 모델에 대한 자세한 내용은 [레거시 패키지 배포&#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
 > [!NOTE]  
->  프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 모델을 사용하는 경우 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 은 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있는 증분 패키지 배포 기능을 소개했습니다.  
+>  프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 모델을 사용하는 경우 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 은 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있는 증분 패키지 배포 기능을 소개했습니다.  
   
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>프로젝트 배포 모델과 레거시 패키지 배포 모델 비교  
  프로젝트에 대해 선택한 배포 모델 유형에 따라 해당 프로젝트에 사용할 수 있는 배포 및 관리 옵션이 달라집니다. 다음 표에서는 프로젝트 배포 모델을 사용하는 경우와 패키지 배포 모델을 사용하는 경우의 차이점과 유사점을 보여 줍니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 09/27/2017
 |패키지가 별도의 Windows 프로세스에서 실행됩니다.|패키지가 별도의 Windows 프로세스에서 실행됩니다.|  
 |SQL Server 에이전트를 사용하여 패키지 실행을 예약합니다.|SQL Server 에이전트를 사용하여 패키지 실행을 예약합니다.|  
   
- 프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 모델을 사용하는 경우 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 은 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있는 증분 패키지 배포 기능을 소개했습니다.   
+ 프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 모델을 사용하는 경우 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 은 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있는 증분 패키지 배포 기능을 소개했습니다.   
   
 ## <a name="features-of-project-deployment-model"></a>프로젝트 배포 모델의 기능  
  다음 표에서는 프로젝트 배포 모델에만 배포되는 프로젝트에 사용할 수 있는 기능을 나열합니다.  
@@ -71,25 +72,25 @@ ms.lasthandoff: 09/27/2017
 ## <a name="project-deployment"></a>프로젝트 배포  
  프로젝트 배포 모델의 중앙에는 프로젝트 배포 파일(.ispac extension)이 있습니다. 프로젝트 배포 파일은 프로젝트의 패키지 및 매개 변수에 대한 중요 정보만 포함하는 자체 포함된 배포 단위입니다. 프로젝트 배포 파일은 Integration Services 프로젝트 파일(.dtproj 확장명)에 포함된 모든 정보 중 일부만 캡처합니다. 예를 들어 메모를 작성하는 데 사용하는 추가 텍스트 파일은 프로젝트 배포 파일에 저장되지 않으므로 카탈로그에 배포되지 않습니다.  
 
-## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>SSIS를 배포 하는 데 필요한 권한은 패키지 및 프로젝트
+## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>SSIS 프로젝트 및 패키지를 배포하는 데 필요한 권한
 
-기본값에서 SSIS 서비스 계정을 변경 하면 패키지를 성공적으로 배포 하려면 먼저 기본이 아닌 서비스 계정에 추가 권한을 부여할 수 있습니다. 기본이 아닌 서비스 계정에 필요한 사용 권한이 없으면 다음과 같은 오류 메시지가 표시 될 수 있습니다.
+기본값에서 SSIS 서비스 계정을 변경하는 경우, 패키지를 성공적으로 배포하려면 먼저 기본이 아닌 서비스 계정에 추가 권한을 부여해야 할 수 있습니다. 기본이 아닌 서비스 계정에 필요한 사용 권한이 없으면 다음과 같은 오류 메시지가 표시될 수 있습니다.
 
-*사용자 정의 루틴 또는 집계 "deploy_project_internal"를 실행 하는 동안.NET Framework 오류가 발생 했습니다: System.ComponentModel.Win32Exception: 클라이언트는 필요한 권한을 갖고 있지 않습니다.*
+*사용자 정의 루틴 또는 집계 "deploy_project_internal"을 실행하는 동안 .NET Framework 오류가 발생했습니다: System.ComponentModel.Win32Exception: 클라이언트가 필요한 권한을 가지고 있지 않습니다.*
 
-이 오류는 일반적으로 결과를 DCOM 권한이 없습니다. 오류를 해결 하려면 다음 작업을 수행 합니다.
+이 오류는 일반적으로 DCOM 권한 누락으로 인해 발생합니다. 오류를 해결하려면 다음 작업을 수행합니다.
 
-1.  열기는 **구성 요소 서비스** 콘솔 (또는 Dcomcnfg.exe를 실행).
-2.  에 **구성 요소 서비스** 콘솔에서 **구성 요소 서비스** > **컴퓨터** > **내 컴퓨터** > **DCOM 구성**합니다.
-3.  목록에서 찾을 **Microsoft SQL Server Integration Services xx.0** 사용 하는 SQL Server 버전에 대 한 합니다. 예를 들어, SQL Server 2016 버전 13입니다.
-4.  마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.
-5.  에 **Microsoft SQL Server Integration Services 13.0 속성** 대화 상자는 **보안** 탭 합니다.
-6.  시작 및 활성화, 액세스 및 구성-선택-사용 권한 집합 세 개의 각 **사용자 지정**을 선택한 후 **편집** 열려는 **권한** 대화 상자.
-7.  에 **권한** 대화 상자, 기본이 아닌 서비스 계정을 추가 하 고 권한을 부여 **허용** 필요에 따라 사용 권한. 일반적으로 계정에 **로컬 시작** 및 **로컬 활성화** 사용 권한.
-8.  클릭 **확인** 을 두 번 닫습니다는 **구성 요소 서비스** 콘솔.
+1.  **구성 요소 서비스** 콘솔을 엽니다(또는 Dcomcnfg.exe 실행).
+2.  **구성 요소 서비스** 콘솔에서 **구성 요소 서비스** > **컴퓨터** > **내 컴퓨터** > **DCOM 구성**을 차례로 확장합니다.
+3.  목록에서 사용 중인 SQL Server의 버전으로 **Microsoft SQL Server Integration Services xx.0**을 찾습니다. 예를 들어, SQL Server 2016은 버전 13입니다.
+4.  마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+5.  **SQL Server Integration Services 13.0 속성** 대화 상자에서 **보안** 탭을 선택합니다.
+6.  시작, 활성화, 액세스 및 구성의 세 가지 권한 집합 각각에 대해 **사용자 지정**을 선택한 후 **편집**을 선택하여 **권한** 대화 상자를 엽니다.
+7.  **권한** 대화 상자에서 기본이 아닌 서비스 계정을 추가하고 필요에 따라 **허용** 권한을 부여합니다. 일반적으로 계정에는 **로컬 시작** 및 **로컬 활성화** 사용 권한이 있습니다.
+8.  **확인**을 두 번 클릭한 후 **구성 요소 서비스** 콘솔을 닫습니다.
 
-SSIS 서비스 계정에 필요한 사용 권한 및이 섹션에 설명 된 오류에 대 한 자세한 내용은 다음 블로그 게시물을 참조 하십시오.  
-[System.ComponentModel.Win32Exception: SSIS 프로젝트를 배포 하는 동안 클라이언트는 필요한 권한을 갖고 있지 않습니다.](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+이 섹션에 설명된 오류 및 SSIS 서비스 계정에 필요한 사용 권한에 대한 자세한 내용은 다음 블로그 게시물을 참조하세요.  
+[System.ComponentModel.Win32Exception: SSIS 프로젝트를 배포하는 동안 클라이언트가 필요한 권한을 가지고 있지 않습니다.](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Integration Services 서버에 프로젝트 배포
   현재 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서는 환경을 사용하여 패키지를 관리하고, 패키지를 실행하고, 패키지에 대한 런타임 값을 구성할 수 있습니다.  
@@ -99,11 +100,11 @@ SSIS 서비스 계정에 필요한 사용 권한 및이 섹션에 설명 된 오
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 다음 태스크를 완료합니다.  
   
-1.  SSISDB 카탈로그를 만듭니다(아직 없는 경우). 자세한 내용은 참조 [SSIS 카탈로그](../../integration-services/service/ssis-catalog.md)합니다.  
+1.  SSISDB 카탈로그를 만듭니다(아직 없는 경우). 자세한 내용은 [SSIS 카탈로그](../../integration-services/service/ssis-catalog.md)를 참조하세요.  
   
 2.  **Integration Services 프로젝트 변환 마법사** 를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 아래의 [프로젝트 배포 모델로 프로젝트를 변환하려면](#convert)지침을 참조하세요.  
   
-    -   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]에서 프로젝트를 만든 경우 기본적으로 해당 프로젝트는 프로젝트 배포 모델을 사용합니다.  
+    -   [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 이상에서 프로젝트를 만든 경우 기본적으로 해당 프로젝트는 프로젝트 배포 모델을 사용합니다.  
   
     -   이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 프로젝트를 만든 경우 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트 파일을 연 후 프로젝트 배포 모델로 프로젝트를 변환합니다.  
   
@@ -157,7 +158,7 @@ SSIS 서비스 계정에 필요한 사용 권한 및이 섹션에 설명 된 오
 3.  마법사를 완료합니다. 
 
 ## <a name="deploy-packages-to-integration-services-server"></a>Integration Services 서버에 패키지 배포
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 에 도입된 증분 패키지 배포 기능을 사용하면 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있습니다.  
+  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 에 도입된 증분 패키지 배포 기능을 사용하면 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있습니다.  
   
 ###  <a name="DeployWizard"></a> Integration Services 배포 마법사를 사용하여 패키지 배포  
   
@@ -310,7 +311,7 @@ static void Main()
  이 페이지를 사용하면 선택한 설정을 검토할 수 있습니다. **이전**을 클릭하거나 왼쪽 창의 단계 중 하나를 클릭하여 선택 항목을 변경할 수 있습니다. **배포** 를 클릭해 배포 프로세스를 시작합니다.  
   
 #### <a name="results"></a>결과  
- 배포 프로세스가 완료되면 **결과** 페이지가 표시되어야 합니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다. 작업이 실패하면 **결과** 열에서 **실패** 를 클릭하여 해당 오류에 대한 설명을 표시합니다. 클릭 **보고서 저장...**  XML 파일이 나 클릭 하 여 결과 저장 하려면 **닫기** 여 마법사를 종료 합니다.
+ 배포 프로세스가 완료되면 **결과** 페이지가 표시되어야 합니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다. 작업이 실패하면 **결과** 열에서 **실패** 를 클릭하여 해당 오류에 대한 설명을 표시합니다. 결과를 XML 파일로 저장하려면 **보고서 저장...**을 클릭하거나 **닫기**를 클릭해 마법사를 종료합니다.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -422,9 +423,9 @@ static void Main()
   
 1.  [catalog.deploy_project&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 패키지를 포함하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 배포합니다.  
   
-     이진 콘텐츠를 검색 하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 배포 파일에 대 한는  *@project_stream*  매개 변수를 SELECT 문을 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 사용 합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)을 참조하세요.  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 배포 파일의 이진 콘텐츠를 검색하려면 *@project_stream* 매개 변수에 대해 SELECT 문을 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 사용합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)을 참조하세요.  
   
-     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 프로젝트 파일(SSISPackage_ProjectDeployment.ispac)에서 이진 데이터를 읽어서 varbinary(max) 형식의 *@ProjectBinary* 매개 변수에 저장합니다.  *@ProjectBinary*  에 매개 변수 값이 할당 된  *@project_stream*  매개 변수입니다.  
+     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 프로젝트 파일(SSISPackage_ProjectDeployment.ispac)에서 이진 데이터를 읽어서 varbinary(max) 형식의 *@ProjectBinary* 매개 변수에 저장합니다. *@ProjectBinary* 매개 변수 값이 *@project_stream* 매개 변수에 할당됩니다.  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -729,4 +730,3 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **보고서 저장**  
  프로젝트 변환 요약을 .xml 파일로 저장하려면 클릭합니다.  
-

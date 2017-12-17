@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 변수 | Microsoft Docs"
+title: "Integration Services(SSIS) 변수 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb632c5fa2242b5b607d62488b65682a0cc4b07f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
   변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/03/2017
  변수 이름을 지정합니다.  
   
  **네임스페이스**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]두 개의 네임 스페이스를 제공 **사용자** 및 **시스템**합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]은 **User** 및 **System**의 두 가지 네임스페이스를 제공합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
   
 **RaiseChangedEvent**  
  이 속성을 **True**로 설정하면 변수에서 값을 변경할 때 **OnVariableValueChanged** 이벤트가 발생합니다.  
@@ -145,7 +143,7 @@ ms.lasthandoff: 08/03/2017
   
  변수 값의 데이터 형식을 지정합니다.  
 
-## <a name="scenarios-for-using-variables"></a>변수를 사용 하는 시나리오  
+## <a name="scenarios-for-using-variables"></a>변수 사용 시나리오  
  변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 다양한 방법으로 사용됩니다. 패키지 개발이 본격적으로 진행되면 솔루션에서 요구하는 유연성과 관리 효율성을 구현하기 위해 사용자 정의 변수를 패키지에 추가하는 작업이 필요할 것입니다. 시나리오에서 따라서는 시스템 변수도 일반적으로 사용됩니다.  
   
  **속성 식** 변수를 사용하여 패키지 및 패키지 개체의 속성을 설정하는 속성 식에 값을 제공할 수 있습니다. 예를 들어 `SELECT * FROM @varTableName` 식에는 SQL 실행 태스크가 실행하는 SQL 문을 업데이트하는 `varTableName` 변수가 포함되어 있습니다. `DATEPART("d", GETDATE()) == 1? @[User::varPackageFirst]:@[User::varPackageOther]`" 식은 해당 월의 첫 번째 날에는 `varPackageFirst` 변수에 지정된 패키지를 실행하고 다른 날에는 `varPackageOther` 변수에 지정된 패키지를 실행하여 패키지 실행 태스크에서 실행하는 패키지를 업데이트합니다. 자세한 내용은 [패키지에서 속성 식 사용](../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.  
@@ -199,7 +197,7 @@ ms.lasthandoff: 08/03/2017
  **네임스페이스**  
  변수의 네임스페이스를 지정합니다. 기본적으로 사용자 정의 변수는 **User** 네임스페이스에 있습니다.  
   
- **값 형식**  
+ **값 유형**  
  데이터 형식을 선택합니다.  
   
  **Value**  
@@ -224,7 +222,7 @@ ms.lasthandoff: 08/03/2017
   
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="change-the-scope-of-a-variable"></a>변수의 범위를 변경 합니다.  
+## <a name="change-the-scope-of-a-variable"></a>변수의 범위 변경  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -248,9 +246,9 @@ ms.lasthandoff: 08/03/2017
 -   속성 창. **속성** 창에는 **변수** 창에서 사용할 수 없는 변수를 구성하기 위한 Description, EvaluateAsExpression, Expression, ReadOnly, ValueType 및 IncludeInDebugDump 속성이 나열됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]속성을 가진를 업데이트할 수 없는 RaiseChangedEvent 속성이 제외 하 고 시스템 변수 집합도 제공 합니다.  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 속성을 업데이트할 수 없는 시스템 변수 집합도 제공합니다(RaiseChangedEvent 속성은 제외).  
   
-### <a name="set-expressions-on-variables"></a>집합 식에서 변수 변수  
+### <a name="set-expressions-on-variables"></a>변수의 식 설정  
   
  **속성** 창을 사용하여 사용자 정의 변수의 식을 설정하는 경우 다음을 참조하세요.  
   
@@ -270,7 +268,7 @@ ms.lasthandoff: 08/03/2017
   
  변수에 식을 할당하고 **EvaluateAsExpression** 이 **True** 로 설정된 경우 **변수** 창과 **속성**창 모두에서 변수 데이터 형식을 변경할 수 없습니다.  
   
-### <a name="set-the-namespace-and-name-properties"></a>Namespace 및 이름 속성 설정
+### <a name="set-the-namespace-and-name-properties"></a>네임스페이스 및 이름 속성 설정
   
  **Name** 및 **Namespace** 속성 값은 Unicode Standard 2.0에 정의된 대로 영문자 또는 밑줄(_)로 시작해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
   
@@ -308,15 +306,14 @@ ms.lasthandoff: 08/03/2017
   
 7.  **속성** 창에서 읽기/쓰기 변수 속성을 업데이트합니다. 일부 속성은 사용자 정의 변수에 대해 읽기/읽기 전용입니다.  
   
-     속성에 대 한 자세한 내용은 참조 하십시오. [Integration services&#40; Ssis&#41; 변수](../integration-services/integration-services-ssis-variables.md)합니다.  
+     속성에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
   
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장**을 클릭합니다.  
 
-## <a name="update-a-variable-dynamically-with-configurations"></a>구성 변수를 동적으로 업데이트  
+## <a name="update-a-variable-dynamically-with-configurations"></a>구성에서 변수를 동적으로 업데이트  
  변수를 동적으로 업데이트하려면 변수에 대한 구성을 만들고 패키지와 함께 구성을 배포한 다음 패키지를 배포할 때 구성 파일 내의 변수 값을 업데이트하십시오. 패키지는 런타임에 업데이트된 변수 값을 사용합니다. 자세한 내용은 [패키지 구성 만들기](../integration-services/packages/create-package-configurations.md)를 참조하세요.  
 
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
  [자식 패키지에서 변수 및 매개 변수의 값 사용](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-
