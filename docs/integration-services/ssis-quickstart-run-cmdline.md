@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c2b83605714e01961c50d71e83ba57691bc3833
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33293b17caff5d5c71b58bff3f34ed130ab19ba3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>명령 프롬프트에서 DTExec.exe를 사용하여 SSIS 패키지 실행
 이 빠른 시작 자습서에서는 명령 프롬프트에서 적절한 매개 변수로 `DTExec.exe`를 실행하여 SSIS 패키지를 실행하는 방법을 보여 줍니다.
@@ -25,7 +25,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]
 > 이 문서에 설명된 메서드는 Azure SQL Database 서버에 배포되는 패키지에서 테스트를 거치지 않았습니다.
 
-`DTExec.exe`에 대한 자세한 내용은 [dtexec Utility](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility)를 참조하세요.
+`DTExec.exe`에 대한 자세한 내용은 [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)를 참조하세요.
 
 ## <a name="run-a-package-with-dtexec"></a>dtexec를 사용하여 패키지 실행
 
