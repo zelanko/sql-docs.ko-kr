@@ -1,5 +1,5 @@
 ---
-title: "(SQL Server 가져오기 및 내보내기 마법사) 플랫 파일 대상 구성 | Microsoft Docs"
+title: "플랫 파일 대상 구성(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,45 +8,42 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.configureflatfiledest.f1
+f1_keywords: sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 93fbd5e9429d06e3f011f6f0aff03d76a3db9000
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: e312251291cbf2e8850b7900793b8d32e7c3d53b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>플랫 파일 대상 구성(SQL Server 가져오기 및 내보내기 마법사)
-  플랫 파일 대상을 선택한 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서는 **플랫 파일 대상 구성** 쿼리를 입력 한 후 또는 테이블을 복사 하려면을 지정 합니다. 이 페이지에서 대상 플랫 파일에 대한 서식 옵션을 지정합니다. 필요에 따라 개별 열의 매핑을 검토하고 샘플 데이터를 미리 봅니다.  
+  플랫 파일 대상을 선택한 경우 테이블을 복사하도록 지정하거나 쿼리를 지정한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **플랫 파일 대상 구성**을 표시합니다. 이 페이지에서 대상 플랫 파일에 대한 서식 옵션을 지정합니다. 필요에 따라 개별 열의 매핑을 검토하고 샘플 데이터를 미리 봅니다.  
   
 ## <a name="screen-shot-of-the-configure-flat-file-destination-page"></a>플랫 파일 대상 구성 페이지의 스크린샷  
- 다음 스크린 샷에서 모양의 예제가 나와 **플랫 파일 대상 구성** 마법사의 페이지입니다.
+ 다음 스크린샷은 마법사의 **플랫 파일 대상 구성** 페이지 예를 보여 줍니다.
  
- 이 예제에서는 사용자가 일반적인 CSV (쉼표로 구분 된 값) 파일을 만들려면 다음 옵션을 지정 합니다.
--   **행 구분 기호**을 참조하세요. 출력에는 데이터의 각 행은 캐리지 리턴-줄 바꿈 조합으로 끝납니다.
--   **열 구분 기호**을 참조하세요. 각 행 내에서 데이터의 열을 쉼표로 구분 됩니다.
+ 이 예에서는 사용자가 일반적인 CSV(쉼표로 구분된 값) 파일을 만드는 다음 옵션을 지정했습니다.
+-   **행 구분 기호**을 참조하세요. 출력의 각 데이터 행은 캐리지 리턴-줄 바꿈 조합으로 끝납니다.
+-   **열 구분 기호**을 참조하세요. 각 행 내의 데이터 열은 쉼표로 구분됩니다.
 
- ![구성 가져오기 및 내보내기 마법사의 플랫 파일 페이지](../../integration-services/import-export-data/media/flat-file.png)
+ ![가져오기 및 내보내기 마법사의 플랫 파일 구성 페이지](../../integration-services/import-export-data/media/flat-file.png)
   
-## <a name="pick-a-source-table"></a>소스 테이블 선택
+## <a name="pick-a-source-table"></a>원본 테이블 선택
  **원본 테이블 또는 뷰**  
--   를 지정한 경우 이전 페이지에서 테이블을 복사 하려면 드롭다운 목록에서 원본 테이블 또는 뷰를 선택 합니다.
--   쿼리를 지정한 경우 설명이 `"Query"` 을 선택 하 고 가능한 유일한 옵션입니다.  
+-   이전 페이지에서 테이블을 복사하기로 지정한 경우 원본 드롭다운 목록에서 원본 테이블 또는 보기를 선택합니다.
+-   쿼리를 제공한 경우 `"Query"`가 선택되고 유일한 옵션으로 표시됩니다.  
 
-## <a name="specify-row-and-column-delimiters-for-the-output"></a>출력에 대 한 행 및 열 구분 기호를 지정 합니다.
+## <a name="specify-row-and-column-delimiters-for-the-output"></a>출력에 대한 행 및 열 구분 기호를 지정합니다.
  **행 구분 기호**  
- 출력 행을 구분할 구분 기호 목록에서 선택 합니다. 옵션은 없습니다 지정 하는 *사용자 지정* 행 구분 기호입니다.  
+ 출력의 행을 구분할 구분 기호를 목록에서 선택합니다. *사용자 지정* 행 구분 기호를 지정할 수 있는 옵션은 없습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -60,7 +57,7 @@ ms.lasthandoff: 10/13/2017
 |**세로 막대{&#124;}**|행을 세로 막대로 구분합니다.|  
   
  **열 구분 기호**  
- 출력에 열을 구분할 구분 기호 목록에서 선택 합니다. 옵션은 없습니다 지정 하는 *사용자 지정* 열 구분 기호입니다.  
+ 출력의 열을 구분할 구분 기호를 목록에서 선택합니다. *사용자 지정* 열 구분 기호를 지정할 수 있는 옵션은 없습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -73,21 +70,20 @@ ms.lasthandoff: 10/13/2017
 |**탭 {t}**|열을 탭으로 구분합니다.|  
 |**세로 막대{&#124;}**|열을 세로 막대로 구분합니다.|  
 
-## <a name="optionally-review-column-mappings-and-preview-data"></a>필요에 따라 열 매핑을 검토 하 고 데이터 미리 보기
+## <a name="optionally-review-column-mappings-and-preview-data"></a>필요에 따라 열 매핑을 검토하고 데이터 미리 보기
 
 **매핑 편집**   
-필요에 따라 **매핑 편집** 표시 하는 **열 매핑** 선택한 테이블에 대 한 대화 상자. **열 매핑** 대화 상자를 사용하여 다음을 수행할 수 있습니다.
+필요에 따라 **매핑 편집**을 클릭하여 선택한 테이블에 대한 **열 매핑** 대화 상자를 표시합니다. **열 매핑** 대화 상자를 사용하여 다음을 수행할 수 있습니다.
 -   원본과 대상 간의 개별 열 매핑을 검토합니다.
 -   복사하지 않을 열에 **무시** 를 선택하여 일부 열만 복사합니다.
 
 자세한 내용은 [열 매핑](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)을 참조하세요.  
 
 **미리 보기**  
-필요에 따라 **미리 보기** 을 최대 200 개 행에 있는 샘플 데이터의 미리 보기에 **데이터 미리 보기** 대화 상자. 이를 통해 원하는 데이터를 마법사가 복사하는지 확인할 수 있습니다. 자세한 내용은 [데이터 미리 보기](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)를 참조하세요.  
+필요에 따라 **미리 보기**를 클릭하여 **데이터 미리 보기** 대화 상자에서 최대 200개의 샘플 데이터 행을 미리 봅니다. 이를 통해 원하는 데이터를 마법사가 복사하는지 확인할 수 있습니다. 자세한 내용은 [데이터 미리 보기](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)를 참조하세요.  
   
 데이터를 미리 본 후 마법사의 이전 페이지에서 선택한 옵션을 변경할 수도 있습니다. 이렇게 변경하려면 **플랫 파일 대상 구성** 페이지로 돌아간 다음 **뒤로** 를 클릭하여 선택 내용을 변경할 수 있는 이전 페이지로 돌아갑니다.  
 
 ## <a name="whats-next"></a>다음 단계  
- 대상 플랫 파일에 대한 서식 옵션을 지정한 후 다음 페이지는 **패키지 저장 및 실행**입니다. 이 페이지에서는 작업을 즉시 실행할지 여부를 지정합니다. 구성에 따라 수도 있습니다으로 설정을 저장할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 사용자 지정 하 고 나중에 다시 사용 합니다. 자세한 내용은 [패키지 저장 및 실행](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)을 참조하세요.  
-
+ 대상 플랫 파일에 대한 서식 옵션을 지정한 후 다음 페이지는 **패키지 저장 및 실행**입니다. 이 페이지에서는 작업을 즉시 실행할지 여부를 지정합니다. 구성에 따라 설정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지로 저장하여 나중에 사용자 지정하고 다시 사용할 수도 있습니다. 자세한 내용은 [패키지 저장 및 실행](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)을 참조하세요.  
 

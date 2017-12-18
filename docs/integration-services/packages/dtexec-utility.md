@@ -8,22 +8,20 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: b83e544cb070ab07d943965a5a11f305e7c70a2d
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
   **dtexec** 명령 프롬프트 유틸리티는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. **dtexec** 유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. **dtexec** 유틸리를 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버, .ispac 프로젝트 파일, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소, 파일 시스템의 원본에서 패키지를 로드할 수 있습니다.  
@@ -63,29 +61,29 @@ ms.lasthandoff: 09/27/2017
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- **dtexec** 를 사용하여 .ispac 프로젝트 파일에서 패키지를 실행할 경우 이와 관련하여 프로젝트 경로와 프로젝트 스트림 이름을 지정하는 데 사용하는 /Proj[ect] 및 /Pack[age] 옵션이 있습니다. **에서** Integration Services 프로젝트 변환 마법사 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 실행하여 프로젝트를 프로젝트 배포 모델로 변환할 경우 마법사가 .ispac 프로젝트 파일을 생성합니다. 자세한 내용은 참조 [배포할 Integration Services (SSIS) 프로젝트 및 패키지](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)합니다.  
+ **dtexec** 를 사용하여 .ispac 프로젝트 파일에서 패키지를 실행할 경우 이와 관련하여 프로젝트 경로와 프로젝트 스트림 이름을 지정하는 데 사용하는 /Proj[ect] 및 /Pack[age] 옵션이 있습니다. **에서** Integration Services 프로젝트 변환 마법사 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 실행하여 프로젝트를 프로젝트 배포 모델로 변환할 경우 마법사가 .ispac 프로젝트 파일을 생성합니다. 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
   
  타사 일정 도구와 함께 **dtexec** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되는 패키지를 예약할 수 있습니다.  
   
 ##  <a name="bit"></a> 64비트 컴퓨터에서의 설치 고려 사항  
  64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 64비트 버전의 **dtexec** 유틸리티(dtexec.exe)를 설치합니다. 특정 패키지를 32비트 모드로 실행해야 하는 경우 **dtexec** 유틸리티의 32비트 버전을 설치해야 합니다. 32비트 버전의 **dtexec** 유틸리티를 설치하려면 설치 도중 클라이언트 도구 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 선택해야 합니다.  
   
- 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. (일반적으로 32 비트 디렉터리 경로  *\<드라이브 >*: 파일 (x86) server\110\dts\binn 이며 64 비트 디렉터리 경로 \Program  *\<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn입니다.)  
+ 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. (일반적으로 32비트 디렉터리 경로는 *\<드라이브>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn이고, 64비트 디렉터리 경로는 *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn입니다.)  
   
 > **참고:** SQL Server 에이전트를 사용하여 유틸리티를 실행하는 경우 SQL Server 에이전트는 64비트 버전의 유틸리티를 자동으로 사용합니다. SQL Server 에이전트는 PATH 환경 변수가 아닌 레지스트리를 사용하여 유틸리티에 대한 올바른 실행 파일을 찾습니다.  
   
  명령 프롬프트에서 64비트 버전의 유틸리티를 실행하기 위해 다음 동작 중 하나를 수행할 수 있습니다.  
   
--   명령 프롬프트 창을 열고 64 비트 버전의 유틸리티가 포함 되어 있는 디렉터리로 변경 합니다 (*\<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn)를 다음 해당 위치에서 유틸리티를 실행 합니다.  
+-   명령 프롬프트 창을 열고 64비트 버전의 유틸리티가 포함되어 있는 디렉터리(*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn)로 변경한 다음 해당 위치에서 유틸리티를 실행합니다.  
   
--   전체 경로 입력 하 여 명령 프롬프트 유틸리티를 실행 (*\<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn)를 64 비트 버전의 유틸리티가 있습니다.  
+-   명령 프롬프트에서 64비트 버전의 유틸리티에 대한 전체 경로(*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn)를 입력하여 유틸리티를 실행합니다.  
   
--   64 비트 경로 배치 하 여 PATH 환경 변수에서의 경로 순서를 영구적으로 변경 (*\<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn) 앞의 32 비트 경로 (*\<드라이브 >*: \ \ 프로그램 파일 (x86) \Microsoft SQL Server\110\DTS\Binn) 변수에 합니다.  
+-   변수에서 32비트 경로(*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) 앞에 64비트 경로(*\<drive>*:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn)를 배치하여 PATH 환경 변수에서의 경로 순서를 영구적으로 변경합니다.  
   
 ##  <a name="side"></a> 병렬 설치 컴퓨터에 대한 고려 사항  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 또는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 가 설치된 컴퓨터에 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 를 설치하면 여러 버전의 **dtexec** 유틸리티가 설치됩니다.  
   
- 명령 프롬프트 유틸리티의 전체 경로 입력 하 여 실행에 올바른 버전의 유틸리티를 실행 하려면 (*\<드라이브 >*: files\microsoft SQL Server\\< 버전\>\DTS\Binn).  
+ 올바른 버전의 유틸리티가 실행되도록 하려면 명령 프롬프트에서 전체 경로(*\<drive>*:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn)를 입력하는 방식으로 유틸리티를 실행합니다.  
   
 ##  <a name="phases"></a> 실행 단계  
  이 유틸리티를 실행하면 다음 4단계가 수행됩니다.  
@@ -221,7 +219,7 @@ dtexec /option [value] [/option [value]]...
   
      **/ConsoleLog** 옵션에 관한 여러 가지 예는 **주의** 섹션을 참조하세요.  
   
---   **/D [ts]** *package_path*: (선택 사항). SSIS 패키지 저장소에서 패키지를 로드합니다. SSIS 패키지 저장소에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
+--   **/D[ts]** *package_path*: (옵션). SSIS 패키지 저장소에서 패키지를 로드합니다. SSIS 패키지 저장소에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -237,7 +235,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** *오류 코드*: 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 폴더에서 디버그 덤프 파일을 저장  *\<드라이브 >*: files\microsoft SQL Server\110\Shared\ErrorDumps 합니다.  
+     **/Dump** *error code*: 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 디버그 덤프 파일을 *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 저장합니다.  
   
     > **참고:** 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. ACL(액세스 제어 목록)을 사용하여 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다. 예를 들어 디버그 파일을 Microsoft 지원 서비스에 보내기 전에 중요한 정보나 기밀 정보를 제거하는 것이 좋습니다.  
   
@@ -249,7 +247,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (옵션) 패키지가 실행되는 동안 오류가 발생할 때 디버그 덤프 파일(.mdmp 및 .tmp)을 만듭니다.  
   
-     기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 폴더에서 디버그 덤프 파일을 저장  *\<드라이브 >*: files\microsoft SQL Server\110\Shared\ErrorDumps 폴더입니다.  
+     기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 디버그 덤프 파일을 *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 저장합니다.  
   
     > **참고:** 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. ACL(액세스 제어 목록)을 사용하여 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다. 예를 들어 디버그 파일을 Microsoft 지원 서비스에 보내기 전에 중요한 정보나 기밀 정보를 제거하는 것이 좋습니다.  
   
@@ -266,7 +264,7 @@ dtexec /option [value] [/option [value]]...
      **/Env[Reference]** 옵션은 **/ISServer** 및 **/Server** 옵션과 함께 사용합니다.  
   
      이 매개 변수는 SQL Server 에이전트에서 사용됩니다.  
-  --   **/F [ile]** *filespec*: (선택 사항). 파일 시스템에 저장된 패키지를 로드합니다. 파일 시스템에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
+  --   **/F[ile]** *filespec*: (옵션). 파일 시스템에 저장된 패키지를 로드합니다. 파일 시스템에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
 
   *filespec* 인수는 패키지의 경로와 파일 이름을 지정합니다. 경로는 UNC(Universal Naming Convention) 경로나 로컬 경로로 지정할 수 있습니다. *filespec* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *filespec* 인수를 따옴표로 묶어야 합니다.  
   
@@ -388,11 +386,11 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Res[tart]** {*deny | force | ifPossible*}: (옵션). 패키지에서 <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성의 새 값을 지정합니다. 매개 변수의 의미는 다음과 같습니다.  
   
-     *거부* 집합 <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_NEVER>합니다.  
+     *Deny* <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_NEVER>로 설정합니다.  
   
-     *Force* 집합 <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_ALWAYS>합니다.  
+     *Force* <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_ALWAYS>로 설정합니다.  
   
-     *ifPossible* 집합 <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_IFEXISTS>합니다.  
+     *ifPossible* <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_IFEXISTS>로 설정합니다.  
   
      값을 지정하지 않으면 기본값인 **force** 가 사용됩니다.  
   
@@ -416,7 +414,7 @@ dtexec /option [value] [/option [value]]...
   
      **/ISServer** 옵션이 지정된 경우 **/Ser[ver]** 옵션이 필요합니다.  
   
---   **/SQ [L]** *package_path*:에 저장 된 패키지를 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 **msdb** 데이터베이스입니다. **msdb** 데이터베이스에 저장된 패키지는 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.   
+--   **/SQ[L]** *package_path*: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **msdb** 데이터베이스에 저장된 패키지를 로드합니다. **msdb** 데이터베이스에 저장된 패키지는 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.   
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -640,4 +638,3 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  www.mattmasson.com의 [종료 코드, DTEXEC 및 SSIS 카탈로그](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)블로그 항목  
   
   
-

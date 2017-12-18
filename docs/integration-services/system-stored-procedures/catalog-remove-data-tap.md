@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f2c9b5d9333c201120e5f3a3e392c59012a8ac7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 28339c0762182397a266fa42abf6411a3dd56ef4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogremovedatatap"></a>catalog.remove_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +35,8 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @data_tap_id =] *data_tap_id*  
- catalog.add_data_tap 저장 프로시저를 사용하여 만든 데이터 탭의 고유 식별자입니다. *data_tap_id* 은 **bigint**합니다.  
+ [ @data_tap_id = ] *data_tap_id*  
+ catalog.add_data_tap 저장 프로시저를 사용하여 만든 데이터 탭의 고유 식별자입니다. *data_tap_id*는 **bigint**입니다.  
   
 ## <a name="remarks"></a>주의  
  패키지에 이름이 같은 데이터 흐름 태스크가 두 개 이상 포함되어 있는 경우 주어진 이름을 가진 첫 번째 데이터 흐름 태스크에 데이터 탭이 추가됩니다.  
@@ -52,16 +50,16 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  없음  
   
 ## <a name="remarks"></a>주의  
- 탭 데이터를 제거 하려면을 실행 인스턴스가 생성 됨 상태 여야 합니다 (값 1에는 **상태** 의 열은 [catalog.operations &#40; SSISDB 데이터베이스 &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)보기).  
+ 데이터 탭을 제거하려면 실행 인스턴스가 생성됨 상태여야 합니다([catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 보기의 **status** 열 값이 1).  
   
 ## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 MODIFY 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 ## <a name="errors-and-warnings"></a>오류 및 경고  
  다음 목록에서는 저장 프로시저 실패 조건을 설명합니다.  
@@ -73,4 +71,3 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

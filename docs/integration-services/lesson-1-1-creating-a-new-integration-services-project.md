@@ -1,5 +1,5 @@
 ---
-title: "1 단계: 만들기 새 Integration Services 프로젝트 | Microsoft Docs"
+title: "1단계: 새 Integration Services 프로젝트 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 162bd2913648f8164c11fb425f8ca58a976c74a2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f9733831933f547066d4840186a96df34267001c
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/01/2017
 ---
-# <a name="lesson-1-1---creating-a-new-integration-services-project"></a>단원 1-1-새 Integration Services 프로젝트 만들기
+# <a name="lesson-1-1---creating-a-new-integration-services-project"></a>1-1단원: 새 Integration Services 프로젝트 만들기
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만드는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만드는 것입니다. 이 프로젝트는 데이터 변환 솔루션에서 사용하는 데이터 원본, 데이터 원본 뷰, 패키지 등의 개체에 대한 템플릿을 포함합니다.  
   
 이 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서에서 만들 패키지는 로캘 구분 데이터의 값을 해석합니다. 컴퓨터가 영어(미국) 국가별 옵션을 사용하도록 구성되어 있지 않은 경우 패키지에 추가 속성을 설정해야 합니다. 2-5단원에서 사용하는 패키지는 1단원에서 만든 패키지에서 복사한 것이므로 복사된 패키지의 로캘 구분 속성을 업데이트할 필요가 없습니다.  
@@ -35,7 +32,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 > 이 자습서를 사용하려면 Microsoft SQL Server Data Tools가 필요합니다.  
 >   
-> SQL Server Data Tools 설치 방법에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](http://msdn.microsoft.com/en-us/data/hh297027)를 참조하세요.  
+> SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](http://msdn.microsoft.com/data/hh297027)를 참조하십시오.  
   
 ### <a name="to-create-a-new-integration-services-project"></a>새 Integration Services 프로젝트를 만들려면  
   
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [2단계: 플랫 파일 연결 관리자 추가 및 구성](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
-

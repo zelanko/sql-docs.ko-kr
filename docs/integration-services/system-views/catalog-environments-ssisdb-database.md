@@ -1,5 +1,5 @@
 ---
-title: "catalog.environments (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.environments(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e7ba1ba0bd8a444e4609a2f3d011da9cd233b73
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: edb3360d05e44131d6f30b510ed5dd120e2aeae7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +33,9 @@ ms.lasthandoff: 09/26/2017
 |environment_id|**bigint**|환경의 고유 식별자(ID)입니다.|  
 |name|**sysname**|환경의 이름입니다.|  
 |folder_id|**bigint**|환경이 있는 폴더의 고유 ID입니다.|  
-|description|**nvarchar (1024)**|환경에 대한 설명입니다. 이 값은 선택 사항입니다.|  
+|description|**nvarchar(1024)**|환경에 대한 설명입니다. 이 값은 선택 사항입니다.|  
 |created_by_sid|**varbinary(85)**|환경을 만든 사용자의 보안 식별자(SID)입니다.|  
-|created_by_name|**nvarchar (128)**|환경을 만든 사용자의 이름입니다.|  
+|created_by_name|**nvarchar(128)**|환경을 만든 사용자의 이름입니다.|  
 |created_time|**datetimeoffset**|환경을 만든 날짜 및 시간입니다.|  
   
 ## <a name="remarks"></a>주의  
@@ -48,12 +46,11 @@ ms.lasthandoff: 09/26/2017
   
 -   환경에 대한 READ 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 > [!NOTE]  
 >  행 수준 보안이 적용됩니다. 따라서 볼 수 있는 권한이 있는 행만 표시됩니다.  
   
   
-

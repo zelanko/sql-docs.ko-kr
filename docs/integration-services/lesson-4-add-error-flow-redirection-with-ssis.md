@@ -1,5 +1,5 @@
 ---
-title: "4 단원: SSIS와 오류 흐름 리디렉션 추가 | Microsoft Docs"
+title: "4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cfe3634566a7ede28e3c1f5640cfe6e4caa1c351
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 71522bf83637a5f783f14c0a13c2e129b5a0afdd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가
 변환 프로세스에서 발생할 수 있는 오류를 처리하기 위해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 변환할 수 없는 데이터를 처리하는 방법을 구성 요소 단위 및 열 단위로 결정할 수 있습니다. 특정 열의 오류를 무시하거나 오류가 발생한 전체 행을 리디렉션하거나 또는 구성 요소 작동이 실패하도록 선택할 수 있습니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 모든 구성 요소는 오류 발생 시 작동이 실패하도록 구성되어 있습니다. 구성 요소 작동이 실패하면 이에 따라 패키지 실행이 실패하고 모든 후속 처리가 중지됩니다.  
@@ -44,19 +41,18 @@ ms.lasthandoff: 08/03/2017
 ## <a name="tasks-in-lesson"></a>단원의 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 3 단원 패키지 복사](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+-   [1단계: 3단원 패키지 복사](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [2 단계: 손상된 된 파일 만들기](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
+-   [2단계: 손상된 파일 만들기](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [3 단계: 오류 흐름 리디렉션 추가](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [3단계: 오류 흐름 리디렉션 추가](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [4 단계: 플랫 파일 대상 추가](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+-   [4단계: 플랫 파일 대상 추가](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [5 단계: 4 단원 자습서 패키지 테스트](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [5단계: 4단원 자습서 패키지 테스트](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
-[1 단계: 3 단원 패키지 복사](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+[1단계: 3단원 패키지 복사](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   
-

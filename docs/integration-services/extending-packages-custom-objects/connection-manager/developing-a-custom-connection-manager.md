@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - packages [Integration Services], connections
 - custom connection managers [Integration Services], about custom connection managers
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connection managers
 - custom connection managers [Integration Services]
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1297f0123a896003e2dbca5f01a05fffbf18b23d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b34531a1c303d28584faea0918ae89994f3df8c0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-connection-manager"></a>사용자 지정 연결 관리자 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 연결 관리자를 사용하여 외부 데이터 원본에 연결하는 데 필요한 정보를 캡슐화합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 엔터프라이즈 데이터베이스에서 텍스트 파일 및 Excel 워크시트에 이르기까지 가장 일반적으로 사용되는 데이터 원본에 대한 연결을 지원하는 다양한 연결 관리자가 포함되어 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 지원하는 연결 관리자와 외부 데이터 원본이 개발자의 요구 사항을 완전히 충족시키지 못할 경우에는 사용자 지정 연결 관리자를 만들 수 있습니다.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 08/03/2017
  [사용자 지정 연결 관리자 코딩](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
  기본 클래스의 메서드 및 속성을 재정의하여 사용자 지정 연결 관리자를 구현하는 방법에 대해 설명합니다.  
   
- [사용자 지정 연결 관리자에 대 한 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [사용자 지정 연결 관리자의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
  사용자 지정 연결 관리자를 구성하는 데 사용되는 사용자 인터페이스 클래스 및 폼을 구현하는 방법에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
@@ -84,4 +81,3 @@ ms.lasthandoff: 08/03/2017
  [사용자 지정 데이터 흐름 구성 요소 개발](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  사용자 지정 데이터 흐름 원본, 변환 및 대상을 프로그래밍하는 방법에 대해 설명합니다.  
   
-

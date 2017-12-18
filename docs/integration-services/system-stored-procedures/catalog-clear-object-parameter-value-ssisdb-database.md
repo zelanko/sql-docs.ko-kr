@@ -1,5 +1,5 @@
 ---
-title: "catalog.clear_object_parameter_value (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.clear_object_parameter_value(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d0d89081a31341a8d813d9985940c0e3ce0160a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9c079f4c5ce9809d1624992601213f6d5fafc8e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +39,20 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @folder_name =] *folder_name*  
- 프로젝트가 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar (128)**합니다.  
+ [ @folder_name = ] *folder_name*  
+ 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)**입니다.  
   
- [ @project_name =] *project_name*  
- 프로젝트의 이름입니다. *project_name* 은 **nvarchar (128)**합니다.  
+ [ @project_name = ] *project_name*  
+ 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)**입니다.  
   
- [ @object_type =] *object_type*  
- 개체의 유형입니다. 유효한 값은 프로젝트의 경우 `20`이고, 패키지의 경우 `30`입니다. *object_type* 은 **smallInt**합니다.  
+ [ @object_type = ] *object_type*  
+ 개체의 유형입니다. 유효한 값은 프로젝트의 경우 `20`이고, 패키지의 경우 `30`입니다. *object_type*은 **smallInt**입니다.  
   
- [개체 _name @ =] *_name 개체*  
- 패키지의 이름입니다. *_name 개체* 은 **nvarchar (260)**합니다.  
+ [ @ object _name = ] *object _name*  
+ 패키지의 이름입니다. *object _name*은 **nvarchar(260)**입니다.  
   
- [ @parameter_ 이름 =] *p a r a*  
- 매개 변수의 이름입니다. *parameter_ 이름* 은 **nvarchar (128)**합니다.  
+ [ @parameter_ name = ] *parameter_name*  
+ 매개 변수의 이름입니다. *parameter_ name*은 **nvarchar(128)**입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
@@ -67,12 +65,12 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 -   프로젝트에 대한 READ 및 MODIFY 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 ## <a name="errors-and-warnings"></a>오류 및 경고  
- 다음 목록에서는 clear_object_parameter 저장 프로시저에서 오류가 발생 하는 몇 가지 조건을 설명 합니다.  
+ 다음 목록에서는 clear_object_parameter 저장 프로시저에서 오류가 발생하는 몇 가지 조건을 설명합니다.  
   
 -   잘못된 개체 유형을 지정하거나 프로젝트에서 개체 이름을 찾을 수 없는 경우  
   
@@ -83,4 +81,3 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 -   사용자에게 적절한 권한이 없는 경우  
   
   
-

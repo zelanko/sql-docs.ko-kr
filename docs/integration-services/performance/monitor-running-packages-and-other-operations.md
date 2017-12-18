@@ -1,5 +1,5 @@
 ---
-title: "패키지 및 기타 작업을 실행 하는 모니터 | Microsoft Docs"
+title: "실행 중인 패키지 및 기타 작업 모니터링 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2555a719c2677c2c573a07dfa803ad80b3946ebf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: a23adf907e01dd8c95c5c44a5a57db0aeb807625
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
   다음 도구 중 하나 이상을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 실행, 프로젝트 유효성 검사 및 기타 작업을 모니터링할 수 있습니다. 데이터 탭과 같은 일부 도구는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 프로젝트에 대해서만 사용할 수 있습니다.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  한 작업의 상태를 나타내기 위해 9가지 상태 유형이 사용됩니다. 상태 유형에 대한 전체 목록은 [catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰를 참조하세요.  
 
-## <a name="active_ops"></a>활성 작업 대화 상자
+## <a name="active_ops"></a> 활성 작업 대화 상자
   **활성 작업** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 작업(예: 배포, 유효성 검사 및 패키지 실행)의 상태를 볼 수 있습니다. 이 데이터는 SSISDB 카탈로그에 저장됩니다.  
   
  관련된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 뷰에 대한 자세한 내용은 [catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 및 [catalog.executions&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)를 참조하세요.  
@@ -102,7 +100,7 @@ ms.lasthandoff: 09/27/2017
  서버에서 실행 중인 패키지 목록을 보려면 상태가 2인 패키지에 대해 [catalog.executions&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) 뷰를 쿼리합니다.  
   
  관리되는 API를 통해 프로그래밍 방식으로 액세스  
- 참조는 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임 스페이스 및 클래스입니다.  
+ <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스 및 해당 클래스를 참조하세요.  
   
 ### <a name="stopping-a-running-package"></a>실행 중인 패키지 중지  
  **활성 작업** 대화 상자에서 실행 중인 패키지를 중지하도록 요청할 수 있습니다. 자세한 내용은 [Active Operations Dialog Box](#active_ops)를 참조하세요.  
@@ -113,7 +111,7 @@ ms.lasthandoff: 09/27/2017
  서버에서 실행 중인 패키지를 중지하려면 [catalog.stop_operation&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md) 저장 프로시저를 호출합니다.  
   
  관리되는 API를 통해 프로그래밍 방식으로 액세스  
- 참조는 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임 스페이스 및 클래스입니다.  
+ <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스 및 해당 클래스를 참조하세요.  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>실행된 패키지 기록 보기  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 실행된 패키지의 기록을 보려면 **모든 실행** 보고서를 사용합니다. **모든 실행** 보고서 및 다른 표준 보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](#reports)를 참조하세요.  
@@ -124,14 +122,14 @@ ms.lasthandoff: 09/27/2017
  실행된 패키지에 대한 정보를 보려면 [catalog.executions&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) 뷰를 쿼리합니다.  
   
  관리되는 API를 통해 프로그래밍 방식으로 액세스  
- 참조는 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임 스페이스 및 클래스입니다.  
+ <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스 및 해당 클래스를 참조하세요.  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
   현재 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 모니터링하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다. 이러한 보고서는 패키지 상태 및 기록을 보고 필요한 경우 패키지 실행 실패 원인을 파악하는 데 도움이 됩니다.  
   
  각 보고서 페이지의 위쪽에서 뒤로 아이콘을 클릭하면 확인한 이전 페이지로 이동하고, 새로 고침 아이콘을 클릭하면 페이지에 표시된 정보가 새로 고쳐지며, 인쇄 아이콘을 사용하면 현재 페이지를 인쇄할 수 있습니다.  
   
- 패키지를 배포 하는 방법에 대 한 내용은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버 참조 [배포할 Integration Services (SSIS) 프로젝트 및 패키지](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)합니다.  
+ 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포하는 방법은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
   
 ### <a name="integration-services-dashboard"></a>통합 서비스 대시보드  
  **Integration Services 대시보드** 보고서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 패키지 실행에 대한 개요를 제공합니다. 대시보드에서는 서버에서 실행된 각 패키지를 "확대"하여 발생했을 수 있는 패키지 실행 오류에 대한 특정 세부 정보를 찾을 수 있습니다.  
@@ -178,7 +176,7 @@ ms.lasthandoff: 09/27/2017
  **모든 유효성 검사 보고서** 에는 서버에서 수행된 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 유효성 검사에 대한 요약 내용이 표시됩니다. 요약 내용으로는 상태, 시작 시간 및 종료 시간과 같은 각 유효성 검사에 대한 정보가 표시됩니다. 각 요약 항목에는 유효성 검사 중 생성된 메시지에 대한 링크가 포함됩니다. Integration Services 대시보드를 사용하는 경우와 마찬가지로 테이블에 필터를 적용하여 표시되는 정보를 좁힐 수 있습니다.  
   
 ### <a name="custom-reports"></a>사용자 지정 보고서  
- **Integration Services 카탈로그** 노드 아래의 **SSISDB** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스 >.\< 소유자 >. \<개체 >. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
+ **Integration Services 카탈로그** 노드 아래의 **SSISDB** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스>.\<소유자>.\<개체>입니다. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
   
 > [!NOTE]  
 >  **데이터베이스** 노드 아래의 **SSISDB** 노드에 사용자 지정 보고서를 추가한 경우에는 SSISDB 접두사가 필요하지 않습니다.  
@@ -209,4 +207,3 @@ ms.lasthandoff: 09/27/2017
 ## <a name="see-also"></a>관련 항목:  
  [프로젝트 및 패키지 실행](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [패키지 실행 문제 해결 보고서](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
-

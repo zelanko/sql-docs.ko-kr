@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00c2cd8fa5f8423a7791d663d02aecbf27b8ab41
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 345b424bd4404af4cc2f52aee4fc9ce174aee983
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  기존 사용자 지정 된 로깅 수준을 이름을 바꿉니다. 사용자 지정 된 로깅 수준에 대 한 자세한 내용은 참조 하십시오. [Integration services&#40; Ssis&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)합니다.  
+  기존 사용자 지정 로깅 수준의 이름을 바꿀 수 있습니다. 사용자 지정 로깅 수준에 대한 자세한 내용은 [Integration Services &#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,15 +36,15 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @old_name =] *old_name*  
- 기존 아티클의 이름 사용자의 이름을 바꾸려면 로깅 수준을 지정 합니다.  
+ [ @old_name = ] *old_name*  
+ 이름을 바꿀 기존 사용자 지정 로깅 수준의 이름입니다.  
   
- *old_name* 은 **nvarchar (128)**합니다.  
+ *old_name*은 **nvarchar(128)**입니다.  
   
- [ @new_name =] *new_name*  
- 새 이름이 지정된 된 로깅 수준을 사용자 지정합니다.  
+ [ @new_name = ] *new_name*  
+ 지정된 사용자 지정 로깅 수준의 새 이름입니다.  
   
- *new_name* 은 **nvarchar (128)**합니다.  
+ *new_name*은 **nvarchar(128)**입니다.  
   
 ## <a name="remarks"></a>주의  
   
@@ -68,7 +66,6 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ## <a name="errors-and-warnings"></a>오류 및 경고  
  다음 목록에서는 저장 프로시저 실패 조건을 설명합니다.  
   
--   사용자는 데 필요한 권한이 없습니다.  
+-   사용자에게 필요한 권한이 없습니다.  
   
   
-

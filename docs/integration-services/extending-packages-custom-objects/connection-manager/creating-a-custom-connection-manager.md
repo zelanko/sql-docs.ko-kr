@@ -8,26 +8,22 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom connection managers [Integration Services], creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c617741134c19c012f487bc00263c2e4b071810
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 17534beced4fc9e917ded7fb91514460deb83d0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-custom-connection-manager"></a>사용자 지정 연결 관리자 만들기
   사용자 지정 연결 관리자를 만들 때 수행해야 하는 단계는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 다른 사용자 지정 개체를 만들 때의 단계와 비슷합니다.  
@@ -53,9 +49,9 @@ ms.lasthandoff: 08/03/2017
  강력한 이름 키 파일을 사용하여 빌드 시 생성될 어셈블리에 서명하도록 두 프로젝트를 구성합니다.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>DtsConnection 특성 적용  
- 앞에서 만든 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 특성을 적용하여 해당 클래스를 연결 관리자로 식별합니다. 이 특성은 연결 관리자의 이름, 설명 및 연결 유형 같은 디자인 타임 정보를 제공합니다. <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> 및 **설명** 속성에 해당는 **형식** 및 **설명** 에 표시 된 열은 **SSIS 연결 관리자 추가** 패키지에 대 한 연결을 구성할 때 표시 되는 대화 상자에서 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]합니다.  
+ 앞에서 만든 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 특성을 적용하여 해당 클래스를 연결 관리자로 식별합니다. 이 특성은 연결 관리자의 이름, 설명 및 연결 유형 같은 디자인 타임 정보를 제공합니다. <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> 및 **Description** 속성은 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 패키지에 대한 연결을 구성할 때 **SSIS 연결 관리자 추가** 대화 상자에 표시되는 **유형** 및 **설명** 열에 해당합니다.  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 속성을 사용하여 연결 관리자를 사용자 지정 사용자 인터페이스에 연결합니다. 사용이 속성에 필요한 공개 키 토큰을 가져오려면 **sn.exe-t** 사용자 인터페이스 어셈블리 서명에 사용할 키 쌍 (.snk) 파일에서 공개 키 토큰을 표시 합니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 속성을 사용하여 연결 관리자를 사용자 지정 사용자 인터페이스에 연결합니다. 이 속성에 필요한 공개 키 토큰을 가져오려면 **sn.exe -t**를 사용하여 사용자 인터페이스 어셈블리 서명에 사용할 키 쌍(.snk) 파일의 공개 키 토큰을 표시할 수 있습니다.  
   
 ```vb  
 <DtsConnection(ConnectionType:="SQLVB", _  
@@ -81,11 +77,10 @@ ConnectionManagerBase
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>사용자 지정 연결 관리자 빌드, 배포 및 디버깅  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 사용자 지정 연결 관리자의 빌드, 배포 및 디버깅 단계는 다른 형식의 사용자 지정 개체에 대한 단계와 비슷합니다. 자세한 내용은 참조 [건물, Deploying, and Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)합니다.    
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 사용자 지정 연결 관리자의 빌드, 배포 및 디버깅 단계는 다른 형식의 사용자 지정 개체에 대한 단계와 비슷합니다. 자세한 내용은 [사용자 지정 개체 빌드, 배포 및 디버그](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)를 참조하세요.    
   
 ## <a name="see-also"></a>관련 항목:  
  [사용자 지정 연결 관리자 코딩](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
- [사용자 지정 연결 관리자에 대 한 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [사용자 지정 연결 관리자의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

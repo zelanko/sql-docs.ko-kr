@@ -1,5 +1,5 @@
 ---
-title: "catalog.worker_agents (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.worker_agents(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,48 +8,45 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d56af0ab150255c53746898a638a32112938755c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: a74c1d81b2defff8b3d5566c221e1df102c136e2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents (SSISDB 데이터베이스)
+# <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-에 대 한 정보를 표시는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 스케일 아웃 작업자입니다.
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker에 대한 정보를 표시합니다.
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|WorkerAgentId|**uniqueidentifier**|작업자 에이전트 ID의 스케일 아웃 작업자입니다.|
-|IsEnabled|**bit**|스케일 아웃 작업자 활성화 되어 있는지 여부를 나타냅니다.|
-|DisplayName|**nvarchar(256)**|스케일 아웃 작업자의 표시 이름입니다.|
-|Description|**nvarchar(256)**|스케일 아웃 작업자의 설명입니다.|
-|MachineName|**nvarchar(256)**|스케일 아웃 작업자에 대 한 컴퓨터 이름입니다.|
-|Tags|**nvarchar(max)**|스케일 아웃 작업자의 태그입니다.|
-|UserAccount|**nvarchar(256)**|스케일 아웃 Worker 서비스를 실행 하는 사용자 계정입니다.|
-|LastOnlineTime|**(7)**|마지막 시간 스케일 아웃 작업자는 온라인입니다.|
+|WorkerAgentId|**uniqueidentifier**|Scale Out Worker의 작업자 에이전트 ID입니다.|
+|IsEnabled|**bit**|Scale Out Worker의 사용 여부를 나타냅니다.|
+|DisplayName|**nvarchar(256)**|Scale Out Worker의 표시 이름입니다.|
+|Description|**nvarchar(256)**|Scale Out Worker에 대한 설명입니다.|
+|MachineName|**nvarchar(256)**|Scale Out Worker의 컴퓨터 이름입니다.|
+|Tags|**nvarchar(max)**|Scale Out Worker의 태그입니다.|
+|UserAccount|**nvarchar(256)**|Scale Out Worker 서비스를 실행하는 사용자 계정입니다.|
+|LastOnlineTime|**datetimeoffset(7)**|Scale Out Worker가 마지막으로 온라인 상태인 시간입니다.|
 
 ## <a name="remarks"></a>주의
-이 뷰는 각 스케일 아웃 작업자 SSISDB 카탈로그 작업 마스터 스케일 아웃 연결에 대 한 행을 표시 합니다.
+이 보기는 SSISDB 카탈로그와 함께 작동하는 Scale Out 마스터에 연결하는 각 Scale Out Worker의 행을 표시합니다.
 
 ## <a name="permissions"></a>Permissions
 이 뷰를 보려면 다음 권한 중 하나가 필요합니다.
 
-- 멤버 자격에는 **ssis_admin** 데이터베이스 역할
+- **ssis_admin** 데이터베이스 역할에 대한 멤버 자격
 
-- 멤버 자격에는 **ssis_cluster_executor** 데이터베이스 역할
+- **ssis_cluster_executor** 데이터베이스 역할에 대한 멤버 자격
 
-- 멤버 자격에는 **sysadmin** 서버 역할
-
+- **sysadmin** 서버 역할에 대한 멤버 자격

@@ -1,5 +1,5 @@
 ---
-title: "스크립트 태스크와 성능 카운터 모니터링 | Microsoft Docs"
+title: "스크립트 태스크를 사용하여 성능 카운터 모니터링 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - performance counters [Integration Services]
 - SSIS Script task, performance counters
@@ -24,37 +21,36 @@ helpviewer_keywords:
 - Script task [Integration Services], performance counters
 - counters [Integration Services]
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: fd733f7d2fdf9c5d1181df6e7856d729e9a58026
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 134c0f6317fbea5ca23c0fe727cd505c133ae10d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>스크립트 태스크를 사용하여 성능 카운터 모니터링
-  관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. **System.Diagnostics** 의 네임 스페이스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 기존 성능 카운터를 사용 하 고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공 합니다.  
+  관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 **System.Diagnostics** 네임스페이스에서는 기존 성능 카운터를 사용하고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공합니다.  
   
- 성능 카운터는 시간 경과에 따른 소프트웨어 성능을 분석하는 데 사용할 수 있는 응용 프로그램 성능 정보를 저장합니다. 성능 카운터를 사용 하 여에 로컬 또는 원격으로 모니터링할 수는 **성능 모니터** 도구입니다. 나중에 패키지에서 제어 흐름을 분기할 수 있도록 성능 카운터의 값을 변수에 저장할 수 있습니다.  
+ 성능 카운터는 시간 경과에 따른 소프트웨어 성능을 분석하는 데 사용할 수 있는 응용 프로그램 성능 정보를 저장합니다. **성능 모니터** 도구를 사용하여 로컬 또는 원격으로 성능 카운터를 모니터링할 수 있습니다. 나중에 패키지에서 제어 흐름을 분기할 수 있도록 성능 카운터의 값을 변수에 저장할 수 있습니다.  
   
- 성능 카운터를 사용 하는 대신를 발생 시킬 수 있습니다는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 를 통해 이벤트는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 의 속성은 **Dts** 개체입니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 이벤트는 진행률 및 완료율 정보를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 반환합니다.  
+ 성능 카운터를 사용하는 대신 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 속성을 통해 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 이벤트를 발생시킬 수도 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 이벤트는 진행률 및 완료율 정보를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 반환합니다.  
   
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
 ## <a name="description"></a>Description  
- 다음 예에서는 사용자 지정 성능 카운터를 만들고 해당 카운터를 증가시킵니다. 이 예에서는 먼저 성능 카운터가 이미 있는지 여부를 확인합니다. 경우 성능 카운터가 만들어지지 않은, 스크립트 호출에서 **만들기** 의 메서드는 **PerformanceCounterCategory** 개체를 만듭니다. 성능 카운터를 만든 후에는 스크립트에서 해당 카운터를 증가시킵니다. 이 예제에서는 호출 최선의 방법을 따르는 하는 마지막으로 **닫기** 메서드를 더 이상 필요 없는 경우 성능 카운터입니다.  
+ 다음 예에서는 사용자 지정 성능 카운터를 만들고 해당 카운터를 증가시킵니다. 이 예에서는 먼저 성능 카운터가 이미 있는지 여부를 확인합니다. 성능 카운터가 만들어지지 않은 경우 스크립트에서는 **PerformanceCounterCategory** 개체의 **Create** 메서드를 호출하여 성능 카운터를 만듭니다. 성능 카운터를 만든 후에는 스크립트에서 해당 카운터를 증가시킵니다. 마지막으로, 성능 카운터가 더 이상 필요하지 않은 경우 성능 카운터에서 **Close** 메서드를 호출하는 모범 사례를 따릅니다.  
   
 > [!NOTE]  
 >  성능 카운터 범주와 성능 카운터를 새로 만들려면 관리자 권한이 필요합니다. 또한 새 범주 및 카운터는 만든 후에도 해당 컴퓨터에 유지됩니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
--   사용 하 여 프로그램 **Imports** 가져오려는 코드에 문이 **System.Diagnostics** 네임 스페이스입니다.  
+-   코드에 **Imports** 문을 사용하여 **System.Diagnostics** 네임스페이스를 가져옵니다.  
   
 ### <a name="example-code"></a>코드 예  
   
@@ -129,4 +125,3 @@ public void Main()
         }  
   
 ```  
-

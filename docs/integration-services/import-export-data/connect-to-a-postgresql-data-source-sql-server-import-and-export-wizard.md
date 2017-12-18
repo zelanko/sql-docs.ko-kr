@@ -1,5 +1,5 @@
 ---
-title: "(SQL Server 가져오기 및 내보내기 마법사) PostgreSQL 데이터 원본에 연결 | Microsoft Docs"
+title: "PostgreSQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,96 +8,93 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4c82ae7eedc3e18e7591cf7ab30a507920695247
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 58d8e69ae49c56716d8d0f5393fad329bd924b21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>(SQL Server 가져오기 및 내보내기 마법사) PostgreSQL 데이터 원본에 연결
-이 항목에 연결 하는 방법을 보여 줍니다.는 **PostgreSQL** 에서 데이터 소스는 **데이터 원본을 선택** 또는 **대상 선택** SQL Server 가져오기 및 내보내기 마법사의 페이지입니다. 
+# <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
+이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **PostgreSQL** 데이터 원본에 연결하는 방법을 보여 줍니다. 
 
 > [!IMPORTANT]
-> 자세한 요구 사항 및 PostgreSQL 데이터베이스에 연결 하기 위한 필수 구성 요소는이 Microsoft 문서에서 다루지 않습니다. 이 문서에서는 이미 PostgreSQL 클라이언트 소프트웨어가 설치 되어 있고 연결할 수 있는지 이미 성공적으로 대상 PostgreSQL 데이터베이스에 가정 합니다. 자세한 내용은 PostgreSQL 데이터베이스 관리자 또는 PostgreSQL 설명서를 참조 하십시오.
+> PostgreSQL 데이터베이스에 연결하기 위한 자세한 요구 사항 및 필수 구성 요소는 이 Microsoft 문서에서 다루지 않습니다. 이 문서에서는 여러분의 컴퓨터에 PostgreSQL 클라이언트 소프트웨어가 설치되어 있고 대상 PostgreSQL 데이터베이스에 연결할 수 있다고 가정합니다. 자세한 내용은 PostgreSQL 데이터베이스 관리자에게 문의하거나 PostgreSQL 설명서를 참조하세요.
 
-## <a name="get-the-postgresql-odbc-driver"></a>PostgreSQL ODBC 드라이버
+## <a name="get-the-postgresql-odbc-driver"></a>PostgreSQL ODBC 드라이버 받기
 
-### <a name="install-the-odbc-driver-with-stack-builder"></a>스택 작성기로 ODBC 드라이버를 설치 합니다.
-스택 PostgreSQL ODBC 드라이버 (psqlODBC) PostgreSQL의 설치를 추가 하는 작성기를 실행 합니다.
+### <a name="install-the-odbc-driver-with-stack-builder"></a>스택 작성기로 ODBC 드라이버 설치
+스택 작성기를 실행하여 설치된 PostgreSQL에 PostgreSQL ODBC 드라이버(psqlODBC)를 추가합니다.
 
-![PostgreSQL ODBC 스택 작성기와 함께 설치](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
+![스택 작성기로 PostgreSQL ODBC 드라이버 설치](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
-### <a name="or-download-the-latest-odbc-driver"></a>또는 최신 ODBC 드라이버를 다운로드 합니다.
-이 FTP 사이트-에서 직접 PostgreSQL ODBC 드라이버 (psqlODBC)의 최신 버전은 Windows 설치 관리자 다운로드 또는 [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)합니다. .Zip 파일에서 파일을 추출 하 고.msi 파일을 실행 합니다.
+### <a name="or-download-the-latest-odbc-driver"></a>또는 최신 ODBC 드라이버 다운로드
+또는 FTP 사이트 [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)에서 최신 버전의 PostgreSQL ODBC 드라이버(psqlODBC) Windows Installer를 다운로드합니다. .zip 파일에서 파일을 추출하여 .msi 파일을 실행합니다.
 
-## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>PostgreSQL ODBC 드라이버 (psqlODBC) PostgreSQL에 연결
-ODBC 드라이버는 데이터 원본의 드롭 다운 목록에 나열 되지 않습니다. ODBC 드라이버를 연결 하려면 선택 하 여 시작 된 **.NET Framework Data Provider for ODBC** 데이터 원본으로 **데이터 원본을 선택** 또는 **대상 선택** 페이지. 이 공급자는 ODBC 드라이버 주위에서 래퍼로 역할을 합니다.
+## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>PostgreSQL ODBC 드라이버(psqlODBC)를 사용하여 PostgreSQL에 연결
+ODBC 드라이버는 데이터 원본의 드롭다운 목록에 나열되지 않습니다. ODBC 드라이버를 연결하려면 먼저 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 데이터 원본으로 **.NET Framework Data Provider for ODBC**를 선택합니다. 이 공급자는 ODBC 드라이버의 래퍼 역할을 합니다.
 
-다음은.NET Framework Data Provider for ODBC 선택한 후 볼 수 있는 제네릭 화면입니다.
+다음은 .NET Framework Data Provider for ODBC를 선택하는 즉시 표시되는 제네릭 화면입니다.
 
-![PostgreSQL 전에 odbc 연결](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
+![ODBC로 PostgreSQL에 연결 이전](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
-### <a name="options-to-specify-postgresql-odbc-driver"></a>(PostgreSQL ODBC 드라이버)를 지정 하는 옵션
+### <a name="options-to-specify-postgresql-odbc-driver"></a>지정 옵션(PostgreSQL ODBC 드라이버)
 
 > [!NOTE]
-> 이 데이터 공급자와 ODBC 드라이버에 대 한 연결 옵션 PostgreSQL 소스 또는 대상 인지 동일 합니다. 즉, 표시 되는 옵션은 둘 다에 동일한는 **데이터 원본을 선택** 및 **대상 선택** 마법사의 페이지입니다.
+> 이 데이터 공급자 및 ODBC 드라이버의 연결 옵션은 PostgreSQL이 원본이든 대상이든 관계없이 동일합니다. 즉, 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에 똑같은 옵션이 표시됩니다.
 
-PostgreSQL PostgreSQL ODBC 드라이버와 연결할 다음 설정 및 값을 포함 하는 연결 문자열을 조합 합니다. 전체 연결 문자열의 형식이 설정 목록 바로 뒤에.
+PostgreSQL ODBC 드라이버를 사용하여 PostgreSQL에 연결하려면 다음 설정 및 값을 포함하는 연결 문자열을 조합합니다. 전체 연결 문자열의 형식은 설정 목록 바로 뒤에 옵니다.
 
 > [!TIP]
-> 가장 적합 하는 연결 문자열을 어셈블하여 도움말을 봅니다. 연결 문자열을 제공 하는 대신 기존의 DSN (데이터 원본 이름)를 제공 합니다. 아니면를 새로 만듭니다. 이러한 옵션에 대 한 자세한 내용은 참조 하십시오. [ODBC 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)합니다.
+> 도움을 받아 연결 문자열을 적절하게 조합하세요. 또는 연결 문자열을 제공하는 대신 기존 DSN(데이터 원본 이름)을 제공하거나 새 DSN을 만듭니다. 이러한 옵션에 대한 자세한 내용은 [ODBC 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 
 **드라이버**  
-ODBC 드라이버의-하거나 이름 **PostgreSQL ODBC Driver(UNICODE)** 또는 **PostgreSQL ODBC Driver(ANSI)**합니다.
+ODBC 드라이버의 이름 - **PostgreSQL ODBC 드라이버(유니코드)**이거나 **PostgreSQL ODBC 드라이버(ANSI)**입니다.
 
 **Server**  
 PostgreSQL 서버의 이름입니다. 
 
 **포트**  
-PostgreSQL 서버에 연결 하는 데 사용할 포트입니다.
+PostgreSQL 서버에 연결하는 데 사용할 포트입니다.
 
 **데이터베이스**  
 PostgreSQL 데이터베이스의 이름입니다.
 
 **Uid** 및 **Pwd**   
-**Uid** (사용자 id) 및 **Pwd** 연결할 (암호).
+연결할 **Uid**(사용자 id) 및 **Pwd**(암호)입니다.
 
 ### <a name="connection-string-format"></a>연결 문자열 형식
-일반적인 연결 문자열의 형식은 다음과 같습니다. 
+다음은 일반적인 연결 문자열의 형식입니다. 
 
     ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
     ```
 
 ### <a name="enter-the-connection-string"></a>연결 문자열 입력
-에 대 한 연결 문자열을 입력의 **ConnectionString** 에 DSN 이름을 입력 하거나 필드는 **Dsn** 필드에 **데이터 원본을 선택** 또는 **대상 선택** 페이지. 연결 문자열을 입력 한 후 마법사는 문자열을 구문 분석 하 고 목록에서 개별 속성 및 해당 값을 표시 합니다.
+**데이터 원본 선택** 또는 **대상 선택** 페이지에서 **ConnectionString** 필드에 연결 문자열을 입력하거나 **Dsn** 필드에 DSN 이름을 입력합니다. 연결 문자열을 입력하면 마법사에서 문자열을 구문 분석하고 개별 속성과 해당 값을 목록에 표시합니다.
 
-다음 예제에서는이 연결 문자열을 사용합니다.
+다음 예제에서는 이 연결 문자열을 사용합니다.
 
     ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
     ```
 
-다음은 연결 문자열을 입력 한 후 표시 되는 화면입니다.
+다음은 연결 문자열을 입력한 후 표시되는 화면입니다.
 
-![ODBC와 PostgreSQL에 연결](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
+![ODBC로 PostgreSQL에 연결](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
 
-## <a name="other-data-providers-and-more-info"></a>다른 데이터 공급자 및 자세한 정보
-PostgreSQL 여기에 나열 되어 있지 않은 데이터 공급자와 연결 하는 방법에 대 한 정보를 참조 하십시오. [PostgreSQL 연결 문자열](https://www.connectionstrings.com/postgresql/)합니다. 또한이 제 3 자 사이트 데이터 공급자 및 연결 매개 변수가이 페이지에서 설명 하는 방법에 대 한 자세한 정보를 포함 합니다.
+## <a name="other-data-providers-and-more-info"></a>다른 데이터 공급자 및 추가 정보
+여기에 나열되지 않은 데이터 공급자를 사용하여 PostgreSQL에 연결하는 방법에 대한 자세한 내용은 [PostgreSQL 연결 문자열](https://www.connectionstrings.com/postgresql/)을 참조하세요. 또한 이러한 타사 사이트에는 이 페이지에서 설명하는 데이터 공급자 및 연결 매개 변수에 대한 자세한 정보가 포함되어 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 

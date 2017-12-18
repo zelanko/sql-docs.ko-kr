@@ -1,5 +1,5 @@
 ---
-title: "2 단원: SSIS를 사용 하 여 반복 추가 | Microsoft Docs"
+title: "2단원: SSIS를 사용하여 루핑 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 96194edec70f67e9db45265de11d735e09fead30
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>2단원: SSIS를 사용하여 루핑 추가
 [1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)에서는 단일 플랫 파일 원본에서 데이터를 추출하고 조회 변환을 사용하여 변환한 다음 **AdventureWorksDW2012** 샘플 데이터베이스의 **FactCurrency** 팩트 테이블로 로드한 패키지를 만들었습니다.  
@@ -78,4 +75,3 @@ Foreach 루프 컨테이너를 사용하면 패키지에서 지정한 열거자�
   
   
   
-

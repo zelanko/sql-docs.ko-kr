@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 서비스 (SSIS 서비스) | Microsoft Docs"
+title: "Integration Services 서비스(SSIS 서비스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,22 +24,21 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9c2a1063b982ab1f3b8203f76adc59e945da12b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 서비스(SSIS 서비스)
   이 섹션의 항목에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. 이 서비스는 Integration Services 패키지를 생성, 저장 및 실행하는 데 필요하지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 는 이전 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 버전과의 호환성을 위한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]서비스를 지원합니다.  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 프로젝트 배포 모델을 사용하여 **서버에 배포한 프로젝트의** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스에 개체, 설정 및 작업 데이터를 저장합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스 엔진의 인스턴스인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버는 데이터베이스를 호스팅합니다. 데이터베이스에 대한 자세한 내용은 [SSIS 카탈로그](../../integration-services/service/ssis-catalog.md)를 참조하세요. 에 프로젝트를 배포 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버 참조 [배포할 Integration Services (SSIS) 프로젝트 및 패키지](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)합니다.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 프로젝트 배포 모델을 사용하여 **서버에 배포한 프로젝트의** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스에 개체, 설정 및 작업 데이터를 저장합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스 엔진의 인스턴스인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버는 데이터베이스를 호스팅합니다. 데이터베이스에 대한 자세한 내용은 [SSIS 카탈로그](../../integration-services/service/ssis-catalog.md)를 참조하세요. 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포하는 방법에 대한 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
   
 ## <a name="management-capabilities"></a>관리 기능  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 관리를 위한 Windows 서비스입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서만 사용할 수 있습니다.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 09/27/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인 및 실행만 하려는 경우에는 필요하지 않습니다. 하지만 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 패키지를 나열하고 모니터링하려면 이 서비스가 필요합니다.  
 
-## <a name="manage-the-service"></a>서비스 관리
+## <a name="manage-the-service"></a>서버 관리
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 요소를 설치할 때 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스도 함께 설치됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 기본적으로 시작되며 서비스의 시작 유형은 자동으로 설정됩니다. 그러나 서비스를 사용하여 저장 및 실행 중인 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 패키지를 관리하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 도 설치해야 합니다.  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 09/27/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 이벤트를 Windows 이벤트 로그에 기록합니다. 서비스 이벤트는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 볼 수 있습니다. 또한 Windows 이벤트 뷰어를 사용하여 서비스 이벤트를 볼 수도 있습니다.  
   
-## <a name="set-the-properties-of-the-service"></a>서비스의 속성 설정
+## <a name="set-the-properties-of-the-service"></a>서비스 속성 설정
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 패키지를 관리하고 모니터링합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 처음 설치하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 시작되고 서비스의 시작 유형이 자동으로 설정됩니다.  
   
@@ -146,7 +144,7 @@ ms.lasthandoff: 09/27/2017
   
 7.  **파일** 메뉴에서 **끝내기** 를 클릭하여 **서비스** 스냅인을 닫습니다.  
 
-## <a name="grant-permissions-to-the-service"></a>서비스에 권한을 부여 합니다.
+## <a name="grant-permissions-to-the-service"></a>서비스에 사용 권한 부여
   이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하면 기본적으로 Users 그룹의 모든 사용자에게 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대한 액세스 권한이 부여되었지만 현재 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하면 사용자에게 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대한 액세스 권한이 부여되지 않습니다. 이 서비스에는 기본적으로 보안이 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 후 관리자가 서비스에 대한 액세스 권한을 부여해야 합니다.  
   
 ### <a name="to-grant-access-to-the-integration-services-service"></a>Integration Services 서비스에 대한 액세스 권한을 부여하려면  
@@ -175,7 +173,7 @@ ms.lasthandoff: 09/27/2017
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 개체 탐색기에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 대해 표시할 루트 폴더는 MSDB와 파일 시스템 폴더입니다.  
   
--   파일 시스템에 패키지 하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 관리 %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages에 합니다.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 관리하는 파일 시스템의 패키지는 %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages에 있습니다.  
   
  이 구성 파일은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 관리할 패키지가 들어 있는 msdb 데이터베이스도 지정합니다. 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 와 동시에 설치되는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]인스턴스의 msdb 데이터베이스에 있는 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 동시에 설치되지 않는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 기본 인스턴스에 있는 msdb 데이터베이스에 저장된 패키지를 관리하도록 구성됩니다.  
   
@@ -255,7 +253,7 @@ ms.lasthandoff: 09/27/2017
 ```  
   
 ### <a name="modify-the-configuration-file-location"></a>구성 파일 위치 수정  
- 레지스트리 키 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** 는 파일의 위치와 구성의 이름을 지정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 사용 합니다. 레지스트리 키의 기본값은 **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**합니다. 이 레지스트리의 값을 업데이트하여 구성 파일의 이름과 위치를 변경할 수 있습니다. 경로에 버전 번호 (SQL Server에 대 한 120 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130에 대 한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]등) SQL Server 버전에 따라 달라 집니다.
+ 레지스트리 키 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile**은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 사용하는 구성 파일의 위치와 이름을 지정합니다. 레지스트리 키의 기본값은 **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**입니다. 이 레지스트리의 값을 업데이트하여 구성 파일의 이름과 위치를 변경할 수 있습니다. 경로의 버전 번호(SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]의 경우 120, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 경우 130 등)는 SQL Server 버전에 따라 달라집니다.
   
 > [!CAUTION]  
 >  레지스트리 키를 잘못 편집하면 운영 체제를 다시 설치해야 하는 심각한 문제가 발생할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 레지스트리를 잘못 편집하여 발생하는 문제에 대한 해결을 보증하지 않습니다. 레지스트리를 편집하기 전에 중요한 데이터를 백업하십시오. 레지스트리를 백업, 복원 및 편집하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 [Microsoft Windows 레지스트리 설명](http://support.microsoft.com/kb/256986)을 참조하십시오.  
@@ -265,7 +263,7 @@ ms.lasthandoff: 09/27/2017
 ## <a name="connect-to-the-local-service"></a>로컬 서비스에 연결
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 연결하려면 먼저 관리자가 해당 서비스에 대한 액세스 권한을 부여해야 합니다. 
   
-### <a name="to-connect-to-the-integration-services-service"></a>Integration Services 서비스에 연결 하려면  
+### <a name="to-connect-to-the-integration-services-service"></a>Integration Services 서버에 연결하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
@@ -296,7 +294,7 @@ ms.lasthandoff: 09/27/2017
   
 3.  **서버 유형** 목록에서 **Integration Services** 를 선택합니다.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 입력란에 **서버의 이름을** 입력합니다.  
+4.  **서버 이름** 입력란에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버의 이름을 입력합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 인스턴스에 국한되지 않습니다. Integration Services 서버가 실행 중인 컴퓨터의 이름을 사용하여 서비스에 연결합니다.  
@@ -361,20 +359,20 @@ SQL Server 서비스 계정에 **모든 서비스에 대한 위임용으로 이 
  
 ## <a name="configure-the-firewall"></a>방화벽 구성
   
- Windows 방화벽 시스템을 사용 하면 네트워크 연결을 통해 컴퓨터 리소스에 대 한 무단된 액세스를 방지 합니다. 이 방화벽을 통해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 액세스하려면 액세스 가능하도록 방화벽을 구성해야 합니다.  
+ Windows 방화벽 시스템을 사용하면 네트워크 연결을 통해 이루어지는 컴퓨터 리소스에 대한 무단 액세스를 차단할 수 있습니다. 이 방화벽을 통해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 액세스하려면 액세스 가능하도록 방화벽을 구성해야 합니다.  
   
 > [!IMPORTANT]  
 >  원격 서버에 저장된 패키지를 관리하는 경우 해당 원격 서버에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 인스턴스에 연결할 필요가 없습니다. 대신 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 원격 서버에 저장된 패키지를 표시하도록 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 서비스에 대한 구성 파일을 편집합니다.
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에는 DCOM 프로토콜이 사용됩니다. 방화벽을 통한 DCOM 프로토콜 작동 방법은 MSDN Library에서 "[방화벽과 함께 분산 COM 사용(Using Distributed COM with Firewalls)](http://go.microsoft.com/fwlink/?LinkId=12490)" 문서를 참조하십시오.  
   
- 사용할 수 있는 방화벽 시스템은 여러 가지가 있습니다. Windows 방화벽 이외의 방화벽을 실행 하는 경우 사용 중인 시스템에만 적용 되는 정보에 대 한 해당 방화벽 설명서를 참조 하십시오.  
+ 사용할 수 있는 방화벽 시스템은 여러 가지가 있습니다. Windows 방화벽 이외의 다른 방화벽을 사용하는 경우 사용 중인 시스템별 정보를 보려면 해당 방화벽 설명서를 참조하십시오.  
   
  방화벽에서 응용 프로그램 수준의 필터링이 지원되는 경우 Windows에서 제공하는 사용자 인터페이스를 사용하여 프로그램 및 서비스와 같이 방화벽을 통해 허용되는 예외를 지정할 수 있습니다. 그렇지 않으면 제한된 TCP 포트 집합을 사용하도록 DCOM을 구성해야 합니다. 이전에 제공된 Microsoft 웹 사이트 링크에는 사용할 TCP 포트 지정 방법에 대한 정보가 포함됩니다.  
   
  Integration Services 서비스에는 포트 135가 사용되며 이 포트는 변경할 수 없습니다. SCM(서비스 제어 관리자)에 액세스하려면 TCP 포트 135를 열어야 합니다. SCM은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 시작 및 중지와 실행 중인 서비스에 대한 제어 요청 전송과 같은 태스크를 수행합니다.  
   
- 다음 섹션의 정보는 Windows 방화벽에만 해당 합니다. 명령 프롬프트에서 명령을 실행 하거나 Windows 방화벽 대화 상자에서 속성을 설정 하 여 Windows 방화벽 시스템을 구성할 수 있습니다.  
+ 다음 섹션의 정보는 Windows 방화벽에만 해당됩니다. 명령 프롬프트에서 명령을 실행하거나 Windows 방화벽 대화 상자에서 속성을 설정하여 Windows 방화벽 시스템을 구성할 수 있습니다.  
   
  기본 Windows 방화벽 설정 방법과 데이터베이스 엔진, Analysis Services, Reporting Services 및 Integration Services에 영향을 주는 TCP 포트에 대한 설명은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
@@ -400,7 +398,7 @@ SQL Server 서비스 계정에 **모든 서비스에 대한 위임용으로 이 
   
  다음 절차에서는 Windows 사용자 인터페이스를 사용하여 TCP 포트 135를 열고, 예외 목록에 MsDtsSrvr.exe를 추가하고, 방화벽에 대한 차단 해제 범위를 지정할 수 있습니다.  
   
-#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>Windows 방화벽 대화 상자를 사용 하 여 방화벽을 구성 하려면  
+#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>Windows 방화벽 대화 상자를 사용하여 방화벽을 구성하려면  
   
 1.  제어판에서 **Windows 방화벽**을 두 번 클릭합니다.  
   
@@ -424,5 +422,4 @@ SQL Server 서비스 계정에 **모든 서비스에 대한 위임용으로 이 
 9. **Windows 방화벽** 대화 상자를 닫으려면 **확인**을 클릭합니다.  
   
     > [!NOTE]  
-    >  이 절차에서는 Windows 방화벽을 구성 하려면 다음을 사용 합니다.는 **Windows 방화벽** 제어판 항목입니다. **Windows 방화벽** 항목은 현재 네트워크 위치 프로필에 대한 방화벽만 구성합니다. 그러나 사용 하 여 Windows 방화벽도 구성할 수는 **netsh** 명령줄 도구 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 명명 된 고급 보안이 포함 된 Windows 방화벽 MMC (Management Console) 스냅인입니다. 이러한 도구에 대한 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
-
+    >  Windows 방화벽을 구성하려면 이 절차에서 제어판의 **Windows 방화벽** 항목을 사용합니다. **Windows 방화벽** 항목은 현재 네트워크 위치 프로필에 대한 방화벽만 구성합니다. 그러나 **netsh** 명령줄 도구 또는 고급 보안이 설정된 Windows 방화벽 MMC([!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) 스냅인을 사용하여 Windows 방화벽을 구성할 수도 있습니다. 이러한 도구에 대한 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  

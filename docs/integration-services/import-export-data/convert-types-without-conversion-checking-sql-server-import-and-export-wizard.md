@@ -1,5 +1,5 @@
 ---
-title: "변환 형식 (SQL Server 가져오기 내보내기 마법사)를 확인 하는 중 변환 작업 없이 | Microsoft Docs"
+title: "변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기-내보내기 마법사) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.nomappingfile.f1
+f1_keywords: sql13.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d4b3bfd3d61282ba7a4d7363ef02b05c5c23ac20
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c912d48ddf69360d4ac02549a0556fed85f5b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기 및 내보내기 마법사)
   복사할 기존 테이블 및 뷰를 선택하거나 제공한 쿼리를 검토한 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **변환 검사를 수행하지 않고 형식 변환**이 표시될 수 있습니다. 마법사에서는 원본과 대상 간에 데이터 형식을 매핑하는 데 필요한 하나 이상의 데이터 형식 변환 및 매핑 파일을 찾을 수 없는 경우 이 페이지를 표시합니다. 이 페이지에는 누락된 항목을 파악하는 데 도움이 되는 정보가 포함됩니다.
@@ -47,4 +44,3 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>참고 항목
 [SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-

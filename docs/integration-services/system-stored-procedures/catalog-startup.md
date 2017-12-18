@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3a8c89be0541be1861f45240b891d349019a8935
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b80919c3a754913ff15a5eed9ae37b39044977a0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartup"></a>catalog.startup
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 09/26/2017
   
  저장 프로시저는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서버 인스턴스가 다운될 때 실행 중이었던 패키지의 상태를 수정합니다.  
   
- 저장된 프로시저를 사용 하도록 설정 될 때마다 자동으로 실행 하는 옵션도 있습니다는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서버 인스턴스를 다시 시작을 선택 하 여는 **Integration Services의 자동 실행 저장 프로시저SQLServer시작** 옵션에 **카탈로그 만들기** 대화 상자.  
+ **카탈로그 만들기** 대화 상자에서 **SQL Server 시작 시 Integration Services 저장 프로시저 자동 실행** 옵션을 선택하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서버 인스턴스를 다시 시작할 때마다 저장 프로시저를 자동으로 실행하도록 설정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,9 +49,8 @@ catalog.startup
   
 -   실행 인스턴스에 대한 READ 및 MODIFY 권한, 프로젝트에 대한 READ 및 EXECUTE 권한, 해당되는 경우 참조된 환경에 대한 READ 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
   
-

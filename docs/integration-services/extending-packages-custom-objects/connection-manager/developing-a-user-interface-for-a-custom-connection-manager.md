@@ -1,5 +1,5 @@
 ---
-title: "사용자 인터페이스 사용자 지정 연결 관리자에 대 한 개발 | Microsoft Docs"
+title: "사용자 지정 연결 관리자의 사용자 인터페이스 개발 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c66c5410f38532c80a631cb190f248f7c5377bd5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 267313c3cc0c6d12f290088832ad908bf53dd980
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>사용자 지정 연결 관리자의 사용자 인터페이스 개발
   기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공한 후 연결 관리자의 사용자 지정 사용자 인터페이스를 만들 수 있습니다. 사용자 지정 사용자 인터페이스를 만들지 않은 경우 사용자는 속성 창에서만 연결 관리자를 구성할 수 있습니다.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/03/2017
  사용자 지정 사용자 인터페이스 프로젝트 또는 어셈블리에는 일반적으로 두 개의 클래스가 포함됩니다. 하나는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>를 구현하는 클래스이고 다른 하나는 이 클래스에서 사용자로부터 정보를 수집하기 위해 표시하는 Windows Form입니다.  
   
 > [!IMPORTANT]  
->  사용자 지정 사용자 인터페이스 서명 및 빌드하고 전역 어셈블리 캐시에서에 설명 된 대로 설치 후 [사용자 지정 연결 관리자 코딩](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)에서이 클래스의 정규화 된 이름을 제공 해야는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 의 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>합니다.  
+>  [사용자 지정 연결 관리자 코딩](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)에 설명된 대로 사용자 지정 사용자 인터페이스를 서명 및 빌드하고 전역 어셈블리 캐시에 설치한 후에는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 속성에서 이 클래스의 정규화된 이름을 지정해야 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에 기본 제공된 대부분의 태스크, 원본 및 대상은 특정 유형의 기본 제공 연결 관리자와만 사용할 수 있습니다. 따라서 이러한 예제를 기본 제공 태스크 및 구성 요소와 함께 테스트할 수 없습니다.  
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 >  사용자가 연결 관리자의 인스턴스를 삭제할 때 정리 작업을 수행할 필요가 없으면 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A> 메서드에 대한 코드를 작성하지 않아도 됩니다.  
   
 ### <a name="initializing-the-user-interface"></a>사용자 인터페이스 초기화  
- <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> 메서드에서 디자이너는 사용자 인터페이스 클래스에서 연결 관리자의 속성을 수정할 수 있도록 구성할 연결 관리자에 대한 참조를 제공합니다. 코드를 연결 managerfor에 대 한 참조를 캐시 해야 다음 코드에 나와 있는 것 처럼 나중에 사용 합니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> 메서드에서 디자이너는 사용자 인터페이스 클래스에서 연결 관리자의 속성을 수정할 수 있도록 구성할 연결 관리자에 대한 참조를 제공합니다. 다음 코드에서 보여 주는 것과 같이 코드에서는 나중에 사용할 수 있도록 연결 관리자에 대한 참조를 캐시해야 합니다.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As Microsoft.SqlServer.Dts.Runtime.ConnectionManager, ByVal serviceProvider As System.IServiceProvider) Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize  
@@ -170,7 +167,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 인터페이스의 메서드를 구현하는 사용자 인터페이스 클래스를 만든 후에는 사용자가 연결 관리자의 속성을 구성할 수 있는 Windows Form을 만들어야 합니다.  
   
 ### <a name="initializing-the-user-interface-form"></a>사용자 인터페이스 폼 초기화  
- 편집용 사용자 지정 폼을 표시하면 편집할 연결 관리자에 대한 참조를 전달할 수 있습니다. 폼 클래스에 대 한 사용자 지정 생성자를 사용 하 여 하거나 직접 만들어이 참조를 전달할 수 있습니다 **초기화** 메서드를 다음과 같이 합니다.  
+ 편집용 사용자 지정 폼을 표시하면 편집할 연결 관리자에 대한 참조를 전달할 수 있습니다. 폼 클래스의 사용자 지정 생성자를 사용하거나 여기에 표시된 대로 **Initialize** 메서드를 만들어 이 참조를 전달할 수 있습니다.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  
@@ -299,4 +296,3 @@ private void ConfigureControlsFromConnectionManager()
  [사용자 지정 연결 관리자 코딩](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   
   
-

@@ -1,12 +1,14 @@
 ---
-title: "실행된 Integration Services (SSIS) 패키지 | Microsoft Docs"
+title: "Integration Services(SSIS) 패키지 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,21 +23,21 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f9c69107d378b8a49c02cfebd04d09e76f5c6e8a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fa8080adf06263de7a3055d790b9c5fe89633e20
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지 실행
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하려면 해당 패키지가 저장된 위치에 따라 여러 도구 중 하나를 사용할 수 있습니다. 도구는 다음 표에 나열되어 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 패키지를 저장하려면 프로젝트 배포 모델을 사용하여 프로젝트를 서버에 배포합니다. 자세한 내용은 참조 [배포할 Integration Services (SSIS) 프로젝트 및 패키지](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 패키지를 저장하려면 프로젝트 배포 모델을 사용하여 프로젝트를 서버에 배포합니다. 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
   
  SSIS 패키지 저장소, msdb 데이터베이스 또는 파일 시스템에 패키지를 저장하려면 패키지 배포 모델을 사용합니다. 자세한 내용은 [레거시 패키지 배포&#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
@@ -43,14 +45,14 @@ ms.lasthandoff: 08/03/2017
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**SQL Server Data Tools**|아니오|아니오<br /><br /> 그러나 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소(msdb 데이터베이스 포함)에서 프로젝트에 기존 패키지를 추가할 수 있습니다. 이러한 방식으로 프로젝트에 기존 패키지를 추가하면 파일 시스템에 패키지의 로컬 복사본을 만들 수 있습니다.|예|  
 |**SQL Server Management Studio(Integration Services 서버를 호스트하는 데이터베이스 엔진의 인스턴스에 연결된 경우)**<br /><br /> 자세한 내용은 [Execute Package Dialog Box](#execute_package_dialog)를 참조하세요.|예|아니오<br /><br /> 그러나 이러한 위치에서 서버에 패키지를 가져올 수 있습니다.|아니오<br /><br /> 그러나 파일 시스템에서 서버에 패키지를 가져올 수 있습니다.|
-|**SQL Server Management Studio(규모 확장 마스터로 사용되는 Integration Services 서버를 호스트하는 데이터베이스 엔진의 인스턴스에 연결된 경우)**<br /><br /> 자세한 내용은 [규모 확장 시 패키지 실행](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)을 참조하세요.|예|아니요|아니오|
+|**SQL Server Management Studio(규모 확장 마스터로 사용되는 Integration Services 서버를 호스트하는 데이터베이스 엔진의 인스턴스에 연결된 경우)**<br /><br /> 자세한 내용은 [규모 확장 시 패키지 실행](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)을 참조하세요.|예|아니오|아니오|
 |**SQL Server Management Studio(SSIS 패키지 저장소를 관리하는 Integration Services 서비스에 연결된 경우)**|아니오|예|아니오<br /><br /> 그러나 파일 시스템에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소로 패키지를 가져올 수 있습니다.|  
-|**dtexec**<br /><br /> 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하세요.|예|사용자 계정 컨트롤|예|  
-|**dtexecui**<br /><br /> 자세한 내용은 [패키지 실행 유틸리티&#40;DtExecUI&#41; UI 참조](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)를 참조하세요.|아니오|사용자 계정 컨트롤|예|  
-|**SQL Server 에이전트**<br /><br /> 패키지를 예약하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 사용합니다.<br /><br /> 자세한 내용은 [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.|예|사용자 계정 컨트롤|예|  
-|**기본 제공 저장 프로시저**<br /><br /> 자세한 내용은 [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)을 참조하세요.|예|아니요|아니요|  
-|**형식 및 멤버를 사용 하 여 관리 되는 API를는** <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임 스페이스|예|아니요|아니요|  
-|**형식 및 멤버를 사용 하 여 관리 되는 API를는** <xref:Microsoft.SqlServer.Dts.Runtime> 네임 스페이스|현재는 아님|예|예|  
+|**dtexec**<br /><br /> 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하세요.|예|예|예|  
+|**dtexecui**<br /><br /> 자세한 내용은 [패키지 실행 유틸리티&#40;DtExecUI&#41; UI 참조](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)를 참조하세요.|아니오|예|예|  
+|**SQL Server 에이전트**<br /><br /> 패키지를 예약하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 사용합니다.<br /><br /> 자세한 내용은 [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.|예|예|예|  
+|**기본 제공 저장 프로시저**<br /><br /> 자세한 내용은 [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)을 참조하세요.|예|아니오|아니요|  
+| **<xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|예|아니오|아니요|  
+| **<xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|현재는 아님|예|예|  
 
 ## <a name="execution-and-logging"></a>실행 및 로깅  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 대한 로깅을 활성화할 수 있으며 로그 파일에서 런타임 정보를 확인할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
@@ -80,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  솔루션 탐색기에서 실행할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 폴더를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-2.  에  **\<프로젝트 이름 > 속성 페이지** 대화 상자를 클릭 **빌드**합니다.  
+2.  **\<프로젝트 이름> 속성 페이지** 대화 상자에서 **빌드**를 클릭합니다.  
   
 3.  OutputPath 속성의 값을 업데이트하여 디자인 타임 배포에 사용할 폴더를 지정하고 **확인**을 클릭합니다.  
 
@@ -171,4 +173,3 @@ ms.lasthandoff: 08/03/2017
 [SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   
   
-

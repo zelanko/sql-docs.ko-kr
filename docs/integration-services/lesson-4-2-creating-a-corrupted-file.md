@@ -1,5 +1,5 @@
 ---
-title: "2 단계: 손상된 된 파일 만들기 | Microsoft Docs"
+title: "2단계: 손상된 파일 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7760a481839ec7bd33aeeefd4b066f3d7750020d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 89cd8b22732914664b8fc870334c3994adc15373
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-2---creating-a-corrupted-file"></a>단원 4-2-손상된 된 파일 만들기
+# <a name="lesson-4-2---creating-a-corrupted-file"></a>4-2단원 - 손상된 파일 만들기
 변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  
   
 이 태스크에서는 기존 예제 플랫 파일의 복사본을 만듭니다. 그런 다음 메모장에서 해당 파일을 열고 변환 조회를 수행하는 동안 일치 항목을 생성하지 못하도록 **CurrencyID** 열을 편집합니다. 이 새 파일을 처리하면 조회 실패로 Currency Key Lookup 변환이 실패하며 따라서 패키지의 나머지 부분도 실패합니다. 손상된 예제 파일을 만든 다음에는 패키지를 실행하여 패키지 오류를 봅니다.  
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

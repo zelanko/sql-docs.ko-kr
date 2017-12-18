@@ -1,5 +1,5 @@
 ---
-title: "catalog.object_versions (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.object_versions(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3ea7c5ae054a002b9bb4f150e60f323ae03d702a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b50e91381182bf2462c8f784a71e811f3bb8efe9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +34,10 @@ ms.lasthandoff: 09/26/2017
 |object_id|**bigint**|개체의 고유 ID입니다.|  
 |object_type|**smallint**|개체의 유형입니다. 프로젝트의 경우 값 `20`이 표시됩니다.|  
 |object_name|**sysname(nvarchar(128))**|개체 이름입니다.|  
-|description|**nvarchar (1024)**|프로젝트에 대한 설명입니다.|  
-|created_by|**nvarchar (128)**|카탈로그에 개체를 추가한 사용자의 이름입니다.|  
+|description|**nvarchar(1024)**|프로젝트에 대한 설명입니다.|  
+|created_by|**nvarchar(128)**|카탈로그에 개체를 추가한 사용자의 이름입니다.|  
 |created_time|**datetimeoffset**|개체가 카탈로그에 추가된 날짜 및 시간입니다.|  
-|restored_by|**nvarchar (128)**|개체를 복원한 사용자의 이름입니다.|  
+|restored_by|**nvarchar(128)**|개체를 복원한 사용자의 이름입니다.|  
 |last_restored_time|**datetimeoffset**|개체가 마지막으로 복원된 날짜 및 시간입니다.|  
   
 ## <a name="remarks"></a>주의  
@@ -50,12 +48,11 @@ ms.lasthandoff: 09/26/2017
   
 -   개체에 대한 READ 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격이 **sysadmin** 서버 역할입니다.  
+-   **sysadmin** 서버 역할의 멤버 자격  
   
 > [!NOTE]  
 >  행 수준 보안이 적용됩니다. 따라서 볼 수 있는 권한이 있는 행만 표시됩니다.  
   
   
-

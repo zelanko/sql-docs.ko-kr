@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- sql13.dts.designer.sapbw.f1
+f1_keywords: sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51b1f3bfd75179ec1a66d31d167a1827e8bf8d5c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: af4b72d2ec634d8ae71a607c6a7c4d6b17254599
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 도움말
   이 섹션에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW의 세 가지 구성 요소에 대한 F1 도움말 항목이 포함되어 있습니다. 마법사 페이지와 대화 상자에서 F1 키를 누르거나 도움말을 클릭하여 사용자 인터페이스에서 이러한 항목을 볼 수도 있습니다.  
@@ -41,13 +38,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 원본 F1 도움말  
   
--   [SAP BW 원본 편집기 &#40; 연결 관리자 페이지 &#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW 원본 편집기 &#40; 열 페이지 &#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [SAP BW 원본 편집기&#40;열 페이지&#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW 원본 편집기 &#40; 오류 출력 페이지 &#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW 원본 편집기&#40;오류 출력 페이지&#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW 원본 편집기 &#40; 고급 페이지 &#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW 원본 편집기&#40;고급 페이지&#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [RFC 대상 조회](../integration-services/data-flow/look-up-rfc-destination.md)  
   
@@ -59,13 +56,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-destination-f1-help"></a>SAP BW 대상 F1 도움말  
   
--   [SAP BW 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 대상 편집기 &#40; 매핑 페이지 &#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 대상 편집기&#40;매핑 페이지&#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 대상 편집기 &#40; 오류 출력 페이지 &#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 대상 편집기&#40;오류 출력 페이지&#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 대상 편집기 &#40; 고급 페이지 &#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 대상 편집기&#40;고급 페이지&#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
 -   [InfoPackage 조회](../integration-services/data-flow/look-up-infopackage.md)  
   
@@ -87,4 +84,3 @@ ms.lasthandoff: 08/03/2017
  [Microsoft Connector for SAP BW 구성 요소](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

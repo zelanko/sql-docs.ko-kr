@@ -1,5 +1,5 @@
 ---
-title: "유효성을 검사 하는 데이터 흐름 구성 요소 | Microsoft Docs"
+title: "데이터 흐름 구성 요소 유효성 검사 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 937d904f7139e03655177b4544d573da7cc35e14
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c3953a6c1fbf676d82b3057df2eb9a61f9cc6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="validating-a-data-flow-component"></a>데이터 흐름 구성 요소의 유효성 검사
   <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 기본 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드는 올바르게 구성되지 않은 구성 요소가 실행되는 것을 방지하기 위해 제공됩니다. 이 메서드를 사용하여 구성 요소에 입력 및 출력 개체 수가 필요한 만큼 있는지, 구성 요소의 사용자 지정 속성 값이 허용되는 값인지, 필요한 경우 연결이 지정되어 있는지를 확인할 수 있습니다. 또한 이 메서드를 사용하여 입력 및 출력 컬렉션의 열 데이터 형식이 올바른지와 각 열의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>이 해당 구성 요소에 적절하게 설정되어 있는지 확인할 수 있습니다. 기본 클래스 구현은 유효성 검사 프로세스에서 구성 요소의 입력 열 컬렉션을 검사하고 컬렉션의 각 열이 업스트림 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100>에 있는 열을 참조하는지 확인하는 데 유용합니다.  
@@ -48,9 +45,9 @@ ms.lasthandoff: 08/03/2017
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> 값은 디자이너에서 구성 요소를 편집하는 방법으로는 해결할 수 없는 오류가 구성 요소에 있음을 나타냅니다. 이 오류는 일반적으로 사용자 지정 속성 또는 필요한 연결이 지정되지 않았거나 올바르게 설정되지 않은 경우에 발생합니다.  
   
- 최종 오류 값은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>입니다. 이 값은 패키지 XML을 편집하거나 개체 모델을 사용하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 속성을 직접 수정한 경우에만 발생하는 오류를 구성 요소에서 발견했음을 나타냅니다. 이러한 종류의 오류는 예를 들어 구성 요소에서 입력을 하나만 추가했는데 유효성 검사 과정에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>에 둘 이상의 입력이 있음을 발견한 경우에 발생합니다. 이 생성 하는 오류 반환 값만 사용 하 여 구성 요소를 다시 설정 하 여 복구할 수는 **재설정** 단추는 **고급 편집기** 대화 상자.  
+ 최종 오류 값은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>입니다. 이 값은 패키지 XML을 편집하거나 개체 모델을 사용하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 속성을 직접 수정한 경우에만 발생하는 오류를 구성 요소에서 발견했음을 나타냅니다. 이러한 종류의 오류는 예를 들어 구성 요소에서 입력을 하나만 추가했는데 유효성 검사 과정에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>에 둘 이상의 입력이 있음을 발견한 경우에 발생합니다. 이 반환 값을 생성하는 오류는 **고급 편집기** 대화 상자에서 **다시 설정** 단추를 사용하여 구성 요소를 다시 설정하는 방법으로만 복구할 수 있습니다.  
   
- 구성 요소에서는 오류 값을 반환할 뿐 아니라 유효성 검사 도중 경고 또는 오류를 게시하여 피드백을 제공하기도 합니다. 이 메커니즘은 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 메서드에서 제공합니다. 이러한 이벤트에 게시 된 이러한 메서드를 호출 하는 경우는 **오류 목록** 의 창 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]합니다. 그런 다음 구성 요소 개발자는 발생한 오류와 적절한 경우 이를 수정하는 방법에 대한 직접적인 피드백을 사용자에게 제공할 수 있습니다.  
+ 구성 요소에서는 오류 값을 반환할 뿐 아니라 유효성 검사 도중 경고 또는 오류를 게시하여 피드백을 제공하기도 합니다. 이 메커니즘은 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 메서드에서 제공합니다. 이러한 메서드가 호출되면 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 **오류 목록** 창에 해당 이벤트가 게시됩니다. 그런 다음 구성 요소 개발자는 발생한 오류와 적절한 경우 이를 수정하는 방법에 대한 직접적인 피드백을 사용자에게 제공할 수 있습니다.  
   
  다음 코드 예에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>의 재정의된 구현을 보여 줍니다.  
   
@@ -199,4 +196,3 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-

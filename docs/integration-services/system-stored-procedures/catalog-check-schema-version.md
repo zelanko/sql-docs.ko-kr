@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 56eacb6ed209f34f65ae406fe4dd520284b79e5b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ac266609952f0e2995dde7a8f7882bbeb50a822c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +39,8 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @use32bitruntime=] *use32bitruntime*  
- 매개 변수가로 설정 되 면 **True**, 32 비트 버전의 dtexec가 호출 됩니다. *use32bitruntime* 는 **Bool**합니다.  
+ [ @use32bitruntime= ] *use32bitruntime*  
+ 매개 변수를 **True**로 설정하면 32비트 버전의 dtexec가 호출됩니다. *use32bitruntime*은 **Bool**입니다.  
   
 ## <a name="result-set"></a>결과 집합  
  없음  
@@ -50,7 +48,6 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한이 필요합니다.  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할입니다.  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
   
-

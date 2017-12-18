@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20f2c882a78f5e60931b0152d5877898e1972d0a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8e561e94e3dee033941c5defade34d28b1ac89c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +38,20 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @execution_id =] *execution_id*  
- 실행 인스턴스의 고유 식별자입니다. *execution_id* 은 **bigint**합니다.  
+ [ @execution_id = ] *execution_id*  
+ 실행 인스턴스의 고유 식별자입니다. *execution_id*는 **bigint**입니다.  
   
- [ @property_path =] *property_path*  
- 패키지의 속성에 대한 경로입니다. *property_path* 은 **nvarchar (4000)**합니다.  
+ [ @property_path = ] *property_path*  
+ 패키지의 속성에 대한 경로입니다. *property_path*는 **nvarchar(4000)**입니다.  
   
- [ @property_value =] *property_value*  
- 속성에 할당할 재정의 값입니다. *property_value* 은 **nvarchar (max)**합니다.  
+ [ @property_value = ] *property_value*  
+ 속성에 할당할 재정의 값입니다. *property_value*는 **nvarchar(max)**입니다.  
   
- [ @sensitive =] *중요 한*  
- 값이 1이면 속성이 중요하며 저장될 때 암호화됩니다. 값이 0이면 속성이 중요하지 않으며 값이 일반 텍스트로 저장됩니다. *중요 한* 인수가 **비트**합니다.  
+ [ @sensitive = ] *sensitive*  
+ 값이 1이면 속성이 중요하며 저장될 때 암호화됩니다. 값이 0이면 속성이 중요하지 않으며 값이 일반 텍스트로 저장됩니다. *sensitive* 인수는 **bit**입니다.  
   
 ## <a name="remarks"></a>주의  
- 이 절차와 동일한 기능을 수행는 **속성 재정의** 섹션의 **고급** 탭은 **패키지 실행** 대화 상자. 속성에 대 한 경로에서 파생 되는 **패키지 경로** 패키지 태스크의 속성입니다.  
+ 이 프로시저는 **패키지 실행** 대화 상자의 **고급** 탭에 있는 **속성 재정의** 섹션과 동일한 기능을 수행합니다. 속성에 대한 경로는 패키지 테스트의 **패키지 경로** 속성에서 파생됩니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
@@ -76,4 +74,3 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [catalog.set_execution_parameter_value&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   
-
