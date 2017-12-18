@@ -1,5 +1,5 @@
 ---
-title: "2 단계: 추가 하 고 플랫 파일 연결 관리자를 구성 | Microsoft Docs"
+title: "2단계: 플랫 파일 연결 관리자 추가 및 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0b3ebf32ebaa03f1dbb1aa1c52234b56fa8de16
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>단원 1-2-플랫 파일 연결 관리자 추가 및 구성
+# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>1-2단원: 플랫 파일 연결 관리자 추가 및 구성
 이 태스크에서는 플랫 파일 연결 관리자를 방금 작성한 패키지에 추가합니다. 플랫 파일 연결 관리자를 통해 패키지가 플랫 파일에서 데이터를 추출할 수 있습니다. 플랫 파일 연결 관리자를 사용하여 패키지가 플랫 파일에서 데이터를 추출할 때 적용할 열 구분 기호를 포함한 파일 형식, 파일 이름과 위치 및 로캘과 코드 페이지를 지정할 수 있습니다. 또한 개별 열의 데이터 형식을 수동으로 지정하거나 **열 유형 제안** 대화 상자를 사용하여 추출된 데이터 열을 자동으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 데이터 형식에 매핑할 수 있습니다.  
   
 작업할 파일 형식마다 새 플랫 파일 연결 관리자를 만들어야 합니다. 이 자습서에서는 데이터 형식이 정확히 일치하는 여러 플랫 파일에서 데이터를 추출하므로 패키지에 하나의 플랫 파일 연결 관리자만 추가하고 구성해야 합니다.  
@@ -117,4 +114,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

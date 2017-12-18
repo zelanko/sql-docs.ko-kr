@@ -1,5 +1,5 @@
 ---
-title: "검사점을 사용 하 여 패키지 다시 시작 | Microsoft Docs"
+title: "검사점을 사용하여 패키지 다시 시작 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c12ab9b92aa37b0e60f699fbec07e13c97cdbddc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 전체 패키지를 다시 실행하지 않고 오류 발생 시점에서 실패한 패키지를 다시 시작할 수 있습니다. 패키지가 검사점을 사용하도록 구성된 경우 패키지 실행에 대한 정보는 검사점 파일에 기록됩니다. 실패한 패키지가 다시 실행될 때 검사점 파일은 오류 발생 지점에서 패키지를 다시 시작하는 데 사용됩니다. 패키지가 성공적으로 실행된 경우 검사점 파일은 삭제되고 다음에 패키지가 실행될 때 다시 만들어집니다.  
@@ -123,4 +121,3 @@ ms.lasthandoff: 08/03/2017
 -   social.technet.microsoft.com의 기술 문서 - [장애 조치(Failover) 또는 실패 이후 SSIS 패키지 자동 다시 시작](http://go.microsoft.com/fwlink/?LinkId=200407)  
   
 -   support.microsoft.com의 고객 지원 문서 - [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](http://go.microsoft.com/fwlink/?LinkId=241633)  
-

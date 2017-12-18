@@ -1,5 +1,5 @@
 ---
-title: "4 단계: 6 단원 패키지를 배포 하 | Microsoft Docs"
+title: "4단계: 6단원 패키지 배포 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d9be296088cf3f455f8790ff013ab0c1df14b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 35970f8d14fd44ec9b1e11aec91ed11ea439a648
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>6-4-6 단원 패키지를 배포 단원
+# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>6-4단원 - 6단원 패키지 배포
 패키지를 배포하려면 SQL Server 인스턴스의 Integration Services에서 SSISDB 카탈로그에 패키지를 추가해야 합니다. 이 단원에서는 6 단원 패키지를 SSISDB 카탈로그에 추가하고, 매개 변수를 설정하 고 패키지를 실행합니다. 이 단원에서 SQL Server Management Studio를 사용하여 SSISDB 카탈로그에 6 단원 패키지를 추가하고 패키지를 배포합니다. 패키지를 배포한 후 새 위치를 가리키도록 패키지를 수정한 다음 매개 변수를 실행합니다.  
   
 이 단원에서는 다음을 수행합니다.  
@@ -130,4 +127,3 @@ Integration Services 프로젝트 변환 마법사를 닫으면 SSIS가 Integrat
   
   
   
-

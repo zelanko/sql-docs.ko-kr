@@ -1,5 +1,5 @@
 ---
-title: "catalog.grant_permission (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.grant_permission(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 5f9bb38521631bcc60d39fba747f17b86183545d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +41,28 @@ catalog.grant_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @object_type =] *object_type*  
- 보안 개체의 유형입니다. 보안 개체 유형에 폴더 (`1`), 프로젝트 (`2`), 환경 (`3`), 및 작업 (`4`). *object_type* 은 **smallint***합니다.*  
+ [ @object_type = ] *object_type*  
+ 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint***입니다.*  
   
- [ @object_id =] *object_id*  
- 보안 개체의 고유 식별자(ID)입니다. *object_id* 은 **bigint**합니다.  
+ [ @object_id = ] *object_id*  
+ 보안 개체의 고유 식별자(ID)입니다. *object_id*는 **bigint**입니다.  
   
- [ @principal_id =] *principal_id*  
- 사용 권한을 허용할 보안 주체의 ID입니다. *principal_id* 은 **int**합니다.  
+ [ @principal_id = ] *principal_id*  
+ 사용 권한을 허용할 보안 주체의 ID입니다. *principal_id*는 **int**입니다.  
   
- [ @permission_type =] *permission_type*  
- 허용할 사용 권한의 유형입니다. *permission_type* 은 **smallint**합니다.  
+ [ @permission_type = ] *permission_type*  
+ 허용할 사용 권한의 유형입니다. *permission_type*은 **smallint**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공)  
   
- 1 (object_class 잘못 되었습니다.)  
+ 1(object_class가 유효하지 않습니다.)  
   
- 2 (object_id 존재 하지 않음)  
+ 2(object_id가 없습니다.)  
   
- 3 (보안 주체가 존재 하지 않음)  
+ 3(보안 주체가 없습니다.)  
   
- 4 (권한이 잘못 되었습니다.)  
+ 4 (사용 권한이 잘못되었습니다.)  
   
  5(기타 오류)  
   
@@ -76,11 +74,11 @@ catalog.grant_permission [ @object_type = ] object_type
   
 -   개체에 대한 ASSIGN_PERMISSIONS 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
 
-SQL Server에서 인증 된 로그인이 프로시저를 호출할 수 없습니다. Sa 로그인에서 호출할 수 없습니다.
+이 프로시저는 SQL Server에서 인증한 로그인으로는 호출할 수 없습니다. sa 로그인으로는 호출할 수 없습니다.
   
 ## <a name="remarks"></a>주의  
  이 저장 프로시저를 통해 다음 표에 설명된 사용 권한 유형을 허용할 수 있습니다.  
@@ -101,4 +99,3 @@ SQL Server에서 인증 된 로그인이 프로시저를 호출할 수 없습니
  관련 오류 및 메시지는 반환 코드 값 섹션을 참조하십시오.  
   
   
-

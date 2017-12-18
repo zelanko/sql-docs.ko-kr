@@ -1,5 +1,5 @@
 ---
-title: "5 단계: 4 단원 자습서 패키지 테스트 | Microsoft Docs"
+title: "5단계: 4단원 자습서 패키지 테스트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 68e4545ee2eae96664007a8dc69c9953c0351107
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>단원 4-5-4 단원 자습서 패키지 테스트
+# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>4-5단원 - 4단원 자습서 패키지 테스트
 런타임에 손상된 파일인 Currency_BAD.txt가 있으면 Currency Key Lookup 변환에서 일치 항목을 생성하지 못합니다. 이제 Currency Key Lookup의 오류 출력이 실패한 행을 새 실패한 행 대상으로 리디렉션하도록 구성되었으므로 해당 구성 요소가 실패하지 않으며 패키지가 성공적으로 실행됩니다. 실패한 모든 오류 행은 ErrorOutput.txt에 기록됩니다.  
   
 이 태스크에서는 패키지를 실행하여 수정된 오류 출력 구성을 테스트한 다음 패키지 실행 성공 여부에 따라 ErrorOutput.txt 파일의 내용을 표시하는 방법에 대해 설명합니다.  
@@ -40,11 +37,11 @@ ms.lasthandoff: 09/26/2017
   
 **제어 흐름**  
   
-![패키지의 흐름 제어](../integration-services/media/task4lesson2control.gif "패키지의 흐름 제어")  
+![패키지의 제어 흐름](../integration-services/media/task4lesson2control.gif "패키지의 제어 흐름")  
   
 **데이터 흐름**  
   
-![패키지의 데이터 흐름](../integration-services/media/task5lesson5data.gif "패키지에 데이터 흐름")  
+![패키지의 데이터 흐름](../integration-services/media/task5lesson5data.gif "패키지의 데이터 흐름")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>4단원 자습서 패키지를 실행하려면  
   
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

@@ -8,62 +8,59 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: ac121e600c3c616006d79892c50f796ca7cd6b3f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: 10be16cbc85cccce51fafbcd733045c653b7be0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure에서 SSISDB 카탈로그 데이터베이스에 연결
 
-Azure SQL 데이터베이스 서버에서 호스팅되는 SSISDB 카탈로그 데이터베이스에 연결 하는 데 필요한 연결 정보를 가져옵니다. 다음 항목을 연결 해야 합니다.
-- 정규화 된 서버 이름
+Azure SQL Database 서버에서 호스트되는 SSISDB 카탈로그 데이터베이스에 연결하는 데 필요한 연결 정보를 가져옵니다. 연결하려면 다음 항목이 필요합니다.
+- 정규화된 서버 이름
 - 데이터베이스 이름
 - 로그인 정보 
 
 ## <a name="prerequisites"></a>필수 구성 요소
-시작 하기 전에 17.2 SQL Server Management Studio의 이후 버전 지정 했는지 확인 합니다. 최신 버전의 SSMS 다운로드 하려면 [다운로드 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
+시작하기 전에 SQL Server Management Studio 버전 17.2 이상이 설치되어 있는지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
-## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure 포털에서 연결 정보 가져오기
+## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure Portal에서 연결 정보 가져오기
 1. [Azure 포털](https://portal.azure.com/)에 로그인합니다.
-2. Azure 포털에서 선택 **SQL 데이터베이스** 선택 고 왼쪽 메뉴의 `SSISDB` 데이터베이스에 **SQL 데이터베이스** 페이지. 
-3. 에 **개요** 에 대 한 페이지는 `SSISDB` 데이터베이스, 다음 그림에 나와 있는 것 처럼 정규화 된 서버 이름을 검토 합니다. (를) 실행 서버 이름을 가리키면는 **에 복사 하려면 클릭** 옵션입니다.
+2. Azure Portal의 왼쪽 메뉴에서 **SQL 데이터베이스**를 선택한 다음 **SQL 데이터베이스** 페이지에서 `SSISDB` 데이터베이스를 클릭합니다. 
+3. `SSISDB` 데이터베이스의 **개요** 페이지에서 다음 이미지와 같이 정규화된 서버 이름을 검토합니다. 마우스로 서버 이름 위를 가리켜서 **복사하려면 클릭** 옵션을 표시합니다.
 
     ![서버 연결 정보](media/ssis-azure-connect-to-catalog-database/server-name.png) 
 
-4. SQL 데이터베이스 서버에 대 한 로그인 정보를 잊은 경우 SQL 데이터베이스 서버 페이지로 이동 합니다. 서버 관리자를 볼 수 있는 이름을 지정 하 고, 필요한 경우 암호를 다시 설정 합니다.
+4. SQL Database 서버의 로그인 정보를 잊은 경우 SQL Database 서버 페이지로 이동합니다. 거기에서 서버 관리자 이름을 볼 수 있고 필요한 경우 암호를 재설정할 수 있습니다.
 
-## <a name="connect-with-ssms"></a>SSMS를 사용 하 여 연결
+## <a name="connect-with-ssms"></a>SSMS를 사용하여 연결
 1. SQL Server Management Studio를 엽니다.
 
-2. **서버에 연결**합니다. 에 **서버에 연결** 대화 상자에서 다음 정보를 입력 합니다.
+2. **서버에 연결합니다**. **서버에 연결** 대화 상자에 다음 정보를 입력합니다.
 
-   | 설정       | 제안 된 값 | Description | 
+   | 설정       | 제안된 값 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
-   | **서버 이름** | 정규화 된 서버 이름 | 이 형식 이름 이어야 합니다: **mysqldbserver.database.windows.net**합니다. |
-   | **인증** | SQL Server 인증(SQL Server Authentication) | 이 퀵 스타트의 SQL 인증을 사용 합니다. |
+   | **서버 이름** | 정규화된 서버 이름 | **mysqldbserver.database.windows.net** 형식이어야 합니다. |
+   | **인증** | SQL Server 인증(SQL Server Authentication) | 이 빠른 시작에서는 SQL 인증을 사용합니다. |
    | **로그인** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
-   | **암호** | 서버 관리자 계정의 암호 | 이 서버를 만들 때 지정한 암호입니다. |
+   | **암호** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
 
-3. **SSISDB 데이터베이스에 연결**합니다. 선택 **옵션** 확장 하 고 **서버에 연결** 대화 상자. 확장 된 **서버에 연결** 대화 상자는 **연결 속성** 탭 합니다. 에 **연결할 데이터베이스** 필드를 선택 하거나 입력 `SSISDB`합니다.
+3. **SSISDB 데이터베이스에 연결합니다**. **옵션**을 선택하여 **서버에 연결** 대화 상자를 펼칩니다. 펼쳐진 **서버에 연결** 대화 상자에서 **연결 속성** 탭을 선택합니다. **데이터베이스에 연결** 필드에서 `SSISDB`를 선택하거나 입력합니다.
 
     > [!IMPORTANT]
-    > 선택 하지 않으면 `SSISDB` 개체 탐색기에서 SSIS 카탈로그를 보이지 않을 수 있음에 연결할 때.
+    > 연결할 때 `SSISDB`를 선택하지 않으면 개체 탐색기에 SSIS 카탈로그가 표시되지 않을 수 있습니다.
 
-4. 그런 다음 선택 **연결**합니다.
+4. 그런 다음 **연결**을 선택합니다.
 
-5. 개체 탐색기에서 확장 **Integration Services 카탈로그** 펼친 다음 **SSISDB** SSIS 카탈로그 데이터베이스에서 개체를 볼 수 있습니다.
+5. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
 
 ## <a name="next-steps"></a>다음 단계
-- 패키지를 배포 합니다. 자세한 내용은 참조 하십시오. [SQL Server Management Studio (SSMS)와 SSIS 프로젝트 배포](../ssis-quickstart-deploy-ssms.md)합니다.
-- 패키지를 실행 합니다. 자세한 내용은 참조 하십시오. [SSIS 패키지를 SQL Server Management Studio (SSMS)를 실행](../ssis-quickstart-run-ssms.md)합니다.
-- 패키지를 예약 합니다. 자세한 내용은 참조 하십시오. [일정 SSIS 패키지를 Azure에서 실행](ssis-azure-schedule-packages.md)
-
+- 패키지를 배포합니다. 자세한 내용은 [SSMS(SQL Server Management Studio)를 사용하여 SSIS 프로젝트 배포](../ssis-quickstart-deploy-ssms.md)를 참조하세요.
+- 패키지를 실행합니다. 자세한 내용은 [SSMS(SQL Server Management Studio)를 사용하여 SSIS 패키지 실행](../ssis-quickstart-run-ssms.md)을 참조하세요.
+- 패키지를 예약합니다. 자세한 내용은 [Azure에서 SSIS 패키지 실행 예약](ssis-azure-schedule-packages.md)을 참조하세요.

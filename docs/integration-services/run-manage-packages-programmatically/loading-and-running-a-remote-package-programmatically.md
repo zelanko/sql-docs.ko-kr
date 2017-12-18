@@ -1,5 +1,5 @@
 ---
-title: "로드 하 고 프로그래밍 방식으로 원격 패키지 실행 | Microsoft Docs"
+title: "프로그래밍 방식으로 원격 패키지 로드 및 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Integration Services packages, running
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9890f84a983b07534713fe5ec8c547f01e5b2264
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c0a229c7706ac3c46cf7a1688c15dd4e02daa4c8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>프로그래밍 방식으로 원격 패키지 로드 및 실행
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되어 있지 않은 로컬 컴퓨터에서 원격 패키지를 실행하려면 패키지를 시작할 때 해당 패키지가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치된 원격 컴퓨터에서 실행되도록 합니다. 이렇게 하려면 로컬 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 웹 서비스 또는 원격 구성 요소를 사용하여 원격 컴퓨터에서 패키지를 시작하도록 합니다. 로컬 컴퓨터에서 직접 원격 패키지를 시작하면 패키지가 로컬 컴퓨터로 로드되어 로컬 컴퓨터에서 실행됩니다. 로컬 컴퓨터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되어 있지 않으면 패키지가 실행되지 않습니다.  
@@ -37,24 +34,24 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]가 설치되지 않은 클라이언트 컴퓨터의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 외부에서는 패키지를 실행할 수 없으며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용권 계약에 따라 추가 컴퓨터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치하지 못할 수도 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 서버 구성 요소이며 클라이언트 컴퓨터에 재배포할 수 없습니다.  
   
- 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치된 로컬 컴퓨터에서 원격 패키지를 실행할 수 있습니다. 자세한 내용은 참조 [로드 및 프로그래밍 로컬 패키지 실행](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)합니다.  
+ 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치된 로컬 컴퓨터에서 원격 패키지를 실행할 수 있습니다. 자세한 내용은 [프로그래밍 방식으로 로컬 패키지 로드 및 실행](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)을 참조하세요.  
   
-##  <a name="top"></a>원격 컴퓨터에서 원격 패키지 실행  
+##  <a name="top"></a> 원격 컴퓨터에서 원격 패키지 실행  
  위에서 언급한 대로 원격 서버에서 원격 패키지를 실행하는 방법에는 여러 가지가 있습니다.  
   
--   [SQL Server 에이전트를 사용 하 여 프로그래밍 방식으로 원격 패키지를 실행 하려면](#agent)  
+-   [SQL Server 에이전트를 사용하여 프로그래밍 방식으로 원격 패키지 실행](#agent)  
   
--   [웹 서비스 또는 원격 구성 요소를 사용 하 여 프로그래밍 방식으로 원격 패키지를 실행 하려면](#service)  
+-   [웹 서비스 또는 원격 구성 요소를 사용하여 프로그래밍 방식으로 원격 패키지 실행](#service)  
   
- 이 항목에서 패키지 로드 및 저장에 사용 되는 거의 모든 방법에 대 한 참조가 필요는 **Microsoft.SqlServer.ManagedDTS** 어셈블리입니다. 예외는를 실행 하기 위한이 항목에서 설명 하는 ADO.NET 접근은 **sp_start_job** 저장 프로시저를 참조 하는 데 **System.Data**합니다. 에 대 한 참조를 추가한 후의 **Microsoft.SqlServer.ManagedDTS** 가져오기 새 프로젝트에서 어셈블리는 <xref:Microsoft.SqlServer.Dts.Runtime> 포함 된 네임 스페이스는 **를 사용 하 여** 또는 **Imports** 문입니다.  
+ 이 항목에서 패키지를 로드하고 저장하는 데 사용되는 거의 모든 메서드에는 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조가 필요합니다. **System.Data**에 대한 참조만 필요한 **sp_start_job** 저장 프로시저를 실행하기 위해 이 항목에서 설명하는 ADO.NET 방법은 예외입니다. 새 프로젝트의 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조를 추가한 후 **using** 또는 **Imports** 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
   
-###  <a name="agent"></a>SQL Server 에이전트를 사용 하 여 서버에서 원격 패키지를 프로그래밍 방식으로 실행 하려면  
- 다음 코드 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 프로그래밍 방식으로 사용하여 서버에서 원격 패키지를 실행하는 방법을 보여 줍니다. 시스템 저장 프로시저를 호출 하는 코드 샘플 **sp_start_job**, 실행 되며 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업입니다. 이 프로시저가 시작하는 작업의 이름은 `RunSSISPackage`이며 이 작업은 원격 컴퓨터에 있습니다. 그런 다음 `RunSSISPackage` 작업은 원격 컴퓨터에서 패키지를 실행합니다.  
+###  <a name="agent"></a> SQL Server 에이전트를 사용하여 서버에서 프로그래밍 방식으로 원격 패키지 실행  
+ 다음 코드 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 프로그래밍 방식으로 사용하여 서버에서 원격 패키지를 실행하는 방법을 보여 줍니다. 이 코드 샘플에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 시작하는 **sp_start_job** 시스템 저장 프로시저를 호출합니다. 이 프로시저가 시작하는 작업의 이름은 `RunSSISPackage`이며 이 작업은 원격 컴퓨터에 있습니다. 그런 다음 `RunSSISPackage` 작업은 원격 컴퓨터에서 패키지를 실행합니다.  
   
 > [!NOTE]  
->  반환 값은 **sp_start_job** 저장된 프로시저는 저장된 프로시저를 시작할 수 있는지 여부를 나타냅니다.는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 성공적으로 합니다. 패키지가 성공했는지 실패했는지를 나타내지는 않습니다.  
+>  **sp_start_job** 저장 프로시저의 반환 값은 저장 프로시저에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 성공적으로 시작할 수 있었는지 여부를 나타내며, 패키지가 성공했는지 실패했는지를 나타내지는 않습니다.  
   
- 실행 되는 패키지 문제 해결에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft 문서를 참조 하는 에이전트 작업, [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행 되지 않는다](http://support.microsoft.com/kb/918760)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에서 실행되는 패키지 문제를 해결하는 방법에 대한 자세한 내용은 [SSIS 패키지는 SQL Server 에이전트 작업 단계에서 호출 될 때 실행되지 않습니다.](http://support.microsoft.com/kb/918760) Microsoft 문서를 참조하세요.  
   
 ### <a name="sample-code"></a>예제 코드  
   
@@ -153,11 +150,11 @@ namespace LaunchSSISPackageAgent_CS
 }  
 ```  
   
-###  <a name="service"></a>웹 서비스 또는 원격 구성 요소를 사용 하 여 프로그래밍 방식으로 원격 패키지를 실행 하려면  
- 서버에서 프로그래밍 방식으로 패키지를 실행하기 위한 이전 솔루션의 경우 서버에서 사용자 지정 코드가 필요하지 않습니다. 그러나 SQL Server 에이전트를 사용하지 않고 패키지를 실행할 수 있는 솔루션이 필요한 경우가 있습니다. 다음 예에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 로컬로 시작하기 위해 서버에 만들 수 있는 웹 서비스와 클라이언트 컴퓨터에서 웹 서비스를 호출하는 데 사용할 수 있는 테스트 응용 프로그램을 보여 줍니다. 웹 서비스 대신 원격 구성 요소를 만들려면 선호 하는 경우에 약간만 변경 원격 구성 요소에서 동일한 코드 논리를 사용할 수 있습니다. 그러나 원격 구성 요소를 만들 경우에는 웹 서비스를 만들 때보다 더욱 광범위한 구성이 필요할 수 있습니다.  
+###  <a name="service"></a> 웹 서비스 또는 원격 구성 요소를 사용하여 프로그래밍 방식으로 원격 패키지 실행  
+ 서버에서 프로그래밍 방식으로 패키지를 실행하기 위한 이전 솔루션의 경우 서버에서 사용자 지정 코드가 필요하지 않습니다. 그러나 SQL Server 에이전트를 사용하지 않고 패키지를 실행할 수 있는 솔루션이 필요한 경우가 있습니다. 다음 예에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 로컬로 시작하기 위해 서버에 만들 수 있는 웹 서비스와 클라이언트 컴퓨터에서 웹 서비스를 호출하는 데 사용할 수 있는 테스트 응용 프로그램을 보여 줍니다. 웹 서비스 대신 원격 구성 요소를 만들려면 원격 구성 요소를 거의 변경하지 않는 동일한 코드 논리를 사용할 수 있습니다. 그러나 원격 구성 요소를 만들 경우에는 웹 서비스를 만들 때보다 더욱 광범위한 구성이 필요할 수 있습니다.  
   
 > [!IMPORTANT]  
->  인증 및 권한 부여에 기본 설정을 사용할 경우 웹 서비스에는 일반적으로 SQL Server 또는 파일 시스템에 액세스하여 패키지를 로드하고 실행할 수 있는 충분한 권한이 없습니다. 웹 서비스에서 해당 인증 및 권한 부여 설정을 구성 하 여 적절 한 권한을 할당 해야 할 수 있습니다는 **web.config** 파일 및 데이터베이스와 파일 시스템 사용 권한을 적절 하 게 할당 합니다. 웹, 데이터베이스 및 파일 시스템 사용 권한에 대한 자세한 설명은 이 항목에서 다루지 않습니다.  
+>  인증 및 권한 부여에 기본 설정을 사용할 경우 웹 서비스에는 일반적으로 SQL Server 또는 파일 시스템에 액세스하여 패키지를 로드하고 실행할 수 있는 충분한 권한이 없습니다. **web.config** 파일에서 인증 및 권한 부여 설정을 구성하고 데이터베이스 및 파일 시스템 권한을 적절하게 할당하여 웹 서비스에 적절한 권한을 할당해야 할 수 있습니다. 웹, 데이터베이스 및 파일 시스템 사용 권한에 대한 자세한 설명은 이 항목에서 다루지 않습니다.  
   
 > [!IMPORTANT]  
 >  SSIS 패키지 저장소를 사용하기 위한 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 클래스의 메서드는 ".", localhost 또는 로컬 서버의 서버 이름만 지원합니다. "(local)"은 사용할 수 없습니다.  
@@ -166,13 +163,13 @@ namespace LaunchSSISPackageAgent_CS
  다음 코드 예제에서는 웹 서비스를 만들고 테스트하는 방법을 보여 줍니다.  
   
 #### <a name="creating-the-web-service"></a>웹 서비스 만들기  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 파일 또는 SQL Server에서 직접 로드하거나 SQL Server와 특수한 파일 시스템 폴더 모두의 패키지 저장소를 관리하는 SSIS 패키지 저장소에서 로드할 수 있습니다. 이 샘플에서 사용 가능한 옵션을 모두 사용 하 여 한 **Select Case** 또는 **전환** 패키지를 시작 하기 위한 적절 한 구문을 선택 하 고 입력된 인수를 연결할 구조 적절 하 게 합니다. LaunchPackage 웹 서비스 메서드는 클라이언트 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값 대신 정수로 반환합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 파일 또는 SQL Server에서 직접 로드하거나 SQL Server와 특수한 파일 시스템 폴더 모두의 패키지 저장소를 관리하는 SSIS 패키지 저장소에서 로드할 수 있습니다. 이 샘플에서는 **Select Case** 또는 **switch** 구문을 사용하여 패키지를 시작하기 위한 적절한 구문을 선택하고 입력 인수를 적절하게 연결함으로써 사용 가능한 모든 옵션을 지원합니다. LaunchPackage 웹 서비스 메서드는 클라이언트 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값 대신 정수로 반환합니다.  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>웹 서비스를 만들어 서버에서 프로그래밍 방식으로 패키지를 실행하려면  
   
 1.  Visual Studio를 열고 원하는 프로그래밍 언어로 웹 서비스 프로젝트를 만듭니다. 예제 코드에서는 프로젝트 이름으로 LaunchSSISPackageService를 사용합니다.  
   
-2.  에 대 한 참조를 추가 **Microsoft.SqlServer.ManagedDTS** 추가 **Imports** 또는 **를 사용 하 여** 문을 대 한 코드 파일에는  **Microsoft.SqlServer.Dts.Runtime** 네임 스페이스입니다.  
+2.  **Microsoft.SqlServer.ManagedDTS**에 대한 참조를 추가하고, **Microsoft.SqlServer.Dts.Runtime** 네임스페이스에 대한 코드 파일에 **Imports** 또는 **using** 문을 추가합니다.  
   
 3.  LaunchPackage 웹 서비스 메서드의 예제 코드를 클래스에 붙여 넣습니다. 이 예제에서는 코드 창의 전체 내용을 보여 줍니다.  
   
@@ -426,12 +423,11 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   비디오, [하는 방법: SQL Server 에이전트 (SQL Server 비디오)를 사용 하 여 SSIS 패키지 실행 자동화](http://technet.microsoft.com/sqlserver/ff686764.aspx), technet.microsoft.com  
+-   technet.microsoft.com의 비디오 - [방법: SQL Server 에이전트를 사용하여 SSIS 패키지 실행 자동화(SQL Server 비디오)](http://technet.microsoft.com/sqlserver/ff686764.aspx)  
   
 ## <a name="see-also"></a>관련 항목:  
- [로컬 및 원격 실행 간의 차이점 이해](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [로드 및 로컬 패키지를 프로그래밍 방식으로 실행](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
+ [로컬 실행과 원격 실행의 차이점 이해](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [프로그래밍 방식으로 로컬 패키지 로드 및 실행](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [로컬 패키지의 출력 로드](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

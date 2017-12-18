@@ -1,5 +1,5 @@
 ---
-title: "코딩 및 스크립트 태스크 디버깅 | Microsoft Docs"
+title: "스크립트 태스크 코딩 및 디버깅 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -26,50 +23,49 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: 81
+caps.latest.revision: "81"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c706fc1db3e31130a7754b9e4c3d16f9a13eaf4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-and-debugging-the-script-task"></a>스크립트 태스크 코딩 및 디버깅
-  스크립트를 구성한 후에 작업의 **스크립트 태스크 편집기**, 스크립트 태스크 개발 환경에서 사용자 지정 코드를 작성 합니다.  
+  **스크립트 태스크 편집기**에서 스크립트 태스크를 구성한 후에 스크립트 태스크 개발 환경에서 사용자 지정 코드를 작성합니다.  
   
 ## <a name="script-task-development-environment"></a>스크립트 태스크 개발 환경  
- 스크립트 태스크를 사용 하 여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] VSTA Tools for Applications ()에서 스크립트 자체에 대 한 개발 환경으로 합니다.  
+ 스크립트 태스크는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 스크립트 자체의 개발 환경으로 사용합니다.  
   
- 스크립트 코드는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성됩니다. 설정 하 여 스크립트 언어를 지정 된 **u a g e** 속성에는 **스크립트 태스크 편집기**합니다. 다른 프로그래밍 언어를 사용하고 싶으면 원하는 언어로 사용자 지정 어셈블리를 개발하고 스크립트 태스크의 코드에서 해당 기능을 호출할 수 있습니다.  
+ 스크립트 코드는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성됩니다. **스크립트 태스크 편집기**에서 **ScriptLanguage** 속성을 설정하여 스크립트 언어를 지정합니다. 다른 프로그래밍 언어를 사용하고 싶으면 원하는 언어로 사용자 지정 어셈블리를 개발하고 스크립트 태스크의 코드에서 해당 기능을 호출할 수 있습니다.  
   
  스크립트 태스크에서 작성하는 스크립트는 패키지 정의에 저장되며 별도의 스크립트 파일은 없습니다. 따라서 스크립트 태스크를 사용해도 패키지 배포에 영향을 주지 않습니다.  
   
 > [!NOTE]  
 >  패키지를 디자인하고 스크립트를 디버깅할 때 스크립트 코드는 임시로 프로젝트 파일에 기록됩니다. 중요한 정보를 파일에 저장하면 보안상 위험할 수 있으므로 암호와 같은 중요한 정보는 스크립트 코드에 포함하지 않는 것이 좋습니다.  
   
- 기본적으로 **Option Strict** IDE에서 사용할 수 없습니다.  
+ 기본적으로 **Option Strict**는 IDE에서 비활성화되어 있습니다.  
   
 ## <a name="script-task-project-structure"></a>스크립트 태스크 프로젝트 구조  
  스크립트 태스크에 포함되는 스크립트를 만들거나 수정할 경우 VSTA에서는 빈 새 프로젝트가 열리거나 기존 프로젝트가 다시 열립니다. 이 프로젝트는 패키지 파일 내에 저장되며 스크립트 태스크에서는 추가 파일을 만들지 않으므로 이 VSTA 프로젝트를 만들어도 패키지의 배포에는 영향이 없습니다.  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>스크립트 태스크 프로젝트의 프로젝트 항목 및 클래스  
- 기본적으로 VSTA 프로젝트 탐색기 창에 표시 되는 스크립트 태스크 프로젝트는 단일 항목 포함 **ScriptMain**합니다. **ScriptMain** 라고도 하는 단일 클래스를 차례로 포함 하는 항목을 **ScriptMain**합니다. 클래스의 코드 요소는 스크립트 태스크용으로 선택한 프로그래밍 언어에 따라 다릅니다.  
+ VSTA 프로젝트 탐색기 창에 표시되는 스크립트 태스크 프로젝트에는 기본적으로 **ScriptMain**이라는 단일 항목이 포함되어 있습니다. 이 **ScriptMain** 항목에는 **ScriptMain**이라는 단일 클래스도 있습니다. 클래스의 코드 요소는 스크립트 태스크용으로 선택한 프로그래밍 언어에 따라 다릅니다.  
   
--   스크립트 태스크에 대해 구성 된 경우는 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 프로그래밍 언어는 **ScriptMain** 클래스에 공용 서브루틴이 **Main**합니다. **ScriptMain.Main** 서브루틴은 개발자가 스크립트 태스크를 실행할 때 런타임에서 호출 하는 메서드.  
+-   스크립트 태스크가 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 프로그래밍 언어로 구성되면 **ScriptMain** 클래스에 **Main**이라는 공용 서브루틴이 있습니다. **ScriptMain.Main** 서브루틴은 스크립트 태스크를 실행할 때 런타임에서 호출하는 메서드입니다.  
   
-     유일한 코드가 기본적으로는 **Main** 새 스크립트의 서브루틴은 선 `Dts.TaskResult = ScriptResults.Success`합니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다. **Dts.TaskResult** 속성에 대해서는 설명 [스크립트 태스크에서 결과 반환](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)합니다.  
+     기본적으로 새 스크립트의 **Main** 서브루틴에 있는 유일한 코드는 `Dts.TaskResult = ScriptResults.Success` 줄입니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다. **Dts.TaskResult** 속성은 [스크립트 태스크에서 결과 반환](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)에서 설명합니다.  
   
--   스크립트 태스크에 대 한 Visual C# 프로그래밍 언어에서 구성 하는 경우는 **ScriptMain** 클래스에는 공용 메서드가 **Main**합니다. 이 메서드는 스크립트 태스크가 실행될 때 호출됩니다.  
+-   스크립트 태스크가 Visual C# 프로그래밍 언어로 구성되면 **ScriptMain** 클래스에 **Main**이라는 공용 메서드가 있습니다. 이 메서드는 스크립트 태스크가 실행될 때 호출됩니다.  
   
-     기본적으로는 **Main** 메서드는 행이 포함 되어 `Dts.TaskResult = (int)ScriptResults.Success`합니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다.  
+     기본적으로 **Main** 메서드에는 `Dts.TaskResult = (int)ScriptResults.Success` 줄이 포함됩니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다.  
   
- **ScriptMain** 항목 이외의 클래스를 포함할 수는 **ScriptMain** 클래스입니다. 클래스는 해당 클래스가 있는 스크립트 태스크에서만 사용할 수 있습니다.  
+ **ScriptMain** 항목에는 **ScriptMain** 클래스 이외의 클래스가 포함될 수 있습니다. 클래스는 해당 클래스가 있는 스크립트 태스크에서만 사용할 수 있습니다.  
   
- 기본적으로는 **ScriptMain** 프로젝트 항목에는 다음 자동 생성 코드가 포함 되어 있습니다. 코드 템플릿은 또한 스크립트 태스크에 대한 개요와 SSIS 개체(예: 변수, 이벤트 및 연결)를 검색 및 조작하는 방법에 대한 추가 정보를 제공합니다.  
+ **ScriptMain** 프로젝트 항목에는 기본적으로 다음과 같이 자동 생성된 코드가 포함되어 있습니다. 코드 템플릿은 또한 스크립트 태스크에 대한 개요와 SSIS 개체(예: 변수, 이벤트 및 연결)를 검색 및 조작하는 방법에 대한 추가 정보를 제공합니다.  
   
 ```vb  
 ' Microsoft SQL Server Integration Services Script Task  
@@ -207,28 +203,28 @@ To open Help, press F1.
 ```  
   
 ### <a name="additional-project-items-in-the-script-task-project"></a>스크립트 태스크 프로젝트의 추가 프로젝트 항목  
- 스크립트 태스크 프로젝트 기본값 이외의 다른 항목에 포함할 수 **ScriptMain** 항목입니다. 이 프로젝트에는 클래스, 모듈 및 코드 파일을 추가할 수 있습니다. 폴더를 사용하여 항목 그룹을 구성할 수도 있습니다. 추가하는 모든 항목은 패키지 내부에 지속됩니다.  
+ 스크립트 태스크 프로젝트에는 기본 **ScriptMain** 항목 이외의 다른 항목이 포함될 수 있습니다. 이 프로젝트에는 클래스, 모듈 및 코드 파일을 추가할 수 있습니다. 폴더를 사용하여 항목 그룹을 구성할 수도 있습니다. 추가하는 모든 항목은 패키지 내부에 지속됩니다.  
   
 ### <a name="references-in-the-script-task-project"></a>스크립트 태스크 프로젝트의 참조  
- 스크립트 태스크 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 관리 되는 어셈블리에 대 한 참조를 추가할 수 있습니다 **프로젝트 탐색기**을 클릭 한 다음 **참조 추가**합니다. 자세한 내용은 참조 [스크립팅 솔루션에서 다른 어셈블리 참조](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)합니다.  
+ **프로젝트 탐색기**에서 스크립트 태스크 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭하여 관리되는 어셈블리에 대한 참조를 추가할 수 있습니다. 자세한 내용은 [스크립팅 솔루션에서 다른 어셈블리 참조](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)를 참조하세요.  
   
 > [!NOTE]  
->  VSTA IDE에서 프로젝트 참조를 볼 수 있습니다 **클래스 뷰** 또는 **프로젝트 탐색기**합니다. 이들이 창 중 하나를 열면는 **보기** 메뉴. 새 참조를 추가할 수는 **프로젝트** 메뉴에서 **프로젝트 탐색기**, 또는 **클래스 뷰**합니다.  
+>  프로젝트 참조는 VSTA IDE의 **클래스 뷰** 또는 **프로젝트 탐색기**에서 볼 수 있습니다. **보기** 메뉴에서 이러한 창 중 하나를 엽니다. **프로젝트** 메뉴, **프로젝트 탐색기** 또는 **클래스 뷰**에서 새 참조를 추가할 수 있습니다.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>스크립트 태스크에서 패키지와 상호 작용  
- 스크립트 태스크를 사용 하 여 전역 **Dts** 인스턴스 개체의는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스 및 해당 멤버를 포함 하는 패키지와 상호 작용 하는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임.  
+ 스크립트 태스크는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 인스턴스인 전역 **Dts** 개체 및 해당 멤버를 사용하여 이를 포함한 패키지 및 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임과 상호 작용합니다.  
   
- 다음 표에서의 주요 공용 멤버를 보여 줍니다.는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 전역 통해 스크립트 태스크 코드에 제공 되는 클래스 **Dts** 개체입니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.  
+ 다음 표에는 전역 **Dts** 개체를 통해 스크립트 태스크 코드에 노출되는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 주요 공용 멤버가 나와 있습니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.  
   
 |멤버|용도|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|패키지에 정의된 연결 관리자에 액세스할 수 있게 해 줍니다.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|스크립트 태스크에서 오류, 경고 및 정보 메시지를 발생시킬 수 있게 해 주는 이벤트 인터페이스를 제공합니다.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|런타임에 단일 개체를 반환 하는 간단한 방법을 제공 (외에 **TaskResult**) 워크플로 분기에 사용할 수도 있는 합니다.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|워크플로 분기에도 사용할 수 있는 단일 개체를 **TaskResult** 외에도 런타임에 반환하는 간단한 방법을 제공합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|사용하도록 설정된 로그 공급자에 태스크 진행률 및 결과 등의 정보를 로깅합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|태스크의 성공 또는 실패를 보고합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|태스크의 컨테이너가 실행 중인 트랜잭션을 제공합니다.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|에 나열 된 변수에 액세스할 수 있도록는 **ReadOnlyVariables** 및 **ReadWriteVariables** 스크립트 내에서 사용 하기 위해 속성 작업입니다.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|스크립트 내에서 사용하기 위해 **ReadOnlyVariables** 및 **ReadWriteVariables** 태스크 속성에 나열된 변수에 대한 액세스를 제공합니다.|  
   
  <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스에는 대개 사용하지 않는 공용 멤버도 일부 포함되어 있습니다.  
   
@@ -253,11 +249,10 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   블로그 항목- [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](http://go.microsoft.com/fwlink/?LinkId=215661), blogs.msdn.com에서 합니다.  
+-   blogs.msdn.com의 블로그 항목 - [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](http://go.microsoft.com/fwlink/?LinkId=215661)  
   
 ## <a name="see-also"></a>관련 항목:  
  [스크립팅 솔루션에서 다른 어셈블리 참조](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
  [스크립트 태스크 편집기에서 스크립트 태스크 구성](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "catalog.revoke_permission (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.revoke_permission(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f058368bdd39b31a569d8810cccfc4d03d9f875e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bc46123d3d395080f6bc5252bfccd63e597a3612
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +41,28 @@ catalog.revoke_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @object_type =] *object_type*  
- 보안 개체의 유형입니다. 보안 개체 유형에 폴더 (`1`), 프로젝트 (`2`), 환경 (`3`), 및 작업 (`4`). *object_type* 은 **smallint***합니다.*  
+ [ @object_type = ] *object_type*  
+ 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint***입니다.*  
   
- [ @object_id =] *object_id*  
- 보안 개체의 고유 식별자(ID)입니다. *object_id* 은 **bigint**합니다.  
+ [ @object_id = ] *object_id*  
+ 보안 개체의 고유 식별자(ID)입니다. *object_id*는 **bigint**입니다.  
   
- [ @principal_id =] *principal_id*  
- 사용 권한을 취소할 보안 주체의 ID입니다. *principal_id* 은 **int**합니다.  
+ [ @principal_id = ] *principal_id*  
+ 사용 권한을 취소할 보안 주체의 ID입니다. *principal_id*는 **int**입니다.  
   
- [ @permission_type =] *permission_type*  
- 사용 권한의 유형입니다. *permission_type* 은 **smallint**합니다.  
+ [ @permission_type = ] *permission_type*  
+ 사용 권한의 유형입니다. *permission_type*은 **smallint**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공)  
   
- 1 (object_class 잘못 되었습니다.)  
+ 1(object_class가 유효하지 않습니다.)  
   
- 2 (object_id 존재 하지 않음)  
+ 2(object_id가 없습니다.)  
   
- 3 (보안 주체가 존재 하지 않음)  
+ 3(보안 주체가 없습니다.)  
   
- 4 (권한이 잘못 되었습니다.)  
+ 4(권한이 잘못되었습니다.)  
   
  5(기타 오류)  
   
@@ -79,12 +77,12 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   개체에 대한 ASSIGN_PERMISSIONS 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 ## <a name="remarks"></a>주의  
- Permission_type 지정 된 경우 저장된 프로시저는 개체에 대 한 보안 주체에 명시적으로 할당 된 사용 권한을 제거 합니다. 해당 인스턴스가 없는 경우에도 프로시저에서 성공 코드 값(`0`)을 반환합니다. Permission_type를 생략 하면 저장된 프로시저는 개체에 보안 주체의 모든 사용 권한을 제거 합니다.  
+ permission_type을 지정한 경우 저장 프로시저는 개체의 보안 주체에 명시적으로 할당된 사용 권한을 제거합니다. 해당 인스턴스가 없는 경우에도 프로시저에서 성공 코드 값(`0`)을 반환합니다. permission_type을 생략한 경우에는 저장 프로시저에서 개체의 보안 주체에 대한 모든 사용 권한을 제거합니다.  
   
 > [!NOTE]  
 >  보안 주체가 지정된 사용 권한이 있는 역할의 멤버인 경우에는 개체에 대한 지정된 사용 권한을 계속 유지할 수도 있습니다.  
@@ -104,4 +102,3 @@ catalog.revoke_permission [ @object_type = ] object_type
 |`104`|MANAGE_OBJECT_PERMISSIONS|보안 주체가 폴더의 모든 개체에 대한 사용 권한을 관리할 수 있습니다.|Folder|  
   
   
-

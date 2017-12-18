@@ -1,5 +1,5 @@
 ---
-title: "(SQL Server 가져오기 및 내보내기 마법사)는 MySQL 데이터 원본에 연결 | Microsoft Docs"
+title: "MySQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/20/2017
 ms.prod: sql-non-specified
@@ -8,104 +8,101 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3df56fcda5b39c2895de83feac4f302686b1adf3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4fb97dd247146cd2535e4eee72c448fdd94c10de
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>(SQL Server 가져오기 및 내보내기 마법사)는 MySQL 데이터 원본에 연결
-이 항목에 연결 하는 방법을 보여 줍니다.는 **MySQL** 에서 데이터 소스는 **데이터 원본을 선택** 또는 **대상 선택** SQL Server 가져오기 및 내보내기 마법사의 페이지입니다. MySQL에 연결 하는 데 사용할 수 있는 여러 데이터 공급자가 있습니다.
+# <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
+이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **MySQL** 데이터 원본에 연결하는 방법을 보여 줍니다. MySQL에 연결하는 데 사용할 수 있는 데이터 공급자는 여러 개입니다.
 
 > [!IMPORTANT]
-> 자세한 요구 사항 및 MySQL 데이터베이스에 연결 하기 위한 필수 구성 요소는이 Microsoft 문서에서 다루지 않습니다. 이 문서에서는 이미 MySQL 클라이언트 소프트웨어가 설치 되어 있고 연결할 수 있는지 이미 성공적으로 대상 MySQL 데이터베이스를 가정 합니다. 자세한 정보에 대 한 MySQL 데이터베이스 관리자 또는 MySQL 설명서를 참조 하십시오.
+> MySQL 데이터베이스에 연결하기 위한 자세한 요구 사항 및 필수 구성 요소는 이 Microsoft 문서에서 다루지 않습니다. 이 문서에서는 여러분의 컴퓨터에 MySQL 클라이언트 소프트웨어가 설치되어 있고 대상 MySQL 데이터베이스에 연결할 수 있다고 가정합니다. 자세한 내용은 MySQL 데이터베이스 관리자에게 문의하거나 MySQL 설명서를 참조하세요.
 
 ## <a name="get-the-mysql-connectors"></a>MySQL 커넥터 가져오기
-공급자와 드라이버에서이 항목에 설명 된 다운로드는 [MySQL 커넥터](https://dev.mysql.com/downloads/connector/) 페이지.
+[MySQL 커넥터](https://dev.mysql.com/downloads/connector/) 페이지에서 이 문서에 설명된 공급자 및 드라이버를 다운로드합니다.
 
-## <a name="connect-to-mysql-with-the-net-framework-data-provider-for-mysql"></a>MySQL에 연결할.Net Framework Data Provider for MySQL
-선택한 후 **MySQL에 대 한.NET Framework Data Provider** 에 **데이터 원본을 선택** 또는 **대상 선택** 마법사 페이지의 페이지 옵션은 공급자에 대 한 그룹화 된 목록을 제공 합니다. 이들 중 대부분은 이해 하기 어려운 이름 및 생소 한 설정입니다. 에서는 몇 가지 정보를 제공 하기만 하면 됩니다. 다른 설정에 대 한 기본값을 무시할 수 있습니다.
+## <a name="connect-to-mysql-with-the-net-framework-data-provider-for-mysql"></a>.NET Framework Data Provider for MySQL을 사용하여 MySQL에 연결
+마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **.NET Framework Data Provider for MySQL**을 선택하면 페이지에 공급자에 대한 옵션의 그룹화된 목록이 표시됩니다. 이들 중 대부분은 이해하기 어려운 이름이거나 생소한 설정입니다. 여기에서는 몇 가지 정보만 제공하면 됩니다. 다른 설정의 기본값은 무시할 수 있습니다.
 
 > [!NOTE]
-> 이 데이터 공급자에 대 한 연결 옵션 MySQL 소스 또는 대상 인지 동일 합니다. 즉, 표시 되는 옵션은 둘 다에 동일한는 **데이터 원본을 선택** 및 **대상 선택** 마법사의 페이지입니다.
+> 이 데이터 공급자에 대한 연결 옵션은 MySQL이 원본 또는 대상인지 여부에 관계없이 동일합니다. 즉, 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에 똑같은 옵션이 표시됩니다.
 
-|필수 정보|.NET framework Data Provider for MySQL 속성|
+|필수 정보|.Net Framework Data Provider for MySQL 속성|
 |---|---|
 |서버 이름|**Server**|
 |데이터베이스 이름|**데이터베이스**|
-|인증 (로그인) 정보|**사용자 Id** 및 **암호**|
+|인증(로그인) 정보|**사용자 ID** 및 **암호**|
 
-연결 문자열을 입력할 필요가 없습니다는 **ConnectionString** 필드 목록입니다. MySQL 서버 이름에 대 한 개별 값을 입력 한 후 (**서버**)을 로그인 정보, 마법사 개별 속성 및 해당 값에서 연결 문자열을 조합 합니다. 
+목록의 **ConnectionString** 필드에 연결 문자열을 입력할 필요가 없습니다. MySQL 서버 이름(**Server**) 및 로그인 정보에 대한 개별 값을 입력하면 마법사는 개별 속성과 값에서 연결 문자열을 어셈블합니다. 
 
-![1 / 2.NET 공급자와 함께 MySQL에 연결](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-1-of-2.png)
+![.NET 공급자로 MySQL에 연결, 1/2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-1-of-2.png)
 
-![2 / 2.NET 공급자와 함께 MySQL에 연결](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-2-of-2.png)
+![.NET 공급자로 MySQL에 연결, 2/2](../../integration-services/import-export-data/media/connect-to-mysql-with-the-net-provider-2-of-2.png)
 
-## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>MySQL ODBC 드라이버와 MySQL에 연결
-ODBC 드라이버는 데이터 원본의 드롭 다운 목록에 나열 되지 않습니다. ODBC 드라이버를 연결 하려면 선택 하 여 시작 된 **.NET Framework Data Provider for ODBC** 데이터 원본으로 **데이터 원본을 선택** 또는 **대상 선택** 페이지. 이 공급자는 ODBC 드라이버 주위에서 래퍼로 역할을 합니다.
+## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>MySQL ODBC 드라이버로 MySQL에 연결
+ODBC 드라이버는 데이터 원본의 드롭다운 목록에 표시되지 않습니다. ODBC 드라이버를 연결하려면 먼저 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 데이터 원본으로 **.NET Framework Data Provider for ODBC**를 선택합니다. 이 공급자는 ODBC 드라이버 주위에서 래퍼 역할을 합니다.
 
-다음은.NET Framework Data Provider for ODBC 선택한 후 볼 수 있는 제네릭 화면입니다.
+다음은 .NET Framework Data Provider for ODBC를 선택한 직후 표시되는 일반적인 화면입니다.
 
-![전에 odbc SQL에 연결](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
+![이전에 ODBC를 사용하여 SQL에 연결](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
-### <a name="options-to-specify-mysql-odbc-driver"></a>(MySQL ODBC 드라이버)를 지정 하는 옵션
+### <a name="options-to-specify-mysql-odbc-driver"></a>지정할 옵션(MySQL ODBC 드라이버)
 
 > [!NOTE]
-> 이 데이터 공급자와 ODBC 드라이버에 대 한 연결 옵션 MySQL 소스 또는 대상 인지 동일 합니다. 즉, 표시 되는 옵션은 둘 다에 동일한는 **데이터 원본을 선택** 및 **대상 선택** 마법사의 페이지입니다.
+> 이 데이터 공급자 및 ODBC 드라이버의 연결 옵션은 MySQL이 원본이건 대상이건 관계없이 동일합니다. 즉, 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에 똑같은 옵션이 표시됩니다.
 
-다음 설정 및 값을 포함 하는 연결 문자열을 조합 하 MySQL ODBC 드라이버와 MySQL에 연결 합니다. 전체 연결 문자열의 형식이 설정 목록 바로 뒤에.
+MySQL ODBC 드라이버를 사용하여 MySQL에 연결하려면 다음 설정 및 값을 포함하는 연결 문자열을 조합합니다. 전체 연결 문자열의 형식은 설정 목록 바로 뒤에 나옵니다.
 
 > [!TIP]
-> 가장 적합 하는 연결 문자열을 어셈블하여 도움말을 봅니다. 연결 문자열을 제공 하는 대신 기존의 DSN (데이터 원본 이름)를 제공 합니다. 아니면를 새로 만듭니다. 이러한 옵션에 대 한 자세한 내용은 참조 하십시오. [ODBC 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)합니다.
+> 도움을 받아 연결 문자열을 적절하게 조합합니다. 또는 연결 문자열을 제공하는 대신 기존 DSN(데이터 원본 이름)을 제공하거나 새 DSN을 만듭니다. 이러한 옵션에 대한 자세한 내용은 [ODBC 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 
 **드라이버**  
 ODBC 드라이버의 이름입니다.
 
 **Server**  
-MySQL server의 이름입니다. 
+MySQL 서버의 이름입니다. 
 
 **데이터베이스**  
 MySQL 데이터베이스의 이름입니다.
 
 **UID** 및 **PWD**   
-사용자 id와 암호를 연결 합니다.
+연결할 사용자 ID와 암호입니다.
 
 ### <a name="connection-string-format"></a>연결 문자열 형식
-일반적인 연결 문자열의 형식은 다음과 같습니다.
+다음은 일반적인 연결 문자열의 형식입니다.
 
     ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
     ```
 
 ### <a name="enter-the-connection-string"></a>연결 문자열 입력
-에 대 한 연결 문자열을 입력의 **ConnectionString** 에 DSN 이름을 입력 하거나 필드는 **Dsn** 필드에 **데이터 원본을 선택** 또는 **대상 선택** 페이지. 연결 문자열을 입력 한 후 마법사는 문자열을 구문 분석 하 고 목록에서 개별 속성 및 해당 값을 표시 합니다.
+**데이터 원본 선택** 또는 **대상 선택** 페이지에서 **ConnectionString** 필드에 연결 문자열을 입력하거나 **Dsn** 필드에 DSN 이름을 입력합니다. 연결 문자열을 입력하면 마법사에서 문자열을 구문 분석하고 개별 속성과 해당 값을 목록에 표시합니다.
 
-다음 예제에서는이 연결 문자열을 사용합니다.
+다음 예제에서는 이 연결 문자열을 사용합니다.
 
     ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
     ```
 
-다음은 연결 문자열을 입력 한 후 표시 되는 화면입니다.
+다음은 연결 문자열을 입력한 후 표시되는 화면입니다.
 
 ![ODBC로 MySQL에 연결](../../integration-services/import-export-data/media/connect-to-mysql-with-odbc.png)
 
-## <a name="other-data-providers-and-more-info"></a>다른 데이터 공급자 및 자세한 정보
-여기에 나열 되어 있지 않은 데이터 공급자와 MySQL에 연결 하는 방법에 대 한 정보를 참조 하십시오. [MySQL 연결 문자열](https://www.connectionstrings.com/mysql/)합니다. 또한이 제 3 자 사이트 데이터 공급자 및 연결 매개 변수가이 페이지에서 설명 하는 방법에 대 한 자세한 정보를 포함 합니다.
+## <a name="other-data-providers-and-more-info"></a>다른 데이터 공급자 및 추가 정보
+여기에 나열되지 않은 데이터 공급자를 사용하여 MySQL에 연결하는 방법에 대한 내용은 [MySQL 연결 문자열](https://www.connectionstrings.com/mysql/)을 참조하세요. 또한 이러한 타사 사이트에는 이 페이지에서 설명하는 데이터 공급자 및 연결 매개 변수에 대한 자세한 정보가 포함되어 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 

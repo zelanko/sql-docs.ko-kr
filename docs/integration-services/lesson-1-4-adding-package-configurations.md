@@ -1,5 +1,5 @@
 ---
-title: "4 단계: 패키지 구성 추가 | Microsoft Docs"
+title: "4단계: 패키지 구성 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 9e708a39e926908ff542a5137517f51a5e200009
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-4---adding-package-configurations"></a>1-4-단원 패키지 구성 추가
+# <a name="lesson-1-4---adding-package-configurations"></a>1-4단원 - 패키지 구성 추가
 이 태스크에서는 각 패키지에 구성을 추가합니다. 구성은 런타임 시 패키지 속성 및 패키지 개체의 값을 업데이트합니다.  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 다양한 구성 유형이 제공됩니다. 구성을 환경 변수, 레지스트리 항목, 사용자 정의 변수, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블 및 XML 파일에 저장할 수 있습니다. 보다 나은 유연성을 위해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 간접 구성 사용을 지원합니다. 이는 실제 값을 지정하는 구성의 위치는 환경 변수를 사용하여 지정한다는 것을 의미합니다. Deployment Tutorial 프로젝트의 패키지는 XML 구성 파일과 간접 구성의 조합을 사용합니다. XML 구성 파일은 여러 속성에 대한 구성을 포함할 수 있으며 가능한 경우 여러 패키지에서 참조할 수 있습니다. 이 자습서에서는 각 패키지에 대한 별개의 구성 파일을 사용합니다.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 다양한 구성 유형이 제공됩니다. 구성을 환경 변수, 레지스트리 항목, 사용자 정의 변수, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블 및 XML 파일에 저장할 수 있습니다. 보다 나은 유연성을 위해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 간접 구성 사용을 지원합니다. 이는 실제 값을 지정하는 구성의 위치는 환경 변수를 사용하여 지정한다는 것을 의미합니다. Deployment Tutorial 프로젝트의 패키지는 XML 구성 파일과 간접 구성의 조합을 사용합니다. XML 구성 파일은 여러 속성에 대한 구성을 포함할 수 있으며 가능한 경우 여러 패키지에서 참조할 수 있습니다. 이 자습서에서는 각 패키지에 대한 별개의 구성 파일을 사용합니다.  
   
 구성 파일은 연결 문자열과 같은 중요한 정보를 포함하는 경우가 많습니다. 따라서 ACL(액세스 제어 목록)을 사용하여 파일을 저장하는 위치나 폴더에 대한 액세스를 제한하고 패키지 실행이 허용되는 사용자나 계정에만 액세스를 제공해야 합니다. 자세한 내용은 [패키지에서 사용되는 파일 액세스](../integration-services/security/security-overview-integration-services.md#files)를 참조하세요.  
   
@@ -38,7 +35,7 @@ ms.lasthandoff: 08/03/2017
   
 구성 파일인 DataTransferConfig.dtsConfig 및 LoadXMLData.dtsConfig를 만듭니다. 이러한 파일은 패키지에 사용되는 데이터 및 로그 파일의 위치를 지정하는 패키지의 속성을 업데이트하는 이름-값 쌍을 포함합니다. 나중에 배포 프로세스의 한 단계에서 구성 파일의 값을 업데이트하여 대상 컴퓨터에 있는 파일의 새 위치를 반영합니다.  
   
-다음 단원에서 배포 번들을 만들 때 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 DataTransferConfig.dtsConfig 및 LoadXMLData.dtsConfig가 DataTransfer 및 LoadXMLData 패키지의 종속 파일임을 인식하고 구성 파일을 자동으로 포함합니다.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 DataTransferConfig.dtsConfig 및 LoadXMLData.dtsConfig가 DataTransfer 및 LoadXMLData 패키지의 종속 파일임을 인식하고 구성 파일을 자동으로 포함합니다.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>DataTransfer 패키지에 대한 간접 구성을 만들려면  
   
@@ -145,4 +142,3 @@ ms.lasthandoff: 08/03/2017
 [패키지 구성](../integration-services/packages/package-configurations.md)  
 [패키지 구성 만들기](../integration-services/packages/create-package-configurations.md)  
 [패키지에서 사용되는 파일 액세스](../integration-services/security/security-overview-integration-services.md#files)  
-

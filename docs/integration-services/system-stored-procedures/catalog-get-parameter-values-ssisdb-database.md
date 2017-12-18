@@ -1,5 +1,5 @@
 ---
-title: "catalog.get_parameter_values (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.get_parameter_values(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ad8f0c367e38581db696d2aa32afd5b92d635d2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 644103554b39fde12a2abb150af18799700f7b79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +39,17 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @folder_name =] *folder_name*  
- 프로젝트가 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar (128)**합니다.  
+ [ @folder_name = ] *folder_name*  
+ 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)**입니다.  
   
- [ @project_name =] *project_name*  
- 매개 변수가 있는 프로젝트의 이름입니다. *project_name* 은 **nvarchar (128)**합니다.  
+ [ @project_name = ] *project_name*  
+ 매개 변수가 있는 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)**입니다.  
   
- [ @package_name =] *package_name*  
- 패키지의 이름입니다. 패키지 이름을 지정하면 모든 프로젝트 매개 변수와 특정 패키지의 매개 변수를 검색할 수 있습니다. 모든 프로젝트 매개 변수와 모든 패키지의 매개 변수를 검색하려면 NULL을 사용합니다. *package_name* 은 **nvarchar (260)**합니다.  
+ [ @package_name = ] *package_name*  
+ 패키지의 이름입니다. 패키지 이름을 지정하면 모든 프로젝트 매개 변수와 특정 패키지의 매개 변수를 검색할 수 있습니다. 모든 프로젝트 매개 변수와 모든 패키지의 매개 변수를 검색하려면 NULL을 사용합니다. *package_name*은 **nvarchar(260)**입니다.  
   
- [ @reference_id =] *reference_id*  
- 환경 참조의 고유 식별자입니다. 이 매개 변수는 선택 사항입니다. *reference_id* 은 **bigint**합니다.  
+ [ @reference_id = ] *reference_id*  
+ 환경 참조의 고유 식별자입니다. 이 매개 변수는 선택 사항입니다. *reference_id*는 **bigint**입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
@@ -62,7 +60,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|매개 변수의 유형입니다. 값은 프로젝트 매개 변수의 경우 `20`이고, 패키지 매개 변수의 경우 `30`입니다.|  
-|parameter_data_type|**nvarchar (128)**|매개 변수의 데이터 형식입니다.|  
+|parameter_data_type|**nvarchar(128)**|매개 변수의 데이터 형식입니다.|  
 |parameter_name|**sysname**|매개 변수의 이름입니다.|  
 |parameter_value|**sql_variant**|매개 변수의 값입니다.|  
 |sensitive|**bit**|값이 `1`이면 매개 변수 값이 중요하고, 값이 `0`이면 매개 변수 값이 중요하지 않습니다.|  
@@ -70,16 +68,16 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |value_set|**bit**|값이 `1`이면 매개 변수 값이 할당되었고, 값이 `0`이면 매개 변수 값이 할당되지 않았습니다.|  
   
 > [!NOTE]  
->  리터럴 값은 일반 텍스트로 표시됩니다. **NULL** 중요 한 값 위치에 표시 됩니다.  
+>  리터럴 값은 일반 텍스트로 표시됩니다. **NULL**은 중요한 값 대신 표시됩니다.  
   
 ## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 권한과 해당되는 경우 참조된 환경에 대한 READ 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 ## <a name="errors-and-warnings"></a>오류 및 경고  
  다음 목록에서는 오류나 경고가 발생하는 몇 가지 조건을 설명합니다.  
@@ -91,4 +89,3 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 -   지정된 환경 참조가 없는 경우  
   
   
-

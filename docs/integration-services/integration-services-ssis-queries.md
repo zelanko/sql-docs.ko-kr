@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 쿼리 | Microsoft Docs"
+title: "Integration Services(SSIS) 쿼리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.querybuilder.f1
+f1_keywords: sql13.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
   SQL 쿼리는 SQL 실행 태스크, OLE DB 원본, OLE DB 대상 및 조회 변환에서 사용될 수 있습니다. SQL 실행 태스크에서 SQL 문은 데이터베이스 개체 및 데이터를 생성, 업데이트 및 삭제할 수 있으며 저장 프로시저를 실행하고 SELECT 문을 수행할 수 있습니다. OLE DB 원본 및 조회 변환에서 일반적으로 SQL 문은 SELECT 문 또는 EXEC 문입니다. 후자는 결과 집합을 반환하는 저장 프로시저를 가장 자주 실행합니다.  
@@ -38,9 +35,9 @@ ms.lasthandoff: 09/26/2017
  쿼리 유효성 여부를 확인하기 위해 구문 분석을 수행할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 연결을 사용하는 쿼리를 구문 분석하는 경우 쿼리를 구문 분석하고 실행한 다음 구문 분석 결과에 실행 결과(성공 또는 실패)를 할당합니다. 쿼리가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]이외의 데이터로의 연결을 사용하는 경우 문은 구문 분석만 됩니다.  
   
 다음과 같은 방법으로 SQL 문을 제공할 수 있습니다.
-1.   디자이너에 직접 입력 합니다.
-2.   파일에 대 한 연결에는 문이 포함 되어 있으면 지정 합니다.
-3.   문을 포함 하는 변수를 지정 합니다.  
+1.   디자이너에서 직접 입력합니다.
+2.   명령문이 포함된 파일에 대한 연결을 지정합니다.
+3.   명령문이 포함된 변수를 지정합니다.  
   
 ## <a name="direct-input-sql"></a>SQL 직접 입력  
  쿼리 작성기는 SQL 실행 태스크, OLE DB 원본, OLE DB 대상 및 조회 변환의 사용자 인터페이스에서 사용할 수 있습니다. 쿼리 작성기를 사용하면 다음과 같은 이점이 있습니다.  
@@ -90,7 +87,7 @@ ms.lasthandoff: 09/26/2017
   
  Transact-SQL 언어와 해당 구문에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
   
- 쿼리에 변수를 사용하여 입력 매개 변수에 값을 제공하고 출력 매개 변수의 값을 캡처하며 반환 코드를 저장할 수도 있습니다. 패키지에서 사용 하는 쿼리에서 변수를 사용 하는 방법에 대 한 자세한 참조 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md), [OLE DB 원본](../integration-services/data-flow/ole-db-source.md), 및 [Integration services&#40; Ssis&#41; 쿼리](../integration-services/integration-services-ssis-queries.md)합니다. SQL 실행 태스크에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크의 매개 변수 및 반환 코드](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 및 [SQL 실행 태스크의 결과 집합](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)을 참조하세요.  
+ 쿼리에 변수를 사용하여 입력 매개 변수에 값을 제공하고 출력 매개 변수의 값을 캡처하며 반환 코드를 저장할 수도 있습니다. 패키지에서 사용하는 쿼리에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md), [OLE DB 원본](../integration-services/data-flow/ole-db-source.md) 및 [Integration Services&#40;SSIS&#41; 쿼리](../integration-services/integration-services-ssis-queries.md)를 참조하세요. SQL 실행 태스크에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크의 매개 변수 및 반환 코드](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 및 [SQL 실행 태스크의 결과 집합](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)을 참조하세요.  
   
  조회 및 유사 항목 조회 변환에서도 매개 변수와 반환 코드에 변수를 사용할 수 있습니다. OLE DB 원본에 대한 정보는 이러한 두 변환에도 적용됩니다.  
   
@@ -123,4 +120,3 @@ ms.lasthandoff: 09/26/2017
 |**결과** 창|도구 모음에서 **실행** 을 클릭하면 쿼리 결과가 표시됩니다.| 
 
   
-

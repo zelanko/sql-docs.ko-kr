@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b7aeb07c52f7ed00aa5a6a29cdd054258cb62d65
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bb3d3f706bba3e6c0c6cbf88b5c2145e73fdaaeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +34,10 @@ ms.lasthandoff: 09/26/2017
 |Event_message_id|bigint|컨텍스트와 관련된 메시지의 고유 ID입니다.|  
 |Context_depth|int|수준이 증가함에 따라 컨텍스트가 오류에서 더 멀어집니다. 오류가 발생하면 컨텍스트 수준이 1에서 시작합니다. 값 0은 실행이 시작되기 전의 패키지 상태를 나타냅니다.|  
 |Package_path|Nvarchar(max)|컨텍스트 원본의 패키지 경로입니다.|  
-|Context_type|smallint|컨텍스트의 원본인 개체의 유형입니다. 참조는 **주의** 컨텍스트 유형 목록은 섹션.|  
-|Context_source_name|Nvarchar (4000)|컨텍스트의 원본인 개체의 이름입니다.|  
-|Context_source_id|nvarchar(38)|컨텍스트의 원본인 개체의 고유 ID입니다.|  
-|Property_name|Nvarchar (4000)|컨텍스트의 원본에 연결된 속성의 이름입니다.|  
+|Context_type|smallint|컨텍스트의 원본인 개체의 유형입니다. 컨텍스트 유형 목록은 **주의** 섹션을 참조하십시오.|  
+|Context_source_name|Nvarchar(4000)|컨텍스트의 원본인 개체의 이름입니다.|  
+|Context_source_id|Nvarchar(38)|컨텍스트의 원본인 개체의 고유 ID입니다.|  
+|Property_name|Nvarchar(4000)|컨텍스트의 원본에 연결된 속성의 이름입니다.|  
 |Property_value|Sql_variant|컨텍스트의 원본에 연결된 속성 값입니다.|  
   
 ## <a name="remarks"></a>주의  
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/26/2017
 |-|-|-|  
 |컨텍스트 유형 값|유형 이름|Description|  
 |10|태스크|오류가 발생할 당시의 태스크 상태입니다.|  
-|20|파이프라인|파이프라인 구성 요소에서 오류가 발생 했습니다: 원본, 대상 또는 변환 구성 요소입니다.|  
+|20|파이프라인|파이프라인 구성 요소의 오류: 원본, 대상 또는 변환 구성 요소.|  
 |30|시퀀스|시퀀스의 상태입니다.|  
 |40|For 루프|For Loop의 상태입니다.|  
 |50|Foreach 루프|Foreach Loop의 상태입니다.|  
@@ -62,9 +60,8 @@ ms.lasthandoff: 09/26/2017
   
 -   작업에 대한 READ 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할입니다.  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할입니다.  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
   
-

@@ -8,27 +8,24 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.variables.f1
 - sql13.dts.designer.variableoptionswindow.f1
-helpviewer_keywords:
-- Variables Window dialog box
+helpviewer_keywords: Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="variables-window"></a>변수 창
   **변수** 창을 사용하여 사용자 정의 변수를 생성 및 수정하고 시스템 변수를 볼 수 있습니다.  
@@ -120,8 +117,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>관련 항목:  
  [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services &#40; Ssis&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [패키지 실행을 위한 덤프 파일 생성](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

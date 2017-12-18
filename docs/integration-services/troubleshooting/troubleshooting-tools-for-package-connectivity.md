@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 11c80c7ecc8fc8598b1079458d83773db6e68f06
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>패키지 연결 문제 해결 도구
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 패키지와 패키지가 데이터를 추출 및 로드하는 데이터 원본 간 연결 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/03/2017
   
     -   OLE DB 연결 관리자, OLE DB 원본 및 OLE DB 대상  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]연결 관리자 및 Ado.net 원본  
+    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 및 ADO.NET 원본  
   
     -   SQL 실행 태스크  
   
@@ -81,4 +79,3 @@ ms.lasthandoff: 08/03/2017
  [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

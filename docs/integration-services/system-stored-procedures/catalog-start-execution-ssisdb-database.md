@@ -1,5 +1,5 @@
 ---
-title: "catalog.start_execution (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.start_execution(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +36,16 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
   
 ## <a name="arguments"></a>인수  
  [@execution_id =] *execution_id*  
- 실행 인스턴스의 고유 식별자입니다. *execution_id* 은 **bigint**합니다.
+ 실행 인스턴스의 고유 식별자입니다. *execution_id*는 **bigint**입니다.
  
  [@retry_count =] *retry_count*  
- 실행이 실패 하면 재시도 횟수입니다. 실행 중인 스케일 아웃 하는 경우에 적용이 됩니다. 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 해당 값을 0으로 설정 됩니다. *retry_count* 은 **int**합니다.
+ 실행이 실패할 경우 다시 시도 횟수입니다. Scale Out에서 실행인 경우에만 적용됩니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 0으로 설정됩니다. *retry_count*는 **int**입니다.
   
 ## <a name="remarks"></a>주의  
- 실행은 단일 인스턴스의 패키지 실행 시 패키지에서 사용 되는 매개 변수 값을 지정 하는 데 사용 됩니다. 실행 인스턴스가 생성된 후부터 시작되기 전까지 해당 프로젝트가 다시 배포될 수도 있습니다. 이 경우 실행 인스턴스는 오래 된 프로젝트를 참조 합니다. 이 잘못 된 참조 하면 저장된 프로시저에 실패 합니다.  
+ 실행은 단일 인스턴스의 패키지 실행 중에 패키지에서 사용할 매개 변수 값을 지정하는 데 사용됩니다. 실행 인스턴스가 생성된 후부터 시작되기 전까지 해당 프로젝트가 다시 배포될 수도 있습니다. 이 경우 실행 인스턴스는 오래된 프로젝트를 참조합니다. 이 잘못된 참조로 인해 저장 프로시저가 실패합니다.  
   
 > [!NOTE]  
->  실행은 한 번만 시작할 수 있습니다. 생성 됨 상태 여야 합니다 실행 인스턴스를 시작 하려면 (값 `1` 에 **상태** 의 열은 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 보기).  
+>  실행은 한 번만 시작할 수 있습니다. 실행 인스턴스를 시작하려면 해당 상태가 생성됨 상태([catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰의 **status** 열 값 `1`에 해당)여야 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 catalog.create_execution을 호출하여 Child1.dtsx 패키지에 대한 실행 인스턴스를 만듭니다. Integration Services Project1에 패키지가 포함되어 있습니다. 이 예에서는 catalog.set_execution_parameter_value를 호출하여 Parameter1, Parameter2 및 LOGGING_LEVEL 매개 변수에 값을 설정합니다. 이 예에서는 catalog.start_execution을 호출하여 실행 인스턴스를 시작합니다.  
@@ -77,9 +75,9 @@ GO
   
 -   실행 인스턴스에 대한 READ 및 MODIFY 권한, 프로젝트에 대한 READ 및 EXECUTE 권한, 해당되는 경우 참조된 환경에 대한 READ 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 ## <a name="errors-and-warnings"></a>오류 및 경고  
  다음 목록에서는 오류나 경고가 발생하는 몇 가지 조건을 설명합니다.  
@@ -97,4 +95,3 @@ GO
 -   실행 인스턴스와 연결된 프로젝트 버전이 오래된 경우(최신 버전의 프로젝트만 실행할 수 있음)  
   
   
-

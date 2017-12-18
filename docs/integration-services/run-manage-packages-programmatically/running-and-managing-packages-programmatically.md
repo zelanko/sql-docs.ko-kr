@@ -1,5 +1,5 @@
 ---
-title: "패키지 실행 및 관리 프로그래밍 방식으로 | Microsoft Docs"
+title: "프로그래밍 방식으로 패키지 실행 및 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 206411bed262d99b043cf667b9699a6fbeb85981
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6affcd02d932b1e382268f328a6e5c6abf8b177b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="running-and-managing-packages-programmatically"></a>프로그래밍 방식으로 패키지 실행 및 관리
   개발 환경 외부에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리 및 실행해야 하는 경우 패키지를 프로그래밍 방식으로 조작할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
  단 몇 줄의 코드를 작성하여 클라이언트 응용 프로그램에서 기존 패키지를 로드하고 실행할 수 있습니다.  
   
- 이 섹션에서는 기존 패키지를 프로그래밍 방식으로 실행하는 방법과 다른 응용 프로그램에서 데이터 흐름의 출력에 액세스하는 방법을 설명합니다. 고급 프로그래밍 방법을 만들 수 있습니다는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 줄씩 항목에 설명 된 대로 [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)합니다.  
+ 이 섹션에서는 기존 패키지를 프로그래밍 방식으로 실행하는 방법과 다른 응용 프로그램에서 데이터 흐름의 출력에 액세스하는 방법을 설명합니다. 고급 프로그래밍 옵션인 [프로그래밍 방식으로 패키지 작성](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 항목의 설명에 따라 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 프로그래밍 방식으로 한 줄씩 만들 수 있습니다.  
   
  이 섹션에서는 저장된 패키지, 실행 중인 패키지 및 패키지 역할을 관리하기 위해 프로그래밍 방식으로 수행할 수 있는 기타 관리 태스크도 설명합니다.  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
  [프로그래밍 방식으로 실행 중인 패키지 관리](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
  현재 실행 중인 패키지를 나열하고 해당 속성을 조사하고 실행 중인 패키지를 중지하는 방법에 대해 설명합니다.  
   
- [프로그래밍 방식으로 패키지 역할 관리 &#40; SSIS 서비스 &#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
+ [프로그래밍 방식으로 패키지 역할 관리&#40;SSIS 서비스&#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  패키지 또는 폴더에 할당된 역할에 대한 정보를 가져오거나 설정하는 방법에 대해 설명합니다.  
   
 ## <a name="reference"></a>참조  
@@ -90,4 +87,3 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

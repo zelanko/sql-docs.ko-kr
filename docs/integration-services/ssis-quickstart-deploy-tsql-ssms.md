@@ -1,5 +1,5 @@
 ---
-title: "Transact SQL (SSMS)와 SSIS 프로젝트 배포 | Microsoft Docs"
+title: "Transact-SQL(SSMS)을 사용하여 SSIS 프로젝트 배포 | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,67 +8,65 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: e97fb20f5b0ee10aa3e5de690676b7e0bb797b4c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 068f54a757e16c7b44760cbb69dee4a4d5cb70ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>TRANSACT-SQL로 SSMS에서 SSIS 프로젝트 배포
+# <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL을 사용하여 SSMS에서 SSIS 프로젝트 배포
 
-이 빠른 시작에는 SQL Server Management Studio (SSMS)를 사용 하 여 SSIS 카탈로그 데이터베이스에 연결한 다음 TRANSACT-SQL 문을 사용 하 여 SSIS 카탈로그에 SSIS 프로젝트를 배포 하는 방법을 보여 줍니다. 
+이 빠른 시작에서는 SSMS(SQL Server Management Studio)를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Transact-SQL 문을 사용하여 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여 줍니다. 
 
 > [!NOTE]
-> SSMS로 Azure SQL 데이터베이스 서버에 연결 하는 경우에이 문서에 설명 된 메서드는 사용할 수 없습니다. `catalog.deploy_project` 프로시저에 대 한 경로 저장된 프로시저는 `.ispac` (온-프레미스) 로컬 파일 시스템의 파일입니다.
+> SSMS를 사용하여 Azure SQL Database 서버에 연결하는 경우에는 이 문서에서 설명하는 방법을 사용할 수 없습니다. `catalog.deploy_project` 저장 프로시저에는 로컬(온-프레미스) 파일 시스템의 `.ispac` 파일에 대한 경로가 필요합니다.
 
-SQL Server Management Studio는 SQL Server를 SQL 데이터베이스에서 모든 SQL 인프라를 관리 하기 위한 통합된 환경입니다. SSMS에 대 한 자세한 내용은 참조 하십시오. [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)합니다.
+SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS에 대한 자세한 내용은 [SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)를 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-시작 하기 전에 SQL Server Management Studio의 최신 버전 지정 했는지 확인 합니다. SSMS를 다운로드 하려면 [다운로드 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
+시작하기 전에 최신 버전의 SQL Server Management Studio가 설치되어 있는지 확인합니다. SSMS를 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>SSIS 카탈로그 데이터베이스에 연결
 
-SQL Server Management Studio를 사용 하 여 SSIS 카탈로그에 대 한 연결을 설정 합니다. 
+SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결을 설정합니다. 
 
 > [!NOTE]
-> Azure SQL 데이터베이스 서버는 포트 1433에서 수신합니다. 회사 방화벽 내에서 Azure SQL 데이터베이스 서버에 연결 하려는 경우에이 포트에 성공적으로 연결 하면 회사 방화벽에서 열려 있어야 합니다.
+> Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
 
 1. SQL Server Management Studio를 엽니다.
 
-2. 에 **서버에 연결** 대화 상자에서 다음 정보를 입력 합니다.
+2. **서버에 연결** 대화 상자에 다음 정보를 입력합니다.
 
-   | 설정       | 제안 된 값 | 추가 정보 | 
+   | 설정       | 제안된 값 | 추가 정보 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
-   | **서버 이름** | 정규화 된 서버 이름 |  |
-   | **인증** | SQL Server 인증(SQL Server Authentication) | 이 퀵 스타트의 SQL 인증을 사용 합니다. |
+   | **서버 이름** | 정규화된 서버 이름 |  |
+   | **인증** | SQL Server 인증(SQL Server Authentication) | 이 빠른 시작에서는 SQL 인증을 사용합니다. |
    | **로그인** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
-   | **암호** | 서버 관리자 계정의 암호 | 이 서버를 만들 때 지정한 암호입니다. |
+   | **암호** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
 
-3. **연결**을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
+3. **연결**을 클릭합니다. SSMS에서 [개체 탐색기] 창이 열립니다. 
 
-4. 개체 탐색기에서 확장 **Integration Services 카탈로그** 펼친 다음 **SSISDB** SSIS 카탈로그 데이터베이스에서 개체를 볼 수 있습니다.
+4. [개체 탐색기]에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
 
-## <a name="run-the-t-sql-code"></a>T-SQL 코드를 실행 합니다.
-SSIS 프로젝트를 배포 하려면 다음 TRANSACT-SQL 코드를 실행 합니다.
+## <a name="run-the-t-sql-code"></a>T-SQL 코드 실행
+다음 Transact-SQL 코드를 실행하여 SSIS 프로젝트를 배포합니다.
 
-1.  SSMS에서 새 쿼리 창을 열고 다음 코드를 붙여 넣습니다.
+1.  SSMS에서 새 쿼리 창을 열고 다음 코드를 붙여넣습니다.
 
-2.  매개 변수 값을 업데이트는 `catalog.deploy_project` 시스템에 대 한 프로시저를 저장 합니다.
+2.  시스템에 대한 `catalog.deploy_project` 저장 프로시저의 매개 변수 값을 업데이트합니다.
 
-3.  SSISDB가 현재 데이터베이스에 있는지 확인 합니다.
+3.  SSISDB가 현재 데이터베이스인지 확인합니다.
 
 4.  스크립트를 실행합니다.
 
-5. 개체 탐색기에서의 내용을 새로 고칩니다 **SSISDB** 필요한 경우 배포 된 프로젝트를 확인 합니다.
+5. [개체 탐색기]에서 필요한 경우 **SSISDB**의 내용을 새로 고치고 배포한 프로젝트를 확인합니다.
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)
@@ -83,17 +81,16 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
 ```
 
 ## <a name="next-steps"></a>다음 단계
-- 패키지를 배포 하는 다른 방법을 고려 합니다.
-    - [SSMS로 SSIS 패키지 배포](./ssis-quickstart-deploy-ssms.md)
-    - [TRANSACT-SQL (VS Code)를 SSIS 패키지 배포](ssis-quickstart-deploy-tsql-vscode.md)
+- 패키지를 배포하는 다른 방법을 고려합니다.
+    - [SSMS를 사용하여 SSIS 패키지 배포](./ssis-quickstart-deploy-ssms.md)
+    - [Transact-SQL(VS Code)을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-tsql-vscode.md)
     - [명령 프롬프트에서 SSIS 패키지 배포](./ssis-quickstart-deploy-cmdline.md)
-    - [PowerShell과 함께 SSIS 패키지 배포](ssis-quickstart-deploy-powershell.md)
-    - [C#과 함께 SSIS 패키지 배포](./ssis-quickstart-deploy-dotnet.md) 
-- 배포 된 패키지를 실행 합니다. 패키지를 실행 하려면 여러 가지 도구와 언어를 선택할 수 있습니다. 자세한 내용은 다음 문서를 참조 합니다.
-    - [SSMS로는 SSIS 패키지를 실행 합니다.](./ssis-quickstart-run-ssms.md)
-    - [Transact SQL (SSMS)를 SSIS 패키지를 실행 합니다.](./ssis-quickstart-run-tsql-ssms.md)
-    - [Transact-sql (VS Code)는 SSIS 패키지를 실행 합니다.](ssis-quickstart-run-tsql-vscode.md)
+    - [PowerShell을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-powershell.md)
+    - [C#을 사용하여 SSIS 패키지 배포](./ssis-quickstart-deploy-dotnet.md) 
+- 배포된 패키지를 실행합니다. 패키지를 실행하려면 여러 도구와 언어 중에서 선택할 수 있습니다. 자세한 내용은 다음 문서를 참조하세요.
+    - [SSMS를 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-ssms.md)
+    - [Transact-SQL(SSMS)을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-tsql-ssms.md)
+    - [Transact-SQL(VS Code)을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-tsql-vscode.md)
     - [명령 프롬프트에서 SSIS 패키지 실행](./ssis-quickstart-run-cmdline.md)
-    - [PowerShell에서 SSIS 패키지 실행](ssis-quickstart-run-powershell.md)
-    - [C#과 함께 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md) 
-
+    - [PowerShell을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-powershell.md)
+    - [C#을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md) 

@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,30 +24,29 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-source-component"></a>사용자 지정 원본 구성 요소 개발
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 개발자가 사용자 지정 데이터 원본에 연결 하 고 데이터 흐름 태스크의 다른 구성 요소에 이러한 원본에서 데이터를 제공할 수 있는 원본 구성 요소를 작성할 수 있습니다. 사용자 지정 원본을 만드는 기능은 기존 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본 중 하나를 사용하여 액세스할 수 없는 데이터 원본에 연결해야 하는 경우에 유용합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 개발자가 사용자 지정 데이터 원본에 연결하고 해당 원본의 데이터를 데이터 흐름 태스크의 다른 구성 요소에 제공할 수 있는 원본 구성 요소를 작성할 수 있습니다. 사용자 지정 원본을 만드는 기능은 기존 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본 중 하나를 사용하여 액세스할 수 없는 데이터 원본에 연결해야 하는 경우에 유용합니다.  
   
  원본 구성 요소에는 하나 이상의 출력이 있으며 입력은 없습니다. 디자인 타임에 원본 구성 요소는 연결을 만들어 구성하고, 외부 데이터 원본에서 열 메타데이터를 읽고, 외부 데이터 원본을 기반으로 원본의 출력 열을 구성하는 데 사용됩니다. 실행 중 원본 구성 요소는 외부 데이터 원본에 연결하고 출력 버퍼에 행을 추가합니다. 그런 다음 데이터 흐름 태스크에서는 다운스트림 구성 요소에 이 데이터 행 버퍼를 제공합니다.  
   
- 데이터 흐름 구성 요소 개발의 일반적인 개요를 참조 하십시오. [사용자 지정 데이터 흐름 구성 요소 개발](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)합니다.  
+ 데이터 흐름 구성 요소 개발에 대한 일반적인 개요는 [사용자 지정 데이터 흐름 구성 요소 개발](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)을 참조하세요.  
   
 ## <a name="design-time"></a>디자인 타임  
  원본 구성 요소의 디자인 타임 기능을 구현하려면 외부 데이터 원본에 대한 연결을 지정하고, 데이터 원본을 반영하는 출력 열을 추가 및 구성하고, 구성 요소를 실행할 준비가 되었는지 확인해야 합니다. 정의에 따라 원본 구성 요소에는 입력이 없으며 하나 이상의 비동기 출력이 있습니다.  
   
 ### <a name="creating-the-component"></a>구성 요소 만들기  
- 원본 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 원본 구성 요소에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 속성의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 컬렉션에 요소를 추가하여 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 구성 요소에서 사용하는 패키지에 연결 관리자에 대한 참조를 저장하는 것이고 다른 하나는 디자이너에 연결 관리자가 필요함을 알리는 것입니다. 경우는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 를 컬렉션에 추가 되었습니다는 **고급 편집기** 표시는 **연결 속성** 탭을 선택 하거나 패키지에 대 한 연결을 만들 수 있습니다.  
+ 원본 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 원본 구성 요소에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 속성의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 컬렉션에 요소를 추가하여 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 구성 요소에서 사용하는 패키지에 연결 관리자에 대한 참조를 저장하는 것이고 다른 하나는 디자이너에 연결 관리자가 필요함을 알리는 것입니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>을 컬렉션에 추가하면 **고급 편집기**에 **연결 속성** 탭이 표시되어 사용자가 패키지에서 연결을 선택하거나 만들 수 있습니다.  
   
  다음 코드 예에서는 출력을 추가하고 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 개체를 추가하는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>의 구현을 보여 줍니다.  
   
@@ -185,10 +182,10 @@ End Sub
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|0보다 크고 28보다 작거나 같으며 Precision보다 작습니다.|1보다 크거나 같고 38보다 작거나 같습니다.|0|  
 |DT_BYTES|0보다 큽니다.|0|0|0|  
-|DT_STR|0 보다 작은 8000 보다 크고 합니다.|0|0|0이 아니며 올바른 코드 페이지가 아닙니다.|  
+|DT_STR|0보다 크고 8000보다 작습니다.|0|0|0이 아니며 올바른 코드 페이지가 아닙니다.|  
 |DT_WSTR|0보다 크고 4000보다 작습니다.|0|0|0|  
   
- 데이터 형식 속성에 대한 제한 사항은 출력 열의 데이터 형식을 기준으로 하므로 관리되는 형식을 사용할 때는 올바른 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식을 선택해야 합니다. 세 가지 도우미 메서드를 제공 하는 기본 클래스 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>, 및 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, 선택 하는 관리 되는 구성 요소 개발자를 지원 하기 위해 프로그램 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 관리 되는 형식이 지정 된 데이터 형식입니다. 이러한 메서드는 관리되는 데이터 형식을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식으로 변환하거나 그 반대로 변환합니다.  
+ 데이터 형식 속성에 대한 제한 사항은 출력 열의 데이터 형식을 기준으로 하므로 관리되는 형식을 사용할 때는 올바른 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식을 선택해야 합니다. 기본 클래스는 관리되는 구성 요소 개발자가 관리되는 형식이 지정된 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식을 선택하는 데 도움이 되는 세 개의 도우미 메서드(<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>)를 제공합니다. 이러한 메서드는 관리되는 데이터 형식을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식으로 변환하거나 그 반대로 변환합니다.  
   
  다음 코드 예에서는 테이블의 스키마를 기반으로 구성 요소의 출력 열 컬렉션을 채우는 방법을 보여 줍니다. 기본 클래스의 도우미 메서드는 열의 데이터 형식을 설정하는 데 사용되며 종속 속성은 해당 데이터 형식에 따라 설정됩니다.  
   
@@ -369,9 +366,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>구성 요소 유효성 검사  
- 원본 구성 요소의 유효성을 검사하고 해당 출력 열 컬렉션에 정의된 열과 외부 데이터 원본에 있는 열이 일치하는지 확인해야 합니다. 때로는 연결이 끊어진 상태이거나 오랜 서버 왕복을 피하는 것이 바람직할 때와 같이 외부 데이터 원본을 기준으로 출력 열의 유효성을 검사하는 것이 불가능한 경우가 있습니다. 이러한 경우에도 출력 개체의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A>을 사용하여 출력의 열에 대한 유효성을 검사할 수 있습니다. 자세한 내용은 참조 [유효성을 검사 하는 데이터 흐름 구성 요소](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)합니다.  
+ 원본 구성 요소의 유효성을 검사하고 해당 출력 열 컬렉션에 정의된 열과 외부 데이터 원본에 있는 열이 일치하는지 확인해야 합니다. 때로는 연결이 끊어진 상태이거나 오랜 서버 왕복을 피하는 것이 바람직할 때와 같이 외부 데이터 원본을 기준으로 출력 열의 유효성을 검사하는 것이 불가능한 경우가 있습니다. 이러한 경우에도 출력 개체의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A>을 사용하여 출력의 열에 대한 유효성을 검사할 수 있습니다. 자세한 내용은 [데이터 흐름 구성 요소에 대한 유효성 검사](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)를 참조하세요.  
   
- 이 컬렉션은 입력 개체와 출력 개체 모두에 있으며 외부 데이터 원본의 열로 이 컬렉션을 채울 수 있습니다. 이 컬렉션을 사용 하 여 출력 열의 유효성을 검사할 수 있습니다 때 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 오프 라인 구성 요소는 연결이 끊어졌기 때나 때는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성은 **false**합니다. 먼저 출력 열이 만들어짐과 동시에 컬렉션이 채워져 있어야 합니다. 외부 메타데이터 열은 처음에는 출력 열과 일치하므로 컬렉션에 외부 메타데이터 열을 추가하는 것은 비교적 쉽습니다. 열의 데이터 형식 속성은 이미 올바르게 설정되어 있어야 하며 이 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 개체에 직접 복사할 수 있습니다.  
+ 이 컬렉션은 입력 개체와 출력 개체 모두에 있으며 외부 데이터 원본의 열로 이 컬렉션을 채울 수 있습니다. 이 컬렉션은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 오프라인 상태이거나, 구성 요소의 연결이 끊어졌거나, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 **false**일 때 출력 열의 유효성을 검사하는 데 사용할 수 있습니다. 먼저 출력 열이 만들어짐과 동시에 컬렉션이 채워져 있어야 합니다. 외부 메타데이터 열은 처음에는 출력 열과 일치하므로 컬렉션에 외부 메타데이터 열을 추가하는 것은 비교적 쉽습니다. 열의 데이터 형식 속성은 이미 올바르게 설정되어 있어야 하며 이 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 개체에 직접 복사할 수 있습니다.  
   
  다음 예제 코드에서는 새로 만들어진 출력 열을 기반으로 외부 메타데이터 열을 추가합니다. 출력 열은 이미 만들어진 것으로 가정합니다.  
   
@@ -678,7 +675,6 @@ End Namespace
   
 ## <a name="see-also"></a>관련 항목:  
  [사용자 지정 대상 구성 요소 개발](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
- [스크립트 구성 요소를 사용 하 여 원본 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
+ [스크립트 구성 요소를 사용하여 원본 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
-

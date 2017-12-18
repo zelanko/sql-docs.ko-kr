@@ -1,5 +1,5 @@
 ---
-title: "catalog.operation_messages (SSISDB 데이터베이스) | Microsoft Docs"
+title: "catalog.operation_messages(SSISDB 데이터베이스) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 235e9896cbf075bdc26e3df120b23091b8e82d6d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +35,11 @@ ms.lasthandoff: 09/26/2017
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|메시지의 고유 식별자(ID)입니다.|  
 |operation_id|**bigint**|작업의 고유 ID입니다.|  
-|message_time|**(7)**|메시지가 생성된 시간입니다.|  
+|message_time|**datetimeoffset(7)**|메시지가 생성된 시간입니다.|  
 |message_type|**smallint**|표시된 메시지의 유형입니다.|  
 |message_source_type|**smallint**|메시지 원본 유형의 ID입니다.|  
 |message|**nvarchar(max)**|메시지의 텍스트입니다.|  
-|extended_info_id|**bigint**|작업 메시지 관련 추가 정보의 ID에서 발견 된 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 보기.|  
+|extended_info_id|**bigint**|작업 메시지와 관련된 추가 정보의 ID는 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 뷰에서 확인할 수 있습니다.|  
   
 ## <a name="remarks"></a>주의  
  이 뷰는 카탈로그에서 작업하는 동안 기록된 각 메시지에 대한 행을 표시합니다. 메시지는 서버, 패키지 실행 프로세스 또는 실행 엔진에서 생성할 수 있습니다.  
@@ -84,12 +82,11 @@ ms.lasthandoff: 09/26/2017
   
 -   작업에 대한 READ 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 > [!NOTE]  
 >  서버에서 작업을 수행할 권한이 있으면 작업에 대한 정보를 볼 수 있는 권한도 있습니다. 행 수준 보안이 적용됩니다. 따라서 볼 수 있는 권한이 있는 행만 표시됩니다.  
   
   
-

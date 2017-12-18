@@ -1,5 +1,5 @@
 ---
-title: "SSIS는 ETL 패키지를 만드는 방법 | Microsoft Docs"
+title: "SSIS에서 ETL 패키지를 만드는 방법 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 2005755d073f7bb4950268e0fba827860491d1c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b14d05d686b26aaad7e6de24c9b445e0c4b1abf7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL 패키지를 만드는 방법
 
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [SSIS 자습서: 간단한 ETL 패키지 만들기](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx)합니다.
+ > 이전 버전의 SQL Server와 관련된 내용은 [SSIS 자습서: 간단한 ETL 패키지 만들기](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx)를 참조하세요.
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)는 데이터 웨어하우징을 위한 ETL(추출, 변환 및 로드) 패키지를 비롯하여 고성능 데이터 통합 솔루션을 작성하기 위한 플랫폼입니다.(!!) SSIS에는 패키지를 빌드하고 디버깅하기 위한 그래픽 도구 및 마법사, FTP 작업과 같은 워크플로 함수를 수행하고 SQL 문을 실행하며 전자 메일 메시지를 보내기 위한 태스크, 데이터 추출 및 로드를 위한 데이터 원본과 대상, 데이터 삭제, 집계, 병합 및 복사를 위한 변환, 패키지 실행 및 저장을 관리하기 위한 관리 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델 프로그래밍을 위한 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
   
@@ -52,7 +49,7 @@ ms.lasthandoff: 08/03/2017
   
 이 자습서를 사용하려면 시스템에 다음 구성 요소가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 **AdventureWorksDW2012** 데이터베이스입니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [SQL Server 2012용 Adventure Works](http://go.microsoft.com/fwlink/?LinkId=275026)를 참조하십시오.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AdventureWorksDW2012 **데이터베이스가 있는** . 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [SQL Server 2012용 Adventure Works](http://go.microsoft.com/fwlink/?LinkId=275026)를 참조하십시오.  
   
     > [!IMPORTANT]  
     > 데이터베이스(\*.mdf 파일)에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 기본적으로 .ldf 파일을 검색합니다. **데이터베이스 연결** 대화 상자에서 확인을 클릭하기 전에 .ldf 파일을 수동으로 제거해야 합니다.  
@@ -88,4 +85,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "데이터 흐름 구성 요소에 대 한 사용자 인터페이스 개발 | Microsoft Docs"
+title: "데이터 흐름 구성 요소의 사용자 인터페이스 개발 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -27,25 +25,24 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5a1e9773d91303335b616159f70de7aa0ddf966e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ce13ece34803cd0f30c0ec5633e59b6dbb1151cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>데이터 흐름 구성 요소의 사용자 인터페이스 개발
   구성 요소 개발자는 구성 요소를 편집할 때 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 표시되는 사용자 지정 사용자 인터페이스를 구성 요소에 제공할 수 있습니다. 사용자 지정 사용자 인터페이스를 구현하면 해당 구성 요소가 데이터 흐름 태스크에 추가되거나 데이터 흐름 태스크에서 삭제될 때와 해당 구성 요소에 대한 도움말이 요청될 때 이에 대한 알림을 받을 수 있습니다.  
   
- 구성 요소에 사용자 지정 사용자 인터페이스를 제공하지 않는 경우에도 최종 사용자는 고급 편집기를 사용하여 구성 요소와 해당 구성 요소의 사용자 지정 속성을 구성할 수 있습니다. 고급 편집기에서는 적절할 때 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 속성을 사용하여 사용자 지정 속성 값을 적절하게 편집할 수 있습니다. 자세한 내용은 "사용자 지정 속성 만들기"를 참조 [데이터 흐름 구성 요소의 디자인 타임 메서드](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)합니다.  
+ 구성 요소에 사용자 지정 사용자 인터페이스를 제공하지 않는 경우에도 최종 사용자는 고급 편집기를 사용하여 구성 요소와 해당 구성 요소의 사용자 지정 속성을 구성할 수 있습니다. 고급 편집기에서는 적절할 때 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 속성을 사용하여 사용자 지정 속성 값을 적절하게 편집할 수 있습니다. 자세한 내용은 [데이터 흐름 구성 요소의 디자인 타임 메서드](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)의 "사용자 지정 속성 만들기"를 참조하세요.  
   
 ## <a name="setting-the-uitypename-property"></a>UITypeName 속성 설정  
- 사용자 지정 사용자 인터페이스를 개발하려면 개발자는 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 인터페이스를 구현하는 클래스의 이름으로 설정해야 합니다. 이 속성을 설정 하는 구성 요소에 의해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 로드 하 고 사용자 지정 사용자 인터페이스를 호출 하 여에서 구성 요소를 편집할 때 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너입니다.  
+ 사용자 지정 사용자 인터페이스를 개발하려면 개발자는 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 인터페이스를 구현하는 클래스의 이름으로 설정해야 합니다. 구성 요소에 의해 이 속성이 설정된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 구성 요소가 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 편집될 때 사용자 지정 사용자 인터페이스를 로드하고 호출합니다.  
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> 속성은 해당 형식의 정규화된 이름을 식별하는 쉼표로 구분된 문자열입니다. 다음 목록에서는 형식 식별 요소를 순서대로 보여 줍니다.  
   
@@ -94,10 +91,10 @@ End Class
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스를 통해 직접 구성 요소를 수정할 수도 있지만 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> 메서드를 사용하여 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A>의 인스턴스를 만드는 것이 더 좋습니다. 이 인터페이스를 사용하여 직접 구성 요소를 편집하면 구성 요소 보호를 위한 유효성 검사가 무시됩니다. 그러나 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper>를 통해 구성 요소의 디자인 타임 인스턴스를 사용하면 구성 요소에서 해당 구성 요소에 대한 변경을 제어할 수 있다는 장점이 있습니다.  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 메서드의 반환 값은 구성 요소의 변경 내용이 지속되는지 삭제되는지를 결정합니다. 이 메서드가 반환 될 때 **false**, 모든 변경 내용이 삭제 됩니다. **true** 구성 요소에 변경 내용을 유지 하 고 패키지 저장 하는 것으로 표시 합니다.  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 메서드의 반환 값은 구성 요소의 변경 내용이 지속되는지 삭제되는지를 결정합니다. 이 메서드가 **false**를 반환하면 모든 변경 내용이 삭제되고, **true**를 반환하면 구성 요소의 변경 내용이 유지되고 패키지가 저장되어야 하는 것으로 표시됩니다.  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS 디자이너의 서비스 사용  
- **IServiceProvider** 의 매개 변수는 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 의 다음 서비스에 대 한 액세스를 제공 하는 메서드 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너:  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 메서드의 **IServiceProvider** 매개 변수는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 다음 서비스에 액세스할 수 있도록 합니다.  
   
 |서비스|Description|  
 |-------------|-----------------|  
@@ -291,8 +288,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용자 지정 데이터 흐름 구성 요소 만들기](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 686b40e7e1ad7f7843bee5af3295fdf394538f63
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 20b136348f21d6b688d86039e96c5f16f1fa7d10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,36 +40,36 @@ catalog.add_data_tap [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @execution_id =] *execution_id*  
- 패키지를 포함한 실행의 실행 ID입니다. *execution_id* 는 **bigint**합니다.  
+ [ @execution_id = ] *execution_id*  
+ 패키지를 포함한 실행의 실행 ID입니다. *execution_id*는 **bigint**입니다.  
   
- [ @task_package_path =] *task_package_path*  
- 데이터 흐름 태스크의 패키지 경로입니다. **PackagePath** 데이터 흐름 태스크에 대 한 속성의 경로 지정 합니다. 경로는 대/소문자를 구분합니다. 패키지 경로 찾으려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 데이터 흐름 태스크를 마우스 오른쪽 단추로 누른 **속성**합니다. **PackagePath** 속성에 표시 된 **속성** 창.  
+ [ @task_package_path = ] *task_package_path*  
+ 데이터 흐름 태스크의 패키지 경로입니다. 데이터 흐름 태스크에 대한 **PackagePath** 속성에서 이 경로를 지정합니다. 경로는 대/소문자를 구분합니다. 패키지 경로를 찾으려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 데이터 흐름 태스크를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **PackagePath** 속성이 **속성** 창에 표시됩니다.  
   
- *task_package_path* 는 **nvarchar (max)**합니다.  
+ *task_package_path*는 **nvarchar(max)**입니다.  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- 데이터 흐름 경로의 ID 문자열입니다. 경로는 두 개의 데이터 흐름 구성 요소를 연결합니다. **IdentificationString** 속성의 경로 대 한 문자열을 지정 합니다.  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ 데이터 흐름 경로의 ID 문자열입니다. 경로는 두 개의 데이터 흐름 구성 요소를 연결합니다. 경로에 대한 **IdentificationString** 속성에서 이 문자열을 지정합니다.  
   
- id 문자열을 찾으려고 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 두 데이터 흐름 구성 요소와 클릭 사이의 경로 마우스 오른쪽 단추로 클릭 **속성**합니다. **IdentificationString** 속성에 표시 된 **속성** 창.  
+ ID 문자열을 찾으려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 두 데이터 흐름 구성 요소 사이의 경로를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **IdentificationString** 속성이 **속성** 창에 표시됩니다.  
   
- *dataflow_path_id_string* 는 **nvarchar (4000)**합니다.  
+ *dataflow_path_id_string*은 **nvarchar(4000)**입니다.  
   
- [ @data_filename =] *data_filename*  
+ [ @data_filename = ] *data_filename*  
  탭 데이터를 저장하는 파일의 이름입니다. 데이터 흐름 태스크가 Foreach 루프 또는 For 루프 컨테이너 내부에서 실행되는 경우 각 루프 반복에 대한 탭 데이터가 개별 파일에 저장됩니다. 각 파일은 반복에 해당하는 번호가 접두사로 붙습니다.  
   
- 기본적으로 파일에 저장 됩니다는 \< *드라이브*>: files\microsoft SQL Server\130\DTS\DataDumps 폴더입니다.  
+ 파일은 기본적으로 \<*드라이브*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps 폴더에 저장됩니다.  
   
- *data_filename* 는 **nvarchar (4000)**합니다.  
+ *data_filename*은 **nvarchar(4000)**입니다.  
   
- [ @max_rows =] *max_rows*  
- 데이터 탭 도중 캡처하는 행 수입니다. 이 값을 지정하지 않으면 모든 행이 캡처됩니다. *max_rows* 는 **int**합니다.  
+ [ @max_rows = ] *max_rows*  
+ 데이터 탭 도중 캡처하는 행 수입니다. 이 값을 지정하지 않으면 모든 행이 캡처됩니다. *max_rows*는 **int**입니다.  
   
- [ @data_tap_id =] *data_tap_id*  
- 데이터 탭의 ID를 반환합니다. *data_tap_id* 는 **bigint**합니다.  
+ [ @data_tap_id = ] *data_tap_id*  
+ 데이터 탭의 ID를 반환합니다. *data_tap_id*는 **bigint**입니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 데이터 흐름 태스크 `'Paths[OLE DB Source.OLE DB Source Output]`의 데이터 흐름 경로 `\Package\Data Flow Task`에 데이터 탭을 만듭니다. 탭된 데이터에 저장 되는 `output0.txt` DataDumps 폴더에서 파일 (\<*드라이브*>: files\microsoft SQL Server\130\DTS\DataDumps).  
+ 다음 예에서는 데이터 흐름 태스크 `'Paths[OLE DB Source.OLE DB Source Output]`의 데이터 흐름 경로 `\Package\Data Flow Task`에 데이터 탭을 만듭니다. 탭 데이터는 DataDumps 폴더(\<*드라이브*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps)의 `output0.txt` 파일에 저장됩니다.  
   
 ```sql
 Declare @execution_id bigint  
@@ -85,7 +83,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ```  
   
 ## <a name="remarks"></a>주의  
- 데이터 탭을 추가 하려면 실행 인스턴스가 생성 됨 상태 여야 합니다 (값 1에는 **상태** 의 열은 [catalog.operations &#40; SSISDB 데이터베이스 &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)보기). 실행 인스턴스를 실행하면 상태 값이 변경됩니다. 호출 하 여 실행을 만들 수 [catalog.create_execution &#40; SSISDB 데이터베이스 &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+ 데이터 탭을 추가하려면 실행 인스턴스가 생성됨 상태([catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰의 **status** 열 값이 1임)여야 합니다. 실행 인스턴스를 실행하면 상태 값이 변경됩니다. [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)을 호출하여 실행을 만들 수 있습니다.  
   
  다음은 add_data_tap 저장 프로시저에 대한 고려 사항입니다.  
   
@@ -114,9 +112,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
   
 -   실행 인스턴스에 대한 MODIFY 권한  
   
--   멤버 자격에는 **ssis_admin** 데이터베이스 역할  
+-   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  
   
--   멤버 자격에는 **sysadmin** 서버 역할  
+-   **sysadmin** 서버 역할에 대한 멤버 자격  
   
 ## <a name="errors-and-warnings"></a>오류 및 경고  
  다음 목록에서는 저장 프로시저 실패 조건을 설명합니다.  
@@ -130,10 +128,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>요구 사항  
   
 ## <a name="external-resources"></a>외부 리소스  
- 블로그 항목- [SSIS 2012: 데이터 탭 보기 A](http://go.microsoft.com/fwlink/?LinkId=239983), 살펴보기 합니다.  
+ raffael-alas.com의 블로그 항목 - [SSIS 2012: 데이터 탭 살펴보기](http://go.microsoft.com/fwlink/?LinkId=239983)  
   
 ## <a name="see-also"></a>관련 항목:  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 서비스에 의해 기록 된 이벤트 | Microsoft Docs"
+title: "Integration Services 서비스에서 기록하는 이벤트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dc85b9b432cfccacabb6cf877e7f26edd4b0b975
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 서비스에서 기록하는 이벤트
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 Windows 응용 프로그램 로그에 다양한 메시지를 기록합니다. 이러한 메시지는 서비스가 시작되거나 중지될 때 또는 특정 문제가 발생할 때 기록됩니다.  
@@ -103,6 +101,5 @@ ms.lasthandoff: 08/03/2017
   
 9. **파일** 메뉴에서 **끝내기** 를 클릭하여 **이벤트 뷰어** 대화 상자를 닫습니다.  
  
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
  로그 항목을 보는 방법은 [통합 서비스 패키지에 의해 기록된 이벤트](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

@@ -1,5 +1,5 @@
 ---
-title: "3 단계: 배포 패키지를 테스트 | Microsoft Docs"
+title: "3단계: 배포된 패키지 테스트 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2b0caedd9ff32327970ea36993f5e239eafe37cc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 59cceacbf934aea6fc3e7c0a8e2c5f089ed7f6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-deployed-packages"></a>단원 3-3-배포 된 패키지 테스트
-이 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 배포한 패키지를 테스트합니다.  
+# <a name="lesson-3-3---testing-the-deployed-packages"></a>3-3단원 - 배포된 패키지 테스트
+이 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포한 패키지를 테스트합니다.  
   
 다른 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]디버그 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]메뉴의 **디버깅 시작** 옵션을 사용하여 **용 개발 환경인** 에서 패키지를 실행했습니다. 여기에서는 패키지를 다르게 실행합니다.  
   
@@ -52,7 +49,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     > [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 연결할 수 없으면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 실행되고 있지 않는 것일 수 있습니다. 이 서비스의 상태를 확인하려면 **시작**을 클릭하고 **모든 프로그램**, **Microsoft SQL Server**, **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다. 왼쪽 창에서 **SQL Server 서비스**를 클릭하고 오른쪽 창에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 찾습니다. 서비스가 실행되지 않았으면 서비스를 시작합니다.  
   
-    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]엽니다. 기본적으로 개체 탐색기 창이 열리고 Studio의 오른쪽 상단 모서리에 위치합니다. 개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기** 를 클릭합니다.  
+    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 가 열립니다. 기본적으로 개체 탐색기 창이 열리고 Studio의 오른쪽 상단 모서리에 위치합니다. 개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기** 를 클릭합니다.  
   
 ### <a name="to-run-the-packages-using-the-execute-package-utility"></a>패키지 실행 유틸리티를 사용하여 패키지를 실행하려면  
   
@@ -118,4 +115,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

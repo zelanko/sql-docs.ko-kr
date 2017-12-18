@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 88c6bc973c6039b81d8af48a9dd7d76304946add
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="view-package-objects"></a>패키지 개체 보기
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 **패키지 탐색기** 탭은 패키지에 대한 탐색기 뷰를 제공합니다. 이 뷰에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 아키텍처의 컨테이너 계층이 표시됩니다. 패키지 컨테이너는 최상위 계층에 있으며, 패키지를 확장하면 패키지에 있는 연결, 실행 개체, 이벤트 처리기, 로그 공급자, 선행 제약 조건 및 변수를 볼 수 있습니다.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
  다음 다이어그램에서는 예제 패키지의 트리 뷰를 보여 줍니다.  
   
- ![패키지 탐색기 탭의 스크린 샷](../integration-services/media/packageexplorer.gif "패키지 탐색기 탭의 스크린 샷")  
+ ![패키지 탐색기 탭의 스크린샷](../integration-services/media/packageexplorer.gif "패키지 탐색기 탭의 스크린샷")  
   
 ## <a name="view-the-package-structure-and-content"></a>패키지 구조 및 내용 보기  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 09/26/2017
   
 -   개체를 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭하여 **속성** 창을 엽니다.  
   
-## <a name="delete-an-object-in-a-package"></a>패키지의 개체를 삭제 합니다.  
+## <a name="delete-an-object-in-a-package"></a>패키지에서 개체 삭제  
   
 -   개체를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다. 
  
@@ -70,8 +68,7 @@ ms.lasthandoff: 09/26/2017
  [Integration Services 컨테이너](../integration-services/control-flow/integration-services-containers.md)   
  [선행 제약 조건](../integration-services/control-flow/precedence-constraints.md)   
  [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40; Ssis&#41; 이벤트 처리기](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40; Ssis&#41; 로깅](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services&#40;SSIS&#41; 이벤트 처리기](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services&#40;SSIS&#41; 로깅](../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

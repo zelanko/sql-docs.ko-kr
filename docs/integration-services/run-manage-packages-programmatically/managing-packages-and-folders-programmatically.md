@@ -1,5 +1,5 @@
 ---
-title: "패키지 및 폴더를 프로그래밍 방식으로 관리 | Microsoft Docs"
+title: "프로그래밍 방식으로 패키지 및 폴더 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,30 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - enumerators [Integration Services]
 - packages [Integration Services], managing
 - custom enumerators [Integration Services]
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a40acf3a586c74119d948291fd179f78833cb37a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f53a752a5c6035bef8450a0eeabcbbf27829226d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>프로그래밍 방식으로 패키지 및 폴더 관리
-<a name="top"></a>프로그래밍 방식으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지, 수도 있습니다를, 개별 패키지 또는 폴더가 있는지 확인 하거나 패키지가 저장 된 폴더를 관리할 수 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.Application> 네임스페이스의 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스는 이 요구 사항을 충족하기 위한 다양한 메서드를 제공합니다.    
+<a name="top"></a> 프로그래밍 방식으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 대한 작업을 수행할 때 개별 패키지 또는 폴더가 있는지 여부를 확인하거나 패키지가 저장된 폴더를 관리할 수 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.Application> 네임스페이스의 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스는 이 요구 사항을 충족하기 위한 다양한 메서드를 제공합니다.    
     
-##  <a name="exists"></a>패키지 또는 폴더가 있는지 여부 확인    
+##  <a name="exists"></a> 패키지 또는 폴더가 있는지 확인    
  저장된 패키지가 있는지 여부를 프로그래밍 방식으로 확인하려면 해당 패키지를 로드 및 실행하기 전에 다음 메서드 중 하나를 호출합니다.    
     
 |저장소 위치|호출할 메서드|    
@@ -51,10 +48,10 @@ ms.lasthandoff: 09/26/2017
     
  [맨 위로 이동](#top)    
     
-##  <a name="managing"></a>패키지 및 폴더 관리    
+##  <a name="managing"></a> 패키지 및 폴더 관리    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 네임스페이스의 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스에서는 패키지와 패키지가 저장된 폴더를 관리하기 위한 추가 메서드를 제공합니다.    
     
-###  <a name="managing_rempkg"></a>패키지 제거    
+###  <a name="managing_rempkg"></a> 패키지 제거    
  저장된 패키지를 프로그래밍 방식으로 제거하려면 다음 메서드 중 하나를 호출합니다.    
     
 |저장소 위치|호출할 메서드|    
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
     
  [맨 위로 이동](#top)    
     
-###  <a name="managing_create"></a>폴더 만들기    
+###  <a name="managing_create"></a> 폴더 만들기    
  프로그래밍 방식으로 저장소 폴더를 만들려면 다음 메서드 중 하나를 호출합니다.    
     
 |저장소 위치|호출할 메서드|    
@@ -74,7 +71,7 @@ ms.lasthandoff: 09/26/2017
     
  [맨 위로 이동](#top)    
     
-###  <a name="managing_remfldr"></a>폴더 제거    
+###  <a name="managing_remfldr"></a> 폴더 제거    
  프로그래밍 방식으로 저장소 폴더를 제거하려면 다음 메서드 중 하나를 호출합니다.    
     
 |저장소 위치|호출할 메서드|    
@@ -84,7 +81,7 @@ ms.lasthandoff: 09/26/2017
     
  [맨 위로 이동](#top)    
     
-###  <a name="managing_rename"></a>폴더 이름 바꾸기    
+###  <a name="managing_rename"></a> 폴더 이름 바꾸기    
  프로그래밍 방식으로 저장소 폴더의 이름을 바꾸려면 다음 메서드 중 하나를 호출합니다.    
     
 |저장소 위치|호출할 메서드|    
@@ -95,8 +92,7 @@ ms.lasthandoff: 09/26/2017
  [맨 위로 이동](#top)    
     
 ## <a name="see-also"></a>관련 항목:    
- [패키지 관리 &#40; SSIS 서비스 &#41;](../../integration-services/service/package-management-ssis-service.md)     
+ [패키지 관리&#40;SSIS 서비스&#41;](../../integration-services/service/package-management-ssis-service.md)     
  [프로그래밍 방식으로 사용 가능 패키지 열거](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
     
   
-
