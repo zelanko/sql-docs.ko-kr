@@ -37,7 +37,7 @@ SQL Server 2017이 이제 Linux에서 실행됩니다. 운영체제와 관계없
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
-> Docker 자체는 여러 플랫폼에서 실행됩니다 즉, Linux, Mac, Windows에서 Docker 이미지를 실행할 수 있습니다.
+> Docker 자체는 여러 플랫폼에서 실행됩니다. 즉, Linux, Mac, Windows에서 Docker 이미지를 실행할 수 있습니다.
 
 ## <a name="connect">연결</a>
 
@@ -51,14 +51,14 @@ SQL Server 2017이 이제 Linux에서 실행됩니다. 운영체제와 관계없
 
 ## <a name="explore">탐색</a>
 
-SQL Server 2017은 Linux를 포함하여 모든 지원되는 플랫폼에 동일한 기본 데이터베이스 엔진을 가지고 있습니다. 따라서 기존의 많은 기능과 성능이 Linux에서 동일한 방식으로 동작합니다. 이 문서에서는 Linux 관점에서 해당 기능 중 일부 범위를 설명합니다. 또한 Linux에만 해당하는 요구 사항을 설명합니다.
+SQL Server 2017은 Linux를 포함하여 모든 지원되는 플랫폼에 동일한 기본 데이터베이스 엔진을 가지고 있습니다. 따라서 기존의 많은 기능과 성능이 Linux에서 동일한 방식으로 동작합니다. 이 문서에서는 해당 기능 중 일부 범위를 Linux 관점에서 설명합니다. 또한 Linux에만 해당하는 요구 사항을 설명합니다.
 
-SQL Server에 이미 익숙한 경우, [릴리스 정보](sql-server-linux-release-notes.md) 를 참고하여 일반적인 지침과 릴리스의 알려진 문제를 살펴봅니다. 그리고 [SQL Server on Linux의 새로운 기능](sql-server-linux-whats-new.md) 과 [SQL Server 2017 전반에 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md) 을 살펴봅니다.
+SQL Server에 이미 익숙한 경우, [릴리스 정보](sql-server-linux-release-notes.md)를 참고하여 일반적인 지침과 릴리스의 알려진 문제를 살펴봅니다. 그리고 [SQL Server on Linux의 새로운 기능](sql-server-linux-whats-new.md)과 [SQL Server 2017 전반에 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)을 살펴봅니다.
 
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"> SQL Server 엔지니어링 팀에 문의</a>![info_tip](./media/general/info_tip.png)
 
 - [DBA 스택 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): 데이터베이스 관리 관련 질문하기
-- [스택 오버플로](http://stackoverflow.com/questions/tagged/sql-server): 개발 관련 질문하기
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): 개발에 대해 질문하기
 - [MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): 기술 관련 질문하기
 - [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): 기능 요청과 버그 보고하기
 - [Reddit](https://www.reddit.com/r/SQLServer/): SQL Server 토론
