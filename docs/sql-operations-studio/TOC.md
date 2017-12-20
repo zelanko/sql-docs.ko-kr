@@ -1,5 +1,6 @@
 # [SQL Operations Studio(미리 보기)](what-is.md)
 # [설치](download.md)
+# [릴리스 정보](release-notes.md)
 # 빠른 시작
 ## [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 ## [Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
@@ -24,5 +25,6 @@
 ## [Transact-SQL 참조](../t-sql/language-reference.md)
 ## [SQL Operations Studio(미리 보기) GitHub 리포지토리](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [SQL Server 블로그](https://blogs.technet.microsoft.com/dataplatforminsider/)
+## [새로운 또는 업데이트 된 문서](new-updated-sql-operations-studio.md)
 # [FAQ](faq.md)
 # [문제 보고 및 제안](https://github.com/microsoft/sqlopsstudio/issues)

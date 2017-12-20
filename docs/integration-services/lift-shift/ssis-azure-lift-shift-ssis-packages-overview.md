@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ddfcca6408a64b2c2875aaa625c275899e8c85f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
 이제 SSIS(SQL Server Integration Services) 패키지 및 워크로드를 Azure 클라우드로 이동할 수 있습니다.
@@ -55,7 +55,7 @@ SSIS IR은 한 번만 프로비전하면 됩니다. 그런 다음 SSDT(SQL Serve
 또한 Data Factory는 다른 유형의 통합 런타임도 지원합니다. SSIS IR 및 다른 유형의 통합 런타임에 대한 자세한 내용은 [Azure Data Factory의 통합 런타임](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
-이 항목에서 설명하는 기능에는 SQL Server 2017 또는 SQL Server 2016이 필요하지 않습니다.
+이 아티클에서 설명하는 기능에는 SQL Server 2017 또는 SQL Server 2016이 필요하지 않습니다.
 
 이러한 기능을 사용하려면 다음 버전의 SSDT(SQL Server Data Tools)가 필요합니다.
 -   Visual Studio 2017용, 버전 15.3(미리 보기) 이상

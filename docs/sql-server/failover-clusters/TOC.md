@@ -25,3 +25,4 @@
 ### [장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경](windows/change-the-ip-address-of-a-failover-cluster-instance.md)  
 ## [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](windows/upgrade-a-sql-server-failover-cluster-instance.md)  
 ### [SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(설치)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)
+### [SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(Windows Server 2008/2008 R2/2012)](windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0b8dbc635523b33a480ad887b73d9f395d71c8d
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지 실행 예약
 다음 예약 옵션 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그 데이터베이스에 저장된 패키지의 실행을 예약할 수 있습니다.
@@ -62,13 +62,13 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="elastic"></a> SQL Database 탄력적 작업을 사용하여 패키지 예약
 
-SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장된 클라우드 데이터베이스 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)를 참조하세요.
+SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장된 클라우드 데이터베이스 관리](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)를 참조하세요.
 
 ### <a name="prerequisites"></a>필수 구성 요소
 
 탄력적 작업을 사용하여 Azure SQL Database 서버의 SSISDB 카탈로그 데이터베이스에 저장된 SSIS 패키지를 예약하려면 다음 작업을 수행해야 합니다.
 
-1.  Elastic Database 작업 구성 요소를 설치하고 구성합니다. 자세한 내용은 [Elastic Database 작업 설치 개요](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)를 참조하세요.
+1.  Elastic Database 작업 구성 요소를 설치하고 구성합니다. 자세한 내용은 [Elastic Database 작업 설치 개요](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)를 참조하세요.
 
 2. 작업에서 SSIS 카탈로그 데이터베이스에 명령을 보내는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.
 
@@ -121,7 +121,9 @@ Azure Data Factory SQL Server 저장 프로시저 작업을 사용하여 패키�
 
 4.  SQL Server 저장 프로시저 작업을 사용하여 SSIS 패키지를 실행하는 Data Factory 파이프라인을 만듭니다.
 
-이 섹션에서는 이러한 단계에 대한 개요를 제공합니다. 완전한 Data Factory 자습서는 이 문서의 범위를 벗어납니다. 자세한 내용은 [SQL Server 저장 프로시저 작업](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)을 참조하세요.
+이 섹션에서는 이러한 단계에 대한 개요를 제공합니다. 완전한 Data Factory 자습서는 이 문서의 범위를 벗어납니다. 자세한 내용은 [SQL Server 저장 프로시저 작업](https://docs.microsoft.com/azure/data-factory/data-factory-stored-proc-activity)을 참조하세요.
+
+예약된 실행이 실패하고 ADF 저장 프로시저 작업이 실패한 실행에 대한 실행 ID를 제공하는 경우 SSIS 카탈로그의 SSMS에서 해당 ID에 대한 실행 보고서를 확인합니다.
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>SSISDB를 호스팅하는 SQL Database에 대한 연결된 서비스를 만들었습니다.
 연결된 서비스를 통해 Data Factory에서 SSISDB에 연결할 수 있습니다.
@@ -225,9 +227,45 @@ END
 GO
 ```
 
+위에 `stmt` 매개 변수 값으로 표시된 SQL 스크립트를 제공하려면 일반적으로 다음 예에 표시된 것처럼 전체 스크립트를 한 줄에 포함해야 합니다. ([JSON 표준](https://json.org/)은 다른 언어에서 여러 줄 문자열의 줄을 구분하는 데 사용되는 `\n` 줄 바꿈 제어 문자를 비롯한 제어 문자를 지원하지 않습니다.)
+
+```json
+{
+    "name": "SprocActivitySamplePipeline",
+    "properties": {
+        "activities": [
+            {
+                "type": "SqlServerStoredProcedure",
+                "typeProperties": {
+                    "storedProcedureName": "sp_executesql",
+                    "storedProcedureParameters": {
+                        "stmt": "DECLARE @return_value INT, @exe_id BIGINT, @err_msg NVARCHAR(150)    EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'test', @project_name=N'TestProject', @package_name=N'STestPackage.dtsx', @use32bitruntime=0, @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT    EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1    EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id, @retry_count=0    IF(SELECT [status] FROM [SSISDB].[catalog].[executions] WHERE execution_id=@exe_id)<>7 BEGIN SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20)) RAISERROR(@err_msg,15,1) END"
+                    }
+                },
+                "outputs": [
+                    {
+                        "name": "sprocsampleout"
+                    }
+                ],
+                "scheduler": {
+                    "frequency": "Minute",
+                    "interval": 15
+                },
+                "name": "SprocActivitySample"
+            }
+        ],
+        "start": "2017-12-06T12:00:00Z",
+        "end": "2017-12-06T12:30:00Z",
+        "isPaused": false,
+        "hubName": "test_hub",
+        "pipelineMode": "Scheduled"
+    }
+}
+```
+
 이 스크립트의 코드에 대한 자세한 내용은 [저장 프로시저를 사용하여 SSIS 패키지 배포 및 실행](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL Server 에이전트 작업](../packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.
 
-SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장된 클라우드 데이터베이스 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)를 참조하세요.
+SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장된 클라우드 데이터베이스 관리](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)를 참조하세요.
