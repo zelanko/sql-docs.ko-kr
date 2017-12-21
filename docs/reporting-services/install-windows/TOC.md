@@ -1,7 +1,7 @@
-# [Reporting Services 설치](install-reporting-services.md)
+# [Reporting Services 2017 설치](install-reporting-services.md)
+## [Reporting Services 2017에 대 한 제품 키 찾기](find-reporting-services-product-key-ssrs.md)
 
-
-# [기본 모드에서 Reporting Services 설치](install-reporting-services-native-mode-report-server.md)  
+# [기본 모드에서 Reporting Services 2016 설치](install-reporting-services-native-mode-report-server.md)  
 ## [Reporting Services의 파일만 설치 수행](files-only-installation-reporting-services.md)  
 ## [Reporting Services와 인터넷 정보 서비스 함께 설치(SSRS 기본 모드)](install-reporting-and-internet-information-services-side-by-side.md)  
 ## [SQL Server 장애 조치(Failover) 클러스터에서 보고서 서버 데이터베이스 호스팅](host-a-report-server-database-in-a-sql-server-failover-cluster.md)  
@@ -29,7 +29,7 @@
 ### [Power BI 통합](power-bi-report-server-integration-configuration-manager.md)  
 
 
-# [Reporting Services SharePoint 모드 설치](install-reporting-services-sharepoint-mode.md)  
+# [SharePoint 모드에서 Reporting Services 2016 설치](install-reporting-services-sharepoint-mode.md)  
 ## [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합(SQL Server 2016)](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 ## [SharePoint용 SSRS 추가 기능 검색 위치](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
 ## [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)  
