@@ -3,7 +3,7 @@
 # 개요
 ## [Microsoft Machine Learning Services란?](r/r-services.md)
 ## [기계 학습의 새로운 기능](what-s-new-in-sql-server-machine-learning-services.md)
-## [새로 추가되거나 최근에 업데이트된 문서](new-updated-advanced-analytics.md)
+## [새로운 또는 업데이트 된 문서](new-updated-advanced-analytics.md)
 ## [아키텍처 및 개요](architecture-overview-machine-learning.md)
 ## [SQL Server 버전 간 기계 학습 기능의 차이점](r/differences-in-r-features-between-editions-of-sql-server.md)
 
@@ -122,8 +122,6 @@
 
 ### [R에 대한 사용자 패키지 라이브러리의 오류 방지](r/packages-installed-in-user-libraries.md)
 
-### [SQLRUserGroup을 데이터베이스 사용자로 추가](r/add-sqlrusergroup-to-database.md)
-
 ## 데이터 탐색 및 모델링
 
 ### [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)
@@ -155,7 +153,10 @@
 ### [SQL Server의 R 런타임에 대한 보안 고려 사항](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [SQL Server Machine Learning Services의 사용자 계정 풀 수정](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [SQLRUserGroup을 데이터베이스 사용자로 추가](r/add-sqlrusergroup-to-database.md)
+
 ### [웹 서비스를 사용하여 모델 배포 및 사용](operationalization-with-mrsdeploy.md)
+
 ### [기계 학습 솔루션 관리 및 모니터링](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning Services를 위한 리소스 거버넌스](r/resource-governance-for-r-services.md)
 ### [기계 학습을 위한 리소스 풀 만들기](r/how-to-create-a-resource-pool-for-r.md)
