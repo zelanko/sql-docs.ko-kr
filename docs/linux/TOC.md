@@ -100,6 +100,7 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # 리소스
+## [FAQ](sql-server-linux-faq.md)
 ## [문제 해결](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server 설명서](../sql-server/sql-server-technical-documentation.md)
 ## 파트너
