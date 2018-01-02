@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 27e43fe72eefa18e7e42dea1a18b63a7005074fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81d35953fbdf67c20e857b3b7e4d29e57f0c1a4b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 서버에 대한 표준 연결이 불가능할 때 관리자에게 특별 진단 연결을 제공합니다. 이 진단 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 표준 연결 요청에 응답하지 않은 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하여 진단 쿼리를 실행하고 문제를 해결할 수 있습니다.  
@@ -40,16 +40,14 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 성공적으로 DAC가 연결되도록 모든 시도를 하지만 극단적인 경우 연결이 실패할 수도 있습니다.  
   
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
 ## <a name="connecting-with-dac"></a>DAC를 사용하여 연결  
  기본적으로 서버에서 실행되는 클라이언트에서만 연결이 허용됩니다. [remote admin connections 옵션](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)이 사용된 sp_configure 저장 프로시저를 사용하여 구성하지 않은 경우에는 네트워크 연결이 허용되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 역할의 멤버만이 DAC를 사용하여 연결할 수 있습니다.  
   
- DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치(**-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 **admin:**을 **sqlcmd -Sadmin:***<instance_name>* 형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 **admin:**\<*instance_name*>에 연결하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 DAC를 시작할 수도 있습니다.  
+ DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치(**-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 **admin:**을 **sqlcmd -S admin:<*instance_name*> **형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 **admin:\<*instance_name*>**에 연결하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 DAC를 시작할 수도 있습니다.  
   
 ## <a name="restrictions"></a>제한 사항  
  DAC는 드물게 발생하는 서버 문제 진단만을 위한 연결이므로 연결에 다음과 같은 제한이 있습니다.  
@@ -76,11 +74,11 @@ ms.lasthandoff: 11/20/2017
   
  이론상으로는 DAC에서 병렬로 실행하지 않아도 되는 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있지만 다음과 같은 진단 및 문제 해결 명령에만 사용하는 것이 좋습니다.  
   
--   기본 진단을 위해 잠금 상태에 대한 sys.dm_tran_locks, 캐시 상태를 확인하기 위한 sys.dm_os_memory_cache_counters, 활성 세션과 요청을 위한 sys.dm_exec_requests 및 sys.dm_exec_sessions 등 동적 관리 뷰를 쿼리합니다. 리소스를 많이 사용하는 동적 관리 뷰(예를 들어 sys.dm_tran_version_store는 전체 버전 저장소를 검색하므로 광범위한 I/O를 발생시킬 수 있음) 또는 복잡한 조인을 사용하는 동적 관리 뷰를 사용하지 마십시오. 성능에 미치는 영향에 대한 자세한 내용은 해당 [동적 관리 뷰](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)문서를 참조하십시오.  
+-   기본 진단을 위해 잠금 상태에 대한 [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md), 캐시 상태를 확인하기 위한 [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md), 활성 세션과 요청을 위한 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 및 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 등 동적 관리 뷰를 쿼리합니다. 리소스를 많이 사용하는 동적 관리 뷰(예를 들어 [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)는 전체 버전 저장소를 검색하므로 광범위한 I/O를 발생시킬 수 있음) 또는 복잡한 조인을 사용하는 동적 관리 뷰를 사용하지 마세요. 성능에 미치는 영향에 대한 자세한 내용은 해당 [동적 관리 뷰](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)문서를 참조하십시오.  
   
 -   카탈로그 뷰를 쿼리합니다.  
   
--   DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS**,** DBCC SQLPERF 등의 기본 DBCC 명령을 사용합니다. **DBCC** CHECKDB, DBCC DBREINDEX 또는 DBCC SHRINKDATABASE 등 리소스를 많이 사용하는 명령을 실행하지 마세요.  
+-   [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md), [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) 등의 기본 DBCC 명령을 사용합니다. [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 또는 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 등 리소스를 많이 사용하는 명령을 실행하지 마세요.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>* 명령 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상태에 따라 KILL 명령은 성공하지 않을 수도 있습니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 것이 유일한 해결 방법입니다. 일반적인 지침은 다음과 같습니다.  
   
@@ -99,11 +97,11 @@ ms.lasthandoff: 11/20/2017
   
  시작할 때 DAC 포트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 동적으로 할당됩니다. 기본 인스턴스에 연결할 때 DAC는 SQL Server Browser 서비스에 대한 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) 요청을 사용하지 않습니다. 먼저 TCP 포트 1434를 통해 연결합니다. 연결이 실패할 경우 SSRP 호출을 실행하여 포트를 설정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 SSRP 요청을 수신하지 않을 경우 연결 요청이 오류를 반환합니다. 오류 로그를 참조하여 DAC를 수신 대기 중인 포트 번호를 찾으십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 원격 관리 연결을 허용하도록 구성되어 있는 경우 DAC를 명시적 포트 번호로 시작해야 합니다.  
   
- **sqlcmd–Stcp:** *\<서버>,\<포트>*  
+ **sqlcmd –S tcp:***\<server>,\<port>*  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그는 DAC의 포트 번호를 표시합니다. 포트 번호는 기본적으로 1434입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 로컬 DAC 연결만 허용하도록 구성된 경우 다음 명령을 사용하여 루프백 어댑터를 통해 연결하십시오.  
   
- **sqlcmd–S127.0.0.1**,**1434**  
+ **sqlcmd –S 127.0.0.1,1434**  
   
 > [!TIP]  
 >  DAC로 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 에 연결할 때 -d 옵션을 사용하여 연결 문자열에 데이터베이스 이름을 지정해야 합니다.  
@@ -119,33 +117,19 @@ ms.lasthandoff: 11/20/2017
   
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
-## <a name="related-tasks"></a>관련 태스크  
-  
 ## <a name="related-content"></a>관련 내용  
  [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)  
-  
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
  [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-  
  [sp_lock&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)  
-  
  [KILL&#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)  
-  
  [DBCC CHECKALLOC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)  
-  
  [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
-  
  [DBCC OPENTRAN&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md)  
-  
  [DBCC INPUTBUFFER&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  
-  
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
  [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   

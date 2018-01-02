@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e122b8b8aba89b971407c43c35715a387a687e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be67496825da165dca22ed5074e0e1ee67a32a56
+ms.sourcegitcommit: d8d602898e80797e330aab54e53ee7dde8282e21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="configure-distributed-availability-group"></a>분산 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -209,6 +209,12 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
+## <a name="failover"></a> 두 번째 가용성 그룹의 보조에 있는 데이터베이스 조인
+두 번째 가용성 그룹의 보조에 있는 데이터베이스가 복원 상태로 전환되면 해당 데이터베이스를 가용성 그룹에 수동으로 조인해야 합니다.
+
+```sql  
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+```  
   
 ## <a name="failover"></a> 보조 가용성 그룹에 대한 장애 조치(failover)  
 이 경우에는 수동 장애 조치(failover)만 지원됩니다. 다음 Transact-SQL 문은 `distributedag`라는 이름의 분산 가용성 그룹을 장애 조치(failover)합니다.  

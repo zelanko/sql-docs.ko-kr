@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc794554646b0382f5cb0e0c60451e213746d16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec51663f65f5673888ef20ee462078e545848334
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
@@ -73,7 +73,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  기본적으로 XML 파서는 문자열 데이터를 XML로 변환할 때 다음 중 하나에 해당하면 불필요한 공백을 무시합니다.  
   
--   `The xml:space` 특성이 한 요소 또는 한 요소의 상위 항목 요소에 정의되어 있지 않습니다.  
+-   `xml:space` 특성이 한 요소 또는 한 요소의 상위 항목 요소에 정의되어 있지 않습니다.  
   
 -   한 요소 또는 한 요소의 상위 항목 요소 중 하나에 적용된 `xml:space` 특성에 기본값이 있습니다.  
   

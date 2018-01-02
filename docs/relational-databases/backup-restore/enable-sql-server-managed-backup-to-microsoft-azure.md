@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
  이 자습서는 Azure PowerShell을 사용합니다. 자습서를 시작하기 전에 [Azure PowerShell을 다운로드 및 설치](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)하십시오.  
   
 > [!IMPORTANT]  
->  고급 옵션도 설정하거나 사용자 지정 일정을 사용하려는 경우에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 해당 설정을 구성하십시오. 자세한 내용은 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
+>  고급 옵션도 설정하거나 사용자 지정 일정을 사용하려는 경우에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 해당 설정을 구성하십시오. 자세한 내용은 [Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
   
 ## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>기본 설정으로 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 설정 및 구성  
   

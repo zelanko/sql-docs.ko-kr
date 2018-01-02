@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
  스크립트 태스크를 패키지에 적합한 선택 항목으로 결정한 후에는 태스크에서 사용하는 스크립트를 개발하고 태스크 자체를 구성해야 합니다.  
   
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>태스크에서 사용하는 스크립트 작성 및 실행  
- 스크립트 태스크는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the environment in which you write the scripts and the engine that runs those scripts.  
+ 스크립트 태스크는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 를 스크립트 작성 환경과 스크립트 실행 엔진으로 사용합니다.  
   
  VSTA는 색 구분 기능이 포함된 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 편집기, IntelliSense, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 개체 탐색기 **등**환경의 모든 표준 기능을 제공합니다. 또한 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 개발 도구에서 사용하는 것과 동일한 디버거를 사용합니다. 스크립트 작업의 중단점이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크 및 컨테이너의 중단점과 문제 없이 작동합니다. VSTA는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 프로그래밍 언어를 지원합니다.  
   

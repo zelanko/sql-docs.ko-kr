@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3278e9eaf53426fef36b42c47e63cdf049de4266
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b5758fcbb5e73e40a3022d5a97fb744b6735c7d2
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory 옵션 설정(Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다.  
@@ -50,9 +50,9 @@ ms.lasthandoff: 11/20/2017
   
 7.  **사용자, 서비스 계정 또는 그룹 선택** 대화 상자에서 sqlservr.exe를 실행할 권한이 있는 계정을 추가합니다.  
   
-8.  이 변경 사항을 적용하려면 로그아웃한 다음 다시 로그인합니다.  
+8.  이 설정을 적용하려면 SQL Server 데이터 엔진 서비스를 다시 시작합니다.
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   

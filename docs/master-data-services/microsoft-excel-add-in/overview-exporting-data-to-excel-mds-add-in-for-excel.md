@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |MDS 데이터를 Excel에 로드하기 전에 필터링합니다.|[내보내기 전 데이터 필터링&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)|  
-|MDS 데이터를 Excel로 로드합니다.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|MDS 데이터를 Excel로 로드합니다.|[Master Data Services에서 Excel로 데이터 내보내기](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |데이터를 다운로드하기 전에 열 순서를 변경합니다.|[열 순서 바꾸기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>관련 내용  

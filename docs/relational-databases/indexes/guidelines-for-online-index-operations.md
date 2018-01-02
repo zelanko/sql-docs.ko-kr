@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ ms.lasthandoff: 11/17/2017
 - 인덱스 다시 작성 오류(예: 데이터베이스 장애 조치(failover)나 디스크 공간 부족)에서 복구
 - 인덱스 작업이 일시 중지된 경우 원래 인덱스와 새로 만든 인덱스 모두 저장할 디스크 공간이 필요하고 DML 작업 중 업데이트해야 합니다.
 
-- 인덱스 다시 작성 작업 중 잘림 로그의 잘림 지원(일반 온라인 인덱스 작업에서는 이 작업을 수행할 수 없음)
+- 인덱스 다시 작성 작업 중 트랜잭션 로그의 잘림 지원(일반 온라인 인덱스 작업에서는 이 작업을 수행할 수 없음)
 - SORT_IN_TEMPDB=ON 옵션이 지원되지 않음
 
 > [!IMPORTANT]
-> 다시 시작 가능한 다시 작성에서는 오래 실행되는 잘림을 계속 열어둘 필요가 없으므로 이 작업 중 로그 잘림이 허용되고 로그 공간을 더 효율적으로 관리할 수 있습니다. 새로운 디자인에서는 다시 시작 가능한 작업을 다시 시작하는 데 필요한 모든 참조와 함께 필요한 데이터를 하나의 데이터베이스에 유지할 수 있도록 했습니다.
+> 다시 시작 가능한 다시 작성에서는 오래 실행되는 트랜잭션을 계속 열어둘 필요가 없으므로 이 작업 중 로그 잘림이 허용되고 로그 공간을 더 효율적으로 관리할 수 있습니다. 새로운 디자인에서는 다시 시작 가능한 작업을 다시 시작하는 데 필요한 모든 참조와 함께 필요한 데이터를 하나의 데이터베이스에 유지할 수 있도록 했습니다.
 >
 
 일반적으로 온라인 인덱스 다시 작성 시 다시 시작 가능 여부에 따른 성능 차이는 없습니다. 인덱스 다시 작성 작업이 일시 중지된 동안, 다시 시작 가능한 인덱스를 업데이트하면 다음과 같습니다.

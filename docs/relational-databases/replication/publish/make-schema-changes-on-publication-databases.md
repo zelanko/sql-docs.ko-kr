@@ -24,18 +24,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0da3801d395420c24ebb09b8d8d746ec4d417379
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ef239563e768ee5044e07e8bca666bdd4169158
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
   
 -   ALTER TABLE  
   
--   스키마 변경 복제가 활성화되어 있고 토폴로지에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.ALTER VIEW가 포함된 경우 ALTER TABLE SET LOCK ESCALATION을 사용해서는 안 됩니다.  
+-   스키마 변경 복제가 활성화되어 있고 토폴로지에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers가 포함된 경우 ALTER TABLE SET LOCK ESCALATION을 사용해서는 안 됩니다.
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   

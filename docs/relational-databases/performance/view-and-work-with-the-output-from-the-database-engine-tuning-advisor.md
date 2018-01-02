@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 구성 및 보고서를 사용하여 튜닝 권장 구성을 구현하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상될 때까지 튜닝을 계속합니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
+  데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 구성 및 보고서를 사용하여 튜닝 권장 구성을 구현하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상될 때까지 튜닝을 계속합니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
 ##  <a name="View"></a> 튜닝 출력 보기  
  다음 프로시저에서는 데이터베이스 엔진 튜닝 관리자 GUI로 튜닝 권장 구성, 요약, 보고서 및 튜닝 로그를 보는 방법에 대해 설명합니다. 사용자 인터페이스 옵션에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [사용자 인터페이스 설명](#UI) 을 참조하세요.  
@@ -54,9 +54,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>데이터베이스 엔진 튜닝 관리자 GUI로 튜닝 권장 구성을 보려면  
   
-1.  데이터베이스 엔진 튜닝 관리자 GUI 또는 **dta** 명령줄 유틸리티를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 사용하려면 이 단계를 건너뛰고 2단계를 실행합니다.  
+1.  데이터베이스 엔진 튜닝 관리자 GUI 또는 **dta** 명령줄 유틸리티를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 사용하려면 이 단계를 건너뛰고 2단계를 실행합니다.  
   
-2.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션의 튜닝 권장 구성을 보려면 **세션 모니터**창의 세션 이름을 두 번 클릭하여 세션을 엽니다.  
+2.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션의 튜닝 권장 구성을 보려면 **세션 모니터**창의 세션 이름을 두 번 클릭하여 세션을 엽니다.  
   
      새 튜닝 세션이 완료되거나 도구가 기존 세션을 로드한 후에 **권장 구성** 페이지가 표시됩니다.  
   
@@ -70,9 +70,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>데이터베이스 엔진 튜닝 관리자 GUI로 튜닝 요약 및 보고서를 보려면  
   
-1.  데이터베이스 엔진 튜닝 관리자 GUI 또는 **dta** 명령줄 유틸리티를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 사용하려면 이 단계를 건너뛰고 2단계를 실행합니다.  
+1.  데이터베이스 엔진 튜닝 관리자 GUI 또는 **dta** 명령줄 유틸리티를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 사용하려면 이 단계를 건너뛰고 2단계를 실행합니다.  
   
-2.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 튜닝 요약 및 기존 튜닝 세션에 대한 보고서를 보려면 **세션 모니터**의 세션 이름을 두 번 클릭하여 세션을 엽니다.  
+2.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 튜닝 요약 및 기존 튜닝 세션에 대한 보고서를 보려면 **세션 모니터**의 세션 이름을 두 번 클릭하여 세션을 엽니다.  
   
 3.  새 튜닝 세션이 완료되거나 도구가 기존 세션을 로드한 후에 **보고서** 탭을 클릭합니다.  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  데이터베이스 엔진 튜닝 관리자 GUI 또는 **dta** 명령줄 유틸리티를 사용하여 데이터베이스를 튜닝합니다. 작업을 튜닝할 때 **일반** 탭의 **튜닝 로그 저장** 을 선택했는지 확인합니다. 기존 튜닝 세션을 사용하려면 이 단계를 건너뛰고 2단계를 실행합니다.  
   
-2.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션에 대한 튜닝 요약 및 보고서를 보려면 **세션 모니터** 창에서 세션 이름을 두 번 클릭하여 세션을 엽니다.  
+2.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션에 대한 튜닝 요약 및 보고서를 보려면 **세션 모니터** 창에서 세션 이름을 두 번 클릭하여 세션을 엽니다.  
   
 3.  새 튜닝 세션이 완료되거나 도구가 기존 세션을 로드한 후에 **진행률** 탭을 클릭합니다. **튜닝 로그** 창은 로그 내용을 표시합니다. 로그에는 데이터베이스 엔진 튜닝 관리자가 분석할 수 없는 작업 이벤트에 대한 정보가 있습니다.  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 튜닝 권장 구성을 수동으로 구현하려면  
   
-1.  데이터베이스 엔진 튜닝 관리자 GUI 또는 **dta** 명령 프롬프트 유틸리티를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 사용하려면 이 단계를 건너뛰고 2단계를 실행합니다.  
+1.  데이터베이스 엔진 튜닝 관리자 GUI 또는 **dta** 명령 프롬프트 유틸리티를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 사용하려면 이 단계를 건너뛰고 2단계를 실행합니다.  
   
-2.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존의 튜닝 세션에 대해 튜닝 권장 구성을 구현하려면 **세션 모니터**에서 세션 이름을 두 번 클릭하여 세션을 엽니다.  
+2.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존의 튜닝 세션에 대해 튜닝 권장 구성을 구현하려면 **세션 모니터**에서 세션 이름을 두 번 클릭하여 세션을 엽니다.  
   
 3.  새 튜닝 세션이 완료된 후나 기존 세션이 도구에 로드된 후 **동작** 메뉴의 **권장 구성 적용** 을 클릭합니다.  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 11/17/2017
     dta -E -D DatabaseName -if WorkloadFile -s SessionName -a  
     ```  
   
-     여기서 **-E** 는 로그인 ID와 암호 대신 트러스트된 연결이 튜닝 세션에 사용되도록 지정하고, **-D** 는 튜닝할 데이터베이스의 이름이나 작업에 사용되는 여러 데이터베이스의 쉼표로 구분된 목록을 지정하며, **-if** 는 작업 파일의 이름과 경로를 지정합니다. 또한 **-s** 는 튜닝 세션의 이름을 지정하고, **-a** 는 작업이 분석된 후 **dta** 명령 프롬프트 유틸리티에서 사용자에게 확인하지 않고 자동으로 튜닝 권장 구성을 적용하도록 지정합니다. **dta** 명령 프롬프트 유틸리티를 사용하여 데이터베이스를 튜닝하는 방법에 대한 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
+     여기서 **-E** 는 로그인 ID와 암호 대신 트러스트된 연결이 튜닝 세션에 사용되도록 지정하고, **-D** 는 튜닝할 데이터베이스의 이름이나 작업에 사용되는 여러 데이터베이스의 쉼표로 구분된 목록을 지정하며, **-if** 는 작업 파일의 이름과 경로를 지정합니다. 또한 **-s** 는 튜닝 세션의 이름을 지정하고, **-a** 는 작업이 분석된 후 **dta** 명령 프롬프트 유틸리티에서 사용자에게 확인하지 않고 자동으로 튜닝 권장 구성을 적용하도록 지정합니다. **dta** 명령 프롬프트 유틸리티를 사용하여 데이터베이스를 튜닝하는 방법에 대한 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
 3.  Enter 키를 누릅니다.  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
   
 ##### <a name="to-evaluate-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>데이터베이스 엔진 튜닝 관리자 GUI로 튜닝 권장 구성을 평가하려면  
   
-1.  데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 평가하려면 **세션 모니터**를 두 번 클릭합니다.  
+1.  데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 평가하려면 **세션 모니터**를 두 번 클릭합니다.  
   
 2.  **권장 구성** 탭에서 사용하지 않을 권장 물리적 디자인 구조를 지웁니다.  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 11/17/2017
   
 ##### <a name="to-export-tuning-session-results-from-the-database-engine-tuning-advisor-gui-for-what-if-analysis-with-the-dta-command-line-utility"></a>dta 명령줄 유틸리티로 "가정(what-if)" 분석을 하기 위해 데이터베이스 엔진 튜닝 관리자 GUI의 튜닝 세션 결과를 내보내려면  
   
-1.  데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 평가하려면 **세션 모니터**를 두 번 클릭합니다.  
+1.  데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 평가하려면 **세션 모니터**를 두 번 클릭합니다.  
   
 2.  **파일** 메뉴에서 **세션 결과 내보내기** 를 클릭한 다음 XML 파일로 저장합니다.  
   
@@ -160,16 +160,16 @@ ms.lasthandoff: 11/17/2017
   
 4.  3단계에서 새로 만든 XML 입력 파일에서 원하는 튜닝 옵션을 **TuningOptions** 요소에 지정하고 **Configuration** 요소 섹션을 편집하고(분석에 적합하도록 물리적 디자인 구조를 추가 또는 삭제) 파일을 저장한 다음 데이터베이스 엔진 튜닝 관리자 XML 스키마에 대해 유효성을 검사합니다. 이 XML 파일을 편집하는 방법은 [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)를 참조하세요.  
   
-5.  4단계에서 만든 XML 파일을 **dta** 명령줄 유틸리티에 대한 입력으로 사용합니다. 이 도구에서 XML 입력 파일을 사용하는 방법은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
+5.  4단계에서 만든 XML 파일을 **dta** 명령줄 유틸리티에 대한 입력으로 사용합니다. 이 도구에서 XML 입력 파일을 사용하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
   
 ### <a name="using-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>사용자 지정 구성 기능과 dta 명령줄 유틸리티 사용  
  숙련된 XML 개발자인 경우 작업 및 물리적 데이터베이스 디자인 구조의 가상 구성(예: 인덱스, 인덱싱된 뷰 또는 분할)을 지정할 데이터베이스 엔진 튜닝 관리자 XML 입력 파일을 만들 수 있습니다. 그런 다음 **dta** 명령줄 유틸리티를 사용하여 이 가상 구성이 데이터베이스 쿼리 성능에 미치는 영향을 분석할 수 있습니다. 다음 절차에서는 이 과정을 단계별로 설명합니다.  
   
 ##### <a name="to-use-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>사용자 지정 구성 기능과 dta 명령줄 유틸리티를 사용하려면  
   
-1.  튜닝 작업을 만듭니다. 이 태스크를 수행하는 방법은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)를 참조하세요.  
+1.  튜닝 작업을 만듭니다. 이 태스크를 수행하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)를 참조하세요.  
   
-2.  [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)을 복사하여 XML 편집기 또는 텍스트 편집기에 붙여넣습니다. 이 예제를 사용하여 튜닝 세션용 XML 입력 파일을 만듭니다. 이 태스크를 수행하는 방법은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)의 "XML 입력 파일 만들기" 섹션을 참조하세요.  
+2.  [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)을 복사하여 XML 편집기 또는 텍스트 편집기에 붙여넣습니다. 이 예제를 사용하여 튜닝 세션용 XML 입력 파일을 만듭니다. 이 태스크를 수행하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)의 "XML 입력 파일 만들기" 섹션을 참조하세요.  
   
 3.  예제 XML 입력 파일에서 **TuningOptions** 및 **Configuration** 요소를 편집합니다. **TuningOptions** 요소에서 데이터베이스 엔진 튜닝 관리자가 튜닝 세션 중 고려할 물리적 디자인 구조를 지정합니다. **Configuration** 요소에서 데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 디자인 구조의 가상 구성과 일치하는 물리적 디자인 구조를 지정합니다. **TuningOptions** 및 **Configuration** 부모 요소에 사용할 수 있는 특성 및 자식 요소에 대한 자세한 내용은 [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)를 참조하세요.  
   
@@ -183,7 +183,7 @@ ms.lasthandoff: 11/17/2017
   
      또한 데이터베이스 엔진 튜닝 관리자 XML 스키마는 [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta)에서 온라인으로도 제공됩니다.  
   
-6.  작업 및 XML 입력 파일을 만든 후에는 분석을 위해 **dta** 명령줄 유틸리티에 이 입력 파일을 전송할 수 있습니다. **-ox** 유틸리티 인수에 XML 출력 파일 이름을 지정했는지 확인하세요. 이렇게 하면 **Configuration** 요소에 지정된 권장 구성으로 XML 출력 파일이 생성됩니다. 이 출력에 따른 다른 가상 구성을 확인하기 위해 데이터베이스 엔진 튜닝 관리자를 다시 실행하려면 출력 파일에서 **Configuration** 요소 내용을 복사하여 원본 또는 새 XML 입력 파일에 붙여 넣습니다. **dta** 유틸리티에서 XML 입력 파일을 사용하는 방법에 대한 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
+6.  작업 및 XML 입력 파일을 만든 후에는 분석을 위해 **dta** 명령줄 유틸리티에 이 입력 파일을 전송할 수 있습니다. **-ox** 유틸리티 인수에 XML 출력 파일 이름을 지정했는지 확인하세요. 이렇게 하면 **Configuration** 요소에 지정된 권장 구성으로 XML 출력 파일이 생성됩니다. 이 출력에 따른 다른 가상 구성을 확인하기 위해 데이터베이스 엔진 튜닝 관리자를 다시 실행하려면 출력 파일에서 **Configuration** 요소 내용을 복사하여 원본 또는 새 XML 입력 파일에 붙여 넣습니다. **dta** 유틸리티에서 XML 입력 파일을 사용하는 방법에 대한 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
   
      튜닝을 완료한 다음 데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 튜닝 보고서를 보거나 XML 출력 파일을 열어 **TuningSummary** 및 **Configuration** 요소의 데이터베이스 엔진 튜닝 관리자 권장 구성을 볼 수 있습니다. 튜닝 세션의 결과를 보는 방법은 이 항목의 앞부분에 나오는 [튜닝 출력 보기](#View) 를 참조하세요. XML 출력 파일에는 데이터베이스 엔진 튜닝 관리자 분석 보고서가 포함될 수 있습니다.  
   
@@ -192,14 +192,14 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="ReviewEvaluateClone"></a> 튜닝 세션 검토, 평가 및 복제  
  데이터베이스 엔진 튜닝 관리자에서는 데이터베이스에 대한 작업 영향 분석을 시작할 때마다 새 튜닝 세션을 만듭니다. 데이터베이스 엔진 튜닝 관리자 GUI의 **세션 모니터** 를 사용하여 지정한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 실행된 모든 튜닝 세션을 보거나 다시 로드할 수 있습니다. 기존의 튜닝 세션을 모두 검토할 수 있으면 기존 세션에서 세션을 복제하거나, 기존의 튜닝 권장 구성을 편집한 다음 데이터베이스 엔진 튜닝 관리자를 사용하여 편집된 세션을 평가하거나, 정기적으로 튜닝을 수행하여 데이터베이스의 물리적 디자인을 모니터링하는 등의 작업을 쉽게 수행할 수 있습니다. 예를 들어 월별 일정으로 데이터베이스를 튜닝하도록 결정할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 튜닝 세션을 검토하려면 먼저 데이터베이스 엔진 튜닝 관리자를 사용하여 작업을 튜닝하여 서버 인스턴스에 튜닝 세션을 만들어야 합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 튜닝 세션을 검토하려면 먼저 데이터베이스 엔진 튜닝 관리자를 사용하여 작업을 튜닝하여 서버 인스턴스에 튜닝 세션을 만들어야 합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
 ### <a name="review-existing-tuning-sessions"></a>기존 튜닝 세션 검토  
  다음 단계를 사용하여 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 기존 튜닝 세션을 찾아봅니다.  
   
 ##### <a name="to-review-existing-tuning-sessions"></a>기존 튜닝 세션을 검토하려면  
   
-1.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
+1.  데이터베이스 엔진 튜닝 관리자 GUI를 시작합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
 2.  **세션 모니터** 창의 상단에 모든 기존 튜닝 세션이 표시됩니다. 표시된 세션 수는 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스를 튜닝한 횟수에 따라 달라집니다. 스크롤 막대를 사용하여 모든 튜닝 세션을 볼 수 있습니다.  
   
@@ -395,7 +395,7 @@ ms.lasthandoff: 11/17/2017
  선택한 보고서에 대한 자세한 정보를 볼 수 있습니다. 표의 열은 보고서마다 다릅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
+ [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta 유틸리티](../../tools/dta/dta-utility.md)  
   
   

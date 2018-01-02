@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 전체 텍스트 인덱스 및 쿼리 성능 저하의 몇 가지 일반적인 원인에 대해 설명합니다. 또한 이러한 문제를 완화하고 성능을 향상시킬 수 있는 몇 가지 제안 사항도 제공합니다.
@@ -151,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  `F = 8*10*8=640`  
   
- 다음 계산에서는 **max server memory**에 대한 최적 값인*M*을 구합니다. *이*시스템에서 사용 가능한 실제 총 메모리(MB)(*T*)는 `8192`입니다.  
+ 다음 계산에서는 **max server memory**에 대한 최적 값인*M*을 구합니다. 이 시스템에서 사용 가능한 실제 총 메모리(MB)(*T*)는 `8192`입니다.  
   
  `M = 8192-640-500=7052`  
   

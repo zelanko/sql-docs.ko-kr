@@ -142,11 +142,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 85c04a4e1322476be6181e09e6c3a6873955ec37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e90365c7328e85782a818b3dc07462ef185c9ec
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>실행 계획 논리 및 물리 연산자 참조
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 연산자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리 또는 DML(데이터 조작 언어) 문이 실행되는 방식을 설명합니다. 쿼리 최적화 프로그램은 연산자를 사용하여 쿼리 계획을 작성함으로써 쿼리에 지정된 결과를 만들거나 DML 문에 지정된 작업을 수행합니다. 쿼리 계획은 물리 연산자로 구성된 트리입니다. SET SHOWPLAN 문, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 그래픽 실행 계획 옵션 또는 SQL Server Profiler의 Showplan 이벤트 클래스를 사용하여 쿼리 계획을 볼 수 있습니다.  
@@ -192,7 +192,7 @@ ms.lasthandoff: 11/17/2017
 |![Arithmetic expression 연산자 아이콘](../relational-databases/media/arithmetic-expression-32x-2.gif "Arithmetic expression operator icon")|**Arithmetic Expression**|**Arithmetic Expression** 연산자는 한 행의 기존 값에서 새 값을 계산합니다. **에서는** Arithmetic Expression [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이 사용되지 않습니다.|  
 |![Assert 연산자 아이콘](../relational-databases/media/assert-32x.gif "Assert operator icon")|**StartupExpression**|**Assert** 연산자는 조건을 확인합니다. 예를 들어 참조 무결성을 확인하거나 스칼라 하위 쿼리에서 한 개의 행을 반환하게 합니다. **Assert** 연산자는 각 입력 행에 대해 실행 계획의 **Argument** 열의 식을 계산합니다. 이 식이 NULL이면 **Assert** 연산자를 통해 행이 전달되고 쿼리 실행을 계속합니다. 이 식이 NULL이 아니면 해당 오류가 발생합니다. **Assert** 연산자는 물리 연산자입니다.|  
 |![Assign 언어 요소 아이콘](../relational-databases/media/assign-32.gif "Assign language element icon")|**Assign**|**Assign** 연산자는 식 값 또는 상수 값을 변수에 할당합니다. **Assign** 는 언어 요소입니다.|  
-|없음|**Asnyc Concat**|**Asnyc Concat** 연산자는 원격 쿼리(분산 쿼리)에서만 사용됩니다. Asnyc Concat은 부모 노드 하나와 *n* 개의 자식 노드를 포함합니다. 일반적으로 일부 자식 노드는 분산 쿼리에 참여하는 원격 컴퓨터에 해당합니다. **Asnyc Concat** 은 모든 자식에게 동시에 `open()` 호출을 수행한 다음 각 자식에게 비트맵을 적용합니다. 값이 1인 각 비트에 대해 **Async Concat** 은 요청 시 출력 행을 부모 노드로 보냅니다.|  
+|없음|**Async Concat**|**Async Concat** 연산자는 원격 쿼리(분산 쿼리)에서만 사용됩니다. Asnyc Concat은 부모 노드 하나와 *n* 개의 자식 노드를 포함합니다. 일반적으로 일부 자식 노드는 분산 쿼리에 참여하는 원격 컴퓨터에 해당합니다. **Asnyc Concat**은 모든 자식에게 동시에 `open()` 호출을 수행한 다음 각 자식에게 비트맵을 적용합니다. 값이 1인 각 비트에 대해 **Async Concat** 은 요청 시 출력 행을 부모 노드로 보냅니다.|  
 |![Bitmap 연산자 아이콘](../relational-databases/media/bitmap-32x.gif "Bitmap operator icon")|**Bitmap**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 **Bitmap** 연산자를 사용하여 병렬 쿼리 계획에 비트맵 필터링을 구현합니다. 비트맵 필터링은 **Parallelism** 연산자 같은 다른 연산자로 행을 전달하기 전에 조인 레코드를 생성할 수 없는 키 값을 가진 행을 제거하여 쿼리의 실행 속도를 높입니다. 비트맵 필터는 연산자 트리의 한 부분에 있는 테이블의 값 집합에 대한 압축된 표현을 사용하여 트리의 다른 부분에 있는 다른 테이블에서 행을 필터링합니다. 쿼리 초기 단계에서 필요 없는 행을 제거하면 이후 연산자에서 작업할 행 수가 더 적어지고 쿼리의 전체적인 성능이 향상됩니다. 최적화 프로그램은 비트맵이 유용할 만큼 충분히 선택 가능성이 높아지는 시점과 필터를 적용할 연산자를 판단합니다. **Bitmap** 는 물리 연산자입니다.|  
 |![Bitmap 연산자 아이콘](../relational-databases/media/bitmap-32x.gif "Bitmap operator icon")|**Bitmap Create**|**Bitmap Create** 연산자는 비트맵이 작성된 실행 계획 출력에 나타납니다. **Bitmap Create** 는 논리 연산자입니다.|  
 |![Bookmark lookup 연산자 아이콘](../relational-databases/media/bookmark-lookup-32x.gif "Bookmark lookup operator icon")|**Bookmark Lookup**|**Bookmark Lookup** 연산자는 책갈피(행 ID 또는 클러스터링 키)를 사용하여 테이블이나 클러스터형 인덱스에서 해당 행을 조회합니다. **Argument** 열에는 테이블이나 클러스터형 인덱스에서 행을 조회할 때 사용하는 책갈피 레이블이 포함됩니다. **Argument** 열에는 행을 조회하는 테이블 또는 클러스터형 인덱스의 이름도 포함됩니다. WITH PREFETCH 절이 **Argument** 열에 나타나는 경우에 쿼리 프로세서에서는 테이블 또는 클러스터형 인덱스에서 책갈피를 조회할 때 비동기 사전 인출(미리 읽기)을 사용하는 것을 최적의 방법으로 결정합니다.<br /><br /> **에서는** Bookmark Lookup [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이 사용되지 않습니다. 대신 **Clustered Index Seek** 및 **RID Lookup** 이 책갈피 조회 기능을 제공합니다. **Key Lookup** 연산자도 이 기능을 제공합니다.|  

@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f7ce518d2588e07ae90842f92a7e9ee47cfc5543
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="polybase-guide"></a>PolyBase 가이드
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase는 t-sql 언어를 통해 데이터베이스 외부의 데이터에 액세스하는 기술입니다.  SQL Server 2016에서 이 기술을 사용하여 Hadoop에서 외부 데이터에 대한 쿼리를 실행하거나 Azure Blob Storage의 데이터를 내보내거나 가져올 수 있습니다. 쿼리는 Hadoop에 계산을 푸시하도록 최적화됩니다. Azure SQL Data Warehouse에서는 Azure Blob Storage 및 Azure Data Lake Store의 데이터를 가져오거나 내보낼 수 있습니다.
@@ -59,7 +59,7 @@ PolyBase는 Hadoop 환경에 추가 소프트웨어를 설치할 필요 없이 �
   
 ## <a name="performance"></a>성능  
   
--   **Hadoop에 계산 푸시.**쿼리 최적화 프로그램은 비용 기반 결정을 내려 Hadoop에 계산을 푸시하며 이를 통해 쿼리 성능이 향상됩니다.  외부 테이블의 통계를 사용하여 비용 기반 결정을 내립니다.   계산을 푸시하는 데는 MapReduce 작업을 만들고 Hadoop의 분산된 계산 리소스를 활용합니다.  
+-   **Hadoop에 계산 푸시.**쿼리 최적화 프로그램은 비용 기반 결정을 내려 Hadoop에 계산을 푸시하며 이를 통해 쿼리 성능이 향상됩니다.  외부 테이블의 통계를 사용하여 비용 기반 결정을 내립니다. 계산을 푸시하는 데는 MapReduce 작업을 만들고 Hadoop의 분산된 계산 리소스를 활용합니다.  
   
 -   **계산 리소스 크기 조정.** 쿼리 성능을 향상시키기 위해 SQL Server [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 사용할 수 있습니다. 이를 통해 Hadoop 노드와 SQL Server 인스턴스 간에 병렬 데이터 전송이 가능하며 외부 데이터에서 작동하기 위한 계산 리소스를 추가합니다.  
   
