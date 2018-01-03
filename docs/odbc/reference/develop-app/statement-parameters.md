@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7039a3830f24f29260b41ad244799be677fc817b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 08d2365291bf6c402ead138d6182c83de5f27896
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statement-parameters"></a>문 매개 변수
 A *매개 변수* SQL 문에서 변수입니다. 예를 들어 부품 테이블에는 PartID, 설명 및 가격 이라는 열에는 것으로 가정 합니다. 매개 변수 없이 부품을 추가 하려면 필요와 같은 SQL 문을 생성 합니다.  

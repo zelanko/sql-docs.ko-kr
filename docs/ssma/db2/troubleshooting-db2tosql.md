@@ -1,7 +1,7 @@
 ---
 title: "(DB2ToSQL) 문제 해결 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: faabe670e559675f26965aed94c5fdc9238c4429
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a81fecde8ebf12e9b32128c8a4121788af9144a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-db2tosql"></a>문제 해결 (DB2ToSQL)
 마이그레이션 문제의 중간에 있는 콘솔 스크립트 또는 명령을 실행 하는 일반적이 지 않습니다.  

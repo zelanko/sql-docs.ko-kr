@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4b219fe2f008c6e7f0e289211665a1dcf6f1bd1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f6b8bf58c2d8db8cf394e6017a9e817c1f20096e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-position"></a>카탈로그 위치
 데이터 원본에 데이터 원본의 식별자 및 식별자의 나머지 부분에서 어떻게 분리 되는지에서 카탈로그 이름의 위치 달라 집니다. 예를 들어 Xbase 데이터 원본에 카탈로그 이름이 디렉터리와, Microsoft® Windows®에서 구별 (즉, 파일 이름) 테이블 이름에 백슬래시가 (\\). 다음 그림에서는이 문제를 보여 줍니다.  

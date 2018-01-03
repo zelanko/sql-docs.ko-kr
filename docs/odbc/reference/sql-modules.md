@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee18719a325135af480645de3446042339a44f8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aac70e91e91277f7778fed439f68e5620f116d41
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-modules"></a>SQL 모듈
 DBMS SQL 문을 보내기 위한 두 번째 방법은 모듈을 통해 것입니다. 짧게 모듈은 호스트 프로그래밍 언어에서에서 호출 된 프로시저의 그룹으로 구성 됩니다. 각 프로시저는 단일 SQL 문 있어서 데이터가 하 고 프로시저에서 매개 변수를 통해 전달 됩니다.  

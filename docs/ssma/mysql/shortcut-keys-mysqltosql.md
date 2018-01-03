@@ -1,7 +1,7 @@
 ---
 title: "바로 가기 키 (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3bd50ece5714d6c89f8db248ba65992697333573
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94b156ee8349ce0ab98369c47ea30635f73e74bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortcut-keys-mysqltosql"></a>바로 가기 키 (MySQLToSQL)
 SSMA 응용 프로그램을 탐색 하려면 바로 가기 키를 사용할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  

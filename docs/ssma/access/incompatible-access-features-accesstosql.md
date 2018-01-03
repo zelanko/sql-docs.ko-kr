@@ -1,7 +1,7 @@
 ---
 title: "호환 되지 않는 액세스 기능 (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -38,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59c6c7d0130c93efb7e5d3136deb0edbd5d05ab9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d981889ef89abab5cbf071557b658ae14ae59402
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="incompatible-access-features-accesstosql"></a>호환 되지 않는 액세스 기능 (AccessToSQL)
 모든 액세스 데이터베이스 기능을 호환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 액세스 예약 된 키워드 집합은 및입니다. 발급 하 여 성공적인 마이그레이션을 방해할 수 있습니다 이러한 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 가능한 마이그레이션 문제 및 //office.microsoft.com/ 수행할 수 있는 작업에 대 한 자세한 내용은 다음 표를 사용 합니다.  

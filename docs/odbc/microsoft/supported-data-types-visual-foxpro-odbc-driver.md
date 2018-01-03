@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2bb3bc1b6de38295af0028fb79d0526bb092b49b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6e80a4f6f079620e4a5a3ee82d87342e87591001
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>지원 되는 데이터 형식 (Visual FoxPro ODBC 드라이버)
 ODBC API 및 Microsoft 쿼리에서 드라이버에서 지 원하는 데이터 형식의 목록을 표시 합니다.  

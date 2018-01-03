@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91037df4d0c92b21f1395c56da6f8944a8b9f9bc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 091703d14644fe24bef88c939ac4b45087113bd7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdescfield-function"></a>SQLGetDescField 함수(SQLGetDescField Function)
 **규칙**  
@@ -91,7 +91,7 @@ SQLRETURN SQLGetDescField(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetDescField** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 여는 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetDescField** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *ValuePtr* 충분히 필드 잘렸습니다 하므로 전체 설명자 필드를 반환할 수 없습니다. 잘리지 않은 설명자 필드의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -109,7 +109,7 @@ SQLRETURN SQLGetDescField(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *DescriptorHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램에서 호출할 수 **SQLGetDescField** 설명자 레코드의 단일 필드의 값을 반환 합니다. 에 대 한 호출 **SQLGetDescField** 헤더 필드, 레코드의 필드 및 책갈피 필드를 포함 하 여 모든 설명자 형식의 모든 필드의 설정을 반환할 수 있습니다. 응용 프로그램 반복 된 호출 하 여 동일한 또는 다른 설명자 임의의 순서로에서 여러 필드의 설정을 가져오려면 먼저 **SQLGetDescField**합니다. **SQLGetDescField** 드라이버에서 정의 된 설명자 필드를 반환 하려면 호출할 수도 있습니다.  
   
  성능상의 이유로 응용 프로그램 호출 하지 않아야 **SQLGetDescField** 문을 실행 하기 전에 IRD에 대 한 합니다.  

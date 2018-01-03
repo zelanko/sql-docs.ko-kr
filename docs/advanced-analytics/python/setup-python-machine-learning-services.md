@@ -1,10 +1,12 @@
 ---
 title: "설정 및 Python 컴퓨터 학습 서비스에 대 한 구성 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-non-specified
+ms.date: 12/20/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,15 +14,15 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bc9cfe7bf885c99ccfe487e10e001ff36f68ee86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: bea554929e222b98788524203ed060c9b5e0ce17
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Python 컴퓨터 학습 Services (In-database) 설치
 
-  실행 하 여 Python에 대 한 필수 구성 요소를 설치는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 고이 항목에 설명 된 대로 대화형 프롬프트를 따릅니다.
+  이 문서에서는 실행 하 여 Python에 필요한 구성 요소를 설치 하는 방법을 설명는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 및 대화형 프롬프트를 수행 합니다.
 
 ## <a name="machine-learning-options-in-sql-server-setup"></a>기계 학습에서 SQL Server 설치 옵션
 
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/01/2017
 
 설치가 완료 된 후에 외부 실행 파일을 사용 하는 스크립트의 실행을 허용 하도록 인스턴스를 다시 구성 합니다. 컴퓨터 학습 작업을 지원 하려면 서버에 대 한 추가 변경을 해야 할 수 있습니다. 구성 변경에는 일반적으로 인스턴스를 다시 시작 또는 실행 패드 서비스를 다시 시작 해야합니다.
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 + SQL Server 2017가 필요 합니다. Python 통합 이전 버전의 SQL Server에서 지원 되지 않습니다.
 + 데이터베이스 엔진을 설치 해야 합니다. SQL Server 인스턴스의 데이터베이스에서 Python 스크립트를 실행 하려면 필요 합니다.
@@ -40,11 +42,12 @@ ms.lasthandoff: 12/01/2017
   이 문제를 해결 Python 서비스를 사용 하는 독립 실행형 SQL Server 인스턴스에 필요한 테이블을 복사할 복제를 사용할 수 있습니다. 또는 기계 학습 Python AlwaysOn 설정을 사용 하 고 가용성 그룹의 일부는 독립 실행형 컴퓨터에는 서비스와 함께 설치할 수 있습니다.
 
 + Python의 다른 버전과 함께 설치 하 여 병렬이 SQL Server 인스턴스 Anaconda 배포의 자체 복사본을 사용 하기 때문에 가능 합니다. 그러나 SQL Server 외부 SQL Server 컴퓨터에 Python을 사용 하는 코드를 실행 중인 다양 한 문제가 발생할 수 있습니다.
-    + 다른 라이브러리와 다른 실행 파일이 사용 및 SQL Server에서 실행 하는 때 보다 서로 다른 결과 가져옵니다.
-    + Python 스크립트 외부 라이브러리에서 실행 중인 SQL server에 리소스 경합을 관리할 수 없습니다.
+    
+    - 다른 라이브러리와 다른 실행 파일이 사용 및 SQL Server에서 실행 하는 때 보다 서로 다른 결과 가져옵니다.
+    - Python 스크립트 외부 라이브러리에서 실행 중인 SQL server에 리소스 경합을 관리할 수 없습니다.
   
 > [!IMPORTANT]
-> 설치가 완료 된 후에이 항목에 설명 된 추가 구성 후 단계를 완료 해야 합니다. 여기에 SQL Server 외부 스크립트를 사용 하도록 설정 및 계정에서 사용자 대신 Python 작업을 실행 하는 SQL Server에 필요한 추가 됩니다.
+> 설치가 완료 된 후에이 문서에 설명 된 추가 구성 후 단계를 완료 해야 합니다. 이러한 단계에는 외부 스크립트를 사용 하도록 SQL Server를 사용 하도록 설정 하 고 사용자 대신 Python 작업을 실행 하는 SQL Server에 필요한 계정 추가 포함 됩니다.
 
 ### <a name="unattended-installation"></a>무인된 설치
 
@@ -103,7 +106,12 @@ ms.lasthandoff: 12/01/2017
 
 ##  <a name="bkmk_enableFeature"></a>2 단계: Python 스크립트 실행을 사용 하도록 설정
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 아직 설치 되지 않은 경우 다운로드 링크를 열도록 하 고 설치를 다시 SQL Server 설치 마법사를 실행할 수 있습니다.
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
+
+    > [!TIP]
+    > 다운로드 하 고이 페이지에서 적절 한 버전을 설치할 수 있습니다: [다운로드 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
+    > 
+    > 미리 보기 릴리스도 볼 수 있습니다 [SQL 작업 Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)를 지 원하는 관리 작업 및 SQL Server에 대 한 쿼리 합니다.
   
 2. 컴퓨터 학습 서비스를 설치한 인스턴스에 연결 하 고 다음 명령을 실행 합니다.
 
@@ -120,7 +128,7 @@ ms.lasthandoff: 12/01/2017
     RECONFIGURE WITH OVERRIDE
     ```
     
-    R 언어에 대 한 기능을 이미 사용 하는 경우 실행할 필요가 없습니다 Python에 대 한를 두 번째로 다시 구성 합니다. 기본 확장성 플랫폼 언어를 모두 지원 합니다.
+    R 언어에 대 한 기능을 이미 사용 하는 경우 실행 하지 마십시오 Python에 대 한를 두 번째로 다시 구성 합니다. 기본 확장성 플랫폼 언어를 모두 지원 합니다.
 
 4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 SQL Server 서비스를 다시 시작합니다. SQL Server 서비스가 자동으로 다시 시작 하면 관련 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 서비스입니다.
 

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2af7ec87b34ba6b2a8482d9321905f409dd9dd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 00ec992c87cce93eb95cd85314743a109183c51f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-interval-structure"></a>C 간격 구조
 에 나열 된 각 C 간격 데이터 형식의 [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 섹션은 동일한 구조를 사용 하 여 간격 데이터를 포함 시키십시오. 때 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData** 은, 드라이버 SQL_INTERVAL_STRUCT 구조에 데이터를 반환 합니다.를 호출 하 여 지정 된 값을 사용 하 여는 C 데이터 형식에 대 한 응용 프로그램 (에 대 한 호출에서 **SQLBindCol**, **SQLGetData**, 또는 **SQLBindParameter**) SQL_INTERVAL_STRUCT의 내용을 해석 하려면 정보를 표시 하 고는 *interval_type* 구조의 필드는 *enum* C 형식에 해당 하는 값입니다. 드라이버 읽지 않는 *interval_type* 간격의 유형을 결정 하도록 필드; SQL_DESC_CONCISE_TYPE 설명자 필드의 값을 검색 합니다. 매개 변수 데이터 구조를 사용 하면 드라이버를 사용 하 여 APD의 SQL_DESC_CONCISE_TYPE 필드에서 응용 프로그램에 의해 지정 된 값, SQL_INTERVAL_STRUCT의 내용을 해석 응용 프로그램의 값을 설정 하는 경우에는  *interval_type* 필드 값을 다른 값입니다.  

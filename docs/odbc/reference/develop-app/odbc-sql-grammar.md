@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d52c87b9e89c4c3dab7f0e7a61679ce5dc8cc626
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 90f472e26dec0364f803d801e2ebde7824cf8a9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-sql-grammar"></a>ODBC SQL 문법
 상호 운용 가능한 응용 프로그램 SQL 문에서 ODBC SQL 문법을 항상 사용 해야 합니다. 그러나 성능이 매우 다양이이 문법 내 에서도 불가능합니다. 자세한 내용은 참조 [SQL 문을 상호 운용성](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)합니다.

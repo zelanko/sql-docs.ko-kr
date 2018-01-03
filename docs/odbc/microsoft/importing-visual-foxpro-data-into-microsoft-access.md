@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6835c7ba9b4e1d2034b20e2e9945888f74bba60c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4fd7585d60928bdae7f7be94c78c07ea35117cc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Visual FoxPro 데이터 Microsoft Access로 가져오기
 Visual FoxPro 데이터베이스 가져오기 옵션을 사용 하 여 Microsoft Access 데이터베이스에 저장 된 데이터를 가져올 수 있습니다.  

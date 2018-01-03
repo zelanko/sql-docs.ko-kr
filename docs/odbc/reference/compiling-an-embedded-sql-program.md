@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 996e0cc19a0828fe7ca7a7ba1bd1a95402ebbe81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aeb3dbb46b8ac3e5e715a479923694cdea28a97f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiling-an-embedded-sql-program"></a>포함 된 SQL 프로그램 컴파일
 포함된 된 SQL 프로그램에는 다양 한 SQL 및 호스트 언어 문 포함 된, 호스트 언어에 대 한 컴파일러에 직접 전송할 수 없습니다. 대신 다중 단계 프로세스를 통해 컴파일됩니다. 이 프로세스 다른 제품으로 있지만 단계는 대략 모든 제품에 대해 동일 합니다.  

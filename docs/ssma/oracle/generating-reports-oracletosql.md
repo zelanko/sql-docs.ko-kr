@@ -1,7 +1,7 @@
 ---
 title: "(OracleToSQL) 보고서를 생성 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4fd0b5cf06541178cc334bd557dbb1e9aded9a20
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aaadc1f77e9fb7e0179f46f4a2186322aa2ad656
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-oracletosql"></a>보고서 생성 (OracleToSQL)
 명령을 사용 하 여 수행 된 특정 작업 보고서는 개체 트리 수준 SSMA 콘솔에 생성 됩니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**Command**|**보고서 제목**|  
-    |1.|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
+    |1|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
     |2|스키마 변환|SchemaConversionReport&lt;n&gt;합니다. XML|  
     |3|데이터 마이그레이션|DataMigrationReport&lt;n&gt;합니다. XML|  
     |4|convert sql 문|ConvertSQLReport&lt;n&gt;합니다. XML|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1.|자세한 정보 = "false"|활동의 요약 된 보고서를 생성합니다.|  
+    |1|자세한 정보 = "false"|활동의 요약 된 보고서를 생성합니다.|  
     |2|자세한 정보 = "true"|각 작업에 대 한 요약 및 세부 상태 보고서를 생성합니다.|  
   
     > [!NOTE]  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/05/2017
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1.|오류 보고 = "false"|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
+    |1|오류 보고 = "false"|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
     |2|오류 보고 = "true"|자세한 오류 / 경고 / 정보 메시지입니다.|  
   
     > [!NOTE]  

@@ -3,7 +3,7 @@ title: "호출 순서 (SybaseToSQL) 사용자 지정 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e181c4339c663b2455c68151937013b5c587f2b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fcc1a0055eabcde9b4718e537e2ee37956f116f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>호출 순서 (SybaseToSQL) 사용자 지정
 이 단계에서 개체를 테스트를 호출할 수 있는 순서를 선택 합니다.  

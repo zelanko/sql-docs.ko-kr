@@ -1,7 +1,7 @@
 ---
 title: "SQL 모드 (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17254008fad944edba94e0f24a180dba1d4bb8ed
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3f9271008c9633a5266d2171e7724d259ebae37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 모드 (MySQLToSQL)
 MySQL 용 SSMA 다른 SQL 모드에서 작동할 수 있습니다 및 다른 클라이언트에 대 한 이러한 모드를 다르게 적용할 수 있습니다.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f807bd12056f3c6a8e7a38efee56f0a6b6727066
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3946b81210ce439579464fa7e10e8fad63bfd225
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="like-predicate-escape-character"></a>마찬가지로 조건자 이스케이프 문자
 에 **같은** 조건자 백분율 기호 (%) 일치 항목 0 개 이상의 임의 문자 및 밑줄 (_) 하나의 문자를 찾습니다. 실제 백분율 기호는 하거나에 밑줄을 **같은** 조건자에 이스케이프 문자가 앞에 야 백분율 기호 또는 밑줄 합니다. 정의 하는 이스케이프 시퀀스는 **같은** 조건자 이스케이프 문자는:  

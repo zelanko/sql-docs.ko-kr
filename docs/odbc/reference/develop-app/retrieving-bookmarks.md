@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04e89e941162869b1bb3f1418f5d6e73622fe4cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bb71f5ce4b60a133d600367086cdf73c02a61461
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-bookmarks"></a>책갈피를 검색합니다.
 응용 프로그램 책갈피를 사용할 경우를 준비 하거나 문을 실행 하기 전에 SQL_UB_VARIABLE로 SQL_ATTR_USE_BOOKMARKS 문 특성을 설정 합니다. 빌드 및 응용 프로그램 좋은 보장할 수 있는 경우에 책갈피를 사용할 수 해야 하므로 책갈피는 비용이 많이 드는 작업 수를 유지 관리 중 사용 되므로이 작업이 필요 합니다.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e2127d5b33c5ea4bf2a0c96c5e020322aec39db
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2a9fd1565d0980e5af77d3cded499ce1f0091e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-commit-mode"></a>자동 커밋 모드
 *자동 커밋 모드에서* 모든 데이터베이스 작업은 수행 될 때 커밋됩니다. 이 모드는 단일 SQL 문으로 구성 된 여러 실제 트랜잭션이에 적합 합니다. 구분 하거나 이러한 트랜잭션이 완료를 지정할 필요는 없습니다. 트랜잭션 지원 없이 데이터베이스, 자동 커밋 모드는 지원 되는 유일한 모드는 있습니다. 이러한 데이터베이스에서는 문이 커밋됩니다 때 실행 되 고 롤백; 방식은 없습니다. 따라서 항상에 않습니다 자동 커밋 모드.  

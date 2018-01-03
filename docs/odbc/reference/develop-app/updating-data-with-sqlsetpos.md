@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aa432de213eba0d6bf36b18115324c5a505f9238
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3a86647a0086c322918d8dc650d4f840b09326d6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos 사용 하 여 업데이트 데이터
 응용 프로그램을 업데이트 하거나 삭제 된 행 집합의 모든 행 **SQLSetPos**합니다. 호출 **SQLSetPos** 편리 하 게 하는 대신 하면 작성 하 고 SQL 문을 실행 합니다. 데이터 소스 위치 지정 된 SQL 문을 지원 하지 않는 경우에 위치 지정된 업데이트를 지 원하는 ODBC 드라이버를 수 있습니다. 함수 호출을 사용 하 여 완전 한 데이터베이스 액세스를 얻기 위한 패러다임의 일부인 것입니다.  

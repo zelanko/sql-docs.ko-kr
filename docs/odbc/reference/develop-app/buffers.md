@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fa45570f0f5bda2190f7b3193f404ffccd3d621
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffers"></a>버퍼
 버퍼는 드라이버 및 응용 프로그램 간에 데이터를 전달 하는 데 사용 되는 응용 프로그램 메모리의 일부입니다. 예를 들어 응용 프로그램 버퍼에 연결할 수 있는, 또는 *하면서 바인딩된* 결과 집합으로 열 **SQLBindCol**합니다. 각 행을 인출할 때 이러한 버퍼에 각 열에 대 한 데이터가 반환 됩니다. *입력 버퍼* 드라이버;에 응용 프로그램에서 데이터를 전달 하는 데 사용 됩니다 *출력 버퍼* 응용 프로그램에는 드라이버에서 데이터를 반환 하는 데 사용 됩니다.  

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server (AccessToSQL)에 연결 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -32,11 +32,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd14f32d796098393d7869f717f45f424504f7d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f7f2c52a7af7fc3f9a35585678b222d6a29e5787
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL)에 연결
 Access 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 대상 인스턴스에 연결 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. SSMA 인스턴스의 데이터베이스에 대 한 메타 데이터를 가져오며 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서 데이터베이스 메타 데이터를 표시 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다. SSMA는의 인스턴스에 대 한 정보를 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 연결 하지만 암호를 저장 하지 않는 있습니다.  
@@ -129,7 +129,7 @@ Access 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](
   
 에 다시 연결 하는 절차가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 연결을 설정 하는 절차와 같습니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 원본 및 대상 데이터베이스 간의 매핑을 사용자 지정 하는 경우 참조 [매핑 소스와 대상 데이터베이스](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) 데이터베이스 개체를 변환 하려면 다음 단계는 그렇지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문을 사용 하 여 [데이터베이스 개체를 변환 합니다.](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>관련 항목:  

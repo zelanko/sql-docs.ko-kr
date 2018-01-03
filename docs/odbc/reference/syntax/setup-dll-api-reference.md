@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc1e600ad9b1a7c38150fdbc1ad346fde2b02b0f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 953fbdf89defc5b17e3899cad3ec2077c693df9d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setup-dll-api-reference"></a>설치 프로그램 DLL API 참조
 이 섹션에서는 드라이버 설치는 두 개의 구성 된 DLL API의 구문을 설명 (**ConfigDriver** 및 **ConfigDSN**). **ConfigDriver** 및 **ConfigDSN** 별도의 DLL을 설치 하거나 드라이버 DLL에에서 있을 수 있습니다.  

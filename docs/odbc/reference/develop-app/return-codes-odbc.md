@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6f51708cf47cf84a33cefee3003e0edb94baaae6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9e5daaf1389631ac392fd487e99b28864b71efb8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-codes-odbc"></a>ODBC 반환 코드
 ODBC에서 각 함수 라고 하는 코드를 반환 합니다. 해당 *코드를 반환* 전반적인 성공 또는 실패는 함수의 나타냅니다. 프로그램 논리는 일반적으로 반환 코드에 기반을 둡니다.  

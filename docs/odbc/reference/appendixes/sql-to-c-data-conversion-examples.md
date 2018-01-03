@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e2c763d78eb6ea0cf854a455e09fc09b8a7de2c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 52791dba31e61663a84d9c80041874c1869c2836
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL에서 C 데이터 변환 예제
 다음 표에 표시 된 예제 드라이버 C 데이터를 SQL 데이터를 변환 하는 방법을 보여 줍니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_DECIMAL|1234.56|SQL_C_STINYINT|무시됨|----|22003|  
 SQL_DOUBLE|1.2345678|SQL_C_DOUBLE|무시됨|1.2345678|n/a|  
 |SQL_DOUBLE|1.2345678|SQL_C_FLOAT|무시됨|1.234567|n/a|  
-|SQL_DOUBLE|1.2345678|SQL_C_STINYINT|무시됨|1.|n/a|  
+|SQL_DOUBLE|1.2345678|SQL_C_STINYINT|무시됨|1|n/a|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|11|1992-12-31\0 [a]|n/a|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|10|-----|22003|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_TIMESTAMP|무시됨|1992,12,31, 0,0,0,0 [b]|n/a|  

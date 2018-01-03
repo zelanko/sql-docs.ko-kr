@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1ff8e2e111db13f67c80189d225dad5084bfdb6e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69613e528d2b0e4e660725f204d9ffd1bf3d54af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-c-data-types"></a>기본 C 데이터 형식
 응용 프로그램에서 SQL_C_DEFAULT를 지정 하는 경우 **SQLBindCol**, **SQLGetData**, 또는 **SQLBindParameter**, 드라이버는 출력 또는 입력된 버퍼의 C 데이터 형식을 가정 열 또는 매개 변수 버퍼 바인딩되는 변수의 SQL 데이터 형식에 해당 합니다.  

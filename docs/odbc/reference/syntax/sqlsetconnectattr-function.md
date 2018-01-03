@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d239280ebe6eaaafaed44341354bec8a6d0b225e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 함수
 **규칙**  
@@ -82,7 +82,7 @@ SQLRETURN SQLSetConnectAttr(
   
  드라이버는 옵션을 설정할 때의 결과 대 한 정보를 제공 하는 SQL_SUCCESS_WITH_INFO를 반환할 수 있습니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01 S 02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다 *ValuePtr* 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -115,7 +115,7 @@ SQLRETURN SQLSetConnectAttr(
   
  때 *특성* 문 특성은 **SQLSetConnectAttr** 에서 반환 된 Sqlstate를 반환할 수 **SQLSetStmtAttr**합니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  연결 특성에 대 한 일반 정보를 참조 하십시오. [연결 특성](../../../odbc/reference/develop-app/connection-attributes.md)합니다.  
   
  현재 정의 된 특성 및 이러한 기능이 도입 된 ODBC 버전입니다;이 섹션의 뒷부분에 나오는 표에 표시 됩니다. 다른 데이터 원본 활용 하기 위해 더 많은 특성을 정의할는 사용할 수 있습니다. 특성의 범위는 ODBC;에 예약 되어 있습니다. 드라이버 개발자는 Open Group에서 드라이버 관련 사용을 위해 값을 예약 해야 합니다.  
@@ -129,7 +129,7 @@ SQLRETURN SQLSetConnectAttr(
   
  연결 된; 전에만 일부 연결 특성을 설정할 수 있습니다. 다른 사용자를 연결한 후에 설정할 수 있습니다. 다음 표에서 이전 또는 이후에 연결에 설정 해야 하는 해당 연결 특성을 나타냅니다. *어느* 앞 이나 뒤 연결 특성을 설정할 수 있도록 나타냅니다.  
   
-|Attribute|하기 전이나 후 연결 설정|  
+|attribute|하기 전이나 후 연결 설정|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|모두|  

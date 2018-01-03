@@ -20,16 +20,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 86547cd78253d17ccacebe1d9b0db9e3cdda0c8a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d66238df770dfd647c3013441024409f15fdef9b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="clr-integration---enabling"></a>CLR 통합 기능을 사용 하도록 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]공용 언어 런타임 (CLR) 통합 기능은 기본적으로 꺼져 있고 CLR 통합을 사용 하 여 구현 되는 개체를 사용 하려면을 사용 해야 합니다. CLR 통합을 사용 하려면는 **사용 하도록 설정 하는 clr** 의 옵션은 **sp_configure** 저장 프로시저를 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
-```tsql  
+```sql  
   
 sp_configure 'show advanced options', 1;  
 GO  

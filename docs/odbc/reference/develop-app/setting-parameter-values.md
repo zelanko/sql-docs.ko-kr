@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c89f68450a7d4ffe65f5d7bc0e8697b5ac2cb1b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 726af8b2a7b4e9f0b630c95c45f512201fa1cf3a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-parameter-values"></a>매개 변수 값 설정
 응용 프로그램은 매개 변수 값을 설정 하려면 단순히 매개 변수에 바인딩된 변수 값을 설정 합니다. 이 중요 하지 않습니다이 값을 설정 하는 경우 문을 실행 하기 전에 설정 됩니다. 이전 또는 변수를 바인딩한 후 응용 프로그램 값을 설정할 수 및 원하는 횟수 만큼 값을 변경할 수는 있습니다. 문이 실행 되는 경우 드라이버는 단순히 변수의 현재 값을 검색 합니다. 준비 된 문을 두 번 이상; 실행 될 때 특히 유용 응용 프로그램이 새 값을 설정 일부 또는 모든 변수는 문이 실행 될 때마다 합니다. 이 예제를 보려면 [실행 준비](../../../odbc/reference/develop-app/prepared-execution-odbc.md)이 섹션의 앞부분에 나오는 합니다.  

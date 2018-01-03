@@ -1,7 +1,7 @@
 ---
 title: "SSMA 콘솔 (AccessToSQL) 실행 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d749a876fb128f55e653eca6fe8dda613a09dfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 29f9c2bbce707aa08ce5cff918965e65f66d8370
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA 콘솔 (AccessToSQL)를 실행합니다.
 Microsoft는 강력한 집합 스크립트 파일 명령 및 실행 및 제어 SSMA 활동 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다.  
@@ -167,7 +167,7 @@ Microsoft는 강력한 집합 스크립트 파일 명령 및 실행 및 제어 S
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <load-access-database>  
@@ -201,7 +201,7 @@ force-부하-원본/대상 데이터베이스
   
   metabase="<source/target>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <force-load>  
@@ -314,7 +314,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <generate-assessment-report  
@@ -386,7 +386,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <convert-schema  
@@ -446,7 +446,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 </migrate-data>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <migrate-data  
@@ -476,7 +476,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 </link-tables>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <link-tables>  
@@ -502,7 +502,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 </unlink-tables>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <unlink-tables>  
@@ -581,7 +581,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target  
@@ -590,7 +590,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
   object-type="category"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target>  
@@ -646,7 +646,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database  
@@ -655,7 +655,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
   object-type="category"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database>  
@@ -705,7 +705,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <save-as-script  

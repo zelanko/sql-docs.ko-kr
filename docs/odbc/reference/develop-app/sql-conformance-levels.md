@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e99ef46b43da0976e6401d8b169cddca8a1c5b23
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d397eef2bec5e803cca97f05d009708273a05473
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-conformance-levels"></a>SQL 받는 규칙 수준
 드라이버에서 지 원하는 SQL 92 문법의 수준에 대 한 호출에서 반환 된 값으로 표시 됩니다 **SQLGetInfo** SQL_SQL_CONFORMANCE 정보 유형을 사용 합니다. 이 드라이버는 SQL 92에 정의 된 항목, FIPS 전환, 중간, 또는 전체 수준이에 맞는지 여부를 나타냅니다.  

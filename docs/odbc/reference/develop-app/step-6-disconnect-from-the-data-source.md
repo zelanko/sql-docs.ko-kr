@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 078471ba5f6f95d20a03d6e5191de0df2d8bdd9c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d76d3b3061dded62c7230e4a8d02a4312c8152f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>6 단계: 데이터 소스에서 연결 끊기
 마지막 단계는 다음 그림에 나와 있는 것 처럼 데이터 소스에서 연결을 끊으려면입니다. 응용 프로그램 호출 하 여 모든 문 핸들을 해제 하는 첫째, **SQLFreeHandle**합니다. 자세한 내용은 참조 [문 핸들 해제](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)합니다.  

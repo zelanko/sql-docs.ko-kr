@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 24abc4dee066853da7b201f19839063aa437d854
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19a70f6afcceeac41ef983a5756409fabcb428af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serializability"></a>순차성
 트랜잭션을 여야 가장 바람직합니다 *직렬화 가능*합니다. 에 트랜잭션을 동시에 실행의 결과 동일한 결과를 직렬로 실행 하는 경우 직렬화 가능 트랜잭션이 있다고-즉, 하나씩 있습니다. 중요 하지 않습니다 트랜잭션 실행 먼저는 결과 트랜잭션의 모든 혼합을 반영 하지 않습니다.  

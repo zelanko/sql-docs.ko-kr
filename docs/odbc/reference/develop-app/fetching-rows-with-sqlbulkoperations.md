@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84b8e31821e1571da8272806c5fcd7f5563a4182
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b3af3d83d9d0dab4735842621bbcb49fab69a4c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>SQLBulkOperations 가진 행을 인출합니다.
 에를 호출 하 여 책갈피를 사용 하 여 행 집합에 데이터를 따라 다시 인출 수 수 **SQLBulkOperations 합니다.** 가져와야 하는 행 바인딩된 책갈피 열에 있는 책갈피로 식별 됩니다. 열 값이 SQL_COLUMN_IGNORE는 페치 되지 않습니다.  

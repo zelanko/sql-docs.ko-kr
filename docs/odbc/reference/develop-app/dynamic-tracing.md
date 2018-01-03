@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52d7526610d7488fda27bba0a592eb976dce0897
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 51ea74b8b54bf9d9e26bedf2733147e8552ce08f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-tracing"></a>동적 추적
 추적을 사용 하도록 설정 또는 실행 하는 응용 프로그램의 한 지점에서 사용 하지 않도록 설정 수 있습니다. 따라서 응용을 프로그램을 여러 개의 함수 호출을 추적할 수 있습니다.  

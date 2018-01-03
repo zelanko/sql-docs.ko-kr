@@ -1,7 +1,7 @@
 ---
 title: sys.stats (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba477c2bc30fdeccee1af448e953043f3c5d9d92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0650931e6a9c450409cd40b366a5e9fb6bf08771
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 통계가 속한 개체의 ID입니다.|  
 |**name**|**sysname**|통계의 이름입니다. 개체 내에서 고유합니다.|  
-|**stats_id**|**int**|통계의 ID입니다. 개체 내에서 고유합니다.|  
+|**stats_id**|**int**|통계의 ID입니다. 개체 내에서 고유합니다.<br /><br />통계가 인덱스에 대응 하는 경우는 *stats_id* 값이 동일는 *index_id* 값에 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰.|  
 |**auto_created**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 생성된 통계인지 여부를 나타냅니다.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 생성된 통계가 아닙니다.<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 생성된 통계입니다.|  
 |**user_created**|**bit**|사용자가 만든 통계인지 여부를 나타냅니다.<br /><br /> 0 = 사용자가 만든 통계가 아닙니다.<br /><br /> 1 = 사용자가 만든 통계입니다.|  
 |**no_recompute**|**bit**|통계를 사용 하 여 만든 있는지 여부를 나타냅니다는 **NORECOMPUTE** 옵션입니다.<br /><br /> 0 = 통계 만들어지지 않은 **NORECOMPUTE** 옵션입니다.<br /><br /> 1 = 사용 하 여 만든 통계는 **NORECOMPUTE** 옵션입니다.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>예  
  다음 예에서는 `HumanResources.Employee` 테이블에 대한 모든 통계 및 통계 열을 반환합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT s.name AS statistics_name  
@@ -68,12 +68,16 @@ INNER JOIN sys.stats_columns AS sc
 INNER JOIN sys.columns AS c   
     ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
 WHERE s.object_id = OBJECT_ID('HumanResources.Employee');  
-  
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
  [개체 카탈로그 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
-  
-  
+ [SQL Server 시스템 카탈로그 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [통계](../../relational-databases/statistics/statistics.md)    
+ [sys.dm_db_stats_properties&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.stats_columns &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
+ 
+
+ 

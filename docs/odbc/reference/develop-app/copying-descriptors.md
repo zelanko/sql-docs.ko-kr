@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04ce43d9cc30012e559b27839b308f31b1617d35
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b6ba44b9cdb214007cb11cadcb1a9f25d80a5f63
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copying-descriptors"></a>설명자 복사
 **SQLCopyDesc** 다른 설명자에 하나의 설명자 필드를 복사 하려면 함수를 호출 합니다. 필드는 IPD 또는 응용 프로그램 설명자에만 속하지만 IRD에 복사할 수 있습니다. 설명자의 모든 형식에서 필드를 복사할 수 있습니다. 소스와 대상 설명자에 대해 정의 된 필드에만 복사 됩니다. **SQLCopyDesc** 설명자의 할당 유형을 변경할 수 없으므로 SQL_DESC_ALLOC_TYPE 필드를 복사 하지 않습니다. 복사한 필드 기존 필드를 덮어씁니다.  

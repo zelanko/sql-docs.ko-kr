@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 039de577f9c7d31bd3968494e1fc9113c041007e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3cdc3ae1e4efe4292077851a4f457bae4af17bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 함수
 **규칙**  
@@ -74,7 +74,7 @@ RETCODE SQLInstallerError(
   
  잘림은 오류 메시지에서 발생 했는지를 확인 하려면 응용 프로그램에 값을 비교는 *cbErrorMsgMax* 에 기록 된 메시지 텍스트의 실제 길이 인수는 *pcbErrorMsg* 인수입니다. 에 대 한 올바른 버퍼 길이 할당 해야 하면, *lpszErrorMsg* 및 **SQLInstallerError** 해당와 다시 호출 해야 *iError*레코드입니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램이 호출 **SQLInstallerError** ODBC 설치 관리자 함수에 대 한 이전 호출에서 FALSE를 반환 하는 경우. ODBC 설치 관리자 및 드라이버 또는 변환기 설치 함수는 함수가 실패할 때에 0 개 이상의 오류를 게시할 (FALSE를 반환 합니다). 따라서 응용 프로그램이 호출 **SQLInstallerError** ODBC 설치 관리자 함수 실패 한 후에 합니다.  
   
  ODBC 설치 관리자 오류 큐는 새 설치 관리자 함수를 호출할 때마다가 플러시됩니다. 따라서 응용 프로그램은 마지막 installer 함수 호출에서 아닌 다른 함수에 대 한 오류를 검색할 기대할 수 없습니다.  

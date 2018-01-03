@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 083be2fe5cda6f28cb250a3e0bc4aaef9bf30ef2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 함수
 **규칙**  
@@ -96,7 +96,7 @@ SQLRETURN SQLBindParameter(
 ## <a name="diagnostics"></a>진단  
  때 **SQLBindParameter** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 여는 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLBindParameter** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성 위반|으로 식별 되는 데이터 형식에서 *ValueType* 인수에서 식별 되는 데이터 형식으로 변환할 수 없습니다는 *ParameterType* 인수입니다. 이 오류를 반환할 수 있습니다는 **SQLExecDirect**, **SQLExecute**, 또는 **SQLPutData** 순서가 아니라 실행 시 **SQLBindParameter**.|  
@@ -117,7 +117,7 @@ SQLRETURN SQLBindParameter(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램이 호출 **SQLBindParameter** 하는 SQL 문의 각 매개 변수 표식을 바인딩합니다. 바인딩은 응용 프로그램 호출할 때까지 적용 되지 않고 **SQLBindParameter** 다시 호출 **SQLFreeStmt** SQL_RESET_PARAMS 옵션 또는 호출 **SQLSetDescField** 를 APD의 SQL_DESC_COUNT 헤더 필드를 0으로 설정 합니다.  
   
  매개 변수에 대 한 자세한 내용은 참조 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다. 매개 변수 데이터 형식 및 매개 변수 표식에 대 한 자세한 내용은 참조 [매개 변수 데이터 형식](../../../odbc/reference/appendixes/parameter-data-types.md) 및 [매개 변수 표식을](../../../odbc/reference/appendixes/parameter-markers.md) 부록 c: SQL 문법에 있습니다.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8110bf3ccf6f4d2105c645aaa71868fc6f6ad80c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4158e29b460959122eeb963d5e841793866f7776
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstate"></a>SQLSTATE
 데이터 소스에서 발생 하는 오류에 대 한 ODBC 드라이버는 반환 된 원시 오류를 적절 한 SQLSTATE에 매핑됩니다. 드라이버 또는 드라이버 관리자를 ODBC 드라이버에서 검색 된 오류에 대 한 또는 드라이버 관리자는 적절 한 SQLSTATE를 생성 합니다.

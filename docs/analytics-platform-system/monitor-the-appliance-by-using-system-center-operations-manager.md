@@ -3,10 +3,10 @@ title: "System Center Operations Manager (APS)와 함께 모니터 어플라이�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
 caps.latest.revision: "14"
-ms.openlocfilehash: 115d32ab8f633752dacfaf245017803bcdbfb8d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47a89b19a93d99bb3e63925b012bb53d169fdf0d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>System Center Operations Manager를 사용 하 여 어플라이언스에 모니터링
 SQL Server PDW 및 HDInsight를 모니터링 하려면 System Center Operations Manager를 사용 하는 방법을 설명 합니다.  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
   
 1.  System Center Operations Manager 2007 R2, 2012 또는 2012 SP1 설치 되어 실행 중 이어야 합니다.  
   
@@ -47,7 +47,7 @@ SQL Server PDW 및 HDInsight를 모니터링 하려면 System Center Operations 
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>SQL Server PDW SCOM으로 모니터링 하려면  
 SCOM 관리 팩을 구성한 후 SCOM의 모니터링 창에서을 클릭 하 고 드릴 다운 하 **SQL Server 어플라이언스** 차례로 **Microsoft SQL Server 병렬 데이터 웨어하우스**합니다. Microsoft SQL Server 병렬 데이터 웨어하우스, 아래 네 가지 선택 사항이: 경고, 제품, 어플라이언스 다이어그램 및 노드.  
   
-### <a name="alerts"></a>경고  
+### <a name="alerts"></a>,  
 경고는 관리 해야 하는 현재 경고를 찾을 수 있습니다.  
   
 ![경고](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  

@@ -3,10 +3,10 @@ title: "기기 표준 시간대 구성 (분석 플랫폼 시스템)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cea9eeb9-fe05-4e65-b229-539de02ab20a
 caps.latest.revision: "18"
-ms.openlocfilehash: 05cf2811dad14a6a7d53752893f363b061b86843
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0dc20594fa45375fe07b4ec374da9c752d3cc8b0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-time-zone-configuration"></a>기기 표준 시간대 구성
 **시간대** 페이지를 사용 하면 SQL Server PDW 어플라이언스에 모든 노드에 대 한 표준 시간대를 설정할 수 있습니다.  

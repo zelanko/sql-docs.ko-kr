@@ -1,7 +1,7 @@
 ---
 title: DBCC CHECKDB (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,10 +132,7 @@ DBCC CHECKDB
 >  오류를 복구하려면 백업에서 복원하는 것이 좋습니다. 복구 작업이 수행될 경우 테이블 자체나 테이블 간에 존재할 수 있는 제약 조건이 고려되지 않습니다. 지정된 테이블이 하나 이상의 제약 조건에 관련되면 복구 작업 후에 DBCC CHECKCONSTRAINTS를 실행하는 것이 좋습니다. REPAIR를 사용해야 하는 경우 복구 옵션 없이 DBCC CHECKDB를 실행하여 사용할 복구 수준을 확인합니다. REPAIR_ALLOW_DATA_LOSS 수준을 사용하는 경우 이 옵션으로 DBCC CHECKDB를 실행하기 전에 데이터베이스를 백업하는 것이 좋습니다.    
     
  ALL_ERRORMSGS  
- 개체당 보고되는 모든 오류를 표시합니다. 기본적으로 모든 오류 메시지가 표시됩니다. 이 옵션을 지정하거나 생략하더라도 아무런 영향을 미치지 않습니다. 오류 메시지에서 생성 된 메시지를 제외한 모든 개체 ID에 따라 정렬 [tempdb 데이터베이스](../../relational-databases/databases/tempdb-database.md)합니다.  
-    
-> [!NOTE] 
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 경우 반환되는 오류 메시지의 최대 개수는 1000개입니다. ALL_ERRORMSGS를 지정할 때 사용 하 여 DBCC 명령을 실행 하는 것이 좋습니다는 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md) 또는 예약 하 여 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 명령을 실행 하 고 출력 파일을 전송 합니다. 이러한 방법을 사용할 경우 명령을 한 번 실행하면 모든 오류 메시지가 보고됩니다.    
+ 개체당 보고되는 모든 오류를 표시합니다. 기본적으로 모든 오류 메시지가 표시됩니다. 이 옵션을 지정하거나 생략하더라도 아무런 영향을 미치지 않습니다. 오류 메시지에서 생성 된 메시지를 제외한 모든 개체 ID에 따라 정렬 [tempdb 데이터베이스](../../relational-databases/databases/tempdb-database.md)합니다.     
 
  EXTENDED_LOGICAL_CHECKS  
  호환성 수준이 100([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 이상인 경우 인덱싱된 뷰, XML 인덱스 및 공간 인덱스에 대해 논리적 일관성 검사가 수행됩니다.  
@@ -227,7 +224,7 @@ DBCC CHECKDB 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnov
 |State|Description|    
 |-----------|-----------------|    
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
-|1.|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|    
+|1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|    
 |2|응급 모드 데이터베이스 복구 중에 오류가 발생했습니다.|    
 |3|메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
 |4|어설션 또는 액세스 위반이 감지되었습니다.|    

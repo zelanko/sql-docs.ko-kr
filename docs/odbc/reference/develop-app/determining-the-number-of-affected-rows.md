@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 003268d449fd21ba23bbe8a905fafc972ee13914
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ac4b30fc9bbbb2e289ca53094d5050f0808b3ec1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-the-number-of-affected-rows"></a>영향을 받는 행 수를 결정합니다.
 응용 프로그램 업데이트, 삭제 또는 행을 삽입, 후 호출할 수 **SQLRowCount** 행의 수가 영향을 받았는지 확인 합니다. **SQLRowCount** 여부 행 된 업데이트, 삭제 또는 삽입을 실행 하 여이 값을 반환 합니다.는 **업데이트**, **삭제**, 또는 **삽입** 위치 지정된 update 또는 delete 문을 실행 하 여 또는 호출 하 여 문에서 **SQLSetPos**합니다.  

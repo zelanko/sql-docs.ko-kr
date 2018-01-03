@@ -4,7 +4,7 @@ description: "이 항목에서는 SQL 서버가 Linux에서 실행 하 고 자�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: b598357bb8ebe17ad15fb10e1d74c21c169c1da8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a17c62aeddd0ed898d2a43931965bb7052a58412
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sql-server-on-linux"></a>Linux의 SQL Server
 
@@ -27,7 +27,7 @@ SQL Server 2017 Linux에서 실행 됩니다. 많은 유사 기능 및 운영 �
 
 ## <a name="install"></a>Install
 
-시작 하려면 다음 빠른 시작 자습서 중 하나를 사용 하 여 Linux에서 SQL Server를 설치 합니다.
+시작 하려면 다음 퀵 스타트 중 하나를 사용 하 여 Linux에서 SQL Server를 설치 합니다.
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
@@ -38,9 +38,9 @@ SQL Server 2017 Linux에서 실행 됩니다. 많은 유사 기능 및 운영 �
 > [!NOTE]
 > Docker 자체 즉, Linux, Mac 및 Windows에서 Docker 이미지를 실행할 수 있습니다 여러 플랫폼에서 실행 됩니다.
 
-## <a name="connect"></a>Connect
+## <a name="connect"></a>연결
 
-설치가 끝나면 Linux 컴퓨터에서 SQL Server 인스턴스에 연결 합니다. 로컬 또는 원격으로 및 다양 한 도구 및 드라이버와 연결할 수 있습니다. 빠른 시작 자습서에 사용 하는 방법을 보여 주기는 [sqlcmd](sql-server-linux-setup-tools.md) 명령줄 도구입니다. 다른 도구는 다음과 같습니다.
+설치가 끝나면 Linux 컴퓨터에서 SQL Server 인스턴스에 연결 합니다. 로컬 또는 원격으로 및 다양 한 도구 및 드라이버와 연결할 수 있습니다. 퀵 스타트 사용 하는 방법을 보여 주기는 [sqlcmd](sql-server-linux-setup-tools.md) 명령줄 도구입니다. 다른 도구는 다음과 같습니다.
 
 | 도구 | 자습서 |
 |-----|-----|
@@ -52,7 +52,7 @@ SQL Server 2017 Linux에서 실행 됩니다. 많은 유사 기능 및 운영 �
 
 SQL Server 2017 Linux를 포함 하 여 모든 지원 되는 플랫폼에서 동일한 기본 데이터베이스 엔진을 있습니다. 너무 많은 기존 기능과 성능을 Linux에서 동일한 방식으로 작동합니다. 설명서의이 영역 Linux 관점에서 이러한 기능 중 일부를 노출합니다. 또한 Linux에서 고유한 요구 사항이 영역 호출 합니다.
 
-SQL Server에 익숙한 경우 검토는 [릴리스 정보](sql-server-linux-release-notes.md) 일반적인 지침과이 릴리스의 알려진된 문제에 대 한 합니다. 다음 확인 [Linux에서 SQL Server에 대 한 새로운](sql-server-linux-whats-new.md) 으로 [SQL Server 2017 전체에 대 한 새로운](../sql-server/what-s-new-in-sql-server-2017.md)합니다.
+SQL Server에 익숙한 경우 검토는 [릴리스 정보](sql-server-linux-release-notes.md) 일반적인 지침과이 릴리스의 알려진된 문제에 대 한 합니다. 다음 확인 [Linux에서 SQL Server에 대 한 새로운](sql-server-linux-whats-new.md) 으로 [SQL Server 2017 전체에 대 한 새로운](../sql-server/what-s-new-in-sql-server-2017.md)합니다. 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](sql-server-linux-faq.md)합니다.
 
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) SQL Server 엔지니어링 팀에 문의
 

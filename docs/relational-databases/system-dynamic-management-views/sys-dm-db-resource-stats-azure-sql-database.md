@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 계산된 평균 계산 활용률입니다.|  
 |avg_data_io_percent|**10 진수 (5,2)**|평균 데이터 서비스 계층 제한의 I/O 활용률입니다.|  
 |avg_log_write_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 계산된 평균 쓰기 리소스 활용률입니다.|  
-|avg_memory_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 계산된 평균 메모리 활용률입니다.<br /><br /> 메모리 내 OLTP 개체의 저장에 사용 된 메모리 포함 됩니다.|  
+|avg_memory_usage_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 계산된 평균 메모리 활용률입니다.<br /><br /> 메모리 내 OLTP 개체의 저장에 사용 된 메모리 포함 됩니다.|  
 |xtp_storage_percent|**10 진수 (5,2)**|저장소 사용률이 메모리 내 OLTP에 대 한 서비스 계층 한도의 비율로 (보고 간격의 끝). 여기에 다음 메모리 내 OLTP 개체의 저장에 사용 된 메모리: 메모리 액세스에 최적화 된 테이블, 인덱스 및 테이블 변수입니다. ALTER TABLE 작업을 처리 하기 위해 사용 되는 메모리 포함 됩니다.<br /><br /> 데이터베이스에 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|  
 |max_worker_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 비율로 최대 동시 작업자 (요청 수)입니다.|  
 |max_session_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 비율로 최대 동시 세션|  

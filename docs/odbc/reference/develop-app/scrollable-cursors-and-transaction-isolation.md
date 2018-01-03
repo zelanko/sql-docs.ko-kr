@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4db2f357942eb7bab34a17e8f9c03e442731055
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>스크롤 가능 커서 및 트랜잭션 격리
 다음 표에서 변경 내용 표시를 제어 하는 요소를 나열 합니다.  
@@ -46,17 +46,17 @@ ms.lasthandoff: 11/20/2017
 |커서 type\action|자체|소유<br /><br /> Txn|기타<br /><br /> Txn<br /><br /> (RU[a])|기타<br /><br /> Txn<br /><br /> (RC[a])|기타<br /><br /> Txn<br /><br /> (RR[a])|기타<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |정적|||||||  
-|Insert|Maybe [b]|아니요|아니오|아니오|아니오|아니요|  
-|Update|Maybe [b]|아니요|아니오|아니오|아니오|아니요|  
-|DELETE|Maybe [b]|아니요|아니오|아니오|아니오|아니요|  
+|Insert|Maybe [b]|아니오|아니오|아니오|아니오|아니오|  
+|Update|Maybe [b]|아니오|아니오|아니오|아니오|아니오|  
+|DELETE|Maybe [b]|아니오|아니오|아니오|아니오|아니오|  
 |키 집합|||||||  
-|Insert|Maybe [b]|아니요|아니오|아니오|아니오|아니요|  
-|Update|예|예|예|예|아니오|아니요|  
-|DELETE|Maybe [b]|예|예|예|아니오|아니요|  
+|Insert|Maybe [b]|아니오|아니오|아니오|아니오|아니오|  
+|Update|예|예|예|예|아니오|아니오|  
+|DELETE|Maybe [b]|예|예|예|아니오|아니오|  
 |Dynamic|||||||  
-|Insert|예|예|예|예|예|아니요|  
-|Update|예|예|예|예|아니오|아니요|  
-|DELETE|예|예|예|예|아니오|아니요|  
+|Insert|예|예|예|예|예|아니오|  
+|Update|예|예|예|예|아니오|아니오|  
+|DELETE|예|예|예|예|아니오|아니오|  
   
  [a] 괄호로 문자 나타냅니다는 커서를 포함 하는 트랜잭션의 격리 수준 (에 변경) 다른 트랜잭션 격리 수준을 관련이 없습니다.  
   

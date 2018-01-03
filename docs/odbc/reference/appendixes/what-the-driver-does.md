@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 352c4adb445b670f0a236e16954e6dd85a63de7c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4c1bf17e8a54f4eeb8722b1a17b9e85b930dd00
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-the-driver-does"></a>드라이버에서 수행 하는 작업
 다음 표에서 요약 함수 및 문 특성 ODBC 3*.x* 드라이버 블록 및 스크롤 가능 커서에 대해 구현 해야 합니다.  
   
-|함수 또는<br /><br /> 문 특성|설명|  
+|함수 또는<br /><br /> 문 특성|주석|  
 |-----------------------------------------|--------------|  
 |SQL_ATTR_ROW_STATUS_PTR을|행 상태 배열이의 주소에 의해 채워짐 설정 **SQLFetch** 및 **SQLFetchScroll**합니다. 이 배열에도 여 채워집니다 **SQLSetPos** 경우 **SQLSetPos** S6 문 상태에서 호출 됩니다. 경우 **SQLSetPos** 라고 S7 상태에서이 배열은 비어 있지만 배열에서 가리키는 *RowStatusArray* 의 인수 **SQLExtendedFetch** 채워집니다. 자세한 내용은 참조 [문을 전환](../../../odbc/reference/appendixes/statement-transitions.md) 부록 b: ODBC 상태 전환 표에 합니다.|  
 |SQL_ATTR_ROWS_FETCHED_PTR|버퍼의 주소를 설정 하는 **SQLFetch** 및 **SQLFetchScroll** 인출 된 행 수를 반환 합니다. 경우 **SQLExtendedFetch** 은 호출,이 버퍼 비어 있지만 *RowCountPtr* 인수 인출 된 행 수를 가리킵니다.|  

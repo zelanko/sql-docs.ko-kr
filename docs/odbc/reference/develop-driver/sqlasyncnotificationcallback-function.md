@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 615792da52bcdc2dd12775d2c62450f95364b115
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0a60a959b842c344631ed38ceba33f020e6b8800
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 함수
 **규칙**  
@@ -59,7 +59,7 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ## <a name="diagnostics"></a>진단  
  **SQLAsyncNotificationCallback** (이러한 드라이버 또는 드라이버 관리자에는 구현 문제를 나타냅니다 다음과 같은 두 가지 상황에서 SQL_ERROR를 반환할 수 있습니다.  
   
-|오류|Description|  
+|Error|Description|  
 |-----------|-----------------|  
 |연결 또는 명령문 알림을 요청 하지 않았습니다.||  
 |잘못 된 *처리*|드라이버 내부 드라이버 관리자 유효성 검사 테스트를 실패 한 잘못 된 핸들을 전달 합니다.|  

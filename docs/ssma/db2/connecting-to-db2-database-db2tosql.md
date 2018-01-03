@@ -1,7 +1,7 @@
 ---
 title: "DB2 데이터베이스 (DB2ToSQL)에 연결 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 973d8f565fb50815c3e8c01190a08b622fadeb77
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f718f75a750d376bdae9ff7bfab10f298107822d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 데이터베이스 (DB2ToSQL)에 연결
 DB2 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 마이그레이션할 DB2 데이터베이스에 연결 해야 합니다. 에 연결할 때 SSMA는 모든 DB2 스키마에 대 한 메타 데이터를 가져오고 DB2 메타 데이터 탐색기 창에 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  

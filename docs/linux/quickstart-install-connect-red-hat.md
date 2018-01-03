@@ -1,6 +1,6 @@
 ---
 title: "Red Hat Enterprise Linux에서 SQL Server 2017 시작 | Microsoft Docs"
-description: "이 빠른 시작 자습서에는 Red Hat Enterprise Linux에 SQL Server 2017을 설치할 로컬 폴더를 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 하는 방법을 보여 줍니다."
+description: "이 빠른 시작에서는 Red Hat Enterprise Linux에 SQL Server 2017을 설치할 로컬 폴더를 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 하는 방법을 보여 줍니다."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 42bcabc32c3a47c09bc8c3dd116403163faa2071
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 1826b003083d374aa052943016296079491ae158
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Red Hat에서 데이터베이스를 만들고 SQL Server 설치
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 빠른 시작 자습서에서는 처음 설치할 SQL Server 2017에 Red Hat Enterprise Linux (RHEL) 7.3 + 합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작에서 처음 설치할 SQL Server 2017에 Red Hat Enterprise Linux (RHEL) 7.3 + 합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
 
 > [!TIP]
 > 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 에 관심이 있는 경우는 [무인](sql-server-linux-setup.md#unattended) 또는 [오프 라인](sql-server-linux-setup.md#offline) 설치 절차 참조 [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 RHEL 7.3 또는 7.4 컴퓨터 있어야 **최소 2GB** 메모리입니다.
 
@@ -117,6 +117,11 @@ RHEL에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령�
    ```
 
 > [!TIP]
-> **Sqlcmd** 쿼리를 실행 하 고 관리 및 개발 작업을 수행 하도록 SQL Server에 연결 하기 위한 하나의 도구입니다. 다른 도구로 [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) 및 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)합니다.
+> **Sqlcmd** 쿼리를 실행 하 고 관리 및 개발 작업을 수행 하도록 SQL Server에 연결 하기 위한 하나의 도구입니다. 다른 도구는 다음과 같습니다.
+>
+> * [SQL Server 작업 Studio (미리 보기)](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)합니다.
+> * [mssql-cli (미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

@@ -3,10 +3,10 @@ title: "병렬 데이터 웨어하우스 개요"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
 caps.latest.revision: "20"
-ms.openlocfilehash: 587b1ce6720fc07d9ac24edde2c5b8cc2b30c89f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2b6708f6e82340c971bdd3a6cc0cdb7e67f2d65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-data-warehouse-overview"></a>병렬 데이터 웨어하우스 개요
 이 항목에서는 원격 클라이언트 컴퓨터 및 분석 플랫폼 시스템의 비 어플라이언스 소프트웨어 구성 요소를 설명 합니다.  

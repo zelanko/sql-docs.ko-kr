@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-functions"></a>숫자 함수
 다음 표에서 ODBC 스칼라 함수 집합에 포함 된 숫자 함수를 설명 합니다. 호출 하 여 **SQLGetInfo** 와 *정보 유형* SQL_NUMERIC_FUNCTIONS의 응용 프로그램이 드라이버를 통해 지원 되는 숫자 함수 확인할 수 있습니다.  

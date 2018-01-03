@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62304f435662004de941d0101b7f376fbe0e026d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-data-type-conversion-function"></a>명시적 데이터 형식 변환 함수
 명시적 데이터 형식 변환이 SQL 데이터 형식 정의 기준으로 지정 됩니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
  명시적 데이터 형식 변환 함수에 대 한 ODBC 구문을 변환 형식 사양을 지원 하지 않습니다. 명시적 형식 지정 데이터 원본으로 사용할 수, 드라이버 기본값을 지정 하거나 형식 지정을 구현 해야 합니다.  
   
- 인수 *value_exp* 열 이름, 결과 다른 스칼라 함수 이거나 숫자 또는 문자열 리터럴일 수 있습니다. 예를 들어  
+ 인수 *value_exp* 열 이름, 결과 다른 스칼라 함수 이거나 숫자 또는 문자열 리터럴일 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

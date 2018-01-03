@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff5b0244e54432e28d5a1b43d813911b3f90ffd2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 626d1577fe3b4176a01f95332dc6c90d2cbc2faa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datetime-data-types"></a>날짜/시간 데이터 형식
 ODBC 3에서*.x*, 날짜에 대 한 식별자, SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP에서 time 및 timestamp SQL 데이터 형식 변경 (의 인스턴스와 **#define** 9, 10 및 11의 헤더 파일에서) SQL_를 TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP (의 인스턴스와 **#define** 91이 고, 92, 및 93 헤더 파일에), 각각. 인스턴스 식별자에서 변경 SQL_C_DATE, SQL_C_TIME, 및 SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, 및 SQL_C_TYPE_TIMESTAMP를 각각 해당 C 형식 및 인스턴스 **#define** 변경 적절 하 게 합니다.  

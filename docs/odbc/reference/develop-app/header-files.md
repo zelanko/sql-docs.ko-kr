@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d56c0096350b5f8d1d217a2cea85a770ecde6e14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 197c7ef28124fb1b1c52facbec541913330c69c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="header-files"></a>헤더 파일
 헤더 파일 Sql.h 함수 및 기능 ODBC 핵심 인터페이스 규칙 수준에 대 한 프로토타입이 포함 되어 있습니다. Sqlext.h 헤더 파일에는 함수 및 기능 수준 1 및 수준 2 API 받는 규칙 수준에 대 한 프로토타입이 포함 됩니다. 형식 정 및 SQL 데이터 형식에 대 한 표시기 Sqltypes.h 헤더 파일에 포함 되어 있습니다.  

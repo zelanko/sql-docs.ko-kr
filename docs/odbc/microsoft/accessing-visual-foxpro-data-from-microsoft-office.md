@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be2c379f5453c2b0cfccdceb875bbccf177ef9ff
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f75e2eff164a0cc8437da1949b002318f9192d3f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>Microsoft Office에서 Visual FoxPro 데이터에 액세스
 Windows 98 또는 Windows 95 응용 프로그램에 대 한 Microsoft Office 프로그램에서 Visual FoxPro 데이터에 액세스 하는 Microsoft Visual FoxPro ODBC 드라이버를 사용할 수 있습니다.  

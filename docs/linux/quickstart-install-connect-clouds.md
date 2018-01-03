@@ -11,17 +11,17 @@ ms.prod_service: database-engine
 ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 5a7ea24d7563a7256c93dbfaa052bfb4041f9aa0
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 9fa5f2751b515b86574165e6f6cda8f0b9e6661a
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>SQL Server 2017은 클라우드에서 실행
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 빠른 시작 자습서에서는 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 또는 사용자가 선택한 클라우드에 Ubuntu에 SQL Server 2017을 설치 합니다. 로 이동 [Azure 포털에서 Linux SQL Server 가상 컴퓨터를 프로 비전](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) Azure에서 Linux에서 SQL Server를 실행 합니다.
+이 빠른 시작 자습서에서는 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 또는 사용자가 선택한 클라우드에 Ubuntu에 SQL Server 2017을 설치 합니다. 로 이동 [Azure 포털에서 Linux SQL Server 가상 컴퓨터를 프로 비전](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) Azure에서 Linux에서 SQL Server를 실행 합니다.
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)

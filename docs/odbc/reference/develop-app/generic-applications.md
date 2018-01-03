@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c36060d3c908436376babae7376478849da87ff
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 471cceb31dfec36cde45185d3d472aba3100b4da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-applications"></a>일반 응용 프로그램
 일반 응용 프로그램 데이터베이스에서 데이터를 검색 하는 스프레드시트와 같은 하드 코드 된 작업을 수행 하는 경우가 있습니다. 또한 다양 한 사용자가 입력 하 고 SQL 문을 실행할 수 있도록 일반 쿼리 응용 프로그램과 같은 사용자 정의 작업을 수행할 수 있습니다. 어떤 일반 응용 프로그램 서로 공통 되는 이며 다양 한 다른 Dbms와 작동 해야 하는지는 개발자 모르면 미리 이러한 Dbms는 것입니다.  

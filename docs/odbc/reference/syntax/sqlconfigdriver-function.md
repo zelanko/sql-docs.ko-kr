@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad15d5e7d61d9ef4b85ae347376f01b0bdb6ec67
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3af2f70156cae3427b5d22f3214f5c911af14a5d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 함수
 **규칙**  
@@ -87,7 +87,7 @@ BOOL SQLConfigDriver(
 ## <a name="diagnostics"></a>진단  
  때 **SQLConfigDriver** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*lpszMsg* 인수가 잘못 되었습니다.|  
@@ -99,7 +99,7 @@ BOOL SQLConfigDriver(
 |ODBC_ERROR_LOAD_LIBRARY_FAILED|드라이버 또는 변환기 설치 라이브러리를 로드할 수 없습니다.|드라이버 설치 라이브러리를 로드할 수 없습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLConfigDriver** 운전 호출 응용 프로그램 **ConfigDriver** 이름을 알고와 드라이버 설치 DLL을 로드할 필요 없이 라우팅입니다. 설치 프로그램 드라이버 설치 DLL을 설치한 후이 함수를 호출 합니다. 호출 프로그램은이 함수 사용 하지 못할 모든 드라이버에 대해 알고 있어야 합니다. 이 경우 호출 프로그램은 오류 없이 계속 해야 합니다.  
   
 ## <a name="driver-specific-options"></a>드라이버 관련 옵션  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f62c820f57fba7af608a870e00e0b2ddf0ad13b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="when-to-use-procedures"></a>프로시저를 사용 하는 경우
 모든 프로시저를 사용 하 여 있다는 사실에 기반으로 SQL 문을에서 이동 데이터 원본에 응용 프로그램, 다양 한 프로시저를 사용 하 여 장점이 있습니다. 응용 프로그램에서 남아 상호 운용 가능한 프로시저 호출입니다. 이러한 이점 중 하나:  

@@ -1,11 +1,11 @@
 ---
 title: "SQL Server의 기계 학습 시작 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 600f105a3e3fb5fb590ce081633258db3d3d35d5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>기계 학습에서 SQL Server 시작
 
@@ -83,7 +83,7 @@ SQL Server 2016에서 설치 하는 옵션을 사용 [!INCLUDE[rsql-platform-md]
 
 + [컴퓨터 학습 자습서](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  시작 하려면 모든 리소스의 목록을 사용 하 여 컴퓨터 학습 솔루션에 대 한 학습 찾을 [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] 또는 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]합니다.
+  시작 하려면 SQL Server 2016 및 SQL Server 2017을 사용 하 여 컴퓨터 학습 솔루션에 대 한 학습을 위한 모든 리소스의 목록을 찾습니다.
 
 ### <a name="r-tutorials"></a>R 자습서
 
@@ -95,7 +95,7 @@ SQL Server 2016에서 설치 하는 옵션을 사용 [!INCLUDE[rsql-platform-md]
 
 + [R과 ScaleR 25 간단한 함수에서 탐색](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   R을 처음 사용하세요? Microsoft R (또는 RevoScaleR) 표준 R을 비교 하는 방법을 있는지 궁금 하십니까? R 서버에 대 한 이러한 빠른 시작을 참조 하십시오.
+   R을 처음 사용하세요? Microsoft R (또는 RevoScaleR) 표준 R을 비교 하는 방법을 있는지 궁금 하십니까? R 서버 및 서버를 학습 하는 컴퓨터에 대 한 이러한 빠른 시작을 참조 하십시오.
 
 ### <a name="python-tutorials"></a>Python 자습서
 

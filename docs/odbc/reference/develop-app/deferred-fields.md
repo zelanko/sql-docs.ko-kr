@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46f0e525814b648b5f2b1236e1b093321974eb39
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2042efcdacf45a8638bb5197da04f903a6ffdd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deferred-fields"></a>지연 된 필드
 값 *필드 지연* 시간을 설정 하지만 드라이버는 지연 된 효과 대 한 변수의 주소를 저장 하는 경우에 사용 되지 않습니다. 변수의 내용을에 대 한 호출 시 드라이버는 응용 프로그램 매개 변수 설명자에 대 한 사용 **SQLExecDirect** 또는 **SQLExecute**합니다. 응용 프로그램 행 설명자를 사용 하는 드라이버 변수의 내용을 인출 시간에 사용합니다.  

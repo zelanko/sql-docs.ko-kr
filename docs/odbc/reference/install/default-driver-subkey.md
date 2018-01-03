@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6abe4c5b5b07ea59b18c1bd298225ca33db2a65b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eb867819985d1466b00cb048f91d8aa99c35cdd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-driver-subkey"></a>기본 드라이버의 하위 키
 기본 하위 키에서 기본 데이터 원본을 사용 하는 드라이버를 설명 하는 단일 값을 포함 합니다. 이 값의 형식은 다음 표에 표시 됩니다.  
   
-|이름|데이터 형식|data|  
+|속성|데이터 형식|data|  
 |----------|---------------|----------|  
 |**드라이버**|REG_SZ|*기본 드라이버-설명*|  
   

@@ -1,7 +1,7 @@
 ---
 title: "MySQL (MySQLToSQL)에 대 한 SQL Server Migration Assistant | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: ff51f4a7e7c59bc04418782564dc8cf410fa695d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e52a544559d47f118839d68838fe7b43507d8585
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL (MySQLToSQL)에 대 한 SQL Server Migration Assistant
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) MySQL 용는 MySQL 데이터베이스 마이그레이션에 대 한 도구 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 Windows 및 Linux (미리 보기)에서 Azure / [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB입니다. SSMA MySQL MySQL 데이터베이스 개체를 SQL Server 데이터베이스 개체를 변환에 대 한 이러한 개체를 만드는에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 MySQL에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|**섹션**|**Description**|  
+|**섹션**|**설명**|  
 |[MySQL 용 SSMA의 새로운 기능](http://msdn.microsoft.com/en-us/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|이 버전의 MySQL 용 SSMA의 새로운 기능|  
 |[SSMA for MySQL &#40; 설치 MySqlToSql &#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|필수 구성 요소 및 SQL Server를 실행 하는 컴퓨터에서 MySQL 클라이언트 및 필수 구성 요소에 대 한 SSMA를 설치 하기 위한 지침을 제공 하는 항목을 포함 합니다.|  
 |[SSMA MySQL &#40;에 대 한 시작 MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|사용자 인터페이스, 프로젝트 및 구성 옵션을 소개합니다.|  

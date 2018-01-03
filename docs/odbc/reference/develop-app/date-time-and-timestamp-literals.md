@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8aa042321602332ea016b88c69332dd67a256044
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time 및 Timestamp 리터럴
 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스는  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
 |*리터럴 형식*|의미|서식을 지정 *값*|  
 |---------------------|-------------|-----------------------|  
-|**d**|날짜|*yyyy*-*mm*-*dd*|  
+|**d**|date|*yyyy*-*mm*-*dd*|  
 |**t**|시간 *|*hh*:*mm*:*ss*[1]|  
 |**ts**|타임스탬프|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss* [. *f...* ] [1]|  
   

@@ -3,7 +3,7 @@ title: "전역 설정 (대화 상자) (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fcb8cbedacd85afe1d2f76f572d40593b3912659
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5b25e702cec71f04f680d6c24f09f3b9e1e003ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>전역 설정 (대화 상자) (SybaseToSQL)
 대화 상자 페이지를 사용 하는 **전역 설정** 대화 상자는 기본 사용자 작업 및 SSMA에 대 한 경고 설정을 지정 합니다.  
   
 대화 상자 설정에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정**, 클릭 **GUI** 선택 고 왼쪽된 창 맨 아래에 **대화 상자의**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **개체를 덮어쓰기 전에 경고 표시**  
 SSMA는 SQL server 개체를 변환, 일부 개체는 프로젝트의 SQL Server 메타 데이터에 이미 있습니다. 이러한 개체 이미 변환 되었기 수 있습니다, 또는 개체는 대상 스키마 내에서 개체와 이름이 같은 변환 하는 것을 단순히 있을 수 있습니다.  
   

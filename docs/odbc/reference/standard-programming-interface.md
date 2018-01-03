@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c1f3cccc67bb9c2223ee98f30a1fb6781a12fd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79cfb261e4ee433043794c864e7e02d93586c881
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-programming-interface"></a>표준 프로그래밍 인터페이스
 가장 확실 한 후보 표준화에 대 한 프로그래밍 인터페이스가입니다. 사실, ODBC 개발 시 ANSI 및 ISO 이미 제공 된 표준 포함 된 SQL 및 SQL에 대 한 모듈입니다. CLI의 SQL 액세스 그룹 데이터베이스에 대 한 없는 표준 있었지만-데이터베이스 공급 업체는 업계 컨소시엄-; 만들 것인지를 고려할 되었습니다 ODBC의 일부를 나중에 작업에 대 한 기본 업체가 되었습니다.  

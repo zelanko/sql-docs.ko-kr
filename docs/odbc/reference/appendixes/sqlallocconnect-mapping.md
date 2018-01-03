@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a699be0e0c93ea48646375c0f6d9c0ab55ba74a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 001c430558b3db813bd316f3b4d913fe0eae26c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect 매핑
 응용 프로그램 호출 하는 경우 **SQLAllocConnect** ODBC 3. *x* 드라이버에 대 한 호출 **SQLAllocConnect**(*henv*, *phdbc*)에 매핑되어 **SQLAllocHandle** 다음과 같습니다.  

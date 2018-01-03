@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7966552f130ce8ab4825c77929c5fd4599fd6209
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2ae8d60d6e41536bc67bd14f9252c372fdeaa5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="batches-of-sql-statements"></a>SQL 문의 일괄 처리
 SQL 문의 일괄 처리는 그룹 두 개 이상의 SQL 문 또는 두 개 이상의 SQL 문 그룹 것과 동일한 결과가 단일 SQL 문입니다. 일부 구현에서는 전체 일괄 처리 문은 사용할 수 있는 모든 결과가 전에 실행 됩니다. 이 대개 더 네트워크 트래픽이 감소 종종 수를 데이터 소스 SQL 문의 일괄 처리의 실행을 최적화 때로는 수 때문에 문을 개별적으로 전송 하는 보다 효율적입니다. 다른 구현에서는 호출 **SQLMoreResults** 일괄 처리의 다음 문으로 실행을 트리거합니다. ODBC는 다음과 같은 유형의 일괄 처리를 지원합니다.  

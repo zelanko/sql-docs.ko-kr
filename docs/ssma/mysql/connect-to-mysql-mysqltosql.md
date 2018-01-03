@@ -1,7 +1,7 @@
 ---
 title: "MySQL (MySQLToSQL)에 연결 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7e56b60fb754c34dafda5c08953bf50d01f478f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL)에 연결
 사용 하 여 **MySQL에 연결** 마이그레이션할 MySQL 데이터베이스에 연결 하는 대화 상자.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **MySQL에 연결**합니다. 이 명령은 이전에 연결한 경우 **MySQL에 다시 연결**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **공급자**  
   
 사용 가능한 MySQL 공급자는 MySQL ODBC 5.1 드라이버 (신뢰할 수 있음).  
@@ -48,7 +48,7 @@ MySQL 서버 이름을 입력 합니다. 표준 모드 옵션입니다.
   
 서버 포트를 입력 합니다. 기본 서버 포트는 3306 합니다. 표준 모드 옵션입니다.  
   
-**사용자 이름**  
+**User name**  
   
 SSMA는 MySQL 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   

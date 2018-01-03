@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 45c46ec84d6f5a431521589a506b4028e406ac09
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 310adbb9cc67ffe6982ca6838285ffe4967ab7c4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 함수
 **규칙**  
@@ -81,7 +81,7 @@ SQLRETURN SQLSetPos(
   
  다중 행 작업의 하나 또는 더 전부가 아닌 행에 오류가 발생 하 고에서 오류가 발생할 경우 SQL_ERROR가 반환 되는 경우 모든 해당 SQLSTATEs SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (제외 01xxx SQLSTATEs) 반환할 수 있는, sql_success_with_info가 반환 됩니다는 단일 행 작업입니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01001|커서 작업이 충돌 합니다.|*작업* 인수 SQL_DELETE 되었거나 SQL_UPDATE, 및 둘 이상의 행 또는 행이 없는 된 삭제 하거나 업데이트 합니다. (둘 이상의 행에 대 한 업데이트에 대 한 자세한 내용은 참조는 SQL_ATTR_SIMULATE_CURSOR에 대 한 설명을 *특성* 에 **SQLSetStmtAttr**.) (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> *작업* 인수 SQL_DELETE 되었거나 SQL_UPDATE, 및 낙관적 동시성으로 인해 작업이 실패 했습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -121,7 +121,7 @@ SQLRETURN SQLSetPos(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
   
 > [!CAUTION]  
 >  없다는 문에 대 한 정보에 대 한 **SQLSetPos** 에서 호출할 수 있습니다 및 ODBC 2와 호환성을 위해 수행 하는 데*.x* 응용 프로그램 참조 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)합니다.  

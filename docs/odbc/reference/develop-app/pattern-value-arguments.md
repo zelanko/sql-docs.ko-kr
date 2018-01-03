@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 28caa361e4363aa2224d6cfa63a8830675aeece8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4959b329f855028cedc99f7c43ef889754baecda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pattern-value-arguments"></a>패턴 값 인수
 와 같은 일부 인수 카탈로그에서 함수가 *TableName* 인수 **SQLTables**, 검색 패턴을 사용할 합니다. 이 인수는 검색 패턴을 사용할 SQL_ATTR_METADATA_ID 문 특성이 SQL_FALSE;로 설정 된 경우 이 특성은 SQL_TRUE로 설정 하는 경우 검색 패턴을 허용 하지 않는 식별자 인수 않은 것입니다.  

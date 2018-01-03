@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6e9f4cb753a7849e87c8b4725e7e0fad0e953ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e537a1a767d0789333659d1aa26e57e11c42195e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-results"></a>여러 결과
 A *결과* 문제가 원본에서 반환 되는 데이터는 문이 실행 된 후입니다. ODBC에는 두 가지 유형의 결과: 결과 집합을 행 합니다. *행* 는 업데이트에 의해 영향을 받는 행의 수, 삭제 또는 insert 문이 됩니다. 에 설명 된 일괄 처리, [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md), 여러 개의 결과 생성할 수 있습니다.  

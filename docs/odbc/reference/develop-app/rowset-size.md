@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-size"></a>행 집합 크기
 응용 프로그램에 사용 하는 행 집합 크기에 따라 다릅니다. 일반적으로 화면 기반 응용 프로그램 두 가지 전략 중 하나를 수행 합니다. 첫 번째 화면에 표시 되는 행의 수는 행 집합 크기를 설정 하는 사용자가 화면을 응용 프로그램에 따라 행 집합 크기를 변경 합니다. 두 번째에 더 큰 숫자를 100, 데이터 원본에 대 한 호출 수를 줄일 수 있는를 행 집합 크기를 설정 하는 것입니다. 응용 프로그램이 로컬로 가능 하면 행 집합 내의 스크롤하고 행 집합 외부 스크롤 하는 경우에 새 행을 인출 합니다.  

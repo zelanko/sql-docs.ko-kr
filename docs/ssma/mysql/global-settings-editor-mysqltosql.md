@@ -1,7 +1,7 @@
 ---
 title: "전역 설정 (편집기) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 440303d56fc621d811c67147fa4ebe665ac51341
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cedd977a396116621741fce43993e4dcecc3c494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-mysqltosql"></a>전역 설정 (편집기) (MySQLToSQL)
 편집기 페이지를 사용 하 여 **전역 설정** 코드 편집기 창에 대 한 설정을 지정 하려면 대화 상자.  
   
 편집기 설정에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정**, 클릭 **GUI** 선택 고 왼쪽된 창 맨 아래에 **편집기**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **편집기에서 줄 번호 표시**  
 코드 편집기 창에서 줄 번호를 표시 하려면 선택한 **True**합니다.  
   

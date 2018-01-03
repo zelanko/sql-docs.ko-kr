@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53621c73a5a5504287ff959f54aa27131f4c26c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fa8f72d601130df15f73e856f676b07bf8f0e52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-data-sources"></a>파일 데이터 원본
 *파일 데이터 원본을* 파일에 저장 되 고 연결 정보를 단일 사용자가 반복적으로 사용 하거나 여러 사용자가 공유를 허용 합니다. 파일 데이터 원본을 사용 되는 경우 드라이버 관리자.dsn 파일에 정보를 사용 하 여 데이터 원본에 연결을 만듭니다. 이 파일은 다른 파일 처럼 조작할 수 있습니다. 파일 데이터 원본이 없는 데이터 원본 이름 처럼 컴퓨터 데이터 소스를 수행 하 고 하나의 사용자 또는 컴퓨터에 등록 되어 있지 않습니다.  

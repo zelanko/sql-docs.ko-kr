@@ -3,10 +3,10 @@ title: "사용 권한 부여"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -14,11 +14,11 @@ ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: c0d21f2d5b9e3f10cf56a8e1af6915aec87b0c4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="grant-permissions"></a>사용 권한 부여
 
@@ -248,7 +248,7 @@ GO
   
 참조 관리자 로그인을 만들려는 [고정 서버 역할](pdw-permissions.md#fixed-server-roles)합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [로그인 만들기](../t-sql/statements/create-login-transact-sql.md)  
 [사용자 만들기](../t-sql/statements/create-user-transact-sql.md)  
 [역할 만들기](../t-sql/statements/create-role-transact-sql.md)  

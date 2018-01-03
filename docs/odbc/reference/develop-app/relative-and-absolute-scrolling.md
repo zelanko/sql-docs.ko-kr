@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32782c2fe59aaf36fa8741870a798163d923a3a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relative-and-absolute-scrolling"></a>상대 및 절대 스크롤
 대부분의 스크롤 옵션의 **SQLFetchScroll** 현재 위치를 기준으로 또는 절대 위치에 커서를 놓습니다. **SQLFetchScroll** 다음 인출 지원 이전, 첫 번째 및 마지막 행 집합으로도 같이 상대 인출 (행 집합을 인출할  *n*  현재 행 집합의 시작 부분부터 행)과 절대 인출 (fetch는 행에서 시작 하는 행 집합  *n* ). 경우  *n*  는 절대 인출에서 음수 이면 행 결과 집합의 끝에서 계산 됩니다. 따라서 결과 집합의 마지막 행으로 시작 하는 행 집합을 인출 하는 – 1 행의 절대 인출을 의미 합니다.  

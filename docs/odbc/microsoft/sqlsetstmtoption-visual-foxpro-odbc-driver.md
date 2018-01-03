@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77cd6f6f8ddd09a011dba2cbbe39c962d78b4574
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: beceecda58550532d8c4b1a867fee5ed6393078e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetstmtoption-visual-foxpro-odbc-driver"></a>SQLSetStmtOption (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
  문 핸들에 관련 된 옵션 설정 *hstmt*합니다.  
   
-|*fOption*|허용된 값|설명|  
+|*fOption*|허용된 값|주석|  
 |---------------|--------------------|--------------|  
 |SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|이 설정 하려고 하면 *fOption*, 드라이버는 오류를 반환 합니다.: "드라이버를 사용할 수 없습니다."입니다. Visual FoxPro 비동기 실행을 지원 하지 않습니다.|  
 |SQL_BIND_TYPE|SQL_BIND_BY_COLUMN 또는 결과에 열이 바인딩될 버퍼 인스턴스나 구조의 길이 나타내는 32 비트 값입니다.||  

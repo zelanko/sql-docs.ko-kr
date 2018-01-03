@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f2b121ce21aaf2b3a6e4bb179a0b8b84933fc04
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c622054c6c9d4c2314fe2ae0af9fb8574c338312
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-e-scalar-functions"></a>부록 e: 스칼라 함수
 ODBC이 부록의이 내용의 해당 섹션에서 제공 되는 이러한 함수 형식의 각각에 대 한 세부 정보가 포함 된 다음과 같은 유형의 스칼라 함수를 지정 합니다. 함수 설명에 관련 된 구문을 포함합니다.  

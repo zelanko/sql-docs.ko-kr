@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d38aa5b7d3aeedd09b18941c69b82b2a835b8f6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fb2662ac4dcfc6a1f0fa2362bfc71f7a173bcd9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-block-cursors"></a>블록 커서를 사용 하 여
 블록 커서에 대 한 지원 변환은 ODBC 3에 있습니다. *x*합니다. **SQLFetch** 다중 행 인출 ODBC 3에서 호출 된 경우에 사용할 수 있습니다. *x*경우는 ODBC 2. *x* 응용 프로그램 호출 **SQLFetch**는 단일 행, 정방향 전용 커서가 열립니다. 때 ODBC 3. *x* 응용 프로그램 호출 **SQLFetch** ODBC 2에서. *x* 드라이버 반환 단일 행 드라이버를 지원 하지 않으면 **SQLExtendedFetch**합니다. 자세한 내용은 참조 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  

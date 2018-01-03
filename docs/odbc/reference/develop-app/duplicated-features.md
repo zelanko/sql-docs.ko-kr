@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b27da2aac2c42987f6eeaba4f104b647912df0d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 911e36882d278a997126dbf0ee99bbab837c5125
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duplicated-features"></a>중복 된 기능
 다음 ODBC 2입니다. *x* 함수 ODBC 3에 의해 복제 된 했습니다. *x* 함수입니다. 결과적으로 ODBC 2. *x* ODBC 3에서 함수는 사용 되지 않습니다. *x*합니다. ODBC 3입니다. *x* 함수는 대체 함수 라고 합니다.  

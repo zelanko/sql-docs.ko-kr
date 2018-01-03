@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 691ff249f971a7c7baa16a8409786cde455d58a5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0c92c727b79c2fc33c98e02580d7980c219c56d6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>스레드 지원 (Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버는 스레드로부터 안전 합니다. 환경 핸들에 대 한 액세스 (*때*), 연결 핸들 (*hdbc*), 및 문 핸들 (*hstmt*) 다른 프로세스를 방지 하기 위해 적절 한 세마포에 겹쳐서 표시 액세스 하 고 잠재적으로 드라이버의 내부 데이터 구조를 변경 합니다.  

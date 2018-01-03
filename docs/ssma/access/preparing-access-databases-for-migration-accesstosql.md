@@ -1,7 +1,7 @@
 ---
 title: "Access 데이터베이스 마이그레이션 (AccessToSQL)에 대 한 준비 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -31,11 +31,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: 7acee61cd57706ff696abda0fae9c48d6bfaaeac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Access 데이터베이스 마이그레이션 (AccessToSQL) 준비
 Access 데이터베이스를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 마이그레이션하고 해당 데이터베이스 마이그레이션에 대 한 준비 되었는지 확인 하려면 데이터베이스를 결정 해야 합니다.  
@@ -84,6 +84,6 @@ Access 데이터베이스를 백업 하는 **도구** 메뉴에서 **데이터�
 ### <a name="documenting-databases"></a>데이터베이스 문서화  
 문서 데이터베이스 개체, 파일 크기 및 Access 데이터베이스의 사용 권한 목록과 같은 속성 수도 있습니다. Access에서는이 문서에서 생성 하는 **도구** 메뉴에서 **분석**, 클릭 하 고 **Documented**합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [SQL Server에 대 한 액세스 응용 프로그램 연결](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)

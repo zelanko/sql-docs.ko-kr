@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e94325210db4232ae3a5b715aa26a059d7895eae
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33cc5f63c34618f51196e173e58adbac58377f29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="why-was-odbc-created"></a>ODBC 만들어진 이유
 지금 까지는 회사 단일 DBMS를 사용 합니다. 데이터베이스에 대 한 모든 액세스는 해당 시스템의 프런트 엔드 또는 해당 시스템 에서만 작동 하도록 작성 된 응용 프로그램을 통해 수행 되었습니다. 그러나 컴퓨터의 사용이 증가 하 고 더 많은 컴퓨터 하드웨어 및 소프트웨어를 사용할 수 있게을 다른 Dbms 얻으려고 회사 시작. 많은 된 이유: 어떤은 이미 가장 저렴 한, fastest, 구입 하는 사용자가 알고 였습니까 최신 단일 응용 프로그램에 대 한 가장 잘 작동 어떤 시장에 있습니다. 기타 이유로 인해 이전에 단일 DBMS 부서 이제에 여러 재구성 및 합병으로 했습니다.  

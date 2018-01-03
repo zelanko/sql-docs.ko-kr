@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dbc86d0dd1be8ef4e8ca19f8a7f25147a35fcc6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 함수(SQLGetDiagField Function)
 **규칙**  
@@ -121,7 +121,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_NO_DATA: *RecNumber* 에 지정 된 핸들에 대 한 존재 하는 진단 레코드 개수 보다 큰 *처리 합니다.* 함수에 대 한 임의의 양수도 SQL_NO_DATA를 반환할 *RecNumber* 에 대 한 진단 레코드가 없는 경우 *처리*합니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램에서 일반적으로 호출 **SQLGetDiagField** 세 개의 목표 중 하나를 수행 하려면:  
   
 1.  함수 호출 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 했습니다 때 특정 오류 또는 경고 정보를 얻으려면 (또는 대 한 SQL_NEED_DATA는 **SQLBrowseConnect** 함수).  

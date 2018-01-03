@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e73a559545a870d83e3d8e2e94dd20f6731f72eb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 195dc99394d8708e4895fce746ca13bbf724782c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-drivers"></a>유니코드 드라이버
 유니코드 드라이버 또는 ANSI 드라이버는 드라이버 수 있는지 여부를 전적으로의 데이터 소스 특성에 따라 달라 집니다. 데이터 소스에서 유니코드 데이터를 지 원하는 경우 드라이버는 유니코드 드라이버 여야 합니다. 데이터 원본에서만 ANSI 데이터를 지 원하는 경우 드라이버는 ANSI 드라이버를 유지 해야 합니다.  

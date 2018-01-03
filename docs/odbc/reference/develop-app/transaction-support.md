@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac759747a088f98f1426afedf8623169d91b113f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4964565ce7de30b30fa3dc4c7705c5656ebcb88b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-support"></a>트랜잭션 지원
 트랜잭션에 대 한 지원 수준을 드라이버 정의입니다. ODBC가 해당 데이터에 대 한 여러 업데이트를 관리할 필요가 없는 단일 사용자 또는 데스크톱 데이터베이스에서 구현 하도록 설계 되었습니다. 트랜잭션을 지 원하는 일부 데이터베이스의 경우에 SQL;의 데이터 조작 언어 (DML) 문을 수행 하는 또한 제한이 나 특별 한 트랜잭션 의미 체계 데이터 정의 언어 (DDL)를 사용 하면 됩니다 트랜잭션이 활성 상태입니다. 즉, 수 및 트랜잭션 중 테이블의 정의 변경 하지 않습니다 테이블에 여러 동시 업데이트에 대 한 트랜잭션 지원이 있을 수 있습니다.  

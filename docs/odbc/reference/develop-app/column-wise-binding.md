@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8419aeccf298788898fa6b764682faa0cff73e54
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7fe322c1184c4b46eb2354a58177f5cb00aa6f10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-wise-binding"></a>열 단위 바인딩
 열 단위 바인딩을 사용할 때 응용 프로그램 하나 또는 두 개 또는 경우에 따라 배열이 세, 데이터 반환 되는 각 열에 바인딩합니다. 첫 번째 배열을 데이터 값을 보유 하 고 두 번째 배열 길이/표시기 버퍼를 저장 합니다. 표시기 및 길이 값에에서 저장할 수 별도 버퍼 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드; 있는 다른 값을 설정 하 여 이 도구를 실행 하는 경우 세 번째 배열이 바인딩되어 있습니다. 각 배열 행 집합의 행이 더 많은 요소를 포함 합니다.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6cb8bb35eb0e53415465b3ea003341d74e248bda
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0920797887e8fa1d156401a2b91255396f6e24d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-is-metadata-used"></a>메타 데이터 사용은 어떻게 합니까?
 응용 프로그램에서는 대부분의 결과 집합 작업에 대해 메타데이터를 요구합니다. 예를 들어 응용 프로그램에서는 열의 데이터 형식을 사용하여 해당 열에 바인딩할 변수의 종류를 확인하고 문자 열의 바이트 길이 사용 하 여 해당 열의 데이터를 표시 하는 데 필요한 공간의 크기를 결정 합니다. 응용 프로그램에서 열의 메타데이터를 확인하는 방법은 응용 프로그램 종류에 따라 다릅니다.  

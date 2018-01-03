@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b806f4c887af3f1ba80ee3321820e97dd336fad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7c841b4404132e4fe385c9c3aa6fd12bdd2eb8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbms-based-drivers"></a>DBMS 기반 드라이버
 드라이버가 DBMS 기반 드라이버에 대 한 독립 실행형 데이터베이스 엔진을 제공 하는 Oracle 또는 SQL Server와 같은 데이터 원본 사용 됩니다. 이러한 드라이버는 독립 실행형 엔진; 통해 실제 데이터에 액세스 즉, SQL 문을 제출 하며 엔진에서 결과 검색 합니다.  

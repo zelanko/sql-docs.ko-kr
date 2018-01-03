@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a878a9ff6c0d1a00f5e551b1810ab3d6f20d44a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be483c04101007383a4672701ac2cdfefbade862
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automatic-population-of-the-ipd"></a>IPD의 자동 채우기
 일부 드라이버 매개 변수가 있는 쿼리를 준비한 후은 IPD 필드를 설정할 수 있습니다. 설명자 필드 데이터 형식, 정밀도, 배율, 및 기타 특성을 포함 하 여 매개 변수에 대 한 정보로 자동으로 채워집니다. 지 원하는 동일 **SQLDescribeParam**합니다. 이 정보를 응용 프로그램에 대해 알지 못하는 하는 매개 변수는 임시 쿼리 수행 될 때와 같은 검색할 수 있는 다른 방법이 때 응용 프로그램에 특히 유용 수 있습니다.  

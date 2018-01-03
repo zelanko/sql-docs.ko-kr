@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: faba1c19d221ac79d0be4513f6a1b2802daef7ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a4c1d3356b91e3cb311c1dbf5ee7246bbb4baaa8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
  SQL_CURSOR_ROLLBACK_BEHAVIOR SQL_CB_PRESERVE를 반환합니다.  
   
-## <a name="d"></a>D  
+## <a name="d"></a>d  
  DSN을 변수로 전달 된 값을 반환 하는 SQL_DATA_SOURCE_NAME [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), 또는 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md); 없는 DSN이 지정 된 경우 빈 문자열을 반환 합니다.  
   
  SQL_DATA_SOURCE_READ_ONLY 반환 ' N '입니다.  

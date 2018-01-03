@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46b8a628b6b8e6ad9a2eb3164e6935f3f3401ec8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b05067010701d1751056cb99089708b5cbeb67f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-returned-by-catalog-functions"></a>카탈로그 함수에서 반환 된 데이터
 각 카탈로그 함수는 데이터를 결과 집합으로 반환 합니다. 이 결과 집합은 다른 결과 집합에서 다르지 않습니다. 일반적으로 생성 되는 미리 정의 된 의해 매개 변수화 **선택** 드라이버에 하드 코드 또는 데이터 원본에 프로시저에서 저장 된 문입니다. 결과 집합에서 데이터를 검색 하는 방법에 대 한 정보를 참조 하십시오. [는 결과 집합 생성 된?](../../../odbc/reference/develop-app/was-a-result-set-created.md)합니다.  

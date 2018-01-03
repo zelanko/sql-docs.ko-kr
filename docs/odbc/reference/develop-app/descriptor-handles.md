@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44f8593c55579c40854190c8710fdfde0b753d0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be9387fd0b34123e1a0b903795b1bf1e2106d725
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptor-handles"></a>설명자 핸들
 A *설명자* 응용 프로그램 또는 드라이버에서 인식 되는 SQL 문의 매개 변수 또는 결과 집합의 열에 설명 하는 메타 데이터의 컬렉션 (라고도 *구현*). 따라서 설명자를 4 개의 역할 중 하나를 작성할 수 있습니다.  

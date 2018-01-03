@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f3ce3621c9a6cd709dc008f436fe89fbba14ef3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 34636d9ead963cf9548d8ff1345424f4283fd1fb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructing-interoperable-sql-statements"></a>상호 운용할 수 있는 SQL 문 구성
 이전 섹션에서 설명 했 듯이 상호 운용 가능한 응용 프로그램에서 ODBC SQL 문법을 사용 해야 합니다. 그러나이 문법을 사용 하 여 다음 다양 한 추가 문제 상호 운용 가능한 응용 프로그램에서 직면 됩니다. 예를 들어 응용 프로그램이 수행 하는 모든 데이터 원본에서 지원 되지 않는 외부 조인과 같은 기능을 사용 하려는 경우  

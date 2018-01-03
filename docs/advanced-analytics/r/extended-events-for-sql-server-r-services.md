@@ -1,10 +1,12 @@
 ---
-title: "SQL Server R Services의 확장 이벤트 | Microsoft 문서"
-ms.custom: SQL2016_New_Updated
-ms.date: 11/29/2016
-ms.prod: sql-non-specified
+title: "SQL Server 컴퓨터 학습 서비스에 대 한 확장 이벤트 | Microsoft Docs"
+ms.custom: 
+ms.date: 12/21/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,36 +14,47 @@ ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 76350c58a9ef7dc52eaf1a260ec04a231f362872
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b08e48eb6a53d40eefbed2a0503c4f92a10f8e66
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="extended-events-for-sql-server-r-services"></a>SQL Server R Services의 확장 이벤트
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 은(는) [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 에 보내는 R 작업 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 문제 해결 작업에 사용할 확장 이벤트를 제공합니다.  
-  
- SQL Server 관련 이벤트 목록을 보려면, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 다음 쿼리를 실행합니다.  
-  
-```  
-select o.name as event_name, o.description  
-  from sys.dm_xe_objects o  
-  join sys.dm_xe_packages p  
-    on o.package_guid = p.guid  
- where o.object_type = 'event'  
-   and p.name = 'SQLSatellite';  
-```  
-  
- 하지만, [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 의 일부 추가적인 확장 이벤트는 R 런타임을 시작하는 위성 프로세스, [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], BXLServer와 같은 외부 프로세스를 통해서만 실행됩니다. 이러한 이벤트를 캡처하는 방법에 대한 자세한 내용은 [Collecting Events from External Processes](#bkmk_externalevents)을(를) 참조하십시오.  
-  
- 확장 이벤트 사용에 대한 일반 정보는 [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)을(를) 참조하십시오.  
+# <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 확장된 이벤트
 
-  
-##  <a name="bkmk_xeventtable"></a> 확장 이벤트 테이블  
-  
-|이벤트|설명|이후|  
+SQL Server 문제 해결 관련 된 작업에 사용할 확장된 이벤트를 집합이 제공 된 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], Python 또는 R 작업에 전송 하는 것은 물론 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
+
+**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 기계 학습 서비스
+
+## <a name="sql-server-events-for-machine-learning"></a>기계 학습에 대 한 SQL Server 이벤트
+
+SQL Server 관련 이벤트 목록을 보려면, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 다음 쿼리를 실행합니다.
+
+```SQL
+SELECT o.name AS event_name, o.description
+FROM sys.dm_xe_objects o
+JOIN sys.dm_xe_packages p
+ON o.package_guid = p.guid
+WHERE o.object_type = 'event'
+AND p.name = 'SQLSatellite';
+```
+
+확장된 이벤트 사용에 대 한 일반 정보를 참조 하십시오. [확장 이벤트 도구](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)합니다.
+
+> [!TIP]
+> SQL Server에서 생성 하는 확장된 이벤트에 대 한 새 시도 [SSMS의 XEvent 프로파일러](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler)합니다. Management Studio의이 새로운 기능, 확장된 이벤트에 대 한 라이브 뷰어를 표시 및 유사한 프로파일러 추적을 보다 SQL Server 개입 수준이 낮습니다.
+
+## <a name="additional-events-specific-to-machine-learning-components"></a>특정 컴퓨터 학습 구성 요소에 추가 이벤트
+
+와 관련 된 및와 같은 SQL Server 컴퓨터 학습 서비스에서 사용 되는 구성 요소에 대해 사용할 수 있는 추가 확장된 이벤트는 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], bxlserver, R 런타임을 시작 하는 위성 프로세스입니다. 이러한 추가적인 확장 이벤트는 외부 프로세스에서 발생 하 고 따라서 캡처되어야 외부 유틸리티를 사용 하 합니다.
+
+이 작업을 수행 하는 방법에 대 한 자세한 내용은 섹션을 참조 [외부 프로세스에서 이벤트 수집](#bkmk_externalevents)합니다.
+
+##  <a name="bkmk_xeventtable"></a>확장된 이벤트 테이블
+
+|이벤트|Description|참고|  
 |-----------|-----------------|---------|  
 |connection_accept|새 연결이 허용될 때 발생합니다. 이 이벤트는 모든 연결 시도를 기록합니다.||  
 |failed_launching|시작하지 못했습니다.|오류를 나타냅니다.|  
@@ -54,7 +67,7 @@ select o.name as event_name, o.description
 |satellite_data_chunk_sent|위성 연결이 단일 데이터 청크 보내기를 마칠 때 실행됩니다.|이 이벤트는 전송된 행 수, 열 수, 사용된 SNI 패킷 수, 청크를 전송하는 동안 경과된 시간(밀리초)을 보고합니다. 이 정보는 각 유형의 데이터를 전달하는 데 소비된 시간 및 사용된 패킷 수를 파악하는 데 도움이 됩니다.|  
 |satellite_data_receive_completion|위성 연결을 통해 쿼리에 필요한 모든 데이터를 수신한 경우에 실행됩니다.|외부 프로세스를 통해서만 실행됩니다. 외부 프로세스 이벤트 수집에 대한 지침을 참조하십시오.|  
 |satellite_data_send_completion|위성 연결을 통해 세션에 필요한 모든 데이터를 보낸 경우에 실행됩니다.||  
-|satellite_data_send_start|데이터 전송이 시작된 경우에 실행됩니다(첫 번째 데이터 청크를 보내기 직전에).||  
+|satellite_data_send_start|데이터 전송을 시작 될 때 발생 합니다.| 데이터 전송에 첫 번째 데이터 청크를 보내기 전에 바로 시작 됩니다.|  
 |satellite_error|SQL 위성 오류를 추적하는 데 사용됩니다.||  
 |satellite_invalid_sized_message|메시지의 크기가 유효하지 않습니다.||  
 |satellite_message_coalesced|네트워킹 계층의 메시지 결합을 추적하는 데 사용됩니다.||  
@@ -74,26 +87,32 @@ select o.name as event_name, o.description
 |satellite_data_chunk_sent|위성 연결이 단일 데이터 청크 보내기를 마칠 때 실행됩니다.|열의 수, 행의 수, 패킷 수, 청크를 보내면서 경과한 시간에 대한 정보를 포함합니다.|  
 |satellite_sessionId_mismatch|메시지의 세션 ID가 예상한 것과 다릅니다.||  
   
-###  <a name="bkmk_externalevents"></a> Collecting Events from External Processes  
- [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 은(는) SQL Server 프로세스 외부에서 실행되는 일부 서비스를 시작합니다. 외부 프로세스 관련 이벤트를 캡처하려면 이벤트 추적 구성 파일을 만들고 프로세스의 실행 파일과 동일한 디렉터리에 파일을 배치해야 합니다.  
+###  <a name="bkmk_externalevents"></a>외부 프로세스에서 이벤트 수집
+
+SQL Server 컴퓨터 학습 서비스는 SQL Server 프로세스 외부에서 실행 되는 일부 서비스를 시작 합니다. 외부 프로세스와 관련 된 이벤트를 캡처하려면 이벤트 추적 구성 파일을 만들고 프로세스의 실행 파일과 동일한 디렉터리에 파일을 배치 합니다.  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
++ **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-     실행 패드 관련 이벤트를 캡처하려면, SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다.  기본 설치 시 디렉터리는 `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`입니다.  
+    실행 패드 관련 이벤트를 캡처하려면, SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다.  기본 설치에서이 합니다.
+
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`을 참조하세요.  
   
--   **BXLServer**는 R 및 다른 외부 스크립트 언어를 사용하여 SQL 확장성을 지원하는 위성 프로세스입니다.  
++ **BXLServer** 는 Python 또는 R 등의 외부 스크립트 언어로 SQL 확장성을 지 원하는 위성 프로세스입니다. 외부 언어 인스턴스마다 BxlServer의 개별 인스턴스가 시작 됩니다.
   
-     BXLServer 관련 이벤트를 캡처하려면, R 설치 디렉터리에 *.config* 파일을 배치합니다.  기본 설치 시 디렉터리는 `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`입니다.  
-  
-> [!IMPORTANT]
->   구성 파일은 “[name].xevents.xml” 형식을 사용하여 실행 파일과 같은 이름을 지정해야 합니다. 즉, 파일 이름을 다음과 같이 지정해야 합니다.  
->   
-> - Launchpad.xevents.xml  
-> - bxlserver.xevents.xml  
-  
- 구성 파일 자체의 형식은 다음과 같습니다.  
-  
-```  
+    BXLServer 관련 이벤트를 캡처하려면, 배치는 *.config* Python 또는 R 설치 디렉터리에 파일입니다.  기본 설치에서이 합니다.
+     
+    **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`합니다.  
+
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`합니다.
+
+구성 파일은 “[name].xevents.xml” 형식을 사용하여 실행 파일과 같은 이름을 지정해야 합니다. 즉, 파일 이름을 다음과 같이 지정해야 합니다.
+
++ `Launchpad.xevents.xml`
++ `bxlserver.xevents.xml`
+
+구성 파일 자체의 형식은 다음과 같습니다.
+
+```xml
 \<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
@@ -107,19 +126,16 @@ select o.name as event_name, o.description
     </target>  
   </event_session>  
 </event_sessions>  
-  
-```  
-  
- **참고:**  
-  
--   추적을 구성하려면 *session name* 자리 표시자, 파일 이름(`[SessionName].xel`)의 자리 표시자, 캡처할 이벤트의 이름(예: `[XEvent Name 1]`, `[XEvent Name 1]`)을 편집합니다.  
-  
--   사용할 수 있는 `event package` 태그의 수에는 제한이 없으며, name 특성이 올바르기만 하면 수집됩니다.  
-  
-### <a name="example-capturing-launchpad-events"></a>예: 실행 패드 이벤트 캡처  
- 다음 예는 실행 패드 서비스 이벤트 추적에 대한 정의를 보여줍니다.  
-  
-```  
+```
+
++ 추적을 구성 하려면 편집는 *세션 이름* 자리 표시자, 파일 이름에 대 한 자리 표시자 (`[SessionName].xel`), 이벤트를 캡처하려면, 예를 들어의 이름과 `[XEvent Name 1]`, `[XEvent Name 1]`).  
++ 이벤트 패키지 태그 개수에 관계 없이 지정할 수 있으며 name 특성이으로 수집 됩니다.
+
+### <a name="example-capturing-launchpad-events"></a>예: 실행 패드 이벤트 캡처
+
+다음 예제에서는 실행 패드 서비스에 대 한 이벤트 추적의 정의 보여 줍니다.
+
+```xml
 \<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
@@ -133,19 +149,16 @@ select o.name as event_name, o.description
     </target>  
   </event_session>  
 </event_sessions>  
-  
-```  
-  
- **참고:**  
-  
--   SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다.  
-  
--   파일의 이름을 *Launchpad.xevents.xml*로 지정해야 합니다.  
-  
+```
+
++ SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다.
++ 이 파일 이름을 지정 해야 `Launchpad.xevents.xml`합니다.
+
 ### <a name="example-capturing-bxlserver-events"></a>예: BXLServer 이벤트 캡처  
- 다음 예는 BXLServer 실행 파일 이벤트 추적에 대한 정의를 보여줍니다.  
+
+다음 예는 BXLServer 실행 파일 이벤트 추적에 대한 정의를 보여줍니다.
   
-```  
+```xml
 \<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
@@ -166,18 +179,11 @@ select o.name as event_name, o.description
     </target>  
   </event_session>  
 </event_sessions>  
-  
-```  
-  
- **참고:**  
-  
--   BXLServer 실행 파일과 같은 디렉터리에 *.config* 파일을 배치합니다.  
-  
--   파일의 이름을 *bxlserver.xevents.xml*로 지정해야 합니다.  
-  
-## <a name="see-also"></a>참고 항목
-[R Services에 대한 사용자 지정 Management Studio 보고서](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md)  
- [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
- [R 솔루션 관리 및 모니터링](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
-  
-  
+```
+
++ BXLServer 실행 파일과 같은 디렉터리에 *.config* 파일을 배치합니다.
++ 이 파일 이름을 지정 해야 `bxlserver.xevents.xml`합니다.
+
+## <a name="see-also"></a>관련 항목:
+
+[컴퓨터 학습 서비스에 대 한 사용자 지정 관리 Studio 보고서](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

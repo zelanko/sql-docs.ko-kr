@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b04226eeab2adde4a36f93fb5630f3097741a6d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 비트 응용 프로그램을 사용 하 여 32 비트 드라이버와
 32 비트 드라이버와 32 비트 응용 프로그램을 실행할 수 있습니다. 32 비트 응용 프로그램 및 32 비트 드라이버 Win32® API를 사용합니다.  
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/20/2017
 ## <a name="administration"></a>관리  
  ODBC 데이터 원본 관리자를 사용 하 여 32 비트 드라이버에 대 한 데이터 원본을 관리할 수 있습니다. Windows 2000을 실행 하는 컴퓨터에서 ODBC 관리자를 열려면 Windows 제어판을 열고, 두 번 클릭 **관리 도구**를 두 번 클릭 하 고 **데이터 원본 (ODBC)**합니다. 이전 버전의 Microsoft Windows를 실행 하는 컴퓨터에 있는 아이콘 라는 **32 비트 ODBC** 또는 단순히 **ODBC**합니다.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>구성 요소  
  ODBC 구성 요소는 32 비트 드라이버와 32 비트 응용 프로그램을 실행 하기 위한 다음 파일을 포함 합니다. 이러한 구성 요소는 \Redist 디렉터리에 있습니다.  
   
-|파일 이름|Description|  
+|파일 이름 |Description|  
 |---------------|-----------------|  
 |Odbc32.dll|32 비트 드라이버 관리자|  
 |Odbccp32.dll|32 비트 설치 관리자 DLL|  

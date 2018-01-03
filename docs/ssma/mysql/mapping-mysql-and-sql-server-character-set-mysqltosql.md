@@ -1,7 +1,7 @@
 ---
 title: "(MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3845c66ea4407b48e371f8b2ec0ad7b9da7edfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑
 MySQL 문자 데이터 형식, 식 및 리터럴을 대 한 문자 집합 (문자 집합)을 지정할 수 있습니다.  
@@ -121,7 +121,7 @@ MySQL 문자 데이터 형식, 식 및 리터럴을 대 한 문자 집합 (문�
     |cp 1251|Windows 키릴 자모|CHAR/VARCHAR (기본값)|  
     |cp 1256|Windows 아랍어|CHAR/VARCHAR (기본값)|  
     |cp 1257|Windows 발트어|CHAR/VARCHAR (기본값)|  
-    |binary|이진 의사 문자 집합|CHAR/VARCHAR (기본값)|  
+    |BINARY|이진 의사 문자 집합|CHAR/VARCHAR (기본값)|  
     |geostd8|GEOSTD8 그루지야어|CHAR/VARCHAR (기본값)|  
     |cp932|Windows 일본어 SJIS|NCHAR/NVARCHAR (기본값)|  
     |eucjpms|Windows 일본어 UJIS|NCHAR/NVARCHAR (기본값)|  

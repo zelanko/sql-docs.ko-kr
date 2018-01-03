@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 81fb191b3087d6eb9a6b25712229627388f3a676
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 315ea45ac8f88d482f0b2cf81ed3b9d15b80a7b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 함수
 **규칙**  
@@ -57,7 +57,7 @@ BOOL SQLWriteDSNToIni(
 ## <a name="diagnostics"></a>진단  
  때 **SQLWriteDSNToIni** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_DSN|잘못 된 DSN|*lpszDSN* 인수에는 DSN에 대 한 잘못 된 문자열이 포함 되어 있습니다.|  
@@ -65,7 +65,7 @@ BOOL SQLWriteDSNToIni(
 |ODBC_ERROR_REQUEST_FAILED|요청이 실패 했습니다.|설치 관리자를 레지스트리에서 DSN을 만들지 못했습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLWriteDSNToIni** 시스템 정보 [ODBC 데이터 소스] 섹션에 데이터 소스를 추가 합니다. 그런 다음 데이터 원본에 대 한 사양 섹션 만들고 추가 하는 단일 키워드 (**드라이버**) 드라이버의 값으로 DLL의 이름으로 합니다. 데이터 원본 사양 섹션에 이미 있으면 **SQLWriteDSNToIni** 새를 만들기 전에 이전 섹션을 제거 합니다.  
   
  이 함수의 호출자에 게는 모든 드라이버 관련 키워드와 값의 시스템 정보와 데이터 원본 사양 섹션에 추가 해야 합니다.  

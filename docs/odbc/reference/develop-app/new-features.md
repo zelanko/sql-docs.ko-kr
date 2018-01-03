@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 016c2cefd6280a7b2cc21e4b5e290468d8271973
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 12e66ad8a1aa5e1389b69d5f30156f7b86b3b733
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-features"></a>새로운 기능
 ODBC 3에서 다음과 같은 새로운 기능을 도입 했습니다. *x*합니다. ODBC 3입니다. *x* 작업 하는 ODBC 2 응용 프로그램*.x* 드라이버가이 기능을 사용할 수 없게 됩니다. ODBC 3입니다. *x* 는 ODBC 2 작업할 때 드라이버 관리자에서는 이러한 기능을 매핑하지 않습니다*.x* 드라이버입니다.  

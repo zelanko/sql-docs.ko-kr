@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d7cfdacb91ff3963a1bf77343c171e8f9d3fec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 676ab0116fa14af4d2f29c2620a4f6e15f17cdc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>SQLConfigDatasource을 with the ODBC Driver for Oracle 사용
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 |설정|최대 길이|기본값|유효한 값|Description|  
 |-------------|-------------|-------------------|------------------|-----------------|  
 |BufferSize|7|65535|1000|최소 인출 버퍼 크기는 최대 65, 535 바이트|  
-|CatalogCap|2|1.|0 또는 1|1 인 경우, nonquoted 식별자 카탈로그에 대문자로 변환 된 함수가 됩니다.|  
+|CatalogCap|2|1|0 또는 1|1 인 경우, nonquoted 식별자 카탈로그에 대문자로 변환 된 함수가 됩니다.|  
 |ConnectString|128|""|A/N|연결 문자열. 필요한 방식의 Msorcl10.dll 드라이버를 사용 하 여 서버 이름을 지정 합니다.|  
 |Description|256|""|A/N|설명|  
 |DSN|33|""|A/N|데이터 원본 이름입니다.|  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/20/2017
 |RDOSupport|2|""|0 또는 1|RDO를 Oracle 프로시저를 호출할 수 있습니다.|  
 |주의|2|0|0 또는 1|카탈로그 함수에 주의 포함 합니다.|  
 |RowLimit|4|""|0에서 99 사이의|SELECT 문에 의해 반환 된 행의 최대 수입니다. 길이가 0 인 문자열 제한이 적용 되었음을 나타냅니다.|  
-|Server|128|""|A/N|Oracle 서버 이름입니다.|  
-|SynonymColumns|2|1.|0 또는 1|SQLColumns에 동의어를 포함 합니다.|  
+|서버|128|""|A/N|Oracle 서버 이름입니다.|  
+|SynonymColumns|2|1|0 또는 1|SQLColumns에 동의어를 포함 합니다.|  
 |SystemTable|2|""|0 또는 1|0 인 경우, 시스템 테이블 표시 되지 않습니다. 1 인 경우, 시스템 테이블이 표시 됩니다.|  
 |TranslationDLL|33|""|A/N|변환.dll 이름입니다.|  
 |TranslationName|33|""|A/N|변환 이름입니다.|  

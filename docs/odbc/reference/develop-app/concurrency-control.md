@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d40d92b6771aa27a0fbfbdbfefd485496b10984c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ab0a0838c2bac6359452d3870cf3d3c7d8b472d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-control"></a>동시성 제어
 *동시성* 같은 시간에 동일한 데이터를 사용 하는 두 개의 트랜잭션 기능 이며 증가 된 트랜잭션 격리는 대개 제공 동시성이 줄어들된 합니다. 트랜잭션 격리는 잠금 행에서 일반적으로 구현 하 고 잠긴된 행에 의해 적어도 일시적으로 차단 되지 않고 더 적은 트랜잭션을 완료할 수 있습니다 더 많은 행 잠겨 있기 때문입니다. 데이터베이스 무결성을 유지 하는 데 필요한 높은 트랜잭션 격리 수준에 대 한 절충안으로 동시성이 줄어들된은 일반적으로 허용 하는 동안 커서를 사용 하는 높은 읽기/쓰기 작업으로 대화형 응용 프로그램에서 문제가 될 수 있습니다.  

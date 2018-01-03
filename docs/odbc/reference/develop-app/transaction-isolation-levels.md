@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f0b5499af07c7bbb5309ff87037f7c3825872dab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d19973db310faafd97d9ab6c38848395a344100
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
 *트랜잭션 격리 수준* 는 트랜잭션 격리 성공 범위의 측정값입니다. 특히, 트랜잭션 격리 수준은 다음과 같은 현상이의 유무 의해 정의 됩니다.  

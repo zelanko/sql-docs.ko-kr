@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f951b69af4ecc18dc1dcdc23d0cbd1ce115caf0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db147faaae4ad0f2713e21f9e55228cbb2b057e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freeing-descriptors"></a>설명자를 해제합니다.
 명시적으로 할당 된 설명자 될 수 있습니다 하나를 명시적으로 호출 하 여 해제 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_DESC, 또는 암시적으로 때 연결 핸들 해제 됩니다. 명시적으로 할당 된 설명자는 해제, 모든 문 핸들을 자동으로 적용 해제 된 설명자에 암시적으로 할당 된 설명자를 되돌립니다.  

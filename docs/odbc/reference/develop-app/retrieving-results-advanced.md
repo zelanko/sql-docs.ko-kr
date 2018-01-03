@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f669180407ed626ae9235bd666068b6889060b8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 85c3447abebf7ef6eaa538a8a1d5d00edcc007fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-results-advanced"></a>검색 결과 (고급)
 응용 프로그램에서 오프셋 바인딩된 데이터 버퍼 주소 및 해당 길이/표시기 추가 되어 있는지를 지정할 수 때 버퍼 주소 **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, 또는 **SQLSetPos** 호출 됩니다. 추가 하는이 코드의 결과 이러한 작업에 사용 되는 주소를 결정 합니다.  

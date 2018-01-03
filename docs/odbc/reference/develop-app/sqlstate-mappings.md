@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c17b2052e3ef088d5baa98481cbb81d972cd1093
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 68b514cd35e7da713f6e38a01c25d5d64d621794
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 매핑(SQLSTATE Mappings)
 이 항목에서는 ODBC 2에 대 한 SQLSTATE 값을 설명 합니다. *x* 및 ODBC 3. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값 참조 [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
  SQL_OV_ODBC2를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 하면 드라이버는 ODBC 2를 게시 합니다. *x* SQLSTATEs 대신 ODBC 3. *x* SQLSTATEs 때 **SQLGetDiagField** 또는 **SQLGetDiagRec** 호출 됩니다. 특정 매핑 ODBC 2를 확인 하 여 확인할 수 있습니다*.x* ODBC 3에 해당 하는 다음 표의 열 1의에서 SQLSTATE입니다. *x* 열 2의에서 SQLSTATE입니다.  
   
-|ODBC 2입니다. *x* SQLSTATE|ODBC 3입니다. *x* SQLSTATE|설명|  
+|ODBC 2입니다. *x* SQLSTATE|ODBC 3입니다. *x* SQLSTATE|주석|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  

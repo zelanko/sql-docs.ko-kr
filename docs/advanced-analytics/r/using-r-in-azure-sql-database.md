@@ -2,9 +2,11 @@
 title: "Azure SQL 데이터베이스에서 R을 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: cb43b2c1edb6ce03acd2e3e64eb077ca96c62304
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 8960f8a8c5dadaa0c53cd4fcb1ab786ce6e720a7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="using-r-in-azure-sql-database"></a>Azure SQL 데이터베이스에서 R을 사용 하 여
 
@@ -104,19 +106,23 @@ GO
 다음 저장된 프로시저는 실제로 만들고 이진 두 형식 중 하나로 저장 될 수 있는 모델을 학습 작업을 수행 합니다.
 
 ```sql
-CREATE PROCEDURE generate_iris_model (@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
+CREATE PROCEDURE generate_iris_model
+    @trained_model VARBINARY(MAX) OUTPUT, 
+    @native_trained_model VARBINARY(MAX) OUTPUT
 AS
 BEGIN
   EXEC sp_execute_external_script @language = N'R'
-    , @script = N'
+  , @script = N'
     iris_model <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris_rx_data);
     trained_model <- as.raw(serialize(iris_model, connection=NULL));
     native_trained_model <- rxSerializeModel(iris_model, realtimeScoringOnly = TRUE)
     '
   , @input_data_1 = N'SELECT "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species" FROM iris_data'
   , @input_data_1_name = N'iris_rx_data'
-  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT'
+  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
     , @trained_model = @trained_model OUTPUT
+    , @native_trained_model = @native_trained_model OUTPUT;
+End
 ```
 
 + **출력** 값을 통과 하 고도 출력에 사용 되는 키워드의 입력된 매개 변수를 나타냅니다.

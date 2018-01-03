@@ -3,10 +3,10 @@ title: "PDW 서비스 상태 (분석 플랫폼 시스템)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3fc9bee2-c372-4c4a-956c-fb54215d8918
 caps.latest.revision: "14"
-ms.openlocfilehash: 252a18f85d86129aa9f1916a224048b7e4b03f30
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a6b1a1f9a6ef922833930abf00ca10482648141
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-services-status"></a>PDW 서비스 상태
 병렬 데이터 웨어하우스 **서비스 상태** 페이지 Microsoft 분석 플랫폼 시스템 구성 관리자에서 모든 SQL Server PDW 서비스의 현재 상태를 표시 하 고 PDW 서비스 중지 및 시작 하는 기능을 제공 합니다. 이것이 PDW 서비스 시작 및 중지에 대 한 지원 되는 유일한 방법입니다. 개별 구성 요소 또는 서비스를 시작할 수 없습니다 독립적으로 확인 합니다.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c198136c6ded3f0e9e7184a34bf3814d7e061810
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 64b8479b23f76c8af74be77b4f44e3bca6f8a6f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 함수
 **규칙**  
@@ -61,14 +61,14 @@ BOOL SQLGetInstalledDrivers(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetInstalledDrivers** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*lpszBuf* 인수는 NULL 이거나 잘못 된 또는 *cbBufMax* 0 보다 작거나 같은 인수 했습니다.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|구성 요소 레지스트리에서 찾을 수 없습니다|설치 관리자 레지스트리에 [ODBC Drivers] 섹션을 찾을 수 없습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  각 드라이버 설명 null 바이트를으로 종료 되 고 전체 목록을 바이트 null로 종료 됩니다. (즉, 두 개의 null 바이트의 끝을 표시 목록입니다.) 할당된 된 버퍼를 전체 목록을 저장할 수 있을 만큼 큰 없으면 목록 오류 없이 잘립니다. Null 포인터로 전달 되는 경우 오류가 반환 됩니다 *lpszBuf*합니다.  
   
 ## <a name="related-functions"></a>관련 함수  

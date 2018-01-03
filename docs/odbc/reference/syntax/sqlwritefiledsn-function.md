@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 635f756827364a1ca586a934f94216e0cf4d537a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 973c27fb58411e0fd3ddc482a0a8cbee3d929ee8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 함수
 **규칙**  
@@ -65,13 +65,13 @@ BOOL SQLWriteFileDSN(
 ## <a name="diagnostics"></a>진단  
  때 **SQLWriteFileDSN** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_PATH|잘못 된 설치 경로|에 지정 된 파일 이름의 경로 *lpszFileName* 인수가 잘못 되었습니다.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|요청의 형식이 잘못 되었습니다|*lpszAppName*, *lpszkeyname 만들기*, 또는 *lpszString* 에 NULL 인수가 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  ODBC 연결 정보를 저장 하는 섹션 이름 [ODBC]가 보유 합니다. 이 섹션에 대 한 예약 된 키워드에서 연결 문자열에 대 한 예약 된 것으로 동일 **SQLDriverConnect**합니다. (자세한 내용은 참조는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 함수 설명 합니다.)  
   
  응용 프로그램 파일 DSN에 직접 정보를 기록 이러한 예약 된 키워드를 사용할 수 있습니다. 에서 응용 프로그램을 만들거나 파일 DSN와 관련 된 DSN 없는 연결 문자열을 수정 하려는 경우 호출할 수 **SQLWriteFileDSN** [ODBC] 섹션에서 예약 된 연결 문자열 키워드에 대 한 합니다.  

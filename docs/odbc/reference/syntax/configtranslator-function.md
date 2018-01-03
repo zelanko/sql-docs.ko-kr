@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aa51e22163896c373703dda57715b71776fd4f88
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8b0c064453d84d10037eb1360c20b2fab8ecb1d8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 함수
 **규칙**  
@@ -57,13 +57,13 @@ BOOL ConfigTranslator(
 ## <a name="diagnostics"></a>진단  
  때 **ConfigTranslator** 관련 FALSE를 반환  *\*pfErrorCode* 를 호출 하 여 설치 관리자 오류 버퍼에 값이 게시 **SQLPostInstallerError**를 호출 하 여 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|잘못 된 창 핸들|*창은* 인수가 잘못 되었거나 NULL입니다.|  
 |ODBC_ERROR_DRIVER_SPECIFIC|드라이버 또는 변환기 관련 오류|정의 된 ODBC 설치 관리자 오류가 없는 드라이버 관련 오류가 발생 했습니다. *SzError* 에 대 한 호출의 인수는 **SQLPostInstallerError** 함수에는 드라이버 특정 오류 메시지가 포함 되어 있어야 합니다.|  
 |ODBC_ERROR_INVALID_OPTION|잘못 된 번역 옵션|*pvOption* 인수에 잘못 된 값을 포함 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  변환기는 단일 변환 옵션을 지 원하는 경우 **ConfigTranslator** TRUE를 반환 하 고 설정 *pvOption* 를 32 비트 옵션입니다. 그렇지 않은 경우 사용 하는 기본 변환 옵션을 결정 합니다. **ConfigTranslator** 는 사용자가 기본 변환 옵션을 선택 하는 대화 상자를 표시할 수 있습니다.  
   
 ## <a name="related-functions"></a>관련 함수  

@@ -3,10 +3,10 @@ title: "다운로드 하 여 Microsoft 업데이트 (분석 플랫폼 시스템)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>다운로드 하 여 Microsoft 업데이트 적용
 이 항목에서는 Windows Server Update Services (WSUS)를 Microsoft Update 카탈로그에서 업데이트를 다운로드 하 고 분석 플랫폼 시스템 기기 서버 해당 업데이트를 적용 하는 방법에 설명 합니다. Microsoft 업데이트를 통해 Windows 및 SQL Server에 대 한 모든 적용 가능한 업데이트를 설치 합니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 >   
 > 어플라이언스에 사용 중인 동안에 Microsoft 업데이트를 적용 하지 마십시오. 업데이트를 적용 하면 어플라이언스 노드를 다시 부팅 될 수 있습니다. 어플라이언스를 사용 하는 경우 유지 관리 기간 동안 업데이트를 적용 되어야 합니다.  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 다음이 단계를 수행 하기 전에 해야 합니다.  
   
 -   지침에 따라 WSUS 어플라이언스 구성 [Windows Server Update Services 구성 &#40; WSUS &#41; &#40; 분석 플랫폼 시스템 &#41; ](configure-windows-server-update-services-wsus.md).  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,14 +21,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91ae086fd7be4222c55a8fad9b8383846cc59949
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0a6e8d81141c5bfbfe48a5fe234471ffe506f11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-statements-entered-by-the-user"></a>사용자가 입력 한 SQL 문
-일반적으로 임시 분석을 수행 하는 응용 프로그램 SQL 문을 직접 입력할 수 있습니다. 예를 들어  
+일반적으로 임시 분석을 수행 하는 응용 프로그램 SQL 문을 직접 입력할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  

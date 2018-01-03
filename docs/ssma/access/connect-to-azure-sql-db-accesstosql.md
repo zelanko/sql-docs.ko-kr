@@ -1,7 +1,7 @@
 ---
 title: "Azure SQL DB (AccessToSQL)에 연결 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -21,30 +21,30 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3254d9db5c90b932e5a1fbfcf8d9821549c3b61b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54f826bd9b4bd2bdec0c7cd79c6faf20b0630639
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL)에 연결
 SQL Azure 대화 상자에 연결을 사용 하 여 마이그레이션할 SQL Azure 데이터베이스에 연결 합니다.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **SQL Azure에 연결**합니다. 이 명령은 이전에 연결한 경우 **SQL Azure에 다시 연결 합니다.**  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **서버 이름**  
   
 선택 하거나 SQL Azure에 연결 하기 위한 서버 이름을 입력 합니다.  
   
-**데이터베이스**  
+**데이터베이스 백업**  
   
 선택, 입력 또는 **찾아보기** 데이터베이스 이름입니다.  
   
 > [!IMPORTANT]  
 > Access 용 SSMA는 SQL Azure에서 master 데이터베이스에 연결을 지원 하지 않습니다.  
   
-**사용자 이름**  
+**User name**  
   
 SSMA는 SQL Azure 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 하십시오  
   

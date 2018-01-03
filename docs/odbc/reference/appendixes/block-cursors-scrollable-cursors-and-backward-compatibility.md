@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f653ed286aa421f9ac7fe8ae7c29e5eb8cb3348
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 00e83e48a76e3c9159b50eb63fe4aec657baf928
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성
 둘 다의 존재 여부 **SQLFetchScroll** 및 **SQLExtendedFetch** 사이 API 응용 프로그래밍 인터페이스 (), 일련의 함수는 ODBC의 첫 번째 일반 분할 나타냅니다는 호출 응용 프로그램 및 서비스 공급자 인터페이스 (SPI), 일련의 함수는 드라이버 구현 합니다. 이 분할은 필요한 있도록 ODBC 3. *x*를 사용 하 여 **SQLFetchScroll**, standards bealigned 하며 ODBC 2와 호환 해야 합니다. *x*를 사용 하 여 **SQLExtendedFetch**합니다.  

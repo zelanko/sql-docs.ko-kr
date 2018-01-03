@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1117eac94fdad6d90fda688f1a324608f0b37dad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: af6533afbeb3b47c548e5475604136ae5fdc894b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-a-odbc-error-codes"></a>부록 a: ODBC 오류 코드
 이 항목에서는 ODBC 3에 대 한 SQLSTATE 값을 설명 합니다. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값 참조 [SQLSTATE 매핑](../../../odbc/reference/develop-app/sqlstate-mappings.md)합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  함수의 실행이 성공 SQL_SUCCESS 반환 값이 표시 됩니다, 있지만 00000 SQLSTATE는 또한 성공을 나타냅니다.  
   
-|SQLSTATE|오류|반환 될 수 있습니다.|  
+|SQLSTATE|Error|반환 될 수 있습니다.|  
 |--------------|-----------|--------------------------|  
 |01000|일반 경고|제외한 모든 ODBC 함수가:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |01001|커서 작업이 충돌 합니다.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  

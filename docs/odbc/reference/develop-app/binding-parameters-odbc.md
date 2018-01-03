@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0994006c2e99c8f1e454eaf07b74fffcee70e9f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53c032a38f81b87b596e05f22137c80f5c54853c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameters-odbc"></a>바인딩 매개 변수 ODBC
 SQL 문의 각 매개 변수에 연결, 해야 또는 *바인딩되는 경우,* 문이 실행 되기 전에 응용 프로그램의 변수에 합니다. 해당 변수를 설명 응용 프로그램 변수에 매개 변수를 바인딩할 때-주소, C 데이터 형식 등에-driver. 매개 변수 자체에 대해서도 설명 — SQL 데이터 형식, 정밀도 및 등입니다. 드라이버는 해당 문에 대 한 유지 관리 하 고는 문이 실행 될 때 변수에서 값을 검색 하는 정보를 사용 하 여 구조에이 정보를 저장 합니다.  

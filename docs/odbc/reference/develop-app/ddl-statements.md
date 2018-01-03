@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12ad45516f14b33dcd9ae506bbf4e86c71c9a8cd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69fedff83875bf08625ee97ecab93a02a856cc21
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ddl-statements"></a>DDL 문
 데이터 정의 언어 (DDL) 문을 Dbms 매우 다양합니다. ODBC SQL 문을 가장 일반적인 데이터 정의 작업에 대 한 정의: 만들고 테이블, 인덱스, 및; 뷰를 삭제 합니다. 테이블 변경 부여 및 권한을 취소 합니다. 다른 모든 DDL 문은 데이터 원본에 따른 특정입니다. 따라서 상호 운용 가능한 응용 프로그램 일부 데이터 정의 작업을 수행할 수 없습니다. 일반적으로 이것은 문제, 이러한 작업 높은 DBMS 관련 경향이 하며 가장 독점 데이터베이스 관리 소프트웨어에는 왼쪽 대부분 Dbms와 함께 제공 되 또는 드라이버와 함께 제공 되는 설치 프로그램입니다.  

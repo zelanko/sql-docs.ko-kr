@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca3a769ca983cae0cb7a2bc629c366b184b067e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 620965b524b6d76d1f1d0a3d7adaf84c05c4540c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-batches"></a>실행 중인 일괄 처리
 응용 프로그램이 실행 된 문의 일괄 처리 전에 지원 되는지 여부를 확인 먼저 해야 합니다. 이렇게 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS, 및 SQL_PARAM_ARRAY_SELECTS 옵션을 사용 합니다. 첫 번째 옵션 행 개수 – 생성 하 고 결과 집합 – 생성 문은 명시적 일괄 처리 및 후자 두 옵션에 설정 하는 행 개수 및 결과의 가용성에 대 한 정보를 반환 하는 동안 프로시저에 지원 매개 변수화 여부를 반환 합니다. 실행 합니다.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursors"></a>커서
 사용 하 여 데이터를 인출 하는 응용 프로그램을 *커서*합니다. 커서는 결과 집합에서 다른: 결과 집합은 특정 검색 조건과 일치 하는 행 집합, 응용 프로그램에는 행을 반환 하는 반면 커서는 소프트웨어입니다. 이름을 *커서* 데이터베이스에 적용 될 때 아마도 터미널 컴퓨터에 깜박이 커서가에서 시작 합니다. 해당 커서 화면과 형식화 된 단어가 표시 되는 위치 다음에 현재 위치에 표시 하는 대로만 결과 집합에서 커서에서 결과 집합은 다음 어떤 행이 반환 되 고 현재 위치를 나타냅니다.  

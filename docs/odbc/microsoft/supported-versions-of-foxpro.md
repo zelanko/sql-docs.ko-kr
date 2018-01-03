@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c59ade51c0b3aec211c60974e8b27c8fc521d526
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1330773f8521b1fc6edcefc6074f77c3579e9051
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-versions-of-foxpro"></a>FoxPro의 지원 되는 버전
 FoxPro 테이블에 저장 된 데이터에 액세스 하기 위해 Microsoft® Visual FoxPro® ODBC Driver를 사용할 수 있습니다. FoxPro 데이터의 다음 버전이 지원 됩니다.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2bc56113933e993b5748564a1c64ef1798ed8ef1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-size"></a>열 크기
 숫자 데이터 형식의 열 (또는 매개 변수) 크기는 데이터 형식의 열 또는 매개 변수 또는 데이터의 전체 자릿수에 사용 되는 숫자의 최대 수로 정의 됩니다. 이; 데이터의 문자 길이 문자 형식에 대 한 이진 데이터 형식에 대 한 열 크기는 데이터의 길이 (바이트)에서으로 정의 됩니다. 시간, 타임 스탬프 및 모든 간격 데이터 형식의 경우이 데이터의 문자 표시에 있는 문자의 수입니다. 각 간결한 SQL 데이터 형식에 대해 정의 된 열 크기는 다음 표에 표시 됩니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 |-------------------------|-----------------|  
 |모든 문자 형식 [a], [b]입니다.|문자 열 또는 매개 변수 (SQL_DESC_LENGTH 설명자 필드에 포함)으로 정의 된 또는 최대 열 크기입니다. 예를 들어, 단일 바이트 문자 열 (10)로 정의 된 열 크기는 10입니다.|  
 |SQL_DECIMAL SQL_NUMERIC|정의 된 자릿수입니다. 예를 들어 NUMERIC(10,3)로 정의 된 열 전체 자릿수는 10입니다.|  
-|SQL_BIT [c + +]|1.|  
+|SQL_BIT [c + +]|1|  
 |SQL_TINYINT [c + +]|3|  
 |SQL_SMALLINT [c + +]|5|  
 |SQL_INTEGER [c + +]|10|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 |모든 이진 형식 [a], [b]입니다.|정의 된 또는 최대 길이 (바이트)에서의 열 또는 매개 변수입니다. 예를 들어 binary (10)로 정의 된 열의 길이 10입니다.|  
 |SQL_TYPE_DATE [c + +]|10 (문자 수는 *yyyy-월-일* 형식).|  
 |SQL_TYPE_TIME [c + +]|8 (의 문자 수는 *hh-mm ss* 형식), 또는 9 + *s* (의 문자 수는 *hh: mm:*[.fff...] 형식으로 여기서 *의*초 전체 자릿수)입니다.|  
-|SQL_TYPE_TIMESTAMP|16 (의 문자 수는 *yyyy-월-일 hh: mm* 형식)<br /><br /> 19 (의 문자 수는 *yyyy-월-일* *hh: mm:* 형식)<br /><br /> 또는<br /><br /> 20 + *s* (의 문자 수는 *h:mm: ss yyyy-월-일*[.fff...] 형식으로 위치 *s* 초 전체 자릿수)입니다.|  
+|SQL_TYPE_TIMESTAMP|16 (의 문자 수는 *yyyy-월-일 hh: mm* 형식)<br /><br /> 19 (의 문자 수는 *yyyy-월-일* *hh: mm:* 형식)<br /><br /> 로 구분하거나 여러<br /><br /> 20 + *s* (의 문자 수는 *h:mm: ss yyyy-월-일*[.fff...] 형식으로 위치 *s* 초 전체 자릿수)입니다.|  
 |SQL_INTERVAL_SECOND|여기서 *p* 은 전체 자릿수를 유도 하는 간격 및 *s* 초 전체 자릿수 *p* (경우 *s*= 0) 또는 *p* + *s*+ 1 (경우 *s*> 0). [ d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|여기서 *p* 은 전체 자릿수를 유도 하는 간격 및 *s* 초 전체 자릿수, 9 +*p* (경우 *s*= 0) 또는 10 +*p* + *s* (경우 *s*> 0). [ d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|여기서 *p* 은 전체 자릿수를 유도 하는 간격 및 *s* 초 전체 자릿수, 6 +*p* (경우 *s*= 0) 또는 7 +*p* + *s* (경우 *s*> 0). [ d]|  

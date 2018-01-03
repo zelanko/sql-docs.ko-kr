@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fcb5ecd444385b44ecc82d1952cbde88b55e594
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd6fee8d18326d09781f4890b63f4c12191f3465
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource 함수
 **SQLDriverToDataSource** ODBC 드라이버에 대 한 번역을 지원 합니다. 이 함수는 ODBC 사용 응용 프로그램; 의해 호출 되지 않습니다. 응용 프로그램 요청 통해 번역 **SQLSetConnectAttr**합니다. 관련 된 드라이버의 *ConnectionHandle* 에 지정 된 **SQLSetConnectAttr** 드라이버에서 데이터 원본에 전송 하는 모든 데이터의 번역을 수행 하려면 지정된 된 DLL을 호출 합니다. ODBC 초기화 파일의 기본 변환 DLL을 지정할 수 있습니다.  
@@ -91,7 +91,7 @@ BOOL SQLDriverToDataSource(
 ## <a name="returns"></a>반환 값  
  변환이 성공 했으면 FALSE 변환에 실패 한 경우 TRUE입니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  드라이버 호출 **SQLDriverToDataSource** (SQL 문, 매개 변수 및 등)의 모든 데이터를 변환 하는 드라이버에서 데이터 원본에 전달 합니다. 변환 DLL 데이터의 종류와 변환 DLL의 용도 따라 일부 데이터를 변환할 수 있습니다. 예를 들어 다른 코드 페이지에서 문자 데이터를 변환 하는 DLL 모든 숫자 및 이진 데이터를 무시 합니다.  
   
  값 *fOption* 의 값으로 설정 되어 *vParam* 호출 하 여 지정 **SQLSetConnectAttr** SQL_ATTR_TRANSLATE_OPTION 특성을 사용 합니다. 지정 된 변환 DLL에 대 한 특정 의미 있는 32 비트 값입니다. 예를 들어, 특정 문자 집합 변환 지정할 수 없습니다.  

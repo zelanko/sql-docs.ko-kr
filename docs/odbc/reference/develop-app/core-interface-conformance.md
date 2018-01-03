@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07c5896fc179f8224914d0af8b4aa9defa94b9bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1df0215014eea87559e87aeb2f29e848e1473a66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="core-interface-conformance"></a>핵심 인터페이스 규칙
 모든 ODBC 드라이버 이상 핵심 수준 통해 인터페이스를 준수 합니다. 핵심 수준에서 기능 대부분의 제네릭 상호 운용 가능한 응용 프로그램에서 필요한 것 이므로, 드라이버는 이러한 응용 프로그램 작업할 수 있습니다. 핵심 수준에서 기능 ISO CLI 사양에 정의 된 기능 하 고 Open 그룹 CLI 사양에 정의 된 nonoptional 기능에도 해당 합니다. 핵심 수준 인터페이스 – 준수 ODBC 드라이버는 다음과 같은 작업을 수행 하는 응용 프로그램을 허용 합니다.  

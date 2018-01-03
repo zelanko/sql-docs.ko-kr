@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 422f16155f79b61a7cc46516d8a4e7deb2fe19f9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff92590df7cbc65f3fb349327827c652fe1dd567
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimistic-concurrency"></a>낙관적 동시성
 *낙관적 동시성* 이라는 낙관적 가정에서 이름을 파생 트랜잭션 간의 충돌 됩니다는 거의 발생 하지 않으면 충돌이 발생 한 다른 트랜잭션의 업데이트 또는 읽기 시간 사이 데이터의 행을 삭제 하는 경우를 라고 합니다. 시간과 현재 트랜잭션에 의해 업데이트 또는 삭제 됩니다. 반대 되 *비관적 동시성* 잠금, 또는에 응용 프로그램 개발자가 이러한 충돌은 일반적입니다.  

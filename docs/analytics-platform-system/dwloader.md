@@ -3,23 +3,23 @@ title: "dwloader 병렬 데이터 웨어하우스에 대 한 명령줄 로더"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "* * dwloader * *는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다."
+description: "**dwloader** 는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다."
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader 명령줄 로더
 **dwloader** 는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다. 행을 로드할 때 테이블의 끝에 모든 행을 추가할 수 있습니다 (*추가 모드* 또는 *fastappend 모드*), 새 행이 추가 및 기존 행을 업데이트 (*upsert 모드*)을 모두 삭제 하거나 행 로드 하기 전에 기존 한 다음 빈 테이블에 모든 행을 삽입 (*모드를 다시 로드*).  
@@ -226,7 +226,7 @@ ASCII 파일에 대 한 Null 구분 기호를 연속적으로 배치 하 여 표
 **-t** *field_delimiter*  
 행의 각 필드 (열)에 대 한 구분 기호입니다. 필드 구분 기호에는 이러한 ASCII 이스케이프 문자 또는 16 진수 ASCII 값 중 하나 이상을...  
   
-|이름|이스케이프 문자|16 진수 문자|  
+|속성|이스케이프 문자|16 진수 문자|  
 |--------|--------------------|-----------------|  
 |탭|\t|0x09|  
 |캐리지 리턴 (CR)|\r|0x0d|  
@@ -402,7 +402,7 @@ dym
 fastappend  
 로더 대상 테이블의 기존 행의 끝에 임시 테이블을 사용 하지 않고 직접 행을 삽입 합니다. fastappend 다중 트랜잭션 필요 (– m) 옵션입니다. Fastappend를 사용 하는 경우 준비 데이터베이스를 지정할 수 없습니다. 복구 실패 했거나 중단 부하에서은 자신의 로드 프로세스에서 처리 되어야 즉 fastappend와 어떤 롤백이 있습니다.  
   
-upsert **-K***merge_column* [,... *n* ]    
+upsert **-K***merge_column* [,... *n* ]  
 로더는 SQL Server Merge 문을 사용 하 여 기존 행을 업데이트 하 고 새 행을 삽입 합니다.  
   
 -K 옵션 병합을 기준으로 열을 지정 합니다. 이러한 열에 고유 행을 표시 해야 하는 병합 키를 형성 합니다. 병합 키에 대상 테이블에 없는 행이 업데이트 됩니다. 대상 테이블에 존재 하지 않으면 병합 키 행이 추가 됩니다.  
@@ -491,7 +491,7 @@ Char, nchar, varchar 및 nvarchar 필드의 왼쪽 및 오른쪽에서 공백 �
 ## <a name="return-code-values"></a>반환 코드 값  
 0 (성공) 또는 다른 정수 값 (실패)  
   
-명령 창이 나 배치 파일을 사용 하 여 `errorlevel` 반환 코드를 표시 합니다. 예를 들어  
+명령 창이 나 배치 파일을 사용 하 여 `errorlevel` 반환 코드를 표시 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 dwloader  
@@ -557,12 +557,12 @@ LOG_SIZE는 데이터베이스에 대 한 보다 작아야 하며 모든 동시 
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |힙|예|예|예|최소|  
 |힙|예|아니오|예|최소|  
-|힙|아니요|예|아니요|최소|  
-|힙|아니요|아니오|아니요|최소|  
-|Cl|예|예|아니요|최소|  
+|힙|아니오|예|아니오|최소|  
+|힙|아니오|아니오|아니오|최소|  
+|Cl|예|예|아니오|최소|  
 |Cl|예|아니오|예|전체|  
-|Cl|아니요|예|아니요|최소|  
-|Cl|아니요|아니요|예|전체|  
+|Cl|아니오|예|아니오|최소|  
+|Cl|아니오|아니오|예|전체|  
   
 위의 표에서 **dwloader** 힙 또는 클러스터형된 인덱스 (CI) 테이블을 다중 트랜잭션 플래그 유무에 로드 하 고 빈 테이블 또는 비어 있지 않은 테이블에 로드 추가 모드를 사용 하 여 합니다. 잠금과 부하의 이러한 조합은 각각의 동작을 로깅 테이블에 표시 됩니다. 예를 들어, (2) 단계와 추가 모드 로드 테이블이 테이블에 대 한 단독 잠금을 만들 PDW 포함할 다중 트랜잭션 모드 하지 않고 클러스터형된 인덱스를 하며이 빈 및 로깅을 최소화 됩니다. 즉, 고객은 빈 테이블에 (2) 단계 및 쿼리를 동시에 로드할 수 없습니다. 그러나 비어 있지 않은 테이블에 동일한 구성을 갖는 로드할 때 PDW 예정 되지 테이블에 대 한 단독 잠금 및 동시성은 가능 합니다. 반면 전체 로깅이 발생, 프로세스를 그대로 유지 합니다.  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e45b0f8bf4944b1f683245033123b15d76c1befa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scalar-function-calls"></a>스칼라 함수 호출
 스칼라 함수는 각 행에 대 한 값을 반환합니다. 예를 들어 절대 값의 스칼라 함수는 숫자 열을 인수로 사용 하 고 열에 각 값의 절대값을 반환 합니다. 스칼라 함수를 호출 하기 위한 이스케이프 시퀀스는  

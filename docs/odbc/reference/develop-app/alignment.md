@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 527e8d47d4d352a0fad579d3c12c5ef3768c402b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignment"></a>맞춤
 ODBC 응용 프로그램의 맞춤 문제는 일반적으로 서로 다른 응용 프로그램에 보다 합니다. 즉, 대부분의 ODBC 응용 프로그램 문제가 없거나 거의 맞춤. 주소 정렬 되어 있지 않기에 의해 엄격히 규제 되어 하드웨어 및 운영 체제와 다르며 성능이 약간 저하 같은 사소한 문제로 또는 런타임 오류로 같이 주요 될 수 있습니다. 따라서 ODBC 응용 프로그램 및 휴대용 ODBC 응용 프로그램, 특히 주의 해야 데이터를 제대로 정렬 합니다.  

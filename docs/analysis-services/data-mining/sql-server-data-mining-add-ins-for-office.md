@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 데이터 마이닝 추가 기능에 대 한 Office | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/18/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -19,14 +19,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: be2255a512f04cd23b8f9d6717d6ec63ab2b2f16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 420437152716f78a03c78e3d9a67216029751f5e
+ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office용 SQL Server 데이터 마이닝 추가 기능
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 용 데이터 마이닝 추가 기능은 간단한 Excel에서 데이터를 사용 하 여 예측, 권장 또는 탐색에 대 한 분석 모델을 작성할 수 있는 예측 분석에 대 한 도구 집합이 있습니다.  
+
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office용 데이터 마이닝 추가 기능은 Excel의 데이터를 사용하여 예측, 권장 또는 탐색을 위한 분석 모델을 작성할 수 있도록 지원하는 일련의 간단한 예측 분석 도구 집합입니다.  
+  
+> [!IMPORTANT]
+> 데이터 마이닝 추가 기능을 Office 용 이상 Office 2016에서 지원 되지 않습니다.
   
  추가 기능의 마법사 및 데이터 관리 도구는 다음과 같은 일반 데이터 마이닝 작업에 대한 단계별 지침을 제공합니다.  
   
@@ -79,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Business Intelligence  
   
--   Standard  
+-   표준  
   
  연결하는 SQL Server Analysis Services의 버전에 따라 일부 고급 알고리즘을 사용하지 못할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.  
   

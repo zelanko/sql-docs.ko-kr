@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a21a5e5b390e0798ed4dd25fba164a710298af00
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 함수(SQLFetchScroll Function)
 **규칙**  
@@ -85,7 +85,7 @@ SQLRETURN SQLFetchScroll(
   
  다중 행 작업의 하나 또는 더 전부가 아닌 행에 오류가 발생 하 고에서 오류가 발생할 경우 SQL_ERROR가 반환 되는 경우 모든 해당 SQLSTATEs SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (제외 01xxx SQLSTATEs) 반환할 수 있는, sql_success_with_info가 반환 됩니다는 단일 행 작업입니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|문자열 또는 열에 대해 반환 된 이진 데이터의 공백이 아닌 문자 또는 NULL이 아닌 이진 데이터 잘림이 발생 했습니다. 문자열 값 경우 오른쪽 잘림 없었습니다.|  
@@ -122,7 +122,7 @@ SQLRETURN SQLFetchScroll(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLFetchScroll** 결과 집합에서 지정 된 행 집합을 반환 합니다. 절대 또는 상대 위치 또는 책갈피 행 집합을 지정할 수 있습니다. **SQLFetchScroll** 결과 집합이 존재 하는 동안에 호출할 수 있습니다-즉, 결과 집합을 호출한 후에 만들어지는 하 고 결과 집합 위에 커서 앞 닫힙니다. 열에 바인딩된 경우 해당 열에 데이터를 반환 합니다. 응용 프로그램에서 행 상태 배열이 또는, 가져온 행 수를 반환 하는 버퍼에 대 한 포인터를 지정 하는 경우 **SQLFetchScroll** 뿐만 아니라이 정보를 반환 합니다. 에 대 한 호출이 **SQLFetchScroll** 호출을 혼합할 수 **SQLFetch** 와 함께 혼합할 수 없고 있지만 **SQLExtendedFetch**합니다.  
   
  자세한 내용은 참조 [블록 커서를 사용 하 여](../../../odbc/reference/develop-app/using-block-cursors.md) 및 [스크롤 가능 커서를 사용 하 여](../../../odbc/reference/develop-app/using-scrollable-cursors.md)합니다.  
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
   
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
-|*시작 하기 전에*|1.|  
+|*시작 하기 전에*|1|  
 |*CurrRowsetStart + RowsetSize*[1]  *\<LastResultRow =*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*종료 후*|  
 |*종료 후*|*종료 후*|  
@@ -258,7 +258,7 @@ SQLRETURN SQLFetchScroll(
   
  커서 결과 집합에 추가 하는 행을 검색 또는 결과 집합에서 삭제 된 행을 제거 하는 경우 데이터를 인출 하는 경우에 이러한 변경 내용을 감지 처럼 나타납니다. 경우를 포함 하면 **SQLFetchScroll** FetchOrientation SQL_FETCH_RELATIVE 및 FetchOffset을 동일한 행 집합을 다시 인출할 0으로 설정으로 설정 된 라고 하지만 SQLSetPos fOption SQL_로 설정 된 호출 될 때 대/소문자를 포함 하지 않습니다 새로 고칩니다. 후자의 경우에는 버퍼의에서 데이터는 행 집합을 새로 고칠 있지만 따라 다시 인출 하지 및 삭제 된 행은 결과 집합에서 제거 되지 않습니다. 따라서 행에서 삭제 되었거나 현재 행 집합에 삽입 된 경우 커서 행 집합 버퍼를 수정 하지 않습니다. 대신, 변경 하는 모든 행 집합 인출 하는 경우 이전에 삭제 된 행을 포함 하거나 이제에 삽입 된 행이 포함를 검색 합니다.  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 // Fetch the next rowset.  
@@ -289,9 +289,9 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |행 21-22 사이 행 삽입|PRIOR|0|11 ~ 20|  
 |행 20 및 21 사이 행 삽입|PRIOR|0|12 ~ 20, 삽입 된 행|  
 |21 행 삭제|RELATIVE|0|22 ~ 31<sup>[2]</sup>|  
-|21 행 삭제|RELATIVE|1.|22에서 31|  
+|21 행 삭제|RELATIVE|1|22에서 31|  
 |행 21-22 사이 행 삽입|RELATIVE|0|삽입 된 행 21, 22-29|  
-|행 21-22 사이 행 삽입|RELATIVE|1.|22에서 31|  
+|행 21-22 사이 행 삽입|RELATIVE|1|22에서 31|  
 |21 행 삭제|ABSOLUTE|21|22 ~ 31<sup>[2]</sup>|  
 |22 행 삭제|ABSOLUTE|21|21, 23 ~ 31|  
 |행 21-22 사이 행 삽입|ABSOLUTE|22|삽입된 한 행을 22-29|  

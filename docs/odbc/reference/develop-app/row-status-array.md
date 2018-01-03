@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4451ccb74ca19a02c352c2e7361d0ec8e84c87d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35f61dfb550c54c47e821476687320125b60b7e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="row-status-array"></a>행 상태 배열이
 데이터 뿐만 아니라 **SQLFetch** 및 **SQLFetchScroll** 행 집합의 각 행의 상태를 제공 하는 배열을 반환할 수 있습니다. 이 배열은 SQL_ATTR_ROW_STATUS_PTR 문 특성을 통해 지정 됩니다. 이 배열은 응용 프로그램에 의해 할당 되 고 SQL_ATTR_ROW_ARRAY_SIZE 문 특성에 의해 지정 된 만큼의 요소에 있어야 합니다. 값 배열에 의해 설정 된 **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, 및 **SQLSetPos 합니다.** 값의 상태는 행 및 해당 상태의 마지막으로 인출 된 후에 변경 되었는지 여부를 설명 합니다.  

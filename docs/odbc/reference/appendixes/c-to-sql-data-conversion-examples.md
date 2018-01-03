@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d900ac7b21b75a5cecbb92f41a95dc9cbb836423
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d3270b142cb857876a558122b670bb329e08c93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C to SQL 데이터 변환 예제
 다음 예에서는 드라이버 SQL 데이터 C 데이터를 변환 하는 방법을 보여 줍니다.  
   
-|C 형식 식별자|C 데이터 값|SQL 유형<br /><br /> 식별자(identifier)|열<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
+|C 형식 식별자|C 데이터 값|SQL 유형<br /><br /> 식별자(identifier)|Column<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|n/a|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  

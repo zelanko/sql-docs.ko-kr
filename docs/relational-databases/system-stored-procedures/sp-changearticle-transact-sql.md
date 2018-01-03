@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||동기화 출력 파일 생성에 사용하는 테이블 또는 뷰의 이름입니다. 기본값은 NULL입니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |**테이블 스페이스**||Oracle 데이터베이스에서 게시된 아티클에 대한 로깅 테이블에서 사용되는 테이블스페이스를 식별합니다. 자세한 내용은 [Oracle 테이블스페이스 관리](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)를 참조하세요.|  
 |**임계값**||배포 에이전트가 새 ID 범위를 할당하는 시점을 제어하는 비율 값입니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
-|**유형**||Oracle 게시자에 대해서는 지원되지 않습니다.|  
+|**type**||Oracle 게시자에 대해서는 지원되지 않습니다.|  
 ||**logbased**|로그 기반 아티클입니다.|  
 ||**logbased manualboth**|수동 필터 및 수동 뷰가 있는 로그 기반 아티클입니다. 이 옵션을 사용 하려면는 *sync_object* 및 *필터* 속성도 설정 해야 합니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 ||**logbased manualfilter**|수동 필터가 있는 로그 기반 아티클입니다. 이 옵션을 사용 하려면는 *sync_object* 및 *필터* 속성도 설정 해야 합니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  기존 게시에서 사용할 수 있습니다 **sp_changearticle** 아티클을 삭제 하 고 전체 게시를 다시 만들 필요 없이 변경할 수 있습니다.  
   
 > [!NOTE]  
->  값을 변경할 때 *schema_option*, 시스템 비트 단위 업데이트를 수행 하지 않습니다. 즉, 설정한 *schema_option* 를 사용 하 여 **sp_changearticle**기존 비트 설정이 해제 될 수 있습니다. 기존 설정을 유지 하려면 수행 해야 [& (비트 AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md) 설정 하는 값과의 현재 값 사이 *schema_option*, 를실행하여얻는[sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)합니다.  
+>  값을 변경할 때 *schema_option*, 시스템 비트 단위 업데이트를 수행 하지 않습니다. 즉, 설정한 *schema_option* 를 사용 하 여 **sp_changearticle**기존 비트 설정이 해제 될 수 있습니다. 기존 설정을 유지 하려면 수행 해야 [| (비트 OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 설정 하는 값과의 현재 값 사이 *schema_option*를 실행 하 여 얻는 [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)합니다.  
   
 ## <a name="valid-schema-options"></a>유효한 스키마 옵션  
  다음 표에서 설명의 사용 가능한 값 *schema_option* (위쪽에 표시)는 복제 유형 및 아티클 유형 (첫 번째 열에 표시)에 기반 합니다.  

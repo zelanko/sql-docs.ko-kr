@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ca3aa931dc19199913a5f1499c87e89348fa7b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4142d2806cb71f8cb188f1ab155213493d4dc975
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 설정 대화 상자
 **ODBC Visual FoxPro 설정** 대화 상자를 사용 하면 추가 하거나 Visual FoxPro 데이터 원본을 변경할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
  **데이터 원본 이름**  
  데이터 원본에 대해 하는 데 사용할 이름을 입력 합니다.  
   
- **Description**  
+ **설명**  
  데이터 원본에 대 한 설명을 입력 합니다.  
   
  **데이터베이스 유형**  

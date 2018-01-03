@@ -4,7 +4,7 @@ description: "이 항목 릴리스 정보를 포함 하 고 SQL Server 2017 Linu
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/12/2017
 | Docker 엔진 1.8 + Windows, Mac 또는 Linux에 | 해당 사항 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> 검토는 [시스템 요구 사항](sql-server-linux-setup.md#system) Linux에서 SQL Server에 대 한 합니다.
+> 자세한 내용은 검토는 [시스템 요구 사항](sql-server-linux-setup.md#system) Linux에서 SQL Server에 대 한 합니다. SQL Server 2017에 대 한 최신 지원 정책에 대 한 참조는 [Microsoft SQL Server에 대 한 기술 지원 정책을](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)합니다.
 
 ## <a name="supported-client-tools"></a>지원 되는 클라이언트 도구
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/12/2017
 
 다음 표에서 SQL Server 2017에 대 한 출시 내역을 나열합니다.
 
-| 릴리스 | 버전 | 릴리스 날짜 |
+| 릴리스 | 버전 옵션 | 릴리스 날짜 |
 |-----|-----|-----|
 | [C U 2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
@@ -127,9 +127,9 @@ SQL Server 2017의 GA (일반 공급) 릴리스입니다. 이 릴리스에 대 �
 | &nbsp; | 시스템 확장 저장된 프로시저 (XP_CMDSHELL 등). |
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR 어셈블리 EXTERNAL_ACCESS 또는 UNSAFE 권한 설정 |
-| &nbsp; | 버퍼 풀 확장 |
+| &nbsp; | Buffer Pool Extension |
 | **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, 큐 판독기, SSIS, SSAS, SSRS |
-| &nbsp; | 경고 |
+| &nbsp; | , |
 | &nbsp; | 로그 판독기 에이전트 |
 | &nbsp; | 변경 데이터 캡처 |
 | &nbsp; | Managed Backup |
@@ -142,8 +142,8 @@ SQL Server 2017의 GA (일반 공급) 릴리스입니다. 이 릴리스에 대 �
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting  Services |
-| &nbsp; | Data Quality Services |
+| &nbsp; | Reporting Services |
+| &nbsp; | 데이터베이스 엔진 서비스 |
 | &nbsp; | Master  Data  Services |
 
 ### <a name="known-issues"></a>알려진 문제
@@ -289,7 +289,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 
 ### <a name="next-steps"></a>다음 단계
 
-시작 하려면 다음 빠른 시작 자습서를 참조 하세요.
+시작 하려면 다음 퀵 스타트를 참조 하세요.
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)

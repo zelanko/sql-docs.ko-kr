@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad246dc337b57eb97b588c1ed08bb380cc4d6185
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8a70e7d7de19f4f69a79db56742938ca0d61344
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr 함수
 **규칙**  
@@ -67,7 +67,7 @@ SQLRETURN SQLSetEnvAttr(
 ## <a name="diagnostics"></a>진단  
  때 **SQLSetEnvAttr** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* SQL_의 HANDLE_ENV 및 *처리* 의 *EnvironmentHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLSetEnvAttr** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다. 드라이버 환경 특성을 지원 하지 않으면 연결 시간 중에 오류를 반환할 수 있습니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01 S 02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다 *ValuePtr* 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -82,7 +82,7 @@ SQLRETURN SQLSetEnvAttr(
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYC00|선택적 기능이 구현 되지 않았습니다|인수에 대해 지정 된 값 *특성* ODBC의 버전은 드라이버에서 지원 되지만 드라이버에서 지원 하지 않아 유효한 ODBC 환경 특성을 했습니다.<br /><br /> DM ()는 *특성* SQL_ATTR_OUTPUT_NTS, 되었습니다 및 *ValuePtr* SQL_FALSE 되었습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램에서 호출할 수 **SQLSetEnvAttr** 환경에 없는 연결 핸들을 할당 한 경우에 합니다. 모든 환경 특성 환경에 대 한 응용 프로그램에 의해 성공적으로 설정 될 때까지 지속 **SQLFreeHandle** 환경에서 호출 됩니다. ODBC 3에서 개 이상의 환경 핸들을 동시에 할당 될 수*.x*합니다.  
   
  정보의 형식을 통해 설정 *ValuePtr* 했는지에 따라 지정 된 *특성*합니다. **SQLSetEnvAttr** 두 가지 형식 중 하나에 대 한 특성 정보를 수락할: null로 끝나는 문자열 또는 32 비트 정수 값입니다. 각각의 형식 특성의 설명에 표시 됩니다.  

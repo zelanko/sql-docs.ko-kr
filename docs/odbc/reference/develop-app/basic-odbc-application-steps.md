@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3d35ee438d57be1fac0959645d7c04743c4b873
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf9073f8dc4ec4a3216ee676a0f942c8e2ff982f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-odbc-application-steps"></a>기본 ODBC 응용 프로그램 단계
 이 섹션에서는 ODBC 응용 프로그램의 일반적인 흐름을 설명 합니다. 그럴 가능성은 모든 응용 프로그램이 순서 대로 이러한 함수의 모든 호출을 합니다. 그러나 대부분의 응용 프로그램 단계 약간 다를 사용합니다. 기본 응용 프로그램 단계는 다음 그림에 표시 됩니다.  

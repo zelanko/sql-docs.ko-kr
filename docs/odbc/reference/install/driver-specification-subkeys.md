@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a2bbfe9608fabef11b4208597f550e32e2a816d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 078afea5ea6dfa6e0c3312d8e61cabb37369a2f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specification-subkeys"></a>드라이버 사양 하위 키
 ODBC 드라이버 하위 키에 나열 된 각 드라이버에는 자체의 하위 키를 있습니다. 이 하위 키는 ODBC 드라이버 하위 키 아래에서 해당 값으로 동일한 이름을 있습니다. 드라이버 및 드라이버 설치 Dll 반환한 드라이버 키워드 값의 전체 경로 나열 하는 값이 하위이 키 아래 **SQLDrivers**, 사용 횟수입니다. 다음 표에 표시 된은 값의 형식입니다.  
   
-|이름|데이터 형식|data|  
+|속성|데이터 형식|data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |ConnectFunctions|REG_SZ|{**Y**&#124; **N**} {**Y**&#124; **N**} {**Y**&#124; **N**}|  

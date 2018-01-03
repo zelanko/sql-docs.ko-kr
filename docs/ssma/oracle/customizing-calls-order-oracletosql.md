@@ -1,7 +1,7 @@
 ---
 title: "호출 순서 (OracleToSQL) 사용자 지정 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8abd778349449dba6fe3004d8f42905261d5552e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3b22b6355f3b711a9350298e1dbc169e442b6921
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-calls-order-oracletosql"></a>호출 순서 (OracleToSQL) 사용자 지정
 이 단계에서 개체를 테스트를 호출할 수 있는 순서를 선택 합니다.  

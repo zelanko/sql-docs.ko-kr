@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a440ee58a5c59237ee31186beb19d1847e814637
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b3ae7606967ce0f77fea638a69a8b44f0e175a48
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo와 데이터 형식 정보를 검색 하는 중
 ODBC 함수를 제공 이기 때문에 기본 SQL 데이터 형식 ODBC 형식 식별자 매핑을 대략적인 (**SQLGetTypeInfo**) 하는 드라이버 수 완전히를 통해 데이터 원본에서 각 SQL 데이터 형식에 설명 합니다. 이 함수는 결과 집합을 단일 데이터 형식, 이름, 유형 식별자, 전체 자릿수, 소수 자릿수 및 null 허용 여부 등의 특성을 설명 하는 각 행을 반환 합니다.  

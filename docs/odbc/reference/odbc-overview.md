@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 607e516c8654631ab032dfc6159a8990d464a023
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c69180bcf3babcfaaef5d513d6c47954478ef39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-overview"></a>ODBC 개요
 ODBC open Database Connectivity ()은 데이터베이스 액세스를 위해 널리 사용 되는 응용 프로그램 프로그래밍 인터페이스 (API). 데이터베이스 Api에 대 한 Open Group 및 ISO/IEC 호출 수준 인터페이스 (CLI) 사양을 기반으로 하 고 SQL 구조적 쿼리 언어 ()를 사용 하 여 해당 데이터베이스 액세스 언어입니다.  

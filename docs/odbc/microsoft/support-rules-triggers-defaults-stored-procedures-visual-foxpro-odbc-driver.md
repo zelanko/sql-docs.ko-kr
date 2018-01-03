@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -35,11 +35,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1592db374d02534121ed75cfe8e07429f1aacac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>규칙, 트리거, 기본값 및 저장된 프로시저 (Visual FoxPro ODBC 드라이버)에 대 한 지원
 Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이버를 사용 하 여 저장된 프로시저를 만들 수 없습니다. 그러나 응용 프로그램와 상호 작용할 수도 기존 규칙, 트리거, 기본값 또는 저장된 프로시저를 삽입, 업데이트 또는 삭제는 데이터베이스에 저장 된 Visual FoxPro 데이터 것 처럼 합니다.  
@@ -101,7 +101,7 @@ Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이�
 |CTOT () 함수|CURSORGETPROP () 함수||  
 |CURVAL () 함수|CDOW () 함수||  
   
-## <a name="d"></a>D  
+## <a name="d"></a>d  
   
 ||||  
 |-|-|-|  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43c1aa1d08fa6995d2511a8eb9b86b199a4d78b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 함수
 **규칙**  
@@ -76,7 +76,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>진단  
  때 **SQLFreeHandle** 핸들에 대 한 진단 데이터 구조에서 가져올 수는 관련 된 SQLSTATE 값 SQL_ERROR를 반환 하는 **SQLFreeHandle** 확보 하려고 하지만 찾지 못했습니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLFreeHandle** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
@@ -87,7 +87,7 @@ SQLRETURN SQLFreeHandle(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|DM ()는 *HandleType* 인수 SQL_HANDLE_DESC, 이며 드라이버는 ODBC 2*.x* 드라이버입니다.<br /><br /> DM ()는 *HandleType* 인수 여, 되었으며 유효한 ODBC 드라이버가 없습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLFreeHandle** 다음 섹션에 설명 된 대로 환경, 연결, 문 및 설명자에 대 한 핸들을 해제 하는 데 사용 됩니다. 핸들에 대 한 일반 정보를 참조 하십시오. [핸들](../../../odbc/reference/develop-app/handles.md)합니다.  
   
  응용 프로그램 해제; 된 후 핸들을 사용 하지 않아야 드라이버 관리자는 함수 호출에 대 한 핸들의 유효성을 검사 하지 않습니다.  

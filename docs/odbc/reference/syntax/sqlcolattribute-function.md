@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fead7415e3cb4a951a5ab2ba90b4969682905a0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 함수(SQLColAttribute Function)
 **규칙**  
@@ -96,7 +96,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="diagnostics"></a>진단  
  때 **SQLColAttribute** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType*여의 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLColAttribute** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *CharacterAttributePtr* 충분히 문자열 값이 잘렸습니다 하므로 전체 문자열 값을 반환할 수 없습니다. 잘리지 않은 문자열 값의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -120,7 +120,7 @@ SQLRETURN SQLColAttribute (
   
  성능상의 이유로 응용 프로그램 호출 하지 않아야 **SQLColAttribute** 문을 실행 하기 전에.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램에서 반환 된 정보를 사용 하는 방법에 대 한 내용은 **SQLColAttribute**, 참조 [결과 집합 메타 데이터](../../../odbc/reference/develop-app/result-set-metadata.md)합니다.  
   
  **SQLColAttribute** 하거나 정보를 반환에 \* *NumericAttributePtr* 또는 \* *CharacterAttributePtr*합니다. 정수 정보에 반환 됩니다 \* *NumericAttributePtr* SQLLEN 값으로 정보의 다른 모든 형식에 반환될지 \* *CharacterAttributePtr*합니다. 정보에 반환 될 때 \* *NumericAttributePtr*, 무시 *CharacterAttributePtr*, *BufferLength*, 및  *StringLengthPtr*합니다. 정보에 반환 될 때 \* *CharacterAttributePtr*, 무시 *NumericAttributePtr*합니다.  
@@ -131,7 +131,7 @@ SQLRETURN SQLColAttribute (
   
  ODBC 3입니다. *x* 드라이버의 각 설명자 필드에 대 한 값을 반환 해야 합니다. 설명자 필드는 드라이버 또는 데이터 원본에 적용 되지 않으며 따로 명시 하지 않는 드라이버에서 0을 반환 하는 경우 \* *StringLengthPtr* 에 빈 문자열 또는 **CharacterAttributePtr*합니다.  
   
-## <a name="backward-compatibility"></a>이전 버전과의 호환성  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  ODBC 3입니다. *x* 함수 **SQLColAttribute** 대체 사용 되지 않는 ODBC 2. *x* 함수 **SQLColAttributes**합니다. 매핑할 때 **SQLColAttributes** 를 **SQLColAttribute** (때 ODBC 2. *x* 응용 프로그램이 작동 ODBC 3. *x* 드라이버), 또는 매핑을 **SQLColAttribute** 를 **SQLColAttributes** (때 ODBC 3. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버), 드라이버 관리자의 값을 통과 *FieldIdentifier* 다음과 같은 오류를 반환 하거나, 새 값에 매핑됩니다.  
   
 > [!NOTE]  

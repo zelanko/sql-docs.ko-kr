@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d3f3edee7f90920ad1d3ff68ccf3057a248b3b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>C에서 SQL 데이터 형식으로 데이터를 변환
 응용 프로그램 호출 하는 경우 **SQLExecute** 또는 **SQLExecDirect**를 검색 하 여 데이터를 바인딩된 매개 변수 **SQLBindParameter** 의 저장소 위치에서 응용 프로그램입니다. 응용 프로그램 호출 하는 경우 **SQLSetPos**, 드라이버 업데이트에 대 한 데이터를 검색 하거나 연결 된 열에서 작업을 추가할 **SQLBindCol**합니다. 응용 프로그램 실행 시 데이터 매개 변수를 사용 하 여 매개 변수 데이터를 보냅니다 **SQLPutData**합니다. 하는 경우 필요에 따라 드라이버는 데이터 변환에서 지정한 데이터 형식에서는 *ValueType* 인수 **SQLBindParameter** 에서 지정한 데이터 형식으로는 *ParameterType*인수 **SQLBindParameter**, 데이터 원본에는 데이터를 보냅니다.  

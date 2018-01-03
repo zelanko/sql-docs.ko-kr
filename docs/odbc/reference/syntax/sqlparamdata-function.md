@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10bd29a112823ea3c4aa400b0fd63d1627d55ac5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4449d7b0af1c8138680d11b71b0a696d5f2d65fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 함수
 **규칙**  
@@ -57,7 +57,7 @@ SQLRETURN SQLParamData(
 ## <a name="diagnostics"></a>진단  
  때 **SQLParamData** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* SQL_의 HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLParamData** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성 위반|데이터 값으로 식별 된 *ValueType* 인수에 **SQLBindParameter** 바인딩된 매개 변수에서 식별 되는 데이터 형식 변환 하지 못했습니다에 대 한는 *ParameterType*인수 **SQLBindParameter**합니다.<br /><br /> SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT 하지 변환 못했습니다으로 식별 되는 데이터 형식으로 바인딩된 매개 변수에 대해 반환 되는 데이터 값의 *ValueType* 인수 **SQLBindParameter**합니다.<br /><br /> (하나 이상의 행에 대 한 데이터 값을 변환할 수 없습니다, 하지만 성공적으로 반환 된 하나 이상의 행을이 함수 SQL_SUCCESS_WITH_INFO를 반환 합니다.)|  
@@ -78,7 +78,7 @@ SQLRETURN SQLParamData(
   
  경우 **SQLParamData** 호출 되는 SQL 문의 매개 변수에 대 한 데이터를 전송 하는 동안 문을 실행 하는 호출 되는 함수에서 반환 될 수 있는 모든 SQLSTATE 반환할 수 있습니다 (**SQLExecute** 또는 **SQLExecDirect**). 열에 대 한 데이터를 전송 하는 동안 호출 되 면 업데이트 되거나 추가 된 **SQLBulkOperations** 로 업데이트 또는 **SQLSetPos**, 반환할 수 있지만에서 반환 될 수 있는 모든 SQLSTATE  **SQLBulkOperations** 또는 **SQLSetPos**합니다.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLParamData** 두 가지 용도 대 한 데이터 실행 시 데이터를 제공 하기 위해 호출할 수:에 대 한 호출에서 사용할 수 있는 매개 변수 데이터 **SQLExecute** 또는 **SQLExecDirect**, 또는 사용 되는 열 데이터 행이 업데이트 되거나 추가를 호출 하 여이 **SQLBulkOperations** 에 대 한 호출에 의해 업데이트 **SQLSetPos**합니다. 실행 시 **SQLParamData** 표시기는 데이터의 드라이버 필요한 응용 프로그램에 반환 합니다.  
   
  응용 프로그램 호출 하는 경우 **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos**, 드라이버 SQL_NEED_를 반환 합니다. 실행 시 데이터 데이터가 필요한 경우 데이터입니다. 응용 프로그램이 호출 **SQLParamData** 보낼 데이터를 확인 하려면. 드라이버 매개 변수 데이터가 필요한 경우 드라이버에서 반환 된  *\*ValuePtrPtr* 출력 버퍼는 행 집합 버퍼에 응용 프로그램이 포함 하는 값입니다. 응용 프로그램은 드라이버가 요청 하는 매개 변수 데이터를 확인 하려면이 값을 사용할 수 있습니다. 드라이버에 열 데이터가 필요한 경우 드라이버에서 반환 된  *\*ValuePtrPtr* 버퍼 열에, 다음과 같이 바인딩된 원래 주소:  

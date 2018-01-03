@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b0d3f96885ba2f317759280e859fdcdc4977a5e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4885db2868e5baf301264d2b29a18831d02dcf26
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-support"></a>데이터 형식 지원
 ODBC 드라이버는 SQL_CHAR 및 SQL_VARCHAR 중 하나 이상을 지원 해야 합니다. 다른 데이터 형식에 대 한 지원 드라이버의 또는 데이터 원본 sql-92 규칙 수준에 따라 결정 됩니다. 응용 프로그램 호출 해야 **SQLGetTypeInfo** 드라이버에서 지 원하는 데이터 형식을 확인 하려면.  

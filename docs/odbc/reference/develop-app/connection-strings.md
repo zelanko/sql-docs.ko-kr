@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99c0ebcad365396bd2ebab2d03df4cb6a6627003
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3abf812d73f780533a77a42498bfde4c299996d5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-strings"></a>연결 문자열
 연결 문자열을 연결 구성에 사용 되는 정보를 포함 합니다. 전체 연결 문자열을 연결을 설정 하는 데 필요한 모든 정보를 포함 합니다. 연결 문자열은 일련의 세미콜론으로 구분 하는 키워드/값 쌍입니다. (연결 문자열의 전체 구문을 참조 하십시오.는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 함수 설명 합니다.) 연결 문자열에서 사용 됩니다.  

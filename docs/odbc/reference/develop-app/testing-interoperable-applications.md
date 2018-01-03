@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1722688afbda2ecbc8a71d05cc8f9bb4bc330345
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1acbc994449e61b879ca2223f3ed4eb394943b44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-interoperable-applications"></a>상호 운용 가능한 응용 프로그램 테스트
 상호 운용 가능한 응용 프로그램 테스트 계산은 아무리 잘는 시간이 많이 걸리는 비즈니스 및 새 드라이버 시장에 지속적으로 표시 되기 때문에 최악의 불가능 합니다. 그러나 테스트는 적절 한 수준의 수는 없습니다. 해당 드라이버를 지원 하도록 보장 됩니다에 대 한 제한 된 또는 낮은 상호 운용성와 응용 프로그램을 테스트만 필요 합니다. 그러나 이러한 완벽 하 게 테스트 해야 이러한 드라이버에 대 한 합니다.  

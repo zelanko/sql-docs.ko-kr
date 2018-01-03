@@ -1,7 +1,7 @@
 ---
 title: "프로젝트 설정 (개체 로드) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27c4ebc7a1a796f951bf06c06dc1fdb42a958ba7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: da86fe46153ede299a41a2b4e308f1b5b51f6947
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>프로젝트 설정 (개체 로드) (AccessToSQL)
 개체를 로드 프로젝트 설정에는 SQL Server 데이터베이스 개체와 Access 데이터베이스 개체가 동기화 되는 방식을 구성할 수 있습니다.  
@@ -37,7 +37,7 @@ Access 데이터베이스에서 개체를 새로 고치에 대 한 SQL Server �
   
 -   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴에서 클릭 **프로젝트 설정**, 클릭 하 고 **개체 로드** 왼쪽 창의 맨 아래에 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ##### <a name="misc"></a>기타  
   

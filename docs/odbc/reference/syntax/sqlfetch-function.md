@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4da263d0f7511aef2e01b66667761a9e364e9720
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 함수
 **규칙**  
@@ -55,7 +55,7 @@ SQLRETURN SQLFetch(
   
  다중 행 작업의 하나 또는 더 전부가 아닌 행에 오류가 발생 하 고에서 오류가 발생할 경우 SQL_ERROR가 반환 되는 경우 모든 해당 SQLSTATEs SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (제외 01xxx SQLSTATEs) 반환할 수 있는, sql_success_with_info가 반환 됩니다는 단일 행 작업입니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|문자열 또는 열에 대해 반환 된 이진 데이터의 공백이 아닌 문자 또는 NULL이 아닌 이진 데이터 잘림이 발생 했습니다. 문자열 값 경우 오른쪽 잘림 없었습니다.|  
@@ -89,7 +89,7 @@ SQLRETURN SQLFetch(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLFetch** 결과 집합의 다음 행 집합을 반환 합니다. 결과 집합이 존재 하는 동안에 호출할 수 있습니다: 즉, 결과 집합을 호출한 후에 만들어지는 하 고 결과 집합 위에 커서 앞 닫힙니다. 열에 바인딩된 경우 해당 열에 데이터를 반환 합니다. 응용 프로그램에서 행 상태 배열이 또는, 가져온 행 수를 반환 하는 버퍼에 대 한 포인터를 지정 하는 경우 **SQLFetch** 도이 정보를 반환 합니다. 에 대 한 호출이 **SQLFetch** 호출을 혼합할 수 **SQLFetchScroll** 와 함께 혼합할 수 없고 있지만 **SQLExtendedFetch**합니다. 자세한 내용은 참조 [행의 데이터를 인출](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)합니다.  
   
  ODBC 3 경우*.x* 는 ODBC 2와 작동 하는 응용 프로그램*.x* 드라이버, 드라이버 관리자 매핑합니다 **SQLFetch** 에 대 한 호출이 **SQLExtendedFetch** 에 대 한는 ODBC 2*.x* 를 지 원하는 드라이버 **SQLExtendedFetch**합니다. 경우 ODBC 2*.x* 드라이버가 지원 하지 않으면 **SQLExtendedFetch**, 드라이버 관리자 매핑합니다 **SQLFetch** 에 대 한 호출이 **SQLFetch** ODBC 2 *.x* 단일 행만 가져올 수 있는 드라이버입니다.  
@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
   
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
-|시작 하기 전에|1.|  
+|시작 하기 전에|1|  
 |*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|종료 후|  
 |종료 후|종료 후|  

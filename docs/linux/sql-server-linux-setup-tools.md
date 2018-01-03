@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 410d3c7c51e1b5fc0824da8c5d3f788ccb77f104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux에서 sqlcmd 및 bcp SQL Server 명령줄 도구를 설치
 
@@ -206,7 +206,7 @@ SQL Server 2017 CTP 2.0 부터는 SQL Server 명령줄 도구는 Docker 이미�
 
 다음 표에서 최신 도구 패키지에 대 한 위치를 제공합니다.
 
-| 도구 패키지 | 버전 | 다운로드 |
+| 도구 패키지 | 버전 옵션 | 다운로드 |
 |-----|-----|-----|
 | Red Hat RPM 도구 패키지 | 14.0.5.0-1 | [mssql 도구 RPM 패키지](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | SLES RPM 도구 패키지 | 14.0.5.0-1 | [mssql 도구 RPM 패키지](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -215,7 +215,7 @@ SQL Server 2017 CTP 2.0 부터는 SQL Server 명령줄 도구는 Docker 이미�
 
 이러한 패키지에 종속 될 **배치한**, 먼저 설치 해야 합니다. **배치한** 패키지 때에 중 하나에 종속 되어 **unixODBC 개발자** (RPM) 또는 **unixodbc dev** (Debian). 위치는 **배치한** 패키지는 다음 표에 나열 됩니다.
 
-| 배치한 패키지 | 버전 | 다운로드 |
+| 배치한 패키지 | 버전 옵션 | 다운로드 |
 |-----|-----|-----|
 | Red Hat RPM 배치한 패키지 | 13.1.6.0-1 | [배치한 RPM 패키지](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM 배치한 패키지 | 13.1.6.0-1 | [배치한 RPM 패키지](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -261,7 +261,7 @@ SQL Server 2017 CTP 2.0 부터는 SQL Server 명령줄 도구는 Docker 이미�
 
 ## <a name="next-steps"></a>다음 단계
 
-사용 하는 방법의 예제를 보려면 **sqlcmd** 하 SQL Server에 연결 된 데이터베이스를 만들려면 다음 빠른 중 하나를 참조 시작 자습서:
+사용 하는 방법의 예제를 보려면 **sqlcmd** 하 SQL Server에 연결 된 데이터베이스를 만들려면 다음 퀵 스타트 중 하나를 참조 합니다.
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)

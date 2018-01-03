@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e6e18576f4898b6902d15ab20cc5ebfcb336835
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 943c1240a9a9ad80c5787597f01917c517966005
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-odbc"></a>ODBC 트랜잭션
 A *트랜잭션* 는 작업의 단위를 단일 원자성 작업으로 이루어집니다; 작업이 성공 하거나 전체 실패 즉, 합니다. 예를 들어 은행 계좌에서 간에 자금을 이체 하는 것이 좋습니다. 이 두 단계: 첫 번째 계정에서 금액을 취소 하 고 두 번째에서 입출금 계좌 합니다. 성공 하는 단계를 모두; 반드시 성공 하려면 1 단계 및 실패에 대 한 허용 되지 않습니다. 트랜잭션을 지 원하는 데이터베이스는이 보장할 수 있습니다.  

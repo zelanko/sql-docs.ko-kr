@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20f9d91887f020cd6753ed8be684e5caa32ba99c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0b12009618489863c856d9b29433ff5146210ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fixed-length-bookmarks"></a>고정 길이의 책갈피
 ODBC 3 경우*.x* 드라이버는 ODBC 2 함께 사용할 수 있어야 합니다. *x* 응용 프로그램 사용 하 여 고정 길이의 책갈피, 드라이버에서 다음을 지원 해야 합니다.  

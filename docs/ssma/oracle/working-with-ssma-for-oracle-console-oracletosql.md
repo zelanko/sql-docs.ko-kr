@@ -1,7 +1,7 @@
 ---
 title: "SSMA Oracle 콘솔 (OracleToSQL)에 대 한 작업 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6135cf88be820227efbc2d6d0dfa7ccd919c8a84
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 57e366ff233e744f4689cd5f3ce5ba8275692aa4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>SSMA Oracle 콘솔 (OracleToSQL)에 대 한 작업
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Oracle에 대 한 마이그레이션 길잡이 (SSMA) 릴리스는 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 이제입니다. 스크립트 파일의 명령을 실행 하기 위한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램 SSMA 스크립트 수준 상호 작용, 마이그레이션 주기를 줄일 수 있으며 특정 마이그레이션 작업의 크기를 조정 합니다.  
@@ -32,7 +32,7 @@ SSMA 콘솔 응용 프로그램을 사용 하 여 Oracle 데이터베이스 마�
   
 |||  
 |-|-|  
-|**항목**|**Description**|  
+|**항목**|**설명**|  
 |[SSMA Oracle 콘솔 &#40; OracleToSQL &#41;에 대 한 시작](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 설명 합니다.|  
 |[Command Line Options SSMA 콘솔 &#40; OracleToSQL &#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|SSMA 콘솔 응용 프로그램을 작동 하도록 명령줄 옵션 및 매개 변수를 설명 합니다.|  
 |[만들기 스크립트 파일 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|스크립트 파일을 만드는 방법에 설명 합니다.|  

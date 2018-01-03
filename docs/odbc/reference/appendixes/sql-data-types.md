@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-types"></a>SQL 데이터 형식
 각 DBMS 자체 SQL 형식을 정의합니다. 각 ODBC 드라이버 관련된 DBMS 정의 하는 SQL 데이터 유형만 표시 합니다. ODBC 정의 SQL 형식 식별자에 드라이버를 매핑하는 방법에 대 한 정보 DBMS SQL가 입력 하 고 호출을 통해 반환 되는 드라이버 매핑되는 방법을 DBMS SQL 형식 자체 드라이버별 SQL 유형 식별자 **SQLGetTypeInfo**합니다. 열 및 매개 변수를 호출 하 여 데이터 형식을 설명 하는 경우 또한 드라이버 SQL 데이터 형식을 반환 **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_NUMERIC|숫자 (*p*,*s*)|서명 됨, 정확한 숫자 값 전체 자릿수가 *p* 와 소수 자릿수 *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_SMALLINT|SMALLINT|정확한 숫자 값을 정밀도 5 및 배율 0 (서명: –32,768 < =  *n*  < = 32, 767 서명 되지 않은: 0 < =  *n*  < 65, 535 =) [3].|  
 _INTEGER|INTEGER|정확한 숫자 값을 정밀도 10 및 배율 0 (서명: 있음 < =  *n*  < [31]-2 = 1, 서명 되지 않은: 0 < =  *n*  < = 2 [32]-1) [3].|  
-|SQL_REAL|REAL|서명 됨, 이진 정밀도 이며 24와 숫자 값 (0 또는 10[38]) 절대값 10 [–38].|  
+|SQL_REAL|real|서명 됨, 이진 정밀도 이며 24와 숫자 값 (0 또는 10[38]) 절대값 10 [–38].|  
 |SQL_FLOAT|FLOAT (*p*)|서명 됨, 이진 정밀도를 가진 숫자 값 이상 *p*합니다. (최대 전체 자릿수는 드라이버 정의 합니다.) [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|서명 됨, 이진 전체 자릿수가 53 인 숫자 값 (0 또는 10[308]) 절대값 10 [–308].|  
 |SQL_BIT|BIT|단일 비트 이진 데이터입니다. [8]|  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5ae190d85af4927f1a58808c025d3cebf78b53
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d1769b4951662f99cd50709b498891540fd4b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 함수
 **규칙**  
@@ -61,14 +61,14 @@ BOOL SQLInstallDriverManager(
 ## <a name="diagnostics"></a>진단  
  때 **SQLInstallDriverManager** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*lpszPath* 인수 출력 경로 포함할 수 없습니다. 버퍼의 잘린된 경로 포함합니다.<br /><br /> *cbPathMax* 인수 된 _MAX_PATH 보다 작습니다.|  
 |ODBC_ERROR_USAGE_UPDATE_FAILED|증가 하거나 구성 요소 사용 횟수를 감소 시킬 수 없습니다.|설치 관리자에서 ODBC 핵심 구성 요소 사용 횟수를 증가 하지 않습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLInstallDriverManager** ODBC 핵심 구성 요소와 구성 요소 사용 증가 시스템 정보에 계산에 대 한 경로 반환 하기 위해 호출 됩니다. 버전의 드라이버 관리자가 이미 존재 하는 경우 드라이버에 대 한 구성 요소의 사용 횟수가 존재 하지 않는 새 구성 요소 사용 개수 값을 2로 설정 됩니다.  
   
  응용 프로그램 설치 프로그램은 물리적으로 핵심 구성 요소 파일을 복사 하 고 계산 파일 사용을 유지 관리. 핵심 구성 요소 파일을 이전에 설치 되지 않은 경우 응용 프로그램 설치 프로그램 파일 복사를 업데이트 하 고 파일 사용 횟수를 생성 해야. 파일이 이전에 설치 된 경우 설치 프로그램 파일 사용 횟수를 단순히 증가 합니다.  

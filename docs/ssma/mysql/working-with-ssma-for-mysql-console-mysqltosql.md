@@ -1,7 +1,7 @@
 ---
 title: "SSMA MySQL 콘솔 (MySQLToSQL)에 대 한 작업 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1722db6c7325c10099cd293e6b8c102c38874692
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3bd319d0cff1a3f7d7681591a59b640a2afd9d24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>SSMA MySQL 콘솔 (MySQLToSQL)에 대 한 작업
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) MySQL에 대 한 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있는 되었습니다. 스크립트 파일의 명령을 실행 하기 위한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램 SSMA 스크립트 수준 상호 작용, 마이그레이션 주기를 줄일 수 있으며 특정 마이그레이션 작업의 크기를 조정 합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|**항목**|**Description**|  
+|**항목**|**설명**|  
 |[SSMA 콘솔 MySQL &#40;에 대 한 시작 MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 설명 합니다.|  
 |[SSMA 콘솔 &#40;에서 명령줄 옵션 MySQLToSQL &#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|SSMA 콘솔 응용 프로그램을 작동 하도록 명령줄 옵션 및 매개 변수를 설명 합니다.|  
 |[스크립트 파일 &#40; 만들기 MySQLToSQL &#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|스크립트 파일을 만드는 방법에 설명 합니다.|  

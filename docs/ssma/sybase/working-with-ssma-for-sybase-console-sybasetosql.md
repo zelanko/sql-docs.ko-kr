@@ -3,7 +3,7 @@ title: "SSMA Sybase 콘솔 (SybaseToSQL)에 대 한 작업 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f2e07c869e1562a2fc563646eac8b69890557dd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a872584b3b854de713ef6a741a8fa19f956ece8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>SSMA Sybase 콘솔 (SybaseToSQL)에 대 한 작업
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA)를 릴리스에 대 한 Sybase 적응형 Server Enterprise (ASE)를 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있는 되었습니다. 스크립트 파일의 명령을 실행 하기 위한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램 SSMA 스크립트 수준 상호 작용, 마이그레이션 주기를 줄일 수 있으며 특정 마이그레이션 작업의 크기를 조정 합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|**항목**|**Description**|  
+|**항목**|**설명**|  
 |[SSMA for Sybase 콘솔 &#40; 시작 SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 설명 합니다.|  
 |[SSMA 콘솔 &#40;에서 명령줄 옵션 SybaseToSQL &#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|SSMA 콘솔 응용 프로그램을 작동 하도록 명령줄 옵션 및 매개 변수를 설명 합니다.|  
 |[스크립트 파일 &#40; 만들기 SybaseToSQL &#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|스크립트 파일을 만드는 방법에 설명 합니다.|  

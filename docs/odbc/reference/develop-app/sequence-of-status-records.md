@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29c8fb3232abfc81eb41e9e3ec67ceb7e96de7ea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a101cf26b66f3556330354c0fa9ded4c6d9ad583
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sequence-of-status-records"></a>상태 레코드의 시퀀스
 둘 이상의 상태 레코드가 반환 되는 경우 드라이버 관리자와 드라이버 등급을 매기고 다음 규칙에 따라 합니다. 가장 높은 순위 인 레코드는 첫 번째 레코드입니다. 레코드 (드라이버 관리자, 드라이버, 게이트웨이 및 등)의 소스 간주 되지 않습니다 레코드의 순위를 지정 합니다.  

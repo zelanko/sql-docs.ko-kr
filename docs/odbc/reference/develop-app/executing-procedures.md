@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f952e8d2fbc1eb41d65cd4d30fa2f13c991d264
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5faf7f71d56ea6a1f6a8d4de436937dd96c03cec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-procedures"></a>프로시저 실행
 ODBC는 프로시저를 실행 하기 위한 표준 이스케이프 시퀀스를 정의 합니다. 이 시퀀스 및이 사용 하는 코드 예제에서는 구문에 대 한 참조 [프로시저 호출](../../../odbc/reference/develop-app/procedure-calls.md)합니다.  

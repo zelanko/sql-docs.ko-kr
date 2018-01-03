@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40d432cd25752c88b6c82209269c1d37a6bf5f63
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c81717abdde1a8427df5e20e9241820ab11b5879
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datetime-data-type-changes"></a>날짜/시간 데이터 형식 변경
 Odbc 3. *x*, 날짜에 대 한 식별자, SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP에서 time 및 timestamp SQL 데이터 형식 변경 (의 인스턴스와 **#define** 9, 10 및 11의 헤더 파일에서)를 통해 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP (의 인스턴스와 **#define** 91이 고, 92, 및 93 헤더 파일에), 각각. 해당 C 형식 식별자는 각각 SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, 및 SQL_C_TYPE_TIMESTAMP, SQL_C_DATE, SQL_C_TIME, 및 SQL_C_TIMESTAMP에서 변경 되었습니다.  

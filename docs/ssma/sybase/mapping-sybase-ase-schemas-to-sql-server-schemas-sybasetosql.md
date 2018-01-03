@@ -3,7 +3,7 @@ title: "Sybase ASE 스키마를 SQL Server 스키마 (SybaseToSQL)로 매핑 | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2afb2479c801fbc2484b387dfc2a81ea3fc0d782
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e0b8dad8d5742782ed3b3828806c5122092b37b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE 스키마를 SQL Server 스키마 (SybaseToSQL)로 매핑
 Sybase 적응형 Server Enterprise (ASE), 각 데이터베이스에 하나 이상의 스키마에 있습니다. 기본적으로 SSMA는 동일한 데이터베이스 및 스키마에 데이터베이스 및 스키마 내의 모든 개체를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 그러나 ASE 간의 매핑을 사용자 지정할 수는 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 및 스키마입니다.  
@@ -69,7 +69,7 @@ ASE 스키마 간의 매핑을 사용자 지정 하는 경우와 [!INCLUDE[ssNoV
   
 1.  스키마 매핑 탭에서 모든 행을 선택 하 고 클릭 **기본값으로 재설정** 기본 데이터베이스 및 스키마에 되돌릴 수 있습니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 Sybase ASE 개체를 변환 하는 과정을 분석 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체를 할 수 있습니다 [변환 보고서를 만들](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)합니다. 수 그렇지 않으면 [ASE 데이터베이스 개체 정의 변환](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체를 정의 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  

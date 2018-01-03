@@ -3,10 +3,10 @@ title: "잠금 동작 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
 caps.latest.revision: "27"
-ms.openlocfilehash: 6f4b213942db85b9e7171d11d6b88512d3ad7779
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1cb1b0ec346ff18d40a3ac03e7ba45b37666c98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locking-behavior"></a>잠금 동작
 SQL Server PDW에서 트랜잭션 무결성을 보장 하 고 여러 사용자가 동시에 데이터에 액세스 하는 데이터베이스의 일관성을 유지 하기 위해 잠금을 사용 합니다.  
@@ -33,7 +33,7 @@ SQL Server PDW는 4 개의 잠금 모드를 지원합니다.
 단독  
 배타적 잠금에 쓰거나 완료 배타적 잠금을 보유 하는 트랜잭션으로까지 잠긴된 개체에서 읽는 금지 합니다. 모드의 다른 잠금이 없는 한 배타적 잠금이 적용 되는 동안 허용 됩니다. 예를 들어 DROP TABLE 및 CREATE DATABASE 배타적 잠금을 사용합니다.  
   
-공유됨  
+Shared  
 공유 잠금 영향을 받는 개체의 단독 잠금의 시작 금지 하지만 다른 모든 잠금 모드를 허용 합니다. 예를 들어 SELECT 문의 공유 잠금을 시작 하 고 따라서 선택한 데이터를 동시에 액세스할 수 있는 여러 쿼리를 사용 하면 있지만 SELECT 문이 완료 될 때까지 읽혀질 레코드를 업데이트할 수 없습니다.  
   
 ExclusiveUpdate  

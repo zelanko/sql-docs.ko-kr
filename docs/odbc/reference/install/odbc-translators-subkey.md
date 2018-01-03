@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 547790398258ef250cca0331e468b8834218890e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e94cd3cd2313b98376e32c8775ec38c3c8ddb268
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 변환기가 하위 키
 설치 된 변환기가 ODBC 변환기 하위 키 아래 값을 나열합니다. 이러한 값의 서식은 다음 표에 표시 됩니다.  
   
-|이름|데이터 형식|data|  
+|속성|데이터 형식|data|  
 |----------|---------------|----------|  
 |*변환기 desc*|REG_SZ|**설치**|  
   

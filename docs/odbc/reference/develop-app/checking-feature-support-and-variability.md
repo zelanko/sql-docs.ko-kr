@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31b297b5d1932c6e3a9c8b7e128973d36fbd93cd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 290caddfe0a26067ed5807372a5a405a7cf389d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checking-feature-support-and-variability"></a>기능 지원 및 변경 사항 확인
 기능 지원 및 가변성을 확인 하려면 응용 프로그램 일반적으로 호출 **SQLGetInfo**, **SQLGetFunctions**, 및 **SQLGetTypeInfo**합니다. 좋은 시작 지점은 드라이버의 API 및 SQL 문법 규칙 수준입니다. 이러한 광범위 한 수준의 기능 지원 설명합니다. 응용 프로그램이 호출할 수 **SQLGetInfo** 지원 또는 필요한 기능의 가변성을 결정 하는 다른 옵션과 **SQLGetFunctions** 확인 하려면 여부는 반환 된 다음 필요한 함수 규칙 수준, 사용할 수 및 **SQLGetTypeInfo** 를 어떤 SQL 데이터 형식이 지원 되는지 확인 합니다.  

@@ -1,7 +1,7 @@
 ---
 title: "데이터베이스 마법사 (선택 위치)를 찾을 (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -21,18 +21,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ccb64e44a02b83559ce3528290b06f401d1c402
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 069e14ae3babfb3961042edaf0d99e24367df85d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>데이터베이스 마법사 (선택 위치)를 찾을 (AccessToSQL)
 데이터베이스 검색 마법사의 위치 선택 페이지에서 Access 데이터베이스를 찾기 위한 검색 매개 변수를 입력 합니다.  
   
 검색 데이터베이스 마법사를 열려면는 **파일** 메뉴를 클릭 하 여 **찾을 데이터베이스**합니다. 이 대화 상자를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [추가 및 제거 Access 데이터베이스 파일](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **찾아보기**  
 컴퓨터 또는 네트워크를 찾으려면 여기를 클릭 합니다. 폴더 또는 위치를 클릭 하 고 검색할 선택 **확인**합니다. 클릭 **추가** 목록에이 위치를 추가 합니다.  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1d3afd8cdc7f4d482c4bc5f23c775e6c67cdd46
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3a461a0845961e2c7019c1ece680b35e05ebcaf3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-subkey"></a>기본 하위 키
 레지스트리 기본 하위 키를 기본 데이터 원본을 지정할 수 있습니다. 이 하위 키는 특별 한 경우 데이터 원본 사양 하위 키의 있고 다른 데이터 원본 사양 하위 키와 같은 값을 보유 합니다. 유일한 차이점은 ODBC 데이터 원본 하위 키 아래에 있는 값으로 나열 되지 않아서 합니다.

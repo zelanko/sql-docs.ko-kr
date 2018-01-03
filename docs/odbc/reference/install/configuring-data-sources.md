@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 42f60e7cd5673685a262467e54085a5d0b9ec068
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7e8c96fe9ce093f9a5d3d0f09b0dc6a35568d9e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configuring-data-sources"></a>데이터 소스 구성
 데이터 원본에 대 한 정보는 시스템 레지스트리에 저장 됩니다. 사용자가 관리 프로그램을 통해 데이터 원본 정보를 수정 합니다. 이 ODBC 관리자, ODBC 제어판 장치 또는 응용 프로그램 또는 드라이버 개발자가 작성 하는 관리 프로그램 수 있습니다.  

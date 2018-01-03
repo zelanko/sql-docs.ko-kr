@@ -3,10 +3,10 @@ title: "APS 기기 (분석 플랫폼 시스템)를 끄거나 전원"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
 caps.latest.revision: "45"
-ms.openlocfilehash: 3264c3f97f765e9a62a38987638bdf2a8b13e82b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e96898197098556d256c46b517ea42650c4c3ac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="power-the-aps-appliance-on-or-off"></a>APS 기기를 켜거나 전원을
 이 항목에서는 전원을 켜거나 전원을 끄고 병렬 데이터 웨어하우스를 실행 하 고 필요에 따라 HDInsight 지역이 실행 하 여 분석 플랫폼 Systemappliance 하는 방법을 설명 합니다. 사용 하 여이 항목 분석 플랫폼 시스템 기기를 이동할 때 전원 기기에서 치명적인 정전 후.  

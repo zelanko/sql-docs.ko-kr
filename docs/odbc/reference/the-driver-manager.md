@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ee227f7fab393cdf563daab2aa695cd469281ff
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6bd1a9c9f164c1a745e3ec9baf40a7184600a4b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-driver-manager"></a>드라이버 관리자
 *드라이버 관리자* 은 응용 프로그램 및 드라이버 간의 통신을 관리 하는 라이브러리입니다. 예를 들어 Microsoft® Windows® 플랫폼 드라이버 관리자는 Microsoft가 작성 하 고 재배포 가능 MDAC 2.8 s p 1 SDK의 사용자가 재배포할 수 있는 동적 연결 라이브러리 (DLL)입니다.  

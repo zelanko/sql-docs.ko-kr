@@ -1,6 +1,6 @@
 ---
 title: "Docker에서 SQL Server 2017 시작 | Microsoft Docs"
-description: "이 빠른 시작 자습서에는 SQL Server 2017 컨테이너 이미지를 실행 하려면 Docker를 사용 하는 방법을 보여 줍니다. 그런 다음 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 합니다."
+description: "이 빠른 시작에서는 Docker를 사용 하 여 SQL Server 2017 컨테이너 이미지를 실행 하는 방법을 보여 줍니다. 그런 다음 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 합니다."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,24 +15,24 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 합니다.
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 빠른 시작 자습서를 사용 하 여 Docker pull 및 SQL Server 2017 컨테이너 이미지를 실행 [mssql-서버-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 퀵 스타트를 사용 하 여 Docker pull 및 SQL Server 2017 컨테이너 이미지를 실행 [mssql-서버-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
 
 이 이미지는 Ubuntu 16.04에 따라 Linux에서 실행 중인 SQL Server 구성 됩니다. Mac/Windows 용 Docker 엔진 1.8 + linux 또는 Docker에서 사용할 수 있습니다.
 
 > [!NOTE]
 > 이 빠른 시작에 중점을 mssql를 사용 하 여-서버-**linux** 이미지입니다. Windows 이미지 적용 되지 않는 있지만에서 항목에 대 한 자세히 알아볼 수 있습니다는 [mssql 서버-windows 개발자 Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)합니다.
 
-## <a id="requirements"></a> 필수 구성 요소
+## <a id="requirements"></a> Prerequisites
 
 - docker 엔진 1.8 + Mac/창에 Linux 배포 또는 Docker를 지원 합니다. 자세한 내용은 참조 [설치 Docker](https://docs.docker.com/engine/installation/)합니다.
 - 최소 2GB의 디스크 공간
@@ -240,6 +240,8 @@ SELECT @@SERVERNAME,
 
 - [Visual Studio 코드](sql-server-linux-develop-use-vscode.md)
 - [Windows에서 SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [SQL Server 작업 Studio (미리 보기)](../sql-operations-studio/what-is.md)
+- [mssql-cli (미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>컨테이너 제거
 
@@ -257,6 +259,12 @@ docker rm sql1
 
 > [!WARNING]
 > 중지 하 고 컨테이너를 영구적으로 제거에 컨테이너의 모든 SQL Server 데이터를 삭제 합니다. 데이터를 보존 하는 경우 [만들고 컨테이너에서 백업 파일을 복사](tutorial-restore-backup-in-sql-server-container.md) 하거나 사용 하 여 한 [컨테이너 데이터 지 속성 기술](sql-server-linux-configure-docker.md#persist)합니다.
+
+## <a name="docker-demo"></a>Docker 데모
+
+Docker에 대 한 SQL Server 컨테이너 이미지를 사용 하 여 시도한 후에 Docker 개발 및 테스트를 개선 하는 방법을 알아야 할 수 있습니다. 다음 비디오 연속 통합 및 배포 시나리오에서 Docker를 사용할 수 있는 방법을 보여 줍니다.
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
 ## <a name="next-steps"></a>다음 단계
 

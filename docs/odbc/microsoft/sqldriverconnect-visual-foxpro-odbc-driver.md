@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4233d9785ae420a2634db0e97d226bc1c2abbc7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95587af8044ec6485729233ebff378ceac064c40
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 |단독|"Yes" 또는 "No"|  
 |SourceDB|정규화 된 경로를 포함 하는 디렉터리 0 개 이상의 [테이블 있음](../../odbc/microsoft/visual-foxpro-terminology.md), 또는 대 한 절대 경로 파일 이름을 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.|  
 |SourceType|"Dbc 입니다" 또는 "DBF"|  
-|버전||  
+|버전 옵션||  
   
  드라이버 관리자는 정보에 대 한 사용자 요청 데이터 원본 이름을 지정 하지 않으면 (의 설정에 따라는 *fDriverCompletion* 인수) 하 고 계속 합니다. 자세한 정보가 필요한 경우 Visual FoxPro ODBC 드라이버는 메시지 대화 상자를 표시 합니다.  
   

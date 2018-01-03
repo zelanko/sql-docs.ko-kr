@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>응용 프로그램의 이전 버전과 호환성에 대 한 매핑 대체 함수
 ODBC 3*.x* ODBC 3를 통해 작업 하는 응용 프로그램*.x* ODBC 2에 대 한 드라이버 관리자가 작동 합니다. *x* 드라이버 있다면 없는 새로운 기능이 사용 됩니다. 그러나 둘 다 중복 기능 및 변경 된 동작 방식에 영향를 수행 하는 ODBC 3. *x* 응용 프로그램이 ODBC 2에서 작동 합니다. *x* 드라이버입니다. ODBC 2 작업할 때는. *x* 드라이버, 드라이버 관리자 매핑합니다 다음 ODBC 3. *x* 는 하나 이상의 ODBC 2를 대체 하는 함수. *x* 함수에 해당 하는 ODBC 2. *x* 함수입니다.  

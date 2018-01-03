@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6795a0e730f1b927b7921863714a2a9db55551e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="state-transitions"></a>상태 전환
 ODBC에 정의 되어 불연속 *상태* 각 환경, 각 연결 및 각 문에 대 한 합니다. 예를 들어 환경에 가능한 상태는 세: (할당 되는 환경이)에 할당 되지 않은, 할당 된 (있는 환경 할당 되었지만 연결이 없는 할당) 및 (중인 환경 및 하나 이상의 연결을 연결 할당 됨). 연결 있는 7 가지 가능한 상태입니다. 문은 사항이 13 가능한 상태입니다.  

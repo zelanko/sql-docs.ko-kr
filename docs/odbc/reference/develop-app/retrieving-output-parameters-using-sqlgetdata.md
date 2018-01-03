@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3a33528b7f64bb781e835e3ec0f9bbd563adb35
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73a76a7c78a6dc5b9cc1d3128863d7c8a0de2ff4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData를 사용 하 여 출력 매개 변수 검색
 ODBC 3.8 하기 전에 응용 프로그램만 바인딩된 출력 버퍼를 사용 하 여 쿼리를 출력 매개 변수를 검색할 수 있습니다. 그러나 매개 변수 값의 크기가 매우 크게 (예: 큰 이미지) 매우 큰 버퍼를 할당 하는 어렵습니다. ODBC 3.8 부분에서 출력 매개 변수를 검색 하는 새로운 방법이 도입 되었습니다. 응용 프로그램이 호출할 수 **SQLGetData** 작은 버퍼로 여러 번 큰 매개 변수 값을 검색 합니다. 큰 열 데이터를 검색 하는 것과 비슷합니다.  

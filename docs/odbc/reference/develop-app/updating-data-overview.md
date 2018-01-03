@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d779b8550a882e8ed92dcbf8ded0ec76196b3c72
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 587233467dbc265be12a009b34ce0376acfd0911
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-data-overview"></a>업데이트 데이터 개요
 SQL 문을 실행 하 여 또는 호출 하 여 응용 프로그램 데이터를 업데이트할 수 **SQLSetPos** 또는 **SQLBulkOperations**합니다. **업데이트**, **삭제**, 및 **삽입** 문 데이터 원본에 직접 역할 및 일반적으로 드라이버에서 지원 합니다. 업데이트 검색 및 delete 문을 변경 하려면 행의 지정을 포함 합니다. 배치 update 및 delete 문 및 **SQLSetPos** 커서를 통해 데이터 원본에 대해 작동 하 고 덜 광범위 하 게 지원 됩니다.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d4faac1ac4f917557a0827a0ad434bf6d8f36cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 34383ecfbfae7c037137296942ba392ddb50db63
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Microsoft Access에서 Visual FoxPro 데이터 쿼리 및 업데이트
 쿼리 하 고 링크 테이블 옵션을 사용 하 여 Microsoft Access 데이터베이스에서 Visual FoxPro 데이터베이스에 저장 된 데이터를 업데이트할 수 있습니다.  

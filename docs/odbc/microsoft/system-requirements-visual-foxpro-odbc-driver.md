@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 842f31d5444513a6acde47f3a502806578b9baeb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ed926636cbfb7c31c9a6312abf296a7d1e4f0993
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>시스템 요구 사항 (Visual FoxPro ODBC 드라이버)
 설치에 대 한 시스템 요구 사항의 최소 운영 체제 및 드라이버를 성공적으로 설치 하는 데 필요한 디스크 공간을 제공 합니다. 드라이버를 설치한 후 Visual FoxPro 데이터에 액세스 하는 데 사용할 특정 응용 프로그램 소프트웨어를 선택할 수 있습니다.  

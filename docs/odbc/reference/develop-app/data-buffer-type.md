@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73acfc1747cdda9d3082eaed420e56943f698fea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b37e2294a22eadffad1302452d74b72a94891f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-buffer-type"></a>데이터 버퍼 종류
 버퍼의 C 데이터 형식은 응용 프로그램에 의해 지정 됩니다. 을 단일 변수로 경우가이 응용 프로그램 변수를 할당 합니다. 일반적인 메모리 사용-메모리 즉, void 형식의 포인터에서 가리키는-이 응용 프로그램 메모리를 특정 형식으로 캐스팅 때 발생 합니다. 드라이버는이 이와 같은 두 가지 방법으로 검색 됩니다.  

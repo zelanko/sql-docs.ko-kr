@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e016c39dfe63a17aa174a5ed172d695902f79e44
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 081d91ac2c257fbaa60b93de24dd134ea698bcd9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 함수
 **규칙**  
@@ -65,13 +65,13 @@ BOOL SQLWritePrivateProfileString(
 ## <a name="diagnostics"></a>진단  
  때 **SQLWritePrivateProfileString** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_REQUEST_FAILED|요청이 실패 했습니다.|요청 된 시스템 정보를 쓸 수 없습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLWritePrivateProfileString** Microsoft Windows/Windows 2000에서 Microsoft® Windows® 포트 드라이버 및 드라이버 설치 Dll로 간단한 방법으로 제공 됩니다. 에 대 한 호출이 **WritePrivateProfileString** Odbc.ini 파일에 프로필 문자열에 대 한 호출으로 대체 해야 쓰기에 **SQLWritePrivateProfileString**합니다. **SQLWritePrivateProfileString** Odbc.ini 하위 키의 시스템 정보를 지정 된 값 이름 및 데이터를 추가 하려면 Win32® api에서 함수를 호출 합니다.  
   
  구성 모드 DSN 값을 나열 하는 Odbc.ini 항목 시스템 정보에는 위치를 나타냅니다. DSN (상태 변수는 USERDSN_ONLY은)는 사용자 DSN 이면 함수 HKEY_CURRENT_USER의 Odbc.ini 엔트리를 씁니다. DSN 시스템 DSN (SYSTEMDSN_ONLY) 이면 함수에서 HKEY_LOCAL_MACHINE Odbc.ini 항목을 씁니다. BOTHDSN 상태 변수를 사용 하는 경우 HKEY_CURRENT_USER 시도 되 면 하 고 실패 한 경우 HKEY_LOCAL_MACHINE 사용 됩니다.  

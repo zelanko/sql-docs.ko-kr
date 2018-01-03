@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4bb349dd9bc791659dc518aa66cbc40e958dbe66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-long-data"></a>긴 데이터 가져오기
 Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 255 자 같은 특정 크기에 대 한 이진 데이터입니다. 이 데이터 만큼 작지 않아서 몇 천 문자의 파트 설명 등의 단일 버퍼에 저장 될 수 있습니다. 그러나 너무 길어 긴 텍스트 문서 또는 비트맵 처럼 메모리에 저장할 수 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없습니다, 때문에 사용 하 여 파트에서 드라이버에서 검색 된 **SQLGetData** 행의 다른 데이터를 가져온 후 합니다.  
@@ -39,7 +39,7 @@ Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 255 자 같은 특정
   
  단일 열에 대 한 **SQLGetData** 처럼 동작 **SQLFetch**: 열에 대 한 데이터를 검색, 응용 프로그램 변수 형식으로 변환 하 고 해당 변수에 반환 합니다. 또한 길이/표시기 버퍼의 데이터의 바이트 길이 반환합니다. 방법에 대 한 자세한 내용은 **SQLFetch** 반환 데이터 참조 [행의 데이터를 인출](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)합니다.  
   
- **SQLGetData** 에서 다른 **SQLFetch** 한 중요 한 측면에서 합니다. 호출 될 두 번 이상 연속 해 서에서 동일한 열에 대 한 각 호출 데이터의 연속 된 부분을 반환 합니다. 마지막 호출을 제외한 각 호출은 SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01004 (문자열 데이터, 오른쪽이 잘렸습니다); 반환 마지막으로 호출한 관계 없이 SQL_SUCCESS를 반환 합니다. 이 어떻게 **SQLGetData** 부분에 long 데이터를 검색 하는 데 사용 됩니다. 반환할 데이터가 더 이상 없을 때 **SQLGetData** SQL_NO_DATA를 반환 합니다. 응용 프로그램은 긴 데이터를 함께 배치 하는 데 일부 데이터를 연결 하 의미입니다. 각 파트는 null로 끝나는; 응용 프로그램 부분을 연결 하는 경우 null 종결 문자를 제거 해야 합니다. 다른 긴 데이터의 경우와 다양 한 길이의 책갈피를도 대 한 부분에서 데이터 검색을 수행할 수 있습니다. 일반적으로 드라이버에서 사용 가능한 데이터의 크기를 검색 하 고 SQL_NO_TOTAL의 바이트 길이 반환 하지 못할 수 있지만 각 호출에 길이/표시기 버퍼 감소 이전 호출에서 반환 된 바이트 수로 반환 된 값입니다. 예를 들어  
+ **SQLGetData** 에서 다른 **SQLFetch** 한 중요 한 측면에서 합니다. 호출 될 두 번 이상 연속 해 서에서 동일한 열에 대 한 각 호출 데이터의 연속 된 부분을 반환 합니다. 마지막 호출을 제외한 각 호출은 SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01004 (문자열 데이터, 오른쪽이 잘렸습니다); 반환 마지막으로 호출한 관계 없이 SQL_SUCCESS를 반환 합니다. 이 어떻게 **SQLGetData** 부분에 long 데이터를 검색 하는 데 사용 됩니다. 반환할 데이터가 더 이상 없을 때 **SQLGetData** SQL_NO_DATA를 반환 합니다. 응용 프로그램은 긴 데이터를 함께 배치 하는 데 일부 데이터를 연결 하 의미입니다. 각 파트는 null로 끝나는; 응용 프로그램 부분을 연결 하는 경우 null 종결 문자를 제거 해야 합니다. 다른 긴 데이터의 경우와 다양 한 길이의 책갈피를도 대 한 부분에서 데이터 검색을 수행할 수 있습니다. 일반적으로 드라이버에서 사용 가능한 데이터의 크기를 검색 하 고 SQL_NO_TOTAL의 바이트 길이 반환 하지 못할 수 있지만 각 호출에 길이/표시기 버퍼 감소 이전 호출에서 반환 된 바이트 수로 반환 된 값입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db8463f643763f4dbaa621b5e26549c5523197ec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bb973a525b5a978d16566edc02fb4d4651e11406
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arguments-in-catalog-functions"></a>카탈로그 함수에서 인수
 모든 카탈로그 함수는 응용 프로그램 반환 되는 데이터의 범위를 제한 하는 데 수 있는 인수를 수락 합니다. 예를 들어 첫 번째 및 두 번째에 대 한 호출 **SQLTables** 다음 코드에서 세 번째 호출은 Orders 테이블에 대 한 정보를 반환 하는 동안 모든 테이블에 대 한 정보를 포함 한 결과 집합을 반환 합니다.  

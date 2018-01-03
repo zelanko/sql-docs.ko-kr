@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d58e64c6d53863c52d0e2194755e5d45ff1e99ae
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ddd48de7b988cf16fb8c3ce5d3bc33088f487308
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="length-of-the-product-cycle"></a>제품 주기의 길이
 상호 운용성에 대 한 마지막 문의 시간입니다. 일반적으로 상호 운용 가능한 응용 프로그램을 개발 noninteroperable 하나 개발 보다 오래 걸립니다. 이유는 응용 프로그램 해야 DBMS 기능을 확인, 다른 Dbms에 대 한 동일한 작업을 다르게 수행, 다른 하지만 일부 Dbms에서 지 원하는 기능을 해결 등입니다.  

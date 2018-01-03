@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8528eb498b4c15a3d55aa3b3a09947c85329918b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ad4afa4a54b63b759b03774f77ed7ec0371ff931
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 함수
 **규칙**  
@@ -54,7 +54,7 @@ SQLRETURN SQLDrivers(
  *EnvironmentHandle*  
  [입력] 환경 핸들입니다.  
   
- *방향*  
+ *Direction*  
  [입력] 드라이버 관리자 목록 (SQL_FETCH_NEXT) 또는 (SQL_FETCH_FIRST) 목록의 시작 부분에서 검색이 시작 되는 여부에 다음 드라이버 설명을 인출 하는지 여부를 결정 합니다.  
   
  *DriverDescription*  
@@ -85,7 +85,7 @@ SQLRETURN SQLDrivers(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDrivers** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 SQL_HANDLE_ENV 및 *처리* 의 *EnvironmentHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLDrivers** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|(DM) 드라이버 관리자 별 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|(DM) 버퍼 \* *DriverDescription* 하지 만큼 충분히 큰지 전체 드라이버 설명을 반환 합니다. 따라서 설명을 잘렸습니다. 전체 드라이버 설명의 길이에 반환 됩니다 \* *DescriptionLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> (DM) 버퍼 \* *DriverAttributes* 충분히 특성 값 쌍의 전체 목록을 반환할 수 없습니다. 따라서 목록이 잘렸습니다. 특성 값 쌍의 잘리지 않은 목록의 길이에 반환 됩니다 **AttributesLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -97,7 +97,7 @@ SQLRETURN SQLDrivers(
 |HY103|검색 코드가 잘못 되었습니다|인수에 대해 지정 된 값 (DM) *방향* SQL_FETCH_FIRST 또는 SQL_FETCH_NEXT 없습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLDrivers** 드라이버 설명에서 반환 된 \* *DriverDescription* 버퍼입니다. 드라이버에 대 한 추가 정보를 반환 하는 것은 \* *DriverAttributes* 키워드-값 쌍의 목록으로 버퍼입니다. 드라이버에 대 한 모든 드라이버를 제외 하 고 반환 됩니다에 대 한 시스템 정보에 나열 된 모든 키워드가 **CreateDSN**, 데이터 원본 만들 것인지 묻는 메시지가 사용 되 고 있는 따라서 선택 사항입니다. Null 바이트가 각 쌍이 종료 되 고 전체 목록은 바이트 null로 종료 됩니다 (즉, 두 개의 null 바이트 표시 목록의 끝). 예를 들어 C 구문을 사용 하 여 파일 기반 드라이버는 다음과 같은 특성 ("\0" null 문자를 나타냄)를 반환할 수 있습니다.  
   
 ```  

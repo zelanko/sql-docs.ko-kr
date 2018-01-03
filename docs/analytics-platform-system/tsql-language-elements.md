@@ -3,10 +3,10 @@ title: "T-SQL 언어 요소 분석 플랫폼 시스템 병렬 데이터 웨어�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: a3b4da032f0f82aeedfaaa3a579f6a53b1aeb89c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-elements"></a>언어 요소
 TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
@@ -41,7 +41,7 @@ TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL S
 * [식](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [IDENTITY 속성 해결 방법](../t-sql/statements/create-table-transact-sql-identity-property.md)
-* [인쇄](../t-sql/language-elements/print-transact-sql.md)
+* [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
 ## <a name="batches-control-of-flow-and-variables"></a>일괄 처리, 흐름 제어 및 변수
@@ -234,7 +234,7 @@ TRANSACT-SQL (T-SQL) 언어 요소에 대 한 분석 Platform System (APS) SQL S
 * [YEAR](../t-sql/functions/year-transact-sql.md)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
-## <a name="transactions"></a>트랜잭션
+## <a name="transactions"></a>의
 * [트랜잭션](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>진단 세션

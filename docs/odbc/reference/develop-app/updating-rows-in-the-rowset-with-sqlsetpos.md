@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 960845d3101157b3e263230e51bd2b3b5ac05ef5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 898bbdbf15cec2e583d9fa55a82ec8b0caa32d18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos와 행 집합의 행 업데이트
 업데이트 작업과 **SQLSetPos** 은 데이터 원본 ()를 제외 길이/표시기 버퍼의 값 SQL_COLUMN_IGNORE 응용 프로그램 버퍼의 데이터를 바인딩된 각 열에 대 한 사용 하는 테이블의 하나 이상의 선택 된 행을 업데이트 합니다. 바인딩되지 않은 열을 업데이트 하지 않습니다.  

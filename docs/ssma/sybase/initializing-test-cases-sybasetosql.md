@@ -3,7 +3,7 @@ title: "초기화 테스트 사례 (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 273532ab2462d9a145c699183a1e5c4e6504f23a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8a62d9803867f6b1d7ea86e027426f28c893b860
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>테스트 사례 (SybaseToSQL)를 초기화합니다.
 이 단계에서 새 테스트 사례에 대 한 초기 정보를 지정합니다.  

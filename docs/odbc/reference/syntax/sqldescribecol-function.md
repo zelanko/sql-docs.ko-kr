@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 778b301cad67e6cfaf6205b65a67026ed109eae0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 함수
 **규칙**  
@@ -99,7 +99,7 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDescribeCol** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType*여의 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLDescribeCol** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|오류|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *ColumnName* 충분히 열 이름이 잘렸습니다 하므로 전체 열 이름을 반환할 수 없습니다. 잘리지 않은 열 이름의 길이에서 **NameLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -122,7 +122,7 @@ SQLRETURN SQLDescribeCol(
   
  성능상의 이유로 응용 프로그램 호출 하지 않아야 **SQLDescribeCol** 문을 실행 하기 전에.  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  응용 프로그램에서 일반적으로 호출 **SQLDescribeCol** 를 호출한 후 **SQLPrepare** 이전 또는 관련된 호출 후 및 **SQLExecute**합니다. 응용 프로그램 호출 또한 수 **SQLDescribeCol** 를 호출한 후 **SQLExecDirect**합니다. 자세한 내용은 참조 [결과 집합 메타 데이터](../../../odbc/reference/develop-app/result-set-metadata.md)합니다.  
   
  **SQLDescribeCol** 열 이름, 형식 및 길이 의해 생성 된 검색 한 **선택** 문. 열이 식 **ColumnName* 은 빈 문자열 또는 드라이버에서 정의 된 이름이 있습니다.  

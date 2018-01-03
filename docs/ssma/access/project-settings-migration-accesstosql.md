@@ -1,7 +1,7 @@
 ---
 title: "프로젝트 설정 (마이그레이션) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7fcf9092c57fd07601171003381812de2ed6b12
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-accesstosql"></a>프로젝트 설정 (마이그레이션) (AccessToSQL)
 마이그레이션 프로젝트 설정으로 데이터가 마이그레이션되는 방식을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 -   사용 하 여 **기본 프로젝트 설정** 모든 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 마이그레이션 설정에 액세스 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 라는 프로젝트 형식을 선택 **마이그레이션 대상 버전** 콤보 상자 설정에 액세스를 클릭 합니다. 원하는는 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **마이그레이션**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **CHECK 제약 조건**  
 테이블에 데이터를 추가할 때 SSMA 제약 조건을 확인 해야 하는지 여부를 지정 합니다.  
   

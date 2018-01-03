@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8073bd935f010a91c9dde8863e1731ab3032a7e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 049eb6998407ad02ca91565d9b26d0a0bf9b37eb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-static-cursors"></a>하려면 ODBC 정적 커서가
 정적 커서가 static으로 표시 되는 결과 집합 하나입니다. 멤버 자격, 순서 또는 커서가 열린 후에 결과 집합의 값에 대 한 변경 내용을 일반적으로 감지 하지 못합니다. 예를 들어 정적 커서를 행 및 다른 응용 프로그램을 인출 합니다. 그런 다음 해당 행을 업데이트 합니다. 정적 커서 다시 행을 발견 하는 값에서 다른 응용 프로그램에의 한 변경 되더라도 변경 된지 않습니다.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9290e4c7bf6025025d02256a1907cac7a1d52861
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3ea179e93c7883399795e6f42836305aee4246c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-statements"></a>SQL 문
 ODBC 응용 프로그램에서는 SQL 문을 실행 하 여 데이터베이스에 대 한 거의 모든 액세스를 수행 합니다. 이러한 문의 폼 — 하드 코드 된 또는 런타임에, 상호 운용 가능한 또는 데이터 원본에 따른 특정 등에 생성-응용 프로그램의 요구에 따라 달라 집니다.  

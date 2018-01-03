@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abf3068ec65fdcca39a88f6ce18d750294f865bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f898533861d389336da3aafa6f839f8a66a340a1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-odbc-api-functions"></a>지원 되는 ODBC API 함수
 평준화의 목적은 어떤 기능을 사용할 수에 드라이버에서 응용 프로그램에 알리기 위해 하는 것입니다. Microsoft ODBC 데스크톱 데이터베이스 드라이버는 모든 핵심과 수준 1 기능을 지원 합니다.  

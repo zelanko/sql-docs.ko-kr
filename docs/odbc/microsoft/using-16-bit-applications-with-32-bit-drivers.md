@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cdfeea078774f5261bdeca25123a4743b1c874b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>32 비트 드라이버와 16 비트 응용 프로그램을 사용 하 여
 > [!IMPORTANT]  
@@ -49,10 +49,10 @@ ms.lasthandoff: 11/20/2017
   
  (32 비트를 16 비트 썽킹) Windows에서 Windows에서 DLL 32 비트 설치 프로그램을 통해 전달 된 16 비트 인수 값 Ds32gt.dll 변환 추가 썽킹 DLL은 16 비트를 백업 합니다.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>구성 요소  
  MDAC 2.8 s p 1 SDK의 ODBC 구성 요소는 32 비트 드라이버와 16 비트 응용 프로그램을 실행 하기 위한 다음 파일을 포함 합니다. 이러한 구성 요소는 \Redist 디렉터리에 있습니다.  
   
-|파일 이름|Description|  
+|파일 이름 |Description|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 비트 ODBC 제네릭 썽킹 DLL|  
 |Odbc32gt.dll|32 비트 ODBC 제네릭 썽킹 DLL|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
  또한 ODBC 3.51에 속하지 않은는 16 비트 ODBC 2.10 드라이버 관리자와 함께 다음 파일에 필요한 16 비트 응용 프로그램과 함께 설치 해야 합니다.  
   
-|파일 이름|Description|  
+|파일 이름 |Description|  
 |---------------|-----------------|  
 |Odbc.dll|16 비트 드라이버 관리자|  
 |Odbcinst.dll|16 비트 설치 관리자 DLL|  

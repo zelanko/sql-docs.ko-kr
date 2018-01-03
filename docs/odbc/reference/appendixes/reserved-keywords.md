@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb3cd6b0bcb1d159e3c32a672b8b9f1038057b51
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54df53e2ff5f095a0404719d6e1219013d90d47f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reserved-keywords"></a>예약 키워드
 다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 단어; 최소 SQL 문법을 강요 하지 그러나 응용 프로그램은 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 보장 하려면 이러한 키워드를 사용 하 여를 하지 않아야 합니다. #**정의** 값 SQL_ODBC_KEYWORDS 이러한 키워드의 쉼표로 구분 된 목록을 포함 합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
 |ALL|LANGUAGE|  
 |ALLOCATE|LAST|  
 |ALTER|LEADING|  
-|및|LEFT|  
+|AND|LEFT|  
 |ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/20/2017
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/20/2017
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Delete|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  

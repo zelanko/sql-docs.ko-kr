@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31122122cdb7a6f940dd1ba91eeb8caef8ac9d0c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3bb3278fe83922aee29aa8348d32b3fbc757511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-data"></a>유니코드 데이터
 SQL 유니코드 데이터 형식은 고유 하 게 하는 DBMS에서 유니코드로에 있는 데이터를 설명 하기 위해 제공 됩니다. C 유니코드 데이터 형식은 응용 프로그램 데이터를 유니코드 버퍼에 바인딩할 수 있도록 제공 됩니다. 드라이버 관리자 유니코드 C 형식 있도록 (SQL_C_WCHAR)에서 데이터를 변환할 수는 ANSI 드라이버로 함수입니다.  

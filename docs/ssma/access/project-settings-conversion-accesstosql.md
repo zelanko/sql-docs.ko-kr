@@ -1,7 +1,7 @@
 ---
 title: "프로젝트 설정 (변환) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ce9b6bec50de99ba85561ec3a1679692ccb9bf6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec31bf02ccdeedd4356d0a85c85d7d33041d5bde
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-accesstosql"></a>프로젝트 설정 (변환) (AccessToSQL)
 변환 프로젝트 설정 개체에서 Access 데이터베이스 개체를 변환 하는 방법을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 개체입니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 -   사용 하 여 **기본 프로젝트 설정** 모든 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 변환 설정에 액세스 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 설정 된 볼 /에서 변경 하는 데 필요한 마이그레이션 프로젝트 형식을 선택 **마이그레이션 대상 버전** 드롭다운을 클릭 **일반** 선택 고 왼쪽된 창 맨 아래에 **변환**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **기본 키를 추가 합니다.**  
 새 기본 키를 만듭니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Access 테이블에 기본 키 또는 고유 인덱스 일 경우 SQL Azure 테이블입니다.  
   

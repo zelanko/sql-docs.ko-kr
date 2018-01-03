@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cd5658e3dfcbdad0b0ba8b8e8f12d489eadd55e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8d74b3b3eda914210f8d69d6089eb9a474416318
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 함수
 **규칙**  
@@ -51,16 +51,16 @@ BOOL SQLRemoveDriverManager(
  함수는 실패 한 경우, FALSE 실패할 경우 TRUE를 반환 합니다. 시스템 정보에 없는 항목이 있으면이 함수를 호출할 때 FALSE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLRemoveDriverManager** 관련 FALSE를 반환 * \*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에 * \*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
+ 때 **SQLRemoveDriverManager** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|오류|Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|구성 요소 레지스트리에서 찾을 수 없습니다|설치 관리자에 레지스트리에 없습니다. 되었거나 레지스트리에서 찾을 수 없습니다 드라이버 관리자 정보를 제거 하지 못했습니다.|  
 |ODBC_ERROR_USAGE_UPDATE_FAILED|증가 하거나 구성 요소 사용 횟수를 감소 시킬 수 없습니다.|드라이버 관리자의 사용 횟수를 감소 시키기 위해는 설치 프로그램이 실패 했습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  **SQLRemoveDriverManager** 보완는 **SQLInstallDriverManager** 함수 및 시스템 정보에는 구성 요소 사용을 계산 하는 업데이트 합니다. 이 함수는 설치 응용 프로그램 에서만에서 호출 되어야 합니다.  
   
  **SQLRemoveDriverManager** 핵심 구성 요소 사용 횟수가 1 씩 감소 됩니다. 구성 요소의 사용 횟수가 0이 되 면 항목 시스템 정보 제거 됩니다. 핵심 구성 요소 항목은 시스템 정보 "ODBC 핵심" 제목 아래에 다음 위치에서:  

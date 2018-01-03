@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 808eab22673e0ca69671a8209b48bd283a2cb476
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 780cbed9bb417c32b6a7ed33f68e4671c612ca6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tracing"></a>추적
 ODBC 드라이버 관리자에 대 한 ODBC 응용 프로그램 기록 하 고 로그 파일에 변환 된 하는 함수 호출의 시퀀스를 허용 하는 추적 기능을 있습니다. DLL 및 드라이버 관리자와 드라이버는 응용 프로그램 및 드라이버 관리자 간의 호출을 캡처하는 추적으로 추적을 수행 합니다. 추적의이 메서드는 ODBC 2에서 수행 하는 추적을 대신*.x* ODBC 2에서 수행 하는 드라이버 관리자와 추적*.x* ODBC Spy 여 합니다.  

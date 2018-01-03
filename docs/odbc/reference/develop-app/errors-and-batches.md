@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f00a70ec411824da13d37666c7b22f92248a236
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6bdb04f60a6f7a981fd5869f7c74c4741df05f3a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-batches"></a>오류 및 일괄 처리
 SQL 문의 일괄 처리를 실행 하는 동안 오류가 발생 하는 경우 다음 네 가지 결과 중 하나 작성할 수 있으며 (각 가능한 결과 데이터 원본에 따른 특정 및 일괄 처리에 포함 된 문을에 종속 될 수 있습니다.)  

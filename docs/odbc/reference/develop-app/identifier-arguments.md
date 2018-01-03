@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a6800d7cb73790c61ec94acaffdeb291fa6b475
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifier-arguments"></a>식별자 인수
 식별자 인수에 문자열에 따옴표를 드라이버 선행 및 후행 공백을 제거 하 고 따옴표 안에 문자열 리터럴로 처리 합니다. 문자열에 따옴표가 사용 되지 드라이버 제거 후행 공백 및 접기 문자열을 대문자로 합니다. SQL_ERROR 및 SQLSTATE HY009 반환 식별자 인수는 null 포인터를 설정 (잘못 된 null 포인터)를 사용 하는 경우가 아니면 인수가 카탈로그 이름을 카탈로그는 지원 되지 않습니다.  

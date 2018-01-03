@@ -1,7 +1,7 @@
 ---
 title: "SSMA 액세스 콘솔 (AccessToSQL)에 대 한 작업 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: 1abb9d9a59151cabf70b5a9ae8192b12d2363dda
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a53f3cb5f05cff896bc03245c20f68a9050f5d1f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>SSMA 액세스 콘솔 (AccessToSQL)에 대 한 작업
 Microsoft SQL Server Migration Assistant (SSMA) 액세스를 위한 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있는 되었습니다. 스크립트 파일의 명령을 실행 하기 위한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램 SSMA 스크립트 수준 상호 작용, 마이그레이션 주기를 줄일 수 있으며 특정 마이그레이션 작업의 크기를 조정 합니다.  
@@ -35,7 +35,7 @@ Microsoft SQL Server Migration Assistant (SSMA) 액세스를 위한 명령줄에
   
 |||  
 |-|-|  
-|**항목**|**Description**|  
+|**항목**|**설명**|  
 |[SSMA 액세스 콘솔 &#40;에 대 한 시작 AccessToSQL &#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 설명 합니다.|  
 |[SSMA 콘솔 &#40;에서 명령줄 옵션 AccessToSQL &#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|SSMA 콘솔 응용 프로그램을 작동 하도록 명령줄 옵션 및 매개 변수를 설명 합니다.|  
 |[스크립트 파일 &#40; 만들기 AccessToSQL &#41;](../../ssma/access/creating-script-files-accesstosql.md)|스크립트 파일을 만드는 방법에 설명 합니다.|  
@@ -47,6 +47,6 @@ Microsoft SQL Server Migration Assistant (SSMA) 액세스를 위한 명령줄에
 |[보고서 &#40; 생성 AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md)|보고서를 생성 하는 명령을 나열 합니다.|  
 |[문제 해결 &#40; AccessToSQL &#41;](../../ssma/access/troubleshooting-accesstosql.md)|마이그레이션 문제를 해결 하는 방법에 대 한 간략 한 정보를 제공 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 액세스에 대 한 시작](http://msdn.microsoft.com/8585ec16-7e0a-483a-b250-adab9b9232a3)  
   

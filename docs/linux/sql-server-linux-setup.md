@@ -4,7 +4,7 @@ description: "설치, 업데이트 및 Linux에서 SQL Server를 제거 합니�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/26/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 65835ac1faf75664ecdbac8907c74906ccc4175e
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 이 항목에서는 설치, 업데이트 및 SQL Server 2017 Linux에서 제거 하는 방법에 설명 합니다. SQL Server 2017 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 및 Ubuntu에서 지원 됩니다. Linux 또는 Docker에 대 한 Windows/Mac. Docker 엔진에서 실행할 수 있는 Docker 이미지 형식으로 제공 됩니다.
 
 > [!TIP]
-> 빠르게 시작 하려면 하나에 대 한 빠른 시작 자습서로 이동할 [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), 또는 [Docker](quickstart-install-connect-docker.md)합니다.
+> 빠르게 시작 하려면에 대 한 퀵 스타트 중 하나로 이동 [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), 또는 [Docker](quickstart-install-connect-docker.md)합니다.
 
 ## <a id="supportedplatforms"></a>지원 되는 플랫폼
 
@@ -40,6 +40,10 @@ SQL Server 2017 Linux 다음 플랫폼에서 사용할 수 있습니다.
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 받기](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 가져오기](http://www.ubuntu.com/download/server)
 | **Docker 엔진** | 1.8+ | [Docker 가져오기](http://www.docker.com/products/overview)
+
+Microsoft는 배포 하 고 OpenShift 및 Kubernetes 사용 하 여 SQL Server 컨테이너 관리를 지원 합니다.
+
+SQL Server 2017에 대 한 최신 지원 정책에 대 한 참조 [Microsoft SQL Server에 대 한 기술 지원 정책을](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)합니다.
 
 ## <a id="system"></a>시스템 요구 사항
 
@@ -62,7 +66,7 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 
 ## <a id="platforms"></a> SQL Server 설치
 
-명령줄에서 Linux에서 SQL Server를 설치할 수 있습니다. 자세한 내용은 다음 빠른 시작 자습서 중 하나를 참조 하십시오.
+명령줄에서 Linux에서 SQL Server를 설치할 수 있습니다. 자세한 내용은 다음 퀵 스타트 중 하나를 참조 합니다.
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
@@ -162,7 +166,7 @@ sudo rm -rf /var/opt/mssql/
 CU 또는 GDR 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
 > [!NOTE]
-> [빠른 시작 자습서](#platforms) CU 리포지토리를 구성 합니다. 이러한 자습서를 수행 하는 경우 다음 단계를 사용 하 여 CU 저장소를 사용 하 여 계속 필요가 없습니다. 이러한 단계는만 구성 된 저장소를 변경 하는 데 필요 합니다.
+> [퀵 스타트](#platforms) CU 리포지토리를 구성 합니다. 이러한 자습서를 수행 하는 경우 다음 단계를 사용 하 여 CU 저장소를 사용 하 여 계속 필요가 없습니다. 이러한 단계는만 구성 된 저장소를 변경 하는 데 필요 합니다.
 
 1. 필요한 경우 이전에 구성 된 저장소를 제거 합니다.
 
@@ -202,7 +206,7 @@ CU 또는 GDR 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
 다음과 같은 방식으로 무인된 설치를 수행할 수 있습니다.
 
-- 초기 단계에서 수행 된 [빠른 시작 자습서](#platforms) 리포지토리를 등록 및 SQL Server를 설치 합니다.
+- 초기 단계에서 수행 된 [퀵 스타트](#platforms) 리포지토리를 등록 및 SQL Server를 설치 합니다.
 - 실행 하는 경우 `mssql-conf setup`설정, [환경 변수](sql-server-linux-configure-environment-variables.md) 사용 하는 `-n` (메시지 표시) 옵션입니다.
 
 다음 예제에서는 구성 사용 하 여 SQL server Developer edition에서 **MSSQL_PID** 환경 변수입니다. EULA 받기도 (**ACCEPT_EULA**) SA 사용자 암호를 설정 하 고 (**MSSQL_SA_PASSWORD**). `-n` 매개 변수는 구성 값 환경 변수에서 찾아볼 수 있는 unprompted 설치 수행 합니다.
@@ -266,7 +270,7 @@ Linux 컴퓨터에 없는 경우 액세스에 사용 되는 온라인 저장소�
 - [SQL Server 전체 텍스트 검색](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-데이터베이스 만들기 및 관리를 시작 하 여 SQL Server 인스턴스에 연결 합니다. 시작 하려면 빠른 시작 자습서를 참조 합니다.
+데이터베이스 만들기 및 관리를 시작 하 여 SQL Server 인스턴스에 연결 합니다. 시작 하려면 퀵 스타트를 참조 하세요.
 
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)

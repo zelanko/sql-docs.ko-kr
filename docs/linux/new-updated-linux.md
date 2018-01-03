@@ -15,11 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 4adfcb675e52b5b73bd4dcc4867bf79350a26d52
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 030f30580b0ddb02da2a67990d0c58acf15236c9
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>신규 / 최근에 업데이트: Linux 문서에서 SQL Server
 
@@ -33,7 +33,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *날짜 범위 업데이트:* &nbsp; **2017-09-28** &nbsp; 을 아래와 같이 &nbsp; **2017-12-02**
+- *업데이트 날짜 범위:*  &nbsp; **2017-09-28** &nbsp;부터 &nbsp; **2017-12-02**
 - *주제 영역:* &nbsp; **Linux에서 Microsoft SQL Server**합니다.
 
 
@@ -102,7 +102,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 ### <a name="1-nbsp-run-the-sql-server-2017-container-image-with-dockerquickstart-install-connect-dockermd"></a>1. &nbsp;[Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 합니다.](quickstart-install-connect-docker.md)
 
-*업데이트 됨된: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([다음](#TitleNum_2))
+*업데이트됨: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([다음](#TitleNum_2))
 
 <!-- Source markdown line 261.  ms.author= jroth.  -->
 
@@ -210,7 +210,7 @@ docker rm sql1
 
 | |고가용성 & </br> 데이터 보호 | 데이터 보호
 |:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1.
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |주 중단 | 자동 장애 조치(failover). 새 주 파일 그룹은 R /w | 자동 장애 조치(failover). 사용자 트랜잭션에 대 한 새로운 주 ´ ù.
 |보조 복제본의 작동 중단 | 주 파일 그룹은 R/W, (기본 실패 하 고 복구할 수 없습니다) 경우 데이터 손실에 노출 실행 합니다. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 공간이 없습니다. 장애 조치할 경우 주 복제본도 실패 합니다.
 |구성만 복제본 중단 | 기본 R은 /w 기본 경우 자동 장애 조치가 실패 합니다. | 기본 R은 /w 기본 경우 자동 장애 조치가 실패 합니다.
@@ -256,7 +256,7 @@ docker rm sql1
 **<a id="production"></a>컨테이너 이미지를 프로덕션에 실행**
 
 
-이전 섹션에서 빠른 시작 자습서 Docker 허브에서 SQL Server의 무료 개발자 버전을 실행합니다. 대부분의 정보에는 프로덕션 Enterprise, Standard 또는 Web edition 등의 컨테이너 이미지를 실행 하려는 경우 여전히 적용 됩니다. 그러나 여기에서 설명 하는 몇 가지 차이점이 있습니다.
+Docker 허브에서 무료 개발자 버전의 SQL Server를 실행 하는 이전 섹션에서 빠른 시작 합니다. 대부분의 정보에는 프로덕션 Enterprise, Standard 또는 Web edition 등의 컨테이너 이미지를 실행 하려는 경우 여전히 적용 됩니다. 그러나 여기에서 설명 하는 몇 가지 차이점이 있습니다.
 
 - 유효한 라이선스가 있는 경우 SQL Server는 프로덕션 환경에서 사용할 수 있습니다. 무료 SQL Server Express 프로덕션 라이선스를 가져올 수 있습니다 [여기](https://go.microsoft.com/fwlink/?linkid=857693)합니다. 통해 사용할 수 있는 SQL Server Standard 및 Enterprise Edition 라이선스 [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)합니다.
 
@@ -272,7 +272,7 @@ docker rm sql1
 
    1. 다음으로 무료 개발자 Docker 저장소에서 컨테이너 이미지를 가져올 해야 합니다. 로 이동 [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), 클릭 **체크아웃으로**, 지시를 따릅니다.
 
-   1. 요구 사항을 검토 하 고 [빠른 시작 자습서-빠른 시작-설치-연결-docker.md)에서 프로시저를 실행 합니다. 하지만 두 가지 차이점이 있습니다. 이미지를 가져와야 **저장소/microsoft/mssql-서버-linux:\<태그 이름을\>**  Docker 저장소에서 합니다. 와 프로덕션 버전을 지정 해야 하는 **MSSQL_PID** 환경 변수입니다. 다음 예제에서는 Enterprise Edition에 대 한 최신 SQL Server 2017 컨테이너 이미지를 실행 하는 방법을 보여 줍니다.
+   1. 요구 사항을 검토 하 고 [quickstart-빠른 시작-설치-연결-docker.md) 프로시저를 실행 합니다. 하지만 두 가지 차이점이 있습니다. 이미지를 가져와야 **저장소/microsoft/mssql-서버-linux:\<태그 이름을\>**  Docker 저장소에서 합니다. 와 프로덕션 버전을 지정 해야 하는 **MSSQL_PID** 환경 변수입니다. 다음 예제에서는 Enterprise Edition에 대 한 최신 SQL Server 2017 컨테이너 이미지를 실행 하는 방법을 보여 줍니다.
 
 
 
@@ -506,7 +506,7 @@ Linux에서 SQL Server 에이전트를 사용 하려면 먼저 설치 해야는 
 
 ### <a name="9-nbsp-troubleshoot-sql-server-on-linuxsql-server-linux-troubleshooting-guidemd"></a>9. &nbsp;[Linux에서 SQL Server 문제 해결](sql-server-linux-troubleshooting-guide.md)
 
-*업데이트 됨된: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([이전](#TitleNum_8))
+*업데이트됨: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_8))
 
 <!-- Source markdown line 125.  ms.author= anshrest.  -->
 
@@ -569,26 +569,26 @@ SQLCMD 통해 단일 사용자 모드로 SQL Server를 시작 합니다.
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새 + 업데이트 (3 + 14): **SQL에 대 한 고급 분석** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(3+14): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
 - [새로 추가되었거나 업데이트됨(1+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
-- [새 + 업데이트 (87 + 0): **SQL에 대 한 분석 플랫폼 시스템** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [새 + 업데이트 (5 + 4): **SQL에 연결** docs](../connect/new-updated-connect.md)
-- [새 + 업데이트 (0 + 1): **SQL에 대 한 데이터베이스 엔진** docs](../database-engine/new-updated-database-engine.md)
-- [새 + 업데이트 (2 + 2): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [새 + 업데이트 (10 + 9): **SQL에 대 한 Linux** docs](../linux/new-updated-linux.md)
-- [새 + 업데이트 (2 + 4): **SQL에 대 한 관계형 데이터베이스** docs](../relational-databases/new-updated-relational-databases.md)
-- [새 + 업데이트 (4 + 2): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [새 + 업데이트 (0 + 1): **SQL에 대 한 샘플** docs](../sample/new-updated-sample.md)
-- [새 + 업데이트 (21 + 0): **SQL 작업 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [새 + 업데이트 (5 + 1): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(87 + 0): **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [새로 추가되었거나 업데이트됨(5+4): **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(2+2): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(10+9): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(2+4): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(4+2): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새로 추가되었거나 업데이트됨(21+0): **SQL 작업 Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새로 추가되었거나 업데이트됨(5+1): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
 - [새로 추가되었거나 업데이트됨(0+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새 + 업데이트 (1 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [새로 추가되었거나 업데이트됨(1+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새 + 업데이트 (0 + 2): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [새로 추가되었거나 업데이트됨(0+2): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
-- [새 + 업데이트 (0 + 0): **데이터 마이그레이션 길잡이 (DMA) sql** docs](../dma/new-updated-dma.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMA(Data Migration Assistant)** 문서](../dma/new-updated-dma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)

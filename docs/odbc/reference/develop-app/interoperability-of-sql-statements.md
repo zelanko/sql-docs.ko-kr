@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 991208c26beba1167d083785a19c1e64ecaeaba6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ebbf617702162e2f1de9920375cfe0cb51246300
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interoperability-of-sql-statements"></a>SQL 문의 상호 운용성
 응용 프로그램의 나머지 부분에서는 같은 상호 운용 가능한 또는 DBMS 관련 SQL 문을 수 있습니다. 응용 프로그램의 나머지 부분에서는 같은 다양 한 방법을 상호 운용할 수 있는 SQL 문 할 필요가 응용 프로그램 종류에 따라 달라 집니다. 사용자 지정 응용 프로그램은 상호 운용할 수 있는 SQL 문을 사용 하는 하나 또는 두 Dbms의 기능을 이용 하려면 일반적으로 설계 되었으므로 가능성이 적습니다. 다양 한 Dbms와 작동 하도록 설계 되기 때문에 상호 운용할 수 있는 SQL 문을 사용 하는 일반 응용 프로그램입니다. 수직 응용 프로그램을 일반적으로 떨어질 위치 사이 특정 수준의 기능이 요구 되는 있지만 그렇지 않은 경우 상호 운용할 수 있는 SQL 문을 사용 하 여입니다.  

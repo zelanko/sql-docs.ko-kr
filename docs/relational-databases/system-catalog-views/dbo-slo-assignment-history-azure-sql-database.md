@@ -1,13 +1,12 @@
 ---
 title: "dbo.slo_assignment_history (Azure SQL 데이터베이스) | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -26,14 +25,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61bf1f0541df9085235dc00072624e1e91425cc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fcff1c5141e6556f8cb4184284769e3be537f80a
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history(Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
@@ -53,12 +52,12 @@ ms.lasthandoff: 11/09/2017
 |-----------------|---------------|-----------------|  
 |database_name|**sysname**|데이터베이스의 이름입니다.|  
 |database_id|**int**|데이터베이스의 ID입니다.|  
-|create_date|**(7)**|데이터베이스 생성 날짜입니다.|  
+|create_date|**datetimeoffset(7)**|데이터베이스 생성 날짜입니다.|  
 |service_objective_name|**sysname**|SLO(서비스 수준 목표)의 이름입니다.|  
 |service_objective_id|**uniqueidentifier**|SLO의 ID입니다.|  
 |operation_id|**uniqueidentifier**|작업의 ID입니다.|  
-|operation_start_time|**(7)**|데이터베이스 SLO 변경 요청의 시작 시간입니다.|  
-|operation_end_time|**(7)**|데이터베이스 SLO 변경 요청의 종료 시간입니다.|  
+|operation_start_time|**datetimeoffset(7)**|데이터베이스 SLO 변경 요청의 시작 시간입니다.|  
+|operation_end_time|**datetimeoffset(7)**|데이터베이스 SLO 변경 요청의 종료 시간입니다.|  
 |error_code|**int**|데이터베이스 SLO 변경 요청의 오류 코드입니다.|  
 |error_desc|**nvarchar**|데이터베이스 SLO 변경 요청의 오류에 대한 설명입니다.|  
   
