@@ -30,11 +30,11 @@ caps.latest.revision: "35"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b6478b5e9eb148dea799fb928384098712e4810d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 35b7f2b516227e00af629cadb5c1dccadad2b092
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ FILE_NAME ( file_id )
  파일 이름을 반환할 해당 파일 ID입니다. *file_id* 은 **int**합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>주의  
  *file_ID* sys.master_files 또는 sys.database_files 카탈로그 뷰의 file_id 열에 해당 합니다.  
@@ -62,7 +62,7 @@ FILE_NAME ( file_id )
 ## <a name="examples"></a>예  
  다음 예제에서는 파일 이름을 반환 `file_ID 1` 및 `file_ID` 에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.  
   
-```tsql  
+```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
 GO  
 ```  

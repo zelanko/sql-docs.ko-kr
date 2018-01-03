@@ -3,7 +3,7 @@ title: "외부 라이브러리 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
@@ -21,15 +21,15 @@ helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bf4807943521308cb2907adab8cfc6e701325b8a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-external-library-transact-sql"></a>외부 라이브러리 (Transact SQL) 만들기  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 데이터베이스에 지정 된 바이트 스트림 또는 파일 경로에서 R 패키지를 업로드합니다.
 
@@ -189,7 +189,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 > [!NOTE]
 > 다른 달리 `DROP` 에 문을 [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)],이 문은 사용자 권한을 지정 하는 선택적 매개 변수를 지원 합니다. 이 옵션을 사용 하면 일반 사용자가 업로드 되는 라이브러리를 삭제 하려면 소유권 역할이 할당 된 사용자입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [ALTER 외부 라이브러리 (Transact SQL)](alter-external-library-transact-sql.md)  
 [DROP 외부 라이브러리 (Transact SQL)](drop-external-library-transact-sql.md)  

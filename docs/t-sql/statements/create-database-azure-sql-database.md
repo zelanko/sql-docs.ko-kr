@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -223,14 +223,14 @@ SQL Server Management Studio를 사용 하 여 Azure SQL 데이터베이스에 �
 ### <a name="simple-example"></a>간단한 예  
  데이터베이스를 만들기 위한 간단한 예입니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### <a name="simple-example-with-edition"></a>Edition 간단한 예  
  표준 데이터베이스를 만들기 위한 간단한 예입니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -238,7 +238,7 @@ CREATE DATABASE TestDB2
 ### <a name="example-with-additional-options"></a>추가 옵션으로는 예제  
  여러 개의 옵션을 사용 하는 예제입니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -247,7 +247,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### <a name="creating-a-copy"></a>복사본 만들기  
  데이터베이스의 복사본을 만드는 예입니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -255,21 +255,21 @@ AS COPY OF school;
 ### <a name="creating-a-database-in-an-elastic-pool"></a>탄력적 풀의 데이터베이스 만들기  
  S3M100 이라는 풀에 새 데이터베이스를 만듭니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>다른 서버에서 데이터베이스의 복사본 만들기  
  다음 예에서는 P2 성능 수준에서 db_copy 단일 데이터베이스에 대 한 명명 된 db_original 데이터베이스의 복사본을 만듭니다.  탄력적 풀 또는 단일 데이터베이스에 대 한 성능 수준을 db_original 인지에 관계 없이 유용 합니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  다음 예에서는 라는 ep1 라는 탄력적 풀의 db_copy db_original 데이터베이스의 복사본을 만듭니다.  탄력적 풀 또는 단일 데이터베이스에 대 한 성능 수준을 db_original 인지에 관계 없이 유용 합니다.  Db_original 다른 이름의 탄력적 풀에 있으면 db_copy ep1에 생성 계속 됩니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -279,12 +279,12 @@ CREATE DATABASE db_copy
 
 다음 예제에서는 DATABASE_DEFAULT 카탈로그 데이터 정렬이 카탈로그 데이터 정렬은 데이터베이스 데이터 정렬으로 동일 하 게 설정 하는 데이터베이스 생성 중 설정 합니다.
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 
 -  [sys.dm_database_copies &#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 

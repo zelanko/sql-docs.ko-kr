@@ -3,7 +3,7 @@ title: "SQL Server Profiler 대화 상자 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -48,11 +48,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e27d4133d4115d3313dcb7b9f0e9e834b60645d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 927d9d4f805932f4d95e898649e2cac60547d99c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 을 캡처하는 도구는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버에서 이벤트입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다. 명령 및의 대화 상자에서 사용할 수 있는 설정에는 다음과 같은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -198,15 +198,15 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 |항목|Description
 |---|---
 |**SQL Server**|현재 연결된 SQL Server 인스턴스를 지정합니다. 이 필드는 자동으로 채워지며 업데이트할 수 없습니다.  
-|**데이터베이스**|추적 테이블이 있는 데이터베이스를 지정합니다.  
+|**데이터베이스 백업**|추적 테이블이 있는 데이터베이스를 지정합니다.  
 |**소유자**|Specifies the owner of the trace table. 이 필드에는 **dbo**가 자동으로 채워집니다.  
-|**Table**|추적을 읽어오는 추적 테이블의 이름을 지정합니다.  
+|**테이블**|추적을 읽어오는 추적 테이블의 이름을 지정합니다.  
 ## <a name="destination-table"></a>대상 테이블
 **대상 테이블** 대화 상자를 사용하여 추적을 저장할 테이블을 지정할 수 있습니다.  
 |항목|Description
 |---|---
 |**SQL Server**|현재 연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 이 필드는 자동으로 채워지며 업데이트할 수 없습니다. 서버를 변경하려면 **취소** 를 클릭하고 추적 테이블을 저장할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
-|**데이터베이스**|추적 테이블을 저장할 데이터베이스를 지정합니다.  
+|**데이터베이스 백업**|추적 테이블을 저장할 데이터베이스를 지정합니다.  
 |**소유자**|Specifies the owner of the trace table. 이 필드에는 **dbo**가 자동으로 채워집니다.  
 |**Table**|추적을 저장할 테이블의 이름을 지정합니다.  
 ## <a name="replay-configuration"></a>재생 구성
@@ -277,7 +277,7 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 |**서버 유형**|템플릿을 선택할 서버 유형을 선택합니다. 이 옵션은 템플릿을 내보내는 경우에만 사용할 수 있습니다.  
 |**템플릿 이름**|새 템플릿 이름을 입력하거나 목록에서 템플릿 이름을 선택합니다. 템플릿을 내보내는 경우에는 목록에서 템플릿 이름을 선택할 수만 있습니다. 
 
-## <a name="see-also"></a>참고 항목 
+## <a name="see-also"></a>관련 항목: 
 [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [서버 성능 및 작업 모니터링](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   

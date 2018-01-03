@@ -3,7 +3,7 @@ title: "NS$&lt;서비스 이름&gt; 속성 (탭의 로그) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2df08f361dfea2acf97f79632343c2d04183c316
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f14473aba288e4f68b08472d77e6cacbd99061c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;서비스 이름&gt; 속성 (로그 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **로그온에** 탭은 **Notification Services 속성** 대화 상자에서 사용할 계정을 지정 하려면는 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스를 선택한를 시작 및 서비스를 중지 합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **로컬 시스템 계정**  
  암호를 요구하지 않는 로컬 시스템 계정을 지정합니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 다른 서버와 상호 작용하지 못하도록 서비스를 제한할 수 있습니다.  
   

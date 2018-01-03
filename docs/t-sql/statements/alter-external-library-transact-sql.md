@@ -3,7 +3,7 @@ title: "외부 라이브러리 (Transact SQL) ALTER | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
@@ -19,15 +19,15 @@ helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8365e364c9769af139be2b8dd4e7f5943afc58ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 28a62f00b479506e919faf2cbdbf1202045192eb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER 외부 라이브러리 (Transact SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 기존 외부 패키지 라이브러리의 콘텐츠를 수정합니다.
 
@@ -135,7 +135,7 @@ WITH RESULT SETS (([result] int));
 ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 
 [외부 라이브러리 (Transact SQL) 만들기](create-external-library-transact-sql.md)
 [DROP 외부 라이브러리 (Transact SQL)](drop-external-library-transact-sql.md)  

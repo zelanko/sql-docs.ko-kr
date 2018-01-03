@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa55f12c6e68df15f1ee9497c28133d4be3470aa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f17fa70885b833fcaeabaa221382c738a5885eb6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**fileid**|**smallint**|파일의 숫자 식별자입니다. 반환 되는지 *이름* 지정*합니다.*|  
 |**파일 이름**|**nchar(260)**|물리적 파일 이름입니다.|  
 |**파일 그룹**|**sysname**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 파일이 로그 파일입니다. 파일 그룹에 속하지 않습니다.|  
-|**크기**|**nvarchar (15)**|파일 크기(KB)입니다.|  
+|**size**|**nvarchar (15)**|파일 크기(KB)입니다.|  
 |**maxsize**|**nvarchar (15)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**증가**|**nvarchar (15)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양을 나타냅니다.<br /><br /> 0 = 파일은 고정 크기를 가지며 증가하지 않습니다.|  
 |**사용**|**varchar(9)**|데이터 파일에 대 한 값이 **'데이터에만 해당'** 및 값은 로그 파일에 대 한 **'로그 만'**합니다.|  
@@ -68,7 +68,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에 있는 파일에 대한 정보를 반환합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfile;  

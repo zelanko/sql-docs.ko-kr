@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>1. 데이터의 초기 동기화에 대한 행 반환  
  다음 예제에서는 테이블 데이터의 초기 동기화에 대한 데이터를 가져오는 방법을 보여 줍니다. 쿼리는 모든 행 데이터 및 연관된 버전을 반환합니다. 그러면 동기화된 데이터를 포함하는 시스템에 이 데이터를 추가하거나 삽입할 수 있습니다.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +170,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>2. 특정 버전 이후의 모든 변경 내용 나열  
  다음 예에서는 지정된 버전(`@last_sync_version)` 이후에 테이블에서 변경된 내용을 모두 나열합니다. [Emp ID] 및 SSN은 복합 기본 키에 있는 열입니다.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +182,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>3. 동기화를 위해 변경된 모든 데이터 가져오기  
  다음 예에서는 변경된 모든 데이터를 가져오는 방법을 보여 줍니다. 이 쿼리는 변경 내용 추적 정보를 사용자 테이블과 조인하여 사용자 테이블 정보가 반환되게 합니다. 삭제된 행에 대해 하나의 행이 반환되도록 `LEFT OUTER JOIN`이 사용됩니다.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +197,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>4. CHANGETABLE(VERSION...)을 사용하여 충돌 검색  
  다음 예에서는 행에 마지막 동기화 이후의 변경 내용이 없는 경우에만 행을 업데이트하는 방법을 보여 줍니다. 특정 행의 버전 번호는 `CHANGETABLE`을 사용하여 얻습니다. 행이 업데이트되었으면 변경 내용이 적용되지 않으며 쿼리가 행의 최근 변경 내용에 대한 정보를 반환합니다.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  

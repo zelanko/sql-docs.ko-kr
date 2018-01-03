@@ -3,7 +3,7 @@ title: SQL Server Migration Assistant | Microsoft Docs
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bde2050f1151c19eeeecde37752c4fd52624017f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b3e57982cc43dcee94e10198220bd4d7838589e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 마이그레이션 길잡이
 Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE에서 SQL Server로 데이터베이스 마이그레이션을 자동화할 수 있는 도구입니다.  

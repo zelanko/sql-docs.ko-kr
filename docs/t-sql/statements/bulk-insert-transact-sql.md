@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: da5449283269e7ff018e7a4b394eb4c26b69e590
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 5900878e440a0ae821655adea764eaebad8fddf2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -415,7 +415,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>6. Azure blob 저장소에 파일에서 데이터 가져오기   
 다음 예제에서는 외부 데이터 원본으로 구성 된 Azure blob 저장소 위치에 있는 csv 파일에서 데이터를 로드 하는 방법을 보여 줍니다. 이 공유 액세스 서명을 사용 하 여 데이터베이스 범위 자격 증명이 필요 합니다.    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -441,7 +441,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
   
 -   [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
@@ -451,7 +451,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 유틸리티](../../tools/bcp-utility.md)   
  [가져오거나 데이터 &#40; 내보내기 위한 서식 파일 SQL Server &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

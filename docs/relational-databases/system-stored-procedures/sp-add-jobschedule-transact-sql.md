@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63ebaeb737f3e1d1b6abbf2a8b4800161a82e9ef
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b2680a591628811fb9617077700d05981ece2a2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_type=** ] *frequency_type*  
  작업을 실행할 시간을 나타내는 값입니다. *frequency_type* 은 **int**, 기본값은 **0**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**4**|일별|  
@@ -150,7 +150,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  이제 작업 일정을 작업과 독립적으로 관리할 수 있습니다. 작업에 일정을 추가 하려면 사용 하 여 **sp_add_schedule** 일정을 만들 및 **sp_attach_schedule** 작업에 일정을 연결 하려면.  
@@ -168,7 +168,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  
  ## <a name="example"></a>예제
  다음 예제에서는 할당 작업 일정을 `SaturdayReports` 된 매주 토요일 오전 2 시에 실행 됩니다.
-```tsql  
+```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
         @name = N'Weekly_Sat_2AM',  -- Schedule name

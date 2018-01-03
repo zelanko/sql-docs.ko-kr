@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4192928157e3f6e534b8fb50c34e349dac3f5b8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7cc579d5f4c5d84dcec335e69d12334725f60741
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="collations"></a>데이터 정렬
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,7 +113,7 @@ FROM fn_helpcollations();
 ### <a name="a-specifying-collation-during-a-select"></a>1. 선택 중 데이터 정렬 지정  
  다음 예에서는 간단한 테이블을 만든 후 행 4개를 삽입합니다. 그런 다음 테이블에서 데이터를 선택할 때 두 데이터 정렬을 적용하여 `Chiapas`가 서로 다르게 정렬되는 방식을 보여 줍니다.  
   
-```tsql  
+```sql  
 CREATE TABLE Locations  
 (Place varchar(15) NOT NULL);  
 GO  

@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93aec7a71f3522114bc9ef6c2d19edaccaac2e57
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5f43afdac5972dd5f01c192dbbc755911a83a341
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -78,15 +78,15 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  다음 다이어그램에서는 6단계의 히스토그램을 보여 줍니다. 첫 번째 상한 값 왼쪽의 영역이 1단계입니다.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")  
+ ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "히스토그램")  
   
  각 히스토그램 단계를 살펴보면 다음과 같습니다.  
   
--   굵은 선은 상한 값을 나타냅니다 (*range_high_key*) 및 발생 횟수 (*equal_rows*)  
+-   굵은 선은 상한 값(*range_high_key*)과 발생한 횟수(*equal_rows*)를 나타냅니다.  
   
--   채워진 영역은 왼쪽 *range_high_key* 발생 하는 각 열 값의 평균 수 및 열 값의 범위를 나타냅니다 (*average_range_rows*). *average_range_rows* 첫 번째 히스토그램 단계는 항상 0입니다.  
+-   *range_high_key* 왼쪽의 채워진 영역은 열 값의 범위와 각 열 값이 발생한 평균 횟수(*average_range_rows*)를 나타냅니다. 첫 번째 히스토그램 단계의 *average_range_rows*는 항상 0입니다.  
   
--   점선은 범위에 있는 고유한 값의 총 수를 예상 하는 데 사용 되는 샘플링 된 값을 나타냅니다 (*distinct_range_rows*) 및 범위에 있는 값의 총 수 (*range_rows*). 쿼리 최적화 프로그램에서 사용 하 여 *range_rows* 및 *distinct_range_rows* 계산 *average_range_rows* 고 샘플링 된 값을 저장 하지 않습니다.  
+-   점선은 범위 내 고유 값의 총 개수(*distinct_range_rows*) 및 범위 내 값의 총 개수(*range_rows*)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 *range_rows* 및 *distinct_range_rows*를 사용하여 *average_range_rows*를 계산하며 샘플링된 값은 저장하지 않습니다.  
   
  쿼리 최적화 프로그램은 통계적 중요성에 따라 히스토그램 단계를 정의합니다. 또한 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 최대 차이 알고리즘을 사용합니다. 최대 단계 수는 200개입니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 예를 들어 100개의 고유 값을 가진 열의 히스토그램에 100개 미만의 경계 지점이 있을 수 있습니다.  
   
@@ -99,7 +99,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 ### <a name="a-simple-example"></a>1. 간단한 예    
 다음 예제에서는 만들고 간단한 테이블을 채웁니다. 그런 다음에 통계를 작성은 `Country_Name` 열입니다.
 
-```tsql
+```sql
 CREATE TABLE Country
 (Country_ID int IDENTITY PRIMARY KEY,
 Country_Name varchar(120) NOT NULL);
@@ -109,13 +109,12 @@ CREATE STATISTICS Country_Stats
     ON Country (Country_Name) ;  
 ```   
 기본 키를 차지 `stat_id` 번호가 1, 없으므로 호출 `sys.dm_db_stats_histogram` 에 대 한 `stat_id` 번호 2에 대 한 통계 히스토그램을 반환 하는 `Country` 테이블입니다.    
-```tsql     
+```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-
 ### <a name="b-useful-query"></a>2. 유용한 쿼리:   
-```tsql  
+```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
 FROM sys.stats AS s
@@ -126,14 +125,14 @@ WHERE s.[name] = N'<statistic_name>';
 ### <a name="c-useful-query"></a>3. 유용한 쿼리:
 다음 예에서는 테이블에서 선택 `Country` 열에 대 한 조건자가 있는 `Country_Name`합니다.
 
-```tsql  
+```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
 다음 예에서는 테이블에 대해 이전에 만든된 통계 살펴봅니다 `Country` 및 열 `Country_Name` 위의 쿼리에서 조건자와 일치 하는 히스토그램 단계에 대 한 합니다.
 
-```tsql  
+```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
     shr.modification_counter, shr.last_updated, sh.range_rows, sh.equal_rows
 FROM sys.stats ss
@@ -149,7 +148,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>관련 항목:  
-
 [DBCC SHOW_STATISTICS (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [개체 관련된 동적 관리 뷰 및 함수 (Transact SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

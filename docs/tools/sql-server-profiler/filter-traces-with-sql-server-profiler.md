@@ -3,7 +3,7 @@ title: "SQL Server Profiler로 추적 필터링 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16bff7f75c75a8caae3ddaa297c31d70e927614a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0e678a5fd9886cbe8c529e3732ae08fb1480c22b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>SQL Server Profiler로 추적 필터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 대 한 데이터 열에 필터를 정의할 수 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 이벤트에 관심 있는 이벤트에 대 한 정보가 캡처됩니다. 추적 필터를 사용하면 추적 시 캡처되는 이벤트 수가 줄어 들기 때문에 추적이 시스템 성능에 미치는 영향이 감소합니다. 또한 필터링을 통해 검색할 이벤트 수가 적어지므로 추적 출력을 읽기 쉽습니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
  [추적에서의 이벤트 필터링&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

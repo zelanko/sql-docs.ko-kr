@@ -3,7 +3,7 @@ title: "DTAXML 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c75accc66ce70c6d5f8c022fe87ba9aeaa11bc1a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a652a6e44909984906fcbcbe2b962cc7de374fbb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]루트 요소의 데이터베이스 엔진 튜닝 관리자 XML 입력 또는 출력 파일 **DTAXML** 는 튜닝 입력 및 튜닝 출력을 생성 하는 데이터베이스 엔진 튜닝 관리자를 설명 하는 모든 요소를 포함 합니다.  
@@ -41,14 +41,14 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|Attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**xmlns:xsi**|필수 사항입니다. XML 스키마 인스턴스 네임스페이스를 식별합니다. 이 네임스페이스의 특성은 데이터베이스 엔진 튜닝 관리자 XML 파일의 유효성을 검사하는 데 사용되는 스키마를 참조하는 데 사용됩니다.<br /><br /> 필요한 값: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|필수 사항입니다. 데이터베이스 엔진 튜닝 관리자 네임스페이스를 식별합니다.<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 XML 편집기를 사용하여 데이터베이스 엔진 튜닝 관리자 XML 파일을 편집할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 가능한 참조 항목을 찾기 위해 F1 도움말과 동적 도움말에서 이 값이 사용됩니다.<br /><br /> 필요한 값:<br /><br /> [데이터베이스 엔진 튜닝 관리자 XML 스키마](http://go.microsoft.com/fwlink/?LinkId=43100) 네임스페이스|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|없음|  
+|**부모 요소**|InclusionThresholdSetting|  
 |**자식 요소**|[DTAInput 요소&#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** 요소(자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](http://schemas.microsoft.com/sqlserver/) 참조)|  
   
 ## <a name="remarks"></a>주의  

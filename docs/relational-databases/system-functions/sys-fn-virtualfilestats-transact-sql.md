@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75af14c94dd17ae6caead3f6b5dee9e0bf0b257e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f09bc032ffe4de52fcb7d9f46e4fbdd4450c8c14
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### <a name="a-displaying-statistical-information-for-a-database"></a>1. 데이터베이스에 대한 통계 정보 표시  
  다음 예에서는 ID가 `1`인 데이터베이스의 파일 ID 1에 대한 통계 정보를 표시합니다.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>2. 명명된 데이터베이스 및 파일에 대한 통계 정보 표시  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 로그 파일에 대한 통계 정보를 표시합니다. 시스템 함수 `DB_ID` 지정 하는 데 사용 되는 *database_id* 매개 변수입니다.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -99,7 +99,7 @@ GO
 ### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>3. 모든 데이터베이스 및 파일에 대한 통계 정보 표시  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 모든 데이터베이스의 모든 파일에 대한 통계 정보를 표시합니다.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  

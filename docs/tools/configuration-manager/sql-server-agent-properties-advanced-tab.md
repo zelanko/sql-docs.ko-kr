@@ -3,7 +3,7 @@ title: "SQL Server 에이전트 속성 (고급 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44ab270aef5436ced00f4f8289ece1e0adefb62e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1446ea1a5ec5d950e0a2873f39de4c4a8d2072cb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>SQL Server 에이전트 속성(고급 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 5 개의 속성이 나타납니다는 **고급** 기본적으로 탭 합니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **클러스터형**  
  이 서비스가 클러스터형 서버의 리소스로 설치되었는지 여부를 나타냅니다.  
   

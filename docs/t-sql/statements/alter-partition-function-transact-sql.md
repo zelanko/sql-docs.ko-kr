@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5fc84614d46bdf32bcbcc4bfa9ace7cf049baa9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 66b921eb3bd6378d20de11a0197a20c957d14ac6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 ### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>1. 분할 테이블 또는 인덱스의 파티션을 두 개의 파티션으로 분할  
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. `ALTER PARTITION FUNCTION`은 파티션 중 하나를 둘로 분할하여 총 5개의 파티션을 만듭니다.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  
@@ -135,7 +135,7 @@ SPLIT RANGE (500);
 ### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>2. 분할된 테이블의 두 개의 파티션을 하나의 파티션으로 병합  
  다음 예에서는 위의 예와 같은 파티션 함수를 만든 다음 두 개의 파티션을 하나로 병합하여 총 3개의 파티션을 만드는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  

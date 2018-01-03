@@ -3,7 +3,7 @@ title: "프로젝트 설정 (형식 매핑) (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea1b35e6943e89236aee72e7b0c31c545e100f88
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 594ef6405a41b199d527eaae56a77c7f1d91c4e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>프로젝트 설정 (형식 매핑) (SybaseToSQL)
 형식 매핑 페이지는 **프로젝트 설정** 대화 상자 SSMA Sybase 적응형 Server Enterprise (ASE) 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 -   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴 선택 **프로젝트 설정**, 선택한 후 **유형 매핑** 왼쪽 창의 맨 아래에 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **원본 형식**  
 매핑된 ASE 데이터 형식입니다.  
   

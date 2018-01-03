@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8e4b889d1ee7ec8480c9f41a730ffafcd5888ef4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   서버 수준 DDL 트리거  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -104,22 +104,22 @@ sys.dm_sql_referencing_entities (
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|테이블|예*|예|  
+|Table|예*|예|  
 |보기|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|아니요|예|  
+|CLR 저장 프로시저|아니오|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니요|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|CLR 사용자 정의 함수|아니오|예|  
+|CLR 트리거(DML 및 DDL)|아니오|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니오|  
+|확장 저장 프로시저|아니오|예|  
+|큐|아니오|예|  
+|동의어|아니오|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니오|예|  
+|XML 스키마 컬렉션|아니오|예|  
+|파티션 함수|아니오|예|  
   
  \*한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   
@@ -148,7 +148,7 @@ sys.dm_sql_referencing_entities (
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>1. 지정된 엔터티를 참조하는 엔터티 반환  
  다음 예에서는 지정된 테이블을 참조하는 현재 데이터베이스의 엔터티를 반환합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>2. 지정된 유형을 참조하는 엔터티 반환  
  다음 예에서는 `dbo.Flag` 별칭 유형을 참조하는 엔터티를 반환합니다. 결과 집합은 두 개의 저장 프로시저가 이 유형을 사용한다는 것을 보여 줍니다. `dbo.Flag` 형식에 있는 여러 열의 정의에 또한는 `HumanResources.Employee` 테이블; 그러나 형식 정의 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건을 테이블에 없기 때문에 행을 반환 하지는 에대한`HumanResources.Employee`테이블입니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  

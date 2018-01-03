@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 다음은 전달 설명 하기 위해 기본 예제는 **sql_handle** 직접 또는 **CROSS APPLY**합니다.
   1.  활동을 만듭니다.  
 새 쿼리 창에서 다음 T-SQL을 실행 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +108,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  사용 하 여 **CROSS APPLY**합니다.  
     sql_handle **sys.dm_exec_requests** 에 전달 될 **sys.dm_exec_sql_text** 를 사용 하 여 **CROSS APPLY**합니다. 새 쿼리 창을 열고 1 단계에서 식별 된 spid를 전달 합니다. Spid 이런 경우에이 예에서 `59`합니다.
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +118,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  전달 **sql_handle** 직접 합니다.  
 획득 된 **sql_handle** 에서 **sys.dm_exec_requests**합니다. 그런 다음 전달는 **sql_handle** 에 직접 **sys.dm_exec_sql_text**합니다. 새 쿼리 창을 열고 1 단계에서 식별 된 spid를 전달 **sys.dm_exec_requests**합니다. Spid 이런 경우에이 예에서 `59`합니다. 그런 다음 반환 된 **sql_handle** 인수로 **sys.dm_exec_sql_text**합니다.
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +130,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>2. 평균 CPU 시간별 상위 5 개 쿼리에 대 한 정보  
  다음 예에서는 상위 5개 쿼리에 대한 SQL 문 텍스트와 평균 CPU 시간을 반환합니다.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>3. 일괄 처리 실행 통계 제공  
  다음 예에서는 일괄 처리에서 실행되는 SQL 쿼리 텍스트를 반환하고 이에 대한 통계 정보를 제공합니다.  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   
@@ -173,7 +173,7 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   

@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d36338abefd30103b80a202ebde030d73b6b071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar (60)**|서버의 데이터 정렬|보안 개체 클래스에 대한 설명입니다.|  
 |permission_name|**nvarchar (60)**|서버의 데이터 정렬|사용 권한 이름입니다.|  
-|형식|**varchar(4)**|서버의 데이터 정렬|단축 사용 권한 유형 코드입니다. 다음 표를 참조하십시오.|  
+|유형|**varchar(4)**|서버의 데이터 정렬|단축 사용 권한 유형 코드입니다. 다음 표를 참조하십시오.|  
 |covering_permission_name|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 이 클래스에 대한 다른 사용 권한을 포함하는 사용 권한의 이름입니다.|  
 |parent_class_desc|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 현재 클래스를 포함하는 부모 클래스의 이름입니다.|  
 |parent_covering_permission_name|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 부모 클래스에 대한 다른 모든 사용 권한을 포함하는 사용 권한의 이름입니다.|  
@@ -224,9 +224,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **적용 대상**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|Delete|DATABASE|  
+|DL|Delete|OBJECT|  
+|DL|Delete|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|OBJECT|  
@@ -348,20 +348,20 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ### <a name="a-listing-all-built-in-permissions"></a>1. 모든 기본 제공 사용 권한 나열   
 사용 하 여 `DEFAULT` 또는 모든 사용 권한을 반환 하는 빈 문자열입니다.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>2. 대칭 키에 설정할 수 있는 사용 권한 나열   
 해당 클래스에 대 한 모든 가능한 사용 권한을 반환 하는 클래스를 지정 합니다.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>3. SELECT 사용 권한이 있는 클래스 나열   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  

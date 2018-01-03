@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: da7c61f339c0d8d66c8c0bcd00514a6ecf58286f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d362be9a5cf9e3b60f30760073ec4ea30288a61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|보낸 사람|수행할 작업|관계|  
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|일 대 일|  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>tempdb의 빈 공간 확인  
  다음 쿼리 (mb) 사용할 수 있는 모든 파일에서 사용 가능한 페이지 및 총 사용 가능 공간의 총 수를 반환 **tempdb**합니다.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 SELECT SUM(unallocated_extent_page_count) AS [free pages],   
@@ -112,7 +112,7 @@ FROM sys.dm_db_file_space_usage;
 ### <a name="determining-the-amount-of-space-used-by-user-objects"></a>사용자 개체에 의해 사용되는 공간 확인  
  다음 쿼리는 tempdb에서 사용자 개체에 의해 사용되는 전체 페이지 수와 공간(MB)을 반환합니다.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],  

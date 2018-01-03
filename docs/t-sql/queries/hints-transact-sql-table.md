@@ -42,11 +42,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---table"></a>테이블 힌트 (Transact SQL)-
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 > [!IMPORTANT]  
 >  WITH 키워드 생략은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 다음 테이블 힌트와 WITH 키워드 없이 사용할 수: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, 스냅숏 및 NOEXPAND 합니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어  
+ 다음 테이블 힌트와 WITH 키워드 없이 사용할 수: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, 스냅숏 및 NOEXPAND 합니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 FROM t (TABLOCK)  
@@ -450,7 +450,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>1. TABLOCK 힌트를 사용하여 잠금 방법 지정  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.Product` 테이블에 공유 잠금을 사용하고 UPDATE 문이 끝날 때까지 유지하도록 지정합니다.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +474,7 @@ GO
   
  다음 예에서는 인덱스와 함께 FORCESEEK 힌트를 사용하여 쿼리 최적화 프로그램이 지정된 인덱스 및 인덱스 열에서 Index Seek 연산을 수행하도록 지정합니다.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +489,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>3. FORCESCAN 힌트를 사용하여 Index Scan 연산 지정  
  다음 예에서는 FORCESCAN 힌트를 사용하여 쿼리 최적화 프로그램이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Sales.SalesOrderDetail` 테이블에서 검색 작업을 수행하도록 지정합니다.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   

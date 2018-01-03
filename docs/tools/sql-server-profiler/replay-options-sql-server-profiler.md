@@ -3,7 +3,7 @@ title: "재생 옵션 (SQL Server Profiler) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e3f6fd0521be0b607a35fe2fd05089e116c9d54
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d207e1c930edc41b9270c7e1d34deacef9e08fa7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="replay-options-sql-server-profiler"></a>재생 옵션(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]캡처된 추적을 재생 하기 전에 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 재생 옵션을 지정 된 **재생 구성** 대화 상자. 이 대화 상자를 열려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 추적 파일이나 테이블을 연 다음 **재생** 메뉴에서 **시작**을 클릭합니다. 추적 재생에 필요한 권한에 대한 자세한 내용은 [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)을 참조하십시오.  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="about-the-health-monitor"></a>상태 모니터 정보  
  상태 모니터는 추적 재생의 시뮬레이션된 프로세스를 모니터링하고 재생 내에서 차단된 프로세스를 종료하는 응용 프로그램 스레드입니다. **재생 구성** 대화 상자의 **고급 재생 옵션** 탭에서 차단된 프로세스를 끝내기 전에 상태 모니터가 대기해야 하는 시간(**상태 모니터 대기 간격**)을 초 단위로 지정할 수 있습니다. 이 간격을 0으로 설정하면 상태 모니터가 재생 추적에서 시뮬레이션된 차단 프로세스를 종료하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [추적 재생](../../tools/sql-server-profiler/replay-traces.md)   
  [재생 요구 사항](../../tools/sql-server-profiler/replay-requirements.md)   
  [추적 재생에 대한 고려 사항&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  

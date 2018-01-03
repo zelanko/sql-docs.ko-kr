@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54a39a38050589ba4e842253e192b820c2f1c0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b7ea9bb6828182ee0cbc5d0ebef1065564bf03df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ string
 ## <a name="examples"></a>예
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>1.  문자열의 양쪽 모두에서 공백 문자를 제거합니다.   
 다음 예에서는 앞에서 앞뒤로 공백을 제거 `test`합니다.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -68,7 +68,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>2.  지정 된 문자열의 양쪽 모두에서 문자 제거   
 다음 예제에서는 뒤에 마침표 및 후행 공백을 제거합니다.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 

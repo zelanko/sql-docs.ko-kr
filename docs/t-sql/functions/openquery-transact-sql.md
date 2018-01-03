@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66c1c5dc3f116cc88b8e61111f626361a1a601b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5b302ea6346c33431d87e1923156253411170ea5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ OPENQUERY ( linked_server ,'query' )
 ## <a name="remarks"></a>주의  
  OPENQUERY는 변수를 인수로 받아들이지 않습니다.  
   
- OPENQUERY는 연결된 서버에서 확장 저장 프로시저를 실행하는 데 사용할 수 없습니다. 그러나 확장 저장 프로시저는 네 부분으로 된 이름을 사용하여 연결된 서버에서 실행할 수 있습니다. 예를 들어  
+ OPENQUERY는 연결된 서버에서 확장 저장 프로시저를 실행하는 데 사용할 수 없습니다. 그러나 확장 저장 프로시저는 네 부분으로 된 이름을 사용하여 연결된 서버에서 실행할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
-```t-sql  
+```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
@@ -73,7 +73,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>1. UPDATE 통과 쿼리 실행  
  다음 예에서는 예 1에서 만든 연결된 서버에 대해 `UPDATE` 통과 쿼리를 사용합니다.  
   
-```t-sql  
+```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +81,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>2. INSERT 통과 쿼리 실행  
  다음 예에서는 예 1에서 만든 연결된 서버에 대해 `INSERT` 통과 쿼리를 사용합니다.  
   
-```t-sql  
+```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,14 +89,14 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>3. DELETE 통과 쿼리 실행  
  다음 예에서는 `DELETE` 통과 쿼리를 사용하여 예 3에서 삽입된 행을 삭제합니다.  
   
-```t-sql  
+```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>4. SELECT 통과 쿼리 실행  
  다음 예제에서는 통과 `SELECT` 예 3에서에서 삽입 된 행을 선택 하는 쿼리  
   
-```t-sql  
+```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     

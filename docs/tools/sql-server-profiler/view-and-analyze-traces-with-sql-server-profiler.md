@@ -3,7 +3,7 @@ title: "SQL Server Profiler로 추적 보기 및 분석 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b0a6ecac72a8f200d5ec104b4cd8774328db190e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e75f8ec80a1564b788cefdd226b2f7b7338a7734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적 보기 및 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적에서 캡처한 이벤트 데이터를 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 정의된 추적 속성을 기반으로 데이터를 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 분석하는 한 가지 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 같은 다른 프로그램으로 데이터를 복사하는 것입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 **Text** 데이터 열이 추적에 포함되어 있는 경우 SQL 일괄 처리와 RPC(원격 프로시저 호출) 이벤트가 있는 추적 파일을 사용할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에 사용할 수 있도록 올바른 이벤트와 열이 캡처되었는지 확인하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 제공되는 사전 정의된 튜닝 템플릿을 사용합니다.  
@@ -87,7 +87,7 @@ AND     CPU < (Duration * 1000)
   
  동일한 방법을 사용하여 그룹화된 이벤트를 찾을 수 있습니다. 찾던 이벤트를 발견하면 **ClientProcessID**, **ApplicationName**또는 다른 이벤트 클래스로 해당 이벤트를 그룹화하여 시간 순서대로 관련 작업을 확인합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [저장된 추적 보기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [필터 정보 보기 &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   

@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a58e89017ef86f85b71345cbb9f773e96dd78dd5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f8ca783fe598e05a83c32a22e821f9b0ce48760c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
+```sql  
 sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'  
 ```  
   
@@ -114,7 +114,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
 ## <a name="examples"></a>예  
 1.  다음 코드 예제에서는 리소스 풀 Pool_Hekaton에 데이터베이스 Hekaton_DB를 바인딩합니다.  
   
-```tsql  
+```sql  
 sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'  
 ```  
  
@@ -122,7 +122,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  2. 확장 된 예제 위 일부 기본 검사를 포함 하는 예제입니다.  다음 실행 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
-```tsql
+```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
 DECLARE @database sysname = N'Hekaton_DB';
 

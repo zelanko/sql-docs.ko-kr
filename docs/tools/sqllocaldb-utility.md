@@ -3,7 +3,7 @@ title: "SqlLocalDB 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqllocaldb
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 962a07574f343032dff1099d468d066944a186a7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 96463b7d884bf4744a273085c9b77dd76ac27294
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **SqlLocalDB** 유틸리티의 인스턴스를 만드는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**합니다. **SqlLocalDB** 유틸리티(SqlLocalDB.exe)는 사용자와 개발자가 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 인스턴스를 만들고 관리하는 데 사용할 수 있는 간단한 명령줄 도구입니다. **LocalDB**를 사용하는 방법에 대한 자세한 내용은 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)를 참조하세요.  

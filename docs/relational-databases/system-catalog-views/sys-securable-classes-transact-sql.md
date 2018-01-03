@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 592e0b34a2789df1c1aeb76b412feee110af248c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3d21b559f232a05ab8699962b4691aa3b4e3bea9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssecurableclasses-transact-sql"></a>sys.securable_classes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**class_desc**|**sysname**|클래스의 이름입니다.|  
-|**클래스**|**int**|클래스의 숫자 지정입니다.|  
+|**class**|**int**|클래스의 숫자 지정입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 인스턴스에서 지원하는 보안 개체 클래스를 반환합니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.securable_classes ORDER BY class;  
 ```  
   

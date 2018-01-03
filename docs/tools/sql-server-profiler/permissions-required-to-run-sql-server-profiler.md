@@ -3,7 +3,7 @@ title: "SQL Server 프로파일러 실행에 필요한 권한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2ad771af23debc0bb70cf0a2ce8870ba18aac1bc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7892bf572016f697a80878376cfeba4aea3b447c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server 프로파일러 실행에 필요한 권한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]기본적으로 실행 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 작성에 사용 되는 TRANSACT-SQL 저장 프로시저와 같은 사용자 권한이 필요 합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하려면 사용자에게 ALTER TRACE 권한이 있어야 합니다. 자세한 내용은 [GRANT 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)을 참조하세요.  

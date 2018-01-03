@@ -3,7 +3,7 @@ title: "TestServer 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b0d3bce0b200207f12527b639d259a723ececa7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f814fbd049ada0169d0ae14cc5161372285e173
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testserver-element-dta"></a>TestServer 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]프로덕션 서버를 튜닝할 때 사용할 테스트 서버를 지정 합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 길이 제한 없음|  
 |**기본값**|없음|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="example"></a>예제  
  이 요소의 사용 예제를 보려면 [프로덕션 서버 튜닝 로드 줄이기](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -3,7 +3,7 @@ title: "FeatureSet 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4b31e99ca6ad7d26ae67bd3092295cc7736d1fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f921dbdf63afe4748f80eeae63ecd559c909b7cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]분석 중에 사용할 데이터베이스 엔진 튜닝 관리자 할 물리적 디자인 구조 (인덱스 또는 인덱싱된 뷰)를 포함 합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 최대 길이 없음|  
 |**허용된 값**|**IDX_IV**<br /> 인덱스와 인덱싱된 뷰<br /><br /> **IDX**<br /> 인덱스만<br /><br /> **IV**<br /> 인덱싱된 뷰만<br /><br /> **NCL_IDX**<br /> 비클러스터형 인덱스만<br /><br /> 이 요소에 이러한 값 중 하나를 사용합니다.|  

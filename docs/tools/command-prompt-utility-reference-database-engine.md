@@ -3,7 +3,7 @@ title: "SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진) | Micro
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: misc
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1d08c7596e3ded97a7ef1dddf0b84bd3470bbab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9939c015b3c163d8de8b70c626c0b9108a48269c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]명령 프롬프트 유틸리티를 사용 하면 스크립트에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업 합니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 명령 프롬프트 유틸리티를 보여 줍니다.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 |*기울임꼴*|사용자가 제공하는 매개 변수|  
 |**굵게**|표시된 대로 입력해야 하는 명령, 매개 변수 및 다른 구문|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 배포 에이전트](../relational-databases/replication/agents/replication-distribution-agent.md)   
  [복제 로그 판독기 에이전트](../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [복제 병합 에이전트](../relational-databases/replication/agents/replication-merge-agent.md)   

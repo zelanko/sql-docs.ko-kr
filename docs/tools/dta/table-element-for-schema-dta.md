@@ -3,7 +3,7 @@ title: "요소 (DTA) 스키마에 대 한 테이블 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 730783951f15814c4ffd02dba76b8b45d95d61ad
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d6ebf5a4a05d02281f7335d7244fc17bbca7e2b3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-element-for-schema-dta"></a>Schema의 Table 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]튜닝에 사용할 테이블을 지정합니다.  
@@ -39,13 +39,13 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|Attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**NumberOfRows**|(선택 사항) 여러 다른 크기의 테이블을 시뮬레이트할 수 있게 하는 정수입니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 1에서 255자 사이|  
 |**기본값**|없음|  

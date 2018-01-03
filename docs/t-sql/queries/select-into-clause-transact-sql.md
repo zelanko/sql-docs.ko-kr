@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>선택-INTO 절 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>1. 여러 원본에서 열을 지정하여 테이블 만들기  
  다음 예에서는 다양한 직원 관련 테이블 및 주소 관련 테이블에서 7개의 열을 선택하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `dbo.EmployeeAddresses` 테이블을 만듭니다.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +128,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>2. 최소 로깅을 사용하여 행 삽입  
  다음 예에서는 `dbo.NewProducts` 테이블을 만든 후 `Production.Product` 테이블의 행을 삽입합니다. 여기에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 복구 모델이 FULL로 설정되었다고 가정합니다. 최소 로깅을 사용할 수 있도록 행 삽입 전에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 복구 모델이 BULK_LOGGED로 설정되고 SELECT...INTO 문 다음에 FULL로 재설정됩니다. 이 프로세스를 통해 SELECT...INTO 문은 트랜잭션 로그에 최소 공간을 사용하여 효율적으로 수행됩니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +144,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>3. IDENTITY 함수를 사용하여 ID 열 만들기  
  다음 예에서는 IDENTITY 함수를 사용 하 여 새 테이블에 id 열을 만들려는 `Person.USAddress` 에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. 이렇게 하는 이유는 테이블을 정의하는 SELECT 문에 조인이 포함되어 있기 때문입니다. 조인이 포함되어 있으면 IDENTITY 속성이 새 테이블에 전송되지 않습니다. IDENTITY 함수에 지정된 초기값과 증가값은 원본 테이블 `AddressID`의 `Person.Address` 열에 있는 해당 값과 다릅니다.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +173,7 @@ WHERE name = 'AddressID';
   
  **적용 대상:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +216,7 @@ GO
   
  **적용 대상:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 참조하세요.  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -234,7 +234,7 @@ ORDER BY YearlyIncome
 
  **적용 대상:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE

@@ -1,7 +1,7 @@
 ---
 title: "MySQL (MySQLToSql) 용 SSMA의 새로운 기능 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa1c2183c81438c1d83e13e35c627e5e087b62ec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6da0bf47b7976da1f21262d23bd29d8e093a0516
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL (MySQLToSql) 용 SSMA의 새로운 기능
 이 항목에서는 각 릴리스의 MySQL 변경에 대 한 SSMA를 나열 합니다. 

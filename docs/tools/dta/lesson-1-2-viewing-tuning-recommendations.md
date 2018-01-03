@@ -3,7 +3,7 @@ title: "튜닝 권장 구성 보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0beed8adb028f43884306b92223a9c3f58db507b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: edd4b57780ac2df7a8eec09701819b5b44ef19bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>단원 1-2-튜닝 권장 구성 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 태스크에서 만든 튜닝 세션을 사용 하 여 [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md)합니다. MyScript.sql [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 스크립트를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스를 튜닝하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **권장 구성** 탭에 해당 결과가 표시됩니다. 다음 태스크에서는 **튜닝 관리자 GUI(그래픽 사용자 인터페이스)의** 권장 구성 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 탭을 소개하고 튜닝 세션 결과에 대해 제공된 정보를 탐색하는 과정을 안내합니다.  

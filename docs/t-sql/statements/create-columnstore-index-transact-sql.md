@@ -34,11 +34,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +46,11 @@ ms.lasthandoff: 11/17/2017
 비클러스터형된 columnstore 인덱스를 만들거나 rowstore 테이블을 클러스터형된 columnstore 인덱스로 변환 합니다. OLTP 워크 로드에서 실시간 운영 분석을 효율적으로 실행 하거나 데이터 웨어하우징 작업에 대 한 데이터 압축 및 쿼리 성능 향상을 위해 columnstore 인덱스를 사용 합니다.  
   
 > [!NOTE]  
->  부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 테이블을 클러스터형된 columnstore 인덱스로 만들 수 있습니다.   먼저 rowstore 테이블을 생성 한 다음 클러스터형된 columnstore 인덱스로 변환 하는 데 필요한 파일이 없습니다.  
-  
+> 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 테이블을 클러스터형된 columnstore 인덱스로 만들 수 있습니다.   먼저 rowstore 테이블을 생성 한 다음 클러스터형된 columnstore 인덱스로 변환 하는 데 필요한 파일이 없습니다.  
+
+> [!TIP]
+> 인덱스 디자인 지침에 대 한 자세한 내용은 참조는 [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)합니다.
+
 예제를 건너뜁니다.  
 -   [Rowstore 테이블을 columnstore로 변환 하기 위한 예제](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [비클러스터형 columnstore 인덱스에 대 한 예제](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -257,7 +260,7 @@ ON
   
 이 컨텍스트에서 default는 키워드가 아닙니다. 기본 파일 그룹에 대 한 식별자 이며 ON 같이 구분 되어야 합니다 **"**기본**"** 또는 ON **[**기본**]**합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> Permissions  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="GenRemarks"></a>일반적인 주의 사항  
@@ -272,7 +275,7 @@ ON
 - INSERT, UPDATE, DELETE 또는 MERGE 작업으로 필터링된 인덱스의 데이터를 수정합니다.  
 - 필터링 된 인덱스는 쿼리 최적화 프로그램에서 쿼리 계획을 생성 하기 위해 사용 됩니다.  
   
-    |Set 옵션|필요한 값|기본 서버 값|기본값<br /><br /> OLE DB 및 ODBC 값|기본값<br /><br /> DB-Library 값|  
+    |Set 옵션|필요한 값|기본 서버 값|Default<br /><br /> OLE DB 및 ODBC 값|Default<br /><br /> DB-Library 값|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -299,20 +302,20 @@ ON
 **Columnstore 인덱스의 각 열은 다음과 같은 일반적인 비즈니스 데이터 형식 중 하나 여야 합니다.** 
 -   datetimeoffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   날짜  
 -   시간 [(  *n*  )]  
 -   float [(  *n*  )]  
 -   실제 [(  *n*  )]  
 -   10 진수 [( *정밀도* [ *, 배율* ] **)** ]
 -   숫자 [( *정밀도* [ *, 배율* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
--   smallint  
--   tinyint  
+-   SMALLMONEY  
+-   BIGINT  
+-   ssNoversion  
+-   SMALLINT  
+-   TINYINT  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar (max) (적용할 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 클러스터형된 columnstore 인덱스에만에서 가격 책정 계층을 premium Azure SQL 데이터베이스)   
@@ -619,7 +622,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  테이블에 비클러스터형 columnstore 인덱스를 만든 후에는 해당 테이블에서 데이터를 직접 수정할 수 없습니다. INSERT, UPDATE, DELETE 또는 MERGE를 사용 하 여 쿼리는 실패 하 고 오류 메시지를 반환 합니다. 테이블에서 데이터를 추가하거나 수정하려면 다음 중 하나를 수행합니다.  
   
--   columnstore 인덱스를 사용하지 않도록 설정하거나 삭제합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 예를 들면 다음과 같습니다.  
+-   columnstore 인덱스를 사용하지 않도록 설정하거나 삭제합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 예:  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  

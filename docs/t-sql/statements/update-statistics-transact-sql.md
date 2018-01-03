@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96ace864a1cff7724451b521db4b184323db6d8e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +181,7 @@ PERSIST_SAMPLE_PERCENT = {ON | OFF}
 ## <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats를 사용하여 모든 통계 업데이트  
  데이터베이스의 모든 사용자 정의 테이블 및 내부 테이블에 대한 통계를 업데이트하는 방법은 저장 프로시저 [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)를 참조하세요. 예를 들어 다음 명령에서는 sp_updatestats를 호출하여 데이터베이스에 대한 모든 통계를 업데이트합니다.  
   
-```t-sql  
+```sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -191,23 +191,23 @@ EXEC sp_updatestats;
 ## <a name="pdw--sql-data-warehouse"></a>PDW / SQL 데이터 웨어하우스  
  다음 구문을 PDW에서 지원 되지 않습니다 / SQL 데이터 웨어하우스  
   
-```t-sql  
+```sql  
 update statistics t1 (a,b);   
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with sample 10 rows;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with NORECOMPUTE;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with INCREMENTAL=ON;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
@@ -219,7 +219,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ### <a name="a-update-all-statistics-on-a-table"></a>1. 테이블에 대한 모든 통계 업데이트  
  모든 인덱스에 대 한 통계를 업데이트 하는 다음 예제는 `SalesOrderDetail` 테이블입니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -229,7 +229,7 @@ GO
 ### <a name="b-update-the-statistics-for-an-index"></a>2. 인덱스에 대한 통계 업데이트  
  다음 예에서는 `AK_SalesOrderDetail_rowguid` 테이블의 `SalesOrderDetail` 인덱스에 대한 통계를 업데이트합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -239,7 +239,7 @@ GO
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>3. 50퍼센트 샘플링을 사용하여 통계 업데이트  
  다음 예에서는 `Name` 테이블의 `ProductNumber` 및 `Product` 열에 대한 통계를 만든 후 업데이트합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -253,7 +253,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>4. FULLSCAN 및 NORECOMPUTE를 사용하여 통계 업데이트  
  다음 예에서는 `Products` 테이블의 `Product` 통계를 업데이트하고 `Product` 테이블의 모든 행을 전체 검색하며 `Products` 통계에 대한 자동 통계를 비활성화합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -266,21 +266,21 @@ GO
 ### <a name="e-update-statistics-on-a-table"></a>5. 테이블에 대 한 통계를 업데이트 합니다.  
  다음 예에서는 업데이트 된 `CustomerStats1` 에 대 한 통계는 `Customer` 테이블입니다.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>6. 전체 검색을 사용 하 여 통계를 업데이트 합니다.  
  다음 예에서는 업데이트 된 `CustomerStats1` 에 있는 행의 모든 검색 기준으로 통계는 `Customer` 테이블입니다.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### <a name="g-update-all-statistics-on-a-table"></a>7. 테이블에 대한 모든 통계 업데이트  
  모든 통계를 업데이트 하는 다음 예제는 `Customer` 테이블입니다.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer;  
 ```  
   
@@ -293,7 +293,7 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40; Transact SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_properties&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 
 

@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4df7543112666b498a2896d62d16186a83d6e4af
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/21/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들어<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. 집계 이벤트에 대 한 **End_time** 은 항상 정확히 5 분 후 해당 보다 **start_time** 같은 행에 있습니다. 집계 되지 않는 이벤트에 대 한 **start_time** 및 **end_time** 같은 실제 UTC 날짜와 이벤트의 시간입니다.|  
 |**event_category**|**nvarchar(64)**|이 이벤트를 생성한 높은 수준의 구성 요소입니다.<br /><br /> 참조 [이벤트 유형을](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 목록이 가능한 값에 대 한 합니다.|  
 |**event_type**|**nvarchar(64)**|이벤트의 유형입니다.<br /><br /> 참조 [이벤트 유형을](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 목록이 가능한 값에 대 한 합니다.|  
 |**event_subtype**|**int**|발생 이벤트의 하위 유형입니다.<br /><br /> 참조 [이벤트 유형을](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 목록이 가능한 값에 대 한 합니다.|  
 |**event_subtype_desc**|**nvarchar(64)**|이벤트 하위 유형에 대한 설명입니다.<br /><br /> 참조 [이벤트 유형을](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 목록이 가능한 값에 대 한 합니다.|  
-|**심각도**|**int**|오류의 심각도입니다. 가능한 값은<br /><br /> 0 = 정보<br />1 = 경고<br />2 = 오류|  
+|**severity**|**int**|오류의 심각도입니다. 가능한 값은<br /><br /> 0 = 정보<br />1 = 경고<br />2 = 오류|  
 |**event_count**|**int**|횟수가이 이벤트가 발생 한 지정된 된 데이터베이스에 대 한 지정 된 시간 간격 내에서 (**start_time** 및 **end_time**).|  
 |**설명**|**nvarchar(max)**|이벤트에 대한 상세한 설명입니다.<br /><br /> 참조 [이벤트 유형을](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 목록이 가능한 값에 대 한 합니다.|  
 |**additional_data**|**XML**|*참고:이 값은 항상 Azure SQL 데이터베이스 v 12에 대 한 NULL입니다. 참조 [예제](#Deadlock) v 12에 대 한 교착 상태 이벤트를 검색 하는 방법에 대 한 섹션.*<br /><br /> 에 대 한 **교착 상태** 이벤트,이 열에는 교착 상태 그래프가 포함 합니다. 이 열은 다른 이벤트 유형에 대해서는 NULL을 반환합니다. |  
@@ -64,11 +64,11 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  이 뷰에는 여기에 나와 있는 것 외에 발생할 수 있는 다른 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 이벤트가 포함되어 있지 않습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 후속 릴리스에 범주, 이벤트 유형 및 하위 유형이 추가될 수 있습니다.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**심각도**|**설명**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**설명**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**연결**|**connection_successful**|0|**connection_successful**|0|데이터베이스에 연결되었습니다.|  
 |**연결**|**connection_failed**|0|**invalid_login_name**|2|이 SQL Server 버전에서 로그인 이름이 잘못되었습니다.|  
-|**연결**|**connection_failed**|1.|**windows_auth_not_supported**|2|이 버전의 SQL Server에서는 Windows 로그인이 지원되지 않습니다.|  
+|**연결**|**connection_failed**|1|**windows_auth_not_supported**|2|이 버전의 SQL Server에서는 Windows 로그인이 지원되지 않습니다.|  
 |**연결**|**connection_failed**|2|**attach_db_not_supported**|2|사용자가 지원되지 않는 데이터베이스 파일 첨부를 요청했습니다.|  
 |**연결**|**connection_failed**|3|**change_password_not_supported**|2|사용자가 지원되지 않는 사용자 로그인 암호 변경을 요청했습니다.|  
 |**연결**|**connection_failed**|4|**login_failed_for_user**|2|로그인에 실패했습니다.|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
 |**연결**|**connection_failed**|8|**client_close**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 클라이언트 연결 설정 시 시간이 초과되었습니다. 연결 제한 시간을 늘려 보세요.|  
 |**연결**|**connection_failed**|9|**재구성**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 당시에 데이터베이스가 재구성 중이었으므로 연결이 실패했습니다.|  
 |**연결**|**connection_terminated**|0|**idle_connection_timeout**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 연결이 시스템에 정의된 임계값보다 오랫동안 유휴 상태였습니다.|  
-|**연결**|**connection_terminated**|1.|**재구성**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 세션이 데이터베이스 재구성으로 인해 종료되었습니다.|  
+|**연결**|**connection_terminated**|1|**재구성**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 세션이 데이터베이스 재구성으로 인해 종료되었습니다.|  
 |**연결**|**제한**|*\<이유 코드 >*|**reason_code**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  정체 이유 코드:  *\<이유 코드 >*합니다. 자세한 내용은 참조 [엔진 제한](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)합니다.|  
 |**연결**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 트랜잭션을 오래 실행하여 세션이 종료됩니다. 트랜잭션을 줄여 보세요. 자세한 내용은 참조 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
 |**연결**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 잠금을 너무 많이 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽거나 수정하는 행 수를 줄여 보세요. 자세한 내용은 참조 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  예를 들어, 사용자가 잘못된 로그인 이름으로 인해 2012년 2월 5일 오전 11시와 11시 5분(UTC) 사이에 데이터베이스 Database1에 대한 연결을 7회 실패한 경우 이 정보는 이 뷰의 단일 행에서 확인할 수 있습니다.  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**심각도**|**event_count**|**설명**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**설명**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -174,7 +174,7 @@ WHERE event_type = 'throttling'
 ### <a name="db-scoped-extended-event"></a>DB 범위 확장된 이벤트  
  다음 샘플 코드를 사용 하 여 db 범위 확장 이벤트 (XEvent) 세션을 설정 하려면:  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -206,7 +206,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 다음 쿼리를 사용 하 여 교착 상태 인지 확인 합니다.  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  

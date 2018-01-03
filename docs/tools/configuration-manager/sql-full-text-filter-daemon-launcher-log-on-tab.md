@@ -3,7 +3,7 @@ title: "SQL 전체 텍스트 필터 데몬 시작 관리자 (로그온 탭) | Mi
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 88b20c4eb7da9731885989284da6f893f4755839
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 816ec9e88b5786ef9fc5c59b17a2ccb4cfcd4934
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>SQL 전체 텍스트 필터 데몬 시작 관리자(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL 전체 텍스트 필터 데몬 시작 관리자 (FDHOST Launcher) 서비스가 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색 합니다. 전체 텍스트 검색을 사용할 경우 이 서비스를 실행해야 합니다. 필터 데몬 호스트 프로세스에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "전체 텍스트 검색 아키텍처"를 참조하십시오.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 >   
 >  서비스를 실행할 계정을 선택하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "Windows 서비스 계정 설정"을 참조하십시오.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **기본 제공 계정**  
  **로컬 시스템**  
  로컬 시스템 계정을 지정합니다. 이 계정에는 암호가 필요하지 않습니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 서비스가 다른 서버와 상호 작용하지 못하도록 할 수 있습니다.  

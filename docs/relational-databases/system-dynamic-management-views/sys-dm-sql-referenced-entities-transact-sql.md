@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   파티션 함수  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
 ## <a name="syntax"></a>구문  
   
@@ -123,22 +123,22 @@ sys.dm_sql_referenced_entities (
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|테이블|예*|예|  
+|Table|예*|예|  
 |보기|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|아니요|예|  
+|CLR 저장 프로시저|아니오|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니요|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|CLR 사용자 정의 함수|아니오|예|  
+|CLR 트리거(DML 및 DDL)|아니오|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니오|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니오|  
+|확장 저장 프로시저|아니오|예|  
+|큐|아니오|예|  
+|동의어|아니오|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니오|예|  
+|XML 스키마 컬렉션|아니오|예|  
+|파티션 함수|아니오|예|  
   
  \*한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   
@@ -152,7 +152,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>1. 데이터베이스 수준 DDL 트리거에 의해 참조되는 엔터티 반환  
  다음 예에서는 데이터베이스 수준 DDL 트리거 `ddlDatabaseTriggerLog`에 의해 참조되는 엔터티(테이블 및 열)를 반환합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +164,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>2. 개체에 의해 참조되는 엔터티 반환  
  다음 예에서는 사용자 정의 함수 `dbo.ufnGetContactInformation`에 의해 참조되는 엔터티를 반환합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +176,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>3. 열 종속성 반환  
  다음 예에서는 `Table1` 열과 `c` 열의 합계로 정의되는 계산 열 `a`가 포함된 `b` 테이블을 만듭니다. 그런 다음 `sys.dm_sql_referenced_entities` 뷰를 호출합니다. 이 뷰는 계산 열에 정의된 각 열마다 하나씩 두 개의 행을 반환합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +205,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>4. 비스키마 바운드 열 종속성 반환  
  다음 예에서는 `Table1`을 삭제하고 `Table2` 및 저장 프로시저 `Proc1`을 만듭니다. 이 프로시저는 `Table2` 및 존재하지 않는 테이블 `Table1`을 참조합니다. 저장 프로시저가 참조 엔터티로 지정되어 `sys.dm_sql_referenced_entities` 뷰가 실행됩니다. 결과 집합에는 `Table1`에 대한 행 하나와 `Table2`에 대한 행 세 개가 표시됩니다. `Table1`이 없기 때문에 열 종속성을 확인할 수 없고 오류 2020이 반환됩니다. `is_all_columns_found` 열은 `Table1`에 대해 검색할 수 없는 열이 있음을 나타내는 0을 반환합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +239,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>5. 동적 종속성 유지 관리 설명  
  다음 예에서는 예 4를 확장하여 종속성이 동적으로 유지 관리되고 있음을 보여 줍니다. 먼저 예 4에서 삭제한 `Table1`을 다시 만듭니다. 그러면 저장 프로시저가 참조 엔터티로 지정되어 `sys.dm_sql_referenced_entities`가 다시 실행됩니다. 결과 집합은 저장 프로시저에 정의된 테이블 및 해당 열이 모두 반환되었음을 보여 줍니다. 또한 `is_all_columns_found` 열은 모든 개체 및 열에 대해 1을 반환합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +272,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   

@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec4c1036182df1ab4a9c21dff494a0a17a1bca73
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 32a064570e66de5e2bde0bb539221c04366d5a73
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>공간 형식-geometry (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-showing-how-to-add-and-query-geometry-data"></a>1. geometry 데이터를 추가하고 쿼리하는 방법 보기  
  다음 두 예에서는 geometry 데이터를 추가하고 쿼리하는 방법을 보여 줍니다. 첫 번째 예에서는 ID 열과 `geometry` 열 `GeomCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geometry` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString` 의 `geometry`인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
   
-```tsql 
+```sql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -67,7 +67,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>2. 두 geometry 인스턴스의 교차점 반환  
  두 번째 예에서는 `STIntersection()` 메서드를 사용하여 앞서 삽입한 두 `geometry` 인스턴스가 교차하는 지점을 반환합니다.  
   
-```tsql  
+```sql  
 DECLARE @geom1 geometry;  
 DECLARE @geom2 geometry;  
 DECLARE @result geometry;  
@@ -81,7 +81,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geometry-in-a-computed-column"></a>3. 계산 열에서 geometry 사용  
  다음 예제에서는 사용 하 여 지속형된 계산된 열 테이블을 만듭니다는 **geometry** 유형입니다.  
   
-```tsql  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  

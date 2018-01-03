@@ -3,7 +3,7 @@ title: "(SQL Server Profiler) 추적 창 지우기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f0b74a05c9ce561cf9ae8a0e4217b1bfbda1257
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ab76bbe6ab701ac2f5285a4ab3ca919ee587b085
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>추적 창 지우기(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 사용 하 여 실행 중인 추적의 추적 창을 지우는 방법을 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
      추적 창의 내용이 제거됩니다. 추적 창 또는 테이블이 저장된 경우 해당 파일 또는 테이블의 내용이 변경되지 않은 채로 유지됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

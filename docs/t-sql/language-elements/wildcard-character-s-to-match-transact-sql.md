@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee043b18eebafdc86b0d2d6e6a34afc0fc865c2f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e6de8f9b9a1ed36135915e5985312a02c02fba6d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (와일드 카드-일치 항목으로 자) (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/18/2017
 ### <a name="a-simple-example"></a>A: 간단한 예   
 다음 예제에서는 문자로 시작 하는 이름을 반환 `m`합니다. `[n-z]`두 번째 문자 까지의 범위에 어딘가에 같아야 함을 지정 `n` 를 `z`합니다. 백분율 와일드 카드 `%` 3는 문자로 시작 하는 모든 없거나 자를 허용 합니다. `model` 및 `msdb` 데이터베이스가이 기준을 충족 합니다. `master` 데이터베이스 하지 않으며 결과 집합에서 제외 됩니다.
  
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm[n-z]%';
 ```
@@ -59,7 +59,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B: 더 복잡 한 예제   
  다음 예에서는 [] 연산자를 사용하여 4자리 우편 번호 주소를 가지는 모든 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 직원의 ID와 이름을 찾는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.BusinessEntityID, p.FirstName, p.LastName, a.PostalCode  

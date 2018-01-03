@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7680fdcc7f3d59295f6dd4dd9e08501d56d54d4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39223c0b83e3c79bede3e25ed6f5f8e70f34750b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 ## <a name="examples"></a>예  
  다음 예에서는 `1` 테이블의 인덱스 ID `1`과 키 열 `Production.Location`에 대해 두 속성이 반환됩니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   

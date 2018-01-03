@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b8ee79d871f207b59ccaf5cc0562d7e125e596a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9f875f7d34c568bc1156c5f8bce60d893fce8039
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX(선택적 XML 인덱스)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ identifier
 ## <a name="examples"></a>예  
  다음 예에서는 ALTER INDEX 문을 보여 줍니다. 이 문은 인덱스의 XQuery 부분에 `'/a/b/m'` 경로를 추가하고 [CREATE SELECTIVE XML INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md) 항목의 예에서 만든 인덱스의 SQL 부분에서 `'/a/b/e'` 경로를 삭제합니다. 삭제할 경로는 해당 경로를 만들 때 지정한 경로 이름으로 식별됩니다.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -167,7 +167,7 @@ FOR
   
  다음 예에서는 인덱스 옵션을 지정하는 ALTER INDEX 문을 보여 줍니다. 인덱스 옵션이 허용되는 이유는 이 문이 FOR 절을 사용하여 경로를 추가하거나 제거하지 않기 때문입니다.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 PAD_INDEX = ON;  

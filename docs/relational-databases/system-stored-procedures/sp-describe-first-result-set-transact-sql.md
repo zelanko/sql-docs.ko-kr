@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1ad511e008e2d2c1d975f54a03db8290b26e527
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -186,7 +186,7 @@ WHERE object_id = @id1'
   
  정보가 없음을 나타내는 0을 반환하는 예제가 반환됩니다.  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.t (a int PRIMARY KEY, b1 int);  
 GO  
 CREATE VIEW dbo.v AS SELECT b1 AS b2 FROM dbo.t;  
@@ -196,35 +196,35 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1.|b3|NULL|NULL|NULL|NULL|  
+|0|1|b3|NULL|NULL|NULL|NULL|  
   
  1을 사용하는 예제는 쿼리에 FOR BROWSE 옵션이 포함된 것처럼 정보를 반환합니다.  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1  
   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1.|b3|dbo|t|B1|0|  
-|1|2|a|dbo|t|a|1.|  
+|0|1|b3|dbo|t|B1|0|  
+|1|2|a|dbo|t|a|1|  
   
  마치 커서를 준비하는 것처럼 분석됨을 나타내는 2를 사용하는 예제.  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1.|B 3|dbo|v|B 2|0|  
+|0|1|B 3|dbo|v|B 2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>문제 예  

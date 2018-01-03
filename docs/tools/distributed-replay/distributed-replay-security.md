@@ -3,7 +3,7 @@ title: "Distributed Replay 보안 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e3f2b9639e7643ffefac8e67ac08c7443bb0463
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c49b865f8db2b57e95f4c2c5746e1d40090b15d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]설치 및 사용 하기 전에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을이 항목의 중요 한 보안 정보를 검토 해야 합니다. 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
 -   가상 계정 및 MSA(관리 서비스 계정)  
   
--   네트워크 서비스, 로컬 서비스 및 시스템  
+-   Network Services, 로컬 서비스 및 시스템  
   
  그룹 계정(로컬 또는 도메인) 및 다른 기본 제공 계정(예: Everyone)은 사용할 수 없습니다.  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 12/05/2017
   
 -   테스트에 사용된 추적 파일, 중간 파일, 디스패치 파일 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일을 모두 삭제합니다. 중간 파일 및 디스패치 파일은 각각 컨트롤러와 클라이언트의 작업 디렉터리에 저장됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay 설치 - 개요](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   

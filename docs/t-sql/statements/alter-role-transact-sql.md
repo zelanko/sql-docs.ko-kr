@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a568c327c48b346491fae7d8b72d0e27bf5b5fea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 897e8017965e71f345a93550e9af0c138d80b3b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ DROP MEMBER *데이터베이스 _ 보안 주체*
   
  다음 예에서는 `buyers` 역할의 이름을 `purchasing`으로 변경합니다. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
@@ -135,7 +135,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
   
  이 예에서는 라는 데이터베이스 역할을 만든 `Sales`합니다. 구성원 자격과 Barry 라는 데이터베이스 사용자를 추가 하 고 Barry 구성원을 제거 하는 방법을 보여 줍니다. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 CREATE ROLE Sales;  
 ALTER ROLE Sales ADD MEMBER Barry;  
 ALTER ROLE Sales DROP MEMBER Barry;  

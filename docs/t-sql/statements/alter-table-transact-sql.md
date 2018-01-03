@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -543,7 +543,7 @@ WITH CHECK | WITH NOCHECK
   
  *max_degree_of_parallelism* 다음 값 중 하나일 수 있습니다.  
   
- 1.  
+ 1  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -765,7 +765,7 @@ TABLE
   
  **테이블에 대 한 스트레치 데이터베이스를 활성화합니다.**  
   
- 지정 하 여 테이블에 대 한 확대를 사용 하는 경우 `ON`를 지정 해야 `MIGRATION_STATE = OUTBOUND` 시작 하려면 즉시 데이터 마이그레이션 또는 `MIGRATION_STATE = PAUSED` 데이터 마이그레이션을 연기 하 합니다. 기본값은 `MIGRATION_STATE = OUTBOUND`합니다. 테이블에 스트레치를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)합니다.  
+ 지정 하 여 테이블에 대 한 확대를 사용 하는 경우 `ON`를 지정 해야 `MIGRATION_STATE = OUTBOUND` 시작 하려면 즉시 데이터 마이그레이션 또는 `MIGRATION_STATE = PAUSED` 데이터 마이그레이션을 연기 하 합니다. 기본값은 `MIGRATION_STATE = OUTBOUND`입니다. 테이블에 스트레치를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)합니다.  
   
  **필수 구성 요소**. 테이블에 대해 스트레치를 사용 하기 전에 서버에서를 데이터베이스에서 스트레치를 사용 하도록 설정 해야 합니다. 자세한 내용은 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)를 참조하십시오.  
   
@@ -777,7 +777,7 @@ TABLE
   
 -   테이블에서 스트레치를 비활성화하고 Azure에서 SQL Server로 테이블에 대한 원격 데이터를 다시 복사하려면 다음 명령을 실행합니다. 이 명령은 취소할 수 없습니다.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -788,12 +788,12 @@ ALTER TABLE \<table name>
   
 -   테이블에서 스트레치를 비활성화하고 원격 데이터를 중지하려면 다음 명령을 실행합니다.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
   
- 테이블에서 스트레치 데이터베이스를 비활성화하면 데이터 마이그레이션이 중단되고 쿼리 결과에 원격 테이블의 결과가 더 이상 포함되지 않습니다.  
+ 테이블에서 Stretch Database를 비활성화하면 데이터 마이그레이션이 중단되고 쿼리 결과에 원격 테이블의 결과가 더 이상 포함되지 않습니다.  
   
  스트레치를 비활성화 하면 원격 테이블을 제거 되지 않습니다. 원격 테이블을 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다.  
   
@@ -1764,7 +1764,7 @@ WITH
   
 |Partition|데이터에 게 있나요?|경계 범위|  
 |---------------|---------------|--------------------|  
-|1.|예|OrderDate < ' 2004-01-01'|  
+|1|예|OrderDate < ' 2004-01-01'|  
 |2|예|' 2004-01-01' < = 주문일 < ' 2005-01-01'|  
 |3|예|' 2005-01-01' < = 주문일 < ' 2006-01-01'|  
 |4|예|' 2006-01-01'< = 주문일 < ' 2007-01-01'|  

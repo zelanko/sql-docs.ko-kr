@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4f4793f0692b77ba8a606c904612674e29721
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a498430f8af12bad1e5ec934dcb60c63aeb96e56
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="translate-transact-sql"></a>번역 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>2. GeoJSON 지점은 WKT으로 변환    
 GeoJSON는 다양 한 지리적 데이터 구조를 인코딩에 대 한 형식입니다. 와 `TRANSLATE` 함수 개발자 GeoJSON 지점은 WKT 형식으로 또는 그 반대로 쉽게 변환할 수 있습니다. 다음 쿼리를 일반 중괄호 입력에 사각형와 둥근 중괄호를 대체합니다.   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```

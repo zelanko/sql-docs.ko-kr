@@ -3,7 +3,7 @@ title: "(SQL Server Profiler)의 이벤트 종료 시간 기반의 이벤트 필
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bebd06fdaccb548e3c189a6d97ec3c423d9a142
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 241526f1d5bf95ffc3baf7d37ee64fd586d0c9a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>이벤트 종료 시간 기반의 이벤트 필터링(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 이벤트를 사용 하 여 종료 시간에 따라 추적 이벤트를 필터링 하는 방법을 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  **보다 큼** 이나 **보다 작음**을 확장하고 비교 연산자 아래에 나타나는 필드에 **datetime**값을 입력합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

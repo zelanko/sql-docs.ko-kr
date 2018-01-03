@@ -38,11 +38,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3e872d63c71817e8f79e261598875840ccb65f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a218d6f89ee2c190361441a6922770e770ec11a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]다음 예에서는 microsoft에서 XML 대량 로드 기능을 설명 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 각 예는 XSD 스키마와 이에 해당하는 XDR 스키마를 제공합니다.  
@@ -123,7 +123,7 @@ End Function
   
 1.  다음 테이블을 만듭니다.  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Cust(CustomerID  int PRIMARY KEY,  
                       CompanyName varchar(20),  
                       City        varchar(20));  
@@ -281,7 +281,7 @@ End Function
   
 1.  두 테이블을 만들고 **tempdb** 데이터베이스:  
   
-    ```tsql  
+    ```sql  
     USE tempdb;  
     CREATE TABLE Cust(  
            CustomerID  int PRIMARY KEY,  
@@ -388,7 +388,7 @@ End Function
 </xsd:schema>  
 ```  
   
- 스키마 지정는  **\<순서 >** 인 요소는  **\<제품 >** 자식 요소입니다. **\<순서 >** 요소 Ord 테이블에 매핑됩니다 및  **\<제품 >** 요소는 데이터베이스의 Product 테이블에 매핑됩니다. 에 지정 된 체인 관계는  **\<제품 >** 요소는 OrderDetail 테이블이 나타내는 M:N 관계를 식별 합니다. 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
+ 스키마 지정는  **\<순서 >** 인 요소는  **\<제품 >** 자식 요소입니다.  **\<순서 >** 요소 Ord 테이블에 매핑됩니다 및  **\<제품 >** 요소는 데이터베이스의 Product 테이블에 매핑됩니다. 에 지정 된 체인 관계는  **\<제품 >** 요소는 OrderDetail 테이블이 나타내는 M:N 관계를 식별 합니다. 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
   
  이 스키마를 사용하여 XML 문서를 대량 로드하는 경우 Ord, Product 및 OrderDetail 테이블에 레코드가 추가됩니다.  
   
@@ -396,7 +396,7 @@ End Function
   
 1.  다음 3개의 테이블을 만듭니다.  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Ord (  
              OrderID     int  PRIMARY KEY,  
              CustomerID  varchar(5));  

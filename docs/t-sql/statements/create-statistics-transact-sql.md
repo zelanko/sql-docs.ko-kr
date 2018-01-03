@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +234,7 @@ CREATE STATISTICS statistics_name
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>1. CREATE STATISTICS에 SAMPLE number PERCENT 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ContactMail1` 테이블에서 `BusinessEntityID` 및 `EmailPromotion` 열에 대해 5% 무작위 샘플링을 사용하여 `Contact` 통계를 만듭니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
@@ -243,7 +243,7 @@ CREATE STATISTICS ContactMail1
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>2. CREATE STATISTICS에 FULLSCAN 및 NORECOMPUTE 사용  
  다음 예에서는 `ContactMail2` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에서 모든 행에 대한 `Contact` 통계를 만듭니다. 통계의 자동 다시 계산 기능은 사용하지 않습니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -252,7 +252,7 @@ CREATE STATISTICS NamePurchase
 ### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>3. CREATE STATISTICS를 사용하여 필터링된 통계 만들기  
  다음 예에서는 필터링된 통계 `ContactPromotion1`을 만듭니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 데이터의 50%를 샘플링한 다음 `EmailPromotion`이 2인 행을 선택합니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -265,7 +265,7 @@ GO
   
  이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 검색 옵션 통계를 만들려면를 임시 테이블에 외부 테이블에서 훨씬 더 오래 걸립니다. 큰 테이블에 대 한 기본 샘플링 방법으로 충분 합니다.  
   
-```t-sql  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
@@ -276,7 +276,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>5. CREATE STATISTICS에 FULLSCAN 및 PERSIST_SAMPLE_PERCENT 사용  
  다음 예제에서는 `ContactMail2` 의 모든 행에 대 한 통계는 `BusinessEntityID` 및 `EmailPromotion` 의 열은 `Contact` 테이블을 명시적으로 되어 있어야 하지 않는 한 모든 후속 업데이트는 샘플링을 지정할 100% 샘플링 비율을 설정 합니다. 백분율입니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
@@ -287,14 +287,14 @@ CREATE STATISTICS NamePurchase
 ### <a name="f-create-statistics-on-two-columns"></a>6. 두 열에 통계를 작성 합니다.  
  다음 예제에서는 `CustomerStats1` 기준으로 통계는 `CustomerKey` 및 `EmailAddress` 의 열은 `DimCustomer` 테이블입니다. 통계에 있는 행의 통계적으로 중요 한 샘플링을 기반으로 생성 된 `Customer` 테이블입니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>7. 전체 검색을 사용 하 여 통계를 만들어  
  다음 예제에서는 `CustomerStatsFullScan` 에 있는 행의 모든 검색 기준으로 통계는 `DimCustomer` 테이블입니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
@@ -302,7 +302,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>8. 샘플 비율을 지정 하 여 통계를 만들어  
  다음 예제에서는 `CustomerStatsSampleScan` 에 있는 행의 50% 검색 기준으로 통계는 `DimCustomer` 테이블입니다.  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  

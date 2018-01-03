@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 484ad4e6f82bff235fd1a9a3cad5752fb4ce08a2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5b6f184c3ea2a455c59f221f4156e5ab7ce5210
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
+```sql  
 SEMANTICKEYPHRASETABLE  
     (  
     table,  
@@ -54,7 +54,7 @@ SEMANTICKEYPHRASETABLE
   
  이 이름은 1~4개의 부분으로 구성된 이름일 수 있지만 원격 서버 이름은 사용할 수 없습니다.  
   
- **열**  
+ **column**  
  결과가 반환될 인덱싱된 열의 이름입니다. 열에 의미 체계 인덱싱이 사용하도록 설정되어 있어야 합니다.  
   
  **column_list**  
@@ -98,7 +98,7 @@ SEMANTICKEYPHRASETABLE
 ###  <a name="HowToTopPhrases"></a>예 1: 특정 문서에서 상위 키 구 찾기  
  다음 예제에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 @DocumentId 변수를 통해 지정된 문서에서 상위 10개의 키 구를 검색합니다. @DocumentId 변수는 전체 텍스트 인덱스의 키 열에 있는 값을 나타냅니다. **SEMANTICKEYPHRASETABLE** 함수는 테이블 검색 대신 인덱스 검색을 사용하여 이러한 결과를 효율적으로 검색합니다. 이 예에서는 열이 전체 텍스트 및 의미 체계 인덱싱에 대해 구성되어 있는 것으로 가정합니다.  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -113,7 +113,7 @@ ORDER BY KEYP_TBL.score DESC;
 ###  <a name="HowToTopDocuments"></a>예제 2: 특정 키 구가 포함 된 상위 문서 찾기  
  다음 예에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 “Bracket” 키 구가 포함된 상위 25개의 문서를 검색합니다. 이 예에서는 열이 전체 텍스트 및 의미 체계 인덱싱에 대해 구성되어 있는 것으로 가정합니다.  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87af188936ad4c7b2101760b7b18ca63c90db9b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8b5b63c7f76695853ab216aee1aaab63a3139cc2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ### <a name="a-setting-an-option-on-a-specific-index"></a>1. 특정 인덱스에 대한 옵션 설정  
  다음 예제에서는 페이지 잠금을에서 허용 하지 않습니다는 `IX_Customer_TerritoryID` 인덱스에 `Customer` 테이블입니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',  
@@ -104,7 +104,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
 ### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>2. 테이블의 모든 인덱스에 대한 옵션 설정  
  다음 예에서는 `Product` 테이블에 연결된 모든 인덱스에 대해 행 잠금을 허용하지 않습니다. 문의 결과를 표시하기 위해 `sys.indexes` 프로시저를 실행하기 전과 후에 `sp_indexoption` 카탈로그 뷰를 쿼리합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options for all indexes on the table.  
@@ -126,7 +126,7 @@ GO
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>3. 클러스터형 인덱스가 없는 테이블에 대한 옵션 설정  
  다음 예에서는 클러스터형 인덱스가 없는 테이블(힙)에 대해 페이지 잠금을 허용하지 않습니다. `sys.indexes` 전과 후 카탈로그 뷰를 쿼리는 `sp_indexoption` 문의 결과 표시 하려면 프로시저가 실행 될 합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options of the table.   

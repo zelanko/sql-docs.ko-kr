@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bb3aa76b6d09b2a1c31f30c20fb4ce4374d48d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bd975dbb78b502df209a6763c6198284f1f5dea
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ sys.dm_exec_text_query_plan
   
  먼저 `sp_who` 저장 프로시저를 사용하여 쿼리 또는 일괄 처리를 실행 중인 프로세스의 SPID(서버 프로세스 ID)를 검색합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_who;  
@@ -127,7 +127,7 @@ GO
   
  `sp_who`에 의해 반환되는 결과 집합은 SPID가 `54`임을 나타냅니다. `sys.dm_exec_requests` 동적 관리 뷰에 이 SPID를 사용하여 다음 쿼리를 통해 계획 핸들을 검색할 수 있습니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -137,7 +137,7 @@ GO
   
  반환 되는 테이블 **sys.dm_exec_requests** 실행 속도가 느린 쿼리나 일괄 처리에 대 한 계획 핸들 임을 나타냅니다 `0x06000100A27E7C1FA821B10600`합니다. 다음 예에서는 지정 계획 핸들에 대한 쿼리 계획을 반환하고 쿼리 또는 일괄 처리의 모든 문을 반환하도록 기본값 0 및 -1을 사용합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT query_plan   
@@ -148,7 +148,7 @@ GO
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>2. 계획 캐시에서 모든 쿼리 계획 검색  
  계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색하려면 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_cached_plans` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_text_query_plan`으로 전달합니다. 출력은 현재 계획 캐시에 있는 각 계획의 실행 계획은 `query_plan` 반환 되는 테이블의 열입니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT *   
@@ -160,7 +160,7 @@ GO
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>3. 서버가 계획 캐시에서 쿼리 통계를 수집한 모든 쿼리 계획 검색  
  서버가 통계를 수집한 현재 계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색하려면 `sys.dm_exec_query_stats` 동적 관리 뷰를 쿼리하여 캐시에서 이 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_query_stats` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_text_query_plan`으로 전달합니다. 각 계획의 실행 계획 출력은 반환된 테이블의 `query_plan` 열에 있습니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
@@ -171,7 +171,7 @@ GO
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>4. 평균 CPU 시간별 상위 5개 쿼리에 대한 정보 검색  
  다음 예에서는 상위 5개 쿼리에 대한 쿼리 계획과 평균 CPU 시간을 반환합니다. **sys.dm_exec_text_query_plan** 기본값 0 및-1은 쿼리 계획에서 일괄 처리의 모든 문을 반환 하도록 지정 하는 함수입니다.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  

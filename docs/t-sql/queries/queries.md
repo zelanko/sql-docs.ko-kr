@@ -3,7 +3,7 @@ title: "쿼리 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
@@ -18,15 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1281c4a6accf5083cf6b023b4dc19b31ff432d25
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d7e4bf6357fe56f3c9b6a1e67e9e6aeb3675930
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queries"></a>쿼리
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  DML(데이터 조작 언어)은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 데이터를 검색하고 데이터로 작업하는 데 사용하는 어휘입니다. 이러한 DML 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 추가, 수정, 쿼리 또는 제거할 수 있습니다.  
+  데이터 조작 언어 (DML)은 검색 한 데이터로 작업 하는 데 사용 하는 어휘 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 SQL 데이터베이스입니다. SQL 데이터 웨어하우스 및 PDW (자세한 내용은 각 개별 문을 검토) 가장 에서도 작동 합니다. 이러한 DML 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 추가, 수정, 쿼리 또는 제거할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 DML 문을 나열합니다.  

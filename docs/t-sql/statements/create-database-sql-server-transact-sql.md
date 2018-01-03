@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 777f08cf0a05e195ca5086f7af25eb8d95ef4010
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE(SQL Server Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ CREATE DATABASE database_snapshot_name
   
      데이터베이스에 대한 비트랜잭션 FILESTREAM 액세스 수준을 지정합니다.  
   
-    |값|설명|  
+    |값|Description|  
     |-----------|-----------------|  
     |OFF|비트랜잭션 액세스는 사용할 수 없습니다.|  
     |READONLY|비트랜잭션 프로세스에서 이 데이터베이스의 FILESTREAM 데이터를 읽을 수 있습니다.|  
@@ -359,7 +359,7 @@ CREATE DATABASE database_snapshot_name
   
  크기 수 없습니다 될 때 지정 되는 *os_file_name* UNC 경로로 지정 합니다. SIZE는 FILESTREAM 파일 그룹에 적용되지 않습니다.  
   
- *크기*  
+ *size*  
  파일의 처음 크기입니다.  
   
  때 *크기* 주 파일에 대 한 제공 되지 않으면는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] model 데이터베이스에 있는 주 파일의 크기를 사용 합니다. 모델의 기본 크기는 8MB (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 또는 (이전 버전)의 경우 1MB입니다. 보조 데이터 파일 또는 로그 파일을 지정 하지만 *크기* 파일을 지정 하지 않으면는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 파일 하 게 8MB (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 또는 (이전 버전)의 경우 1MB입니다. 주 파일에 지정된 크기는 최소한 model 데이터베이스의 주 파일 크기와 같아야 합니다.  
@@ -390,7 +390,7 @@ CREATE DATABASE database_snapshot_name
   
  FILEGROWTH를 지정 하지 않으면 기본 값은:  
   
-|버전|기본값|  
+|버전 옵션|기본값|  
 |-------------|--------------------|  
 |시작[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|데이터 64MB입니다. 로그 파일 64MB.|  
 |시작[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|데이터 1MB입니다. 로그 파일 10%입니다.|  
@@ -541,7 +541,7 @@ GO
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>2. 데이터 파일 및 트랜잭션 로그 파일을 지정하는 데이터베이스 만들기  
  다음 예에서는 `Sales` 데이터베이스를 만듭니다. 주 키워드를 사용하지 않았으므로 첫 번째 파일(`Sales_dat`)이 주 파일이 됩니다. `Sales_dat` 파일의 SIZE 매개 변수에 MB 또는 KB를 지정하지 않았으므로 기본값 MB를 사용하여 할당됩니다. 사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 `Sales_log` 파일은 `MB` 매개 변수에 명시적으로 `SIZE` 접미사를 지정했으므로 메가바이트(MB)로 공간이 할당됩니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -563,7 +563,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>3. 데이터 파일 및 트랜잭션 로그 파일을 여러 개 지정하여 데이터베이스 만들기  
  다음 예에서는 3개의 `Archive` 데이터 파일과 2개의 `100-MB` 트랜잭션 로그 파일을 가진 `100-MB` 데이터베이스를 만듭니다. 주 파일은 목록의 첫 번째 파일이며 `PRIMARY` 키워드로 명시적으로 지정되어 있습니다. 트랜잭션 로그 파일은 `LOG ON` 키워드 다음에 지정됩니다. `FILENAME` 옵션에서 파일에 사용된 확장명에 유의하십시오. 주 데이터 파일에는 `.mdf`, 보조 데이터 파일에는 `.ndf`, 트랜잭션 로그 파일에는 `.ldf`가 각각 사용됩니다. 이 예에서는 데이터베이스를 `D:` 데이터베이스와 함께 배치하는 대신 `master` 드라이브에 배치합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -609,7 +609,7 @@ GO
   
  이 예에서는 성능을 향상시키기 위해 데이터 파일과 로그 파일을 서로 다른 디스크에 배치합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -658,7 +658,7 @@ GO
 ### <a name="e-attaching-a-database"></a>5. 데이터베이스 연결  
  다음 예에서는 예 4에서 만든 `Archive` 데이터베이스를 분리한 다음, `FOR ATTACH` 절을 사용하여 데이터베이스를 연결합니다. `Archive`는 데이터 파일과 로그 파일을 여러 개 포함하도록 정의되었습니다. 그러나 파일을 만든 후 위치를 변경하지 않았으므로 `FOR ATTACH` 절에 주 파일만 지정해야 합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 연결 중인 데이터베이스에 속한 모든 전체 텍스트 파일이 데이터베이스에 연결됩니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -674,7 +674,7 @@ GO
   
  이 예의 원본 데이터베이스는 예 4에서 만든 `Sales` 데이터베이스입니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -691,7 +691,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>7. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정  
  다음 예에서는 `MyOptionsTest` 데이터베이스를 만듭니다. 데이터 정렬 이름을 지정하고 `TRUSTYWORTHY` 및 `DB_CHAINING` 옵션을 `ON`으로 설정합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -712,7 +712,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>8. 이동된 전체 텍스트 카탈로그 연결  
  다음 예에서는 `AdvWksFtCat` 전체 텍스트 카탈로그를 `AdventureWorks2012` 데이터 및 로그 파일과 연결합니다. 이 예에서는 전체 텍스트 카탈로그를 기본 위치에서 새 위치 `c:\myFTCatalogs`로 이동하고 데이터 및 로그 파일은 기본 위치에 그대로 남아 있습니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -737,7 +737,7 @@ GO
   
 -   `FileStreamResumes`는 FILESTREAM 데이터를 포함합니다. 여기에는 `FSResumes`에 있는 FILESTREAM 데이터 컨테이너 `C:\MyFSfolder\Resumes`가 포함됩니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -789,7 +789,7 @@ GO
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>10. 여러 파일이 포함된 FILESTREAM 파일 그룹이 있는 데이터베이스 만들기  
  다음 예에서는 `BlobStore1` 데이터베이스를 만듭니다. 이 데이터베이스에는 행 파일 그룹 하나와 FILESTREAM 파일 그룹 하나(`FS`)가 있습니다. FILESTREAM 파일 그룹에는 두 개의 파일(`FS1` 및 `FS2`)이 포함됩니다. 그런 다음 세 번째 파일(`FS3`)을 FILESTREAM 파일 그룹에 추가하여 데이터베이스를 변경합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

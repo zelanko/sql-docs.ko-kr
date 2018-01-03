@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6811c1ab9fef0f15422f1d51ac9b969476e58699
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4bf584c6d467d311223831d180838e6851013830
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|parameter_name|**nvarchar (128)**|속성의 이름입니다. Null을 허용하지 않습니다.|  
+|parameter_name|**nvarchar(128)**|속성의 이름입니다. Null을 허용하지 않습니다.|  
 |parameter_value|**sql_variant**|실제 속성 값입니다. Null을 허용합니다.|  
   
 ## <a name="permissions"></a>Permissions  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>예  
  다음 예에서는 syscollector_config_store 뷰를 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT parameter_name, parameter_value  
 FROM msdb.dbo.syscollector_config_store;  
 ```  

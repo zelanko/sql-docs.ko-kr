@@ -3,7 +3,7 @@ title: "튜닝 보고서 보기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d270a34d882cbe4c5ffd458e52a9033db1b16c26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9a1a567a2f29073f73033182fd14867540a95b93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>단원 1-3-튜닝 보고서 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 단원의 이전 연습에서 본는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 만들거나 MySession 튜닝 세션의 결과로 생성 된 데이터베이스 엔진 튜닝 관리자 권장 구성에서 데이터베이스 개체를 삭제 하는 스크립트입니다. MySession 튜닝 세션은 [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md)에서 만들었습니다.  

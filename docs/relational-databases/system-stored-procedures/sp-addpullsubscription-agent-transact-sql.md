@@ -22,15 +22,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e13ce0bc7be6b2e21a30f13a3cf7cc299d00295
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 01f7e3cdecd4c0a95c9d91104e2feee39f00252b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
+ 
   끌어오기 구독을 동기화하는 데 사용하는 새로 예약된 에이전트 작업을 트랜잭션 게시에 추가합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -40,8 +40,7 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 sp_addpullsubscription_agent [ @publisher = ] 'publisher'  
-    [ , [ @publisher_db = ] 'publisher_db' ]  
-        , [ @publication = ] 'publication'  
+    [ , [ @publisher_db = ] 'publisher_db' ]          , [ @publication = ] 'publication'  
     [ , [ @subscriber = ] 'subscriber' ]  
     [ , [ @subscriber_db = ] 'subscriber_db' ]  
     [ , [ @subscriber_security_mode = ] subscriber_security_mode ]  
@@ -57,7 +56,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
     [ , [ @frequency_interval = ] frequency_interval ]  
     [ , [ @frequency_relative_interval = ] frequency_relative_interval ]  
     [ , [ @frequency_recurrence_factor = ] frequency_recurrence_factor ]  
-    [ , [ @frequency_subda y= ] frequency_subday ]  
+    [ , [ @frequency_subday = ] frequency_subday ]  
     [ , [ @frequency_subday_interval = ] frequency_subday_interval ]  
     [ , [ @active_start_time_of_day = ] active_start_time_of_day ]  
     [ , [ @active_end_time_of_day = ] active_end_time_of_day ]  
@@ -152,7 +151,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_type=**] *frequency_type*  
  배포 에이전트를 예약하는 빈도입니다. *frequency_type* 은 **int**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2** (기본값)|요청 시|  
@@ -290,7 +289,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>관련 항목:  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   

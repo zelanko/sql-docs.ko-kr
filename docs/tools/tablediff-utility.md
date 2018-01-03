@@ -3,7 +3,7 @@ title: "tablediff 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: tabledif
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**tablediff** 유틸리티 불일치가 대 한 두 테이블의 데이터를 비교 하는 데 사용 되 고의 복제 토폴로지의 데이터 불일치 문제를 해결 하는 데 특히 유용 합니다. 명령 프롬프트나 배치 파일에서 이 유틸리티를 사용하여 다음 태스크를 수행할 수 있습니다.  
@@ -170,7 +170,7 @@ tablediff
   
 ## <a name="return-value"></a>반환 값  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|성공|  
 |**1**|오류|  
@@ -191,7 +191,7 @@ tablediff
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**이미지**|  
+|**varbinary(max)**|**image**|  
 |**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
 |**이미지**|**varbinary(max)**|  
@@ -216,9 +216,9 @@ tablediff
   
 -   **ntext**  
   
--   **이미지**  
+-   **image**  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  테이블을 비교하려면 비교할 테이블 개체에 대한 SELECT ALL 권한이 있어야 합니다.  
   
  **-et** 옵션을 사용하려면 db_owner 고정 데이터베이스 역할의 멤버이거나 적어도 구독 데이터베이스에 대한 CREATE TABLE 권한과 대상 서버의 대상 소유자 스키마에 대한 ALTER 권한이 있어야 합니다.  
@@ -227,7 +227,7 @@ tablediff
   
  **-o** 또는 **-f** 옵션을 사용하려면 지정된 파일 디렉터리 위치에 대한 쓰기 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제된 테이블의 차이점 비교&#40;복제 프로그래밍&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

@@ -3,7 +3,7 @@ title: "Sybase ASE 데이터베이스 개체 (SybaseToSQL) 변환 | Microsoft Do
 ms.custom: 
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67806cc9609d6fb0c6fae16c3f73161d91259f7f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 38cd19ee1684b52aa7e98d4e9cd30897098e3b4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE 데이터베이스 개체 (SybaseToSQL) 변환
 에 연결 하려면 SAP 적응형 Server Enterprise (ASE)에 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SAP 적응형 Server Enterprise (ASE) 데이터베이스 개체를 Azure SQL 및 집합 프로젝트 및 데이터 매핑 옵션을 변환할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL 데이터베이스 개체입니다.  
@@ -134,6 +134,6 @@ ASE 데이터베이스 개체를 변환 하려면 먼저, 변환할 개체를 �
 ## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [를 SQL Server로 변환 된 데이터베이스 개체를 로드 / SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SAP ASE로 데이터베이스 마이그레이션 SQL Server-Azure SQL 데이터베이스 &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

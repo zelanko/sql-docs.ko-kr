@@ -3,7 +3,7 @@ title: "새 프로젝트 (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbe1907178f7ee0e706140eb43882c3b3b54f79c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 15ba3260c208501b75c09b7f5b6a7696f331e6b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-project-sybasetosql"></a>새 프로젝트 (SybaseToSQL)
 사용 하 여는 **새 프로젝트** 대화 상자를 새 SSMA 프로젝트를 만듭니다. 에 액세스 하려면는 **새 프로젝트** 대화 상자의 **파일** 메뉴를 클릭 하 여 **새 프로젝트**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명을 추가 합니다.  
   

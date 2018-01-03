@@ -3,7 +3,7 @@ title: "도구 옵션 및 레이아웃 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d497ec1f8b0d7c557c6d802328ddbbb4360a988
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc759f4beb67d96abad27dc5bdbe0a4e322f330a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>단원 1-2-도구 옵션 및 레이아웃 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]시작 시 사용 되는 글꼴 표시 될 데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스 (GUI)를 구성 하는 옵션을 설정할 수 있으며 가장 기타 도구 기능을 사용 하는 방법을 지원 합니다. 이 페이지의 연습을 통해 사용자가 설정할 수 있는 옵션과 해당 옵션을 설정하는 방법에 익숙해질 수 있습니다.  

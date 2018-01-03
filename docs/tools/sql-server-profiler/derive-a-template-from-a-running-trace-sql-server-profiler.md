@@ -3,7 +3,7 @@ title: "실행 중인 추적 (SQL Server Profiler)에서 템플릿을 파생 | M
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e2809d167582e261d0d64d430e419862fb9a8b66
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3f73f49d90ee0e5ca9bbe33b80fa8444f8dae045
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>실행 중인 추적으로부터 템플릿 파생(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 사용 하 여 실행 중인 기존 추적에서 추적 템플릿을 만드는 방법을 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  기존 템플릿 파일을 선택하면 파일을 덮어쓸 것인지를 묻는 메시지가 표시됩니다. 사용자가 정의한 템플릿만 선택할 수 있습니다. 미리 정의된 시스템 추적 템플릿은 덮어쓸 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿을 &#40; 수정 SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   

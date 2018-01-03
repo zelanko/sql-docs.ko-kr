@@ -3,7 +3,7 @@ title: "분석 서버 속성 (서비스 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12775be4c4468eb778d7c5cf1d36fe2fda8b640e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a91db42a951bc74c191bf9b63357d582eb91a451
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analysis-server-properties-service-tab"></a>분석 서버 속성(서비스 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 서비스는는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. [!INCLUDE[ssAS](../../includes/ssas-md.md)] 가 제대로 작동하려면 이 서비스가 실행되고 있어야 합니다. 밝은 회색으로 표시된 속성 값은 이 응용 프로그램을 사용하여 변경할 수 없습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **이진 경로**  
  이 서비스에 사용되는 프로그램 파일의 위치를 표시합니다.  
   

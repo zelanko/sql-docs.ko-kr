@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 029ba3a0508e3198b3b81e94a508783308a4257d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f37b03f60063643472b325c4c3f61e87078794f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 경로의 서버 구성 요소를 포맷 해야 하는 방법을 정의 하는 합니다. *@option*다음 값 중 하나일 수 있습니다. 기본값은 0입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|BIOS로 변환 된 서버 이름을 반환 형식, 예:`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1.|예를 들어 서버 이름을 변환 하지 않고 반환합니다.`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|1|예를 들어 서버 이름을 변환 하지 않고 반환합니다.`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|예를 들어 전체 서버 경로를 반환합니다.`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
@@ -68,7 +68,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |-----------|-----------------|  
 |지정 안 됨|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
 |0|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
-|1.|함수가 경로에 컴퓨터 이름을 반환합니다.|  
+|1|함수가 경로에 컴퓨터 이름을 반환합니다.|  
   
 ## <a name="return-type"></a>반환 형식  
  **nvarchar(max)**  
@@ -86,7 +86,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>1. FILESTREAM BLOB의 경로 읽기  
  다음 예에서는 `PathName` 변수에 `nvarchar(max)`을 할당합니다.  
   
-```tsql  
+```sql  
 DECLARE @PathName nvarchar(max);  
 SET @PathName = (  
     SELECT TOP 1 photo.PathName()  
@@ -98,7 +98,7 @@ SET @PathName = (
 ### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>2. 테이블에 FILESTREAM BLOB 경로 표시  
  다음 예에서는 3개의 FILESTREAM BLOB에 대한 경로를 만들고 표시합니다.  
   
-```tsql  
+```sql  
 -- Create a FILESTREAM-enabled database.  
 -- The c:\data directory must exist.  
 CREATE DATABASE PathNameDB  

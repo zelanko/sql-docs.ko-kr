@@ -52,11 +52,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -716,7 +716,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *logical_expression*  
  TRUE 또는 FALSE를 반환하는 논리 식입니다. 별칭 데이터 형식은 식에 포함될 수 없습니다.  
   
- *열*  
+ *column*  
  제약 조건 정의에서 사용하는 열을 표시하기 위해 테이블 제약 조건에서 괄호로 묶어 사용하는 열 또는 열 목록입니다.  
   
  [ **ASC** | DESC]  
@@ -901,7 +901,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  **테이블에 대 한 스트레치 데이터베이스를 활성화합니다.**  
   
- 지정 하 여 테이블에 대 한 확대를 사용 하는 경우 `ON`, 선택적으로 지정할 수 `MIGRATION_STATE = OUTBOUND` 하려면 즉시 데이터 마이그레이션 또는 `MIGRATION_STATE = PAUSED` 데이터 마이그레이션을 연기 하 합니다. 기본값은 `MIGRATION_STATE = OUTBOUND`합니다. 테이블에 스트레치를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)합니다.  
+ 지정 하 여 테이블에 대 한 확대를 사용 하는 경우 `ON`, 선택적으로 지정할 수 `MIGRATION_STATE = OUTBOUND` 하려면 즉시 데이터 마이그레이션 또는 `MIGRATION_STATE = PAUSED` 데이터 마이그레이션을 연기 하 합니다. 기본값은 `MIGRATION_STATE = OUTBOUND`입니다. 테이블에 스트레치를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)합니다.  
   
  **필수 구성 요소**. 테이블에 대해 스트레치를 사용 하기 전에 서버에서를 데이터베이스에서 스트레치를 사용 하도록 설정 해야 합니다. 자세한 내용은 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)를 참조하십시오.  
   
@@ -1083,7 +1083,7 @@ Azure SQL DB에 대 한 전역 임시 테이블 구문 및 의미 체계를 임�
 
 - Session A가 testdb1 Azure SQL 데이터베이스에서에서 전역 임시 테이블 ##test을 만들고 1 개 행 추가
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1101,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - 세션 B testdb1 Azure SQL 데이터베이스에 연결 하 고 ##test A 세션에서 만든 테이블에 액세스할 수 있습니다.
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1109,7 @@ SELECT * FROM ##test
 
 - 세션 C testdb2 Azure SQL 데이터베이스의에서 다른 데이터베이스에 연결 및 testdb1에서 만든 ##test에 액세스 하려고 합니다. 전역 임시 테이블에 대 한 데이터베이스 범위이 선택이 실패 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1118,7 @@ Invalid object name '##test'
 
 - 현재 사용자 데이터베이스 testdb1에서 Azure SQL 데이터베이스 tempdb에 시스템 개체를 주소 지정
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1405,7 +1405,7 @@ GO
   
 |파일 그룹|test1fg|test2fg|test3fg|test4fg|  
 |---------------|-------------|-------------|-------------|-------------|  
-|**파티션**|1.|2|3|4|  
+|**파티션**|1|2|3|4|  
 |**값**|열 1 \<= 1|c o l 1 > 1 AND col1 \<= 100|c o l 1 > 100 AND col1 \<= 1, 000|col1 > 1000|  
   
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>9. 열에 uniqueidentifier 데이터 형식 사용  

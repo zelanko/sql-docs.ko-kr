@@ -1,12 +1,12 @@
 ---
 title: "SQLRUserGroup 데이터베이스 사용자로 추가 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/13/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 12/21/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,19 +19,25 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 97a571a9a91ac31e955f6833e27a975f87267218
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7de60bccb72364e124656f03f043c03e812187db
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>SQLRUserGroup 데이터베이스 사용자로 추가
 
-설치 동안 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 또는 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]의 보안 토큰에서 작업 실행을 위해 새로운 Windows 사용자 계정을 만드는 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스입니다. 기계 학습 외부 클라이언트에서 스크립트를 보낼 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 가능한 작업자 계정을 활성화 하 고 호출 하는 사용자의 id로 매핑합니다 사용자를 대신 하 여 스크립트를 실행 합니다. 데이터베이스 엔진의이 새로운 서비스 보안 이라는 외부 스크립트 실행을 지원 *암시 된 인증이*합니다.
+이 문서는 여러 작업자 계정 SQL Server의 컴퓨터 학습 서비스에서 사용 하는 데이터베이스에 연결 하 고 사용자 대신 Python 또는 R 작업을 실행 하는 데 필요한 사용 권한을 부여 하는 방법에 설명 합니다.
 
-이러한 계정은 Windows 사용자 그룹에 볼 수 있습니다 **SQLRUserGroup**합니다. 기본적으로 R을 실행 하기 위한 충분 한 더 많은 작업은 일반적으로 20 작업자 계정이 생성 됩니다.
+## <a name="what-is-sqlrusergroup"></a>SQLRUserGroup 란?
 
-그러나 원격 데이터 과학 클라이언트에서 R 스크립트를 실행 해야 하 고 Windows 인증을 사용 하는 경우 권한을 부여 해야 이러한 작업자 계정에 로그인 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 대신 인스턴스.
+설치 동안 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 또는 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], R의 실행을 지원 하기 위해 새로운 Windows 사용자 계정을 만드는 또는 Python 스크립트 작업의 보안 토큰에서는 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스입니다.
+
+이러한 계정은 Windows 사용자 그룹에 볼 수 있습니다 **SQLRUserGroup**합니다. 기본적으로 기계 학습을 실행 하기 위한 충분 한 더 많은 작업은 일반적으로 20 작업자 계정이 생성 됩니다.
+
+기계 학습 외부 클라이언트에서 스크립트를 보낼 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 가능한 작업자 계정을 활성화 하 고 호출 하는 사용자의 id로 매핑합니다 사용자를 대신 하 여 스크립트를 실행 합니다. 데이터베이스 엔진의이 새로운 서비스 보안 이라는 외부 스크립트 실행을 지원 *암시 된 인증이*합니다.
+
+그러나 원격 데이터 과학자의 클라이언트에서 Python 또는 R 스크립트를 실행 해야 하는 경우 Windows 인증을 사용 하는 권한을 부여 해야 이러한 작업자 계정에 로그인 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 대신 인스턴스.
 
 ## <a name="add-sqlrusergroup-as-a-sql-server-login"></a>SQLRUserGroup를 SQL Server 로그인으로 추가
 
@@ -55,8 +61,8 @@ ms.lasthandoff: 11/17/2017
 
 5. 부터는 하나를 찾을 때까지 서버에서 그룹 계정 목록 스크롤하여 `SQLRUserGroup`합니다.
     
-    + 에 대 한 실행 패드 서비스와 관련 된 그룹의 이름에서 _기본 인스턴스_ 방금는 항상 **SQLRUserGroup**합니다. 기본 인스턴스에 대해서만이 계정을 선택 합니다.
-    + 사용 하는 경우는 _명명 된 인스턴스_, 인스턴스 이름이 기본 이름에 추가 됩니다 `SQLRUserGroup`합니다. 따라서 인스턴스 이름이 "MLTEST" 이면이 인스턴스에 대 한 기본 사용자 그룹 이름을 것 **SQLRUserGroupMLTest**합니다.
+    + 에 대 한 실행 패드 서비스와 관련 된 그룹의 이름에서 _기본 인스턴스_ 항상 **SQLRUserGroup**R, Python 또는 둘 다 설치 여부에 관계 없이 합니다. 기본 인스턴스용이 계정을 선택 합니다.
+    + 사용 하는 경우는 _명명 된 인스턴스_, 인스턴스 이름이 기본 작업자 그룹 이름의 이름에 추가 됩니다 `SQLRUserGroup`합니다. 따라서 인스턴스 이름이 "MLTEST" 이면이 인스턴스에 대 한 기본 사용자 그룹 이름을 것 **SQLRUserGroupMLTest**합니다.
  
      ![서버의 그룹에 대 한 예제](media/implied-auth-login5.png "서버의 그룹 예제")
    

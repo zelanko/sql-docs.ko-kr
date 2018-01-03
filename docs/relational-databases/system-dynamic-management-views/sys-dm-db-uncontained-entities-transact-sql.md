@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2786493aeb75402eae5d7e91458e97436f3435a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 91f36a8a8070e5f5752acf82bec5305fa4adc021
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.lasthandoff: 11/27/2017
   
 ||||  
 |-|-|-|  
-|**열 이름**|**형식**|**Description**|  
-|*클래스*|**int**|1 = 개체 또는 열(모듈, XP, 뷰, 동의어 및 테이블 포함)<br /><br /> 4 = 데이터베이스 보안 주체<br /><br /> 5 = 어셈블리<br /><br /> 6 = 형식<br /><br /> 7 = 인덱스(전체 텍스트 인덱스)<br /><br /> 12 = 데이터베이스 DDL 트리거<br /><br /> 19 = 경로<br /><br /> 30 = 감사 사양|  
+|**열 이름**|**형식**|**설명**|  
+|*class*|**int**|1 = 개체 또는 열(모듈, XP, 뷰, 동의어 및 테이블 포함)<br /><br /> 4 = 데이터베이스 보안 주체<br /><br /> 5 = 어셈블리<br /><br /> 6 = 형식<br /><br /> 7 = 인덱스(전체 텍스트 인덱스)<br /><br /> 12 = 데이터베이스 DDL 트리거<br /><br /> 19 = 경로<br /><br /> 30 = 감사 사양|  
 |*class_desc*|**nvarchar(120)**|엔터티의 클래스에 대한 설명입니다. 클래스와 일치 하려면 다음 중 하나입니다.<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **데이터베이스 _ 보안 주체**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|엔터티의 ID입니다.<br /><br /> 경우 *클래스* 1, object_id =<br /><br /> 경우 *클래스* = 4, 다음 sys.database_principals.principal_id 합니다.<br /><br /> 경우 *클래스* = 5, sys.assemblies.assembly_id 합니다.<br /><br /> 경우 *클래스* = 6, sys.types.user_type_id 합니다.<br /><br /> 경우 *클래스* = 7, sys.indexes.index_id 합니다.<br /><br /> 경우 *클래스* = 12, sys.triggers.object_id 합니다.<br /><br /> 경우 *클래스* = 19, sys.routes.route_id입니다.<br /><br /> 경우 *클래스* = 30 인 sys. database_audit_specifications.databse_specification_id 합니다.|  
 |*statement_line_number*|**int**|클래스가 모듈인 경우 포함되지 않은 용도가 있는 줄 번호를 반환합니다.  그렇지 않으면 값이 Null입니다.|  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>예  
  다음 예에서는 P1이라는 프로시저를 만든 다음 `sys.dm_db_uncontained_entities`쿼리를 만듭니다. 이 쿼리는 P1에서 데이터베이스 외부에 있는 **sys.endpoints** 를 사용하는 것을 보고합니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE Test;  
 GO  
   

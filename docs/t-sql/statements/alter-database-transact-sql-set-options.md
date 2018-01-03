@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET 옵션 (Transact SQL) | Microsoft Docs"
 description: "자동 튜닝, 암호화, SQL Server 및 Azure SQL 데이터베이스에서 쿼리 저장소와 같은 데이터베이스 옵션을 설정 하는 방법에 알아보기"
 ms.custom: 
-ms.date: 11/27/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -34,11 +34,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -384,11 +384,11 @@ SET
  [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 에서 마지막 알려진된 좋은 계획을 자동으로 강제는 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 새 SQL 계획 한 성능 저하가 발생 하는 위치 쿼리 합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 계속 해 서의 쿼리 성능을 모니터링 하는 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 강제 계획을 사용 하 여 쿼리 합니다. 성능 향상이 없으면는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 는 마지막 알려진된 좋은 계획에 사용 하 여 계속 합니다. 성능 향상, 검색 되지 않는 경우는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 새 SQL 계획을 생성 합니다. 쿼리 저장소를 사용 하지 않는 경우 또는 없는 경우 문이 실패 합니다 *읽기 / 쓰기* 모드입니다.   
 
  OFF  
- [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 에 SQL 계획 변경으로 인 한 잠재적 쿼리 성능 저하 보고 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 보기. 그러나 이러한 권장 사항은 자동으로 적용 되지 않습니다. 사용자에 적용 하 여 활성 권장 사항 및 문제를 식별 하는 해결을 모니터링할 수 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 보기에 표시 되는 스크립트입니다. 이 값은 기본값입니다.
+ [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 에 SQL 계획 변경으로 인 한 잠재적 쿼리 성능 저하 보고 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 보기. 그러나 이러한 권장 사항은 자동으로 적용 되지 않습니다. 사용자에 적용 하 여 활성 권장 사항 및 문제를 식별 하는 해결을 모니터링할 수 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 보기에 표시 되는 스크립트입니다. 이것은 기본값입니다.
 
  **\<change_tracking_option >:: =**  
   
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 사용할 수 없는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]합니다.  
   
  변경 내용 추적 옵션을 제어합니다. 변경 내용 추적을 설정 또는 해제하고 옵션을 설정 또는 변경할 수 있습니다. 예를 보려면 이 항목의 뒤 부분에 나오는 예 섹션을 참조하십시오.  
   
@@ -671,7 +671,7 @@ MULTI_USER
  MIXED_PAGE_ALLOCATION {OFF | 여부} 컨트롤에 데이터베이스 혼합된 익스텐트를 사용 하 여 테이블이 나 인덱스의 첫 8 페이지에 대 한 초기 페이지 만들 수 있습니다.  
   
  OFF  
- 데이터베이스는 항상 단일 익스텐트를 사용 하 여 초기 페이지를 만듭니다. 이 값은 기본값입니다.  
+ 데이터베이스는 항상 단일 익스텐트를 사용 하 여 초기 페이지를 만듭니다. 이것은 기본값입니다.  
   
  ON  
  데이터베이스 혼합된 익스텐트를 사용 하 여 초기 페이지를 만들 수 있습니다.  
@@ -693,7 +693,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  ON | OFF | CLEAR [ ALL ]  
  이 데이터베이스에서 쿼리 저장소를 사용 여부를 제어하고 쿼리 저장소의 내용 제거를 제어합니다.  
@@ -702,7 +702,7 @@ ON
  쿼리 저장소를 사용 하도록 설정 합니다.  
   
 OFF  
- 쿼리 저장소를 사용 하지 않도록 설정 합니다.  이 값은 기본값입니다.   
+ 쿼리 저장소를 사용 하지 않도록 설정 합니다.  이것은 기본값입니다.   
   
 CLEAR  
  쿼리 저장소의 콘텐츠를 제거 합니다.  
@@ -1018,7 +1018,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | 해제
   
  이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_arithabort_on 열 또는 DATABASEPROPERTYEX 함수의 IsArithmeticAbortEnabled 속성을 검사하여 확인할 수 있습니다.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1123,21 +1123,21 @@ FEDERATED_SERVICE_ACCOUNT = ON | 해제
 |\<db_user_access_option >|예|예|  
 |\<db_update_option >|예|예|  
 |\<delayed_durability_option >|예|예|  
-|\<external_access_option >|예|아니요|  
-|\<cursor_option >|예|아니요|  
-|\<auto_option >|예|아니요|  
-|\<sql_option >|예|아니요|  
-|\<recovery_option >|예|아니요|  
-|\<target_recovery_time_option >|아니요|예|  
-|\<문당 >|아니요|아니요|  
-|ALLOW_SNAPSHOT_ISOLATION|아니요|아니요|  
-|READ_COMMITTED_SNAPSHOT|아니요|예|  
+|\<external_access_option >|예|아니오|  
+|\<cursor_option >|예|아니오|  
+|\<auto_option >|예|아니오|  
+|\<sql_option >|예|아니오|  
+|\<recovery_option >|예|아니오|  
+|\<target_recovery_time_option >|아니오|예|  
+|\<문당 >|아니오|아니오|  
+|ALLOW_SNAPSHOT_ISOLATION|아니오|아니오|  
+|READ_COMMITTED_SNAPSHOT|아니오|예|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|  
-|\<다음과 >|예|아니요|  
+|\<다음과 >|예|아니오|  
 |DATE_CORRELATION_OPTIMIZATION|예|예|  
 |\<parameterization_option >|예|예|  
 |\<change_tracking_option >|예|예|  
-|\<db_encryption >|예|아니요|  
+|\<db_encryption >|예|아니오|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대한 계획 캐시는 다음 옵션 중 하나를 설정하여 삭제됩니다.  
   
@@ -1223,9 +1223,9 @@ GO
   
  결과 집합은 스냅숏 격리 프레임워크가 활성화되었음을 보여 줍니다.  
   
- |name |snapshot_isolation_state |description|  
+ |NAME |snapshot_isolation_state |description|  
  |-------------------- |------------------------  |----------|  
- |AdventureWorks2012   |1.                        | ON |  
+ |AdventureWorks2012   |1                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>4. 변경 내용 추적 설정, 수정 및 해제  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  
@@ -1251,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>5. 쿼리 저장소를 사용하도록 설정  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.  
   

@@ -3,7 +3,7 @@ title: "추적 (SQL Server Profiler)에 대 한 이벤트를 필터링 | Microso
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2111de43f590ebae4a89252b17a2ae8a40be0050
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa5c7ca6a19c0ae5d7afb854645a99fb2aed6131
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>추적에서의 이벤트 필터링(SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]필터 추적에 수집 된 이벤트를 제한 합니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 반드시 추적에 대한 필터를 설정해야 하는 것은 아닙니다. 그러나 필터를 설정하면 추적하는 동안 발생하는 오버헤드가 최소화됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 필터가 설정되면 추적에서 수집하는 이벤트가 제한됩니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 반드시 추적에 대한 필터를 설정해야 하는 것은 아닙니다. 그러나 필터를 설정하면 추적하는 동안 발생하는 오버헤드가 최소화됩니다.  
   
  **추적 속성** 또는 **추적 템플릿 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 추적 정의에 필터를 추가합니다.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **osql** 유틸리티 또는 **sqlcmd** 유틸리티에서 이벤트를 추적하는 경우 항상 **%** 를 **TextData** 데이터 열의 필터에 추가합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

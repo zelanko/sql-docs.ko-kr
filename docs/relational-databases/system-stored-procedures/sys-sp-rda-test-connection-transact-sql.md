@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 897eb5ff888873c7e9befcdb850b13dd2dd9be03
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e7376d3b6fa4bebac0e0b176bd4144d6bec54b0c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -75,10 +75,10 @@ EXECUTE sys.sp_rda_test_connection
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|link_state|int|에 대 한 값에 해당 하는 다음 값 중 하나 **link_state_desc**합니다.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state|ssNoversion|에 대 한 값에 해당 하는 다음 값 중 하나 **link_state_desc**합니다.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
 |link_state_desc|varchar (32)|에 대 한 값 앞에 해당 하는 다음 값 중 하나 **link_state**합니다.<br /><br /> -정상<br />     SQL Server와 원격 Azure 서버는 정상 상태입니다.<br />-ERROR_AZURE_FIREWALL<br />     Azure 방화벽이 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.<br />-ERROR_NO_CONNECTION<br />     SQL Server가 원격 Azure 서버에 연결할 수 없습니다.<br />-ERROR_AUTH_FAILURE<br />     인증 실패 때문에 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.<br />-오류<br />     인증 문제, 연결 문제 또는 방화벽 문제가 없는 오류 때문에 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.|  
-|error_number|int|오류의 수입니다. 오류가 없으면 이면이 필드는 NULL입니다.|  
-|error_message|nvarchar (1024)|오류 메시지. 오류가 없으면 이면이 필드는 NULL입니다.|  
+|error_number|ssNoversion|오류의 수입니다. 오류가 없으면 이면이 필드는 NULL입니다.|  
+|error_message|nvarchar(1024)|오류 메시지. 오류가 없으면 이면이 필드는 NULL입니다.|  
   
 ## <a name="permissions"></a>Permissions  
  Db_owner 권한이 필요합니다.  
@@ -87,7 +87,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>원격 Azure 서버에 SQL Server 연결 확인  
   
-```tsql  
+```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
 ### <a name="check-the-azure-firewall"></a>Azure 방화벽 확인  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -113,11 +113,11 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1.|ERROR_AZURE_FIREWALL|*\<방화벽와 관련 된 오류 번호 >*|*\<방화벽 관련 오류 메시지 >*|  
+|1|ERROR_AZURE_FIREWALL|*\<방화벽와 관련 된 오류 번호 >*|*\<방화벽 관련 오류 메시지 >*|  
   
 ### <a name="check-authentication-credentials"></a>인증 자격 증명 확인  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -133,7 +133,7 @@ GO
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>원격 Azure 서버 상태 확인  
   
-```tsql  
+```sql  
 USE <SQL Server database>  
 GO  
 EXECUTE sys.sp_rda_test_connection   

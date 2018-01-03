@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75d56944852d39d083bd1a8c075c3efb6aaa723
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ca1e489937aba92270fe73978f017c35b4fca99
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |반환 값|Description|  
 |------------------|-----------------|  
 |0|지정된 된 열에 없는 *change_columns* 목록입니다.|  
-|1.|지정 된 열에이 *change_columns* 목록입니다.|  
+|1|지정 된 열에이 *change_columns* 목록입니다.|  
   
 ## <a name="remarks"></a>주의  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK 유효성을 검사 하는 검사를 수행 하지 않습니다는 *column_id* 값 이나 하는 *change_columns* 에서 테이블을 얻는 데 사용 된 매개 변수는  *column_id* 을 받았습니다.  
@@ -68,7 +68,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="examples"></a>예  
  다음 예에서는 `Salary` 테이블의 `Employees` 열이 업데이트되었는지 여부를 확인합니다. `COLUMNPROPERTY` 의 열 ID를 반환 하는 함수는 `Salary` 열입니다. `@change_columns` 지역 변수는 CHANGETABLE을 데이터 원본으로 사용하여 쿼리의 결과에 설정되어야 합니다.  
   
-```tsql  
+```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
     (COLUMNPROPERTY(OBJECT_ID('Employees'), 'Salary', 'ColumnId')  
     ,@change_columns);  

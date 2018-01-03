@@ -3,7 +3,7 @@ title: "재생 결과 검토 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이후에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 캡처하여 각 클라이언트에서 결과 추적 파일에 저장 된 각 클라이언트에 대 한 재생 작업 수, Distributed Replay 기능이 분산된 재생을 완료 합니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="column-descriptions-for-result-trace"></a>결과 추적의 열에 대한 설명  
  다음 표에서는 결과 추적 데이터의 열에 대해 설명합니다.  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|  
+|데이터 열 이름|데이터 형식|Description|열 ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|이벤트 클래스의 이름입니다.|1|  
 |EventSequence|**bigint**|공급자 오류 및 내부 오류와 경고의 경우 오류나 경고에 해당하는 캡처 이벤트 순서입니다.<br /><br /> 다른 모든 이벤트 클래스의 경우 원래 추적 데이터의 이벤트 순서입니다.|2|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/05/2017
 |ReplayHostName|**nvarchar**|재생하는 동안 클라이언트를 실행 중인 컴퓨터의 이름입니다.|16|  
 |ApplicationName|**nvarchar**|캡처하는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 만든 클라이언트 응용 프로그램의 이름입니다.|17|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   

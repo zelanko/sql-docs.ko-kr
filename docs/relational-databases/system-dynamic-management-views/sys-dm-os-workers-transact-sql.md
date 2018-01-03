@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2de361a20f4369cb79b856c265f732dc4dc8018c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4451ba929c34137f285aadb615a1b286fd38e28e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>예  
  다음 쿼리를 사용하여 SUSPENDED 또는 RUNNABLE 상태에서 작업자가 실행된 시간을 확인할 수 있습니다.  
   
-```tsql
+```sql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  

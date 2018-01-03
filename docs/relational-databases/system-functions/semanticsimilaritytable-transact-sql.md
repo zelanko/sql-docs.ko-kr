@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 236debd7c90389d054de4b06caff9418b15366d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2944708e70d9cc71cddcad33ff060df8a223530d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYTABLE  
     (  
     table,  
@@ -54,7 +54,7 @@ SEMANTICSIMILARITYTABLE
   
  이 이름은 1~4개의 부분으로 구성된 이름일 수 있지만 원격 서버 이름은 사용할 수 없습니다.  
   
- **열**  
+ **column**  
  결과가 반환될 인덱싱된 열의 이름입니다. 열에 의미 체계 인덱싱이 사용하도록 설정되어 있어야 합니다.  
   
  **column_list**  

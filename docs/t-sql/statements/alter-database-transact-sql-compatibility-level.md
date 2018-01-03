@@ -1,7 +1,7 @@
 ---
 title: DATABASE Compatibility LEVEL (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c5e55a85b2ff67327198ff3fa54654b904429ed8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 
  버전을 확인 하려면 다음 쿼리를 실행 된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결 되어 있는 합니다.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
@@ -88,12 +88,13 @@ SELECT SERVERPROPERTY('ProductVersion');
 
  현재 호환성 수준을 확인 하려면 쿼리는 **compatibility_level** 열 [sys.databases&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level FROM sys.databases;  
 ```  
   
 ## <a name="remarks"></a>주의  
- 모든 설치에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 기본 호환성 수준을의 버전으로 설정 되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 데이터베이스는이 수준으로 설정 하지 않으면는 **모델** 데이터베이스의 호환성 수준이 이보다 낮지 합니다. 데이터베이스의 이전 버전에서 업그레이드할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스는 최소 이상 해당 인스턴스에 대 한 허용 하는 경우의 기존 호환성 수준이 유지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 허용 된 수준 보다 낮은 호환성 수준으로 데이터베이스를 업그레이드 하는, 데이터베이스 허용 수준이 가장 낮은 호환성 설정 합니다. 이는 시스템 및 사용자 데이터베이스 모두에 적용됩니다. 사용 하 여 **ALTER DATABASE** 데이터베이스의 호환성 수준을 변경할 수 있습니다. 데이터베이스의 현재 호환성 수준을 보려면, 쿼리는 **compatibility_level** 열에는 **sys.databases** 카탈로그 뷰.  
+
+모든 설치에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 기본 호환성 수준을의 버전으로 설정 되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 데이터베이스는이 수준으로 설정 하지 않으면는 **모델** 데이터베이스의 호환성 수준이 이보다 낮지 합니다. 데이터베이스의 이전 버전에서 업그레이드할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스는 최소 이상 해당 인스턴스에 대 한 허용 하는 경우의 기존 호환성 수준이 유지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 허용 된 수준 보다 낮은 호환성 수준으로 데이터베이스를 업그레이드 하는, 데이터베이스 허용 수준이 가장 낮은 호환성 설정 합니다. 이는 시스템 및 사용자 데이터베이스 모두에 적용됩니다. 사용 하 여 **ALTER DATABASE** 데이터베이스의 호환성 수준을 변경할 수 있습니다. 데이터베이스의 현재 호환성 수준을 보려면, 쿼리는 **compatibility_level** 열에는 **sys.databases** 카탈로그 뷰.  
 
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>이전 버전과의 호환을 위해 호환성 수준 사용  
@@ -136,7 +137,8 @@ SELECT name, compatibility_level FROM sys.databases;
 | 2371 추적에 기본적으로 꺼져 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]합니다. | [2371 추적](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) 에 기본적으로 켜져 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 추적 플래그 2371을 매우 많은 행이 있는 테이블에서 행의 더 작은 아직 현명 해 집니다 일부만 샘플링 자동 통계 업데이트 도구를 알려 줍니다. <br/> <br/> 하나의 개선 최근에 삽입 된 행이 이상 샘플에 포함 하는 것입니다. <br/> <br/> 개선 된 또 다른 업데이트 통계 프로세스는 실행을 차단 하기 보다는 쿼리 하는 동안 실행 하는 쿼리를 사용 하는 것입니다. |  
 | 수준 120에 대 한 통계에서 샘플링 된 *단일*-프로세스 스레드입니다. | 수준 130에 대 한 통계에서 샘플링 된 *다중*-프로세스 스레드입니다. |  
 | 253 들어오는 외래 키에는 한계입니다. | 최대 10, 000 개의 들어오는 외래 키 또는 유사한 참조 하 여 지정된 된 테이블을 참조할 수 있습니다. 제한 사항에 대해서는 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)를 참조하세요. |  
-|사용 되지 않는 MD2, MD4, MD5, SHA 및 SHA1 해시 알고리즘 허용 됩니다.|SHA2_256 및 SHA2_512 해시 알고리즘이 허용 됩니다.|  
+|사용 되지 않는 MD2, MD4, MD5, SHA 및 SHA1 해시 알고리즘 허용 됩니다.|SHA2_256 및 SHA2_512 해시 알고리즘이 허용 됩니다.|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]일부 데이터 형식 변환 및 (주로 드문) 일부 작업에 향상 된 기능을 포함합니다. 자세한 내용은 [일부 데이터 형식 및 일반적이 지 않은 작업을 처리 하는 SQL Server 2016 향상 된 기능](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)합니다.|
   
   
 수정 프로그램이에서 추적 플래그 4199 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전에 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이제 기본적으로 활성화 됩니다. 호환 모드가 130입니다. 추적 플래그 4199를 이후에 릴리스되는 새로운 쿼리 최적화 프로그램 수정에 대 한 적용 될 여전히 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 이전 쿼리 최적화 프로그램에서 사용 하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 호환성 수준 110 선택 해야 합니다. 추적 플래그 4199에 대 한 정보를 참조 하십시오. [추적 플래그 4199](https://support.microsoft.com/en-us/kb/974006)합니다.  
@@ -146,7 +148,7 @@ SELECT name, compatibility_level FROM sys.databases;
   
 |호환성 수준 설정 110 이하|호환성 수준 설정 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|이전 쿼리 최적화 프로그램이 사용됩니다.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서는 쿼리 계획을 만들고 최적화하는 구성 요소에 대한 많은 기능이 향상되었습니다. 이러한 새로운 쿼리 최적화 프로그램 기능은 데이터베이스 호환성 수준 120의 사용에 따라 달라집니다. 이러한 향상된 기능을 활용하려면 데이터베이스 호환성 수준 120을 사용하여 새 데이터베이스 응용 프로그램을 개발해야 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 마이그레이션된 응용 프로그램의 경우 좋은 성능이 유지되거나 향상되었는지 확인하려면 신중하게 테스트해야 합니다. 성능이 저하되면 데이터베이스 호환성 수준을 110 이하로 설정하여 이전 쿼리 최적화 프로그램 방법을 사용할 수 있습니다.<br /><br /> 데이터베이스 호환성 수준 120은 최신 데이터 웨어하우징 및 OLTP 작업에 대해 조정된 새로운 카디널리티 평가기를 사용합니다. 참조의 쿼리 계획 섹션에서 권장 하는 데이터베이스 호환성 수준이 110으로 성능 문제로 인해을 설정 하기 전에 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [데이터베이스 엔진의 새로운](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) 항목입니다.|  
+|이전 쿼리 최적화 프로그램이 사용됩니다.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]만들고 쿼리 계획을 최적화 하는 구성 요소에 크게 향상 된 기능을 포함 합니다. 이러한 새로운 쿼리 최적화 프로그램 기능은 데이터베이스 호환성 수준 120의 사용에 따라 달라집니다. 이러한 향상된 기능을 활용하려면 데이터베이스 호환성 수준 120을 사용하여 새 데이터베이스 응용 프로그램을 개발해야 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 마이그레이션된 응용 프로그램의 경우 좋은 성능이 유지되거나 향상되었는지 확인하려면 신중하게 테스트해야 합니다. 성능이 저하되면 데이터베이스 호환성 수준을 110 이하로 설정하여 이전 쿼리 최적화 프로그램 방법을 사용할 수 있습니다.<br /><br /> 데이터베이스 호환성 수준 120은 최신 데이터 웨어하우징 및 OLTP 작업에 대해 조정된 새로운 카디널리티 평가기를 사용합니다. 참조의 쿼리 계획 섹션에서 권장 하는 데이터베이스 호환성 수준이 110으로 성능 문제로 인해을 설정 하기 전에 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [데이터베이스 엔진의 새로운](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) 항목입니다.|  
 |120 미만의 호환성 수준에서 변환할 때 언어 설정이 무시 됩니다는 **날짜** 값을 문자열 값입니다. 이 동작에만 특정는 **날짜** 유형입니다. 아래 예 섹션의 예제 B를 참조 하십시오.|변환할 때 언어 설정이 무시 되지 않습니다는 **날짜** 값을 문자열 값입니다.|  
 |EXCEPT 절의 오른쪽에 있는 재귀 참조는 무한 루프를 만듭니다. 예 3 아래 예 섹션에서이 동작을 보여 줍니다.|EXCEPT 절에 있는 재귀 참조는 ANSI SQL 표준에 따라 오류를 생성합니다.|  
 |재귀적 CTE에서 중복 열 이름을 허용합니다.|재귀적 CTE에서 중복 열 이름을 허용하지 않습니다.|  
@@ -222,7 +224,7 @@ SELECT name, compatibility_level FROM sys.databases;
 ### <a name="a-changing-the-compatibility-level"></a>1. 호환성 수준 변경  
  다음 예에서는 변경의 호환성 수준을 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 `110,` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 110;  
 GO  
@@ -230,7 +232,7 @@ GO
   
  다음 예에서는 현재 데이터베이스의 호환성 수준을 반환합니다.  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level   
 FROM sys.databases   
 WHERE name = db_name();  
@@ -239,7 +241,7 @@ WHERE name = db_name();
 ### <a name="b-ignoring--the-set-language-statement-except-under-compatibility-level-120"></a>2. 호환성 수준이 120 미만일 제외 하 고 SET LANGUAGE 문을 무시합니다.  
  다음 쿼리는 호환성 수준이 120 미만일 제외 하 고 SET LANGUAGE 문을 무시합니다.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;   
 DECLARE @t2 date = '12/5/2011' ;  
 SET LANGUAGE dutch;   
@@ -255,7 +257,7 @@ SELECT CONVERT(varchar(11), @t2, 106);
 ### <a name="c"></a>3.  
  호환성 수준 설정 110 이하로 EXCEPT 절의 오른쪽에 있는 재귀 참조는 무한 루프를 만듭니다.  
   
-```tsql  
+```sql  
 WITH   
 cte AS (SELECT * FROM (VALUES (1),(2),(3)) v (a)),  
 r   
@@ -270,7 +272,7 @@ FROM r;
 ### <a name="d"></a>4.  
  이 예에서는 스타일 0과 스타일 121의 차이점을 보여 줍니다. 날짜 및 시간 스타일에 대 한 자세한 내용은 참조 [CAST 및 convert&#40; Transact SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE TABLE t1 (c1 time(7), c2 datetime2);   
   
 INSERT t1 (c1,c2) VALUES (GETDATE(), GETDATE());  
@@ -293,7 +295,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ### <a name="e"></a>5.  
  최상위 UNION 연산자가 포함된 문에 변수를 할당할 수 있지만 예상치 않은 결과가 반환됩니다. 예를 들어 다음 문에서 지역 변수 `@v`에는 두 테이블의 합집합의 열 `BusinessEntityID` 값이 할당됩니다. 원래 SELECT 문에서 둘 이상의 값을 반환하면 반환된 값 중 마지막 값이 변수에 할당됩니다. 이 경우 변수에 마지막 값이 올바르게 할당되지만 SELECT UNION 문의 결과 집합도 함께 반환됩니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET compatibility_level = 90;  
 GO  
@@ -309,7 +311,7 @@ SELECT @v;
 ### <a name="f"></a>6.  
  최상위 UNION 연산자가 포함된 문에는 변수를 할당할 수 없습니다. 오류 10734가 반환됩니다. 오류를 해결하려면 다음 예와 같이 쿼리를 다시 작성합니다.  
   
-```tsql  
+```sql  
 DECLARE @v int;  
 SELECT @v = BusinessEntityID FROM   
     (SELECT BusinessEntityID FROM HumanResources.Employee  

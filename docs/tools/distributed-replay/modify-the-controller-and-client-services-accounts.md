@@ -3,7 +3,7 @@ title: "컨트롤러를 수정 및 클라이언트 서비스 계정 | Microsoft 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c955e0a3d78b758d1fe571c88da1defcf45e692
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa1ebb116e83725355975dddc31108a9365d190b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 Distributed Replay controller 및 client 서비스 계정을 수정 하 고 다음 액세스 제어 목록 (Acl)을 다시 적용 하는 방법에 설명 합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
     -   가상 계정 및 MSA(관리 서비스 계정)  
   
-    -   네트워크 서비스, 로컬 서비스 및 시스템  
+    -   Network Services, 로컬 서비스 및 시스템  
   
      그룹 계정(로컬 또는 도메인) 및 다른 기본 제공 계정(예: Everyone)은 사용할 수 없습니다.  
   

@@ -3,7 +3,7 @@ title: SQL Server Profiler | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8194b34b1e07abaedabe5c4ee685f645470fce70
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1fc967826c92981266156cf9a3655ff0a80478af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler"></a>SQL Server 프로파일러
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 인터페이스로을 생성 하 고 추적을 관리, 분석 및 추적 결과 재생 합니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
@@ -198,7 +198,7 @@ ms.lasthandoff: 12/05/2017
 |SQL Server Profiler에 대한 상황에 맞는 도움말 항목을 보여 줍니다.|[SQL Server 프로파일러 F1 도움말](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 성능 및 작업을 모니터링하는 데 사용하는 시스템 저장 프로시저를 보여 줍니다.|[SQL Server Profiler 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [잠금 이벤트 범주](../../relational-databases/event-classes/locks-event-category.md)   
  [Sessions 이벤트 범주](../../relational-databases/event-classes/sessions-event-category.md)   
  [Stored Procedures 이벤트 범주](../../relational-databases/event-classes/stored-procedures-event-category.md)   

@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31dd44920c1bc814985cd0391f52e035621de89f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 다음 예에서는 테이블 및 테이블을 참조 하는 프로시저를 만듭니다 상시 암호화를 구성 하 고 다음 테이블을 변경 하 고 실행을 보여 줍니다는 `sp_refresh_parameter_encryption` 프로시저입니다.  
 
 먼저 초기 테이블 및 테이블을 참조 하는 저장된 프로시저를 만듭니다.
-```tsql
+```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
     [FirstName] [nvarchar](50) NULL,
@@ -121,7 +121,7 @@ GO
 ```
 
 그런 다음 상시 암호화 키를 설정 합니다.
-```tsql
+```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
 (
@@ -143,7 +143,7 @@ GO
 
 
 마지막으로 SSN 열 암호화 된 열 및 다음 실행 바꿉니다는 `sp_refresh_parameter_encryption` 프로시저 상시 암호화 구성 요소를 업데이트 합니다.
-```tsql
+```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
 

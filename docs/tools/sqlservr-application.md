@@ -3,7 +3,7 @@ title: "sqlservr 응용 프로그램 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlservr
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1736e617da17f058e27a970e73e77ada7957876e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52fb7eaebe655c2be06b23522e434a2e08950b62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlservr-application"></a>sqlservr 응용 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**sqlservr** 응용 프로그램 시작, 중지, 일시 중지 및 계속 인스턴스의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 명령 프롬프트에서 합니다.  
@@ -78,7 +78,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  **-n**  
  명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. 인스턴스를 시작 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와  **-n**  옵션이 표시 되지 않으면 사용 하는 것이 좋습니다는 **-e** 옵션을 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록 되지 않습니다.  
   
- **-T** *trace#*  
+ **-T** *trace #*  
  지정된 추적 플래그( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
   
 > [!IMPORTANT]  
@@ -111,7 +111,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
 ## <a name="compatibility-support"></a>호환성 지원  
  **-h**  매개 변수는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 지원되지 않습니다. 이 매개 변수는 이전 버전 32비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 AWE가 설정된 경우 Hot Add 메모리 메타데이터에 대해 가상 주소 공간을 예약하는 데 사용되었습니다. 자세한 내용은 [SQL Server 2016에서 지원되지 않는 SQL Server 기능](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   

@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be983f785ef54523f27366d73e329b3b0517e9b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80f1b3bc5fa9684a87fbf330f50aca4f3e85aea5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>예  
  올바르지 않은 공간 개체의 다음 예제에서는 방법을 **isvaliddetailed ()** 메서드가 동작 합니다.  
   
-```tsql  
+```sql  
 DECLARE @p GEOGRAPHY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
 SELECT @p.IsValidDetailed()  
 --Returns: 24409: Not valid because some portion of polygon ring (1) lies in the interior of a polygon.  

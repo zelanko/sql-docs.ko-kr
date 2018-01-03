@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab6b1bde36e0e2b84c2bacfd52baca137e894f0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 40bcb89844fb9b5cea09dab93765a32c8dedcc90
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
 ### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>1. 계획 캐시의 쿼리 계획에서 계획 지침 만들기  
  다음 예에서는 계획 캐시에서 쿼리 계획을 지정하여 단일 SELECT 문에 대한 계획 지침을 만듭니다. 이 예에서는 계획 지침이 만들어지는 간단한 `SELECT` 문을 실행하여 시작합니다. 이 쿼리의 계획은 `sys.dm_exec_sql_text` 및 `sys.dm_exec_text_query_plan` 동적 관리 뷰를 사용하여 검사됩니다. 그런 다음 쿼리와 관련된 계획 캐시에서 쿼리 계획을 지정하여 쿼리에 대한 계획 지침을 만듭니다. 이 예에서 마지막 문은 계획 지침의 존재를 확인합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  

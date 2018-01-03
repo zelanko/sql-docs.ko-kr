@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 67b5d9300d4be84d16b2a650265e812eba1988a9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b736272f07e8767840076fc69cbd5ac3d86d377d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lead-transact-sql"></a>LEAD(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -67,7 +67,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 ### <a name="a-compare-values-between-years"></a>1. 연도 간 값 비교  
  다음 쿼리에서는 LEAD 함수를 사용하여 특정 직원의 연도별 판매 할당량 간 차이를 반환합니다. 마지막 행의 경우 뒤에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -92,7 +92,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 ### <a name="b-compare-values-within-partitions"></a>2. 파티션 내의 값 비교  
  다음 예에서는 LEAD 함수를 사용하여 직원별 연간 누계 매출을 비교합니다. 결과 집합의 행을 판매 지역별로 분할하기 위해 PARTITION BY 절이 지정되었습니다. LEAD 함수는 각 파티션에 별도로 적용되고 각 파티션에 대해 계산이 다시 시작됩니다. OVER 절에 지정된 ORDER BY 절은 함수를 적용하기 전에 각 파티션의 행을 정렬합니다. SELECT 문의 ORDER BY 절은 전체 결과 집합의 행을 정렬합니다. 각 파티션에 있는 마지막 행의 경우 뒤에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -118,7 +118,7 @@ Northwest                280              1352577.1325          0.00
 ### <a name="c-specifying-arbitrary-expressions"></a>3. 임의의 식 지정  
  다음 예에서는 LEAD 함수 구문에서 다양한 임의의 식을 지정하는 방법을 보여 줍니다.  
   
-```t-sql  
+```sql  
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -146,7 +146,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: 분기 간 값 비교  
  다음 예에서는 LEAD 함수를 보여 줍니다. 쿼리는 후속 달력 분기 동안 지정된 된 직원에 대 한 판매 할당량 값의 차이 가져옵니다. 확인 가능한 때문에 선행 값이 없는 마지막 행 뒤, 영 (0)의 기본값이 사용 됩니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

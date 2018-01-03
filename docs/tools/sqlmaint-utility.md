@@ -3,7 +3,7 @@ title: "sqlmaint 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlmaint
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef2ee4a1e84f18cc79b337e6358155f88fde826
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**sqlmaint** 유틸리티는 지정된 된 집합이 하나 이상의 데이터베이스에서 유지 관리 작업을 수행 합니다. **sqlmaint** 를 사용하여 DBCC 검사를 실행하고 데이터베이스 및 트랜잭션 로그를 백업하고 통계를 업데이트하고 인덱스를 다시 만들 수 있습니다. 모든 데이터베이스 유지 관리 작업은 지정된 텍스트 파일, HTML 파일 또는 전자 메일 계정으로 보낼 수 있는 보고서를 만듭니다. **sqlmaint** 는 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 만든 데이터베이스 유지 관리 계획을 실행합니다. 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유지 관리 계획을 실행하려면 [dtexec 유틸리티](../integration-services/packages/dtexec-utility.md)를 사용합니다.  
@@ -135,7 +135,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  *sqlmaint* 에서 원격 서버에 액세스할 때 **html_file** 에는 전체 UNC 파일 이름이 필요합니다.  
   
  **-DelHtmlRpt** \<*time_period*>  
- 보고서 파일을 만든 후 시간 간격이 초과 하는 경우 보고서 디렉터리에 있는 HTML 보고서를 삭제 하도록 지정 \< *time_period*> 합니다. **-DelHtmlRpt** 는 *html_file* 매개 변수에서 생성된 패턴과 이름이 맞는 파일을 찾습니다. 경우 *html_file* 이 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm 인 다음 **-DelHtmlRpt** 하면 **sqlmaint** C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint 패턴 일치 하는 파일을 삭제 하려면\*.htm에 있고 지정 된 다음 보다 오래 된 \< *time_period*> 합니다.  
+ 보고서 파일을 만든 후 시간 간격이 초과 하는 경우 보고서 디렉터리에 있는 HTML 보고서를 삭제 하도록 지정 \< *time_period*> 합니다. **-DelHtmlRpt**는 *html_file* 매개 변수에서 생성된 패턴과 이름이 맞는 파일을 찾습니다. 경우 *html_file* 이 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm 인 다음 **-DelHtmlRpt** 하면 **sqlmaint** C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint 패턴 일치 하는 파일을 삭제 하려면\*.htm에 있고 지정 된 다음 보다 오래 된 \< *time_period*> 합니다.  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  **-D**에 지정된 데이터베이스에서 사용하지 않는 공간을 제거하도록 지정합니다. 이 옵션은 자동으로 증가하도록 정의된 데이터베이스에서만 유용합니다. *Threshold_percent* 는 데이터베이스 크기가 몇 MB에 도달하면 **sqlmaint** 가 사용하지 않는 데이터 공간을 제거할지를 지정합니다. 데이터베이스가 *threshold_percent*보다 작으면 동작이 수행되지 않습니다. *Free_percent* 는 사용하지 않는 공간 중 데이터베이스에 유지해야 할 공간을 최종 데이터베이스 크기의 백분율로 지정합니다. 예를 들어 200MB의 데이터베이스에 100MB 데이터가 포함된 경우 *free_percent* 에 10을 지정하면 최종 데이터베이스 크기는 110MB가 됩니다. 데이터베이스가 *free_percent* 와 데이터베이스의 데이터 양을 더한 크기보다 작으면 데이터베이스가 확장되지 않습니다. 예를 들어 108MB의 데이터베이스에 100MB 데이터가 포함된 경우 *free_percent* 에 10을 지정하면 데이터베이스가 110MB로 확장되지 않고 108MB로 유지됩니다.  
@@ -244,7 +244,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   일반 오류가 발생한 경우  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **sqlmaint** 유틸리티는 **에 대한** 읽기 및 실행 `sqlmaint.exe`권한이 있는 Windows 사용자라면 누구나 실행할 수 있습니다. 이 파일은 기본적으로 `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` 폴더에 저장되어 있습니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -login_ID **로 지정된** 로그인에는 지정된 동작을 수행하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용 권한이 있어야 합니다. Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하는 경우 인증된 Windows 사용자에 매핑된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인에는 지정된 동작을 수행하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용 권한이 있어야 합니다.  
   
  예를 들어 **-BkUpDB** 를 사용하려면 BACKUP 문을 실행할 수 있는 권한이 있어야 합니다. 또한 **-UpdOptiStats** 인수를 사용하려면 UPDATE STATISTICS 문을 실행할 수 있는 권한이 있어야 합니다. 자세한 내용은 온라인 설명서에서 해당 항목의 "사용 권한" 섹션을 참조하십시오.  
@@ -275,7 +275,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [BACKUP&#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)   
  [UPDATE STATISTICS&#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)  
   

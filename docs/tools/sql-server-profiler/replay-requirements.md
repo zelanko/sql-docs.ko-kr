@@ -3,7 +3,7 @@ title: "재생 요구 사항 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -22,13 +22,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5fdf69fad3a8b7aaa337715ac2e32f92cb22e93a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d76f9ac6450ffd473b91831416a26f6f313ccad7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="replay-requirements"></a>재생 요구 사항
+# <a name="replay-requirements"></a>Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]추적 데이터를 재생 하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 또는 Distributed Replay Utility, 특정 이벤트 클래스 및 열 집합이 추적에 캡처되어야 합니다. **TSQL_Replay** 추적 템플릿을 사용하여 나중에 재생에 사용되도록 추적을 구성한 경우 이러한 설정이 기본적으로 사용됩니다. 이 항목에서는 이러한 설정 및 기타 재생 요구 사항에 대해 설명합니다.  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.lasthandoff: 12/05/2017
   
  추적 재생에 필요한 권한에 대한 자세한 내용은 [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)을 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [추적 테이블 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [추적 파일 &#40; 재생 SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)   

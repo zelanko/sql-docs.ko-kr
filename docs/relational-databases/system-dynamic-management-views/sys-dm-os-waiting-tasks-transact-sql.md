@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d8df7b1a31a649962f4074c936ff4310cf16a942
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 52f867ccc301a710656739bf49ec1a11a50fcee1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,7 +143,7 @@ ms.lasthandoff: 11/17/2017
  
 ## <a name="example"></a>예제
 이 예제에서는 차단된 세션을 식별 합니다.  실행 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 쿼리할 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.
-```tsql
+```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ``` 

@@ -1,7 +1,7 @@
 ---
 title: "고급 개체 선택 (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a03991486724b9eeefa562279337b990df9317b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d940a606be683a5ae345fb02a214002695e9c050
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>고급 개체 선택 (MySQLToSQL)
 **고급 개체 섹션** 대화 상자를 사용 하면 개체 이름에 문자열 및 부분 문자열을 사용 하 여 데이터베이스 개체를 필터링 한 다음 선택 하거나 해당 개체를 선택 취소 합니다. SSMA는 선택한 개체에 변환 및 마이그레이션 작업을 수행합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 이 대화 상자를 사용 하기 전에를 강제로 SSMA 스키마 변환 하거나 프로젝트를 저장 하 여 모든 메타 데이터를 로드 하는 것이 좋습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **모든 항목 선택**  
 모든 항목 옆에 있는 확인 표시를 추가합니다. 메타 데이터 탐색기에서 이러한 항목을 즉시 선택 됩니다.  
   

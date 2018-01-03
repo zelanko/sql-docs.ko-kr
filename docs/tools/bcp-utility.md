@@ -3,7 +3,7 @@ title: "bcp 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 18d7ba613fe4b98adc94bcf099e9576fd0550e6d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1b9fd81237093da7296d85efdbe9472da711315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -143,7 +143,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > 데이터 정렬/코드 페이지 사양보다 65001 옵션에 더 높은 우선 순위를 두려는 경우를 제외하고는 서식 파일의 각 열에 대한 데이터 정렬 이름을 지정하는 것이 좋습니다.
   
-|코드 페이지 값|설명|  
+|코드 페이지 값|Description|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows(ISO 1252)입니다.|  
 |OEM|클라이언트가 사용하는 기본 코드 페이지입니다. **-C** 를 지정하지 않은 경우 사용되는 기본 코드 페이지입니다.|  
@@ -151,7 +151,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|850과 같은 특정 코드 페이지 번호입니다.<br /><br /> 버전 13([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다. 버전 13부터 UTF-8 인코딩을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]이전 버전으로 가져올 수 있습니다.|  
   
  **-d** ***database_name***<a name="d"></a>   
- 연결할 데이터베이스를 지정합니다. bcp.exe는 기본적으로 사용자의 기본 데이터베이스에 연결됩니다. **-d***database_name*과 세 부분으로 구성된 이름(bcp.exe에 첫 번째 매개 변수로 전달되는 *database_name.schema.table*)을 지정하면 오류가 발생하는데 이는 데이터베이스 이름을 두 번 지정할 수 없기 때문입니다. *database_name*이 하이픈(-)이나 슬래시(/)로 시작하면 **-d**와 데이터베이스 이름 사이에 공백을 포함하지 마세요.  
+ 연결할 데이터베이스를 지정합니다. bcp.exe는 기본적으로 사용자의 기본 데이터베이스에 연결됩니다. 경우 **-d** *database_name* 및 세 부분으로 된 이름을 (*database_name.schema.table*bcp.exe에 첫 번째 매개 변수로 전달 된)을 지정 하기 때문에 오류가 발생 하면 데이터베이스 이름을 두 번 지정할 수 없습니다. 경우 *database_name* 시작 하이픈 (-) 또는 슬래시 (/) 사이 공백의 추가 하지 마십시오 **-d** 및 데이터베이스 이름입니다.  
   
  **-e** ***err_file***<a name="e"></a>  
  **bcp** 유틸리티가 파일에서 데이터베이스로 전송할 수 없는 행을 저장하는 데 사용되는 오류 파일의 전체 경로를 지정합니다. **bcp** 명령의 오류 메시지는 사용자의 워크스테이션에 나타납니다. 이 옵션을 사용하지 않으면 오류 파일이 생성되지 않습니다.  
@@ -210,7 +210,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   입력 데이터에 제약 조건을 위반하는 행이 포함된 경우에는 제약 조건을 사용하지 않을 수 있습니다(기본 동작). CHECK 제약 조건을 사용하지 않으면 데이터를 가져온 다음 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하여 잘못된 데이터를 제거할 수 있습니다.  
   
   > [!NOTE]
-  > **bcp** 는 이제 데이터 유효성 검사 및 데이터 검사를 강제로 실행하므로 스크립트를 데이터 파일의 잘못된 데이터에 대해 실행할 경우 오류가 발생할 수 있습니다.
+  > **bcp**는 이제 데이터 유효성 검사 및 데이터 검사를 강제로 실행하므로 스크립트를 데이터 파일의 잘못된 데이터에 대해 실행할 경우 오류가 발생할 수 있습니다.
   
   > [!NOTE]
   > **-m** *max_errors* 스위치는 제약 조건 검사에 적용되지 않습니다.
@@ -227,7 +227,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다. 자세한 내용은 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
  **-K** ***application_intent***<a name="K"></a>   
- 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+ 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
  **-L** ***last_row***<a name="L"></a>  
  테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다. 이 매개 변수에는 0보다 크고(>) 마지막 행 번호보다 작거나(<) 같은(=) 값을 지정해야 합니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 마지막 행입니다.  

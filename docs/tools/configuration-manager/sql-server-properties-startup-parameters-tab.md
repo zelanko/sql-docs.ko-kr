@@ -3,7 +3,7 @@ title: "SQL Server 속성 (시작 매개 변수 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc88c227ddad0cabd100e78d4424375399aa5fb6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 속성(시작 매개 변수 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 대화 상자를 사용 하 여 추가 또는 제거에 대 한 시작 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 시작 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 성능에 많은 영향을 미칠 수 있습니다. 시작 매개 변수를 추가하거나 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목을 참조하십시오.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **시작 매개 변수 지정**  
  매개 변수를 추가하려면 매개 변수를 입력한 다음 **추가**를 클릭합니다.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 |매개 변수|간단한 설명|  
 |---------------|-----------------------|  
-|-m|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작합니다.|  
+|-M|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작합니다.|  
 |-T1204|교착 상태에 있는 잠금의 유형과 리소스 및 현재 영향을 받은 명령을 반환합니다.|  
 |-T1224|잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다.|  
 |-T3608|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 master 데이터베이스를 제외한 모든 데이터베이스를 자동으로 시작 및 복구하지 못하도록 방지합니다.|  

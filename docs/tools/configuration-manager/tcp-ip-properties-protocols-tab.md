@@ -3,7 +3,7 @@ title: "TCP/IP 속성 (프로토콜 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe54bf4b1cb0d2e99b5276b440bf30374e788954
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e090b89ed827e1ea8a7700a2503fed95ace84501
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 속성(프로토콜 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **TCP/IP 속성** 대화 상자는 TCP/IP 프로토콜에 대 한 옵션을 구성할 수 있습니다. 세부 정보 창에 개별 IP 주소 구성을 표시하려면 왼쪽 창에서 **TCP/IP** 를 클릭합니다.  
   
  변경 내용을 적용하려면 Microsoft SQL Server를 다시 시작해야 합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **Enabled**  
  가능한 값은 **예** 및 **아니요**입니다.  
   

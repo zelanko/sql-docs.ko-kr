@@ -3,7 +3,7 @@ title: "dta 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
@@ -134,7 +134,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- 작업을 튜닝할 때 **dta** 가 연결하는 첫 번째 데이터베이스를 지정합니다. 이 인수에는 데이터베이스를 하나만 지정할 수 있습니다. 예를 들어  
+ 작업을 튜닝할 때 **dta** 가 연결하는 첫 번째 데이터베이스를 지정합니다. 이 인수에는 데이터베이스를 하나만 지정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*–D* 옵션으로 지정된 **database_name**||  
 |*owner_name*|**dbo**|*owner_name* 은 **dbo**여야 합니다. 다른 값을 지정할 경우 **dta** 를 실행할 수 없으며 오류가 반환됩니다.|  
-|*table_name*|없음||  
+|*table_name*|InclusionThresholdSetting||  
   
  파일을 사용하는 경우 TuningLog.xml과 같이 확장명으로 .xml을 지정합니다.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  **dta** 가 권장 구성에 포함해야 할 실제 디자인 구조 유형을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다. 값을 지정하지 않으면 **dta** 는 기본적으로 **-fa****IDX**를 사용합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |IDX_IV|인덱스와 인덱싱된 뷰|  
 |IDX|인덱스만|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  권장 구성을 생성할 때 **dta** 가 유지해야 할 기존의 실제 디자인 구조를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |없음|기존 구조 없음|  
 |ALL|기존의 모든 구조|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  **dta** 가 제안하는 새 실제 디자인 구조(인덱스 및 인덱싱된 뷰)를 분할할 것인지 여부와 분할 방법을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |없음|분할 안 함|  
 |FULL|전체 분할(성능 향상 중심)|  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  물리적 디자인 구조를 온라인으로 만들 것인지 여부를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |OFF|권장되는 물리적 디자인 구조를 온라인으로 만들 수 없습니다.|  
 |ON|권장되는 모든 물리적 디자인 구조를 온라인으로 만들 수 있습니다.|  
@@ -285,7 +285,7 @@ dta -iq -I 48
  **-or** *output_script_file_name*  
  **dta** 가 권장 구성을 지정된 파일 이름 및 대상에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트로 쓰도록 지정합니다.  
   
- 이 옵션과 함께 **-F** 를 사용할 수 있습니다. 파일 이름이 고유한지 확인합니다. 특히 **-or** 및 **-ox**를 함께 사용하는 경우 고유한 파일 이름이어야 합니다.  
+ 이 옵션과 함께 **-F**를 사용할 수 있습니다. 파일 이름이 고유한지 확인합니다. 특히 **-or** 및 **-ox**를 함께 사용하는 경우 고유한 파일 이름이어야 합니다.  
   
  **-ox** *output_xml_report_file_name*  
  **dta** 가 권장 구성을 XML 형식의 출력 보고서로 쓰도록 지정합니다. 파일 이름을 제공한 경우 권장 구성이 해당 대상에 기록됩니다. 그렇지 않으면 **dta** 는 세션 이름을 사용하여 파일 이름을 생성하고 현재 디렉터리에 씁니다.  
@@ -420,7 +420,7 @@ AdventureWorks2012.Production.Product  2000000
 dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
  [데이터베이스 엔진 튜닝 관리자](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   

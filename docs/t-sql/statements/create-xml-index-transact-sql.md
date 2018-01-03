@@ -33,11 +33,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28de81b28ee31c172d1a31644f6847579af4e961
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7949376e26e184013b9a31258ff757991f4bdd19
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  XML 인덱스를 작성, 다시 작성 또는 삭제하는 오프라인 인덱스 작업은 테이블에 대해 SCH-M(스키마 수정) 잠금을 획득합니다. 이 경우 작업 중에 모든 사용자가 기본 테이블에 액세스할 수 없게 됩니다.  
   
 > [!NOTE]  
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
@@ -227,7 +227,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  *max_degree_of_parallelism* 될 수 있습니다.  
   
- 1.  
+ 1  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -256,7 +256,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 ### <a name="a-creating-a-primary-xml-index"></a>1. 기본 XML 인덱스 만들기  
  다음 예에서는 `CatalogDescription` 테이블의 `Production.ProductModel` 열에 기본 XML 인덱스를 만듭니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT * FROM sys.indexes  
@@ -272,7 +272,7 @@ GO
 ### <a name="b-creating-a-secondary-xml-index"></a>2. 보조 XML 인덱스 만들기  
  다음 예에서는 `CatalogDescription` 테이블의 `Production.ProductModel` 열에 보조 XML 인덱스를 만듭니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.indexes  

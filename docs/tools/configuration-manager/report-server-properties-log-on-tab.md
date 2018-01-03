@@ -3,7 +3,7 @@ title: "보고서 서버 속성 (로그온 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e326dd97af3e3fbd8580bc5b624c6957a711293
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 93320cb43be5f499917c16843d39f1aeee9b1336
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="report-server-properties-log-on-tab"></a>보고서 서버 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **로그온** 탭은 **보고서 서버 속성** 대화 상자 보고서 서버 서비스에서 사용 하는 계정을 지정 하 고 시작 하 고 서비스를 중지 합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **로컬 시스템 계정**  
  암호를 요구하지 않는 로컬 시스템 계정을 지정합니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 다른 서버와 상호 작용하지 못하도록 서비스를 제한할 수 있습니다.  
   

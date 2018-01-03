@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eb86009bf940857788425afd4781ca79ab3686
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**nchar(128)**|논리적 파일 이름입니다.|  
 |**fileid**|**smallint**|파일의 ID입니다.|  
 |**파일 이름**|**nchar(260)**|운영 체제 파일 이름(물리적 파일 이름)입니다.|  
-|**파일 그룹**|**nvarchar (128)**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 로그 파일이며 파일 그룹에 속하지 않습니다.|  
-|**크기**|**nvarchar(18)**|파일 크기(MB)입니다.|  
+|**파일 그룹**|**nvarchar(128)**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 로그 파일이며 파일 그룹에 속하지 않습니다.|  
+|**size**|**nvarchar(18)**|파일 크기(MB)입니다.|  
 |**maxsize**|**nvarchar(18)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**증가**|**nvarchar(18)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양입니다.|  
 |**사용**|**varchar(9)**|파일의 용도입니다. 데이터 파일에 대 한 값이 **'데이터에만 해당'** 및 값은 로그 파일에 대 한 **'로그 만'**합니다.|  
@@ -87,14 +87,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### <a name="a-returning-information-about-a-single-database"></a>1. 단일 데이터베이스에 대한 정보 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 정보를 표시합니다.  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### <a name="b-returning-information-about-all-databases"></a>2. 모든 데이터베이스에 대한 정보 반환  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 서버에 있는 모든 데이터베이스에 대한 정보를 표시합니다.  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

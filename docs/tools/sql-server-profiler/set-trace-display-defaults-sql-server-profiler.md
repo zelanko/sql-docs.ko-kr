@@ -3,7 +3,7 @@ title: "추적 표시 기본값 (SQL Server Profiler) 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8737ffefa5cf01785de31d41ee7a17a3b4787b1c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 80fe4bde3fdbd2aad03ca328f4efcbffbecba183
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>추적 표시 기본값 설정(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에는 글꼴 종류를 지정 하는 도구 옵션을 설정 하는 방법에 설명 크기 및 스타일을 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 사용 하 여 추적 창에 추적을 표시 합니다. 또한 운영 체제에서 구성된 국가별 설정에 따라 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 모든 날짜 및 시간을 표시하도록 지정할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  **확인** 을 클릭하여 **일반 옵션** 대화 상자를 닫습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

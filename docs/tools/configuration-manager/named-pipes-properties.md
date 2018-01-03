@@ -3,7 +3,7 @@ title: "명명 된 파이프 속성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -22,18 +22,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5397519a722e753509161e9fc6cfcf108fc5c73a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6122004c46c36f21d2b301e70be91b26fa06c701
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="named-pipes-properties"></a>명명된 파이프 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **프로토콜**페이지에 **명명 된 파이프 속성** 대화 상자 보기 또는 변경 된 명명 된 파이프를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 수신 하는 명명 된 파이프 프로토콜을 사용 하는 경우.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작해야 합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **Enabled**  
  가능한 값은 **예** 및 **아니요**입니다.  
   

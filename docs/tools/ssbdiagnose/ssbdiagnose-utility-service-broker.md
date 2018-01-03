@@ -3,7 +3,7 @@ title: "ssbdiagnose 유틸리티 (Service Broker) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 601de096e50a39b13113ff09e86965187701b327
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**ssbdiagnose** 유틸리티의 문제는 보고 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화를 구성 하거나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스입니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
@@ -314,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 환경 변수  
  **ssbdiagnose** 유틸리티는 **sqlcmd** 유틸리티도 사용하는 SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD 및 SQLCMDLOGINTIMOUT 환경 변수를 지원합니다. 환경 변수는 명령 프롬프트 SET 명령을 사용하여 설정하거나 **sqlcmd** 를 사용하여 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 **setvar**명령을 사용하여 설정할 수 있습니다. **sqlcmd** 에서 **setvar**을 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  각 **connectionoptions** 절에서 **-E** 또는 **-U** 를 사용하여 지정된 로그인은 **-S** 에 지정된 인스턴스에 있는 **sysadmin**고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -451,7 +451,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [BEGIN DIALOG conversation&#40; Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [BROKER 우선 순위 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   

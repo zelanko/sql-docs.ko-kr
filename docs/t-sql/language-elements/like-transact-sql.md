@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +91,7 @@ match_expression [ NOT ] LIKE pattern
   
  포함 하는 패턴을 사용 하 여 문자열 비교 **char** 및 **varchar** 데이터 데이터가 저장 되는 방식 때문에 LIKE 비교가 성공 하지 않을 수 있습니다. 각 데이터 형식의 저장 방식과 LIKE 비교가 실패할 수 있는 상황을 이해하는 것이 중요합니다. 다음 예제에서는 로컬 전달 **char** 변수 저장된 프로시저와 다음 사용 하 여 패턴 일치를 시작 하는 성을 지정 된 문자 집합으로 모든 직원 찾기를 합니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +109,7 @@ GO
   
  그러나 다음 예제에서는 성공에 후행 공백이 추가 되지 않습니다 때문에 **varchar** 변수입니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +137,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  다음 예에서는 ASCII 패턴 일치 및 유니코드 LIKE 패턴 일치가 반환하는 행의 차이를 보여 줍니다.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +168,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  예를 들어 다음 쿼리는 모두 `dm` 문자로 시작하므로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 모든 동적 관리 뷰를 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +207,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>1. LIKE와 % 와일드카드 문자 사용  
  다음 예에서는 `415` 테이블에서 지역 번호가 `PersonPhone`인 모든 전화 번호를 찾는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +241,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>2. NOT LIKE와 % 와일드카드 문자 사용  
  다음 예에서는 `PersonPhone` 테이블에서 `415` 외의 다른 지역 번호를 포함하는 모든 전화 번호를 찾는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +272,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>3. ESCAPE 절 사용  
  다음 예에서는 `ESCAPE` 절과 이스케이프 문자를 사용하여 `10-15%` 테이블의 `c1` 열에서 `mytbl2`와 정확히 일치하는 문자열을 찾는 방법을 보여 줍니다.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +297,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>4. [ ] 와일드카드 문자 사용  
  다음 예제에서 직원을 찾습니다는 `Person` 의 이름이 포함 된 테이블 `Cheryl` 또는 `Sheryl`합니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +308,7 @@ GO
   
  다음 예에서는 `Person` 테이블에서 성이 `Zheng` 또는 `Zhang`인 직원의 행을 찾습니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +323,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>5. LIKE와 % 와일드카드 문자 사용  
  다음 예제에서는 검색에 모든 직원의 `DimEmployee` 로 시작 하는 전화 번호를 가진 테이블 `612`합니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>6. NOT LIKE와 % 와일드카드 문자 사용  
  다음 예제에서는에서 모든 전화 번호를 찾습니다는 `DimEmployee` 로 시작 하지 않는 테이블 `612`합니다.  의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>7. LIKE와 _ 와일드 카드 문자 사용  
  다음 예제에서는 부터는 지역 번호는 모든 전화 번호를 찾습니다 `6` 와 끝 `2` 에 `DimEmployee` 테이블입니다. Note 지역 번호 전화 번호의 첫 번째 부분 하 고 열 값에 이후에 추가 문자가 존재 하므로 % 와일드 카드 문자 검색 패턴의 끝에도 됩니다.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  

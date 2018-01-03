@@ -3,7 +3,7 @@ title: "프로파일러 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e01a99b3fa95074d48f2d3f7c69596cfd4c2d7e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c3bd2990df59e1ae2ccaa0a5a162b3ac42e4c938
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profiler-utility"></a>프로파일러 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**프로파일러** 유틸리티를 실행 하는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 도구입니다. 이 항목에서 나중에 나열된 옵션 인수를 사용하여 응용 프로그램 시작 방법을 제어할 수 있습니다.  
@@ -87,7 +87,7 @@ profiler
  프로파일러를 시작할 때 로드할 추적 테이블을 지정합니다. 데이터베이스, 사용자나 스키마 및 테이블을 지정해야 합니다.  
   
  **/T"** *template_name* **"**  
- 추적을 구성하기 위해 로드할 템플릿을 지정합니다. 템플릿 이름을 따옴표로 묶어야 합니다. 또한 템플릿 이름은 시스템 템플릿 디렉터리나 사용자 템플릿 디렉터리에 있어야 합니다. 두 디렉터리에 이름이 같은 템플릿 두 개가 있을 경우 시스템 디렉터리의 템플릿이 로드됩니다. 지정한 이름의 템플릿이 없을 경우 표준 템플릿이 로드됩니다. *template_name*에 템플릿의 파일 확장명(.tdf)을 포함하지 마세요. 예를 들어  
+ 추적을 구성하기 위해 로드할 템플릿을 지정합니다. 템플릿 이름을 따옴표로 묶어야 합니다. 또한 템플릿 이름은 시스템 템플릿 디렉터리나 사용자 템플릿 디렉터리에 있어야 합니다. 두 디렉터리에 이름이 같은 템플릿 두 개가 있을 경우 시스템 디렉터리의 템플릿이 로드됩니다. 지정한 이름의 템플릿이 없을 경우 표준 템플릿이 로드됩니다. *template_name*에 템플릿의 파일 확장명(.tdf)을 포함하지 마세요. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 /T "standard"  
@@ -130,7 +130,7 @@ profiler
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

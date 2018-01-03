@@ -3,7 +3,7 @@ title: "경과 했는데도 문제가 있다면 추적 실행 일시 중지 또�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccaa3b09b9c0f632dc523e0bdef96baeafa06dca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c342e43e792438f230e753809ef237d0bd459c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>일시 중지 또는 중지 후 추적 실행(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 추적을 일시 중지 하거나 사용 하 여 중지 한 후 다시 시작 하는 방법을 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  **파일** 메뉴에서 **추적 실행**을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [추적 시작](../../tools/sql-server-profiler/start-a-trace.md)  
   

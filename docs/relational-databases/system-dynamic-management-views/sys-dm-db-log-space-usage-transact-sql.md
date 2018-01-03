@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4dfc548cdc7c2ece756e86f753a8bc21513f158
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7e0e14e96c3581b7a66fad23e21ac7a15808a1f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>1. Tempdb에 가능한 로그 양 공간 확인   
 다음 쿼리에서 메가바이트 (MB) tempdb에서 사용할 수 있는의 총 사용 가능한 로그 공간을 반환합니다.
 
-```tsql
+```sql
 USE tempdb;  
 GO  
 

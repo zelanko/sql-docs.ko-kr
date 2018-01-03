@@ -3,7 +3,7 @@ title: "&lt;별칭&gt; 속성 (별칭 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e8fe43fb1322109dbd90cdb6923669503ae1ff41
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cadb0bdb27b29c3f1a34e5db94154d0aaeda0382
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;별칭&gt; 속성 (별칭 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]별칭은 연결을 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. **\<**Alias name**> Properties** 대화 상자의 **별칭** 페이지를 사용하여 별칭에 대한 연결 문자열의 요소를 확인하거나 지정할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **Alias Name**  
  이 연결을 나타내는 데 사용할 이름(별칭)입니다.  
   

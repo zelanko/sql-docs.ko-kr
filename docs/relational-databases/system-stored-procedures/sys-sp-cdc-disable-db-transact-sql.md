@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6bde9363f4778f4aee337d11067b28fefc9895c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bf0fefa010665821d13153072e35214080385566
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
+```sql  
 sys.sp_cdc_disable_db  
 ```  
   
@@ -52,7 +52,7 @@ sys.sp_cdc_disable_db
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  **sys.sp_cdc_disable_db** 변경 현재 사용 하도록 설정 하는 데이터베이스의 모든 테이블에 대 한 데이터 캡처를 비활성화 합니다. 변경 테이블, 작업, 저장 프로시저, 함수 등 변경 데이터 캡처와 관련된 모든 시스템 개체가 삭제됩니다. **is_cdc_enabled** 데이터베이스 항목에 대 한 열은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 0으로 설정 합니다.  
@@ -66,7 +66,7 @@ sys.sp_cdc_disable_db
 ## <a name="examples"></a>예  
  다음 예에서는 `AdventureWorks2012` 데이터베이스에 대한 변경 데이터 캡처를 비활성화합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE sys.sp_cdc_disable_db;  

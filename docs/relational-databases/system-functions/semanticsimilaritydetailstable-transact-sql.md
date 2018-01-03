@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7ea0123e9d5c86bdd6b3983d0b6c20ceed59c0e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c602d6119bba1b828c9c68853c2ed60249e33c60
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYDETAILSTABLE  
     (  
     table,  
@@ -98,7 +98,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="examples"></a>예  
  다음 예제에 지정 된 지원자 간에 유사성 점수가 가장 높은 5 개의 키 구를 검색 **HumanResources.JobCandidate** AdventureWorks2012 예제 데이터베이스의 테이블입니다. @CandidateId 및 @MatchedID 변수 전체 텍스트 인덱스의 키 열에서 값을 나타냅니다.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROMSEMANTICSIMILARITYDETAILSTABLE  
     (  

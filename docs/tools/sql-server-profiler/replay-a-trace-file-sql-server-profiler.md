@@ -3,7 +3,7 @@ title: "추적 파일 (SQL Server Profiler) 재생 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7495e722c8bd620be497894ad87f527454171aa9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4a7a8c4b5165f72500f1bb38c47d2c9b50c7c840
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>추적 파일 재생(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]재생은 저장된 된 추적을 열고 다시 재생 하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 응용 프로그램이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 응용 프로그램이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  **추적한 순서대로 이벤트를 재생합니다.**또는 **여러 스레드를 사용하여 이벤트를 재생합니다.**를 선택합니다. 다음 표에서는 이 두 설정 사이의 차이점을 설명합니다.  
   
-    |옵션|설명|  
+    |옵션|Description|  
     |------------|-----------------|  
     |**추적한 순서대로 이벤트를 재생합니다.**|기록된 순서대로 이벤트를 재생합니다. 이 옵션을 사용하면 디버깅할 수 있습니다.|  
     |**여러 스레드를 사용하여 이벤트를 재생합니다.**|이 옵션은 여러 스레드를 사용하여 순서와 관계없이 각 이벤트를 재생합니다. 이 옵션을 사용하면 성능이 최적화됩니다.|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/05/2017
   
     -   재생하는 동안 SQL Server가 프로세스를 관리하는 방법을 제어하려면 **상태 모니터 옵션**을 구성합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로파일러 실행에 필요한 권한](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [추적 재생](../../tools/sql-server-profiler/replay-traces.md)   
  [추적 파일 &#40; 열기 SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   

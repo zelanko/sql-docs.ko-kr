@@ -3,7 +3,7 @@ title: "TuningTimeInMin 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed0440a28276fa64aa94dad3bbfcdbb287dc28d7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f96f2d58bdc3e5bed18e9dd76fbdd7813a24f8a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]분 후에는 튜닝 세션의 최대 길이 지정합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**unsignedInt**, 길이 제한 없음|  
 |**기본값**|480분(8시간)|  
@@ -51,11 +51,11 @@ ms.lasthandoff: 12/05/2017
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**자식 요소**|없음|  
+|**자식 요소**|InclusionThresholdSetting|  
   
 ## <a name="example"></a>예제  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 코드 예에서는 최대 튜닝 시간을 12시간으로 설정하는 방법을 보여 줍니다.  
   
 ## <a name="code"></a>코드  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

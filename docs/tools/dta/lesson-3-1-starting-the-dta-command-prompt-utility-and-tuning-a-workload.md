@@ -3,7 +3,7 @@ title: "Dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝 | Microsof
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 615ce013af8c88bc748f1fc150e47fea182e7a06
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 70cb8fd744c0f169d151d076606740ad53fa404e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>단원 3-1-dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 작업 과정을 안내해 시작는 **dta** 고 도움말을 본 다음 명령 프롬프트에서 작업을 튜닝 하는 데 사용 하는 유틸리티입니다. 여기서는 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스) 연습인 [작업 튜닝](../../tools/dta/lesson-1-1-tuning-a-workload.md)에 대해 만든 MyScript.sql 작업을 사용합니다.  

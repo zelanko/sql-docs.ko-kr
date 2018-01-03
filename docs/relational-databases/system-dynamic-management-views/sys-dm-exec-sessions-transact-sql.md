@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4119f0283be2bf4a0b145e59ec930eea4496d666
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|각각의 기본 활성 연결과 연결된 세션을 식별합니다. Null을 허용하지 않습니다.|  
 |login_time|**datetime**|세션이 설정된 시간입니다. Null을 허용하지 않습니다.|  
-|host_name|**nvarchar (128)**|세션에 따라 달라지는 클라이언트 워크스테이션의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.<br /><br /> **보안 정보:** 클라이언트 응용 프로그램이 워크스테이션 이름을 제공 하며 부정확 한 데이터를 제공할 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.|  
-|program_name|**nvarchar (128)**|세션을 시작한 클라이언트 프로그램의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
+|host_name|**nvarchar(128)**|세션에 따라 달라지는 클라이언트 워크스테이션의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.<br /><br /> **보안 정보:** 클라이언트 응용 프로그램이 워크스테이션 이름을 제공 하며 부정확 한 데이터를 제공할 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.|  
+|program_name|**nvarchar(128)**|세션을 시작한 클라이언트 프로그램의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |host_process_id|**int**|세션을 시작한 클라이언트 프로그램의 프로세스 ID입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |client_version|**int**|클라이언트가 서버에 연결하는 데 사용하는 TDS 프로토콜 버전의 인터페이스입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |client_interface_name|**nvarchar (32)**|서버와 통신 하는 클라이언트에서 사용 되는 라이브러리/드라이버의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |security_id|**varbinary(85)**|로그인과 연결된 Microsoft Windows 보안 ID입니다. Null을 허용하지 않습니다.|  
-|login_name|**nvarchar (128)**|현재 세션을 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. 세션을 만든 원래 로그인 이름은 original_login_name을 참조하십시오. 일 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 이름 또는 Windows 인증된 도메인 사용자 이름입니다. Null을 허용하지 않습니다.|  
-|nt_domain|**nvarchar (128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 도메인입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
-|nt_user_name|**nvarchar (128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 사용자 이름입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
+|login_name|**nvarchar(128)**|현재 세션을 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. 세션을 만든 원래 로그인 이름은 original_login_name을 참조하십시오. 일 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 이름 또는 Windows 인증된 도메인 사용자 이름입니다. Null을 허용하지 않습니다.|  
+|nt_domain|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 도메인입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
+|nt_user_name|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 사용자 이름입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |상태|**nvarchar (30)**|세션 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **실행** -현재 하나 이상의 요청을 실행<br /><br /> **절전 모드** -현재 실행 중인 요청이 없습니다<br /><br /> **유휴** -연결 풀링으로 인해 다시 설정 되었음을 세션과 로그인 하기 전 상태가 되었습니다.<br /><br /> **Preconnect** -세션은 리소스 관리자 분류자입니다.<br /><br /> Null을 허용하지 않습니다.|  
 |context_info|**varbinary(128)**|세션의 CONTEXT_INFO 값입니다. 컨텍스트 정보를 사용 하 여 사용자가 설정 되는 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 문. Null을 허용합니다.|  
 |cpu_time|**int**|이 세션에서 사용한 CPU 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 |logical_reads|**bigint**|세션에서 수행된 논리적 읽기 수입니다. Null을 허용하지 않습니다.|  
 |is_user_process|**bit**|시스템 세션인 경우에는 0이고, 그렇지 않으면 1입니다. Null을 허용하지 않습니다.|  
 |text_size|**int**|세션에 대한 TEXTSIZE 설정입니다. Null을 허용하지 않습니다.|  
-|language|**nvarchar (128)**|세션에 대한 LANGUAGE 설정입니다. Null을 허용합니다.|  
+|language|**nvarchar(128)**|세션에 대한 LANGUAGE 설정입니다. Null을 허용합니다.|  
 |date_format|**nvarchar(3)**|세션에 대한 DATEFORMAT 설정입니다. Null을 허용합니다.|  
 |date_first|**smallint**|세션에 대한 DATEFIRST 설정입니다. Null을 허용하지 않습니다.|  
 |quoted_identifier|**bit**|세션에 대한 QUOTED_IDENTIFIER 설정입니다. Null을 허용하지 않습니다.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 |row_count|**bigint**|세션에서 지금까지 반환된 행 수입니다. Null을 허용하지 않습니다.|  
 |prev_error|**int**|세션에서 반환된 마지막 오류의 ID입니다. Null을 허용하지 않습니다.|  
 |original_security_id|**varbinary(85)**|original_login_name과 연결된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 보안 ID입니다. Null을 허용하지 않습니다.|  
-|original_login_name|**nvarchar (128)**|클라이언트가 이 세션을 만드는 데 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 이름, Windows 인증 도메인 사용자 이름 또는 포함된 데이터베이스 사용자일 수 있습니다. 초기 연결 이후 세션에서 암시적 또는 명시적인 많은 컨텍스트 전환이 수행되었을 수 있습니다. 예를 들어 경우 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 사용 됩니다. Null을 허용하지 않습니다.|  
+|original_login_name|**nvarchar(128)**|클라이언트가 이 세션을 만드는 데 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 이름, Windows 인증 도메인 사용자 이름 또는 포함된 데이터베이스 사용자일 수 있습니다. 초기 연결 이후 세션에서 암시적 또는 명시적인 많은 컨텍스트 전환이 수행되었을 수 있습니다. 예를 들어 경우 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 사용 됩니다. Null을 허용하지 않습니다.|  
 |last_successful_logon|**datetime**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 현재 세션이 시작되기 전에 original_login_name에 대해 마지막으로 성공한 로그온 시간입니다.|  
 |last_unsuccessful_logon|**datetime**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 현재 세션이 시작되기 전에 original_login_name에 대해 마지막으로 실패한 로그온 시간입니다.|  
 |unsuccessful_logons|**bigint**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> original_login_name에 대해 last_successful_logon과 login_time 사이에 실패한 로그온 시도 횟수입니다.|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|열 이름/APPLY|관계|  
+|보낸 사람|수행할 작업|열 이름/APPLY|관계|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-finding-users-that-are-connected-to-the-server"></a>1. 서버에 연결된 사용자 찾기  
  다음 예에서는 서버에 연결되는 사용자를 찾고 각 사용자에 대한 세션 수를 반환합니다.  
   
-```tsql  
+```sql  
 SELECT login_name ,COUNT(session_id) AS session_count   
 FROM sys.dm_exec_sessions   
 GROUP BY login_name;  
@@ -134,7 +134,7 @@ GROUP BY login_name;
 ### <a name="b-finding-long-running-cursors"></a>2. 장기 실행 커서 찾기  
  다음 예에서는 지정한 시간을 초과하여 열려 있는 커서, 해당 커서를 만든 사람 및 해당 커서가 있는 세션을 찾습니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT creation_time ,cursor_id   
@@ -148,7 +148,7 @@ WHERE DATEDIFF(mi, c.creation_time, GETDATE()) > 5;
 ### <a name="c-finding-idle-sessions-that-have-open-transactions"></a>3. 열려 있는 트랜잭션이 있는 유휴 세션 찾기  
  다음 예에서는 열려 있는 트랜잭션이 있는 유휴 세션을 찾습니다. 유휴 세션은 현재 실행되고 있는 요청이 없는 세션입니다.  
   
-```tsql  
+```sql  
 SELECT s.*   
 FROM sys.dm_exec_sessions AS s  
 WHERE EXISTS   
@@ -168,7 +168,7 @@ WHERE EXISTS
 ### <a name="d-finding-information-about-a-queries-own-connection"></a>4. 쿼리 자체 연결에 대한 정보 찾기  
  쿼리 자체 연결에 대한 정보를 수집하는 일반 쿼리입니다.  
   
-```tsql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

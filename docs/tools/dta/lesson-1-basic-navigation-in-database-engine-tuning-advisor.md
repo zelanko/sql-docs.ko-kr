@@ -3,7 +3,7 @@ title: "1 단원: 기본 탐색 데이터베이스 엔진 튜닝 관리자 | Mic
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dd5bbaafbd076779463bf205208c12ce0d39b7ea
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1eeead53bf2d2f1a6ff1c5117395e134b1af8acd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>1단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스 (GUI)를 기반으로 보기 튜닝 세션과 튜닝 권장 구성 보고서 수를 제공 합니다. 이 단원에서는 도구를 시작하는 방법과 도구 화면을 구성하는 방법을 보여 줍니다. 이 세션의 작업을 마치면 도구를 시작하는 여러 방법과 정기적으로 수행하는 튜닝 태스크를 지원하도록 도구 화면을 구성하는 방법을 알게 됩니다.  

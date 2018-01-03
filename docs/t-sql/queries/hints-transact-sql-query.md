@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---query"></a>쿼리 힌트 (Transact SQL)-
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -363,7 +363,7 @@ GO
 ### <a name="c-using-maxrecursion"></a>3. MAXRECURSION 사용  
  잘못 구성된 재귀 공통 테이블 식이 무한 루프에 진입하는 것을 방지하는 데 MAXRECURSION을 사용할 수 있습니다. 다음 예에서는 의도적으로 무한 루프를 만들고, MAXRECURSION 힌트를 사용 하 여 재귀 수준 2로 수를 제한 합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
-```tsql  
+```sql  
 --Creates an infinite loop  
 WITH cte (CustomerID, PersonID, StoreID) AS  
 (  

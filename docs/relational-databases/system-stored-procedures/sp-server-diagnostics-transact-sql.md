@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 537267b15a65dca3035ba79e6bbecb9f7bc4a51c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>결과 집합  
 **sp_server_diagnostics** 다음 정보를 반환 합니다.  
   
-|열|데이터 형식|Description|  
+|Column|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|행 만들기의 타임스탬프를 나타냅니다. 단일 행 집합의 각 행은 타임스탬프가 같습니다.|  
 |**component_type**|**sysname**|행에 대 한 정보를 포함 하는지 여부를 나타냅니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 이벤트<br /><br /> *\<가용성 그룹의 이름 >*|  
-|**상태**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|state 열을 설명합니다. state 열의 값에 해당하는 설명은 다음과 같습니다.<br /><br /> 0: 알 수 없음<br /><br /> 1: 정리<br /><br /> 2: 경고<br /><br /> 3: 오류|  
-|**데이터**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
+|**data**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
   
  다음은 다섯 가지 구성 요소에 대한 설명입니다.  
   
@@ -89,7 +89,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 다음 표에서는 각 구성 요소와 관련 상태를 보여 줍니다.  
   
-|Components|정상(1)|경고(2)|오류(3)|알 수 없음(0)|  
+|구성 요소|정상(1)|경고(2)|오류(3)|알 수 없음(0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |시스템|x|x|x||  
 |resource|x|x|x||  
@@ -107,7 +107,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 ## <a name="examples"></a>예  
 상태 정보를 캡처하여 SQL Server 외부에 있는 파일에 저장하려면 확장 세션을 사용하는 것이 가장 좋습니다. 이렇게 하면 오류가 발생한 경우에도 계속 액세스할 수 있습니다. 다음 예에서는 이벤트 세션의 출력을 파일에 저장합니다.  
-```tsql  
+```sql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -119,7 +119,7 @@ GO
 ```  
   
 아래 예의 쿼리는 확장 세션 로그 파일을 읽습니다.  
-```tsql  
+```sql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -142,7 +142,7 @@ ORDER BY time;
 ```  
   
 다음 예에서는 sp_server_diagnostics의 출력을 반복되지 않는 모드로 테이블에 캡처합니다.  
-```tsql  
+```sql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  
@@ -156,16 +156,16 @@ INSERT INTO SpServerDiagnosticsResult
 EXEC sp_server_diagnostics; 
 ```  
 
-아래 예의 쿼리 출력 테이블의 요약을 읽습니다.  
-```tsql  
+아래의 예제 쿼리는 테이블의 요약 출력을 읽습니다.  
+```sql  
 SELECT create_time,
        component_name,
        state_desc 
 FROM SpServerDiagnosticsResult;  
 ``` 
 
-아래 예의 쿼리는 테이블의 각 구성 요소에서 자세한 출력 중 일부를 읽습니다.  
-```tsql  
+아래의 예제 쿼리는 테이블의 각 구성 요소의 자세한 출력을 읽습니다.  
+```sql  
 -- system
 select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
    data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',

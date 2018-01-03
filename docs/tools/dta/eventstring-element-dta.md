@@ -3,7 +3,7 @@ title: "EventString 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c130b82b84da5001d6df778713efb6f9bb3c4aec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b51de55832ddd13103fb67f41f937a1efdd0b999
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventstring-element-dta"></a>EventString 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] XML 입력된 파일에서 직접 스크립트 작업.  
@@ -41,13 +41,13 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|Attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**Weight**|(선택 사항) 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. **float** 데이터 형식을 사용하여 가중치를 지정할 수 있습니다(예: **Weight**="100.01"). **Weight** 에 지정할 수 있는 최소값은 "0"입니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 길이 제한 없음|  
 |**기본값**|없음|  

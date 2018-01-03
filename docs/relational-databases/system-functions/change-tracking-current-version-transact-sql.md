@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7be2d0c11dbf7537818c658b0a26254c5d7e41ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a560013a52a801b6b2ddf29050218f2370307717
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ## <a name="examples"></a>예  
  다음 예에서는 추적된 변경 내용의 현재 버전을 저장하기 위해 지역 변수 `@next_baseline`을 선언한 다음 `CHANGE_TRACKING_CURRENT_VERSION()` 함수를 사용하여 이 변수에 대한 값을 가져옵니다.  
   
-```tsql  
+```sql  
 DECLARE @next_baseline bigint;  
 SET @next_baseline = CHANGE_TRACKING_CURRENT_VERSION();  
 ```  

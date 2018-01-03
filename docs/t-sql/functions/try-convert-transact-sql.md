@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 98f60a6a46fbbce2bd4b1bac16d0a7c8edc69361
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5fedc9777146d24cb04fb7652344f244babc8246
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="tryconvert-transact-sql"></a>TRY_CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ### <a name="a-tryconvert-returns-null"></a>1. TRY_CONVERT가 Null 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CONVERT가 null을 반환하는 것을 보여 줍니다.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CONVERT(float, 'test') IS NULL   
     THEN 'Cast failed'  
@@ -92,7 +92,7 @@ Cast failed
   
  다음 예에서는 식이 해당 형식에 맞아야 한다는 것을 보여 줍니다.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
 GO  
@@ -111,7 +111,7 @@ NULL
 ### <a name="b-tryconvert-fails-with-an-error"></a>2. TRY_CONVERT가 오류와 함께 실패  
  다음 예에서는 캐스팅이 명시적으로 허용되지 않은 경우 TRY_CONVERT가 오류를 반환하는 것을 보여 줍니다.  
   
-```tsql  
+```sql  
 SELECT TRY_CONVERT(xml, 4) AS Result;  
 GO  
 ```  

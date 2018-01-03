@@ -3,7 +3,7 @@ title: "입력된 추적 데이터 준비 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 41930826cc18840a250ecd29d5a09ac0a63853fe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7f92ad0cc65a6e4be5df650d480e5bbb04174f0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prepare-the-input-trace-data"></a>입력 추적 데이터 준비
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]분산된 재생을 시작 하기 전에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 distributed replay administration tool에서 전처리 단계를 시작 하 여 입력된 추적 데이터를 준비 해야 합니다. 전처리 단계에서는 Distributed Replay Controller가 추적 데이터를 전처리하고 중간 파일을 생성합니다.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  전처리 단계가 완료되면 중간 파일이 컨트롤러 작업 디렉터리에 저장됩니다. 이벤트 재생 단계를 시작하려면 **replay** 옵션을 사용하여 관리 도구를 실행해야 합니다. 자세한 내용은 [추적 데이터 재생](../../tools/distributed-replay/replay-trace-data.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   

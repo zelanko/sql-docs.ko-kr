@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c86a7a8108e94d07341f5b6ced498b56ab934405
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT(아래 예외 참조)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
+|Delete|OPEN|UPDATE|  
 |DROP|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
   
  때 OFF로 보이지 않는 BEGIN TRANSACTION과 보이지 않는 COMMIT TRANSACTION 문으로 제한 됩니다 각각 이전 T-SQL 문을. Off로 설정 하면 트랜잭션 모드는 말할 *자동 커밋*합니다. 트랜잭션 모드는 T-SQL 코드는 BEGIN TRANSACTION에 시각적으로 발급 하는 경우 테 *명시적*합니다.  
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## <a name="examples"></a>예  
  다음 TRANSACT-SQL 스크립트는 몇 가지 다른 테스트 사례를 실행합니다. 세부 동작을 표시 하 고 각 테스트 사례에서 결과 텍스트 출력도 제공 됩니다.  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -169,7 +169,7 @@ go
   
  다음은 이전 Transact SQL 스크립트의 텍스트 출력 합니다.  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

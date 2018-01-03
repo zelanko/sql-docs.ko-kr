@@ -3,7 +3,7 @@ title: "OnlineIndexOperation 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f1b623107b78bcf9edd3ff101f2faf7831ff3fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd8acd696b9aa2ddfe200adba618d848657df5f7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]여부 인덱스, 인덱싱된 뷰 또는 데이터베이스 엔진 튜닝 관리자 권장 하는 파티션을 온라인으로 만들 수를 지정 합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 최대 길이 없음|  
 |**허용된 값**|**OFF**<br /> 권장되는 물리적 디자인 구조를 온라인으로 만들 수 없습니다.<br /><br /> **ON**<br /> 권장되는 모든 물리적 디자인 구조를 온라인으로 만들 수 있습니다.<br /><br /> **MIXED**<br /> 데이터베이스 엔진 튜닝 관리자는 가능한 경우 온라인으로 만들 수 있는 물리적 디자인 구조를 제안합니다.<br /><br /> 이 요소에 이러한 값 중 하나를 사용합니다. 인덱스를 온라인으로 만들 경우 **ONLINE = ON** 키워드가 개체 정의에 추가됩니다.|  

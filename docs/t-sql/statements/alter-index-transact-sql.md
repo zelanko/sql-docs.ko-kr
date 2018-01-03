@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef1bc9e0e99288cb739f53eb42a8e19691a04601
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="syntax"></a>구문  
   
 ```  
--- Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+-- Syntax for SQL Server and Azure SQL Database
   
 ALTER INDEX { index_name | ALL } ON <object>  
 {  
@@ -152,7 +152,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```  
--- Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+-- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -488,7 +488,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}
   
  *max_degree_of_parallelism* 될 수 있습니다.  
   
- 1.  
+ 1  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -556,7 +556,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}
   
  여러 파티션에 대해 서로 다른 데이터 압축 유형을 설정하려면 DATA_COMPRESSION 옵션을 두 번 이상 지정합니다. 예를 들면 다음과 같습니다.  
   
-```t-sql  
+```sql  
 REBUILD WITH   
 (  
 DATA_COMPRESSION = NONE ON PARTITIONS (1),   
@@ -703,9 +703,7 @@ WAIT_AT_LOW_PRIORITY 사용한 **다시 시작 가능 = ON** 및 **ONLINE = ON**
  다음을 수행할 때만 동일한 테이블 또는 테이블 파티션에서 동시 온라인 작업을 수행할 수 있습니다.  
   
 -   여러 개의 비클러스터형 인덱스 생성  
-  
 -   동일한 테이블에서 여러 인덱스 다시 구성  
-  
 -   동일한 테이블에서 겹치지 않는 인덱스를 다시 작성하는 동안 여러 인덱스 다시 구성  
   
  동시에 수행된 다른 온라인 인덱스 작업이 모두 실패합니다. 예를 들어, 동일한 테이블에서 두 개 이상의 인덱스를 다시 작성할 수 없습니다. 또는 동일한 테이블에서 기존 인덱스를 다시 작성하면서 새 인덱스를 생성할 수 없습니다.  
@@ -715,18 +713,17 @@ WAIT_AT_LOW_PRIORITY 사용한 **다시 시작 가능 = ON** 및 **ONLINE = ON**
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 다시 시작 가능을 사용 하 여 다시 시작 가능으로 지정 된 온라인 인덱스 다시 작성 = ON 옵션입니다. 
--  다시 시작 가능한 옵션에 지정된 된 인덱스에 대 한 메타 데이터는 영구 저장소가 아니며 현재 DDL 문의 기간에만 적용 됩니다. 따라서 다시 시작 가능 = ON 절을 작업 재개를 사용 하도록 설정 하려면 명시적으로 지정 해야 합니다.
-
+-  다시 시작 가능한 옵션에 지정된 된 인덱스에 대 한 메타 데이터는 영구 저장소가 아니며 현재 DDL 문의 기간에만 적용 됩니다.  따라서 다시 시작 가능 = ON 절을 작업 재개를 사용 하도록 설정 하려면 명시적으로 지정 해야 합니다.
 -  두 가지 MAX_DURATION 옵션 note 하십시오. 하나는 low_priority_lock_wait 관련이 다시 시작 가능 관련이 있으면 다른 = ON 옵션입니다.
    -  MAX_DURATION 옵션은 다시 시작 가능에 대 한 지원 = ON 옵션 또는 **low_priority_lock_wait** 인수 옵션입니다. 
-   MAX_DURATION 다시 시작 가능한 옵션에 대 한 다시 작성 되 고 인덱스에 대 한 시간 간격을 지정 합니다. 이 현재 사용 되 면 인덱스 다시 작성은 일시 중지 되었거나 해당 실행을 완료 합니다. 사용자가 일시 중지 된 인덱스에 대 한 다시 빌드를 다시 시작할 수 있습니다. **시간** MAX_DURATION 분 0 분 보다 크거나 같은 1 주 (7 x 24 x 60 = 10080 분) 이어야 합니다. 발생 하는 인덱스 작업에 대 한 오래 지연 된 특정 테이블에 대 한 DML 성능에 영향을 줄 수 뿐만 아니라 모두 데이터베이스 디스크 용량 원래 인덱스 및 새로 만든된 것 필요한 디스크 공간 및 DML 작업 하는 동안 업데이트 해야 합니다. MAX_DURATION 옵션을 생략 하면 인덱스 작업의 완료 될 때까지 또는 오류가 발생할 때까지 계속 됩니다. 
+   -  MAX_DURATION 다시 시작 가능한 옵션에 대 한 다시 작성 되 고 인덱스에 대 한 시간 간격을 지정 합니다. 이 현재 사용 되 면 인덱스 다시 작성은 일시 중지 되었거나 해당 실행을 완료 합니다. 사용자가 일시 중지 된 인덱스에 대 한 다시 빌드를 다시 시작할 수 있습니다. **시간** MAX_DURATION 분 0 분 보다 크거나 같은 1 주 (7 * 24 * 60 = 10080 분) 이어야 합니다. 발생 하는 인덱스 작업에 대 한 오래 지연 된 특정 테이블에 대 한 DML 성능에 영향을 줄 수 뿐만 아니라 모두 데이터베이스 디스크 용량 원래 인덱스 및 새로 만든된 것 필요한 디스크 공간 및 DML 작업 하는 동안 업데이트 해야 합니다. MAX_DURATION 옵션을 생략 하면 인덱스 작업의 완료 될 때까지 또는 오류가 발생할 때까지 계속 됩니다. 
 -   \<low_priority_lock_wait > 인수 옵션 Sch-m 잠금을 차단 될 때 인덱스 작업을 진행할 수는 방법을 결정할 수 있습니다.
  
 -  동일한 매개 변수를 사용 하 여 원래 ALTER INDEX REBUILD 문을 다시 실행 하는 일시 중지 된 인덱스 다시 작성 작업을 다시 시작 합니다. 또한 ALTER INDEX를 다시 시작 문을 실행 하 여 일시 중지 된 인덱스 다시 작성 작업을 재개할 수 있습니다.
 -  SORT_IN_TEMPDB = ON 옵션은 다시 시작 가능한 인덱스에 대 한 지원 되지 않습니다 
 -  다시 시작 가능을 사용 하 여 DDL 명령을 = ON 명시적 트랜잭션 내에서 실행 될 수 없습니다 (포함 될 수 없습니다... tran 시작 커밋 블록)입니다.
 -  만 일시 중지 된 인덱스 작업은 다시 시작할 수 없습니다.
--   일시 중지 하는 인덱스 작업을 다시 시작할 때 MAXDOP 값을 새 값으로 변경할 수 있습니다.  MAXDOP 지정 되지 않은 경우, 일시 중지 하는 인덱스 작업을 다시 시작 하는 경우 마지막 MAXDOP 값을 가져옵니다. 인덱스 다시 작성 작업에 대 한 MAXDOP 옵션 전혀 지정 하지 않으면 기본 값을 가져옵니다.
+-  일시 중지 하는 인덱스 작업을 다시 시작할 때 MAXDOP 값을 새 값으로 변경할 수 있습니다.  MAXDOP 지정 되지 않은 경우, 일시 중지 하는 인덱스 작업을 다시 시작 하는 경우 마지막 MAXDOP 값을 가져옵니다. 인덱스 다시 작성 작업에 대 한 MAXDOP 옵션 전혀 지정 하지 않으면 기본 값을 가져옵니다.
 - 인덱스 작업을 즉시 일시 중지, 지속적인 명령 (Ctrl + C)를 중지할 수 있습니다 또는 KILL 또는 ALTER INDEX를 일시 중지 명령을 실행할 수 있습니다 *session_id* 명령입니다. 명령이 일시 중지 되 면 다시 시작 옵션을 사용 하 여 다시 시작할 수 있습니다.
 -  해당 프로세스를 중단 명령을 원래 인덱스를 다시 호스트 하 고 인덱스 작업을 중단 하는 세션 중지  
 -  된을 제외 하 고 다시 시작 가능한 인덱스 다시 작성에 필요한 추가 리소스가
@@ -765,12 +762,10 @@ WAIT_AT_LOW_PRIORITY 사용한 **다시 시작 가능 = ON** 및 **ONLINE = ON**
   
  페이지 및 행 압축을 변경 내용이 미치는 영향을 테이블, 인덱스 또는 파티션을 평가 수행 하려면 사용 하 여는 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 저장 프로시저입니다.  
   
- 다음은 분할된 인덱스에 적용되는 제한 사항입니다.  
+다음은 분할된 인덱스에 적용되는 제한 사항입니다.  
   
 -   사용 하는 경우 `ALTER INDEX ALL ...`, 압축 설정을 단일 파티션의 테이블에 있는 경우 변경할 수 없습니다 정렬 되지 않은 인덱스가 있습니다.  
-  
 -   ALTER INDEX \<인덱스 >... REBUILD  PARTITION  ...  구문은 인덱스의 지정된 파티션을 다시 작성합니다.  
-  
 -   ALTER INDEX \<인덱스 >... REBUILD  WITH  ...  구문은 인덱스의 모든 파티션을 다시 작성합니다.  
   
 ## <a name="statistics"></a>통계  
@@ -782,14 +777,12 @@ WAIT_AT_LOW_PRIORITY 사용한 **다시 시작 가능 = ON** 및 **ONLINE = ON**
 ## <a name="version-notes"></a>버전 정보  
   
 -  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]파일 그룹 및 filestream 옵션을 사용 하지 않습니다.  
-  
 -  Columnstore 인덱스를 이전에 사용할 수 없는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다. 
-
 -  다시 시작 가능한 인덱스 작업은 다음으로 사용할 수 있는 시작 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
   
 ## <a name="basic-syntax-example"></a>기본 구문 예제:   
   
-```t-sql 
+```sql 
 ALTER INDEX index1 ON table1 REBUILD;  
   
 ALTER INDEX ALL ON table1 REBUILD;  
@@ -803,7 +796,7 @@ ALTER INDEX ALL ON dbo.table1 REBUILD;
 ### <a name="a-reorganize-demo"></a>1. 데모를 다시 구성  
  이 예에서는 ALTER INDEX REORGANIZE 명령을 사용 예를 보여 줍니다.  여러 개의 rowgroup 및 다음 REORGANIZE rowgroup 병합 하는 방법을 보여 줍니다 테이블을 만듭니다.  
   
-```  
+```sql  
 -- Create a database   
 CREATE DATABASE [ columnstore ];  
 GO  
@@ -848,20 +841,20 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```t-sql
+```sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
  TABLOCK 옵션을 사용 하 여 병렬의 행을 삽입 합니다. 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], TABLOCK 사용 되는 경우 INSERT INTO 작업을 병렬로 실행할 수 있습니다.  
   
-```t-sql  
+```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
 SELECT TOP 300000 * FROM staging;  
 ```  
   
  열린 델타 행 그룹을 확인 하려면이 명령을 실행 합니다. Rowgroup의 수는 병렬 처리 수준에 따라 달라 집니다.  
   
-```t-sql  
+```sql  
 SELECT *   
 FROM sys.dm_db_column_store_row_group_physical_stats   
 WHERE object_id  = object_id('cci_target');  
@@ -869,20 +862,20 @@ WHERE object_id  = object_id('cci_target');
   
  모든 CLOSED 및 OPEN rowgroup을 columnstore로 강제로 수행 하려면이 명령을 실행 합니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
  이 명령을 다시 실행 하 고 더 작은 행 그룹이 압축 된 행 그룹 하나에 병합 됩니다 표시 됩니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
 ### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>2. 닫힌된 델타 행 그룹을 columnstore로 압축 합니다.  
  이 예제에서는 REORGANIZE 옵션을 압축 각 닫힌된 델타 행 그룹을 columnstore로 압축 된 행 그룹으로 합니다.   이 작업은 필요 하지 하지만 튜플 이동 기가 있을 정도로 충분히 빠르면 CLOSED 행 그룹이 압축 되지 않습니다 때 유용 합니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW  
 -- REORGANIZE all partitions  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -898,7 +891,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
   
  REORGANIZE 결합 rowgroup이 최대 행 수 까지의 행 그룹을 채우는 \<1,024,576 = 합니다. 따라서 모든 열기 및 CLOSED 행 그룹이 압축 하면 않습니다 /fd만 행을 몇 개 압축 된 rowgroup 많이 합니다. 원하는 rowgroup이 수를 채움 압축 된 크기를 줄이고 쿼리 성능을 향상 시킬 수 있습니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW2016  
 -- Move all OPEN and CLOSED delta rowgroups into the columnstore.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
@@ -913,9 +906,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
  부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], REORGANIZE는 columnstore에 델타 행 그룹을 압축 이상 않습니다. 또한 온라인 조각 모음을 수행합니다. 첫째, 물리적으로 삭제 된 행 그룹의 행 중 10% 이상을 삭제 된 행을 제거 하 여 columnstore의 크기를 줄입니다.  그런 다음 rowgroup 당 1,024,576 행의 최대 해야 하는 보다 큰 행 그룹을 형성 하는 rowgroup를 결합 합니다.  이 변경 되는 모든 rowgroup 다시 압축 합니다.  
   
 > [!NOTE]
->  부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], columnstore 인덱스 다시 작성은 더 이상 대부분의 경우에서 필요한 REORGANIZE에서 물리적으로 삭제 된 행을 제거 하 고 행 그룹 병합 합니다. 에 COMPRESS_ALL_ROW_GROUPS 옵션이 이전에 수행할 수 있었습니다 다시 빌드를 사용 하 여 columnstore에 모든 OPEN 또는 CLOSED 델타 행 그룹을 강제로 수행 합니다.   REORGANIZE는 온라인 상태 이며 쿼리 작업이 발생 하면 계속 될 수 있도록 백그라운드에서 발생 합니다.  
+> 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], columnstore 인덱스 다시 작성은 더 이상 대부분의 경우에서 필요한 REORGANIZE에서 물리적으로 삭제 된 행을 제거 하 고 행 그룹 병합 합니다. 에 COMPRESS_ALL_ROW_GROUPS 옵션이 이전에 수행할 수 있었습니다 다시 빌드를 사용 하 여 columnstore에 모든 OPEN 또는 CLOSED 델타 행 그룹을 강제로 수행 합니다. REORGANIZE는 온라인 상태 이며 쿼리 작업이 발생 하면 계속 될 수 있도록 백그라운드에서 발생 합니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
 -- Defragment by physically removing rows that have been logically deleted from the table, and merging rowgroups.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -932,7 +925,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
   
  이 예에서는 클러스터형된 columnstore 인덱스 다시 작성 하 고 모든 델타 rowgroup이 columnstore로 강제로 하는 방법을 보여 줍니다. 첫 단계에서는 클러스터형 columnstore 인덱스가 있는 FactInternetSales2 테이블을 준비하고 첫 번째 네 열에서 데이터를 삽입합니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW  
   
 CREATE TABLE dbo.FactInternetSales2 (  
@@ -953,7 +946,7 @@ SELECT * FROM sys.column_store_row_groups;
   
  결과 표시는 OPEN 행 그룹이 하나, 즉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 더 많은 행을 행 그룹을 닫고 및 데이터를 columnstore로 이동 하기 전에 추가 될 때까지 대기 합니다. 다음 문에서 모든 행을 columnstore로 강제로 클러스터형된 columnstore 인덱스 다시 작성 합니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
 SELECT * FROM sys.column_store_row_groups;  
 ```  
@@ -965,7 +958,7 @@ SELECT * FROM sys.column_store_row_groups;
  
  대규모 클러스터형된 columnstore 인덱스의 파티션을 다시 작성 하려면 파티션 옵션과 함께 ALTER INDEX REBUILD를 사용 합니다. 이 예에서는 12 파티션을 다시 작성합니다. 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 다시 작성 경로로 바꿉니다 REORGANIZE는 것이 좋습니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX cci_fact3   
 ON fact3  
 REBUILD PARTITION = 12;  
@@ -978,7 +971,7 @@ REBUILD PARTITION = 12;
   
  다음 예에서는 보관 압축을 사용하기 위해 클러스터형 columnstore 인덱스를 다시 작성한 다음 보관 압축을 제거하는 방법을 보여 줍니다. 마지막 결과에서는 columnstore 압축만 사용합니다.  
   
-```t-sql  
+```sql  
 --Prepare the example by creating a table with a clustered columnstore index.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -1010,7 +1003,7 @@ GO
 ### <a name="a-rebuilding-an-index"></a>1. 인덱스 다시 작성  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Employee` 테이블의 단일 인덱스를 다시 작성합니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
@@ -1019,16 +1012,16 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON);  
 ```  
   
- 다음 예에서는 낮은 우선 순위 잠금 옵션을 포함하여 ONLINE 옵션을 추가하고 행 압축 옵션을 추가합니다.  
+다음 예에서는 낮은 우선 순위 잠금 옵션을 포함하여 ONLINE 옵션을 추가하고 행 압축 옵션을 추가합니다.  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH   
 (  
@@ -1043,7 +1036,7 @@ REBUILD WITH
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>3. 인덱스 다시 구성과 LOB 압축  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 단일 클러스터형 인덱스를 다시 구성합니다. 인덱스에 리프 수준의 LOB 데이터 형식이 포함되어 있으므로 해당 문은 큰 개체 데이터가 포함된 페이지도 모두 압축합니다. 기본값이 ON이므로 WITH(LOB_COMPACTION) 옵션은 지정하지 않아도 됩니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
 ```  
   
@@ -1052,7 +1045,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
     Sales.SalesOrderHeader  
 SET (  
@@ -1066,37 +1059,37 @@ GO
 ### <a name="e-disabling-an-index"></a>5. 인덱스 비활성화  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Employee` 테이블의 비클러스터형 인덱스를 비활성화합니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 ```  
   
 ### <a name="f-disabling-constraints"></a>6. 제약 조건 비활성화  
  다음 예제에서 기본 키 인덱스를 비활성화 하 여 PRIMARY KEY 제약 조건을 사용 하지 않도록 설정 된 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. 기본 테이블에 대한 FOREIGN KEY 제약 조건이 자동으로 비활성화되고 경고 메시지가 표시됩니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;  
 ```  
   
- 결과 집합에서 다음과 같은 경고 메시지를 반환합니다.  
+결과 집합에서 다음과 같은 경고 메시지를 반환합니다.  
   
- ```t-sql  
- Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
- on table 'EmployeeDepartmentHistory' referencing table 'Department'  
- was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
- ```  
+```  
+Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
+on table 'EmployeeDepartmentHistory' referencing table 'Department'  
+was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
+```  
   
 ### <a name="g-enabling-constraints"></a>7. 제약 조건 활성화  
  다음 예에서는 6번 예에서 비활성화된 PRIMARY KEY와 FOREIGN KEY 제약 조건을 활성화합니다.  
   
- PRIMARY KEY 인덱스를 다시 작성하여 PRIMARY KEY 제약 조건이 활성화됩니다.  
+PRIMARY KEY 인덱스를 다시 작성하여 PRIMARY KEY 제약 조건이 활성화됩니다.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department REBUILD;  
 ```  
   
- 그런 다음 FOREIGN KEY 제약 조건이 활성화됩니다.  
+그런 다음 FOREIGN KEY 제약 조건이 활성화됩니다.  
   
-```t-sql  
+```sql  
 ALTER TABLE HumanResources.EmployeeDepartmentHistory  
 CHECK CONSTRAINT FK_EmployeeDepartmentHistory_Department_DepartmentID;  
 GO  
@@ -1107,7 +1100,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
   
-```t-sql  
+```sql  
 -- Verify the partitioned indexes.  
 SELECT *  
 FROM sys.dm_db_index_physical_stats (DB_ID(),OBJECT_ID(N'Production.TransactionHistory'), NULL , NULL, NULL);  
@@ -1123,7 +1116,7 @@ GO
 ### <a name="i-changing-the-compression-setting-of-an-index"></a>9. 인덱스의 압축 설정 변경  
  다음 예에서는 분할되지 않은 rowstore 테이블에 인덱스를 다시 작성합니다.  
   
-```t-sql
+```sql
 ALTER INDEX IX_INDEX1   
 ON T1  
 REBUILD   
@@ -1131,7 +1124,7 @@ WITH (DATA_COMPRESSION = PAGE);
 GO  
 ```  
   
- 추가 데이터 압축 예 참조 [데이터 압축](../../relational-databases/data-compression/data-compression.md)합니다.  
+추가 데이터 압축 예 참조 [데이터 압축](../../relational-databases/data-compression/data-compression.md)합니다.  
  
 ### <a name="j-online-resumable-index-rebuild"></a>10. 다시 시작 가능한 온라인 인덱스 다시 작성
 
@@ -1141,7 +1134,7 @@ GO
 
 1. MAXDOP으로 작업을 다시 시작 가능으로 온라인 인덱스 다시 작성 실행 = 1입니다.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON) ;
    ```
 
@@ -1149,29 +1142,29 @@ GO
 
 3. MAX_DURATION 집합 240 분으로 다시 시작 가능한 작업으로 온라인 인덱스 다시 작성을 실행 합니다.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240) ; 
    ```
 4. 실행 중인 다시 시작 가능한 온라인 인덱스 다시 작성을 일시 중지 합니다.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table PAUSE ;
    ```   
 5. MAXDOP에 대 한 새 값을 지정 하는 다시 시작 될 작업을 4로 설정 하는 대로 실행 된 인덱스를 다시 작성에 대 한 온라인 인덱스 다시 작성을 다시 시작 합니다.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
 6. 다시 시작 가능 상태로 실행 된 인덱스 온라인 다시 작성에 대 한 온라인 인덱스 다시 작성 작업을 다시 시작 합니다. MAXDOP를 2로 설정, 240 분 및 10 분 잠금 대기에서 차단 되는 인덱스의 경우 resmumable로 실행 되 고 인덱스에 대 한 실행 시간을 설정 및 그 후 모든 블 로커를 중지 합니다. 
 
-   ```t-sql
+   ```sql
       ALTER INDEX test_idx on test_table  
          RESUME WITH (MAXDOP=2, MAX_DURATION= 240 MINUTES, 
          WAIT_AT_LOW_PRIORITY (MAX_DURATION=10, ABORT_AFTER_WAIT=BLOCKERS)) ;
    ```      
 7. 실행 중이거나 일시 중지 되는 다시 시작 가능한 인덱스 다시 작성 작업을 중단 합니다.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
@@ -1188,5 +1181,3 @@ GO
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
-

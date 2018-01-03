@@ -3,7 +3,7 @@ title: "추적 정의 기본값 (SQL Server Profiler) 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d50b6e43cff642a072359607938ceb6d2cde8ab7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2942dfbdd74b23bbc373f29a3419faa23634f181
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>추적 정의 기본값 설정(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]추적 정의 기본값은 각 공급자나 서버에 사용 되는 기본 추적 템플릿입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 기본 추적 템플릿을 설정할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Profiler 템플릿](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

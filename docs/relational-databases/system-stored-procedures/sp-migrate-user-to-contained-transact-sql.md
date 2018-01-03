@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ### <a name="a-migrating-a-single-user"></a>1. 단일 사용자 마이그레이션  
  다음 예에서는 `Barry`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 암호를 포함하는 포함된 데이터베이스 사용자로 마이그레이션합니다. 이 예에서는 사용자 이름이 변경되지 않도록 유지하고 로그인을 사용 가능한 상태로 유지합니다.  
   
-```tsql  
+```sql  
 sp_migrate_user_to_contained   
 @username = N'Barry',  
 @rename = N'keep_name',  
@@ -96,7 +96,7 @@ sp_migrate_user_to_contained
 ### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>2. 로그인을 포함하는 모든 데이터베이스 사용자를 로그인을 포함하지 않는 포함된 데이터베이스 사용자로 마이그레이션  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기반으로 하는 모든 사용자를 암호를 가진 포함된 데이터베이스 사용자로 마이그레이션합니다. 이 예에서는 활성화되지 않은 로그인을 제외합니다. 이 예는 포함된 데이터베이스에서 실행해야 합니다.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

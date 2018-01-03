@@ -3,7 +3,7 @@ title: "SQL Server 속성 (로그온 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9449025621c2269b4a810f1a0dfdaaae7850471e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 623948bfc41640e1aebe0b492872fbc095c056f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **로그온** 탭은 **SQL Server 속성** 대화 상자에서 사용할 계정을 지정 하려면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 암호를 변경 하 고 시작 하 고 서비스를 중지 합니다. 계정의 암호를 변경하면 즉시 적용됩니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/05/2017
 >   
 >  서비스를 실행할 계정을 선택하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "Windows 서비스 계정 설정"을 참조하십시오.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **기본 제공 계정**  
  **로컬 시스템**  
  -   로컬 시스템 계정을 지정합니다. 이 계정에는 암호가 필요하지 않습니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 서비스가 다른 서버와 상호 작용하지 못하도록 할 수 있습니다.  

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fee0eefa43553f1e942abc2c7797d2dd487891d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902c3fc7afb5ede1af0d49ef4429f8177b2101ad
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  사용하고 있는 ODBC 버전입니다. *ODBCVer* 은 **int (**4**)**, 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타냅니다. ODBC 버전 2.0과 ODBC 버전 3.0의 차이 대 한 자세한 내용은 ODBC 버전 3.0 ODBC SQLSpecialColumns 사양을 참조 하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -83,8 +83,8 @@ sp_special_columns [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|각 열에 대 한 열 이름에서 *테이블*반환 합니다. 이 필드는 항상 값을 반환합니다.|  
 |DATA_TYPE|**smallint**|ODBC SQL 데이터 형식입니다.|  
 |TYPE_NAME|**sysname**|데이터 원본에 종속적인 데이터 형식 이름입니다. 예를 들어 **char**, **varchar**, **money**, 또는 **텍스트**합니다.|  
-|PRECISION|**Int**|데이터 원본의 행 전체 자릿수입니다. 이 필드는 항상 값을 반환합니다.|  
-|LENGTH|**Int**|길이 (바이트)를 필요한 데이터 원본의 형태의 이진 데이터 형식에 대 한 예를 들어 10에 대 한 **char (**10**)**, 4에 대 한 **정수**, 2 **smallint** .|  
+|PRECISION|**정수**|데이터 원본의 행 전체 자릿수입니다. 이 필드는 항상 값을 반환합니다.|  
+|LENGTH|**정수**|길이 (바이트)를 필요한 데이터 원본의 형태의 이진 데이터 형식에 대 한 예를 들어 10에 대 한 **char (**10**)**, 4에 대 한 **정수**, 2 **smallint** .|  
 |SCALE|**smallint**|데이터 원본의 소수 자릿수입니다. 소수 자릿수가 적용되지 않는 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |PSEUDO_COLUMN|**smallint**|열이 의사(pseudo) 열인지 여부를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 1을 반환합니다.<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
@@ -97,7 +97,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 ## <a name="examples"></a>예  
  다음 예에서는 `HumanResources.Department` 테이블의 행을 고유하게 식별하는 열에 대한 정보를 반환합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_special_columns @table_name = 'Department'   

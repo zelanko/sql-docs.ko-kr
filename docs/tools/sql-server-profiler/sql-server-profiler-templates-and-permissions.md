@@ -3,7 +3,7 @@ title: "SQL Server Profiler 템플릿 및 권한 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bca0afc8ddbf301b1ffc5760a01e232010ffaae4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8fcf7a6edeeedc09f6b83a2db354256f116633b0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 템플릿 및 권한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 표시 방법을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부적으로 쿼리를 해결 합니다. 이를 통해 관리자는 어떤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 다차원 식이 서버에 전송되고 해당 서버에서 어떻게 데이터베이스 또는 큐브에 액세스하여 결과 집합을 반환하는지를 정확히 파악할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[SQL Server Profiler 템플릿](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]와 함께 제공되는 미리 정의된 추적 템플릿에 대해 설명합니다.|  
 |[SQL Server 프로파일러 실행에 필요한 권한](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]실행에 필요한 사용 권한에 대해 설명합니다.|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
 |[SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 출력을 필터링하도록 데이터 열에 필터를 설정하는 방법에 대한 정보가 포함됩니다.|  
 |[추적 재생](../../tools/sql-server-profiler/replay-traces.md)|추적 재생의 의미와 추적 재생에 필요한 사항을 설명하는 정보가 포함됩니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

@@ -3,7 +3,7 @@ title: "osql 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: osql
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**osql** 유틸리티 입력할 수 있습니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일입니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
@@ -142,7 +142,7 @@ C:\>osql
  명령 종료 문자를 지정합니다. 기본적으로 줄에 GO만 단독으로 입력하면 명령이 종료되어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 보내집니다. 명령 종료 문자를 다시 설정할 때는 앞에 백슬래시를 지정하는지 여부에 상관없이 [!INCLUDE[tsql](../includes/tsql-md.md)] 예약어 또는 운영 체제와 연관된 특별한 의미를 가진 문자를 사용하지 마십시오.  
   
  **-q "** *query* **"**  
- **osql** 이 시작될 때 쿼리를 실행하지만 쿼리가 완료되더라도 **osql** 을 끝내지 않습니다. 쿼리 문에는 GO를 포함할 수 없습니다. 일괄 처리에서 쿼리를 실행하면 %변수 또는 환경 %변수%를 사용할 수 있습니다. 예를 들어  
+ **osql** 이 시작될 때 쿼리를 실행하지만 쿼리가 완료되더라도 **osql** 을 끝내지 않습니다. 쿼리 문에는 GO를 포함할 수 없습니다. 일괄 처리에서 쿼리를 실행하면 %변수 또는 환경 %변수%를 사용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SET table=sys.objects  
@@ -212,7 +212,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 명령  
  [!INCLUDE[tsql](../includes/tsql-md.md)] osql **내에서**문 외에도 다음 명령을 사용할 수 있습니다.  
   
-|Command|설명|  
+|Command|Description|  
 |-------------|-----------------|  
 |GO|마지막 GO 이후에 입력한 모든 문을 실행합니다.|  
 |RESET|입력한 모든 문을 지웁니다.|  
@@ -274,13 +274,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- EXIT 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 예를 들어  
+ EXIT 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -308,7 +308,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   상태가 127인 RAISERROR  
   
 > [!NOTE]  
->  **osql** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **osql** 이 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어  
+>  **osql** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **osql** 이 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 RAISERROR(50001, 10, 127)  
@@ -340,7 +340,7 @@ GO
   
  이 문의 결과는 `10.3496`로 표시됩니다. 모든 소수 자릿수를 그대로 사용하여 값이 저장되었습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [설명&#40;MDX&#41;](../mdx/comment-mdx.md)   
  [-&#40; 설명 &#41; &#40; Mdx&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST 및 convert&#40; Transact SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   

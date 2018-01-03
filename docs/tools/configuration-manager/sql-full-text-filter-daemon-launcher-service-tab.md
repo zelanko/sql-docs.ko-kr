@@ -3,7 +3,7 @@ title: "SQL 전체 텍스트 필터 데몬 시작 관리자 (서비스 탭) | Mi
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,18 +17,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58adfe0ee2c9133c357079766ad01e2a7847b83d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8ed0ccaed0106d331812d56f3aa5c29e0d70c4d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL 전체 텍스트 필터 데몬 시작 관리자(서비스 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL 전체 텍스트 필터 데몬 시작 관리자 (FDHOST Launcher) 서비스가 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트입니다. 전체 텍스트 검색을 사용할 경우 이 서비스를 실행해야 합니다. 필터 디먼 호스트 프로세스에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "전체 텍스트 검색 아키텍처"를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL 전체 텍스트 필터 데몬 시작 관리자 (FDHOST Launcher) 서비스가 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트입니다. 전체 텍스트 검색을 사용할 경우 이 서비스를 실행해야 합니다. 필터 데몬 호스트 프로세스에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "전체 텍스트 검색 아키텍처"를 참조하십시오.  
   
  **SQL 전체 텍스트 필터 디먼 시작 관리자 속성**대화 상자의 **서비스** 탭을 사용하여 다음 옵션을 보거나 지정할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **이진 경로**  
  이 서비스에 사용되는 프로그램 파일의 위치를 표시합니다.  
   

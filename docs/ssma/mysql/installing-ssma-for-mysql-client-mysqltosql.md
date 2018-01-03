@@ -1,7 +1,7 @@
 ---
 title: "SSMA MySQL 클라이언트 (MySQLToSQL)에 대 한 설치 | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d90df6e2df45b099867240c8d8272871ce5333cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 20e2b46e1b020865359431a4999e097c20e14da1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>MySQL 클라이언트 (MySQLToSQL) 용 SSMA를 설치합니다.
 다음 작업을 수행 하는 프로그램 파일의 MySQL 클라이언트 용 SSMA 구성 됩니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 이 항목에서는 설치 필수 구성 요소 및 MySQL 클라이언트에 대 한 SSMA를 설치 하기 위한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 MySQL 용 SSMA는 MySQL 4.1 또는 그 이후 버전 및 SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016 및 Azure SQL DB의 모든 버전에서 실행 되도록 설계 되었습니다.  
   
 SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  

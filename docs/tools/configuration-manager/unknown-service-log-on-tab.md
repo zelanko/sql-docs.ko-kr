@@ -3,7 +3,7 @@ title: "알 수 없는 서비스 (로그온 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71ffe463ebe463bddc8408048539264106dcface
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: de5b7be856ee9425c1471ae9bdcc8dedd9d60f61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unknown-service-log-on-tab"></a>알 수 없는 서비스(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가이 서비스를 식별할 수 없습니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/05/2017
   
  올바른 서비스가 표시되는 경우 **알 수 없는 서비스 속성** 대화 상자의 **로그온** 탭을 사용하여 이 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **로컬 시스템 계정**  
  암호를 요구하지 않는 로컬 시스템 계정을 지정합니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 서비스가 다른 서버와 상호 작용하지 못하도록 할 수 있습니다.  
   

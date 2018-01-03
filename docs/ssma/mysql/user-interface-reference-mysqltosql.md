@@ -1,7 +1,7 @@
 ---
 title: "사용자 인터페이스 참조 (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e61c90785328f887caff3df0b97d632cf4cdbaf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e39a5ca8327230660a0a6dc1c0a6d1170ae7c279
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>사용자 인터페이스 참조 (MySQLToSQL)
 이 섹션 MySQL에 대 한 도움말 항목에 대 한 SQL Server Migration Assistant (SSMA) 포함 되어 있습니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|**항목**|**Description**|  
+|**항목**|**설명**|  
 |[고급 개체 선택 &#40; MySQLToSQL &#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|사용 하 여는 **개체 선택 고급** 대화 상자를 필터 조건을 사용 하 여 데이터베이스 개체를 찾는 다음를 선택 하거나 해당 개체의 선택을 취소 합니다.|  
 |[평가 보고서 &#40; MySQLToSQL &#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|TRANSACT-SQL 구문에 MySQL 개체의 변환의 결과 확인 하 고 SQL Server로 마이그레이션의 복잡성 및 시간을 예측 하는 보고서를 사용 합니다.|  
 |[MySQL &#40;에 연결 MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|사용 하 여 **MySQL에 연결** 마이그레이션할 MySQL 데이터베이스에 연결 하는 대화 상자.|  

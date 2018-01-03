@@ -1,7 +1,7 @@
 ---
 title: "추적 플래그 (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-추적 플래그 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/28/2017
 |**1204**|교착 상태에 있는 잠금의 유형과 리소스 및 현재 영향을 받은 명령을 반환합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/832524)합니다.<br /><br />**범위 지정:** 글로벌만|  
 |**1211**|메모리 가중이나 잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 행 또는 페이지 잠금을 테이블 잠금으로 에스컬레이션하지 않습니다.<br /><br />이 추적 플래그를 사용하면 과도하게 많은 잠금이 생성될 수 있습니다. 이로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 성능이 저하되거나 메모리가 부족하게 되어 잠금 리소스를 할당할 수 없는 1204 오류가 발생할 수 있습니다.<br /><br />추적 플래그 1211과 1224를 모두 설정하면 1211이 1224보다 우선 적용됩니다. 그러나 추적 플래그 1211은 메모리 부족 등의 모든 경우에서 에스컬레이션을 차단하므로 1224를 사용하는 것이 좋습니다. 이렇게 하면 많은 잠금을 사용할 때 "잠금 부족" 오류를 방지하는 데 도움이 됩니다.<br /><br />**범위**: 전역 또는 세션|  
 |**1222**|교착 상태에 있는 잠금 유형과 리소스 및 현재 영향을 받은 명령을 XSD 스키마에 맞지 않는 XML 형식으로 반환합니다.<br /><br />**범위**: 글로벌만|  
-|**1224**|잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다. 그러나 메모리 가중으로 잠금 에스컬레이션이 활성화될 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 잠금 개체에 사용되는 메모리 양이 다음 조건 중 하나를 초과하면 행 또는 페이지 잠금을 테이블(또는 파티션) 잠금으로 에스컬레이션합니다.<br /><br />-에서 사용 되는 메모리의 40% [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 이 경우에만 적용 된 **잠금** sp_configure의 매개 변수는 0으로 설정 됩니다.<br />-를 사용 하 여 구성 된 잠금 메모리의 40 %는 **잠금** sp_configure의 매개 변수입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.<br /><br />추적 플래그 1211과 1224를 모두 설정하면 1211이 1224보다 우선 적용됩니다. 그러나 추적 플래그 1211은 메모리 부족 등의 모든 경우에서 에스컬레이션을 차단하므로 1224를 사용하는 것이 좋습니다. 이렇게 하면 많은 잠금을 사용할 때 "잠금 부족" 오류를 방지하는 데 도움이 됩니다.<br /><br />**참고:** LOCK_ESCALATION 옵션을 사용 하 여 잠금 에스컬레이션 테이블 수준 또는 HoBT 수준 세분성을 제어할 수도 있습니다는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 문.<br /><br />**범위 지정:** 전역 또는 세션|
+|**1224**|잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다. 그러나 메모리 가중으로 잠금 에스컬레이션이 활성화될 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 잠금 개체에 사용되는 메모리 양이 다음 조건 중 하나를 초과하면 행 또는 페이지 잠금을 테이블(또는 파티션) 잠금으로 에스컬레이션합니다.<br /><br />-에서 사용 되는 메모리의 40% [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 이 경우에만 적용 된 **잠금** sp_configure의 매개 변수는 0으로 설정 됩니다.<br />-를 사용 하 여 구성 된 잠금 메모리의 40 %는 **잠금** sp_configure의 매개 변수입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.<br /><br />추적 플래그 1211과 1224를 모두 설정하면 1211이 1224보다 우선 적용됩니다. 그러나 추적 플래그 1211은 메모리 부족 등의 모든 경우에서 에스컬레이션을 차단하므로 1224를 사용하는 것이 좋습니다. 이렇게 하면 많은 잠금을 사용할 때 "잠금 부족" 오류를 방지하는 데 도움이 됩니다.<br /><br />**참고:** LOCK_ESCALATION 옵션을 사용 하 여 잠금 에스컬레이션 테이블 수준 또는 HoBT 수준 세분성을 제어할 수도 있습니다는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 문.<br /><br />**범위 지정:** 전역 또는 세션|
 |**1236**|데이터베이스 잠금 분할을 사용 하도록 설정 합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2926217)합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 아무 효과가 s p 1이이 동작은 1236 엔진 및 추적 플래그에서 제어 됩니다.<br /><br />**범위**: 글로벌만|
 |**1237**|ALTER PARTITION FUNCTION 문을 (를) 기본적으로 가능성이 교착 상태가 발생 되는 대신 현재 사용자 지정 세션 교착 상태 우선 순위를 처리할 수 있습니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/help/4025261)합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 및 데이터베이스 [호환성 수준이](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 140 기본 동작이 며 추적 플래그 1237 아무 효과가 없습니다.<br /><br />**범위**: 전역 또는 세션 또는 쿼리|
 |**1260**|스케줄러 모니터 덤프를 사용 하지 않도록 설정 합니다.<br /><br />**범위**: 글로벌만|   
@@ -82,12 +82,13 @@ ms.lasthandoff: 11/28/2017
 |**2371**|동적 자동 update statistics 임계값으로 고정된 자동 update statistics 임계값을 변경합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2754171)합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 고는 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130,이 동작은 엔진에 의해 제어 됩니다 추적 플래그 2371 영향을 주지 않습니다.<br /><br />**범위**: 글로벌만|
 |**2389**|Enable 오름차순 (히스토그램 수정) 키에 대 한 빠른 통계를 자동으로 생성 합니다. 추적 플래그 2389를 설정 하는 경우는 선행 통계 열이 오름차순으로 표시 되어 카디널리티를 예측 하는 데 사용 되는 히스토그램이 쿼리 컴파일 타임에 조정 됩니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2801413)합니다.<br /><br />**참고:** 철저 하 게 테스트 프로덕션 환경에 배포 하기 전에이 옵션을 확인 하십시오.<br /><br />**참고:** 이 추적 플래그는 CE 버전 120 이상 적용 되지 않습니다. 추적 플래그 4139을 대신 사용 합니다.<br /><br />**범위**: 전역 또는 세션 또는 쿼리|
 |**2390**|오름차순 또는 알 수 없는 키 (히스토그램 수정)에 대 한 빠른 자동으로 생성 된 통계를 사용 하도록 설정 합니다. 2390 추적 플래그를 설정 하는 경우는 선행 통계 열이 오름차순 또는 알 수 없는로 표시 카디널리티를 예측 하는 데 사용 되는 히스토그램이 쿼리 컴파일 타임에 조정 됩니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2801413)합니다.<br /><br />**참고:** 철저 하 게 테스트 프로덕션 환경에 배포 하기 전에이 옵션을 확인 하십시오.<br /><br />**참고:** 이 추적 플래그는 CE 버전 120 이상 적용 되지 않습니다. 추적 플래그 4139을 대신 사용 합니다.<br /><br />**범위**: 전역 또는 세션 또는 쿼리|
+|**2430**|활성화 잠금 클래스 정리를 대체합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2754301)합니다.<br /><br />**범위**: 글로벌만| 
 |**2453**|테이블 변수를를 충분 한 행 수가 변경 될 때 recompile을 트리거할 수 있습니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2952444)합니다.<br /><br />**참고:** 철저 하 게 테스트 프로덕션 환경에 배포 하기 전에이 옵션을 확인 하십시오.<br /><br />**범위**: 전역 또는 세션 또는 쿼리|
 |**2528**|DBCC CHECKDB, DBCC CHECKFILEGROUP 및 DBCC CHECKTABLE에 의한 개체 병렬 확인을 해제합니다. 기본적으로 쿼리 프로세서가 자동으로 병렬 처리 수준을 결정합니다. 최대 병렬 처리 수준은 병렬 쿼리의 경우처럼 구성됩니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.<br /><br />**참고:** 은 일반적으로 병렬 DBCC 검사 사용 (기본값). 쿼리 프로세서는 다시 평가 하 고 자동으로 각 테이블 또는 DBCC CHECKDB에서 확인 된 테이블의 일괄 처리에 대 한 병렬 처리를 조정 합니다.<br /><br />일반적인 사용 시나리오 시스템 관리자가 DBCC CHECKDB 완료 되 고 있으므로 수동으로 감소 시키거나 병렬 처리 수준, 사용자의 작업 부하를 사용 하 여 동시성을 높이기 위해 해제 하도록 선택 하기 전에 해당 서버 로드가 증가할 것을 알고 있는 경우입니다. 그러나 DBCC CHECKDB의 병렬 검사를 사용 하지 않도록 설정을 완료 하는 데 걸리는 것 발생할 수 있습니다.<br /><br />**참고:** 오랜 시간에 대 한 테이블을 잠글 수 TABLOCK 옵션을 사용 하 여 DBCC CHECKDB를 실행할 경우 병렬 처리를 사용 하지 않도록 설정 합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, MAXDOP 옵션은 문에 대 한 sp_configure의 병렬 처리 수준 구성 옵션의 최대 수준 재정의를 사용할 수 있습니다.<br /><br />**범위**: 전역 또는 세션|
 |**2549**|각 데이터베이스 파일은 고유한 디스크 드라이브에 가정 DBCC CHECKDB 명령을 실행 합니다. DBCC CHECKDB 명령이 모든 데이터베이스 파일에서 각 고유 디스크 드라이브 읽을 페이지의 내부 목록을 작성 합니다. 이 논리는 각 파일의 물리적 파일 이름의 드라이브 문자에 따라 고유한 디스크 드라이브를 결정 합니다.<br /><br />**참고:** 고유한 물리적 디스크에 따라은 각 파일을 모를 경우이 추적 플래그를 사용 하지 않습니다.<br /><br />**참고:** DBCC CHECKDB는 PHYSICAL_ONLY 옵션의 어떤 대상 사용 명령, 일부 사용자가 성능에 향상 된 기능을 표시 되지 않을 수 있지만이 추적 플래그의 성능을 향상 합니다. 이 추적 플래그 디스크 I/O 리소스 사용량을 향상 시키거나, 하는 동안 디스크 리소스의 기본 성능을 DBCC CHECKDB 명령이의 전반적인 성능이 제한할 수 있습니다. 자세한 내용은 참조 [Microsoft 지원 문서](http://support.microsoft.com/kb/2634571)합니다.<br /><br />**범위**: 글로벌만| 
 |**2562**|단일 데이터베이스의에서 인덱스 수에 관계 없이 "batch" DBCC CHECKDB 명령을 실행합니다. 기본적으로 DBCC CHECKDB 명령이 인덱스 또는 "배치" 개념을 사용 하 여 생성 되는 "정보"의 수를 제한 하 여 tempdb 리소스를 최소화 하려고 시도 합니다. 이 추적 플래그는 하나의 작업으로 모든 처리가 되도록합니다.<br /><br />이 추적 플래그를 사용 하 여의 효과 중 하나는 tempdb에 대 한 공간 요구 사항이 증가할 수 있습니다. DBCC CHECKDB 명령에 의해 처리 되는 데이터베이스 중 5% 이상을 Tempdb 증가할 수 있습니다.<br /><br />**참고:** DBCC CHECKDB는 PHYSICAL_ONLY 옵션의 어떤 대상 사용 명령, 일부 사용자가 성능에 향상 된 기능을 표시 되지 않을 수 있지만이 추적 플래그의 성능을 향상 합니다. 이 추적 플래그 디스크 I/O 리소스 사용량을 향상 시키거나, 하는 동안 디스크 리소스의 기본 성능을 DBCC CHECKDB 명령이의 전반적인 성능이 제한할 수 있습니다. 자세한 내용은 참조 [Microsoft 지원 문서](http://support.microsoft.com/kb/2634571)합니다.<br /><br />**범위**: 글로벌만|
 |**2566**|DATA_PURITY 옵션을 지정 하지 않으면 데이터 순도 검사가 없이 DBCC CHECKDB 명령을 실행 합니다.<br /><br />**참고:** 열 값 무결성 검사는 기본적으로 사용 되며 DATA_PURITY 옵션은 필요 하지 않습니다. 이전 버전의 SQL Server에서 업그레이드 된 데이터베이스에 대 한 열 값 검사는 DBCC CHECKDB WITH DATA_PURITY가 실행 될 때까지 오류 없이 데이터베이스에 한 번 이상 기본적으로 사용 되지 합니다. 이 옵션이 성공적으로 실행되면 DBCC CHECKDB는 기본적으로 열 값 무결성을 검사합니다. 자세한 내용은 참조 [Microsoft 지원 문서](http://support.microsoft.com/kb/945770)합니다.<br /><br />**범위**: 글로벌만|
-|**3023**|백업 명령에 대 한 기본값으로 CHECKSUM 옵션을 사용할 수 있게 합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2656988)합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이 동작을 설정 하 여 제어 되는 **백업 체크섬 기본값** 구성 옵션입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.<br /><br />**범위**: 전역 및 세션|
+|**3023**|백업 명령에 대 한 기본값으로 CHECKSUM 옵션을 사용할 수 있게 합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2656988)합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이 동작을 설정 하 여 제어 되는 **백업 체크섬 기본값** 구성 옵션입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.<br /><br />**범위**: 전역 및 세션|
 |**3042**|백업 파일이 최종 크기에 도달하는 데 필요한 만큼만 늘어날 수 있도록 기본 백업 압축 사전 할당 알고리즘을 무시합니다. 이 추적 플래그는 압축된 백업에 실제로 필요한 크기만 할당하여 공간에 저장해야 하는 경우 유용합니다. 이 추적 플래그를 사용하면 약간의 성능 저하가 발생할 수 있습니다(백업 작업 시간이 늘어날 수 있음). 사전 할당 알고리즘에 대 한 자세한 내용은 참조 하십시오. [백업 압축 &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br />**범위**: 글로벌만|
 |**3051**|SQL Server Backup to URL 특정 오류 로그 파일에 기록할 수 있습니다. 자세한 내용은 참조 [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)합니다.<br /><br />**범위**: 글로벌만|  
 |**3205**|기본적으로 테이프 드라이브가 하드웨어 압축을 지원하면 DUMP 또는 BACKUP 문에서 하드웨어 압축을 사용합니다. 이 추적 플래그를 사용하면 테이프 드라이버에 대한 하드웨어 압축을 해제할 수 있습니다. 다른 사이트 또는 압축을 지원하지 않는 테이프 드라이브와 테이프를 교환할 때 유용합니다.<br /><br />**범위**: 전역 또는 세션|  
@@ -165,13 +166,13 @@ ms.lasthandoff: 11/28/2017
 ## <a name="examples"></a>예  
  DBCC TRACEON를 사용 하 여 서버 수준에서 모든 세션에 대 한 추적 플래그 3205를 설정 하는 다음 예제에서는 합니다.  
   
-```t-sql  
+```sql  
 DBCC TRACEON (3205,-1);  
 ```
 
 추적 플래그 4199 및 특정 쿼리에 대해 4137에 의해 제어 되는 모든 계획에 영향을 주는 핫픽스를 사용할 수 있습니다.
   
-```t-sql
+```sql
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  

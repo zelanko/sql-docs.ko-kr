@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 위의 테이블에서 **특성** 다음 값을 가질 수 있습니다.
 
-|Attribute|데이터 형식|Description|  
+|attribute|데이터 형식|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|계획을 컴파일할 때 사용하는 옵션 값을 나타냅니다.|  
 |objectid|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. ID에 저장 하는 개체 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 데이터베이스 개체 (프로시저, 뷰, 트리거, 및 등)에 대 한 합니다. 계획 유형이 "임시" 또는 "준비됨"일 경우 일괄 처리 텍스트의 내부 해시입니다.|  
@@ -98,7 +98,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |옵션|값|  
 |------------|-----------|  
-|ANSI_PADDING|1.|  
+|ANSI_PADDING|1|  
 |Parallel Plan|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
@@ -126,8 +126,8 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |옵션|값|  
 |------------|-----------|  
-|없음|0|  
-|INSENSITIVE|1.|  
+|InclusionThresholdSetting|0|  
+|INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
 |FOR UPDATE|8|  
@@ -148,7 +148,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>1. 특정 계획에 대한 특성 반환  
  다음 예에서는 지정된 계획에 대한 모든 계획 특성을 반환합니다. 지정된 계획에 대한 계획 핸들을 얻기 위해 먼저 `sys.dm_exec_cached_plans` 동적 관리 뷰가 쿼리됩니다. 두 번째 쿼리에서는 `<plan_handle>`을 첫 번째 쿼리의 계획 핸들 값으로 대체합니다.  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>2. 컴파일된 계획의 SET 옵션 및 캐시된 계획의 SQL 핸들 반환  
  다음 예에서는 각 계획이 컴파일될 때 사용한 옵션을 나타내는 값을 반환합니다. 또한 모든 캐시된 계획의 SQL 핸들도 반환됩니다.  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

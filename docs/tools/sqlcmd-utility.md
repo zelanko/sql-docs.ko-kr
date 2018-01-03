@@ -3,7 +3,7 @@ title: "sqlcmd 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlcmd
 ms.reviewer: 
@@ -33,11 +33,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbf609bb0bfba5f49a38e942deb566377b066864
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -319,7 +319,7 @@ sqlcmd
 > [!IMPORTANT]  
 >  쿼리에 GO 종결자를 사용하지 마십시오.  
   
- 이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b** 에 대해서는 이 항목의 뒷부분에서 설명합니다.  
+ 이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b**에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
  **-Q"** *cmdline query* **"**  
  **sqlcmd** 가 시작될 때 쿼리를 실행한 다음 바로 **sqlcmd**를 종료합니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다.  
@@ -505,7 +505,7 @@ sqlcmd
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 스크립팅 변수  
   
-|변수|관련 스위치|R/W|기본값|  
+|변수|관련 스위치|R/W|Default|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -642,7 +642,7 @@ sqlcmd
   
  `:EXIT(query)`  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -668,7 +668,7 @@ sqlcmd
   
  쿼리를 포함하는 일괄 처리를 실행하며 쿼리 결과를 반환한 다음 종료합니다.  
   
- **sqlcmd** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **sqlcmd** 가 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어  
+ **sqlcmd** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **sqlcmd** 가 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -729,7 +729,7 @@ sqlcmd
  `:connect $(myservername) $(myusername)`  
   
  [**:**] **!!**< *명령*>  
- 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개(**!!**)로 줄을 시작하고 운영 체제 명령을 입력합니다. 예를 들어  
+ 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개(**!!**)로 줄을 시작하고 운영 체제 명령을 입력합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `:!! Dir`  
   

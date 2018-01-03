@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -219,7 +219,7 @@ WINDOWS
   
  **CREDENTIAL** 옵션을 사용하는 경우에는 서버에 대한 **ALTER ANY CREDENTIAL** 권한도 필요합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  로그인을 만든 후 로그인에 연결할 수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 부여 된 권한을 되었지만 **공용** 역할입니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.  
   
 -   데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.  
@@ -228,7 +228,7 @@ WINDOWS
   
 -   사용 하 여 **sp_addsrvrolemember** 고정된 서버 역할에는 로그인을 추가 합니다. 자세한 내용은 참조 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md) 및 [sp_addsrvrolemember &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
--   사용 하 여는 **GRANT** 새 로그인 또는 로그인이 포함 된 역할에 서버 수준 사용 권한을 부여 하 여 문을 합니다. 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)를 참조하세요.  
+-   사용 하 여는 **GRANT** 새 로그인 또는 로그인이 포함 된 역할에 서버 수준 사용 권한을 부여 하 여 문을 합니다. 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -314,7 +314,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>7. SQL Server 인증 로그인 암호를 사용 하 여 만들기  
  다음 예에서는 로그인 `Mary7` 암호로 `A2c3456`합니다.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   

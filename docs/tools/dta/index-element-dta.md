@@ -3,7 +3,7 @@ title: "Index 요소 (DTA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13ff4535227d924b5da7bc27a36f5ecf082ba60f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18505a8ac88e1524f290d4559537ffe1f6751566
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-element-dta"></a>Index 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 지정 구성에 대해 만들거나 삭제 하려는 인덱스에 대 한 정보를 포함 합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|인덱스 특성|데이터 형식|설명|  
+|인덱스 특성|데이터 형식|Description|  
 |---------------------|---------------|-----------------|  
 |**클러스터형**|**boolean**|(선택 사항) 클러스터형 인덱스를 지정합니다. "true" 또는 "false"로 설정합니다. 예를 들면 다음과 같습니다.<br /><br /> `<Index Clustered="true">`<br /><br /> 기본적으로 이 특성은 "false"로 설정됩니다.|  
 |**고유**|**boolean**|(선택 사항) 고유 인덱스를 지정합니다. "true" 또는 "false"로 설정합니다. 예를 들면 다음과 같습니다.<br /><br /> `<Index Unique="true">`<br /><br /> 기본적으로 이 특성은 "false"로 설정됩니다.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  

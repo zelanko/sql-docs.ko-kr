@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 97d8db9f9e697b72deecc59f6dbb0674b5061f0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 803982ea5e9ce81d280eeb4ba09319d671d6a87c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="system-dynamic-management-views"></a>시스템 동적 관리 뷰
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  모든 동적 관리 뷰 및 함수는 sys 스키마에 있어야 하며 dm_* 명명 규칙을 따라야 합니다. 동적 관리 뷰 또는 함수를 사용할 경우 뷰 또는 함수 이름에 sys 스키마 접두사를 지정해야 합니다. 예를 들어 dm_os_wait_stats 동적 관리 뷰를 쿼리하려면 다음 쿼리를 실행합니다.  
   
- ```tsql
+ ```sql
 SELECT wait_type, wait_time_ms  
 FROM sys.dm_os_wait_stats;  
 ```  

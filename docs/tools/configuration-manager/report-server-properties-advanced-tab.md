@@ -3,7 +3,7 @@ title: "보고서 서버 속성 (고급 탭) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 197ec01940e7bc3d1000cbafb390e6a495c70d96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa7c2b03d450634f8201231c577870b0ad2c0ff0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="report-server-properties-advanced-tab"></a>보고서 서버 속성(고급 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 서비스는는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **고객 의견 보내기**  
  이 서비스에 대해 서비스 품질 모니터링이 활성화되었는지 여부를 나타냅니다. 고객 의견 보고에 대한 자세한 내용은 온라인 설명서에서 "오류 및 사용 보고서 설정" 항목을 참고하십시오.  
   

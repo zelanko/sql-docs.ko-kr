@@ -23,11 +23,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea8fbfa2707da63b0b936539281ec578de02285c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -88,14 +88,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>1. 실행 중인 일괄 처리에 대 한 활성 쿼리 계획 및 실행 통계를 살펴보면  
  다음 예제 쿼리에서 **sys.dm_exec_requests** 흥미로운 쿼리 및 복사를 찾으려면 해당 `session_id` 의 출력 합니다.  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  그런 다음 활성 쿼리 계획 및 실행 통계를 얻으려면 사용 하 여 복사 된 `session_id` 시스템 함수와 함께 **sys.dm_exec_query_statistics_xml**합니다.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,7 +103,7 @@ GO
 
  또는 실행 중인 모든 요청에 대 한 결합 합니다.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  

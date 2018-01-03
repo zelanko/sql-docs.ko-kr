@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b1b92761aa72e4d001ddfb2845c593c3d99f79a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -266,7 +266,7 @@ BOUNDING_BOX = ( {
  *table_name*  
  인덱싱할 테이블 이름입니다.  
   
- database_name이 현재 데이터베이스이거나 database_name이 tempdb이고 object_name이 #으로 시작하는 경우 Windows Azure SQL 데이터베이스는 세 부분으로 구성된 이름 형식 database_name.[schema_name].object_name을 지원합니다.  
+ database_name이 현재 데이터베이스이거나 database_name이 tempdb이고 object_name이 #으로 시작하는 경우 Microsoft Azure SQL Database는 세 부분으로 구성된 이름 형식 database_name.[schema_name].object_name을 지원합니다.  
   
 ### <a name="using-options"></a>USING 옵션  
  GEOMETRY_GRID  
@@ -286,8 +286,8 @@ BOUNDING_BOX = ( {
  geography 데이터 형식의 열에만 지정할 수 있습니다.  이 데이터 형식의 기본값이므로 따로 지정할 필요는 없습니다.  
   
 ### <a name="with-options"></a>WITH 옵션  
- BOUNDING_BOX  
- 경계 상자의 네 좌표를 정의하는 숫자로 된 네 튜플을 지정합니다. x-min과 y-min은 왼쪽 아래 모퉁이의 좌표를 지정하며 x-max와 y-max는 오른쪽 위 모퉁이의 좌표를 지정합니다.  
+BOUNDING_BOX  
+경계 상자의 네 좌표를 정의하는 숫자로 된 네 튜플을 지정합니다. x-min과 y-min은 왼쪽 아래 모퉁이의 좌표를 지정하며 x-max와 y-max는 오른쪽 위 모퉁이의 좌표를 지정합니다.  
   
  *xmin*  
  경계 상자 왼쪽 아래 모퉁이의 X 좌표를 지정합니다.  
@@ -313,13 +313,14 @@ BOUNDING_BOX = ( {
  YMAX =*ymax*  
  경계 상자 오른쪽 위 모퉁이의 Y 좌표에 대한 속성 이름 및 값을 지정합니다.  
   
- 경계 상자 좌표는 USING GEOMETRY_GRID 절 내에서만 적용됩니다.  
-  
- *xmax* 보다 커야 *xmin* 및 *ymax* 보다 커야 *ymin*합니다. 유효한 지정할 수 있습니다 [float](../../t-sql/data-types/float-and-real-transact-sql.md) 값 표현을 가정 하 고: *xmax* > *xmin* 및 *ymax*  >  *ymin*합니다. 그렇지 않으면 해당 오류가 발생합니다.  
-  
- 기본값은 없습니다.  
-  
- 경계 상자 속성 이름은 데이터베이스 데이터 정렬에 관계없이 대/소문자를 구분하지 않습니다.  
+ > [!NOTE]
+ > 경계 상자 좌표는 USING GEOMETRY_GRID 절 내에서만 적용됩니다.  
+ >
+ > *xmax* 보다 커야 *xmin* 및 *ymax* 보다 커야 *ymin*합니다. 유효한 지정할 수 있습니다 [float](../../t-sql/data-types/float-and-real-transact-sql.md) 값 표현을 가정 하 고: *xmax* > *xmin* 및 *ymax*  >  *ymin*합니다. 그렇지 않으면 해당 오류가 발생합니다.  
+ > 
+ > 기본값은 없습니다.  
+ >
+ > 경계 상자 속성 이름은 데이터베이스 데이터 정렬에 관계없이 대/소문자를 구분하지 않습니다.  
   
  속성 이름을 지정하려면 각 항목을 한 번만 지정해야 합니다. 지정하는 순서에는 제한이 없습니다. 예를 들어 다음 절은 동등합니다.  
   
@@ -327,8 +328,8 @@ BOUNDING_BOX = ( {
   
 -   BOUNDING_BOX = (XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
- GRIDS  
- 공간 분할 구성표의 각 수준에서 표의 밀도를 정의합니다. GEOMETRY_AUTO_GRID and GEOGRAPHY_AUTO_GRID를 선택한 경우에는 이 옵션을 사용할 수 없습니다.  
+GRIDS  
+공간 분할 구성표의 각 수준에서 표의 밀도를 정의합니다. GEOMETRY_AUTO_GRID and GEOGRAPHY_AUTO_GRID를 선택한 경우에는 이 옵션을 사용할 수 없습니다.  
   
  공간 분할에 대 한 정보를 참조 하십시오. [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)합니다.  
   
@@ -355,12 +356,14 @@ BOUNDING_BOX = ( {
  HIGH  
  지정된 수준의 표에 가장 높은 밀도를 지정합니다. HIGH는 256셀(16x16 표)과 같습니다.  
   
- 수준 이름을 사용하면 순서에 관계없이 수준을 지정하고 수준을 생략할 수 있습니다. 수준에 이름을 사용하면 지정하는 다른 모든 수준에도 이름을 사용해야 합니다. 수준을 생략하면 해당 밀도의 기본값은 MEDIUM이 됩니다.  
+> [!NOTE] 
+> 수준 이름을 사용하면 순서에 관계없이 수준을 지정하고 수준을 생략할 수 있습니다. 수준에 이름을 사용하면 지정하는 다른 모든 수준에도 이름을 사용해야 합니다. 수준을 생략하면 해당 밀도의 기본값은 MEDIUM이 됩니다.  
   
- 잘못된 밀도를 지정하면 오류가 발생합니다.  
+> [!WARNING] 
+> 잘못된 밀도를 지정하면 오류가 발생합니다.  
   
- CELLS_PER_OBJECT =*n*  
- 공간 분할 프로세스에서 인덱스의 단일 공간 개체에 대해 사용할 수 있는 개체당 공간 분할 셀 수를 지정합니다. *n*1과 8192 (포함) 사이의 정수일 수 있습니다. 수가 잘못 전달되거나 지정된 공간 분할의 최대 셀 수보다 클 경우 오류가 발생합니다.  
+CELLS_PER_OBJECT =*n*  
+공간 분할 프로세스에서 인덱스의 단일 공간 개체에 대해 사용할 수 있는 개체당 공간 분할 셀 수를 지정합니다. *n*1과 8192 (포함) 사이의 정수일 수 있습니다. 수가 잘못 전달되거나 지정된 공간 분할의 최대 셀 수보다 클 경우 오류가 발생합니다.  
   
  CELLS_PER_OBJECT의 기본값은 다음과 같습니다.  
   
@@ -375,8 +378,8 @@ BOUNDING_BOX = ( {
   
  CELLS_PER_OBJECT 값은 개체당 공간 분할 규칙에서 사용됩니다. 공간 분할 규칙에 대 한 정보를 참조 하십시오. [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)합니다.  
   
- PAD_INDEX = {ON | **OFF** }  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+PAD_INDEX = {ON | **OFF** }  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
@@ -388,7 +391,7 @@ BOUNDING_BOX = ( {
   
  PAD_INDEX는 FILLFACTOR에 지정된 비율을 사용하므로 FILLFACTOR가 지정된 경우에만 PAD_INDEX 옵션을 사용할 수 있습니다. FILLFACTOR에 지정된 비율이 한 행을 저장하기에도 부족하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부적으로 허용된 최소 비율을 무시합니다. 중간 인덱스 페이지의 행 수는 두 개 이상, 어떻게 낮은 값에 관계 없이 되지 않는 *fillfactor*합니다.  
   
- FILLFACTOR =*fillfactor*  
+FILLFACTOR =*fillfactor*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
  인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor* 100 1 까지의 정수 값 이어야 합니다. 기본값은 0입니다. 경우 *fillfactor* 가 100 또는 0 일에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 리프 페이지가 꽉 찬 인덱스를 만듭니다.  
@@ -399,12 +402,12 @@ BOUNDING_BOX = ( {
  FILLFACTOR 설정은 인덱스를 만들거나 다시 작성하는 경우에만 적용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 페이지에 지정된 비율의 빈 공간을 동적으로 유지하지 않습니다. 채우기 비율 설정을 보려면는 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰에 있습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 클러스터형 인덱스를 만들 때 데이터를 다시 배포하므로 FILLFACTOR가 100 미만인 클러스터형 인덱스를 만들면 데이터가 차지하는 저장 공간 크기에 영향을 줍니다.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 클러스터형 인덱스를 만들 때 데이터를 다시 배포하므로 FILLFACTOR가 100 미만인 클러스터형 인덱스를 만들면 데이터가 차지하는 저장 공간 크기에 영향을 줍니다.  
   
  자세한 내용은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.  
   
- SORT_IN_TEMPDB = {ON | **OFF** }  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+SORT_IN_TEMPDB = {ON | **OFF** }  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
  tempdb에 임시 정렬 결과를 저장할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
@@ -416,11 +419,11 @@ BOUNDING_BOX = ( {
   
  사용자 데이터베이스에서 인덱스를 만드는 데 필요한 공간 외에 tempdb에는 중간 정렬 결과를 저장할 정도의 동일한 공간이 추가로 필요합니다. 자세한 내용은 참조 [인덱스에 대 한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)합니다.  
   
- IGNORE_DUP_KEY =**OFF**  
- 인덱스 유형은 고유할 수 없으므로 공간 인덱스에 영향을 미치지 않습니다. 이 옵션을 ON으로 설정하지 마세요. ON으로 설정하면 오류가 발생합니다.  
+IGNORE_DUP_KEY =**OFF**  
+인덱스 유형은 고유할 수 없으므로 공간 인덱스에 영향을 미치지 않습니다. 이 옵션을 ON으로 설정하지 마세요. ON으로 설정하면 오류가 발생합니다.  
   
- STATISTICS_NORECOMPUTE = {ON | **OFF**}  
- 배포 통계를 다시 계산할지 여부를 지정합니다. 기본값은 OFF입니다.  
+STATISTICS_NORECOMPUTE = {ON | **OFF**}  
+배포 통계를 다시 계산할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
  ON  
  이전 통계가 자동으로 다시 계산되지 않습니다.  
@@ -431,10 +434,10 @@ BOUNDING_BOX = ( {
  자동 통계 업데이트를 복원하려면 STATISTICS_NORECOMPUTE를 OFF로 설정하거나 NORECOMPUTE 절 없이 UPDATE STATISTICS를 실행합니다.  
   
 > [!IMPORTANT]  
->  배포 통계 자동 재계산 기능을 해제하면 쿼리 최적화 프로그램에서 테이블과 관련된 쿼리에 대해 최적의 실행 계획을 선택할 수 없습니다.  
+> 배포 통계 자동 재계산 기능을 해제하면 쿼리 최적화 프로그램에서 테이블과 관련된 쿼리에 대해 최적의 실행 계획을 선택할 수 없습니다.  
   
- DROP_EXISTING = {ON | **OFF** }  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+DROP_EXISTING = {ON | **OFF** }  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
  명명된 기존 공간 인덱스를 삭제하고 다시 작성하도록 지정합니다. 기본값은 OFF입니다.  
   
@@ -446,16 +449,16 @@ BOUNDING_BOX = ( {
   
  인덱스 유형은 DROP_EXISTING을 사용하여 변경할 수 없습니다.  
   
- ONLINE =**OFF**  
- 인덱스 작업 중에 쿼리 및 데이터 수정에 기본 테이블 및 관련 인덱스를 사용할 수 없도록 지정합니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 공간 인덱스에 대해 온라인 인덱스 작성이 지원되지 않습니다. 이 옵션이 공간 인덱스에 대해 ON으로 설정되어 있으면 오류가 발생합니다. ONLINE 옵션을 생략하거나 ONLINE을 OFF로 설정하세요.  
+ONLINE =**OFF**  
+인덱스 작업 중에 쿼리 및 데이터 수정에 기본 테이블 및 관련 인덱스를 사용할 수 없도록 지정합니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 공간 인덱스에 대해 온라인 인덱스 작성이 지원되지 않습니다. 이 옵션이 공간 인덱스에 대해 ON으로 설정되어 있으면 오류가 발생합니다. ONLINE 옵션을 생략하거나 ONLINE을 OFF로 설정하세요.  
   
  공간 인덱스를 생성, 다시 작성 또는 삭제하는 오프라인 인덱스 작업은 테이블에 대해 SCH-M(스키마 수정) 잠금을 획득합니다. 이 경우 작업 중에 모든 사용자가 기본 테이블에 액세스할 수 없게 됩니다.  
   
 > [!NOTE]  
->  온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+> 온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- ALLOW_ROW_LOCKS = { **ON** | OFF}  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+ALLOW_ROW_LOCKS = { **ON** | OFF}  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
@@ -465,8 +468,8 @@ BOUNDING_BOX = ( {
  OFF  
  행 잠금이 사용되지 않습니다.  
   
- ALLOW_PAGE_LOCKS = { **ON** | OFF}  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+ALLOW_PAGE_LOCKS = { **ON** | OFF}  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
@@ -476,17 +479,17 @@ BOUNDING_BOX = ( {
  OFF  
  페이지 잠금이 사용되지 않습니다.  
   
- MAXDOP =*max_degree_of_parallelism*  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+MAXDOP =*max_degree_of_parallelism*  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
  인덱스 작업 중에 `max degree of parallelism` 구성 옵션을 재정의합니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
 > [!IMPORTANT]  
->  MAXDOP 옵션은 구문으로는 지원되지만 현재 CREATE SPATIAL INDEX는 항상 단일 프로세서만 사용합니다.  
+> MAXDOP 옵션은 구문으로는 지원되지만 현재 CREATE SPATIAL INDEX는 항상 단일 프로세서만 사용합니다.  
   
  *max_degree_of_parallelism* 될 수 있습니다.  
   
- 1.  
+ 1  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -498,14 +501,14 @@ BOUNDING_BOX = ( {
  자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
 > [!NOTE]  
->  병렬 인덱스 작업의 일부 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+> 병렬 인덱스 작업의 일부 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- DATA_COMPRESSION = {NONE | ROW | PAGE}  
- **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+DATA_COMPRESSION = {NONE | ROW | PAGE}  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
  인덱스에 사용되는 데이터 압축 수준을 결정합니다.  
   
- NONE  
+ 없음  
  인덱스 데이터 압축 안 함  
   
  ROW  
@@ -520,7 +523,7 @@ BOUNDING_BOX = ( {
  테이블의 각 공간 열에는 최대 249개의 공간 인덱스를 만들 수 있습니다. 예를 들어 특정 공간 열에 두 개 이상의 공간 인덱스를 만들면 한 열에 있는 서로 다른 공간 분할 매개 변수를 인덱싱하는 데 유용할 수 있습니다.  
   
 > [!IMPORTANT]  
->  이 밖에도 공간 인덱스를 만드는 데는 많은 제한 사항이 있습니다. 자세한 내용은 참조 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)합니다.  
+> 이 밖에도 공간 인덱스를 만드는 데는 많은 제한 사항이 있습니다. 자세한 내용은 참조 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)합니다.  
   
  인덱스 작성 작업은 사용 가능한 프로세스 병렬 처리를 사용할 수 없습니다.  
   
@@ -548,7 +551,7 @@ BOUNDING_BOX = ( {
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  공간 분할 구성표 및 각 공간 인덱스의 매개 변수에 대한 정보를 나타냅니다.  
   
-## <a name="additional-remarks-about-creating-indexes"></a>인덱스 작성에 대한 추가 주의 사항  
+## <a name="additional-remarks-about-creating-indexes"></a>인덱스 만들기에 대 한 추가 주의 사항  
  인덱스를 만드는 방법에 대 한 자세한 내용은의 "주의" 섹션을 참조 하십시오. [CREATE index&#40; Transact SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
@@ -559,7 +562,7 @@ BOUNDING_BOX = ( {
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>1. geometry 열에 공간 인덱스 만들기  
  다음 예에서는 라는 테이블을 만들어 `SpatialTable` 를 포함 하는 **기 하 도형** 유형 열 `geometry_col`합니다. 그런 다음 `SIndx_SpatialTable_geometry_col1`에 공간 인덱스 `geometry_col`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정합니다.  
   
-```  
+```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1   
    ON SpatialTable(geometry_col)  
@@ -569,7 +572,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>2. geometry 열에 공간 인덱스 만들기  
  다음 예에서는 `SIndx_SpatialTable_geometry_col2` 테이블의 `geometry_col`에 두 번째 공간 인덱스 `SpatialTable`를 만듭니다. 이 예에서는 `GEOMETRY_GRID`를 공간 분할 구성표로 지정합니다. 또한 경계 상자를 지정하고 표 수준마다 다른 밀도를 지정하며 개체당 64셀을 지정합니다. 인덱스 패딩은 `ON`으로 설정합니다.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  
    ON SpatialTable(geometry_col)  
    USING GEOMETRY_GRID  
@@ -583,7 +586,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>3. geometry 열에 공간 인덱스 만들기  
  다음 예에서는 `SIndx_SpatialTable_geometry_col3` 테이블의 `geometry_col`에 세 번째 공간 인덱스 `SpatialTable`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정하고 셋째와 넷째 수준에 다른 셀 밀도를 사용하며 개체당 셀 수로 기본값을 사용합니다.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  
    ON SpatialTable(geometry_col)  
    WITH (  
@@ -594,7 +597,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
 ### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>4. 공간 인덱스와 관련된 옵션 변경  
  다음 예에서는 새 `SIndx_SpatialTable_geography_col3` 밀도를 지정하고 DROP_EXISTING을 ON으로 설정하여 이전 예에서 만든 공간 인덱스 `LEVEL_3`을 다시 작성합니다.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable(geography_col)  
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ),  
@@ -605,7 +608,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>5. geography 열에 공간 인덱스 만들기  
  다음 예에서는 라는 테이블을 만듭니다 `SpatialTable2` 를 포함 하는 **geography** 유형 열 `geography_col`합니다. 그런 다음 `SIndx_SpatialTable_geography_col1`에 공간 인덱스 `geography_col`을 만듭니다. 이 예에서는 GEOGRAPHY_AUTO_GRID 공간 분할 구성표의 기본 매개 변수 값을 사용합니다.  
   
-```  
+```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1   
    ON SpatialTable2(object);  
@@ -617,7 +620,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 ### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>6. geography 열에 공간 인덱스 만들기  
  다음 예에서는 `SIndx_SpatialTable_geography_col2` 테이블의 `geography_col`에 두 번째 공간 인덱스 `SpatialTable2`를 만듭니다. 이 예에서는 `GEOGRAPHY_GRID`를 공간 분할 구성표로 지정합니다. 또한 수준마다 다른 표 밀도를 지정하고 개체당 64셀을 지정합니다. 인덱스 패딩은 `ON`으로 설정합니다.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2  
    ON SpatialTable2(object)  
    USING GEOGRAPHY_GRID  
@@ -630,7 +633,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
 ### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>7. geography 열에 공간 인덱스 만들기  
  다음 예에서는 `SIndx_SpatialTable_geography_col3` 테이블의 `geography_col`에 세 번째 공간 인덱스 `SpatialTable2`을 만듭니다. 이 예에서는 기본 공간 분할 구성표인 GEOGRAPHY_GRID와 기본 CELLS_PER_OBJECT 값(16)을 사용합니다.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable2(object)  
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  

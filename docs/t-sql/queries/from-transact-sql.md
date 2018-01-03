@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20363fdc5408fbc79ba833c365bcb118fb1a2846
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="from-transact-sql"></a>FROM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -290,7 +290,7 @@ FROM { <table_source> [ ,...n ] }
  ON \<c h _ c >  
  조인의 기준이 되는 조건을 지정합니다. 열과 비교 연산자를 주로 사용하지만 조건에서는 모든 조건자를 지정할 수 있습니다. 예를 들어 다음과 같습니다.  
   
-```tsql
+```sql
 SELECT p.ProductID, v.BusinessEntityID  
 FROM Production.Product AS p   
 JOIN Purchasing.ProductVendor AS v  
@@ -435,7 +435,7 @@ ON (p.ProductID = v.ProductID);
 ### <a name="a-using-a-simple-from-clause"></a>1. 간단한 FROM 절 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 샘플 데이터베이스에서 `TerritoryID` 테이블의 `Name` 및 `SalesTerritory`을 검색합니다.  
   
-```tsql    
+```sql    
 SELECT TerritoryID, Name  
 FROM Sales.SalesTerritory  
 ORDER BY TerritoryID ;  
@@ -462,7 +462,7 @@ TerritoryID Name
 ### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>2. TABLOCK 및 HOLDLOCK 최적화 프로그램 힌트 사용  
  다음의 부분 트랜잭션은 `Employee`에 명시적인 공유 테이블 잠금을 설정하고 인덱스를 읽는 방법을 보여 줍니다. 잠금은 전체 트랜잭션 동안 유지됩니다.  
   
-```tsql    
+```sql    
 BEGIN TRAN  
 SELECT COUNT(*)   
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
@@ -481,7 +481,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>4. SQL-92 FULL OUTER JOIN 구문 사용  
  다음 예는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `SalesOrderDetail` 테이블의 제품 이름 및 해당되는 모든 판매 주문을 반환합니다. 또한 `Product` 테이블에 나열되어 있는 제품이 없는 모든 판매 주문, 그리고 `Product` 테이블에 나열된 것 이외의 주문된 모든 제품을 반환합니다.  
   
-```tsql  
+```sql  
 -- The OUTER keyword following the FULL keyword is optional.  
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
@@ -493,7 +493,7 @@ ORDER BY p.Name ;
 ### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>5. SQL-92 LEFT OUTER JOIN 구문 사용  
  다음 예에서는 `ProductID`로 두 테이블을 조인하고 왼쪽 테이블에서 일치하지 않는 행도 함께 반환합니다. `Product` 테이블은 `SalesOrderDetail` 열에서 각 `ProductID` 테이블과 일치합니다. 모든 제품은 주문 여부에 관계없이 결과 집합에 나타납니다.  
   
-```tsql    
+```sql    
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
 LEFT OUTER JOIN Sales.SalesOrderDetail AS sod  
@@ -504,7 +504,7 @@ ORDER BY p.Name ;
 ### <a name="f-using-the-sql-92-inner-join-syntax"></a>6. SQL-92 INNER JOIN 구문 사용  
  다음 예에서는 모든 제품 이름과 판매 주문 ID를 반환합니다.  
   
-```tsql    
+```sql    
 -- By default, SQL Server performs an INNER JOIN if only the JOIN   
 -- keyword is specified.  
 SELECT p.Name, sod.SalesOrderID  
@@ -517,7 +517,7 @@ ORDER BY p.Name ;
 ### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>7. SQL-92 RIGHT OUTER JOIN 구문 사용  
  다음 예에서는 `TerritoryID`로 두 테이블을 조인하고 오른쪽 테이블에서 일치하지 않는 행도 함께 반환합니다. `SalesTerritory` 테이블은 `SalesPerson` 열에서 각 `TerritoryID` 테이블과 일치합니다. 판매 직원에게 담당 구역이 할당되었는지 여부에 관계없이 모든 판매 직원이 결과 집합에 표시됩니다.  
   
-```tsql    
+```sql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
 FROM Sales.SalesTerritory AS st   
 RIGHT OUTER JOIN Sales.SalesPerson AS sp  
@@ -530,7 +530,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 > [!IMPORTANT]  
 >  조인 힌트를 지정한 이후에는 INNER 키워드가 더 이상 선택 사항이 아니며 INNER JOIN을 수행하도록 명시적으로 지정해야 합니다.  
   
-```tsql    
+```sql    
 SELECT p.Name AS ProductName, v.Name AS VendorName  
 FROM Production.Product AS p   
 INNER MERGE JOIN Purchasing.ProductVendor AS pv   
@@ -543,7 +543,7 @@ ORDER BY p.Name, v.Name ;
 ### <a name="i-using-a-derived-table"></a>9. 파생된 테이블 사용  
  다음 예에서는 파생된 테이블과 `SELECT` 문을 `FROM` 절 다음에 사용하여 모든 직원의 성과 이름, 직원이 거주하는 도시를 반환합니다.  
   
-```tsql    
+```sql    
 SELECT RTRIM(p.FirstName) + ' ' + LTRIM(p.LastName) AS Name, d.City  
 FROM Person.Person AS p  
 INNER JOIN HumanResources.Employee e ON p.BusinessEntityID = e.BusinessEntityID   
@@ -559,7 +559,7 @@ ORDER BY p.LastName, p.FirstName;
 ### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>10. TABLESAMPLE을 사용하여 테이블의 행 샘플 데이터 읽기  
  다음 예에서는 `TABLESAMPLE` 절에 `FROM`을 사용하여 `10` 테이블에 있는 모든 행 중 대략 `Customer` 퍼센트를 반환합니다.  
   
-```tsql    
+```sql    
 SELECT *  
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
@@ -577,14 +577,14 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
  이 예에서는 `APPLY`를 사용하여 모든 부서와 해당 부서의 모든 직원을 반환합니다. 특정 부서에 직원이 한 명도 없으면 해당 부서에 대해서는 행이 반환되지 않습니다.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
  쿼리가 직원이 없는 부서의 행도 생성하도록 하려면 `EmpID`를 사용하세요. 이 때 `EmpLastName`, `EmpSalary` 및 `OUTER APPLY` 열에 대해서는 Null 값이 생성됩니다.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
@@ -592,7 +592,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ### <a name="l-using-cross-apply"></a>12. CROSS APPLY 사용  
  다음 예제는 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색함으로써 계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색합니다. 그런 다음 `CROSS APPLY`에 계획 핸들을 전달할 `sys.dm_exec_query_plan` 연산자를 지정합니다. 계획 캐시에 있는 각 계획의 XML 실행 계획 출력은 현재 반환된 테이블의 `query_plan` 열에 있습니다.  
   
-```tsql
+```sql
 USE master;  
 GO  
 SELECT dbid, object_id, query_plan   
@@ -607,7 +607,7 @@ GO
   
  다음 예제에서는 SYSTEM_TIME AS OF date_time_literal_or_variable 인수를 사용 하 여 실제 (현재) 2014 년 1 월 1 일을 기준으로 된 테이블 행을 반환 합니다.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -619,7 +619,7 @@ WHERE ManagerID = 5;
   
  다음 예제에서는 date_time_literal_or_variable 인수에 FOR SYSTEM_TIME FROM date_time_literal_or_variable를 사용 하 여 2013 년 1 월 1 일부터 2014 년 1 월 1 일에 끝나는으로 정의 된 기간 동안 활성 상태 였던 모든 행을 반환 상위 경계 전용입니다.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -631,7 +631,7 @@ WHERE ManagerID = 5;
   
  다음 예제에서는 사용에 대 한 SYSTEM_TIME 사이의 date_time_literal_or_variable 및 2013 년 1 월 1 일부터 2014 년 1 월 1 일에 끝나는으로 정의 된 기간 동안 활성화 된 모든 행을 반환할 date_time_literal_or_variable 인수 상위 경계 (포함).  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -643,7 +643,7 @@ WHERE ManagerID = 5;
   
  다음 예제에서는 FOR SYSTEM_TIME CONTAINED IN (date_time_literal_or_variable, date_time_literal_or_variable) 인수를에 열리고 닫힌 2013 년 1 월 1 일 시작 해 서 끝나는으로 정의 된 기간 동안 모든 행 반환 하려면 2014 년 1 월 1 일입니다.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -655,7 +655,7 @@ WHERE ManagerID = 5;
   
  다음 예에서는 리터럴 대신 변수를 사용 하 여 쿼리에 대 한 날짜 경계 값을 제공 하도록 합니다.  
   
-```tsql
+```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
 DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime());
   
@@ -673,7 +673,7 @@ WHERE ManagerID = 5;
 ### <a name="n-using-the-inner-join-syntax"></a>14. INNER JOIN 구문 사용  
  다음 예제에서는 반환 된 `SalesOrderNumber`, `ProductKey`, 및 `EnglishProductName` 열을는 `FactInternetSales` 및 `DimProduct` where 테이블 조인 키 `ProductKey`, 두 테이블에서 일치 합니다. `SalesOrderNumber` 및 `EnglishProductName` 이러한 별칭은 가독성을 위해 포함; 열에는 각각 있으므로 같이 이러한 열이 있는 테이블 별칭을 지정할 필요가 없습니다만, 테이블 중 하나에 존재 합니다. 단어 **AS** 별칭 하기 전에 이름을 필요 하지 않지만 가독성을 높이기 위해 및 ANSI 표준을 준수 하는 것이 좋습니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
   
  이후는 `INNER` 키워드가 내부 조인에 필요 하지 않습니다이 동일한 쿼리를 작성할 수도 있습니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -695,7 +695,7 @@ ON dp.ProductKey = fis.ProductKey;
   
  A `WHERE` 절 사용 될 수도이 쿼리의 결과 제한 하려면. 이 예에서는 결과를 제한 `SalesOrderNumber` 'SO5000' 보다 높은 값:  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -709,7 +709,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>15. LEFT OUTER JOIN 및 RIGHT OUTER JOIN 구문 사용  
  다음 예제에서는 조인을 `FactInternetSales` 및 `DimProduct` 테이블에 `ProductKey` 열입니다. 왼쪽에서 일치 하지 않는 행을 유지 하는 왼쪽된 우선 외부 조인 구문 (`FactInternetSales`) 테이블입니다. 이후는 `FactInternetSales` 테이블 포함 하지 않는 `ProductKey` 값과 일치 하지 않는 `DimProduct` 테이블이이 쿼리는 위의 첫 번째 내부 조인 예제와 같은 행을 반환 합니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -722,7 +722,7 @@ LEFT OUTER JOIN DimProduct AS dp
   
  오른쪽 우선 외부 조인, 오른쪽 테이블에서 일치 하지 않는 행이 유지 됩니다. 다음 예제에서는 위 왼쪽된 우선 외부 조인 예제와 같은 행을 반환 합니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
   
  다음 쿼리에서 `DimSalesTerritory` 왼쪽된 우선 외부 조인에 왼쪽 테이블로 테이블입니다. 검색 된 `SalesOrderNumber` 에서 값의 `FactInternetSales` 테이블입니다. 특정에 대 한 주문이 있는 경우 `SalesTerritoryKey`, 쿼리는 NULL을 반환 된 `SalesOrderNumber` 해당 행에 대 한 합니다. 이 쿼리 별로 정렬 되는 `SalesOrderNumber` 열이이 열에 Null 모든 있도록 나타납니다 결과 맨 위에 있는 합니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -745,7 +745,7 @@ ORDER BY fis.SalesOrderNumber;
   
  이 쿼리는 동일한 결과 검색 하려면 오른쪽 우선 외부 조인으로 다시 작성할 수 있습니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -758,7 +758,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="p-using-the-full-outer-join-syntax"></a>16. FULL OUTER JOIN 구문 사용  
  다음 예제에서는 완전 외부 조인은 조인 된 두 테이블에서 모든 행을 반환 하지만 다른 테이블에서 일치 하지 않는 값에 대 한 NULL을 반환 하는 방법을 보여 줍니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -770,7 +770,7 @@ ORDER BY fis.SalesOrderNumber;
   
  하지 않고이 쿼리를 작성할 수도 있습니다는 `OUTER` 키워드입니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -783,7 +783,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="q-using-the-cross-join-syntax"></a>17. CROSS JOIN 구문 사용  
  교차곱을 반환 하는 다음 예제는 `FactInternetSales` 및 `DimSalesTerritory` 테이블입니다. 가능한 모든 조합 목록이 `SalesOrderNumber` 및 `SalesTerritoryKey` 반환 됩니다. `ON` 크로스 조인 쿼리에서 절.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, fis.SalesOrderNumber  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="r-using-a-derived-table"></a>18. 파생된 테이블 사용  
  파생된 테이블을 사용 하 여 다음 예제 (한 `SELECT` 다음 문으로 `FROM` 절) 반환 하는 `CustomerKey` 및 `LastName` 열에 있는 모든 고객의는 `DimCustomer` 테이블의 `BirthDate` 년 1 월 1 일 이후의 값 1970 및 성 'Smith'.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, LastName  
@@ -809,7 +809,7 @@ ORDER BY LastName;
 ### <a name="s-reduce-join-hint-example"></a>S.는 조인 힌트 예제 줄이기  
  다음 예제에서는 `REDUCE` 쿼리 내에서 파생 된 테이블의 처리를 변경 하는 조인 힌트입니다. 사용 하는 경우는 `REDUCE` 이 쿼리에서 조인 힌트는 `fis.ProductKey` 프로젝션, 복제 및 distinct, 만든에 `DimProduct` 의 순서 섞기 중 `DimProduct` 에 `ProductKey`합니다. 결과 파생된 테이블에 배포 됩니다 `fis.ProductKey`합니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -825,7 +825,7 @@ ORDER BY SalesOrderNumber;
 ### <a name="t-replicate-join-hint-example"></a>20. 복제 조인 힌트 예제  
  다음 예제에서는이 점을 제외 하 고 앞의 예제와 동일한 쿼리를 보여 줍니다.는 `REPLICATE` 대신 조인 힌트가 사용 되어는 `REDUCE` 조인 힌트입니다. 사용은 `REPLICATE` 힌트에 있는 값 사용 하면는 `ProductKey` (조인) 열에서는 `FactInternetSales` 테이블에 모든 노드에 대해 복제 합니다. `DimProduct` 테이블은 해당 값의 복제 된 버전에 조인 합니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -843,7 +843,7 @@ ORDER BY SalesOrderNumber;
   
  다음 예제에서는 REDISTRIBUTE 힌트 ProductKey DimProduct에 대 한 배포 열은 FactInternetSales에 대 한 배포 열 없기 때문에 FactInternetSales 테이블에서 순서 섞기 이동을 강제로 수행 합니다.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN  

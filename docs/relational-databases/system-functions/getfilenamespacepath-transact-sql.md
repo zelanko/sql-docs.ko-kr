@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10f9a117a4ecac05d541ffb004f18106f88dec75
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e7ba6d9582a0eb3660f206dc68087f4fa4852a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/27/2017
  *is_full_path*  
  상대 경로를 반환할지 절대 경로를 반환할지 지정하는 정수 식입니다. *is_full_path* 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|데이터베이스 수준 디렉터리 내에서의 상대 경로를 반환합니다.<br /><br /> 기본값입니다.|  
 |**1**|`\\computer_name`으로 시작하는 전체 UNC 경로를 반환합니다.|  
@@ -57,9 +57,9 @@ ms.lasthandoff: 11/27/2017
  *@option*  
  경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. *@option*다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**0**|NetBIOS 형식으로 변환된 서버 이름을 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> 이 값은 기본값입니다.|  
+|**0**|NetBIOS 형식으로 변환된 서버 이름을 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> 이것은 기본값입니다.|  
 |**1**|서버 이름을 변환하지 않고 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
 |**2**|전체 서버 경로를 반환합니다. 예를 들면 다음과 같습니다.<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDB`|  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="best-practices"></a>최선의 구현 방법  
  코드와 응용 프로그램을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 전체 경로 파일에 대 한 런타임 시 사용 하 여 가져올는 **FileTableRootPath** 및 **GetFileNamespacePath** 함수를 다음 예제에 표시 된 대로 함께 합니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  

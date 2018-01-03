@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbca0ca02e994a3c286cea445965edd9cd53bfcf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ddde4fe4ff510058ff1a70a329a8939de0808a3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 ### <a name="a-validating-all-plan-guides-in-a-database"></a>1. 데이터베이스에 있는 모든 계획 지침 확인  
  다음 예에서는 현재 데이터베이스에 있는 모든 계획 지침의 유효성을 확인합니다. 빈 결과 집합이 반환되면 모든 계획 지침을 사용할 수 있습니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>2. 데이터베이스를 변경하기 전에 계획 지침 유효성 테스트  
  다음 예에서는 명시적 트랜잭션을 사용하여 인덱스를 삭제합니다. `sys.fn_validate_plan_guide` 함수는이 작업은 데이터베이스에 있는 모든 계획 지침 무효화 됩니다 있는지 여부를 확인 하려면 실행 합니다. 함수의 결과에 따라 `DROP INDEX` 문이 커밋되거나 트랜잭션이 롤백되고 인덱스가 삭제되지 않습니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN TRANSACTION;  

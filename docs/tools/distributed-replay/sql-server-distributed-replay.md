@@ -3,7 +3,7 @@ title: SQL Server Distributed Replay | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e307c48172d882a3846c6a9ea6053188d9fff201
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bbfa2d70826055e9818985cc9b17679b5048a788
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용 하면 따르는 영향을 평가 하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드 합니다. 또한 하드웨어 및 운영 체제 업그레이드와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 튜닝에 따르는 영향도 쉽게 평가할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/05/2017
 |Distributed Replay 추적 데이터 결과를 검토하는 방법에 대해 설명합니다.|[재생 결과 검토](../../tools/distributed-replay/review-the-replay-results.md)|  
 |관리 도구를 사용하여 컨트롤러에서 작업을 시작, 모니터링 및 취소하는 방법에 대해 설명합니다.|[관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Distributed Replay 포럼](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [사용 하 여 Distributed Replay를 2 부-SQL Server 테스트 로드](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [사용 하 여 Distributed Replay를 1 부-SQL Server 테스트 로드](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  

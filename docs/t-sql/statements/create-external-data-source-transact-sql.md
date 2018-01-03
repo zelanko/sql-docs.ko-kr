@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ba34b4411b5c3946bf1bc5cb75bc361cd7929990
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>외부 데이터 원본 (Transact SQL) 만들기
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -143,14 +143,14 @@ HADOOP는 표시기 URI (Uniform Resource) Hadoop 클러스터에 대 한을 지
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: 컴퓨터 이름 또는 Namenode Hadoop 클러스터의 IP 주소입니다.  
 포트: Namenode IPC 포트입니다. 이 Hadoop에 fs.default.name 구성 매개 변수에 의해 표시 됩니다. 값을 지정 하지 않으면 8020 기본적으로 사용 됩니다.  
-예:`LOCATION = 'hdfs://10.10.10.10:8020'`
+예: `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 Hadoop으로 Azure blob 저장소에 대 한 Azure blob 저장소에 연결 하기 위한 URI를 지정 합니다.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb [s]: Azure blob 저장소에 대 한 프로토콜을 지정 합니다. [S]는 선택 사항이 며; 보안 SSL 연결을 지정 합니다. SQL Server에서 보낸 데이터는 SSL 프로토콜을 통해 안전 하 게 암호화 됩니다. 'Wasb' 대신 ' wasbs'를 사용 하는 것이 좋습니다. Note 위치가 wasb [s] 대신 [s] asv를 사용할 수 있습니다. Asv [s] 구문을 사용 되지 않으며 이후 릴리스에서 제거 됩니다.  
 컨테이너: Azure blob 저장소 컨테이너의 이름을 지정 합니다. 도메인의 저장소 계정의 루트 컨테이너를 지정 하려면 컨테이너 이름 대신 도메인 이름을 사용 합니다. 루트 컨테이너는 읽기 전용 컨테이너에 데이터를 다시 쓸 수 없습니다.  
 account_name: Azure 저장소 계정과의 정규화 된 도메인 이름 (FQDN)입니다.  
-예:`LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
+예: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
 Azure 데이터 레이크 저장소에 대 한 위치는 Azure 데이터 레이크 저장소에 연결 하기 위한 URI를 지정 합니다.
 
@@ -211,7 +211,7 @@ RDBMS에 대 한 단계별 자습서를 참조 하십시오. [데이터베이스
 
 |Hadoop 연결|리소스 관리자 기본 포트|
 |-------------------|-----------------------------|
-|1.|50300|
+|1|50300|
 |2|50300|
 |3|8021|
 |4|8032|
@@ -308,7 +308,7 @@ PolyBase에 대 한 RESOURCE_MANAGER_LOCATION 또는 JOB_TRACKER_LOCATION 정의
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>1. 참조 Hadoop에 외부 데이터 원본 만들기  
 Hortonworks 또는 Cloudera Hadoop 클러스터를 참조 하는 외부 데이터 원본을 만들려면 컴퓨터 이름이 나 IP 주소는 Hadoop Namenode 및 포트를 지정 합니다.  
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -320,7 +320,7 @@ WITH (
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>2. 푸시 다운을 사용 하도록 설정 참조 Hadoop에 외부 데이터 원본 만들기  
 Polybase에 대 한 Hadoop에 푸시 다운 계산을 사용 하도록 설정 하려면 RESOURCE_MANAGER_LOCATION 옵션을 지정 합니다. 활성화 되 면 PolyBase 비용 기반 결정을 사용 하 여 Hadoop으로 쿼리 계산을 푸시할 또는 모든 데이터가 SQL Server의 쿼리 처리를 설정할지 여부를 결정 합니다.
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -333,7 +333,7 @@ WITH (
 ###  <a name="credential"></a> 3. Kerberos 보안 Hadoop 참조 하려면 외부 데이터 원본 만들기  
 Kerberos 보안 Hadoop 클러스터 인지를 확인 하려면 Hadoop 코어 site.xml hadoop.security.authentication 속성의 값을 확인 합니다. Kerberos 보안 Hadoop 클러스터를 참조 하려면 Kerberos 사용자 이름 및 암호를 포함 하는 데이터베이스 범위 자격 증명을 지정 해야 합니다. 데이터베이스 범위 자격 증명 암호를 암호화 하는 데이터베이스 마스터 키 사용 됩니다. 
   
-```tsql  
+```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
 
@@ -380,7 +380,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>5. Shard map manager 외부 데이터 원본 만들기
 SHARD_MAP_MANAGER 참조 하려면 외부 데이터 소스를 만들려면 Azure SQL 데이터베이스 또는 Azure 가상 컴퓨터에 SQL Server 데이터베이스에서 분할 맵 관리자를 호스트 하는 논리 서버 이름을 지정 합니다.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
@@ -400,7 +400,7 @@ WITH (
 ### <a name="f-create-an-rdbms-external-data-source"></a>6. RDBMS 외부 데이터 원본 만들기
 RDBMS가 참조 하는 외부 데이터 원본을 만들려면 Azure SQL 데이터베이스에 원격 데이터베이스의 논리 서버 이름을 지정 합니다.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
@@ -421,7 +421,7 @@ WITH (
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>7. Azure 데이터 레이크 저장소 참조를 외부 데이터 원본 만들기
 Azure 데이터 레이크 저장소 연결 ADLS URI 및 Azure 활성 디렉터리 응용 프로그램의 서비스 사용자 기반으로 합니다. 이 응용 프로그램 만들기에 대 한 설명서에서 찾을 수 있습니다[Active Directory를 사용 하 여 데이터 레이크 저장소 인증](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)합니다.
 
-```tsql
+```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY
 
@@ -444,7 +444,7 @@ WITH (TYPE = HADOOP,
 ### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>8. 푸시 다운을 사용 하도록 설정 참조 Hadoop에 외부 데이터 원본 만들기
 Polybase에 대 한 Hadoop에 푸시 다운 계산을 사용 하도록 설정 하려면 JOB_TRACKER_LOCATION 옵션을 지정 합니다. 활성화 되 면 PolyBase 비용 기반 결정을 사용 하 여 Hadoop으로 쿼리 계산을 푸시할 또는 모든 데이터가 SQL Server의 쿼리 처리를 설정할지 여부를 결정 합니다. 
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -458,7 +458,7 @@ WITH (
 
 이 예제에서는 외부 데이터 원본은 dailylogs myaccount 라는 Azure 저장소 계정에서 호출 하는 Azure blob 저장소 컨테이너를입니다. Azure 저장소 외부 데이터 원본의 데이터 전송만 되며 조건자 푸시 다운을 지원 하지 않습니다.
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
         TYPE = HADOOP, 
         LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'
@@ -469,7 +469,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>10. Azure Blob 저장소에서 데이터를 검색 하는 대량 작업에 대 한 외부 데이터 원본을 만듭니다.   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.   
 사용 하 여 대량 작업에 대 한 다음 데이터 소스를 사용 하 여 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)합니다. 사용 하 여을 사용 하는 자격 증명을 만들어야 `SHARED ACCESS SIGNATURE` id로 합니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,

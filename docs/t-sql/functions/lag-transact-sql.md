@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8da98a7a5fe003c9567be9623cff3604e754c473
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a6942ecfcf189716e0829eadcb0d94c6d731650
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lag-transact-sql"></a>LAG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -68,7 +68,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>1. 연도 간 값 비교  
  다음 예에서는 LAG 함수를 사용하여 특정 직원의 전년도 대비 판매 할당량 차이를 반환합니다. 첫 번째 행의 경우 앞에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -94,7 +94,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>2. 파티션 내의 값 비교  
  다음 예에서는 LAG 함수를 사용하여 직원별 연간 누계 매출을 비교합니다. 결과 집합의 행을 판매 지역별로 나누기 위해 PARTITION BY 절이 지정되었습니다. LAG 함수는 각 파티션에 별도로 적용되고 각 파티션에 대해 계산이 다시 시작됩니다. OVER 절에서 ORDER BY 절은 각 파티션의 행을 정렬합니다. SELECT 문의 ORDER BY 절은 전체 결과 집합의 행을 정렬합니다. 각 파티션에 있는 첫 번째 행의 경우 앞에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -120,7 +120,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>3. 임의의 식 지정  
  다음 예에서는 LAG 함수 구문에서 다양한 임의의 식을 지정하는 방법을 보여 줍니다.  
   
-```t-sql   
+```sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -148,7 +148,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: 분기 간 값 비교  
  다음 예에서는 LAG 함수를 보여 줍니다. 쿼리에서 LAG 함수를 사용 하 여 이전 분기를 통해 특정 직원에 대 한 판매 할당량 차이 반환 합니다. 첫 번째 행의 경우 앞에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
-```t-sql   
+```sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  

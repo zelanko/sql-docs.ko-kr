@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ed224c77a502f81da57b232a68fddc0d4157338
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 147ac7627ba30a8a249e00cbf03e37887368de09
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ request_id [sys.dm_exec_requests](../../relational-databases/system-dynamic-mana
 ### <a name="a-simple-example"></a>1. 간단한 예  
  다음 예제에서는 함수에는 세션 id (SPID)와 요청 id를 전달 하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-using-cross-apply-to-additional-information"></a>2. 크로스 사용 하 여 추가 정보에 적용  
  다음 예제에서는 세션 id가 50 보다 크므로 인 세션에 대 한 입력된 버퍼를 나열합니다.  
   
-```tsql  
+```sql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  

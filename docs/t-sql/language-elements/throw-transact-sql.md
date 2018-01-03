@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f4589c45311ad9c1479f97ceb82b38f3e13393e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 67c842da8894bc7fe33be69a35a88949c6e441b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="throw-transact-sql"></a>THROW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,10 +48,10 @@ THROW [ { error_number | @local_variable },
  *error_number*  
  예외를 나타내는 상수 또는 변수입니다. *error_number* 은 **int** 50000 보다 크거나 여야 하 고 및 2147483647입니다.  
   
- *메시지*  
+ *message*  
  예외를 설명하는 문자열 또는 변수입니다. *메시지* 은 **nvarchar (2048)**합니다.  
   
- *상태*  
+ *state*  
  메시지와 연결할 상태를 나타내는 0에서 255 사이의 상수 또는 변수입니다. *상태* 은 **tinyint**합니다.  
   
 ## <a name="remarks"></a>주의  
@@ -77,7 +77,7 @@ THROW [ { error_number | @local_variable },
 ### <a name="a-using-throw-to-raise-an-exception"></a>1. THROW를 사용하여 예외 발생  
  다음 예에서는 `THROW` 문을 사용하여 예외를 발생시키는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 THROW 51000, 'The record does not exist.', 1;  
 ```  
   
@@ -92,7 +92,7 @@ THROW 51000, 'The record does not exist.', 1;
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>2. THROW를 사용하여 다시 예외 발생  
  다음 예에서는 `THROW` 문을 사용하여 발생한 예외를 다시 발생시키는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE dbo.TestRethrow  
@@ -123,7 +123,7 @@ END CATCH;
 ### <a name="c-using-formatmessage-with-throw"></a>3. THROW에 FORMATMESSAGE 사용  
  다음 예에서는 `FORMATMESSAGE` 함수를 `THROW`와 함께 사용하여 사용자 지정된 오류 메시지를 발생시키는 방법을 보여 줍니다. 이 예제에서는 먼저 `sp_addmessage`를 사용하여 사용자 정의 오류 메시지를 만듭니다. THROW 문은 대체 매개 변수에서 허용 하지 않으므로 *메시지* 오류 메시지 60000에 필요한 세 가지 매개 변수 값을 전달 하는 방식 RAISERROR는 FORMATMESSAGE 함수 매개 변수를 사용 합니다.  
   
-```tsql  
+```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
 ,@severity = 16  

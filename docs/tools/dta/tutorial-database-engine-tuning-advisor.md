@@ -3,7 +3,7 @@ title: "자습서: 데이터베이스 엔진 튜닝 관리자 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91ada122d3cdad5d3b40b1809c063b821c898bcb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a21a71c1ae0239e4725f09b404fe7df8d62da697
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>자습서: 데이터베이스 엔진 튜닝 관리자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터베이스 엔진 튜닝 관리자 자습서를 시작 합니다. 사용자가 지정한 데이터베이스에서 쿼리를 처리하는 방법을 검사한 다음 인덱스, 인덱싱된 뷰 및 분할과 같은 데이터베이스 구조를 수정하여 쿼리 처리 성능을 높일 수 있는 방법을 권장합니다.  

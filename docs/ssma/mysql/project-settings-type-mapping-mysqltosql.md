@@ -1,7 +1,7 @@
 ---
 title: "프로젝트 설정 (형식 매핑) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00caaddad937894b416e3289a7d4e96b152ac41b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7ca62e82b85d401f99a6e59f6f440d9a6519e58d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>프로젝트 설정 (형식 매핑) (MySQLToSQL)
 프로젝트 유형 매핑 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 -   기본 프로젝트 설정 대화 상자를 사용 하 여 모든 프로젝트에 대 한 구성 옵션을 설정 합니다. 형식 매핑에 액세스 하려면 도구 메뉴에서 설정을 선택 기본 프로젝트 설정, 설정 된 볼 /에서 변경 하는 데 필요한 선택 마이그레이션 프로젝트 형식을 **마이그레이션 대상 버전** 드롭다운 하 고 왼쪽된 창에서 형식 매핑 클릭 합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ##### <a name="source-type"></a>원본 유형  
 대상 데이터베이스의 데이터 형식에 매핑할 수 있는 MySQL 데이터 형식입니다.  
@@ -61,9 +61,9 @@ ms.lasthandoff: 12/05/2017
 |||  
 |-|-|  
 |**MySQL 데이터 형식**|**SQL Server 데이터 형식**|  
-|bigint|bigint|  
-|bigint [*... 255]|bigint|  
-|binary|이진 [1]|  
+|BIGINT|BIGINT|  
+|bigint [*... 255]|BIGINT|  
+|BINARY|이진 [1]|  
 |이진 [0..1]|이진 [1]|  
 |이진 [2..255]|이진 [*]|  
 |bit|이진 [1]|  
@@ -89,35 +89,35 @@ ms.lasthandoff: 12/05/2017
 |char [2..255]|nchar [*]|  
 |character|nchar [1]|  
 |[0..1] 다양 한 문자|nvarchar [1]|  
-|다양 한 2..255 문자|nvarchar|  
+|다양 한 2..255 문자|NVARCHAR|  
 |문자 [0..1]|nchar [1]|  
 |문자 [2..255]|nchar [*]|  
-|date|date|  
-|datetime|datetime2 [0]|  
-|dec|decimal|  
+|날짜|날짜|  
+|DATETIME|datetime2 [0]|  
+|dec|Decimal|  
 |dec [*... 65]|decimal [*] [0]|  
 |dec [*... 65][\*.. 30]|decimal [*] [\*]|  
-|decimal|decimal|  
+|Decimal|Decimal|  
 |10 진수 [*... 65]|decimal [*] [0]|  
 |10 진수 [*... 65][\*.. 30]|decimal [*] [\*]|  
 |double|float [53]|  
 |배정밀도|float [53]|  
 |배정밀도 [*... 255][\*.. 30]|숫자 [*] [\*]|  
 |double [*... 255][\*.. 30]|숫자 [*] [\*]|  
-|고정|numeric|  
+|고정|NUMERIC|  
 |고정 [*... 65][\*.. 30]|숫자 [*] [\*]|  
-|float|float [24]|  
+|FLOAT|float [24]|  
 |float [*... 255][\*.. 30]|숫자 [*] [\*]|  
 |float [*... 53]|float [53]|  
-|int|int|  
-|int [*... 255]|int|  
-|integer|int|  
-|정수 [*... 255]|int|  
+|ssNoversion|ssNoversion|  
+|int [*... 255]|ssNoversion|  
+|integer|ssNoversion|  
+|정수 [*... 255]|ssNoversion|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|mediumint [*... 255]|int|  
+|mediumint|ssNoversion|  
+|mediumint [*... 255]|ssNoversion|  
 |mediumtext|nvarchar(max)|  
 |국가별 문자|nchar [1]|  
 |national char [0..1]|nchar [1]|  
@@ -133,76 +133,76 @@ ms.lasthandoff: 12/05/2017
 |national varchar [0..1]|nvarchar [1]|  
 |national varchar [2..4000]|nvarchar [*]|  
 |national varchar [4001.. *]|nvarchar(max)|  
-|nchar|nchar [1]|  
+|NCHAR|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
 |nchar varchar [0..1]|nvarchar [1]|  
 |nchar varchar [2..4000]|nvarchar [*]|  
 |nchar varchar [4001.. *]|nvarchar(max)|  
 |nchar [0..1]|nchar [1]|  
 |nchar [2..255]|nchar [*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |숫자 [*... 65]|숫자 [*] [0]|  
 |숫자 [*... 65][\*.. 30]|숫자 [*] [\*]|  
-|nvarchar|nvarchar [1]|  
+|NVARCHAR|nvarchar [1]|  
 |nvarchar [0..1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
-|real|float [53]|  
+|REAL|float [53]|  
 |실제 [*... 255][\*.. 30]|숫자 [*] [\*]|  
-|직렬|bigint|  
-|smallint|smallint|  
-|smallint [*... 255]|smallint|  
+|직렬|BIGINT|  
+|SMALLINT|SMALLINT|  
+|smallint [*... 255]|SMALLINT|  
 |text|nvarchar(max)|  
 |텍스트 [0..1]|nvarchar [1]|  
 |텍스트 [2..4000]|nvarchar [*]|  
 |텍스트 [4001.. *]|nvarchar(max)|  
-|time|time|  
-|timestamp|datetime|  
+|Time|Time|  
+|TIMESTAMP|DATETIME|  
 |tinyblob|varbinary [255]|  
-|tinyint|smallint|  
-|tinyint [*... 255]|smallint|  
+|TINYINT|SMALLINT|  
+|tinyint [*... 255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
-|부호 없는 bigint|bigint|  
-|부호 없는 bigint [*... 255]|bigint|  
-|부호 없는 10 진수|decimal|  
+|부호 없는 bigint|BIGINT|  
+|부호 없는 bigint [*... 255]|BIGINT|  
+|부호 없는 10 진수|Decimal|  
 |부호 없는 10 진수 [*... 65]|decimal [*] [0]|  
 |부호 없는 10 진수 [*... 65][\*.. 30]|decimal [*] [\*]|  
-|부호 없는 10 진수|decimal|  
+|부호 없는 10 진수|Decimal|  
 |부호 없는 10 진수 [*... 65]|decimal [*] [0]|  
 |부호 없는 10 진수 [*... 65][\*.. 30]|decimal [*] [\*]|  
 |double 서명 되지 않은|float [53]|  
 |배정밀도 서명 되지 않은|float [53]|  
 |배정밀도 서명 되지 않은 [*... 255][\*.. 30]|숫자 [*] [\*]|  
 |double 서명 되지 않은 [*... 255][\*.. 30]|숫자 [*] [\*]|  
-|서명 되지 않은 고정|numeric|  
+|서명 되지 않은 고정|NUMERIC|  
 |서명 되지 않은 고정 [*... 65][\*.. 30]|숫자 [*] [\*]|  
 |서명 되지 않은 부동 소수점|float [24]|  
 |부호 없는 float [*... 255][\*.. 30]|숫자 [*] [\*]|  
 |부호 없는 float [*... 53]|float [53]|  
-|부호 없는 정수|bigint|  
-|부호 없는 int [*... 255]|bigint|  
-|부호 없는 정수|bigint|  
-|부호 없는 정수 [*... 255]|bigint|  
-|부호 없는 mediumint|int|  
-|부호 없는 mediumint [*... 255]|int|  
-|부호 없는 숫자|numeric|  
+|부호 없는 정수|BIGINT|  
+|부호 없는 int [*... 255]|BIGINT|  
+|부호 없는 정수|BIGINT|  
+|부호 없는 정수 [*... 255]|BIGINT|  
+|부호 없는 mediumint|ssNoversion|  
+|부호 없는 mediumint [*... 255]|ssNoversion|  
+|부호 없는 숫자|NUMERIC|  
 |부호 없는 숫자 [*... 65]|숫자 [*] [0]|  
 |부호 없는 숫자 [*... 65][\*.. 30]|숫자 [*] [\*]|  
 |실제 서명 되지 않은|float [53]|  
 |실제 서명 되지 않은 [*... 255[[\*.. 30]|숫자 [*] [\*]|  
-|부호 없는 smallint|int|  
-|부호 없는 smallint [*... 255]|int|  
-|부호 없는 tinyint|tinyint|  
-|부호 없는 tinyint [*... 255]|tinyint|  
+|부호 없는 smallint|ssNoversion|  
+|부호 없는 smallint [*... 255]|ssNoversion|  
+|부호 없는 tinyint|TINYINT|  
+|부호 없는 tinyint [*... 255]|TINYINT|  
 |varbinary [0..1]|varbinary [1]|  
 |varbinary [2..8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
 |varchar [0..1]|nvarchar [1]|  
 |varchar [2..4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
-|year|smallint|  
-|연도 [2..2]|smallint|  
-|연도 [4..4]|smallint|  
+|year|SMALLINT|  
+|연도 [2..2]|SMALLINT|  
+|연도 [4..4]|SMALLINT|  
   
 ##### <a name="add"></a>추가  
 데이터 형식 매핑 목록에 추가 하려면 클릭 합니다.  
