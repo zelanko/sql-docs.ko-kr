@@ -3,10 +3,10 @@ title: "master 데이터베이스 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -17,11 +17,11 @@ ms.topic: article
 ms.assetid: c71617c0-6689-4f52-81c6-58f4cf7c7377
 caps.latest.revision: "8"
 ms.workload: not set
-ms.openlocfilehash: 59acb3fb8c5c1913e8b4d656e9895b2810e19497
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fde1a329703ed833a9fdeb6686b1a63c04aea79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-database"></a>master 데이터베이스
 SQL Server PDW 마스터 데이터베이스 수준의 어플라이언스에 로그인 정보 및 데이터베이스 카탈로그에 저장합니다. 제어 노드에 있는 SQL Server 마스터 데이터베이스. 따라서 SQL Server에 제공 하는 마스터 SQL Server PDW에 유사한 기능을 제공 합니다.  
@@ -47,7 +47,7 @@ SQL Server PDW 마스터 데이터베이스 수준의 어플라이언스에 로�
   
 -   실행 **DBCC SHRINKLOG**합니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크|Description|  
 |--------|---------------|  

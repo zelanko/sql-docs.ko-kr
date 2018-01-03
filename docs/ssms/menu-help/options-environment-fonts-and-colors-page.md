@@ -3,7 +3,7 @@ title: "옵션(환경 - 글꼴 및 색 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ae02d8e4c6639555fe79ceca82ca46361648ddee
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b25286172071a980e96ead35ffef81a6b5cf19d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>옵션(환경 - 글꼴 및 색 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **옵션** 대화 상자를 통해 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 여러 사용자 인터페이스 요소에 사용되는 사용자 지정 글꼴 및 색 구성표를 설정할 수 있습니다. **도구** 메뉴에서 **옵션** 을 클릭하고 **환경** 폴더를 확장한 다음 **글꼴 및 색**을 선택합니다.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
 **항목 전경**  
 **표시 항목**에서 선택한 항목의 전경색으로 사용할 수 있는 색을 나열합니다. 일부 항목은 서로 관련이 있기 때문에 표시 구성표의 일관성을 유지해야 합니다. 예를 들어 텍스트의 전경색을 변경하면 문자열과 같은 요소의 전경색도 변경됩니다.  
   
-**사용자 지정**  
+**Custom**  
 **표시 항목** 목록에서 선택한 항목의 사용자 지정 색을 설정하는 **색** 대화 상자를 표시합니다.  
   
 > [!NOTE]  

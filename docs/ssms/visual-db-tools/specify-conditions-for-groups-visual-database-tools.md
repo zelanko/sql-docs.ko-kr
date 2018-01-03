@@ -3,7 +3,7 @@ title: "그룹 조건 지정(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83c0a7bd21d7af608a3d8f31a2eeb9e08554d20b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b6168fec36beba851fea3850b688dedc3958ebf0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>그룹 조건 지정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] HAVING 절에서 그룹 전체에 적용되는 조건을 지정하여 쿼리에 표시되는 그룹을 제한할 수 있습니다. 데이터를 그룹화하고 집계한 후에 HAVING 절의 조건이 적용됩니다. 쿼리에는 이 조건에 맞는 그룹만 표시됩니다.  

@@ -2,12 +2,14 @@
 title: "데이터베이스 내 Python 분석 SQL 개발자를 위해 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 1f6a1279268668062c83a151b6e7235b5c873325
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c6e59f8e3e1b59b9225a95dbe787698dd5bf4f9e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 개발자를 위해 데이터베이스에서 Python 분석
 
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 + 컴퓨터 학습 서비스 및 Python 사용 하도록 설정 된 SQL Server 2017의 인스턴스를 설치 합니다. 자세한 내용은 참조 [python SQL Server 컴퓨터 학습 서비스 설정](../python/setup-python-machine-learning-services.md)합니다.
 + 이 연습에 사용하는 로그인에 데이터베이스 및 기타 개체를 만들고, 데이터를 업로드하고, 데이터를 선택하고, 저장 프로시저를 실행할 수 있는 권한이 있어야 합니다.

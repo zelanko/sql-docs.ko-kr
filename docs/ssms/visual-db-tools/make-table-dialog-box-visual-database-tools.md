@@ -3,7 +3,7 @@ title: "테이블 만들기 대화 상자(Visual Database Tools) | Microsoft 문
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a50332021cd0c3a3b4c789ced8b02d0c2ca9d34c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fba467f32b32d76ceed49a4dbb26c0e61878f953
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>테이블 만들기 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 행을 복사하려는 대상 테이블을 만들고 이름을 지정할 수 있습니다. 이 대화 상자는 쿼리 형식을 MAKE TABLE 쿼리로 변경하면 나타납니다. 쿼리 형식을 변경하려면 **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **테이블 만들기**를 클릭합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **테이블 이름**  
 만들 테이블의 이름을 입력합니다. 쿼리 및 뷰 디자이너는 이 이름이 이미 사용되고 있는지 또는 사용자에게 테이블을 만들 수 있는 권한이 있는지를 확인하지 않습니다.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > 만들 테이블의 속성을 변경하려는 경우 쿼리를 실행하기 전에 **속성** 창에서 이러한 테이블의 속성을 변경할 수 있습니다. 자세한 내용은 [쿼리 속성&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [테이블 만들기 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
 [쿼리 형식&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

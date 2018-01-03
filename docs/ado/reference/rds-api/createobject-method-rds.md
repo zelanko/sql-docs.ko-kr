@@ -3,7 +3,7 @@ title: "CreateObject 메서드 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba9c2d9ee2c2cf0a646155e5d184640d1aa0283b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createobject-method-rds"></a>CreateObject 메서드 (RDS)
 대상 비즈니스 개체에 대 한 프록시를 만들고에 대 한 포인터를 반환 합니다. 인터넷을 통해 요청 및 데이터를 보낼 비즈니스 개체와의 통신에 대 한 서버 쪽 스텁에 프록시 패키징하고 데이터입니다. In-process 구성 요소 개체에 대 한 프록시가 사용 되, 개체에 대 한 포인터만 제공 됩니다.  

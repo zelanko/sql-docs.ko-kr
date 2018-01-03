@@ -3,7 +3,7 @@ title: "범위란 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9459d144016deaaec593a8edd92bf5b518a8962b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50749d088c57754ef9b667b114da8fb4f475ad19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyrecord-method-ado"></a>범위란 메서드 (ADO)
 복사로 표시 되는 엔터티에 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치에 있습니다.  

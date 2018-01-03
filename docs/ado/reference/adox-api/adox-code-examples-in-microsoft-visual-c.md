@@ -3,7 +3,7 @@ title: "Microsoft Visual c + +의에서 ADOX 코드 예제 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dcf0e1bd104d8ecb986bb5e854f17de3d8779fd7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97ac5aa3978ff14f37ec02d72b41982cda2fff5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual c + +의에서 ADOX 코드 예제
 이러한 항목 ADOX를 사용 하는 방법을 이해 하는 예제 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual c + +를 사용 하 여 기록 됩니다.  

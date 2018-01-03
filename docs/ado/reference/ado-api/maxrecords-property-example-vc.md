@@ -3,7 +3,7 @@ title: "MaxRecords 속성 예제 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e69d3f3ec9b90e01593951b908441ff106bb6d4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa201c48e8b84a3edfa6f1c201c30b421451a3dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 속성 예제 (VC + +)
 사용 하 여이 예제는 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 속성 열을 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 10 개의 가장 비싼 책 제목을 포함 하는 ***타이틀*** 테이블입니다.  

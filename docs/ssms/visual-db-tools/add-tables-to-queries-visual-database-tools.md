@@ -3,7 +3,7 @@ title: "쿼리에 테이블 추가(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e6ccda0e06a9b7a0644985e06912c07ac7376fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 92cadb859c17ffc53bb0aaa59063d1939e1f1049
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>쿼리에 테이블 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리를 만들 때는 뷰와 특정 사용자 정의 함수 같은 테이블 구조의 다른 개체나 테이블에서 데이터를 검색합니다. 쿼리에서 이러한 개체를 사용하여 작업하려면 필요한 개체를 **다이어그램 창**에 추가합니다.  
@@ -62,7 +62,7 @@ SQL 창에서 테이블이나 뷰를 문에 참조하면 참조된 테이블과 
   
 7.  **SQL 창**에서 닫는 괄호 뒤에 별칭을 추가합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [테이블 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
 [쿼리에서 테이블 제거&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
 [검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

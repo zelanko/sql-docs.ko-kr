@@ -3,7 +3,7 @@ title: "NumericScale 및 열의 예 (VC + +)의 전체 자릿수 속성 | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a9d10cb0493db6e19d8f3ee7c60beb0be5adeff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5ee47669ccadbf3fe43d8861248020244c320ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>NumericScale 및 전체 자릿수이 고 속성 열 개체 예제의 (VC + +)
 이 예제에서는 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) 및 [정밀도](../../../ado/reference/adox-api/precision-property-adox.md) 의 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체입니다. 이 코드에 대 한 해당 값이 표시는 **Order Details** 목차는 *Northwind* 데이터베이스입니다.  

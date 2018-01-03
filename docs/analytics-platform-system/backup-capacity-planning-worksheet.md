@@ -3,10 +3,10 @@ title: "백업 서버 용량 계획 워크시트 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
 caps.latest.revision: "6"
-ms.openlocfilehash: f707715e19a3c647048f3156878bbd479ebb4b59
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e025410f3be18b5f8276984219dd1cb6a40c2a87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-server-capacity-planning-worksheet"></a>백업 서버 용량 계획 워크시트
 이 용량 계획 워크시트 및 복원 작업을 SQL Server PDW 데이터베이스 백업을 수행 하기 위한 백업 서버에 대 한 요구 사항을 확인할 수 있습니다. 이 대화 상자를 사용 하 여 구매 새롭거나 프로 비전 기존 백업 서버에 대 한 계획을 만들 수 있습니다.  

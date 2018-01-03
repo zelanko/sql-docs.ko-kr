@@ -3,7 +3,7 @@ title: "CreateRecordset 메서드 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드 (RDS)
 비어 있는 만듭니다 연결이 끊어진 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -51,9 +51,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant** 특성의 각 열을 정의 하는 배열을 **레코드 집합** 생성 합니다. 각 열 정의는 4 개의 필수 특성와 하나의 선택적 특성의 배열을 포함합니다.  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
-|이름|열 머리글의 이름입니다.|  
+|속성|열 머리글의 이름입니다.|  
 |형식|정수 데이터 형식입니다.|  
 |크기|데이터 형식에 관계 없이 문자 너비의 정수입니다.|  
 |Null 허용 여부|부울 값입니다.|  

@@ -3,7 +3,7 @@ title: "대상 서버의 폴링 간격 설정 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55865e4b4a2a112f92f58e229ccff74e5dd2a48d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 372fcb40beb2eb1a2235a67acd998350af6a338e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 마스터 서버에서 대상 서버로 정보를 새로 고치는 빈도를 설정하는 방법에 대해 설명합니다. 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 수행하도록 지정된 일련의 동작입니다. 다중 서버 작업은 마스터 서버가 하나 이상의 대상 서버에서 실행하는 작업입니다.  
@@ -71,6 +71,6 @@ ms.lasthandoff: 12/05/2017
   
 3.  쿼리 창에서 [sp_post_msx_operation(Transact-SQL)](http://msdn.microsoft.com/en-us/085deef8-2709-4da9-bb97-9ab32effdacf) 시스템 저장 프로시저를 사용하여 대상 서버의 폴링 간격을 설정합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [sysdownloadlist](http://msdn.microsoft.com/en-us/71087a4c-e829-488e-aa7d-a9476e2b4779)  
   

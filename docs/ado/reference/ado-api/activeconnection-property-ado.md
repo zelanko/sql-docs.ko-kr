@@ -3,7 +3,7 @@ title: "ActiveConnection 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9722834bb3a5edb7abdb1ecf7b0235a069d60f09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77c5f58c5fed82651e5fc7f0228ef36e5fbea880
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 속성 (ADO)
 나타내는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 지정 된 개체 [명령](../../../ado/reference/ado-api/command-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 현재 속해 합니다.  

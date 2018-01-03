@@ -3,10 +3,10 @@ title: "어플라이언스 구성 (분석 플랫폼 시스템)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
 caps.latest.revision: "43"
-ms.openlocfilehash: ebb797e3fdb24bad79857f83c163dbf92a439883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05670f1727691b1abc0fd98dd5970c7697725b8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-configuration"></a>어플라이언스 구성
 사용자가 자신의 환경에 대 한 분석 플랫폼 시스템을 구성 하는 데 필요한 작업에 대 한 검사 목록을 제공 합니다. 어플라이언스를 사용 하려면 먼저 이러한 구성 작업은 필요 합니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="BeforeTasks"></a>시작하기 전 주의 사항  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
   
 1.  어플라이언스에는 데이터 센터에 설치 하 고 전원이 켜져 해야 합니다.  
   

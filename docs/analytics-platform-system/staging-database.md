@@ -3,10 +3,10 @@ title: "병렬 데이터 웨어하우스에 대 한 준비 데이터베이스를
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6d0b2726-4772-4858-b700-885cc12219b2
 caps.latest.revision: "20"
-ms.openlocfilehash: f88e2c45aaed8b6f2b3bfb6fe610a0f228c4449e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 073dbb385d34d67b9274ac46828df5887abfe5a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staging-database"></a>준비 데이터베이스 
 준비 데이터베이스를 사용 하 여 로드 프로세스 중에 일시적으로 데이터를 저장 하는 SQL Server 병렬 데이터 웨어하우스 (PDW). 기본적으로 SQL Server PDW 대상 데이터베이스를 사용 하 여 테이블 조각화를 일으킬 수 있는 준비 데이터베이스로 합니다. 테이블 조각화를 줄이려면 사용자 정의 준비 데이터베이스를 만들 수 있습니다. 또는의 로드 오류는 롤백 문제가 없는 경우 임시 테이블을 건너뛰는 중 대상 테이블에 직접 로드 하 여 성능을 향상 하는 fastappend 로드 모드를 사용할 수 있습니다.  

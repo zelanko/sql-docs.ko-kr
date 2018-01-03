@@ -3,7 +3,7 @@ title: "ADO MD LevelName 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63d1709c67ebc0aadb88d879f01633e0fa9c4ede
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e2777d2c16723ee1055c90604842a2ca6e37c50
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="levelname-property-ado-md"></a>ADO MD LevelName 속성
 수준 이름을 나타냅니다는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md)합니다.  

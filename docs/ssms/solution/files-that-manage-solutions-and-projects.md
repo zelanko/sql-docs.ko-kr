@@ -3,7 +3,7 @@ title: "솔루션 및 프로젝트 관리 파일 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 246a04e3e09565b936df2a057f1d37344e8637a9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3eff63b8a66d99b06a63e3fc3e6d365300e67541
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>솔루션 및 프로젝트 관리 파일
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 고유한 파일 형식에 대해 설명합니다. 기본적으로 모든 솔루션과 해당 프로젝트는 \My Documents\SQL Server Management Studio Projects에서 생성됩니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/05/2017
  
 솔루션 탐색기에 표시되는 논리적 구조와 비슷한 디렉터리 구조를 갖고 있을 경우 프로젝트 및 솔루션 파일을 더 쉽게 찾고 팀의 다른 개발자와 공유할 수 있습니다.  
    
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [인코딩으로 파일 관리](../../ssms/solution/manage-files-with-encoding.md)  
 [기타 파일](../../ssms/solution/miscellaneous-files.md)  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  

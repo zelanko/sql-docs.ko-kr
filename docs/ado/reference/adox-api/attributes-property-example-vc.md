@@ -3,7 +3,7 @@ title: "특성 속성 예제 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 69ec8dcfecac32da4d963198298cf94f58edba1c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a24ab881fb2c4c86f92d25c0c697ae4d40aa6707
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-property-example-vc"></a>특성 속성 예제 (VC + +)
 이 예제에서는 [특성](../../../ado/reference/adox-api/attributes-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 로 설정 **adColNullable** 의 값을 설정할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 을 빈 문자열입니다. 이 경우 사용자는 데이터가 적용 되지 않은 레코드와 위치 데이터 알 수 없는 레코드 구별할 수 있습니다.  

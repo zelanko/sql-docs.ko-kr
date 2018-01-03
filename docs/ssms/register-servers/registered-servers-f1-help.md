@@ -3,7 +3,7 @@ title: "등록된 서버 F1 도움말 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd228d9af6de24bc8e57a1ae640af9fa0e613695
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4902f1e3a7d22fb7ff6b8df884daaa605ddc380b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registered-servers-f1-help"></a>등록된 서버 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 등록된 서버 구성 요소에 대한 F1 도움말을 제공합니다. 다양한 옵션에 대해 설명합니다.
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  이 페이지에 액세스하려면 등록된 서버에서 **등록된 서버** 도구 모음의 **Reporting Services** 를 클릭하고 **Reporting Services**와 같은 등록된 서버 그룹을 마우스 오른쪽 단추로 클릭한 다음 **새로 만들기**를 가리키고 **서버 등록**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **서버 유형**  
  등록된 서버에서 서버를 등록하는 경우 **서버 유형** 상자는 읽기 전용이며 **등록된 서버** 창에 표시된 서버 유형과 일치합니다. 다른 유형의 서버를 등록하려면 새 서버를 등록하기 전에 **등록된 서버** 도구 모음에서 원하는 서버를 클릭합니다.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/05/2017
   
  이 페이지에 액세스하려면 등록된 서버 도구 모음에서 **Analysis Services** 를 클릭하고 **Analysis Services**와 같은 등록된 서버 그룹을 마우스 오른쪽 단추로 클릭한 다음 **새로 만들기**를 가리키고 **서버 등록**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **서버 유형**  
  등록된 서버에서 서버를 등록하는 경우 **서버 유형** 상자는 읽기 전용이며 등록된 서버 창에 표시된 서버 유형과 일치합니다. 다른 유형의 서버를 등록하려면 새 서버를 등록하기 전에 **등록된 서버** 도구 모음에서 원하는 서버를 클릭합니다.  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 12/05/2017
   
  이 페이지에 액세스하려면 등록된 서버의 **등록된 서버** 도구 모음에서 **Integration Services** 를 클릭하고 등록된 서버 그룹을 마우스 오른쪽 단추로 클릭한 다음 **새로 만들기**를 가리키고 **서버 등록**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **서버 유형**  
  등록된 서버에서 서버를 등록하는 경우 **서버 유형** 상자는 읽기 전용이며 등록된 서버에 표시된 서버 유형과 일치합니다. 다른 유형의 서버를 등록하려면 새 서버를 등록하기 전에 **등록된 서버**, **데이터베이스 엔진**, **데이터베이스 엔진**, **Analysis Server** **SQL Server Compact** **등록된 서버** 도구 모음에서 **Integration Services** 를 클릭합니다.  
   

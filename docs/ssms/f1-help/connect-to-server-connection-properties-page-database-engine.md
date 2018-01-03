@@ -3,7 +3,7 @@ title: "서버에 연결(연결 속성 페이지) 데이터베이스 엔진 | Mi
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-f1
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a77352d39a6842399dbcae8b1db0c380b41b505b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c0230b21293b7866aaf3367d856fe773151c770c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>서버에 연결(연결 속성 페이지) 데이터베이스 엔진
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 인스턴스에 연결하거나 [!INCLUDE[ssDE](../../includes/ssde_md.md)]를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결 중인 경우에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]등록 시에만 이 대화 상자에 나타납니다.  
@@ -78,6 +78,6 @@ ms.lasthandoff: 12/05/2017
 **저장**  
 **등록된 서버**에 설정을 저장합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [연결 속성 대화 상자](../../ssms/f1-help/connection-properties-dialog-box.md)  
   

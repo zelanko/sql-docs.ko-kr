@@ -2,10 +2,10 @@
 title: "일반적인 문제를 SQL Server의 외부 스크립트 실행 | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e1dfc244fbe77d7938853cf6c1109e190c464436
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f515ba26c4eeae70eaf9244c0eaedaa954954b4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>일반적인 문제를 SQL Server의 외부 스크립트 실행
 
@@ -191,9 +191,9 @@ R 사용자 (Python에도 사용)에 대 한 Windows 그룹 R 서비스를 실�
 
 4. 일반적으로 서비스를 다시 시작 컴퓨터 학습 스크립트 실행 될 수 있도록 하며 문제를 해결 합니다. 경로 인수에 기록해 둡니다 다시 시작이 문제를 해결 하지 않는 경우는 **이진 경로** 속성을 선택한 다음을 수행 합니다.
 
-    a. 실행 프로그램의.config 파일을 검토 하 고 작업 디렉터리가 올바른지 확인 하십시오.
+    1. 실행 프로그램의.config 파일을 검토 하 고 작업 디렉터리가 올바른지 확인 하십시오.
 
-    b. 에 설명 된 대로 Windows 그룹 실행 패드에서 사용 되는 SQL Server 인스턴스에 연결할 수 있는지를 확인는 [이전 섹션](#bkmk_LaunchpadTS)합니다.
+    2. 에 설명 된 대로 Windows 그룹 실행 패드에서 사용 되는 SQL Server 인스턴스에 연결할 수 있는지를 확인는 [이전 섹션](#bkmk_LaunchpadTS)합니다.
 
     c. 서비스 속성을 변경 하는 경우에 실행 패드 서비스 다시 시작 합니다.
 

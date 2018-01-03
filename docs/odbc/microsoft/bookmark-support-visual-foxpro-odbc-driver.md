@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a804befe83d20585359e8780144dfbcb807052d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3591e0eecb8c97412f0fbc01c1b93a850f205299
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>책갈피 지원 (Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버는 간단한 책갈피를 지원 합니다. 호출 하는 경우 [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) 는 SQL_BOOKMARK_PERSISTENCE와 *정보 항목*, 반환 값은 SQL_BP_SCROLL 합니다.  

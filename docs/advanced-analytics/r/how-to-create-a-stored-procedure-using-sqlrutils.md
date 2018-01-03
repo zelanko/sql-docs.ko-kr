@@ -2,9 +2,11 @@
 title: "sqlrutils를 사용하여 저장 프로시저를 만드는 방법 | Microsoft 문서"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86e9655770c55f99514cd5a0a9b9910d5f78e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 475665c87f672868eaa6efeb2b5b6e927ed945af
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>저장 프로시저를 사용 하 여 sqlrutils 만들기
 
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/01/2017
 
 함수의 다른 모든 입력 매개 변수뿐만 아니라 데이터 프레임 내의 개체는 다음과 같은 R 데이터 형식이어야 합니다.
 - POSIXct
-- numeric
+- NUMERIC
 - character
 - integer
 - 논리
@@ -87,7 +89,7 @@ R 코드 그룹이 정리 되 고 단일 함수로 호출할 수 있습니다, �
 
 모든 입력 및 출력 매개 변수 준비 되 면 확인에 대 한 호출에서 `StoredProcedure` 생성자입니다.
 
-**사용법**
+**Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

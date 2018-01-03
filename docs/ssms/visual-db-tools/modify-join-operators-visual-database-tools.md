@@ -3,7 +3,7 @@ title: "조인 연산자 수정(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62763186119afe111ee2a191a577db19178be896
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b7b7ca1e7ef8cd5eca3909c6479d1edbb753dcf2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>조인 연산자 수정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 기본적으로 두 조인 열의 값을 일치시키는 등호(동등 조인)를 사용하여 테이블을 조인합니다. 필요한 경우 조인 열의 값을 비교하는 데 사용되는 연산자를 변경할 수 있습니다.  

@@ -3,7 +3,7 @@ title: "매개 변수 (Visual c + + 구문 있는 인덱스 #import) | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed8959a3e067dbe387409e27066f10eb86780027
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6b884f466a9394a4f835f997bb4dae453e9c623e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>매개 변수 (Visual c + + 구문 인덱스 #import 사용)
 ## <a name="methods"></a>메서드  

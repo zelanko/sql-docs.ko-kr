@@ -3,7 +3,7 @@ title: "쿼리 결과 정렬 및 그룹화(Visual Database Tools) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0977a1822b0dc2eec81254e3cc09f103640f5de6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22bb1cb3000fc6c97d168731c7c3085d994f55f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>쿼리 결과 정렬 및 그룹화(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 결과의 각 결과 행이 원본 데이터의 전체 행 그룹에 대응하는 쿼리 결과를 만들 수 있습니다.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 [출력 열 다시 정렬&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/reorder-output-columns-visual-database-tools.md)  
 현재 정렬 설정을 변경하는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 [쿼리 결과 요약&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 쿼리 결과 요약에 대해 설명하는 항목의 링크를 제공합니다.  
   

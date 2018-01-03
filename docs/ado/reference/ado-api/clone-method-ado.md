@@ -3,7 +3,7 @@ title: "Clone 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34f8e0161fa85ec497ec6a1e6b414691161ff7a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0fa4429b66b8a43bf2eecccca1fbc94597f07a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clone-method-ado"></a>Clone 메서드 (ADO)
 복제를 만들어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기존 개체 **레코드 집합** 개체입니다. 필요에 따라 읽기 전용 복제 되도록 지정 합니다.  
@@ -74,17 +74,17 @@ rsNew.Filter = rsOriginal.Filter
   
 |이벤트|복제본에서 트리거되며?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|아니요|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|아니요|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|아니요|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|아니오|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|아니오|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|아니오|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|예|  
-|[두](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니요|  
+|[두](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니오|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|예|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|아니요|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|아니오|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|예|  
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|예|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|아니요|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니요|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|아니오|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니오|  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

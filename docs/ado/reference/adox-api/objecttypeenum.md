@@ -3,7 +3,7 @@ title: ObjectTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a320f3471c3ba7db9bd51225d9237ae0d29e085
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b4907a7ea076a38c4f0832cf5e33b1cbcae57f15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 사용 권한 또는 소유권을 설정 하는 데이터베이스 개체의 유형을 지정 합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |**adPermObjDatabase**|3|개체는 데이터베이스입니다.|  
 |**adPermObjProcedure**|4|개체는 프로시저입니다.|  
 |**adPermObjProviderSpecific**|-1|개체는 공급자에 의해 정의 된 형식입니다. 경우 오류가 발생 합니다는 *ObjectType* 매개 변수는 **adPermObjProviderSpecific** 및 *ObjectTypeId* 제공 되지 않았습니다.|  
-|**adPermObjTable**|1.|개체는 테이블입니다.|  
+|**adPermObjTable**|1|개체는 테이블입니다.|  
 |**adPermObjView**|5|뷰는 개체가입니다.|  
   
 ## <a name="applies-to"></a>적용 대상  

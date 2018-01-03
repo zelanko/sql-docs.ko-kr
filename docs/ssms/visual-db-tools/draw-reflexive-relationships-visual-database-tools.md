@@ -3,7 +3,7 @@ title: "반사 관계 그리기(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56b5d0c6558b802d595eee6cb6e3a2e0acabcbec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a69c7bc560b19d21e2b50bf8462e72c94e6c0531
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>반사 관계 그리기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 반사 관계를 만들면 테이블에 있는 하나 이상의 열을 동일한 테이블에 있는 하나 이상의 다른 열에 연결할 수 있습니다. 예를 들어, `employee` 테이블에 `emp_id` 열과 `mgr_id` 열이 있다고 가정합니다. 각 관리자는 회사의 직원이기도 하므로 테이블 내에서 관계 선을 그려 이러한 두 열을 연결합니다. 이와 같이 관계를 설정하면 테이블에 추가되는 각 관리자 ID가 기존의 직원 ID와 일치하도록 만들 수 있습니다.  

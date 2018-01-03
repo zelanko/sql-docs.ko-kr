@@ -3,7 +3,7 @@ title: "입력 속성 예제 (속성) (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ed5cb366292f87e294576ec880947888631e7a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca949b82660a87d3688bfc18e54fcb61a78b2b14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-example-property-vb"></a>형식 속성 예제 (속성) (VB)
 이 예제에서는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성입니다. 모델의 이름 및 컬렉션의 형식과 같은 나열 하기 위한 유틸리티입니다 [속성](../../../ado/reference/ado-api/properties-collection-ado.md), [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등입니다.  

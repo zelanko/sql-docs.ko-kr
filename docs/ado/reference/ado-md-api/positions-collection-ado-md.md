@@ -3,7 +3,7 @@ title: "ADO MD 컬렉션 배치 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e812608f75e885ce933c0aaf252b50e1c9735dcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0829260afe4da88c0cb974fb910de36510cb5945
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="positions-collection-ado-md"></a>ADO MD 위치 컬렉션
 포함 된 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 축에서 한 지점을 정의 하는 개체입니다.  

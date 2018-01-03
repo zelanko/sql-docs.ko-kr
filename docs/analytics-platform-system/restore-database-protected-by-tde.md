@@ -3,10 +3,10 @@ title: "병렬 데이터 웨어하우스에서 TDE로 보호 되는 데이터베
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
 caps.latest.revision: "4"
-ms.openlocfilehash: 31f81447bd4fdaf5a2528f5828cc3d70618240c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5df3843a3e329901f8f77b65e5f6d4ff69cf6dbf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restore-a-database-protected-by-tde"></a>TDE로 보호 되는 데이터베이스를 복원 합니다.
 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다.  

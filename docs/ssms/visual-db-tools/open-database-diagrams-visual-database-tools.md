@@ -3,7 +3,7 @@ title: "데이터베이스 다이어그램 열기(Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56181f69c637a1368d25e633cbd2e847f89beac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ace503d33170b10379ccbdab94b9860e2689946
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 열기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램을 열어서 다이어그램의 구조를 보거나 편집할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > 다이어그램의 소유자나 데이터베이스에 대한 db_owner 역할이 부여된 멤버만 다이어그램을 열 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   

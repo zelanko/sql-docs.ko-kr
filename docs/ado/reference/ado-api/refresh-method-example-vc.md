@@ -3,7 +3,7 @@ title: "메서드 예제 (VC + +)를 새로 고침 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61dd571d77fc30614a157ef96d986c9408b197ce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e8fb146b71124e65ca66b92ceb8aef525240742
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-method-example-vc"></a>새로 메서드 예제 (VC + +)
 사용 하 여 보여 주는이 예제는 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 를 새로 고치려면 메서드는 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 저장된 프로시저에 대 한 컬렉션 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  

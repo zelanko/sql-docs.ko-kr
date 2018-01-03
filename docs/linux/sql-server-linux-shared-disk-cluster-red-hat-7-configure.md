@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: d5a621f6bcd1605b7f48ada14607b3e55ef6d6de
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/01/2017
 
 다음 섹션에서는 장애 조치 클러스터 솔루션을 설정 하는 단계를 안내 합니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 아래 종단 간 시나리오를 완료 하려면 두 노드 클러스터와 NFS 서버를 구성 하려면 다른 서버를 배포 하려면 두 컴퓨터 해야 합니다. 아래 단계 이러한 서버는 구성 하는 방법에 대해 간략하게 설명 합니다.
 
@@ -134,16 +134,16 @@ NFS 서버에서 다음을 수행 합니다.
 1. 설정 및 시작`rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
 1. 설정 및 시작`nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 원하는 각 공유에 대 한 1 줄이 필요 합니다. 예를 들어 
+1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 원하는 각 공유에 대 한 1 줄이 필요 합니다. 예를 들어 다음과 같이 사용할 수 있습니다. 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

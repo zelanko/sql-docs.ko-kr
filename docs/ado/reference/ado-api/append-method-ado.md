@@ -3,7 +3,7 @@ title: "Append 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 87c05e88325d3e00061ee57af80be65d9a7508ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0c0c887da52e8c91caeab582c2b1973b491e81d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-ado"></a>Append 메서드 (ADO)
 컬렉션에 개체를 추가합니다. 컬렉션의 경우 [필드](../../../ado/reference/ado-api/fields-collection-ado.md), 새 [필드](../../../ado/reference/ado-api/field-object.md) 컬렉션에 추가 하기 전에 개체를 만들 수 있습니다.  

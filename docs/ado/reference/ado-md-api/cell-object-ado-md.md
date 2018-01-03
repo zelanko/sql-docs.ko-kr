@@ -3,7 +3,7 @@ title: "ADO MD 개체 셀 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e35b30a2474f43ee1d46e23ae4a4323cca47f16b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48b3cf06a7c11e29e87e462b037053906ff10d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cell-object-ado-md"></a>ADO MD cell 개체
 셀 집합에 포함 된 축 좌표의 교집합에서 데이터를 나타냅니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  **속성** 컬렉션 공급자를 제공 하는 속성을 포함 합니다. 다음 표에서 사용할 수 있는 속성을 나열 합니다. 실제 속성 목록은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록은 대 한 공급자에 대 한 설명서를 참조 하십시오.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |BackColor|셀을 표시할 때 사용 되는 배경색입니다.|  
 |FontFlags|글꼴 효과 자세하게 비트 마스크입니다.|  

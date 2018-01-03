@@ -3,7 +3,7 @@ title: "함께 사용할 수 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4b94b5bf6c47fa824e7ff5f542d749b509376376
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9d47fdb7a2e1ba604ddae22da0fcc823c458160
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordopenoptionsenum"></a>함께 사용할 수
 열기에 대 한 옵션을 지정 된 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다. 사용 하 여 이러한 값을 결합할 수 있습니다 또는 합니다.  

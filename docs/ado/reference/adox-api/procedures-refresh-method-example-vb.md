@@ -3,7 +3,7 @@ title: "프로시저 메서드 예제 (VB) 새로 고침 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 888f0a69ddcd49efad660dc86e60bc53a3862d85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8844e9a9dc12477e1cedcc5f257fcd26545c960
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedures-refresh-method-example-vb"></a>프로시저는 메서드 예제를 (VB)를 새로 고칩니다.
 다음 코드에서는 새로 고치는 방법을 보여 줍니다.는 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 하기 전에 반드시 지정 해야 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 에서 개체는 **카탈로그** 액세스할 수 있습니다.  

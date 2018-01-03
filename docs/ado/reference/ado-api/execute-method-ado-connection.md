@@ -3,7 +3,7 @@ title: "Execute 메서드 (ADO 연결) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b6f8e6c980d8263a5a7076603f447ecc8aa33e00
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 071e752063020ace305371f814f1b78224dbb9a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-method-ado-connection"></a>Execute 메서드 (ADO 연결)
 지정 된 쿼리, SQL 문, 저장된 프로시저 또는 공급자 특정 텍스트를 실행합니다.  

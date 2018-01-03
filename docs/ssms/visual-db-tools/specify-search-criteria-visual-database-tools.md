@@ -3,7 +3,7 @@ title: "검색 조건 지정(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 617b996bbd6142dd14f5307ae39f13cc058a6c53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44e732e599553a3f7adcd2abee8ea6a209aa42cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 검색 기준을 사용하여 쿼리가 반환하는 행의 수를 제한할 수 있습니다.  
@@ -80,7 +80,7 @@ AND 및 OR 연산자를 사용하는 데 필요한 기본 개념을 설명합니
 [하위 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-subqueries-visual-database-tools.md)  
 하위 쿼리 또는 중첩된 쿼리를 만드는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 가장 일반적인 쿼리 태스크를 수행하는 단계와 관련된 항목의 링크를 제공합니다.  
   

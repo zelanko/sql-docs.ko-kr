@@ -2,12 +2,14 @@
 title: "5 단계: 학습 및 T-SQL을 사용 하 여 Python 모델을 저장할 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: python-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: bcad930d7d2a759e66adf1309eba6af144010c82
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 66a72f22e91cf1a1e4f4ec27279f7a7249e7571b
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>5 단계: 학습 및 T-SQL을 사용 하 여 Python 모델 저장
 
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/01/2017
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    데이터를 처리 하 고 모델을 맞출 분 정도 걸릴 수 있습니다. Python의 파이프 될 메시지 **stdout** 스트림에 표시 되는 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 예를 들어
+    데이터를 처리 하 고 모델을 맞출 분 정도 걸릴 수 있습니다. Python의 파이프 될 메시지 **stdout** 스트림에 표시 되는 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
     *외부 스크립트의 STDOUT 메시지:*
   *C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
@@ -187,7 +189,7 @@ ms.lasthandoff: 12/01/2017
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    데이터를 처리 하 고 모델을 맞출 시간이 걸릴 수 있습니다. Python의 파이프 될 메시지 **stdout** 스트림에 표시 되는 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 예를 들어
+    데이터를 처리 하 고 모델을 맞출 시간이 걸릴 수 있습니다. Python의 파이프 될 메시지 **stdout** 스트림에 표시 되는 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
     *외부 스크립트의 STDOUT 메시지:*
   *C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*

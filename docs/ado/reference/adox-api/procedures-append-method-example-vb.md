@@ -3,7 +3,7 @@ title: "메서드 예제 (VB)를 추가 하는 프로시저 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6558c9bf192bdc79edcf867fcdc1f010a0a31a7c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b5abab2f572c3e05f3d7221ee1aaf2f5a64a199
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedures-append-method-example-vb"></a>메서드 예제 (VB)를 추가 하는 절차
 다음 코드에 사용 하는 방법을 보여 줍니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션 [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) 메서드를 기본 데이터 원본에 새 프로시저를 만듭니다.  

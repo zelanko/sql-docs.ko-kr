@@ -3,7 +3,7 @@ title: "테이블 추가 대화 상자(데이터베이스 디자이너)(Visual D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8feca58b1bbf76906ffba0e8855ec572302fde46
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1c2019c038704b47f050980016c23bc27c213018
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>테이블 추가 대화 상자(데이터베이스 디자이너)(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 데이터베이스 디자이너에서 테이블을 추가할 수 있습니다.  
@@ -45,6 +45,6 @@ ms.lasthandoff: 12/05/2017
 **닫기**  
 테이블을 계속 추가하지 않고 대화 상자를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [다이어그램에 테이블 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   

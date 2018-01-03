@@ -3,7 +3,7 @@ title: "사용 권한 및 Visual Database Tools(Visual Database Tools) | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ceb8a15b4f480c2f2a075928787d86803f567187
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8b4c7a9678f0ecf1acf5169e50012ec865ba92ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>사용 권한 및 Visual Database Tools(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 사용자가 데이터 원본 개체에 액세스하는 데 필요한 사용 권한은 Visual Database Tools가 아니라 데이터 원본에 부여됩니다. 데이터 원본 개체에 부여된 액세스 권한은 설치 환경의 보안 정책을 통해 제어됩니다. 특정 데이터베이스 개체에 액세스할 수 있는 권한이 없는 경우 데이터베이스 관리자에게 문의하십시오.  

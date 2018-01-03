@@ -3,7 +3,7 @@ title: "수동으로 자체 조인 만들기(Visual Database Tools) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1b1d10f031ba4f794e2590dee5561deb1570ed9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4560bbd65e5bbd5ed6ff3751ea27e4b6259ad348
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>수동으로 자체 조인 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스에서 테이블에 반사 관계가 없는 경우에도 테이블을 자체 조인할 수 있습니다. 예를 들어, 자체 조인을 사용하여 같은 도시에 살고 있는 만든 이 쌍을 찾을 수 있습니다.  

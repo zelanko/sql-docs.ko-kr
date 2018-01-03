@@ -3,7 +3,7 @@ title: "카탈로그 ActiveConnection 속성 예제 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 967249a588c89ce3a385fc6692a1cf99b2d8d34c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5be09d926019d43bede94f71e19792aee73bb614
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>카탈로그 ActiveConnection 속성 예제 (VC + +)
 설정의 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성 유효한 열린 연결을 "열립니다" 카탈로그입니다. 열려 있는 카탈로그에서 해당 카탈로그에 포함 된 스키마 개체를 액세스할 수 있습니다.  

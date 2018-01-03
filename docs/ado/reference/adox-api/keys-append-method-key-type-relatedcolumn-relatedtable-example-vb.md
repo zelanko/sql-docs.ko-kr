@@ -3,7 +3,7 @@ title: "테이블 예제 (VB) 간에 새 외래 키 관계 만들기 | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 81f1326ea6125468f7e236b555fe882a361ac6f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 20b9ad65e6d9f4352db96848e8f096710fcf2db2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>키 추가 방법, 키 형식, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)
 다음 코드에 라는 두 개의 기존 테이블 간에 새 외래 키 관계를 만드는 방법을 보여 줍니다 **고객** 및 **Orders**합니다.  

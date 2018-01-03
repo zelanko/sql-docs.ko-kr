@@ -3,7 +3,7 @@ title: "데이터베이스 다이어그램 작업(Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ab3f8d06ac812b63c86e763ab1f9dd077c35f4fb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 19146185e1f01352f7be33fed099163dfa36667c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 작업(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 디자이너를 사용하여 데이터베이스에 대한 시각적인 다이어그램을 만들 수 있습니다. 다음은 디자이너를 사용하여 데이터베이스 다이어그램 작업을 수행하는 기본적인 내용을 다루는 항목입니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
 [다이어그램 속성 표시&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md)  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 [데이터베이스 다이어그램에서 테이블 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
 [다이어그램 레이아웃 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  

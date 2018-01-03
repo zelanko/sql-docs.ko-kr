@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05e115df47cb916bceafab871d475e98d5074b00
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c159bfdc9e6c7c9e6cb50a8197110391723c6a62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>우편물 레이블 Visual FoxPro 데이터를 사용 하 여 Microsoft Word에서 만들기
 Windows 95 또는 Windows 98 문서에 대 한 Microsoft Word에서 Visual FoxPro 데이터를 사용할 수 있습니다. 예를 들어 Visual FoxPro 테이블에 저장 된 고객 정보에서 우편물 레이블을 만들려고 할 수 있습니다.  

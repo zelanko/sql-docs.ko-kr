@@ -3,7 +3,7 @@ title: "작업 단계 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 74a603626ff9e2c076abb09eb27ac2416a525b01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6db3f3c828aa0841372bdc8bc8d493235d0bccb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 작업 단계는 데이터베이스나 서버에서 작업이 수행하는 동작입니다. 모든 작업에는 작업 단계가 하나 이상 있어야 합니다. 작업 단계가 될 수 있는 항목은 다음과 같습니다.  
@@ -204,7 +204,7 @@ SSIS 카탈로그에 패키지를 배포하고 패키지 원본으로 **SSIS 카
   
 |||  
 |-|-|  
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |실행 프로그램으로 작업 단계를 만드는 방법에 대해 설명합니다.|[CmdExec 작업 단계 만들기](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 사용 권한을 다시 설정하는 방법에 대해 설명합니다.|[SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |[!INCLUDE[tsql](../../includes/tsql_md.md)] 작업 단계를 만드는 방법에 대해 설명합니다.|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  

@@ -3,7 +3,7 @@ title: "다이어그램 창(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 572d4a03893a080c6e2e97a882965c160574cfba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e339c6f51a7a6baf20ba1d7264c17a339722e466
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagram-pane-visual-database-tools"></a>다이어그램 창(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다이어그램 창은 데이터 연결에서 선택한 테이블 또는 테이블 반환 개체를 그래픽으로 표시합니다. 또한 이들 사이의 조인 관계도 보여 줍니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 각 테이블 또는 테이블 반환 개체는 다이어그램 창에서 별도의 창으로 나타납니다. 각 사각형의 제목 표시줄에 있는 아이콘은 다음 표에서 설명하는 바와 같이 사각형이 나타내는 개체 형식을 보여 줍니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **테이블**  
 다이어그램 창에 추가할 수 있는 테이블을 나열합니다. 테이블을 추가하려면 테이블을 선택하고 **추가**를 클릭합니다. 여러 테이블을 한번에 추가하려면 원하는 테이블을 모두 선택하고 **추가**를 클릭합니다.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
 |아이콘|개체 유형|  
 |--------|---------------|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools 아이콘")|테이블|  
+|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools 아이콘")|Table|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi2.gif "Visual Database Tools 아이콘")|쿼리 또는 뷰|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi3.gif "Visual Database Tools 아이콘")|연결된 테이블|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dvudficon.gif "Visual Database Tools 아이콘")|사용자 정의 함수|  

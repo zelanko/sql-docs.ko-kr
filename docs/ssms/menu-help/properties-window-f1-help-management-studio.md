@@ -3,7 +3,7 @@ title: "속성 창 F1 도움말(Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -30,18 +30,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2c2c42f9a4e9690d9c9229ec7020e5e94c130ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e53a9ff4593a24820c6ff8f4ab0cb1540ba02a95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **속성** 창을 사용하여 선택한 요소의 속성을 확인할 수 있습니다. 또한 **속성** 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. **속성** 창은 **보기** 메뉴에서 **속성** 창을 클릭하여 사용할 수 있습니다.  
   
 **속성** 창에는 특정 속성의 필요 여부에 따라 다른 유형의 편집 필드가 표시됩니다. 회색으로 표시된 속성은 읽기 전용입니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **개체 이름**  
 현재 선택한 개체가 나열됩니다. 활성 편집기 또는 디자이너의 개체만 표시됩니다.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 **사전순**  
 선택한 개체에 대한 모든 디자인 타임 속성과 이벤트를 사전순으로 정렬합니다.  
   
-**속성**  
+**Properties**  
 개체에 대한 속성을 표시합니다.  
   
 **설명 창**  

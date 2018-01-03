@@ -5,7 +5,7 @@ ms.date: 10/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc543e392818c2fa8ceea1c55e7a065df603b02d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-data-migration-assistant"></a>데이터 마이그레이션 길잡이 개요
 
@@ -87,7 +87,7 @@ DMA 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 하�
 
 DMA를 설치 하려면 최신 버전의 도구를 다운로드는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53595), 다음 실행 하 고는 **DataMigrationAssistant.msi** 파일입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [SQL Server 마이그레이션 평가](../dma/dma-assesssqlonprem.md)
 

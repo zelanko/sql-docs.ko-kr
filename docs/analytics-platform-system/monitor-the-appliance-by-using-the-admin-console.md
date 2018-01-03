@@ -3,10 +3,10 @@ title: "관리 콘솔 (분석 플랫폼 시스템)를 사용 하 여 어플라�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
 caps.latest.revision: "26"
-ms.openlocfilehash: c9a2d9e7191a1f362dfc998254f69a2a71e32aac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>관리 콘솔을 사용 하 여 어플라이언스에 모니터
 관리 콘솔 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 SQL Server PDW 웹 응용 프로그램은 합니다. 사용자가 Internet Explorer를 통해 관리 콘솔에 연결 합니다.  
@@ -112,7 +112,7 @@ HDInsight 저장소 사용을 요약합니다.
 |-|-|  
 |**정보 유형**|**관리 콘솔에 액세스 하는 방법**|  
 |어플라이언스의 전체 상태|클릭 **기기 상태** 위쪽 메뉴에서 또는 **홈**합니다.|  
-|경고|클릭 **경고**합니다. 자세한 내용은 참조 [관리 콘솔 경고 이해 &#40; 분석 플랫폼 시스템 &#41; ](understanding-admin-console-alerts.md).|  
+|,|클릭 **경고**합니다. 자세한 내용은 참조 [관리 콘솔 경고 이해 &#40; 분석 플랫폼 시스템 &#41; ](understanding-admin-console-alerts.md).|  
 |어플라이언스 구성 요소 및 해당 상태|클릭 **기기 상태** 위쪽 메뉴에서 또는 **홈**합니다.|  
 |모니터 요청 (쿼리, 로드, 백업 및 복원 포함)|클릭 **세션** 현재 활성 또는 최근에 사용한 세션을 볼 수 있습니다.<br /><br />클릭 **쿼리** 현재 활성 또는 최근 쿼리를 볼 수 있습니다. 쿼리에 대 한 표시 되는 정보에 로드, 백업 및 복원에 포함 됩니다.<br /><br />클릭 **잠금** 활성 잠금 볼 수 있습니다.|  
 |부하, 백업 및 복원에 대 한 추가 정보를 모니터링 합니다.|클릭 **로드** 또는 **백업/복원**합니다.|  

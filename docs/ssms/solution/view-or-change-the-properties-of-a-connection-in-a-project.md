@@ -3,7 +3,7 @@ title: "프로젝트의 연결 속성 보기 및 변경 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04b64f2186b1be8f1909d72c10732c8b33fa2cb5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d2fbf26947bbf50bb16fc78dbe6af61e45f4c202
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>프로젝트의 연결 속성 보기 및 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 프로젝트에 저장된 연결의 속성을 볼 수 있으며 일부 속성은 수정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  속성 창에서 연결 속성을 확인합니다. **실행 제한 시간**, **데이터베이스**및 **로그인 제한 시간** 속성을 변경할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
 [쿼리를 프로젝트의 연결 정보로 연결](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)  
 [쿼리와 연관된 연결 변경](../../ssms/solution/change-the-connection-associated-with-a-query.md)  

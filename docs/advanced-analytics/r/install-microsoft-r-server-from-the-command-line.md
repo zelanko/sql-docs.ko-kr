@@ -2,11 +2,11 @@
 title: "명령줄에서 컴퓨터 학습 Server (독립 실행형) 또는 Microsoft R Server (독립 실행형) 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c10594fdecd48782a80b5d609bb21c6a937f8863
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>명령줄에서 컴퓨터 학습 Server (독립 실행형) 또는 Microsoft R Server (독립 실행형) 설치
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/09/2017
 
 **자동** 설치의 경우 동일한 인수를 제공하고 **/q** 스위치를 추가합니다. 어떠한 프롬프트도 제공 되며 상호 작용이 필요 합니다. 그러나 모든 필수 인수를 생략 하면 설치가 실패 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 SQL Server의 명령줄 설치를 수행 하 고 스크립팅 인수를 잘 알고 있어야 하는 방법을 알아야 합니다.
 

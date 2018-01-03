@@ -3,7 +3,7 @@ title: "데이터베이스의 단계적 개발 문제(Visual Database Tools) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f9e9985d441c4fdc27c371717870fd57f2a2156
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 28810b25698a010037707119cbc9d29350dd0933
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>데이터베이스의 단계적 개발 문제(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 배포된 데이터베이스의 구조를 변경하는 경우 변경 내용이 기존 데이터 및 데이터베이스 구조와 호환되도록 각별히 주의해야 합니다. 다음과 같이 수정한 경우 특별한 단계를 수행해야 할 수도 있습니다.  

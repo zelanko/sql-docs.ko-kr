@@ -2,11 +2,11 @@
 title: "인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/30/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 065f66ca4d1e94e021b1d65b379c4a79302b1066
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 93adacb061b3bf4c77606294ae8341144eaf24c9
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치
 
@@ -193,7 +193,7 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 
 사용자 환경에 따라 다음 필수 구성 요소에 대한 설치 관리자의 로컬 복사본을 만들어야 할 수 있습니다.
 
-구성 요소  |버전
+구성 요소  |버전 옵션
 ---------|---------
 [SQL Server 2016용 Microsoft AS OLE DB 공급자](https://go.microsoft.com/fwlink/?linkid=834405)     |  13.0.1601.5
 [Microsoft .NET Core](https://go.microsoft.com/fwlink/?linkid=834319)     | 1.0.1
@@ -262,7 +262,7 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 > [!NOTE]
 > SQL Server 설치 프로그램에서 매개 변수를 사용 하 여 실행 패드에 대 한 서비스 계정을 변경할 수 없습니다. 기본 서비스 계정을 사용 하 여 설치 하 고 다음 SQL Server 구성 관리자를 사용 하 여 서비스 계정을 수정 하는 것이 좋습니다. 이렇게 하면 실행 패드 서비스를 다시 시작 해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [Microsoft R Server 설치](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 

@@ -3,7 +3,7 @@ title: "유효성 검사 경고 대화 상자(Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed5e7c20f59ffd598cd6de1aa8431e1498e62b1e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b5aaee99afbfe7eb4a5bb3ad3fd3f16ffd40d1b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>유효성 검사 경고 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자는 잠재적인 손상의 위험이 있는 수정 내용을 저장하려는 경우나 데이터베이스 커밋 작업이 실패할 가능성이 있는 경우에 나타납니다. 이 대화 상자에는 위험 요소가 잠재된 사항이 무엇인지 또는 커밋 작업이 실패하는 이유가 무엇인지에 대한 정보가 표시됩니다. 이러한 정보를 확인하고 그 결과에 따라 수정 작업을 계속 진행하거나 작업을 취소할 수 있습니다.  
@@ -48,17 +48,17 @@ ms.lasthandoff: 12/05/2017
   
 -   수정 결과로 인해 한 테이블 내의 열에 대해 ANSI_NULLS나 ANSI_PADDING 또는 이 둘 모두에 대해 중요한 사항이 설정되는 경우  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **예**  
 작업을 계속하여 변경 스크립트를 만들거나 수정 사항을 데이터베이스에 전송합니다. 데이터베이스를 수정하는 데 필요한 권한이 없거나, 수정 결과로 인해 900바이트보다 큰 인덱스가 생성되거나, 수정 결과로 인해 잘못된 형식의 계산 열, DEFAULT 제약 조건 또는 CHECK 제약 조건이 발생하는 경우에는 커밋 작업이 실패할 수 있습니다.  
   
-**아니오**  
+**아니요**  
 저장 동작을 취소합니다.  
   
 **텍스트 파일 저장**  
 **다른 이름으로 저장** 대화 상자가 표시됩니다. 이 대화 상자를 사용하면 경고 목록이 포함된 텍스트 파일의 위치를 지정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [테이블 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

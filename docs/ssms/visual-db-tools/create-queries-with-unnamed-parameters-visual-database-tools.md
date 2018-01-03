@@ -3,7 +3,7 @@ title: "명명되지 않은 매개 변수를 사용하여 쿼리 만들기(Visua
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8875fccaba240797d2a5467a6cd863e02efd1cbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: abd2c8d121a7f3e536c30324c1f4f83ae323795e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-queries-with-unnamed-parameters-visual-database-tools"></a>명명되지 않은 매개 변수를 사용하여 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 리터럴 값에 대한 자리 표시자로 물음표(?)를 지정하면 명명되지 않은 매개 변수를 사용하여 쿼리를 만들 수 있습니다. 쿼리 및 뷰 디자이너에서 이러한 매개 변수에 임시 이름이 지정됩니다. 쿼리에서 지정할 수 있는 명명되지 않은 매개 변수의 수에는 제한이 없습니다.  
@@ -39,6 +39,6 @@ ms.lasthandoff: 12/05/2017
   
     쿼리 및 뷰 디자이너에서는 "=" 연산자가 기본적으로 추가됩니다. 셀을 편집하여 이 연산자를 ">", "<" 또는 임의의 다른 SQL 비교 연산자로 바꿀 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [매개 변수를 사용하여 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
   

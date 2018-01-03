@@ -3,7 +3,7 @@ title: "다 대 다 관계 매핑(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8193108d39f2273134fc55b2c9c4bb13f692b66
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 284fa2533046bafeed2dc468f2299ecfb80c9f9e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>다 대 다 관계 매핑(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다 대 다 관계를 사용하면 한 테이블의 각 행을 다른 테이블의 여러 행에 연결하거나 그 반대로 행을 연결할 수 있습니다. 예를 들어, 각 작가를 해당 작가의 모든 저서에 연결하고 각 도서를 모든 해당 작가에 연결하도록 `authors` 테이블과 `titles` 테이블 사이에 다 대 다 관계를 만들 수 있습니다. 각 테이블에서 일 대 다 관계를 만드는 것만으로는 모든 도서가 한 명의 작가에게만 연결되거나 모든 작가가 한 권의 책만 쓴 것으로 잘못 표시될 수 있습니다.  
@@ -51,6 +51,6 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     > 데이터베이스 다이어그램에서 병합 테이블을 만들어도 관련 테이블의 데이터가 병합 테이블에 삽입되지는 않습니다. 테이블에 데이터를 삽입하는 방법에 대한 자세한 내용은 [결과 삽입 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

@@ -3,7 +3,7 @@ title: DataTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a50a4efc0c84e3d18fad287ba31a0ebaf0705dd0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70e44dc6ea6eb3622b43f241827ad5cae7a7df44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 데이터 형식을 지정 된 [필드](../../../ado/reference/ado-api/field-object.md), [매개 변수](../../../ado/reference/ado-api/parameter-object.md), 또는 [속성](../../../ado/reference/ado-api/property-object-ado.md)합니다. 해당 OLE DB 유형 표시기는 다음 표의 설명 열에 대 한 괄호 안에 표시 됩니다.  

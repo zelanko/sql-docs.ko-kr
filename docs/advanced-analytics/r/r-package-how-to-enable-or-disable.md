@@ -2,9 +2,11 @@
 title: "SQL Server에 대 한 R 패키지 관리를 사용할지 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59f7522a8065a733be49b24435563b1b033b1b8f
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 59ab247ebdb53dbd530b3becf6e90ef45bc3a503
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="enable-or-disable-r-package-management-for-sql-server"></a>SQL Server에 대 한 R 패키지 관리를 사용할지 설정 합니다.
 
@@ -97,6 +99,6 @@ ms.lasthandoff: 12/01/2017
 
     이 명령은 인스턴스에서 패키지 관리 기능을 제거 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [SQL Server에 대한 R 패키지 관리](r-package-management-for-sql-server-r-services.md)

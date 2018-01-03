@@ -3,10 +3,10 @@ title: "병렬 데이터 웨어하우스에 대 한 투명 한 데이터 암호�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,13 +15,13 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
 caps.latest.revision: "22"
-ms.openlocfilehash: b0544f5dee735b8444ce68d25e3be288be214202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transparent-data-encryption"></a>투명한 데이터 암호화
+# <a name="transparent-data-encryption"></a>Transparent Data Encryption
 보안 시스템 디자인, 중요한 자산 암호화 및 데이터베이스 서버에 대한 방화벽 구축과 같은 데이터베이스의 보안을 설정하기 위해 여러 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어(예: 드라이브 또는 백업 테이프)를 도난 당한 경우 악의적인 사용자가 데이터베이스를 복원하거나 연결하여 데이터를 찾아볼 수 있습니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  
   
 *투명 한 데이터 암호화* 실시간 I/O 암호화 및 데이터의 암호 해독을 수행 하는 (TDE) 및 특별 한 PDW 및 트랜잭션 로그 파일에 대 한 로그 파일입니다. 이 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. DEK는 SQL Server PDW의 master 데이터베이스에 저장 된 인증서를 사용 하 여 보호 되는 대칭 키입니다. TDE는 데이터 및 로그 파일을 의미하는 "유휴" 데이터를 보호하고 다양한 업계에서 확립된 법, 규정 및 지침에 부합하는 기능을 제공합니다. 이를 통해 소프트웨어 개발자는 AES 및 3DES 암호화 알고리즘을 사용하여 기존의 응용 프로그램을 변경하지 않고 데이터를 암호화할 수 있습니다.  
@@ -149,7 +149,7 @@ TDE와 관련 된 메타 데이터를 보려면 필요는 `CONTROL SERVER` 권�
   
 사용 하 여 데이터베이스 암호화 상태를 찾을 수는 **sys.dm_pdw_nodes_database_encryption_keys** 동적 관리 뷰. 자세한 내용은 참조는 *카탈로그 뷰 및 동적 관리 뷰* 이 항목의 앞부분에 나오는 섹션).  
   
-### <a name="restrictions"></a>제한 사항  
+### <a name="restrictions"></a>Restrictions  
 다음과 같은 작업 동안 허용 되지 않습니다는 `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, 또는 `ALTER DATABASE...SET ENCRYPTION` 문.  
   
 -   데이터베이스 삭제  

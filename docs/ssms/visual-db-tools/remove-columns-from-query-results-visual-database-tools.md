@@ -3,7 +3,7 @@ title: "쿼리 결과에서 열 제거(Visual Database Tools) | Microsoft 문서
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ade4d54d4e9e1ea791a7f0330d6bb6da091b6c19
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 92b4c394638b19addcbaf534400286494558c352
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>쿼리 결과에서 열 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 선택 쿼리에 사용 중인 열을 결과 집합에 표시하지 않으려는 경우 즉, 쿼리의 선택 목록에 포함하지 않으려는 경우 해당 열을 출력에서 제거할 수 있습니다. 쿼리의 출력에서 열을 제거한 후에도 이 열을 검색 조건에 사용하거나 정렬 필드로 사용할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)의 출력 목록에서 열을 제거합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리에 열 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  
 [쿼리에서 열 제거&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)  
 [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

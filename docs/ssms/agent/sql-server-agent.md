@@ -3,7 +3,7 @@ title: "SQL Server 에이전트 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1e818b754e994c3b6b585712092e5a473ed6e11b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f475fcb1a86f61f684edb65adf637e9234d0a494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/05/2017
   
 자세한 내용은 [일정을 만들고 작업에 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)을 참조하세요.  
   
-### <a name="alerts"></a>경고  
+### <a name="alerts"></a>,  
 *경고* 는 특정 이벤트에 대한 자동 응답입니다. 예를 들어 이벤트는 시작되는 작업 또는 특정 임계값에 도달한 시스템 리소스일 수 있습니다. 경고가 발생할 조건을 정의합니다.  
   
 경고는 다음 조건 중 하나에 대해 응답할 수 있습니다.  

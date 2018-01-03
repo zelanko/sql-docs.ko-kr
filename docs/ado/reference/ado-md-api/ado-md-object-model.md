@@ -3,7 +3,7 @@ title: "ADO MD 개체 모델 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4b205da2f8ee9366abee0dfc2657100ab6fa629c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e17fdaabf4d36aa5a2ff0ac1dcc1d682fec5857
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-object-model"></a>ADO MD 개체 모델
 이 항목에서는 개체를 표시 하 고 ADO MD. 관련 된 하는 방법을 설명합니다  

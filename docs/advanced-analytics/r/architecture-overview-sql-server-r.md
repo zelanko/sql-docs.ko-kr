@@ -2,9 +2,11 @@
 title: "아키텍처 개요(SQL Server R Services) | Microsoft 문서"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 037393dfd83c2576ed0783bfa582e96f2b74da9d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 445c28ab59dd3f66f46a0ad43aff40da5696ee0a
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server의 R에 대 한 아키텍처 개요
 

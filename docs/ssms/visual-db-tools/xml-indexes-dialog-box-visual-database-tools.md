@@ -3,7 +3,7 @@ title: "XML 인덱스 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1d2fc393ebd15e3c76dd17912e0e9f29c7a369a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2c44720dea321d4fee407bd33d6a41ad4cdcee5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **XML 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 XML 데이터 형식의 열에 대한 인덱스를 만들 수 있습니다. 각 XML 열에는 두 개 이상의 XML 인덱스가 있을 수 있지만 첫 번째 작성된 인덱스(기본 인덱스)가 나머지 인덱스(보조 인덱스)의 기준으로 사용됩니다. 기본 XML 인덱스를 삭제하면 보조 인덱스도 함께 삭제됩니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **선택한 XML 인덱스**  
 기존 XML 인덱스가 나열됩니다. 인덱스를 선택하면 오른쪽 표에 해당 속성이 표시됩니다. 목록이 비어 있는 경우 테이블에 정의된 항목이 없음을 의미합니다.  
   

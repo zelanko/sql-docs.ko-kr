@@ -3,7 +3,7 @@ title: "테이블 수동 조인(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f9fe3b4dd3fc65924ef308ca5ce817c9a008fc1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1223e0a42ed48773f2294a5ae58444e52fae2843
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>테이블 수동 조인(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리에 둘 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 데이터베이스에 저장된 테이블 관계 정보나 공용 데이터를 기반으로 테이블을 조인합니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)을 참조하세요. 하지만 쿼리 및 뷰 디자이너가 테이블을 자동으로 조인하지 않은 경우나 테이블간에 추가로 조인 조건을 만들려는 경우에는 테이블을 수동으로 조인하면 됩니다.  
@@ -48,6 +48,6 @@ ms.lasthandoff: 12/05/2017
   
 쿼리 및 뷰 디자이너는 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)의 SQL 문에 INNER JOIN 절을 추가합니다. 조인 형식을 외부 조인으로 변경할 수 있습니다. 자세한 내용은 [외부 조인 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-outer-joins-visual-database-tools.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   

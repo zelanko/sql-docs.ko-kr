@@ -2,11 +2,11 @@
 title: "컴퓨터 학습 서비스의 무인된 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c58bbb4a7277b37c9ef479b79ba4809a02218908
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fdd28279b99f0dd39a0b971412d1252feb978413
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>시스템 학습 services (In-database) 무인된 설치
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/09/2017
 
 **적용 대상: SQL Server 2017 기계 학습 Services (In-database) SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 + 기계 학습 사용할지 각 인스턴스에서 데이터베이스 엔진을 설치 해야 합니다.
 

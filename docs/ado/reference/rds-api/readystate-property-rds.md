@@ -1,11 +1,13 @@
 ---
 title: "ReadyState 속성 (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d5533fd471b6aee697825d2251c84adbcdfccfa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 52d32f6b2ba1e3a85b0d374a4d11b4e0bf3c742c
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="readystate-property-rds"></a>ReadyState 속성 (RDS)
 진행률을 나타냅니다는 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체에 데이터를 검색 하는 대로 해당 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  

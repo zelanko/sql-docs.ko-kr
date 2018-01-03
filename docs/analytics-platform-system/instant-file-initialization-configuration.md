@@ -3,10 +3,10 @@ title: "즉시 파일 초기화 (분석 플랫폼 시스템) 구성"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
 caps.latest.revision: "20"
-ms.openlocfilehash: af18d7da04c84f9cbc74b9b2974ef568098963ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b7dda4bb925e08f49409ea1950cfe3649b4db3e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="instant-file-initialization-configuration"></a>즉시 파일 초기화 구성
 즉시 파일 초기화는 보다 빠르게 실행 하는 데이터 파일 작업을 허용 하는 SQL Server 기능입니다. 즉시 파일 초기화를 설정 하려면 확인란을 선택 하면 SQL Server PDW의 성능이 향상 됩니다. 그러나이 작업은 보안상 위험 하기에 대 한 비즈니스, 하는 경우 다음 상자를 둡니다 선택 취소 되어 있음.  

@@ -3,7 +3,7 @@ title: "쿼리 결과 복사(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5bab1e49dc6e83401fec2ac6f0210f27801a7387
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 913fb6061bed6eaa47eff5f92d5d1c3064b1731f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-query-results-visual-database-tools"></a>쿼리 결과 복사(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **결과** 창에서 탭으로 구분된 텍스트로 결과 집합을 복사할 수 있습니다. 전체 결과 집합, 연속된 모든 숫자 또는 연속되지 않은 행이나 셀을 복사할 수 있습니다.  

@@ -3,7 +3,7 @@ title: "작업 단계 정보 보기 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 329d7dd7efdd2523b9a992c41654717c64d0d5f2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3a2ec721ed574f1268cea87e2599a93f7c7545aa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 작업 단계 속성 대화 상자에서 작업 단계의 세부 사항을 보는 방법에 대해 설명합니다. 또한 작업 단계 출력 보기에 대한 정보도 제공합니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
     [제한 사항](#Restrictions)  
   

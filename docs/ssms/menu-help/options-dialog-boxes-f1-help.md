@@ -3,7 +3,7 @@ title: "옵션 대화 상자 F1 도움말 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8af76afab17affc70b5d8ed6478be09cda02120
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bdf5e5b420a413c49d64743b8241e70810e9b965
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-dialog-boxes-f1-help"></a>옵션 대화 상자 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 **도구** 메뉴에서 **옵션**을 클릭하면 사용할 수 있는 대화 상자에 대한 F1 도움말을 제공합니다.  

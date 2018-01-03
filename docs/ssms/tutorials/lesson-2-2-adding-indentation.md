@@ -3,7 +3,7 @@ title: "들여쓰기 추가 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 21b8fbca046e733afd062b07e5316694cb0adc76
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5559f970627449d56863f4c9d933d5e6636f0bd2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-2---adding-indentation"></a>2-2단원 - 들여쓰기 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 편집기를 사용하여 한 단계로 여러 코드 섹션을 들여 쓸 수 있으며 들여쓰기 크기도 변경할 수 있습니다.  

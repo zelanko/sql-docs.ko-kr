@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, prerequisites
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8449ce51322ebc605bbfb8a5406e92489334dda
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc9be5bd8809f274d1f895952f2fd201a01a25a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>ADO 설명서를 사용 하기 위한 필수 구성 요소
 이 설명서를 사용 하려면 있어야, 여기에 최소한 경험을 대부분의 가이드의 예제는이 언어에 기록 되기 때문에 Microsoft Visual Basic로 응용 프로그램을 개발 합니다. Microsoft Visual c + +, Java, Visual Basic Scripting Edition (VBScript) 및 Microsoft JScript로 작성 된 몇 가지 예도 있습니다.  

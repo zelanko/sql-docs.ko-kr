@@ -3,7 +3,7 @@ title: "한 열에 여러 검색 조건 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7c369f2d9dd68a45e103dd891e7a04b6a13bae1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1d4495ef2355edcf37993f6fb566d762cd915032
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>한 열에 여러 검색 조건 지정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 동일한 데이터 열에 여러 개의 검색 조건을 적용해야 하는 경우가 있습니다. 예를 들면 다음과 같습니다.  

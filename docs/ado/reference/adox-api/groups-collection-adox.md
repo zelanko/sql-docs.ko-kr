@@ -3,7 +3,7 @@ title: "컬렉션 (ADOX) 그룹화 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2edcde5ebd3bcc21f105a6b1f6a6d2fce495350a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f41898c749bdbca30f02fd30b4720d93f54fbf9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="groups-collection-adox"></a>그룹 컬렉션 (ADOX)
 모든 포함 저장 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 카탈로그 또는 사용자의 개체입니다.  

@@ -3,10 +3,10 @@ title: "Configuration Manager (분석 플랫폼 시스템)를 시작 합니다."
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
 caps.latest.revision: "22"
-ms.openlocfilehash: 98ae90d198b4a1b68e1b72305721611a8efa30ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="launch-the-configuration-manager"></a>구성 관리자를 시작
 시작 하기 위한 지침을 제공 하는이 항목의 **Configuration Manager** 분석 플랫폼 시스템 어플라이언스에 대 한 합니다.  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 분석 플랫폼 시스템**Configuration Manager** 기기 도메인 관리자만 실행할 수 있습니다. 이 도구를 실행 하려면 기기 도메인 관리자에 대 한 암호가 필요 합니다. 참조 추가 APS 관리자 만들려고 [APS 도메인 관리자 &#40; 만들기 APS &#41; ](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>구성 관리자 도구를 시작 합니다.  

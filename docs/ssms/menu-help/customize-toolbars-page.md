@@ -3,7 +3,7 @@ title: "사용자 지정(도구 모음 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1be117c2fafffd2272f5af08c987c61e5d64b8e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a0fb95a5c9589b46e2f144362d7b667411965545
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-toolbars-page"></a>사용자 지정(도구 모음 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **도구 모음** 탭을 사용하여 도구 모음을 만들고 제거하며 다시 설정하고 해당 이름을 바꿀 수 있습니다. **도구** 메뉴에서 **사용자 지정** 을 클릭한 다음 **도구 모음**을 클릭하여 이 탭에 액세스할 수 있습니다.  

@@ -3,7 +3,7 @@ title: "Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provide
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a31421c2947f376b152826c87d2d01d1e0863da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider
 서비스 인터페이스 ADSI (Active Directory) 공급자 ADO를 ADSI 통해 유형이 다른 디렉터리 서비스에 연결할 수 있습니다. 그러면 ADO 응용 프로그램에서는 읽기 전용 액세스할 모든 LDAP 호환 디렉터리 서비스 및 Novell 디렉터리 서비스 외에 Microsoft Windows NT 4.0 및 Microsoft Windows 2000 디렉터리 서비스에 있습니다. ADO 응용 프로그램 원활 하 게 액세스할 수 없는 경우 다른 디렉터리에 새 공급자 주어진 액세스, 있도록 ADSI 자체 공급자 모델에 기반 합니다. ADSI 공급자는 자유 스레드 및 유니코드를 사용할 수 있습니다.  
@@ -72,13 +72,13 @@ ADSDSOObject
 |*특성*|쉼표로 구분 된 목록이 반환 될 특성을 나타냅니다.|  
 |*범위*|(선택 사항) A **문자열** 검색 범위를 지정 하는 합니다. 다음 중 하나일 수 있습니다.<br /><br /> 밑수가-기준 개체 (검색의 루트)를 검색 합니다.<br />-기준 개체를 검색 한 수준입니다.<br />-하위 트리-전체 하위 트리를 검색 합니다.|  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- 공급자도 지원 SQL SELECT 명령 텍스트에 대 한 합니다. 예를 들어  
+ 공급자도 지원 SQL SELECT 명령 텍스트에 대 한 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
@@ -122,13 +122,13 @@ objectClass='user' AND objectCategory='Person'"
   
 |메서드|사용 가능 여부|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니요|  
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|아니요|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니오|  
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|아니오|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니오|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니오|  
 |[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|  
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|  
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|  
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니오|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|  
 |[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
@@ -140,8 +140,8 @@ objectClass='user' AND objectCategory='Person'"
 |[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|  
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|  
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|아니요|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|아니오|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니오|  
   
  ADSI 및 공급자의 세부 사항에 대 한 자세한 내용은 Active Directory 서비스 인터페이스 설명서를 참조 하거나 ADSI 웹 페이지를 방문 하십시오.  
   

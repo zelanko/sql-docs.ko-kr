@@ -3,10 +3,10 @@ title: "DNS 전달자를 사용 하 여 비 어플라이언스 DNS 이름 (APS)�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
 caps.latest.revision: "21"
-ms.openlocfilehash: 6e91828bcc64a47d942959a2522af0e53041e027
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6538ec32f141592b6cf21a325b74f3e451e73092
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>비 어플라이언스 DNS 이름을 확인 하기 위해 DNS 전달자를 사용 합니다.
 Active Directory 도메인 서비스 노드에서 DNS 전달자를 구성할 수 있습니다 (***appliance_domain*-AD01** 및  ***appliance_domain*-AD02**) 분석 플랫폼 시스템 어플라이언스 스크립트와 소프트웨어 응용 프로그램 외부 서버에 액세스할 수 있도록 합니다.  

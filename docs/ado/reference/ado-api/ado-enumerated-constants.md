@@ -3,7 +3,7 @@ title: "ADO 열거형 상수의 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb606a366746b09d7ba6303b0cb11bb1b96f6164
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2bbbd8cdea692ed5ed6117ea2e3afc72b90c7b89
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-enumerated-constants"></a>ADO 열거 상수
 디버깅을 돕기 위해, ADO 열거 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADO의 릴리스에서 변경 될 수 있습니다. 코드는 실제 값이 아닌 각 열거 된 상수의 이름 뒤에 의존 해야 합니다.  

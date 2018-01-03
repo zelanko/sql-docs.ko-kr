@@ -1,10 +1,10 @@
 ---
 title: "컴퓨터 학습 서비스의 알려진 문제 | Microsoft Docs"
 ms.date: 11/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 62eeb13d172325d70d4efcbc014a3525fabf4136
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2eeadd5a11f3fd16282164ba6536417e7da515da
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
 
@@ -265,7 +265,7 @@ R에 문자열 데이터를 보낼 때 ASCII 표현으로 가능 하면 변환 �
 
 이 문제가 발생한 경우 `f` 의 정의를 `g`의 정의 내에 포함하여 문제를 해결할 수 있습니다. `g` 앞의 모든 곳에서 `f`를 정상적으로 호출합니다.
 
-예를 들어
+예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```r
 f <- function(x) { 2*x * 3 }
@@ -384,7 +384,7 @@ go
 SQLite ODBC 드라이버의 수정 버전 0.92는 RevoScaleR과 호환 되지 않습니다. 수정 버전 0.88 ~ 0.91 및 0.93 이상은 및 나중에 호환 가능한 것으로 알려져 있습니다.
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
 

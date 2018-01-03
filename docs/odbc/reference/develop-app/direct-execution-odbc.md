@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abce5a1c9f4fceb38420c15159cf89a2430025dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 058dada1c14b901b32f721bc2d42f3cc24434f07
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="direct-execution-odbc"></a>ODBC 직접 실행
 직접 실행은 문을 실행 하는 가장 간단한 방법은 합니다. 문이 실행을 위해 전송 되 면 데이터 원본 액세스 계획으로 컴파일합니다 하 고 해당 액세스 계획을 실행 합니다.  

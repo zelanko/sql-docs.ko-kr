@@ -3,10 +3,10 @@ title: "PDW (분석 플랫폼 시스템)에 대 한 SCOM 관리 팩 가져오기
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
 caps.latest.revision: "6"
-ms.openlocfilehash: 2766219fc98a1a3f0174b2c33846fcedb0b74022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 179395b7befdf934fcc44532944f4b535b9d3c5a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-the-scom-management-pack-for-pdw"></a>PDW에 대 한 SCOM 관리 팩 가져오기
 SQL Server PDW에 대 한 System Center Operations Manager (SCOM) 관리 팩을 가져오려면 다음이 단계를 수행 합니다. 관리 팩은 SCOM에서 SQL Server PDW 모니터링 해야 합니다.  

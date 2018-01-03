@@ -3,7 +3,7 @@ title: "쿼리 복사(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f6376ed021145556deb2985ca253f12b9a86bf6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: be5544426a41cefe54b345af67aef02bcf7810ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-queries-visual-database-tools"></a>쿼리 복사(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 본문을 새 쿼리로 복사하여 새로운 쿼리를 만들기 위한 기반으로 사용할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  마우스 오른쪽 단추를 클릭하고 바로 가기 메뉴에서 **붙여넣기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 이름 바꾸기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  
 [쿼리 결과 지우기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
 [쿼리 저장&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  

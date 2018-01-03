@@ -3,7 +3,7 @@ title: "집계 함수, CALC 함수 및 NEW 키워드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 284a672a725e5627d0b9be61c12f0c95d565ae09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aab522abece6300345819649380be206a277a456
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
 데이터 모양 지정 다음 기능을 지원 합니다. 작업을 수행할 열을 포함 하는 장에 할당 된 이름은 *장 별칭*합니다.  

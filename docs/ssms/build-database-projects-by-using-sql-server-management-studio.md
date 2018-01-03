@@ -3,7 +3,7 @@ title: "SQL Server Management Studio를 사용하여 데이터베이스 프로�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 00e88a87885a2c7d1e6aec7f82525b8cf540cc50
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e503d3f0effc561a8ed715ac9ff3bfb0277e2ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 스크립트 프로젝트는 데이터베이스와 관련되거나 데이터베이스의 일부인 스크립트, 연결 정보 및 템플릿으로 구성된 집합입니다. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 스크립트 프로젝트의 컨텍스트 내에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 데이터베이스를 관리하고 디자인할 수 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 를 제공합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 사용자의 데이터베이스 개발, 배포 및 유지 관리를 도와 주는 디자이너, 편집기, 지침 및 마법사가 포함되어 있습니다.  

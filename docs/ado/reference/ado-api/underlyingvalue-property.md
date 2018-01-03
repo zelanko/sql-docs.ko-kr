@@ -3,7 +3,7 @@ title: "UnderlyingValue 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d4f3014350f4e29461a6208802d3f82f8c95535
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c49f65c2f75e83765c8d4ede18881cc2f8fcdcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue 속성
 현재 값을 표시 한 [필드](../../../ado/reference/ado-api/field-object.md) 데이터베이스의 개체입니다.  

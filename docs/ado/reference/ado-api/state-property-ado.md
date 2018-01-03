@@ -3,7 +3,7 @@ title: "State 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a261e499afc4a65217fe179c48151f52cb817dff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 799a6570590df27096779cff8138ede7af0c40c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="state-property-ado"></a>State 속성 (ADO)
 적용 가능한 모든 개체에 대 한 개체의 상태를 열거나 닫을지 여부를 나타냅니다. 개체는 비동기 메서드를 실행 하는 경우 개체의 현재 상태 연결, 실행 또는 검색을 나타냅니다.  

@@ -3,7 +3,7 @@ title: "SQL 구문 오류 발생 대화 상자(Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b59d9f9ce4768a5cabb6c763b99a029f7720e7c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd83cac5ef064cb5df226ecc94b5be954f506405
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>SQL 구문 오류 발생 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 디자이너의 SQL 창에서 SQL 문을 구문 분석할 수 없는 경우 이 대화 상자에 오류 메시지가 나타납니다.  
@@ -42,6 +42,6 @@ SQL 창에서 SQL 문을 입력하거나 편집한 다음 다른 창으로 이�
   
 SQL 문을 구문 분석할 수 없으면 이 대화 상자에 문제의 원인이 표시됩니다. 계속 진행하려면 **확인** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

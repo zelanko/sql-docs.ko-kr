@@ -3,7 +3,7 @@ title: "상태 속성 예제 (필드) (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7034c405798a8583abcf43a6b7830ccdf229cdf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e1abe338e6034fec34d1576b52af6df43970ea9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-property-example-field-vb"></a>상태 속성 예제 (필드) (VB)
 다음 예제에서는 문서를 사용 하 여 읽기/쓰기 폴더에서 열고는 [인터넷 게시 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)합니다. [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 속성은 [필드](../../../ado/reference/ado-api/field-object.md) 의 개체는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 처음으로 설정 됩니다 **adFieldPendingInsert**, 로업데이트한다음**adFieldOk**합니다.  

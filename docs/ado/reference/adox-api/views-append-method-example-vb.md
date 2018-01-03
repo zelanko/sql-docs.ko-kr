@@ -3,7 +3,7 @@ title: "뷰 추가 메서드 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e297d5927cdd504c1c0aebd39d3dac9320965d60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c37eca79e8613da612c8d1d109a94534fa323a01
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="views-append-method-example-vb"></a>뷰 추가 (VB) 메서드 예제
 다음 코드에서는 사용 하는 방법을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션 [추가](../../../ado/reference/adox-api/append-method-adox-views.md) 데이터 원본에서 새 보기를 만드는 방법.  

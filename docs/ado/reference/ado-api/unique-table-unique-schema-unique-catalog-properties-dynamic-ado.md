@@ -3,7 +3,7 @@ title: "컨트롤 (ADO) 레코드 집합 기본 테이블에 변경 | Microsoft 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29120a3012b74196e9184384fc740b7c18363e98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 034f0f577201d3f0b3b4e38e78e11acb8649884e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>고유 테이블, 고유 고유한 스키마 카탈로그 속성 동적 (ADO)
 특정 기본 테이블에 제어 수정 밀접 하 게 할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 여러 기본 테이블에서 조인 작업으로 만든입니다.  

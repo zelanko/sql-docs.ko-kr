@@ -3,7 +3,7 @@ title: "공간 인덱스 대화 상자(Visual Database Tools) | Microsoft 문서
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a3a67a16ceef1e85a988b762d7f0cecb4e452d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **공간 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 **기하 도형** 또는 **지리** 데이터 형식의 열(*공간 열*)에 대한 인덱스를 만들 수 없습니다. 각 공간 열에는 둘 이상의 공간 인덱스가 있을 수 있으며, 이러한 공간 인덱스는 한 번에 하나씩 만들어야 합니다.  
   
 공간 인덱스 만들기의 제한 사항에 대한 자세한 내용은 [공간 인덱스 개요](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)를 참조하세요.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **선택한 공간 인덱스**  
 기존 공간 인덱스의 목록을 표시합니다. 속성을 표시할 인덱스를 선택합니다. 이 목록이 비어 있으면 테이블에 정의된 공간 인덱스가 없는 것입니다.  
   

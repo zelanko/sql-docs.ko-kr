@@ -2,9 +2,11 @@
 title: "R 서비스-결과 및 리소스에 대 한 성능 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0b490c8f0d3795dae52fc575c1e231d39ff6e874
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0ee44976c109818292f7fa1587d6828e9f209fc1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R 서비스에 대 한 성능: 결과 및 리소스
 
@@ -95,7 +97,7 @@ metric time pct
 
 첫 번째 테스트 압축 및 데이터의 크기를 줄이려면 열 테이블의 사용을 비교 합니다.
 
-| 테이블 이름            | 행     | 예약됨   | 데이터       | index_size | 사용 안 함  | 단축 비율(%)(예약됨) |
+| 테이블 이름            | 행     | 예약됨   | data       | index_size | 사용 안 함  | 단축 비율(%)(예약됨) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816KB | 2972160KB | 6128KB    | 528KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784KB  | 623744KB  | 1352KB    | 688KB  | 79%                 |
@@ -288,7 +290,7 @@ MicrosoftML와 RevoScaleR 패키지는 큰 데이터 집합과 관련 된 복잡
 
 - 메모리 내 테이블
 - Soft-NUMA
-- 리소스 관리자
+- 관리
 
 R 스크립트 실행에 소프트 NUMA의 영향을 평가 하기 위해 데이터 과학 팀 20 개의 실제 코어를 Azure 가상 컴퓨터에서 솔루션을 테스트 했습니다. 이러한 물리적 코어에서 4 개의 소프트 NUMA 노드 각 노드에 5 개의 코어를 포함 자동으로 생성 되었습니다.
 

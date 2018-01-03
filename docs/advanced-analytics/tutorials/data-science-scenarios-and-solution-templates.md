@@ -2,12 +2,14 @@
 title: "데이터 과학 시나리오 및 솔루션 템플릿을 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
 caps.latest.revision: "17"
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 962c3044f0cc43ded921635d12b87858affe8123
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 95b2bccc56dd3e42aaae4a0e9dada2361e35f203
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
 

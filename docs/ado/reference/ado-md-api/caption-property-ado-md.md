@@ -3,7 +3,7 @@ title: "ADO MD 속성 캡션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 022d9f750abe10f2a5801c2928c20d8edddf5837
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91b73878ffedc99111254d98f341141818702104
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caption-property-ado-md"></a>ADO MD caption 속성
 표시할 때 사용할 텍스트 캡션을 나타냅니다는 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 또는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체입니다.  

@@ -2,9 +2,11 @@
 title: "R 패키지는 SQL Server에 설치 된 확인 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/09/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2404680ce5c3ddccc0ac65a3b49c905a1fc30a8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c570f5643880b1111889e29e6de03bbff4b10e1d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>R 패키지는 SQL Server에 설치 된 확인
 
@@ -78,6 +80,6 @@ sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=m
 sqlPackages <- rxInstalledPackages(computeContext = sqlServerCompute)
 sqlPackages
 ```
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [SQL Server에 추가 R 패키지를 설치 합니다.](install-additional-r-packages-on-sql-server.md)

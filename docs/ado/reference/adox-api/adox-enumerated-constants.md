@@ -3,7 +3,7 @@ title: "ADOX 열거형 상수의 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d531e41fdba4e012ed1d33dcf3efa180065e7697
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 열거 상수
 디버깅을 지원 하기 ADOX 열거 상수에는 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADOX의 릴리스에서 변경 될 수 있습니다. 코드는 실제 값이 아닌 열거 된 상수의 이름 뒤에 의존 해야 합니다.  

@@ -3,7 +3,7 @@ title: "지속 필터링 되 고 계층적 레코드 집합 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dfd42fa2530b8eed731b5b969c9cfbf30c29dea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45f6f546531e506e841088bd0b73daab3e0e5360
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>필터링을 유지 하 고 계층적 레코드 집합
 경우는 [필터](../../../ado/reference/ado-api/filter-property.md) 속성에 적용 되는 **레코드 집합**, 필터 액세스할 수 있는 행만 저장 됩니다. 경우는 **레코드 집합** 계층형 현재 자식 **레코드 집합** 및 자식의 부모를 포함 하 여 저장 됩니다 **레코드 집합**합니다. 경우는 **저장** 메서드는 자식 **레코드 집합** 가 자식 및 모든 자식 저장 되지만 부모를 호출 합니다. 계층에 대 한 자세한 내용은 **레코드 집합**, 참조 [데이터 셰이핑](../../../ado/guide/data/data-shaping.md)합니다.  

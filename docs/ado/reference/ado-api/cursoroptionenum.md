@@ -3,7 +3,7 @@ title: CursorOptionEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0076db0f4d9bcb1c85858bef763795cee1ba6754
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c63c915bddd54bafecb20ac7d02595b6d18da84
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 어떤 기능을 지정 된 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드를 테스트 해야 합니다.  

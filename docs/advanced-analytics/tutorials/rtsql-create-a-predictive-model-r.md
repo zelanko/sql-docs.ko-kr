@@ -2,12 +2,14 @@
 title: "만들기 predictive 모델 (SQL 빠른 시작에서 R) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4e0d5dab1f737361a82191b6a3d74561e12722e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c6f0117198cd7a548b9e56d228c14231b39ec35a
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>예측 모델 (SQL 빠른 시작에서 R) 만들기
 

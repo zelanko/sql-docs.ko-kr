@@ -3,7 +3,7 @@ title: "쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 208b7c4819344b1a54dfbff8b5299cb122f01727
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1aa5d3107577a7d838d6ba813934b42f497db8a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 및 뷰 디자이너를 사용하면 응용 프로그램의 데이터 검색 및 데이터 조작 부분을 쉽게 만들고 유지 관리할 수 있습니다.  
@@ -65,7 +65,7 @@ UPDATE, DELETE 및 MAKE TABLE 쿼리와 같은 다양한 유형의 쿼리를 만
 [매개 변수를 사용하여 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 쿼리를 실행할 때마다 서로 다른 값을 사용할 수 있도록 하는 매개 변수로 쿼리를 만드는 데 관련된 항목을 나열합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 [테이블 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 테이블, 열, 키, 인덱스, 저장 프로시저 등을 통해 데이터베이스 구조를 디자인하고 유지 관리하는 단계를 자세히 설명합니다.  
   

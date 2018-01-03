@@ -3,7 +3,7 @@ title: "결과 창에서 새 행 추가(Visual Database Tools) | Microsoft 문�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 736d3da284554a6657ff644bd9e3658a3bc06a0c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 456b54e01cf02c27f1dcb0714104365b53e8a875
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 새 행 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터를 직접 입력하거나 메모장 또는 Excel 같은 다른 프로그램에서 복사하여 붙여넣는 방식으로 새 데이터를 추가할 수 있습니다. 붙여넣을 행은 행이 들어갈 테이블과 열 수 및 형식이 똑같아야 합니다. 결과 창에 여러 행을 한 번에 붙여넣을 수 있습니다.  

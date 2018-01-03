@@ -1,37 +1,42 @@
 ---
-title: "만들기 및 R 스크립트 실행 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: "만들기 및 R 스크립트 (SQL과 R 심층 분석)를 실행 합니다. | Microsoft Docs"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
 caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d5afb4be84373a1002d7a141fdc743a3a91d1ac8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 3f26a5850ffe3245029486a2be4406790e36b6ab
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="create-and-run-r-scripts"></a>만들기 및 R 스크립트 실행
+# <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>만들기 및 R 스크립트 (SQL과 R 심층 분석)를 실행 합니다.
 
-이제 데이터 원본을 설정하고 하나 이상의 계산 컨텍스트를 설정했으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 몇 가지 고성능 R 스크립트를 실행할 준비가 되었습니다.  이 단원에서는 서버 계산 컨텍스트를 사용하여 몇 가지 일반적인 Machine Learning 작업을 수행합니다.
+이 문서는 데이터 과학 심층 분석 자습서를 사용 하는 방법에 대 한 일부 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
+
+이제 데이터 원본을 설정하고 하나 이상의 계산 컨텍스트를 설정했으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 몇 가지 고성능 R 스크립트를 실행할 준비가 되었습니다.  이 단원 server 계산 컨텍스트를 사용 하 여 몇 가지 일반적인 시스템 작업 학습을 수행 하려면:
 
 - 데이터 시각화 및 몇 가지 요약 통계 생성
 - 선형 회귀 모델 만들기
 - 로지스틱 회귀 모델 만들기
 - 새 데이터 점수 매기기 및 점수 히스토그램 만들기
 
-## <a name="change-compute-context-to-the-server"></a>계산 컨텍스트를 서버로 변경
+## <a name="change-compute-context-to-the-server"></a>계산 서버에는 컨텍스트 변경
 
 R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 컨텍스트를 지정해야 합니다.
 
@@ -41,7 +46,7 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 컨텍스트를 
     rxSetComputeContext(sqlCompute)
     ```
   
-    이 문을 실행하는 즉시 이후의 모든 계산은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlCompute *매개 변수에 지정된* 컴퓨터에서 수행됩니다.
+    이 문을 실행 하는 즉시 모든 이후 계산에 진행는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 지정 된 컴퓨터는 *sqlCompute* 매개 변수입니다.
   
 2. 워크스테이션에서 R 코드를 실행하려는 경우  **local** 키워드를 사용하여 계산 컨텍스트를 다시 로컬 컴퓨터로 전환할 수 있습니다.
   
@@ -53,22 +58,22 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 컨텍스트를 
   
 3. 계산 컨텍스트를 지정하면 변경할 때까지 활성 상태로 유지됩니다. 그러나 원격 서버 컨텍스트에서 실행할 수 *없는* 모든 R 스크립트는 로컬로 실행됩니다.
 
-## <a name="compute-summary-statistics"></a>계산 요약 통계
+## <a name="compute-some-summary-statistics"></a>일부 요약 통계를 계산 합니다.
 
-계산 컨텍스트가 작동하는 방식을 확인하려면 *sqlFraudDS* 데이터 원본을 사용하여 몇 가지 요약 통계를 생성해 보세요.  데이터 원본 개체는 사용할 데이터만 정의하고 계산 컨텍스트를 변경하지는 않는다는 점을 기억하세요.
+계산 컨텍스트 작동 방식을 보려면 사용 하 여 일부 요약 통계를 생성을 시도 `sqlFraudDS` 데이터 원본입니다.  기억, 데이터 원본 개체에는 방금; 사용 하는 데이터 정의 계산 컨텍스트를 바뀌지 않습니다.
 
-+ 로컬에서 요약을 수행하려면 **rxSetComputeContext** 를 사용하고 "local" 키워드를 지정합니다.
++ 로컬로 요약을 수행 하려면 **rxSetComputeContext** 지정는 _로컬_ 키워드입니다.
 + SQL Server 컴퓨터에서 같은 계산을 만들려면 앞에서 정의한 SQL 계산 컨텍스트로 전환합니다.
 
-1. **rxSummary** 함수를 호출하고 수식 및 데이터 원본과 같은 필수 인수를 전달하고 결과를 *sumOut*변수에 할당합니다.
+1. 호출 된 [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) 함수 및 수식 및 데이터 원본 등의 필수 인수를 전달 하 고 결과 변수에 할당 `sumOut`합니다.
   
     ```R
-    sumOut \<- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
+    sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 언어 요약에서는 다양 한 기능을 제공 하지만 rxSummary 다양 한 원격 계산 컨텍스트를 포함 하 여 실행을 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  유사한 함수에 대한 자세한 내용은 [ScaleR reference](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries) (ScaleR 참조)의 [Data Summaries](https://msdn.microsoft.com/microsoft-r/scaler/scaler)(데이터 요약)를 참조하세요.
+    R 언어 여러 요약 기능을 제공 하지만 **rxSummary** 다양 한 원격 계산 컨텍스트를 포함 하 여 실행을 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 유사한 기능에 대 한 정보를 참조 하십시오. [RevoScaleR을 사용 하 여 데이터 요약](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)합니다.
   
-2. 처리가 완료되면 *sumOut* 변수의 내용을 콘솔에 출력할 수 있습니다.
+2. 처리가 완료 되는 경우의 내용을 인쇄할 수 있습니다는 `sumOut` 콘솔에 변수입니다.
   
     ```R
     sumOut
@@ -76,7 +81,6 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 컨텍스트를 
   
     > [!NOTE]
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 결과가 반환되기 전에 결과를 출력하려고 하지 마세요. 그러지 않으면 오류가 발생할 수 있습니다.
-
 
 **결과**
 
@@ -112,11 +116,11 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 컨텍스트를 
 
   *Female 3846*
 
-## <a name="add-maximum-and-minimum-values"></a>최대값 및 최소값 추가
+## <a name="add-maximum-and-minimum-values"></a>최대 및 최소 값 추가
 
-계산된 요약 통계에 따라 데이터에 대한 몇 가지 유용한 정보를 발견했으며 추가 계산에 사용하기 위해 이 정보를 데이터 원본에 저장하려고 합니다. 예를 들어 히스토그램을 계산 하 고가 및 저가 값 RxSqlServerData 데이터 소스에 추가 하려는 데는 최소 및 최대 값을 사용할 수 있습니다.
+계산된 요약 통계에 따라 데이터에 대한 몇 가지 유용한 정보를 발견했으며 추가 계산에 사용하기 위해 이 정보를 데이터 원본에 저장하려고 합니다. 예를 들어 히스토그램을 계산 하는 최소 및 최대 값을 사용할 수 있습니다. 이러한 이유로 추가 하 고가 및 저가 값은 **RxSqlServerData** 데이터 원본입니다.
 
-다행히 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 에는 매우 효율적으로 정수 데이터를 범주 인수 데이터로 변환할 수 있는 최적화된 함수가 포함되어 있습니다.
+다행히 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 범주 비율 데이터에 정수 데이터를 효율적으로 변환할 수 있는 최적화 된 기능을 포함 합니다.
 
 1. 먼저 몇 가지 임시 변수를 설정합니다.
   
@@ -125,9 +129,9 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 컨텍스트를 
     var <- sumDF$Name
     ```
   
-2. 앞에서 만든 *ccColInfo* 변수를 사용하여 데이터 원본의 열을 정의합니다.
+2. 앞에서 만든 `ccColInfo` 변수를 사용하여 데이터 원본의 열을 정의합니다.
   
-    또한 몇 가지 새로운 계산 열(*numTrans*, *numIntlTrans*및 *creditLine*)을 열 컬렉션에 추가합니다.
+    또한 일부 새 계산 열을 추가 (`numTrans`, `numIntlTrans`, 및 `creditLine`)을 열 컬렉션입니다.
   
     ```R 
     ccColInfo <- list(
@@ -149,28 +153,28 @@ R 코드를 실행하기 전에 *현재* 또는 *활성* 계산 컨텍스트를 
             )
     ```
   
-3. 열 컬렉션을 업데이트한 후 다음 문을 적용하여 앞에서 정의한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본의 업데이트된 버전을 만들 수 있습니다.
+3. 업데이트 된 버전을 만들려면 다음 문을 적용 열 컬렉션에 있는 업데이트 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 앞에서 정의한 데이터 원본.
   
     ```R
-    sqlFraudDS \<- RxSqlServerData(
+    sqlFraudDS <- RxSqlServerData(
         connectionString = sqlConnString,
         table = sqlFraudTable,
         colInfo = ccColInfo,
         rowsPerRead = sqlRowsPerRead)
     ```
   
-    이제 *sqlFraudDS* 데이터 원본에 *ccColInfo*에 추가된 새 열이 포함됩니다.
+    `sqlFraudDS` 데이터 원본을 사용 하 여 추가 하는 새 열이 포함 이제 `ccColInfo`합니다.
   
-  이러한 수정 내용은 R의 데이터 원본 개체에만 영향을 주고 데이터베이스 테이블에는 아직 새 데이터가 기록되지 않습니다. 그러나 *sumOut* 변수에서 캡처된 데이터를 사용하여 시각화 및 요약을 만들 수 있습니다. 다음 단계에서는 계산 컨텍스트를 전환하는 동안 이 작업을 수행하는 방법을 알아봅니다.
+
+수정만 R;에서 데이터 원본 개체에 영향을 줄이 시점에서 새 데이터가 아직 데이터베이스 테이블에 기록 된 했습니다. 그러나에서 수집 된 데이터를 사용할 수는 `sumOut` 변수를 시각화 및 요약을 만듭니다. 다음 단계 계산 컨텍스트를 전환 하는 동안이 작업을 수행 하는 방법에 설명 합니다.
 
 > [!TIP]
-> 사용 하는 계산 컨텍스트를 잊은 경우 실행 `rxGetComputeContext()`합니다.  반환 값이 `RxLocalSeq Compute Context` 로컬 계산 컨텍스트에서 실행을 나타냅니다.
+> 사용 하는 계산 컨텍스트를 잊은 경우 실행 `rxGetComputeContext()`합니다.  반환 값이 "RxLocalSeq 계산 컨텍스트" 로컬 계산 컨텍스트에서 실행을 나타냅니다.
 
 ## <a name="next-step"></a>다음 단계
 
-[R을 사용 하 여 SQL Server 데이터를 시각화 합니다.](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+[R을 사용하여 SQL Server 데이터 시각화](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
 
 ## <a name="previous-step"></a>이전 단계
 
-[계산 컨텍스트를 사용 및 정의](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
+[계산 컨텍스트 정의 및 사용](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

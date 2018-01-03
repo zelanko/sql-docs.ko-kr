@@ -3,7 +3,7 @@ title: "NextRecordset 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 524957fe66debad97fc9c1512cc9e3c70153d216
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 569303b6598f0d6b580f20049a02f7e9a5e90621
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 메서드 (ADO)
 현재 지웁니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 하 고 다음 반환 **레코드 집합** 는 일련의 명령을 통해 이동 하 여 합니다.  

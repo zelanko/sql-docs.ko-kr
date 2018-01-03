@@ -2,12 +2,14 @@
 title: "R 함수를 사용 하 여 SQL Server 데이터 (SQL 빠른 시작에서 R) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c7bfdf38a0c7b820f3c85bf456b05d908104f67a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0a536b0d569fba36c84b550bec0b60896b448e45
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>R 함수를 사용 하 여 SQL Server 데이터 (SQL 빠른 시작에서 R)
 

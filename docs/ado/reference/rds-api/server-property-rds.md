@@ -1,11 +1,13 @@
 ---
 title: "서버 속성 (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -17,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e1475b73658e9cbf5b1b1ebc393d2cf60bb6e5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9225e5184faf0087458a9e3ca3828fa75f259d6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="server-property-rds"></a>서버 속성 (RDS)
 인터넷 정보 서비스 (IIS) 이름 및 통신 프로토콜을 나타냅니다.  

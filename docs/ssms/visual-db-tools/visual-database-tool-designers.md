@@ -3,7 +3,7 @@ title: "Visual Database Tools 디자이너 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 206d464ab885728f270c81d9bb527b9c5f2a98ec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 69528faf39230c9c268457896e6c692a6fc93305
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tools 디자이너
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools는 데이터 원본 작업을 수행하는 데 사용할 수 있는 여러 가지 디자인 도구 모음입니다. 이러한 도구를 사용하여 쿼리를 만들고, 데이터베이스 구조를 디자인하거나 수정하고, 데이터를 업데이트할 수 있습니다. 여기에 포함된 도구는 데이터베이스 다이어그램 디자이너, 테이블 디자이너, 쿼리 및 뷰 디자이너입니다.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/05/2017
 >   
 > 이 버전의 Visual Database Tools는 Microsoft SQL Server 버전 7 및 이전 버전을 지원하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
 [테이블 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

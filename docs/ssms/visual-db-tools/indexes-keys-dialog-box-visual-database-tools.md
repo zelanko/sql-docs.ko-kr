@@ -3,7 +3,7 @@ title: "인덱스 - 키 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a246ec54d0b0cd439bbdbd8f81acb6ad3be7d9c4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1fa2fa79f818c344f9228dffe500fbe96236954b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>인덱스 - 키 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 인덱스, 기본 키, 고유 키를 만들거나 수정할 수 있습니다. 이 대화 상자에 액세스하려면 인덱스나 키가 포함된 테이블의 테이블 정의를 열고 테이블 정의 표를 마우스 오른쪽 단추로 클릭한 다음 **인덱스/키**를 클릭합니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > 테이블이 복제용으로 게시된 경우 Transact-SQL 문 [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) 또는 SMO(SQL Server 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **선택한 Primary/Unique 키 또는 인덱스**  
 기존의 기본 또는 고유 키와 인덱스를 나열합니다. 키나 인덱스를 선택하면 오른쪽의 표에 해당 속성이 표시됩니다. 목록이 비어 있는 경우 테이블에 정의된 항목이 없음을 의미합니다.  
   

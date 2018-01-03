@@ -3,7 +3,7 @@ title: "UniqueName 속성 (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee3cdca9581746ef6529d0b0d1d0475b5c5fc414
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f056d50f09fdc42b4071d90d4f8eab5f89baa13b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniquename-property-ado-md"></a>ADO MD UniqueName 속성
 현재 개체에 대 한 명확한 이름을 나타냅니다.  

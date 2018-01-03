@@ -3,10 +3,10 @@ title: "획득 및 AP PDW에 대 한 백업 서버를 구성 합니다."
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 caps.latest.revision: "20"
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 3540c2e43082dbdad4f267745683f33ae9b0b036
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>획득 하 고 백업 서버를 구성 합니다.
 이 항목에서는 Analytics Platform System (APS)의 백업 및 복원 기능을 통해 사용 하기 위해 백업 서버 및 SQL Server 병렬 데이터 웨어하우스 (PDW)와 비 어플라이언스 Windows 시스템을 구성 하는 방법에 설명 합니다.  
@@ -94,7 +94,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버를 액세스 합니다. 파일 
   
 5.  PDW에 백업 도메인 계정 자격 증명을 추가 합니다.  
   
-    예를 들어  
+    예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -114,7 +114,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버를 액세스 합니다. 파일 
 > [!IMPORTANT]  
 > 백업 서버의 InfiniBand IP 주소를 사용 해야 합니다. 그렇지 않으면 데이터 over Ethernet InfiniBand 대신 복사 됩니다.  
   
-예를 들어  
+예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  

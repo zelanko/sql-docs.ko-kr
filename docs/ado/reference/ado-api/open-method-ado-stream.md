@@ -3,7 +3,7 @@ title: "Open 메서드 (ADO 스트림) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2da6a07f58ab3cceb9ca9d661703603146c3e5f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e93255bf18f91377f8d62400a236208507cb8c8c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-stream"></a>Open 메서드 (ADO 스트림)
 열립니다는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 이진 또는 텍스트 데이터 스트림을 조작 하는 개체입니다.  

@@ -3,10 +3,10 @@ title: "데이터 형식 dwloader에 대 한 변환 규칙"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
 caps.latest.revision: "30"
-ms.openlocfilehash: 2ac1325b3765bafbe34dc61f65f7641431afdfa0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29cf43b7bb5ea38d821e62b03cc125fe5e0fc30c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversion-rules-for-dwloader"></a>데이터 형식 dwloader에 대 한 변환 규칙
 이 항목에서는 입력된 데이터 형식 및 암시적 데이터 형식 변환을 설명 하는 [dwloader 명령줄 로더](dwloader.md) PDW에 데이터를 로드할 때 지원 합니다. 암시적 데이터 변환이 입력된 데이터에 SQL Server PDW 대상 테이블에서 데이터 형식이 일치 하지 않을 때 발생 합니다. SQL Server PDW로 성공적으로 로드 데이터를 확인 하 여 로드 프로세스를 디자인 하는 경우이 정보를 사용 합니다.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="DateFormats"></a>날짜/시간 형식  
 Dwloader는 SQL Server PDW에 로드 하는 입력된 데이터에 대 한 다음 데이터 형식을 지원 합니다. 자세한 내용은 표 다음에 나열 됩니다.  
   
-|datetime|smalldatetime|date|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|날짜|Datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[[M] M] M-[d] d-[yy] yy hh: mm: [.fff]|[[M] M] M-[d] d-[yy] yy hh: mm [: 00]|[[M] M] M-[d] d-[yy] yy|[[M] M] M-[d] d-[yy] yy h:mm: ss [.fffffff]|[[M] M] M-[d] d-[yy] yy h:mm: ss [.fffffff] zzz|  
 |[[M] M] M-[d] d-[yy] yy hh: mm: [.fff] [tt]|[[M] M] M-[d] d-[yy] yy hh: mm [: 00] [tt]||[[M] M] M-[d] d-[yy] yy h:mm: ss [.fffffff] [tt]|[[M] M] M-[d] d-[yy] yy h:mm: ss [.fffffff] [tt] zzz|  

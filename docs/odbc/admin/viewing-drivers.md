@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1cbbb5dbaf6331659a731536691803a4c2254a2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29875d3bc97d2fe8c18f04f6ba48e2884f32d40f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="viewing-drivers"></a>드라이버 보기
 데이터 소스를 구성 하려면 설치 해야 드라이버를 하나 이상 시스템에 있습니다. **드라이버** 탭에 **ODBC 데이터 원본 관리자** 대화 상자 이름, 버전, 회사, 파일 이름 및 각 드라이버의 파일 작성 날짜를 포함 하 여 컴퓨터에 설치 된 모든 드라이버를 나열 합니다. 드라이버의 설치 프로그램을 사용 하 여를 추가 하 여 시스템에서 드라이버를 삭제 해야 합니다. 드라이버를 수정 하는 방법에 대 한 자세한 내용은 참조 [데이터 원본 관리](../../odbc/admin/managing-data-sources.md)합니다.

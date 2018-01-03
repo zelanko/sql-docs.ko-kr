@@ -2,9 +2,11 @@
 title: "R 데이터 형식 사용 | Microsoft 문서"
 ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09ff5069864db36036685c751759cadcf66d6a02
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e72c4a984359230ace9f800e8ac4efbfcfe5f2a1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식
 
@@ -52,7 +54,7 @@ Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참�
 
 다음 표는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터를 R 스크립트에 사용한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 반환할 때 데이터 형식 및 값의 변화를 보여줍니다.
 
-|SQL 유형|R 클래스|RESULT SET 형식|설명|
+|SQL 유형|R 클래스|RESULT SET 형식|주석|
 |-|-|-|-|
 |**bigint**|`numeric`|**float**||
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
@@ -70,7 +72,7 @@ Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참�
 |**smallint**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
 |**tinyint**|`integer`|**int**||
-|**ssNoversion**|`character`|**varchar(max)**||
+|**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
 |**varbinary(max)**|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
 |**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||

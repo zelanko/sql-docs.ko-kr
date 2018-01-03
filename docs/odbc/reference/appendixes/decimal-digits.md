@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1bb5222837dab705701e4a137c00f3b10867ae2a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4cac84febc2f1dc2afe11cf118237ad4ed4a65a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="decimal-digits"></a>10 진수
 *10 진수* decimal 및 numeric 데이터 형식 소수점 오른쪽 자릿수 또는 데이터의 소수 자릿수의 최대 수로 정의 됩니다. 근사 부동 소수점 숫자 열 또는 매개 변수 눈금 정의 되지 않습니다 소수점 오른쪽 자릿수 하지 고정 되어 있으므로. 초 구성 요소가 포함 된 날짜/시간 또는 간격 데이터에 대 한 10 진수 숫자 데이터의 초 구성 요소에서 소수점 오른쪽 자릿수의 수로 정의 됩니다.  

@@ -3,7 +3,7 @@ title: "데이터베이스 다이어그램에서 테이블 작업(Visual Databas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4dcaafec5d7e68e43b16a7c6bb69f0f03f27b59e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3fcb4d2737fcc69d352ea0ef77541b7031afe2a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 작업(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 테이블 디자이너나 데이터베이스 다이어그램 디자이너에서 데이터베이스 테이블을 만들고 수정할 수 있습니다.  
@@ -52,4 +52,4 @@ ms.lasthandoff: 12/05/2017
 ## <a name="reference"></a>참조  
 [테이블 추가 대화 상자&#40;데이터베이스 디자이너&#41;&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  

@@ -3,7 +3,7 @@ title: "쿼리에 TOP 절 지정(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 169a3a633c25a1c902e5242f848816c7f37749d8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 388d36bd06c1bb26ca1ede9c51d4d4109d73795e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>쿼리에 TOP 절 지정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] TOP 절은 쿼리에서 처음 *n*개 또는 *n%*의 행만 반환합니다. TOP 절은 쿼리 결과를 모두 반환하는 데 필요한 리소스를 사용하지 않은 채 쿼리가 의도한 대로 올바르게 작동하는지 확인하기 위해 결과의 일부만 검사하려는 경우에 유용합니다.  

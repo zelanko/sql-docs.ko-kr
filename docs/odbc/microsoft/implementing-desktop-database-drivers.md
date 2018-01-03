@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93d3fa89e2e918082f327848a55c6dbd60376984
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3994ed86f488748f3edd569ad80979d9871f588f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버 구현
 ODBC 데이터 원본 관리자 온라인 도움말의 지침 및 구현 하 고 Microsoft ODBC 데스크톱 데이터베이스 드라이버를 설정 하는 방법에 대 한 기술 정보를 찾을 수 있습니다. 드라이버 설치가 루틴 중이 파일에 액세스할 수는 [Microsoft ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)합니다.  

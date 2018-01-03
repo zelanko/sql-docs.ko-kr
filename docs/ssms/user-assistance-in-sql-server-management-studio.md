@@ -3,7 +3,7 @@ title: "SQL Server Management Studio의 사용자 지원 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6a3108ec508a859dd6b097425f27475a85c026f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af99082f7ec0d39d59c7aa20fc1f6ba1d51596ed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio의 사용자 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]에서는 도움말 메뉴 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 온라인 설명서를 통해 사용자에 대한 지원이 제공됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 의 도움말 메뉴는 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]에 대한 정보를 볼 수 있는 여러 다른 경로를 제공합니다. 또한 이전에 도움말 환경 내에서 사용할 수 없었던 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 커뮤니티 및 MSDN 온라인 리소스에 대한 액세스가 제공됩니다. 이외에도 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 환경 내에서 시작되거나 연관된 고유한 외부 창에서 시작되도록 도움말 환경을 구성할 수 있습니다.  

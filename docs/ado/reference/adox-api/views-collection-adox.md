@@ -3,7 +3,7 @@ title: "뷰 컬렉션 (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11a8bad0bb61e0f0256b31a24eaf3f283d645a45
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e41c925504ec50dcb115aabbfad916994a079507
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="views-collection-adox"></a>뷰 컬렉션 (ADOX)
 모든 포함 [보기](../../../ado/reference/adox-api/view-object-adox.md) 카탈로그의 개체가 있습니다.  

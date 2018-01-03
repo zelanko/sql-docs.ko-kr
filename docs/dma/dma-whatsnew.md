@@ -5,7 +5,7 @@ ms.date: 10/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05c94bd5803520aa5424cca837784f8f67382d16
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>데이터 마이그레이션 길잡이의 새로운 기능
 
@@ -90,6 +90,6 @@ DMA의 v1.0 릴리스는 초기 릴리스 및에 대 한 제공:
 
 -   평가 수행 하려면 최신 사용자 경험 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [데이터 마이그레이션 길잡이 개요](../dma/dma-overview.md)

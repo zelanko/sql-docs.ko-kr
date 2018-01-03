@@ -3,7 +3,7 @@ title: "환경 레이아웃 변경 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec585601316887d3968dc70795a09053e54d1868
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aeb1e5f0f66a98425ab7600636510e82cfdc16c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>1-3단원 - 환경 레이아웃 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 구성 요소는 서로 화면 공간을 차지하려고 합니다. 공간을 더 확보하려는 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 구성 요소를 닫거나 숨기거나 이동할 수 있습니다. 이 페이지의 연습에서는 구성 요소를 다른 위치로 이동합니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  개체 탐색기의 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 다음 메뉴 옵션을 확인합니다.  
   
-    -   부동  
+    -   float  
   
     -   도킹  
   

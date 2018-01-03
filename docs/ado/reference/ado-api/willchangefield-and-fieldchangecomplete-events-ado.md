@@ -3,7 +3,7 @@ title: "WillChangeField 및 FieldChangeComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d532aa3857e2a61bb5ec23fa9258f6d7aa1186f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c30a41b18016515f97ba044eb0d36724a59a351
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 및 FieldChangeComplete 이벤트 (ADO)
 **WillChangeField** 이벤트는 보류 중인 작업이 하나 이상의 값을 변경 하기 전에 호출 됩니다 [필드](../../../ado/reference/ado-api/field-object.md) 개체에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. **FieldChangeComplete** 하나 이상의 값 보다 이후 라고 이벤트 **필드** 개체 변경 되었습니다.  
@@ -47,7 +47,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  A **긴** 의 수를 나타내는 **필드** 개체 *필드*합니다.  
   
- *필드*  
+ *Fields*  
  에 대 한 **WillChangeField**, *필드* 매개 변수는 배열입니다 **변형** 포함 된 **필드** 원래 값이 있는 개체입니다. 에 대 한 **FieldChangeComplete**, *필드* 매개 변수는 배열입니다 **변형** 포함 된 **필드** 에서 변경 된 값을 사용 하 여 개체 .  
   
  *pError*  

@@ -3,7 +3,7 @@ title: "작업 단계 속성 - 새 작업 단계(일반 페이지) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fb87fbdb20c9872d502543f125911eb638cfc8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13f3553e80052f9264f70d0018d8d1157aaacb14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>작업 단계 속성 - 새 작업 단계(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 단계의 속성을 확인하고 변경하거나 새 작업 단계를 정의할 수 있습니다.  
   
 이 페이지로 이동하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 확장한 다음 **작업**을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 클릭한 다음 **단계** 페이지를 선택하고 **새로 만들기**를 클릭합니다. 개체 탐색기에서 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **단계** 를 선택하고 **새로 만들기**, **삽입**또는 **편집**을 클릭하여 이 페이지로 이동할 수도 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **단계 이름**  
 작업 단계의 이름을 설정합니다.  
   
@@ -39,14 +39,14 @@ ms.lasthandoff: 12/05/2017
 **다음 계정으로 실행**  
 작업 단계에 사용할 프록시 계정을 설정합니다. sysadmin 고정 서버 역할의 멤버는 **SQL 에이전트 서비스 계정**도 지정할 수 있습니다.  
   
-**데이터베이스**  
+**데이터베이스 백업**  
 작업 단계가 실행되는 데이터베이스를 설정합니다. 일부 작업 단계 유형에 대해서는 이 옵션을 사용할 수 없습니다.  
   
 **Command**  
 작업 단계에서 실행하는 명령을 설정합니다.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 작업 단계 옵션  
-**열기**  
+**파일**  
 파일에서 명령을 로드합니다.  
   
 **모두 선택**  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/05/2017
 **기타**  
 다른 스크립트 언어로 작성된 작업 단계에 사용할 언어 이름을 입력합니다.  
   
-**열기**  
+**파일**  
 파일에서 명령을 로드합니다.  
   
 **모두 선택**  
@@ -91,7 +91,7 @@ ms.lasthandoff: 12/05/2017
 **성공한 명령의 프로세스 종료 코드**  
 성공을 나타내기 위해 명령에서 반환하는 종료 코드를 입력합니다.  
   
-**열기**  
+**파일**  
 파일에서 명령을 로드합니다.  
   
 **모두 선택**  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/05/2017
 클립보드의 내용을 붙여 넣습니다.  
   
 ## <a name="options-for-powershell-job-steps"></a>PowerShell 작업 단계 옵션  
-**열기**  
+**파일**  
 파일로부터 스크립트를 로드합니다.  
   
 **모두 선택**  
@@ -137,7 +137,7 @@ ms.lasthandoff: 12/05/2017
 클립보드의 내용을 붙여 넣습니다.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>복제 큐 판독기 작업 단계 옵션  
-**데이터베이스**  
+**데이터베이스 백업**  
 작업 단계에 사용할 데이터베이스입니다.  
   
 **모두 선택**  
@@ -192,7 +192,7 @@ ms.lasthandoff: 12/05/2017
 **데이터베이스**  
 작업 단계에 사용할 데이터베이스입니다.  
   
-**열기**  
+**파일**  
 파일에서 명령을 로드합니다.  
   
 **모두 선택**  
@@ -278,7 +278,7 @@ ms.lasthandoff: 12/05/2017
 **연결 관리자**  
 데이터 원본의 이름을 표시합니다.  
   
-**Description**  
+**설명**  
 데이터 원본에 대한 설명을 표시합니다.  
   
 **연결 문자열**  
@@ -329,7 +329,7 @@ ms.lasthandoff: 12/05/2017
 **속성 경로**  
 속성 경로를 표시하거나 변경합니다.  
   
-**값**  
+**Value**  
 속성 값을 표시하거나 변경합니다.  
   
 **제거**  
@@ -371,7 +371,7 @@ ms.lasthandoff: 12/05/2017
 **명령줄**  
 이 패키지에 사용할 명령줄 옵션을 입력합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [작업 단계 관리](../../ssms/agent/manage-job-steps.md)  
 [패키지에 대한 SQL Server 에이전트 작업](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
 [복제 에이전트 관리](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  

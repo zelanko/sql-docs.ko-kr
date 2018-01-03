@@ -3,7 +3,7 @@ title: "다이어그램 변경 내용 취소(Visual Database Tools) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59f4167104b87c8e37ab2df3f2590cabbf6dede7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7cef5c9676d25b0d37b8a863e4155c2a0068f3b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>다이어그램 변경 내용 취소(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램에서 데이터베이스에 저장하지 않으려는 변경 내용을 취소할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
     > [!CAUTION]  
     > 동일한 데이터베이스에 연결된 다른 데이터베이스 다이어그램이나 테이블 디자인 창이 열려 있으면 이러한 창의 변경 내용도 저장되지 않은 채 닫힙니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [데이터베이스 다이어그램에서 테이블 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

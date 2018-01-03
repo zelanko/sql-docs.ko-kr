@@ -3,7 +3,7 @@ title: "사용자 개체 (ADOX) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a34d35adf84e32738733184430160613ef8eca45
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7087b8d19a5f9959c15539fb9b84dd14651d2e71
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-object-adox"></a>사용자 개체 (ADOX)
 보안된 데이터베이스 내에서 액세스 권한이 있는 사용자 계정을 나타냅니다.  

@@ -2,9 +2,11 @@
 title: "SQL Server와 함께 사용 하기 위해 데이터 과학 클라이언트 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 791a27f78442cd1ca191a042238769368c7da228
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8f9156e11e906454e7cae00703d1ffd976424297
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>SQL Server와 함께 사용 하기 위해 데이터 과학 클라이언트 설정
 

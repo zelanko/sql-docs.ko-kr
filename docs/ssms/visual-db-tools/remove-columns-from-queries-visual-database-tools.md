@@ -3,7 +3,7 @@ title: "쿼리에서 열 제거(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fdffb968590c41dd6a0158c5777dad3c38483411
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb5152ae022bd736492f01d2a370443cc42850b5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>쿼리에서 열 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리에 계속 사용할 필요가 없는 열은 제거할 수 있습니다. 쿼리에서 열을 제거하면 쿼리 및 뷰 디자이너의 선택 목록, 정렬 사양, 검색 조건, **SQL 창**및 기타 모든 그룹화 사양에서 해당 열에 대한 참조가 제거됩니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에서 열에 대한 모든 참조를 제거합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리에 열 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  
 [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [쿼리 결과 요약&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  

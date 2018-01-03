@@ -3,7 +3,7 @@ title: "CommandStream 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dacfa25b7ab9967f8c28e38c0df121063b583319
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d1c75a7db62475c8f717e36a93b9bf554c6248d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 속성 (ADO)
 에 대 한 입력으로 사용 되는 스트림과 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  

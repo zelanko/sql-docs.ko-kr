@@ -2,9 +2,11 @@
 title: "sqlrutils 패키지를 사용하여 R 코드에 대한 R 저장 프로시저 생성 | Microsoft 문서"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 805d533d140512754ecd6393654c67fa70f93340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 05cd57e3d4e4b266eb3570da253e9417646d91f4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>sqlrutils 패키지를 사용하여 R 코드에 대한 R 저장 프로시저 생성
 **sqlrutils** 패키지는 R 사용자가 T-SQL 저장 프로시저에 R 스크립트를 입력하고, 데이터베이스에 해당 저장 프로시저를 등록하며, R 개발 환경에서 저장 프로시저를 실행하는 메커니즘을 제공합니다. 
@@ -89,6 +91,6 @@ help(package="sqlrutils")
 
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [sqlrutils를 사용하여 저장 프로시저를 만드는 방법](../../advanced-analytics/r-services/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

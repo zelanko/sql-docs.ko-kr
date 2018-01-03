@@ -3,7 +3,7 @@ title: "Visual Database Tools F1 도움말 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58c97c63b74f329e00958d833b732cc9ed1eadf9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebe883f56442fcd71e31c514b16fd8305d2a09f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools F1 도움말
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다음 항목에서는 테이블 속성 창 및 열 속성 탭과 같은 Visual Database Tools 요소에 대한 대화 상자 및 속성 창에서 제공하는 명령과 옵션에 대해 설명합니다.  

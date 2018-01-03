@@ -3,7 +3,7 @@ title: "실행 하 고 다시 쿼리, 방법 예 (VBScript)의 선택을 취소 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24e117e7ef566283f867f8e49e06b085e03882bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb06b4cf66aeecc5413262064829a9702ca6769d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>실행, Requery, 및 메서드 (VBScript) 예제를 지웁니다.
 이 예제에서는 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 에 현재 데이터를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [지우기](../../../ado/reference/ado-api/clear-method-ado.md) 의 내용을 삭제 하는 메서드는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. ExecuteCommand 및 PrintOutput 절차는이 절차를 실행 하려면 필요 합니다.  

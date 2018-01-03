@@ -3,10 +3,10 @@ title: "Windows Server Update Services (WSUS) (분석 플랫폼 시스템) 구�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
 caps.latest.revision: "41"
-ms.openlocfilehash: d2b37819663009df090c76d516d629199691472c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS)를 구성 합니다.
 이 지침에서는 Windows Server Update Services (WSUS) 구성 마법사를 사용 하 여 분석 플랫폼 시스템에 대 한 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스로 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 이미 설치 되었습니다.  
@@ -30,7 +30,7 @@ WSUS 구성에 대 한 자세한 내용은 참조는 [WSUS 단계별 설치 가�
 > [!WARNING]  
 > 이 구성 프로세스 중 오류가 발생 하면 중지 하 고 지원에 문의 하십시오. 오류를 무시 하거나 오류가 수신 된 후 프로세스에서 계속 하지 마십시오.  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
 WSUS를 구성 하려면:  
   
 -   분석 플랫폼 시스템 기기 도메인 관리자 계정 로그인 정보가 있어야 합니다.  

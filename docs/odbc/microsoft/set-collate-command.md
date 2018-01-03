@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73bf988f0ab1b181a75c7569c8b279b36a9b76d8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-collate-command"></a>SET COLLATE 명령
 후속 인덱싱 및 정렬 작업의 문자 필드에 대 한 데이터 정렬 순서를 지정합니다.  
@@ -38,7 +38,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  데이터 정렬 순서를 지정합니다. 사용 가능한 데이터 정렬 순서 옵션을 다음 표에 설명 되어 있습니다.  
   
-|옵션|언어|  
+|변수|언어|  
 |-------------|--------------|  
 |네덜란드어|네덜란드어|  
 |GENERAL|영어, 프랑스어, 독일어, 최신 스페인어, 포르투갈어, 및 기타 서유럽 언어|  

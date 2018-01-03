@@ -1,9 +1,9 @@
 ---
 title: "SSMS(SQL Server Management Studio) 다운로드 | Microsoft 문서"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -30,14 +30,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 90ffdbc2b636c360fd145c83847704f9860d6c37
-ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
+ms.openlocfilehash: efd1e5f85968f90af166a14eb58526b66f20cf3a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SSMS는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS는 SQL의 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. SSMS를 사용하면 응용 프로그램에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드하고 쿼리 및 스크립트를 작성할 수 있습니다.
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] SSMS는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS는 SQL의 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. SSMS를 사용하면 응용 프로그램에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드하고 쿼리 및 스크립트를 작성할 수 있습니다.
 
 로컬 컴퓨터 또는 클라우드 등 어디에서나 SSMS(SQL Server Management Studio)를 사용하여 데이터베이스 및 데이터 웨어하우스를 쿼리, 디자인 및 관리할 수 있습니다.
 
@@ -179,7 +179,7 @@ XE 프로파일러:
 
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [자습서: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio 설명서](sql-server-management-studio-ssms.md)

@@ -3,7 +3,7 @@ title: "운영자에게 작업 상태 알리기 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -24,18 +24,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 735b0b262e7817d77ffcd70e968344ba67a01304
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6b2e18889789f8849546295fbce2b5961c003935
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서 알림 옵션을 설정하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 작업에 대한 알림을 운영자에게 전송할 수 있도록 하는 방법에 대해 설명합니다.  
   
 **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
     [보안](#Security)  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
     [SQL Server 관리 개체](#SMO)  
   
-## <a name="BeforeYouBegin"></a>시작하기 전에  
+## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="Security"></a>보안  
 자세한 내용은 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  

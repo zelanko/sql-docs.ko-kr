@@ -3,7 +3,7 @@ title: "CHECK 제약 조건 식 대화 상자(Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2c1d1ecee5caafc8b4b4c0557fcbe15daf1552cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5d0ac97223818ba2dd3b00dfe4400b416576e699
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>CHECK 제약 조건 식 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] CHECK 제약 조건을 테이블이나 열에 연결하려면 SQL 식을 포함해야 합니다. 제공된 입력란에 CHECK 제약 조건 식을 입력합니다.  
@@ -66,7 +66,7 @@ NOT (payment_method = 'credit card') OR
 |function|기본 제공 함수입니다.|  
 |적용한 후|산술 연산자, 비트 연산자, 비교 연산자 또는 문자열 연산자입니다.|  
 |AND|두 식을 연결하기 위해 부울 식에 사용됩니다. 두 식이 모두 참인 경우에 결과를 반환합니다.<br /><br />문 하나에 AND와 OR를 모두 사용하는 경우 AND가 먼저 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
-|OR|여러 조건을 연결하기 위해 부울 식에 사용됩니다. 한 조건이라도 참이면 결과를 반환합니다.<br /><br />문 하나에 AND와 OR를 모두 사용하는 경우 OR는 AND보다 늦게 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
+|또는|여러 조건을 연결하기 위해 부울 식에 사용됩니다. 한 조건이라도 참이면 결과를 반환합니다.<br /><br />문 하나에 AND와 OR를 모두 사용하는 경우 OR는 AND보다 늦게 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
 |NOT|모든 부울 식을 부정합니다. 여기에는 LIKE, NULL, BETWEEN, IN 및 EXISTS 등과 같은 키워드가 포함될 수 있습니다.<br /><br />문 하나에 논리 연산자를 두 개 이상 사용하는 경우 NOT은 제일 먼저 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

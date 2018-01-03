@@ -3,7 +3,7 @@ title: "인쇄 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bf2b7655a68c15bca3fea87751f036ebfbe0518
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c4c8a107640273cf14b73b032d945d0274418d85
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-dialog-box"></a>인쇄 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **인쇄** 대화 상자에서 옵션을 선택하여 원하는 문서 인쇄 방법을 지정할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 **설명**  
 선택한 프린터에 대한 추가 정보를 포함합니다.  
   
-**속성**  
+**Properties**  
 \<*printer name properties*> 대화 상자를 열려면 클릭합니다.  
   
 **파일로 인쇄**  

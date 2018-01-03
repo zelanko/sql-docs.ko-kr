@@ -3,7 +3,7 @@ title: "BI용 SQL Server Management Studio 소개 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0f53b3e12ef919e69c86091aac8b94f4fb5ea4cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eaccab366a5b3cacd86f3f29f8209f9eaf51a408
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>비즈니스 인텔리전스용 SQL Server Management Studio 소개
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)]를 액세스, 구성 및 관리하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]를 사용합니다. 3가지 비즈니스 인텔리전스 기술 모두 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]에 의존하지만 각 기술과 관련된 관리 태스크는 약간씩 다릅니다.  

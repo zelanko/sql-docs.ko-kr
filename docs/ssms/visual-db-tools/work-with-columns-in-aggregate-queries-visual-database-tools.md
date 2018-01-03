@@ -3,7 +3,7 @@ title: "집계 쿼리에서 열 작업(Visual Database Tools) | Microsoft 문서
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2aca7a040d2eba0fec2870ee95a89d1ad47ae1b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ea4c188fc5075cb0c563e360df5fe2fe83022cb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>집계 쿼리에서 열 작업(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 집계 쿼리를 만드는 경우 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)에서는 특정 가정을 만들어 유효한 쿼리를 만들 수 있도록 합니다. 예를 들어 집계 쿼리를 만들 때 출력할 데이터 열을 표시하면 쿼리 및 뷰 디자이너가 이 열을 자동으로 GROUP BY 절의 일부로 만들기 때문에 요약에서 개별 행의 내용을 실수로 표시할 염려가 없습니다.  

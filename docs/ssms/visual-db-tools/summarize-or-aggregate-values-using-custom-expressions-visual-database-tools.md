@@ -3,7 +3,7 @@ title: "사용자 지정 식을 사용하여 값 요약 또는 집계 | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1edf241b0dee212748090dbf0d35511a3203c78c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2c34ad32139e6baabb94009858809043915773be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>사용자 지정 식을 사용하여 값 요약 또는 집계(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 집계 함수를 사용하여 데이터를 집계할 수 있을 뿐만 아니라 사용자 지정 식을 만들어 집계 값을 산출할 수도 있습니다. 집계 쿼리에서 집계 함수를 사용할 위치에 어디든지 사용자 지정 식을 사용할 수 있습니다.  

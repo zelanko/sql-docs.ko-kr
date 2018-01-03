@@ -3,7 +3,7 @@ title: "Execute 메서드 (ADO 명령) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d8a16c395a01e20765dd1aaa569889b4b041cb9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa39093a0efe75959bfa0e6805ea90b65c6d39a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-method-ado-command"></a>Execute 메서드 (ADO 명령)
 쿼리, SQL 문 또는 저장된 프로시저에 지정 된 실행 되는 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 의 속성은 [명령 개체](../../../ado/reference/ado-api/command-object-ado.md)합니다.  

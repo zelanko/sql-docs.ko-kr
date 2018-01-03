@@ -3,7 +3,7 @@ title: "Parameters 컬렉션 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9544c12738c3c6f3e4d22a62e26c2654c9ac0edb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cceeccbcca886b151dd505881be25687fd26e37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameters-collection-ado"></a>Parameters 컬렉션 (ADO)
 모든 포함 된 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 의 개체는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  

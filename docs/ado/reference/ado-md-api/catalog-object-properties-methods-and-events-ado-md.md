@@ -3,7 +3,7 @@ title: "카탈로그 개체 속성, 메서드 및 이벤트 (ADO MD) | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a280746760e2256ef9be265847442c36d18fadd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1ab186f8f0df3403620bb411db6d3c51c4e4489c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>카탈로그 개체 속성, 메서드 및 이벤트 (ADO MD)
 ## <a name="propertiescollections"></a>속성/컬렉션  

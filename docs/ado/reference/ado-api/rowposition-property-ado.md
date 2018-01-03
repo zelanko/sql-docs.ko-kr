@@ -3,7 +3,7 @@ title: "RowPosition 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3e20769e324400357ea65acc21d338749987ae4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65bd34a35b48b980cd3d9b6c29dc5e297b732fa3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 속성 (ADO)
 OLE DB를 가져오거나 설정 합니다. **RowPosition** 에/에서 개체는 **ADORecordsetConstruction** 개체입니다. 사용 하는 경우 **put_RowPosition** 설정 하는 **RowPosition** 결과 개체 **레코드 집합** 개체에서 사용 하 여 **RowPosition** 개체를 현재 행을 결정 합니다.  

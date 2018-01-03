@@ -2,10 +2,10 @@
 title: "실시간 점수 매기기 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 214fd0c3fad495db4642650de867c8d3a9c3b741
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9136aee11d5104fd0723521a3466361f06ce26d6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="realtime-scoring"></a>실시간 점수 매기기
 
@@ -62,7 +62,7 @@ SQL Server에서 기능을 미리 점수 매기기 실시간 사용 하도록 �
 
 실시간 대 한 자세한 내용은 Microsoft R Server에 기반 하 여 분산된 환경에서 점수 매기기를 참조 하십시오는 [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) 함수에서 사용할 수는 [mrsDeploy 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)를 지 원하는 실시간 새 점수 매기기 R 서버에서 실행 되는 웹 서비스에 대 한 모델을 게시 합니다.
 
-### <a name="restrictions"></a>제한 사항
+### <a name="restrictions"></a>Restrictions
 
 + 사전에 지원 되는 중 하나를 사용 하 여 모델을 학습 해야 **rx** 알고리즘입니다. 자세한 내용은 참조 [알고리즘 지원](#bkmk_rt_supported_algos)합니다. 실시간 점수 매기기 `sp_rxPredict` RevoScaleR와 MicrosoftML 알고리즘을 지원 합니다.
 

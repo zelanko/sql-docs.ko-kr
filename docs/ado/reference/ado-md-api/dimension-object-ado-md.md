@@ -3,7 +3,7 @@ title: "ADO MD 개체 차원 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8b166484928abbeba70934d5b597c7e27d41f1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aeab1d9f91ac80c78bd5c3f546d26ff1c868f3cd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dimension-object-ado-md"></a>차원 개체 (ADO MD)
 하나 이상의 멤버 계층 구조를 포함 하는 다차원 큐브의 차원 중 하나를 나타냅니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  **속성** 컬렉션 공급자를 제공 하는 속성을 포함 합니다. 다음 표에서 사용할 수 있는 속성을 나열 합니다. 실제 속성 목록은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록은 대 한 공급자에 대 한 설명서를 참조 하십시오.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |CatalogName|이 큐브 속해 있는 카탈로그의 이름입니다.|  
 |CubeName|큐브의 이름입니다.|  

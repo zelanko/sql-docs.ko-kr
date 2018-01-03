@@ -5,7 +5,7 @@ ms.date: 10/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac241b75f8501df03eb7938ab5ab952dd49ddb52
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c23f8d37e7af9daad2af78164a21adbe8c613a3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>SQL Server 마이그레이션 평가 수행
 단계별 지침을 통해 온-프레미스 SQL Server, 데이터 마이그레이션 길잡이 사용 하 여 Azure SQL 데이터베이스 또는 Azure VM에서 실행 중인 SQL Server로 마이그레이션하기 위한 첫 번째 평가 수행할 수 수 있습니다.

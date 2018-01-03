@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c8c6d75686741d1835f46a5ad7a64ab04c6925f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-table---sql-command"></a>테이블-SQL 명령을 만들려면
 지정된 된 필드가 있는 테이블을 만듭니다.  
@@ -72,7 +72,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  NULL  
  필드에 null 값을 허용 합니다.  
   
- NOT  NULL  
+ NOT NULL  
  필드에 null 값을 방지합니다.  
   
  NOT NULL 및 NULL를 생략 NULL 설정의 현재 설정을 필드에 null 값 허용 여부를 결정 합니다. 그러나 생략 NULL 및 NOT NULL 및 PRIMARY KEY 또는 UNIQUE 절 포함 NULL 설정의 현재 설정을 무시 되 고는 필드는 기본적으로 NOT NULL입니다.  

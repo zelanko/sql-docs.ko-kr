@@ -3,7 +3,7 @@ title: "개체 탐색기 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 05c1ba2d0a8d223ee1d4713613b23d9d07df8241
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8c782b118587bb1b3b8596172901daf57086ef81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-explorer"></a>개체 탐색기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,6 +53,6 @@ ms.lasthandoff: 12/05/2017
 |개체 탐색기를 열고 탐색기의 동작을 정의하는 옵션을 구성하는 방법에 대해 설명합니다.|[개체 탐색기 열기 및 구성](../../ssms/object/open-and-configure-object-explorer.md)|  
 |개체 탐색기를 [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]인스턴스에 연결하는 방법에 대해 설명합니다.|[개체 탐색기에서 인스턴스에 연결](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |개체 탐색기 계층 구조에서 노드로 표시되는 개체를 관리하는 방법에 대해 설명합니다.|[개체 탐색기를 사용하여 개체 관리](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
-|개체 탐색기 정보 창에 대해 설명합니다. 개체 탐색기 정보 창은 서버의 모든 개체를 관리하기 위한 사용자 인터페이스를 제공하는 테이블 형식 뷰입니다.|[개체 탐색기 세부 정보 창](../../ssms/object/object-explorer-details-pane.md)|  
+|개체 탐색기 정보 창에 대해 설명합니다. 개체 탐색기 정보 창은 서버의 모든 개체를 관리하기 위한 사용자 인터페이스를 제공하는 테이블 형식 뷰입니다.|[개체 탐색기 정보 창](../../ssms/object/object-explorer-details-pane.md)|  
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에서 사용자 지정 보고서를 실행하는 방법에 대해 설명합니다.|[Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)|  
   

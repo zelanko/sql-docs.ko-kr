@@ -2,11 +2,11 @@
 title: "SQL Server의 기계 학습에 대 한 리소스 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e5f334edf065d691a78469c01bf2cd3352a71544
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 61cffc85e6a27ffe4c171da8849d84a19332f223
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server의 기계 학습에 대 한 리소스 관리
 
@@ -91,7 +91,7 @@ SQL Server에서는 세 가지 유형의 기본 리소스 풀을 지원합니다
 
 따라서 즉시 완화 되어야 하는 리소스 문제 또는 보안 문제가 있는 경우 관리자가 즉시 해제할 수 있는 외부 스크립트 실행을 사용 하 여 [sp_configure &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 속성을 설정 하 고 `external scripts enabled` FALSE 또는 0입니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [기계 학습 솔루션 관리 및 모니터링](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 

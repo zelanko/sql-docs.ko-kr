@@ -3,7 +3,7 @@ title: "속성 (ADO)를 준비 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62f01b807c56065c61e5cf8650c15f7210df6b7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a938fcdbf5fbdbe73ca61465063ccd3622711920
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prepared-property-ado"></a>준비 된 속성 (ADO)
 컴파일된 버전을 저장할지 여부를 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 실행 하기 전에.  

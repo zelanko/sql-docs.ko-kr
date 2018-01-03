@@ -3,7 +3,7 @@ title: "연결 (ADO-WFC 구문) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 484591a11de70bda78a0916205fca3c444927bc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6933f51d4879d389d97cd266f9d91d2f5e0ea39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-ado---wfc-syntax"></a>연결 (ADO-WFC 구문)
 ## <a name="package-commswfcdata"></a>패키지 com.ms.wfc.data  

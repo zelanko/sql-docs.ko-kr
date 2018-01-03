@@ -2,12 +2,14 @@
 title: "R 코드를 사용 하 여 transact-sql (SQL 빠른 시작에서 R) | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 08/20/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
@@ -16,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2513c04aaf701bcbcb83716bc6b528c5d12e28c4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 413eefaf65d2d1547635e9bd3ceb2214cf6eb039
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>R 코드를 사용 하 여 transact-sql (SQL 빠른 시작에서 R)
 
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/01/2017
 
 30분, 설치 제외
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이미 설치 된 다음 중 하나가 지정 된 SQL Server의 인스턴스에 액세스할 수 있어야 합니다.
 

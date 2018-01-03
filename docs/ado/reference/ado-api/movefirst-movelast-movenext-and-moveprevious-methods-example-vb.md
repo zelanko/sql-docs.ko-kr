@@ -3,7 +3,7 @@ title: "레코드 집합 예 (VB)의 레코드 포인터를 이동 합니다. | 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 14d424c130d61a2bfc058d6c15b41793482d8af5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4aef1776ebb59bd646bbfce9b84b3de4892dc41f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 예제 (VB)
 사용 하 여이 예제는 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), 및 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 는 의레코드포인터를이동하는메서드를[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 제공 된 명령을 기반으로 합니다. MoveAny 절차는이 절차를 실행 하려면 필요 합니다.  

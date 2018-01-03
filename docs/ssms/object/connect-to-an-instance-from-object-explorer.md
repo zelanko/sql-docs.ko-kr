@@ -3,7 +3,7 @@ title: "SQL Server 또는 Azure SQL Database에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9f1f7bc813e3b22007c9a7ef58ce373e57fbe0c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 023641a1c7f298af6a946e3d9746bc8fe29145a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server 또는 Azure SQL Database에 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 서버 및 데이터베이스를 사용하려면 먼저 서버에 연결해야 합니다. 여러 서버에 동시에 연결할 수 있습니다.
@@ -52,11 +52,11 @@ ms.lasthandoff: 12/05/2017
 
    ![연결됨](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>다음 단계
+## <a name="next-steps"></a>Next Steps
 
 [테이블 디자인, 생성 및 업데이트](../visual-db-tools/design-tables-visual-database-tools.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SSMS(SQL Server Management Studio)](../sql-server-management-studio-ssms.md)  
 [SSMS(SQL Server Management Studio) 다운로드](../download-sql-server-management-studio-ssms.md)

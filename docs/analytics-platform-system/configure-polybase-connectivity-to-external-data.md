@@ -3,10 +3,10 @@ title: "외부 데이터 (분석 플랫폼 시스템) PolyBase 연결 구성"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: "43"
-ms.openlocfilehash: 7d486992f688b5bc914508ef000f23209b4bde89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 391b088af58f7c231d9d95e6940332f8f78dd1d5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>외부 데이터 연결 PolyBase 구성
 Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연결 하려면 SQL Server PDW에서 PolyBase를 구성 하는 방법에 설명 합니다. PolyBase를 사용 하 여 Hadoop, Azure blob 저장소, SQL Server PDW를 비롯 한 여러 원본의 데이터를 통합 하는 쿼리를 실행 합니다.  

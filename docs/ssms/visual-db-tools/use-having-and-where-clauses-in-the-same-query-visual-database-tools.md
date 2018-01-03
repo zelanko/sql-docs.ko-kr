@@ -3,7 +3,7 @@ title: "동일한 쿼리에서 HAVING 및 WHERE 절 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f4bfd62f245d9f2c46324fc437483fb379a2faa7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89c20b9ce8f4789a9be80efd8bd95a3763ba8800
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 경우에 따라서는 HAVING 절을 사용하여 그룹 전체에 조건을 적용하기 전에 WHERE 절을 사용하여 그룹에서 개별 행을 제외해야 할 수도 있습니다.  

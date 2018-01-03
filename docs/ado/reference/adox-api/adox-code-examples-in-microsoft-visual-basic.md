@@ -3,7 +3,7 @@ title: "ADOX 코드 예제에서는 Microsoft Visual Basic | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72497e01d95884bdfb09a451936b0df086e7b321
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3092479b81c672da3e71f685fa7c5711340c28d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>ADOX 코드 예제에서는 Microsoft Visual Basic
 이러한 항목 ADOX를 사용 하는 방법을 이해 하는 예제 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual Basic을 사용 하 여 기록 됩니다.  

@@ -3,10 +3,10 @@ title: "모니터 어플라이언스 상태 (분석 플랫폼 시스템)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
 caps.latest.revision: "12"
-ms.openlocfilehash: dad3355061bafcbbfa3a34b21d2043b0411129ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d83c3d35c4cf65ebf714b44bc9db7db36b11f818
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-appliance-health-state"></a>모니터 어플라이언스 상태
 이 SQL Server PDW 동적 관리 뷰를 직접 쿼리하여 또는 관리 콘솔을 사용 하 여 SQL Server PDW 어플라이언스의 상태를 모니터링 하는 방법을 설명 합니다.  

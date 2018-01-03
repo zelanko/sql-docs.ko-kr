@@ -3,7 +3,7 @@ title: "GetPermissions 및 SetPermissions 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 815c41c39e7355161489afc486ee4db8802e18df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8b29b1bc4d55e67aad09137c2d0a7a21e4f0480
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 및 SetPermissions 메서드 예제 (VB)
 이 예제에서는 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 및 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 메서드. 다음 코드를 관리자로 Orders 테이블에 대 한 전체 액세스를 제공합니다.  

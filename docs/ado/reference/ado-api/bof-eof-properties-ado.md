@@ -3,7 +3,7 @@ title: "BOF, EOF 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e97052bce1e27e7730ffa73d04a8ba95f8af233c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c2b827856eac7ec2eed9ca4f3580b2a12418933
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성 (ADO)
 -   **BOF** 현재 레코드 위치에 있는 첫 번째 레코드 앞에 있는 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -55,9 +55,9 @@ ms.lasthandoff: 11/17/2017
   
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> < 0 이동|Move 0|MoveNext<br /><br /> > 0 이동|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|허용함|오류|오류|허용함|  
-|**BOF**=**False**, **EOF**=**True**|허용함|허용함|오류|오류|  
-|둘 다 **True**|오류|오류|오류|오류|  
+|**BOF**=**True**, **EOF**=**False**|허용함|Error|Error|허용함|  
+|**BOF**=**False**, **EOF**=**True**|허용함|허용함|Error|Error|  
+|둘 다 **True**|Error|Error|Error|Error|  
 |둘 다 **False**|허용함|허용함|허용함|허용함|  
   
  허용는 **이동** 메서드 메서드는 레코드를 제대로 찾는 것은 보증 하지 않습니다; 지정 된 호출만 의미 **이동** 메서드 오류가 발생 하지 것입니다.  

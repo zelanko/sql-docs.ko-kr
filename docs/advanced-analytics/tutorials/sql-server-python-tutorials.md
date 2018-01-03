@@ -2,23 +2,17 @@
 title: "SQL Server Python 자습서 | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 09/19/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
-ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
+vapplies_to: SQL Server 2017
 dev_langs: Python
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 2ad3195e695d7e99a812b5eb6c3987f9553e248c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 60b17dd267e5b6bbb940a335aa89b74585b24dcc
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 자습서
 
@@ -84,6 +78,6 @@ SQL Server 설치 프로그램을 실행 한 후 이러한 중요 한 단계를 
 
 문제를 실행 하면 몇 가지 일반적인 문제에 대 한이 문서를 참조 하세요.: [컴퓨터 학습 서비스 문제 해결](../machine-learning-troubleshooting-faq.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [SQL Server용 R 자습서](sql-server-r-tutorials.md)

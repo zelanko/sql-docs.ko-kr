@@ -3,7 +3,7 @@ title: "Query 메서드 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32233e74eece2de258223599a682c8fb27d46fe6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ceedab6dd52492c5660165b3b1377def3a51f253
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-method-rds"></a>Query 메서드 (RDS)
 유효한 SQL 쿼리 문자열을 사용 하 여 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

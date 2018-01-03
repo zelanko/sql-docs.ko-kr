@@ -3,7 +3,7 @@ title: "개체 (ADO) 레코드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0efb504844ac58e7889cdb768821efe95f52e0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1246dfe943ae415f7777e5924c14580fe05afbe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-object-ado"></a>Record 개체 (ADO)
 행을 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) , 데이터 공급자 또는 파일 또는 디렉터리와 같은 반 구조화 된 데이터 공급자를 반환 하는 개체입니다.  

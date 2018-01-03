@@ -2,11 +2,11 @@
 title: "SQL Server 인스턴스의 컴퓨터 학습 구성 요소를 업그레이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e83922e15c8bea5f26dcc5c1992acc0529daf18c
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>SQL Server 인스턴스의 컴퓨터 학습 구성 요소 업그레이드
 
@@ -189,7 +189,7 @@ Microsoft R Server 9.1.0에 대 한 새 설치 관리자를 실행 하면 SQL Se
 
 ### <a name="parameters"></a>매개 변수
 
-|이름|Description|
+|속성|Description|
 |------|------|
 |*list*| 현재 컴퓨터의 모든 SQL Database 인스턴스 ID 목록을 표시합니다.|
 |*bind*| 지정된 SQL Database 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R 서버의 향후 업그레이드를 자동으로 가져오도록 합니다.|
@@ -199,7 +199,7 @@ Microsoft R Server 9.1.0에 대 한 새 설치 관리자를 실행 하면 SQL Se
 
 이 도구는 다음과 같은 오류 메시지를 반환합니다.
 
-|오류|해결 방법|
+|Error|해결 방법|
 |------|------|
 |인스턴스를 바인딩하는 동안 오류가 발생했습니다.| 인스턴스를 바인딩할 수 없습니다. 지원 서비스에 문의하세요.|
 |인스턴스가 이미 바인딩되어 있습니다.| *bind* 명령을 실행했지만 지정한 인스턴스가 이미 바인딩되어 있습니다. 다른 인스턴스를 선택하세요.|

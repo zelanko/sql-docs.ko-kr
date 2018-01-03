@@ -3,7 +3,7 @@ title: "쿼리에 파생 테이블 추가(Visual Database Tools) | Microsoft 문
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2d34a149735ccf0238167d6785560f2dcdbbc0b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a6a04a3e2beadefdd94596e215eb972c0af4a7ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>쿼리에 파생 테이블 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 파생 테이블은 쿼리에서 테이블 원본으로 사용되는 결과 집합입니다. **다이어그램 창**에서 파생 테이블을 쿼리에 추가할 수 있습니다.  

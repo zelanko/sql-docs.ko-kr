@@ -3,7 +3,7 @@ title: "쿼리 및 뷰 디자이너에 국가별 데이터 사용 | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0b88c7cbc8f2976c79017ebca218eb79cbfcc588
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 562e347f9f51230c41358545e93cc970743a3f74
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>쿼리 및 뷰 디자이너에 국가별 데이터 사용(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 모든 언어 및 모든 Windows 운영 체제 버전에서 사용할 수 있습니다. 다음 지침은 이러한 상황에서 나타나는 차이점을 요약한 것이며, 국가별 응용 프로그램에서 데이터를 관리하는 방법에 대해 설명합니다.  

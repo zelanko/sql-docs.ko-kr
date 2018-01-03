@@ -3,10 +3,10 @@ title: "Microsoft (SQL Server PDW) 원격 분석 피드백 보내기"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
 caps.latest.revision: "18"
-ms.openlocfilehash: f2c928c8f61a98af3eb1e5f05881683dbcaedf1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>Microsoft 원격 분석 피드백 보내기
 분석 플랫폼 시스템에 관리 콘솔 데이터를 Microsoft로 전송 하는 선택적 원격 분석 기능이 있습니다. 이 제품을 개선 하기 위한 필드를 사용 하는 것이 좋습니다.  

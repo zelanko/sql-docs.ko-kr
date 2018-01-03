@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e78cbddc46b03fc39a2603f06b3563f99a8abec3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d867b0a2a61c9d60ce91453b43d1a19b2f37935e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 오류 코드 (Visual FoxPro ODBC 드라이버)
 다음 표에서 ODBC 오류 코드 SQLSTATE 값에 매핑된 Visual FoxPro 오류 코드를 나열 합니다. 매핑된 SQLSTATE 값에서 제공 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 및 [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)합니다. 때문에 다른 ODBC API의 다른 SQLSTATE 값 매핑된 **SQLExecDirect** 및 **SQLPrepare** Visual FoxPro 엔진에 액세스 하는 유일한 함수입니다.  

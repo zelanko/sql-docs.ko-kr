@@ -3,7 +3,7 @@ title: ResyncEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f7ad5525f2f9e7ce7e915b97d397d3d7d372a27
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 64e65b766600b9da9a721da2ca9ad702dfb05d18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resyncenum"></a>ResyncEnum
 호출 하 여 원본 값을 덮어쓸지 여부를 지정 [Resync](../../../ado/reference/ado-api/resync-method.md)합니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|기본. 데이터를 덮어쓰고 보류 중인 업데이트가 취소 됩니다.|  
-|**adResyncUnderlyingValues**|1.|데이터를 덮어쓰지 않습니다 및 보류 중인 업데이트를 취소 하지 않습니다.|  
+|**adResyncUnderlyingValues**|1|데이터를 덮어쓰지 않습니다 및 보류 중인 업데이트를 취소 하지 않습니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
  패키지에 대 한 **com.ms.wfc.data**  

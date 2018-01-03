@@ -3,7 +3,7 @@ title: "OriginalValue 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: baa1b522660f2ed7d521a55ad995ed8347c0a2fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70e33fcec6571a845ee81a393e5f267cc945de5d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 속성 (ADO)
 값을 나타냅니다는 [필드](../../../ado/reference/ado-api/field-object.md) 는 전의 레코드에서 변경 작업을 수행 합니다.  

@@ -3,7 +3,7 @@ title: "중앙 관리 서버 및 서버 그룹 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 03053923b6cb9ec0515131f45b1bd36a9aa50854
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 59a0fecfbf924b2ce4ab4d9e559dac678dfcb661
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>중앙 관리 서버 및 서버 그룹 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 중앙 관리 서버로 지정하는 방법에 대해 설명합니다. 중앙 관리 서버는 하나 이상의 중앙 관리 서버 그룹으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스 목록을 저장합니다. 중앙 관리 서버 그룹을 사용하여 수행되는 동작은 서버 그룹의 모든 서버에 적용됩니다. 여기에는 개체 탐색기를 사용하여 서버에 연결하는 동작 및 여러 서버에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 정책 기반 관리 정책을 동시에 실행하는 동작이 포함됩니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/05/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  msdb 데이터베이스의 두 데이터베이스 역할을 통해 중앙 관리 서버에 대한 액세스 권한을 부여합니다. 이 중 ServerGroupAdministratorRole 역할의 멤버만 중앙 관리 서버를 관리할 수 있으며 중앙 관리 서버에 연결하려면 ServerGroupReaderRole 역할의 멤버 자격이 필요합니다.  
   
  중앙 관리 서버에서 유지 관리하는 연결은 Windows 인증을 사용하여 사용자 컨텍스트 내에서 실행되므로 등록된 서버에 대한 유효 사용 권한은 달라질 수 있습니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 인스턴스에서는 sysadmin 고정 서버 역할의 멤버이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 인스턴스에서는 제한된 사용 권한을 가질 수 있습니다.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/05/2017
   
 -   하나의 중앙 관리 서버, 하나 이상의 서버 그룹 및 하나 이상의 등록된 서버를 만든 후에는 전체 그룹에 대해 동시에 쿼리를 실행할 수 있습니다. 서버 그룹의 서버에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동시에 실행하는 방법에 대한 자세한 내용은 [여러 서버에 대해 동시에 문 실행&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [중앙 관리 서버를 사용하여 여러 서버 관리](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

@@ -3,7 +3,7 @@ title: "ADO MD depth 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cac1a30dcd710686186d9d6db4f215aebb7eab41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6999cc0ee4f5dcea08bec0c09f99257eef641590
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="depth-property-ado-md"></a>ADO MD depth 속성
 사이 있는 수준 수를 나타내는 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 및 계층의 루트입니다.  

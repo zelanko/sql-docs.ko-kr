@@ -3,7 +3,7 @@ title: "쿼리 형식(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5172dd65f727d4829dd92b1aa5f54ce0f8bea89
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ea5c9451b1db6e369525edd93a9d735f6538263e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-queries-visual-database-tools"></a>쿼리 형식(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 및 뷰 디자이너에서는 선택, 결과 삽입, 값 삽입, 업데이트, 삭제 및 테이블 만들기 쿼리 형식에 대한 기본적인 기능을 제공하고 UNION 쿼리, 전체 텍스트 검색 쿼리 및 CASE 식 쿼리도 지원합니다.  
@@ -61,7 +61,7 @@ SELECT 문의 결과를 테이블에 삽입하는 쿼리를 만드는 방법에 
 [쿼리 속성&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
 쿼리를 디자인할 때 사용할 수 있는 속성에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 쿼리와 뷰를 디자인하고 조작하는 방법에 대해 설명합니다.  
   

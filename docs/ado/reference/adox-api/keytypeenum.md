@@ -3,7 +3,7 @@ title: KeyTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b560d4b5edd23593f5c149813a6be445bc79dd1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b7041fefba35f0b496473af4ca25e861ee798918
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 유형을 지정 [키](../../../ado/reference/adox-api/key-object-adox.md): 기본, 외래, 또는 고유 합니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adKeyPrimary**|1.|기본. 키가 기본 키.|  
+|**adKeyPrimary**|1|기본. 키가 기본 키.|  
 |**adKeyForeign**|2|키는 외래 키입니다.|  
 |**adKeyUnique**|3|키는 고유 합니다.|  
   

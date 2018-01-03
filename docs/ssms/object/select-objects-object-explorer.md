@@ -3,7 +3,7 @@ title: "개체 선택(개체 탐색기) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 27a9e701bc4dede53db94d2f9ab3260e3d305d81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select-objects-object-explorer"></a>개체 선택(개체 탐색기)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **개체 선택** 대화 상자를 사용하여 다른 대화 상자에 있는 목록에 개체를 추가할 수 있습니다. 대화 상자 제목과 대화 상자에서 사용할 수 있는 옵션은 대화 상자를 연 방법에 따라 다릅니다. 사용 가능한 옵션만 나타납니다. 예를 들어 새 개체의 소유자를 선택하는 경우에는 로그인만 사용할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **개체 유형 선택**  
 선택할 개체가 속한 유형 목록을 표시합니다. 유형에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 수준과 데이터베이스 수준의 보안 주체 및 보안 개체가 있습니다. 이 상자는 **개체 유형** 단추를 클릭하여 액세스할 수 있는 **개체 유형 선택** 대화 상자에서 선택한 항목으로 채워집니다.  
   

@@ -3,7 +3,7 @@ title: "다중 사용자 환경(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b698bbf209cc7f30c6b5c13b90104e1cadd752be
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 856d43b504fad6aa72bf23dcfe9eff3ff6384246
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>다중 사용자 환경(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다중 사용자 환경은 작업하고 있는 동일한 데이터베이스에 다른 사용자가 연결하여 변경할 수 있는 환경입니다. 결과적으로 여러 명의 사용자가 동시에 동일한 데이터베이스 개체에서 작업할 수 있습니다. 따라서 다중 사용자 환경에서 현재 사용자가 작업 중인 데이터베이스를 다른 사용자가 변경할 수 있으며 그 반대의 경우도 가능합니다.  

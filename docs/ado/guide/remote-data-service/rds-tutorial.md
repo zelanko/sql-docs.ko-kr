@@ -3,7 +3,7 @@ title: "RDS 자습서 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7cb8882a540b2f079aeff1c3a014dc6b43c692d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43835c09a245725ad169e037abd0080f7794d6ab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-tutorial"></a>RDS 자습서
 이 자습서에서는 RDS 프로그래밍 모델을 사용 하 여를 쿼리하고 데이터 소스를 업데이트 합니다. 먼저,이 작업을 수행 하는 데 필요한 단계에 설명 합니다. 다음 자습서는 Microsoft® Visual Basic Scripting Edition (ADO에 대 한 Windows Foundation Class (ADO/WFC) 특징으로)에서 반복 됩니다.  

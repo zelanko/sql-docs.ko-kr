@@ -3,7 +3,7 @@ title: "검색 조건 지정(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3573826befe64c24817f0c1198af1a2c632bcb6a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 773ae71e94702da89b1e4a9cea350e1307881af6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 검색 조건을 지정하여 쿼리에 표시할 데이터 행을 지정할 수 있습니다. 예를 들어 `employee` 테이블을 쿼리 중인 경우 특정 지역에 근무하는 직원만 찾도록 지정할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
 쿼리 및 뷰 디자이너는 WHERE 절을 추가하거나 수정하여 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 에서 SQL 문을 업데이트합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [검색 값 입력 규칙&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
 [검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

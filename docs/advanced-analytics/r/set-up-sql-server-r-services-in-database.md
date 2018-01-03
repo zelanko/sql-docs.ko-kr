@@ -2,11 +2,11 @@
 title: "SQL Server 컴퓨터 학습 Services (In-database) 설치 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/15/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 3a32560422e8fc5f1a2e4284702d2cb28562f01f
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 2b0bace5079478e725df9d253c31e583193660cb
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>SQL Server 컴퓨터 학습 Services (In-database) 설치
 
@@ -231,7 +231,7 @@ ms.lasthandoff: 11/16/2017
 
     | hello |
     |----|
-    | 1.|
+    | 1|
 
 
 8. 오류가 발생 하는 경우 설치가 완료 된 후 확인 또는 문제 해결 가이드를 참조 해야 할 수 있는 선택적, 기타 변경 내용을 설명 하는 섹션으로 진행 합니다.

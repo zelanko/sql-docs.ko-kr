@@ -3,7 +3,7 @@ title: "위치 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e909d68acae61d209d8d5c9be569b6d76c88b892
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c355410d0536b4f461973ac55ba382183aa3694
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>위치 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 원하는 파일을 포함하는 폴더를 찾고 선택할 수 있습니다. 이 대화 상자에서는 호출하는 대화 상자로 선택한 폴더의 경로를 반환합니다. 다음과 같은 방법으로 이 대화 상자에 액세스할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 **폴더 이름**  
 선택한 폴더의 경로를 표시합니다.  
   
-**열기**  
+**파일**  
 호출하는 대화 상자로 **폴더 이름** 필드에서 선택한 폴더의 경로를 반환합니다.  
   
 ## <a name="toolbar"></a>도구 모음  

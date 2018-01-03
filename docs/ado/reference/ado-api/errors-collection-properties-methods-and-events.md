@@ -3,7 +3,7 @@ title: "오류 컬렉션 속성, 메서드 및 이벤트 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b98786b581fe6e479bddd9048e4a299c0338b4c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 562ae7488e0152e5ca9024d4e9a934d4d824759e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>오류 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 716c304225e71455a6c492e9824712806f83e3a8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ed7759322501a8bbf7a214669c7e4c1480af8882
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="escape-sequences"></a>이스케이프 시퀀스
 날짜, 시간, 타임 스탬프 및 날짜/시간 간격 리터럴 스칼라 함수 호출에 대 한 표준 문법을 포함 하는 이스케이프 시퀀스를 정의 하는 ODBC **같은** 이스케이프 문자, 외부 조인 및 프로시저 호출 조건자입니다. 상호 운용 가능한 응용 프로그램 가능 하면 이러한 시퀀스를 사용 해야 합니다.  

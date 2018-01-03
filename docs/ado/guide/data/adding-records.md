@@ -3,7 +3,7 @@ title: "레코드 추가 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d46cb8e801f39cf8b87c0c3187667247e3da9d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 055603ed5db63df42fd7301df84eb615ae4c9833
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-records-to-a-recordset"></a>레코드 집합에 레코드를 추가합니다.
 사용 하 여는 **AddNew** 메서드를 만들고 기존에서 새 레코드를 초기화할 **레코드 집합**합니다. 사용할 수 있습니다는 **지원** 메서드는 **CursorOptionEnum** 값 **adAddNew** 현재 레코드를 추가할 수 있는지 여부를 확인 하려면 **레코드집합** 개체입니다.

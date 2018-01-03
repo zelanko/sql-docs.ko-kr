@@ -2,11 +2,11 @@
 title: "고급 컴퓨터 학습 서비스에 대 한 구성 옵션 | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 369c630e249d7775e67508fc9b00e94447182012
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24f2082572cdb314257826570471548f87b1b60e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>컴퓨터 학습 서비스에 대 한 고급 구성 옵션
 
@@ -97,7 +97,7 @@ SQL Server 2016 R Services의 초기 버전에서을 편집 하 여 서비스의
 
 다음 표에서에 대 한 고급 설정을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 허용 가능한 값을 사용 합니다. 
 
-|**설정 이름**|**형식**|**Description**|
+|**설정 이름**|**형식**|**설명**|
 |----|----|----|
 |작업\_정리\_ON\_종료|정수 |이 내부 설정 –이 값을 변경 하지 마십시오. </br></br>세션이 완료 된 후 각 외부 런타임 세션에 대해 생성 된 임시 작업 폴더를 정리 해야 하는지 여부를 지정 합니다. 이 설정은 디버깅 작업에 유용합니다. </br></br>지원 되는 값은 **0** (사용 안 함) 또는 **1** (사용). </br></br>기본값은 1, 종료 시 의미 로그 파일이 제거 됩니다.|
 |추적\_수준|정수 |디버깅을 위해 MSSQLLAUNCHPAD의 추적의 자세한 정도 수준을 구성 합니다. 이 LOG_DIRECTORY 설정에 의해 지정 된 경로에서 추적 파일을 영향을 줍니다. </br></br>지원 되는 값은: **1** (오류), **2** (성능) **3** (경고) **4** (정보). </br></br>기본값은 1, 출력 경고만 의미 합니다.|

@@ -3,10 +3,10 @@ title: "바이러스 백신 소프트웨어 (분석 플랫폼 시스템)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
 caps.latest.revision: "29"
-ms.openlocfilehash: f1d5c81381b486ec89198fed6aa22ccff22a544a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1733ec6be50d839284fa147eb1cf5c1660b77190
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="antivirus-software"></a>바이러스 백신 소프트웨어
 데이터 센터 바이러스 백신 소프트웨어를 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 다음이 지침을 사용 합니다. 데이터 센터의 절대적인 요구 하는 경우 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.  

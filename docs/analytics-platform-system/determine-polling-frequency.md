@@ -3,10 +3,10 @@ title: "폴링 빈도 (분석 플랫폼 시스템)를 결정 합니다."
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 062c0e3d-f7d0-44f1-aeab-a9bd17dc6fdd
 caps.latest.revision: "7"
-ms.openlocfilehash: fb32abc38a90cd7450dc310a9f73eb7a5d72b5fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dce371320f42df646e861b1323b352966ae9916
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determine-polling-frequency"></a>폴링 빈도 결정 합니다.
 이 항목에서는 SQL Server PDW 어플라이언스에 경고에 대 한 폴링 빈도 결정 하는 방법에 설명 합니다.  

@@ -3,10 +3,10 @@ title: "Microsoft 업데이트 (분석 플랫폼 시스템)를 제거 합니다.
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df61570a-210d-4154-822f-98acd721f075
 caps.latest.revision: "19"
-ms.openlocfilehash: c801918cbac5d0762384a0cd3adcca9ddf8f346a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52bd212a753f4bb69c79d8b8e274664d2100cbee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uninstall-microsoft-updates"></a>업데이트 제거
 이 항목에서는 분석 플랫폼 시스템 기기에서 이전에 설치 된 Microsoft 업데이트를 제거 하는 방법에 설명 합니다.  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 다음이 단계를 수행 하려면 다음이 필요 합니다.  
   
 -   어플라이언스를 모니터링 하는 관리 콘솔에 액세스할 수 있는 권한이 있는 분석 플랫폼 시스템 로그인입니다.  

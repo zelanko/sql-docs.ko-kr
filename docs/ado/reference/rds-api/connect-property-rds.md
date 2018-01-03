@@ -3,7 +3,7 @@ title: "연결 속성 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bb6a9a33267b70f83eb9a3c559ec24e5e1427af7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fd828ee21628a5c0b00566c47b9b7dedcb5b0b65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-property-rds"></a>속성 (RDS) 연결
 쿼리 및 업데이트 작업은 실행 하는 데이터베이스 이름을 나타냅니다.  

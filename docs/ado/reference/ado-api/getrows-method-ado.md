@@ -3,7 +3,7 @@ title: "GetRows 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8a80f8619d636c13b8c76b4f867e7cbe6333a742
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 317e654699ab6e2c6abc349d91ed58d4c97a7a19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getrows-method-ado"></a>(ADO) 메서드
 여러 레코드를 검색 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 배열에 있습니다.  
@@ -48,7 +48,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *시작*  
  (선택 사항) A **문자열** 값 또는 **Variant** 있는 레코드에 대 한 책갈피로 계산 되는 **GetRows** 작업을 시작 해야 합니다. 사용할 수도 있습니다는 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) 값입니다.  
   
- *필드*  
+ *Fields*  
  (선택 사항) A **Variant** 나타내는 단일 필드 이름 또는 서 수 위치 또는 배열 필드 이름 또는 서 수 위치 번호입니다. ADO 이러한 필드의 데이터에 대해서만 반환합니다.  
   
 ## <a name="remarks"></a>주의  

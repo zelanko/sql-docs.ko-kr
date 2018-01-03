@@ -3,7 +3,7 @@ title: "저장(허용되지 않음) 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1224061affb1882d717f184f974a176d30a24a8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 188f544161ee56e63d92e381fa4cd5485eeba05e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-not-permitted-dialog-box"></a>저장(허용되지 않음) 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **저장**(허용되지 않음) 대화 상자는 변경한 내용을 적용하려면 나열된 테이블을 삭제한 다음 다시 만들어야 하므로 변경 내용 저장이 허용되지 않음을 경고합니다.  

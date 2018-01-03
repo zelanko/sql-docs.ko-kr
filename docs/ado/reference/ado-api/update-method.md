@@ -3,7 +3,7 @@ title: "Update 메서드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b8d9acf6072961b1d63a691033d4c2ecd578cb4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7d416b0d132af4d2f1d2145de577ca930eaeef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update-method"></a>Update 메서드
 현재 행에 수행한 변경 내용을 저장 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션은 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  
@@ -38,7 +38,7 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *필드*  
+ *Fields*  
  (선택 사항) A **Variant** 단일 이름을 나타내는 또는 **Variant** 이름 또는 하나 이상의 수정할 필드의 서 수 위치를 나타내는 배열입니다.  
   
  *값*  

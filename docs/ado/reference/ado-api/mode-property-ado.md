@@ -3,7 +3,7 @@ title: "Mode 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71b8bbcaa20e10791f8e3d684655b47e3dd1441a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21a3257ff92cd73d10f0685a7727d98417a917ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mode-property-ado"></a>Mode 속성 (ADO)
 데이터 수정에 대 한 사용할 수 있는 권한을 나타냅니다는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [레코드](../../../ado/reference/ado-api/record-object-ado.md), 또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  

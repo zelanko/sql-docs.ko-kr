@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 939ac623b62b4b079e81a5c3f12df804e0b6171c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>ODBC 연결 풀링 옵션 설정
 연결 풀링은 사용할 때마다 다시 설정에 필요 하지 않은 연결 풀에서 연결을 사용 하도록 응용 프로그램입니다. 사용할 수는 **연결 풀링** 탭은 **ODBC 데이터 원본 관리자** 대화 상자를 사용 하도록 설정 하 고 성능 모니터링을 사용 하지 않도록 설정 합니다. 연결 제한 시간을 설정 하는 드라이버 이름을 두 번 클릭 합니다.  

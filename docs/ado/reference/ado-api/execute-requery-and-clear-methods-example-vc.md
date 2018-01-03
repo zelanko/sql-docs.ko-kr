@@ -3,7 +3,7 @@ title: "실행 하 고 다시 쿼리, 메서드 예제 (VC + +)의 선택을 취
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b991ab1b281f00bf94253e98628789fc97433958
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86168ef1f2fdff985d7c9c61188d42c1afea4369
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>실행 하 고 다시 쿼리, 메서드 예제 (VC + +)을 선택 취소
 이 예제에서는 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 에 현재 데이터를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [지우기](../../../ado/reference/ado-api/clear-method-ado.md) 의 내용을 삭제 하는 메서드는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. ExecuteCommand 및 PrintOutput 함수는이 예제를 실행 하려면 필요 합니다.  

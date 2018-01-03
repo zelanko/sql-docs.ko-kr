@@ -3,7 +3,7 @@ title: "저장 및 열기 메서드 예제 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 074e26314b178bce57a78a171cd0dffc2acb395c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91c4a609689598194ed2d597ddbfb215db2192ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-and-open-methods-example-vc"></a>저장 및 열기 메서드 예제 (VC + +)
 이 세 가지 예제를 보여 주는 방법을 [저장](../../../ado/reference/ado-api/save-method.md) 및 **열려** 방법을 함께 사용할 수 있습니다.  

@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, technologies
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c17d4b1877ce350e261e0bf671b8fd661409f47d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a03ed3b7537d81fac8045ceaad2c1c9a1afcaa0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="products-and-technologies-table"></a>제품 및 기술 테이블
 다음 표에서 Microsoft 제품, 도구 및 ADO Programmer's Guide에 설명 된 기술을 나열 합니다. 가능한 경우이 가이드의 관련 항목에 링크를 제공 합니다.

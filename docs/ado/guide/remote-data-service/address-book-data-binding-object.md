@@ -3,7 +3,7 @@ title: "주소록 데이터 바인딩 개체 주소 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20adad3287a409a0d9dc05ea58397da32226f00b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22552b3b4f9574f04b5fec8a382ee792b1267ebf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-book-data-binding-object"></a>주소록 데이터 바인딩 개체
 주소록 응용 프로그램이 사용 하 여 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 에서 데이터를 바인딩할 SQL Server 데이터베이스 (이 경우 DHTML 테이블)에 시각적 개체를 응용 프로그램의 HTML 클라이언트 페이지 개체입니다. 이벤트 기반 VBScript 프로그램 논리를 사용 하 여는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 에:  

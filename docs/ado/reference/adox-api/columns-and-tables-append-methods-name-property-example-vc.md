@@ -3,7 +3,7 @@ title: "메서드를 추가, 속성 예제 (VC + +)을 이름 열과 테이블 |
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a4a43b1279691142fbf8bd75ce26a608e40a8fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba80318ed651ca16b94011a09744c1ed1de1c8c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>테이블 및 열 이름 속성 예제 (VC + +) 메서드 추가
 다음 코드를 새 테이블을 만드는 방법을 보여 줍니다.  

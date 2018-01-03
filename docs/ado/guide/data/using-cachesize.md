@@ -3,7 +3,7 @@ title: "CacheSize를 사용 하 여 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72ef02bfcf8e5392d23cd90f0ad0d49fe4d87122
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f22491ec3d32fc9819bdeaa993af0700c4f49260
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cachesize"></a>CacheSize를 사용 하 여
 사용 하 여는 **CacheSize** 레코드를 공급자에서 로컬 메모리에 한 번에 가져올 수를 제어 하는 속성입니다. 예를 들어 경우는 **CacheSize** 은 10, 첫 번째 여는 **레코드 집합** 개체 공급자는 로컬 메모리에 처음 10 개의 레코드를 검색 합니다. 이동할 때는 **레코드 집합** 개체 공급자는 로컬 메모리 버퍼에서 데이터를 반환 합니다. 캐시에 있는 마지막 레코드를 지 나 이동 공급자 다음 10 개의 레코드를 캐시에에 데이터 원본에서 검색 합니다.  

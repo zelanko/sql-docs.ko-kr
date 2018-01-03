@@ -3,7 +3,7 @@ title: "축 개체 (ADO MD) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4164cd36a128de91f42f141db4c04aa7d9a2110c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075cccb08756fe6459db87bbbc091700ae333400
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="axis-object-ado-md"></a>축 개체 (ADO MD)
 선택한 멤버를 하나 이상의 차원 포함 하는 셀 집합의 필터 축을 또는 위치 나타냅니다.  

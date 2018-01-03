@@ -3,7 +3,7 @@ title: "쿼리 및 뷰 디자이너의 조인 표시 방법 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d112b8edd88c1d5b34f63206dc3c69a1e2e89652
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 38a655b6bd55d27c49ee88affeb16db66089b87e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>쿼리 및 뷰 디자이너의 조인 표시 방법(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 테이블이 조인되면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) 에 조인을 그래픽으로 나타내고 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에 SQL 구문을 사용합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 조인 선의 가운데 있는 아이콘 모양은 테이블 또는 테이블 구조 개체가 조인되는 방법을 보여 줍니다. 조인 절이 등호(=) 이외의 연산자를 사용하는 경우 조인 선 아이콘에 해당 연산자가 표시됩니다. 다음 표는 조인 선에 표시되는 아이콘 목록입니다.  
   
-|**조인 선 아이콘**|**Description**|  
+|**조인 선 아이콘**|**설명**|  
 |----------------------|-------------------|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools 아이콘")|등호(=)를 사용하여 만든 내부 조인|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 아이콘")|">" 연산자를 기반으로 하는 내부 조인|  

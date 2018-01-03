@@ -3,7 +3,7 @@ title: "연결된 서버 등록(SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 66d6bf38a5500017012c3eabb466b11d2d28ad49
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5140781326b2ada6fcc7e99dcf3cb566e70cba4b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>연결된 서버 등록(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 연결된 서버를 등록하는 방법에 대해 설명합니다. 서버를 등록하면 자주 액세스하는 서버에 대한 연결 정보를 저장할 수 있습니다. 개체 탐색기에서 연결하기 전이나 연결할 때 서버를 등록할 수 있습니다.  메뉴에서 **보기**\\**등록된 서버** 로 이동하여 SSMS에서 등록된 서버를 볼 수 있습니다.
@@ -57,7 +57,7 @@ Windows 인증 모드를 사용하면 사용자는 [!INCLUDE[msCoName](../../inc
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 자세한 내용은 [인증 모드 선택](../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
 
-     -    **사용자 이름**  
+     -    **User name**  
 연결 중인 현재 사용자 이름을 보여 줍니다. 이 읽기 전용 옵션은 Windows 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다. **사용자 이름**을 변경하려면 다른 사용자로 컴퓨터에 로그인합니다. 
 
      -    **로그인**  
@@ -84,7 +84,7 @@ Windows 인증 모드를 사용하면 사용자는 [!INCLUDE[msCoName](../../inc
 **저장**  
 등록된 서버 설정을 저장하려면 클릭합니다. 
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [새 등록된 서버 만들기(SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
   
   

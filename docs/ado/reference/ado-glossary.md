@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, glossary
@@ -17,11 +17,11 @@ caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-glossary"></a>ADO 용어집
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.  
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/17/2017
  cursor  
  레코드 탐색, 데이터의 updateability 및 다른 사용자가 데이터베이스에 대 한 변경 내용의 표시 유형을 제어 하는 데이터베이스 요소입니다.  
   
-## <a name="d"></a>D  
+## <a name="d"></a>d  
  데이터 바인딩  
  개체 또는 데이터 원본에 응용 프로그램의 컨트롤을 연결 하 합니다. 데이터 원본에 연결 된 컨트롤 이라고는 *데이터 바인딩된 컨트롤*합니다.  
   
@@ -292,7 +292,7 @@ ms.lasthandoff: 11/17/2017
  다음 작업이 시작 되기 전에 완료 하는 코드에 의해 시작 되는 작업입니다. 비동기 작업을 참조 하십시오.  
   
 ## <a name="t-z"></a>T-Z  
- 트리  
+ trEE  
  요소 (노드) 간의 계층 관계를 나타내는 구조입니다. 트리 (루트)의 최상위 수준에서 노드 하나 있습니다. 서비스의 루트를 아래에 자식이 여러 개 있을 수 있습니다. 각 자식 트리와 같이 분기 되므로, 다른 하위 항목의 부모 요소일 수 있습니다. 문서 및 기타 폴더가 들어 있는 폴더는 일반적인 예는 트리 구조입니다. 계층, 노드, 루트, 자식, 부모를 참조 하십시오.  
   
  웹 서버  

@@ -3,7 +3,7 @@ title: "쿼리 정의 다름 대화 상자(Visual Database Tools) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f350cc4cc985ca672cfc571f98b9adb04db935a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 68b33327f45dd53c814ac00a3ed511d72c1cddb9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>쿼리 정의 다름 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자에는 다이어그램 창과 조건 창에서 쿼리를 그래픽 방식으로 표현할 수 없고 SQL 창에서만 쿼리를 편집할 수 있다는 메시지가 나타납니다.  
@@ -46,7 +46,7 @@ SQL 창에서 SQL 문을 입력하거나 편집한 다음 다른 창으로 이�
 > [!NOTE]  
 > 다이어그램 창과 조건 창을 숨기면 **쿼리 정의 다름** 대화 상자가 나타나지 않습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **무시 단추**  
 이 단추를 선택하면 SQL 문을 받아들여 계속 편집하거나 실행하도록 지정할 수 있습니다. 문을 받아들이면 다이어그램 창과 조건 창이 흐리게 표시됩니다. 이는 SQL 창의 문을 해당 창에서 표현하지 않는다는 사실을 나타냅니다.  
   

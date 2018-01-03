@@ -2,12 +2,14 @@
 title: "R 및 SQL Server에 대 한 종단 간 데이터 과학 연습 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
@@ -15,11 +17,11 @@ caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: f392f7366ffc2504ce2834311b941351ef4e66c2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9d6654109e3cb5ff2e2c174dc37fd02bfc02dcb3
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 및 SQL Server에 대 한 종단 간 데이터 과학 연습
 
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/01/2017
 + 모든 SQL과 R 스크립트가 포함 되어 있습니다.
 + 사용자 환경에서 실행 하는 스크립트에서 문자열을 수정 해야 합니다. 이렇게 하려면 코드 편집기와 같은 [Visual Studio Code](https://code.visualstudio.com/Download)합니다.
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 
 + SQL Server 2016의 인스턴스 또는 SQL Server 2017의 평가 버전에 액세스할 수 있어야 합니다.
 + 하나 이상의 SQL Server 컴퓨터 인스턴스에 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]이 설치되어 있어야 합니다.

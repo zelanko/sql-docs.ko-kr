@@ -3,10 +3,10 @@ title: "활성 쿼리 (SQL Server PDW) 모니터링"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,16 +16,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
 caps.latest.revision: "7"
-ms.openlocfilehash: b2975ef92cb3af808ea5698f1980af3f9d0996d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 44f128124c8027bf4c37e34309d6c711006ac113
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitoring-active-queries"></a>활성 쿼리 모니터링
 이 항목에서는 활성 쿼리를 모니터링 하려면 관리 콘솔 및 SQL Server PDW 시스템 뷰를 사용 하는 방법을 보여 줍니다. 참조 [관리 콘솔을 사용 하 여 어플라이언스에 모니터링](monitor-the-appliance-by-using-the-admin-console.md) 및 [시스템 뷰](tsql-system-views.md) 이러한 도구에 대 한 내용은 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 활성 쿼리를 모니터링 하는 데 사용 하는 방법에 관계 없이 로그인 "사용 하 여 모든의 관리 콘솔에서"에서 설명 하는 권한이 있어야 합니다 [관리 콘솔을 사용할 수 있는 권한을 부여](grant-permissions.md#grant-permissions-to-use-the-admin-console)합니다.  
   
 ## <a name="PermsAdminConsole"></a>활성 쿼리 모니터  

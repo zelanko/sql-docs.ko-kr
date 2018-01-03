@@ -2,11 +2,11 @@
 title: "기계 학습에 대 한 리소스 풀 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/13/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f56dcd77490f258afd3086a94577c443adc879c5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f5699ed583f0fd40657f3be5f132b879681a7942
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>기계 학습에 대 한 리소스 풀 만들기
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 
     **예제 결과**
 
-    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|기본|0|100|0|100|100|0|0|
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 
     **예제 결과**
 
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|기본|100|20|0|2|
  
@@ -168,9 +168,9 @@ ms.lasthandoff: 11/17/2017
 
     **예제 결과**
 
-    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1.|내부|보통|25|0|0|0|0|1|2|
+    |1|내부|보통|25|0|0|0|0|1|2|
     |2|기본|보통|25|0|0|0|0|2|2|
     |256|ds_wg|보통|25|0|0|0|0|2|256|
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 11/17/2017
 
     **예제 결과**
     
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|기본|100|20|0|2|
     |256|ds_ep|100|40|0|1|
@@ -197,7 +197,7 @@ ms.lasthandoff: 11/17/2017
   
      이 경우 풀이 AUTO 선호도로 생성되었으므로 정보가 표시되지 않습니다. 자세한 내용은 [sys.dm_resource_governor_resource_pool_affinity&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 관리 서버 리소스에 대 한 자세한 내용은 다음을 참조 합니다.
 

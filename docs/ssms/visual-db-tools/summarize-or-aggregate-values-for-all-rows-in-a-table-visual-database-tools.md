@@ -3,7 +3,7 @@ title: "테이블에 있는 모든 행의 값 요약 또는 집계 | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e735ed981d3b2a64f1ddd2d9f3ac621ad14afd39
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b4fb6c1467ebac212e00353cb3e0fc3b4a5b81b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +84,7 @@ FROM titles
 > [!NOTE]  
 > 그룹화 방법 모드를 명시적으로 종료하지 않는 한 쿼리 및 뷰 디자이너의 SQL 창에서 집계 함수가 SQL 문의 일부로 계속 유지됩니다. 따라서, 다이어그램 창에 표시되는 테이블이나 테이블 반환 개체를 변경하거나 쿼리 형식을 변경하여 쿼리를 수정하면 결과 쿼리에 잘못된 집계 함수가 포함될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [쿼리 결과 요약&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

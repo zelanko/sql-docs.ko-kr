@@ -3,7 +3,7 @@ title: "SQL Server 에이전트 서비스의 계정 선택 | Microsoft 문서"
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef5922992da36377ad46ab4f76a3a8fb6b310edb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1bb0705f19d85e827f622e4da8783324574f303
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 서비스 시작 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 실행하는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 계정과 해당 네트워크 사용 권한을 정의합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 지정된 사용자 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구성 관리자에서 다음 옵션 중 하나를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스의 계정을 선택하십시오.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구성 관리자를 사용하여 운영 체제가 시작될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 시작되도록 지정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Windows 서비스 계정 설정](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
 [SQL 컴퓨터 관리자를 사용하여 서비스 관리](http://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  

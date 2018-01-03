@@ -3,7 +3,7 @@ title: "AND에 우선 순위가 있는 조건 조합(Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 375048e54f6cf1b95650a4f21deac8137ece5242
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 33d6a936357454191378295a2387b30b5884df38
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND에 우선 순위가 있는 조건 조합(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] AND를 사용하여 조건을 조합하려면 각 조건에 한 번씩, 즉 쿼리에 열을 두 번 추가합니다. 조건을 OR와 조합하려면 첫째 조건은 필터 열에 지정하고 추가 조건은 **또는...** 열에 지정합니다.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/05/2017
       (job_lvl = 200)  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [OR에 우선 순위가 있는 조건 조합(Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [조건 창의 검색 조건 결합 규칙(Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [검색 값 입력 규칙(Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  

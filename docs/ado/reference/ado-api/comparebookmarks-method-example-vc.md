@@ -3,7 +3,7 @@ title: "예제에서는 불일치 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 034f5a7a6773e0109b7760ce058a2deee13056de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 71641e627af38572e191e3ae8fc1439ff7d71ce2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comparebookmarks-method-example-vc"></a>예제에서는 불일치 (VC + +)
 이 예제에서는 [불일치](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 메서드. 책갈피의 상대 값은 특정 책갈피는 어떤 방식으로든 특별 한 경우가 아니면 필요 하지 않습니다.  

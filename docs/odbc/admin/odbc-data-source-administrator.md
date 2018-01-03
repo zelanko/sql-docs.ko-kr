@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7b9056b21f5f2b74956c4a94878a0b326bbd1335
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d3ad9ed32342dbd2dc7faf955eba3e9141b4fab1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 데이터 원본 관리자
 Microsoft® ODBC 데이터 소스 관리자 드라이버 및 데이터 원본 데이터베이스를 관리합니다. 이 응용 프로그램에서 Windows 제어판에 있는 **관리 도구**합니다. Windows 8 부터는 아이콘 라는 **ODBC 데이터 원본**, 64 비트 운영 체제는 32 비트 및 64 비트 버전 및 합니다.  

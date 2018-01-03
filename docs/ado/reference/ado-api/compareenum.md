@@ -3,7 +3,7 @@ title: CompareEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9377c58ed99ff5cc69f8938a614bebdcd0bdfe89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee22fbb105dc9f01444540dbdc46130d8a626bd7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compareenum"></a>CompareEnum
 책갈피를 나타내는 두 레코드의 상대적 위치를 지정 합니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**|1.|책갈피 같음을 나타냅니다.|  
+|**adCompareEqual**|1|책갈피 같음을 나타냅니다.|  
 |**adCompareGreaterThan**|2|두 번째 후 첫 번째 책갈피 임을 나타냅니다.|  
 |**adCompareLessThan**|0|두 번째 하기 전에 첫 번째 책갈피 임을 나타냅니다.|  
 |**adCompareNotComparable**|4|책갈피를 비교할 수 없음을 나타냅니다.|  

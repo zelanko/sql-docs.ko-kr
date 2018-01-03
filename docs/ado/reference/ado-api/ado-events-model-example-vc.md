@@ -3,7 +3,7 @@ title: "ADO 이벤트 모델 (VC + +) 예 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e984459ddf5e45cbcf25d9109a7e50cbd43abbf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7056aa943362acbfa7b2cdc4d16ab2e73fe14160
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 이벤트 모델 예제 (VC + +)
 Visual c + + 섹션 [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md) ADO 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 이벤트 모델에서 만든 환경에서 인스턴스화하는 구체적인 예제는 **#import** 지시문입니다.  

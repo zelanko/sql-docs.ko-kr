@@ -3,7 +3,7 @@ title: "레코드 집합으로 작업할 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cf54089c037d972649d3acc872a38eed21d02507
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a861030b8ec30e176d7535d6e2f7976a87c0832a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-recordsets"></a>레코드 집합 사용
 **레코드 집합** 개체에는 제공 하는 기준에 따라 특정 레코드를 검색 하 고 인덱스를 사용 하 여 해당 검색 작업을 최적화 하기 위해도 결과 집합에 있는 데이터의 순서를 다시 정렬할 수 있는 기본 제공 기능입니다. 일부 경우 공급자에 따라 이러한 기능을 사용 하기 위해 사용할 수 있는지 여부 — 등는 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성 — 자체 데이터 원본의 구조입니다.  

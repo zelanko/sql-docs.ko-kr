@@ -3,7 +3,7 @@ title: "COMPUTE 절 셰이프 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 부모를 생성 하는 셰이프 COMPUTE 절 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어져 **레코드 집합**선택적 요소 내용이 장, 새로 만들었거나, 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **레코드 집합** 또는 이전에 모양의 **레코드 집합**; 및 모든 열을 자식 **레코드 집합** 에 나열 된 절에 의해 선택 사항입니다.  
@@ -67,7 +67,7 @@ SHAPE child-command [AS] child-alias
   
  BY 절을 생략 하면 전체 자식 **레코드 집합** 단일 그룹 및 부모도 처리 **레코드 집합** 정확히 한 개의 행이 포함 됩니다. 해당 행은 전체 자식 참조 **레코드 집합**합니다. BY 절을 생략 하면 전체 자식 통해 "총합계" 집계를 계산 하 **레코드 집합**합니다.  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         

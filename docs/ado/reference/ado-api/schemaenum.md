@@ -3,7 +3,7 @@ title: SchemaEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 78baaa8f9665bc54efdc0b93464013f3fea71a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e8380ba12f6390f8db4661fc570b40f18e7c49
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaenum"></a>SchemaEnum
 스키마의 유형을 지정 **레코드 집합** 하는 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드를 검색 합니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |상수|값|Description|제약 조건 열|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|카탈로그에 정의 된 지정된 된 사용자가 소유 하 고 있는 어설션을 반환 합니다.<br /><br /> (어설션 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
-|**adSchemaCatalogs**|1.|DBMS에서 액세스 가능한 카탈로그와 관련 된 물리적 특성을 반환 합니다.<br /><br /> (카탈로그 행 집합)|CATALOG_NAME|  
+|**adSchemaCatalogs**|1|DBMS에서 액세스 가능한 카탈로그와 관련 된 물리적 특성을 반환 합니다.<br /><br /> (카탈로그 행 집합)|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|지정된 된 사용자에 액세스할 수 있는 카탈로그에 정의 된 문자 집합을 반환 합니다.<br /><br /> (CHARACTER_SETS 행 집합)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|지정된 된 사용자가 소유 하는 카탈로그에 정의 된 check 제약을 반환 합니다.<br /><br /> (CHECK_CONSTRAINTS) 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
 |**adSchemaCollations**|3|문자 데이터 정렬을 카탈로그에 정의 된 지정된 된 사용자에 액세스할 수 있는 반환 합니다.<br /><br /> (데이터 정렬 행 집합)|COLLATION_CATALOG COLLATION_SCHEMA 데이터 정렬 이름|  

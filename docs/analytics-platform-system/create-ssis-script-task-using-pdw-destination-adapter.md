@@ -3,10 +3,10 @@ title: "SSIS PDW 대상 어댑터를 사용 하는 스크립트 태스크를 만
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
 caps.latest.revision: "8"
-ms.openlocfilehash: 7d9cfb2987b05b51edc31cd0db4105ae2c12e596
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8056c97e66147cb68d7918301515c1dc52524387
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter"></a>SSIS PDW 대상 어댑터를 사용 하는 스크립트 태스크를 만드는 방법
 Integration Services 스크립트 태스크를 사용 하면 SSIS 제어 흐름의 컨텍스트 내에서.Net 응용 프로그램에서 수행할 수 있는 거의 모든 작업을 수행할 수 있습니다. 이 SSIS 패키지 스크립트 코드는 SSIS PDW 대상 어댑터를 사용 하기 위한 코드 예제입니다.  

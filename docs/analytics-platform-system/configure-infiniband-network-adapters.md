@@ -3,10 +3,10 @@ title: "Analytics Platform System (APS)의 InfiniBand 네트워크 어댑터 구
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 InfiniBand 네트워크 어댑터 구성
 SQL Server 병렬 데이터 웨어하우스 (PDW) 제어 노드에 연결 하려면 비 어플라이언스 클라이언트 서버에 InfiniBand 네트워크 어댑터를 구성 하는 방법에 설명 합니다. 로드, 백업, 및 기타 프로세스 활성 InfiniBand 네트워크에 자동으로 연결 해 되도록 하 고 고가용성을 위해 기본 연결에 대 한 다음이 지침을 사용 합니다.  
@@ -58,7 +58,7 @@ AD01 노드에 로그인에 APS 기기 도메인 계정이 필요 합니다. 예
   
 네트워크 어댑터를 구성할 수 있는 권한을 가진 클라이언트 서버에 Windows 계정이 필요 합니다.  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 이러한 지침에는 클라이언트 서버 이미 racked 되 고 어플라이언스의 InfiniBand 네트워크 케이블이 연결 가정 합니다. 랙 및 케이블 지침 [를 획득 하 고 로드 하는 서버를 구성](acquire-and-configure-loading-server.md)합니다.  
   
 ### <a name="general-remarks"></a>일반적인 주의 사항  

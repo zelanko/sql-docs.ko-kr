@@ -3,10 +3,10 @@ title: "어플라이언스에 설치 및 구성 개요 (분석 플랫폼 시스�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
 caps.latest.revision: "23"
-ms.openlocfilehash: 34d66302d0ed114c32e0c6294dfe7789e32a9253
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 719447d2f6d9376ec9db35f35c7f38b50ef460fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-installation-and-configuration-overview"></a>어플라이언스에 설치 및 구성 개요
 초기 단계를 설정 하 고 새 SQL Server PDW 어플라이언스를 사용 하 여 시작 하려면 SQL Server PDW 어플라이언스에 단계적으로 안내 합니다.  
@@ -43,7 +43,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**태스크**|**Description**|  
+|**태스크**|**설명**|  
 |설명서를 확인 합니다.|모든 필요한 문서 및 정보 (IHV) 독립 하드웨어 공급 업체 로부터 받은 있는지 확인 합니다. 참조 [프로그램 IHV &#40;에서 가져오지 정보 분석 플랫폼 시스템 &#41; ](information-to-obtain-from-your-ihv.md).|  
 |하드웨어 설치|어플라이언스를 수용할 수 있는 데이터 센터를 확인 합니다. 데이터 센터에 어플라이언스 구성 요소를 이동 합니다. 네트워크 스위치, Pdu, 랙 및 케이블 연결 합니다. 참조 [하드웨어 설치 &#40; 분석 플랫폼 시스템 &#41; ](hardware-installation.md).|  
   
@@ -51,14 +51,14 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**태스크**|**Description**|  
+|**태스크**|**설명**|  
 |어플라이언스에서 전원|확인 오류가 발생 하는 데 필요한 대기 하 여 필요한 순서 대로 각 어플라이언스 구성 요소 노드를 켭니다.|  
   
 ## <a name="ConfigureAppliance"></a>3. 어플라이언스를 구성 합니다.  
   
 |||  
 |-|-|  
-|**태스크**|**Description**|  
+|**태스크**|**설명**|  
 |||  
 |SQL Server PDW를 사용 하 여 어플라이언스에 구성**Configuration Manager**|어플라이언스 기기 암호, 표준 시간대, 네트워크 및 방화벽 설정, 보안 인증서, 성능 및 기타 설정을 설정 하려면 구성 관리자를 사용 합니다. 참조 [기기 구성 &#40; 분석 플랫폼 시스템 &#41; ](appliance-configuration.md).|  
   
@@ -69,7 +69,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**태스크**|**Description**|  
+|**태스크**|**설명**|  
 |SQL Server PDW 업데이트 적용|(선택 사항) 최신 버전으로 SQL Server PDW 소프트웨어 업데이트에 하나 이상의 SQL Server PDW 업데이트를 적용 해야 합니다. 참조 [분석 플랫폼 시스템 핫픽스 &#40; 적용 분석 플랫폼 시스템 &#41; ](apply-analytics-platform-system-hotfixes.md).|  
 |Windows Server Update Services를 구성 합니다.|소프트웨어를 지원 하기 위한 Windows Server Update Services에서 업데이트를 받는 어플라이언스를 구성 합니다. 참조 [다운로드 하 여 Microsoft 업데이트 &#40; 적용 분석 플랫폼 시스템 &#41; ](download-and-apply-microsoft-updates.md).|  
   
@@ -78,7 +78,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**태스크**|**Description**|  
+|**태스크**|**설명**|  
 |SQL Server PDW 드라이버를 설치 및 연결 구성|SQL Server Data Tools, sqlcmd, 비즈니스 인텔리전스 소프트웨어 또는 다른 도구를 사용 하 여 SQL Server PDW에 연결 하기 위해 로컬 컴퓨터를 구성 합니다. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |로그온 및 서버 역할을 만들고 사용 권한을 할당합니다|계획 하 고 사용자가 적절 한 권한이 있는 SQL Server PDW에 로그온 할 수 있는 로그온 및 서버 역할을 만들어야 합니다. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Azure 데이터 관리 게이트웨이 구성|APS 데이터 보안 OData 피드를 노출 하 여 온-프레미스 APS 데이터에 액세스 하는 게이트웨이 Azure 있습니다. 게이트웨이 제어 노드에 이미 설치 됩니다. Microsoft 구성 사용 하 여 지원을 요청 합니다.|  

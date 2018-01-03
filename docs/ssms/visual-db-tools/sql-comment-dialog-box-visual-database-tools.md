@@ -3,7 +3,7 @@ title: "SQL 주석 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 039f84ddff175ae8e2830b7e38ee4fc28b54a307
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 395fb96d7c98556d62c17858c549287aa7af3d66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>SQL 주석 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자에서는 쿼리에 대한 자세한 설명을 기록할 수 있는 편집 가능한 영역을 제공합니다. 이 대화 상자에 액세스하려면 쿼리 및 뷰 디자이너에서 쿼리나 뷰를 열고 **속성** 창에서 **SQL 주석**을 선택한 다음 속성 필드의 오른쪽에 있는 줄임표(**...**)를 클릭합니다.  

@@ -3,7 +3,7 @@ title: "Stat 메서드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c33383de27f2685849034cec79c6b4589dfb0a79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31938be266101339d70b820260466263a737f88a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-method"></a>Stat 메서드
 에 대 한 정보를 검색 한 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -49,7 +49,7 @@ Long stream.Stat(StatStg, StatFlag)
 |상수|값|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
-|STATFLAG_NONAME|1.|  
+|STATFLAG_NONAME|1|  
   
 ## <a name="remarks"></a>주의  
  STATSTG 구조의 다음 필드 ADO 스트림 개체에 대 한 구현 Stat 메서드 버전을 채웁니다.  

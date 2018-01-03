@@ -3,7 +3,7 @@ title: "입력 속성 예제 (필드) (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16bfc2bc77c729bc2ae2043a79889dd461018137
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85d88e81cb53eefe6534c8621b7df5002c9bb1ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-example-field-vc"></a>형식 속성 예제 (필드) (VC + +)
 이 예제에서는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성의 값에 해당 하는 상수 이름을 표시 하 여는 **형식** 모든 속성은 [필드](../../../ado/reference/ado-api/field-object.md) 개체에 ***직원*** 테이블입니다. FieldType 함수는이 절차를 실행 하려면 필요 합니다.  

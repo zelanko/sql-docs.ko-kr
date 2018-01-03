@@ -3,10 +3,10 @@ title: "로드"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
 caps.latest.revision: "22"
-ms.openlocfilehash: bef6cf70573aaac642665b9f1e847f4b251e39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be5ea7c2b939b58c7dfd826965f1568431cb1bff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-sql-server-pdw"></a>부하 (SQL Server PDW)
 로드 하거나 Integration Services를 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스 (PDW)을 삽입 하려면 [bcp 유틸리티](../tools/bcp-utility.md), **dwloader** 명령줄 로더 또는 SQL INSERT 문을 합니다.  
@@ -46,7 +46,7 @@ dwloader 제어 노드를 통해 데이터를 전달 하지 않고 계산 노드
 For more information, see [Prepared statements](prepared-statements.md).
 -->
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크|Description|  
 |--------|---------------|  

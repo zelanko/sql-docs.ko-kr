@@ -3,7 +3,7 @@ title: "Execute21 메서드 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13b3da0c799b0bc3ce14adb42df8a3d5d79398fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b94d4cdb75cbdcfaa2dfece8d7172e2935d6759d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute21-method-rds"></a>Execute21 메서드 (RDS)
 요청을 실행 하 고 ADO 2.1에서에서 사용 하기 위해 ADO 레코드 집합을 만듭니다.  

@@ -3,7 +3,7 @@ title: "값 삽입의 대상 테이블 선택 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,17 +20,17 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 122a85ded88a961a7c39945d5db88e1f2b128140
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0f73ebe1c3a1c0f1b37b02f7941c217d10780d88
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>값 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자에서 INSERT VALUES 쿼리로 업데이트할 테이블을 지정할 수 있습니다. 이 대화 상자는 **다이어그램** 창에 두 개 이상의 테이블이 표시되어 있는 상태에서 쿼리 형식을 INSERT VALUES 쿼리로 변경하는 경우에 나타납니다.  
   
 데이터를 추가하려는 테이블을 선택한 다음 **확인**을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [값 삽입 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md)  
   

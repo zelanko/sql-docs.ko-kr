@@ -3,7 +3,7 @@ title: "결과 창(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72c6d376b55df42961420aacb9d768324196c21f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e2b2fc492396c2831f4a007ef0f3b491a22671ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="results-pane-visual-database-tools"></a>결과 창(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 결과 창은 가장 최근에 실행한 SELECT 쿼리의 결과를 보여 줍니다. 다른 쿼리 형식의 결과는 메시지 상자에 표시됩니다. 결과 창을 열려면 쿼리를 열거나 만듭니다. 테이블의 데이터를 반환해도 결과 창이 나타납니다. 결과 창이 기본적으로 표시되지 않으면 **쿼리 디자이너** 메뉴에서 **창**을 가리킨 다음 **결과**를 클릭합니다.  

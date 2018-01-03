@@ -3,10 +3,10 @@ title: "InfiniBand PDW 원격 테이블 복사본을 외부 Windows 시스템 �
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
 caps.latest.revision: "11"
-ms.openlocfilehash: 95cbd11e4e0a3e8455f76287221d970737dca228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: efebff74a8c17952b39efb43006051603c624a03
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband"></a>InfiniBand를 사용 하 여 원격 테이블 복사본을 받을 수는 외부 Windows 시스템 구성
 구입 하 고 InfiniBand 네트워크를 사용 하 여 SQL Server PDW에서 원격 테이블 복사 기능과 함께 사용 하기 위해 연결 하는 비 어플라이언스 Windows 시스템을 구성 하는 방법을 설명 합니다. Windows 시스템 SQL Server PDW 데이터베이스에서 원격 테이블 복사본을 수신 하는 SQL Server 데이터베이스를 호스트 합니다. 기기에서 별도로 구입 이며 기기 InfiniBand 네트워크에 연결 합니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
 이 항목에서는 원격 테이블 복사본을 구성 하기 위한 구성 단계 중 하나. 목록이 모든 구성 단계에 대 한 참조 [원격 테이블 복사](remote-table-copy.md)  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
 외부 Windows 시스템을 구성 하기 전에 다음을 수행 해야 합니다.  
   
 1.  구입 하거나 원격 복사본을 받을 Windows 시스템을 제공 합니다.  

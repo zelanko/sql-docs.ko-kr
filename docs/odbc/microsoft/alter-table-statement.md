@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97d15f6e7acd6594684a699e61d9861849bbd0ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 55cbbebec6937e409597879eaa3446f5ab02abce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-table-statement"></a>ALTER TABLE 문
 Microsoft Access, dBASE 또는 Paradoxdriver 사용 되는 ALTER TABLE 문의 add 및 drop 테이블 제약 조건 정의 절과 함께 지원 됩니다. (ALTER TABLE 문은 Microsoft Excel 또는 텍스트 드라이버에 대 한 지원 되지 않습니다.)  

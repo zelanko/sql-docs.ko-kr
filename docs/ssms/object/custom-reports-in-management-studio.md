@@ -3,7 +3,7 @@ title: "Management Studio의 사용자 지정 보고서 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 299019dabf0c16863eda99cb2f841dae8bd4ea5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio의 사용자 지정 보고서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 많은 개체 탐색기 노드에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]에서 만든 표준 보고서 집합이 표시됩니다. 이러한 보고서는 일반적으로 요청되는 서버 정보를 요약합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 서비스 팩 2부터 관리자는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 만든 사용자 지정 보고서를 실행할 수 있습니다.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="managing-custom-reports"></a>사용자 지정 보고서 관리  
 많은 사용자 지정 보고서를 보유하고 있는 사용자의 경우 적절한 NTFS 파일 시스템 권한이 있는 파일 시스템 폴더를 사용하여 보고서를 구성하는 것이 좋습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 사용자 지정 보고서는 현재 사용자의 사용 권한을 사용하여 실행됩니다. 보고서에서 실행하는 쿼리를 악의적인 사용자가 변경하지 못하게 하려면 보고서 파일이 있는 파일 시스템 폴더에 대한 액세스가 제한되도록 사용 권한을 설정해야 합니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 서비스에 사용되는 사용자와 계정 모두에는 보고서 파일이 있는 파일 시스템 폴더에 대한 읽기 권한이 필요합니다.  

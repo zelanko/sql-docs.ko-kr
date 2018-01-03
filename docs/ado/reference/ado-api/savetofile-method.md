@@ -3,7 +3,7 @@ title: "SaveToFile 메서드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 464742a71244a16b5823c2f85a0ddcbb413c66f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a515534601696c0ca056f573c179c5e00bac3e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="savetofile-method"></a>SaveToFile 메서드
 이진 내용을 저장 한 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 파일에 있습니다.  

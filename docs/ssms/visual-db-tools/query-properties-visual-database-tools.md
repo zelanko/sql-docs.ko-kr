@@ -3,7 +3,7 @@ title: "쿼리 속성(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7b8519c310eff1942280345c77c630aeea23e56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0140ad78a13b1dda752ee0c3f303094578c4f158
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-properties-visual-database-tools"></a>쿼리 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 속성은 쿼리 및 뷰 디자이너에서 쿼리를 연 경우 속성 창에 표시됩니다. 별도로 언급하지 않는 한 속성 창에서 이러한 속성을 편집할 수 있습니다.  
@@ -32,14 +32,14 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > 이 항목의 속성은 사전순이 아니라 범주별로 정렬됩니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **ID 범주**  
 확장하면 **이름** 속성이 표시됩니다.  
   
 **이름**  
 현재 쿼리의 이름을 표시합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서는 이를 변경할 수 없습니다.  
   
-**데이터베이스 이름**  
+**Database Name**  
 선택한 테이블의 데이터 원본 이름을 표시합니다.  
   
 **서버 이름**  
@@ -82,7 +82,7 @@ SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집�
 **식**  
 쿼리에서 반환할 행의 수나 비율을 지정합니다. **Percent** 를 예로 설정한 경우 이 값은 쿼리에서 반환할 행의 비율을 나타내고, **Percent** 를 아니요로 설정한 경우 이 값은 반환할 행의 수를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 이상 버전에만 적용됩니다.  
   
-**Percent**  
+**백분율**  
 결과 집합의 처음 *n* %에 해당하는 행만 쿼리가 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 이상 버전에만 적용됩니다.  
   
 **With Ties**  

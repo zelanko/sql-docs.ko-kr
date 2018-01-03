@@ -3,7 +3,7 @@ title: SeekEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97a2a99c7310022e86e574a0f4b04227cee95726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6f60ed06b2f23bceec62822f43b77f5c10c3ce1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seekenum"></a>SeekEnum
 유형을 지정 [Seek](../../../ado/reference/ado-api/seek-method.md) 실행할 수 있습니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1.|같은 첫 번째 키를 찾고 *KeyValues*합니다.|  
+|**adSeekFirstEQ**|1|같은 첫 번째 키를 찾고 *KeyValues*합니다.|  
 |**adSeekLastEQ**|2|검색 (seek)의 마지막 키와 같지 *KeyValues*합니다.|  
 |**adSeekAfterEQ**|4|같은 중 하나는 키를 찾고 *KeyValues* 위나 바로 뒤와 일치 하는 었어야 합니다.|  
 |**adSeekAfter**|8|키를 where 직후 검색 (seek) 일치 하는 *KeyValues* 발생 합니다.|  

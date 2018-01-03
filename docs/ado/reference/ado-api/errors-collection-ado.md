@@ -3,7 +3,7 @@ title: "Errors 컬렉션 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b3fffa48412387178006c66a97a0cbd6a9f3a93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66afd514c40c646fad62d5fc0302bc486af7e653
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-collection-ado"></a>Errors 컬렉션 (ADO)
 모든 포함 된 [오류](../../../ado/reference/ado-api/error-object.md) 단일 공급자 관련 오류에 대 한 응답에서 생성 된 개체입니다.  

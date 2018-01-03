@@ -3,7 +3,7 @@ title: "지원 메서드 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09f47061d9b99569b13ee3d5c57c713c4d0f56a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc46e19049b576ca1af9a6cbce24087b7672e501
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supports-method-example-vb"></a>메서드 예제 (VB)를 지원합니다.
 사용 하 여이 예제는 [지원](../../../ado/reference/ado-api/supports-method.md) 레코드 집합에서 지 원하는 옵션을 표시 하는 메서드를 다른 커서 유형으로 열입니다. DisplaySupport 절차는이 절차를 실행 하려면 필요 합니다.  

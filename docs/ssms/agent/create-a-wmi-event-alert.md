@@ -3,7 +3,7 @@ title: "WMI 이벤트 경고 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d95c99f5252dc6c87329ca4d9d003eba748b11c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: da5a68bfb9a0a984c7d43b1f2c3c1de01b83c7af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
+# <a name="create-a-wmi-event-alert"></a>WMI 이벤트 경고 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql_md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]의 서버 이벤트에 대해 WMI 공급자가 모니터링하는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이벤트가 발생할 때 발생하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 경고에 대해 설명합니다.  
   
 WMI 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이벤트를 모니터링하는 방법에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자 클래스 및 속성](http://msdn.microsoft.com/en-us/80767fe0-32ac-406a-81a0-8212cd6ce7e4)을 참조하세요. WMI 이벤트 경고 알림을 받는 데 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 서비스의 계정 선택](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)을 참조하세요. WQL에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자에 WQL 사용](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)을 참조하세요.  
   
 **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
     [제한 사항](#Restrictions)  
   

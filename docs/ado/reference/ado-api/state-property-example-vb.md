@@ -3,7 +3,7 @@ title: "상태 속성 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cd4f3c91f2857aeac2ba7e3addb9774b9db87b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc786def082c71c956a910cc070123aeafa39266
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="state-property-example-vb"></a>State 속성 예제 (VB)
 사용 하 여이 예제는 [상태](../../../ado/reference/ado-api/state-property-ado.md) 비동기 연결을 여는 동안 비동기 명령이 실행 되는 메시지를 표시 하는 속성입니다.  

@@ -3,7 +3,7 @@ title: "CreateParameter 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 929d7e91566aa18938a64f1085b1d77153205898
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 070b1fed1f5d38da0a3f8275abf9933339a8f5dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 메서드 (ADO)
 새 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 속성을 지정 합니다.  
@@ -48,7 +48,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *형식*  
  (선택 사항) A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 값의 데이터 형식을 지정 하는 **매개 변수** 개체입니다.  
   
- *방향*  
+ *Direction*  
  (선택 사항) A [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) 의 유형을 지정 하는 값 **매개 변수** 개체입니다.  
   
  *크기*  

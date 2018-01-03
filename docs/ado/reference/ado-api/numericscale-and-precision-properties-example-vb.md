@@ -3,7 +3,7 @@ title: "NumericScale 및 전체 자릿수 속성 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e2c60b7301ea2b6bf96b2624c4ad62299157c87c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 250ea458b257a4e28a955ea66e7444750c43aac6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 및 전체 자릿수 속성 예제 (VB)
 사용 하 여이 예제는 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 및 [정밀도](../../../ado/reference/ado-api/precision-property-ado.md) 소수 자릿수 및 필드에 전체 자릿수를 표시 하는 속성의 ***할인*** 목차는  ***Pubs*** 데이터베이스입니다.  

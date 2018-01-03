@@ -3,7 +3,7 @@ title: "일정을 만들고 작업에 연결 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc61a3323ae24d1c571b743fa4d0d2bed3278585
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c1f516bb0add6bd1f415260f061b1de77bf2b22a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>일정을 만들고 작업에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 일정 예약이란 사용자 개입 없이 작업을 실행할 조건을 정의하는 것입니다. 작업에 대한 새로운 일정을 만들거나 기존 일정을 작업에 연결하여 작업이 자동으로 실행되도록 예약할 수 있습니다.  
@@ -91,12 +91,12 @@ CPU 유휴 조건을 CPU 사용이 지정된 시간 동안 그 이하로 유지�
   
 |||  
 |-|-|  
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업에 대한 예약을 만드는 방법에 대해 설명합니다.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 예약하는 방법에 대해 설명합니다.|[작업 예약](../../ssms/agent/schedule-a-job.md)|  
 |서버의 CPU 유휴 상태 판단 기준을 정의하는 방법에 대해 설명합니다.|[CPU 유휴 시간 및 기간 설정&#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  
 [sysjobschedules](http://msdn.microsoft.com/en-us/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
   

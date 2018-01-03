@@ -3,7 +3,7 @@ title: "WillChangeRecordset 및 RecordsetChangeComplete 이벤트 (ADO) | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a103d1710f01403e8e199fc308369b4a9dc82c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 188bdb13879e4229686fb725edbc190db9ea59b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 및 RecordsetChangeComplete 이벤트 (ADO)
 **WillChangeRecordset** 이벤트는 보류 중인 작업을 변경 하기 전에 호출 됩니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. **RecordsetChangeComplete** 이벤트 후에 호출 됩니다는 **레코드 집합** 변경 되었습니다.  

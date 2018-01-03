@@ -1,36 +1,42 @@
 ---
-title: "데이터 rxImport를 사용 하 여 메모리에 로드 | Microsoft Docs"
+title: "데이터 rxImport (SQL과 R 심층 분석)를 사용 하 여 메모리에 로드 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
 caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3517ad7bb95f79dc2dec2567ecb88d64e78338bc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 71848a5bf0af5b1dcbce24dbd33ba760369f1338
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="load-data-into-memory-using-rximport"></a>rxImport를 사용하여 메모리에 데이터 로드
+# <a name="load-data-into-memory-using-rximport-sql-and-r-deep-dive"></a>RxImport (SQL과 R 심층 분석)를 사용 하 여 메모리에 데이터 로드
 
-**rxImport** 함수를 사용하여 데이터 원본의 데이터를 R 세션 메모리의 데이터 프레임 또는 디스크의 XDF 파일로 이동할 수 있습니다. 파일을 대상으로 지정하지 않으면 데이터는 메모리에 데이터 프레임으로 저장됩니다.
+이 문서는 데이터 과학 심층 분석 자습서를 사용 하는 방법에 대 한 일부 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
 
-이 단계에서는 데이터를 가져오는 방법을 알아봅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 다음 rxImport 함수를 사용 하 여 관심 있는 데이터는 로컬 파일에 추가 합니다. 이렇게 하면 데이터베이스를 다시 쿼리하지 않고도 로컬 계산 컨텍스트에서 반복하여 데이터를 분석할 수 있습니다.
+[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 데이터 프레임에서 세션 메모리 나 디스크에 있는 XDF 파일에 데이터 원본에서 데이터를 이동 하는 함수를 사용할 수 있습니다. 파일을 대상으로 지정하지 않으면 데이터는 메모리에 데이터 프레임으로 저장됩니다.
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server에서 로컬 메모리로 데이터 하위 집합 추출
+이 단계에서 데이터를 가져오는 방법을 배웁니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용 하 여는 **rxImport** 관심 있는 데이터는 로컬 파일에 추가 하는 함수입니다. 이렇게 하면 데이터베이스를 다시 쿼리하지 않고도 로컬 계산 컨텍스트에서 반복하여 데이터를 분석할 수 있습니다.
 
-고위험 개인만 자세히 검사하기로 결정했습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 원본 테이블은 크기 때문에 고위험 고객에 대한 정보를 가져와 로컬 워크스테이션의 메모리에 있는 데이터 프레임에 로드합니다.
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server에서 로컬 메모리에 데이터의 하위 집합을 추출
+
+자세히 위험 수준이 높은 개인만 검사할 것인지 결정 합니다. 원본 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 크므로 방금 위험 수준이 높은 고객에 대 한 정보를 가져오려는 합니다. 그런 다음 로컬 워크스테이션의 메모리에 데이터 프레임으로 해당 데이터를 로드 합니다.
 
 1. 계산 컨텍스트를 로컬 워크스테이션으로 다시 설정합니다.
 
@@ -47,15 +53,15 @@ ms.lasthandoff: 12/01/2017
         connectionString = sqlConnString)
     ```
 
-3. **rxImport** 함수를 사용하여 실제로 로컬 R 세션의 데이터 프레임으로 데이터를 로드합니다.
+3. 함수 호출 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 로컬 R 세션에서 데이터 프레임으로 데이터를 읽을 수 있습니다.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    작업에 성공하면 상태 메시지 Rows Read: 35, Total Rows Processed: 35, Total Chunk Time: 0.036 seconds가 나타납니다.
+    작업에 성공 하면 다음과 같은 상태 메시지가 나타납니다: "Rows Read: 35, 총 행 처리 됨: 35, 총 청크 시간: 0.036 시간 (초)"
 
-4. 이제 메모리의 데이터 프레임에 고위험 관찰이 있으므로 다양한 R 함수를 사용하여 데이터 프레임을 조작할 수 있습니다. 예를 들어 고객의 위험 점수를 기준으로 고객 순서를 매긴 다음 가장 위험도가 높은 고객을 출력할 수 있습니다.
+4. 메모리 내 데이터 프레임에서 위험 수준이 높은 관찰 인 했으므로 데이터 프레임을 조작 하기 위한 다양 한 R 함수를 사용할 수 있습니다. 예를 들어 해당 위험 점수 고객 주문 수 있으며 가장 높은 위험 노출 하는 고객의 목록을 인쇄.
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -81,21 +87,17 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="more-about-rximport"></a>rxImport 대한 자세한 정보
 
-RxImport 뿐 아니라 데이터를 이동 하지만 것을 읽는 동안 데이터를 변환에 사용할 수 있습니다. 예를 들어 고정 너비 열에 대해 문자 수를 지정하고, 변수에 대한 설명을 제공하고, 요소 열에 대한 수준을 설정하고, 가져온 후 사용할 새로운 수준을 만들 수 있습니다.
+**rxImport** 를 사용하여 데이터 이동은 물론 데이터를 읽는 동안 데이터를 변환할 수도 있습니다. 예를 들어 고정 너비 열에 대해 문자 수를 지정하고, 변수에 대한 설명을 제공하고, 요소 열에 대한 수준을 설정하고, 가져온 후 사용할 새로운 수준을 만들 수 있습니다.
 
-RxImport 함수 가져오기 프로세스 동안 열에 변수 이름을 할당 하지만 사용 하 여 새 변수 이름을 지정할 수 있습니다는 *colInfo* 매개 변수에 사용 하 여 데이터 형식을 변경할 수는 *colClasses* 매개 변수입니다.
+**rxImport** 함수 가져오기 프로세스 동안 열에 변수 이름을 할당 하지만 사용 하 여 새 변수 이름을 지정할 수 있습니다는 *colInfo* 매개 변수 또는 를사용하여변경데이터형식*colClasses* 매개 변수입니다.
 
 *transforms* 매개 변수에서 추가 작업을 지정하여 읽은 각 데이터 청크에 대한 기본 처리를 수행할 수 있습니다.
 
 ## <a name="next-step"></a>다음 단계
 
-[RxDataStep를 사용 하 여 새 SQL Server 테이블 만들기](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+[rxDataStep을 사용하여 새 SQL Server 테이블 만들기](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
 
 ## <a name="previous-step"></a>이전 단계
 
-[R을 사용 하 여 데이터를 변환 합니다.](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
-## <a name="see-also"></a>관련 항목:
-
-[기계 학습 자습서](../../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
+[R을 사용하여 데이터 변환](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
 

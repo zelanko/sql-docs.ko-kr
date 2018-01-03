@@ -3,7 +3,7 @@ title: "파일 열기 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 894dcee809aac7b3d32b30f1ee5fdc988eb8b009
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-file-dialog-box"></a>파일 열기 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **파일 열기** 대화 상자를 사용하여 디스크에 있는 기존 파일을 열 수 있습니다. 또한 이 대화 상자를 사용하여 다양한 언어 인코딩 옵션을 통해 이미 열린 파일을 열 수 있습니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
 > [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 프로젝트나 구성 요소를 열기 전에 해당 코드를 신뢰할 수 있는지 확인하십시오. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 에서 프로젝트나 구성 요소를 열면 로컬 컴퓨터의 트러스트된 프로세스에서 해당 코드가 실행될 수 있습니다.  
   
 ## <a name="option"></a>옵션  
-**찾는 위치**  
+**Look in**  
 이 드롭다운 메뉴에서 기존 프로젝트 폴더를 찾습니다. 이 목록에서 폴더를 선택하면 주 창에 해당 폴더의 내용이 표시됩니다.  
   
 ## <a name="my-places-bar"></a>바로 가기 모음  

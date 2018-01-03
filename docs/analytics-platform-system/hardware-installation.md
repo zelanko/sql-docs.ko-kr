@@ -3,10 +3,10 @@ title: "하드웨어 설치 (분석 플랫폼 시스템)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
 caps.latest.revision: "17"
-ms.openlocfilehash: 9eb9fc0c1249c63550c33f09ac357c519d93bd7f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea0935ed3af9dcea187098e39df2d0219f98fd7a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hardware-installation"></a>하드웨어 설치
 이 항목에서는 이동, 압축 풀기 및 SQL Server PDW 장치에 대 한 하드웨어를 설치 하는 방법을 설명 합니다. 이 항목은 정보를 제공 하며 프로세스를 쉽게 이해할 수 있도록 합니다. 장치 포장을 푼, 설치와를 설정 된 전에 확인 합니다. 고객 참여는 데이터와 같이 항목에 대 한 필수 액세스, 전력, 및 이더넷 연결 가운데 맞춤 합니다.  

@@ -3,7 +3,7 @@ title: "명령 속성-동적 (ADO)를 다시 동기화 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 725327b6ef4304b8d8a30c6dd80c6a3a79e7e72d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2545b52883ef01ae0715c7412fdac9b06a559784
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resync-command-property-dynamic-ado"></a>명령 속성-동적 (ADO)를 다시 동기화
 지정 된 사용자가 제공한 명령 문자열의 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 에 명명 된 테이블의 데이터를 새로 고치려면 메서드 문제는 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성.  

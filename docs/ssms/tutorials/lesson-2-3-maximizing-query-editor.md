@@ -3,7 +3,7 @@ title: "쿼리 편집기 화면 크기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2abd1efbec2221c9f909a79b21df27b6869e828e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e1bd610191d11f3c61db638179fc565bab7e0ea9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-3---maximizing-query-editor"></a>2-3단원 - 쿼리 편집기 화면 크기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 프로그래머가 자주 제기하는 "코드를 쓸 공간을 더 확보하려면 어떻게 합니까?"라는 질문에 대해 두 가지 간단한 방법이 있다고 대답할 수 있습니다. 쿼리 편집기 창을 최대화하고 사용하지 않는 도구 창을 숨기면 됩니다.  

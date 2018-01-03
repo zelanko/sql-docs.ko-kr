@@ -3,7 +3,7 @@ title: "항목이나 프로젝트 제거 또는 삭제 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10a079026d7c31d627154279daa627acd05670f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fa1c0e7218476480f99cbb2bc5a8d310f9efeb65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>항목이나 프로젝트 제거 또는 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 프로젝트의 프로젝트 항목은 쿼리, 연결 및 기타 파일입니다. 저장소에서 파일을 지우지 않고 솔루션에서 프로젝트 쿼리 및 기타 파일을 제거할 수 있습니다. 프로젝트 또는 항목이 현재 솔루션에는 유용하지 않지만 다른 솔루션에 포함하려는 경우 해당 프로젝트 또는 항목을 제거합니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  **파일** 메뉴에서 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
 [프로젝트에 새 항목 추가](../../ssms/solution/add-new-items-to-a-project.md)  
 [프로젝트에 기존 항목 추가](../../ssms/solution/add-existing-items-to-a-project.md)  

@@ -3,7 +3,7 @@ title: "멤버 예 (VBScript) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e583363b1aeb0af736b34634a158fe6d136acde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41e43b59b8c9fe849582f1bb3845f544f89ddeb7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="members-example-vbscript"></a>멤버 예 (VBScript)
 이 샘플은 MDX 쿼리 문자열을 사용 하 여 OLAP 데이터를 검색 하 고 결과 셀 집합 다차원에 대 한 열 범위 기능을 사용 하 여 HTML 테이블 구조를 씁니다.  

@@ -3,7 +3,7 @@ title: "연결 개체 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9911597512c0172931b940fe463fab90391c2d7f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68a54c70eb48a65e5bce6349adf99040945211d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-object-ado"></a>연결 개체 (ADO)
 데이터 원본에 대해 열린 연결을 나타냅니다.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
 >  이 기능을 사용 하지 마십시오 (네이티브 메서드 인쇄 된 하는 경우 명명 된 명령 또는 저장된 프로시저를 호출의 **연결** 개체)는 Microsoft®.NET Framework 응용 프로그램에서 때문에 기능 충돌의 기본 구현 com 상호 운용.NET Framework는 방식과  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>연결 개체의 기본 방법으로 명령을 실행합니다  
- 명령을 실행 하려면 명령을 이름을 사용 하 여 지정 된 **명령** 개체 [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성입니다. 설정의 **ActiveConnection** 속성은 **명령** 개체를 연결 합니다. 메서드처럼 하는 경우 명령 이름 사용 되는 위치 명령문을 발급 하는 **연결** 매개 변수, 개체 및 **레코드 집합** 모든 행이 반환 하는 경우 개체입니다. 설정의 **레코드 집합** 결과 사용자 지정 하는 속성 **레코드 집합**합니다. 예를 들어  
+ 명령을 실행 하려면 명령을 이름을 사용 하 여 지정 된 **명령** 개체 [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성입니다. 설정의 **ActiveConnection** 속성은 **명령** 개체를 연결 합니다. 메서드처럼 하는 경우 명령 이름 사용 되는 위치 명령문을 발급 하는 **연결** 매개 변수, 개체 및 **레코드 집합** 모든 행이 반환 하는 경우 개체입니다. 설정의 **레코드 집합** 결과 사용자 지정 하는 속성 **레코드 집합**합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -83,7 +83,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>연결 개체의 기본 방법으로 저장된 프로시저를 실행 합니다.  
- 저장된 프로시저를 실행 하려면 저장된 프로시저 이름이 사용 되는 위치 처럼에 메서드처럼 문을 발행는 **연결** 묶인 매개 변수 개체입니다. ADO는 "최상의 추측" 매개 변수 형식의 생성 됩니다. 예를 들어  
+ 저장된 프로시저를 실행 하려면 저장된 프로시저 이름이 사용 되는 위치 처럼에 메서드처럼 문을 발행는 **연결** 묶인 매개 변수 개체입니다. ADO는 "최상의 추측" 매개 변수 형식의 생성 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 Dim cnn As New ADODB.Connection  

@@ -3,7 +3,7 @@ title: "OpenSchema 메서드 예제 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10a60afa93d9a0891e534c438a28b66fcae1c771
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0cf2c2acc81d01168e5376a140da3a273db2c37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema 메서드 예제 (VC + +)
 사용 하 여이 예제는 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 에서 각 테이블의 형식과 이름을 표시 하는 메서드는 ***Pubs*** 데이터베이스입니다.  

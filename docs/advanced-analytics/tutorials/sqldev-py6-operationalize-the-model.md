@@ -2,12 +2,14 @@
 title: "6 단계: SQL Server를 사용 하 여 Python 모델을 운용 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: python-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: da38ad56ff82d836fa34e42d3505d3a588344cfa
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 56a0ae3bab6e8a60221f34c954adc661d2d0ddca
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>6 단계: SQL Server를 사용 하 여 Python 모델을 운용
 
@@ -371,6 +373,6 @@ GO
 
 [5 단계: 학습 및 Python 모델 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [기계 학습 Python 사용 하 여 서비스](../python/sql-server-python-services.md)

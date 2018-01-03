@@ -3,7 +3,7 @@ title: "데이터베이스 다이어그램 디자인(Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7afa4c3169353a26660f962f84b20346fdd2680b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 23b1b757d8c4e0ae00891d4359c285f6e5b24b66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 디자인(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 디자이너는 연결할 데이터베이스를 디자인하고 시각화할 수 있게 하는 비주얼 도구입니다. 데이터베이스를 디자인할 때 데이터베이스 디자이너를 사용하여 테이블, 열, 키, 인덱스, 관계, 제약 조건 등을 만들거나 편집하거나 삭제할 수 있습니다. 데이터베이스를 시각화하기 위해 테이블, 열, 키, 관계의 일부 또는 전부를 표시하는 다이어그램을 하나 이상 만들 수 있습니다.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/05/2017
   
 [데이터베이스 다이어그램 디자이너 열기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [데이터베이스 다이어그램에서 테이블 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
 [다이어그램 레이아웃 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  

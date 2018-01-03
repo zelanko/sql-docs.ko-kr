@@ -3,7 +3,7 @@ title: "결과 창에서 데이터 작업(Visual Database Tools) | Microsoft 문
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7493784bc506c454ab0c230d549d0accae58c7c4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7ac0861f7c9d1a5f30efbfeb7466ed320f346191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>결과 창에서 데이터 작업(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리나 뷰를 실행하면 결과 창에 그 결과가 표시됩니다. 이러한 결과를 사용하여 작업할 수 있습니다. 예를 들어 행을 추가 및 삭제하고 데이터를 입력 또는 변경하며 수많은 결과 집합 사이를 쉽게 이동할 수 있습니다.  
@@ -125,7 +125,7 @@ null을 사용하는 대신 빈 공백을 입력하려면 기존 텍스트를 �
   
 -   경우에 따라 전체 자릿수와 소수 자릿수가 유지되지 않을 수 있습니다. 예를 들어 결과 창에서 전체 자릿수를 27까지 지원하는데 데이터의 전체 자릿수가 이보다 큰 형식인 경우 이 데이터는 초과 부분이 잘리거나 *<Unable to read data>*으로 표시될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

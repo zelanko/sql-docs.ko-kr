@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7db96c719d22b3f6dd47a02eac2ef7724c0b6040
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 파일 (텍스트 파일 드라이버)
 텍스트 드라이버를 사용 하는 스키마 정보 파일을 사용 하 여 텍스트 파일의 형식이 결정 됩니다. 스키마 정보 파일은 항상 Schema.ini 라는 하며 텍스트 데이터 소스와 같은 디렉터리에 항상 유지 됩니다. 스키마 정보 파일 IISAM 파일, 열 이름 및 데이터 형식 정보 및 기타 여러 가지 데이터 특성의 일반 형식에 대 한 정보를 제공합니다. Schema.ini 파일은 항상 고정 길이 데이터에 액세스 하기 위해 필요 합니다. 날짜/시간, 통화 또는 10 진수 데이터 또는 테이블의 데이터를 처리 하 여 더 많은 제어 하려는 텍스트 테이블에 포함 되어 있는 경우 Schema.ini 파일을 사용 해야 합니다.  
@@ -105,8 +105,8 @@ n=ColumnNametype [#]
 |매개 변수|Description|  
 |---------------|-----------------|  
 |*열 이름*|열의 텍스트 이름입니다. 열 이름에 공백이 포함 된 경우이 큰따옴표로 묶어 해야 합니다.|  
-|*type*|데이터 형식은 다음과 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> 단일<br /><br /> Double<br /><br /> DateTime<br /><br /> 텍스트<br /><br /> 메모<br /><br /> **ODBC 데이터 형식** Char (텍스트와 같음)<br /><br /> Float (Double과 동일)<br /><br /> 정수 (Short와 같음)<br /><br /> LongChar (메모와 같음)<br /><br /> 날짜 *날짜 형식*|  
-|**너비**|리터럴 문자열 값 `Width`합니다. 다음 숫자 열의 너비를 지정 나타냅니다 (문자 구분 파일에 대 한 선택 사항, 고정 길이 파일에 필요).|  
+|*type*|데이터 형식은 다음과 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> 단일<br /><br /> Double<br /><br /> DateTime<br /><br /> 텍스트 모드<br /><br /> 메모<br /><br /> **ODBC 데이터 형식** Char (텍스트와 같음)<br /><br /> Float (Double과 동일)<br /><br /> 정수 (Short와 같음)<br /><br /> LongChar (메모와 같음)<br /><br /> 날짜 *날짜 형식*|  
+|**Width**|리터럴 문자열 값 `Width`합니다. 다음 숫자 열의 너비를 지정 나타냅니다 (문자 구분 파일에 대 한 선택 사항, 고정 길이 파일에 필요).|  
 |*#*|열 너비를 지정 하는 정수 값 (필요한 경우 **너비** 지정).|  
   
 ## <a name="selecting-a-character-set"></a>문자 집합의 선택  

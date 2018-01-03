@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7e611136116edd4f6b978f7fc09bd7acf2bf1e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ad887c4653c98a6fb4cab3df498233e6d196bd8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-92-compliance"></a>S Q l-92 호환성
 ODBC 데스크톱 데이터베이스 드라이버 및 기본 Microsoft Jet 엔진이 sql-92 호환 되지 않습니다. S Q l-92에 정의 된 많은 기능을 지원 합니다. 드라이버에서 지원 되는 일부 기능에 SQL 92 지원 되지 않습니다. 자세한 내용은 참조는 *Microsoft Jet 데이터베이스 엔진 Programmer's Guide*합니다. 다음은 두 항목 간의 주요 차이점입니다.  

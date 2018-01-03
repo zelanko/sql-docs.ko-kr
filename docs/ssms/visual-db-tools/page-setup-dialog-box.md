@@ -3,7 +3,7 @@ title: "페이지 설정 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e52e80a2de50c69ecc6349a3666e9da5a71f742
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d415cfe737b8b559873b581e094b408495eb386
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="page-setup-dialog-box"></a>페이지 설정 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **페이지 설정** 대화 상자에서 옵션을 선택하여 페이지 디자인을 사용자 지정할 수 있습니다. 일부 옵션의 사용 가능성은 편집하기 위해 설치 및 설정된 언어에 따라 달라집니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 오른쪽  
 페이지의 오른쪽 가장자리와 오른쪽 정렬된 들여쓰지 않은 줄의 오른쪽 가장자리 간 거리를 설정합니다.  
   
-위쪽  
+TOP  
 페이지의 위쪽과 페이지 첫 줄의 위쪽 간 거리를 설정합니다.  
   
 아래쪽  

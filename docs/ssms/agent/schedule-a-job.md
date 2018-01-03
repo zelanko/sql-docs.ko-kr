@@ -3,7 +3,7 @@ title: "작업 예약 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3c2cc7a2dc0b6c7ccf91d7fd7cd9c77e749c05d0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 66ca56809d2e4946bd191efbc343aacf1a5a7975
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 예약하는 방법에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
     [SQL Server 관리 개체](#SMO)  
   
-## <a name="BeforeYouBegin"></a>시작하기 전에  
+## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="Security"></a>보안  
 자세한 내용은 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  

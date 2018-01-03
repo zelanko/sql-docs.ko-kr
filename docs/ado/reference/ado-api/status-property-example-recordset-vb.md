@@ -3,7 +3,7 @@ title: "상태 속성 예제 (레코드 집합) (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d334c2a07ceb112f71840c50898389df1c87dae3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15c61225fd2c77ecd5b27765663c147810b0423c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-property-example-recordset-vb"></a>상태 속성 예제 (레코드 집합) (VB)
 사용 하 여이 예제는 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 일괄 업데이트가 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 합니다.  

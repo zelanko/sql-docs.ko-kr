@@ -3,7 +3,7 @@ title: "DataControl 개체 (RDS) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cf3ffe486c22f7e0fce7bec243e182c459aedc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4921e2895aeeede12f161b31a5dac83e0276822a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 개체 (RDS)
 데이터 쿼리 바인딩하여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 표시 하려면 하나 이상의 컨트롤 (예: 텍스트 상자, 표 형태 컨트롤 또는 콤보 상자)에 **레코드 집합** 웹 페이지에는 데이터입니다.  

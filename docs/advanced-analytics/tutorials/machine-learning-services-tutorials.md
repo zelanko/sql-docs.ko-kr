@@ -1,30 +1,33 @@
 ---
-title: "SQL Server 컴퓨터 학습 자습서 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+title: "학습 Services 자습서 SQL Server 컴퓨터 | Microsoft Docs"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: Python
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- Python
+- R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
 caps.latest.revision: "32"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0547d809e73e13b7bedcc8ac960b00c7c8a9706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b8c384e5d8e13ed0961ad82f95af17c0352389be
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="sql-server-machine-learning-tutorials"></a>SQL Server 컴퓨터 학습 자습서
+# <a name="tutorials-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 자습서
 
 이 문서에는 자습서, 데모 및 SQL Server 2016 또는 SQL Server 2017 컴퓨터 학습 기능을 사용 하는 예제 응용 프로그램의 한 포괄적인 목록을 제공 합니다. 시작 하려면 SQL 프로덕션 환경에 대 한 R 및 Python 코드를 최적화 하는 방법, 원격 및 로컬 계산 컨텍스트를 사용 하는 방법 및 T-SQL에서 R, Python을 실행 하는 방법을 설명 합니다.
 
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 
 + [솔루션](#bkmk_solutions) 
 
-    Microsoft 데이터 과학 팀에서 템플릿은 기계 학습 빠른 시작 하도록 사용자 지정할 수 있습니다. 각 솔루션은 특정 작업이 나 업계 문제; 맞게 또한 대부분의 솔루션은 SQL Server 또는 Azure 기계 학습 등 클라우드 환경에서 실행 하도록 설계 되었습니다. 다른 솔루션 Microsoft R Server 또는 서버를 학습 하는 컴퓨터를 사용 하 여 Linux에서 또는 Spark 또는 Hadoop 클러스터에서를 실행할 수 있습니다.
+    Microsoft 데이터 과학 팀에서 템플릿은 기계 학습 빠른 시작 하도록 사용자 지정할 수 있습니다. 각 솔루션은 특정 작업 또는 업계 문제에 맞게 조정 됩니다. 솔루션의 대부분은 SQL Server 또는 Azure 기계 학습 등 클라우드 환경에서 실행 하도록 설계 되었습니다. 다른 솔루션 Microsoft R Server 또는 서버를 학습 하는 컴퓨터를 사용 하 여 Linux에서 또는 Spark 또는 Hadoop 클러스터에서를 실행할 수 있습니다.
 
 ### <a name ="bkmk_samples"></a>SQL Server 제품 샘플
 
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
 
 + [새로운! 고객 수행 Python 및 SQL Server를 사용 하 여 클러스터링](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
-    알고리즘을 사용 하 여 Kmeans 고객의 감독 되지 않은 클러스터링을 수행 하는 방법을 알아봅니다. 이 예제에서는 Python 언어에서-데이터베이스를 사용 합니다. 
+    알고리즘을 사용 하 여 Kmeans 고객의 감독 되지 않은 클러스터링을 수행 하는 방법을 알아봅니다. 이 예제에서는 Python 언어에서-데이터베이스를 사용 합니다.
     
     적용 대상: SQL Server 2017
 
@@ -73,6 +76,10 @@ ms.lasthandoff: 11/09/2017
    Python을 사용 하 여 이후 요청에 대 한 계획 ski 임대 분석 응용 프로그램을 빌드하십시오. 이 예제에서는 새 Python 라이브러리를 사용 하 여 **revoscalepy**, 선형 회귀 모델을 만듭니다.
    
    적용 대상: SQL Server 2017
+
++ [SQL Server 컴퓨터 학습 services Tableau를 사용 하는 방법](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/)
+
+    소셜 미디어를 분석 하 고 Tableau 그래프, SQL Server 및 오른쪽을 사용 하 여 만들기
 
 ### <a name="bkmk_solutions"></a>솔루션 템플릿
 
@@ -111,7 +118,7 @@ SQL Server 2017 년 R, Python, 또는 둘 다 설치할 수 있습니다. 그렇
 SQL Server 설치 프로그램을 실행 한 후 이러한 중요 한 단계를 잊지 마십시오.
 
 1. 외부 스크립트 실행 기능을 사용 하 여 활성화 `sp_configure 'external scripts enabled', 1`합니다. 지침에 따라를 다시 구성 하 고 SQL Server 다시 시작 합니다.
-2. 실행 패드 서비스 실행 되 고 SQL Server 인스턴스에 연결할 수 있는지 작업자 계정 것 사용 하 여 확인 합니다.
+2. 실행 패드 서비스를 실행 하 고 실행 패드 작업자 계정이 SQL Server 인스턴스에 연결할 수 있는지 확인 하십시오.
 3. Python 또는 R 스크립트를 실행 해야 하는 사용자와 연결 된 권한을 검토 합니다. 것 Windows 사용자 계정 또는 SQL 로그인을 사용, 사용자 Python 또는 R 스크립트를 실행할 수 있는 권한이 있어야 하 고 인스턴스에 연결할 수 있어야 합니다. 자습서를 따라 사용자 필요한 데이터를 작성, 데이터베이스 개체를 만들고 하거나 대량 권한 데이터를 가져오도록 합니다.
 
 자세한 내용은 몇 가지 일반적인 설치 및 구성 문제에 대 한이 문서를 참조 하세요.: [컴퓨터 학습 서비스 문제 해결](../machine-learning-troubleshooting-faq.md)

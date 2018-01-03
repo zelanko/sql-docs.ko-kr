@@ -3,7 +3,7 @@ title: "상태 속성 예제 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4d94baa3a1de7a84ce6997577b6f1c820d2698fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 609c86e5e7b0a9fa801ca2685a80ff97833b8e2f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-property-example-vc"></a>상태 속성 예제 (VC + +)
 사용 하 여이 예제는 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 일괄 업데이트가 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 합니다.  

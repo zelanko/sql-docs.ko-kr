@@ -3,7 +3,7 @@ title: "공급자 오류 정보 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-errors"></a>공급자 오류 정보
 공급자 오류가 발생 하는 경우에-2147467259 런타임에 오류가 반환 됩니다. 이 오류를 받으면 확인는 **오류** 활성의 컬렉션 **연결** 하나 이상의 오류가 발생 한 문제를 설명 하는 포함 하는 개체입니다.  
@@ -72,7 +72,7 @@ End Function
   
 |속성 이름|Description|  
 |-------------------|-----------------|  
-|**Description**|발생 한 오류의 텍스트 설명입니다.|  
+|**설명**|발생 한 오류의 텍스트 설명입니다.|  
 |**HelpContext, 도움말 파일**|발생 한 오류에 대 한 설명을 포함 하는 도움말 항목 및 도움말 파일을 가리킵니다.|  
 |**NativeError**|공급자 특정 오류 번호입니다.|  
 |**번호**|한 수를 나타내는 정수 (Long) (에 나열 된는 **ErrorValueEnum**)에 발생 한 오류입니다.|  

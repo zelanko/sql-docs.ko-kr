@@ -3,7 +3,7 @@ title: "ADO 컬렉션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b6bc8649cca88a6a132db440a3294989dfdcadb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 911a1225bc9dd14cbf7bdc68ceb67af77ff819bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-collections"></a>ADO 컬렉션
 이러한 컬렉션 및 ADO 개체 간의 관계는 표현 되는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)합니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |[오류](../../../ado/reference/ado-api/errors-collection-ado.md)|모든 포함 된 **오류** 단일 공급자 관련 오류에 대 한 응답에서 생성 된 개체입니다.|  
-|[필드](../../../ado/reference/ado-api/fields-collection-ado.md)|모든 포함 된 **필드** 의 개체는 **레코드 집합** 개체입니다.|  
+|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|모든 포함 된 **필드** 의 개체는 **레코드 집합** 개체입니다.|  
 |[매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md)|모든 포함 된 **매개 변수** 의 개체는 **명령** 개체입니다.|  
 |[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)|모든 포함 된 **속성** 개체의 특정 인스턴스에 대 한 개체입니다.|  
   

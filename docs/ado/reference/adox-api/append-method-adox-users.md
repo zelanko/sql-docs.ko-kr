@@ -3,7 +3,7 @@ title: "Append 메서드 (ADOX 사용자) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1720503f6ff8de32b247fa4878bccb69c88d5c71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69f839a24ee99d0db10435a3562926786f2d4620
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-users"></a>Append 메서드 (ADOX 사용자)
 새로 추가 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체는 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션입니다.  

@@ -3,7 +3,7 @@ title: "테이블 속성(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7dc7692744a8f1b194e10591106d43d0f8aa938d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe0a195866ec219190d9c2c2ae5a21c8ebc7b194
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-properties-visual-database-tools"></a>테이블 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 테이블 디자이너 내부를 마우스 오른쪽 단추로 클릭한 다음 속성을 선택하는 경우 속성 창에 이러한 속성이 나타납니다. 별도로 언급하지 않는 한 테이블을 선택할 때 속성 창에서 이러한 속성을 편집할 수 있습니다.  

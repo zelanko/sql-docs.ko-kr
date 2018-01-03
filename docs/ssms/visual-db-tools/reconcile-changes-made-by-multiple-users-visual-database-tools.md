@@ -3,7 +3,7 @@ title: "여러 사용자가 변경한 내용 조정(Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00eeab1dbe74e77189136b200b4f1ddfe50e218b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b8113bac98412aedfbb5d9e9bd8781893d033c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>여러 사용자가 변경한 내용 조정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다중 사용자 환경에서는 동일한 개체를 여러 사용자가 동시에 변경할 수 있습니다. 이러한 상황은 테이블 또는 데이터베이스 다이어그램 디자이너에서 개체 구조에 대한 작업을 수행 중일 때 발생할 수도 있고, 쿼리 및 뷰 디자이너의 결과 창에 반환된 결과의 값에 대해 발생할 수도 있습니다. 이 경우 충돌이 발생할 수 있으므로 적절한 해결책이 필요합니다.  
