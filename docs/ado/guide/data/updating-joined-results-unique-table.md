@@ -3,7 +3,7 @@ title: "업데이트 결과 조인: 고유 테이블 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4629cc3c5fcfacb34deebf9fac1b679bb3797c8a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5eec914a23c667459118f49c9bbdc51cdd803ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-joined-results-unique-table"></a>고유 테이블 업데이트 결과 가입:
 ADO를 사용 하면 밀접 하 게 제어 수정 Unique Table 동적 속성을 사용 하 여 여러 기본 테이블에서 조인 작업으로 만든 레코드 집합의 특정 기본 테이블에 있습니다. 에 대 한 내용은 고유 테이블을 사용 하 여, 고유 테이블 및 업데이트를 다시 동기화 동적 속성에 ADO 프로그래머 참조 항목을 참조 합니다.  

@@ -3,9 +3,9 @@ title: "결과 목록을 사용하여 문서 검색 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b47e823091e48f25000f9d7fe1d1b927017a657c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6159d723ec52adf4117a5ab571570b6c1ec1166
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-documents-using-results-lists"></a>결과 목록을 사용하여 문서 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **찾기 및 바꾸기** 대화 상자를 사용하면 프로젝트나 솔루션 또는 파일 시스템 폴더의 모든 파일을 검색하여 바꿀 수 있으며 이러한 파일이 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 열려 있지 않은 경우에도 마찬가지입니다. **찾기 및 바꾸기** 대화 상자에서 수행한 검색 조건과 일치하는 항목이 찾기 결과 1 및 찾기 결과 2 창에 나타나며 일치하는 항목이 포함된 줄에서 해당 텍스트를 볼 수 있습니다.  

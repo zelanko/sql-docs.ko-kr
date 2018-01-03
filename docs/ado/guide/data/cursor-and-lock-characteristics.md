@@ -3,7 +3,7 @@ title: "커서와 잠금 특성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84f06591c70a42701ca264c99af00e4f072aadd0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: decfe9ec172e1446c8af78fbea5d534ad98e2985
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursor-and-lock-characteristics"></a>커서와 잠금 특성
 커서의 특징 공급자의 기능에 따라 다르지만, 하는 동안 다음과 같은 장점 및 단점 일반적으로 적용에 다양 한 유형의 커서 및 잠금.  

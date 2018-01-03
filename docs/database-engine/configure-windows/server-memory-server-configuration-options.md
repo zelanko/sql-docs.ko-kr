@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f3d5134098013c95051fc38f634461d00718e2f8
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: b6d712ab6a6e4a7dbeb2fe3029de5b1ec8820d8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/28/2017
 ### <a name="example-a"></a>예 1  
  다음 예에서는 `max server memory` 옵션을 4GB로 설정합니다.  
   
-```t-sql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -145,7 +145,7 @@ GO
 ### <a name="example-b-determining-current-memory-allocation"></a>예 B. 현재 메모리 할당 확인  
  다음 쿼리는 현재 할당된 메모리에 대한 정보를 반환합니다.  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
@@ -160,7 +160,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [메모리 관리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md)   
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

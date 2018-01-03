@@ -21,18 +21,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b7281ad56ebbf4b63d03866888a91ccfc111985
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfde48c7c81bfc23bd01d771363d9c4e9f7443f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 새 사용자 정의 데이터 형식 별칭을 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
      **NULL 허용**  
      사용자 정의 데이터 형식에 NULL 값이 허용되는지 여부를 지정합니다. 기존 사용자 정의 데이터 형식의 Null 허용 여부는 편집할 수 없습니다.  
   
-     **데이터 형식**  
+     **Data type**  
      목록 상자에서 기본 데이터 형식을 선택합니다. 목록 상자에는 **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** 및 **xml** 데이터 형식을 제외한 모든 데이터 형식이 표시됩니다. 기존 사용자 정의 데이터 형식의 데이터 형식은 편집할 수 없습니다.  
   
      **Default**  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 시스템이 제공하는 `varchar` 데이터 형식을 기반으로 데이터 형식 별칭을 만듭니다. `ssn` 데이터 형식 별칭은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

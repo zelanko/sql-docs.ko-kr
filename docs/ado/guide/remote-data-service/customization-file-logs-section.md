@@ -3,7 +3,7 @@ title: "사용자 지정 파일 기록 섹션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be0416bacdc32c272b5c88139b06e5e133e6a43a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 80f9b0a4d00326d7e9a81554d96b07bbf0817c43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customization-file-logs-section"></a>사용자 지정 파일 로그 섹션
 **로그** 섹션의 작업 중 오류를 기록 하는 파일의 이름을 지정 하는 로그 파일 항목에 포함 되어는 **DataFactory**합니다.  

@@ -5,7 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1d909039eb43c65358515cd4c3891b20a9a2b7e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4e94eae55ba86f5aa2cd548790f583c281de8f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
   이 문서에서는 Windows Server 2012 R2 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 를 설치하고, MDS 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델 및 데이터를 배포하는 방법을 설명합니다. MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )를 사용하면 조직에서 신뢰할 수 있는 버전의 데이터를 관리할 수 있습니다.   
@@ -285,7 +285,7 @@ ms.lasthandoff: 11/20/2017
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 및 엔터티를 사용하여 데이터 구조를 작성하는 방법에 대한 개요는 [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
   
 ## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
+ 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
   
 ## <a name="see-also"></a>참고 항목  
  [Master Data Services 데이터베이스](../master-data-services/master-data-services-database.md)   

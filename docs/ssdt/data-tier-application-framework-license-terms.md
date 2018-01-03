@@ -3,7 +3,7 @@ title: "데이터 계층 응용 프로그램 프레임워크 - 사용 조건 | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 69ff96ae34f0584dce48eb4e5659a3dda888f840
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f149d3f9f87cc9306cf7e0ee316a326c0fd7956
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-tier-application-framework---license-terms"></a>데이터 계층 응용 프로그램 프레임워크 - 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,8 +97,8 @@ ms.lasthandoff: 12/05/2017
   
 10. **관련 법률.**  
   
-    a.  **미국.** 소프트웨어를 미국에서 구입한 경우, 국제사법 원칙에 관계없이 본 계약의 해석은 워싱턴 주법을 따르며 계약 위반에 대한 청구 발생 시에도 워싱턴 주법이 적용됩니다. 소비자 보호법, 불공정거래법 및 기타 불법 행위 관련 법규의 적용을 받는 청구가 발생한 경우 귀하가 거주하고 있는 주의 주법이 적용됩니다.  
-b.  **미국 외 지역.** 본 사용 조건에는 대한민국 법이 적용됩니다.  
+    1.  **미국.** 소프트웨어를 미국에서 구입한 경우, 국제사법 원칙에 관계없이 본 계약의 해석은 워싱턴 주법을 따르며 계약 위반에 대한 청구 발생 시에도 워싱턴 주법이 적용됩니다. 소비자 보호법, 불공정거래법 및 기타 불법 행위 관련 법규의 적용을 받는 청구가 발생한 경우 귀하가 거주하고 있는 주의 주법이 적용됩니다.  
+2.  **미국 외 지역.** 본 사용 조건에는 대한민국 법이 적용됩니다.  
   
 11. **법적 효력.** 본 계약은 특정 법적 권리에 대해 기술하고 있습니다. 귀하는 귀하가 거주하고 있는 국가의 법규가 보장하는 다른 권리를 보유할 수 있습니다. 또한 귀하가 소프트웨어를 구입한 당사자와 관련된 권리를 보유할 수도 있습니다. 귀하가 거주하고 있는 국가의 법에서 권리 변경을 허용하지 않는 경우 본 계약은 해당 권리를 변경하지 않습니다.  
   

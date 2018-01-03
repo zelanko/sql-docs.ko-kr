@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82eda03e726cc16476847cc8ed21ad46f77509cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 전체 텍스트 카탈로그는 전체 텍스트 인덱스 그룹에 대한 논리적 컨테이너입니다. 전체 텍스트 인덱스를 만들려면 먼저 전체 텍스트 카탈로그를 만들어야 합니다.
@@ -34,9 +34,9 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="creating"></a> 전체 텍스트 카탈로그 만들기  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Transact-SQL을 사용하여 전체 텍스트 카탈로그 만들기
-[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)를 사용합니다. 예를 들어
+[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)를 사용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -71,7 +71,7 @@ GO
   
 다음 표에서는 전체 텍스트 카탈로그에 관련된 속성을 나열합니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용할 수 있습니다. 
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|악센트 구분 설정입니다.|
 |**ImportStatus**|전체 텍스트 카탈로그를 가져올지 여부를 나타냅니다.|  

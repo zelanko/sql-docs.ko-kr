@@ -3,7 +3,7 @@ title: "Append 메서드 (ADOX 테이블) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c5ab4e01e7478f1501dc550c8d45a86f5e8a600
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcf41f4e1ad50dc7e698b3f1a7d6eeb241a41dbc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-tables"></a>Append 메서드 (ADOX 테이블)
 새로 추가 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 개체는 [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 컬렉션입니다.  

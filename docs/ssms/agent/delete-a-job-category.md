@@ -3,7 +3,7 @@ title: "작업 범주 삭제 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91dcdbb782a916fde90d3ee49f668353abad4380
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b1e0e46a690917a37e1a51f49c72032e71e5520
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-a-job-category"></a>작업 범주 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 범주를 삭제하는 방법에 대해 설명합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
     [제한 사항](#Restrictions)  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
     [SQL Server 관리 개체](#SMO)  
   
-## <a name="BeforeYouBegin"></a>시작하기 전에  
+## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="Restrictions"></a>제한 사항  
 사용자가 정의한 작업 범주를 삭제할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 이 작업 범주에 할당된 작업을 다른 작업 범주에 재할당할 것인지 묻습니다. 사용자가 정의한 작업 범주만 삭제할 수 있습니다.  

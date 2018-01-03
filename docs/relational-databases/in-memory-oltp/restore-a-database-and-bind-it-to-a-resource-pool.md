@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0123a452a34fc5d445499fa1ba372a458cdcff60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e959e9afd0ff9487e77fd4526a570aacf894d285
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>데이터베이스를 복원하여 리소스 풀에 바인딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 메모리 최적화 테이블이 포함된 데이터베이스를 복원하기에 충분한 메모리가 있더라도 최선의 구현 방법에 따라 데이터베이스를 명명된 리소스 풀에 바인딩하려고 합니다. 데이터베이스가 있어야 풀에 바인딩할 수 있기 때문에 데이터베이스를 복원하려면 여러 단계를 수행해야 합니다. 이 항목에서는 각 단계를 안내합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_NORECOVERY"></a> NORECOVERY를 사용하여 복원  
  데이터베이스를 복원할 때 NORECOVERY 를 사용하면 메모리를 사용하지 않고 데이터베이스가 만들어지고 디스크 이미지가 복원됩니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE IMOLTP_DB   
    FROM DISK = 'C:\IMOLTP_test\IMOLTP_DB.bak'  
    WITH NORECOVERY  
@@ -51,7 +51,7 @@ RESTORE DATABASE IMOLTP_DB
 ###  <a name="bkmk_createPool"></a> 리소스 풀 만들기  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서는 메모리의 50%를 사용할 수 있는 Pool_IMOLTP라는 리소스 풀을 만듭니다.  풀이 만들어진 후 Pool_IMOLTP를 포함하도록 리소스 관리자가 다시 구성됩니다.  
   
-```tsql  
+```sql  
 CREATE RESOURCE POOL Pool_IMOLTP WITH (MAX_MEMORY_PERCENT = 50);  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
@@ -62,7 +62,7 @@ GO
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서는 리소스 풀 Pool_IMOLTP와 데이터베이스 IMOLTP_DB의 바인딩을 정의합니다. 다음 단계를 완료해야 바인딩이 유효해집니다.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -70,7 +70,7 @@ GO
 ###  <a name="bkmk_RECOVERY"></a> RECOVERY를 사용하여 복원  
  복구를 사용하여 데이터베이스를 복원하면 데이터베이스가 온라인 상태가 되고 모든 데이터가 복원됩니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE IMOLTP_DB   
    WITH RECOVERY  
 ```  

@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac05bddeb5b8ec7ddb153dc4eff000dc9747d4e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c036b75d93fe75cf0feb5e047223cb5bb285aad5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 문서 또는 텍스트가 들어 있는 선택한 열에서 통계 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  다음 예에서는 기본 전체 텍스트 카탈로그 **ft**를 만들고, AdventureWorks2012 예제 데이터베이스의 **HumanResources.JobCandidate** 테이블에 있는 **JobCandidateID** 열에 대해 고유 인덱스를 만듭니다. 이 고유 인덱스는 전체 텍스트 인덱스에 대한 키 열로 필요합니다. 그런 다음 **Resume** 열에 대한 전체 텍스트 인덱스와 의미 체계 인덱스를 만듭니다.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -90,7 +90,7 @@ GO
   
  또한 이 예에서는 채우기 작업을 수행하지 않고 변경 내용 추적이 해제되도록 지정합니다. 나중에 사용률이 낮은 시간에 **ALTER FULLTEXT INDEX** 문을 사용하여 새 인덱스에 대해 전체 채우기를 시작하고 변경 내용 자동 추적을 사용하도록 설정합니다.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -113,7 +113,7 @@ GO
   
  다음과 같이 나중에 사용률이 낮은 시간에 인덱스가 채워집니다.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -139,7 +139,7 @@ GO
   
  다음 예에서는 AdventureWorks2012 예제 데이터베이스의 **Production.Document** 테이블에 대한 기존 전체 텍스트 인덱스를 변경합니다. 이 예에서는 전체 텍스트 인덱스가 이미 있는 **Production.Document** 테이블의 **Document** 열에 의미 체계 인덱스를 추가합니다. 또한 자동으로 다시 채워지지 않는 인덱스를 지정합니다.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -164,7 +164,7 @@ GO
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL을 사용하여 의미 체계 인덱스 삭제  
 열에서 의미 체계 인덱싱만 삭제하려면 **ALTER COLUMN** column_name **DROP STATISTICAL_SEMANTICS***옵션을 사용하여***ALTER FULLTEXT INDEX** 문을 호출합니다. 단일 **ALTER** 문으로 여러 열의 인덱싱을 삭제할 수도 있습니다.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
 
@@ -176,7 +176,7 @@ GO
   
 열에서 전체 텍스트 인덱스와 의미 체계 인덱싱을 모두 삭제하려면 **ALTER COLUMN** column_name **DROP***옵션을 사용하여***ALTER FULLTEXT INDEX** 문을 호출합니다.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -202,7 +202,7 @@ GO
   
  반환 값이 1이면 데이터베이스에 대해 전체 텍스트 검색과 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -226,7 +226,7 @@ GO
   
      반환 값이 1이면 열에 대해 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -235,7 +235,7 @@ GO
   
      **statistical_semantics** 열의 값이 1이면 지정된 열에 전체 텍스트 인덱싱과 의미 체계 인덱싱이 사용하도록 설정되어 있음을 나타냅니다.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -253,7 +253,7 @@ GO
   
  카탈로그 뷰 [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)를 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  

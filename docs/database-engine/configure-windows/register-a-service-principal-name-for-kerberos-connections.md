@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: ddf0e47b4ff05f5280401ae5fdbc7a81a8ebb7ec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Kerberos 인증을 사용하려면 다음 조건 모두에 해당해야 합니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 sys.dm_exec_connections 동적 관리 뷰를 쿼리하여 연결에 Kerberos가 사용되는지 확인할 수 있습니다. 다음 쿼리를 실행하고, Kerberos를 사용할 수 있을 경우 "KERBEROS"가 되는 auth_scheme 열의 값을 확인하십시오.  
   
-```t-sql  
+```sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -62,7 +62,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Windows 인증은 사용자를 SQL Server에 인증하는 데 사용하는 기본 인증 방법입니다. Windows 인증을 사용하는 클라이언트는 NTLM이나 Kerberos를 사용하여 인증됩니다. Active Directory 환경에서는 항상 Kerberos 인증이 먼저 시도됩니다. 명명된 파이프를 사용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 클라이언트에는 Kerberos 인증을 사용할 수 없습니다.  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 시작하면 서비스가 SPN(서비스 사용자 이름)을 등록하려고 합니다. SQL Server를 시작하는 계정에 Active Directory 도메인 서비스에 SPN을 등록할 권한이 없으면 이 호출이 실패하고 응용 프로그램 이벤트 로그와 SQL Server 오류 로그에 경고 메시지가 기록됩니다. SPN을 등록하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 로컬 시스템(권장되지 않음) 또는 NETWORK SERVICE와 같은 기본 제공 계정이나 도메인 관리자 계정과 같은 SPN 등록 권한이 있는 계정으로 실행되고 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가  [!INCLUDE[win7](../../includes/win7-md.md)] 또는  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 운영 체제에서 실행 중인 경우 가상 계정이나 MSA(관리 서비스 계정)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행할 수 있습니다. 가상 계정 및 MSA 모두 SPN을 등록할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 이러한 계정 중 하나로 실행되고 있지 않으면 시작할 때 SPN이 등록되지 않으므로 도메인 관리자가 SPN을 수동으로 등록해야 합니다.  
   
 > [!NOTE]  
@@ -155,7 +155,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname
   
 연결 인증 방법을 확인하려면 다음 쿼리를 실행합니다.  
   
-```t-sql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

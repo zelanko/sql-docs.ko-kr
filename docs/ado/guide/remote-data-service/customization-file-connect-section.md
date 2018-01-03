@@ -3,7 +3,7 @@ title: "사용자 지정 파일 연결 섹션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe0012f287536d015e1086d02833a0f6651194f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b18fd84d31e95aa2973dd0d5377fbc8f51fafe4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 하는 것입니다. **연결** 섹션 해당 동작에 대 한 예외를 지정 합니다. 예를 들어 모든는 **연결** 섹션 된 absent 이거나 비어 있는 경우 다음 기본적으로 없습니다 연결을 만들 수 없습니다.  

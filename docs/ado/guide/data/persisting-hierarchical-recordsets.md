@@ -3,7 +3,7 @@ title: "계층적 레코드 집합을 지속 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4780fb2fe34b4d742365079eed06885146cbc0a7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4922bd5b3166fcb13e0c69f0e226b33656e03a9f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persisting-hierarchical-recordsets"></a>계층적 레코드 집합 유지
 계층적 구조를 저장할 수 있습니다 **레코드 집합** ADTG 또는 XML 형식으로 호출 하 여 파일에는 [저장](../../../ado/reference/ado-api/save-method.md) 메서드. 그러나 두 가지 제한 사항이 적용 계층적 저장할 때 **레코드 집합**XML 형식으로 s: 경우 XML에 저장할 수 없습니다 계층적 **레코드 집합** 보류 중인 업데이트가 포함 되어 매개 변수가 있는 저장할 수 없습니다 계층적 **레코드 집합**합니다.  

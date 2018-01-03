@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5de0a22e84a354096a5e595b39f8ba60154bdd87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc6d693e70c23fa23f6a48780df9cc98ebab14ed
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [페이지 복원이 유용한 경우](#WhenUseful)  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/17/2017
      **복원**  
      이 섹션은 **데이터베이스 복원(일반 페이지)** 의 [복원 위치](../../relational-databases/backup-restore/restore-database-general-page.md)와 동일한 기능을 수행합니다.  
   
-     **데이터베이스**  
+     **데이터베이스 백업**  
      복원할 데이터베이스를 지정합니다. 새 데이터베이스를 입력하거나 드롭다운 목록에서 기존 데이터베이스를 선택할 수 있습니다. 이 목록에는 시스템 데이터베이스인 **master** 및 **tempdb**를 제외한 서버의 모든 데이터베이스가 포함되어 있습니다.  
   
     > [!WARNING]  
@@ -143,7 +143,7 @@ ms.lasthandoff: 11/17/2017
     |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<비어 있음>**(트랜잭션 로그의 경우)이 될 수 있습니다.|  
     |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
     |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
-    |**데이터베이스**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
+    |**데이터베이스 백업**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  
     |**첫 번째 LSN**|백업 세트에 있는 첫 번째 트랜잭션의 LSN(로그 시퀀스 번호)입니다. 파일 백업의 경우 비워 둡니다.|  
     |**마지막 LSN**|백업 세트에 있는 마지막 트랜잭션의 LSN(로그 시퀀스 번호)입니다. 파일 백업의 경우 비워 둡니다.|  
@@ -211,7 +211,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 `B` 로 `NORECOVERY`파일의 손상된 4페이지를 복원합니다. 그런 다음 두 개의 로그 백업에 `NORECOVERY`를 적용하고 `RECOVERY`로 복원되는 비상 로그 백업을 실행합니다. 이 예에서는 온라인 복원을 수행합니다. 이 예에서 `B` 파일의 파일 ID는 `1`이고 손상된 페이지의 페이지 ID는 각각 `57`, `202`, `916`및 `1016`입니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  

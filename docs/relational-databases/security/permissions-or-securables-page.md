@@ -3,7 +3,7 @@ title: "사용 권한 또는 보안 개체 페이지 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/07/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: security
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcdb1f8d446c5cadf94718f2ae7f59c9c0624caf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6dc65e94e95e978d47e9cb454337a52d0a6cc622
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>사용 권한 또는 보안 개체 페이지
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **사용 권한** 페이지 또는 **보안 개체** 페이지를 사용하여 보안 개체에 대한 사용 권한을 보거나 설정할 수 있습니다. 이 페이지는 여러 위치에서 열 수 있으며 페이지의 내용은 페이지를 연 방법과 페이지에 포함된 항목에 따라 조금씩 다를 수 있습니다. 페이지가 열릴 때 해당 페이지의 위쪽 표는 채워져 있거나 비어 있을 수 있습니다. 상단 표에 항목을 추가하려면 **검색**을 클릭합니다. 상단 표에서 항목을 선택한 다음 **명시적** 탭에서 적절한 사용 권한을 설정합니다. 집계된 사용 권한을 보려면 **유효** 탭을 사용합니다.  

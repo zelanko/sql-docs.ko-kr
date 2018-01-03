@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ba9740868c30bcc587cae0f99411bd6a49276fc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b6d7a92e154f6e517fe3299a952a78a05aa4b7d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  쿼리 편집기에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 입력하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 `SRVR002\ACCTG`인스턴스에 연결합니다.  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -219,7 +219,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  다음 코드를 실행하여 연결된 서버에서 연결된 서버를 사용하는 로그인의 도메인 자격 증명을 사용하도록 구성합니다.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -234,7 +234,7 @@ ms.lasthandoff: 11/17/2017
   
 -   다음 코드를 실행하여 연결된 서버에 대한 연결을 테스트합니다. 이 예에서는 연결된 서버의 데이터베이스 이름을 반환합니다.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/17/2017
   
 -   네 부분으로 이루어진 이름을 사용하여 연결된 서버의 개체를 참조합니다. 다음 코드를 실행하면 로컬 서버의 모든 로그인 및 연결된 서버에서 이와 일치하는 로그인의 목록이 반환됩니다.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

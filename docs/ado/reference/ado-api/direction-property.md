@@ -3,7 +3,7 @@ title: "Direction 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9400ea130432404da164d563cb0d05abfa3207af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 115301a55f3da3e9ff4dab4da880b366efeb8143
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="direction-property"></a>Direction 속성
 나타냅니다 여부는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 입력된 매개 변수, 출력 매개 변수, 입력 및 출력 매개 변수를 나타내는 매개 변수가 저장된 프로시저에서 반환 값 이면 또는 합니다.  

@@ -3,7 +3,7 @@ title: "작업 단계 로그 삭제 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 843f2c327a287c6c879f9746321acb3407080da9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c09ff995e7bbe65fa117812652e6665afe7ff8b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
     [제한 사항](#Restrictions)  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
     [SQL Server 관리 개체](#SMO)  
   
-## <a name="BeforeYouBegin"></a>시작하기 전에  
+## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="Restrictions"></a>제한 사항  
 작업 단계를 삭제하면 해당 출력 로그가 자동으로 삭제됩니다.  

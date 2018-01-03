@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 362ce1e89941b1abb4578f1931d91d424ec68ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c3e51c4507973ef0e4394aef1049fe0edadf94f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR를 사용하여 근접 단어 검색
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자 또는 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 함수에서 *근접 단어* **NEAR**를 사용하여 단어나 구를 검색할 수 있습니다. 
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-1"></a>예 1
  예를 들어 다음과 같이 'Smith'와의 사이에 최대 두 단어가 있는 'John'을 검색할 수 있습니다.  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -89,10 +89,10 @@ ms.lasthandoff: 11/17/2017
   
  아랍어나 히브리어와 같이 오른쪽에서 왼쪽으로 읽는 언어에서는 전체 텍스트 엔진이 지정된 단어를 반대 방향으로 적용합니다. 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 개체 탐색기는 오른쪽에서 왼쪽으로 읽는 언어로 지정된 단어의 표시 순서를 자동으로 전환합니다.   
 
-### <a name="example-2"></a>예 2
+### <a name="example-2"></a>예제 2
  다음 예에서는 `Production.Document` 샘플 데이터베이스의 `AdventureWorks` 테이블에서 "bracket"이라는 단어와 동일한 문서에 "reflector"라는 단어가 들어 있는 모든 문서 요약을 검색합니다.  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -113,7 +113,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>NEAR와 다른 용어 결합  
- NEAR를 일부 다른 용어와 결합할 수 있습니다. AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 사용자 지정 근접 단어를 다른 사용자 지정 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 예를 들어  
+ NEAR를 일부 다른 용어와 결합할 수 있습니다. AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 사용자 지정 근접 단어를 다른 사용자 지정 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
   

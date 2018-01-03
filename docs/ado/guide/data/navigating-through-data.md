@@ -3,7 +3,7 @@ title: "데이터를 탐색 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e787efafcff3b037e686abe0a245afde3a96873e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df5475f04cbb0ccb268b0871bb60a25cb3037a14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigating-through-data"></a>데이터 탐색
 **레코드 집합** 다양 한 메서드 및 속성 결과 데이터 집합 탐색을 지원 합니다. 이 샘플에는 몇 가지 시나리오를 통해 이동 하 여이 기능을 살펴볼 **레코드 집합** 개체입니다.  

@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bc20a0bfe85f4e4f1a507554ec6e34e98274d624
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3a806029b1583f1c8d8049639d3350f86969dd0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>가장 인접한 항목의 공간 데이터 쿼리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 공간 데이터에 사용되는 일반적인 쿼리는 가장 인접한 항목 쿼리입니다. 가장 인접한 항목 쿼리는 특정 공간 개체에 가장 가까운 공간 개체를 찾는 데 사용됩니다. 예를 들어 웹 사이트에 대한 상점 로케이터는 고객 위치와 가장 가까운 상점 위치를 찾아야 하는 경우가 많습니다.  
@@ -83,7 +83,7 @@ SELECT TOP ( number )
 ## <a name="example"></a>예제  
  다음 코드 예에서는 공간 인덱스를 사용할 수 있는 가장 인접한 항목 쿼리를 보여 줍니다. 이 예에서는 `Person.Address` 데이터베이스의 `AdventureWorks2012` 테이블을 사용합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -98,7 +98,7 @@ ORDER BY SpatialLocation.STDistance(@g);
 ## <a name="example"></a>예제  
  다음 코드 예에서는 공간 인덱스를 사용할 수 없는 가장 인접한 항목 쿼리를 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  

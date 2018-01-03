@@ -3,7 +3,7 @@ title: "대상 서버(대상 서버 상태 탭) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3916162dd9b141ab53632493a9ba20332508835f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c82dade335a85425ea3bcee535dd10a6b6ad1be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="target-servers-target-server-status-tab"></a>대상 서버(대상 서버 상태 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 이 마스터 서버와 관련된 대상 서버의 상태를 확인할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **대상 서버**  
 대상 서버의 이름을 표시합니다.  
   
@@ -58,6 +58,6 @@ ms.lasthandoff: 12/05/2017
 **새로 고침 간격**  
 페이지의 정보를 새로 고치는 주기를 지정합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [기업 내 관리 자동화](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

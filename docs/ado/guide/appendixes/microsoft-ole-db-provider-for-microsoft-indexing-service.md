@@ -3,7 +3,7 @@ title: "Microsoft 인덱싱 서비스용 Microsoft OLE DB Provider | Microsoft D
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0fb1ffdfdd73562aaa5b64ce997e857ae9f213
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d278b3fd6a2460471195e5744baef93292dfbc30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 인덱싱 서비스 개요
 Microsoft OLE DB Provider for Microsoft Indexing Service 파일 시스템 및 Microsoft 인덱싱 서비스에 의해 인덱싱된 웹 데이터에 대 한 프로그래밍 방식으로 읽기 전용 액세스를 제공 합니다. ADO 응용 프로그램 콘텐츠 및 파일 속성 정보를 검색할 SQL 쿼리를 실행할 수 있습니다.
@@ -101,13 +101,13 @@ MSIDXS
 
 |메서드|사용 가능 여부|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니요|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니오|
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니오|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니오|
 |[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니오|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|
 |[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|
@@ -116,8 +116,8 @@ MSIDXS
 |[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|
-|[Update](../../../ado/reference/ado-api/update-method.md)|아니요|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|
+|[Update](../../../ado/reference/ado-api/update-method.md)|아니오|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니오|
 
  특정 구현 세부 정보 및 Microsoft 인덱싱 서비스용 Microsoft OLE DB Provider에 대 한 기능 정보에 대 한 참조는 [OLE DB Programmer's Guide](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), Windows NT Server 웹의 웹 서비스 페이지를 방문 하 여 사이트입니다.
 

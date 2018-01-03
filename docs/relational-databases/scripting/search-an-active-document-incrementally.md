@@ -3,9 +3,9 @@ title: "활성 문서에서 입력하는 순서대로 검색 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5308e98da83b0478d911ca83c56b8e0df73af5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1f235f48a9ac1cd0082bd0c7476d0d5ab844143
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-an-active-document-incrementally"></a>활성 문서에서 입력하는 순서대로 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 텍스트를 입력하여 하나의 문서나 창을 증분식으로 검색할 수 있습니다. 검색 작업은 문서나 창에서 증분 검색 중에 입력된 문자와 일치하는 첫 번째 문자 집합을 강조 표시합니다. 증분 검색은 숨겨진 텍스트를 제외하고 문서나 창에 있는 모든 텍스트를 자동으로 검색합니다.  

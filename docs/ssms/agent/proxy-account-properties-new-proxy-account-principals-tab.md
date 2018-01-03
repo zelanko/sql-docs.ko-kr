@@ -3,7 +3,7 @@ title: "프록시 계정 속성 - 새 프록시 계정(보안 주체 탭) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 60fdffb69df65303117569f7a5ff6b2ea1a2bd94
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9aa7f82cd8a2b31f7bb120cb17cd58f5d5f32e09
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>프록시 계정 속성 - 새 프록시 계정(보안 주체 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 작업 단계에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시 계정을 사용할 수 있는 보안 주체를 확인하거나 변경할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **프록시 계정 보안 주체**  
 이 프록시 계정을 사용할 수 있는 보안 주체를 나열합니다.  
   

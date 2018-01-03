@@ -3,7 +3,7 @@ title: "사용자 지정 비즈니스 개체를 등록 하는 중 | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c121ddf9e271f4dfb67490d77a719267cfa11a3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 505473d61ef7cc3aeea2067473cd23e3981a2aaa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registering-a-custom-business-object"></a>사용자 지정 비즈니스 개체를 등록 하는 중
 이 절차에 설명 된 대로 비즈니스 개체의 ProgID (.dll 또는.exe)에 사용자 지정 비즈니스 개체를 통해 웹 서버를 성공적으로 시작 하려면 레지스트리에 입력 해야 합니다. 이 RDS 기능 승인된 실행 파일만 실행 하 여 웹 서버의 보안을 보호 합니다.  

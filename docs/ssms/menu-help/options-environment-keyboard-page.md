@@ -3,7 +3,7 @@ title: "옵션(환경 - 키보드 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27217dad35a1fc323c92cd0db69c867fcbc7a766
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c63d20ce0e494c3f21c6e3e1b5a786b1a1dd530a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---keyboard-page"></a>옵션(환경 - 키보드 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **옵션** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 키보드 구성표를 사용자 지정할 수 있습니다. 이 옵션을 사용하여 키보드 구성표를 선택할 수 있습니다. 이 페이지를 표시하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 폴더를 선택한 다음 **키보드**를 클릭합니다.  

@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0ae7abf60c9d2cf540a0daa73bd0bb6ceebb3729
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb605b3caeee875464e91ac811e6b760b0e353d2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -56,13 +56,13 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
 -   시스템 프로시저 이름을 일치시킬 때 호출 데이터베이스 데이터 정렬이 사용됩니다. 따라서 프로시저 호출에서 대/소문자를 구분하여 시스템 프로시저 이름을 항상 정확하게 지정해야 합니다. 예를 들어 다음 코드는 대/소문자를 구분하는 데이터 정렬을 사용하는 데이터베이스 컨텍스트에서 실행할 경우 실패합니다.  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
      시스템 프로시저는 접두사 **sp_**로 시작합니다. 시스템 프로시저는 모든 사용자 정의 데이터베이스와 시스템 정의 데이터베이스에 논리적으로 나타나기 때문에 프로시저 이름을 완전히 한정하지 않고도 모든 데이터베이스에서 시스템 프로시저를 실행할 수 있습니다. 그러나 이름 충돌이 발생하지 않도록 **sys** 스키마 이름으로 모든 시스템 프로시저 이름을 스키마로 한정하는 것이 좋습니다. 다음 예에서는 권장되는 시스템 프로시저 호출 방법을 보여 줍니다.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
      다음 예에서는 권장되는 사용자 정의 프로시저 실행 방법을 보여 줍니다. 프로시저는 하나의 입력 매개 변수를 받아들입니다. 입력 및 출력 매개 변수를 지정하는 방법은 [매개 변수 지정](../../relational-databases/stored-procedures/specify-parameters.md)을 참조하세요.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
      -또는-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> 보안  
  자세한 내용은 [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) 및 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -158,7 +158,7 @@ ms.lasthandoff: 11/17/2017
      **Null 값 전달**  
      매개 변수의 값으로 NULL 값을 전달합니다.  
   
-     **값**  
+     **Value**  
      프로시저를 호출할 때 매개 변수의 값을 입력합니다.  
   
 5.  저장 프로시저를 실행하려면 **확인**을 클릭합니다.  
@@ -173,7 +173,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 하나의 매개 변수를 예상하는 저장 프로시저를 실행하는 방법을 보여 줍니다. 또한 `uspGetEmployeeManagers` 매개 변수로 지정된 값인  `6` 을 사용하여 `@EmployeeID` 저장 프로시저를 실행합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -188,7 +188,7 @@ GO
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 자동 실행되도록 프로시저를 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 프로시저가 자동 실행되는 것을 중지하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

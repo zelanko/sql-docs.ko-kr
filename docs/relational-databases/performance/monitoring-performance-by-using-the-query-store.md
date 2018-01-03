@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b3236a5888d906328f525333ae9e20b42e6d8de
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용  
   
-1.  **ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어  
+1.  **ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
  다음 쿼리는 쿼리 저장소의 쿼리 및 계획에 대한 정보를 반환합니다.  
   
-```tsql  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -200,7 +200,7 @@ SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고�
   
  쿼리 저장소가 현재 활성 상태인지, 및 현재 런타임 통계를 수집하는지의 여부를 정하려면 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)를 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
@@ -213,7 +213,7 @@ FROM sys.database_query_store_options;
   
  쿼리 저장소 상태에 대한 자세한 정보를 찾으려면 사용자 데이터베이스에서 다음을 실행합니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -221,7 +221,7 @@ SELECT * FROM sys.database_query_store_options;
   
  쿼리 런타임 통계를 집계하는 간격(기본값은 60분)을 재정의할 수 있습니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
@@ -235,14 +235,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  현재 쿼리 저장소 크기를 확인하려면 데이터베이스에서 다음 문의 실행을 제한합니다.  
   
-```tsql  
+```sql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  쿼리 저장소 저장 공간이 꽉 차는 경우 다음 문을 사용하여 저장소를 확장합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -251,7 +251,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  단일 ALTER DATABASE 문 사용하여 여러 쿼리 저장소 옵션을 한 번에 설정할 수 있습니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
@@ -270,7 +270,7 @@ SET QUERY_STORE (
   
  데이터베이스 생성 중 쿼리 저장소 내부 테이블이 PRIMARY 파일 그룹에 만들어지며 해당 구성은 나중에 변경할 수 없습니다. 공간이 부족한 경우 다음 문을 사용하여 이전 쿼리 저장소 데이터를 지울 수 있습니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -278,7 +278,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  **임시 쿼리 삭제** 한번만 실행되고 24시간 이상 지난 쿼리를 삭제합니다.  
   
-```tsql  
+```sql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -321,7 +321,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  **마지막 *n*개 쿼리가 데이터베이스에서 실행되었나요?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -336,7 +336,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **각 쿼리에 대한 실행 수는 몇 개입니까?**  
   
-```tsql  
+```sql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -352,7 +352,7 @@ ORDER BY total_execution_count DESC;
   
  **지난&1;시간 내에 평균 실행 시간이 가장 긴 쿼리 수는 몇 개입니까?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -369,7 +369,7 @@ ORDER BY rs.avg_duration DESC;
   
  **지난 24시간 동안 평균 물리적 IO 읽기가 가장 큰 쿼리 수 및 해당하는 평균 행 수 및 실행 수는 몇 개입니까?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -388,7 +388,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **여러 계획을 사용하는 쿼리는 무엇입니까?** 이러한 쿼리는 계획 선택 변경으로 인한 재발을 일으킬 수 있으므로 특히 흥미롭습니다. 다음 쿼리는 이러한 쿼리와 함께 모든 계획을 식별합니다.  
   
-```tsql  
+```sql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -417,7 +417,7 @@ ORDER BY query_id, plan_id;
   
  **최근에 성능이 저하된 쿼리(다른 시점과 비교)는 무엇입니까?** 다음 쿼리 예제는 지난 48 시간에 계획 선택 변경으로 인해 실행 시간이 두 배가 된 모든 쿼리를 반환합니다. 쿼리에서는 모든 런타임 통계 간격을 나란히 비교합니다.  
   
-```tsql  
+```sql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -457,7 +457,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  **가장 오래 대기 중인 쿼리는 무엇인가요?**
 이 쿼리는 가장 오래 대기 중인 상위 10개의 쿼리를 반환합니다. 
  
- ```tsql 
+ ```sql 
   SELECT TOP 10
     qt.query_text_id,
     q.query_id,
@@ -473,7 +473,7 @@ ORDER BY sum_total_wait_ms DESC
  
  **최근에 성능이 저하된 쿼리(최근 및 기록 실행 비교)는 무엇입니까?** 다음 쿼리는 실행 기간을 기준으로 쿼리 실행을 비교합니다. 이 특정 예제의 쿼리는 최근 기간(1시간) 및 기록 기간(어제)의 실행을 비교하고 `additional_duration_workload`를 초래한 쿼리를 식별합니다. 이 메트릭은 최근 평균 실행 기간과 기록 평균 실행 간의 차이에 최근 실행 수를 곱한 값으로 계산됩니다. 이 값은 실제로 기록에 비해 최근 실행으로 초래된 추가 기간을 나타냅니다.  
   
-```tsql  
+```sql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -562,7 +562,7 @@ OPTION (MERGE JOIN);
   
  **쿼리에 대 한 계획 강제 적용(강제 적용 정책 적용)** 특정 쿼리에 계획을 ;강제 적용하는 경우 쿼리를 실행할 때마다 강제 적용된 계획이 실행됩니다.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -570,11 +570,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **쿼리에 대한 계획 강제 적용 제거** 다시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램 사용하여 최적의 쿼리 계획을 계산하려면 **sp_query_store_unforce_plan** 을 사용하여 쿼리에 대해 선택한 계획의 강제 적용을 취소합니다.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [메모리 내 OLTP와 쿼리 저장소 사용](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)   

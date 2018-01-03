@@ -47,11 +47,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2694383403923ad677ba680fcdaaa0a2e7e5138a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e9ff0f1d6fb35c9c5bc63b973e4ec269f12b3865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 
   이 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]구성 관리자, 명령 프롬프트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령,  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 **,** 에이전트 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]Browser 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작하는 방법에 대해 설명합니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
     -   [SQL Server Database Engine, SQL Server 에이전트 및 SQL Server Browser 서비스 정의](#Services)  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  기본적으로 로컬 Administrators 그룹의 멤버만 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작할 수 있습니다. 관리자가 아닌 사용자에게 서비스 관리 권한을 부여하려면 [Windows Server 2003에서 사용자에게 서비스 관리 권한을 부여하는 방법](http://support.microsoft.com/kb/325349)을 참조하세요. 이 프로세스는 다른 Windows 버전에서도 비슷합니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**명령을 사용하여** 을 중지하려면 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버여야 하며 이 권한은 위임할 수 없습니다.  
@@ -276,13 +276,13 @@ ms.lasthandoff: 11/20/2017
   
 -   현재 실행 중인 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 저장 프로시저가 완료될 때까지 기다린 다음 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 중지하려면 다음 문을 실행합니다.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 즉시 중지하려면 다음 문을 실행합니다.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

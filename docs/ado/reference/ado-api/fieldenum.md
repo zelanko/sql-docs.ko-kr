@@ -3,7 +3,7 @@ title: FieldEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10555100d93b931f3b07c2118cf70556171ba831
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3816a8a810c6ad3bfc50c0dd960b6abc4f859737
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fieldenum"></a>FieldEnum
 참조 하는 특수 필드를 지정 된 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체의 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션입니다.  

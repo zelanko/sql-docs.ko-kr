@@ -3,7 +3,7 @@ title: "명령 사용 하 여 저장된 프로시저를 호출 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 25d639d9d8f7c8e454957f1b309a449951550b26
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6c22f098efcb2352e450c07aece8f88c8f32b4d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>명령 사용 하 여 저장된 프로시저 호출
 저장된 프로시저를 호출 하는 명령을 사용할 수 있습니다. 이 항목의 끝에 있는 코드 샘플 CustOrdersOrders 다음과 같이 정의 된 호출 Northwind 샘플 데이터베이스의 저장된 프로시저를 참조 합니다.  

@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a293cb894ac3a0c4eac086a8740d16c98c955e83
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41bac509d07c7aaeea93ab34ee19aecf653fa2e6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>변경 내용 추적 설정 및 해제(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="enable-change-tracking-for-a-database"></a>데이터베이스에 변경 내용 추적을 사용하도록 설정  
  변경 내용 추적을 사용하기 전에 데이터베이스 수준에서 변경 내용 추적을 설정해야 합니다. 다음 예에서는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)를 사용하여 변경 내용 추적을 사용하도록 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = ON  
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
@@ -63,7 +63,7 @@ SET CHANGE_TRACKING = ON
   
  다음 예에서는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 테이블에 변경 내용 추적을 사용하도록 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 ENABLE CHANGE_TRACKING  
 WITH (TRACK_COLUMNS_UPDATED = ON)  
@@ -78,14 +78,14 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
  데이터베이스의 테이블에 변경 내용 추적이 설정되어 있지 않으면 해당 데이터베이스에 대해 변경 내용 추적을 해제할 수 있습니다. 다음 예에서는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)를 사용하여 데이터베이스에 변경 내용 추적을 사용하지 않도록 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = OFF  
 ```  
   
  다음 예에서는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 테이블에 변경 내용 추적을 사용하지 않도록 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  

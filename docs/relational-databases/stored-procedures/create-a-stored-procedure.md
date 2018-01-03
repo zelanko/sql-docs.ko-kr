@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc9ed462b52c79f792852a1b6b1d380cae3e182
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 321ac7ca18880205192923cc567c172342668eec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-stored-procedure"></a>저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **프로시저를 만들려면:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> Permissions  
  데이터베이스의 CREATE PROCEDURE 권한과 프로시저를 만들 스키마에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="Procedures"></a> 저장 프로시저를 만드는 방법  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
     |---------------|-----------|  
     |작성자|*Your name*|  
     |만든 날짜|*Today's date*|  
-    |설명|Returns employee data|  
+    |Description|Returns employee data|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  **쿼리 편집기**에서 SELECT 문을 다음 문으로 바꿉니다.  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  

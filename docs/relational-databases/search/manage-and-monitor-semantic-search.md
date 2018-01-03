@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b01af634ed2681c49bdb444cd4a468b45be3ab03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d318e818800a2f1cf8591ba6f35f31d55b0cd564
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>의미 체계 검색 관리 및 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 의미 체계 인덱싱의 과정과 인덱스를 모니터링하고 관리하는 데 관련된 태스크에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  인덱싱의 첫 번째 단계에는 문서 유사성 데이터의 추출뿐만 아니라 전체 텍스트 키워드 인덱스와 의미 체계 키 구 인덱스의 채우기도 포함됩니다.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -62,7 +62,7 @@ GO
   
  논리적 크기는 인덱스 페이지의 수로 표시됩니다.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -73,7 +73,7 @@ GO
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스의 총 크기 확인  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 메타데이터 함수의 **IndexSize** 속성을 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -81,7 +81,7 @@ GO
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스에서 인덱싱된 항목 수 확인  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 메타데이터 함수의 **ItemCount** 속성을 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
   
  의미 체계 인덱싱이 사용하지 않도록 설정되거나 일시 중지된 경우에도 의미 체계 데이터에 대한 쿼리는 계속 작동하여 이전에 인덱싱된 데이터를 반환합니다. 이 동작은 전체 텍스트 검색의 동작과 같지 않습니다.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  

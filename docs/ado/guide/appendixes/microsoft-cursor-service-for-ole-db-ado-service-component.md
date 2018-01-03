@@ -3,7 +3,7 @@ title: "OLE DB (ADO 서비스 구성 요소)에 대 한 Microsoft 커서 서비�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c1fe1572b2ef44ad8fe672b51d5b353ea8182f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62ee8c5da51de28eff001b2056e738653db5b813
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 개요에 대 한 Microsoft 커서 서비스
 OLE DB에 대 한 Microsoft 커서 서비스의 데이터 공급자 커서 지원 기능을 보완합니다. 결과적으로 사용자에 게 기능을 모든 데이터 공급자 비교적 안정적입니다.

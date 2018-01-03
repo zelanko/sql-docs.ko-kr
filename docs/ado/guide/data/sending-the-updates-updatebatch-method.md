@@ -3,7 +3,7 @@ title: "업데이트를 전송: UpdateBatch 메서드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b43ae9cdb1a8ed61dc1ef8546b4c560bac403a33
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2b1043286735c1fc44caed21650e098dfc923d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>업데이트를 전송: UpdateBatch 메서드
 다음 코드 adLockBatchOptimistic 및 adUseClient 앞에 LockType 속성을 설정 하 여 일괄 처리 모드에서 레코드 집합을 엽니다. 플랫폼 원래 값이 저장 된 기존 레코드에서 필드의 값이 변경를 두 개의 새 레코드를 추가 변경 내용을 데이터 소스에 다시 보낼 UpdateBatch를 호출 합니다.  

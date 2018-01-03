@@ -3,9 +3,9 @@ title: "대화형으로 문서 검색 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 894d326c58a11f4c284ef91a3b2ff5bacb4b498b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b85af6717ff7493bdfff482a88015cf47dac1bf9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-documents-interactively"></a>대화형으로 문서 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **찾기 및 바꾸기** 대화 상자를 사용하면 하나 이상의 열려 있는 파일이나 창을 검색하고 검색 조건과 일치하는 항목을 하나씩 이동할 수 있습니다. 이 기술을 사용하면 일치하는 항목 주위의 텍스트 컨텍스트에서 일치하는 개별 항목을 검토할 수 있습니다. 또한 **찾기 및 바꾸기** 대화 상자를 사용하여 대량 찾기 작업을 수행하고 검색 조건과 일치하는 항목을 보고서 형식으로 검토할 수 있습니다.  

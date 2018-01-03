@@ -3,7 +3,7 @@ title: "모양 변경 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 26704fa45780f1f38e45b98401bc89e6f1bd660f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f00f6a724f4ab500b82d44e06e78ae0af1fe955d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reshaping"></a>모양 변경
 A **레코드 집합** 만든 도형의 절에 의해 명령을 할당할 수 있습니다는 *별칭* 이름 (일반적으로 AS 키워드가). 모양의의 별칭 **레코드 집합** 완전히 다른 명령에서 참조할 수 있습니다. 즉, 다시 사용할 수 있습니다, 또는 *변형*, 이전에 모양의 **레코드 집합** 새 shape 명령에서 합니다. 이 기능을 지원 하려면 ADO에는 속성을 제공 [이름 변형](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)합니다.  

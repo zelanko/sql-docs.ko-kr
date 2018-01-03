@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec18dcf8fd78dbee82bf74adcf4e492dca604049
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0d5c10d9e0e34352db32481270343f948277149d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>파생 계층에서 다 대 다 관계 표시(Master Data Services)
   파생 계층(DH)은 일 대 다 관계를 표시하며 다 대 다 관계도 보여줄 수 있습니다.  
@@ -94,7 +94,7 @@ Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> 멤버 보안  
- 구성원 보안 권한을 할당하는 데 구성원 중복을 허용하는 계층(구성원이 둘 이상의 부모를 가질 수 있음)을 사용할 수 없습니다. 예를 들어  
+ 구성원 보안 권한을 할당하는 데 구성원 중복을 허용하는 계층(구성원이 둘 이상의 부모를 가질 수 있음)을 사용할 수 없습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   null 재귀에 앵커를 지정하지 않는 재귀적 파생 계층(RDH)입니다(재귀 수준에서 각 구성원은 루트와 해당 재귀 부모 아래에 나타남).  
   

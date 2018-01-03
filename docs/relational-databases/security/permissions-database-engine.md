@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6d2d7b6f97be65f053248396528c3f4f18f7230e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 [![데이터베이스 엔진 사용 권한](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 권한을 이해했으면 [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)및 [DENY](../../t-sql/statements/deny-transact-sql.md) 문을 사용하여 로그인 및 데이터베이스 수준 권한 사용자에게 서버 수준 권한을 적용합니다. 예를 들면 다음과 같습니다.   
-```tsql
+```sql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
@@ -110,8 +110,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |----------------|----------------|  
 |ALTER|TYPE을 제외한 모든 개체 클래스입니다.|  
 |CONTROL|모든 개체 클래스 <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW 및<br />XML SCHEMA COLLECTION|  
-|DELETE|DATABASE SCOPED CONFIGURATION 및 SERVER를 제외한 전체 개체 클래스입니다.|  
-|EXECUTE|CLR 형식, 외부 스크립트, 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR), 스칼라와 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 동의어|  
+|Delete|DATABASE SCOPED CONFIGURATION 및 SERVER를 제외한 전체 개체 클래스입니다.|  
+|CREATE 문을 실행하기 전에|CLR 형식, 외부 스크립트, 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR), 스칼라와 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 동의어|  
 |IMPERSONATE|로그인 및 사용자|  
 |INSERT|동의어, 테이블과 열, 뷰 및 열입니다. 데이터베이스, 스키마 또는 개체 수준에서 권한을 부여할 수 있습니다.|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐|  
@@ -217,8 +217,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
+|DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
+|DATABASE|CREATE 문을 실행하기 전에|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
@@ -264,8 +264,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
-|OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
+|OBJECT|DELETE|DL|SCHEMA|Delete|  
+|OBJECT|CREATE 문을 실행하기 전에|EX|SCHEMA|CREATE 문을 실행하기 전에|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
@@ -294,8 +294,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
-|SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
+|SCHEMA|Delete|DL|DATABASE|Delete|  
+|SCHEMA|CREATE 문을 실행하기 전에|EX|DATABASE|CREATE 문을 실행하기 전에|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
@@ -352,7 +352,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
-|TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
+|TYPE|CREATE 문을 실행하기 전에|EX|SCHEMA|CREATE 문을 실행하기 전에|  
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -362,7 +362,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |User|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
-|XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
+|XML SCHEMA COLLECTION|CREATE 문을 실행하기 전에|EX|SCHEMA|CREATE 문을 실행하기 전에|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -423,8 +423,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="secial-considerations-for-column-level-permissions"></a>열 수준 사용 권한에 대한 특별 고려 사항
 
-*<table_name>(\<column _name>)* 구문을 사용하여 열 수준 사용 권한을 부여합니다. 예를 들어
-```tsql
+*<table_name>(\<column _name>)* 구문을 사용하여 열 수준 사용 권한을 부여합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 테이블에서 DENY는 열에서 GRANT에 의해 재정의됩니다. 그러나 테이블에서 후속 DENY는 열 GRANT를 제거합니다. 
@@ -435,7 +435,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>1. 부여 가능한 사용 권한의 전체 목록 반환  
  다음 문에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 함수를 사용하여 모든 `fn_builtin_permissions` 사용 권한을 반환합니다. 자세한 내용은 [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)를 참조하세요.  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions(default);  
 GO  
 ```  
@@ -443,7 +443,7 @@ GO
 ### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>2. 특정 개체 클래스의 사용 권한 반환  
  다음 예제에서는 `fn_builtin_permissions` 를 사용하여 보안 개체 범주에 사용할 수 있는 모든 사용 권한을 표시합니다. 다음 예에서는 어셈블리의 사용 권한을 반환합니다.  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions('assembly');  
 GO    
 ```  
@@ -451,7 +451,7 @@ GO
 ### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>3. 개체의 실행 보안 주체에 부여된 사용 권한 반환  
  다음 예에서는 `fn_my_permissions` 를 사용하여 지정된 보안 개체에 대해 해당 보안 주체가 가진 유효 사용 권한의 목록을 반환합니다. 다음 예에서는 `Orders55`라는 개체의 사용 권한을 반환합니다. 자세한 내용은 [sys.fn_my_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)를 참조하세요.  
   
-```tsql  
+```sql  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
 GO  
 ```  
@@ -459,7 +459,7 @@ GO
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>4. 지정된 개체에 적용할 수 있는 사용 권한 반환  
  다음 예에서는 `Yttrium`이라는 개체에 적용할 수 있는 사용 권한을 반환합니다. `OBJECT_ID` 개체의 ID를 검색하는 데 기본 제공 함수인 `Yttrium`가 사용됩니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_permissions   
     WHERE major_id = OBJECT_ID('Yttrium');  
 GO  

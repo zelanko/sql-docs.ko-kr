@@ -3,9 +3,9 @@ title: "SQL Server PowerShell 공급자에 인스턴스 지정 | Microsoft 문�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,20 +17,20 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 409654f138f1ac9628822d824c431cea504d2c0f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d643ffaa5bb51529b1aa9624112cbb0e31f762cd
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자에 인스턴스 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server PowerShell 공급자에 대해 지정되는 경로는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스와 해당 인스턴스가 실행 중인 컴퓨터를 식별해야 합니다. 컴퓨터와 인스턴스를 지정하는 구문은 SQL Server 식별자 규칙과 Windows PowerShell 경로 규칙을 모두 준수해야 합니다.  
   
-1.  **시작하기 전에:**  [제한 사항](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
 2.  **인스턴스를 지정하려면**  [예](#Examples)  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  SQL Server 공급자 경로에서 SQLSERVER:\SQL 다음에 오는 첫 번째 노드는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스를 실행하는 컴퓨터 이름입니다. 예를 들면 다음과 같습니다.  
   
 ```  

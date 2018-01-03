@@ -3,9 +3,9 @@ title: "탭 완성 기능 관리(SQL Server PowerShell) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97a58c82d7108c040d391537804ea34920312df4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 012deb0010431ee9bc50a3a470c3e3a00a15d19e
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>탭 완성 기능 관리(SQL Server PowerShell)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인에 도입된 3개의 변수(**$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems** 및 **$SqlServerIncludeSystemObjects**)를 사용하여 Windows PowerShell 탭 완성 기능을 제어할 수 있습니다. 탭 완성 기능은 이름이 입력한 문자열로 시작하는 항목의 테이블을 반환하여 사용자 입력을 줄여 줍니다.  

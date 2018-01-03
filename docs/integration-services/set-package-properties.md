@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ae011fb40b1e20a82d92f6db4c1077910f8d735
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 |**CreationDate**|패키지를 만든 날짜입니다.|  
 |**CreatorComputerName**|패키지를 만든 컴퓨터의 이름입니다.|  
 |**CreatorName**|패키지를 만든 사용자의 이름입니다.|  
-|**Description**|패키지 기능에 대한 설명입니다.|  
+|**설명**|패키지 기능에 대한 설명입니다.|  
 |**ID**|패키지를 만들 때 할당된 패키지 GUID입니다. 이 속성은 읽기 전용입니다. **ID** 속성의 새 임의 값을 생성하려면 드롭다운 목록에서 **\<새 ID 생성\>**을 선택합니다.|  
 |**이름**|패키지의 이름입니다.|  
 |**PackageType**|패키지 유형입니다. 가능한 값은 **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**및 **SQLReplication**입니다. 이 속성의 기본값은 **Default**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>를 참조하세요.|  
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/20/2017
   
 |속성|Description|  
 |--------------|-----------------|  
-|**IsolationLevel**|패키지 트랜잭션의 격리 수준입니다. 가능한 값은 **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**및 **Snapshot**입니다. 이 속성의 기본값은 **Serializable**입니다.<br /><br /> 참고: **IsolationLevel** 속성의 **Snapshot** 값은 패키지 트랜잭션에 사용할 수 없습니다. 따라서 **IsolationLevel** 속성으로는 패키지 트랜잭션의 격리 수준을 **Shapshot**으로 설정할 수 없습니다. 패키지 트랜잭션을 **Snapshot**으로 설정하려면 SQL 쿼리를 대신 사용해야 합니다. 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.<br /><br /> **IsolationLevel** 속성 값을 **TransactionOption** 로 설정한 경우에만 **Required**속성이 패키지 트랜잭션에 적용됩니다.<br /><br /> 다음과 같은 경우 자식 컨테이너에서 요청하는 **IsolationLevel** 속성 값이 무시됩니다.<br />자식 컨테이너의 **TransactionOption** 속성 값이 **Supported**일 경우<br />자식 컨테이너가 부모 컨테이너의 트랜잭션에 참여하는 경우<br /><br /> 컨테이너에서 요청하는 **IsolationLevel** 속성 값은 컨테이너가 새 트랜잭션을 시작할 때만 적용됩니다. 다음과 같은 경우 컨테이너가 새 트랜잭션을 시작합니다.<br />컨테이너의 **TransactionOption** 속성 값이 **Required**일 경우<br />부모는 트랜잭션을 시작하지 않습니다.<br /><br /> <br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>를 참조하세요.|  
+|**IsolationLevel**|패키지 트랜잭션의 격리 수준입니다. 가능한 값은 **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**및 **Snapshot**입니다. 이 속성의 기본값은 **Serializable**입니다.<br /><br /> 참고: **IsolationLevel** 속성의 **Snapshot** 값은 패키지 트랜잭션에 사용할 수 없습니다. 따라서 **IsolationLevel** 속성으로는 패키지 트랜잭션의 격리 수준을 **Shapshot**으로 설정할 수 없습니다. 패키지 트랜잭션을 **Snapshot**으로 설정하려면 SQL 쿼리를 대신 사용해야 합니다. 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.<br /><br /> **IsolationLevel** 속성 값을 **TransactionOption** 로 설정한 경우에만 **Required**속성이 패키지 트랜잭션에 적용됩니다.<br /><br /> 다음과 같은 경우 자식 컨테이너에서 요청하는 **IsolationLevel** 속성 값이 무시됩니다.<br />자식 컨테이너의 **TransactionOption** 속성 값이 **Supported**일 경우<br />자식 컨테이너가 부모 컨테이너의 트랜잭션에 참여하는 경우<br /><br /> 컨테이너에서 요청하는 **IsolationLevel** 속성 값은 컨테이너가 새 트랜잭션을 시작할 때만 적용됩니다. 다음과 같은 경우 컨테이너가 새 트랜잭션을 시작합니다.<br />컨테이너의 **TransactionOption** 속성 값이 **Required**일 경우<br />부모가 트랜잭션을 시작하지 않은 경우<br /><br /> <br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>를 참조하세요.|  
 |**TransactionOption**|패키지의 트랜잭션 참여 옵션입니다. 가능한 값은 **NotSupported**, **Supported**및 **Required**입니다. 이 속성의 기본값은 **Supported**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>를 참조하세요.|  
   
 ###  <a name="Version"></a> 버전  

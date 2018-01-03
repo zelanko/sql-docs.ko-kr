@@ -3,7 +3,7 @@ title: "일정 참조 작업 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3212c569168c7eb1ecba2ceb85e17899e3f300c6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c9188b1b33eac136f2bc1a59b04aa2af1716d18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="jobs-that-reference-a-schedule"></a>일정 참조 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 특정 일정을 참조하는 작업에 대한 정보를 확인할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **일정**  
 확인 중인 일정의 이름을 표시합니다.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
 **이름**  
 이 일정을 사용하는 작업의 이름입니다.  
   
-**설정**  
+**Enabled**  
 읽기 전용입니다. 이 작업이 현재 사용하도록 설정되어 있는지 여부를 나타냅니다.  
   
 **범주**  

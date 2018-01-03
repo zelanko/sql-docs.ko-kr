@@ -3,7 +3,7 @@ title: "명령 이름은 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0eca9ac410156f891f4bd383a7100342c69662c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6830fefa2e01cf03466ae0b28dc8b132ad6a7149
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="named-commands"></a>명명 된 명령
 [만들기 및 실행 하는 간단한 명령](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 명령을 실행 하는 방법을 보여 줍니다. 다른 방법으로: 명명된 된 명령을 확인 하 고 호출 하는이 명령에서 직접 명명 된는 **연결** 개체 (에 할당 된는 **ActiveConnection** 의 속성은 **명령** 개체). 명령 이름 지정에 이름을 할당 의미는 **이름** 속성은 **명령** 개체입니다. 예:  

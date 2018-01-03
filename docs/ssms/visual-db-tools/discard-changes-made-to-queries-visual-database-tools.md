@@ -3,7 +3,7 @@ title: "쿼리 변경 내용 취소(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 507ef93ff1bae87aea60ef746d2e9c578f6b63e4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8b1e89b785a2f490d15594f7ecc786b40b6c9dec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>쿼리 변경 내용 취소(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 정의에 대한 변경 내용을 저장하기 전에 취소할 수 있습니다. 이러한 변경 내용을 저장한 후에는 이전 상태로 되돌릴 수 없습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
     마지막 저장 상태로 쿼리 정의가 되돌아갑니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 저장(Visual Database Tools)](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [쿼리 관련 기본 작업 수행(Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

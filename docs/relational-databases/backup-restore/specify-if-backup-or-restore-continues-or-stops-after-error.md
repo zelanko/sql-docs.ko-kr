@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f597ea6c3b7f99a3dcff8ead62377acbafd2f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c3bd76705ebf1f118fc1398e9fb13e083053de03
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>오류 발생 후 백업 또는 복원을 계속할지 중지할지 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -45,11 +45,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  BACKUP  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문에서 계속하려면 CONTINUE_AFTER ERROR 옵션을 지정하고 중지하려면 STOP_ON_ERROR 옵션을 지정합니다. 기본 동작은 오류가 발생한 후 중지하는 것입니다. 이 예에서는 오류가 발생하더라도 백업 작업을 계속하도록 지시합니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -93,7 +93,7 @@ GO
   
 3.  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 계속하려면 CONTINUE_AFTER ERROR 옵션을 지정하고 중지하려면 STOP_ON_ERROR 옵션을 지정합니다. 기본 동작은 오류가 발생한 후 중지하는 것입니다. 이 예에서는 오류가 발생하더라도 복원 작업을 계속하도록 지시합니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

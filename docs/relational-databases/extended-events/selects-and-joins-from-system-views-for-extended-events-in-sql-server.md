@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a81021ed7170b6bf92bfd2eebfebef9044de3bde
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ SSMS의 **개체 탐색기**에서 **관리** 확장 이벤트 **를 확장한 �
 ![새 세션 > 이벤트, 필터 조건자 필드(동작)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-**데이터 저장소** 섹션에서는 **event_file** 이 대상으로 선택되어 있습니다. 또한 **파일 롤오버 사용** 옵션이 선택되었습니다.
+**데이터 저장소** 섹션에서는 **event_file**이 대상으로 선택되어 있습니다. 또한 **파일 롤오버 사용** 옵션이 선택되었습니다.
 
 ![새 세션 > 데이터 저장소, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
@@ -165,7 +165,7 @@ SSMS의 **개체 탐색기**에서 **관리** 확장 이벤트 **를 확장한 �
 다음 T-SQL 스크립트는 SSMS로 리버스 엔지니어링하여 생성되었습니다. 그런 다음 공백만 전략적으로 조작하여 스크립트를 수동으로 수정했습니다.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -219,7 +219,7 @@ CREATE EVENT SESSION [event_session_test3]
 염려하지 마세요. 다음 T-SQL SELECT 문은 여러 개의 작은 SELECT를 UNION하기 때문에 긴 것뿐입니다. 작은 SELECT를 모두 개별적으로 실행할 수 있습니다. 작은 SELECT는 다양한 시스템 카탈로그 뷰를 JOIN하는 방법을 보여 줍니다.
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -414,7 +414,7 @@ DMV 참조 설명서는 [확장 이벤트 동적 관리 뷰](../../relational-da
 확장 이벤트 영역에서 사용할 수 있는 모든 개체는 시스템에 로드된 패키지에서 제공됩니다. 이 섹션에서는 모든 패키지와 해당 설명을 보여 줍니다.
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -470,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 이 섹션에서는 이벤트 패키지에 포함된 개체 유형에 대해 설명합니다. *sys.dm\_xe\_objects*에 있는 모든 개체 유형의 전체 목록이 각 유형의 개수와 함께 표시됩니다.
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -514,7 +514,7 @@ Count-of-Type   object_type
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -583,7 +583,7 @@ type           package0       xml                           Well formed XML frag
 - 또한 *o.name =*에 대한 WHERE 절 값을 편집해야 합니다.
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -661,7 +661,7 @@ SELECT의 목적은 이벤트 세션에 대해 선택할 수 있는 다양한 �
 - 대상에 전송할 이벤트 발생 및 대상에서 유지할 이벤트 발생을 필터링하기 위해
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -736,7 +736,7 @@ you could put:
 - 또한 *o.name =*에 대한 WHERE 절 값을 편집해야 합니다.
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -801,7 +801,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 - *s.name =*에 대한 WHERE 절 값을 편집해야 합니다.
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -869,7 +869,7 @@ XML-Cast 셀을 클릭하면 다음과 같은 멋진 표시가 나타납니다.
     - 세션을 다시 시작할 때마다 SQL 시스템이 실제 .XEL 파일 이름에 포함하는 추가 자릿수는 무시하고, 기본 루트 이름과 확장명만 지정합니다.
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,

@@ -3,7 +3,7 @@ title: "작업 속성 - 새 작업(일반 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29830d258e5cc754e7619d931ad1ba5fffe4974f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4df639fb259f06df03da70c8fef92779f19a3ac3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-properties---new-job-general-page"></a>작업 속성 - 새 작업(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업의 일반 속성을 확인하고 수정할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 작업 이름을 변경합니다.  
   
@@ -40,10 +40,10 @@ ms.lasthandoff: 12/05/2017
 **...**  
 선택한 범주의 작업을 표시합니다.  
   
-**Description**  
+**설명**  
 작업 설명을 변경합니다.  
   
-**설정**  
+**Enabled**  
 작업을 설정합니다. 작업을 설정하지 않은 경우 일정 또는 경고에 따라 작업이 실행되지는 않지만 **sp_start_job** 저장 프로시저를 사용하여 작업을 시작할 수 있습니다.  
   
 **원본**  

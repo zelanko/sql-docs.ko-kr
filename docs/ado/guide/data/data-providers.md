@@ -3,7 +3,7 @@ title: "데이터 공급자 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e6d00455aecf64a1de3f8304c8be5ec18b7de7c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b424a116282c7c1edcfa06f22fc72f32a7e0fcda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-providers"></a>데이터 공급자
 데이터 공급자는 다양 한 SQL 데이터베이스, 인덱싱된 순차적 파일, 스프레드시트, 문서 저장소 및 메일 파일 등 데이터 원본을 나타냅니다. 공급자는 행 집합 이라고 하는 일반적인 추상화를 사용 하 여 균일 하 게 데이터를 표시 합니다.  

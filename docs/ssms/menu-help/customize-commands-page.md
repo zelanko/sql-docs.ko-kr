@@ -3,7 +3,7 @@ title: "사용자 지정(명령 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fec4dfbfc43e1b0ef8716af253278192bf82747
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9d748b147c19031f5f304f0233c772dbd91798b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-commands-page"></a>사용자 지정(명령 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 도구 모음과 메뉴에서 명령을 추가하거나 제거할 수 있을 뿐만 아니라 도구 모음 단추 또는 메뉴 명령에 사용되는 이미지를 변경할 수 있습니다. **도구** 메뉴에서 **사용자 지정** 을 클릭한 다음 **명령** 을 클릭하면 **명령**페이지에 액세스할 수 있습니다.  

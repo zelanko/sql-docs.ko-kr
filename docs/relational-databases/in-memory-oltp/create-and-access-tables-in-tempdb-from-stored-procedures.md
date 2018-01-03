@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20efc092c1ec8caa7438c58c0767c6bcc8355bcd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 652d731aac746a5e8df4bc5ff84916596ea36106
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>저장 프로시저에서 TempDB에 테이블 만들기 및 액세스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
   다음 예제에서는 세 개의 열(id, ProductID, Quantity)로 임시 테이블 사용을 **@OrderQuantityByProduct** 형식의 **@OrderQuantityByProduct**테이블 변수를 사용하여 변경할 수 있는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   
   AS TABLE   
    (id INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT=100000),   

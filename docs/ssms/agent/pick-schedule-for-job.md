@@ -3,7 +3,7 @@ title: "작업 일정 선택 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -19,26 +19,26 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba4f4845b905b4b9ccf77c4e96b985b7be3ad5d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 35274d2236cc7485c3f9a967386b3931ece03ed1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pick-schedule-for-job"></a>작업 일정 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업의 기존 일정을 선택할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **사용 가능한 일정**  
 이 작업에 사용할 수 있는 일정을 나열합니다. 작업과 일정의 소유자가 같아야 하므로 이 목록에는 작업 소유자가 소유한 일정만 포함됩니다.  
   
 **이름**  
 일정 이름을 표시합니다.  
   
-**설정**  
+**Enabled**  
 일정이 사용되면 선택되어 있습니다.  
   
-**Description**  
+**설명**  
 일정에서 작업을 실행하는 조건을 설명합니다.  
   
 **이 일정 내의 작업**  

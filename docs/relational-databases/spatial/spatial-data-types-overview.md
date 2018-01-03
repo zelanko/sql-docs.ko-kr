@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c434a1c9c514018176b1afcc0a7a57c63fc896e3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cc470ce80e24520283f3a34c9e1f560ab096288
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.
 다음 다이어그램에서는 동일한 이등변 삼각형을 보여 줍니다. 삼각형 A는 선 세그먼트를 사용하여 삼각형을 정의하고 삼각형 B는 원호 세그먼트를 사용하여 삼각형을 정의합니다.  
 
 ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) 이 예에서는 **LineString** 인스턴스와 **CircularString** 인스턴스를 모두 사용하여 위의 이등변 삼각형을 저장하는 방법을 보여 줍니다.  
-```tsql
+```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);
@@ -125,7 +125,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 삼각형을 정의하는 데 **CircularString** 인스턴스에는 7개의 점이 필요하지만 **LineString** 인스턴스에는 4개의 점만 필요합니다. 이는 **CircularString** 인스턴스가 원호 세그먼트만 저장하고 선 세그먼트는 저장하지 않기 때문입니다. 따라서 **CircularString** 인스턴스에 저장된 삼각형의 면은 ABC, CDE 및 EFA이지만 **LineString** 인스턴스에 저장된 삼각형의 면은 AC, CE 및 EA입니다.  
 
 다음 코드 조각을 참조하십시오.  
-```tsql
+```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
@@ -145,7 +145,7 @@ LS LengthCS Length
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 및 CompoundCurve 비교  
 다음 코드 예제에서는 **LineString** 및 **CompoundCurve** 인스턴스를 사용하여 동일한 그림을 저장하는 방법을 보여 줍니다.
-```tsql
+```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
@@ -154,7 +154,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 로 구분하거나 여러  
 
 위 예제에서 **LineString** 인스턴스나 **CompoundCurve** 인스턴스는 그림을 저장할 수 있습니다.  다음 예제에서는 **CompoundCurve** 를 사용하여 원형 조각을 저장합니다.  
-```tsql
+```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
 
@@ -162,7 +162,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString 및 CompoundCurve 비교  
 다음 코드 예제에서는 **CircularString** 인스턴스에 원형 조각을 저장하는 방법을 보여 줍니다.  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
 SELECT @g.ToString(), @g.STLength();
@@ -170,12 +170,12 @@ SELECT @g.ToString(), @g.STLength();
 
 **CircularString** 인스턴스를 사용하여 원형 조각을 저장하려면 각 선 세그먼트에 세 개의 점을 사용해야 합니다.  중간 점을 알 수 없으면 다음 조각과 같이 선 세그먼트의 끝점을 계산하거나 따옴표로 묶어야 합니다.  
 
-```tsql
+```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
 **CompoundCurve** 인스턴스는 **LineString** 및 **CircularString** 구성 요소를 모두 허용하므로 원형 조각의 선 세그먼트에 대한 두 개의 점만 알면 됩니다.  이 코드 예제에서는 **CompoundCurve** 를 사용하여 동일한 그림을 저장하는 방법을 보여 줍니다.  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');
 SELECT @g.ToString(), @g.STLength();

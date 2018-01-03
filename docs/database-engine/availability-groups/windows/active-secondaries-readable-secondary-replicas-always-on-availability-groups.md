@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38a85c28afb7a93c15b031799b47b07f592350c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9060efc7289f0bf8fd17ad52cd97f45abefc4bfc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -210,9 +210,9 @@ ms.lasthandoff: 11/20/2017
 ##  
             <a name="bkmk_AccessInMemTables">
             </a> 보조 복제본에서 메모리 최적화 테이블 액세스  
- 보조 복제본의 메모리 액세스에 최적화된 테이블에 사용할 수 있는 트랜잭션 격리 수준은 주 복제본의 경우와 동일합니다. 세션 수준 격리 수준을 READ COMMITTED로 설정하고 데이터베이스 수준 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하는 것이 좋습니다. 예를 들어  
+ 보조 복제본의 메모리 액세스에 최적화된 테이블에 사용할 수 있는 트랜잭션 격리 수준은 주 복제본의 경우와 동일합니다. 세션 수준 격리 수준을 READ COMMITTED로 설정하고 데이터베이스 수준 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하는 것이 좋습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
@@ -239,9 +239,9 @@ GO
   
     |읽기 가능한 보조 복제본인지 여부|스냅숏 격리 또는 RCSI 수준이 설정되었는지 여부|주 데이터베이스|보조 데이터베이스|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |아니요|아니요|행 버전이 없거나 14바이트 오버헤드임|행 버전이 없거나 14바이트 오버헤드임|  
-    |아니요|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
-    |예|아니요|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
+    |아니오|아니오|행 버전이 없거나 14바이트 오버헤드임|행 버전이 없거나 14바이트 오버헤드임|  
+    |아니오|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
+    |예|아니오|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
     |예|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
   
 ##  <a name="bkmk_RelatedTasks"></a> 관련 태스크  

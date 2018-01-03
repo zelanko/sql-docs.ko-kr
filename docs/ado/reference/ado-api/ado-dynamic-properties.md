@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55158776c72f16a8988edb0e8a552f64672935e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98b2e7a1c4cbd7063379249b9d7fb0ac3264a56f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-dynamic-properties"></a>ADO 동적 속성
 동적 속성에 추가할 수는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [명령](../../../ado/reference/ado-api/command-object-ado.md), 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이러한 속성에 대 한 소스는 중 하나는 데이터 공급자와 같은 [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), 또는 서비스 공급자와 같은 [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)합니다. 적절 한 데이터 공급자 또는 특정 동적 속성에 대 한 자세한 내용은 서비스 공급자 설명서를 참조 하십시오.  

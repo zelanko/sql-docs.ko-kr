@@ -3,7 +3,7 @@ title: "ConnectionEvents (Visual c + + 구문 있는 인덱스 #import) | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: baa2fb9e43a40f266d1b9a35d5c4f516e713d0bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f67fe9b689b203d627fb9d7ff2db475b64960894
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (Visual c + + 구문 인덱스 #import 사용)
 ## <a name="events"></a>이벤트  

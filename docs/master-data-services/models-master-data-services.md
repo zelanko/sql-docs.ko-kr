@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 523de334c16c35bec75d05faca66d4a7ce2c5240
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ba1579075948fa3a58faf1a2ce57a4a997331f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="models-master-data-services"></a>모델(Master Data Services)
   모델은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 최상위 데이터 구성 수준입니다. 모델은 마스터 데이터 관리 솔루션의 데이터 구조를 정의합니다. 모델은 다음 개체를 포함합니다.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Geography - 우편 번호, 도시, 군, 주, 지방, 지역, 영토, 국가, 대륙 등을 포함할 수 있습니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

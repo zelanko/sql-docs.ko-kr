@@ -3,7 +3,7 @@ title: "ADO 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-properties"></a>ADO 속성
 |||  
@@ -53,9 +53,9 @@ ms.lasthandoff: 11/17/2017
 |[데이터 원본](../../../ado/reference/ado-api/datasource-property-ado.md)|로 나타낼 수 있는 데이터를 포함 하는 개체를 나타냅니다는 **레코드 집합** 개체입니다.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|에 대 한 기본 데이터베이스를 나타내지는 **연결** 개체입니다.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|데이터 용량 나타냅니다는 **필드** 개체입니다.|  
-|[설명](../../../ado/reference/ado-api/description-property.md)|에 대해 설명 된 **오류** 개체입니다.|  
+|[Description](../../../ado/reference/ado-api/description-property.md)|에 대해 설명 된 **오류** 개체입니다.|  
 |[언어](../../../ado/reference/ado-api/dialect-property.md)|구문 및 구문 분석 하는 공급자가 사용 되는 일반 규칙 나타냅니다는 **CommandText** 또는 **CommandStream** 속성입니다.|  
-|[방향](../../../ado/reference/ado-api/direction-property.md)|나타냅니다 여부는 **매개 변수** 입력된 매개 변수, 출력 매개 변수 또는 둘 다 나타냅니다 또는 저장된 프로시저에서 반환 값 매개 변수가 없는 경우.|  
+|[Direction](../../../ado/reference/ado-api/direction-property.md)|나타냅니다 여부는 **매개 변수** 입력된 매개 변수, 출력 매개 변수 또는 둘 다 나타냅니다 또는 저장된 프로시저에서 반환 값 매개 변수가 없는 경우.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|현재 레코드의 편집 상태를 나타냅니다.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|현재 위치가 스트림 끝에 있는지 여부를 나타냅니다.|  
 |[Assert](../../../ado/reference/ado-api/filter-property.md)|데이터에 대 한 필터 나타냅니다는 **레코드 집합**합니다.|  

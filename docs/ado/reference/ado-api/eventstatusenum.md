@@ -3,7 +3,7 @@ title: EventStatusEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de4655072b5ce25b3fb35dbb8bc73b6334a9f6c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82518cbfd6572f03cbe0b742b52bb5e4acd3d8e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 이벤트의 실행의 현재 상태를 지정합니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 |**adStatusCancel**|4|이벤트를 발생 시킨 작업의 취소를 요청 합니다.|  
 |**adStatusCantDeny**|3|작업을 보류 중인 작업의 취소를 요청할 수 없습니다 것을 나타냅니다.|  
 |**adStatusErrorsOccurred**|2|이벤트를 발생 시킨 작업 오류로 인해 실패 했음을 나타냅니다.|  
-|**adStatusOK**|1.|이벤트를 발생 시킨 작업에 성공 했음을 나타냅니다.|  
+|**adStatusOK**|1|이벤트를 발생 시킨 작업에 성공 했음을 나타냅니다.|  
 |**adStatusUnwantedEvent**|5|이벤트 메서드에서 실행이 끝나면 전에 알림 메시지가 방지 합니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  

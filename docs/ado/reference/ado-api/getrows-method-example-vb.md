@@ -3,7 +3,7 @@ title: "GetRows 메서드 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f5a5b9b039abc902588056ea5fc3d6b63e009ede
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d54b56b673be26020c3fec138c5650cfdaf845d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 메서드 예제 (VB)
 사용 하 여이 예제는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 의 행에서 지정 된 수를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 하 고 결과 데이터 배열을 채우는 합니다. **GetRows** 메서드 수의 행 보다 적은 두 가지 경우에 반환 됩니다: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가을 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. GetRowsOK 함수는이 절차를 실행 하려면 필요 합니다.  

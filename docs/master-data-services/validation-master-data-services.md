@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0a1bd346fc2c317056e54bd81e7e9c2ad191f6b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc6dd180a307835fae0977c19b60b47b6cab7aa8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="validation-master-data-services"></a>유효성 검사(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 데이터의 유효성을 검사하여 정확성을 확인합니다. 일부 유효성 검사는 자동으로 발생하고, 일부 유효성 검사는 관리자가 만든 비즈니스 규칙을 기반으로 합니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 |비즈니스 규칙에 대해 특정 하위 집합 데이터의 유효성을 검사합니다. **탐색기** 기능 영역에 대한 사용 권한을 가진 모든 사용자용입니다.|[비즈니스 규칙에 대해 특정 멤버 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |비즈니스 규칙에 대해 특정 하위 집합 데이터의 유효성을 검사합니다. **탐색기** 기능 영역에 대한 사용 권한을 갖고 있으며 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]을 사용하는 모든 사용자용입니다.|[비즈니스 규칙 적용&#40;Excel용 MDS 추가 기능&#41;](../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

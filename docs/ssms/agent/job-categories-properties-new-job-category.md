@@ -3,7 +3,7 @@ title: "작업 범주 속성 - 새 작업 범주 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 622a0451534174884d44259a329702cabaff2528
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a5086ecbd7c6dbd2a8a6635da9c3820b80fd0702
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-categories-properties---new-job-category"></a>작업 범주 속성 - 새 작업 범주
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 하나의 작업 범주 또는 모든 작업 범주에 속해 있는 작업이 나열되며 새 작업 범주를 추가할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 새 작업 범주의 이름을 입력합니다. 작업 범주 속성 대화 상자의 경우 현재 화면에 표시된 작업 범주의 이름이 여기에 표시됩니다.  
   

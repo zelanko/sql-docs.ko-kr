@@ -3,7 +3,7 @@ title: "일정 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,26 +18,26 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3abb52a483d939ade1e2e24ddc9836fe1560548e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fed3a1f1202817d56c1e96c241d0487f5b51aaec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-schedules"></a>일정 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 일정의 속성을 확인하고 변경할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **사용 가능한 일정**  
 이 사용자가 사용할 수 있는 일정을 나열합니다. 작업 및 일정은 소유자가 동일해야 합니다. 따라서 이 목록에는 작업의 소유자가 소유한 일정만 표시됩니다.  
   
 **이름**  
 일정 이름을 표시합니다.  
   
-**설정**  
+**Enabled**  
 일정을 사용하려면 이 옵션을 선택합니다.  
   
-**Description**  
+**설명**  
 일정에서 작업을 실행하는 조건을 설명합니다.  
   
 **이 일정 내의 작업**  

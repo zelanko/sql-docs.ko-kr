@@ -3,9 +3,9 @@ title: "sqlcmd 유틸리티 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 06/06/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0969b3f39f94ec3832cc762ec9419425e099000f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2b59520b9b976e6b8e9f7b03a080552818d73904
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **sqlcmd** 유틸리티는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 스크립트의 임시 대화형 실행과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립팅 태스크의 자동화를 위한 명령줄 유틸리티입니다. **sqlcmd** 를 대화형으로 사용하거나 **sqlcmd**를 사용하여 실행할 스크립트 파일을 작성하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 이해해야 합니다. 일반적으로 **sqlcmd** 유틸리티는 다음과 같은 방법으로 사용됩니다.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     또는  
+     로 구분하거나 여러  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
     > **힌트** **sqlcmd** 유틸리티에서 지원하는 옵션 목록을 보려면 `sqlcmd -?`를 실행하세요.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd를 사용하여 대화형으로 Transact-SQL 문 실행  
- **sqlcmd** 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **를 사용하여**문을 대화형으로 실행하려면 입력 파일이나 쿼리를 지정하는 **-Q**, **-q**, **-Z**또는 **-i** 옵션을 사용하지 않고 유틸리티를 실행합니다. 예를 들어  
+ **sqlcmd** 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **를 사용하여**문을 대화형으로 실행하려면 입력 파일이나 쿼리를 지정하는 **-Q**, **-q**, **-Z**또는 **-i** 옵션을 사용하지 않고 유틸리티를 실행합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="quoted-strings"></a>따옴표 붙은 문자열  
  따옴표 두 개를 연속으로 입력하여 문자열 내에 따옴표를 삽입하는 예외적인 경우를 제외하고 따옴표로 묶인 문자는 추가적인 전처리 없이 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 문자 시퀀스를 하나의 따옴표로 처리합니다. 변환은 서버에서 발생합니다. 스크립팅 변수 역시 문자열 내에서는 단순한 문자로 처리됩니다.  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `sqlcmd`  
   

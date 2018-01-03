@@ -3,7 +3,7 @@ title: "등록된 서버 또는 등록된 서버 그룹 이동 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ac3daddf1a07d6872d4813c99981c8546352d75
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89f9a409da7eede0af44d58d9d33a1105ec5b0e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>등록된 서버 또는 등록된 서버 그룹 이동
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹을 이동하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 서버 그룹에는 등록된 서버나 다른 서버 그룹이 포함될 수 있습니다. 서버 및 서버 그룹은 한 서버 그룹에서 다른 서버 그룹으로 이동할 수 있습니다.  

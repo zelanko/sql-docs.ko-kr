@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b49994a3167ad8639b537279085e16ef2c7ccb1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d42b86732e2f752646ef7d71d61f037b8e66407
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 고유하게 컴파일된 저장 프로시저의 성능을 모니터링하는 방법에 대해 설명합니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
  확장 이벤트의**line_number**와 함께 **line_number** 를 사용하여 쿼리를 조사할 수 있습니다. 다음 쿼리를 사용하여 프로시저 정의를 검색할 수 있습니다. 줄 번호를 사용하여 정의 내에서 쿼리를 식별할 수 있습니다.  
   
-```tsql  
+```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
@@ -55,7 +55,7 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  다음 쿼리에서는 통계 컬렉션 후 현재 데이터베이스에서 고유하게 컴파일된 저장 프로시저에 대한 실행 통계 및 프로시저 이름을 반환합니다.  
   
-```tsql  
+```sql  
 select object_id,  
        object_name(object_id) as 'object name',  
        cached_time,  
@@ -77,7 +77,7 @@ order by total_worker_time desc
   
  다음 쿼리에서는 쿼리 텍스트와 함께 현재 데이터베이스에서 통계가 수집된 고유하게 컴파일된 저장 프로시저의 코든 쿼리에 대한 실행 통계(전체 작업자 시간을 기준으로 정렬됨)도 내림차순으로 반환합니다.  
   
-```tsql  
+```sql  
 select st.objectid,   
        object_name(st.objectid) as 'object name',   
        SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
@@ -106,7 +106,7 @@ order by qs.total_worker_time desc
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 실행하여 Showplan XML을 가져옵니다.  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC my_proc   

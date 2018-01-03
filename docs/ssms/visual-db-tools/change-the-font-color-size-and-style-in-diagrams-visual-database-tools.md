@@ -3,7 +3,7 @@ title: "다이어그램의 글꼴 색, 크기 및 스타일 변경 | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb0f8bdb8cdb830825b419321ed15fe6557e1193
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d056b70f7d13c4c6754a9e0eef8486f82e21d39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>다이어그램의 글꼴 색, 크기 및 스타일 변경(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 글꼴 색, 크기 및 스타일을 변경하여 데이터베이스 다이어그램에 나타나는 텍스트 모양을 사용자 지정할 수 있습니다. 변경 내용은 새 다이어그램과 수정 시 기존 다이어그램에 적용됩니다.  

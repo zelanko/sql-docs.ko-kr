@@ -24,18 +24,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ffca436fc0c0557950e239fcf979c84b973df6a0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bca0580d442c30bc41d46340b3317cbe15515309
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-or-disable-dml-triggers"></a>DML 트리거 삭제 또는 해제
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 DML 트리거를 삭제하거나 비활성화하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [권장 사항](#Recommendations)  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  DML 트리거를 삭제하려면 트리거가 정의된 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
  DML 트리거를 비활성화하거나 활성화하려면 사용자에게 트리거가 만들어진 테이블 또는 뷰에 대한 ALTER 권한이 있어야 합니다.  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣습니다. [트리거를 만들려면](../../t-sql/statements/create-trigger-transact-sql.md) CREATE TRIGGER `Sales.bonus_reminder` 문을 실행합니다. 트리거를 삭제하려면 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 문을 실행합니다.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -112,7 +112,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -130,7 +130,7 @@ GO
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣습니다. [트리거를 만들려면](../../t-sql/statements/create-trigger-transact-sql.md) CREATE TRIGGER `Sales.bonus_reminder` 문을 실행합니다. 트리거를 비활성화하거나 활성화려면 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 및 [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) 문을 각각 실행합니다.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -146,7 +146,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  

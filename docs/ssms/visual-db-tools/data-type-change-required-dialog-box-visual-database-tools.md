@@ -3,7 +3,7 @@ title: "데이터 형식 변경 필요 대화 상자(Visual Database Tools) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 629cd7c93550345eccd5c3b56dafebe91c56aff1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6fdd762b2fa0fcd1287ecb4488e5258e78305c72
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>데이터 형식 변경 필요 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자는 관계에 참여하고 있는 열의 데이터 형식, 길이, 소수 자릿수, 전체 자릿수 또는 데이터 정렬을 변경하는 경우에 나타납니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **예**  
 목록에 표시된 관련 열의 데이터 형식 속성을 변경하여 기존의 관계를 유지합니다.  
   

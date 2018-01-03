@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44774cbb85152ecbb16c36a01326973177bad8f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f958bece2f83b2a29914367fb71adbac640a941d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 형식으로 실행 계획 저장
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실행 계획을 XML 파일로 저장하고 열어서 볼 수 있습니다.  
@@ -40,14 +40,14 @@ ms.lasthandoff: 11/17/2017
   
 2.  다음 문으로 [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)을 설정합니다.  
   
-    ```t-sql  
+    ```sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
      [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)을 설정하려면 다음 문을 사용합니다.  
   
-    ```t-sql  
+    ```sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  쿼리를 실행합니다. 예:  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  

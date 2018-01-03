@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b90ec3cc6932d9487dd339041fc1f580f63a8db6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9e5aa7f65caf1de9fc0389d6d1dd5aefcc825e0b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-user-defined-functions-database-engine"></a>사용자 정의 함수 만들기(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 UDF(사용자 정의 함수)를 만드는 방법에 대해 설명합니다.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Scalar"></a> 스칼라 함수  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 다중 문 스칼라 함수를 만듭니다. 함수에 `ProductID`가 단일 입력 값으로 입력되고 지정한 제품의 총 재고 수량이 단일 데이터 값으로 반환됩니다.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -98,7 +98,7 @@ END;
   
  다음 예에서는 `ufnGetInventoryStock` 함수를 사용하여 `ProductModelID` 가 75와 80 사이인 제품의 현재 재고 수량을 반환합니다.  
   
-```t-sql  
+```sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
@@ -107,7 +107,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 ##  <a name="TVF"></a> 테이블 반환 함수  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 인라인 테이블 값 함수를 만듭니다. 함수에 고객(상점) ID가 단일 입력 매개 변수로 입력되고 `ProductID`, `Name`및 `YTD Total` (해당 상점에 판매된 각 제품의 연간 총 매출액) 열이 반환됩니다.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -128,13 +128,13 @@ RETURN
   
  다음 예에서는 함수를 호출하고 고객 ID 602를 지정합니다.  
   
-```t-sql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 테이블 값 함수를 만듭니다. 함수에 `EmployeeID` 가 단일 입력 매개 변수로 입력되고 지정한 직원에게 직접 또는 간접적으로 보고하는 모든 직원의 목록이 반환됩니다. 그런 다음 직원 ID 109를 지정하여 함수를 호출합니다.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  

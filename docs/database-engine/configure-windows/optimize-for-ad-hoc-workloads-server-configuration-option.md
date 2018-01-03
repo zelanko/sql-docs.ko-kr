@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 207ca8c64cd20e8e98093960bd68ad23b770ea24
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96e21a0eb32b9aeecabdfeb574d3e793b3ab99d8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 일회 사용 계획의 수가 OLTP 서버의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 메모리의 상당 부분을 차지하고 이러한 계획이 임시 계획인 경우 이 서버 옵션을 사용하여 이들 개체의 메모리 사용을 줄입니다.
 단일 사용으로 캐시된 계획의 수를 찾으려면 다음 쿼리를 실행합니다.
 
-```t-sql
+```sql
 SELECT objtype, cacheobjtype, 
   AVG(usecounts) AS Avg_UseCount, 
   SUM(refcounts) AS AllRefObjects, 
@@ -56,7 +56,7 @@ GROUP BY objtype, cacheobjtype;
 > **optimize for ad hoc workloads** 를 1로 설정하면 새 계획만 영향을 받으며, 이미 계획 캐시에 있던 계획은 영향을 받지 않습니다.
 > 이미 캐치된 계획에 즉시 영향을 주려면 [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)를 사용하여 계획 캐시를 지우거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작해야 합니다.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [sys.dm_exec_cached_plans&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   

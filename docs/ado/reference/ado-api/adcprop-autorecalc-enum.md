@@ -3,7 +3,7 @@ title: ADCPROP_AUTORECALC_ENUM | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2388e467e4224480fef339b7b3e407458964a692
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0be561a70465aab4483fc3a2e870cbc9b68972b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 시기를 지정 된 [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 공급자는 계층적 레코드 집합에서 집계 및 계산 된 열을 다시 계산 합니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adRecalcAlways**|1.|기본. 때마다 다시 계산의 **MSDataShape** 공급자 계산 된 열이 종속 값이 변경 되었는지 확인 합니다.|  
+|**adRecalcAlways**|1|기본. 때마다 다시 계산의 **MSDataShape** 공급자 계산 된 열이 종속 값이 변경 되었는지 확인 합니다.|  
 |**adRecalcUpFront**|0|처음에 계층 구조를 작성 하는 경우에 계산 **레코드 집합**합니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  

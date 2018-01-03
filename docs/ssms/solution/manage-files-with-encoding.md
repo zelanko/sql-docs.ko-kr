@@ -3,7 +3,7 @@ title: "인코딩으로 파일 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12f1c224e5a2d31d406e9d4190d287aaa45bf31c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eb72b7335688bc088db221e2a263521b04c6c0bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-files-with-encoding"></a>인코딩으로 파일 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 특정 언어와 특정 플랫폼에서 코드를 더 쉽게 표시할 수 있도록 특정 문자 인코딩을 파일과 연결할 수 있습니다.  
@@ -67,7 +67,7 @@ Visual SourceSafe를 사용하여 ANSI, UTF8 또는 유니코드로 파일을 �
   
 -   UTF8 파일의 경우에는 체크 인, 체크 아웃, 차이 검사 및 병합 중에 UTF8 파일 편집기의 문제를 일으키는 변경 내용이 적용되기 때문에 Visual SourceSafe에서 안전하게 작동하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [솔루션 및 프로젝트 관리 파일](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
 [파일 확장명을 코드 편집기에 연결](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
   

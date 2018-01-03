@@ -22,18 +22,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4d34c96c7a70464aeb072bd80dc6cddafd2cdc34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2276cce5bd041722169bf4825bd13483bad9789
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>차등 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 차등 데이터베이스 백업을 만듭니다.  
   
  **이 항목의 단원**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 -   명시적 또는 암시적 트랜잭션에서는 BACKUP 문을 사용할 수 없습니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   차등 데이터베이스 백업을 만들려면 이전 전체 데이터베이스 백업이 필요합니다. 데이터베이스를 백업한 적이 없으면 차등 백업을 만들기 전에 전체 데이터베이스 백업을 실행합니다. 자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)에서 차등 데이터베이스 백업을 만듭니다.  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 `MyAdvWorks` 데이터베이스에 대한 전체 및 차등 데이터베이스 백업을 만듭니다.  
   
-```tsql  
+```sql  
 -- Create a full database backup first.  
 BACKUP DATABASE MyAdvWorks   
    TO MyAdvWorks_1   

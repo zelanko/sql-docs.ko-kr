@@ -18,13 +18,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84fee80391d7ac1ce5b509ba91eaf54b385b623a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ce086529c97471ed6b2e80e5487aadab70be2c9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="migrate-to-a-partially-contained-database"></a>부분적으로 포함된 데이터베이스로 마이그레이션
+# <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 부분적으로 포함된 데이터베이스 모델 변경을 준비하는 방법에 대해 설명한 다음 마이그레이션 단계를 제공합니다.  
   
  **항목 내용**  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Transact-SQL을 사용하여 포함된 데이터베이스 설정  
  다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 포함된 데이터베이스를 사용 가능하도록 설정합니다.  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -80,7 +80,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Transact-SQL을 사용하여 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
  다음 예에서는 이름이 `Accounting` 인 데이터베이스를 부분적으로 포함된 데이터베이스로 변환합니다.  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -99,7 +99,7 @@ GO
 ##  <a name="users"></a> 포함된 데이터베이스 사용자로 사용자 마이그레이션  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기반으로 하는 모든 사용자를 암호를 가진 포함된 데이터베이스 사용자로 마이그레이션합니다. 이 예에서는 활성화되지 않은 로그인을 제외합니다. 이 예는 포함된 데이터베이스에서 실행해야 합니다.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

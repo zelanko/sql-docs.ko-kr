@@ -3,7 +3,7 @@ title: "컬렉션 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d5d88dfcfe9d05d5f78f4f8e61ee32a23a67048d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4f4f89342ddf85459779c77ecc11f7059734aa7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>컬렉션 (Visual c + + 구문 인덱스 #import 사용)
 컬렉션 특정 공용 메서드와 속성을 상속 한다는 알아야는 것이 유용 합니다.  

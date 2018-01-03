@@ -3,7 +3,7 @@ title: "작업 매개 변수가 있는 명령의 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5bce98fd15ac82cf9492b4f4454dba36146dd46f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 658d0dc9baa22006b327d826effb5687ccbc1822
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operation-of-parameterized-commands"></a>매개 변수가 있는 명령 작업을
 큰 자식을 사용 하는 경우 **레코드 집합**, 특히 부모의 크기에 비해 **레코드 집합**만 몇 가지 자식 장 액세스할 필요 하지만 보다 효율적으로 사용할 찾을 수 있습니다는 매개 변수가 있는 명령입니다.  
@@ -80,7 +80,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  방식으로 팀 및 게임 테이블 방법이 있으면 매개 변수가 없는 계층 구조를 사용 하는 자식 **레코드 집합** 각 팀 전체 일정이 포함에 대 한 합니다. 홈 일정 또는로 일정을 하나만 포함 하는 장을 만들 수 있습니다. RELATE 절 폼의 부모-자식 관계를 제한 하기 때문에 이것이 (pc1 cc1 =) AND (p c 2 = p c 2). 따라서 명령 "RELATE team_id TO home_team, team_id TO visiting_team"를 포함 하는 경우 얻을 수만 게임 자체 팀을 여기서 재생 합니다. 원하는 대로 "(team_id=home_team) 또는 (team_id visiting_team =)", 하지만 셰이프 공급자 OR 절을 지원 하지 않습니다.  
   
- 원하는 결과 얻으려면 매개 변수가 있는 명령을 사용할 수 있습니다. 예를 들어  
+ 원하는 결과 얻으려면 매개 변수가 있는 명령을 사용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SHAPE {SELECT * FROM teams}   

@@ -3,7 +3,7 @@ title: "스키마 섹션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbe340ed1778b125d6281ef62f53b721923939cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65b56003d7fd7723dce57a0c8c6fae2ecee6da06
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schema-section"></a>스키마 섹션
 스키마 섹션이 필요 합니다. 이전 예제와 같이 ADO 업데이트에 대 한 가능한 한 데이터 값의 의미 체계를 유지 하기 위해 각 열에 대 한 메타 데이터를 작성 합니다. 그러나 XML을 로드 하려면 ADO 하기만 열과 소속 된 행 집합의 이름을 합니다. 다음은 최소한의 스키마의 예가입니다.  

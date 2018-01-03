@@ -3,7 +3,7 @@ title: "RDS 프로그래밍 모델 개체와 사용 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eafec33754d2c1dd0c7a79ddfae627006e31f493
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0f2d2e5cfb50df5fa6a6b1eaace7ba285b0855e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 프로그래밍 모델 개체와 사용
 RDS의 목표 액세스 하 고 IIS와 같은 매개 자를 통해 데이터 소스를 업데이트 하는 것입니다. 프로그래밍 모델은이 목표를 달성 하는 데 필요한 작업 순서를 지정 합니다. 개체 모델 메서드와 속성이 프로그래밍 모델에 영향을 줄 개체를 지정 합니다.  

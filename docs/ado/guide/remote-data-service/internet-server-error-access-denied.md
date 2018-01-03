@@ -3,7 +3,7 @@ title: "인터넷 서버 오류: 액세스가 거부 되었습니다. | Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad54a40b51084bbf17c754521d914e08222408bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11e0e177aebfbc892dde8e866151cacc1ab088f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-server-error-access-denied"></a>인터넷 서버 오류: 액세스가 거부 되었습니다.
 이 오류가 발생할 경우에 일반적으로 Microsoft 인터넷 정보 서비스 (IIS) 다음과 같은 상태를 반환 했음을 의미 합니다.  

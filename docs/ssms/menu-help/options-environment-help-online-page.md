@@ -3,7 +3,7 @@ title: "옵션(환경 - 도움말 - 온라인 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cbb96fdd292aabaf655ab69d9a8f44928705f2e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 864a8798e9778b16eb49592c8f4e2b801ed1749d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---help---online-page"></a>옵션(환경 - 도움말 - 온라인 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **옵션** 대화 상자를 사용하면 F1 도움말을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 검색에 사용할 도움말 원본을 지정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **환경** 폴더를 확장한 다음 **도움말**을 선택하고 **온라인**을 클릭합니다. **온라인** 페이지가 목록에 나타나지 않으면 **옵션** 대화 상자의 **모든 설정 표시** 확인란을 선택합니다.  

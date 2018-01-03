@@ -3,9 +3,9 @@ title: "와일드카드로 텍스트 검색 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 97576c021e902fb460181124cbf21c24833cf7bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 538191055aedb1c2caebe062d3227742a4e12e9c
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾기 및 바꾸기** 대화 상자의 **찾을 내용** 필드에서 다음 식은 문자나 숫자를 대체할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  다음 표에서는 **참조 목록**에서 사용할 수 있는 와일드카드를 설명합니다.  
   
-|식|구문|설명|  
+|식|구문|Description|  
 |----------------|------------|-----------------|  
 |임의의 단일 문자|?|임의의 문자 하나에 대응합니다.|  
 |임의의 단일 숫자|#|임의의 숫자 하나와 대응합니다. 예를 들어 7#은 7 다음에 다른 숫자 하나가 표시되는 숫자와 일치합니다(즉, 71과는 일치하지만 17과는 일치하지 않음).|  

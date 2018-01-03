@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,16 +18,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60d930bbdd618e5a99450735bdfe290d8f1a9e59
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06a7e065187ca920497d411172a67eb8362ba857
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staging-process-errors-master-data-services"></a>준비 프로세스 오류(Master Data Services)
   준비 프로세스가 완료되면 준비 테이블에 있는 처리된 모든 레코드의 ErrorCode 열에 값이 지정됩니다. 이러한 값에 대해서는 다음 표에서 설명합니다.  
   
-|코드|오류|발생하는 경우/세부 정보|적용 테이블|  
+|코드|Error|발생하는 경우/세부 정보|적용 테이블|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|동일한 멤버 코드가 준비 테이블에 여러 번 나옵니다.|준비 배치에 동일한 멤버 코드가 여러 번 나옵니다. 멤버가 생성 또는 업데이트되지 않았습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210003|특성 값이 존재하지 않거나 비활성인 멤버를 참조합니다.|도메인 기반 특성을 준비할 때는 이름이 아니라 코드를 사용해야 합니다. **ImportType0**, **1**및 **2**에 적용됩니다.|리프<br /><br /> 통합|  

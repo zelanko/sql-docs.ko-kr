@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebc75200894e27976911f2c7413e027fbb1c5b14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43888872cd4d686363fbf995a71e0367beb3c7e7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>기본 프로시저의 Atomic 블록
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  다음 예에서는 ATOMIC 블록 및 고유하게 컴파일된 저장 프로시저에 대한 오류 처리 동작을 설명합니다.  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -169,7 +169,7 @@ GO
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> catch되지 않는 예외는 ATOMIC 블록을 롤백시키지만 오류로 인해 트랜잭션이 실패하지 않는다면 트랜잭션이 중단되지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

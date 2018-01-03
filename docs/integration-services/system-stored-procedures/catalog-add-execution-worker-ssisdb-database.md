@@ -3,8 +3,11 @@ title: "catalog.add_execution_worker(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d5ecc54863b47ef55269a068353cbc25bbd5d008
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b2a534635569d5e317d5bb88b2da2103a6a3ca6
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker(SSISDB 데이터베이스)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-스케일 아웃의 실행 인스턴스에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 스케일 아웃 작업자를 추가합니다.
+Scale Out의 실행 인스턴스에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out 작업자를 추가합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -42,9 +45,9 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 READ 및 MODIFY 권한  
@@ -64,6 +67,6 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 
 - 실행이 스케일 아웃에 없습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [스케일 아웃에서 패키지 실행](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

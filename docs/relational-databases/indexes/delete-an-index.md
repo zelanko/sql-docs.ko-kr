@@ -3,8 +3,11 @@ title: "인덱스 삭제 | Microsoft 문서"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ff66a6307eabd6cf4a849144c7f1753231144655
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f076878916c402070c4a2808209b30f2bb7ae495
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-an-index"></a>인덱스 삭제
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,7 +36,7 @@ ms.lasthandoff: 12/01/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -45,14 +48,14 @@ ms.lasthandoff: 12/01/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  PRIMARY KEY 또는 UNIQUE 제약 조건으로 생성된 인덱스는 이 방법으로 삭제할 수 없습니다. 대신 제약 조건을 삭제해야 합니다. 제약 조건과 해당 인덱스를 제거하려면 [에서](../../t-sql/statements/alter-table-transact-sql.md) ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]에 DROP CONSTRAINT 절을 사용합니다. 자세한 내용은 [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md)을 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할에 부여됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

@@ -3,7 +3,7 @@ title: "솔루션에서 항목 이동 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 816386ec314fa6fbfad7bdc8fd1eb75054aaadd8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0e549c4943173ccf23c62c0e12f53cd8203aa064
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-items-in-a-solution"></a>솔루션에서 항목 이동
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 프로젝트의 프로젝트 항목은 쿼리, 연결 및 기타 파일입니다. 솔루션 탐색기에서 쿼리와 기타 파일을 프로젝트 간에 이동할 수 있지만 연결은 이동할 수 없습니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > 연결된 쿼리를 이동할 경우 연결이 대상 프로젝트로 이동하지는 않습니다. 해당 쿼리를 대상 프로젝트로 이동하면 연결이 손실됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
 [솔루션에서 항목 복사](../../ssms/solution/copy-items-in-a-solution.md)  
   

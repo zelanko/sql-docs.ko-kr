@@ -3,7 +3,7 @@ title: "Visual c + + 확장 헤더 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2cb1c9de2672077e98b930b18b8e1bc382feb5a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 14cc7d50dd75b325b9980341aa74f5542a7b2074
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions-header"></a>Visual c + + 확장 헤더
 다음 헤더 **icrsint.h**, 클라이언트가에서 필드를 검색 하도록 허용 하는 인터페이스에 자세히 설명 된 **레코드 집합** 에서 파생 된 클래스에 정의 된 변수로 **CADORecordBinding**. 에 액세스 하려면 각 필드에 대 한 ADO 바인딩 매크로 지정 해야 합니다.  

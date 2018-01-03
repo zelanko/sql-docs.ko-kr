@@ -3,7 +3,7 @@ title: "작업 단계 속성 - 새 작업 단계(고급 페이지) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58ef4690d93af433ab05fc45841e8de48bfc7904
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89de59aaac4ca2c66272c4be25f9829ed589d563
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>작업 단계 속성 - 새 작업 단계(고급 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 단계의 속성을 확인하고 변경할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **성공한 경우 동작**  
 작업 단계 성공 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 수행할 동작을 설정합니다.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 12/05/2017
 **Server**  
 복제 큐 판독기 작업 단계에 사용할 서버를 설정합니다.  
   
-**데이터베이스**  
+**데이터베이스 백업**  
 복제 큐 판독기 작업 단계에 사용할 데이터베이스를 설정합니다.  
   
 ## <a name="options-for-sql-server-analysis-services-job-steps"></a>SQL Server Analysis Services 작업 단계 옵션  

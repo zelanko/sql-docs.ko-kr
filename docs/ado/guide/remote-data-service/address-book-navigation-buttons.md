@@ -3,7 +3,7 @@ title: "주소록 탐색 단추 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3c23cb02c58179306e9be87e6b61d00ab3c08a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 87b10be87a3a51708bd1c026622e938641867aaf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-book-navigation-buttons"></a>주소록 탐색 단추
 주소록 응용 프로그램 웹 페이지의 맨 아래에 있는 탐색 단추를 표시합니다. 데이터의 첫 번째 또는 마지막 행 또는 현재 선택 영역에 인접 한 행 중 하나를 선택 하 여 HTML 눈금 표시의 데이터를 탐색 하려면 탐색 단추를 사용할 수 있습니다.  

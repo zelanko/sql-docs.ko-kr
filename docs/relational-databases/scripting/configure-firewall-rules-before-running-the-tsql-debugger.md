@@ -3,9 +3,9 @@ title: "TSQL 디버거를 실행하기 전에 방화벽 규칙 구성 | Microsof
 ms.custom: 
 ms.date: 10/20/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 072d92452d554a439ab05010d62f5fcf624f2c4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74c2f422427764fce597607afdd9a259b11544a1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.  
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/17/2017
 
 * 서버는 RPC를 통해 클라이언트와 다시 통신해야 합니다. SQL Server 서비스를 실행 중인 계정에 클라이언트에 대한 인증 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL 디버거 실행](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)   

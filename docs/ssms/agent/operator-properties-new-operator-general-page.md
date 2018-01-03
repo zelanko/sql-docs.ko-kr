@@ -3,7 +3,7 @@ title: "운영자 속성 - 새 운영자(일반 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a488d571176d09e950094328efdbc481157cdcff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb3db6a241f33a91f1eaafb4433b3e26ebe72816
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-properties---new-operator-general-page"></a>운영자 속성 - 새 운영자(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 운영자의 일반 속성을 확인하고 수정할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 운영자의 이름을 변경합니다.  
   
-**설정**  
+**Enabled**  
 운영자를 활성화합니다. 활성화하지 않으면 해당 운영자에게 알림이 전송되지 않습니다.  
   
 **전자 메일 이름**  

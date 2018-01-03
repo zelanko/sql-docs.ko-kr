@@ -3,7 +3,7 @@ title: "RDS 응용 프로그램 보안 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a84a52dc353d11a391ff79c5f0975d71540cd08a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 02b36b9a5ca7a0e55af5dffa3e0c1ad06a4f83d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="securing-rds-applications"></a>RDS 응용 프로그램 보안
 이 항목.rds 입니다에 대 한 보안 정보를 제공합니다.  

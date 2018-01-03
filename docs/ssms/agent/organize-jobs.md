@@ -3,7 +3,7 @@ title: "작업 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59cbeeff0868e37f4eb665090adcb507505b7204
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 72379002527a54261fab19d152b5c7db553aeec1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="organize-jobs"></a>작업 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 작업 범주를 사용하면 작업을 쉽게 필터링하고 그룹화할 수 있게 구성할 수 있습니다. 예를 들어 데이터베이스 유지 관리 범주에 있는 모든 데이터베이스 백업 작업을 구성할 수 있습니다. 사용자 고유의 작업 범주를 만들 수도 있습니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |작업 범주를 만드는 방법에 대해 설명합니다.|[작업 범주 만들기](../../ssms/agent/create-a-job-category.md)|  
 |작업 범주를 삭제하는 방법에 대해 설명합니다.|[작업 범주 삭제](../../ssms/agent/delete-a-job-category.md)|  
 |작업 범주에 작업을 할당하는 방법에 대해 설명합니다.|[작업 범주에 작업 할당](../../ssms/agent/assign-a-job-to-a-job-category.md)|  

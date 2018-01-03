@@ -3,7 +3,7 @@ title: "Fields 컬렉션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecfc7532761897cddf868dcb617c6eeb5f32bccb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5899f7f1d3d35d0b64cab9dc3c5169dfaba87e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-fields-collection"></a>Fields 컬렉션
 **필드** 컬렉션은 ADO의 내장 컬렉션 중 하나입니다. 컬렉션은 하나의 단위로 참조할 수 있는 항목의 정렬된 된 집합. ADO 컬렉션에 대 한 자세한 내용은 참조 [The ADO 개체 모델](../../../ado/guide/data/ado-objects-and-collections.md)합니다.  

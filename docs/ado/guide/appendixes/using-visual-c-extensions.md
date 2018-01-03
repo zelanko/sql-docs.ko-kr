@@ -3,7 +3,7 @@ title: "Visual c + + 확장을 사용 하 여 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da6cd44f389b059a897ec464e1848cd9660b6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 확장
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 인터페이스
@@ -136,7 +136,7 @@ Update(CADORecordBinding *binding)
 |상수|값|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null이 아닌 필드 값이 반환 되었습니다.|
-|**adFldBadAccessor**|1.|바인딩 올바르지 않습니다.|
+|**adFldBadAccessor**|1|바인딩 올바르지 않습니다.|
 |**adFldCantConvertValue**|2|부호 불일치 또는 데이터 오버플로가 아닌 다른 이유로 값을 변환할 수 없습니다.|
 |**adFldNull**|3|필드를 가져올 때 null 값을 반환 되었음을 나타냅니다.<br /><br /> 필드를 설정할 때 표시로 필드를 설정 해야 **NULL** 필드 인코딩할 수 없는 경우 **NULL** 자체 (예를 들어 문자 배열 또는 정수).|
 |**adFldTruncated**|4|가변 길이 데이터 또는 숫자로 이루어진 잘렸습니다.|

@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ SQL 문에서 인덱싱되지 않은 뷰를 참조할 경우 파서와 쿼리 �
 
 예를 들어 다음과 같은 뷰가 있습니다.
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -118,7 +118,7 @@ GO
 
 이 뷰를 기반으로 두 SQL 문이 모두 기본 테이블에 대해 동일한 작업을 수행하고 동일한 결과를 생성합니다.
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -142,7 +142,7 @@ WHERE OrderDate > '20020531';
 
 쿼리의 뷰에 힌트를 넣으면 뷰가 확장되어 기본 테이블에 액세스할 때 발견되는 다른 힌트와 서로 충돌할 수 있습니다. 이러한 경우 쿼리에서 오류를 반환합니다. 예를 들어 다음과 같이 뷰 정의에 테이블 힌트가 포함되어 있습니다.
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -154,7 +154,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 다음 쿼리를 입력한다고 가정합니다.
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -168,7 +168,7 @@ WHERE StateProvinceCode = 'WA';
 
 뷰를 포함하는 쿼리에 `FORCE ORDER` 힌트를 사용하면 정렬된 구조체에서의 뷰 위치에 따라 뷰 내의 테이블 조인 순서가 결정됩니다. 예를 들어 다음 쿼리는 세 개의 테이블과 한 개의 뷰에서 선택합니다.
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -178,7 +178,7 @@ OPTION (FORCE ORDER);
 
 `View1` 은 다음과 같이 정의됩니다.
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -249,7 +249,7 @@ WHERE TableA.ColZ = TableB.Colz;
 
 Server1에서 실행되는 다음 쿼리에 대해 작성된 실행 계획을 검토합니다.
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -259,7 +259,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 프로세서는 실행 계획이 작성되어야 할 때 키 값이 알려지지 않은 SQL 문에 대해 동적 논리를 쿼리 실행 계획으로 작성할 수 있습니다. 예를 들면 다음 저장 프로시저가 있습니다.
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -269,7 +269,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 프로시저가 실행될 때마다 `@CustomerIDParameter` 매개 변수에서 어떤 키 값을 제공하는지 예측할 수 없습니다. 키 값을 예측할 수 없으므로 쿼리 프로세서는 어떤 멤버 테이블을 액세스해야 하는지도 예측할 수 없습니다. 이러한 경우를 처리하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 어떤 멤버 테이블이 입력 매개 변수 값에 기반하여 액세스되는지 제어하기 위한 조건부 논리(동적 필터)를 포함하는 실행 계획을 작성합니다. `GetCustomer` 저장 프로시저가 Server1에서 실행되었다고 가정했을 때 실행 계획 논리를 다음과 같이 나타낼 수 있습니다.
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -303,7 +303,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 캐시에서 사용되지 않은 기존 실행 계획과 새 SQL 문을 대응시키는 알고리즘을 적용하려면 모든 개체 참조가 정규화되어야 합니다. 예를 들어 다음에서 첫 번째 `SELECT` 문은 기존 계획과 일치되지 않지만 두 번째 문은 일치됩니다.
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -383,13 +383,13 @@ ADO, OLE DB 및 ODBC 응용 프로그램의 매개 변수 표식을 포함하여
  
 다음의 두 `SELECT` 문 간의 유일한 차이점은 `WHERE` 절에서 비교된 값이 다르다는 것입니다.
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -401,7 +401,7 @@ WHERE ProductSubcategoryID = 4;
 
 * Transact-SQL에서는 `sp_executesql`을 사용합니다. 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -436,7 +436,7 @@ WHERE ProductSubcategoryID = 4;
 
 강제 매개 변수화를 설정한 경우에도 단순 매개 변수화가 계속해서 수행될 수 있습니다. 예를 들어 다음 쿼리는 강제 매개 변수화 규칙에 따라 매개 변수화할 수 없습니다.
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -454,18 +454,18 @@ WHERE AddressID = 1 + 2;
 
 다음 문을 고려해 보십시오.
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 문 끝의 값 1은 매개 변수로 지정될 수 있습니다. 관계형 엔진은 마치 값 1 대신 매개 변수가 지정된 것처럼 이 일괄 처리에 대해 실행 계획을 작성합니다. 이러한 단순 매개 변수화로 인해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 다음 두 문이 기본적으로 동일한 실행 계획을 생성한다는 것을 확인하고 두 번째 문에 대해 첫 번째 계획을 재사용합니다.
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -561,7 +561,7 @@ WHERE ProductSubcategoryID = 4;
 
 첫째, 응용 프로그램이 요청된 각 제품에 대해 별도의 쿼리를 실행할 수 있습니다.
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -569,7 +569,7 @@ WHERE ProductID = 63;
 둘째, 응용 프로그램에서 다음을 수행합니다. 
 
 1. 매개 변수 표식(?)을 포함하는 문을 준비합니다.  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -654,7 +654,7 @@ MAXDOP 구성에 대한 모범 사례는 이 [Microsoft 지원 문서](http://su
 
 다음 예에서는 가상의 테이블 및 열 이름을 사용합니다.
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -672,7 +672,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 다음 인덱스가 `lineitem` 및 `orders` 테이블에서 정의된다고 가정합니다.
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -765,7 +765,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 * 연결된 서버 이름  
   시스템 저장 프로시저 `sp_addlinkedserver` 와 `sp_addlinkedsrvlogin` 은 OLE DB 데이터 원본에 서버 이름을 제공하는 데 사용됩니다. Transact-SQL 문에서는 4부분으로 된 이름을 사용하여 이러한 연결 서버의 개체를 참조할 수 있습니다. 예를 들어 연결된 서버 이름 `DeptSQLSrvr`이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 다른 인스턴스에 대해 정의되는 경우 다음 문은 해당 서버의 테이블을 참조합니다. 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -775,7 +775,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 * 임의 커넥터 이름  
   데이터 원본이 자주 참조되지 않는 경우 연결된 서버에 연결하는 데 필요한 정보로 `OPENROWSET` 또는 `OPENDATASOURCE` 함수가 지정됩니다. 그런 다음 행 집합은 테이블이 Transact-SQL 문에서 참조되는 방법과 동일하게 참조될 수 있습니다. 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
@@ -811,13 +811,13 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (논리적 선행 열)과 가능한 다른 인덱스 키 열에서 수행된 후, 두 번째 수준의 seek 연산은 다른 조건을 사용하여 첫 번째 수준의 seek 연산에 대한 제한을 충족시키는 각각의 고유 값에 대해 수행될 수 있습니다. 즉 skip scan이라고 하는 이 연산을 통해 쿼리 최적화 프로그램은 seek 또는 scan 연산을 하나의 조건을 기준으로 수행하여 액세스할 파티션을 결정하고 해당 연산자에서 두 번째 수준 index seek 연산을 수행하여 다른 조건을 충족시키는 이러한 파티션에서 행을 반환할 수 있습니다. 예를 들어 다음 쿼리를 살펴보십시오.
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 이 예에서 `T(a, b, c)`로 정의되는 T 테이블은 a 열에서 분할되고 b 열에 클러스터형 인덱스가 있다고 가정합니다. T 테이블의 파티션 경계는 다음 파티션 함수로 정의됩니다.
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -847,7 +847,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 그래픽 실행 계획 출력 및 XML 실행 계획 출력 모두에 이 정보가 표시되는 방법을 보여 주려면 분할된 테이블 `fact_sales`의 다음 쿼리를 살펴봅니다. 이 쿼리는 두 개의 파티션에 있는 데이터를 업데이트합니다. 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -976,7 +976,7 @@ XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSumm
 > [!NOTE]
 > 이 예에서는 백만 개 이상의 행을 테이블로 삽입합니다. 이 예를 실행하는 데에는 하드웨어에 따라 시간이 몇 분 정도 걸릴 수 있습니다. 이 예를 실행하기 전에 1.5GB 이상의 사용 가능한 디스크 공간이 있는지 확인하십시오. 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL

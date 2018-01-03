@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b0c6e128f6b2213e1a4a2af46281388f7c8a593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 SQL Server에서 전체 텍스트 인덱스를 만들고, 채우고, 관리하는 방법을 설명합니다.
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
  다음 표에서는 인덱싱된 테이블 및 열과 관련한 전체 텍스트 속성과 관련 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 보여 줍니다.  
   
-|속성|설명|함수|  
+|속성|Description|함수|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|열의 문서 유형 정보를 보관하는 테이블의 TYPE COLUMN입니다.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|열에 대한 전체 텍스트 인덱싱 설정 여부를 나타냅니다.|COLUMNPROPERTY|  
@@ -174,7 +174,7 @@ GO
   
 전체 텍스트 엔진은 운영 체제에 설치된 기존 필터를 활용할 수 있습니다. 운영 체제 필터, 단어 분리기, 형태소 분석기를 사용하려면 먼저 다음과 같이 서버 인스턴스에 로드해야 합니다.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_service @action='load_os_resources', @value=1  
 ```  
   

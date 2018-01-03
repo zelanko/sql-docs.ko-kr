@@ -2,32 +2,34 @@
 title: "PowerShell: TDE using your own Azure Key Vault 키를 사용하여 TDE 설정 | Microsoft Docs"
 description: "PowerShell을 사용하여 미사용 암호화를 위해 TDE(투명한 데이터 암호화)를 사용하도록 Azure SQL Database 및 데이터 웨어하우스를 구성하는 방법에 대해 알아봅니다."
 keywords: 
-services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: f8de7e653a925e04dbcab9efbd5b5c8e5354b611
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: Azure Key Vault에서 사용자 고유 키를 사용하여 투명한 데이터 암호화 사용
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 이 방법 가이드는 SQL Database 또는 데이터 웨어하우스에서 TDE(투명한 데이터 암호화)를 위해 Azure Key Vault의 키를 사용하는 방법을 안내합니다. BYOK(Bring Your Own Key) 기반 TDE 지원에 대해 자세히 알아보려면 [Azure SQL에 대한 Bring Your Own Key 기반 TDE](transparent-data-encryption-byok-azure-sql.md)를 방문하세요. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - Azure 구독이 있고 해당 구독의 관리자여야 합니다.
 - [권장되지만 선택 사항임] TDE 보호기 키 자료의 로컬 복사본을 만들기 위해 HSM(하드웨어 보안 모듈) 또는 로컬 키 저장소를 포함합니다.

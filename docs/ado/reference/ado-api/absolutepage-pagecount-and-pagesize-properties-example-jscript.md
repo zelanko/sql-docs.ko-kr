@@ -3,7 +3,7 @@ title: "AbsolutePage, PageCount, 및 PageSize 속성 예제 (JScript) | Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30f5eee1b1fa6e6cab2ab982d4be7d12bbd6e4b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e6621c4e6e2f5fbc810c0b122b39c8edcad0c9d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount, 및 PageSize 속성 예제 (JScript)
 이 예제에서는 AbsolutePage, PageCount PageSize 속성을 보여 줍니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **AbsolutePageJS.asp**합니다.  

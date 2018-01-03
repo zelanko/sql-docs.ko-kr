@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 dev_langs: VB
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7369fe9b75148c7b0d448ff4fd2b9457dc77212
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eee5dea5945d48b4fd9a2d40380c61c632d02410
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 응용 프로그램에서 ADO 라이브러리 참조
 ADO 라이브러리는 Microsoft Visual Basic 6 응용 프로그램을 가져오려면 Visual Basic 프로젝트에 대 한 참조를 설정 해야 합니다.  
@@ -45,7 +45,7 @@ ADO 라이브러리는 Microsoft Visual Basic 6 응용 프로그램을 가져오
   
 6.  클릭 **확인** 에 대 한 참조를 설정 합니다.  
   
-## <a name="backward-compatibility"></a>이전 버전과의 호환성  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  이전 버전의 다음과 같은 형식 라이브러리에도 복사 ADO 설치:  
   
 -   *msado27.tlb*, ADO 2.7 형식 라이브러리  

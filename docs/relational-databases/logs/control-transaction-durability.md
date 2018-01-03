@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 469b8008c1697f691c56f6d8893f1d637534c989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c55b9f3bc4df4048c2edb058e7c70579fb80bdba
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_DbControl"></a> 데이터베이스 수준 제어    
  DBA는 다음 문을 사용하여 사용자가 데이터베이스에서 지연된 트랜잭션 내구성을 사용할 수 있는지 여부를 제어할 수 있습니다. ALTER DATABASE를 사용하여 지연된 내구성 설정을 지정해야 합니다.    
     
-```tsql    
+```sql    
 ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
@@ -114,7 +114,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 ###  <a name="CompiledProcControl"></a> Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저    
  다음 코드는 ATOMIC 블록 내로 이동합니다.    
     
-```tsql    
+```sql    
 DELAYED_DURABILITY = { OFF | ON }    
 ```    
     
@@ -126,7 +126,7 @@ DELAYED_DURABILITY = { OFF | ON }
     
  **코드 예:**    
     
-```tsql    
+```sql    
 CREATE PROCEDURE <procedureName> …    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
@@ -149,7 +149,7 @@ END
 ###  <a name="bkmk_T-SQLControl"></a> COMMIT 수준 제어 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  지연된 트랜잭션 내구성을 강제로 적용할 수 있도록 COMMIT 구문이 확장됩니다. 데이터베이스 수준에서 If DELAYED_DURABILITY가 DISABLED 또는 FORCED인 경우(위 내용 참조) 이 COMMIT 옵션은 무시됩니다.    
     
-```tsql    
+```sql    
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]    
     
 ```    
@@ -212,6 +212,6 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  지연된 내구성의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 예기치 않은 종료와 예상된 종료/다시 시작 간에는 차이가 없습니다. 재해와 같은 데이터 손실을 대비하여 계획을 세워야 합니다. 예정된 종료/다시 시작에서 디스크에 기록되지 않은 일부 트랜잭션이 먼저 디스크에 저장될 수 있지만 이에 대한 계획을 세우지 않아야 합니다. 예정되었든 예정되지 않았든 종료/다시 시작 시 재해와 동일하게 데이터를 손실할 것처럼 계획을 세우세요.    
     
 ## <a name="see-also"></a>참고 항목    
- [메모리 액세스에 최적화된 테이블의 트랜잭션](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
+ [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   

@@ -3,7 +3,7 @@ title: "쿼리 및 뷰 디자이너 창 표시(Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14268591a142263a159d879ea821a8a395d33c1f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e7ab7fc0efacbcd2f777c7c64154d98661d8318
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>쿼리 및 뷰 디자이너 창 표시(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 및 뷰 디자이너는 다이어그램 창, 조건 창, SQL 창, 결과 창이라는 네 개의 별도 창으로 구성되어 있습니다. 일반적으로 뷰를 열거나 새 쿼리를 만들 때는 네 개의 창이 모두 열리지만 쿼리 및 뷰 디자이너가 열려 있는 상태에서 이러한 창을 임의로 선택하여 열 수도 있습니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  **쿼리 디자이너** 메뉴에서 **창** 을 가리킨 다음 열려는 창의 이름을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [쿼리 및 뷰 디자이너 열기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
   

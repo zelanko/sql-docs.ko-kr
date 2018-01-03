@@ -3,7 +3,7 @@ title: "마샬링 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b45e39c0b12ecb961278604bdf56592d9bb651ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66303cf1b144086d3bc3f3ef4b7f3d4743343e18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshaloptions-property-example-vb"></a>마샬링 예제 (VB)
 사용 하 여이 예제는 [마샬링](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 속성을 서버에 다시 전송 되는 행 지정할-모든 행 또는 행만 수정 합니다.  

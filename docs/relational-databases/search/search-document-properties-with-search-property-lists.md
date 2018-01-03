@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df8aadeeec0588b9ddd851daa97d4f31d493f228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ade7dbffabb11419e8eeb43f50fa2ecf6d27dc9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이전에는 문서 속성의 내용을 문서 본문의 내용과 구분할 수 없었으므로 전체 문서에서 일반 검색에 대해 전체 텍스트 쿼리를 수행할 수 없었습니다. 그러나 이제 **varbinary**, **varbinary(max)** ( **FILESTREAM**포함) 또는 **image** 이진 데이터 열의 지원되는 문서 유형의 경우 Author 및 Title과 같은 특정 `속성에 대한 속성 범위 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 이러한 형태의 검색을 *속성 검색*이라고 합니다.  
@@ -163,7 +163,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> CONTAINS를 사용하여 검색 속성 쿼리  
  속성 범위 전체 텍스트 쿼리를 위한 기본 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 구문은 다음과 같습니다.  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  

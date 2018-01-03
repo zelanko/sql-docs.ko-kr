@@ -3,7 +3,7 @@ title: "ADO 오류 코드 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 51e932d5c17c4d33bb15dbf85080a9bc14d51c3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37d535f280d4bfac44795b94cb4a2e3e348993bc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="capture-ado-error-codes"></a>ADO 오류 코드를 캡처
 반환 되는 공급자 오류 이외에 [오류](../../../ado/reference/ado-api/error-object.md) 의 개체는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션 자체 ADO 런타임 환경의 예외 처리 메커니즘에 오류를 반환할 수 있습니다. 오류 트래핑 메커니즘 프로그래밍 언어와 같은 사용는 **On Error** Microsoft® Visual Basic의 문 또는 **try / catch** ADO 오류 캡처합니다 Microsoft Visual C++®의 블록입니다.

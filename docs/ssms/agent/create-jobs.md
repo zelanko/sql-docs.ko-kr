@@ -3,7 +3,7 @@ title: "작업 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fcabe7c6d56c8e888ae1f5563f0d20a5cbfe7485
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b8a6a9fdae56ee2c0c73966e44182dafbceb5f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-jobs"></a>작업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 작업이란 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 순차적으로 수행하는 일련의 지정된 작업입니다. 작업은 [!INCLUDE[tsql](../../includes/tsql_md.md)] 스크립트, 명령 프롬프트 응용 프로그램, Microsoft ActiveX 스크립트, Integration Services 패키지, Analysis Services 명령 및 쿼리 또는 복제 태스크를 실행하는 등 광범위한 활동을 수행합니다. 작업은 반복적인 태스크나 예약 가능한 태스크를 실행하고 경고를 발생시켜 작업 상태를 사용자에게 자동으로 알리므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 관리를 매우 단순하게 만들어 줍니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 만드는 방법에 대해 설명합니다.|[작업 만들기](../../ssms/agent/create-a-job.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업의 소유권을 다른 사용자에게 다시 할당하는 방법에 대해 설명합니다.|[Give Others Ownership of a Job](../../ssms/agent/give-others-ownership-of-a-job.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 기록 로그를 설정하는 방법에 대해 설명합니다.|[Set Up the Job History Log](../../ssms/agent/set-up-the-job-history-log.md)|  

@@ -3,9 +3,9 @@ title: "데이터베이스 엔진 스크립팅 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d97fa3f4c13ad328cbcb2302ae6ab2a7b922707e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52a85f7ed9f26b1414f918f50509999394a66399
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 및 이러한 인스턴스의 개체를 관리하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell 스크립팅 환경을 지원합니다. 또한 스크립팅 환경과 매우 유사한 환경에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 XQuery를 포함하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작성 및 실행할 수 있습니다.  

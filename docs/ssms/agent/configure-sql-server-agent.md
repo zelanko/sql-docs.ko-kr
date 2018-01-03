@@ -3,7 +3,7 @@ title: "SQL Server 에이전트 구성 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,18 +22,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05d6175107814800aafd99d90230a1e3ac633b96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 43a71cb61d546518fd93f59e221a12e65a4d7e52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-sql-server-agent"></a>Configure SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에이전트의 일부 구성 옵션을 지정하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 구성 옵션의 전체 집합은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 관리 개체) 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 저장 프로시저 내에서만 사용할 수 있습니다.  
   
 **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
     [제한 사항](#Restrictions)  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [SQL Server 에이전트를 구성하려면](#SSMSProcedure)  
   
-## <a name="BeforeYouBegin"></a>시작하기 전에  
+## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="Restrictions"></a>제한 사항  
   

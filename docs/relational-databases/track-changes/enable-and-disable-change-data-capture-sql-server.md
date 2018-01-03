@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 204b18d54a65c8fdf3cbc86d04e7daf1850fe84f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 86c13345caa59dfb4ef9dad6f9c9cdb0ea324472
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>변경 데이터 캡처 설정 및 해제(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목에서는 데이터베이스 및 테이블에서 변경 데이터 캡처를 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이 템플릿을 찾으려면 **보기**로 이동하고 **템플릿 탐색기**를 클릭한 다음 **SQL Server 템플릿**을 선택합니다. **변경 데이터 캡처** 는 하위 폴더입니다. 이 폴더 아래에는 이 항목에서 참조하는 모든 템플릿이 있습니다. 또한 **도구 모음에 있는** 템플릿 탐색기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 아이콘을 사용할 수도 있습니다.  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -63,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이 템플릿을 찾으려면 **보기**로 이동하고 **템플릿 탐색기**를 클릭한 다음 **SQL Server 템플릿**을 클릭합니다. **변경 데이터 캡처** 하위 폴더에는 이 항목에서 참조되는 모든 템플릿이 있습니다. 또한 **도구 모음에 있는** 템플릿 탐색기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 아이콘을 사용할 수도 있습니다.  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -86,7 +86,7 @@ GO
   
  기본적으로 변경 테이블은 데이터베이스의 기본 파일 그룹에 있습니다. 개별 변경 테이블의 배치를 제어하려는 데이터베이스 소유자는 *@filegroup_name* 매개 변수를 사용하여 캡처 인스턴스와 연결된 변경 테이블에 대해 특정 파일 그룹을 지정할 수 있습니다. 명명된 파일 그룹은 이미 존재해야 합니다. 일반적으로 변경 테이블은 원본 테이블과 별도의 파일 그룹에 배치하는 것이 좋습니다. 제어 역할이 없는 테이블을 설정하는 예는 **@filegroup_name** 매개 변수 사용 방법을 보여 주는 예는 *@filegroup_name* 템플릿을 참조하세요.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -108,7 +108,7 @@ GO
   
  제어 역할을 사용하지 않으려면 *@role_name* 매개 변수를 명시적으로 NULL로 설정하세요. 제어 역할이 없는 테이블을 설정하는 예는 **Enable a Table Without Using a Gating Role** 템플릿을 참조하십시오.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -133,7 +133,7 @@ GO
   
  두 쿼리 함수로 캡처 인스턴스를 생성하는 방법을 보여 주는 예는 **Enable a Table for All and Net Changes Queries** 템플릿을 참조하십시오.  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -157,7 +157,7 @@ GO
   
  테이블에서 이 기능을 사용하지 않도록 설정하는 예는 테이블의 캡처 인스턴스 해제 템플릿을 참조하십시오.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

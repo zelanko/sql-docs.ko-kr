@@ -3,7 +3,7 @@ title: "절대 곡선과 상대 Url | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae21e6abedfda13da5a02130110cac0034ef8f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolute-and-relative-urls"></a>절대 곡선과 상대 Url
 URL을 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 합니다. 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등의 대상이 될 수 있습니다*합니다.*  
@@ -41,7 +41,7 @@ URL을 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 �
  *구성표*  
  지정 방법을 *리소스* 를 액세스 하 합니다.  
   
- *서버*  
+ *server*  
  컴퓨터의 이름을 지정 합니다. 여기서는 *리소스* 있는 합니다.  
   
  *경로*  

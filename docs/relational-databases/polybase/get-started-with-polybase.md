@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 330a9b9a12312ab22389e8de0849ab164b8f0d47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27265e6d6caf4f1acfc0803839e3077cd1597f67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 시작하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   PolyBase 개체를 사용하는 쿼리 예제  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  다음이 포함된 [SQL Server(64비트)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)의 인스턴스  
   
 -   Microsoft .NET Framework 4.5  
@@ -73,9 +73,9 @@ ms.lasthandoff: 11/17/2017
  PolyBase를 설치하지 않은 경우 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)를 참조하세요.  
   
 ### <a name="how-to-confirm-installation"></a>설치 확인 방법  
- 설치가 끝난 후 PolyBase가 제대로 설치되었는지 확인하려면 다음 명령을 실행합니다. PolyBase가 설치된 경우 1을 반환합니다. 그렇지 않으면 0이 반환됩니다.  
+ 설치가 끝난 후 PolyBase가 제대로 설치되었는지 확인하려면 다음 명령을 실행합니다. PolyBase가 설치된 경우 1을 반환 합니다. 그렇지 않으면 0이 반환됩니다.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -103,7 +103,7 @@ Hadoop은 새 릴리스를 위해 “Major.Minor.Version” 패턴을 따릅니�
 ### <a name="external-data-source-configuration"></a>외부 데이터 원본 구성  
   
 1.  [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity'를 실행하고 적절한 값을 설정합니다. 기본적으로 hadoop 연결은 7로 설정됩니다. 값을 찾으려면 [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.  
-      ```tsql  
+      ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -289,7 +289,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   임시 쿼리  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
     -- Select customers who drive faster than 35 mph: joining structured customer data stored   
     -- in SQL Server with car sensor data stored in Hadoop.  
@@ -303,7 +303,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   데이터 가져오기  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 2: Import external data into SQL Server.  
     -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
     -- leverage Columnstore technology.  
@@ -365,7 +365,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="next-steps"></a>다음 단계  
  확장 기능을 이해하려면 [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  PolyBase를 모니터링하려면 [PolyBase 문제 해결](../../relational-databases/polybase/polybase-troubleshooting.md)을 참조하세요. PolyBase 성능 문제를 해결하려면 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)을(를) 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)   
  [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)   
  [PolyBase 저장 프로시저](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   

@@ -3,7 +3,7 @@ title: "인터넷 게시에 대 한 OLE DB Provider | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29dc06f21ef0a20271184ae71ecb9d203897f2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5731b15274e4d2c1acafec09bd6478fc244a1f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>인터넷 게시에 대 한 OLE DB Provider
 ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 및 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체가 사용 하 여 Microsoft OLE DB Provider for Internet Publishing (게시 공급자 인터넷) 액세스 하 고 리소스를 조작할 웹 폴더 또는 파일 Microsoft FrontPage 처리합니다. ADO와 원본을 지정할 수 있습니다는 **레코드**, **스트림**, 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) url은 URL 이어야 합니다. 수 다음 업로드, 다운로드, 이동, 복사 및 리소스를 삭제 또는 리소스 속성을 직접 조작 합니다.  
@@ -38,19 +38,19 @@ ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 및 [스트
   
  ADO 인터넷 게시 공급자에 연결 하는 방법은 세 가지가 있습니다.  
   
--   지정 "URL =" 연결 문자열에 있습니다. 예를 들어  
+-   지정 "URL =" 연결 문자열에 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     objConn.Open "URL=http://servername"  
     ```  
   
--   에 대 한 Msdaipp.dso 지정는 *공급자* 의 연결 문자열 키워드입니다. 예를 들어  
+-   에 대 한 Msdaipp.dso 지정는 *공급자* 의 연결 문자열 키워드입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
     ```  
   
--   에 대 한 Msdaipp.dso 지정는 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 예를 들어  
+-   에 대 한 Msdaipp.dso 지정는 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  

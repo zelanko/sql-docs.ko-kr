@@ -3,7 +3,7 @@ title: "AddNew를 사용 하 여 레코드를 추가 합니다. | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e3bb2828935872cc4759608b0041db71ce8c24d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c29eacc0e556f82458cf313f1c0fc93d7ab83d3b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-records-using-addnew-method"></a>AddNew 메서드를 사용 하 여 레코드를 추가 합니다.
 기본 구문은 **AddNew** 메서드:

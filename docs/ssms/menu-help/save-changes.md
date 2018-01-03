@@ -3,7 +3,7 @@ title: "변경 내용 저장 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 132a5f61c658d410af36efe597bb48d64c4f3da8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d771efdee7eaa700897ac9614d27c602e59d34e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-changes"></a>변경 내용 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **예**를 클릭하지 않으면 나열된 항목의 변경 내용이 저장되지 않는다는 경고가 표시됩니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 이전에 저장한 항목의 변경 내용은 저장소의 해당 저장 위치에 자동으로 저장됩니다. 항목을 아직 저장하지 않은 경우 새 저장 위치를 묻는 **다른 이름으로 파일 저장** 대화 상자가 나타납니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **다음 항목의 변경 내용을 저장하시겠습니까?**  
 선택한 항목이 저장됩니다. 항목을 선택하거나 선택을 취소할 수 있습니다.  
   

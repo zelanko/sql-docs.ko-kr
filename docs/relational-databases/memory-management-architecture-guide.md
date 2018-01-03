@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 503814b6f9ade3623a4586b97ae09434f78c0db4
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,10 +93,10 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
 |단일 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
-|다중 페이지 할당|아니요|예, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|아니요|예|
-|스레드 스택 메모리|아니요|아니요|
-|Windows에서 직접 할당|아니요|아니요|
+|다중 페이지 할당|아니오|예, "임의 크기" 페이지 할당에 통합됨|
+|CLR 할당|아니오|예|
+|스레드 스택 메모리|아니오|아니오|
+|Windows에서 직접 할당|아니오|아니오|
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 ***Total Server Memory(KB)*** 값이 이미 max server memory에 지정된 ***Target Server Memory(KB)*** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
 
@@ -120,7 +120,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
-|단일 페이지 할당|아니요|아니요, "임의 크기" 페이지 할당에 통합됨|
+|단일 페이지 할당|아니오|아니요, "임의 크기" 페이지 할당에 통합됨|
 |다중 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
 |CLR 할당|예|예|
 |스레드 스택 메모리|예|예|
@@ -138,7 +138,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 다음 쿼리는 현재 할당된 메모리에 대한 정보를 반환합니다.  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
@@ -281,7 +281,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 NUMA(Non-Uniform Memory Access)를 인식하며 특수한 구성 없이 NUMA 하드웨어에서 원활하게 작동합니다. 클럭 속도와 프로세서 수가 증가할수록 이러한 추가 처리 능력을 사용하는 데 필요한 메모리 대기 시간을 줄이기가 더 어려워집니다. 이러한 문제를 피하기 위해 하드웨어 공급업체에서는 대용량의 L3 캐시를 제공하지만 이는 제한적인 해결책입니다. NUMA 아키텍처는 확장성 있는 솔루션으로 이 문제를 해결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 응용 프로그램을 변경할 필요 없이 NUMA 기반 컴퓨터를 활용하도록 설계되었습니다. 자세한 내용은 [방법: 소프트 NUMA를 사용하도록 SQL Server 구성](../database-engine/configure-windows/soft-numa-sql-server.md)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [페이지 읽기](../relational-databases/reading-pages.md)   
 [페이지 쓰기](../relational-databases/writing-pages.md)   

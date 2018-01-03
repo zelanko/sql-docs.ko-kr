@@ -3,9 +3,9 @@ title: "IntelliSense에서 지원되는 Transact-SQL 구문 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bec5a6542bc3095df0414c77af09acbb2ec05020
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6316251928dd147230e0849f0468a3848ef7d779
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 IntelliSense에서 지원하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 구문 요소에 대해 설명합니다.  
@@ -52,17 +52,17 @@ ms.lasthandoff: 11/17/2017
   
 |Transact-SQL 문|지원되는 구문|예외|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|*execute_statement* 절을 제외한 모든 구문|없음|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|모든 구문|없음|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|모든 구문|없음|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|모든 구문|없음|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|모든 구문|없음|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|없음|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|모든 구문|없음|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|모든 구문|없음|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|*execute_statement* 절을 제외한 모든 구문|InclusionThresholdSetting|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|InclusionThresholdSetting|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|모든 구문|EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|모든 구문|EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|모든 구문|없음|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|모든 구문|InclusionThresholdSetting|  
   
 ## <a name="intellisense-in-supported-statements"></a>지원되는 문의 IntelliSense  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 지원되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 중 하나에서 사용되는 경우 다음 구문 요소를 지원합니다.  

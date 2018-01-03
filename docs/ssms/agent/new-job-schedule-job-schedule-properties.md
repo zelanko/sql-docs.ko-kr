@@ -3,7 +3,7 @@ title: "새 작업 일정 - 작업 일정 속성 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b1e568c6ccc32c56e098c8bd3ce407c631909c6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94af2eeef2d7a6bc308463deb70207305f52500f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>새 작업 일정 - 작업 일정 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 일정 속성을 확인하고 변경할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 새 일정 이름을 입력합니다.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 **일정 유형**  
 일정 유형을 선택합니다.  
   
-**설정**  
+**Enabled**  
 일정을 사용하거나 사용하지 않으려면 선택합니다.  
   
 ## <a name="recurring-schedule-types-options"></a>되풀이 일정 유형 옵션  

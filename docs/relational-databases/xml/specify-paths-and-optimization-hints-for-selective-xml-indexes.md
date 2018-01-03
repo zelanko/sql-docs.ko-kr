@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd7817115889688a612e004c6eb44584acb49ff6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: feae81d56a340583d9a48a36abba01cacc7049c4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목에서는 선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 인덱싱에 대한 최적화 힌트를 지정합니다.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  다음은 기본 매핑을 사용하여 만든 선택적 XML 인덱스의 예입니다. 세 경로 모두에 기본 노드 형식(**xs:untypedAtomic**) 및 카디널리티가 사용됩니다.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -98,7 +98,7 @@ mypath03 = '/a/b/d'
   
  다음과 같은 방법으로 선택적 XML 인덱스를 최적화할 수 있습니다.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -122,7 +122,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  다음 쿼리를 살펴보십시오.  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -130,7 +130,7 @@ FROM myXMLTable T
   
  지정된 쿼리는 NVARCHAR(200) 데이터 형식으로 압축된 `/a/b/d` 경로에서 값을 반환하기 때문에 노드에 지정할 데이터 형식이 분명합니다. 그러나 형식화되지 않은 XML로 노드의 카디널리티를 지정할 수 있는 스키마는 없습니다. `d` 노드가 해당 부모 노드인 `b`에 최대 한 번만 표시되도록 지정하려면 다음과 같이 SINGLETON 최적화 힌트를 사용하는 선택적 XML 인덱스를 만듭니다.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -228,7 +228,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      이 항목의 [샘플 XML 문서](#sample) 에 대한 다음과 같은 간단한 쿼리를 살펴보십시오.  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -243,7 +243,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  위에 표시된 SELECT 문의 성능을 향상시키기 위해 다음과 같은 선택적 XML 인덱스를 만들 수 있습니다.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -256,7 +256,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>동일한 경로 인덱싱  
  동일한 경로를 서로 다른 경로 이름을 사용하는 동일한 데이터 형식으로 승격시킬 수 없습니다. 예를 들어 다음 쿼리를 실행하면 `pathOne` 과 `pathTwo` 가 동일하기 때문에 오류가 발생합니다.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -267,7 +267,7 @@ FOR
   
  그러나 동일한 경로를 서로 다른 이름을 사용하는 서로 다른 데이터 형식으로는 승격시킬 수 있습니다. 예를 들어 다음 쿼리는 데이터 형식이 다르기 때문에 허용될 수 있습니다.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -283,7 +283,7 @@ FOR
   
  다음은 exist() 메서드를 사용하는 간단한 XQuery입니다.  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -298,7 +298,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  다음은 조건자가 적용된 이전 XQuery의 보다 복잡한 변형입니다.  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -314,7 +314,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  다음은 value() 절이 포함된 보다 복잡한 쿼리입니다.  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -332,7 +332,7 @@ FROM myXMLTable T
   
  다음은 exist() 절 내의 FLWOR 절을 사용하는 쿼리입니다. (FLWOR이라는 이름은 XQuery FLWOR 식을 구성하는 다섯 개의 절인 for, let, where, order by 및 return에서 따온 것입니다.)  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -362,8 +362,8 @@ WHERE T.xmldata.exist('
   
 |최적화 힌트|보다 효율적인 저장소|성능 향상|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|예|아니요|  
-|**SINGLETON**|아니요|예|  
+|**node()**|예|아니오|  
+|**SINGLETON**|아니오|예|  
 |**DATA TYPE**|예|예|  
 |**MAXLENGTH**|예|예|  
   
@@ -372,10 +372,10 @@ WHERE T.xmldata.exist('
   
 |최적화 힌트|XQuery 데이터 형식|SQL 데이터 형식|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|예|아니요|  
+|**node()**|예|아니오|  
 |**SINGLETON**|예|예|  
-|**DATA TYPE**|예|아니요|  
-|**MAXLENGTH**|예|아니요|  
+|**DATA TYPE**|예|아니오|  
+|**MAXLENGTH**|예|아니오|  
   
 ### <a name="node-optimization-hint"></a>node() 최적화 힌트  
  적용 대상: XQuery 데이터 형식  
@@ -384,7 +384,7 @@ WHERE T.xmldata.exist('
   
  다음 예를 살펴 보십시오.  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  

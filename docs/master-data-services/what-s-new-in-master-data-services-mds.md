@@ -5,7 +5,7 @@ ms.date: 07/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4184ce50cbacda16e113122753b56a4e4ee682cf
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 3921b3ed3862218b1f2fd645641915fb4ed64ee5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -232,7 +232,7 @@ ms.lasthandoff: 12/04/2017
   
  샘플 패키지가 새로운 시나리오를 지원하도록 업데이트되었습니다. 자세한 내용은 [SQL Server 예제: 모델 배포 패키지(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2016 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [사용되지 않는 Master Data Services 기능](../master-data-services/deprecated-master-data-services-features.md)   
  [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)  

@@ -3,7 +3,7 @@ title: Microsoft OLE DB Provider for ODBC | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 44f3131bff34d35b334495c7c718eb513f5d88bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 ADO 또는 RDS 프로그래머가 이상적인 것 모든 데이터에서 원본에서 OLE DB 인터페이스를 제공 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 하지만 점점 더 많은 데이터베이스 공급 업체 OLE DB 인터페이스를 구현 하는 경우 일부 데이터 원본은이 방식으로 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템 ODBC를 통해 액세스할 수 있습니다.
@@ -210,19 +210,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|예|예|예|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|예|예|예|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|예|예|예|
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니요|예|예|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니오|아니오|예|예|
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|예|예|예|
 |[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|예|예|예|
 |[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|예|예|예|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니오|예|예|예|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니오|예|예|예|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|예|예|예|
 |[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|예|예|예|
 |[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|예|예|예|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|예|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니오|아니오|예|예|
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|예|예|예|
 |[Update](../../../ado/reference/ado-api/update-method.md)|예|예|예|예|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|예|예|예|

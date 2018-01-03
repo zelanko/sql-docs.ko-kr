@@ -3,7 +3,7 @@ title: "APPEND 절 셰이프 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab01c719611309117308c818930b1553741495e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-append-clause"></a>셰이프 APPEND 절
 열 또는 열을 추가 하는 셰이프 명령 APPEND 절은 **레코드 집합**합니다. 대부분의 경우 이러한 열은 장 열을 참조 하는 자식 **레코드 집합**합니다.  

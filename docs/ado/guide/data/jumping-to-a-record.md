@@ -3,7 +3,7 @@ title: "레코드 점프 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8612ee07c90c315bf5cc1eceb621082ced03d5a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3178020e032f7ed86d48445fdf3bdc460c522b87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="jumping-to-a-record"></a>레코드로 이동
 [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하면에서 앞 이나 뒤로 이동할 수는 **레코드 집합** 지정된 된 수의 다음 구문을 사용 하 여 레코드:  

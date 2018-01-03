@@ -3,7 +3,7 @@ title: "창 대화 상자(Microsoft Document Explorer 도움말) | Microsoft 문
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2078ea79f44f7dbc8a1072497a6c9aea9538db6c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d033e911618a22a6537fd4a0f4ea311792f56b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>창 대화 상자(Microsoft Document Explorer 도움말)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 편집기와 디자이너에서 열리는 문서를 표시하고 닫으며 정렬할 수 있습니다. **창** 메뉴에서 **창** 을 클릭하여 이 대화 상자를 표시할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 현재 선택한 활성 항목과 함께 문서 및 도구 창의 이름을 표시합니다.  
   

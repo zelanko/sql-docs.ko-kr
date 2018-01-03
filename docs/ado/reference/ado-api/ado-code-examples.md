@@ -3,7 +3,7 @@ title: "ADO 코드 예제 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4bec152ed062ce421192f8198326f8d1cfbc2403
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c342571983b65054e888dbbd2afee6c291445378
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-code-examples"></a>ADO 코드 예제
 다음 코드 예제를 사용 하 여 ADO 개체, 메서드, 속성 및 이벤트를 사용 하는 방법에 알아봅니다.  

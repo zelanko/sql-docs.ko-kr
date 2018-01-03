@@ -24,13 +24,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c4d90a0e4498ecdb28727eeca14c2f6bbe147e6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="query-with-full-text-search"></a>전체 텍스트 검색을 사용한 쿼리
+# <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 전체 텍스트 조건자 **CONTAINS** 및 **FREETEXT**와 **SELECT** 문에서 행 집합 반환 함수 **CONTAINSTABLE** 및 **FREETEXTTABLE**을 사용하여 전체 텍스트 쿼리를 작성합니다. 이 항목에서는 각 조건자 및 함수의 예제를 제공하여 최적의 사용 방법을 선택할 수 있습니다.
 
 -   단어 및 구를 일치시키려면 **CONTAINS** 및 **CONTAINSTABLE**을 사용합니다.
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---contains"></a>예제 - CONTAINS  
  다음 예에서는 가격이 `$80.99` 이고 `"Mountain"`이라는 단어가 포함된 모든 제품을 검색합니다.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -55,7 +55,7 @@ GO
 ### <a name="example---freetext"></a>예제 - FREETEXT 
  다음 예제에서는 vital, safety, components와 관련된 단어를 포함하는 문서를 모두 검색합니다.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -68,7 +68,7 @@ GO
 ### <a name="example---containstable"></a>예제 - CONTAINSTABLE  
  다음 예에서는 **Description** 열에서 "light" 또는 "lightweight"라는 단어 근처에 "aluminum"이라는 단어가 포함된 모든 제품의 설명 ID와 설명을 반환합니다. 등급 값이 2 이상인 행만 반환됩니다.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -90,7 +90,7 @@ GO
 ### <a name="example--freetexttable"></a>예제 - FREETEXTTABLE  
  다음 예에서는 순위가 높은 행을 먼저 반환하고 SELECT 목록에 각 행의 순위를 추가하도록 FREETEXTTABLE 쿼리를 확장합니다. 쿼리를 지정하려면 **ProductDescriptionID** 가 **ProductDescription** 테이블의 고유 키 열임을 알아야 합니다.  
   
-```tsql 
+```sql 
 USE AdventureWorks2012  
 GO  
   
@@ -106,7 +106,7 @@ GO
   
 다음은 순위 값이 10 이상인 행만 반환하도록 동일한 쿼리를 확장한 것입니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -164,7 +164,7 @@ GO
 ###  <a name="Simple_Term"></a> 특정 단어 또는 구(단순 단어) 검색  
  [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 을 사용하여 테이블에서 특정 구를 검색할 수 있습니다. 예를 들어 **데이터베이스의** ProductReview [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 검색하여 "learning curve"라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용합니다.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -179,7 +179,7 @@ GO
 ###  <a name="Prefix_Term"></a> 접두사(접두사 용어)가 포함된 단어 검색  
  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 또는 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 을 사용하여 지정된 접두사가 포함된 단어나 구를 검색할 수 있습니다. 열에서 지정된 접두사로 시작하는 텍스트가 포함된 모든 항목이 반환됩니다. 예를 들어 `top`, `top``ple`및 `top``ping`에서와 같이 `top`- 접두사가 포함된 모든 행을 검색하려면 다음 쿼리를 사용합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -198,7 +198,7 @@ GO
   
 다음 예에서는 `Comments` 데이터베이스의 `ProductReview` 테이블에 있는 `AdventureWorks` 열에서 "foot"의 모든 형태("foot", "feet" 등)를 검색합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -215,7 +215,7 @@ GO
   
 다음 예에서는 가중치를 사용하여 문자열 "Bay"로 시작하는 텍스트에 "Street" 또는 "View"가 있는 모든 고객 주소를 검색하는 쿼리를 보여 줍니다. 지정한 단어가 많이 포함된 행일수록 높은 가중치가 지정됩니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -243,7 +243,7 @@ CONTAINS 조건자와 CONTAINSTABLE 함수는 동일한 검색 조건을 사용�
 ### <a name="example"></a>예제  
  다음 예제는 CONTAINS 조건자를 사용하여 설명 ID가 5와 같지 않고 "Aluminum"이라는 단어와 "spindle"이라는 단어가 모두 포함된 설명을 검색합니다. 검색 조건에는 AND 부울 연산자가 사용됩니다. 이 예제에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 ProductDescription 테이블을 사용합니다.
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -270,7 +270,7 @@ GO
 
 쿼리에 특정 단어 분리기, 동의어 사전 및 중지 목록 조합을 적용하면 **sys.dm_fts_parser** 동적 관리 뷰를 사용하여 토큰화 결과를 볼 수 있습니다. 자세한 내용은 [sys.dm_fts_parser&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CONTAINS&#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT&#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   

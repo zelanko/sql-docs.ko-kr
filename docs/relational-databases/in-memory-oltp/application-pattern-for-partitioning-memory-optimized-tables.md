@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 395967f86de07074db3a7c8cad7c49195ed54d86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9fcd874e83a0fcecadf7dd76bb5bf67a21df6d6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 응용 프로그램 패턴
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  이 예제의 첫 번째 부분에서는 데이터베이스와 필요한 개체를 만듭니다. 예제의 두 번째 부분에서는 메모리 최적화 테이블에서 분할된 테이블로 데이터를 이동하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

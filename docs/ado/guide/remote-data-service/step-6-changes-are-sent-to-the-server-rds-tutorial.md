@@ -3,7 +3,7 @@ title: "6 단계: (RDS 자습서) 서버에 변경 내용이 보내집니다 | M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35a1d8037574c2fb79e3998b5eb20f1474392d41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: de6c8d6a9873f57d25a24f29633360490f24c44e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>(RDS 자습서) 서버에 변경 내용이 보내집니다 6 단계:
 경우는 **레코드 집합** 개체를 편집, 변경 (즉, 추가, 변경 또는 삭제 하는 행) 서버에 다시 보낼 수 있습니다.  

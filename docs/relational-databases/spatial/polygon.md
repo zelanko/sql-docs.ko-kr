@@ -20,13 +20,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b8881f34970d44bdf99a9e3e547eeefb8c21d2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e65cb03e1efa9b1c83f9cacad4bd8edba231484e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="polygon"></a>다각형
+# <a name="polygon"></a>Polygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Polygon**은 외부 경계 링과 0개 이상의 내부 링을 정의하는 일련의 점으로 저장되는 2차원 표면입니다.  
   
 ## <a name="polygon-instances"></a>Polygon 인스턴스  
@@ -142,7 +142,7 @@ MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1
   
  다음은 유효하지 않은 인스턴스를 유효한 geometry 인스턴스로 변환하는 다른 예입니다. 다음 예에서는 정확하게 서로 동일한 점 세 개를 사용하여 `Polygon` 인스턴스를 만들었습니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('POLYGON((1 3, 1 3, 1 3, 1 3))');  
 SET @g = @g.MakeValid();  

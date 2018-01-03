@@ -23,11 +23,11 @@ caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: f0fd76a64d46d8d4cd1efbdfa86e3f4b8c4b97c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0dc198b7f7e40bb99c0e019b9172b647f8bda79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 읽기 전용 라우팅 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]에서 읽기 전용 라우팅을 지원하도록 Always On 가용성 그룹을 구성하려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]이나 PowerShell을 사용합니다. *읽기 전용 라우팅* 이란 특정 읽기 전용 연결 요청을 Always On의 사용 가능하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 읽기 가능한 보조 복제본 [(즉, 보조 역할로 실행될 때 읽기 전용 작업을 허용하도록 구성된 복제본)으로 라우팅하는](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 기능을 말합니다. 읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 응용 프로그램 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청*이어야 합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  읽기 가능한 보조 복제본을 구성하는 방법은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [필수 구성 요소](#Prerequisites)  
   
@@ -60,9 +60,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [관련 내용](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   가용성 그룹에 가용성 그룹 수신기가 있어야 합니다. 자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)가 있어야 합니다.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
   
 |태스크|사용 권한|  
 |----------|-----------------|  
@@ -136,13 +136,13 @@ ms.lasthandoff: 11/20/2017
   
  예를 들어 다음 라우팅 목록은 두 읽기 전용 복제본 `Server1` 및 `Server2`에 대해 읽기 전용 연결 요청을 부하 분산합니다. 이 두 서버를 묶는 중첩 괄호는 부하 분산되는 집합을 식별합니다. 해당 집합에서 두 복제본을 모두 사용할 수 없으면 읽기 전용 라우팅 목록의 다른 복제본인 `Server3` 및 `Server4`에 순서대로 계속 연결을 시도합니다.  
   
-```tsql  
+```sql  
 READ_ONLY_ROUTING_LIST = (('Server1','Server2'), 'Server3', 'Server4')  
 ```  
   
  라우팅 목록의 각 항목 자체가 부하 분산된 읽기 전용 복제본 집합일 수 있습니다. 다음 예에 이러한 부하 분산 방식이 나와 있습니다.  
   
-```tsql  
+```sql  
 READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5'), 'Server6')  
 ```  
   

@@ -3,7 +3,7 @@ title: "서버에 연결(데이터베이스 엔진) | Microsoft 문서"
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-f1
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6c964843ed176e0a175606ef92c8146d20a37b47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b70f7d86d487cc947940edf5daf89c54d9186df6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-server-database-engine"></a>서버에 연결(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]에 연결할 때 이 대화 상자를 사용하여 옵션을 확인하거나 지정할 수 있습니다. 대부분의 경우 **서버 이름** 상자에서 데이터베이스 서버의 컴퓨터 이름을 입력한 다음 **연결**을 클릭하여 연결할 수 있습니다. 명명된 인스턴스에 연결하는 경우 컴퓨터 이름, 백슬래시, 인스턴스 이름의 순서로 사용합니다. `mycomputer\myinstance`)을 입력합니다. [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]에 연결하는 경우 컴퓨터 이름과 그 뒤에 **\sqlexpress**를 사용합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 - [SQL Server 데이터베이스 엔진에 대한 연결 문제 해결](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
 - [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)(SQL Server에 대한 연결 오류 해결)   
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **서버 유형**  
 개체 탐색기에서 서버를 등록하는 경우 연결할 서버 유형을 [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]중에서 선택합니다. 대화 상자의 나머지 부분에는 선택한 서버 유형에 적용되는 옵션만 표시됩니다. 등록된 서버에서 서버를 등록하는 경우 **서버 유형** 상자는 읽기 전용이며 등록된 서버 구성 요소에 표시된 서버 유형과 일치합니다. 다른 유형의 서버를 등록하려면 새 서버를 등록하기 전에 등록된 서버 도구 모음에서 [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)], [!INCLUDE[ssEW](../../includes/ssew_md.md)]또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 중에서 선택합니다.  
   
@@ -67,7 +67,7 @@ Azure Active Directory 인증은 Azure AD(Azure Active Directory)에서 ID를 �
   > **Active Directory - 통합**  
 Azure Active Directory 인증은 Azure AD(Azure Active Directory)에서 ID를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 에 연결하는 메커니즘입니다. 페더레이션된 도메인에서 Azure Active Directory 자격 증명을 사용하여 Windows에 로그인하는 경우 [!INCLUDE[ssSDS](../../includes/sssds_md.md)]에 연결하는 데 이 방법을 사용합니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요.  
   
-**사용자 이름**  
+**User name**  
 연결에 사용할 Windows 사용자 이름입니다. 이 옵션은 **Active Directory 암호 인증**을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다. **Windows 인증** 또는 **Active Directory - 통합** 인증을 선택하는 경우 읽기 전용입니다.  
   
 **로그인**  

@@ -3,7 +3,7 @@ title: "결과 삽입의 대상 테이블 선택 대화 상자 | Microsoft 문�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ab56a5548e59cac0f7f2d6f84d35453942ce1f6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8acff0ca01947c905615542de85bd2da9b0c5be6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>결과 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] INSERT RESULTS 쿼리 결과로서 데이터 행을 추가할 테이블을 지정할 수 있습니다. 이 대화 상자는 INSERT RESULTS 쿼리를 시작할 때 나타납니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **대상을 선택하십시오.**  
 행을 추가할 테이블의 이름을 목록에서 선택합니다. INSERT RESULTS 쿼리에 대해 테이블을 하나만 지정할 수 있습니다.  
   

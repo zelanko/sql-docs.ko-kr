@@ -3,7 +3,7 @@ title: "데이터 업데이트 및 지속 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9220fd7448c5c2b7ba9e2600ca129f61e917723
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b6b67b559f31dc2e7c57f32abb4a2c2e26e0e558
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-and-persisting-data"></a>업데이트 및 데이터 유지
 데이터 원본에 가져올 데이터에 ADO를 사용 하는 방법, 데이터를 이동 하는 방법 및 데이터를 편집 하는 방법에도 이전 장에서 살펴보았습니다. 물론, 응용 프로그램의 목표는 데이터를 변경할 수 있도록 하려는 경우, 이러한 변경 내용을 저장 하는 방법을 이해 해야 합니다. 하거나 유지할 수 있습니다는 **레코드 집합** 로 사용 하 여 파일 변경는 **저장** 하거나 메서드를 사용 하 여 저장소에 대 한 데이터 소스에 변경 내용을 다시 보낼 수는 **업데이트** 또는  **UpdateBatch** 메서드.  

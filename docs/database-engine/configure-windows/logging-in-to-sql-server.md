@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01cb38024cef71a6a19c9b79ca036270dc46a6ab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 그래픽 관리 도구를 사용하거나 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 로그인할 수 있습니다.  
@@ -77,13 +77,13 @@ ms.lasthandoff: 11/20/2017
 ## <a name="verifying-your-connection-protocol"></a>연결 프로토콜 확인  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결된 경우 다음 쿼리는 인증 방법(NTLM 또는 Kerberos)과 함께 현재 연결에 사용되는 프로토콜을 반환하며 연결이 암호화되는지 여부를 표시합니다.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [SQL Server 인스턴스에 로그인&#40;명령 프롬프트&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  다음 리소스는 연결 문제를 해결하는 데 도움이 될 수 있습니다.  

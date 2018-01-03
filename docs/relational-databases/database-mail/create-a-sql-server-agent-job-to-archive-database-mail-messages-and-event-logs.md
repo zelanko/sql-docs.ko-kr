@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d7173c3482cb13806c4d4754d493ccec3118a73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc840281d8a9cd2ae9a1f85988f850cc29ab1582
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 메일 및 첨부 파일의 복사본은 데이터베이스 메일 이벤트 로그와 함께 **msdb** 테이블에 보관됩니다. 정기적으로 테이블의 크기를 축소하고 더 이상 필요하지 않은 메시지와 이벤트를 보관할 수 있습니다. 다음 절차에서는 SQL Server 에이전트 작업을 만들어 이 프로세스를 자동화합니다.  
@@ -37,14 +37,14 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  데이터를 저장하고 보관할 새 테이블은 특수한 보관 데이터베이스에 위치할 수 있습니다. 행을 텍스트 파일로 내보낼 수도 있습니다.  
    
 ###  <a name="Recommendations"></a> 권장 사항  
  프로덕션 환경에서 오류 검사를 추가하고 작업이 실패할 경우 운영자에게 전자 메일 메시지를 보낼 수 있습니다.  
   
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="Permissions"></a> Permissions  
  이 항목에서 설명하는 저장 프로시저를 실행하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  **명령** 입력란에 다음 문을 입력하여 이전 달의 이름을 딴 테이블을 만들고 현재 달의 시작일보다 이전인 행을 포함하도록 합니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  **명령** 입력란에 다음 문을 입력하여 이전 달의 이름을 딴 테이블을 만들고 이전 단계에서 복사한 메시지에 해당하는 첨부 파일이 포함되도록 합니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  **명령** 입력란에 다음 문을 입력하여 이전 달의 이름을 딴 테이블을 만들고 이전 단계에서 복사한 메시지에 해당하는 로그 항목이 포함되도록 합니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  **명령** 입력란에 다음 문을 입력하여 현재 달보다 이전인 행을 데이터베이스 테이블에서 제거합니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @CopyDate ;  
@@ -191,7 +191,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  **명령** 입력란에 다음 문을 입력하여 현재 달보다 이전인 행을 데이터베이스 메일 이벤트 로그에서 제거합니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @CopyDate ;  

@@ -3,7 +3,7 @@ title: "SQL Server PowerShell 모듈 다운로드 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/10/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 83b535f97682334f6a83f3eb58e2f673c2040b4c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 208bf291819a3e847e784e76611acdec0bf2f2d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>SQL Server PowerShell 모듈 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio의 17.0 릴리스의 일환으로 SQL Server PowerShell 모듈이 이제 PowerShell 갤러리를 통해 제공됩니다.  이 모듈은 더 이상 SSMS 설치 패키지에 포함되지 않습니다. SSMS 17.0 버전 이상에서 PowerShell을 사용하려면 추가 단계로 SQL Server 모듈을 컴퓨터에 설치해야 합니다.

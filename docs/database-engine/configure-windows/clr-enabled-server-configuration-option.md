@@ -20,18 +20,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2227aa16c39c819a169844be9ac0df46849a74b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8cd679c894e1d9518ff5547cde0150c11cf156f1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   clr enabled 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 어셈블리를 실행할 수 있는지 여부를 지정합니다. clr enabled 옵션은 다음 값을 제공합니다. 
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 어셈블리를 실행할 수 없습니다.|  
 |1|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 어셈블리를 실행할 수 없습니다.|  
@@ -48,7 +48,7 @@ RECONFIGURE를 실행하고 clr enabled 옵션을 1에서 0으로 변경하면 �
 ## <a name="example"></a>예제  
  다음 예에서는 먼저 clr enabled 옵션의 현재 설정을 표시한 다음 옵션 값을 1로 설정하여 옵션을 사용하도록 설정합니다. 옵션을 해제하려면 값을 0으로 설정합니다.  
   
-```tsql  
+```sql  
 EXEC sp_configure 'clr enabled';  
 EXEC sp_configure 'clr enabled' , '1';  
 RECONFIGURE;    

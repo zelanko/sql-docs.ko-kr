@@ -3,7 +3,7 @@ title: "ADO 이벤트 처리기 요약 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7a241c21719e2181f8dbbce11742a273d8552d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c00af6ce5dcdff509b04d25bc09a42a6e9e89fd7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 연결 및 레코드 집합 이벤트
 두 개의 ADO 개체 이벤트를 발생 시킬 수 있습니다:는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. **ConnectionEvent** 에 작업에 관련 된 제품군의 **연결** 개체 및 **RecordsetEvent** 제품군 관련 작업에는  **레코드 집합** 개체입니다.

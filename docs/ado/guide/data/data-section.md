@@ -3,7 +3,7 @@ title: "데이터 섹션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fae3df37c9a83bdf97a7ae2a53bc76777b318546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 486c936681adca59a90dae6a5e304be6f8b4dba5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션 업데이트, 삽입 또는 삭제 보류 중인 함께 행 집합의 데이터를 정의합니다. 데이터 섹션에는 0 개 이상의 행 포함 될 수 있습니다. 행이 스키마에 정의 되어 있는 행 집합에서 데이터를 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 모든 데이터가 없는 열을 생략할 수 있습니다. 특성 또는 하위 요소 데이터 섹션에 사용 하는 경우 해당 구문이 스키마 섹션에 정의 되지 않은 자동으로 무시 됩니다.  
   
-## <a name="string"></a>문자열  
+## <a name="string"></a>String  
  적절 한 문자 엔터티가 포함 된 텍스트 데이터에서 예약 된 XML 문자를 바꾸어야 합니다. 예를 들어 "조의 차고" 회사 이름에는 작은따옴표 엔터티에 의해 교체 해야 합니다. 실제 행은 다음과 유사 합니다.  
   
 ```  

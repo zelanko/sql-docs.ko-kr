@@ -3,7 +3,7 @@ title: "메뉴 및 바로 가기 키 사용자 지정 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c790f0a159366986a193bbfd4509f92d65ec5492
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 키보드 액셀러레이터를 사용하면 Alt+*<single letter>*를 눌러 메뉴 명령이나 단추를 선택할 수 있습니다. 예를 들어 **편집** 메뉴를 열려면 Alt+E를 누릅니다. **사용자 지정** 대화 상자를 사용하여 도구 모음 단추, 메뉴 및 메뉴 명령을 다시 정렬하고 수정할 수 있습니다. 여기에서는 마우스를 사용하거나 키보드만 사용하여 설정을 변경하기 위한 지침이 제공됩니다.  
@@ -65,7 +65,7 @@ Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이
   
 3.  바로 가기 메뉴의 **이름** 상자에서 도구 모음 단추의 이름과 함께 키보드 액셀러레이터로 사용할 문자의 앞에 앰퍼샌드(&)를 입력합니다.  
   
-4.  **Enter** 키를 누릅니다.  
+4.  **Enter**키를 누릅니다.  
   
 5.  **사용자 지정** 대화 상자에서 **닫기**를 클릭합니다.  
   
@@ -81,7 +81,7 @@ Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이
   
 4.  바로 가기 메뉴의 **이름** 상자에서 메뉴 명령의 이름과 함께 키보드 액셀러레이터로 사용할 문자의 앞에 앰퍼샌드(&)를 입력합니다.  
   
-5.  **Enter** 키를 누릅니다.  
+5.  **Enter**키를 누릅니다.  
   
 6.  **사용자 지정** 대화 상자에서 **닫기**를 클릭합니다.  
   
@@ -115,7 +115,7 @@ Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이
   
 6.  바로 가기 메뉴의 **이름** 상자로 이동한 다음 도구 모음 단추의 이름과 함께 키보드 액셀러레이터로 사용할 문자의 앞에 앰퍼샌드(&)를 입력합니다.  
   
-7.  **Enter** 키를 누릅니다.  
+7.  **Enter**키를 누릅니다.  
   
 8.  **닫기** 단추로 이동한 다음 **Enter**키를 누릅니다.  
   
@@ -166,6 +166,6 @@ Ctrl 키를 사용하는 저장 프로시저에 대한 키보드 액셀러레이
 > [!NOTE]  
 > 일부 명령은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 에 관련 내용이 표시되는 경우에만 사용할 수 있습니다. 메뉴에 사용할 수 있는 명령이 없으면 메뉴 항목을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server Management Studio의 기능](../ssms/features-in-sql-server-management-studio.md)  
   

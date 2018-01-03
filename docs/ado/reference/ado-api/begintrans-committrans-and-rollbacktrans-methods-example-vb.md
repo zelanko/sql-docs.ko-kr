@@ -3,7 +3,7 @@ title: "BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VB) | Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 95e490863b80fa226e5f310560f0b1a197227620
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779ec99986daa9b85a48febdbb8588e7d39b44d6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VB)
 에 있는 모든 심리학 책의 책 종류를 변경 하는이 예제는 ***타이틀*** 데이터베이스의 테이블입니다. 후의 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드 시작에 대 한 모든 변경 내용을 격리 하는 트랜잭션을 ***타이틀*** 테이블은 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드는 변경 내용을 저장 합니다. 사용할 수는 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드를 사용 하 여 저장 하는 변경 내용을 취소 하는 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드.  

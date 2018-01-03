@@ -3,9 +3,9 @@ title: "데이터베이스 엔진 cmdlet 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b3833567185c16097983cfce99fca2e33d61d88e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d4bd752ec6a8029d7fb209557769d6e7f32c7d7
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-database-engine-cmdlets"></a>데이터베이스 엔진 cmdlet 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Windows PowerShell cmdlet은 **Get-Help** 또는 **Set-MachineName**과 같이 일반적으로 동사-명사 명명 규칙을 사용하는 단일 함수 명령입니다. Windows PowerShell의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 cmdlet을 제공합니다.  

@@ -3,7 +3,7 @@ title: "SQL Server 에이전트 속성(경고 시스템 페이지) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35318a641f1f0e59f6ac0c809be44bca43394308
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 072c6c1a55e470499d49ccb11fd449a95df3cbcd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server 에이전트 속성(경고 시스템 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 경고가 보낸 메시지의 설정을 확인하거나 수정할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **메일 세션**  
 이 섹션의 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 메일을 구성합니다.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 12/05/2017
 **유사 시 대기 운영자 설정**  
 유사 시 대기 운영자를 지정합니다.  
   
-**연산자**  
+**같음**  
 유사 시 대기 알림을 받을 운영자의 이름을 설정합니다.  
   
 **알림 방법**  

@@ -28,13 +28,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4e254e5338ef80143d5444ea0c4b4365b957c514
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b31637578959e543e890de37c9f42e174e5b72c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="upgrade-reports"></a>보고서 업그레이드
+# <a name="upgrade-reports"></a>Upgrade Reports
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
  보고서 정의 파일을 보고서 서버 또는 SharePoint 사이트에 직접 업로드하는 경우에는 보고서가 업그레이드되지 않습니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 보고서 정의를 업그레이드해야만 .rdl 파일을 업그레이드할 수 있습니다.  
   
- 로컬 또는 보고서 서버에서 보고서를 업그레이드한 후 추가적인 오류, 경고 및 메시지가 나타날 수 있습니다. 이것은 내부 보고서 개체 모델 및 처리 구성 요소가 변경됨에 따라 보고서에서 근본적인 문제를 감지하고 메시지를 표시하기 때문입니다. 자세한 내용은 [[Reporting Services의 이전 버전과의 호환성]](../../reporting-services/reporting-services-backward-compatibility.md "이전 버전과의 호환성 | Reporting Services")을 참조하세요.  
+ 로컬 또는 보고서 서버에서 보고서를 업그레이드한 후 추가적인 오류, 경고 및 메시지가 나타날 수 있습니다. 이것은 내부 보고서 개체 모델 및 처리 구성 요소가 변경됨에 따라 보고서에서 근본적인 문제를 감지하고 메시지를 표시하기 때문입니다. 자세한 내용은 [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)을 참조하세요.  
   
  [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md)의 새 기능에 대한 자세한 내용은  
 

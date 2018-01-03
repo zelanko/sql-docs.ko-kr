@@ -3,9 +3,9 @@ title: "조사식 창 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ce89bd43189b4d873fd6a827b7fc9bd28726349
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d07939bd14884e347601f890bec0676b36321d3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 디버거 - 조사식 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **조사식** 창은 선택한 식에 대한 정보를 표시합니다. **조사식 1**, **조사식 2, 조사식 3**및 **조사식 4**의 최대 4개의 창으로 구성할 수 있습니다. 식은 **호출 스택** 창에서 선택한 현재 호출 스택 프레임 범위 내에서 평가됩니다. 변수 및 식을 조사하려면 디버그 모드여야 합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1 등의 단일 값을 반환하는 Transact-SQL 문입니다.  
   
- **값**  
+ **Value**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 **이름**에 지정된 식을 평가한 후 반환되는 값을 표시합니다.  
   
  식의 길이가 **값** 열의 너비보다 큰 경우 해당 식의 **값** 셀 위로 포인터를 움직이면 도구 설명에 전체 값이 표시됩니다.  

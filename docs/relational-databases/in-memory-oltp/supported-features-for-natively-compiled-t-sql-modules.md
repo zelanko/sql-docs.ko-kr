@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fee5822e0833afec741b00d2e18b2c1a0db28ec5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ HAVING 절:
   - 쿼리에 조인 또는 집계 함수가 포함되어 있으면 이 제한이 더 낮아질 수 있습니다. 예를 들어, 조인이 하나 있고 테이블이 두 개 있으면 4,096개의 행으로 제한되고, 조인이 두 개 있고 테이블이 세 개 있으면 2,730개의 행으로 제한됩니다.  
   - 변수에 행 수를 저장하여 8,192개 이상의 결과를 가져올 수 있습니다.  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -155,7 +155,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   UPDATE  
 
--   DELETE  
+-   Delete  
 
 -   WHERE은 UPDATE 및 DELETE 문에서 지원됩니다.  
 
@@ -258,7 +258,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
  TOP N = 8192인 경우의 예: 컴파일  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -271,7 +271,7 @@ GO
 
  TOP N > 8192인 경우의 예: 컴파일 실패  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -286,7 +286,7 @@ GO
 
  변수 사용의 예: 컴파일  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -306,7 +306,7 @@ GO
 
  TOP N에서 지원되는 최대 N의 경우를 계산하는 공식은 `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`입니다.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
 

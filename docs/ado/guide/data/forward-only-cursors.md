@@ -3,7 +3,7 @@ title: "정방향 전용 커서 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 496e62ece05a14a5b64eae797d546af7ba4a1ede
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6b9357706047dbcf6e69968ce289fb59a7e055b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="forward-only-cursors"></a>정방향 전용 커서
 커서를 앞 으로만 이동 가능한 (또는 스크롤할 수 없는)를 호출 하는 일반적인 기본 커서 유형을 결과 집합 앞 으로만 이동할 수 있습니다. 정방향 전용 커서 (결과 집합에서 앞 이나 뒤로 이동 하는 기능); 스크롤을 지원 하지 않습니다. 결과 집합의 끝에 시작에서의 행 인출만 지원 합니다. 일부 정방향 전용 커서와 함께 (같은 SQL Server 커서 라이브러리와 함께), 모든 insert, update 및 delete 문을 현재 사용자 (또는 다른 사용자가 커밋하여) 행 결과 집합에 영향을 행 인출 될 때 표시 됩니다. 그러나 커서는 뒤로 스크롤할 수 없는, 행 변경 내용을 데이터베이스에 행이 인출 된 후 표시 되지 않습니다 커서를 통해.  

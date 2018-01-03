@@ -3,7 +3,7 @@ title: "등록된 서버 또는 등록된 서버 그룹 이름 변경 | Microsof
 ms.custom: 
 ms.date: 08/02/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 76b0c8fb0f6ef95348200c04c65b6c3838c33d80
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: edaa2f33cdf9a5e7d63279c27a5f559f0faaa42e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>등록된 서버 또는 등록된 서버 그룹 이름 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹의 이름을 변경하는 방법에 대해 설명합니다. 이 이름은 언제든지 변경할 수 있습니다. 등록된 서버의 서버 이름을 변경하면 이름이 표시되는 방식만 변경됩니다. 다른 서버에 연결하려면 등록된 서버의 연결 속성을 편집해야 합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  **그룹 이름** 입력란에 서버 그룹의 새 이름을 입력한 다음 **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [서버 등록 변경&#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)  
   
   

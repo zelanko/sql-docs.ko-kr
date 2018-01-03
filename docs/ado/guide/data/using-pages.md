@@ -3,7 +3,7 @@ title: "페이지를 사용 하 여 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00394ba3e6a7e07e36ab28d0899c5ea1e6ff32ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 87c39965c7cf46c628aac17dd00fa3bf7ff18fdc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-pages"></a>페이지를 사용 하 여
 사용 하 여는 **PageCount** 속성에 있는 데이터 페이지 수를 확인 하 고 **레코드 집합** 개체입니다. *페이지* 같은 크기의 레코드의 그룹은 **PageSize** 속성을 설정 합니다. 보다 적은 수의 레코드가 있기 때문에 마지막 페이지가 완료 되는 경우에는 **PageSize** 에서 추가 페이지로 계산 값은 **PageCount** 값입니다. 경우는 **레코드 집합** 개체가이 속성을 지원 하지 않는 **PageCount** 임을 나타내는-1이 됩니다는 **PageCount** 결정할 수 있는있지 않습니다.  

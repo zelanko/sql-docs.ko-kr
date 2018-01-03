@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2d704561458719b9d1d73467370d2e5e1d8bd13
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_CreateDatabase"></a> 데이터베이스 만들기  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 하나 이상의 메모리 최적화 테이블이 포함되는 IMOLTP_DB라는 데이터베이스를 만듭니다. 이 명령을 실행하기 전에 \<driveAndPath> 경로가 있어야 합니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -98,7 +98,7 @@ GO
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서는 메모리의 절반을 사용할 수 있는 Pool_IMOLTP라는 리소스 풀을 만듭니다.  풀이 만들어진 후 Pool_IMOLTP를 포함하도록 리소스 관리자가 다시 구성됩니다.  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -115,7 +115,7 @@ GO
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서는 리소스 풀 Pool_IMOLTP와 데이터베이스 IMOLTP_DB의 바인딩을 정의합니다. 데이터베이스를 온라인 상태로 전환할 때까지 바인딩이 적용되지 않습니다.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -125,7 +125,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> 바인딩 확인  
  IMOLTP_DB의 리소스 풀 ID에 주의하여 바인딩을 확인합니다. 값이 NULL이면 안 됩니다.  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -134,7 +134,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> 바인딩 적용  
  바인딩을 리소스 풀에 바인딩한 후 바인딩을 적용하려면 데이터베이스를 오프라인 상태로 만들었다가 다시 온라인 상태로 만들어야 합니다. 데이터베이스가 다른 풀에 바인딩된 경우 이전 리소스 풀에서 할당된 메모리가 제거되고 이제 데이터베이스로 새로 바인딩된 리소스 풀에서 메모리 최적화 테이블과 인덱스에 대한 메모리 할당이 수행됩니다.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -158,7 +158,7 @@ GO
   
  **예제 코드**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -189,7 +189,7 @@ GO
   
  데이터베이스가 명명된 리소스 풀에 바인딩되면 다음 쿼리를 사용하여 다른 리소스 풀 전반의 메모리 할당량을 확인합니다.  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  
@@ -220,7 +220,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ## <a name="see-also"></a>참고 항목  
  [sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
- [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
+ [관리](../../relational-databases/resource-governor/resource-governor.md)   
  [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [리소스 풀 설정 변경](../../relational-databases/resource-governor/change-resource-pool-settings.md)   

@@ -3,7 +3,7 @@ title: "사용자 지정 파일 SQL 섹션 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e596d2c1ae90e86931e5656ac7ccdbdeb95e4d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0cb92bcd2ea9580fa8824a50b15a1f60cdf35c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 **sql** 섹션에는 클라이언트 명령 문자열을 대체 하는 새로운 SQL 문자열 포함 될 수 있습니다. 섹션에서 SQL 문자열이 없는 섹션 무시 됩니다.  

@@ -3,7 +3,7 @@ title: "요약: 기본 탐색 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bfc0fee9e578e04c7011e838fad8336fae015fc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4318861dc0a6eb8037b041789d9e737a7be9878e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-9---summary---basic-navigation"></a>1-9단원 - 요약 - 기본 탐색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 개인적인 취향과 작업 요구 사항에 맞게 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 디자인 화면을 사용자 지정할 수 있습니다.  

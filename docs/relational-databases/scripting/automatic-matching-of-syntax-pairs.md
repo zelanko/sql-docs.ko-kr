@@ -3,9 +3,9 @@ title: "구문 쌍의 자동 일치 기능 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca8d67e673cefb5fc61562f6b16c9482a030a7f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d8d02ee81c5d9bccbac11cbb9a099881598a2f3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>구문 쌍의 자동 일치 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 구문 쌍 자동 맞추기 기능은 쌍으로 코드를 작성해야 하는 구문 요소가 제대로 쌍을 이루는지 여부에 대한 즉각적인 피드백을 제공합니다. 이를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 구분 기호 짝 맞추기, Analysis Services XMLA 쿼리 편집기에서는 중괄호 짝 맞추기, MDX 및 DMX 편집기에서는 괄호 짝 맞추기라고 합니다.  

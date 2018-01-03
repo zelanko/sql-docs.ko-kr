@@ -3,7 +3,7 @@ title: "현재 레코드와 레코드 집합의 크기 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6e1da6abaf639a691c647168f51dfa6130da12f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6b4bab8061c7343d303dcd322ae2ae7fef2fd42
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="current-record-and-size-of-recordset"></a>현재 레코드와 레코드 집합의 크기
 이 섹션에서는 샘플에는 커서의 현재 위치를 찾는 방법을 설명 **레코드 집합** 에 [JScript 코드 예제에서는 레코드 집합을 반환 하려면](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)합니다.  

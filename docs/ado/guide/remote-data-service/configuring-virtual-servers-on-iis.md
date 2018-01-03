@@ -3,7 +3,7 @@ title: "IIS에서 가상 서버 구성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 085aaafca8390c2c036ea5e67905e194a18401b6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05eaeb3a40093158fbcf82fb2b8239e92204a350
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>IIS에서 가상 서버를 구성합니다.
 인터넷 정보 서비스 4.0에서 가상 서버를 만들 때 다음 두 가지 추가 단계 RDS를 사용 하도록 가상 서버를 구성 하는 데 필요 합니다.  

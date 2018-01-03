@@ -3,7 +3,7 @@ title: "데이터를 검토할 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f05ca08a88951de138f094fbcac1dd9a31bfdfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22b4be4e37ebebcf2edd2bf4e6403c589d5ee181
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examining-data"></a>데이터를 검사합니다.
 [데이터 가져오기](../../../ado/guide/data/getting-data.md) 하나 이상의 데이터 원본에서 데이터를 검색 하는 방법을 설명 했습니다 **레코드 집합** 개체입니다. 이 섹션에 설명 합니다 **레코드 집합** 더욱 자세하게에서를 통해 탐색 하는 방법을 포함 하는 **레코드 집합** 있으며 해당 데이터를 볼 합니다.  

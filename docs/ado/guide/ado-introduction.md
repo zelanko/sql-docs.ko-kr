@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, programming
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: MightyPen
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce6cdcbf6969f00c42b1fe06f591471a0735e8d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01aeb96879bf7822b8dde24a5d7e7605484947f2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 개요 및 이점
 ADO ActiveX Data Objects ()는 OLE DB에는 상위 수준, 사용 하기 쉬운 인터페이스입니다. OLE DB는 다양 한 데이터 저장소에는 하위 수준, 고성능 인터페이스입니다. OLE DB 및 ADO 작업할 수 관계형 (테이블 형식) 및 비관계형 (계층적 또는 스트림) 데이터입니다.

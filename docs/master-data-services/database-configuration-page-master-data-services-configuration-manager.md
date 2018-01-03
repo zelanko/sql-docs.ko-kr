@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdbdbafcfc2981633b1965492addea21dbb7ad7c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ac732f7d981c1183dccc56df7ec9cb31b4eea307
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>데이터베이스 구성 페이지(Master Data Services 구성 관리자)
   **데이터베이스 구성** 페이지를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 시스템 설정을 편집할 수 있습니다. 시스템 설정은 선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 모든 웹 응용 프로그램 및 웹 서비스에 영향을 줍니다. 시스템 설정을 활성화하고 구성에 사용하려면 먼저 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택하거나 만들어야 합니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
  이러한 설정은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 사용할 수 있으며 시스템 설정 테이블(mdm.tblSystemSetting)의 데이터베이스에 저장됩니다. 모든 설정 목록은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md) [데이터베이스 요구 사항&#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   

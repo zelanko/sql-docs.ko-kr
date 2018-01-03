@@ -20,11 +20,11 @@ author: pelopes
 ms.author: harinid
 manager: 
 ms.workload: Inactive
-ms.openlocfilehash: 09020e8a41d4d378bf8f2f8aadc7a0c1f4996f01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3264cab532c77a8e27daff0a3c5c1bd5ed801818
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ SARGable이 아닌 조건자의 몇 가지 예:
 ### <a name="steps-to-resolve"></a>해결 단계
 1.  다중 문 TVF에 문이 하나뿐인 경우 인라인 TVF로 변환합니다.
 
-    ```tsql
+    ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
     RETURNS @tblAddress TABLE
     ([Address] VARCHAR(60) NOT NULL)
@@ -150,7 +150,7 @@ SARGable이 아닌 조건자의 몇 가지 예:
     ```
     수행할 작업 
 
-    ```tsql
+    ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
     RETURNS TABLE
     AS

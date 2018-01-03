@@ -21,20 +21,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6334d38dd066fc5980851ebf02116c3b96568991
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6bfbc46bb8c08c1176e14809cd2ca98ae8dcaad7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-a-stored-procedure"></a>저장 프로시저 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
 ##  <a name="Top"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 저장된 프로시저를 삭제하는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **프로시저 삭제에 사용되는 도구:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To delete a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  프로시저가 속한 스키마에 대한 ALTER 권한 또는 프로시저에 대한 CONTROL 권한이 필요합니다.  
   
 ##  <a name="Procedures"></a> 저장 프로시저를 삭제하려면  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  현재 데이터베이스의 저장 프로시저 이름을 확인합니다. 개체 탐색기에서 **프로그래밍 기능** 을 확장한 다음 **저장 프로시저**를 확장합니다. 또는 쿼리 편집기에서 다음 문을 실행합니다.  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  다음 예제를 쿼리 편집기에 복사하여 붙여 넣고 저장 프로시저 이름을 입력하여 현재 데이터베이스에서 삭제합니다.  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  

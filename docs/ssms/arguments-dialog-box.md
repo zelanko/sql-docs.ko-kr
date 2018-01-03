@@ -3,7 +3,7 @@ title: "인수 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e5b21e5522fd44c4a97068c166355f571831302
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07f7625af26f29e94bdca8bbe78466ae32282ccc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arguments-dialog-box"></a>인수 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **인수** 대화 상자는 도구에 대한 새 인수나 기존 인수를 지정합니다. **외부 도구** 대화 상자에서 선택한 **인수 확인** 옵션이 있는 외부 도구를 시작하면 이 대화 상자가 나타납니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **인수**  
 **외부 도구** 대화 상자의 도구에 지정된 현재 변수를 나열합니다. 미리 정의된 인수 및 인수 정의의 전체 목록은 [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)를 참조하십시오. 사용자 지정 인수를 입력할 수도 있습니다.  
   

@@ -3,7 +3,7 @@ title: "다이어그램에 테이블 추가(Visual Database Tools) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6440fa3227030cf334c0117d44b6ce9e1d1dfa70
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b210aae8de63f5bfb51b2bf3559af28a199865b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>다이어그램에 테이블 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램에 테이블을 추가하여 구조를 편집하거나 다이어그램에 있는 다른 테이블에 연결할 수 있습니다. 다이어그램에 기존의 데이터베이스 테이블을 추가하거나 데이터베이스에 아직 정의되지 않은 새 테이블을 삽입할 수 있습니다.  

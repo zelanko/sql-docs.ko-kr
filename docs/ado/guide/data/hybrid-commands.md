@@ -3,7 +3,7 @@ title: "하이브리드 명령 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,14 +21,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc33fbefc8a868986baf4d24577cf9ddf58796a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12292bb7801f5888d63676574ba42ce81f4a28d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hybrid-commands"></a>하이브리드 명령
-하이브리드 주석은 부분적으로 매개 변수화 된 명령을 있습니다. 예를 들어  
+하이브리드 주석은 부분적으로 매개 변수화 된 명령을 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SHAPE {select * from plants}   

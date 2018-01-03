@@ -3,7 +3,7 @@ title: "연결 속성 예 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0727d4aa613771872d175ca3909499df5c2c35b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d54cc2ce55aa82a87dacfe2e8934d7eea449aa9a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VC + +)
 이 예제에서는 여러 가지를 사용 하 여는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 열고는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 연결 제한 시간을 설정 하는 속성 및 [상태](../../../ado/reference/ado-api/state-property-ado.md) 연결의 상태를 확인할 속성입니다. 우편 번호 함수는이 절차를 실행 하려면 필요 합니다.  

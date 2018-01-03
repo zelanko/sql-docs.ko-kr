@@ -3,7 +3,7 @@ title: "Microsoft Visual Basic ADO를 사용 하 여 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef8260be592439a3130afe9af830b8159290f2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f3652eba15968b40a6d8a33902e1ca757275dd8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 및 Visual Basic ADO를 사용 하 여 응용 프로그램에 대 한
 ADO 프로젝트를 설정 하 고 ADO 코드를 작성은 유사 사용할지 Visual Basic 또는 Visual Basic 응용 프로그램에 대 한 합니다. 이 항목 응용 프로그램에 대 한 Visual Basic 및 Visual Basic 모두와 함께 ADO를 사용 및 차이 인식 합니다.
@@ -103,7 +103,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- 사용 하 여 개체를 인스턴스화할 **CreateObject** 런타임에 바인딩되므로 강력한 형식이 아니며 및 명령줄 완성 비활성화 되었음을 의미 합니다. 그러나 ADO 라이브러리 프로젝트에서 참조할 수 있습니다 및 특정 버전의 개체를 인스턴스화할 수 있습니다. 예를 들어
+ 사용 하 여 개체를 인스턴스화할 **CreateObject** 런타임에 바인딩되므로 강력한 형식이 아니며 및 명령줄 완성 비활성화 되었음을 의미 합니다. 그러나 ADO 라이브러리 프로젝트에서 참조할 수 있습니다 및 특정 버전의 개체를 인스턴스화할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

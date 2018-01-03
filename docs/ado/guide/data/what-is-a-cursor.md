@@ -3,7 +3,7 @@ title: "커서는 무엇입니까? | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61fb503b5b183f1147e2297a76045876c254a8e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f4439986c9e1debc2c2fd3e510f53da729e82c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-a-cursor"></a>커서는 무엇입니까?
 관계형 데이터베이스에서의 연산은 전체 행 집합에 적용됩니다. SELECT 문에 의해 반환된 행 집합은 문의 WHERE 절 조건을 만족하는 모든 행으로 구성됩니다. SELECT 문에 의해 반환된 전체 행 집합을 결과 집합이라고 합니다. 응용 프로그램, 특히 대화형 및 온라인으로 하는 항상 전체 결과 집합을 하나의 단위로 사용 효과적으로 작업할 수 없습니다. 이러한 응용 프로그램에는 한 번에 한 행이나 적은 행 블록을 사용하여 작업하는 메커니즘이 필요합니다. 커서는 이러한 메커니즘을 제공하는 결과 집합에 대한 확장입니다.  

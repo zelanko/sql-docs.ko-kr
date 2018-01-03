@@ -3,9 +3,9 @@ title: "SQLPS 모듈 가져오기 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 360350a7b8e051bcab2e24df508ea97b742c52a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae5fb5957e23a6ad4488a33587d227219855d6b8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS 모듈 가져오기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] PowerShell에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리하는 데 권장되는 방법은 **sqlps** 모듈을 Windows PowerShell 환경으로 가져오는 것입니다. 이 모듈은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅인 및 관리 효율성 어셈블리를 로드하고 등록합니다.  Windows PowerShell 3.0부터 모듈은 명령에서 cmdlet 또는 모듈의 함수를 사용할 경우 자동으로 가져옵니다. 이 기능은 PSModulePath 환경 변수의 값에 포함된 디렉터리에서 모든 모듈에 대해 작동합니다.  자세한 내용은 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)(PowerShell 모듈 가져오기)을 참조하세요.

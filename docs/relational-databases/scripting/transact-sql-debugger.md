@@ -3,9 +3,9 @@ title: "Transact-SQL 디버거 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed70a11de7d159fb2e26f43b7456954fc41db9f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb725e9794a5c2fe582e49d77e02b7246cabd4e8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 디버거
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 코드의 런타임 동작을 조사하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 오류를 찾을 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 디버그 모드로 설정한 후 코드의 특정 줄에서 실행을 일시 중지하여 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용하거나 반환하는 정보 및 데이터를 검사할 수 있습니다.  

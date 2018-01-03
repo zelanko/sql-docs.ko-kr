@@ -3,7 +3,7 @@ title: "솔루션에 기존 프로젝트 추가 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 49df8383be7aa92a07429deb886f31e9f62b2755
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dc23e1916ac3c9844f06ff8a379e9f2da0cde025
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>솔루션에 기존 프로젝트 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 기존 솔루션에 하나 이상의 프로젝트를 추가할 수 있습니다. 프로젝트는 둘 이상의 솔루션과 연관될 수 있습니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > 다중 개발자 환경에서 공유 디렉터리의 기존 프로젝트를 추가하려면 먼저 자신의 변경 내용이 다른 개발자의 변경 내용을 덮어쓰거나 프로젝트에 좋지 않은 영향을 주지는 않는지 확인해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [프로젝트&#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [솔루션&#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   

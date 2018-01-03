@@ -3,7 +3,7 @@ title: "응용 프로그램 기능에 대 한 Visual Basic | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835dfeb15a84529baf553ce1daa171d02e8faca7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-for-applications-functions"></a>응용 프로그램 기능에 대 한 Visual Basic
 다음 Visual Basic 응용 프로그램 기능에 대 한 데이터 셰이핑 계산 식에에서 사용할 수 있습니다.  
@@ -35,11 +35,11 @@ ms.lasthandoff: 11/17/2017
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|날짜|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
-|오류|Error$|Exp|Fix|형식|Format$|  
+|Error|Error$|Exp|Fix|형식|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
-|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|정수|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|왼쪽|  
 |LeftB|Left$|LeftB $|Len|Log|LTrim|  
 |LTrim$|Mid|Mid$|Minute|MIRR|Month|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |PPmt|PV|QBColor|Rate|RGB|오른쪽|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
 |둘째|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|문자열|  
+|Sqr|Str|Str$|StrComp|StrConv|String|  
 |String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|Year||  

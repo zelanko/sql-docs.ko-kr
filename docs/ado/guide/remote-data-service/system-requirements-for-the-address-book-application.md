@@ -3,7 +3,7 @@ title: "응용 프로그램을 예약 하는 주소에 대 한 시스템 요구 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 74ec1d3159669f5c9233047c18226c06ec45c30b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b0d0f4a2429a3bae63f3a29c2e785cb428d921c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>주소록 응용 프로그램에 대 한 시스템 요구 사항
 주소록 예제 응용 프로그램을 설정 하려면 다음 소프트웨어 및 데이터베이스 요구 사항에 맞게 필요:  

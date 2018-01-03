@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 84f3081d1f5737c9b324c0ffe51b94a1c5a7183c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f356dbeceebad3a4b8f0be21921c96f97f5df818
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>user options 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [권장 사항](#Recommendations)  
   
@@ -50,13 +50,13 @@ ms.lasthandoff: 11/20/2017
   
 -   **후속 작업:**  [user options 구성 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
 -   다음 표에서는 **user options**에 따른 구성 값을 나열하고 설명합니다. 모든 구성 값은 서로 호환 됩니다. 예를 들어 ANSI_NULL_DFLT_ON 및 ANSI_NULL_DFLT_OFF는 동시에 설정할 수 없습니다.  
   
-    |값|Configuration|설명|  
+    |값|Configuration|Description|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|중간 또는 지연된 제약 조건 검사를 제어합니다.|  
     |2|IMPLICIT_TRANSACTIONS|dblib 네트워크 라이브러리 연결의 경우 문 실행 시 트랜잭션을 암시적으로 시작할지 여부를 제어합니다. IMPLICIT_TRANSACTIONS 설정은 ODBC 또는 OLEDB 연결에 영향을 주지 않습니다.|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 통해 ANSI_WARNINGS 서버 옵션에 대한 설정을 변경하기 위해 `user options` 으로 설정하여 제한 시간을 사용하지 않도록 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  

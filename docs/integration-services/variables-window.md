@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd98311fb9b047d7c518524a6f33210bf7e9ea2b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variables-window"></a>변수 창
   **변수** 창을 사용하여 사용자 정의 변수를 생성 및 수정하고 시스템 변수를 볼 수 있습니다.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Raise Change Event**  
  값이 변경될 때 **OnVariableValueChanged** 이벤트를 발생시킬지 여부를 나타냅니다. 사용자 정의 및 시스템 변수에 대한 값을 업데이트할 수 있습니다. 기본적으로 **변수** 창에는 이 열이 나열되지 않습니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
   
- **Description**  
+ **설명**  
  변수 설명을 봅니다. 사용자 정의 변수에 대한 설명을 변경할 수 있습니다. 기본적으로 **변수** 창에는 이 열이 나열되지 않습니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
   
  **변수**  
@@ -106,15 +106,15 @@ ms.lasthandoff: 11/20/2017
   
 -   **Value**  
   
--   **네임스페이스**  
+-   **Namespace**  
   
 -   **변수 값 변경 시 이벤트 발생**  
   
--   **Description**  
+-   **설명**  
   
--   **변수**  
+-   **식**  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)   

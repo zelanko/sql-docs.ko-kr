@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9f4dcd81deb9f16e21cd1b63df80cebb25a53ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  여기에서는 두 가지 테이블인 Customer 및 Order 테이블을 살펴봅니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에는 기존의 디스크 기반 형태로 이러한 두 테이블과 관련 인덱스에 대한 정의가 포함됩니다.  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -72,7 +72,7 @@ GO
   
  다음 쿼리를 살펴보십시오. 이 쿼리는 Customer 및 Order 테이블을 조인하고 주문 ID와 연관된 고객 정보를 반환합니다.  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -91,7 +91,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  이제 이 쿼리를 약간 변형하여 OrderID만 아니라 Order 테이블의 모든 행을 반환합니다.  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -144,7 +144,7 @@ SQL Server 쿼리 처리 파이프라인.
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에는 해시 인덱스를 사용하는 Order 및 Customer 테이블의 메모리 최적화 버전이 포함됩니다.  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -161,7 +161,7 @@ GO
   
  다음과 같이 메모리 최적화 테이블에서 동일한 쿼리를 실행한다고 가정해보세요.  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -180,10 +180,10 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   이 계획에는 **Hash Match** 이 아니라 **Merge Join**가 포함됩니다. Order 및 Customer 테이블에 모두 있는 인덱스는 해시 인덱스이므로 정렬되지 않습니다. **Merge Join** 을 사용하기 위해서는 성능 저하가 발생하는 sort 연산자가 필요합니다.  
   
-## <a name="natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저  
+## <a name="natively-compiled-stored-procedures"></a>Natively Compiled Stored Procedures  
  고유하게 컴파일된 저장 프로시저는 쿼리 실행 엔진에서 해석되지 않고 기계어 코드로 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 다음 스크립트는 예제 쿼리(예제 쿼리 섹션 참조)를 실행하는 기본적으로 컴파일되는 저장 프로시저를 만듭니다.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -247,9 +247,9 @@ END
  고유하게 컴파일된 저장 프로시저를 컴파일하는 데에는 매개 변수 스니핑이 사용되지 않습니다. 이 저장 프로시저에 대한 모든 매개 변수는 UNKNOWN 값을 갖는 것으로 간주됩니다. 해석된 저장 프로시저처럼 고유하게 컴파일된 저장 프로시저도 **OPTIMIZE FOR** 힌트를 지원합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 검색  
- 고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 예를 들어  
+ 고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -268,11 +268,11 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|이 연산자는 내장 함수 및 형식 변환에 모두 사용됩니다. 고유하게 컴파일된 저장 프로시저 내에서 모든 함수 및 형식 변환이 지원되는 것은 아닙니다.|  
 |중첩 루프 조인|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops는 고유하게 컴파일된 저장 프로시저에서 지원되는 유일한 조인 연산자입니다. 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로 실행된 것과 동일한 쿼리에 대한 계획에 해시 또는 병합 조인이 포함되더라도 조인을 포함하는 모든 계획에는 Nested Loops 연산자가 사용됩니다.|  
-|정렬|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
-|위쪽|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
+|Sort|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
+|TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
 |Top-sort|`SELECT TOP 10 ContactName FROM dbo.Customer  ORDER BY ContactName`|**TOP** 식(반환할 행의 수)은 8,000행을 초과할 수 없습니다. 쿼리에 조인 및 집계 연산자도 있을 경우 이보다 적습니다. 일반적으로 조인과 집계는 기본 테이블의 행 개수와 비교할 때 정렬될 행 수를 줄입니다.|  
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Hash Match 연산자는 집계가 지원되지 않습니다. 따라서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 동일 쿼리에 대한 계획에 Hash Match 연산자가 사용되더라도 고유하게 컴파일된 저장 프로시저의 모든 집계에는 Stream Aggregate 연산자가 사용됩니다.|  
   

@@ -3,7 +3,7 @@ title: "자습서: SSMS(SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ae304d08d1f747a656266f159e0833a2028c46e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e6ca96ba58cb6f32cdceb4a310ba5b94ce290ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tutorial-sql-server-management-studio"></a>자습서: SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../
 -   AdventureWorks 예제 데이터베이스를 포함하는 SQL Server 2016 이후 버전 AdventureWorks 예제 데이터베이스를 설치하려면 [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014)를 참조하고 AdventureWorks2014(OLTP) 데이터베이스를 설치합니다.  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터베이스 엔진 자습서](../../relational-databases/database-engine-tutorials.md)  
   
   

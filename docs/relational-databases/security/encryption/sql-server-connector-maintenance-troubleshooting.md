@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483b31cf84a5933bac88744612c5c95fa7ceae56
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 커넥터 유지 관리 &amp; 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      새 비대칭 키를 가져옵니다.  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE ASYMMETRIC KEY [MASTER_KEY2]   
     FROM PROVIDER [EKM]   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
      TDE 지침 아래에 표시된 대로 새 비대칭 키와 연결할 새 로그인을 만듭니다.  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE LOGIN TDE_Login2   
     FROM ASYMMETRIC KEY [MASTER_KEY2]  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
      로그인에 매핑될 새 자격 증명을 만듭니다.  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
        SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
@@ -86,14 +86,14 @@ ms.lasthandoff: 11/21/2017
   
      다시 암호화할 데이터베이스 암호화 키의 데이터베이스를 선택합니다.  
   
-    ```tsql  
+    ```sql  
     USE [database]  
     GO  
     ```  
   
      데이터베이스 암호화 키를 다시 암호화합니다.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE ENCRYPTION KEY   
     ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];  
     GO  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  다음 문을 실행하여 EKM 공급자를 변경하고 최신 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 사용합니다. 파일 경로가 최신 버전을 다운로드한 위치를 가리키고 있는지 확인합니다. 원본 버전과 동일한 위치에 새 버전을 설치 중인 경우에는 이 단계를 건너뛸 수 있습니다. 
   
-    ```tsql  
+    ```sql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE =   
     'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
@@ -207,7 +207,7 @@ Active Directory에 대한 자세한 내용을 보려면 [Azure Active Directory
 ##  <a name="AppendixC"></a> 3. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에 대한 오류 코드 설명  
  **공급자 오류 코드**  
   
-오류 코드  |기호  |설명    
+오류 코드  |기호  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | 작업이 성공했습니다.    
 1 | scp_err_Failure | 작업이 실패했습니다.    

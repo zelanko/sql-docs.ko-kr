@@ -3,7 +3,7 @@ title: "사후 저장 알림 대화 상자(Visual Database Tools) | Microsoft �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef2947ba3f63c75bef2f4f15822743b16f88d07a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe0d00e66789e1971df2db603cc90213c31067de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>사후 저장 알림 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자는 테이블에 대한 변경 내용을 저장하려 할 때 오류가 발생하면 나타납니다. 이 대화 상자에는 데이터베이스에 성공적으로 저장된 개체와 저장되지 않은 개체 및 발생한 오류가 표시됩니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **텍스트 파일 저장**  
 **다른 이름으로 저장** 대화 상자를 표시합니다. 이 대화 상자에서는 오류 정보가 나열된 텍스트 파일의 저장 위치를 지정할 수 있습니다. 이 파일에는 오류로 인해 저장할 수 없었던 변경 내용을 비롯하여 성공적으로 저장한 데이터베이스 변경 내용도 기록됩니다.  
   

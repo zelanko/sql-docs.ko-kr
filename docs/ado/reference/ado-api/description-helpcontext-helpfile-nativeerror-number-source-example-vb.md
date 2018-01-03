@@ -3,7 +3,7 @@ title: "오류 개체 속성 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d9bcc939ba82ee2d9a3a89e21ff0952b46d45a7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4ea56f6da2f9a003e6641b55fffd8a2dc5f2052
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>설명, HelpContext, 도움말 파일, NativeError, 숫자, 소스 및 SQLState 속성 예제 (VB)
 이 예제에서는 오류를 트리거합니다.를 트래핑 하 고 표시 된 [설명](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ 숫자](../../../ado/reference/ado-api/number-property-ado.md), [소스](../../../ado/reference/ado-api/source-property-ado-error.md), 및 [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) 결과 속성 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  

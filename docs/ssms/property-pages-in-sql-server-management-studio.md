@@ -3,7 +3,7 @@ title: "SQL Server Management Studio의 속성 페이지 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c4c23da504c70c1139705c514d3b95631fa1ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bbb3f4310dfedc47615f47ba07d95ed44a9416e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio의 속성 페이지
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]의 모든 속성 페이지 대화 상자는 확대 및 축소 범주가 포함된 정보를 표시하는 공통된 형식을 사용합니다. 표시되는 필드는 특정 속성에 따라 달라집니다. 회색으로 표시된 속성은 읽기 전용입니다. 각 속성 페이지의 맨 위 근처에는 범주별 및 사전순 단추가 있습니다.  

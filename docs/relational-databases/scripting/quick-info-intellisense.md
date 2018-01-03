@@ -3,9 +3,9 @@ title: "요약 정보(IntelliSense) | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1ecd0b206a381b8bc467ebd704bcfd9a6dc5ae5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: adcf4b2e0e108a886a3ea24e9b5a225b691dcbcb
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="quick-info-intellisense"></a>요약 정보(IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **요약 정보** 옵션은 코드의 모든 식별자에 대한 완전한 선언을 표시합니다. 마우스 포인터를 식별자 위로 이동하면 노란색 팝업 창에 해당 선언이 표시됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **요약 정보** 는 데이터베이스 엔진 및 XML 쿼리 편집기에서 사용할 수 있습니다.  

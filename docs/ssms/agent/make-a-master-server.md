@@ -3,7 +3,7 @@ title: "마스터 서버 만들기 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -28,18 +28,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec76937f749586eadafb5f3fe01a309d59a146c8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 96f9c83cd9266aa225263f5d35c74025a6ee44ec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql_md.md)]을 사용하여 마스터 서버 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]를 만드는 방법에 대해 설명합니다.  
   
 **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
     [보안](#Security)  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/05/2017
     **연결 추가**  
     서버를 등록하지 않고 대상 서버 목록에 추가합니다.  
   
-    **연결**  
+    **대량 삽입 태스크 편집기**  
     선택한 서버의 연결 속성을 변경합니다.  
   
 5.  **마스터 서버 로그인 자격 증명** 페이지에서 대상 서버에 대해 새 로그인을 만들지 여부와 필요한 경우 해당 로그인에 마스터 서버에 대한 권한을 부여할지 여부를 지정할 수 있습니다.  

@@ -3,7 +3,7 @@ title: "지 속성 레코드 집합에 대 한 자세한 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 03208e45eb04540befeae3e8e86ec0100e1f9831
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45c072e5a21e04488a45bb8dc978a663f734ac08
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="more-about-recordset-persistence"></a>지 속성 레코드 집합에 대 한 자세한 정보
 ADO 레코드 집합 개체의 콘텐츠를 저장 하도록 지원는 **레코드 집합** 개체를 사용 하 여 파일에 해당 [저장](../../../ado/reference/ado-api/save-method.md) 메서드. 영구적으로 저장 된 파일은 로컬에 있을 수 있습니다 드라이브, 서버 또는 사이트는 웹에서 URL로 합니다. 사용 하 여 파일을 복원할 수 나중의 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 의 메서드는 **레코드 집합** 개체 또는 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 의 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  

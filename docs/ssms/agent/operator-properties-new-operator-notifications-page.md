@@ -3,7 +3,7 @@ title: "운영자 속성 - 새 운영자(알림 페이지) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eacdc0fce2998fd7288b0e5f2dfc0213d41e42d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b41c2ca9d7094a79109a8582f4e8e34f7e147f4b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>운영자 속성 - 새 운영자(알림 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 운영자에게 알릴 경고 및 작업을 설정할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **경고**  
 인스턴스의 경고를 표시합니다.  
   
@@ -51,6 +51,6 @@ ms.lasthandoff: 12/05/2017
 **Net send**  
 **net send**를 사용하여 이 운영자에게 알립니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [연산자](../../ssms/agent/operators.md)  
   

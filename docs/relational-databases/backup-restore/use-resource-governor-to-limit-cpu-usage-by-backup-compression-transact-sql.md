@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36fd0cd2cc5f7168e4daf7948ab9a9223b21e394
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  이 예제에서는 *domain_name*`\MAX_CPU` Windows 계정의 로그인을 만든 다음 이 로그인에 VIEW SERVER STATE 권한을 부여합니다. 이 권한을 통해 로그인 세션의 리소스 관리자 분류를 확인할 수 있습니다. 그런 다음 *domain_name*`\MAX_CPU` 의 사용자를 만들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 샘플 데이터베이스에 대한 db_backupoperator 고정 데이터베이스 역할에 추가합니다. 이 사용자 이름은 리소스 관리자 분류자 함수에 의해 사용됩니다.  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -207,7 +207,7 @@ GO
 > [!IMPORTANT]  
 >  다음 예제에서는 “예제 A: 로그인 및 사용자 설정(Transact-SQL)”에서 만든 샘플 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자의 사용자 이름인 *domain_name*`\MAX_CPU`를 사용합니다. 이 이름을 우선 순위가 낮은 압축된 백업을 만드는 데 사용할 로그인 사용자의 이름으로 대체합니다.  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -249,7 +249,7 @@ GO
 ##  <a name="verifying"></a> 현재 세션의 분류 확인(Transact-SQL)  
  필요에 따라 분류자 함수에 지정한 사용자로 로그인한 후 개체 탐색기에서 다음 [SELECT](../../t-sql/queries/select-transact-sql.md) 문을 실행하여 세션 분류를 확인합니다.  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -272,7 +272,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>예 C: 압축된 백업 만들기(Transact-SQL)  
  다음 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 예에서는 새로 형식이 지정된 백업 파일인 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 에 `Z:\SQLServerBackups\AdvWorksData.bak`데이터베이스의 압축된 전체 백업을 만듭니다.  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   

@@ -3,7 +3,7 @@ title: "작업 활동 모니터 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,20 +20,20 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 675e006303e5e7669365fd82c305a3e7489c9c35
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0e813333c90000e74353de06f36ef42f97f3ecd8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-activity-monitor"></a>작업 활동 모니터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업의 현재 활동을 볼 수 있습니다. **필터** 를 클릭하여 표시되는 작업의 수를 제한할 수 있습니다. **에이전트 작업 활동** 표는 읽기 전용입니다. 표를 정렬하려면 열 머리글을 클릭합니다. 작업을 수정하려면 작업을 두 번 클릭하여 **작업 속성** 대화 상자를 엽니다. 표에서 작업을 마우스 오른쪽 단추로 클릭하여 모든 작업 단계의 실행을 시작하거나, 특정 작업 단계에서 시작하거나, 작업을 활성화 또는 비활성화하거나, 작업을 새로 고치거나, 작업을 삭제하거나, 작업 기록이나 작업 속성을 확인하는 등의 작업을 수행할 수 있습니다. 현재 정보로 표를 업데이트하려면 **새로 고침** 을 클릭합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 작업의 이름입니다.  
   
-**설정**  
+**Enabled**  
 작업을 사용할지(**예**) 또는 사용하지 않을지(**아니요**)를 지정합니다.  
   
 **상태***  
@@ -63,6 +63,6 @@ ms.lasthandoff: 12/05/2017
   
 -   **개체 탐색기**에서 해당 서버를 확장하고 **SQL Server 에이전트**를 확장한 다음 **작업 활동 모니터**를 마우스 오른쪽 단추로 클릭하고 **작업 활동 보기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [작업 활동 모니터링](../../ssms/agent/monitor-job-activity.md)  
   

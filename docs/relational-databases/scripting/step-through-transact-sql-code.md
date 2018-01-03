@@ -3,9 +3,9 @@ title: "Transact-SQL 코드 단계별 실행| Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc1cc4305f53fe709a984f9cb16776c2f911b8cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8225e6152e33690fc2a3853d4ed79fc9606c8f9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 실행되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 제어할 수 있습니다. 개별 문에서 디버거를 일시 중지한 다음 해당 지점에서의 코드 요소 상태를 볼 수 있습니다.  

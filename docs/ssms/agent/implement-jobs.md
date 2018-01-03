@@ -3,7 +3,7 @@ title: "작업 구현 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2c24813e306a43cf1adce27f71afe7c209194d53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4551b1ed606f3ddeef57c855e64ac2306e8a306e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implement-jobs"></a>작업 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 사용하여 일상적인 관리 태스크를 자동화하고 정기적으로 실행함으로써 좀 더 효율적인 관리를 할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |작업을 만들고 소유권을 할당하는 방법에 대해 설명합니다.|[작업 만들기](../../ssms/agent/create-jobs.md)|  
 |범주에 작업을 구성하는 방법에 대해 설명합니다.|[작업 구성](../../ssms/agent/organize-jobs.md)|  
 |사용자가 만들 수 있는 작업 단계의 여러 가지 종류와 관리하는 방법에 대해 설명합니다.|[작업 단계 관리](../../ssms/agent/manage-job-steps.md)|  

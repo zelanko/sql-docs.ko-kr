@@ -3,7 +3,7 @@ title: "레코드 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 890e22a8b95e2a7a212b78aa703928aeea837951
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2dc15facadef0c04a06f5bcc98164d0869c57866
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-visual-c-syntax-index-with-import"></a>레코드 (Visual c + + 구문 인덱스 #import 사용)
 ## <a name="methods"></a>메서드  

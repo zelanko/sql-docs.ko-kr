@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 941481fb17d33c18e648e4afe511e868e59fc0a1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
  또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하여 시스템의 총 쿼리 텍스트 수, 쿼리 수 및 계획 수를 파악하고 query_hash와 plan_hash를 비교하여 차이점을 확인할 수 있습니다.  
   
-```tsql  
+```sql  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
@@ -166,7 +166,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
  개별 쿼리 템플릿을 사용하는 접근 방식에서는 계획 지침을 만들어야 합니다.  
   
-```tsql  
+```sql  
 /*Apply plan guide for the selected query template*/  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
   
  모든 쿼리(또는 대부분의 쿼리)가 자동 매개 변수화에 적합한 경우 전체 데이터베이스에 대해 `FORCED PARAMETERIZATION` 을 변경하는 것이 더 나은 옵션일 수 있습니다.  
   
-```tsql  
+```sql  
 /*Apply forced parameterization for entire database*/  
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
@@ -204,7 +204,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;
   
  이 경우 [**임시 작업을 위해 최적화**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 서버 옵션을 설정하여 다시 실행될 가능성이 낮은 쿼리에서 캐시 메모리가 낭비되는 것을 방지하는 것이 좋습니다. 쿼리 저장소에서 이러한 쿼리의 캡처를 방지하려면 `QUERY_CAPTURE_MODE` 를 `AUTO`로 설정합니다.  
   
-```tsql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -221,7 +221,7 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   

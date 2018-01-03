@@ -37,11 +37,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0115a7595476adadb0fc0328a14b01b0476771a
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: c55cc253a5b82bed265b2b67ab9cd63d8c971408
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/28/2017
   
  **sys.dm_db_index_physical_stats** 함수에서 반환한 결과 집합은 다음 열을 포함합니다.  
   
-|열|설명|  
+|Column|Description|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|논리적 조각화(인덱스에서 순서가 잘못된 페이지) 비율|  
 |**fragment_count**|인덱스의 조각(물리적으로 연속되는 리프 페이지) 수|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/28/2017
   
 ### <a name="Security"></a> 보안  
   
-#### <a name="Permissions"></a> 사용 권한  
+#### <a name="Permissions"></a> Permissions  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="SSMSProcedureFrag"></a> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 인덱스 조각화 확인  
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find the average fragmentation percentage of all indexes  
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
@@ -278,7 +278,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize all indexes on the HumanResources.Employee table.  
@@ -313,7 +313,7 @@ ms.lasthandoff: 11/28/2017
 
 [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
   [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)   
   [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
   [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   

@@ -3,7 +3,7 @@ title: "다운로드 명령 게시 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91d211e60e91cdf59aa8877fed2f0c771a16a3e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 15869a75cc44e52a962ad85e23089551c908f087
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="post-download-instructions"></a>다운로드 명령 게시
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 대상 서버에 대한 다운로드 명령을 지정할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **명령 유형**  
 게시할 다운로드 명령의 유형을 지정합니다.  
   
-**Description**  
+**설명**  
 다운로드 명령에 대한 설명을 표시합니다.  
   
 **폴링 간격**  

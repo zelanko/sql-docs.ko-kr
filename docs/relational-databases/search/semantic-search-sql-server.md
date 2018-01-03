@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: abfcc7d118cf97c24fd9d73817261fc1b8293c67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b9a1fe1c33de87d0d298e530e4704f669e7675c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semantic-search-sql-server"></a>의미 체계 검색(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 통계 의미 체계 검색은 통계적으로 관련성이 있는 *키 구*를 추출한 다음 인덱싱하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 구조화되지 않은 문서를 깊이 있게 검색하는 기능입니다. 그런 다음 이 키 구를 사용하여 *유사하거나 관련된 문서*를 식별한 후 인덱싱합니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  
  이 쿼리는 [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) 함수를 호출합니다.  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -79,7 +79,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
  
  이 쿼리는 [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) 함수를 호출합니다.  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   

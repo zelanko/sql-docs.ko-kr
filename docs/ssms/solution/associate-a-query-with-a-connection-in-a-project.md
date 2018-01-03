@@ -3,7 +3,7 @@ title: "쿼리를 프로젝트의 연결 정보로 연결 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 36217d01e2858e7193b1d7cbe72e734d6831281f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c790e099f0fc9558b452879866c8dbbaa25d7f2d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>쿼리를 프로젝트의 연결 정보로 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리를 연결 없이 만들었거나 특정 프로젝트에서 다른 프로젝트로 쿼리를 이동한 경우 해당 쿼리는 현재 프로젝트의 연결에 연결되지 않습니다.  

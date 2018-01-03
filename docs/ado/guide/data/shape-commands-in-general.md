@@ -3,7 +3,7 @@ title: "셰이프 일반적 명령 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f58f3450a097d2c84de5909a8f2f6817e1274947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cca594326e550fd68b8cd507f019c8f19a392933
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-commands-in-general"></a>일반적으로 shape 명령
 모양의의 열을 정의 데이터 셰이핑 **레코드 집합**, 열 및는 방식을 나타내는 엔터티 사이의 관계는 **레코드 집합** 데이터로 채워집니다.  

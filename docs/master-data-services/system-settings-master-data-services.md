@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eab5482b701e990308aeaf1c39c1125b1592787b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 478c9b2d7699e261db6ac02b5600a97ebfcdf29b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 모든 웹 응용 프로그램 및 웹 서비스에 대해 시스템 설정을 구성할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/20/2017
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**모든 준비 트랜잭션 기록**|**StagingTransactionLogging**|SQL Server 2008 R2에만 적용됩니다. 준비 레코드가 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 로드될 때 트랜잭션을 기록할지 여부를 결정합니다. 기본값은 **해제** 또는 **2**입니다. 기록할 수 있도록 설정하려면 **설정** 또는 **1** 로 변경합니다.|  
-|**준비 일괄 처리 간격**|**StagingBatchInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **통합 관리** 기능 영역에서 **일괄 처리 시작** 을 선택한 후 일괄 처리가 처리될 때까지의 시간(초)입니다. 기본값은 **60**초(1분)입니다.|  
+|**준비 일괄 처리 간격**|**StagingBatchInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **통합 관리** 기능 영역에서 **일괄 처리 시작** 을 선택한 후 일괄 처리가 처리될 때까지의 시간(초)입니다. 기본값은 **60** 초(1분)입니다.|  
   
  자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
   

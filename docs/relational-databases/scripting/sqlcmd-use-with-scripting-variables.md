@@ -3,9 +3,9 @@ title: "스크립팅 변수와 함께 sqlcmd 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 165c7c1cac15f641c44c0d2f4ce4e7327fd514c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eba9a6581d4f93c1eb84e14b3172f1f6cefb312f
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 스크립팅 변수와 함께 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 스크립트에서 사용할 수 있는 변수를 스크립팅 변수라고 합니다. 스크립팅 변수를 사용하면 하나의 스크립트를 여러 시나리오에서 사용할 수 있습니다. 예를 들어 하나의 스크립트를 여러 서버에서 실행해야 하는 경우 각 서버에 맞게 스크립트를 수정하는 대신 서버 이름에 스크립팅 변수를 사용할 수 있습니다. 스크립팅 변수로 제공되는 서버 이름을 변경하여 같은 스크립트를 다른 서버에서 실행할 수 있습니다.  
@@ -113,7 +113,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 스크립팅 변수  
  **sqlcmd** 에서 정의하는 변수를 스크립팅 변수라고 합니다. 다음 표에는 **sqlcmd** 스크립팅 변수가 나와 있습니다.  
   
-|        변수         | 관련 옵션 | R/W |         기본값         |
+|        변수         | 관련 옵션 | R/W |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |

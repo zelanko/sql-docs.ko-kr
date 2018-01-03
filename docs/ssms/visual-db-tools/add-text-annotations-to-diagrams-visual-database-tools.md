@@ -3,7 +3,7 @@ title: "다이어그램에 텍스트 주석 추가(Visual Database Tools) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2bf2ee6e692782bfd6bcddc4e8a70d758e002416
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: beabc88a547b3fdef7690471cf60a246944c954b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>다이어그램에 텍스트 주석 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다이어그램에 메모나 설명을 만들어 텍스트 주석을 추가할 수 있습니다.  
@@ -42,6 +42,6 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > 글꼴을 변경하려면 텍스트 필드를 마우스 오른쪽 단추로 클릭하고 **텍스트 주석 글꼴 설정**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

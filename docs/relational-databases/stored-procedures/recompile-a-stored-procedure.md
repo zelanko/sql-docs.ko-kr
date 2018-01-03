@@ -22,18 +22,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d2f173b7e4c88182846f2613e24933ae4a470edb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60eeccf774507cd6f4a949b7f0b5baf07b0bd960
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 저장 프로시저를 다시 컴파일하는 방법에 대해 설명합니다. 이렇게 하려면 프로시저 정의에서나 프로시저가 호출될 때 **WITH RECOMPILE** 옵션을 사용하거나, 개별 문에서 **RECOMPILE** 쿼리 힌트를 사용하거나, **sp_recompile** 시스템 저장 프로시저를 사용합니다. 이 항목에서는 프로시저 정의를 만들고 기존 프로시저를 실행할 때 RECOMPILE 옵션을 사용하는 방법에 대해 설명합니다. 또한 sp_recompile 시스템 저장 프로시저를 사용하여 기존 프로시저를 다시 컴파일하는 방법에 대해서도 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [권장 사항](#Recommendations)  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  **WITH RECOMPILE** 옵션  
  프로시저 정의를 만들 때 이 옵션을 사용하는 경우 데이터베이스에서 CREATE PROCEDURE 권한과 프로시저를 만들고 있는 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
@@ -111,7 +111,7 @@ AS
   
      그런 다음 두 번째 코드 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 프로시저가 실행되고 프로시저의 쿼리 계획이 다시 컴파일됩니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -129,7 +129,7 @@ GO
   
      그런 다음 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 프로시저가 실행되지는 않지만 다음에 프로시저가 실행될 때 쿼리 계획이 업데이트될 수 있게 프로시저가 다시 컴파일되도록 표시됩니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  

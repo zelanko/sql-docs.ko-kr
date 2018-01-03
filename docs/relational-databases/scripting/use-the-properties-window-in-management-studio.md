@@ -3,9 +3,9 @@ title: "Management Studio에서 속성 창 사용 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b99df9358de8b26efb064587af391ff901418c24
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: adef30d9bc7488bc56c3d118962028b4b005c2fa
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio에서 속성 창 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 속성 창은 연결 또는 실행 계획 연산자와 같은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 항목의 상태와 테이블, 뷰, 디자이너 등과 같은 데이터베이스 개체에 대한 정보를 설명합니다.  

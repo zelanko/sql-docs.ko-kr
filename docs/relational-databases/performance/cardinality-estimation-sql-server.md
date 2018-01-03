@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b1c53b09fe118de3a90c78bd1393da90a915385b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b009aea458e83421468e57a07455803f9df96a0b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  **호환성 수준:** [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 대해 다음 Transact-SQL 코드를 사용하여 데이터베이스가 특정 수준에 있는지 확인할 수 있습니다.  
 
-```tsql  
+```sql  
 SELECT ServerProperty('ProductVersion');  
 go  
   
@@ -65,7 +65,7 @@ go
   
  **레거시 CE:** 호환성 수준 120 이상으로 설정된 SQL Server 데이터베이스의 경우 [데이터베이스 범위 구성 변경](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용하여 데이터베이스 수준에서 CE 버전 70을 활성화할 수 있습니다.
   
-```tsql  
+```sql  
 ALTER DATABASE
     SCOPED CONFIGURATION  
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
@@ -78,7 +78,7 @@ SELECT name, value
  
  또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)`USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`를 사용할 수 있습니다.
  
- ```tsql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01'; 
@@ -87,7 +87,7 @@ SELECT CustomerId, OrderAddedDate
  
  **쿼리 저장소:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 처음 도입된 쿼리 저장소는 쿼리의 성능을 검사하는 유용한 도구입니다. 쿼리 저장소가 사용하도록 설정된 경우 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]의 데이터베이스 노드 아래에 있는 **개체 탐색기**에 **쿼리 저장소** 노드가 표시됩니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE <yourDatabase>  
     SET QUERY_STORE = ON;  
 go  
@@ -109,7 +109,7 @@ ALTER DATABASE <yourDatabase>
   
  카디널리티 추정 프로세스를 추적하기 위한 또 다른 옵션은 확장 이벤트 **query_optimizer_estimate_cardinality**를 사용하는 것입니다. 다음 T-SQL 코드 샘플은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행됩니다. C:\Temp\(경로 변경 가능)에 .xel 파일을 씁니다. [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]에서 .xel 파일을 열면 사용자에게 친숙한 방식으로 세부 정보가 표시됩니다.  
   
-```tsql  
+```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
@@ -234,7 +234,7 @@ go
   
 OrderTable에 대한 통계가 마지막으로 수집된 날짜가 2016-04-30이고 최대 OrderAddedDate가 2016-04-30이라고 가정합니다. 호환성 수준 120 이상의 CE는 *오름차순* 데이터를 가진 OrderTable의 열에 통계에 의해 기록된 최대값보다 더 큰 값이 있을 수 있다는 것을 이해합니다. 이러한 인식은 다음과 같은 SQL SELECT에 대한 쿼리 계획을 향상시킵니다.  
   
-```tsql  
+```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01';  
@@ -246,7 +246,7 @@ SELECT CustomerId, OrderAddedDate
   
 수준 120의 CE는 동일한 테이블의 두 열 Model 및 ModelVariant 간에 상호 연결이 있을 수 있다는 것을 이해합니다. CE는 쿼리에 의해 반환될 행 수를 더 정확하게 예측하고 쿼리 최적화 프로그램에서 더 최적의 계획을 생성합니다.  
   
-```tsql  
+```sql  
 SELECT Model, Purchase_Price  
     FROM dbo.Hardware  
     WHERE  
@@ -257,7 +257,7 @@ SELECT Model, Purchase_Price
 ### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>예제 C. CE에서 더 이상 서로 다른 테이블의 필터링된 예측이 상호 연결되어 있다고 가정하지 않습니다. 
 최신 작업 및 실제 비즈니스 데이터에 대한 새로운 연구 결과 서로 다른 테이블의 예측 필터는 보통 서로 상호 연결되지 않습니다. 다음 쿼리에서는 CE가 s.type 및 r.date가 서로 연결되지 않은 것으로 간주합니다. 따라서 CE는 반환 행 수를 더 적게 예측합니다.  
   
-```tsql  
+```sql  
 SELECT s.ticket, s.customer, r.store  
     FROM  
                    dbo.Sales    AS s  

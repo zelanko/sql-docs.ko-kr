@@ -3,7 +3,7 @@ title: "Ssms 유틸리티 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/08/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 867317119ffb1b58aeac049f4a1e64162368ff08
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: a69ee6a0f66529c6cfb08216643d9c2a6c2a1482
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssms-utility"></a>Ssms 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **Ssms**유틸리티는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다. **Ssms** 를 지정하면 서버 연결도 설정되며 쿼리, 스크립트, 파일, 프로젝트 및 솔루션이 열립니다.  
@@ -88,7 +88,7 @@ Ssms
 [**-?**]  
  명령줄 도움말을 표시합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  모든 스위치는 선택 사항이며 쉼표로 구분되는 파일을 제외하고 공백으로 구분합니다. 스위치를 지정하지 않으면 **Ssms** 가 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 도구 **메뉴의** 옵션 **설정에 지정된 대로** 를 엽니다. 예를 들어 **환경/일반** 페이지에서 **시작 시** 옵션으로 **새 쿼리 창 열기**를 지정할 경우 **Ssms** 는 빈 쿼리 편집기를 엽니다.  
   
  **-log** 스위치는 명령줄 끝에 다른 모든 스위치 뒤에 나타나야 합니다. 파일 이름 인수는 선택 사항입니다. 파일 이름을 지정하는 경우 해당 파일이 없으면 파일이 만들어집니다. 쓰기 권한 부족 등의 이유로 파일을 만들 수 없는 경우 로그는 대신 지역화되지 않은 APPDATA 위치에 작성됩니다(아래 참조). 파일 이름 인수를 지정하지 않으면 현재 사용자의 지역화되지 않은 응용 프로그램 데이터 폴더에 파일이 두 개 작성됩니다. SQL Server에 대한 지역화되지 않은 응용 프로그램 데이터 폴더는 APPDATA 환경 변수에서 찾아볼 수 있습니다. 예를 들어 SQL Server 2012의 경우 해당 폴더는 \<시스템 드라이브>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\\입니다. 기본적으로 두 파일의 이름은 ActivityLog.xml과 ActivityLog.xsl입니다. ActivityLog.xml에는 작업 로그 데이터가 포함되고 ActivityLog.xsl은 XML 파일을 더 편리하게 볼 수 있는 방법을 제공하는 XML 스타일 시트입니다. Internet Explorer와 같은 기본 XML 뷰어에서 로그 파일을 보려면 시작, 실행...을 차례로 클릭하고 제공된 필드에 “\<시스템 드라이브>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml”을 입력한 다음 Enter 키를 누릅니다.  

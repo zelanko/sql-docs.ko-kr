@@ -3,7 +3,7 @@ title: "ADO를 사용 하 여 스크립트 언어 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,31 +20,31 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7551fd26f6c0862115f0212777fb738a68e548a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>스크립트 언어와 함께 ADO 사용
 스크립팅 환경 내에서 ADO를 사용 하면 서버 쪽 스크립트를 통해 데이터를 노출할 수 있습니다. 이 시나리오에서는 ADO, OLE DB 공급자를 사용 하 고 다른 모든 구성 요소는 지정 된 데이터 저장소를 참조 하는 데 필요한 인터넷 정보 서비스 (IIS)를 실행 하는 서버에 설치 되어 있는 원본으로 사용 합니다. ASP Active Server Pages ()를 사용 하 여 ADO는 예를 들어 HTML을 생성할 수 있는 스크립트에서 참조 하는 구성 요소입니다. 이 HTML 콘텐츠를 클라이언트 웹 브라우저에 HTTP를 통해 전달할 수 있습니다. 스크립트를 사용 하 여 웹 페이지 업데이트 트래버스하거나 특정 데이터를 볼 수 있도록 서버 쪽 스크립트에 다시 작업을 보낼 수 있습니다.  
   
  웹 페이지에는 ActiveX 개체를 사용 하기 전에는 개체가 스크립트에 대 한 안전 하 게 보호 되는지 확인 해야 합니다. 개체는 스크립팅에 안전한 것으로 간주 됩니다, 컨트롤 사용자의 컴퓨터에서 모든 유해한 작업을 수행할 수 없습니다 및 사용자의 승인 요청 하지 않고 실행할 수 있습니다 의미 합니다. 다음 표에서 ADO 개체를 나열 하 고 안전한 지 여부를 나타냅니다.  
   
-|개체|스크립트 사용에 대 한 안전?|  
+|Object|스크립트 사용에 대 한 안전?|  
 |------------|-------------------------|  
 |ADO 연결|예|  
-|ADO 명령|아니요|  
-|ADO 매개 변수|아니요|  
+|ADO 명령|아니오|  
+|ADO 매개 변수|아니오|  
 |ADO 레코드 집합|예|  
 |ADO 레코드|예|  
 |ADO 스트림|예|  
-|ADO 오류|아니요|  
-|ADOX 카탈로그|아니요|  
-|ADOX 셀 집합|아니요|  
+|ADO 오류|아니오|  
+|ADOX 카탈로그|아니오|  
+|ADOX 셀 집합|아니오|  
 |RDS DataControl|예|  
 |RDS DataSpace|예|  
-|RDS DataFactory|아니요|  
+|RDS DataFactory|아니오|  
   
  다음 표에서 Windows DAC/MDAC와 포함 된 공급자를 나열 하 고 안전한 지 여부를 나타냅니다.  
   
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/17/2017
 |셰이프|예|  
 |유지|예|  
 |원격|예|  
-|OLE DB Provider for SQL Server (SQLOLEDB)|아니요|  
-|OLE DB Provider for ODBC (MSDASQL)|아니요|  
+|OLE DB Provider for SQL Server (SQLOLEDB)|아니오|  
+|OLE DB Provider for ODBC (MSDASQL)|아니오|  
   
 ## <a name="odbc-data-sources"></a>ODBC 데이터 원본  
  사용 하는 경우 중요 한 차이점 스크립팅 및 비 스크립팅 ADO 코드는 ODBC 데이터 원본으로 지정. 비 스크립팅 응용 프로그램에 대 한 사용자 DSN이 ODBC 데이터 원본 관리자를 만들 수 있습니다. IIS에서 실행 되는 스크립트에 대 한 시스템 DSN; 만들어야 합니다. 그렇지 않은 경우 스크립트에서 만든 데이터 원본을 인식 되지 않습니다. 이 Microsoft OLE DB Provider를 사용 하 여 Microsoft IIS를 통해 ODBC에 대 한 모든 ADO 스크립팅 응용 프로그램에 적용 됩니다.  

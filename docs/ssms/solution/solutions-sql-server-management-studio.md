@@ -3,7 +3,7 @@ title: "솔루션(SQL Server Management Studio) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 506e7aec9c3c6c89d057d75f4b8b92947cc0cd50
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54000cd193dc9634f9dcfae9bd702fadcd77b7e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="solutions-sql-server-management-studio"></a>솔루션(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 솔루션은 하나 이상의 관련 프로젝트의 모음입니다. 프로젝트는 일반적으로 사용되는 관리 스크립트와 같이 개발자가 관련 파일을 구성하는 데 사용되는 컨테이너입니다.  

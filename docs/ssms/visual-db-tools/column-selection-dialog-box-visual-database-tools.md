@@ -3,7 +3,7 @@ title: "열 선택 대화 상자(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f391acc3059f0e263977ea4a3f834a98ce5d962f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa038800133fb48bb16d73a0fb73dbf000ed8d86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>열 선택 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 데이터베이스 다이어그램에서 테이블에 대한 사용자 지정 보기를 변경할 수 있습니다. 사용자 지정 보기에는 사용자가 지정한 열 속성만 표시됩니다.  
   
 이 대화 상자를 열려면 테이블을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **사용자 지정 보기 수정** 을 선택합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **사용 가능한 열**  
 선택한 데이터베이스 테이블에 있는 모든 열이 나열됩니다. 여기에 나열되는 열은 데이터베이스 테이블의 속성과 데이터베이스 형식에 따라 달라집니다. 원하는 열을 선택하여 강조 표시하고 화살표 단추를 사용하여 열을 **선택한 열** 상자로 옮깁니다.  
   

@@ -3,7 +3,7 @@ title: "옵션(디자이너 - 유지 관리 계획 페이지) | Microsoft 문서
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be7de4f323b1f4351ad851c04222e0513d73a93c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a30c75098d6c3211ae0b961867d156356566dba6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-designers---maintenance-plans-page"></a>옵션(디자이너 - 유지 관리 계획 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **옵션** 대화 상자를 사용하여 디자인 화면에 새 셰이프를 추가할 때의 디자이너 기본 동작을 결정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너**를 확장한 다음 **유지 관리 계획**을 선택합니다.  

@@ -3,7 +3,7 @@ title: "하위 쿼리 만들기(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c35dd45aeb947c081c0ad878fa40390923276b04
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b237a914e043e88aa9d1740d725046ecb66fb0be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-subqueries-visual-database-tools"></a>하위 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 한 쿼리의 결과를 다른 쿼리의 입력 항목으로 사용할 수 있습니다. 하위 쿼리의 결과를 IN( ) 함수, EXISTS 연산자 또는 FROM 절을 사용하는 문으로 사용할 수 있습니다.  

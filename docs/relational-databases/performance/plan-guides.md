@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 83025e81146c8d7087c100c66fb47215a0603562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04a9fcb300f3c3f374a3ee940df34c77d2516db0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="plan-guides"></a>계획 지침
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 실제 쿼리의 텍스트를 직접 변경할 수 없거나 직접 변경하지 않으려는 경우 계획 지침에 따라 쿼리 성능을 최적화할 수 있습니다. 계획 지침은 쿼리 힌트 또는 고정 쿼리 계획을 연결하여 쿼리 최적화에 영향을 줍니다. 계획 안내는 타사 공급업체에서 제공된 데이터베이스 응용 프로그램의 일부 쿼리 하위 집합이 올바른 성능을 내지 못하는 경우에 유용합니다. 계획 지침에서 최적화하려는 Transact-SQL 문을 지정하고 사용할 쿼리 힌트가 들어 있는 OPTION 절이나 쿼리를 최적화하는 데 사용할 특정 쿼리 계획을 지정합니다. 쿼리가 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Transact-SQL 문을 계획 지침과 대응시키고 런타임에 쿼리에 OPTION 절을 추가하거나 지정된 쿼리 계획을 사용합니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  `@Country_region` 데이터베이스에 대해 배포되는 데이터베이스 응용 프로그램에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 매개 변수를 가져오는 다음 저장 프로시저가 있다고 가정합니다.  
   
-```t-sql  
+```sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -66,7 +66,7 @@ END;
   
  저장 프로시저를 수정하여 `OPTIMIZE FOR` 쿼리 힌트를 쿼리에 추가하면 이 문제를 해결할 수 있습니다. 그러나 저장 프로시저가 배포된 응용 프로그램 안에 있기 때문에 응용 프로그램 코드를 직접 수정할 수 없습니다. 대신 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 다음 계획 지침을 만들 수 있습니다.  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -86,13 +86,13 @@ sp_create_plan_guide
  ### <a name="sql-plan-guide"></a>SQL 계획 지침  
  SQL 계획 지침은 데이터베이스 개체의 일부가 아닌 독립 실행형 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 일괄 처리의 컨텍스트에서 실행되는 쿼리와 일치합니다. SQL 기반 계획 지침은 지정된 형식으로 매개 변수화되는 쿼리와 일치되도록 하는 데도 사용될 수 있습니다. SQL 계획 지침은 독립 실행형 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 일괄 처리에 적용됩니다. 이러한 문은 종종 응용 프로그램에서 [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 시스템 저장 프로시저를 사용하여 제출됩니다. 예를 들어 다음 독립 실행형 일괄 처리를 생각해 보십시오.  
   
-```t-sql  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  병렬 실행 계획이 이 쿼리에서 생성되지 않도록 하려면 다음 계획 지침을 만들고 `MAXDOP` 쿼리 힌트를 `1` 매개 변수의 `@hints` 로 설정합니다.  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -119,13 +119,13 @@ sp_create_plan_guide
 ## <a name="plan-guide-matching-requirements"></a>계획 지침 일치 요구 사항  
  계획 지침의 범위는 이 지침이 생성되는 데이터베이스입니다. 따라서 쿼리를 실행할 때 현재 데이터베이스에 있는 계획 지침만 쿼리에 일치시킬 수 있습니다. 예를 들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 가 현재 데이터베이스이면 다음 쿼리가 실행됩니다.  
   
- ```t-sql
+ ```sql
  SELECT FirstName, LastName FROM Person.Person;
  ```  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 계획 지침만 이 쿼리에 일치될 수 있습니다. 그러나 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 가 현재 데이터베이스이면 다음 문이 실행됩니다.  
   
- ```t-sql
+ ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;
  ```  
@@ -144,7 +144,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>계획 캐시의 계획 지침 효과  
  모듈에 대한 계획 지침을 만들면 계획 캐시에서 해당 모듈에 대한 쿼리 계획이 제거되고, 일괄 처리에 OBJECT 또는 SQL 유형의 계획 지침을 만들면 같은 해시 값을 가진 일괄 처리에 대한 쿼리 계획이 제거되며, TEMPLATE 유형의 계획 지침을 만들면 해당 데이터베이스 내의 계획 캐시에서 단일 문 일괄 처리가 모두 제거됩니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크|항목|  
 |----------|-----------|  

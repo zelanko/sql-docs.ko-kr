@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,13 +25,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>전체 텍스트 인덱스 생성 시 언어 선택
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   전체 텍스트 인덱스를 만들 때는 인덱싱된 열에 대한 열 수준 언어를 지정해야 합니다. 지정된 언어의 [단어 분리기 및 형태소 분석기](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 는 인덱싱된 열에 대한 전체 텍스트 쿼리에 사용됩니다. 전체 텍스트 인덱스를 만들기 위해 열 언어를 선택할 때 고려할 몇 가지 사항이 있습니다. 이러한 고려 사항은 전체 텍스트 엔진으로 텍스트를 토큰화한 다음 인덱싱하는 방법과 관련이 있습니다.  
   
 > [!NOTE]  

@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,13 +28,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a25804d6bb1769d785e53e0790dff994a528d92
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 202e61892586abc10c00e345361def5c26cdb75b
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>클러스터형 인덱스의 크기 예측
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   다음 단계를 사용하여 클러스터형 인덱스에 데이터를 저장하는 데 필요한 공간을 예측할 수 있습니다.  
   
 1.  클러스터형 인덱스의 리프 수준에 데이터를 저장하는 데 사용되는 공간을 계산합니다.  

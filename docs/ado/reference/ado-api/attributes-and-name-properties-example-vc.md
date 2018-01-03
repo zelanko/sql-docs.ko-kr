@@ -3,7 +3,7 @@ title: "특성 및 이름 속성 예 (VC + +) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c157c41d046585806c7ae3f00ef822fa90e06b2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79633c646120c4b53eb123d4ca0f3665b4d7be95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>특성 및 이름 속성 예 (VC + +)
 값을 표시 하는이 예제는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성에 대 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [필드](../../../ado/reference/ado-api/field-object.md), 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다. 사용 하 여는 [이름](../../../ado/reference/ado-api/name-property-ado.md) 각각의 이름을 표시 하는 속성 **필드** 및 **속성** 개체입니다.  

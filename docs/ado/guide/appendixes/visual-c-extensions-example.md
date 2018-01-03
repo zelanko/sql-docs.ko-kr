@@ -3,7 +3,7 @@ title: "Visual c + + 확장 예제 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04f9d075a9ff4b48f83e27a6699a28a99dfcb2dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9303528381341f57722730a6e92b69a773a73b13
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions-example"></a>Visual c + + 확장 예제
 이 프로그램에는 값 필드에서 검색 되 고 C/c + + 변수로 변환 되는 방법을 보여 줍니다.  

@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8eb8029f9824ceaeee061fc829a89d0054e1244
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cb0435fd5e28952f71cc23ce61af4a3635f06cf
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 
 다음 메모리 최적화 테이블 스키마를 살펴봅니다.
   
-```tsql  
+```sql  
 CREATE TABLE t_hk
 (  
   col1 int NOT NULL  PRIMARY KEY NONCLUSTERED,  
@@ -120,21 +120,21 @@ GO
   
 해시 인덱스는 같은지 여부를 확인하는 다음과 같은 조회를 매우 빠르게 수행합니다.  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 = 3;
 ```  
   
 비클러스터형 인덱스는 다음과 같은 범위 조회의 경우 더욱 빠릅니다.  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 >= 3;
 ```  
   
 디스크 기반 테이블을 마이그레이션하는 경우 다음을 사용하여 t1c2_index 인덱스에 대한 고유 값의 수를 확인할 수 있습니다.  
   
-```tsql
+```sql
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk;
 ```  
@@ -170,7 +170,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  비클러스터형 인덱스는 다음 쿼리로 예시된 범위 조회에 사용될 때 가장 효과적입니다.  
   
-```tsql  
+```sql  
 SELECT * FRON t_hk  
    WHERE c2 > 5;  
 ```  
@@ -201,7 +201,7 @@ SELECT * FRON t_hk
 
 위의 계산에서는 현재 상태의 테이블에 필요한 메모리를 예측합니다. 이 메모리 외에도 테이블의 증가를 예측하고 이러한 증가를 수용하는 데 충분한 메모리를 제공해야 합니다.  예를 들어 10% 증가를 예상하는 경우 위의 결과에 1.1을 곱하여 테이블에 필요한 총 메모리를 얻어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
 

@@ -3,7 +3,7 @@ title: "메서드 예제 (JScript) 찾기 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49fc4aea817ba5ea3455b626c7c217936ad82d86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 238e90e2a1630838a8a264db5bf7ef9ecdbb65e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-method-example-jscript"></a>찾을 메서드 예제 (JScript)
 사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 메서드를 찾아서 표시에 있는 회사는 ***Northwind*** G. 잘라내기 문자로 시작 되는 이름의 데이터베이스 및 붙여넣기 다음 코드를 메모장 이나 다른 텍스트 편집기를 및로 저장 **붙여 넣고 FindJS.asp**합니다.  

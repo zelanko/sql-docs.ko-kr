@@ -3,7 +3,7 @@ title: "결과 집합 스트림으로 검색 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed2d2412cf8314875f9469689677c22ae4e60e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7bca240a384ef3e8a3e6bbd2a59731cc8861136d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-resultsets-into-streams"></a>스트림으로 결과 집합을 검색합니다.
 기존에 결과 수신 하는 대신 **레코드 집합** 개체, ADO는 스트림으로 대신 쿼리 결과 검색할 수 있습니다. ADO **스트림** 개체 (또는 다른 개체를 지 원하는 COM **IStream** ASP 같은 인터페이스 **요청** 및 **응답** 개체 )는 이러한 결과 포함 하는 데 사용할 수 있습니다. XML 형식으로 결과 검색 하는이 기능을 사용 합니다. SQL server에서는 예를 들어 XML 결과 수 반환할 SQL SELECT 쿼리에서 FOR XML 절을 사용 하 여 XPath 쿼리를 사용 하 여 등 여러 가지 방법으로입니다.  

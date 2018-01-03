@@ -3,9 +3,9 @@ title: "중단점 창 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06c8b84f4cf69b06e54e8a8d10c1121add1c6026
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1d2cbc8ca85606b85f8f4780bfda7bf25527162
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 디버거 - 중단점 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **중단점** 창에서는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에 설정된 모든 중단점을 표시합니다. 중단점을 관리하려면 **중단점** 창의 도구 모음을 사용합니다. 여기서 중단점은 디버깅 데이터를 볼 수 있도록 디버그 모드에서 실행을 일시 중지하는 코드의 특정 위치를 의미합니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  **열** 목록에서 다음 열을 선택하여 해당 열을 추가하거나 제거할 수 있습니다.  
   
- **필터**  
+ **Assert**  
  **(없음)**을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 필터 설정을 지원하지 않습니다.  
   
  **적중될 때**  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  **함수**  
  중단점이 설정된 줄의 번호를 표시합니다.  
   
- **파일**  
+ **최근에 사용한 파일**  
  중단점을 포함하는 원본 파일 이름과 중단점이 설정된 줄의 번호를 표시합니다.  
   
  **주소**  

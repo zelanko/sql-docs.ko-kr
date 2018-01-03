@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: becczhang
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
+ms.custom: 
+ms.component: security
 ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: be2fd15b1f742d7edb01d39be69456c58d472801
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 30b08c760eff3bdeb6d264d1c9d79c375f0a09ec
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 제거
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 - Azure 구독이 있고 해당 구독의 관리자여야 합니다.
 - Azure PowerShell 버전 4.2.0 이상이 설치되어 실행 중이어야 합니다. 
 - 이 방법 가이드는 Azure Key Vault의 키를 Azure SQL Database 또는 데이터 웨어하우스에 대한 TDE 보호기로 이미 사용 중이라고 가정합니다. 자세한 내용은 [BYOK를 사용하는 투명한 데이터 암호화 지원](transparent-data-encryption-byok-azure-sql.md)을 참조하세요.

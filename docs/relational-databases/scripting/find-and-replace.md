@@ -3,9 +3,9 @@ title: "찾기 및 바꾸기 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31dc1f37e5f8bd3cdb5f11c244966037bd8eeca4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85901d1a79d1f6bffb1787a555c9ebb553f4cfe5
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-and-replace"></a>찾기 및 바꾸기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **찾기 및 바꾸기** 대화 상자를 사용하여 파일 내에서 텍스트를 찾을 수 있으며 필요하면 다른 텍스트로 바꿀 수 있습니다. 대화 상자를 여는 방법에 따라 **찾기 및 바꾸기** 대화 상자에 표시되는 옵션이 조금씩 다릅니다. 찾기 옵션만 있고 바꾸기 옵션은 없는 대화 상자를 열려면 **편집** 메뉴에서 **찾기 및 바꾸기**를 가리킨 다음 **빠른 찾기** 를 클릭합니다. 찾기 옵션과 바꾸기 옵션이 모두 있는 대화 상자를 열려면 **편집** 메뉴에서 **찾기 및 바꾸기**를 가리킨 다음 **빠른 바꾸기** 를 클릭합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="find-what"></a>찾을 내용  
  다음 컨트롤을 사용하면 일치하는 문자열이나 식을 지정할 수 있습니다.  
   
- **Find what**  
+ **찾을 내용**  
  검색할 텍스트를 입력합니다. 대화 상자에서는 대화 상자를 열기 전에 커서로 선택한 텍스트, 가까이 위치한 텍스트 또는 이전에 검색한 텍스트를 사용하여 가능한 검색 텍스트를 입력합니다. 드롭다운 목록에서 검색 문자열을 선택하여 가장 최근에 사용한 20개의 문자열을 다시 사용할 수 있습니다.  
   
  **[와일드카드가 포함된 문자열]**  

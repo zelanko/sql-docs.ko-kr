@@ -20,18 +20,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5470b86096170410b88c6a8e8a596fe608d33cc7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: 8bc8f0154f8da5ecbbfc5d45e1ab1ee7ff974c69
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용자 정의 데이터베이스의 이름을 바꾸는 방법에 대해 설명합니다. 데이터베이스 이름에는 식별자 규칙에서 허용하는 모든 문자를 사용할 수 있습니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [데이터베이스의 이름을 바꾼 후](#FollowUp)  
+-   **Follow Up:**  [After renaming a database](#FollowUp)  
 
 > [!NOTE]
 > Azure SQL Database에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) 문을 사용합니다. Azure SQL Data Warehouse 또는 Parallel Data Warehouse에서 데이터베이스의 이름을 바꾸려면 [RENAME(Transact-SQL)](/t-sql/statements/rename-transact-sql) 문을 사용합니다.
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `AdventureWorks2012` 데이터베이스의 이름을 `Northwind`로 변경합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -93,7 +93,7 @@ GO
 ##  <a name="FollowUp"></a> 후속 작업: 데이터베이스의 이름을 바꾼 후  
  데이터베이스 이름을 바꾼 후 **master** 데이터베이스를 백업합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)  
   

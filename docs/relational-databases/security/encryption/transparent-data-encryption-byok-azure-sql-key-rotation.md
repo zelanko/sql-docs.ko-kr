@@ -7,23 +7,27 @@ documentationcenter:
 author: becczhang
 manager: jhubbard
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: quick start create, mvc
+ms.custom: 
+ms.component: security
 ms.workload: Inactive
-ms.tgt_pltfrm: portal
+ms.tgt_pltfrm: 
 ms.devlang: na
-ms.topic: hero-article
+ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.openlocfilehash: b682c9059d9a6365beebeff549d4c2840c04d477
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 85a1d74907dc3e6b887a172247850b9bc4452b31
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 회전 
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 이 방법 가이드에서는 Azure Key Vault에서 TDE 보호기를 사용하여 Azure SQL Server에 대한 키 회전을 설명합니다. Azure SQL Server의 TDE 보호기를 회전한다는 것은 서버에서 데이터베이스를 보호하는 새 비대칭 키로 전환한다는 것을 의미합니다. 키 회전은 온라인 작업이며 전체 데이터베이스가 아니라 데이터베이스의 데이터 암호화 키만 암호 해독 및 다시 암호화하므로 불과 몇 분 안에 완료됩니다.
 
@@ -37,11 +41,11 @@ ms.lasthandoff: 11/18/2017
 > 롤오버 후에는 키의 이전 버전을 **삭제하지 마세요**.  키가 롤오버되면 이전 데이터베이스 백업처럼 일부 데이터가 이전 키로 암호화됩니다. 
 >
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 이 방법 가이드는 Azure Key Vault의 키를 Azure SQL Database 또는 데이터 웨어하우스에 대한 TDE 보호기로 이미 사용 중이라고 가정합니다. [BYOK를 사용하는 투명한 데이터 암호화 지원](transparent-data-encryption-byok-azure-sql.md)을 참조하세요.
 - Azure PowerShell 버전 3.7.0 이상이 설치되어 실행 중이어야 합니다. 
-- [권장되지만 선택 사항임] HSM(하드웨어 보안 모듈) 또는 로컬 키 저장소에서 TDE 보호기에 대한 키 자료를 먼저 만들고 키 자료를 Azure Key Vault로 가져옵니다. 자세히 알아보려면 [HSM(하드웨어 보안 모듈) 및 Key Vault 사용에 대한 지침](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started)을 따르세요.
+- [권장되지만 선택 사항임] HSM(하드웨어 보안 모듈) 또는 로컬 키 저장소에서 TDE 보호기에 대한 키 자료를 먼저 만들고 키 자료를 Azure Key Vault로 가져옵니다. 자세히 알아보려면 [HSM(하드웨어 보안 모듈) 및 Key Vault 사용에 대한 지침](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)을 따르세요.
 
 ## <a name="option-1-auto-rotation"></a>옵션 1: 자동 회전
 

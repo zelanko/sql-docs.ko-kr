@@ -3,7 +3,7 @@ title: BookmarkEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca2824f69eadd33828ca04017b9fd51fd9f6db1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 20c6371a77f9e60b48b0a6c8d807e3fbe23983fb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 작업을 시작할 위치를 나타내는 책갈피를 지정 합니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|현재 레코드에서 시작 합니다.|  
-|**adBookmarkFirst**|1.|첫 번째 레코드에서 시작 합니다.|  
+|**adBookmarkFirst**|1|첫 번째 레코드에서 시작 합니다.|  
 |**adBookmarkLast**|2|마지막 레코드에서 시작 합니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  

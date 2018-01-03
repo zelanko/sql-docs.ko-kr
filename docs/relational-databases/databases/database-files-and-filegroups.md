@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c18d191f0e97a2fbef5343d7b0fb7900bd2d80a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 최소한 두 개의 운영 체제 파일인 데이터 파일과 로그 파일이 있습니다. 데이터 파일은 테이블, 인덱스, 저장 프로시저 및 뷰 등의 개체와 데이터를 포함합니다. 로그 파일은 데이터베이스의 모든 트랜잭션을 복구하는 데 필요한 정보를 포함합니다. 데이터 파일은 할당 및 관리를 간편하게 수행하기 위해 파일 그룹으로 그룹화할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="database-files"></a>데이터베이스 파일  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 다음 표에 설명된 것처럼 세 가지 유형의 파일이 있습니다.  
   
-|파일|설명|  
+|파일|Description|  
 |----------|-----------------|  
 |주|주 데이터 파일은 데이터베이스의 시작 정보를 포함하며 데이터베이스의 나머지 파일을 가리킵니다. 사용자 데이터와 개체를 이 파일에 저장하거나 보조 데이터 파일에 저장할 수 있습니다. 모든 데이터베이스에는 하나의 주 데이터 파일이 있습니다. 권장되는 주 데이터 파일 확장명은 .mdf입니다.|  
 |보조|보조 데이터 파일은 선택적으로 사용하는 사용자 정의 데이터 파일이며 사용자 데이터를 저장합니다. 보조 파일은 각 파일을 서로 다른 디스크 드라이브에 배치하여 데이터를 여러 디스크에 분산시키는 데 사용할 수 있습니다. 또한 데이터베이스가 단일 Windows 파일의 최대 크기를 초과할 경우 보조 데이터 파일을 사용하여 데이터베이스 크기를 계속해서 늘릴 수 있습니다.<br /><br /> 권장되는 보조 데이터 파일 확장명은 .ndf입니다.|  
@@ -97,7 +97,7 @@ SQL Server 파일은 원래 지정된 크기에서 자동으로 증가할 수 �
   
  모든 데이터 파일은 다음 표에 나열된 파일 그룹에 저장됩니다.  
   
-|파일 그룹|설명|  
+|파일 그룹|Description|  
 |---------------|-----------------|  
 |주|주 파일을 포함하는 파일 그룹. 주 파일 그룹에는 모든 시스템 테이블이 할당됩니다.|  
 |사용자 정의|사용자가 데이터베이스를 처음 만들 때 또는 나중에 수정할 때 만드는 파일 그룹|  
@@ -110,7 +110,7 @@ SQL Server 파일은 원래 지정된 크기에서 자동으로 증가할 수 �
 ### <a name="file-and-filegroup-example"></a>파일 및 파일 그룹 예
  다음 예에서는 SQL Server 인스턴스에서 데이터베이스를 만듭니다. 데이터베이스에는 주 데이터 파일, 사용자 정의 파일 그룹 및 로그 파일이 있습니다. 주 데이터 파일은 주 파일 그룹에 있으며 사용자 정의 파일 그룹에는 보조 데이터 파일이 두 개 있습니다. ALTER DATABASE 문을 통해 사용자 정의 그룹 파일이 기본 파일 그룹으로 지정됩니다. 그런 다음 사용자 정의 파일 그룹을 지정하여 테이블이 생성됩니다. (이 예에서는 일반 경로 `c:\Program Files\Microsoft SQL Server\MSSQL.1` 을 사용하여 SQL Server 버전 지정을 방지합니다.)
 
-```t-sql
+```sql
 USE master;
 GO
 -- Create the database with the default data

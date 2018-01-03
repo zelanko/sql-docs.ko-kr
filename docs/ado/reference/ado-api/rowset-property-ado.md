@@ -3,7 +3,7 @@ title: "행 집합 속성 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8792f0b78e2dcc565d88847767506c310160ed5c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa35e9e2e53457c3b69451478c240baff996efdd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-property-ado"></a>행 집합 속성 (ADO)
 OLE DB를 가져오거나 설정 합니다. **행 집합** 에/에서 개체는 **ADORecordsetConstruction** 개체입니다. 행 집합 ADO 형태로 put_Rowset를 사용 하면 **레코드 집합** 개체입니다.  

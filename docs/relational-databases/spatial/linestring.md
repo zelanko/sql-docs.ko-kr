@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a06c7cffcf4fbfc98323cdbb3e69f78b2d87c4bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7fda6bbf8ea336bc5646f2d420db8594d1faf968
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **LineString**은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
@@ -109,7 +109,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
   
  다음 예에서는 동일한 점 두 개로 `geometry LineString` 인스턴스를 만드는 방법을 보여 줍니다. `IsValid` 에 대한 호출은 **LineString** 인스턴스가 유효하지 않음을 나타내며 `MakeValid` 호출 시 **LineString** 인스턴스가 **Point**로 변환됩니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::STGeomFromText('LINESTRING(1 3, 1 3)',0);  
 IF @g.STIsValid() = 1  

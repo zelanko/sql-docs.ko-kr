@@ -3,7 +3,7 @@ title: "Flush 메서드 (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4ddc1ad0790ed951b846813e6724b97a8aaaa33
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50abb3583435f9240a5904733e4103ba994bd79c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="flush-method-ado"></a>Flush 메서드 (ADO)
 내용을 강제로 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 원본 개체는 ADO 버퍼에에서 남아 있는 **스트림** 연결 합니다.  

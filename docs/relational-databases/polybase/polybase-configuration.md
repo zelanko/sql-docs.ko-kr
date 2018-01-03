@@ -17,11 +17,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d796fb91c46e2620a80d2bedb481156657aeb539
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 07ace3fa24747619e8dbe64cbeb461175220a755
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-configuration"></a>PolyBase 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  sp_configure ‘hadoop connectivity’를 실행하고 적절한 값을 설정합니다.  값을 찾으려면 [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.  
   
-    ```tsql  
+    ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -223,7 +223,7 @@ PolyBase가 Kerberos로 보호되는 클러스터에 인증하는 경우 hadoop.
   
  [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [PolyBase 연결 구성 &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)   
  [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)  
   

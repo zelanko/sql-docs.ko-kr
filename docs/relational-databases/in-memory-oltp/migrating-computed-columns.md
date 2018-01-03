@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e5af311f2c8957a3d24dfbcaeecf421f04b6467b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcb3ba499f02c5e82bff0027cfa9085e525b681a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="migrating-computed-columns"></a>계산 열 마이그레이션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="non-persisted-computed-columns"></a>비지속형 계산 열  
  비지속형 계산 열의 효과를 시뮬레이션하려면 메모리 최적화 테이블에 대한 뷰를 만듭니다. 뷰를 정의하는 SELECT 문에서 계산 열 정의를 뷰에 추가합니다. 고유하게 컴파일된 저장 프로시저의 경우를 제외하고 계산 열에서 값을 사용하는 쿼리는 뷰에서 읽어야 합니다. 고유하게 컴파일된 저장 프로시저 내에서는 계산 열 정의에 따라 모든 SELECT, UPDATE 또는 DELETE 문을 업데이트해야 합니다.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -58,7 +58,7 @@ CREATE VIEW dbo.v_order_details AS
 ## <a name="persisted-computed-columns"></a>지속형 계산 열  
  지속형 계산 열의 효과를 시뮬레이션하려면 테이블에 삽입하기 위한 저장 프로시저와 테이블을 업데이트하기 위한 또 다른 저장 프로시저를 만듭니다. 테이블을 삽입하거나 업데이트하는 경우 이러한 저장 프로시저를 호출하여 해당 작업을 수행합니다. 저장 프로시저 내에서는 계산 열이 원래 디스크 기반 테이블에 정의되는 방식과 매우 유사하게 입력에 따라 계산 필드의 값을 계산합니다. 그런 다음 저장 프로시저 내에서 필요에 따라 테이블을 삽입하거나 업데이트합니다.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -96,7 +96,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

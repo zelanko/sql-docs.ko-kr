@@ -3,7 +3,7 @@ title: "외부 도구를 도구 메뉴에 추가 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 81aeeca6f826ea15266c6049df383b13b39f9a3f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8fac7c1ac3be2d7371672f84da5644d98a57dc7a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>외부 도구를 도구 메뉴에 추가(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]에서 모든 [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows 또는 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] 응용 프로그램을 시작할 수 있습니다. 외부 응용 프로그램은 **도구** 메뉴에 추가하여 실행할 수 있습니다.  

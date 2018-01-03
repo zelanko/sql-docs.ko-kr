@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c4026c4495c9c11922f8f4496b0000dfb2c9420
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  서로 다른 쿼리와 계획을 많이 생성하거나 쿼리 기록을 장기간 유지하려고 할 경우에는 기본값(100MB)이 충분하지 않을 수도 있습니다. 현재 공간 사용을 계속 추적하고 최대 크기(MB)를 늘려 쿼리 저장소가 읽기 전용 모드로 전환되지 않도록 합니다.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하거나 다음 스크립트를 실행하여 쿼리 저장소 크기에 대한 최신 정보를 확인합니다.  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -68,14 +68,14 @@ FROM sys.database_query_store_options;
   
  다음 스크립트에서는 새로운 최대 크기 (MB)를 설정합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **통계 수집 간격:** 수집된 런타임 통계에 대한 세분성의 수준을 정의합니다(기본값 - 1시간). 문제를 완화하기 위해 세분성이 더 상세하고 시간을 줄여야 할 경우 값을 낮추는 것을 고려해 볼 수 있지만 쿼리 저장소 데이터 크기에 직접 영향을 미칠 수 있음을 염두에 둬야 합니다. 통계 수집 간격에 대해 다른 값을 설정하려면 SSMS 또는 Transact-SQL을 사용합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
@@ -84,7 +84,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
   
  사용하지 않을 기록 데이터는 보관하지 않는 것이 좋습니다. 이렇게 하면 읽기 전용 상태로 변경되는 횟수가 줄어듭니다. 쿼리 저장소의 데이터 크기와 문제를 검색하여 완화하는 시간도 더 예측 가능해집니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 다음 스크립트를 사용하여 시간 기반 정리 정책을 구성합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
@@ -93,7 +93,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
   
  크기 기반 정리를 활성화하여 쿼리 저장소가 항상 읽기-쓰기 모드 상태로 최신 데이터를 수집하는 것이 좋습니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -108,7 +108,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  다음 스크립트는 쿼리 캡처 모드를 자동으로 설정합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -120,7 +120,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  이전 섹션에서 설명한 대로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 쿼리 저장소를 사용하도록 설정하거나 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -179,7 +179,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 ##  <a name="Verify"></a> 쿼리 저장소에서 쿼리 데이터가 계속 수집되는지 확인  
  쿼리 저장소에서 작업 모드가 자동으로 변경될 수 있습니다. 쿼리 저장소의 상태를 정기적으로 모니터링하여 쿼리 저장소가 작동 중인지 확인하고, 예방 가능한 원인으로 인해 오류가 발생하지 않도록 조치를 취해야 합니다. 다음 쿼리를 실행하여 작업 모드를 결정하고 가장 관련성이 높은 매개 변수를 확인합니다.  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -200,13 +200,13 @@ FROM sys.database_query_store_options;
   
 -   다음 문을 사용하여 쿼리 저장소 데이터를 정리합니다.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
 명시적으로 작업 모드를 읽기-쓰기로 변경하는 다음 문을 실행하여 위 단계 중 하나 또는 모두를 적용할 수 있습니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -222,7 +222,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>오류 상태  
  쿼리 저장소를 복구하려면 명시적으로 읽기-쓰기 모드를 설정해 보고 실제 상태를 다시 확인합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -240,7 +240,7 @@ FROM sys.database_query_store_options;
  
  그래도 해결되지 않으면 읽기-쓰기 모드를 요청하기 전에 쿼리 저장소를 정리할 수 있습니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -303,7 +303,7 @@ FROM sys.database_query_store_options;
 
  강제 계획은 중요한 쿼리 성능을 수정하고 쿼리를 좀 더 예측 가능하게 하는 편리한 메커니즘입니다. 그러나 계획 힌트 및 계획 가이드와 마찬가지로 강제 계획은 이후 실행에 사용됨을 보장하지는 않습니다. 일반적으로 실행 계획에서 참조하는 개체가 변경되거나 삭제되는 방식으로 데이터베이스 스키마가 변경하는 경우 강제 계획이 실패하기 시작합니다. 이 경우 실제 강제 실패 이유가 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 표시되는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리 재컴파일로 대체합니다. 다음 쿼리는 강제 계획에 대한 정보를 반환합니다.  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   
@@ -330,7 +330,7 @@ WHERE is_forced_plan = 1;
   
   추적 플래그 7752를 통해 쿼리 저장소를 비동기 로드할 수 있으며, 쿼리 저장소가 완전히 로드되기 전에 SQL Server에서 쿼리를 실행합니다. 기본 쿼리 저장소 동작은 쿼리 저장소가 복구되기 전에 쿼리가 실행되지 않도록 방지합니다.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [메모리 내 OLTP와 쿼리 저장소 사용](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 15fe0cb4d21bc72fa8eb351829914bdd6958a89c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8270991f406e6845cdbe4d19fd8bc58e57eb4b35
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI(선택적 XML 인덱스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 선택적 XML 인덱스는 일반 XML 인덱스 외에 추가로 제공되는 또 다른 유형의 XML 인덱스입니다. 선택적 XML 인덱스 기능의 목적은 다음과 같습니다  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
  `/book/title` 경로 및 `/book/subjects` 경로를 통해 이 데이터를 쿼리하기만 하면 되는 경우 다음과 같은 선택적 XML 인덱스를 만들면 됩니다.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -196,7 +196,7 @@ FOR
 -   선택적 XML 인덱스 및 보조 선택적 XML 인덱스는 데이터베이스 튜닝 관리자에서 지원되지 않습니다.  
   
   
-##  <a name="reltasks"></a> 관련 태스크  
+##  <a name="reltasks"></a> 관련 작업  
   
 |||  
 |-|-|  

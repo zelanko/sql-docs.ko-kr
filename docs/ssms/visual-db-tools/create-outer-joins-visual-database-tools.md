@@ -3,7 +3,7 @@ title: "외부 조인 만들기(Visual Database Tools) | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccbda35c56aaa7aeb221ff3f0c7527b0389eebe8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5847977926b80ef1cf98172b7b59c3e8a0a1c02
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>외부 조인 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 기본적으로 테이블 간에 내부 조인을 만듭니다. 다른 테이블의 행과 일치하지 않는 행은 없앱니다. 그러나 외부 조인은 FROM 절에 지정된 하나 이상의 테이블이나 뷰에서 WHERE 또는 HAVING 검색 조건을 만족하는 모든 행을 반환합니다. 조인된 테이블에 일치 값이 없는 데이터 행을 결과 집합에 포함하려면 외부 조인을 만들면 됩니다.  

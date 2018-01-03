@@ -3,7 +3,7 @@ title: "프로젝트 기본 위치 변경 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eafe0cdf17d433e821e78128dcc30b1eff83cfae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7dfbea8ef4621e7e61e2bc04b4d24bcd68c68dfc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-the-default-location-for-projects"></a>프로젝트 기본 위치 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 파일 및 프로젝트의 기본 위치는 내 문서 폴더의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 프로젝트 폴더입니다.  

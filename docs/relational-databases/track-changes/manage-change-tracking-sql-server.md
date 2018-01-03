@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0353aea7e84d69dca9dc469d4945a7cdf6eb7c34
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f06b2599172d8cbdaee05a4c42d852a37290dadb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-change-tracking-sql-server"></a>변경 내용 추적 관리(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
  다른 내부 테이블을 사용할 때와 같이 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 저장 프로시저를 사용하여 변경 내용 추적 테이블에 사용되는 공간을 결정할 수 있습니다. 내부 테이블의 이름은 다음 예와 같이 [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 카탈로그 뷰를 사용하여 가져올 수 있습니다.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

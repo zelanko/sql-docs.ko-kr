@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 803fdbbcc2b7bc83306c3f6a3135860059819840
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06de30704387cd64c66461145138cf22b33b51f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>겹치는 사용자 및 그룹 권한(Master Data Services)
   사용자의 사용 권한은 다음 요소에 따라 결정됩니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  겹치는 사용자 및 그룹 권한은 사용자 인터페이스에서 확인할 수 있습니다. **모델** 탭과 **계층 멤버** 탭 둘 다에 **유효** 를 선택하여 유효 사용 권한을 볼 수 있는 드롭다운 목록이 있습니다.  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
  ![mds_conc_user_group_ex_1](../master-data-services/media/mds-conc-user-group-ex-1.gif "mds_conc_user_group_ex_1")  
   
  사용자가 그룹 1 및 그룹 2에 속합니다.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
  결과: Product 엔터티에 대한 사용자의 유효 권한은 **거부** 입니다.  
   
-## <a name="example-3"></a>예 3  
+## <a name="example-3"></a>예제 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
   
  사용자가 그룹 1 및 그룹 2에 속합니다.  

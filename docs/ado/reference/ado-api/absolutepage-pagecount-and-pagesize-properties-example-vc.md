@@ -3,7 +3,7 @@ title: "AbsolutePage, PageCount, 및 PageSize 속성 예제 (VC + +) | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 703979cfbdcd81f36f25f7885365924910025de3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b2f7a4d82931b259cc6fb893416a98f405a7f10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount, 및 PageSize 속성 예제 (VC + +)
 사용 하 여이 예제는 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), 및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 이름을 표시 하 고 고용 날짜에서 속성을는 ***직원*** 테이블을 한 번에 5 개 레코드입니다.  

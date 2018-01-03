@@ -3,9 +3,9 @@ title: "책갈피 관리 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4dc1a1474d70e686fb08e6c6df79c40cb9d3488
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-bookmarks"></a>책갈피 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 코드 편집기에서 작업하는 동안 **책갈피** 창을 사용하여 문서 내의 특정 코드 행에 대한 링크를 만들 수 있습니다. 이 창은 **보기** 메뉴에서 표시할 수 있습니다.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
  **Delete**  
  **책갈피** 창과 책갈피가 있는 문서에서 현재 선택한 책갈피를 제거합니다. 책갈피가 표시된 코드 행은 제거하지 않습니다.  
   
- **Rename**  
+ **이름 바꾸기**  
  책갈피나 폴더에 새 표시 이름을 할당할 수 있습니다.  
   
  **책갈피 사용/책갈피 사용 안 함**  

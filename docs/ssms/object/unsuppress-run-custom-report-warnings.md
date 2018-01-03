@@ -3,7 +3,7 @@ title: "사용자 지정 보고서 실행 경고 표시 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e9c1b384b36a83daa97c2fe6150dc40d69f1ae4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5be05fff6edfd03df8da89c4c9d30db51f4e3c2e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>사용자 지정 보고서 실행 경고 표시
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 사용자 지정 보고서에 대한 경고 대화 상자에는 두 가지가 있습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에서 이러한 상자를 표시하는 방법에 대해 설명합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]를 다시 시작합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)  
 [Management Studio에 사용자 지정 보고서 추가](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  

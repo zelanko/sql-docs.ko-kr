@@ -3,7 +3,7 @@ title: "저장 고급 옵션 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c75d958c7cca998117b03821857157cf2eb9355
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-save-options"></a>저장 고급 옵션
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 언어 인코딩 스키마를 선택하고 각 줄 끝에 삽입할 문자를 지정할 수 있습니다. **저장 고급 옵션** 대화 상자에 액세스하려면 **파일** 메뉴에서 **.sql** <query name>**저장** 을 클릭하여 **.sql 파일 As** 대화 상자를 열고 **.sql** 단추의 아래쪽 화살표를 클릭한 다음 **.sql with Encoding**을 클릭합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **인코딩**  
 이 목록 상자를 사용하여 대상 파일에 새 언어 인코딩 스키마를 적용할 수 있습니다.  
   

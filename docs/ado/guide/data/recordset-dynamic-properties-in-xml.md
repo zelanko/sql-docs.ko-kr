@@ -3,7 +3,7 @@ title: "XML에서 레코드 집합 동적 속성 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 925981765184f05deadfda8ca8b27a929a6387ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b05609621af12607d11448028fc48a940f531ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML에서 레코드 집합 동적 속성
 (Client Cursor Engine)에서 다음 레코드 집합 공급자별 속성이 현재 XML 형식으로 유지 됩니다.  

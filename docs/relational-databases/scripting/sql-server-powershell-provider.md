@@ -3,9 +3,9 @@ title: "SQL Server PowerShell 공급자 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,13 +24,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4aa7050589878d109ef826bad2c9385abc00b5f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f87f36a963adb92f660d292560e06128bfeac237
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 공급자
+# <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Windows PowerShell용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 계층 구조를 파일 시스템 경로와 비슷한 경로에 표시합니다. 이 경로를 사용하여 개체를 찾은 다음 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) 모델의 메서드를 사용하여 개체에 대해 동작을 수행할 수 있습니다.  
   
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자의 이점  

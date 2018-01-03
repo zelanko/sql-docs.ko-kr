@@ -3,7 +3,7 @@ title: "범위란, CopyTo 및 SaveToFile 메서드 예제 (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8cd9135930d2cd4f3cfaf60bb6fcaf7548ba0a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bfba399f540ad30e5593dd0dc677ba0073bc19eb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>범위란, CopyTo 및 SaveToFile 메서드 예제 (VB)
 사용 하 여 파일의 복사본을 만드는 방법을 보여 주는이 예제 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다. 하나의 복사본이 인터넷 게시에 대 한 웹 폴더에 생성 됩니다. 다른 속성 및 메서드로 표시 된 [스트림 형식](../../../ado/reference/ado-api/type-property-ado-stream.md), **열려**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), 및 [레코드가 열려](../../../ado/reference/ado-api/open-method-ado-record.md)합니다.  

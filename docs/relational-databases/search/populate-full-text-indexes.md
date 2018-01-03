@@ -31,11 +31,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aa5d1392d5dd90cd5b783ae8e96a47b0fdf4d5be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 463494b3e3810a31d487b44c58aac58eccbf3674
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기*(*탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>예제 - 전체 채우기를 실행하지 않고 전체 텍스트 인덱스 만들기  
  다음 예에서는 `Production.Document` 예제 데이터베이스의 `AdventureWorks` 테이블에서 전체 텍스트 인덱스를 만듭니다. 이 예제에서는 `WITH CHANGE_TRACKING OFF, NO POPULATION`을 사용하여 초기 전체 채우기를 지연합니다.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -77,7 +77,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>예제 - 테이블에서 전체 채우기 실행  
  다음 예에서는 `Production.Document` 예제 데이터베이스의 `AdventureWorks` 테이블에 대해 전체 채우기를 실행합니다.  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -110,7 +110,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **예제 - 자동 변경 내용 추적을 사용하도록 전체 텍스트 인덱스 변경**  
     다음 예에서는 자동 채우기와 함께 변경 내용 추적을 사용하도록 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks` 테이블에 대한 전체 텍스트 인덱스를 변경합니다.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -130,7 +130,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **예제 - 수동 변경 내용 추적이 있는 전체 텍스트 인덱스 만들기**  
     다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks` 테이블에 대해 수동 채우기가 있는 변경 내용 추적을 사용하는 전체 텍스트 인덱스를 만듭니다.  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -144,7 +144,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **예제 - 수동 채우기 실행**  
     다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks` 테이블에서 변경 내용 추적이 설정된 전체 텍스트 인덱스에 대해 수동 채우기를 실행합니다.  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  

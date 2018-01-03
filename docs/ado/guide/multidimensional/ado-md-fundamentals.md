@@ -3,7 +3,7 @@ title: "ADO MD 기본 사항 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e98b845d993ba3e3d6a3ddc459f9c50aa24e6309
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 507a43b6f10da603951a412a4adf280858615b68
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD 기본 사항
 Microsoft® ActiveX® Data Objects (다차원) ADO MD 쉽게 액세스할 수 다차원 데이터에 Microsoft Visual Basic®과 같은 언어의 Microsoft Visual C++® 합니다. Microsoft® ADO ActiveX Data Objects ()와 같은 다차원 데이터에 특정 개체를 포함 하도록 확장 하는 ADO MD는 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 및 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체입니다. ADO MD 다차원 스키마 찾아보기는 큐브를 쿼리 하 고 사용할 수는 결과 검색 합니다.  

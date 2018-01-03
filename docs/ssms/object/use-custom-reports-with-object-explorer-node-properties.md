@@ -3,7 +3,7 @@ title: "개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd4e8e45cb6002d2ede2a7ac487f9408b13e8685
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc21ac20f60dfbe503779d4ad41c47d99068259f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 사용자 지정 보고서가 선택한 개체 탐색기 노드의 보고서 매개 변수를 참조하면 사용자 지정 보고서를 해당 노드의 컨텍스트에서 실행할 수 있습니다. 이렇게 하면 사용자 지정 보고서가 현재 컨텍스트(예: 현재 데이터베이스)나 데이터베이스 또는 서버 개체를 사용할 수 있습니다.  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/05/2017
 |매개 변수 이름|데이터 형식|  
 |------------------|-------------|  
 |**ObjectName**|**문자열**|  
-|**ObjectTypeName**|**문자열**|  
+|**ObjectTypeName**|**String**|  
 |**필터링됨**|**Boolean**|  
-|**ServerName**|**문자열**|  
-|**FontName**|**문자열**|  
-|**DatabaseName**|**문자열**|  
+|**ServerName**|**String**|  
+|**FontName**|**String**|  
+|**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>개체 탐색기 노드 보고서 매개 변수 예제  
 예제를 실행하려면 다음 절차를 따릅니다.  
@@ -533,7 +533,7 @@ ms.lasthandoff: 12/05/2017
 </Report></pre>  
 ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)  
 [Management Studio에 사용자 지정 보고서 추가](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [사용자 지정 보고서 실행 경고 표시](../../ssms/object/unsuppress-run-custom-report-warnings.md)  

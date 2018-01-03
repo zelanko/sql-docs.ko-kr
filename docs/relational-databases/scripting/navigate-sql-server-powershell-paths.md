@@ -3,9 +3,9 @@ title: "SQL Server PowerShell 경로 탐색 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4caf4b8db104a553904213319d58fb4ea558d40a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17bc67249ae7df8e637fc3a2314db51f4ee473c3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 공급자는 SQL Server 인스턴스의 개체를 파일 경로와 비슷한 구조로 표시합니다. Windows PowerShell cmdlet을 사용하여 공급자 경로를 탐색하고 사용자 지정 드라이브를 만들어 입력해야 하는 경로를 단축할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 다음 테이블과 같이 공급자 cmdlet의 하위 집합을 구현합니다.  
   
-|cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|설명|  
+|cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|현재 노드를 가져옵니다.|  
 |**Set-Location**|**sl**|**cd, chdir**|**cd, chdir**|현재 노드를 변경합니다.|  

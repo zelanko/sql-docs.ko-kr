@@ -3,9 +3,9 @@ title: "간략한 조사식 대화 상자 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 29db30b65a2ec487cfd56a849b82f645e5bb9e4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4831c5a62987109aba02f29f540fdff908cee5b1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 디버거 - 간략한 조사식 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **간략한 조사식** 대화 상자를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 디버깅할 때 변수나 매개 변수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식의 데이터 형식 및 값을 빨리 볼 수 있습니다. **조사식** 창에 식을 추가하여 여러 식을 조사할 수도 있습니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 -   식을 마우스 오른쪽 단추로 클릭하고 **값 편집**을 선택합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **식 목록**  
  현재 선택한 식을 표시합니다. 드롭다운 목록에는 표시하도록 선택할 수 있는 식 집합이 있습니다. 목록에 있는 식은 현재 **호출 스택** 창에서 선택한 스택 프레임 범위에서 사용할 수 있는 식입니다. 다른 식을 표시하려면 식을 입력하거나 목록에서 선택합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 변수, 매개 변수 및 @@ 기호로 시작하는 시스템 함수를 지원합니다.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  **이름**  
  조사 중인 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식입니다.  
   
- **값**  
+ **Value**  
  현재 식에 할당된 값을 표시합니다. 현재 식에 값이 없으면 빈 상태로 표시됩니다.  
   
  식의 길이가 **값** 열의 너비보다 큰 경우 해당 식의 **값** 셀 위로 포인터를 움직이면 도구 설명에 전체 값이 표시됩니다.  

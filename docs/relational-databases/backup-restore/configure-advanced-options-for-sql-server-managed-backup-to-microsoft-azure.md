@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4c2bb5ecc63c0168989e6ae23c0d85d5a22dea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb251e8c5305d6ee4acc8cfaff61ee1f9d01864f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 다음 자습서는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 대한 고급 옵션 설정 방법을 설명합니다. 이러한 절차는 제공되는 기능에서 필요한 경우에만 필요합니다. 그렇지 않으면 기본 동작에 따라 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 사용할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  **백업 인증서 또는 비대칭 키 생성:** 암호화에서 사용할 CERTIFICATE 또는 ASYMMETRIC KEY를 사용할 수 있습니다. 다음 예제에서는 백업 암호화에 사용할 백업 인증서를 만듭니다.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
   
     ```  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  고급 옵션 및 사용자 지정 일정을 구성한 후 대상 데이터베이스 또는 SQL Server 인스턴스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 활성화해야 합니다. 자세한 내용은 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을(를) 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  

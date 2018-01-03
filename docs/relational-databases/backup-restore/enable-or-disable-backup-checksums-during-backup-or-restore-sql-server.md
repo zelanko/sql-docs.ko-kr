@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c363b96889bdf48710e4da2b930047d27ed3c26e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6285718d684b1468bce5eefc4ab5e43c0310c80
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>백업 또는 복원 중 백업 체크섬 설정 또는 해제(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  BACKUP  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문에서 백업 체크섬을 설정하려면 WITH CHECKSUM 옵션을 지정합니다. 백업 체크섬을 해제하려면 WITH NO_CHECKSUM 옵션을 지정합니다. 이 동작은 압축된 백업을 제외한 경우의 기본 동작입니다. 다음 예제는 체크섬이 수행되도록 지정합니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -92,7 +92,7 @@ GO
   
 3.  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 백업 체크섬을 설정하려면 WITH CHECKSUM 옵션을 지정합니다. 이 동작은 압축된 백업의 기본 동작입니다. 백업 체크섬을 해제하려면 WITH NO_CHECKSUM 옵션을 지정합니다. 이 동작은 압축된 백업을 제외한 경우의 기본 동작입니다. 다음 예제는 백업 체크섬이 수행되도록 지정합니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
