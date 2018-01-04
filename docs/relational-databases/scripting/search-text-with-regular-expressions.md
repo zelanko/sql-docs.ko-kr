@@ -3,9 +3,9 @@ title: "정규식을 사용한 텍스트 검색 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d9837053135c6c0783d69d9544c84efd35cc5efe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4522ce26253a547b7cf55202f99a4e391f8fdaf3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **** 찾기 및 바꾸기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  다음 표에서는 **참조 목록**에서 사용할 수 있는 정규식을 설명합니다.  
   
-|식|구문|설명|  
+|식|구문|Description|  
 |----------------|------------|-----------------|  
 |임의의 문자|을 선택합니다.|줄 바꿈을 제외한 임의의 문자 하나와 대응합니다.|  
 |없거나 1개 이상|*|선행 식이 없거나 하나 이상인 경우와 대응하며 일치하는 모든 선행 식을 포함합니다.|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  **찾기 및 바꾸기** 작업에서 유효한 모든 정규식의 목록은 **참조 목록**에 표시된 것보다 더 많습니다. 또한 다음 정규식을 **찾을 내용** 문자열에 삽입할 수 있습니다.  
   
-|식|구문|설명|  
+|식|구문|Description|  
 |----------------|------------|-----------------|  
 |최소 - 없거나 1개 이상|@|선행 식이 없거나 하나 이상인 경우와 대응하며 가능한 적은 수의 문자를 포함합니다.|  
 |최소 - 1개 이상|#|1개 이상의 선행 식과 대응하며 가능한 적은 수의 문자와 대응합니다.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
  다음 표에서는 표준 유니코드 문자 속성으로 대응시키기 위한 구문을 나열합니다. 두 자로 된 약어는 유니코드 문자 속성 데이터베이스에 나열된 것과 동일합니다. 이러한 약어는 문자 집합의 일부로 지정할 수 있습니다. 예를 들어 [:Nd:Nl:No] 식은 모든 종류의 숫자와 대응합니다.  
   
-|식|구문|설명|  
+|식|구문|Description|  
 |----------------|------------|-----------------|  
 |대문자|:Lu|임의의 대문자 하나와 대응합니다. 예를 들어 :Luhe는 "The"와 대응하지만 "the"와는 대응하지 않습니다.|  
 |소문자|:Ll|임의의 소문자 하나와 대응합니다. 예를 들어 :Llhe는 "the"와 대응하지만 "The"와는 대응하지 않습니다.|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  표준 유니코드 문자 속성 외에 다음 추가 속성을 문자 집합의 일부로 지정할 수 있습니다.  
   
-|식|구문|설명|  
+|식|구문|Description|  
 |----------------|------------|-----------------|  
 |알파|:Al|임의의 문자 하나와 대응합니다. 예를 들어 :Alhe는 "The", "then", "reached" 등의 단어와 대응합니다.|  
 |숫자|:Nu|임의의 숫자 하나와 대응합니다.|  
