@@ -1,7 +1,7 @@
 ---
 title: "통계 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,9 +65,10 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
-          | STATS_STREAM = stats_stream ] ]   
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -84,6 +85,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -138,11 +144,11 @@ CREATE STATISTICS statistics_name
   
  다음은 Production.BillOfMaterials 테이블에 대한 필터 조건자의 예입니다.  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  필터 조건자에 대 한 자세한 내용은 참조 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)합니다.  
   
@@ -184,28 +190,38 @@ CREATE STATISTICS statistics_name
  파티션별 통계가 지원되지 않을 경우 오류가 생성됩니다. 다음 통계 유형에 대해서는 증분 통계가 지원되지 않습니다.  
   
 -   기본 테이블을 기준으로 파티션 정렬되지 않은 인덱스를 사용하여 작성된 통계입니다.  
-  
 -   Always On 읽기 가능한 보조 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   읽기 전용 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   필터링된 인덱스에 대해 작성된 통계입니다.  
-  
 -   뷰에 대해 작성된 통계입니다.  
-  
 -   내부 테이블에 대해 작성된 통계입니다.  
-  
 -   공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계입니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
+MAXDOP = *max_degree_of_parallelism*  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ 재정의 **x degree of** 통계 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
+  
+ *max_degree_of_parallelism* 될 수 있습니다.  
+  
+ 1  
+ 병렬 계획이 생성되지 않습니다.  
+  
+ \>1  
+ 지정된 된 수 이하로 현재 시스템 작업에 따라 병렬 통계 작업에 사용 되는 프로세서의 최대 수를 제한 합니다.  
+  
+ 0(기본값)  
+ 현재 시스템 작업에 따라 실제 프로세서 수 이하의 프로세서를 사용합니다.  
+  
+ \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
 ## <a name="permissions"></a>Permissions  
  이러한 사용 권한 중 하나가 필요합니다.  
   
 -   ALTER TABLE  
-  
 -   사용자는 소유자  
-  
 -   멤버 자격이 **db_ddladmin** 고정된 데이터베이스 역할  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
@@ -224,8 +240,9 @@ CREATE STATISTICS statistics_name
  [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 카탈로그 뷰 종속성 참조로 필터링 된 통계 조건자의 각 열을 추적 합니다. 필터링된 통계 조건자에서 정의된 테이블 열은 삭제, 이름 바꾸기 또는 정의 변경을 수행할 수 없으므로 필터링된 통계를 만들기 전에 테이블 열에서 수행하는 작업을 고려하세요.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
-*  외부 테이블에서 통계를 업데이트할 수 없습니다. 외부 테이블에 대 한 통계를 업데이트 하려면 삭제 하 고 통계를 다시 만듭니다.  
-*  개체당 최대 64 개 열을 나열할 수 있습니다.
+* 외부 테이블에서 통계를 업데이트할 수 없습니다. 외부 테이블에 대 한 통계를 업데이트 하려면 삭제 하 고 통계를 다시 만듭니다.  
+* 개체당 최대 64 개 열을 나열할 수 있습니다.
+* MAXDOP 옵션 STATS_STREAM, 행 개수 및 PAGECOUNT 옵션와 호환 되지 않습니다.
   
 ## <a name="examples"></a>예  
 

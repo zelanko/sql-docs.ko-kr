@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: ce2427d4defca8640d93ea25919fe805ac7c6133
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
 
@@ -180,7 +180,7 @@ NFS 서버에서 다음을 수행 합니다.
 
 모든 클러스터 노드에서 다음 단계를 수행 합니다.
 
-1.  NFS 서버에서 설치`nfs-utils`
+1.  `nfs-utils` 설치
 
    ```bash
    sudo yum -y install nfs-utils
@@ -214,7 +214,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 1.  **주 노드의**, 데이터베이스 파일을 임시 위치에 저장 합니다. 다음 스크립트에서는 새로운 임시 디렉터리를 만듭니다 하 고, 데이터베이스 파일을 새 디렉터리를 복사, 오래 된 데이터베이스 파일을 제거 합니다. SQL Server mssql 로컬 사용자로 실행 되는 탑재 된 공유에 데이터 전송, 후 로컬 사용자가 공유에 대 한 읽기 / 쓰기 액세스 있는지 확인 해야 합니다. 
 
    ``` 
-   $ su mssql
+   $ sudo su mssql
    $ mkdir /var/opt/mssql/tmp
    $ cp /var/opt/mssql/data/* /var/opt/mssql/tmp
    $ rm /var/opt/mssql/data/*
@@ -240,9 +240,9 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 1.  에 저장 된 데이터베이스 및 로그 파일을 복사 `/var/opt/mssql/tmp` 새로 탑재 된 공유에 `/var/opt/mssql/data`합니다. 만 작업을 수행 해야이 **주 노드에서**합니다. 'Mssql' 로컬 사용자 읽기/쓰기 권한을 부여 하는 있는지 확인 합니다.
 
    ``` 
-   $ chown mssql /var/opt/mssql/data
-   $ chgrp mssql /var/opt/mssql/data
-   $ su mssql
+   $ sudo chown mssql /var/opt/mssql/data
+   $ sudo chgrp mssql /var/opt/mssql/data
+   $ sudo su mssql
    $ cp /var/opt/mssql/tmp/* /var/opt/mssql/data/
    $ rm /var/opt/mssql/tmp/*
    $ exit
@@ -265,8 +265,8 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+   echo '<loginName>' | sudo tee -a /var/opt/mssql/secrets/passwd
+   echo '<loginPassword>' | sudo tee -a /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a242628af9898a3a437ec11000de626135e9d79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35cf3118e503193200dec0e5e07714aa4e2a54ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-messages"></a>진단 메시지
 각 sqlstate 진단 메시지가 반환 됩니다. 동일한 SQLSTATE 종종 서로 다른 메시지 수가 반환 됩니다. 예를 들어 SQL 구문에서 대부분의 오류에 대 한 SQLSTATE 42000 (구문 오류 또는 액세스 위반) 반환 됩니다. 그러나 각 구문 오류는 서로 다른 메시지에 의해 기술 할 합니다.  

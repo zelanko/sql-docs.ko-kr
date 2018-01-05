@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 지정한 데이터베이스에 있는 데이터 및 로그 파일의 크기를 축소합니다.
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  데이터베이스를 축소한 후 데이터베이스에 남겨둘 여유 공간의 비율입니다.  
   
  NOTRUNCATE  
- 파일 끝에 있는 할당된 페이지를 파일 앞의 할당되지 않은 페이지로 이동하여 데이터 파일의 데이터를 압축합니다. *target_percent* 선택 사항입니다.  
+ 파일 끝에 있는 할당된 페이지를 파일 앞의 할당되지 않은 페이지로 이동하여 데이터 파일의 데이터를 압축합니다. *target_percent* 선택 사항입니다. 이 옵션은 Azure SQL 데이터 웨어하우스에서 지원 되지 않습니다. 
   
  파일 끝의 여유 공간이 운영 체제에 반환되지 않고, 파일의 물리적 크기가 변경되지 않습니다. 그러므로 NOTRUNCATE를 지정하면 데이터베이스가 축소되지 않는 것처럼 보입니다.  
   
  NOTRUNCATE는 데이터 파일에만 적용되며 로그 파일에는 영향을 주지 않습니다.  
   
  TRUNCATEONLY  
- 파일 끝의 모든 여유 공간을 운영 체제로 해제하지만 파일 내에서 페이지 이동을 수행하지 않습니다. 데이터 파일은 마지막으로 할당된 익스텐트까지만 축소됩니다. *target_percent* TRUNCATEONLY와 함께 지정 해도 무시 됩니다.  
+ 파일 끝의 모든 여유 공간을 운영 체제로 해제하지만 파일 내에서 페이지 이동을 수행하지 않습니다. 데이터 파일은 마지막으로 할당된 익스텐트까지만 축소됩니다. *target_percent* TRUNCATEONLY와 함께 지정 해도 무시 됩니다. 이 옵션은 Azure SQL 데이터 웨어하우스에서 지원 되지 않습니다.
   
  TRUNCATEONLY는 로그 파일에 영향을 줍니다. 데이터 파일만 자르려면 DBCC SHRINKFILE을 사용합니다.  
   
@@ -108,6 +108,9 @@ NOTRUNCATE 옵션이나 TRUNCATEONLY 옵션을 지정하지 않고 DBCC SHRINKDA
 축소할 데이터베이스는 단일 사용자 모드가 아니어도 됩니다. 즉, 다른 사용자가 데이터베이스에서 작업 중이라도 데이터베이스를 축소할 수 있습니다. 시스템 데이터베이스의 경우에도 그렇습니다.
   
 데이터베이스가 백업되는 동안에는 데이터베이스를 축소할 수 없습니다. 반대로 데이터베이스에 대한 축소 작업이 처리되는 동안에는 데이터베이스를 백업할 수 없습니다.
+
+>[!NOTE]
+> 현재 Azure SQL 데이터 웨어하우스 사용 하도록 설정 하는 TDE와 DBCC SHRINKDATABASE를 지원 하지 않습니다.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE 작동 방법  
 DBCC SHRINKDATABASE는 파일 단위로 데이터 파일을 축소하지만 로그 파일이 모두 한 연속 로그 풀에 있는 것처럼 로그 파일을 축소합니다. 항상 파일은 끝부터 축소됩니다.
@@ -167,7 +170,7 @@ GO
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKFILE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  

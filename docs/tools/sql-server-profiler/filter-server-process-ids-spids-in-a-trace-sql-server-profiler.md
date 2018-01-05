@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 747817e69c175e90f119906f8263920bc1851c2e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b113e50edcd72ff72717cae44166817478c959b9
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>추적의 SPID(서버 프로세스 ID) 필터링(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 추적에서 서버 프로세스 id (Spid)를 사용 하 여 필터링 하는 방법을 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -34,18 +34,18 @@ ms.lasthandoff: 12/21/2017
   
 1.  **파일** 메뉴에서 **새 추적**을 클릭한 다음 SQL Server 인스턴스에 연결합니다.  
   
-     **추적 속성**대화 상자가 표시됩니다.  
+     **추적 속성** 대화 상자가 나타납니다.  
   
     > [!NOTE]  
-    >  **연결한 후 즉시 추적 시작**을 선택한 경우에는 **추적 속성**대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 **도구**메뉴에서 **옵션**을 클릭한 다음 **연결한 후 즉시 추적 시작** 확인란의 선택을 취소합니다.  
+    >  경우 **연결한 후 즉시 추적 시작** 확인란이 **추적 속성** 대화 상자가 나타나지 않으며 대신 추적이 시작 됩니다. 에이 설정을 해제 하려면는 **도구** 메뉴를 클릭 하 여 **옵션**, 선택을 취소 하 고는 **연결한 후 즉시 추적 시작** 확인란 합니다.  
   
 2.  **추적 이름** 입력란에 추적의 이름을 입력합니다.  
   
-3.  **템플릿 사용**이름 목록에서 추적 템플릿을 선택합니다.  
+3.  에 **서식 파일을 사용 하 여** 이름 목록에서 추적 템플릿을 선택 합니다.  
   
 4.  필요에 따라 추적 결과를 저장할 대상 파일이나 테이블을 지정합니다.  
   
-5.  **이벤트 선택**탭에서 **SPID**열 머리글을 클릭하여 **필터 편집** 대화 상자를 엽니다. 또는 열 머리글을 마우스 오른쪽 단추로 클릭하고 **열 필터 편집**을 클릭할 수도 있습니다. **SPID** 열이 표시되지 않는 경우에는 **모든 열 표시** 확인란을 선택합니다.  
+5.  에 **이벤트 선택** 탭을 클릭는 **SPID** 열 머리글을는 **필터 편집** 대화 상자. 또는 열 머리글을 마우스 오른쪽 단추로 클릭하고 **열 필터 편집**을 클릭할 수도 있습니다. **SPID** 열이 표시되지 않는 경우에는 **모든 열 표시** 확인란을 선택합니다.  
   
 6.  **필터 편집** 대화 상자에서 적절한 비교 연산자를 확장한 다음 비교할 값으로 SPID를 입력합니다.  
   

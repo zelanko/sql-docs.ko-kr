@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b6abe63c911f92c661cb7ab4c56b3a2bb61fa14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 453ce7fe955af4ffe25d13b1ab1abfef0f48cf59
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 대량 로드에 대한 지침 및 제한 사항(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XML 대량 로드를 사용 하는 경우 다음 지침 및 제한 사항에 잘 알고 있어야 합니다.  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
 -   SchemaGen은 주석이 추가 된 XSD 로부터 관계형 스키마를 생성 하기 위한 기본적인 기능만을 제공 합니다. 필요한 경우 생성된 테이블을 사용자가 직접 수정해야 합니다.  
   
--   테이블 간에 존재 두 개 이상의 관계가 있는 SchemaGen 두 테이블 간에 관련 된 모든 키를 포함 된 하나의 관계를 만들려고 시도 합니다. 이 제한 사항은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 오류의 원인이 될 수 있습니다.  
+-   SchemaGen은 테이블 간에 관계가 둘 이상 있는 두 테이블 간에 관련 된 모든 키를 포함 하는 단일 관계를 만들려고 시도 합니다. 이 제한 사항은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 오류의 원인이 될 수 있습니다.  
   
 -   XML 데이터를 데이터베이스에 대량 로드할 경우 데이터베이스 열에 매핑되는 특성 또는 자식 요소가 매핑 스키마에 적어도 하나 있어야 합니다.  
   

@@ -14,17 +14,19 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 6ad13c3432daee4fd38b6d46704adc0c00913f7a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들기 및 Linux에서 SQL Server에 대 한 가용성 그룹 구성
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 자습서에서는 가용성 그룹 (AG) 만들기 및 구성 하는 방법에 설명 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux. 와 달리 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] 이전 버전 windows에서 사용할 수 있습니다 Ag 또는 먼저 기반이 되는 Pacemaker 클러스터를 만들지 않고도 합니다. 클러스터와의 통합 필요에 따라 수행 되지 않으므로 나중에 다시.
+
+이 자습서에는 다음 작업이 포함 됩니다.
  
 > [!div class="checklist"]
 > * 가용성 그룹을 사용 하도록 설정 합니다.
@@ -593,12 +595,10 @@ Pacemaker 고가용성 클러스터 기본 [!INCLUDE[ssnoversion-md](../includes
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
     ```
 
->[참고] RHEL 7.4-마스터의를 사용 하 여 경고를 발생할 수 있습니다. 이 방지 하려면 다음 구문을 사용 합니다.
-    ```bash
-    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-    ```
-
-    **SUSE Linux Enterprise Server (SLES)**
+    >[!NOTE]
+    >RHEL 7.4-마스터의를 사용 하 여 경고를 발생할 수 있습니다. 이 문제를 방지 하려면 사용`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+   
+    **SUSE Linux Enterprise Server(SLES)**
     
     ```bash
     primitive <NameForAGResource> \
@@ -618,7 +618,7 @@ Pacemaker 고가용성 클러스터 기본 [!INCLUDE[ssnoversion-md](../includes
     commit
     ```
     
-    where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
+    여기서 *NameForAGResource* AG에 대해이 클러스터 리소스를 지정 하는 고유 이름입니다 및 *AGName* 만든 AG 이름입니다.
  
 2.  기능 수신기와 연결 될 AG에 대 한 IP 주소 리소스를 만듭니다.
 
@@ -647,8 +647,7 @@ Pacemaker 고가용성 클러스터 기본 [!INCLUDE[ssnoversion-md](../includes
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
-   
-    
+
     **SLES**
     
     ```bash
@@ -690,5 +689,5 @@ Pacemaker 고가용성 클러스터 기본 [!INCLUDE[ssnoversion-md](../includes
 대부분 AG 관리 작업을 업그레이드를 포함 하 고 들어 장애 조치에 대 한 참조.
 
 > [!div class="nextstepaction"]
-> [Linux에서 SQL Server에 대 한 HA 가용성 그룹을 작동](sql-server-linux-availability-group-failover-ha.md)합니다.
+> [Linux에서 SQL Server에 대 한 HA 가용성 그룹 동작](sql-server-linux-availability-group-failover-ha.md)
 

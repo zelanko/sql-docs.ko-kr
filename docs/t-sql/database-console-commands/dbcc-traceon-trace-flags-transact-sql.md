@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d5c466e35f8e37d7f2559e6766886b5ef80e390e
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-추적 플래그 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +82,7 @@ ms.lasthandoff: 01/02/2018
 |**2371**|동적 자동 update statistics 임계값으로 고정된 자동 update statistics 임계값을 변경합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2754171)합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 고는 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130,이 동작은 엔진에 의해 제어 됩니다 추적 플래그 2371 영향을 주지 않습니다.<br /><br />**범위**: 글로벌만|
 |**2389**|Enable 오름차순 (히스토그램 수정) 키에 대 한 빠른 통계를 자동으로 생성 합니다. 추적 플래그 2389를 설정 하는 경우는 선행 통계 열이 오름차순으로 표시 되어 카디널리티를 예측 하는 데 사용 되는 히스토그램이 쿼리 컴파일 타임에 조정 됩니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2801413)합니다.<br /><br />**참고:** 철저 하 게 테스트 프로덕션 환경에 배포 하기 전에이 옵션을 확인 하십시오.<br /><br />**참고:** 이 추적 플래그는 CE 버전 120 이상 적용 되지 않습니다. 추적 플래그 4139을 대신 사용 합니다.<br /><br />**범위**: 전역 또는 세션 또는 쿼리|
 |**2390**|오름차순 또는 알 수 없는 키 (히스토그램 수정)에 대 한 빠른 자동으로 생성 된 통계를 사용 하도록 설정 합니다. 2390 추적 플래그를 설정 하는 경우는 선행 통계 열이 오름차순 또는 알 수 없는로 표시 카디널리티를 예측 하는 데 사용 되는 히스토그램이 쿼리 컴파일 타임에 조정 됩니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2801413)합니다.<br /><br />**참고:** 철저 하 게 테스트 프로덕션 환경에 배포 하기 전에이 옵션을 확인 하십시오.<br /><br />**참고:** 이 추적 플래그는 CE 버전 120 이상 적용 되지 않습니다. 추적 플래그 4139을 대신 사용 합니다.<br /><br />**범위**: 전역 또는 세션 또는 쿼리|
+|**2422**|사용 하도록 설정 된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] REQUEST_MAX_CPU_TIME_SEC 리소스 관리자 구성에 의해 설정 된 최대 시간을 초과 하는 요청을 중단 합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/help/4038419)합니다.<br /><br />**참고:** 이 추적 플래그에 적용 됩니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및 더 높은 빌드입니다.<br /><br />**범위**: 전역|
 |**2430**|활성화 잠금 클래스 정리를 대체합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2754301)합니다.<br /><br />**범위**: 글로벌만| 
 |**2453**|테이블 변수를를 충분 한 행 수가 변경 될 때 recompile을 트리거할 수 있습니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2952444)합니다.<br /><br />**참고:** 철저 하 게 테스트 프로덕션 환경에 배포 하기 전에이 옵션을 확인 하십시오.<br /><br />**범위**: 전역 또는 세션 또는 쿼리|
 |**2528**|DBCC CHECKDB, DBCC CHECKFILEGROUP 및 DBCC CHECKTABLE에 의한 개체 병렬 확인을 해제합니다. 기본적으로 쿼리 프로세서가 자동으로 병렬 처리 수준을 결정합니다. 최대 병렬 처리 수준은 병렬 쿼리의 경우처럼 구성됩니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.<br /><br />**참고:** 은 일반적으로 병렬 DBCC 검사 사용 (기본값). 쿼리 프로세서는 다시 평가 하 고 자동으로 각 테이블 또는 DBCC CHECKDB에서 확인 된 테이블의 일괄 처리에 대 한 병렬 처리를 조정 합니다.<br /><br />일반적인 사용 시나리오 시스템 관리자가 DBCC CHECKDB 완료 되 고 있으므로 수동으로 감소 시키거나 병렬 처리 수준, 사용자의 작업 부하를 사용 하 여 동시성을 높이기 위해 해제 하도록 선택 하기 전에 해당 서버 로드가 증가할 것을 알고 있는 경우입니다. 그러나 DBCC CHECKDB의 병렬 검사를 사용 하지 않도록 설정을 완료 하는 데 걸리는 것 발생할 수 있습니다.<br /><br />**참고:** 오랜 시간에 대 한 테이블을 잠글 수 TABLOCK 옵션을 사용 하 여 DBCC CHECKDB를 실행할 경우 병렬 처리를 사용 하지 않도록 설정 합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, MAXDOP 옵션은 문에 대 한 sp_configure의 병렬 처리 수준 구성 옵션의 최대 수준 재정의를 사용할 수 있습니다.<br /><br />**범위**: 전역 또는 세션|

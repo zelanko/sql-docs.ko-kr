@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 284c184a7e77842ec798dbff6d32c193ce9055f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6ddb3472f19ce2fda8bc368cd07f7ea602d74a02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ ROW_NUMBER ( )
 
 다음 쿼리에서 알파벳 순서로 4 개의 시스템 테이블을 반환합니다.
 
-```t-sql
+```sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -89,16 +89,16 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|name    |recovery_model_desc |  
+|NAME    |recovery_model_desc |  
 |-----------  |------------ |  
 |master |SIMPLE |
 |model |FULL |
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
 
-각 행 앞에 행 번호 열을 추가 하려면 지정 된 열을 추가 `ROW_NUMBER` 함수,이 경우 이름은 `Row#`합니다. `ORDER BY` 절을 `OVER` 절 위로 이동해야합니다.
+각 행 앞에 행 번호 열을 추가 하려면 지정 된 열을 추가 `ROW_NUMBER` 함수,이 경우 이름은 `Row#`합니다. `ORDER BY`절을`OVER` 절로 이동해야합니다.
 
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -108,16 +108,16 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|행 번호 |name    |recovery_model_desc |  
+|행 번호 |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1. |master |SIMPLE |
+|1 |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
 추가 `PARTITION BY` 절에는 `recovery_model_desc` 열 번호 매기기 때 다시 시작 됩니다는 `recovery_model_desc` 값이 변경 합니다. 
  
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -127,10 +127,10 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|행 번호 |name    |recovery_model_desc |  
+|행 번호 |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1. |model |FULL |
-|1. |master |SIMPLE |
+|1 |model |FULL |
+|1 |master |SIMPLE |
 |2 |msdb |SIMPLE |
 |3 |tempdb |SIMPLE |
 
@@ -138,7 +138,7 @@ FROM sys.databases WHERE database_id < 5;
 ### <a name="b-returning-the-row-number-for-salespeople"></a>2. 영업 사원의 행 번호 반환  
  다음 예에서는 연간 누계 판매 실적에 따라 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]의 영업 사원에 대한 행 번호를 계산합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -172,7 +172,7 @@ Row FirstName    LastName               SalesYTD
 ### <a name="c-returning-a-subset-of-rows"></a>3. 행의 하위 집합 반환  
  다음 예에서는 `SalesOrderHeader` 테이블에서 `OrderDate`를 기준으로 모든 행의 행 번호를 계산한 후 `50`에서 `60`까지의 행만 반환합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -189,7 +189,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### <a name="d-using-rownumber-with-partition"></a>4. PARTITION에 ROW_NUMBER() 사용  
  다음 예에서는 `PARTITION BY` 인수를 사용하여 `TerritoryName` 열을 기준으로 쿼리 결과 집합을 분할합니다. `ORDER BY` 절에 지정된 `OVER` 절은 각 파티션의 행을 `SalesYTD` 열을 기준으로 정렬합니다. `ORDER BY` 문의 `SELECT` 절은 전체 쿼리 결과 집합을 `TerritoryName`을 기준으로 정렬합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
@@ -227,7 +227,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### <a name="e-returning-the-row-number-for-salespeople"></a>5. 영업 사원의 행 번호 반환  
  다음 예제에서는 반환 된 `ROW_NUMBER` 영업 담당자의 판매 할당량에 따라에 대 한 합니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -256,7 +256,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ### <a name="f-using-rownumber-with-partition"></a>6. PARTITION에 ROW_NUMBER() 사용  
  다음 예에서는 `ROW_NUMBER` 인수에 `PARTITION BY` 함수를 사용하는 방법을 보여 줍니다. 이 인해는 `ROW_NUMBER` 함수 각 파티션에 있는 행 번호입니다.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 

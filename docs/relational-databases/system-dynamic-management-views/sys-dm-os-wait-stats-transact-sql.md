@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/18/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
+ms.openlocfilehash: 1e6b1129e76717981e08ff35a97abf516c134ac3
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +90,7 @@ GO
   
  다음 표에서는 태스크에서 발생한 대기 유형을 나열합니다.  
 
-|형식 |Description| 
+|유형 |Description| 
 |-------------------------- |--------------------------| 
 |ABR |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -169,7 +169,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |COUNTRECOVERYMGR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |CREATE_DATINISERVICE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|CXPACKET |병렬 쿼리 계획 생성 하 고 행을 사용 하는 경우 및 쿼리 프로세서 교환 반복기를 동기화 할 때 발생 합니다. 대기 시간이 너무 길고 쿼리 튜닝(예: 인덱스 추가)으로 시간을 줄일 수 없는 경우에는 병렬 처리 비용 임계값을 조정하거나 병렬 처리 수준을 낮추세요.| 
+|CXCONSUMER |병렬 쿼리 계획에서 소비자 스레드 행 보낼 공급자 스레드를 대기할 때 발생 합니다. 이 병렬 쿼리 실행의 정상적인 일부입니다. <br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |병렬 쿼리 계획 생성 하 고 행을 사용 하는 경우 및 쿼리 프로세서 교환 반복기를 동기화 할 때 발생 합니다. 대기 시간이 너무 길고 쿼리 튜닝(예: 인덱스 추가)으로 시간을 줄일 수 없는 경우에는 병렬 처리 비용 임계값을 조정하거나 병렬 처리 수준을 낮추세요.<br /> **참고:** 에 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET 쿼리 프로세서 교환 반복기를 동기화 하 고 제작 및 소비자 스레드에 대 한 행만 참조 합니다. 소비자 스레드는 CXCONSUMER 대기 유형의에서 개별적으로 추적 됩니다.| 
 |CXROWSET_SYNC |병렬 범위 검색 중에 발생합니다.| 
 |DAC_INIT |관리자 전용 연결이 초기화되는 동안 발생합니다.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -1020,7 +1021,7 @@ GO
   
  잠금 호환성 표를 참조 하십시오. [sys.dm_tran_locks&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
     
  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
