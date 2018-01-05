@@ -30,31 +30,9 @@ ms.lasthandoff: 10/14/2017
 ## <a id="requirements"></a> 필수 구성 요소
 
 - docker 엔진 1.8 + Mac/창에 Linux 배포 또는 Docker를 지원 합니다. 자세한 내용은 참조 [설치 Docker](https://docs.docker.com/engine/installation/)합니다.
-- 최소 4GB의 디스크 공간
-- 최소 4GB의 RAM
+- 최소 2 GB의 디스크 공간
+- 최소 2 GB의 RAM
 - [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
-
-> [!IMPORTANT]
-> Mac 용 Docker 및 Windows 용 Docker에 대 한 기본값 Moby VM에 대 한 2GB 이므로 4GB로 변경 해야 합니다. Mac 또는 Windows에서 실행 하는 경우에 메모리를 늘리기 위해 다음 절차를 따르세요.
-
-### <a name="increase-docker-memory-to-4-gb-mac"></a>4GB (Mac) Docker 메모리 증가
-
-다음 단계는 4GB로 Mac 용 Docker에 대 한 메모리를 늘리십시오.
-
-1. 상위 상태 표시줄에 Docker 로고를 클릭 합니다.
-1. 선택 **기본 설정**합니다.
-1. 4GB 이상의 메모리 표시기를 이동 합니다.
-1. 클릭는 **다시 시작** 화면 단추에 있는 단추입니다.
-
-### <a name="increase-docker-memory-to-4-gb-windows"></a>4GB (Windows) Docker 메모리 증가
-
-다음 단계는 4GB로 Windows 용 Docker에 대 한 메모리를 늘리십시오.
-
-1. 작업 표시줄에서 Docker 아이콘을 마우스 오른쪽 단추로 클릭 합니다.
-1. 클릭 **설정을** 해당 메뉴.
-1. 클릭는 **고급** 탭 합니다.
-1. 4GB 이상의 메모리 표시기를 이동 합니다.
-1. 클릭는 **적용** 단추입니다.
 
 ## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 실행 하 고 끌어오기
 
