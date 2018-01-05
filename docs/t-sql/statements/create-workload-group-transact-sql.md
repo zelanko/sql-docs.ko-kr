@@ -1,7 +1,7 @@
 ---
 title: "작업 그룹 (Transact SQL) 만들기 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbe9d11d3b018df43eed813f8f987695f41ae189
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -65,13 +64,11 @@ CREATE WORKLOAD GROUP group_name
  작업 그룹에 있는 요청의 상대적 중요도를 지정합니다. 중요도는 다음 중 하나이며 MEDIUM이 기본값이 됩니다.  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM(기본값)    
 -   HIGH  
   
 > [!NOTE]  
->  내부적으로 각 중요도 설정은 계산에 사용된 멤버로 저장됩니다.  
+> 내부적으로 각 중요도 설정은 계산에 사용된 멤버로 저장됩니다.  
   
  IMPORTANCE는 리소스 풀에 대해 로컬입니다. 같은 리소스 풀 내에 있는 다른 중요도의 작업 그룹은 서로 영향을 주지만 다른 리소스 풀의 작업 그룹에는 영향을 주지 않습니다.  
   
@@ -79,7 +76,7 @@ CREATE WORKLOAD GROUP group_name
  단일 요청이 풀에서 사용할 수 있는 최대 메모리 양을 지정합니다. 이 비율은 MAX_MEMORY_PERCENT에서 지정한 리소스 풀 크기에 따라 바뀝니다.  
   
 > [!NOTE]  
->  지정된 양은 쿼리 실행 부여 메모리만 참조합니다.  
+> 지정된 양은 쿼리 실행 부여 메모리만 참조합니다.  
   
  *값* 0 또는 양의 정수 여야 합니다. 허용된 범위 *값* 은 0에서 100 까지입니다. 에 대 한 기본 설정은 *값* 은 25입니다.  
   
@@ -102,7 +99,10 @@ CREATE WORKLOAD GROUP group_name
  요청이 사용할 수 있는 최대 CPU 시간(초)을 지정합니다. *값* 0 또는 양의 정수 여야 합니다. 에 대 한 기본 설정은 *값* 0은 무제한을 의미 합니다.  
   
 > [!NOTE]  
->  최대 시간이 초과하는 경우 리소스 관리자가 요청을 종료하지는 않지만 이벤트가 생성됩니다. 자세한 내용은 참조 [CPU 임계값을 초과 이벤트 클래스](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)합니다.  
+> 기본적으로 리소스 관리자를 최대 시간을 초과 하는 경우 계속할 요청을 해도 됩니다. 이벤트가 생성됩니다. 자세한 내용은 참조 [CPU 임계값을 초과 이벤트 클래스](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)합니다.  
+
+> [!IMPORTANT]
+> 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, 및를 사용 하 여 [추적 플래그 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), 최대 시간을 초과 하는 경우 리소스 관리자 요청을 중단 됩니다. 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*값*  
  메모리(작업 버퍼 메모리)가 부여될 때까지 쿼리가 대기할 수 있는 최대 시간(초)을 지정합니다.  

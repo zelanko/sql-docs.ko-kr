@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  파일 그룹의 논리적 이름이거나 해당 값이 백업에 포함시킬 파일 그룹의 논리적 이름과 같은 변수입니다. 단순 복구 모델에서 파일 그룹 백업은 읽기 전용 파일 그룹에만 사용할 수 있습니다.  
   
 > [!NOTE]  
->  데이터베이스 크기와 성능 요구 사항으로 인해 데이터베이스 백업이 불가능할 경우 파일 백업을 사용하십시오.  
+>  데이터베이스 크기와 성능 요구 사항으로 인해 데이터베이스 백업이 불가능할 경우 파일 백업을 사용하십시오. NUL 장치 백업 성능을 테스트 하려면 사용할 수 있지만 프로덕션 환경에서는 사용할 수 없습니다.
   
  *n*  
  쉼표로 구분된 목록에 여러 개의 파일 및 파일 그룹을 지정할 수 있음을 나타내는 자리 표시자입니다. 사용할 수 있는 숫자에는 제한이 없습니다. 
@@ -227,8 +227,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  { *logical_device_name* | **@***logical_device_name_var* }  
  데이터베이스를 백업할 백업 장치의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수로 제공한 경우 (@*logical_device_name_var*), 백업 장치 이름은 수 지정 하는 문자열 상수 (@*logical_device_name_var*  **=**  논리적 백업 장치 이름) 또는 모든 문자열 형식의 데이터를 제외 하 고 변수는 **ntext** 또는 **텍스트** 데이터 형식입니다.  
   
- {디스크 | 테이프 | URL을 (를)  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* }  
- 디스크 파일이나 테이프 장치 또는 Windows Azure Blob 스토리지 서비스를 지정합니다. URL 형식은 Windows Azure 저장소 서비스에 백업을 만드는 데 사용 됩니다. 자세한 내용 및 예제에 대 한 참조 [SQL Server 백업 및 Microsoft Azure Blob 저장소 서비스로 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)합니다. 자습서를 참조 하십시오. [자습서: SQL Server 백업 및 복원 Windows Azure Blob 저장소 서비스에](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)합니다.  
+ {디스크 | 테이프 | URL을 (를)  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* | NUL}  
+ 디스크 파일이나 테이프 장치 또는 Windows Azure Blob 스토리지 서비스를 지정합니다. URL 형식은 Windows Azure 저장소 서비스에 백업을 만드는 데 사용 됩니다. 자세한 내용 및 예제에 대 한 참조 [SQL Server 백업 및 Microsoft Azure Blob 저장소 서비스로 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)합니다. 자습서를 참조 하십시오. [자습서: SQL Server 백업 및 복원 Windows Azure Blob 저장소 서비스에](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)합니다. 
+
+[!NOTE] 
+ NUL 디스크 장치에 전송 하는 모든 정보를 잃게 됩니다 및 테스트에 사용 해야 합니다. 프로덕션 용도로 아닙니다.
   
 > [!IMPORTANT]  
 >  와 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 까지 SP1 CU2 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], URL에 백업할 때만 단일 장치에 백업할 수 있습니다. 여러 장치에 URL에 백업할 때를 백업 하기 위해 사용 해야 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 공유 액세스 서명 (SAS) 토큰을 사용 해야 합니다. 공유 액세스 서명을 만드는 예제를 보려면 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell 포함 Azure Storage에서 공유 액세스 서명 (SAS) 토큰으로 SQL 자격 증명 만들기 간소화](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)합니다.  
@@ -236,6 +239,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 **URL에 적용 됩니다.**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  BACKUP 문에 지정되기 전에는 디스크 장치가 없어도 됩니다. 물리적 장치가 존재하고 BACKUP 문에서 INIT 옵션이 지정되지 않은 경우에는 백업이 장치에 추가됩니다.  
+ 
+ 하지만 NUL 장치 백업은 여전히 표시 모든 페이지를 백업이 파일을 전송 하는 모든 입력을 삭제 합니다.
   
  자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.  
   
@@ -346,7 +351,7 @@ DESCRIPTION **=** { **'***text***'** | **@***text_variable* }
 {EXPIREDATE **='***날짜***'**| RETAINDAYS  **=**  *일* }  
 이 백업에 대한 백업 세트를 덮어쓸 수 있는 날짜를 지정합니다. 두 옵션을 모두 사용하면 RETAINDAYS가 EXPIREDATE보다 우선적으로 적용됩니다.  
   
-따라 만료 날짜가 결정은 두 옵션을 지정 하는 경우는 **mediaretention** 구성 설정입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.  
+따라 만료 날짜가 결정은 두 옵션을 지정 하는 경우는 **mediaretention** 구성 설정입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
 > [!IMPORTANT]  
 >  이러한 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일을 덮어쓰지 못하도록 하기 위한 것입니다. 테이프는 다른 방법을 사용하여 지울 수 있고 디스크 파일은 운영 체제를 통해 삭제할 수 있습니다. 만료일 확인에 대한 자세한 내용은 이 항목에서 SKIP과 FORMAT을 참조하십시오.  
@@ -359,7 +364,7 @@ EXPIREDATE  **=**  { **'***날짜***'** |   **@**  *date_var* }
 -   A **smalldatetime**  
 -   A **datetime** 변수  
   
-예를 들어  
+예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   `'Dec 31, 2020 11:59 PM'`  
 -   `'1/1/2021'`  
@@ -649,7 +654,7 @@ GO
 |미러|미디어 패밀리 1|미디어 패밀리 2|미디어 패밀리 3|  
 |------------|--------------------|--------------------|--------------------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|1.|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  미디어 패밀리는 항상 특정 미러 내의 동일한 장치에 백업되어야 합니다. 따라서 기존 미디어 세트를 사용할 때마다 미디어 세트가 생성될 때 지정된 것과 동일한 순서로 각 미러의 장치를 나열하십시오.  
   

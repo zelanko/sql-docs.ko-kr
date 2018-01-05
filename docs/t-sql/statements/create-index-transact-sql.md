@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 16335773aba9cc005911434d5090223e7e6f8209
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 48d755dcd5257a3208c087db44df1e9fd262ddcc
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -168,12 +168,12 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 <range> ::=   
 <partition_number_expression> TO <partition_number_expression>  
   
-Backward Compatible Relational Index  
-Important   The backward compatible relational index syntax structure 
-will be removed in a future version of SQL Server. Avoid using this 
-syntax structure in new development work, and plan to modify 
-applications that currently use the feature. Use the syntax structure 
-specified in <relational_index_option> instead.  
+Backward Compatible Relational Index
+
+> [!IMPORTANT]
+> The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+> Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature. 
+> Use the syntax structure specified in <relational_index_option> instead.  
   
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )   
@@ -514,7 +514,7 @@ MAXDOP = *max_degree_of_parallelism*
  자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
 > [!NOTE]  
-> 병렬 인덱스 작업의 일부 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+> 병렬 인덱스 작업의 일부 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [버전 및 SQL Server 2016에 대 한 지원 되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 및 [버전 및 지원 되는 기능에 대 한 SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)합니다.  
   
  DATA_COMPRESSION  
  지정된 인덱스, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.  

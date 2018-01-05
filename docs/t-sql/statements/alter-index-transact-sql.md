@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,8 @@ columnstore 인덱스에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 -   행 중 10% 이상이 있는 논리적으로 삭제 된 행 그룹, SQL Server는이 행 그룹 하나 이상의 rowgroup으로 결합 하려고 합니다.    예를 들어 500, 000 행을 사용 하 여 압축 행 그룹 1 및 21 그룹이 compressed 임을 1048576 행의 최대 합니다.  행 그룹 21 409,830 행 생략 삭제 된 행의 60%에 있습니다. SQL Server 우선으로 이러한 두 909,830 행이 새 행 그룹을 압축 rowgroup을 결합 합니다.  
   
 다시 구성 (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2016부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 COMPRESS_ALL_ROW_GROUPS OPEN 또는 CLOSED 델타 행 그룹을 columnstore로 강제 하는 방법을 제공 합니다. 이 옵션을 델타 행 그룹 비워지도록 columnstore 인덱스 다시 작성 하는 데 필요한있지 않습니다.  이 함께 다른 제거 및 병합 조각 모음 기능을 통해 더 이상 트랜젹션 대부분의 경우에서 인덱스를 다시 작성 됩니다.    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 COMPRESS_ALL_ROW_GROUPS OPEN 또는 CLOSED 델타 행 그룹을 columnstore로 강제 하는 방법을 제공 합니다. 이 옵션을 델타 행 그룹 비워지도록 columnstore 인덱스 다시 작성 하는 데 필요한있지 않습니다.  이 함께 다른 제거 및 병합 조각 모음 기능을 통해 더 이상 트랜젹션 대부분의 경우에서 인덱스를 다시 작성 됩니다.    
+
 -   ON 크기와 상태 (닫혀 있지 않거나 열)에 관계 없이 columnstore로 모든 rowgroup을 강제로 수행 합니다.  
   
 -   OFF 모든 CLOSED 행 그룹이 columnstore로 강제로 수행합니다.  
@@ -393,17 +394,11 @@ FILLFACTOR = *fillfactor*
  파티션별 통계가 지원되지 않는 경우에는 이 옵션이 무시되고 경고가 생성됩니다. 다음 통계 유형에 대해서는 증분 통계가 지원되지 않습니다.  
   
 -   기본 테이블을 기준으로 파티션 정렬되지 않은 인덱스를 사용하여 작성된 통계입니다.  
-  
 -   Always On 읽기 가능한 보조 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   읽기 전용 데이터베이스에 대해 작성된 통계입니다.  
-  
 -   필터링된 인덱스에 대해 작성된 통계입니다.  
-  
 -   뷰에 대해 작성된 통계입니다.  
-  
 -   내부 테이블에 대해 작성된 통계입니다.  
-  
 -   공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계입니다.  
  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
@@ -414,7 +409,7 @@ FILLFACTOR = *fillfactor*
  XML 인덱스 또는 공간 인덱스의 경우 ONLINE = OFF만 지원되며 ONLINE을 ON으로 설정하면 오류가 발생합니다.  
   
 > [!NOTE]
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [버전 및 지원 되는 기능에 대 한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)합니다.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [버전 및 지원 되는 기능에 대 한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 및 [버전 및 지원 되는 기능에 대 한 SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)합니다.  
   
  ON  
  인덱스 작업 중에 장기 테이블 잠금이 유지되지 않습니다. 인덱스 작업의 주 단계 중 내재된 공유(IS) 잠금만 원본 테이블에 유지됩니다. 따라서 기본 테이블 및 인덱스를 계속 쿼리 또는 업데이트할 수 있습니다. 작업이 시작될 때 아주 짧은 기간 동안 S(공유) 잠금이 원본 개체에서 유지됩니다. 작업이 끝날 때 짧은 기간 동안 비클러스터형 인덱스가 생성되는 경우에는 원본에 대해 S(공유) 잠금이 유지되고, 온라인 상태에서 클러스터형 인덱스가 생성 또는 삭제될 때나 클러스터형 또는 비클러스터형 인덱스가 다시 작성될 때는 SCH-M(스키마 수정) 잠금이 획득됩니다. 로컬 임시 테이블에서 인덱스를 생성하는 경우에는 ONLINE을 ON으로 설정할 수 없습니다.  
