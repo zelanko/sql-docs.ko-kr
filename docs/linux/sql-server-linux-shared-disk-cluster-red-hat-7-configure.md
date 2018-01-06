@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: ce2427d4defca8640d93ea25919fe805ac7c6133
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 1d2731e55c9add5cfa06d70297793f4f7d5fef48
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
 
@@ -335,7 +335,6 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 2. SQL Server, 파일 시스템 및 가상 IP 리소스에 대 한 클러스터 리소스를 구성 하 고 클러스터 구성을 밀어넣습니다. 다음과 같은 정보가 필요 합니다.
 
    - **SQL Server 리소스 이름**: 클러스터 된 SQL Server 리소스에 대 한 이름입니다. 
-   - **제한 시간 값**: 시간 제한 값은 클러스터에서 대기 하는 시간 동안는 리소스는 온라인 상태가 합니다. SQL Server 하기 위해 수행할 수 있어야 하는 경우 SQL server는 `master` 데이터베이스를 온라인 상태로 있습니다.  
    - **부동 IP 리소스 이름**: 가상 IP 주소 리소스에 대 한 이름입니다.
    - **IP 주소**: SQL Server의 클러스터형된 인스턴스에 연결 하려면 클라이언트에서 사용 하는 IP 주소입니다. 
    - **파일 시스템 리소스 이름**: 파일 시스템 리소스에 대 한 이름입니다.
@@ -347,7 +346,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg resource create <fileShareResourceName> Filesystem device=<networkPath> directory=<localPath>         fstype=<fileShareType>
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
@@ -359,7 +358,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha
