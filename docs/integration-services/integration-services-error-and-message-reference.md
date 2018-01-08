@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8b969229037b01c4897ad504ad8db2cfa17182cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f3b9bd353109d4e9d96597ad7ac944423b4d9b54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
@@ -169,7 +169,7 @@ ms.lasthandoff: 11/20/2017
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|해시 값이 1차원 바이트 배열이 아닙니다(오류: %1). 이 오류는 CPackage::LoadUserCertificateByHash에서 발생합니다.|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|배열의 데이터에 액세스할 수 없습니다(오류: %1). 이 오류는 GetDataFromSafeArray가 호출될 때마다 발생할 수 있습니다.|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 관리되는 SSIS 도우미 개체를 만들지 "%2"입니다. 이 오류는 CoCreateInstance CLSID_DTSManagedHelper가 실패할 때마다 발생할 수 있습니다.|  
-|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|오류 0x%1!8.8X! "%2"(으)로 인해 SSIS 런타임이 OLE DB 연결을 분산 트랜잭션에 참여시키지 "%2"입니다.|  
+|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|오류 0x%1!8.8X! "%2"(으)로 인해 SSIS 런타임이 OLE DB 연결을 분산 트랜잭션에 참여시키지 못했습니다.|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지를 서명하지 "%2"입니다. 이 오류는 ManagedHelper.SignDocument 메서드가 실패할 때 발생합니다.|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지 XML에서 XML 서명 봉투를 확인하지 "%2"입니다. 이 오류는 CPackage::LoadFromXML에서 발생합니다.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 XML DOM 개체에서 XML 원본을 가져오지 "%2"입니다. 이 오류는 IXMLDOMDocument::get_xml이 실패할 때 발생합니다.|  
@@ -2082,8 +2082,8 @@ ms.lasthandoff: 11/20/2017
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|태스크 "%1"을(를) 실행하지 못했습니다.|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|파일/프로세스 "%1"이(가) 경로에 없습니다.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|제목이 비어 있습니다.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|"받는 사람" 줄의 주소 형식이 잘못되었습니다. "@" 기호가 없거나 잘못되었습니다.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|"보낸 사람" 줄의 주소 형식이 잘못되었습니다. "@" 기호가 없거나 잘못되었습니다.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|"받는 사람" 줄의 주소 형식이 잘못되었습니다. "\@" 기호가 없거나 잘못되었습니다.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|"보낸 사람" 줄의 주소 형식이 잘못되었습니다. "\@" 기호가 없거나 잘못되었습니다.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|두 XML 문서가 다릅니다.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD 유효성 검사에서는 XML 문서의 DOCTYPE 줄에 정의된 DTD 파일이 사용됩니다. 속성 "%1"에 할당된 문서는 사용되지 않습니다.|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|"%1"의 유효성을 검사하지 못했습니다.|  
@@ -2273,7 +2273,7 @@ ms.lasthandoff: 11/20/2017
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
-|0x1|1.|DTS_MSG_CATEGORY_SERVICE_CONTROL|잘못된 함수입니다.|  
+|0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|잘못된 함수입니다.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|시스템에서 지정한 파일을 찾을 수 없습니다.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|Microsoft SSIS 서비스를 시작하고 있습니다.<br /><br /> 서버 버전 %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS 서비스가 시작되었습니다.<br /><br /> 서버 버전 %1|  
