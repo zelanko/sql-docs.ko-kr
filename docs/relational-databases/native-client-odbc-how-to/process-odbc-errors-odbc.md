@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: errors [ODBC]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 032c112a083f6746e4a447bc273ebc6f8d5a3d93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9573d2b899c240a9077f7a27324a5fc5480058e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="process-odbc-errors-odbc"></a>프로세스 ODBC 오류(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  이 예제에서는 표준 ODBC 정보용 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 을 호출하는 간단한 오류 처리기를 보여 줍니다. 그런 다음 유효한 연결이 있는지 테스트하고, 유효한 연결이 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버별 진단 필드에 대해 **SQLGetDiagField**를 호출합니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  

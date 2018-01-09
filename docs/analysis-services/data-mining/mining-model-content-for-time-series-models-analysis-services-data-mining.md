@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>시계열 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모든 마이닝 모델 콘텐츠를 저장 하는 동일한 구조를 사용 합니다. 이 구조는 데이터 마이닝 콘텐츠 스키마 행 집합에 따라 정의됩니다. 그러나 해당 표준 구조 내에서 정보를 포함하는 노드는 다양한 종류의 트리를 나타내기 위해 서로 다른 방법으로 정렬됩니다. 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 기반으로 하는 마이닝 모델에 대해 노드가 구성되는 방법과 각 노드의 의미에 대해 설명합니다.  
@@ -415,7 +413,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** 특정 항을 가져오기 위해 쿼리할 수 있는 중첩 테이블의 수식 항을 표시합니다. 노드 배포 테이블은 XML 규칙과 동일한 계층 구조를 따릅니다. 즉, ARIMA 계열의 루트 노드(NODE_TYPE = 27)는 여러 주기성을 포함할 수 있는 완전한 수식에 대한 절편 값 및 주기성을 포함하는데 반해 자식 노드는 특정 주기 구조 또는 해당 주기 구조의 자식 노드에 대한 정보만 포함합니다.  
   
-|노드 유형|Attribute|값 유형|  
+|노드 유형|attribute|값 유형|  
 |---------------|---------------|----------------|  
 |27(ARIMA 루트)|가로채기<br /><br /> 주기성|11|  
 |28(ARIMA 주기 구조)|주기성<br /><br /> 자동 회귀 차수<br /><br /> 차수<br /><br /> 이동 평균 순서|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  

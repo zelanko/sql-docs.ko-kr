@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 445984322c81766be4919cfda8b211a21e2519a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97f594dde59411f05b60d8d778d617955526cad6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="transaction-lifetimes"></a>트랜잭션 수명
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]시작 된 트랜잭션 사이는 중요 한 차이점이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장된 프로시저와 관리 코드에서 시작: 공용 언어 런타임 (CLR) 코드 시 불균형 한 트랜잭션 상태 또는에서는 CLR 호출의 종료를 합니다. 이 차이점으로 인해 발생하는 다음과 같은 문제점에 주의하십시오.  

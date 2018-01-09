@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e8bac4005982e113a765b59557ae4380610b03b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 598c2f0520d8fa9ae1215373b4ac29bd040d7d6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-report-data-source"></a>보고서 데이터 원본 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Power view를 다차원 모델에 연결 하려면 순서로 공유 보고서 데이터 원본 정의 SharePoint 라이브러리에서.rsds 파일 라고도 만들어야 합니다. .rsds 파일은 다차원 모델에 연결하는 데 사용되는 Analysis Services 서버 인스턴스의 이름, 연결 형식, 연결 문자열 및 자격 증명을 지정합니다. 사용자가 .rsds를 클릭하면 비어 있는 새 파워 뷰 보고서(.rdlx 파일)가 브라우저에 열립니다.  

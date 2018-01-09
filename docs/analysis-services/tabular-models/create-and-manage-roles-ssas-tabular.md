@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cde5ecfbcaa904dc4f0f62e0b135dac5780b8ffd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 38c3e0e07fe0a595ccfef997c94dd7bfe43b17fa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>역할 만들기 및 관리(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델에서 역할을 모델에 대 한 멤버 권한을 정의 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 역할 관리자 대화 상자를 사용하여 모델 프로젝트에 대해 역할을 정의합니다. 모델을 배포할 때 데이터베이스 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 역할을 관리할 수 있습니다.  
@@ -53,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
     |사용 권한|Description|  
     |----------------|-----------------|  
-    |**InclusionThresholdSetting**|멤버는 모델 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|  
+    |**없음**|멤버는 모델 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|  
     |**읽기**|멤버는 행 필터를 기반으로 데이터를 쿼리할 수 있지만 모델 스키마를 변경할 수 없습니다.|  
     |**읽기 및 처리**|멤버는 행 수준 필터를 기반으로 데이터를 쿼리하고 처리 및 모두 처리 작업을 실행할 수 있지만 모델 스키마를 변경할 수 없습니다.|  
     |**처리**|멤버는 처리 및 모두 처리 작업을 실행할 수 있습니다. 모델 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|  

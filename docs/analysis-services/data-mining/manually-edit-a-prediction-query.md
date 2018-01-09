@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b0450b31862960c3c78e7061c0ec823e93316e6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 48eb031ed8d8bd7d2788f74c349d4ff03eb27bb8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="manually-edit-a-prediction-query"></a>예측 쿼리 수동 편집
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]예측 쿼리 작성기를 사용 하 여 쿼리를 디자인 후 쿼리 텍스트 보기로 전환 하 여 쿼리를 수정할 수는 **마이닝 모델 예측** 데이터 마이닝 디자이너의 탭 합니다. 쿼리 작성기가 만든 쿼리를 표시할 텍스트 편집기가 화면 맨 아래에 나타납니다.  

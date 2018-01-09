@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: full-text search [SMO]
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2ae3c11901de210ae49a95eab1443b6e171fcba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0db7400457bb39daa082650a73f5fbdc9689a16d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="implementing-full-text-search"></a>전체 텍스트 검색 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]전체 텍스트 검색의 인스턴스당 ´ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 SMO에는 표시 되는 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.FullTextService> 아래에 있으며는 **서버** 개체입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 전체 텍스트 검색 서비스의 구성 옵션을 관리하는 데 사용됩니다. <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 개체에 속하는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체는 데이터베이스에 정의된 전체 텍스트 카탈로그를 나타내는 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 개체 모음입니다. 일반 인덱스와 달리 전체 텍스트 인덱스는 각 테이블에 하나만 정의할 수 있으며 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 개체에서 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체로 표시됩니다.  

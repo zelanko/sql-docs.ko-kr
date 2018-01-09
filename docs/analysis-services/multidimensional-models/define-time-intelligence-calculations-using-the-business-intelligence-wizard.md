@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c0a46098b9f1793309ae31417f29f2b23772de0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f2767b84432f137bd8f43c4352f99277abb845df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>비즈니스 인텔리전스 마법사를 사용하여 시간 인텔리전스 계산 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]시간 인텔리전스 기능의 경우 선택한 계층 시간 계산 (또는 시간 보기) 추가 하는 큐브 기능 이 기능은 다음과 같은 계산 범주를 지원합니다.  
@@ -75,7 +72,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="viewing-the-time-intelligence-enhancement"></a>시간 인텔리전스 기능 보기  
  비즈니스 인텔리전스 마법사의 마지막 페이지에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 변경 사항을 확인할 수 있습니다. 시간 인텔리전스 기능의 경우 다음 표에서 설명하는 것처럼 마법사에서 선택한 시간 차원, 연결된 데이터 원본 뷰 및 연결된 큐브를 변경합니다.  
   
-|개체|변경|  
+|Object|변경|  
 |------------|------------|  
 |시간 차원|각 계산(또는 보기)에 특성을 추가합니다.|  
 |데이터 원본 뷰|시간 차원의 각 새 특성에 대한 시간 테이블에 계산 열을 추가합니다.|  

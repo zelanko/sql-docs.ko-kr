@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,11 +28,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14cab75f3f5468259504b103bfa0a3e43e23f8ce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98eadce8ef3ffe948793a6da69a47c209889942d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-query-notifications"></a>쿼리 알림 작업
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `service=mySSBService;local database=mydb`  
   
@@ -82,7 +82,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 속성 집합  
  OLE DB를 통해 쿼리 알림을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client DBPROPSET_SQLSERVERROWSET 속성 집합을 다음과 같은 새 속성을 추가 합니다.  
   
-|이름|유형|Description|  
+|속성|형식|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|쿼리 알림이 활성 상태로 유지되는 시간(초)입니다.<br /><br /> 기본값은 432000초(5일)입니다. 최소값은 1초이고 최대값은 2^31-1초입니다.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|알림의 메시지 메시지입니다. 사용자가 정의하며 미리 정의된 형식은 없습니다.<br /><br /> 기본값은 빈 문자열입니다. 1-2000자를 사용하여 메시지를 지정할 수 있습니다.|  
@@ -90,7 +90,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  구독 알림은 문이 사용자 트랜잭션 또는 자동 커밋에서 실행되었는지 여부나 문이 실행된 트랜잭션이 커밋 또는 롤백되었는지 여부에 관계없이 항상 커밋됩니다. 서버 알림은 잘못된 알림 조건, 즉 기본 데이터 또는 스키마 변경이나 제한 시간에 도달한 경우 중 더 빠른 시간에 발생합니다. 알림 등록은 발생하는 즉시 삭제됩니다. 따라서 알림을 받을 때 응용 프로그램에서 추가 업데이트를 가져오려는 경우 다시 구독해야 합니다.  
   
- 다른 연결이나 스레드에서 알림의 대상 큐를 확인할 수 있습니다. 예를 들어  
+ 다른 연결이나 스레드에서 알림의 대상 큐를 확인할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   

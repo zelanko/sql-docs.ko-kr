@@ -5,13 +5,10 @@ ms.date: 12/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 567945f59ffad3d5662485663a7b212f94d8af56
-ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
+ms.openlocfilehash: 07565f6092a8f4e642234038c05a0f83024ce6a4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 동적 관리 뷰 (DMV)은 로컬 서버 작업 및 서버 상태에 대 한 정보를 노출 하는 쿼리 구조입니다. 쿼리 구조는 Analysis Services 인스턴스에 대한 메타데이터 및 모니터링 정보를 반환하는 스키마 행 집합에 대한 인터페이스입니다.  

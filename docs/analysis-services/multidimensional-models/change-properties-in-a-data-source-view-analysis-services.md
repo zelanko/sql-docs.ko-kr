@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f17e0880839470e128266ae62993bceeb4457c3e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 속성 변경(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]명명 된 계산, 데이터 원본 뷰 마법사를 사용 하 고 테이블, 뷰, 추가 데이터 원본 뷰를 정의 및 데이터 원본에 명명 된 쿼리를 한 후 관련 된 속성을 변경 하는 것이 좋습니다.  
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |데이터 원본|속성을 보고 있는 데이터 원본 뷰 내의 데이터 원본을 지정합니다.|  
 |Description|데이터 원본 뷰에 대한 설명을 지정합니다.|  
-|이름|솔루션 탐색기나 Analysis Services 데이터베이스에 표시되는 데이터 원본 뷰의 이름을 지정합니다. 여기서 또는 솔루션 탐색기에서 데이터 원본 뷰 이름을 변경할 수 있습니다.|  
+|속성|솔루션 탐색기나 Analysis Services 데이터베이스에 표시되는 데이터 원본 뷰의 이름을 지정합니다. 여기서 또는 솔루션 탐색기에서 데이터 원본 뷰 이름을 변경할 수 있습니다.|  
 |NameMatchingCriteria|데이터 원본의 이름 일치 조건입니다. 데이터 원본 뷰 마법사에서 기본 키 - 외래 키 관계가 감지된 경우 기본값은 (없음)입니다. 데이터 원본 뷰 마법사에서 이 속성을 설정했는지에 관계없이 여기서 값을 지정할 수 있습니다. 데이터베이스 관계가 있으며 이름 일치 조건을 지정하면 기존 테이블과 새로 추가한 테이블 간의 관계를 유추하기 위해 둘 다 사용됩니다.|  
 |RetrieveRelationships|데이터베이스에서 관계가 검색되는지 여부를 지정합니다. 기본값은 True입니다.|  
 |SchemaRestriction|데이터 원본에서 검색된 스키마에 대한 제한(있는 경우)을 지정합니다. 기본적으로 스키마 제한은 없습니다.|  
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
 |DataSource|개체의 데이터 원본을 지정합니다. 이 속성은 편집할 수 없습니다.|  
 |Description|테이블, 뷰 또는 명명된 쿼리에 대한 설명을 지정합니다. 기본 데이터베이스 테이블이나 뷰에 확장 속성으로 저장된 설명이 있으면 이 값도 표시됩니다. 이 속성은 편집할 수 있습니다.|  
 |FriendlyName|사용자가 보다 쉽게 이해할 수 있거나 주제 영역에 더 적합한 테이블 또는 뷰 이름을 지정합니다. 기본적으로 테이블이나 뷰의 **FriendlyName** 속성은 해당 테이블이나 뷰의 **Name** 속성과 동일합니다. **FriendlyName** 속성은 테이블이나 뷰를 기반으로 개체를 정의할 때 OLAP 및 데이터 마이닝 개체에 사용됩니다. 이 속성은 편집할 수 있습니다.|  
-|이름|기본 테이블이나 뷰의 이름 또는 명명된 쿼리의 이름을 지정합니다. **Name** 속성은 명명된 쿼리를 기반으로 개체를 정의할 때 OLAP 및 데이터 마이닝 개체에 사용됩니다. 이 속성은 명명된 쿼리에 대해서만 편집할 수 있습니다.|  
+|속성|기본 테이블이나 뷰의 이름 또는 명명된 쿼리의 이름을 지정합니다. **Name** 속성은 명명된 쿼리를 기반으로 개체를 정의할 때 OLAP 및 데이터 마이닝 개체에 사용됩니다. 이 속성은 명명된 쿼리에 대해서만 편집할 수 있습니다.|  
 |QueryDefinition|명명된 쿼리 정의를 지정합니다. 이 속성은 명명된 쿼리에만 해당되며 직접 편집할 수 없습니다. 이 속성을 편집하려면 명명된 쿼리 자체를 편집합니다.|  
 |스키마|테이블, 뷰 또는 명명된 쿼리에 해당하는 데이터베이스 스키마를 지정합니다. 이 속성은 편집할 수 없습니다.|  
 |TableType|테이블, 뷰 또는 명명된 쿼리에 대한 테이블 유형을 지정합니다. 이 속성은 편집할 수 없습니다.|  
@@ -86,7 +83,7 @@ ms.lasthandoff: 12/08/2017
 |Description|열에 대한 설명을 지정합니다. 기본 데이터베이스 열에 확장 속성으로 저장된 설명이 있으면 이 값도 표시됩니다. 이 속성은 편집할 수 있습니다.|  
 |FriendlyName|사용자가 보다 쉽게 이해할 수 있거나 주제 영역에 더 적합한 테이블 또는 뷰의 열 이름을 지정합니다. 기본적으로 테이블이나 뷰의 열에 대한 **FriendlyName** 속성은 해당 열의 **Name** 속성과 동일합니다. **FriendlyName** 속성은 테이블이나 뷰의 열을 기반으로 특성을 정의할 때 OLAP 및 데이터 마이닝 개체에 사용됩니다. 이 속성은 편집할 수 있습니다.|  
 |길이|기본 테이블이나 뷰의 열 데이터를 기반으로 열의 최대 길이를 지정합니다.|  
-|이름|기본 열의 이름 또는 명명된 계산의 이름을 지정합니다. **Name** 속성은 명명된 계산을 기반으로 특성을 정의할 때 OLAP 및 데이터 마이닝 개체에 사용됩니다. 이 속성은 명명된 계산에 대해서만 편집할 수 있습니다.|  
+|속성|기본 열의 이름 또는 명명된 계산의 이름을 지정합니다. **Name** 속성은 명명된 계산을 기반으로 특성을 정의할 때 OLAP 및 데이터 마이닝 개체에 사용됩니다. 이 속성은 명명된 계산에 대해서만 편집할 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   

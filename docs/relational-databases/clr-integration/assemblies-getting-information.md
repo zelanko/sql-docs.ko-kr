@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99f37c281eacba3fbe673914d9779c8d994187fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: faae880f2751179d5cc0903714062b47893e2dfe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assemblies---getting-information"></a>어셈블리-정보 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]어셈블리에 대 한 메타 데이터에 대 한 다음 함수와 카탈로그 뷰를 쿼리할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [어셈블리 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [어셈블리 디자인](../../relational-databases/clr-integration/assemblies-designing.md)   
  [어셈블리 구현](../../relational-databases/clr-integration/assemblies-implementing.md)  

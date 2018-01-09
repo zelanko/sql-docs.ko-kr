@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e016e0f7d6250f25f1c92d3f2527f68dc91c69e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fd1b3396b763d6ca8eb8c3f3f6f2559f3ef4c44e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
   
 |기호|의미|  
 |------------|-------------|  
-|1.|서버 이외의 유형이 DBTYPE_UDT로 지정 **icommandwithparameters:: Setparameterinfo** 접근자 유형이 DBTYPE_UDT 인 이며 문이 실행 될 때 오류가 발생 합니다.  오류는 DB_E_ERRORSOCCURRED이고 매개 변수 상태는 DBSTATUS_E_BADACCESSOR가 됩니다.<br /><br /> UDT가 아닌 서버 매개 변수에 대해 UDT 유형의 매개 변수를 지정하는 것은 오류입니다.|  
+|1|서버 이외의 유형이 DBTYPE_UDT로 지정 **icommandwithparameters:: Setparameterinfo** 접근자 유형이 DBTYPE_UDT 인 이며 문이 실행 될 때 오류가 발생 합니다.  오류는 DB_E_ERRORSOCCURRED이고 매개 변수 상태는 DBSTATUS_E_BADACCESSOR가 됩니다.<br /><br /> UDT가 아닌 서버 매개 변수에 대해 UDT 유형의 매개 변수를 지정하는 것은 오류입니다.|  
 |2|데이터가 16진수 문자열에서 이진 데이터로 변환됩니다.|  
 |3|데이터가 이진 데이터에서 16진수 문자열로 변환됩니다.|  
 |4|유효성 검사 사용 시 발생할 수 **CreateAccessor** 또는 **GetNextRows**합니다. 오류는 DB_E_ERRORSOCCURRED이고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정됩니다.|  

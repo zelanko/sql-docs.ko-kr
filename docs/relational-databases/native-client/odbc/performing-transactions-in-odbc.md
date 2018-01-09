@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|ODBC
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 078a983b4427ac275828219cd20f85e2482121ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4605f7e9a8f96aec23f884bcdbd620c65d0364ec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="performing-transactions-in-odbc"></a>ODBC의 트랜잭션 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  BEGIN TRANSACTION, COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 같은 Transact-SQL 트랜잭션 문을 사용하면 드라이버에서 예기치 않은 동작이 발생할 수 있으므로 ODBC 응용 프로그램에서는 이러한 문을 사용하지 않는 것이 좋습니다. ODBC 응용 프로그램은 자동 커밋 모드로 실행하면서 다른 트랜잭션 관리 함수나 문을 실행하지 않거나, 수동 커밋 모드로 실행하면서 ODBC **SQLEndTran** 함수를 사용하여 트랜잭션을 커밋하거나 롤백해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [수행 하는 트랜잭션 &#40; ODBC &#41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

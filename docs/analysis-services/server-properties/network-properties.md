@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -42,11 +42,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9566ef27a12b78300ff94e2253ac05393a540be
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a315095f7a7f7060964eb22c0c54698f5f68f9a9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="network-properties"></a>네트워크 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다음 표에 나열 된 서버 속성을 지원 합니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/08/2017
  **IPV4Support**  
  IPv4 프로토콜에 대한 지원을 정의하는 부호 있는 32비트 정수 속성입니다. 이 속성은 다음 표에 나열된 값 중 하나를 가집니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |*0*|IPv4가 해제되어 클라이언트가 연결할 수 없습니다.|  
 |*1.*|(기본값) IPv4가 필요하고 IPv4를 수신할 수 없으면 서버가 시작되지 않습니다.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/08/2017
  **IPV6Support**  
  IPv6 프로토콜에 대한 지원을 정의하는 부호 있는 32비트 정수 속성입니다. 이 속성은 다음 표에 나열된 값 중 하나를 가집니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |*0*|IPv6이 해제되어 클라이언트가 연결할 수 없습니다.|  
 |*1.*|(기본값) IPv6이 필요하고 IPv6을 수신할 수 없으면 서버가 시작되지 않습니다.|  

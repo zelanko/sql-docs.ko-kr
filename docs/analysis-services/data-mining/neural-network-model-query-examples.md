@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d13b5801cbf011723fa0ec9272819a83364f3f8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="neural-network-model-query-examples"></a>신경망 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델에 대 한 쿼리를 만들 때 분석 중에 발견 된 패턴에 대 한 세부 정보를 제공 하는 내용 쿼리 또는 패턴을 사용 하는 모델에 새 데이터에 대 한 예측을 만드는 예측 쿼리를 만들 수 있습니다. 예를 들어 신경망 모델에 대한 내용 쿼리에서는 숨겨진 계층 수와 같은 모델 메타데이터를 검색할 수 있습니다. 또한 예측 쿼리는 입력에 따른 분류를 제안하고 선택적으로 각 분류에 대한 확률을 제공할 수 있습니다.  
@@ -73,7 +71,7 @@ WHERE NODE_TYPE = 24
   
 |MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1.|  
+|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
  신경망 모델의 컨텍스트에서 스키마 행 집합 열의 의미에 대한 정의는 [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)이라고 하는 마이닝 모델을 기반으로 합니다.  
@@ -163,7 +161,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  예제 결과:  
   
-|NODE_UNIQUE_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
+|NODE_UNIQUE_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |------------------------|-----------------------|------------------------|-----------------|  
 |70000000200000000|6000000000000000a|-0.178616518|7|  
 |70000000200000000|6000000000000000b|-0.267561918|7|  
@@ -230,7 +228,7 @@ NATURAL PREDICTION JOIN
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통적인 함수 목록은 [알고리즘 참조(Analysis Services - 데이터 마이닝)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Microsoft 신경망 알고리즘](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft 신경망 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [신경망 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [5 단원: 구축 신경망 네트워크 및 로지스틱 회귀 모델 &#40; 중급 데이터 마이닝 자습서 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  

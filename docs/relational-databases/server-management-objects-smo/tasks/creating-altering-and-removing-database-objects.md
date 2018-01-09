@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9b2565474a777bbaddc6b659227a88bc1d2d609
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc43e77e099c216dbe13f2df5facbdb60a83c63b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>생성, 변경 및 데이터베이스 개체를 제거 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO 개체를 만드는 단계는 다음과 같습니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  개체 및 처음 개체를 만들 때 필요했던 모든 상호 종속 자식 개체를 제거하려면 **Drop** 문을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SMO 개체 모델](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 612b97c8a6a649deaa11b16348a9ba3cc8feb256
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9caf9a17a4513c6261cad876ffb7aadce1c8ff09
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Analysis Services 인스턴스에 서버 관리 권한 부여
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]인스턴스 내에서 서버 관리자 역할의 멤버 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모두에 무제한 액세스할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 및 해당 인스턴스의 데이터입니다. 데이터베이스 작성 또는 처리, 서버 속성 수정, 추적 시작(이벤트 처리용 제외) 등의 서버 차원의 태스크를 수행하려면 사용자가 서버 관리자 역할의 멤버여야 합니다.  

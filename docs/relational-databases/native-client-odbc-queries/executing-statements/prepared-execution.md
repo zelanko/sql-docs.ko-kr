@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 841de8200a7f09301fafa2fc38573b7895e8634f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: af15198f0c876933a9ab2ff5583b903e279e665b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="prepared-execution"></a>준비된 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
  사용 되는 일부 초기 ODBC 응용 프로그램 **SQLPrepare** 언제 든 지 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 사용 되었습니다. **SQLBindParameter** 사용 하지 않아도 **SQLPrepare**를 함께 사용할 수 있습니다 **SQLExecDirect**합니다. 사용 예를 들어 **SQLExecDirect** 와 **SQLBindParameter** 출력은 한 번만 실행된 되는 저장된 프로시저의 매개 변수 또는 반환 코드를 검색 합니다. 사용 하지 마십시오 **SQLPrepare** 와 **SQLBindParameter** 동일한 문이 여러 번 실행 되는 경우가 아니면 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [실행 중인 문 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2109157a401082febbaadb2a42f607aba22ee73
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에 설명 되어 제품 전체의 계정 프로 비전 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), 모든에 대 한 포괄적인 서비스 계정 정보를 제공 하는 항목 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 포함한서비스를[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  

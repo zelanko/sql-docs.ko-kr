@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 317683c9d9f3527bf043153738a31b5b80e9a9ca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9878a5d6577cdeb1e7c5f29b40378af3f4733074
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Analysis Services 서버에서 사용자와 세션 연결 끊기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]관리자로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 작업 관리의 일환으로 최종 사용자 작업을 할 수 있습니다. 사용자 작업을 종료하려면 세션 및 연결을 취소합니다. 세션은 쿼리 실행 시(암시적) 또는 관리자가 쿼리 생성 시 이름을 지정하면(명시적) 자동으로 구성될 수 있습니다. 연결은 쿼리를 실행할 수 있는 열린 통로입니다. 세션과 연결 모두 활성 상태에서 종료할 수 있습니다. 예를 들어 관리자는 처리 시간이 너무 오래 걸리거나 실행 중인 명령이 올바르게 작성되었다는 확신이 없을 경우 세션 처리를 종료할 수 있습니다.  

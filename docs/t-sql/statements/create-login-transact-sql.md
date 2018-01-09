@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +177,7 @@ WINDOWS
   
  이 로그인과 연결될 비대칭 키의 이름을 지정합니다. 이 키는 master 데이터베이스에 이미 있어야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  암호는 대소문자를 구분합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 만들 때만 암호를 미리 해시할 수 있습니다.  
@@ -196,6 +196,8 @@ WINDOWS
  로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](http://support.microsoft.com/kb/918992)을 참조하세요.  
   
  로그인을 만들면 새 로그인이 자동으로 사용하도록 설정되고 해당 로그인에 서버 수준 **CONNECT SQL** 권한이 부여됩니다.  
+ 
+ 서버의 [인증 모드](../../relational-databases/security/choose-an-authentication-mode.md) 액세스를 허용 하도록 로그인 형식과 일치 해야 합니다.
   
  권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.  
   
@@ -212,7 +214,7 @@ WINDOWS
   
  에 대 한 자세한 내용은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 로그인, 참조 [데이터베이스 및 Windows Azure SQL 데이터베이스에서 로그인 관리](http://msdn.microsoft.com/library/ee336235.aspx)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 필요 **ALTER ANY LOGIN** 서버 또는 구성원에 대 한 권한이 **securityadmin** 고정된 서버 역할입니다.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master  데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다.  
@@ -335,7 +337,7 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 권한 시작](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [암호 정책](../../relational-databases/security/password-policy.md)   

@@ -1,13 +1,13 @@
 ---
 title: "SQL Server에서 패키지를 찾거나 R 설치 RevoScaleR 함수를 사용 하는 방법 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 찾거나 SQL Server에서 R 패키지를 설치 하는 방법
 
@@ -38,7 +38,7 @@ Microsoft R Server 릴리스 9.0.1 작업에 사용할 SQL Server 계산 컨텍�
 
 + 지정 하지 않으면 사용자 이름 및 암호 계산 컨텍스트를 만들 때, 하는 경우에 R 코드를 실행 하는 사용자의 id가 사용 됩니다.
 
-+ R 원격 클라이언트에서 이러한 함수를 사용할 때는 만들어야 계산 컨텍스트 개체를 먼저 RxInSQLServer 함수를 사용 하 여 합니다. 그 후 사용 하는 각 패키지 관리 기능에 대 한 계산 컨텍스트를 인수로 전달 합니다.
++ R 원격 클라이언트에서 이러한 함수를 사용할 때는 계산 컨텍스트 개체를 먼저 만들어야를 사용 하 여는 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수입니다. 그 후 사용 하는 각 패키지 관리 기능에 대 한 계산 컨텍스트를 인수로 전달 합니다.
 
 + 패키지 관리 기능을 사용 하 여를 실행할 수는 `sp_execute_external_script`합니다. 이렇게 하면 함수는 저장된 프로시저 호출자의 보안 컨텍스트를 사용 하 여 실행 합니다.
 
@@ -46,22 +46,23 @@ Microsoft R Server 릴리스 9.0.1 작업에 사용할 SQL Server 계산 컨텍�
 
 다음 패키지 관리 기능, RevoScaleR 패키지는 지정 된 계산 컨텍스트에서 설치 및 제거에 대 한 다음과 같이 제공 됩니다.
 
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): 지정 된 계산 컨텍스트에서 설치 된 패키지에 대 한 정보입니다.
++ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages): 지정 된 계산 컨텍스트에서 설치 된 패키지에 대 한 정보입니다.
 
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): 패키지를 압축 한 계산 컨텍스트를 지정 된 저장소 또는 로컬에 저장 한 읽어에 패키지를 설치 합니다.
++ [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages): 패키지를 압축 한 계산 컨텍스트를 지정 된 저장소 또는 로컬에 저장 한 읽어에 패키지를 설치 합니다.
 
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): 계산 컨텍스트에서 설치 된 패키지를 제거 합니다.
++ [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages): 계산 컨텍스트에서 설치 된 패키지를 제거 합니다.
 
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): 지정 된 계산 컨텍스트에서 하나 이상의 패키지에 대 한 경로 가져옵니다.
++ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage): 지정 된 계산 컨텍스트에서 하나 이상의 패키지에 대 한 경로 가져옵니다.
 
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): 지정 된 계산 컨텍스트에서 파일 시스템과 데이터베이스 사이의 패키지 라이브러리를 복사 합니다.
++ [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages): 지정 된 계산 컨텍스트에서 파일 시스템과 데이터베이스 사이의 패키지 라이브러리를 복사 합니다.
 
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 내에서 실행 하는 동안 패키지에 대 한 라이브러리 트리에 대 한 검색 경로 가져옵니다.
++ [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 내에서 실행 하는 동안 패키지에 대 한 라이브러리 트리에 대 한 검색 경로 가져옵니다.
 
-이러한 패키지는 SQL Server 2017에 기본적으로 포함 됩니다. 이러한 함수에 대 한 정보, RevoScaleR 함수 참조 페이지를 참조 하십시오.: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+이러한 패키지는 SQL Server 2017에 기본적으로 포함 됩니다. 이러한 함수에 대 한 정보, RevoScaleR 함수 참조 페이지를 참조 하십시오.: (https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
 > 패키지 관리에 대 한 R 함수에는 Microsoft R Server 9.0.1부터 사용할 수는 있습니다. RevoScaleR 함수를 찾을 수 없으면, 최신 버전으로 업그레이드 해야 하는 것입니다. 
+
 ## <a name="examples"></a>예
 
 이 섹션에는 SQL Server 인스턴스 또는 데이터베이스에서 패키지 관리 기능을 사용 하는 방법 예제가 포함 되어 있습니다. 

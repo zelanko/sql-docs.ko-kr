@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>차원 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브에 대 한 읽기 액세스를 설정한 후 명시적으로 허용 하거나 차원 구성원 (큐브에 사용 되는 측정값의 모든 포함 된 측정값 차원에 포함 된 측정값 포함)에 대 한 액세스를 거부 하는 추가 권한을 설정할 수 있습니다. 예를 들어 여러 범주의 재판매인의 경우, 특정 비즈니스 유형에 대한 데이터를 제외하도록 권한을 설정할 수 있습니다. 다음은 Reseller 차원에서 Warehouse 비즈니스 유형에 대한 액세스 거부의 전후 효과를 설명합니다.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  다음 지침에서는 MDX에서 쿼리를 실행하는 클라이언트 연결을 가정합니다. 클라이언트에서 Power BI의 파워 뷰와 같은 DAX를 사용하는 경우 차원 보안이 쿼리 결과에 분명히 나타나지 않습니다. 자세한 내용은 [다차원 모델용 파워 뷰 이해](understanding-power-view-for-multidimensional-models.md) 를 참조하세요.
       
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  일부 측정값 또는 차원 구성원은 사용자 지정 액세스 시나리오에 사용할 수 없습니다. 역할이 기본 측정값 또는 구성원에 대한 액세스를 제한하거나 측정값 식의 일부인 측정값에 대한 액세스를 제한하는 경우 연결에 실패합니다.  
   
  **차원 보안에 대한 장애물 확인: 기본 측정값, 기본 구성원 및 측정값 식에 사용된 측정값**  

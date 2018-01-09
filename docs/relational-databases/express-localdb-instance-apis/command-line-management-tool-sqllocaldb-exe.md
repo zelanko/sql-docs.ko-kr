@@ -8,7 +8,7 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apilocation: sqluserinstance.dll
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8f2bac1f105f5d299fa97d11fa579226026134aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ffc8033651fedbe906086f0a35ef31d463f6e31
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>명령줄 관리 도구: SqlLocalDB.exe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SqlLocalDB.exe는 사용자가을 명령줄에서 LocalDB 인스턴스를 쉽게 관리할 수 있도록 하는 간단한 도구입니다. 이 도구는 LocalDB 인스턴스 API에 대한 단순 래퍼로 구현되어 있습니다. SQLCMD 등의 비슷한 여러 SQL Server 도구와 마찬가지로 매개 변수는 SqlLocalDB에 명령줄 인수로 전달되며 출력은 콘솔로 보내집니다.  

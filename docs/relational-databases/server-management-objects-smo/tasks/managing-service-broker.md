@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Service Broker [SMO]
@@ -18,16 +18,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c95f140f023d59e07161ac0f8841d306425b77c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 211edf4746ab07cd65ce189c4279e91e1e956a0d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="managing-service-broker"></a>Service Broker 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Smo에서 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체에서 발견 되는 **Microsoft.SqlServer.Management.Smo.Broker** 네임 스페이스는 Microsoft.SqlServer.Smo.dll에 대 한 참조가 필요 합니다. 클래스 정보를 지원하려면 Microsoft.SqlServer.ServiceBrokerEnum.dll에 대한 참조도 필요합니다.  
   
- SMO는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 구현에 대한 프로그래밍 방식 관리(DDL)를 허용하는 일련의 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체를 제공합니다.. 프로그래밍 방식 관리에는 메시지 유형, 계약, 큐 및 서비스를 정의하는 작업이 포함됩니다. SMO는 데이터 조작용 도구가 아니라 관리 도구이므로 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 메시지를 보내고 받는 것은 지원하지 않습니다.  
+ SMO는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 구현에 대한 프로그래밍 방식 관리(DDL)를 허용하는 일련의 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체를 제공합니다. 프로그래밍 방식 관리에는 메시지 유형, 계약, 큐 및 서비스를 정의하는 작업이 포함됩니다. SMO는 데이터 조작용 도구가 아니라 관리 도구이므로 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 메시지를 보내고 받는 것은 지원하지 않습니다.  
   
  SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Database.ServiceBroker%2A> 개체는 최상위 클래스이고 이 클래스 아래에 모든 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 기능이 포함됩니다. 분산 메시징 응용 프로그램에 참여하는 각 데이터베이스에 대해서는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)]를 구현해야 합니다. 따라서 <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 자식이 됩니다.  
   

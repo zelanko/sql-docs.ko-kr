@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73dd29d7c658a9537c6860aecfb69c5fcd538460
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5fd0a8abac60e2e5b0e2f1bce35bd1d6e3554e1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploying-clr-database-objects"></a>CLR 데이터베이스 개체 배포
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]배포는 완성 된 응용 프로그램이 나 모듈을 설치 하 고 다른 컴퓨터에서 실행할 배포 하는 프로세스입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio를 사용하면 CLR(공용 언어 런타임) 데이터베이스 개체를 개발하고 테스트 서버에 배포할 수 있습니다. 또는 Visual Studio 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 재배포 파일을 사용하여 관리되는 데이터베이스 개체를 컴파일할 수도 있습니다. 컴파일되고 나면 CLR 데이터베이스 개체가 포함된 어셈블리를 Visual Studio 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 테스트 서버에 배포할 수 있습니다. Visual Studio .NET 2003은 CLR 통합 프로그래밍이나 배포에 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 .NET Framework가 미리 설치되어 있으며 Visual Studio .NET 2003에서는 .NET Framework 2.0 어셈블리를 사용할 수 없습니다.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
  배포를 클릭하면 Visual Studio에서 프로젝트 배포 후에 이 스크립트를 실행합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

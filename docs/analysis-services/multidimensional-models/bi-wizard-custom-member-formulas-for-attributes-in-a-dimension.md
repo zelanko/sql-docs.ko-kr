@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10b6f8e3daf8a5b13bee1bef87454dfc40096804
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: acec3f91c8229acc6c17f5989b63677b394b6129
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>BI 마법사-차원에서 특성에 대 한 사용자 지정 멤버 수식
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 또는 차원 멤버는 MDX (Multidimensional Expressions) 식의 결과 연결 된 기본 집계를 바꾸려면 차원에 사용자 지정 멤버 수식 기능을 추가 합니다. 이 기능은 차원에서 지정한 특성에 대한 **CustomRollupColumn** 속성을 설정합니다.  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a4f1dcea3c74fdf61af401a854aba9c2166f5610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0159070eb0405e49f9813828aa82b1483008b61f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>큐브에서 데이터 및 메타데이터 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하 여 **브라우저** 큐브 데이터를 검색할 큐브 디자이너의 탭 합니다. 이 뷰를 사용하여 큐브의 구조를 검토하고 데이터베이스 개체의 데이터, 계산, 형식, 보안을 확인할 수 있습니다. 보고 도구 또는 기타 클라이언트 응용 프로그램에서 최종 사용자에게 큐브가 어떻게 표시되는지 신속하게 검토할 수 있습니다. 큐브 데이터를 검색할 때는 차원별로 데이터를 조회하고, 멤버를 드릴다운하고, 차원을 통해 데이터를 조각화할 수 있습니다.  

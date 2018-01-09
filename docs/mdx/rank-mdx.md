@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: RANK
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ba556f2a298ea65ff2d9662a8deba90334d31a0f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cb61eefec8d262d2955e3383c2e0a24b8380be2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rank-mdx"></a>Rank(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  숫자 식이 지정 되는 **순위** 함수 튜플에 대해 지정된 된 숫자 식을 계산 하 여 1부터 지정 된 튜플 순위를 결정 합니다. 숫자 식이 지정 되는 **순위** 함수를 집합에 중복 값을 갖는 튜플에 같은 순위를 할당 합니다. 중복 값에 이렇게 같은 순위를 할당하면 집합의 이후 튜플 순위에 영향을 줍니다. 예를 들어 `{(a,b), (e,f), (c,d)}`와 같은 튜플로 구성된 집합을 고려해 보십시오. 튜플 `(a,b)`는 튜플 `(c,d)`와 값이 동일합니다. 튜플 `(a,b)`의 순위가 1이면 `(a,b)`와 `(c,d)` 모두 순위가 1이 됩니다. 하지만 튜플 `(e,f)`는 순위가 3이 됩니다. 이 집합에서는 순위가 2인 튜플이 있을 수 없습니다.  
   
  숫자 식이 지정 하지 않으면는 **순위** 함수는 지정 된 튜플의 순서 위치 1부터 반환 합니다.  
@@ -91,7 +91,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [순서 &#40; Mdx&#41;](../mdx/order-mdx.md)   
  [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
   

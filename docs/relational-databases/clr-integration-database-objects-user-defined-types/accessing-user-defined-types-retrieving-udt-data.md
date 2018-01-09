@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 034e0ad04a92d2257a798ed8a41b8c2d5cdcddec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 971e75599c1b0d0ac6960a8db45a9ed6cfab9041
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>사용자 정의 형식 액세스-UDT 데이터 검색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]클라이언트에서 UDT로 등록 된 어셈블리에서 사용자 정의 형식 (UDT)를 만들기 위해는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 클라이언트 응용 프로그램에 사용할 수 있어야 합니다. UDT 어셈블리는 응용 프로그램과 같은 디렉터리나 GAC(전역 어셈블리 캐시)에 넣을 수 있습니다. 사용자의 프로젝트에서 어셈블리에 대한 참조를 설정할 수도 있습니다.  

@@ -5,13 +5,10 @@ ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>테이블 형식 및 다차원 솔루션 비교
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services는 비즈니스 인텔리전스 의미 체계 모델을 만들기 위한 여러 가지 방식: 테이블 형식, 다차원 및 Powerpivot for SharePoint.
@@ -60,23 +57,23 @@ ms.lasthandoff: 12/08/2017
 |||| 
 |-|-|-|
 ||다차원|테이블 형식|
-|동작|예|아니요|
-|Aggregations|예|아니요|
-|계산된 열|아니요|예|  
+|동작|예|아니오|
+|Aggregations|예|아니오|
+|계산된 열|아니오|예|  
 |계산 측정값|예|예| 
-|계산된 테이블|아니요|예<sup>1</sup>|  
-|사용자 지정 어셈블리|예|아니요|
-|사용자 지정 롤업|예|아니요| 
-|기본 멤버|예|아니요|  
+|계산된 테이블|아니오|예<sup>1</sup>|  
+|사용자 지정 어셈블리|예|아니오|
+|사용자 지정 롤업|예|아니오| 
+|기본 멤버|예|아니오|  
 |표시 폴더|예|예<sup>1</sup>|  
 |Distinct Count|예|예(DAX를 통해)|
 |드릴스루|예|예 (클라이언트 응용 프로그램에 따라 다름)|
 |계층 구조|예|예|
 |KPI|예|예| 
 |연결된 개체|예|예(연결된 테이블)|
-|M 식|아니요|예<sup>1</sup>|
+|M 식|아니오|예<sup>1</sup>|
 |다 대 다 관계|예|더 (이지만 [양방향 교차 필터](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 1200 이상 호환성 수준에서)| 
-|명명된 집합|예|아니요| 
+|명명된 집합|예|아니오| 
 |비정형 계층 구조|예|예<sup>1</sup>|  
 |부모-자식 계층 구조|예|예(DAX를 통해)|
 |파티션|예|예| 
@@ -86,7 +83,7 @@ ms.lasthandoff: 12/08/2017
 |반가산적 측정값|예|예| 
 |Translations|[예](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|예| 
 |사용자 정의 계층|예|예|
-|쓰기 저장(writeback)|예|아니요| 
+|쓰기 저장(writeback)|예|아니오| 
   
  <sup>1</sup> 참조 [Compatibility Level for Tabular Analysis Services의 모델링](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) 호환성 수준 간의 기능 차이점에 대 한 정보에 대 한 합니다.  
   

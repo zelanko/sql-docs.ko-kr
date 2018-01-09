@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,11 +19,11 @@ helpviewer_keywords: DROP EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: c157270e83ccfd3277356863b26c49222691e9e3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 23ea7a2d914dd1dd0eabcb411b3636f19a8cd70d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP 외부 라이브러리 (Transact SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [외부 라이브러리 (Transact SQL) 만들기](create-external-library-transact-sql.md)  
 [ALTER 외부 라이브러리 (Transact SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  

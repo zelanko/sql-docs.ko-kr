@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d91930309e865b84f4d6e763a46026879bdc47c5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 마법사-차원에 계정 인텔리전스 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 또는 계정 특성의 멤버에 수입 및 비용과 같은 표준 계정 분류를 할당 하려면 차원에 계정 인텔리전스 기능을 추가 합니다. 이러한 향상된 기능을 사용하면 Asset, Liability 등의 계정 유형을 식별할 수 있으며 각 계정 유형에 적절한 집계를 할당할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 분류를 사용하여 시간별로 계정을 집계할 수 있습니다.  
@@ -55,13 +52,13 @@ ms.lasthandoff: 12/08/2017
   
     |서버 계정 유형|집계|Description|  
     |-------------------------|-----------------|-----------------|  
-    |**통계**|**InclusionThresholdSetting**|항목의 계산된 비율 또는 시간에 따라 집계되지 않는 항목의 합계입니다. 이 계정 유형은 변환 규칙을 사용하여 통화 간을 변환하지 않습니다.|  
+    |**통계**|**없음**|항목의 계산된 비율 또는 시간에 따라 집계되지 않는 항목의 합계입니다. 이 계정 유형은 변환 규칙을 사용하여 통화 간을 변환하지 않습니다.|  
     |**Liability**|**LastNonEmpty**|특정 시간에 진 빚의 가치나 금액입니다. 이 계정 유형은 시간에 따라 누적되지 않으므로 자연히 시간에 따라 집계되지 않습니다. 예를 들어 Year 금액은 데이터가 있는 마지막 월의 값입니다. 이 계정 유형은 End of Period 비율을 사용하여 통화 간을 변환합니다.|  
     |**Asset**|**LastNonEmpty**|특정 시간에 보유하고 있는 빚의 가치나 금액입니다. 이 계정 유형은 시간에 따라 누적되지만 시간에 따라 자연히 집계되지는 않습니다. 예를 들어 Year 금액은 데이터가 있는 마지막 월의 값입니다. 이 계정 유형은 End of Period 비율을 사용하여 통화 간을 변환합니다.|  
     |**Balance**|**LastNonEmpty**|특정 시간의 항목 합계입니다. 이 계정 유형은 누적되지만 시간에 따라 자연히 집계되지 않습니다. 예를 들어 Year 금액은 데이터가 있는 마지막 월의 값입니다.|  
-    |**Flow**|**합계**|항목의 증분 합계입니다. 이 계정 유형은 시간에 따라 **Sum** 으로 집계되지만 통화 변환 규칙을 사용하여 통화 간을 변환하지 않습니다.|  
+    |**Flow**|**Sum**|항목의 증분 합계입니다. 이 계정 유형은 시간에 따라 **Sum** 으로 집계되지만 통화 변환 규칙을 사용하여 통화 간을 변환하지 않습니다.|  
     |**Expense**|**합계**|소비한 항목의 가치나 금액입니다. 이 계정 유형은 시간에 따라 **Sum** 으로 집계되며 평균 비율을 사용하여 통화 간을 변환합니다.|  
-    |**Income**|**합계**|받은 항목의 가치나 금액입니다. 이 계정 유형은 시간에 따라 **Sum** 으로 집계되며 평균 비율을 사용하여 통화 간을 변환합니다.|  
+    |**Income**|**Sum**|받은 항목의 가치나 금액입니다. 이 계정 유형은 시간에 따라 **Sum** 으로 집계되며 평균 비율을 사용하여 통화 간을 변환합니다.|  
   
     > [!NOTE]  
     >  필요한 경우 차원의 여러 계정 유형을 특정 서버 계정 유형에 매핑할 수 있습니다.  

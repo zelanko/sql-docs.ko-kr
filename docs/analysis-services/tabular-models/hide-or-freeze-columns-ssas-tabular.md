@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.hideunhidecolumnsdb.f1
@@ -21,17 +18,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 87db88ee64c7890db4b4a711af91307b2615fb9a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8334a3e6087740a2060425e764e9de6afa365e19
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>열 숨기기 또는 고정(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]모델 디자이너에서 테이블에 표시 하지 않을 열이 없는 경우 임시로 숨길 수 있습니다 이러한. 열을 숨기면 새 열을 추가하거나 관련 데이터 열만 사용하여 작업하기 위해 화면에서 공간을 확보할 수 있습니다. 모델 디자이너의 **열** 메뉴 및 각 열 머리글을 마우스 오른쪽 단추로 클릭했을 때 열리는 메뉴를 사용하여 열을 숨기거나 숨겨진 열을 표시할 수 있습니다. 모델의 다른 영역으로 스크롤할 때 모델의 특정 영역이 계속 표시되도록 하려면 해당 영역의 열을 고정하여 잠글 수 있습니다.  
   
 > [!IMPORTANT]  
->  열을 숨기는 기능은 데이터 보안의 목적보다는 모델 디자이너 또는 보고서에 표시되는 열의 목록을 단순화하고 간소화하기 위해 사용됩니다. 데이터 보안을 위해서는 보안 역할을 정의할 수 있습니다. 역할을 통해 특정 개체에 대해서만 메타데이터와 데이터를 볼 수 있도록 제한할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)을 참조하세요.  
+>  열을 숨기는 기능은 데이터 보안의 목적보다는 모델 디자이너 또는 보고서에 표시되는 열의 목록을 단순화하고 간소화하기 위해 사용됩니다. 데이터 보안을 위해서는 보안 역할을 정의할 수 있습니다. 역할을 통해 특정 개체에 대해서만 메타데이터와 데이터를 볼 수 있도록 제한할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)를 참조하세요.  
   
  열을 숨길 때 모델 디자이너 또는 보고서에서 작업할 동안에만 열을 숨기는 방법도 있습니다. 모든 열을 숨기면 모델 디자이너에서 전체 테이블이 공백으로 나타납니다.  
   

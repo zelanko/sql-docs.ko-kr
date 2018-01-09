@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3f21d2fb03590680afb0ceaf405448f6ad17761
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 89db9be2fb51e8f37dce7b223b312a0a7e0a8221
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tracing-and-replaying-events"></a>이벤트 추적 및 재생
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Smo에서 **추적** 및 **재생** 개체에 <xref:Microsoft.SqlServer.Management.Trace> 에 프로그래밍 방식 액세스를 제공 하는 네임 스페이스는 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 의인스턴스를모니터링에사용되는기능을[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 프로시저가 너무 늦게 실행되어 성능 저하를 유발하는지 확인할 수 있습니다.  

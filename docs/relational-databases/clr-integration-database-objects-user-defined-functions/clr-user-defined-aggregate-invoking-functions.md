@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c132fc09f18cf35df63e917ddfe1afe92baa9f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4a1bf6dc27e59e0e739a8a8841ac2f19f69ff32
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 사용자 정의 집계-함수 호출
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문의 공용 언어 런타임 (CLR) 사용자 정의 집계, 시스템 집계 함수에 적용 되는 모든 규칙에 따라 호출할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 -   사용자 정의 집계의 반환 형식이 일치 해야 합니다는 *return_type* 에 **CREATE AGGREGATE** 문.  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
  테이블의 열에서 가져온 문자열 값 집합을 연결하는 사용자 정의 집계 함수의 예는 다음과 같습니다.  
   
  [C#]  
@@ -242,7 +242,7 @@ GROUP BY BookID;
   
 |BookID|작성자 이름|  
 |------------|------------------|  
-|1.|Johnson|  
+|1|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   
@@ -447,7 +447,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 집계](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

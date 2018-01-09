@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), sending data to a stored procedure one row at a time
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20900452e652063da258e0d22cd56d4c49040218
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb1d06be20296ad3513bf2e0c3e926f44e1f2b3f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
  테이블 값에 대 한 SQLPutData를 호출할 때 *DataPtr* (이 예에서는 항상 1)에서 사용할 수 있는 행의 수에 사용 됩니다. *StrLen_or_IndPtr* 항상 0 이어야 합니다. 테이블 반환의 모든 행이 전달 되 면 SQLPutData로 호출 됩니다는 *DataPtr* 값이 0입니다.  
   
-## <a name="prerequisite"></a>필수 구성 요소  
+## <a name="prerequisite"></a>사전 요구 사항  
  이 절차에서는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 서버에서 실행되었다고 가정합니다.  
   
 ```  

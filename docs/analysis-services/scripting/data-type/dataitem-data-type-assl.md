@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DataItem Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2d7ed0841e42ad4dadf63b738986afc0720c9a8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ec40eca06225eef5d9c7e505e4fe2c9dee6972b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dataitem-data-type-assl"></a>DataItem 데이터 형식(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]데이터 항목에 열 또는 특성 등의 데이터와 관련 된 특성을 나타내는 기본 데이터 형식을 정의 합니다.  
@@ -54,16 +52,16 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|없음|  
-|파생 데이터 형식|없음|  
+|기본 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
 |자식 요소|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [Collation](../../../analysis-services/scripting/properties/collation-element-assl.md), [DataSize](../../../analysis-services/scripting/properties/datasize-element-assl.md), [DataType](../../../analysis-services/scripting/properties/datatype-element-assl.md), [Format](../../../analysis-services/scripting/properties/format-element-assl.md), [InvalidXmlCharacters](../../../analysis-services/scripting/properties/invalidxmlcharacters-element-assl.md), [MimeType](../../../analysis-services/scripting/properties/mimetype-element-assl.md), [NullProcessing](../../../analysis-services/scripting/properties/nullprocessing-element-assl.md), [Source](../../../analysis-services/scripting/properties/source-element-binding-assl.md), [Trimming](../../../analysis-services/scripting/properties/trimming-element-assl.md)|  
 |파생 요소|주의에 있는 표를 참조하십시오.|  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  다음 표에서는 **DataItem**유형의 요소를 나열합니다.  
   
-|부모 요소|**DataItem**유형의 요소|설명|  
+|부모 요소|**DataItem**유형의 요소|주석|  
 |--------------------|----------------------------------|--------------|  
 |[AttributeTranslation](../../../analysis-services/scripting/data-type/attributetranslation-data-type-assl.md)|[CaptionColumn](../../../analysis-services/scripting/objects/captioncolumn-element-assl.md)|**Source** 의 **DataItem** 요소는 [ColumnBinding](../../../analysis-services/scripting/data-type/columnbinding-data-type-assl.md) 또는 [AttributeBinding](../../../analysis-services/scripting/data-type/attributebinding-data-type-assl.md)|  
 |[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|[CustomRollupColumn](../../../analysis-services/scripting/objects/customrollupcolumn-element-assl.md)|**Source** 의 **DataItem** 요소는 [ColumnBinding](../../../analysis-services/scripting/data-type/columnbinding-data-type-assl.md) 또는 [AttributeBinding](../../../analysis-services/scripting/data-type/attributebinding-data-type-assl.md)|  

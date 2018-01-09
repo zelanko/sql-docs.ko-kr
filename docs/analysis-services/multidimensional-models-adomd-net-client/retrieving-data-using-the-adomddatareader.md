@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9c02bc400a7d1b3d9bec1a42f6ee43045616e3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 66058488afc823095c2868b45d4156d723fb6ae6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>AdomdDataReader를 사용하여 데이터 검색
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]분석 데이터를 검색할 때의 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 오버 헤드와 상호 작용 간에 적절 한 균형을 제공 합니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 분석 데이터 원본에서 정방향 및 읽기 전용의 평면화된 데이터 스트림을 검색합니다. 이 버퍼링되지 않은 데이터 스트림을 사용하면 절차적인 논리에서 분석 데이터 원본의 결과를 순차적으로 처리할 수 있습니다. 따라서 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>는 데이터가 메모리에 캐시되지 않기 때문에 표시를 목적으로 많은 양의 데이터를 검색할 때 유용하게 사용할 수 있습니다.  

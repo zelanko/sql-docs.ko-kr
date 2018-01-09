@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83363ce6c22bdbb651074e3d42ae0d02ab2c2d2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 546e6bf41520d265aa88c46982b9ee4553d9f5b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>SQL 문 생성(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
  SELECT 문의 열 목록에는 현재 태스크를 수행하는 데 필요한 열만 포함되어 있어야 합니다. 그래야만 네트워크를 통해 보내는 데이터의 양이 줄 뿐 아니라 데이터베이스 변경이 응용 프로그램에 미치는 영향도 줄어듭니다. 응용 프로그램에서 테이블의 열을 참조하지 않는 경우 해당 열이 변경되어도 응용 프로그램에는 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [실행 중인 쿼리 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

@@ -5,13 +5,10 @@ ms.date: 10/21/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e44414be7517bbecf0411753bdd55337cc9e0d39
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a95f7acdcf05c003521a4471f07036b5f458b65e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>테이블 형식 모델 (SSAS 테이블 형식)의 DAX
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터 분석 식 (DAX)는 Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에서 사용자 지정 계산을 만드는 데 사용 되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
@@ -76,8 +73,8 @@ ms.lasthandoff: 12/08/2017
 |정수|64비트(8바이트) 정수 값 <sup>1, 2</sup>|소수 자릿수가 없는 숫자입니다. 정수는 양수나 음수가 될 수 있지만 -9,223,372,036,854,775,808(-2^63)부터 9,223,372,036,854,775,807(2^63-1) 사이의 정수여야 합니다.|  
 |10진수|64비트(8바이트) 실수 <sup>1, 2</sup>|실수는 소수 자리를 가질 수 있는 수입니다. 실수는 광범위한 값을 포함합니다.<br /><br /> -1.79E +308에서 -2.23E -308 사이의 음수 값<br /><br /> 0<br /><br /> 2.23E -308에서 1.79E + 308 사이의 양수 값<br /><br /> 하지만 유효 숫자 수는 열일곱 자릿수로 제한됩니다.|  
 |Boolean|Boolean|True 또는 False 값입니다.|  
-|텍스트|문자열|유니코드 문자 데이터 문자열입니다. 텍스트 형식으로 표시된 문자열, 숫자 또는 날짜가 될 수 있습니다.|  
-|날짜|날짜/시간|허용되는 날짜-시간 표현의 날짜 및 시간<br /><br /> 유효한 날짜는 1900년 3월 1일 이후의 모든 날짜입니다.|  
+|텍스트 모드|String|유니코드 문자 데이터 문자열입니다. 텍스트 형식으로 표시된 문자열, 숫자 또는 날짜가 될 수 있습니다.|  
+|date|날짜/시간|허용되는 날짜-시간 표현의 날짜 및 시간<br /><br /> 유효한 날짜는 1900년 3월 1일 이후의 모든 날짜입니다.|  
 |Currency|Currency|통화 데이터 형식에는 -922,337,203,685,477.5808부터 922,337,203,685,477.5807 사이의 소수 자릿수가 고정된 네 자릿수를 사용할 수 있습니다.|  
 |해당 사항 없음|공백|공백은 SQL null을 나타내거나 대체하는 DAX의 데이터 형식입니다. BLANK 함수를 사용하여 공백을 만들고 논리 함수 ISBLANK를 사용하여 공백을 테스트할 수 있습니다.|  
   

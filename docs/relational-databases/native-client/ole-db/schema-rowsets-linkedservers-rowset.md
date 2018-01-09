@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c612665a38ec016208d241396a615db2fefa358f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc7f37349f76ffa2ee955f4342844f9d8582b742
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>스키마 행 집합-LINKEDSERVERS 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  **LINKEDSERVERS** 행 집합에는 다음 열이 포함되어 있습니다.  
   
-|열 이름|유형 표시기|설명|  
+|열 이름|유형 표시기|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|연결된 서버의 이름입니다.|  
 |SVR_PRODUCT|DBTYPE_WSTR|연결된 서버 이름이 나타내는 데이터 저장소 유형을 식별하는 제조업체 또는 기타 이름입니다.|  

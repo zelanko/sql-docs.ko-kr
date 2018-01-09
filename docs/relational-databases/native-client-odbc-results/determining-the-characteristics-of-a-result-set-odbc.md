@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-results
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b38f9221a82b9d3f042045cf6aa08b16ead82fad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 065e73417c448ea1ae54b31b9a2721ecd2fa58cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>결과 집합의 특징 확인(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  응용 프로그램에서 특정 메타데이터 집합을 두 번 이상 사용하는 경우 이러한 메타데이터 집합을 처음으로 가져올 때 전용 변수에 해당 정보가 캐시되는 이점을 얻을 수 있습니다. 이는 나중에 드라이버를 강제로 서버에 왕복하게 하는 ODBC 카탈로그 함수가 동일한 정보에 대해 호출되지 않도록 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [처리 결과 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

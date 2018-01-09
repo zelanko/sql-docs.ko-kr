@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a65107e5281bfa85e92a1c1ca27f9213fdd69ded
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e5c678f53cbf6ffe66d8713e7c847137330eb7e1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>3단원: 측정값, 특성 및 계층 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]처음 큐브를 정의한 후 준비가 유용성 고 큐브의 친숙 합니다. 이렇게 하려면 다양한 수준에서 탐색 및 집계를 지원하는 계층을 추가하고 특정 측정값에 형식을 적용하고 계산 및 관계를 정의해야 합니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 [배포된 큐브 찾아보기](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
 이 태스크에서는 큐브 디자이너의 브라우저를 사용하여 큐브 데이터를 찾아봅니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
 [다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-보고서에 대 한 테이블 동작 속성 구성
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]에 대 한 데이터 모델로 테이블 형식 모델을 사용할 경우 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], 보다 세부적인 수준에서 정보 행을 표시 하는 테이블 동작 속성을 설정할 수 있습니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보(예: 이름, 사진 ID, 로고 이미지)의 기본 배치가 향상됩니다.  
@@ -141,7 +138,7 @@ ms.lasthandoff: 12/08/2017
   
  ![행 ID 그룹화를 기반으로 차트](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "행 ID 그룹화를 기반으로 차트")  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  모델에서 테이블을 평가하고 개별 항목으로 항상 표시되어야 하는 정보 행을 포함하는 테이블에서 테이블 동작 속성을 설정한 후 추가 속성 또는 설정을 사용하여 모델을 최적화할 수 있습니다.  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a83bab6263ca8812fb7909a92c48daab8ec96883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d6b8b562bb4dbcdb53326bf1a97163368b282fa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client의 시스템 요구 사항
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,15 +76,15 @@ ms.lasthandoff: 11/17/2017
 |데이터 형식|SQL Server Native Client <br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC 및<br /><br /> SQL Server Native Client OLE DB 응용 프로그램에서 DataTypeCompatibility=80 설정|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<8kb =)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|이미지|  
-|varchar(max)|varchar|varchar|텍스트|  
-|nvarchar(max)|nvarchar|nvarchar|Ntext|  
+|varbinary(max)|varbinary|varbinary|image|  
+|varchar(max)|varchar|varchar|텍스트 모드|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|udt|varbinary|이미지|  
-|date|date|varchar|Varchar|  
-|datetime2|datetime2|varchar|Varchar|  
+|CLR UDT (> 8Kb)|udt|varbinary|image|  
+|날짜|날짜|varchar|Varchar|  
+|Datetime2|Datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
-|time|time|varchar|Varchar|  
+|Time|Time|varchar|Varchar|  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client 프로그래밍](../../relational-databases/native-client/sql-server-native-client-programming.md)   

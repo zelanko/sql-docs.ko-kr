@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6837fe5d825a12287cd46c122e5d3bcfc69c4e05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08cca5788a9e3908fd72fd415feaab72533b1480
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>초기화 및 권한 부여 속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
  공급자별 속성 집합 DBPROPSET_SQLSERVERDATASOURCEINFO는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 추가 속성을 정의; 참조 [데이터 원본 정보 속성](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md) 자세한 정보에 대 한 합니다.  
   
 ## <a name="the-sql-server-native-client-ole-db-provider-string"></a>SQL Server Native Client OLE DB 공급자 문자열  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 공급자 문자열 속성 값에서 ODBC 유사 구문을 인식합니다. 공급자 문자열 속성은 OLE DB 데이터 원본에 대한 연결이 설정될 때 OLE DB 초기화 속성 DBPROP_INIT_PROVIDERSTRING의 값으로 제공됩니다. 이 속성은 OLE DB 데이터 원본에 대한 연결을 구현하기 위해 필요한 OLE DB 공급자별 연결 데이터를 지정합니다. 문자열 내에서 요소는 세미콜론으로 구분됩니다. 문자열의 마지막 요소는 세미콜론으로 끝나야 합니다. 각 요소는 키워드, 등호 문자, 그리고 초기화 시 전달되는 값으로 구성됩니다. 예를 들어  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 공급자 문자열 속성 값에서 ODBC 유사 구문을 인식합니다. 공급자 문자열 속성은 OLE DB 데이터 원본에 대한 연결이 설정될 때 OLE DB 초기화 속성 DBPROP_INIT_PROVIDERSTRING의 값으로 제공됩니다. 이 속성은 OLE DB 데이터 원본에 대한 연결을 구현하기 위해 필요한 OLE DB 공급자별 연결 데이터를 지정합니다. 문자열 내에서 요소는 세미콜론으로 구분됩니다. 문자열의 마지막 요소는 세미콜론으로 끝나야 합니다. 각 요소는 키워드, 등호 문자, 그리고 초기화 시 전달되는 값으로 구성됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 Server=MyServer;UID=MyUserName;  

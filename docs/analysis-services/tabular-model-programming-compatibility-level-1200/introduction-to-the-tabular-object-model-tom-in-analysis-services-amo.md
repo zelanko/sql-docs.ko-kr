@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3f8399c5430cf34d947e881586bacef5ade46587
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92b6d35f7ad2a4c32b7f9ba6d7dcb1e2fdc8e407
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO의에서 테이블 형식 개체 모델 (TOM) 소개
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 개체 모델 (TOM)에 호환성 수준 1200 이상에서 작성 된 테이블 형식 모델에 대 한 프로그래밍 시나리오를 지원 하기 위해 만든 관리 개체 AMO (Analysis Services) 클라이언트 라이브러리의 확장입니다. AMO에서와 마찬가지로 TOM 범주 예측자 변수, 가져오기 및 데이터를 새로 고칠 및 역할과 사용 권한을 할당와 같은 관리 기능을 처리 하는 프로그래밍 방법을 제공 합니다.  

@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -51,11 +48,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e0ff496e40e85387e492fc6cfe355035c0e271ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d448349dfa423810a6bdfd70a5d79a1dfd41f0b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-measure-properties"></a>측정값 속성 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]측정값을 정의할 수 있습니다 사용할 수 있는 속성은 방법을 해당 측정값의 작동 고 측정값의 사용자에 게 표시 하는 방법을 제어할 수 있습니다.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|----------------|  
 |**AggregateFunction**|필수 사항입니다. 측정값이 집계되는 방법을 결정합니다. **Sum** 이 기본 집계입니다. 자세한 내용은 각 함수 설명의 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 을 참조하세요.|  
 |**DataType**|필수 사항입니다. 측정값이 바인딩되는 기본 팩트 테이블 열의 데이터 형식을 지정합니다. 이 값은 기본적으로 원본 열에서 상속됩니다.|  
-|**Description**|클라이언트 응용 프로그램에 노출될 수 있는 측정값에 대한 설명을 제공합니다.|  
+|**설명**|클라이언트 응용 프로그램에 노출될 수 있는 측정값에 대한 설명을 제공합니다.|  
 |**DisplayFolder**|사용자가 큐브에 연결할 때 측정값이 표시되는 폴더를 지정합니다. 큐브에 많은 측정값이 있을 때 표시 폴더를 사용하여 측정값을 분류하고 사용자 검색 환경을 개선할 수 있습니다.|  
 |**FormatString**|측정값의 **FormatString** 속성을 사용하여 사용자에게 측정값을 표시하는 데 사용되는 형식을 선택할 수 있습니다.<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 표시 형식 목록이 제공되지만 목록에 없는 여러 가지 추가 형식을 지정할 수 있습니다. Microsoft Visual Basic에서 유효한 사용자 정의 형식이나 명명된 형식을 지정할 수 있습니다.|  
 |**ID**|필수 사항입니다. 측정값의 고유 ID를 표시합니다. 이 속성은 읽기 전용입니다.|  

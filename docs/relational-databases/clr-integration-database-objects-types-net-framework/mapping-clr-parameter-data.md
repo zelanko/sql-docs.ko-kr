@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -33,11 +33,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bee49e277d3492dc93bcdf29b65c1c3007cebe50
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3592a4c547b3586df4be45b2e1734e330dd16664
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR 매개 변수 데이터 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]다음 표에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대 한 공용 언어 런타임 (CLR)에서 동등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 **System.Data.SqlTypes** 네임 스페이스 및 해당 네이티브 CLR 형식에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework입니다.  
@@ -48,41 +48,41 @@ ms.lasthandoff: 11/17/2017
 |**bigint**|**SqlInt64**|**Int64, null 허용\<Int64 >**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte]**|  
 |**bit**|**SqlBoolean**|**부울, null은 허용\<부울 >**|  
-|**char**|없음|없음|  
-|**cursor**|없음|없음|  
+|**char**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**cursor**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**date**|**SqlDateTime**|**DateTime, null 허용\<날짜/시간 >**|  
 |**datetime**|**SqlDateTime**|**DateTime, null 허용\<날짜/시간 >**|  
-|**datetime2**|없음|**DateTime, null 허용\<날짜/시간 >**|  
+|**datetime2**|InclusionThresholdSetting|**DateTime, null 허용\<날짜/시간 >**|  
 |**DATETIMEOFFSET**|**없음**|**DateTimeOffset의 경우 null을 허용\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**10 진수, null은 허용\<10 진수 >**|  
 |**float**|**SqlDouble**|**Double, null은 허용\<Double >**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography** SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|없음|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|없음|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|없음|  
-|**image**|없음|없음|  
+|**geography**|**SqlGeography**<br /><br /> **SqlGeography** SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|InclusionThresholdSetting|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|InclusionThresholdSetting|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|InclusionThresholdSetting|  
+|**image**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**int**|**SqlInt32**|**Int32, null 허용\<i n t 32 >**|  
 |**money**|**SqlMoney**|**10 진수, null은 허용\<10 진수 >**|  
 |**nchar**|**SqlChars, SqlString**|**String, Char**|  
-|**ntext**|없음|없음|  
+|**ntext**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**numeric**|**SqlDecimal**|**10 진수, null은 허용\<10 진수 >**|  
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** 데이터 전송 및 액세스에 대 한 더 일치 되 고 **SQLString** 더 적합 한 문자열 작업 수행에 대 한 합니다.|**String, Char**|  
 |**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, String, Char, Nullable\<char >**|  
 |**real**|**그러나 SqlSingle** (범위 **SqlSingle**, 보다 크면 **실제**)|**단일, null은 허용\<단일 >**|  
-|**rowversion**|없음|**Byte]**|  
+|**rowversion**|InclusionThresholdSetting|**Byte]**|  
 |**smallint**|**SqlInt16**|**Int16, null 허용\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**10 진수, null은 허용\<10 진수 >**|  
-|**sql_variant**|없음|**개체**|  
-|**table**|없음|없음|  
-|**text**|없음|없음|  
-|**time**|없음|**Null 허용 TimeSpan\<TimeSpan >**|  
-|**timestamp**|없음|없음|  
+|**sql_variant**|InclusionThresholdSetting|**개체**|  
+|**table**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**text**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**time**|InclusionThresholdSetting|**Null 허용 TimeSpan\<TimeSpan >**|  
+|**timestamp**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**tinyint**|**SqlByte**|**Byte, null 허용\<바이트 >**|  
 |**uniqueidentifier**|**SqlGuid**|**Guid, null 허용\<Guid >**|  
-|**사용자 정의 type(UDT)**|없음|동일한 어셈블리 또는 종속 어셈블리의 사용자 정의 형식에 바인딩된 동일한 클래스입니다.|  
+|**사용자 정의 type(UDT)**|InclusionThresholdSetting|동일한 어셈블리 또는 종속 어셈블리의 사용자 정의 형식에 바인딩된 동일한 클래스입니다.|  
 |**varbinary**|**SqlBytes, SqlBinary**|**Byte]**|  
 |**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**바이트, Byte, Nullable\<바이트 >**|  
-|**varchar**|없음|없음|  
-|**xml**|**SqlXml**|없음|  
+|**varchar**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**xml**|**SqlXml**|InclusionThresholdSetting|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Out 매개 변수로 자동 데이터 형식 변환  
  CLR 메서드는 입력된 매개 변수를 표시 하 여 호출 코드나 프로그램 정보를 반환할 수는 **아웃** 한정자 (Microsoft Visual C#) 또는  **\<out () > ByRef** (Microsoft Visual Basic) 입력된 매개 변수는 CLR 데이터 형식에는 **System.Data.SqlTypes** 네임 스페이스에 속하고 호출 프로그램에 해당 하는 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식 변환이 자동으로 발생 입력된 매개 변수 데이터 형식 CLR 메서드가 데이터 형식을 반환 합니다.  
@@ -116,8 +116,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 데이터 형식 (SQL Server)**|**SQL Server 데이터 형식**|  
-|**10 진수**|smallmoney|  
-|**SqlMoney**|smallmoney|  
+|**10 진수**|SMALLMONEY|  
+|**SqlMoney**|SMALLMONEY|  
 |**10 진수**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
@@ -128,7 +128,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |---------------------|  
 |추가 **SqlGeography**, **SqlGeometry**, 및 **SqlHierarchyId** 매핑 테이블에는 형식입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [.NET Framework의 SQL Server 데이터 형식](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

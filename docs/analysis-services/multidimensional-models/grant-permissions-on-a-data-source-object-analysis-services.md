@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.datasources.f1
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5a08c7f67120126f836552af70bf97e0b6cda366
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f7cd02446a61b7ff1c8d9fdaa2803c30ee81a6e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>데이터 원본 개체에 대한 권한 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]일반적으로 대부분의 사용자가을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기반이 되는 데이터 원본에 액세스할 필요가 없는 한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트. 사용자는 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 데이터를 쿼리하기만 합니다. 그러나 마이닝 모델 기반의 예측을 수행하는 등의 데이터 마이닝 컨텍스트에서는 사용자가 마이닝 모델에서 얻은 데이터와 사용자 제공 데이터를 조인해야 합니다. 사용자 제공 데이터가 포함된 데이터 원본에 연결하기 위해 사용자는 [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 또는 [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 절이 포함된 DMX(Data Mining Extensions) 쿼리를 사용합니다.  

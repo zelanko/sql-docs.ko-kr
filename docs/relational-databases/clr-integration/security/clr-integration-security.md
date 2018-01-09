@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc5caa71cbc0a367456787f1f19babb89190d978
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7045ebaf7ed6b6d9ce3590e8406df34a040584f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]보안 모델은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와 통합은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 공용 언어 런타임 (CLR)를 관리 및 다양 한 유형의 CLR 및 비 CLR 개체 내에서 실행 중인 간의 액세스를 보호 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 이러한 개체는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이나 서버에서 실행되는 다른 CLR 개체에서 호출할 수 있습니다. 개체 간의 호출을 링크라고 합니다. 이러한 개체에 대해 수행되는 보안 검사의 유형은 관련된 링크의 유형에 따라 다릅니다.  

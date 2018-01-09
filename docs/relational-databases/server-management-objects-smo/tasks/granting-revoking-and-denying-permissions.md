@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25903194512146b53d325b217ff7d866d7b38ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d9a4e8529fdb24060db49e2263576f492570e64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>권한 부여, 취소 및 거부
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 개체를 사용 하는 일련의 권한 또는 개별 서버 권한을 할당 하는 <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> 개체입니다. 서버 수준 권한의 경우 피부여자가 로그온을 참조합니다. Windows에 의해 인증된 로그온이 Windows 사용자 이름으로 나열됩니다. 이 코드 예제를 실행하면 피부여자로부터 권한이 취소되고 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 메서드로 권한이 제거되었는지 확인합니다.  

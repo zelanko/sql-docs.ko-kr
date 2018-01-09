@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|ODBC
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f28bf395b36900f23e20f826c8badd7a8310f01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ab8ca0cedf17f38b55750f06e401232ff495b0f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLiduRows|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
 |SQLSelects|SQL_PERF_START 이후 처리된 SELECT 문의 수입니다.|  
 |SQLSelectRows|SQL_PERF_START 이후에 선택된 행의 수입니다.|  
-|트랜잭션|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 응용 프로그램이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
+|의|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 응용 프로그램이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
 |SQLPrepares|수가 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360) SQL_PERF_START 이후 호출 합니다.|  
 |ExecDirects|수가 **SQLExecDirect** SQL_PERF_START 이후 호출 합니다.|  
 |SQLExecutes|수가 **SQLExecute** SQL_PERF_START 이후 호출 합니다.|  

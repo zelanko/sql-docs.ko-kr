@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: multidimensional data [Analysis Services], querying
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cc4a3cba75283f80d03a2853d5b18fe30f96ead2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1c7afc85473545c4801973c3fdf8b19a95141917
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="querying-multidimensional-data-with-mdx"></a>MDX를 사용하여 다차원 데이터 쿼리
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (multidimensional Expressions)는 작업할 다차원 데이터를 검색 하는 데 사용 하는 쿼리 언어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. MDX는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 위한 특정 확장이 포함된 XMLA(XML for Analysis) 사양을 기반으로 합니다. MDX에서 사용되는 식은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 집합 또는 멤버와 같은 개체나 문자열 또는 숫자와 같은 스칼라 값을 검색하기 위해 평가할 수 있는 식별자, 값, 문, 함수 및 연산자로 구성됩니다.  

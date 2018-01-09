@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d73d30b8335e3dc99c15013be9bc6cb32ed67ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9a4ed6f218b77febc84719fb001ca072c9b80bc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `service=mySSBService;local database=mydb`  
   

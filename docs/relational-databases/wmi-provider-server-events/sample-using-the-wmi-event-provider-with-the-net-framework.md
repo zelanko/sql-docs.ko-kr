@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c46aa82d1498ff52116280e92ffd7a3ad31b9be6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f137b554dd9a87428b31b161703e3d96cb9113cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>샘플:.NET framework에서 WMI 이벤트 공급자 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]다음 예제에서는 WMI 이벤트 공급자를 사용 하 여 모든 데이터 정의 대 한 이벤트 데이터의 기본 설치 인스턴스에서 발생 하는 언어 (DDL) 이벤트를 반환 하는 C#에서 응용 프로그램을 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

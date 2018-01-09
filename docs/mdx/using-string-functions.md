@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a1602c44dfb2effa8e6ccc42e128da4dd4e424f2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5b260cc6523f0e9938eaff8e98207fe7dbe739c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-string-functions"></a>문자열 함수 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/27/2017
 > [!NOTE]  
 >  **StrToMember** 및 **StrToSet** 주의 하 여 함수를 사용 해야 합니다. 이러한 함수를 계산 정의 내에 사용할 때 쿼리 성능이 저하될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [생성 &#40; Mdx&#41;](../mdx/generate-mdx.md)   
  [이름 &#40; Mdx&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40; Mdx&#41;](../mdx/uniquename-mdx.md)   

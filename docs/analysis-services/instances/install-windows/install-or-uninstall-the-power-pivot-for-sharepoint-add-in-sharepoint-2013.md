@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5f899bb9902c06d1288db8d94d719c27c250112
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 499e2929691553884a7c52d3d46918455c8d39a8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>SharePoint용 파워 피벗 추가 기능 설치 또는 제거(SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 응용 프로그램 서버 구성 요소 및 제공 하는 백 엔드 서비스의 컬렉션인 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스는 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 팜 합니다. SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 추가 기능(**spPowerpivot.msi**)은 응용 프로그램 서버 구성 요소를 설치하는 데 사용되는 설치 관리자 패키지입니다.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
     -   [파워 피벗 모드에서 Analysis Services 설치](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
-    -   [SharePoint용 Power Pivot 제거](../../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)  
+    -   [SharePoint용 파워 피벗 제거](../../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)  
   
 ##  <a name="bkmk_where_to_install"></a> spPowerPivot.msi 설치 위치  
  권장되는 최선의 구현 방법은 구성 일치를 위해 응용 프로그램 서버 및 웹 프런트 엔드 서버를 포함하여 SharePoint 팜의 모든 서버에 **spPowerPivot.msi** 를 설치하는 것입니다. 설치 관리자 패키지에는 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 구성 도구뿐만 아니라 Analysis Services 데이터 공급자도 포함되어 있습니다. **spPowerPivot.msi** 를 설치하는 경우 개별 구성 요소를 제외하여 설치를 사용자 지정할 수 있습니다.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/08/2017
 6.  **설치** 를 클릭하여 설치하고 설치를 완료합니다.  
   
 ### <a name="command-line-installation"></a>명령줄 설치  
- 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot.msi**를 실행합니다. 예를 들어  
+ 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot.msi**를 실행합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `Msiexec.exe /i SpPowerPivot.msi`항목을 참조하세요.  
   
@@ -150,7 +150,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
 ```  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Configuration|  
 |SQL_OLAPDM|MSOLAP|  

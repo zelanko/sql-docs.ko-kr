@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 dev_langs:
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee0c4cf9fb0c941751dbf8e79b570ce040895ff8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f16f13a8f55429cb196a9cc6bc82e61bb8c7328
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 통합으로 작업 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 네임 스페이스 및 데이터베이스 개체를 사용 하 여 컴파일하는 데 필요한 라이브러리에 대 한 개요는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 공용 언어 런타임 (CLR)와 통합 합니다. 또한 이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성된 간단한 CLR 저장 프로시저를 작성, 컴파일 및 실행하는 방법도 보여 줍니다.  
@@ -102,7 +102,7 @@ End Class
 C:\Windows\Microsoft.NET\Framework\(version)  
 ```  
   
- version에는 설치된 .NET Framework 재배포 가능 패키지의 버전 번호가 포함됩니다. 예를 들어  
+ version에는 설치된 .NET Framework 재배포 가능 패키지의 버전 번호가 포함됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\v4.6.1  
@@ -180,7 +180,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
    drop assembly helloworld  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [CLR 저장 프로시저](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [ADO.NET에 SQL Server In-process 전용 확장](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [CLR 데이터베이스 개체 디버깅](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   

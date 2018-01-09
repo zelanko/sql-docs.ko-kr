@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47ad74a70236b156db230ed229d2022cd6e057b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f87ea88579145b0220be7a047d230d2f3d8d9a1e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structure-columns"></a>마이닝 구조 열
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]외부 데이터 열을 선택 하 고 다음 데이터가 모델링에 사용 하는 하는 방법을 지정 하 여 마이닝 구조를 만들 때 마이닝 구조에 열을 정의 합니다. 따라서 마이닝 구조 열이 데이터 원본의 데이터 복사본보다 많으며 마이닝 구조 열에 따라 원본 데이터가 마이닝 모델에 사용되는 방법이 정의됩니다. 데이터를 분할하는 방법을 결정하는 속성과 데이터 값을 분산하는 방법을 설명하는 속성을 할당할 수 있습니다.  

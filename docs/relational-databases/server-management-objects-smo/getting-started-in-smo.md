@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5d130ee73284c41c9a12bb43b364a00f67f1468b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8854a9d7edef76144688a56f94409f4d5448574a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="getting-started-in-smo"></a>SMO 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 페이지에서는 SQL Server 관리 개체 (SMO)를 사용 하 여 시작할 수 있도록 설계 된 항목의 링크를 제공 합니다. 항목 나열 커버 SMO 개체 계층 구조에서 SMO, SMO 및 다양 한 프로그래밍 언어 및 프로그래밍 작업을 특정 프로그램을 작성 합니다.  

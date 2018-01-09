@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d1f0c2dd179e54760eeff4254c19265105e08f3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버에 의해 할당 된 다양 한 개체에 대 한 DISCOVER_MEMORYUSAGE 통계를 반환 합니다.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 |**ElementCount**|**DBTYPE_UI4**||컨테이너 개체의 경우 해당 개체에 포함된 개체 수입니다.|  
 |**축소**|**DBTYPE_BOOL**|예|메모리가 축소 가능(메모리 가중으로 인해 삭제 가능)한지 여부를 나타내는 부울입니다. true이면 메모리가 축소 가능하며, false이면 축소 불가능합니다.|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||이 개체의 전체 경로를 식별하는 문자열입니다.|  
-|**ObjectID**|**DBTYPE_WSTR**||개체를 식별하는 문자열입니다. 이 개체의 전체 경로 문자열에 의해 표시 됩니다: (ObjectParentPath + '.' + ObjectId).|  
+|**Exchange Spill**|**DBTYPE_WSTR**||개체를 식별하는 문자열입니다. 이 개체의 전체 경로 문자열에 의해 표시 됩니다: (ObjectParentPath + '.' + ObjectId).|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  
   

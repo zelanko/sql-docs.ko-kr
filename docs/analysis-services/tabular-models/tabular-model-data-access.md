@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-data-access"></a>테이블 형식 모델 데이터 액세스
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]대부분의 동일한 클라이언트, 인터페이스 및 언어는 다차원 모델에서 데이터 또는 메타 데이터를 검색 하는 데 사용 하 여 Analysis Services 테이블 형식 모델 데이터베이스에에서 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
@@ -37,7 +34,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="power-bi"></a>Power BI
 [Power BI](https://powerbi.microsoft.com/)에서 온-프레미스 Analysis Services 테이블 형식 model 데이터베이스에 연결할 수 있습니다. Power BI는 데이터를 분석하고 통찰력을 공유하기 위한 비즈니스 분석 도구 제품군입니다. 
 
-### <a name="excel"></a>Excel  
+### <a name="excel"></a>내보내기  
  Excel의 데이터 시각화 및 분석 기능을 사용하여 Excel에서 테이블 형식 model 데이터베이스에 연결하여 데이터를 사용할 수 있습니다. 데이터에 액세스하려면 Analysis Services 데이터 연결을 정의하고, 테이블 형식 서버 모드로 실행되는 서버를 지정한 다음, 사용할 데이터베이스를 선택합니다. 자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](http://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
   
  Excel은 또한 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블 형식 모델을 찾아보는 데 권장되는 응용 프로그램입니다. 이 도구에는 Excel의 새 인스턴스를 시작하고, Excel 통합 문서를 만들고, 통합 문서에서 모델 작업 영역 데이터베이스로의 데이터 연결을 여는 **Excel에서 분석** 옵션이 포함되어 있습니다. Excel에서 테이블 형식 모델 데이터를 찾아보는 경우 Excel은 Excel 피벗 테이블 클라이언트를 사용하여 모델에 대한 쿼리를 실행한다는 사실을 기억하십시오. 따라서 Excel 통합 문서 내에서 작업할 경우 DAX 쿼리가 아니라 MDX 쿼리가 작업 영역 데이터베이스로 전송됩니다. SQL 프로파일러 또는 기타 모니터링 도구를 사용하여 쿼리를 모니터링하는 경우 프로파일러 추적에 DAX가 아니라 MDX가 표시됩니다. Excel에서 분석 기능에 대한 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)을 참조하세요.  
@@ -50,13 +47,13 @@ ms.lasthandoff: 12/08/2017
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 클라이언트에서 모델로 보내는 쿼리는 모델에 대해 추적을 설정하여 모니터링할 수 있는 DAX 문으로 실행됩니다.  또한 클라이언트는 CSDL(개념 스키마 정의 언어)에 따라 제공되는 초기 스키마 정의에 대한 요청을 서버에 보냅니다. 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 테이블 형식 모델을 호스팅하는 인스턴스를 관리하고 해당 메타데이터 및 데이터를 쿼리할 수 있습니다. 모델 또는 모델의 개체를 처리하고, 파티션을 생성 및 관리하고, 데이터 액세스를 관리하는 데 사용될 수 있는 보안을 설정할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 테이블 형식 모델을 호스팅하는 인스턴스를 관리하고 해당 메타데이터 및 데이터를 쿼리할 수 있습니다. 모델 또는 모델의 개체를 처리하고, 파티션을 생성 및 관리하고, 데이터 액세스를 관리하는 데 사용될 수 있는 보안을 설정할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
 -   [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)  
   
--   [Analysis Services 인스턴스 모니터](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+-   [Analysis Services 인스턴스 모니터링](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 MDX 및 XMLA 쿼리 창을 사용하여 테이블 형식 데이터베이스에서 데이터 및 메타데이터를 검색할 수 있습니다. 그러나 다음과 같은 제한 사항이 있습니다.  
   

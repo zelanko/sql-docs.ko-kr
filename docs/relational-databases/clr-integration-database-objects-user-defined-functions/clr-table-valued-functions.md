@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41d9217d8bbee3f961ccc019f2b8b8dd65eb6fcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 220c83c7378e634745a7edc71f521d30c3f812b6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]테이블 반환 함수는 테이블을 반환 하는 사용자 정의 함수가입니다.  
@@ -62,7 +62,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL에서 테이블 반환 함수 정의  
- CLR 테이블 반환 함수를 정의 하기 위한 구문은 유사 하지만 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 추가 하 여 테이블 반환 함수는 **외부 이름** 절. 예를 들어  
+ CLR 테이블 반환 함수를 정의 하기 위한 구문은 유사 하지만 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 추가 하 여 테이블 반환 함수는 **외부 이름** 절. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

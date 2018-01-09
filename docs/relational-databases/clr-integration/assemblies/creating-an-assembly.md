@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 47932740178358f0ea1b9cd72195d04988a627ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 249bd52e59dfb91ca4d4a24efb3cd824fb329864
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-an-assembly"></a>어셈블리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]저장 프로시저나 트리거 같은 관리 되는 데이터베이스 개체 컴파일되고 어셈블리 라는 단위로 배포 됩니다. 관리되는 DLL 어셈블리의 경우 어셈블리에서 제공하는 기능을 사용하려면 먼저 어셈블리를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 등록해야 합니다. CREATE ASSEMBLY 문을 사용하여 어셈블리를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 등록할 수 있습니다. 이 항목에서는 CREATE ASSEMBLY 문을 사용하여 어셈블리를 데이터베이스에 등록하는 방법과 어셈블리에 대한 보안 설정을 지정하는 방법에 대해 설명합니다.  

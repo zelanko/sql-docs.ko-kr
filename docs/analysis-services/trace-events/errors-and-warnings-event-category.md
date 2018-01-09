@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,18 +23,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd6d742e5e1e5d06834e74018d907c13d39db64b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 06a1d7ef68cd2b996165b5940139221897634669
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="errors-and-warnings-event-category"></a>Errors and Warnings 이벤트 범주
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Errors and Warnings 이벤트 범주에는 다음 표에 설명 된 이벤트 클래스가 있습니다.  
   
 |Event Class|이벤트 ID|Description|  
 |-----------------|--------------|-----------------|  
-|오류|17|추적이 시작된 이후의 새 오류 이벤트를 모두 기록합니다.|  
+|Error|17|추적이 시작된 이후의 새 오류 이벤트를 모두 기록합니다.|  
   
  각 Errors and Warnings 이벤트 클래스와 연관된 열에 대한 자세한 내용은 [Errors and Warnings Events Data Columns](../../analysis-services/trace-events/errors-and-warnings-events-data-columns.md)를 참조하십시오.  
   

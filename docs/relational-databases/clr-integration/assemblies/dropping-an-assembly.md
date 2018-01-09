@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c5e6afcbe1335bb857b13e88404d8f6ec4c499a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c3f4ddb7618756878da84112ea713520a0d3e01
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dropping-an-assembly"></a>어셈블리 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 등록 된 어셈블리 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CREATE ASSEMBLY 문을 사용 하 여 수 삭제 또는 삭제할 수를 제공 하는 기능이 더 이상 필요 합니다. 어셈블리를 삭제하면 데이터베이스에서 어셈블리뿐 아니라 디버그 파일 등의 모든 관련 파일이 제거됩니다. 어셈블리를 삭제하려면 DROP ASSEMBLY 문을 다음 구문으로 사용합니다.  
@@ -69,7 +69,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
     ON at.user_type_id = c.user_type_id;   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CLR 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [어셈블리 변경](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [어셈블리 만들기](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

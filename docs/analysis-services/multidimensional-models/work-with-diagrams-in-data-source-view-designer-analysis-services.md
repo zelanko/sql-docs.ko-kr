@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db04c042238a82e090e13c795c96114207526e31
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 96015431ceabb705a04ed7fc73a1879a7c496d8d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>데이터 원본 뷰 디자이너에서의 다이어그램 작업(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 원본 뷰 (DSV) 다이어그램은 DSV에 있는 개체의 시각적 표현입니다. 다이어그램에서 대화형 작업을 통해 특정 개체를 추가, 숨기기, 삭제 또는 수정할 수 있습니다. 한 DSV에서 개체의 특정 하위 집합에 초점을 맞춘 다이어그램을 여러 개 만들 수도 있습니다.  

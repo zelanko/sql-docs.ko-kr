@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a919efd37f8e10259ee23b9d6b879c46812d2721
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>다차원 모델 처리(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]처리 단계 또는 일련의 단계를 Analysis Services 다차원 모델에 관계형 데이터 원본에서 데이터 로드는입니다. MOLAP 저장소를 사용하는 개체의 경우 데이터가 데이터베이스 파일 폴더의 디스크에 지정됩니다. ROLAP 저장소의 경우 처리는 개체에 대한 MDX 쿼리의 응답으로 요청 시 발생합니다. ROLAP 저장소를 사용하는 개체의 경우 처리는 쿼리 결과를 반환하기 전 캐시를 업데이트하는 과정을 의미합니다.  

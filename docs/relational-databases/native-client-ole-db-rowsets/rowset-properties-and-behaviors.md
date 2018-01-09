@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68f4ffdbf0408a936d7a2c9b49f18eb8adb32520
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0c53bff9e68fb0b95ce2876fd9521c0eb40c206
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>행 집합 속성 및 동작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
 |SSPROP_MAXBLOBLENGTH|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_I4<br /><br /> 기본값: 공급자는 서버에서 반환 하는 텍스트의 크기를 제한 하지 않습니다 및 속성 값이 해당 최대값으로 설정 합니다. 2147483647).<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 SELECT 문에서 반환 하는 이진 BLOB (large object) 데이터의 길이 제한 하는 SET TEXTSIZE 문을 실행 합니다.|  
 |SSPROP_NOCOUNT_STATUS|열: NoCount<br /><br /> R/w: 읽기 전용<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: SET NOCOUNT on/off에서의 상태를 나타내는 부울 값 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: SET NOCOUNT ON인 경우<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF인 경우|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR (1-2000 자 허용)<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 메시지의 메시지 텍스트입니다. 사용자가 정의하며 정의된 형식은 없습니다.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 옵션입니다. 이러한 옵션은 `name=value`가 포함된 문자열로 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다. 쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 예를 들어<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 옵션입니다. 이러한 옵션은 `name=value`가 포함된 문자열로 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다. 쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_UI4<br /><br /> 기본값: 432000 초 (5 일)<br /><br /> 최소: 1 초<br /><br /> 최대: 2 ^31-1 초<br /><br /> 설명: 쿼리 알림이 활성 상태로 유지 되는 시간 (초) 수입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  

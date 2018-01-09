@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: SQL_SS_TABLE
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 624e3886e5ae82b63fe163b60f6a118540abe523
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a781dd635a0c1c17e67415101536d7af69db60b2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>테이블 반환 매개 변수의 ODBC SQL 유형
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 
   새로운 ODBC SQL 형식인 SQL_SS_TABLE에서 테이블 반환 매개 변수에 대한 지원을 제공합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SQL_SS_TABLE은 다른 ODBC 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환할 수 없습니다.  
   
  SQL_SS_TABLE에서 C 데이터 형식으로 사용 되는 경우는 *ValueType* SQL_DESC_TYPE을 SQL_SS_TABLE로는 응용 프로그램 매개 변수 APD (설명자) 레코드의 설정에 대 한 SQLBindParameter 또는 시도가 매개 변수에 이루어지면 SQL_ERROR가 반환 되 고 진단 레코드가 생성은 SQLSTATE = HY003, "잘못 된 응용 프로그램 버퍼 형식 입니다" 합니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  테이블 반환 매개 변수에는 행별 기본값이 지원되지 않으므로 테이블 반환 매개 변수 열의 *StrLen_or_IndPtr*에는 SQL_DEFAULT_PARAM을 사용할 수 없습니다. 대신 응용 프로그램에서 열 특성 SQL_CA_SS_COL_HAS_DEFAULT_VALUE를 1로 설정할 수 있습니다. 즉, 해당 열이 모든 행에 대해 기본값을 갖습니다. 경우 *StrLen_or_IndPtr* 설정 되어를 SQL_DEFAULT_PARAM으로 SQLExecute 또는 SQLExecDirect에서 SQL_ERROR를 반환 하 고 진단 레코드가 sqlstate 문을에 추가할 = HY090 및 "잘못 된 문자열 또는 버퍼 길이" 메시지입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [테이블 반환 매개 변수 사용 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

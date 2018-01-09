@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: CALCULATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fe79fa5b94e07be72408fc72b0df6e57fa467ee2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7bc4b283d3874b68c4bbe532bc32dcf4014896f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-scripting---calculate"></a>MDX 스크립팅-계산
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ CALCULATE
 ```  
   
 ## <a name="arguments"></a>인수  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 큐브를 만들면 큐브의 MDX 스크립트에 CALCULATE 문이 첫 번째 문으로 자동으로 포함됩니다. CALCULATE 문은 큐브의 각 셀이 세분성이 보다 낮은 셀에서 집계되도록 지정합니다. 셀이 집계된 후 식을 사용하여 세분성이 낮은 셀을 채우면 세분성이 높은 셀의 집계 값에 영향이 미칩니다. 대부분은 이 집계 방법을 사용하지만 이 문을 제거하거나 이 문보다 다른 문이 먼저 실행되도록 할 수도 있습니다.  

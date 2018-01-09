@@ -5,12 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0219e94bf988b1df95a93e8fc927092fc07e2c2f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="prediction-queries-data-mining"></a>예측 쿼리(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]일반적인 데이터 마이닝 프로젝트의 목표는 예측을 만드는 마이닝 모델을 사용 하는입니다. 예를 들어 서버의 특정 클러스터에 대해 예상 작동 중단 시간의 양을 예측하거나, 고객의 세그먼트가 광고 캠페인에 응답할 가능성이 있는지 여부를 표시하는 점수를 생성할 수 있습니다. 이러한 작업을 모두 수행하기 위해 예측 쿼리를 만들 수 있습니다.  

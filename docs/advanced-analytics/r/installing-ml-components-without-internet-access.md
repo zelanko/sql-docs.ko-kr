@@ -1,13 +1,13 @@
 ---
 title: "인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/30/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 93adacb061b3bf4c77606294ae8341144eaf24c9
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: b84c15fba4b363eee589b6ff1d2a19d142100c32
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 컴퓨터 학습 구성 요소 설치
 
@@ -126,15 +126,20 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Microsoft Python 열기     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python 서버    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |이전에 사용 하 여|
+Microsoft R Open     |변경 없음 이전에 사용 하 여|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Microsoft Python 열기     |이전에 사용 하 여 |
+Microsoft Python 열기     |변경 없음 이전에 사용 하 여 |
 Microsoft Python 서버    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 CU2** |
-Microsoft R Open     |이전에 사용 하 여|
-Microsoft R Server      |이전에 사용 하 여|
-Microsoft Python 열기     |이전에 사용 하 여 |
-Microsoft Python 서버    |이전에 사용 하 여|
+Microsoft R Open     |변경 없음 이전에 사용 하 여|
+Microsoft R Server      |변경 없음 이전에 사용 하 여|
+Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
+Microsoft Python 서버    |변경 없음 이전에 사용 하 여|
+**SQL Server 2017 CU3** |
+Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
+Microsoft Python 서버    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016에 대 한 다운로드
 
@@ -187,7 +192,7 @@ Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlin
 Microsoft R Open     |변경 없음 이전에 사용 하 여|
 Microsoft R Server    |변경 없음 이전에 사용 하 여 |
 
-Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 수 있는.tar 형식으로 보관으로: [다운로드 R 서버 설치 관리자](https://docs.microsoft.com/r-server/install/r-server-install-windows#download)
+Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 수 있는.tar 형식으로 보관으로: [다운로드 R 서버 설치 관리자](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 ### <a name = "bkmk_OtherComponents"></a>추가 필수 구성 요소
 

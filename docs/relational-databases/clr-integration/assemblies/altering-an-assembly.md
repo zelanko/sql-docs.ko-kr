@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f279c3f1e1315ea44cdb75918b471c8fdd22ee01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: efe9022b31b47e346d79ee1a65f93865d6c939b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="altering-an-assembly"></a>어셈블리 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 등록 된 어셈블리 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ALTER ASSEMBLY 문을 사용 하 여 최신 버전에서 업데이트할 수 있습니다. 어셈블리를 업데이트하려면 ALTER ASSEMBLY 문을 다음 구문과 함께 사용합니다.  

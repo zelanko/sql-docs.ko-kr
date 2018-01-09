@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d602336d96fe81a55655640efe48287c4959e0ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 948077a159fcb1937639c8e522e6b647300729e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,22 +37,22 @@ ms.lasthandoff: 11/17/2017
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|OLE DB 데이터 형식|값|  
 |-----------------------------------------|----------------------|-----------|  
-|datetime|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
+|DATETIME|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
-|date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
+|날짜|DBTYPE_DBDATE|133 (oledb.h)|  
+|Time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
-|datetime2|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
+|Datetime2|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>데이터 형식: 문자열 및 리터럴  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|OLE DB 데이터 형식|클라이언트 변환을 위한 문자열 형식|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
+|DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
-|date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
-|time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
-|datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
+|날짜|DBTYPE_DBDATE|'yyyy-mm-dd'|  
+|Time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
+|Datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
   
  날짜/시간 리터럴에 대한 이스케이프 시퀀스에는 변경 내용이 없습니다.  
@@ -181,7 +181,7 @@ enum SQLVARENUM {
   
 |OLE DB 데이터 형식 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|참고|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|date||  
+|DBTYPE_DBDATE|날짜||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBCOLUMDESC 검사 *bScale* 멤버를 소수 자릿수 초의 전체 자릿수를 확인 합니다.|  
 |DBTYPE_DBTIME2|**시간**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBCOLUMDESC 검사 *bScale* 멤버를 소수 자릿수 초의 전체 자릿수를 확인 합니다.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBCOLUMDESC 검사 *bScale* 멤버를 소수 자릿수 초의 전체 자릿수를 확인 합니다.|  

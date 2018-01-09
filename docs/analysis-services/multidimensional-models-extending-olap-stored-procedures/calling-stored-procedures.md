@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 48c35e5583369335f5d9ab6215faa4fd86d66f6a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0ea0a687bd6e5482211a4f953c0f7565c483a586
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calling-stored-procedures"></a>저장 프로시저 호출
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]저장된 프로시저는 서버 또는 클라이언트 응용 프로그램에서 호출할 수 있습니다. 어느 경우에나 저장 프로시저는 항상 서버에서 서버나 데이터베이스의 컨텍스트로 실행됩니다. 저장 프로시저를 실행하는 데 필요한 특별 권한은 없습니다. 어셈블리를 사용하여 서버 또는 데이터베이스 컨텍스트에 저장 프로시저를 추가한 후에는 저장 프로시저에서 수행하는 동작이 허가된 역할의 사용자는 모두 저장 프로시저를 실행할 수 있습니다.  

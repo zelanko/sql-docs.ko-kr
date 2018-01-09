@@ -1,26 +1,26 @@
 ---
 title: "기능 &#39; s 컴퓨터 학습 서비스의 새로운 기능 | Microsoft Docs"
-ms.date: 11/16/2017
+ms.date: 01/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
 caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>SQL Server의 컴퓨터 학습 서비스의 새로운 기능
 
@@ -34,9 +34,11 @@ SQL Server 2017 데이터베이스 통합 기계 학습이 훨씬 더 강력해�
 
 SQL Server에서 컴퓨터 학습 서버 빌드하고 Python 또는 R에서 컴퓨터 학습 솔루션을 배포 하기 위한 포괄적인 지원을 제공 합니다. 다음은이 릴리스의 주요 내용입니다.
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>SQL Server 2017 용 누적 업데이트 1의 새로운 기능
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>SQL Server 2017 용 누적 업데이트 3의 새로운 기능
 
-이제 컴퓨터 학습 서버로 9.2.1.24 Python 및 R 구성 요소를 업그레이드할 수 있습니다. 이 릴리스의 기능에 많은 향상 된 기능 **revoscalepy** 및 **RevoScaleR**, 성능 향상을 포함 합니다.
+이 릴리스에 Python 및 R 구성 요소에 대 한 업데이트를 포함 합니다. 
+
++ Python 모델 직렬화 rx_serialize_model 함수를 사용 하 여 revoscalepy에 대 한 지원 추가
 
 ### <a name="in-database-python-integration"></a>데이터베이스에서 Python 통합
 

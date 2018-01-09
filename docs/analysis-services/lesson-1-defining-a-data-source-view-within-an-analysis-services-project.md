@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae0bf6f8f74711407a33f5b32929bfb62d75423c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d8f91c18a5150bd769c53ac24ad49346a4c6af60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]비즈니스 인텔리전스 응용 프로그램 디자인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 만드는 것부터 시작 프로그램 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. 이 프로젝트에서 솔루션의 모든 요소를 정의하고 데이터 원본 뷰를 사용하여 시작합니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>다음 단원  
 [2단원: 큐브 정의 및 배포](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
 [지원되는 데이터 원본&#40;SSAS 다차원&#41;](https://msdn.microsoft.com/library/ms175608(v=sql.110).aspx)  
 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

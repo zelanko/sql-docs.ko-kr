@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2755e08e3e509723e3c1b511c27f852be157ad3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8010e9c0412b50c8d65a67c87c176bff02d1a887
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]DefaultDetails 요소는 "기본 필드 집합을 함께 정의"는 테이블의 열 속성 참조 목록을 나타냅니다. 각 속성은 측정값 또는 열만 참조할 수 있습니다.  
@@ -32,9 +30,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표에서는 DefaultDetails 요소를 정의하는 요소와 특성을 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|DefaultDetailsPosition|아니요|컬렉션에서의 존재 여부와 위치를 나타내는 양의 정수입니다.|  
+|DefaultDetailsPosition|아니오|컬렉션에서의 존재 여부와 위치를 나타내는 양의 정수입니다.|  
   
 ## <a name="example"></a>예제  
  **테이블 형식**  

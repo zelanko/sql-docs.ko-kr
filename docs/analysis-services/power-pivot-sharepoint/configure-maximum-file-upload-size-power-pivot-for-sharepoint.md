@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 68e7aa514a63f6bce6ddcff33c1b7a6a2616beed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d30e4644eed3d695db28a246aa9d05cba6e2cecc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>최대 파일 업로드 크기 구성(SharePoint용 파워 피벗)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서가 포함 되어 SharePoint 업로드에 허용 된 최대 파일 크기를 초과 하는 파일에서 발생 하는 데이터를 대량 경우가 많습니다. 이 상한을 초과하는 파일을 업로드하려고 하면 SharePoint에서  

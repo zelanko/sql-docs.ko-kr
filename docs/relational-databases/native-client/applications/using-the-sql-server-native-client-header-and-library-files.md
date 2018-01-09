@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3d2ecc60ef8ef34f6b7d3f8db06d0c440a6a7506
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35bd2d44e7628127d325815c0a4241b11bc10b36
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>SQL Server Native Client 헤더 및 라이브러리 파일 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ include "sqlncli.h";
   
  자세한 내용은 참조 공연 [대량 복사 작업 수행](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

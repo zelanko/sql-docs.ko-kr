@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 512e5321c0be221e06988dfc1991409a044166bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82cafa346d2347afa9022a61d9ffce018d9d0dd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>파티션-쓰기 가능 파티션
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브에서 데이터에는 일반적으로 읽기 전용는입니다. 그러나 특정 시나리오에 대해 파티션을 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능 파티션을 사용하면 비즈니스 사용자가 셀 값을 변경하고 큐브 데이터에 대한 이러한 변경의 효과를 분석하여 여러 시나리오를 조사해 볼 수 있습니다. 파티션을 쓰기 가능하도록 설정하면 클라이언트 응용 프로그램에서 파티션의 데이터에 변경 내용을 기록할 수 있습니다. 쓰기 저장(writeback) 데이터라고 하는 이러한 변경 내용은 별도의 테이블에 저장되며 측정값 그룹의 기존 데이터를 덮어쓰지 않습니다. 그러나 큐브 데이터의 일부인 것처럼 쿼리 결과에 포함됩니다.  

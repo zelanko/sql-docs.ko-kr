@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5efdf95cb4a87acd7c2b1e626dd20d3105aa1f6b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fa67a1dce190a145588f90b740213f6400612dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델에 대 한 쿼리를 만들 때 내용 쿼리, 분석 시 발견 된 패턴에 대 한 세부 정보에 제공 하는 만들 수 있습니다 또는 패턴을 사용 하는 모델에 새 데이터에 대 한 예측을 만드는 예측 쿼리를 만들 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다. 이 섹션에서는 Microsoft Naive Bayes 알고리즘을 기반으로 하는 모델에 대해 이러한 쿼리를 만드는 방법을 설명합니다.  
@@ -96,10 +94,10 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|1.|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0.507263784|4|  
-|TM_NaiveBayes|Bike Buyer|1.|8615|0.492736216|4|  
-|TM_NaiveBayes|Gender|Missing|0|0|1.|  
+|TM_NaiveBayes|Bike Buyer|1|8615|0.492736216|4|  
+|TM_NaiveBayes|Gender|Missing|0|0|1|  
 |TM_NaiveBayes|Gender|F|8656|0.495081217|4|  
 |TM_NaiveBayes|Gender|M|8828|0.504918783|4|  
   
@@ -123,7 +121,7 @@ WHERE ATTRIBUTE_NAME = 'Region'
   
 |NODE_TYPE|NODE_CAPTION|NODE_PROBABILITY|NODE_SUPPORT|MSOLAP_NODE_SCORE|NODE_TYPE|  
 |----------------|-------------------|-----------------------|-------------------|-------------------------|----------------|  
-|10|Bike Buyer -> Region|1.|17484|84.51555875|10|  
+|10|Bike Buyer -> Region|1|17484|84.51555875|10|  
 |11|Bike Buyer -> Region = Missing|0|0|0|11|  
 |11|Bike Buyer -> Region = North America|0.508236102|8886|0|11|  
 |11|Bike Buyer -> Region = Pacific|0.193891558|3390|0|11|  
@@ -215,7 +213,7 @@ NATURAL PREDICTION JOIN
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
 |0|10161.5714|0.581192599|0.010530981|0|0|  
-|1.|7321.428768|0.418750215|0.008945684|0|0|  
+|1|7321.428768|0.418750215|0.008945684|0|0|  
 ||0.999828444|5.72E-05|5.72E-05|0|0|  
   
  표의 마지막 행에서는 누락 값의 지지도 및 확률에 대한 조정을 보여 줍니다. 분산 및 표준 편차 값은 항상 0이지만 Naive Bayes 모델에서는 연속 값을 모델링할 수 없습니다.  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68e89b1615013947bd4f249b6ddfd67084db1d68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16d7cc6bac67972516efb5bc916eefacd91eafc4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-data-types"></a>데이터 형식 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터에 다양 한 유형과 정의 된 길이, 특정 정확성이 있는 숫자 또는 고유한 규칙 집합이 있는 다른 개체인 사용자 정의 데이터 형식이 포함 된 문자열을 같은 크기를 가져옵니다. <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체에서 올바르게 처리 될 수 있도록 데이터 형식을 분류 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체는 데이터를 허용하는 개체와 연결되어 있습니다. 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하 여 정의 해야 하는 데이터를 허용 하는 관리 개체 (SMO) 개체는 <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체 속성:  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services의 로그 작업
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services 인스턴스를 설치 하는 각 인스턴스에 대해 하나씩의 msmdsrv.log 파일에 서버 알림, 오류 및 경고를 기록 합니다. 관리자는 이 로그에서 루틴 및 비정상적 이벤트에 대한 정보를 참조합니다. 최신 릴리스에서는 더 많은 정보를 포함하도록 로깅이 향상되었습니다. 이제 로그 레코드에는 제품 버전과 버전 정보, 프로세서, 메모리, 연결, 차단 이벤트 등이 모두 포함되어 있습니다. 전체 변경 목록은 [로깅 개선 사항](http://support.microsoft.com/kb/2965035)에서 확인할 수 있습니다.  
@@ -54,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 |파일 이름 또는 위치|형식|사용 대상|기본적으로 설정|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|오류 로그|일상 모니터링 및 기본 문제 해결|예|  
-|관계형 데이터베이스의 OlapQueryLog 테이블|쿼리 로그|사용 최적화 마법사에 대한 입력 수집|아니요|  
+|관계형 데이터베이스의 OlapQueryLog 테이블|쿼리 로그|사용 최적화 마법사에 대한 입력 수집|아니오|  
 |SQLDmp\<guid >.mdmp 파일|충돌 및 예외|상세한 문제 해결|아니오|  
   
  이 항목에서 다루지 않는 추가 정보는 [Microsoft 지원의 초기 데이터 수집 팁](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)링크를 참조하세요.  
@@ -161,10 +158,10 @@ ms.lasthandoff: 12/08/2017
   
  수정될 가능성이 가장 높은 구성 설정은 메모리 덤프 파일을 생성할지 여부를 결정하는 데 사용되는 **CreateAndSendCrashReports** 설정입니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|메모리 덤프 파일을 해제합니다. 예외 섹션 아래의 모든 다른 설정은 무시됩니다.|  
-|1.|(기본값) 사용하도록 설정되지만, 메모리 덤프 파일을 보내지 않습니다.|  
+|1|(기본값) 사용하도록 설정되지만, 메모리 덤프 파일을 보내지 않습니다.|  
 |2|사용하도록 설정되고 오류 보고서를 Microsoft로 자동으로 보냅니다.|  
   
  **CrashReportsFolder** 는 덤프 파일의 위치입니다. 기본적으로 .mdmp 파일 및 연결된 로그 레코드는 \Olap\Log 폴더에 있습니다.  

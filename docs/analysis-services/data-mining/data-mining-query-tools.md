@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3979e01644bbec77b71a93b7a20cfc9bc4276402
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-query-tools"></a>데이터 마이닝 쿼리 도구
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모든 데이터 마이닝 쿼리는 데이터 마이닝 DMX (Extensions) 언어를 사용합니다. DMX는 분류, 위험 분석, 권장 사항 생성 및 선형 회귀를 포함한 모든 종류의 기계 학습 태스크에 대한 모델을 만드는 데 사용할 수 있습니다. 또한 DMX 쿼리를 작성하여 모델을 처리할 때 생성된 패턴 및 통계에 대한 정보를 가져올 수 있습니다.  

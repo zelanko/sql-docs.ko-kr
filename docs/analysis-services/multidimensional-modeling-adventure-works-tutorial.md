@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e19abcab353fd70636f552348d2488738ba203a7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bc7d14a9b90c18eeccc977ba73ec6787b11093e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>다차원 모델링(Adventure Works 자습서)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]시작 된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서입니다. 이 자습서의 모든 예에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 가상 회사에서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 프로젝트를 개발 및 배포하는 방법을 설명합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 이 단원에 대한 컨텍스트를 더 잘 이해할 수 있도록 이 자습서와 함께 시나리오 설명이 제공됩니다. 자세한 내용은 [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 이 자습서의 모든 단원을 완료하려면 예제 데이터, 예제 프로젝트 파일 및 소프트웨어가 있어야 합니다. 이 자습서의 필수 구성 요소를 찾아서 설치하는 방법은 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md)를 참조하십시오.  
   
 이 자습서를 성공적으로 완료하려면 이 외에도 다음과 같은 사용 권한이 있어야 합니다.  

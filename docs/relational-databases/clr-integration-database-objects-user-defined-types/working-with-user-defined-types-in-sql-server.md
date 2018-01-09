@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecb5e4f780c1aa35b5ab509cc7862b477c3854d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1ad6e283f580aa36ef84d62ae274a57f6d84e6a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL 서버의 사용자 정의 형식 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 형식 (UDT) 기능에 액세스할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일반 쿼리 구문을 사용 하 여 언어입니다. UDT는 데이터베이스 개체 정의에 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 함수 및 저장 프로시저의 변수, 그리고 함수 및 저장 프로시저의 인수로 사용할 수 있습니다.  

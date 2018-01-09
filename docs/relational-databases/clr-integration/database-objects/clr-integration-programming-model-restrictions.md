@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 180f770c24721ef9e8ed84e4d6f01204b0fd42b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23972fb78bafaca778b37fc7226d3db4f53083e8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체 작성 하는 경우 없는 코드 검사 수행 하 여 특정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 것으로 간주 해야 하는 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]데이터베이스에 처음 등록 될 때 관리 코드 어셈블리에 대 한 검사를 수행 합니다. 사용 하는 **CREATE ASSEMBLY** 문, 하며 런타임에도 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드가 충족 해야 하는 요구 사항을으로 어셈블리를 등록 하는 여부에 따라 달라 집니다 **안전**, **EXTERNAL_ACCESS**, 또는 **UNSAFE**, **안전한** 가 가장 엄격 함 및 아래에 나열 되어 있습니다.  

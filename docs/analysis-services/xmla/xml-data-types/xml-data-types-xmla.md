@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,18 +23,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a65065437ced53d1554ddd11035e7aa687872e9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 57e14656a089736a8b7ce9566362c9d7c8888a5d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-data-types-xmla"></a>XML 데이터 형식(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]표준 기본 형식 및 파생 형식을 XML 1.0 권장 사항에 정의 된 외에도 XML for Analysis (XMLA) 1.1 사양 다차원 모델과 테이블 형식 데이터의 표현을 지원 하기 위한 추가 데이터 형식을 정의 합니다.  
   
  XMLA는 다음 표에 나열된 데이터 형식을 사용합니다.  
   
-|데이터 형식|설명|  
+|데이터 형식|Description|  
 |----------------|-----------------|  
 |Boolean|표준 XML **boolean** 데이터 형식입니다.|  
 |Decimal|표준 XML **decimal** 데이터 형식입니다.|  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 |[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|반환 된 다차원 데이터는 *결과* 의 매개 변수는 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.|  
 |[결과 집합](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|**Execute** 메서드에 의해 반환되는 자기 설명적 XML 결과 집합입니다.|  
 |[행 집합](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|포함된 된 XML 스키마에 의해 구조화 하는 데이터 원본의 행을 반환한는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드.|  
-|문자열|XML **string** 데이터 형식입니다.|  
+|String|XML **string** 데이터 형식입니다.|  
 |UnsignedInt|XML **unsignedInt** 스키마 유형입니다.|  
   
  표준 XML 데이터 형식에 대한 자세한 내용은 WC3(World Wide Web Consortium) 후보 권장 사항을 참조하십시오.  

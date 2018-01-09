@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 397c5e27b3dcf096fa3707d94d3e5e8d049e8f36
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 의사 결정 트리 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리를 만드는 여러 방법을 통합 하며 회귀, 분류, 연결 등의 여러 분석 태스크를 지 원하는 하는 하이브리드 알고리즘입니다. Microsoft 의사 결정 트리 알고리즘은 불연속 특성과 연속 특성 모두의 모델링을 지원합니다.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
  모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 알고리즘에서는 자동으로 기능 선택을 사용하여 분석을 향상시키고 처리 로드를 줄입니다. 기능 선택에 사용되는 방법은 모델을 작성하는 데 사용된 알고리즘에 따라 달라집니다. 의사 결정 트리 모델의 기능 선택을 제어하는 알고리즘 매개 변수는 MAXIMUM_INPUT_ATTRIBUTES와 MAXIMUM_OUTPUT입니다.  
   
-|알고리즘|분석 방법|설명|  
+|알고리즘|분석 방법|주석|  
 |---------------|------------------------|--------------|  
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않을 경우 기본 방법이나 지정된 방법이 사용됩니다.|  
 |선형 회귀|흥미도 점수|선형 회귀는 연속 열만 지원하므로 흥미도 점수만 사용합니다.|  
@@ -157,9 +155,9 @@ ms.lasthandoff: 12/08/2017
  *SCORE_METHOD*  
  분할 점수를 계산하는 데 사용되는 메서드를 결정합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
-|ID|이름|  
+|ID|속성|  
 |--------|----------|  
-|1.|Entropy|  
+|1|Entropy|  
 |3|Bayesian with K2 Prior|  
 |4|Bayesian Dirichlet Equivalent (BDE) with uniform prior<br /><br /> (기본값)|  
   
@@ -170,9 +168,9 @@ ms.lasthandoff: 12/08/2017
  *SPLIT_METHOD*  
  노드를 분할하는 데 사용되는 메서드를 결정합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
-|ID|이름|  
+|ID|속성|  
 |--------|----------|  
-|1.|**Binary:** 특성의 실제 값 수에 관계없이 트리가 두 개의 분리로 분할됨을 나타냅니다.|  
+|1|**Binary:** 특성의 실제 값 수에 관계없이 트리가 두 개의 분리로 분할됨을 나타냅니다.|  
 |2|**Complete:** 트리에서 특성 값 수만큼의 분할을 만들 수 있음을 나타냅니다.|  
 |3|**Both:** 최상의 결과를 생성하기 위해 이진(Both) 분할을 사용할지 완전(Complete) 분할을 사용할지를 Analysis Services에서 결정할 수 있도록 지정합니다.|  
   
@@ -201,7 +199,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)을 참조하세요.  
   
-|열|내용 유형|  
+|Column|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Continuous, Cyclical, Discrete, Discretized, Key, Ordered, Table|  
 |예측 가능한 특성|Continuous, Cyclical, Discrete, Discretized, Ordered, Table|  

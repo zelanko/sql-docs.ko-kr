@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 20302da167c1ba1d19fb1b65ab871d81f7170591
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>클라이언트 응용 프로그램에서 연결(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services를 처음 접하는 경우의 정보를 사용이 항목의 기존 인스턴스에 연결 하는 데 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 일반 도구 및 응용 프로그램을 사용 하 여 합니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
@@ -132,7 +129,7 @@ ms.lasthandoff: 12/08/2017
   
      테스트하려면 원격 컴퓨터에서 Excel 또는 SSMS를 사용하여 Analysis Services 인스턴스에서 사용하는 IP 주소 및 포트를 지정합니다. 연결할 수 있으면 방화벽 규칙이 인스턴스에 대해 올바르며 인스턴스에서 원격 연결을 허용하는 것입니다.  
   
-     또한 연결 프로토콜에 TCP/IP를 사용하는 경우 Analysis Services에서는 클라이언트 연결이 동일한 도메인이나 트러스트된 도메인에서 설정되도록 요구합니다. 연결이 보안 경계를 넘어 이동하는 경우 대부분 HTTP 액세스를 구성해야 합니다. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
+     또한 연결 프로토콜에 TCP/IP를 사용하는 경우 Analysis Services에서는 클라이언트 연결이 동일한 도메인이나 트러스트된 도메인에서 설정되도록 요구합니다. 연결이 보안 경계를 넘어 이동하는 경우 대부분 HTTP 액세스를 구성해야 합니다. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하십시오.  
   
 -   특정 도구를 사용해서만 연결할 수 있습니까? 문제는 잘못된 클라이언트 라이브러리 버전일 수 있습니다. SQL Server 기능 팩 다운로드 페이지에서 클라이언트 라이브러리를 얻을 수 있습니다.  
   

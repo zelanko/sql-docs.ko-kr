@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb044b96eecbbb5c6eb18dcc33eae1807b2fe8b4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7dc0ec5be4d6a0189e844ddfa24595b0cadade24
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>시계열 모델에 대한 수식 보기(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하 여 시간 시계열 모델을 만든 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝을 사용 하는 것은 모델에 대 한 회귀 수식을 볼 수는 가장 쉬운 방법은 **마이닝 범례** 의 [Microsoft 시계열 뷰어](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)이며 읽을 수 있는 형식으로 모든 상수를 제공 합니다.  

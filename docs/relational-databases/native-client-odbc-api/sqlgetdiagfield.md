@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8212e4077187ac68835c732ecbaee0891ad461b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2f030fff57fba783584d3b46ba5ad56d45771bf2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 다음과 같은 추가 진단 필드 지정 **SQLGetDiagField**합니다. 이러한 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에 대한 다양한 오류 보고를 지원하며 연결된 ODBC 연결 핸들과 ODBC 문 핸들에서 생성된 모든 진단 레코드에서 사용할 수 있습니다. 필드는 sqlncli.h에서 정의됩니다.  
   
-|진단 레코드 필드|설명|  
+|진단 레코드 필드|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|오류를 생성하는 저장 프로시저의 줄 번호를 보고합니다. SQL_DIAG_SS_LINE 값은 SQL_DIAG_SS_PROCNAME에서 값을 반환하는 경우에만 의미가 있습니다. 값은 부호 없는 16비트 정수로 반환됩니다.|  
 |SQL_DIAG_SS_MSGSTATE|오류 메시지의 상태입니다. 오류 메시지 상태에 대 한 정보를 참조 하십시오. [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)합니다. 값은 부호 있는 32비트 정수로 반환됩니다.|  

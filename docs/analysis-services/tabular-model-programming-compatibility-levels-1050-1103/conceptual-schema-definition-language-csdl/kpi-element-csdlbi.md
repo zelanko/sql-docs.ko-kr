@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10ddf679eb9ede1302120eae9274b79927c3dc9a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 28f4f65bc65ac1a5d231717ddbc552e83ef302de
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpi-element-csdlbi"></a>KPI 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kpi 요소로는 KPI 핵심 성과 지표 ()를 사용할 수 있는 계산을 정의 합니다. 비즈니스 인텔리전스 데이터 모델에서 KPI는 측정값을 기반으로 하며, KPI 정의처럼 측정값과 관련된 모든 메타데이터뿐 아니라 KPI 값을 표시하는 데 필요한 기본 그래픽 등의 정보를 포함합니다.  
@@ -34,9 +32,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 KPI 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|설명서|아니요|KPI에 대한 설명입니다.|  
+|설명서|아니오|KPI에 대한 설명입니다.|  
 |KpiGoal|예|목표로 사용할 수 있는 값이 포함된 열에 대한 참조입니다.<br /><br /> [PropertyRef 요소&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md)a를 참조하세요.|  
 |KpiStatus|예|KPI의 현재 상태를 나타내는 값이 포함된 열에 대한 참조입니다.|  
 |StatusGraphic|예|KPI에 정의된 대상에 대한 음수, 보통 또는 양수 진행률을 나타내는 이미지에 대한 참조입니다.|  

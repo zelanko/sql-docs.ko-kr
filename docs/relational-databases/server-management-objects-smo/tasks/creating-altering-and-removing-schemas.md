@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: schemas [SMO]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ccddc4fe30aac6b508765af816d8dceb010555b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 615e7513018ef686be549f10f2d6ae708d6eb6d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-altering-and-removing-schemas"></a>스키마 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.Schema> 개체는 데이터베이스 개체에 대 한 소유권 컨텍스트를 나타냅니다. <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성은 <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체 모음을 나타냅니다.  

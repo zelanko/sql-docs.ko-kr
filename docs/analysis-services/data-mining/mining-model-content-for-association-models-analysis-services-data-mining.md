@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0da3079620f64d2c2b1def8225f359b6cb0d4454
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fbe96dfa6e17bda952dc2858c274df6dee231f02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>연결 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 설명 하는 사용 하는 모델만 마이닝 모델 콘텐츠에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘입니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |노드 유형 ID|형식|  
 |------------------|----------|  
 |1(모델)|루트 또는 부모 노드입니다.|  
-|7(항목 집합)|항목 집합 또는 특성-값 쌍 모음입니다. 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 또는<br /><br /> `Gender = Male`를 참조하세요.|  
+|7(항목 집합)|항목 집합 또는 특성-값 쌍 모음입니다. 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 로 구분하거나 여러<br /><br /> `Gender = Male`를 참조하세요.|  
 |8(규칙)|항목 간의 관련 방식을 정의하는 규칙입니다.<br /><br /> 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`를 참조하세요.|  
   
  NODE_CAPTION  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa655c5c761d4ba943bad6c7f8c188b50c45a275
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>다차원 모델의 데이터 원본 뷰
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 원본 뷰 (DSV)은 큐브 및 차원을 다차원 프로젝트에서 만들 수의 기반이 되는 관계형 데이터 원본에 대 한 추상화입니다. DSV의 목적은 프로젝트에 사용된 데이터 구조를 제어하고 기본 데이터 원본과 관계없이 작업할 수 있도록 하는 것입니다. 예를 들어 원래 데이터 원본을 직접 수정하지 않고 열의 이름을 바꾸거나 열을 연결할 수 있습니다.  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0815ae6b182f371eb171cf577e89a50adb9cdac4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3c4495b75f9464eb0e8211eeea6529264053c61
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>연결에 대한 가장 및 자격 증명
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 인증을 사용 하 여 공용 언어 런타임 (CLR) 통합은 복잡 하지만 SQL Server 인증을 사용 하 여 보다 더 안전 합니다. Windows 인증을 사용하는 경우 다음 사항을 고려하십시오.  

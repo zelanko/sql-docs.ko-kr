@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs: TSQL
@@ -39,11 +39,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 788eeeb4acb1a2acc562f71dfe4d59a7f622192e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7402b0f36f4d8b5ea0a554d7c82f1ff2cbaad19
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server의 사용자 정의 형식 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 형식 (UDT)를 사용 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 등록 해야 합니다. UDT를 등록하려면 해당 형식을 사용할 데이터베이스에 어셈블리를 등록하고 형식을 만듭니다. UDT는 범위가 단일 데이터베이스로 한정되며, 데이터베이스마다 동일한 어셈블리와 UDT를 등록하지 않는 한 여러 데이터베이스에 사용할 수 없습니다. UDT 어셈블리가 등록되고 형식이 만들어지면 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 클라이언트 코드에 UDT를 사용할 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
@@ -220,7 +220,7 @@ SELECT CAST(content AS varchar(8000))
   
  Udt를 사용 하기 위한 조치를 취할 필요가 없습니다 참고 때 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 작업 테이블을 만듭니다는 **tempdb** 시스템 데이터베이스입니다. 테이블 변수, 커서의 처리가 포함 및 사용자 정의 테이블 반환 함수 등이 포함 된 Udt를 투명 하 게 활용 **tempdb**합니다. 그러나의 임시 테이블을 명시적으로 만들면 **tempdb** UDT 열을 정의 하는 다음에 UDT를 등록 합니다 **tempdb** 사용자 데이터베이스의 경우와 동일 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

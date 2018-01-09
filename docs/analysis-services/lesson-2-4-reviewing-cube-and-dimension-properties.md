@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0831f70668a453f811b2b330e6593d6ac23dd1f4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 850aa434cc5eb5b5f1379be68d29cd77994a2f75
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>단원 2-4-검토 큐브 및 차원 속성
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]큐브를 정의 하면 큐브 디자이너를 사용 하 여 결과 검토할 수 있습니다. 다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 큐브 구조를 검토합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [Analysis Services 프로젝트 배포](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [차원 디자이너에서 차원 데이터 찾아보기](../analysis-services/multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

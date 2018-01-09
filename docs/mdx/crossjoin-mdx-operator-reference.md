@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: '*'
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 030faf30d7038379697b095edfa2a6bddfb22fbd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e192e0eacd926cde2c6548392b1523cfc3d0af12
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin-MDX 연산자 참조
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ Set_Expression * Set_Expression
  지정된 두 매개 변수의 교차곱을 포함하는 집합입니다.  
   
 ## <a name="remarks"></a>주의  
- **\* (Crossjoin)** 연산자는 기능적으로 동일는 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.  
+  **\* (Crossjoin)** 연산자는 기능적으로 동일는 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: df64c85fb5aa9034bc9f4c77a3ac54f98e379ecf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4dbed7c8217e5ea7a14d07c2c75a3c3857fd7cb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="usage"></a>사용법  
  다음 표에서는 클라이언트 응용 프로그램이 보안 인증을 사용할 수 있는 가장 일반적인 시나리오에 대해 설명합니다.  
   
-|시나리오|설명|  
+|시나리오|Description|  
 |--------------|-----------------|  
 |레거시 응용 프로그램이 SPN을 지정하지 않습니다.|이 호환성 시나리오는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용으로 개발된 응용 프로그램의 동작에 변화가 없을 것임을 보장합니다.  지정된 SPN이 없으면 해당 응용 프로그램은 생성된 SPN에 의존하며, 어떤 인증 방법이 사용되는지 알 수 없습니다.|  
 |클라이언트 응용 프로그램의 현재 버전을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 도메인 사용자 또는 컴퓨터 계정으로, 인스턴스별 SPN으로 또는 사용자 정의 문자열로 연결 문자열에 SPN을 지정 합니다.|공급자, 초기화 또는 연결 문자열에서 **ServerSPN** 키워드를 사용하여 다음을 수행할 수 있습니다.<br /><br /> -에서 사용할 계정을 지정 하십시오.는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 연결에 대 한 합니다. 이를 통해 Kerberos 인증에 대한 액세스가 간소화됩니다. Kerberos KDC(키 배포 센터)가 있고 올바른 계정이 지정된 경우 NTLM보다 Kerberos 인증이 사용될 가능성이 더 높습니다. KDC는 일반적으로 도메인 컨트롤러와 동일한 컴퓨터에 위치합니다.<br /><br /> --서비스 계정에 대 한를 조회 하는 SPN을 지정 하는 중는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스. 에 대 한 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를이 용도로 사용할 수 있는 두 개의 기본 Spn이 생성 됩니다. 그러나 키가 Active Directory에 있다는 보장은 없으므로 이 경우 Kerberos 인증이 보장되지는 않습니다.<br /><br /> -에 대 한 서비스 계정을 조회에 사용할 SPN을 지정 합니다.는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스. 이는 서비스 계정에 매핑되는 사용자 정의 문자열일 수 있습니다. 이 경우 키는 KDC에 수동으로 등록해야 하며 사용자 정의 SPN에 대한 규칙을 충족해야 합니다.<br /><br /> **FailoverPartnerSPN** 키워드를 사용하여 장애 조치(Failover) 파트너 서버에 대한 SPN을 지정할 수 있습니다. 계정 및 Active Directory 키 값의 범위는 주 서버에 지정할 수 있는 값과 동일합니다.|  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
  응용 프로그램은 연결 문자열 키워드를 지정하는 대신 프로그래밍 방식으로 SPN을 연결 특성으로 지정할 수 있습니다. 이렇게 하면 연결 풀 조각화를 보다 용이하게 관리할 수 있습니다.  
   
- 응용 프로그램에서는 해당 연결 특성을 설정하여 연결 문자열의 SPN을 재정의할 수 있지만 연결 풀링에 사용되는 연결 문자열은 풀링을 위해 연결 문자열 값을 사용한다는 점을 인식해야 합니다.  
+ 응용 프로그램에서는 해당 연결 특성을 설정하여 연결 문자열의 SPN을 재정의할 수 있지만 연결 풀링에 사용되는 연결 문자열은 풀링을 위해 연결 문자열 값을 사용한다는 점을 인식해야 합니다.   
   
 ## <a name="down-level-server-behavior"></a>하위 수준 서버 동작  
  새 연결 동작은 클라이언트에 의해 구현되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 특정 버전에 국한되지 않습니다.   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  SPN이 연결 문자열 또는 연결 특성에서 사용하는 구문은 다음과 같습니다.  
   
-|구문|설명|  
+|구문|Description|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|TCP 이외의 프로토콜이 사용될 때 기본 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *fqdn* 은 정규화된 도메인 이름입니다.|  
 |MSSQLSvc/*fqdn*:*port*|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다.<br /><br /> *port* 는 TCP 포트 번호입니다.|  

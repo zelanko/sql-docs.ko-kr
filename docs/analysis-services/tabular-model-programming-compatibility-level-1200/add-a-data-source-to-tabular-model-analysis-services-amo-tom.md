@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8aac5145c520ac61fda5689a4ba40b882bb554da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>테이블 형식 모델 (Analysis Services AMO-TOM)에 데이터 소스 추가
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**DataSource** Microsoft.AnalysisServices.Tabular 네임 스페이스의 클래스 값은 데이터 새로 고침 작업 중 유형을 지정 하는 테이블 형식 모델의 데이터 원본에 대 한 추상화 및 가져온된 데이터의 위치입니다. 

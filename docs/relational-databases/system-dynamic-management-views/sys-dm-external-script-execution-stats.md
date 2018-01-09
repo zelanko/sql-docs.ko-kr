@@ -8,7 +8,7 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -24,11 +24,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4cc170e6b8da5bc83e4ca2927baed90c8a02fe24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a80c26130d5671dd387122930e599a2c33a5db60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/17/2017
 |counter_value|**integer**|서버에서 등록된 외부 스크립트 함수를 호출한 총 인스턴스 수입니다. 이 값은 누적되며, 인스턴스에 기능이 설치된 시간부터 시작되어 다시 설정할 수 없습니다.|  
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 > [!NOTE]  
 >  외부 스크립트를 실행하는 사용자에게는 추가 권한 EXECUTE ANY EXTERNAL SCRIPT가 있어야 합니다. 하지만 이 DMV는 이 권한이 없는 관리자가 사용할 수 있습니다. 
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   이 DMV는 내부 원격 분석용으로 제공되어 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 제공되는 새로운 외부 스크립트 실행 기능의 전반적인 사용을 모니터링합니다. 원격 분석 서비스는 LaunchPad가 실행될 때 시작되고, 등록된 외부 스크립트 함수를 호출할 때마다 디스크 기반 카운터를 늘립니다.
 
 일반적으로 생성된 프로세스가 활성 상태인 경우에만 성능 카운터가 유효합니다. 따라서 DMV에서 쿼리는 실행이 중지된 서비스의 데이터 세부 정보를 표시할 수 없습니다. 예를 들어 시작 관리자가 외부 스크립트를 실행하고 매우 신속하게 종료한 경우 기존의 DMV에는 아무 데이터도 표시되지 않습니다.
@@ -90,7 +90,7 @@ WHERE language = 'R';
 ```  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md) 
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  

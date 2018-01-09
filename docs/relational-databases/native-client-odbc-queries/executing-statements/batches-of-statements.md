@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,17 +24,17 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b23d06e07703ff9b7cc7c978d69a9cb9d7eff635
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27345751dba7376371150acb15330a6e39a70c1c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="batches-of-statements"></a>문의 일괄 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  일괄 처리를 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에 전달 된 단일 문자열에 세미콜론 (;)으로 구분 된 두 개 이상의 문을 포함 하 여 문을 **SQLExecDirect** 또는 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)합니다. 예를 들어  
+  일괄 처리를 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에 전달 된 단일 문자열에 세미콜론 (;)으로 구분 된 두 개 이상의 문을 포함 하 여 문을 **SQLExecDirect** 또는 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -53,7 +53,7 @@ szSqlState = "01S02", pfNativeError = 0
 szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type changed."  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [실행 중인 문 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

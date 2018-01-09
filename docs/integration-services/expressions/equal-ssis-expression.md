@@ -109,7 +109,7 @@ ListPrice == 500
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [!= &#40;같지 않음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
+ [\!= &#40;같지 않음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
  [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

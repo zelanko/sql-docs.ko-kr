@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -30,11 +30,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07c6a083b967be69fa68ae0eb8ecf67affd3636f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fae91b291c11e3993b2182414bf4845fb91969fb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Dataadapter로 UDT 열을 업데이트 하는 사용자 정의 형식-액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 형식 (Udt)를 사용 하 여 사용할 수는 **System.Data.DataSet** 및 **System.Data.SqlClient.SqlDataAdapter** 검색 하 고 데이터를 수정 합니다.  

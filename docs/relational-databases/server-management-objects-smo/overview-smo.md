@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a768d79345789dfbe9e33dc885e296928429e01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96293d1bf121ac3697d494f1c5a6fc22f4dffb64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)는 개체의 프로그래밍 방식으로 관리 하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 응용 프로그램을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 응용 프로그램이지만 SMO 응용 프로그램을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  

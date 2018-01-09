@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,17 +18,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c9f593c830dbdffe9b09b6f5e44d0957a7bb1d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3d71a404f2b91606ec12ac08689a2c8ebefea85f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>단원 3-4-Date 차원 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 항목의 태스크에서는 사용자 정의 계층 만들고 날짜, Month, Calendar Quarter 및 Calendar Semester 특성에 대해 표시 되는 멤버 이름을 변경 합니다. 또한 특성에 대한 복합 키를 정의하고 차원 멤버의 정렬 순서를 제어하고 특성 관계도 정의합니다.  
   
 ## <a name="adding-a-named-calculation"></a>명명된 계산 추가  
-계산 열로 표시되는 SQL 식인 명명된 계산을 데이터 원본 뷰의 테이블에 추가할 수 있습니다. 이 식은 테이블의 열로 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블을 수정하지 않고 데이터 원본 뷰에서 기존 테이블의 관계형 스키마를 확장할 수 있습니다. 자세한 내용은 [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)를 참조하세요.  
+계산 열로 표시되는 SQL 식인 명명된 계산을 데이터 원본 뷰의 테이블에 추가할 수 있습니다. 이 식은 테이블의 열로 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블을 수정하지 않고 데이터 원본 뷰에서 기존 테이블의 관계형 스키마를 확장할 수 있습니다. 자세한 내용은 [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>명명된 계산을 추가하려면  
   
@@ -215,7 +215,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  **속성** 창에서 **KeyColumns** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
   
-3.  **키 열** 대화 상자의 **사용 가능한 열** 목록에서 **CalendarYear**열을 선택한 후 **>** 단추를 클릭합니다.  
+3.  **키 열** 대화 상자의 **사용 가능한 열** 목록에서 **CalendarYear** 열을 선택한 후 **>** 단추를 클릭합니다.  
   
     **CalendarQuarter** 및 **CalendarYear** 열이 **키 열** 목록에 표시됩니다.  
   
@@ -306,6 +306,6 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [배포된 큐브 찾아보기](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [다차원 모델의 차원](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

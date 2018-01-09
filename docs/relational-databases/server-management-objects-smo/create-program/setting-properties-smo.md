@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5174b61d138f94c795da64be18556258c53ad3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625b34647312ffb31fbe3821ed8e893d883f3298
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="setting-properties---smo"></a>설정 속성-SMO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]속성은 개체에 대 한 설명 정보를 저장 하는 값입니다. 예를 들어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 옵션으로 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 개체의 속성입니다. 속성 컬렉션을 사용하여 직접 또는 간접적으로 속성에 액세스할 수 있습니다. 속성에 직접 액세스하는 경우 다음 구문을 사용합니다.  

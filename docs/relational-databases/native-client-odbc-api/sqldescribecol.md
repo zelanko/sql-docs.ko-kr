@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 41bedf7d6dd15d4b7168c339385560c07ff48733
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db6d072d29b95c7656d4ac7af950866b0fba6e27
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
 ||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|---------------------|------------------------|  
-|datetime|SQL_TYPE_TIMESTAMP|23|3|  
+|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|date|SQL_TYPE_DATE|10|0|  
-|time|SQL_SS_TIME2|8, 10..16|0..7|  
-|datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
+|날짜|SQL_TYPE_DATE|10|0|  
+|Time|SQL_SS_TIME2|8, 10..16|0..7|  
+|Datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
   
  자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLDescribeCol 지원  
  **SQLDescribeCol** 큰 CLR 사용자 정의 형식 (Udt)을 지원 합니다. 자세한 내용은 참조 [Large CLR User-Defined 형식 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLDescribeCol 함수](http://go.microsoft.com/fwlink/?LinkID=59338)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

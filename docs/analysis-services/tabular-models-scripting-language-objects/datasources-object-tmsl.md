@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1a28cf4fcb0f9cd7ba5d00f74e6957302768c17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 07c2eb15addda49071fa962518eae322c014d8ad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="datasources-object-tmsl"></a>데이터 원본 개체 TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]모델 또는 DirectQuery 모드를 통해 쿼리를 통해 패스에서 모델에 데이터를 추가 하는 가져오기 중에 사용 되는 데이터 원본에 대 한 연결을 정의 합니다.  DirectQuery 모드의 모델 하나만 **DataSource** 개체입니다.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="object-definition"></a>개체 정의  
  모든 개체 이름, 유형, 설명, properties 컬렉션 및 주석을 포함 하 여 속성의 공통 집합을 가집니다. **데이터 원본** 개체에는 다음과 같은 속성이 있습니다.  
   
- 형식  
+ 유형  
  DataSource의 형식입니다. 현재, 유일한 유효 값에는 공급자 (1)-일반적인 연결 문자열입니다.  
   
  connectionString  

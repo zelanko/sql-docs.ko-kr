@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae826437d790e807998d223f9c8999582311fe7a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>부모-자식 차원 특성 단항 연산자
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]부모-자식 관계를 포함 하는 차원에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 단항 (또는 사용자 지정 롤업)을 지정 하면 부모 특성의 모든 계산 되지 않는 멤버에 대 한 사용자 지정 롤업을 결정 하는 연산자 열. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  

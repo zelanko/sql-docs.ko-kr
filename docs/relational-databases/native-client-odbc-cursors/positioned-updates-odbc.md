@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-cursors
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a77f61ebd66cf6bda10d8c59c61e5364208a66e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: de1164ecd8c965dbd641f1a5a1db5c26b3163453
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="positioned-updates-odbc"></a>위치 지정 업데이트(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
  **SQLSetPos** 서버 커서를 사용 하는 경우 WHERE CURRENT OF 보다 선호 됩니다. ODBC 커서 라이브러리에 업데이트 가능한 정적 커서를 사용하면 커서 라이브러리가 기본 테이블의 키 값을 통해 WHERE 절을 추가하는 방법으로 WHERE CURRENT OF 업데이트를 구현합니다. 이 경우 테이블의 키가 고유하지 않으면 불필요한 업데이트가 수행될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [커서 &#40; ODBC &#41;를 사용 하 여](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

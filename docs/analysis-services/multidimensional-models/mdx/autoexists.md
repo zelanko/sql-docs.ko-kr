@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3f930db51b869d4f504ee282aeaae6e4a12061c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 655041c87d4cf9009692025f9396a94dd41a2cf1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="autoexists"></a>Autoexists
+# <a name="autoexists"></a>AUTOEXIST
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]개념 *autoexists* 을 수 있는 동일한 특성의 가능한 모든 조합을 계층 멤버로 만들 결과로 존재 하는 셀이 아니라 큐브에서 실제로 존재 하는 셀으로 큐브 공간 제한 계층 구조입니다. 이는 한 특성 계층의 멤버가 동일한 차원에 있는 다른 특성 계층의 멤버와 함께 존재할 수 없기 때문입니다. SELECT 문에서 동일한 차원의 특성 계층이 두 개 이상 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 조건에 맞게 적절히 제한되도록 특성의 식을 계산합니다.  
   
  예를 들어 Geography 차원의 특성을 사용한다고 가정합니다. City 특성의 모든 멤버를 반환하는 식과 Country 특성의 멤버를 유럽의 모든 국가로 제한하는 다른 식이 있는 경우 City 멤버는 유럽 국가에 속한 도시로만 제한됩니다. 이것은 Analysis Services의 AUTOEXIST 특징 때문입니다. Autoexists는 한 특성 식에서 제외된 차원 레코드를 다른 특성 식에서 포함하지 않도록 하기 때문에 동일한 차원의 특성에만 적용됩니다. 결과적으로 차원 행에서 서로 다른 특성 식이 교차하는 것으로 AUTOEXIST를 이해할 수도 있습니다.  

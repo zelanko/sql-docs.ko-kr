@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7897c756eb0aa9aa53ed56356052974e53afd601
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>분류 행렬(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *분류 행렬* 범주 예측된 값의 실제 값과 일치 하는지 여부를 확인 하 여 모델의 모든 사례를 정렬 합니다. 그런 다음 각 범주의 모든 사례 수가 계산되고 행렬에 합계가 표시됩니다. 분류 행렬은 통계 모델을 평가하기 위한 표준 도구로 *혼동 행렬*이라고도 합니다.  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |예측|0(실제)|1(실제)|2(실제)|  
 |---------------|------------------|------------------|------------------|  
 |0|111|3|5|  
-|1.|2|123|17|  
+|1|2|123|17|  
 |2|19|0|20|  
   
  열이 추가되어 보고서가 더 복잡해 보이지만 잘못된 예측의 누적 비용을 평가하려는 경우 추가 세부 정보가 매우 유용할 수 있습니다. 대각선의 합계를 구하거나 다른 행 조합의 결과를 비교하려면 **분류 행렬** 탭에서 제공된 **복사** 단추를 클릭하고 보고서를 Excel에 붙여넣습니다. 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 지원하는 Excel용 데이터 마이닝 클라이언트와 같은 클라이언트를 사용하여 개수 및 비율을 모두 포함하는 분류 보고서를 Excel에서 직접 만들 수 있습니다. 자세한 내용은 [SQL Server 데이터 마이닝(SQL Server Data Mining)](http://go.microsoft.com/fwlink/?LinkID=77733)을 참조하십시오.  

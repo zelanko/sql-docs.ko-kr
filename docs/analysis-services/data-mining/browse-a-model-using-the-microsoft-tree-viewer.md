@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb13244b95652917fdf09d017d66f927be915c8b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 61e3be434f2029216742813178b041b083174362
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Microsoft 트리 뷰어를 사용하여 모델 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 트리 뷰어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 표시 하 여 만든 의사 결정 트리는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 알고리즘은 분류와 회귀를 둘 다 지원하는 하이브리드 의사 결정 트리 알고리즘입니다. 따라서 이 뷰어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 기반으로 모델을 볼 수도 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 불연속 및 연속 특성 모두의 예측 모델링에 사용됩니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)를 참조하십시오.  

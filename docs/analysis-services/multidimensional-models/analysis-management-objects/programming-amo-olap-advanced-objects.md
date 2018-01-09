@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 924f2a618b029d3724a2435fa1a27287d454247e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 09f1785d313f0598121ad06e42b26ca4f4367730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 고급 개체 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 분석 관리 개체 (AMO) OLAP의 세부 정보를 프로그래밍 고급 개체에 설명 합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -425,7 +423,7 @@ static public void CreatePerspectives(Cube cube)
   
 2.  캐시 사양을 추가합니다.  
   
-|사양|설명|  
+|사양|Description|  
 |-------------------|-----------------|  
 |AggregationStorage|집계에 대한 저장소 유형입니다.<br /><br /> 파티션에만 적용됩니다. 차원에서 **Regular.**여야 합니다.|  
 |SilenceInterval|MOLAP 이미징 처리를 시작하기 전에 캐시가 존재하는 최소 시간입니다.|  

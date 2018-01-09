@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ca2bd5f49f3d8a756e213f9e8ae46dcd5a25f6a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 441bb1316c22d0a701ded998def0b1f94c84e4de
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>열 데이터 형식 설정(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터를 가져오거나 데이터 모델에 붙여 넣을 때 모델 디자이너는 자동으로 검색 및 데이터 형식을 적용 합니다. 모델에 데이터를 추가한 후 열의 데이터 형식을 수동으로 수정하여 데이터가 저장되는 방법을 변경할 수 있습니다. 원하는 경우 데이터 저장 방식은 변경하지 않고 데이터 표시 방식의 형식만 변경할 수도 있습니다.  

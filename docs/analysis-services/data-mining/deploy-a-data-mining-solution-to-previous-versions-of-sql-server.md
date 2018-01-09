@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 834b8ceae72e00eea7bf989ea9583068551bfc92
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f082d488439f1331c009352bc7d691b7703f0e32
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 데이터 마이닝 모델 또는의 인스턴스에서 만든 데이터 마이닝 구조에 배포 하려고 할 때 발생할 수 있는 알려진된 호환성 문제를 설명 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] SQL Server 2005 Analysis Services를 사용 하는 데이터베이스를 배포 하는 경우 또는 인스턴스를 SQL Server 2005에서 만든 모델 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  

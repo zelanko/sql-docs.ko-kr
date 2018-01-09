@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 26bae76004b344b15f8f2be3605eb8c600c31039
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91d370b9e71d843aa9a8ef8848b7cd63b38f0880
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 및 데이터를 모델에 테이블 가져오기 마법사를 사용 하 여를 추가한 후 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장 하는 계산 정의 및 필터링 및 데이터를 정렬 하 여 테이블 작업을 시작할 수 있습니다. 보기 쉽게 테이블입니다.  
@@ -35,7 +32,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [테이블 및 열 작업](#bkmk_working)  
   
--   [관련 작업](#bkmk_related_tasks)  
+-   [관련 태스크](#bkmk_related_tasks)  
   
 ##  <a name="bkmk_benefits"></a> 이점  
  테이블 형식 모델에서 테이블은 열 및 기타 메타데이터가 정의되는 프레임 워크를 제공합니다. 테이블에는 다음이 포함됩니다.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 12/08/2017
  **테이블 메타데이터**  
  관계, 측정값, 역할, 큐브 뷰 및 붙여넣은 데이터는 모두 테이블 컨텍스트 내에서 개체를 정의하는 메타데이터입니다.  
   
- **데이터**  
+ **Data**  
  테이블 가져오기 마법사를 사용하거나 계산 열에서 새 데이터를 만들어 테이블을 처음 가져오면 데이터가 테이블 열에 채워집니다. 원본에서 데이터가 변경되거나 모델이 메모리에서 제거되면 처리 작업을 실행하여 데이터를 테이블에 다시 채워야 합니다.  
   
 ##  <a name="bkmk_working"></a> 테이블 및 열 작업  
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
  매우 큰 데이터 집합을 작업하는 경우 특정 데이터가 표시되지 않도록 필터링할 수 있습니다. 다른 순서로 데이터를 정렬할 수도 있습니다. 모델 디자이너를 사용하면 필터, 정렬 및 숨기기 기능을 사용하여 전체 열 또는 특정 데이터를 표시하거나 표시하지 않을 수 있습니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
 |항목|Description|  
 |-----------|-----------------|  

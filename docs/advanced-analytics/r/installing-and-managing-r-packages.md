@@ -1,13 +1,13 @@
 ---
 title: "SQL Server와 함께 설치 된 R 패키지 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -15,27 +15,23 @@ ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 070e1776f0a9760742e933064be569818fe200b2
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 2783d4ce6ca9cd25b41c1e658f5e3bf2a4f05f24
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="r-packages-installed-with-sql-server"></a>SQL Server와 함께 설치 된 R 패키지
 
-이 문서는 SQL Server와 함께 설치 된 R 패키지에 설명 하 고 관리 하 고 기존 패키지를 확인 하는 방법에 대 한 정보를 제공 합니다.
-
-이 문서에는 또한 SQL Server와 함께 사용 하기 위해 새 패키지를 추가 하는 방법에 대 한 정보 링크를 제공 합니다.
+이 문서에서는 설치 하 고 컴퓨터 학습 기능을 사용 하는 경우 SQL Server와 함께 설치 된 R 패키지를 설명 합니다. 관리 및 기존 패키지를 확인 하거나 SQL Server 인스턴스를 새 패키지를 추가 하는 방법에 대해서도 설명 합니다.
 
 **적용 대상:** SQL Server 2017 컴퓨터 학습 Services (In-database), SQL Server 2016 R Services (In-database)
 
 ## <a name="what-is-the-instance-library-and-where-is-it"></a>인스턴스 라이브러리 무엇 이며 여기서 입니까?
 
-SQL Server에서 실행 되는 모든 R 솔루션 인스턴스와 연결 된 기본 R 라이브러리에 설치 된 패키지에만 사용할 수 있습니다.
-
-SQL Server에서 R 기능을 설치 하는 경우 R 패키지 라이브러리 인스턴스 폴더에 있습니다.
+SQL Server에서 실행 되는 모든 R 솔루션 인스턴스와 연결 된 기본 R 라이브러리에 설치 된 패키지에만 사용할 수 있습니다. SQL Server에서 R 기능을 설치 하는 경우 R 패키지 라이브러리 인스턴스 폴더에 있습니다.
 
 + 기본 인스턴스 *MSSQLSERVER* 
 
@@ -51,25 +47,44 @@ SQL Server에서 R 기능을 설치 하는 경우 R 패키지 라이브러리 �
 
 다음 문을 실행하여 R의 현재 인스턴스에 대한 기본 라이브러리를 확인할 수 있습니다.
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script  @language = N'R'
 , @script = N'OutputDataSet <- data.frame(.libPaths());'
 WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
+
+Alternatiely를 사용할 수 있습니다 새 [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) sp를 실행 하는 경우 작동\_실행\_외부\_대상 컴퓨터에서 직접 스크립트입니다. 함수는 원격 연결에 대 한 라이브러리 경로 반환할 수 없습니다.
+
+```sql
+EXEC sp_execute_external_script
+  @language =N'R',
+  @script=N'
+  sql_r_path <- rxSqlLibPaths("local")
+  print(sql_r_path)
+```
+
+> [!NOTE]
+> 바인딩을 사용 하 여 인스턴스에 R 구성 요소를 업그레이드 하는 경우 경로 인스턴스 라이브러리를 변경할 수 있습니다. SQL Server가 있는 라이브러리를 사용 중인지 확인 해야 합니다.
+
 ## <a name="r-packages-installed-with-sql-server"></a>SQL Server와 함께 설치 된 R 패키지
 
-R 기본적으로 SQL Server에서 R 언어를 설치 하는 경우 **기본** 패키지도 설치 합니다. 과 같은 패키지에서 제공 하는 핵심 기능을 포함 하는 기본 패키지 `stats` 및 `utils`합니다.
+기본적으로 R **기본** 패키지도 설치 합니다. 과 같은 패키지에서 제공 하는 핵심 기능을 포함 하는 기본 패키지 `stats` 및 `utils`합니다.
 
-SQL Server 2016 및 SQL Server 2017에서 R의 설치도 포함 되어는 **RevoScaleR** 패키지 및 관련된 향상 된 패키지 및 공급자가 원격 계산 컨텍스트를 지 원하는 스트리밍, 병렬 rx 함수를 실행 하 고 다른 여러 기능이 있습니다.
+SQL Server 2016 또는 SQL Server 2017에서 R의 설치는 항상 포함 됩니다는 **RevoScaleR** 패키지 및 관련된 향상 된 패키지 및 공급자가 원격 계산 컨텍스트를 지 원하는 스트리밍, 병렬 rx 함수를 실행 하 고 다른 여러 기능이 있습니다. RevoScaleR 패키지를 업그레이드 하기 위해 사용 하 여 하거나 바인딩 방금 기계 학습 구성 요소를 업그레이드 또는 패치 또는 SQL Server의 최신 버전으로 인스턴스를 업그레이드 합니다.
 
-+ 향상된 된 R 기능 개요를 참조 하세요. [컴퓨터 학습 서버에 대 한](https://docs.microsoft.com/r-server/what-is-microsoft-r-server)
++ 향상된 된 R 기능 개요를 참조 하세요. [컴퓨터 학습 서버에 대 한](https://docs.microsoft.com/machine-learning-server/what-is-microsoft-r-server)
 
-+ 설치 하는 클라이언트 컴퓨터로 RevoScaleR 라이브러리를 다운로드 하려면 [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)
++ 설치 하는 클라이언트 컴퓨터로 RevoScaleR 라이브러리를 다운로드 하려면 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
 ## <a name="permissions-required-for-installing-r-packages"></a>R 패키지를 설치에 필요한 사용 권한
 
-SQL Server 2016에서 관리자는 인스턴스 전체에서 새 R 패키지를 설치 해야 했습니다. SQL Server 2017 년 1에서 데이터베이스 관리자 선택 된 사용자에 대 한 패키지 관리를 위임 하는 기능을 제공 하는 새 데이터베이스 기능 추가 되었습니다.
+SQL Server 2016에서 관리자는 인스턴스 전체에서 새 R 패키지를 설치 해야 했습니다. 
+
+SQL Server 2017에 패키지를 설치 및 관리에 대 한 새로운 기능이 추가 되었습니다.
+
++ 전용 또는 공유 범위를 사용 하 여 패키지를 설치 하려면 R 명령을 원격 클라이언트에서 사용할 수 있습니다. 이 기능에 필요 하거나 [Microsoft R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install) 또는 [컴퓨터 학습 서버](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 인스턴스에 대 한 dbo 권한이 뿐만 아니라 합니다.
++ 새 데이터베이스 기능이 추가 되었습니다 패키지 관리를 지원 하기 위해 데이터베이스 관리자가 T-SQL을 사용 하지 않고 있습니다. 나중에 이러한 기능은 대부분의 패싯에 패키지 관리 권한이 있는 사용자를 위임 하는 기능 Dba를 제공 합니다.
 
 이 섹션에서는 설치 하 고 버전 당 패키지를 관리 하는 데 필요한 사용 권한을 설명 합니다.
 
@@ -81,9 +96,9 @@ SQL Server 2016에서 관리자는 인스턴스 전체에서 새 R 패키지를 
 
 + SQL Server 2017 Machine Learning Services
 
-    이 릴리스에서 데이터베이스 관리자가 선택한 사용자에 게 패키지 설치 권한을 위임할 수 있도록 패키지 관리 함수를 포함 합니다. 이 기능을 사용 하는 경우 데이터베이스 관리자가 새 패키지 역할 중 하나를 있습니다 추가 요청 합니다. 자세한 내용은 참조 [SQL Server에 대 한 R 패키지 관리](r-package-management-for-sql-server-r-services.md)합니다.
-
     SQL Server 인스턴스의 관리자 인 경우에 새 패키지를 설치할 수 있습니다. 방금 인스턴스와 연결 된 기본 라이브러리를 사용 해야 합니다. 다른 위치에 설치 된 패키지에는 저장된 프로시저에서 호출 될 때 실행할 수 없습니다. 사용 하 여 SQL Server 계산 컨텍스트도도 실행 되는 R 코드는 인스턴스 라이브러리의 패키지 사용할 수 있어야 합니다.
+
+    이 버전에는 이후 릴리스에서 Dba 하 여 보다 쉽게 패키지 관리를 지원 하기 위한 몇 가지 새로운 기능이 포함 됩니다. 지금은 계속는 인스턴스 전체에서 R 패키지를 설치 하는 것이 좋습니다.
 
 + R Server (Standalone)
 

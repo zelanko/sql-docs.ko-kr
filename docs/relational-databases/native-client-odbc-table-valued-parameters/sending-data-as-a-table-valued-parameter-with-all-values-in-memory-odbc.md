@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d4dd96100a0e2a7075f8f1b814442d71442b93d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd8b1e9857a7da6f504484a85afdac13067768e8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>모든 값을 메모리에 로드하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 
   이 항목에서는 모든 값이 메모리에 있을 때 데이터를 테이블 반환 매개 변수로 저장 프로시저에 보내는 방법에 대해 설명합니다. 테이블 반환 매개 변수를 보여 주는 다른 샘플을 보려면 [테이블 반환 매개 변수 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
   
-## <a name="prerequisite"></a>필수 구성 요소  
+## <a name="prerequisite"></a>사전 요구 사항  
  이 절차에서는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 서버에서 실행되었다고 가정합니다.  
   
 ```  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92f53728f3c3b9b2a1ea78299c2104d1af51319f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0771cf457515af5fd66da0f1232f2c908ae460ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자 이해
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]서버 이벤트 용 WMI 공급자를 사용 하면 (WMI (Windows Management Instrumentation)를 사용 하 여 이벤트를 모니터링 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리 WMI 개체로 전환하여 작동됩니다. WMI에서는 이 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이벤트 알림을 생성할 수 있는 모든 이벤트를 사용할 수 있습니다. 또한 WMI와 상호 작용하는 관리 응용 프로그램인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 이러한 이벤트에 응답할 수 있기 때문에 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 처리하던 이벤트보다 다양한 이벤트를 처리할 수 있습니다.  

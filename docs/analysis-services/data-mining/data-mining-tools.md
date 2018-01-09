@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d47b9015ba7635a7392639fbc8a7e1ca5ff73d13
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 130c8098a7083019671b3b799246b16757fd1b5b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-tools"></a>데이터 마이닝 도구
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 솔루션을 만드는 데 사용할 수 있는 다음 도구가 있습니다.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
  **자세한 내용:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>데이터 마이닝 디자이너  
+## <a name="data-mining-designer"></a>Data Mining Designer  
  데이터 마이닝 마법사를 사용하여 마이닝 구조와 마이닝 모델을 만든 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 데이터 마이닝 디자이너를 사용하여 기존 모델과 구조로 작업할 수 있습니다.  
   
  디자이너에는 다음 태스크를 위한 도구가 포함되어 있습니다.  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services 데이터 마이닝 태스크 및 변환  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 마이닝을 지원하는 많은 구성 요소가 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 도구는 예측, 모델 작성, 처리 등의 일반적인 데이터 마이닝 태스크를 쉽게 자동화할 수 있도록 설계되었습니다. 예를 들어  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 도구는 예측, 모델 작성, 처리 등의 일반적인 데이터 마이닝 태스크를 쉽게 자동화할 수 있도록 설계되었습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   데이터 집합이 새 고객으로 업데이트될 때마다 모델을 자동으로 업데이트하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만듭니다.  
   
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
 -   매개 변수에서 전달된 모델을 자동으로 생성합니다.  
   
- 그러나 다른 프로세스에 대한 입력으로 패키지 워크플로에서 데이터 마이닝을 사용할 수도 있습니다. 예를 들어  
+ 그러나 다른 프로세스에 대한 입력으로 패키지 워크플로에서 데이터 마이닝을 사용할 수도 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   모델에서 생성된 확률 값을 사용하여 텍스트 마이닝 또는 다른 분류 태스크에 대한 점수에 가중치를 부여합니다.  
   

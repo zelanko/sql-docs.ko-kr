@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 332b9e9e84ac25637186655de533624449ac3a01
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 85890ac9d5264bdce01f5bf10a0060532da00646
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services Tutorial 시나리오
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 자습서에 따라 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], 가상의 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 북미, 유럽 및 아시아 시장에서 금속 및 합성 소재 자전거를 생산하고 판매하는 대규모 다국적 제조 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/08/2017
   
 Analysis Services 자습서의 단원에서는 이러한 모든 목표에 맞는 큐브 데이터베이스를 작성하는 데 필요한 지침을 제공합니다. 시작하려면 첫 번째 단원인 [1단원: 새 테이블 형식 모델 프로젝트를 만들기](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)로 이동하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 843ce549dbd36f8fcbde8c61ade8cee2bc7163ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f56fc5dcd50b47a0689aa9ab96d17aaff1d0afe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="date-and-time-improvements"></a>날짜 및 시간 기능 향상
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="use-datetimedatetimedatetimeoffset-data-with-client-side-conversions-consistent-with-existing-conversions"></a>기존 변환과 일관된 클라이언트 쪽 변환이 포함된 Date/Time/Datetime/Datetimeoffset 데이터 사용  
  ODBC 표준은 기존 date, time 및 timestamp 형식 간 변환이 작동하는 방법에 대해 설명합니다. 이러한 변환은 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에 도입된 모든 date 및 time 형식 간 변환을 포함하도록 일관된 방식으로 확장되었습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee327934c7b524a9cb20be146e0fb72d8eb4ab67
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 61f69caeab165c4d6822f8f25667ad544d6014ec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverlocations-rowset"></a>DISCOVER_LOCATIONS 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]백업 파일의 내용에 대 한 정보를 반환합니다. 백업 파일 위치에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
 |열 이름|유형 표시기|제한 상태|  
 |-----------------|--------------------|-----------------------|  
-|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|필수임|  
+|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|필수|  
 |**LOCATION_PASSWORD PF_DBTYPE**|**DBTYPE_WSTR**|백업하는 동안 지정된 경우 필수 이 제한은 반환되는 행을 제한하는 데는 사용되지 않습니다. 해당 위치에 액세스하기 위한 암호를 제공하는 데 사용됩니다.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>ADOMD.NET을 사용하여 행 집합 반환  

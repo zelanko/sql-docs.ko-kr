@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a46a1a0e60c7fbe667904388a4c1c8cae93ab827
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 158b2aaa95f289a558f0d186e359903252f6d90e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR 사용자 정의 집계-요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]필요한 집계 계약을 구현 하 고 공용 언어 런타임 (CLR) 어셈블리의 형식으로 사용자 정의 집계 함수를 등록할 수 있습니다. 이 계약은 이루어져는 **SqlUserDefinedAggregate** 특성과 집계 계약 메서드로 합니다. 집계 계약은 집계의 중간 상태를 저장 하는 메커니즘 및 메커니즘과 새 값을 누적 하는 메커니즘을 포함: **Init**, **Accumulate**,  **병합**, 및 **종료**합니다. 이러한 요구 사항을 충족할 경우에 사용자 정의 집계를 완전히 활용 할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 항목의 다음 섹션에서는 사용자 정의 집계를 만드는 방법과 사용하는 방법에 대한 자세한 정보를 제공합니다. 예를 들어 참조 [Invoking CLR User-Defined 집계 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)합니다.  

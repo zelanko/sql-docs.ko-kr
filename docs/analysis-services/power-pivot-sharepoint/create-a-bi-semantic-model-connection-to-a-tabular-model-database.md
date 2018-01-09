@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: feb8740550ba5488ff07425ce20036140d84e3dc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목의 정보를 사용 하 여 SharePoint 팜 외부의 Analysis Services 인스턴스에서 실행 되는 테이블 형식 모델 데이터베이스로 리디렉션하는 BI 의미 체계 모델 연결을 설정 합니다.  

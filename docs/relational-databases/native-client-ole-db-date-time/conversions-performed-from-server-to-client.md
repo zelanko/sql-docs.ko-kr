@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: conversions [OLE DB], server to client
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 45124fb2e318cee317d496a525094b63651716d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0f86d6337913eee857e3575eb23dc52417c6e8f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,16 +35,16 @@ ms.lasthandoff: 11/17/2017
   
 |대상 -><br /><br /> 보낸 사람|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|날짜|1,7|확인|-|-|1.|1,3|1,7|-|확인 (VT_BSTR)|확인|확인|4|4|  
+|date|1,7|확인|-|-|1|1,3|1,7|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Time|5,6,7|-|9|확인|6|3,6|5,6|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Smalldatetime|7|8|9,10|10|확인|3|7|-|7 (VT_DATE)|확인|확인|4|4|  
-|날짜/시간|5,7|8|9,10|10|확인|3|7|-|7 (VT_DATE)|확인|확인|4|4|  
+|DATETIME|5,7|8|9,10|10|확인|3|7|-|7 (VT_DATE)|확인|확인|4|4|  
 |Datetime2|5,7|8|9,10|10|7|3|5,7|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|확인|5,7,11|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (date)|1,7|확인|2|2|1.|1,3|1,7|-|가능(VT_BSTR)|확인|확인|4|4|  
+|Sql_variant<br /><br /> (date)|1,7|확인|2|2|1|1,3|1,7|-|가능(VT_BSTR)|확인|확인|4|4|  
 |Sql_variant<br /><br /> (time)|5,6,7|2|6|확인|6|3,6|5,6|-|가능(VT_BSTR)|확인|확인|4|4|  
 |Sql_variant<br /><br /> (datetime2)|5,7|8|9,10|10|확인|3|5,7|-|가능(VT_BSTR)|확인|확인|4|4|  
 |Sql_variant<br /><br /> (datetimeoffset)|5,7,11|8,11|9,10,11|10,11|7,11|확인|5,7,11|-|가능(VT_BSTR)|확인|확인|4|4|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |------------|-------------|  
 |확인|변환이 필요 없습니다.|  
 |-|변환이 지원되지 않습니다. 에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환 바인딩이 확인 되 면 iaccessor:: Createaccessor를 호출할 때 *rgStatus*합니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
-|1.|시간 필드가 0으로 설정됩니다.|  
+|1|시간 필드가 0으로 설정됩니다.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다.|  
 |3|표준 시간대가 0으로 설정됩니다.|  
 |4|클라이언트 버퍼의 크기가 충분하지 않으면 DBSTATUS_S_TRUNCATED가 설정됩니다. 서버 형식에 소수 자릿수 초가 있는 경우 결과 문자열의 자릿수는 서버 형식의 소수 자릿수와 정확하게 일치합니다.|  

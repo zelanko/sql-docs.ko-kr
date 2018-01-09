@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a38653e2a8e4370d144c1ed799ac068f9b08585
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 75dfa26af76e2d3fe667ee8efb1f346e5066558a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---manipulating-data"></a>MDX 데이터 조작-데이터 조작
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (multidimensional Expressions)의 다양 한 방법으로 데이터를 조작 데 사용할 수 있습니다. 다음 항목은 MDX 언어에서 데이터 조작의 보다 발전된 개념 중 일부를 다룬 것입니다.  

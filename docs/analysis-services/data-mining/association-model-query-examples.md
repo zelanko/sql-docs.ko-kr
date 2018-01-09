@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b176b73816fb01ff7659e00f58dd4441bc689866
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1313c2933ba37f161edd4980a6b931388f60e13b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="association-model-query-examples"></a>연결 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델에 대 한 쿼리를 만들 때 내용 쿼리를 분석 하는 동안 발견 된 규칙과 하는 방법에 대 한 세부 정보에 제공 하는 만들 수 있습니다. 또는 사용 하 여 데이터에서 발견 된 연결 하는 예측 쿼리를 만들 수 있습니다. 예측 합니다. 연결 모델에서 예측은 일반적으로 규칙을 기반으로 하여 권장 구성을 생성하는 데 사용되고, 내용에 대한 쿼리는 일반적으로 항목 집합 간의 관계를 탐색합니다. 모델에 대한 메타데이터를 검색할 수도 있습니다.  

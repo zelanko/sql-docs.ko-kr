@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: triggers [SMO]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 961845d6eccfc241f1adaebfc45a1116eeb24521
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e712f4cacb6a1d7e795a75e1af6a47b758e21a3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-altering-and-removing-triggers"></a>트리거 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO에서 트리거를 사용 하 여 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 개체입니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 트리거는 발생 하 설정 된 경우 실행 하는 코드는 <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> 트리거 개체의 속성입니다. <xref:Microsoft.SqlServer.Management.Smo.Trigger> 개체의 다른 속성(예: <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 속성)을 사용하여 트리거 유형을 설정할 수 있습니다. Update 속성은 부모 테이블의 레코드 **UPDATE** 에 의해 트리거 실행 여부를 지정하는 부울 값입니다.  

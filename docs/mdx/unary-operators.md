@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a2dd50160dbe0185056988cfd866f119d7e330c4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9c729af732238916a2cb88795fb94d0729ce9f85
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="unary-operators"></a>단항 연산자
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,6 +53,6 @@ WHERE [Product].[Category].[Bikes]
  또한 MDX가 특수 한 단항 연산자를 사용 하 여 수행한 집계 작업을 확인 하는 [RollupChildren](../mdx/rollupchildren-mdx.md) 함수입니다. 이러한 특수 한 단항 연산자에 대 한 자세한 내용은 참조 하십시오. [차원에 사용자 지정 집계 추가](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [연산자 &#40; MDX 구문 &#41;](../mdx/operators-mdx-syntax.md)  
+ [연산자 & #40; MDX 구문 & #41;](../mdx/operators-mdx-syntax.md)  
   
   

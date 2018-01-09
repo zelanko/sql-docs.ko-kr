@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b1441eed61d8efba39ee33ff17b8fc81b98a7ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 758db0c45f710e760db31c5ddb3a48fd30139301
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +98,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
  연결 풀링을 사용할 경우 sql_copt_ss_ansi_npw는 SQLSetConnectAttr 아니라 연결 문자열에서 설정 되어야 합니다. 연결 풀링을 사용할 경우 연결이 설정된 후 이 특성을 변경하려고 시도하면 자동으로 실패합니다.  
   
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 **Readonly** 및 **ReadWrite**합니다. 예를 들어  
+ 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 **Readonly** 및 **ReadWrite**합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -195,7 +195,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  MARS에 대 한 자세한 내용은 참조 하세요. [Multiple Active Result Sets를 사용 하 여 &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- 응용 프로그램이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 예를 들어  
+ 응용 프로그램이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  

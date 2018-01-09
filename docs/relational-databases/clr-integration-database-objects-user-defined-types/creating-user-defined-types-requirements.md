@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52083d3b3d82f46f3248450b6242d5c66a213138
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04ee34b1a2474e97111d42be84954dc4c0987dd1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>사용자 정의 형식-요구 사항 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 형식 (UDT)에 설치를 만들 때 몇 가지 중요 한 디자인 결정을 내려야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="userdefined-serialization"></a>UserDefined 직렬화  
  **UserDefined** 형식에 대 한 설정에서 **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** 특성은 이진 형식에 대해 전체 개발자 제어 합니다. 지정 하는 경우는 **형식** 특성의 속성으로 **UserDefined**, 사용자 코드에서 다음을 수행 해야 합니다.  
   
--   선택적 지정 **IsByteOrdered** 특성의 속성입니다. 기본값은 **false**입니다.  
+-   선택적 지정 **IsByteOrdered** 특성의 속성입니다. 기본 값은 **false**입니다.  
   
 -   지정 된 **MaxByteSize** 속성은 **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**합니다.  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
  FOR XML 쿼리에서는 UDT가 직렬화되지 않습니다. Udt의 XML 직렬화를 표시 하는 FOR XML 쿼리를 실행 하려면 각 UDT 열을 명시적으로 변환 된 **xml** SELECT 문에서 데이터 형식입니다. 열을 명시적으로 변환할 수 있습니다 **varbinary**, **varchar**, 또는 **nvarchar**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 정의 형식 만들기](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

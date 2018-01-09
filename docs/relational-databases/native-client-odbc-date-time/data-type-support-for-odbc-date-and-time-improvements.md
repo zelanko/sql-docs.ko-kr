@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0dfb3bd0b1d1790b1ab578e4ad29c426437839cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8ce110fdfcf5db36e063ca923f049e81cd2f17f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,9 +43,9 @@ ms.lasthandoff: 11/17/2017
   
 |SQL Server 데이터 형식|SQL 데이터 형식|값|  
 |--------------------------|-------------------|-----------|  
-|날짜/시간|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
+|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
-|날짜|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
+|date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
 |Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155(SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
@@ -66,9 +66,9 @@ ms.lasthandoff: 11/17/2017
   
 |SQL Server 데이터 형식|ODBC 데이터 형식|클라이언트 변환을 위한 문자열 형식|  
 |--------------------------|--------------------|------------------------------------------|  
-|날짜/시간|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
+|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
-|날짜|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-월-일 h:mm: ss [.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  

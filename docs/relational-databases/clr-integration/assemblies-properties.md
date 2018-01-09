@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords: sql13.swb.assemblies.general.f1
@@ -18,16 +18,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6598c6a24fcf23a9ebcdab0cdc736df9b2f9f39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf08c95a2dad30afb8920f9519791ecf4a3fc51f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assemblies---properties"></a>어셈블리-속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 페이지를 사용 하 여 보거나 어셈블리에 대 한 속성을 수정 합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **어셈블리 이름**  
  항상 CLR 어셈블리 이름과 일치하는 어셈블리 이름을 표시합니다.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
  **강력한 이름**  
  어셈블리에 디지털 서명된 경우에는 **True** 를 표시하고 디지털 서명되지 않은 경우에는 **False** 를 표시합니다.  
   
- **버전**  
+ **버전(Version)**  
  어셈블리의 버전 번호를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목:  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19ce71cdffe3272a791cf7f9961a4d7757c913ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a169a625d2ee3e55257e1629d3043fbe9851ac8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="collation-and-clr-integration-data-types"></a>데이터 정렬 및 CLR 통합 데이터 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], **CompareInfo** 개체가 데이터 정렬을 처리 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 문자열 API(응용 프로그래밍 인터페이스)는 현재 스레드의 **CompareInfo** 개체와 연결된 **CultureInfo** 속성을 사용하여 문자열 비교를 수행합니다. **CultureInfo** 개체의 기본 설정은 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 로캘 설정에 기반을 둡니다. **CultureInfo** 값을 비교할 때 **System.String** 가 명시적으로 지정되지 않은 경우 이 설정에 따라 기본 비교 의미 체계가 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]명시적으로 변경 되지 않습니다는 **CompareInfo** 데이터베이스 또는 서버 데이터 정렬으로 속성입니다. 필요한 경우 사용자가 자신의 루틴에서 적절한 **CompareInfo** 속성을 설정해야 합니다.  

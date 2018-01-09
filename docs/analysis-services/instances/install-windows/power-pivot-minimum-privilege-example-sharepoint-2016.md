@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f86e52576c3a145042741c1a1ecc012b7c4941f3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 258bb0a43d8f3e507327594f9db399ef82745754
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot 최소 권한 예-SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 예제를 설명 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 최소 권한 사용한 SharePoint 2016 구성에 대 한 합니다. 이 구성은 세 가지 구성 요소 각각에 대해 다른 계정을 사용하며 계정마다 취소 수준의 권한이 있습니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/08/2017
   
  다음 표에는 최소 권한 구성에 대한 이 예에서 사용된 세 계정이 요약되어 있습니다.  
   
-|범위|이름|  
+|범위|속성|  
 |-----------|----------|  
 |SharePoint 관리자 계정|**SPAdmin**|  
 |SharePoint 팜 계정|**SPFarm**|  

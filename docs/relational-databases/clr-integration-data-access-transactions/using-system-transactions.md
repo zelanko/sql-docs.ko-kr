@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40c3ac24cc6be800fea8da1fab407569e4cdab87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-systemtransactions"></a>System.Transactions 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions** 네임 스페이스는 ADO.NET와 완전히 통합 하는 트랜잭션 프레임 워크를 제공 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공용 언어 런타임 (CLR) 통합 합니다. **System.Transactions.TransactionScope** 클래스는 연결을 암시적으로 분산 트랜잭션에 등록함으로써 코드 블록에 트랜잭션을 적용합니다. **Complete** 로 표시된 코드 블록의 끝에서 **TransactionScope**메서드를 호출해야 합니다. **Dispose** 메서드는 프로그램 실행이 코드 블록을 종료할 때 호출되며 **Complete** 메서드가 호출되지 않으면 트랜잭션이 중단되도록 합니다. 예외가 발생하여 코드가 범위를 벗어나게 되면 트랜잭션이 중단된 것으로 볼 수 있습니다.  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: SqlServiceAdvancedProperty Class
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc15b15084f74c6749c1c3a33b34beadcb82d0a1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 10ce5ff004313fcab365296bcd0dac087374f8e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)][SqlServiceAdvancedProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 에서 참조 되는 서비스의 고급 속성을 나타냅니다는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) 클래스는 서비스에 고유한 속성을 나타냅니다. 이러한 속성은 연결 된 속성의 목록에는 [SqlService 클래스](http://technet.microsoft.com/library/ms186497.aspx) 클래스입니다. [SqlServiceAdvancedProperty 클래스](http://technet.microsoft.com/library/ms182447.aspx) 클래스를 사용 하면 문자열, 숫자 또는 부울 속성을 표시 합니다. 지정한 서비스의 고유한 속성을 볼 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작, 중지 및 일시 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

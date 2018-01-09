@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,11 +30,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1316967a7c1840f4c86c849c79dd6f4ae47ce243
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6eefda89b1b3d453fa8ee7c45d24d0481115375
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-snapshot-isolation"></a>스냅숏 격리 작업
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
  스냅숏 격리 트랜잭션에서 지원 되는 방법에 대 한 정보를 참조 하십시오. [커서 트랜잭션 격리 수준을](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [행 집합 속성 및 동작](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   

@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3306e20389ece189a8f40c449ea88aa640af4f0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f658740766736a83dd374cf647523ea9f8e2bfe4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 데이터 수정-쓰기 되돌림 큐브를 사용 하 여
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]사용 하 여 큐브를 업데이트는 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) 문. 이 문은 특정 값을 가진 튜플을 업데이트할 수 있도록 해줍니다. 큐브 업데이트에 UPDATE CUBE 문을 효과적으로 사용하기 위해서는 문의 구문, 발생할 수 있는 오류 조건 및 업데이트로 인한 큐브의 영향을 이해해야 합니다.  

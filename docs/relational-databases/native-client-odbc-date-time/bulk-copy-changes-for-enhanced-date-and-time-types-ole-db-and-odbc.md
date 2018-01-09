@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: ODBC, bulk copy operations
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da9c9153c30e45eaa821c367f5a8b627078f7a9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18199adbb78f94a22bedaeb8cedb436174c8add7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>향상 된 날짜 및 시간 형식 (OLE DB 및 ODBC)에 대 한 대량 복사 변경 사항
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/17/2017
   
 |파일 저장 유형|호스트 파일 데이터 형식|메시지에: "< e l d _ > 필드의 파일 저장 유형 입력 [\<기본 >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|날짜/시간|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|d|  
-|날짜|SQLDATE|de|  
+|date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 |파일 저장 유형|저장 크기(바이트)|  
 |-----------------------|---------------------------|  
-|Datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
 |날짜|3|  
 |Time|6|  
@@ -99,9 +99,9 @@ ms.lasthandoff: 11/17/2017
   
 |파일 저장 유형|호스트 파일 데이터 형식|Ibcpsession:: Bcpcolfmt 사용 하기 위해 sqlncli.h에에서 입력 합니다.|값|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|날짜|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -111,12 +111,12 @@ ms.lasthandoff: 11/17/2017
   
  **OLE DB 참고 사항** IBCPSession에 의해 다음 변환이 수행 됩니다. IRowsetFastLoad에 정의 된 OLE DB 변환을 사용 하 여 [변환은 클라이언트에서 서버로 수행](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)합니다. datetime 값은 1/300초로 반올림되며 smalldatetime 값은 아래에 설명된 클라이언트 변환이 수행된 후 0초로 설정됩니다. datetime 반올림은 시간 및 분까지만 전파되고 날짜에는 전파되지 않습니다.  
   
-|To --><br /><br /> 보낸 사람|날짜|Time|Smalldatetime|Datetime|datetime2|Datetimeoffset|char|wchar|  
+|To --><br /><br /> 보낸 사람|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|날짜|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|해당 사항 없음|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10(ODBC)1,12(OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar(date)|9|-|9,6(ODBC)9,6,12(OLE DB)|9,6(ODBC)9,6,12(OLE DB)|9,6|9,5,6|해당 사항 없음|해당 사항 없음|  

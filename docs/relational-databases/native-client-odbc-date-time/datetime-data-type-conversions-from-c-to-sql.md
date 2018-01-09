@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: conversions [ODBC], C to SQL
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bda65e6abcfe3d75163352d6d3ec03a318478232
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a476140684c4bb5b44f15374e15836f6a6c262c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime to SQL에서 C 데이터 형식 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,8 +35,8 @@ ms.lasthandoff: 11/17/2017
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 ||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1.|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1.|1|1,7|1,5,7|1,13|1,13|  
+|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
+|SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
 |SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|해당 사항 없음|해당 사항 없음|1,10,11|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  

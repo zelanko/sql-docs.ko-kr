@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 958927bcd5f55fadfd5753702d7be012da3e882c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f340e182d8867a1560d1bf31945aced7ecfa0f22
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lesson 9-2-번역 정의 및 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]번역은 이름에 대 한 표현을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 특정 언어의 개체입니다. 개체에는 측정값 그룹, 측정값, 차원, 특성, 계층, KPI, 동작 및 계산 멤버가 포함됩니다. 번역은 여러 언어를 지원할 수 있는 클라이언트 응용 프로그램에 대한 서버 지원을 제공합니다. 클라이언트는 이러한 클라이언트를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 LCID(로캘 식별자)를 전달합니다. 그러면 해당 Analysis Services 인스턴스는 LCID를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 메타데이터를 제공할 때 사용할 번역 집합을 결정합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 해당 언어에 대한 번역이나 지정된 개체에 대한 번역이 없을 경우 기본 언어가 개체 메타데이터를 클라이언트에게 다시 반환하는 데 사용됩니다. 예를 들어 프랑스의 비즈니스 사용자가 프랑스어로 로캘이 설정된 워크스테이션에서 큐브에 액세스하는 경우 프랑스어 번역이 있다면 이 비즈니스 사용자에게는 멤버 캡션과 멤버 속성 값이 프랑스어로 표시됩니다. 그러나 독일의 비즈니스 사용자가 독일어로 로캘이 설정된 워크스테이션에서 동일한 큐브에 액세스하면 해당 캡션 이름과 멤버 속성 값이 독일어로 표시됩니다. 자세한 내용은 [차원 번역](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [큐브 번역](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)및 [Analysis Services에서의 번역 지원](../analysis-services/translation-support-in-analysis-services.md)을 참조하세요.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
     프랑스어 번역을 정의할 수 있는 또 다른 언어 열이 나타납니다.  
   
-5.  **Date** 차원에 대한 **Caption** 개체의 행에서 **스페인어(스페인)** 번역 열에 **Fecha** 를, **프랑스어(프랑스)** 번역 열에 **Temps** 를 입력합니다.  
+5.  **Date** 차원에 대한 **Caption** 개체의 행에서 **스페인어(스페인)** 번역 열에 **Fecha**를, **프랑스어(프랑스)** 번역 열에 **Temps**를 입력합니다.  
   
 6.  **Month Name** 특성에 대한 **Caption** 개체의 행에서 **스페인어(스페인)** 번역 열에 **Mes del Año** 를, **프랑스어(프랑스)** 번역 열에 **Mois d'Année** 를 입력합니다.  
   

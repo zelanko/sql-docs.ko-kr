@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: SELECT
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 79fb3f8ce7766130ced9a8353a83e34bbbf007d1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a769e8dc2157140718a4a4c35e45fa9ccdd2e43d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-dmx"></a>SELECT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +70,7 @@ SELECT FLATTENED <select list> FROM ...
  식을 사용 하 여 쿼리 결과 정렬할 수 및의 조합을 사용 하 여 결과의 하위 집합을 반환한 다음 수는 **ORDER BY** 및 **TOP** 절. 이 함수는 응답할 가능성이 높은 사람에게만 결과를 보내도록 메일 대상을 지정하는 시나리오 등에서 유용합니다. 예측 확률에 따라 예측 쿼리를 발송 대상의 결과 정렬 하 고 다음 반환할 상위 수 \<n > 결과입니다.  
   
 ## <a name="select-list"></a>select list  
- *\<select 목록 >* 스칼라 열 참조, 예측 함수 및 식을 포함할 수 있습니다. 사용 가능한 옵션은 알고리즘과 다음 컨텍스트에 따라 달라집니다.  
+  *\<select 목록 >* 스칼라 열 참조, 예측 함수 및 식을 포함할 수 있습니다. 사용 가능한 옵션은 알고리즘과 다음 컨텍스트에 따라 달라집니다.  
   
 -   마이닝 구조를 쿼리하는지 아니면 마이닝 모델을 쿼리하는지 여부  
   

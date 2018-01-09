@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b00a88530d8917d45358cbd69a21b9b2555e1f82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>테이블 형식 모델 솔루션 배포(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델 프로젝트를 작성 한 후 사용자가 보고 클라이언트 응용 프로그램을 사용 하 여 모델을 검색할 배포 해야 합니다. 이 항목에서는 사용자 환경에서 테이블 형식 모델 솔루션을 배포할 때 사용할 수 있는 다양한 속성과 메서드에 대해 설명합니다.  
@@ -41,7 +38,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [배포 서버 구성 및 배포된 모델에 연결](#bkmk_connecting)  
   
--   [관련 작업](#bkmk_rt)  
+-   [관련 태스크](#bkmk_rt)  
   
 ##  <a name="bkmk_benefits"></a> 이점  
  테이블 형식 모델을 배포하면 테스트, 준비 또는 프로덕션 환경에 model 데이터베이스가 만들어집니다. 그러면 사용자는 Sharepoint에서 .bism 연결 파일을 통해 또는 Microsoft Excel, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]또는 사용자 지정 응용 프로그램과 같은 보고 클라이언트 응용 프로그램에서 직접 데이터 연결을 사용하여 배포된 모델에 연결할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 테이블 형식 모델 프로젝트와 함께 만들어지며 모델을 제작하는 데 사용되는 모델 작업 영역 데이터베이스는 작업 영역 서버 인스턴스에 남아 있으므로 필요한 경우 모델 프로젝트를 변경한 다음 테스트, 준비 또는 프로덕션 환경에 다시 배포할 수 있습니다.  
@@ -59,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
-|**처리 옵션**|**기본값**|이 속성은 개체에 대한 변경 내용을 배포할 때 필요한 처리 유형을 지정합니다. 이 속성에는 다음과 같은 옵션이 있습니다.<br /><br /> **기본값** – 이 설정은 Analysis Services에서 필요한 처리 유형을 결정하도록 지정합니다. 처리되지 않은 개체가 처리되며 필요한 경우 특성 관계, 특성 계층, 사용자 계층 및 계산 열을 다시 계산합니다. 이 설정을 사용하면 전체 처리 옵션을 사용할 때보다 일반적으로 배포 시간이 빨라집니다.<br /><br /> **처리 안 함** – 이 설정은 메타데이터만 배포되도록 지정합니다. 배포 후 배포된 모델에서 처리 작업을 실행하여 데이터를 업데이트하고 다시 계산해야 할 수 있습니다.<br /><br /> **전체** – 이 설정은 메타데이터가 배포되고 전체 처리 작업이 수행되도록 지정합니다. 이렇게 하면 배포된 모델의 메타데이터와 데이터가 최신 상태로 업데이트됩니다.|  
+|**처리 옵션**|**Default**|이 속성은 개체에 대한 변경 내용을 배포할 때 필요한 처리 유형을 지정합니다. 이 속성에는 다음과 같은 옵션이 있습니다.<br /><br /> **기본값** – 이 설정은 Analysis Services에서 필요한 처리 유형을 결정하도록 지정합니다. 처리되지 않은 개체가 처리되며 필요한 경우 특성 관계, 특성 계층, 사용자 계층 및 계산 열을 다시 계산합니다. 이 설정을 사용하면 전체 처리 옵션을 사용할 때보다 일반적으로 배포 시간이 빨라집니다.<br /><br /> **처리 안 함** – 이 설정은 메타데이터만 배포되도록 지정합니다. 배포 후 배포된 모델에서 처리 작업을 실행하여 데이터를 업데이트하고 다시 계산해야 할 수 있습니다.<br /><br /> **전체** – 이 설정은 메타데이터가 배포되고 전체 처리 작업이 수행되도록 지정합니다. 이렇게 하면 배포된 모델의 메타데이터와 데이터가 최신 상태로 업데이트됩니다.|  
 |**트랜잭션 배포**|**False**|이 속성은 배포가 트랜잭션인지 여부를 지정합니다. 기본적으로 모든 개체 또는 변경된 개체의 배포는 배포되는 개체의 처리에 있어서 트랜잭션이 아닙니다. 처리가 실패해도 배포는 성공하고 유지될 수 있습니다. 이를 변경하여 배포와 처리를 단일 트랜잭션에 통합할 수 있습니다.|  
 |**쿼리 모드**|**메모리 내**|이 속성은 메모리 내(캐시됨) 모드 또는 DirectQuery 모드 중에서 쿼리 결과가 반환되는 원본이 실행되는 모드를 지정합니다. 이 속성에는 다음과 같은 옵션이 있습니다.<br /><br /> **DirectQuery** – 이 설정은 모델에 대한 모든 쿼리에서 관계형 데이터 원본만 사용하도록 지정합니다.<br /><br /> **DirectQuery with In-Memory** - 이 설정은 클라이언트의 연결 문자열에 다르게 지정되어 있지 않으면 기본적으로 관계형 원본을 사용하여 쿼리에 응답하도록 지정합니다.<br /><br /> **In-Memory** - 이 설정은 캐시만 사용하여 쿼리에 응답하도록 지정합니다.<br /><br /> **In-Memory with DirectQuery** - 이 설정은 기본적으로 클라이언트에서 연결 문자열에 다르게 지정되어 있지 않으면 캐시를 사용하여 쿼리에 응답하도록 지정합니다.<br /><br /> <br /><br /> 자세한 내용은 [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)를 참조하세요.|  
   
@@ -69,8 +66,8 @@ ms.lasthandoff: 12/08/2017
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
 |**서버**<br /><br /> 프로젝트가 생성될 때 설정됩니다.|**localhost**|프로젝트가 생성될 때 설정되는 이 속성은 모델이 배포될 이름별 Analysis Services 인스턴스를 지정합니다. 기본적으로 모델은 로컬 컴퓨터에 있는 기본 Analysis Services 인스턴스로 배포됩니다. 하지만 이 설정을 변경하여 로컬 컴퓨터의 명명된 인스턴스 또는 Analysis Services 개체를 만들 권한이 있는 원격 컴퓨터의 인스턴스를 지정할 수 있습니다.|  
-|**버전**|작업 영역 서버가 위치한 인스턴스와 동일한 버전입니다.|이 속성은 모델이 배포될 Analysis Services 서버의 버전을 지정합니다. 서버 버전은 프로젝트에 통합할 수 있는 다양한 기능을 정의합니다. 기본적으로 로컬 Analysis Services 서버의 버전이 사용됩니다. 프로덕션 Analysis Services 서버 등의 다른 Analysis Services 서버를 지정하는 경우 해당 Analysis Services 서버의 버전을 지정해야 합니다.|  
-|**데이터베이스**|**\<프로젝트 이름 >**|이 속성은 배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 보고 클라이언트 데이터 연결 또는 .bism 데이터 연결 파일에도 지정됩니다.<br /><br /> 모델을 제작할 때 언제든지 이 이름을 변경할 수 있습니다. 모델을 배포한 후 이름을 변경하면 배포 후의 변경 내용은 이전에 배포한 모델에 영향을 주지 않습니다. 예를 들어 **TestDB** 이라는 솔루션을 열고 기본 model 데이터베이스 이름인 Model로 솔루션을 배포한 다음, 솔루션을 수정하고 model 데이터베이스 **Sales**의 이름을 바꾸면 솔루션이 배포된 Analysis Services 인스턴스에는 Model이라는 이름의 데이터베이스와 Sales라는 이름의 데이터베이스가 별도로 표시됩니다.|  
+|**버전(Edition)**|작업 영역 서버가 위치한 인스턴스와 동일한 버전입니다.|이 속성은 모델이 배포될 Analysis Services 서버의 버전을 지정합니다. 서버 버전은 프로젝트에 통합할 수 있는 다양한 기능을 정의합니다. 기본적으로 로컬 Analysis Services 서버의 버전이 사용됩니다. 프로덕션 Analysis Services 서버 등의 다른 Analysis Services 서버를 지정하는 경우 해당 Analysis Services 서버의 버전을 지정해야 합니다.|  
+|**데이터베이스 백업**|**\<프로젝트 이름 >**|이 속성은 배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 보고 클라이언트 데이터 연결 또는 .bism 데이터 연결 파일에도 지정됩니다.<br /><br /> 모델을 제작할 때 언제든지 이 이름을 변경할 수 있습니다. 모델을 배포한 후 이름을 변경하면 배포 후의 변경 내용은 이전에 배포한 모델에 영향을 주지 않습니다. 예를 들어 **TestDB** 이라는 솔루션을 열고 기본 model 데이터베이스 이름인 Model로 솔루션을 배포한 다음, 솔루션을 수정하고 model 데이터베이스 **Sales**의 이름을 바꾸면 솔루션이 배포된 Analysis Services 인스턴스에는 Model이라는 이름의 데이터베이스와 Sales라는 이름의 데이터베이스가 별도로 표시됩니다.|  
 |**큐브 이름**|**Model**|이 속성은 클라이언트 도구(예: Excel)와 AMO(Analysis Management Objects)에 표시된 큐브 이름을 지정합니다.|  
   
 ### <a name="directquery-options-properties"></a>DirectQuery 옵션 속성  
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/08/2017
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
-|**가장 설정**|**기본값**|이 속성은 DirectQuery 모드로 실행되는 모델이 데이터 원본에 연결할 때 사용되는 가장 설정을 지정합니다. 메모리 내 캐시를 쿼리할 때는 가장 자격 증명이 사용되지 않습니다. 이 속성 설정에는 다음과 같은 옵션이 있습니다.<br /><br /> **기본값** – 이 설정은 테이블 가져오기 마법사를 사용하여 데이터 원본 연결이 만들어진 경우 Analysis Services가 가장 정보 페이지에서 지정한 옵션을 사용하도록 지정합니다.<br /><br /> **ImpersonateCurrentUser** – 이 설정은 모든 데이터 원본에 연결할 때 현재 로그온한 사용자의 사용자 계정이 사용되도록 지정합니다.|  
+|**가장 설정**|**Default**|이 속성은 DirectQuery 모드로 실행되는 모델이 데이터 원본에 연결할 때 사용되는 가장 설정을 지정합니다. 메모리 내 캐시를 쿼리할 때는 가장 자격 증명이 사용되지 않습니다. 이 속성 설정에는 다음과 같은 옵션이 있습니다.<br /><br /> **기본값** – 이 설정은 테이블 가져오기 마법사를 사용하여 데이터 원본 연결이 만들어진 경우 Analysis Services가 가장 정보 페이지에서 지정한 옵션을 사용하도록 지정합니다.<br /><br /> **ImpersonateCurrentUser** – 이 설정은 모든 데이터 원본에 연결할 때 현재 로그온한 사용자의 사용자 계정이 사용되도록 지정합니다.|  
   
 ##  <a name="bkmk_meth"></a> 배포 방법  
  여러 가지 방법을 사용하여 테이블 형식 모델 프로젝트를 배포할 수 있습니다. 다차원 등의 다른 Analysis Services에 사용할 수 있는 대부분의 배포 방법은 테이블 형식 모델 프로젝트를 배포하는 데도 사용할 수 있습니다.  
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  모델을 배포하고 선택적 서버 설정을 구성한 후에는 보고 클라이언트 응용 프로그램을 통해 모델을 연결할 수 있으며 모델을 사용하여 모델 메타데이터를 찾아보고 분석할 수 있습니다. 클라이언트 응용 프로그램에서 배포된 model 데이터베이스에 연결하는 방법은 이 항목에서 다루지 않습니다. 클라이언트 응용 프로그램에서 model 데이터베이스에 연결하는 방법을 자세히 알아보려면 [Tabular Model Data Access](../../analysis-services/tabular-models/tabular-model-data-access.md)을 참조하십시오.  
   
-##  <a name="bkmk_rt"></a> 관련 작업  
+##  <a name="bkmk_rt"></a> 관련 태스크  
   
 |태스크|Description|  
 |----------|-----------------|  

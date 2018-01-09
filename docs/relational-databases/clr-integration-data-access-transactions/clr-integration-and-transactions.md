@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91af8f269dce39e8e707c570aba606f743b1a7e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 231d1a9904409f36b551cd6c314283dbc753bcde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 통합 및 트랜잭션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions** 네임 스페이스는 ADO.NET와 완전히 통합 하는 트랜잭션 프레임 워크를 제공 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공용 언어 런타임 (CLR) 통합 합니다. **System.Transactions** 와 ADO.NET 함께 작동 하는 관리 되는 응용 프로그램에서 로컬 및 분산 트랜잭션의 사용을 단순화 하 고, 확장 합니다.  

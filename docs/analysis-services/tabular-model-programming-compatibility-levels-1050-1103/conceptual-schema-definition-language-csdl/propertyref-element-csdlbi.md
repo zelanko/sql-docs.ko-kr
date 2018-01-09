@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a1793ff1c0f7094ad8b63a2f0365ec90f6b05c57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9df2f9bfd77a854c90f08ed8b4314bfa212bf469
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertyref-element-csdlbi"></a>PropertyRef 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]PropertyRef 요소는 다른 속성에 필요한 값을 제공 하는 열에 대 한 참조를 제공 하는 단순 형식입니다.  
@@ -32,16 +30,16 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 PropertyRef 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|이름|예|참조 대상인 속성의 이름이 포함된 문자열입니다.|  
+|속성|예|참조 대상인 속성의 이름이 포함된 문자열입니다.|  
   
 ## <a name="propertyrefs-element"></a>PropertyRefs 요소  
  PropertyRefs는 속성 컬렉션을 정의하는 복합 유형으로, 각 속성은 PropertyRef 요소에 포함되어 있습니다.  
   
  다음 표는 PropertyRefs 유형의 요소와 특성을 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|예|속성 참조가 포함된 문자열입니다.|  
   

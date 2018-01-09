@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: SELECT
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 2a8b90fca4585047873c919c5aa90d1d6d3b8f17
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 데이터 조작 선택
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +131,7 @@ FROM
   
  계산된 멤버에 포함 될 수 \<t query axis > 때마다 연결 문자열 매개 변수를 사용 하 여 해당 연결을 연 *하위 쿼리 = 1*; 참조 [지원 XMLA 속성 &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
   
-## <a name="autoexists"></a>Autoexists  
+## <a name="autoexists"></a>AUTOEXIST  
  SELECT 문에 두 개 이상의 차원 특성이 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 기준에 맞도록 적절히 제한되도록 특성의 식을 계산합니다. 예를 들어 Geography 차원의 특성을 사용한다고 가정합니다. City 특성의 모든 멤버를 반환하는 식과 Country 특성의 멤버를 유럽의 모든 국가로 제한하는 다른 식이 있는 경우 City 멤버는 유럽 국가에 속한 도시로만 제한됩니다. 이러한 Analysis Services 특징을 Autoexists라고 하며 이는 동일한 차원의 특성에만 적용됩니다. Autoexists는 한 특성 식에서 제외된 차원 레코드를 다른 특성 식에서 포함하지 않도록 하기 때문에 동일한 차원의 특성에만 적용됩니다. 결과적으로 차원 레코드에서 서로 다른 특성 식이 교차하는 것으로 Autoexists를 이해할 수도 있습니다. 아래의 예를 참조하십시오.  
   
  `//Obtain the Top 10 best reseller selling products by Name`  

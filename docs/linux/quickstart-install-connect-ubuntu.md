@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 17d6ebb3df10a5bc8b5801c11cc8ac12cde372a2
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: f490b54cd26fd5d62699d8b5807d116f72ca771b
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Ubuntu에서 데이터베이스를 만들고 SQL Server 설치
 
@@ -51,13 +51,13 @@ Ubuntu에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명�
 1. 공용 저장소 GPG 키를 가져옵니다.
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Microsoft SQL Server Ubuntu 리포지토리를 등록 합니다.
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
    > [!NOTE]
@@ -99,13 +99,13 @@ Ubuntu에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명�
 1. 공용 저장소 GPG 키를 가져옵니다.
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Microsoft Ubuntu 리포지토리를 등록 합니다.
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
    ```
 
 1. 원본 목록 업데이트 하 고 unixODBC 개발자 패키지가으로 설치 명령을 실행 합니다.

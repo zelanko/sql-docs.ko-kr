@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6153914ef43333ad2feefb1dd428974c15eb83b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41ff7f36b26ddc1adc96bcbc9569c5a697741dd5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supported-net-framework-libraries"></a>지원되는 .NET Framework 라이브러리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]공용 언어 런타임 (CLR)에서 호스트 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 저장된 프로시저, 트리거, 사용자 정의 함수, 사용자 정의 형식 및 관리 코드에서 사용자 정의 집계를 작성할 수 있습니다. .NET Framework 클래스 라이브러리에 있는 기능을 사용하면 문자열 조작, 고급 수학 연산, 파일 액세스, 암호화 등에 대한 기능을 제공하는 미리 작성된 클래스에 액세스할 수 있습니다. 임의의 관리되는 저장 프로시저, 사용자 정의 형식, 트리거, 사용자 정의 함수 또는 사용자 정의 집계에서 이러한 클래스에 액세스할 수 있습니다.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
  예를 들어는 **System.DirectoryServices** 네임 스페이스는 지원 되지 않습니다. System.DirectoryServices.dll 어셈블리를 등록 해야 **UNSAFE** 사용 권한 사용자 코드에서 호출할 수 있습니다. **UNSAFE** 권한에 필요 하기 때문에 있는 클래스는 **System.DirectoryServices** 네임 스페이스에 대 한 요구 사항을 충족 하지 않는 **안전 하 게 보호** 또는  **EXTERNAL_ACCESS**합니다. 자세한 내용은 참조 [CLR 통합 프로그래밍 모델 제한 사항](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) 및 [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [어셈블리 만들기](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [CLR 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR 통합 프로그래밍 모델 제한 사항](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  

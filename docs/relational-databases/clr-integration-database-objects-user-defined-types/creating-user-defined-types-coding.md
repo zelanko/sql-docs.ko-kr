@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -38,11 +38,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71fd426940e8cf9b5970bcd24a3f982bc9dc8f2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f1abec952d7ad6ca57b38ff1bda37134312da4b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>사용자 정의 형식-코딩 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 형식 (UDT) 정의 코딩 하는 경우에 있는지 여부를 구현 하는 UDT를 클래스 또는 구조체와 선택한 형식 및 직렬화 옵션에 따라 다양 한 기능을 구현 해야 합니다.  
@@ -752,7 +752,7 @@ public void Read(System.IO.BinaryReader r)
   
  에 대 한 전체 코드에 대 한 예제는 **통화** UDT 참조 [SQL Server 데이터베이스 엔진 예제](http://msftengprodsamples.codeplex.com/)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 정의 형식 만들기](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

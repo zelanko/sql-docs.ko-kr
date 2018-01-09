@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 65c85b108905cbfecd1f52234af7d33745e8e681
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 94508cf2bb7347d3b8cef15ce5c743f33c04a018
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="perspectives-in-multidimensional-models"></a>다차원 모델의 큐브 뷰
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 뷰는 특정 응용 프로그램 또는 사용자 그룹을 위해 생성 된 큐브 하위 집합입니다. 큐브 자체가 기본 큐브 뷰입니다. 큐브 뷰는 큐브로 클라이언트에게 노출됩니다. 큐브 뷰는 사용자에게 다른 큐브와 같게 보입니다. 큐브 뷰에서 쓰기 저장을 통해 큐브 데이터를 변경하면 원본 큐브에 변경 내용이 반영됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 뷰에 대한 자세한 내용은 [큐브 뷰](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)를 참조하세요.  
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
 -   KPI  
   
--   작업  
+-   동작  
   
 -   계산 멤버  
   

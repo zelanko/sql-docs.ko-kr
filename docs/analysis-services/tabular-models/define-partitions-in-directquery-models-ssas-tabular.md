@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2af8137f3063c4403c728e229c1836d5111bc927
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 88079b80a84e692ca07695f718c161f626093cec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-partitions-in-directquery-models"></a>DirectQuery 모델에서 파티션 정의
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 섹션에서는 DirectQuery 모델에서 파티션을 사용 하는 방법을 설명 합니다. 테이블 형식 모델의 파티션에 대한 일반적인 정보는 [파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/08/2017
 |DataView=Sample<br /><br /> 샘플 데이터 뷰를 사용 하 여 테이블 형식 모델에 적용 됩니다.|파티션을 처리하도록 허용|모델이 샘플 데이터를 사용하는 경우 테이블을 처리하여 모델 디자인 중에 시각 신호를 제공하는 필터링된 데이터 집합을 반환할 수 있습니다.|  
 |DirectQueryUsage=InMemory With DirectQuery<br /><br /> 메모리 내 모드 및 DirectQuery 모드 조합에서 실행되는 테이블 형식 1100 또는 1103 모델에 적용됨|파티션을 처리하도록 허용|모델이 혼합 모드를 사용하는 경우에는 메모리 내 데이터 원본과 DirectQuery 데이터 원본에 대한 쿼리에 같은 파티션을 사용해야 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 488b1caaab31a06f2bff4f611e0bc1e6affada68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b624f5dcc4cad3bdd4ffc6cbddad0f49f701ec55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>관리되는 데이터베이스 개체 모니터링 및 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 모니터링 및 관리 되는 데이터베이스 개체 및 실행 되는 어셈블리 문제 해결에 사용할 수 있는 도구에 대 한 정보를 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="performance-counters"></a>성능 카운터  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 작업을 모니터링하기 위해 시스템 모니터에서 사용할 수 있는 개체 및 카운터를 제공합니다. 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금이나 Windows 프로세스와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 말합니다. 각 개체에는 모니터링할 개체의 여러 요소를 결정하는 하나 이상의 카운터가 포함됩니다. 자세한 내용은 [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)을 참조하세요.  
   
-|개체|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[SQL Server, CLR 개체](../../relational-databases/performance-monitor/sql-server-clr-object.md)|CLR 실행에 소요된 총 시간입니다.|  
   

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 375e6c59c38d7bcf4eb270c6b007d2fca16d119c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 시퀀스 클러스터링 알고리즘
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 클러스터링과 함께 시퀀스 분석을 결합 하는 고유한 알고리즘입니다. 이 알고리즘을 사용하여 *시퀀스*로 연결할 수 있는 이벤트가 들어 있는 데이터를 탐색할 수 있습니다. 이 알고리즘은 가장 일반적인 시퀀스를 찾고 클러스터링을 수행하여 유사한 시퀀스를 찾습니다. 다음 예제에서는 일반적인 문제나 비즈니스 시나리오에 대한 통찰력을 제공하기 위해 기계 학습에 대한 데이터로 캡처할 수 있는 시퀀스의 종류를 보여 줍니다.  
