@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2779e5f09f447e0499e2eeb87ec89ba698cc8628
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS에서 DirectQuery 모드를 사용하도록 설정
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]여기서 쿼리 실행 데이터는 백엔드 관계형 데이터 원본에 대해 해당 캐시 되지 않고 데이터 메모리 내 상주 DirectQuery 모드를 사용 하면 이미 배포 된 테이블 형식 모델의 데이터 액세스 속성 변경할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/08/2017
   
     |||  
     |-|-|  
-    |**유효한 값**|**Description**|  
+    |**유효한 값**|**설명**|  
     |**DirectQuery**|쿼리는 모델에 대해 정의된 데이터 원본 연결을 사용하여 백엔드 관계형 데이터베이스에 대해 실행됩니다.<br /><br /> 모델에 대한 쿼리는 기본 데이터베이스 쿼리로 변환되고 데이터 원본으로 리디렉션됩니다.<br /><br /> DirectQuery 모드로 설정되어 있는 모델을 처리할 경우 메타데이터만 컴파일되어 배포됩니다. 데이터 자체는 작동 가능한 데이터 원본의 데이터베이스 파일에 있는 모델의 외부입니다.|  
     |**가져오기**|쿼리는 MDX 또는 DAX에서 테이블 형식 데이터베이스에 대해 실행됩니다.<br /><br /> 가져오기 모드로 설정된 모델을 처리할 때 데이터는 백엔드 데이터 원본에서 검색되어 디스크에 저장됩니다. 데이터베이스가 로드되면 데이터는 매우 빠른 테이블 검색 및 쿼리에 대해 메모리로 완전히 복사됩니다.<br /><br /> 테이블 형식 모델에 대한 기본 모드이며 특정(비관계형) 데이터 원본에 대한 유일한 모드입니다.|  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
     |||  
     |-|-|  
-    |**유효한 값**|**Description**|  
+    |**유효한 값**|**설명**|  
     |**InMemory**|쿼리는 캐시된 메모리 내 데이터만 사용합니다.|  
     |**InMemoryWithDirectQuery**|클라이언트에서 연결 문자열에 다르게 지정되어 있지 않으면 기본적으로 쿼리에서 캐시를 사용합니다.<br /><br /> 파티션이 메모리 내 또는 DirectQuery를 사용하도록 개별 구성되어 있는 하이브리드 모드입니다.|  
     |**DirectQuery**|쿼리에서 관계형 데이터 원본만 사용합니다.|  
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  추적에서 관계형 데이터베이스에 대한 쿼리 실행의 증거를 확인해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   

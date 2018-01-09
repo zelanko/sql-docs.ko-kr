@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AttributeHierarchyEnabled Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4716a605ce262e0f755746d0c056dbb4d3c14f3d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8f5b6c9afdba0367685ee9aee0d036bb659103b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributehierarchyenabled-element-assl"></a>AttributeHierarchyEnabled 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특성 계층의 특성에 대 한 사용 되는지 여부를 결정 합니다.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Boolean|  
 |기본값|**True**|  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CubeAttribute](../../../analysis-services/scripting/data-type/cubeattribute-data-type-assl.md), [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **AttributeHierarchyEnabled** 요소는 특성 계층을 생성할지 여부를 결정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 특성에 대 한 합니다. 특성 계층이 설정되지 않으면 사용자 정의 계층에서 해당 특성을 사용할 수 없으며 MDX(Multidimensional Expressions) 문에서 특성 계층을 참조할 수도 없습니다.  

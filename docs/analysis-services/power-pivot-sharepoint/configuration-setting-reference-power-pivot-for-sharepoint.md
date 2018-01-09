@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 683198616cb883944a20de70e3531d9fa48fee62
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b66f1bb71a185be8663e1fab732a208a0ca99d87
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>구성 설정 참조(SharePoint용 Power Pivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 항목에서 사용 하는 구성 설정에 대 한 참조 설명서를 제공 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스는 SharePoint 팜에서 응용 프로그램입니다. PowerShell 스크립트를 사용하여 서버를 구성하거나 특정 설정에 대한 정보를 찾아보려는 경우 이 항목의 정보가 자세한 설명을 제공합니다.  
@@ -50,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="LoadingData"></a> 데이터 로드 제한 시간  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터는 팜에서 Analysis Services 서버 인스턴스에 의해 검색되고 로드됩니다. 마지막으로 데이터를 액세스한 방법과 시기에 따라 콘텐츠 라이브러리나 로컬 파일 캐시에서 데이터가 로드됩니다. 데이터는 쿼리나 처리 요청을 받을 때마다 메모리에 로드됩니다. 전체적인 서버 가용성을 최대화하기 위해 할당된 시간 내에 완료할 수 없을 경우 데이터 로드 요청을 중지하도록 서버에 지시하는 제한 시간 값을 설정할 수 있습니다.  
   
-|이름|기본값|유효한 값|Description|  
+|속성|Default|유효한 값|Description|  
 |----------|-------------|------------------|-----------------|  
 |데이터 로드 제한 시간|1800(초 단위)|1 ~ 3600|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에서 특정 Analysis Services 서버 인스턴스의 응답을 기다릴 시간을 지정합니다.<br /><br /> 기본적으로 서비스 응용 프로그램은 특정 요청을 전달한 엔진 서비스 인스턴스로부터 데이터 페이로드를 30분 동안 기다립니다.<br /><br /> 이 기간 내에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본이 로드될 수 없는 경우 스레드가 중지되고 새로운 스레드가 시작됩니다.|  
   
@@ -65,7 +62,7 @@ ms.lasthandoff: 12/08/2017
   
  연결 풀의 각 유형에는 연결 관리를 위해 시스템 메모리를 최적으로 사용하기 위해 설정할 수 있는 상한값이 있습니다.  
   
-|이름|기본값|유효한 값|Description|  
+|속성|Default|유효한 값|Description|  
 |----------|-------------|------------------|-----------------|  
 |연결 풀 제한 시간|1800(초 단위)|1 ~ 3600|이 설정은 데이터 연결 풀에 적용됩니다.<br /><br /> 유휴 연결을 연결 풀에서 제거하기 전에 유지할 수 있는 시간을 지정합니다.<br /><br /> 기본적으로 서비스 응용 프로그램에서는 5분 넘게 연결이 비활성 상태인 경우 연결을 제거합니다.|  
 |최대 사용자 연결 풀 크기|1000|-1, 0 또는 1 ~ 10000<br /><br /> -1은 유휴 연결 수에 제한이 없음을 의미합니다.<br /><br /> 0은 유휴 연결을 유지하지 않음을 의미합니다. 따라서 매번 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 대한 새로운 연결이 만들어져야 합니다.|이 설정은 특정 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 인스턴스에 대해 만들어진 모든 데이터 연결 풀의 유휴 연결에 적용됩니다.<br /><br /> SharePoint 사용자, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 및 서비스 인스턴스의 고유한 조합에 대해 개별 연결 풀이 만들어집니다. 많은 사용자가 다양한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 액세스하는 경우 연결 풀 크기의 증가로 인해 서버 성능이 향상될 수 있습니다.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 인스턴스에 대해 100개가 넘는 유휴 연결이 있는 경우 새로 유휴 상태가 되는 연결은 풀로 반환되지 않고 연결이 해제됩니다.|  
@@ -74,14 +71,14 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="AllocationScheme"></a> 부하 분산  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스에서 수행하는 기능 중 하나는 사용 가능한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 인스턴스 중에서 Analysis Services 데이터가 로드될 위치를 결정하는 것입니다. **AllocationMethod** 설정은 서비스 인스턴스 선택 조건을 지정합니다.  
   
-|이름|기본값|유효한 값|Description|  
+|속성|Default|유효한 값|Description|  
 |----------|-------------|------------------|-----------------|  
 |할당 방법|RoundRobin|라운드 로빈<br /><br /> 상태 기반|둘 이상의 Analysis Services 서버 인스턴스에서 로드 요청을 할당하기 위한 체계.<br /><br /> 기본적으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스는 서버 상태를 기반으로 요청을 교대로 할당합니다. 상태 기반(Health Based)은 사용 가능한 메모리 및 CPU 사용률을 기반으로 가장 많은 시스템 리소스를 사용할 수 있는 서버에 요청을 할당합니다.<br /><br /> 라운드 로빈은 현재 부하 또는 서버 상태에 관계없이 사용 가능한 서버에 순차적으로 요청을 할당합니다.|  
   
 ##  <a name="DataRefresh"></a> 데이터 새로 고침  
  조직의 기본 또는 표준 업무 시간을 정의하는 시간 범위를 지정합니다. 이 구성 설정은 업무 시간 외에 데이터 새로 고침 작업을 위해 데이터 처리가 수행되는 시간을 결정합니다. 업무 시간 외 처리는 업무 시간이 종료되는 시간에 시작될 수 있습니다. 업무 시간 외 처리는 기본 업무 시간 중에 생성된 트랜잭션 데이터를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본을 새로 고치려는 문서 소유자를 위한 일정 옵션입니다.  
   
-|이름|기본값|유효한 값|Description|  
+|속성|Default|유효한 값|Description|  
 |----------|-------------|------------------|-----------------|  
 |시작 시간|오전 4시|1 ~ 12시, 값은 이 범위 내의 유효한 정수<br /><br /> 유형은 Time|업무 시간 범위의 하한값을 설정합니다.|  
 |종료 시간|오후 8시|1 ~ 12시, 값은 이 범위 내의 유효한 정수<br /><br /> 유형은 Time|업무 시간 범위의 상한값을 설정합니다.|  
@@ -92,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="UsageData"></a> 사용 데이터 수집  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 보고서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]사용 통합 문서의 사용 방법에 대한 중요한 정보를 제공할 수 있습니다. 다음 구성 설정은 이후에 사용 또는 작업 보고서에 표시되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 이벤트에 대한 사용 데이터 컬렉션을 제어합니다.  
   
-|이름|기본값|유효한 값|Description|  
+|속성|Default|유효한 값|Description|  
 |----------|-------------|------------------|-----------------|  
 |쿼리 보고 간격|300(초)|1 ~ n초, 여기서 n은 임의의 유효한 정수|사용 데이터 컬렉션에서 팜의 데이터 전송 용량을 너무 많이 사용하지 않도록 하기 위해 쿼리 통계가 각 연결마다 수집되어 단일 이벤트로 보고됩니다. 쿼리 보고 간격은 이벤트 보고 빈도를 결정합니다. 기본적으로 쿼리 통계는 5분마다 보고됩니다.<br /><br /> 요청이 전송되면 즉시 연결이 종료되므로 시스템에서는 한 사용자가 하나의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 액세스하는 경우에도 매우 많은 수의 연결을 생성합니다. 따라서 각 사용자와 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본 조합에 대해 연결 풀이 만들어져 한 번 연결이 만들어지면 동일한 사용자가 동일한 데이터에 대해 이 연결을 다시 사용할 수 있습니다. 이 구성 설정을 통해 지정된 간격에 따라 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에서 연결 풀의 각 연결에 대한 사용 데이터를 주기적으로 보고합니다.<br /><br /> 보고 시간 값을 늘리면 더 적은 수의 이벤트가 기록됩니다. 그러나 이 값을 너무 크게 설정하면 서버가 다시 시작되거나 연결이 종료될 경우 이벤트 데이터가 손실될 위험이 있습니다.<br /><br /> 값을 줄이면 더 많은 이벤트가 더 자주 기록되어 SharePoint 사용 데이터베이스의 데이터 컬렉션 시스템에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]관련 사용 데이터가 더 많이 추가됩니다.<br /><br /> 일반적으로 특정 문제를 해결하기 위한 경우(예: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 사용 데이터로 인해 사용 데이터베이스가 너무 빨리 커지는 경우)가 아니면 이 구성 설정을 변경하지 마세요.|  
 |사용 데이터 기록|365(일)|0 또는 1 ~ n일, 여기서 n은 임의의 유효한 정수<br /><br /> 0은 기록이 항상 보존되며 삭제되지 않음을 의미합니다.|기본적으로 사용 데이터는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스에 1년 동안 유지됩니다. 1년이 넘은 레코드는 데이터베이스에서 삭제됩니다.<br /><br /> 매일 Microsoft SharePoint Foundation 사용 데이터 처리 작업이 실행될 때 만료된 기록 데이터에 대한 확인이 수행됩니다. 타이머 작업에서 이 설정을 읽고 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스의 만료된 기록에 대해 데이터 삭제 명령을 트리거합니다.|  

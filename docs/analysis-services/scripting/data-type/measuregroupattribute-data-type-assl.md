@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MeasureGroupAttribute Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f9336aa58d5fc25c0f46356faf6afb55e46d5d3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fb1d514aed7662cb9377364cb90fe7b0d40fccd4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>MeasureGroupAttribute _데이터 형식(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특성 및 측정값 그룹 사이의 관계를 나타내는 기본 데이터 형식을 정의 합니다.  
@@ -48,16 +46,16 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|없음|  
-|파생 데이터 형식|없음|  
+|기본 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
 |자식 요소|[주석](../../../analysis-services/scripting/collections/annotations-element-assl.md), [AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md), [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md), [유형](../../../analysis-services/scripting/properties/type-element-measuregroupattribute-assl.md)|  
 |파생 요소|[특성](../../../analysis-services/scripting/objects/attribute-element-assl.md) ([특성](../../../analysis-services/scripting/collections/attributes-element-assl.md) 컬렉션 [RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md))|  
   

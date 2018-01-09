@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4331bf4de9efa68338e509976b534549bd3506d5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a64d57676b6b9c0fb36772dfce08ed0a137df19a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>데이터 원본 뷰 정의(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 하는 스키마의 논리 모델을 포함 하는 데이터 원본 뷰 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스 개체-큐브, 차원 및 마이닝 구조입니다. 데이터 원본 뷰는 UDM(Unified Dimensional Model)과 마이닝 구조에서 사용하는 이러한 스키마 요소의 메타데이터 정의이며 XML 형식으로 저장됩니다. 데이터 원본 뷰의 특성은 다음과 같습니다.  

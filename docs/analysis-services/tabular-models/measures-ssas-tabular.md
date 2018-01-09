@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measures"></a>측정값 그룹
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델에서 측정값은 보고 클라이언트에서 사용 하기 위해 DAX 수식을 사용 하 여 만든 계산입니다. 측정값은 보고 클라이언트 응용 프로그램에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
@@ -81,7 +78,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
-|**Description**|비어 있음|측정값에 대한 설명입니다. 설명은 측정값과 함께 보고 클라이언트에 표시되지 않습니다.|  
+|**설명**|비어 있음|측정값에 대한 설명입니다. 설명은 측정값과 함께 보고 클라이언트에 표시되지 않습니다.|  
 |**형식**|수식 식에서 참조되는 열의 데이터 형식에 따라 자동으로 결정됩니다.|측정값의 형식입니다. 예를 들어 통화 또는 백분율입니다.|  
 |**수식**|측정값을 만들 때 수식 입력줄에 입력된 수식입니다.|측정값의 수식입니다.|  
 |**측정값 이름**|자동 합계를 사용하면 측정 값 이름이 열 이름 앞에 표시되고 그 뒤에 콜론이 표시됩니다. 사용자 지정 수식을 입력할 경우 이름, 콜론, 수식을 차례로 입력합니다.|보고 클라이언트 필드 목록에 표시된 측정값의 이름입니다.|  

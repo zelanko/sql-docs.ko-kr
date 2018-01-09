@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Security Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eda44b6d7a8a371521c766205a474f022739e3db
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e5dbfc3276c972f37e9ed19223fd7a011a1f99b7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="security-element-xmla"></a>Security 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]백업 하거나 하는 동안 역할 및 권한과 같은 보안 정의 복원 하는 방법을 지정는 [백업](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) 또는 [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) 명령입니다.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|*SkipMembership*|  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[백업](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **보안** 요소에 역할 및 권한과 같은 보안 정의 정의 하는지 여부를 결정 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스 백업 또는 각각시복원되는지**백업** 또는 **복원** 명령입니다. 또한 이 요소는 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 **Backup** 또는 **Restore** 명령의 일부로 포함할지 여부를 결정합니다.  

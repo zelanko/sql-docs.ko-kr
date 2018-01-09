@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX의 주요 개념(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) 사용 하 여 다차원 데이터를 쿼리하거나 큐브 내에서 MDX 식을 만들 수 있습니다, 전에 다차원의 개념과 용어를 이해 수 있습니다.  
@@ -144,7 +141,7 @@ ms.lasthandoff: 12/08/2017
   
  **데이터베이스 차원 및 큐브 차원**. 모델 내에서 같은 모델에 있는 임의 개수의 큐브에 포함되는 독립 실행형 차원을 정의할 수 있습니다. 큐브에 차원을 추가하면 이를 큐브 차원이라 부릅니다. 개체 탐색기의 독립 실행 항목으로, 프로젝트 내에서 그 자체로 데이터베이스 차원이라 부릅니다. 이렇게 구분하는 이유는 무엇일까요? 독립적으로 속성을 설정할 수 있기 때문입니다. 이 두 용어는 제품 설명서에서 사용되고 있으므로 그 의미를 이해하는 것이 중요합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  이제 중요한 개념과 용어에 대해 살펴봤으므로 Analysis Services의 기본 개념을 더 자세히 설명하는 다음과 같은 추가 항목을 진행할 수 있습니다.  
   
 -   [기본 MDX 쿼리&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  

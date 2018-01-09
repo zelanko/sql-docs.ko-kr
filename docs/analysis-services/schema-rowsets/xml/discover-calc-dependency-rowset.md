@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9eca892f8ddf9e85e05d33b81023a3602c861734
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 39e8c2f6aa89e83de104862a22d8b8fefcab5fd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]계산 간 종속성과 해당 계산에서 참조 하는 개체에 보고 합니다. 클라이언트 응용 프로그램에 이 정보를 사용하여 복잡한 수식과 관련된 문제를 보고하거나 관련 개체가 삭제 또는 수정될 때 경고할 수 있습니다. 행 집합을 사용하여 측정값 또는 계산 열에 사용된 DAX 식을 추출할 수도 있습니다.  

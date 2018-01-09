@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccfb635aa80a3d4277ed1a7e98e12284043c0c95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1f1c3a65fed07267090b0294a7f427a63b33e57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 특성은 NOCOUNT의 현재 설정을 나타내는 옵션을 제어 하 여부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에 의해 영향을 받는 행 수를 보고할지 때 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) 호출 됩니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT가 OFF입니다. SQLRowCount 영향을 받는 행 수를 반환 합니다.|  
 |SQL_NC_ON|NOCOUNT가 ON입니다. SQLRowCount 영향을 받는 행 수가 반환 되지 않습니다 및 반환 되는 값은 0입니다.|  

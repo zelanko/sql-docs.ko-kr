@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.realtime.f1
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e1eae96e5152fa9d16dd20cf1333c03bf2160db4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="directquery-mode"></a>DirectQuery 모드
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 설명 *DirectQuery 모드* 1200 이상 호환성 수준에서 Analysis Services 테이블 형식 모델에 대 한 합니다. SSDT에서 디자인하는 모델에 대해 DirectQuery 모드를 설정하거나 이미 배포된 테이블 형식 모델에 대해 SSMS에서 DirectQuery 모드로 변경할 수 있습니다. DirectQuery 모드를 선택하기 전에 이점과 제한 사항을 이해하는 것이 중요합니다.
@@ -66,9 +66,9 @@ DirectQuery 모드의 테이블 형식 모델에는 몇 가지 제한 사항이 
 데이터 원본   |버전  |공급자
 ---------|---------|---------
 Microsoft SQL Server    |  2008 이상      |       OLE DB Provider for SQL Server, SQL Server Native Client OLE DB 공급자, .NET Framework Data Provider for SQL Client  
-Microsoft Azure SQL Database    |   모두      |  OLE DB Provider for SQL Server, SQL Server Native Client OLE DB 공급자, .NET Framework Data Provider for SQL Client            
-Microsoft Azure SQL Data Warehouse     |   모두     |  .NET Framework Data Provider for SQL Client       
-Microsoft SQL APS(분석 플랫폼 시스템)     |   모두      |  OLE DB Provider for SQL Server, SQL Server Native Client OLE DB 공급자, .NET Framework Data Provider for SQL Client       
+Microsoft Azure SQL Database    |   All      |  OLE DB Provider for SQL Server, SQL Server Native Client OLE DB 공급자, .NET Framework Data Provider for SQL Client            
+Microsoft Azure SQL Data Warehouse     |   All     |  .NET Framework Data Provider for SQL Client       
+Microsoft SQL APS(분석 플랫폼 시스템)     |   All      |  OLE DB Provider for SQL Server, SQL Server Native Client OLE DB 공급자, .NET Framework Data Provider for SQL Client       
 Oracle 관계형 데이터베이스     |  Oracle 9i 이상       |  Oracle OLE DB 공급자       
 Teradata 관계형 데이터베이스    |  Teradata V2R6 이상     | .Net Data Provider for Teradata        
 

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d8ef26565ff777cf7f280408d08791364c136225
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 11a03b066797c047e213242bdedceaf3054f8516
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-view---reporting-properties-ssas-tabular"></a>Power View에서 보고 속성 (SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 직관적인 임시 데이터 분석가, 비즈니스 의사 결정권자 및 정보 근로자와 같은 비즈니스 사용자에 대 한 보고를 제공 합니다. 비즈니스 사용자는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 기반으로 하는 테이블 형식 모델 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 만든 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services 인스턴스에 배포된 테이블 형식 모델에서 데이터 뷰를 쉽게 만들고 상호 작용할 수 있습니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] SharePoint Server 2010 이상에서 실행되는 브라우저 기반 Silverlight 응용 프로그램입니다.  

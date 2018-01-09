@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DimensionPermission Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3a38dfd173d886d299211ee45dd20ea486c0ce1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7e15c2d5d155a14b71a08185123495bc9ba535f1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensionpermission-element-assl"></a>DimensionPermission 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특정에 속하는 사용 권한을 정의 [역할](../../../analysis-services/scripting/objects/role-element-assl.md) 특정 데이터베이스 차원 또는 큐브 차원에 대 한 요소입니다.  
@@ -47,10 +45,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|다음은 유효한 부모 (또는 상위 항목): 데이터 형식 쌍:<br /><br /> [차원](../../../analysis-services/scripting/objects/dimension-element-assl.md):[DimensionPermission](../../../analysis-services/scripting/data-type/dimensionpermission-data-type-assl.md)<br /><br /> [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md):<br />                        [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md)|  
-|기본값|없음|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-n: 한 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

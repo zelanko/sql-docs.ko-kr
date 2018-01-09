@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DisplayInfo Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fd866c55aebaf6d61319277c1a305614fd001b8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b98de668557e1f8786bd08dfca92a0b2313c87f1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="displayinfo-element-xmla"></a>DisplayInfo 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]부모에 대 한 표시 정보를 포함 [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) 또는 [멤버](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 요소입니다.  
@@ -50,10 +48,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|unsignedInt|  
-|기본값|없음|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md), [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **DisplayInfo** 요소는 클라이언트 응용 프로그램이 부모 **HierarchyInfo** 또는 **Member** 요소를 렌더링하는 데 도움을 주는 다양한 정보 항목을 포함합니다. 이 값은 OLAP용 OLE DB 사양의 축 행 집합에 대해 정의된 DISPLAY_INFO 속성과 동일합니다.  

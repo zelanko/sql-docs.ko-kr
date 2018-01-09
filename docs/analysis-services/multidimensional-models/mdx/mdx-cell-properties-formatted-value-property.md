@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23c043a3c35dd63927596c5bba0d9b8cf8d76bf4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>MDX 셀 속성-FORMATTED_VALUE 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]FORMATTED_VALUE 속성은 셀의 VALUE, FORMAT_STRING 및 언어 속성의 상호 작용을 기반으로 합니다. 이 항목에서는 이러한 속성이 상호 작용하여 FORMATTED_VALUE 속성을 작성하는 방법에 대해 설명합니다.  
@@ -90,7 +87,7 @@ ms.lasthandoff: 12/08/2017
 |변수를 잠그기 위한|$5,040.00|FORMAT_STRING이 `Currency` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)입니다.|  
 |B|5.040,00|FORMAT_STRING이 `Currency` (A에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었으므로 유로 기호, 다른 소수 구분 기호 및 다른 천 단위 구분 기호가 표시됩니다.|  
 |C|$5.040,00|FORMAT_STRING이 `$#,##0.00` (A에서 상속된 Currency에 대한 재정의)으로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었습니다. FORMAT_STRING 속성이 명시적으로 통화 기호를 $로 설정했으므로 FORMATTED_VALUE가 $ 기호와 함께 표시됩니다. 그러나 `.` (점) 및 `,` (쉼표)가 각각 소수 구분 기호와 천 단위 구분 기호의 자리 표시자이므로 언어 사양은 소수 구분 기호와 천 단위 구분 기호에 대해 지역화된 출력을 생성하면서 이러한 기호에 영향을 줍니다.|  
-|D|5.04E+03|FORMAT_STRING이 `Scientific` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.|  
+|d|5.04E+03|FORMAT_STRING이 `Scientific` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.|  
 |E|5,04E+03|FORMAT_STRING이 `Scientific` 으로 설정되었고 LANGUAGE가 명시적으로 `1034,` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.|  
 |F|50.40%|FORMAT_STRING이 `Percent` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.<br /><br /> VALUE가 5040에서 0.5040으로 변경되었습니다.|  
 |G|50,40%|FORMAT_STRING이 `Percent`(F에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.<br /><br /> VALUE가 F 값에서 상속되었습니다.|  
@@ -140,7 +137,7 @@ ms.lasthandoff: 12/08/2017
 |변수를 잠그기 위한|3/12/1959 6:30:00 AM|FORMAT_STRING이 CDate() 식에 의해 암시적으로 `General Date` 로 설정되었고 LANGUAGE가 `1033` (영어)(시스템 로캘 값에서 상속)으로 설정되었습니다.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 `1033` (영어)(시스템 로캘 값에서 상속)입니다.|  
 |C|12/03/1959 6:30:00|FORMAT_STRING이 명시적으로 `General Date` 로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인어)입니다.<br /><br /> 미국 형식 지정 스타일과 비교해 보면 월과 일이 바뀌었습니다.|  
-|D|jueves, 12 de marzo de 1959|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인어)입니다.<br /><br /> 월과 요일은 스페인어로 표시됩니다.|  
+|d|jueves, 12 de marzo de 1959|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인어)입니다.<br /><br /> 월과 요일은 스페인어로 표시됩니다.|  
 |E|1959/03/12 6:30:00|FORMAT_STRING이 명시적으로 `General Date` 로 설정되었고 LANGUAGE가 명시적으로 `1041` (일본어)입니다.<br /><br /> 이제 날짜의 형식이 연도/월/일 시간:분:초입니다.|  
 |F|1959年3月12日|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 명시적으로 `1041` (일본어)입니다.|  
 |G|오전 6:30:00|FORMAT_STRING이 명시적으로 `Long Time` 으로 설정되었고 LANGUAGE가 `1033` (영어)(시스템 로캘 값에서 상속)입니다.|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Server Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d91cc9cd7fea558c0da2311866929d6072d6bb5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f614b8a35253208970ee54a3261c35c0c169bf40
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="server-element-assl"></a>Server 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]인스턴스를 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
@@ -63,17 +61,17 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
 |자식 요소|[이름](../../../analysis-services/scripting/properties/name-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md), [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md), [설명](../../../analysis-services/scripting/properties/description-element-assl.md), [주석 ](../../../analysis-services/scripting/collections/annotations-element-assl.md), [ProductName](../../../analysis-services/scripting/properties/productname-element-assl.md), [Edition](../../../analysis-services/scripting/properties/edition-element-assl.md), [EditionId](../../../analysis-services/xmla/xml-elements-properties/editionid-element.md), [버전](../../../analysis-services/scripting/properties/version-element-assl.md), [ServerMode](../../../analysis-services/xmla/xml-elements-properties/editionid-element.md), [ProductLevel](../../../analysis-services/xmla/xml-elements-properties/productlabel-element.md), [데이터베이스](../../../analysis-services/scripting/collections/databases-element-assl.md), [어셈블리](../../../analysis-services/scripting/collections/assemblies-element-assl.md), [추적](../../../analysis-services/scripting/collections/traces-element-assl.md), [역할](../../../analysis-services/scripting/collections/roles-element-assl.md), [ServerProperties](../../../analysis-services/scripting/collections/serverproperties-element-assl.md)>|  
   
 ## <a name="remarks"></a>주의  

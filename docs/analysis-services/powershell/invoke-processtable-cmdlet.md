@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 865e6d06-b99a-41f3-9d6f-c3c97b529b23
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01d14a3ee7db466f184cb99fbb271520ab448244
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e2a7f1392931ec5edd41803f6df6d98aa95403dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]수행 하는 **프로세스** 연산을 **테이블** 특정 **RefreshType**합니다.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1.|  
+|위치|1|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/08/2017
 |파이프라인 입력 허용||  
 |와일드카드 문자 허용|false|  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
  `PS SQLSERVER:\SQLAS\MachineName\Instance\Databases\DB1\> Invoke-ProcessTable -TableName "myTable" -Database "DB1"  -RefreshType "Full"`  
   
  이 명령은 처리할 테이블의 ID를 파이프합니다.  

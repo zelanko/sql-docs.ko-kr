@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c78b965e827ad4b355563c7c698db2b8f063c78
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0c12d59deb8a039ed5d8af5033d65e2614d4feb2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="feature-properties"></a>기능 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]기능 속성은 대부분 고급, 서버 인스턴스 간의 연결을 제어 하는 속성을 포함 하 여 제품 기능에 적용 됩니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="properties"></a>속성  
   
-|속성|기본값|Description|  
+|속성|Default|Description|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|CLR 저장소 프로시저가 설정되어 있는지 여부를 나타내는 부울 속성입니다.|  
 |**LinkInsideInstanceEnabled**|1|연결된 개체를 동일 서버 인스턴스 내에 만들 수 있는지 여부를 나타내는 부울 속성입니다.|  

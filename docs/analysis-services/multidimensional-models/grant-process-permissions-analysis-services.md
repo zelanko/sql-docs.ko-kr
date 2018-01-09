@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ccb2f4ebb1db848d62f470ed2e37230a95916cb9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b63cc40a5620fc0ae23f2b9d17a52acdea2ae3ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-process-permissions-analysis-services"></a>처리 권한 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]관리자로 서 특정 작업을 다른 사용자 또는 자동된 일정된 처리에 사용 되는 응용 프로그램에 위임할 수 있도록 전용 역할 Analysis Services 처리 작업을 만들 수 있습니다. 처리 권한은 데이터베이스,  큐브,  차원 및 마이닝 구조 수준에서 부여할 수 있습니다. 대규모 큐브 또는 테이블 형식 데이터베이스에서 작업하지 않는다면 서로 종속된 개체를 비롯한 모든 개체를 포함하여 데이터베이스 수준에서 처리 권한을 부여하는 것이 좋습니다.  

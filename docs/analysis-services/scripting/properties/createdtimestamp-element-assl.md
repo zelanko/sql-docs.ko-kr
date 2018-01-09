@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CreatedTimestamp Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37aec9f2d9d44ecfd3ccf479a9cc452a5f461a51
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7b241b7cc65f9bffa687a7d589bc6cb3faa08688
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="createdtimestamp-element-assl"></a>CreatedTimestamp 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소의 읽기 전용 생성 타임 스탬프를 포함합니다.  
@@ -47,10 +45,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|DateTime|  
-|기본값|없음|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[어셈블리](../../../analysis-services/scripting/objects/assembly-element-assl.md), [큐브](../../../analysis-services/scripting/objects/cube-element-assl.md), [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md), [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md), [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md), [차원](../../../analysis-services/scripting/objects/dimension-element-assl.md), [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [ 파티션](../../../analysis-services/scripting/objects/partition-element-assl.md), [권한](../../../analysis-services/scripting/data-type/permission-data-type-assl.md), [관점](../../../analysis-services/scripting/objects/perspective-element-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **CreatedTimestamp** 읽기 전용 요소는 포함 **DateTime** 개체의 지정 된 인스턴스에 생성 된 시간과 날짜를 나타내는 값 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. 이 요소의 값은 비워둘 수 없습니다.  

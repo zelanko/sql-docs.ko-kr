@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c5a8d84d4e38cfb444f57392479332f328838aaf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4e15a18c55318373b41c8a4fabe7377aad5d9f00
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpigoal-element-csdlbi"></a>KpiGoal 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]KpiGoal 요소는 핵심 성과 지표 (KPI)에 대 한 목표를 정의 하는 데 사용 되는 열에 대 한 참조를 제공 합니다.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 KpiGoal 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|예|KPI 목표 값을 포함하는 열에 대한 참조입니다.<br /><br /> Kpigoal 요소에는 PropertyRef 요소가 정확히 하나 포함되어야 합니다.<br /><br /> [PropertyRef 요소&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md)를 참조하세요.|  
   

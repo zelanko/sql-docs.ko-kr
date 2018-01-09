@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a52799da2610aa55a0e045b2192b46ffd5f85f15
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d8cae9fd297d0ae2946cccab69a9a273a2cf85b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>스키마 생성 마법사 사용(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]스키마 생성 마법사에는 생성 단계 동안 제한 된 정보만을 사용 합니다. 스키마 생성 마법사가 관계형 스키마를 생성하기 위해 필요한 대부분의 정보는 프로젝트에서 이미 만들었던 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브와 차원으로부터 추출됩니다. 또한 주제 영역 데이터베이스 스키마가 생성되는 방법과 스키마의 개체 이름이 지정되는 방법을 사용자 지정할 수 있습니다.  

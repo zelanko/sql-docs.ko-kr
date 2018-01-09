@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Root Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 714981915579f08fe025d73d574f8ffeccdf72a8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="root-element-xmla"></a>root 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]반환 된 결과 포함는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드 또는 XML for Analysis (XMLA) 명령을 사용 하 여 실행 된 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
@@ -54,10 +52,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|아래 표를 참조 합니다.|  
-|기본값|없음|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-n: 두 번 이상 나타날 수 있는 필수 요소입니다.|  
   
 |상위 항목|데이터 형식|  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/08/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[결과](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [반환](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **루트** 요소에서 반환 된 정보를 포함는 [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) 요소는 단일 반환 **Discover** 메서드 호출 또는 [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) 요소는 단일 실행 하는 단일 XMLA 명령에서 반환 된 **Execute** 메서드를 호출 합니다.  

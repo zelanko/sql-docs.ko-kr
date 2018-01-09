@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ca81b54546e3ff69c42ea60484e462513443c5e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8a0fec3423b126a425206441543fd50679712c2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SharePoint 또는 테이블 형식 모드에서 실행 되는 Analysis Services 데이터베이스에서 사용 되는 저장소 테이블에 대 한 열 수준에서 정보를 제공 합니다.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>행 집합 열  
  **DISCOVER_STORAGE_TABLE_COLUMNS** 행 집합에는 다음과 같은 열을 포함 합니다.  
   
-|**열 이름**|**유형 표시기**|**제한**|**Description**|  
+|**열 이름**|**유형 표시기**|**제한**|**설명**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**A S E _**|**DBTYPE_WSTR**|예|테이블이 포함된 데이터베이스 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMNS** 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|예|테이블이 포함된 큐브 또는 모델을 지정합니다.<br /><br /> 이 열을 사용하여 **DISCOVER_STORAGE_TABLES** 행 집합을 제한할 수 있습니다.|  

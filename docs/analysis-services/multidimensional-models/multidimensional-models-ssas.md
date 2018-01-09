@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c03d39261ff288832dbbeedc5e2a5cc90175d735
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 276211036c3d977ab0a0b6a61114e7fe58505b63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-modeling-ssas"></a>다차원 모델링(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services 다차원 솔루션 여러 차원에서 비즈니스 데이터를 분석 하기 위해 큐브 구조를 사용 합니다. 다차원 모드는 Analysis Services의 기본 서버 모드입니다. 데이터 확장 요구 사항과 성능의 균형을 맞추기 위한 MOLAP, ROLAP 및 HOLAP 저장소 모드와 함께 OLAP 데이터의 쿼리 및 계산 엔진을 포함합니다. Analysis Services OLAP 엔진은 광범위한 BI 도구와 함께 효과적으로 작동하는 업계 최고의 OLAP 서버입니다. 대부분의 Analysis Services 배포는 기존 OLAP 서버로 설치됩니다.  

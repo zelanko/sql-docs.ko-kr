@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df185344ea5af92a66c019c29b7a385ff309522b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버에서 현재 고정 된 잠금에 대 한 정보를 제공 합니다.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="lock-types"></a>잠금 유형  
   
-|잠금 이름|값|설명|  
+|잠금 이름|값|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|잠금이 없습니다.|  
 |LOCK_SESSION_LOCK|0x0000001|비활성 세션입니다. 다른 잠금을 방해하지 않습니다.|  

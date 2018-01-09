@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Power Pivot 서비스 계정 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]설치에 서버 작업을 지 원하는 두 서비스가 포함 됩니다. **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 서비스는 응용 프로그램 서버에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 처리 및 쿼리 지원을 제공하는 Windows 서비스입니다. 이 서비스의 로그인 계정은 항상 SQL Server 설치 중 SharePoint 통합 모드의 Analysis Services를 설치할 때 지정됩니다.  

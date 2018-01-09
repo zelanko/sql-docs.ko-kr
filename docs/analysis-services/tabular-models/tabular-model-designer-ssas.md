@@ -4,14 +4,11 @@ ms.date: 10/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1d0894a7718907bcbfa26565f80494cdce719287
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>테이블 형식 모델 디자이너(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델 디자이너의 일부인 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Microsoft와 통합 된 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], 전문적인 테이블 형식의 모델 솔루션을 개발 하기 위한 추가 프로젝트 형식 템플릿이 함께 제공 합니다.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 무료 웹 다운로드로 설치됩니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.    
@@ -93,9 +90,9 @@ ms.lasthandoff: 12/08/2017
   
 -   Model.bim  
   
--   테이블  
+-   Table  
   
--   열  
+-   Column  
   
 -   이름  
   
@@ -130,7 +127,7 @@ ms.lasthandoff: 12/08/2017
  Analysis Services 도구 모음을 통해 신속하고 간편하게 자주 사용하는 모델 작성 명령에 액세스할 수 있습니다.  
   
 ##  <a name="bkmk_vsint"></a>Visual Studio 통합  
- **소스 제어**  
+ **원본 제어**  
  Analysis Services 프로젝트는 선택한 원본 제어 플러그 인과 통합됩니다. 원본 제어를 사용하도록 Visual Studio를 구성하면 솔루션 탐색기에서 체크 인/체크 아웃을 사용할 수 있습니다. Team Foundation Server를 사용하도록 구성하려면 [Team Foundation 버전 제어로 Visual Studio 구성](http://msdn.microsoft.com/library/ms253064.aspx)을 참조하십시오. 그 외 다양한 타사 원본 제어 플러그 인도 지원합니다.  
   
  **글꼴**  
@@ -139,7 +136,7 @@ ms.lasthandoff: 12/08/2017
  **바로 가기 키**  
  도구->옵션->키보드 대화 상자를 통해 Analysis Services 키보드 바로 가기를 구성하거나 다시 매핑할 수 있습니다. 빌드, 저장, 디버그, 새 프로젝트 등과 같은 전역 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 바로 가기가 테이블 형식 모델 디자이너 컨텍스트에서 지원됩니다. 그 외 테이블 형식 모델 디자이너용 바로 가기 키는 Analysis Services 컨텍스트에서 지원됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
  [속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   

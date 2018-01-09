@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: AGGREGATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6e0905531658202c86ef5deac9e20d4db36fd9d6
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |합계|집합에서의 값 합계를 반환합니다.|  
 |개수|집합에서의 값 개수를 반환합니다.|  
 |최대값|집합에서의 최대값을 반환합니다.|  
-|Min|집합에서의 최소값을 반환합니다.|  
+|최소값|집합에서의 최소값을 반환합니다.|  
 |반가산적 집계 함수|셰이프를 시간 축으로 나타낸 다음 집합에서의 반가산적 동작의 계산을 반환합니다.|  
 |Distinct Count|slicer 축에 집합이 포함될 때 하위 큐브에 속하는 팩트 데이터의 집계를 반환합니다.<br /><br /> 집합의 각 멤버에 대한 고유 카운트를 반환합니다. 결과는 계산에 필요한 셀의 보안이 아니라 집계할 셀의 보안에 따라 달라집니다. 집합의 셀 보안은 오류를 발생시키지만 지정된 집합의 세분성 이하의 셀 보안은 무시됩니다. 해당 집합에 대한 계산은 오류를 발생시킵니다. 해당 집합에 대한 세분성 이하의 계산은 무시됩니다. 멤버와 해당 자식이 하나 이상 포함된 집합의 고유 카운트는 자식 멤버에 속하는 팩트의 고유 카운트를 반환합니다.|  
 |집계될 수 없는 특성|값의 합계를 반환합니다.|  

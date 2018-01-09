@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ec951bb5666f28167e0ce704e63ba3bb0972d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-the-database-schemas"></a>데이터베이스 스키마 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]스키마 생성 마법사에서 차원 및 측정값 그룹을 기반으로 주제 영역 데이터베이스에 대 한 비정규 관계형 스키마를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 마법사는 각 차원에 대해 차원 데이터를 저장할 관계형 테이블(차원 테이블)과 각 측정값 그룹에 대해 팩트 데이터를 저장할 관계형 테이블(팩트 테이블)을 생성합니다. 이러한 관계형 테이블을 생성할 때 연결된 차원, 연결된 측정값 및 서버 시간 차원은 무시합니다.  
@@ -66,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  차원 테이블의 기반이 되는 차원에서 키 특성을 두 개 이상 지정하면 오류가 발생합니다.  
   
- 번역  
+ Translations  
  마법사는 번역 열이 필요한 특성에 대해 번역된 값을 보관할 별도의 테이블을 생성합니다. 또한 마법사는 필요한 각 언어에 대해 별도의 열을 만듭니다.  
   
 ## <a name="fact-tables"></a>팩트 테이블  
@@ -87,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
  참조 무결성을 강제 적용하는 경우에는 차원 테이블과 팩트 테이블 간에 참조 무결성 제약 조건이 생성됩니다(해당되는 경우).  
   
- 번역  
+ Translations  
  마법사는 측정값 그룹에서 번역 열이 필요한 속성에 대해 번역된 값을 보관할 별도의 테이블을 생성합니다. 또한 마법사는 필요한 각 언어에 대해 별도의 열을 만듭니다.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>데이터 형식 변환 및 기본 길이  
@@ -101,7 +98,7 @@ ms.lasthandoff: 12/08/2017
 |NameColumn|50|  
 |CustomRollupColumn|3000|  
 |CustomRollupPropertiesColumn|500|  
-|UnaryOperatorColumn|1.|  
+|UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>관련 항목:  
  [증분 생성 이해](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   

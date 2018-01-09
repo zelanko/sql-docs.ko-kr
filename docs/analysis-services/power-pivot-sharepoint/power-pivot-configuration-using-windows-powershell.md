@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf814ab826f373ff4266206e6e4c0becda187bca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f70a2f37df18dfae9ced1a1de2d9e4d991702db7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>Windows PowerShell을 사용하여 파워 피벗 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 설치를 구성 하는 데 사용할 수 있는 Windows PowerShell cmdlet이 포함 되어 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]합니다. PowerShell을 사용하여 설치를 완전히 구성하려면 SharePoint cmdlet과 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlet을 모두 사용해야 합니다. 대부분의 구성은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 도구 중 하나를 사용하여 완료할 수 있습니다. 도구에 대한 자세한 내용은 [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하십시오.  
@@ -94,6 +91,6 @@ ms.lasthandoff: 12/08/2017
   
  [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
- [SharePoint용 파워 피벗에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
+ [SharePoint용 Power Pivot에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
   

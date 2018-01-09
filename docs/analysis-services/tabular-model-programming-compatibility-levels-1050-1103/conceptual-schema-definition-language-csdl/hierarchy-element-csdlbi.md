@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 53d88729411c0a353b82923d3f4a3337647902ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Hierarchy 요소는 계층을 구성을 서로 연결 될 수 있는 테이블의 필드에에서 대 한 논리적 컨테이너입니다. Hierarchy 요소는 CSDL Member 요소에서 파생되는 요소로, 비즈니스 인텔리전스 데이터 모델에서 만든 계층을 지원하도록 범위가 확장되었습니다.  
@@ -32,9 +30,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 Hierarchy 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|설명서|아니요|계층에 대한 설명입니다.|  
+|설명서|아니오|계층에 대한 설명입니다.|  
 |Level|예|계층에 사용되는 열을 정의하는 하나 이상의 Level 요소입니다.<br /><br /> [Level 요소&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md)를 참조하세요.|  
   
 ## <a name="remarks"></a>주의  

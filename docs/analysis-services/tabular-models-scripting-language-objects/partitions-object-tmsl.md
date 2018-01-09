@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6725ed37b909b80393a2760df26ba25b6f5148f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-object-tmsl"></a>파티션 개체 TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]파티션 또는 테이블 행 집합의 논리적 조각화를 정의합니다. 모델링 환경에서 또는 DirectQuery 통해 통과 쿼리 실행을 통해 전체 데이터 쿼리로 샘플 데이터에 대 한 데이터를 가져오는 데 사용 되는 SQL 쿼리는 파티션 구성 됩니다.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="object-definition"></a>개체 정의  
  모든 개체 이름, 유형, 설명, properties 컬렉션 및 주석을 포함 하 여 속성의 공통 집합을 가집니다. **파티션** 개체에는 다음과 같은 속성이 있습니다.  
   
- 형식  
+ 유형  
  파티션 유형입니다. 유효한 값으로 숫자로 이루어지며, 및는 다음과 같습니다.  
   
 -   쿼리 (1)-이 파티션에 있는 데이터에 대 한 쿼리를 실행 하 여 검색 되는 **DataSource**합니다. **DataSource** model.bim 파일에 정의 된 데이터 원본 이어야 합니다.  

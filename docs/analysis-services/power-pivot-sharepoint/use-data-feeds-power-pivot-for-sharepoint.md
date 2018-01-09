@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>데이터 피드 사용(SharePoint용 PowerPivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 피드는 온라인 데이터 원본에서 생성 되어 대상 문서 또는 응용 프로그램으로 스트리밍되는 하나 이상의 데이터 스트림입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel을 사용 중인 경우 데이터 피드를 통해 임의 데이터 원본의 기존 회사 또는 비즈니스 데이터를 Excel 2010 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 창으로 쉽게 가져올 수 있습니다. 통합 문서로 데이터 피드를 가져온 후 SharePoint 서버에서 예약한 데이터 새로 고침 작업에서 나중에 참조할 수 있습니다.  

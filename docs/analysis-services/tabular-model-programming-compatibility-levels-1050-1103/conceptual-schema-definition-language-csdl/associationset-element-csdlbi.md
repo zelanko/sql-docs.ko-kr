@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**AssociationSet** 요소는 연결을 정의 하는 복합 유형입니다. CSDLBI 데이터 모델에서 연결은 두 테이블 간의 관계입니다.  
@@ -34,10 +32,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="applicable-attributes"></a>적용 가능한 특성  
  다음 표는 **AssociationSet** 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |State|예|연결이 활성인지 여부를 나타내는 문자열입니다. 값은 State 요소에 따라 정의됩니다.|  
-|숨김|아니요|관계가 표시되는지 여부를 나타내는 부울 값입니다. 기본적으로 Hidden은 모든 관계가 모델에 표시됨을 의미하는 **false**입니다.|  
+|숨김|아니오|관계가 표시되는지 여부를 나타내는 부울 값입니다. 기본적으로 Hidden은 모든 관계가 모델에 표시됨을 의미하는 **false**입니다.|  
   
 ## <a name="state-element"></a>State 요소  
  **State** 요소는 연결이 활성이고 계산에 사용해야 하는지, 아니면 비활성이어서 계산에 명시적으로 참조해야 하는지를 설명하는 단순 유형입니다.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
  다음 표는 **State** 요소의 값을 보여 줍니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |활성|연결이 활성입니다.|  
 |비활성|연결이 활성입니다.|  

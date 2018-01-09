@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 812d973da1d754ee8fcca06151b2068c180cfc5e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ac102f21aeadab1d5ca7b916a2081405c654cd5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>테이블 형식 모델 파티션(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 모델에 대해 정의한 파티션은 배포된 모델에서 복제됩니다. 배포한 후에는 **의** 파티션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자 또는 스크립트를 사용하여 파티션을 관리하고 새 파티션을 만들 수 있습니다. 이 항목에서 제공하는 정보는 배포된 테이블 형식 model 데이터베이스의 파티션에 대해 설명합니다. 모델을 제작하는 동안 파티션을 만들고 관리하는 방법에 대한 자세한 내용은 [파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
@@ -34,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [이점](#bkmk_benefits)  
   
--   [Permissions](#bkmk_permissions)  
+-   [사용 권한](#bkmk_permissions)  
   
 -   [파티션 처리](#bkmk_process_partitions)  
   
@@ -61,10 +58,10 @@ ms.lasthandoff: 12/08/2017
   
  조직의 테이블 형식 모델에 대한 파티션 전략을 구현하는 방법은 특정 모델 데이터 처리 요구 사항과 사용 가능한 리소스에 따라 크게 다릅니다.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> 사용 권한  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션을 만들고 관리하고 처리하려면 보안 역할에 적절한 Analysis Services 사용 권한이 정의되어 있어야 합니다. 각 보안 역할의 사용 권한은 다음과 같습니다.  
   
-|사용 권한|작업|  
+|사용 권한|동작|  
 |----------------|-------------|  
 |관리자|읽기, 처리, 만들기, 복사, 병합, 삭제|  
 |처리|읽기, 처리|  
@@ -92,7 +89,7 @@ Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 
 |지우기 처리|파티션에서 모든 데이터를 제거합니다.|  
 |증분 처리|새 데이터로 파티션을 증분 업데이트합니다.|  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
 |태스크|Description|  
 |----------|-----------------|  

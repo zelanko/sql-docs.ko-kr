@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c6d92c514cb38f1277efeedaa4172968f8e150ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c1504d26e2c7cbdbdacf943e17d7514ba20b786
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>단원 1-2-데이터 원본 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]만든 후는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서는 일반적으로 작업을 시작할 프로젝트 하나 이상의 데이터 원본을 정의 하 여 프로젝트를 사용 합니다. 데이터 원본을 정의하면 데이터 원본에 연결하는 데 사용할 연결 문자열 정보가 정의됩니다. 자세한 내용은 [데이터 원본 만들기&#40;SSAS 다차원&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)를 참조하세요.  
@@ -61,6 +61,6 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [데이터 원본 뷰 정의](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [데이터 원본 만들기&#40;SSAS 다차원&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   

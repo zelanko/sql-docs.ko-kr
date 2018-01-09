@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Error Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 14c3d26fece5e60a2397636c8641e06dc7f7226b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0d513dc324fe6f1efc857a03bf231d06481c10c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="error-element-xmla"></a>Error 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]인스턴스에서 반환 된 오류에 대 한 정보를 포함 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
@@ -65,10 +63,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -80,12 +78,12 @@ ms.lasthandoff: 12/08/2017
   
 |상위 항목|자식 요소|  
 |--------------|--------------------|  
-|[메시지](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|없음|  
+|[메시지](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|InclusionThresholdSetting|  
 |[셀](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md), [행](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[설명](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md), [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md), [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md), [소스](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>특성  
   
-|Attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |ErrorCode|필요한 **UnsignedInt** 특성 (경우에만 **메시지** 부모 요소입니다.) 오류의 숫자 반환 코드를 포함합니다.|  
 |Severity|선택적 **문자열** 특성 (경우에만 **메시지** 부모 요소입니다.) 오류의 심각도를 포함합니다.|  

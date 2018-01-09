@@ -8,7 +8,7 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apilocation: sqluserinstance.dll
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b349093cc92fdfced91476f69bf98b60384e783
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55d0f7662217b9b2b92fbd8a7a0b640f2384f4ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 헤더 및 버전 정보
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQL Server Express LocalDB 인스턴스 API;에 대 한 별도 헤더 파일이 없습니다. LocalDB 함수 서명 및 오류 코드는 SQL Server Native Client 헤더 파일 (sqlncli.h)에 정의 됩니다. LocalDB 인스턴스 API를 사용하려면 프로젝트에 sqlncli.h 헤더 파일을 포함해야 합니다.  

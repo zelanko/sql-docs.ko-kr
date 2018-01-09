@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: LNum Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c5d42bebd4740b7a4c741cfffa9d7762cd2a6bc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c2103608617b5f84f9ea6ae124389b1966a03df7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lnum-element-xmla"></a>LNum 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]부모 수준 서 수 위치에 대 한 정보를 포함 [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) 또는 [멤버](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 요소입니다.  
@@ -50,10 +48,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|int|  
-|기본값|없음|  
+|데이터 형식 및 길이|ssNoversion|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md), [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  에 대 한 **HierarchyInfo** 요소는 **LNum** 요소는 계층의 수준 서 수 위치를 제공 하는 속성의 이름을 포함 합니다. 이 값은 OLAP용 OLE DB 사양 축 행 집합에 정의된 LEVEL_NUMBER 속성과 같습니다.  

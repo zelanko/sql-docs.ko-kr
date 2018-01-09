@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 13f937635d7e2a780d8db41bf2a421b55570fbcb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a4c742521eca5d2d00f1525f90797159a55a2f90
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>CLR(공용 언어 런타임) 통합 프로그래밍 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대 한.NET Framework의 공용 언어 런타임 (CLR) 구성 요소 통합 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 합니다. 이를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#을 포함한 모든 .NET Framework 언어를 사용하여 저장 프로시저, 트리거, 사용자 정의 형식, 사용자 정의 함수, 사용자 정의 집계 및 스트리밍 테이블 반환 함수를 작성할 수 있습니다.  

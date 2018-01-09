@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0660deb042e8b3d0c665152779fc6900833b26d9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 649475fa5fd1a4e0bb2a6c734f916270ac7f9a64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverpartitionstat-rowset"></a>DISCOVER_PARTITION_STAT 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특정 파티션의 집계에에서 대 한 통계를 반환합니다.  
@@ -36,10 +34,10 @@ ms.lasthandoff: 12/08/2017
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**A S E _**|**DBTYPE_WSTR**|필수임|차원을 포함하는 데이터베이스 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|필수임|파티션을 포함하는 큐브 또는 테이블 형식 모델 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|필수임|차원에 있는 측정값 그룹 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**PARTITION_NAME**|**DBTYPE_WSTR**|필수임|파티션의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**A S E _**|**DBTYPE_WSTR**|필수|차원을 포함하는 데이터베이스 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|필수|파티션을 포함하는 큐브 또는 테이블 형식 모델 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|필수|차원에 있는 측정값 그룹 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|필수|파티션의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
 |**AGGREGATION_NAME**|**DBTYPE_WSTR**||집계의 이름입니다.|  
 |**AGGREGATION_SIZE**|**DBTYPE_I8**||집계의 크기입니다.|  
   

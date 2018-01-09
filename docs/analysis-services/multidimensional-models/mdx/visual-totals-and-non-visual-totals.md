@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f966f4108f3ad029b6c069216cd7713f3b4ac7e7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4d85d2ce789793c03fa99d51451e1a64d0868962
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>보이는 값 합계 및 보이지 않는 값 합계
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]보이는 값 합계는 모든 열 이나 행에 표시 되는 항목을 추가 하는 열 이나 행의 끝에 합계입니다. 이 동작은 표시된 대부분의 테이블에서 기본 동작입니다. 그러나 사용자가 테이블의 특정 열만 표시하고 표시되지 않은 열을 포함하여 전체 행에 대한 합계를 유지하려는 경우가 있습니다. 이러한 경우를 **보이지 않는 값 합계**라고 하는데 이는 보이는 값과 보이지 않는 값 모두에서 합계가 제공되기 때문입니다.  

@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>큐브, 파티션 및 차원 처리에 대 한 오류 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]오류 구성 속성에 큐브, 파티션 또는 차원 개체 처리 시 데이터 무결성 오류가 발생할 경우 서버가 응답 하는 방법을 결정 합니다. 일반적으로 키 열의 중복 키, 누락된 키 및 Null 값에 의해 이러한 오류가 트리거되며, 오류의 원인이 되는 레코드가 데이터베이스에 추가되지 않지만 다음에 발생하는 작업을 결정하는 속성을 설정할 수 있습니다. 기본적으로 처리가 중지됩니다. 그러나 큐브를 개발하는 중에 오류가 발생하는 경우 가져온 데이터로 큐브 동작을 테스트할 수 있도록 처리를 계속할 수 있습니다(가져온 데이터가 완전하지 않은 경우 포함).  
@@ -90,7 +87,7 @@ ms.lasthandoff: 12/08/2017
   
  **특정 오류에 대한 서버 응답**  
   
-|속성|기본값|다른 값|  
+|속성|Default|다른 값|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> 오류 구성을 초기화할 때 발생합니다.|**IgnoreError** 는 오류를 기록하거나 오류 수를 계산하지 않습니다. 오류 수가 최대 제한 미만이면 처리가 계속됩니다.|**ReportAndContinue** 는 오류를 기록하고 오류 수를 계산합니다.<br /><br /> **ReportAndStop** 은 오류 제한에 관계없이 오류를 보고하고 즉시 처리를 중지합니다.|  
 |**KeyNotFound**<br /><br /> 팩트 테이블의 외래 키에 관련 차원 테이블의 일치하는 기본 키가 없는 경우(예: Sales 팩트 테이블에 제품 ID가 Product 차원 테이블에 없는 레코드가 있는 경우) 발생합니다. 이 오류는 눈송이 차원의 차원 처리 또는 파티션 처리 중에 발생할 수 있습니다.|**ReportAndContinue** 는 오류를 기록하고 오류 수를 계산합니다.|**ReportAndStop** 은 오류 제한에 관계없이 오류를 보고하고 즉시 처리를 중지합니다.<br /><br /> **IgnoreError** 는 오류를 기록하거나 오류 수를 계산하지 않습니다. 오류 수가 최대 제한 미만이면 처리가 계속됩니다. 이 오류를 트리거하는 레코드는 기본적으로 알 수 없는 멤버로 변환되지만 대신 해당 레코드를 삭제하도록 **KeyErrorAction** 속성을 변경할 수 있습니다.|  

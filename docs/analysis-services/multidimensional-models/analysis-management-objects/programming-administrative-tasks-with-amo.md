@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72c1e8f8b21dbdaed355bd72fe89dc9976a49137
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6e33f084432098336b7affff9c5465cfe5c6931e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>AMO로 관리 태스크 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Management Objects (AMO)는 관리 클라이언트 응용 프로그램에서 사용 하는 프로그래밍 라이브러리 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이 섹션에서는 AMO 개체를 사용하여 프로그래밍하는 방법을 배웁니다.  

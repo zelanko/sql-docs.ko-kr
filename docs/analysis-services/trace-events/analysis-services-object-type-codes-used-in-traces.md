@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>추적에 사용되는 Analysis Services 개체 형식 코드
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 페이지는 Analysis Services 데이터 모델에서 각 개체의 개체 유형 (6 자리 숫자)를 나열합니다. 이러한 코드는 추적 로그에 표시되며 특정 잠금과 연관된 개체 형식을 식별하는 데 사용됩니다. 예를 들어 데이터베이스에 대한 잠금 시간 제한은 데이터베이스 개체 형식인 개체 형식 100002를 나타냅니다.  
@@ -33,12 +33,12 @@ ms.lasthandoff: 12/08/2017
   
 |개체 유형|개체 이름|  
 |-----------------|-----------------|  
-|100000|Server|  
+|100000|서버|  
 |100001|Command|  
 |100002|데이터베이스|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
-|100005|역할|  
+|100005|Role|  
 |100006|차원|  
 |100007|DimensionAttribute|  
 |100008|계층|  

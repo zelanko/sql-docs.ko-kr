@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: ql12.asvs.bidtoolset.deffieldset.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e5a36f650081d5932e7100abc923b627a4aa47c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 155cf92c41b31e6ad8e09c9e4c5b20f0531842e5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View-보고서에 대 한 기본 필드 집합 구성
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]기본 필드 집합은 미리 정의 된 목록입니다는 자동으로 추가 된 열 및 측정값을 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서 필드 목록에서 테이블을 선택할 때 보고서 캔버스입니다. 테이블 형식 모델 작성자는 보고서에 모델을 사용하는 보고서 작성자를 위해 기본 필드 집합을 만들어 중복된 단계를 제거할 수 있습니다. 예를 들어, 고객 연락처 정보를 사용하는 대부분의 보고서 작성자가 항상 연락처 이름, 기본 전화 번호, 전자 메일 주소 및 회사 이름을 보려고 하는 것으로 파악되는 경우 해당 열을 미리 선택하여 작성자가 Customer Contact 테이블을 클릭할 때 보고서 캔버스에 이러한 정보가 항상 추가되도록 할 수 있습니다.  

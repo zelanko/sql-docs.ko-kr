@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0dbdaee8077ccfeb374f1ef360d397fa194dbfca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd9dfea18c7b201dfcf5838b43d59ae0f5b942a7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measure-element-csdlbi"></a>Measure 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Measure 요소는 CSDL Property 요소를 기반으로 하는 복합 유형입니다. CSDLBI 주석은 비즈니스 인텔리전스 데이터 모델에서 사용할 복합 수식의 정의를 지원하는 특성을 추가합니다.  
@@ -32,10 +30,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표에서는 Measure 요소를 정의하는 특성과 해당 요소 및 Property 요소에 적용 가능한 모든 특성을 설명합니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|Kpi|아니요|KPI로 사용되는 측정값 전용의 필수 요소입니다. 모든 측정값이 KPI인 것은 아니지만 모든 KPI는 측정값 정의를 기반으로 해야 합니다.<br /><br /> [KPI 요소 &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)|  
-|IsSimpleMeasure|아니요|측정값에 사용된 수식이 단순 집계(SUM, COUNT, MIN, MAX, AVG, DistinctCount) 중 하나인지 여부를 나타내는 True/False 값입니다.<br /><br /> 기본값은 true입니다.|  
+|Kpi|아니오|KPI로 사용되는 측정값 전용의 필수 요소입니다. 모든 측정값이 KPI인 것은 아니지만 모든 KPI는 측정값 정의를 기반으로 해야 합니다.<br /><br /> [KPI 요소 &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)|  
+|IsSimpleMeasure|아니오|측정값에 사용된 수식이 단순 집계(SUM, COUNT, MIN, MAX, AVG, DistinctCount) 중 하나인지 여부를 나타내는 True/False 값입니다.<br /><br /> 기본값은 true입니다.|  
   
 ## <a name="example"></a>예제  
  **테이블 형식**  

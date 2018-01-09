@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>추가 단원-Power View 보고서에 대 한 보고 속성 구성
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
 이 단원에 소요되는 예상 시간: **30분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 이 추가 단원은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 태스크를 수행하려면 이전 단원을 모두 완료해야 합니다.  
 이 특정 추가 단원을 완료하려면 다음이 필요합니다.  
   
@@ -155,7 +155,7 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
   
     **Customer**  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
     |Geography Id|숨김|True|  
     |Birth Date|데이터 형식|간단한 날짜|  
@@ -165,9 +165,9 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
     > [!NOTE]  
     > 7단원: 날짜 테이블로 표시에서 날짜 테이블로 표시 설정을 사용하여 날짜 테이블을 모델 날짜 테이블로 선택하고 날짜 테이블의 날짜 열을 고유 식별자로 사용할 열로 선택했으므로 날짜 열의 행 식별자 속성이 자동으로 True로 설정되며 변경할 수 없습니다. DAX 수식에서 시간 인텔리전스 함수를 사용할 때는 날짜 테이블을 지정해야 합니다. 이 모델에서는 시간 인텔리전스 함수를 사용하여 이전 분기 및 현재 분기 등 다양한 기간에 대해 KPI에서도 사용할 판매 데이터를 측정하는 여러 측정값을 만들었습니다. 날짜 테이블 지정 방법에 대한 자세한 내용은 SQL Server 온라인 설명서에서 [시간 인텔리전스에 사용할 날짜 테이블로 표시 지정&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)을 참조하세요.  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
-    |Date|데이터 형식|간단한 날짜|  
+    |date|데이터 형식|간단한 날짜|  
     |Day Number of Week|숨김|True|  
     |Day Name|열 기준 정렬|Day Number of Week|  
     |Day Of Week|숨김|True|  
@@ -182,14 +182,14 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
   
     **Geography**  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
     |Geography Id|숨김|True|  
     |Sales Territory Id|숨김|True|  
   
     **Product**  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
     |Product Id|숨김|True|  
     |Product Alternate Id|기본 레이블|True|  
@@ -199,7 +199,7 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
   
     **Internet Sales**  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
     |Product Id|숨김|True|  
     |Customer Id|숨김|True|  

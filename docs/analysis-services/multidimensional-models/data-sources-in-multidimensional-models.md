@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c8da4c13bdddd0994ec67548ce2666d7b06fea8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 99bdc630a51bd2bb4f9cbfeb7860d2dffb9392a0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-sources-in-multidimensional-models"></a>다차원 모델의 데이터 원본
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]가져오거나를 다차원 모델에 로드 하는 모든 데이터는 외부 데이터 원본에서 생성 됩니다. 일반적으로 원본 데이터는 보고용으로 디자인된 데이터 웨어하우스의 데이터이지만 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지와 같은 매개자를 통해 직접 또는 간접으로 액세스되는 관계형 데이터베이스의 데이터일 수도 있습니다.  

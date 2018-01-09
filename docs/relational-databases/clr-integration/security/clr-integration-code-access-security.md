@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1bdecb5570f4c139fd42a77d2ef5479758bdf63a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37d547672455e794854d2143819a445fc25edef2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 통합 코드 액세스 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]공용 언어 런타임 (CLR) 관리 코드에 대 한 코드 액세스 보안 이라는 보안 모델을 지원 합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. 자세한 내용은 .NET Framework 소프트웨어 개발 키트의 "코드 액세스 보안" 섹션을 참조하십시오.  
@@ -114,9 +114,9 @@ ms.lasthandoff: 11/17/2017
 ||**안전**|**EXTERNAL_ACCESS**|**안전 하지 않은**|  
 |**코드 액세스 보안 권한**|실행 전용|실행 및 외부 리소스 액세스|제한 없음(P/Invoke 포함)|  
 |**프로그래밍 모델 제한 사항**|예|예|제한 없음|  
-|**안정성 요구 사항**|예|예|아니요|  
+|**안정성 요구 사항**|예|예|아니오|  
 |**로컬 데이터 액세스**|예|예|예|  
-|**네이티브 코드를 호출 하는 기능**|아니요|아니요|예|  
+|**네이티브 코드를 호출 하는 기능**|아니오|아니오|예|  
   
 ## <a name="see-also"></a>관련 항목:  
  [CLR 통합 보안](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

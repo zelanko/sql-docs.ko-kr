@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c9a3cd3a86660e9c5ed818a0751deef36218a812
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8527382a85e1e85fb7981e69ea02304d2a7a940c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-incremental-generation"></a>증분 생성 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]초기 스키마를 생성 하는 큐브 및 차원 정의 사용 하 여 변경할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 다음 스키마 생성 마법사를 다시 실행 하십시오. 마법사는 주제 영역 데이터베이스 및 연결된 데이터 원본 뷰에서 스키마를 업데이트하여 변경 내용을 반영하고 다시 생성될 테이블의 현재 데이터를 가능한 범위까지 보존합니다. 처음 스키마를 생성한 후 테이블을 변경하면 스키마 생성 마법사가 다음 규칙에 따라 가능한 경우 해당 변경 내용을 유지합니다.  

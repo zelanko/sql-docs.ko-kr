@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CrossProduct Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 76d36d6f020ecfca7984a35ae36148273c38d0d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5cb8065433f823c3d702447b0d75cc76d7ba16d5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]에 대 한 각 계층의 멤버를에서 정렬 된 집합 간의 교차곱을 포함 한 [축](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) 요소를 사용 하는 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) 가 반환 되는 데이터 형식이 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드입니다.  
@@ -52,10 +50,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>특성  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |크기|필요한 **정수** 특성입니다. 가 나타내는 교차곱에 포함 된 튜플 수를 나타내는 **CrossProduct** 요소입니다.|  
   

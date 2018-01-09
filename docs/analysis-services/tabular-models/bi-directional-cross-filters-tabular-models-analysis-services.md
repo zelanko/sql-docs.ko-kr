@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0ffd9fce046edae4098f965f2cc2967fa7f1e3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>양방향 교차 필터-테이블 형식 모델-Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]새 SQL Server 2016에는 기본 제공 접근 방식을 수 있도록 *양방향 교차 필터* 테이블 형식 모델에서 테이블 관계에서 필터 컨텍스트를 전파 하기 위한 수동 DAX 해결 방법에 대 한 필요성을 제거 합니다.  
@@ -171,7 +169,7 @@ ms.lasthandoff: 12/08/2017
   
 7.  **열** > **자동 합계** > **DistinctCount** 를 클릭하여 고유한 제품에 대한 측정값을 만듭니다.  
   
-### <a name="analyze-in-excel"></a>Excel에서 분석  
+### <a name="analyze-in-excel"></a>도구 모음  
   
 1.  **모델** > **Excel에서 분석** 을 클릭하여 모든 데이터를 피벗 테이블로 가져옵니다.  
   
@@ -204,7 +202,7 @@ ms.lasthandoff: 12/08/2017
   
  실제로 교차 필터링은 일반적으로 다 대 다 구문을 통해서만 배달되는 데이터 탐색 형식을 지원할 수 있습니다. 양방향 교차 필터링은 다 대 다 구문이 아니라는 점을 인식해야 합니다.  이 릴리스의 테이블 형식 모델 디자이너에서는 실제 다 대 다 테이블 구성이 지원되지 않는 상태로 유지됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Power BI Desktop에서 관계 만들기 및 관리](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
  [Powerpivot과 SSAS 테이블 형식 모델에서 간단한 다 다 대 다 관계를 처리 하는 방법의 실제 예](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [DAX를 활용 하 여 다 대 다 관계를 확인 하 고 교차 테이블 필터링](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   

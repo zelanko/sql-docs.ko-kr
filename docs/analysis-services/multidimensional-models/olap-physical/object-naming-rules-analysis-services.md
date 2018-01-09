@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]예약 된 단어 뿐만 아니라 개체 명명 규칙에 설명 하는이 항목에 사용할 수 없는 코드에서 이름 개체 또는 스크립트 및 문자에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  다음 표에서는 개체별로 유효하지 않은 문자열 보여 줍니다.  
   
-|개체|유효하지 않은 문자|  
+|Object|유효하지 않은 문자|  
 |------------|------------------------|  
 |**Server**|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 자세한 내용은 [명명 규칙(Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) 을 참조하십시오.|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  
@@ -88,9 +86,9 @@ ms.lasthandoff: 12/08/2017
   
 |서버 모드 및 데이터베이스 호환성 수준|예약 문자 허용 여부|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP(모든 버전)|아니요|  
-|테이블 형식 - 1050|아니요|  
-|테이블 형식 - 1100|아니요|  
+|MOLAP(모든 버전)|아니오|  
+|테이블 형식 - 1050|아니오|  
+|테이블 형식 - 1100|아니오|  
 |테이블 형식 – 1130 이상|예|  
   
  데이터베이스 기본 ModelType을 가질 수 있습니다. 기본값은 다차원과 같으므로 열 이름에 예약 문자를 사용할 수 없습니다.  

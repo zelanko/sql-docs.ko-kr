@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ImpersonationInfo Data Type
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5aa38a49881e9d22cb5b4ad8b074ca4a2350a392
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f651898ff723f55b4d3c32ad31f462144d28946c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="impersonationinfo-data-type-assl"></a>ImpersonationInfo 데이터 형식(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]사용자를 가장 하는 데 사용 하는 정보를 나타내는 기본 데이터 형식을 정의 합니다.  
@@ -47,16 +45,16 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|없음|  
-|파생 데이터 형식|없음|  
+|기본 데이터 형식|InclusionThresholdSetting|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
 |자식 요소|[Account](../../../analysis-services/scripting/properties/account-element-impersonationinfo-assl.md), [ImpersonationInfoSecurity](../../../analysis-services/scripting/properties/impersonationinfosecurity-element-assl.md), [ImpersonationMode](../../../analysis-services/scripting/properties/impersonationmode-element-assl.md), [Password](../../../analysis-services/scripting/properties/password-element-assl.md)|  
 |파생 요소|[DataSourceImpersonationInfo](../../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md), [ImpersonationInfo](../../../analysis-services/scripting/properties/impersonationinfo-element-assl.md)|  
   

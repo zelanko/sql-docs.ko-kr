@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1d1caae0c63d1ffdbbed07940b35a4a822787f5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 39d00b432101560c5cf5075a0e60e445e670a28d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-powerpivotserviceapplication-cmdlet"></a>Set-PowerPivotServiceApplication cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]속성을 설정 하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램입니다.  
@@ -347,7 +347,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |입력|없음|  
 |출력|없음|  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
   
 ```  
 C:\PS>Set-PowerPivotServiceApplication -identity 1234567-890a-bcde-fghijklm -AllowCustomWindowsCredentials:$false -UnattendedAccount "MyTargetApp"  
@@ -367,7 +367,7 @@ C:\PS>Set-PowerPivotServiceApplication -identity 1234567-890a-bcde-fghijklm -Hea
   
  유효한 ID를 가져오려면 Get-powerpivotserviceapplication을 사용합니다.  
   
-## <a name="example-3"></a>예 3  
+## <a name="example-3"></a>예제 3  
   
 ```  
 C:\PS>Set-PowerPivotServiceApplication -identity 1234567-890a-bcde-fghijklmn -BusinessHoursStartTime "07:15AM" -BusinessHoursEndTime "08:00PM"  

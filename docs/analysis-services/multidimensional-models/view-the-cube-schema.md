@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2489ce5465afcbbb42ffaa9403d75a7d42d68ca4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25343dab0a818aa86f0a3a2f5080204602cc1f38
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="view-the-cube-schema"></a>큐브 스키마 보기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**데이터 원본 뷰** 의 창 고 **큐브 구조** 탭에서 **큐브 디자이너** 큐브 스키마가 표시 됩니다. 이 스키마는 큐브의 측정값과 차원이 파생된 원본 테이블 집합입니다. 모든 큐브 스키마는 해당 큐브의 측정값과 차원의 기반이 되는 하나 이상의 팩트 테이블과 하나 이상의 차원 테이블로 구성됩니다.  

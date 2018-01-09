@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 17fde2d95fb202712610a31769b1a50623bac7c7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a09461909c86014aeb459cdc602ee9e96985d88a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>단원 2-2-큐브를 정의 합니다.
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]큐브 마법사를 사용 하면 측정값 그룹 및 큐브 차원을 정의할 수 있습니다. 다음 태스크에서는 큐브 마법사를 사용하여 큐브를 만듭니다.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [차원에 특성 추가](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [다차원 모델의 큐브](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
 [다차원 모델의 차원](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

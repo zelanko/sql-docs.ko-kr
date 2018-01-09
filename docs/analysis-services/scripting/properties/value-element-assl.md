@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Value Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3363b3650dc93718e04fa2365c5f0537bfc602e5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 007c2b2da48f72655bfd131eedf61db9f8989a3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="value-element-assl"></a>Value 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소의 값을 포함합니다.  
@@ -47,24 +45,24 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|아래 표를 참조 합니다.|  
-|기본값|없음|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 |상위 항목 또는 부모|데이터 형식|  
 |------------------------|---------------|  
 |[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)|모든 simpleType|  
 |[ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|모든 simpleType|  
-|나머지|문자열|  
+|나머지|String|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md), [주석](../../../analysis-services/scripting/objects/annotation-element-assl.md), [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md), [ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md), [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md), [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **값** 요소는 부모 개체와 연결 된 값을 포함 합니다. 예상 값은 **값** 다음 표에 설명 된 대로 요소는 부모 요소에 따라 달라 집니다.  

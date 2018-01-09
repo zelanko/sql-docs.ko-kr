@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc03c77ffd4fc5ad02d234fa5c1bdc456234779b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f36ab9dbb5054c4014e03718a99fc28033e4d9ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processpartition-cmdlet"></a>Invoke-ProcessPartition cmdlet
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]특정 처리 유형 변수를 사용 하 여 파티션을 처리 합니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1.|  
+|위치|1|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/08/2017
 |입력|InclusionThresholdSetting|  
 |출력|InclusionThresholdSetting|  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\Sales Orders\Partitions\Total_Orders_2004 > Get-Item .| Invoke-ProcessPartition –ProcessType:ProcessDefault`  
   
  이 명령은 처리할 파티션의 ID를 파이프합니다.  

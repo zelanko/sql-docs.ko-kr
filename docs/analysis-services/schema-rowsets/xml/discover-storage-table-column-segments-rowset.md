@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66d86e3583b81069f2c1f77a616dac91a022ff9c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]테이블 형식에서 실행 되는 Analysis Services 데이터베이스에서 사용 되는 저장소 테이블에 대 한 열 및 세그먼트 수준 정보를 제공 하거나 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모드입니다. 이 행 집합은 주로 문제 해결 및 분석을 위해 사용됩니다.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>행 집합 열  
  **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** 행 집합에는 다음과 같은 열을 포함 합니다.  
   
-|**열 이름**|**유형 표시기**|**제한**|**Description**|  
+|**열 이름**|**유형 표시기**|**제한**|**설명**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**A S E _**|**DBTYPE_WSTR**|예|테이블 형식 데이터베이스를 지정합니다.<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** 이 열을 사용 하 여 행 집합을 제한할 수 있습니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|예|모델의 이름입니다.<br /><br /> 이 열을 사용하여 **DISCOVER_STORAGE_TABLES** 행 집합을 제한할 수 있습니다.|  

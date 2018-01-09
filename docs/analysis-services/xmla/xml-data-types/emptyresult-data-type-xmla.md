@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: EmptyResult Data Type
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d7edcf4e95bf5c6936a504be610fa88055eb0d3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d9eb4f523fb783e9ded2e1a1d9d9c26e220331c5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 데이터 형식(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]나타내는 파생된 데이터 형식을 정의 [루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 요소에서 데이터를 반환 하지 않는 한 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 또는 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드를 호출 합니다.  
@@ -50,17 +48,17 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[결과 집합](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|파생 데이터 형식|없음|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
-|자식 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
+|자식 요소|InclusionThresholdSetting|  
 |파생 요소|[루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>주의  

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 092ec27d421f91a1dc4484298139783df1695594
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 43652986e789837299feacf5387cd8b6e6d57a8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>데이터 마이닝 알고리즘(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*알고리즘* 데이터 마이닝 (또는 기계 학습)는 데이터 로부터 모델을 만드는 추론 및 계산의 집합입니다. 모델을 만들기 위해 알고리즘은 제공된 데이터를 분석하여 특정 유형의 패턴 또는 추세를 찾습니다. 알고리즘은 많은 반복을 통해 이 분석 결과를 사용하여 마이닝 모델을 만들기 위한 최적의 매개 변수를 찾습니다. 그런 다음 이러한 매개 변수를 전체 데이터 집합에 적용하여 동작 가능한 패턴과 자세한 통계를 추출합니다.  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|**항목**|**Description**|  
+|**항목**|**설명**|  
 |---------------|---------------------|  
 |데이터 마이닝 모델에 사용되는 알고리즘 결정|[마이닝 모델을 만드는 데 사용한 매개 변수 쿼리](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)|  
 |사용자 지정 플러그 인 알고리즘 만들기|[플러그 인 알고리즘](../../analysis-services/data-mining/plugin-algorithms.md)|  

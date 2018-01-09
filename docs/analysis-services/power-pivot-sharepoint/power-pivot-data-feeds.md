@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e845c632a44b4d74a7b12eeaf2ed80e85ffbb02
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 97bc6142b19e453c2415653e899d6bbf832f4c1a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-data-feeds"></a>파워 피벗 데이터 피드
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 피드는 클라이언트 응용 프로그램에는 온라인 데이터 원본에서 필요에 따라 데이터 스트림을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 피드를 사용하여 Atom 인식 웹 서비스나 응용 프로그램의 데이터를 Excel 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 추가할 수 있습니다.  

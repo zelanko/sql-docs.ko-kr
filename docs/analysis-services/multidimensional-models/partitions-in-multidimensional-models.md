@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6984e77d1969db95ac8b8659ba841085ce7ef7c8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-in-multidimensional-models"></a>다차원 모델의 파티션
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], *파티션* 를 측정값 그룹에 로드 된 팩트 데이터의 물리적 저장소를 제공 합니다. 각 측정값 그룹에 대해 단일 파티션이 자동으로 만들어지지만 더욱 효율적으로 처리하고 쿼리 성능이 빨라지도록 데이터를 추가로 분할하는 추가 파티션을 만드는 것이 일반적입니다.  

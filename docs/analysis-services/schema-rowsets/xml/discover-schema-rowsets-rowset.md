@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_SCHEMA_ROWSETS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4e5a3923ff0137e81064224fb6a2dfd9ca98f435
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73fe1580fb43a090a7df04a43432e5b213e86369
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverschemarowsets-rowset"></a>DISCOVER_SCHEMA_ROWSETS 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이름, 제한, 설명 및 모든 열거 값 및에서 지 원하는 모든 추가 공급자별 열거 값에 대 한 기타 정보를 반환 합니다.는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 공급자입니다.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/08/2017
 |**SchemaName**|**DBTYPE_WSTR**||스키마 또는 요청의 이름입니다. 이 요청은 *RequestTypes* 열거형의 값을 반환합니다.|  
 |**SchemaGuid**|**DBTYPE_GUID**||스키마의 GUID입니다.|  
 |**제한 사항**|**DBTYPE_HCHAPTER**||공급자에서 지원하는 제한의 배열입니다.|  
-|**Description**|**DBTYPE_WSTR**||스키마의 지역화 가능한 설명입니다.|  
+|**설명**|**DBTYPE_WSTR**||스키마의 지역화 가능한 설명입니다.|  
 |**RestrictionsMask**|**DBTYPE_UI8**|||  
   
  이 스키마 행 집합은 정렬되지 않습니다.  

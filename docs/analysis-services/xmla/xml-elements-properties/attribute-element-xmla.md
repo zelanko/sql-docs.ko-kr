@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Attribute Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2100479529d5d7ca15bd8b6dcf0600088617c02
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d8441c406aac47d1c67bc8f24f049c6073043261
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-element-xmla"></a>Attribute 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]정의 하거나 필터링 되는 특성의 멤버는 부모 [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [업데이트](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), 또는 [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 명령은 작업을 수행 합니다.  
@@ -60,10 +58,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  

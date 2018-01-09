@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d0f9c22476a7005ed5eee055c6c95f078e743f90
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7d4d1ba933a5f927c86908f743d21093e9ded602
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions"></a>파티션
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 SSDT에서 파티션 대화 상자를 사용 하 여 만든 파티션은 모델 작업 영역 데이터베이스에 적용 됩니다. 모델을 배포하면 모델 작업 영역 데이터베이스에 대해 정의된 파티션이 배포된 model 데이터베이스에 복제됩니다. 있습니다 수 추가로 만들고 SSMS에서 파티션 대화 상자를 사용 하 여 배포 된 모델 데이터베이스에 대 한 파티션을 관리 합니다.  이 항목에서 제공 하는 정보는 SSDT에서 파티션 관리자 대화 상자를 사용 하 여 모델 제작 중에 만든 파티션을 설명 합니다. 배포 된 모델에 대 한 파티션을 만들고 관리 하는 방법에 대 한 내용은 [만들기 및 테이블 형식 모델 파티션 관리](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)합니다.  
@@ -54,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 |[작업 영역 데이터베이스에서 파티션 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|만들고 SSDT에서 파티션 관리자를 사용 하 여 모델 작업 영역 데이터베이스에서 파티션을 관리 하는 방법을 설명 합니다.|  
 |[작업 영역 데이터베이스에서 파티션 처리](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 파티션을 처리(새로 고침)하는 방법을 설명 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [데이터 처리](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   

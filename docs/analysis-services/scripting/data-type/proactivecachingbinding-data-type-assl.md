@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ProactiveCachingBinding Data Type
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7727c84f7854d254434a2d04da7d5d51b54ea9f0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6311850e1373c3731c26bba7eeee0eb6ef0498d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="proactivecachingbinding-data-type-assl"></a>ProactiveCachingBinding 데이터 형식(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]정보를 나타내는 추상 파생된 데이터 형식을 정의 [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) 캐시를 다시 작성 해야 하는 데이터 원본 변경 내용이 나 다시 작성 프로세스의 상태에 대 한 요소입니다.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[바인딩](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
 |파생 데이터 형식|[ProactiveCachingIncrementalProcessingBinding](../../../analysis-services/scripting/data-type/proactivecachingincrementalprocessingbinding-data-type-assl.md), [ProactiveCachingObjectNotificationBinding](../../../analysis-services/scripting/data-type/proactivecachingobjectnotificationbinding-data-type-assl.md), [ProactiveCachingQueryBinding](../../../analysis-services/scripting/data-type/proactivecachingquerybinding-data-type-assl.md)|  
@@ -53,9 +51,9 @@ ms.lasthandoff: 12/08/2017
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
-|자식 요소|없음|  
-|파생 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
+|자식 요소|InclusionThresholdSetting|  
+|파생 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  에 대 한 자세한 내용은 **바인딩** 유형의 Analysis Services Scripting Language (ASSL) 개체 테이블을 포함 하 여는 **바인딩** 유형과의 상속 계층 구조 **바인딩**  형식 참조 [바인딩 데이터 형식 &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: queries [ODBC]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 032772aa34ed8b3e3d350b6dac121b76c34aed59
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b40875dcd570bf53f7da9813af6863c0fe34ac95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>프로 파일링 ODBC 드라이버 성능 데이터-장기 실행 쿼리 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>장기 실행 쿼리 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 및 장기 실행 쿼리 로그 파일의 전체 경로 파일 이름을 사용 합니다. 예를 들어  
+1.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 및 장기 실행 쿼리 로그 파일의 전체 경로 파일 이름을 사용 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     C:\\Odbcqry.log  

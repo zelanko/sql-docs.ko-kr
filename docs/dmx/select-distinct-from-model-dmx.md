@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e36b3c6b97fa441297961d2edf889bee61f67cc7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9911bf2fb1184412cb7b66765f3502e656c82d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;모델 &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +64,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>주의  
  **SELECT DISTINCT FROM** 문이 단일 열 또는 관련된 열 집합에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
   
- **SELECT DISTINCT FROM** 문을 사용 하면 중첩된 테이블 안의 열을 직접 참조할 수 있습니다. 예를 들어  
+ **SELECT DISTINCT FROM** 문을 사용 하면 중첩된 테이블 안의 열을 직접 참조할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -155,6 +153,6 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>관련 항목:  
  [SELECT&#40; DMX &#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

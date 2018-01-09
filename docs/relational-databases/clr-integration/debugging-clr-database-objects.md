@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e822a52ab516d65c9e28aaaa3bcfb7d78f2eec16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 055023bf4c41bad380e1306a2facd7dc884b75ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="debugging-clr-database-objects"></a>CLR 데이터베이스 개체 디버깅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디버깅에 대 한 지원을 제공 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 공용 언어 런타임 (CLR)은 데이터베이스의 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디버깅에서 중요한 점은, 설치 및 사용이 쉽고 SQL Server 디버거를 Microsoft Visual Studio 디버거와 통합할 수 있다는 것입니다. 또한 디버깅이 여러 언어에서 작동합니다. 사용자는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 CLR 개체로 매끄럽게 한 단계씩 코드를 실행할 수 있으며 그 반대의 경우도 가능합니다. 관리되는 데이터베이스 개체를 디버깅할 때는 SQL Server Management Studio의 Transact-SQL 디버거를 사용할 수 없지만 Visual Studio의 디버거를 사용하여 개체를 디버깅할 수 있습니다. Visual Studio의 관리되는 데이터베이스 개체 디버깅은 서버에서 실행 중인 루틴에서 "step into" 및 "step over" 문과 같은 대부분의 일반적인 디버깅 기능을 지원합니다. 디버거는 디버깅하는 동안 중단점을 설정하고, 호출 스택을 검사하고, 변수를 검사하고, 변수 값을 수정할 수 있습니다. Visual Studio .NET 2003은 CLR 통합 프로그래밍 또는 디버깅에 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 .NET Framework가 미리 설치되어 있으며 Visual Studio .NET 2003에서는 .NET Framework 2.0 어셈블리를 사용할 수 없습니다.  

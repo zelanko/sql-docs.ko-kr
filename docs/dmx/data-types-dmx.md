@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8a66c05b21a723aaa50de515cb9e686fb85e603c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: adddda081272fedbc602c5065e1592527f9e3d8d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-dmx"></a>데이터 형식(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
  데이터 형식은 알고리즘에 따라 다릅니다. 각 알고리즘은 지원되는 데이터 형식 및 사용 방법을 결정합니다. Microsoft 알고리즘에서는 다음과 같은 데이터 형식을 지원합니다.  
   
--   텍스트  
+-   텍스트 모드  
   
 -   Long  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Double  
   
--   날짜  
+-   date  
   
  데이터에 대 한 자세한 내용은 형식에 대해 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지 원하는 참조 [데이터 형식 &#40; 데이터 마이닝 속성 &#41;](../analysis-services/data-mining/data-types-data-mining.md)합니다.  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 685e5d9b0586d0c97fa686507bc1934f8fb31c1e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>SharePoint에 PowerPivot 솔루션 배포
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]수동으로 추가 하는 두 개의 솔루션 패키지를 배포 하려면 다음 지침을 사용 하 여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint Server 2010 환경에는 기능입니다. 솔루션 배포는 SharePoint 2010 서버에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을(를) 구성하기 위한 필수 단계입니다. 필수 단계의 전체 목록을 보려면 [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)을 참조하세요.  

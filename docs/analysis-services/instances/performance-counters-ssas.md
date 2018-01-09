@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="performance-counters-ssas"></a>성능 카운터(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]성능 모니터를 사용 하 여 성능 카운터를 사용 하 여 Microsoft SQL Server Analysis Services (SSAS) 인스턴스의 성능을 모니터링할 수 있습니다.  
@@ -109,7 +106,7 @@ ms.lasthandoff: 12/08/2017
 |Rows/sec|데이터 마이닝 예측 쿼리 중에 처리되는 행 수입니다.|  
 |Queries/sec|처리된 데이터 마이닝 쿼리 수입니다.|  
 |Total  Queries|서버에서 받는 총 데이터 마이닝 쿼리 수입니다.|  
-|Total  Rows|데이터 마이닝 쿼리에서 반환되는 총 행 수입니다.|  
+|합계 행|데이터 마이닝 쿼리에서 반환되는 총 행 수입니다.|  
 |Total  Predictions|서버에서 받는 총 데이터 마이닝 예측 쿼리 수입니다.|  
   
 ###  <a name="bkmk_Locks"></a> 잠금  
@@ -168,7 +165,7 @@ ms.lasthandoff: 12/08/2017
 |-------------|-----------------|  
 |Page  Pool  64  Alloc  KB|시스템에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page  Pool  64  Lookaside  KB|64KB  할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
-|Page  Pool  8  Alloc  KB|64KB  페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
+|Page  Pool  8  Alloc  KB|64KB 페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page Pool 8 Lookaside KB|8KB 할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
 |Page Pool 1 Alloc KB|64KB  페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page Pool 1 Lookaside KB|8KB 할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
@@ -315,7 +312,7 @@ ms.lasthandoff: 12/08/2017
 |Network round trips/sec|네트워크 왕복 비율입니다.  여기에는 모든 클라이언트/서버 통신이 포함됩니다.|  
 |Total network round trips|총 네트워크 왕복 수입니다.  여기에는 모든 클라이언트/서버 통신이 포함됩니다.|  
 |Flat cache lookups/sec|플랫 캐시 조회 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 플랫 캐시가 포함됩니다.|  
-|Flat  cache  hits/sec|플랫 캐시 적중 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 플랫 캐시가 포함됩니다.|  
+|Flat  cache  hits/sec|플랫 캐시 적중 비율입니다.  여기에는 전역, 세션 및 쿼리 범위 플랫 캐시가 포함됩니다.|  
 |Calculation  cache  lookups/sec|계산 캐시 조회 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 계산 캐시가 포함됩니다.|  
 |Calculation  cache  hits/sec|계산 캐시 적중 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 계산 캐시가 포함됩니다.|  
 |Persisted cache lookups/sec|지속형 캐시 조회 비율입니다.  지속형 캐시는 MDX  스크립트 CACHE  문으로 만들어집니다.|  

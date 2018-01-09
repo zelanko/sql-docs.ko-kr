@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63a271429d0d71516760e81ba0c085f903d90511
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6d2896a01a8efeacb42bde203ad93e0efdb52be4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="level-element-csdlbi"></a>Level 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Level 요소는 계층 구조에서 단일 수준을 정의 하는 복합 유형  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 Level 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |원본|예|속성 참조를 위한 컨테이너입니다.|  
 |PropertyRef|예|인스턴스 속성에 대한 참조입니다. 캡션, 이름 및 참조 이름 등 그 밖의 수준 특성은 참조된 인스턴스 속성에서 가져올 수 있습니다. 그 경우 Level 요소에서 지정할 필요가 없습니다.|  

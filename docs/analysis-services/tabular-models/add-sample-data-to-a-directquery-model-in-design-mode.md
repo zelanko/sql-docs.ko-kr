@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 962cadeac40c4cd450265d6c617a2bdcf1afa9ac
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a95bc30ae2e75638c61f9d8bba8f5069c8fdf9d8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>디자인 모드에서 DirectQuery 모델에 샘플 데이터 추가
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]DirectQuery 모드에서 모델을 디자인할 때 사용 되는 샘플 데이터 하위 집합 만들기 또는 전체 데이터 뷰의 대안을 테이블 파티션은 사용 합니다.
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  파티션을 선택하고 **복사**를 클릭합니다.  
 
-    기본 파티션의 복사본이 생성됩니다. 그러나 이 복사본에는 쿼리에서 지정한 샘플 데이터가 포함됩니다. 예를 들어
+    기본 파티션의 복사본이 생성됩니다. 그러나 이 복사본에는 쿼리에서 지정한 샘플 데이터가 포함됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.
   
      ![ssas_tabularproject_copypartition](../../analysis-services/tabular-models/media/ssas-tabularproject-copypartition.jpg "ssas_tabularproject_copypartition")  
   

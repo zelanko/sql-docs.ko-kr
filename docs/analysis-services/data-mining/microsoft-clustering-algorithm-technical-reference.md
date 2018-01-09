@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffca0c4aa4879d5732831113308c26a9032a7dff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 클러스터링 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션의 구현에 설명 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘, 클러스터링 모델의 동작을 제어 하는 데 사용할 수 있는 매개 변수를 포함 합니다. 또한 클러스터링 모델을 만들고 처리할 때 성능을 향상시킬 수 있는 방법도 제공합니다.  
@@ -104,7 +102,7 @@ ms.lasthandoff: 12/08/2017
   
 |ID|메서드|  
 |--------|------------|  
-|1.|Scalable  EM|  
+|1|Scalable  EM|  
 |2|Non-scalable  EM|  
 |3|Scalable  K-Means|  
 |4|Non-scalable  K-Means|  
@@ -170,7 +168,7 @@ ms.lasthandoff: 12/08/2017
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|열이 Missing 및 Existing 상태를 갖는 것으로 간주됩니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
-|NOT  NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
+|NOT NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  클러스터링 모델은 키 열 및 입력 열을 포함해야 합니다. 입력 열을 예측 가능한 열로 정의할 수도 있습니다. **Predict Only** 로 설정된 열은 클러스터를 작성하는 데 사용되지 않습니다. 클러스터의 이러한 값 분포는 클러스터가 작성된 다음에 계산됩니다.  
@@ -178,7 +176,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)을 참조하세요.  
   
-|열|내용 유형|  
+|Column|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Continuous,  Cyclical,  Discrete,  Discretized,  Key,  Table,  Ordered|  
 |예측 가능한 특성|Continuous,  Cyclical,  Discrete,  Discretized,  Table,  Ordered|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffebab4d2702f914cdf43ba4acdff916b1f54e57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c6417a0f9f52f4b1fe6974928f534e8fafa04bca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services에서의 번역 지원
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 모델, 캡션 또는 LCID에 따라 문화권 관련 문자열을 제공할 설명의 여러 번역을 포함할 수 있습니다. 다차원 모델의 경우 데이터베이스 이름, 큐브 개체 및 데이터베이스 차원 개체에 대한 번역을 추가할 수 있습니다. 테이블 형식 모델의 경우 테이블 및 열 캡션 및 설명을 번역할 수 있습니다.  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81357b2e0baec6545a6fec8aedf5d2c635d0c9da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 인증 및 권한 부여
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 2010 팜에서 실행 되는 배포를 SharePoint에 대 한 SharePoint 서버에서 제공 되는 인증 하위 시스템과 권한 부여 모델을 사용 합니다. 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관련 콘텐츠는 SharePoint 콘텐츠 데이터베이스에 저장되고 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]관련 작업은 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]공유 서비스에 의해 수행되므로 SharePoint 보안 인프라는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 콘텐츠 및 작업까지 포함합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 통합 문서를 요청하는 사용자는 Windows 사용자 ID를 기반으로 하는 SharePoint 사용자 ID를 사용하여 인증됩니다. 통합 문서에 대한 보기 권한에 따라 요청을 허용할지 여부가 결정됩니다.  

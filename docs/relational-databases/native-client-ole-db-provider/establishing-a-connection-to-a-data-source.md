@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-provider
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5dac1fe79571bd160a1b7c061733c54bdc8d4568
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 61f67561c03646f196b87b17e832cb9759cc1abe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>데이터 원본에 대한 연결 설정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  컴퓨터에서 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 경우 서버 이름은 ServerName\InstanceName 형식으로 지정됩니다.  
   
- 데이터 원본 개체도 노출 합니다.는 **IDBInitialize** 인터페이스입니다. 데이터 원본 연결을 호출 하 여 설정 되는 속성을 설정한 후의 **idbinitialize:: Initialize** 메서드. 예를 들어  
+ 데이터 원본 개체도 노출 합니다.는 **IDBInitialize** 인터페이스입니다. 데이터 원본 연결을 호출 하 여 설정 되는 속성을 설정한 후의 **idbinitialize:: Initialize** 메서드. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   

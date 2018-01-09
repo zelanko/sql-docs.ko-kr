@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: af807f0c68cf255903ff2d25cd14fa8a032d3264
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b004e611448db0100186a9f6d7fa9812d3de9c15
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="navigationproperty-element-csdlbi"></a>NavigationProperty 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]NavigationProperty 요소는, 비즈니스 인텔리전스 데이터 모델에서 탐색을 지원 하도록 CSDL Member 유형을 확장 하는 복합 유형입니다.  
@@ -35,9 +33,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 NavigationProperty 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|CollectionCaption|아니요|탐색 속성의 인스턴스 집합을 참조하기 위한 복수형 이름입니다.<br /><br /> 이 특성을 생략하면 기본 Member의 Caption 특성이 사용됩니다.|  
+|CollectionCaption|아니오|탐색 속성의 인스턴스 집합을 참조하기 위한 복수형 이름입니다.<br /><br /> 이 특성을 생략하면 기본 Member의 Caption 특성이 사용됩니다.|  
   
 ## <a name="example"></a>예제  
  **테이블 형식**  

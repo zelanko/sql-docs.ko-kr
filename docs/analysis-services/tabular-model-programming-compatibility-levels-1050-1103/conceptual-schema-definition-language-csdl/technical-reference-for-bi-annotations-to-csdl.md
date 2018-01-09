@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be086d8e2a61ffbf5871c12b73cb628f656414ac
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4d2f4c509035a2d806704757ddda6ed4610f048f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>CSDL용 BI 주석에 대한 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 섹션에는 요소, 특성 및 CSDL에 사용 되는 속성을 나타내는 나열 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 테이블 형식 모델입니다. 일부 요소는 새로 추가된 요소이고, 나머지는 BI 확장을 지원하도록 주석이 추가되거나 확장된 요소입니다.  

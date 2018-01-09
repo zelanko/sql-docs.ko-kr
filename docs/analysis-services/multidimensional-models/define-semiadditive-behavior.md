@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 92207d751d305fba91bb3e5a2762918cf2451272
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]모든 차원에서 균일 하 게 집계 되지 않는, 반 가산적 측정값은 다양 한 비즈니스 시나리오에서 매우 흔히입니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 응용 프로그램에서 이러한 스냅숏을 찾을 수 있습니다.  
@@ -79,14 +76,14 @@ ms.lasthandoff: 12/08/2017
 |---------------------------|-----------------|  
 |Average of Children|멤버 자식의 평균을 집계합니다.|  
 |ByAccount|시스템에서 계정 유형에 지정된 반가산적 동작을 읽습니다.|  
-|Count|멤버 개수를 집계합니다.|  
+|개수|멤버 개수를 집계합니다.|  
 |Distinct Count|고유 멤버의 개수를 집계합니다.|  
 |First Child|멤버 값이 시간 차원에 따른 첫 번째 자식의 값으로 계산됩니다.|  
 |FirstNonEmpty|멤버 값이 시간 차원에 따른 데이터를 포함하는 첫 번째 자식의 값으로 계산됩니다.|  
 |LastChild|멤버 값이 시간 차원에 따른 마지막 자식의 값으로 계산됩니다.|  
 |LastNonEmpty|멤버 값이 시간 차원에 따른 데이터를 포함하는 마지막 자식의 값으로 계산됩니다.|  
-|Max|표준 최대 집계 함수가 적용됩니다.|  
-|Min|표준 최소 집계 함수가 적용됩니다.|  
+|최대값|표준 최대 집계 함수가 적용됩니다.|  
+|최소값|표준 최소 집계 함수가 적용됩니다.|  
 |InclusionThresholdSetting|집계가 적용되지 않습니다.|  
 |SUM|표준 합계 함수가 적용됩니다.|  
   

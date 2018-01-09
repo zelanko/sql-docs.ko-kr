@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: driver performance data [ODBC]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1f09e0a9accb1b5940823609fb9fbb7313fcc067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5391255c4e3141a2c1436d36277fb046918e48a1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>ODBC 드라이버 성능 데이터 프로 파일링
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>드라이버 성능 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG 및 성능 데이터 로그 파일의 전체 경로 파일 이름을 사용 합니다. 예를 들어  
+1.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG 및 성능 데이터 로그 파일의 전체 경로 파일 이름을 사용 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     "C:\\Odbcperf.log"  

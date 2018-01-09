@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e7a4600dc6a3a0a9b32db40d0d9111907510768
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 17c8d0a3fddeb0cfd9d8a6ef69eac11bc9b2c34a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>멤버 삽입, 업데이트 및 삭제(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용할 수는 [삽입](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [업데이트](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), 및 [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 명령은 xml에서 for Analysis (XMLA)를 삽입, 업데이트 또는 쓰기 가능 차원에서 멤버를 삭제 합니다. 쓰기 가능 차원에 대 한 자세한 내용은 참조 [쓰기 가능한 차원](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  

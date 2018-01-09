@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs: TSQL
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f669f8a9b9e031d21bd95958b12ad4f111b72b89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a98e8438ab41e1f8dad5dd333d033d86ffcc4da2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-user-defined-types"></a>사용자 정의 형식 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 형식 (UDT)에 설치 되 고 기능의 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 지원 되는.NET Framework 프로그래밍 언어와 같은 Visual C# 또는 Visual Basic로 Udt를 만들기에 대 한 사양을 준수 하는 중 하나에서 클래스를 먼저 만들어야 합니다. 그런 다음 클래스를 DLL(동적 연결 라이브러리)로 컴파일하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드할 수 있습니다. 또한 Visual Studio를 사용하여 UDT를 만들고 배포할 수도 있습니다.  

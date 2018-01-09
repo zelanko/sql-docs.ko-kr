@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c3000dfc2ecd94fb70061eead07ef92cfd643f73
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>5단원: 차원과 측정값 그룹의 관계 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 자습서의 이전 단원에서는 하나 이상의 큐브 차원에 대 한 큐브에 추가한 데이터베이스 차원을 기반으로 사용할 수 있습니다 배웠습니다. 이 단원에서는 큐브 차원과 측정값 그룹 간에 서로 다른 유형의 관계를 정의하고 이 관계의 속성을 지정하는 방법에 대해 설명합니다.  

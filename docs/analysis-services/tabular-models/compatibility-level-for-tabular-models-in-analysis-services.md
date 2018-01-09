@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.versioncompat.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d194cdfa2771b96f2ae1880f474b8a0107e0b67c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4dcc372bb9eac9887a06923cf517e4375ec1bbcb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 테이블 형식 모델에 대 한 호환성 수준
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
  이 속성에는 서버에서 실행 되는 데이터베이스의 가장 높은 호환성 수준을 지정 합니다. 지원되는 호환성 수준은 읽기 전용이며 변경할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [다차원 데이터베이스의 호환성 수준](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)   
  [새 테이블 형식 모델 프로젝트 만들기](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  

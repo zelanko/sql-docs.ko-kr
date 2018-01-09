@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c3b028eb658f2f75d6e70ec9057f3f156ca5f05
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 데이터 조작-이해 패스 순서 및 계산 순서
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]큐브는 MDX 스크립트 결과로 계산 필드 상태로 여러 가지 다양 한 계산 관련 기능 사용에 따라 계산 단계를 통해 않을 수 있습니다. 이러한 각 단계를 계산 패스라고 합니다.  
@@ -172,7 +169,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- 또는  
+ 로 구분하거나 여러  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  

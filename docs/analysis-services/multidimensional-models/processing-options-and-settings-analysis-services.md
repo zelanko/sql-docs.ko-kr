@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>처리 옵션 및 설정(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]개체를 처리할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 각 개체에 대해 발생 하는 처리 유형을 제어 하는 처리 옵션을 선택할 수 있습니다. 처리 유형은 개체마다 다르며 마지막으로 처리되어 개체에 변경된 내용에 따라서도 다릅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다.  

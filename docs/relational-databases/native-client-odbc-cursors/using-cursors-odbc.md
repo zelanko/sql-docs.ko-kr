@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-cursors
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7770a2fa27cc99d7f164db9ed3129c470bc43064
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2df5cd8be5feb937c971c2ce9cef2f02759e8b21
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-cursors-odbc"></a>커서 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  다음은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트와 ODBC 응용 프로그램의 커서 작업 방법을 비교한 것입니다.  
   
-|동작|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|작업|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
 |커서 동작 정의|DECLARE CURSOR 매개 변수를 통해 지정|사용 하 여 커서 특성 설정 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
 |커서 열기|커서 열기 선언 *cursor_name*|**SQLExecDirect** 또는 **SQLExecute**|  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10fc0c4c74dddf6faaa2cfe0b2bff4e24695ec2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 536e56027445e2634ac2b72537c3af9540d76fff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="model-properties-ssas-tabular"></a>모델 속성(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 테이블 형식 모델 속성에 설명 합니다. 테이블 형식 모델 프로젝트 각각에는 SQL Server 개발 도구에서 제작하는 모델의 빌드 방식, 백업 방식 및 작업 영역 데이터베이스의 저장 방식에 영향을 주는 모델 속성이 있습니다. 여기서 설명하는 모델 속성은 이미 배포된 모델에는 적용되지 않습니다.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38eb6dae47c01758b3ca3b5c04794014b247b495
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버에서 현재 실행 중인 작업에 의해 수행 된 할당량 부여 목록을 내부 메모리를 반환 합니다. 서버에서 작업이 실행되고 있는지 여부를 확인하려면 `Select * from $System.Discover_Jobs`를 사용합니다.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**MEMORY_ID**|**DBTYPE_I8**||메모리 할당량 부여를 식별하는 번호입니다. 단일 DISCOVER_MEMORYGRANT 요청 컨텍스트에서 고유합니다.|  
-|**SPID**|**DBTYPE_I4**|필수임|`Select * from $System.Discover_Sessions`를 실행하여 가져올 수 있는 SPID입니다.|  
+|**SPID**|**DBTYPE_I4**|필수|`Select * from $System.Discover_Sessions`를 실행하여 가져올 수 있는 SPID입니다.|  
 |**CreationTime**|**DBTYPE_I8 DBTYPE_DBTIMESTAMP**||할당량이 부여된 시간입니다.|  
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||할당량 요청을 마지막으로 수정한 시간입니다.|  
 |**MemoryUsed**|**DBTYPE_I4**||할당량과의 연결에 사용되는 메모리 양입니다.|  

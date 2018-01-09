@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c5729dfd1411ae533c359bfdbc9867b2c453ebc1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 19f72f294bc06ecec0e38be763afb656f7ebcc67
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO 데이터 마이닝 개체 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]AMO를 사용 하 여 데이터 마이닝 개체를 프로그래밍 하는 것은 간단 합니다. 첫 번째 단계는 마이닝 프로젝트를 지원하는 데이터 구조 모델을 만드는 것입니다. 그런 다음 데이터 내부의 보이지 않는 관계를 예측하거나 찾는 데 사용할 마이닝 알고리즘을 지원하는 데이터 마이닝 모델을 만듭니다. 구조 및 알고리즘을 포함하여 만든 마이닝 프로젝트를 통해 마이닝 모델을 처리하여 나중에 클라이언트 응용 프로그램에서 쿼리 또는 예측하는 데 사용하는 학습된 모델을 얻을 수 있습니다.  

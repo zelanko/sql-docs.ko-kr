@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-ssas-tabular"></a>관계(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델에서 관계는 두 테이블 데이터 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다. 예를 들어 Customers 테이블과 Orders 테이블을 연결하여 각 주문에 연결된 고객 이름을 표시할 수 있습니다.  
@@ -39,34 +37,34 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="what"></a> 이점  
  관계는 각 테이블에 있는 하나 이상의 열에 기반을 둔 두 데이터 테이블 간의 연결입니다. 관계가 어떤 점에서 유용한지 궁금하다면 여러분이 기업에서 고객 주문 데이터를 추적하는 업무를 담당하고 있다고 가정해 보십시오. 관계를 사용하면 다음과 같은 구조를 지닌 단일 테이블에서 모든 데이터를 추적할 수 있습니다.  
   
-|CustomerID|이름|EMail|DiscountRate|OrderID|OrderDate|Product|수량|  
+|CustomerID|속성|EMail|DiscountRate|OrderID|OrderDate|Product|수량|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|1.|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|1.|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  이 접근 방법도 나쁘지 않지만 이 경우 각 주문에 대해 고객의 전자 메일 주소와 같은 중복 데이터가 다량 저장될 수 있습니다. 저장 비용은 저렴하지만 전자 메일 주소가 변경될 경우 해당 고객에 대한 모든 행을 업데이트해야 합니다. 데이터를 여러 테이블로 분할하고 해당 테이블 간에 관계를 정의하면 이러한 문제를 해결할 수 있습니다. 사용 하는 방법 이것이 *관계형 데이터베이스* SQL server. 예를 들어 모델로 가져온 데이터베이스에서 다음과 같은 세 개의 관련 테이블을 사용하여 주문 데이터를 나타낼 수 있습니다.  
   
 ### <a name="customers"></a>고객  
   
-|[CustomerID]|이름|EMail|  
+|[CustomerID]|속성|EMail|  
 |--------------------|----------|-----------|  
-|1.|Ashton|chris.ashton@contoso.com|  
+|1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |[CustomerID]|DiscountRate|  
 |--------------------|------------------|  
-|1.|.05|  
+|1|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Product|수량|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|1.|256|2010-01-07|Compact Digital|11|  
-|1.|255|2010-01-03|SLR Camera|15|  
+|1|256|2010-01-07|Compact Digital|11|  
+|1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
  이러한 테이블을 동일한 데이터베이스에서 가져오는 경우, 테이블 가져오기 마법사에서는 [대괄호] 안에 있는 열을 기준으로 테이블 간의 관계를 검색하여 모델 디자이너에서 이러한 관계를 재현할 수 있습니다. 자세한 내용은 이 항목의 [관계 자동 검색 및 유추](#detection) 를 참조하십시오. 여러 원본에서 테이블을 가져오는 경우 수동으로 만들 수 있습니다 관계에 설명 된 대로 [테이블 두 간의 관계를 만들](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)합니다.  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
   
  다음 표에서는 세 테이블 간의 관계를 보여 줍니다.  
   
-|관계|형식|조회 열|열|  
+|관계|형식|조회 열|Column|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|일 대 일|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|일 대 다|Customers.CustomerID|Orders.CustomerID|  
@@ -185,7 +183,7 @@ ms.lasthandoff: 12/08/2017
 |[관계 삭제](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|관계를 삭제하는 방법과 관계를 삭제할 경우에 발생하는 결과를 설명합니다.|  
 |[SQL Server 2016 Analysis Services의 테이블 형식 모델에 대한 양방향 교차 필터](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|관련된 테이블에 대한 양방향 교차 필터링을 설명합니다. 한 테이블 관계의 필터 컨텍스트는 테이블이 관련되고 양방향 교차 필터가 정의되는 경우 두 번째 테이블 관계를 통해 쿼리할 때 사용할 수 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [데이터 가져오기](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   

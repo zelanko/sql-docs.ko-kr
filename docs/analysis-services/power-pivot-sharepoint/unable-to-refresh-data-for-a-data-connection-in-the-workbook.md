@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 35eeb61383298c6345147e3ea1db3f4f8c7e915b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]포함 된 Excel 통합 문서에 대 한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 Excel 서비스에 연결 요청을 제출 하는 경우이 오류를 반환 된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 했는데 요청이 실패 합니다.  

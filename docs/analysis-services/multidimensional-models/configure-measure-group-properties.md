@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: properties [Analysis Services], measure groups
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f650fd897c68e10044a02d55c08f9545a0e6046
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f7cf2328a6f93ed1c7fe17034af1b42b53baaa39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-measure-group-properties"></a>측정값 그룹 속성 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]측정값 그룹에는 측정값 그룹의 작동 방법을 정의할 수 있도록 하는 속성이 있습니다.  
@@ -37,7 +34,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|----------------|  
 |**AggregationPrefix**|ROLAP 저장소에 적용됩니다. SQL Server에서 이 측정값 그룹과 연관된 파티션에 대한 집계를 저장하는 데 사용되는 인덱싱된 뷰에 공통 접두사를 할당합니다.|  
 |**DataAggregation**|이 속성은 나중에 사용하도록 예약되어 있으며 현재 영향을 주지 않습니다. 따라서 이 설정을 수정하지 않는 것이 좋습니다.|  
-|**Description**|이 속성을 사용하여 측정값 그룹을 문서화할 수 있습니다.|  
+|**설명**|이 속성을 사용하여 측정값 그룹을 문서화할 수 있습니다.|  
 |**ErrorConfiguration**|중복 키, 알 수 없는 키, Null 키, 오류 제한, 오류 감지 시 수행 동작 및 오류 로그 파일을 처리할 때 구성 가능한 오류 처리 설정을 제공합니다. [큐브, 파티션 및 차원 처리에 대한 오류 구성&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)을 참조하세요.|  
 |**EstimatedRows**|팩트 테이블의 예상 행 수를 지정합니다.|  
 |**EstimatedSize**|측정값 그룹의 예상 크기(바이트)를 지정합니다.|  

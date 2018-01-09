@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a32592d58d51c1504f88fb054cee688d657cb93
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24a0af4329f543c43087f902e959963384def662
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-command-tmsl"></a>Attach 명령 TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 파일 서버에 연결 합니다.  
@@ -45,8 +43,8 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**속성**|**Default**|**Description**|  
-|데이터베이스|[필수]|연결할 데이터베이스 개체의 이름입니다.|  
+|**속성**|**Default**|**설명**|  
+|database|[필수]|연결할 데이터베이스 개체의 이름입니다.|  
 |폴더|[필수]|연결 된 데이터베이스를 포함 하는 폴더입니다.|  
 |password|비어 있음|연결된 된 데이터베이스의 암호를 암호화 하는 데 암호입니다.|  
 |readWriteMode|ReadWrite|데이터베이스에 허용 된 액세스 모드를 나타내는 열거형 값입니다.<br /><br /> **열거형 값은 다음과 같습니다.**<br /><br /> readWrite-읽기 / 쓰기 액세스가 허용 됩니다.<br /><br /> 읽기 전용-읽기 전용 권한이 허용 됩니다.<br /><br /> readOnlyExclusive-읽기 전용 단독 액세스가 허용 됩니다.|  

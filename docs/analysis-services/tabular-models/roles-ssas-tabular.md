@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bbbcfdbaafa7e5cbc17defc91b5dc7e391d92ad6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="roles"></a>역할
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델에서 역할을 모델에 대 한 멤버 권한을 정의 합니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다. 
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  기본적으로 새 테이블 형식 모델 프로젝트를 만들 경우 모델 프로젝트에는 아무 역할도 없습니다. SSDT의 역할 관리자 대화 상자를 사용 하 여 역할을 정의할 수 있습니다. 모델 제작 중에 역할을 정의한 경우 해당 역할은 모델 작업 영역 데이터베이스에 적용됩니다. 모델을 배포하면 동일한 역할이 배포된 모델에 적용됩니다. 모델을 배포한 후 모델에 연결 된 역할 및 각 역할과 연결 된 SSMS를 사용 하 여 멤버 ([Analysis Services 관리자) 서버 역할 및 데이터베이스 관리자의 구성원이 관리할 수 있습니다.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> 사용 권한  
  결합된 읽기 및 처리 권한을 제외하고 역할별로 하나의 데이터베이스 권한이 정의되어 있습니다. 기본적으로 새 역할은 없음 권한을 갖게 됩니다. 즉, 없음 권한을 가진 역할에 추가된 멤버는 다른 권한이 부여될 때까지 데이터베이스를 수정하거나, 프로세스 작업을 실행하거나, 데이터를 쿼리하거나, 데이터베이스를 볼 수 없습니다.  
   
  그룹 또는 사용자 역할의 여러 다른 권한 가진 각 역할의 구성원이 수 있습니다. 사용자가 여러 역할의 멤버인 경우 각 역할에 대해 정의된 사용 권한은 누적됩니다. 예를 들어 사용자가 읽기 권한을 가진 역할의 멤버인 동시에 없음 권한을 가진 역할의 멤버일 경우 해당 사용자는 읽기 권한을 가집니다.  
@@ -73,11 +70,11 @@ ms.lasthandoff: 12/08/2017
   
  행 필터는 지정된 행과 관련 행에 적용됩니다. 테이블에 여러 관계가 있는 경우 필터는 활성 관계에 대한 보안을 적용합니다. 행 필터는 관련 테이블에 대해 정의된 다른 행 필터와 교차됩니다. 예를 들면 다음과 같습니다.  
   
-|테이블|DAX 식|  
+|Table|DAX 식|  
 |-----------|--------------------|  
 |Region|=Region[Country]=”USA”|  
 |ProductCategory|=ProductCategory[Name]=”Bicycles”|  
-|트랜잭션|=Transactions[Year]=2008|  
+|의|=Transactions[Year]=2008|  
   
  Transactions 테이블에 이러한 사용 권한이 적용되면 멤버는 고객이 USA에 있고, 제품 범주가 Bicycles이며, 연도가 2008년에 해당하는 데이터 행을 쿼리할 수 있습니다. 사용자는 해당 사용 권한이 부여된 다른 역할의 멤버가 아닌 한 미국 이외의 국가에서 발생한 거래, Bicycles 범주가 아닌 거래 또는 2008년에 발생하지 않은 거래를 쿼리할 수 없습니다.  
   
@@ -114,7 +111,7 @@ ms.lasthandoff: 12/08/2017
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1.|Corporate|  
+|1|Corporate|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
 |4|Manufacturing|  

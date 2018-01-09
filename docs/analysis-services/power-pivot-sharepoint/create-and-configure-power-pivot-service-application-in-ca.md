@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 49fc11b6e1c6ed280af505d904fc514cfce6bbc8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은의 공유 서비스 인스턴스는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스입니다. 각 서비스 응용 프로그램은 고유한 응용 프로그램 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
@@ -162,6 +159,6 @@ ms.lasthandoff: 12/08/2017
 3.  리본에서 **속성** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [중앙 관리에서 Power Pivot 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

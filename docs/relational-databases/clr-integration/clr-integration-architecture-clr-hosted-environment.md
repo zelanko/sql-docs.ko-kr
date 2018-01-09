@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62e51e155dbd230d3db7d6e84d71f5b1635a22be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bbd3cffc1f5db0b07f0868b2ac1b6b6f78989a5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처-CLR 호스팅된 환경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .NET Framework 공용 언어 런타임 (CLR)와 통합 되어 데이터베이스 프로그래머가 Visual C#, Visual Basic.NET 및 Visual c + +와 같은 언어를 사용할 수 있습니다. 프로그래머가 이러한 언어를 사용하여 작성할 수 있는 비즈니스 논리의 종류에는 함수, 저장 프로시저, 트리거, 데이터 형식, 집계 등이 포함됩니다.  
@@ -132,8 +132,8 @@ ms.lasthandoff: 11/17/2017
 |권한 집합|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|제한 없음|  
 |프로그래밍 모델 제한 사항|예|예|제한 없음|  
-|안정성 요구 사항|예|예|아니요|  
-|네이티브 코드를 호출하는 기능|아니요|아니요|예|  
+|안정성 요구 사항|예|예|아니오|  
+|네이티브 코드를 호출하는 기능|아니오|아니오|예|  
   
  SAFE는 가장 신뢰할 수 있고 안전한 모드로, 허용되는 프로그래밍 모델에 대한 제한이 있습니다. SAFE 어셈블리는 실행하고, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있는 권한이 부여됩니다. SAFE 어셈블리는 확인할 수 있는 형식 안전 어셈블리여야 하며 비관리 코드를 호출할 수 없습니다.  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 85e0d667cc7ad89533dd9df7ced0a68e6e7ae8a7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-object-tmsl"></a>Tables 개체 TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]모델에 포함 된 테이블을 정의 합니다. 모델 테이블에에서 있는 데이터를 가져오거나 쿼리, 외부 데이터베이스의 테이블 또는 계산된 하는 DAX 식에서 생성 된 테이블에 하거나 바인딩됩니다. 하나 이상의 테이블 내에서 **파티션** 개체 데이터 소스를 설명 합니다.  테이블 간에 **관계** 카디널리티, 필터 방향 및 관계의 다른 속성을 지정 하는 개체입니다.  

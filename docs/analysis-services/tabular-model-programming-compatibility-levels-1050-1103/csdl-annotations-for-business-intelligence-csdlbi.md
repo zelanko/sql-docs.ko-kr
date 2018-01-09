@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4f41d6d697299ad964912fe1df86db9b0581cdda
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ec23a28ccf5a6fc115ae9aac984c6e9a30eea694
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>비즈니스 인텔리전스에 대한 CSDL 주석(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Business Intelligence 주석 (CSDLBI)를 사용 하 여 개념 스키마 정의 언어를 호출 하는 XML 형식으로 테이블 형식 모델 정의의 표시를 지원 합니다. 이 항목에서는 CSDLBI의 개요와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델에서 CSDLBI를 사용하는 방법을 설명합니다.  

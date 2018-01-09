@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Warning Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d4962988a5c21183ac6e4f841c43a422eb48528e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 195e45dbde159409196a56657d14cbc168e99fdf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="warning-element-xmla"></a>Warning 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]인스턴스에서 반환 된 경고에 대 한 정보를 포함 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
@@ -54,10 +52,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -65,15 +63,15 @@ ms.lasthandoff: 12/08/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[메시지](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="attributes"></a>특성  
   
-|Attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |ErrorCode|필수 **UnsignedInt** 특성입니다. 경고의 숫자 반환 코드를 포함합니다.|  
 |Severity|선택적 **String** 특성입니다. 경고의 심각도를 포함합니다.|  
-|설명|선택적 **String** 특성입니다. 경고에 대한 설명 텍스트를 포함합니다.|  
+|Description|선택적 **String** 특성입니다. 경고에 대한 설명 텍스트를 포함합니다.|  
 |원본|선택적 **String** 특성입니다. 경고를 생성한 구성 요소 이름을 포함합니다.|  
 |HelpFile|선택적 **String** 특성입니다. 경고를 설명하는 도움말 파일 또는 항목의 경로 또는 URL을 포함합니다.|  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: RowBinding Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da115b8e9bc0729ef1e9e40c6ac1eed644500cb1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c141e9bbc92cf085bac21f80f1db43096644bec8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowbinding-data-type-assl"></a>RowBinding 데이터 형식(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]에 있는 테이블의 행에 대 한 바인딩을 나타내는 파생된 데이터 형식을 정의 [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) 요소입니다.  
@@ -46,16 +44,16 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[바인딩](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
-|파생 데이터 형식|없음|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
 |자식 요소|[TableID](../../../analysis-services/scripting/properties/tableid-element-assl.md)|  
 |파생 요소|참조 [바인딩](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   

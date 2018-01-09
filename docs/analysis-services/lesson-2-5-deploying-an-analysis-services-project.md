@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: de2922988f9a53f6ec4eae3d563d0e29ad565ac0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 19d9c5cae52ed4eee5ee553905475bcbf62c38c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>단원 2-5-Analysis Services 프로젝트 배포
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]개체에 대 한 큐브 및 차원 데이터를 보려면는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 특정 인스턴스에 프로젝트를 배포 해야 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브와 해당 차원을 처리 합니다. *프로젝트를* 배포 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 정의된 개체가 만들어집니다. *인스턴스의 개체를* 처리 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 하면 데이터가 기본 데이터 원본에서 큐브 개체로 복사됩니다. 자세한 내용은 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) 및 [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)인스턴스에 정의된 개체가 만들어집니다.  

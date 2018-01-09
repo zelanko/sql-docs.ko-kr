@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e1e98142c2234fc680daa8311cf35cbd8057bed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 660698f6b7c09e040e1845f38ddbb48513a1726f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>상태 규칙 참조(SharePoint용 Power Pivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 참조 항목으로 추가 되는 SharePoint 상태 규칙에 설명 된 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 설치 합니다. 이러한 규칙은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 응용 프로그램 또는 연결된 해당 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 구성,  가용성 또는 서버 상태에 대한 문제를 보고하는 데 사용됩니다.  
@@ -41,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
 ```  
   
-|규칙|구성 가능 여부|자동 복구|버전|Description|  
+|규칙|구성 가능|자동 복구|버전 옵션|Description|  
 |----------|------------------|-----------------|-------------|-----------------|  
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services OLE DB 공급자가 이 컴퓨터에 설치되어 있지 않습니다.|아니오|아니오|SharePoint 2010|Analysis  Services  OLE  DB  공급자가 서버에 설치되어 있지 않거나 잘못된 버전입니다. 이 규칙은 SharePoint 팜에 SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 이 없는 응용 프로그램 서버의 Excel 서비스 인스턴스가 포함된 경우에 나타납니다. 이 규칙은 Excel 서비스에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터에 연결하는 데 사용되는 Analysis Services OLE DB 공급자가 설치되어 있지 않음을 경고합니다. 이 문제를 해결하려면 Analysis  Services  OLE  DB  공급자가 설치되지 않은 각 Excel  서비스 서버에 OLE  DB  공급자를 설치합니다. Microsoft  다운로드 센터에서 Analysis  Services  OLE  DB  공급자를 다운로드하여 설치할 수 있습니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.|  
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 이 컴퓨터에서 MSOLAP 공급자의 SQL Server 2008 R2 버전을 설치한 후에는 Microsoft.AnalysisServices.ChannelTransport.dll에 대한 레지스트리 설정이 유효하지 않게 됩니다.|아니오|예|SharePoint 2010|서버 구성 문제입니다. ChannelTransport.dll이 전역 어셈블리에 등록되어 있지 않을 가능성이 가장 높습니다. 이 규칙에 대해 자동 복구를 실행하여 SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 이 설치된 각 서버에 .dll을 등록하십시오. 또는 regasm.exe를 수동으로 실행하여 파일을 등록할 수 있습니다. SharePoint  Timer  Service가 로컬 관리자로 실행되지 않는 경우 수동 등록이 필요할 수 있습니다. 레지스트리 설정을 업데이트하지 못하면 Excel 서비스와 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 시스템 서비스 간의 서버 통신이 느려지고 특정 보안 구성에서 연결에 실패할 수 있습니다.|  

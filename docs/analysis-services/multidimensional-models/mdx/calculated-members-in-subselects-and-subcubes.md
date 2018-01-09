@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]계산된 멤버는 차원 멤버 값을 갖는 런타임 시 식에서 계산 이며 하위 select에서 사용할 수 있습니다 및 하위 큐브를 보다 정확 하 게 쿼리의 cubespace를 정의할 합니다.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
 |||  
 |-|-|  
-|값|설명|  
+|값|Description|  
 |0|계산 멤버는 하위 SELECT 또는 하위 큐브에서 허용되지 않습니다.<br /><br /> 계산 멤버가 참조된 경우 하위 SELECT 또는 하위 큐브를 평가할 때 오류가 발생합니다.|  
 |1|계산 멤버는 하위 SELECT 또는 하위 큐브에서 허용되지만 상위 항목 멤버는 반환 하위 공간에 포함되지 않습니다.|  
 |2|계산 멤버는 하위 SELECT 또는 하위 큐브에서 허용되고 상위 항목 멤버는 반환 하위 공간에 포함됩니다. 또한 혼합 세분성이 계산 멤버 선택에서 허용됩니다.|  

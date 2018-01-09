@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ManyToManyMeasureGroupDimension Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 578d6ae434384364f723e41044442d6c25fc14d9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c23506137f7f825bd155b9ca99a8531c4d5ee1c1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="manytomanymeasuregroupdimension-data-type-assl"></a>ManyToManyMeasureGroupDimension 데이터 형식(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]다 대 다 차원과 측정값 그룹 간의 관계를 나타내는 파생된 데이터 형식을 정의 합니다.  
@@ -47,18 +45,18 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[MeasureGroupDimension](../../../analysis-services/scripting/data-type/measuregroupdimension-data-type-assl.md)|  
-|파생 데이터 형식|없음|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
 |자식 요소|[DefaultMember](../../../analysis-services/scripting/properties/defaultmember-element-assl.md), [MeasureGroupID](../../../analysis-services/scripting/properties/measuregroupid-element-assl.md)|  
-|파생 요소|없음|  
+|파생 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>합니다.  

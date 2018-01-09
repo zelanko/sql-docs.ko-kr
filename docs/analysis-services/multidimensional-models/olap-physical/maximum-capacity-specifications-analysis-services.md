@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f0ababa5bb354b91df756bd5998967fb9b6ddf3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>최대 용량 사양 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]다음 표에서 최대 크기 및 수의 다양 한 개체에 정의 된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다른 서버 배포 모드에서 구성 요소입니다.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_OLAP"></a>다차원 및 데이터 마이닝 (DeploymentMode = 0)  
  데이터와 메타데이터가 저장되는 MOLAP 저장소 모드에서는 파일 크기에 대한 추가적인 물리적 제한이 있습니다. 기본적으로 문자열 저장소 파일의 최대 크기는 4GB입니다. 더 큰 문자열 저장소 파일이 필요한 경우 다른 문자열 저장소 아키텍처를 지정할 수 있습니다. 자세한 내용은 참조 [차원 및 파티션에 대 한 문자열 저장소 구성](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)합니다.  
   
-|개체|최대 크기/개수|  
+|Object|최대 크기/개수|  
 |------------|----------------------------|  
 |인스턴스의 데이터베이스|2^31-1 = 2,147,483,647|  
 |데이터베이스의 차원|2^31-1 = 2,147,483,647|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|개체|최대 크기/개수|  
+|Object|최대 크기/개수|  
 |------------|----------------------------|  
 |인스턴스의 데이터베이스|2^31-1 = 2,147,483,647|  
 |데이터베이스의 테이블|2^31-1 = 2,147,483,647|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_vertipaq"></a>테이블 형식 (DeploymentMode = 2)  
 다음은 이론적 제한 합니다. 성능에 더 낮은 숫자 낮아집니다.   
 
-|개체|최대 크기/개수|  
+|Object|최대 크기/개수|  
 |------------|----------------------------|  
 |인스턴스의 데이터베이스|16,000|  
 |데이터베이스의 테이블 및 열의 총된 수|16,000|  
@@ -105,7 +103,7 @@ ms.lasthandoff: 12/08/2017
 |원본 쿼리의 레코드 크기|64K|  
 |개체 이름의 길이|문자 수가 512 개|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 인스턴스의 서버 모드 확인](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [일반 속성](../../../analysis-services/server-properties/general-properties.md)  
   

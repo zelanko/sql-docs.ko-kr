@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11260792-ff8b-4d0e-b845-ca210dd3fced
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 430bfd1f58ea15ab04fb57f7f806191a57bc2d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ad389541ba4bb964df0c3a0ca7cb08277d1bd1d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="test-a-model-in-directquery-mode"></a>DirectQuery 모드에서 모델 테스트
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]디자인부터 개발의 각 단계에서 DirectQuery 모드에서 테이블 형식 모델을 테스트 하기 위한 옵션을 검토 합니다.  

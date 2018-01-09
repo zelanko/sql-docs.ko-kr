@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>다차원 모델 데이터 액세스(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목의 정보를 사용 하 여 액세스 하는 방법을 알아보려면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 프로그래밍 방식이, 스크립트 또는 연결에 대 한 기본 제공 지원을 포함 하는 클라이언트 응용 프로그램을 사용 하 여 다차원 데이터는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 네트워크 상의 서버에 있습니다.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
  다음 Microsoft 응용 프로그램은 다차원 데이터에 대한 네이티브 연결을 지원합니다.  
   
-### <a name="excel"></a>Excel  
+### <a name="excel"></a>내보내기  
  Analysis Services 다차원 데이터는 대개 Excel 통합 문서의 피벗 테이블 및 피벗 차트 컨트롤을 사용하여 표시됩니다. 피벗 테이블이 다차원 데이터에 적합한 이유는 모델의 계층, 집계 및 탐색 구성이 피벗 테이블의 데이터 요약 기능과 잘 맞기 때문입니다. Analysis Services OLE DB 데이터 공급자는 데이터 연결을 쉽게 설정할 수 있도록 Excel 설치에 포함되어 있습니다. 자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](http://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
   
 ### <a name="reporting-services-reports"></a>Reporting Services 보고서  

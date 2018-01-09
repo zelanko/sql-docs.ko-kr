@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fd4a0176a291088c9f0ee78b6c12406a3abd7e7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fad4277b58170a555597c9993ee9f681e99397f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>교차 유효성 검사(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*교차 유효성 검사* 분석의 표준 도구 이며 개발 및 데이터 마이닝 모델을 미세 조정 하는 데 도움이 되는 중요 한 기능입니다. 마이닝 구조 및 관련 마이닝 모델을 만든 후 교차 유효성 검사를 사용하여 모델의 유효성을 확인합니다.  교차 유효성 검사는 다음과 같이 적용됩니다.  

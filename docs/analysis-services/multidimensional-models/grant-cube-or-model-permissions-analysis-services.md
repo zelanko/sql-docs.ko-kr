@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.cubes.f1
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fb36f978c414a1ef5916cb0ebd78971c001940e7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e15e73da6c4c4a064a6730873dd866b87d5727d6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>큐브 또는 모델 권한 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 또는 테이블 형식 모델은 Analysis Services 데이터 모델의 기본 쿼리 개체입니다. 임시 데이터 탐색을 위해 Excel에서 다차원 또는 테이블 형식 데이터에 연결할 경우 일반적으로 가장 먼저 피벗 보고서 개체를 지원하는 데이터 구조로 특정 큐브 또는 테이블 형식 모델을 선택합니다. 이 항목에서는 큐브 또는 테이블 형식 데이터 액세스에 필요한 사용 권한을 부여하는 방법에 대해 설명합니다.  

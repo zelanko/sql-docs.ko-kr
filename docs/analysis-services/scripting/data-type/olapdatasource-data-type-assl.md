@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: OlapDataSource Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2757d17355c8e35144c50b8ae6d552ce5b304665
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 46ca5b5c583a0fc1f5a3c38e112804a174432475
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="olapdatasource-data-type-assl"></a>OlapDataSource 데이터 형식(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]다차원를 나타내는 파생된 데이터 형식을 정의 [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) 요소입니다.  
@@ -45,17 +43,17 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[데이터 원본](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)|  
-|파생 데이터 형식|없음|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
-|자식 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
+|자식 요소|InclusionThresholdSetting|  
 |파생 요소|[데이터 원본](../../../analysis-services/scripting/objects/datasource-element-assl.md) ([DataSources](../../../analysis-services/scripting/collections/datasources-element-assl.md) 컬렉션 [데이터베이스](../../../analysis-services/scripting/objects/database-element-assl.md))|  
   
 ## <a name="remarks"></a>주의  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dcb916e9-97c5-47e0-922a-404891423b2a
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9581f7eb39fe0a6f8979ce09fde4233e800bef8d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9f2529d4f7cb3e4912b3d0b6d0ee0879c46d83ec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>만들기 및 배포 (Analysis Services AMO-TOM) 빈 데이터베이스
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]일반적인 프로그래밍 시나리오에 AMO TOM 데이터베이스 및 모델 즉석에서 생성 하는 것입니다. 이 문서에서는 데이터베이스를 만드는 과정을 안내 합니다. 

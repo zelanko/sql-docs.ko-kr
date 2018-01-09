@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 245c39d7ff9366e43b1faad07fec64befa5aea0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 시계열 알고리즘
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 시간에 따른 제품 판매량과 같은 연속 값을 예측에 대 한 최적화 된 여러 알고리즘을 제공 합니다. 의사 결정 트리와 같은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에서는 새 정보로 된 추가 열을 입력해야 추세를 예측할 수 있지만, 시계열 모델에서는 이런 열이 필요하지 않습니다. 시계열 모델은 이 모델을 만드는 데 사용되는 원래 데이터 집합만을 기반으로 추세를 예측할 수 있습니다. 또한 예측을 만들고 자동으로 새 데이터를 추세 분석에 통합하는 경우 시계열 모델에 새 데이터를 추가할 수도 있습니다.  

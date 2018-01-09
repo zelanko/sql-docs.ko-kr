@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>사용자 정의 계층의 특성 관계 4-6 지정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 자습서에서 이미 설명한, 대로 탐색 경로를 제공할 큐브의 사용자에 대 한 사용자 계층 안에 수준으로 특성 계층을 구성할 수 있습니다. 사용자 계층은 구/군/시, 시/도 및 국가와 같은 자연 계층을 나타내거나 직원 이름, 직책 및 부서 이름과 같은 탐색 경로를 나타낼 수 있습니다. 계층을 탐색하는 사용자에게는 이 두 가지 유형의 사용자 계층이 동일합니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  다이어그램에서 **Full Name** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-4.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Full Name**입니다. **관련 특성** 을 **Postal Code**로 설정합니다. 멤버 간의 관계는 시간이 지나면 변경될 수 있으므로 **관계 유형** 목록에서 관계 유형을 **유동** 으로 설정된 상태로 둡니다.  
+4.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Full Name**입니다. **관련 특성** 을 **Postal Code**로 설정합니다. 멤버 간의 관계는 시간이 지나면 변경될 수 있으므로 **관계 유형** 목록에서 관계 유형을 **유동**으로 설정된 상태로 둡니다.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  다이어그램에서 **Model Name** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-3.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Model Name**입니다. **관련 특성** 을 **Product Line**으로 설정합니다. **관계 유형** 목록에서 관계 유형을 **유동**으로 설정된 상태로 둡니다.  
+3.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Model Name**입니다. **관련 특성**을 **Product Line**으로 설정합니다. **관계 유형** 목록에서 관계 유형을 **유동**으로 설정된 상태로 둡니다.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -141,19 +141,19 @@ ms.lasthandoff: 12/08/2017
   
 1.  다이어그램에서 **Month Name** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-2.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Month Name**입니다. **관련 특성** 을 **Calendar Quarter**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
+2.  **특성 관계 만들기** 대화 상자에서 **원본 특성**은 **Month Name**입니다. **관련 특성** 을 **Calendar Quarter**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  다이어그램에서 **Calendar Quarter** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-5.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Calendar Quarter**입니다. **관련 특성** 을 **Calendar Semester**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
+5.  **특성 관계 만들기** 대화 상자에서 **원본 특성**은 **Calendar Quarter**입니다. **관련 특성** 을 **Calendar Semester**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  다이어그램에서 **Calendar Semester** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-8.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Calendar Semester**입니다. **관련 특성** 을 **Calendar Year**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
+8.  **특성 관계 만들기** 대화 상자에서 **원본 특성**은 **Calendar Semester**입니다. **관련 특성** 을 **Calendar Year**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -169,7 +169,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  다이어그램에서 **City** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
-6.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **City**입니다. **관련 특성** 을 **State-Province**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
+6.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **City**입니다. **관련 특성**을 **State-Province**로 설정합니다. **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [알 수 없는 멤버 및 Null 처리 속성 정의](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [특성 관계 정의](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
 [사용자 계층 속성](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

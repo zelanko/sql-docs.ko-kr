@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 94bad422a63276ad130027ea77de4734571016a8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2017fa20a68222bf577cc68284882ac15a22f95f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>테이블 형식 모델에 테이블, 파티션 및 열 만들기
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델 테이블의 행과 열 구성 됩니다. 행은 증분 데이터 새로 고침을 지원 하기 위해 파티션으로 구성 됩니다. 테이블 형식 솔루션에는 여러 유형의 데이터에서 온 것인지에 따라 테이블을 지원할 수 있습니다.  

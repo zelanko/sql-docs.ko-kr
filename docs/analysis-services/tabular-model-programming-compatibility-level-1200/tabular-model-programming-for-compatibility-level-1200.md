@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5c7a0c3c69a8d4c834cf6a44cd3e588faed2593f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30122388bc5e1c82f26bbaa37452330b97a77077
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>테이블 형식 모델 프로그래밍에 대 한 호환성 수준 1200 이상
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]부터 호환성 수준이 1200, 테이블 형식 메타 데이터 모델 구조, 테이블 형식 모델 개체에 대 한 설명자도 기록 다차원 메타 데이터를 교체 설명 하는 데 사용 됩니다. 테이블, 열 및 관계에 대 한 메타 데이터는 테이블, 열 및 관계를 아닌 (차원 및 특성) 해당 하는 다차원 항목입니다.  

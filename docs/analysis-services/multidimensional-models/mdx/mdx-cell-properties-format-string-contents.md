@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 셀 속성-FORMAT_STRING 내용
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING** 속성 형식 셀는 **값** 셀 속성에 대 한 값의 **FORMATTED_VALUE** 셀 속성입니다. **FORMAT_STRING** 셀 속성은 문자열 및 숫자 원시 값을 모두 처리할 수 있으며 값에 형식 지정 식을 적용하여 **FORMATTED_VALUE** 셀 속성에 사용할 형식 지정된 값을 반환합니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  

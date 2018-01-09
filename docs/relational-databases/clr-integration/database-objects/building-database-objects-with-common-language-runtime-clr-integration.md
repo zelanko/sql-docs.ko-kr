@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 51fd445775e428d259a53176e3aaafdb2d1e47a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96bcc0d6c847815fa92499cd004657bf6a51cb37
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터베이스 개체를 사용 하 여 빌드할 수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 공용 언어 런타임 (CLR)와 통합 합니다. 내에 실행 되는 관리 코드 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 "CLR 루틴" 이라고 이러한 루틴에는 다음과 같은 항목이 포함됩니다.  

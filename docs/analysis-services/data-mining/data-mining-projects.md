@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-projects"></a>데이터 마이닝 프로젝트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 프로젝트의 일부인는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션입니다. 디자인 프로세스 중에 이 프로젝트에서 만든 개체를 작업 영역 데이터베이스의 일부로 테스트 및 쿼리할 수 있습니다. 사용자가 프로젝트에서 개체를 쿼리하거나 찾아볼 수 있도록 하려면 다차원 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 프로젝트를 배포해야 합니다.  

@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ca6771f8ea74bdff21f67704a1d45915b6d73cf6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 배포에 대한 요구 사항 및 고려 사항
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]기본 하드웨어, 서버 배포 토폴로지, (예: 분산 하는 파티션이 있으면 해당 솔루션의 특성의 기능을 포함 하 여 다양 한 요인에 따라 달라 집니다 성능과 솔루션의 가용성 여러 서버 또는 관계형 엔진에 직접 액세스 해야 하는 ROLAP 저장소를 사용 하 여), 서비스 수준 계약 및 데이터 모델의 복잡성.  

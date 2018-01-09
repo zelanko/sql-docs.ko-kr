@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>가장 옵션 설정(SSAS - 다차원)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]만들 때 한 **데이터 소스** 개체는 Analysis Services 모델에 가장 옵션을 구성 해야 하는 설정 중 하나입니다. 이 옵션은 Analysis Services에서 OLE DB 데이터 공급자를 로드하거나 로밍 프로필을 지원하는 환경에서 사용자 프로필 정보를 분석하는 등 연결과 관련된 로컬 작업을 수행할 때 특정 Windows 사용자 계정의 ID를 가장할지 여부를 결정합니다.  

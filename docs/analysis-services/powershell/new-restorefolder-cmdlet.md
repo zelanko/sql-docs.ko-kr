@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 91f83a1e522059fe9924ece04a6cfd64ee221120
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>New-RestoreFolder cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]새 폴더에 원래 폴더를 복원 합니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1.|  
+|위치|1|  
 |기본값||  
 |파이프라인 입력 허용|true|  
 |와일드카드 문자 허용|false|  
@@ -106,5 +106,5 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |입력||  
-|출력|없음|  
+|출력|InclusionThresholdSetting|  
   

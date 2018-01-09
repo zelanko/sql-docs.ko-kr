@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 486f0507-cec6-4672-b947-0bb61d1cbc46
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcf8b3c47b7663e467ad421a3732f8663320f055
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f03fce7d1159e6fe7d34024e7cf63167024b752b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tmsl-reference---tabular-objects"></a>TMSL 참조-테이블 형식 개체
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]또는 테이블 형식 모드에서 SQL Sever 2016 Analysis Services 인스턴스에 연결 하는 생성, 사용, 또는 테이블 형식 데이터베이스를 관리 하는 응용 프로그램 명령 및 JSON 형식에서 개체 표시가 TMSL Tabular Model Scripting Language ()를 사용할 수 있습니다.  

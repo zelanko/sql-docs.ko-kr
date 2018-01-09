@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ae5c046b-8242-4046-ae76-2c070503fd93
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8506cdf1917fb803c701ca0acd9f1bf1f25b141
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e67dfe62b23e08a675fbb93833c9383091198629
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-object-tmsl"></a>데이터베이스 개체 TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]동일한 수준 모델을 기반으로 한 호환성 수준 1200 이상에서 테이블 형식 데이터베이스를 정의 합니다. 이 항목의 생성, 변경, 삭제 및 데이터베이스 관리 작업을 수행 하는 요청에 대 한 페이로드를 제공 하는 데이터베이스 개체 정의 설명 합니다.  

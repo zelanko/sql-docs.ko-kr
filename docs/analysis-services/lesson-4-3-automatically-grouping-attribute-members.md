@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d787f200287979270ce8ffe818c3375878fc284
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 46154c876e57ea952e0df93294f6d65891fa91c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4-3-자동으로 특성 멤버 그룹화
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]큐브를 찾아볼 때 일반적으로 다른 특성 계층의 멤버에 하나의 특성 계층의 멤버를 차원입니다. 예를 들어 고객 판매를 도시별, 구매 제품별 또는 성별로 그룹화할 수 있습니다. 그러나 특정 특성 유형의 경우에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특성 계층 내의 멤버 배포에 따라 자동으로 특성 멤버를 그룹화하도록 하는 것이 유용합니다. 예를 들어 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 고객의 연간 소득 값 그룹을 만들도록 할 수 있습니다. 이 작업을 수행하면 특성 계층을 찾아보는 사용자는 멤버 자체가 아니라 그룹의 이름과 값을 보게 됩니다. 이렇게 하면 사용자에게 표시되는 수준 수가 제한되므로 분석하는 데 보다 유용합니다.  
@@ -132,7 +132,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [특성 계층 숨기기 및 비활성화](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [특성 멤버 그룹화&#40;불연속화&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

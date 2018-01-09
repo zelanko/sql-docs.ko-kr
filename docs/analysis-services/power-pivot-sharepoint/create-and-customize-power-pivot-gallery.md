@@ -5,13 +5,10 @@ ms.date: 08/31/2015
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3443f25a3a929f9bad6cbe394a4fe60b38785b65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="create-and-customize-power-pivot-gallery"></a>Power Pivot 갤러리 만들기 및 사용자 지정
+# <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 특수 한 유형의 SharePoint 문서 라이브러리에 게시 된 Excel 통합 문서에 대 한 풍부한 미리 보기와 문서 관리 기능을 제공 하 고 포함 하는 Reporting Services 보고서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터입니다.  
   
 ##  <a name="bkmk_top"></a> 항목 내용  
@@ -68,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
  미리 보기 이미지는 Excel 서비스가 통합 문서를 렌더링하는 방식을 기반으로 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 표현은 브라우저에 표시되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 모양과 동일해야 합니다. 하지만 미리 보기의 화면 영역은 제한되어 있습니다. 따라서 사용 가능한 공간에 맞도록 통합 문서 또는 보고서의 일부가 잘릴 수 있습니다. 이 경우 통합 문서 또는 보고서를 열어 전체 문서를 봐야 할 수 있습니다.  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서는 외부 데이터 원본에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 데이터 새로 고침이 지원되지만 추가 구성이 필요합니다. 팜 또는 서비스 관리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스 신뢰할 수 있는 위치로 추가해야 합니다. 자세한 내용은 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서는 외부 데이터 원본에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 데이터 새로 고침이 지원되지만 추가 구성이 필요합니다. 팜 또는 서비스 관리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스 신뢰할 수 있는 위치로 추가해야 합니다. 자세한 내용은 [중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
   
 ##  <a name="createlib"></a> Power Pivot 갤러리 만들기  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 새 서버 설치 옵션을 사용하여 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 를 설치하면 만들어집니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 기존 팜에 추가한 경우 또는 추가 라이브러리가 필요한 경우 응용 프로그램이나 사이트에 대해 새로 만들 수 있습니다.  

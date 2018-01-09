@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 99e4faa1-2f87-43c6-b7ec-a97d4112c5ac
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df1c2c4108ad29164ab096fde95bc760a0c7ccb0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 00ec7bd0c6ffe655e77cb8543216053697733fad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="get-powerpivotserviceapplication-cmdlet"></a>Get-PowerPivotServiceApplication cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]하나 이상의 반환 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램입니다.  
@@ -64,7 +64,7 @@ Get-PowerPivotServiceApplication [[-Identity] <SPGeminiServiceApplicationPipeBin
 |입력|없음|  
 |출력|없음|  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
   
 ```  
 C:\PS>Get-PowerPivotServiceApplication  
@@ -80,7 +80,7 @@ C:\PS>Get-PowerPivotServiceApplication | format-list
   
  이 예에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램의 모든 속성을 반환합니다.  
   
-## <a name="example-3"></a>예 3  
+## <a name="example-3"></a>예제 3  
   
 ```  
 C:\PS>get-PowerPivotServiceApplication -Identity 1234567-890a-bcde-fghijklm  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 33231250-3880-4d75-936b-d70662a01855
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7210a93db11f4cbabe4b8b574d1945f932c2f31c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 20c13c68abadafcbe4cc357345a4b3ba7d0668f7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="get-powerpivotsystemservice-cmdlet"></a>Get-PowerPivotSystemService cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]전역 속성을 반환 된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜에서 시스템 서비스 개체입니다. 
@@ -64,7 +64,7 @@ Get-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [<Com
 |입력|없음|  
 |출력|없음|  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
   
 ```  
 C:\PS>Get-PowerPivotSystemService  

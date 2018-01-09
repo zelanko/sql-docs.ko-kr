@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a649a02dfeb483aec0ed1c9efb236deebe3845f0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92a61b6d5d860ae94fdc3d38212fed45ed2363bc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>파티션 조각 속성 설정(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 조각은 적절 한 파티션의 데이터를 직접 쿼리를 돕는 중요 한 최적화 기능입니다. Slice 속성을 명시적으로 설정하면 MOLAP 및 HOLAP 파티션에 대해 생성된 기본 조각을 재정의하여 쿼리 성능을 향상시킬 수 있습니다. 또한 Slice 속성은 파티션을 처리할 때 추가 유효성 검사를 제공합니다.  

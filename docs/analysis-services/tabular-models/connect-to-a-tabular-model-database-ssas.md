@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4848d36fffe5d7b6e70b5be937874bbfe6537cb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e2911c3a191a0cd41832fc37a3f07bff4735ee54
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>테이블 형식 모델 데이터베이스에 연결(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델을 작성 하 고 Analysis Services 테이블 형식 모드 서버에 배포 후에 클라이언트 응용 프로그램에 사용할 수 있도록 권한을 설정 해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 응용 프로그램에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  

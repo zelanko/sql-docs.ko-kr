@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f443e4ecb0d6bb16eaf582c89b98af9eb35a25a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="power-pivot-usage-data-collection"></a>Power Pivot 사용 데이터 컬렉션
+# <a name="power-pivot-usage-data-collection"></a>파워 피벗 사용 현황 데이터 수집
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]사용 현황 데이터 수집 팜 수준의 SharePoint 기능입니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 이 시스템을 사용하고 확장하여 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드의 사용 현황 데이터에 대한 자세한 내용은 [파워 피벗 관리 대시보드 및 사용 현황 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하세요.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 |단계|Description|  
 |-----------|-----------------|  
-|1.|사용 데이터 컬렉션은 SharePoint 배포의 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 공급자와 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 구성 요소가 생성하는 이벤트에 의해 트리거됩니다. 설정하거나 해제할 수 있는 구성 가능 이벤트에는 연결 요청, 로드 및 언로드 요청, 쿼리 응답 타이밍 이벤트가 포함되며 이들은 응용 프로그램 서버에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스에 의해 모니터링됩니다. 다른 이벤트는 서버에서만 관리되며 해제할 수 없습니다. 여기에는 데이터 새로 고침 및 서버 상태 이벤트가 포함됩니다.<br /><br /> 처음에 사용 데이터는 SharePoint 시스템의 데이터 컬렉션 기능을 사용하여 논리 로그 파일에 수집되고 저장됩니다. 파일과 해당 위치는 SharePoint의 표준 사용 데이터 컬렉션 시스템의 일부입니다. 파일의 위치는 팜에 있는 모든 서버에서 동일합니다. 로깅 디렉터리의 위치를 보거나 변경하려면 SharePoint 중앙 관리에서 **모니터링** 으로 이동하고 **Usage and Health Data Collection 구성**을 클릭합니다.|  
+|1|사용 데이터 컬렉션은 SharePoint 배포의 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 공급자와 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 구성 요소가 생성하는 이벤트에 의해 트리거됩니다. 설정하거나 해제할 수 있는 구성 가능 이벤트에는 연결 요청, 로드 및 언로드 요청, 쿼리 응답 타이밍 이벤트가 포함되며 이들은 응용 프로그램 서버에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스에 의해 모니터링됩니다. 다른 이벤트는 서버에서만 관리되며 해제할 수 없습니다. 여기에는 데이터 새로 고침 및 서버 상태 이벤트가 포함됩니다.<br /><br /> 처음에 사용 데이터는 SharePoint 시스템의 데이터 컬렉션 기능을 사용하여 논리 로그 파일에 수집되고 저장됩니다. 파일과 해당 위치는 SharePoint의 표준 사용 데이터 컬렉션 시스템의 일부입니다. 파일의 위치는 팜에 있는 모든 서버에서 동일합니다. 로깅 디렉터리의 위치를 보거나 변경하려면 SharePoint 중앙 관리에서 **모니터링** 으로 이동하고 **Usage and Health Data Collection 구성**을 클릭합니다.|  
 |2|Microsoft SharePoint Foundation 사용 데이터 가져오기 타이머 작업은 예약된 간격(기본적으로 1시간 간격)으로 사용 데이터를 로컬 파일에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스로 이동합니다. 팜에 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 여러 개 있을 경우 응용 프로그램마다 고유한 데이터베이스가 있습니다. 이벤트에는 해당 이벤트를 생성한 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 식별하는 내부 정보가 포함되어 있습니다. 응용 프로그램 식별자를 통해 사용 데이터가 해당 데이터를 생성한 응용 프로그램에 바인딩됩니다.|  
 |3|중앙 관리의 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드에서 사용할 수 있는 내부 보고 데이터베이스에 데이터가 복사됩니다.|  
 |4|데이터 원본은 Excel에서 사용자 지정 보고서를 만들기 위해 액세스할 수 있는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 통합 문서입니다. 원본 통합 문서의 인스턴스는 하나뿐입니다. 지역화된 보고서는 모두 동일한 원본 통합 문서를 기반으로 합니다.|  
@@ -54,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
 |이벤트|Description|구성 가능|  
 |-----------|-----------------|------------------|  
-|연결|Excel 통합 문서에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터를 쿼리하는 사용자를 위해 서버 연결이 설정됩니다. 연결 이벤트는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 통합 문서에 대한 연결을 연 사용자를 식별합니다. 보고서에서 이 정보는 자주 사용하는 사용자, 동일한 사용자가 액세스하는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 원본 및 시간별 연결 추세를 식별하는 데 사용됩니다.|[사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 사용하거나 사용하지 않도록 설정할 수 있습니다.|  
+|Connections|Excel 통합 문서에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터를 쿼리하는 사용자를 위해 서버 연결이 설정됩니다. 연결 이벤트는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 통합 문서에 대한 연결을 연 사용자를 식별합니다. 보고서에서 이 정보는 자주 사용하는 사용자, 동일한 사용자가 액세스하는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 원본 및 시간별 연결 추세를 식별하는 데 사용됩니다.|[사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 사용하거나 사용하지 않도록 설정할 수 있습니다.|  
 |쿼리 응답 시간|완료하는 데 걸리는 시간을 기준으로 쿼리를 범주화하는 쿼리 응답 통계입니다. 쿼리 응답 통계는 서버가 쿼리 요청에 응답하는 데 걸리는 시간의 패턴을 보여 줍니다.|[사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 사용하거나 사용하지 않도록 설정할 수 있습니다.|  
 |데이터 로드|[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]의 데이터 로드 작업입니다. 데이터 로드 이벤트는 가장 자주 사용되는 데이터 원본을 식별합니다.|[사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 사용하거나 사용하지 않도록 설정할 수 있습니다.|  
 |데이터 언로드|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램의 데이터 언로드 작업입니다. [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 는 사용 중이 아니거나, 서버에 메모리가 부족하거나, 데이터 새로 고침 작업을 실행할 추가 메모리가 필요한 경우 비활성 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 원본을 언로드합니다.|[사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 사용하거나 사용하지 않도록 설정할 수 있습니다.|  

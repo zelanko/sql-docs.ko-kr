@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 84cdb30142c75b4bc35d956daff130df3bf62305
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>테이블 형식 모델에서 지원 되는 데이터 형식
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 문서 테이블 형식 모델에서 사용할 수 있는 데이터 형식을 설명 하 고 데이터를 계산 하거나 분석 DAX (Data Expressions) 수식에서 사용 하는 경우 데이터 형식의 암시적 변환에 설명 합니다.  
@@ -39,12 +36,12 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**모델의 데이터 형식**|**DAX의 데이터 형식**|**Description**|  
+|**모델의 데이터 형식**|**DAX의 데이터 형식**|**설명**|  
 |정수|64비트(8바이트) 정수 값*<br /><br /> 참고:<br />         DAX 수식은 너무 작아서 설명에 나열된 최소 값을 저장할 수 없는 데이터 형식을 지원하지 않습니다.|소수 자릿수가 없는 숫자입니다. 정수는 양수나 음수가 될 수 있지만 -9,223,372,036,854,775,808(-2^63)부터 9,223,372,036,854,775,807(2^63-1) 사이의 정수여야 합니다.|  
 |10진수|64비트(8바이트) 실수*<br /><br /> 참고:<br />         DAX 수식은 너무 작아서 설명에 나열된 최소 값을 저장할 수 없는 데이터 형식을 지원하지 않습니다.|실수는 소수 자리를 가질 수 있는 수입니다. 실수는 광범위한 값을 포함합니다.<br /><br /> -1.79E +308에서 -2.23E -308 사이의 음수 값<br /><br /> 0<br /><br /> 2.23E -308에서 1.79E + 308 사이의 양수 값<br /><br /> 하지만 유효 숫자 수는 열일곱 자릿수로 제한됩니다.|  
 |Boolean|Boolean|True 또는 False 값입니다.|  
-|텍스트|문자열|유니코드 문자 데이터 문자열입니다. 문자열, 숫자 또는 날짜를 텍스트 형식으로 표시 될 수 있습니다.|  
-|날짜|날짜/시간|허용되는 날짜-시간 표현의 날짜 및 시간<br /><br /> 유효한 날짜는 1900년 3월 1일 이후의 모든 날짜입니다.|  
+|텍스트 모드|String|유니코드 문자 데이터 문자열입니다. 문자열, 숫자 또는 날짜를 텍스트 형식으로 표시 될 수 있습니다.|  
+|date|날짜/시간|허용되는 날짜-시간 표현의 날짜 및 시간<br /><br /> 유효한 날짜는 1900년 3월 1일 이후의 모든 날짜입니다.|  
 |Currency|Currency|통화 데이터 형식에는 -922,337,203,685,477.5808부터 922,337,203,685,477.5807 사이의 소수 자릿수가 고정된 네 자릿수를 사용할 수 있습니다.|  
 |해당 사항 없음|공백|공백은 SQL null을 나타내거나 대체하는 DAX의 데이터 형식입니다. BLANK 함수를 사용하여 공백을 만들고 논리 함수 ISBLANK를 사용하여 공백을 테스트할 수 있습니다.|  
   
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
 ||  
 |-|  
-|Value|  
+|값|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
   
  각 DAX 함수에는 입력 및 출력으로 사용되는 데이터 형식과 관련된 특정 요구 사항이 있습니다. 예를 들어 정수와 날짜를 인수로 사용해야 하는 함수도 있고 텍스트 또는 테이블을 인수로 사용해야 하는 함수도 있습니다.  
   
- 인수로 지정 하는 열의 데이터가 함수에 필요한 데이터 형식과 호환 되지 않으면 대부분의 경우 DAX는 오류를 반환 합니다. 그러나 아무 곳에 나 가능한 DAX 하려고 암시적으로 데이터를 필요한 데이터 형식으로 변환 합니다. 예를 들어  
+ 인수로 지정 하는 열의 데이터가 함수에 필요한 데이터 형식과 호환 되지 않으면 대부분의 경우 DAX는 오류를 반환 합니다. 그러나 아무 곳에 나 가능한 DAX 하려고 암시적으로 데이터를 필요한 데이터 형식으로 변환 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   숫자(예: "123")를 문자열로 입력할 수 있습니다. DAX는 문자열을 구문 분석 하 고 숫자 데이터 형식으로 지정 하려고 합니다.  
   
@@ -96,10 +93,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|연산자(+)|INTEGER|Currency|REAL|날짜/시간|  
-|INTEGER|INTEGER|Currency|REAL|날짜/시간|  
-|Currency|Currency|Currency|REAL|날짜/시간|  
-|REAL|REAL|REAL|REAL|날짜/시간|  
+|연산자(+)|INTEGER|Currency|real|날짜/시간|  
+|INTEGER|INTEGER|Currency|real|날짜/시간|  
+|Currency|Currency|Currency|real|날짜/시간|  
+|real|real|real|real|날짜/시간|  
 |날짜/시간|날짜/시간|날짜/시간|날짜/시간|날짜/시간|  
   
  예를 들어 더하기 연산에서 실수(R8)를 통화 데이터(CY)와 함께 사용하는 경우 두 값이 R8로 변환되고 결과가 R8로 반환됩니다.  
@@ -109,10 +106,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|연산자(-)|INTEGER|Currency|REAL|날짜/시간|  
-|INTEGER|INTEGER|Currency|REAL|REAL|  
-|Currency|Currency|Currency|REAL|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
+|연산자(-)|INTEGER|Currency|real|날짜/시간|  
+|INTEGER|INTEGER|Currency|real|real|  
+|Currency|Currency|Currency|real|real|  
+|real|real|real|real|real|  
 |날짜/시간|날짜/시간|날짜/시간|날짜/시간|날짜/시간|  
   
  예를 들어 빼기 연산에서 날짜를 다른 데이터 형식과 함께 사용하면 두 값이 날짜로 변환되고 결과 값도 날짜로 반환됩니다.  
@@ -124,10 +121,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|연산자(*)|INTEGER|Currency|REAL|날짜/시간|  
-|INTEGER|INTEGER|Currency|REAL|INTEGER|  
-|Currency|Currency|REAL|Currency|Currency|  
-|REAL|REAL|Currency|REAL|REAL|  
+|연산자(*)|INTEGER|Currency|real|날짜/시간|  
+|INTEGER|INTEGER|Currency|real|INTEGER|  
+|Currency|Currency|real|Currency|Currency|  
+|real|real|Currency|real|real|  
   
  예를 들어 곱하기 연산에서 정수를 실수와 함께 사용하는 경우 두 숫자가 실수로 변환되고 반환 값도 실수입니다.  
   
@@ -136,11 +133,11 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|연산자(/)<br /><br /> (행/열)|INTEGER|Currency|REAL|날짜/시간|  
-|INTEGER|REAL|Currency|REAL|REAL|  
-|Currency|Currency|REAL|Currency|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
-|날짜/시간|REAL|REAL|REAL|REAL|  
+|연산자(/)<br /><br /> (행/열)|INTEGER|Currency|real|날짜/시간|  
+|INTEGER|real|Currency|real|real|  
+|Currency|Currency|real|Currency|real|  
+|real|real|real|real|real|  
+|날짜/시간|real|real|real|real|  
   
  예를 들어 나누기 연산에서 정수를 통화 값과 함께 사용하는 경우 두 값이 실수로 변환되고 결과도 실수가 됩니다.  
   
@@ -152,19 +149,19 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|식|DAX|Excel|  
+|식|DAX|내보내기|  
 |BLANK + BLANK|공백|0(영)|  
 |BLANK +5|5|5|  
 |BLANK * 5|공백|0(영)|  
-|5/BLANK|Infinity|오류|  
-|0/BLANK|NaN|오류|  
-|BLANK/BLANK|공백|오류|  
+|5/BLANK|Infinity|Error|  
+|0/BLANK|NaN|Error|  
+|BLANK/BLANK|공백|Error|  
 |FALSE OR BLANK|FALSE|FALSE|  
 |FALSE AND BLANK|FALSE|FALSE|  
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
-|BLANK OR BLANK|공백|오류|  
-|BLANK AND BLANK|공백|오류|  
+|BLANK OR BLANK|공백|Error|  
+|BLANK AND BLANK|BLANK|Error|  
   
  특정 함수 또는 연산자에서 공백을 처리하는 방법은 [DAX 함수 참조](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)섹션에서 각 DAX 함수에 대한 항목을 참조하세요.  
   

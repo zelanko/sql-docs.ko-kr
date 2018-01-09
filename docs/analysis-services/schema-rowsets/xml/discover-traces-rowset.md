@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcdd8443c60299987c6b9ee239a5ffefb3f61f09
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertraces-rowset"></a>DISCOVER_TRACES 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버에서 현재 활성 상태인 추적에 대 한 정보를 제공 합니다.  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |인수|값|  
 |--------------|-----------|  
 |GUID|a07ccd1a-8148-11d0-87bb-00c04fc33942|  
-|문자열|DISCOVER_TRACES|  
+|String|DISCOVER_TRACES|  
   
 ## <a name="see-also"></a>관련 항목:  
  [XML for Analysis 스키마 행 집합](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

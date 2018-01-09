@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8f4dc0dc32d94ec793bab4e9912db739c942bb06
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>테이블에 열 추가(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 기존 테이블에 열을 추가 하는 방법에 설명 합니다.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 2.  **테이블 속성 편집** 대화 상자의 테이블 미리 보기 창에서 추가할 원본 열을 선택한 다음 확인을 클릭합니다. 이때 모델 테이블 정의에 이미 포함된 열은 확인란이 선택되어 있습니다.  
   
 ## <a name="add-a-calculated-column"></a>계산 열 추가  
- 계산 열에서는 DAX 수식에 따라 각 행의 값이 정해집니다. 예를 들어 각 행에 값으로 1을 추가하는 간단한 수식(=1)으로 계산된 열을 만들 수 있습니다. 또는 모델의 다른 데이터를 바탕으로 값을 계산하는 좀 더 복잡한 수식의 계산된 열을 만들 수도 있습니다. 계산 열은 다른 항목에서 더 자세히 다룹니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)을 참조하세요.  
+ 계산 열에서는 DAX 수식에 따라 각 행의 값이 정해집니다. 예를 들어 각 행에 값으로 1을 추가하는 간단한 수식(=1)으로 계산된 열을 만들 수 있습니다. 또는 모델의 다른 데이터를 바탕으로 값을 계산하는 좀 더 복잡한 수식의 계산된 열을 만들 수도 있습니다. 계산 열은 다른 항목에서 더 자세히 다룹니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다.  
   
 #### <a name="to-create-a-calculated-column"></a>계산 열을 만들려면  
   

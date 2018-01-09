@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23021f365a349e226194326ed2d4d43acb2e7af8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>동작(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]동작은 다른 형식의 수 및 필요한 것은 적절 하 게 만들 수 있습니다. 다음과 같은 유형의 동작이 있을 수 있습니다.  
@@ -68,13 +65,13 @@ ms.lasthandoff: 12/08/2017
 |동작 유형|Description|  
 |-----------------|-----------------|  
 |명령줄|명령 프롬프트에서 명령을 실행합니다.|  
-|데이터 집합|데이터 집합을 클라이언트 응용 프로그램으로 반환합니다.|  
+|Dataset|데이터 집합을 클라이언트 응용 프로그램으로 반환합니다.|  
 |드릴스루|행 집합을 반환하기 위해 클라이언트가 실행하는 드릴스루 문을 식으로 반환합니다.|  
 |Html|인터넷 브라우저에서 HTML 스크립트를 실행합니다.|  
 |소유|이 표에 나열되지 않은 인터페이스를 사용하여 작업을 수행합니다.|  
 |보고서|매개 변수가 있는 URL 기반 요청을 보고서 서버로 전송하고 보고서를 클라이언트 응용 프로그램으로 반환합니다.|  
 |행 집합|행 집합을 클라이언트 응용 프로그램으로 반환합니다.|  
-|문|OLE DB 명령을 실행합니다.|  
+|인수를 제거합니다.|OLE DB 명령을 실행합니다.|  
 |URL|동적 웹 페이지를 인터넷 브라우저로 표시합니다.|  
   
 ## <a name="resolving-and-executing-actions"></a>동작 확인 및 실행  

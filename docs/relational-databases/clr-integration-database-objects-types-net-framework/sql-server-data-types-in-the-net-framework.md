@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54feb379272889d7bed97128b0d4eb7ca274cafa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf47c53748e56fa455a62e8489839321e960493b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework의 SQL Server 데이터 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SqlTypes** 라이브러리는 기본 클래스 라이브러리의 일부는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터 형식과 의미 체계 및 전체 자릿수가 동일한 데이터 형식을 제공하도록 디자인되었습니다. 이 항목.NET Framework 프로그래머에 게 새로운 의미 체계에 설명 하 고에서 구현 하는 형식을 소개는 **System.Data.SqlTypes** 에 포함 된 네임 스페이스는 **System.Data** 라이브러리입니다.  

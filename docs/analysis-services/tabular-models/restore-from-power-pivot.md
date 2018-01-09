@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql11.asvs.ssmsimbi.RestoreFromPP.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cc8322e9a7208189ec7a8630e79a47baecaeb92
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7beb148b2090fcdcb7a150d3b5eb789beaf7bb08
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-from-power-pivot"></a>파워 피벗에서 복원
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]복원을 사용할 수 있습니다 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (테이블 형식 모드에서 실행 중), Analysis Services 인스턴스에서 새 테이블 형식 모델 데이터베이스를 만들려면 SQL Server Management Studio에서 기능 또는 기존 데이터베이스를 복원는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 (.xlsx)입니다.  

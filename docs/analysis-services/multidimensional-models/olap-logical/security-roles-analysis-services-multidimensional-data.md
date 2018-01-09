@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5bb382b53436e7567df3b970a77c75e7e3fe2be0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>보안 역할(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]역할에 사용 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 대 한 보안을 관리할 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체와 데이터입니다. 기술적으로 역할의 특정 액세스 권한 및의 인스턴스에 의해 관리 되는 개체에 대해 정의 된 사용 권한이 있는 Microsoft Windows 사용자 및 그룹 보안 식별자 (Sid)를 연결 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 두 가지 유형의 역할에 제공 됩니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/08/2017
   
  <xref:Microsoft.AnalysisServices.Permission> 클래스는 추상 클래스입니다. 따라서 해당 개체에 대한 사용 권한을 정의하려면 추상 클래스를 사용해야 합니다. 각 개체에는 권한 파생 클래스가 정의되어 있습니다.  
   
-|개체|클래스|  
+|Object|클래스|  
 |------------|-----------|  
 |<xref:Microsoft.AnalysisServices.Database>|<xref:Microsoft.AnalysisServices.DatabasePermission>|  
 |<xref:Microsoft.AnalysisServices.DataSource>|<xref:Microsoft.AnalysisServices.DataSourcePermission>|  

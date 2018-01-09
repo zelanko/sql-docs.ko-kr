@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DiscretizationMethod Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c521e8de3d734420442f51cb02470e607337dbd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fd84d0426afa9ee1272c26c8ca7ac302972748b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discretizationmethod-element-assl"></a>DiscretizationMethod 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]불연속화에 사용할 방법을 정의 합니다.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|*없음*|  
@@ -58,14 +56,14 @@ ms.lasthandoff: 12/08/2017
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  **DiscretizationMethod** 요소의 값은 **DimensionAttribute** 또는 **ScalarMiningStructureColumn** 에 대한 값을 불연속화하거나 특정 그룹 집합으로 구성하는 방법을 결정합니다. 불연속화 방법에 대 한 자세한 내용은 참조 [분할 방법 &#40; 데이터 마이닝 속성 &#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md)합니다.  
   
  이 요소의 값은 다음 표에 있는 문자열 중 하나로 제한됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |*자동*|마이닝 구조 열의 AUTOMATIC 불연속화 메서드와 같습니다.|  
 |*EqualAreas*|마이닝 구조 열의 EQUAL_AREAS 불연속화 메서드와 같습니다.|  

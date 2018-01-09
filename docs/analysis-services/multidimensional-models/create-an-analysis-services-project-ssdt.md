@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff6e42f9b18df54afc83fe80574d79845cf78e4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services 프로젝트 만들기(SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]정의할 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용 하 여는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 또는 가져오기를 사용 하 여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 마법사의 내용을 읽을 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 현재 로드된 솔루션이 없는 경우 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 로드된 솔루션이 있으면 새로운 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 기존 솔루션에 추가됩니다. 솔루션을 개발하는 가장 좋은 방법은 응용 프로그램 데이터 유형별로 다른 개별 프로젝트를 만들어 프로젝트와 관련 있는 단일 솔루션을 사용하는 것입니다. 예를 들어 동일한 비즈니스 응용 프로그램에 사용되는 Integration Services 패키지, Analysis Services 데이터베이스 및 Reporting Services 보고서에 대해 별도의 프로젝트를 포함하는 단일 솔루션을 사용할 수 있습니다.  
@@ -124,7 +121,7 @@ ms.lasthandoff: 12/08/2017
   
 |Folder|Description|  
 |------------|-----------------|  
-|데이터 원본|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 데이터 원본을 포함합니다. 데이터 원본 마법사를 사용하여 이러한 개체를 만들고 데이터 원본 디자이너에서 편집합니다.|  
+|솔루션 탐색기|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 데이터 원본을 포함합니다. 데이터 원본 마법사를 사용하여 이러한 개체를 만들고 데이터 원본 디자이너에서 편집합니다.|  
 |데이터 원본 뷰|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 데이터 원본 뷰를 포함합니다. 데이터 원본 뷰 마법사를 사용하여 이러한 개체를 만들고 데이터 원본 뷰 디자이너에서 편집합니다.|  
 |큐브|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 큐브를 포함합니다. 큐브 마법사를 사용하여 이러한 개체를 만들고 큐브 디자이너에서 편집합니다.|  
 |차원|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 차원을 포함합니다. 차원 마법사 또는 큐브 마법사를 사용하여 이러한 개체를 만들고 차원 디자이너에서 편집합니다.|  

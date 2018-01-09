@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6912b3c73f898335853ff3ffe78021fad75bb357
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bdf14cf2c3ac199c1108cd8d1178ede676976baa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Synchronize 명령 TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,8 +46,8 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**속성**|**Default**|**Description**|  
-|데이터베이스||동기화 할 데이터베이스 개체의 이름입니다.|  
+|**속성**|**Default**|**설명**|  
+|database||동기화 할 데이터베이스 개체의 이름입니다.|  
 |원본(source)||원본 서버에 연결 하는 데 연결 문자열입니다.|  
 |synchronizeSecurity|skipMembership|역할 및 사용 권한이 포함 되는 보안 정의 복원 하는 방법을 지정 하는 열거형 값입니다. CopyAll, skipMembership, ignoreSecurity 유효한 값에 포함 되어 있습니다.|  
 |applyCompression|True|True 이면 나타내고; 동기화 작업을 하는 동안 압축을 적용할 하는 Boolean 그렇지 않으면 false입니다.|  

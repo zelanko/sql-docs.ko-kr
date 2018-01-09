@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -102,11 +102,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aab19956bbd7b25a8b6fbd55c587f09383a73283
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cfeaedcf34ffdafdc54c0ce88ae80ecfc6190f6f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="olap-properties"></a>OLAP 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다음 표에 나열 된 OLAP 서버 속성을 지원 합니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
@@ -136,7 +136,7 @@ ms.lasthandoff: 12/08/2017
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="lazyprocessing"></a>LazyProcessing  
- **설정**  
+ **Enabled**  
  지연 집계 처리가 설정되어 있는지 여부를 지정하는 부울 속성입니다.  
   
  **SleepIntervalSecs**  
@@ -293,7 +293,7 @@ ms.lasthandoff: 12/08/2017
  **ROLAPDimensionProcessingEffort**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## <a name="query"></a>Query  
+## <a name="query"></a>쿼리  
  **AggregationsUseEnabled**  
  런타임에 저장 집계가 사용되는지 여부를 정의하는 부울 속성입니다. 이 속성을 사용하면 정보 제공 및 벤치마크 목적으로 집계 디자인을 변경하거나 다시 처리하지 않고 집계를 해제할 수 있습니다.  
   
@@ -437,7 +437,7 @@ ms.lasthandoff: 12/08/2017
  **DataCache\ MemoryModel\ Tax**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## <a name="jobs"></a>작업  
+## <a name="jobs"></a>에서  
  **ProcessAggregation\ MemoryModel\ Income**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   

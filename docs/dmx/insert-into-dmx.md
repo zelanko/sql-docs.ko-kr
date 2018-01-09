@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -34,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6effd75e67a69db182ddaf37388d377b644a17da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -89,7 +87,7 @@ INSERT INTO [MINING MODEL] <model>
 ||마이닝 구조가 처리되지 않습니다.|마이닝 모델 및 마이닝 구조가 처리됩니다.|  
 ||마이닝 구조에 추가 마이닝 모델이 포함되어 있습니다.|프로세스가 실패합니다. 마이닝 구조 및 연결된 마이닝 모델을 다시 처리해야 합니다.|  
 |INSERT INTO MINING STRUCTURE*\<구조 >*|마이닝 구조가 처리되거나 처리되지 않습니다.|마이닝 구조 및 연결된 마이닝 모델이 처리됩니다.|  
-|INSERT INTO MINING MODEL*\<모델 >* 원본 쿼리 포함<br /><br /> 또는<br /><br /> INSERT INTO MINING STRUCTURE*\<구조 >* 원본 쿼리 포함|마이닝 구조 또는 모델에 이미 내용이 포함되어 있습니다.|프로세스가 실패합니다. 사용 하 여이 작업을 수행 하기 전에 개체를 지워야 [delete&#40; DMX &#41;](../dmx/delete-dmx.md)합니다.|  
+|INSERT INTO MINING MODEL*\<모델 >* 원본 쿼리 포함<br /><br /> 로 구분하거나 여러<br /><br /> INSERT INTO MINING STRUCTURE*\<구조 >* 원본 쿼리 포함|마이닝 구조 또는 모델에 이미 내용이 포함되어 있습니다.|프로세스가 실패합니다. 사용 하 여이 작업을 수행 하기 전에 개체를 지워야 [delete&#40; DMX &#41;](../dmx/delete-dmx.md)합니다.|  
   
 ## <a name="mapped-model-columns"></a>매핑된 모델 열  
  사용 하 여는 \<매핑된 모델 열 > 요소를 마이닝 모델의 열에 데이터 원본의 열을 매핑할 수 있습니다. \<매핑된 모델 열 > 요소 형식은 다음과 같습니다.  
@@ -147,6 +145,6 @@ AS [Models]
 ## <a name="see-also"></a>관련 항목:  
  [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

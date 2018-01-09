@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data feeds [Analysis Services with SharePoint]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 70d102f069894aec4e6286e3bdc590f41fcdbbea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c9b2b0c9ed6a70ce6e596bd1afe8bd2b49fc3a4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>데이터 피드 라이브러리를 사용하여 데이터 피드 공유(SharePoint용 PowerPivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 피드는 서비스 또는 Atom 연결 형식에 대 한 데이터를 노출 하는 응용 프로그램에서 생성 되는 XML 데이터 스트림입니다. 데이터 피드는 응용 프로그램 간에 데이터를 전송하고 클라이언트측 뷰어에게 데이터를 전송하는 데 점점 더 많이 사용되고 있습니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서 데이터 피드는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 Atom 인식 응용 프로그램 또는 서비스의 데이터를 채우는 데 사용됩니다.  
@@ -121,6 +118,6 @@ ms.lasthandoff: 12/08/2017
  SharePoint 라이브러리에서 만든 데이터 서비스 문서를 사용하려면 **데이터 원본에서** 데이터 피드 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 가져오기 옵션을 사용합니다. 자세한 내용은 [데이터 피드 사용&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [파워 피벗 데이터 피드](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
+ [Power Pivot 데이터 피드](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

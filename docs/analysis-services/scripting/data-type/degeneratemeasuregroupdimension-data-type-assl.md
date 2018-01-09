@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DegenerateMeasureGroupDimension Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 663d7587015f9228fb2959b02ab481c2a4468661
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de05e60a72b203ee5dd5be24c55508df96b44210
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>DegenerateMeasureGroupDimension 데이터 형식(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]중복 제거 차원 (팩트 차원)와 측정값 그룹 간의 관계를 나타내는 파생된 데이터 형식을 정의 합니다.  
@@ -45,18 +43,18 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md)|  
-|파생 데이터 형식|없음|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
-|자식 요소|없음|  
-|파생 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
+|자식 요소|InclusionThresholdSetting|  
+|파생 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>주의  
  팩트 차원에 대 한 자세한 내용은 참조 [차원 관계](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  

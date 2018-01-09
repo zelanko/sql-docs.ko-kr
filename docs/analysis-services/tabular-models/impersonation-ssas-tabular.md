@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="impersonation"></a>가장 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목에서는 테이블 형식 모델 작성자 사용 하는 방법 로그온 자격 증명은 Analysis Services에서 데이터 원본에 연결할 때를 가져오고 데이터 처리 (새로 고침) 이해를 제공 합니다.  
@@ -89,7 +86,7 @@ ms.lasthandoff: 12/08/2017
   
 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [데이터 원본](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [테이블 형식 모델 솔루션 배포](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

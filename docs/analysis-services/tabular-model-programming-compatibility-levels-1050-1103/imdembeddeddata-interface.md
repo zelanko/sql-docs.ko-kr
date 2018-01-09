@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77bad0900d5d636a06ed1b836697e96120d0a7cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData 인터페이스
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]IMDEmbeddedData 인터페이스는 공용 인터페이스는 포함 된 관리 하는 데 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 또는 테이블 형식 모델 데이터베이스. 이 인터페이스는 **IPersistStream** 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
@@ -90,7 +88,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  호스트 응용 프로그램에 사용되는 식별자를 컨테이너 문서의 포함된 스트림에 가져옵니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -112,7 +110,7 @@ HRESULT GetStreamIdentifier (
   
  DBPROP_MSMD_EMBEDDED_DATA의 가능한 값은 다음과 같습니다.  
   
-|이름|값|정의|  
+|속성|값|정의|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|포함된 데이터베이스를 사용할 수 없습니다.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|현재 응용 프로그램에 포함된 데이터베이스가 포함되어 있습니다.|  
@@ -134,7 +132,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함된 스트림을 포함하는 파일의 URL을 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -164,7 +162,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함하는 응용 프로그램이 호스팅된 환경에 있는지 여부를 나타내는 플래그를 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -194,7 +192,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함하는 응용 프로그램에 사용되는 임시 파일에 대한 경로를 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -222,7 +220,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  현재 포함된 데이터베이스 작업을 취소합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -253,7 +251,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함된 개체를 저장하기 위해 스트림의 예상 크기(바이트)를 가져옵니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -273,7 +271,7 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함된 데이터베이스가 마지막으로 저장된 후에 변경되었는지 여부를 확인합니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -297,7 +295,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함된 데이터베이스를 로컬 또는 in-process 엔진에 로드합니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -323,7 +321,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  로컬 또는 in-process 데이터베이스를 컨테이너 문서의 포함된 스트림에 저장합니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  

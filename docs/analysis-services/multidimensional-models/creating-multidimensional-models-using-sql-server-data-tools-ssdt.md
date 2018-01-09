@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4c79cf49be9eb64e21a6a19b6c8ac540d6c655d6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e841871a7be5dd1d787854bc5fbedc86eed264f4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)를 사용하여 다차원 모델 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 빌드, 배포 및 관리에 대 한 두 가지 다른 환경을 제공 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션: [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 이러한 환경은 둘 다 프로젝트 시스템을 구현합니다. Visual Studio 프로젝트에 대한 자세한 내용은 MSDN Library의 [프로젝트의 컨테이너 특성(Projects as Containers)](http://go.microsoft.com/fwlink/?LinkId=63960) 을 참조하십시오.  

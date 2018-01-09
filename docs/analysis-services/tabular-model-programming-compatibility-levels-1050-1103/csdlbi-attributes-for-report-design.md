@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>보고서 디자인의 CSDLBI 특성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 영향을 주는 테이블 형식 모델링 하기 위한 CSDL 확장에의 특성을 설명 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 쿼리 디자인.  
@@ -32,9 +30,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="model-attributes"></a>Model Attributes  
  이러한 특성은 CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) 요소의 하위 요소에 정의됩니다.  
   
-|특성 이름|데이터 형식|설명|  
+|특성 이름|데이터 형식|Description|  
 |--------------------|---------------|-----------------|  
-|Culture|텍스트|통화 형식에 사용되는 culture를 나타냅니다. 생략하면 EN-US가 사용됩니다.|  
+|Culture|텍스트 모드|통화 형식에 사용되는 culture를 나타냅니다. 생략하면 EN-US가 사용됩니다.|  
 |IsRightToLeft|Boolean|텍스트 필드 값을 기본적으로 오른쪽에서 왼쪽으로 읽어야 하는지 여부를 나타냅니다.|  
   
 ## <a name="entity-attributes"></a>엔터티 특성  
@@ -42,11 +40,11 @@ ms.lasthandoff: 12/08/2017
   
 |특성 이름|데이터 형식|Description|  
 |--------------------|---------------|-----------------|  
-|**ReferenceName**|텍스트|DAX 쿼리에서 이 엔터티를 참조하는 데 사용되는 식별자입니다. 생략하면 이름이 사용됩니다.|  
-|**캡션**|텍스트|엔터티의 표시 이름입니다.|  
-|**설명서**|텍스트|비즈니스 사용자가 데이터의 의미를 이해하는 데 도움을 주는 설명 텍스트입니다.|  
+|**ReferenceName**|텍스트 모드|DAX 쿼리에서 이 엔터티를 참조하는 데 사용되는 식별자입니다. 생략하면 이름이 사용됩니다.|  
+|**캡션**|텍스트 모드|엔터티의 표시 이름입니다.|  
+|**설명서**|텍스트 모드|비즈니스 사용자가 데이터의 의미를 이해하는 데 도움을 주는 설명 텍스트입니다.|  
 |**숨김**|Boolean|엔터티를 표시해야 하는지 여부를 나타냅니다. 기본값은 **false**입니다.|  
-|**CollectionCaption**|텍스트|엔터티의 인스턴스 집합을 참조하기 위한 복수 이름입니다. 생략하면 Caption 특성이 사용됩니다.|  
+|**CollectionCaption**|텍스트 모드|엔터티의 인스턴스 집합을 참조하기 위한 복수 이름입니다. 생략하면 Caption 특성이 사용됩니다.|  
 |**DisplayKey**|MemberRef[]|비즈니스 사용자가 엔터티 인스턴스를 식별하는 데 사용하는 필드의 정렬된 목록입니다. 참조는 인스턴스 속성 및 탐색 속성을 포함할 수 있습니다. 탐색 속성을 참조하면 대상 엔터티의 **DisplayKey** 가 표시됩니다. **DisplayKey** 값을 생략하면 키 필드가 사용됩니다.|  
 |**DefaultImage**|MemberRef|비즈니스 사용자가 엔터티 인스턴스를 시각적으로 식별하는 데 사용하는 이미지가 포함된 필드에 대한 참조입니다. 생략하면 엔터티의 첫 번째 이미지 필드가 사용됩니다(있는 경우).|  
 |**DefaultDetails**|MemberRef[]|엔터티 인스턴스에 대해 비즈니스 사용자에게 표시하는 기본 세부 정보 집합을 나타내는 필드의 정렬된 목록입니다. 생략하면 엔터티의 처음 5개 필드가 사용됩니다. 이때 **Key**, **DisplayKey**또는 **DefaultImage**에서 이미 참조하는 필드는 제외됩니다.|  
@@ -59,15 +57,15 @@ ms.lasthandoff: 12/08/2017
   
 |특성 이름|데이터 형식|Description|  
 |--------------------|---------------|-----------------|  
-|**ReferenceName**|텍스트|DAX 쿼리에서 이 엔터티를 참조하는 데 사용되는 식별자입니다. 생략하면 필드 이름이 사용됩니다.|  
-|**캡션**|텍스트|엔터티의 표시 이름입니다. 생략하면 필드의 **ReferenceName** 이 사용됩니다.|  
-|**설명서**|텍스트|비즈니스 사용자가 필드의 의미를 이해하는 데 도움을 주는 설명 텍스트입니다.|  
+|**ReferenceName**|텍스트 모드|DAX 쿼리에서 이 엔터티를 참조하는 데 사용되는 식별자입니다. 생략하면 필드 이름이 사용됩니다.|  
+|**캡션**|텍스트 모드|엔터티의 표시 이름입니다. 생략하면 필드의 **ReferenceName** 이 사용됩니다.|  
+|**설명서**|텍스트 모드|비즈니스 사용자가 필드의 의미를 이해하는 데 도움을 주는 설명 텍스트입니다.|  
 |**숨김**|Boolean|필드를 표시해야 하는지 여부를 나타냅니다. 기본값은 **false**이며 필드가 표시됨을 의미합니다.|  
-|**DisplayFolder**|텍스트|이 필드가 표시되는 폴더의 이름(전체 경로)입니다. 생략하면 필드가 모델 루트에 표시됩니다.|  
+|**DisplayFolder**|텍스트 모드|이 필드가 표시되는 폴더의 이름(전체 경로)입니다. 생략하면 필드가 모델 루트에 표시됩니다.|  
 |**ContextualNameRule**|Enum|속성 이름을 해당 이름이 사용되는 컨텍스트를 기반으로 수정할지 여부와 수정 방법을 나타내는 값입니다. 가능한 값은  **None**,  **Role**,  **Merge**입니다.|  
 |**맞춤**|Enum|테이블 형식 프레젠테이션에서 필드 값을 정렬하는 방법을 나타내는 값입니다. 가능한 값은 **Default**, **Center**, **Left**, **Right**입니다. 생략하면 기본값이 필드의 데이터 형식에 따라 맞춤을 결정합니다.|  
-|**FormatString**|텍스트|기본적으로 필드 값의 서식을 지정하는 방법을 나타내는 .NET 형식입니다. 생략하면 다음 형식이 사용됩니다.<br /><br /> -날짜/시간 필드: 국가별 짧은 날짜 또는 "d"<br /><br /> -집계 함수 부동 소수점 필드 및 기본 정수 필드: 국가별 숫자 또는 "n"<br /><br /> -집계 함수가 없는 기본 정수: 국가별 10 진수 또는 "d"<br /><br /> 다른 모든 유형의 필드에는 형식 문자열이 적용되지 않습니다.|  
-|**단위**|텍스트|단위를 표현하기 위해 필드 값에 적용되는 기호입니다. 생략하면 단위는 알 수 없는 것으로 간주됩니다.|  
+|**FormatString**|텍스트 모드|기본적으로 필드 값의 서식을 지정하는 방법을 나타내는 .NET 형식입니다. 생략하면 다음 형식이 사용됩니다.<br /><br /> -날짜/시간 필드: 국가별 짧은 날짜 또는 "d"<br /><br /> -집계 함수 부동 소수점 필드 및 기본 정수 필드: 국가별 숫자 또는 "n"<br /><br /> -집계 함수가 없는 기본 정수: 국가별 10 진수 또는 "d"<br /><br /> 다른 모든 유형의 필드에는 형식 문자열이 적용되지 않습니다.|  
+|**단위**|텍스트 모드|단위를 표현하기 위해 필드 값에 적용되는 기호입니다. 생략하면 단위는 알 수 없는 것으로 간주됩니다.|  
 |**Width**|정수|테이블 형식 프레젠테이션에서 필드 값을 표시하기 위해 예약해야 하는 기본 설정 너비(문자 수)입니다. 생략하면 기본 너비는 필드의 데이터 형식을 기반으로 합니다.|  
 |**SortDirection**|Enum|필드 값이 일반적으로 정렬되는 방법을 나타내는 값입니다. 가능한 값은 **Default**, **Ascending**, **Descending**입니다. 생략하면 정렬 방향을 할당하는 기본값은 필드의 데이터 형식을 기반으로 합니다.|  
 |**IsRightToLeft**|Boolean|필드에 오른쪽에서 왼쪽으로 읽어야 하는 텍스트가 포함되는지 여부를 나타냅니다. 생략하면 모델 설정이 사용됩니다.|  

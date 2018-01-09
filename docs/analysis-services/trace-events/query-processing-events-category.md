@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
@@ -17,16 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2ab73a3e9caae0f21270534e8eb9a149d306770
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d547a887a05120405f6bf26049a567e1aa8026c8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="query-processing-events-category"></a>Query Processing 이벤트 범주
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Query Processing 이벤트 범주에는 다음 표에 설명 된 이벤트 클래스가 있습니다.  
   
-|**Event Class**|**이벤트 ID**|**Description**|  
+|**Event Class**|**이벤트 ID**|**설명**|  
 |---------------------|------------------|---------------------|  
 |Query Subcube|11|사용 빈도 기반 최적화에 대한 쿼리 하위 큐브입니다.|  
 |Query Subcube Verbose|12|세부 정보가 포함된 쿼리 하위 큐브입니다. 이 이벤트를 설정하면 성능이 저하될 수 있습니다.|  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.ssmsimbi.duplicateroles.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ca9b0efadcf07deebdc0eb6c19890e41fbc81345
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 83a6d2bfa6b50ed38544a6f4acf34676e4df2de1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>테이블 형식 모델 역할(SSAS 테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]이 항목과 관련 된 작업의 정보는 테이블 형식 모델 데이터베이스 관리자를 만들고 사용 하 여 배포 된 테이블 형식 모델에 대 한 역할 관리를 위해 제공 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 테이블 형식 모델에 대한 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)을 참조하세요. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 역할 관리자를 사용하여 테이블 형식 모델 프로젝트의 역할을 만들고 관리하는 방법에 대한 자세한 내용은 [역할 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)를 참조하세요.  

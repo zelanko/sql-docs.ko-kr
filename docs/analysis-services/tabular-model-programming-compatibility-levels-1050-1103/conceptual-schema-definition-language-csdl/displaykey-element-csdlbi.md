@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea38abe670eb7585a8f0b6286f8ffa059d6a4457
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6c3e0be2d677f87afae5bbdff84947b3d013c23f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="displaykey-element-csdlbi"></a>DisplayKey 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]DisplayKey 요소는 강력한 식별자를 구성 하는 다음 요소 목록을 포함 합니다. DisplayKey는 EntityType 요소의 자식으로만 사용됩니다. 이 요소는 열 또는 역할 END를 참조할 수 있습니다.  
@@ -32,9 +30,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표에서는 DisplayKey 요소의 특성을 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
-|IsDisplayKey|아니요|True 또는 False입니다.|  
+|IsDisplayKey|아니오|True 또는 False입니다.|  
   
 ## <a name="remarks"></a>주의  
  이 요소는 보고서용입니다. 이 특성을 적용할 요소는 실제 테이블 키일 필요가 없으며 키로 표시할 요소이기만 하면 됩니다. 하지만 DisplayKey에 사용하는 열에는 고유의 값이 포함되어야 합니다.  

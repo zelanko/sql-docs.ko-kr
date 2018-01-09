@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fefda98d12920fb3f7ae2cb03c52f932f371602
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013에서 파워 피벗 데이터 새로 고침
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]새로 고침을 위해 디자인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 2013에서 데이터 모델에는 사용 하 여 Excel 서비스를 로드 하 고 인스턴스의 데이터 모델을 새로 고칠 기본 구성 요소로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SharePoint 모드에서 실행 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버는 SharePoint 팜 외부에서 실행됩니다. SharePoint 2013 Excel Services의 아키텍처는 **대화형 데이터 새로 고침** 과 **예약된 데이터 새로 고침**을 모두 지원합니다.  
@@ -138,7 +135,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **예약된 데이터 새로 고침의 핵심 사항**  
   
--   SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능 배포가 필요합니다. 설치에 대한 자세한 내용은 [SharePoint용 PowerPivot 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
+-   SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능 배포가 필요합니다. 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
   
 -   사용자가 통합 문서에 대한 새로 고침 일정을 구성합니다. 예약된 시간에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스가 Excel Services에 다음 요청을 보냅니다.  
   
