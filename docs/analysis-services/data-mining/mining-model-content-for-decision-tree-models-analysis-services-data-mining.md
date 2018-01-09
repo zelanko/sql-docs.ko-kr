@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b46a11c3edc4ca3e9c735d324f961165bd022cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]이 설명 하는 사용 하는 모델만 마이닝 모델 콘텐츠에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘입니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요. Microsoft 의사 결정 트리 알고리즘은 매우 다양한 함수로 모델을 만들 수 있는 하이브리드 알고리즘이라는 사실을 기억해야 합니다. 의사 결정 트리는 연결, 규칙 또는 선형 회귀를 나타낼 수 있습니다. 트리의 구조는 기본적으로 동일하지만 정보를 해석하는 방법은 모델을 만든 목적에 따라 달라집니다.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]연속 특성을 버킷 팅;에 대 한 메서드를 자동으로 선택 그러나 입력의 방법을 연속 값을 제어할 수 있습니다에 마이닝 구조 열의 내용 유형을 설정 하 여 분할 **Discretized** 로 설정한 다음는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 또는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성입니다.  
   
- [위쪽](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_ModelContent"></a> 의사 결정 트리 모델에 대한 모델 콘텐츠  
  이 섹션에서는 의사 결정 트리 모델과 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다. 스키마 행 집합의 범용 열에 대한 자세한 내용 및 마이닝 모델 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -174,7 +172,7 @@ ms.lasthandoff: 12/08/2017
   
  이러한 통계를 검색하는 방법에 대한 예제는 [의사 결정 트리 모델 쿼리 예제](../../analysis-services/data-mining/decision-trees-model-query-examples.md)를 참조하세요.  
   
- [위쪽](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ## <a name="example-of-decision-tree-structure"></a>의사 결정 트리 구조의 예  
  의사 결정 트리의 작동 방식을 이해하기 위해 AdventureWorks 자전거 구매 고객 시나리오와 같은 예를 살펴보세요. 예측 가능한 특성이 고객 구매 기록이라고 가정하면 의사 결정 트리 알고리즘에서는 사용자가 제공한 모든 입력 중에서 자전거를 구매할 가능성이 있는 고객과 구매할 가능성이 없는 고객을 가장 효율적으로 검색하는 하나의 데이터 열을 찾으려고 합니다. 예를 들어 모델에서는 나이가 구매 행동을 가장 잘 나타내는 지표임을 찾아낼 수 있습니다. 특히 30세 이상의 고객은 자전거를 구매할 가능성이 매우 높고 다른 모든 고객은 구매 가능이 낮습니다. 이 시나리오에서 모델은 나이 특성에 대한 *분할* 을 만듭니다. 즉, 트리는 두 개의 분기로 나뉩니다. 한 분기에는 30세 이상의 고객이 포함되고 다른 분기에는 30세 미만의 고객이 포함됩니다. 새 분기는 모델 구조에서 두 개의 새 내부 트리(NODE_TYPE = 3)로 표현됩니다.  
@@ -196,7 +194,7 @@ ms.lasthandoff: 12/08/2017
   
  예측 가능한 특성이 연속 숫자인 경우 알고리즘에서는 예측 가능한 특성과 입력 간의 관계를 모델링하는 회귀 수식을 만듭니다.  
   
- [위쪽](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="NodeCaption"></a> 노드 캡션 및 노드 설명  
  의사 결정 트리 모델에서 노드 캡션과 노드 설명에는 비슷한 정보가 포함됩니다. 그러나 노드 설명은 보다 완전하며 리프 노드에 근접하게 이동할수록 더 많은 정보를 포함합니다. 노드 캡션과 노드 설명은 모두 지역화된 문자열입니다.  
@@ -216,7 +214,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 중첩 테이블 사용을 지원하는 확장과 함께 2.0 버전의 PMML 표준을 지원합니다. 데이터에 중첩 테이블이 들어 있는 경우 PMML 버전의 모델을 생성하면 해당 모델에서 조건자가 포함된 모든 요소는 확장으로 표시됩니다.  
   
- [위쪽](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> 불연속 특성의 노드 분포  
  의사 결정 트리 모델에서 NODE_DISTRIBUTION 테이블에는 유용한 통계가 들어 있습니다. 그러나 통계의 유형은 트리가 불연속 특성을 예측하는지 연속 특성을 예측하는지에 따라 달라집니다. 이 섹션에서는 불연속 특성에 대한 노드 분포 통계의 의미를 설명합니다.  
@@ -231,7 +229,7 @@ ms.lasthandoff: 12/08/2017
   
  연속 특성을 나타내는 노드의 경우 데이터에 Null이 있으면 예상치 않은 결과가 발생할 수 있습니다. 예를 들어 m개의 사례가 있는 경우 평균값은 합계(모든 사례)/n으로 계산됩니다. 여기서 n은 m보다 작은 숫자이고 m-n은 누락 값이 있는 사례의 수를 나타냅니다. 지지도는 n으로도 표현됩니다.  
   
-#### <a name="probability"></a>확률  
+#### <a name="probability"></a>Probability  
  각 노드와 관련된 확률은 전체 데이터 집합의 사례가 해당 노드에 포함될 확률을 나타냅니다. 확률 점수는 트리 전체와 바로 아래의 분할 모두에 대해 계산됩니다.  
   
  예를 들어 다음 표에서는 100개의 사례가 있는 매우 간단한 모델을 보여 줍니다.  
@@ -284,7 +282,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  연속 및 불연속 예측 가능 특성이 모두 있는 의사 결정 트리 모델을 만드는 경우 각 트리 유형을 나타내는 (All) 노드에는 완전히 다른 점수가 표시됩니다. 각 모델은 독립적으로 간주되며 회귀 평가에 사용되는 방법은 분류 평가에 사용되는 방법과 완전히 다릅니다. 따라서 노드 점수 값을 비교할 수 없습니다.  
   
- [위쪽](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_RegressionNodes"></a> 의사 결정 트리 모델 내의 회귀 노드  
  의사 결정 트리 모델에 예측 가능한 특성과 연속 숫자 데이터가 있는 경우 Microsoft 의사 결정 트리 알고리즘은 데이터에서 예측된 상태와 입력 변수 간의 관계가 선형적인 영역을 찾으려고 합니다. 선형 관계를 찾는 데 성공할 경우 알고리즘은 선형 회귀를 나타내는 특수한 트리(NODE_TYPE = 25)를 만듭니다. 이러한 회귀 트리 노드는 불연속 값을 나타내는 노드보다 복잡합니다.  

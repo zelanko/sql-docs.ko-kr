@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b065a7c059cf4c3e7ba79c0c03ef7b96d4928bf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 60d9d0bc1d8f78e4baa7c2d36291c76e00c88015
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-model-viewers"></a>데이터 마이닝 모델 뷰어
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]데이터 마이닝 모델을 학습 한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 관심 있는 추세에 대 한 모델을 탐색할 수 있습니다. 마이닝 모델의 결과는 복잡하며 원시 형식으로 이해하기 어려울 수 있으므로 데이터를 시각적으로 조사하는 것이 데이터 내에서 알고리즘으로 찾은 규칙과 관계를 가장 쉽게 이해하는 방법일 수 있습니다.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
   
  사용자 지정 뷰어가 모델을 탐색하고 이해하기 위해 디자인된 반면 일반 뷰어는 이미 모델을 이해하고 있으며 특정 노드에서 통계 또는 규칙을 추출하려고 할 때 보다 유용합니다. 예를 들어 노드 확률, 회귀 수식 등과 같이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 분석 중에 캡처하는 패턴 및 통계에 대한 자세한 정보를 보려면 일반 뷰어를 사용합니다.  
   
- 이 뷰어에 표시되는 모든 정보를 가져오도록 DMX를 사용하여 *내용 쿼리* 를 작성할 수도 있습니다. 자세한 내용은 [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)를 참조하세요.  
+ 이 뷰어에 표시되는 모든 정보를 가져오도록 DMX를 사용하여 *내용 쿼리* 를 작성할 수도 있습니다. 자세한 내용은 [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서는 각 뷰어에 대해 자세히 설명하고 각 뷰어에서 정보를 해석하는 방법에 대해 알아봅니다.  

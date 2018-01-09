@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 33b53fb1f2015fe83e8803b10be6e981922d90ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services 이전 버전과 호환성 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -127,5 +127,5 @@ using Microsoft.AnalysisServices.Core;
  이전 호환성 수준의 설정은 최신 1200 이상 호환성 수준에서 정확한 해당 항목이 없기 때문에는 DirectQuery 모델의 내부 업그레이드 없습니다. DirectQuery 모드에서 실행 되는 기존 테이블 형식 모델이 있는 경우 있습니다 해야 SQL Server Data Tools에서 모델을 열고 DirectQuery를 해제, 설정 된 **호환성 수준이** 1200 이상으로, 속성 및 DirectQuery 후 다시 구성 속성입니다. 참조 [DirectQuery 모드](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md) 대 한 자세한 내용은 합니다.
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 [Analysis Services 이전 버전과 호환성 (SQL Server 2017)](analysis-services-backward-compatibility-sql2017.md)

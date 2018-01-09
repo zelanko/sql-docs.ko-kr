@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53cfcc73f8bca771607425ac69eff021b8e6a00c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 318b583cc92dcd70c75f0eb04be262a82ecf7d1d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-create-relationships"></a>4단원: 관계 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
 이 단원에 소요되는 예상 시간: **10분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [3 단원: 날짜 테이블로 표시](../analysis-services/lesson-3-mark-as-date-table.md)합니다. 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>기존 관계를 검토하고 새 관계 추가  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  모델 디자이너에서 다이어그램 보기 또는 관계 관리 대화 상자를 사용 하 여 때 다음 관계가 생성 되었는지 확인 하려면 각 테이블에서에서 가져온 AdventureWorksDW 데이터베이스:  
   
-    |활성|테이블|관련 조회 테이블|  
+    |활성|Table|관련 조회 테이블|  
     |----------|---------|------------------------|  
     |예|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |예|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  

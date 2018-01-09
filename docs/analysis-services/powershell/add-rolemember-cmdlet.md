@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 827c8bbc-d48f-4e49-9ea5-abb1380f7623
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 771fefcbd11d53d286b428fe3c069398b32b41aa
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f9aabb7cd07ad5864373e566766c7980dd00f9b0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-rolemember-cmdlet"></a>Add-RoleMember cmdlet
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1.|  
+|위치|1|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/08/2017
 |입력|없음|  
 |출력|InclusionThresholdSetting|  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> add-rolemember –membername “adventure-works\bobh” –database “AdventureWorks” –rolename “Reader”  
@@ -116,7 +116,7 @@ PS SQLSERVER:\sqlas\localhost\default> add-rolemember –membername:“adventure
   
  첫 번째 줄에서는 AWTEST 데이터베이스의 모든 데이터베이스 역할을 파이프라인에 추가합니다. 프롬프트에 $roles를 입력하는 2번 줄에는 역할 배열이 표시됩니다. 3번 줄은 Windows 사용자 adventure-works\bobh를 배열의 첫 번째 역할의 멤버로 추가합니다.  
   
-## <a name="example-3"></a>예 3  
+## <a name="example-3"></a>예제 3  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles=dir  

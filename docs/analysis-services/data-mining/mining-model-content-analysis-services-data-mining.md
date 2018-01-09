@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]디자인 하 고 기본 마이닝 구조에서 데이터를 사용 하 여 마이닝 모델 처리 후 마이닝 모델 완료 되 고이 포함 하는 *마이닝 모델 콘텐츠*합니다. 이 콘텐츠를 사용하여 예측을 만들거나 데이터를 분석할 수 있습니다.  
@@ -84,8 +82,8 @@ ms.lasthandoff: 12/08/2017
   
 |NODE_TYPE ID|노드 레이블|노드 내용|  
 |-------------------|----------------|-------------------|  
-|1.|Model|메타데이터 및 루트 내용 노드입니다. 모든 모델 유형에 적용됩니다.|  
-|2|트리|분류 트리의 루트 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
+|1|Model|메타데이터 및 루트 내용 노드입니다. 모든 모델 유형에 적용됩니다.|  
+|2|trEE|분류 트리의 루트 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |3|내부|트리의 내부 분할 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |4|배포|트리의 터미널 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |5|클러스터|알고리즘을 통해 검색되는 클러스터입니다. 클러스터링 모델 및 시퀀스 클러스터링 모델에 적용됩니다.|  
@@ -221,12 +219,12 @@ ms.lasthandoff: 12/08/2017
   
 |VALUE_TYPE ID|값 레이블|값 형식 이름|  
 |--------------------|-----------------|---------------------|  
-|1.|Missing|사례 데이터에 해당 특성에 대한 값이 포함되지 않았음을 나타냅니다. **Missing** 상태는 값이 있는 특성과 별도로 계산됩니다.|  
+|1|Missing|사례 데이터에 해당 특성에 대한 값이 포함되지 않았음을 나타냅니다. **Missing** 상태는 값이 있는 특성과 별도로 계산됩니다.|  
 |2|Existing|사례 데이터에 해당 특성에 대한 값이 포함되어 있음을 나타냅니다.|  
 |3|연속|특성 값이 연속 숫자 값이며 분산 및 표준 편차와 함께 평균으로 표시할 수 있음을 나타냅니다.|  
 |4|불연속|불연속 값으로 처리되는 숫자 또는 텍스트 값을 나타냅니다.<br /><br /> **참고** 불연속 값도 누락될 수 있지만 누락된 불연속 값은 계산을 수행할 때 다르게 처리됩니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.|  
 |5|불연속화됨|특성에 불연속화 숫자 값이 포함되어 있음을 나타냅니다. 이러한 값은 불연속화 버킷을 나타내는 서식 있는 문자열이 됩니다.|  
-|6|Existing|특성에 연속 숫자 값이 포함되어 있고 이러한 값이 누락 또는 유추된 데이터 및 값에 제공되었음을 나타냅니다.|  
+|6|기존|특성에 연속 숫자 값이 포함되어 있고 이러한 값이 누락 또는 유추된 데이터 및 값에 제공되었음을 나타냅니다.|  
 |7|계수|계수를 나타내는 숫자 값을 가리킵니다.<br /><br /> 계수는 종속 변수의 값을 계산할 때 적용되는 값입니다. 예를 들어 모델에서 나이를 기반으로 소득을 예측하는 회귀 수식을 만들면 나이와 소득을 연결하는 수식에 계수가 사용됩니다.|  
 |8|득점|특성의 득점을 나타내는 숫자 값을 가리킵니다.|  
 |9|통계|회귀 변수의 통계를 나타내는 숫자 값을 가리킵니다.|  
@@ -260,7 +258,7 @@ ms.lasthandoff: 12/08/2017
   
 |노드 수준/특성 및 값|한계 확률|노드 확률|  
 |----------------------------------------|--------------------------|----------------------|  
-|모델 루트<br /><br /> 모든 대상 고객|1.|1.|  
+|모델 루트<br /><br /> 모든 대상 고객|1|1|  
 |성별로 나눈 대상 고객|.5|.5|  
 |성별로 나누고 다시 소득에 따라 세 가지로 나눈 대상 고객|.33|.5 * .33 = .165|  
   

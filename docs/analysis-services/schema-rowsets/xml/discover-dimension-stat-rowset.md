@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]것, 차원 이름, 해당 특성 및 각 특성에 대 한 멤버의 개수를 포함 하는 데이터베이스의 이름을 포함 하 여 차원에 대 한 정보를 제공 합니다. 테이블 형식 모델에서 이 항목은 테이블에 있는 열과 각 열에 있는 값의 수에 해당합니다.  
@@ -36,8 +34,8 @@ ms.lasthandoff: 12/08/2017
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**A S E _**|**DBTYPE_WSTR**|필수임|차원을 포함하는 데이터베이스 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|필수임|차원의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**A S E _**|**DBTYPE_WSTR**|필수|차원을 포함하는 데이터베이스 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|필수|차원의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||차원의 특성 이름입니다.|  
 |**ATTRIBUTE_COUNT**|**DBTYPE_I8**||명명된 특성에 있는 값의 수입니다. 테이블 형식 모델의 경우 값은 항상 테이블의 행 수와 같습니다.|  
   

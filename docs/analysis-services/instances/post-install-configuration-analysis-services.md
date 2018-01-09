@@ -5,14 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining - "setup-install"
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
-- setup-install
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
@@ -21,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6c35dfdbf2dd4eb9e9cae0c99bfc405fbca27380
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 58d6481958138346ee40b9815b8209cb41bf2bae
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>설치 후 구성(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services를 설치한 후 추가 구성 하도록 설정 해야 서버를 완전히 작동 하 고 일반 용도로 사용 가능 하 게 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)참조).  
@@ -47,7 +43,7 @@ ms.lasthandoff: 12/08/2017
 |[Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|설치 중에 서버에서 실행되는 모델의 유형(다차원 또는 테이블 형식)을 결정하는 서버 모드를 선택했습니다. 서버 모드를 잘 모르는 경우 이 항목의 정보를 사용하여 설치된 모드를 확인하세요.|  
 |[Analysis Services 인스턴스 이름 바꾸기](../../analysis-services/instances/rename-an-analysis-services-instance.md)|설명이 포함된 이름은 서버 모드가 서로 다른 여러 인스턴스나 조직의 부서나 팀에서 주로 사용하는 인스턴스를 구별하는 데 도움이 될 수 있습니다. 인스턴스 이름을 설치의 효율적인 관리에 도움이 되는 이름으로 변경하려면 이 항목의 정보를 사용하여 방법을 알아보세요.|  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  클라이언트 라이브러리를 사용하여 Microsoft 응용 프로그램 또는 사용자 지정 응용 프로그램에서 Analysis Services에 연결하는 방법을 알아봅니다. 솔루션 요구 사항에 따라 Kerberos 인증에 대해 서비스를 구성해야 할 수도 있습니다. 도메인 경계를 넘어야 하는 연결에는 HTTP 액세스가 필요합니다. 다음 단계에 대한 지침은 [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md) 을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  

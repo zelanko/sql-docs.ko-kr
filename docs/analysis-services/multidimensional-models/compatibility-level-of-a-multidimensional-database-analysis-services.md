@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0055b4c33a489d13ee7feac39f179505d76d50e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>다차원 데이터베이스의 호환성 수준(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 데이터베이스 호환성 수준 속성에는 데이터베이스의 기능 수준을 결정 합니다. 호환성 수준은 각 모델 유형에 고유합니다. 예를 들어 호환성 수준 **1100** 은 다차원 데이터베이스인지 테이블 형식 데이터베이스인지에 따라 의미가 달라집니다.  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 > [!WARNING]  
 >  데이터베이스 호환성 수준을 더 높여서 설정하는 경우 되돌릴 수 없습니다. 호환성 수준을 **1100**으로 높인 후에는 계속하여 최신 서버에서 데이터베이스를 실행해야 합니다. **1050**으로 롤백할 수 없습니다. **또는** 미만의 서버 버전에서는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 1100 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]데이터베이스를 연결하거나 복원할 수 없습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  데이터베이스 호환성 수준은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. 데이터베이스 호환성 수준을 보거나 설정하려면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상이 있어야 합니다.  
   
  데이터베이스는 로컬 큐브일 수 없습니다. 로컬 큐브는 **CompatibilityLevel** 속성을 지원하지 않습니다.  
@@ -97,7 +94,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  서버 동기화는 동일한 버전과 데이터베이스 호환성 수준을 공유하는 서버에 대해서만 지원됩니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  데이터베이스 호환성 수준을 높인 후 **에서** StringStoresCompatibilityLevel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]속성을 설정할 수 있습니다. 그러면 측정값 및 차원에 대한 문자열 저장소가 증가합니다. 이 기능에 대한 자세한 내용은 [차원 및 파티션에 대한 문자열 저장소 구성](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  

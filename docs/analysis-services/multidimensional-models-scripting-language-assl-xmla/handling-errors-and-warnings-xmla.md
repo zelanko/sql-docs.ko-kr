@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,16 +28,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 510e6bbbc7155c60241b9aee4ed8b33f130652ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>오류 및 경고 처리(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]오류 처리는 필요한 경우 XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) 또는 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 호출이 실행 되지 않습니다, 성공적으로 실행 하지만 오류 또는 경고를 생성 또는 성공적으로 실행 되지만 결과 반환 오류가 있습니다.  
   
-|오류|보고|  
+|Error|보고|  
 |-----------|---------------|  
 |XMLA 메서드 호출이 실행되지 않음|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 오류의 세부 정보가 포함 된 SOAP 오류 메시지를 반환 합니다.<br /><br /> 자세한 내용은 섹션을 참조 하십시오. [SOAP 오류 해결](#handling_soap_faults)합니다.|  
 |메서드 호출이 성공적으로 실행되었으나 오류 또는 경고 발생|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]포함는 [오류](../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) 또는 [경고](../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md) 각 오류 또는 경고에 대 한 요소에서 각각의 [메시지](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md) 의 속성은 [루트](../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 메서드 호출의 결과 포함 하는 요소입니다.<br /><br /> 자세한 내용은 섹션을 참조 하십시오. [오류 및 경고 처리](#handling_errors_and_warnings)합니다.|  
@@ -61,11 +59,11 @@ ms.lasthandoff: 12/08/2017
   
 |열 이름|형식|Description|Null 허용<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|메서드의 성공 또는 실패를 나타내는 코드를 반환합니다. 16 진수 값으로 변환 해야는 **UnsignedInt** 값입니다.|아니요|  
+|**ErrorCode**|**UnsignedInt**|메서드의 성공 또는 실패를 나타내는 코드를 반환합니다. 16 진수 값으로 변환 해야는 **UnsignedInt** 값입니다.|아니오|  
 |**WarningCode**|**UnsignedInt**|경고 조건을 나타내는 코드를 반환합니다. 16 진수 값으로 변환 해야는 **UnsignedInt** 값입니다.|예|  
-|**Description**|**문자열**|오류가 발생한 구성 요소에서 반환한 오류 또는 경고에 대한 텍스트와 설명입니다.|예|  
-|**원본**|**문자열**|오류 또는 경고가 발생한 구성 요소의 이름입니다.|예|  
-|**도움말 파일**|**문자열**|오류 또는 경고를 설명하는 도움말 파일 또는 항목의 경로 또는 URL입니다.|예|  
+|**설명**|**String**|오류가 발생한 구성 요소에서 반환한 오류 또는 경고에 대한 텍스트와 설명입니다.|예|  
+|**원본**|**String**|오류 또는 경고가 발생한 구성 요소의 이름입니다.|예|  
+|**도움말 파일**|**String**|오류 또는 경고를 설명하는 도움말 파일 또는 항목의 경로 또는 URL입니다.|예|  
   
  <sup>1</sup> 고 여부를 나타내는 데이터 필수 항목이 며 반환 되어야 합니다 또는 여부는 데이터는 없어도 열 적용 되지 않는 경우 null 문자열은 사용할 수 있습니다.  
   

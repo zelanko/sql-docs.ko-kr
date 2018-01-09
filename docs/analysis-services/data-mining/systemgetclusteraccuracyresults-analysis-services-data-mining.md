@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ad7e0e0cbb1cf265a9944b81989b59b110602e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 구조와 관련 된 클러스터링 모델에 대 한 교차 유효성 검사 정확도 메트릭을 반환합니다.  
@@ -91,14 +91,14 @@ SystemGetClusterAccuracyResults(
 |PartitionCases|테스트된 사례 수를 나타내는 정수입니다.|  
 |테스트|수행한 테스트 유형입니다.|  
 |이름|테스트에서 반환한 측정값의 이름입니다. 각 모델의 측정값은 모델 유형 및 예측 가능한 값의 유형에 따라 달라집니다.<br /><br /> 각 예측 가능 유형에 대해 반환된 측정값 목록은 [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.<br /><br /> 각 측정값의 정의는 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.|  
-|Value|클러스터 사례 유사도를 나타내는 확률 점수입니다.|  
+|값|클러스터 사례 유사도를 나타내는 확률 점수입니다.|  
   
 ## <a name="remarks"></a>주의  
  다음 표에서는 교차 유효성 검사에 사용되는 마이닝 구조의 데이터를 지정하는 데 사용할 수 있는 값의 예를 보여 줍니다. 교차 유효성 검사에 테스트 사례를 사용하려면 마이닝 구조에 테스트 데이터 집합이 이미 포함되어 있어야 합니다. 마이닝 구조를 만들 때 테스트 데이터 집합을 정의하는 방법에 대한 자세한 내용은 [데이터 집합 학습 및 테스트](../../analysis-services/data-mining/training-and-testing-data-sets.md)를 참조하세요.  
   
 |정수 값|Description|  
 |-------------------|-----------------|  
-|1.|학습 사례만 사용합니다.|  
+|1|학습 사례만 사용합니다.|  
 |2|테스트 사례만 사용합니다.|  
 |3|학습 사례와 테스트 사례를 모두 사용합니다.|  
 |4|잘못된 조합입니다.|  
@@ -121,7 +121,7 @@ CALL SystemGetClusterAccuracyResults (
   
  예제 결과:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|값|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |클러스터 1|||0|5545|Clustering|사례 유사도|0.796514342249313|  
 |클러스터 2|||0|5545|Clustering|사례 유사도|0.732122471228572|  

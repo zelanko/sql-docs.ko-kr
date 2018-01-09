@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,11 +33,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="content-types-data-mining"></a>내용 유형(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]을 두는 실제 데이터 형식과 열에 대 한 마이닝 구조 및 모델에 사용 된 열에 대 한 논리적 내용 유형을 정의할 수 있습니다  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  이 내용 유형은 **Double**, **Long**및 **Date**데이터 형식에서 지원합니다.  
   
-## <a name="table"></a>테이블  
+## <a name="table"></a>Table  
  *Table* 내용 유형은 열에 행과 열이 각각 한 개 이상인 다른 데이터 테이블이 포함되어 있음을 나타냅니다. 이 열은 사례 테이블의 특정 행에 대해 여러 값을 포함할 수 있는데 이러한 값은 모두 부모 사례 레코드와 관련되어 있습니다. 예를 들어 주 사례 테이블에 고객 목록이 포함되어 있는 경우 중첩 테이블을 포함하는 열이 여러 개 있을 수 있습니다. 예를 들어 **ProductsPurchased** 열의 중첩 테이블에는 이 고객이 과거에 구매한 제품이 나열되며 **Hobbies** 열에는 고객의 관심 사항이 나열됩니다.  
   
  이 열의 데이터 형식은 항상 **Table**입니다.  

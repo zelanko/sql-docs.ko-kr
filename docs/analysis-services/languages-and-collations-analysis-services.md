@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: "Analysis Services 테스트"
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 언어 및에서 제공 하는 데이터 정렬 지원 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제. **Language** 및 **Collation** 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/08/2017
   
     -   latin1_general_100  
   
-     Windows 데이터 정렬에서는 언어의 문화적 특성과 언어적 특성을 기준으로 문자를 정렬합니다. Windows에서 데이터 정렬은 공통 알파벳을 공유하는 많은 언어와 문자 정렬 및 비교 규칙들로 인해 함께 사용하는 로캘(또는 언어) 보다 월등히 많습니다. 예를 들어 모든 포르투갈어 및 영어 Windows 로캘을 포함한 33개의 Windows 로캘은 Latin1 코드 페이지(1252)를 사용하고 문자 정렬 및 비교 시 공용 규칙 집합을 따릅니다.  
+     Windows 데이터 정렬에서는 언어의 문화적 특성과 언어적 특성을 기준으로 문자를 정렬합니다. Windows에서 데이터 정렬은 공통 알파벳을 공유하는 많은 언어와 문자 정렬 및 비교 규칙들로 인해 함께 사용하는 로캘(또는 언어) 보다 월등히 많습니다. 예를 들어 모든 포르투갈어 및 영어 Windows 로캘을 포함한 33개의 Windows 로캘은 Latin1 코드 페이지(1252)를 사용하고 문자 정렬 및 비교 시 공용 규칙 집합을 따릅니다.   
   
     > [!NOTE]  
     >  데이터 정렬을 결정할 때는 기본 데이터베이스에서 사용하는 것과 같은 데이터 정렬을 선택해야 합니다. 그러나 선택이 가능한 경우에는 언어적으로 더 정확한 문화권별 정렬 규칙을 제공하는 최신 버전인 _100 버전을 선택해야 합니다.  
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/08/2017
   
  다음 표에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 대한 Windows 데이터 정렬 순서 옵션 및 관련 접미사를 설명합니다.  
   
-|정렬 순서(접미사)|정렬 순서 설명|  
+|정렬 순서(접미사)|정렬 순서 설명 |  
 |---------------------------|----------------------------|  
 |이진(_BIN) 또는 BIN2(_BIN2)|SQL Server에는 두 가지 유형의 이진 데이터 정렬 즉, 이전 BIN 데이터 정렬과 최신 BIN2 데이터 정렬이 있습니다. BIN2 데이터 정렬에서 모든 문자는 코드 포인트에 따라 정렬됩니다. BIN 데이터 정렬에서 첫 번째 문자만 코드 포인트에 따라 정렬되며 나머지 문자는 바이트 값에 따라 정렬됩니다. Intel 플랫폼은 little endian 아키텍처이므로, 유니코드 문자는 항상 바이트 스왑 상태로 저장됩니다.<br /><br /> 유니코드 데이터 형식에서의 이진 데이터 정렬의 경우 데이터 정렬 시 로캘은 고려되지 않습니다. 예를 들어 Latin_1_General_BIN과 Japanese_BIN은 유니코드 데이터에서 사용할 때 동일한 정렬 결과를 생성합니다.<br /><br /> 이진 정렬 순서는 대/소문자와 악센트를 구분합니다. 이진은 가장 빠른 정렬 순서입니다.|  
 |대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 설정할 수 있습니다. 데이터 정렬 관련 대/소문자 설정은 차원, 큐브 및 기타 개체의 ID와 같은 개체 식별자에 적용되지 않습니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.|  
@@ -171,7 +171,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  기존 언어 또는 데이터 정렬을 검색하고 대체 값으로 바꿉니다.  
   
-3.  F5 키를 눌러 스크립트를 실행합니다.  
+3.  F5 키를 눌러 스크립트를 실행합니다.   
   
 4.  큐브를 다시 처리합니다.  
   

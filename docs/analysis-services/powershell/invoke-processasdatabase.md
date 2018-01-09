@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 711ab57846b862479c946dae4ad50402a5876f48
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]수행 하는 **프로세스** 연산이 지정된 된 **데이터베이스** 특정 **ProcessType** 또는 **RefreshType** 에 따라는 내부 메타 데이터 형식입니다.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1.|  
+|위치|1|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1.|  
+|위치|1|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -41,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>큐브 속성-다차원 모델 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브에 큐브 차원 동작에 영향을 설정할 수 있는 속성의 수는 있습니다. 다음 표에서는 이러한 속성을 요약하여 설명합니다.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |**AggregationPrefix**|집계 이름에 사용되는 공통 접두사를 지정합니다.|  
 |**데이터 정렬**|LCID(로캘 ID)와 비교 플래그를 밑줄로 구분하여 지정합니다(예: Latin1_General_C1_AS).|  
 |**DefaultMeasure**|큐브의 기본 측정값을 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.|  
-|**Description**|큐브에 대한 설명을 제공합니다. 이 설명은 클라이언트 응용 프로그램에 노출될 수 있습니다.|  
+|**설명**|큐브에 대한 설명을 제공합니다. 이 설명은 클라이언트 응용 프로그램에 노출될 수 있습니다.|  
 |**ErrorConfiguration**|중복 키, 알 수 없는 키, 오류 제한, 오류 감지 시 수행 동작, 오류 로그 파일 및 Null 키 처리 등에 대한 구성 가능한 오류 처리 설정을 포함합니다.|  
 |**EstimatedRows**|큐브의 예상 행 수를 지정합니다.|  
 |**ID**|큐브의 ID(고유 식별자)를 포함합니다.|  

@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2a122ab3ac28879a1fbcf3790953ba229a285df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 이전에 만든 통합 문서 사용자 환경을 설명 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경 및 업그레이드 하는 방법 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서를이 릴리스에 도입 된 새로운 기능을 취할 수 있습니다. 새 기능에 대한 자세한 내용은 [PowerPivot의 새로운 기능](http://go.microsoft.com/fwlink/?LinkID=203917)을 참조하세요.  
@@ -175,7 +175,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  MSOLAP이 나타날 때까지 아래로 스크롤합니다. 시스템에 설치된 OLAP 공급자 중에 MSOLAP.5가 나열되었는지 확인합니다. MSOLAP | CurVer이 MSOLAP.5로 설정되었는지 확인합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SharePoint 2013으로 파워 피벗 마이그레이션](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [SharePoint용 파워 피벗 업그레이드](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Analysis Services의 새로운 기능](../../../analysis-services/what-s-new-in-analysis-services.md)   

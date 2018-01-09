@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services는 다양 한 유형의 Analysis Services 모델에서 사용 하는 메모리 아키텍처 및 런타임 환경을 결정 하는 서버 배포 모드에서 작동 합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로 설치 된 Analysis Services의 인스턴스를 참조 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint에 로드 하 고 Excel 쿼리 사용 또는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 데이터 모델입니다.  
@@ -119,12 +117,12 @@ ms.lasthandoff: 12/08/2017
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|패키지|마지막|  
-|3516987|1.|6|1.|15|1 월-10-99|  
-|3554790|1.|6|1.|40|1 월-19-99|  
-|3572673|1.|6|1.|34|Jan-27-99|  
-|3600974|1.|6|1.|45|Feb-02-99|  
-|3645541|1.|6|1.|20|Feb-09-99|  
-|3674906|1.|6|1.|36|Feb-17-99|  
+|3516987|1|6|1|15|1 월-10-99|  
+|3554790|1|6|1|40|1 월-19-99|  
+|3572673|1|6|1|34|Jan-27-99|  
+|3600974|1|6|1|45|Feb-02-99|  
+|3645541|1|6|1|20|Feb-09-99|  
+|3674906|1|6|1|36|Feb-17-99|  
   
  이전 테이블의 각 행에 동일한 값에 대 한는 **RouteKey**, **SourceKey**, 및 **TimeKey** 이러한 행은 동일한 큐브 셀을 발생할 수 있음을 나타내는 열입니다.  
   

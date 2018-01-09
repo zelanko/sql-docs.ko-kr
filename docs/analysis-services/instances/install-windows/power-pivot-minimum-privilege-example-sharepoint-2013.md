@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b7ccea7d93562ea9103594e13b078cf9b8ccdf7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: df875446bad5b208301a88e38f6fb73416ab8922
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot 최소 권한 예-SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목에서는 예제를 설명 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 최소 권한 사용한 SharePoint 2013 구성에 대 한 합니다. 이 구성은 세 가지 구성 요소 각각에 대해 다른 계정을 사용하며 계정마다 취소 수준의 권한이 있습니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/08/2017
   
  다음 표에는 최소 권한 구성에 대한 이 예에서 사용된 세 계정이 요약되어 있습니다.  
   
-|범위|이름|  
+|범위|속성|  
 |-----------|----------|  
 |SharePoint 관리자 계정|**SPAdmin**|  
 |SharePoint 팜 계정|**SPFarm**|  

@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b593a2de59682d400c72d5242b078b3b7f2fadb5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>차원 및 파티션에 대한 문자열 저장소 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]차원 특성 또는 파티션의 문자열 저장소에 대 한 4GB 파일 크기 제한을 초과 하는 매우 큰 문자열을 수용 하기 위해 문자열 저장소를 다시 구성할 수 있습니다. 차원 또는 파티션이 이 크기의 문자열 저장소를 포함하는 경우, 연결된(로컬 또는 원격) 개체는 물론 로컬 개체에 대해 차원 또는 파티션 수준에서 **StringStoresCompatibilityLevel** 속성을 변경하여 파일 크기 제한을 해결할 수 있습니다.  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/08/2017
   
  이 속성에 유효한 값은 다음과 같습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**1050**|저장소당 최대 파일 크기가 4GB인 기본 문자열 저장소 아키텍처를 지정합니다.|  
 |**1100**|저장소당 최대 40억 개의 고유 문자열을 지원하는 더 큰 문자열 저장소를 지정합니다.|  

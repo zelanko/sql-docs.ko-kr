@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f4de10c612f0338cecbfbd2e106bee41c6115905
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 기타 클래스 및 메서드
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 섹션에서는 OLAP 또는 데이터 마이닝과 관련 되지 않은 하 고 관리 하거나 개체를 관리 하는 데 유용한 일반적인 클래스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이러한 클래스에서는 저장 프로시저, 추적, 예외, 백업 및 복원 등의 기능을 제공합니다.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/08/2017
   
  보안 =**CopyAll**  
   
-##### <a name="restrictions"></a>제한 사항  
+##### <a name="restrictions"></a>Restrictions  
   
 1.  로컬 파티션은 원격 파티션으로 복원될 수 없습니다.  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/08/2017
   
  AMO는 다양한 문제가 발생할 때 예외를 throw합니다. 다음 표에서는 AMO에서 처리되는 예외의 종류를 보여 줍니다. 예외는 <xref:Microsoft.AnalysisServices.AmoException> 클래스에서 파생됩니다.  
   
-|Exception|파생 위치|Description|  
+|예외|파생 위치|Description|  
 |---------------|------------|-----------------|  
 |<xref:Microsoft.AnalysisServices.AmoException>|기본 클래스|필수 부모 개체가 없거나 요청된 항목이 컬렉션에 없는 경우 응용 프로그램에서 이 예외가 발생합니다.|  
 |<xref:Microsoft.AnalysisServices.OutOfSyncException>|AMOException에서 파생됨|AMO가 엔진과 동기화되어 있지 않고 AMO가 인식할 수 없는 개체 참조가 엔진에서 반환되는 경우 응용 프로그램에서 이 예외가 발생합니다.|  

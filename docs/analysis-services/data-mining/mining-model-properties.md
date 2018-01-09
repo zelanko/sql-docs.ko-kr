@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88e8d798f3e3a37fafab3f06ca6354310508e2b5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-properties"></a>마이닝 모델 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 모델에는 다음과 같은 종류의 속성:  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |**알고리즘**|마이닝 모델에 대한 알고리즘 유형을 설정합니다.|  
 |**AlgorithmParameters**|각 알고리즘 유형에 사용할 수 있는 알고리즘 매개 변수의 값을 설정합니다.|  
-|**필터**|마이닝 모델을 학습하고 테스트할 때 사용하는 데이터에 적용되는 필터를 설정합니다. 필터 정의는 모델에 저장되며 예측 쿼리를 만들거나 모델의 정확도를 테스트할 때 선택적으로 사용할 수 있습니다.<br /><br /> 모델을 학습할 경우 모델 필터는 선택 사항이 아닙니다.|  
+|**Assert**|마이닝 모델을 학습하고 테스트할 때 사용하는 데이터에 적용되는 필터를 설정합니다. 필터 정의는 모델에 저장되며 예측 쿼리를 만들거나 모델의 정확도를 테스트할 때 선택적으로 사용할 수 있습니다.<br /><br /> 모델을 학습할 경우 모델 필터는 선택 사항이 아닙니다.|  
 |**이름**|마이닝 모델의 이름을 설정합니다.|  
 |**AllowDrillThrough**|드릴스루를 마이닝 모델에 설정할지 여부를 지정합니다.|  
   
@@ -60,11 +58,11 @@ ms.lasthandoff: 12/08/2017
   
 |속성|Description|  
 |--------------|-----------------|  
-|**Description**|마이닝 열의 목적을 설명합니다.|  
+|**설명**|마이닝 열의 목적을 설명합니다.|  
 |**이름**|마이닝 모델 열의 이름을 설정합니다. 새 이름을 입력하여 마이닝 모델 열의 별칭을 제공할 수 있습니다.|  
 |**ModelingFlags**|열에 대해 알고리즘별 플래그를 설정합니다.|  
 |**SourceColumnID**|모델 열의 기반이 되는 마이닝 구조 열의 이름을 나타냅니다.<br /><br /> 이 속성은 읽기 전용입니다.|  
-|**사용법**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
+|**Usage**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)   

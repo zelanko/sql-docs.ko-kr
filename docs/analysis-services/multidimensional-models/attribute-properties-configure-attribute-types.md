@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>속성을 특성-특성 유형 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 특성 유형은 업무 기능에 따라 특성을 분류 데 유용 합니다. 다양한 특성 유형이 있으며 이들 대부분은 클라이언트 응용 프로그램에서 특성을 표시하거나 지원하는 용도로 사용됩니다. 하지만 일부 특성 유형이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 특정한 의미를 지니기도 합니다. 예를 들어 일부 특성 유형은 시간 차원에 대한 다양한 달력의 기간을 나타내는 특성을 식별합니다.  
@@ -155,7 +152,7 @@ ms.lasthandoff: 12/08/2017
 |**ShortCaption**|간단한 캡션을 나타냅니다.|  
 |**StateOrProvince**|시/도를 나타냅니다.|  
 |**유틸리티**|유틸리티를 나타냅니다.|  
-|**버전**|버전을 나타냅니다.|  
+|**버전(Version)**|버전을 나타냅니다.|  
 |**WebHtml**|HTML 콘텐츠를 나타냅니다.|  
 |**WebMailAlias**|전자 메일 별칭을 나타냅니다.|  
 |**WebUrl**|URL 주소를 나타냅니다.|  

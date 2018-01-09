@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c5badc4ffe9ddfc52a767f93771436913369ab1f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 913b2cbb8fbf93be08b1854051024492e691bdea
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-stored-procedures"></a>저장 프로시저 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]저장된 프로시저를 모두 사용 하려면 공용 언어 런타임 (CLR) 또는 구성 요소 개체 모델 (COM) 클래스와 연결 되어야 합니다. 클래스는 서버에 설치 해야-의 형태로 일반적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® 동적 연결 라이브러리 (DLL)-서버 또는 어셈블리로 등록 하 고는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스입니다.  

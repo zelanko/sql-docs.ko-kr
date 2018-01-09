@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,13 +22,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="set-partition-writeback"></a>파티션 쓰기 저장 설정
+# <a name="set-partition-writeback"></a>파티션 쓰기 저장(writeback) 설정
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]경우 쓰기 가능 측정값 그룹, 최종 사용자가 큐브 데이터, 원본 데이터의 쓰기 저장 테이블 이라는 개별 테이블의 변경 내용을 저장 위치를 검색 하는 동안 큐브 데이터를 변경할 수 있습니다. 쓰기 가능한 파티션을 검색하는 최종 사용자에게 해당 파티션에 대한 쓰기 저장 테이블의 모든 변경 내용에 대한 최종 결과가 표시됩니다.  
   
  쓰기 저장 데이터를 찾아보거나 삭제할 수 있으며 쓰기 저장 데이터를 파티션으로 변환할 수도 있습니다. 쓰기 가능한 파티션의 경우 큐브 역할을 사용하여 사용자 및 사용자 그룹에 읽기/쓰기 권한을 부여하고 파티션의 특정 셀 또는 셀 그룹에 대한 액세스를 제한할 수 있습니다.  
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/08/2017
  파티션의 쓰기 저장 테이블에 포함된 데이터를 파티션으로 변환할 수 있습니다. 이 절차로 인해 쓰기 저장 테이블이 새 파티션의 팩트 테이블이 됩니다.  
   
 > [!CAUTION]  
->  파티션을 잘못 사용하면 정확하지 않은 큐브 데이터가 만들어질 수 있습니다. 자세한 내용은 [로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)를 참조하세요.  
+>  파티션을 잘못 사용하면 정확하지 않은 큐브 데이터가 만들어질 수 있습니다. 자세한 내용은 [로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)을 참조하세요.  
   
  쓰기 저장 데이터 테이블을 파티션으로 변환하면 파티션이 쓰기 불가능으로 설정됩니다. 파티션의 셀에 대한 모든 제한 없는 읽기/쓰기 정책 및 읽기/쓰기 권한이 해제되며 최종 사용자는 표시된 큐브 데이터를 변경할 수 없게 됩니다. 제한 없는 읽기/쓰기 정책 또는 읽기/쓰기 권한이 해제된 최종 사용자도 큐브를 찾아볼 수는 있습니다. 읽기 권한 및 불확정 읽기 권한은 영향을 받지 않습니다.  
   

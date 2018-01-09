@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55c63a3a3d54bd92f494e11029e6ee450f0ee46c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>단원 3-2-Customer 차원 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]여러 가지 다른 방법으로 유용 성과 큐브에서 차원의 기능을 늘릴 수 있습니다. 이 항목의 태스크에서는 Customer 차원을 수정합니다.  
@@ -227,11 +227,11 @@ ms.lasthandoff: 12/08/2017
   
 2.  다이어그램에서 **City** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 클릭합니다.  
   
-3.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **City**입니다. **관련 특성** 을 **State-Province**로 설정합니다.  
+3.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **City**입니다. **관련 특성**을 **State-Province**로 설정합니다.  
   
 4.  **관계 유형** 목록에서 관계 유형을 **고정**으로 설정합니다.  
   
-    멤버 간의 관계는 시간이 지나도 변경되지 않으므로 관계 유형은 **고정** 입니다. 예를 들어 도시가 다른 시/도 소속으로 변경될 가능성은 거의 없습니다.  
+    멤버 간의 관계는 시간이 지나도 변경되지 않으므로 관계 유형은 **고정**입니다. 예를 들어 도시가 다른 시/도 소속으로 변경될 가능성은 거의 없습니다.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -271,7 +271,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [Product 차원 수정](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [차원 특성 속성 참조](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
 [차원에서 특성 제거](../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
 [특성 이름 변경](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  

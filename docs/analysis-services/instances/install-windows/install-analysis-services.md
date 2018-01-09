@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c988142d87edfe702fa9a0346331c7a1b3b71c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버입니다.  
@@ -72,14 +72,14 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** 는 대/소문자를 구분합니다.  모든 값은 대문자로 표시해야 합니다. 다음 표에는 **ASSERVERMODE**의 유효한 값에 대한 설명이 나와 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|TABULAR|이 값은 기본값입니다. 설정 하지 않으면 **ASSERVERMODE**, 서버가 테이블 형식 모드에 설치 됩니다.|
+|TABULAR|이것은 기본값입니다. 설정 하지 않으면 **ASSERVERMODE**, 서버가 테이블 형식 모드에 설치 됩니다.|
 |MULTIDIMENSIONAL|이 값은 선택 사항입니다.|  
 |POWERPIVOT|이 값은 선택 사항입니다. 실제로 **ROLE** 매개 변수를 설정한 경우 서버 모드는 자동으로 1로 설정되며 **ASSERVERMODE** 를 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 설치에 대한 옵션으로 만듭니다. 자세한 내용은 [명령 프롬프트에서 Power Pivot 설치](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)를 참조하십시오.|  
   
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 인스턴스의 서버 모드 확인](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [테이블 형식 모델링 (SSAS 테이블 형식)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   

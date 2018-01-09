@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54b91c7abf3f9abe366d45d2579818aee1c121a5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fdd5623be105cba70aa9404aba2c4d87cd0574cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]지정 된 수의 교집합 영역으로 마이닝 구조 각 파티션에 대 한 모델을 학습 파티션과 각 파티션에 대 한 정확도 메트릭을 반환 합니다.  
@@ -102,7 +102,7 @@ SystemGetClusterCrossValidationResults(
 |PartitionSize|각 파티션에 포함된 사례 수를 나타내는 정수입니다.|  
 |테스트|수행한 테스트 유형입니다.|  
 |이름|테스트에서 반환한 측정값의 이름입니다. 각 모델의 측정값은 예측 가능한 값의 유형에 따라 달라집니다. 각 측정값의 정의는 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.<br /><br /> 각 예측 가능 유형에 대해 반환된 측정값 목록은 [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.|  
-|Value|지정된 테스트 측정값의 값입니다.|  
+|값|지정된 테스트 측정값의 값입니다.|  
   
 ## <a name="remarks"></a>주의  
  전체 데이터 집합에 대한 정확도 메트릭을 반환하려면 [SystemGetClusterAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)를 사용해야 합니다.  
@@ -129,12 +129,12 @@ CALL SystemGetClusterCrossValidationResults(
   
  예제 결과:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|값|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|클러스터 1|||1.|3025|Clustering|사례 유사도|0.930524511864121|  
+|클러스터 1|||1|3025|Clustering|사례 유사도|0.930524511864121|  
 |클러스터 1|||2|3025|Clustering|사례 유사도|0.919184178430778|  
 |클러스터 1|||3|3024|Clustering|사례 유사도|0.929651120490248|  
-|클러스터 2|||1.|1289|Clustering|사례 유사도|0.922789726933607|  
+|클러스터 2|||1|1289|Clustering|사례 유사도|0.922789726933607|  
 |클러스터 2|||2|1288|Clustering|사례 유사도|0.934865535691068|  
 |클러스터 2|||3|1288|Clustering|사례 유사도|0.924724595688798|  
   

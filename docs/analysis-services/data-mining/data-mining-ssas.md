@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data mining [Analysis Services], about data mining
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ac8390ebf0ffd45388d4fcea1dfbf846146b3b0d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-ssas"></a>데이터 마이닝(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지났습니다 예측 분석에서 선두 2000 버전의 데이터 마이닝을 제공 하 여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝의 조합은 데이터 정리 및 준비, 기계 학습 및 보고를 포함하는 예측 분석에 대한 통합된 플랫폼을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에는 EM 및 K-means 클러스터링 모델, 신경망, 로지스틱 회귀 분석 및 선형 회귀, 의사 결정 트리 및 naive bayes 분류자를 비롯하여 여러 표준 알고리즘이 포함됩니다. 모든 모델은 모델을 개발하고 구체화하고 평가할 수 있도록 시각화를 통합했습니다.  비즈니스 인텔리전스 솔루션에 데이터 마이닝을 통합하면 복잡한 문제에 대한 지능형 의사 결정을 수행할 수 있습니다.  

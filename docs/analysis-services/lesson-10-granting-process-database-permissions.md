@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdeda5d56ce61482e1ba46d697fa8e49ce0ebdef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 71f92a11e25c8e766871fd682e77220bb9d36b57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-10---granting-process-database-permissions"></a>10-데이터베이스 처리 권한 부여 단원
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]인스턴스를 설치한 후 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 모든 멤버는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 해당 인스턴스에서 서버 관리자 역할에서 서버 수준 권한이의 인스턴스 내에서 모든 태스크를 수행할 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 기본적으로 어떠한 사용자에게도 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스의 개체를 관리하거나 볼 수 있는 권한이 없습니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 > 10단원의 완료된 프로젝트는 예제를 다운로드 및 설치하여 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](../analysis-services/install-sample-data-and-projects.md)을(를) 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [역할 및 권한&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

@@ -5,13 +5,10 @@ ms.date: 06/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e6b67ada589c925b8737ed13ba6c07f93a75f12c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 버전에서 지원하는 Analysis Services 기능
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 
 ## <a name="analysis-services-servers"></a>Analysis Services (서버)
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |확장 가능 공유 데이터베이스|예||||||예|  
 |데이터베이스 백업/복원 및 연결/분리|예|예|||||예|  
@@ -43,12 +40,12 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="tabular-models"></a>테이블 형식 모델 
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |계층 구조|예|예|||||예|  
 |KPI|예|예|||||예|  
 |큐브 뷰|예||||||예|  
-|번역|예|예|||||예|  
+|Translations|예|예|||||예|  
 |DAX 계산, DAX 쿼리, MDX 쿼리|예|예|||||예|  
 |행 수준 보안|예|예|||||예|  
 |여러 파티션|예||||||예|  
@@ -57,13 +54,13 @@ ms.lasthandoff: 12/08/2017
 
 ## <a name="multidimensional-models"></a>다차원 모델 
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |반가산적 측정값|예|아니오 <sup>1</sup>|||||예|  
-|계층 구조|예|예|||||예|  
+|계층|예|예|||||예|  
 |KPI|예|예|||||예|  
 |큐브 뷰|예||||||예|  
-|작업|예|예|||||예|  
+|동작|예|예|||||예|  
 |계정 인텔리전스|예|예|||||예|  
 |시간 인텔리전스|예|예|||||예|  
 |사용자 지정 롤업|예|예|||||예|  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
 |고급 계층 유형(부모-자식 및 비정형 계층 구조)|예|예|||||예|  
 |고급 차원(참조 차원, 다 대 다 차원)|예|예|||||예|  
 |연결된 측정값 및 차원|예|예  <sup>2</sup> |||||예|  
-|번역|예|예|||||예|  
+|Translations|예|예|||||예|  
 |Aggregations|예|예|||||예|  
 |여러 파티션|예|예, 최대 3|||||예|  
 |자동 관리 캐싱|예||||||예|  
@@ -95,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="power-pivot-for-sharepoint"></a>SharePoint용 PowerPivot  
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |공유 서비스 아키텍처를 기반으로 하는 SharePoint 팜 통합|예||||||예|  
 |사용 보고|예||||||예|  
@@ -106,7 +103,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-mining"></a>데이터 마이닝  
   
-|기능 이름|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능 이름|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |표준 알고리즘|예|예|||||예|  
 |데이터 마이닝 도구(마법사, 편집기, 쿼리 작성기)|예|예|||||예|  

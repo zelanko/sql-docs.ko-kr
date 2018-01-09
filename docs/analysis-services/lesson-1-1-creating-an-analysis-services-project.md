@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ebc25a68b66605dd82de6107011bcce34a2a0557
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9cdbd57f570c79b3efaabf5d07fb09ea4cc20c8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>단원 1-1-Analysis Services 프로젝트 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]다음 작업을 사용 하 여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 새로 만들려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 프로젝트 **Analysis Services Tutorial**에 따라는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 합니다. *프로젝트* 는 관련된 개체의 모음입니다. 프로젝트는 솔루션 내에 있으며 솔루션은 하나 이상의 프로젝트를 포함합니다. 자세한 내용은 [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)를 참조하세요.  

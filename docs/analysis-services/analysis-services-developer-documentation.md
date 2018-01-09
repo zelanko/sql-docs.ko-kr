@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 개발자 설명서
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services에서 거의 모든 개체 및 작업은 프로그래밍이 가능 하며 종종 둘 이상의 접근 방식을 선택할 수 있습니다.  옵션에는 관리 코드 작성, 스크립트 또는.NET framework를 사용 하 여 솔루션 요구 사항을 배제 하는 경우에 MSOLAP 등 XMLA 개방형 표준을 사용 하 여 포함 됩니다.

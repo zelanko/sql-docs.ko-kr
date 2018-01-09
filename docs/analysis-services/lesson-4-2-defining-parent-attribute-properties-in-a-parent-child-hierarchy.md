@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d8a8e45d9785d9eb4b449ad36689aadd8e454c6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9f8206a854379bd95a41d271d3c5f9dc45bd200c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Lesson 4-2-부모-자식 계층에서 부모 특성 속성 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]부모-자식 계층은 두 개의 테이블 열을 기반으로 하는 차원의 계층입니다. 이 두 열은 차원의 멤버 간 계층 관계를 정의합니다. *멤버 키 열*이라는 첫 번째 열은 각 차원 멤버를 식별합니다. *부모 열*이라는 다른 하나의 열은 각 차원 멤버의 부모를 식별합니다. 부모 특성의 **NamingTemplate** 속성은 부모-자식 계층의 각 수준 이름을 지정하고 **MembersWithData** 속성은 부모 멤버의 데이터 표시 여부를 지정합니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 7.  Excel 아이콘을 클릭한 다음 연결을 사용하도록 설정할지 묻는 메시지가 나타나면 **사용** 을 클릭합니다.  
   
-8.  피벗 테이블 필드 목록에서 **Reseller Sales**를 확장합니다. **Reseller Sales-Sales Amount** 를 값 영역으로 끌어옵니다.  
+8.  피벗 테이블 필드 목록에서 **Reseller Sales**를 확장합니다. **Reseller Sales-Sales Amount**를 값 영역으로 끌어옵니다.  
   
 9. 피벗 테이블 필드 목록에서 **Employee**를 확장한 다음 **Employees** 계층을 **행** 영역으로 끌어옵니다.  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>특성이 수정된 Employee 차원 찾아보기  
   
-1.  **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
 2.  배포가 성공적으로 완료되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너로 전환한 후 **브라우저** 탭의 도구 모음에서 **다시 연결** 을 클릭합니다.  
   

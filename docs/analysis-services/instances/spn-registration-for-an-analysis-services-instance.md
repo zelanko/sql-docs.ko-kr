@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>Analysis Services 인스턴스에 대한 SPN 등록
+# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]서비스 사용자 이름 (SPN) Kerberos를 사용 하 여 클라이언트 및 서비스 id를 상호 인증 하는 경우 Active Directory 도메인의 서비스 인스턴스를 고유 하 게 식별 합니다. SPN은 서비스 인스턴스가 실행되는 로그온 계정과 연결되어 있습니다.  
   
  Kerberos  인증을 통해 Analysis  Services에 연결하는 클라이언트 응용 프로그램의 경우 Analysis  Services  클라이언트 라이브러리는 지정된 Analysis  Services  릴리스에서 고정된 잘 알려진 변수(예:  서비스 클래스)  및 연결 문자열의 호스트 이름을 사용하여 SPN을 생성합니다.  

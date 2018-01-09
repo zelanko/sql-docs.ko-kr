@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 36c55916f0f1b403ddf248c975151b638a7ccb86
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9fe63b761a9834e53832c1525d8d77ea00a9a508
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *마이닝 모델* 알고리즘은 데이터를을 적용 단순한 알고리즘 또는 메타 데이터 컨테이너가 만들어집니다: 데이터, 통계 및 새 데이터를 예측을 생성 하 고 추론에 적용할 수 있는 패턴의 집합이 에 대 한 관계.  
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/08/2017
   
 -   DMX ALTER STRUCTURE ADD MODEL 문 - 기존 구조에 새 마이닝 모델을 추가하는 데 사용할 수 있습니다. 동일한 데이터 집합을 기반으로 하는 다양한 모델을 시험하려면 이 방법을 사용합니다.  
   
- AMO 또는 XML/A를 사용하거나 Excel용 데이터 마이닝 클라이언트 등의 다른 클라이언트를 사용하여 프로그래밍 방식으로 마이닝 모델을 만들 수도 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
+ AMO 또는 XML/A를 사용하거나 Excel용 데이터 마이닝 클라이언트 등의 다른 클라이언트를 사용하여 프로그래밍 방식으로 마이닝 모델을 만들 수도 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
  [마이닝 모델 아키텍처](#bkmk_mdlArch)  
   
@@ -147,7 +145,7 @@ ms.lasthandoff: 12/08/2017
 |----------|----------|  
 |마이닝 모델 추가 및 삭제|[기존 마이닝 구조에 마이닝 모델 추가](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [마이닝 구조에서 마이닝 모델 삭제](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
 |마이닝 모델 열 작업|[마이닝 모델에서 열 제외](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [모델 열의 별칭 만들기](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [마이닝 모델에서 열의 분할 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [모델에서 회귀 변수로 사용할 열 지정](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|모델 속성 변경|[마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [마이닝 모델에 필터 적용](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [알고리즘 매개 변수 확인 또는 변경](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
+|모델 속성 변경|[마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [마이닝 모델에 필터 적용](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [알고리즘 매개 변수 보기 또는 변경](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
 |복사. 모델 복사, 이동 또는 관리|[마이닝 모델 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [마이닝 모델의 뷰 복사](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT&#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT&#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |모델에 데이터 채우기 또는 모델의 데이터 업데이트|[마이닝 모델 처리](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |OLAP 모델 작업|[데이터 마이닝 차원 만들기](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 605c4ae52c6e6f51ff03eb5ff161603b9fb082e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1d080c99d9d3fc1a1fcdfb8e6a4e183850462f94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-8-defining-actions"></a>8단원: 동작 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 단원에서는 배웁니다의 동작을 정의 하 여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트. 동작은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 저장되며 클라이언트 응용 프로그램에 통합되고 사용자가 시작할 수 있는 MDX(Multidimensional Expressions) 문입니다.  
@@ -35,13 +35,13 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |명령줄|명령 프롬프트에서 명령을 실행합니다.|  
-|데이터 집합|데이터 집합을 클라이언트 응용 프로그램으로 반환합니다.|  
+|Dataset|데이터 집합을 클라이언트 응용 프로그램으로 반환합니다.|  
 |드릴스루|행 집합을 반환하기 위해 클라이언트가 실행하는 드릴스루 문을 식으로 반환합니다.|  
 |Html|인터넷 브라우저에서 HTML 스크립트를 실행합니다.|  
 |소유|이 표에 나열되지 않은 인터페이스를 사용하여 작업을 수행합니다.|  
 |보고서|매개 변수가 있는 URL 기반 요청을 보고서 서버로 전송하고 보고서를 클라이언트 응용 프로그램으로 반환합니다.|  
 |행 집합|행 집합을 클라이언트 응용 프로그램으로 반환합니다.|  
-|문|OLE DB 명령을 실행합니다.|  
+|인수를 제거합니다.|OLE DB 명령을 실행합니다.|  
 |URL|동적 웹 페이지를 인터넷 브라우저로 표시합니다.|  
   
 동작을 사용하여 응용 프로그램을 시작하거나 선택한 항목의 컨텍스트 내에서 다른 작업을 수행할 수 있습니다. 자세한 내용은 [동작&#40;Analysis Services - 다차원 데이터&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)및 [다차원 모델의 동작](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>다음 단원  
 [9단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
 [다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [동작&#40;Analysis Services - 다차원 데이터&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  

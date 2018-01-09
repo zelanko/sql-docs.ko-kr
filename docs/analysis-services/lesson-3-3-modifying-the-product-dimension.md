@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6ff0c5e509a40c84850e281d2ab9f41246c4880
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>단원 3-3-Product 차원 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 항목의 태스크를 사용 하 여 명명된 된 계산, 제품 라인에 대 한 보다 설명적인 이름을 제공 하 고, Product 차원에 계층 구조를 정의 하 고, 계층의 (All) 멤버 이름을 지정 합니다. 또한 특성을 표시 폴더로 그룹화합니다.  
@@ -165,7 +165,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  다이어그램에서 **Model Name** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 클릭합니다.  
   
-3.  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Model Name**입니다. **관련 특성** 을 **Product Line**으로 설정합니다.  
+3.  **특성 관계 만들기** 대화 상자에서 **원본 특성**은 **Model Name**입니다. **관련 특성** 을 **Product Line**으로 설정합니다.  
   
     멤버 간의 관계는 시간이 지나면 변경될 수 있으므로 **관계 유형** 목록에서 관계 유형을 **유동** 으로 설정된 상태로 둡니다. 예를 들어 제품 모델은 나중에 다른 제품 라인으로 이전될 수 있습니다.  
   

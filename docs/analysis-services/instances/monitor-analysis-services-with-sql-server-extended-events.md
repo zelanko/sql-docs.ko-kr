@@ -5,13 +5,10 @@ ms.date: 12/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 58e23a9d4732274b84c325f6ac8424b0330d8dc4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]확장 이벤트 (*xEvents*)은 경량 추적 및 성능 모니터링 매우 적은 시스템 리소스를 사용 하 여 시스템을는 프로덕션 및 테스트 서버에서 문제를 진단 하는 데 이상적인 도구입니다. 또한, 확장성이 뛰어나고 구성 가능하며 SQL Server 2016에서는 새롭게 기본적으로 제공되는 도구 지원을 통해 쉽게 사용할 수 있습니다. SQL Server Management Studio의 Analysis Services 인스턴스에 연결에서 SQL Server Profiler를 사용하는 방식과 유사하게 실시간 추적을 구성, 실행 및 모니터링할 수 있습니다. 향상된 도구가 추가되어 SQL Server Profiler에서 xEvent를 좀 더 적절하게 교체하고 데이터베이스 엔진 및 Analysis Services 작업에서 문제를 좀 더 대칭적으로 진단할 수 있습니다.  

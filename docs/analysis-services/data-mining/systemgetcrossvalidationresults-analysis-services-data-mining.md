@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5818339f5bcc44770cdf728d93deb1b41b9bf618
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]지정 된 수의 교집합 영역으로 마이닝 구조 각 파티션에 대 한 모델을 학습 파티션과 각 파티션에 대 한 정확도 메트릭을 반환 합니다.  
@@ -143,7 +143,7 @@ SystemGetCrossValidationResults(
 |PartitionSize|각 파티션에 포함된 사례 수를 나타내는 정수입니다.|  
 |테스트|수행된 테스트의 범주입니다. 범주 및 각 범주에 포함된 테스트에 대한 설명은 [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.|  
 |이름|테스트에서 반환한 측정값의 이름입니다. 각 모델의 측정값은 예측 가능한 값의 유형에 따라 달라집니다. 각 측정값의 정의는 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.<br /><br /> 각 예측 가능 유형에 대해 반환된 측정값 목록은 [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.|  
-|Value|지정된 테스트 측정값의 값입니다.|  
+|값|지정된 테스트 측정값의 값입니다.|  
   
 ## <a name="remarks"></a>주의  
  전체 데이터 집합에 대한 정확도 메트릭을 반환하려면 [SystemGetAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)를 사용하여 클러스터링 모델의 교차 유효성 검사를 실행할 수 있습니다.  
@@ -172,22 +172,22 @@ NULL
   
  예제 결과:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|값|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Target Mail DT|Bike Buyer|1.|1.|500|분류|참 긍정|144|  
-|Target Mail DT|Bike Buyer|1.|1.|500|분류|거짓 긍정|105|  
-|Target Mail DT|Bike Buyer|1.|1.|500|분류|참 부정|186|  
-|Target Mail DT|Bike Buyer|1.|1.|500|분류|거짓 부정|65|  
-|Target Mail DT|Bike Buyer|1.|1.|500|Likelihood|로그 점수|-0.619042807138345|  
-|Target Mail DT|Bike Buyer|1.|1.|500|Likelihood|리프트|0.0740963734002671|  
-|Target Mail DT|Bike Buyer|1.|1.|500|Likelihood|제곱 평균 오차|0.346946279977653|  
-|Target Mail DT|Bike Buyer|1.|2|500|분류|참 긍정|162|  
-|Target Mail DT|Bike Buyer|1.|2|500|분류|거짓 긍정|86|  
-|Target Mail DT|Bike Buyer|1.|2|500|분류|참 부정|165|  
-|Target Mail DT|Bike Buyer|1.|2|500|분류|거짓 부정|87|  
-|Target Mail DT|Bike Buyer|1.|2|500|Likelihood|로그 점수|-0.654117781086519|  
-|Target Mail DT|Bike Buyer|1.|2|500|Likelihood|리프트|0.038997399132084|  
-|Target Mail DT|Bike Buyer|1.|2|500|Likelihood|제곱 평균 오차|0.342721344892651|  
+|Target Mail DT|Bike Buyer|1|1|500|분류|참 긍정|144|  
+|Target Mail DT|Bike Buyer|1|1|500|분류|거짓 긍정|105|  
+|Target Mail DT|Bike Buyer|1|1|500|분류|참 부정|186|  
+|Target Mail DT|Bike Buyer|1|1|500|분류|거짓 부정|65|  
+|Target Mail DT|Bike Buyer|1|1|500|Likelihood|로그 점수|-0.619042807138345|  
+|Target Mail DT|Bike Buyer|1|1|500|Likelihood|리프트|0.0740963734002671|  
+|Target Mail DT|Bike Buyer|1|1|500|Likelihood|제곱 평균 오차|0.346946279977653|  
+|Target Mail DT|Bike Buyer|1|2|500|분류|참 긍정|162|  
+|Target Mail DT|Bike Buyer|1|2|500|분류|거짓 긍정|86|  
+|Target Mail DT|Bike Buyer|1|2|500|분류|참 부정|165|  
+|Target Mail DT|Bike Buyer|1|2|500|분류|거짓 부정|87|  
+|Target Mail DT|Bike Buyer|1|2|500|Likelihood|로그 점수|-0.654117781086519|  
+|Target Mail DT|Bike Buyer|1|2|500|Likelihood|리프트|0.038997399132084|  
+|Target Mail DT|Bike Buyer|1|2|500|Likelihood|제곱 평균 오차|0.342721344892651|  
   
 ## <a name="requirements"></a>요구 사항  
  교차 유효성 검사는 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 해당)에서만 사용할 수 있습니다.  

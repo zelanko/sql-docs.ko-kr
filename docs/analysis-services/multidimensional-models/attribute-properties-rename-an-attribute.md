@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da652fbd1c97f09e35c67fba4c7bec798f67a38f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a06c4a6c36c6955d1cd8d174738436b9c9bae734
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---rename-an-attribute"></a>속성을 특성-특성 이름 변경
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에 있는 특성의 이름 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 정의한 해당 **이름** 속성입니다. 특성 이름을 바꾸려면 **에 있는 차원 디자이너의** 차원 구조 **탭의** 특성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]창에서 특성을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭합니다. **특성** 창이 표 뷰로 되어 있으면 표에서 직접 특성 이름을 클릭하고 편집합니다. 특성을 선택하고 **속성** 창에서 **Name** 속성을 설정할 수도 있습니다.  

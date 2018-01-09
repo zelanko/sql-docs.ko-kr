@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0215c2ebdd4a98607dcb60418e468fbe02f6663f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7c958feff44c2947c74f51eaec94abcd4ca8e543
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>파워 피벗 모드에서 Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목의 절차를 안내해 단일 서버에 설치 하는 단계는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 배포 모드입니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/08/2017
   
      **고:** 이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 백 엔드 서비스의 설치에 대해 설명합니다.  
   
--   **중간 계층:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 포함한 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경 향상. 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하세요.  
+-   **중간 계층:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 포함한 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경 향상. 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
     -   [SharePoint용 Power Pivot 추가 기능 설치 또는 제거(SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
@@ -294,7 +294,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_multiple_servers"></a> 단일 서버 설치 그 이상 – Microsoft SharePoint용 Power Pivot  
  **WFE(웹 프런트 엔드)** 또는 **중간 계층:**더 큰 SharePoint 팜에 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하고 팜에 추가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 설치하려면 각 SharePoint 서버에서 설치 관리자 패키지 **spPowerPivot16.msi(SharePoint 2016) 또는 spPowerPivot.msi(SharePoint 2013)** 를 실행해야 합니다. spPowerPivot16.msi 또는 spPowerPivot.msi는 필요한 데이터 공급자와 SharePoint 2016 또는 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
   
- 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하세요.  
+ 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   

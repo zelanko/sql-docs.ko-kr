@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03ae0a4bfe3c764cc0d541f99714be872029e867
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e89ab9340c73e1ae09ec66cb360e23cbe28cd9b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>7단원: KPI(핵심 성과 지표) 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 단원에서는 핵심 성과 지표 (Kpi)을 정의 하에서 배우 프로그램 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트. KPI는 비즈니스를 측정하는 서버 쪽 계산을 정의하기 위한 프레임워크를 제공하며 결과 정보의 표시 방식을 표준화합니다. KPI는 보고서, 포털 및 대시보드에 표시할 수 있으며 데이터 액세스 API, [!INCLUDE[msCoName](../includes/msconame-md.md)] 도구 및 타사 도구를 통해 표시할 수 있습니다. KPI는 정규 측정값 및 기타 MDX(Multidimensional Expressions) 식에 대한 메타데이터 래퍼입니다. 자세한 내용은 [다차원 모델의 KPI&#40;핵심 성과 지표&#41;](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)를 참조하세요.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="next-lesson"></a>다음 단원  
 [8단원: 동작 정의](../analysis-services/lesson-8-defining-actions.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
 [다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [다차원 모델의 KPI&#40;핵심 성과 지표&#41;](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)  

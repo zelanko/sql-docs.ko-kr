@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -37,11 +35,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bab78f642342cd070ecde62a37d65972a17a109f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7e870e18ae05b3daddf9e8230079bec87bb29e2d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-dimension-properties---types"></a>데이터베이스 차원 속성 형식
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**형식** 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대 한 정보를 제공 합니다. 일부 경우에는 **형식** 설정은 클라이언트 응용 프로그램에 대 한 지침을 제공 하며 선택적입니다. 다른 경우에서와 같은 **계정** 또는 **시간** 차원은 **형식** 차원과 차원의 특성에 대 한 속성 설정이 특정 서버 기반 동작을 결정 및 큐브의 특정 동작을 구현 해야 할 수 있습니다. 예를 들어는 **형식** 차원의 속성 설정할 수 있습니다 **계정** 표준 차원에 계정 특성이 포함 되어는 클라이언트 응용 프로그램에 알립니다. 시간, 계정 및 통화 차원에 대 한 자세한 내용은 참조 [날짜 유형 차원 만들기](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [부모-자식 유형 차원의 재무 계정 만들기](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), 및 [통화 만들기 차원 입력](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)합니다.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 |Time|해당 특성이 연도, 반기, 분기, 월 및 일과 같은 기간을 나타내는 차원입니다.|  
 |조직|해당 특성이 직원이나 자회사와 같은 조직 정보를 나타내는 차원입니다.|  
 |지리|해당 특성이 도시 또는 우편 번호와 같은 지리적 정보를 나타내는 차원입니다.|  
-|BillOfMaterials|해당 특성이 제품의 부품 목록 같은 재고 또는 제조 정보를 나타내는 차원입니다.|  
+|제품 구성 정보|해당 특성이 제품의 부품 목록 같은 재고 또는 제조 정보를 나타내는 차원입니다.|  
 |계정|해당 특성이 재무 보고용 계정 차트를 나타내는 차원입니다.|  
 |고객|해당 특성이 고객 또는 연락처 정보를 나타내는 차원입니다.|  
 |제품|해당 특성이 제품 정보를 나타내는 차원입니다.|  
