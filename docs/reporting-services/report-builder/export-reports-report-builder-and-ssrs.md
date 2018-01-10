@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10437"
@@ -18,13 +16,13 @@ ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: be5b29f8f01eaaee1f1ea225ec47c0665762984f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ed5a8e47a39df2d7d521181fff55fe6734062ce8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
 
@@ -124,8 +122,8 @@ ms.lasthandoff: 12/05/2017
 |형식|렌더링 확장 프로그램 유형|Description|  
 |------------|------------------------------|-----------------|  
 |Acrobat(PDF) 파일|하드 페이지 나누기|PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 6 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.<br /><br /> 자세한 내용은 [PDF 파일로 내보내기](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)를 참조하세요.|  
-|Atom|데이터|Atom 렌더링 확장 프로그램은 보고서에서 Atom 규격 데이터 피드를 생성합니다. 데이터 피드는 Atom 규격 데이터 피드를 사용할 수 있는 파워 피벗 또는 Power BI와 같은 응용 프로그램을 통해 읽을 수 있고 교환할 수 있습니다.<br /><br /> 이 확장 프로그램의 출력 형식은 보고서에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서입니다. 이 문서에서는 보고서의 각 데이터 영역에 대한 데이터 피드가 하나 이상 생성되는데, 데이터 영역의 유형과 데이터 영역에 표시되는 데이터에 따라 여러 개의 데이터 피드가 생성될 수 있습니다.<br /><br /> 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.|  
-|CSV|데이터|CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 보고서의 데이터를 결합하여 읽기 쉽고 많은 응용 프로그램과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.<br /><br /> 자세한 내용은 [CSV 파일로 내보내기](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.|  
+|Atom|data|Atom 렌더링 확장 프로그램은 보고서에서 Atom 규격 데이터 피드를 생성합니다. 데이터 피드는 Atom 규격 데이터 피드를 사용할 수 있는 파워 피벗 또는 Power BI와 같은 응용 프로그램을 통해 읽을 수 있고 교환할 수 있습니다.<br /><br /> 이 확장 프로그램의 출력 형식은 보고서에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서입니다. 이 문서에서는 보고서의 각 데이터 영역에 대한 데이터 피드가 하나 이상 생성되는데, 데이터 영역의 유형과 데이터 영역에 표시되는 데이터에 따라 여러 개의 데이터 피드가 생성될 수 있습니다.<br /><br /> 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.|  
+|CSV|data|CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 보고서의 데이터를 결합하여 읽기 쉽고 많은 응용 프로그램과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.<br /><br /> 자세한 내용은 [CSV 파일로 내보내기](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.|  
 |EXCELOPENXML|소프트 페이지 나누기|보고서를 검토할 때 내보내기 메뉴에 "Excel"로 표시됩니다. Excel 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013과 호환되는 Excel 문서(.xlsx)로 렌더링합니다.  자세한 내용은 [Microsoft Excel로 내보내기](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.|  
 |PowerPoint|하드 페이지 나누기|PowerPoint 렌더링 확장 프로그램은 보고서를 PowerPoint 2013과 호환되는 PowerPoint 문서(.pptx)로 렌더링합니다.|  
 |TIFF 파일|하드 페이지 나누기|이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다.<br /><br /> 이미지 렌더링 확장 프로그램은 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]에서 지원하는 BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF 형식으로 파일을 생성할 수 있습니다.<br /><br /> 자세한 내용은 [이미지 파일로 내보내기](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)를 참조하세요.|  
@@ -147,7 +145,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Word  
   
--   Excel  
+-   내보내기  
   
 -   Image/TIFF  
   

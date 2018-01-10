@@ -8,22 +8,22 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dd0c562ba03e3a5b5d92530a40ad58b89e75756c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 028a5103175b31e4928c474617f9c8199df0facc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
+# <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서의 지도
 지도는 지리 데이터를 시각화하는 유용한 방법입니다. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 은(는) 다양한 유형의 지도 시각화를 제공하며, 대륙 및 많은 국가의 지도를 기본으로 제공합니다. [사용자 지정 지도를 업로드하여 사용](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)할 수도 있습니다.   
   
 ## <a name="types-of-maps"></a>지도 유형  
@@ -85,7 +85,7 @@ SQL Server 모바일 보고서는 다양한 상황에 유용한 세 가지 다�
      
 8. 왼쪽 위 모서리에서 **저장** 아이콘을 선택하고 사용자의 컴퓨터 **Save Locally** (로컬에 저장)하거나 **Save to Server**(서버에 저장)합니다.  
   
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>관련 항목:  
 -  [Reporting Services 모바일 보고서의 사용자 지정 맵](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   

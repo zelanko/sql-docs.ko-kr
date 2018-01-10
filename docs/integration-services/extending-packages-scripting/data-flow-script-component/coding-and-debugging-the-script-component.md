@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1df48e67801190ccef4a6e5dce7de92fc5a5bca2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8874b50730037fee6f369c99d5ce860f5f91c95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-and-debugging-the-script-component"></a>스크립트 구성 요소 코딩 및 디버깅
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 메타데이터 디자인 모드와 코드 디자인 모드의 두 가지 모드가 있습니다. **스크립트 변환 편집기**를 열면 구성 요소가 메타데이터 디자인 모드로 전환됩니다. 여기서는 메타데이터를 구성하고 구성 요소 속성을 설정할 수 있습니다. 메타데이터 디자인 모드에서 스크립트 구성 요소 속성을 설정하고 입/출력을 구성한 후에는 코드 디자인 모드로 전환하여 사용자 지정 스크립트를 작성할 수 있습니다. 메타데이터 디자인 모드 및 코드 디자인 모드에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요.  
@@ -175,7 +175,7 @@ public class ScriptMain : UserComponent
 |패키지 기능|액세스 방법|  
 |---------------------|-------------------|  
 |변수|**ScriptMain** 클래스의 **Variables** 속성을 통해 노출되는 **ComponentWrapper** 프로젝트 항목의 **Variables** 컬렉션 클래스에서 명명되고 형식화된 접근자 속성을 사용합니다.<br /><br /> **PreExecute** 메서드는 읽기 전용 변수만 액세스할 수 있습니다. **PostExecute** 메서드는 읽기 전용 변수 및 읽기/쓰기 변수 모두에 액세스할 수 있습니다.|  
-|연결|**ScriptMain** 클래스의 **Connections** 속성을 통해 노출되는 **ComponentWrapper** 프로젝트 항목의 **Connections** 컬렉션 클래스에서 명명되고 형식화된 접근자 속성을 사용합니다.|  
+|Connections|**ScriptMain** 클래스의 **Connections** 속성을 통해 노출되는 **ComponentWrapper** 프로젝트 항목의 **Connections** 컬렉션 클래스에서 명명되고 형식화된 접근자 속성을 사용합니다.|  
 |이벤트|**ScriptMain** 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 속성과 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 **Fire\<X>** 메서드를 사용하여 이벤트를 발생시킵니다.|  
 |로깅|**ScriptMain** 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 메서드를 사용하여 로깅을 수행합니다.|  
   
@@ -214,7 +214,7 @@ public class ScriptMain : UserComponent
   
 -   blogs.msdn.com의 블로그 항목 - [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](http://go.microsoft.com/fwlink/?LinkId=215661)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
   
   

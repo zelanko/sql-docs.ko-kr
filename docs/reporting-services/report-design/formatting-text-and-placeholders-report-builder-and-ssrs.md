@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,13 +22,13 @@ ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e3dbe51460c639d7574df42ad9d0a275e80cdbd5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18a17ad4befad58d70db0f52f08fe9c8bea98e06
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>텍스트 및 자리 표시자 서식 지정(보고서 작성기 및 SSRS)
   입력란은 데이터 영역 안에 있는 보고서 항목 또는 개별 셀로서 텍스트, 계산 필드, 데이터베이스의 필드에 대한 포인터 또는 이 세 항목의 조합을 포함하고 있습니다. 글꼴 및 색을 혼합하고, 굵게 및 기울임꼴 스타일을 추가하고, 맞춤 및 내어쓰기와 같은 단락 스타일을 사용할 수 있습니다. 또한 입력란 전체의 형식을 지정하거나 입력란 내에 있는 특정 텍스트, 숫자, 식 또는 필드의 형식을 지정할 수 있습니다.  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="aligning-horizontal-text-using-general"></a>일반을 사용하여 가로 텍스트 맞춤  
  **입력란 속성** 대화 상자의 **맞춤** 에서 텍스트를 가로로 어떻게 맞출 것인지를 지정할 수 있습니다. 맞춤 값을 지정하지 않는 경우 맞춤의 기본값은 **기본값**입니다. 즉, 자리 표시자 값의 필드 유형에 따라 텍스트를 맞춥니다. 문자열이 아닌 값(즉, 숫자가 아닌 값)으로 계산되는 식을 지정하면 텍스트를 오른쪽에 맞춥니다. 식이 문자열 값(예: 숫자)으로 평가되면 텍스트를 왼쪽에 맞춥니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

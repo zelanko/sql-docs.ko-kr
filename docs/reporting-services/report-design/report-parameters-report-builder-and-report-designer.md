@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,13 +22,13 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: "41"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2daf7d7d92e9e0fe3163a06a08d85f5710a8606f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 및 보고서 디자이너에서 만드는 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
@@ -149,13 +147,13 @@ ms.lasthandoff: 12/05/2017
   
 |속성|Description|  
 |--------------|-----------------|  
-|이름|매개 변수의 대/소문자를 구분하는 이름을 입력합니다. 이 이름은 문자로 시작해야 하고 문자, 숫자 및 밑줄(_)을 포함할 수 있습니다. 이름에 공백은 포함할 수 없습니다. 자동으로 생성된 매개 변수의 이름은 데이터 집합 쿼리의 매개 변수와 일치합니다. 기본적으로 수동으로 만든 매개 변수는 ReportParameter1과 이름이 유사합니다.|  
+|속성|매개 변수의 대/소문자를 구분하는 이름을 입력합니다. 이 이름은 문자로 시작해야 하고 문자, 숫자 및 밑줄(_)을 포함할 수 있습니다. 이름에 공백은 포함할 수 없습니다. 자동으로 생성된 매개 변수의 이름은 데이터 집합 쿼리의 매개 변수와 일치합니다. 기본적으로 수동으로 만든 매개 변수는 ReportParameter1과 이름이 유사합니다.|  
 |프롬프트|보고서 뷰어 도구 모음에서 매개 변수 옆에 표시되는 텍스트입니다.|  
 |데이터 형식|보고서 매개 변수는 다음 데이터 형식 중 하나여야 합니다.<br /><br /> **Boolean**. 사용자가 라디오 단추에서 True 또는 False를 선택합니다.<br /><br /> **DateTime**. 사용자가 달력 컨트롤에서 날짜를 선택합니다.<br /><br /> **Integer**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Float**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Text**. 사용자가 입력란에 값을 입력합니다.<br /><br /> 매개 변수에 대해 사용할 수 있는 값을 정의할 때 사용자는 데이터 형식이 **DateTime**인 경우에도 드롭다운 목록에서 값을 선택합니다.<br /><br /> 보고서 데이터 형식에 대한 자세한 내용은 [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)을 참조하세요.|  
 |빈 값 허용|매개 변수 값에 빈 문자열이나 공백을 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 공백 값을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 공백 값을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 공백이 자동으로 포함되지는 않습니다.|  
 |Null 값 허용|매개 변수 값이 Null이 될 수 있도록 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 null을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 null을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 null이 자동으로 포함되지는 않습니다.|  
 |다중 값 허용|사용자가 선택할 수 있는 드롭다운 목록을 만드는 데 사용 가능한 값을 제공합니다. 이렇게 하면 데이터 집합 쿼리에서 유효한 값만 제출되도록 할 수 있습니다.<br /><br /> 매개 변수의 값이 드롭다운 목록에 표시되는 다중 값이 될 수 있도록 허용하려면 이 옵션을 선택합니다. Null 값은 허용되지 않습니다. 이 옵션을 선택하면 매개 변수 드롭다운 목록의 사용 가능한 값 목록에 확인란이 추가되고 목록의 맨 위에 **모두 선택**에 대한 확인란이 포함됩니다. 사용자는 원하는 값을 선택할 수 있습니다.<br /><br /> 값을 제공하는 데이터가 빠르게 변동될 경우 사용자에게 표시되는 목록이 최신 상태가 아닐 수도 있습니다.|  
-|Visible|보고서를 실행할 때 보고서 위쪽에 보고서 매개 변수를 표시하려면 이 옵션을 선택합니다. 이 옵션을 설정하면 사용자가 런타임에 매개 변수 값을 선택할 수 있습니다.|  
+|표시|보고서를 실행할 때 보고서 위쪽에 보고서 매개 변수를 표시하려면 이 옵션을 선택합니다. 이 옵션을 설정하면 사용자가 런타임에 매개 변수 값을 선택할 수 있습니다.|  
 |숨김|게시된 보고서에서 보고서 매개 변수를 숨기려면 이 옵션을 선택합니다. 보고서 매개 변수 값은 여전히 보고서 URL, 구독 정의 또는 보고서 서버에 설정할 수 있습니다.|  
 |내부|보고서 매개 변수를 숨기려면 이 옵션을 선택합니다. 게시된 보고서에서 보고서 매개 변수는 보고서 정의에서만 볼 수 있습니다.|  
 |사용 가능한 값|매개 변수에 대해 사용 가능한 값을 지정한 경우에는 유효한 값이 항상 드롭다운 목록으로 표시됩니다. 예를 들어 **DateTime** 매개 변수에 사용할 수 있는 값을 제공하면 날짜에 대한 드롭다운 목록이 달력 컨트롤 대신 매개 변수 창에 표시됩니다.<br /><br /> 값 목록이 보고서와 하위 보고서 간에 일관되도록 하려면 데이터 원본과 연관된 데이터 집합의 모든 쿼리에 단일 트랜잭션을 사용하도록 데이터 원본에서 옵션을 설정할 수 있습니다.<br /><br /> **보안 정보** **텍스트** 데이터 형식의 매개 변수가 포함된 보고서에서는 유효한 값 목록이라고도 하는 사용 가능한 값 목록을 사용해야 하며 보고서를 실행하는 모든 사용자가 보고서의 데이터를 보는 데 필요한 권한만 갖도록 해야 합니다. 자세한 내용은 [보안&#40;보고서 작성기&#41;](../../reporting-services/report-builder/security-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.|  

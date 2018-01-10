@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea8213ba1a174a818413d1b4fb8b3009e1e6a58a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7d20035ce370e8e096963afe20083a82eed19a2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-folders"></a>보안 폴더
   폴더 보안 설정은 보고서 서버의 모든 내용에 보안을 설정하기 위한 기본 토대입니다. 보안 설정은 폴더 구조를 통해 상속되므로 폴더 계층의 큰 부분이나 작은 부분을 지정하여 특정 종류의 액세스를 허용할 수 있습니다.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |데이터 원본 관리|폴더에 새 공유 데이터 원본 항목을 추가하거나 기존 공유 데이터 원본을 변경합니다.|  
 |항목의 보안 설정|폴더에 대한 액세스를 제어하는 역할 할당을 생성 및 수정합니다. 이 태스크는 "폴더 보기"나 "폴더 관리"와 함께 사용해야 합니다. 그렇지 않으면 사용자가 항목을 선택할 수 없게 되므로 효과가 없습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)   
  [공유 데이터 원본 항목 보안](../../reporting-services/security/secure-shared-data-source-items.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

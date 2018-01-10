@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f73e01f06207255c7af761b46e48d0a35b1a8b40
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fecb8cd6e36040876e21baa9e1789d95fb5dba49
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>여러 셰이프 차트에 일관된 색 지정(보고서 작성기 및 SSRS)
   페이지를 매긴 보고서의 셰이프가 아닌 차트에서 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 는 차트 내 계열의 인덱스를 기반으로 색상표에서 새로운 색을 선택합니다. 예를 들어 차트의 첫 번째 계열은 색상표의 첫 번째 색에 매핑됩니다. 그러나 셰이프 차트의 경우 다르게 동작합니다. 셰이프 차트에서 색상표의 각 색은 데이터 집합의 데이터 요소와 매핑됩니다. 즉 데이터 요소 1은 색상표의 첫 번째 색과 매핑되며 데이터 요소 2는 두 번째 색 등의 형태로 매핑됩니다.  
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
     =Code.GetColor(Fields!MyCategoryField)  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [차트에 3D 가장자리, 볼록 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [색상표를 사용하여 차트에 대한 색 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   

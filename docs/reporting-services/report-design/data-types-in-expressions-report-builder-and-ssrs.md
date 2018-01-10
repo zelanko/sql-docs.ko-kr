@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 51b8f1249bb257d3aea3752b6b593e470ae8c775
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8f9aac801e823f364070fc2b3ce2e6b4b015f78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
   데이터 형식은 여러 종류의 데이터를 나타낼 때 이를 효율적으로 저장하고 처리할 수 있도록 합니다. 일반적인 데이터 형식으로는 텍스트(문자열이라고도 함), 소수 자릿수가 있거나 없는 숫자, 날짜 및 시간, 이미지 등이 있습니다. 보고서의 값은 RDL(Report Definition Language) 데이터 형식이어야 합니다. 보고서에서 값을 표시할 때 원하는 대로 값의 형식을 지정할 수 있습니다. 예를 들어 통화를 나타내는 필드는 보고서 정의에 부동 소수점 숫자로 저장되지만 이를 표시할 때는 사용자가 선택한 형식 속성에 따라 다양한 형식을 사용할 수 있습니다.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 |RDL 형식|CLR 형식|  
 |--------------|---------------|  
-|문자열|기본값: 문자열<br /><br /> Chart, GUID, Timespan|  
+|String|기본값: 문자열<br /><br /> Chart, GUID, Timespan|  
 |Boolean|기본값: 부울|  
 |정수|기본값: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |DateTime|기본값: 날짜/시간<br /><br /> DateTimeOffset|  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/05/2017
   
  다음 방법 중 하나를 사용하여 이 데이터를 하나 이상의 CLR 값으로 변환할 수 있습니다.  
   
--   입력란에서 식을 사용하여 문자열의 일부를 추출합니다. 예를 들어  
+-   입력란에서 식을 사용하여 문자열의 일부를 추출합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     -   다음 식은 UTC 표준 시간대 오프셋의 시간 부분만 추출하여 분으로 변환합니다. `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/05/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) 의 [SQL Server Books Onl의e](http://go.microsoft.com/fwlink/?linkid=120955)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

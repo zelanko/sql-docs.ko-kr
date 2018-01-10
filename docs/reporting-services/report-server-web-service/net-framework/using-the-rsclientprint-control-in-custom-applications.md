@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: "31"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d641ec2dacd6f0296199e9f547bce6baa1c0cb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34becf7210dd08dbf663d99e6cf5cd1b7f57c190
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 컨트롤인 **RSPrintClient**는 HTML 뷰어에 표시되는 보고서에 대한 클라이언트 쪽 인쇄 기능을 제공합니다. 사용자는 제공된 **인쇄** 대화 상자를 사용하여 인쇄 작업 시작, 보고서 미리 보기, 인쇄할 페이지 지정, 여백 조정 등의 작업을 수행할 수 있습니다. 클라이언트 쪽 인쇄 작업 과정에서 보고서 서버는 이미지(EMF) 렌더링 확장 프로그램으로 보고서를 렌더링하고 운영 체제의 인쇄 기능으로 인쇄 작업을 만들어 프린터에 보냅니다.  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 속성  
   
-|속성|형식|RW|기본값|Description|  
+|속성|형식|RW|Default|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|보고서 설정|왼쪽 여백을 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서에 지정되지 않은 경우 기본값은 12.2밀리미터입니다.|  
 |MarginRight|Double|RW|보고서 설정|오른쪽 여백을 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서에 지정되지 않은 경우 기본값은 12.2밀리미터입니다.|  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 |PageWidth|Double|RW|보고서 설정|페이지 너비를 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서 정의에 지정되지 않은 경우 기본값은 215.9밀리미터입니다.|  
 |PageHeight|Double|RW|보고서 설정|페이지 높이를 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서 정의에 지정되지 않은 경우 기본값은 279.4밀리미터입니다.|  
 |Culture|Int32|RW|브라우저 로캘|LCID(로캘 ID)를 지정합니다. 이 값에 따라 사용자 입력 단위가 결정됩니다. 예를 들어 사용자가 **3**을 입력할 경우 언어가 프랑스어이면 값이 밀리미터 단위로 측정되고 영어(미국)이면 인치 단위로 측정됩니다. 유효한 값은 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082와 같습니다.|  
-|UICulture|문자열|RW|클라이언트 culture|대화 상자의 문자열 지역화를 지정합니다. 인쇄 대화 상자의 텍스트는 독일어, 스페인어, 영어, 이탈리아어, 일본어, 중국어 간체, 중국어 번체, 프랑스어 및 한국어와 같은 언어로 지역화됩니다. 유효한 값은 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082와 같습니다.|  
+|UICulture|String|RW|클라이언트 culture|대화 상자의 문자열 지역화를 지정합니다. 인쇄 대화 상자의 텍스트는 독일어, 스페인어, 영어, 이탈리아어, 일본어, 중국어 간체, 중국어 번체, 프랑스어 및 한국어와 같은 언어로 지역화됩니다. 유효한 값은 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082와 같습니다.|  
 |Authenticate|Boolean|RW|False|사용 가능한 세션이 없는 인쇄에 대한 연결을 시작하기 위해 컨트롤이 보고서 서버에 대해 GET 명령을 실행할지 여부를 지정합니다.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>인증 속성 설정 시기  
@@ -113,9 +111,9 @@ ms.lasthandoff: 12/05/2017
   
 |인수|입력/출력|형식|Description|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|입력|문자열|보고서 서버 가상 디렉터리를 지정합니다(예: `https://adventure-works/reportserver`).|  
-|ReportPathParameters|입력|문자열|보고서 서버 폴더 네임스페이스에 있는 보고서의 전체 이름을 매개 변수를 포함하여 지정합니다. 보고서는 URL 액세스를 통해 검색됩니다. 예제: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
-|ReportName|입력|문자열|보고서의 짧은 이름입니다. 위의 예에서 짧은 이름은 Employee Sales Summary입니다. 짧은 이름은 인쇄 대화 상자와 인쇄 큐에 나타납니다.|  
+|ServerPath|입력|String|보고서 서버 가상 디렉터리를 지정합니다(예: `https://adventure-works/reportserver`).|  
+|ReportPathParameters|입력|String|보고서 서버 폴더 네임스페이스에 있는 보고서의 전체 이름을 매개 변수를 포함하여 지정합니다. 보고서는 URL 액세스를 통해 검색됩니다. 예제: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|입력|String|보고서의 짧은 이름입니다. 위의 예에서 짧은 이름은 Employee Sales Summary입니다. 짧은 이름은 인쇄 대화 상자와 인쇄 큐에 나타납니다.|  
   
 ### <a name="example"></a>예제  
  다음 HTML 예에서는 JavaScript에서 .cab 파일, **Print** 메서드 및 속성을 지정하는 방법을 보여 줍니다.  
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/05/2017
   
  `</BODY>`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [이미지 장치 정보 설정](../../../reporting-services/image-device-information-settings.md)  

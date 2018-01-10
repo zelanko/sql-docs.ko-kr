@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e16bc12aa7361cd348caeb34fa73f974d4f74add
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c595b197cab784eb3ccc1ab34257868ecdc9e87
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
 
@@ -129,7 +127,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
  사용자 지정 구성 요소를 개발할 필요 없이 모든 서버 기능을 사용할 수 있도록 Reporting Services에서는 기본 확장 프로그램을 제공합니다. 다음 표에서는 즉시 사용 가능한 기능을 제공하는 전체 보고서 서버 인스턴스에 영향을 주는 기본 확장 프로그램에 대해 설명합니다.  
   
-|형식|기본값|  
+|형식|Default|  
 |----------|-------------|  
 |인증|기본 보고서 서버 인스턴스는 가장 및 위임 기능(도메인에 설정된 경우)을 비롯한 Windows 인증을 지원합니다.|  
 |데이터 처리|기본 보고서 서버 인스턴스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, 병렬 데이터 웨어하우스 및 ODBC 데이터 원본용 데이터 처리 확장 프로그램이 있습니다.|  
@@ -139,7 +137,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
 > [!NOTE]  
 >  Reporting Services는 서버를 관리하고 콘텐츠를 작성하며 이 콘텐츠를 조직의 사용자가 사용할 수 있도록 설정하는 데 사용할 수 있는 모든 도구와 응용 프로그램을 포함합니다.  
   
-## <a name="related-tasks"></a>관련 태스크
+## <a name="related-tasks"></a>관련 작업
 
  다음 항목에서는 보고서 서버 설치, 사용 및 유지 관리에 대한 추가 정보를 제공합니다.  
   

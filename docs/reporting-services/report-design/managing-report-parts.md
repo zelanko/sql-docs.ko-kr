@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
   보고서 파트는 여러 사용자가 다시 사용하고 페이지가 매겨진 보고서 및 여러 보고서에서 다시 사용할 수 있습니다. 사용자는 서버에서 보고서 파트를 검색하여 보고서에 추가할 수 있습니다.  또한 사용자에게 서버의 보고서 파트에 대한 업데이트를 알리고 보고서 파트의 새 버전을 다시 게시할 수 있습니다. 이러한 보고서 제작 동작은 Reporting Services 보안 권한에 의해 제어되고 이의 영향을 받습니다.  이 항목에서는 서버에 게시된 보고서 파트 속성 및 동작을 검토합니다.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 |속성|Description|보고서 파트<br /><br /> 갤러리 검색 조건|  
 |--------------|-----------------|---------------------------------------------|  
-|이름|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
+|속성|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
 |Description|사용자가 갤러리에서 쉽게 찾을 수 있도록 보고서 파트 이름을 구성할 수 있습니다. 예를 들어 판매 관련 데이터 및 프레젠테이션이 포함되는 모든 보고서 파트를 찾을 때 "판매>>"로 시작하는 설명을 검색할 수 있습니다.|예|  
 |CreatedBy|보고서 파트를 보고서 서버 데이터베이스에 추가한 사용자의 ID입니다. 정확한 형식은 인증 방식에 따라 다릅니다. 예를 들어 일부 인증 방법은 CreatedBy 및 ModifiedBy 필드에 전체 도메인\사용자 이름이 표시됩니다.|예|  
 |CreationDate|보고서 파트가 처음 생성된 날짜입니다.<br /><br /> 사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="server-in-native-mode"></a>기본 모드의 서버  
   
-|작업|역할|  
+|동작|역할|  
 |-------------|-----------|  
 |보고서 파트 추가, 삭제, 항목 속성 편집, 보안 관리 및 다운로드|내용 관리자<br /><br /> 내 보고서|  
 |보고서 파트 추가, 삭제 및 다운로드|게시자|  
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드의 서버  
   
-|작업|역할|  
+|동작|Role|  
 |-------------|----------|  
 |보고서 파트 추가, 삭제, 항목 속성 편집, 보안 관리 및 다운로드|모든 권한|  
 |보고서 파트 추가, 삭제, 항목 속성 편집 및 다운로드|디자인<br /><br /> 참가|  
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 -   보고서 파트는 기존 "리소스" 항목 유형과 동일한 사용 권한 정책을 사용합니다. 보안 상속 관점에서 폴더 내의 기존 리소스 항목과 보고서 파트는 차이가 없습니다. 보고서 파트는 같은 폴더에 있는 이미지와 동일한 사용 권한 정책을 상속합니다. 구별해야 하는 경우에는 원하는 보고서 파트에 대해 항목 수준 보안을 구성할 수 있습니다. 또는 올바른 사용 권한이 구성된 별도의 폴더에 보고서 파트를 넣을 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   

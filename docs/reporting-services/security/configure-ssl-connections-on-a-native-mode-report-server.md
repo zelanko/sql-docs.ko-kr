@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 8012c0fd281c34e199deb6bd4daa206d113508ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 94e454e201b2e9130b115e527ee2433f04f2ab60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 SSL 연결 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버에 대한 암호화된 연결을 설정합니다. 보고서 서버 컴퓨터의 로컬 인증서 저장소에 설치된 인증서(.cer) 파일이 있는 경우 인증서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약에 바인딩하여 암호화된 채널을 통한 보고서 서버 연결을 지원할 수 있습니다.  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/05/2017
   
  Reporting Services 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 SSL 바인딩을 제거하는 경우 인터넷 정보 서비스(IIS)를 실행하는 서버 또는 다른 HTTP.SYS 서버의 웹 사이트에 대해 SSL이 더 이상 작동하지 않을 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 다음 레지스트리 키를 제거합니다. 이 레지스트리 키가 제거되면 IIS에 대한 SSL 바인딩도 제거됩니다. 이 바인딩이 없으면 HTTPS 프로토콜에 대해 SSL이 제공되지 않습니다. 이 문제를 진단하려면 IIS 관리자 또는 HTTPCFG.exe 명령줄 유틸리티를 사용합니다. 이 문제를 해결하려면 IIS 관리자를 사용하여 웹 사이트에 대한 SSL 바인딩을 복원합니다. 이 문제가 다시 발생하지 않도록 하려면 IIS 관리자를 사용하여 SSL 바인딩을 제거한 다음 IIS 관리자를 사용하여 원하는 웹 사이트에 대한 바인딩을 복원합니다. 자세한 내용은 기술 자료 문서 [SSL 바인딩을 제거한 후 SSL이 더 이상 작동하지 않습니다.(http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   
  [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

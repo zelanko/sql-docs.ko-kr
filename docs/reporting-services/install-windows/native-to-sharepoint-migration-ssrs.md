@@ -8,22 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c9b8e85da6a482740c59cc4ab1df4d4b298a9de4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f7418326fb11d712ad8cea0bd77fb4479e3020f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
 
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
  다음 표에는 스크립트를 사용하여 마이그레이션할 수 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개체가 요약되어 있습니다.  
   
-|개체|스크립팅 가능|설명|  
+|Object|스크립팅 가능|주석|  
 |------------|---------------------|--------------|  
 |보고서|예|마이그레이션 후 데이터 원본에 대한 암호를 다시 입력합니다.|  
 |데이터 원본|예|마이그레이션 후 보고서를 데이터 원본에 다시 연결 합니다.|  

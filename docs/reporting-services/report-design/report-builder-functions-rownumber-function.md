@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33f3b559c924f6a5cb9751ad938a01f495172701
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6edb97aaf3da5499568c4893c02cfd208d556696
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---rownumber-function"></a>보고서 작성기 함수 - RowNumber 함수
   지정한 범위에서 행 개수의 실행 개수를 반환합니다.  
@@ -42,7 +40,7 @@ RowNumber(scope)
  *범위*  
  (**String**) 행 개수를 계산할 컨텍스트를 지정하는 데이터 집합, 데이터 영역, 그룹의 이름 또는 Null(**의** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])입니다. **Nothing** 은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 집합입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **RowNumber** 는 [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) 가 집계 함수의 실행 값을 반환하는 것처럼 지정한 범위 내 행 개수의 실행 값을 반환합니다. 범위를 지정할 때 행 개수를 1로 다시 설정할 시점을 지정합니다.  
   
  *scope* 는 식이 될 수 없습니다. *scope* 는 포함하는 범위여야 합니다. 가장 바깥쪽에서 가장 안쪽 포함까지의 일반적인 범위는 보고서 데이터 집합, 데이터 영역, 행 그룹 또는 열 그룹입니다.  
@@ -61,7 +59,7 @@ RowNumber(scope)
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d74e5d7e56704515bb6f1c97e26e47802583279
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 일반적인 함수 및 연산자와 함께 식을 사용하여 강력하고 유연한 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -663,7 +663,7 @@ ms.lasthandoff: 12/05/2017
 ![보고서-작성기-식-자습서-최종-브라우저 내](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [식&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 [식 예&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 [표시기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

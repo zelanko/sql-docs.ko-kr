@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71c6b76105da8947181ee87652646024b29bfbc5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a20a5a33ac90263b1b399ebfa8725a88383f5b8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX(Multidimensional Expression) 쿼리 및 DMX(Data Mining Expression) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. 이 항목에서는 MDX 쿼리 디자이너에 대해 설명합니다. DMX 쿼리 디자이너에 대한 자세한 내용은 [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)을 참조하세요.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
 |메타데이터 창|선택한 큐브에 정의된 측정값, KPI(핵심 성과 지표) 및 차원의 계층 목록을 표시합니다.|  
 |계산 멤버 창|쿼리에 사용할 수 있는 현재 정의된 계산 멤버를 표시합니다.|  
 |필터 창|원본의 데이터를 필터링하고 보고서에 반환되는 데이터를 제한하기 위해 차원과 관련 계층을 선택하려면 사용합니다.|  
-|데이터 창|메타데이터 창 및 계산 멤버 창에서 항목을 끌 때 결과 집합에 대한 열 머리글을 표시합니다. **자동 실행** 단추가 선택된 경우 결과 집합을 자동으로 업데이트합니다. 을 참조하세요.|  
+|데이터 창|메타데이터 창 및 계산 멤버 창에서 항목을 끌 때 결과 집합에 대한 열 머리글을 표시합니다. **자동 실행** 단추가 선택된 경우 결과 집합을 자동으로 업데이트합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
   
  메타데이터 창의 차원, 측정값 및 KPI와 계산 멤버 창의 계산 멤버를 데이터 창으로 끌 수 있습니다. 필터 창에서 차원 및 관련 계층을 선택하고 필터 식을 설정하여 쿼리에 사용할 수 있는 데이터를 제한할 수 있습니다. 도구 모음의 **자동 실행**(![쿼리 자동 실행](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")) 토글 단추가 선택된 경우 메타데이터 개체를 데이터 창에 놓을 때마다 쿼리 디자이너는 쿼리를 실행합니다. 도구 모음의 **실행**(![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")) 단추를 사용하여 쿼리를 수동으로 실행할 수 있습니다.  
   
@@ -125,7 +123,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **집계 표시**(![집계 표시 단추](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "집계 표시 단추"))  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   

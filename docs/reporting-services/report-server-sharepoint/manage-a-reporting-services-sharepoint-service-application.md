@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddd945cd1ccd0ce85082c9d4a2a4d05a6eac626c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c73f9685bd5f340376d95191730fecaf7e54dbf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 응용 프로그램 관리
 
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="report-settings"></a>보고서 설정
   
-|설정|설명|  
+|설정|주석|  
 |-------------|--------------|  
 |외부 이미지 제한 시간|기본값은 600초입니다.|  
 |스냅숏 압축|기본값은 SQL입니다.|  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="session-settings"></a>세션 설정
   
-|설정|설명|  
+|설정|주석|  
 |-------------|--------------|  
 |세션 제한 시간|기본값은 600초입니다.|  
 |세션 쿠키 사용|기본값은 TRUE입니다.|  
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="system-settings-for-logging"></a>로깅에 대한 시스템 설정
   
-|설정|설명|  
+|설정|주석|  
 |-------------|--------------|  
 |실행 로깅 사용|기본값은 TRUE입니다.<br /><br /> 보고서 서버에서 추적 로그를 생성할지 여부와 로그를 보관할 일 수를 지정합니다. 를 클릭합니다. 로그는 보고서 서버 컴퓨터의 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 폴더에 저장됩니다. 서비스가 다시 시작될 때마다 새 로그 파일이 시작됩니다. 로그 파일에 대한 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.|  
 |실행 로그 보관 일 수|기본값은 60일입니다.|  
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="security-settings"></a>보안 설정
   
-|설정|설명|  
+|설정|주석|  
 |-------------|--------------|  
 |통합 보안 사용|기본값은 TRUE입니다.<br /><br /> 보고서를 요청한 사용자의 Windows 보안 토큰을 사용하여 보고서 데이터 원본에 연결할 수 있는지 여부를 지정합니다.|  
 |보고서 정의 로드 사용|기본값은 TRUE입니다.|  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="client-settings"></a>클라이언트 설정
   
-|설정|설명|  
+|설정|주석|  
 |-------------|--------------|  
 |보고서 작성기 다운로드 사용|기본값은 TRUE입니다.<br /><br /> 클라이언트가 보고서 작성기 응용 프로그램을 다운로드하기 위한 단추를 볼 수 있는지 여부를 지정합니다.|  
 |보고서 작성기 시작 URL|보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 시작됩니다. 보고서 작성기 3.0을 Click-Once 응용 프로그램으로 시작하려면 http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application 값을 입력합니다.|  
@@ -148,7 +146,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)을 참조하세요.  
 
-### <a name="options"></a>옵션
+### <a name="options"></a>변수
 
  **실행 계정 지정**  
  계정을 지정하려면 선택합니다.  
@@ -166,7 +164,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  이 페이지에서는 보고서 서버에서 보고서 서버 전자 메일 배달을 가능하게 하는 SMTP(Simple Mail Transport Protocol) 설정을 지정할 수 있습니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하여 전자 메일 구독을 통해 보고서 또는 보고서 처리 알림을 배포할 수 있습니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하려면 SMTP 서버 및 보낸 사람 주소: 필드에 사용할 전자 메일 주소가 필요합니다.  
 
-### <a name="options"></a>옵션
+### <a name="options"></a>변수
 
  **SMTP 서버 사용**  
  보고서 서버 전자 메일이 SMTP 서버를 통해 라우팅되도록 지정합니다.  

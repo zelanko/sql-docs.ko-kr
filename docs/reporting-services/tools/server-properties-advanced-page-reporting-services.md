@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4b993a3e2c45709e1095bfeb54919f5261bf6a12
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8c6a475c37a953394fa51023dccdd9d80e5cb32
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
 
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 
 이 페이지를 열려면 SQL Server Management Studio를 시작하고, 보고서 서버 인스턴스에 연결한 다음, 보고서 서버 이름을 마우스 오른쪽 단추로 클릭하고, **속성**을 선택합니다. **고급**을 선택하여 이 페이지를 엽니다.
 
-## <a name="options"></a>옵션
+## <a name="options"></a>변수
 
 **EnableMyReports**  
 내 보고서 기능이 설정되어 있는지 여부를 나타냅니다. **true** 값은 이 기능이 설정되어 있음을 나타냅니다.  
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/05/2017
 이 옵션을 끄면 악의적인 사용자가 LoadReportDefinition 요청으로 보고서 서버에 오버로드를 가하여 서비스 거부 공격을 실행할 수 있는 위협이 완화됩니다.  
 
 **EnableRemoteErrors**  
-원격 컴퓨터에서 보고서를 요청하는 사용자에 대해 반환되는 오류 메시지에 외부 오류 정보(예: 보고서 데이터 원본에 대한 오류 정보)를 포함합니다. 유효한 값은 **true** 및 **false**입니다. 기본값은 **false**입니다. 자세한 내용은 [원격 오류 사용&#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)을 참조하세요.  
+원격 컴퓨터에서 보고서를 요청하는 사용자에 대해 반환되는 오류 메시지에 외부 오류 정보(예: 보고서 데이터 원본에 대한 오류 정보)를 포함합니다. 유효한 값은 **true** 및 **false**입니다. 기본 값은 **false**입니다. 자세한 내용은 [원격 오류 사용&#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)을 참조하세요.  
 
 **EnableReportDesignClientDownload**  
 보고서 서버에서 보고서 작성기 설치 패키지를 다운로드할 수 있는지 여부를 지정합니다. 이 설정을 해제하면 보고서 작성기에 대한 URL이 작동하지 않습니다. 자세한 내용은 [보고서 작성기 액세스 구성](../../reporting-services/report-server/configure-report-builder-access.md)을 참조하세요.  
@@ -130,7 +128,7 @@ PowerBI Report Server는 Power BI 시각적 개체에서 데이터 내보내기�
 사용자가 보고서 서버를 사용하여 데이터 원본 연결을 테스트할 때 클라이언트 컴퓨터로 자세한 오류 메시지를 보낼지 여부를 나타냅니다. 기본값은 **true**입니다. 이 옵션이 **false**로 설정되어 있으면 일반 오류 메시지만 보냅니다.
 
 **AccessControlAllowCredentials**  
-'자격 증명' 플래그가 true로 설정되면 클라이언트 요청에 대한 응답이 노출될 수 있는지를 나타냅니다. 기본값은 **false**입니다.
+'자격 증명' 플래그가 true로 설정되면 클라이언트 요청에 대한 응답이 노출될 수 있는지를 나타냅니다. 기본 값은 **false**입니다.
 
 **AccessControlAllowHeaders** 클라이언트가 요청하면 서버에서 허용하는 헤더의 쉼표로 구분된 목록입니다. 이 속성은 빈 문자열일 수 있고 *를 지정하면 모든 헤더를 허용합니다.
 
@@ -142,7 +140,7 @@ PowerBI Report Server는 Power BI 시각적 개체에서 데이터 내보내기�
 
 **AccessControlMaxAge** 실행 전 요청 결과를 캐시할 수 있는 시간(초)을 지정합니다. 기본값은 600초(10분)입니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

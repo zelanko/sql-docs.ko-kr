@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 caps.latest.revision: "44"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 29e229961a0ffa3c91da604219587b75d6dd5372
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4924fee006b0e40eb60a0525e80c71cefe558ea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Reporting Services의 이전 버전과의 호환성
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]동작의 변경된 내용에 대해 알아봅니다. 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다.
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 |[SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](http://msdn.microsoft.com/en-us/39c7aafd-dcb9-4317-b8f7-d15828eb4f9a)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]로 업그레이드할 때 발생할 수 있는 문제에 대해 설명합니다.|  
 |[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경 내용](http://msdn.microsoft.com/en-us/2a767f0f-84f2-4099-8784-1e37790f858e)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 변경된 기능을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [이전 버전과의 호환성 | Analysis Services](http://msdn.microsoft.com/en-us/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
   
   

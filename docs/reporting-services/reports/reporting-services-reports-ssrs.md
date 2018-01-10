@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords: Reporting Services, report creation
@@ -18,13 +16,13 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: "54"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b5d023c1f2fa7c8795f83e610c49e03f50f38032
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 11bf9da4b78262f75a411f847c721309abc2457b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 보고서(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서는 보고서 데이터 및 보고서 레이아웃 요소가 포함된 XML 기반 보고서 정의입니다. 보고서 정의는 .rdl 확장자로 클라이언트 파일 시스템에 저장됩니다. 페이지가 매겨진 보고서를 게시한 후에는 보고서 서버 또는 SharePoint 사이트에 저장된 보고서 항목이 됩니다. 페이지가 매겨진 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 서버 기반 보고 플랫폼의 일부입니다. [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)도 가능합니다.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
     -   **각 원본에서 사용할 데이터를 선택합니다.** 각 데이터 원본에 대해 보고서 데이터 집합을 정의합니다. 각 데이터 집합에는 사용할 데이터를 지정하는 쿼리가 포함되어 있습니다. 보고서 매개 변수가 있는 경우 각 매개 변수에 사용 가능한 값 목록을 채울 데이터 집합을 정의합니다. 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 및 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
-    -   **데이터 시각화를 선택합니다.** 각 데이터 집합에 대해 데이터를 표시하는 데 사용할 데이터 영역을 선택합니다. 테이블, 차트, 계기 및 지도 목록에서 선택할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
+    -   **데이터 시각화를 선택합니다.** 각 데이터 집합에 대해 데이터를 표시하는 데 사용할 데이터 영역을 선택합니다. 테이블, 차트, 계기 및 지도 목록에서 선택할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
         -   [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
@@ -100,7 +98,7 @@ ms.lasthandoff: 12/05/2017
   
         -   [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **데이터 및 레이아웃을 사용자 지정합니다.** 보고서 레이아웃을 디자인합니다. 보고서 정의에는 보고서 원문, 데이터 원본, 데이터 집합, 데이터 영역, 입력란, 선 및 이미지가 있습니다. 사각형은 레이아웃의 컨테이너 및 시각적 요소로 사용됩니다. 데이터에 대해 필터, 그룹, 정렬, 서식 및 표시를 제어할 식을 작성하여 각 데이터 영역을 사용자 지정합니다. 보고서 이름과 위치를 비롯하여 수십 개 또는 수백 개의 보고서를 관리하는 데 유용한 기타 식별 정보를 추가합니다. 시각적 요소 및 컨테이너를 추가하여 페이지의 레이아웃 요소를 구성합니다. 자세한 내용은 다음 항목을 참조하세요.  
+    -   **데이터 및 레이아웃을 사용자 지정합니다.** 보고서 레이아웃을 디자인합니다. 보고서 정의에는 보고서 원문, 데이터 원본, 데이터 집합, 데이터 영역, 입력란, 선 및 이미지가 있습니다. 사각형은 레이아웃의 컨테이너 및 시각적 요소로 사용됩니다. 데이터에 대해 필터, 그룹, 정렬, 서식 및 표시를 제어할 식을 작성하여 각 데이터 영역을 사용자 지정합니다. 보고서 이름과 위치를 비롯하여 수십 개 또는 수백 개의 보고서를 관리하는 데 유용한 기타 식별 정보를 추가합니다. 시각적 요소 및 컨테이너를 추가하여 페이지의 레이아웃 요소를 구성합니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
         -   [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="create-notifications-based-on-report-data"></a>보고서 데이터 기반 알림 만들기  
  SharePoint 사이트에 게시된 보고서에 대한 데이터 경고를 만들 수 있습니다. 데이터 경고는 보고서 내 데이터 영역의 데이터 피드를 기반으로 합니다. 기본적으로 데이터 영역의 이름은 자동으로 지정됩니다. 보고서 작성자는 비즈니스 용도에 따라 데이터 영역의 이름을 지정하여 보고서에 데이터 경고를 보다 쉽게 만들 수 있습니다. 데이터 경고를 만들면 데이터가 지정한 조건을 충족하는 경우 전자 메일 알림이 제공됩니다. 자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [데이터 경고 디자이너에서 데이터 경고 만들기](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) 및 [Reporting Services 데이터 경고](../../reporting-services/reporting-services-data-alerts.md)를 참조하세요.  
   
-## <a name="upgrade-reports"></a>보고서 업그레이드  
+## <a name="upgrade-reports"></a>Upgrade Reports  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 여러 버전의 보고서 정의, 보고서 서버 및 SharePoint 사이트를 지원합니다. 보고서를 업그레이드합니다.  
   
 -   보고서 서버 설치를 업그레이드합니다. 보고서 서버에 저장된 컴파일된 보고서는 처음 사용할 때 자동으로 업그레이드됩니다. 그러나 보고서 정의(.rdl)는 변경되지 않습니다. 자세한 내용은 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
@@ -182,7 +180,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **추가 정보를 찾을 수 있는 위치를 확인합니다.** 예를 들어 식이 포함된 보고서 디자인의 경우 보고서 디자이너 도구가 보고서 작성기 도구보다 식 평가 문제에 대한 보다 자세한 정보를 제공합니다. 보고서 처리 오류의 경우 로그 파일에 자세한 정보가 포함됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)   
  [확장 프로그램&#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
  [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10012"
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20cfc19fedbf8bc1369804c2795f180228b6a88b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   보고서 작성기 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 보고서 데이터 집합에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 에서 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 |Avg|그룹에 속한 값의 평균을 반환합니다. SQL  AVG  집계를 구현합니다.|  
 |Count|그룹에 포함된 항목 개수를 반환합니다. SQL  COUNT  집계를 구현합니다.|  
 |Count  Big|그룹의 항목 개수를 반환합니다. SQL  COUNT_BIG  집계입니다. COUNT와 COUNT_BIG의 차이점은 COUNT_BIG은 항상 **bigint** 데이터 형식 값을 반환한다는 점입니다.|  
-|Min|그룹의 최소값을 반환합니다. SQL  MIN  집계를 구현합니다.|  
+|최소값|그룹의 최소값을 반환합니다. SQL  MIN  집계를 구현합니다.|  
 |최대값|그룹의 최대값을 반환합니다. SQL  MAX  집계를 구현합니다.|  
 |StDev|그룹의 모든 값에 대한 통계적 표준 편차를 반환합니다. SQL  STDEV  집계를 구현합니다.|  
 |StDevP|그룹에서 지정한 식에 있는 모든 값의 모집단에 대한 통계 표준 편차를 반환합니다. SQL  STDEVP  집계를 구현합니다.|  
@@ -203,7 +201,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="text-based-query-designer"></a>텍스트 기반 쿼리 디자이너  
  쿼리를 최대한 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다. 텍스트 기반 쿼리 디자이너로 전환하려면 도구 모음에서 **텍스트로 편집**을 클릭합니다. 텍스트 기반 쿼리 디자이너에서 쿼리를 편집한 후에는 관계형 쿼리 디자이너를 더 이상 사용할 수 없습니다. 이후에는 해당 쿼리가 항상 텍스트 기반 쿼리 디자이너에서 열립니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

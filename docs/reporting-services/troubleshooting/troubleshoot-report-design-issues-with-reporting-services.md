@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 caps.latest.revision: "5"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c0991804db66f94aa8216353998035043ea8225
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a4660fb6aaf21c418ecf19d9ef5953015eaa36e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Reporting Services의 보고서 디자인 문제 해결
 보고서 디자인 문제는 보고서 제작 응용 프로그램의 디자인 뷰에서 보고서 레이아웃을 만들 때 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   
@@ -62,8 +60,8 @@ PageNumber 및 TotalPages는 페이지 머리글 및 페이지 바닥글에서�
   
 여러 데이터 영역 또는 보고서 항목을 하나로 그룹화하려면 이를 동일 부모 컨테이너에 넣습니다. 예를 들어 차트 및 테이블을 사각형 컨테이너에 넣고 각 요소의 위쪽 가장자리를 정렬하여 나란히 표시할 수 있습니다. 자세한 내용은 [보고서 작성기에서 렌더링 동작](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
-[Reporting Services 보고서에서 데이터 검색 문제 해결](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+## <a name="see-also"></a>참고 항목  
+[Reporting Services 보고서의 데이터 검색 문제 해결](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Reporting Services 구독 및 배달 문제 해결](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   

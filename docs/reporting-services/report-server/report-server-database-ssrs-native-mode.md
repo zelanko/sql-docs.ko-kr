@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 03acb388a2fe0b5eb75821379d0299460707c042
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b800d0677323aa53276640be971fddf73d36b62
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스(SSRS 기본 모드)
   보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 사용하여 메타데이터와 개체 정의를 저장하는 상태 비저장 서버입니다. 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 두 개의 데이터베이스를 사용하여 임시 저장소와는 별도로 영구 데이터 저장소를 제공합니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본적으로 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
  임시 데이터베이스를 백업하고 이후에 복원한 경우에는 내용을 삭제해야 합니다. 일반적으로 임시 데이터베이스의 내용은 언제든지 삭제하는 것이 안전합니다. 그러나 내용을 삭제한 후에는 보고서 서버 Windows 서비스를 다시 시작해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 장애 조치(failover) 클러스터에서 보고서 서버 데이터베이스 호스팅](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   

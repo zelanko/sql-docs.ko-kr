@@ -8,20 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ece2ccbf6f9c67789d5d248a9ad92b2acf0a7f36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services의 트리 맵 및 선버스트 차트
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 맵 및 선버스트 시각화를 사용하면 계층 데이터를 시각적으로 잘 표현할 수 있습니다. 이 문서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 트리 맵 또는 선버스트 차트를 추가하는 방법에 대한 개요입니다. 문서에는 시작할 수 있도록 AdventureWorks 샘플 쿼리가 포함되어 있습니다.  
@@ -132,7 +132,7 @@ ms.lasthandoff: 12/05/2017
   
     3.  연결 형식으로 **Microsoft SQL Server**를 선택합니다.  
   
-    4.  서버 및 데이터베이스에 연결 문자열을 입력합니다. 예를 들어  
+    4.  서버 및 데이터베이스에 연결 문자열을 입력합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
         ```  
         Data Source=[server name];Initial Catalog=AdventureWorks2016  
@@ -180,7 +180,7 @@ ms.lasthandoff: 12/05/2017
      데이터 집합을 만드는 방법에 대한 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 * [공유 데이터 집합 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [자습서: Power BI의 트리 맵](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)

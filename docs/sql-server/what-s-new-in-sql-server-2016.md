@@ -23,14 +23,15 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] SQL Server 2016을 사용하면 메모리 내 성능 및 고급 보안부터 데이터베이스 내 분석까지 모든 기능이 기본 제공된 확장 가능한 하이브리드 데이터베이스 플랫폼을 사용하여 지능형 중요 업무용 응용 프로그램을 빌드할 수 있습니다. SQL Server 2016 릴리스에는 다양한 개선 사항 및 향상된 기능과 함께 새로운 보안 기능, 쿼리 기능, Hadoop 및 클라우드 통합, R 분석 등이 추가되어 있습니다. 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+ SQL Server 2016을 사용하면 메모리 내 성능 및 고급 보안부터 데이터베이스 내 분석까지 모든 기능이 기본 제공된 확장 가능한 하이브리드 데이터베이스 플랫폼을 사용하여 지능형 중요 업무용 응용 프로그램을 빌드할 수 있습니다. SQL Server 2016 릴리스에는 다양한 개선 사항 및 향상된 기능과 함께 새로운 보안 기능, 쿼리 기능, Hadoop 및 클라우드 통합, R 분석 등이 추가되어 있습니다. 
 
 이 페이지에서는 각 SQL Server 구성 요소에 대해 SQL Server 2016의 새로운 기능에 대한 자세한 정보를 확인할 수 있는 요약 정보 및 링크를 제공합니다. 
 

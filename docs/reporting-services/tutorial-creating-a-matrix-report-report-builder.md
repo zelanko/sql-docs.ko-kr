@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5148e4416998d69822fb7aea96304c92b8c2a1e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
 이 자습서에서는 중첩된 행 및 열 그룹의 샘플 판매 데이터 행렬을 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만드는 방법을 설명합니다. 
@@ -361,7 +361,7 @@ ms.lasthandoff: 12/05/2017
   
 지역 이름이 아래에서 위쪽으로 세로로 표시됩니다. Territory 행 그룹의 높이는 지역 이름의 길이에 따라 달라집니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 이것으로 행렬 보고서를 만드는 자습서를 마칩니다. 행렬에 대한 자세한 내용은 다음을 참조하세요. 
 -    [테이블, 행렬 및 목록](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [행렬 만들기](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

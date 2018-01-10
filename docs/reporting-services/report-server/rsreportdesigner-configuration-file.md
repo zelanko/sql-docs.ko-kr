@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b23c29de71985635eaf98720bb3e6f32dae3edf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fcc7025e74656da02806d81cef9fc26295bc3a1b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 구성 파일
   RSReportDesigner.config 파일에는 보고서 디자이너에 사용할 수 있는 렌더링 및 데이터 처리 확장 프로그램에 대한 설정이 저장됩니다. 데이터 처리 확장 프로그램 정보는 **Data** 요소에 저장됩니다. 렌더링 확장 프로그램 정보는 **Render** 요소에 저장됩니다. **Designer** 요소는 보고서 디자이너에 사용된 쿼리 작성기를 열거합니다.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
 |**Designer**|보고서 디자이너에서 사용할 수 있는 쿼리 작성기를 열거합니다. 쿼리 작성기는 보고서에 사용된 데이터를 검색하는 쿼리를 구성할 사용자 인터페이스를 제공합니다. 쿼리 작성기는 데이터 처리 확장 프로그램마다 다를 수 있습니다. 기본적으로 Reporting Services는 제품에 포함된 모든 데이터 처리 확장 프로그램용으로 하나의 시각적 데이터 도구 사용자 인터페이스를 제공합니다. 그러나 타사의 데이터 처리 확장 프로그램을 작성하거나 사용 중이면 다른 쿼리 작성기 인터페이스를 사용할 수 있습니다.|  
 |**PreviewProcessingServiceStartupTimeoutSeconds**|오류 메시지를 표시하기 전에 미리 보기 처리 서비스가 시작될 때까지 기다릴 시간을 지정합니다. 기본값은 15초입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)  
   

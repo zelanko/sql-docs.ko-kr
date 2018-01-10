@@ -8,27 +8,27 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 740191557130edaa87688733ea6b1d61d254826b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a6316978d5799462526a28c196bd70100bf3c09
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-the-web-portal"></a>웹 포털 구성
 
 웹 포털은 보고서를 확인하고 보고서 서버 내용을 관리하며 사용자에게 기본 모드 보고서 서버에 대한 액세스 권한을 부여하는 데 사용되는 웹 프런트 엔드 응용 프로그램입니다. 웹 포털은 보고서 서버 웹 서비스와 동일한 보고서 서버 인스턴스 내에 설치되며 설치 시 **기본값인 기본 모드 구성으로 설치** 옵션을 선택하면 구성됩니다. 웹 포털을 사후 설치 작업으로 구성할 수도 있습니다. 이 항목에서는 다음과 같은 웹 포털 구성 시나리오에 대한 정보를 제공합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 웹 포털을 사용하려면 다음과 같은 전제 조건을 충족해야 합니다.
 

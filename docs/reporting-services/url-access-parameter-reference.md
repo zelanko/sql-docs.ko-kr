@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2924bd13417cbe3b9ce114516b998871abb0c89d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 장치 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 장치별 매개 변수에 대한 자세한 내용은 [URL에 장치 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
@@ -133,7 +131,7 @@ ms.lasthandoff: 12/05/2017
  보고서 서버 명령은 *rs:* 접두사가 추가되며 보고서 서버를 대상 지정하는 데 사용:  
   
 -   *Command*:  
-                  해당 항목 유형에 따라 카탈로그 항목에 동작을 수행합니다. 기본값은 URL 액세스 문자열에 참조된 카탈로그 항목의 유형에 의해 결정됩니다. 유효한 값은 다음과 같습니다.  
+                  해당 항목 유형에 따라 카탈로그 항목에 동작을 수행합니다. 기본값은 URL 액세스 문자열에 참조된 카탈로그 항목의 유형에 의해 결정됩니다. 유효한 값은  
   
     -   **ListChildren** 및 **GetChildren** . 폴더 내용을 표시합니다. 폴더 항목은 일반 항목 탐색 페이지 내에 표시됩니다.  
   
@@ -266,10 +264,10 @@ ms.lasthandoff: 12/05/2017
     ```  
   
 -   *PersistStreams*:  
-                  보고서를 단일 지속형 스트림에서 렌더링합니다. 이 매개 변수는 이미지 렌더러에서 렌더링된 보고서를 한 번에 한 청크씩 전송하는 데 사용됩니다. 이 매개 변수를 URL 액세스 문자열에 사용한 후에는 *GetNextStream* 매개 변수 대신 *PersistStreams* 매개 변수를 사용하여 지속형 스트림의 다음 청크를 가져옵니다. 이 URL 명령은 결과적으로 지속형 스트림의 끝을 나타내는 0바이트 스트림을 반환합니다. 기본값은 **false**입니다.  
+                  보고서를 단일 지속형 스트림에서 렌더링합니다. 이 매개 변수는 이미지 렌더러에서 렌더링된 보고서를 한 번에 한 청크씩 전송하는 데 사용됩니다. 이 매개 변수를 URL 액세스 문자열에 사용한 후에는 *GetNextStream* 매개 변수 대신 *PersistStreams* 매개 변수를 사용하여 지속형 스트림의 다음 청크를 가져옵니다. 이 URL 명령은 결과적으로 지속형 스트림의 끝을 나타내는 0바이트 스트림을 반환합니다. 기본 값은 **false**입니다.  
   
 -   *GetNextStream*:  
-                  *PersistStreams* 매개 변수를 사용하여 액세스하는 지속형 스트림의 다음 데이터 청크를 가져옵니다. 자세한 내용은 *PersistStreams*에 대한 설명을 참조하십시오. 기본값은 **false**입니다.  
+                  *PersistStreams* 매개 변수를 사용하여 액세스하는 지속형 스트림의 다음 데이터 청크를 가져옵니다. 자세한 내용은 *PersistStreams*에 대한 설명을 참조하십시오. 기본 값은 **false**입니다.  
   
 -   *SessionID*:  
                   클라이언트 응용 프로그램과 보고서 서버 간에 설정된 활성 보고서 세션을 지정합니다. 이 매개 변수의 값은 세션 식별자로 설정됩니다.  
@@ -277,10 +275,10 @@ ms.lasthandoff: 12/05/2017
      세션 ID를 쿠키로 지정하거나 URL의 일부로 지정할 수 있습니다. 보고서 서버가 세션 쿠키를 사용하지 않도록 구성된 경우 지정된 세션 ID가 없는 첫 번째 요청은 세션 ID가 있는 항목으로 리디렉션됩니다. 보고서 서버 세션에 대한 자세한 내용은 [Identifying Execution State](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)을 참조하십시오.  
   
 -   *ClearSession*:  
-                  **true** 값은 보고서 서버가 보고서 세션에서 보고서를 제거하도록 합니다. 인증된 사용자와 연관된 모든 보고서 인스턴스가 보고서 세션에서 제거됩니다. 보고서 인스턴스는 다양한 보고서 매개 변수 값을 사용하여 여러 번 실행되는 동일한 보고서로 정의됩니다. 기본값은 **false**입니다.  
+                  **true** 값은 보고서 서버가 보고서 세션에서 보고서를 제거하도록 합니다. 인증된 사용자와 연관된 모든 보고서 인스턴스가 보고서 세션에서 제거됩니다. 보고서 인스턴스는 다양한 보고서 매개 변수 값을 사용하여 여러 번 실행되는 동일한 보고서로 정의됩니다. 기본 값은 **false**입니다.  
   
 -   *ResetSession*:  
-                  **true** 값은 보고서 서버가 보고서 세션과 모든 보고서 스냅숏의 연결을 제거하여 보고서 세션을 다시 설정하도록 합니다. 기본값은 **false**입니다.  
+                  **true** 값은 보고서 서버가 보고서 세션과 모든 보고서 스냅숏의 연결을 제거하여 보고서 세션을 다시 설정하도록 합니다. 기본 값은 **false**입니다.  
   
 -   *ShowHideToggle*:  
                   보고서의 섹션의 표시/숨기기 상태를 토글합니다. 토글할 섹션을 나타내는 양의 정수를 지정합니다.  
@@ -320,7 +318,7 @@ ms.lasthandoff: 12/05/2017
   
 -   *AsyncRender*: 보고서가 비동기적으로 렌더링되는지 여부를 제어합니다. 기본값 **true**는 보고서가 비동기적으로 렌더링됨을 지정합니다. 부울 값 **true** 또는 **false**여야 합니다.  
   
--   *ParamMode*: 보고서 뷰어 웹 파트의 매개 변수 프롬프트 영역이 전체 페이지 뷰에서 표시되는 방식을 제어합니다. 기본값은 **Full**입니다. 유효한 값은 다음과 같습니다.  
+-   *ParamMode*: 보고서 뷰어 웹 파트의 매개 변수 프롬프트 영역이 전체 페이지 뷰에서 표시되는 방식을 제어합니다. 기본값은 **Full**입니다. 유효한 값은  
   
     -   **Full**: 매개 변수 프롬프트 영역을 표시합니다.  
   
@@ -334,7 +332,7 @@ ms.lasthandoff: 12/05/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: 보고서 뷰어 웹 파트의 문서 구조 영역이 전체 페이지 뷰에서 표시되는 방식을 제어합니다. 기본값은 **Full**입니다. 유효한 값은 다음과 같습니다.  
+-   *DocMapMode*: 보고서 뷰어 웹 파트의 문서 구조 영역이 전체 페이지 뷰에서 표시되는 방식을 제어합니다. 기본값은 **Full**입니다. 유효한 값은  
   
     -   **Full**: 문서 구조 영역을 표시합니다.  
   
@@ -350,7 +348,7 @@ ms.lasthandoff: 12/05/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: 도구 모음 항목 표시 여부를 제어합니다. 비트 열거 값입니다. 도구 모음 항목을 추가하려면 합계 값에 항목의 값을 추가합니다. 예를 들어 동작 없음 메뉴의 경우 rv:ToolBarItemsDisplayMode=63(또는 0x3F)(1+2+4+8+16+32)을 사용하며, 동작 메뉴의 경우에만 rv:ToolBarItemsDisplayMode=960(또는 0x3C0)을 사용합니다. 기본값은 **-1**이며, 모든 도구 모음 항목을 포함합니다. 유효한 값은 다음과 같습니다.  
+-   *ToolBarItemsDisplayMode*: 도구 모음 항목 표시 여부를 제어합니다. 비트 열거 값입니다. 도구 모음 항목을 추가하려면 합계 값에 항목의 값을 추가합니다. 예를 들어 동작 없음 메뉴의 경우 rv:ToolBarItemsDisplayMode=63(또는 0x3F)(1+2+4+8+16+32)을 사용하며, 동작 메뉴의 경우에만 rv:ToolBarItemsDisplayMode=960(또는 0x3C0)을 사용합니다. 기본값은 **-1**이며, 모든 도구 모음 항목을 포함합니다. 유효한 값은  
   
     -   1(0x1): **뒤로** 단추  
   
@@ -380,7 +378,7 @@ ms.lasthandoff: 12/05/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스를 사용하여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)  
   

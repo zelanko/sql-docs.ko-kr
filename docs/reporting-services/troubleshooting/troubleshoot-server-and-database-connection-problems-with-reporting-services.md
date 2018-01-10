@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5dd30097deb23e911e43789e10e81685f1ce0743
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
 이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하십시오.  
@@ -119,10 +117,10 @@ SQL Server 2008 Reporting Services에서는 보고서 서버 서비스 계정에
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>MSCS(Microsoft Cluster Services) 클러스터에서 실행되는 가상 SQL Server에 보고서 서버 데이터베이스를 생성할 경우 /reports 및 /reportsserver 디렉터리에 연결할 수 없음  
 MSCS 클러스터에서 실행되는 가상 SQL Server에 보고서 서버 데이터베이스인 **ReportServer** 및 **ReportServerTempDB**를 만드는 경우 `<domain>\<computer_name>$` 형식의 원격 이름을 SQL Server에 로그인으로 등록하지 못할 수 있습니다. 보고서 서버 서비스 계정을 연결 시 이 원격 이름이 필요한 계정으로 구성한 경우 사용자는 Reporting Services에서 /reports 및 /reportserver 디렉터리에 연결할 수 없습니다. 예를 들어, 기본 제공 Windows 계정 NetworkService에는 이 원격 이름이 필요합니다. 이 문제를 방지하려면 명시적 도메인 계정이나 SQL Server 로그인을 사용하여 보고서 서버 데이터베이스에 연결하십시오.  
     
-  ## <a name="see-also"></a>관련 항목:  
+  ## <a name="see-also"></a>참고 항목  
 [Reporting Services 및 파워 뷰 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [오류 및 이벤트(Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Reporting Services 보고서에서 데이터 검색 문제 해결](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Reporting Services 보고서의 데이터 검색 문제 해결](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Reporting Services 구독 및 배달 문제 해결](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   

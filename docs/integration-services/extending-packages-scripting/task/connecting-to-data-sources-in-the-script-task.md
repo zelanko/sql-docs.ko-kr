@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 052113c5e6f18381a26d9a3a7f1703659a40a88e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76108d1b6c4004d85456b0f412874012b8d71228
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>스크립트 태스크에서 데이터 원본에 연결
   연결 관리자를 사용하면 패키지에 구성된 데이터 원본에 액세스할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../../integration-services/connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
@@ -57,54 +57,42 @@ ms.lasthandoff: 11/20/2017
  다음 예에서는 스크립트 태스크 내에서 연결 관리자에 액세스하는 방법을 보여 줍니다. 이 예제에서는 **Test ADO.NET Connection**이라는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자와 **플랫 파일 연결 관리자**라는 플랫 파일 연결 관리자를 만들고 구성했다고 가정합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자는 데이터 원본에 즉시 연결하는 데 사용할 수 있는 **SqlConnection** 개체를 반환합니다. 반면에 플랫 파일 연결 관리자는 경로와 파일 이름이 들어 있는 문자열만 반환합니다. 플랫 파일을 열어 작업하려면 **System.IO** 네임스페이스의 메서드를 사용해야 합니다.  
   
 ```vb  
-Public Sub Main()  
-  
-    Dim myADONETConnection As SqlClient.SqlConnection  
-    myADONETConnection = _  
-        DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction), _  
-        SqlClient.SqlConnection)  
-    MsgBox(myADONETConnection.ConnectionString, _  
-        MsgBoxStyle.Information, "ADO.NET Connection")  
-  
-    Dim myFlatFileConnection As String  
-    myFlatFileConnection = _  
-        DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _  
-        String)  
-    MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")  
-  
-    Dts.TaskResult = ScriptResults.Success  
-  
-End Sub  
+    Public Sub Main()
+
+        Dim myADONETConnection As SqlClient.SqlConnection =
+            DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction),
+                SqlClient.SqlConnection)
+        MsgBox(myADONETConnection.ConnectionString,
+            MsgBoxStyle.Information, "ADO.NET Connection")
+
+        Dim myFlatFileConnection As String =
+            DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction),
+                String)
+        MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")
+
+        Dts.TaskResult = ScriptResults.Success
+
+    End Sub
 ```  
   
 ```csharp  
-using System;  
-using System.Data.SqlClient;  
-using Microsoft.SqlServer.Dts.Runtime;  
-using System.Windows.Forms;  
-  
-public class ScriptMain  
-{  
-  
-        public void Main()  
-        {  
-            SqlConnection myADONETConnection = new SqlConnection();  
-            myADONETConnection = (SqlConnection)(Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)as SqlConnection);  
-            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");  
-  
-            string myFlatFileConnection;  
-            myFlatFileConnection = (string)(Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);  
-            MessageBox.Show(myFlatFileConnection, "Flat File Connection");  
-  
-            Dts.TaskResult = (int)ScriptResults.Success;  
-  
-        }  
-  
-}  
-  
+        public void Main()
+        {
+            SqlConnection myADONETConnection = 
+                Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)
+                as SqlConnection;
+            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");
+
+            string myFlatFileConnection = 
+                Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) 
+                as string;
+            MessageBox.Show(myFlatFileConnection, "Flat File Connection");
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [연결 관리자 만들기](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   

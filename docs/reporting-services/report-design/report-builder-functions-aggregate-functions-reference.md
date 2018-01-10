@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 80dda6c12477a044a8a12c9b50d8fccb18aebb23
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4fcaa7101ebdd8042d0148b4a216335a74af837b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>보고서 작성기 함수 - 집계 함수 참조
   보고서에 집계 값을 포함하려면 식에서 기본 제공 집계 함수를 사용할 수 있습니다. 숫자 필드에 대한 기본 집계 함수는 SUM입니다. 식을 편집하고 다른 기본 제공 집계 함수를 사용하거나 다른 범위를 지정할 수 있습니다. 범위는 계산에 사용할 데이터 집합을 식별합니다.  
@@ -60,13 +58,13 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="CalculatingAggregates"></a> 기본 제공 집계 함수  
  다음 기본 제공 함수는 기본 범위 또는 명명된 범위에서 Null이 아닌 숫자 데이터의 집합에 대한 요약 값을 계산합니다.  
   
-|**함수**|**Description**|  
+|**함수**|**설명**|  
 |------------------|---------------------|  
 |[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)|식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 평균을 반환합니다.|  
 |[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)|식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 값의 개수를 반환합니다.|  
-|[CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)|식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 고유 값의 개수를 반환합니다.|  
+|[CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)|식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 고유 값의 수를 반환합니다.|  
 |[Max](../../reporting-services/report-design/report-builder-functions-max-function.md)|특정 범위의 컨텍스트에서 식에 의해 지정된 Null이 아닌 모든 숫자 값의 최대값을 반환합니다. 이 함수로 차트 축의 최대값을 지정하여 눈금을 제어할 수 있습니다.|  
-|[Min](../../reporting-services/report-design/report-builder-functions-min-function.md)|지정된 범위의 컨텍스트에서 식으로 지정되는 Null이 아닌 모든 숫자 값의 최소값을 반환합니다. 이 함수로 차트 축의 최소값을 지정하여 눈금을 제어할 수 있습니다.|  
+|[Min](../../reporting-services/report-design/report-builder-functions-min-function.md)|특정 범위의 컨텍스트에서 식에 의해 지정된 Null이 아닌 모든 숫자 값의 최소값을 반환합니다. 이 함수로 차트 축의 최소값을 지정하여 눈금을 제어할 수 있습니다.|  
 |[StDev](../../reporting-services/report-design/report-builder-functions-stdev-function.md)|식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 표준 편차를 반환합니다.|  
 |[StDevP](../../reporting-services/report-design/report-builder-functions-stdevp-function.md)|식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 숫자 값의 모집단 표준 편차를 반환합니다.|  
 |[Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)|식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 합계를 반환합니다.|  
@@ -86,12 +84,12 @@ ms.lasthandoff: 12/05/2017
 |보고서 매개 변수|아니오|목록 앞부분의 매개 변수만<br /><br /> 참고 4|아니오|아니오|아니오|아니오|아니오|  
 |필드|예|예|아니오|아니오|아니오|아니오|아니오|  
 |쿼리 매개 변수|아니오|예|아니오|아니오|아니오|아니오|아니오|  
-|그룹 식|예|예|아니오|아니요|예|아니오|아니오|  
-|정렬 식|예|예|아니오|아니요|예|예<br /><br /> 참고 5|아니오|  
-|필터 식|예|예|아니오|아니요|예|예<br /><br /> 참고 6|아니오|  
+|그룹 식|예|예|아니오|아니오|예|아니오|아니오|  
+|정렬 식|예|예|아니오|아니오|예|예<br /><br /> 참고 5|아니오|  
+|필터 식|예|예|아니오|아니오|예|예<br /><br /> 참고 6|아니오|  
 |코드|아니오|예<br /><br /> 참고 7|아니오|아니오|아니오|아니오|아니오|  
 |보고서 언어|아니오|예|아니오|아니오|아니오|아니오|아니오|  
-|변수|예|예|아니오|아니요|예|현재 범위 또는 포함하는 범위|아니오|  
+|변수|예|예|아니오|아니오|예|현재 범위 또는 포함하는 범위|아니오|  
 |집계|예|예|페이지 머리글/페이지 바닥글에서만|보고서 항목 집계에서만|예|아니오|아니오|  
 |조회 함수|예|예|예|아니오|예|아니오|아니오|  
   
@@ -118,10 +116,10 @@ ms.lasthandoff: 12/05/2017
   
 |컨텍스트|RunningValue|RowNumber|첫째<br /><br /> 마지막|Previous|Sum 및 기타 미리 정렬 함수|ReportItem 집계|조회 함수|Aggregate 함수|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Running Value|아니오|아니오|아니오|아니요|예|아니오|예|아니오|  
-|첫째<br /><br /> 마지막|아니오|아니오|아니오|아니요|예|아니오|아니오|아니오|  
+|Running Value|아니오|아니오|아니오|아니오|예|아니오|예|아니오|  
+|첫째<br /><br /> 마지막|아니오|아니오|아니오|아니오|예|아니오|아니오|아니오|  
 |Previous|예|예|예|아니오|예|아니오|예|아니오|  
-|Sum 및 기타 미리 정렬 함수|아니오|아니오|아니오|아니요|예|아니오|예|아니오|  
+|Sum 및 기타 미리 정렬 함수|아니오|아니오|아니오|아니오|예|아니오|예|아니오|  
 |ReportItem 집계|아니오|아니오|아니오|아니오|아니오|아니오|아니오|아니오|  
 |조회 함수|예|예<br /><br /> 참고 1|예<br /><br /> 참고 1|예<br /><br /> 참고 1|예<br /><br /> 참고 1|예<br /><br /> 참고 1|아니오|아니오|  
 |Aggregate 함수|아니오|아니오|아니오|아니오|아니오|아니오|아니오|아니오|  
@@ -133,7 +131,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="CalculatingRunningValues"></a> 실행 값 계산  
  다음 기본 제공 함수는 데이터의 집합에 대한 실행 값을 계산합니다. **RowNumber** 는 포함하는 범위 내의 각 행에 대해 증가하는 개수의 실행 값을 반환한다는 점에서 **RunningValue** 와 비슷합니다. 이러한 함수의 범위 매개 변수는 개수 계산을 다시 시작하는 시점을 제어하는 포함하는 범위를 지정해야 합니다.  
   
-|**함수**|**Description**|  
+|**함수**|**설명**|  
 |------------------|---------------------|  
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|지정한 범위에서 행 개수의 실행 개수를 반환합니다. **RowNumber** 는 0이 아닌 1부터 계산을 다시 시작합니다.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 실행 집계를 반환합니다.|  
@@ -143,7 +141,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingRowCounts"></a> 행 개수 검색  
  다음 기본 제공 함수는 지정된 범위에서 행 개수를 계산합니다. 이 함수를 사용하여 Null 값을 가진 행을 포함한 모든 행의 개수를 계산할 수 있습니다.  
   
-|**함수**|**Description**|  
+|**함수**|**설명**|  
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Null 값을 가진 행을 포함하여 지정된 범위의 행 수를 반환합니다.|  
   
@@ -152,7 +150,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="LookupFunctions"></a> 다른 데이터 집합에서 값 조회  
  다음 조회 함수는 지정된 데이터 집합에서 값을 검색합니다.  
   
-|**함수**|**Description**|  
+|**함수**|**설명**|  
 |------------------|---------------------|  
 |[Lookup 함수](../../reporting-services/report-design/report-builder-functions-lookup-function.md)|데이터 집합에서 지정된 식에 대한 값을 반환합니다.|  
 |[LookupSet 함수](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|데이터 집합에서 지정된 식에 대한 값 집합을 반환합니다.|  
@@ -163,7 +161,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingPostsortValues"></a> 정렬 종속 값 검색  
  다음 기본 제공 함수는 지정된 범위 내의 첫 번째, 마지막 또는 이전 값을 반환합니다. 이러한 함수는 데이터 값의 정렬 순서에 따라 달라집니다. 예를 들어 이러한 함수를 사용하여 페이지의 첫 번째와 마지막 값을 찾아 사전 스타일의 페이지 머리글을 만들 수 있습니다. 예를 들어 **Previous** 를 사용하여 특정 범위 내에서 한 행에 있는 값을 이전 행의 값과 비교하여 테이블에서 전년동기대비 백분율 값을 찾을 수 있습니다.  
   
-|**함수**|**Description**|  
+|**함수**|**설명**|  
 |------------------|---------------------|  
 |[첫째](../../reporting-services/report-design/report-builder-functions-first-function.md)|지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.|  
 |[마지막](../../reporting-services/report-design/report-builder-functions-last-function.md)|지정된 식의 지정된 범위에서 마지막 값을 반환합니다.|  
@@ -174,7 +172,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingServerAggregates"></a> 서버 집계 검색  
  다음 기본 제공 함수는 데이터 공급자에서 사용자 지정 집계를 검색합니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형을 사용하면 데이터 원본 서버에서 계산된 집계를 검색하여 그룹 머리글에 사용할 수 있습니다.  
   
-|**함수**|**Description**|  
+|**함수**|**설명**|  
 |------------------|---------------------|  
 |[집계](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|데이터 공급자가 정의한 대로 지정한 식의 사용자 지정 집계를 반환합니다.|  
   
@@ -198,7 +196,7 @@ ms.lasthandoff: 12/05/2017
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  

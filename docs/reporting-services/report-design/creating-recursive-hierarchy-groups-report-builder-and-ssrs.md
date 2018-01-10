@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3062eacef7de155c81bab789cc808cb3e1bffc5d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 86c1fd83cfd413275c18c335a69efaa3e0fccbb4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 생성(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 부모와 자식 간의 관계가 데이터 집합의 필드로 표현되는 재귀 데이터를 표시하려면 자식 필드를 기반으로 데이터 영역 그룹 식을 설정하고 부모 필드를 기반으로 Parent 속성을 설정합니다.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="aggregate-functions-that-support-recursion"></a>재귀를 지원하는 집계 함수  
  매개 변수 *Recursive* 를 허용하는 Reporting Services 집계 함수를 사용하여 재귀 계층 구조의 요약 데이터를 계산할 수 있습니다. 다음 함수 **Sum** , [Avg](../../reporting-services/report-design/report-builder-functions-sum-function.md), [Count](../../reporting-services/report-design/report-builder-functions-avg-function.md), [CountDistinct](../../reporting-services/report-design/report-builder-functions-count-function.md), [CountRows](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md), [Max](../../reporting-services/report-design/report-builder-functions-countrows-function.md), [Min](../../reporting-services/report-design/report-builder-functions-max-function.md), [StDev](../../reporting-services/report-design/report-builder-functions-min-function.md), [StDevP](../../reporting-services/report-design/report-builder-functions-stdev-function.md), [Sum](../../reporting-services/report-design/report-builder-functions-stdevp-function.md), [Var](../../reporting-services/report-design/report-builder-functions-sum-function.md)및 [VarP](../../reporting-services/report-design/report-builder-functions-var-function.md)는 매개 변수로 [Recursive](../../reporting-services/report-design/report-builder-functions-varp-function.md)을 허용합니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   

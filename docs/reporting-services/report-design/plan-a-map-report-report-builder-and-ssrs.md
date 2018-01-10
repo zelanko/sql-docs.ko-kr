@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b6581db08d67cef66d9ea4134493b3c83a4b0d80
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d934c4314aa149c4e220fc0b91a9cc182083f6d6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>지도 보고서 계획(보고서 작성기 및 SSRS)
 훌륭한 보고서는 조치를 취하거나 상황을 깊이 있게 파악할 수 있는 정보를 제공합니다. 지리적 배경에 대한 인구 통계 또는 판매량 합계와 같은 분석 데이터를 제공하기 위해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 지도를 추가할 수 있습니다. 지도에는 여러 계층이 포함될 수 있으며, 각 계층에는 위치를 나타내는 점, 길을 나타내는 선, 영역을 나타내는 다각형 등의 특정 공간 데이터 유형으로 정의되는 지도 요소가 표시됩니다. 각 계층에서 분석 데이터와 지도 요소를 연결할 수 있습니다.  
@@ -115,8 +113,8 @@ ms.lasthandoff: 12/05/2017
   
 |마법사 아이콘|계층 스타일|계층 유형|설명 및 옵션|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|기본 지도|다각형|영역만 표시하는 지도입니다(예: 판매 지역).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 색을 사용합니다. 색상표는 미리 정의된 색 집합입니다. 색상표의 모든 색이 할당되었으면 색의 음영이 할당됩니다.|  
-|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|색 분석 지도|다각형|색을 변경하여 분석 데이터를 표시하는 지도입니다(예: 지역별 판매량 데이터).|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|기본 지도|Polygon|영역만 표시하는 지도입니다(예: 판매 지역).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 색을 사용합니다. 색상표는 미리 정의된 색 집합입니다. 색상표의 모든 색이 할당되었으면 색의 음영이 할당됩니다.|  
+|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|색 분석 지도|Polygon|색을 변경하여 분석 데이터를 표시하는 지도입니다(예: 지역별 판매량 데이터).|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|거품형 지도|다각형|지역 중심의 거품 크기를 변경하여 분석 데이터를 표시하는 지도입니다(예: 지역별 판매량 데이터).<br /><br /> 옵션: 두 번째 분석 필드에 따라 영역 색을 변경하고 색 규칙을 지정합니다.|  
 |![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|기본 선 지도|선|선만 표시하는 지도입니다(예: 배달 경로).<br /><br /> 옵션: 색상표에 따라 색을 변경하거나 한 색을 사용합니다.|  
 |![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Basic")|분석 선 지도|선|선 색 및 두께를 변경하는 지도입니다(예: 경로별 정기 메트릭 및 배달된 물품 수).<br /><br /> 옵션: 한 분석 필드에 따라 선 두께를 변경하고, 두 번째 분석 필드에 따라 선 색을 변경하고, 색 규칙을 지정합니다.|  
@@ -158,7 +156,7 @@ ms.lasthandoff: 12/05/2017
   
  동적 공간 데이터를 사용하려면 공간 데이터 원본이 보고서 서버에 있어야 합니다. 보고서가 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 디자인되는 경우 공간 데이터 원본을 프로젝트에 추가하고 보고서 정의와 함께 보고서 서버에 게시할 수 있습니다. 보고서 작성기를 사용하여 보고서를 디자인하는 경우 먼저 공간 데이터를 보고서 서버에 업로드한 다음 마법사나 계층 속성에서 지도 계층의 공간 데이터 원본을 지정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [자습서: 지도 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

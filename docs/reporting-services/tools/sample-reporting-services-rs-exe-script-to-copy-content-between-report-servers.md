@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 41f7f0b36b5889772bde8fbdc39840061bdf88fb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b713cbe4afa9a54e9753e3347d4b2e6b85d91144
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
   이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RS.exe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
@@ -98,9 +96,9 @@ ms.lasthandoff: 12/05/2017
   
 |항목|마이그레이션|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
-|암호|**아니오**|**아니오**|암호는 마이그레이션되지 **않습니다** . 콘텐츠 항목이 마이그레이션된 다음에는 대상 서버에서 자격 증명 정보를 업데이트합니다. 예: 저장된 자격 증명이 포함된 데이터 원본.|  
-|내 보고서|**아니오**|**아니오**|기본 모드의 "내 보고서" 기능은 개별 사용자 로그인을 기반으로 하므로, 스크립팅 서비스가 rss 스크립트를 실행하는 데 사용된 **–u** 매개 변수 이외에는 사용자에 대해 "내 보고서" 폴더의 콘텐츠에 대한 액세스 권한을 갖지 않습니다. 또한 "내 보고서"는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 기능이 아니며, 폴더의 항목을 SharePoint 환경으로 복사할 수 없습니다. 따라서 원본 기본 모드 보고서 서버에서 "내 보고서" 폴더에 있는 보고서 항목은 스크립트로 복사되지 않습니다.<br /><br /> 이 스크립트를 사용해서 "내 보고서" 폴더에 있는 콘텐츠를 마이그레이션하려면 다음을 수행합니다.<br /><br /> 1.  보고서 관리자에서 새 폴더를 만듭니다. 필요에 따라 각 사용자에 대해 폴더 또는 하위 폴더를 만들 수 있습니다.<br />2.  "내 보고서" 콘텐츠가 있는 사용자 중 하나로 로그인합니다.<br />3.  보고서 관리자에서 **내 보고서** 폴더를 클릭합니다.<br />4.  폴더에 대한 **세부 정보** 보기를 클릭합니다.<br />5.  복사하려는 각 보고서를 선택합니다.<br />6.  보고서 관리자 도구 모음에서 **이동**을 클릭합니다.<br />7.  원하는 대상 폴더를 선택합니다.<br />8.  각 사용자에 대해 2-7단계를 반복합니다.<br />9. 스크립트를 실행합니다.|  
-|기록|**아니오**|**아니오**||  
+|암호|**아니요**|**아니요**|암호는 마이그레이션되지 **않습니다** . 콘텐츠 항목이 마이그레이션된 다음에는 대상 서버에서 자격 증명 정보를 업데이트합니다. 예: 저장된 자격 증명이 포함된 데이터 원본.|  
+|내 보고서|**아니오**|**아니요**|기본 모드의 "내 보고서" 기능은 개별 사용자 로그인을 기반으로 하므로, 스크립팅 서비스가 rss 스크립트를 실행하는 데 사용된 **–u** 매개 변수 이외에는 사용자에 대해 "내 보고서" 폴더의 콘텐츠에 대한 액세스 권한을 갖지 않습니다. 또한 "내 보고서"는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 기능이 아니며, 폴더의 항목을 SharePoint 환경으로 복사할 수 없습니다. 따라서 원본 기본 모드 보고서 서버에서 "내 보고서" 폴더에 있는 보고서 항목은 스크립트로 복사되지 않습니다.<br /><br /> 이 스크립트를 사용해서 "내 보고서" 폴더에 있는 콘텐츠를 마이그레이션하려면 다음을 수행합니다.<br /><br /> 1.  보고서 관리자에서 새 폴더를 만듭니다. 필요에 따라 각 사용자에 대해 폴더 또는 하위 폴더를 만들 수 있습니다.<br />2.  "내 보고서" 콘텐츠가 있는 사용자 중 하나로 로그인합니다.<br />3.  보고서 관리자에서 **내 보고서** 폴더를 클릭합니다.<br />4.  폴더에 대한 **세부 정보** 보기를 클릭합니다.<br />5.  복사하려는 각 보고서를 선택합니다.<br />6.  보고서 관리자 도구 모음에서 **이동**을 클릭합니다.<br />7.  원하는 대상 폴더를 선택합니다.<br />8.  각 사용자에 대해 2-7단계를 반복합니다.<br />9. 스크립트를 실행합니다.|  
+|기록|**아니요**|**아니요**||  
 |기록 설정|예|예|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
 |일정|예|예|일정을 마이그레이션하려면 대상 서버에서 SQL Server 에이전트가 실행 중이어야 합니다. SQL Server 에이전트가 대상에서 실행 중이 아니면 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
 |역할 및 시스템 정책|예|예|기본적으로 스크립트에서는 서버 사이에 사용자 지정 권한 스키마가 복사되지 않습니다. 기본 동작에 따르면 '부모 권한 상속' 플래그가 TRUE로 설정된 항목이 대상 서버로 복사됩니다. 스크립트가 개별 항목의 권한을 복사하도록 하려면 SECURITY 스위치를 사용합니다.<br /><br /> 원본 및 대상 서버가 **동일한 보고서 서버 모드가 아니고**(예: 기본 모드에서 SharePoint 모드로), SECURITY 스위치를 사용하는 경우, 스크립트는 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)항목에 설명된 비교 방법을 기준으로 기본 역할 및 그룹을 매핑하려고 시도합니다. 사용자 지정 역할 및 그룹은 대상 서버로 복사되지 않습니다.<br /><br /> **동일한 모드**의 서버 사이에 스크립트를 복사하고 SECURITY 스위치를 사용하는 경우에는 스크립트가 새 역할(기본 모드) 또는 그룹(SharePoint 모드)을 대상 서버에 만듭니다.<br /><br /> 역할이 대상 서버에 이미 있을 경우 스크립트는 다음과 비슷한 "오류" 메시지를 만들고 다른 항목의 마이그레이션을 계속 수행합니다. 스크립트가 완료되면 대상 서버의 역할이 사용자 요구에 맞게 구성되었는지 확인합니다. 마이그레이션 역할: 8개 항목이 발견되었습니다.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.<br /><br /> **참고:** 원본 서버에 있는 사용자가 대상 서버에 없을 경우 스크립트가 역할 지정을 대상 서버에 적용할 수 없고, SECURITY 스위치가 사용되었어도 스크립트가 역할 지정을 적용할 수 없습니다.|  
@@ -249,7 +247,7 @@ ms.lasthandoff: 12/05/2017
   
 ##  <a name="bkmk_parameter_description"></a> 매개 변수 설명  
   
-|매개 변수|Description|필수임|  
+|매개 변수|Description|필수|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|원본 보고서 서버의 URL|예|  
 |**-u** Domain\password **–p** password|원본 서버의 자격 증명입니다.|선택 사항입니다. 누락된 경우 기본 자격 증명이 사용됩니다.|  
@@ -366,7 +364,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 -   System.Exception: 서버에 연결하지 못했습니다. http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **HTTP 상태 401 때문에 요청이 실패했습니다. 권한 없음**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String methodName, Object parameters) at Microsoft.sqlserver.reportingservices2010.reportingservice2010.issslrequired at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String url, String userName, String password String domain, Int32 timeout) at Microsoft.reportingservices.scripthost.scripthost.determineserverurlsecurity---내부 예외 스택 추적 끝--  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [Reporting Services의 역할 및 작업과 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   

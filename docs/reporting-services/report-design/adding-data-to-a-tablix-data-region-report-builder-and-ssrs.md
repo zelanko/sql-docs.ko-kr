@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc72748fdcb76e456c9c8155a5d91c83a1ad2483
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2bf18d57ac033120507c9c2ab5df9b98bf5cc2db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역에 데이터 추가(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 보고서 데이터 집합의 데이터를 테이블 또는 행렬에 표시하려면 각 데이터 셀에서 표시할 데이터 집합 필드의 이름을 지정합니다. 세부 데이터 또는 그룹화된 데이터를 표시할 수 있습니다. 테이블 또는 행렬에 그룹을 추가하면 그룹 값 및 그룹 데이터를 위한 행과 열이 자동으로 추가됩니다. 그런 다음 데이터의 부분합과 합계를 추가할 수 있습니다.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>다른 보고서의 기존 테이블릭스 데이터 영역 추가  
  다른 보고서에서 데이터 영역을 복사하여 새 보고서나 기존 보고서에 붙여넣을 수 있습니다. 데이터 영역을 붙여넣은 후 데이터 영역에서 사용하는 데이터 집합이 정의되어 있고 데이터 집합 필드의 이름 및 데이터 형식이 원래 보고서의 해당 이름 및 데이터 형식과 동일한지 확인해야 합니다. 한 보고서에서 다른 보고서로 데이터 집합을 복사할 수 없지만 보고서에서 공유 데이터 원본을 사용하는 경우 다른 보고서의 데이터 집합을 신속하게 복제할 수 있습니다. 또한 데이터 집합의 데이터를 검색하는 쿼리의 쿼리 텍스트를 가져올 수 있으므로 보고서의 쿼리를 간단하게 복제할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

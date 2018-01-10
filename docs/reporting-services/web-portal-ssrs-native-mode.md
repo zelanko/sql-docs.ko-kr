@@ -8,20 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e11550048a916088124c63a21a55d57056fba855
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e134b496c8e7e9a3cf39c2fa8fb0f8f6cf31dafb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="web-portal-ssrs-native-mode"></a>웹 포털(SSRS 기본 모드)
 
@@ -97,7 +97,7 @@ Reporting Services 웹 포털은 보고서, 모바일 보고서, KPI를 보고 �
 - Power BI Desktop 보고서
 - Excel 통합 문서
 - 데이터 집합
-- 데이터 원본
+- 솔루션 탐색기
 - 리소스
 
 오른쪽 상단에서 **보기** 를 선택하여 표시되는 항목을 관리할 수 있습니다. 숨김 표시를 선택할 경우 해당 항목은 흐린 색으로 표시됩니다.
@@ -128,7 +128,7 @@ Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드
 
 [공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [URL 구성(SSRS 구성 관리자)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

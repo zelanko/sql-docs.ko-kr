@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: "30"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e794dde4202bbd680f82a8c8cbe1f9af30711fc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 03fcc6acbfb855a42a91ef139a2ccff0d7b62ac2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="security-considerations-for-extensions"></a>확장 프로그램에 대한 보안 고려 사항
   CLR(공용 언어 런타임) 기능이 있는 모든 응용 프로그램은 CLR 보안 시스템과 상호 작용해야 합니다. 이러한 응용 프로그램은 실행되면 CLR에 의해 자동으로 평가되어 권한 집합이 부여됩니다. 부여받은 권한에 따라 응용 프로그램이 계속 실행될 수도 있고 보안 예외가 생성될 수도 있습니다. 특정 보고서 서버에 대한 보안 정책 구성 파일의 로컬 보안 설정 및 정책은 어셈블리에서 수신하는 코드 권한을 정의합니다.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="initialization-of-extension-assemblies"></a>확장 프로그램 어셈블리 초기화  
  일부 확장 프로그램 어셈블리에서 시스템 리소스 액세스, 구성 파일 읽기 및 다른 종속 어셈블리 로드 작업을 수행하려면 특정 권한이 필요하므로 보고서 서버에서 확장 프로그램이 메모리로 처음 로드될 때 서비스 계정 자격 증명이 사용됩니다. 하지만 어셈블리가 로드되고 초기화된 후 확장 프로그램 어셈블리에 대한 이후의 모든 호출에서는 현재 로그온한 사용자 계정의 자격 증명을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../reporting-services/extensions/reporting-services-extensions.md)   
  [Reporting Services 확장 라이브러리](../../reporting-services/extensions/reporting-services-extension-library.md)  
   

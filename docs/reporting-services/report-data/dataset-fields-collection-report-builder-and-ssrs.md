@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dfd2de97c1ed49e559ae4b991b6fc1b6ecfc05ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 93e0f3ac2c38d3fa61ec63c65c3a5ceb664bc4d8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 집합 필드 컬렉션(보고서 작성기 및 SSRS)
   데이터 집합 필드는 데이터 연결의 데이터를 나타냅니다. 필드는 숫자 데이터나 숫자가 아닌 데이터를 나타낼 수 있습니다. 예로는 판매액, 총 판매액, 고객 이름, 데이터베이스 식별자, URL, 이미지, 공간 데이터, 전자 메일 주소 등이 있습니다. 디자인 화면에서 필드는 입력란, 테이블 및 차트와 같은 보고서 항목에서 식으로 나타납니다.  
@@ -101,8 +99,8 @@ ms.lasthandoff: 12/05/2017
   
     |SQL 데이터 형식|CLR 데이터 형식|Description|  
     |-------------------|-------------------|-----------------|  
-    |**Date**|**DateTime**|날짜만|  
-    |**Time**|**TimeSpan**|시간입니다.|  
+    |**날짜**|**DateTime**|날짜만|  
+    |**Time**|**TimeSpan**|시간만|  
     |**DateTimeTZ**|**DateTimeOffset**|표준 시간대 오프셋을 포함하는 날짜 및 시간|  
     |**DateTime2**|**DateTime**|소수 자릿수 밀리초를 포함하는 날짜 및 시간|  
   
@@ -115,7 +113,7 @@ ms.lasthandoff: 12/05/2017
  보고서가 처리될 때 해당 열이 더 이상 데이터 원본에 존재하지 않아 데이터 집합에 대한 결과 집합에서 지정된 일부 열에 대한 값이 누락될 수 있습니다. 필드 속성 IsMissing을 사용하여 필드에 대한 값이 런타임에 반환되었는지를 검색할 수 있습니다. 자세한 내용은 [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

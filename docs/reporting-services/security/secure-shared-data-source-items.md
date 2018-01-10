@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fca9c96553326482a92a0c4d0fcd2d0eaee75763
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3db92934757b56ac3b37ee0d83ccfdaa4261fa88
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-shared-data-source-items"></a>공유 데이터 원본 항목 보안 설정
   공유 데이터 원본 항목에 대한 보안을 설정하여 해당 항목에 대한 액세스를 허용하거나 허용하지 않을 수 있습니다.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 |데이터 원본 관리|이름, 설명 및 연결 정보를 지정하는 속성을 봅니다. 이 태스크는 폴더 계층에 공유 데이터 원본 항목을 표시하는 데에도 사용됩니다. 이 태스크를 선택하면 "데이터 원본 보기" 작업을 생략할 수 있습니다.|  
 |항목의 보안 설정|공유 데이터 원본에 대한 액세스를 제어하는 역할 할당을 만들고 수정합니다. 이 태스크는 "데이터 원본 보기" 또는 "데이터 원본 관리" 작업과 함께 사용해야 합니다. 그렇지 않으면 사용자가 항목을 선택할 수 없으므로 효과가 없습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본 관리](../../reporting-services/report-data/manage-report-data-sources.md)   
  [보안 폴더](../../reporting-services/security/secure-folders.md)   
  [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)   

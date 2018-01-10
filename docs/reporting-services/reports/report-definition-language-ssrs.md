@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 735811c38ce6073e9dee4dd5b35cf18645a74a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_RDL_Types"></a> RDL 형식  
  다음 표에서는 RDL 요소 및 특성에 사용되는 유형을 보여 줍니다.  
   
-|Type|Description|  
+|형식|Description|  
 |----------|-----------------|  
 |**이진**|Base-64로 인코딩된 이진 값을 갖는 속성입니다.|  
 |**Boolean**|개체 값으로 **true** 또는 **false** 를 갖는 속성입니다. 다르게 지정되지 않는 이상 생략된 선택적 Boolean 개체의 값은 **False**입니다.|  
@@ -90,11 +88,11 @@ ms.lasthandoff: 12/05/2017
 |-----------------------|---------------------------------|  
 |Boolean|Boolean|  
 |DateTime, DateTimeOffset|DateTime|  
-|Int16, Int32, UInt16, Byte, SByte|Integer|  
+|Int16, Int32, UInt16, Byte, SByte|정수|  
 |Single, Double|Float|  
 |String, Char, GUID, Timespan|String|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [사용자 지정 보고서 항목](../../reporting-services/custom-report-items/custom-report-items.md)  

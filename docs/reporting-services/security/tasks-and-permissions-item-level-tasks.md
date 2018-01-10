@@ -8,23 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3abea80a4ddfee5eddd4c4070b79b338d4b398ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a824675df700ba1910d21acea217061acb0879d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>작업 및 사용 권한 - 항목 수준의 작업
   항목 수준 태스크는 보고서, 폴더, 보고서 모델, 리소스 또는 공유 데이터 원본과 관련된 사용 권한 모음입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서 서버 사이트에 전체적으로 적용되는 시스템 수준 태스크도 있습니다. 자세한 내용은 [시스템 수준 태스크](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)를 참조하세요. 일반적인 태스크 및 사용 권한에 대한 자세한 내용은 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)을 참조하십시오.  
@@ -37,14 +35,14 @@ ms.lasthandoff: 12/05/2017
   
  공유 데이터 집합은 보고서와 동일한 사용 권한 집합을 사용하고, 보고서 파트는 리소스와 동일한 사용 권한 집합을 사용합니다.  
   
-|태스크|적용 항목|Permissions|  
+|태스크|적용 항목|사용 권한|  
 |----------|---------------------|-----------------|  
 |보고서 사용|보고서|내용 읽기<br /><br /> 보고서 정의 읽기<br /><br /> 속성 읽기|  
 |보고서 사용|공유 데이터 집합|내용 읽기<br /><br /> 보고서 정의 읽기<br /><br /> 속성 읽기|  
 |링크된 보고서 만들기|보고서|링크 만들기<br /><br /> 속성 읽기|  
 |모든 구독 관리|보고서|속성 읽기<br /><br /> 모든 구독 읽기<br /><br /> 모든 구독 만들기<br /><br /> 모든 구독 삭제<br /><br /> 모든 구독 업데이트|  
 |데이터 원본 관리|폴더|데이터 원본 만들기|  
-|데이터 원본 관리|데이터 원본|속성 업데이트<br /><br /> 업데이트 내용 삭제<br /><br /> 속성 읽기|  
+|데이터 원본 관리|솔루션 탐색기|속성 업데이트<br /><br /> 업데이트 내용 삭제<br /><br /> 속성 읽기|  
 |폴더 관리|폴더|폴더 만들기<br /><br /> 업데이트 속성 삭제<br /><br /> 속성 읽기|  
 |개별 구독 관리|보고서|속성 읽기<br /><br /> 구독 만들기<br /><br /> 구독 삭제<br /><br /> 구독 읽기<br /><br /> 구독 업데이트|  
 |모델 관리|폴더|모델 만들기|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
 |리소스 보기|리소스|내용 읽기<br /><br /> 속성 읽기|  
 |리소스 보기|보고서 파트|내용 읽기<br /><br /> 속성 읽기|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

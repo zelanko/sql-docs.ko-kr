@@ -8,20 +8,18 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: a409c0678ca17215932cffe378bdcebbb752897d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f739af4e274a8d9ccdb4ccb3bc4ab3de3776d8a8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -175,7 +173,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 |||  
 |-|-|  
-|새로 만들기|Previous|  
+|단추를 사용하여 새|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
 **매개 변수 창 사용자 지정:** 이제 매개 변수 창을 사용자 지정할 수 있습니다. 보고서 작성기의 디자인 화면을 사용하여 매개 변수 창의 특정 열과 행에 매개 변수를 끌어 넣을 수 있습니다. 열을 추가하거나 제거하여 창 레이아웃을 변경할 수 있습니다.   자세한 내용은 [보고서에서 매개 변수 창 사용자 지정&#40;보고서 작성기&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)을 참조하세요.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: expressions [Reporting Services], about expressions
@@ -18,13 +16,13 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: "59"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55c99fec659eaeffa55efee403bd336a20f9ccab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc3cfbff325d163ca9ddde120ecc17db97e91c03
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>보고서에 사용되는 식(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서는 매개 변수, 쿼리, 필터, 보고서 항목 속성, 그룹 및 정렬 정의, 입력란 속성, 책갈피, 문서 구조, 동적 페이지 머리글 및 바닥글 내용, 이미지, 동적 데이터 원본 정의에 대한 값을 지정하거나 계산하기 위해 보고서 정의 전체에서 식이 사용됩니다. 이 항목에서는 식을 사용하여 보고서의 내용 또는 모양을 수정할 수 있는 많은 경우에 대한 예를 제공합니다. 이 목록에는 일부만 나와 있습니다. 식 단추(**fx**)를 표시하는 대화 상자 또는 **\<Expression...>**을 표시하는 드롭다운 목록에서 속성 식을 설정할 수 있습니다.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
 |특정 culture에 대해 서식이 지정된 날짜를 지정합니다.|데이터 영역의 입력란 내에 있는 자리 표시자에 대한 Value입니다. **입력란 속성 대화 상자, 일반**을 사용합니다.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |문자열과 두 소수 자릿수의 백분율로 서식이 지정된 숫자를 연결합니다.|데이터 영역의 입력란 내에 있는 자리 표시자에 대한 Value입니다. **입력란 속성 대화 상자, 일반**을 사용합니다.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

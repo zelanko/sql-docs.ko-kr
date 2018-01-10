@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 193d9894222d2616b90fc7a43de7a2523cac2358
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8e12172ffc24d67a0ad27f07be3c08b17e9c660f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-alert-messages"></a>데이터 경고 메시지
 
@@ -75,7 +73,7 @@ SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포
   
 -   [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  

@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee561435c401a1b0e3299216172bf4e25e146137
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5cd348cbc4968f915203ff1b0e0fa1d1f13f955c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제
 
@@ -82,7 +80,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
 |**MaxArrayResultLength**|RDL 식의 배열 반환 값에 허용되는 최대 항목 수입니다.<br /><br /> 기본값: 100|  
 |**유형**|RDL 식 내에 허용할 멤버 목록입니다.|  
 |**Allow**|RDL 식에 허용할 형식 또는 형식 집합입니다.|  
-|**네임스페이스**|**Allow** 의 특성이며, Value에 적용되는 하나 이상의 형식이 포함된 네임스페이스입니다. 이 속성은 대/소문자를 구분하지 않습니다.|  
+|**Namespace**|**Allow** 의 특성이며, Value에 적용되는 하나 이상의 형식이 포함된 네임스페이스입니다. 이 속성은 대/소문자를 구분하지 않습니다.|  
 |**AllowNew**|**Allow**의 부울 특성이며, 새 형식 인스턴스를 RDL 식에 만들 수 있는지 아니면 RDL **\<Class>** 요소에 만들 수 있는지를 제어합니다.<br /><br /> 참고: **RDLSandboxing**을 사용하도록 설정하면 **AllowNew** 설정에 관계 없이 새 배열을 RDL 식에 만들 수 없습니다.|  
 |**Value**|**Allow** 의 값이며, RDL 식에 허용할 형식의 이름입니다. **\*** 값은 네임스페이스의 모든 형식이 허용됨을 나타냅니다. 이 속성은 대/소문자를 구분하지 않습니다.|  
 |**멤버**|**\<Types>** 요소에 포함된 형식 목록의 경우 RDL 식에 허용되지 않는 멤버 이름 목록입니다.|  
@@ -183,7 +181,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
   
 -   이 클래스를 허용 목록에 추가합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)  

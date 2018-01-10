@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37bfede873cdcfebd34c8fba985614adc41305e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>용어 설명(보고서 작성기)
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 |데이터 원본 이름(data source name)|보고서에서 데이터 원본 개체의 이름입니다.|  
 |데이터 형식|열, 매개 변수 또는 변수에 저장될 수 있는 정보 유형을 지정하는 특성입니다.|  
 |데이터 웨어하우스|쿼리 및 분석을 위해 특수하게 구성된 데이터베이스입니다.|  
-|데이터베이스|데이터 검색, 정렬 및 재결합과 같은 특정 목적을 위해 구성 및 제공되는 정보, 테이블 및 기타 개체의 모음입니다.|  
+|database|데이터 검색, 정렬 및 재결합과 같은 특정 목적을 위해 구성 및 제공되는 정보, 테이블 및 기타 개체의 모음입니다.|  
 |데이터베이스 카탈로그(database catalog)|데이터베이스에 포함된 모든 개체의 정의 및 데이터베이스 정의를 포함하는 데이터베이스의 부분입니다.|  
 |데이터베이스 엔진|데이터베이스 관리 시스템(DBMS)에 대한 액세스를 제공하는 프로그램 모듈입니다.|  
 |데이터베이스 파일(database file)|데이터베이스를 구성하는 물리적 파일 중 하나입니다.|  
@@ -358,7 +356,7 @@ ms.lasthandoff: 12/05/2017
 |시스템 역할 할당(system role assignment)|사이트에 전체적으로 적용되는 역할 할당입니다.|  
 |시스템 역할 정의(system role definition)|사이트 전체 권한을 지정하는 역할 정의입니다.|  
 |시스템 저장 프로시저|시스템 카탈로그에서 정보를 검색하거나 관리 태스크를 수행하는 것과 같은 동작에 사용할 수 있는 SQL Server 제공 저장 프로시저 집합입니다.|  
-|table|1. 관계형 데이터베이스에서 모델링된 엔터티에 대한 데이터를 저장하며 행 및 열로 구성된 2차원 개체입니다. 2. 데이터를 열 형식으로 표시하는 보고서 레이아웃의 데이터 영역입니다.|  
+|테이블|1. 관계형 데이터베이스에서 모델링된 엔터티에 대한 데이터를 저장하며 행 및 열로 구성된 2차원 개체입니다. 2. 데이터를 열 형식으로 표시하는 보고서 레이아웃의 데이터 영역입니다.|  
 |테이블 데이터 영역(table data region)|데이터를 열 형식으로 표시하는 보고서 레이아웃의 보고서 항목입니다.|  
 |테이블릭스(tablix)|테이블 또는 행렬과 유사한(두 가지의 특성을 공유) 행과 열을 포함하는 Reporting Services RDL 데이터 영역입니다.|  
 |태스크(task)|태스크(보고서 관리, 폴더 관리 등)를 구성하는 사용 권한 컬렉션입니다.|  
@@ -377,7 +375,7 @@ ms.lasthandoff: 12/05/2017
 |x축(x-axis)|다음 용어 참조: 범주(x) 축(category (x) axis)|  
 |y축(y-axis)|다음 용어 참조: 값(y) 축(value (y) axis)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

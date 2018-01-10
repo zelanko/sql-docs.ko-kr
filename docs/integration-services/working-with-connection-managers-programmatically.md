@@ -5,10 +5,10 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c61113cc241b20a30ac31ac6e89d82251c0dd69
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5f6811dc16f649b4160125f0234d2d26fdbb9c11
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-connection-managers-programmatically"></a>프로그래밍 방식으로 연결 관리자 사용
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 관련된 연결 관리자 클래스의 AcquireConnection 메서드는 관리 코드에서 연결 관리자를 사용할 때 가장 자주 호출하는 메서드입니다. 관리 코드를 작성할 때 연결 관리자의 기능을 사용하려면 AcquireConnection 메서드를 호출해야 합니다. 스크립트 태스크, 스크립트 구성 요소, 사용자 지정 개체 또는 사용자 지정 응용 프로그램 중 어느 항목에서 관리 코드를 작성하든 관계없이 이 메서드를 호출해야 합니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
 |-----------------------------|-----------------------------|--------------------------|----------------------------|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|[!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자|**System.Data.SqlClient.SqlConnection**||  
 |FILE|파일 연결 관리자|**System.String**|파일에 대한 경로입니다.|  
-|FLATFILE|플랫 파일 연결 관리자|**System.String**|파일에 대한 경로입니다.|  
+|FLATFILE|Flat File Connection Manager|**System.String**|파일에 대한 경로입니다.|  
 |MSMQ|MSMQ 연결 관리자|**System.Messaging.MessageQueue**||  
 |MULTIFILE|다중 파일 연결 관리자|**System.String**|파일 중 하나에 대한 경로입니다.|  
 |MULTIFLATFILE|다중 플랫 파일 연결 관리자|**System.String**|파일 중 하나에 대한 경로입니다.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
 |WMI|WMI 연결 관리자|**System.Management.ManagementScope**||  
 |SQLMOBILE|SQL Server Compact 연결 관리자|**System.Data.SqlServerCe.SqlCeConnection**||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [스크립트 태스크에서 데이터 원본에 연결](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
  [스크립트 구성 요소에서 데이터 원본에 연결](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [사용자 지정 태스크에서 데이터 원본에 연결](../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  

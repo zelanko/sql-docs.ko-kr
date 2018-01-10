@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 3033651c005ce39bd0e2565dd51ed2d2b1089e62
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 474bf581a8aec282de1a6bfadc1e716e439f5b47
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux에서 SQL Server Integration Services (SSIS)를 설치 합니다.
 
@@ -76,7 +76,7 @@ sudo apt-get install mssql-server-is
 ### <a name="remove-ssis"></a>SSIS를 제거 합니다.
 제거 하려면 `mssql-server-is`, 다음 명령을 실행할 수 있습니다.
 ```bash
-sudo apt-get remove msssql-server-is
+sudo apt-get remove mssql-server-is
 ```
 
 ## <a name="RHEL"></a>RHEL에 SSIS를 설치 합니다.
@@ -140,7 +140,7 @@ sudo SSIS_PID= Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | 환경 변수 | Description |
 |---|---|
 | **ACCEPT_EULA** | 값으로 설정 된 경우 SQL Server 사용권 계약에 동의 (예를 들어 `Y`).|
-| **SSIS_PID** | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다.<br/>Evaluation<br/>개발자<br/>Express <br/>Web <br/>표준<br/>Enterprise <br/>제품 키<br/><br/>제품 키 형식에서 이어야 합니다 제품 키를 지정 하는 경우 `#####-#####-#####-#####-#####`여기서 `#` 문자 또는 숫자 이면 합니다.  |
+| **SSIS_PID** | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다.<br/>Evaluation<br/>개발자<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>제품 키<br/><br/>제품 키 형식에서 이어야 합니다 제품 키를 지정 하는 경우 `#####-#####-#####-#####-#####`여기서 `#` 문자 또는 숫자 이면 합니다.  |
 | | |
 
 ## <a name="next-steps"></a>다음 단계

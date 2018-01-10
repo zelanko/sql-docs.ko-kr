@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 caps.latest.revision: "3"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 65f5adb42afa0ec3217e5726cb4b53f4547a29fd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ef2e6405ce01442ca8a9709db2f1aa61a4934dc3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 버전에서 지원하는 Reporting Services 기능
 
@@ -49,7 +47,7 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
 
 ##  <a name="SSRS"></a> Reporting  Services  
   
-|기능 이름|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|기능 이름|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |모바일 보고서 및 KPI|예||||||예|  
 |지원되는 카탈로그 DB [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Standard 이상|Standard 이상|Web|Express|||Standard 이상|  
@@ -89,7 +87,7 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 버전|데이터베이스 호스팅에 사용할 데이터베이스 엔진 인스턴스 버전|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Standard 또는 Enterprise Edition(로컬 또는 원격)|  
-|Standard|Standard 또는 Enterprise Edition(로컬 또는 원격)|  
+|표준|Standard 또는 Enterprise Edition(로컬 또는 원격)|  
 |Web|Web Edition(로컬 전용)|  
 |Express with Advanced Services|Express with Advanced Services(로컬 전용)|  
 |Evaluation|Evaluation|  
@@ -97,7 +95,7 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
 ##  <a name="BIC"></a> Business Intelligence 클라이언트  
  Microsoft 다운로드 센터에서 제공하는 다음 소프트웨어 클라이언트 응용 프로그램을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 실행되는 비즈니스 인텔리전스 문서를 손쉽게 만들 수 있습니다. 이러한 문서를 서버 환경에서 호스트하려는 경우 해당 문서 유형을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 사용하세요. 다음 표에서는 이러한 클라이언트 응용 프로그램에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
   
-|도구 이름|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
+|도구 이름|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl 및.rds)|예|예|||||예|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|예||||||예|  

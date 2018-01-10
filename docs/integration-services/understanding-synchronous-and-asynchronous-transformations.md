@@ -5,10 +5,10 @@ ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c258cd2c85a26c20fc50c1a5e860096f7e69f26f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21d23689ec407d03f8329d628791c19beaf6243e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>동기 및 비동기 변환 이해
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 동기 변환과 비동기 변환의 차이점을 가장 쉽게 이해하려면 먼저 동기 변환을 이해해야 합니다. 동기 변환이 개발자의 요구에 맞지 않으면 디자인에 비동기 변환을 사용해야 합니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  각 입력 행을 출력에 명시적으로 복사하여 동기 변환을 에뮬레이트하는 비동기 변환을 만들 수도 있습니다. 이 방법을 사용하면 열 이름을 바꾸거나 데이터 형식을 변환할 수 있습니다. 그러나 성능은 저하됩니다. 열 복사 또는 데이터 변환과 같은 기본 제공 Integration Services 구성 요소를 사용하면 보다 나은 성능으로 동일한 결과를 얻을 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [스크립트 구성 요소를 사용하여 동기 변환 만들기](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [스크립트 구성 요소를 사용하여 비동기 변환 만들기](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
  [동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

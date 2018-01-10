@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77ab1d9f9216fda6bf393037b341e531cd16c14
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
   NLB(네트워크 부하 분산) 클러스터에서 실행되도록 보고서 서버 확장을 구성하는 경우 다음을 수행해야 합니다.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 |단계|Description|자세한 정보|  
 |----------|-----------------|----------------------|  
-|1.|NLB 클러스터의 서버 노드에서 Reporting Services를 설치하기 전에 스케일 아웃 배포를 위한 요구 사항을 확인합니다.|[스케일 아웃 배포 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 Reporting Services 기본 모드 &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
+|1|NLB 클러스터의 서버 노드에서 Reporting Services를 설치하기 전에 스케일 아웃 배포를 위한 요구 사항을 확인합니다.|[스케일 아웃 배포 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 Reporting Services 기본 모드 &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
 |2|NLB 클러스터를 구성하고 제대로 작동하는지 확인합니다.<br /><br /> NLB 클러스터의 가상 서버 IP에 호스트 헤더 이름을 매핑합니다. 호스트 헤더 이름은 보고서 서버 URL에서 사용되며 IP 주소보다 기억하기 쉽고 입력하기도 편리합니다.|자세한 내용은 실행 중인 Windows 운영 체제 버전에 대한 Windows Server 제품 설명서를 참조하십시오.|  
 |3|Windows 레지스트리에 저장된 **BackConnectionHostNames** 목록에 호스트 헤더의 NetBIOS와 FQDN(정규화된 도메인 이름)을 추가합니다. **KB 896861** (http://support.microsoft.com/kb/896861)에 있는 [메서드 2: 호스트 이름 지정](http://support.microsoft.com/kb/896861) 의 단계를 사용하여 다음과 같이 적절하게 조정합니다. 즉, 이 KB 문서의**7단계** 에 설명된 것과 같이 "레지스트리 편집기를 끝낸 다음 IISAdmin 서비스를 다시 시작"하지 않고 컴퓨터를 다시 부팅하여 변경 내용이 적용되도록 합니다.<br /><br /> 예를 들어 호스트 헤더 이름 \<MyServer>가 Windows 컴퓨터 이름인 "contoso"의 가상 이름인 경우 FQDN 형식 "contoso.domain.com"을 참조할 수 있습니다. **BackConnectionHostNames**의 목록에 호스트 헤더 이름(MyServer)과 FQDN 이름(contoso.domain.com)을 모두 추가해야 합니다.|이 단계는 서버 환경의 로컬 컴퓨터에 NTLM 인증이 사용되어 루프백 연결이 생성되는 경우에 필요합니다.<br /><br /> 이 경우 보고서 관리자와 보고서 서버 간의 요청이 401(권한 없음) 오류와 함께 실패하게 됩니다.|  
 |4|NLB 클러스터에 이미 속해 있는 노드에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 파일만 모드로 설치하고 스케일 아웃 배포를 위한 보고서 서버 인스턴스를 구성합니다.<br /><br /> 구성한 확장은 가상 서버 IP에 전송되는 요청에 응답하지 않을 수 있습니다. 가상 서버 IP를 사용하도록 확장을 구성하는 작업은 뷰 상태 유효성 검사를 구성한 후 그 다음 단계에서 수행됩니다.|[기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
@@ -120,7 +118,7 @@ ms.lasthandoff: 12/05/2017
   
  이러한 변경을 수행한 후 Reporting Services 구성 도구를 시작하면 \<**ReportServerUrl**> 설정이 기본값으로 변경될 수 있습니다. 구성 파일을 필요한 설정이 포함된 버전으로 바꾸어야 하는 경우에는 항상 해당 백업 복사본을 보관해 두십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [기본 모드 보고서 서버 스케일 아웃 배포 구성&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   

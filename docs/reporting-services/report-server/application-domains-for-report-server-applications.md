@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce02d45295537bf9eef80816f7099a4697ddfd1c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f892ef4a4849385e0a48272dd7eef826e4b49635
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="application-domains-for-report-server-applications"></a>보고서 서버 응용 프로그램의 응용 프로그램 도메인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램을 포함하는 단일 서비스로 구현됩니다. 각 응용 프로그램은 단일 보고 서버 프로세스 내 자체 응용 프로그램 도메인에서 실행됩니다. 대부분의 경우 응용 프로그램 도메인은 내부적으로 생성, 구성 및 관리됩니다. 그러나 보고서 서버 응용 프로그램 도메인에 대해 재활용 작업이 발생하는 방식을 이해하면 성능 또는 메모리 문제를 조사하거나 서비스 장애 문제를 해결하는 경우 도움이 될 수 있습니다.  
@@ -87,8 +85,8 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  보고서 서버 웹 서비스와 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램이지만 두 응용 프로그램 모두 IIS에서 호스팅되는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램에 대해 machine.config에 지정되어 있을 수 있는 예약된 응용 프로그램 도메인 재활용에 응답하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>참고 항목  
+ [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
   

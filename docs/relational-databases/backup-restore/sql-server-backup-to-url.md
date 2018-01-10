@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3358baeca572cb8894eb31798932221d1809a77a
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 8be67d9cca60d3debf15cc1c10bd2ebfa171761a
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/22/2017
   
 ###  <a name="limitations"></a> 제한 사항  
   
--   프리미엄 저장소로 백업은 지원 되지 않습니다.  
+-   Premium 저장소로 백업은 지원 되지 않습니다.  
   
 -   페이지 blob을 통해 지원되는 최대 백업 크기는 단일 페이지 blob의 최대 크기인 1TB로 제한됩니다. 블록 blob을 통해 지원되는 최대 백업 크기는 블록 blob의 최대 크기인 200GB로 제한되지 않습니다. 블록 blob 백업은 스트라이프를 지원하여 실질적으로 더 큰 크기를 지원하기 때문입니다.  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/22/2017
   
 ###  <a name="Support"></a> Backup/Restore 문 지원  
   
-|Backup/Restore 문|지원됨|예외|설명|
+|Backup/Restore 문|지원됨|예외|주석|
 |-|-|-|-|
 |BACKUP|Y|BLOCKSIZE 및 MAXTRANSFERSIZE는 블록 Blob에 대해 지원됩니다. 페이지 Blob에 대해서는 지원되지 않습니다. | 블록 Blob에 대한 백업에는 SQL Server 자격 증명에 저장된 공유 액세스 서명이 필요합니다. 페이지 Blob에 대한 백업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명에 저장된 저장소 계정 키가 필요하며 WITH CREDENTIAL 인수가 지정되어야 합니다.|  
 |RESTORE|Y||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 정의해야 하며, 저장소 계정 키를 암호로 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 정의한 경우 WITH CREDENTIAL 인수를 지정해야 합니다.|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/22/2017
   
 ### <a name="support-for-backup-arguments"></a>Backup 인수 지원  
 
-|인수|지원됨|예외|설명|  
+|인수|지원됨|예외|주석|  
 |-|-|-|-|  
 |DATABASE|Y|||  
 |LOG|Y|||  
@@ -165,7 +165,7 @@ ms.lasthandoff: 11/22/2017
   
 ### <a name="support-for-restore-arguments"></a>Restore 인수 지원  
   
-|인수|지원됨|예외|설명|  
+|인수|지원됨|예외|주석|  
 |-|-|-|-|  
 |DATABASE|Y|||  
 |LOG|Y|||  
@@ -355,7 +355,7 @@ Write-Host $tSql
    (SELECT * FROM sys.credentials   
    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
-      WITH IDENTITY = 'SHARED ACCESS IGNATURE',  
+      WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
       SECRET = '<SAS_TOKEN>';  
    ```  
   

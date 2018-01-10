@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -17,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59b8b667a9a895b9e95388ac781ec6bb46923920
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: efb8daaa71c08e9292e7d0427e04fc0a7878f219
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ## <a name="parse-json-documents-into-rows-and-columns"></a>행과 열로 JSON 문서 구문 분석
 단일 값으로 전체 JSON 파일을 읽지 않고 파일을 구문 분석하여 파일의 책과 해당 속성을 행과 열에 반환할 수 있습니다. 다음 예제에서는 [이 사이트](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)에서 책 목록이 포함된 JSON 파일을 사용합니다.
 
-### <a name="example-1"></a>예제 1
+### <a name="example-1"></a>예 1
 가장 간단하게 파일에서 전체 목록을 로드할 수 있습니다. 
 
 ```sql
@@ -150,7 +149,7 @@ OPENROWSET는 파일에서 단일 텍스트 값을 읽어 BulkColumn으로 반�
 {"id":"978-1933988177″, "cat":["book","paperback"], "name":"Lucene in Action, Second … 
 ```
 
-### <a name="example-3"></a>예 3
+### <a name="example-3"></a>예제 3
 OPENJSON 함수는 JSON 콘텐츠를 구문 분석하여 테이블 또는 결과 집합으로 변환할 수 있습니다. 다음 예제에서는 콘텐츠를 로드하고 로드된 JSON을 구문 분석하여 5개의 필드를 열로 반환합니다.
 
 ```sql
@@ -163,7 +162,7 @@ SELECT book.*
 
 이 예제에서 OPENROWSET(BULK)는 파일 콘텐츠를 읽고 그 콘텐츠를 출력에 대해 정의된 스키마로 OPENJSON 함수에 전달합니다. OPENJSON은 열 이름을 사용하여 JSON 개체의 속성을 찾습니다. 예를 들어 `price` 속성은 `price` 열로 반환되고 float 데이터 형식으로 변환됩니다. 결과는 다음과 같습니다.
 
-|Id|이름|price|pages_i|작성자
+|Id|속성|price|pages_i|작성자
 |---|---|---|---|---|
 978-0641723445|번개 도둑|12.5|384|Rick Riordan| 
 978-1423103349|몬스터 바다|6.49|304|Rick Riordan| 
@@ -176,6 +175,6 @@ SELECT book.*
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
 많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [OPENJSON을 사용하여 JSON 데이터를 행 및 열로 변환](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
 

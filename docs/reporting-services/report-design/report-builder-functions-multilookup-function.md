@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3b5c2254a10b9effafd6ac0640ddc5233a3efd8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a935d3281eae92baacc6741d7e276b3046f2ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---multilookup-function"></a>보고서 작성기 함수 - Multilookup 함수
   이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름 집합과 처음 일치하는 값 집합을 반환합니다.  
@@ -43,10 +41,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (**VariantArray**) 현재 범위에서 평가되고, 조회할 키 또는 이름의 집합을 지정하는 식입니다. 예를 들어 다중값 매개 변수의 경우 `=Parameters!IDs.value`입니다.  
   
  *destination_expression*  
- (**Variant**) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`)을 입력합니다.  
+ (**Variant**) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`).  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*인 데이터 집합의 행에 대해 계산되고 검색할 값을 지정하는 식입니다. `=Fields!Name.Value`)을 입력합니다.  
+ (**Variant**) *source_expression* = *destination_expression*인 데이터 집합의 행에 대해 계산되고 검색할 값을 지정하는 식입니다. `=Fields!Name.Value`).  
   
  *데이터 집합(dataset)*  
  보고서의 데이터 집합 이름을 지정하는 상수입니다. 예를 들면 "Colors"입니다.  
@@ -54,7 +52,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>반환 값  
  **VariantArray**를 반환하거나, 일치하는 항목이 없으면 **Nothing** 을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **Multilookup** 을 사용하여 일 대 일 관계가 있는 이름 값 쌍의 데이터 집합에서 값 집합을 검색할 수 있습니다. **MultiLookup** 은 이름 또는 키 집합에 대해 **Lookup** 을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 **Multilookup** 을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 집합에서 연결된 값을 검색할 수 있습니다.  
   
  **Multilookup** 은 다음을 수행합니다.  
@@ -98,12 +96,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  CategoryNames 데이터 집합은 다음 표와 같이 범주 식별자와 범주 이름을 포함합니다.  
   
-|ID|이름|  
+|ID|속성|  
 |--------|----------|  
-|1.|Accessories|  
+|1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|구성 요소|  
   
  식별자 목록에 해당하는 이름을 조회하려면 **Multilookup**을 사용합니다. 먼저 목록을 문자열 배열로 분할한 다음, **Multilookup** 을 호출하여 범주 이름을 검색하고 결과를 문자열로 연결해야 합니다.  
   
@@ -120,7 +118,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ColorID|색|  
 |-------------|-----------|  
-|1.|빨강|  
+|1|빨강|  
 |2|파랑|  
 |3|녹색|  
   
@@ -130,7 +128,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 =Join(MultiLookup(Parameters!MyColors.Value,Fields!ColorID.Value,Fields!Color.Value,"ProductColors"),", ")  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

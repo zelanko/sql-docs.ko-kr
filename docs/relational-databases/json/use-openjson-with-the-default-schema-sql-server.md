@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -18,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0795006b2ec1b6dbc0f222f9513bf9d6ce9a17ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3da875380580bcf7151db13c0b14280a9790d5dc
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>기본 스키마와 함께 OPENJSON 사용(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 11/17/2017
  아래에는 기본 스키마와 함께 **OPENJSON** 을 사용하는 몇 가지 예가 나와 있습니다. 자세한 내용 및 더 많은 예제를 보려면 [OPENJSON&#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)을 참조하세요.  
   
 ## <a name="example---return-each-property-of-an-object"></a>예 - 개체의 각 속성 반환  
- **Query**  
+ **쿼리**  
   
 ```sql  
 SELECT *
@@ -43,12 +42,12 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
 |Key|값|  
 |---------|-----------|  
-|name|John|  
+|NAME|John|  
 |surname|Doe|  
 |age|45|  
   
 ## <a name="example---return-each-element-of-an-array"></a>예 - 배열의 각 요소 반환  
- **Query**  
+ **쿼리**  
   
 ```sql  
 SELECT [key],value
@@ -92,7 +91,7 @@ FROM OPENJSON(@json,N'lax $.info')
   
 |Key|값|형식|  
 |---------|-----------|----------|  
-|형식|1|0|  
+|유형|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
 |tags|[ "Sport", "Water polo" ]|4|  
   
@@ -110,7 +109,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
 많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [OPENJSON&#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   
   

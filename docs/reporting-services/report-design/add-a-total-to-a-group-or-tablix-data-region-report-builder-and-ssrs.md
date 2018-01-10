@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 63b61913ff8df9f2f822e83e5722f0a8895395bd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1c37142936d631a6a01fbc805dcedc381679133
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>그룹 또는 테이블릭스 데이터 영역에 합계 추가(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서는 그룹 또는 전체 데이터 영역에 대한 테이블릭스 데이터 영역에 합계를 추가할 수 있습니다. 기본적으로 합계는 필터가 적용된 후 그룹 또는 데이터 영역의 Null이 아닌 숫자 데이터의 합계입니다. 그룹에 대한 합계를 추가하려면 그룹화 창의 그룹에 대한 바로 가기 메뉴에서 **합계 추가** 를 클릭합니다. 테이블릭스 본문 영역에서 개별 셀에 대한 합계를 추가하려면 셀에 대한 바로 가기 메뉴에서 **합계 추가** 를 클릭합니다. **합계 추가** 명령은 상황에 맞게 작동하며 숫자 필드에 대해서만 사용할 수 있습니다. 선택한 테이블릭스 셀에 따라 테이블릭스 본문 영역에서 셀을 선택하여 단일 셀에 대한 합계를 추가하거나 테이블릭스 행 그룹 영역 또는 열 그룹 영역에서 셀을 선택하여 전체 그룹에 대한 합계를 추가할 수 있습니다. 테이블릭스 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)을 참조하세요.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
      새 열이 현재 그룹 외부 데이터 영역에 추가되고 해당 열의 각 숫자 필드에 대한 기본 합계가 추가됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

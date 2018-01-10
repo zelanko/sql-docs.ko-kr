@@ -8,9 +8,7 @@ ms.service:
 ms.component: custom-report-items
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 caps.latest.revision: "22"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 224b29e8df95d5ec83f385e62edf872a9a0a4341
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4c5d87cbad10c4b453f46093b515936b1061cf1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="custom-report-items"></a>사용자 지정 보고서 항목
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 엔터프라이즈 보고서 작성 및 게시, 보안 및 구독 관리, 포괄적 API를 통한 보고 기능 확장 등을 위한 풍부한 도구 집합을 제공합니다. 보고서는 RDL(Report Definition Language)이라는 XML 기반 언어를 사용하여 정의됩니다. RDL은 보고서의 레이아웃, 쿼리 정보 및 항목 형식을 설명하는 지침을 제공합니다. 사용자 지정 보고서 항목을 작성하여 RDL을 확장할 수 있습니다. 사용자 지정 보고서 항목은 런타임에 보고서 처리기에서 호출하는 런타임 구성 요소와 사용자 지정 보고서 항목을 보고서 디자이너에서 사용할 수 있도록 하는 디자인 타임 구성 요소로 구성됩니다.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
  [사용자 지정 보고서 항목 클래스 라이브러리](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
  **Microsoft.ReportDesigner** 네임스페이스의 사용자 지정 보고서 항목 인프라 클래스 및 관리되는 래퍼 클래스를 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

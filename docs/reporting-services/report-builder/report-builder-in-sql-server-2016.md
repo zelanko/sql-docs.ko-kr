@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords: "10428"
@@ -21,13 +19,13 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c84b428355b76b69e15aa14fad713c5fdd9b575e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5009b0c7ebe8fae67fe51a885dd9f5bf92dc69f9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016의 보고서 작성기
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Visual Studio의 보고서 디자이너를 사용하는 대신 독립 실행형 환경에서 작업하려는 비즈니스 사용자가 페이지를 매긴 보고서를 작성하는 데 사용할 수 있는 도구입니다.  페이지를 매긴 보고서를 디자인할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 지정하는 보고서 정의를 만듭니다. 보고서를 실행하면 보고서 처리기는 지정된 보고서 정의를 가져와 데이터를 검색한 다음 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 에서 보고서를 미리 볼 수 있으며, 기본 모드 또는 SharePoint 통합 모드에서 다른 사람이 보고서를 실행할 수 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 보고서를 게시할 수 있습니다.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  게시된 보고서는 보고서 서버 또는 SharePoint 통합 모드의 보고서 서버에서 보고서 서버 관리자가 관리합니다. 보고서 서버 관리자는 보안을 정의하고 속성을 설정하고 보고서 기록 및 전자 메일 보고서 배달과 같은 작업을 예약할 수 있으며, 공유 일정과 공유 데이터 원본을 만들어 일반적 용도로 사용 가능하도록 할 수 있습니다. 또한 관리자는 모든 보고서 서버 폴더도 관리합니다. 관리 태스크를 수행하는 능력은 사용자 권한에 따라 다릅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
   [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)  
   
   [보고서 작성기 설치](../../reporting-services/install-windows/install-report-builder.md)

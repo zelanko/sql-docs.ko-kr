@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,14 +19,14 @@ helpviewer_keywords:
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 caps.latest.revision: "39"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: febbd48dbe572a668ad8811eec0cff11cb43a849
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0e8cc3d577c678b60ead9a5e5e7983980059a728
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-role-assignments"></a>역할 할당 생성 및 관리
   *역할 할당* 은 사용자 또는 그룹이 특정 보고서 서버 항목에 액세스하거나 작업을 수행할 수 있는지 여부를 결정하는 보안 정책입니다. 역할 할당은 단일 사용자 또는 그룹 계정 이름과 하나 이상의 역할 정의로 구성됩니다.  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="deleting-a-role-assignment"></a>역할 할당 삭제  
  삭제할 각 할당에 해당하는 확인란을 선택한 다음 **삭제**를 클릭하여 역할 할당을 삭제할 수 있습니다. **부모 보안으로 되돌리기**를 클릭하여 역할 할당을 삭제할 수도 있습니다. 이 단추를 클릭하면 항목에 대한 기존 역할 할당이 삭제되고 부모 항목을 통해 제공되는 역할 할당이 대신 사용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
  [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [역할 할당](../../reporting-services/security/role-assignments.md)   

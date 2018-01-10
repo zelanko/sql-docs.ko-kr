@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 946210d52bfd883e4cf26e2664fef9254f7e6086
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9a7cc41553ca20061bebb29a5956cf48ebede673
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-shared-datasets"></a>공유 데이터 집합 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 공유 데이터 집합은 외부 데이터 원본에 연결되는 공유 데이터 원본에서 데이터를 검색합니다. 공유 데이터 집합을 사용하면 쿼리를 공유하여 여러 보고서에서 일관성 있는 데이터 집합을 제공할 수 있습니다. 데이터 집합 쿼리에는 데이터 집합 매개 변수를 포함할 수 있습니다. 처음 사용할 때 또는 일정을 지정하여 특정 매개 변수 조합에 대해 쿼리 결과를 캐시하도록 공유 데이터 집합을 구성할 수 있습니다. 공유 데이터 집합 캐싱을 보고서 캐싱 및 보고서 데이터 피드와 함께 사용하면 데이터 원본에 대한 액세스를 쉽게 관리할 수 있습니다.  
@@ -100,7 +98,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |공유 데이터 집합 항목 속성 변경|보고서 관리자|[일반 속성 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |보고서의 공유 데이터 집합 인스턴스에 대한 추가 공유 데이터 집합 속성 지정|보고서 작성기 보고서 디자이너|[데이터 집합 속성 대화 상자, 쿼리](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |공유 데이터 집합의 다른 공유 데이터 원본에 바인딩|보고서 관리자|[데이터 원본 선택 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|데이터 집합 매개 변수의 기본값 확인|보고서 작성기에서 열기 또는 URL 액세스 구문 사용|예를 들어<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|데이터 집합 매개 변수의 기본값 확인|보고서 작성기에서 열기 또는 URL 액세스 구문 사용|예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |캐싱 설정|보고서 관리자|[공유 데이터 집합 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [캐싱 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |캐시 새로 고침 계획 만들기 또는 편집|보고서 관리자|[캐시 새로 고침 옵션&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
 |공유 데이터 집합 정의 스키마 보기|보고서 관리자|`http://<reportserver>/shareddatasetdefinition.xsd`|  
@@ -127,7 +125,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   공유 데이터 집합은 매개 변수 값 지정에 구독과 동일한 규칙을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

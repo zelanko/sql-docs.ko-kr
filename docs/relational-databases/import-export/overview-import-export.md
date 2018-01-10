@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 데이터 가져오기 및 내보내기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다양한 메서드를 사용하여 SQL Server 및 Azure SQL Database에서 데이터를 가져오고 내보낼 수 있습니다. 이러한 메서드는 Transact-SQL 문, 명령줄 도구 및 마법사를 포함합니다.
@@ -55,7 +55,7 @@ SQL Server 가져오기 및 내보내기 마법사를 사용하여 다양한 원
 플랫 파일 또는 다양한 다른 파일 형식, 관계형 데이터베이스 및 클라우드 서비스 간에 데이터를 가져오고 내보낼 수 있습니다. 특정 도구에 대한 이러한 옵션에 대한 자세한 내용은 다음 항목을 참조하세요.
 -   SQL Server 가져오기 및 내보내기 마법사의 경우 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)을 참조하세요.
 -   SQL Server Integration Services의 경우 [Integration Services(SSIS) 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)을 참조하세요.
--   Azure Data Factory의 경우 [Azure Data Factory 커넥터](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector)를 참조하세요.
+-   Azure Data Factory의 경우 [Azure Data Factory 커넥터](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector)를 참조하세요.
 
 ### <a name="commonly-used-data-formats"></a>일반적으로 사용되는 데이터 형식
 

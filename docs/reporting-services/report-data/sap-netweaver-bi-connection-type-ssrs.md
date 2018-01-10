@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3a004db77f5c137742542a729ced6e79c708c43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22a2d5eec19c545771fb5791b37aa50b90124b94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 연결 형식(SSRS)
   보고서에 SAP NetWeaver® Business Intelligence 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]의 확장 프로그램을 기반으로 합니다.  
@@ -93,13 +91,13 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |------------------|--------------|---------------------------------------|  
 |**Value**|**개체**|필드의 데이터 값을 지정합니다.|  
 |**IsMissing**|**Boolean**|필드가 결과 데이터 집합에 있는지 여부를 나타냅니다.|  
-|**FormattedValue**|**문자열**|주요 숫자 값의 형식화된 값을 반환합니다.|  
-|**BackgroundColor**|**문자열**|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.|  
-|**색**|**문자열**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.|  
+|**FormattedValue**|**String**|주요 숫자 값의 형식화된 값을 반환합니다.|  
+|**BackgroundColor**|**String**|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.|  
+|**색**|**String**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.|  
 |**Key**|**개체**|수준의 키를 반환합니다.|  
-|**LevelNumber**|**정수**|부모-자식 계층에 대해 수준 또는 차원 번호를 반환합니다.|  
-|**ParentUniqueName**|**문자열**|부모-자식 계층에 대해 부모 수준의 정규화된 이름을 반환합니다.|  
-|**UniqueName**|**문자열**|수준의 정규화된 이름을 반환합니다. 예를 들어 직원의 **UniqueName** 값은 *[0D_Company].[10D_Department].[11]*일 수 있습니다.|  
+|**LevelNumber**|**Integer**|부모-자식 계층에 대해 수준 또는 차원 번호를 반환합니다.|  
+|**ParentUniqueName**|**String**|부모-자식 계층에 대해 부모 수준의 정규화된 이름을 반환합니다.|  
+|**UniqueName**|**String**|수준의 정규화된 이름을 반환합니다. 예를 들어 직원의 **UniqueName** 값은 *[0D_Company].[10D_Department].[11]*일 수 있습니다.|  
   
  식에서 필드 및 필드 속성을 사용하는 방법은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
@@ -139,7 +137,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

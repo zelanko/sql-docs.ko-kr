@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef5d6f5c0abbe09505de7608ec18d309a112d0c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 데이터 요소는 차트에서 가장 작은 개별 엔터티입니다. 셰이프 차트가 아닌 차트에서 데이터 요소는 차트 종류에 따라 다르게 표시됩니다. 예를 들어 선 계열은 하나 이상의 연결된 데이터 요소로 구성됩니다. 셰이프 차트에서 데이터 요소는 전체 차트를 구성하는 개별 조각 또는 세그먼트로 표현됩니다. 예를 들어 원형 차트에서는 각 조각이 데이터 요소입니다. 자세한 내용은 [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)를 참조하세요.  
@@ -68,21 +66,21 @@ ms.lasthandoff: 12/05/2017
   
 |차트 키워드|Description|적용 가능한 차트 종류|동일한 단순 식의 예|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|데이터 요소의 Y 값|모두|`=Fields!MyDataField.Value`|  
-|#VALY2|데이터 요소의 Y 값 #2|범위, 거품형|없음|  
-|#VALY3|데이터 요소의 Y 값 #3|주식형, 원통형|없음|  
-|#VALY4|데이터 요소 #4의 Y 값|주식형, 원통형|없음|  
-|#SERIESNAME|계열 이름|모두|없음|  
-|#LABEL|데이터 요소 레이블|모두|없음|  
+|#VALY|데이터 요소의 Y 값|All|`=Fields!MyDataField.Value`|  
+|#VALY2|데이터 요소의 Y 값 #2|범위, 거품형|InclusionThresholdSetting|  
+|#VALY3|데이터 요소의 Y 값 #3|주식형, 원통형|InclusionThresholdSetting|  
+|#VALY4|데이터 요소 #4의 Y 값|주식형, 원통형|InclusionThresholdSetting|  
+|#SERIESNAME|계열 이름|All|InclusionThresholdSetting|  
+|#LABEL|데이터 요소 레이블|All|InclusionThresholdSetting|  
 |#AXISLABEL|축 데이터 요소 레이블|셰이프|`=Fields!MyDataField.Value`|  
-|#INDEX|데이터 요소 인덱스|모두|없음|  
-|#PERCENT|데이터 요소 Y 값의 백분율|모두|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|계열의 모든 Y 값에 대한 합계|모두|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|범례 항목의 텍스트에 해당하는 텍스트|모두|없음|  
-|#AVG|계열의 모든 Y 값에 대한 평균|모두|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|데이터 요소 인덱스|All|InclusionThresholdSetting|  
+|#PERCENT|데이터 요소 Y 값의 백분율|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|계열의 모든 Y 값에 대한 합계|All|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|범례 항목의 텍스트에 해당하는 텍스트|All|InclusionThresholdSetting|  
+|#AVG|계열의 모든 Y 값에 대한 평균|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|계열의 모든 Y 값에 대한 최소값|모두|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|계열의 모든 Y 값에 대한 최대값|모두|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|계열의 모든 Y 값에 대한 첫 번째 값|모두|`=First(Fields!MyDataField.Value)`|  
+|#MAX|계열의 모든 Y 값에 대한 최대값|All|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|계열의 모든 Y 값에 대한 첫 번째 값|All|`=First(Fields!MyDataField.Value)`|  
   
  키워드 형식을 지정하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열을 괄호로 묶습니다. 예를 들어 도구 설명에서 데이터 요소의 값을 두 소수 자릿수를 포함하는 숫자로 지정하려면 계열의 **도구 설명** 속성에 대해 "#VALY{N2}"와 같이 형식 문자열 "N2"를 중괄호로 묶습니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열에 대한 자세한 내용은 MSDN의 [형식 지정(Formatting Types)](http://go.microsoft.com/fwlink/?LinkId=112024) 을 참조하십시오. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 숫자 형식을 지정하는 방법에 대한 자세한 내용은 [숫자 및 날짜 형식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/05/2017
   
  [원형 차트에서 백분율 값 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

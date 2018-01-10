@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: "56"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 950b8b49b79139405018fd20301241eb2d0e558d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 이 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약합니다.  
@@ -151,7 +151,7 @@ ms.lasthandoff: 12/05/2017
 7.  관리자 권한으로 웹 포털로 이동합니다. 예를 들어 Internet Explorer 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.  
   
     [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 URL로 이동합니다.   
-    **참고:** *포털* URL은 Report *Server* URL인 "Reportserver"가 아니라 "Reports"입니다.  예를 들어   
+    **참고:** *포털* URL은 Report *Server* URL인 "Reportserver"가 아니라 "Reports"입니다.  예를 들어 다음과 같이 사용할 수 있습니다.   
     - `http://<server name>/reports`를 클릭합니다.  
      - `http://localhost/reports` 은(는) 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 12/05/2017
  
 ** 기본 테이블 보고서 만들기 자습서를 성공적으로 완료했습니다.**  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

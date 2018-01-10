@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d89029ffc521d08ea3152ca164d3985de4644a32
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b70d9cbcbca9a8898d6b838f667f786cecf64805
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 연결 형식(SSRS)
   보고서에 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]외부 데이터 원본에서 다차원 데이터를 검색할 수 있게 하는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 에 대한 데이터 확장 프로그램을 기반으로 합니다.  
@@ -91,10 +89,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |------------------|--------------|---------------------------------------|  
 |**Value**|**개체**|필드의 데이터 값을 지정합니다.<br /><br /> 차원 속성의 경우 MEMBER_CAPTION에 매핑됩니다. 측정값의 경우 데이터 값에 매핑됩니다.|  
 |**IsMissing**|**Boolean**|필드가 결과 데이터 집합에 있는지 여부를 나타냅니다.|  
-|**FormattedValue**|**문자열**|주요 숫자 값의 형식화된 값을 반환합니다.<br /><br /> MDX 식의 FORMATTED_VALUE에서 매핑됩니다.|  
-|**BackgroundColor**|**문자열**|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.<br /><br /> MDX 식의 BACK_COLOR에서 매핑됩니다.|  
-|**색**|**문자열**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.<br /><br /> MDX 식의 FORE_COLOR에서 매핑됩니다.|  
-|**UniqueName**|**문자열**|수준의 정규화된 이름을 반환합니다.<br /><br /> MDX 식의 MEMBER_UNIQUE_NAME에서 매핑됩니다.|  
+|**FormattedValue**|**String**|주요 숫자 값의 형식화된 값을 반환합니다.<br /><br /> MDX 식의 FORMATTED_VALUE에서 매핑됩니다.|  
+|**BackgroundColor**|**String**|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.<br /><br /> MDX 식의 BACK_COLOR에서 매핑됩니다.|  
+|**색**|**String**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.<br /><br /> MDX 식의 FORE_COLOR에서 매핑됩니다.|  
+|**UniqueName**|**String**|수준의 정규화된 이름을 반환합니다.<br /><br /> MDX 식의 MEMBER_UNIQUE_NAME에서 매핑됩니다.|  
   
  식에 필드 및 필드 속성을 사용하는 방법에 대한 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
@@ -110,7 +108,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**속성**|**형식**|**설명 또는 필요한 값**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**문자열**|측정값에 대해 정의되며, String 유형으로 사용할 수 있는 **FormattedValue** 입니다.|  
+|**FORMAT_STRING**|**String**|측정값에 대해 정의되며, String 유형으로 사용할 수 있는 **FormattedValue** 입니다.|  
   
   
 ##  <a name="Remarks"></a> 주의  
@@ -151,7 +149,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  이 데이터 확장 프로그램을 사용하는 방법에 대한 자세한 정보를 제공합니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

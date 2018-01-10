@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f498c79b8b523df72db40d689e609a45c8616b0c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e848cffab72a3523d0a63617f5ebbb5bb5717559
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 구성 파일
  ||  
@@ -96,7 +94,7 @@ ReportingServicesService.exe.config 파일에는 추적을 구성하는 설정�
 |**Components**|추적 로그를 생성할 구성 요소를 지정합니다. 기본값은 **all**입니다. 이 설정에 대한 기타 유효한 값에는 내부 구성 요소의 이름이 포함됩니다. 이 값은 수정하지 마세요.|  
 |**런타임**|이전 버전과의 호환성을 지원하는 구성 설정을 지정합니다. 런타임 설정은 이전 버전의 Microsoft.ReportingServices.Interfaces를 대상으로 하는 요청을 새 버전으로 리디렉션하는 데 사용됩니다.<br /><br /> 이 섹션의 모든 구성 설정은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 제품 설명서에 설명되어 있습니다. 자세한 내용을 보려면 MSDN 웹 사이트 또는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서에서 "Runtime Schema Settings"를 검색하십시오.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

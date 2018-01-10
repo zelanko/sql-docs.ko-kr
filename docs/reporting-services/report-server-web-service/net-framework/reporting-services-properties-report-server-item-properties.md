@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c874a823a27a10f0b915aa7bf6bf221b7dc6ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c254ee33efb4ddd644690747c407cce237fb9112
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 속성 - 보고서 서버 항목 속성
   항목 속성은 보고서 서버 데이터베이스의 항목에 대한 특정 속성입니다. 이러한 항목에는 보고서, 링크된 보고서, 폴더, 리소스, 모델 및 데이터 원본이 포함됩니다.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|-----------------|  
 |**CreatedBy**|처음에 항목을 보고서 서버 데이터베이스에 추가한 사용자의 이름입니다.|  
 |**CreationDate**|항목이 보고서 서버 데이터베이스에 추가된 날짜와 시간입니다.|  
-|**Description**|항목에 대한 설명입니다.|  
+|**설명**|항목에 대한 설명입니다.|  
 |**숨김**|사용자가 항목을 볼 수 있으며 사용할 수 있는지 여부를 나타내는 값입니다.|  
 |**ID**|보고서 서버 데이터베이스에 있는 항목의 ID입니다.|  
 |**ModifiedBy**|보고서 서버 데이터베이스의 항목을 마지막으로 수정한 사용자의 이름입니다.|  
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|-----------------|  
 |**MimeType**|보고서 서버 데이터베이스에 있는 리소스의 MIME 형식입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

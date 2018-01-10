@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2018c910537ea73bc36d1a41f074d9aeae0e9a37
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9e4181a11fafb1629ce10e8ac21a462a1d95f5b2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
   보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  보고서 작성기를 사용하려면 작업할 게시된 보고서 모델이 있어야 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 보고서 작성기를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  클라이언트 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0이 설치되어 있어야 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 응용 프로그램을 실행하기 위한 인프라를 제공합니다.  
@@ -170,7 +168,7 @@ ms.lasthandoff: 12/05/2017
 |기본 인증|ClickOnce는 기본 인증을 지원하지 않습니다. ClickOnce는 인증 헤더에 기본 인증을 지정하는 요청을 작성하지 않으며 자격 증명을 전달하거나 자격 증명을 지정하라는 메시지를 표시하지 않습니다. 보고서 작성기 응용 프로그램 파일에 대한 익명 액세스를 사용하여 이러한 문제를 해결할 수 있습니다.<br /><br /> 보고서 작성기 응용 프로그램 파일에 대한 익명 액세스를 사용하는 경우 보고서 서버에서 인증 헤더를 무시하므로 요청이 성공적으로 수행됩니다. 보고서 작성기에 대한 익명 액세스를 사용하도록 설정하는 방법에 대한 자세한 내용은 [보고서 서버의 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)을 참조하세요.<br /><br /> ClickOnce가 응용 프로그램 파일을 검색한 후 보고서 작성기는 보고서 서버에 대한 별도의 연결을 엽니다. 보고서 작성기가 보고서 서버에 연결하려면 사용자가 자격 증명을 다시 입력해야 합니다. 보고서 작성기는 Internet Explorer 또는 ClickOnce에서 자격 증명을 수집하지 않습니다.<br /><br /> 보고서 서버가 기본 인증용으로 구성되어 있고 보고서 작성기 프로그램 파일에 대한 익명 액세스를 사용하지 않는 경우 요청이 실패합니다. ClickOnce가 해당 요청에 대해 Windows 통합 보안을 지정하기 때문에 요청이 실패합니다. 보고서 서버를 기본 인증용으로 구성하는 경우 요청에서 잘못된 보안 패키지를 지정하고 보고서 서버에 필요한 자격 증명이 없기 때문에 서버에서 요청을 거부합니다.<br /><br /> 또한 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성되어 있고 SharePoint 사이트에서 기본 인증을 사용하는 경우 ClickOnce를 사용하여 클라이언트 컴퓨터에 보고서 작성기를 설치하려고 하면 401 오류가 발생합니다. 이는 SharePoint에서는 쿠키를 사용하여 세션이 지속되는 동안 사용자를 인증된 상태로 유지하지만 ClickOnce에서는 쿠키를 지원하지 않기 때문입니다. 사용자가 보고서 작성기 등의 ClickOnce 응용 프로그램을 실행하면 응용 프로그램에서 SharePoint에 쿠키를 전달하지 않으므로 SharePoint에서 액세스를 거부하고 401 오류를 반환합니다.<br /><br /> 다음 방법 중 하나를 사용하여 이 문제를 해결할 수 있습니다.<br /><br /> -사용자 자격 증명을 제공할 때 **암호 저장** 옵션을 선택합니다.<br /><br /> -SharePoint 사이트 모음에 대한 익명 액세스를 허용합니다.<br /><br /> -사용자가 자격 증명을 제공하지 않도록 환경을 구성합니다. 예를 들어 인트라넷 환경에서는 SharePoint 서버가 작업 그룹에 속하도록 구성한 다음 로컬 컴퓨터에 사용자 계정을 만들 수 있습니다.|  
 |사용자 지정|보고서 서버가 사용자 지정 인증을 사용하도록 구성하는 경우 보고서 서버에서 익명 액세스가 사용되고 인증 검사 없이 요청이 허용됩니다.<br /><br /> ClickOnce가 응용 프로그램 파일을 검색한 후 보고서 작성기는 보고서 서버에 대한 별도의 연결을 엽니다. 보고서 작성기가 보고서 서버에 연결하려면 사용자가 자격 증명을 다시 입력해야 합니다. 보고서 작성기는 Internet Explorer 또는 ClickOnce에서 자격 증명을 수집하지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)   

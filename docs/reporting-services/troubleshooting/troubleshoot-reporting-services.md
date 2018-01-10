@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6c2421f29b750a5616f1f86ef69fc197566e0cb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ce0ce0df4a993917cb0aef35f603b3dfb2a5275c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services 문제 해결
   이 섹션의 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 관련된 문제를 식별하고 해결하는 데 도움이 됩니다.  
@@ -49,6 +47,6 @@ ms.lasthandoff: 12/05/2017
 
 +  [Reporting Services 오류의 원인 및 해결 방법](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  

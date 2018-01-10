@@ -8,9 +8,7 @@ ms.service:
 ms.component: custom-assemblies
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8798cc2873cc77885ebdc9c7a32f326b5db60759
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a68f5a72debf44282660d20ca2d092615f83c234
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="initializing-custom-assembly-objects"></a>사용자 지정 어셈블리 개체 초기화
   사용자 지정 어셈블리 클래스를 인스턴스화할 때 속성 및 필드 값을 초기화해야 하는 경우가 있습니다. 대개 보고서의 전역 개체 컬렉션에서 제공되는 값으로 사용자 지정 클래스를 초기화해야 합니다. 이 작업은 보고서 **Code** 개체의 **OnInit** 메서드를 다시 정의하여 수행합니다. **OnInit**에 액세스하려면 보고서 정의의 **Code** 요소를 사용합니다. 보고서에서 사용하려는 사용자 지정 어셈블리에 있는 클래스의 속성이나 필드 값을 초기화하는 데는 두 가지 방법이 있습니다. **OnInit**를 사용하여 클래스의 새 인스턴스를 선언 및 만들거나 **OnInit**를 사용하여 공개적으로 사용 가능한 메서드를 호출하는 방법입니다.  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
  전역 개체 컬렉션에 대한 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

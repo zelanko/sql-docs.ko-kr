@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21ebae6b3b0d2a9d30b5078460f610060ba79780
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7f1198cddebd82cbabaccd635dc10182236bcc33
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preload-the-cache-report-manager"></a>캐시 사전 로드(보고서 관리자)
   공유 데이터 집합에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 집합에 대한 캐시를 미리 로드할 수 있습니다.  
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  **다음**을 클릭합니다.  
   
-9. 구독자 데이터를 검색하는 쿼리나 명령을 지정합니다. 처리하는 데 시간이 오래 걸리는 쿼리에 대해 제한 시간 값을 늘립니다(옵션). 예를 들어  
+9. 구독자 데이터를 검색하는 쿼리나 명령을 지정합니다. 처리하는 데 시간이 오래 걸리는 쿼리에 대해 제한 시간 값을 늘립니다(옵션). 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     Select * from UserInfo  
@@ -127,7 +125,7 @@ ms.lasthandoff: 12/05/2017
   
 18. **적용**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [성능, 스냅숏, 캐싱&#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 caps.latest.revision: "80"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9cc8974ff85c595e97de7fc795a8a7908c983300
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 도구
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 관리 환경에서 다양한 보고서의 개발 및 사용을 지원하는 그래픽 및 스크립팅 도구 집합이 포함되어 있습니다. 이 도구 집합에는 개발 도구, 구성 및 관리 도구, 보고서 보기 도구가 포함되어 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 개별 툴 및 툴 액세스 방법에 대한 간략한 개요를 제공합니다.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 |웹 포털|**(기본 모드 전용)** 이 도구를 사용하면 HTTP 연결을 통해 원격 위치에서 단일 보고서 서버 인스턴스를 관리할 수 있습니다. 사용할 수 있는 기능은 다음과 같습니다.<br /><br /> 보고서 보기, 검색, 인쇄 및 구독<br /><br /> 서버의 항목을 체계적으로 구성하도록 폴더 계층 구조 생성, 보안 설정 및 유지 관리<br /><br /> 항목 및 작업에 대한 액세스 권한을 결정하는 역할 기반 보안 구성<br /><br /> 보고서 실행 속성, 보고서 기록 및 보고서 매개 변수 구성<br /><br /> 연결을 설정하고 Microsoft SQL Server Analysis Services 데이터 원본 또는 SQL Server 관계형 데이터 원본에서 데이터를 검색하는 보고서 모델 만들기<br /><br /> 모델의 특정 엔터티에 대한 액세스를 허용하도록 모델 항목 보안 설정 또는 미리 정의된 클릭 광고 보고서에 엔터티 매핑<br /><br /> 일정 및 데이터 원본 연결을 편리하게 관리하기 위해 공유 일정 및 공유 데이터 원본 만들기<br /><br /> 대규모 받는 사람 목록에 보고서를 전달하는 데이터 기반 구독 만들기<br /><br /> 기존 보고서를 다른 방식으로 다시 사용하고 용도를 변경하기 위해 링크된 보고서 만들기<br /><br /> 보고서 서버에서 저장하고 실행할 수 있는 보고서를 만들기 위해 보고서 작성기 시작 자세한 내용은 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)을 참조하세요.| 브라우저  
 |RS 유틸리티|이 도구는 스크립팅된 작업을 수행하는 데 사용할 수 있는 스크립트 호스트입니다. 이 도구를 사용하면 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 실행하여 보고서 서버 데이터베이스 간의 데이터 복사, 보고서 게시, 보고서 서버 데이터베이스에 항목 만들기 등을 수행할 수 있습니다. 자세한 내용은 [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)를 참조하세요.|명령 프롬프트|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Reporting Services 개념&#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

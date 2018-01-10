@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a42bdc5a9d8a0f19958d6537de027d815b3ca8d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c725ae731867a57e36bc80a8a1cbac3d11953c6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
 |-------------------------------|-----------------|  
 |Report Title(보고서 제목)|Title|  
 |Report.Author|작성자|  
-|Report.Description|설명|  
+|Report.Description|주석|  
   
 ##  <a name="ReportHeadersFooters"></a> 페이지 머리글 및 바닥글  
  페이지 머리글 및 바닥글은 Word에서 머리글 및 바닥글 영역으로 렌더링됩니다. 보고서 페이지 번호나 보고서 페이지의 총 수를 나타내는 식이 페이지 머리글이나 바닥글에 있으면 렌더링된 보고서에 정확한 페이지를 표시할 수 있도록 해당 페이지 번호나 식이 Word 필드로 변환됩니다. 보고서에 머리글 또는 바닥글 높이가 설정되어 있더라도 이 설정은 Word에서 지원되지 않습니다. PrintOnFirstPage 속성은 일부 환경에서 보고서의 첫 번째 페이지에 페이지 머리글 및 페이지 바닥글을 인쇄할지 여부를 지정할 수 있습니다. 렌더링된 보고서에 여러 페이지가 있고 각 페이지에 단일 섹션만 포함되는 경우 PrintOnFirstPage를 False로 설정할 수 있으며 이렇게 하면 텍스트가 첫 번째 페이지에 표시되지 않습니다. 그렇지 않은 경우 텍스트는 PrintOnFirstPage 속성의 값에 상관없이 인쇄됩니다.  

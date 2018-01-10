@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들기 및 Linux에서 SQL Server에 대 한 가용성 그룹 구성
 
@@ -357,9 +357,9 @@ sudo systemctl restart mssql-server
 
 11. 를 읽을 수 있는 시나리오에 대 한 수신기를 만드는 경우 17.3 또는 그 이후 버전의 SSMS는 마법사에서 읽기 전용 라우팅의 만들 수 있습니다. SSMS 또는 TRANSACT-SQL을 통해 나중에 추가할 수도 있습니다. 추가 하려면 읽기 전용 라우팅 이제:
 
-    1.  읽기 전용 라우팅 탭을 선택 합니다.
+    a.  읽기 전용 라우팅 탭을 선택 합니다.
 
-    2.  읽기 전용 복제본에 대 한 Url을 입력 합니다. 이러한 Url 끝점 하지 인스턴스 포트를 사용할 점을 제외 하 고 끝점을와 비슷합니다.
+    b.  읽기 전용 복제본에 대 한 Url을 입력 합니다. 이러한 Url 끝점 하지 인스턴스 포트를 사용할 점을 제외 하 고 끝점을와 비슷합니다.
 
     c.  각 URL을 선택 하 고 아래에서 읽기 가능한 복제본을 선택 합니다. 다중 선택 하려면 SHIFT 또는 클릭 한 후 드래그 누른 합니다.
 
@@ -415,7 +415,7 @@ sudo systemctl restart mssql-server
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -479,7 +479,7 @@ sudo systemctl restart mssql-server
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -551,7 +551,7 @@ Pacemaker 고가용성 클러스터 기본 [!INCLUDE[ssnoversion-md](../includes
     
     GO
     
-    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABLITY GROUP::<AGThatWasCreated> TO PMLogin;
+    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::<AGThatWasCreated> TO PMLogin;
     
     GO
     ```
@@ -572,7 +572,7 @@ Pacemaker 고가용성 클러스터 기본 [!INCLUDE[ssnoversion-md](../includes
     
 4.  CTRL 키를 누른 다음 X, 파일을 저장 하 고 종료 한 다음 C 키를 누릅니다.
 
-5.  Execute 
+5.  Parameter 
     ```bash
     sudo chmod 400 /var/opt/mssql/secrets/passwd
     ```

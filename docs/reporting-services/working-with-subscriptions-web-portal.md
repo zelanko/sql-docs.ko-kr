@@ -8,20 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 770147e3bed0f660127938ba1b2f0ae955954e62
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bee70a9c4d77be578aae8c77af8772bdd2faadc0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="working-with-subscriptions-web-portal"></a>구독 작업(웹 포털)
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
 이 옵션은 고급 권한이 있는 사용자가 사용할 수 있습니다. 기본 보안을 사용할 경우 내 보고서 폴더에 있는 보고서에 대해서는 데이터 기반 구독을 사용할 수 없습니다.  
   
-### <a name="destination"></a>대상  
+### <a name="destination"></a>Destination  
 보고서를 배포하는 데 사용할 배달 확장 프로그램을 선택합니다.   
   
 배달 확장 프로그램의 가용성은 보고서 서버에 설치 및 구성되었는지 여부에 따라 다릅니다. 보고서 서버 전자 메일은 기본 배달 확장 프로그램이지만 먼저 구성을 해야 사용할 수 있습니다. 파일 공유 배달은 구성이 필요하지 않지만 먼저 공유 폴더를 정의해야 사용할 수 있습니다.  

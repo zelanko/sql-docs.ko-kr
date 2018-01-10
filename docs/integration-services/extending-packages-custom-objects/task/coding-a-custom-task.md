@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c15c407c7fae442d7d96b6679d177e864aa632
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fea3020fe77c6f5ac3f69f489a4ab1f0c4af8ccb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-a-custom-task"></a>사용자 지정 태스크 코딩
   <xref:Microsoft.SqlServer.Dts.Runtime.Task> 기본 클래스에서 상속된 클래스를 만들고 이 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 특성을 적용한 후에는 기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공해야 합니다.  
@@ -176,7 +176,7 @@ End Class
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|태스크에서 사용할 수 있는 변수를 포함합니다. 태스크에서는 변수를 직접 사용하는 것이 아니라 VariableDispenser를 통해 사용합니다. VariableDispenser는 변수를 잠그거나 잠금 해제하고 교착 상태나 덮어쓰기를 방지합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|태스크에서 런타임 엔진에 이벤트를 발생시키기 위해 호출하는 메서드를 포함합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|태스크에서 이벤트 로그에 항목을 기록하는 데 사용하는 메서드 및 속성을 포함합니다.|  
-|개체|해당 컨테이너가 포함된 트랜잭션 개체가 있는 경우 이를 포함합니다. 이 값은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 개체의 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 메서드에 매개 변수로 전달됩니다.|  
+|Object|해당 컨테이너가 포함된 트랜잭션 개체가 있는 경우 이를 포함합니다. 이 값은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 개체의 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 메서드에 매개 변수로 전달됩니다.|  
   
 ### <a name="providing-execution-feedback"></a>실행 피드백 제공  
  태스크에서 해당 코드를 **try/catch** 블록에 래핑하여 런타임 엔진에 예외가 발생하지 않도록 합니다. 이렇게 하면 패키지 실행이 끝까지 완료되며 예기치 않게 중지되는 경우가 없습니다. 그러나 런타임 엔진에서는 태스크 실행 중 발생할 수 있는 오류 조건을 처리하기 위한 다른 메커니즘을 제공합니다. 이러한 메커니즘에는 오류 및 경고 메시지 게시, <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 구조의 값 반환, 메시지 게시, <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값 반환 및 <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A> 속성을 통한 태스크 실행 결과에 대한 정보 공개 등이 포함됩니다.  
@@ -292,7 +292,7 @@ Public Class SampleTask
 End Class  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 태스크 만들기](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
  [사용자 지정 태스크 코딩](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [사용자 지정 태스크의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
