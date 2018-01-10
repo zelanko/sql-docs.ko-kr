@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6088455f0ecd7df14adfa2b60f68995ac5bee22
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 37b7b96be2c0b74f9ddc56a66dbe50d62c55c5d9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>비즈니스 규칙에 대해 특정 멤버 유효성 검사(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙에 따라 멤버의 하위 집합을 업데이트하거나 유효성을 검사하려는 경우 비즈니스 규칙을 선택적으로 적용합니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  모델 버전의 모든 멤버에 비즈니스 규칙을 적용하려면 [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)를 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

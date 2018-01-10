@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cbb80778055ea6df4d672bf2581cc2ce266f834
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a22e2a5b37205e5f46a300e4c280d6095e07fadc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derived-hierarchies-master-data-services"></a>파생 계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 파생 계층은 모델의 엔터티 간에 이미 있는 도메인 기반 특성 관계에서 파생됩니다.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
  멤버의 도메인 기반 특성이 비어 있거나 특성이 파생 계층에 사용되는 경우 해당 멤버는 계층에 표시되지 않습니다. 특성을 채워야 하는 비즈니스 규칙을 만드십시오. 자세한 내용은 [특성 값 요구&#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)를 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 96194edec70f67e9db45265de11d735e09fead30
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 46add077a9b90353ba41f18fe5c4dd15082e7c0c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>2단원: SSIS를 사용하여 루핑 추가
 [1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)에서는 단일 플랫 파일 원본에서 데이터를 추출하고 조회 변환을 사용하여 변환한 다음 **AdventureWorksDW2012** 샘플 데이터베이스의 **FactCurrency** 팩트 테이블로 로드한 패키지를 만들었습니다.  

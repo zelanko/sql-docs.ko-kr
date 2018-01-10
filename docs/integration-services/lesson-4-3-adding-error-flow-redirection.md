@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1538ad973644dfa38fbed083327528a1973bcc4e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fb3ec5c108f74e6ae0b53f6bd27a4cad70e7313
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>4-3단원 - 오류 흐름 리디렉션 추가
 이전 태스크에서 설명한 대로 Lookup Currency Key 변환은 오류를 생성한 손상된 예제 플랫 파일을 처리할 때 일치하는 항목을 생성할 수 없습니다. 변환은 오류 출력에 대해 기본 설정을 사용하므로 오류가 발생하면 변환이 실패합니다. 변환이 실패하면 나머지 패키지도 실패합니다.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/20/2017
   
 13. **확인** 을 클릭하여 **스크립트 변환 편집기** 대화 상자를 닫습니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 [4단계: 플랫 파일 대상 추가](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
   

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38835ec5dd79b28f009c4471f5723ea3e2cae7a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4a8793f71d09da12c30a5e79989f5d87d5b5b8e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>폴더 및 파일 사용 권한(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치할 경우 폴더와 파일이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공유 기능에 대해 지정한 설치 경로의 파일 시스템에 설치됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공유 기능에 기본 설치 경로를 사용하는 경우 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 의 설치 경로는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services입니다. 공유 기능 설치 경로를 변경할 수 있지만 부모 폴더에서 상속된 사용 권한과 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 대해 명시적으로 설정된 사용 권한을 알고 있어야 합니다.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 파일의 내용에 대한 자세한 내용은 [웹 구성 참조&#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) 설치](../master-data-services/install-windows/install-master-data-services.md)  
   
   

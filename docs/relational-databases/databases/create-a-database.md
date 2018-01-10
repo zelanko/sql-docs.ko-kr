@@ -21,18 +21,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5558d9a179c78ef097d98d0810675f5473d3e9c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e8823c02d89c781ecb033c5b639f0e8d5fb327e0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-database"></a>데이터베이스 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 데이터베이스를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
 -   하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스당 최대 32,767개의 데이터베이스를 지정할 수 있습니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   CREATE DATABASE 문은 기본 트랜잭션 관리 모드인 자동 커밋 모드에서 실행해야 하며 명시적 또는 암시적 트랜잭션에서는 허용되지 않습니다.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  master 데이터베이스의 CREATE DATABASE 권한이 있거나 CREATE ANY DATABASE 또는 ALTER ANY DATABASE 권한이 있어야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디스크 사용을 제어하기 위해 일반적으로 데이터베이스를 만들 수 있는 사용 권한은 일부 로그인 계정으로 제한됩니다.  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `Sales`데이터베이스를 만듭니다. 주 키워드를 사용하지 않았으므로 첫 번째 파일(`Sales_dat`)이 주 파일이 됩니다. `Sales_dat` 파일의 SIZE 매개 변수에 MB 또는 KB를 지정하지 않았으므로 기본값 MB를 사용하여 할당됩니다. 사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 `Sales_log` 파일은 `MB` 매개 변수에 명시적으로 `SIZE` 접미사를 지정했으므로 메가바이트(MB)로 공간이 할당됩니다.  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 CREATE DATABASE Sales  
@@ -137,7 +137,7 @@ GO
   
  추가 예제를 보려면 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)   
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

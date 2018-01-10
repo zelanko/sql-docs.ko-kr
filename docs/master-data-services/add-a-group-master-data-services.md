@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,16 +20,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7e0d8aab20d5d92bbc9b74c84d8159bcb560d3d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 282a0c3e16d9254797beeed57f69b26985bb707d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-a-group-master-data-services"></a>그룹 추가(Master Data Services)
   **의** 그룹 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 그룹을 추가하여 웹 응용 프로그램에 사용 권한을 할당하는 프로세스를 시작합니다. 그룹의 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있게 하려면 하나 이상의 기능 영역과 모델 개체에 그룹 권한을 부여해야 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 처음으로 액세스하면 사용자의 이름이 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 사용자 목록에 추가됩니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   

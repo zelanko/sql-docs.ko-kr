@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5b6ae51592297a748d4a1e39a71bed0b2fc921b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1a07bbd31a8c04506dcb64830beec5d21fa83c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>준비 과정에서 발생하는 오류 보기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 준비 프로세스 동안 발생하는 오류를 볼 수 있습니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에는 오류를 표시하는 두 개의 뷰가 있습니다.  
@@ -31,12 +31,12 @@ ms.lasthandoff: 11/20/2017
   
 -   stg.viw_name_RelationshipErrorDetails 뷰는 계층 관계 업데이트를 표시합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 stg.viw_name_MemberErrorDetails 또는 stg.viw_name_RelationshipErrorDetails 뷰에 대한 SELECT 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 ### <a name="to-view-staging-errors"></a>준비 오류를 보려면  
   
@@ -50,10 +50,10 @@ ms.lasthandoff: 11/20/2017
   
 4.  쿼리를 실행합니다. 오류 세부 정보가 **ErrorDescription** 필드에 표시됩니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  오류 메시지에 대한 자세한 내용은 [준비 프로세스 오류&#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [준비 프로세스 문제 해결(Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

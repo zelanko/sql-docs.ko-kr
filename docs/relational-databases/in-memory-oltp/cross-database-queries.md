@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 06fa7924c167236056961396e9ae8f811f867be9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 24549110df950d32ef6a1757d7adc58e1bccc1ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cross-database-queries"></a>데이터베이스 간 쿼리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 
 1. 테스트 개체를 만듭니다.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 다음 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]명령을 실행합니다.  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 
 2.  데이터베이스 간 쿼리를 시도합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 다음 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]명령을 실행합니다.
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/17/2017
 
 3.  메모리 최적화 테이블 형식을 만듭니다.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 다음 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]명령을 실행합니다.
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
     ```
 
 4.  데이터베이스 간 쿼리를 다시 시도합니다.  이때 원본 데이터가 먼저 메모리 최적화 테이블 변수로 전송됩니다.  그런 다음 테이블 변수의 데이터가 메모리 최적화 테이블에 전송됩니다.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     
@@ -127,7 +127,7 @@ ms.lasthandoff: 11/17/2017
     GO 
     ```
    
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

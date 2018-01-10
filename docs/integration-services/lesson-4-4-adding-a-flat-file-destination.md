@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a5037fb489588b174ec66a8845cf4994d8a915e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-4---adding-a-flat-file-destination"></a>4-4단원 - 플랫 파일 대상 추가
 Lookup Currency Key 변환의 오류 출력은 조회 작업에 실패한 모든 데이터 행을 스크립트 변환으로 리디렉션합니다. 발생한 오류에 대한 정보를 보강하기 위해 스크립트 변환은 오류에 대한 설명을 가져오는 스크립트를 실행합니다.  
@@ -65,7 +65,7 @@ Lookup Currency Key 변환의 오류 출력은 조회 작업에 실패한 모든
   
 15. **확인**을 클릭합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 [5단계: 4단원 자습서 패키지 테스트](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

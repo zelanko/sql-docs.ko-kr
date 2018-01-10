@@ -5,7 +5,7 @@ ms.date: 02/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: beb17b82f5dc7ce522403d7d32a71e52a497bd2e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 60127dd894485c979e0c79dcde0091119d88ed9a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-overview-mds"></a>MDS(Master Data Services) 개요
   이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 주요 데이터 구성 및 관리 기능을 설명합니다. 
@@ -53,12 +53,12 @@ ms.lasthandoff: 11/20/2017
   
  데이터에 대한 기본 구조를 정의한 후 가져오기 기능을 사용하여 데이터 레코드(멤버)의 추가를 시작할 수 있습니다. 준비 표에 데이터를 로드하고, 비즈니스 규칙을 사용하여 데이터의 유효성을 검사하고, MDS 표에 데이터를 로드합니다.  비즈니스 규칙을 사용하여 특성 값을 설정할 수도 있습니다.  
   
- 다음 표에 주요 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 작업이 정리되어 있습니다. 다른 언급이 없는 경우 아래의 모든 절차를 수행하려면 사용자가 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+ 다음 표에 주요 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 작업이 정리되어 있습니다. 다른 언급이 없는 경우 아래의 모든 절차를 수행하려면 사용자가 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 > [!NOTE]  
 >  테스트 환경에서 다음 태스크를 완료하고 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치할 때 제공된 샘플 데이터를 사용할 수 있습니다. 자세한 내용은 [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)를 참조하세요.  
   
-|동작|세부 정보|관련 항목|  
+|작업|세부 정보|관련 항목|  
 |------------|-------------|--------------------|  
 |모델 만들기|모델을 만들면 VERSION_1로 간주됩니다.|[모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)<br /><br /> [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
 |엔터티 만들기|멤버를 포함하는 데 필요한 만큼 엔터티를 만듭니다.|[엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)<br /><br /> [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  

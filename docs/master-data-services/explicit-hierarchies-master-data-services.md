@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f91073a3fd6ad665f793860efdb2ca7b9c0ce976
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 64766039b76c424e7141339d566381bcc2693406
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>명시적 계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층은 지정한 방법으로 단일 엔터티의 멤버를 구성합니다. 구조는 비정형일 수 있으며 파생 계층과 달리 명시적 계층은 도메인 기반 특성 관계를 기반으로 하지 않습니다.  

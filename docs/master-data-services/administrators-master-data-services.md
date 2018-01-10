@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad9b72ba9a7a26b51727fa502fb2c38ec4dd6b7f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 739f8703c2090be6cd62850c6ba587b4a7974987
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
   이 문서에서는 모델 관리자, 엔터티 관리자, 슈퍼 사용자 등 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 관리자 유형을 설명합니다.  

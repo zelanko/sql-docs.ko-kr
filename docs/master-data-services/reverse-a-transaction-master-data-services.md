@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,20 +18,20 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b070c2452fa453a1017080abf4876f817cf3fd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e176eb73c1285719ecb040cd87515407c32fd97
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>트랜잭션 되돌리기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 동작을 취소해야 할 경우 관리자가 트랜잭션을 되돌릴 수 있습니다. 트랜잭션의 예로 특성 값 변경, 계층 이동 또는 멤버 삭제가 있습니다. 이 항목은 트랜잭션 로그 유형이 "특성"인 엔터티의 트랜잭션에만 적용됩니다. 트랜잭션 로그 유형이 "멤버"인 엔터티의 트랜잭션 기록을 보려면 엔터티 탐색기 페이지로 이동하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 ### <a name="to-reverse-a-transaction"></a>트랜잭션을 되돌리려면  
   

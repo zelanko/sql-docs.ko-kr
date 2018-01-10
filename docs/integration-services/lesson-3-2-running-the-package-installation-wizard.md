@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e432e01995835f870b40ff1a0e5df07c06ef56a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>3-2단원 - 패키지 설치 마법사 실행
 이 태스크에서는 패키지 설치 마법사를 실행하여 Deployment Tutorial 프로젝트의 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포합니다. 패키지만 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 sysssispackages 테이블에 설치할 수 있고 배포 번들에 포함된 지원 파일은 파일 시스템에 배포됩니다.  

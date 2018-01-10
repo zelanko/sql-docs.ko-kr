@@ -5,7 +5,7 @@ ms.date: 12/20/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6194ffef0fdf5e94669e84f071d51623458b3395
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 510ada265167a4c29f9778c7501b24988ba4d636
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-manager-web-application"></a>마스터 데이터 관리자 웹 응용 프로그램
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램은 주로 관리자가 관리 태스크를 수행하는 데 사용됩니다. 예를 들어 모델, 비즈니스 규칙 또는 여러 버전의 데이터를 만드는 일은 관리자만 수행할 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  

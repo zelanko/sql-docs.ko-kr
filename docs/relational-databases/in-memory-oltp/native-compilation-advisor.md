@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c389e518cd4250461102ead5343a1933d7de1426
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50cc4e0be728b54029c764e784008dab53aad8c6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="native-compilation-advisor"></a>네이티브 컴파일 관리자
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  일반적으로 **FILEGROUP** 요소 및 **USE** mydatabase 문은 Microsoft SQL Server에 적용되지만 Azure SQL 데이터베이스에는 적용되지 않습니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  

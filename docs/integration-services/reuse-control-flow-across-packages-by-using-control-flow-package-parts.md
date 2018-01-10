@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 25de11d7825c2e52b8247d44ee790d21c0457468
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 212e1c2913cc8720d2a5ca92916cec187e357c2e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>제어 흐름 패키지 파트를 사용하여 패키지에 대해 제어 흐름 재사용
   일반적으로 사용되는 제어 흐름 태스크 또는 컨테이너를 독립 실행형 파트 파일(".dtsxp" 파일)에 저장하고 제어 흐름 패키지 파트를 사용하여 이 파일을 하나 이상의 패키지에 여러 번 재사용합니다. 이 재사용 기능으로 인해 SSIS 패키지 디자인 및 유지 관리가 좀 더 간편해집니다.  

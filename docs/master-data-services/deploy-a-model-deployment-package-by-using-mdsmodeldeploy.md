@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f6941c1ea7901e8a89eebc64c5c519931cb1c05
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d06b9e0bd8001f6fa8e436558ecb503f601899e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 배포
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 다음 중 하나를 포함하는 패키지를 배포합니다.  
@@ -35,14 +35,14 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 배포할 수 있습니다. 따라서 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 에서 만든 패키지는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상에 배포할 수 없습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   대상 **환경의** 시스템 관리 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 -   모델 배포 패키지가 있어야 합니다. 자세한 내용은  [Create a Model Deployment Package by Using MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  
   
--   모델을 배포하는 환경에서 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델을 배포하는 환경에서 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 -   데이터로 모델을 업데이트하려는 경우 배포하려는 버전을 **잠금** 또는 **커밋됨**상태로 만들 수 없습니다.  
   
@@ -115,12 +115,12 @@ ms.lasthandoff: 11/20/2017
   
      모델을 업데이트할 때 처음 3단계 동안 프로세스가 실패하면 진행되지 않습니다. 그러나 이미 수행한 변경 내용은 롤백되지 않습니다. 4단계에서 프로세스가 실패하면 업데이트 가능한 멤버가 업데이트됩니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  파일 특성, 사용자 및 그룹 권한은 모델 배포 패키지에 포함되지 않습니다. 모델을 배포한 후에 이러한 항목을 수동으로 업데이트해야 합니다. 참조 항목:  
   
 -   [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -24,18 +24,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6216637338c1b1006873086586aa9f516be219f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a2a0d393cc2d60db80a5359b9be1d2efaf8037f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-a-database"></a>데이터베이스 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용자 정의 데이터베이스를 삭제하는 방법을 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -51,15 +51,15 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [데이터베이스를 삭제한 후](#FollowUp)  
+-   **Follow Up:**  [After deleting a database](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
 -   시스템 데이터베이스는 삭제할 수 없습니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   데이터베이스에 있는 모든 데이터베이스 스냅숏을 삭제합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)를 참조하세요.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  DROP DATABASE를 실행하려면 최소한 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `Sales` 및 `NewSales` 데이터베이스를 제거합니다.  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 DROP DATABASE Sales, NewSales ;  

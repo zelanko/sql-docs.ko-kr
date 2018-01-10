@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터는 **PASSWORD** 및 **MEDIAPASSWORD** 옵션은 백업을 만드는 데 더 이상 사용되지 않습니다. 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
  백업 장치의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 **있어야 합니다** . 그러나 시스템 테이블의 백업 장치에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 장치의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
@@ -265,10 +265,10 @@ ms.lasthandoff: 12/05/2017
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
-    |옵션|설명|  
+    |옵션|Description|  
     |------------|-----------------|  
     |*database*|백업할 데이터베이스입니다.|  
-    |*backup_device* [ **또는 PowerShell을 사용하여**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|  
+    |*backup_device* [ **또는 PowerShell을 사용하여**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
     |WITH *with_options* [ **,**...*o* ]|필요에 따라 *o*등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|  
   
 2.  필요에 따라 한 개 이상의 WITH 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션은 이 페이지에 설명되어 있습니다. 모든 WITH 옵션에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
@@ -304,7 +304,7 @@ ms.lasthandoff: 12/05/2017
 #### <a name="a-back-up-to-a-disk-device"></a>**A. 디스크 장치에 백업**  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 을 사용하여 새 미디어 세트를 만들어 `FORMAT` 데이터베이스 전체를 디스크에 백업합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -318,7 +318,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**B. 테이프 장치에 백업**  
  다음 예제에서는 이전 백업에 백업을 추가하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스 전체를 테이프에 백업합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -331,7 +331,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**C. 논리적 테이프 장치에 백업**  
  다음 예에서는 테이프 드라이브에 대한 논리적 백업 장치를 만듭니다. 그런 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스 전체를 이 장치에 백업합니다.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  
@@ -390,7 +390,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
   
 -   [유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 **[SQL Server 백업 및 복원 작업 문제 해결](https://support.microsoft.com/en-us/kb/224071)**          
 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   

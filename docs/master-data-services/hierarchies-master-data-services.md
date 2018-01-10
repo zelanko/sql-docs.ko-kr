@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be330f5114f0d3c610460b7c0e07727bf3523b8f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19dd4e701123b4c014de6ed6c5940ea04e864ef6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchies-master-data-services"></a>계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 계층은 다음 작업에 사용할 수 있는 트리 구조입니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
  ![하위 범주로 그룹화된 계층 예제](../master-data-services/media/mds-conc-hierarchy.gif "하위 범주로 그룹화된 계층 예제")  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c4b5daabf1f2a9246fda5e58aaf5814063e576fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ec0674b98d8967742b6f904091ab41e8ffc6ee2d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tracing-master-data-services"></a>추적(Master Data Services)
   Web.config 파일에는 다음과 같은 추적 섹션이 포함되어 있습니다. 이 섹션은 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  

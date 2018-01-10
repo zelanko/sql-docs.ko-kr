@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9710a8f5fcc77032f7bb575e90be1b91188c6e5c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4c074fdc892d55da4ee65c433a3189e94138f4b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backward-compatibility-master-data-services"></a>이전 버전과의 호환성(Master Data Services)
   이 섹션에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]버전 간의 변경 사항에 대해 설명하며 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 Integration Services 기능을 비롯한 기존 응용 프로그램의 동작을 중단시키거나 변경하는 것으로 알려진 제품 변경 사항에 대해서도 설명합니다.  

@@ -5,7 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -24,11 +24,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3046646a61d7b9e85812808493a748f50a7ea416
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d6696b83e60538b0b18c2de37ffcd943a1a54f3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="members-master-data-services"></a>멤버(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버는 실제 마스터 데이터입니다. 예를 들어, 멤버는 Product 엔터티의 Road-150 bike이거나 Customer 엔터티의 특정 고객일 수 있습니다.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
  ![Bike 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

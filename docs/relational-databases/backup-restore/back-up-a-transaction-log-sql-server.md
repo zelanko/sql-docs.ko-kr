@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 175d7015137566ae5d9ecf2de97698395679eca2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 404829831ddf4958c19fa89eae9eb8c8fbd7077f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>트랜잭션 로그 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 -   기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 빠르게 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
   
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> Permissions  
 **시작하기 전에 올바른 사용 권한을 확인하세요.** 
 
 필요한 BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버에 의해 부여됩니다.  
@@ -151,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  이 예에서는 이전에 만든 명명된 백업 장치 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 에 `MyAdvWorks_FullRM_log1`데이터베이스의 트랜잭션 로그 백업을 만듭니다.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  
@@ -172,7 +172,7 @@ GO
   
 -   [SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

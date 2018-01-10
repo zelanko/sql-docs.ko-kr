@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -24,11 +24,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca7a31974a26dfe6b8f38ea3e17c480a74526518
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9acfc7e9d80dd82186f62dcb3fedbe43c80f9f6c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-master-data-services"></a>특성(Master Data Services)
   특성은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 엔터티에 포함된 개체입니다. 특성 값은 엔터티 멤버를 설명합니다. 특성을 사용하여 리프 멤버, 통합 멤버 또는 컬렉션을 설명할 수 있습니다.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
  ![제품 엔터티 트리 구조](../master-data-services/media/mds-conc-entity-ui.gif "제품 엔터티 트리 구조")  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

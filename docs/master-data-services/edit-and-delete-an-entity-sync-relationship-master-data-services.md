@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,21 +17,21 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2af2dc85c24e3cf610c09e796cc91d75c65f32e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: afbfa60002d96fa11d76eca3146f13117e49fd22
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계 편집 및 삭제(Master Data Services)
   엔터티 동기화는 엔터티 버전 간의 반복 가능한 단방향 동기화입니다. 이는 서로 다른 모델 간에 엔터티 데이터를 공유하는 방법을 제공합니다. 만든 동기화 관계를 편집하고 삭제할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  엔터티 동기화 관계를 편집하기 위한 필수 구성 요소  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
--   대상 모델의 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   대상 모델의 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 -   최소한 원본 엔터티와 모든 엔터티 특성 및 멤버에 대한 읽기 권한이 있어야 합니다.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
--   대상 모델의 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   대상 모델의 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
  엔터티 동기화 관계를 편집할 때 다음을 고려하세요.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [엔터티 동기화 관계 만들기 및 실행&#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [엔터티 동기화 관계&#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   

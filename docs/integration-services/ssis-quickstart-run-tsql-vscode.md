@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: deb2b7ee8d96fe02383647345aad7bcf4562ad6f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c962285d10ca05434deafc9cf1d071a09f8cca65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 패키지 실행
 이 빠른 시작에서는 Visual Studio Code를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Transact-SQL 문을 사용하여 SSIS 카탈로그에 저장된 SSIS 패키지를 실행하는 방법을 보여줍니다.
 
 Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL Data Warehouse에 연결하기 위한 `mssql` 확장을 포함하여 확장을 지원하는 Windows, macOS 및 Linux용 코드 편집기입니다. VS Code에 대한 자세한 내용은 [Visual Studio Code](https://code.visualstudio.com/)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 최신 버전의 Visual Studio Code를 설치하고 `mssql` 확장을 로드했는지 확인합니다. 이러한 도구를 다운로드하려면 다음 페이지를 참조하세요.
 -   [Visual Studio 코드 다운로드](https://code.visualstudio.com/Download)
@@ -60,7 +60,7 @@ Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정�
    | **서버 이름** | 정규화된 서버 이름 | Azure SQL Database 서버에 연결하는 경우 이름은 `<server_name>.database.windows.net` 형식입니다. |
    | **데이터베이스 이름** | **SSISDB** | 연결할 데이터베이스의 이름입니다. |
    | **인증** | SQL 로그인| 이 빠른 시작에서는 SQL 인증을 사용합니다. |
-   | **사용자 이름** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
+   | **User name** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
    | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 'Yes'를 선택합니다. |
    | **이 프로필의 이름을 입력합니다.** | 프로필 이름(예: **mySSISServer**) | 저장된 프로필 이름은 후속 로그인에서 연결 속도를 높입니다. | 

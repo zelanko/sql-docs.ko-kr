@@ -5,7 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 88c6bc973c6039b81d8af48a9dd7d76304946add
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48327b0b2b0b964366369699b1800f08375125c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-package-objects"></a>패키지 개체 보기
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 **패키지 탐색기** 탭은 패키지에 대한 탐색기 뷰를 제공합니다. 이 뷰에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 아키텍처의 컨테이너 계층이 표시됩니다. 패키지 컨테이너는 최상위 계층에 있으며, 패키지를 확장하면 패키지에 있는 연결, 실행 개체, 이벤트 처리기, 로그 공급자, 선행 제약 조건 및 변수를 볼 수 있습니다.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
 -   개체를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다. 
  
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services 컨테이너](../integration-services/control-flow/integration-services-containers.md)   
  [선행 제약 조건](../integration-services/control-flow/precedence-constraints.md)   

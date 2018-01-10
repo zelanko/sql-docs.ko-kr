@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -24,11 +24,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90de17c77982bd2eb15575f9eb80dba48969dbf2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a894b57cbe4c6111ff0c3c986d8761228c3ff86e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>데이터베이스 로그인, 사용자 및 역할(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 데이터베이스를 호스팅하는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 자동으로 설치되는 로그인, 사용자 및 역할이 포함되어 있습니다. 이러한 로그인, 사용자 및 역할은 수정하면 안 됩니다.  
@@ -57,19 +57,19 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="master-data-services-database-role"></a>Master Data Services 데이터베이스 역할  
   
-|역할|Description|Permissions|  
+|Role|Description|사용 권한|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|이 역할은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 웹 응용 프로그램을 만들고 응용 프로그램 풀의 계정을 지정하는 경우 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에 지정하는 계정을 포함합니다.|모든 스키마에 대한 EXECUTE 권한<br /><br /> <br /><br /> 다음 테이블에 대한 ALTER, INSERT 및 SELECT 권한:<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> 다음 테이블에 대한 SELECT 권한:<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> 다음 뷰에 대한 SELECT 권한:<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>스키마  
   
-|역할|Description|  
+|Role|Description|  
 |----------|-----------------|  
 |**mdm**|mdq 스키마에 포함된 함수 이외의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 및 Service Broker 개체를 모두 포함합니다.|  
 |**mdq**|정규식 또는 유사성에 따라 멤버 결과를 필터링하는 데 관련이 있으며 알림 전자 메일의 서식을 지정하기 위한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 함수를 포함합니다.|  
 |**stg**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 테이블, 저장 프로시저 및 준비 프로세스와 관련된 뷰를 포함합니다. 이러한 개체는 삭제하지 마십시오. 준비 프로세스에 대한 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 개체 보안&#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

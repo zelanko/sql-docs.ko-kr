@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 068f54a757e16c7b44760cbb69dee4a4d5cb70ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fa245a3411b175e1bf9b8f95d473d2980eb0f47c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL을 사용하여 SSMS에서 SSIS 프로젝트 배포
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 11/20/2017
 
 SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS에 대한 자세한 내용은 [SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 최신 버전의 SQL Server Management Studio가 설치되어 있는지 확인합니다. SSMS를 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
@@ -51,9 +51,9 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
    | **로그인** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
 
-3. **연결**을 클릭합니다. SSMS에서 [개체 탐색기] 창이 열립니다. 
+3. **연결**을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
 
-4. [개체 탐색기]에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
+4. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
 
 ## <a name="run-the-t-sql-code"></a>T-SQL 코드 실행
 다음 Transact-SQL 코드를 실행하여 SSIS 프로젝트를 배포합니다.

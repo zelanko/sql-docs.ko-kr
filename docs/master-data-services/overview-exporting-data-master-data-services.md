@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd6016f2daf818d5a7038925c77eaaff91789f8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: beb9d19bb033405761e5152d7684ba7d5b7224e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-exporting-data-master-data-services"></a>개요: 데이터 내보내기(Master Data Services)
   이 문서에서는 구독 뷰 형식 유형 및 모델 개체에 대한 변경 내용으로 인해 뷰를 편집해야 하는 경우를 확인하는 방법을 소개합니다.  

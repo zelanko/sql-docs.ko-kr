@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7922e4d3240a6fae7e9a6f608a0631c7b7435953
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8943644fcede0155643b12a73cc2107cddfd4493
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-a-version-master-data-services"></a>버전 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 버전에 연결된 마스터 데이터가 더 이상 필요하지 않은 경우 해당 버전을 삭제할 수 있습니다. 버전을 삭제한 후에는 연결된 마스터 데이터를 검색할 수 없습니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 > [!WARNING]  
 >  모델에 버전이 하나뿐인 경우 해당 버전을 삭제하면 모델을 사용할 수 없게 됩니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 mdm.viw_SYSTEM_SCHEMA_VERSION 뷰를 보고 mds.udpVersionDelete 저장 프로시저를 실행할 수 있는 권한이 있어야 합니다. 자세한 내용은 [데이터베이스 개체 보안&#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)을 참조하세요.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  웹 응용 프로그램에서 변경 내용을 반영할 때까지 몇 분간 기다려야 할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [버전 복사&#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   

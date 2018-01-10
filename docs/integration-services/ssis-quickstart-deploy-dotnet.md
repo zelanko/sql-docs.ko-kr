@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7891a781a5874653eb7d4864529630d4d2a03442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e01ed21accad152b2ef32d012f3194458ab0440
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET 앱에 C# 코드가 있는 SSIS 프로젝트 배포
 이 빠른 시작 자습서에서는 C# 코드를 작성하여 데이터베이스 서버에 연결하고 SSIS 프로젝트를 배포하는 방법을 보여 줍니다.
 
 C# 앱을 만들려면 Visual Studio, Visual Studio Code 또는 원하는 다른 도구를 사용할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 Visual Studio 또는 Visual Studio Code가 설치되어 있는지 확인합니다. [Visual Studio 다운로드](https://www.visualstudio.com/downloads/)에서 Visual Studio Community Edition 버전 평가판 또는 Visual Studio Code 평가판을 다운로드합니다.
 
@@ -122,7 +122,7 @@ namespace deploy_ssis_project
 - 패키지를 배포하는 다른 방법을 고려합니다.
     - [SSMS를 사용하여 SSIS 패키지 배포](./ssis-quickstart-deploy-ssms.md)
     - [Transact-SQL(SSMS)을 사용하여 SSIS 패키지 배포](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Transact-SQL(VS Code)을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Transact-SQL(VS 코드)을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-tsql-vscode.md)
     - [명령 프롬프트에서 SSIS 패키지 배포](./ssis-quickstart-deploy-cmdline.md)
     - [PowerShell을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-powershell.md)
 - 배포된 패키지를 실행합니다. 패키지를 실행하려면 여러 도구와 언어 중에서 선택할 수 있습니다. 자세한 내용은 다음 문서를 참조하세요.

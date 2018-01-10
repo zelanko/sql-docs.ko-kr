@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 524c568fa36613702db72cfe4388b6f3c32897d7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9445ba2bf07ff68c3d71cdc7ec751d7ffd381376
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-tracking-master-data-services"></a>변경 내용 추적(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 변경 내용 추적 그룹을 사용하여 특성 값이 변경될 때 동작을 수행할 수 있습니다. 새 값이 무엇인지 모르지만 대신 변경이 발생했는지 알고 싶으면 변경 내용 추적을 사용합니다.  

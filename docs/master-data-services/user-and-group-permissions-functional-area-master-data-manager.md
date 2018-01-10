@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f24dc8d6d08e69e144a41a96dcff1c7c81b0299
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5dd3875aaef8ed922f3566c4b2961d477c97ee11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자)
   사용자 및 그룹 권한 기능 영역에서 관리자는 기능 영역, 특성(모델 탭에서) 및 멤버(계층 멤버 탭에서)에 사용 권한을 부여할 수 있습니다. 개별 특성 값에 대한 사용자의 사용 권한을 확인하려면 겹치는 사용 권한을 확인합니다.  

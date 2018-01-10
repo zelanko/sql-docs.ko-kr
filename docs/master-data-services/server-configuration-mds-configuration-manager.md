@@ -5,7 +5,7 @@ ms.date: 01/26/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d6e1fd92da6c48f3eabf34016e69dd17220271a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e5c82395b7d274a7bf3e0f92246ee44f370c4a56
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>서버 구성(MDS Configuration Manager)
   **서버 구성** 페이지를 사용하여 로컬 서버 컴퓨터에 대한 구성 정보를 볼 수 있습니다.  

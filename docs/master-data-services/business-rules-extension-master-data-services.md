@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a4eea06466e59b0ddb8344dbba5b7d81bf1e97b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5052c8c5d53cccdbabc91b135d1452f89f573f16
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="business-rules-extension-master-data-services"></a>비즈니스 규칙 확장(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 사용자 정의 SQL 스크립트를 미리 정의된 조건과 동작의 확장으로 적용할 수 있습니다.  
@@ -73,7 +73,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -116,7 +116,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [비즈니스 규칙 조건&#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [비즈니스 규칙 동작&#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,21 +20,21 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6093015d9ac63d5d2ceb9055f26638cae6d818ab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6ccb178ea6b481bf2c86bcff208a1cf68cebeb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>특성 값 변경 기반 동작 시작(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 값 변경을 기반으로 동작을 시작하는 비즈니스 규칙을 만듭니다. 예를 들어, 특정 특성 값이 변경될 때 값을 변경하거나 알림을 보내거나 외부 워크플로를 시작할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 -   특성이 변경 내용 추적 그룹 안에 있어야 합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 를 참조하세요.  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
 21. 확인 대화 상자에서 **확인**을 클릭합니다. 규칙의 상태가 **활성**으로 변경됩니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   다음 절차 중 하나를 수행하여 비즈니스 규칙을 데이터에 적용합니다.  
   

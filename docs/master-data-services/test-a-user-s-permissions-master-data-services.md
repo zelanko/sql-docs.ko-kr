@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8126179f84ba0fa189996c583c3d0973b5f71b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 52d966b73cb5bf50534c8fb62be0b85db8e31aef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>사용자의 사용 권한 테스트(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 테스트 사용자를 만들고 사용 권한을 테스트하기 위해 웹 응용 프로그램에 로그인할 수 있습니다. 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] URL에 액세스하려고 시도할 때 사용자의 자격 증명이 인증됩니다. Internet Explorer의 보안 설정에 따라 인증이 자동으로 진행되는지, 아니면 사용자 이름 및 암호를 입력해야 하는지 여부가 결정됩니다. 이 설정을 변경하려면 다음 단계를 수행하십시오.  

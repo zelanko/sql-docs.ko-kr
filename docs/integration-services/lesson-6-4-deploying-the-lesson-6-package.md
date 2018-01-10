@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 35970f8d14fd44ec9b1e11aec91ed11ea439a648
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 417d9cea0efa946e5180776f629f221a8bb1b545
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-6-4---deploying-the-lesson-6-package"></a>6-4단원 - 6단원 패키지 배포
 패키지를 배포하려면 SQL Server 인스턴스의 Integration Services에서 SSISDB 카탈로그에 패키지를 추가해야 합니다. 이 단원에서는 6 단원 패키지를 SSISDB 카탈로그에 추가하고, 매개 변수를 설정하 고 패키지를 실행합니다. 이 단원에서 SQL Server Management Studio를 사용하여 SSISDB 카탈로그에 6 단원 패키지를 추가하고 패키지를 배포합니다. 패키지를 배포한 후 새 위치를 가리키도록 패키지를 수정한 다음 매개 변수를 실행합니다.  

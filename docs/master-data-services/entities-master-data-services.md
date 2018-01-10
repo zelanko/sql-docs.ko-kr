@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f76478f355ea25c72572ebd52535360697b301cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf437e4047e30beb754fac29c4ed2626de594363
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="entities-master-data-services"></a>엔터티(Master Data Services)
   엔터티는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델에 포함된 개체입니다. 각 엔터티에는 관리하는 마스터 데이터의 행인 멤버가 들어 있습니다.  

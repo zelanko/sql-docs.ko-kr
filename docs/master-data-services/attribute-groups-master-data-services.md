@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a40acdb2ec04840eedec357b6dbc202be37ff0d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a5e3e96290d46851727d3e8f973120a37109d023
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-groups-master-data-services"></a>특성 그룹(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 그룹은 엔터티의 특성을 구성하는 데 유용합니다. 엔터티에 있는 특성이 여러 개인 경우 특성 그룹을 사용하면 엔터티가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에 표시되는 방식이 향상됩니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
   
  그룹 내의 특정 특성을 숨기려면 해당 특성에 **거부** 권한을 할당하면 됩니다. 자세한 내용은 [리프 권한&#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

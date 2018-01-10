@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b959d2dd76d312b64b4a2379a99d04fd5d164aff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1739fcbc11cdf849292e420842b168ba653cea46
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 데이터 형식
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|  
 |[datetimeoffset&#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography&#40;Transact-SQL&#41;](../../t-sql/spatial-geography/spatial-types-geography.md)|[geometry&#40;Transact-SQL&#41;](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)|  
 |[hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[rowversion&#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)|[xml&#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)|  
-|[sql_variant&#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)|사용자 정의 형식|.|  
+|[sql_variant&#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)|사용자 정의 형식|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
   
 ## <a name="notable-supported-data-types"></a>지원되는 주요 데이터 형식  
  메모리 내 OLTP의 대다수 기능은 대부분의 데이터 형식을 지원합니다. 지원되는 몇 가지 주요 데이터 형식은 다음과 같습니다.  
@@ -68,7 +68,7 @@ SQL Server 2016부터는 메모리 최적화 테이블이 [행 외부 열을 지
 - max_length가 -1이면 LOB(Large Object) 열을 나타냅니다.
 
 
-```tsql
+```sql
 SELECT
         OBJECT_NAME(m.object_id) as [table],
         c.name                   as [column],

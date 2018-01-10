@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2a318589eae5c96aed87835bd17bd3defceccf17
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f2842c71f7af2d569cd6455aa437fbf4f8397e5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-2---adding-and-configuring-logging"></a>3-2단원 - 로깅 추가 및 구성
 이 태스크에서는 Lesson 3.dtsx 패키지의 데이터 흐름에 로깅을 설정한 다음 PipelineExecutionPlan 및 PipelineExecuteTrees 이벤트를 로그하도록 텍스트 파일 로그 공급자를 구성합니다. 텍스트 파일 로그 공급자는 쉽게 보고 변환할 수 있는 로그를 만듭니다. 이러한 로그 파일은 단순하기 때문에 특히 패키지의 기본 테스트 단계에서 유용합니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 로그 이벤트 창에서도 로그 항목을 볼 수 있습니다.  
@@ -64,6 +64,6 @@ ms.lasthandoff: 11/20/2017
   
 14. **확인**을 클릭합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 [3단계: 3단원 자습서 패키지 테스트](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   

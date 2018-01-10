@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88497e6a02ded0fc47b703ebe2bda99e10917d6b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 03ffca860f467f806dca3c9385543a59ef743219
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
   계층 멤버 권한은 선택 사항이며 사용자에게 특정 멤버에 대한 제한된 액세스 권한을 부여하려는 경우에만 사용해야 합니다. **계층 멤버** 탭에서 아무 권한도 할당하지 않을 경우 사용자의 권한은 전적으로 **모델** 탭에서 할당한 권한을 기반으로 합니다.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="external-resources"></a>외부 리소스  
  msdn.com의 블로그 게시물 [향상된 보안 기능](http://go.microsoft.com/fwlink/p/?LinkId=615376)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   

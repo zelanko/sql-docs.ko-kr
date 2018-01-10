@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd4abcfde3f017de3bff746a596f031025dd214e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 160f491061d37b4f7bd871cc97dd01917045918c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-a-model-deployment-package"></a>모델 배포 패키지 편집
   이 항목에서는 MDS에서 전체 모델 대신 모델의 선택한 부분을 배포하는 방법에 대해 설명합니다. 이렇게 하려면 모델 패키지 편집기를 사용하여 MDS 모델 패키지를 편집하면 됩니다.  
@@ -30,10 +30,10 @@ ms.lasthandoff: 11/20/2017
   
  모델 패키지 편집기를 사용하여 MDSModelDeploy 도구(개체 및 데이터가 포함된 패키지 파일을 만드는 도구) 또는 모델 배포 마법사(모델 구조만 포함된 파일을 만드는 도구)를 사용하여 만든 패키지 파일에서 모델의 일부분을 선택할 수 있습니다. 패키지의 모델을 편집한 후에는 MDSModelDeploy 도구를 사용하여 개체 및 데이터를 배포하거나 모델 배포 마법사를 사용하여 모델 구조만 배포할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 -   편집할 모델 패키지가 있어야 합니다. 자세한 내용은 [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md) 및 [마법사를 사용하여 모델 배포 패키지 만들기](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md) 또는 [MDSModelDeploy를 사용하여 모델 배포 패키지 만들기](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  **마침**을 클릭합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   [마법사를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   

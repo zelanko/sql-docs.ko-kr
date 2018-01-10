@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b29636580a8e8e87229ce591863547a91cd05a8f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e81823e1a6af46813b8d8df969d7a2060d1c1b17
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-packages"></a>패키지 저장
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만든 패키지를 파일 시스템에 XML 파일(.dtsx 파일)로 저장합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 msdb 데이터베이스나 패키지 저장소에 패키지 XML 파일의 복사본을 저장할 수도 있습니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에서 관리하는 파일 시스템 위치에 있는 폴더를 나타냅니다.  

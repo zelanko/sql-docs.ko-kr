@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bb22135ac89ddc9ac95b934b403b0c5a970cfaf2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 720e4aa2ef9d6b6278ee3ddf8da46de180c8c104
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>백업 테이프 또는 파일의 내용 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
  보안에 대한 자세한 내용은 [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)를 참조하세요.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 문을 사용합니다. 이 예에서는 `AdventureWorks2012-FullBackup.bak`라는 파일에 대한 정보를 반환합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 RESTORE HEADERONLY   
 FROM DISK = N'C:\AdventureWorks2012-FullBackup.bak' ;  

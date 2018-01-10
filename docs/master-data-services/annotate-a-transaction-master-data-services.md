@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec045db7e85912ac6ffd165f5a410396b8fbb36b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3b21908af85948492677134c17465a6788f3b9b5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>트랜잭션에 주석 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 기록 목적으로 트랜잭션에 대한 지원 정보를 제공하려면 트랜잭션에 주석을 추가합니다.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  주석은 삭제할 수 없습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   만든 트랜잭션에 주석을 추가하려면 **탐색기** 기능 영역에 대한 액세스 권한과 주석을 추가할 모델 개체에 대한 **업데이트** 이상의 사용 권한이 있어야 합니다.  
   
--   모든 사용자를 위해 트랜잭션에 주석을 추가하려면 **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 하며 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모든 사용자를 위해 트랜잭션에 주석을 추가하려면 **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 하며 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>탐색기에서 트랜잭션에 주석을 추가하려면  
   

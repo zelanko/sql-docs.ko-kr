@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593c18478ee73b66d0f8402885324615615d0fcf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>5-2단원 - 패키지 구성 설정 및 구성
 이 작업에서는 프로젝트를 패키지 배포 모델로 변환하고 패키지 구성 마법사를 사용하여 패키지 구성을 설정합니다. 이 마법사를 사용하여 Foreach 루프 컨테이너의 **Directory** 속성에 대한 구성 설정을 포함하는 XML 구성 파일을 생성합니다. 런타임에 업데이트할 수 있는 새 패키지 수준 변수에서 Directory 속성 값을 제공합니다. 또한 테스트하는 동안 사용할 새로운 예제 데이터 폴더를 채웁니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  경고 프롬프트에서 **확인** 을 클릭하고 변환이 완료되면 **패키지 배포 모델로 변환** 대화 상자에서 **확인** 을 클릭합니다.  
   
-3.  **디자이너에서** 제어 흐름 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭의 배경을 클릭합니다.  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 **제어 흐름** 탭의 배경을 클릭합니다.  
   
 4.  **SSIS** 메뉴에서 **패키지 구성**을 클릭합니다.  
   

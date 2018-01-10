@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 891e8008f313a8087970b66a2cc8278813a4984e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ce2247de6d55d26b7e2360d4b68149106024e8e0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 파일이 FileTable에 저장되는 디렉터리 구조에 대해 설명합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="BestPracticeRelativePaths"></a> 방법: 이식 가능한 코드에 상대 경로 사용  
  코드와 응용 프로그램을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 다음 예와 같이 [FileTableRootPath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 및 [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)함수를 함께 사용하여 런타임에 파일의 전체 경로를 가져옵니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
   
-```tsql  
+```sql  
 USE database_name;  
 DECLARE @root nvarchar(100);  
 DECLARE @fullpath nvarchar(1000);  
@@ -111,7 +111,7 @@ GO
   
 -   파일 시스템 API를 통한 FILESTREAM 또는 FileTable 데이터에 대한 모든 액세스에는 컴퓨터 이름 대신 VNN이 사용되어야 합니다. 자세한 내용은 [Always On 가용성 그룹의 FILESTREAM 및 FileTable&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [FileTable의 필수 구성 요소를 사용하도록 설정](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [FileTable 만들기, 변경 및 삭제](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Transact-SQL을 사용하여 FileTable에 액세스](../../relational-databases/blob/access-filetables-with-transact-sql.md)   

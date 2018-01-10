@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ac9a4b15d48f9c5f9ac9a25a932d9acec798e31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd4c11bc8b7fcaad34aa085e3406f31529793954
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changesets-master-data-services"></a>변경 집합(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서는 이제 엔터티에 대해 보류 중인 모든 변경 내용을 변경 집합으로 저장하는 기능을 지원합니다. 이 기능의 두 가지 사용 시나리오가 있습니다.  
@@ -34,11 +34,11 @@ ms.lasthandoff: 11/20/2017
   
     1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다. [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [변경 집합 적용 및 업데이트&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)를 참조하세요.  
+    2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
-    3.  승인을 위해 엔터티 관리자에게 변경 집합을 제출합니다. 변경 집합은 보류 중 상태입니다. [변경 집합 커밋 또는 제출&#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)을 참조하세요.  
+    3.  승인을 위해 엔터티 관리자에게 변경 집합을 제출합니다. 변경 집합은 보류 중 상태입니다. [Commit or Submit a Changeset &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-    4.  엔터티 관리자가 변경 집합이 승인 대기 중이라는 메일 알림을 받습니다. 엔터티 관리자가 변경 집합을 승인할 경우 변경 집합은 승인됨 상태입니다. [변경 집합 승인 또는 거부&#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)를 참조하세요.  
+    4.  엔터티 관리자가 변경 집합이 승인 대기 중이라는 메일 알림을 받습니다. 엔터티 관리자가 변경 집합을 승인할 경우 변경 집합은 승인됨 상태입니다. [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
     5.  승인된 변경 집합은 자동으로 커밋됩니다. 변경 내용이 성공적으로 커밋되면 변경 집합은 커밋됨 상태입니다.  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
     3.  준비가 되면 변경 집합을 커밋합니다. [변경 집합 커밋 또는 제출&#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [변경 집합 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [변경 집합 적용 및 업데이트&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [변경 집합 커밋 또는 제출&#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   

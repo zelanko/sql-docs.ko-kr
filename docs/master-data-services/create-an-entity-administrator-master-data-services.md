@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 864c9a05a863106f62bd0ecc4a5db09034de05c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f48a4f1e1ecfbab11ae890a0da8f1aa85edc325
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>엔터티 관리자 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 그룹이나 사용자에게 엔터티 하나 이상의 모든 개체에 대한 모든 권한을 제공하거나 보류 중인 변경 집합 승인 권한을 제공하려는 경우 엔터티 관리자를 만듭니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/20/2017
 > [!TIP]  
 >  관리 작업을 간편하게 수행하려면 Windows 또는 로컬 그룹을 만든 다음 엔터티 관리자로 구성합니다. 그러면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

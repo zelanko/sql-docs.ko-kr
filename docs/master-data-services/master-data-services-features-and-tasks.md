@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ac8fc262775d11c08cb2e30a750549fe3b0ec96b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b563882777ac6ca62665a66e7aed497bdacdccdd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 기능 및 태스크
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 사용하여 조직의 마스터 데이터를 관리하는 방법에 대해 알아봅니다. 데이터를 위한 컨테이너인 모델 개체를 만들고 조작하는 방법에 대해 알아봅니다. 마스터 데이터를 구성하고 유지 관리하는 방법에 대해 알아봅니다. 마스터 데이터를 가져오고 내보내는 방법, 그리고 테스트 환경과 프로덕션 환경 간에 모델을 공유하는 방법에 대해 알아봅니다. 마지막으로 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스에 액세스하는 사용자 지정 응용 프로그램을 개발하는 방법에 대해 알아봅니다.  

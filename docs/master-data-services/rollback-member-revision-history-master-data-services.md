@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,16 +17,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d361d60514bcd3e63a79c03da52281bd02fcedb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 123c2e3be7c8ce472c4499f4ac12bc38ea13edbc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>멤버 수정 기록 롤백(Master Data Services)
   멤버 수정 기록은 멤버를 변경할 때마다 기록됩니다. 멤버 수정 기록을 이전 버전으로 롤백할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   선택한 멤버의 특성 하나 이상을 업데이트할 권한이 있어야 합니다. 수정 기록을 롤백하면 업데이트할 수 있는 모든 특성 값이 이전 버전 값으로 롤백됩니다.  
   

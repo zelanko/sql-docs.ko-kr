@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 212e32ce69ae1b5bef4502227bdc4aafca5e5be2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3c43cc72c49f00af429de5863bdbbf608704a2f4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>새 위치로 파일 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/17/2017
     |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
     |**Server**|백업 작업을 수행한 데이터베이스 엔진 인스턴스의 이름입니다.|  
     |**논리적 파일 이름**|파일의 논리적 이름입니다.|  
-    |**데이터베이스**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
+    |**데이터베이스 백업**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**Start Date**|클라이언트의 국가별 설정으로 표시되는 백업 작업 시작 날짜 및 시간입니다.|  
     |**완료 날짜**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
     |**크기**|백업 세트의 크기를 바이트 단위로 표시한 것입니다.|  
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 원래 드라이브 C에 있었던 `MyNwind` 데이터베이스의 두 파일을 드라이브 D의 새 위치로 복원합니다. 두 트랜잭션 로그도 적용되어 데이터베이스를 현재 시간으로 복원합니다. `RESTORE FILELISTONLY` 문은 복원할 데이터베이스에 있는 파일의 수와 논리적/물리적 이름을 확인하는 데 사용합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

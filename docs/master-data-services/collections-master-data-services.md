@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88cf44a116a2bca8ca61bb27106bb9b080d950cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ffdc2b58550e1ca5dac4b33782dbc04ae5d30bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections-master-data-services"></a>컬렉션(Master Data Services)
   컬렉션은 단일 엔터티의 리프 멤버와 통합 멤버의 그룹입니다. 전체 계층이 필요 없고 보고나 분석을 위해 멤버의 다른 그룹을 보려는 경우 또는 분류를 만들어야 할 경우 컬렉션을 사용합니다.  

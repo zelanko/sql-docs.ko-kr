@@ -24,18 +24,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd81cf779f87f0eeda72f744471cce12b407e46d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06e1add6dcc897d39d9c34d8881661a845a2dc8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>존재하지 않는 파일 그룹 제거(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 존재하지 않는 파일 그룹을 제거하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. **참고:** 이 예제에서는 파일과 파일 그룹이 이미 있다고 가정합니다. 이러한 개체를 만들려면 [ALTER DATABASE 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 항목의 예제 B를 참조하세요. 첫 번째 예에서는 `test1dat3` 절과 함께 `test1dat4` 문을 사용하여 존재하지 않는 파일 그룹에서 `ALTER DATABASE` 및 `REMOVE FILE` 파일을 제거합니다. 두 번째 예에서는 `Test1FG1` 절을 사용하여 존재하지 않는 파일 그룹 `REMOVE FILEGROUP`을 제거합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -105,7 +105,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 506bd9415733f02d54875ecb936e750a877e0e32
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f2a0fe1d27bd0ed1b70b3d31aacfca43cb291c1f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functional-area-permissions-master-data-services"></a>기능 영역 권한(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI(사용자 인터페이스)의 각 기능 영역에 사용 권한을 할당할 수 있습니다. 기능 영역은 다음과 같습니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
  기능 영역에 사용 권한을 할당하면 UI의 해당 영역이 사용자 또는 그룹에 표시됩니다.  
   
- **탐색기** 기능 영역 내에서 모델 개체 및 계층 멤버에 할당된 추가 사용 권한에 따라 사용자가 액세스할 수 있는 데이터가 결정됩니다. 다른 모든 기능 영역 내에서 사용자가 모델을 보고 모델에 대한 작업을 수행하려면 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+ **탐색기** 기능 영역 내에서 모델 개체 및 계층 멤버에 할당된 추가 사용 권한에 따라 사용자가 액세스할 수 있는 데이터가 결정됩니다. 다른 모든 기능 영역 내에서 사용자가 모델을 보고 모델에 대한 작업을 수행하려면 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  슈퍼 사용자 권한이 있는 사용자는 효과적으로 모든 모델에 대한 관리자 권한이 있으며 다른 모든 기능 권한을 갖습니다.  

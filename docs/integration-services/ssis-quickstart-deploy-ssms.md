@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17670ea5b9cc4f0795a0aa8801a1c9b496ed580b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 151089d319a1106f81426beee4aa2989bc72b978
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 SSIS 프로젝트 배포
 이 빠른 시작에서는 SSMS(SQL Server Management Studio)를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Integration Services 배포 마법사를 실행하여 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여 줍니다. 
 
 SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS에 대한 자세한 내용은 [SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 최신 버전의 SQL Server Management Studio가 설치되어 있는지 확인합니다. SSMS를 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
@@ -47,9 +47,9 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
    | **로그인** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
 
-3. **연결**을 클릭합니다. SSMS에서 [개체 탐색기] 창이 열립니다. 
+3. **연결**을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
 
-4. [개체 탐색기]에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
+4. 개체 탐색기에서 **Integration Services 카탈로그**, **SSISDB**를 차례로 펼쳐 SSIS 카탈로그 데이터베이스의 개체를 봅니다.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 배포 마법사 시작
 1. **Integration Services 카탈로그** 노드와 **SSISDB**가 펼쳐진 [개체 탐색기]에서 프로젝트 폴더를 펼칩니다.
@@ -83,7 +83,7 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
 ## <a name="next-steps"></a>다음 단계
 - 패키지를 배포하는 다른 방법을 고려합니다.
     - [Transact-SQL(SSMS)을 사용하여 SSIS 패키지 배포](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Transact-SQL(VS Code)을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Transact-SQL(VS 코드)을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-tsql-vscode.md)
     - [명령 프롬프트에서 SSIS 패키지 배포](./ssis-quickstart-deploy-cmdline.md)
     - [PowerShell을 사용하여 SSIS 패키지 배포](ssis-quickstart-deploy-powershell.md)
     - [C#을 사용하여 SSIS 패키지 배포](./ssis-quickstart-deploy-dotnet.md) 

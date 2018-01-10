@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24617e8cdf46bcb5efb9b1466bcedc96583ee5ce
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 32365e66adee63c6bce756bd6081664776c29ad9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>비즈니스 규칙 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 비즈니스 규칙이 더 이상 필요하지 않으면 삭제할 수 있습니다.  
@@ -32,12 +32,12 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  비즈니스 규칙을 삭제하지 않고 제외하면 비즈니스 규칙에 대해 데이터 유효성을 검사하지 않을 수 있습니다. 자세한 내용은 [비즈니스 규칙 제외&#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)를 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 ### <a name="to-delete-a-business-rule"></a>비즈니스 규칙을 삭제하려면  
   

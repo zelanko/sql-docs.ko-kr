@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fbbbdd8675aff3dbf19e628b0063b96460f596f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7ab3415d2252e52e79a0129ab5c5d438ad114a76
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>.NET 앱에서 C# 코드가 있는 SSIS 패키지 실행
 이 빠른 시작 자습서에서는 C# 코드를 작성하여 데이터베이스 서버에 연결하고 SSIS 패키지를 실행하는 방법을 보여 줍니다.
 
 Visual Studio, Visual Studio Code 또는 원하는 다른 도구를 사용하여 C# 앱을 만들 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 Visual Studio 또는 Visual Studio Code가 설치되어 있는지 확인합니다. [Visual Studio 다운로드](https://www.visualstudio.com/downloads/)에서 Visual Studio Community Edition 버전 평가판 또는 Visual Studio Code 평가판을 다운로드합니다.
 

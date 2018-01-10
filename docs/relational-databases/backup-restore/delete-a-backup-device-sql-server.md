@@ -23,18 +23,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a398b2c48aa61d877d4dece9380289022998bd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5bfc3a48c13e08702d7d06f1e6ee2cd95a92be6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-a-backup-device-sql-server"></a>백업 장치 삭제(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 백업 장치를 삭제하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  **diskadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  다음 예를 복사하여 쿼리에 붙여 넣습니다. 이 예에서는 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) 를 사용하여 백업 장치를 삭제하는 방법에 대해 설명합니다. `mybackupdisk` 백업 장치와 실제 이름 `c:\backup\backup1.bak`를 만들려면 첫 번째 예를 실행합니다. **백업 장치를 삭제하려면** sp_dropdevice `mybackupdisk` 를 실행합니다. `delfile` 매개 변수는 물리적 이름을 삭제합니다.  
   
-```tsql  
+```sql  
 --Define a backup device and physical name.   
 USE AdventureWorks2012 ;  
 GO  

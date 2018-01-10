@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b132be5de44e4bb669ce0c1aa014b89aec07a63
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53c154bf25df98ca502925b5514e5d0da583ce2d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-designer"></a>SSIS 디자이너
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만들고 유지 관리하는 데 사용할 수 있는 그래픽 도구입니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트의 일부로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다.  
@@ -150,7 +150,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="event-handlers-tab"></a>이벤트 처리기 탭
   **디자이너의** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 제어 흐름을 작성할 수 있습니다. 이벤트 처리기는 패키지 또는 패키지의 태스크나 컨테이너에 의해 발생한 이벤트에 대한 응답으로 실행됩니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **실행 파일**  
  이벤트 처리기를 작성할 실행 파일을 선택합니다. 실행 파일은 패키지 또는 패키지의 태스크나 컨테이너가 될 수 있습니다.  
   
@@ -186,11 +186,11 @@ ms.lasthandoff: 11/20/2017
   
  이 영역을 마우스 오른쪽 단추로 클릭한 다음 메뉴에서 수행하려는 태스크에 대한 옵션을 클릭합니다.
  
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 -   [SQL Server Data Tools에서 패키지 만들기](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 사용자 인터페이스](../integration-services/integration-services-user-interface.md)  
   
   

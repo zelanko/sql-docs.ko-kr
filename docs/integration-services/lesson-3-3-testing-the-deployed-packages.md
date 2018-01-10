@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59cceacbf934aea6fc3e7c0a8e2c5f089ed7f6e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ca1b0eb6ba963192597a4ebc471c09024eef3042
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>3-3단원 - 배포된 패키지 테스트
 이 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포한 패키지를 테스트합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > 이 자습서의 컨텍스트에서 패키지가 성공적으로 실행되도록 하려면 어떠한 옵션도 수정해서는 안 됩니다.  
   
-패키지 실행 유틸리티를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 패키지를 실행하기 전에 Integration Services 서비스가 실행 중인지 확인합니다. Integration Services 서비스는 패키지 저장 및 실행을 위한 지원을 제공합니다. 이 서비스가 중지된 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 연결할 수 없으며 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 실행할 패키지를 나열하지 않습니다. 또한 패키지가 배포된 인스턴스에서 패키지를 실행할 수 있는 권한이 있어야 합니다. 자세한 내용은 [Integration Services 역할&#40;SSIS Service&#41;](../integration-services/security/integration-services-roles-ssis-service.md)을 참조하세요.  
+패키지 실행 유틸리티를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 패키지를 실행하기 전에 Integration Services 서비스가 실행 중인지 확인합니다. Integration Services 서비스는 패키지 저장 및 실행을 위한 지원을 제공합니다. 이 서비스가 중지된 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 연결할 수 없으며 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 실행할 패키지를 나열하지 않습니다. 또한 패키지가 배포된 인스턴스에서 패키지를 실행할 수 있는 권한이 있어야 합니다. 자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../integration-services/security/integration-services-roles-ssis-service.md)를 참조하세요.  
   
 저장된 패키지 폴더 내의 최상위 폴더는 Integration Services 서비스가 모니터링하는 사용자 정의 폴더입니다. MsDtsSrvr.ini.xml 파일에서 많거나 적은 폴더를 원하는 대로 지정할 수 있습니다. 이 자습서에서는 기본 MsDtsSrvr.ini.xml 파일이 사용되고 있으며 저장된 패키지 내 최상위 폴더의 이름이 File System 및 MSDB라고 가정합니다.  
   

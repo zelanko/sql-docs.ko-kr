@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6efc48764533527337be76e53fb940fc91cd525c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2c993fc2c7e32f42e7a292f72cfc7bc92e39ec1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-operators-master-data-services"></a>필터 연산자(Master Data Services)
   멤버 목록을 필터링할 때 다음과 같은 연산자를 사용할 수 있습니다.  

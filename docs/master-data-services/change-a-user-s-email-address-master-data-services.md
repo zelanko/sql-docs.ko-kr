@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,16 +18,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f94d4512b61b803df6565850b3e974a0b3e8f505
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 651629a606111a3af1394baacacee15fcc514282
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>사용자의 전자 메일 주소 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 알림이 전송되는 전자 메일 주소와 알림 전자 메일의 기본 형식을 변경할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  **저장**을 클릭합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   

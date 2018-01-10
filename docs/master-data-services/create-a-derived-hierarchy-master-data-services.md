@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba61bce272c5d5045a4564b3d736d860f302b1da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a9069f215a9e1bbd997cdaffee909c6caedc1ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>파생 계층 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버가 올바른 수준으로 유지되는 수준 기반 계층을 원하는 경우 파생 계층을 만듭니다. 파생 계층은 모델에 있는 도메인 기반 특성 관계를 기반으로 합니다.  
@@ -32,12 +32,12 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  멤버에 대한 도메인 기반 특성 값이 없으면 멤버가 파생 계층에 포함되지 않습니다. 모든 멤버에 대한 도메인 기반 특성 값을 요구하려면 [특성 값 요구&#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)를 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 ### <a name="to-create-a-derived-hierarchy"></a>파생 계층을 만들려면  
   

@@ -3,8 +3,11 @@ title: "SQL Server 2016 Integration Services의 새로운 기능 | Microsoft Doc
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 6e459849dbbc844039ba3ae7a766794f1283e8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -32,9 +35,9 @@ ms.lasthandoff: 12/04/2017
 
 2017년 9월 Azure Data Factory 버전 2의 공개 미리 보기에서 이제 다음과 같은 작업을 수행할 수 있습니다.
 -   Azure SQL Database의 SSISDB(SSIS 카탈로그 데이터베이스)에 패키지를 배포합니다.
--   Azure SSIS 통합 런타임에서 Azure에 배포된 패키지 및 Azure Data Factory 버전 2의 구성 요소를 실행합니다.
+-   Azure SSIS Integration Runtime에서 Azure에 배포된 패키지 및 Azure Data Factory 버전 2의 구성 요소를 실행합니다.
 
-자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 및 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 
 이러한 새로운 기능을 사용하려면 SSDT(SQL Server Data Tools) 버전 17.2 이상이 필요하지만, SQL Server 2017 또는 SQL Server 2016은 필요하지 않습니다. Azure에 패키지를 배포할 때 패키지 배포 마법사는 항상 패키지를 최신 패키지 형식으로 업그레이드합니다.
 
@@ -157,16 +160,16 @@ ms.lasthandoff: 12/04/2017
   
 -   이전 버전의 SQL Server에서 데이터베이스를 복원한 경우  
   
--   SQL Server 인스턴스를 업그레이드하기 전에 Always On 가용성 그룹에서 데이터베이스를 제거하지 않은 경우. 이 경우 데이터베이스가 자동으로 업그레이드되지 않습니다. 자세한 내용은 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)를 참조하십시오.  
+-   SQL Server 인스턴스를 업그레이드하기 전에 Always On 가용성 그룹에서 데이터베이스를 제거하지 않은 경우. 이 경우 데이터베이스가 자동으로 업그레이드되지 않습니다. 자세한 내용은 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)를 참조하십시오.  
   
- 자세한 내용은 [SSIS 카탈로그&#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md)를 참조하세요. 
+ 자세한 내용은 [SSIS 카탈로그&#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md)를 참조하세요. 
 
 ####  <a name="AlwaysOn"></a> SSIS 카탈로그에서 Always On 지원  
  Always On 가용성 그룹 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. 가용성 그룹은 함께 장애 조치(Failover)되는 사용자 데이터베이스(가용성 데이터베이스라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 자세한 내용은 [AlwaysOn 가용성 그룹](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 참조하세요.  
   
  SQL Server 2016에서 SSIS에는 중앙 집중식 SSIS 카탈로그(즉, SSISDB 사용자 데이터베이스)로 쉽게 배포할 수 있는 기능이 새로 도입되었습니다. SSIS 데이터베이스 및 해당 콘텐츠(프로젝트, 패키지, 실행 로그 등)에 대한 고가용성을 제공하려는 경우에는 다른 사용자 데이터베이스와 같은 방식으로 SSISDB 데이터베이스를 AlwaysOn 가용성 그룹에 추가할 수 있습니다. 장애 조치(Failover)가 발생하면 보조 노드 중 하나가 자동으로 새 주 노드가 됩니다.  
   
- SSISDB용으로 AlwaysOn을 사용하도록 설정하는 단계별 지침과 상세 개요는 [SSIS 카탈로그](../integration-services/service/ssis-catalog.md)를 참조하세요.  
+ SSISDB용으로 AlwaysOn을 사용하도록 설정하는 단계별 지침과 상세 개요는 [SSIS 카탈로그](../integration-services/catalog/ssis-catalog.md)를 참조하세요.  
 
 ####  <a name="IncrementalDeployment"></a> 증분 패키지 배포  
 증분 패키지 배포 기능을 사용하면 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있습니다. 다음과 같은 도구를 사용하여 증분 방식으로 패키지를 배포할 수 있습니다.  
@@ -316,7 +319,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
 ### <a name="better-install-experience"></a>설치 경험 향상
 
 ####  <a name="Upgrade"></a> SSISDB가 가용성 그룹에 속해 있을 경우 업그레이드 차단  
- SSISDB(SSIS 카탈로그 데이터베이스)가 Always On 가용성 그룹에 속한 경우에는 가용성 그룹에서 SSISDB를 제거하고 SQL Server를 업그레이드한 다음 가용성 그룹에 SSISDB를 다시 추가해야 합니다. 자세한 내용은 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)를 참조하십시오.  
+ SSISDB(SSIS 카탈로그 데이터베이스)가 Always On 가용성 그룹에 속한 경우에는 가용성 그룹에서 SSISDB를 제거하고 SQL Server를 업그레이드한 다음 가용성 그룹에 SSISDB를 다시 추가해야 합니다. 자세한 내용은 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)를 참조하십시오.  
 
 ### <a name="better-design-experience"></a>디자인 환경 향상
 

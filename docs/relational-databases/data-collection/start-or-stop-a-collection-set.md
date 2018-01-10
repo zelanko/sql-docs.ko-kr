@@ -20,18 +20,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7603f80f020b23ace4b4cf4a8f482e3c9d185ce0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ee6c8e3e44af4cb9a9a49404e0ad428a9e9ef73
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="start-or-stop-a-collection-set"></a>컬렉션 집합 시작 또는 중지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 컬렉션 집합을 시작 또는 중지하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 -   일반적인 저장 프로시저와 달리 데이터 수집기 저장 프로시저에 대한 매개 변수는 형식이 엄격하게 지정되어 있으며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   SQL Server 에이전트가 시작되어야 합니다.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  **dc_operator** 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 컬렉션 집합에 프록시 계정이 없는 경우에는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. 예  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) 를 사용하여 ID가 `1`인 컬렉션 집합을 시작합니다.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
@@ -110,7 +110,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) 를 사용하여 ID가 `1`인 컬렉션 집합을 중지합니다.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  

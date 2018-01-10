@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 28de8df00cc2a98756492b7ae434838d04a4e53c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55dd8e263f95d9abf13d34bc37d703b7171bea2c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] FILESTREAM을 사용하려면 먼저 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에서 FILESTREAM을 사용하도록 설정해야 합니다. 이 항목에서는 SQL Server 구성 관리자를 사용하여 FILESTREAM을 사용하도록 설정하는 방법에 대해 설명합니다.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 11. 쿼리 편집기에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 입력합니다.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  
@@ -82,9 +82,9 @@ ms.lasthandoff: 11/17/2017
   
 ||||||  
 |-|-|-|-|-|  
-|RAID 수준|쓰기 성능|읽기 성능|내결함성|주의|  
+|RAID 수준|쓰기 성능|읽기 성능|내결함성|Remarks|  
 |RAID 5|보통|보통|최고|성능은 하나의 디스크 또는 JBOD보다 우수하지만 RAID 0 또는 스트라이프를 사용하는 RAID 5보다 떨어집니다.|  
-|RAID 0|최고|최고|없음||  
+|RAID 0|최고|최고|InclusionThresholdSetting||  
 |RAID 5 + 스트라이프|최고|최고|최고|가장 비용이 많이 드는 옵션입니다.|  
   
   

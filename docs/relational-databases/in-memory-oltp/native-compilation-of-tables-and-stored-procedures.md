@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34d3f8da055577f32d1532f9ca5300960a51d383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ac27d37604a2245346b307b0dff8d648de26ebd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>테이블과 저장 프로시저의 네이티브 컴파일
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 메모리 내 OLTP에서는 네이티브 컴파일이라는 개념이 도입됩니다. 
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 
 다음 쿼리에서는 서버의 메모리에 현재 로드된 모든 테이블 및 저장 프로시저 DLL을 보여 줍니다.
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -66,7 +66,7 @@ SELECT
 
 다음 예제 스크립트에서는 데이터베이스와 메모리 최적화 테이블을 만듭니다.
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -159,7 +159,7 @@ NATIVE_COMPILATION으로 표시된 저장 프로시저는 고유하게 컴파일
 
 다음 예제 저장 프로시저에서는 이전 예제의 테이블 t1에 행을 삽입합니다.
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,
@@ -218,6 +218,6 @@ native_sp에 대한 DLL은 t1에 대한 DLL 및 메모리 내 OLTP 저장소 엔
 
 ## <a name="see-also"></a>참고 항목
 
-[메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

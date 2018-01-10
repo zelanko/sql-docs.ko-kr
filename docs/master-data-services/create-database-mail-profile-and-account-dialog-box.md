@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5eea1f635fcd1080bf85fe0d45c689ef883181a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2ad5962c25cc48dcb95ff3d8efe8de37886cd971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>데이터베이스 메일 프로필 및 계정 만들기 대화 상자
   **데이터베이스 메일 프로필 및 계정 만들기** 대화 상자를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 대한 데이터베이스 메일 프로필 및 데이터베이스 메일 계정을 만들 수 있습니다. 이 프로필은 비즈니스 규칙 유효성 검사가 실패한 경우 사용자와 그룹에 전자 메일로 알리는 데 사용됩니다.  
@@ -56,12 +56,12 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |**데이터베이스 엔진 서비스 자격 증명을 사용한 Windows 인증**|데이터베이스 메일에서 SMTP 서버 인증에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 서비스 계정의 자격 증명을 사용하도록 지정합니다.|  
 |**기본 인증**|데이터베이스 메일에서 SMTP 서버 인증에 특정 사용자 이름과 암호를 사용하도록 지정합니다. 이 정보는 전자 메일 서버 인증에만 사용되며 계정이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 사용자에 해당할 필요는 없습니다.|  
-|**사용자 이름**|데이터베이스 메일에서 SMTP 서버에 로그온하는 데 사용하는 사용자 계정의 이름을 입력합니다. SMTP 서버에 기본 인증이 필요한 경우 사용자 이름은 필수 사항입니다.|  
+|**User name**|데이터베이스 메일에서 SMTP 서버에 로그온하는 데 사용하는 사용자 계정의 이름을 입력합니다. SMTP 서버에 기본 인증이 필요한 경우 사용자 이름은 필수 사항입니다.|  
 |**암호**|데이터베이스 메일에서 SMTP 서버에 로그온하는 데 사용하는 암호를 입력합니다. SMTP 서버에 기본 인증이 필요한 경우 암호는 필수 사항입니다.|  
 |**암호 확인**|암호를 다시 입력하여 암호를 확인합니다.|  
 |**익명 인증**|SMTP 서버에 인증이 필요하지 않음을 지정합니다. 데이터베이스 메일은 SMTP 서버 인증에 자격 증명을 사용하지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md)
   

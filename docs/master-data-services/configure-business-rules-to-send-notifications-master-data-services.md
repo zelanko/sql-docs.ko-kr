@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,21 +21,21 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfa6864eb1b067b3b8f0ab6c9d492b6d96310777
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4c5699ae14a0bed659a4752d07a217fe3795351
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>알림을 보내도록 비즈니스 규칙 구성(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 특성 값 변경 내용을 사용자에게 알리려는 경우 알림을 보내도록 비즈니스 규칙을 구성할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 와 **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. **사용자 및 그룹 권한** 기능 영역에 대한 권한이 없으면 알림을 보낼 사용자 및 그룹 목록을 볼 수 없습니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 -   유효성 검사 동작을 사용하는 비즈니스 규칙이 있어야 합니다. 자세한 내용은 [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)를 참조하세요.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 10. 확인 대화 상자에서 **확인**을 클릭합니다. **활성** 으로 변경된 **비즈니스 규칙 상태** 열의 값 및 **알림** 열에서는 알림을 보내도록 선택한 사용자 또는 그룹을 표시합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   다음 절차 중 하나를 수행하여 비즈니스 규칙을 데이터에 적용합니다.  
   
