@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 74b104e46e428030658edbd9aabcde0f3c78c4a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d94397d96f5532ed798c2bfe6b50ea17709f9654
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>단계별 보고서 만들기(보고서 작성기 및 SSRS)
 단계별 보고서는 아래 예제와 같이 동일한 열의 부모 그룹 아래에 들여 쓴 정보 행 또는 자식 그룹을 표시하는 페이지가 매겨진  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 한 유형입니다.  
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  그룹 데이터를 표시하는 셀의 안쪽 여백을 변경합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

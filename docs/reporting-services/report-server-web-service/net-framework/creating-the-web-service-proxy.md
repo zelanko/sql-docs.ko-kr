@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 caps.latest.revision: "44"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a0dd90d020f9f38de29acfdce5fc3cff5d52b7f7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 71da140c96f21a28676c2d95ac8d93acf72af16a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-the-web-service-proxy"></a>웹 서비스 프록시 만들기
   클라이언트와 웹 서비스는 입력 및 출력 매개 변수를 XML로 캡슐화하는 SOAP 메시지를 사용하여 통신할 수 있습니다. 프록시 클래스는 매개 변수를 XML 요소에 매핑한 다음 네트워크를 통해 SOAP 메시지를 보냅니다. 이와 같이 프록시 클래스 덕분에 SOAP 수준에서 웹 서비스와 통신할 필요가 없으며 SOAP 및 웹 프록시를 지원하는 임의의 개발 환경에서 웹 서비스 메서드를 호출할 수 있습니다.  
@@ -137,7 +135,7 @@ Import myNamespace.myReferenceName
 using myNamespace.myReferenceName;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

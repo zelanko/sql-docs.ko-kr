@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aea8e6a9c780cbb56dff74c3ee003be2d4259486
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 460c6fc491ce0088c174c49aeb66523079f8016b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="selecting-input-columns-programmatically"></a>프로그래밍 방식으로 입력 열 선택
   프로그래밍 방식으로 구성 요소를 연결한 후에는 업스트림 구성 요소에서 다운스트림 구성 요소로 변환하거나 전달할 열을 선택합니다. 구성 요소의 입력 열을 선택하지 않으면 해당 구성 요소는 데이터 흐름 태스크에서 행을 받지 않습니다.  
@@ -217,7 +217,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 패키지 저장](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
   
   

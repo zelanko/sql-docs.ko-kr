@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c468d7973ff4ade0a4095c60ae60f2eb70961596
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ea6fb5b31ac0a95eb287d52d865b718a45aaf652
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API 액세스
   보고서 서버 웹 서비스는 HTTP를 통한 SOAP(Simple Object Access Protocol)을 사용하며 클라이언트 프로그램과 보고서 서버 간의 통신 인터페이스 역할을 합니다. 웹 서비스는 보고서 실행용과 보고서 관리용으로 끝점을 두 개 제공하며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 전체 기능에 액세스하는 데 사용할 수 있는 메서드 및 복합 형식 개체 집합으로 구성됩니다. 서비스를 호출하려면 Reporting Services WSDL(웹 서비스 기술 언어)을 참조해야 합니다.  
@@ -68,7 +66,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
  WSDL 형식에 대한 자세한 내용은 http://www.w3.org/TR/wsdl에서 W3C(World Wide Web 컨소시엄) WSDL 사양을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

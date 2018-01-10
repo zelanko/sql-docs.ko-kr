@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 258d6a0b9a51f76a35b4d963a0ca42e230bf4a07
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 대한 Excel 데이터 준비
   
@@ -91,7 +91,7 @@ Excel 파일을 모바일 보고서에 대한 데이터 집합으로 준비할 �
   
 피벗 테이블, 시각화 및 이미지를 포함한 Excel 워크시트의 사용자 지정 개체는 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]에 가져오지 않습니다.  
   
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>관련 항목:  
 - [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  보기(iOS용 Power BI)  

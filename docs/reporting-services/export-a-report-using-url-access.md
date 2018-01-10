@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5344aa73486c57d88b2e11d0d7fc18741faae445
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8087e6e9c1ca644a1e1b302bebfbdae1598622b6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="export-a-report-using-url-access"></a>URL 액세스를 사용하여 보고서 내보내기
   *rs:Format* URL 매개 변수를 사용하여 선택적으로 보고서를 렌더링할 형식을 지정할 수 있습니다.  HTML4.0 및 HTM5 형식(렌더링 확장 프로그램)은 브라우저에서 렌더링하고 다른 형식의 경우 브라우저는 로컬 파일에 보고서 출력을 저장하라는 메시지가 나타납니다.  
@@ -53,7 +51,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
  *Format* 매개 변수를 URL의 일부로 포함하지 않으면 보고서 서버가 브라우저를 감지하고 적절한 HTML 형식으로 보고서를 렌더링합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
   

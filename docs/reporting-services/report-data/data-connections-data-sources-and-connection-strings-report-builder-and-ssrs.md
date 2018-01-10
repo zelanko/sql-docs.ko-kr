@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e1f5b27d158714d5e379617e935a2b152a343278
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 697a387240a9e2e0edafeac45b68264187c2a3f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>데이터 연결, 데이터 원본 및 연결 문자열(보고서 작성기 및 SSRS)
 
@@ -111,10 +109,10 @@ ms.lasthandoff: 12/05/2017
  > [!NOTE]  
 >  [Connectionstrings.com](http://www.connectionstrings.com/) 은 연결 문자열에 대한 예제를 가져올 수 있는 다른 리소스입니다. 
   
-|**Data source**|**예제**|**Description**|  
+|**Data source**|**예제**|**설명**|  
 |---------------------|-----------------|---------------------|  
 |로컬 서버의 SQL Server 데이터베이스|`data source="(local)";initial catalog=AdventureWorks`|데이터 원본 유형을 **Microsoft SQL Server**로 설정합니다. 자세한 내용은 [SQL Server 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)을 참조하세요.|  
-|SQL Server 인스턴스<br /><br /> 데이터베이스|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|데이터 원본 유형을 **Microsoft SQL Server**로 설정합니다.|  
+|SQL Server 인스턴스<br /><br /> database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|데이터 원본 유형을 **Microsoft SQL Server**로 설정합니다.|  
 |SQL Server Express 데이터베이스|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|데이터 원본 유형을 **Microsoft SQL Server**로 설정합니다.|  
 |Azure SQL 데이터베이스|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|데이터 원본 유형을 **Microsoft Azure SQL Database**로 설정합니다. 자세한 내용은 [SQL Azure 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.|  
 |SQL Server 병렬 데이터 웨어하우스|`HOST=<IP address>;database= AdventureWorks; port=<port>`|데이터 원본 유형을 **Microsoft SQL Server Parallel Data Warehouse**로 설정합니다. 자세한 내용은 [SQL Server 병렬 데이터 웨어하우스 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)을 참조하세요.|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,15 +17,15 @@ f1_keywords:
 - "10023"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 caps.latest.revision: "40"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30bf51ee5f2c927360dc73f959abdacb7df2ad01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07882659f3ead59efe15d02ede109b6cae11ba29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>데이터 집합 속성 대화 상자, 매개 변수
   **데이터 집합 속성** 대화 상자에서 **매개 변수** 를 선택하여 보고서 매개 변수에 연결되는 쿼리 매개 변수를 비롯한 쿼리 매개 변수를 추가, 변경 및 삭제할 수 있습니다.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
  한 보고서 매개 변수의 기본값이 쿼리 매개 변수에 연결된 다른 보고서 매개 변수에 종속된 경우 보고서 매개 변수의 순서( **보고서 매개 변수 속성** 대화 상자에 표시되는 순서)가 중요한 의미를 가집니다. 목록의 아래쪽에 있는 보고서 매개 변수는 목록의 위쪽에 있는 보고서 매개 변수를 참조할 수 있습니다. 보고서 매개 변수에 대한 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **추가**  
  목록에 새 매개 변수를 추가합니다.  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
  **아래쪽 화살표**  
  선택한 매개 변수를 목록에서 아래쪽으로 이동합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  

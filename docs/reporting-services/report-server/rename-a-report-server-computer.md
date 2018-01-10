@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bc624e7b6e8d4268e6d407aec0adcb38759fe9b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af0df6b2c1f4d850d411d79f7f0fab906d6a8bd5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rename-a-report-server-computer"></a>보고서 서버 컴퓨터 이름 바꾸기
   컴퓨터 이름을 바꾸면 웹 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 같은 컴퓨터에 있는 경우 이에 해당하는 이름이 변경됩니다. 컴퓨터 이름을 변경한 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 액세스할 수 없는 경우도 있습니다. 컴퓨터 이름을 변경한 다음에는 이 항목의 단계를 사용하여 보고서 서버를 다시 구성합니다.  
@@ -52,8 +50,8 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  회사 네트워크에서 WINS(Windows Internet Naming Service)를 사용하는 경우 보고서 서버와 보고서 관리자가 일정 기간 동안 이전 이름으로 사용 가능하다고 표시될 수 있습니다. WINS에서는 서비스하는 각 컴퓨터에 IP 주소를 매핑합니다. WINS에서 이름이 바뀐 컴퓨터의 IP 주소를 새로 고친 다음에는 더 이상 이전 컴퓨터 이름을 사용하여 보고서 서버나 보고서 관리자에 액세스할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>참고 항목  
+ [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae9b5358621f27a8a7f90ae60e63b23c75421bc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 424e36f6be32da0aafb6981e923f66aed7c22139
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>데이터 처리 확장 프로그램 구현 준비
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 구현하기 전에 먼저 구현할 인터페이스를 정의해야 합니다. 전체 인터페이스 집합의 확장 프로그램별 구현을 제공해야 할 수도 있습니다. 또는 클라이언트가 **DataReader** 개체 형태인 결과 집합과 주로 상호 작용하고 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 확장 프로그램을 결과 집합과 데이터 원본 사이의 연결 고리로 사용하는 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 인터페이스와 같은 하위 집합에 대한 구현에 초점을 맞추어야 할 수도 있습니다.  
@@ -75,21 +73,21 @@ ms.lasthandoff: 12/05/2017
   
 |인터페이스|Description|구현|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|데이터 원본의 고유 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템의 경우에는 세션이 서버에 대한 네트워크 연결과 같을 수 있습니다.|필수임|  
+|IDbConnection|데이터 원본의 고유 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템의 경우에는 세션이 서버에 대한 네트워크 연결과 같을 수 있습니다.|필수|  
 |IDbConnectionExtension|보안 및 인증과 관련하여 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 연결 속성을 나타냅니다.|선택 사항|  
-|IDbTransaction|로컬 트랜잭션을 나타냅니다.|필수임|  
+|IDbTransaction|로컬 트랜잭션을 나타냅니다.|필수|  
 |IDbTransactionExtension|[!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 데이터 처리 확장 프로그램으로 구현할 수 있는 추가 트랜잭션 속성을 나타냅니다.|선택 사항|  
-|IDbCommand|데이터 원본에 연결되었을 때 사용되는 쿼리 또는 명령을 나타냅니다.|필수임|  
+|IDbCommand|데이터 원본에 연결되었을 때 사용되는 쿼리 또는 명령을 나타냅니다.|필수|  
 |IDbCommandAnalysis|쿼리를 분석하고 쿼리에서 사용된 매개 변수 이름 목록을 반환하기 위한 추가 명령 정보를 나타냅니다.|선택 사항|  
-|IDataParameter|명령 또는 쿼리에 전달된 매개 변수 또는 이름/값 쌍을 나타냅니다.|필수임|  
-|IDataParameterCollection|명령 또는 쿼리와 관련된 모든 매개 변수의 모음을 나타냅니다.|필수임|  
-|IDataReader|데이터 원본에서 데이터의 정방향 전용, 읽기 전용 스트림을 읽는 방법을 제공합니다.|필수임|  
+|IDataParameter|명령 또는 쿼리에 전달된 매개 변수 또는 이름/값 쌍을 나타냅니다.|필수|  
+|IDataParameterCollection|명령 또는 쿼리와 관련된 모든 매개 변수의 모음을 나타냅니다.|필수|  
+|IDataReader|데이터 원본에서 데이터의 정방향 전용, 읽기 전용 스트림을 읽는 방법을 제공합니다.|필수|  
 |IDataReaderExtension|데이터 원본에서 명령을 실행하여 얻은 정방향 전용 결과 집합 스트림을 하나 이상 읽는 방법을 제공합니다. 이 인터페이스는 필드 집계에 대한 추가 지원을 제공합니다.|선택 사항|  
-|IExtension|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램에 대한 기본 클래스를 제공합니다. 또한 구현 전문가는 이 인터페이스를 사용하여 확장 프로그램에 대한 지역화된 이름을 포함시키고 구성 파일에서 확장 프로그램으로 구성 설정을 전달할 수 있습니다.|필수임|  
+|IExtension|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램에 대한 기본 클래스를 제공합니다. 또한 구현 전문가는 이 인터페이스를 사용하여 확장 프로그램에 대한 지역화된 이름을 포함시키고 구성 파일에서 확장 프로그램으로 구성 설정을 전달할 수 있습니다.|필수|  
   
  데이터 처리 확장 프로그램 인터페이스는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스, 메서드 및 속성의 하위 집합과 동일합니다(가능한 경우 항상). 전체 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자를 구현하는 방법은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK(소프트웨어 개발 키트) 설명서의 ".NET Framework 데이터 공급자 구현(Implementing a .NET Framework Data Provider)"을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [데이터 처리 확장 프로그램 구현](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 확장 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  

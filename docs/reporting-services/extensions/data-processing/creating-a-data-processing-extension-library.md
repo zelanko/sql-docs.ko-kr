@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - assigning namespaces to extensions
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 caps.latest.revision: "39"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8765bcb56ffd9b7f081ae9c7363d2a4f47f6ab1c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 78c48f441b7703b3f08ed9d9b72de083cb19c3ef
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-a-data-processing-extension-library"></a>데이터 처리 확장 프로그램 라이브러리 만들기
   만드는 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 고유한 네임스페이스에 할당하고 라이브러리 또는 어셈블리 파일로 만들어야 합니다. 네임스페이스의 정확한 이름은 중요하지 않지만 고유한 이름이어야 하며 다른 확장 프로그램과 공유하면 안 됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 포함되어 있는 데이터 처리 확장 프로그램에 대해 <xref:Microsoft.ReportingServices.DataProcessing> 네임스페이스를 사용합니다. 회사의 데이터 처리 확장 프로그램에 대해 고유한 네임스페이스를 만들어야 합니다.  
@@ -69,7 +67,7 @@ vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll /r:Microsof
 > [!NOTE]  
 >  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용하여 데이터 처리 확장 프로그램을 디자인, 개발 및 빌드할 수도 있습니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 어셈블리를 개발하는 방법은 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 설명서를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [데이터 처리 확장 프로그램 구현](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 확장 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  

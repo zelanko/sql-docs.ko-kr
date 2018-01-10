@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 770afc0e577f0283193f63ab8ac18fa02734fe8a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b2cfe0cdb9290b4de7fdeac76ad2319807422693
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
 SQL Server 모바일 보고서 게시자는 [Excel 파일의 데이터 로드](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)할 수 있을 뿐 아니라 거의 모든 원본의 데이터에 액세스할 수 있습니다. 데이터에 액세스하려면 Reporting Services 웹 포털에 구성되어 있는 공유 데이터 원본이 필요합니다. [공유 데이터 원본 만들기](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [공유 데이터 집합 만들기](../../reporting-services/report-data/manage-shared-datasets.md)에 대한 자세한 내용을 확인해 보세요.  
@@ -65,7 +65,7 @@ Reporting Services 서버에서 공유 데이터 원본과 공유 데이터 집�
      
 2. 새 서버 연결을 추가하거나 기존 연결을 편집 또는 제거합니다.  
   
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>관련 항목:  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  보기(iOS용 Power BI)  

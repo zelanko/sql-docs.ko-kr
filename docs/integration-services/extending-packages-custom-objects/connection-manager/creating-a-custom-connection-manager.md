@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17534beced4fc9e917ded7fb91514460deb83d0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 302709d86130f517638996db82f46022134d15db
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-a-custom-connection-manager"></a>사용자 지정 연결 관리자 만들기
   사용자 지정 연결 관리자를 만들 때 수행해야 하는 단계는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 다른 사용자 지정 개체를 만들 때의 단계와 비슷합니다.  
@@ -79,7 +79,7 @@ ConnectionManagerBase
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>사용자 지정 연결 관리자 빌드, 배포 및 디버깅  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 사용자 지정 연결 관리자의 빌드, 배포 및 디버깅 단계는 다른 형식의 사용자 지정 개체에 대한 단계와 비슷합니다. 자세한 내용은 [사용자 지정 개체 빌드, 배포 및 디버그](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)를 참조하세요.    
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 연결 관리자 코딩](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
  [사용자 지정 연결 관리자의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   

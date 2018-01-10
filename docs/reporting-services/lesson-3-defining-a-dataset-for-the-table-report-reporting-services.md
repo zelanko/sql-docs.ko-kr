@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: "53"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c610c2cba4f004a35d1d90aceb9288b995587c74
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cab4e640c22b7042fdc34e7756d7fff0dcd999e4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
 데이터 원본을 정의한 후에는 데이터 집합을 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 집합에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="next-task"></a>다음 태스크  
 보고서에 대한 데이터를 검색하는 쿼리를 지정했습니다. 다음 단원에서는 보고서 레이아웃을 만듭니다. [4단원: 보고서에 테이블 추가&#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [쿼리 디자인 도구&#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)  
 [SQL Server 연결 형식&#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)  
 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)  

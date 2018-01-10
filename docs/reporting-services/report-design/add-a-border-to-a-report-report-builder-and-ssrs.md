@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f992d3aa75638b997b55d894c99d58a47f07d9fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1d2c38a4328c5d765d1e9ebc265bd32514f91e30
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>보고서에 테두리 추가(보고서 작성기 및 SSRS)
   선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 테두리를 추가할 수 있습니다.    
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/05/2017
     
 3.  바닥글에서 임의의 항목 바깥쪽 바닥글을 마우스 오른쪽 단추로 클릭하고 **바닥글 속성**을 클릭합니다. **테두리** 탭에서 원하는 스타일의 왼쪽, 아래쪽 및 오른쪽 테두리를 추가합니다.    
     
-## <a name="see-also"></a>관련 항목:    
+## <a name="see-also"></a>참고 항목    
  [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   

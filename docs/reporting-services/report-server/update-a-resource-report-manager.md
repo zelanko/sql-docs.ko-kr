@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d88f10131832c28a00da5d8c4afca2413d99b54c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a7662d051951a32d15138b8c47c7cf5e6451729
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="update-a-resource-report-manager"></a>리소스 업데이트(보고서 관리자)
   리소스를 최신 버전으로 바꾸어 업데이트할 수 있습니다. 리소스는 보고서 서버에 저장된 항목이며 사용자가 업로드한 파일의 내용을 포함합니다. 새롭거나 다른 파일 내용을 기존 리소스에 가져와 기존 리소스를 바꿀 수 있습니다. 리소스를 업데이트하면 리소스에 대한 기존 속성과 보안 설정을 유지하면서 내용을 업데이트할 수 있습니다.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
  업데이트하는 리소스가 보고서에 사용된 이미지를 포함하는 경우 업데이트된 이미지를 보려면 보고서를 새로 고쳐야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [파일 업로드 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)   

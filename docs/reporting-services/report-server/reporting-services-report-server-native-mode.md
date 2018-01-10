@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: "24"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3cc5aeb73c242b71e06d38fa21c451272c8185ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 65acea8f2887a2c45553c69d8d53ecfeb65e96a5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 보고서 서버(기본 모드)
   기본 모드에 대해 구성된 보고서 서버는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 응용 프로그램 서버로 실행됩니다.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 12/05/2017
   
  보고서에서 이미지 리소스를 사용하려면 해당 이미지 파일을 프로젝트에 추가하고 보고서와 함께 게시합니다. 이미지가 게시되면 보고서의 이미지 참조가 보고서 서버의 리소스를 가리키도록 업데이트한 다음 보고서만 다시 게시하여 변경 내용을 저장할 수 있습니다. 이후에 리소스를 다시 게시하여 보고서와 독립적으로 이미지를 업데이트할 수 있습니다. 보고서는 보고서 서버에서 사용할 수 있는 가장 최신 버전의 이미지를 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Reporting Services 설치 문제 해결](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

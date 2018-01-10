@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 caps.latest.revision: "64"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: a049602171321afc5ed20aaea072c73a48a68aae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3f6b048b66f575746c47c1fc083ecc266305684c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>4단원: 보고서에 테이블 추가(Reporting Services)
 데이터 집합이 정의되면 보고서 디자인을 시작할 수 있습니다. 데이터 영역, 입력란, 이미지 및 보고서에 포함하려는 항목을 디자인 화면에 끌어다 놓는 방법으로 보고서 레이아웃을 만듭니다.  
@@ -72,9 +72,9 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > **파일** 메뉴에서 **모두 저장** 을 클릭하여 보고서를 저장합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 보고서에 테이블 데이터 영역을 추가하고, 데이터 영역에 필드를 추가하고, 보고서를 미리 보는 방법을 배웠습니다. 다음 단원에서는 열 머리글과 날짜 및 통화 값에 서식을 지정합니다. [5단원: 보고서 서식 지정&#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [테이블&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
 [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

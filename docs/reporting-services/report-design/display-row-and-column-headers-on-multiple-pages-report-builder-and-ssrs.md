@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e269d3e07952b1c2e9a1b999b2d0438241a4fdb6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f9c2cc9c26644cb4671f5a601ad4c755ff2a1019
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)
   여러 페이지에 걸쳐 있는 테이블릭스 데이터 영역(테이블, 매트릭스 또는 목록)에 대해 페이지를 매긴 보고서의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지마다 행 및 열 머리글을 반복할지 여부를 제어할 수 있습니다.
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
  테이블릭스 데이터 영역이 걸쳐 있는 보고서의 각 페이지를 볼 때 정적 테이블릭스 멤버가 각 페이지에서 반복됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [페이지 나누기, 머리글, 열 및 행 제어&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   

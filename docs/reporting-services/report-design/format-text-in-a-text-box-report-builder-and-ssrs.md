@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4752ac55673b7c208a2d051da928fee1404693f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0dd47857407e353a3b6208554625f29126615da7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>입력란의 텍스트 서식 지정(보고서 작성기 및 SSRS)
   입력란에 있는 텍스트 부분의 서식을 개별적으로 지정하고 한 입력란 내에 자리 표시자 텍스트와 정적 텍스트를 함께 사용할 수 있습니다. 여러 서식을 함께 사용하고 자리 표시자 텍스트를 추가하는 이 기능을 통해 보고서의 텍스트에 대한 편지 병합 또는 템플릿을 만들 수 있습니다. 자리 표시자를 사용하여 모든 식을 개별적으로 정의하고 서식을 지정할 수 있습니다.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
  목록은 필드의 각 값에 대해 한 번씩 반복되고 매번 *FieldName* 은 데이터 집합에 있는 해당 필드의 값으로 바뀝니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [입력란&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
  [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,13 +20,13 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 456f5fe95d2b5899360efaf0f2ab1d2ba492c228
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2ab98b38e62004a5537515b1963f61d01b820697
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 테이블릭스 데이터 영역의 행 및 열 데이터가 표시되는 방식을 제어하려면 정보 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [행렬](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) 또는 [목록](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)을 참조하세요.  
@@ -127,7 +125,7 @@ ms.lasthandoff: 12/05/2017
   
  이전에 병합했던 셀을 분할할 수 있습니다. 셀을 여러 행에 걸쳐 세로로 분할하거나 여러 열에 걸쳐 가로로 분할할 수 있습니다. 셀을 셀 블록으로 분할하려면 먼저 셀을 가로로 분할한 다음 필요한 만큼 세로로 분할합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb436a9666717ebae49327cb71a50c6a4744ad9f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a9cf511f1617f99cf097ca9efc77f07afda9bd6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   복제 마법사에 제공되는 스크립트 생성 기능을 사용하거나  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]을 참조하세요. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   
 -   RMO(복제 관리 개체)를 사용하여 RMO 개체를 만드는 스크립트를 프로그래밍 방식으로 생성합니다.  
   
@@ -230,7 +230,7 @@ REM -- The following must be supplied on one line.
   
 -   끌어오기 구독 동기화  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 프로그래밍 개념](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [복제 스크립팅](../../../relational-databases/replication/scripting-replication.md)  

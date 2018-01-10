@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 41f4a2d11e3eb3200ddd992c6321cca242c8bb2c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b60e6a1156fb9b00b2c74bb4c23a18e2da56b93b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>하위 보고서(보고서 작성기 및 SSRS)
   하위 보고서는 주 보고서의 본문 안에 다른 보고서를 표시하는 보고서 항목입니다. 보고서의 하위 보고서는 개념적 측면에서 웹 페이지의 프레임과 유사하며 보고서 내에 다른 보고서를 포함하는 데 사용됩니다. 모든 보고서를 하위 보고서로 사용할 수 있습니다. 하위 보고서로 표시되는 보고서는 보고서 서버에서 주로 부모 보고서와 같은 폴더에 저장됩니다. 하위 보고서에 부모 보고서가 매개 변수를 전달하도록 디자인할 수 있습니다. 하위 보고서의 각 인스턴스에 데이터 필터링 매개 변수를 사용하여 하위 보고서를 데이터 영역 내에서 반복할 수 있습니다.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
  보고서 작성기에서 주 보고서의 하위 보고서를 미리 보려면 두 보고서가 같은 보고서 서버에 있어야 합니다. 그렇지 않은 경우 하위 보고서의 전체 경로를 지정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

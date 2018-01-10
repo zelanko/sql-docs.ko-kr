@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d4a5f5451a041e9470e71ca19f75684f1d15ebc0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 532a9c3c8daec262f9559f126c40810d90d737ff
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>주체 대체 이름을 사용하도록 Reporting Services 구성
 
@@ -126,7 +124,7 @@ SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 개인
   
 10. Reporting Services 구성 관리자의 **보고서 서버 상태** 페이지에서 **중지** 를 클릭한 다음 **시작** 을 클릭하여 보고서 서버를 다시 시작합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

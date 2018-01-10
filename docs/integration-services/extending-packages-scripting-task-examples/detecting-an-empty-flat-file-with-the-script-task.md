@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fe2ff93bb8852a4f7237ceae25a6af423e6dfd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8eeb62d0694e8028b548715f3b777f94224c2b7f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>스크립트 태스크를 사용하여 빈 플랫 파일 검색
   플랫 파일 원본에서는 플랫 파일의 처리를 시도하기 전에 플랫 파일에 데이터 행이 들어 있는지 여부를 확인하지 않습니다. 그러나 데이터 행이 들어 있지 않은 파일을 건너뛰면 특히 수많은 플랫 파일을 반복하는 패키지 등에서 패키지 효율성을 높일 수 있습니다. 스크립트 태스크는 패키지에서 데이터 흐름의 처리를 시작하기 전에 빈 플랫 파일을 찾을 수 있습니다.  
@@ -146,7 +146,7 @@ public void Main()
         }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [스크립트 태스크 예제](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

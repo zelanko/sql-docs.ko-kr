@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88f5408801551be37142c616644a6cb114834cd4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd6d5bba933195190823357c52d6ced1b8a7158e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 예약 구문(SSRS 구성 관리자)
   이 항목에서는 보고서 서버 웹 서비스 및 보고서 관리자에서 사용하는 URL 문자열 부분에 대해 설명합니다. 내부적으로 저장되는 URL 문자열의 구조는 브라우저 창의 주소 표시줄에 입력하는 URL과는 다릅니다. URL 예약 문자열은 URL을 구성할 때 Reporting Services 구성 도구의 결과 창 및 RSReportServer.config 파일에 표시됩니다. URL 문자열이 정의되는 방식을 알면 URL 예약 문제를 해결하거나 HTTP.SYS를 쿼리하여 서버에 정의된 내부 URL 문자열 예약을 보는 경우 도움이 됩니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
  다음 표에서는 각 속성과 각 속성에 대한 유효한 값을 보여 줍니다.  
   
-|속성|유효한 값|설명|  
+|속성|유효한 값|Description|  
 |--------------|------------------|-----------------|  
 |Scheme|http 또는 https|SSL 및 SSL 이외의 연결에 대한 접두사|  
 |Hostname|(+) 강력한 와일드카드, IP 주소의 **(모두 할당됨)** 값과 동일<br /><br /> (\*) 약한 와일드 카드, **(모두 할당되지 않음)**IP 주소와 동일<br /><br /> 정규화된 도메인 이름<br /><br /> 컴퓨터 이름<br /><br /> IP 주소(IPV4)<br /><br /> IP 주소(IPV6)|네트워크에서 서버를 식별합니다.<br /><br /> (+) 강력한 와일드카드가 기본값입니다. HTTP.SYS는 지정된 포트 및 가상 디렉터리 조합에 대해 모든 네트워크 어댑터에서 모든 요청을 수락합니다. 보고서 서버는 포트에 들어오는 모든 요청을 수락합니다.<br /><br /> (\*) 약한 와일드카드. HTTP.SYS는 주어진 포트 및 가상 디렉터리 조합에 대해 모든 네트워크 어댑터의 다른 URL 예약에서 처리되지 않은 모든 요청을 수락합니다.<br /><br /> 컴퓨터 이름은 네트워크에 있는 컴퓨터의 NETBIOS 이름입니다.<br /><br /> 정규화된 도메인 이름에는 도메인 컨트롤러 또는 공용 도메인 이름 서버에 등록된 도메인 주소 및 서버 이름이 포함됩니다.<br /><br /> IP 주소(IPV4)는 컴퓨터에 있는 네트워크 어댑터의 IPV4 형식 IP 주소로, *nnn.nnn.nnn.nnn*형식입니다.<br /><br /> IP 주소(IPV6)는 컴퓨터에 있는 네트워크 어댑터의 IPV6 형식 IP 주소로, \<header>:\<header>:*nnn.nnn.nnn.nnn* 형식입니다.|  

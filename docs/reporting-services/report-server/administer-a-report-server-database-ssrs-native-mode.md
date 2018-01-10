@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 caps.latest.revision: "63"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4e8fe9877ea3e30466652a1cd4db8f4af53ba396
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 988a22337e01882fec658bec1e18c3114eca7f03
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포는 두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 내부 저장소로 사용합니다. 기본적으로 데이터베이스 이름은 각각 ReportServer와 ReportServerTempdb입니다. ReportServerTempdb는 기본 보고서 서버 데이터베이스로 생성되며 임시 데이터, 세션 정보 및 캐시된 보고서를 저장하는 데 사용됩니다.  
@@ -86,7 +84,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ## <a name="about-database-versions"></a>데이터베이스 버전 정보  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 데이터베이스 버전에 대한 명시적인 정보를 사용할 수 없습니다. 그러나 데이터베이스 버전이 항상 제품 버전과 동기화되므로 제품 버전 정보를 사용하여 데이터베이스 버전 변경 여부를 알 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 제품 버전 정보는 로그 파일(모든 SOAP 호출의 헤더)에 나타나며 보고서 서버 URL에 연결할 때(예: 브라우저에서 `http://localhost/reportserver`를 열 때) 나타나는 파일 버전 정보를 통해 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

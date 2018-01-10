@@ -8,9 +8,7 @@ ms.service:
 ms.component: application-integration
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d435129844bcf4b6740eeeb1c2a1a1ba4dcf70d5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0fcc9818a98957a475885aead617b50315d7b383
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>SOAP를 사용하여 Reporting Services 통합 - Windows 응용 프로그램
   Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 응용 프로그램에 엔터프라이즈 보고 기능을 제공할 수 있습니다. 서비스를 호출하는 코드를 작성하기만 하면 Windows 응용 프로그램에서 웹 서비스에 액세스할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 웹 서비스의 속성 및 메서드를 표시하고 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 응용 프로그램을 만들 수 있는 프록시 클래스를 생성할 수 있습니다.  
@@ -104,7 +102,7 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  ReportViewer 컨트롤은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 온라인 도움말에 설명되어 있습니다. 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 제품 설명서를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [응용 프로그램에 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [웹 응용 프로그램에서 SOAP API 사용](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  

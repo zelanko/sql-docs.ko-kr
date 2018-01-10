@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 462a0417a1ea46655f529c5967626f4f60593567
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fddbf0c42b39574ed2a5f2663ce80e59a4f52ba0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>차트에서 여백 추가 또는 제거(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 세로 막대형 및 분산형 차트 종류의 경우 x-축의 끝에 자동으로 양쪽 여백이 추가됩니다. 가로 막대형 차트 종류의 경우 y축의 끝에 자동으로 양쪽 여백이 추가됩니다. 다른 모든 차트 종류에서는 양쪽 여백이 추가되지 않습니다. 여백의 크기는 변경할 수 없습니다.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
  [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   

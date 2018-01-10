@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3914f4faa9f2b58bfeb599b039be16a87a41a821
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c577245ad46a2989d7e3c7fbc33a1f9e8cfc19e7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-web-service-methods"></a>보고서 서버 웹 서비스 메서드
   보고서 서버 웹 서비스에는 구성 요소 기능에 따라 여러 범주의 메서드가 있습니다. 이러한 메서드는 <xref:ReportService2010.ReportingService2010> 및 <xref:ReportExecution2005.ReportExecutionService> 클래스의 멤버로 노출되는 여러 개의 웹 서비스 끝점(세 개는 보고서 관리용, 하나는 보고서 실행용)을 통해 제공됩니다. 이러한 클래스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK에 포함된 wsdl.exe와 같은 프록시 클래스 도구를 통해 생성될 수 있습니다. 보고서 서버 웹 서비스 및 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에 대한 자세한 내용은 [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)를 참조하세요.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 |[구독 및 배달 메서드](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|구독 및 보고서 배달을 만들고 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  
 |[링크된 보고서 메서드](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|링크된 보고서를 만들고 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SOAP API 액세스](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

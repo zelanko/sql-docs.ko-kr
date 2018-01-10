@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,16 +23,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 397039d98c68bc6828473099091a70b8777f350d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 776a8ac7555128b47175b77739033918f4ed0b5e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-a-source-with-the-script-component"></a>스크립트 구성 요소를 사용하여 원본 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 원본 구성 요소를 사용하여 데이터 원본의 데이터를 로드하고 다운스트림 변환 및 대상에 전달할 수 있습니다. 일반적으로 데이터 원본에 연결하는 데는 기존 연결 관리자를 사용합니다.  
   
- 스크립트 구성 요소 개요는 [스크립트 구성 요소를 사용하여 데이터 흐름 확장](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하세요.  
+ 스크립트 구성 요소에 대한 개요는 [스크립트 구성 요소를 사용하여 데이터 흐름 확장](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하세요.  
   
  스크립트 구성 요소 및 해당 구성 요소가 생성하는 인프라 코드를 사용하면 사용자 지정 데이터 흐름 구성 요소를 개발하는 과정이 훨씬 간단해집니다. 하지만 스크립트 구성 요소의 작동 방식을 이해하려면 사용자 지정 데이터 흐름 구성 요소를 개발하는 데 필요한 단계를 파악하는 것이 좋습니다. [사용자 지정 데이터 흐름 구성 요소 개발](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 섹션과 이 섹션의 [사용자 지정 원본 구성 요소 개발](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) 항목을 참조하세요.  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 11/20/2017
 >  스크립트 구성 요소 및 스크립트 태스크에 대한 기본 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에서 **스크립트 언어** 옵션을 사용합니다. 자세한 내용은 [General Page](~/integration-services/control-flow/script-task-editor-general-page.md)을 참조하세요.  
   
 ### <a name="adding-connection-managers"></a>연결 관리자 추가  
- 일반적으로 원본 구성 요소는 기존 연결 관리자를 사용하여 데이터 흐름으로 로드할 데이터가 있는 데이터 원본에 연결합니다. 적절한 연결 관리자를 추가하려면 **스크립트 변환 편집기**의 **연결 관리자** 페이지에서 **추가**를 클릭합니다.  
+ 일반적으로 원본 구성 요소는 기존 연결 관리자를 사용하여 데이터 흐름으로 로드할 데이터가 있는 데이터 원본에 연결합니다. **스크립트 변환 편집기**의 **연결 관리자** 페이지에서 **추가**를 클릭하여 적절한 연결 관리자를 추가합니다.  
   
  그러나 연결 관리자는 단지 특정 유형의 데이터 원본에 연결하는 데 필요한 정보를 캡슐화하고 저장하는 편리한 단위일 뿐입니다. 데이터를 로드하거나 저장하고 또한 데이터 원본에 대한 연결을 열고 닫는 사용자 지정 코드는 개발자가 직접 작성해야 합니다.  
   
- 스크립트 구성 요소에서 연결 관리자를 사용하는 방법은 [스크립트 구성 요소에서 데이터 원본에 연결](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)을 참조하세요.  
+ 스크립트 구성 요소에서 연결 관리자를 사용하는 방법에 대한 일반적은 내용은 [스크립트 구성 요소에서 데이터 원본에 연결](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)을 참조하세요.  
   
  **스크립트 변환 편집기**의 **연결 관리자** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)를 참조하세요.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/20/2017
   
 -   일반적으로 동일한 **ExclusionGroup**의 여러 출력에는 동일한 출력 열 집합이 있습니다. 그러나 시뮬레이션된 오류 출력을 만드는 경우 오류 정보를 저장할 다른 열을 추가할 수 있습니다. 데이터 흐름 엔진에서 오류 행을 처리하는 방법은 [데이터 흐름 구성 요소에서 오류 출력 사용](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)을 참조하세요. 그러나 스크립트 구성 요소에서는 개발자가 직접 코드를 작성하여 추가 열을 적절한 오류 정보로 채워야 합니다. 자세한 내용은 [스크립트 구성 요소의 오류 출력 시뮬레이션](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **입력 및 출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기(입/출력 페이지)](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.  
   
 ### <a name="adding-variables"></a>변수 추가  
  스크립트에 사용하려는 값을 포함하는 기존 변수가 있는 경우 **스크립트 변환 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에 해당 변수를 추가할 수 있습니다.  
@@ -81,12 +81,12 @@ ms.lasthandoff: 11/20/2017
   
  스크립트 구성 요소에서 변수를 사용하는 방법은 [스크립트 구성 요소에서 변수 사용](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기(스크립트 페이지)](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)를 참조하세요.  
+ **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)를 참조하세요.  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>코드 디자인 모드에서 원본 구성 요소 스크립팅  
  구성 요소에 대한 메타데이터를 구성한 후에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 열고 사용자 지정 스크립트를 코딩합니다. VSTA를 열려면 **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭합니다. **ScriptLanguage** 속성에서 선택한 스크립트 언어에 따라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중 하나를 사용하여 스크립트를 작성할 수 있습니다.  
   
- 스크립트 구성 요소를 사용하여 만든 모든 종류의 구성 요소에 적용되는 자세한 정보는 [스크립트 구성 요소 코딩 및 디버깅](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하세요.  
+ 스크립트 구성 요소를 사용하여 만든 모든 종류의 구성 요소에 적용되는 중요한 정보는 [스크립트 구성 요소 코딩 및 디버깅](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하세요.  
   
 ### <a name="understanding-the-auto-generated-code"></a>자동 생성 코드 이해  
  원본 구성 요소를 만들고 구성한 후 VSTA IDE를 열면 편집 가능한 **ScriptMain** 클래스가 코드 편집기에 나타납니다. 이 **ScriptMain** 클래스에서 사용자 지정 코드를 작성합니다.  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="writing-your-custom-code"></a>사용자 지정 코드 작성  
  사용자 지정 원본 구성 요소 만들기를 마치기 위해 **ScriptMain** 클래스에서 사용할 수 있는 다음 메서드에서 스크립트를 작성할 수 있습니다.  
   
-1.  **AcquireConnections** 메서드를 재정의하여 외부 데이터 원본에 연결합니다. 연결 관리자에서 연결 개체나 필요한 연결 정보를 추출합니다.  
+1.  외부 데이터 원본에 연결하도록 **AcquireConnections** 메서드를 재정의합니다. 연결 관리자에서 연결 개체나 필요한 연결 정보를 추출합니다.  
   
 2.  모든 원본 데이터를 동시에 로드할 수 있는 경우 **PreExecute** 메서드를 재정의하여 데이터를 로드합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결에 대해 **SqlCommand**를 실행하고 모든 원본 데이터를 동시에 **SqlDataReader**로 로드할 수 있습니다. 텍스트 파일을 읽는 경우와 같이 원본 데이터를 한 번에 한 행씩 로드해야 하는 경우에는 **CreateNewOutputRows**에서 행을 반복할 때 데이터를 로드할 수 있습니다.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  **연결 관리자** 페이지에서 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 추가하거나 만들고 해당 이름을 **MyADONETConnection**과 같은 이름으로 지정합니다.  
   
-5.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음과 같이 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
+5.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. **AdventureWorks** 데이터베이스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
   
@@ -271,7 +271,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  **연결 관리자** 페이지에서 **MyFlatFileSrcConnectionManager**와 같이 알기 쉬운 이름을 사용하여 플랫 파일 연결 관리자를 추가하거나 만듭니다.  
   
-6.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음과 같이 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
+6.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같은 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. **AdventureWorks** 데이터베이스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
   
@@ -392,7 +392,7 @@ ms.lasthandoff: 11/20/2017
     }  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [스크립트 구성 요소를 사용하여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [사용자 지정 원본 구성 요소 개발](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
   

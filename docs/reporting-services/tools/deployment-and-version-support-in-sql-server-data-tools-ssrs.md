@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4889d5aabf66b97c4dfaae3c59117f678da4f6a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 배포 및 버전 지원(SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 다음과 같은 시나리오를 지원합니다.  
@@ -67,17 +65,17 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  스키마는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이후 변경되지 않았습니다.  
   
-|프로젝트 또는 파일 유형|버전|보고서 작성|보고서 게시|참고|  
+|프로젝트 또는 파일 유형|버전 옵션|보고서 작성|보고서 게시|참고|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 스키마|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 스키마|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 스키마|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 스키마|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|보고서 서버 프로젝트<br /><br /> 또는<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 스키마|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버만|2003 RDL 및 2005 RDL을 2008 RDL 스키마로 로컬 업그레이드합니다.|  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 스키마|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 스키마|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 스키마|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 스키마|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|보고서 서버 프로젝트<br /><br /> 로 구분하거나 여러<br /><br /> 보고서 서버 마법사 프로젝트|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 스키마|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버만|2003 RDL 및 2005 RDL을 2008 RDL 스키마로 로컬 업그레이드합니다.|  
   
  이전 버전의 보고서 정의 스키마에서 보고서를 여는 방법에 대한 자세한 내용은 [업그레이드 보고서](../../reporting-services/install-windows/upgrade-reports.md)를 참조하세요. 특정 보고서 정의 스키마에 대한 자세한 내용은 [Report Definition Language 사양(Report Definition Language Specification)](http://go.microsoft.com/fwlink/?linkid=116865)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본 및 보고서 게시](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

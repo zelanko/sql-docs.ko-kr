@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eb1b7514e8ba88f4dacf3a521f6deb0d934dfa2d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f995ee637ce4a05f3f4339abf363e02ff96f6f95
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/05/2017
 | 기술 하드웨어 및 장비   | 정보 기술 |  
 | 원격 통신 서비스 |정보 기술 |  
   
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>관련 항목:  
 - [Reporting Services 모바일 보고서에 대한 Excel 데이터 준비](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
 - [모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)

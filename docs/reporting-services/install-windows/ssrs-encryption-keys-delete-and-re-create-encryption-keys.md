@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28f9eae733499868505133cde58982da2754aff2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 744a0c4536283a9143bc423c123da319d0ce05a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 삭제 및 다시 만들기
   암호화 키를 삭제했다가 다시 만드는 작업은 정기적인 암호화 키 유지 관리 작업에 해당되지 않습니다. 보고서 서버가 위협을 받을 때나 보고서 서버 데이터베이스에 더 이상 액세스할 수 없을 때 마지막 수단으로 이러한 태스크를 수행합니다.  

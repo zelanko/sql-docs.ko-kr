@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4f0e806151dc625d25b159b064fbc84edf0a4b94
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 27f8b92c77a5251e2d52e8af85e4aeb759a5ce8a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서의 계기, 차트 또는 데이터 표에서 다른 모바일 보고서 또는 사용자 지정 URL로의 드릴스루를 추가할 수 있습니다. 
@@ -84,7 +84,7 @@ URL이나 다른 모바일 보고서에 드릴스루 기능이 있는 보고서 
 
 숨겨진 항목은 더 밝은 색으로 표시됩니다.
     
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>관련 항목:  
  
 * [Reporting Services 모바일 보고서에 매개 변수 추가](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 

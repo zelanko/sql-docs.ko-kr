@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 99726dcd58f88075a6f9ffabdb419b1c46e9aee5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eed251030c22506725ceace9dacc5100f911e12d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>테이블, 행렬 또는 목록 추가, 이동 또는 삭제(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 데이터 영역은 보고서 데이터 집합에 있는 데이터를 표시합니다. 데이터 영역에는 테이블, 행렬, 목록, 차트 및 계기가 있습니다. 한 데이터 영역을 다른 데이터 영역 안에 중첩시키려면 각 데이터 영역을 개별적으로 추가한 다음 자식 데이터 영역을 부모 데이터 영역 안으로 끕니다.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 -   데이터 영역을 선택하고 데이터 영역을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

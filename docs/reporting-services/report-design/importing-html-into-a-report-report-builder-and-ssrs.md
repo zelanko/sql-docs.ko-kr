@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fddb57614476870c0fe408fb27342d5deeaab60e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2ec424333d0b7bc277c3ecc884f58a853c0397b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
   입력란을 사용하면 데이터 집합의 필드에서 검색한 HTML 서식의 텍스트를 보고서에 삽입할 수 있습니다. 텍스트는 올바른 형식의 HTML로 평가되는 단순 또는 복합 식에서 가져올 수 있습니다. 서식이 지정된 텍스트는 PDF를 비롯한 모든 지원되는 출력 형식으로 렌더링될 수 있습니다.  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
 -   특성 및 CSS 스타일에 대해 속성이 여러 번 지정된 경우에는 속성의 마지막 인스턴스만 적용됩니다. 예를 들어 텍스트가 **\<p align="left" align="right">**인 경우에는 텍스트가 오른쪽에 맞춰집니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

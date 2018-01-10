@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e424561065b7fa6889fd680335f56d1b7082ee60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 492f85664f3a1068d32fca9910717d794fb6dc6e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-definitions---predefined-roles"></a>역할 정의 - 미리 정의된 역할
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 미리 정의된 역할과 함께 설치됩니다. 미리 정의된 각 역할은 관련 태스크 모음을 설명합니다. 미리 정의된 역할에 그룹 및 사용자 계정을 할당하여 보고서 서버 작업에 즉시 액세스하도록 할 수 있습니다.  
@@ -217,7 +215,7 @@ ms.lasthandoff: 12/05/2017
   
  **시스템 사용자** 역할은 기본 보안을 보완하기 위해 사용할 수 있습니다. 보고서 서버 액세스를 보고서 사용자에게 확대하는 새 역할 할당에 이 역할을 포함할 수 있습니다. 자세한 내용은 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
  [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   

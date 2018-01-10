@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3345eedb8d1d8fa933deb6ac5f543fdb6e82f51
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5aa30529e45f4436d6e3d5b7a366993f5f9fa909
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="securable-items"></a>보안 개체 항목
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 보안을 사용하여 보고서 서버에 저장되어 있는 항목에 대한 액세스를 제어합니다. 사용자에게 보고서 서버 액세스 권한을 부여할 때는 일반적으로 다음과 같이 역할 할당 쌍을 만듭니다.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 |공유 데이터 원본|공유 데이터 원본의 보안을 설정하여 항목과 해당 속성 페이지에 대한 액세스를 제한할 수 있습니다. 자세한 내용은 [공유 데이터 원본 항목 보안 설정](../../reporting-services/security/secure-shared-data-source-items.md)을 참조하세요.|  
 |공유 데이터 집합|공유 데이터 집합은 해당 공유 데이터 집합의 정의 보기 또는 변경, 속성 변경 등 사용자가 수행할 수 있는 동작의 범위를 제어하여 보안을 설정할 수 있습니다.<br /><br /> 자세한 내용은 [공유 데이터 집합 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   

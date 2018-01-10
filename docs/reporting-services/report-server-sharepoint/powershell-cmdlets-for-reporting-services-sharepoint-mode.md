@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 96e9ea12df36219b11fe74e3328e6817b03471e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b2d501e76e281716d1d88f858d6642c3a0a1ef5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
 
@@ -69,7 +67,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
   
 3.  **SharePoint 관리 셸**을 클릭합니다.  
   
- cmdlet의 명령줄 도움말을 보려면 PowerShell 명령 프롬프트에서 PowerShell ‘Get-Help’ 명령을 사용합니다. 예를 들어  
+ cmdlet의 명령줄 도움말을 보려면 PowerShell 명령 프롬프트에서 PowerShell ‘Get-Help’ 명령을 사용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -91,7 +89,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 |cmdlet|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|하나 이상의 Reporting Services 서비스 응용 프로그램 개체를 가져옵니다.|  
-|New-SPRSServiceApplication|새 Reporting Services 서비스 응용 프로그램 및 연결된 데이터베이스를 만듭니다.<br /><br /> LogonType 매개 변수: 보고서 서버에서 보고서 서버 데이터베이스에 액세스하기 위해 SSRS 응용 프로그램 풀 계정 또는 SQL Server 로그인을 사용하는지를 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> 0 Windows 인증<br /><br /> 1 SQL Server<br /><br /> 2 응용 프로그램 풀 계정(기본값)|  
+|New-SPRSServiceApplication|새 Reporting Services 서비스 응용 프로그램 및 연결된 데이터베이스를 만듭니다.<br /><br /> LogonType 매개 변수: 보고서 서버에서 보고서 서버 데이터베이스에 액세스하기 위해 SSRS 응용 프로그램 풀 계정 또는 SQL Server 로그인을 사용하는지를 지정합니다. 유효한 값은<br /><br /> 0 Windows 인증<br /><br /> 1 SQL Server<br /><br /> 2 응용 프로그램 풀 계정(기본값)|  
 |Remove-SPRSServiceApplication|지정된 Reporting Services 서비스 응용 프로그램을 삭제합니다. 그러면 연결된 데이터베이스도 제거됩니다.|  
 |Set-SPRSServiceApplication|기존 Reporting Services 서비스 응용 프로그램의 속성을 편집합니다.|  
 |New-SPRSServiceApplicationProxy|새 Reporting Services 서비스 응용 프로그램 프록시를 만듭니다.|  
@@ -117,7 +115,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 |New-SPRSExtension|Reporting Services 서비스 응용 프로그램의 새 확장 프로그램을 등록합니다.|  
 |Set-SPRSExtension|기존 Reporting Services 확장 프로그램의 속성을 설정합니다.|  
 |Remove-SPRSExtension|Reporting Services 서비스 응용 프로그램에서 확장 프로그램을 삭제합니다.|  
-|Get-SPRSExtension|Reporting Services 서비스 응용 프로그램에 대한 하나 이상의 Reporting Services 확장 프로그램을 가져옵니다.<br /><br /> 유효한 값은<br /><br /> <br /><br /> 배달<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> 데이터<br /><br /> 보안<br /><br /> 인증<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 디자이너<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Reporting Services 서비스 응용 프로그램에 대한 하나 이상의 Reporting Services 확장 프로그램을 가져옵니다.<br /><br /> 유효한 값은<br /><br /> <br /><br /> 배달<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> 보안<br /><br /> 인증<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 디자이너<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|"ReportingService" 기능 사용 여부에 따라 SharePoint 사이트를 가져옵니다. 기본적으로 "ReportingService" 기능이 설정되어 있는 사이트가 반환됩니다.|  
   
 ## <a name="basic-samples"></a>기본 샘플

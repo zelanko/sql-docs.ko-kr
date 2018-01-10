@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8f5f4aed6d14373447dbf5ad98078fb159b73c51
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dccc67734b6cf54758ec14b326b171a6effef30b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pdf-device-information-settings"></a>PDF 장치 정보 설정
   다음 표는 PDF 형식으로 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  
   
-|설정|Value|  
+|설정|값|  
 |-------------|-----------|  
 |**열**|보고서에 대해 설정할 열 수입니다. 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**ColumnSpacing**|보고서에 대해 설정할 열 간격입니다. 이 값은 보고서의 원래 설정을 재정의합니다.|  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 |**PageWidth**|보고서에 대해 설정할 페이지 너비(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: 8.5in). 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**StartPage**|렌더링할 보고서의 첫 페이지입니다. **0** 값은 모든 페이지가 렌더링됨을 나타냅니다. 기본값은 **1**입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  

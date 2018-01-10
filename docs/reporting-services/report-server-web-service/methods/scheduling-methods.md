@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,20 +19,20 @@ helpviewer_keywords:
 - methods [Reporting Services], scheduling
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50693cebad14b242175aa95f7f06a487e6d99531
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 17db2c5d9cd8f00d229cd0ec3aaa4a309cfa5ba4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="scheduling-methods"></a>일정 예약 메서드
   이러한 메서드는 보고서 실행 및 전달을 위한 공유 일정을 만들고 관리하는 데 사용할 수 있으며 보고서 서버에서 사용하는 캐시 새로 고침 계획에도 사용할 수 있습니다.  
   
-|메서드|동작|  
+|메서드|작업|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateCacheRefreshPlan%2A>|항목에 대한 캐시 새로 고침 계획을 만듭니다.|  
 |<xref:ReportService2010.ReportingService2010.CreateSchedule%2A>|새 공유 일정을 만듭니다.|  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
 |<xref:ReportService2010.ReportingService2010.SetCacheRefreshPlanProperties%2A>|캐시 새로 고침 계획의 속성을 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.SetScheduleProperties%2A>|공유 일정의 속성 값을 설정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

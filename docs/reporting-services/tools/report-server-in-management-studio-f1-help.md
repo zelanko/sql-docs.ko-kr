@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a938efe16493d55ea2f4b5d7fab739ee0ba1ab02
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 33794866aa7969947253dc13f6076f978129a080
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio의 보고서 서버 F1 도움말
   이 섹션에서는 보고서 서버를 관리하는 데 사용할 수 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 대화 상자에 대한 항목을 제공합니다.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [사용자 역할 속성](../../reporting-services/tools/user-role-properties-management-studio.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기능 참조(Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)  
  [SQL Server Management Studio 사용](~/ssms/use-sql-server-management-studio.md) 
 

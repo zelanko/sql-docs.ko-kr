@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9cf84a0ac978195980be637d6b387c2e4a492164
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 31065c6544f6c93e913ceb9f55a5bc8a804db983
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>대화형 정렬, 문서 구조 및 링크(보고서 작성기 및 SSRS)
   웹 기반 환경에서 사용자가 보고서와 상호 작용할 수 있도록 해주는 다양한 기능을 추가할 수 있습니다. 사용자는 보고서 값의 정렬 순서를 변경할 수 있고, 보고서의 항목을 표시하거나 숨길 수 있으며, 다른 보고서나 웹 페이지로 이동하는 링크를 클릭할 수 있습니다. 또한 목차나 문서 구조를 추가할 수 있습니다. 보고서 사용자는 목차나 문서 구조의 항목을 클릭하여 보고서 내의 영역으로 이동할 수 있습니다.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
  [URL에 하이퍼링크 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  보고서의 링크를 URL에 추가하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

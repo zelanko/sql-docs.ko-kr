@@ -8,9 +8,7 @@ ms.service:
 ms.component: wmi-provider-library-reference
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: IsWindowsServiceEnabled
@@ -19,15 +17,15 @@ apitype: MOFDef
 helpviewer_keywords: IsWindowsServiceEnabled property
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4940ab6f67cecc550e51491a308d8e033bda26c4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe66a0ad4fa46f7f34758590f2cb93a0ca463ee3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configurationsetting-property---iswindowsserviceenabled"></a>ConfigurationSetting 속성 - IsWindowsServiceEnabled
   보고서 서버 Windows 서비스를 사용하는지 여부를 나타냅니다. 읽기 전용입니다.  
@@ -51,7 +49,7 @@ public boolean IsWindowsServiceEnabled;
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

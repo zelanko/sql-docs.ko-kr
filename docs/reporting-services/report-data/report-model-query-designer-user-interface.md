@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 caps.latest.revision: "31"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f02abfbd27673219495569994f5d0fafc4e87a36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7ec879b55af66aa8044327ab88a1ea65e92ec844
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-model-query-designer-user-interface"></a>보고서 모델 쿼리 디자이너 사용자 인터페이스
   보고서 디자이너는 보고서에 사용할 보고서 서버 모델 데이터 원본의 데이터를 지정할 수 있는 두 가지 쿼리 디자이너를 제공합니다. 그래픽 쿼리 디자이너를 사용하여 모델 엔터티와 엔터티 필드를 탐색하고 선택할 수 있습니다. 또한 텍스트 기반 쿼리 디자이너를 사용하여 XML 형식으로 SMDL(Semantic Model Definition Language) 사양에서 직접 작업할 수 있습니다.  
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/05/2017
 |**가져오기**|기존 보고서에서 쿼리를 가져옵니다.|  
 |![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")|쿼리 텍스트를 실행하고 결과 창에 결과 행 집합을 표시합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
  [보고서 모델 연결&#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   

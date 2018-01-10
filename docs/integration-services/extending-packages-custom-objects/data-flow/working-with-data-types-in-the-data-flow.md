@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a3fa3c62effc46f0c30754000c83bb8916a91087
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a448bea8dcefd44e625ad910b4d4099b5a3bbb59
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>데이터 흐름의 데이터 형식 작업
   Integration Services에서 사용자 지정 데이트 흐름 구성 요소를 개발할 때는 데이터를 데이터 흐름 버퍼에 복사하거나 데이터 흐름 버퍼에서 복사해 오고 값을 변환하는 방식으로 데이터 형식에 대한 작업을 지속적으로 수행하게 됩니다. 이 항목에서는 올바른 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 선택하고 데이터 형식에 대한 작업을 수행할 때 올바른 메서드를 사용할 수 있도록 유용한 정보를 제공합니다.  
@@ -162,7 +162,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> 메서드는 DT_DBTIMESTAMPOFFSET 데이터 형식에 대한 값은 반환하지 않으며 이때 <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException>이 발생됩니다. 따라서 DT_DBTIMESTAMPOFFSET 데이터 형식은 관리되는 데이터 형식에 매핑할 수 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 날짜/시간 데이터 형식 중 하나로 변환해야 합니다. 관리되는 데이터 형식에 매핑할 수 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 날짜/시간 데이터 형식의 목록은 앞부분의 "Integration Services와 관리되는 데이터 형식 간의 매핑" 섹션에 나오는 표를 참조하십시오. 데이터 형식 변환에 대한 자세한 내용은 [Integration Services 데이터 형식](../../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: custom-assemblies
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 87bfd7706f968bb9340fd998ed98a6469fc16104
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a1f75514d0b1984a5296c8fad54d4654fbaea57c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>사용자 지정 어셈블리에서 권한 어설션
   기본적으로 사용자 지정 어셈블리 코드는 제한된 **Execution** 권한 집합으로 실행됩니다. 경우에 따라 보안 시스템 내에서 보호된 리소스(파일, 레지스트리 등)에 대한 보안 호출을 하는 사용자 지정 어셈블리를 구현하고자 할 수 있습니다. 이렇게 하려면 다음 작업을 수행해야 합니다.  
@@ -98,7 +96,7 @@ try
   
  자세한 내용은 .NET Framework 개발자 가이드의 ".NET Framework Security(.NET Framework 보안)"를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

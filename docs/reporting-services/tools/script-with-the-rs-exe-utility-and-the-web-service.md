@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d5417fb473850fc0e2b97790d83af88474e930dc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 19a8ddb14a675d691fc2b13871584c769ad2abd8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅
   개발자와 보고서 서버 관리자는 **rs** 유틸리티(RS.exe)를 사용하여 보고서 서버 작업을 수행할 수 있습니다. 이 유틸리티를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 작성한 스크립트를 사용하여 보고서 서버를 프로그래밍 방식으로 관리할 수 있습니다.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [보고서 서버 웹 서비스](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   

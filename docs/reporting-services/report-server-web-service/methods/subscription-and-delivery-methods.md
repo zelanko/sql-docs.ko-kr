@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,20 +19,20 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c9ae174d09aa5c6ae0e1348ac209cc70534ecf7c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 329ed3b2de2498de0a04491edfe6871dab923703
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subscription-and-delivery-methods"></a>구독 및 배달 메서드
   다음 메서드를 사용하여 카탈로그 항목의 구독 및 배달을 만들고 관리할 수 있습니다.  
   
-|메서드|동작|  
+|메서드|작업|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|지정된 항목에 대한 데이터 기반 구독을 만듭니다.|  
 |<xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|데이터 기반 구독에 대한 속성을 반환합니다.|  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|데이터 기반 구독의 속성 값을 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|구독의 속성 값을 설정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

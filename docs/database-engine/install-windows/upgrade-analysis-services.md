@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +26,11 @@ caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4286f2266d115d39ad97ff3f6255187e7a01d968
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Analysis Services 인스턴스는 [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)에서 설명한 대로 현재 릴리스에 도입된 기능을 활용하기 위해 동일한 서버 모드의 SQL Server 버전으로 업그레이드할 수 있습니다.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/20/2017
   
  자세한 내용은 [다차원 데이터베이스의 호환성 수준&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md) 및 [Analysis Services 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)   
  [PowerPivot for SharePoint 업그레이드](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
   

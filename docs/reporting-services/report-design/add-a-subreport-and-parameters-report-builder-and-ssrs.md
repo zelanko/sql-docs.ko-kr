@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ad2eeac8c2758be74150e0ccbb262beb39ef3af
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bef0babb7531e4ef6c513175515fb8e92ac89e6b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>하위 보고서 및 매개 변수 추가(보고서 작성기 및 SSRS)
   여러 관련 보고서의 컨테이너인 주 보고서를 만들려는 경우 하위 보고서를 보고서에 추가합니다. 하위 보고서는 다른 보고서에 대한 참조입니다. 여러 보고서에서 동일한 고객에 대한 데이터를 표시하도록 하는 등의 이유로 데이터 값을 통해 여러 보고서를 연결하려면 매개 변수가 있는 보고서(예: 특정 고객에 대한 세부 정보를 표시하는 보고서)를 하위 보고서로 디자인해야 합니다. 하위 보고서를 주 보고서에 추가할 때에는 매개 변수를 지정하여 하위 보고서에 전달할 수 있습니다.  
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/05/2017
   
      하위 보고서 매개 변수의 순서 변경은 하위 보고서의 처리에 아무런 영향도 주지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

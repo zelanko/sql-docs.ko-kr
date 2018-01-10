@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dffc0db9598a8f31690cebfe6a7ecb8c6b52cfbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ad004b9e6c01b1bddc61019f64ae9bd1999850f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>렌더링 확장 프로그램에 대한 장치 정보 설정(Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 장치 정보 설정을 사용하여 렌더링 매개 변수를 렌더링 확장 프로그램으로 전달할 수 있습니다. 각 렌더링 확장 프로그램에서 특정 설정 집합을 사용할 수 있습니다.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 |[RGDI 장치 정보 설정](../reporting-services/rgdi-device-information-settings.md)|RGDI 렌더링 출력과 연관된 장치 정보 설정을 설명합니다.|  
 |[PPTX 장치 정보 설정](../reporting-services/pptx-device-information-settings.md)|PPTX 렌더링 출력과 연관된 장치 정보 설정을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   

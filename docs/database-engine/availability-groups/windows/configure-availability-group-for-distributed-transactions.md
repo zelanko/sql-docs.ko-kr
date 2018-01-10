@@ -22,11 +22,11 @@ caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 198d9e8f67003e23a6c94094b7e559249a2d3fad
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>분산 트랜잭션에 대한 가용성 그룹 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 
 가용성 그룹이 분산 트랜잭션에 대해 구성되지 않은 경우에도 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]는 가용성 그룹의 데이터베이스에 대한 분산 트랜잭션을 방지하지 않습니다. 그러나 가용성 그룹이 분산 트랜잭션에 대해 구성되지 않으면 일부 상황에서 장애 조치가 실패할 수 있습니다. 특히 새 주 복제본 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 인스턴스는 DTC에서 트랜잭션 결과를 가져올 수 없습니다. 장애 조치 후 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 인스턴스가 DTC에서 미결 트랜잭션의 결과를 얻도록 하려면 분산 트랜잭션에 대한 가용성 그룹을 구성합니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 가용성 그룹에서 분산 트랜잭션을 지원하도록 구성하려면 먼저 다음 필수 조건을 충족해야 합니다.
 
@@ -86,7 +86,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -187,7 +187,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 미결 트랜잭션을 해결하는 방법에 대한 자세한 내용은 [수동으로 트랜잭션 해결(영문)](http://technet.microsoft.com/library/cc754134.aspx)을 참조하세요.
 
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 
 [분산 트랜잭션](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c44e3342fa9c15ecb9924c9fa64a4bc5163a484b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 15c30b516ec8d2b19d0f54fb47281c74f7442ec0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services용 사용자 지정 개체 개발
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 제어 흐름 및 데이터 흐름 개체가 요구 사항을 완전히 충족하지 못하는 경우 다음을 비롯한 여러 가지 유형의 사용자 지정 개체를 직접 개발할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="base-classes-attributes-and-important-methods"></a>기본 클래스, 특성 및 주요 메서드  
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에서 개발 가능한 각 사용자 지정 개체 유형의 가장 중요한 요소에 대한 참조를 제공합니다.  
   
-|사용자 지정 개체|기본 클래스|Attribute|주요 메서드|  
+|사용자 지정 개체|기본 클래스|attribute|주요 메서드|  
 |-------------------|----------------|---------------|-----------------------|  
 |태스크|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |ODBC 대상 편집기|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
 -   blogs.msdn.com의 블로그 항목 - [Visual Studio 솔루션 빌드 프로세스에서 SSIS 참조 때문에 .NET Framework 어셈블리에 대한 간접 종속성 경고를 제공함](http://go.microsoft.com/fwlink/?LinkId=215662)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 개체 지속](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [사용자 지정 개체 빌드, 배포 및 디버그](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   

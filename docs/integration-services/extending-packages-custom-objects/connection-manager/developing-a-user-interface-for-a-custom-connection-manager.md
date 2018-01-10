@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 267313c3cc0c6d12f290088832ad908bf53dd980
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7fd1cf7b6637ed930d9a4dbc9f6cfb7e3153a7d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>사용자 지정 연결 관리자의 사용자 인터페이스 개발
   기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공한 후 연결 관리자의 사용자 지정 사용자 인터페이스를 만들 수 있습니다. 사용자 지정 사용자 인터페이스를 만들지 않은 경우 사용자는 속성 창에서만 연결 관리자를 구성할 수 있습니다.  
@@ -291,7 +291,7 @@ private void ConfigureControlsFromConnectionManager()
  }  
 ```
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 연결 관리자 만들기](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
  [사용자 지정 연결 관리자 코딩](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   

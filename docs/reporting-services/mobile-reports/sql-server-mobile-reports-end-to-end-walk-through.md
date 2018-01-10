@@ -8,7 +8,7 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4d6caec3b829d7cad2434397e68f1ec97d27f6b1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
@@ -305,7 +305,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 KPI와 모바일 보고서는 Reporting Services 웹 포털에 있는 것과 동일한 폴더에 표시됩니다.   
   
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>관련 항목:  
  
 -  [iPad 앱(iOS용 Power BI)에서 Reporting Services 모바일 보고서 및 KPI 보기](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  
 -  [iPhone 앱(iOS용 Power BI)에서 Reporting Services 모바일 보고서 및 KPI 보기](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc831068b5a306c9de62873b3e173a1b9d43b2db
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d29cc34d665dd08acc7eac8dfb634be06f427ee
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>마스터 데이터 관리자 웹 서비스에 대한 프록시 클래스 만들기
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 서비스를 사용하면 사용자의 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 사이트에 액세스할 수 있는 모든 컴퓨터에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]의 기능을 프로그래밍 방식으로 사용할 수 있습니다. 웹 서비스에 액세스하기 위한 코드를 작성하려면 먼저 프록시 클래스를 생성해야 합니다. 웹 서비스 작업을 수행하는 데 사용되는 주요 프록시 클래스는 <xref:Microsoft.MasterDataServices.ServiceClient> 인터페이스를 구현하는 <xref:Microsoft.MasterDataServices.IService> 클래스입니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
     시작하는 페이지가 표시됩니다.  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Visual Studio를 사용하여 프록시 클래스 만들기  
- Visual Studio 2010이 설치된 경우 프로젝트에 **서비스 참조**를 추가하면 가장 간단하게 프록시 클래스를 생성할 수 있습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL에 /service/service.svc를 추가하면 서비스 참조의 주소가 됩니다. 예를 들면 `http://yourserver/MDS/service/service.svc`과 같습니다. 자세한 내용은 [방법: 서비스 참조 추가, 업데이트 또는 제거](http://go.microsoft.com/fwlink/?LinkId=221167)를 참조하십시오.  
+ Visual Studio 2010이 설치된 경우 프로젝트에 **서비스 참조**를 추가하면 가장 간단하게 프록시 클래스를 생성할 수 있습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL에 /service/service.svc를 추가하면 서비스 참조의 주소가 됩니다. 예를 들어 `http://yourserver/MDS/service/service.svc`을 참조하십시오. 자세한 내용은 [방법: 서비스 참조 추가, 업데이트 또는 제거](http://go.microsoft.com/fwlink/?LinkId=221167)를 참조하십시오.  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Svcutil.exe를 사용하여 프록시 클래스 만들기  
  컴퓨터에서 Svcutil.exe를 사용하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK가 설치되어 있어야 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용하는 경우에는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 명령 프롬프트를 사용하여 명령을 실행해야 합니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](http://go.microsoft.com/fwlink/?LinkId=165027) 및 [서비스 메타데이터에서 WCF 클라이언트 생성](http://go.microsoft.com/fwlink/?LinkId=164821)을 참조하십시오.  
@@ -65,7 +65,7 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
 -   *proxy_name*은 생성된 프록시 파일의 이름입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [범주별로 분류한 웹 서비스 작업&#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   

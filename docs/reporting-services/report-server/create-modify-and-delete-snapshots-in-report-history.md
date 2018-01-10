@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 caps.latest.revision: "40"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 725cf2ab029fcaa7385a1321f4c7bacc3fcc008c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d3f31eeab1cd9bf01b3d0525a1599678c7912ac7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>보고서 기록에서 스냅숏 만들기, 수정 및 삭제
   보고서 기록은 보고서 스냅숏의 모음입니다. 스냅숏을 추가하고 삭제하거나 보고서 기록 저장소에 영향을 주는 속성을 수정하여 보고서 기록을 유지 관리할 수 있습니다. 수동으로 또는 예약된 일정을 통해 보고서 기록을 만들 수 있습니다.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
  보고서를 삭제하면 보고서 기록도 삭제됩니다. 예를 들어 월별 판매 보고서를 새 버전으로 바꾸기 위해 삭제하면 이 보고서와 연결된 보고서 기록도 모두 삭제됩니다. 그러나 보고서를 이동하면 모든 보고서 기록도 함께 이동합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 기록 만들기&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cef868a3eef5413777e8bd05101311931df9e191
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d730302cddaba05d9160489fab2bf761986fca9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 추가
   데이터 흐름을 작성할 때는 먼저 구성 요소를 추가합니다. 그런 다음 해당 구성 요소를 구성하고 서로 연결하여 런타임에 데이터의 흐름을 구성합니다. 이 섹션에서는 데이터 흐름 태스크에 구성 요소를 추가하고 해당 구성 요소의 디자인 타임 인스턴스를 만든 다음 구성 요소를 구성하는 방법을 설명합니다. 구성 요소를 연결하는 방법에 대한 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)을 참조하세요.  
@@ -289,7 +289,7 @@ End Module
 ## <a name="external-resources"></a>외부 리소스  
  blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](http://go.microsoft.com/fwlink/?LinkId=243223)  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   

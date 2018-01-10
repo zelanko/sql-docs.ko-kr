@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: "44"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 31a4eb9c303fe2c7d676cca535de3c64272f0caa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: be5dfff54e54b9e5fd768f3b438f9e378bf34c9a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="caching-reports-ssrs"></a>보고서 캐시(SSRS)
   보고서 서버는 처리된 보고서의 복사본을 캐시했다가 사용자가 보고서를 열면 해당 복사본을 반환할 수 있습니다. 사용자는 보고서가 실행된 날짜와 시간을 통해서만 보고서가 캐시된 복사본인지 여부를 알 수 있습니다. 보고서의 날짜 또는 시간이 현재가 아니고 보고서가 스냅숏이 아니라면 캐시에서 가져온 보고서입니다.  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/05/2017
   
  사용자가 지정한 매개 변수 값이 캐시된 보고서를 만드는 데 사용된 값과 다른 경우 등 어떤 이유에서든 캐시된 인스턴스에서 보고서를 렌더링할 수 없으면 보고서 서버에서 보고서를 다시 실행합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Reporting Services 개념&#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   

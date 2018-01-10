@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72173ef704d12154cffe3eabcbe09317f1c40c10
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b6629d85f2a92834f848938beac45a7ff5bf0bf6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>사용자 지정 ForEach 열거자 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 foreach 열거자를 사용하여 컬렉션의 항목을 반복하고 각 요소에 대해 동일한 태스크를 수행합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 폴더의 모든 파일, 데이터베이스의 모든 테이블 또는 패키지 변수에 저장된 목록의 모든 요소와 같이 가장 일반적으로 사용되는 컬렉션을 지원하는 다양한 foreach 열거자가 포함되어 있습니다. 제공된 foreach 열거자 및 컬렉션이 개발자의 요구 사항을 완전하게 충족시키지 못할 경우에는 사용자 지정 foreach 열거자를 만들 수 있습니다.  

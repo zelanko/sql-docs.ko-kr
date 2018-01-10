@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: "22"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6936d4ed42c5e63c964655f43e3618a2ae58f0db
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6b412c5beb8de29b1d51ab3db2240608f1c7b50f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
 
@@ -220,7 +218,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)   
 [경고 담당자용 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

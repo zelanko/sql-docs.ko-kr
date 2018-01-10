@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5326ae33eada7dc692607d14779180174a045959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 914afdde95e3b3a130cb71e5b9277f7331ee4e56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-variables-programmatically"></a>프로그래밍 방식으로 변수 사용
   변수는 패키지, 컨테이너, 태스크 및 이벤트 처리기에서 동적으로 값을 설정하고 프로세스를 제어하는 데 사용됩니다. 선행 제약 조건에서 변수를 사용하여 다른 태스크로의 데이터 흐름 방향을 제어할 수도 있습니다. 다음과 같은 다양한 용도로 변수를 사용할 수 있습니다.  
@@ -235,7 +235,7 @@ End Module
 ## <a name="configuration-files"></a>구성 파일  
  구성 파일에 사용자 지정 변수가 포함된 경우 런타임에 해당 변수를 업데이트할 수 있습니다. 즉, 패키지를 실행할 때 패키지의 원래 변수 값을 구성 파일의 새 값으로 바꿀 수 있습니다. 이 기술은 패키지가 각기 다른 변수 값이 필요한 여러 서버에 배포된 경우에 유용합니다. 예를 들어 변수는 **Foreach 루프** 컨테이너가 워크플로를 반복하는 횟수를 지정하거나, 오류가 발생할 경우 이벤트 처리기에서 보내는 전자 메일의 받는 사람을 나열하거나, 패키지가 실패한 것으로 처리되기 전에 발생할 수 있는 오류 횟수를 변경할 수 있습니다. 이러한 변수는 각 환경의 구성 파일에서 동적으로 제공됩니다. 따라서 구성 파일에는 읽기/쓰기가 가능한 변수만 포함될 수 있습니다. 자세한 내용은 [패키지 구성 만들기](../../integration-services/packages/create-package-configurations.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   

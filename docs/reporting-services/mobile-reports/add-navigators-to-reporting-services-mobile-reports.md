@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d483e2dcafeb45beb00e32cfed7cf04ab41ca689
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 672e1d91d042900da427e357d630eacbb98052b0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 시각화의 데이터를 시간별 또는 선택 항목별로 필터링하려면 *탐색기* 를 추가합니다. 
@@ -127,9 +127,9 @@ ms.lasthandoff: 12/05/2017
   
 또한, 필터를 함께 캐스케이드하여 선택한 첫 번째 값으로 두 번째 이용 가능 값을 필터링할 수 있습니다. 필터를 캐스케이드하려면 일반 갤러리 요소와 마찬가지로 키 열에 필터를 적용합니다.  
 
-### <a name="see-also"></a>참고 항목 
+### <a name="see-also"></a>관련 항목: 
   
-* [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 시각화](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 모바일 보고서의 계기](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Reporting Services 모바일 보고서의 데이터 표](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  

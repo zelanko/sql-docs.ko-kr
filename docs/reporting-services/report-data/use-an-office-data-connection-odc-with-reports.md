@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c146c2fe80f27ace8a8f03ce2767efd9751acf48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 68cbb3437a7f994a60e13163a8372f2e5c0a7174
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>보고서에 Office 데이터 연결(.odc) 사용
   제한된 시나리오에서 기존 Office 데이터 연결 파일(.odc)을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 연결 정보를 제공할 수 있습니다. 공유 데이터 원본을 만들 때 .rsds 파일 대신 .odc 파일을 사용할 수 있습니다. 보고서 서버는 .rsds 파일과 같은 방식으로 .odc 파일을 사용합니다. 즉, 이 파일을 읽어 데이터 원본 유형, 연결 문자열 및 자격 증명 정보를 확인합니다.  
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/05/2017
   
      [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 예제 보고서를 사용하여 이러한 단계를 수행하는 경우 Company Sales 보고서만 .odc 파일에서 추가 작업 없이 작동한다는 사실에 유의하십시오. 다른 예제 보고서에는 OLE DB 공급자에서 작동하지 않는 쿼리 매개 변수와 기능이 들어 있습니다. 하지만 먼저 보고서 디자이너에서 이러한 보고서를 수정하면 OLE DB 공급자에서 작동하도록 만들 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

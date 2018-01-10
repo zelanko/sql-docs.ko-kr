@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee524d36f62b65fc4a74d33f0815ecea1ce92c6d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b7c90c1760c555f0099d9a6ea8fc675d0bd0719
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>확장 배포의 암호화 키 추가 및 제거
   여러 보고서 서버에서 공유 보고서 서버 데이터베이스를 사용하도록 구성하여 스케일 아웃 배포 모델에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 실행할 수 있습니다. 스케일 아웃 배포의 멤버 자격은 보고서 서버가 암호화 키를 보고서 서버 데이터베이스에 저장하는지 여부에 따라 결정됩니다. 특정 보고서 서버 인스턴스에 대한 암호화 키를 추가 및 제거하여 스케일 아웃 배포 멤버 자격을 제어할 수 있습니다. 배포에서 노드를 제거하는 경우 순서에 관계없이 제거할 수 있습니다. 배포에 노드를 추가할 경우 이미 배포에 포함되어 있는 보고서 서버로부터 새 인스턴스를 조인해야 합니다.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
  이 단계를 수행하면 스케일 아웃 배포에서 보고서 서버가 제거되지만, 보고서 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 설치가 제거되지는 않습니다. 스케일 아웃 배포에서 보고서 서버를 제거한 후 해당 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 더 이상 필요하지 않은 경우 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제거할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   

@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6325133adefc387c9fbcd59a5b7b32547ead4909
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 73de345a79e96800bf194c73bc17d70de7bd4055
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서 만들기
 SQL Server 모바일 보고서 게시자를 사용하면 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 SQL Server 2016 Reporting Services 모바일 보고서를 빠르게 만들 수 있습니다.  
@@ -72,7 +72,7 @@ SQL Server 모바일 보고서 게시자를 사용하면 조정 가능한 표 �
   
    보고서를 서버에 저장하려면 SQL Server 2016 Reporting Services 보고서 서버 액세스 권한이 있어야 합니다.  
      
-   ### <a name="see-also"></a>참고 항목  
+   ### <a name="see-also"></a>관련 항목:  
      
 -   [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [휴대폰 또는 태블릿용 Reporting Services 모바일 보고서 레이아웃](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  

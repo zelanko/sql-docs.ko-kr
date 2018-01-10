@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a73c1630674189dd1f86a1aca68937a558d5149f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-source-component"></a>사용자 지정 원본 구성 요소 개발
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 개발자가 사용자 지정 데이터 원본에 연결하고 해당 원본의 데이터를 데이터 흐름 태스크의 다른 구성 요소에 제공할 수 있는 원본 구성 요소를 작성할 수 있습니다. 사용자 지정 원본을 만드는 기능은 기존 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본 중 하나를 사용하여 액세스할 수 없는 데이터 원본에 연결해야 하는 경우에 유용합니다.  
@@ -673,7 +673,7 @@ Namespace BlobSrc
 End Namespace  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 대상 구성 요소 개발](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
  [스크립트 구성 요소를 사용하여 원본 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   

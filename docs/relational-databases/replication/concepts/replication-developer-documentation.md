@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6d8c0a3227bdb30bb446b5eceeaf02354c6c29b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1e522d77e3d5fb047fbdb3c9f545e9bfae62eed2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="replication-developer-documentation"></a>복제 개발자 설명서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
  [복제 프로그래밍 개념](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
  복제를 사용하는 응용 프로그램을 개발하기 위한 계획 단계에 대해 설명합니다.  
   
- [복제 시스템 저장 프로시저 개념](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
  시스템 저장 프로시저를 사용하여 복제 토폴로지에서 프로그래밍 방식 액세스를 제공하는 방법에 대해 설명합니다.  
   
  [복제 관리 개체 개념](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  

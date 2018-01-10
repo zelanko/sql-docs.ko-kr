@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 caps.latest.revision: "32"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5d24b824fcb87d7eca888f4dbc7c4c142e2c71de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e38526ea1804c4a38a1a2dccec1339c4718f290
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="understanding-security-policies"></a>보안 정책 이해
   보고서 서버에 의해 실행되는 모든 코드는 특정 코드 액세스 보안 정책의 일부여야 합니다. 이러한 보안 정책은 증명 정보를 일련의 명명된 권한 집합에 매핑하는 코드 그룹으로 구성됩니다. 코드 그룹은 해당 그룹의 코드에 대해 허용 가능한 권한을 지정하는 명명된 권한 집합과 연결되어 있는 경우가 많습니다. 런타임은 신뢰할 수 있는 호스트 또는 로더가 제공하는 증명 정보를 사용하여 코드가 속하는 코드 그룹을 결정하고 이에 따라 코드에 부여할 권한을 결정합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 의해 정의된 대로 이 보안 정책 아키텍처를 따릅니다. 다음 섹션에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 다양한 코드 유형 및 이와 연결된 정책 규칙에 대해 설명합니다.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
   
  보고서 식에서 특정 코드 권한이 필요한 작업을 수행해야 하는 경우도 있습니다. 일반적으로 이는 보고서 식이 보안된 CLR 라이브러리 메서드(예: 파일 또는 시스템 레지스트리에 액세스하는 메서드)를 호출해야 함을 의미합니다. 이러한 보안 호출을 실행하는 데 필요한 코드 권한은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 설명서에 나와 있습니다. 호출을 실행하려면 호출 코드에 이러한 특정 보안 권한을 부여해야 합니다. 보고서 식 또는 **Code** 식에서 호출하는 경우에는 식 호스트 어셈블리에 적절한 권한을 부여해야 합니다. 그러나 식 호스트에 권한을 부여하면 보고서의 모든 식에서 실행되는 모든 코드에 해당 권한이 부여됩니다. 그러므로 사용자 지정 어셈블리에서 호출하여 해당 사용자 지정 어셈블리에 특정 권한을 부여하는 것이 훨씬 더 안전합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 코드 액세스 보안](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)   
  [안전한 개발&#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   

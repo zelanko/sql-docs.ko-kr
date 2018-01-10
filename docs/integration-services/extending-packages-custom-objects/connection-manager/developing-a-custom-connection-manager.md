@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b34531a1c303d28584faea0918ae89994f3df8c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0143cab738f36fe9d9180ff31cafbcab6e943b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-connection-manager"></a>사용자 지정 연결 관리자 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 연결 관리자를 사용하여 외부 데이터 원본에 연결하는 데 필요한 정보를 캡슐화합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 엔터프라이즈 데이터베이스에서 텍스트 파일 및 Excel 워크시트에 이르기까지 가장 일반적으로 사용되는 데이터 원본에 대한 연결을 지원하는 다양한 연결 관리자가 포함되어 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 지원하는 연결 관리자와 외부 데이터 원본이 개발자의 요구 사항을 완전히 충족시키지 못할 경우에는 사용자 지정 연결 관리자를 만들 수 있습니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
  [사용자 지정 연결 관리자의 사용자 인터페이스 개발](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
  사용자 지정 연결 관리자를 구성하는 데 사용되는 사용자 인터페이스 클래스 및 폼을 구현하는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
   
 ### <a name="information-common-to-all-custom-objects"></a>모든 사용자 지정 개체에 대한 일반적인 정보  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 만들 수 있는 모든 사용자 지정 개체 유형에 공통적인 내용은 다음 항목을 참조하십시오.  

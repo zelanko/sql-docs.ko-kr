@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: "31"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: febad00785c6baad2d1b0dbe7bc620295f7b8546
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e9d615bd2062ac5bf93e86ace8ffc1b1d8ed978c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
   RSReportServer 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 보고서의 기본 보고서 렌더링 동작을 재정의할 수 있습니다. 다음과 같은 목적으로 렌더링 확장 프로그램 매개 변수를 수정할 수 있습니다.  
@@ -136,7 +134,7 @@ ms.lasthandoff: 12/05/2017
 </Render>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [RsReportServer.config 구성 파일](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner 구성 파일](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [CSV 장치 정보 설정](../reporting-services/csv-device-information-settings.md)   

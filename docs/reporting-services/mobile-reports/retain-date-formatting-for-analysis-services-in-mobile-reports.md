@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 caps.latest.revision: "3"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 99423ecb6ab8adc01524c7708cc732c5901a1786
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a20327b51bd4fa05baa140bd8958dd9ff5486291
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지
 보고서 작성기의 공유 데이터 집합에 측정값을 추가하므로 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 데이터 원본의 날짜가 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]의 데이터 형식을 유지합니다.
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/05/2017
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>측정값을 만들어 날짜 필드 데이터 형식 유지
 
-1. 측정값을 만들어 요청한 날짜 필드 값을 유지하고, 수식 필드에서 날짜의 계층/수준을 선택하고 **.CurrentMember.MemberValue**를 추가합니다. 예를 들어
+1. 측정값을 만들어 요청한 날짜 필드 값을 유지하고, 수식 필드에서 날짜의 계층/수준을 선택하고 **.CurrentMember.MemberValue**를 추가합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 
    ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
-### <a name="see-also"></a>참고 항목
+### <a name="see-also"></a>관련 항목:
 
 -  [Data for Reporting Services mobile reports](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
--  [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
+-  [Reporting Services 모바일 보고서에 대한 데이터 준비](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 629decc021a33945c5a4baae9aef1cda70d22f0b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a9e34b37436a71d34def9aaae26c38866098a5b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="previewing-reports-in-report-builder"></a>보고서 작성기에서 보고서 미리 보기
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 만들 때 보고서에 원하는 항목이 표시되는지 확인하기 위해 자주 보고서를 미리 보는 것이 유용합니다. 보고서를 미리 보려면 **실행**을 클릭합니다. 보고서가 미리 보기 모드에서 렌더링됩니다.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
   
  보고서에서 사용하는 하위 보고서가 편집 세션이 생성된 후 변경되는 경우 보고서가 미리 보기에서 렌더링되지 않습니다. 보고서를 성공적으로 미리 보려면 보고서를 저장하거나 **새로 고침** 을 클릭하여 새로운 데이터를 가져와야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

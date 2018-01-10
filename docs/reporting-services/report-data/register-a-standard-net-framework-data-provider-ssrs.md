@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 454c87f8c7ced0404681f500c00453f69433c08c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90600a0b51f489dcb2a1bd21038bf30562b7f144
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>표준 .NET Framework 데이터 공급자 등록(SSRS)
   타사 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 데이터 집합에 대한 데이터를 검색하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리를 보고서 제작 클라이언트와 보고서 서버에 배포하고 등록해야 합니다. 보고서 제작 클라이언트에서 데이터 공급자를 데이터 원본 유형으로 등록하고 쿼리 디자이너와 연결해야 합니다. 그러면 보고서 데이터 집합을 만들 때 이 데이터 공급자를 데이터 원본 유형으로 선택할 수 있습니다. 연결된 쿼리 디자이너가 열려 이 데이터 원본 유형에 대한 쿼리 생성을 도와줍니다. 또한 보고서 서버에서 데이터 공급자를 데이터 원본 유형으로 등록해야 합니다. 그러면 이 데이터 공급자를 사용하여 데이터 원본에서 데이터를 검색하는 게시된 보고서를 처리할 수 있습니다.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자에 대한 항목을 추가합니다.  
   
-    |Attribute|Description|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**이름**|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |**형식**|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/05/2017
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     GAC(전역 어셈블리 캐시)에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 예를 들어  
+     GAC(전역 어셈블리 캐시)에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  데이터 공급자에 대한 항목을 추가합니다.  
   
-    |Attribute|Description|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**이름**|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |**형식**|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/05/2017
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     GAC에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 예를 들어  
+     GAC에 어셈블리를 로드하는 경우 강력한 이름 속성을 제공해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -208,7 +206,7 @@ ms.lasthandoff: 12/05/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 함께 설치되는 데이터 처리 확장 프로그램은 각 플랫폼에 대해 기본적으로 컴파일되어야 하며 올바른 위치에 설치되어야 합니다. 또한 사용자 지정 데이터 공급자나 표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 등록하는 경우 이러한 공급자는 해당 플랫폼에 대해 기본적으로 컴파일되어야 하며 적절한 위치에 설치되어야 합니다. 32비트 플랫폼에서 실행하는 경우 데이터 공급자는 32비트 플랫폼에 대해 컴파일되어야 합니다. 64비트 플랫폼에서 실행하는 경우에는 데이터 공급자가 64비트 플랫폼에 대해 컴파일되어야 합니다. 64비트 인터페이스로 래핑된 32비트 데이터 공급자를 64비트 플랫폼에서 사용할 수는 없습니다. 설치된 플랫폼에서 데이터 공급자가 작동할지 여부에 대한 자세한 내용은 해당 타사 소프트웨어를 참조하십시오. 데이터 공급자 및 플랫폼 지원에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [데이터 처리 확장 프로그램 구현](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)   

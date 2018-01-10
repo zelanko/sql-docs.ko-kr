@@ -8,9 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Local Audit
@@ -20,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2d1dba346ae2e2cb5f68ff93613a2f3c12729780
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 사용 피드백 모음에 대한 로컬 감사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ Microsoft SQL Server에는 컴퓨터 또는 장치에 대한 정보("표준 컴�
 
 SQL Server 2016 CU2부터 로컬 감사는 SQL Server 데이터베이스 엔진 및 Analysis Services(SSAS)에 대한 인스턴스 수준에서 구성할 수 있습니다. SQL Server 2016 CU4 및 SQL Server 2016 SP1에서 로컬 감사는 SSIS(SQL Server Integration Services)에 대해서도 사용할 수 있습니다. 설정 중 설치된SQL Server 구성 요소와 설정 이후 다운로드하거나 설치한 SQL Server 도구에는 사용 피드백 모음에 대한 로컬 감사 기능이 없습니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소 
+## <a name="prerequisites"></a>사전 요구 사항 
 
 다음은 각 SQL Server 인스턴스에서 로컬 감사를 사용 하도록 설정하는 데 필요한 필수 구성 요소입니다. 
 
@@ -183,14 +181,14 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
 | 컴퓨터 | hostname, domainHash, sqmID, operatingSystem 
 | 인스턴스 | instanceName, correlationID, clientVersion 
 | Session | sessionID, traceName 
-| Query | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
+| 쿼리 | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
 | data |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>이름/값 쌍 정의 및 예제 
 
 아래 나열된 열은 로컬 감사 파일 출력 순서를 나타냅니다. SHA 256을 사용하는 단방향 해시를 통해 아래의 다양한 열이 익명 값으로 처리됩니다.  
 
-| 이름 | Description | 예제 값
+| 속성 | Description | 예제 값
 |-------|--------| ----------|
 |hostname | SQL Server를 설치하는 익명 처리된 컴퓨터 이름| de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 
 |domainHash| SQL Server 인스턴스를 호스트하는 컴퓨터의 익명 처리된 도메인 해시 | de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 
@@ -390,6 +388,6 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [SSMS 사용 피드백 수집에 대한 로컬 감사](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
 

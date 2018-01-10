@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2456f192a8518ed45c548d94e75e7ec0c5ae1ec9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8333a60403a32321c8796bb2041d6e95e39160ce
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>보고서 작성기의 보고서 파트 및 데이터 집합
   보고서 작성기에서 보고서에 데이터를 포함하는 가장 쉬운 방법은 보고서 파트 갤러리에서 보고서 파트를 추가하는 것입니다. 보고서 파트에는 파트가 종속되는 *종속 데이터 집합*이라는 데이터 집합이 들어 있습니다. 종속 데이터 집합은 공유 데이터 원본을 기반으로 하며 포함된 데이터 집합 또는 공유 데이터 집합일 수 있습니다. [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 >  자신과 다른 사용자가 공유 데이터 집합의 데이터를 계속 정상적으로 사용하도록 하려면 보고서 항목 보안 관련 원칙을 이해해야 합니다. 자세한 내용은 [공유 데이터 집합 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [보안&#40;보고서 작성기&#41;](../../reporting-services/report-builder/security-report-builder.md)   
  [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   

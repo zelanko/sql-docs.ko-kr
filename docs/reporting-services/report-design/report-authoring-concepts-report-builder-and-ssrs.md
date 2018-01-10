@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38eaef95a61458ddca97d830c3d0fce8df139c3d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5ecffefd9ca76d03fb51f7335bc68f211f95246d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>보고서 제작 개념(보고서 작성기 및 SSRS)
   이 섹션에서는 보고서 작성기 및 보고서 디자이너 설명서에서 페이지를 매긴 보고서를 설명하는 데 사용된 몇 가지 주요 개념을 간략하게 정의합니다. 특정 단어 또는 용어에 대한 정의를 보려면 [용어집&#40;보고서 작성기&#41;](../../reporting-services/report-builder/glossary-report-builder.md)을 참조하세요.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
  [보고서 매개 변수 개념(보고서 작성기 및 SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  보고서 매개 변수를 정의하고 사용하는 방법 및 보고서 서버의 보고서 정의를 통해 보고서 매개 변수를 별도로 관리하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

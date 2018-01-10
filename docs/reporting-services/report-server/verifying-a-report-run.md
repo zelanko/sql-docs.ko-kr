@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - checking report execution
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9eb6ea81a3d0ae18ae9bb8d2a3c6533effc74a73
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bf36b3817f4d3c1c86212e1436ca93a0ae9a2710
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="verifying-a-report-run"></a>보고서 실행 확인
   보고서 처리 상태에 대한 정보를 보려면 로그 파일을 사용하거나 보고서 관리자에서 보고서와 함께 표시되는 상태 정보를 참조할 수 있습니다.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/05/2017
 |보고서 기록의 스냅숏|기록 속성 페이지. 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.|1) 보고서를 엽니다.<br /><br /> 2) **속성** 페이지를 클릭합니다.<br /><br /> 3) **기록** 탭을 클릭합니다.<br /><br /> 4) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
 |캐시된 보고서|캐시된 보고서를 만들고 새로 고치는 데 사용되는 일정|1) 보고서를 엽니다.<br /><br /> 2) **속성** 페이지를 클릭합니다.<br /><br /> 3) **실행** 탭을 클릭합니다.<br /><br /> 4) 일정을 엽니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  

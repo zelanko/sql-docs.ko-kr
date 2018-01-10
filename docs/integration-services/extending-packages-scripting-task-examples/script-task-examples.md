@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cd20d44652dacf8f5d0c4e6039c477a87f8bd3f3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1817a8afa58b3670b9bafd8516a4fbbdf8463c69
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="script-task-examples"></a>스크립트 태스크 예
   스크립트 태스크는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 태스크가 충족시키지 않는 거의 모든 요구 사항을 충족시키기 위해 패키지에서 사용할 수 있는 다용도 도구입니다. 이 항목에는 사용 가능한 기능 중 몇 가지를 보여 주는 스크립트 태스크 코드 예제가 나열되어 있습니다.  

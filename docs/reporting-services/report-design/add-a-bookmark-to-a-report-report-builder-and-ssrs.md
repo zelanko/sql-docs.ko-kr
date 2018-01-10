@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d08c5ede8ad95a151dc5a4d0e721d386490f3fa0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4a59e7381ed6df7fbc9be2d8e8f82224f75f9ef7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>보고서에 책갈피 추가(보고서 작성기 및 SSRS)
   사용자 지정된 목차를 제공하거나 보고서의 사용자 지정된 내부 탐색 링크를 제공하려는 경우 보고서에 책갈피 또는 책갈피 링크를 추가합니다. 일반적으로 각 테이블 또는 차트나 테이블 또는 행렬에 표시된 고유한 그룹 값 등 사용자를 안내하려는 보고서 위치에 책갈피를 추가합니다. 사용자 고유의 문자열을 만들어 책갈피로 사용하거나 그룹의 경우 책갈피를 그룹 식으로 설정할 수 있습니다.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  링크를 테스트하려면 **실행** 을 클릭하여 보고서를 미리 본 다음, 이 링크를 설정한 보고서 항목을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

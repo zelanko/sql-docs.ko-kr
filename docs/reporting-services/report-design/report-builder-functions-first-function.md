@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6919cb9eea7da37cb3967b4e06d945a66ab6c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb2645f7db1b7e65c1fea7f72ab70b79b7565bdb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---first-function"></a>보고서 작성기 함수 - First 함수
   지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.  
@@ -48,7 +46,7 @@ First(expression, scope)
 ## <a name="return-type"></a>반환 형식  
  식 유형에 따라 결정됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **First** 함수는 지정된 범위에 모든 정렬 및 필터링을 적용한 후 데이터 집합에서 첫 번째 값을 반환합니다.  
   
  **First** 함수는 그룹 필터 식에서 현재(기본) 범위 외에는 사용할 수 없습니다.  
@@ -78,7 +76,7 @@ First(expression, scope)
 =First(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

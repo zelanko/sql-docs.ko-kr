@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd7e9017dbc3bcfea38ea43b21a9c3a463eb813e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3b92954553d0db01e8d86773fbccbbab739aacb2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 이벤트 발생 및 정의
   구성 요소 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 속성에 제공된 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 인터페이스에 정의된 일부 이벤트를 발생시킬 수 있습니다. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> 컬렉션을 사용하여 사용자 지정 이벤트를 정의하고 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 메서드를 사용하여 실행하는 동안 해당 이벤트를 발생시킬 수도 있습니다. 이 섹션에서는 이벤트를 만들고 발생시키는 방법을 설명하고 디자인 타임에 이벤트를 발생시켜야 하는 경우에 대한 지침을 제공합니다.  
@@ -97,7 +97,7 @@ Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pip
 End Sub  
 ```  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 이벤트 처리기](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [패키지에 이벤트 처리기 추가](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   

@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: "16"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f135c5a6221af8c169c59e65f5ff47a64ac3d430
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 64a0926d87c12bc84c73e9f10f766a5e79c78975
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS)
   데이터 집합은 데이터 연결에서 사용할 데이터를 지정합니다. 데이터 집합은 포함된 데이터 원본 또는 보고서 서버의 공유 데이터 원본에 대한 참조로 보고서에 저장된 데이터 연결을 기반으로 합니다. 데이터 집합은 필드 집합을 지정하는 쿼리를 포함합니다. 이러한 필드를 디자인 화면으로 끌면 보고서를 실행할 때 실제 데이터를 계산하는 식이 만들어집니다.  
@@ -156,7 +154,7 @@ ms.lasthandoff: 12/05/2017
 |필터|필터 정의|정의의 일부인 데이터 집합 필터를 보거나 변경할 수 없음<br /><br /> 추가 필터를 만들 수 없음|  
 |데이터 원본|공유 데이터 원본이어야 함|공유 데이터 원본을 변경할 수 없음|  
 |필드|쿼리 명령의 필드<br /><br /> 데이터 집합 정의의 일부가 아닌 계산 필드|필드를 볼 수 있지만 변경할 수는 없음<br /><br /> 필드 컬렉션은 보고서에 공유 데이터 집합을 추가할 때의 쿼리를 기반으로 정적입니다. 업데이트하려면 **데이터 집합 속성** 대화 상자에서 **필드 새로 고침** 을 클릭합니다. 실제 필드 컬렉션은 정의의 현재 쿼리가 반환하는 필드 컬렉션입니다.<br /><br /> 계산 필드 추가|  
-|데이터 집합|대/소문자 구분과 같은 데이터 옵션|인스턴스의 데이터 옵션 무시|  
+|Dataset|대/소문자 구분과 같은 데이터 옵션|인스턴스의 데이터 옵션 무시|  
   
  데이터 집합을 만드는 방법은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 및 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   
@@ -226,7 +224,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="Options"></a> 데이터 집합 옵션 설정  
  국가별 데이터를 지원하는 데이터 원본의 경우 정렬 순서,  국가별 문자 속성 및 대/소문자 구분에 영향을 주는 데이터 집합의 속성을 조정해야 할 수 있습니다. 이러한 속성에는 대/소문자,  일본어 가나,  전자,  악센트,  데이터 정렬 등이 있습니다. 자세한 내용은 [SQL  Server  온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "데이터베이스 및 데이터베이스 엔진 응용 프로그램에 대한 국가별 고려 사항"  및 "데이터 정렬 작업"을 참조하십시오. 이러한 속성을 설정하는 방법은 [데이터 집합 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

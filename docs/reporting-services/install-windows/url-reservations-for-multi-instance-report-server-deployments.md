@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc599768d1626591320e5cf727fba35ec98083c2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 675fd1e47d93dcb2767669ff4b138f386947d71d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>다중 인스턴스 보고서 서버 배포를 위한 URL 예약
   같은 컴퓨터에 여러 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 설치하는 경우 각 인스턴스의 URL 예약을 어떻게 정의할지 고려해야 합니다. 각 인스턴스 내에서 보고서 서버 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에는 각각 한 개 이상의 URL 예약이 있어야 합니다. 전체 예약 집합은 HTTP.SYS에서 고유해야 합니다.  

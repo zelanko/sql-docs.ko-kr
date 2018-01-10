@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2250158376315b0eb05dc0b95bc7cd78a333aec9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 지리적 배경 데이터를 표시하는 데 사용할 수 있는 지도 기능에 대해 알아봅니다. 
@@ -545,12 +545,12 @@ ms.lasthandoff: 12/05/2017
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 보고서에 지도를 추가하는 방법에 대한 연습을 완료했습니다.  
   
 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

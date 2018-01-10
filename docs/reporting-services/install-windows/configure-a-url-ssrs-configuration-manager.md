@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: bfb7f618f6927c79392d13953dfd4daf5aa84290
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5753323aaf5d0dad99354441a6d44bbaecb2e845
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 응용 프로그램에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 응용 프로그램에 대해 URL이 이미 구성되어 있습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
  URL이 저장되고 유지 관리되는 방식 및 상호 운용성 문제에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 및 [Reporting Services와 인터넷 정보 서비스 함께 설치&#40;SSRS 기본 모드&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)를 참조하세요. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  URL을 만들거나 수정하기 전에 다음 사항을 유념하십시오.  
   
 -   보고서 서버 컴퓨터에서 로컬 관리자 그룹의 멤버여야 합니다.  

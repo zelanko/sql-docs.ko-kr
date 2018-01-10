@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,13 +24,13 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f765c32963d149c42bda40849f67e9206a1ff3b2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec9e18aeee47b023b6afcf8dbac2e733fd2c6223
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
   보고서에서 식은 보고서 데이터를 제어, 구성 및 정렬하는 데 사용됩니다. 기본적으로 데이터 집합을 만들고 보고서 레이아웃을 디자인하면 보고서 항목의 속성이 데이터 집합 필드, 매개 변수 및 보고서 데이터 창에 표시되는 기타 항목을 기반으로 자동으로 식에 설정됩니다. 또한 테이블 또는 행렬 셀에 대화형 정렬 단추를 추가하여 사용자가 그룹의 행 정렬 순서 또는 그룹 내 행을 대화형으로 변경하도록 할 수 있습니다.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/05/2017
   
  테이블 또는 행렬 데이터 영역에서 여러 행 그룹과 열 그룹을 만들 수 있습니다. 중첩 그룹, 인접 그룹 및 재귀 계층 구조 그룹(예: 조직 차트)을 구성하여 데이터를 시각적 계층에 표시할 수 있습니다.  
   
- 그룹 이름은 식 범위를 나타냅니다. 집계를 계산하고, 데이터를 계층적으로 구성하고 드릴다운 보고서에서 자식 노드 보기와 부모 노드 보기 간에 전환하고, 여러 데이터 영역에 있는 동일한 데이터에 대한 다양한 보기를 표시하고, 테이블, 행렬, 차트, 계기 또는 지도에 요약 데이터를 시각화하기 위해 그룹의 이름을 범위로 지정할 수 있습니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
+ 그룹 이름은 식 범위를 나타냅니다. 집계를 계산하고, 데이터를 계층적으로 구성하고 드릴다운 보고서에서 자식 노드 보기와 부모 노드 보기 간에 전환하고, 여러 데이터 영역에 있는 동일한 데이터에 대한 다양한 보기를 표시하고, 테이블, 행렬, 차트, 계기 또는 지도에 요약 데이터를 시각화하기 위해 그룹의 이름을 범위로 지정할 수 있습니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   
  여러 데이터 집합 필드를 그룹화하려면 각 필드를 그룹 식 집합에 추가합니다. 또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 그룹 식을 직접 작성할 수도 있습니다. 예를 들어 값의 범위로 그룹화하거나 보고서 매개 변수를 사용하여 그룹화함으로써 데이터 영역의 데이터를 그룹화하는 방법을 사용자가 직접 선택하도록 할 수 있습니다. 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -214,7 +212,7 @@ FROM Production.Product
   
  [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

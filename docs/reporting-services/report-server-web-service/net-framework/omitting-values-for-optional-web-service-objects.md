@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - omitting values [Reporting Services]
 ms.assetid: ceb68b8b-9214-4745-abc9-f47f33ecd6f7
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07d914a5898d28a66d40adeeb6b6fc7407eb6db0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d078083e271d1e7b50c5c7b8f930f37ad9aafbdd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="omitting-values-for-optional-web-service-objects"></a>선택적 웹 서비스 개체에 대한 값 생략
   보고서 서버 웹 서비스 복합 유형의 속성은 대부분 Specified 속성으로 알려진 동반 속성을 갖습니다. 속성 이름은 원래 속성 이름에 "Specified"라는 단어를 붙여 만듭니다. 이 속성이 있다면 원래 속성의 값을 가끔씩 생략할 수 있다는 의미입니다. 이는 WSDL(Web Service Description Language)에서 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 프록시 클래스로 변환하는 데 따른 직접적인 결과입니다. 예를 들어, 복합 유형 <xref:ReportService2010.DataSourceDefinition.Enabled%2A>의 웹 서비스 속성 <xref:ReportService2010.DataSourceDefinition>에 <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A>라는 동반 속성이 있습니다. 응용 프로그램을 구축하는 중 <xref:ReportService2010.DataSourceDefinition.Enabled%2A> 속성의 값을 설정하지 않으려면 <xref:ReportService2010.DataSourceDefinition.Enabled%2A>의 값을 제공할 필요가 없습니다. 그러면 기본값 **true**가 사용됩니다. 그러나 <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A>를 **false**로 설정해야 합니다. <xref:ReportService2010.DataSourceDefinition.Enabled%2A> 속성에 값을 제공하려면 <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A>를 **true**에 해당하는 값으로 설정해야 합니다. 이는 쓰기 가능한 속성의 경우입니다. 읽기 전용 속성의 경우에는 별다른 조치를 하지 않아도 됩니다.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
  예제는 <xref:ReportService2010.ReportingService2010.CreateDataSource%2A> 메서드를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   

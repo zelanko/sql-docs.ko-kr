@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: "33"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e5be508787d44acd1c3356105cd3bd988b175a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a7354eba000f4982753d0253dd9dfbc70aa09bf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Reporting Services 보안 정책 파일 사용
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 설치 중에 파일 시스템으로 복사되는 세 개의 구성 파일에 구성 요소 보안 정책 정보를 저장합니다. 이러한 구성 파일에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 코드 어셈블리에 대한 내부용 보안 정책과 사용자 정의 보안 정책의 조합이 들어 있을 수 있습니다. 세 개의 구성 파일은 보고서 서버 및 Windows 서비스, 보고서 관리자 웹 응용 프로그램, 보고서 디자이너 미리 보기 창과 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 세 개 보안 개체 구성 요소에 해당합니다.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="policy-files-in-reporting-services"></a>Reporting Services의 정책 파일  
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 정책 구성 파일, 해당 위치(기본 설치 가정) 및 해당 기능을 나열합니다.  
   
-|파일 이름|위치(기본 설치)|Description|  
+|파일 이름 |위치(기본 설치)|Description|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|보고서 서버의 정책 구성 파일입니다. 보고서가 보고서 서버에 배포되면 이러한 보안 정책은 주로 보고서 식 및 사용자 지정 어셈블리에 영향을 줍니다. 이 정책 파일은 보고서 서버에 배포된 사용자 지정 데이터, 배달, 렌더링 및 보안 확장 프로그램에도 영향을 줍니다.|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|보고서 관리자의 정책 구성 파일입니다. 이러한 보안 정책은 사용자 지정 배달을 위한 구독 사용자 인터페이스 확장 프로그램과 같이 보고서 관리자를 확장하는 모든 어셈블리에 영향을 줍니다.|  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
  추가 코드 그룹을 차례로 추가할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보안 정책 이해](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
   
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d92b185585539d38e1282b649c767fd16f74a0d5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cacc9e4b99055911d8fa46e0ce43c082fd4a8ccc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>합계, 집계 및 기본 제공 컬렉션의 식 범위
   식을 작성할 때 여러 컨텍스트에서 *범위* 라는 용어를 자주 볼 수 있습니다. 범위는 식 계산에 사용하는 데이터, 렌더링된 페이지의 입력란 집합, 그리고 토글을 기반으로 표시하거나 숨길 수 있는 보고서 항목 집합을 지정할 수 있습니다. *범위* 라는 용어는 식 계산, 집계 함수 구문, 조건부 표시 유형 및 이러한 영역과 관련된 오류 메시지에서 볼 수 있습니다. 다음 설명을 참조하면 적용되는 *범위* 의 각 의미를 구분할 수 있습니다.  
@@ -167,7 +165,7 @@ ms.lasthandoff: 12/05/2017
  많은 보고서의 범위가 그룹인 계산에서 0 또는 Null 값이 있는 셀이 여러 개 생성됩니다. 이러한 경우 보고서를 좀 더 단순하게 하려면 집계 값이 0인 경우 공백을 반환하는 식을 추가할 수 있습니다. 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md))을 지정해야 합니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   

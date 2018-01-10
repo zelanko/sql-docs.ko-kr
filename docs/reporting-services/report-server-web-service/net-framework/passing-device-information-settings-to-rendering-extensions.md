@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: af193124f65e1189d787cadb5d3deeab44d7def4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e1830b81544f5bbaed71c7b10a080f7e70c61be
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>장치 정보 설정을 렌더링 확장 프로그램에 전달
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 장치 정보 설정을 사용하여 렌더링 매개 변수를 렌더링 확장 프로그램으로 전달할 수 있습니다. 보고서 서버 웹 서비스의 설정이 **DeviceInfo** XML 요소로 전달되고 보고서 서버에서 처리됩니다. 장치 정보 설정은 기본값을 가지므로 렌더링 프로세스에서 선택적 인수로 간주됩니다. 그러나 장치 정보 설정을 사용하여 렌더링을 사용자 지정하고 서버에서 공급한 기본값을 무효화할 수 있습니다.  
@@ -62,7 +60,7 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
  자세한 내용은 [URL에 장치 정보 설정 지정](../../../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](../../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)   
  [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [웹 서비스 및 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  

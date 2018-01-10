@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,13 +20,13 @@ ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3b887ca39b5198b02294c8e09de765e61ffe5a0e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b506dfd94eaf507c7cb46498b45641a7a08f1ef3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>차트에서 계열 색 서식 지정(보고서 작성기 및 SSRS)
   Reporting Services는 차트에 여러 개의 기본 제공 색상표를 제공하며, 사용자가 사용자 지정 색상표를 정의할 수도 있습니다. 기본적으로 차트는 기본 제공 **Pacific** 색상표를 사용하여 각 계열을 채웁니다. 이 색은 범례에도 나타납니다. 차트에 여러 개의 계열이 추가될 때는 색상표에서 색을 정의한 순서대로 차트가 계열에 색을 할당합니다.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
  [줄무늬 선을 추가하여 차트 데이터 강조 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [차트에 3D 가장자리, 볼록 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

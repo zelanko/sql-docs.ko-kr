@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3540f8a2cb7ce57a858415bffe8576ccde49a928
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e714d755d0423174dafd6477ee0c1c25f780f3c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역의 셀 병합(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 영역의 셀을 병합하여 셀을 결합하거나 데이터 영역 모양을 개선하거나 열 그룹 및 행 그룹에 대한 확장 레이블을 제공할 수 있습니다.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  1단계 및 2단계를 반복하여 데이터 영역의 다른 인접 셀을 병합합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [테이블릭스 데이터 영역](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
  [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [행렬 만들기](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   

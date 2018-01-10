@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f76b250b29e0ab2fb5750941315d75ebed5b7272
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1426af752da0cb20051477d70c566e53589d9f70
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connecting-tasks-programmatically"></a>프로그래밍 방식으로 태스크 연결
   개체 모델에서 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 클래스가 나타내는 선행 제약 조건은 패키지에서 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 개체가 실행되는 순서를 설정합니다. 선행 제약 조건을 사용하면 패키지의 컨테이너 및 태스크 실행이 이전 태스크 또는 컨테이너의 실행 결과에 따라 결정되도록 할 수 있습니다. 선행 제약 조건은 컨테이너 개체에서 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> 개체 쌍 간에 설정됩니다. 두 개의 실행 개체 사이에 제약 조건을 만든 후 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 속성을 설정하여 제약 조건에 정의된 두 번째 실행 파일을 실행하기 위한 조건을 지정합니다.  
@@ -104,7 +104,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 데이터 흐름 태스크 추가](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
   

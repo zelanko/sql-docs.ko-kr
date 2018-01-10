@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname: Reporting Services WMI Provider
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 caps.latest.revision: "57"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 18ccb43bc885e695fbec894a40007abcd5b99517
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 42180a54771653c9749f697de7fdc5876696b172
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Reporting Services WMI 공급자 액세스
   Reporting Services WMI 공급자는 스크립팅을 통해 기본 모드 보고서 서버 인스턴스를 관리하기 위해 두 WMI 클래스를 제공합니다.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 WMI 공급자가 기본 모드 보고서 서버에 대해서만 지원됩니다. SharePoint 모드 보고서 서버는 SharePoint 중앙 관리 페이지 및 PowerShell 스크립트를 사용하여 관리할 수 있습니다.  
   
-|클래스|네임스페이스|Description|  
+|클래스|Namespace|Description|  
 |-----------|---------------|-----------------|  
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13|클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13\Admin|보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.<br /><br /> **\*\* 중요 \*\*** 이 클래스는 관리 권한이 있어야만 액세스할 수 있습니다.|  
@@ -74,7 +72,7 @@ PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\Repor
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>사용 가능한 메서드 및 속성 쿼리  
- Reporting Services WMI 클래스 중 하나에서 사용할 수 있는 메서드 및 속성을 보려면 Get-WmiObject의 결과를 Get-Member 명령으로 전달합니다. 예를 들어  
+ Reporting Services WMI 클래스 중 하나에서 사용할 수 있는 메서드 및 속성을 보려면 Get-WmiObject의 결과를 Get-Member 명령으로 전달합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  
@@ -89,7 +87,7 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services WMI 공급자 라이브러리 참조&#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   

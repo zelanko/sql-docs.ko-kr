@@ -17,11 +17,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bcd7c5ce901bf1083aa48ee2e1236226b13ce5ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a40b52ccc4839f63acbd1be1f9b2643552a44430
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dynamic-data-masking"></a>동적 데이터 마스킹
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
 ## <a name="defining-a-dynamic-data-mask"></a>동적 데이터 마스크 정의  
  해당 열에서 데이터 난독 처리를 위해 테이블의 열에 마스킹 규칙을 정의할 수 있습니다. 네 가지 유형의 마스크를 사용할 수 있습니다.  
   
-|함수|설명|예|  
+|함수|Description|예|  
 |--------------|-----------------|--------------|  
-|기본값|지정된 필드의 데이터 형식에 따라 전체 마스킹.<br /><br /> 문자열 데이터 형식의 경우 필드의 크기가 4자 미만인 경우 XXXX 미만의 X를 사용합니다(**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> 숫자 데이터 형식의 경우 영(0) 값을 사용합니다(**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> 날짜 및 시간 데이터 형식의 경우 01.01.1900 00:00:00.0000000(**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**)을 사용합니다.<br /><br />이진 데이터 형식의 경우 단일 바이트의 ASCII 값 0을 사용합니다(**binary**, **varbinary**, **image**).|열 정의 구문 예제: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 변경 구문 예제: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|전자 메일 주소 형식에서 전자 메일 주소의 첫 글자와 상수 접미사 ".com"을 표시하는 마스킹 방법입니다. 을 참조하세요. `aXXX@XXXX.com`을 참조하세요.|정의 구문 예제: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 변경 구문 예제: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()'`)|  
+|Default|지정된 필드의 데이터 형식에 따라 전체 마스킹.<br /><br /> 문자열 데이터 형식의 경우 필드의 크기가 4자 미만인 경우 XXXX 미만의 X를 사용합니다(**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> 숫자 데이터 형식의 경우 영(0) 값을 사용합니다(**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> 날짜 및 시간 데이터 형식의 경우 01.01.1900 00:00:00.0000000(**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**)을 사용합니다.<br /><br />이진 데이터 형식의 경우 단일 바이트의 ASCII 값 0을 사용합니다(**binary**, **varbinary**, **image**).|열 정의 구문 예제: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 변경 구문 예제: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Email|전자 메일 주소 형식에서 전자 메일 주소의 첫 글자와 상수 접미사 ".com"을 표시하는 마스킹 방법입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. `aXXX@XXXX.com`을 참조하세요.|정의 구문 예제: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 변경 구문 예제: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |임의|지정된 범위 내에서 임의 값으로 원래 값을 마스킹하기 위해 숫자 유형에서 사용할 임의 마스킹 함수입니다.|정의 구문 예제: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> 변경 구문 예제: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |사용자 지정 문자열|첫 번째 및 마지막 문자를 표시하고 가운데에 사용자 지정 안쪽 여백 문자열을 추가하는 마스킹 방법입니다. `prefix,[padding],suffix`<br /><br /> 참고: 원래 값이 너무 짧아서 전체 마스크를 완료할 수 없는 경우 접두사 또는 접미사 부분이 표시되지 않습니다.|정의 구문 예제: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 변경 구문 예제: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 추가 예:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  동적 데이터 마스크로 테이블을 만드는 데 특별한 권한이 필요하지 않습니다. 구성표 권한에 대한 표준 **CREATE TABLE** 및 **ALTER** 만 필요합니다.  
   
  열 마스크를 추가, 대체 또는 제거하려면 테이블에서 **ALTER ANY MASK** 권한 및 **ALTER** 권한이 필요합니다. **ALTER ANY MASK** 를 보안 책임자에게 부여하는 것이 적합합니다.  
@@ -111,7 +111,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  Id | 이름| 급여 |   
+>    |  Id | 속성| 급여 |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  

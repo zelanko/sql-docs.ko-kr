@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 90f52e1c600c0f866eb6a2754c486d0c4e5af08a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b3e08fe0bcf2fd5c2285eea6c0c43e494e8a0f50
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서 테이블릭스 데이터 영역은 행과 열로 구성된 셀에 페이지를 매긴 보고서 데이터를 표시하는 일반화된 레이아웃 보고서 항목입니다. 보고서 데이터는 데이터 원본에서 검색된 상태 그대로의 정보 데이터이거나 지정한 그룹으로 구성된 집계 정보 데이터일 수 있습니다. 각 테이블릭스 셀에는 입력란이나 이미지 같은 보고서 항목이나 테이블릭스 영역, 차트 또는 계기 같은 다른 데이터 영역이 들어 있을 수 있습니다. 한 셀에 여러 보고서 항목을 추가하려면 먼저 컨테이너 역할을 할 사각형을 추가한 다음 이 사각형에 보고서 항목을 추가합니다.  
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/05/2017
   
  합계 추가 기능은 범위가 그룹으로 한정되는 값을 표시하기 위한 행을 현재 그룹 외부에 자동으로 만듭니다. 정적 및 동적 행을 수동으로 추가할 수도 있습니다. 시각적 표시가 어떤 행이 정적이고 어떤 행이 동적인지를 이해하는 데 도움을 줍니다. 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   

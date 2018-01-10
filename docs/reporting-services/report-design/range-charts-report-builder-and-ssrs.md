@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a78c52aacd68919cf6cd3a07bb05da319468ce6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a39861e7284e7fcf17cc57247adcd8844461eaa5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>범위형 차트(보고서 작성기 및 SSRS)
   범위형 차트에서는 각각 동일한 범주의 여러 값으로 정의된 일련의 데이터 요소를 표시합니다. 값은 값 축을 기준으로 측정되는 표식의 높이로 표시됩니다. 범주 레이블은 범주 축에 표시됩니다. 일반 범위형 차트는 각 데이터 요소의 상위 값과 하위 값 사이 영역을 채웁니다.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Gantt 차트는 범위형 가로 막대 차트를 사용하여 만들 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  

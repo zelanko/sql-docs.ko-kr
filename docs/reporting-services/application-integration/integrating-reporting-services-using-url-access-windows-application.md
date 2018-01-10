@@ -8,9 +8,7 @@ ms.service:
 ms.component: application-integration
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1ada6efcf649171bb09324d71e5f6e301d873ff4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b80336b75c47be99a6d5208e6c6a4281394dc49
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL 액세스를 사용하여 Reporting Services 통합 - Windows 응용 프로그램
   보고서 서버에 대한 URL 액세스는 웹 환경에 최적화되어 있지만, URL 액세스를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램에 포함시킬 수도 있습니다. 하지만 Windows Forms와 관련된 URL 액세스의 경우에는 웹 브라우저 기술을 사용해야 합니다. URL 액세스 및 Windows Forms에서 다음과 같은 통합 시나리오를 사용할 수 있습니다.  
@@ -122,7 +120,7 @@ string url = "http://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [응용 프로그램에 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [URL 액세스를 사용하여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [SOAP를 사용하여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
