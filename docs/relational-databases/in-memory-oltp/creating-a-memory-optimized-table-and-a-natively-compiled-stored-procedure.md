@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ceaf111b6f78b72b12021054074c87e956e5cba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f67c300f13ce92de9784f1e62585ad127bddf47c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에는 메모리 내 OLTP의 구문을 소개하는 예제가 포함되어 있습니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  다음 코드 샘플을 사용하려면 c:\Data라는 디렉터리가 필요합니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE imoltp   
 GO  
   
