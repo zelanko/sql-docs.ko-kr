@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: "5"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e74c53736485e3ee7745937e9e9dbd1de1b75e2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d102444b30ad5ddadcd6dcfe8fe25b072f230a63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
  웹 계층의 다음 요소를 사용하여 보고서 서버 내용에 액세스하고 보안을 유지할 수 있습니다. 목록 및 페이지와 같은 다른 개체는 보고서 서버 내용에 액세스하는 데 사용되지 않으므로 다음 표에서 설명하지 않습니다.  
   
-|개체|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |SharePoint 웹 응용 프로그램|SharePoint 웹 응용 프로그램은 독립 실행형 서버로 설치하거나 가상 서버 컬렉션이 포함된 팜에 설치할 수 있습니다. 웹 응용 프로그램에는 URL(예: `http:*//servername*`)이 있으며 여러 사이트가 포함될 수 있습니다.|  
 |사이트|사이트는 웹 응용 프로그램의 부모 사이트 또는 하위 사이트입니다.|  
@@ -142,7 +140,7 @@ ms.lasthandoff: 12/05/2017
   
  보고서 서버가 SharePoint 통합 모드로 실행되는 경우에는 리소스의 개념 정의가 보다 좁아집니다. 여기서 리소스는 외부 이미지를 참조하는 보고서를 저장하기 위한 개념입니다. 이 경우 보고서는 내부 사용을 위해 유지되는 복사본이나 스냅숏입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SharePoint 라이브러리에 보고서 게시](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint 라이브러리에 공유 데이터 원본 게시](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [프로젝트 속성 페이지 대화 상자](../../reporting-services/tools/project-property-pages-dialog-box.md)  

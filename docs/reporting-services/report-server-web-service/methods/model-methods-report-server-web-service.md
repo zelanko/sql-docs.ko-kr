@@ -8,28 +8,26 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 caps.latest.revision: "4"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c7d7785674d0980f989720d2943fa91d698def6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 202fd72da4f455e866991172b3f9dbd07f55a25d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="model-methods---report-server-web-service"></a>모델 메서드 - 보고서 서버 웹 서비스
   다음 메서드를 사용하여 모델을 관리할 수 있습니다.  
   
-|메서드|동작|  
+|메서드|작업|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GenerateModel%2A>|공유 데이터 원본을 기반으로 기본 모델을 생성합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetModelItemPermissions%2A>|모델 항목과 연결된 사용자 권한을 검색합니다.|  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 |<xref:ReportService2010.ReportingService2010.SetModelDrillthroughReports%2A>|드릴스루 보고서 집합을 모델과 연결합니다.|  
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|모델 항목에 대한 보안 정책을 설정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

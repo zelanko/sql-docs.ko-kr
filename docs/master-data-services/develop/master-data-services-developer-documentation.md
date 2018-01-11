@@ -8,7 +8,7 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf661093a0c0851bb0c8663251bf56f273038013
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76dd2b0dd77061e029dc5b7092a21d484ac7f7ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 개발자 설명서
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]와 상호 작용하는 방식을 사용자 지정하기 위해 코드를 작성하는 방법에 대한 정보를 찾아볼 수 있습니다. 다음 작업을 수행하는 방법을 배워 보십시오.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="web-server-namespaces"></a>웹 서버 네임스페이스  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]가 웹 서버 컴퓨터에 어셈블리 집합을 설치합니다. 이러한 어셈블리에는 웹 서버 컴퓨터의 동작을 사용자 지정하는 고급 시나리오에 사용할 수 있는 네임스페이스가 포함됩니다. 다음 표에서는 이러한 네임스페이스에 대해 설명합니다.  
   
-|네임스페이스|설명|  
+|Namespace|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|모델에서 배포 패키지를 만들고 패키지를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 배포하는 데 사용할 수 있는 클래스를 포함합니다.|  
 |<xref:Microsoft.MasterDataServices.Services>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 통해 웹 서버 컴퓨터에 대해 실행되는 웹 서비스 작업을 수신하고 처리하는 클래스를 포함합니다.|  

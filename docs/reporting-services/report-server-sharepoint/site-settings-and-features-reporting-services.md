@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 61a79fe122947e5f68de277035e72639f22f5e6b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3bc11b3c437f6a596e3778b4ccf43b54d9668bf2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services 사이트 설정 및 사이트 기능(SharePoint 모드)
 
@@ -55,7 +53,7 @@ Reporting Services SharePoint 모드에는 SharePoint 사이트 설정 페이지
 |**보고서에 내게 필요한 옵션 메타데이터 사용**|보고서의 HTML 출력에 내게 필요한 옵션 메타데이터 설정|  
 |**보고서에 정확히 맞춘 데이터 시각화 크기 조정 사용**|데이터 시각화 맞춤 동작이 테이블릭스 안에서 정확히 맞도록 구성합니다. 여기에는 차트, 계기 및 지도가 포함됩니다. 사용하지 않도록 설정한 경우 데이터 시각화가 대략적으로 맞도록 조정되며 이로 인해 공백이 생길 수 있습니다. 이 설정은 보고서 뷰어 웹 파트의 렌더링에만 적용됩니다. 서버 쪽 렌더링에 대해 이 동작을 관리하려면 **rsreportserver.config** 파일을 수정해야 합니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)<br /><br /> [Customize Rendering Extension Parameters in RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)입니다.<br /><br /> [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)입니다.<br /><br /> 정확한 크기를 결정하기 위한 처리가 대략적인 맞춤보다 오래 걸릴 수 있기 때문에 정확한 수치를 설정하면 성능에 영향을 줄 수 있습니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
  [Reporting Services SharePoint 서비스 응용 프로그램 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
