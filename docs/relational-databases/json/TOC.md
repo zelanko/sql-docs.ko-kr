@@ -1,7 +1,7 @@
 # [개요](json-data-sql-server.md)  
 # [SQL Server에서 JSON 문서 저장](store-json-documents-in-sql-tables.md)
-# [SQL Server에 JSON 문서 가져오기](import-json-documents-into-sql-server.md)  
 # [JSON 데이터 인덱싱](index-json-data.md)  
+# [SQL Server에 JSON 문서 가져오기](import-json-documents-into-sql-server.md)  
 # [FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)](format-query-results-as-json-with-for-json-sql-server.md)  
 ## [PATH 모드로 중첩 JSON 출력 서식 지정](format-nested-json-output-with-path-mode-sql-server.md)  
 ## [AUTO 모드를 사용하여 JSON 출력 형식 자동 지정](format-json-output-automatically-with-auto-mode-sql-server.md)  
