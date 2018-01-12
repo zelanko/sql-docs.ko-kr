@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 424e7d86a00901c22220d19e86b1bbced698d850
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>SQL Server 인스턴스의 컴퓨터 학습 구성 요소 업그레이드
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 
 기계 학습 구성 요소를 업그레이드 하는 프로세스 라고 **바인딩**새로운 최신 소프트웨어 수명 주기 정책을 사용 하 여 SQL Server 컴퓨터 학습 구성 요소에 대 한 지원 모델을 변경 하기 때문에, 합니다. 
 
-일반적으로 새 라이선스 모델을 전환 하면 데이터 과학자 R, Python의 최신 버전을 항상 사용할 수 있습니다. 최신 수명 주기 정책 조건에 대 한 자세한 내용은 참조 [Microsoft R Server에 대 한 지원 타임 라인](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)합니다.
+일반적으로 새로운 서비스 모델로 전환 하면 데이터 과학자 R, Python의 최신 버전을 항상 사용할 수 있습니다. 최신 수명 주기 정책 조건에 대 한 자세한 내용은 참조 [Microsoft R Server에 대 한 지원 타임 라인](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)합니다.
 
 > [!NOTE]
 > 업그레이드는 SQL Server 데이터베이스에 대 한 지원 모델을 변경 하지 하 고 SQL Server의 버전을 변경 하지 않습니다.
@@ -189,7 +189,7 @@ Microsoft R Server 9.1.0에 대 한 새 설치 관리자를 실행 하면 SQL Se
 
 ### <a name="parameters"></a>매개 변수
 
-|속성|Description|
+|이름|Description|
 |------|------|
 |*list*| 현재 컴퓨터의 모든 SQL Database 인스턴스 ID 목록을 표시합니다.|
 |*bind*| 지정된 SQL Database 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R 서버의 향후 업그레이드를 자동으로 가져오도록 합니다.|
@@ -199,7 +199,7 @@ Microsoft R Server 9.1.0에 대 한 새 설치 관리자를 실행 하면 SQL Se
 
 이 도구는 다음과 같은 오류 메시지를 반환합니다.
 
-|Error|해결 방법|
+|오류|해결 방법|
 |------|------|
 |인스턴스를 바인딩하는 동안 오류가 발생했습니다.| 인스턴스를 바인딩할 수 없습니다. 지원 서비스에 문의하세요.|
 |인스턴스가 이미 바인딩되어 있습니다.| *bind* 명령을 실행했지만 지정한 인스턴스가 이미 바인딩되어 있습니다. 다른 인스턴스를 선택하세요.|

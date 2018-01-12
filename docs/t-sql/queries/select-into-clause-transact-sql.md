@@ -34,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>선택-INTO 절 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT INTO는 기본 파일 그룹에 새 테이블을 만든 후 쿼리의 결과 행을 이 테이블에 삽입합니다. 전체 SELECT 구문을 참조 하십시오 [select&#40; Transact SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 01/02/2018
  선택 목록에 계산 열이 있으면 새 테이블의 해당 열은 계산 열이 아닙니다. 새 열의 값은 SELECT...INTO가 실행될 때 계산된 값이 됩니다.  
   
 ## <a name="logging-behavior"></a>로깅 동작  
- SELECT...INTO의 로깅 양은 데이터베이스에 적용되는 복구 모델에 따라 달라집니다. 단순 복구 모델 또는 대량 로그 복구 모델에서는 대량 작업이 최소 로깅됩니다. SELECT를 사용 하 여 최소 로깅으로... 문으로 수 보다 더 효율적일 수 표를 만들고 다음 INSERT 문 사용 하 여 테이블을 채우는 합니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
+ SELECT...INTO의 로깅 양은 데이터베이스에 적용되는 복구 모델에 따라 달라집니다. 단순 복구 모델 또는 대량 로그 복구 모델에서는 대량 작업이 최소 로깅됩니다. SELECT를 사용 하 여 최소 로깅으로... 문으로 수 보다 더 효율적일 수 표를 만들고 다음 INSERT 문 사용 하 여 테이블을 채우는 합니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
   
 ## <a name="permissions"></a>Permissions  
  대상 데이터베이스에서 CREATE TABLE 권한이 필요합니다.  
@@ -230,7 +230,7 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>6. 다른 테이블의 복사본으로 새 테이블을 만들고 지정된 된 파일 그룹을 로드
-다음 예제에서는 demostrates 다른 테이블의 복사본으로 새 테이블을 만들고 지정 된 사용자의 기본 파일 그룹에서 다른 파일 그룹으로 로드 합니다.
+다음 예제에서는 다른 테이블의 복사본으로 새 테이블을 만들고 지정 된 사용자의 기본 파일 그룹에서 다른 파일 그룹으로 로드 하는 방법을 보여 줍니다.
 
  **적용 대상:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
