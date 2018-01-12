@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a05d33191df12f115cea94a10eb1b2bd3a9a3498
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  이 항목은 SQL Server 업그레이드에 대한 설명으로 제한됩니다. WSFC(Windows Server Failover Clusting) 클러스터를 포함하는 운영 체제 업그레이드를 다루지 않습니다. Windows Server 2012 R2 이전의 운영 체제에서는 장애 조치(Failover) 클러스터를 호스팅하는 Windows 운영 체제 업그레이드가 지원되지 않습니다. Windows Server 2012 R2에서 실행되는 클러스터 노드를 업그레이드하려면 [클러스터 운영 체제 롤링 업그레이드](https://technet.microsoft.com/library/dn850430.aspx)를 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용자의 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
@@ -40,8 +40,11 @@ ms.lasthandoff: 11/20/2017
   
 -   [데이터베이스 엔진 업그레이드 계획 및 테스트](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): 릴리스 정보 및 알려진 업그레이드 문제, 업그레이드 전 검사 목록을 검토한 후 업그레이드 계획을 개발하고 테스트합니다.  
   
--   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화할 수 있도록 업그레이드 프로세스를 시작하기 전에 각 노드에 해당 소프트웨어를 설치하세요.  
-  
+-   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
+
+> [!NOTE]  
+>  동일한 AG에서 혼합 버전의 SQL Server가 지원되지 않습니다. 가용성 그룹을 사용하여 새 버전으로 마이그레이션하기 위해 지원되는 유일한 방법은 SQL Server 2016 Enterprise Edition 이후에 포함된 분산된 가용성 그룹입니다.
+
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Always On 가용성 그룹의 롤링 업그레이드를 위한 최상의 방법  
  서버 업그레이드 도는 업데이트를 수행할 때 가용성 그룹에 대한 가동 중단 시간 및 데이터 손실을 최소화하기 위해 다음과 같은 최상의 방법을 구현해야 합니다.  
   

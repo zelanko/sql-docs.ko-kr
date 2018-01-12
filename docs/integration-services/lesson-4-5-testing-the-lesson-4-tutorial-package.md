@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e16aa094a76f359d65b024fc428f4a2c623700b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>4-5단원 - 4단원 자습서 패키지 테스트
 런타임에 손상된 파일인 Currency_BAD.txt가 있으면 Currency Key Lookup 변환에서 일치 항목을 생성하지 못합니다. 이제 Currency Key Lookup의 오류 출력이 실패한 행을 새 실패한 행 대상으로 리디렉션하도록 구성되었으므로 해당 구성 요소가 실패하지 않으며 패키지가 성공적으로 실행됩니다. 실패한 모든 오류 행은 ErrorOutput.txt에 기록됩니다.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 -   메모장이나 텍스트 편집기에서 ErrorOutput.txt 파일을 엽니다. 기본 열 순서는 AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription입니다.  
   
-    파일의 모든 행에 일치하지 않는 CurrencyID 값인 BAD, ErrorCode 값인 -1071607778, ErrorColumn 값인 0 및 ErrorDescription 값인 "조회 중에 행에서 일치하는 항목을 생성하지 않았습니다"가 포함됩니다. 열 관련 오류가 아니라 조회 작업 오류이므로 ErrorColumn 값은 0으로 설정됩니다. 을 클릭합니다.  
+    파일의 모든 행에 일치하지 않는 CurrencyID 값인 BAD, ErrorCode 값인 -1071607778, ErrorColumn 값인 0 및 ErrorDescription 값인 "조회 중에 행에서 일치하는 항목을 생성하지 않았습니다"가 포함됩니다. 열 관련 오류가 아니라 조회 작업 오류이므로 ErrorColumn 값은 0으로 설정됩니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
   
   

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8ee63b1546b182cad4e0bb2b137c1bad51f15032
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 56776e68d9e9ed897bb948ad53e4736c7d1485dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>1-1단원 - 작업 폴더 및 환경 변수 만들기
 이 태스크에서는 이후의 자습서 태스크에서 사용할 작업 폴더(C:\DeploymentTutorial)와 새 시스템 환경 변수(`DataTransfer` 및 `LoadXMLData`)를 만듭니다.  

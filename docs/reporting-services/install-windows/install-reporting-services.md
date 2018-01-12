@@ -1,33 +1,31 @@
 ---
-title: "SQL Server Reporting Services 설치 | Microsoft Docs"
-ms.date: 10/10/2017
+title: "SQL Server Reporting Services(2017 이상) 설치 | Microsoft Docs"
+ms.date: 12/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+ms.topic: get-started-article
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f09b475d42657c8c9ce8ef60d6b5b7c36b30cc2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services 설치
+# <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services(2017 이상) 설치
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services 설치에는 보고서 항목을 저장하고 보고서를 렌더링하며 구독 및 기타 보고서 서비스를 처리하기 위한 서버 구성 요소가 포함됩니다.  Power BI Report Server를 설치하는 방법을 알아봅니다.
+SQL Server Reporting Services 설치에는 보고서 항목을 저장하고 보고서를 렌더링하며 구독 및 기타 보고서 서비스를 처리하기 위한 서버 구성 요소가 포함됩니다. 
 
 SQL Server 2017 Reporting Services를 다운로드하려면 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)로 이동하세요.
 
@@ -55,11 +53,11 @@ Reporting Services를 설치하기 전에 [SQL Server 설치를 위한 하드웨
 
     ![버전 선택](media/install-reporting-services/report-server-install-edition.png)
 
-    드롭다운에서 평가판 또는 개발자 버전을 선택할 수 있습니다.
+    무료 버전의 경우 드롭다운에서 평가판 또는 개발자 버전을 선택합니다.
 
     ![평가판 또는 개발자 버전](media/install-reporting-services/report-server-install-edition-select.png)
 
-    그렇지 않은 경우 제품 키를 입력할 수 있습니다.
+    그렇지 않은 경우 제품 키를 입력합니다. [SQL Server 2017 Reporting Services의 제품 키를 찾습니다](find-reporting-services-product-key-ssrs.md).
 
 4. 사용 조건을 읽고 동의한 후 **다음**을 선택합니다.
 
@@ -104,7 +102,7 @@ Windows 서비스는 설치의 일부로 만들어집니다. **SQL Server Report
 
 URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다.
 
-|부분|설명|
+|부분|Description|
 |----------|-----------------|
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `http://<computername>/reportserver`, `http://localhost/reportserver` 또는`http://<IPAddress>/reportserver.`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|

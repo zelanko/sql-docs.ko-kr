@@ -1,7 +1,7 @@
 ---
-title: "Columnstore 인덱스 디자인 지침 | Microsoft 문서"
+title: "Columnstore 인덱스 - 디자인 지침 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/27/2017
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -17,20 +17,20 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2166cfa2f5ab944ac302916085c7abbebb687457
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81afdfbd75f9a6862851319e81929a2b5dbd6ef7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 디자인 지침
+# <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 - 디자인 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 columnstore 인덱스 디자인을 위한 고급 권장 사항입니다. 소수의 훌륭한 디자인 결정을 통해 columnstore 인덱스에서 제공하고자 하는 높은 데이터 압축 및 쿼리 성능을 얻을 수 있습니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
-이 문서에서는 columnstore 아키텍처 및 용어에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 [Columnstore 인덱스 - 개요](../../relational-databases/indexes/columnstore-indexes-overview.md) 및 [Columnstore 인덱스 - 아키텍처](../../relational-databases/indexes/columnstore-indexes-architecture.md)를 참조하세요.
+이 문서에서는 columnstore 아키텍처 및 용어에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 [Columnstore 인덱스 - 개요](../../relational-databases/indexes/columnstore-indexes-overview.md) 및 [Columnstore 인덱스 아키텍처](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)를 참조하세요.
 
 ### <a name="know-your-data-requirements"></a>데이터 요구 사항 파악
 columnstore 인덱스를 디자인하려면 먼저 데이터 요구 사항에 대해 최대한 많이 이해해야 합니다. 예를 들어 다음 질문에 대한 답변을 생각해 보세요.
@@ -45,17 +45,16 @@ columnstore 인덱스가 필요하지 않을 수 있습니다. 힙이나 클러�
 
 ## <a name="choose-the-best-columnstore-index-for-your-needs"></a>요구에 맞는 최상의 columnstore 인덱스 선택
 
-columnstore 인덱스는 클러스터형이거나 비클러스터형입니다.  클러스터형 columnstore 인덱스에는 하나 이상의 비클러스터형 btree 인덱스가 있을 수 있습니다. columnstore 인덱스는 쉽게 사용해 볼 수 있습니다. 테이블을 columnstore 인덱스로 만드는 경우 columnstore 인덱스를 삭제하여 테이블을 rowstore 테이블로 다시 쉽게 변환할 수 있습니다. 
+columnstore 인덱스는 클러스터형이거나 비클러스터형입니다.  클러스터형 columnstore 인덱스에는 하나 이상의 비클러스터형 B-트리 인덱스가 있을 수 있습니다. columnstore 인덱스는 쉽게 사용해 볼 수 있습니다. 테이블을 columnstore 인덱스로 만드는 경우 columnstore 인덱스를 삭제하여 테이블을 rowstore 테이블로 다시 쉽게 변환할 수 있습니다. 
 
 다음은 옵션 및 권장 사항에 대한 요약입니다. 
 
 | columnstore 옵션 | 사용하는 경우에 대한 권장 사항 | 압축 |
 | :----------------- | :------------------- | :---------- |
 | 클러스터형 columnstore 인덱스 | 다음과 같은 경우에 사용됩니다.<br></br>1) 별모양 또는 눈송이 스키마를 사용하는 기존 데이터 웨어하우스 워크로드<br></br>2) 최소 업데이트 및 삭제로 많은 양의 데이터를 삽입하는 IOT(사물 인터넷) 워크로드 | 평균 10배 |
-| 클러스터형 columnstore 인덱스의 비클러스터형 btree 인덱스 | 다음을 수행하는 데 사용됩니다.<br></br>    1) 클러스터형 columnstore 인덱스에 기본 키 및 외래 키 제약 조건을 적용합니다.<br></br>    2) 특정 값이나 작은 범위의 값을 검색하는 쿼리의 속도를 향상시킵니다.<br></br>    3) 특정 행의 업데이트 및 삭제 속도를 향상시킵니다.| 평균 10배와 NCI에 대한 약간의 추가 저장소.|
-| 디스크 기반 힙 또는 btree 인덱스의 비클러스터형 columnstore 인덱스 | 다음과 같은 경우에 사용됩니다. <br></br>1) 몇 가지 분석 쿼리가 있는 OLTP 워크로드. 분석을 위해 만든 btree 인덱스를 삭제하고 하나의 비클러스터형 columnstore 인덱스로 바꿀 수 있습니다.<br></br>2) ETL(Extract Transform and Load) 작업을 수행하여 별도의 데이터 웨어하우스로 데이터를 이동하는 기존의 많은 OLTP 워크로드. 일부 OLTP 테이블에 비클러스터형 columnstore 인덱스를 만들어 ETL 및 별도의 데이터 웨어하우스를 제거할 수 있습니다. | NCCI는 평균 10% 더 많은 저장소가 필요한 추가 인덱스입니다.|
+| 클러스터형 columnstore 인덱스의 비클러스터형 B-트리 인덱스 | 다음을 수행하는 데 사용됩니다.<br></br>    1. 클러스터형 columnstore 인덱스에 기본 키 및 외래 키 제약 조건을 적용합니다.<br></br>    2. 특정 값이나 작은 범위의 값을 검색하는 쿼리의 속도를 향상시킵니다.<br></br>    3. 특정 행의 업데이트 및 삭제 속도를 향상시킵니다.| 평균 10배와 NCI에 대한 약간의 추가 저장소.|
+| 디스크 기반 힙 또는 B-트리 인덱스의 비클러스터형 columnstore 인덱스 | 다음과 같은 경우에 사용됩니다. <br></br>1) 몇 가지 분석 쿼리가 있는 OLTP 워크로드. 분석을 위해 만든 B-트리 인덱스를 삭제하고 하나의 비클러스터형 columnstore 인덱스로 바꿀 수 있습니다.<br></br>2) ETL(Extract Transform and Load) 작업을 수행하여 별도의 데이터 웨어하우스로 데이터를 이동하는 기존의 많은 OLTP 워크로드. 일부 OLTP 테이블에 비클러스터형 columnstore 인덱스를 만들어 ETL 및 별도의 데이터 웨어하우스를 제거할 수 있습니다. | NCCI는 평균 10% 더 많은 저장소가 필요한 추가 인덱스입니다.|
 | 메모리 내 테이블의 columnstore 인덱스 | 기본 테이블이 메모리 내 테이블이라는 점을 제외하면 디스크 기반 테이블의 비클러스터형 columnstore 인덱스와 권장 사항이 동일합니다. | columnstore 인덱스는 추가 인덱스입니다.|
-
 
 ## <a name="use-a-clustered-columnstore-index-for-large-data-warehouse-tables"></a>큰 데이터 웨어하우스 테이블에 클러스터형 columnstore 인덱스 사용
 클러스터형 columnstore 인덱스는 인덱스 이상의 의미가 있으며, 기본 테이블 저장소라고 할 수 있습니다. 큰 데이터 웨어하우징 팩트 및 차원 테이블에서 높은 데이터 압축을 제공하며 쿼리 성능을 현저하게 향상시킵니다. 분석 쿼리는 특정 값을 조회하지 않고 큰 범위의 값에 대해 작업을 수행하는 경향이 있으므로 클러스터형 columnstore 인덱스는 트랜잭션 쿼리가 아닌 분석 쿼리에 가장 적합합니다. 
@@ -75,17 +74,17 @@ columnstore 인덱스는 클러스터형이거나 비클러스터형입니다.  
 
 자세한 내용은 [Columnstore 인덱스-데이터 웨어하우징](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)을 참조하세요.
 
-## <a name="add-btree-nonclustered-indexes-for-efficient-table-seeks"></a>효율적인 테이블 검색을 위해 btree 비클러스터형 인덱스 추가
+## <a name="add-b-tree-nonclustered-indexes-for-efficient-table-seeks"></a>효율적인 테이블 검색을 위해 B-트리 비클러스터형 인덱스 추가
 
-SQL Server 2016부터는 클러스터형 columnstore 인덱스의 보조 인덱스로 비클러스터형 btree 인덱스를 만들 수 있습니다. 비클러스터형 btree 인덱스는 columnstore 인덱스가 변경될 때 업데이트됩니다. 이는 유용하게 사용할 수 있는 강력한 기능입니다. 
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 클러스터형 columnstore 인덱스의 보조 인덱스로 비클러스터형 B-트리 인덱스를 만들 수 있습니다. 비클러스터형 B-트리 인덱스는 columnstore 인덱스가 변경될 때 업데이트됩니다. 이는 유용하게 사용할 수 있는 강력한 기능입니다. 
 
-보조 btree 인덱스를 사용하면 모든 행을 검색하지 않고도 특정 행을 효율적으로 검색할 수 있습니다.  다른 옵션도 사용할 수 있습니다. 예를 들어 btree 인덱스에서 UNIQUE 제약 조건을 사용하여 기본 키 또는 외래 키 제약 조건을 적용할 수 있습니다. 고유하지 않은 값은 btree 인덱스에 삽입되지 않으므로 SQL Server에서 columnstore에 값을 삽입할 수 없습니다. 
+보조 B-트리 인덱스를 사용하면 모든 행을 검색하지 않고도 특정 행을 효율적으로 검색할 수 있습니다.  다른 옵션도 사용할 수 있습니다. 예를 들어 B-트리 인덱스에서 UNIQUE 제약 조건을 사용하여 기본 키 또는 외래 키 제약 조건을 적용할 수 있습니다. 고유하지 않은 값은 B-트리 인덱스에 삽입되지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 columnstore에 값을 삽입할 수 없습니다. 
 
-다음과 같은 경우 columnstore 인덱스에서 btree 인덱스를 사용하는 것이 좋습니다.
+다음과 같은 경우 columnstore 인덱스에서 B-트리 인덱스를 사용하는 것이 좋습니다.
 * 특정 값 또는 작은 범위의 값을 검색하는 쿼리를 실행합니다.
 * 기본 키 또는 외래 키 제약 조건과 같은 제약 조건을 적용합니다.
-* 업데이트 및 삭제 작업을 효율적으로 수행합니다. btree 인덱스는 전체 테이블 또는 테이블의 파티션을 검색하지 않고도 특정 행에서 업데이트 및 삭제를 신속하게 찾을 수 있습니다.
-* btree 인덱스를 저장하는 데 사용할 수 있는 추가 저장소가 있습니다.
+* 업데이트 및 삭제 작업을 효율적으로 수행합니다. B-트리 인덱스는 전체 테이블 또는 테이블의 파티션을 검색하지 않고도 특정 행에서 업데이트 및 삭제를 신속하게 찾을 수 있습니다.
+* B-트리 인덱스를 저장하는 데 사용할 수 있는 추가 저장소가 있습니다.
 
 ## <a name="use-a-nonclustered-columnstore-index-for-real-time-analytics"></a>실시간 분석을 위해 비클러스터형 columnstore 인덱스 사용
 
@@ -95,11 +94,11 @@ columnstore 인덱스는 rowstore 인덱스보다 10배 더 뛰어난 데이터 
 
  다음과 같은 경우에 비클러스터형 columnstore 인덱스를 사용하는 것이 좋습니다.
 
-* 트랜잭션 rowstore 테이블에 대해 실시간으로 분석을 실행합니다. 분석을 위해 설계된 기존 btree 인덱스를 비클러스터형 columnstore 인덱스로 바꿀 수 있습니다. 
+* 트랜잭션 rowstore 테이블에 대해 실시간으로 분석을 실행합니다. 분석을 위해 설계된 기존 B-트리 인덱스를 비클러스터형 columnstore 인덱스로 바꿀 수 있습니다. 
   
 *   별도 데이터 웨어하우스가 필요하지 않습니다. 일반적으로 회사는 rowstore 테이블에서 트랜잭션을 실행하고 별도의 데이터 웨어하우스에 데이터를 로드하여 분석을 실행합니다. 많은 워크로드에서 트랜잭션 테이블에 비클러스터형 columnstore 인덱스를 만들어 로드 프로세스 및 별도의 데이터 웨어하우스를 제거할 수 있습니다.
 
-  SQL Server 2016은 이 시나리오의 성능을 향상시킬 수 있는 몇 가지 전략을 제공합니다. OLTP 응용 프로그램을 변경하지 않고도 비클러스터형 columnstore 인덱스를 사용할 수 있으므로 매우 쉽게 체험할 수 있습니다. 
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]은 이 시나리오의 성능을 향상시킬 수 있는 몇 가지 전략을 제공합니다. OLTP 응용 프로그램을 변경하지 않고도 비클러스터형 columnstore 인덱스를 사용할 수 있으므로 매우 쉽게 체험할 수 있습니다. 
 
 처리 리소스를 더 추가하려면 읽기 가능한 보조 복제본에서 분석을 실행할 수 있습니다. 읽기 가능한 보조 복제본 사용으로 트랜잭션 워크로드 및 분석 워크로드의 처리를 구분합니다. 
 
@@ -148,22 +147,22 @@ columnstore 인덱스에서는 columnstore 압축 및 보관 압축이라는 두
 
 ## <a name="use-optimizations-when-you-convert-a-rowstore-table-to-a-columnstore-index"></a>rowstore 테이블을 columnstore 인덱스로 변환할 때 최적화 사용
 
-데이터가 이미 rowstore 테이블에 있는 경우 [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 사용하여 테이블을 클러스터형 columnstore 인덱스로 변환할 수 있습니다. 테이블을 변환한 후 쿼리 성능을 향상시키는 몇 가지 최적화 방법이 있습니다.
+데이터가 이미 rowstore 테이블에 있는 경우 [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 사용하여 테이블을 클러스터형 columnstore 인덱스로 변환할 수 있습니다. 테이블을 변환한 후 쿼리 성능을 향상시키는 몇 가지 최적화 방법이 있으며, 이어서 설명하겠습니다.
 
 ### <a name="use-maxdop-to-improve-rowgroup-quality"></a>MAXDOP를 사용하여 행 그룹 품질 향상
-힙 또는 클러스터형 btree 인덱스를 columnstore 인덱스로 변환하기 위해 최대 수의 프로세서를 구성할 수 있습니다. 프로세서를 구성하려면 최대 병렬 처리 수준 옵션(MAXDOP)을 사용합니다. 
+힙 또는 클러스터형 B-트리 인덱스를 columnstore 인덱스로 변환하기 위해 최대 수의 프로세서를 구성할 수 있습니다. 프로세서를 구성하려면 최대 병렬 처리 수준 옵션(MAXDOP)을 사용합니다. 
 
-데이터가 많은 경우 MAXDOP 1은 너무 느릴 수 있습니다.  MAXDOP를 4로 높이면 제대로 작동합니다. 행 수가 최적이 아닌 몇 개의 행 그룹이 생성되면 [ALTER INDEX REORG](../../t-sql/statements/alter-index-transact-sql.md)를 실행하여 백그라운드에서 병합할 수 있습니다.
+데이터가 많은 경우 MAXDOP 1은 너무 느릴 수 있습니다.  MAXDOP를 4로 높이면 제대로 작동합니다. 행 수가 최적이 아닌 몇 개의 행 그룹이 생성되면 [ALTER INDEX REORGANIZE](../../t-sql/statements/alter-index-transact-sql.md)를 실행하여 백그라운드에서 병합할 수 있습니다.
 
-### <a name="keep-the-sorted-order-of-a-btree-index"></a>btree 인덱스의 정렬된 순서 유지
-btree 인덱스는 정렬된 순서로 행을 저장하므로 행이 columnstore 인덱스로 압축될 때 해당 순서를 유지하면 쿼리 성능을 향상시킬 수 있습니다.
+### <a name="keep-the-sorted-order-of-a-b-tree-index"></a>B-트리 인덱스의 정렬된 순서 유지
+B-트리 인덱스는 정렬된 순서로 행을 저장하므로 행이 columnstore 인덱스로 압축될 때 해당 순서를 유지하면 쿼리 성능을 향상시킬 수 있습니다.
 
 columnstore 인덱스는 데이터를 정렬하지 않지만 메타데이터를 사용하여 각 행 그룹에서 각 열 세그먼트의 최소값과 최대값을 추적합니다.  값 범위를 검색할 때 행 그룹을 건너뛸 시기를 신속하게 계산할 수 있습니다. 데이터가 정렬되면 더 많은 행 그룹을 건너뛸 수 있습니다. 
 
 변환하는 동안 정렬된 순서를 유지하려면
 * DROP_EXISTING 절과 함께 [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 사용합니다. 그러면 인덱스의 이름도 유지됩니다. rowstore 인덱스의 이름을 이미 사용하는 스크립트가 있는 경우 해당 스크립트를 업데이트할 필요가 없습니다. 
 
-    다음 예제에서는 ```MyFactTable```이라는 테이블의 클러스터형 rowstore 인덱스를 클러스터형 columnstore 인덱스로 변환합니다. 인덱스 이름 ```ClusteredIndex_d473567f7ea04d7aafcac5364c241e09```가 동일하게 유지됩니다.
+    다음 예제에서는 `MyFactTable`이라는 테이블의 클러스터형 rowstore 인덱스를 클러스터형 columnstore 인덱스로 변환합니다. 인덱스 이름 `ClusteredIndex_d473567f7ea04d7aafcac5364c241e09`가 동일하게 유지됩니다.
 
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
@@ -171,7 +170,7 @@ columnstore 인덱스는 데이터를 정렬하지 않지만 메타데이터를 
     WITH (DROP_EXISTING = ON);  
     ```
 
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
 다음은 columnstore 인덱스를 만들고 유지하기 위한 태스크입니다. 
   
 |태스크|참조 항목|참고|  
@@ -182,10 +181,10 @@ columnstore 인덱스는 데이터를 정렬하지 않지만 메타데이터를 
 |rowstore 테이블을 columnstore로 변환합니다.|[CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|기존 힙 또는 이진 트리를 columnstore로 변환합니다. 예제에서는 이 변환을 수행할 때 기존 인덱스 및 인덱스 이름을 처리하는 방법을 보여 줍니다.|  
 |columnstore 테이블을 rowstore로 변환합니다.|[CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|일반적으로 이 작업은 필요하지 않지만 이 변환을 수행해야 하는 경우가 있을 수 있습니다. 예제에서는 columnstore를 힙 또는 클러스터형 인덱스로 변환하는 방법을 보여 줍니다.|  
 |Rowstore 테이블에 columnstore 인덱스를 만듭니다.|[CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Rowstore 테이블에는 하나의 columnstore 인덱스가 있을 수 있습니다.  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스에 필터링된 조건이 있을 수 있습니다. 예제에서는 기본 구문을 보여 줍니다.|  
-|운영 분석에 대한 고성능 인덱스를 만듭니다.|[Get started with Columnstore for real time operational analytics(실시간 운영 분석을 위한 Columnstore 시작)](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|OLTP 쿼리에서는 btree 인덱스를 사용하고 분석 쿼리에서는 columnstore 인덱스를 사용하도록 상호 보완적인 columnstore 및 btree 인덱스를 만드는 방법을 설명합니다.|  
-|데이터 웨어하우징용 고성능 columnstore 인덱스를 만듭니다.|[Columnstore 인덱스 - 데이터 웨어하우징](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Columnstore 테이블에서 btree 인덱스를 사용하여 고성능 데이터 웨어하우징 쿼리를 만드는 방법을 설명합니다.|  
-|btree 인덱스를 사용하여 columnstore 테이블에서 기본 키 제약 조건을 적용합니다.|[Columnstore 인덱스 - 데이터 웨어하우징](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|btree 및 columnstore 인덱스를 결합하여 columnstore 인덱스에서 기본 키 제약 조건을 적용하는 방법을 보여 줍니다.|  
-|Columnstore 인덱스를 삭제합니다.|[DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Columnstore 인덱스 삭제에서는 btree 인덱스에서 사용하는 표준 DROP INDEX 구문을 사용합니다. 클러스터형 columnstore 인덱스를 삭제하면 columnstore 테이블이 힙으로 변환됩니다.|  
+|운영 분석에 대한 고성능 인덱스를 만듭니다.|[실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|OLTP 쿼리에서는 B-트리 인덱스를 사용하고 분석 쿼리에서는 columnstore 인덱스를 사용하도록 상호 보완적인 columnstore 및 B-트리 인덱스를 만드는 방법을 설명합니다.|  
+|데이터 웨어하우징용 고성능 columnstore 인덱스를 만듭니다.|[Columnstore 인덱스 - 데이터 웨어하우징](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Columnstore 테이블에서 B-트리 인덱스를 사용하여 고성능 데이터 웨어하우징 쿼리를 만드는 방법을 설명합니다.|  
+|B-트리 인덱스를 사용하여 columnstore 테이블에서 기본 키 제약 조건을 적용합니다.|[Columnstore 인덱스 - 데이터 웨어하우징](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|B-트리 및 columnstore 인덱스를 결합하여 columnstore 인덱스에서 기본 키 제약 조건을 적용하는 방법을 보여 줍니다.|  
+|Columnstore 인덱스를 삭제합니다.|[DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Columnstore 인덱스 삭제에서는 B-트리 인덱스에서 사용하는 표준 DROP INDEX 구문을 사용합니다. 클러스터형 columnstore 인덱스를 삭제하면 columnstore 테이블이 힙으로 변환됩니다.|  
 |Columnstore 인덱스에서 행을 삭제합니다.|[DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|행을 삭제하려면 [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) 를 사용합니다.<br /><br /> **columnstore** 행: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 행을 논리적으로 삭제된 것으로 표시하지만, 인덱스가 다시 작성될 때까지는 행에 대한 물리적 저장소를 회수하지 않습니다.<br /><br /> **deltastore** 행: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 행을 논리적 및 물리적으로 삭제합니다.|  
 |Columnstore 인덱스의 행을 업데이트합니다.|[UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|행을 삭제하려면 [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) 를 사용합니다.<br /><br /> **columnstore** 행:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 행을 논리적으로 삭제됨으로 표시한 다음 업데이트된 행을 deltastore에 삽입합니다.<br /><br /> **deltastore** 행: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 deltastore에 있는 행을 업데이트합니다.|  
 |deltastore의 모든 행을 강제로 columnstore로 이동합니다.|[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Columnstore 인덱스 - 조각 모음](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|REBUILD 옵션과 함께 ALTER INDEX를 사용하면 모든 행이 강제로 columnstore로 이동합니다.|  
@@ -196,19 +195,8 @@ columnstore 인덱스는 데이터를 정렬하지 않지만 메타데이터를 
 ## <a name="next-steps"></a>다음 단계
 빈 columnstore 인덱스를 만들려면
 
-* SQL Server의 경우 [CREATE TABLE(Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 사용
-* SQL Database의 경우 [Azure SQL Database의 CREATE TABLE](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1) 사용
-* SQL Data Warehouse의 경우 [CREATE TABLE(Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md) 사용
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 [CREATE TABLE(Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 [CREATE TABLE(Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)을 참조하세요.
 
-기존 rowstore 힙 또는 btree 인덱스를 클러스터형 columnstore 인덱스로 변환하거나 비클러스터형 columnstore 인덱스를 만들려면 다음을 사용합니다.
-
-* [CREATE COLUMNSTORE INDEX(Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
-
-
-
-
-
-
-
-  
+기존 rowstore 힙 또는 B-트리 인덱스를 클러스터형 columnstore 인덱스로 변환하는 방법 또는 비클러스터형 columnstore 인덱스를 만드는 방법에 대한 자세한 내용은 [CREATE COLUMNSTORE INDEX(TRANSACT-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 참조하세요.
 

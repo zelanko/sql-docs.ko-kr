@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1c80c429cd094c36ec92aa71039e6431e60e73e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65789c30fdb080171e70ab16e81808990a7b636e
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="sql-server-guides"></a>SQL Server 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 [인덱스 디자인 가이드](../relational-databases/sql-server-index-design-guide.md)  
 [메모리 관리 아키텍처 가이드](../relational-databases/memory-management-architecture-guide.md)  
 [페이지 및 익스텐트 아키텍처 가이드](../relational-databases/pages-and-extents-architecture-guide.md)  
-[마이그레이션 후 유효성 검사 및 최적화 가이드](post-migration-validation-and-optimization-guide.md)  
+[마이그레이션 후 유효성 검사 및 최적화 가이드](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [쿼리 처리 아키텍처 가이드](../relational-databases/query-processing-architecture-guide.md)  
 [SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](https://msdn.microsoft.com/library/jj856598)  
 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  

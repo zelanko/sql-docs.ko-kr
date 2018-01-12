@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f761097d3e2b7bac98c8617a723927d132c9f30b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 179a1924a52c5cede301584c7f658abc4a4ef3d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>5-4단원 - 5단원 자습서 패키지 테스트
 런타임에 패키지는 패키지를 만들 때 지정한 원래 디렉터리 이름을 사용하지 않고 런타임에 업데이트된 변수에서 **Directory** 속성 값을 가져옵니다. SSISTutorial.dtsConfig 파일을 사용하여 변수의 값이 채워집니다.  

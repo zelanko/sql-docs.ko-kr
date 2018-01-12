@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7f44e93c4fa879a8717b0af33e6071fcc0d53368
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 71126f3d0625bd33ef66ab27aa645cdc3d0fa170
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>6단원: SSIS에서 프로젝트 배포 모델에 매개 변수 사용
 SQL Server 2012에는 Integration Services 서버에 프로젝트를 배포할 수 있는 새로운 배포 모델이 도입되었습니다. Integration Services 서버에서는 패키지를 관리 및 실행하고 패키지에 대한 런타임 값을 구성할 수 있습니다.  

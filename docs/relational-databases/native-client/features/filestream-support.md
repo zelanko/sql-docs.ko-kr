@@ -3,7 +3,7 @@ title: "FILESTREAM 지원 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine
 ms.service: 
 ms.component: native-client|features
 ms.reviewer: 
@@ -20,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: afe5f7b8e469380682d9927eb537c1fac73807ff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e3f90f397fb7d40f809d94371738fdc02c314e04
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   FILESTREAM은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Windows 파일 시스템에 대한 직접 액세스를 통해 큰 이진 값을 저장하고 액세스하는 방법을 제공합니다. 큰 이진 값은 2GB보다 큰 값입니다. 향상 된 FILESTREAM 지원에 대 한 자세한 내용은 참조 [FILESTREAM &#40; SQL Server &#41; ](../../../relational-databases/blob/filestream-sql-server.md).  
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
  Windows 파일 시스템 API를 사용하여 FILESTREAM 열에 액세스하고 업데이트할 수도 있습니다.  
   
- 자세한 내용은 다음 항목을 참조하십시오.  
+ 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [FILESTREAM 지원 &#40; OLE db&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   

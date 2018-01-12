@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,18 +18,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0c72afb5690be9e69958276c6d7e5b2663ce24a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a8497a8aeed8c0e355eef5913c05c2a22d9d4606
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 디자이너 옵션의 일반 페이지
   **옵션** 대화 상자에 있는 **Integration Services 디자이너** 페이지의 **일반** 페이지를 사용하여 패키지 로드, 표시 및 업그레이드 옵션을 지정할 수 있습니다.  
   
  **에서** 일반 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]페이지를 열려면 **도구** 메뉴에서 **옵션**을 클릭한 다음 **Business Intelligence 디자이너**를 확장하여 **Integration Services 디자이너**를 엽니다.  
   
-## <a name="options"></a>일반  
+## <a name="options"></a>변수  
  **패키지 로드 시 디지털 서명 확인**  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지 로드 시 디지털 서명을 확인하도록 하려면 선택합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 디지털 서명이 있는지, 유효한지 신뢰할 수 있는 원본에서 가져온 것인지 여부만 확인합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 패키지가 서명된 이후 변경되었는지 여부는 확인하지 않습니다.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
  **새 패키지 ID 만들기**  
  [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 패키지를 업그레이드할 때 업그레이드된 버전의 패키지에 대해 새 패키지 ID를 만듭니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보안 개요&#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
  [스크립팅을 사용한 패키지 확장](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   

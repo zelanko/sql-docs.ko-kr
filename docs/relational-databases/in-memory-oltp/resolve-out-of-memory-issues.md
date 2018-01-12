@@ -1,7 +1,7 @@
 ---
 title: "OOM(메모리 부족) 문제 해결 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 838f604df21a87912db8d48f815a73c6af27c8f2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cd2c56037edfc85932f8cb9ef0c7dbe8b5251ef4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.lasthandoff: 11/27/2017
 |[최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](#bkmk_VMs)|가상화된 환경에서 메모리 내 OLTP를 사용할 때의 참고 사항입니다.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> OOM으로 인한 데이터베이스 복원 실패 해결  
- 데이터베이스 복원을 시도하면 "'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 *\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다."라는 오류 메시지가 나타날 수 있습니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다.
+ 데이터베이스 복원을 시도하면 "'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 *\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다."라는 오류 메시지가 나타날 수 있습니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다. 
    
-데이터베이스를 복원할 서버에는 데이터베이스 백업 시 메모리 최적화 테이블에 대해 충분한 사용 가능한 메모리가 있어야 합니다. 그렇지 않으면 데이터베이스가 온라인 상태가 되지 않습니다.  
+데이터베이스를 복원할 서버에는 데이터베이스 백업 시 메모리 최적화 테이블에 대해 충분한 사용 가능한 메모리가 있어야 합니다. 그렇지 않으면 데이터베이스가 온라인 상태가 되지 않으며 주의 대상으로 표시됩니다.  
   
 서버에 충분한 실제 메모리가 있지만 이 오류가 계속 나타나면 다른 프로세스에서 너무 많은 메모리를 사용하거나, 구성 문제로 복원에 사용할 수 있는 메모리가 충분하지 않을 수 있습니다. 이 문제 유형의 경우 다음 조치를 수행하여 복원 작업에 필요한 메모리를 더 많이 확보하세요. 
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/27/2017
     > 서버가 VM에서 실행 중이고 전용 서버가 아니면 MIN_MEMORY_PERCENT 값을 MAX_MEMORY_PERCENT와 동일한 값으로 설정합니다.   
     > 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](#bkmk_VMs) 항목을 참조하세요.  
   
-    ```tsql  
+    ```sql  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/27/2017
 >  서버가 VM에서 실행 중이고 전용 서버가 아니면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 동일한 값으로 설정합니다.   
 > 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](#bkmk_VMs) 항목을 참조하세요.  
   
-```tsql  
+```sql  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -163,7 +163,7 @@ GO
 ### <a name="resolution"></a>해결 방법
 이 문제를 완화하기 위해서는 필요할 때 추가 메모리를 제공하기 위한 동적 메모리에 따라 달라지는 최소 값이 아니라 데이터베이스를 복구 또는 다시 시작하기 위한 충분한 메모리를 데이터베이스에 미리 할당하십시오.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP의 메모리 관리](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [메모리 사용량 모니터링 및 문제 해결](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   

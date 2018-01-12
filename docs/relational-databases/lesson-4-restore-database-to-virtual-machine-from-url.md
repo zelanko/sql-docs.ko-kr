@@ -18,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09801cfab4da23ee4c4b082d649d0ff40649b257
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>4단원: URL에서 가상 컴퓨터로 데이터베이스 복원
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 단원에서는 Azure 가상 머신의 SQL Server 2016 인스턴스로 AdventureWorks2014 데이터베이스를 복원합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 단원에서는 Azure 가상 머신의 SQL Server 2016 인스턴스로 AdventureWorks2014 데이터베이스를 복원합니다.
   
 > [!NOTE]  
 > 이 자습서에서는 간단한 설명을 위해 데이터베이스 백업에 사용한 것과 동일한 컨테이너를 데이터 및 로그 파일에 사용합니다. 프로덕션 환경에서는 여러 컨테이너를 사용할 가능성이 크며, 여러 데이터 파일을 사용하는 경우도 많습니다. SQL Server 2016에서는 큰 데이터베이스를 백업할 때 백업 성능을 향상시키기 위해 여러 blob에 백업을 스트라이핑할 수도 있습니다.  

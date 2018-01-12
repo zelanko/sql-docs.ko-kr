@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f9733831933f547066d4840186a96df34267001c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b03d92d8550c38e6bb6e5048af1d013bfd404b41
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>1-1단원: 새 Integration Services 프로젝트 만들기
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만드는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만드는 것입니다. 이 프로젝트는 데이터 변환 솔루션에서 사용하는 데이터 원본, 데이터 원본 뷰, 패키지 등의 개체에 대한 템플릿을 포함합니다.  

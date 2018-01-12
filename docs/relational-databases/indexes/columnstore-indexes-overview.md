@@ -1,5 +1,5 @@
 ---
-title: "Columnstore 인덱스 - 개요 | Microsoft 문서"
+title: "Columnstore 인덱스 - 개요 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2016
 ms.prod: sql-non-specified
@@ -23,21 +23,20 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7ee09bc377beed53a4af3a43111deeec03830e98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa5fedd940718a69baf8afabcee503a3c1f356e6
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="columnstore-indexes---overview"></a>Columnstore 인덱스 - 개요
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  *columnstore 인덱스* 는 대규모 데이터 웨어하우징 팩트 테이블을 저장하고 쿼리하는 표준입니다. 열 기반 데이터 저장소 및 쿼리 처리를 사용하여 데이터 웨어하우스에서 기존 행 기반 저장소보다 최대 **10배 높은 쿼리 성능** 을 실현하고 압축되지 않은 데이터 크기보다 최대 **10배 높은 데이터 압축** 을 실현합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스는 트랜잭션 워크로드에 대해 고성능 실시간 분석을 실행하는 기능인 운영 분석을 지원합니다.  
+*Columnstore 인덱스*는 대규모 데이터 웨어하우징 팩트 테이블을 저장하고 쿼리하는 표준입니다. 열 기반 데이터 저장소 및 쿼리 처리를 사용하여 데이터 웨어하우스에서 기존 행 기반 저장소보다 최대 **10배 높은 쿼리 성능** 을 실현하고 압축되지 않은 데이터 크기보다 최대 **10배 높은 데이터 압축** 을 실현합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스는 트랜잭션 워크로드에 대해 고성능 실시간 분석을 실행하는 기능인 운영 분석을 지원합니다.  
   
  다음 시나리오로 이동:  
   
--   [데이터 웨어하우스용 Columnstore 인덱스](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
-  
+-   [데이터 웨어하우스용 Columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 -   [Get started with Columnstore for real time operational analytics(실시간 운영 분석을 위한 Columnstore 시작)](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
 ## <a name="what-is-a-columnstore-index"></a>columnstore 인덱스란?  
@@ -50,21 +49,19 @@ ms.lasthandoff: 11/17/2017
  *columnstore* 는 열과 행이 있는 테이블로 논리적으로 구성되고 열 데이터 형식으로 물리적으로 저장되는 데이터입니다.  
   
  rowstore  
- *rowstore* 는 열과 행이 있는 테이블로 논리적으로 구성되고 행 데이터 형식으로 물리적으로 저장되는 데이터입니다. 이 방식은 관계형 테이블 데이터를 저장하는 전통적인 방법이었습니다. SQL Server에서 rowstore는 기본 데이터 저장소 형식이 힙, 클러스터형 인덱스인 테이블 또는 메모리 최적화 테이블을 참조합니다.  
+ *rowstore* 는 열과 행이 있는 테이블로 논리적으로 구성되고 행 데이터 형식으로 물리적으로 저장되는 데이터입니다. 이 방식은 관계형 테이블 데이터를 저장하는 전통적인 방법이었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 rowstore는 기본 데이터 저장소 형식이 힙, 클러스터형 인덱스인 테이블 또는 메모리 최적화 테이블을 참조합니다.  
   
 > [!NOTE]  
->  Columnstore 인덱스에 대한 설명에서는 데이터 저장소에 대한 형식을 강조하기 위해 *rowstore* 및 *columnstore* 라는 용어를 사용합니다.  
+> Columnstore 인덱스에 대한 설명에서는 데이터 저장소에 대한 형식을 강조하기 위해 *rowstore* 및 *columnstore* 라는 용어를 사용합니다.  
   
  행 그룹  
  *행 그룹* 은 columnstore 형식으로 동시에 압축되는 행의 그룹입니다. 열 그룹에는 대개 1,048,576개(행 그룹당 최대 행 수)의 행이 포함됩니다.  
   
  성능과 압축률을 높이기 위해 columnstore 인덱스는 테이블을 여러 행 그룹으로 조각화한 후 각 행 그룹을 열 방식으로 압축합니다. 행 그룹의 행 수는 압축률을 높일 만큼 크고, 메모리 내 작업을 활용할 만큼 작아야 합니다.  
-  
  열 세그먼트  
  *열 세그먼트* 는 행 그룹 내의 데이터 열입니다.  
   
 -   각 행 그룹에는 테이블의 모든 열에 대해 각각 하나의 열 세그먼트가 포함됩니다.  
-  
 -   각 열 세그먼트는 함께 압축되며 실제 미디어에 저장됩니다.  
   
  ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
@@ -121,41 +118,25 @@ ms.lasthandoff: 11/17/2017
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>Rowstore와 Columnstore를 동일한 테이블에서 결합할 수 있습니까?  
  예 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 rowstore 테이블에서 업데이트 가능한 비클러스터형 columnstore 인덱스를 만들 수 있습니다. Columnstore 인덱스는 선택한 열의 복사본을 저장하므로 복사본에 대한 추가 공간이 필요하지만 평균 10배로 압축됩니다. 따라서 columnstore 인덱스에서 분석을 실행하고 이와 동시에 rowstore 인덱스에서 트랜잭션을 실행할 수 있습니다. rowstore 테이블의 데이터가 변경되면 columnstore가 업데이트되므로 두 인덱스 모두 동일한 데이터에 대해 작동합니다.  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 하나의 클러스터형 columnstore 인덱스에서 하나 이상의 비클러스터형 rowstore 인덱스를 사용할 수 있습니다. 따라서 기본 columnstore에서 효율적인 테이블 찾기를 수행할 수 있습니다. 다른 옵션도 사용할 수 있습니다. 예를 들어 rowstore 테이블에서 UNIQUE 제약 조건을 사용하여 기본 키 제약 조건을 적용할 수 있습니다. 고유하지 않은 값은 rowstore 테이블에 삽입하지 못하므로 SQL Server에서 columnstore에 값을 삽입할 수 없습니다.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 하나의 클러스터형 columnstore 인덱스에서 하나 이상의 비클러스터형 rowstore 인덱스를 사용할 수 있습니다. 따라서 기본 columnstore에서 효율적인 테이블 찾기를 수행할 수 있습니다. 다른 옵션도 사용할 수 있습니다. 예를 들어 rowstore 테이블에서 UNIQUE 제약 조건을 사용하여 기본 키 제약 조건을 적용할 수 있습니다. 고유하지 않은 값은 rowstore 테이블에 삽입하지 못하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 columnstore에 값을 삽입할 수 없습니다.  
   
 ## <a name="metadata"></a>메타데이터  
  columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 저장됩니다. columnstore 인덱스에는 키 열이 없습니다.  
+
+|||
+|-|-|  
+|[sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
+|[sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|  
+|[sys.column_store_segments&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
+|[sys.column_store_row_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_operational_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|  
+|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
--   [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
+## <a name="related-tasks"></a>관련 작업  
+ 모든 관계형 테이블은 클러스터형 columnstore 인덱스로 지정하지 않는 한 rowstore를 기본 데이터 형식으로 사용합니다. `WITH CLUSTERED COLUMNSTORE INDEX` 옵션을 지정하지 않으면 `CREATE TABLE`은 rowstore 테이블을 만듭니다.  
   
--   [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
--   [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)  
-  
--   [sys.internal_partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)  
-  
--   [sys.column_store_segments&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
-  
--   [sys.column_store_dictionaries&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
-  
--   [sys.column_store_row_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)  
-  
--   [sys.dm_column_store_object_pool&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_operational_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
-  
-## <a name="related-tasks"></a>관련 태스크  
- 모든 관계형 테이블은 클러스터형 columnstore 인덱스로 지정하지 않는 한 rowstore를 기본 데이터 형식으로 사용합니다. CREATE TABLE은 WITH CLUSTERED COLUMNSTORE INDEX 옵션을 지정하지 않는 한 rowstore 테이블을 만듭니다.  
-  
- CREATE TABLE 문을 사용하여 테이블을 만드는 경우 WITH CLUSTERED COLUMNSTORE INDEX 옵션을 지정하여 테이블을 columnstore로 만들 수 있습니다. Rowstore 테이블이 이미 있는 경우 이를 columnstore로 변환하려면 CREATE COLUMNSTORE INDEX 문을 사용합니다. 예제는 다음을 참조하세요.  
+ CREATE `CREATE TABLE` 문을 사용하여 테이블을 만드는 경우 `WITH CLUSTERED COLUMNSTORE INDEX` 옵션을 지정하여 테이블을 columnstore로 만들 수 있습니다. rowstore 테이블이 이미 있는 경우 이를 columnstore로 변환하려면 `CREATE COLUMNSTORE INDEX` 문을 사용합니다.  
   
 |태스크|참조 항목|참고|  
 |----------|----------------------|-----------|  
@@ -182,7 +163,9 @@ ms.lasthandoff: 11/17/2017
  [Columnstore 인덱스 쿼리 성능](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Get started with Columnstore for real time operational analytics(실시간 운영 분석을 위한 Columnstore 시작)](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [데이터 웨어하우스용 Columnstore 인덱스](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Columnstore 인덱스 조각 모음](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Columnstore 인덱스 조각 모음](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)   
+ [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)   
+ [Columnstore 인덱스 아키텍처](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
   
   
 

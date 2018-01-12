@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e9f7359e19df03dc544211ba3a39041efa0637
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 프로젝트 배포 모델 및 레거시 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
 이 섹션에 설명된 오류 및 SSIS 서비스 계정에 필요한 사용 권한에 대한 자세한 내용은 다음 블로그 게시물을 참조하세요.  
 [System.ComponentModel.Win32Exception: SSIS 프로젝트를 배포하는 동안 클라이언트가 필요한 권한을 가지고 있지 않습니다.](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
-## <a name="deploy-projects-to-integration-services-server"></a>Integration Services 서버에 프로젝트 배포
+## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   현재 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서는 환경을 사용하여 패키지를 관리하고, 패키지를 실행하고, 패키지에 대한 런타임 값을 구성할 수 있습니다.  
   
 > [!NOTE]  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 다음 태스크를 완료합니다.  
   
-1.  SSISDB 카탈로그를 만듭니다(아직 없는 경우). 자세한 내용은 [SSIS 카탈로그](../../integration-services/service/ssis-catalog.md)를 참조하세요.  
+1.  SSISDB 카탈로그를 만듭니다(아직 없는 경우). 자세한 내용은 [SSIS 카탈로그](../../integration-services/catalog/ssis-catalog.md)를 참조하세요.  
   
 2.  **Integration Services 프로젝트 변환 마법사** 를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 아래의 [프로젝트 배포 모델로 프로젝트를 변환하려면](#convert)지침을 참조하세요.  
   
@@ -341,7 +341,7 @@ static void Main()
 > [!IMPORTANT]  
 >  지정된 실행의 경우 패키지는 단일 서버 환경에 포함된 값만으로 실행할 수 있습니다.  
   
- 서버 환경, 환경 참조 및 환경 변수 목록에 대한 뷰를 쿼리할 수 있습니다. 저장 프로시저를 호출하여 환경, 환경 참조 및 환경 변수를 추가, 삭제 및 수정할 수도 있습니다. 자세한 내용은 **SSIS Catalog** 의 [서버 환경, 서버 변수 및 서버 환경 참조](../../integration-services/service/ssis-catalog.md)섹션을 참조하십시오.  
+ 서버 환경, 환경 참조 및 환경 변수 목록에 대한 뷰를 쿼리할 수 있습니다. 저장 프로시저를 호출하여 환경, 환경 참조 및 환경 변수를 추가, 삭제 및 수정할 수도 있습니다. 자세한 내용은 **SSIS Catalog** 의 [서버 환경, 서버 변수 및 서버 환경 참조](../../integration-services/catalog/ssis-catalog.md)섹션을 참조하십시오.  
   
 ### <a name="to-create-and-use-a-server-environment"></a>서버 환경을 만들고 사용하려면  
   
@@ -361,13 +361,13 @@ static void Main()
   
     3.  환경 변수의 **값** 을 입력합니다.  
   
-         환경 변수 이름에 대한 규칙은 **SSIS Catalog** 의 [환경 변수](../../integration-services/service/ssis-catalog.md)섹션을 참조하십시오.  
+         환경 변수 이름에 대한 규칙은 **SSIS Catalog** 의 [환경 변수](../../integration-services/catalog/ssis-catalog.md)섹션을 참조하십시오.  
   
     4.  **중요** 확인란을 선택하거나 선택을 취소하여 변수에 중요한 값이 포함되어 있는지 여부를 나타냅니다.  
   
          **중요**를 선택하면 변수 값이 **값** 필드에 표시되지 않습니다.  
   
-         중요한 값은 SSISDB 카탈로그에서 암호화됩니다. 암호화에 대한 자세한 내용은 [SSIS Catalog](../../integration-services/service/ssis-catalog.md)를 참조하십시오.  
+         중요한 값은 SSISDB 카탈로그에서 암호화됩니다. 암호화에 대한 자세한 내용은 [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md)를 참조하십시오.  
   
 6.  **사용 권한** 페이지에서 다음을 수행하여 선택한 사용자 및 역할에 대해 사용 권한을 허용하거나 거부합니다.  
   
@@ -577,7 +577,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **SQL Server 인증 사용**  
  사용자가 지정한 로그인 이름과 암호를 사용하여 트러스트되지 않은 연결로부터 연결하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 계정이 설정되었는지와 지정한 암호가 이전에 기록한 암호와 일치하는지를 확인하여 연결을 인증합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 로그인 계정이 설정되어 있지 않으면 인증이 실패하고 오류 메시지가 나타납니다.  
   
- **사용자 이름**  
+ **User name**  
  SQL Server 인증을 사용할 경우 사용자 이름을 지정합니다.  
   
  **암호**  
@@ -697,7 +697,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **범위**  
  매개 변수의 범위를 나열합니다.  
   
- **값**  
+ **Value**  
  매개 변수 값을 나열합니다.  
   
  매개 변수 속성을 구성하려면 값 필드 옆에 있는 줄임표 단추를 클릭합니다.  

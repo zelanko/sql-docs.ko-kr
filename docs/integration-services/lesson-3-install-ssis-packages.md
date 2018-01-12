@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b2e2f583b73ea67cdf3dcab23fe93ca00db8b949
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: adc1ce92302b10835ca88454b8a5f0bbdf179d50
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-install-ssis-packages"></a>3단원: SSIS 패키지 설치
 [2단원: SSIS에서 배포 번들 만들기](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)에서는 배포 유틸리티를 빌드하고 다른 컴퓨터에 패키지를 설치해야 하는 항목이 포함된 배포 번들을 만들었습니다. 또한 배포 번들에서 파일 목록을 확인하고 배포 유틸리티를 작성할 때 만들었던 매니페스트 파일의 내용을 검사했습니다.  

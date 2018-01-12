@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f27d9b0172671e11a9bea26db398c6229e458320
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4b596cf9e0df51127ca7acc48113d9a01004c826
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>1-6단원: 조회 변환 추가 및 구성
 원본 파일에서 데이터를 추출하도록 플랫 파일 원본을 구성한 후에 다음 태스크에서는 **CurrencyKey** 및 **DateKey**값을 얻는 데 필요한 조회 변환을 정의합니다. 조회 변환에서는 지정한 입력 열의 데이터를 참조 데이터 집합의 열로 조인하여 조회를 수행합니다. 참조 데이터 집합은 기존 테이블, 기존 뷰, 새 테이블 또는 SQL 문의 결과일 수 있습니다. 이 자습서에서 조회 변환은 OLE DB 연결 관리자를 사용하여 참조 데이터 집합의 원본인 데이터가 포함된 데이터베이스에 연결합니다.  
@@ -61,34 +61,11 @@ ms.lasthandoff: 11/20/2017
     2.  **SQL 쿼리 결과 사용**을 선택하고 다음 SQL 문을 입력하거나 복사합니다.  
   
         ```sql
-        select * from (select * from [dbo].[DimCurrency]) as refTable  
-        where [refTable].[CurrencyAlternateKey] = 'ARS'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'AUD'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'BRL'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'CAD'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'CNY'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'DEM'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'EUR'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'FRF'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'GBP'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'JPY'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'MXN'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'SAR'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'USD'  
-        OR  
-        [refTable].[CurrencyAlternateKey] = 'VEB'  
+        SELECT * FROM [dbo].[DimCurrency]
+        WHERE [CurrencyAlternateKey]
+        IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
+            'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
+            'MXN', 'SAR', 'USD', 'VEB')
         ```  
   
 7.  **열** 페이지에서 다음을 선택합니다.  

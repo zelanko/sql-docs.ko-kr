@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 435147a234c6d6ddc6d1efc09e5b02de4e9e5e4f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e0d051aa94420c8c3aba844f746c88ed9784f4f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-1---copying-the-lesson-3-package"></a>4-1단원 - 3단원 패키지 복사
 이 태스크에서는 3단원에서 만든 Lesson 3.dtsx 패키지의 복사본을 만듭니다. 또는 3단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 3단원 패키지를 프로젝트에 추가한 다음 작업을 수행할 복사본을 만들 수 있습니다. 4단원의 나머지 부분에서 이 새 복사본을 사용합니다.  

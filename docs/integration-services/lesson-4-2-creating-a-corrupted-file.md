@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89cd8b22732914664b8fc870334c3994adc15373
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f00ad52ab0eb775a7934b24cb56400e3235fab55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>4-2단원 - 손상된 파일 만들기
 변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     > 27은 구성 요소의 ID입니다. 이 값은 데이터 흐름을 작성할 때 할당되며 패키지 값과 다를 수 있습니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
 [3단계: 오류 흐름 리디렉션 추가](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   

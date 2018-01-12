@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d546b045520134cd3e429ec0ecf1098a1b8b462e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f467fe7abac22aff8b9f832e879d9b7b229b768c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services(SSIS) 이벤트 처리기
   런타임 시 실행 개체(패키지 및 Foreach 루프, For 루프, 시퀀스 및 태스크 호스트 컨테이너)는 이벤트를 발생시킵니다. 예를 들어 오류가 발생하면 OnError 이벤트가 발생합니다. 이러한 이벤트에 대한 사용자 지정 이벤트 처리기를 만들면 패키지 기능을 확장하고 런타임 시 패키지를 더 쉽게 관리할 수 있습니다. 이벤트 처리기는 다음과 같은 태스크를 수행할 수 있습니다.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  이벤트 처리기에 제어 흐름 항목을 추가하고 제어 흐름 항목 간에 제약 조건을 끌어서 선행 제약 조건을 사용하는 항목을 연결합니다. 자세한 내용은 [Control Flow](../integration-services/control-flow/control-flow.md)을 참조하세요.  
   
-8.  필요에 따라 **데이터 흐름** 탭의 디자인 화면에 데이터 흐름 태스크를 추가하고 이벤트 처리기의 데이터 흐름을 만들 수도 있습니다. 자세한 내용은 [Data Flow](../integration-services/data-flow/data-flow.md)을 참조하세요.  
+8.  필요에 따라 **데이터 흐름** 탭의 디자인 화면에 데이터 흐름 태스크를 추가하고 이벤트 처리기의 데이터 흐름을 만들 수도 있습니다. 자세한 내용은 [Data Flow](../integration-services/data-flow/data-flow.md)을(를) 참조하세요.  
   
 9. **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 패키지를 저장합니다.  
 

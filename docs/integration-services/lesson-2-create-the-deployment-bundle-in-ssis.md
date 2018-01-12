@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cafc9a6455ccc1534a91284e3e443714c48b3ab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 60ff7d6e351b823d482f7fbf037d251a90756d2a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>2단원: SSIS에서 배포 번들 만들기
 [1단원: 배포 번들 작성 준비](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)에서는 Deployment Tutorial이라는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 패키지 및 지원 파일을 이 프로젝트에 추가했으며 패키지에서 구성을 구현했습니다.  

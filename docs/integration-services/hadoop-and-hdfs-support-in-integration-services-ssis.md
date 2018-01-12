@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fcd6ee17bbd88a138f069b8c27bb2808943c943b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2a44be65609f02710630cf8afd1d1052b785b715
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services(SSIS)에서 Hadoop 및 HDFS 지원
   SQL Server 2016 Integration Services(SSIS)에는 Hadoop 및 HDFS 온-프레미스에 대한 지원을 제공하는 다음 구성 요소가 포함됩니다.  

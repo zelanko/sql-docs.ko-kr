@@ -18,34 +18,20 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 388ea24b3ae23533db81025287d41ccdce10efbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 42c1a7168ee509cf343f0ca6cc2ab54b0a468c07
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-primary-keys"></a>기본 키 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [Create Primary Keys](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx)합니다.
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기본 키를 정의할 수 있습니다. 기본 키를 만들면 해당하는 고유 클러스터형 또는 비클러스터형 인덱스가 자동으로 만들어집니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기본 키를 정의할 수 있습니다. 기본 키를 만들면 지정한 내용에 따라 해당하는 고유 클러스터형 또는 비클러스터형 인덱스가 자동으로 만들어집니다.  
   
- **항목 내용**  
-  
--   **시작하기 전에:**  
-  
-     [제한 사항](#Restrictions)  
-  
-     [보안](#Security)  
-  
--   **기본 키를 만들려면:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -55,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  기본 키가 포함된 새 테이블을 만들려면 데이터베이스에서 CREATE TABLE 권한이 필요하고 테이블을 만들려는 스키마에 대한 ALTER 권한이 필요합니다.  
   
  기존 테이블에서 기본 키를 만들려면 해당 테이블에 대한 ALTER 권한이 필요합니다.  
@@ -80,8 +66,8 @@ ms.lasthandoff: 11/17/2017
  복합 키를 정의하는 경우 기본 키의 열 순서는 테이블에 표시되는 열 순서와 일치합니다. 기본 키를 만든 후에 이러한 열 순서를 변경할 수 있습니다. 자세한 내용은 [기본 키 수정](../../relational-databases/tables/modify-primary-keys.md)을 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
-  
-#### <a name="to-create-a-primary-key-in-an-existing-table"></a>기존 테이블에 고유 키를 만들려면  
+
+### <a name="to-create-a-primary-key-in-an-existing-table"></a>기존 테이블에 고유 키를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -89,35 +75,58 @@ ms.lasthandoff: 11/17/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `TransactionID`열에 기본 키를 만듭니다.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER TABLE Production.TransactionHistoryArchive   
     ADD CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID);  
     GO  
-  
     ```  
   
-#### <a name="to-create-a-primary-key-in-a-new-table"></a>새 테이블에 고유 키를 만들려면  
+### <a name="to-create-a-primary-key-in-a-new-table"></a>새 테이블에 고유 키를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 테이블을 만들고 `TransactionID` 열에 고유 키를 정의합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 테이블을 만들고 `TransactionID`열에 고유 키를 정의합니다.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
-       TransactionID int NOT NULL,  
+       TransactionID int IDENTITY (1,1) NOT NULL,  
        CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID)  
     );  
     GO  
-  
     ```  
+
+### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>비클러스터형 인덱스를 사용하여 새 테이블에 기본 키를 만들려면  
   
-     자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [table_constraint&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)를 참조하세요.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-###  <a name="TsqlExample"></a>  
+2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 테이블을 만들고 `CustomerID` 열에 기본 키를, `TransactionID` 열에 클러스터형 인덱스를 정의합니다.  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+    CREATE TABLE Production.TransactionHistoryArchive1  
+    (  
+       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
+       TransactionID int IDENTITY (1,1) NOT NULL,  
+       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)  
+    );  
+    GO  
+
+    -- Now add the clustered index
+    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
+    GO
+    ```  
+
+## <a name="see-also"></a>참고 항목    
+[ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+[table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)    

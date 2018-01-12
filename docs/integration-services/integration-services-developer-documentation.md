@@ -5,10 +5,10 @@ ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f1568b369673d68051ecccf19484f80b6094087
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b35a4d553ebeb0a7aaae3ee2a26cbbc2bf10b950
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 개발자 설명서
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 완전히 다시 작성된 개체 모델이 포함되어 있으며 이러한 개체 모델은 패키지 확장 및 프로그래밍을 보다 쉽고 유연하고 강력하게 해 주는 다양한 기능을 갖도록 향상되었습니다. 개발자는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지의 거의 모든 측면을 확장하고 프로그래밍할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/20/2017
  [Integration Services 오류 및 메시지 참조](../integration-services/integration-services-error-and-message-reference.md)  
  미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 코드와 해당 심볼 이름 및 설명을 나열합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [패키지 배포 문제 해결 도구](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 개발 과정의 패키지 문제 해결을 위해 제공하는 기능 및 도구에 대해 설명합니다.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
 -   www.codeplex.com/MSFTISProdSamples의 CodePlex 예제 - [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkID=131204)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   

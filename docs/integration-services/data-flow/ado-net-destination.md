@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3bd7ded25119de1acc18ded3d2add5de52441399
+ms.sourcegitcommit: d70b1c121c8536f92c90bf90f2e2b126acbc86de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="ado-net-destination"></a>ADO.NET 대상
   ADO.NET 대상은 데이터베이스 테이블이나 뷰를 사용하는 다양한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]호환 데이터베이스로 데이터를 로드합니다. 이 데이터를 기존 테이블이나 뷰에 로드하는 옵션이 제공되거나 새 테이블을 만들고 데이터를 새 테이블에 로드할 수 있습니다.  
@@ -104,10 +104,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  SQL Server 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전에 IDENTITY_INSERT를 활성화하고 그 후에 다시 비활성화해야 합니다. (ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문은 원본 테이블의 명시적 값을 대상 테이블의 ID 열에 삽입되도록 합니다.)  
 >   
->   SET IDENTITY_INSERT 문 및 데이터 로딩을 성공적으로 실행하려면 다음을 수행해야 합니다. 
->       1. SQL 실행 태스크와 ADO NET 대상에 같은 ADO.NET 연결 관리자를 사용합니다. 
->       2. 연결 관리자에서 **RetainSameConnection** 속성 및 **MultipleActiveResultSets** 속성을 True로 설정합니다. 
->       3. ADO.NET 대상에서 **UseBulkInsertWhenPossible** 속성을 False로 설정합니다. 
+>   SET IDENTITY_INSERT 문 및 데이터 로딩을 성공적으로 실행하려면 다음을 수행해야 합니다.  
+>       1. SQL 실행 태스크와 ADO NET 대상에 같은 ADO.NET 연결 관리자를 사용합니다.  
+>       2. 연결 관리자에서 **RetainSameConnection** 속성 및 **MultipleActiveResultSets** 속성을 True로 설정합니다.  
+>       3. ADO.NET 대상에서 **UseBulkInsertWhenPossible** 속성을 False로 설정합니다.   
 >
 >  자세한 내용은 [SET IDENTITY_INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 및 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)를 참조하세요.  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **ADO NET 대상 편집기**에서 **매핑**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 입력 열을 대상 열에 매핑합니다.  
   
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **ADO NET 대상 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **입력 또는 출력**  
  입력 이름을 표시합니다.  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **잘림**  
  사용되지 않습니다.  
   
- **Description**  
+ **설명**  
  작업에 대한 설명을 표시합니다.  
   
  **이 값을 선택한 셀에 설정**  

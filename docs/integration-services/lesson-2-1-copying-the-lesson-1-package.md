@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc1fd5b193fa9b9a2da8931ad290b7f2612bd76f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3656d4c9647c12e8d824b59956b114098270751e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>2-1단원 - 1단원 패키지 복사
 이 태스크에서는 1단원에서 만든 Lesson 1.dtsx 패키지의 복사본을 만듭니다. 1단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 1단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 2단원의 나머지 부분에서 이 새 복사본을 사용합니다.  

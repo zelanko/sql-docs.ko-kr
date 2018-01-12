@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5de86bfa68d281e79f77b9578eff2385f20c0958
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f097ece3e0560b749197be6bb0111d2c7edad711
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>FROM 또는 하위 쿼리를 사용하여 UPDATE 구현
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
   
   
   
-  
+   ```
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
-  
+   ```
   
   
 
@@ -54,13 +54,13 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
   
   
   
-
+ ```
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
     -----------------------------  
-    <a name="---table-and-table-type"></a>-- Table and table type
+    -- Table and table type
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -68,7 +68,7 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
         Id           INT        NOT NULL  PRIMARY KEY NONCLUSTERED,  
         Column2      INT        NOT NULL,  
         LastUpdated  DATETIME2  NOT NULL  DEFAULT (SYSDATETIME())  
-    ).  
+    )  
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
   
@@ -79,22 +79,23 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
         
         RowID    INT NOT  NULL  IDENTITY,  
         INDEX ix_RowID HASH (RowID) WITH (BUCKET_COUNT=1024)
-    ).   
+    )   
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
     ----------------------------- 
-    <a name="---trigger-that-contains-the-workaround-for-update-with-from"></a>-- trigger that contains the workaround for UPDATE with FROM 
+    -- trigger that contains the workaround for UPDATE with FROM 
     -----------------------------  
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
         WITH NATIVE_COMPILATION, SCHEMABINDING  
         AFTER UPDATE  
-    AS BEGIN ATOMIC WITH  
+    AS 
+    BEGIN ATOMIC WITH  
         (  
         TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
         LANGUAGE = N'us_english'  
-        ).  
+        )  
         
       DECLARE @tabvar1 dbo.Type1;  
     
@@ -106,7 +107,7 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
           @max INT = SCOPE_IDENTITY();  
     
       ---- Loop as a workaround to simulate a cursor.
-    ---- Iterate over the rows in the memory-optimized table  
+      ---- Iterate over the rows in the memory-optimized table  
       ----   variable and perform an update for each row.  
     
       WHILE @i <= @max  
@@ -124,7 +125,7 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
     END  
     go  
     -----------------------------  
-    <a name="---test-to-verify-functionality"></a>-- Test to verify functionality
+    -- Test to verify functionality
     -----------------------------  
   
     SET NOCOUNT ON;  
@@ -162,4 +163,4 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
     ****/  
   
   
-  
+ ```

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d1e14ed63694a7b5dc320f062de85c73c843883
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9d3bbb70503d86358362e78809f9f51408309b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>1-7단원: OLE DB 대상 추가 및 구성
 이제 패키지는 플랫 파일 원본에서 데이터를 추출하여 대상과 호환되는 형식으로 이 데이터를 변환할 수 있습니다. 다음 태스크에서는 변환된 데이터를 실제로 대상에 로드합니다. 데이터를 로드하려면 데이터 흐름에 OLE DB 대상을 추가해야 합니다. OLE DB 대상은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스에 데이터를 로드할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [OLE DB 대상](../integration-services/data-flow/ole-db-destination.md)  
   
   

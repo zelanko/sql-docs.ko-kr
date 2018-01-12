@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa344530396b13defc44680a1232a3d6a1c39b42
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 17278022f78c04425638e87328234fbc3b0df3a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>3-3단원 - 3단원 자습서 패키지 테스트
 이 태스크에서는 Lesson 3.dtsx 패키지를 실행합니다. 패키지를 실행하면 이벤트 로그 창에 로그 파일에 기록된 로그 항목이 나열됩니다. 패키지 실행을 끝낸 후 로그 공급자가 생성한 로그 파일 내용을 확인합니다.  

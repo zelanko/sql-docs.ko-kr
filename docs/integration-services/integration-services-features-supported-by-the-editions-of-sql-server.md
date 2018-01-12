@@ -5,7 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89bf032a15857d8716fd19def326256862f4d9e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 버전에서 지원하는 Integration Services 기능
  이 항목은 다른 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]버전에서 지원되는 SSIS(SQL Server Integration Services) 기능에 대한 세부 정보를 제공합니다.  
@@ -37,11 +37,11 @@ ms.lasthandoff: 11/20/2017
 
 SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있습니다.  
     
-> [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+> [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
 ## <a name="ISNew"></a>SQL Server 2017의 새로운 Integration Services 기능
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out 마스터|예|||||
 |Scale Out 작업자|예|예 <sup>1</sup>|TBD|TBD|TBD|
@@ -53,13 +53,13 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 
 ## <a name="IEWiz"></a> SQL Server 가져오기 및 내보내기 마법사
 
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |SQL Server 가져오기 및 내보내기 마법사|예|예|예|예|예|  
 
 ## <a name="IS"></a> Integration Services  
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |기본 제공 데이터 원본 커넥터|예|예|||| 
 |기본 제공 태스크 및 변환|예|예||||  
@@ -70,7 +70,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 
 ## <a name="ISAA"></a> Integration Services - 고급 원본 및 대상  
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Attunity에 의한 고성능 Oracle 원본 및 대상|예|||||  
 |Attunity에 의한 고성능 Teradata 원본 및 대상|예|||||  
@@ -81,7 +81,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
   
 ## <a name="ISAT"></a> Integration Services - 고급 작업 및 변환  
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Attunity의 변경 데이터 캡처 구성 요소 <sup>1</sup>|예|||||  
 |데이터 마이닝 쿼리 변환|예|||||  

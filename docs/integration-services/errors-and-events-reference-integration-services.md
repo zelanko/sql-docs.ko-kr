@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1924900d1e4237f49424808a71f40f61d769b2d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4076635be876b3ad472f6a7ac63500de9349eb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-events-reference-integration-services"></a>오류 및 이벤트 참조(Integration Services)
   설명서의 이 섹션에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]와 관련된 몇 가지 오류와 이벤트에 대한 정보가 포함되어 있습니다. 또한 오류 메시지의 원인 및 해결 방법 정보도 포함되어 있습니다.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
 |SQLISService_273|구성 파일을 읽을 수 없거나 구성 파일이 유효하지 않음을 나타냅니다.|  
 |SQLISService_274|구성 파일의 위치가 포함된 레지스트리 항목이 없거나 비어 있음을 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../integration-services/integration-services-error-and-message-reference.md)  
   
   

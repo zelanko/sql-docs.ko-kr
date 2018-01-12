@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b955ca40730e07da0b0532ee42b0820116ad14f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c10eafdd991210ceff584c215efc9426446bb40
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-editor"></a>고급 편집기
   **고급 편집기** 대화 상자를 사용하여 선택한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체의 속성을 구성할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  구성 요소에 따라 다른 속성이 표시됩니다. **고급 편집기**에 표시될 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Integration Services 변환](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../integration-services/integration-services-error-and-message-reference.md)  
   
   

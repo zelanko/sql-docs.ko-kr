@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a50727ec3560bf2d5f0cef41c13be050026366df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e9500bdeffd9c7e9e9480f30a87e1678074cc57
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
 ## <a name="install-localdb"></a>LocalDB 설치  
  설치 마법사를 통해 또는 SqlLocalDB.msi 프로그램을 사용하여 **LocalDB** 를 설치합니다. **LocalDB** 는 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]설치 시 옵션 항목입니다. 
  
-설치 중에 **기능 선택/공유 기능** 페이지에서 **LocalDB** 를 선택합니다. 각 주요 **버전에 대해** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이진 파일을 하나만 설치할 수 있습니다. 여러 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스를 시작할 수 있으며, 이러한 프로세스에는 모두 동일한 이진 파일이 사용됩니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] LocalDB **로 시작된** 인스턴스는 다음과 동일한 제한 사항을 갖습니다.: [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+설치 중에 **기능 선택/공유 기능** 페이지에서 **LocalDB** 를 선택합니다. 각 주요 **버전에 대해** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이진 파일을 하나만 설치할 수 있습니다. 여러 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스를 시작할 수 있으며, 이러한 프로세스에는 모두 동일한 이진 파일이 사용됩니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]LocalDB**로 시작된**  인스턴스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]과(와) 동일한 제한 사항을 갖습니다.   
 
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 인스턴스는 **SqlLocalDB.exe** 유틸리티를 사용하여 관리됩니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** LocalDB [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 사용해야 합니다. 
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  **LocalDB** 설치 프로그램은 SqlLocalDB.msi 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 **LocalDB** 는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  
   
  응용 프로그램에 **LocalDB**를 포함하는 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설명서 [로컬 데이터 개요](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [연습: SQL Server LocalDB 데이터베이스 만들기](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) 및 [연습: SQL Server LocalDB 데이터베이스의 데이터에 연결(Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)을 참조하세요.  
@@ -62,7 +62,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
   
  **LocalDB** 의 인스턴스 데이터 정렬은 SQL_Latin1_General_CP1_CI_AS로 설정되며 변경할 수 없습니다. 데이터베이스 수준, 열 수준 및 식 수준 데이터 정렬은 일반적으로 지원됩니다. 포함된 데이터베이스는 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)에 정의된 메타데이터 및 tempdb 데이터 정렬 규칙을 따릅니다.  
   
-### <a name="restrictions"></a>제한 사항  
+### <a name="restrictions"></a>Restrictions  
  **LocalDB** 는 병합 복제 구독자일 수 없습니다.  
   
  **LocalDB** 는 FILESTREAM을 지원하지 않습니다.  
@@ -109,11 +109,11 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|이름|"LocalDBApp1"|  
-|버전|\<현재 버전>|  
+|속성|"LocalDBApp1"|  
+|버전 옵션|\<현재 버전>|  
 |공유 이름|""|  
 |소유자|"\<Windows 사용자>"|  
-|자동 만들기|아니요|  
+|자동 만들기|아니오|  
 |State|실행|  
 |마지막 시작 시간|\<날짜 및 시간>|  
 |인스턴스 파이프 이름|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b0a714de788a94028320999df48fad41c393df37
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2c5aed369c1d1fc9300a3a746a821f8550c4c9be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>2-3단원 - 플랫 파일 연결 관리자 수정
 이 태스크에서는 1단원에서 만들어 구성한 플랫 파일 연결 관리자를 수정합니다. 처음 만든 플랫 파일 연결 관리자는 파일 하나를 정적으로 로드하도록 구성되어 있습니다. 플랫 파일 연결 관리자를 사용하여 반복적으로 파일을 로드하려면 런타임에 로드할 파일의 경로를 포함하는 사용자 정의 변수 `User:varFileName`을 허용하도록 연결 관리자의 ConnectionString 속성을 수정해야 합니다.  

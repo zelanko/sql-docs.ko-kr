@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05993c2ce383b65938712557cd82db47aaaf28bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc82c95d6bed2f0479a576d2cab04a24f4ab2176
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-indexes-and-constraints"></a>인덱스 및 제약 조건 활성화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -75,10 +75,12 @@ ms.lasthandoff: 11/17/2017
     |ALTER INDEX REBUILD|동작이 실패합니다.|동작이 성공합니다.|  
     |DROP INDEX|동작이 성공합니다.|동작이 성공합니다.|  
     |CREATE INDEX WITH DROP_EXISTING|동작이 실패합니다.|동작이 성공합니다.|  
-  
+
+-   사용되지 않는 압축된 비클러스터형 인덱스를 다시 빌드할 때 data_compression은 기본적으로 'none'으로 설정됩니다. 다시 말해서 인덱스가 압축되지 않습니다. 비클러스터형 인덱스를 사용하지 않도록 설정할 경우 압축 설정 메타데이터가 손실되기 때문입니다. 이 문제를 해결하려면 rebuild 문에서 명시적 데이터 압축을 지정해야 합니다.
+
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. DBCC DBREINDEX를 사용하는 경우 사용자는 테이블의 소유자이거나 **sysadmin** 고정 서버 역할 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

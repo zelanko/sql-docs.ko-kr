@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69c55653dd8044bc2236025457fa3b5ae180cbed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>1-4단원 - 패키지 구성 추가
 이 태스크에서는 각 패키지에 구성을 추가합니다. 구성은 런타임 시 패키지 속성 및 패키지 개체의 값을 업데이트합니다.  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [5단계: 업데이트된 패키지 테스트](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [패키지 구성](../integration-services/packages/package-configurations.md)  
 [패키지 구성 만들기](../integration-services/packages/create-package-configurations.md)  
 [패키지에서 사용되는 파일 액세스](../integration-services/security/security-overview-integration-services.md#files)  

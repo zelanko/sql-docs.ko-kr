@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da96393429cf37224ef609b1ed1de52f41704015
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b42b1455fd7505872c506057bb517559fcf00b85
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>1-2단원 - 배포 프로젝트 만들기
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 배포 가능한 단위는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트입니다. 패키지를 배포할 수 있으려면 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 모든 패키지 및 패키지와 함께 배포할 모든 보조 파일을 해당 프로젝트에 추가해야 합니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [3단계: 패키지 및 기타 파일 추가](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Integration Services&#40;SSIS&#41; 프로젝트](~/integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

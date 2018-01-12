@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: af4b72d2ec634d8ae71a607c6a7c4d6b17254599
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e4f1911bef4050d55b388bfa08e359af4e1862a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 도움말
   이 섹션에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW의 세 가지 구성 요소에 대한 F1 도움말 항목이 포함되어 있습니다. 마법사 페이지와 대화 상자에서 F1 키를 누르거나 도움말을 클릭하여 사용자 인터페이스에서 이러한 항목을 볼 수도 있습니다.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [InfoPackage 만들기](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Microsoft Connector for SAP BW 구성 요소](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

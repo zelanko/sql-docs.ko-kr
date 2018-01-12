@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-copy-of-existing-package"></a>기존 패키지의 복사본 추가
   **기존 패키지의 복사본 추가** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 파일 시스템 또는 SSIS 패키지 저장소에 저장된 패키지의 복사본을 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **패키지 위치**  
  패키지를 복사할 저장소 위치 유형을 선택합니다.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **인증 유형**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 복사하는 경우 인증 유형을 선택합니다.  
   
- **사용자 이름**  
+ **User name**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름을 입력합니다.  
   
  **암호**  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  **패키지 경로**  
  패키지 경로를 입력하거나 찾아보기 단추 **(…)** 를 클릭한 다음 복사할 패키지를 찾습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [패키지 복사본 저장](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [패키지 저장](../integration-services/save-packages.md)   
  [Integration Services 서비스&#40;SSIS 서비스&#41;](../integration-services/service/integration-services-service-ssis-service.md)

@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16137e7b3fe1880592afa025f324e614332d87d3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e8dc5d5ef9aaebced036db796e1518bcf929dfef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>PowerShell을 사용하여 SSIS 패키지 실행
 이 빠른 시작 자습서에서는 PowerShell 스크립트를 사용하여 데이터베이스 서버에 연결하고 SSIS 패키지를 실행하는 방법을 보여 줍니다.
@@ -71,6 +71,6 @@ Write-Host "Done."
 - 패키지를 실행하는 다른 방법을 고려합니다.
     - [SSMS를 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-ssms.md)
     - [Transact-SQL(SSMS)을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-tsql-ssms.md)
-    - [Transact-SQL(VS 코드)을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-tsql-vscode.md)
+    - [Transact-SQL(VS Code)을 사용하여 SSIS 패키지 실행](ssis-quickstart-run-tsql-vscode.md)
     - [명령 프롬프트에서 SSIS 패키지 실행](./ssis-quickstart-run-cmdline.md)
     - [C#을 사용하여 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md) 

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86ca875378afdd32cf509767eb3c02dc3ff0154d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
   SQL 쿼리는 SQL 실행 태스크, OLE DB 원본, OLE DB 대상 및 조회 변환에서 사용될 수 있습니다. SQL 실행 태스크에서 SQL 문은 데이터베이스 개체 및 데이터를 생성, 업데이트 및 삭제할 수 있으며 저장 프로시저를 실행하고 SELECT 문을 수행할 수 있습니다. OLE DB 원본 및 조회 변환에서 일반적으로 SQL 문은 SELECT 문 또는 EXEC 문입니다. 후자는 결과 집합을 반환하는 저장 프로시저를 가장 자주 실행합니다.  
@@ -91,11 +91,11 @@ ms.lasthandoff: 11/20/2017
   
  조회 및 유사 항목 조회 변환에서도 매개 변수와 반환 코드에 변수를 사용할 수 있습니다. OLE DB 원본에 대한 정보는 이러한 두 변환에도 적용됩니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **도구 모음**  
  도구 모음을 사용하여 데이터 집합을 관리하고, 표시할 창을 선택하고, 쿼리 함수를 제어할 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**다이어그램 창 표시/숨기기**|**다이어그램** 창을 표시하거나 숨깁니다.|  
 |**표 형태 창 표시/숨기기**|**표 형태** 창을 표시하거나 숨깁니다.|  

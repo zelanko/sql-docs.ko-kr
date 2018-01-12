@@ -1,9 +1,9 @@
 ---
 title: "SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/28/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7ab22071b1f85d14e1a1e01f50a2924af702334e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 72f038b58f16dfaebb7ca64569afe76757ff3540
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Data Tools(SSDT)는 관계형 데이터베이스, Analysis Services 모델, Reporting Services 보고서, Integration Services 패키지 등의 SQL Server 콘텐츠 형식을 작성하기 위한 프로젝트 템플릿 및 디자인 화면을 제공합니다.  
@@ -39,6 +39,7 @@ SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-serve
 
 |릴리스| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.3|[VS2015 17.3용 SSDT](https://go.microsoft.com/fwlink/?linkid=858660)| \* 해당 사항 없음|
 |17.2|[VS2015 17.2용 SSDT](https://go.microsoft.com/fwlink/?linkid=852922)| \* 해당 사항 없음|
 |17.1|[VS2015 17.1용 SSDT](https://go.microsoft.com/fwlink/?linkid=849393)| \* 해당 사항 없음|
 |17.0|[VS2015 17.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=846626)| \* 해당 사항 없음|
@@ -76,7 +77,7 @@ BIDS(Business Intelligence Development Studio)는 SQL Server 설치 프로그램
   
 SQL Server 2012 또는 2014의 경우 **Visual Studio 2012용 SSDT-BI** 또는 **SSDT-BI f또는 Visual Studio 2013**등과 같은 다양한 이름으로 출시되었습니다. 두 버전은 Visual Studio 버전만 다릅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server Data Tools 다운로드 &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [SQL Server Management Studio 다운로드 &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [SQL 도구 및 유틸리티](../tools/overview-sql-tools.md)

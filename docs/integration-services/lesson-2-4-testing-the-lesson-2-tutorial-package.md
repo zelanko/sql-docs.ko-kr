@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 26912319fa6a922f0ef3fdc8ac3df090f01accdc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4cb56da4115cb662b5287b7474aef7dc375bf860
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>2-4단원 - 2단원 자습서 패키지 테스트
 Foreach 루프 컨테이너와 플랫 파일 연결 관리자가 이제 구성되었으므로 2단원 패키지에서는 Sample Data 폴더에 있는 14개의 플랫 파일을 반복 처리할 수 있습니다. 지정한 파일 이름 기준과 일치하는 파일 이름을 찾을 때마다 Foreach 루프 컨테이너는 사용자 정의 변수를 해당 파일 이름으로 채웁니다. 이에 따라 이 변수가 플랫 파일 연결 관리자의 ConnectionString 속성을 업데이트하면 새 플랫 파일에 연결됩니다. Foreach 루프 컨테이너는 폴더에 있는 다음 파일에 연결하기 전에 새 플랫 파일의 데이터에 대해 수정되지 않은 데이터 흐름 태스크를 실행합니다.  
@@ -54,7 +54,7 @@ Foreach 루프 컨테이너와 플랫 파일 연결 관리자가 이제 구성�
 ## <a name="next-lesson"></a>다음 단원  
 [5단원: 패키지 배포 모델을 위한 SSIS 패키지 구성 추가](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [프로젝트 및 패키지 실행](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

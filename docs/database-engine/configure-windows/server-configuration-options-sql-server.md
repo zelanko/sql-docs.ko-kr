@@ -35,11 +35,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 740339a82c745fe610fc47a9a33b45483f587a39
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8b89940bf96eb5cf4b6a9d5f4555891babe138cc
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="server-configuration-options-sql-server"></a>서버 구성 옵션(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
 -   SC = 자체 구성 옵션입니다.  
   
-    |구성 옵션|최소값|최대값|기본값|  
+    |구성 옵션|최소값|최대값|Default|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)). |0|1|0|  
+    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
     |[contained database authentication](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
     |[default trace enabled](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|0|1|0|  
+    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
     |ft crawl bandwidth(max), [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A) 참조|0|32767|100|  
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/20/2017
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 권장 최대값은 1024이고 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 권장 최대값은 2048입니다. 32비트 운영 체제에서 제공되었던 마지막 버전은[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 입니다.|0<br /><br /> 0을 선택하면 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (256+(*\<프로세서 수>* -4) * 8) 수식을 사용하고, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 32비트의 2배를 사용하여 프로세서 수에 따라 최대 작업자 스레드 수가 자동으로 구성됩니다. 32비트 운영 체제에서 제공되었던 마지막 버전은[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 입니다.|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 1024, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 2048을 설정하는 것이 좋습니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|0<br /><br /> 0을 선택하면 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (256+(*\<프로세서 수>* -4) * 8) 수식을 사용하고, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (512 + (*\<프로세서 수>* - 4) * 8) 수식을 사용하여 프로세서 수에 따라 최대 작업자 스레드 수가 자동으로 구성됩니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/20/2017
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, 구식)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[PolyBase Hadoop 및 Azure Blob Storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|0|7|0|   
+    |[PolyBase Hadoop 및 Azure Blob Storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|7|0|   
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
@@ -152,7 +152,7 @@ ms.lasthandoff: 11/20/2017
     |[user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
  [DBCC FREEPROCCACHE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)

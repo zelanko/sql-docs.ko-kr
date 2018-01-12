@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 26fe270767369de22f7a5b87f34a92fce2b1c2bd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f68db5304f6093bcebbb768d5ec13d14930dec57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 만들기
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 다음 방법 중 하나를 사용하여 새 패키지를 만들 수 있습니다.  

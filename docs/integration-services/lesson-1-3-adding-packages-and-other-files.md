@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43f5f8e693aac51bee20a4ca7b29a5cb0676cf92
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e5c5c217d5449c0c934636b983f48235724bb027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>1-3단원 - 패키지 및 기타 파일 추가
 이 태스크에서는 기존 패키지, 개별 패키지를 지원하는 보조 파일 및 추가 정보를 이전 태스크에서 만든 Deployment Tutorial 프로젝트에 추가합니다. 예를 들어 패키지에 대한 데이터가 포함된 XML 데이터 파일과 프로젝트의 모든 패키지에 대한 추가 정보를 제공하는 텍스트 파일을 추가합니다.  

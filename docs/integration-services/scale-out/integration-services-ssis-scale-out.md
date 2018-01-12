@@ -1,7 +1,8 @@
 ---
 title: SSIS(SQL Server Integration Services) Scale Out | Microsoft Docs
+ms.description: This article provides an overview of the SQL Server Integration Services (SSIS) Scale Out feature, which provides high-performance execution of SSIS packages
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
@@ -15,20 +16,39 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0277d312ce4dab14e7ba64529e3eb2251a0d2d02
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3dc41da860382173076afafd768de09bd20366e
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services(SSIS) 규모 확장
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 규모 확장에서는 여러 컴퓨터에 실행을 배포하여 고성능 패키지 실행을 제공합니다. SQL Server Management Studio에서 여러 패키지 실행에 대한 요청을 제출할 수 있습니다. 이러한 패키지는 규모 확장 모드에서 병렬로 실행됩니다.  
+SSIS(SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) Scale Out에서는 여러 컴퓨터에 패키지 실행을 배포하여 SSIS 패키지의 고성능 실행을 제공합니다. Scale Out을 설정한 후에 SSMS(SQL Server Management Studio)에서 스케일 아웃 모드로 동시에 여러 패키지를 실행할 수 있습니다.
 
-[!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out은 하나의 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 마스터와 여러 개의 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 작업자로 구성됩니다. 규모 확장 마스터는 규모 확장 관리를 담당하며 사용자로부터 패키지 실행 요청을 받습니다. 규모 확장 작업자는 규모 확장 마스터에서 실행 작업을 끌어오고 패키지 실행 작업을 수행합니다. 자세한 내용은 [규모 확장 마스터](integration-services-ssis-scale-out-master.md), [규모 확장 작업자](integration-services-ssis-scale-out-worker.md)를 참조하세요.
+## <a name="components"></a>구성 요소
+[!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out은 하나의 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 마스터와 여러 개의 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 작업자로 구성됩니다.
 
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out은 한 대의 컴퓨터에서 실행되며, Scale Out 마스터와 Scale Out 작업자는 해당 컴퓨터에 함께 설치됩니다. 또한 규모 확장은 여러 컴퓨터에서 실행되며, 각 규모 확장 작업자는 다른 컴퓨터에 있습니다.
-- [연습: Integration Services 규모 확장 설치](walkthrough-set-up-integration-services-scale-out.md)
+-   규모 확장 마스터는 규모 확장 관리를 담당하며 사용자로부터 패키지 실행 요청을 받습니다. 자세한 내용은 [Scale Out 마스터](integration-services-ssis-scale-out-master.md)를 참조하세요.
 
-규모 확장은 SSISDB 카탈로그에서 병렬로 여러 패키지 실행을 지원합니다. 자세한 내용은 [규모 확장 시 패키지 실행](run-packages-in-integration-services-ssis-scale-out.md)을 참조하세요.
+-   Scale Out 작업자는 Scale Out 마스터에서 실행 작업을 끌어오고 패키지를 실행합니다. 자세한 내용은 [Scale Out 작업자](integration-services-ssis-scale-out-worker.md)를 참조하세요.
+
+## <a name="configuration-options"></a>구성 옵션
+다음과 같은 구성으로 Scale Out을 설정할 수 있습니다.
+
+-   **단일 컴퓨터에서** 여기서는 Scale Out 마스터 및 Scale Out 작업자를 같은 컴퓨터에서 나란히 실행합니다.
+
+-   **여러 컴퓨터에서** 여기서는 다른 컴퓨터에 각 Scale Out 작업자가 배치됩니다.
+
+## <a name="what-you-can-do"></a>수행 가능한 작업
+Scale Out을 설정한 후에 다음과 같은 작업을 수행할 수 있습니다.
+
+-   동시에 SSISDB 카탈로그에 배포된 여러 패키지를 실행합니다. 자세한 내용은 [Scale Out으로 패키지 실행](run-packages-in-integration-services-ssis-scale-out.md)을 참조하세요.
+
+-   Scale Out 관리자 앱에서 Scale Out 토폴로지를 관리합니다. 자세한 내용은 [Integration Services Scale Out 관리자](integration-services-ssis-scale-out-manager.md)를 참조하세요.
+
+## <a name="next-steps"></a>다음 단계
+-   [단일 컴퓨터에서 Integration Services(SSIS) Scale Out 시작](get-started-with-ssis-scale-out-onebox.md)
+
+-   [연습: Integration Services 규모 확장 설치](walkthrough-set-up-integration-services-scale-out.md)

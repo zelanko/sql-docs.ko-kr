@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2850e4cff0eb342e04c9770aefdf2d9914a941cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48d9546f2b4d7a743b193125ef64deb6b8831c9d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-packages"></a>패키지 삭제
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 파일 시스템에 저장된 패키지를 삭제할 수 있습니다. 패키지를 삭제하면 패키지가 영구적으로 삭제되어 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트로 복원할 수 없습니다.  

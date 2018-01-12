@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8e55988e5e55671b5ff97b80916e3c368d51dd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>1-2단원: 플랫 파일 연결 관리자 추가 및 구성
 이 태스크에서는 플랫 파일 연결 관리자를 방금 작성한 패키지에 추가합니다. 플랫 파일 연결 관리자를 통해 패키지가 플랫 파일에서 데이터를 추출할 수 있습니다. 플랫 파일 연결 관리자를 사용하여 패키지가 플랫 파일에서 데이터를 추출할 때 적용할 열 구분 기호를 포함한 파일 형식, 파일 이름과 위치 및 로캘과 코드 페이지를 지정할 수 있습니다. 또한 개별 열의 데이터 형식을 수동으로 지정하거나 **열 유형 제안** 대화 상자를 사용하여 추출된 데이터 열을 자동으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 데이터 형식에 매핑할 수 있습니다.  
@@ -92,10 +92,10 @@ ms.lasthandoff: 11/20/2017
   
     |플랫 파일 열|제안 형식|대상 열|대상 유형|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|날짜|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
     **CurrencyID** 열에 제안된 데이터 형식은 대상 테이블의 필드 데이터 형식과 호환되지 않습니다. `DimCurrency.CurrencyAlternateKey` 데이터 형식은 nchar (3)이므로 **CurrencyID** 를 문자열 [DT_STR]에서 문자열 [DT_WSTR]로 변경해야 합니다. 또한 `DimDate.FullDateAlternateKey` 필드는 Date 데이터 형식으로 정의되므로 **CurrencyDate** 를 날짜 [DT_Date]에서 데이터베이스 날짜 [DT_DBDATE]로 변경해야 합니다.  
   

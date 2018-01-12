@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 953fccc13a0d3ef9d34cfe84e5ed50675eeb801b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
   패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  

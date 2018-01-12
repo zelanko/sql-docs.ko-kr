@@ -29,16 +29,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9c2a1063b982ab1f3b8203f76adc59e945da12b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4ee9dbf85cc5fbe25b4547c1152ff1139ec9c6fd
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 서비스(SSIS 서비스)
   이 섹션의 항목에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. 이 서비스는 Integration Services 패키지를 생성, 저장 및 실행하는 데 필요하지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 는 이전 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 버전과의 호환성을 위한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]서비스를 지원합니다.  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 프로젝트 배포 모델을 사용하여 **서버에 배포한 프로젝트의** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스에 개체, 설정 및 작업 데이터를 저장합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스 엔진의 인스턴스인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버는 데이터베이스를 호스팅합니다. 데이터베이스에 대한 자세한 내용은 [SSIS 카탈로그](../../integration-services/service/ssis-catalog.md)를 참조하세요. 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포하는 방법에 대한 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 프로젝트 배포 모델을 사용하여 **서버에 배포한 프로젝트의** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스에 개체, 설정 및 작업 데이터를 저장합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스 엔진의 인스턴스인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버는 데이터베이스를 호스팅합니다. 데이터베이스에 대한 자세한 내용은 [SSIS 카탈로그](../../integration-services/catalog/ssis-catalog.md)를 참조하세요. 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포하는 방법에 대한 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
   
 ## <a name="management-capabilities"></a>관리 기능  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 관리를 위한 Windows 서비스입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서만 사용할 수 있습니다.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
  MMC(Microsoft Management Console) 스냅인인 SQL Server 구성 관리자나 SQL Server 서비스 중 하나를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 관리할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 패키지를 관리하려면 먼저 서비스를 시작해야 합니다.  
   
- 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 와 동시에 설치되는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]인스턴스의 msdb 데이터베이스에 있는 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 동시에 설치되지 않는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 기본 인스턴스에 있는 msdb 데이터베이스에 저장된 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 명명된 인스턴스나 원격 인스턴스 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스에 저장된 패키지를 관리하려면 서비스의 구성 파일을 수정해야 합니다.
+ 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]와 동시에 설치되는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 인스턴스의 msdb 데이터베이스에 있는 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 동시에 설치되지 않는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 기본 인스턴스에 있는 msdb 데이터베이스에 저장된 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 명명된 인스턴스나 원격 인스턴스 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스에 저장된 패키지를 관리하려면 서비스의 구성 파일을 수정해야 합니다.
   
  기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 서비스를 중지할 때 패키지 실행을 중지하도록 구성되어 있습니다. 그러나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 패키지가 중지될 때까지 기다리지 않으며 일부 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 중지된 후에도 계속 실행될 수 있습니다.  
   

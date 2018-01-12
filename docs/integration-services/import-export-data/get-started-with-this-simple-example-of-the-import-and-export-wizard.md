@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 523dcd99da61b11e42848ea77037baf59a3ea00b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eb0da34dd83cd9e7b10a21a4a89047902e656ab3
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>가져오기 및 내보내기 마법사의 간단한 예제 시작
 Excel 스프레드시트에서 SQL Server 데이터베이스로 데이터를 가져오는 일반적인 시나리오를 살펴봄으로써 SQL Server 가져오기 및 내보내기 마법사에서 기대할 수 있는 작업을 알아봅니다. 다른 원본과 대상을 사용하려는 경우에도 이 항목에서는 마법사를 실행하는 방법에 대해 알아야 할 사항을 대부분 보여 줍니다.
@@ -68,7 +68,7 @@ Excel에 연결하는 방법에 대한 자세한 내용은 [Excel 데이터 원�
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>4단계 - 대상으로 SQL Server 선택
 다음 페이지의 **대상 선택**에서 SQL Server에 연결하는 목록에서 데이터 공급자 중 하나를 선택하여 Microsoft SQL Server를 대상으로 선택합니다. 이 예에서는 **.Net Framework Data Provider for SQL Server**를 선택합니다.
 
-페이지에는 공급자 속성 목록이 표시됩니다. 이러한 속성 중 대부분은 이해하기 어려운 이름이거나 생소한 설정입니다. 다행히도 엔터프라이즈 데이터베이스에 연결하려면 일반적으로 세 가지 정보만 제공해야 합니다. 다른 설정의 기본값을 무시할 수 있습니다.
+페이지에는 공급자 속성 목록이 표시됩니다. 이러한 속성 중 대부분은 이해하기 어려운 이름이거나 생소한 설정입니다. 다행히도 엔터프라이즈 데이터베이스에 연결하려면 일반적으로 세 가지 정보만 제공해야 합니다. 다른 설정의 기본값은 무시할 수 있습니다.
 
 |필수 정보|.NET Framework Data Provider for SQL Server 속성|
 |---|---|
@@ -91,7 +91,7 @@ SQL Server 연결에 대한 자세한 내용은 [SQL Server 데이터 원본에 
 다음 페이지의 **원본 테이블 및 뷰 선택**에서 데이터 원본에서 복사할 테이블을 선택합니다. 그런 다음 선택한 각 원본 테이블을 새 대상 테이블 또는 기존 대상 테이블에 맵핑합니다.
 
 이 예에서 마법사는 기본적으로 **원본** 열의 **WizardWalkthrough$** 워크시트를 SQL Server 대상에 있는 동일한 이름의 새 테이블에 매핑했습니다. (Excel 통합 문서에는 하나의 워크시트만 있습니다.)
--   원본 테이블의 이름에 있는 달러($) 기호는 Excel 워크시트를 나타냅니다. Excel에서 명명된 범위는 이름만으로 표시됩니다.
+-   원본 테이블의 이름에 있는 달러($) 기호는 Excel 워크시트를 나타냅니다. (Excel에서 명명된 범위는 이름만으로 표시됩니다.)
 -   대상 테이블 아이콘의 별은 마법사에서 새 대상 테이블을 만들 것임을 나타냅니다.
 
 ![테이블 선택(이름 변경 전)](../../integration-services/import-export-data/media/select-the-table-before-renaming.jpg)
@@ -153,9 +153,9 @@ SQL Server Management Studio에서 마법사가 SQL Server에 만든 새 대상 
 
 ![SQL Server에 복사된 데이터 2](../../integration-services/import-export-data/media/data-copied-to-sql-server-2.jpg)
 
-## <a name="learn-more"></a>자세한 정보  
+## <a name="learn-more"></a>자세히 알아보기  
 마법사의 작동 방식에 대해 자세히 알아봅니다.
--   **마법사에 대해 자세히 알아보기** - 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
+-   **마법사에 대해 자세히 알아보기.** 마법사에 대한 개요를 살펴보려면 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.
 
 -   **마법사의 단계에 대해 자세히 알아보기** - 마법사의 단계에 대한 정보를 찾으려면 [SQL Server 가져오기 및 내보내기 마법사의 단계](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)의 목록에서 원하는 페이지를 선택하세요. 또한 마법사의 각 페이지마다 별도의 설명서 페이지가 있습니다.
 

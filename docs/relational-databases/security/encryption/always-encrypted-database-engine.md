@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,10 +85,10 @@ ms.lasthandoff: 11/21/2017
 
 |태스크|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|예|예|아니요|
+|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|예|예|아니오|
 |데이터베이스에 키 메타데이터 만들기|예|예|예|
 |암호화된 열이 있는 새 테이블 만들기|예|예|예|
-|선택한 데이터베이스 열에 있는 기존 데이터 암호화|예|예|아니요|
+|선택한 데이터베이스 열에 있는 기존 데이터 암호화|예|예|아니오|
 
 > [!NOTE]
 > 데이터베이스를 호스트하는 컴퓨터와 다른 컴퓨터의 보안 환경에서 키 프로비저닝 또는 데이터 암호화 도구를 실행해야 합니다. 그러지 않으면 중요한 데이터나 키가 서버 환경에 누출되어 상시 암호화 사용의 이점이 줄어듭니다.  
@@ -127,7 +127,7 @@ ms.lasthandoff: 11/21/2017
 
 -   암호화된 개체의 정의를 변경한 후 [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)을 실행하여 개체에 대한 상시 암호화 메타데이터를 업데이트합니다.
   
-다음과 같은 특성을 가진 열에는 상시 암호화가 지원되지 않습니다. 예를 들어 다음 조건 중 하나가 열에 적용되는 경우 열에 대한 *CREATE TABLE/ALTER TABLE* 에서 **암호화된 WITH** 절을 사용할 수 없습니다.  
+다음과 같은 특성을 가진 열에는 상시 암호화가 지원되지 않습니다. 예를 들어 다음 조건 중 하나가 열에 적용되는 경우 열에 대한 **CREATE TABLE/ALTER TABLE**에서 *암호화된 WITH* 절을 사용할 수 없습니다.  
   
 -   **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, 별칭, 사용자 정의 형식 등의 데이터 형식 중 하나를 사용하는 열  
 - FILESTREAM 열  

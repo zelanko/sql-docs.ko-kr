@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 07f4bba6b5a5312d62898f26b1ed6965f72cbec2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b78023eab9f0a737276e02c76a0ef27ce16c3002
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>SSIS(Integration Services) 배포 및 관리 도구
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지에 사용할 수 있는 두 가지 스튜디오가 포함되어 있습니다.  

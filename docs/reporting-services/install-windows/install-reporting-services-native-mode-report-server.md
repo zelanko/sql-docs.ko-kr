@@ -1,14 +1,14 @@
 ---
-title: "Reporting Services 기본 모드 보고서 서버 설치 | Microsoft Docs"
+title: "Reporting Services 2016 기본 모드 보고서 서버 설치 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: "68"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 9feeb8c3f7e9d2c1d365e8d6ad7f327e20d80b4f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 23104fa56aeb157b19d43b332c2d570613ed5a62
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 설치
+# <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 기본 모드 보고서 서버 설치
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -91,7 +91,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_defaultURLreservations"></a> 기본 URL 예약  
  URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다.  
   
-|부분|설명|  
+|부분|Description|  
 |----------|-----------------|  
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|  
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `http://<computername>/reportserver`, `http://localhost/reportserver` 또는 `http://<IPAddress>/reportserver`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|  
@@ -180,7 +180,7 @@ ms.lasthandoff: 12/05/2017
   
 -   보고서 컴퓨터에서 액세스하여 보고서를 보고 관리할 수 있도록 웹 포털을 구성하려면 [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 및 [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Reporting Services 설치 문제 해결](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
 [Reporting Services 설치 확인](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   

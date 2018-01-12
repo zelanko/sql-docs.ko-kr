@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e491a90b39421fb04501498b205b5e8355eec063
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 사용자 인터페이스
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너 탭의 디자인 화면 외에도 사용자 인터페이스를 사용하면 패키지에 기능을 추가하고 패키지 개체의 속성을 구성하기 위한 다음 창과 대화 상자에 액세스할 수 있습니다.  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 패키지를 만드는 방법은 [SQL Server Data Tools에서 패키지 만들기](../integration-services/create-packages-in-sql-server-data-tools.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SSIS 디자이너](../integration-services/ssis-designer.md)  
   
   

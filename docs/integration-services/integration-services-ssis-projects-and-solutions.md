@@ -5,7 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a1b5a5839699b44fe0e5a2ff7d08ea7c663915a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services(SSIS) 프로젝트 및 솔루션
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 패키지 개발을 위해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 제공합니다.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="version-targeting-in-integration-services-projects"></a>Integration Services 프로젝트의 버전 대상 지정  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로하는 패키지를 만들고, 유지 관리하고 실행할 수 있습니다.  
   
- 솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 프로젝트에 대한 속성 페이지를 엽니다. **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
+ 솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 프로젝트에 대한 속성 페이지를 엽니다. **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
   
  ![프로젝트 속성 대화 상자의 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자의 TargetServerVersion 속성")  
  

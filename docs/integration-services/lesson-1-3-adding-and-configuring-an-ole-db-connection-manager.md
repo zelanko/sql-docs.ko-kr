@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 42e22e1fc4d46c96160b5c507e6e51f3d6f820f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7f432097d86740e5da191a7d741ca430a1cf4a5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>1-3단원: OLE DB 연결 관리자 추가 및 구성
 데이터 원본에 연결하기 위해 플랫 파일 연결 관리자를 추가한 후에는 OLE DB 연결 관리자를 추가하여 대상에 연결합니다. OLE DB 연결 관리자를 사용하면 패키지가 OLE DB 호환 데이터 원본에서 데이터를 추출하거나 데이터를 로드할 수 있습니다. OLE DB 연결 관리자를 사용하여 서버, 인증 방법 및 연결의 기본 데이터베이스를 지정할 수 있습니다.  

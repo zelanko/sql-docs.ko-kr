@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 26a983c967941ef068600cd6b7efc115aba14515
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5cdab7fc8814d7a688329b2255e181adfd0c9492
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS를 사용하여 패키지 배포
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 다른 컴퓨터에 쉽게 배포할 수 있게 하는 도구를 제공합니다. 또한 이러한 배포 도구는 패키지에 필요한 구성 및 파일과 같은 모든 종속 파일을 관리합니다. 이 자습서에서는 이러한 도구를 사용하여 패키지와 패키지의 종속 파일을 대상 컴퓨터에 설치하는 방법을 배웁니다.    

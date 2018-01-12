@@ -1,7 +1,7 @@
 ---
 title: "데이터베이스 엔진에 암호화된 연결 사용 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0408459ba5ef287cb583962a536d1780fa9f6769
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1123fe0698e9b5e38ba77f5ca1aa634904281e3b
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  편리한 위치에 인증서 파일을 저장하여 **인증서 내보내기 마법사**를 완료합니다.  
   
-##  <a name="ConfigureServerConnections"></a> 암호화된 연결을 허용하도록 서버를 구성하려면  
+##  <a name="ConfigureServerConnections"></a> 암호화된 연결을 강제하도록 서버를 구성하려면  
   
 1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 *\<서버 인스턴스>***에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
@@ -90,11 +90,18 @@ ms.lasthandoff: 11/20/2017
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다.  
 
+
+> [!NOTE]
+> 클라이언트와 서버 간에 보안 연결을 보장하려면 암호화된 연결을 요청하도록 클라이언트를 구성합니다. 자세한 내용은 [이 문서의 뒷부분](#client-request-encrypt-connect-23h)에 설명되어 있습니다.
+
+
+
 ### <a name="wildcard-certificates"></a>와일드카드 인증서  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원시 클라이언트는 와일드카드 인증서를 지원합니다. 다른 클라이언트에서는 와일드카드 인증서를 지원하지 않습니다. 자세한 내용은 클라이언트 설명서를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 사용하여 와일드카드 인증서를 선택할 수 없습니다. 와일드카드 인증서를 사용하려면 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 레지스트리 키를 편집하고 **인증서** 값에 공백 없이 인증서의 지문을 입력해야 합니다.  
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
-  
+
+<a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> 암호화된 연결을 요청하도록 클라이언트를 구성하려면  
   
 1.  원래 인증서 또는 내보낸 인증서 파일을 클라이언트 컴퓨터로 복사합니다.  
@@ -113,7 +120,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **연결 속성** 탭에서 **연결 암호화**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Microsoft SQL Server에 대한 TLS 1.2 지원](https://support.microsoft.com/kb/3135244)  
 

@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 772e17a6f5b444b6d75719896bed74e3cd13ab67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31182384eaf0b9ae13cca070ac18eba76a14df1e
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="durability-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 내구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/17/2017
  사용 가능한 공간이 있는 CFP 중 일부는 병합할 수 없습니다. 예를 들어, 두 개의 인접한 CFP가 60% 채워진 경우 해당 CFP는 병합되지 않고 각 CFP의 저장소 중 40%는 사용되지 않습니다. 최악의 경우 모든 CFP가 50% 채워진 경우 저장소의 50%만 사용됩니다. CFP가 병합되지 않아 삭제된 행이 저장소에 존재할 수 있지만 삭제된 행은 메모리 내 가비지 수집에 의해 메모리에서 이미 제거되었을 수 있습니다. 저장소 관리와 메모리는 가비지 수집에 종속되지 않습니다. 활성 CFP가 차지하는 저장소(일부 CFP는 업데이트되지 않음)는 메모리 내 영구 테이블 크기보다 최대 2배 더 클 수 있습니다.  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP의 수명 주기  
- CPF 할당을 취소하려면 여러 상태를 전환해야 합니다. 데이터베이스 검사점 및 로그 백업에는 단계를 통해 파일을 전환하는 작업이 필요하고 궁극적으로 더 이상 필요 없는 파일을 정리해야 합니다. 이러한 단계에 대한 자세한 내용은 [sys.dm_db_xtp_checkpoint_files&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)를 참조하세요.  
+ CFP 할당을 취소하려면 여러 상태를 전환해야 합니다. 데이터베이스 검사점 및 로그 백업에는 단계를 통해 파일을 전환하는 작업이 필요하고 궁극적으로 더 이상 필요 없는 파일을 정리해야 합니다. 이러한 단계에 대한 자세한 내용은 [sys.dm_db_xtp_checkpoint_files&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)를 참조하세요.  
   
  검사점 후에 강제 로그 백업을 수동으로 수행하여 가비지를 빠르게 수집할 수 있습니다. 프로덕션 시나리오에서 백업 전략의 일부로 수행되는 자동 검사점 및 로그 백업에서는 수동 작업을 수행할 필요 없이 이러한 단계에서 CFP를 완벽하게 전환합니다. 가비지 수집 프로세스의 영향으로 메모리 최적화 테이블을 포함하는 데이터베이스에 메모리 내 크기에 비해 큰 저장소가 존재할 수 있습니다. 검사점 및 로그 백업이 발생하지 않는 경우 검사점 파일의 디스크상 공간이 계속 증가합니다.  
   

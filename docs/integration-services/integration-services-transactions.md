@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8fa0747761ecfac4fd617096942db77a2214019d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ce49a6834335160b400207521bd454a6c91298c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-transactions"></a>Integration Services 트랜잭션
   패키지는 트랜잭션을 사용하여 태스크가 원자 단위로 수행되는 데이터베이스 동작을 바인딩하며 이를 통해 데이터 무결성을 유지 관리합니다. 각 작업을 캡슐화하는 For Loop, Foreach Loop, Sequence 컨테이너 및 태스크 호스트 등의 모든 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 컨테이너는 트랜잭션을 사용하도록 구성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 트랜잭션 구성을 위해 **NotSupported**, **Supported**및 **Required**의 세 가지 옵션을 제공합니다.  
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/20/2017
   
 -   www.mssqltips.com의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](http://go.microsoft.com/fwlink/?LinkId=157783)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [상속된 트랜잭션](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
  [여러 트랜잭션](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
