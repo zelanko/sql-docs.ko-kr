@@ -16,18 +16,20 @@ helpviewer_keywords:
 - SMO [SQL Server], about SQL Server Management Objects
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8854a9d7edef76144688a56f94409f4d5448574a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a445c54edd24685fd1e25eedc25615e2fb4121a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="getting-started-in-smo"></a>SMO 시작
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 페이지에서는 SQL Server 관리 개체 (SMO)를 사용 하 여 시작할 수 있도록 설계 된 항목의 링크를 제공 합니다. 항목 나열 커버 SMO 개체 계층 구조에서 SMO, SMO 및 다양 한 프로그래밍 언어 및 프로그래밍 작업을 특정 프로그램을 작성 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+이 페이지에서는 SQL Server 관리 개체 (SMO)를 사용 하 여 시작할 수 있도록 설계 된 항목의 링크를 제공 합니다. 항목 나열 커버 SMO 개체 계층 구조에서 SMO, SMO 및 다양 한 프로그래밍 언어 및 프로그래밍 작업을 특정 프로그램을 작성 합니다.  
  
 ##<a name="installing-smo"></a>SMO 설치
 [SMO 설치](installing-smo.md) 를 설치 하 고 SMO 어셈블리 참조에 대 한 지침을 제공 합니다.

@@ -18,16 +18,16 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: Azure Key Vault에서 사용자 고유 키를 사용하여 투명한 데이터 암호화 사용
+# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell: Azure Key Vault에서 사용자 고유 키를 사용하여 투명한 데이터 암호화 사용(미리 보기)
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-이 방법 가이드는 SQL Database 또는 데이터 웨어하우스에서 TDE(투명한 데이터 암호화)를 위해 Azure Key Vault의 키를 사용하는 방법을 안내합니다. BYOK(Bring Your Own Key) 기반 TDE 지원에 대해 자세히 알아보려면 [Azure SQL에 대한 Bring Your Own Key 기반 TDE](transparent-data-encryption-byok-azure-sql.md)를 방문하세요. 
+이 방법 가이드는 SQL Database 또는 데이터 웨어하우스에서 TDE(투명한 데이터 암호화) (미리 보기에서)를 위해 Azure Key Vault의 키를 사용하는 방법을 안내합니다. BYOK(Bring Your Own Key) 기반 TDE 지원(미리 보기에서)에 대해 자세히 알아보려면 [Azure SQL에 대한 Bring Your Own Key 기반 TDE](transparent-data-encryption-byok-azure-sql.md)를 방문하세요. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

@@ -19,18 +19,20 @@ helpviewer_keywords:
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a81f6f2228ac9f91dbc5fd401fcda16fb249989d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a23f5abd57fdf723382671b82d6078cbb2c7b8d5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="files-and-version-numbers"></a>파일 및 버전 번호
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]모든 필수 SQL Server 관리 개체 (SMO) 구성 요소가 Microsoft.SqlServer.SqlManagementObjects NuGet 패키지에 포함 합니다. SMO는 몇 개의 관리되는 어셈블리에 구현됩니다. 클라이언트나 서버에서 SMO 응용 프로그램을 개발할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  모든 필수 SQL Server 관리 개체 (SMO) 구성 요소가 Microsoft.SqlServer.SqlManagementObjects NuGet 패키지에 포함 합니다. SMO는 몇 개의 관리되는 어셈블리에 구현됩니다. 클라이언트나 서버에서 SMO 응용 프로그램을 개발할 수 있습니다.  
 
 >>[!Important]
 SMO 어셈블리의 파일 버전이 주으로 표시 됩니다. **0**합니다. Build.Revision 합니다. 하지만 포함 된 어셈블리 버전은 주 버전. **100**합니다. Build.Revision 합니다. 이 작업은 하나에 대 한 업데이트에 영향을 주지는 기타 모든 하므로 별도 각 응용 프로그램에서 사용 되는 SMO의 버전을 유지 하려면 수행 됩니다.

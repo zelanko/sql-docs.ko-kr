@@ -14,18 +14,18 @@ ms.topic: reference
 helpviewer_keywords: statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1acbf6b7d4c0a14bb9f236d0b802f0e96ff070
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c1a24487cf7460024fd26e1f4101c791d29589d
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-and-updating-statistics"></a>통계 생성 및 업데이트
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO에서 데이터베이스의에서 쿼리를 처리 하는 방법에 대 한 통계 정보를 사용 하 여 수집할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 개체입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]SMO에서 데이터베이스의에서 쿼리를 처리 하는 방법에 대 한 통계 정보를 사용 하 여 수집할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 개체입니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Statistic> 및 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 개체를 사용하여 임의 열에 대한 통계를 만드는 것도 가능합니다. <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> 개체에서 통계를 업데이트하려면 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 메서드를 실행할 수 있습니다. 결과는 쿼리 최적화 프로그램에서 볼 수 있습니다.  
   

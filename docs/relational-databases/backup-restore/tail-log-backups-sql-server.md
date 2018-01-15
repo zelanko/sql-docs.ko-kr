@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3396d9d6ec351550509300f760db8e5fc58836d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a1254e44ac2fcc110a81d9ac7f566a348812f80
+ms.sourcegitcommit: 1eac335235847c3578e376e0854413710d345dee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>비상 로그 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 백업 및 복원과 관련된 내용을 다룹니다.  
@@ -50,9 +50,9 @@ ms.lasthandoff: 11/17/2017
   
  다음 표에는 BACKUP NORECOVERY 및 CONTINUE_AFTER_ERROR 옵션이 요약되어 있습니다.  
   
-|BACKUP LOG 옵션|설명|  
+|BACKUP LOG 옵션|주석|  
 |-----------------------|--------------|  
-|NORECOVERY|데이터베이스에서 복원 작업을 계속하려는 경우 NORECOVERY를 사용합니다. NORECOVERY는 데이터베이스를 복원 중인 상태로 만듭니다. 이렇게 하면 비상 로그 백업 후 데이터베이스가 변경되지 않습니다. NO_TRUNCATE 옵션 또는 COPY_ONLY 옵션을 함께 지정하지 않으면 로그가 잘립니다.<br /><br /> **\*\* 중요 \*\*** 데이터베이스가 손상된 경우가 아니면 NO_TRUNCATE는 사용하지 마세요.|  
+|NORECOVERY|데이터베이스에서 복원 작업을 계속하려는 경우 NORECOVERY를 사용합니다. NORECOVERY는 데이터베이스를 복원 중인 상태로 만듭니다. 이렇게 하면 비상 로그 백업 후 데이터베이스가 변경되지 않습니다. NO_TRUNCATE 옵션 또는 COPY_ONLY 옵션을 함께 지정하지 않으면 로그가 잘립니다.<br /><br /> **중요:** 데이터베이스가 손상된 경우가 아니면 NO_TRUNCATE는 사용하지 마세요.|  
 |CONTINUE_AFTER_ERROR|손상된 데이터베이스의 비상 로그를 백업하는 경우에만 CONTINUE_AFTER_ERROR를 사용합니다.<br /><br /> 손상된 데이터베이스에서 비상 로그 백업을 사용하는 경우에는 일반적으로 로그 백업에서 캡처되는 메타데이터 일부를 사용할 수 없을 수 있습니다. 자세한 내용은 이 항목의 [완전하지 않은 백업 메타데이터가 포함된 비상 로그 백업](#IncompleteMetadata)을 참조하세요.|  
   
 ##  <a name="IncompleteMetadata"></a> 완전하지 않은 백업 메타데이터가 포함된 비상 로그 백업  
@@ -63,13 +63,9 @@ ms.lasthandoff: 11/17/2017
  비상 로그 백업의 메타데이터가 완전하지 않으면 [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) 테이블은 비상 로그 백업 당시 파일 그룹에 대한 대부분의 정보를 잃게 됩니다. 대부분의 **backupfilegroup** 테이블 열은 NULL이 되며 다음 열만 의미를 갖습니다.  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **유형**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
@@ -77,12 +73,12 @@ ms.lasthandoff: 11/17/2017
   
  트랜잭션 로그 백업을 복원하려면 [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)을 참조하세요.  
     
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   

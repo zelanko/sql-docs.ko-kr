@@ -17,18 +17,20 @@ helpviewer_keywords:
 - SMO [SQL Server], capture mode
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76f407dc02ff95535c456f21debe3d208ff475e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6452457dfb60a0a99f405907fb2ae01658b30412
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-capture-mode"></a>캡처 모드 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO 프로그램을 캡처하고 기록에 해당 하는 수 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그램 대신 또는 프로그램에서 실행 되는 문 외에 실행 한 문은 합니다. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하거나 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Server> 속성을 사용하여 캡처 모드를 설정합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO 프로그램은 프로그램에서 실행하는 문 대신 실행하거나 문과 함께 실행한 해당 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 캡처하고 기록할 수 있습니다. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하거나 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Server> 속성을 사용하여 캡처 모드를 설정합니다.  
   
 ## <a name="example"></a>예제  
 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C &#35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  

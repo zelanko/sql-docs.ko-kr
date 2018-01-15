@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 26cc8e4ea520560452b59b9a08da198882ba96cd
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.lasthandoff: 01/05/2018
 |**last_execution_time**|**datetime**|이 계획이 마지막으로 실행되기 시작한 시간입니다.|  
 |**execution_count**|**bigint**|이 계획이 마지막으로 컴파일된 이후 실행된 횟수입니다.|  
 |**total_worker_time**|**bigint**|이 계획이 컴파일된 이후 실행되는 데 사용된 총 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다.<br /><br /> 고유하게 컴파일된 저장 프로시저의 경우 1초 미만이 소요되는 실행이 많으면 **total_worker_time** 이 정확하지 않을 수 있습니다.|  
-|**last_worker_time**|**bigint**|이 계획이 마지막으로 실행되었을 때 사용된 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1.</sup>|  
-|**min_worker_time**|**bigint**|단일 실행 중에 이 계획이 사용한 최소 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1.</sup>|  
-|**max_worker_time**|**bigint**|단일 실행 중에 이 계획이 사용한 최대 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1.</sup>|  
+|**last_worker_time**|**bigint**|이 계획이 마지막으로 실행되었을 때 사용된 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1</sup>|  
+|**min_worker_time**|**bigint**|단일 실행 중에 이 계획이 사용한 최소 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1</sup>|  
+|**max_worker_time**|**bigint**|단일 실행 중에 이 계획이 사용한 최대 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1</sup>|  
 |**total_physical_reads**|**bigint**|이 계획이 컴파일된 이후 실행될 때 수행된 총 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**last_physical_reads**|**bigint**|이 계획이 마지막으로 실행되었을 때 수행된 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**min_physical_reads**|**bigint**|단일 실행 중 이 계획에서 수행한 최소 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
@@ -107,7 +107,6 @@ ms.lasthandoff: 01/05/2018
 |**last_used_threads**|**bigint**|이 계획이 마지막으로 실행 될 때 사용 되는 병렬 스레드의 수입니다. 항상 0을 메모리 액세스에 최적화 된 테이블을 쿼리 됩니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
 |**min_used_threads**|**bigint**|이 계획 적이 한 번 실행 하는 동안 사용 되는 사용 되는 병렬 스레드의 최소 수입니다. 항상 0을 메모리 액세스에 최적화 된 테이블을 쿼리 됩니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
 |**max_used_threads**|**bigint**|이 계획 적이 한 번 실행 하는 동안 사용 되는 사용 되는 병렬 스레드의 최대 수입니다. 항상 0을 메모리 액세스에 최적화 된 테이블을 쿼리 됩니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
-|**pdw_node_id**|**int**|이 배포에 있는 노드에 대 한 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_columnstore_segment_reads**|**bigint**|쿼리가 읽은 columnstore 세그먼트의 총 합계입니다. null일 수 없습니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**last_columnstore_segment_reads**|**bigint**|쿼리의 마지막 실행에서 읽을 columnstore 세그먼트의 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**min_columnstore_segment_reads**|**bigint**|최소 한 번 실행 하는 동안 쿼리에 의해 지금까지 읽은 columnstore 세그먼트 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
@@ -116,7 +115,12 @@ ms.lasthandoff: 01/05/2018
 |**last_columnstore_segment_skips**|**bigint**|쿼리를 실행 하는 마지막으로 건너뛰는 columnstore 세그먼트의 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**min_columnstore_segment_skips**|**bigint**|적이 한 번 실행 하는 동안 건너뛴 쿼리에서 columnstore 세그먼트의 최소 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**max_columnstore_segment_skips**|**bigint**|적이 한 번 실행 하는 동안 건너뛴 쿼리에서 columnstore 세그먼트의 최대 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
-  
+|**total_spills**|**bigint**|이 쿼리를 실행 하 여 유출 되 컴파일된 이후 페이지의 총 수입니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|쿼리가 실행 된 마지막 시간을 유출 하는 페이지 수입니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|단일 실행 중이 쿼리가 현재까지 유출 하는 페이지의 최소 수입니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|단일 실행 중이 쿼리가 현재까지 유출 하는 페이지의 최대 수입니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**pdw_node_id**|**int**|이 배포에 있는 노드에 대 한 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+
 > [!NOTE]
 > <sup>1</sup> 고유 하 게 컴파일된 저장된 프로시저에 대 한 통계 컬렉션을 설정 하면 작업자 시간이 밀리초 단위로 수집 합니다. 쿼리 보다 작거나 1 밀리초를 실행 하는 경우 값은 0이 됩니다.  
   
@@ -133,8 +137,6 @@ ms.lasthandoff: 01/05/2018
  다음 예에서는 평균 CLR 시간을 기준으로 상위 5개의 쿼리에 대한 정보를 반환합니다. 이 예에서는 논리적으로 동일한 쿼리를 누적 리소스 소비량에 따라 그룹화할 수 있도록 쿼리 해시에 따라 쿼리를 집계합니다.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
     SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS "Avg CPU Time",  
     MIN(query_stats.statement_text) AS "Statement Text"  
@@ -171,12 +173,13 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- 
- [실행 관련 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sql_text &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_query_plan &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
-  
+## <a name="see-also"></a>참고 항목  
+[실행 관련 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[sys.dm_exec_sql_text &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys.dm_exec_query_plan &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_procedure_stats&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys.dm_exec_trigger_stats &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys.dm_exec_cached_plans&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

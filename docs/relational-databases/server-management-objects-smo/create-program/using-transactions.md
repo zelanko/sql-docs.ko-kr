@@ -17,18 +17,20 @@ helpviewer_keywords:
 - SMO [SQL Server], transactions
 ms.assetid: 399aded8-bee3-4cfb-a671-1877c7d0de9f
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8beed22985c5f73ff5a4c1fed722fb331155ada
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 556763c88080025e967b7e85b48f5579d2eebcb8
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-transactions"></a>트랜잭션 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), 트랜잭션 처리의 인스턴스에 대 한 연결을 통해 얻습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용 하 여는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체입니다. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 참조 하는 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성은 <xref:Microsoft.SqlServer.Management.Smo.Server> 연결 되 면 개체입니다. <xref:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.StartTransaction>, <xref:Microsoft.SqlServer.Management.Common.ServerConnection.RollBackTransaction%2A> 및 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.CommitTransaction%2A>과 같은 메서드는 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 개체 속성에 속합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Object)에서 트랜잭션 처리는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 통해 수행됩니다. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 참조 하는 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성은 <xref:Microsoft.SqlServer.Management.Smo.Server> 연결 되 면 개체입니다. <xref:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.StartTransaction>, <xref:Microsoft.SqlServer.Management.Common.ServerConnection.RollBackTransaction%2A> 및 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.CommitTransaction%2A>과 같은 메서드는 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 개체 속성에 속합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SMO 프로그램 만들기](../../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)  

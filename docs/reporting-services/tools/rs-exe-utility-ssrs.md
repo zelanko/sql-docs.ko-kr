@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28da6b7f73721a99937dcfca82264463367830c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bf442aad4542358644835a64111ca63ed59b51a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
@@ -107,7 +105,7 @@ rs {-?}
  **-t**  
  추적 로그에 오류 메시지를 출력합니다(옵션). 이 인수는 값을 가지지 않습니다. 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> 사용 권한  
  이 도구를 사용하려면 스크립트를 실행하는 보고서 서버 인스턴스에 연결할 수 있는 사용 권한이 필요합니다. 스크립트를 실행하여 로컬 컴퓨터나 원격 컴퓨터를 변경할 수 있습니다. 원격 컴퓨터에 설치된 보고서 서버를 변경하려면 **-s** 인수에 원격 컴퓨터를 지정합니다.  
   
 ##  <a name="bkmk_examples"></a> 예  
@@ -121,7 +119,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
   
  추가 예제는 [Reporting Services 스크립트 파일 실행](../../reporting-services/tools/run-a-reporting-services-script-file.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  시스템 속성을 설정하고 보고서를 게시하는 등의 스크립트를 정의할 수 있습니다. 생성된 스크립트에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API의 모든 메서드가 포함될 수 있습니다. 사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)를 참조하세요.  
   
  이 스크립트는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 코드로 작성하여 파일 이름 확장명이 .rss인 유니코드 또는 UTF-8 텍스트 파일로 저장해야 합니다. **rs** 유틸리티를 사용하여 스크립트를 디버깅할 수 없습니다. 스크립트를 디버깅하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 코드를 실행하세요.  
@@ -129,7 +127,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 > [!TIP]  
 >  자세한 예제는 [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 - [Reporting Services 스크립트 파일 실행](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
 - [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 - [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   

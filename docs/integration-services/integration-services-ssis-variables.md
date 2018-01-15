@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ae63f120997ba5018b131f8a946b0f9ae9e384d0
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
   변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
@@ -133,7 +133,17 @@ ms.lasthandoff: 11/20/2017
  시스템에서 **IncludeInDebugDump** 옵션을 **false**로 다시 설정하면 사용자가 선택한 값이 재정의될 수 있습니다.  
   
 **Value**    
- 사용자 정의 변수의 값은 문자 또는 식일 수 있습니다. 변수에는 변수 값과 값의 데이터 형식을 설정하기 위한 옵션이 포함됩니다. 이 두 속성은 호환되어야 합니다. 예를 들어 정수 데이터 형식에는 문자열 값을 사용할 수 없습니다.  
+사용자 정의 변수의 값은 문자 또는 식일 수 있습니다. 변수 값은 null일 수 없습니다. 변수에는 다음 기본값이 있습니다.
+
+| 데이터 형식 | 기본값 |
+|---|---|
+| Boolean | False |
+| 숫자 및 이진 데이터 형식 | 0(영) |
+| 문자 및 문자열 데이터 형식 | (빈 문자열) |
+| Object | System.Object |
+| | |
+
+변수에는 변수 값과 값의 데이터 형식을 설정하기 위한 옵션이 있습니다. 이 두 속성은 호환되어야 합니다. 예를 들어 정수 데이터 형식에는 문자열 값을 사용할 수 없습니다.  
   
  변수가 식으로 계산되도록 구성된 경우에는 식을 제공해야 합니다. 런타임에 식이 계산되고 변수에는 해당 계산의 결과가 설정됩니다. 예를 들어 변수에 `DATEPART("month", GETDATE())` 식이 사용된 경우 이 변수의 값은 현재 날짜의 월에 해당하는 숫자입니다. 식은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 식 문법 구문을 사용하는 유효한 식이어야 합니다. 변수에 식이 사용되는 경우 이 식에는 식 문법에서 제공하는 연산자와 함수 및 리터럴을 사용할 수 있지만 식에서 패키지의 데이터 흐름에 있는 열을 참조할 수는 없습니다. 식의 최대 길이는 4000자입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
@@ -187,14 +197,14 @@ ms.lasthandoff: 11/20/2017
 ### <a name="add-variable-dialog-box"></a>변수 추가 대화 상자
 **변수 추가** 대화 상자를 사용하여 새 변수의 속성을 지정할 수 있습니다.  
   
-#### <a name="options"></a>옵션  
+#### <a name="options"></a>변수  
  **컨테이너**  
  목록에서 컨테이너를 선택합니다. 컨테이너는 변수의 범위를 정의합니다. 컨테이너는 패키지 또는 패키지의 실행 파일일 수 있습니다.  
   
  **이름**  
  변수 이름을 입력합니다.  
   
- **네임스페이스**  
+ **Namespace**  
  변수의 네임스페이스를 지정합니다. 기본적으로 사용자 정의 변수는 **User** 네임스페이스에 있습니다.  
   
  **값 유형**  
@@ -313,7 +323,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="update-a-variable-dynamically-with-configurations"></a>구성에서 변수를 동적으로 업데이트  
  변수를 동적으로 업데이트하려면 변수에 대한 구성을 만들고 패키지와 함께 구성을 배포한 다음 패키지를 배포할 때 구성 파일 내의 변수 값을 업데이트하십시오. 패키지는 런타임에 업데이트된 변수 값을 사용합니다. 자세한 내용은 [패키지 구성 만들기](../integration-services/packages/create-package-configurations.md)를 참조하세요.  
 
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [자식 패키지에서 변수 및 매개 변수의 값 사용](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

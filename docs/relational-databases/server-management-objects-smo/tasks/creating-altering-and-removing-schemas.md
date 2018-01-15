@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 615e7513018ef686be549f10f2d6ae708d6eb6d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dda6526ab21fca7285166dc9c5196eb1d2afa01a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-schemas"></a>스키마 생성, 변경 및 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.Schema> 개체는 데이터베이스 개체에 대 한 소유권 컨텍스트를 나타냅니다. <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성은 <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체 모음을 나타냅니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체는 데이터베이스 개체에 대한 소유권 컨텍스트를 나타냅니다. <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성은 <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체 모음을 나타냅니다.  
   
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C &#35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  

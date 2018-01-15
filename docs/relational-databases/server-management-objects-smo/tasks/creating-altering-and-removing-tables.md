@@ -14,18 +14,18 @@ ms.topic: reference
 helpviewer_keywords: tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eecc6cd372e6d060cd225a67e81ab334dc80fcaa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 18973e4478424fa37d6d769cc1fecbaf692a512b
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-tables"></a>테이블 생성, 변경 및 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 테이블에서 표시 되는 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체입니다. SMO 개체 계층 구조에서 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 아래에 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 테이블에서 표시 되는 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체입니다. SMO 개체 계층 구조에서 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 아래에 있습니다.  
   
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 템플릿 및 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C &#35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  

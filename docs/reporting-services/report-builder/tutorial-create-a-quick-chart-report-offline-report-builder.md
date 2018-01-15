@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7aeaa7ce698d5fd2b7f0d9823fb89a201bed96eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3851cd1793ddb98c29fddd82654adfba887b44d3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
  ![보고서 작성기 빠른 원형 차트](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "보고서 작성기 빠른 원형 차트")  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  XML 데이터나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하려면 보고서 작성기에 대한 액세스 권한이 있어야 합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 보고서 서버에서 기본 모드 또는 SharePoint 통합 모드로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하거나 Microsoft 다운로드 센터에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 를 다운로드할 수 있습니다. 자세한 내용은 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)를 참조하세요.  
   
 ##  <a name="TwoWays"></a> 이 자습서에서 수행하는 두 가지 방법  

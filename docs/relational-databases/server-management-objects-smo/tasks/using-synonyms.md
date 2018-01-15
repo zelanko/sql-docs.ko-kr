@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: synonyms [SMO]
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf13a234a187b9da168cc77c26794131c8c32222
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7babb8b9bfb95e964cda26324813b1f7da81953a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-synonyms"></a>동의어 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]동의어는 스키마 범위 개체에 대 한 대체 이름. SMO에서 동의어도 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 자식입니다. 이는 동의어가 정의된 데이터베이스 범위 내에서만 유효함을 의미합니다. 하지만 동의어의 원격 인스턴스 또는 다른 데이터베이스에서 개체를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  동의어는 스키마 범위 개체의 다른 이름입니다. SMO에서 동의어도 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 자식입니다. 이는 동의어가 정의된 데이터베이스 범위 내에서만 유효함을 의미합니다. 하지만 동의어의 원격 인스턴스 또는 다른 데이터베이스에서 개체를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
  대체 이름이 주어지는 개체를 기준 개체라고 합니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체의 이름 속성이 기준 개체에 부여되는 대체 이름입니다.  
   

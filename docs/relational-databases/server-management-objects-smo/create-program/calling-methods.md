@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SMO [SQL Server], method calling
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7059c9dea32d8bcc6fac8e9d0c14e3b3b18f4415
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9f16b887f7dd16a80052da640a7132769299c4e4
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="calling-methods"></a>메서드 호출
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]발급 하는 등의 개체와 관련 된 특정 작업을 수행 하는 메서드는 **검사점** 데이터베이스 또는 인스턴스에 대해 로그온 열거 목록을 요청에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  발급 하는 등의 개체와 관련 된 특정 작업을 수행 하는 메서드는 **검사점** 데이터베이스 또는 인스턴스에 대해 로그온 열거 목록을 요청에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
  메서드는 개체에 대해 작업을 수행하며 매개 변수를 사용할 수 있고 반환 값을 갖는 경우도 있습니다. 반환 값은 단순한 데이터 형식, 복잡한 개체 또는 여러 멤버가 포함된 구조일 수 있습니다.  
   

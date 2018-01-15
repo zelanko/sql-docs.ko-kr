@@ -21,18 +21,20 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fb3927a735f0dddfa753bb939947e8d40b6ef88
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c9e3323e743360d3a6ce2a340c87ab7dac7720b
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="programming-specific-tasks"></a>프로그래밍 관련 태스크
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO 개체를 사용 하는 프로그래밍 관련 태스크에는 복잡 한 작업이 통계 모니터링, 복제, 인스턴스 개체를 관리 및 구성 옵션을 설정 백업, 등의 특정 기능을으로 프로그램 프로그램 요구할 수만 포함 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO 개체를 사용하는 프로그래밍 관련 태스크에는 백업, 통계 모니터링, 복제, 인스턴스 개체 관리, 구성 옵션 설정 등 특정 기능이 있는 프로그램에만 필요한 복잡한 작업이 포함됩니다.  
   
 |항목|Description|  
 |-----------|-----------------|  

@@ -1,7 +1,7 @@
 ---
 title: "데이터베이스 파일 및 파일 그룹 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 최소한 두 개의 운영 체제 파일인 데이터 파일과 로그 파일이 있습니다. 데이터 파일은 테이블, 인덱스, 저장 프로시저 및 뷰 등의 개체와 데이터를 포함합니다. 로그 파일은 데이터베이스의 모든 트랜잭션을 복구하는 데 필요한 정보를 포함합니다. 데이터 파일은 할당 및 관리를 간편하게 수행하기 위해 파일 그룹으로 그룹화할 수 있습니다.  
@@ -62,27 +62,36 @@ ms.lasthandoff: 01/02/2018
  기본적으로 데이터와 트랜잭션 로그는 동일한 드라이브와 경로에 배치됩니다. 이것은 단일 디스크 시스템의 경우에 해당하며 프로덕션 환경에서는 최적이 아닐 수도 있습니다. 데이터와 로그 파일은 서로 다른 디스크에 배치하는 것이 좋습니다.  
 
 ### <a name="logical-and-physical-file-names"></a>논리적 파일 이름과 물리적 파일 이름
-SQL Server 파일은 다음과 같은 두 가지 이름을 갖습니다. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일은 다음과 같이 두 가지 파일 이름 형식을 가집니다. 
 
-**logical_file_name:**  logical_file_name은 모든 Transact-SQL 문에서 물리적 파일을 참조하는 데 사용되는 이름입니다. 논리적 파일 이름은 SQL Server 식별자 규칙을 따라야 하고 데이터베이스의 논리적 파일 이름 사이에서 고유해야 합니다.
+**logical_file_name:**  logical_file_name은 모든 Transact-SQL 문에서 물리적 파일을 참조하는 데 사용되는 이름입니다. 논리적 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자 규칙을 따라야 하고 데이터베이스의 논리적 파일 이름 사이에서 고유해야 합니다. 이것은 `ALTER DATABASE`의 `NAME` 인수에 의해 설정됩니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 
-**os_file_name:** os_file_name은 디렉터리 경로를 포함하는 물리적 파일의 이름입니다. 이 이름은 운영 체제 파일 이름의 규칙을 따라야 합니다.
+**os_file_name:** os_file_name은 디렉터리 경로를 포함하는 물리적 파일의 이름입니다. 이 이름은 운영 체제 파일 이름의 규칙을 따라야 합니다. 이것은 `ALTER DATABASE`의 `FILENAME` 인수에 의해 설정됩니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 
-FAT 또는 NTFS 파일 시스템에 SQL Server 데이터 파일 및 로그 파일을 배치할 수 있습니다. 보안상 NTFS 파일 시스템을 사용하는 것이 좋습니다. 읽기/쓰기 데이터 파일 그룹과 로그 파일은 NTFS 압축 파일 시스템에 배치할 수 없습니다. 읽기 전용 데이터베이스와 읽기 전용 보조 파일 그룹만 NTFS 압축 파일 시스템에 배치할 수 있습니다.
+> [!IMPORTANT]
+> FAT 또는 NTFS 파일 시스템에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일과 로그 파일을 배치할 수 있습니다. Windows 시스템에서는 보안상 NTFS 파일 시스템을 사용하는 것이 좋습니다. 
 
-여러 SQL Server 인스턴스가 단일 시스템에서 실행될 때 각 인스턴스는 해당 인스턴스에서 생성된 데이터베이스에 대한 파일을 보관할 수 있는 서로 다른 기본 디렉터리를 받습니다. 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)참조하세요.
+> [!WARNING]
+> 읽기/쓰기 데이터 파일 그룹과 로그 파일은 NTFS 압축 파일 시스템에 배치할 수 없습니다. 읽기 전용 데이터베이스와 읽기 전용 보조 파일 그룹만 NTFS 압축 파일 시스템에 배치할 수 있습니다.
+> 공간을 절약하기 위해 파일 시스템 압축 대신 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 사용하는 것이 좋습니다.
+
+여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 단일 시스템에서 실행될 때 각 인스턴스는 해당 인스턴스에서 생성된 데이터베이스에 대한 파일을 보관할 수 있는 서로 다른 기본 디렉터리를 받습니다. 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)참조하세요.
 
 ### <a name="data-file-pages"></a>데이터 파일 페이지
-SQL Server 데이터 파일의 페이지는 첫째 페이지가 0으로 시작하여 순차적으로 번호가 매겨집니다. 데이터베이스의 파일마다 고유한 파일 ID 번호가 있습니다. 데이터베이스에서 페이지를 고유하게 식별하려면 해당 파일 ID와 페이지 번호가 모두 필요합니다. 다음 예에서는 4MB의 주 데이터 파일과 1MB의 보조 데이터 파일이 있는 데이터베이스의 페이지 번호를 보여 줍니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일의 페이지는 첫째 페이지가 0으로 시작하여 순차적으로 번호가 매겨집니다. 데이터베이스의 파일마다 고유한 파일 ID 번호가 있습니다. 데이터베이스에서 페이지를 고유하게 식별하려면 해당 파일 ID와 페이지 번호가 모두 필요합니다. 다음 예에서는 4MB의 주 데이터 파일과 1MB의 보조 데이터 파일이 있는 데이터베이스의 페이지 번호를 보여 줍니다.
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
 
-각 파일의 첫 페이지는 파일의 특성에 대한 정보를 포함하는 파일 헤더 페이지입니다. 또한 파일 시작 부분의 다른 여러 페이지에도 할당 맵과 같은 시스템 정보가 포함됩니다. 주 데이터 파일과 첫 번째 로그 파일에 모두 저장되는 시스템 페이지 중 하나는 데이터베이스의 특성에 대한 정보를 포함하는 데이터 부팅 페이지입니다. 페이지 및 페이지 유형에 대한 자세한 내용은 페이지 및 익스텐트 이해를 참조하세요.
+각 파일의 첫 페이지는 파일의 특성에 대한 정보를 포함하는 파일 헤더 페이지입니다. 또한 파일 시작 부분의 다른 여러 페이지에도 할당 맵과 같은 시스템 정보가 포함됩니다. 주 데이터 파일과 첫 번째 로그 파일에 모두 저장되는 시스템 페이지 중 하나는 데이터베이스의 특성에 대한 정보를 포함하는 데이터 부팅 페이지입니다. 페이지 및 페이지 익스텐트 유형에 대한 자세한 내용은 [페이지 및 익스텐트 아키텍처 가이드](../..//relational-databases/pages-and-extents-architecture-guide.md)를 참조하세요.
 
 ### <a name="file-size"></a>파일 크기
-SQL Server 파일은 원래 지정된 크기에서 자동으로 증가할 수 있습니다. 파일을 정의할 때 특정 증분을 지정할 수 있습니다. 파일이 가득 찰 때마다 증분에 따라 크기가 늘어납니다. 한 파일 그룹에 여러 파일이 있을 경우 모든 파일이 가득 찰 때까지 파일은 자동으로 증가하지 않습니다. 이 경우 라운드 로빈 방식으로 증가합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일은 원래 지정된 크기에서 자동으로 증가할 수 있습니다. 파일을 정의할 때 특정 증분을 지정할 수 있습니다. 파일이 가득 찰 때마다 증분에 따라 크기가 늘어납니다. 한 파일 그룹에 여러 파일이 있을 경우 모든 파일이 가득 찰 때까지 파일은 자동으로 증가하지 않습니다. 그런 다음 [비례 채우기](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)을 사용하여 라운드 로빈 방식으로 증가합니다.
 
-각 파일의 최대 크기를 지정할 수도 있습니다. 최대 크기를 지정하지 않으면 파일은 디스크에서 사용 가능한 공간을 모두 사용할 때까지 계속 증가할 수 있습니다. 이 기능은 사용자가 시스템 관리자에 편리하게 액세스할 수 없는 응용 프로그램에 포함된 데이터베이스로 SQL Server를 사용할 때 특히 유용합니다. 사용자는 필요에 따라 파일이 자동으로 증가하게 하여 데이터베이스의 사용 가능한 공간을 모니터링하고 추가 공간을 수동으로 할당하는 관리 작업을 줄일 수 있습니다. 
+각 파일의 최대 크기를 지정할 수도 있습니다. 최대 크기를 지정하지 않으면 파일은 디스크에서 사용 가능한 공간을 모두 사용할 때까지 계속 증가할 수 있습니다. 이 기능은 사용자가 시스템 관리자에 편리하게 액세스할 수 없는 응용 프로그램에 포함된 데이터베이스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 때 특히 유용합니다. 사용자는 필요에 따라 파일이 자동으로 증가하게 하여 데이터베이스의 사용 가능한 공간을 모니터링하고 추가 공간을 수동으로 할당하는 관리 작업을 줄일 수 있습니다.  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 [인스턴트 파일 초기화(IFI)](../../relational-databases/databases/database-instant-file-initialization.md)를 사용하는 경우 데이터 파일에 새 공간을 할당할 때 최소한의 오버헤드가 있습니다.
+
+트랜잭션 로그 파일 관리에 대한 자세한 내용은 [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)를 참조하세요.   
 
 ## <a name="database-snapshot-files"></a>데이터베이스 스냅숏 파일
 데이터베이스 스냅숏에서 쓰기 시 복사 데이터를 저장하기 위해 사용하는 파일 형식은 사용자가 스냅숏을 만들었는지 또는 스냅숏이 내부적으로 사용되는지에 따라 달라집니다.
@@ -174,21 +183,22 @@ GO
 - 파일은 한 파일 그룹의 멤버만 될 수 있습니다.
 - 트랜잭션 로그 파일은 파일 그룹의 일부가 될 수 없습니다.
 
-## <a name="recommendations"></a>권장 사항
+## <a name="Recommendations"></a> 권장 사항
 다음은 파일 및 파일 그룹 작업 시 일반적으로 권장되는 사항입니다. 
 - 대부분의 데이터베이스에는 하나의 데이터 파일과 하나의 트랜잭션 로그 파일만 있으면 됩니다.
-- 여러 파일을 사용할 때는 두 번째 파일 그룹을 만들어 파일을 추가하고 이 파일 그룹을 기본 파일 그룹으로 만듭니다. 이렇게 하면 주 파일에는 시스템 테이블과 개체만 있게 됩니다.
+- 여러 데이터 파일을 사용하는 경우 추가 파일에 대한 두 번째 파일 그룹을 만들고 해당 파일 그룹을 기본 파일 그룹으로 만듭니다. 이렇게 하면 주 파일에는 시스템 테이블과 개체만 있게 됩니다.
 - 성능을 극대화하려면 가능한 여러 개의 사용 가능한 디스크에 파일이나 파일 그룹을 만듭니다. 디스크 공간이 많이 필요한 개체는 여러 파일 그룹에 배치합니다.
 - 특정 물리적 디스크에 개체를 배치할 수 있도록 파일 그룹을 사용합니다.
 - 동일한 조인 쿼리에서 사용되는 여러 테이블은 여러 파일 그룹에 배치합니다. 이렇게 하면 조인된 데이터에서 병렬 디스크 I/O 검색을 하기 때문에 성능이 향상됩니다.
 - 자주 액세스되는 테이블과 해당 테이블에 속한 비클러스터형 인덱스는 여러 파일 그룹에 배치합니다. 이렇게 하면 파일이 여러 물리적 디스크에 있을 경우 병렬 I/O가 수행되기 때문에 성능이 향상됩니다.
 - 트랜잭션 로그 파일은 다른 파일 및 파일 그룹과 동일한 물리적 디스크에 배치하지 않습니다.
 
+트랜잭션 로그 파일 관리 권장 사항에 대한 자세한 내용은 [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)를 참조하세요.   
+
 ## <a name="related-content"></a>관련 내용  
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
- [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-  
- [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 
+ [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
+ [페이지 및 익스텐트 아키텍처 가이드](../../relational-databases/pages-and-extents-architecture-guide.md)    
+ [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     

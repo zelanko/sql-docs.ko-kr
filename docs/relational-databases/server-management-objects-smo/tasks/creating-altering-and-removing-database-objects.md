@@ -16,18 +16,20 @@ helpviewer_keywords:
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc43e77e099c216dbe13f2df5facbdb60a83c63b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 556403a013ee348e836c059ef9b246b4d5606a87
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>생성, 변경 및 데이터베이스 개체를 제거 합니다.
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO 개체를 만드는 단계는 다음과 같습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO 개체를 만드는 단계는 다음과 같습니다.  
   
 1.  개체의 인스턴스를 만듭니다.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
  개체 및 처음 개체를 만들 때 필요했던 모든 상호 종속 자식 개체를 제거하려면 **Drop** 문을 사용합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SMO 개체 모델](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

@@ -12,10 +12,8 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- SYS.QUERY_STORE_WAIT_STATS_TSQL
-- QUERY_STORE_WAIT_STATS_TSQL
-- SYS.QUERY_STORE_WAIT_STATS
-- QUERY_STORE_WAIT_STATS
+- sys.query_store_wait_stats
+- query_store_wait_stats
 dev_langs: TSQL
 helpviewer_keywords:
 - query_store_wait_stats catalog view
@@ -26,11 +24,11 @@ author: AndrejsAnt
 ms.author: AndrejsAnt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75e00467fbee053a05144d67f9d9a68469daeed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bed8035413a61c2bc5e4e644874bec9115c07d68
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -40,13 +38,13 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Plan_id, runtime_stats_interval_id, execution_type 및 wait_category에 대 한 대기 통계를 나타내는 행의 식별자입니다. 이 지난 런타임 통계 간격에 대 한 고유 합니다. 현재 활성 간격에 대 한 실행 유형을 execution_type 및 wait_category 나타내는 대기 범주를 사용 하 여 plan_id에서 참조 하는 계획에 대 한 대기 통계를 나타내는 여러 행 있을 수 있습니다. 일반적으로 한 행 나타냅니다 플러시 되도록 대기 통계를 디스크에 반면 다른 (s) 메모리 내 상태를 나타냅니다. 따라서 모든 간격에 대 한 실제 상태를 가져오려는 해야 집계 메트릭을 plan_id, runtime_stats_interval_id, execution_type 및 wait_category로 그룹화 합니다. |  
-|**plan_id**|**bigint**|외래 키입니다. 조인 [sys.query_store_plan&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|외래 키입니다. 조인 [sys.query_store_runtime_stats_interval&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|외래 키입니다. 조인 [sys.query_store_plan& #40; Transact SQL & #41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|외래 키입니다. 조인 [sys.query_store_runtime_stats_interval& #40; Transact SQL & #41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|아래 표를 사용 하 여 대기 유형을 분류 하 고 대기 시간에서 집계 되는 다음 이러한 범주를 대기 합니다. 대기 범주마다 문제 해결을 위해 다른 후속 분석이 필요하지만 동일한 범주의 대기 유형은 매우 유사한 문제 해결 경험을 생성하므로 대기를 기반으로 해서 영향을 받는 쿼리를 제공하면 대부분의 조사를 성공적으로 완료할 수 있습니다.|
-|**wait_category_desc**|**nvarchar (128)**|대기 범주 필드에 대 한 텍스트 설명을 아래 표를 검토 하십시오.|
+|**wait_category_desc**|**nvarchar(128)**|대기 범주 필드에 대 한 텍스트 설명을 아래 표를 검토 하십시오.|
 |**execution_type**|**tinyint**|쿼리 실행의 형식을 결정합니다.<br /><br /> 0 – 일반적인 실행 (완료)<br /><br /> 3 – 클라이언트에서 시작 된 실행이 중단 됨<br /><br /> 4-예외 실행이 중단 됨|  
-|**execution_type_desc**|**nvarchar (128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0 – 일반<br /><br /> 3 – 중단<br /><br /> 4-예외|  
-|**total_query_wait_time_ms**|**bigint**|총 CPU 대기 시간 집계 간격 내에서 쿼리 계획에 대 한 범주 (마이크로초 단위로 보고)를 기다립니다.|
+|**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0 – 일반<br /><br /> 3 – 중단<br /><br /> 4-예외|  
+|**total_query_wait_time_ms**|**bigint**|총 CPU 대기 시간 집계 간격 내에서 쿼리 계획에 대 한 범주 (밀리초 단위로 보고)를 기다립니다.|
 |**avg_query_wait_time_ms**|**float**|평균 대기 기간 (밀리초 단위로 보고) 집계 간격 및 대기 범주 내에서 실행 당 쿼리 계획입니다.|
 |**last_query_wait_time_ms**|**bigint**|마지막 대기 기간입니다. 집계 간격 내에서 쿼리 계획에 대 한 범주 (보고 밀리초에서)을 기다립니다.|
 |**min_query_wait_time_ms**|**bigint**|최소 CPU 대기 시간 집계 간격 내에서 쿼리 계획에 대 한 범주 (밀리초 단위로 보고)를 기다립니다.|
@@ -90,14 +88,14 @@ ms.lasthandoff: 11/17/2017
  필요는 **VIEW DATABASE STATE** 권한.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sys.database_query_store_options&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats_interval&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [sys.database_query_store_options& #40; Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_context_settings& #40; Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan& #40; Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query& #40; Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text& #40; Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval& #40; Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [쿼리 저장소 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [쿼리 저장소 저장 프로시저 & #40; Transact SQL & #41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

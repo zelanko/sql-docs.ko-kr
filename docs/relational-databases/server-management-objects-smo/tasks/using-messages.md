@@ -14,23 +14,25 @@ ms.topic: reference
 helpviewer_keywords: messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf26f0e7f9795e793f9da85d312f39fe44b611f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3ed18e9b9b7f91613a23d0146b79e0da2b056618
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-messages"></a>메시지 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO에서 시스템 메시지 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 에 속하는 개체는 **서버** 개체입니다. 시스템 메시지는 수정할 수 없으므로 **SystemMessage** 개체 속성은 읽기 전용입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO에서 시스템 메시지 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 에 속하는 개체는 **서버** 개체입니다. 시스템 메시지는 수정할 수 없으므로 **SystemMessage** 개체 속성은 읽기 전용입니다.  
   
  사용자 정의 메시지는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 개체를 통해 SMO에서 프로그래밍 방식으로 표시됩니다. 전체 컬렉션을 반복하여 기존 사용자 정의 메시지를 검색할 수 있습니다. 새 사용자 정의 메시지는 새 **UserDefinedMessage** 개체를 인스턴스화하고 적절한 속성을 설정하여 만들 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C &#35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C & #35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Visual Basic에서 특정 시스템 메시지 찾기  
  코드 예제는 ID 번호로 시스템 메시지를 식별하고 메시지를 표시하는 방법을 보여 줍니다.  

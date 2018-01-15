@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf86a8be5f18bd64cb6f632e22a246317927e3e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 015a01acc3316e4eccc1c4b93ec77388d0b057ab
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>외래 키 생성, 변경 및 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 외래 키로 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 외래 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체로 표시됩니다.  
   
  SMO에서 외래 키를 만들려면의 생성자에 외래 키 정의 되어 있는 테이블을 지정 해야 합니다는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체입니다. 이 테이블에서 외래 키가 될 열을 적어도 하나 이상 선택해야 합니다. 이를 위해 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 개체 변수를 만들고 외래 키 열의 이름을 지정합니다. 그런 다음 참조되는 테이블과 참조되는 열을 지정합니다. 사용 하 여는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> 열을 추가 하는 메서드는 **열** 개체 속성입니다.  
   

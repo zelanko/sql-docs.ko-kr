@@ -17,18 +17,20 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51e983b398a6273680e503ca42a839ad3fd8350
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 06920ebc2a8ea8613a9b24f9e9cbd84eed52e468
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="available-programming-samples"></a>사용 가능한 프로그래밍 샘플
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]다음 표에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체 (SMO) 프로그래밍 예제에서 사용할 수는 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO 디렉터리입니다. 이 예제에서 모두 사용할 수는 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 및 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  다음 표에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체 (SMO) 프로그래밍 예제에서 사용할 수는 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO 디렉터리입니다. 이 예제에서 모두 사용할 수는 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 및 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 합니다.  
   
  예제를 설치 하는 방법에 대 한 자세한 내용은 참조 [SQL Server 2012 용 AdventureWorks](http://msftdbprodsamples.codeplex.com/releases/view/55330)합니다.  
   

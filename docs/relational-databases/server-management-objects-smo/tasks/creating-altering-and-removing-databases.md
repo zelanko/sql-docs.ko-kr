@@ -18,18 +18,20 @@ helpviewer_keywords:
 - databases [SMO], deleting
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1857f72d40bc7e5f38fcda603507b49314cdcd59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cf0867f9ed104a2a04cbdc0b9a0c16093cee59a9
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-databases"></a>데이터베이스 생성, 변경 및 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO에서 데이터베이스도 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO에서 데이터베이스는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체로 표시됩니다.  
   
  데이터베이스를 수정하거나 참조하기 위해 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체를 만들 필요는 없습니다. 데이터베이스는 컬렉션을 사용하여 참조할 수 있습니다.  
   

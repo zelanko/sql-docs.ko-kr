@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SMO [SQL Server], connections
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 066bee36d4dabdf6b11894d5d0158451d601adb9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 721e0fdf56fe26bc4c9484bce8dea091a479aba7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>SQL Server 인스턴스에 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]프로그래밍의 첫 번째 단계는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) 응용 프로그램의 인스턴스를 만드는 것은 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스로 해당 연결을 설정 하 고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  프로그래밍의 첫 번째 단계는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) 응용 프로그램의 인스턴스를 만드는 것은 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스로 해당 연결을 설정 하 고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
  다음과 같은 세 가지 방법으로 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스를 만들고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 설정할 수 있습니다. 첫 번째는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체 변수를 사용하여 연결 정보를 제공하는 것입니다. 두 번째는 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체 속성을 명시적으로 설정하여 연결 정보를 제공하는 것입니다. 세 번째는 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체 생성자에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 전달하는 것입니다. 
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 -   연결을 RMO 프로그래밍 개체에 전달하기 전에 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 메서드를 호출해야 합니다.  
   
 ## <a name="examples"></a>예  
-제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C &#35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C & #35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic에서 Windows 인증을 사용하여 SQL Server 로컬 인스턴스에 연결  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로컬 인스턴스에 연결하는 데는 많은 코드가 필요하지 않습니다. 대신 인증 방법 및 서버에 대한 기본 설정이 사용됩니다. 데이터 검색이 필요한 첫 번째 작업에서 연결이 만들어집니다.  
@@ -228,7 +230,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

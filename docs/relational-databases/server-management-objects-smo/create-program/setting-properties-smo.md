@@ -17,33 +17,35 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 625b34647312ffb31fbe3821ed8e893d883f3298
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd919d2a53a2731e348c1570ef80ffe1714ff0e5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="setting-properties---smo"></a>설정 속성-SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]속성은 개체에 대 한 설명 정보를 저장 하는 값입니다. 예를 들어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 옵션으로 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 개체의 속성입니다. 속성 컬렉션을 사용하여 직접 또는 간접적으로 속성에 액세스할 수 있습니다. 속성에 직접 액세스하는 경우 다음 구문을 사용합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  속성은 개체에 대한 설명 정보를 저장하는 값입니다. 예를 들어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 옵션으로 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 개체의 속성입니다. 속성 컬렉션을 사용하여 직접 또는 간접적으로 속성에 액세스할 수 있습니다. 속성에 직접 액세스하는 경우 다음 구문을 사용합니다.  
   
  `objInstance.PropertyName`  
   
  속성에 읽기/쓰기 권한 또는 읽기 전용 권한이 있는지에 따라 속성 값을 수정하거나 검색할 수 있습니다. 또한 특정 속성을 설정해야 개체를 만들 수 있습니다. 자세한 내용은 특정 개체에 대한 SMO 참조를 참조하십시오.  
   
 > [!NOTE]  
->  자식 개체의 컬렉션은 개체의 속성으로 나타납니다. 예를 들어 **Tables** 컬렉션은 **Server** 개체의 속성입니다. 자세한 내용은 참조 [컬렉션 사용](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)합니다.  
+>  자식 개체의 컬렉션은 개체의 속성으로 나타납니다. 예를 들어 **Tables** 컬렉션은 **Server** 개체의 속성입니다. 자세한 내용은 [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)을 참조하세요.  
   
  개체의 속성은 속성 컬렉션의 멤버입니다. 속성 컬렉션을 사용하여 개체의 모든 속성을 반복할 수 있습니다.  
   
  다음과 같은 이유로 속성을 사용할 수 없는 경우도 있습니다.  
   
--   이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 새로운 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 나타내는 속성에 액세스하려는 경우와 같이 서버 버전에서 속성을 지원하지 않습니다.  
+-   이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 새로운 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]기능을 나타내는 속성에 액세스하려는 경우와 같이 서버 버전에서 속성을 지원하지 않습니다.  
   
--   서버 데이터를 제공 하지 않는 속성에 대 한 경우와 같이 액세스 하려고 하면 나타내는 속성에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 되어 있지 않은 구성 요소입니다.  
+-   설치되지 않은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 요소를 나타내는 속성에 액세스하려는 경우와 같이 서버에서 속성 데이터를 제공하지 않습니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> 및 <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> SMO 실행을 catch하여 이러한 문제를 처리할 수 있습니다.  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 01/08/2018
  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드는 다시 설정될 때까지 또는 나머지 응용 프로그램에 대해 속성 로드 동작을 설정합니다. 사용 하 여 원래 동작을 저장할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 메서드 및 필요에 따라 복원 합니다.  
   
 ## <a name="examples"></a>예  
-제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C &#35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C & #35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Visual Basic에서 속성 가져오기 및 설정  

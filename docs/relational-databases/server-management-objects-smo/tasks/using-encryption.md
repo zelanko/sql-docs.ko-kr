@@ -22,18 +22,20 @@ helpviewer_keywords:
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a5069931c6e144dc574664e71c8f2a5d8964403
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ad74e5242702ace386fb8c14a034a56886f27191
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-encryption"></a>암호화 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SMO에서 서비스 마스터 키로 표현 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 개체입니다. 참조는 <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 의 속성은 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체입니다. 사용 하 여 다시 생성할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 메서드.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO에서 서비스 마스터 키로 표현 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 개체입니다. 참조는 <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 의 속성은 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체입니다. 사용 하 여 다시 생성할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 메서드.  
   
  데이터베이스 마스터 키가 나타내는 <xref:Microsoft.SqlServer.Management.Smo.MasterKey> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> 속성은 데이터베이스 마스터 키는 서비스 마스터 키로 암호화 되어 있는지 여부를 나타냅니다. 데이터베이스 마스터 키가 변경될 때마다 master 데이터베이스의 암호화된 복사본이 자동으로 업데이트됩니다.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/08/2018
  SMO에서 인증서도 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체에 공개 키, 주체 이름, 유효 기간, 및 발급자에 대 한 정보를 지정 하는 속성이 있습니다. 인증서에 대한 액세스 권한은 **Grant**, **Revoke** 및 **Deny** 메서드를 사용하여 제어합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C &#35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C & #35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Visual C#에서 인증서 추가  
  코드 예제는 암호화된 암호를 사용하여 간단한 인증서를 만듭니다. 다른 개체와 달리는 <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 메서드에 여러 오버 로드가 있습니다. 이 예에 사용된 오버로드는 암호화된 암호를 사용하여 새 인증서를 만듭니다.  

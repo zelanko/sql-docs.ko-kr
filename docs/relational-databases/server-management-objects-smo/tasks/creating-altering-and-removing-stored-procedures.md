@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: stored procedures [SMO]
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12c37fba399ab82757303b58a2e1536c3170f67d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 22ab7b6ab6ee687a0d5dba1c37be5f72f308b117
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>저장 프로시저 생성, 변경 및 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 저장된 프로시저도 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 저장된 프로시저도 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체입니다.  
   
  만들기는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> smo에서 개체에 설정 해야는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 속성을는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장된 프로시저를 정의 하는 스크립트입니다. 매개 변수에는 @ 접두사가 필요하며 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 개체를 사용하고 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 개체의 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 컬렉션을 추가하여 개별적으로 만들어야 합니다.  
   
@@ -153,7 +155,7 @@ $sp.Alter()
 $sp.Drop()  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>  
   
   

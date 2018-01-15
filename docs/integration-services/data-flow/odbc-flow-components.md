@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 514818fce9654a720dac0a0721697b30bdcab787
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-flow-components"></a>ODBC 흐름 구성 요소
   이 항목에서는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 용 Connector for ODBC(Open Database Connectivity) by Attunity는 SSIS 개발자가 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 패키지를 쉽게 만드는 데 도움이 됩니다.  
+ [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]용 Connector for ODBC(Open Database Connectivity)는 SSIS 개발자가 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 패키지를 쉽게 만드는 데 도움이 됩니다.  
   
  ODBC Connector는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]의 컨텍스트에서 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드할 때 최적의 성능을 얻기 위해 디자인되었습니다.  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
 ODBC 3.8 사양에 설명된 대로 확장 가능한 C 형식에 대한 데이터 형식 지원은 없습니다. 다음 표에서는 각 ODBC SQL 형식에 사용되는 SSIS 데이터 형식을 설명합니다. SSIS 개발자는 필요한 데이터 변환 작업의 성능에 영향을 주지 않으면서 기본 매핑을 무시하고 입력/출력 열에 다른 SSIS 데이터 형식을 지정할 수 있습니다.  
   
-|ODBC SQL 형식|SSIS 데이터 형식|설명|  
+|ODBC SQL 형식|SSIS 데이터 형식|주석|  
 |-----------------|------------------|------------|  
 |SQL_BIT|DT_BOOL||  
 |SQL_TINYINT|DT_I1<br /><br />DT_UI1|ODBC 드라이버가 해당 SQL 데이터 형식에 대해 UNSIGNED_ATTRIBUTE를 SQL_TRUE로 설정하면 SQL 데이터 형식이 SSIS 부호 없는 형식(DT_UI1, DT_UI2, DT_UI4, DT_UI8)에 매핑됩니다.|  

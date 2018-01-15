@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 231e49bce1350370917871c131d3558b02b82d8d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 220c190a88a1b5c5d38591905e9bb1060a2f4509
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Visual Studio.NET에서에서 Visual C# SMO 프로젝트 만들기 하는 방법
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 섹션에서는 간단한 SMO 콘솔 응용 프로그램을 작성 하는 방법에 설명 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  이 섹션에서는 간단한 SMO 콘솔 응용 프로그램을 빌드하는 방법을 설명합니다.  
   
  이 예에서는 프로그램이 SMO 형식을 참조할 수 있도록 네임스페이스를 가져옵니다. 가져오기는 **에이전트** 네임 스페이스는 선택 사항입니다. 이 네임스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램을 작성하는 경우에 필요합니다. **일반적인** 네임 스페이스의 인스턴스에 보안 연결을 설정 하는 데 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. **SqlClient** 네임 스페이스는 SQL 예외 오류를 처리 하는 데 사용 됩니다.  
   

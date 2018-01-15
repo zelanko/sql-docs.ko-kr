@@ -18,18 +18,20 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae5b30ad5cab9d7e9ceb34103e64b7a782367b1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 820ef3737125c82296655db5cfba1a4265223796
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-table-and-index-partitioning"></a>테이블 및 인덱스 분할 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]제공한 저장 알고리즘을 사용 하 여 데이터를 저장할 수 있습니다 [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)합니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  제공한 저장 알고리즘을 사용 하 여 데이터를 저장할 수 있습니다 [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)합니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
   
 ## <a name="index-and-table-partitioning"></a>인덱스 및 테이블 분할  
  이 기능을 사용하여 인덱스 및 테이블 데이터를 파티션의 여러 파일 그룹에 분산할 수 있습니다. 파티션 함수는 분할 열이라고 하는 특정 열의 값을 기반으로 파티션 집합에 테이블이나 인덱스의 행을 매핑하는 방식을 정의합니다. 파티션 구성표는 파티션 함수로 지정된 각 파티션을 파일 그룹에 매핑합니다. 이렇게 하면 테이블을 파일 그룹과 물리적 장치로 확장하는 보관 전략을 개발할 수 있습니다.  
@@ -135,7 +137,7 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

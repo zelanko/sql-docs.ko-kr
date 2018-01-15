@@ -2,28 +2,30 @@
 title: "Azure SQL Database 및 데이터 웨어하우스에 대한 TDE | Microsoft Docs"
 description: "SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화에 대해 간략히 설명합니다. 이 문서에서는 서비스 관리 TDE 및 Bring Your Own Key를 비롯하여 구성에 대한 옵션과 장점에 대해 설명합니다."
 keywords: 
-services: sql-database
-documentationcenter: 
 author: becczhang
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
+ms.component: security
+ms.custom: 
 ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: d486dd7b9d3019cfb3f3cf88482cdb578e9f9066
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39e1807178f536a1bac2148deae406b1e3bb44b5
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 TDE(투명한 데이터 암호화)를 사용하면 응용 프로그램을 변경할 필요 없이 사용하지 않는 데이터베이스, 연결된 백업 및 트랜잭션 로그 파일에 대한 실시간 암호화 및 암호 해독을 수행하여 악의적인 활동의 위협에 대해 Azure SQL Database 및 데이터 웨어하우스를 보호할 수 있습니다.
 
@@ -43,9 +45,9 @@ Microsoft는 지리적 복제 및 복원에 필요한 대로 원활하게 키를
 > 새로 만든 모든 SQL 데이터베이스는 서비스 관리 TDE를 사용하여 기본적으로 암호화됩니다. 2017년 5월 이전의 기존 데이터베이스와 복원, 지리적 복제 및 데이터베이스 복사를 통해 만든 데이터베이스는 기본적으로 암호화되지 않습니다.
 >
 
-## <a name="bring-your-own-key"></a>Bring Your Own Key
+## <a name="bring-your-own-key-preview"></a>Bring Your Own Key(미리 보기)
 
-BYOK(Bring Your Own Key) 지원을 통해 사용자는 TDE 암호화 키를 제어하고 이 키에 액세스할 수 있는 사용자 및 시기를 제어할 수 있습니다. AKV(Azure Key Vault)는 Azure의 클라우드 기반 외부 키 관리 시스템으로, TDE가 BYOK 지원을 통합한 최초의 키 관리 서비스입니다. BYOK를 통해 데이터베이스 암호화 키는 AKV에 저장된 비대칭 키로 보호됩니다. 비대칭 키는 Key Vault에서 비밀로 유지됩니다. 서버에 키 자격 증명 모음에 대한 권한이 있으면 서버는 Key Vault 서비스를 통해 키 자격 증명 모음에 기본 키 작업 요청을 보냅니다. 비대칭 키는 서버 수준에서 설정되고 해당 서버 아래 모든 데이터베이스에 의해 상속됩니다. BYOK 지원을 통해 사용자는 키 회전, 키 자격 증명 모음 권한, 키 삭제, 모든 암호화 키에 감사/보고 사용 등의 키 관리 작업을 제어할 수 있습니다. Key Vault는 중앙 키 관리를 제공하고, 엄격하게 모니터링되는 HSM(하드웨어 보안 모듈)을 활용하며, 키 및 데이터 관리의 분리를 유도하여 규정 준수를 충족하도록 합니다. Key Vault에 대한 자세한 내용은 [Key Vault 설명서 페이지](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)를 방문하세요.
+BYOK(Bring Your Own Key)(미리 보기) 지원을 통해 사용자는 TDE 암호화 키를 제어하고 이 키에 액세스할 수 있는 사용자 및 시기를 제어할 수 있습니다. AKV(Azure Key Vault)는 Azure의 클라우드 기반 외부 키 관리 시스템으로, TDE가 BYOK 지원을 통합한 최초의 키 관리 서비스입니다. BYOK를 통해 데이터베이스 암호화 키는 AKV에 저장된 비대칭 키로 보호됩니다. 비대칭 키는 Key Vault에서 비밀로 유지됩니다. 서버에 키 자격 증명 모음에 대한 권한이 있으면 서버는 Key Vault 서비스를 통해 키 자격 증명 모음에 기본 키 작업 요청을 보냅니다. 비대칭 키는 서버 수준에서 설정되고 해당 서버 아래 모든 데이터베이스에 의해 상속됩니다. BYOK 지원을 통해 사용자는 키 회전, 키 자격 증명 모음 권한, 키 삭제, 모든 암호화 키에 감사/보고 사용 등의 키 관리 작업을 제어할 수 있습니다. Key Vault는 중앙 키 관리를 제공하고, 엄격하게 모니터링되는 HSM(하드웨어 보안 모듈)을 활용하며, 키 및 데이터 관리의 분리를 유도하여 규정 준수를 충족하도록 합니다. Key Vault에 대한 자세한 내용은 [Key Vault 설명서 페이지](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)를 방문하세요.
 
 Azure SQL Database 및 데이터 웨어하우스에 대한 BYOK 기반 TDE 지원에 대해 자세히 알아보려면 [Bring Your Own Key 지원으로 투명한 데이터 암호화](transparent-data-encryption-byok-azure-sql.md)를 참조하세요.
 
@@ -85,8 +87,8 @@ PowerShell을 통해 TDE를 구성하려면 Azure 소유자, 참가자 또는 SQ
 | Cmdlet | Description |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |데이터베이스에 대해 TDE를 사용하거나 사용하지 않도록 설정합니다.|
-| [Get-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |데이터베이스에 대한 TDE 상태를 가져옵니다. |
-| [Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |데이터베이스에 대한 암호화 진행률을 확인합니다. |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |데이터베이스에 대한 TDE 상태를 가져옵니다. |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption-Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |데이터베이스에 대한 암호화 진행률을 확인합니다. |
 | [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |SQL Server에 Key Vault 키를 추가합니다. |
 | [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |SQL Server의 Key Vault 키를 가져옵니다. |
 | [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |SQL Server에 대 한 TDE 보호기를 설정합니다. |
@@ -102,7 +104,7 @@ PowerShell을 통해 TDE를 구성하려면 Azure 소유자, 참가자 또는 SQ
 | --- | --- |
 | [ALTER DATABASE(Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) | SET ENCRYPTION ON/OFF를 사용하여 데이터베이스를 암호화 또는 암호 해독합니다. |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |연결된 데이터베이스 암호화 키 및 데이터베이스의 암호화 상태에 대한 정보를 반환합니다. |
-| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |연결된 데이터베이스 암호화 키 및 각 데이터 웨어하우스 노드의 암호화 상태에 대한 정보를 반환합니다. | 
+| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |연결된 데이터베이스 암호화 키 및 각 데이터 웨어하우스 노드의 암호화 상태에 대한 정보를 반환합니다. | 
 |  | |
 
 Transact-SQL을 사용하여 TDE 보호기를 Azure Key Vault의 키로 전환할 수 없습니다. PowerShell 또는 Azure Portal을 사용하세요.

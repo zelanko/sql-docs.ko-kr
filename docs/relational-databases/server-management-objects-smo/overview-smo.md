@@ -13,18 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: "69"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 96293d1bf121ac3697d494f1c5a6fc22f4dffb64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8121a42034c748e6acd1265dee06f1552cae1cc0
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="overview-smo"></a>개요(SMO)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)는 개체의 프로그래밍 방식으로 관리 하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 응용 프로그램을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 응용 프로그램이지만 SMO 응용 프로그램을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO)는 개체의 프로그래밍 방식으로 관리 하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 응용 프로그램을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 응용 프로그램이지만 SMO 응용 프로그램을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
   
  예를 들어 새로운 사용자의 요구 사항을 충족하고 교육 비용을 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 태스크를 제어하는 사용자 응용 프로그램을 단순하게 만들어야 하는 경우, 또는 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들어야 하거나 인덱스를 효율적으로 생성하고 모니터링하는 응용 프로그램을 만들어야 하는 경우 SMO 응용 프로그램을 사용할 수 있습니다. 또한 타사 하드웨어나 소프트웨어를 데이터베이스 관리 응용 프로그램에 원활하게 통합하기 위해 SMO 응용 프로그램을 사용할 수도 있습니다.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
  SMO는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 많은 기능과 구성 요소를 새 개체 또는 속성으로 나타냅니다. 이러한 새 기능과 구성 요소는 다음과 같습니다.  
   
--   파티션 구성표에 데이터를 저장하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
+-   파티션 구성표에 데이터를 저장하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.  
   
 -   SOAP 요청을 관리하기 위한 HTTP 끝점. 자세한 내용은 참조 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)합니다.  
   

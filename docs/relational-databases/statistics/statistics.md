@@ -1,7 +1,7 @@
 ---
 title: "통계 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -30,18 +30,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73102f9a2640a9d3481b9e5fd0b613d50c6b1710
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c4fc025cd2026ee0310f67c80a3a05fbd3da45c7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="statistics"></a>통계
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상하는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
   
 ##  <a name="DefinitionQOStatistics"></a> 구성 요소 및 개념  
 ### <a name="statistics"></a>통계  
- 쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용하여 쿼리 결과에서 *카디널리티* 또는 행 수를 계산합니다. 쿼리 최적화 프로그램은 이러한 *카디널리티 예상치*를 통해 고품질의 쿼리 계획을 만듭니다. 예를 들어 조건자에 따라 쿼리 최적화 프로그램은 카디널리티 예상치를 사용하여 리소스를 많이 사용하는 Index Scan 연산자 대신 Index Seek 연산자를 선택할 수 있으며 이렇게 하면 쿼리 성능이 향상됩니다.  
+ 쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 BLOB(Binary Large Object) 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용하여 쿼리 결과에서 *카디널리티* 또는 행 수를 계산합니다. 쿼리 최적화 프로그램은 이러한 *카디널리티 예상치*를 통해 고품질의 쿼리 계획을 만듭니다. 예를 들어 조건자에 따라 쿼리 최적화 프로그램은 카디널리티 예상치를 사용하여 리소스를 많이 사용하는 Index Scan 연산자 대신 Index Seek 연산자를 선택할 수 있으며 이렇게 하면 쿼리 성능이 향상됩니다.  
   
  각 통계 개체는 하나 이상의 테이블 열 목록에 대해 작성되며 첫 번째 열의 값 분포를 나타내는 *히스토그램*을 포함합니다. 여러 열에 대한 통계 개체는 또한 열 사이의 값의 상관 관계에 대한 통계 정보도 저장합니다. 이러한 상관 관계 통계 또는 *밀도*는 열 값의 개별 행 수에서 생성됩니다. 
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/27/2017
 
 다음 다이어그램에서는 6단계의 히스토그램을 보여 줍니다. 첫 번째 상한 값 왼쪽의 영역이 1단계입니다.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "히스토그램") 
   
 위의 각 히스토그램 단계를 살펴보면 다음과 같습니다.
 -   굵은 선은 상한 값(*range_high_key*)과 발생한 횟수(*equal_rows*)를 나타냅니다.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/27/2017
   
 -   점선은 범위 내 고유 값의 총 개수(*distinct_range_rows*) 및 범위 내 값의 총 개수(*range_rows*)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 *range_rows* 및 *distinct_range_rows*를 사용하여 *average_range_rows*를 계산하며 샘플링된 값은 저장하지 않습니다.   
   
-#### <a name="density"></a> 밀도 벡터  
+#### <a name="density"></a>밀도 벡터  
 **밀도**는 주어진 열 또는 열의 조합에서 중복 수에 대한 정보이며 1/(고유 값 수)로 계산됩니다. 쿼리 최적화 프로그램은 같은 테이블 또는 인덱싱된 뷰에서 여러 열을 반환하는 쿼리의 카디널리티 예상치 정확도를 높이기 위해 밀도를 사용합니다. 밀도 벡터는 통계 개체에 있는 각 열 접두사당 한 개의 밀도를 포함합니다. 
 
 > [!NOTE]
@@ -89,16 +89,16 @@ ms.lasthandoff: 11/27/2017
 
 ### <a name="filtered-statistics"></a>필터링된 통계  
  필터링된 통계는 잘 정의된 데이터의 하위 집합에서 선택하는 쿼리에 대한 쿼리 성능을 높일 수 있습니다. 또한 필터 조건자를 사용하여 통계에 포함되는 데이터의 하위 집합을 선택할 수 있습니다. 잘 디자인된 필터링된 통계는 전체 테이블 통계에 비해 쿼리 실행 계획을 향상시킬 수 있습니다. 필터 조건자에 대한 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요. 필터링된 통계를 작성하는 시기에 대한 자세한 내용은 이 항목의 [통계 작성 시기](#CreateStatistics) 섹션을 참조하십시오.  
-  
+ 
 ### <a name="statistics-options"></a>통계 옵션  
  통계가 작성되고 업데이트되는 시기 및 방법에 영향을 주는 다음 세 가지 옵션을 설정할 수 있습니다. 이러한 옵션은 데이터베이스 수준에서만 설정됩니다.  
   
-#### <a name="autocreatestatistics-option"></a>AUTO_CREATE_STATISTICS 옵션  
+#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS 옵션  
  자동 통계 작성 옵션 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics)가 ON으로 설정된 경우 쿼리 최적화 프로그램은 필요에 따라 쿼리 조건자의 개별 열에 대한 통계를 작성하므로 쿼리 계획에 대한 카디널리티 예상치의 정확도가 높아집니다. 이러한 단일 열 통계는 기존 통계 개체에 [히스토그램](#histogram)이 없는 열에 대해 작성됩니다. AUTO_CREATE_STATISTICS 옵션에서는 인덱스에 대해 통계가 작성되는지 확인하지 않습니다. 이 옵션은 또한 필터링된 통계도 생성하지 않으며 전체 테이블에 대한 단일 열 통계에 엄격하게 적용됩니다.  
   
  쿼리 최적화 프로그램이 AUTO_CREATE_STATISTICS 옵션 사용 결과로 통계를 작성하면 통계 이름이 `_WA`로 시작합니다. 다음 쿼리를 사용하여 쿼리 최적화 프로그램이 쿼리 조건자 열에 대한 통계를 작성했는지 확인할 수 있습니다.  
   
-```t-sql  
+```sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -118,8 +118,8 @@ ORDER BY s.name;
 
 * [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다. 이 값은 1,000의 제곱근에 현재 테이블 카디널리티를 곱한 값으로 계산됩니다. 이러한 변경으로 인해 큰 테이블의 통계 업데이트 빈도가 높아집니다. 그러나 데이터베이스의 호환성 수준이 130 미만이면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 임계값이 적용됩니다.  
 
-  > [!IMPORTANT]
-  > [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
+> [!IMPORTANT]
+> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
   
 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전과 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.  
   
@@ -143,25 +143,19 @@ AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server�
   
 * 응용 프로그램에서 통계 업데이트를 기다리는 하나 이상의 쿼리로 인해 클라이언트 요청 제한 시간을 초과하는 경우가 있습니다. 동기 통계를 기다리는 경우 엄격한 시간 제한이 있는 응용 프로그램은 실패할 수 있습니다.  
   
-#### <a name="incremental-stats"></a>INCREMENTAL STATS  
- ON으로 설정된 경우 파티션 통계별로 통계가 작성됩니다. OFF로 설정된 경우 통계 트리가 삭제되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 통계를 다시 계산합니다. 기본값은 OFF입니다. 이 설정은 데이터베이스수준 INCREMENTAL 속성을 재정의합니다.  
+#### <a name="incremental"></a>INCREMENTAL  
+ CREATE STATISTICS의 INCREMENTAL 옵션이 ON이면 파티션 통계별로 통계가 작성됩니다. OFF로 설정된 경우 통계 트리가 삭제되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 통계를 다시 계산합니다. 기본값은 OFF입니다. 이 설정은 데이터베이스수준 INCREMENTAL 속성을 재정의합니다. 증분 통계 만들기에 대한 자세한 내용은 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)을 참조하세요. 자동으로 파티션별 통계를 만드는 방법은 [데이터베이스 속성 &#40;옵션 페이지&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) 및 [ALTER DATABASE SET 옵션 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요. 
   
  큰 테이블에 새 파티션이 추가되는 경우 새 파티션을 포함하도록 통계가 업데이트되어야 합니다. 하지만 전체 테이블 검색((FULLSCAN 또는 SAMPLE 옵션)에 걸리는 시간이 꽤 길 수 있습니다. 또한 새 파티션에 대한 통계만 필요한 경우 전체 테이블 검색이 필요하지 않습니다. 증분 옵션은 파티션별로 통계를 작성 및 저장하며 파티션이 업데이트되는 경우 새 통계가 필요한 해당 파티션에 대해서만 통계를 새로 고칩니다.  
   
  파티션별 통계가 지원되지 않는 경우에는 이 옵션이 무시되고 경고가 생성됩니다. 다음 통계 유형에 대해서는 증분 통계가 지원되지 않습니다.  
   
 * 기본 테이블을 기준으로 파티션 정렬되지 않은 인덱스를 사용하여 작성된 통계입니다.  
-  
 * Always On 읽기 가능한 보조 데이터베이스에 대해 작성된 통계입니다.  
-  
 * 읽기 전용 데이터베이스에 대해 작성된 통계입니다.  
-  
 * 필터링된 인덱스에 대해 작성된 통계입니다.  
-  
 * 뷰에 대해 작성된 통계입니다.  
-  
 * 내부 테이블에 대해 작성된 통계입니다.  
-  
 * 공간 인덱스 또는 XML 인덱스를 사용하여 작성된 통계입니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
@@ -179,12 +173,9 @@ CREATE STATISTICS 문으로 통계를 만들 때 쿼리 최적화 프로그램�
   
 다음 중 한 가지가 적용되는 경우 CREATE STATISTICS 문으로 통계를 작성하십시오.  
 
-* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자가 통계 작성을 제안하는 경우  
-
+* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자가 통계 작성을 제안하는 경우 
 * 쿼리 조건자에 동일한 인덱스에 없는 관련된 여러 열이 포함된 경우  
-
 * 쿼리가 데이터 하위 집합에서 선택하는 경우  
-
 * 쿼리에 통계가 누락된 경우  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>쿼리 조건자에 관련된 여러 열이 포함된 경우  
@@ -196,7 +187,7 @@ CREATE STATISTICS 문으로 통계를 만들 때 쿼리 최적화 프로그램�
   
 카디널리티 예상치에 유용한 밀도를 만들려면 쿼리 조건자의 열이 통계 개체 정의에 있는 열의 접두사 중 하나와 일치해야 합니다. 다음 예에서는 `LastName`, `MiddleName`, 및 `FirstName`열에 대한 여러 열 통계 개체를 만듭니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -223,7 +214,7 @@ GO
   
 쿼리 최적화 프로그램은 `BikeWeights`로 필터링된 통계를 사용하여 `25`보다 가중치가 높은 모든 자전거를 선택하는 다음 쿼리의 쿼리 계획을 향상합니다.  
   
-```t-sql  
+```sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -241,9 +232,7 @@ GO
  통계가 누락된 경우 다음 단계를 수행하십시오.  
   
 * [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 및 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics)가 ON으로 설정되었는지 확인합니다.  
-  
 * 데이터베이스가 읽기 전용이 아닌지 확인합니다. 데이터베이스가 읽기 전용이면 새 통계 개체를 저장할 수 없습니다.  
-  
 * [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문을 사용하여 누락된 통계를 작성합니다.  
   
 읽기 전용 데이터베이스 또는 읽기 전용 스냅숏에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 **tempdb**에서 임시 통계를 만들어 유지 관리합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 임시 통계를 만드는 경우 통계 이름에 접미사 *_readonly_database_statistic*이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 *_readonly_database_statistic*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 통계 이름의 접미사를 *_readonly_database_statistic*에서 *_readonly_database_statistic_scripted*로 변경합니다.  
@@ -251,7 +240,6 @@ GO
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서만 임시 통계를 만들고 업데이트할 수 있습니다. 그러나 임시 통계를 삭제하고 통계 속성을 모니터링하는 데는 영구적 통계에 사용하는 것과 동일한 도구를 사용할 수 있습니다.  
   
 * [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) 문을 사용하여 임시 통계를 삭제합니다.  
-  
 * **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** 및 **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** 카탈로그 뷰를 사용하여 통계를 모니터링합니다. **sys_stats** 에는 영구적 통계와 임시 통계를 나타내는 **is_temporary** 열이 포함되어 있습니다.  
   
  임시 통계는 **tempdb**에 저장되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작하면 모든 임시 통계가 사라집니다.  
@@ -268,11 +256,9 @@ GO
  다음과 같은 경우 통계를 업데이트할 것을 고려하십시오.  
   
 * 쿼리 실행 시간이 느린 경우  
-  
 * 삽입 작업이 오름차순 또는 내림차순 키 열에 대해 발생하는 경우  
-  
 * 유지 관리 작업 이후  
-  
+
 ### <a name="query-execution-times-are-slow"></a>쿼리 실행 시간이 느린 경우  
  쿼리 응답 시간이 느리거나 예측할 수 없는 경우 추가 문제 해결 단계를 수행하기 전에 쿼리에 최신 통계가 포함되었는지 확인하십시오.  
   
@@ -316,7 +302,7 @@ GO
   
      예를 들어 `@date`가 NULL인 경우 다음 `Sales.GetRecentSales` 저장 프로시저에서는 `@date` 매개 변수의 값을 변경합니다.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -335,7 +321,7 @@ GO
   
      `Sales.GetRecentSales` 저장 프로시저에 대한 첫 번째 호출에서 NULL을 `@date` 매개 변수에 전달하면 쿼리 조건자가 `@date = NULL`과 함께 호출되지 않은 경우에도 쿼리 최적화 프로그램에서 `@date = NULL`에 대한 카디널리티 예상치와 함께 저장 프로시저를 컴파일합니다. 실제 쿼리 결과에서 이 카디널리티 예상치는 행 수와 많이 다를 수 있습니다. 그 결과 쿼리 최적화 프로그램에서 만족스럽지 못한 쿼리 계획을 선택할 수 있습니다. 이를 방지하기 위해 다음과 같이 저장 프로시저를 두 개의 프로시저로 다시 작성할 수 있습니다.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -365,7 +351,7 @@ GO
   
  일부 응용 프로그램의 경우 쿼리를 실행할 때마다 다시 컴파일하는 데 너무 많은 시간이 걸릴 수 있습니다. `RECOMPILE` 옵션을 사용하지 않는 경우에도 `OPTIMIZE FOR` 쿼리 힌트가 도움이 될 수 있습니다. 예를 들어 특정 날짜를 지정하기 위해 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 저장 프로시저에 추가할 수 있습니다. 다음 예에서는 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 프로시저에 추가합니다.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -387,7 +373,7 @@ GO
  일부 응용 프로그램의 경우 쿼리를 변경할 수 없거나 RECOMPILE 쿼리 힌트 사용으로 인해 너무 많은 컴파일이 필요해서 통계 설계 지침이 적용되지 않을 수 있습니다. 응용 프로그램 공급업체와 함께 응용 프로그램 변경 내용을 조사하는 동안 쿼리 동작을 제어할 수 있도록 계획 지침을 사용하여 USE PLAN과 같은 기타 힌트를 지정할 수 있습니다. 계획 지침에 대한 자세한 내용은 [Plan Guides](../../relational-databases/performance/plan-guides.md)를 참조하십시오.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
@@ -401,4 +387,5 @@ GO
  [STATS_DATE&#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
- 
+ [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)

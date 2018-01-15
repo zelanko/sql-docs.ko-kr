@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4b5fa050cbb69944039c143f3140086851a68ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 469b28cd43b2e5fd03063e0031b487a7959345e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>기본 제공 컬렉션 - 매개 변수 컬렉션 참조(보고서 작성기)
   보고서 매개 변수는 식에서 참조할 수 있는 기본 제공 컬렉션 중 하나입니다. 식에 매개 변수를 포함하면 사용자의 선택에 따라 보고서 데이터와 모양을 사용자 지정할 수 있습니다. 식은 (*Fx*) 또는 \<**Expression**> 옵션을 제공하는 모든 보고서 항목 속성 또는 입력란 속성에 사용할 수 있습니다. 식은 보고서의 내용과 모양을 다른 방법으로 제어하는 데도 사용됩니다. 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/05/2017
   
  필터에서 매개 변수를 사용하는 방법은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [일반적으로 사용되는 필터&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   

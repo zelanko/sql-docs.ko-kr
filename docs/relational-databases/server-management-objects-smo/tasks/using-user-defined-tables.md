@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7155a66d912f4cb854d23cca3bf8babd2ae1deef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 44a2706d60ff1b6b2935c9c5e5251adece1c33f8
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-user-defined-tables"></a>사용자 정의 테이블 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 정의 테이블 형식의 정보를 나타냅니다. 이들은 테이블 형식 데이터를 저장 프로시저나 사용자 정의 함수로 전달할 때 매개 변수로 사용할 수 있습니다. 데이터베이스 테이블의 열 표시에는 사용자 정의 테이블을 사용할 수 없습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  사용자 정의 테이블은 테이블 형식의 정보를 나타냅니다. 이들은 테이블 형식 데이터를 저장 프로시저나 사용자 정의 함수로 전달할 때 매개 변수로 사용할 수 있습니다. 데이터베이스 테이블의 열 표시에는 사용자 정의 테이블을 사용할 수 없습니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 속성이 있습니다. 각 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 컬렉션에 있다는 점에서 **열** 의 컬렉션을 참조 하는 속성 <xref:Microsoft.SqlServer.Management.Smo.Column> 사용자 정의 테이블의 열을 나열 하는 개체입니다. 사용자 정의 테이블에 열을 추가하려면 Add 메서드를 사용합니다.  
   

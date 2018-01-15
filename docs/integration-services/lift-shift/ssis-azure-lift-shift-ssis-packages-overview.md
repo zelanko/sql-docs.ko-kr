@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
 이제 SSIS(SQL Server Integration Services) 패키지 및 워크로드를 Azure 클라우드로 이동할 수 있습니다.
@@ -54,7 +54,7 @@ SSIS IR은 한 번만 프로비전하면 됩니다. 그런 다음 SSDT(SQL Serve
 
 또한 Data Factory는 다른 유형의 통합 런타임도 지원합니다. SSIS IR 및 다른 유형의 통합 런타임에 대한 자세한 내용은 [Azure Data Factory의 통합 런타임](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime)을 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 이 아티클에서 설명하는 기능에는 SQL Server 2017 또는 SQL Server 2016이 필요하지 않습니다.
 
 이러한 기능을 사용하려면 다음 버전의 SSDT(SQL Server Data Tools)가 필요합니다.
@@ -68,7 +68,7 @@ Azure의 필수 구성 요소에 대한 자세한 내용은 [SSIS(SQL Server Int
 
 ## <a name="ssis-features-on-azure"></a>Azure의 SSIS 기능
 
-SQL Database 인스턴스를 프로비전하여 SSISDB를 호스팅하면 SSIS용 Azure Feature Pack 및 Access 재배포 가능 패키지도 설치됩니다. 이러한 구성 요소는 기본 제공 구성 요소에서 지원하는 데이터 원본 외에도 **Excel 및 Access** 파일 및 다양한 **Azure** 데이터 원본에 대한 연결을 제공합니다. 현재 SSIS용 **타사 구성 요소**(Attunity 및 SAP BI 구성 요소와 같은 Microsoft의 타사 구성 요소 포함)는 설치할 수 없습니다.
+SQL Database 인스턴스를 프로비전하여 SSISDB를 호스팅하면 SSIS용 Azure Feature Pack 및 Access 재배포 가능 패키지도 설치됩니다. 이러한 구성 요소는 기본 제공 구성 요소에서 지원하는 데이터 원본 외에도 **Excel 및 Access** 파일 및 다양한 **Azure** 데이터 원본에 대한 연결을 제공합니다. 이때 SSIS용 **타사 구성 요소**(Attunity 및 SAP BI 구성 요소에 의한 Oracle 및 Teradata 구성 요소와 같은 Microsoft의 타사 구성 요소 포함)는 설치할 수 없습니다.
 
 SSISDB를 호스팅하는 **SQL Database의 이름**은 SSDT 및 SSMS에서 패키지를 배포하고 관리할 때 사용할 네 부분으로 된 이름(`<sql_database_name>.database.windows.net`)의 첫 부분입니다.
 

@@ -17,18 +17,20 @@ helpviewer_keywords:
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac685dde06e3cd95ebd029db96e27d75372b1ed2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 86868dc6aa08ed947e97764df7d8caaf9df57fbc
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server 에이전트에서 자동 관리 태스크 예약
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Smo에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 다음 개체로 표시 됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 다음 개체로 표시됩니다.  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 개체에는 작업, 경고, 운영자의 세 가지 컬렉션이 있습니다.  
   

@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SMO [SQL Server], data types
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16d7cc6bac67972516efb5bc916eefacd91eafc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 575e2b0553bd37ca095c1864cc775547ace36a76
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="working-with-data-types"></a>데이터 형식 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터에 다양 한 유형과 정의 된 길이, 특정 정확성이 있는 숫자 또는 고유한 규칙 집합이 있는 다른 개체인 사용자 정의 데이터 형식이 포함 된 문자열을 같은 크기를 가져옵니다. <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체에서 올바르게 처리 될 수 있도록 데이터 형식을 분류 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체는 데이터를 허용하는 개체와 연결되어 있습니다. 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하 여 정의 해야 하는 데이터를 허용 하는 관리 개체 (SMO) 개체는 <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체 속성:  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  데이터는 정의된 길이가 있는 문자열, 특정 정확성이 있는 숫자 또는 해당 규칙 집합이 있는 다른 개체인 사용자 정의 데이터 형식과 같은 다양한 유형과 크기로 제공됩니다. <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체에서 올바르게 처리 될 수 있도록 데이터 형식을 분류 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체는 데이터를 허용하는 개체와 연결되어 있습니다. 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하 여 정의 해야 하는 데이터를 허용 하는 관리 개체 (SMO) 개체는 <xref:Microsoft.SqlServer.Management.Smo.DataType> 개체 속성:  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Column>  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-basic"></a>Visual Basic의 생성자 사양으로 DataType 개체 생성  
- 이 코드 예제를 기반으로 하는 다른 데이터 형식의 인스턴스를 만드는 생성자를 사용 하는 방법을 보여 줍니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.  
+ 이 코드 예제에서는 생성자를 사용하여 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 데이터 형식 인스턴스를 만드는 방법을 보여 줍니다.  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> 및 XML 유형에서 개체를 식별하려면 모두 이름 값이 필요합니다.  
@@ -81,7 +83,7 @@ dt = New DataType(SqlDataType.Decimal, 10, 2)
 ``` 
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-c"></a>Visual C#의 생성자 사양으로 DataType 개체 생성  
- 이 코드 예제를 기반으로 하는 다른 데이터 형식의 인스턴스를 만드는 생성자를 사용 하는 방법을 보여 줍니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.  
+ 이 코드 예제에서는 생성자를 사용하여 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 데이터 형식 인스턴스를 만드는 방법을 보여 줍니다.  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> 및 XML 유형에서 개체를 식별하려면 모두 이름 값이 필요합니다.  
@@ -96,7 +98,7 @@ dt = new DataType(SqlDataType.Decimal, 10, 2);
 ```  
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-basic"></a>Visual Basic의 기본 생성자를 사용하여 DataType 개체 생성  
- 이 코드 예제를 기반으로 하는 다른 데이터 형식의 인스턴스를 만들 기본 생성자를 사용 하는 방법을 보여 줍니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다. 그런 다음 속성을 사용하여 데이터 형식을 지정합니다.  
+ 이 코드 예제에서는 기본 생성자를 사용하여 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 데이터 형식 인스턴스를 만드는 방법을 보여 줍니다. 그런 다음 속성을 사용하여 데이터 형식을 지정합니다.  
   
  **참고** 는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>, 및 모든 XML 형식 개체를 식별 하는 이름 값이 필요 합니다.  
   
@@ -111,7 +113,7 @@ dt.MaximumLength = 100
 ```
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-c"></a>Visual C#의 기본 생성자를 사용하여 DataType 개체 생성  
- 이 코드 예제를 기반으로 하는 다른 데이터 형식의 인스턴스를 만들 기본 생성자를 사용 하는 방법을 보여 줍니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다. 그런 다음 속성을 사용하여 데이터 형식을 지정합니다.  
+ 이 코드 예제에서는 기본 생성자를 사용하여 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 데이터 형식 인스턴스를 만드는 방법을 보여 줍니다. 그런 다음 속성을 사용하여 데이터 형식을 지정합니다.  
   
  **참고** 는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>, 및 모든 XML 형식 개체를 식별 하는 이름 값이 필요 합니다.  
   

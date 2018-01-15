@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,20 @@ catalog.create_execution [@folder_name = folder_name
  [@runinscaleout =] *runinscaleout*  
  실행이 Scale Out에 있는지 여부를 나타냅니다. Scale Out에서 패키지를 실행하려면 1 값을 사용합니다. Scale Out을 사용하지 않고 패키지를 실행하려면 0 값을 사용합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 [SSISDB].[catalog].[catalog_properties]에서 DEFAULT_EXECUTION_MODE로 설정됩니다. *runinscaleout*은 **bit**입니다. 
  
- [@useanyworker =] *useanyworker*  
-  Scale Out 작업자에서 실행을 수행할 수 있는지 여부를 나타냅니다. Scale Out 작업자를 사용하여 패키지를 실행하려면 1 값을 사용합니다. 일부 Scale Out 작업자에서 패키지를 실행할 수 있음을 나타내려면 0 값을 사용합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 1로 설정됩니다. *useanyworker*는 **bit**입니다. 
+[@useanyworker =] *useanyworker*  
+Scale Out 작업자에서 실행을 수행할 수 있는지 여부를 나타냅니다.
+
+-   Scale Out 작업자를 사용하여 패키지를 실행하려면 1 값을 사용합니다. `@useanyworker`를 true로 설정하면 최대 작업 수 (작업자 구성 파일에 지정된 대로)에 아직 도달하지 않은 작업자가 패키지를 실행할 수 있습니다.
+
+-   일부 Scale Out 작업자에서 패키지를 실행할 수 있음을 나타내려면 0 값을 사용합니다. `@useanyworker`를 false로 설정하면 Scale Out 관리자를 사용하거나 저장 프로시저 `[catalog].[add_execution_worker]`를 호출하여 패키지를 실행할 수 있는 작업자를 지정해야 합니다.
+
+이 매개 변수는 선택 사항입니다. 지정하지 않으면 해당 값이 1로 설정됩니다. *useanyworker*는 **bit**입니다. 
   
  [@execution_id =] *execution_id*  
  실행 인스턴스의 고유 식별자를 반환합니다. *execution_id*는 **bigint**입니다.  
 
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  실행은 단일 인스턴스의 패키지 실행 중에 패키지에서 사용할 매개 변수 값을 지정하는 데 사용됩니다.  
   
  환경 참조가 *reference_id* 매개 변수로 지정되면 저장 프로시저에서 프로젝트 및 패키지 매개 변수를 리터럴 값 또는 해당 환경 변수에서 참조된 값으로 채웁니다. 환경 참조가 지정되면 패키지를 실행하는 동안 기본 매개 변수 값이 사용됩니다. 특정 실행 인스턴스에 사용되는 값을 정확하게 확인하려면 이 저장 프로시저의 *execution_id* 출력 매개 변수 값을 사용하고 [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) 뷰를 쿼리합니다.  
@@ -97,9 +103,9 @@ GO
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 및 EXECUTE 권한과 해당되는 경우 참조된 환경에 대한 READ 권한  
@@ -133,7 +139,7 @@ GO
   
 -   *reference_id* 환경 참조에서 지정하는 환경에서 참조된 환경 변수를 찾을 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
  [catalog.set_execution_parameter_value&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  [catalog.add_execution_worker&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  

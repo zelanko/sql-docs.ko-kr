@@ -14,18 +14,18 @@ ms.topic: reference
 helpviewer_keywords: views [SMO]
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb90ebd600a17efc71c1195ed070091ca826fc4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f32f9db12d027561ef64f405118c0a5a00da5188
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-views"></a>뷰 생성, 변경 및 제거
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 뷰가 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.View> 개체입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 뷰가 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.View> 개체입니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.View> 속성이 뷰를 정의합니다. 해당 하는 것이 고 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 보기를 만드는 방법에 대해 SELECT 문을 합니다.  
   

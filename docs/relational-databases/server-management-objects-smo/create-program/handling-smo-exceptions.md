@@ -18,18 +18,20 @@ helpviewer_keywords:
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f566aea6e37a41af0866df53a985f40eabf56c92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3b2041a8a83780c1ef601c9dce6c031ac1b37eb7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="handling-smo-exceptions"></a>SMO 예외 처리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]관리 코드에서 예외는 오류가 발생 한 경우 throw 됩니다. SMO 메서드와 속성은 반환 값에 성공 또는 실패를 보고하지 않습니다. 대신 예외 처리기에서 예외를 catch하고 처리할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  관리 코드에서 오류가 발생하면 예외가 throw됩니다. SMO 메서드와 속성은 반환 값에 성공 또는 실패를 보고하지 않습니다. 대신 예외 처리기에서 예외를 catch하고 처리할 수 있습니다.  
   
  SMO에는 여러 예외 클래스가 있습니다. 예외에 대한 텍스트 메시지를 제공하는 **Message** 속성과 같은 예외 속성에서 예외 정보를 추출할 수 있습니다.  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/08/2018
  제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C &#35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Visual Basic에서 예외 catch  
- 사용 하는 방법을 보여 주는 코드 예제는 **시도 중... Catch 하는 중... 마지막으로** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 예외를 catch 하는 문입니다. 모든 SMO 예외는 SmoException 유형이며 SMO 참조에 표시됩니다. 내부 예외의 시퀀스가 표시되어 오류의 근원을 보여 줍니다. 자세한 내용은 참조는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 설명서입니다.  
+ 사용 하는 방법을 보여 주는 코드 예제는 **시도 중... Catch 하는 중... 마지막으로** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 예외를 catch 하는 문입니다. 모든 SMO 예외는 SmoException 유형이며 SMO 참조에 표시됩니다. 내부 예외의 시퀀스가 표시되어 오류의 근원을 보여 줍니다. 자세한 내용은 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 설명서를 참조하십시오.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

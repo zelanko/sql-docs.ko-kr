@@ -1,5 +1,5 @@
 ---
-title: "Data Migration Assistant를 사용하여 Stretch Database용 데이터베이스 및 테이블 식별 | Microsoft Docs"
+title: "Stretch Database에 적합한 데이터베이스 및 테이블 식별 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/30/2017
 ms.prod: sql-non-specified
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fe01369c0dc9ab2f8556cafd932d6c624ed9554
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7793add9d2d6e8aceee795cf19e80347df5c14a9
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Data Migration Assistant를 사용하여 Stretch Database용 데이터베이스 및 테이블 식별
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,6 @@ Stretch Database Advisor는 이전의 SQL Server 2016 업그레이드 관리자 
 ## <a name="see-also"></a>참고 항목  
  [스트레치 데이터베이스에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
  [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

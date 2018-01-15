@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SQL Server Management Objects, namespaces
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b24a195a6606c8356d941abb08157700e3d5fdf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 235af9320f130e7b5440491765c964b4fa1771de
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 개체 모델 네임 스페이스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)에 다양 한 네임 스페이스가 있습니다. 각 네임스페이스는 SMO의 서로 다른 기능 영역을 나타냅니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects(SMO)에는 다양한 네임스페이스가 있습니다. 각 네임스페이스는 SMO의 서로 다른 기능 영역을 나타냅니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], SMO 어셈블리는 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\ 폴더에 있습니다.  
   

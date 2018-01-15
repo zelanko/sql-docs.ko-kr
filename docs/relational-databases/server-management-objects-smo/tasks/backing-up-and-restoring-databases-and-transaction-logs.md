@@ -22,18 +22,20 @@ helpviewer_keywords:
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bf1d65068cc72b7fda04be8b98ac999b22e010fd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 12728d80dbae777438b4b9d63a2bc736d2f4ece5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>데이터베이스 및 트랜잭션 로그 백업 및 복원
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Smo에서 <xref:Microsoft.SqlServer.Management.Smo.Backup> 클래스 및 <xref:Microsoft.SqlServer.Management.Smo.Restore> 클래스는 백업 및 복원의 특정 작업을 수행 하는 도구를 제공 하는 유틸리티 클래스입니다. A <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체 대신 필요한 특정 백업 태스크를 나타냅니다.는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체는 서버 인스턴스.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Backup> 클래스와 <xref:Microsoft.SqlServer.Management.Smo.Restore> 클래스는 특정 백업 및 복원 태스크를 수행하는 도구를 제공하는 유틸리티 클래스입니다. A <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체 대신 필요한 특정 백업 태스크를 나타냅니다.는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체는 서버 인스턴스.  
   
  데이터 손실이나 손상이 발생하면 완전히 또는 부분적으로 백업을 복원해야 합니다. 부분 복원에서는 복원할 데이터를 분할하기 위해 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 컬렉션을 사용합니다. 백업에 트랜잭션 로그가 있으면 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Restore> 속성을 사용하여 특정 시점까지 데이터를 복원할 수 있습니다. 또한 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 메서드를 사용하여 데이터의 유효성을 확인할 수 있습니다. 권장되는 백업 절차는, 복원 작업을 수행하고 정기적으로 데이터베이스의 데이터를 검사하여 백업 무결성을 확인하는 것입니다.  
   

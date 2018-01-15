@@ -18,23 +18,25 @@ helpviewer_keywords:
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d9a4e8529fdb24060db49e2263576f492570e64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abd6caba2945c9b435033d75d7c0b353e98a26f7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>권한 부여, 취소 및 거부
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 개체를 사용 하는 일련의 권한 또는 개별 서버 권한을 할당 하는 <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> 개체입니다. 서버 수준 권한의 경우 피부여자가 로그온을 참조합니다. Windows에 의해 인증된 로그온이 Windows 사용자 이름으로 나열됩니다. 이 코드 예제를 실행하면 피부여자로부터 권한이 취소되고 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 메서드로 권한이 제거되었는지 확인합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 개체는 일련의 권한 또는 개별 서버 권한을 <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> 개체에 할당하는 데 사용됩니다. 서버 수준 권한의 경우 피부여자가 로그온을 참조합니다. Windows에 의해 인증된 로그온이 Windows 사용자 이름으로 나열됩니다. 이 코드 예제를 실행하면 피부여자로부터 권한이 취소되고 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 메서드로 권한이 제거되었는지 확인합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> 개체를 사용하여 비슷한 방법으로 데이터베이스 권한 및 데이터베이스 개체 권한을 할당할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C &#35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C & #35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Visual Basic에서 서버 권한 부여  
  이 코드 예제는 지정된 로그인에 Create Endpoint 및 Alter Any Endpoint 권한을 부여한 다음, 권한을 열거하고 표시합니다. 권한 중 하나를 취소하고 나서 권한을 다시 열거합니다. 이 예에서는 지정된 로그인에 지정된 시작 권한이 있다고 가정합니다.  

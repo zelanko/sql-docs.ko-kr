@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: 6d54a849630bece0fba6456a516cbd68aecf2eb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7658d69ae0b59e079e40348962d11fe202a85235
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Linux 백업 및 복원을 사용 하 여 Windows에서 SQL Server 데이터베이스 마이그레이션
 
@@ -195,6 +195,7 @@ SQL Server의 백업 및 복원 기능은 Windows에서 SQL Server에서 SQL Ser
 > * 백업 파일에 대 한 복원을 준비 재배치
 > * 사용 하 여 **sqlcmd** TRANSACT-SQL 명령을 실행 하려면
 > * 사용 하 여 데이터베이스 백업을 복원는 **데이터베이스 복원** 명령 
+> * 마이그레이션을 확인 하려면 쿼리를 실행 합니다.
 
 다음으로 Linux에서 SQL Server에 대 한 다른 마이그레이션 시나리오를 탐색 합니다. 
 

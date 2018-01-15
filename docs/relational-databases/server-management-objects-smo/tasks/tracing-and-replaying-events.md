@@ -18,18 +18,20 @@ helpviewer_keywords:
 - events [SMO], tracing
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89db9be2fb51e8f37dce7b223b312a0a7e0a8221
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a5501861717bf21e6004730b38f93b309c40e0e
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="tracing-and-replaying-events"></a>이벤트 추적 및 재생
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Smo에서 **추적** 및 **재생** 개체에 <xref:Microsoft.SqlServer.Management.Trace> 에 프로그래밍 방식 액세스를 제공 하는 네임 스페이스는 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 의인스턴스를모니터링에사용되는기능을[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 프로시저가 너무 늦게 실행되어 성능 저하를 유발하는지 확인할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Smo에서 **추적** 및 **재생** 개체에 <xref:Microsoft.SqlServer.Management.Trace> 에 프로그래밍 방식 액세스를 제공 하는 네임 스페이스는 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 의인스턴스를모니터링에사용되는기능을[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 프로시저가 너무 늦게 실행되어 성능 저하를 유발하는지 확인할 수 있습니다.  
   
  **추적** 및 **재생** 개체의 인스턴스에 대 한 추적을 만드는 데 사용할 수 있는 개체 집합이 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 이러한 개체는 사용자의 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 추적을 수동으로 만드는 데 사용할 수 있습니다. 또한 SMO **추적** 개체는 SQL 추적 파일 및 모니터링 하 여 생성 된 테이블을 읽는 데 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 또는 DTS 로깅을 합니다.  
   

@@ -24,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e72f863a4746bf091c15e48349943906e172c616
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c82b7d40310c22d9c064367ba5437106ff32422
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 인덱싱된 뷰를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 이 항목에서는 뷰에서 인덱스를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  다음 단계는 인덱싱된 뷰를 만들고 성공적으로 구현하는 데 필요합니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 -   쿼리 최적화 프로그램에서 인덱싱된 뷰를 사용하여 쿼리 계획을 만듭니다.  
   
-    |SET 옵션|필요한 값|기본 서버 값|기본값<br /><br /> OLE DB 및 ODBC 값|기본값<br /><br /> DB-Library 값|  
+    |Set 옵션|필요한 값|기본 서버 값|Default<br /><br /> OLE DB 및 ODBC 값|Default<br /><br /> DB-Library 값|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -155,7 +155,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  데이터베이스에는 CREATE VIEW 권한이 필요하고 뷰를 만들 구성표에는 ALTER 권한이 필요합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -217,7 +217,7 @@ ms.lasthandoff: 11/17/2017
   
  자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   

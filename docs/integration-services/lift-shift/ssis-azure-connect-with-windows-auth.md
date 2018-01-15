@@ -1,5 +1,5 @@
 ---
-title: "Windows 인증으로 온-프레미스 데이터 원본 및 Azure 파일 공유에 연결 | Microsoft Docs"
+title: "Windows 인증으로 데이터 원본 및 파일 공유에 연결 | Microsoft Docs"
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Windows 인증으로 온-프레미스 데이터 원본 및 Azure 파일 공유에 연결
 이 문서에서는 Windows 인증을 사용하여 온-프레미스 데이터 원본과 Azure 파일 공유에 연결하는 패키지를 실행하도록 Azure SQL Database에 SSIS 카탈로그를 구성하는 방법을 설명합니다. Windows 인증을 사용하여 온-프레미스 및 Azure 가상 머신과 Azure Files의 Azure SSIS Integration Runtime과 동일한 가상 네트워크에 있는 데이터 원본에 연결할 수 있습니다.
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/12/2017
 
 3.  SSMS에서 사용할 온-프레미스 SQL Server에 연결할 수 있는지 확인합니다.
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>사전 요구 사항
 Azure에서 실행 중인 패키지에서 온-프레미스 SQL Server에 연결하려면 다음과 같은 사전 요구 사항을 구현해야 합니다.
 
 1.  SQL Server 구성 관리자에서 TCP/IP 프로토콜을 설정합니다.
