@@ -26,6 +26,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_Pacemaker 클러스터 배포](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_가용성 그룹 생성 및 구성](sql-server-linux-create-availability-group.md)
+## [9_고가용성을 위해 Kubernetes에서 구성](tutorial-sql-server-containers-kubernetes.md)
 
 # 개념
 ## Install

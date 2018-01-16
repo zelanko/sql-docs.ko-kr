@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
 
 > [!NOTE]  
->  동일한 AG에서 혼합 버전의 SQL Server가 지원되지 않습니다. 가용성 그룹을 사용하여 새 버전으로 마이그레이션하기 위해 지원되는 유일한 방법은 SQL Server 2016 Enterprise Edition 이후에 포함된 분산된 가용성 그룹입니다.
+>  준비가 된 복제본을 업그레이드하는 롤링 업그레이드 외부에서는 동일한 AG의 SQL Server 혼합 버전이 지원되지 않습니다. 즉, 더 높은 버전의 SQL Server를 기존 AG에 새 복제본으로 추가할 수 없습니다. 예를 들어 SQL Server 2017 복제본은 기존 SQL Server 2016 AG에 추가할 수 없습니다. 가용성 그룹을 사용하여 SQL Server의 새 버전으로 마이그레이션하기 위해 지원되는 유일한 방법은 SQL Server 2016 Enterprise Edition 이후에 포함된 분산된 가용성 그룹입니다.
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Always On 가용성 그룹의 롤링 업그레이드를 위한 최상의 방법  
  서버 업그레이드 도는 업데이트를 수행할 때 가용성 그룹에 대한 가동 중단 시간 및 데이터 손실을 최소화하기 위해 다음과 같은 최상의 방법을 구현해야 합니다.  

@@ -17,11 +17,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24426c82299598fbf80b31b8d2a1ee24b6142d9a
-ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/15/2017
 |`CREATE TABLE` 및 `ALTER TABLE`의 columnstore 인덱스에 대한 압축 지연 옵션|||예|예|예|예|
 |Columnstore 인덱스에는 비지속형 계산 열이 있을 수 있음||||예|||   
   
- <sup>1</sup> 읽기 가능한 비클러스터형 columnstore 인덱스를 만들려면 읽기 전용 파일 그룹에 인덱스를 저장합니다.  
+ <sup>1</sup> 읽기 전용 비클러스터형 columnstore 인덱스를 만들려면 읽기 전용 파일 그룹에 인덱스를 저장합니다.  
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 이러한 새 기능을 추가합니다.

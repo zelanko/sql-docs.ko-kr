@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd1193331cc9658a4703a39201219896c0e921d0
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 버전에서 지원하는 Integration Services 기능
  이 항목은 다른 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]버전에서 지원되는 SSIS(SQL Server Integration Services) 기능에 대한 세부 정보를 제공합니다.  
@@ -63,7 +63,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |기본 제공 데이터 원본 커넥터|예|예|||| 
 |기본 제공 태스크 및 변환|예|예||||  
-|Attunity에 의한 ODBC 원본 및 대상|예|예|||| 
+|ODBC 원본 및 대상 |예|예|||| 
 |Azure 데이터 원본 커넥터 및 태스크|예|예||||  
 |Hadoop/HDFS 커넥터 및 태스크|예|예||||  
 |기본 데이터 프로파일링 도구|예|예|||| 
