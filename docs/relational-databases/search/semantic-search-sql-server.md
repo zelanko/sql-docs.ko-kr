@@ -22,14 +22,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7b9a1fe1c33de87d0d298e530e4704f669e7675c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6bd21c1c3be6109431165eb0c7c17ad1cb88a1c6
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="semantic-search-sql-server"></a>의미 체계 검색(SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 통계 의미 체계 검색은 통계적으로 관련성이 있는 *키 구*를 추출한 다음 인덱싱하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 구조화되지 않은 문서를 깊이 있게 검색하는 기능입니다. 그런 다음 이 키 구를 사용하여 *유사하거나 관련된 문서*를 식별한 후 인덱싱합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 통계 의미 체계 검색은 통계적으로 관련성이 있는 *키 구*를 추출한 다음 인덱싱하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 구조화되지 않은 문서를 깊이 있게 검색하는 기능입니다. 그런 다음 이 키 구를 사용하여 *유사하거나 관련된 문서*를 식별한 후 인덱싱합니다.  
   
 ##  <a name="whatcanido"></a> 의미 체계 검색을 통해 수행할 수 있는 작업  
  의미 체계 검색은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 전체 텍스트 검색 기능을 기반으로 구축되었지만 이를 통해 키워드 검색보다 뛰어난 새로운 시나리오가 지원됩니다. 전체 텍스트 검색을 사용하면 문서의 *단어* 를 쿼리할 수 있지만, 의미 체계 검색을 사용하면 문서의 *의미* 를 쿼리할 수 있습니다. 가능한 솔루션에는 자동 태그 추출, 관련 내용 검색 및 유사 내용 간의 계층 탐색이 포함됩니다. 예를 들어 키 구의 인덱스를 쿼리하여 조직 또는 문서 모음에 대한 분류를 만들 수 있습니다. 또는 문서 유사성 인덱스를 쿼리하여 업무 설명과 일치하는 이력서를 확인할 수 있습니다.  

@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77f8e1c2faa9900f8b41f356e3dd7411f12ff6c0
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ RETCODE bcp_control (
   
  호출 하는 경우에 시퀀스 오류가 발생 합니다 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` 호출한 후 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` 및 bcp_writefmt 합니다.  
   
- 자세한 내용은 참조 [메타 데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)합니다.  
+ 자세한 내용은 [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md)를 참조하십시오.  
   
  BCPFILECP  
  *iValue* 데이터 파일에 대 한 코드 페이지 번호를 포함 합니다. 1252나 850과 같은 코드 페이지 번호를 지정하거나 다음 값 중 하나를 지정할 수 있습니다.  
@@ -116,7 +116,7 @@ RETCODE bcp_control (
  대량 복사 작업이 실패하기 전에 허용되는 오류 수입니다. 기본값은 10입니다. 1 보다 작은 값이이 옵션을 기본값으로 다시 설정 합니다. 대량 복사에는 최대 65,535개의 오류가 허용됩니다. 이 옵션을 65,535보다 큰 값으로 설정하려고 하는 경우 이 옵션은 65,535로 설정됩니다.  
   
  BCPODBC  
- TRUE 인 경우 지정 **datetime** 및 **smalldatetime** 문자 형식으로 저장 된 값에 ODBC 타임 스탬프 이스케이프 시퀀스 접두사 및 접미사를 사용 합니다. BCPODBC 옵션은 BCP_OUT에만 적용됩니다.  
+ TRUE 인 경우 지정 **datetime** 및 **smalldatetime** 문자 형식으로 저장 된 값에 ODBC 타임 스탬프 이스케이프 시퀀스 접두사 및 접미사를 사용 합니다. BCPODBC 옵션 DB_OUT에만 적용 됩니다.  
   
  FALSE 인 경우는 **datetime** 값 1997 년 1 월 1 일을 나타내는 문자 문자열로 변환 됩니다: 1997-01-01 00:00:00.000 합니다. TRUE 이면 동일한 **datetime** 값으로 표시 됩니다: {ts ' 1997-01-01 00:00:00.000'}.  
   

@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 996d73149e364263e0cda1ecd1ffb2aa8b8f14e0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e86cd34a6a4a2f51b86a84bd6eaa1f123fb6ea8
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-database-collations"></a>포함된 데이터베이스 데이터 정렬
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 여러 가지 속성이 대/소문자 구분, 악센트 구분 및 사용되는 기본 언어를 비롯한 텍스트 데이터의 같음 의미 체계 및 정렬 순서에 영향을 줍니다. 이러한 사항은 데이터에 대한 데이터 정렬 선택을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전달됩니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 여러 가지 속성이 대/소문자 구분, 악센트 구분 및 사용되는 기본 언어를 비롯한 텍스트 데이터의 같음 의미 체계 및 정렬 순서에 영향을 줍니다. 이러한 사항은 데이터에 대한 데이터 정렬 선택을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전달됩니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
  데이터 정렬은 사용자 테이블에 저장된 데이터에 적용될 뿐만 아니라 메타데이터, 임시 개체, 변수 이름 등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 처리하는 모든 텍스트에 적용됩니다. 이러한 항목의 처리 방식은 포함되지 않은 데이터베이스인지 여부에 따라 다릅니다. 이러한 변경 내용은 대부분의 사용자에게는 영향을 미치지 않지만 인스턴스 독립 및 일관성을 제공하는 데 도움이 됩니다. 하지만 이로 인해 일부 혼란이 발생할 수도 있고 포함된 데이터베이스와 포함되지 않은 데이터베이스에 모두 액세스하는 세션의 경우에는 문제가 될 수도 있습니다.  
   

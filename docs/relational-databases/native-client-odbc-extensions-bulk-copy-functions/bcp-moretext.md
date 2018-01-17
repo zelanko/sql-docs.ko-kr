@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cf6f4c23f600403c7061d9ed5cb2bfd337660e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f41069ec5254bec0ad40b250a3a9361190ba9b5
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ RETCODE bcp_moretext (
 ## <a name="remarks"></a>주의  
  와 함께에서이 함수를 사용할 수 있습니다 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 및 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long, 다양 한 더 작은 청크로 SQL Server에 가변 길이 데이터 값을 복사 합니다. **bcp_moretext** 다음 SQL Server 데이터 형식의 열을 사용할 수 있습니다: **텍스트**, **ntext**, **이미지**, **varchar (max)** , **nvarchar (max)**, **varbinary (max)**, 사용자 정의 형식 (UDT) 및 XML입니다. **bcp_moretext** 데이터 변환을 지원 하지 않으며, 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
   
- 경우 **bcp_bind** 으로 null이 아닌 호출 *pData* 에서 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext**, **bcp_sendrow** 보냅니다 길이 관계 없이 전체 데이터 값입니다. 그러나 If, **bcp_bind** 에 NULL *pData* 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext** 는 에서성공적인반환후에즉시데이터를복사하는데사용할수**bcp_sendrow** 나타내는 데이터가 있는 바인딩된 모든 열이 처리 되었습니다.  
+ 경우 **bcp_bind** 으로 NULL이 아닌 호출 *pData* 에서 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext**, **bcp_sendrow** 보냅니다 길이 관계 없이 전체 데이터 값입니다. 그러나 If, **bcp_bind** 에 NULL *pData* 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext** 는 에서성공적인반환후에즉시데이터를복사하는데사용할수**bcp_sendrow** 나타내는 데이터가 있는 바인딩된 모든 열이 처리 되었습니다.  
   
  사용 하는 경우 **bcp_moretext** 한 지원 되는 데이터 형식 열을 행에 보내려면도 사용 해야 행의 다른 모든 지원 되는 데이터 형식 열을 보내려고 합니다. 열을 건너뛸 수 없습니다. 지원되는 데이터 형식은 SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT 및 SQLXML입니다. 열이 각각 varchar(max), nvarchar(max) 또는 varbinary(max)인 경우 SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY 및 SQLVARBINARY도 이 범주에 해당합니다.  
   

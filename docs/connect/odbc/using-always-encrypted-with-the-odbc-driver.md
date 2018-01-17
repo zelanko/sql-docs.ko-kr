@@ -17,11 +17,11 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: 307c9e4774037560884c7e2da43c1fed1c405a14
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -350,7 +350,7 @@ ODBC Driver for SQL Server는 다음 기본 제공 키 저장소 공급자와 �
 
 | 이름 | Description | 공급자 (메타 데이터) 이름 |가용성|
 |:---|:---|:---|:---|
-|Azure Key Vault |저장소 Cmk를 Azure 키 자격 증명 모음 | `AZURE_KEY_VAULT` |Windows, Linux, macOS|
+|Azure Key Vault |저장소 Cmk를 Azure 키 자격 증명 모음 | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Windows 인증서 저장소|Windows 키 저장소에 Cmk를 로컬로 저장| `MSSQL_CERTIFICATE_STORE`|창|
 
 - 사용자 (또는 DBA)는 열 마스터 키 메타 데이터에 구성 된 공급자 이름이 올바른지와 열 마스터 키 경로 지정 된 공급자에 대 한 키 경로 형식을 준수 되도록 해야 합니다. [CREATE COLUMN MASTER KEY(Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 실행할 때 적합한 공급자 이름 및 키 경로를 자동으로 생성하는 SQL Server Management Studio 등의 도구를 사용하여 키를 구성하는 것이 좋습니다.
@@ -378,13 +378,13 @@ Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 �
 
 다음 연결 문자열에는 두 가지 자격 증명 유형이 Azure 키 자격 증명 모음에 인증 하는 방법을 보여 줍니다.
 
-**ClientID/암호**:
+**ClientID/Secret**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**사용자 이름/암호**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -526,7 +526,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ODBC 드라이버는 사용을 허용 하는 동안 [비동기 작업](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) 상시 암호화,이 생깁니다 성능에 영향 되는 작업에 항상 암호화를 사용 하도록 설정 합니다. 에 대 한 호출 `sys.sp_describe_parameter_encryption` 명령문을 차단 하 고 반환 하기 전에 메타 데이터를 반환 하는 서버에 대해 기다려야 하면 드라이버에 대 한 암호화 메타 데이터를 확인 하려면 `SQL_STILL_EXECUTING`합니다.
 
 ### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>SQLGetData 사용 하 여 파트에서 데이터 검색
-SQL Server 용 ODBC 드라이버 17 암호화 전에 SQLGetData 사용 하 여 파트의 문자 및 이진 열을 검색할 수 없습니다. SQLGetData 한 번만 호출 전체 열의 데이터를 포함 하기에 충분 한 길이의 버퍼에 수행할 수 있습니다.
+SQL Server 용 ODBC 드라이버 17 암호화 전에 SQLGetData 사용 하 여 파트의 문자 및 이진 열을 검색할 수 없습니다. SQLGetData 한 번만 호출 전체 열의 데이터를 포함 하기에 충분 한 길이의 버퍼에 수행할 수 있습니다. SQL Server 용 ODBC 드라이버 17, 암호화 **varbinary (max)** SQLGetData 및 SQL_C_BINARY C 형식의 부분에서 열을 검색할 수 없습니다.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>SQLPutData 사용 하 여 파트에 데이터 보내기
 SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를 보낼 수 없습니다. 전체 데이터를 포함 하는 버퍼에 SQLPutData 한 번만 호출을 수행할 수 있습니다. 암호화 된 열에 대 한 long 데이터를 삽입에 대 한 입력된 데이터 파일을 사용한 다음 섹션에 설명 된 대량 복사 API를 사용 합니다.

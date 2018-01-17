@@ -1,7 +1,7 @@
 ---
 title: "FILESTREAM(SQL Server) | Microsoft 문서"
 ms.custom: 
-ms.date: 10/17/2016
+ms.date: 01/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,14 +21,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9435c864a481a5df25e74c132062cada5ca0e7b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 393b9178fcda3ba0487fc361e4edf107c17d042b
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
 
 FILESTREAM을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 응용 프로그램에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다. 응용 프로그램은 풍부한 스트리밍 API 및 파일 시스템의 성능을 활용할 수 있고 동시에 구조화되지 않은 데이터와 해당되는 구조화된 데이터 간에 트랜잭션 일관성을 유지할 수 있습니다.  
@@ -154,7 +153,7 @@ FILESTREAM 데이터에 대한 원격 파일 시스템 액세스는 SMB(서버 �
 
 FILESTREAM 핸들을 사용하여 메모리 매핑된 뷰(메모리 매핑된 I/O)를 만들 수는 없습니다. 메모리 매핑을 FILESTREAM 데이터에 사용할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 데이터의 일관성과 지속성 또는 데이터베이스의 무결성을 보장할 수 없습니다.  
 
-## <a name="related-tasks"></a>관련 태스크
+## <a name="related-tasks"></a>관련 작업
 
 [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [FILESTREAM 사용 데이터베이스 만들기](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
