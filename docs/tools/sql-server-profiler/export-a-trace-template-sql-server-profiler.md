@@ -17,15 +17,15 @@ helpviewer_keywords:
 - exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d052ac98b13277d366867d8e95e1f56a3b2cdfaa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 11a382d4256d99321a305137952a0ecee1d50145
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>추적 템플릿 내보내기(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여 서식 파일 (.tdf)로 저장 하려면 기존 추적 템플릿을 내보내는 방법에 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다. 추적 템플릿을 내보내서 파일로 저장할 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 다른 인스턴스로 템플릿을 사용할 수 있습니다.  
@@ -40,8 +40,8 @@ ms.lasthandoff: 12/21/2017
   
 3.  내보낸 템플릿 파일의 이름을 입력한 다음 **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>참고 항목  
+ [추적 템플릿을 &#40; 만들기 SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿을 &#40; 수정 SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [실행 중인 추적 &#40;에서 템플릿을 파생합니다 SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [추적 파일이 나 추적 테이블 &#40;에서 템플릿을 파생합니다 SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   

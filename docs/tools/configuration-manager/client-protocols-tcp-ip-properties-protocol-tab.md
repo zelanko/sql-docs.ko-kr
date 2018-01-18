@@ -16,20 +16,20 @@ helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8d82ee917afc74c5fba0a0bbcc01451b99cb645
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 238c3e5c75ed1fafe9e6fbdc600212d1ba1eb934
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용 하 여는 **프로토콜** 탭에 **TCP/IP 속성** 대화 상자를 보거나 다음 옵션을 지정 합니다. 다른 포트에 연결하려면 **기본 포트** 입력란에 포트 번호를 입력하십시오. 연결 문자열에 대한 자세한 내용은 [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **기본 포트**  
  대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결할 때 TCP/IP Net-library가 사용할 포트를 지정합니다. 기본 포트는 1433입니다.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  클라이언트는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스로 연결할 때 서버 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에서 포트 번호 가져오기를 시도합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 실행되지 않는 경우 이 설정 또는 연결 문자열의 일부로 포트 번호를 제공해야 합니다.  
   
- **Enabled**  
+ **사용**  
  가능한 값은 **예** 및 **아니요**입니다.  
   
  **Keep Alive**  

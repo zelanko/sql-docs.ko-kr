@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c9214cc22fa5b5368b817e663169cbc97d64103
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b02daf16a7cb1be9d7b0f12d1b75c217575a5e4b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 템플릿
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용할 수 있습니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적에 포함할 이벤트 클래스와 데이터 열을 정의 하는 템플릿을 만들 수 있습니다. 템플릿을 정의하고 저장한 후 선택한 각 이벤트 클래스에 대한 데이터를 기록하는 추적을 실행할 수 있습니다. 하나의 템플릿을 많은 추적에 사용할 수 있지만 템플릿 자체는 실행되지 않습니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 |템플릿 이름|템플릿 용도|이벤트 클래스|  
 |-------------------|----------------------|-------------------|  
 |SP_Counts|시간별로 저장 프로시저 실행 동작을 캡처합니다.|**SP:Starting**|  
-|표준|추적을 만들기 위한 일반적인 시작 지점입니다. 실행되는 모든 저장 프로시저와 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 캡처합니다. 일반적인 데이터베이스 서버 활동을 모니터링하는 데 사용합니다.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
+|Standard|추적을 만들기 위한 일반적인 시작 지점입니다. 실행되는 모든 저장 프로시저와 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 캡처합니다. 일반적인 데이터베이스 서버 활동을 모니터링하는 데 사용합니다.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL|클라이언트가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로 전송하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 전송된 시간을 캡처합니다. 클라이언트 응용 프로그램을 디버깅하는 데 사용합니다.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_Duration|클라이언트가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로 전송하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 실행 시간(밀리초)을 캡처하고 이 문들을 기간별로 그룹화합니다. 느린 쿼리를 식별하는 데 사용합니다.|**RPC:Completed**<br /><br /> **SQL:BatchCompleted**|  
 |TSQL_Grouped|[!INCLUDE[tsql](../../includes/tsql-md.md)] 로 전송된 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 전송 시간을 캡처합니다. 문을 전송한 사용자 또는 클라이언트를 기준으로 정보를 그룹화합니다. 특정 클라이언트 또는 사용자가 전송한 쿼리를 조사하는 데 사용합니다.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
 >  기본 템플릿은 지정된 서버 유형에만 사용할 수 있습니다. 한 가지 서버 유형의 기본값을 변경해도 다른 서버 유형의 기본 템플릿에는 영향을 미치지 않습니다. 특정 서버용 기본 템플릿을 설정하는 방법은 [추적 정의 기본값 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [추적 템플릿을 &#40; 만들기 SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿을 &#40; 수정 SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿을 &#40; 내보내기 SQL Server Profiler &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿 가져오기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  

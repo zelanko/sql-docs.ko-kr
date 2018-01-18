@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b113e50edcd72ff72717cae44166817478c959b9
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 67926fa0506f797c4f39988061c4d1b7b731e5fa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>추적의 SPID(서버 프로세스 ID) 필터링(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 추적에서 서버 프로세스 id (Spid)를 사용 하 여 필터링 하는 방법을 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/04/2018
   
 1.  **파일** 메뉴에서 **새 추적**을 클릭한 다음 SQL Server 인스턴스에 연결합니다.  
   
-     **추적 속성** 대화 상자가 나타납니다.  
+     **추적 속성** 대화 상자가 표시됩니다.  
   
     > [!NOTE]  
     >  경우 **연결한 후 즉시 추적 시작** 확인란이 **추적 속성** 대화 상자가 나타나지 않으며 대신 추적이 시작 됩니다. 에이 설정을 해제 하려면는 **도구** 메뉴를 클릭 하 여 **옵션**, 선택을 취소 하 고는 **연결한 후 즉시 추적 시작** 확인란 합니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/04/2018
   
 6.  **필터 편집** 대화 상자에서 적절한 비교 연산자를 확장한 다음 비교할 값으로 SPID를 입력합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

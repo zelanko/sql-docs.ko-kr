@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.computermgr.cert.general.f1
 helpviewer_keywords: MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22aed889fcc7884a34f770e7931cf82ac6983061
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 811489d75af39d9b7cd33eb3f8aaadec5ae045cf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **인증서** 탭에 **MSSQLSERVER 속성에 대 한 프로토콜** 대화 상자에 대 한 인증서를 선택할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 하거나 인증서의 속성을 볼 수 있습니다. 인증서를 선택하기 전에는 모든 필드가 비어 있습니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
  **MSSQLSERVER에 대한 프로토콜 속성**  
  보안 공급자가 결정하는 인증서 이름입니다. 속성 표에서 세부 정보를 보려면 인증서를 선택합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  만료 날짜  
  인증서 유효 기간의 마지막 날짜입니다.  
   

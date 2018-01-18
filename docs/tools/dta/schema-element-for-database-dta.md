@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Schema element
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89c36f9df5ab507edad6254e6c09ccb8039878df
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c2b4da3d22c91ad05ba53736eb17a2210b0c0b5d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="schema-element-for-database-dta"></a>Database의 Schema 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]튜닝할 데이터베이스의 스키마를 지정 합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -49,8 +49,8 @@ ms.lasthandoff: 12/21/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Server의 Database 요소&#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)|  
-|**자식 요소**|[Schema의 Name 요소&#40;DTA&#41;](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [Schema의 Table 요소&#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
+|**부모 요소**|[서버 &#40; DTA &#41;의 database 요소](../../tools/dta/database-element-for-server-dta.md)|  
+|**자식 요소**|[스키마 &#40; DTA &#41;의 name 요소](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [Table 요소 스키마 &#40; DTA &#41;](../../tools/dta/table-element-for-schema-dta.md)|  
   
 ## <a name="example"></a>예제  
  이 요소의 사용 예는 [Server 요소&#40;DTA&#41;](../../tools/dta/server-element-dta.md)를 참조하세요.  

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d98cbf2e1e18538fe20fd4ff76319b8b69d1e05
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllogship-application"></a>sqllogship 응용 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**sqllogship** 응용 프로그램은 로그 전달 구성에 대 한 백업, 복사 또는 복원 작업 및 관련된 정리 작업을 수행 합니다. 이 작업은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 특정 인스턴스에서 특정 데이터베이스에 대해 수행됩니다.  
@@ -61,16 +61,16 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |level|Description|  
 |-----------|-----------------|  
 |0|추적 및 디버깅 메시지를 출력하지 않습니다.|  
-|1|오류 처리 메시지를 출력합니다.|  
+|1.|오류 처리 메시지를 출력합니다.|  
 |2|경고 및 오류 처리 메시지를 출력합니다.|  
-|**3**|정보 메시지, 경고 및 오류 처리 메시지를 출력합니다. 이것은 기본값입니다.|  
+|**3**|정보 메시지, 경고 및 오류 처리 메시지를 출력합니다. 이 값은 기본값입니다.|  
 |4|모든 디버깅 및 추적 메시지를 출력합니다.|  
   
  **–logintimeout** *timeout_value*  
- 서버 인스턴스 로그인에 할당된 제한 시간 값을 지정합니다. 기본값은 15초입니다. *timeout_value* 는 **int***입니다.*  
+ 서버 인스턴스 로그인에 할당된 제한 시간 값을 지정합니다. 기본값은 15초입니다. *timeout_value* 은 **int *입니다.*  
   
  **-querytimeout** *timeout_value*  
- 지정된 작업을 시작하는 데 할당된 제한 시간 값을 지정합니다. 기본값은 제한 시간 없음입니다. *timeout_value* 는 **int***입니다.*  
+ 지정된 작업을 시작하는 데 할당된 제한 시간 값을 지정합니다. 기본값은 제한 시간 없음입니다. *timeout_value* 은 **int *입니다.*  
   
 ## <a name="remarks"></a>주의  
  가능하면 백업, 복사 및 복원 작업을 사용하여 백업, 복사 및 복원을 수행하는 것이 좋습니다. 일괄 처리 작업 또는 다른 응용 프로그램에서 이러한 작업을 시작하려면 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 저장 프로시저를 호출하세요.  

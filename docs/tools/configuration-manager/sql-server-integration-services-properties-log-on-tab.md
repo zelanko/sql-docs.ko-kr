@@ -13,25 +13,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1809315d710225bca806053d97583d76fa8c604
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24c2acb97db0241f1f9ee061196e48e8f5c45086
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>SQL Server Integration Services 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **로그온에** 탭은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **속성** 대화 상자에서 사용할 계정을 지정 하려면는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 선택한를 시작 및 서비스를 중지 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **로컬 시스템 계정**  
  암호를 요구하지 않는 로컬 시스템 계정을 지정합니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 다른 서버와 상호 작용하지 못하도록 서비스를 제한할 수 있습니다.  
   
  **계정 지정**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증을 사용하는 로컬 또는 도메인 사용자 계정을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 서비스에 대해 최소의 권한을 가진 도메인 사용자 계정을 사용할 것을 권장합니다. 계정 선택 방법은 온라인 설명서에서 "Windows 서비스 계정 설정" 항목을 참조하십시오.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증을 사용하는 로컬 또는 도메인 사용자 계정을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]최소의 권한을 가진 도메인 사용자 계정을 사용 하 여 서비스에 대 한 것을 권장 합니다. 계정 선택 방법은 온라인 설명서에서 "Windows 서비스 계정 설정" 항목을 참조하십시오.  
   
  **계정 이름**  
  로컬 또는 도메인 사용자 계정 이름을 지정합니다.  

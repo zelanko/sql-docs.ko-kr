@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**tablediff** 유틸리티 불일치가 대 한 두 테이블의 데이터를 비교 하는 데 사용 되 고의 복제 토폴로지의 데이터 불일치 문제를 해결 하는 데 특히 유용 합니다. 명령 프롬프트나 배치 파일에서 이 유틸리티를 사용하여 다음 태스크를 수행할 수 있습니다.  
@@ -85,7 +85,7 @@ tablediff
  지원되는 매개 변수 목록을 반환합니다.  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 원본 서버의 이름입니다. *의 기본 인스턴스에 대해* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. *의 명명된 인스턴스에 대해***\\***source_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
+ 원본 서버의 이름입니다. *의 기본 인스턴스에 대해* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. 지정 *source_server_name***\\***instance_name* 의 명명 된 인스턴스에 대해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
  **-sourcedatabase** *source_database*  
  원본 데이터베이스의 이름입니다.  
@@ -109,7 +109,7 @@ tablediff
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 원본 테이블이 잠깁니다.  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. *의 명명된 인스턴스에 대해***\\***destination_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
+ 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. 지정 *destination_server_name***\\***instance_name* 의 명명 된 인스턴스에 대해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
  **-destinationdatabase** *subscription_database*  
  대상 데이터베이스의 이름입니다.  
@@ -170,7 +170,7 @@ tablediff
   
 ## <a name="return-value"></a>반환 값  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|성공|  
 |**1**|오류|  

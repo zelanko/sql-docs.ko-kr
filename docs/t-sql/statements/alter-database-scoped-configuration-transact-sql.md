@@ -28,30 +28,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 9638d94c2bd6f461650b15f96c7a75c95eaeb861
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  이 문을에서 다양 한 데이터베이스 구성 설정을 사용 하면는 **개별 데이터베이스** 수준입니다. 이 명령문은 영어로 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 로 시작 하는 SQL Server에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 이러한 설정은 다음과 같습니다.  
+  이 문을에서 다양 한 데이터베이스 구성 설정을 사용 하면는 **개별 데이터베이스** 수준입니다. 이 명령문은 영어로 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 이러한 설정은 다음과 같습니다.  
   
 - 프로시저 캐시를 지웁니다.  
-  
 - 해당 데이터베이스에 가장 적합 기반 하 고 다른 값을 설정 하는 주 데이터베이스에 대 한 MAXDOP 매개 변수 값은 임의의 값 (1, 2,...)를 설정 (예: 0) (예: 보고 쿼리 구문과) 모든 보조 데이터베이스 사용에 대 한 합니다.  
-  
 - 데이터베이스와 관계없이 쿼리 최적화 프로그램 카디널리티 추정 모델을 호환성 수준으로 설정합니다.  
-  
 - 데이터베이스 수준에서 매개 변수 스니핑을 사용하거나 사용하지 않도록 설정합니다.
-  
 - 데이터베이스 수준에서 쿼리 최적화 프로그램 핫픽스를 사용하거나 사용하지 않도록 설정합니다.
-
 - 데이터베이스 수준에서 id 캐시를 사용 하지 않도록 설정 하거나 사용 합니다.
-
-- 일괄 처리가 처음으로 컴파일 되었을 때 캐시에 저장 될 컴파일된 계획 스텁만 사용 하지 않도록 설정 하거나 사용 합니다. 
+- 일괄 처리가 처음으로 컴파일 되었을 때 캐시에 저장 될 컴파일된 계획 스텁만 사용 하지 않도록 설정 하거나 사용 합니다.    
   
  ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [TRANSACT-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +78,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 보조 데이터베이스 (모든 보조 데이터베이스가 동일한 값을 가져야 합니다)에 대 한 설정을 지정 합니다.  
   
 MAXDOP  **=**  {\<값 > | 기본}  
-**\<값 >**  
+**\<value>**  
   
 문에 대 한 설정 MAXDOP를 사용 해야 기본을 지정 합니다. 0 값은 기본값 및 서버 구성 대신 사용 됩니다. 데이터베이스 범위에 대 한 MAXDOP (0으로 설정 되어) 있지 재정의 **x degree of** sp_configure로 서버 수준에서 설정 합니다. 쿼리 힌트는 DB 재정의할 수도 있습니다 MAXDOP 다른 설정을 필요로 하는 특정 쿼리를 조정 하기 위해 범위가 지정 합니다. 이러한 모든 설정은 작업 그룹에 대 한 설정 MAXDOP 제한 됩니다.   
 
@@ -151,7 +145,7 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }
 
 일괄 처리가 처음으로 컴파일 되었을 때 캐시에 저장 될 컴파일된 계획 스텁만 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 OFF입니다. OPTIMIZE_FOR_AD_HOC_WORKLOADS 데이터베이스, 컴파일된 계획 스텁만 있는지 데이터베이스 범위 구성 캐시 때 일괄 처리에에서 저장 되 면 처음으로 컴파일됩니다. 계획 스텁을 전체 컴파일된 계획의 크기에 비해 작은 메모리 사용 공간이 있어야 합니다.  일괄 처리, 컴파일 또는 다시 실행 하는 경우 컴파일된 계획 스텁은 제거 하 고 전체 컴파일된 계획으로 대체 됩니다.
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  필요한 모든 데이터베이스 범위 구성 변경   
 에 데이터베이스입니다. 데이터베이스에 대 한 CONTROL 권한이 있는 사용자가이 사용 권한을 부여할 수 있습니다.  
   
@@ -163,6 +157,8 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }
  3 부분으로 된 이름 쿼리에 대 한 쿼리에 대 한 현재 데이터베이스 연결에 대 한 설정은 현재 데이터베이스 컨텍스트에서 컴파일되는 SQL 모듈 (프로시저, 함수, 트리거 등)에 대 한 외의 다른 적용 되 고 따라서의 옵션을 사용 하 여는 존재 하는 데이터베이스입니다.  
   
  ALTER_DATABASE_SCOPED_CONFIGURATION 이벤트는 DDL 트리거를 시작 하는 데 사용할 수 있는 DDL 이벤트로 추가 됩니다. 이것이 ALTER_DATABASE_EVENTS 트리거 그룹의 자식입니다.  
+ 
+ 데이터베이스 범위 구성 설정을 데이터베이스와 함께 전달 됩니다. 즉, 지정된 된 데이터베이스 복원 또는 연결 하는 경우 기존 구성 설정 상태로 유지 합니다.
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
 **MAXDOP**  

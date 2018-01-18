@@ -28,15 +28,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**ssbdiagnose** 유틸리티의 문제는 보고 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화를 구성 하거나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스입니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
@@ -122,7 +122,7 @@ ssbdiagnose
  **-IGNORE** *error_id*  
  지정된 *error_id* 의 오류 또는 메시지가 보고서에 포함되지 않도록 지정합니다. 여러 메시지 ID를 표시하지 않으려면 **-IGNORE** 를 여러 번 지정하면 됩니다.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  특정 절에 연결 옵션이 포함되어 있지 않은 경우 **ssbdiagnose** 에서 사용되는 기본 연결 정보를 지정합니다. 특정 절에 지정되는 연결 정보는 **baseconnectionoption** 정보보다 우선합니다. 이 작업은 각 매개 변수에 대해 별도로 수행됩니다. 예를 들어 **baseconnetionoptions** 에는 **-S** 와 **-d**가 둘 다 지정되고 **toconnetionoptions** 에는 **-d**만 지정된 경우 **ssbdiagnose** 는 **baseconnetionoptions** 의 -S와 **toconnetionoptions**의 -d를 사용합니다.  
   
  **CONFIGURATION**  
@@ -131,7 +131,7 @@ ssbdiagnose
  **FROM SERVICE** *service_name*  
  대화를 시작하는 서비스를 지정합니다.  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  시작자 서비스를 보유하는 데이터베이스에 연결하는 데 필요한 정보를 지정합니다. **fromconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions** 의 연결 정보를 사용하여 시작자 데이터베이스에 연결합니다. **fromconnectionoptions** 를 지정한 경우 시작자 서비스를 보유하는 데이터베이스를 포함해야 합니다. **fromconnectionoptions** 를 지정하지 않은 경우 **baseconnectionoptions** 에서 시작자 데이터베이스를 지정해야 합니다.  
   
  **TO SERVICE** *service_name*[, *broker_id* ]  
@@ -147,13 +147,13 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  대상 서비스를 보유하는 데이터베이스에 연결하는 데 필요한 정보를 지정합니다. **toconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions** 의 연결 정보를 사용하여 대상 데이터베이스에 연결합니다.  
   
  **MIRROR**  
  연결된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스가 미러된 데이터베이스에서 호스팅되도록 지정합니다. **ssbdiagnose** 는 서비스에 대한 경로가 CREATE ROUTE에 MIRROR_ADDRESS가 지정된 미러된 경로인지 확인합니다.  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  미러 데이터베이스에 연결하는 데 필요한 정보를 지정합니다. **mirrorconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions** 의 연결 정보를 사용하여 미러 데이터베이스에 연결합니다.  
   
  **ON CONTRACT** *contract_name*  
@@ -208,7 +208,7 @@ WHERE database_id = DB_ID();
  **-TIMEOUT** *timeout_interval*  
  **RUNTIME** 보고서를 실행할 시간(초)을 지정합니다. **-TIMEOUT** 을 지정하지 않을 경우 런타임 보고서가 무기한 실행됩니다. **-TIMEOUT** 은 **RUNTIME** 보고서에서만 사용됩니다. **CONFIGURATION** 보고서에서는 사용되지 않습니다. Ctrl+C를 사용하면 **-TIMEOUT** 을 지정하지 않은 경우 **ssbdiagnose** 를 종료하거나 제한 시간 간격이**-**만료되기 전에 런타임 보고서를 종료할 수 있습니다. *timeout_interval* 은 1에서 2,147,483,647 사이의 숫자여야 합니다.  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  모니터링 중인 대화 요소와 연결된 서비스를 포함하는 데이터베이스에 대한 연결 정보를 지정합니다. 모든 서비스가 동일한 데이터베이스에 있으면 **CONNECT TO** 절을 하나만 지정하면 됩니다. 서비스가 서로 다른 데이터베이스에 있으면 각 데이터베이스에 대해 **CONNECT TO** 절을 제공해야 합니다. **runtimeconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions**의 연결 정보를 사용합니다.  
   
  **–E**  
@@ -249,7 +249,7 @@ WHERE database_id = DB_ID();
  **baseconnetionoptions** *server_name*[\\*instance_name*]  
  분석할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 보유하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스를 지정합니다.  
   
- 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 *인스턴스에 연결하려면***\\***server_name* instance_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+ 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 지정 *server_name***\\***instance_name* 의 명명 된 인스턴스에 연결 하는 데는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 해당 서버에 있습니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **-S** *database_name*  
  분석할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스를 보유하는 데이터베이스를 지정합니다. 데이터베이스가 없을 경우에는 오류가 생성됩니다. **-d** 를 지정하지 않을 경우 기본적으로 로그인의 기본 데이터베이스 속성에 지정된 데이터베이스가 사용됩니다.  

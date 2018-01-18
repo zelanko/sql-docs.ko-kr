@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>사용자 및 작업 영역 설정
 
@@ -47,12 +47,22 @@ ms.lasthandoff: 12/21/2017
 
 플랫폼에 따라 사용자 설정 파일은 여기:
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 아래에 있는 작업 영역 설정 파일의 `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` 프로젝트의 폴더에에서 있습니다.
 
+## <a name="hot-exit"></a>핫 종료
+
+기본적으로 종료할 때 SQL 작업 Studio 파일에 저장 되지 않은 변경을 기억 합니다. 이 Visual Studio Code에서 핫 종료 기능와 동일 합니다.
+
+핫 종료는 기본적으로 해제 되어 있습니다. 실행 부하 과다 사용을 편집 하 여 종료는 `files.hotExit` 설정 합니다. 자세한 내용은 참조 [(Visual Studio Code 설명서)에서 핫 종료](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)합니다.
+
+
+## <a name="tab-color"></a>탭 색
+
+를 간소화 하기 위해 사용 하는 연결을 식별 합니다. 편집기에 열려 있는 탭에 속한 연결 된 서버 그룹의 색과 일치 하도록 설정 하 고 색을 가질 수 있습니다. 기본적으로 탭 색은 기본적으로 해제 되어 있습니다. 편집 하 여 탭 색을 사용 하도록 설정 된 `sql.tabColorMode` 설정 합니다.
 
 ## <a name="additional-resources"></a>추가 리소스
 

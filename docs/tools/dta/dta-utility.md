@@ -23,15 +23,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
@@ -134,7 +134,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- 작업을 튜닝할 때 **dta** 가 연결하는 첫 번째 데이터베이스를 지정합니다. 이 인수에는 데이터베이스를 하나만 지정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 작업을 튜닝할 때 **dta** 가 연결하는 첫 번째 데이터베이스를 지정합니다. 이 인수에는 데이터베이스를 하나만 지정할 수 있습니다. 예를 들어  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  **dta** 가 권장 구성에 포함해야 할 실제 디자인 구조 유형을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다. 값을 지정하지 않으면 **dta** 는 기본적으로 **-fa****IDX**를 사용합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |IDX_IV|인덱스와 인덱싱된 뷰|  
 |IDX|인덱스만|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  권장 구성을 생성할 때 **dta** 가 유지해야 할 기존의 실제 디자인 구조를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |없음|기존 구조 없음|  
 |ALL|기존의 모든 구조|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  **dta** 가 제안하는 새 실제 디자인 구조(인덱스 및 인덱싱된 뷰)를 분할할 것인지 여부와 분할 방법을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |없음|분할 안 함|  
 |FULL|전체 분할(성능 향상 중심)|  
@@ -231,7 +231,7 @@ dta -d AdventureWorks2012 ...
  튜닝을 위한 입력으로 사용할 작업 파일의 경로와 이름을 지정합니다. 파일은 .trc(SQL Server Profiler 추적 파일), .sql(SQL 파일) 또는 .log([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적 파일) 형식 중 하나여야 합니다. 작업 파일 또는 작업 테이블을 하나 지정해야 합니다.  
   
  **-it** *workload_trace_table_name*  
- 튜닝을 위한 작업 추적을 포함하는 테이블의 이름을 지정합니다. 이름은 [*database_name*]**.**[*owner_name*]**.***table_name*형식으로 지정됩니다.  
+ 튜닝을 위한 작업 추적을 포함하는 테이블의 이름을 지정합니다. 형식에서 이름은: [*database_name*]**.** [*owner_name*] **. * * * table_name*합니다.  
   
  다음 표에서는 각 매개 변수의 기본값을 보여 줍니다.  
   
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  물리적 디자인 구조를 온라인으로 만들 것인지 여부를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |OFF|권장되는 물리적 디자인 구조를 온라인으로 만들 수 없습니다.|  
 |ON|권장되는 모든 물리적 디자인 구조를 온라인으로 만들 수 있습니다.|  
@@ -306,7 +306,7 @@ dta -iq -I 48
  **-rl** *analysis_report_list*  
  생성할 분석 보고서의 목록을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열합니다.  
   
-|값|보고서|  
+|Value|보고서|  
 |-----------|------------|  
 |ALL|모든 분석 보고서|  
 |STMT_COST|문 비용 보고서|  

@@ -2,7 +2,7 @@
 title: "다운로드 하 여 Microsoft SQL 작업 Studio (미리 보기) 설치 | Microsoft Docs"
 description: "다운로드 및 설치 Microsoft SQL 작업 (미리 보기) 용 Studio 창, macOS 등 또는 Linux"
 ms.custom: tools|sos
-ms.date: 12/19/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a34a03b447e26f072b6c8064cd115333600fef4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0621d5af62b5f5b8b694d47cf16d766215a0c819
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>다운로드 하 고 SQL 작업 Studio (미리 보기) 설치
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]Windows, macOS 등 및 Linux에서 실행 됩니다.
 
-최신 릴리스를 설치 및 다운로드는 *년 12 월 공개 미리 보기*:
+최신 릴리스를 설치 및 다운로드는 *년 1 월 공개 미리 보기*:
 
 |플랫폼|다운로드|릴리스 날짜|
 |:---|:---|:---|
-|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|2017 년 12 월 19 |
-|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=865306)|2017 년 12 월 19 |
-|Linux|[. d](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|2017 년 12 월 19|
+|창|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|2018 년 1 월 17, |
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|2018 년 1 월 17, |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|2018 년 1 월 17,|
 
 최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스 정보](release-notes.md)합니다.
 
@@ -40,27 +40,27 @@ ms.lasthandoff: 12/21/2017
 
 **설치 관리자**
 
-1. 다운로드 및 실행 된 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=865305)합니다.
+1. 다운로드 및 실행 된 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=866480)합니다.
 1. 시작 된 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱.
 
 
 **.zip 파일**
 
-1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 용.zip](https://go.microsoft.com/fwlink/?linkid=865304)합니다.
+1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 용.zip](https://go.microsoft.com/fwlink/?linkid=866479)합니다.
 2. 다운로드 한 파일을 찾아 압축을 풉니다.
 3. `\sqlops-windows\sqlops.exe`을 실행합니다.
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS에 대 한 SQL 작업 Studio (미리 보기) 가져오기
 
-1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS에 대 한](https://go.microsoft.com/fwlink/?linkid=865306)합니다.
+1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] macOS에 대 한](https://go.microsoft.com/fwlink/?linkid=866481)합니다.
 2. Zip 내용의 확장 하려면 두 번 클릭 합니다.
 3. 있도록 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 에서 사용할 수는 *실행 패드*를 끌어 *sqlops.app* 에 *응용 프로그램* 폴더입니다.
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux에 대 한 SQL 작업 Studio (미리 보기) 가져오기
 
-1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Linux 용](https://go.microsoft.com/fwlink/?linkid=865307)합니다.
+1. 다운로드 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Linux 용](https://go.microsoft.com/fwlink/?linkid=866482)합니다.
 1. 파일 및 실행을 추출 하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)]새 터미널 창을 열고 다음 명령을 입력 합니다.
 
    ```bash
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/21/2017
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows, macOS 등 및 Linux에서 실행 하 고 다음 플랫폼에서 지원 됩니다.
 
-### <a name="windows"></a>Windows
+### <a name="windows"></a>창
 - Windows 10(64비트)
 - Windows 8.1(64비트)
 - Windows 8(64비트)
@@ -109,7 +109,7 @@ ms.lasthandoff: 12/21/2017
 - Windows Server 2012(64비트)
 - Windows Server 2008 R2(64비트)
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 - macOS 10.13 높은 시에라
 - macOS 10.12 시에라
 
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/21/2017
 
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 
 시작 하려면 다음 퀵 스타트 중 하나를 참조 합니다.
 - [연결 및 SQL Server 쿼리](quickstart-sql-server.md)

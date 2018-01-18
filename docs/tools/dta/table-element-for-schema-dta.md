@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6ebf5a4a05d02281f7335d7244fc17bbca7e2b3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2fa7311680006fa5fc6ce51058dce05e6ed1f675
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-element-for-schema-dta"></a>Schema의 Table 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]튜닝에 사용할 테이블을 지정합니다.  
@@ -39,13 +39,13 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**NumberOfRows**|(선택 사항) 여러 다른 크기의 테이블을 시뮬레이트할 수 있게 하는 정수입니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 1에서 255자 사이|  
 |**기본값**|없음|  
@@ -55,8 +55,8 @@ ms.lasthandoff: 12/21/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Database의 Schema 요소&#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
-|**자식 요소**|[Table의 Name 요소&#40;DTA&#41;](../../tools/dta/name-element-for-table-dta.md)|  
+|**부모 요소**|[데이터베이스 &#40; DTA &#41;에 대 한 스키마 요소](../../tools/dta/schema-element-for-database-dta.md)|  
+|**자식 요소**|[테이블 &#40; DTA &#41;의 name 요소](../../tools/dta/name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>주의  
  **Table** 요소를 지정하지 않을 경우 데이터베이스 엔진 튜닝 관리자는 지정된 데이터베이스의 모든 테이블을 튜닝할 수 있다고 가정합니다.  

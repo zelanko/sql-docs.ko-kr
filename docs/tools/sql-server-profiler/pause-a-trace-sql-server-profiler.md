@@ -18,15 +18,15 @@ helpviewer_keywords:
 - stopping traces
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 776e2f8ed06f3a935cd425fa351e5ed26521ddd4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cbf301c5d846a42e1aed2571b60c0b88f638631b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>추적 일시 중지(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]추적 일시 중지 하면 추가 이벤트 데이터 추적이 다시 시작 될 때까지 캡처가 합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  **파일** 메뉴에서 **추적 일지 중지**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

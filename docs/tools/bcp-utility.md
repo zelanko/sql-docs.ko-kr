@@ -30,15 +30,15 @@ helpviewer_keywords:
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 caps.latest.revision: "222"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1b9fd81237093da7296d85efdbe9472da711315
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1598d16877f42d0aef9f4a997e47492bd3fee1c7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 -   **format**<a name="format"></a> 은**-n**, **-c**, **-w**, **-N**등의 지정된 옵션과 테이블 또는 뷰 구분 기호를 기준으로 서식 파일을 만듭니다. 데이터를 대량 복사하는 경우 **bcp** 명령은 서식 파일을 참조할 수 있으므로 대화형으로 서식 정보를 다시 입력할 필요가 없습니다. **format** 옵션에는 **-f** 옵션이 필요하며 XML 서식 파일을 만드는 경우 **-x** 옵션도 필요합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요. **nul** 을 값으로 지정해야 합니다(**format nul**).  
   
  ***owner***<a name="schema"></a>  
- 테이블 또는 뷰의 소유자 이름입니다. 작업을 수행하는 사용자가 지정한 테이블 또는 뷰를 소유하고 있는 경우에는*owner* 를 생략할 수 있습니다. *owner* 를 지정하지 않은 경우 작업을 수행하는 사용자가 지정한 테이블이나 뷰의 소유자가 아니면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 오류 메시지를 반환하고 작업이 취소됩니다.  
+ 테이블 또는 뷰의 소유자 이름입니다. 작업을 수행하는 사용자가 지정한 테이블 또는 뷰를 소유하고 있는 경우에는*owner* 를 생략할 수 있습니다. *owner*를 지정하지 않은 경우 작업을 수행하는 사용자가 지정한 테이블이나 뷰의 소유자가 아니면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 오류 메시지를 반환하고 작업이 취소됩니다.  
   
 **"** ***query*** **"**<a name="query"></a> Is a [!INCLUDE[tsql](../includes/tsql-md.md)] query that returns a result set. 쿼리에서 여러 결과 집합을 반환하는 경우 첫 번째 결과 집합만 데이터 파일에 복사되고 그 다음 결과 집합은 무시됩니다. 쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다. 쿼리에서 데이터를 대량 복사할 때는**queryout** 도 지정해야 합니다.  
   
@@ -130,7 +130,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-b** ***batch_size***<a name="b"></a>  
  가져온 데이터의 일괄 처리당 행 수를 지정합니다. 각 일괄 처리는 커밋되기 전에 전체 일괄 처리를 가져오는 별도의 트랜잭션으로 가져오고 기록합니다. 기본적으로 데이터 파일의 모든 행은 하나의 일괄 처리로 가져옵니다. 여러 일괄 처리에 행을 분산시키려면 데이터 파일의 행 수보다 작은 *batch_size* 를 지정합니다. 일괄 처리에 대한 트랜잭션이 실패하면 현재 일괄 처리에서 삽입한 내용만 롤백됩니다. 커밋된 트랜잭션으로 이미 가져온 일괄 처리는 나중에 발생한 오류의 영향을 받지 않습니다.  
   
- 이 옵션을 **-h"**ROWS_PER_BATCH **=***bb***"** 옵션과 함께 사용하지 마세요.  
+ 와 함께에서이 옵션을 사용 하지 않으면는 **-h "**ROWS_PER_BATCH  **= ***bb***"** 옵션입니다.  
  
  **-c**<a name="c"></a>  
  문자 데이터 형식을 사용하여 작업을 수행합니다. 이 옵션은 각 필드에 대한 정보를 요청하지 않습니다. 이 옵션은 **char** 을 저장소 유형으로 사용하고 접두사를 사용하지 않으며 **\t** (탭 문자)를 필드 구분 기호로 사용하고 **\r\n** (줄 바꿈 문자)을 행 종결자로 사용합니다. **-c**는 **-w**와 호환되지 않습니다.  
@@ -143,9 +143,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > 데이터 정렬/코드 페이지 사양보다 65001 옵션에 더 높은 우선 순위를 두려는 경우를 제외하고는 서식 파일의 각 열에 대한 데이터 정렬 이름을 지정하는 것이 좋습니다.
   
-|코드 페이지 값|Description|  
+|코드 페이지 값|설명|  
 |---------------------|-----------------|  
-|ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows(ISO 1252)입니다.|  
+|ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows(ISO 1252)입니다.|  
 |OEM|클라이언트가 사용하는 기본 코드 페이지입니다. **-C** 를 지정하지 않은 경우 사용되는 기본 코드 페이지입니다.|  
 |RAW|코드 페이지 간 변환이 일어나지 않습니다. 변환이 일어나지 않으므로 가장 빠른 옵션입니다.|  
 |*code_page*|850과 같은 특정 코드 페이지 번호입니다.<br /><br /> 버전 13([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다. 버전 13부터 UTF-8 인코딩을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]이전 버전으로 가져올 수 있습니다.|  
@@ -159,7 +159,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *err_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-e** 와 *err_file* 값 사이에 공백을 포함하지 마세요.  
   
  **-E**<a name="E"></a>   
- 가져온 데이터 파일의 ID 값이 ID 열에 사용되도록 지정합니다. **-E** 를 지정하지 않으면 가져오는 데이터 파일에 있는 이 열의 ID 값이 무시되고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 테이블을 만들 때 지정한 초기값 및 증가값을 기반으로 고유 값을 자동으로 할당합니다.  
+ 가져온 데이터 파일의 ID 값이 ID 열에 사용되도록 지정합니다. **-E**를 지정하지 않으면 가져오는 데이터 파일에 있는 이 열의 ID 값이 무시되고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 테이블을 만들 때 지정한 초기값 및 증가값을 기반으로 고유 값을 자동으로 할당합니다.  
   
  데이터 파일에 테이블이나 뷰의 ID 열 값이 포함되지 않은 경우 서식 파일을 사용하여 데이터를 가져올 때 테이블이나 뷰의 ID 열을 생략하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 해당 열에 자동으로 고유 값을 할당합니다. 자세한 내용은 [DBCC CHECKIDENT&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)를 참조하세요.  
   
@@ -184,7 +184,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> 은 데이터를 테이블 또는 뷰로 대량으로 가져올 때 사용할 힌트를 지정합니다.  
   
-* **ORDER**로 데이터를 가져올 때(***column*[ASC | DESC] [**,**...*n*]**)**  
+* **ORDER**(***column*[ASC | DESC] [**,**...*n*]**)**  
 데이터 파일에 있는 데이터의 정렬 순서입니다. 가져올 데이터를 테이블의 클러스터형 인덱스(있는 경우)에 따라 정렬하면 대량 가져오기 성능이 향상됩니다. 데이터 파일을 클러스터형 인덱스 키와 다른 순서로 정렬하거나 테이블에 클러스터형 인덱스가 없으면 ORDER 절이 무시됩니다. 지정한 열 이름은 대상 테이블에서 올바른 열 이름이어야 합니다. 기본적으로 **bcp** 는 데이터 파일이 정렬되지 않은 것으로 간주합니다. 대량 가져오기 작업을 최적화하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 가져온 데이터가 정렬되어 있는지도 확인합니다.  
   
 * **ROWS_PER_BATCH** **=** ***bb***  
@@ -281,7 +281,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  자세한 내용은 이 항목의 뒷부분에 나오는 [주의](#remarks)를 참조하세요.  
   
  **-r** ***row_term***<a name="r"></a>  
- 행 종결자를 지정합니다. 기본값은 **\n** (줄 바꿈 문자)입니다. 기본 행 종결자를 재정의하려면 이 매개 변수를 사용합니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
+ 행 종결자를 지정합니다. 기본값은  **\n**  (줄 바꿈 문자)입니다. 기본 행 종결자를 재정의하려면 이 매개 변수를 사용합니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
  bcp.exe 명령에서 16진수 표기법으로 행 종료 문자를 지정하는 경우 값은 0x00에서 잘립니다. 예를 들어 0x410041을 지정하면 0x41이 사용됩니다.  
   
@@ -290,7 +290,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-R**<a name="R"></a>  
  클라이언트 컴퓨터의 로캘 설정에 정의된 국가별 형식을 사용하여 통화, 날짜 및 시간 데이터를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 대량 복사하도록 지정합니다. 기본적으로 국가별 설정은 무시됩니다.  
   
- **-S** ***server_name*** [\\***instance_name***]<a name="S"> </a> 의 인스턴스를 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결 하는 데에 있습니다. 서버를 지정하지 않으면 **bcp** 유틸리티가 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터나 명명된 로컬 인스턴스에서 **bcp** 명령을 실행할 때 이 옵션을 지정해야 합니다. 서버에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*만 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다.  
+ **-S** ***server_name*** [\\***instance_name***]<a name="S"> </a> 의 인스턴스를 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결 하는 데에 있습니다. 서버를 지정하지 않으면 **bcp** 유틸리티가 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터나 명명된 로컬 인스턴스에서 **bcp** 명령을 실행할 때 이 옵션을 지정해야 합니다. 서버에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*만 지정합니다. 명명 된 인스턴스에 연결 하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 지정 *server_name***\\***instance_name*합니다.  
   
  **-t** ***field_term***<a name="t"></a>  
  필드 종결자를 지정합니다. 기본값은 **\t** (탭 문자)입니다. 기본 필드 종결자를 재정의하려면 이 매개 변수를 사용합니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
@@ -309,7 +309,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]연결에 사용하는 로그인 ID를 지정합니다.  
   
 > [!IMPORTANT]
-> **bcp** 유틸리티에서 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하는 경우 **사용자 이름** 과 *암호* 를 조합하여 사용하는 대신 *-T* 옵션(트러스트된 연결)을 사용합니다. **bcp** 유틸리티가 SQL Database 또는 SQL Data Warehouse에 연결할 때 Windows 인증 또는 Azure Active Directory 인증을 사용이 지원되지 않습니다. **-U** 및 **-P** 옵션을 사용하세요.
+> **bcp** 유틸리티에서 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결하는 경우 *사용자 이름*과 *암호*를 조합하여 사용하는 대신 **-T** 옵션(트러스트된 연결)을 사용합니다. **bcp** 유틸리티가 SQL Database 또는 SQL Data Warehouse에 연결할 때 Windows 인증 또는 Azure Active Directory 인증을 사용이 지원되지 않습니다. **-U** 및 **-P** 옵션을 사용하세요.
   
  **-v**<a name="v"></a>  
  **bcp** 유틸리티 버전 번호 및 저작권을 보고합니다.  
@@ -389,7 +389,7 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
   
 -   유니코드 데이터의 길이가 짝수 바이트인지 여부  
   
- 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 대량으로 가져올 수 있었던 잘못된 데이터 형식은 이제 로드되지 않습니다. 이전 버전에서는 클라이언트가 잘못된 데이터에 액세스해야 오류가 발생했습니다. 추가 유효성 검사를 수행하면 대량 로드 이후 데이터를 쿼리할 때 발생할 수 있는 예상치 못한 문제가 최소화됩니다.  
+ 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 대량으로 가져올 수 있었던 잘못된 데이터 형식은 이제 로드되지 않습니다. 이전 버전에서는 클라이언트가 잘못된 데이터에 액세스해야 오류가 발생했습니다. 추가 유효성 검사를 수행하면 대량 로드 이후 데이터를 쿼리할 때 발생할 수 있는 예상치 못한 문제가 최소화됩니다.  
   
 ## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML 문서 대량 내보내기 또는 가져오기  
  SQLXML 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다.  
@@ -423,7 +423,7 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 ## <a name="character-mode--c-and-native-mode--n-best-practices"></a>문자 모드(-c) 및 기본 모드(-n) 최선의 구현 방법  
  이 섹션에는 문자 모드(-c) 및 기본 모드(-n) 사용 시의 권장 사항이 나와 있습니다.  
   
--   (관리자/사용자) 가능하면 구분 기호 문제를 방지하기 위해 기본 모드(-n)를 사용하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 내보내기 및 가져오기를 수행하려면 기본 형식을 사용합니다. 데이터를 비 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스로 가져오려는 경우에는 -c 또는 -w 옵션을 사용하여[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 데이터를 내보냅니다.  
+-   (관리자/사용자) 가능하면 구분 기호 문제를 방지하기 위해 기본 모드(-n)를 사용하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 내보내기 및 가져오기를 수행하려면 기본 형식을 사용합니다. 데이터를 비 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스로 가져오려는 경우에는 -c 또는 -w 옵션을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 데이터를 내보냅니다.  
   
 -   (관리자) BCP OUT를 사용할 때는 데이터를 확인합니다. 예를 들어 BCP OUT, BCP IN, BCP OUT을 차례로 사용하는 경우에는 데이터가 정상적으로 내보내기되었으며 몇몇 데이터 값의 일부분으로 종결자 값이 사용되지 않았는지 확인해야 합니다. 종결자 값과 데이터 값 간의 충돌을 방지하려면 임의의 16진수 값을 사용하여 기본 종결자를 무시할 수 있습니다(-t 및 -r 옵션 사용).  
   
@@ -436,7 +436,7 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
   
 -   2. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
   
--   [3.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)  
+-   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)  
   
 -   4. 파일에서 테이블로 데이터 복사  
   
@@ -613,11 +613,11 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
 |대량 가져오기 또는 대량 내보내기를 위한 데이터 형식(SQL Server)<br />&emsp;&#9679;&emsp;[네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[문자 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[필드 및 행 종결자 지정(SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[데이터 대량 가져오기 중 ID 값 유지(SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)<br />&emsp;&#9679;&emsp;[서식 파일 만들기(SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[XML 문서 대량 가져오기 및 내보내기 예(SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## <a name="see-also"></a>관련 항목:  
- [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
+ [대량 내보내기 또는 가져오기 &#40;에 대 한 데이터를 준비 합니다. SQL Server &#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
  [SET quoted_identifier&#40; Transact SQL &#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption &#40; Transact SQL &#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   

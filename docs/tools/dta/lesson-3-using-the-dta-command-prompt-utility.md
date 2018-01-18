@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49d542e4542e1a94eb8f17b19e6cf2be7aa23d80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 676d70c67a0be45b3362632c038d60e90448e90c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>3단원: dta 명령 프롬프트 유틸리티 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**dta** 명령 프롬프트 유틸리티를 데이터베이스 엔진 튜닝 관리자에서 제공 하는 기능을 제공 합니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 -   **dta** 명령 프롬프트 유틸리티 시작 및 작업 튜닝  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
-[dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
+[Dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
   
   

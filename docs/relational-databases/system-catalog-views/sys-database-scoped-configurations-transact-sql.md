@@ -1,7 +1,7 @@
 ---
 title: sys.database_scoped_configurations (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/29/2016
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70b0f5c2ecb1f15828d5ac1c219033c337bb3a8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e9df8c18b3ca7556b10e3e2d453c41735a07e52
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.lasthandoff: 11/17/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|구성 옵션의 ID입니다.|  
-|**name**|**nvarchar (60)**|구성 옵션의 이름입니다. 가능한 구성에 대 한 정보를 참조 하세요. [ALTER DATABASE SCOPED configuration&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
-|**값**|**sqlvariant**|주 복제본이 구성 옵션에 대 한 설정 값입니다.|  
+|**name**|**nvarchar(60)**|구성 옵션의 이름입니다. 가능한 구성에 대 한 정보를 참조 하세요. [ALTER DATABASE SCOPED configuration&#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
+|**value**|**sqlvariant**|주 복제본이 구성 옵션에 대 한 설정 값입니다.|  
 |**value_for_secondary**|**sqlvariant**|보조 복제본이 구성 옵션에 대 한 설정 값입니다.|  
   
 ##  <a name="Permissions"></a> 사용 권한  
@@ -46,8 +46,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="remarks"></a>주의  
  NULL 값으로 반환 될 때 **value_for_secondary**, 즉, 보조 PRIMARY로 설정 됩니다.  
+ 
+ 데이터베이스 범위 구성 설정을 데이터베이스와 함께 전달 됩니다. 즉, 지정된 된 데이터베이스 복원 또는 연결 하는 경우 기존 구성 설정 상태로 유지 합니다.
   
 ## <a name="see-also"></a>관련 항목:  
- [ALTER DATABASE SCOPED configuration&#40; Transact SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
+ [데이터베이스 범위 구성 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
   
   

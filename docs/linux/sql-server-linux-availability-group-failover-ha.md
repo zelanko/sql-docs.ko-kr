@@ -15,13 +15,13 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: f80ae6bfb7b6c9b2aea60e3e929b1cc7202dacb2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 23eedac40aff1fcab50c2e05406d3c87b988e392
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 HA 가용성 그룹 동작
+# <a name="operate-always-on-availability-groups-on-linux"></a>Linux에서 가용성 그룹에 대해 항상 작동
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -195,14 +195,14 @@ Linux에서 SQL Server의 인스턴스에서 가용성 그룹 복제본을 가�
    >[!NOTE]
    >가용성 그룹에 있는 비동기 데이터 손실을 방지 하기 위해 복제본-하나의 복제본을 동기 변경한 동기화 될 때까지 기다립니다. 이 복제를 업그레이드 합니다.
    
-   b.1 합니다. 업그레이드에 대 한 대상 보조 복제본을 호스팅하는 노드의에 리소스를 중지 합니다.
+   b.1. 업그레이드에 대 한 대상 보조 복제본을 호스팅하는 노드의에 리소스를 중지 합니다.
    
    업그레이드 명령을 실행 하기 전에 클러스터 모니터링은 되 불필요 하 게 실패 하지 하도록 리소스를 중지 합니다. 다음 예제에서는 중지 될 리소스에 취소할 수 있는 노드의 위치 제약 조건을 추가 합니다. 업데이트 `ag_cluster-master` 리소스 이름으로 및 `nodeName1` 노드를 복제본을 호스팅하는 업그레이드에 대 한 대상으로 합니다.
 
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
-   b.2 합니다. 보조 복제본에서 SQL Server 업그레이드
+   b.2. 보조 복제본에서 SQL Server 업그레이드
 
    다음 예제에서는 업그레이드 `mssql-server` 및 `mssql-server-ha` 패키지 합니다.
 
@@ -210,7 +210,7 @@ Linux에서 SQL Server의 인스턴스에서 가용성 그룹 복제본을 가�
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-   b.3 합니다. 위치 제약 조건 제거
+   b.3. 위치 제약 조건 제거
 
    업그레이드 명령을 실행 하기 전에 클러스터 모니터링은 되 불필요 하 게 실패 하지 하도록 리소스를 중지 합니다. 다음 예제에서는 중지 될 리소스에 취소할 수 있는 노드의 위치 제약 조건을 추가 합니다. 업데이트 `ag_cluster-master` 리소스 이름으로 및 `nodeName1` 노드를 복제본을 호스팅하는 업그레이드에 대 한 대상으로 합니다.
 
