@@ -1,7 +1,7 @@
 ---
-title: "테이블 형식 모델링 (Adventure Works 자습서) | Microsoft Docs"
+title: "테이블 형식 모델링 (호환성 수준 1200) | Microsoft Docs"
 ms.custom: 
-ms.date: 04/19/2017
+ms.date: 01/17/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -23,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f8c49a838abe5cc6948c59f3d0d67984122136a0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="tabular-modeling-adventure-works-tutorial"></a>테이블 형식 모델링(Adventure Works 자습서)
+# <a name="tabular-modeling-1200-compatibility-level"></a>테이블 형식 모델링 (호환성 수준 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 자습서에는 Analysis Services 테이블 형식 모델을 만드는 방법에 단원에서 제공 된 [1200 호환성 수준](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) 를 사용 하 여 [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt), Analysis services 모델을 배포 하 고 온-프레미스 서버 또는 Azure입니다.  
@@ -66,7 +66,7 @@ SQL Server 2017 또는 Azure Analysis Services를 사용 하는 모델 수준에
   
 이 자습서에서는 배포한 테이블 형식 모델 데이터베이스를 SQL Server Management Studio를 사용하여 관리하거나 보고 클라이언트 응용 프로그램을 사용하여 배포된 모델에 연결하여 모델 데이터를 탐색하는 과정을 안내하는 단원이나 정보는 제공하지 않습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 자습서를 완료 하려면 다음 필수 구성 요소가 필요 합니다.  
   
 -   최신 버전의 [! 포함[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md)합니다.

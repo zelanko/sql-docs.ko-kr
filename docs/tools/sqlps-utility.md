@@ -16,15 +16,15 @@ helpviewer_keywords:
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1869cd0a65ab63d5d579eb8c11b2329a8fbbebe8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlps-utility"></a>sqlps 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**sqlps** 유틸리티는 Windows PowerShell 세션을 시작는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 공급자 및 cmdlet이 로드 및 등록 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 구성 요소를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 및 해당 개체와 함께 작동하는 PowerShell 명령 또는 스크립트를 입력할 수 있습니다.  
@@ -75,7 +75,7 @@ sqlps
  실행할 PowerShell 명령 블록을 지정합니다. 명령 블록은 중괄호 {}로 묶어야 합니다. *Script_block* 은 **sqlps** 유틸리티가 **PowerShell** 또는 다른 **sqlps** 유틸리티 세션에서 호출된 경우에만 지정할 수 있습니다. *argument_array* 는 *script_block*의 PowerShell 명령에 대한 인수를 포함하는 PowerShell 변수 배열입니다.  
   
  *string* [ *command_parameters* ]  
- 실행할 PowerShell 명령을 포함하는 문자열을 지정합니다. **"&{***command***}"** 형식을 사용합니다. 큰따옴표는 문자열을 나타내며 호출 연산자(&)는 **sqlps** 유틸리티가 명령을 실행하도록 합니다.  
+ 실행할 PowerShell 명령을 포함하는 문자열을 지정합니다. 형식을 사용 하 여 **"& {***명령***}"**합니다. 큰따옴표는 문자열을 나타내며 호출 연산자(&)는 **sqlps** 유틸리티가 명령을 실행하도록 합니다.  
   
  [ **-?** | **-Help** ]  
  **sqlps** 유틸리티 옵션의 구문 요약 정보를 표시합니다.  

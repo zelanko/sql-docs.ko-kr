@@ -14,22 +14,22 @@ ms.topic: article
 helpviewer_keywords: TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e090b89ed827e1ea8a7700a2503fed95ace84501
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eacd9f77d0794038ce3d4df00f4af06d8e232e6e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 속성(프로토콜 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **TCP/IP 속성** 대화 상자는 TCP/IP 프로토콜에 대 한 옵션을 구성할 수 있습니다. 세부 정보 창에 개별 IP 주소 구성을 표시하려면 왼쪽 창에서 **TCP/IP** 를 클릭합니다.  
   
  변경 내용을 적용하려면 Microsoft SQL Server를 다시 시작해야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **Enabled**  
  가능한 값은 **예** 및 **아니요**입니다.  
   
@@ -44,6 +44,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [TCP/IP를 사용하여 유효한 연결 문자열 만들기](creating-a-valid-connection-string-using-tcp-ip.md)  
+ [TCP IP를 사용 하 여 유효한 연결 문자열 만들기](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   

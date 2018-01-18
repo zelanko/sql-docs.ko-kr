@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 306ceeb731627e5cfc5e6fe868920a66d82f76f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8ebba597240d5e456b8c132a6b5c52be81ed6b73
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="client-protocols-properties-order-tab"></a>클라이언트 프로토콜 속성(순서 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **순서**페이지에 **클라이언트 프로토콜 속성** 대화 상자를 보고 하 여 클라이언트 프로토콜을 사용 하도록 설정 합니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  이러한 설정은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient에서는 사용되지 않습니다. .NET SqlClient에 대한 프로토콜 순서는 첫 번째가 TCP이고 그 다음이 명명된 파이프이며 이 순서는 변경할 수 없습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **사용**  
  설치되어 있지만 현재 사용되지 않는 프로토콜을 나열합니다.  
   

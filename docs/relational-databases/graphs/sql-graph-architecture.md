@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ca6de15012a8fb929c207ab1a79a41607bd74cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -104,20 +104,20 @@ Edge 테이블에는 그래프의 관계를 나타냅니다. 가장자리는 항
 노드 테이블의 암시적 열  
 |열 이름    |데이터 형식  |is_hidden  |설명  |
 |---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1.  |내부 graph_id 열  |
-|$node_id_\<hex_string > |NVARCHAR   |0  |Id 열을 외부 노드  |
+|graph_id_\<hex_string> |bigint |1.  |내부 graph_id 열  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |Id 열을 외부 노드  |
 
 Edge 테이블의 암시적 열  
 |열 이름    |데이터 형식  |is_hidden  |설명  |
 |---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1.  |내부 graph_id 열  |
-|$edge_id_\<hex_string > |NVARCHAR   |0  |외부에 지 id 열  |
-|from_obj_id_\<hex_string >  |INT    |1.  |내부 노드 개체 id에서  |
-|from_id_\<hex_string >  |bigint |1.  |내부 노드 graph_id에서  |
-|$from_id_\<hex_string > |NVARCHAR   |0  |외부에서 노드 id  |
-|to_obj_id_\<hex_string >    |INT    |1.  |내부 개체의 노드 id  |
-|to_id_\<hex_string >    |bigint |1.  |노드 graph_id 내부  |
-|$to_id_\<hex_string >   |NVARCHAR   |0  |노드 id에 대 한 외부  |
+|graph_id_\<hex_string> |bigint |1.  |내부 graph_id 열  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |외부에 지 id 열  |
+|from_obj_id_\<hex_string>  |INT    |1.  |내부 노드 개체 id에서  |
+|from_id_\<hex_string>  |bigint |1.  |내부 노드 graph_id에서  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |외부에서 노드 id  |
+|to_obj_id_\<hex_string>    |INT    |1.  |내부 개체의 노드 id  |
+|to_id_\<hex_string>    |bigint |1.  |노드 graph_id 내부  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |노드 id에 대 한 외부  |
  
 ### <a name="system-functions"></a>시스템 함수
 다음 기본 제공 함수 추가 됩니다. 이러한 생성 된 열에서 정보를 추출 하는 사용자가 할 수 있습니다. 참고 이러한 메서드는 사용자의 입력, 검사 하지 것입니다. 잘못 된 지정 된 경우 `sys.node_id` 메서드가 적절 한 부분을 추출 하 고 반환 됩니다. OBJECT_ID_FROM_NODE_ID 걸립니다 예를 들어는 `$node_id` 입력로 object_id는 반환이 노드가 속한 테이블의 합니다. 
@@ -157,7 +157,7 @@ Edge 테이블의 암시적 열
 ### <a name="query-statements"></a>쿼리 문
 |태스크   |관련된 항목  |참고
 |---  |---  |---  |
-|SELECT |[SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|대부분의 SQL Server 또는 Azure SQL 데이터베이스 테이블에서 지원 되는 작업의 노드 및 가장자리 테이블에 사용할 수 있으므로, 노드 및 가장자리 내부 테이블로 저장 됩니다.  |
+|SELECT |[SELECT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|대부분의 SQL Server 또는 Azure SQL 데이터베이스 테이블에서 지원 되는 작업의 노드 및 가장자리 테이블에 사용할 수 있으므로, 노드 및 가장자리 내부 테이블로 저장 됩니다.  |
 |MATCH  | [일치 하는 항목 &#40; Transact SQL &#41;](../../t-sql/queries/match-sql-graph.md)|기본 제공 일치 하는 패턴 일치 및 그래프를 통해 통과 지원 하기 위해 도입 되었습니다.  |
 
 

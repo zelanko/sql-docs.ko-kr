@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91141f2ae083baf9792e4de9248de488b4146d07
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 속성(시작 매개 변수 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 대화 상자를 사용 하 여 추가 또는 제거에 대 한 시작 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 시작 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 성능에 많은 영향을 미칠 수 있습니다. 시작 매개 변수를 추가하거나 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **시작 매개 변수 지정**  
  매개 변수를 추가하려면 매개 변수를 입력한 다음 **추가**를 클릭합니다.  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  매개 변수를 제거하려면 매개변수를 선택한 다음 **제거**를 클릭합니다.  
   
 ## <a name="parameter-format"></a>매개 변수 형식  
- 매개 변수 사이에 구분 기호를 입력하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 구분 기호를 자동으로 추가합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 다음 매개 변수 요구 사항을 적용합니다.  
+ 매개 변수 사이에 구분 기호를 입력하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 구분 기호를 자동으로 추가합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자에서 다음 매개 변수 요구 사항을 적용 합니다.  
   
 -   선행 공백과 후행 공백은 시작 매개 변수에서 잘립니다.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 |매개 변수|간단한 설명|  
 |---------------|-----------------------|  
-|-M|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작합니다.|  
+|-m|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작합니다.|  
 |-T1204|교착 상태에 있는 잠금의 유형과 리소스 및 현재 영향을 받은 명령을 반환합니다.|  
 |-T1224|잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다.|  
 |-T3608|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 master 데이터베이스를 제외한 모든 데이터베이스를 자동으로 시작 및 복구하지 못하도록 방지합니다.|  

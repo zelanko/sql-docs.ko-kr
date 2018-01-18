@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18505a8ac88e1524f290d4559537ffe1f6751566
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>Index 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용자 지정 구성에 대해 만들거나 삭제 하려는 인덱스에 대 한 정보를 포함 합니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -69,8 +69,8 @@ ms.lasthandoff: 12/21/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Create 요소&#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.|  
-|**자식 요소**|[Index의 Name 요소&#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Index의 Column 요소&#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> **PartitionColumn** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> [Index의 Filegroup 요소&#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> **PercentUsage** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.|  
+|**부모 요소**|[만들기 요소 &#40; DTA &#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.|  
+|**자식 요소**|[Name 요소 index&#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column 요소 index&#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> **PartitionColumn** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> [Index의 Filegroup 요소&#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.<br /><br /> **PercentUsage** 요소입니다. 자세한 내용은 데이터베이스 엔진 튜닝 관리자 XML 스키마를 참조하십시오.|  
   
 ## <a name="example"></a>예제  
  이 요소의 사용 예를 보려면 [사용자 정의 구성이 포함된 XML 입력 파일 예제&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)를 참조하세요.  

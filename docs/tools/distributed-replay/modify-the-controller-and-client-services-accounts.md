@@ -15,13 +15,13 @@ ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1ebb116e83725355975dddc31108a9365d190b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6b43b611e45de9da98954417d5e7a1bfad009eac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 Distributed Replay controller 및 client 서비스 계정을 수정 하 고 다음 액세스 제어 목록 (Acl)을 다시 적용 하는 방법에 설명 합니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
     -   가상 계정 및 MSA(관리 서비스 계정)  
   
-    -   Network Services, 로컬 서비스 및 시스템  
+    -   네트워크 서비스, 로컬 서비스 및 시스템  
   
      그룹 계정(로컬 또는 도메인) 및 다른 기본 제공 계정(예: Everyone)은 사용할 수 없습니다.  
   

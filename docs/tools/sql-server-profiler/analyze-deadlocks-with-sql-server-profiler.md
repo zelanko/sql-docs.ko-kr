@@ -22,15 +22,15 @@ helpviewer_keywords:
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2940a94d2893fb58886506fa5db07402b86280d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2fc7e2adc786982611e58ca4083c575902e5aca3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 교착 상태 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 교착 상태의 원인을 확인 합니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/21/2017
 |소유자 ID|트랜잭션을 사용 중이고 잠금에 대해 현재 대기 중인 프로세스의 트랜잭션 ID입니다.|  
 |트랜잭션 설명자|트랜잭션 상태를 설명하는 트랜잭션 설명자에 대한 포인터입니다.|  
 |입력 버퍼|현재 프로세스의 입력 버퍼. 이벤트의 유형과 실행 중인 문을 정의합니다. 가능한 값은 다음과 같습니다.<br /><br /> **언어**<br /><br /> **RPC**<br /><br /> **없음**|  
-|인수를 제거합니다.|문 유형. 가능한 값은<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|문|문 유형. 가능한 값은<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>교착 상태 리소스 노드  
  두 프로세스가 각각 다른 프로세스에서 소유하고 있는 리소스를 대기하고 있는 상태가 교착 상태입니다. 교착 상태 그래프에서 리소스는 리소스 노드로 표시됩니다.  

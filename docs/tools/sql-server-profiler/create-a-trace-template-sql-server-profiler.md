@@ -17,15 +17,15 @@ helpviewer_keywords:
 - saving trace template
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 683865918f2676484ee96630d3a67c00c91036db
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23a7719304b70e0c981a3bfbc9ad780d45cdd721
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>추적 템플릿 만들기(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목을 사용 하 여 새 추적 템플릿을 만드는 방법에 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -56,8 +56,8 @@ ms.lasthandoff: 12/21/2017
   
 8.  **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [추적 파일에 대해 이벤트 및 데이터 열 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+## <a name="see-also"></a>참고 항목  
+ [추적 파일 &#40;에 대 한 이벤트 및 데이터 열 지정 SQL Server Profiler &#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [실행 중인 추적 &#40;에서 템플릿을 파생합니다 SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [추적 파일이 나 추적 테이블 &#40;에서 템플릿을 파생합니다 SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

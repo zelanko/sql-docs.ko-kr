@@ -16,15 +16,15 @@ helpviewer_keywords:
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9db69a0432f5f9f85001c4443e27c5b08a272f5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f40f56dcf2f46f78ebad2e8095e21cd5e012b3c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 속성(IP 주소 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **TCP/IP 속성 (IP 주소 탭)** 대화 상자를 특정 IP 주소에 대 한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
@@ -37,11 +37,11 @@ ms.lasthandoff: 12/21/2017
 ## <a name="dynamic-ports"></a>동적 포트  
  시작 시 동적 포트에서 수신하도록 구성된 SQL Server 인스턴스는 운영 체제에서 사용 가능한 포트를 확인하고 해당 포트의 끝점을 엽니다. 들어오는 연결은 연결할 포트 번호를 지정해야 합니다. SQL Server를 시작할 때마다 포트 번호가 변경될 수 있으므로 SQL Server에서는 포트를 모니터링하고 들어오는 연결을 해당 인스턴스의 현재 포트로 보내는 SQL Server Browser 서비스를 제공합니다. 동적 포트를 사용할 경우 SQL Server를 다시 시작할 때 포트 번호가 변경되어 방화벽 설정을 변경해야 할 수 있으므로 방화벽을 통해 SQL Server에 연결하는 것이 복잡해집니다. 방화벽을 통한 연결 문제를 방지하려면 정적 포트를 사용하도록 SQL Server를 구성하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **활성**  
  컴퓨터에서 IP 주소가 활성 상태임을 나타냅니다. **IPAll**에는 사용할 수 없습니다.  
   
- **Enabled**  
+ **사용**  
  **TCP/IP 속성(프로토콜 탭)** 의 **모두 수신합니다** 속성이 **아니요**로 설정되어 있으면 이 속성은 SQL Server가 IP 주소에서 수신하고 있는지 여부를 나타냅니다. **TCP/IP 속성(프로토콜 탭)** 의 **모두 수신합니다** 속성이 **예**로 설정되어 있으면 이 속성은 무시됩니다. **IPAll**에는 사용할 수 없습니다.  
   
  **IP 주소**  

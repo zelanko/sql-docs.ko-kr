@@ -13,25 +13,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93320cb43be5f499917c16843d39f1aeee9b1336
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f1b29eb621016e256cc0e5633de0e34089432571
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="report-server-properties-log-on-tab"></a>보고서 서버 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **로그온** 탭은 **보고서 서버 속성** 대화 상자 보고서 서버 서비스에서 사용 하는 계정을 지정 하 고 시작 하 고 서비스를 중지 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **로컬 시스템 계정**  
  암호를 요구하지 않는 로컬 시스템 계정을 지정합니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 다른 서버와 상호 작용하지 못하도록 서비스를 제한할 수 있습니다.  
   
  **계정 지정**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증을 사용하는 로컬 또는 도메인 사용자 계정을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 서비스에 대해 최소의 권한을 가진 도메인 사용자 계정을 사용할 것을 권장합니다. 계정 선택 방법은 온라인 설명서에서 "Windows 서비스 계정 설정" 항목을 참조하십시오.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증을 사용하는 로컬 또는 도메인 사용자 계정을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]최소의 권한을 가진 도메인 사용자 계정을 사용 하 여 서비스에 대 한 것을 권장 합니다. 계정 선택 방법은 온라인 설명서에서 "Windows 서비스 계정 설정" 항목을 참조하십시오.  
   
  **계정 이름**  
  로컬 또는 도메인 사용자 계정 이름을 지정합니다.  

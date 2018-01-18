@@ -18,22 +18,22 @@ helpviewer_keywords:
 - Named Pipes [SQL Server], listening on pipes
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6122004c46c36f21d2b301e70be91b26fa06c701
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 72fecdede46024eae399d9a762b0f8cdf7bb3a6b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="named-pipes-properties"></a>명명된 파이프 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **프로토콜**페이지에 **명명 된 파이프 속성** 대화 상자 보기 또는 변경 된 명명 된 파이프를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 수신 하는 명명 된 파이프 프로토콜을 사용 하는 경우.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]활성화 또는 프로토콜을 사용 하지 않도록 설정 하거나 명명 된 파이프를 변경 하려면 다시 시작 해야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **Enabled**  
  가능한 값은 **예** 및 **아니요**입니다.  
   
@@ -51,6 +51,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="see-also"></a>관련 항목:  
  [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [네트워크 프로토콜 선택](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
- [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+ [명명 된 파이프를 사용 하 여 유효한 연결 문자열 만들기](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

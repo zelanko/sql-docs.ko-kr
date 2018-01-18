@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc428a8f44fb2ca88a3aea2c93f9bdaf43b4e4f1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0f39cc50aa258df595bd7c010d992740a0a68976
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="workload-element-dta"></a>Workload 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]튜닝 세션에 사용할 작업을 지정 합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**자식 요소**|[File 요소&#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Workload의 Database 요소&#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 요소&#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**자식 요소**|[File 요소 &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [작업 &#40; DTA &#41;의 database 요소](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 요소 &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>주의  
  작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 데이터베이스 엔진 튜닝 관리자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 추적 파일 및 추적 테이블을 작업으로 사용할 수 있습니다.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/21/2017
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

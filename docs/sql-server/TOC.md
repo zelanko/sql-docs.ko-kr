@@ -49,9 +49,9 @@
 ### [SQL Server 보안](https://blogs.msdn.microsoft.com/sqlsecurity/)
 
 ## 피드백 및 도움말
+### [SQL Server에 대한 제안](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ### [MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 ### [Reddit](https://www.reddit.com/r/SQLServer)
 ## [도움말 뷰어에서의 로컬 콘텐츠](sql-server-help-installation.md)

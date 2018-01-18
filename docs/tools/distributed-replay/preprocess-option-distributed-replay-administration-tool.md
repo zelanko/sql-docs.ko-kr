@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e61ac04b679f5cf4abbe0d972379195be94d6586
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d1096da9b2acf50e7f495c6948a9c7f9e20acacb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>전처리 옵션(Distributed Replay Utility Administration Tool)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인 **DReplay.exe**, distributed replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. 이 항목에서는 **preprocess** 명령줄 옵션과 해당 구문에 대해 설명합니다.  
@@ -84,7 +84,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
- 이 예에서는 전처리 단계가 시작되고 수정한 전처리 구성 파일이 지정됩니다. 위의 예와는 달리 수정한 구성 파일을 다른 위치에 저장한 경우 **-c** 매개 변수를 사용하여 해당 위치를 가리켜야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 이 예에서는 전처리 단계가 시작되고 수정한 전처리 구성 파일이 지정됩니다. 위의 예와는 달리 수정한 구성 파일을 다른 위치에 저장한 경우 **-c** 매개 변수를 사용하여 해당 위치를 가리켜야 합니다. 예를 들어  
   
 ```  
 dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
@@ -104,13 +104,13 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
 </Options>  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  관리 도구는 로컬 사용자 또는 도메인 사용자 등의 대화형 사용자 계정으로 실행해야 합니다. 로컬 사용자 계정을 사용하려면 관리 도구와 컨트롤러가 동일한 컴퓨터에서 실행되고 있어야 합니다.  
   
  자세한 내용은 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [입력 추적 데이터 준비](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
+## <a name="see-also"></a>참고 항목  
+ [입력된 추적 데이터 준비](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)  
   

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb801e92dfaa141be2b5e942a1c0bd95c19a6cb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a830b25f8719953dec13a2ad43d0d7db275ee8a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>전역 추적 옵션 설정(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목의 특정 인스턴트로 생성 되는 모든 추적에 적용 되는 옵션을 설정 하는 방법을 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
     -   **기본 재생 스레드 수** 는 재생 중 사용할 프로세서 스레드 수를 제어합니다. 스레드 수가 높을수록 재생이 더 빨리 완료되지만 재생 시 서버 성능이 저하됩니다. **4**로 설정하는 것이 좋습니다. 다음 표에서는 사용 가능한 옵션을 나열합니다.  
   
-        |값|Description|  
+        |값|설명|  
         |-----------|-----------------|  
         |**2**|최소값. 두 스레드를 사용하여 재생합니다.|  
         |**4**|기본값.|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
     -   **기본 상태 모니터 대기 간격(초)** 은 재생 스레드가 다른 프로세스를 차단할 수 있는 최대 시간(초)을 설정합니다. 다음 표에서는 값을 설명합니다.  
   
-        |값|Description|  
+        |값|설명|  
         |-----------|-----------------|  
         |**0**|최소값. **0** 은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 차단 프로세스를 절대로 중지하지 않음을 의미합니다.|  
         |**3600**|기본값. **3600** 초 또는 한 시간을 초과하지 않는 차단 프로세스를 허용합니다.|  
@@ -65,14 +65,14 @@ ms.lasthandoff: 12/21/2017
   
     -   **기본 상태 모니터 폴링 간격(초)** 은 차단 프로세스용 재생 스레드를 폴링하는 빈도를 설정합니다. 다음 표에서는 값을 설명합니다.  
   
-        |값|Description|  
+        |값|설명|  
         |-----------|-----------------|  
         |**1**|최소값. **1** 은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 차단 프로세스를 초당 하나만 폴링함을 의미합니다.|  
         |**60**|기본값. 차단 프로세스를 _분당 하나만 폴링합니다.|  
         |**86400**|최대값. 차단 프로세스를 **86400** 초당 또는 하루에 하나만 폴링합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [추적 표시 기본값 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+## <a name="see-also"></a>참고 항목  
+ [추적 표시 기본값 설정 &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

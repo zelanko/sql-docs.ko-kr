@@ -15,18 +15,18 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c6991b8919cf756001cd3f61df396dee8591579
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 87645b4a48c157c65876ecfad89a4fef4dcd62c2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 속성(Always On 고가용성 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **Always On 고가용성** 탭은 **SQL Server 속성** 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의AlwaysOn가용성그룹기능을사용하지않도록설정하거나설정하려면구성관리자[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 Always On 가용성 그룹을 사용하도록 설정해야 합니다.  
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 구성 요소  
  Always On 가용성 그룹을 사용하도록 설정하려면 서버 인스턴스가 다음과 같은 사전 요구 사항을 충족해야 합니다.  
   
 -   서버 인스턴스는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드에 있어야 합니다.  

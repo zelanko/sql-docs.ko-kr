@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu 클러스터와 가용성 그룹 리소스 구성
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. 클러스터를 만듭니다. 
 
    >[!WARNING]
-   >클러스터링 공급 업체는 조사 하 고, 시작 하는 알려진된 문제로 인해 클러스터 ('pc 클러스터 start') 아래의 오류 하면서 실패 합니다. 즉, /etc/corosync/corosync.conf에 구성 된 로그 파일이 잘못 되었습니다. 이 문제를 해결 하려면 로그 파일을 변경할: /var/log/corosync/corosync.log 합니다. 또는 /var/log/cluster/corosync.log 파일을 만들 수 있습니다.
+   >클러스터링 공급 업체는 조사 하 고, 시작 하는 알려진된 문제로 인해 클러스터 ('pc 클러스터 start') 아래의 오류 하면서 실패 합니다. 해당 하는 클러스터 설치 명령을 실행 하는 때 만들어지는 잘못 /etc/corosync/corosync.conf에 구성 된 로그 파일 때문입니다. 이 문제를 해결 하려면 로그 파일을 변경할: /var/log/corosync/corosync.log 합니다. 또는 /var/log/cluster/corosync.log 파일을 만들 수 있습니다.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

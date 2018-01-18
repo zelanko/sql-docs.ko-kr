@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: opening trace files
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48b2f47dc77da176247faf46741035f1dc07519b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0863fb837aa6ba0ed156c573c6c89c3c015b5dd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>추적 파일 열기(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 사용 하 여 추적 파일을 여는 방법을 설명 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  **파일 열기** 대화 상자에서 열려는 추적 데이터 파일을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

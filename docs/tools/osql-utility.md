@@ -26,15 +26,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: "49"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bbd6a75a0ff9e3be746c46882ee93e201d7955ef
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**osql** 유틸리티 입력할 수 있습니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일입니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
@@ -100,7 +100,7 @@ C:\>osql
  암호를 요구하지 않고 트러스트된 연결을 사용합니다.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 *인스턴스에 연결하려면***\\***server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
+ 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 지정 *server_name***\\***instance_name* 의 명명 된 인스턴스에 연결 하는 데 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 해당 서버에 있습니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
   
  **-H** *wksta_name*  
  워크스테이션 이름입니다. 워크스테이션 이름은 **sysprocesses.hostname** 에 저장되고 **sp_who**에 의해 표시됩니다. 이 옵션을 지정하지 않으면 현재 컴퓨터 이름이 사용됩니다.  
@@ -124,7 +124,7 @@ C:\>osql
  출력에 사용할 화면의 너비를 설정할 수 있습니다. 기본값은 80자입니다. 출력 줄이 최대 화면 너비에 도달하면 여러 줄로 나뉘어집니다.  
   
  **-a** *packet_size*  
- 다른 크기의 패킷을 요청할 수 있습니다. 유효한 *packet_size* 값은 512에서 65535까지입니다. 기본값 **osql** 은 서버 기본값입니다. 패킷 크기를 늘리면 GO 명령 사이에 SQL 문이 많은 크기가 큰 스크립트를 실행할 때 성능이 향상됩니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 의 테스트 결과에 의하면 일반적으로 8192를 설정했을 때 대량 복사 작업이 가장 빨리 수행됩니다. 더 큰 패킷 크기를 요청할 수 있지만 요청한 크기를 허용하지 않으면 **osql** 이 서버 기본값을 사용합니다.  
+ 다른 크기의 패킷을 요청할 수 있습니다. 유효한 *packet_size* 값은 512에서 65535까지입니다. 기본값 **osql** 은 서버 기본값입니다. 패킷 크기를 늘리면 GO 명령 사이에 SQL 문이 많은 크기가 큰 스크립트를 실행할 때 성능이 향상됩니다. [!INCLUDE[msCoName](../includes/msconame-md.md)]의 테스트 결과에 의하면 일반적으로 8192를 설정했을 때 대량 복사 작업이 가장 빨리 수행됩니다. 더 큰 패킷 크기를 요청할 수 있지만 요청한 크기를 허용하지 않으면 **osql** 이 서버 기본값을 사용합니다.  
   
  **-e**  
  입력을 에코합니다.  
@@ -142,7 +142,7 @@ C:\>osql
  명령 종료 문자를 지정합니다. 기본적으로 줄에 GO만 단독으로 입력하면 명령이 종료되어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 보내집니다. 명령 종료 문자를 다시 설정할 때는 앞에 백슬래시를 지정하는지 여부에 상관없이 [!INCLUDE[tsql](../includes/tsql-md.md)] 예약어 또는 운영 체제와 연관된 특별한 의미를 가진 문자를 사용하지 마십시오.  
   
  **-q "** *query* **"**  
- **osql** 이 시작될 때 쿼리를 실행하지만 쿼리가 완료되더라도 **osql** 을 끝내지 않습니다. 쿼리 문에는 GO를 포함할 수 없습니다. 일괄 처리에서 쿼리를 실행하면 %변수 또는 환경 %변수%를 사용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ **osql** 이 시작될 때 쿼리를 실행하지만 쿼리가 완료되더라도 **osql** 을 끝내지 않습니다. 쿼리 문에는 GO를 포함할 수 없습니다. 일괄 처리에서 쿼리를 실행하면 %변수 또는 환경 %변수%를 사용할 수 있습니다. 예를 들어  
   
 ```  
 SET table=sys.objects  
@@ -175,7 +175,7 @@ osql -E -q "select name, object_id from %table%"
  성능 통계를 출력합니다.  
   
  **-b**  
- 오류가 발생하면 **osql** 을 끝내고 DOS ERRORLEVEL 값을 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 오류 메시지의 심각도가 11 이상이면 DOS ERRORLEVEL 변수에 1을 반환하고 아니면 0을 반환합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] MS-DOS 배치 파일은 DOS ERRORLEVEL 값을 검사하여 오류를 적절하게 처리할 수 있습니다.  
+ 오류가 발생하면 **osql** 을 끝내고 DOS ERRORLEVEL 값을 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 오류 메시지의 심각도가 11 이상이면 DOS ERRORLEVEL 변수에 1을 반환하고 아니면 0을 반환합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)]MS-DOS 배치 파일은 DOS ERRORLEVEL 값을 테스트 오류를 적절 하 게 처리할 수 있으며  
   
  **-u**  
  *input_file* 형식에 관계없이 *output_file*이 유니코드 형식으로 저장되도록 지정합니다.  
@@ -195,12 +195,12 @@ osql -E -q "select name, object_id from %table%"
  DOS ERRORLEVEL의 기본값을 -1로 설정합니다.  
   
 > [!NOTE]  
->  위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **-n**에서는 **-O** , **-D** 및 **osql**의 이후 버전에서는 이 기능이 제거됩니다.  
+>   **-n** , **-O** 및 **-D** 옵션이 더 이상 지원 **osql**합니다.  
   
 ## <a name="remarks"></a>주의  
  위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **osql** 유틸리티를 운영 체제에서 직접 시작할 수 있습니다. **osql**을 시작하면 osql이 SQL 문을 받아서 대화형으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 보냅니다. 결과는 서식 지정되어 화면에 표시됩니다(**stdout**). **osql**을 끝내려면 QUIT 또는 EXIT를 사용합니다.  
   
- **osql**을 시작할 때 사용자 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 환경 변수를 검사한 후 사용합니다. 예를 들어 **osqluser=(***user***)** 또는 **osqlserver=(***server***)**를 사용합니다. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
+ 시작할 때 사용자 이름의 지정 하지 않으면 **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 환경 변수를 확인 하 고 사용 하 여, 예를 들어 **osqluser = (***사용자***)** 또는 **osqlserver = (***서버***)**합니다. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
   
  **-U** 또는 **-P** 옵션을 사용하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증 모드를 사용하여 연결을 시도합니다. 인증은 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **을 실행하는 사용자의**Windows 계정에 기반합니다.  
   
@@ -212,7 +212,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 명령  
  [!INCLUDE[tsql](../includes/tsql-md.md)] osql **내에서**문 외에도 다음 명령을 사용할 수 있습니다.  
   
-|Command|Description|  
+|Command|설명|  
 |-------------|-----------------|  
 |GO|마지막 GO 이후에 입력한 모든 문을 실행합니다.|  
 |RESET|입력한 모든 문을 지웁니다.|  
@@ -259,7 +259,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  가능하면 **-E**옵션(신뢰할 수 있는 연결)을 사용합니다.  
   
- **osql** 을 대화형으로 사용하면 **:r***file_name*을 지정하여 운영 체제 파일을 명령 버퍼로 읽을 수 있습니다. 그러면 *file_name* 의 SQL 스크립트가 직접 서버에 한 번의 일괄 처리로 보내집니다.  
+ 사용 하는 경우 **osql** 운영 체제 파일을 명령 버퍼로 읽을 수는 대화형으로 **: r * * * file_name*합니다. 그러면 *file_name* 의 SQL 스크립트가 직접 서버에 한 번의 일괄 처리로 보내집니다.  
   
 > [!NOTE]  
 >  **osql**을 사용할 때 일괄 처리 구분 기호 GO가 SQL 스크립트 파일에 나타나면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 이를 구문 오류로 처리합니다.  
@@ -274,13 +274,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- EXIT 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ EXIT 매개 변수를 배치 파일의 일부로 포함할 수도 있습니다. 예를 들어  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -308,7 +308,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   상태가 127인 RAISERROR  
   
 > [!NOTE]  
->  **osql** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **osql** 이 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+>  **osql** 스크립트에 RAISERROR를 사용할 때 상태 127이 발생하면 **osql** 이 종료되고 메시지 ID가 클라이언트에 반환됩니다. 예를 들어  
   
 ```  
 RAISERROR(50001, 10, 127)  
@@ -340,10 +340,10 @@ GO
   
  이 문의 결과는 `10.3496`로 표시됩니다. 모든 소수 자릿수를 그대로 사용하여 값이 저장되었습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [설명&#40;MDX&#41;](../mdx/comment-mdx.md)   
+## <a name="see-also"></a>참고 항목  
+ [설명 &#40; Mdx&#41;](../mdx/comment-mdx.md)   
  [-&#40; 설명 &#41; &#40; Mdx&#41;](../mdx/comment-mdx-operator-reference.md)   
- [CAST 및 convert&#40; Transact SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST 및 CONVERT &#40;TRANSACT-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Raiserror&#40; Transact SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

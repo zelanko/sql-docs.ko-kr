@@ -1,5 +1,5 @@
 ---
-title: "등록은 Linux에서 SQL Server에 대 한 일반 공급 리포지토리 | Microsoft Docs"
+title: "Linux에서 SQL Server에 대 한 일반 공급 리포지토리를 등록 | Microsoft Docs"
 description: "Linux의 GA (일반 공급) 저장소에 SQL Server 2017 미리 보기 저장소에서 리포지토리를 변경 (GA는 또한 라고도 RTM)."
 author: annashres
 ms.author: anshrest
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c2c674c90b327cfe4baf2d109fab09d045f890
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f74c74bddf8337bf4555ce4ecdf0b6e2c869e44f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>GA 저장소에 미리 보기 저장소에서 저장소 변경
 

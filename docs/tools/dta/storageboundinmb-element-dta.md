@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da0825fe578e3c908fd4b0728b98fb9e6b8c1326
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)](메가바이트) 데이터베이스 엔진 튜닝 관리자 튜닝 권장 구성 (인덱스 및 분할 집합)에 사용할 수 있는 최대 공간을 지정 합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**unsignedInt**, 길이 제한 없음|  
 |**기본값**|없음|  
@@ -50,8 +50,8 @@ ms.lasthandoff: 12/21/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**자식 요소**|InclusionThresholdSetting|  
+|**부모 요소**|[TuningOptions 요소 &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**자식 요소**|없음|  
   
 ## <a name="remarks"></a>주의  
  여러 개의 데이터베이스를 튜닝할 경우 모든 데이터베이스에 대한 권장 구성은 공간 계산을 고려하여 처리됩니다. 기본적으로 데이터베이스 엔진 튜닝 관리자는 다음 저장소 크기보다 작은 공간을 가정합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>예제  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 코드 예에서는 튜닝 권장 구성에서 사용할 수 있는 최대 디스크 공간으로 1500MB를 설정하는 방법을 보여 줍니다.  
   
 ## <a name="code"></a>코드  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

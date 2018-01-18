@@ -17,15 +17,15 @@ helpviewer_keywords:
 - replaying traces
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 337569e89216611f972b0ac2305b42cc5c519826
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b21ed5c4b270a64c6eee3cc2d41cb4f1ba0518df
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>Transact-SQL 스크립트 재생(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여 성능 문제에 대해 가능한 솔루션을 테스트할 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 재생 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 프로그램 변경 전후의 성능을 비교 합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  **재생 구성** 대화 상자에서 설정을 확인한 다음 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [추적 재생](../../tools/sql-server-profiler/replay-traces.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b51de55832ddd13103fb67f41f937a1efdd0b999
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93b5886a489f4570dd62249f8620d11b868ee663
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="eventstring-element-dta"></a>EventString 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] XML 입력된 파일에서 직접 스크립트 작업.  
@@ -41,13 +41,13 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**Weight**|(선택 사항) 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. **float** 데이터 형식을 사용하여 가중치를 지정할 수 있습니다(예: **Weight**="100.01"). **Weight** 에 지정할 수 있는 최소값은 "0"입니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 길이 제한 없음|  
 |**기본값**|없음|  
@@ -57,13 +57,13 @@ ms.lasthandoff: 12/21/2017
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Workload 요소&#40;DTA&#41;](../../tools/dta/workload-element-dta.md)|  
+|**부모 요소**|[Workload 요소 &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  
  이 요소의 사용 예를 보려면 [인라인 워크로드가 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

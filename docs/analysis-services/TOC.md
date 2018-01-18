@@ -19,7 +19,7 @@
 ## [Analysis Services 샘플](analysis-services-samples.md)
 
 # 자습서
-## [테이블 형식 모델링(Adventure Works 자습서)](tabular-modeling-adventure-works-tutorial.md)  
+## [테이블 형식 모델링(1200 호환성 수준)](tabular-modeling-adventure-works-tutorial.md)  
 ### [1단원: 새 테이블 형식 모델 프로젝트를 만들기](lesson-1-create-a-new-tabular-model-project.md)  
 ### [2단원: 데이터 추가](lesson-2-add-data.md)  
 ### [3단원: 날짜 테이블로 표시](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [추가 단원 - 행 필터를 사용하여 동적 보안 구현](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [추가 단원 - 파워 뷰 보고서의 보고 속성 구성](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [다차원 모델링(Adventure Works 자습서)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [다차원 모델링](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [자습서 시나리오](analysis-services-tutorial-scenario.md)  
 ### [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](install-sample-data-and-projects.md)  
 ### [1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  

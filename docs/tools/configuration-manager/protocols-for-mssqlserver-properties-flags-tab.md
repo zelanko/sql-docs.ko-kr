@@ -14,18 +14,18 @@ ms.topic: article
 helpviewer_keywords: MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ed0d315ee6b469fddcf3f6e10d8016f43653eda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: db816ac16fa53afeb3c7f8f5434d3123f5a4dc00
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(플래그 탭)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]인증서가 서버에 설치를 사용 하 여는 **플래그** 탭에 **MSSQLSERVER 속성에 대 한 프로토콜** 대화 상자를 확인 하거나 프로토콜 암호화를 지정할 수 있으며 인스턴스 옵션을 숨길입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정을 활성화하거나 비활성화하려면 **ForceEncryption** 를 다시 시작해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]인증서가 서버에 설치를 사용 하 여는 **플래그** 탭에 **MSSQLSERVER 속성에 대 한 프로토콜** 대화 상자를 확인 하거나 프로토콜 암호화를 지정할 수 있으며 인스턴스 옵션을 숨길입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용할지 여부를 다시 시작 해야는 **ForceEncryption** 설정 합니다.  
   
  연결을 암호화하려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 인증서를 제공해야 합니다. 인증서를 설치하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 인스턴스가 시작될 때 자체 서명된 인증서를 생성합니다. 자체 서명된 이 인증서는 신뢰할 수 있는 인증 기관의 인증서 대신 사용될 수 있지만 인증이나 거부할 수 없음 기능을 제공하지 않습니다.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="cluster-servers"></a>클러스터 서버  
  장애 조치(failover) 클러스터에서 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드 명명된 "test1와 2 개 노드 클러스터.  *\<회사 >*.com "및" test2. *\<회사 >*.com "에 대 한 인증서를 설치 해야 하는"virtsql"이라는 가상 서버와" virtsql. *\<회사 >*.com "두 노드에서 모두 합니다. 그런 다음 **SQL Server 구성 관리자** 의 **ForceEncryption** 확인란을 선택하여 장애 조치 클러스터에 암호화를 구성해야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **ForceEncryption**  
  프로토콜 암호화를 강제로 사용합니다. 암호화란 데이터를 읽을 수 없는 형식으로 변경하여 중요한 정보의 기밀성을 유지하는 방법입니다. 암호화를 사용하면 전송 중 전송 패킷이 노출되더라도 데이터는 안전하게 보호됩니다. 채널 바인딩을 사용하려면 **암호화 적용** 을 **켜기** 로 설정하고 **고급** 탭의 **확장된 보호** 를 구성합니다.  
   
