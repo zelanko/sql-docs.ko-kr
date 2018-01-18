@@ -18,17 +18,20 @@ helpviewer_keywords:
 - transaction log guidance
 - vlfs
 - virtual log files
+- virtual log size
+- vlf size
+- transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +70,7 @@ ms.lasthandoff: 01/09/2018
   
  롤백 작업도 기록됩니다. 각 트랜잭션은 트랜잭션 로그에 공간을 예약하여 명시적 롤백 문이나 오류로 인해 발생한 롤백을 지원하기에 충분한 로그 공간을 확보합니다. 예약된 공간의 크기는 트랜잭션에서 수행되는 작업에 따라 다르지만 일반적으로 각 작업을 기록하는 데 사용되는 공간의 크기와 같습니다. 이렇게 예약된 공간은 트랜잭션 완료 시 해제됩니다.  
   
-<a name="minlsn"></a>마지막으로 작성된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백에 필요한 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분 또는 *활성 로그*라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 복구를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 [로그 레코드의 LSN(로그 시퀀스 번호)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)은 **최소 복구 LSN(*MinLSN*)이라고 합니다**.  
+<a name="minlsn"></a>마지막으로 작성된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백에 필요한 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분 또는 *활성 로그*라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 복구를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 [로그 레코드의 LSN(로그 시퀀스 번호)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)은 ***최소 복구 LSN(*MinLSN**)이라고 합니다.  
   
 ##  <a name="physical_arch"></a> 트랜잭션 로그 물리 아키텍처  
 데이터베이스의 트랜잭션 로그는 하나 이상의 물리 파일에 매핑됩니다. 개념상으로 로그 파일은 로그 레코드의 문자열입니다. 실제로 로그 레코드의 시퀀스는 트랜잭션 로그를 구현하는 물리적 파일 집합에 효율적으로 저장됩니다. 데이터베이스마다 최소한 하나의 로그 파일이 있어야 합니다.  
@@ -77,9 +80,10 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]
 > 가상 로그 파일(VLF) 생성은 이 메서드를 따릅니다.
 > - 다음 증가가 현재 로그의 물리적 크기의 1/8보다 작은 경우 증가 크기에 충분한 VLF를 하나 만듭니다([!INCLUDE[ssSQL14](../includes/sssql14-md.md)]로 시작).
-> - 증가가 64MB보다 작은 경우 증가 크기에 충분한 4개의 VLF를 만듭니다(예: 1MB 증가의 경우 256KB VLF 4개 생성).
-> - 증가가 64MB에서 최대 1GB인 경우 증가 크기에 충분한 8개의 VLF를 만듭니다(예: 512MB 증가의 경우 64MB VLF 8개 생성).
-> - 증가가 1GB보다 큰 경우 증가 크기에 충분한 16개의 VLF를 만듭니다(예: 8GB 증가의 경우 512MB VLF 16개 생성).
+> - 다음 증가 현재 로그 크기의 1/8보다 많을 경우 pre-2014 메서드를 사용합니다.
+>    -  증가가 64MB보다 작은 경우 증가 크기에 충분한 4개의 VLF를 만듭니다(예: 1MB 증가의 경우 256KB VLF 4개 생성).
+>    -  증가가 64MB에서 최대 1GB인 경우 증가 크기에 충분한 8개의 VLF를 만듭니다(예: 512MB 증가의 경우 64MB VLF 8개 생성).
+>    -  증가가 1GB보다 큰 경우 증가 크기에 충분한 16개의 VLF를 만듭니다(예: 8GB 증가의 경우 512MB VLF 16개 생성).
 
 수많은 작은 증가값으로 인해 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. **이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다.** 필요한 최종 크기에 가까운 *size* 값을 로그 파일에 할당하고 *growth_increment* 값을 비교적 크게 지정하는 것이 좋습니다. 현재 트랜잭션 로그 크기에 대해 최적의 VLF 분포를 결정하려면 아래 팁을 참조하세요.
  - `ALTER DATABASE`의 `SIZE` 인수로 설정된 *크기* 값은 로그 파일의 초기 크기입니다.

@@ -17,18 +17,26 @@ helpviewer_keywords:
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 404e929c7fd184162df6d68d2dceb0dceb532ff6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 87e90bc33f653b36eac95fd8f525d5eb235ed1ea
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
-  SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
+
+> [!NOTE]
+> SQL Server PowerShell 모듈은 **SqlServer**와 **SQLPS**의 두 가지가 있습니다. **SQLPS** 모듈은 (이전 버전과의 호환성을 위해) SQL Server 설치에 포함되어 있지만 더 이상 업데이트되지는 않습니다. 최신 PowerShell 모듈은 **SqlServer** 모듈입니다. **SqlServer** 모듈은 **SQLPS**에 업데이트된 버전의 cmdlet이 포함되어 있으며, 최신 SQL 기능을 지원하는 새로운 cmdlet도 포함되어 있습니다.  
+> 이전 버전의 **SqlServer** 모듈은 SSMS(SQL Server Management Studio)에 *포함되었습니다*(SSMS 16.x 버전만 해당). SSMS 17.0 이상이 포함된 PowerShell을 사용하려면 PowerShell 갤러리에서 **SqlServer** 모듈을 설치해야 합니다.
+> **SqlServer** 모듈을 설치하려면 [SQL Server PowerShell 설치](download-sql-server-ps-module.md)를 참조하세요.
+
   
 ## <a name="syntax"></a>구문  
   
@@ -93,7 +101,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 |||  
 |-|-|  
 |yyyy|4자리 연도|  
-|mm|두 자리 월(01 - 12)|  
+|MM|두 자리 월(01 - 12)|  
 |dd|두 자리 날짜(01 - 31)|  
 |hh|24시간제를 사용하는 두 자리 시간(01 - 23)|  
 |mi|두 자리 분(01 - 59)|  
@@ -108,7 +116,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  not(\<*PropertyExpression*>)  
  *PropertyExpression*의 평가 값을 부정하고 *PropertyExpression*에 지정된 조건과 일치하지 않는 개체를 모두 열거합니다. 예를 들어 not(contains(@Name, 'xyz'))는 이름에 xyz 문자열이 없는 개체를 모두 열거합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  쿼리 식은 SMO 모델 계층 구조에 있는 노드를 열거하는 문자열입니다. 각 노드에는 해당 노드에서 열거되는 개체를 결정하는 조건을 지정하는 필터 식이 있습니다. 쿼리 식은 XPath 식 언어에서 모델링됩니다. 쿼리 식은 XPath에서 지원하는 작은 식 집합을 구현하고 XPath에 없는 일부 확장도 포함합니다. XPath 식은 XML 문서에서 하나 이상의 태그를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. XPath에 대한 자세한 내용은 [W3C XPath Language](http://www.w3.org/TR/xpath20/)를 참조하십시오.  
   
  쿼리 식은 Server 개체에 대한 절대 참조로 시작해야 합니다. /로 시작하는 상대 식은 사용할 수 없습니다. 쿼리 식에 지정된 개체 시퀀스는 관련 개체 모델에 있는 컬렉션 개체의 계층 구조를 따라야 합니다. 예를 들어 Microsoft.SqlServer.Management.Smo 네임스페이스의 개체를 참조하는 쿼리 식은 Server 노드로 시작하고 그 다음에 Database 노드 등이 와야 합니다.  
@@ -167,7 +175,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Invoke-PolicyEvaluation cmdlet](../powershell/invoke-policyevaluation-cmdlet.md)   
+ [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

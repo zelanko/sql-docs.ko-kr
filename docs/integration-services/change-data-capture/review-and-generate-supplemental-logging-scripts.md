@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 492a21e51a6bdc1dbcf0a39451a81caee737dba4
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>보완 로깅 스크립트 검토 및 생성
   **스크립트** 탭을 사용하여 보완 로깅을 설정하는 Oracle 원본 데이터베이스에서 스크립트를 실행하거나 다시 실행할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  보완 로깅 스크립트를 실행하면 유효한 Oracle 사용자 이름과 암호를 입력할 수 있는 스크립트 실행을 위한 Oracle 자격 증명 대화 상자가 열립니다. 적절한 Oracle 자격 증명을 제공하는 방법은 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)을 참조하십시오.  
   
- 필요한 경우 SQL * Plus를 사용하여 스크립트를 수동으로 실행할 수도 있습니다.  
+ 필요한 경우 SQL\*Plus를 사용하여 스크립트를 수동으로 실행할 수도 있습니다.  
   
 ### <a name="to-run-the-scripts-manually"></a>스크립트를 수동으로 실행하려면  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  파일 이름을 지정하고 **저장** 을 클릭하여 파일을 저장합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [스크립트 실행을 위한 Oracle 자격 증명](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   

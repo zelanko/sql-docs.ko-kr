@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 835b2c27dfaf8e4003cd009e3c20146af32d2bca
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 559847d392fa744b32fc2aa0cdb70eeb9b2c4ebd
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="index-json-data"></a>JSON 데이터 인덱싱
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SQL Server 2016에서 JSON은 기본 제공 데이터 형식이 아니며 SQL Server에는 사용자 지정 JSON 인덱스가 없습니다. 그러나 표준 인덱스를 사용하여 JSON 문서에 대한 쿼리를 최적화할 수 있습니다. 
+SQL Server 및 SQL Database에서 JSON은 기본 제공 데이터 형식이 아니며 SQL Server에는 사용자 지정 JSON 인덱스가 없습니다. 그러나 표준 인덱스를 사용하여 JSON 문서에 대한 쿼리를 최적화할 수 있습니다. 
 
 데이터베이스 인덱스는 필터 및 정렬 작업의 성능을 향상합니다. 인덱스를 사용하지 않으면 SQL Server는 데이터를 쿼리할 때마다 전체 테이블을 검색해야 합니다.  
   
@@ -79,7 +79,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 SQL Server는 전체 테이블을 검색하지 않고 비클러스터형 인덱스에서 인덱스 검색하여 지정된 조건을 충족하는 행을 찾습니다. 그런 다음 `SalesOrderHeader` 테이블에서 키 조회를 사용하여 쿼리에서 참조된 다른 열(이 예제에서는 `SalesOrderNumber` 및 `OrderDate`)을 가져옵니다.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>포괄 열을 사용하여 추가로 인덱스 최적화
-인덱스에 필요한 열을 추가하는 경우 테이블에서 이러한 조회를 추가로 수행할 필요가 없습니다. 위에 표시된 `CREATE INDEX` 예제를 확장하는 다음 예제처럼 이러한 열을 표준형 포괄 열로 추가할 수 있습니다.  
+인덱스에 필요한 열을 추가하는 경우 테이블에서 이러한 조회를 추가로 수행할 필요가 없습니다. 위의 `CREATE INDEX` 예제를 확장하는 다음 예제처럼 이러한 열을 표준형 포괄 열로 추가할 수 있습니다.  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -87,12 +87,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-이 경우 비클러스터형 JSON 인덱스에 필요한 모든 사항이 있기 때문에 SQL Server는 `SalesOrderHeader` 테이블에서 데이터를 추가로 읽을 필요가 없습니다. 이것은 쿼리에서 JSON과 열 데이터를 결합하고 작업에 대한 최적의 인덱스를 생성하기 위한 좋은 방법입니다.  
+이 경우 비클러스터형 JSON 인덱스에 필요한 모든 사항이 있기 때문에 SQL Server는 `SalesOrderHeader` 테이블에서 데이터를 추가로 읽을 필요가 없습니다. 이러한 인덱스 유형은 쿼리에서 JSON과 열 데이터를 결합하고 작업에 대한 최적의 인덱스를 생성하기 위한 좋은 방법입니다.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON 인덱스는 데이터 정렬 인식 인덱스입니다.  
 JSON 데이터에 대한 중요한 인덱스 기능은 인덱스가 데이터 정렬 인식 인덱스라는 점입니다. 계산 열을 만들 때 사용하는 `JSON_VALUE` 함수의 결과는 입력 식에서 데이터 정렬을 상속하는 텍스트 값입니다. 따라서 인덱스의 값은 원본 열에 정의된 데이터 정렬 규칙을 사용하여 정렬됩니다.  
   
-이것을 보여주기 위해 다음 예제에서는 기본 키와 JSON 콘텐츠가 있는 단순한 컬렉션 테이블을 만듭니다.  
+인덱스가 데이터 정렬을 인식한다는 것을 보여주기 위해 다음 예제에서는 기본 키와 JSON 콘텐츠가 있는 단순한 컬렉션 테이블을 만듭니다.  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -146,7 +146,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  쿼리에 `ORDER BY` 절이 있지만 실행 계획은 Sort 연산자를 사용하지 않습니다. JSON 인덱스는 이미 세르비아어 키릴 자모 규칙에 따라 정렬됩니다. 따라서 SQL Server는 결과가 이미 정렬된 비클러스터형 인덱스를 사용합니다.  
   
- 그러나 `ORDER BY` 식의 데이터 정렬을 변경하면(예: `JSON_VALUE` 함수 뒤에 `COLLATE French_100_CI_AS_SC` 입력) 다른 쿼리 실행 계획이 제공됩니다.  
+ 그러나 `ORDER BY` 식의 데이터 정렬을 변경하면(예: `JSON_VALUE` 함수 뒤에 `COLLATE French_100_CI_AS_SC` 추가) 다른 쿼리 실행 계획이 제공됩니다.  
   
  ![실행 계획](../../relational-databases/json/media/jsonindexblog3.png "Execution plan")  
   
