@@ -181,5 +181,5 @@
 ### [MSDN의 SSIS 포럼](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Stack Overflow의 SSIS 태그](http://stackoverflow.com/questions/tagged/ssis)  
 ## 사용자 의견 제공
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+### [SQL Server 피드백 포럼](https://feedback.azure.com/forums/908035-sql-server)  
 ## [PC의 문서 가져오기](../sql-server/sql-server-help-installation.md)
