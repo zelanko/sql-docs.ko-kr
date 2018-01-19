@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, opening
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aec83ff9ef56b4d4ae02867d4055d0b1e38f41ec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92ba2ddafe591c570300918bfb968ae44debea62
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="open-transact-sql"></a>OPEN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

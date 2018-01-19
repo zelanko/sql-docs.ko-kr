@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfcb6ae66bc431304e70e2db52801c9788f5f92d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ STRING_SPLIT ( string , separator )
  *string*  
  이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 모든 문자 형식의 (즉, **nvarchar**, **varchar**, **nchar** 또는 **char**).  
   
- *구분 기호*  
+ *separator*  
  단일 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md) 모든 문자 형식 (예: **nvarchar(1)**, **varchar (1)**, **nchar(1)** 또는  **char(1)**) 연결 된 문자열에 대 한 구분 기호로 사용 되는 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -92,7 +92,7 @@ WHERE RTRIM(value) <> '';
 ### <a name="b-split-comma-separated-value-string-in-a-column"></a>2. 분할 쉼표로 구분 된 열에 값 문자열로  
  제품 테이블에는 쉼표를 별도 태그 목록으로 다음 예제와 같이 지정 된 열을 있습니다.  
   
-|productId|이름|Tags|  
+|ProductId|이름|Tags|  
 |---------------|----------|----------|  
 |1.|전체 손가락 Gloves|clothing touring bike 이동 중|  
 |2|LL 헤드셋|자전거|  
@@ -108,7 +108,7 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|productId|이름|value|  
+|ProductId|이름|value|  
 |---------------|----------|-----------|  
 |1.|전체 손가락 Gloves|의류|  
 |1.|전체 손가락 Gloves|도|  
@@ -171,7 +171,12 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [왼쪽 &#40; Transact SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40; Transact SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [오른쪽 &#40; Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40; Transact SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [부분 문자열 &#40; Transact SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM &#40; Transact SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
+ [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

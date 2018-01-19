@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5481957e399f072e400a042825c2966f06d2e782
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40; 오류 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  때문에 @@ERROR 의 선택을 취소 하 고 실행 된 각 문에서 다시 설정, 확인 하는 문 바로 다음을 확인 또는 나중에 확인할 수 있는 지역 변수에 저장 합니다.  
   
- TRY...CATCH 구문을 사용하여 오류를 처리하세요. TRY... CATCH 구성 지원 추가 시스템 함수 (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE) @ 보다 많은 오류 정보를 반환 하는 또한@ERROR합니다. TRY...CATCH는 오류가 발생된 문 바로 다음 문의 오류 번호만 반환하도록 제한되지 않은 ERROR_NUMBER 함수도 지원합니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)를 참조하세요.  
+ TRY...CATCH 구문을 사용하여 오류를 처리하세요. TRY... CATCH 구성 지원 추가 시스템 함수 (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE) 보다 많은 오류 정보를 반환 하는 또한 @@ERROR 합니다. TRY...CATCH는 오류가 발생된 문 바로 다음 문의 오류 번호만 반환하도록 제한되지 않은 ERROR_NUMBER 함수도 지원합니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>2. 를 사용 하 여 @@ERROR 를 조건부로 프로시저 종료  
- 다음 예제에서는 `IF...ELSE` 테스트 합니다 `@@ERROR` 후는 `INSERT` 저장된 프로시저의 문. `@@ERROR` 변수의 값은 호출하는 프로그램으로 보내진 반환 코드를 결정하고 프로시저의 성공 여부를 나타냅니다.  
+ 다음 예제에서는 `IF...ELSE` 테스트 합니다 `@@ERROR` 후는 `DELETE` 저장된 프로시저의 문. `@@ERROR` 변수의 값은 호출하는 프로그램으로 보내진 반환 코드를 결정하고 프로시저의 성공 여부를 나타냅니다.  
   
 ```  
 USE AdventureWorks2012;  

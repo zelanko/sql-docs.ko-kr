@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 ## <a name="arguments"></a>인수 
 
-*구분 기호*  
+*separator*  
 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 의 `NVARCHAR` 또는 `VARCHAR` 에 대 한 구분 기호로 사용 되는 형식 문자열을 연결 합니다. 리터럴 또는 변수 수 있습니다. 
 
 *expression*  
 이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 모든 종류의 합니다. 식으로 변환 됩니다 `NVARCHAR` 또는 `VARCHAR` 연결 하는 동안 형식입니다. 문자열이 아닌 유형으로 변환 됩니다 `NVARCHAR` 유형입니다.
 
 
-< order_clause >   
+<order_clause>   
 필요에 따라 사용 하 여 연결 된 결과의 순서를 지정할 `WITHIN GROUP` 절:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
-< order_by_expression_list >   
+<order_by_expression_list>   
  
   비상수 목록이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 결과 정렬에 사용할 수 있는 합니다. 하나의 `order_by_expression` 쿼리당 허용 됩니다. 기본 정렬 순서는 오름차순입니다.   
   
@@ -70,14 +70,14 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1... 4000) |NVARCHAR (4000) |
-|VARCHAR (1... 8000) |VARCHAR(8000) |
-|int, bigint, smallint, tinyint, 숫자, float, real, 비트, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR (4000) |
+|NVARCHAR(1…4000) |NVARCHAR(4000) |
+|VARCHAR(1…8000) |VARCHAR(8000) |
+|int, bigint, smallint, tinyint, 숫자, float, real, 비트, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
 
 ## <a name="remarks"></a>주의  
  
-`STRING_AGG`집계 행에서 모든 식을 사용 하 고 단일 문자열로 연결 합니다. 식 값 문자열 형식으로 암시적으로 변환 되 고 연결 됩니다. 문자열에 대한 암시적 변환은 데이터 형식 변환에 대한 기존 규칙을 따릅니다. 데이터 형식 변환에 대 한 자세한 내용은 참조 [CAST 및 CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 
+`STRING_AGG`행에서 모든 식을 사용 하 고 단일 문자열로 연결 하는 집계 함수가입니다. 식 값 문자열 형식으로 암시적으로 변환 되 고 연결 됩니다. 문자열에 대한 암시적 변환은 데이터 형식 변환에 대한 기존 규칙을 따릅니다. 데이터 형식 변환에 대 한 자세한 내용은 참조 [CAST 및 CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 
 
 입력된 식이 형식인 경우 `VARCHAR`, 구분 기호는 형식일 수 없습니다. `NVARCHAR`합니다. 
 
@@ -194,6 +194,15 @@ GROUP BY town;
 
 
 ## <a name="see-also"></a>관련 항목:  
-
-[문자열 함수 (Transact SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

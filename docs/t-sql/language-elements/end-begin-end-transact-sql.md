@@ -22,15 +22,15 @@ helpviewer_keywords:
 - END (BEGIN...END) keyword
 ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e15aaa9fc6d4ea9b3c8a3c8b89826c85f0a4810f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c7746c130339403f4825f84644b3f8c062eb38a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="end-beginend-transact-sql"></a>END(BEGIN...END)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

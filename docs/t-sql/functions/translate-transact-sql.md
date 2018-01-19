@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a498430f8af12bad1e5ec934dcb60c63aeb96e56
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e7ea679043b83d8cee26f431602450d023516647
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="translate-transact-sql"></a>번역 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,14 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 
 ## <a name="see-also"></a>관련 항목:
-
-[문자열 함수 (Transact SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[REPLACE (Transact SQL)](../../t-sql/functions/replace-transact-sql.md)   
+ [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [문자열 함수 (Transact SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 

@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4407538e956f268f4d9bb868c1fcb70c2447cf6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SUBSTRING ( expression ,start , length )
  *expression*  
  이 **문자**, **이진**, **텍스트**, **ntext**, 또는 **이미지**[식](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *시작*  
+ *start*  
  정수 또는 **bigint** 반환 되는 문자의 시작 위치를 지정 하는 식입니다. (1, 기반된은 식에서 첫 번째 문자는 1는 번호 매기기)입니다. 경우 *시작* 1 보다 작으면 반환 되는 식은에 지정 된 첫 번째 문자에서 시작 됩니다 *식*합니다. 이 경우 반환 되는 문자 수는 가장 큰 값의 합계의 *시작* + *길이*-1 또는 0입니다. 경우 *시작* 수보다 큰 값 식에 있는 문자의 길이가 0 인 식이 반환 됩니다.  
   
  *length*  
@@ -63,9 +63,9 @@ SUBSTRING ( expression ,start , length )
   
 |지정된 식|반환 형식|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**텍스트**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
-|**이진**/**varbinary**/**이미지**|**varbinary**|  
+|**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>주의  
  에 대 한 값 *시작* 및 *길이* 의 문자 수를 지정 해야 **ntext**, **char**, 또는 **varchar**  데이터 형식 및에 대 한 바이트 **텍스트**, **이미지**, **이진**, 또는 **varbinary** 데이터 형식입니다.  
@@ -222,6 +222,12 @@ bcd
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
+ [왼쪽 &#40; Transact SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40; Transact SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [오른쪽 &#40; Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40; Transact SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40; Transact SQL &#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40; Transact SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
  [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

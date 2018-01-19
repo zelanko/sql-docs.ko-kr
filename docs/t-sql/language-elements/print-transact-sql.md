@@ -24,15 +24,15 @@ helpviewer_keywords:
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bc40ee58fe6037d7ad29ced76232f84fe91c2c15
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 320c54c81b8c4bdb782d4b685816f10150a075e0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="print-transact-sql"></a>PRINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +51,8 @@ PRINT msg_str | @local_variable | string_expr
  *msg_str*  
  문자열 또는 유니코드 문자열 상수입니다. 자세한 내용은 참조 [상수 &#40; Transact SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***local_variable*  
- 유효한 문자 데이터 형식의 변수입니다. **@***local_variable* 해야 **char**, **nchar**, **varchar**, 또는 **nvarchar**, 될 수 있어야 하거나 이러한 데이터 형식으로 암시적으로 변환 합니다.  
+ **@** *local_variable*  
+ 유효한 문자 데이터 형식의 변수입니다. **@ * * * local_variable* 해야 **char**, **nchar**, **varchar**, 또는 **nvarchar**, 될 수 있어야 하거나 이러한 데이터 형식으로 암시적으로 변환 합니다.  
   
  *string_expr*  
  문자열을 반환하는 식입니다. 연결된 리터럴 값, 함수 및 변수를 포함할 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  

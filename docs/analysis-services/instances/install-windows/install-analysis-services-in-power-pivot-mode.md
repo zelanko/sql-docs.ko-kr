@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7c958feff44c2947c74f51eaec94abcd4ca8e543
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>파워 피벗 모드에서 Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]이 항목의 절차를 안내해 단일 서버에 설치 하는 단계는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 배포 모드입니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다.  
@@ -306,11 +306,11 @@ ms.lasthandoff: 01/08/2018
   
  **중복 및 서버 부하:** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드의 보조 또는 추가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버를 설치하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 기능이 중복됩니다. 또한 서버 간에 부하가 분산됩니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Excel Services에서 데이터 모델 처리를 위해 Analysis Services 구성(SharePoint 2013)](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Excel Services (SharePoint 2013)에서 데이터 모델 처리를 위한 Analysis Services 구성](http://technet.microsoft.com/library/jj614437(v=office.15))합니다.  
   
--   [Excel Services 데이터 모델 설정 관리(SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15)).  
+-   [Excel Services 데이터 모델 설정 (SharePoint 2013)](http://technet.microsoft.com/library/jj219780(v=office.15))합니다.  
   
- ![SharePoint 설정](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)  
+ ![SharePoint 설정](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [SQL Server 피드백을 통해 사용자 의견 및 연락처 정보를 제출](https://feedback.azure.com/forums/908035-sql-server)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SharePoint 2013으로 파워 피벗 마이그레이션](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

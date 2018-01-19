@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 10edb8b1b1e3008321bc03e2e65419dca8956f86
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stuff-transact-sql"></a>STUFF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *character_expression*  
  이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터입니다. *character_expression* 상수, 변수 또는 문자 또는 이진 데이터의 열 수 있습니다.  
   
- *시작*  
+ *start*  
  삭제 및 삽입 시작 위치를 지정하는 정수 값입니다. 경우 *시작* 가 음수 또는 0 이면 null 문자열이 반환 됩니다. 경우 *시작* 첫 번째 보다 긴 *character_expression*, null 문자열이 반환 됩니다. *시작* 유형일 수 **bigint**합니다.  
   
  *length*  
@@ -90,5 +90,14 @@ aijklmnef
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
+ [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  

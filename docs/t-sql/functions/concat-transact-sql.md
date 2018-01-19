@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a924bb7f9eb521e3c9637e69aeb5055c69bfeb11
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f3a1ef2b55b2f67b6b2e01ceb1965a5076e8476
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -57,7 +57,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 |---|---|
 |인수가 SQL-CLR 시스템 형식, SQL-CLR UDT 또는 `nvarchar(max)`인 경우|**nvarchar(max)**|  
 |그렇지 않고 인수가 있으면 **varbinary (max)** 또는 **varchar (max)**|**varchar (max)** 매개 변수 중 하나가 아닌 경우는 **nvarchar** 의 길이입니다. 따라서 다음 결과가 이면 **nvarchar (max)**합니다.|  
-|그렇지 않고 인수가 있으면 **nvarchar**(< = 4000)|**nvarchar**(< = 4000)|  
+|그렇지 않고 인수가 있으면 **nvarchar**(< = 4000)|**nvarchar**(<= 4000)|  
 |그렇지 않은 다른 모든 경우|**varchar**(< = 8000) 매개 변수 중 하나가 임의 길이의 nvarchar가 아닌 경우. 따라서 다음 결과가 이면 **nvarchar (max)**합니다.|  
   
 인수가 < = 4000 **nvarchar**, 또는 < = 8000 **varchar**, 암시적 변환은 결과의 길이 영향을 줄 수 있습니다. 다른 데이터 형식은 암시적으로 문자열로 변환될 경우 다른 길이를 가집니다. 예를 들어는 **int** (14)의 문자열 길이는 12, 동안는 **float** 길이 32입니다. 따라서 두 정수를 연결한 결과는 길이가 24자 이상입니다.
@@ -108,8 +108,16 @@ NameLastname
 ```  
   
 ## <a name="see-also"></a>참고 항목
-[문자열 함수 (Transact SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-[CONCAT_WS (Transact SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [Quotename&#40; Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
 
 

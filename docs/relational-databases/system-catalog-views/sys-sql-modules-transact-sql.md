@@ -1,7 +1,7 @@
 ---
 title: sys.sql_modules (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 496ed3e4d3aad1cea7a0b9c153f4e85da1a46489
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a2ed39676fc1bd477cce716b5c9d86c721df40fe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|포함하는 개체의 개체 ID입니다. 데이터베이스 내에서 고유합니다.|  
-|**정의**|**nvarchar(max)**|이 모듈을 정의하는 SQL 텍스트입니다.<br /><br /> NULL = 암호화됨|  
+|**definition**|**nvarchar(max)**|이 모듈을 정의하는 SQL 텍스트입니다. 사용 하 여이 값 얻을 수도 있습니다는 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 기본 제공 함수입니다.<br /><br /> NULL = 암호화됨|  
 |**uses_ansi_nulls**|**bit**|SET ANSI_NULLS ON으로 모듈을 만들었습니다.<br /><br /> 규칙과 기본값에 대해서는 항상 0입니다.|  
 |**uses_quoted_identifier**|**bit**|SET QUOTED_IDENTIFIER ON으로 모듈을 만들었습니다.|  
 |**is_schema_bound**|**bit**|SCHEMABINDING 옵션으로 모듈을 만들었습니다.<br /><br /> 고유하게 컴파일된 저장 프로시저의 경우 항상 1 값을 포함합니다.|  

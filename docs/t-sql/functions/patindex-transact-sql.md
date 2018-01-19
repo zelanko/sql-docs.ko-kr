@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd0df5a4dba946748dc39c245fcd54d50f1e97e5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 95a86e78aad7ea01a7f57a046b250825c9e37192
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ PATINDEX ( '%pattern%' , expression )
 ```  
   
 ## <a name="arguments"></a>인수  
- *패턴*  
+ *pattern*  
  찾을 시퀀스가 포함된 문자 식 입니다. 와일드 카드 문자를 사용할 수 있습니다. 그러나 % 문자가 앞에 야 하며 따라 *패턴* (제외 하 고 검색 하는 경우 첫 번째 또는 마지막 문자에 대 한). *패턴* 문자 문자열 데이터 형식 범주의 식입니다. *패턴* 8000 자로 제한 됩니다.  
   
  *expression*  
@@ -147,6 +147,8 @@ WHERE DocumentNode = 0x7B40;
 
   
 ## <a name="see-also"></a>관련 항목:  
+ [CHARINDEX &#40; Transact SQL &#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [Len 함수 &#40; Transact SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [&#40; 와일드 카드-문자 &#40; s &#41; 일치 하는 항목 &#41; &#40; Transact SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   

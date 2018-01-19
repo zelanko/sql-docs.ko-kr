@@ -23,15 +23,15 @@ helpviewer_keywords:
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9dbabcc0fe5f9573554384549023ab8395b87762
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6958a7b472f8837f9fc0b9c83548474d61dab17a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="goto-transact-sql"></a>GOTO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ GOTO label
 ```  
   
 ## <a name="arguments"></a>인수  
- *레이블*  
+ *label*  
  GOTO의 대상이 해당 레이블인 경우 처리가 시작되는 지점입니다. 레이블에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 레이블은 GOTO 사용 여부에 관계 없이 주석을 기록하는 방법으로 사용될 수 있습니다.  
   
 ## <a name="remarks"></a>주의  

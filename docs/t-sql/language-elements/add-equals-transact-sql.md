@@ -22,15 +22,15 @@ helpviewer_keywords:
 - augmented operators, +=
 ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7437b65f197650eb06d736519122770a005fb6d8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9547d1225f6081da609f7ce28412a8ad88ccdc90
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-addition-assignment-transact-sql"></a>+ = (더하기 할당) (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

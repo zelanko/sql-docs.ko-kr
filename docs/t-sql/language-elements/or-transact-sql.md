@@ -21,15 +21,15 @@ helpviewer_keywords:
 - OR operator
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05fcf73b02b0ea1f049db32828bc0eeb5a17d2f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 49c74e20949b47afd40b154a13e7fe3db5e8ab8c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="or-transact-sql"></a>OR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ boolean_expression OR boolean_expression
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**알 수 없음**|TRUE|UNKNOWN|UNKNOWN|  
+|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `vEmployeeDepartmentHistory` 뷰를 사용하여 저녁 시간 또는 야간 교대 근무조에 속해 있는 `Quality Assurance` 직원의 이름을 검색합니다. 괄호를 생략하면 이 쿼리는 저녁 시간 근무조에 속한 `Quality Assurance` 직원과 야간 교대 근무조에 속한 모든 직원을 반환합니다.  

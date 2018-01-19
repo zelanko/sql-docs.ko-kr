@@ -18,15 +18,15 @@ helpviewer_keywords:
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f9441cf26142e70340e23212991665f67fb7bf62
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 17ef615ab6b82cb9407871fcf8ee7a312ce22613
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bitwise-operators-transact-sql"></a>비트 연산자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/18/2017
 |적용한 후|비트 수학|
 |---- |---- |
 |및 <br> 모든 위치에서 비트 모두 모두 1 이면 결과 1입니다. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|또는 <br> 모든 위치에서 어느 한쪽 비트가 1 이면 결과 1입니다. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|OR <br> 모든 위치에서 어느 한쪽 비트가 1 이면 결과 1입니다. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> 모든 비트 위치에서 비트 값을 반대로 바꿉니다. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 다음 항목을 참조 합니다.   

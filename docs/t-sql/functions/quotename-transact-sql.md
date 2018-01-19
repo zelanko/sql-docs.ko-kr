@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 650892048daea0a86dc357ebbe2dd08b7eea5184
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 701d229ae745cee4a237f35b69cd00e899d5c6a5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,11 +50,11 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  '*character_string*'  
  유니코드 문자 데이터로 이루어진 문자열입니다. *character_string* 은 **sysname** 128 자로 제한 됩니다. 128자가 넘는 문자열을 입력하면 NULL이 반환됩니다.  
   
- '*대괄호가*'  
+ '*quote_character*'  
  구분 기호로 사용되는 단일 문자 문자열입니다. 작은따옴표를 사용할 수 있습니다 ( **'** ), 왼쪽 또는 오른쪽 대괄호 ( **[]** ), 또는 큰따옴표 ( **"** ). 경우 *대괄호가* 를 지정 하지 않으면 대괄호가 사용 됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar (258)**  
+ **nvarchar(258)**  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `abc[]def` 문자열에 `[` 및 `]` 문자를 추가하여 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구분 식별자로 만듭니다.  
@@ -89,6 +89,16 @@ SELECT QUOTENAME('abc def');
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
+ [PARSENAME &#40; Transact SQL &#41;](../../t-sql/functions/parsename-transact-sql.md)  
+ [CONCAT &#40; Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40; Transact SQL &#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40; Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [바꾸기 &#40; Transact SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [역방향 &#40; Transact SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40; Transact SQL &#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [변환 &#40; Transact SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
  [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

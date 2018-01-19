@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ ms.lasthandoff: 01/02/2018
 |program_name|**nvarchar(128)**|세션을 시작한 클라이언트 프로그램의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |host_process_id|**int**|세션을 시작한 클라이언트 프로그램의 프로세스 ID입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |client_version|**int**|클라이언트가 서버에 연결하는 데 사용하는 TDS 프로토콜 버전의 인터페이스입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
-|client_interface_name|**nvarchar (32)**|서버와 통신 하는 클라이언트에서 사용 되는 라이브러리/드라이버의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
+|client_interface_name|**nvarchar(32)**|서버와 통신 하는 클라이언트에서 사용 되는 라이브러리/드라이버의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |security_id|**varbinary(85)**|로그인과 연결된 Microsoft Windows 보안 ID입니다. Null을 허용하지 않습니다.|  
 |login_name|**nvarchar(128)**|현재 세션을 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. 세션을 만든 원래 로그인 이름은 original_login_name을 참조하십시오. 일 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 이름 또는 Windows 인증된 도메인 사용자 이름입니다. Null을 허용하지 않습니다.|  
 |nt_domain|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 도메인입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |nt_user_name|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 사용자 이름입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
-|상태|**nvarchar (30)**|세션 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **실행** -현재 하나 이상의 요청을 실행<br /><br /> **절전 모드** -현재 실행 중인 요청이 없습니다<br /><br /> **유휴** -연결 풀링으로 인해 다시 설정 되었음을 세션과 로그인 하기 전 상태가 되었습니다.<br /><br /> **Preconnect** -세션은 리소스 관리자 분류자입니다.<br /><br /> Null을 허용하지 않습니다.|  
+|상태|**nvarchar(30)**|세션 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **실행** -현재 하나 이상의 요청을 실행<br /><br /> **절전 모드** -현재 실행 중인 요청이 없습니다<br /><br /> **유휴** -연결 풀링으로 인해 다시 설정 되었음을 세션과 로그인 하기 전 상태가 되었습니다.<br /><br /> **Preconnect** -세션은 리소스 관리자 분류자입니다.<br /><br /> Null을 허용하지 않습니다.|  
 |context_info|**varbinary(128)**|세션의 CONTEXT_INFO 값입니다. 컨텍스트 정보를 사용 하 여 사용자가 설정 되는 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 문. Null을 허용합니다.|  
 |cpu_time|**int**|이 세션에서 사용한 CPU 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |memory_usage|**int**|이 세션에서 사용한 8KB 메모리 페이지 수입니다. Null을 허용하지 않습니다.|  
@@ -109,6 +109,10 @@ ms.lasthandoff: 01/02/2018
 -   unsuccessful_logons  
   
  이 옵션이 설정되지 않은 경우 이러한 열에 Null 값이 반환됩니다. 이 서버 구성 옵션을 설정 하는 방법에 대 한 자세한 내용은 참조 [common criteria 준수 enabled 서버 구성 옵션](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)합니다.  
+ 
+ 
+ Azure SQL 데이터베이스에서 관리자 연결 관리자가 아닌 연결이 데이터베이스 사용자 세션에 관련 된 정보를 확인만 하는 동안 인증 된 세션당 행 하나 표시 됩니다. 
+ 
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   

@@ -1,7 +1,7 @@
 ---
 title: sys.column_store_segments (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 12/30/2016
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 322cd5a22f3d23db02984e13f87989c0585db13e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f73379d3ae23570f95209631444d1335279a5ef5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ Columnstore 인덱스의 각 열 세그먼트에 대해 한 행을 반환합니�
 |**encoding_type**|**int**|해당 세그먼트에 대해 사용 되는 인코딩 유형:<br /><br /> 1 = VALUE_BASED-문자열/이진이 아님으로 사용 가능한 사전 (매우 비슷합니다 일부 내부 변형이 4)<br /><br /> 2 = VALUE_HASH_BASED-사전에 공통 값과 문자열/이진이 아닌 열<br /><br /> 3 = STRING_HASH_BASED-사전에 공통 값과 문자열/이진 열<br /><br /> 4 = STORE_BY_VALUE_BASED-문자열/이진이 아님으로 없는 사전 사용 하 여<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-문자열/이항 없는 사전 사용 하 여<br /><br /> 모든 인코딩을 활용 가능한 경우 비트 압축 및 실행 길이 인코딩.|  
 |**row_count**|**int**|행 그룹의 행 수입니다.|  
 |**has_nulls**|**int**|열 세그먼트에 Null 값이 있으면 1입니다.|  
-|**않으면 base_id**|**bigint**|인코딩 유형 1 기준 값 id는 사용 중입니다.  인코딩 유형 1은 사용 되지 않으면 base_id가 1로 설정 됩니다.|  
-|**크기**|**float**|인코딩 유형 1 경우 magnitude는 사용 중입니다.  인코딩 유형 1은 사용 되지 크기가 1로 설정 됩니다.|  
+|**base_id**|**bigint**|인코딩 유형 1 기준 값 id는 사용 중입니다.  인코딩 유형 1은 사용 되지 않으면 base_id가-1로 설정 됩니다.|  
+|**magnitude**|**float**|인코딩 유형 1 경우 magnitude는 사용 중입니다.  인코딩 유형 1은 사용 되지 크기-1로 설정 됩니다.|  
 |**primary_dictionary_id**|**int**|값이 0에는 전역 사전을 나타냅니다. -1 값이이 열에 대해 만든 글로벌 사전이 없습니다 임을 나타냅니다.|  
 |**secondary_dictionary_id**|**int**|0이 아닌 값이이 열에 현재 세그먼트 (즉, 행)에 대 한 로컬 사전을를 가리킵니다. -1 값이이 세그먼트에 대 한 사전이 없습니다 로컬 임을 나타냅니다.|  
 |**min_data_id**|**bigint**|열 세그먼트의 최소 데이터 ID입니다.|  
 |**max_data_id**|**bigint**|열 세그먼트의 최대 데이터 ID입니다.|  
-|**반환**|**bigint**|Null을 나타내는 데 사용되는 값입니다.|  
+|**null_value**|**bigint**|Null을 나타내는 데 사용되는 값입니다.|  
 |**on_disk_size**|**bigint**|세그먼트의 크기(바이트)입니다.|  
   
 ## <a name="remarks"></a>주의  

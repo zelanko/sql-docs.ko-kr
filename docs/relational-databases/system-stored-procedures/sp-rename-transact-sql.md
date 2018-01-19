@@ -1,7 +1,7 @@
 ---
 title: sp_rename (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,16 +56,16 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  정규화된 개체가 지정된 경우에는 따옴표만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *object_name* 은 **nvarchar(776)**, 기본값은 없습니다.  
   
- [ @newname =] '*new_name*'  
+ [ @newname = ] '*new_name*'  
  지정한 개체의 새 이름입니다. *new_name* 한 부분 이름 이어야 하며 식별자에 대 한 규칙을 따라야 합니다. *newname* 은 **sysname**, 기본값은 없습니다.  
   
 > [!NOTE]  
 >  트리거 이름은 # 또는 ##로 시작될 수 없습니다.  
   
- [ @objtype =] '*object_type*'  
+ [ @objtype = ] '*object_type*'  
  이름을 바꾸는 개체의 유형입니다. *object_type* 은 **varchar(13)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |COLUMN|이름을 바꿀 열입니다.|  
 |DATABASE|사용자 정의 데이터베이스입니다. 이 개체 유형은 데이터베이스 이름을 바꿀 경우 필요합니다.|  
@@ -84,9 +84,9 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  sp_rename을 사용하여 기본 XML 인덱스 및 보조 XML 인덱스의 이름을 변경할 수 있습니다.  
   
- 저장된 프로시저, 함수, 뷰 또는 트리거 이름 바꾸기의 정의 열에 있는 해당 개체 이름은의 이름을 변경 되지 것입니다는 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰에 있습니다. 따라서 이러한 개체 유형의 이름을 변경할 때 sp_rename을 사용하지 않는 것이 좋습니다. 대신 해당 개체를 삭제하고 새로운 이름으로 다시 만듭니다.  
+ 저장된 프로시저, 함수, 뷰 또는 트리거 변경 되지 것입니다 해당 개체의 이름을 정의 열에는 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰 또는 사용 하 여 가져온는 [OBJECT_ 정의](../../t-sql/functions/object-definition-transact-sql.md) 기본 제공 함수입니다. 따라서 이러한 개체 유형의 이름을 변경할 때 sp_rename을 사용하지 않는 것이 좋습니다. 대신 해당 개체를 삭제하고 새로운 이름으로 다시 만듭니다.  
   
- 테이블이나 열과 같은 개체의 이름을 변경해도 이 개체를 참조하는 개체의 이름은 자동으로 변경되지 않습니다. 이름을 변경한 개체를 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 열의 이름을 변경하고 이 열이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 열 이름을 적용해야 합니다. 사용 하 여[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 에 종속성을 나열 하는 개체에 이름을 변경할 수 있습니다.  
+ 테이블이나 열과 같은 개체의 이름을 변경해도 이 개체를 참조하는 개체의 이름은 자동으로 변경되지 않습니다. 이름을 변경한 개체를 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 열의 이름을 변경하고 이 열이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 열 이름을 적용해야 합니다. [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 를 사용하여 이 개체에 종속된 개체를 나열한 다음 개체의 이름을 변경할 수 있습니다.  
   
 ## <a name="permissions"></a>Permissions  
  개체, 열 및 인덱스의 이름을 변경하려면 개체에 대한 ALTER 권한이 필요합니다. 사용자 유형의 이름을 변경하려면 유형에 대한 CONTROL 권한이 필요합니다. 데이터베이스의 이름을 변경하려면 sysadmin 또는 dbcreator 고정 서버 역할의 멤버여야 합니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - control-of-flow language [SQL Server], keywords listed
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 27c7874fbdd1ed29e60b32a8dba1f4acbb84566d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2cb3c6b04d74a7f3420e42cab94aedfce65592e2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-of-flow"></a>흐름 제어
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/18/2017
 |[BEGIN...END](../../t-sql/language-elements/begin-end-transact-sql.md)|[RETURN](../../t-sql/language-elements/return-transact-sql.md)|  
 |[BREAK](../../t-sql/language-elements/break-transact-sql.md)|[THROW](../../t-sql/language-elements/throw-transact-sql.md)|  
 |[CONTINUE](../../t-sql/language-elements/continue-transact-sql.md)|[TRY...CATCH](../../t-sql/language-elements/try-catch-transact-sql.md)|  
-|[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *레이블*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
+|[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *label*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
 |[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
   
 ## <a name="see-also"></a>관련 항목:  

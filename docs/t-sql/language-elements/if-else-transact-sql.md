@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IF keyword
 ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 caps.latest.revision: "49"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eca1a794ea4676b8f3922840802ca44791e100d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cddbd853fb167d6eb393dd2ab713414e91545ee1
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
