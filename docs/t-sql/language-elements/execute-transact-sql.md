@@ -32,15 +32,15 @@ helpviewer_keywords:
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 caps.latest.revision: "104"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5c9081d53346bda14d507688547f37589bd153da
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,12 +206,12 @@ Execute a character string
   
  스칼라 반환 사용자 정의 함수를 호출 하는 데 사용 하는 경우는 @*return_status* 변수는 모든 스칼라 데이터 형식이 될 수 있습니다.  
   
- *모듈*  
+ *module_name*  
  호출할 저장 프로시저나 스칼라 반환 사용자 정의 함수의 정규화되거나 정규화되지 않은 이름입니다. 모듈 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 확장 저장 프로시저의 이름은 서버의 데이터 정렬에 관계없이 항상 대/소문자를 구분합니다.  
   
  다른 데이터베이스에서 생성된 모듈은 이 모듈을 실행하는 사용자가 모듈을 소유하고 있거나 해당 데이터베이스에서 모듈을 실행할 수 있는 적절한 사용 권한이 있는 경우에 실행될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 다른 서버에서 모듈을 실행하려면 모듈을 실행하는 사용자가 원격 액세스를 통해 서버에 연결하여 해당 데이터베이스에서 모듈을 실행할 수 있는 적절한 사용 권한을 갖고 있어야 합니다. 서버 이름은 지정했지만 데이터베이스 이름은 지정하지 않은 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 사용자의 기본 데이터베이스에서 모듈을 찾습니다.  
   
- ; *번호*  
+ ;*number*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  같은 이름의 프로시저를 그룹화하는 데 사용하는 정수입니다(선택 사항). 이 매개 변수는 확장 저장 프로시저에는 사용하지 않습니다.  
@@ -226,7 +226,7 @@ Execute a character string
   
  이 고유 하 게 컴파일된 스칼라 사용자 정의 함수 이름을 포함 하는 변수를 수 있습니다.  
   
- @*매개 변수*  
+ @*parameter*  
  매개 변수 이므로 *모듈*모듈에 정의 된 대로 합니다. 매개 변수 이름 앞에는 반드시 at 기호(@)를 사용해야 합니다. 와 함께 사용할 때의 @*p a r a*=*값* 양식, 매개 변수 이름과 상수를 모듈에 정의 된 순서에 제공할 수 없는 합니다. 그러나 경우는 @*p a r a*=*값* 양식은 매개 변수에 대해 사용 됩니다., 모든 후속 매개 변수를 사용 해야 합니다.  
   
  기본적으로 매개 변수에 Null이 허용됩니다.  
@@ -242,7 +242,7 @@ Execute a character string
   
  기본값으로 NULL을 사용할 수도 있습니다. 일반적으로 모듈 정의는 매개 변수 값이 NULL일 때 수행할 동작을 지정합니다.  
   
- @*변수*  
+ @*variable*  
  매개 변수를 저장하거나 반환하는 변수입니다.  
   
  OUTPUT  
@@ -273,13 +273,13 @@ Execute a character string
   
  가장할 컨텍스트를 로그인으로 지정합니다. 가장의 범위는 서버입니다.  
   
- User  
+ USER  
  가장할 컨텍스트를 현재 데이터베이스의 사용자로 지정합니다. 가장의 범위는 현재 데이터베이스로 제한됩니다. 데이터베이스 사용자로 컨텍스트 전환 시 해당 사용자의 서버 수준 사용 권한은 상속되지 않습니다.  
   
 > [!IMPORTANT]  
 >  데이터베이스 사용자로의 컨텍스트 전환이 활성 상태인 경우 데이터베이스 외부에 있는 리소스에 액세스하려고 시도하면 문이 실행되지 않습니다. 여기에 사용 하 여 *데이터베이스* 문, 분산된 쿼리 및 3-또는 4 부분으로 구성 식별자를 사용 하 여 다른 데이터베이스를 참조 하는 쿼리 합니다.  
   
- '*이름*'  
+ '*name*'  
  유효한 사용자 또는 로그인 이름입니다. *이름* sysadmin 고정된 서버 역할의 구성원 이어야 하거나에서 보안 주체로 존재 해야 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 또는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)각각.  
   
  *이름* NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem 등의 기본 제공 계정일 수 없습니다.  
@@ -292,12 +292,12 @@ Execute a character string
  [?]  
  에 제공 된 값을 매개 변수를 나타냅니다는 \<g-l i >에서 EXEC('...', \<arg-list>)에 사용 되는 통과 명령의 \<linkedsrv > 문입니다.  
   
- *linked_server_name과*  
+ AT *linked_server_name*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  지정 하는 *command_string* 에 대해 실행 된 *linked_server_name과* 클라이언트에 반환 있는 경우 결과 얻으려면 및 합니다. *linked_server_name과* 로컬 서버에서 기존 연결 된 서버 정의를 참조 해야 합니다. 연결 된 서버를 사용 하 여 정의 된 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)합니다.  
   
- 와 \<execute_option >  
+ WITH \<execute_option>  
  가능한 실행 옵션은 아래와 같습니다. INSERT…EXEC 문에서 RESULT SETS 옵션을 지정할 수 없습니다.  
   
 |용어|정의|  
@@ -305,7 +305,7 @@ Execute a character string
 |RECOMPILE|모듈을 실행한 후 새 계획을 컴파일하고 사용한 다음 삭제하도록 합니다. 모듈에 대한 기존 쿼리 계획이 있는 경우 이 계획은 캐시에 유지됩니다.<br /><br /> 제공하는 매개 변수가 불규칙하거나 데이터가 현저하게 변경된 경우에 이 옵션을 사용합니다. 이 옵션은 확장 저장 프로시저에는 사용하지 않습니다. 이 옵션은 비용이 많이 들기 때문에 반드시 필요한 경우에만 사용하는 것이 좋습니다.<br /><br /> **참고:** 사용할 수 없습니다 WITH RECOMPILE OPENDATASOURCE 구문을 사용 하는 저장된 프로시저를 호출할 때입니다. WITH RECOMPILE 옵션은 네 부분으로 된 개체 이름이 지정될 때 무시됩니다.<br /><br /> **참고:** 와 고유 하 게 컴파일된 스칼라 사용자 정의 함수는 RECOMPILE이 지원 되지 않습니다. 다시 컴파일해야 할 경우 사용 하 여 [sp_recompile &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**정의 되지 않은 결과 집합**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.<br /><br /> 이 옵션은 반환되는 결과(있는 경우)를 보장하지 않으며 정의를 제공하지 않습니다. 어떤 결과가 반환되거나 결과가 반환되지 않는 경우에도 이 문은 오류 없이 실행됩니다. RESULT SETS UNDEFINED는 result_sets_option을 제공하지 않는 경우의 기본 동작입니다.<br /><br /> 해석 하는 사용자 정의 스칼라 함수 및 고유 하 게 컴파일된 스칼라 사용자 정의 함수에 대 한에 함수 결과 집합을 반환 하기 때문에이 옵션이 작동 하지 않습니다.|  
 |RESULT SETS NONE|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.<br /><br /> execute 문이 어떠한 결과도 반환하지 않습니다. 결과가 반환되는 경우 일괄 처리가 중단됩니다.<br /><br /> 해석 하는 사용자 정의 스칼라 함수 및 고유 하 게 컴파일된 스칼라 사용자 정의 함수에 대 한에 함수 결과 집합을 반환 하기 때문에이 옵션이 작동 하지 않습니다.|  
-|*\<result_sets_definition >*|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.<br /><br /> 결과가 result_sets_definition에 지정된 대로 반환됩니다. 여러 결과 집합을 반환 하는 문이 여러 개 제공 *result_sets_definition* 섹션. 각 묶습니다 *result_sets_definition* 괄호 안에 쉼표로 구분 합니다. 자세한 내용은 참조 \<result_sets_definition >이 항목의 뒷부분에 나오는 합니다.<br /><br /> 이 옵션은 항상 함수 결과 집합을 반환 하기 때문에 고유 하 게 컴파일된 스칼라 사용자 정의 함수에 대 한 오류가 발생 합니다.|
+|*\<result_sets_definition>*|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.<br /><br /> 결과가 result_sets_definition에 지정된 대로 반환됩니다. 여러 결과 집합을 반환 하는 문이 여러 개 제공 *result_sets_definition* 섹션. 각 묶습니다 *result_sets_definition* 괄호 안에 쉼표로 구분 합니다. 자세한 내용은 참조 \<result_sets_definition >이 항목의 뒷부분에 나오는 합니다.<br /><br /> 이 옵션은 항상 함수 결과 집합을 반환 하기 때문에 고유 하 게 컴파일된 스칼라 사용자 정의 함수에 대 한 오류가 발생 합니다.|
   
 \<result_sets_definition > **적용할**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -730,16 +730,16 @@ GO
  [@@NESTLEVEL&#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
- [osql 유틸리티](../../tools/osql-utility.md)   
+ [osql Utility](../../tools/osql-utility.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [되돌리기 &#40; Transact SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
+ [-b](../../tools/sqlcmd-utility.md)   
  [SUSER_NAME &#40; Transact SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [USER_NAME &#40; Transact SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE&#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [Opendatasource&#40; Transact SQL &#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [메모리 내 OLTP에 대한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   

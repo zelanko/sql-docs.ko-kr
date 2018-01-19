@@ -32,15 +32,15 @@ helpviewer_keywords:
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 993ba7467ada3a69fed043e2d6322efa7538b190
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md) 문자 데이터 형식입니다.  
   
- *패턴*  
+ *pattern*  
  문자에서 검색할 특정 문자열이 며 *match_expression*, 다음과 같은 유효한 와일드 카드 문자를 포함할 수 있습니다. *패턴* 8, 000 바이트의 최대 일 수 있습니다.  
   
 |와일드카드 문자|Description|예제|  

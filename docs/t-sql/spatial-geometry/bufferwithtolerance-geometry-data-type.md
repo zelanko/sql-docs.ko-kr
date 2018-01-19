@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,17 +41,17 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- *거리*  
+ *distance*  
  한 **float** 거리를 지정 하는 식의 **기 하 도형** 인스턴스와의 버퍼를 계산할 합니다.  
   
- *허용 오차*  
+ *tolerance*  
  이 **float** 버퍼 거리의 허용 오차를 지정 하는 식입니다.  
   
  *허용 오차* 은 반환된 된 선형 근사값에 대 한 이상적인 버퍼 거리의 최대 편차를 나타냅니다.  
   
  예를 들어 요소의 이상적인 버퍼 거리는 원이지만 이는 다각형으로 대략 나타내야 합니다. 허용 오차가 작을수록 다각형의 점 개수가 늘어나 결과가 더 복잡해지지만 오류는 줄어듭니다.  
   
- *상대*  
+ *relative*  
  **비트** 지정 여부는 *허용 오차* 상대 또는 절대 값이 합니다. 경우 '값은 TRUE' 또는 1 인 다음 허용 오차는 상대적 이며의 곱으로 계산 되는 *허용 오차* 매개 변수와 인스턴스 경계 상자 지름의 합니다. 'FALSE' 또는 0 허용 오차는 절대적 하는 경우 및 *허용 오차* 값은 반환된 된 선형 근사값에 대 한 이상적인 버퍼 거리의 최대 절대 편차입니다.  
   
 ## <a name="return-types"></a>반환 형식  

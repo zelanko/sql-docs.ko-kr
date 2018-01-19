@@ -21,15 +21,15 @@ helpviewer_keywords:
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 02bf4a96756b8bf3a63a75dec97fe6f58abc8a6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 17d233bf75593d8b27a458120dbcb2035bc7d2ec
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>인수  
- *테이블* **합니다.** *열*  
+ *테이블* **합니다.** *column*  
  읽을 테이블과 열의 이름입니다. 테이블 및 열 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 테이블 및 열 이름은 반드시 지정해야 하지만 데이터베이스 이름과 소유자 이름을 지정하는 것은 선택적입니다.  
   
  *text_ptr*  
  유효한 텍스트 포인터입니다. *text_ptr* 해야 **binary (16)**합니다.  
   
- *오프셋*  
+ *offset*  
  바이트 수입니다 (때는 **텍스트** 또는 **이미지** 데이터 유형을 사용 하 여) 또는 문자 (때는 **ntext** 데이터 형식을 사용)를는 읽기전에건너뛸**텍스트**, **이미지**, 또는 **ntext** 데이터입니다.  
   
- *크기*  
+ *size*  
  바이트 수입니다 (때는 **텍스트** 또는 **이미지** 데이터 유형을 사용 하 여) 또는 문자 (때는 **ntext** 데이터 형식이 사용 됩니다) 읽을 데이터입니다. 경우 *크기* 가 0 이면 4kb의 데이터가 읽혀집니다.  
   
  HOLDLOCK  

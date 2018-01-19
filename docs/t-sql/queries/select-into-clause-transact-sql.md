@@ -30,15 +30,15 @@ helpviewer_keywords:
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 caps.latest.revision: "63"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
-ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
+ms.openlocfilehash: da5481a06a3f1e02ea1f0e1ab3429e2d02c238d3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>선택-INTO 절 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/10/2018
  *new_table*  
  선택 목록에 있는 열과 데이터 원본에서 선택한 행을 기반으로 만들려는 새 테이블의 이름을 지정합니다.  
  
-  *파일 그룹*
+  *filegroup*
  
  새 테이블이 만들어질 파일 그룹의 이름을 지정 합니다. 지정 된 파일 그룹에 존재 해야 합니다는 데이터베이스를 다른 SQL Server 엔진 throw 오류가 발생 합니다. 이 옵션은부터 지원 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]합니다.
  

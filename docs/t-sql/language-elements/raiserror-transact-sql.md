@@ -30,15 +30,15 @@ helpviewer_keywords:
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: de9b90e46c344c4d287d677c9aa17e5d635aca6d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,11 +78,11 @@ RAISERROR ( { msg_str | @local_variable }
   
  *msg_str* 선택적으로 포함 된 변환 사양 가진 문자는 문자열입니다. 각 변환 사양은 인수 목록의 값은 형식 지정 및 변환 사양에서의 위치에 있는 필드에 배치 하는 방식을 정의 *msg_str*합니다. 변환 사양의 형식은 다음과 같습니다.  
   
- % [[*플래그*] [*너비*] [합니다. *정밀도*] [{h | l}]] *유형*  
+ % [[*flag*] [*width*] [. *precision*] [{h | l}]] *type*  
   
  사용할 수 있는 매개 변수 *msg_str* 됩니다.  
   
- *플래그*  
+ *flag*  
   
  대체 값의 공백 처리 및 맞춤을 결정하는 코드입니다.  
   
@@ -94,7 +94,7 @@ RAISERROR ( { msg_str | @local_variable }
 |#(숫자)|x 또는 X의 16진수 유형에 대한 0x 접두사|o, x 또는 X 형식의 값에 사용할 경우 숫자 기호(#)는 0이 아닌 모든 값 앞에 0, 0x 또는 0X를 각각 붙입니다. d, i 또는 u 앞에 숫자 기호(#) 플래그가 있으면 플래그는 무시됩니다.|  
 |' '(공백)|공간 채움|부호 있는 양수일 경우 출력 값 앞에 공백을 붙입니다. 더하기 부호(+) 플래그가 포함된 경우에는 무시됩니다.|  
   
- *너비*  
+ *width*  
   
  인수 값이 배치될 필드의 최소 너비를 정의하는 정수입니다. 인수 값의 길이 보다 길거나 같아야 하는 경우 *너비*, 값은 패딩 없이 출력 됩니다. 값 보다 짧은 경우 *너비*, 값에 지정 된 길이까지 채워집니다 *너비*합니다.  
   
@@ -126,10 +126,10 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  값을 변환 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 지정 데이터 형식, **%I64d**합니다.  
   
- **@***local_variable*  
- 과 동일한 방식으로 서식이 지정 된 문자열을 포함 하는 유효한 문자 데이터 형식의 변수는 *msg_str*합니다. **@***local_variable* 해야 **char** 또는 **varchar**, 이러한 데이터 형식으로 암시적으로 변환할 수 없습니다.  
+ **@** *local_variable*  
+ 과 동일한 방식으로 서식이 지정 된 문자열을 포함 하는 유효한 문자 데이터 형식의 변수는 *msg_str*합니다. **@ * * * local_variable* 여야 **char** 또는 **varchar**, 이러한 데이터 형식으로 암시적으로 변환할 수 없습니다.  
   
- *심각도*  
+ *severity*  
  이 메시지에 연결된 사용자 정의 심각도입니다. 사용 하는 경우 *msg_id* RAISERROR에 지정 된 심각도 sp_addmessage를 사용 하 여 만든 사용자 정의 메시지를 발생 시키기 위해 sp_addmessage에 지정 된 심각도 보다 우선 합니다.  
   
  모든 사용자가 0부터 18까지의 심각도를 지정할 수 있습니다. 19부터 25 까지의 심각도 sysadmin 고정 서버 역할 또는 사용자가 ALTER TRACE 권한을 가진의 구성원이 지정할 수 있습니다. 19부터 25까지의 심각도에 대해서는 WITH LOG 옵션이 필요합니다. 0보다 작은 심각도 수준은 0으로 해석되고 25보다 작은 심각도 수준은 25로 해석됩니다.  
@@ -150,18 +150,18 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *상태*  
+ *state*  
  0에서 255 사이의 정수입니다. 음수 값은 기본적으로 1입니다. 값이 255 보다 큰 사용할 수 없습니다. 
   
  여러 위치에서 동일한 사용자 정의 오류가 발생하는 경우 각 위치의 고유 상태 번호를 사용하면 코드의 어떤 부분에서 오류가 발생하는지 찾는 데 도움이 됩니다.  
   
- *인수*  
+ *argument*  
  정의 된 변수의 대체에 사용 되는 매개 변수는 *msg_str* 또는 해당 하는 메시지 *msg_id*합니다. 0개 이상의 대체 매개 변수가 있을 수 있지만 대체 매개 변수의 총 개수가 20을 초과할 수는 없습니다. 각 대체 매개 변수는 지역 변수 이거나 다음 데이터 형식 중 될 수 있습니다: **tinyint**, **smallint**, **int**, **char**, **varchar**, **nchar**, **nvarchar**, **이진**, 또는 **varbinary**합니다. 다른 데이터 형식은 지원되지 않습니다.  
   
  *옵션*  
  오류에 대한 사용자 지정 옵션이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |LOG|오류 로그와 인스턴스에 대 한 응용 프로그램 로그에 오류가 기록 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 오류 로그에 기록되는 오류는 현재 최대 440바이트로 제한됩니다. Sysadmin 고정된 서버 역할 또는 ALTER TRACE 권한 가진 사용자의 구성원만 WITH LOG를 지정할 수 있습니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|즉시 클라이언트에게 메시지를 전송합니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

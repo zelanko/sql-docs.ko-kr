@@ -35,15 +35,15 @@ helpviewer_keywords:
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>인수  
-\<b l e _ >  
+\<table_source>  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용할 테이블, 뷰, 테이블 변수 또는 파생된 테이블 원본을 별칭과 함께 또는 별칭 없이 지정합니다. 사용 가능한 메모리 및 쿼리에 있는 다른 식의 복잡성에 따라 다르지만 최대 256개의 테이블 원본을 문에 사용할 수 있습니다. 개별 쿼리는 최대 256개 테이블 원본을 지원하지 않을 수 있습니다.  
   
 > [!NOTE]  
@@ -206,29 +206,29 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  테이블 반환 함수를 지정합니다.  
   
- OPENXML \<openxml_clause >  
+ OPENXML \<openxml_clause>  
 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
 
   
  XML 문서를 통해 행 집합 뷰를 제공합니다. 자세한 내용은 참조 [OPENXML &#40; Transact SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md).  
   
- *파생 _ 테이블*  
+ *derived_table*  
  데이터베이스의 행을 검색하는 하위 쿼리입니다. *파생 _ 테이블* 외부 쿼리에 대 한 입력으로 사용 됩니다.  
   
  *파생 된* *_table* צ ְ ײ는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 여러 행을 지정 합니다. `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`)을 입력합니다. 자세한 내용은 참조 [테이블 값 생성자 &#40; Transact SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
- *column_alias를 사용할*  
+ *column_alias*  
  파생된 테이블의 결과 집합에서 열 이름을 대체할 선택적인 별칭입니다. SELECT 목록의 각 열당 한 개의 열 별칭을 포함하고 열 별칭의 전체 목록을 괄호로 묶습니다.  
   
- *table_or_view_name* FOR SYSTEM_TIME \<system_time >  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
 
   
  지정 된 데이터의 특정 버전을 지정된 된 임시 테이블 및 연결 된 시스템 버전 관리 기록 테이블에서 반환 됩니다.  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  테이블의 데이터 샘플이 반환되도록 지정합니다. 샘플은 근사치일 수 있습니다. 이 절은 SELECT, UPDATE 또는 DELETE 문에서 기본 테이블 또는 조인된 테이블에 사용될 수 있습니다. 뷰를 대상으로 TABLESAMPLE을 지정할 수는 없습니다.  
   
 > [!NOTE]  
@@ -252,13 +252,13 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  난수를 생성하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 상수 식입니다. *repeat_seed* 은 **bigint**합니다. 경우 *repeat_seed* 를 지정 하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 임의로 할당 합니다. 특정 *repeat_seed* 값을 샘플링 결과 항상 동일한 변경 테이블에 적용 된 경우. *repeat_seed* 식은 0 보다 큰 정수로 계산 되어야 합니다.  
   
- \<조인 된 테이블 >  
+ \<joined_table>  
  두 개 이상의 테이블을 곱한 결과 집합입니다. 여러 조인이 있을 경우 괄호를 사용하여 조인의 기본 순서를 바꿀 수 있습니다.  
   
-\<조인 유형 >  
+\<join_type>  
  조인 작업의 유형을 지정합니다.  
   
- **내부**  
+ **INNER**  
  일치하는 모든 행의 쌍이 반환되도록 지정합니다. 양 테이블에서 서로 일치하지 않는 행은 제외됩니다. 조인 유형을 지정하지 않는 경우 이것이 기본값입니다.  
   
  FULL [OUTER]  
@@ -270,7 +270,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  오른쪽 테이블에서 조인 조건에 맞지 않는 모든 행을 결과 집합에 포함하고 내부 조인에서 반환된 모든 행과 다른 테이블에 해당되는 출력 열을 NULL로 설정하도록 지정합니다.  
   
-\<알아서 >  
+\<join_hint>  
  에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]를 지정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 쿼리의 FROM 절에 지정 된 조인 당 한 개의 조인 힌트, 즉 실행 알고리즘을 사용 합니다. 자세한 내용은 참조 [조인 힌트 &#40; Transact SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
   
  에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이러한 조인 힌트는 INNER 조인의 두 배포 호환 되지 않는 열에에 적용 합니다. 쿼리 처리 중에 발생 하는 데이터 이동의 양을 제한 하 여 쿼리 성능을 향상 시킬 수 있습니다. 에 대 한 허용 가능한 조인 힌트 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 는 다음과 같습니다.  
@@ -287,7 +287,7 @@ FROM { <table_source> [ ,...n ] }
  JOIN  
  지정된 테이블 원본 또는 뷰 간에 지정된 조인 작업이 이루어져야 함을 나타냅니다.  
   
- ON \<c h _ c >  
+ ON \<search_condition>  
  조인의 기준이 되는 조건을 지정합니다. 열과 비교 연산자를 주로 사용하지만 조건에서는 모든 조건자를 지정할 수 있습니다. 예를 들어 다음과 같습니다.  
   
 ```sql
@@ -322,7 +322,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  이전 인수에 정의된 테이블 원본입니다. 자세한 내용은 주의 섹션을 참조하세요.  
   
- *테이블 원본* 피벗 \<pivot_clause >  
+ *table_source* PIVOT \<pivot_clause>  
  지정 된 *b l e _* 에 따라 피벗는 *pivot_column*합니다. *테이블 원본* 는 테이블 또는 테이블 식입니다. 출력의 모든 열이 포함 된 테이블은는 *b l e _* 제외 하 고는 *pivot_column* 및 *value_column*합니다. 열에는 *b l e _*를 제외 하 고는 *pivot_column* 및 *value_column*, pivot 연산자의 그룹화 열 이라고 합니다. PIVOT 및 UNPIVOT 하는 방법에 대 한 자세한 내용은 참조 [를 사용 하 여 PIVOT 및 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)합니다.  
   
  PIVOT은 그룹화 열과 관련해 입력 테이블에서 그룹화 연산을 수행하고 각각의 그룹마다 한 개의 행을 반환합니다. 또한 출력에 지정 된 각 값에 대 한 하나의 열에 포함 되어는 *column_list* 에 표시 되는 *pivot_column* 의 *input_table*합니다.  
@@ -353,14 +353,14 @@ ON (p.ProductID = v.ProductID);
  UNPIVOT \< unpivot_clause >  
  입력된 테이블의 여러 열에서 범위를 좁힙니다 지정 *column_list* 라는 하나의 열으로 *pivot_column*합니다. PIVOT 및 UNPIVOT 하는 방법에 대 한 자세한 내용은 참조 [를 사용 하 여 PIVOT 및 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)합니다.  
   
- 일부로 \<날짜 _ 시간 >  
+ AS OF \<date_time>  
 
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
 
   
  과거의 지정된 시간에 실제(현재)였던 값이 포함된 각 행에 대한 단일 레코드를 포함하는 테이블을 반환합니다. 내부적으로 임시 테이블과 기록 테이블 간에 합집합이 및에 지정 된 시간에 유효 했던 행의 값을 반환 하도록 결과가 필터링 되는  *\<날짜 _ 시간 >* 매개 변수입니다. 행에 대 한 값의 유효성을 확인 하는 경우는 *system_start_time_column_name* 값 보다 작거나 같음는  *\<날짜 _ 시간 >* 매개 변수 값 및 *system_end_time_ column_name* 값 보다 크면는  *\<날짜 _ 시간 >* 매개 변수 값입니다.   
   
- \<start_date_time > TO \<end_date_time >
+ FROM \<start_date_time> TO \<end_date_time>
 
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.
 

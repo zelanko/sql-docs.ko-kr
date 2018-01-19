@@ -26,15 +26,15 @@ helpviewer_keywords:
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: be1bbb9e63ccb710b42e007c91c1c588a1e8ae1d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0480f1c295c45f32f4ca3bdaec761a6bd2fa924
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -57,13 +57,13 @@ ROLLBACK { TRAN | TRANSACTION }
  *transaction_name*  
  BEGIN TRANSACTION에서 트랜잭션에 할당된 이름입니다. *transaction_name* 식별자에 대 한 규칙을 따라야 하지만 트랜잭션 이름의 처음 32 자만 사용 됩니다. 트랜잭션을 중첩할 경우 *transaction_name* 가장 바깥쪽 BEGIN TRANSACTION 문에서 이름 이어야 합니다. *transaction_name* 는 항상 대/소문자 구분, 경우에 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구분 하지 않습니다.  
   
- **@***tran_name_variable*  
+ **@** *tran_name_variable*  
  유효한 트랜잭션 이름이 포함된 사용자 정의 변수의 이름입니다. 변수를 사용 하 여 선언 해야 합니다는 **char**, **varchar**, **nchar**, 또는 **nvarchar** 데이터 형식입니다.  
   
  *savepoint_name*  
  *savepoint_name* SAVE TRANSACTION 문의 합니다. *savepoint_name* 식별자에 대 한 규칙을 따라야 합니다. 사용 하 여 *savepoint_name* 조건부 롤백이 트랜잭션의 일부에만 영향을 경우.  
   
- **@***savepoint_variable*  
+ **@** *savepoint_variable*  
  유효한 저장점 이름이 포함된 사용자 정의 변수의 이름입니다. 변수를 사용 하 여 선언 해야 합니다는 **char**, **varchar**, **nchar**, 또는 **nvarchar** 데이터 형식입니다.  
   
 ## <a name="error-handling"></a>오류 처리  

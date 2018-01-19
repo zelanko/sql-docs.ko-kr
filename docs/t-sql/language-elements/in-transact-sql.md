@@ -24,15 +24,15 @@ helpviewer_keywords:
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 487c576ea2323ea7da9726dfb161889e12aff0d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 610c374bb6d935495779362d8dd7f1e0a53931d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="in-transact-sql"></a>IN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ test_expression [ NOT ] IN
  *test_expression*  
  유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)합니다.  
   
- *하위 쿼리*  
+ *subquery*  
  하나의 열로 구성된 결과 집합을 갖는 하위 쿼리입니다. 이 열에 동일한 데이터 형식으로 되어 있어야 *test_expression*합니다.  
   
  *식*[ **,**... *n* ]  

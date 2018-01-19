@@ -25,15 +25,15 @@ helpviewer_keywords:
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ccf0fc44e9be488c7c07cdb159270056bba0adc6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b4bf41cecb0c99a38e340c6596d99dde3da8319
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ FETCH
  @*cursor_variable_name*  
  수행할 인출에서 열린 커서를 참조하는 커서 변수의 이름입니다.  
   
- @ INTO*variable_name*[,... *n*]  
+ INTO @*variable_name*[ ,...*n*]  
  인출하는 열에서 지역 변수로 데이터를 가져가도록 허용합니다. 목록의 각 변수는 왼쪽에서 오른쪽 순으로 커서 결과 집합의 해당 열과 연관됩니다. 각 변수의 데이터 형식은 반드시 해당 결과 집합 열의 데이터 형식과 일치하거나 암시적 변환이 지원되어야 합니다. 변수의 개수는 커서 선택 목록의 열 수와 일치해야 합니다.  
   
 ## <a name="remarks"></a>주의  

@@ -1,7 +1,7 @@
 ---
 title: "검색 조건 (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -38,15 +38,15 @@ helpviewer_keywords:
 - LIKE comparisons
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eaacb26fe7c402b17206ecf3a0e05af709170f97
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e507b4e7e14c68f629708255a1cfd6ab06cadb5f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="search-condition-transact-sql"></a>검색 조건(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- \<c h _ c >  
+ \<search_condition>  
  SELECT 문, 쿼리 식 또는 하위 쿼리에 대해 결과 집합에 반환되는 행의 조건을 지정합니다. UPDATE 문에는 업데이트할 행을 지정합니다. DELETE 문에는 삭제할 행을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 검색 조건에 포함할 수 있는 조건자의 개수에는 제한이 없습니다.  
   
  NOT  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
  및  
  두 조건이 TRUE일 때 두 조건을 결합하여 TRUE로 평가합니다. 자세한 내용은 참조 [AND &#40; Transact SQL &#41; ](../../t-sql/language-elements/and-transact-sql.md).  
   
- 또는  
+ OR  
  두 조건 중 하나가 TRUE일 때 두 조건을 결합하여 TRUE로 평가합니다. 자세한 내용은 참조 [또는 &#40; Transact SQL &#41; ](../../t-sql/language-elements/or-transact-sql.md).  
   
  \<조건자 >  
@@ -117,7 +117,9 @@ ms.lasthandoff: 11/17/2017
  열 이름, 상수, 함수, 변수, 스칼라 하위 쿼리이거나 열 이름, 상수 및 연산자나 하위 쿼리로 연결된 함수의 결합입니다. 식에는 CASE 식도 포함될 수 있습니다.  
   
 > [!NOTE]  
->  유니코드 문자 데이터 형식을 참조할 때는 **nchar**, **nvarchar**, 및 **ntext**, 'expression' 대문자 접두사로 추가 해야 ' N '입니다. 'N'을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 또는 열의 기본 데이터 정렬에 해당하는 코드 페이지로 문자열을 변환합니다. 이 코드 페이지에 없는 문자는 모두 손실됩니다.  
+>  유니코드가 아닌 문자열 상수와 변수는 데이터베이스의 기본 데이터 정렬에 해당 하는 코드 페이지를 사용 합니다. 페이지 변환 수 있는 발생만 유니코드 문자 데이터로 작업할 때 코드 및 비유니코드 문자 데이터 형식을 참조할 **char**, **varchar**, 및 **텍스트**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]참조 된 열의 데이터 정렬에 해당 또는 해당 코드 페이지는 데이터베이스의 기본 데이터 정렬에 해당 하는 코드 페이지와 다른 경우 COLLATE를 사용 하 여을 지정 하는 코드 페이지에 유니코드가 아닌 문자열 상수와 변수를 변환 합니다. 경우 유사한 문자에는 새 코드 페이지에 없는 모든 문자를 변환 됩니다는 [bestfitmapping](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) 의 기본 대체 문자 변환 됩니다. 그렇지를 찾을 수 있는 "?"입니다.  
+>  
+> 문자 상수 대 문자가 접두사로 될 여러 코드 페이지를 사용할 때는 ' N ', 및 유니코드 코드 페이지 변환을 방지 하려면 변수에 사용할을 수 있습니다.  
   
  =  
  두 식이 같은지 여부를 검사하는 데 사용되는 연산자입니다.  
@@ -168,9 +170,9 @@ ms.lasthandoff: 11/17/2017
  문자 기반 데이터가 포함된 열에서 조건자에 있는 정확한 단어 대신 의미가 일치하는 값을 검색함으로써 단순한 형태의 자연어 쿼리를 제공합니다. 이 옵션은 SELECT 문에서만 사용할 수 있습니다. 자세한 내용은 참조 [FREETEXT &#40; Transact SQL &#41; ](../../t-sql/queries/freetext-transact-sql.md).  
   
  [ NOT ] IN  
- 식이 목록에 포함되는지 또는 제외되는지 여부에 따라 식을 검색하도록 지정합니다. 검색 식은 상수 또는 열 이름이 될 수 있으며 목록은 상수 집합 또는 더 일반적으로는 하위 쿼리가 될 수 있습니다. 값의 목록은 괄호로 묶어야 합니다. 자세한 내용은 참조 [&#40; Transact SQL &#41; ](../../t-sql/language-elements/in-transact-sql.md).  
+ 식이 목록에 포함되는지 또는 제외되는지 여부에 따라 식을 검색하도록 지정합니다. 검색 식은 상수 또는 열 이름이 될 수 있으며 목록은 상수 집합 또는 더 일반적으로는 하위 쿼리가 될 수 있습니다. 값의 목록은 괄호로 묶어야 합니다. 자세한 내용은 [IN&#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)을 참조하세요.  
   
- *하위 쿼리*  
+ *subquery*  
  제한 된 SELECT 문이 간주할 수 있으며 비슷합니다 \<query_expresssion > SELECT 문의 합니다. ORDER BY 절 및 INTO 키워드는 허용되지 않습니다. 자세한 내용은 참조 [select&#40; Transact SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  

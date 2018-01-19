@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b1608f86abf8605b707f8b72e7baac3b9b794e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -56,7 +55,7 @@ DBCC CHECKCATALOG
 ```  
   
 ## <a name="arguments"></a>인수  
- *a s e _* | *database_id* | 0  
+ *database_name* | *database_id* | 0  
  카탈로그 일관성을 검사할 데이터베이스의 이름 또는 ID입니다. 아무 값도 지정하지 않거나 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
   
  WITH NO_INFOMSGS  
@@ -78,23 +77,23 @@ DBCC CHECKCATALOG는 시스템 메타데이터 테이블 간에 다양한 일관
 스냅숏을 만들 수 없는 경우 DBCC CHECKCATALOG는 필요한 일관성을 얻기 위해 배타적 데이터베이스 잠금을 획득합니다. 불일치가 감지되는 경우 복구가 불가능하며 데이터베이스를 백업에서 복원해야 합니다.
   
 > [!NOTE]  
->  에 대해 DBCC CHECKCATALOG 실행 **tempdb** 검사를 수행 하지 않습니다. 성능상의 이유로 데이터베이스 스냅숏에 사용할 수 있으므로이 **tempdb**합니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. 해결 하려면 서버 재생 **tempdb** 메타 데이터 문제입니다.  
+> 에 대해 DBCC CHECKCATALOG 실행 **tempdb** 검사를 수행 하지 않습니다. 성능상의 이유로 데이터베이스 스냅숏에 사용할 수 있으므로이 **tempdb**합니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. 해결 하려면 서버 재생 **tempdb** 메타 데이터 문제입니다.  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG는 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  
+> DBCC CHECKCATALOG는 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  
   
 DBCC CHECKCATALOG는의 일부로 실행도 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)합니다.
   
 ## <a name="result-sets"></a>결과 집합  
 데이터베이스가 지정되지 않은 경우 DBCC CHECKCATALOG는 다음을 반환합니다.
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]가 데이터베이스 이름으로 지정된 경우 DBCC CHECKCATALOG는 다음을 반환합니다.
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

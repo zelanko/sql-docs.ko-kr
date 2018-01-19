@@ -23,15 +23,15 @@ helpviewer_keywords:
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b6ea6be0d745ca5ce61a540e9a1e299671d8c7fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2e65fc9cacbcfe868c072713f282c42c95839e48
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="all-transact-sql"></a>ALL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  { = | <> | != | > | >= | !> | < | <= | !< }  
  비교 연산자입니다.  
   
- *하위 쿼리*  
+ *subquery*  
  한 열의 결과 집합을 반환하는 하위 쿼리입니다. 반환 된 열의 데이터 형식을의 데이터 형식으로 동일한 데이터 형식 이어야 합니다. *scalar_expression*합니다.  
   
  하위 쿼리는 제한된 SELECT 문이며 ORDER BY 절 및 INTO 키워드는 허용되지 않습니다.  
@@ -63,7 +63,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 지정 된 비교값이 true 일 때 TRUE를 반환 합니다. 모든 쌍에 대 한 (*scalar_expression***,***x)*때 *x* 에서 값은 단일 열 집합입니다. 그렇지 않으면 FALSE를 반환합니다.  
+ 지정 된 비교값이 true 일 때 TRUE를 반환 합니다. 모든 쌍에 대 한 (*scalar_expression***,***x)*때 *x* 단일 열 집합의 값 이며 그렇지 않으면 FALSE를 반환 합니다.  
   
 ## <a name="remarks"></a>주의  
  필요한 모든는 *scalar_expression* 하위 쿼리에서 반환 되는 모든 값을 정확 하 게 비교 합니다. 예를 들어 하위 쿼리에서 값 2와 3을 반환 하는 경우, *scalar_expression* < = ALL (하위 쿼리)에 대해 TRUE로 평가 된 *scalar_expression* 2입니다. 하위 쿼리에서 값 2와 3을 반환 하는 경우 *scalar_expression* = ALL (하위 쿼리)은 일부 값 (값 3)는 하위 쿼리 식의 조건을 만족 하지 않으므로 FALSE로 계산 됩니다.  

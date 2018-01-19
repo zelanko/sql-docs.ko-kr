@@ -38,15 +38,15 @@ helpviewer_keywords:
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ca76e248bc8f3fe0c3b0edff73254e05a6f4f26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---table"></a>테이블 힌트 (Transact SQL)-
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,13 +127,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>인수  
- 와 **(** \<테이블 힌트 > **)** [[**,** ]... *n* ]  
+ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
  몇 가지 예외가 있지만 테이블 힌트는 WITH 키워드를 사용하여 힌트를 지정할 때만 FROM 절에서 지원됩니다. 또한 테이블 힌트는 괄호로 묶어 지정해야 합니다.  
   
 > [!IMPORTANT]  
 >  WITH 키워드 생략은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 다음 테이블 힌트와 WITH 키워드 없이 사용할 수: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, 스냅숏 및 NOEXPAND 합니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 다음 테이블 힌트와 WITH 키워드 없이 사용할 수: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, 스냅숏 및 NOEXPAND 합니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어  
   
 ```  
 FROM t (TABLOCK)  
@@ -153,7 +153,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  쿼리 최적화 프로그램에서 쿼리를 처리할 때 기본 테이블에 액세스하기 위해 인덱싱된 뷰를 확장하지 않도록 지정합니다. 쿼리 최적화 프로그램은 뷰를 클러스터형 인덱스가 있는 테이블처럼 처리합니다. NOEXPAND는 인덱싱된 뷰에만 적용됩니다. 자세한 내용은 설명 부분을 참조하세요.  
   
- 인덱스 **(***index_value* [**,**... *n* ] ) | 인덱스 = ( *index_value***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  INDEX() 구문은 쿼리 최적화 프로그램이 문을 처리할 때 사용할 인덱스 하나 이상의 이름이나 ID를 지정합니다. 대체 INDEX = 구문은 단일 인덱스 값을 지정하며 테이블당 하나의 인덱스 힌트만 지정할 수 있습니다.  
   
  클러스터형 인덱스가 있는 경우에는 INDEX(0)이 클러스터형 인덱스 검색을 강제 실행하고 INDEX(1)이 클러스터형 인덱스 검색 또는 찾기를 강제 실행합니다. 클러스터형 인덱스가 없는 경우 INDEX(0)은 테이블 검색을 강제 실행하고 INDEX(1)은 오류로 해석됩니다.  

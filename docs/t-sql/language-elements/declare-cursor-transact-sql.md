@@ -26,15 +26,15 @@ helpviewer_keywords:
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0641f87c36d3dbed886dc7bb81aa1f179148a8cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1f09a8eb025af56d5edee0a3a4d0861b7edb515f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  이 커서를 통한 업데이트를 방지합니다. UPDATE 문 또는 DELETE 문의 WHERE CURRENT OF 절에서는 이 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다.  
   
- 업데이트 [OF *column_name* [**,**... *n*]]  
+ UPDATE [OF *column_name* [**,**...*n*]]  
  커서 내에서 업데이트할 수 있는 열을 정의합니다. Of *column_name* [**,**... *.n*]가 지정 된 경우만 나열 된 열 수정이 가능 합니다. 열 목록 없이 UPDATE를 지정하면 모든 열을 업데이트할 수 있습니다.  
   
  *cursor_name*  

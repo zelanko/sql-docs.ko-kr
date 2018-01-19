@@ -28,15 +28,15 @@ helpviewer_keywords:
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7cb61a12af903aa444462a7a67c9c71231b96fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 구문 표기 규칙(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,23 +48,23 @@ ms.lasthandoff: 01/09/2018
 |대문자|[!INCLUDE[tsql](../../includes/tsql-md.md)] 키워드입니다.|  
 |*기울임꼴*|사용자가 제공하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 매개 변수입니다.|  
 |**굵게 표시**|표시된 그대로 입력해야 하는 데이터베이스 이름, 테이블 이름, 열 이름, 인덱스 이름, 저장 프로시저, 유틸리티, 데이터 형식 이름 및 텍스트입니다.|  
-|**밑줄**|밑줄 친 값이 포함된 절이 문에 지정되지 않을 때 적용되는 기본값을 나타냅니다.|  
+|**underline**|밑줄 친 값이 포함된 절이 문에 지정되지 않을 때 적용되는 기본값을 나타냅니다.|  
 |&#124;(세로 막대)|대괄호 또는 중괄호 내에서 구문 항목을 구분합니다. 항목 중 하나만 사용할 수 있습니다.|  
 |`[ ]`(대괄호)|선택적 구문 항목입니다. 대괄호는 입력하지 않습니다.|  
 |{}(중괄호)|필수 구문 항목입니다. 중괄호는 입력하지 않습니다.|  
 |[**,**...*n*]|앞의 항목이 반복 될 수 나타냅니다  *n*  번입니다. 각 항목은 쉼표로 구분됩니다.|  
 |[...*n*]|앞의 항목이 반복 될 수 나타냅니다  *n*  번입니다. 각 항목은 공백으로 구분됩니다.|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자입니다. 이 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 대부분의 문에 세미콜론이 필요하지 않지만 이후 버전에서는 필요합니다.|  
-|\<레이블 >:: =|구문 블록의 이름입니다. 이 규칙은 문에서 한 번 이상 사용될 수 있는 긴 구문의 섹션 또는 구문 단위를 그룹화하고 레이블을 붙일 때 사용됩니다. 구문 블록이 사용 될 수 있는 각 위치 모양의 레이블로 표시 됩니다: \<레이블 > 합니다.<br /><br /> 예를 들어 집합은 식 집합이 \<그룹화 집합 >; 목록이 고 컬렉션 집합의 예를 들어 \<복합 요소 목록 > 합니다.|  
+|\<label> ::=|구문 블록의 이름입니다. 이 규칙은 문에서 한 번 이상 사용될 수 있는 긴 구문의 섹션 또는 구문 단위를 그룹화하고 레이블을 붙일 때 사용됩니다. 구문 블록이 사용 될 수 있는 각 위치 모양의 레이블로 표시 됩니다: \<레이블 > 합니다.<br /><br /> 예를 들어 집합은 식 집합이 \<그룹화 집합 >; 목록이 고 컬렉션 집합의 예를 들어 \<복합 요소 목록 > 합니다.|  
   
 ## <a name="multipart-names"></a>다중 부분 이름  
  다른 지침이 없으면 데이터베이스 개체 이름에 대한 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 참조는 다음 형식과 같이 네 부분으로 된 이름으로 구성됩니다.  
   
- *server_name* **.** [*database_name*]**.** [*schema_name*]**.** *object_name*  
+ *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *a s e _***.** [*schema_name*]**.** *object_name*  
+ | *database_name***.**[*schema_name*]**.***object_name*  
   
- | *schema_name***.** *object_name*  
+ | *schema_name***.***object_name*  
   
  *| object_name*  
   
@@ -89,13 +89,13 @@ ms.lasthandoff: 01/09/2018
   
 |개체 참조 형식|Description|  
 |-----------------------------|-----------------|  
-|*서버* **합니다.** *데이터베이스* **합니다.** *스키마* **합니다.** *개체*|네 부분으로 이루어진 이름입니다.|  
-|*서버* **합니다.** *데이터베이스* **...** *개체*|스키마 이름이 생략됩니다.|  
-|*서버* **...** *스키마* **합니다.** *개체*|데이터베이스 이름이 생략됩니다.|  
-|*서버* **...**  *개체*|데이터베이스 및 스키마 이름이 생략됩니다.|  
-|*데이터베이스* **합니다.** *스키마* **합니다.** *개체*|서버 이름이 생략됩니다.|  
+|*server* **.** *데이터베이스* **합니다.** *schema* **.** *개체*|네 부분으로 이루어진 이름입니다.|  
+|*server* **.** *데이터베이스* **...** *개체*|스키마 이름이 생략됩니다.|  
+|*server* **..** *schema* **.** *개체*|데이터베이스 이름이 생략됩니다.|  
+|*server* **...** *object*|데이터베이스 및 스키마 이름이 생략됩니다.|  
+|*데이터베이스* **합니다.** *schema* **.** *개체*|서버 이름이 생략됩니다.|  
 |*데이터베이스* **...** *개체*|서버 및 스키마 이름이 생략됩니다.|  
-|*스키마* **합니다.** *개체*|서버 및 데이터베이스 이름이 생략됩니다.|  
+|*schema* **.** *개체*|서버 및 데이터베이스 이름이 생략됩니다.|  
 |*개체*|서버, 데이터베이스 및 스키마 이름이 생략됩니다.|  
   
 ## <a name="code-example-conventions"></a>코드 예 표기 규칙  

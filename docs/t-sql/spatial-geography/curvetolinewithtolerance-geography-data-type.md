@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: CurveToLineWithTolerance method (geography)
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d27a256db89add06815ab65346216d3a9b013b5f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 497daed444f29db051ac11f6f0c2c2b87011fd80
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- *허용 오차*  
+ *tolerance*  
  이 **double** 원래의 원호 세그먼트와 선형 근사값 사이의 최대 오차를 정의 하는 식입니다.  
   
- *상대*  
+ *relative*  
  이 **bool** 편차에 대해 극대를 사용할지 여부를 나타내는 식입니다. 극대값이 false(0)로 설정되면 선형 근사값이 가질 수 있는 편차에 대해 최대값이 설정됩니다.  극대값이 true(1)로 설정되면 허용 오차는 허용 오차 매개 변수와 공간 개체의 경계 상자 지름의 곱으로 계산됩니다.  
   
 ## <a name="return-types"></a>반환 형식  

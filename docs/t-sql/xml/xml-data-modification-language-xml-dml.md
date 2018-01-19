@@ -23,15 +23,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], XML DML
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acbedcd828fcacb6b690f0380d83d7dd779f1b2e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5b3315bad83aff77c661edb9e0b3e9e081147d42
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML(XML 데이터 수정 언어)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.lasthandoff: 11/17/2017
   
  XML DML은 XQuery에 대해 다음과 같은 대/소문자 구분 키워드를 추가합니다.  
   
--   **삽입**  
+-   **insert**  
   
--   **삭제**  
+-   **delete**  
   
--   **replace value o f**  
+-   **replace value of**  
   
  에 설명 된 대로 [XML 데이터 형식 및 열 &#40; SQL Server &#41; ](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md), 변수 및 열을 만들 수 있습니다는 **xml** 입력 하 고 XML 문서 또는 조각을을 할당 합니다. 이러한 XML 인스턴스를 수정 또는 업데이트하려면 다음을 수행합니다.  
   

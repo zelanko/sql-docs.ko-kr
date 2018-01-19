@@ -23,15 +23,15 @@ helpviewer_keywords:
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0cb4b3936aa78f22958c28351d2dad523a6d9932
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 51924cf8a6715e8966911b33c4c1cf691326322c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>선택-FOR 절 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -209,7 +209,7 @@ JSON
  ABSENT  
  Null 열 값에서는 해당 XML 요소가 XML 결과에 추가되지 않음을 나타냅니다. 이 옵션은 ELEMENTS에만 지정하세요.  
   
- 경로 [ **('***ElementName***')** ]  
+ PATH [ **('***ElementName***')** ]  
  생성 된 \<행 > 요소 래퍼는 결과 집합의 각 행에 대 한 합니다. 요소 이름에 대 한 선택적으로 지정할 수 있습니다는 \<행 > 요소 래퍼 합니다. FOR XML PATH와 같은 경우 빈 문자열이 제공 됩니다 (**'**)), 래퍼 요소가 생성 되지 않습니다. EXPLICIT 지시어를 사용하여 작성된 쿼리 대신 PATH를 사용하는 것이 더 간단한 방법일 수 있습니다. 자세한 내용은 [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)을 참조하세요.  
   
  BINARY BASE64  
@@ -218,7 +218,7 @@ JSON
  TYPE  
  쿼리 결과를 반환 하도록 지정 **xml** 유형입니다. 자세한 내용은 [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md)를 참조하세요.  
   
- 루트 [ **('***RootName***')** ]  
+ ROOT [ **('***RootName***')** ]  
  단일 최상위 요소가 결과 XML에 추가되도록 지정합니다. 필요에 따라 생성할 루트 요소 이름을 지정할 수 있습니다. 선택 사항인 루트 이름을 지정 하지 않으면 기본 \<루트 > 요소가 추가 됩니다.  
   
  자세한 내용은 참조 하십시오. [FOR xml&#40; SQL Server &#41; ](../../relational-databases/xml/for-xml-sql-server.md).  
@@ -253,7 +253,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  지정 하 여 JSON 출력에 null 값이 포함 된 **INCLUDE_NULL_VALUES** 옵션과 함께 **FOR JSON** 절. 이 옵션을 지정 하지 않는 경우 출력은 null 값에 대 한 JSON 속성 쿼리 결과에 포함 되지 않습니다. 자세한 내용과 예제에 대 한 참조 [INCLUDE_NULL_VALUES 옵션 &#40;를 사용 하 여 JSON 출력에서 Null 값 포함 SQL Server &#41; ](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
   
- 루트 [ **('***RootName***')** ]  
+ ROOT [ **('***RootName***')** ]  
  단일 최상위 요소를 지정 하 여 JSON 출력에 추가 된 **루트** 옵션과 함께 **FOR JSON** 절. **ROOT** 옵션을 지정하지 않은 경우 JSON 출력에는 루트 요소가 없습니다. 자세한 내용과 예제에 대 한 참조 [루트 옵션 &#40;를 사용 하 여 JSON 출력에 루트 노드 추가 SQL Server &#41; ](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  
@@ -262,6 +262,6 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  자세한 내용은 [FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정&#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [SELECT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

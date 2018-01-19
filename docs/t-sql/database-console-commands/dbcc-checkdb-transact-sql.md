@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15c991ba9e987d5dc7ed39b2b8edb8bf6b428956
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 49cf7311995d2760306e6050e6bae6efc1db41d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ DATA_PURITY
  이 옵션에서 보고된 유효성 검사 오류는 DBCC 복구 옵션을 사용하여 수정할 수 없습니다. 수동으로 이러한 오류를 수정 하는 방법에 대 한 내용은 기술 자료 문서 923247 참조: [SQL Server 2005 이상 버전에서 문제 해결 DBCC 오류 2570](http://support.microsoft.com/kb/923247)합니다.  
     
  MAXDOP  
- **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] s p 2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] s p 2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  재정의 **x degree of** 구성 옵션의 **sp_configure** 문에 대 한 합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP 리소스 관리자를 구성 된 값을 초과 하는 경우는 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 에 설명 된 리소스 관리자 MAXDOP 값을 사용 하 여 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
  

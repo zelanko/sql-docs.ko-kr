@@ -24,15 +24,15 @@ helpviewer_keywords:
 - '| (bitwise OR operator)'
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65a39571e4cd02b9bbb20d42463301d38d0f8836
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e77a2e7132b7d32a27b7f5be236d75576cb0fcf
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-bitwise-or-transact-sql"></a>|(비트 OR)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ expression | expression
 ## <a name="remarks"></a>주의  
  비트 | 연산자는 양쪽 식에 해당 비트를 취하면서 두 식 간에 비트 논리 OR를 수행합니다. 결과의 비트는 입력 식의 두 비트(확인 중인 현재 비트) 중 하나 또는 둘 모두의 값이 1이면 1로 설정됩니다. 입력 식에 값이 1인 비트가 없으면 결과의 비트는 0으로 설정됩니다.  
   
- 왼쪽 및 오른쪽 식의 경우에 다른 정수 데이터 형식 (예를 들어 왼쪽 *식* 은 **smallint** 및 오른쪽 *식* 은  **int**), 더 작은 데이터 형식의 인수를 더 큰 데이터 형식으로 변환 합니다. 이 예제는 **smallint***식* 변환할는 **int**합니다.  
+ 왼쪽 및 오른쪽 식의 경우에 다른 정수 데이터 형식 (예를 들어 왼쪽 *식* 은 **smallint** 및 오른쪽 *식* 은  **int**), 더 작은 데이터 형식의 인수를 더 큰 데이터 형식으로 변환 합니다. 이 예제에서는 **smallint * * * 식* 변환 되는 **int**합니다.  
   
 ## <a name="examples"></a>예  
  다음 예제에서는 있는 테이블 **int** 데이터 원래 값을 표시 하려면 형식 및 테이블에 하나의 행에 넣습니다.  

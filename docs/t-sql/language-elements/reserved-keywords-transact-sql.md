@@ -19,15 +19,15 @@ helpviewer_keywords:
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f2a3e554a7a3b46242c44c38137609322e6d89f4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reserved-keywords-transact-sql"></a>예약어(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,8 +88,8 @@ ms.lasthandoff: 11/18/2017
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|User|  
-|DROP|또는|VALUES|  
+|DOUBLE|OPTION|USER|  
+|DROP|OR|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
@@ -115,84 +115,84 @@ ms.lasthandoff: 11/18/2017
   
 ||||  
 |-|-|-|  
-|**절대**|**EXEC**|**겹치는 항목이 있습니다**|  
-|**작업**|**EXECUTE**|**채움**|  
+|**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
+|**작업**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**부분**|  
-|**추가**|**외부**|**파스칼**|  
-|**ALL**|**추출**|**위치**|  
-|**할당**|**FALSE**|**전체 자릿수**|  
+|**ADD**|**외부**|**PASCAL**|  
+|**ALL**|**EXTRACT**|**위치**|  
+|**ALLOCATE**|**FALSE**|**전체 자릿수**|  
 |**ALTER**|**FETCH**|**준비**|  
-|**AND**|**첫 번째**|**유지**|  
+|**및**|**FIRST**|**유지**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
 |**는**|**에 대 한**|**사전**|  
 |**AS**|**외부**|**권한**|  
 |**ASC**|**포트란**|**PROCEDURE**|  
-|**어설션**|**찾을 수합니다**|**공개**|  
-|**AT**|**FROM**|**읽기**|  
-|**AUTHORIZATION**|**FULL**|**실제**|  
-|**AVG**|**가져오기**|**참조**|  
-|**BEGIN**|**전역**|**상대**|  
+|**어설션**|**찾을 수합니다**|**PUBLIC**|  
+|**AT**|**FROM**|**READ**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
+|**AVG**|**GET**|**참조**|  
+|**BEGIN**|**GLOBAL**|**상대**|  
 |**BETWEEN**|**GO**|**제한**|  
-|**비트**|**GOTO**|**REVOKE**|  
+|**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**둘 다**|**그룹**|**롤백**|  
-|**에서**|**필요**|**행**|  
-|**계단식 배열**|**1 시간**|**SCHEMA**|  
-|**캐스케이드**|**IDENTITY**|**스크롤**|  
-|**CASE**|**직접 실행**|**두 번째**|  
-|**캐스트**|**IN**|**섹션**|  
-|**카탈로그**|**포함**|**SELECT**|  
+|**BOTH**|**GROUP**|**롤백**|  
+|**BY**|**HAVING**|**ROWS**|  
+|**CASCADE**|**HOUR**|**SCHEMA**|  
+|**CASCADED**|**IDENTITY**|**SCROLL**|  
+|**CASE**|**IMMEDIATE**|**두 번째**|  
+|**CAST**|**IN**|**섹션**|  
+|**CATALOG**|**INCLUDE**|**SELECT**|  
 |**CHAR**|**INDEX**|**세션**|  
-|**CHAR_LENGTH**|**표시기**|**SESSION_USER**|  
-|**문자**|**처음**|**설정**|  
-|**CHARACTER_LENGTH**|**내부**|**크기**|  
-|**확인**|**입력**|**SMALLINT**|  
-|**CLOSE**|**구분 안 함**|**일부**|  
+|**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
+|**CHARACTER**|**INITIALLY**|**SET**|  
+|**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
+|**CHECK**|**INPUT**|**SMALLINT**|  
+|**CLOSE**|**구분 안 함**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
-|**한 부씩 인쇄**|**INT**|**SQL**|  
-|**데이터 정렬**|**정수**|**SQLCA**|  
-|**열**|**교차**|**SQLCODE**|  
-|**커밋**|**간격**|**SQLERROR**|  
-|**연결**|**에**|**SQLSTATE**|  
-|**연결**|**IS**|**SQLWARNING**|  
-|**제약 조건**|**격리**|**SUBSTRING**|  
-|**제약 조건**|**조인**|**SUM**|  
-|**CONTINUE**|**키**|**SYSTEM_USER**|  
-|**변환**|**LANGUAGE**|**TABLE**|  
-|**에 해당**|**마지막**|**임시**|  
+|**COLLATE**|**INT**|**SQL**|  
+|**데이터 정렬**|**INTEGER**|**SQLCA**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**INTERVAL**|**SQLERROR**|  
+|**CONNECT**|**INTO**|**SQLSTATE**|  
+|**연결**|**은**|**SQLWARNING**|  
+|**CONSTRAINT**|**격리**|**SUBSTRING**|  
+|**CONSTRAINTS**|**JOIN**|**SUM**|  
+|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
+|**CONVERT**|**LANGUAGE**|**TABLE**|  
+|**에 해당**|**LAST**|**임시**|  
 |**COUNT**|**앞에**|**그런 다음**|  
-|**만들기**|**LEFT**|**시간**|  
-|**크로스**|**수준**|**타임 스탬프**|  
-|**현재**|**LIKE**|**TIMEZONE_HOUR**|  
-|**CURRENT_DATE**|**로컬**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**LOWER**|**받는 사람**|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**후행**|  
-|**CURRENT_USER**|**MAX**|**트랜잭션**|  
-|**커서**|**MIN**|**TRANSLATE**|  
-|**날짜**|**분**|**번역**|  
+|**CREATE**|**LEFT**|**TIME**|  
+|**CROSS**|**LEVEL**|**타임 스탬프**|  
+|**CURRENT**|**LIKE**|**TIMEZONE_HOUR**|  
+|**CURRENT_DATE**|**LOCAL**|**TIMEZONE_MINUTE**|  
+|**CURRENT_TIME**|**LOWER**|**TO**|  
+|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
+|**CURRENT_USER**|**MAX**|**TRANSACTION**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
+|**DATE**|**MINUTE**|**번역**|  
 |**DAY**|**모듈**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
-|**년 12 월**|**이름**|**공용 구조체**|  
-|**10 진수**|**NATIONAL**|**고유**|  
-|**선언**|**자연**|**알 수 없음**|  
+|**DEC**|**NAMES**|**공용 구조체**|  
+|**DECIMAL**|**NATIONAL**|**고유**|  
+|**선언**|**자연**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**연기할 수**|**다음**|**UPPER**|  
-|**지연**|**아니요**|**사용**|  
+|**연기할 수**|**NEXT**|**UPPER**|  
+|**지연**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**NOT**|**사용 하 여**|  
+|**DESC**|**NOT**|**USING**|  
 |**설명**|**NULL**|**VALUE**|  
-|**설명자**|**NULLIF**|**값**|  
-|**진단**|**숫자**|**VARCHAR**|  
+|**DESCRIPTOR**|**NULLIF**|**VALUES**|  
+|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
 |**연결 끊기**|**OCTET_LENGTH**|**다양 한**|  
-|**DISTINCT**|**의**|**VIEW**|  
-|**도메인**|**ON**|**시기**|  
-|**DOUBLE**|**만**|**때마다**|  
+|**DISTINCT**|**OF**|**VIEW**|  
+|**도메인**|**ON**|**WHEN**|  
+|**DOUBLE**|**ONLY**|**WHENEVER**|  
 |**DROP**|**OPEN**|**WHERE**|  
-|**ELSE**|**옵션**|**사용**|  
+|**ELSE**|**옵션**|**WITH**|  
 |**END**|**OR**|**작업**|  
-|**EXEC 끝**|**순서**|**쓰기**|  
-|**이스케이프**|**외부**|**YEAR**|  
-|**제외 하**|**출력**|**영역**|  
+|**END-EXEC**|**ORDER**|**WRITE**|  
+|**ESCAPE**|**OUTER**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ZONE**|  
 |**예외**|||  
   
 ## <a name="future-keywords"></a>앞으로 사용될 키워드  
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/18/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|아니요|TIMEZONE_MINUTE|  
 |CURRENT_PATH|없음|TRAILING|  
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/18/2017
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|매개 변수|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 97d10776082f3e4aaa80bfc3f09c662838087518
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2561f089f8982bfed4e0b48c673dea17be22de89
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!IMPORTANT]  
 >  BULK 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 응용 프로그램에서 사용하지 않는 것이 좋습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 버전에서 변경 또는 제거될 수 있습니다.  
   
- *table_name* **합니다.** *dest_column_name*  
+ *table_name* **.** *dest_column_name*  
  테이블의 이름 및 **텍스트**, **ntext**, 또는 **이미지** 열을 업데이트할 수 있습니다. 테이블 이름, 열 이름에 대 한 규칙을 사용 하 여 따라야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다. 필요에 따라 데이터베이스 이름과 소유자 이름을 지정할 수 있습니다.  
   
  *dest_text_ptr*  

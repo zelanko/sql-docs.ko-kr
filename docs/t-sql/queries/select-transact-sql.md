@@ -26,32 +26,32 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6dba1b14498cef9e06d9bde5741cb9e37cd31633
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  데이터베이스에서 행을 검색 하 고 하나 이상의 행 또는 열에서 하나 이상의 테이블을 선택할 수 있게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SELECT 문의 전체 구문은 복잡하지만 주요 절은 다음과 같이 요약할 수 있습니다.  
+  데이터베이스에서 행을 검색 하 고 하나 이상의 행 또는 열에서 하나 이상의 테이블을 선택할 수 있게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SELECT 문의 전체 구문은 복잡하지만 주요 절은 다음과 같이 요약할 수 있습니다:  
   
-[으로 {[XMLNAMESPACES] [ \<common_table_expression >]}]
+[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
- 선택 *select_list* [INTO *new_table* ]  
+ SELECT *select_list* [ INTO *new_table* ]  
   
- [에서 *b l e _* ] [여기서 *c h _ c* ]  
+ [ FROM *table_source* ] [ WHERE *search_condition* ]  
   
- [GROUP BY *group_by_expression* ]  
+ [ GROUP BY *group_by_expression* ]  
   
  [필요 *c h _ c* ]  
   
- [ORDER BY *order_expression* [ASC | DESC]]  
+ [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
  UNION, EXCEPT 및 INTERSECT 연산자를 결합 하거나 하나의 결과 집합으로 결과 비교 하는 쿼리 사이의 사용할 수 있습니다.  
   
@@ -105,11 +105,11 @@ SELECT <select_criteria>
 ```  
   
 ## <a name="remarks"></a>주의  
- SELECT 문은 복잡하기 때문에 자세한 구문 요소와 인수가 다음과 같은 절로 표시됩니다.  
+ SELECT 문은 복잡하기 때문에 자세한 구문 요소와 인수가 다음과 같은 절로 표시됩니다:  
   
 |||  
 |-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[필요](../../t-sql/queries/select-having-transact-sql.md)|  
+|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
 |[SELECT 절](../../t-sql/queries/select-clause-transact-sql.md)|[공용 구조체](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
 |[INTO 절](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT 및 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
 |[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  

@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d68384a06978c598754d96752cfa26449549cc93
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2651ae4e2a4d245f61115438e959a6881ff1935f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- *거리*  
+ *distance*  
  이 **float** 에서 수를 버퍼로 점과 되는 최대 거리를 나타내는 **기 하 도형** 인스턴스.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -67,7 +67,7 @@ SQL Server 반환 형식: **기 하 도형**
 |거리 < 0|0 또는 1|빈 **GeometryCollection** 인스턴스|  
 |거리 < 0|2 이상|A **CurvePolygon** 또는 **GeometryCollection** 음수 버퍼가 인스턴스. **참고:** 버퍼가 음수 이면 빈을 만들 수 있습니다 **GeometryCollection**|  
 |거리 = 0|모든 차원|호출의 복사본 **geometry** 인스턴스|  
-|거리 > 0|모든 차원|**CurvePolygon** 또는 **GeometryCollection** 인스턴스|  
+|distance > 0|모든 차원|**CurvePolygon** 또는 **GeometryCollection** 인스턴스|  
   
 > [!NOTE]  
 >  이후 *거리* 는 **float**, 매우 작은 값을 0으로 계산 될 수 있습니다. 이 경우 호출의 복사본 **geometry** 인스턴스가 반환 됩니다. 참조 [float 및 real &#40; Transact SQL &#41; ](../../t-sql/data-types/float-and-real-transact-sql.md).  

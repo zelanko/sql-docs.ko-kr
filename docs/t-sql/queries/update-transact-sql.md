@@ -39,15 +39,15 @@ helpviewer_keywords:
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 caps.latest.revision: "91"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1a739b230d39726367d54a64e7b2327f6a80f9ca
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d30edc04b6b78ae1ccff83028433c4a25e25ca33
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,12 +119,12 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>인수  
- 와 \<common_table_expression >  
+ WITH \<common_table_expression>  
  UPDATE 문의 범위 내에서 정의된 임시 명명된 결과 집합 또는 뷰를 지정합니다. 이를 CTE(공통 테이블 식)라고 합니다. CTE 결과 집합은 단순 쿼리에서 파생되며 UPDATE 문에서 참조됩니다.  
   
  공통 테이블 식은 SELECT, INSERT, DELETE 및 CREATE VIEW 문에서도 사용됩니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(** *식***)** [%]  
+ TOP **(** *expression***)** [ PERCENT ]  
  수 또는 업데이트 되는 행의 비율을 지정 합니다. *expression* 은 행의 수 또는 비율일 수 있습니다.  
   
  INSERT, UPDATE 또는 DELETE와 함께 사용된 TOP 식에서 참조된 행은 어떠한 순서로도 정렬되지 않습니다.  
@@ -149,7 +149,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *rowset_function_limited*  
  이 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 또는 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 공급자 기능에 따라 함수입니다.  
   
- 와 **(** \<Table_Hint_Limited > **)**  
+ WITH **(** \<Table_Hint_Limited> **)**  
  대상 테이블에 허용되는 하나 이상의 테이블 힌트를 지정합니다. WITH 키워드와 괄호가 필요합니다. NOLOCK 및 READUNCOMMITTED는 허용되지 않습니다. 테이블 힌트에 대 한 정보를 참조 하십시오. [테이블 힌트 &#40; Transact SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
@@ -172,9 +172,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
  복합 할당 연산자:  
- + = 더하기 및 할당  
+ += 더하기 및 할당  
  -= 빼기 및 할당  
- * = 곱하기 및 할당  
+ *= 곱하기 및 할당  
  / = 나누기 및 할당  
  % = 모듈로 및 할당  
  & = 비트 AND 및 할당  
@@ -184,13 +184,13 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *udt_column_name*  
  사용자 정의 형식의 열입니다.  
   
- *property_name* | *d _*  
+ *property_name* | *field_name*  
  사용자 정의 형식의 공용 속성 또는 공용 데이터 멤버입니다.  
   
  *method_name* **(** *인수* [ **,**... *n*] **)**  
  비정적 공용 변경자 (mutator) 메서드가 *udt_column_name* 하는 하나 이상의 인수를 사용 하 고 사용 합니다.  
   
- **.** 쓰기 **(***식***,***@Offset***,** *@Length***)**  
+ **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
  지정 하는 값의 섹션 *column_name* 수정 하는 것입니다. *식* 대체  *@Length*  에서 시작 하는 단위  *@Offset*  의 *column_name*합니다. 열만 **varchar (max)**, **nvarchar (max)**, 또는 **varbinary (max)** 이 절을 사용 하 여 지정할 수 있습니다. *column_name* NULL 일 수 없습니다 및 테이블 이름 또는 테이블 별칭으로 정규화 할 수 없습니다.  
   
  *식* 에 복사 하는 값은 *column_name*합니다. *식* 평가 되거나 암시적으로 캐스팅 될 수는 *column_name* 유형입니다. 경우 *식* NULL로 설정 되어  *@Length*  무시 됩니다에 값 *column_name* 잘렸습니다. 지정 된 위치에서  *@Offset* .  
@@ -204,12 +204,12 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  **@***변수*  
  선언 된 변수에서 반환 된 값으로 설정 된 *식*합니다.  
   
- 설정  **@**  *변수* = *열* = *식* 는 같은 변수를 설정 합니다. 열 값입니다. 집합에서이 점에서 차이가  **@**  *변수* = *열*, *열*  =  *식*, 변수 열의 업데이트 전 값을 설정 합니다.  
+ 설정 **@ * * * 변수* = *열* = *식* 변수 열과 동일한 값으로 설정 합니다. 이와 달리 집합에서 **@ * * * 변수* = *열*, *열* = *식*로 설정 하는 변수 열의 업데이트 전 값입니다.  
   
- \<OUTPUT_Clause >  
+ \<OUTPUT_Clause>  
  UPDATE 작업의 일부로서 업데이트된 데이터 또는 이를 바탕으로 한 식을 반환합니다. OUTPUT 절은 원격 테이블 또는 뷰를 대상으로 하는 어떤 DML 문에서도 지원되지 않습니다. 자세한 내용은 참조 [OUTPUT 절 &#40; Transact SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
   
- \<b l e _ >  
+ FROM \<table_source>  
  업데이트 작업의 기준이 될 테이블, 뷰 또는 파생된 테이블 원본을 지정합니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   
  업데이트되는 개체가 FROM 절의 개체와 같고 개체에 대한 참조가 FROM 절에 하나만 있는 경우, 개체 별칭은 지정될 수도 있고 지정되지 않을 수도 있습니다. 업데이트되는 개체가 FROM 절에서 두 번 이상 나타날 경우 개체에 대한 단 한 번의 참조로 테이블 별칭을 지정할 수는 없습니다. FROM 절의 개체에 대한 다른 모든 참조에는 개체 별칭이 포함되어야 합니다.  
@@ -226,7 +226,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
 -   현재 위치 업데이트 - 커서를 지정하는 CURRENT OF 절을 사용합니다. 이 경우 커서의 현재 위치에서 업데이트 작업이 이루어집니다.  
   
-\<c h _ c >  
+\<search_condition>  
  업데이트할 행을 결정하는 조건을 지정합니다. 조인을 기반으로 하는 조건도 검색 조건으로 사용할 수 있습니다. 검색 조건에 포함시킬 수 있는 조건자의 개수에는 제한이 없습니다. 조건자와 검색 조건에 대 한 자세한 내용은 참조 [검색 조건 &#40; Transact SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
@@ -334,7 +334,7 @@ GO
 >  **ntext**, **텍스트**, 및 **이미지** 데이터 형식은 나중 버전의에서 제거 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
   
 ### <a name="updating-large-value-data-types"></a>큰 값 데이터 형식 업데이트  
- 사용 하 여 **.** 쓰기 (*식***,**  *@Offset*  **,***@Length*) 절을 전체 또는 일부 업데이트를 수행 **varchar (max)**, **nvarchar (max)**, 및 **varbinary (max)** 데이터 형식입니다. 예를 들어의 부분 업데이트는 **varchar (max)** 열을 삭제 하거나 전체 업데이트는 삭제 하거나 열에서 모든 데이터를 수정 하는 반면 열의 처음 200 자만 수정할 수 있습니다. **.** 삽입 또는 새 데이터 추가 최소 로깅하도록 업데이트 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정 된 경우를 작성 합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
+ 사용 하 여 **.** 쓰기 (*식 *** *@Offset***,***@Length*)의 일부 또는 전체 업데이트를 수행 하는 절  **varchar (max)**, **nvarchar (max)**, 및 **varbinary (max)** 데이터 형식입니다. 예를 들어의 부분 업데이트는 **varchar (max)** 열을 삭제 하거나 전체 업데이트는 삭제 하거나 열에서 모든 데이터를 수정 하는 반면 열의 처음 200 자만 수정할 수 있습니다. **.** 삽입 또는 새 데이터 추가 최소 로깅하도록 업데이트 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정 된 경우를 작성 합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 UPDATE 문이 다음 중 한 가지 동작을 유발할 때 부분 업데이트를 전체 업데이트로 변환합니다.  
 -   분할된 뷰 또는 테이블의 키 열을 변경합니다.  
@@ -346,7 +346,7 @@ GO
   
 최상의 성능을 위해 8,040바이트의 배수인 청크 크기로 데이터를 삽입 또는 업데이트하는 것이 좋습니다.  
   
-수정 된 열은 **.** 절에서에서 참조 된 열의 전체 값 OUTPUT 절 즉 쓰기는 이전 이미지 **삭제.** *column_name* 또는 이후 이미지가 **삽입.** *column_name*, 테이블 변수에서 지정된 된 열에 반환 됩니다. 다음에 나오는 R 예제를 참조 하십시오.  
+수정 된 열은 **.** 절에서에서 참조 된 열의 전체 값 OUTPUT 절 즉 쓰기는 이전 이미지 **삭제 합니다. * * * column_name* 또는 이후 이미지가 **삽입 합니다. * * * column_name*, 반환 됩니다 테이블 변수에 지정 된 열입니다. 다음에 나오는 R 예제를 참조 하십시오.  
   
 동일한 기능을 얻기 위해 **.** 다른 문자 또는 이진 데이터 형식 쓰기, 사용 된 [항목 &#40; Transact SQL &#41; ](../../t-sql/functions/stuff-transact-sql.md).  
   
@@ -929,7 +929,7 @@ SET Location.SetXY(23.5, 23.5)
 WHERE Name = 'Anchorage';  
 ```  
   
-#### <a name="x-modifying-the-value-of-a-property-or-data-member"></a>X입니다. 속성 또는 데이터 멤버의 값 수정  
+#### <a name="x-modifying-the-value-of-a-property-or-data-member"></a>X. 속성 또는 데이터 멤버의 값 수정  
  등록된 속성 또는 사용자 정의 형식의 공용 데이터 멤버 값을 수정하여 UDT를 업데이트할 수 있습니다. 값을 제공하는 식은 암시적으로 해당 속성 유형으로 변환할 수 있어야 합니다. 다음 예에서는 사용자 정의 형식 `X`의 `Point` 속성 값을 수정합니다.  
   
 ```sql  
@@ -944,7 +944,7 @@ WHERE Name = 'Anchorage';
 > [!CAUTION]  
 >  일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 쿼리에 대해 최상의 실행 계획을 선택하므로 숙련된 개발자 및 데이터베이스 관리자가 마지막 방법으로만 힌트를 사용하는 것이 좋습니다.  
   
-#### <a name="y-specifying-a-table-hint"></a>Y입니다. 테이블 힌트 지정  
+#### <a name="y-specifying-a-table-hint"></a>Y. 테이블 힌트 지정  
  다음 예에서는 지정 된 [테이블 힌트](../../t-sql/queries/hints-transact-sql-table.md) TABLOCK 합니다. 이 힌트는 `Production.Product` 테이블에 공유 잠금을 사용하고 UPDATE 문이 끝날 때까지 이 잠금을 유지하도록 지정합니다.  
   
 ```sql  
@@ -957,7 +957,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-#### <a name="z-specifying-a-query-hint"></a>Z 합니다. 쿼리 힌트 지정  
+#### <a name="z-specifying-a-query-hint"></a>Z. 쿼리 힌트 지정  
  다음 예에서는 지정 된 [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md) `OPTIMIZE FOR (@variable)` UPDATE 문의 합니다. 이 힌트는 쿼리가 컴파일되고 최적화될 때 쿼리 최적화 프로그램이 지역 변수에 대해 특정 값을 사용하도록 지시합니다. 해당 값은 쿼리 최적화 중에만 사용되고 쿼리 실행 중에는 사용되지 않습니다.  
   
 ```sql  
@@ -979,7 +979,7 @@ EXEC Production.uspProductUpdate 'BK-%';
 ###  <a name="CaptureResults"></a>UPDATE 문의 결과 캡처  
  이 섹션의 예에 사용 하는 방법을 보여 줍니다는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md) UPDATE 문에 의해 영향을 각 행의 정보 또는 식을 기반으로 돌아갑니다. 이러한 결과를 처리 응용 프로그램에 반환하여 확인 메시지, 보관 및 기타 응용 프로그램 요구 사항을 충족시키는 데 사용할 수 있습니다.  
   
-#### <a name="aa-using-update-with-the-output-clause"></a>AA 합니다. OUTPUT 절과 함께 UPDATE 사용  
+#### <a name="aa-using-update-with-the-output-clause"></a>AA. OUTPUT 절과 함께 UPDATE 사용  
  다음 예에서는 `VacationHours` 테이블의 처음 10개 행에 대해 `Employee` 열을 25% 업데이트하고 `ModifiedDate` 열의 값을 현재 날짜로 설정합니다. `OUTPUT` 의 값을 반환 하는 절 `VacationHours` 적용 하기 전에 존재 하는 `UPDATE` 에서 문을 `deleted.VacationHours` 열과 업데이트 된 값에는 `inserted.VacationHours` 열을는 `@MyTableVar` 테이블 변수입니다.  
   
  각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다. OUTPUT 절을 사용 하 여 더 많은 예제를 참조 하십시오. [OUTPUT 절 &#40; Transact SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
@@ -1036,7 +1036,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>AC 합니다. TRY…CATCH 블록에 UPDATE 사용  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. TRY…CATCH 블록에 UPDATE 사용  
  다음 예제에서는 UPDATE 문을 사용 하 여 try... CATCH 블록 업데이트 작업 중 발생할 수 있는 실행 오류를 처리 합니다.  
   
 ```sql  
@@ -1070,7 +1070,7 @@ GO
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="ad-using-a-simple-update-statement"></a>AD 합니다. 단순 UPDATE 문 사용  
+### <a name="ad-using-a-simple-update-statement"></a>AD. 단순 UPDATE 문 사용  
  다음 예제에서는 보여 모든 행의 영향을 받을 수 있는 방법 WHERE 절 사용 하지 않는 경우 업데이트 하는 행 (또는 행)을 지정할 수 있습니다.  
   
  값을 업데이트 하는이 예제는 `EndDate` 및 `CurrentFlag` 의 모든 행에 대 한 열은 `DimEmployee` 테이블입니다.  
@@ -1091,7 +1091,7 @@ UPDATE DimEmployee
 SET BaseRate = BaseRate * 2;  
 ```  
   
-### <a name="ae-using-the-update-statement-with-a-where-clause"></a>AE 합니다. WHERE 절과 함께 UPDATE 문 사용  
+### <a name="ae-using-the-update-statement-with-a-where-clause"></a>AE. WHERE 절과 함께 UPDATE 문 사용  
  다음 예에서는 WHERE 절을 사용하여 업데이트할 행을 지정합니다.  
   
 ```sql  
@@ -1102,7 +1102,7 @@ SET FirstName = 'Gail'
 WHERE EmployeeKey = 500;  
 ```  
   
-### <a name="af-using-the-update-statement-with-label"></a>AF 합니다. 레이블이 있는 UPDATE 문 사용  
+### <a name="af-using-the-update-statement-with-label"></a>AF. 레이블이 있는 UPDATE 문 사용  
  다음 예에서는 UPDATE 문에 대 한 레이블의 사용 방법을 보여 줍니다.  
   
 ```sql  
@@ -1114,7 +1114,7 @@ WHERE ProductKey = 313
 OPTION (LABEL = N'label1');  
 ```  
   
-### <a name="ag-using-the-update-statement-with-information-from-another-table"></a>AG 합니다. 다른 테이블의 정보와 함께 UPDATE 문 사용  
+### <a name="ag-using-the-update-statement-with-information-from-another-table"></a>AG. 다른 테이블의 정보와 함께 UPDATE 문 사용  
  이 예에서는 연도별 총 판매액을 저장 하는 테이블을 만듭니다. 2004 년의 총 판매액 FactInternetSales 테이블에 대해 SELECT 문을 실행 하 여 업데이트 합니다.  
   
 ```sql  
@@ -1137,7 +1137,7 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### <a name="ah-ansi-join-replacement-for-update-statements"></a>아 합니다. Update 문에 대 한 ANSI 조인 대체
+### <a name="ah-ansi-join-replacement-for-update-statements"></a>AH. Update 문에 대 한 ANSI 조인 대체
 UPDATE 또는 DELETE를 수행 하려면 ANSI 조인 구문을 사용 하 여 함께 두 개 이상의 테이블을 조인 하는 복잡 한 업데이트가 있는 알 수 있습니다.  
 
 이 테이블을 업데이트 해야 했습니다 같이 가정해 봅니다.  

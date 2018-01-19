@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: aeb292cac514b2f9253fa35369ddea190176538e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b86535eabd6b351127bbab1eb03c97234f8b4b39
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -205,7 +205,7 @@ DBCC CHECKTABLE 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ss
 ## <a name="result-sets"></a>결과 집합    
 DBCC CHECKTABLE은 다음 결과 집합을 반환합니다. 테이블 이름만 지정하거나 아무 옵션도 지정하지 않은 경우 동일한 결과 집합이 반환됩니다.
     
-```sql
+```
 DBCC results for 'HumanResources.Employee'.    
 There are 288 rows in 13 pages for object 'Employee'.    
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    

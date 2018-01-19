@@ -19,15 +19,15 @@ helpviewer_keywords:
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b7d855f491a4f9482308df6f3ed2dcca8b067398
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fd65fea39ac3f9a9cba0d47ec94365bff9155332
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>설정 @local_variable (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,13 +74,13 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>인수  
- **@***local_variable*  
+ **@** *local_variable*  
  제외한 모든 형식의 변수 이름 **커서**, **텍스트**, **ntext**, **이미지**, 또는 **테이블**합니다. 변수 이름을 기호로 시작 해야 합니다 (**@**). 변수 이름에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.  
   
  *property_name*  
  사용자 정의 형식의 속성입니다.  
   
- *d _*  
+ *field_name*  
  사용자 정의 형식의 공용 필드입니다.  
   
  *udt_name*  
@@ -92,7 +92,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *method_name* **(** *인수* [ **,**... *n* ] **)**  
  하나 이상의 인수를 사용하여 한 유형의 인스턴스 상태를 수정하는 사용자 정의 형식 메서드입니다. 정적 메서드는 공용이어야 합니다.  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  어셈블리에 유형이 있는 변수입니다. 자세한 내용은 [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)를 참조하세요.  
   
  *mutator_method*  
@@ -181,7 +181,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  변수는 식에서만 사용할 수 있으며 개체 이름이나 키워드 대신 사용할 수 없습니다. 동적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 생성하려면 EXECUTE를 실행합니다.  
   
- 집합에 대 한 구문 규칙  **@**  *cursor_variable* LOCAL 및 GLOBAL 키워드가 포함 되지 않습니다. 때 집합  **@**  *cursor_variable* = CURSOR... 구문을 사용를 기본값으로 로컬 커서 데이터베이스 옵션의 설정에 따라 커서가 GLOBAL 또는 LOCAL로 만들어집니다.  
+ 구문 규칙 집합에 대 한 **@ * * * cursor_variable* LOCAL 및 GLOBAL 키워드가 포함 되지 않습니다. 때 집합 **@ * * * cursor_variable* = CURSOR... 구문을 사용를 기본값으로 로컬 커서 데이터베이스 옵션의 설정에 따라 커서가 GLOBAL 또는 LOCAL로 만들어집니다.  
   
  전역 커서를 참조하는 경우에도 커서 변수는 항상 지역 변수입니다. 커서 변수가 전역 커서를 참조하면 전역 커서 참조 및 로컬 커서 참조를 모두 가지게 됩니다. 자세한 내용은 예 3을 참조하세요.  
   
@@ -192,7 +192,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  값을 연결하려면, 즉 집계 값을 계산하려면 SELECT 문에 변수를 사용하지 마세요. 사용할 경우 예기치 않은 쿼리 결과가 발생할 수 있습니다. 이는 SELECT 목록의 모든 식(할당 포함)이 각 출력 행에 대해 정확히 한 번씩 실행되도록 보장되지 않기 때문입니다. 자세한 내용은 참조 [이 KB 문서](http://support.microsoft.com/kb/287515)합니다.  
   
 ## <a name="permissions"></a>Permissions  
- public 역할의 멤버 자격이 필요합니다. 모든 사용자 집합을 사용할 수  **@**  *local_variable*합니다.  
+ public 역할의 멤버 자격이 필요합니다. 모든 사용자 집합을 사용할 수 **@ * * * local_variable*합니다.  
   
 ## <a name="examples"></a>예  
   

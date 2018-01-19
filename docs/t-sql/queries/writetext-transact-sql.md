@@ -25,15 +25,15 @@ helpviewer_keywords:
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8c66e4a785fd1d731bd55730a8439f5e796b01f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ WRITETEXT [BULK]
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 무시됩니다. 로깅은 데이터베이스에 영향을 주는 복구 모델에 의해 결정됩니다.  
   
- *데이터*  
+ *data*  
  실제 **텍스트**, **ntext** 또는 **이미지** 데이터를 저장 합니다. *데이터* 는 리터럴 또는 매개 변수가 될 수 있습니다. WRITETEXT와 함께 대화형으로 삽입할 수 있는 텍스트의 최대 길이 약 120KB입니다 **텍스트**, **ntext**, 및 **이미지** 데이터입니다.  
   
 ## <a name="remarks"></a>주의  

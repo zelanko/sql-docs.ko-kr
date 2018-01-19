@@ -22,15 +22,15 @@ helpviewer_keywords:
 - reversing Boolean expression values
 ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ff42c9ff5ea914ae1488517dadcaf907346ae9db
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6b4e19873d64cf38ad662b27ba2ecfdf94e9fd5f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="not-transact-sql"></a>NOT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |------|---------|  
 |**TRUE**|FALSE|  
 |**FALSE**|TRUE|  
-|**알 수 없음**|UNKNOWN|  
+|**UNKNOWN**|UNKNOWN|  
   
 ## <a name="examples"></a>예  
  다음 예에서는 표준 가격이 400달러 이하인 은색 자전거를 모두 찾습니다.  

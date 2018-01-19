@@ -22,15 +22,15 @@ helpviewer_keywords:
 - HAVING clause, about HAVING clause
 ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cf99ee7aece979c973d2d162062ac2bae7aac296
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.openlocfilehash: fe02cc5a74f0d3528942cc524fbcdeb0cf197c8c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---having-transact-sql"></a>선택-것 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

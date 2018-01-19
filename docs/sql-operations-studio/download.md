@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0621d5af62b5f5b8b694d47cf16d766215a0c819
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e8828b5f94c5500aa7ef3bffd48556e599e41124
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>다운로드 하 고 SQL 작업 Studio (미리 보기) 설치
 
@@ -119,7 +119,8 @@ ms.lasthandoff: 01/17/2018
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-
+## <a name="check-for-updates"></a>업데이트 확인
+최신 업데이트를 확인 하려면 클릭 확인 하 고 창을의 왼쪽 아래에서 기어 아이콘을 클릭 **업데이트 확인**
 
 ## <a name="next-steps"></a>다음 단계
 

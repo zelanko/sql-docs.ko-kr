@@ -28,15 +28,15 @@ helpviewer_keywords:
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b0f259b51b993c777b27fe8c43c58268ca3dace
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -528,7 +528,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a>11. 재귀 CTE에서 분석 함수 사용  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. 재귀 CTE에서 분석 함수 사용  
  다음 예에서는 CTE의 재귀 부분에서 분석 또는 집계 함수를 사용할 때 발생할 수 있는 문제를 보여 줍니다.  
   
 ```  

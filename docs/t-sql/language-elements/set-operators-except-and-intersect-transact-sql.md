@@ -24,15 +24,15 @@ helpviewer_keywords:
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e3580ace2c5b4295c0fecbfd7239a988137f8949
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 706aeaab949399ab6d235a368fa354c32cc54d98
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>-연산자를 제외 하 고 설정 하 고 INTERSECT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

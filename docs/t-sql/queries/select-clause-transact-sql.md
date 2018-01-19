@@ -28,15 +28,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc0566abe5865284a39680136f0535e8b801d90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8aa26314b450d859760f69b61887827b73b456fc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ SELECT [ ALL | DISTINCT ]
  \*  
  FROM 절에서 모든 테이블과 뷰에 있는 모든 열이 반환되도록 지정합니다. 열은 FROM 절에서 지정된 대로 테이블 또는 뷰에 존재하는 순서대로 테이블이나 뷰에서 반환됩니다.  
   
- *table_name* | *view_name* | *테이블*_*별칭*. *  
+ *table_name* | *view_name* | *table*_*alias*.*  
  범위를 제한 된 \* 지정한 테이블 또는 뷰에 있습니다.  
   
  *column_name*  
@@ -116,7 +116,7 @@ SELECT [ ALL | DISTINCT ]
  *property_name*  
  공용 속성 *udt_column_name*합니다.  
   
- *d _*  
+ *field_name*  
  공용 데이터 멤버인 *udt_column_name*합니다.  
   
  *method_name*  
@@ -164,6 +164,6 @@ FROM Cities;
 ## <a name="see-also"></a>관련 항목:  
  [예제 &#40;를 선택 합니다. Transact SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [SELECT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

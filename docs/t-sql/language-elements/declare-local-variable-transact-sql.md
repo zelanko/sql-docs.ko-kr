@@ -22,15 +22,15 @@ helpviewer_keywords:
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: "76"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>선언 @local_variable (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DECLARE
   
  시스템 데이터 형식에 대 한 자세한 내용은 참조 하십시오. [데이터 형식 &#40; Transact SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). CLR 사용자 정의 형식 또는 별칭 데이터 형식에 대 한 자세한 내용은 참조 [CREATE type&#40; Transact SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
- =*값*  
+ =*value*  
  인라인으로 변수에 값을 할당합니다. 값은 상수 또는 식일 수 있지만 변수 선언 형식과 일치하거나 해당 형식으로 암시적으로 변환할 수 있어야 합니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
 @*cursor_variable_name*  
@@ -138,10 +138,10 @@ CURSOR
  IDENTITY  
  새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 열에 사용할 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블의 고유한 행 식별자 역할을 합니다. IDENTITY 속성에 지정할 수 **tinyint**, **smallint**, **int**, **decimal(p,0)**, 또는 **numeric(p,0)** 열입니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. 초기값과 증가값을 모두 지정하거나 모두 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
   
- *시드*  
+ *seed*  
  테이블에 로드되는 첫 번째 행에 사용하는 값입니다.  
   
- *증가값*  
+ *increment*  
  이전에 로드된 행의 ID 값에 추가되는 증가값입니다.  
   
  ROWGUIDCOL  

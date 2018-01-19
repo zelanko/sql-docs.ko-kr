@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09d190a3a27344d60fe3861b87443165f39ac352
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e9fa0db095ce2f18fa622b2f1f6406f3cd73fa6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -66,7 +66,7 @@ DBCC CHECKALLOC
 ```  
   
 ## <a name="arguments"></a>인수  
- *a s e _* | *database_id* | 0   
+ *database_name* | *database_id* | 0   
  이름 또는 할당 및 페이지 사용을 확인 하려는 데이터베이스의 ID입니다.
 아무 값도 지정하지 않거나 0을 지정하면 현재 데이터베이스가 사용됩니다.
 데이터베이스 이름에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md)합니다.
@@ -107,7 +107,7 @@ DBCC CHECKALLOC은 페이지가 속한 페이지 유형이나 개체 유형과 �
 NO_INFOMSGS가 지정되지 않은 경우 DBCC CHECKALLOC은 데이터베이스의 모든 개체에 대한 공간 사용률 정보를 수집합니다. 이 정보는 발견 된 오류와 함께 인쇄 됩니다.
   
 > [!NOTE]  
->DBCC CHECKALLOC 기능은에 포함 되어 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 및 [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)합니다. 따라서 이러한 문과 별도로 DBCC CHECKALLOC을 실행할 필요가 없습니다.   DBCC CHECKALLOC은 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  
+> DBCC CHECKALLOC 기능은에 포함 되어 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 및 [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)합니다. 따라서 이러한 문과 별도로 DBCC CHECKALLOC을 실행할 필요가 없습니다.   DBCC CHECKALLOC은 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  
   
 ## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅숏  
 DBCC CHECKALLOC은 내부 데이터베이스 스냅숏을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 지원합니다. 스냅숏을 만들 수 없거나 TABLOCK이 지정되어 있는 경우 DBCC CHECKALLOC은 데이터베이스에 대한 배타(X) 잠금을 얻어 필요한 일관성을 확보하려고 합니다.
@@ -160,7 +160,7 @@ DBCC CHECKALLOC이 오류를 보고하면 복구를 실행하는 대신 데이�
   
 DBCC CHECKALLOC은 ESTIMATEONLY 또는 NO_INFOMSGS가 지정된 경우를 제외하고 다음 결과 집합(값은 변화 가능)을 반환합니다.
   
-```sql
+```
 DBCC results for 'master'.  
 ***************************************************************  
 Table sysobjects                Object ID 1.  
@@ -222,7 +222,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ESTIMATEONLY가 지정된 경우 DBCC CHECKALLOC은 다음 결과 집합을 반환합니다.
   
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)   
 -------------------------------------------------   
 34  
