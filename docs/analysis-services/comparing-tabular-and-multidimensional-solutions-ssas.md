@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>테이블 형식 및 다차원 솔루션 비교
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services는 비즈니스 인텔리전스 의미 체계 모델을 만들기 위한 여러 가지 방식: 테이블 형식, 다차원 및 Powerpivot for SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services는 비즈니스 인텔리전스 의미 체계 모델을 만들기 위한 여러 가지 방식: 테이블 형식, 다차원 및 Powerpivot for SharePoint.
   
  둘 이상의 접근 방식을 사용하면 다양한 비즈니스 및 사용자 요구 사항에 맞게 모델링 환경을 조정할 수 있습니다. 다차원은 다양한 BI 소프트웨어 공급업체에서 수용하는 개방형 표준 기반의 완성도 높은 기술이지만 습득하기 어려울 수 있습니다. 테이블 형식은 많은 개발자에게 보다 직관적인 관계형 모델링 접근 방식을 제공합니다. 파워 피벗은 훨씬 간단한 접근 방식으로, SharePoint를 통해 제공되는 서버 지원과 더불어 Excel에서 시각적 데이터 모델링을 제공합니다.  
   
@@ -57,23 +59,23 @@ ms.lasthandoff: 01/08/2018
 |||| 
 |-|-|-|
 ||다차원|테이블 형식|
-|동작|예|아니오|
-|Aggregations|예|아니오|
-|계산된 열|아니오|예|  
+|작업|예|아니요|
+|Aggregations|예|아니요|
+|계산된 열|아니요|예|  
 |계산 측정값|예|예| 
-|계산된 테이블|아니오|예<sup>1</sup>|  
-|사용자 지정 어셈블리|예|아니오|
-|사용자 지정 롤업|예|아니오| 
-|기본 멤버|예|아니오|  
+|계산된 테이블|아니요|예<sup>1</sup>|  
+|사용자 지정 어셈블리|예|아니요|
+|사용자 지정 롤업|예|아니요| 
+|기본 멤버|예|아니요|  
 |표시 폴더|예|예<sup>1</sup>|  
 |Distinct Count|예|예(DAX를 통해)|
 |드릴스루|예|예 (클라이언트 응용 프로그램에 따라 다름)|
 |계층 구조|예|예|
 |KPI|예|예| 
 |연결된 개체|예|예(연결된 테이블)|
-|M 식|아니오|예<sup>1</sup>|
+|M 식|아니요|예<sup>1</sup>|
 |다 대 다 관계|예|더 (이지만 [양방향 교차 필터](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 1200 이상 호환성 수준에서)| 
-|명명된 집합|예|아니오| 
+|명명된 집합|예|아니요| 
 |비정형 계층 구조|예|예<sup>1</sup>|  
 |부모-자식 계층 구조|예|예(DAX를 통해)|
 |파티션|예|예| 
@@ -81,9 +83,9 @@ ms.lasthandoff: 01/08/2018
 |행 수준 보안|예|예| 
 |개체 수준 보안|예|예<sup>1</sup>|
 |반가산적 측정값|예|예| 
-|Translations|[예](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|예| 
+|번역|[예](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|예| 
 |사용자 정의 계층|예|예|
-|쓰기 저장(writeback)|예|아니오| 
+|쓰기 저장(writeback)|예|아니요| 
   
  <sup>1</sup> 참조 [Compatibility Level for Tabular Analysis Services의 모델링](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) 호환성 수준 간의 기능 차이점에 대 한 정보에 대 한 합니다.  
   

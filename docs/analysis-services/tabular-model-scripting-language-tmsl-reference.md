@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>테이블 형식 모델 스크립팅 언어 (TMSL) 참조
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]스크립팅 언어 TMSL (tabular Model)은 호환성 수준 1200 이상에서 Analysis Services 테이블 형식 모델 데이터베이스에 대 한 명령 및 개체 모델 정의 구문입니다. TMSL, XMLA 프로토콜을 통해 Analysis Services에 통신 합니다. 여기서는 [XMLA 합니다. 실행](../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 둘 다 받습니다 JSON 기반 **문을** 에서 기존 XML 기반 스크립트 뿐만 아니라 TMSL 스크립트 [Analysis Services Scripting Language &#40; ASSL XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  스크립팅 언어 TMSL (tabular Model)은 호환성 수준 1200 이상에서 Analysis Services 테이블 형식 모델 데이터베이스에 대 한 명령 및 개체 모델 정의 구문입니다. TMSL, XMLA 프로토콜을 통해 Analysis Services에 통신 합니다. 여기서는 [XMLA 합니다. 실행](../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 둘 다 받습니다 JSON 기반 **문을** 에서 기존 XML 기반 스크립트 뿐만 아니라 TMSL 스크립트 [Analysis Services Scripting Language &#40; ASSL XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  TMSL의 주요 요소는 다음과 같습니다.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 
 ||||||  
 |-|-|-|-|-|  
-|**버전(Version)**|**다차원**|**테이블 형식 110x**|**테이블 형식 1200**| **테이블 형식 1400** |
+|**버전**|**다차원**|**테이블 형식 110x**|**테이블 형식 1200**| **테이블 형식 1400** |
 |Azure Analysis Services|NA|NA|TMSL|TMSL| 
 |SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 

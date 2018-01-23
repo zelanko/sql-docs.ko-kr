@@ -18,19 +18,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3d535cf6f8bc65ef44393527a46441332fd5aea0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services 자습서(SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 섹션에는 SQL Server Analysis Services에 대 한 자습서가 포함 되어 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+이 섹션에는 SQL Server Analysis Services에 대 한 자습서가 포함 되어 있습니다.  
   
 [테이블 형식 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 이 자습서는 SQL Server Data Tools (SSDT)를 사용 하 여 Adventure Works 라는 가상 회사, 기본 Analysis Services 테이블 형식 모델을 제작 하는 방법에 단원을 제공 합니다.  
   
-[다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[다차원 모델링 &#40; Adventure Works 자습서 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 이 자습서에서는 기본 기술 및 SSDT의 다차원 모델링 개념에 설명 합니다. 완료 되 면, Excel, Reporting Services 또는 다른 클라이언트 응용 프로그램을 Analysis Services에 연결에서 액세스할 수 있는 Adventure Works 데이터 기반 큐브 데이터베이스가 해야 합니다.  
   
 [데이터 마이닝](../analysis-services/data-mining-tutorials-analysis-services.md)  

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5edd0a3c672b5186a97423e0cf2d1ad22b8509d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lesson 5-3-다 대 다 관계 정의
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]차원을 정의 하면 일반적으로 각 팩트 조인 하나의 차원 멤버에 단일 차원 멤버가 여러 팩트와 연결 될 수 있지만 됩니다. 예를 들어 각 고객은 여러 개의 주문을 가질 수 있지만 각 주문은 단일 컴퓨터에 속합니다. 관계형 데이터베이스 용어에서 이 관계를 *일 대 다 관계*라고 합니다. 그러나 단일 팩트가 여러 차원 멤버에 조인될 수도 있습니다. 관계형 데이터베이스 용어에서 이 관계를 *다 대 다 관계*라고 합니다. 예를 들어 고객이 구매하는 데는 여러 이유가 있고 구매 이유는 여러 구매와 연결될 수 있습니다. 조인 테이블을 사용하여 각 구매와 관련된 판매 이유를 정의합니다. 그러므로 이러한 관계에서 생성된 Sales Reason 차원에는 단일 판매 트랜잭션과 관련된 여러 멤버가 포함됩니다. 다 대 다 차원은 차원 모델을 표준 별모양 스키마 이상으로 확장하고 차원이 팩트 테이블에 직접 관련되지 않는 경우 복잡한 분석을 지원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+차원을 정의할 경우 일반적으로 각 팩트는 하나의 차원 멤버에만 조인되지만 단일 차원 멤버는 여러 팩트와 연결될 수 있습니다. 예를 들어 각 고객은 여러 개의 주문을 가질 수 있지만 각 주문은 단일 컴퓨터에 속합니다. 관계형 데이터베이스 용어에서 이 관계를 *일 대 다 관계*라고 합니다. 그러나 단일 팩트가 여러 차원 멤버에 조인될 수도 있습니다. 관계형 데이터베이스 용어에서 이 관계를 *다 대 다 관계*라고 합니다. 예를 들어 고객이 구매하는 데는 여러 이유가 있고 구매 이유는 여러 구매와 연결될 수 있습니다. 조인 테이블을 사용하여 각 구매와 관련된 판매 이유를 정의합니다. 그러므로 이러한 관계에서 생성된 Sales Reason 차원에는 단일 판매 트랜잭션과 관련된 여러 멤버가 포함됩니다. 다 대 다 차원은 차원 모델을 표준 별모양 스키마 이상으로 확장하고 차원이 팩트 테이블에 직접 관련되지 않는 경우 복잡한 분석을 지원합니다.  
   
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 차원 테이블에 조인할 중간 팩트 테이블을 지정하여 차원과 측정값 그룹의 다 대 다 관계를 정의합니다. 이에 따라 중간 팩트 테이블은 팩트 테이블이 조인되는 중간 차원 테이블에 조인됩니다. 중간 팩트 테이블과 관계의 차원 테이블 및 중간 차원 모두 간의 다 대 다 관계는 주 차원 멤버와 관계에 의해 지정된 측정값 그룹의 측정값 간에 다 대 다 관계를 만듭니다. 중간 측정값 그룹을 통해 차원 및 측정값 그룹 간에 다 대 다 관계를 정의하려면 중간 측정값 그룹이 하나 이상의 차원을 원래의 측정값 그룹과 공유해야 합니다.  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  **Internet Sales Reason Count** 를 선택하고 속성 창에서 이 측정값의 속성을 검토합니다.  
   
-    이 측정값의 **AggregateFunction** 속성은 **Sum** 이 아니라 **Count**로 정의됩니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 기본 데이터 형식이 문자열 데이터 형식이므로 **Count** 를 선택했습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 기본 팩트 테이블의 다른 두 열을 실제 측정값이 아니라 숫자 키로 검색하므로 해당 열은 측정값으로 선택되지 않습니다. 자세한 내용은 [반가산적 동작 정의](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)를 참조하세요.  
+    이 측정값의 **AggregateFunction** 속성은 **Sum** 이 아니라 **Count**로 정의됩니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]선택한 **Count** 기본 데이터 형식이 문자열 데이터 형식입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 기본 팩트 테이블의 다른 두 열을 실제 측정값이 아니라 숫자 키로 검색하므로 해당 열은 측정값으로 선택되지 않습니다. 자세한 내용은 [반가산적 동작 정의](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)를 참조하세요.  
   
 6.  속성 창에서 **Internet Sales Reason Count** 측정값의 **Visible** 속성을 **False**로 변경합니다.  
   
@@ -180,7 +182,7 @@ ms.lasthandoff: 01/08/2018
 [측정값 그룹의 차원 세분성 정의](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[데이터 원본 뷰 디자이너 &#40;에서 다이어그램 작업 Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [차원 관계](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [다 대 다 관계 및 다 대 다 관계 속성 정의](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

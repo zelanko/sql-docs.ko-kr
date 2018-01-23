@@ -39,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>큐브 속성-다차원 모델 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브에 큐브 차원 동작에 영향을 설정할 수 있는 속성의 수는 있습니다. 다음 표에서는 이러한 속성을 요약하여 설명합니다.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 |**ScriptErrorHandlingMode**|오류 처리를 결정합니다. 옵션은 **IgnoreNone** 또는 **IgnoreAll**|  
 |**원본**|큐브에 사용된 데이터 원본 뷰를 표시합니다.|  
 |**StorageLocation**|큐브의 파일 시스템 저장소 위치를 지정합니다. 아무 위치도 지정하지 않으면 큐브 개체를 포함하는 데이터베이스에서 위치를 상속받습니다.|  
-|**StorageMode**|큐브의 저장소 모드를 지정합니다. 값은 **MOLAP**, **ROLAP**, 또는 **HOLAP * * *입니다.**|  
+|**StorageMode**|큐브의 저장소 모드를 지정합니다. 값은 **MOLAP**, **ROLAP**, 또는 **HOLAP**합니다.|  
 |**Visible**|큐브의 표시 여부를 결정합니다.|  
   
 > [!NOTE]  

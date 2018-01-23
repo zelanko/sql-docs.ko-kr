@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9a97816c16eda294e89d1c9f9b21aa854c398846
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7b95813f17802e22e4b9308cc0a3805f65f5ff2
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>단원 2-6-큐브 찾아보기
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]큐브를 배포 하면 큐브 데이터에 표시 되는 **브라우저** 큐브 디자이너 및 차원 데이터 탭에 표시 되는 **브라우저** 차원 디자이너에서 탭 합니다. 큐브 및 차원 데이터 검색을 통해 작업을 증분 확인할 수 있습니다. 개체가 처리된 후 속성, 관계 및 기타 개체에 대한 약간의 변경으로 원하는 결과를 얻었는지 확인할 수 있습니다. 브라우저 탭을 사용하여 큐브 데이터와 차원 데이터 모두를 확인할 수 있지만 이 탭에서는 검색하려는 개체에 따라 다른 기능을 제공합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+큐브를 배포하면 큐브 디자이너의 **브라우저** 탭에 큐브 데이터가 표시되고 차원 디자이너의 **브라우저** 탭에 차원 데이터가 표시됩니다. 큐브 및 차원 데이터 검색을 통해 작업을 증분 확인할 수 있습니다. 개체가 처리된 후 속성, 관계 및 기타 개체에 대한 약간의 변경으로 원하는 결과를 얻었는지 확인할 수 있습니다. 브라우저 탭을 사용하여 큐브 데이터와 차원 데이터 모두를 확인할 수 있지만 이 탭에서는 검색하려는 개체에 따라 다른 기능을 제공합니다.  
   
 차원의 경우 브라우저 탭은 리프 노드까지 모두 계층을 탐색하거나 멤버를 볼 수 있는 방법을 제공합니다. 모델에 번역을 추가한 경우 여러 다른 언어로 차원 데이터를 검색할 수 있습니다.  
   
@@ -46,9 +48,9 @@ Excel에서는 가로 축과 세로 축을 통해 데이터의 관계를 분석�
     디자이너 왼쪽 창에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브의 개체가 표시됩니다. **브라우저** 탭의 오른쪽에는 두 개의 창이 있습니다. 위쪽 창은 **필터** 창이고 아래쪽 창은 **데이터** 창입니다. 다음 단원에서는 큐브 브라우저를 사용하여 분석을 수행합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[3단원: 측정값, 특성 및 계층 수정](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+[3 단원: 측정값, 특성 및 계층 수정](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [MDX 쿼리 편집기&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)  
   
   

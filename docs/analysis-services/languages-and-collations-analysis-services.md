@@ -26,14 +26,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 언어 및에서 제공 하는 데이터 정렬 지원 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제. **Language** 및 **Collation** 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 제공하는 언어 및 데이터 정렬을 지원합니다. **Language** 및 **Collation** 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  
   
  다차원 모델(전용)의 데이터베이스나 큐브에서 이러한 속성을 설정할 수 있으며, 큐브 내 개체에 대해 만드는 번역에서도 이 속성을 설정할 수 있습니다. 테이블 형식 모델에서 언어 및 데이터 정렬은 호스트 운영 체제에서 상속됩니다.  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/08/2018
 ###  <a name="bkmk_lcid"></a> 언어 속성의 값이 LCID(로캘 식별자)입니다.  
  유효한 값에는 드롭다운 목록에 표시되는 LCID가 포함됩니다. Management Studio 및 SQL Server Data Tools에서는 LCID가 해당 문자열로 표시됩니다. **Language** 속성이 노출되는 곳에는 도구에 관계없이 같은 언어가 표시됩니다. 동일한 언어 목록이 있으면 모델 전체에서 일관되게 번역을 구현 및 테스트할 수 있습니다.  
   
- Analysis Services에 언어가 이름별로 나열되더라도 속성에 대해 저장된 실제 값은 LCID입니다. 언어 속성을 프로그래밍 방식이나 msmdsrv.ini 파일을 통해 설정할 때에는 [LCID(로캘 식별자)](http://en.wikipedia.org/wiki/Locale) 를 값으로 사용하세요. LCID는 언어 ID, 정렬 ID 및 특정 언어를 식별하는 예약된 비트로 구성된 32비트 값입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 LCID를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 및 개체에 대해 선택할 언어를 지정합니다.  
+ Analysis Services에 언어가 이름별로 나열되더라도 속성에 대해 저장된 실제 값은 LCID입니다. 언어 속성을 프로그래밍 방식이나 msmdsrv.ini 파일을 통해 설정할 때에는 [LCID(로캘 식별자)](http://en.wikipedia.org/wiki/Locale) 를 값으로 사용하세요. LCID는 언어 ID, 정렬 ID 및 특정 언어를 식별하는 예약된 비트로 구성된 32비트 값입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 대해 선택할된 언어를 지정 하는 Lcid를 사용 하 여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 및 개체입니다.  
   
  16진수나 10진수 형식을 사용하여 LCID를 설정할 수 있습니다. **언어** 속성에 유효한 값의 예는 다음과 같습니다.  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_collations"></a> Analysis Services에서의 데이터 정렬 지원  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 Windows(버전 _90 및 _100) 및 이진 데이터 정렬 중 하나만을 사용합니다. 레거시 SQL Server 데이터 정렬은 사용하지 않습니다. 큐브 내에서 단일 데이터 정렬은 특성 수준의 번역을 제외하고, 전체에서 사용됩니다. 특성 번역을 정의하는 방법에 대한 자세한 내용은 [Analysis Services에서의 번역 지원](../analysis-services/translation-support-in-analysis-services.md)을 참조하세요.  
   
- 데이터 정렬은 개체 식별자를 제외하고 bicameral 언어 스크립트에서 모든 문자열의 대/소문자 구분을 제어합니다. 개체 식별자에서 대문자와 소문자를 모두 사용하는 경우 개체 식별자의 대/소문자 구분은 데이터 정렬에 따라 결정되는 것이 아니라 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 따라 결정됩니다. 영어 스크립트에 구성된 개체 식별자의 경우, 개체 식별자는 데이터 정렬에 관계없이 항상 대/소문자를 구분합니다. 키릴자모 및 기타 bicameral 언어에서는 반대로 수행합니다(항상 대/소문자 구분). 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
+ 데이터 정렬은 개체 식별자를 제외하고 bicameral 언어 스크립트에서 모든 문자열의 대/소문자 구분을 제어합니다. 개체 식별자에서 대문자와 소문자를 모두 사용하는 경우 개체 식별자의 대/소문자 구분은 데이터 정렬에 따라 결정되는 것이 아니라 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 따라 결정됩니다. 영어 스크립트에 구성된 개체 식별자의 경우, 개체 식별자는 데이터 정렬에 관계없이 항상 대/소문자를 구분합니다. 키릴자모 및 기타 bicameral 언어에서는 반대로 수행합니다(항상 대/소문자 구분). 자세한 내용은 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
   
  Analysis Services의 데이터 정렬은 각 서비스에 대해 선택한 정렬 옵션에서 패리티를 유지 관리하는 것으로 가정하여 SQL Server 관계형 데이터베이스 엔진의 데이터 정렬과 호환합니다. 예를 들어, 관계형 데이터베이스에서 악센트를 구분하는 경우에는 큐브를 동일한 방식으로 구성해야 합니다. 데이터 정렬 설정이 달라지면 문제가 발생할 수 있습니다. 예와 해결 방법이 필요하면 [유니코드 문자열의 공백에 데이터 정렬을 기반으로 한 서로 다른 처리 결과가 있는 경우](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)(영문)를 참조하세요. 데이터 정렬 및 데이터베이스 엔진에 대해 알려면 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
@@ -121,10 +123,10 @@ ms.lasthandoff: 01/08/2018
   
  다음 표에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 대한 Windows 데이터 정렬 순서 옵션 및 관련 접미사를 설명합니다.  
   
-|정렬 순서(접미사)|정렬 순서 설명 |  
+|정렬 순서(접미사)|정렬 순서 설명|  
 |---------------------------|----------------------------|  
 |이진(_BIN) 또는 BIN2(_BIN2)|SQL Server에는 두 가지 유형의 이진 데이터 정렬 즉, 이전 BIN 데이터 정렬과 최신 BIN2 데이터 정렬이 있습니다. BIN2 데이터 정렬에서 모든 문자는 코드 포인트에 따라 정렬됩니다. BIN 데이터 정렬에서 첫 번째 문자만 코드 포인트에 따라 정렬되며 나머지 문자는 바이트 값에 따라 정렬됩니다. Intel 플랫폼은 little endian 아키텍처이므로, 유니코드 문자는 항상 바이트 스왑 상태로 저장됩니다.<br /><br /> 유니코드 데이터 형식에서의 이진 데이터 정렬의 경우 데이터 정렬 시 로캘은 고려되지 않습니다. 예를 들어 Latin_1_General_BIN과 Japanese_BIN은 유니코드 데이터에서 사용할 때 동일한 정렬 결과를 생성합니다.<br /><br /> 이진 정렬 순서는 대/소문자와 악센트를 구분합니다. 이진은 가장 빠른 정렬 순서입니다.|  
-|대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 설정할 수 있습니다. 데이터 정렬 관련 대/소문자 설정은 차원, 큐브 및 기타 개체의 ID와 같은 개체 식별자에 적용되지 않습니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.|  
+|대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 설정할 수 있습니다. 데이터 정렬 관련 대/소문자 설정은 차원, 큐브 및 기타 개체의 ID와 같은 개체 식별자에 적용되지 않습니다. 자세한 내용은 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.|  
 |악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 'a'와 'ấ'는 같지 않습니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자가 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 설정할 수 있습니다.|  
 |일본어 가나 구분(_KS)|일본어 가나 문자의 두 가지 유형인 히라가나와 가타가나를 구분합니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 정렬할 때 히라가나 문자와 가타가나 문자가 동일한 것으로 간주합니다. 가나를 구분하지 않고 정렬할 때는 정렬 순서 접미사가 없습니다.|  
 |전자/반자 구분(_WS)|같은 문자라도 싱글바이트 문자와 더블바이트 문자를 구분합니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 정렬할 때 싱글바이트와 더블바이트로 표시된 같은 문자를 동일한 것으로 간주합니다. 전자/반자를 구분하지 않고 정렬할 때는 정렬 순서 접미사가 없습니다.|  
@@ -171,7 +173,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  기존 언어 또는 데이터 정렬을 검색하고 대체 값으로 바꿉니다.  
   
-3.  F5 키를 눌러 스크립트를 실행합니다.   
+3.  F5 키를 눌러 스크립트를 실행합니다.  
   
 4.  큐브를 다시 처리합니다.  
   
@@ -184,6 +186,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 세계화 시나리오](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [세계화 팁 및 모범 사례 &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
- [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

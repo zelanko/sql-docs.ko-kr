@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>기능 Analysis Services의 새로운
-[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services는 많은 향상 된 성능, 쉽게 솔루션 작성, 자동화 된 데이터베이스 관리를 제공 하는 향상 된 새로운 기능, 향상 된 관계가 양방향 교차 필터링, 병렬 파티션 처리 및 등 다양 합니다. 이번 릴리스에서 향상된 기능 대부분의 중심에는 테이블 형식 model 데이터베이스에 대한 새로운 호환성 수준 1200이 있습니다.     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
+SQL Server 2016 Analysis Services는 많은 향상 된 성능, 쉽게 솔루션 작성, 자동화 된 데이터베이스 관리를 제공 하는 향상 된 새로운 기능, 향상 된 관계가 양방향 교차 필터링, 병렬 파티션 처리 및 등 다양 합니다. 이번 릴리스에서 향상된 기능 대부분의 중심에는 테이블 형식 model 데이터베이스에 대한 새로운 호환성 수준 1200이 있습니다.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 2016 SQL PASS Conference에서 발표된 Analysis Services를 이제 클라우드에서 Azure 서비스로 사용할 수 있습니다. **Azure Analysis Services** 이상은 1200 호환성 수준의 테이블 형식 모델을 지원 합니다. DirectQuery, 파티션, 행 수준 보안, 양방향 관계, 변환이 모두 지원됩니다. 자세한 내용을 알아보고 무료 시험 버전을 사용하려면 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)를 참조하세요. 
@@ -68,7 +70,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 이제 테이블 형식 1200 모델에 표시 폴더를 사용할 수 있습니다. SQL Server Data Tools에서 정의되고 Excel 또는 Power BI Desktop 등의 클라이언트 응용 프로그램에서 렌더링된 표시 폴더를 사용하여 많은 측정값을 개별 폴더로 구성하여 필드 목록을 더 쉽게 탐색하기 위한 시각적 계층 구조를 추가할 수 있습니다.
 ### <a name="bi-directional-cross-filtering"></a>양방향 교차 필터링
 이번 릴리스의 새로운 기능에는 테이블 형식 모델에서 양방향 교차 필터를 사용하는 기본 제공 접근 방식이 있습니다. 이 방식을 사용하면 테이블 관계에서 필터 컨텍스트를 전파하기 위한 수동 DAX 해결 방법이 필요 없습니다. 필터는 높은 수준의 확신도를 기반으로 방향을 설정할 수 있을 경우에만 자동 생성됩니다. 테이블 관계에서 여러 쿼리 경로의 형식에 모호성이 있으면 필터가 자동으로 생성되지 않습니다. 자세한 내용은 [SQL Server 2016 Analysis Services의 테이블 형식 모델에 대한 양방향 교차 필터](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 를 참조하세요.
- ### <a name="translations"></a>Translations    
+ ### <a name="translations"></a>번역    
  이제 번역된 메타데이터를 테이블 형식 1200 모델에 저장할 수 있습니다. 모델의 메타데이터에는 **Culture**에 대한 필드, 번역된 캡션, 번역된 설명이 포함됩니다. 번역을 추가하려면 **에서** > **모델** 번역 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]명령을 사용합니다. 자세한 내용은 [테이블 형식 모델 번역&#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)을 참조하세요.    
  ### <a name="pasted-tables"></a>붙여넣은 테이블    
  이제 모델에 붙여넣은 테이블이 포함되어 있으면 1100 또는 1103 테이블 형식 모델을 1200으로 업그레이드할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]를 사용하는 것이 좋습니다. SSDT에서 **CompatibilityLevel** 을 1200으로 설정하고 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 배포합니다. 자세한 내용은 [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) 를 참조하세요.    

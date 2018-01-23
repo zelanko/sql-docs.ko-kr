@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b92074c5a43c81673cb3464780ae878d78c14276
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6dbb05ab73e9994d4f3c14a9bdfd919ec48c6f29
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services에서 사용되는 도구 및 응용 프로그램
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]도구 및 Analysis Services 모델 개발에 필요한 응용 프로그램을 찾아 배포 된 데이터베이스를 관리 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  도구 및 Analysis Services 모델 개발에 필요한 응용 프로그램을 찾아 배포 된 데이터베이스를 관리 합니다.  
   
 ## <a name="analysis-services-model-designers"></a>Analysis Services 모델 디자이너  
  모델은 프로젝트 템플릿의 데이터 도구 SSDT (SQL Server), Visual Studio 셸을 사용 하 여 작성 됩니다. 프로젝트 템플릿은 Analysis Services 솔루션을 구성 하는 데이터 모델 개체를 만들기 위한 모델 디자이너를 제공 합니다. SSDT는 매달 업데이트 하는 무료 웹 다운로드입니다.

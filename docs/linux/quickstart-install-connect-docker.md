@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 0cfea0b32221f6aa1ebb8cb947640de3b670c79c
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 합니다.
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 > 이 빠른 시작에 중점을 mssql를 사용 하 여-서버-**linux** 이미지입니다. Windows 이미지 적용 되지 않는 있지만에서 항목에 대 한 자세히 알아볼 수 있습니다는 [mssql 서버-windows 개발자 Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)합니다.
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> 필수 구성 요소
 
 - docker 엔진 1.8 + Mac/창에 Linux 배포 또는 Docker를 지원 합니다. 자세한 내용은 참조 [설치 Docker](https://docs.docker.com/engine/installation/)합니다.
 - 최소 2GB의 디스크 공간
@@ -68,17 +68,20 @@ ms.lasthandoff: 12/23/2017
    ```
 
    > [!NOTE]
+   > 암호에는 SQL Server 기본 암호 정책이 따라야, 그렇지 않으면 컨테이너 SQL server를 설정할 수의 작동이 중지 됩니다. 기본적으로 암호 적어도 8 자 여야 하며 다음 4 개 중 세 범주의 문자를 포함 합니다: 대문자, 소문자, 숫자, 및 기호입니다. 실행 하 여 오류 로그를 검사할 수 있습니다는 [docker 로그](https://docs.docker.com/engine/reference/commandline/logs/) 명령입니다.
+
+   > [!NOTE]
    > 기본적으로 개발자 버전의 SQL Server 2017와 컨테이너를 만듭니다이 있습니다. 컨테이너의 프로덕션 버전을 실행 하기 위한 프로세스는 약간 다릅니다. 자세한 내용은 참조 [프로덕션 컨테이너 이미지를 실행](sql-server-linux-configure-docker.md#production)합니다.
 
    다음 표에서 이전에 매개 변수 설명을 `docker run` 예제:
 
    | 매개 변수 | Description |
    |-----|-----|
-   | **-e ' ACCEPT_EULA = Y'** |  설정의 **ACCEPT_EULA** 동의한 것에 어떤 값이 변수는 [최종 사용자 사용권 계약](http://go.microsoft.com/fwlink/?LinkId=746388)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
-   | **-e ' MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 8 자 이상 되며 충족 된 강력한 암호를 지정 된 [SQL Server 암호 요구 사항을](../relational-databases/security/password-policy.md)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
+   | **-e 'ACCEPT_EULA=Y'** |  설정의 **ACCEPT_EULA** 동의한 것에 어떤 값이 변수는 [최종 사용자 사용권 계약](http://go.microsoft.com/fwlink/?LinkId=746388)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
+   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 8 자 이상 되며 충족 된 강력한 암호를 지정 된 [SQL Server 암호 요구 사항을](../relational-databases/security/password-policy.md)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
    | **-p 1401:1433** | 호스트 환경에서 TCP 포트 매핑 (첫째 값) 컨테이너의 TCP 포트 (두 번째 값). 이 예제에서는 SQL Server가 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1401 포트에 노출 됩니다. |
-   | **-이름 s q l 1** | 임의로 생성 된 것 보다는 컨테이너에 대 한 사용자 지정 이름을 지정 합니다. 둘 이상의 컨테이너를 실행 하는 경우에이 이름을 다시 사용할 수 없습니다. |
-   | **microsoft/mssql-서버-linux:2017-최신** | SQL Server 2017 Linux 컨테이너 이미지입니다. |
+   | **--name sql1** | 임의로 생성 된 것 보다는 컨테이너에 대 한 사용자 지정 이름을 지정 합니다. 둘 이상의 컨테이너를 실행 하는 경우에이 이름을 다시 사용할 수 없습니다. |
+   | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux 컨테이너 이미지입니다. |
 
 1. Docker 컨테이너를 보려면 사용 하 여는 `docker ps` 명령입니다.
 
@@ -238,7 +241,7 @@ SELECT @@SERVERNAME,
 
 다른 일반적인 도구는 SQL Server에 연결 하는 다음과 같습니다.
 
-- [Visual Studio 코드](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [Windows에서 SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 - [SQL Server 작업 Studio (미리 보기)](../sql-operations-studio/what-is.md)
 - [mssql-cli (미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)

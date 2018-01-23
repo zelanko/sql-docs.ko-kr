@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b50bb9f02ef1f5d0c36d05f269b229e803c8100b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f9250e25f4e874c40ec9e400850707f30c8e1930
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lesson 9-1-정의 및 찾아보기 큐브 뷰
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]큐브 뷰는 특정 목적을 위해 큐브의 보기를 단순화할 수 있습니다. 기본적으로 사용자들은 사용 권한이 있는 큐브의 모든 요소를 볼 수 있습니다. 사용자가 전체 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 볼 때 표시되는 내용은 큐브의 기본 큐브 뷰입니다. 전체 큐브의 보기는 너무 복잡해서 사용자가 탐색하기 어려울 수 있으며, 비즈니스 인텔리전스 및 보고 요구 사항을 만족시키기 위해 큐브의 일부만 사용하면 되는 사용자에게는 더욱 그렇습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+큐브 뷰는 특정 목적을 위해 큐브의 보기를 단순화할 수 있습니다. 기본적으로 사용자들은 사용 권한이 있는 큐브의 모든 요소를 볼 수 있습니다. 사용자가 전체 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 볼 때 표시되는 내용은 큐브의 기본 큐브 뷰입니다. 전체 큐브의 보기는 너무 복잡해서 사용자가 탐색하기 어려울 수 있으며, 비즈니스 인텔리전스 및 보고 요구 사항을 만족시키기 위해 큐브의 일부만 사용하면 되는 사용자에게는 더욱 그렇습니다.  
   
 큐브의 복잡성을 줄이기 위해 큐브에서 측정값 그룹, 측정값, 차원, 특성, 계층, KPI(핵심 성과 지표), 동작 및 계산 멤버의 부분만 표시하는 *큐브 뷰*라는 표시 가능한 큐브 하위 집합을 만들 수 있습니다. 이 방법은 특히 이전 릴리스의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]용으로 작성된 클라이언트 응용 프로그램으로 작업할 때 유용합니다. 예를 들어 이러한 클라이언트는 표시 폴더나 큐브 뷰에 대한 개념이 없지만 큐브 뷰는 이전 클라이언트에 큐브인 것처럼 표시됩니다. 자세한 내용은 [큐브 뷰](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)및 [다차원 모델의 큐브 뷰](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)를 참조하세요.  
   

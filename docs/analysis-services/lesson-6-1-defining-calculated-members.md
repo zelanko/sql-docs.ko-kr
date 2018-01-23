@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>단원 6-1-정의 계산 멤버
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]계산된 멤버는 차원 멤버 또는 큐브 데이터, 산술 연산자, 숫자 및 함수 조합에 따라 정의 된 측정값 그룹입니다. 예를 들어 큐브에 있는 두 개의 물리적 측정값 합계를 계산하는 계산 멤버를 만들 수 있습니다. 계산 멤버 정의는 큐브에 저장되지만 해당 값은 쿼리 시간에 계산됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+계산 멤버는 큐브 데이터, 산술 연산자, 숫자 및 함수 조합을 기반으로 정의되는 차원 또는 측정값 그룹의 멤버입니다. 예를 들어 큐브에 있는 두 개의 물리적 측정값 합계를 계산하는 계산 멤버를 만들 수 있습니다. 계산 멤버 정의는 큐브에 저장되지만 해당 값은 쿼리 시간에 계산됩니다.  
   
 계산 멤버를 만들려면 큐브 디자이너의 **계산 탭** 에 있는 **새 계산 멤버** 명령을 사용합니다. 측정값 차원을 비롯하여 모든 차원 내에서 계산 멤버를 만들 수 있습니다. 또한 **계산 속성** 대화 상자에서 표시 폴더 안에 계산 멤버를 둘 수 있습니다. 자세한 내용은 [계산](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [다차원 모델의 계산](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)및 [계산 멤버 만들기](../analysis-services/multidimensional-models/create-calculated-members.md)를 참조하세요.  
   
@@ -294,7 +296,7 @@ ms.lasthandoff: 01/08/2018
     부속품 판매는 시간에 따라 증가하지만 이러한 판매는 총 판매의 일부에 지나지 않습니다. 또한 부속품 판매의 매출이익률은 자전거 판매 매출이익률보다 높습니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
-[명명된 집합 정의](../analysis-services/lesson-6-2-defining-named-sets.md)  
+[명명 된 집합 정의](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>관련 항목:  
 [새 계산 멤버](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

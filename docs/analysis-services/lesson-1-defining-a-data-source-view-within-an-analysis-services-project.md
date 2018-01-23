@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d8f91c18a5150bd769c53ac24ad49346a4c6af60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0fe40b4deeb6fa929be969a0d84a61bcad85f9a1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]비즈니스 인텔리전스 응용 프로그램 디자인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 만드는 것부터 시작 프로그램 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. 이 프로젝트에서 솔루션의 모든 요소를 정의하고 데이터 원본 뷰를 사용하여 시작합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 비즈니스 인텔리전스 응용 프로그램 디자인은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]프로젝트를 만드는 것부터 시작됩니다. 이 프로젝트에서 솔루션의 모든 요소를 정의하고 데이터 원본 뷰를 사용하여 시작합니다.  
   
 이 단원에서는 다음 태스크를 다룹니다.  
   
@@ -44,12 +46,12 @@ ms.lasthandoff: 01/08/2018
 이 단원용으로 작성된 샘플 프로젝트 파일과 결과를 비교하십시오. 이 자습서와 함께 제공되는 예제 프로젝트를 다운로드하는 방법은 codeplex의 제품 예제 페이지에서 [SQL Server 2012용 SSAS 다차원 모델 프로젝트](http://go.microsoft.com/fwlink/p/?LinkID=221866) 를 참조하십시오.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[2단원: 큐브 정의 및 배포](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[2 단원: 정의 및 큐브를 배포 합니다.](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>관련 항목:  
 [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
 [지원되는 데이터 원본&#40;SSAS 다차원&#41;](https://msdn.microsoft.com/library/ms175608(v=sql.110).aspx)  
 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
-[다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[다차원 모델링 &#40; Adventure Works 자습서 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   

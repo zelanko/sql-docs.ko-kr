@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>단원 2-1-차원 정의
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]다음 태스크에서는 Date 차원을 구축을 차원 마법사를 사용 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+다음 태스크에서는 차원 마법사를 사용하여 Date 차원을 구축합니다.  
   
 > [!NOTE]  
 > 이 단원을 수행하려면 1단원의 모든 절차를 완료해야 합니다.  
@@ -60,13 +62,13 @@ ms.lasthandoff: 01/08/2018
   
 8.  **Full Date Alternate Key** 특성의 **특성 유형** 열 설정을 **일반** 에서 **날짜**로 변경합니다. 이렇게 하려면 **특성 유형** 열에서 **일반** 을 클릭합니다. 그런 다음 화살표를 클릭하여 옵션을 확장합니다. **날짜** > **달력** > **날짜**를 클릭합니다. **확인**을 클릭합니다. 이 단계를 반복하여 특성의 특성 유형을 다음과 같이 변경합니다.  
   
-    -   **English Month Name** 에서 **Month**  
+    -   **English Month Name** to **Month**  
   
-    -   **Calendar Quarter** 에서 **Quarter**  
+    -   **Calendar Quarter** to **Quarter**  
   
-    -   **Calendar Year** 에서 **Year**  
+    -   **Calendar Year** to **Year**  
   
-    -   **Calendar Semester** 에서 **Half Year**  
+    -   **Calendar Semester** to **Half Year**  
   
 9. **다음**을 클릭합니다.  
   

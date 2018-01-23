@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1e7d887c9c25ee62cf9fe37ca16c9538c3c646db
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9491f840fdf7d1848fd4cc6bdf23bf98a4acd4b3
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-defining-calculations"></a>6단원: 계산 정의
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 단원에서는 MDX (Multidimensional Expressions) 식 또는 스크립트는 계산을 정의 배웁니다. 계산을 사용하면 계산 멤버와 명명된 집합을 정의하고 기타 스크립트 명령을 실행하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브의 기능을 확장할 수 있습니다. 예를 들어 스크립트 명령을 실행하여 하위 큐브를 정의한 다음 하위 큐브의 셀에 계산을 할당할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+이 단원에서는 MDX(Multidimensional Expressions) 식 또는 스크립트에 해당하는 계산을 정의하는 방법을 배웁니다. 계산을 사용하면 계산 멤버와 명명된 집합을 정의하고 기타 스크립트 명령을 실행하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브의 기능을 확장할 수 있습니다. 예를 들어 스크립트 명령을 실행하여 하위 큐브를 정의한 다음 하위 큐브의 셀에 계산을 할당할 수 있습니다.  
   
 큐브 디자이너에서 새 계산을 정의하면 큐브 디자이너의 **계산** 탭에 있는 **스크립트 구성 도우미** 창에 해당 계산이 추가되며 **계산 식** 창의 계산 폼에 특정 계산 유형에 대한 필드가 표시됩니다. 계산은 **스크립트 구성 도우미** 창에 나열된 순서대로 실행됩니다. 특정 계산을 마우스 오른쪽 단추로 클릭한 후 **위로 이동** 또는 **아래로 이동**을 선택하거나 특정 계산을 클릭한 후 **계산** 탭 도구 모음에 있는 **위로 이동** 또는 **아래로 이동** 아이콘을 사용하여 계산 순서를 다시 지정할 수 있습니다.  
   
@@ -52,20 +54,20 @@ ms.lasthandoff: 01/08/2018
   
 이 단원에서는 다음 태스크를 다룹니다.  
   
-[계산 멤버 정의](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+[계산된 멤버를 정의합니다.](../analysis-services/lesson-6-1-defining-calculated-members.md)  
 이 태스크에서는 계산 멤버의 정의 방법을 배웁니다.  
   
-[명명된 집합 정의](../analysis-services/lesson-6-2-defining-named-sets.md)  
+[명명 된 집합 정의](../analysis-services/lesson-6-2-defining-named-sets.md)  
 이 태스크에서는 명명된 집합의 정의 방법을 배웁니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[7단원: KPI&#40;핵심 성과 지표&#41; 정의](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[7 단원: 핵심 성과 지표 &#40; 정의 Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>관련 항목:  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
-[다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[명명된 집합 만들기](../analysis-services/multidimensional-models/create-named-sets.md)  
-[계산 멤버 만들기](../analysis-services/multidimensional-models/create-calculated-members.md)  
+[다차원 모델링 &#40; Adventure Works 자습서 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[명명 된 집합 만들기](../analysis-services/multidimensional-models/create-named-sets.md)  
+[계산된 멤버 만들기](../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   
   

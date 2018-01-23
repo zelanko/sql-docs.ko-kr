@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d3140b2022e312094df84693acb69b2ea04917a7
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lesson 5-4-측정값 그룹 내에서 차원 세분성 정의
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]사용자는 다양 한 용도 대 한 다양 한 세분성 또는 특이성에 팩트 데이터 차원 합니다. 예를 들어 대리점이나 인터넷 판매의 판매 데이터는 매일 기록하고 판매 할당량 정보는 월별 또는 분기별로 기록할 수 있습니다. 이러한 시나리오에서 사용자는 서로 다른 팩트 테이블 각각에 대해 수준이 다양한 시간 차원을 사용할 수 있습니다. 새 데이터베이스 차원을 이러한 다른 수준을 가진 시간 차원으로 정의할 수 있지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 더 쉬운 방법이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+사용자는 다양한 목적에 맞게 팩트 데이터의 차원을 세밀하게 또는 구체적으로 구분할 수 있습니다. 예를 들어 대리점이나 인터넷 판매의 판매 데이터는 매일 기록하고 판매 할당량 정보는 월별 또는 분기별로 기록할 수 있습니다. 이러한 시나리오에서 사용자는 서로 다른 팩트 테이블 각각에 대해 수준이 다양한 시간 차원을 사용할 수 있습니다. 새 데이터베이스 차원을 이러한 다른 수준을 가진 시간 차원으로 정의할 수 있지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 더 쉬운 방법이 있습니다.  
   
 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 측정값 그룹에 차원을 사용하면 해당 차원의 데이터 수준은 차원의 키 특성을 기반으로 합니다. 예를 들어 시간 차원이 측정값 그룹 내에 포함되어 있고 시간 차원의 기본 수준이 매일이면 측정값 그룹에서 해당 차원의 기본 수준은 매일이 됩니다. 이 자습서의 **Internet Sales** 및 **Reseller Sales** 측정값 그룹과 같은 많은 경우에 이 수준이 적절하게 사용됩니다. 그러나 차원이 Sales Quotas 또는 Budget 측정값 그룹과 같은 다른 종류의 측정값 그룹에 포함되어 있을 때는 일반적으로 월별 또는 분기별 수준이 보다 적절합니다.  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 01/08/2018
     ![Sales Quota 측정값 그룹 차원이 올바르게 구분 되어](../analysis-services/media/l5-granularity-7.gif "Sales Quota 측정값 그룹의 차원이 올바르게 구분 되어")  
   
 ## <a name="next-lesson"></a>다음 단원  
-[6단원: 계산 정의](../analysis-services/lesson-6-defining-calculations.md)  
+[6 단원: 계산 정의](../analysis-services/lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>관련 항목:  
 [차원 관계](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

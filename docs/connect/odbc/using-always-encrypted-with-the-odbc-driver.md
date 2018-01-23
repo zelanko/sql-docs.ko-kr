@@ -18,10 +18,10 @@ manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
 ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -350,7 +350,7 @@ ODBC Driver for SQL Server는 다음 기본 제공 키 저장소 공급자와 �
 
 | 이름 | Description | 공급자 (메타 데이터) 이름 |가용성|
 |:---|:---|:---|:---|
-|Azure Key Vault |저장소 Cmk를 Azure 키 자격 증명 모음 | `AZURE_KEY_VAULT` |Windows, Linux, macOS|
+|Azure Key Vault |저장소 Cmk를 Azure 키 자격 증명 모음 | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Windows 인증서 저장소|Windows 키 저장소에 Cmk를 로컬로 저장| `MSSQL_CERTIFICATE_STORE`|창|
 
 - 사용자 (또는 DBA)는 열 마스터 키 메타 데이터에 구성 된 공급자 이름이 올바른지와 열 마스터 키 경로 지정 된 공급자에 대 한 키 경로 형식을 준수 되도록 해야 합니다. [CREATE COLUMN MASTER KEY(Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 실행할 때 적합한 공급자 이름 및 키 경로를 자동으로 생성하는 SQL Server Management Studio 등의 도구를 사용하여 키를 구성하는 것이 좋습니다.
@@ -378,13 +378,13 @@ Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 �
 
 다음 연결 문자열에는 두 가지 자격 증명 유형이 Azure 키 자격 증명 모음에 인증 하는 방법을 보여 줍니다.
 
-**ClientID/암호**:
+**ClientID/Secret**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**사용자 이름/암호**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>

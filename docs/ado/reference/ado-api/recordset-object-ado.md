@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd263b08584b0ba13f6486e72bcf6c9f083ca896
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="recordset-object-ado"></a>레코드 집합 개체 (ADO)
 기본 테이블이 나 실행 된 명령의 결과에서 레코드의 전체 집합을 나타냅니다. 언제 든 지는 **레코드 집합** 개체가 현재 레코드로 집합 내에서 단일 레코드로 참조 합니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
  사용할 수는 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**, 및 **MovePrevious** 메서드; [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드도 있습니다. 및 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), 및 [필터](../../../ado/reference/ado-api/filter-property.md) 관련 공급자가 지 원하는 것으로 가정 하 여 현재 레코드의 위치를 변경 하는 속성 기능입니다. 앞 으로만 이동 가능한 **레코드 집합** 개체 지원만 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 메서드. 사용 하는 경우는 **이동** 각 레코드를 방문 하는 메서드 (하거나 열거는 **레코드 집합**)를 사용할 수 있습니다는 **BOF** 및 **EOF** 속성을 시작 또는 끝을 지 나 이동 하는 경우 확인 된 **레코드 집합**합니다.  
   
- 모든 기능을 사용 하기 전에 **레코드 집합** 개체를 호출 해야 합니다는 **지원** 메서드를 사용할 수 없거나 지원 되는 기능 인지 확인 하는 개체입니다. 기능을 사용 하지 않아야 때는 **지원** 메서드에서 false를 반환 합니다. 예를 들어, 사용할 수는 **MovePrevious** 경우에만 메서드 `Recordset.Supports(adMovePrevious)` 반환 **True**합니다. 그렇지 않으면 얻게 됩니다 오류가 발생 하기 때문에 **레코드 집합** 개체가 잠겨 되 고 기능 인스턴스를 사용할 수 없도록 렌더링 합니다. 기능에 관심이 있는 지원 되지 않는 경우 **지원** 도 false 반환 합니다. 에 해당 속성이 나 메서드를 호출 하지 않아야이 경우에 **Recrodset** 개체입니다.  
+ 모든 기능을 사용 하기 전에 **레코드 집합** 개체를 호출 해야 합니다는 **지원** 메서드를 사용할 수 없거나 지원 되는 기능 인지 확인 하는 개체입니다. 기능을 사용 하지 않아야 때는 **지원** 메서드에서 false를 반환 합니다. 예를 들어, 사용할 수는 **MovePrevious** 경우에만 메서드 `Recordset.Supports(adMovePrevious)` 반환 **True**합니다. 그렇지 않으면 얻게 됩니다 오류가 발생 하기 때문에 **레코드 집합** 개체가 잠겨 되 고 기능 인스턴스를 사용할 수 없도록 렌더링 합니다. 기능에 관심이 있는 지원 되지 않는 경우 **지원** 도 false 반환 합니다. 에 해당 속성이 나 메서드를 호출 하지 않아야이 경우에 **레코드 집합** 개체입니다.  
   
  **레코드 집합** 개체를 업데이트 하는 두 가지 유형의 지원할 수 있습니다: 즉시 및 일괄 처리 합니다. 즉시 업데이트에 모든 데이터 변경은 즉시 기록 기본 데이터 원본에 호출 하 여 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드. 값의 배열을와 매개 변수로 전달할 수도 있습니다는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 및 **업데이트** 메서드 및 동시에 레코드의 여러 필드를 업데이트 합니다.  
   

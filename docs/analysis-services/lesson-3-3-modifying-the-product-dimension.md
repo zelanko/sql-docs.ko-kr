@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>단원 3-3-Product 차원 수정
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]이 항목의 태스크를 사용 하 여 명명된 된 계산, 제품 라인에 대 한 보다 설명적인 이름을 제공 하 고, Product 차원에 계층 구조를 정의 하 고, 계층의 (All) 멤버 이름을 지정 합니다. 또한 특성을 표시 폴더로 그룹화합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+이 항목의 태스크에서는 명명된 계산을 사용하여 제품 라인에 대해 보다 설명적인 이름을 제공하고 Product 차원에 계층을 정의하고 계층에 대해 (All) 멤버 이름을 지정합니다. 또한 특성을 표시 폴더로 그룹화합니다.  
   
 ## <a name="adding-a-named-calculation"></a>명명된 계산 추가  
 데이터 원본 뷰에서 테이블에 명명된 계산을 추가할 수 있습니다. 다음 태스크에서는 전체 제품 라인 이름을 표시하는 명명된 계산을 만듭니다.  
@@ -189,7 +191,7 @@ ms.lasthandoff: 01/08/2018
 [Date 차원 수정](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[데이터 원본 뷰 &#40; 명명 된 계산을 정의 합니다. Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [사용자 정의 계층 만들기](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [특성 계층에 대해 &#40;All&#41; 수준 구성](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

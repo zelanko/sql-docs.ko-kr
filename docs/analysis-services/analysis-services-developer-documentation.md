@@ -20,14 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69f16ef4141ca467063a84bf2305ccbe6d8f8996
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 개발자 설명서
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services에서 거의 모든 개체 및 작업은 프로그래밍이 가능 하며 종종 둘 이상의 접근 방식을 선택할 수 있습니다.  옵션에는 관리 코드 작성, 스크립트 또는.NET framework를 사용 하 여 솔루션 요구 사항을 배제 하는 경우에 MSOLAP 등 XMLA 개방형 표준을 사용 하 여 포함 됩니다.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+Analysis Services에서 거의 모든 개체 및 작업은 프로그래밍이 가능 하며 종종 둘 이상의 접근 방식을 선택할 수 있습니다.  옵션에는 관리 코드 작성, 스크립트 또는.NET framework를 사용 하 여 솔루션 요구 사항을 배제 하는 경우에 MSOLAP 등 XMLA 개방형 표준을 사용 하 여 포함 됩니다.
 
 ## <a name="what-you-can-accomplish-in-code"></a>코드에서 수행할 수 있는 작업
 일반적인 프로그래밍 시나리오에는 서버 및 데이터베이스를 배포, 관리, 모델 및 데이터베이스 만들기 및 사용자 지정 응용 프로그램 및 Analysis Services 데이터를 사용 하는 보고서에서 데이터 액세스 포함 됩니다. 이러한 모든 시나리오에 공통적으로 적용은 고정된 아키텍처 및 개체 정의 계층을 데이터 정의 처리 및 쿼리 워크 로드에 걸쳐 있는 잘 이해 하기 쉬운 작업.

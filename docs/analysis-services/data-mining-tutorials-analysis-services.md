@@ -19,15 +19,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33717f3b72c46ba55e2e774fde62eba0646fa9c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e1c600dddc4ab87c0f5290d90fdecda49f95045
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>데이터 마이닝 자습서(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쉽게 마법사와 통합 된 시각화를 사용 하 여 데이터 마이닝 솔루션을 만들 수 있습니다. 특히 Machine Learning을 처음 사용하는 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 도구를 통해 편리하게 데이터 마이닝 모델을 디자인, 학습 및 탐색할 수 있습니다. 모델의 데이터는 큐브, 관계형 데이터베이스 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 지원하는 다른 모든 원본에 저장할 수 있습니다. 모델을 만든 후 모델에 액세스하고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ASP.NET 등 여러 클라이언트의 예측을 통해 예측을 만들어 프로덕션으로 전환할 수 있습니다.  
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 마법사 및 통합 시각화를 사용하여 데이터 마이닝 솔루션을 쉽게 만들 수 있습니다. 특히 Machine Learning을 처음 사용하는 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 도구를 통해 편리하게 데이터 마이닝 모델을 디자인, 학습 및 탐색할 수 있습니다. 모델의 데이터는 큐브, 관계형 데이터베이스 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 지원하는 다른 모든 원본에 저장할 수 있습니다. 모델을 만든 후 모델에 액세스하고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ASP.NET 등 여러 클라이언트의 예측을 통해 예측을 만들어 프로덕션으로 전환할 수 있습니다.  
   
 > [!NOTE]  
 >여기에서 설명하는 자습서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대해 업데이트되지 않았습니다. SQL Server 2014용으로 작성된 자습서를 사용할 수 있습니다. 기능적으로 데이터 마이닝 기능에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대해 변경된 내용은 없습니다. 단계가 동일합니다.  

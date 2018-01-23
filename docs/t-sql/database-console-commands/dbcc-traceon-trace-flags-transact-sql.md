@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4dcffcd589d6ff9bd2b32aa618611dc78e98edea
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c58386532c06b5143f7462357d161d2683b1cbbb
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-추적 플래그 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/09/2018
 |**834**|버퍼 풀에 대 한 Microsoft Windows 대용량 페이지 할당을 사용합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/3210239)합니다.<br /><br />**참고:** 의 Columnstore 인덱스 기능을 사용 하는 경우 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 834 추적 플래그를 설정 하지 않는 것이 좋습니다.<br /><br />**범위**: 글로벌만|
 |**845**|표준 Sku에서 잠긴 페이지를 사용 하도록 설정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 서비스 계정이 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Lock Pages in Memory 권한 설정에 있습니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/970070) 와에 설명서 페이지 [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 표준 Sku에서이 동작은 기본적으로 사용 하 고 추적 플래그 845를 사용할 수 없습니다.<br /><br />**범위**: 글로벌만|
 |**902**|누적 업데이트 또는 서비스 팩을 설치 하는 경우 데이터베이스 업그레이드 스크립트의 실행을 건너뜁니다. 스크립트 업그레이드 모드에 있는 동안 오류가 발생 하면 경우에 필요한 추가 지침에 대 한 Microsoft SQL 고객 서비스 지원 (CSS)에 연결 하는 것이 좋습니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2163980)합니다.<br /><br />**경고:** 스크립트 업그레이드 모드에 있는 동안 실패 한 업데이트의 문제 해결을 위해이 추적 플래그 하며 프로덕션 환경에서 계속 실행 되도록 지원 되지 않습니다. 데이터베이스 업그레이드 스크립트 누적 업데이트와 서비스 팩의 전체 설치를 성공적으로 실행 해야 합니다. 이렇게 하지 않으면 예기치 않은 문제가 발생할 수 있습니다 프로그램 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스.<br /><br />**범위**: 글로벌만|
-|**1117**|파일 그룹의 파일 자동 증가 임계값을 충족할 때 파일 그룹의 모든 파일이 증가 합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 추적 플래그 1117이 아무런 영향을 주지 및이 동작은 ALTER DATABASE의 AUTOGROW_SINGLE_FILE 및 AUTOGROW_ALL_FILES 옵션이 제어 됩니다. 자세한 내용은 참조 [ALTER DATABASE 파일 및 파일 그룹 옵션 &#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).<br /><br />**범위 지정:** 글로벌만|
+|**1117**|파일 그룹의 파일 자동 증가 임계값을 충족할 때 파일 그룹의 모든 파일이 증가 합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 추적 플래그 1117이 아무런 영향을 주지 및이 동작은 ALTER DATABASE의 AUTOGROW_SINGLE_FILE 및 AUTOGROW_ALL_FILES 옵션이 제어 됩니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.<br /><br />**범위 지정:** 글로벌만|
 |**1118**|서버에서 대부분의 단일 페이지 할당을 제거하여 SGAM 페이지의 경합을 줄입니다. 기본적으로 새 개체를 만들 때 첫 8 페이지는 서로 다른 익스텐트 (혼합 익스텐트)에서 할당 됩니다. 나중에 페이지가 더 필요할 때 처음 8장의 페이지가 같은 익스텐트(단일 익스텐트)에서 할당됩니다. SGAM 페이지는 이 혼합 익스텐트를 추적하는 데 사용되므로, 여러 혼합 페이지 할당이 발생할 때 빠르게 병목 상태가 될 수 있습니다. 이 추적 플래그는 새 개체를 만들 때 같은 익스텐트에서 8장의 페이지를 모두 할당하여 SGAM 페이지를 검색할 필요를 최소화합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/328551)합니다.<br /><br />**참고:** 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 추적 플래그 1118이 아무런 영향을 주지 및이 동작은 ALTER DATABASE의 MIXED_PAGE_ALLOCATION 설정 옵션으로 제어 됩니다. 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.<br /><br />**범위 지정:** 글로벌만|  
 |**1204**|교착 상태에 있는 잠금의 유형과 리소스 및 현재 영향을 받은 명령을 반환합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/832524)합니다.<br /><br />**범위 지정:** 글로벌만|  
 |**1211**|메모리 가중이나 잠금 수를 기반으로 잠금 에스컬레이션을 해제합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 행 또는 페이지 잠금을 테이블 잠금으로 에스컬레이션하지 않습니다.<br /><br />이 추적 플래그를 사용하면 과도하게 많은 잠금이 생성될 수 있습니다. 이로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 성능이 저하되거나 메모리가 부족하게 되어 잠금 리소스를 할당할 수 없는 1204 오류가 발생할 수 있습니다.<br /><br />추적 플래그 1211과 1224를 모두 설정하면 1211이 1224보다 우선 적용됩니다. 그러나 추적 플래그 1211은 메모리 부족 등의 모든 경우에서 에스컬레이션을 차단하므로 1224를 사용하는 것이 좋습니다. 이렇게 하면 많은 잠금을 사용할 때 "잠금 부족" 오류를 방지하는 데 도움이 됩니다.<br /><br />**범위**: 전역 또는 세션|  
@@ -146,8 +146,8 @@ ms.lasthandoff: 01/09/2018
 |**9939**|수 있도록 병렬 계획 및 메모리 액세스에 최적화 된 테이블 및 테이블 변수에서 메모리 액세스에 최적화 된 테이블 또는 테이블 변수를 참조 하는 DML 작업의 병렬 검색에는 DML 작업의 대상이 되지 않기으로 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/4013877)합니다.<br /><br />**참고:** 추적 플래그 4199 명시적으로 사용 하도록 설정 하는 경우 추적 플래그 9939 필요 하지 않습니다.<br /><br />**범위**: 전역 또는 세션 또는 쿼리|   
 |**10204**|사용 하지 않도록 설정 병합/다시 압축 하는 동안 columnstore 인덱스 다시 구성 합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]columnstore 인덱스 다시 구성 하는 경우 새로운 기능은 자동으로 더 큰 압축 된 행 그룹으로,도 삭제 된 행을 다 수의 모든 rowgroup을 다시 압축 하는 대로 모든 크기가 작은 압축된 rowgroup을 병합 합니다.<br /><br />**참고:** 추적 플래그 10204 메모리 액세스에 최적화 된 테이블에서 생성 하는 columnstore 인덱스에 적용 되지 않습니다.<br /><br />**범위**: 전역 또는 세션|   
 |**10316**|추가 인덱스를 만들 수 있음에 [내부 메모리 액세스에 최적화 된 준비 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), 기본 옆에 있는 합니다. 기본 인덱스에서 다루지 않는 있는 열이 포함 된 특정 쿼리 패턴이 있는 경우 추가 작업을 추가 하는 것이 좋습니다.<br /><br />**참고:** 시스템 버전 임시 테이블 메모리 최적화 된 테이블은 높은 트랜잭션 처리량을 제공 하도록 설계에 대 한 합니다. 추가 인덱스를 만드는 업데이트 하거나 현재 테이블의 행을 삭제 하는 DML 작업에 대 한 오버 헤드가 발생할 수 있습니다 주의 하십시오. 추가 인덱스와 함께 임시 쿼리 성능 및 추가 DML 오버 헤드 간에 적절 한 균형을 찾을 수를 목표로 해야 합니다.<br /><br />**범위**: 전역 또는 세션|
-|**11023**|샘플 속도의 일부로 명시적으로 지정 하지 않으면 모든 후속 통계 업데이트에 대 한 마지막 지속형된 샘플링 주기를 사용 하지 않도록는 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/4039284)합니다.<br /><br />**범위**: 전역|    
-|**11024**|파티션의 수정 수를 초과 하는 로컬 때 통계의 자동 업데이트를 트리거하 수 있도록 [임계값](../../relational-databases/statistics/statistics.md#AutoUpdateStats)합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/4041811)합니다.<br /><br />**범위**: 전역| 
+|**11023**|샘플 속도의 일부로 명시적으로 지정 하지 않으면 모든 후속 통계 업데이트에 대 한 마지막 지속형된 샘플링 주기를 사용 하지 않도록는 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/4039284)합니다.<br /><br />**범위**: 전역 또는 세션|    
+|**11024**|파티션의 수정 수를 초과 하는 로컬 때 통계의 자동 업데이트를 트리거하 수 있도록 [임계값](../../relational-databases/statistics/statistics.md#AutoUpdateStats)합니다. 이 참조에 대 한 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/4041811)합니다.<br /><br />**범위**: 전역 또는 세션| 
   
 ## <a name="remarks"></a>주의  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 추적 플래그의 세 가지: 쿼리, 세션 및 전역 합니다. 쿼리 추적 플래그는 특정 쿼리 컨텍스트에 대 한 활성화 됩니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다. 전역으로만 설정할 수 있는 플래그도 있고 전역 또는 세션 범위에서 설정할 수 있는 플래그도 있습니다.  
@@ -189,6 +189,6 @@ SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUER
 [SELECT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
 [SET NOCOUNT &#40; Transact SQL &#41;](../../t-sql/statements/set-nocount-transact-sql.md)  
 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
-[ALTER DATABASE SCOPED configuration&#40; Transact SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
+[데이터베이스 범위 구성 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
 [쿼리 힌트 (Transact SQL)](../../t-sql/queries/hints-transact-sql-query.md)
 
