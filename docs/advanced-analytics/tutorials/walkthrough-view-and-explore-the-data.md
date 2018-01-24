@@ -35,7 +35,7 @@ ms.lasthandoff: 11/09/2017
 >   
 > RevoScaleR 함수에 대한 추가 설명과 R에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 작업에 대한 팁을 얻으려면 자습서를 계속 진행합니다. 정확히 동일한 스크립트를 사용합니다.
 
-## <a name="verify-downloaded-data-using-sql-server"></a>SQL Server를 사용하여 다운로드한 데이터를 확인
+## <a name="verify-downloaded-data-using-sql-server"></a>SQL Server를 사용하여 다운로드한 데이터 확인
 
 먼저 데이터가 올바르게 로드되었는지 확인합니다.
 
@@ -45,14 +45,14 @@ ms.lasthandoff: 11/09/2017
   
     ![rsql_e2e_ssms_newobjects](media/rsql-e2e-ssms-newobjects.PNG)
   
-3. 데이터가 올바르게 로드되었는지 확인하기위해 테이블을 마우스 오른쪽 클릭하고 **상위 1000 개 행 선택**을 선택합니다. 아래 쿼리가 실행됩니다.
+3. 데이터가 올바르게 로드되었는지 확인하기 위해 테이블을 마우스 오른쪽 클릭하고 **상위 1000 개 행 선택**을 선택합니다. 아래 쿼리가 실행됩니다.
 
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
     테이블의 데이터가 보이지 않는 경우 이전 항목의 [문제 해결](walkthrough-prepare-the-data.md) 절을 참조합니다.
 
-4. 이 데이터 테이블은 [columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-overview.md)를 추가해서 집합 기반 계산용으로 최적화 되었습니다. 아래 문을 실행해서 테이블에 대한 빠른 요약을 생성합니다.
+4. 이 데이터 테이블은 [columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-overview.md)를 추가해서 집합 기반 계산용으로 최적화되었습니다. 아래 문을 실행해서 테이블에 대한 빠른 요약을 생성합니다.
 
     ```SQL
     SELECT DISTINCT [passenger_count]
