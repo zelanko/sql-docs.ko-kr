@@ -30,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL 및 R을 사용한 그래프와 플롯(plot) 만들기(연습)
 
 
-이 연습에서는 SQL Server 데이터와 R을 사용 하여 플롯과 맵을 생성하는 기술을 배웁니다. 연습을 위해 간단한 히스토그램을 만들어 본 뒤 더 복잡한 지도 플롯을 개발합니다.
+이 연습에서는 SQL Server 데이터와 R을 사용하여 플롯과 맵을 생성하는 기술을 배웁니다. 연습을 위해 간단한 히스토그램을 만들어 본 뒤 더 복잡한 지도 플롯을 개발합니다.
 
 
 ### <a name="create-a-histogram"></a>히스토그램 만들기
