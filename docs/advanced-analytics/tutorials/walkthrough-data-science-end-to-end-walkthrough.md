@@ -25,18 +25,18 @@ ms.lasthandoff: 11/09/2017
 
 이 연습에서는 SQL Server 2016 또는 SQL Server 2017에서 Microsoft R 기반 예측 모델링을 위한 전체 솔루션을 개발합니다.
 
-이 연습은 공용 데이터 중 많이 사용되는 뉴욕 시 택시 데이터 집합을 기반으로 합니다. R 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SQL Server 데이터, 사용자 지정 SQL 함수를 사용하여 분류 모델을 작성하고 이를 통해 택시 운전사가 팁을 얻을 수 있는지 그 가능성을 예측합니다. 또한 R 모델을 SQL Server에 배포하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 데이터를 사용해서 해당 모델에 기반한 점수(score)를 생성 합니다.
+이 연습은 공용 데이터 중 많이 사용되는 뉴욕 시 택시 데이터 집합을 기반으로 합니다. R 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SQL Server 데이터, 사용자 지정 SQL 함수를 사용하여 분류 모델을 작성하고 이를 통해 택시 운전사가 팁을 얻을 수 있는지 그 가능성을 예측합니다. 또한 R 모델을 SQL Server에 배포하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 데이터를 사용해서 해당 모델에 기반을 둔 점수(score)를 생성합니다.
 
 이 예제는 영업 캠페인에 대한 고객 반응 예측, 특정 행사의 비용 지출이나 참석 예측과 같은 모든 유형의 실제 문제로 확장될 수 있습니다. 저장 프로시저를 통해 예측 모델을 호출할 수 있으므로 응용 프로그램에 쉽게 내장할 수 있습니다.
 
-이 연습은 R 개발자들에게 R Services(In-Database)를 소개하기 위해 설계되었음으로 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], R이 가능한 모든 곳에 사용됩니다. 그러나 이것이 R이 항상 모든 작업에서 가장 좋은 도구임을 의미하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 집계나 특성(feature) 엔지니어링같은 특정 작업에서는 대부분 SQL Server가 더 나은 성능을 제공할 것입니다. 특히 메모리 최적화 columnstore 인덱스 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인덱스와 같은 SQL Server 2017의 새로운 기능들이 도움이 될 수 있습니다. 과정을 거치면서 가용한 최적화 방안들을 언급할 것입니다.
+이 연습은 R 개발자들에게 R Services(In-Database)를 소개하기 위해 설계되었으므로 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], R이 가능한 모든 곳에 사용됩니다. 그러나 이것이 R이 항상 모든 작업에서 가장 좋은 도구임을 의미하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 집계나 특성(feature) 엔지니어링같은 특정 작업에서는 대부분 SQL Server가 더 나은 성능을 제공할 것입니다. 특히 메모리 최적화 columnstore 인덱스 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인덱스와 같은 SQL Server 2017의 새로운 기능들이 도움이 될 수 있습니다. 과정을 거치면서 가용한 최적화 방안들을 언급할 것입니다.
 
 > [!NOTE]
-> 이 연습은 원래 SQL Server 2016용으로 개발하고 시험했습니다만, 스크린 샷과 프로시저들은 SQL Server 2017 에서도 작동할 수 있도록 최신 버전의 SQL Server Management Studio를 사용해서 업데이트 했습니다.
+> 이 연습은 원래 SQL Server 2016용으로 개발하고 시험했습니다만, 스크린 샷과 프로시저들은 SQL Server 2017 에서도 작동할 수 있도록 최신 버전의 SQL Server Management Studio를 사용해서 업데이트했습니다.
 
 ## <a name="overview"></a>개요
 
-아래 예상 시간에 설치 작업은 포함되지 않습니다. 자세한 내용은 [연습에 대 한 필수 구성 요소](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)를 참조하세요.
+아래 예상 시간에 설치 작업은 포함되지 않습니다. 자세한 내용은 [연습에 대한 필수 구성 요소](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)를 참조하세요.
 
 |항목 목록|예상 시간|
 |-|------------------------------|
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 이 연습은 R 또는 SQL 개발자를 위한 것입니다. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]를 사용하여 엔터프라이즈 워크플로에 R을 통합하는 방법을 소개합니다. 데이터베이스와 테이블 만들기, 데이터 가져오기, 쿼리 실행 같은 데이터베이스 작업에 익숙해야 합니다.
 
 + 모든 SQL과 R 스크립트가 포함됩니다.
-+ 사용자 환경에서 실행하려면 스크립트내 문자열을 수정할 필요도 있습니다. [Visual Studio Code](https://code.visualstudio.com/Download)같은 코드 편집기로 이러한 작업을 수행할 수 있습니다.
++ 사용자 환경에서 실행하려면 스크립트내 문자열을 수정할 필요도 있습니다. [Visual Studio Code](https://code.visualstudio.com/Download) 같은 코드 편집기로 이러한 작업을 수행할 수 있습니다.
 
 ### <a name="prerequisites"></a>필수 구성 요소
 
