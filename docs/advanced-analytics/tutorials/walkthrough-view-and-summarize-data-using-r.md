@@ -51,9 +51,9 @@ Microsoft R을 사용하면 R 코드에서 [!INCLUDE[ssNoVersion](../../includes
 - R 코드를 실행할 때 사용할 하나 이상의 계산 컨텍스트 정의하기
 - 선택적으로, 데이터를 읽는 동안 원본에 적용할 변환을 정의
 
-다음 단계는 모두 R 코드의 일부이므로 R 환경에서 실행합니다. Microsoft R 클라이언트를 사용한 이유는 모든 RevoScaleR 패키지를 포함하고 있으면 기본적이고 가벼운 R 도구세트이기 때문입니다.
+다음 단계는 모두 R 코드의 일부이므로 R 환경에서 실행합니다. Microsoft R 클라이언트를 사용한 이유는 모든 RevoScaleR 패키지를 포함하고 있으면 기본적이고 가벼운 R 도구 세트이기 때문입니다.
 
-1. **RevoScaleR** 패키지가 로드 되지 않은 경우,  아래 R 코드를 실행합니다.
+1. **RevoScaleR** 패키지가 로드되지 않은 경우, 아래 R 코드를 실행합니다. 
 
     ```R
     library("RevoScaleR")
@@ -61,7 +61,7 @@ Microsoft R을 사용하면 R 코드에서 [!INCLUDE[ssNoVersion](../../includes
 
      인용 부호는 선택 사항이나 이 경우에는 권장됩니다.
      
-     오류가 발생한다면 R 개발 환경이 RevoScaleR 패키지를 포함한 라이브러리를 사용하는지 확인합니다. 현재 라이브러리 경로를 보려면.libPaths() 같은 명령을 사용합니다.
+     오류가 발생한다면 R 개발 환경이 RevoScaleR 패키지를 포함한 라이브러리를 사용하는지 확인합니다. 현재 라이브러리 경로를 보려면 .libPaths() 같은 명령을 사용합니다. 
 
 2. SQL Server에 대한 연결 문자열을 만들고 R 변수 _connStr_ 에 저장합니다.
     
@@ -71,13 +71,13 @@ Microsoft R을 사용하면 R 코드에서 [!INCLUDE[ssNoVersion](../../includes
 
     서버 이름으로 인스턴스 이름만 사용할 수도 있고 네트워크에 따라 전체 식별자 이름이 필요할 수도 있습니다.
 
-    Windows 인증의 경우 구문이 조금 다릅니다:
+    Windows 인증의 경우 구문이 조금 다릅니다.
     
     ```R
     connStrWin <- "Driver=SQL Server;Server=SQL_instance_name;Database=database_name;Trusted_Connection=Yes"
     ```
 
-    다운로드 가능한 R 스크립트는 SQL 로그인만 사용합니다. 일반적으로 R 코드에 암호가 저장되는 것을 피하기위해 가능한 Windows 인증을 사용하길 권장합니다. 그러나 이 자습서의 코드가 Github에서 다운로드한 코드와 일치하도록 나머지 연습에서는 SQL 로그인을 사용할 것입니다. (역주. 명명된 인스턴스에 연결하는 경우 구분 문자 \ 를 두 번 지정합니다.)
+    다운로드 가능한 R 스크립트는 SQL 로그인만 사용합니다. 일반적으로 R 코드에 암호가 저장되는 것을 피하기 위해 가능한 Windows 인증을 사용하길 권장합니다. 그러나 이 자습서의 코드가 Github에서 다운로드한 코드와 일치하도록 나머지 연습에서는 SQL 로그인을 사용할 것입니다. (역주. 명명된 인스턴스에 연결하는 경우 구분 문자 \ 를 두 번 지정합니다.)
 
 3. 새로운 _계산 컨텍스트_ 를 만들 때 사용할 변수를 정의합니다. 계산 컨텍스트 개체를 만든 후에 이를 사용해서 SQL Server 인스턴스에 R 코드를 실행할 수 있습니다.
 
@@ -109,11 +109,11 @@ Microsoft R을 사용하면 R 코드에서 [!INCLUDE[ssNoVersion](../../includes
     + `rxSetComputeContext` 는 이전에 활성 계산 컨텍스트를 사용할 수 있도록 보이지 않게 반환합니다.
     + `rxGetComputeContext` 는 활성 계산 컨텍스트를 반환합니다.
     
-    계산 컨텍스트 설정은 **RevoScaleR** 패키지의 함수를 사용하는 연산에만 영향을 줍니다; 오픈 소스 R 연산이 수행되는 방식에는 영향을 미치지 않습니다.
+    계산 컨텍스트 설정은 **RevoScaleR** 패키지의 함수를 사용하는 연산에만 영향을 줍니다. 오픈 소스 R 연산이 수행되는 방식에는 영향을 미치지 않습니다. 
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>RxSqlServer를 사용한 데이터 원본 생성
 
-Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만드는 개체입니다. 데이터 원본 개체는 모델 훈련 또는 특성 추출과 같은 작업에 사용할 데이터 집합을 지정 합니다. 다양한 원본으로부터 데이터를 얻을 수 있습니다. 현재 지원 되는 소스 목록은 [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)를 참조합니다.
+Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만드는 개체입니다. 데이터 원본 개체는 모델 훈련 또는 특성 추출과 같은 작업에 사용할 데이터 집합을 지정합니다. 다양한 원본으로부터 데이터를 얻을 수 있습니다. 현재 지원 되는 소스 목록은 [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)를 참조합니다. 
 
 이전에 우리는 연결 문자열을 정의하고 R 변수에 그 정보를 저장했습니다. 해당 연결 정보를 재사용해서 가져올 데이터를 지정할 수 있습니다.
 
@@ -136,9 +136,9 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
       )
     ```
     
-    + *colClasses* 인수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 R 간에 데이터를 이동할 때 사용할 열 형식을 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 R과는 다른 혹은 더 많은 데이터 형식을 사용하므로 이 중요한 부분입니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](../r/r-libraries-and-data-types.md)참조합니다.
+    + *colClasses* 인수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 R 간에 데이터를 이동할 때 사용할 열 형식을 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 R과는 다른 혹은 더 많은 데이터 형식을 사용하므로 중요한 부분입니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](../r/r-libraries-and-data-types.md)을 참조합니다. 
   
-    + *rowsPerRead* 인수는 메모리 사용량 관리와 효율적인 계산을 위해 중요한 부분입니다. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 의 대부분의 향상된 분석 함수들은 데이터를 청크(chunk)로 처리하고 중간 결과를 누적하면서 모든 데이터를 읽은 후에 최종 계산을 반환합니다. *rowsPerRead* 매개 변수를 추가하여 각 청크에서 처리할 데이터 행 수를 조절할 수 있습니다. 이 매개 변수의 값이 너무 크면 그만큼 큰 데이터 청크를 효율적으로 처리할 수 있는 메모리가 부족해서 데이터 접근 속도가 느려질 수 있습니다. 일부 시스템에서는 *rowsPerRead* 를 지나치게 작은 값으로 설정하는 것도 성능을 저하시킬 수 있습니다.
+    + *rowsPerRead* 인수는 메모리 사용량 관리와 효율적인 계산을 위해 중요한 부분입니다. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 대부분의 향상된 분석 함수들은 데이터를 청크(chunk)로 처리하고 중간 결과를 누적하면서 모든 데이터를 읽은 후에 최종 계산을 반환합니다. *rowsPerRead* 매개 변수를 추가하여 각 청크에서 처리할 데이터 행 수를 조절할 수 있습니다. 이 매개 변수의 값이 너무 크면 그만큼 큰 데이터 청크를 효율적으로 처리할 수 있는 메모리가 부족해서 데이터 접근 속도가 느려질 수 있습니다. 일부 시스템에서는 *rowsPerRead* 를 지나치게 작은 값으로 설정하는 것도 성능을 저하시킬 수 있습니다.
 
 3. 이 시점에서 *inDataSource* 개체를 만들었지만 데이터는 포함되지 않았습니다. [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) 또는 [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) 같은 함수를 실행하기 전까지 SQL 쿼리로부터 로컬 환경으로 데이터를 가져오지 않습니다. 하지만 이제 데이터 개체를 정의했으므로 다른 함수에 인수로 사용할 수 있습니다.
 
@@ -148,9 +148,9 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
 
 1. [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) 함수를 호출하면 데이터 원본에 있는 변수들의 목록과 해당 데이터  형식을 얻을 수 있습니다.
 
-    **rxGetVarInfo**는 편리한 함수입니다; 데이터 프레임 또는 원격 데이터 개체 내의 데이터 집합에 대해 호출하면 최대값과 최소값, 그 데이터 유형, 인자(factor) 열이 몇 개의 수준(level)으로 되어 있는지 등의 정보를 얻을 수 있습니다.
+     **rxGetVarInfo**는 편리한 함수입니다. 데이터 프레임 또는 원격 데이터 개체 내의 데이터 집합에 대해 호출하면 최대값과 최소값, 그 데이터 유형, 인자(factor) 열이 몇 개의 수준(level)으로 되어 있는지 등의 정보를 얻을 수 있습니다. 
     
-    데이터 입력, 특성 변환 또는 특성 추출(feature engineering)후에 이 함수를 실행하는 것을 고려하세요. 그렇게 하면 모델에서 사용하려는 모든 특성의 예상 데이터 유형을 확인하고 오류를 피할 수 있습니다.
+    데이터 입력, 특성 변환 또는 특성 추출(feature engineering) 후에 이 함수를 실행하는 것을 고려하세요. 그렇게 하면 모델에서 사용하려는 모든 특성의 예상 데이터 유형을 확인하고 오류를 피할 수 있습니다.
   
     ```R
     rxGetVarInfo(data = inDataSource)
@@ -171,9 +171,9 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
     Var 10: dropoff_longitude, Type: numeric
     ```
 
-2. 이제 RevoScaleR 함수 [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) 를 호출해서 개별 변수에 대한 자세한 통계를 얻습니다.
+2. 이제 RevoScaleR 함수 [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary)를 호출해서 개별 변수에 대한 자세한 통계를 얻습니다. 
 
-    rxSummary는 R 요약 함수에 기반하지만 몇 가지 추가 기능과 이점을 가집니다. rxSummary는 다중 계산 컨텍스트로 작동하고 청킹(chunking)를 지원합니다. 또한 값을 변환하거나 인자 수준 기반의 요약에도 rxSummary를 사용할 수 있습니다.
+    rxSummary는 R 요약 함수에 기반하지만 몇 가지 추가 기능과 이점을 가집니다. rxSummary는 다중 계산 컨텍스트로 작동하고 청킹(chunking)을 지원합니다. 또한 값을 변환하거나 인자 수준 기반의 요약에도 rxSummary를 사용할 수 있습니다. 
     
     이 예제에서는 승객 수에 따른 요금을 요약합니다.
     
@@ -186,7 +186,7 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
       " seconds to summarize the inDataSource.", sep=""))
     ```
     + rxSummary의 첫 번째 인수는 요약할 수식이나 용어를 지정합니다. 여기서 `F()` 함수는 요약 전에 _passenger_count_ 값을 인자(factor)로 변환하는데 사용됩니다. 또한 _passenger_count_ 인자 변수의 최소값(1)과 최대값(6) 또한 지정해야 합니다.
-    + 출력할 통계를 지정하지 않으면 기본적으로 rxSummary가 Mean, StDev, Min, Max 그리고 유효 관측 수와 누락 관측 수를 출력합니다. (역주. 각각 ValidObs, MissingObs 라는 항목으로 출력됨)
+    + 출력할 통계를 지정하지 않으면 기본적으로 rxSummary가 Mean, StDev, Min, Max 그리고 유효 관측 수와 누락 관측 수를 출력합니다(역주. 각각 ValidObs, MissingObs 라는 항목으로 출력됨).
     + 이 예제에는 함수의 시작과 완료 시간을 추적해서 성능을 비교할 수 있는 코드도 포함하고 있습니다.
   
     **결과**
