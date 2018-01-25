@@ -35,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="install-machine-learning-for-sql-server"></a>SQL Server에 기계 학습 설치
 
-설치된 R을 지원하는 SQL Server의 인스턴스에 접근할 수 있어야 합니다. 이 연습은 원래 SQL Server 2016용으로 개발되고 2017에서 시험했으므로 다음 SQL Server 버전 중 하나를 사용할 수 있어야 합니다. (각 릴리스에서 RevoScaleR 기능에 약간의 차이가 있습니다)
+설치된 R을 지원하는 SQL Server의 인스턴스에 접근할 수 있어야 합니다. 이 연습은 원래 SQL Server 2016용으로 개발되고 2017에서 시험했으므로 다음 SQL Server 버전 중 하나를 사용할 수 있어야 합니다. (각 릴리스에서 RevoScaleR 기능에 약간의 차이가 있습니다.)
 
 + SQL Server 2017용 Machin Learning Services (In-Database)
 + SQL Server 2016 R Services
@@ -59,9 +59,9 @@ ms.lasthandoff: 09/01/2017
 
 - [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]이나 R 클라이언트를 설치할 때 기본적인 R 도구 (R.exe, RTerm.exe, RScripts.exe) 또한 설치됩니다. IDE 설치를 원하지 않는다면 이러한 도구를 사용할 수 있습니다.
 
-## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>SQL Server 인스턴스 및 데이터베이스에 대 한 사용 권한 가져오기
+## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>SQL Server 인스턴스 및 데이터베이스에 대한 사용 권한 가져오기
 
-스크립트를 실행하고 데이터를 업로드하기 위해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하려면, 데이터베이스 서버에 유효한 로그인이 있어야 합니다. SQL 로그인 또는 Windows 통합 인증을 사용할 수 있습니다. R을 사용할 데이터베이스 계정에 다음 권한을 구성하도록 데이터베이스 관리자에게 요청하십시오
+스크립트를 실행하고 데이터를 업로드하기 위해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하려면, 데이터베이스 서버에 유효한 로그인이 있어야 합니다. SQL 로그인 또는 Windows 통합 인증을 사용할 수 있습니다. R을 사용할 데이터베이스 계정에 다음 권한을 구성하도록 데이터베이스 관리자에게 요청하십시오.
 
 - 데이터베이스, 테이블, 함수 및 저장 프로시저 만들기
 - 테이블에 데이터 쓰기
@@ -71,7 +71,13 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="change-list"></a>변경 목록
 
-+ 이 예제는 SQL Server 2016 R Services를 사용 하 여 개발 원래 되었습니다. 그런데 2016 SP1용 Microsoft R 구성 요소에 변경 있었습니다. 특히 _varsToDrop_ 및 _varsToKeep_ 매개변수가 SQL Server 데이터 원본용으로 더 이상 지원되지 않습니다. 따라서 SP1 이전 자습서 버전을 다운로드한 경우 SP1 이후 빌드에서는 작동하지 않습니다.
++ 이 예제는 SQL Server 2016 R Services를 원래 사용하여 개발되었습니다. 
+
+그런데 2016 SP1용 Microsoft R 구성 요소에 변경이 있었습니다. 
+
+특히 _varsToDrop_ 및 _varsToKeep_ 매개변수가 SQL Server 데이터 원본용으로 더 이상 지원되지 않습니다. 
+
+따라서 SP1 이전 자습서 버전을 다운로드한 경우 SP1 이후 빌드에서는 작동하지 않습니다.
 
 + 현재 버전의 예제는 SQL Server 2017 Machine Learning Services (RC1과 RC2)의 사전-릴리스 빌드를 사용하여 시험했습니다. 일반적으로 거의 모든 단계가 2016 SP1에서 2017사이에서 수정없이 동작합니다.
 
