@@ -16,13 +16,13 @@ ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0f7a94c9b3e5e386b30dcc9c97e217441186505
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2e2894f644ac81314e770ac667f4aa2e180a33a6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-objects"></a>개체 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 원하는 개체 유형만 개체 선택 대화 상자에 표시되도록 제한합니다.  

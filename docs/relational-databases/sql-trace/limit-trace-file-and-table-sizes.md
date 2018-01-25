@@ -19,15 +19,15 @@ helpviewer_keywords:
 - size [SQL Server], files
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb3a4845d48fb24d5ca97823b2844e1c3ca369cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a450e9f52065238bb2b3a91b5c52f4c4d8fba50
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>추적 파일 및 테이블 크기 제한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL 추적 파일의 크기는 추적에 포함된 이벤트 클래스와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 사용되는 방식에 따라 달라집니다. 자주 발생하는 이벤트 클래스를 추적하는 경우 최대 파일 크기나 최대 행 수를 설정하여 추적을 통해 수집되는 데이터의 양을 최소화할 수 있습니다. 최대 파일 크기나 최대 행 수를 지정하면 추적 파일이나 테이블의 크기가 지정된 한도를 초과하지 않습니다.  

@@ -15,12 +15,12 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c04481fbe3cb71606509483e542747140b565ca8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: cbbd9d7008457009925f20a74fd2a80866bc6419
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>명령 프롬프트에서 업데이트 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 조직의 필요에 따라 설치 스크립트를 테스트하고 수정할 수 있습니다. 
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    또는 
+    로 구분하거나 여러 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT] 
 > 가능한 한 런타임에 보안 자격 증명을 지정하십시오. 스크립트 파일에 자격 증명을 저장해야 하는 경우에는 무단으로 액세스하지 못하도록 파일에 보안을 설정하세요. 
  
-|스위치|설명| 
+|스위치|Description| 
 |------------|-----------------| 
 |**/?**|무인 설치 명령 프롬프트 도움말을 표시합니다.| 
 |**/action=Patch 또는 /action=RemovePatch**|설치 동작(Patch 또는 RemovePatch)을 지정합니다.| 
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
  
  * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스에 업데이트를 적용할 때는 이 매개 변수를 지정할 수 없습니다. 대신 /instanceID 매개 변수를 지정해야 합니다. 
  
-## <a name="see-also"></a>참고 항목 
+## <a name="see-also"></a>관련 항목: 
  [SQL Server 서비스 설치 개요](http://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
  
  

@@ -17,20 +17,20 @@ helpviewer_keywords:
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cb93f6f2644966696f7d7c48f2dac7f72cde06b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8bfc10f588c868693eb0d24308730a618db9df7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitor-data-tier-applications"></a>데이터 계층 응용 프로그램 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])의 **유틸리티 탐색기** 및 **개체 탐색기**에서 시스템 뷰 및 테이블과 함께 DAC(데이터 계층 응용 프로그램)를 모니터링할 수 있습니다. 또한 DAC에 포함된 데이터베이스의 모든 개체를 표준 데이터베이스 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 모니터링 기술을 사용하여 모니터링할 수 있습니다.  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  DAC를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 관리되는 인스턴스로 배포하는 경우 배포된 DAC에 대한 정보는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. 그런 다음 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기**를 사용하여 DAC에 대한 기본 상태 정보를 볼 수 있습니다.  
   
  인스턴스가 SQL Server 유틸리티에서 관리되는지 여부에 상관없이 SSMS **개체 탐색기** 에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 배포된 각 DAC에 대한 기본 구성 정보가 표시됩니다. 또한 데이터베이스를 모니터링할 때와 동일한 절차를 사용하여 배포된 DAC와 연결된 데이터베이스를 모니터링할 수 있습니다.  

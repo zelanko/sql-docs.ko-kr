@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 >    [!NOTE] 
 >    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.**오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
 
-4.   공유 메모리를 사용하여, 연결할 수 있는 경우 TCP를 사용하여 연결을 테스트합니다. 이름 앞에 **tcp:** 를 지정하여 강제로 TCP 연결을 적용할 수 있습니다. 예를 들어
+4.   공유 메모리를 사용하여, 연결할 수 있는 경우 TCP를 사용하여 연결을 테스트합니다. 이름 앞에 **tcp:** 를 지정하여 강제로 TCP 연결을 적용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 |연결 대상:|유형:|예:|
 |-----------------|---------------|-----------------|

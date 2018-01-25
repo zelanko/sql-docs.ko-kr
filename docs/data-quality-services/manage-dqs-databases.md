@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cda0e712bd4473972c1beb0afc6c530a6d48ef1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 61bdf391348154a3b395c5934ab7b60173f4eb47
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="manage-dqs-databases"></a>DQS 데이터베이스 관리
+# <a name="manage-dqs-databases"></a>Manage DQS Databases
   이 섹션에서는 백업/복원 또는 분리/연결과 같이 DQS 데이터베이스에서 수행할 수 있는 데이터베이스 관리 작업에 대한 정보를 제공합니다.  
   
 ##  <a name="BackupRestore"></a> DQS 데이터베이스 백업 및 복원  
@@ -53,14 +53,14 @@ ms.lasthandoff: 11/20/2017
   
  SQL Server에서 데이터베이스를 분리 및 연결하기 전에 고려해야 할 사항은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |DQS 데이터베이스를 백업 및 복원하는 방법에 대해 설명합니다.|[DQS 데이터베이스 백업 및 복원](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS 데이터베이스를 분리 및 연결하는 방법을 설명합니다.|[DQS 데이터베이스 분리 및 연결](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DQS 관리](../data-quality-services/dqs-administration.md)  
   
   

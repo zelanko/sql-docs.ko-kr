@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dba73f7bbfa6cb1ffee7d24a9f283e29e4649b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bd5115125244859cb147dbc4a5028f87111aaed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-source-dialog-box"></a>원본 선택 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 실행할 정책의 원본을 선택할 수 있습니다. 정책이 포함된 하나 이상의 XML 파일을 선택하려면 **파일**을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 있는 정책을 실행하려면 **서버**를 선택합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   개체 탐색기에서 서버, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭하고 **정책**을 선택한 다음 **평가**를 선택합니다. **정책 평가** 대화 상자에서 **정책 선택** 페이지에서 찾아보기 단추(**...**)를 클릭합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **파일**  
  정책이 포함된 하나 이상의 XML 파일을 선택합니다.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요.  
   
- **사용자 이름**  
+ **User name**  
  연결에 사용할 사용자 이름을 입력합니다. 이 옵션은 Windows 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.  
   
  **로그인**  

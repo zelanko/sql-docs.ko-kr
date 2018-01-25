@@ -24,15 +24,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 581c46bbb59d9339bc91712a4e100d922e76813f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e32ecad2ca9d89f31e7a6b7e05c650a66ffc8c3a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 항목에 설명된 것과 같이 SQL Server는 **xml** 데이터 형식을 통해 XML 데이터에 대한 네이티브 저장소를 제공합니다. 선택적으로 XML 스키마 컬렉션을 통해 **xml** 유형의 열 또는 변수와 XSD 스키마를 연결할 수 있습니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 -   MODELGROUP  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   **SomeAttribute** 는 ATTRIBUTE 구성 요소입니다.  
   

@@ -25,13 +25,13 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c790f0a159366986a193bbfd4509f92d65ec5492
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 26565d1078d8fcb813cc634ce5d3cee05d151f4a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 키보드 액셀러레이터를 사용하면 Alt+*<single letter>*를 눌러 메뉴 명령이나 단추를 선택할 수 있습니다. 예를 들어 **편집** 메뉴를 열려면 Alt+E를 누릅니다. **사용자 지정** 대화 상자를 사용하여 도구 모음 단추, 메뉴 및 메뉴 명령을 다시 정렬하고 수정할 수 있습니다. 여기에서는 마우스를 사용하거나 키보드만 사용하여 설정을 변경하기 위한 지침이 제공됩니다.  

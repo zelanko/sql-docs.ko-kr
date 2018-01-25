@@ -20,13 +20,13 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: "75"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d521b60320fc490d2ba7e824e85bb2eabe1e9bb3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 -   [관련 내용](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
- 자동 장애 조치(Failover)  
+ 자동 장애 조치(automatic failover)  
  주 복제본이 손실되는 경우 자동으로 발생하는 장치 조치(failover)입니다. 자동 장애 조치(Failover)는 현재 주 복제본과 하나의 보조 복제본이 모두 AUTOMATIC으로 설정된 장애 조치(Failover) 모드로 구성되고 보조 복제본이 현재 동기화된 경우에만 지원됩니다.  주 복제본 또는 보조 복제본의 장애 조치(Failover) 모드가 MANUAL인 경우 장애 조치(Failover)를 수행할 수 없습니다.  
   
  계획된 수동 장애 조치(Failover)(데이터가 손실되지 않음)  
@@ -87,8 +87,8 @@ ms.lasthandoff: 11/20/2017
   
 ||비동기-커밋 모드|수동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|자동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|자동 장애 조치(Failover)|아니요|아니요|예|  
-|계획된 수동 장애 조치(Failover)|아니요|예|예|  
+|자동 장애 조치(automatic failover)|아니오|아니오|예|  
+|계획된 수동 장애 조치(Failover)|아니오|예|예|  
 |강제 장애 조치(failover)|예|예|예**\***|  
   
  **\***동기화된 보조 복제본에 강제 장애 조치(Failover) 명령을 실행하면 보조 복제본은 수동 장애 조치(Failover)의 경우와 동일하게 작동합니다.  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/20/2017
 |변수를 잠그기 위한|자동 장애 조치(Failover)를 사용하는 동기 커밋|  
 |B|자동 장애 조치(Failover)를 사용하는 동기 커밋|  
 |C|계획된 수동 장애 조치(failover)만 사용하는 동기-커밋|  
-|D|강제 장애 조치(Failover)만 사용하는 비동기 커밋|  
+|d|강제 장애 조치(Failover)만 사용하는 비동기 커밋|  
   
  각 보조 복제본에 대한 장애 조치(Failover) 동작은 어떤 가용성 복제본이 현재 주 복제본인지에 따라 결정됩니다. 기본적으로 지정된 보조 복제본에 대해 장애 조치(Failover) 동작은 현재 주 복제본에서 최악의 경우입니다. 다음 그림에서는 현재 주 복제본에 따라 보조 복제본의 장애 조치(Failover) 동작이 어떻게 달라지는지와 보조 복제본의 장애 조치(Failover) 동작이 강제 장애 조치(Failover)만 사용하는 비동기-커밋 모드용으로 구성되었는지 자동 장애 조치(Failover)를 사용하거나 사용하지 않는 동기-커밋 모드용으로 구성되었는지를 보여 줍니다.  
   
@@ -264,9 +264,9 @@ ms.lasthandoff: 11/20/2017
   
 |보조 복제본의 가용성 모드|데이터베이스가 동기화되는지 여부|데이터가 손실될 가능성이 있는지 여부|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchronous-commit|예|아니요|  
-|Synchronous-commit|아니요|예|  
-|Asynchronous-commit|아니요|예|  
+|Synchronous-commit|예|아니오|  
+|Synchronous-commit|아니오|예|  
+|Asynchronous-commit|아니오|예|  
   
  보조 데이터베이스는 두 개의 복구 분기만 추적하므로 강제 장애 조치(Failover)를 여러 번 수행할 경우 이전 강제 장애 조치(Failover)와 데이터 동기화를 시작한 보조 데이터베이스는 재개하지 못할 수도 있습니다. 이 경우 재개할 수 없는 보조 데이터베이스를 올바른 시점으로 복원된 가용성 그룹에서 제거한 후 이 가용성 그룹에 다시 조인해야 합니다. 여러 복구 분기 지점에 대해 복원을 수행할 수 없으므로 둘 이상의 강제 장애 조치(Failover) 수행한 후 로그 백업을 수행해야 합니다.  
   

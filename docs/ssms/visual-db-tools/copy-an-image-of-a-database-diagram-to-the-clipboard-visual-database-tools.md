@@ -18,13 +18,13 @@ ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d6c5d281a318eaf1214442a690b0811abde694e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 06c6ebbf5977f2459d886c45ac66f68fb4f20b02
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>데이터베이스 다이어그램의 이미지를 클립보드로 복사(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램의 이미지를 만들고 이 이미지를 다른 응용 프로그램으로 복사할 수 있습니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bb4c95f567173101b0a8168823ccfa15576a4217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a0535029665ac86975ce384d6a2fd093dab816b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reinitialize-a-subscription"></a>구독 다시 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 구독을 다시 초기화하는 방법에 대해 설명합니다. 각 게시를 다시 초기화하도록 표시하여 다음 동기화 중에 새 스냅숏을 적용할 수 있습니다.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독을 다시 초기화하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_reinitpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md)을 실행합니다. **@publisher**, **@publisher_db** 및 **@publication**를 지정합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_reinitpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md)을 실행합니다. **@publisher**, **@publisher_db**및 **@publication**를 지정합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
 2.  필요에 따라 구독자에서 배포 에이전트를 시작하여 구독을 동기화합니다. 자세한 내용은 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)을 참조하세요.  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 다시 초기화하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_reinitmergepullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)을 실행합니다. **@publisher**, **@publisher_db** 및 **@publication**를 지정합니다. 다시 초기화하기 전에 구독자에서 변경 내용을 업로드하려면 **@upload_first** @upload_first **@upload_first**대화 상자에서 다시 초기화할 구독을 표시합니다. 이렇게 하면 다음 병합 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_reinitmergepullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)을 실행합니다. **@publisher**, **@publisher_db**및 **@publication**를 지정합니다. 다시 초기화하기 전에 구독자에서 변경 내용을 업로드하려면 **@upload_first** @upload_first **@upload_first**대화 상자에서 다시 초기화할 구독을 표시합니다. 이렇게 하면 다음 병합 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
     > [!IMPORTANT]  
     >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독을 다시 초기화하려면  
   
-1.  게시자에서 [sp_reinitmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md)을 실행합니다. **@publication**, **@subscriber** 및 **@subscriber_db**를 지정합니다. 다시 초기화하기 전에 구독자에서 변경 내용을 업로드하려면 **@upload_first** @upload_first **@upload_first**대화 상자에서 다시 초기화할 구독을 표시합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
+1.  게시자에서 [sp_reinitmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md)을 실행합니다. **@publication**, **@subscriber**및 **@subscriber_db**를 지정합니다. 다시 초기화하기 전에 구독자에서 변경 내용을 업로드하려면 **@upload_first** @upload_first **@upload_first**대화 상자에서 다시 초기화할 구독을 표시합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
     > [!IMPORTANT]  
     >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
@@ -152,7 +152,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
   
-     자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)을 참조하세요.  
+     자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>기존 병합 게시에 대한 다시 초기화 정책을 변경하려면  
   
@@ -249,7 +249,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  

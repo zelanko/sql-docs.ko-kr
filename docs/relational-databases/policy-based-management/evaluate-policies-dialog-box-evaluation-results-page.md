@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.evalpoliciesresults.f1
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee1bbf3e515fb5da1b5186fbe4d4ad9c37f00034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc11b243f15c6046a342aec2279a86cd1ec2c69c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>정책 평가 대화 상자, 평가 결과 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 정책 평가 결과를 보고 정책을 준수하지 않는 대상 집합에 정책 기반 관리 정책을 적용할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **Results: Policy**  
  평가할 정책의 이름입니다. 이 부분은 읽기 전용입니다.  
   

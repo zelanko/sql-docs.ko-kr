@@ -20,15 +20,15 @@ helpviewer_keywords:
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53e3c9e5da3240ec81b4cf64cc89361f0ef67926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baa793a3d82a7420af7ceb1ddfdb30d23b91c3b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-and-protection-replication"></a>보안 및 보호(복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 배포하는 복제 시나리오를 악의적인 공격으로부터 보호하고 데이터의 보안을 향상시키는 방법을 살펴봅니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  [기타...](../../../relational-databases/replication/security/security-overview-replication.md)  
   
  ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **보안 개발**  
- [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)  
+ [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **안전한 작업**  
  [복제의 로그인 및 암호 관리](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기술 참조&#40;복제&#41;](../../../relational-databases/replication/technical-reference-replication.md)  
   
   

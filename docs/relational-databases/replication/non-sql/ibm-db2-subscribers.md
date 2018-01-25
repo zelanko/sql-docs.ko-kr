@@ -19,17 +19,17 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: "74"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14680465db9798d198685b3e9a556816a33057a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 402675d8725ca5e571261e700b9eb8ec2a035a90
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="ibm-db2-subscribers"></a>IBM DB2 구독자
+# <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server와 함께 제공되는 OLE DB 공급자를 통해 IBM DB2/AS 400, DB2/MVS 및 DB2/Universal Database에 대한 밀어넣기 구독을 지원합니다.  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 -   테이블에 있는 하나 이상의 기본 키 열이 DECIMAL(32-38, 0-38) 또는 NUMERIC(32-38, 0-38) 데이터 형식이면 트랜잭션 복제를 사용하여 테이블을 DB2 구독자로 게시해서는 안 됩니다. 트랜잭션 복제에서는 기본 키를 사용하여 행을 식별하는데 이 데이터 형식은 구독자에서 VARCHAR(41)로 매핑되므로 오류가 발생할 수 있습니다. 기본 키에서 이러한 데이터 형식을 사용하는 테이블은 스냅숏 복제를 사용하여 게시할 수 있습니다.  
   
--   복제에서 테이블을 만드는 대신 구독자에서 테이블을 미리 만들려면 replication support only 옵션을 사용합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)를 참조하세요.  
+-   복제에서 테이블을 만드는 대신 구독자에서 테이블을 미리 만들려면 replication support only 옵션을 사용합니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 DB2에서 지원되는 길이보다 긴 테이블 이름과 열 이름을 사용할 수 있습니다.  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
 |**char(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
 |**date**|DATE|  
-|**datetime**|TIMESTAMP|  
+|**datetime**|timestamp|  
 |**datetime2(0-7)**|VARCHAR(27)|  
 |**datetimeoffset(0-7)**|VARCHAR(34)|  
 |**decimal(1-31, 0-31)**|DECIMAL(1-31, 0-31)|  
@@ -134,8 +134,8 @@ ms.lasthandoff: 11/17/2017
 |**numeric(32-38, 0-38)**|VARCHAR(41)|  
 |**nvarchar(1-4000)**|VARCHAR(1-4000)|  
 |**nvarchar(max)**|VARCHAR(0)*|  
-|**real**|REAL|  
-|**smalldatetime**|TIMESTAMP|  
+|**real**|real|  
+|**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
 |**sql_variant**|해당 사항 없음|  

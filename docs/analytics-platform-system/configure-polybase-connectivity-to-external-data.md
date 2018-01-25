@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: "43"
-ms.openlocfilehash: 391b088af58f7c231d9d95e6940332f8f78dd1d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a10ada824b291e37e61a421882cf012c7b8ddc
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>외부 데이터 연결 PolyBase 구성
 Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연결 하려면 SQL Server PDW에서 PolyBase를 구성 하는 방법에 설명 합니다. PolyBase를 사용 하 여 Hadoop, Azure blob 저장소, SQL Server PDW를 비롯 한 여러 원본의 데이터를 통합 하는 쿼리를 실행 합니다.  
@@ -132,7 +132,35 @@ Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연�
 10. WASB에 연결 하려면 DNS 전달 기기에서 구성할도 필요 합니다. DNS 전달 구성 하려면 참조 [해결 비 어플라이언스 DNS 이름 &#40; DNS 전달자를 사용 하 여 분석 플랫폼 시스템 &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 이제 권한이 있는 사용자가 외부 데이터 원본, 외부 파일 형식을 외부 테이블을 만들 수 있습니다. 사용 하 여 이러한 Hadoop, 포함 하 여 여러 원본의 데이터를에서 통합할 Microsoft Azure blob 저장소 및 SQL Server PDW 합니다.  
+
+## <a name="kerberos-configuration"></a>Kerberos 구성  
+PolyBase가 Kerberos로 보호되는 클러스터에 인증하는 경우 hadoop.rpc.protection 설정을 인증으로 설정해야 합니다. 이렇게 하면 암호화되지 않은 Hadoop 노드 간의 데이터 통신이 유지됩니다. 
+
+ Kerberos로 보호되는 Hadoop 클러스터에 연결하려면 다음 단계를 수행합니다[MIT KDC 사용].
+   
   
+1.  에 제어 노드에 설치 경로에서 Hadoop 구성 디렉터리 찾기:  
+  
+    ```  
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```  
+  
+2.  아래 표에 나와 있는 구성 키의 Hadoop 쪽 구성 값을 찾습니다. 구성 파일은 Hadoop 컴퓨터의 Hadoop 구성 디렉터리에서 찾을 수 있습니다.  
+  
+3.  구성 값을 SQL Server 컴퓨터의 해당 파일 내 value 속성에 복사합니다.  
+  
+    |**#**|**구성 파일**|**구성 키**|**동작**|  
+    |------------|----------------|---------------------|----------|   
+    |1.|core-site.xml|polybase.kerberos.kdchost|KDC 호스트 이름을 지정합니다. 예를 들면 kerberos.your-realm.com과 같습니다.|  
+    |2|core-site.xml|polybase.kerberos.realm|Kerberos 영역을 지정합니다. 예를 들면 YOUR REALM.COM과 같습니다.|  
+    |3|core-site.xml|hadoop.security.authentication|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들면 KERBEROS와 같습니다.<br></br>**보안 정보:** KERBEROS는 대문자로 작성해야 합니다. 소문자로 작성되면 실행되지 않을 수 있습니다.|   
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: hdfs/_HOST@YOUR-REALM.COM|  
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: mapred/_HOST@YOUR-REALM.COM|  
+    |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들면 10.193.26.174:10020과 같습니다.|  
+    |7|yarn-site.xml yarn|yarn.resourcemanager.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: yarn/_HOST@YOUR-REALM.COM|  
+  
+4.  데이터베이스 범위 자격 증명 개체를 만들어 각 Hadoop 사용자에 대해 인증 정보를 지정합니다. [PolyBase T-SQL 개체](../relational-databases/polybase/polybase-t-sql-objects.md)를 참조하세요.  
+ 
 ## <a name="see-also"></a>관련 항목:  
 [어플라이언스 구성 &#40; 분석 플랫폼 시스템 &#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

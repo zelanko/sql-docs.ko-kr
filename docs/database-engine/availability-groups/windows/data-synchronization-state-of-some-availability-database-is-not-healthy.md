@@ -17,13 +17,13 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 63335ecaea193d8c420856879666fb1408ca4472
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 24a7ea125b40bdc453ddb12655fa047099540685
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |**범주**|**경고**|  
 |**패싯**|가용성 복제본|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 가용성 데이터베이스("데이터베이스 복제본"이라고도 함)의 데이터 동기화 상태를 확인합니다. 데이터 동기화 상태가 NOT SYNCHRONIZING이거나 동기 커밋 데이터베이스 복제본에 대한 상태가 SYNCHRONIZED 상태가 아닌 경우 정책은 비정상 상태에 있습니다.  
   
 > [!NOTE]  

@@ -17,22 +17,22 @@ helpviewer_keywords:
 - database snapshots [SQL Server], deleting
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a86dbd8133febc11c103a97515fe486a79726de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 941d0f44ca37d0b2e9b7df202b9650cf172dd352
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 삭제(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 스냅숏을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 스냅숏이 삭제되고 스냅숏에 사용된 스파스 파일도 삭제됩니다. 또한 데이터베이스 스냅숏에 대한 모든 사용자 연결이 종료됩니다.  
   
 ## <a name="security"></a>보안  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> Permissions  
  DROP DATABASE 권한을 가진 사용자는 누구든지 데이터베이스 스냅숏을 삭제할 수 있습니다.  
   
 ##  <a name="TsqlProcedure"></a> 데이터베이스 스냅숏을 삭제하는 방법(Transact-SQL 사용)  

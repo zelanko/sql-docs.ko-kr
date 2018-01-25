@@ -21,13 +21,13 @@ ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
 caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: edaa2f33cdf9a5e7d63279c27a5f559f0faaa42e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7aabe8faf813462c6e674c395b4e0f2c49d7d656
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>등록된 서버 또는 등록된 서버 그룹 이름 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹의 이름을 변경하는 방법에 대해 설명합니다. 이 이름은 언제든지 변경할 수 있습니다. 등록된 서버의 서버 이름을 변경하면 이름이 표시되는 방식만 변경됩니다. 다른 서버에 연결하려면 등록된 서버의 연결 속성을 편집해야 합니다.  

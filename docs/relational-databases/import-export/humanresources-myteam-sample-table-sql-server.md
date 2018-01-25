@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7c82b62908b8004c9ef93c77b5d980cb65b0787
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d1175f8be3cdd8ebf15227ea46ceca7180a44e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 예제 테이블(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [대량 데이터 가져오기 및 내보내기](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)의 코드 예제에는 **myTeam**이라는 특별한 용도의 테스트 테이블이 필요한 경우가 많습니다. 예제를 실행하기 전에 **데이터베이스의** HumanResources **스키마에서** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 만들어야 합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  **myTeam** 테이블에는 다음 열이 있습니다.  
   
-|열|데이터 형식|Null 허용 여부|설명|  
+|Column|데이터 형식|Null 허용 여부|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Null이 아님|행의 기본 키. 팀 멤버의 직원 ID|  
 |**이름**|**nvarchar(50)**|Null이 아님|팀 멤버의 이름|  

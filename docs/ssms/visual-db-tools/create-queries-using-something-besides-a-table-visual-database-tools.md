@@ -18,13 +18,13 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc1923dcca1052c3c0bcdc2d1ba9abfb7935803a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ac44c00dd2ffb0a37a4a7a53a33dbddb54df49f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>테이블 외의 항목을 사용하여 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 검색 쿼리를 작성할 때마다 원하는 열과 행, 쿼리 프로세서가 원래 데이터를 찾는 위치 등을 분명히 설정해야 합니다. 일반적으로 이 원래 데이터는 하나의 테이블 또는 함께 조인된 여러 테이블로 구성됩니다. 그러나 원래 데이터를 테이블 이외의 원본에서 가져올 수 있습니다. 실제로 테이블을 반환하는 사용자 정의 함수나 뷰, 쿼리 또는 동의어에서 가져올 수 있습니다.  

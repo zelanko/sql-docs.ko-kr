@@ -19,13 +19,13 @@ ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b67769fce7a6516e3bd8d0a76eb70ef3d0365d4a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2f2b52243f94686b1132988d588bf901db09c7c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>데이터베이스 미러링 - 아웃바운드 연결에 대한 인증서 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 아웃바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계를 설명합니다. 아웃바운드 연결을 구성한 후 인바운드 연결을 설정할 수 있습니다.  

@@ -18,12 +18,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 571f4f13be8ddcfaf2bd1b4d649df0ef09ba6bfc
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+manager: craigg
+ms.openlocfilehash: 5a23b32644a51bf4e46cab280c7d382d2cb1c786
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 Server Core 설치에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성하는 방법에 대한 자세한 내용을 다룹니다.  
@@ -229,7 +229,7 @@ $Tcp
   
  항목에 지정된 구문 [SQLdiag Utility](../../tools/sqldiag-utility.md)을(를) 사용하여 Server Core의 관리자 명령 프롬프트에서 유틸리티를 시작할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Server Core에 SQL Server 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
  [설치 방법 도움말 항목](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   

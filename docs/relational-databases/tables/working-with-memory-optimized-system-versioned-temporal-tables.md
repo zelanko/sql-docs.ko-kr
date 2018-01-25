@@ -15,13 +15,13 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 caps.latest.revision: "12"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 062d09f13c7d28eb84686a007b9cb9a589f6ac65
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ea705b42888012fada9d9c17ee9db7282455731
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

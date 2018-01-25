@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 변경 로그는 [SQL Server Data Tools(SSDT)](download-sql-server-data-tools-ssdt.md)용입니다.  
@@ -251,7 +251,6 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 - SSIS가 지역화되지 않았습니다.
 - SSIS 패키지 실행 태스크는 *ExecuteOutofProcess*가 *True*로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
 - 전체 변경 내용 목록은 [변경 로그](changelog-for-sql-server-data-tools-ssdt.md)를 참조하세요.
-- 문제 보고는 [SSDT Connect 피드백](https://connect.microsoft.com/SQLServer/Feedback) 사이트를 이용하세요.
 - 타사 확장을 포함하는 SSIS 패키지는 다른 서버 버전을 대상으로 하도록 전환할 수 없습니다.
 
 

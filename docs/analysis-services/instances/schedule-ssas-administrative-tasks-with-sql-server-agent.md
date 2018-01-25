@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4d2bc32eb76882c00b411e7eff81fd3cf5b45b77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d8872cadbcbd7da67212fa26417ac66debc5f79c
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]SQL Server 에이전트 서비스를 사용 하면 예약할 수 있습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리 작업을 실행 및 시간 순서에 필요 합니다. 예약된 태스크를 사용하면 정기적으로 또는 예측 가능한 주기에 따라 프로세스가 자동으로 실행되도록 할 수 있습니다. 비즈니스 활동을 수행하지 않는 시간 동안 큐브 처리 등의 관리 태스크가 실행되도록 예약할 수 있습니다. 또한 SQL Server 에이전트 작업 내에 작업 단계를 만들어 태스크 실행 순서를 지정할 수 있습니다. 예를 들어 큐브를 처리한 다음 큐브 백업을 수행할 수 있습니다.  
@@ -30,10 +30,10 @@ ms.lasthandoff: 01/08/2018
   
  이 항목은 SQL Server 에이전트를 사용하여 XMLA 스크립트를 실행하는 두 가지 방법을 보여 주는 연습입니다. 첫 번째 예에서는 1차원 처리를 예약하는 방법을 보여 줍니다. 예 2에서는 처리 태스크를 일정대로 실행되는 단일 스크립트에 결합하는 방법을 보여 줍니다. 이 연습을 완료하려면 다음 사전 요구 사항을 충족해야 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  SQL Server 에이전트 서비스가 설치되어 있어야 합니다.  
   
- 기본적으로 서비스 계정으로 작업이 실행됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQL Server 에이전트용 기본 계정은 NT Service\SQLAgent$\<인스턴스 이름 >. 백업 또는 처리 태스크를 수행하려면 이 계정이 Analysis Services 인스턴스의 시스템 관리자여야 합니다. 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조하세요.  
+ 기본적으로 서비스 계정으로 작업이 실행됩니다. SQL Server 에이전트용 기본 계정은 NT Service\SQLAgent$\<인스턴스 이름 >. 백업 또는 처리 태스크를 수행하려면 이 계정이 Analysis Services 인스턴스의 시스템 관리자여야 합니다. 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조하세요.  
   
  또한 작업에 사용할 테스트 데이터베이스가 있어야 합니다. AdventureWorks 다차원 예제 데이터베이스나 Analysis Services 다차원 자습서에 있는 프로젝트를 배포하여 이 연습에서 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](../../analysis-services/install-sample-data-and-projects.md)을(를) 참조하세요.  
   

@@ -18,13 +18,13 @@ ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa038800133fb48bb16d73a0fb73dbf000ed8d86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e13dc3712d55ec542cdb783ec3482127c527638
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>열 선택 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 데이터베이스 다이어그램에서 테이블에 대한 사용자 지정 보기를 변경할 수 있습니다. 사용자 지정 보기에는 사용자가 지정한 열 속성만 표시됩니다.  

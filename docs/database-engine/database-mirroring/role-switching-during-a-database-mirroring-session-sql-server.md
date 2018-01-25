@@ -24,13 +24,13 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61c067e2ece8cc222a281e48ebfa9026c48f9ae9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 93d9b6b359098577dfec9f7ba02b3c0e4d0de46d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 중 역할 전환(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 미러링 세션에서는 *역할 전환* 프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다. 역할 전환 시 미러 서버는 주 서버에 대한 *장애 조치(Failover) 파트너* 역할을 하며 주 역할을 넘겨 받아 해당 데이터베이스 복사본을 복원하고 새로운 주 데이터베이스로 사용할 수 있도록 온라인 상태로 만듭니다. 이전 주 서버는 가능할 경우 미러 서버 역할을 맡으며 이 서버의 데이터베이스는 새 미러 데이터베이스가 됩니다. 여러 오류에 대한 응답이나 관리 용도로 역할이 전환될 수 있습니다.  
@@ -73,9 +73,9 @@ ms.lasthandoff: 11/20/2017
   
 ||성능 우선|미러링 모니터 서버가 없는 보안 우선 모드|미러링 모니터 서버가 있는 보안 우선 모드|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|자동 장애 조치(Failover)|아니요|아니요|예|  
-|수동 장애 조치(Failover)|아니요|예|예|  
-|강제 서비스|예|예|아니요|  
+|자동 장애 조치(automatic failover)|아니오|아니오|예|  
+|수동 장애 조치(manual failover)|아니오|예|예|  
+|강제 서비스|예|예|아니오|  
   
  역할 전환 후 모든 데이터베이스 사용자가 새로운 주 데이터베이스에 액세스할 수 있게 하려면 특정 메타데이터가 두 파트너에 모두 있어야 합니다. 또한 데이터베이스가 정기적인 일정에 따라 계속 백업되게 하려면 새로운 주 서버에서 백업 작업을 만들어야 합니다. 자세한 내용은 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   

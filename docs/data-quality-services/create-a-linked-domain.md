@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 898177d27b1c580d8cf40f6d2966ab91c7b01733
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-linked-domain"></a>연결된 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 연결된 도메인을 만드는 방법에 대해 설명합니다. 이전의 다른 기존 도메인에서 연결된 도메인을 만들고 해당 도메인의 모든 값, 규칙 및 속성을 상속(이름 및 설명 제외)할 수 있습니다. 연결된 도메인 집합을 하나로 관리할 수 있습니다. 하나의 도메인을 다른 도메인에 연결하여 다른 도메인의 콘텐츠를 상속하는 도메인을 만들 수 있습니다.  
@@ -40,12 +40,12 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  연결된 도메인을 만들려면 연결할 기존 도메인과 기술 자료가 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  연결된 도메인을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Create"></a> 연결된 도메인 만들기  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  필요한 경우 도메인 속성 탭에서 연결된 도메인의 이름 또는 설명을 변경할 수 있습니다.  
   
-7.  **마침** 을 클릭하여 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

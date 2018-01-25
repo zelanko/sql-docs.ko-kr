@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Always On 가용성 그룹 자동 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2016에서는 가용성 그룹의 자동 시드를 도입했습니다
 
 자세한 내용은 [보조 복제본에 대한 자동 시드](automatic-seeding-secondary-replicas.md)를 참조하세요.
  
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 SQL Server 2016에서 자동 시드를 사용하려면 데이터 및 로그 파일 경로가 가용성 그룹에 참여하는 모든 SQL Server 인스턴스에서 동일해야 합니다. SQL Server 2017에서는 다른 경로를 사용할 수 있지만 모든 복제본이 하나의 플랫폼에 호스트된 경우에는 동일한 경로를 사용하는 것이 좋습니다. 복제본에 대한 플랫폼 간 가용성 그룹의 경로는 모두 다릅니다. 자세한 내용은 [디스크 레이아웃](automatic-seeding-secondary-replicas.md#disklayout)을 참조하세요.
 
@@ -150,7 +150,7 @@ GO
 
 **sys.dm_hadr_automatic_seeding** 
 
-주 복제본에서 `sys.dm_hadr_automatic_seeding` 을 쿼리하여 자동 시드 프로세스의 상태를 확인합니다. 뷰는 각 시드 프로세스당 한 행을 반환합니다. 예를 들어
+주 복제본에서 `sys.dm_hadr_automatic_seeding` 을 쿼리하여 자동 시드 프로세스의 상태를 확인합니다. 뷰는 각 시드 프로세스당 한 행을 반환합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
 SELECT start_time, 
@@ -215,7 +215,7 @@ GO
 
 다음 표에는 자동 시드와 관련된 확장 이벤트가 나열되어 있습니다. 
 
-| 이름 | 설명|
+| 속성 | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  시드 요청 메시지입니다.
 |hadr_physical_seeding_backup_state_change |    물리적 시드 백업 관련 상태 변경입니다.
@@ -236,7 +236,7 @@ GO
 
 **자동 시드 중 모니터링**
 
-현재 실행 중인 자동 시드 프로세스를 위해 `sys.dm_hadr_physical_seeding_stats` 를 쿼리합니다. 뷰는 각 데이터베이스에 대해 하나의 행을 반환합니다. 예를 들어
+현재 실행 중인 자동 시드 프로세스를 위해 `sys.dm_hadr_physical_seeding_stats` 를 쿼리합니다. 뷰는 각 데이터베이스에 대해 하나의 행을 반환합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
 SELECT local_database_name, 

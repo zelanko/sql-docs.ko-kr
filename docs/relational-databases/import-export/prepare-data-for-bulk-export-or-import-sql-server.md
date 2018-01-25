@@ -19,15 +19,15 @@ helpviewer_keywords:
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3cc0c7470798c53ebf81c885c29de3fc59c8f064
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 906bb6398ac67e0424d85aa1fba4f2b1d886f5aa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>대량 내보내기 또는 가져오기를 위한 데이터 준비(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  전체 파일이 아니라 데이터 파일에서 가져올 행의 하위 집합을 지정하려면 **-F** *first_row* 스위치 및/또는 **-L** *last_row* 스위치와 함께 **bcp** 명령을 사용할 수 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
   
--   고정 길이 또는 고정 너비 필드가 있는 데이터 파일에서 데이터를 가져오려면 서식 파일을 사용합니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)을 참조하세요.  
+-   고정 길이 또는 고정 너비 필드가 있는 데이터 파일에서 데이터를 가져오려면 서식 파일을 사용합니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
   
 -   CSV(쉼표로 구분된 값) 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 가져오기 작업에서 지원되지 않습니다. 그러나 경우에 따라 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 대량으로 가져오기 위한 데이터 파일로 CSV(쉼표로 구분된 값) 파일이 사용될 수 있습니다. CSV 파일의 필드 종결자로는 쉼표 이외에 다른 문자도 사용될 수 있습니다. 대량 가져오기를 위한 데이터 파일로 사용하려면 CSV 파일이 다음 제한 사항을 충족해야 합니다.  
   

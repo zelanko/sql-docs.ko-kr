@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Internet [SQL Server replication], security
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c2ef09b09e2505d8771d5e16d7b9bea9b97308b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85ab9523752bc1f72c1535cc00e51e50dbac946e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-security-best-practices"></a>복제 보안을 위한 최선의 구현 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 단일 도메인의 인트라넷에서부터 트러스트되지 않은 도메인 간이나 인터넷을 통해 데이터에 액세스하는 응용 프로그램에 이르기까지의 분산 환경에서 복제는 데이터를 이동합니다. 따라서 이러한 다양한 환경에서 복제 연결의 보안을 유지하는 최선의 방법을 이해하는 것이 중요합니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   각 복제 에이전트를 서로 다른 Windows 계정으로 실행하고 모든 복제 에이전트 연결에 Windows 인증을 사용합니다. 계정 지정에 대한 자세한 내용은 [복제의 로그인 및 암호 관리](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)를 참조하세요.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증이 필요한 환경에서는 UNC 스냅숏 공유에 액세스할 수 없는 경우가 많습니다. 예를 들어 방화벽에서 액세스를 차단할 수 있습니다. 이 경우 FTP(파일 전송 프로토콜)를 통해 스냅숏을 구독자에게 전송할 수 있습니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [인터넷을 통한 복제](../../../relational-databases/replication/replication-over-the-internet.md)   
  [구독자 보안 설정](../../../relational-databases/replication/security/secure-the-subscriber.md)   

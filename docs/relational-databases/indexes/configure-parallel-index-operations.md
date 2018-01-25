@@ -19,15 +19,15 @@ helpviewer_keywords:
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53114677b0aa3635e4c031c4b24309bcb7b4ab9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f6d408cdf02885ce9d3ec56a228bc9341cc7776
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-parallel-index-operations"></a>병렬 인덱스 작업 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 -   MAXDOP 인덱스 옵션을 지정한 쿼리에 대해서만 max degree of parallelism 구성 옵션이 무시됩니다. 다음 표에서는 최대 병렬 처리 수준 구성 옵션 및 MAXDOP 인덱스 옵션에 지정할 수 있는 유효한 정수 값을 보여 줍니다.  
   
-    |값|설명|  
+    |값|Description|  
     |-----------|-----------------|  
     |0|서버가 현재 시스템 작업에 따라 사용되는 CPU의 수를 결정하도록 지정합니다. 이 값은 기본값이며 권장 설정입니다.|  
     |1|병렬 계획이 생성되지 않습니다. 작업이 직렬로 실행됩니다.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

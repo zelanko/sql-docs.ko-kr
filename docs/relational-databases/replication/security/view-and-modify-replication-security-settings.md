@@ -19,22 +19,22 @@ helpviewer_keywords:
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1982ed9a207dad495d6e9e8555785a9260498cc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 811b1d9e9ccc5d561ddc45b9b3c9e9c87443a27d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-replication-security-settings"></a>복제 보안 설정 보기 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 복제 보안 설정을 보고 수정하는 방법에 대해 설명합니다. 예를 들어 게시자에 대한 로그 판독기 에이전트의 연결을 SQL Server 인증에서 Windows 통합 인증으로 변경해야 하거나 Windows 계정 암호가 변경되었을 때 에이전트 작업을 실행하는 데 사용된 자격 증명을 변경해야 할 경우가 있습니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
--   **후속 작업:**  [복제 보안 설정 수정 후](#FollowUp)  
+-   **Follow Up:**  [After you modify replication security settings](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -61,14 +61,14 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> 보안  
  보안을 위해 암호의 실제 값은 복제 저장 프로시저에 의해 반환된 결과 집합에서 마스킹됩니다.  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  다음 대화 상자에서 보안 설정을 확인하고 수정합니다.  
   
 1.  **의** 복제 **폴더에서 사용할 수 있는** 복제 암호 업데이트 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. 복제 토폴로지의 서버에서 Windows 계정이나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 계정의 암호를 변경할 경우 해당 계정을 사용하는 각 에이전트의 암호를 업데이트하지 말고 이 대화 상자를 사용하세요. 두 개 이상의 서버에 있는 에이전트에서 같은 계정을 사용할 경우 각 서버에 연결하고 암호를 변경해야 합니다. 해당 암호를 사용하는 복제가 있는 모든 위치에서 암호가 업데이트됩니다. 연결된 서버와 같은 다른 위치에서는 암호가 업데이트되지 않습니다.  
   
-2.  **게시 속성 - \<Publication>** 대화 상자의 **에이전트 보안** 페이지. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+2.  **게시 속성 - \<Publication>** 대화 상자의 **에이전트 보안** 페이지. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 3.  **구독 속성 - \<Subscription>** 대화 상자. 이 대화 상자에 액세스하는 방법은 [밀어넣기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>하나 이상의 에이전트에서 사용하는 계정의 암호를 변경하려면  
   
-1.  SQL Server 계정을 사용하는 경우 이 대화 상자에서 SQL Server 계정 암호도 변경합니다. Windows 계정을 사용하는 경우에는 Windows에서 해당 암호부터 변경합니다. 자세한 내용은 Windows 설명서를 참조하세요.  
+1.  SQL Server 계정을 사용하는 경우 이 대화 상자에서 SQL Server 계정 암호도 변경합니다. Windows 계정을 사용하는 경우에는 Windows에서 해당 암호부터 변경합니다. 자세한 내용은 Windows 설명서를 참조하십시오.  
   
     > [!NOTE]  
     >  복제 암호를 변경한 후 해당 암호를 사용하는 각 에이전트를 중지한 다음 다시 시작해야 에이전트에 변경 내용이 적용됩니다.  
@@ -575,8 +575,8 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="FollowUp"></a> 후속 작업: 복제 보안 설정 수정 후  
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 관리 개체 개념](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>참고 항목  
+ [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [복제의 로그인 및 암호 관리](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)   

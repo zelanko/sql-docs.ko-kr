@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5db547f298e2987b8686ec86b3d228287ab0697c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95942267f871946f402f2261d4a5dc0cd1873256
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="web-synchronization-for-merge-replication"></a>병합 복제에 대한 웹 동기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 병합 복제에 대한 웹 동기화를 사용하면 HTTPS 프로토콜을 사용하여 데이터를 복제할 수 있으며 다음 시나리오에서도 유용합니다.  
@@ -86,8 +86,8 @@ ms.lasthandoff: 11/17/2017
   
 3.  그러면 구독자의 병합 에이전트가 이 HTTPS 응답을 수락하고 다운로드한 변경 내용을 구독 데이터베이스에 적용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)   
+## <a name="see-also"></a>참고 항목  
+ [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

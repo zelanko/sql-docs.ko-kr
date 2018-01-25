@@ -15,13 +15,13 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: "23"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42d859148c12bcc83c3f6961b69385a390431f20
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41c64af6ffe805d6b0b92ffde0c7057a7cd2abca
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  데이터 보존 기간을 결정하고 나면 그 다음으로 기록 데이터 저장 방법과 저장 위치, 그리고 요구되는 보존 기간보다 오래된 기록 데이터를 삭제하는 방법 등 기록 데이터를 관리하기 위한 계획을 개발합니다. 다음 네 가지 방법으로 임시 기록 테이블에서 기록 데이터를 관리할 수 있습니다.  
   
--   [스트레치 데이터베이스](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
+-   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
 -   [테이블 분할](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)  
   
@@ -51,13 +51,13 @@ ms.lasthandoff: 11/17/2017
   
 > **참고:**  이 항목의 예제에서는 이 [임시 테이블 예제](creating-a-system-versioned-temporal-table.md)를 사용합니다.  
   
-## <a name="using-stretch-database-approach"></a>스트레치 데이터베이스 접근 방식 사용  
+## <a name="using-stretch-database-approach"></a>Stretch Database 접근 방식 사용  
   
 > **참고:**  Stretch Database 접근 방식 사용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.  
   
  [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md) 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Azure로 기록 데이터를 투명하게 마이그레이션합니다. 추가 보안을 위해 SQL Server의 [항상 암호화](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 기능을 사용하여 동작에 대한 데이터를 암호화할 수 있습니다. 또한 데이터 보호를 위해 [행 수준 보안](../../relational-databases/security/row-level-security.md) 및 기타 고급 SQL Server 보안 기능을 임시 및 스트레치 데이터베이스와 함께 사용할 수 있습니다.  
   
- 스트레치 데이터베이스 접근 방식을 사용하면 기록 데이터 일부 또는 전체를 Azure에 스트레치할 수 있으며 SQL Server에서 Azure로 기록 데이터를 자동으로 옮깁니다. 기록 테이블에서 스트레치를 사용하도록 설정한다고 해서 데이터 수정 및 임시 쿼리 측면에서 temporal 테이블을 조작하는 방식이 변경되는 것은 아닙니다.  
+ Stretch Database 접근 방식을 사용하면 기록 데이터 일부 또는 전체를 Azure에 스트레치할 수 있으며 SQL Server에서 Azure로 기록 데이터를 자동으로 옮깁니다. 기록 테이블에서 스트레치를 사용하도록 설정한다고 해서 데이터 수정 및 임시 쿼리 측면에서 temporal 테이블을 조작하는 방식이 변경되는 것은 아닙니다.  
   
 -   **전체 기록 테이블 스트레치:** 주 시나리오에서 기록 데이터에서 데이터 변경 빈도가 높은 반면 쿼리는 상대적으로 드문 환경에서 데이터 감사를 수행할 경우 전체 기록 테이블에 대해 스트레치 데이터베이스를 구성합니다.  즉, 임시 쿼리 작업의 성능이 중요하지 않은 경우 이 방법을 사용합니다. 이 경우 Azure에서 제공하는 비용 효율성이 매력적일 수 있습니다.   
     전체 기록 테이블을 스트레치할 때 스트레치 마법사 또는 TRANSACT-SQL을 사용할 수 있습니다. 두 방법에 대한 예는 아래에 표시됩니다.  
@@ -352,7 +352,7 @@ COMMIT TRANSACTION
  결론: 슬라이딩 파티션에서 RANGE LEFT를 사용하면 파티션 관리가 훨씬 간단해지고 데이터 이동이 발생하지 않습니다. 하지만 RANGE RIGHT를 사용하여 파티션 경계를 정의하는 것이 datetime 시간 틱 문제를 처리하지 않아도 되므로 좀 더 간단합니다.  
   
 ## <a name="using-custom-cleanup-script-approach"></a>사용자 지정 정리 스크립트 방식 사용  
- 스트레치 데이터베이스 및 테이블 분할 방식이 실행 가능한 옵션이 아닐 경우 세 번째로 사용자 지정 정리 스크립트를 사용하여 기록 데이터에서 데이터를 삭제하는 방법이 있습니다. **SYSTEM_VERSIONING = OFF**일 경우에만 기록 테이블에서 데이터를 삭제할 수 있습니다. 데이터 불일치를 방지하기 위해서는 유지 관리 창(데이터 수정 작업이 활성 상태가 아닌 경우) 또는 트랜잭션(효율적으로 다른 작업 차단) 내에서 정리를 수행해야 합니다.  이 작업을 수행하려면 현재 및 기록 테이블에 **CONTROL** 권한이 있어야 합니다.  
+ Stretch Database 및 테이블 분할 방식이 실행 가능한 옵션이 아닐 경우 세 번째로 사용자 지정 정리 스크립트를 사용하여 기록 데이터에서 데이터를 삭제하는 방법이 있습니다. **SYSTEM_VERSIONING = OFF**일 경우에만 기록 테이블에서 데이터를 삭제할 수 있습니다. 데이터 불일치를 방지하기 위해서는 유지 관리 창(데이터 수정 작업이 활성 상태가 아닌 경우) 또는 트랜잭션(효율적으로 다른 작업 차단) 내에서 정리를 수행해야 합니다.  이 작업을 수행하려면 현재 및 기록 테이블에 **CONTROL** 권한이 있어야 합니다.  
   
  일반 응용 프로그램 및 사용자 쿼리를 최소한으로 차단하려면 트랜잭션 내에서 정리 스크립트를 수행할 때 지연을 두고 더 작은 청크로 데이터를 삭제합니다. 모든 시나리오에서 삭제할 각 데이터 청크에 적합한 크기는 없지만 단일 트랜잭션에서 10,000개 이상의 행을 삭제하면 상당한 영향을 미칠 수 있습니다.  
   
@@ -500,7 +500,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 자세한 내용은 [보존 정책을 사용하여 임시 테이블에서 기록 데이터 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)를 참조하세요.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [임시 테이블](../../relational-databases/tables/temporal-tables.md)   
  [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [임시 테이블 시스템 일관성 검사](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

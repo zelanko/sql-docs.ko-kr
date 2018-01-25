@@ -20,13 +20,13 @@ ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: de1ec0766f78a6008f0f0fabcae9870e5f67c762
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: abc94b43ffca65db5e37f32a8efd707f2b142042
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>로그 전달 보고서 보기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 트랜잭션 로그 전달 상태 보고서를 보는 방법을 설명합니다. 모니터 서버, 주 서버 또는 보조 서버에서 상태 보고서를 실행할 수 있습니다. 로그 전달 구성에 대해 가장 완전한 정보를 보려면 모니터 서버 인스턴스에서 보고서를 보십시오.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
  현재 서버 인스턴스에서 수행하는 각 역할에 대해 다음 정보를 볼 수 있습니다.  
   
-|역할|표시되는 정보|  
+|Role|표시되는 정보|  
 |----------|---------------------------|  
 |모니터|이 서버 인스턴스를 모니터 서버로 사용하는 모든 주 서버 및 보조 서버의 이름과 상태|  
 |주|주 데이터베이스 각각에 대한 주 데이터베이스 이름 및 주 서버로서 현재 서버 인스턴스의 상태와 이름. 보고서에는 주 서버에 로컬로 저장되어 있는 백업 작업의 상태가 표시됩니다.<br /><br /> 보고서에는 해당되는 각 보조 서버에 대한 행도 포함됩니다. 구성에서 모니터 서버를 사용하고 저장 프로시저가 모니터에 연결할 수 있으면 이러한 행에 최신 로그 백업의 복사 상태 및 복원 상태가 표시됩니다.|  

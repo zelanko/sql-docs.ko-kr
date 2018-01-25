@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c5a83f9a773f2d0894ed0ed7e4b11e3c7384d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d60d2059230ed74f72ef4e5ad7f32a3f91aa40b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, User Settable 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **User Settable** 개체를 사용하면 사용자 지정 카운터 인스턴스를 만들 수 있습니다. 사용자 지정 카운터 인스턴스를 사용하여 사용자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 고유한 구성 요소 같이 기존 카운터로 모니터링할 수 없는 서버 측면(예: 로그된 고객의 주문 수나 제품 정보)를 모니터링할 수 있습니다.  
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/17/2017
   
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** 개체에 대해 설명합니다.  
   
-|SQL Server User Settable 카운터|설명|  
+|SQL Server User Settable 카운터|Description|  
 |---------------------------------------|-----------------|  
-|**Query**|**User Settable** 개체는 쿼리 카운터를 포함합니다. 사용자는 쿼리 개체에서 **사용자 카운터** 를 구성합니다.|  
+|**쿼리**|**User Settable** 개체는 쿼리 카운터를 포함합니다. 사용자는 쿼리 개체에서 **사용자 카운터** 를 구성합니다.|  
   
  이 표에서는 **Query** 카운터의 **인스턴스** 에 대해 설명합니다.  
   
-|쿼리 카운터 인스턴스|설명|  
+|쿼리 카운터 인스턴스|Description|  
 |-----------------------------|-----------------|  
 |**사용자 카운터 1**|**sp_user_counter1**을 사용하여 정의합니다.|  
 |**사용자 카운터 2**|**sp_user_counter2**를 사용하여 정의합니다.|  

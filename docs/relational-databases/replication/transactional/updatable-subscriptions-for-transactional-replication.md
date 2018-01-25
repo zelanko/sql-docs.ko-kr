@@ -20,15 +20,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d146aaae7ef0a3e033deb1fb3a3cc51b49663abc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a31fed7f22953170b443c42b6394786e6fa9a60e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>트랜잭션 복제를 위한 업데이트 가능 구독
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
  **업데이트 모드를 전환하려면**  
   
- 업데이트 모드를 전환하려면 이 두 업데이트 모드에 대한 게시와 구독을 설정한 다음 필요에 따라 모드를 전환합니다. 자세한 내용은  
+ 업데이트 모드를 전환하려면 이 두 업데이트 모드에 대한 게시와 구독을 설정한 다음 필요에 따라 모드를 전환합니다. 자세한 내용은 다음을 참조하세요.  
 [Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)을 참조하세요.  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>업데이트할 수 있는 구독 사용 시 고려 사항  
@@ -130,8 +130,8 @@ ms.lasthandoff: 11/17/2017
   
     -   충돌이 예상되는 경우에는 "구독자 내용 적용" 충돌 해결 사용 시 게시자나 구독자에서 외래 키 제약 조건을 사용해서는 안 되며 "게시자 내용 적용" 충돌 해결 사용 시 구독자에서 외래 키 제약 조건을 사용해서는 안 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [피어 투 피어 트랜잭션 복제](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>참고 항목  
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [트랜잭션 복제에 대한 게시 유형](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
  [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)  

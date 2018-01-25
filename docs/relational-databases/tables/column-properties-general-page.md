@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 141f7fb3b0645ccc32fbee78fa40c403afad5726
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3087497e8c3757002bc6b80556499ad7c096d51c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="column-properties-general-page"></a>열 속성(일반 페이지)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
  이 페이지의 정보는 읽기 전용입니다. 열을 수정하려면 **열 속성** 대화 상자를 닫고, 개체 탐색기에서 테이블과 열을 확장하고, 열을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **이름**  
  열 이름입니다.  
   

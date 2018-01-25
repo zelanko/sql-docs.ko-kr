@@ -22,13 +22,13 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b605fdc999d3b0bb8937428e7b158322d182d839
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
 |-|-------------------------|-------------------------------------------|  
 |**WSFC 클러스터 사용**|예|예|  
 |**보호 수준**|인스턴스|데이터베이스|  
-|**저장소 유형**|공유됨|공유되지 않음<br /><br /> 가용성 그룹의 복제본은 저장소를 공유하지 않는 반면 FCI가 호스팅하는 복제본은 해당 FCI가 요구하는 대로 공유 저장소 솔루션을 사용합니다. 저장소 솔루션은 FCI 내 노드에 의해서만 공유되고 가용성 그룹의 복제본 사이에서는 공유되지 않습니다.|  
+|**저장소 유형**|Shared|공유되지 않음<br /><br /> 가용성 그룹의 복제본은 저장소를 공유하지 않는 반면 FCI가 호스팅하는 복제본은 해당 FCI가 요구하는 대로 공유 저장소 솔루션을 사용합니다. 저장소 솔루션은 FCI 내 노드에 의해서만 공유되고 가용성 그룹의 복제본 사이에서는 공유되지 않습니다.|  
 |**저장소 솔루션**|직접 연결됨, SAN, 탑재 지점, SMB|노드 유형에 따라 다름|  
 |**읽기 가능한 보조 복제본**|아니요*|예|  
 |**적용할 수 있는 장애 조치(Failover) 정책 설정**|WSFC 쿼럼<br /><br /> FCI별<br /><br /> 가용성 그룹 설정**|WSFC 쿼럼<br /><br /> 가용성 그룹 설정|  

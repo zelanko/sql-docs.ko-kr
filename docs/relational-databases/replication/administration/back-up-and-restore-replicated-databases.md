@@ -28,15 +28,15 @@ helpviewer_keywords:
 - administering replication, backing up
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 243459d70d4e813fc3b476d48cb981b565725073
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5182b97a9b8a0915d53a94bdf7ad716617b29006
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>복제된 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  어떤 복구 전략을 사용하는지에 관계없이 항상 현재 복제 설정 스크립트를 안전한 위치에 보관해야 합니다. 서버에 오류가 발생하거나 테스트 환경을 설정해야 할 때는 서버 이름 참조를 변경하여 스크립트를 수정하고 이를 사용하여 복제 설정을 다시 만들 수 있습니다. 현재 복제 설정을 스크립팅할 뿐만 아니라 복제의 활성화 및 비활성화도 스크립팅해야 합니다. 복제 개체 스크립팅에 대한 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   

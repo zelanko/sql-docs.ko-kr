@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filestream access level
 ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82c17104c43118a62fe3ca1c87db97479bffee4e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b51b1bd6fb8a3dbfac6ae6fe1c5dd97b9902caf6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,6 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 구성 - Filestream](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)   
- [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)  
+ [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
   
   

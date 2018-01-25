@@ -22,30 +22,30 @@ helpviewer_keywords:
 - clr strict security option
 ms.assetid: 
 caps.latest.revision: "0"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4902f0cbbdef0f7c684d154aad3bc896d138228b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01eebbd834d8c1877743f65220af48dd23739f94
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="clr-strict-security"></a>CLR 엄격한 보안   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` 권한의 해석을 제어합니다.   
 
-|값 |설명 | 
+|값 |Description | 
 |----- |----- | 
 |0 |Disabled - 이전 버전과의 호환성을 위해 제공됩니다. `Disabled` 값은 사용하지 않는 것이 좋습니다. | 
-|1. |Enabled - [!INCLUDE[ssde-md](../../includes/ssde-md.md)]에서 어셈블리에 대한 `PERMISSION_SET` 정보를 무시하도록 하고 항상 `UNSAFE`로 해석합니다.  `Enabled`는 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]에 대한 기본값입니다. | 
+|1 |Enabled - [!INCLUDE[ssde-md](../../includes/ssde-md.md)]에서 어셈블리에 대한 `PERMISSION_SET` 정보를 무시하도록 하고 항상 `UNSAFE`로 해석합니다.  `Enabled`는 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]에 대한 기본값입니다. | 
 
 >  [!WARNING]
 >  CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자는 데이터베이스 엔진에서 신뢰해야 하는 어셈블리 목록에 어셈블리를 추가할 수도 있습니다. 자세한 내용은 [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)를 참조하세요.
 
-## <a name="remarks"></a>주의   
+## <a name="remarks"></a>Remarks   
 
 사용하도록 설정되면 `CREATE ASSEMBLY` 및 `ALTER ASSEMBLY` 문의 `PERMISSION_SET` 옵션은 런타임에서 무시되지만 `PERMISSION_SET` 옵션은 메타데이터에서 유지됩니다. 이 옵션을 무시하면 기존 코드 문의 중단을 최소화합니다.
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 >  [!IMPORTANT]  
 >  strict security(엄격한 보안)를 사용하도록 설정하면 서명되지 않은 어셈블리는 로드되지 않습니다. 서버에 대한 `UNSAFE ASSEMBLY` 권한이 있는 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명되도록 각 어셈블리를 변경하거나 삭제한 다음 다시 만들어야 합니다.
 
-## <a name="permissions"></a>Permissions 
+## <a name="permissions"></a>사용 권한 
 
 ### <a name="to-change-this-option"></a>이 옵션을 변경하려면,  
 `CONTROL SERVER` 권한 또는 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다.
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   - 데이터베이스는 `ON`으로 설정된 `TRUSTWORTHY` 속성을 가지고 있고 서버에 대한 `UNSAFE ASSEMBLY` 권한이 있는 로그인으로 소유됩니다. 이 방법은 권장되지 않습니다.  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

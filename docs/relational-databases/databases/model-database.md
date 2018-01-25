@@ -17,15 +17,15 @@ helpviewer_keywords:
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f012597cacaf7058b8463183c5c20c1fa042a37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6733a6d7440071e655004df7dc7926b33503ed1b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="model-database"></a>model 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **model** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 생성된 모든 데이터베이스에 대한 템플릿으로 사용됩니다. **을(를) 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 생성되기 때문에 **model** 데이터베이스는 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 있어야 합니다. 데이터베이스 옵션을 포함한 **model** 데이터베이스의 전체 내용이 새 데이터베이스에 복사됩니다. 또한 **model** 의 일부 설정이 시작되는 동안 새 **tempdb** 를 만드는 데 사용되므로 **시스템에 항상** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 있어야 합니다.  
@@ -68,15 +68,15 @@ ms.lasthandoff: 11/17/2017
 |AUTO_SHRINK|OFF|예|  
 |AUTO_UPDATE_STATISTICS|ON|예|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
-|CHANGE_TRACKING|OFF|아니요|  
+|CHANGE_TRACKING|OFF|아니오|  
 |CONCAT_NULL_YIELDS_NULL|OFF|예|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|예|  
 |CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 예<br /><br /> 예|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 예<br /><br /> 예|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|예|  
-|DB_CHAINING|OFF|아니요|  
-|ENCRYPTION|OFF|아니요|  
-|MIXED_PAGE_ALLOCATION|ON|아니요|  
+|DB_CHAINING|OFF|아니오|  
+|ENCRYPTION|OFF|아니오|  
+|MIXED_PAGE_ALLOCATION|ON|아니오|  
 |NUMERIC_ROUNDABORT|OFF|예|  
 |PAGE_VERIFY|CHECKSUM|예|  
 |PARAMETERIZATION|SIMPLE|예|  
@@ -84,14 +84,14 @@ ms.lasthandoff: 11/17/2017
 |READ_COMMITTED_SNAPSHOT|OFF|예|  
 |RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 다름*|예|  
 |RECURSIVE_TRIGGERS|OFF|예|  
-|Service Broker 옵션|DISABLE_BROKER|아니요|  
-|TRUSTWORTHY|OFF|아니요|  
+|Service Broker 옵션|DISABLE_BROKER|아니오|  
+|TRUSTWORTHY|OFF|아니오|  
   
  *데이터베이스의 현재 복구 모델을 확인하려면 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 또는 [sys.databases&#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)를 참조하세요.  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
-## <a name="restrictions"></a>제한 사항  
+## <a name="restrictions"></a>Restrictions  
  **model** 데이터베이스에서는 다음 작업을 수행할 수 없습니다.  
   
 -   파일이나 파일 그룹 추가  

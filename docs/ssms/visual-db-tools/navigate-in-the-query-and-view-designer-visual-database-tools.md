@@ -20,13 +20,13 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cbebb7269afbf1ae1caa16032c7d4c4406ba148
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9336d8387ac7ff764821eee47405203672a31fe
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너에서 탐색(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 키보드 또는 마우스를 사용하여 쿼리 및 뷰 디자이너에서 작업할 수 있습니다. 구체적인 방법은 다음 표를 참조하십시오.  

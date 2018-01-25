@@ -16,13 +16,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52fc22dc74afa25194dcf6c0883a2ae3aec26a27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="domain-independent-availability-groups"></a>도메인 독립 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
 GO
 ```
 10. 주 복제본일 수 있는 모든 복제본에 대해 모든 관련 보조 복제본에 로그인 및 사용자를 만듭니다.
-11. 각 인스턴스에서 로그인 및 사용자가 작성된 다른 인스턴스의 인증서를 복원합니다. 주 복제본에서 모든 보조 복제본 인증서를 복원합니다. 각 보조 복제본에서 주 복제본의 인증서를 복원하고 주 복제본이 될 수 있는 다른 모든 복제본에서도 복원합니다. 예를 들어
+11. 각 인스턴스에서 로그인 및 사용자가 작성된 다른 인스턴스의 인증서를 복원합니다. 주 복제본에서 모든 보조 복제본 인증서를 복원합니다. 각 보조 복제본에서 주 복제본의 인증서를 복원하고 주 복제본이 될 수 있는 다른 모든 복제본에서도 복원합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 ```
 CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User

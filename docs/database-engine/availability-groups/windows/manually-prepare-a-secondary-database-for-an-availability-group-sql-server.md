@@ -23,12 +23,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: "47"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: b5a8152042d85f7e3025c0f1cdfc5acc534bfbad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 58b7a7ba954159974f60e58ff6b8bbbd07017fef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 Always On 가용성 그룹에 대한 데이터베이스를 준비하는 방법에 대해 설명합니다. 데이터베이스를 준비하는 데에는 다음 두 단계가 필요합니다. 
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Security"></a> 보안  
  데이터베이스를 백업하면 [TRUSTWORTHY 데이터베이스 속성](../../../relational-databases/security/trustworthy-database-property.md) 이 OFF로 설정됩니다. 따라서 새로 복원된 데이터베이스의 TRUSTWORTHY는 항상 OFF입니다.  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
   
  복원할 데이터베이스가 서버 인스턴스에 없으면 RESTORE 문에 CREATE DATABASE 권한이 있어야 합니다. 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)를 통해 복원할 수 없습니다.  
@@ -238,7 +238,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  **Backup-SqlDatabase** cmdlet을 사용하여 각 백업을 만듭니다.  
   
-3.  보조 복제본을 호스트하는 서버 인스턴스로 디렉터리를 변경(**cd**)합니다.  
+3.  보조 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(**cd**)합니다.  
   
 4.  각 주 데이터베이스의 데이터베이스와 로그 백업을 복원하려면 **NoRecovery** 복원 매개 변수를 지정하여 **restore-SqlDatabase** cmdlet을 사용합니다. 또한 주 복제본을 호스팅하는 컴퓨터와 대상 보조 복제본을 호스팅하는 컴퓨터의 파일 경로가 다른 경우 **RelocateFile** 복원 매개 변수를 사용합니다.  
   
@@ -269,7 +269,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
 ##  <a name="FollowUp"></a> 다음 단계  
  보조 데이터베이스 구성을 완료하려면 새로 복원한 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE 인수&#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   

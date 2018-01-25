@@ -16,13 +16,13 @@ ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f88d0c71337f7b4c4fc1e26c2c483b26723c073
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6440acda92e77b3558cf60ba3c54cb5b8b3c042
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>미러 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 미러 데이터베이스가 있는 서버 인스턴스에 대한 정보를 지정할 수 있습니다.  
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/20/2017
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **미러 서버 인스턴스**  
  **데이터베이스 속성** 대화 상자의 **미러링** 페이지에서 미러 서버 인스턴스가 이미 지정되어 있으면 해당 인스턴스가 표시됩니다. 자세한 내용은 [데이터베이스 속성&#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)을 참조하세요.  
   
  그렇지 않은 경우에는 미러 서버 인스턴스의 이름을 입력합니다. 주 서버 인스턴스는 미러 서버 인스턴스로 지정할 수 없습니다.  
   
- **Connect**  
+ **연결**  
  미러 서버 인스턴스가 지정되어 있지 않으면 **연결**을 클릭합니다. 그러면 서버 인스턴스를 지정하고 연결할 수 있는 **서버에 연결** 대화 상자가 표시됩니다.  
   
  인스턴스를 지정했지만 끝점이 있는지 확인할 수 있는 권한을 가진 연결이 없을 경우 **연결**을 클릭합니다. 그러면 서버 인스턴스가 미리 선택되어 있고 변경할 수 없는 **서버에 연결** 대화 상자가 표시됩니다. 충분한 사용 권한을 가진 도메인 계정을 지정하고 서버 인스턴스에 연결합니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
 -   서버 인스턴스에 대한 수신기 포트가 없으면 **포트** 입력란에 포트 번호 5022가 표시됩니다. 7022와 같은 사용 가능한 임의의 포트 번호를 사용할 수 있습니다.  
   
--   미러링 끝점이 있으면 해당 끝점의 포트 번호가 표시됩니다. 포트를 변경해야 하는 경우 ALTER ENDPOINT 명령을 사용합니다. 자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)를 참조하세요.  
+-   미러링 끝점이 있으면 해당 끝점의 포트 번호가 표시됩니다. 포트를 변경해야 하는 경우 ALTER ENDPOINT 명령을 사용합니다. 자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
   
     > [!NOTE]  
     >  포트 번호는 반드시 지정해야 합니다.  

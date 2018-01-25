@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9389568b31c445d66713b68efea8c312f5df9dec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e336447f1719999505d03fff77d0343ff5adf5ef
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 맞춤법 검사기는 도메인에서 문자열 값의 구문, 맞춤법 및 문장 구조를 검사합니다. 맞춤법 검사기는 서버 쪽 엔진에 통합되지 않고 현재 흐름이나 상태에 영향을 주지 않는 독립 실행형의 클라이언트 쪽 기능입니다. 맞춤법 검사기는 잠재적 오류로 간주되는 문자열 값을 식별한 다음 사용자가 도메인 값을 수동으로 변경하는 위치와 동일한 위치에 빨간색 밑줄로 표시합니다. 이러한 위치에는 다음이 포함됩니다.  
@@ -36,12 +36,12 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  맞춤법 검사기를 실행하려면 기술 자료 검색 또는 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다. 맞춤법 검사기를 실행하려는 도메인과 페이지에서 맞춤법 검사기를 설정한 상태여야 합니다. 그리고 도메인의 언어 속성이 지정되어 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  맞춤법 검사기를 실행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Enable"></a> 맞춤법 검사기 설정  

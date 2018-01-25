@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 554993ec4b6b687a2335c3ea6192c40ead327820
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 36b87035d4a578622d9bff9bb2b4aea159cf55b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -149,13 +149,13 @@ SSDT를 설치한 후 데이터베이스, 패키지, 데이터 모델 및 SSDT�
 -   [기본 테이블 보고서 만들기(SSRS 자습서)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 
 ## <a name="see-also"></a>참고 항목  
 [Visual Studio의 SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT 팀 블로그](http://blogs.msdn.com/b/ssdt/)  
-[SSDT Connect 피드백](https://connect.microsoft.com/SQLServer/Feedback)  
 [SSDT 설명서](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [DACFx API 참조](https://msdn.microsoft.com/library/dn645454.aspx)  
 [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)  

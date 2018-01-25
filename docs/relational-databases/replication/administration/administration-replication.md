@@ -19,15 +19,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86a4e432940b36b3ebb8a8dfec58d768b2a036fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a93507645a081f1e0fdc245eae439cf932a44360
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administration-replication"></a>관리(복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 복제 토폴로지 관리에 대한 정보를 제공합니다. 최상의 방법 항목을 먼저 읽고 나서 해당 항목의 링크를 따라 이 섹션 및 다른 섹션에 있는 더 자세한 정보를 찾아보는 것이 좋습니다.  

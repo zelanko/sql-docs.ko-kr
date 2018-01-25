@@ -18,13 +18,13 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fa2fa79f818c344f9228dffe500fbe96236954b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 342d284b458c1eacb6ba358e51a502630268bc67
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>인덱스 - 키 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하면 인덱스, 기본 키, 고유 키를 만들거나 수정할 수 있습니다. 이 대화 상자에 액세스하려면 인덱스나 키가 포함된 테이블의 테이블 정의를 열고 테이블 정의 표를 마우스 오른쪽 단추로 클릭한 다음 **인덱스/키**를 클릭합니다.  

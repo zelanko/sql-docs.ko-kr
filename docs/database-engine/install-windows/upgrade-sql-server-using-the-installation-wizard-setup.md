@@ -18,12 +18,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: "65"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: feadacaccd6f2ba025de359de6f581a7e3685550
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전체 업그레이드할 수 있는 단일 기능 트리를 제공합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 > * [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [SharePoint용 파워 피벗 업그레이드](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있으며 로컬 관리자인 도메인 계정을 사용해야 합니다.  
   
 > [!WARNING]  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
   
 14. 서버 구성 - 서비스 계정 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 기본 서비스 계정이 표시됩니다. 이 페이지에 구성된 실제 서비스는 사용자가 업그레이드하려는 기능에 따라 달라집니다.  
   
-     인증 및 로그인 정보는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 가져옵니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 동일한 로그인 계정을 할당하거나 각 서비스 계정을 따로 구성할 수 있습니다. 서비스 시작 유형을 자동 또는 수동으로 지정하거나 서비스의 해제 여부도 지정할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 서비스 계정을 개별적으로 구성하도록 권장합니다. 그러면 "서비스 시작" 태스크 완료에 필요한 최소한의 권한만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 부여됩니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
+     인증 및 로그인 정보는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 가져옵니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 동일한 로그인 계정을 할당하거나 각 서비스 계정을 따로 구성할 수 있습니다. 서비스 시작 유형을 자동 또는 수동으로 지정하거나 서비스의 해제 여부도 지정할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 서비스 계정을 개별적으로 구성하도록 권장합니다. 그러면 "서비스 시작" 태스크 완료에 필요한 최소한의 권한만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 부여됩니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)를 참조하세요.  
   
      이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 서비스 계정에 대해 동일한 로그인 계정을 지정하려면 페이지 맨 아래에 있는 필드에 자격 증명을 제공합니다.  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
 20. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드한 후 다음 태스크를 완료하십시오.  
   
 -   **서버 등록** - 업그레이드하면 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 등록 설정이 제거됩니다. 업그레이드한 후 서버를 다시 등록해야 합니다.  
@@ -142,7 +142,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 구성** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 공격받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 노출 영역 구성 도구에 대한 자세한 내용은 이 릴리스의 추가 정보 파일을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)   
  [이전 버전과의 호환성_삭제됨](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

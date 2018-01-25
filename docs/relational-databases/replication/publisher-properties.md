@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 756e982f08b68226d9367b5f3b0416505467713c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d28b7bbebfa1e03bb408f5e9b65cf898b444ae3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-properties"></a>게시자 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 배포자 및 게시자에 사용 가능한 게시자 속성에 대한 정보를 제공합니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [게시자 속성 - 게시자, 구독자](../../relational-databases/replication/publisher-properties-publisher-subscribers.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [속성 참조&#40;복제&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   

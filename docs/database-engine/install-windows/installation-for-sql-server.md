@@ -20,12 +20,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 5a37ff592c7ee2bc997d85bf98ad728b485f9c8d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 8b8a7d9783111cff136b2ac576da7ccb2705c57a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-installation"></a>SQL Server 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 설치하는 하나의 기능 트리를 제공합니다.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 [SQL Server Business Intelligence 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능(Microsoft BI 플랫폼에 속함)에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 분석 데이터를 만들거나 사용하는 데 사용되는 일부 클라이언트 응용 프로그램이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치 방법에 대해 설명합니다.  
   
-## <a name="more-information"></a>자세한 정보
+## <a name="more-information"></a>추가 정보
 [SharePoint와 함께 SQL Server BI 기능 설치&#40;파워 피벗 및 Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  이 섹션에서는 SharePoint 환경에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치하는 방법에 대해 설명합니다. 여기에서는 SharePoint의 특정 버전 및 에디션에서 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설명하고 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 SharePoint 모드의 Reporting Services에 대한 설치 지침을 제공합니다.  
   

@@ -15,12 +15,12 @@ ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f02ff71df24b1e1a8f6c17fd8c6edbdfa02c60a5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: ba67d2b2a342b7e4e6887920b0a4ccc9dd55aadd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="complete-the-database-engine-upgrade"></a>데이터베이스 엔진 업그레이드 완료
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 업그레이드가 완료된 후에 추가로 수행해야 할 여러 단계가 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  

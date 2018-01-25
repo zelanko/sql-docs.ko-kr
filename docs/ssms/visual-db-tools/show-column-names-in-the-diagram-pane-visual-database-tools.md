@@ -20,13 +20,13 @@ ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d571493084f7eea6aa70b77cafe8023863a1475
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ba1c5f9aa55e8f7a0fccde5ac94491d53b157043
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>다이어그램 창에 열 이름 표시(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 및 뷰 디자이너의 **다이어그램 창**에서 테이블의 열 이름을 숨기거나 표시하도록 선택할 수 있습니다.  

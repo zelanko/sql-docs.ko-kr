@@ -22,15 +22,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: "79"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d0c0f0112eee81379e2c1548dd9938e27088dea8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
     
 3.  **일반** 페이지에서 **원본** 섹션을 사용하여 복원할 백업 집합의 원본과 위치를 지정합니다. 다음 옵션 중 하나를 선택합니다.    
     
-    -   **데이터베이스**    
+    -   **데이터베이스 백업**    
     
          복원할 데이터베이스를 드롭다운 목록에서 선택합니다. 목록에는 **msdb** 백업 기록에 따라 백업된 데이터베이스만 포함되어 있습니다.    
     
@@ -80,9 +80,9 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
             **추가**  
             **백업 미디어** 드롭다운 목록에서 선택한 미디어 유형에 따라 **추가** 를 클릭하면 다음 대화 상자 중 하나가 열립니다. **백업 미디어** 목록 상자의 목록이 꽉 차면 **추가** 단추를 사용할 수 없습니다.
 
-            |미디어 유형|대화 상자|설명|    
+            |미디어 유형|대화 상자|Description|    
             |----------------|----------------|-----------------|    
-            |**파일**|**백업 파일 찾기**|이 대화 상자에서는 트리에서 로컬 파일을 선택하거나 정규화된 UNC(Universal Naming Convention) 이름을 사용하여 원격 파일을 지정할 수 있습니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)).|    
+            |**최근에 사용한 파일**|**백업 파일 찾기**|이 대화 상자에서는 트리에서 로컬 파일을 선택하거나 정규화된 UNC(Universal Naming Convention) 이름을 사용하여 원격 파일을 지정할 수 있습니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|    
             |**장치**|**백업 장치 선택**|이 대화 상자에서는 서버 인스턴스에 정의된 논리적 백업 장치의 목록에서 장치를 선택할 수 있습니다.|    
             |**테이프**|**백업 테이프 선택**|이 대화 상자에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터에 물리적으로 연결된 테이프 드라이브의 목록에서 백업 테이프를 선택할 수 있습니다.|    
             |**URL**|**백업 파일 위치 선택**|이 대화 상자에서 기존 SQL Server 자격 증명/Azure Storage 컨테이너를 선택하거나, 공유 액세스 서명을 사용하여 새 Azure Storage 컨테이너를 추가하거나, 기존 저장소 컨테이너에 대한 공유 액세스 서명 및 SQL Server 자격 증명을 생성할 수 있습니다.  [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.|  

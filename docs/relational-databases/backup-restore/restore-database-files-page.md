@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43c7026aa357587fea7d4a9611b88237ed7896fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dff6aada8273e1e994ce321213cee66ae0b0bbb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-files-page"></a>데이터베이스 복원(파일 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **데이터베이스 복원** 대화 상자의 **파일** 페이지를 사용하여 데이터베이스 내에서 복원하려고 선택한 특정 파일을 관리할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ### <a name="restore-database-files-as"></a>데이터베이스 파일을 다음으로 복원  
  복원된 파일의 파일 경로를 새로 할당하고 관리하려면 사용합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
  **모든 폴더를 파일에 다시 배치**  
  복원된 파일의 위치를 다시 지정합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**데이터 파일 폴더**|복원된 데이터 파일을 다시 배치할 데이터 파일 폴더 이름을 입력하거나 검색합니다.|  
 |**로그 파일 폴더**|복원된 로그 파일을 다시 배치할 로그 파일 또는 파일 폴더를 입력하거나 검색합니다.|  

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: technical reference [SQL Server replication]
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29ccc0bdbee741895cc0d7e752681aff66958ff6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 591194f20b042c1f069fc3a7756cc4bcb96581c9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="technical-reference-replication"></a>기술 참조(복제)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 대한 기술 참조 설명서에 연결되는 링크가 들어 있습니다.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 기능 및 태스크](../../relational-databases/replication/replication-features-and-tasks.md)   
  [보안 및 보호&#40;복제&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   

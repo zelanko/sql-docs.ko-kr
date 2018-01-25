@@ -16,13 +16,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efa0ea34a2b5432f3c7059d98cee4cbd35fa18ab
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)를 보완합니다.

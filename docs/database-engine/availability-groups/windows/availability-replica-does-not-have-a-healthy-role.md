@@ -17,13 +17,13 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52d4b09e46adcaeb65bedd0cb9dc7c5b28e27016
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ed0b8fbda7545d801c88b672bf352957256d0aef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>가용성 복제본에 정상 상태의 역할이 없음
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |**범주**|**심각**|  
 |**패싯**|가용성 복제본|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 가용성 복제본의 역할 상태를 확인합니다. 가용성 복제본의 역할이 주 역할이나 보조 역할이 아닌 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  

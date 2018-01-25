@@ -17,13 +17,13 @@ ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d033e911618a22a6537fd4a0f4ea311792f56b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dfec5cacbfcd9599cca6f906775ab359833b1259
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>창 대화 상자(Microsoft Document Explorer 도움말)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 편집기와 디자이너에서 열리는 문서를 표시하고 닫으며 정렬할 수 있습니다. **창** 메뉴에서 **창** 을 클릭하여 이 대화 상자를 표시할 수 있습니다.  

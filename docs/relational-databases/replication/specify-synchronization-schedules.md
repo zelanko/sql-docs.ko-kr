@@ -18,15 +18,15 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 678388534668972d3a1cd520c4f352c17a52f4ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85455c6b48ed6670c4d93c7ebf07e55345de0a80
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 동기화 일정을 지정하는 방법에 대해 설명합니다. 구독을 만드는 경우 구독에 대한 복제 에이전트를 실행하는 시기를 제어하는 동기화 일정을 정의할 수 있습니다. 일정 매개 변수를 지정하지 않으면 기본 일정이 사용됩니다.  
@@ -183,7 +183,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독의 동기화 일정을 정의하려면  
   
-1.  병합 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)을 참조하세요.  
+1.  병합 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 2.  구독자에서 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher**, **@publisher_db**, **@publication**와 **@job_name** 및 **@password**에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)을 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
@@ -263,7 +263,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)을 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
@@ -330,9 +330,9 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
+## <a name="see-also"></a>참고 항목  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [끌어오기 구독 동기화](../../relational-databases/replication/synchronize-a-pull-subscription.md)   
  [데이터 동기화](../../relational-databases/replication/synchronize-data.md)  

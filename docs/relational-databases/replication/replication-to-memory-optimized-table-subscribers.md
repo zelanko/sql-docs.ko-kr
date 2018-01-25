@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 118668a688f14cf725e573cc29f1185088faeeb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8c69235ed7926219dc306764b3b2ba80a2c35bb1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 2.  아티클을 게시에 추가합니다. 자세한 내용은 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
      [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 구성하는 경우 **sp_addarticle** 저장 프로시저의 **@schema_option** 매개 변수를   
-    **0x40000000000**으로 설정합니다.  
+    **0x40000000000**부터 사용할 수 있습니다.  
   
 3.  아티클 속성 창에서 **메모리 최적화 사용** 을 **true**로 설정합니다.  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
   
 -   ANSI_PADDING은 ON이어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 기능 및 태스크](../../relational-databases/replication/replication-features-and-tasks.md)  
   
   

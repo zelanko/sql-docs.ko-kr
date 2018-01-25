@@ -17,13 +17,13 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75eb4d860db21dad91aac45c3a681254b2601210
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a4f9ba321f43cd58c210e68f399de0d2f10ef8da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-is-offline"></a>가용성 그룹이 오프라인 상태임
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |**범주**|**심각**|  
 |**패싯**|가용성 그룹|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 가용성 그룹의 온라인 또는 오프라인 상태를 확인합니다. 가용성 그룹의 클러스터 리소스가 오프라인이거나 가용성 그룹에 주 복제본이 없으면 정책이 비정상 상태이며 경고가 발생합니다.  
   
  가용성 그룹의 클러스터 리소스가 온라인이고 가용성 그룹에 주 복제본이 있으면 정책 상태가 정상입니다.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 501582405c40f5688514c9ce5fbcfe06ca2952c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e081c0e361ac7c52a4afc52adcdd2207f3465781
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-tutorials"></a>복제 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 복제 토폴로지를 설정 및 실행하는 방법을 배우는 데 사용할 수 있는 자습서가 포함되어 있습니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 [모바일 클라이언트와의 데이터 복제](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  
 병합 복제를 사용하여 한 서버와 가끔만 연결되는 하나 이상의 클라이언트 간에 데이터를 교환하는 방법을 배웁니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [보안 및 보호&#40;복제&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

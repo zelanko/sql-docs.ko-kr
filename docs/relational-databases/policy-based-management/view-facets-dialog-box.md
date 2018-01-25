@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e73a3a40fa2ef43a04fafdecd6c4f7798a81ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abbe4aa8bc606437662fb92bb25f8d80002e70e8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-facets-dialog-box"></a>패싯 보기 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 정책 기반 관리 패싯의 속성을 볼 수 있습니다. 패싯의 속성은 패싯을 만들 때 정의되며 이 대화 상자를 사용하여 변경할 수 없습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **패싯**  
  현재 선택한 패싯의 이름입니다.  
   

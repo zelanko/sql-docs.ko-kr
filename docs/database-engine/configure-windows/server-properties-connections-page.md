@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26bba253f4e74b7d42f0bf6adf02f981234f7c92
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20a65fb532fd8a37402c9ce09e6095907715d1f3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---connections-page"></a>서버 속성 - 연결 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 연결 옵션을 확인하거나 수정할 수 있습니다.  
   
-## <a name="connections"></a>연결  
+## <a name="connections"></a>Connections  
  **최대 동시 연결 수(0 = 제한 없음)**  
  이 값을 0이 아닌 값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 허용하는 연결 수가 제한됩니다.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **Default connection options**  
  다음 표에서 설명하는 기본 연결 옵션을 지정합니다.  
   
-|구성 옵션|설명|  
+|구성 옵션|Description|  
 |--------------------------|-----------------|  
 |**지연된 제약 조건 검사 비활성화**|중간 또는 지연된 제약 조건 검사를 제어합니다.|  
 |**암시적 트랜잭션**|문 실행 시 트랜잭션을 암시적으로 실행할지 여부를 제어합니다.|  

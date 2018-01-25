@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 운영 체제 서비스로 실행되는 **sqlservr.exe** 실행 파일의 복사본입니다. 각 인스턴스는 여러 시스템 데이터베이스와 하나 이상의 사용자 데이터베이스를 관리합니다. 각 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스를 실행할 수 있습니다. 응용 프로그램은 인스턴스가 관리하는 데이터베이스에서 작업을 수행하기 위해 인스턴스에 연결합니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
  같은 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 여러 인스턴스를 실행할 수 있습니다. 하나의 인스턴스가 기본 인스턴스가 될 수 있습니다. 기본 인스턴스는 이름이 없습니다. 연결 요청에 컴퓨터 이름만 지정된 경우 기본 인스턴스에 연결합니다. 인스턴스를 설치할 때 이름을 지정하는 인스턴스가 명명된 인스턴스입니다. 인스턴스에 연결하려면 연결 요청에서 컴퓨터 이름과 인스턴스 이름을 모두 지정해야 합니다. 기본 인스턴스를 설치할 경우 별도의 요구 사항이 없습니다. 컴퓨터에서 실행 중인 모든 인스턴스는 명명된 인스턴스가 될 수 있습니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

@@ -16,13 +16,13 @@ ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b97e83af3e2b13a0995f24aa56a7622f34d1f327
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: afb32a83bc36c894ed2d44ed9763f9435a345f0e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="select-object-types-object-explorer"></a>개체 유형 선택(개체 탐색기)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 **개체 선택** 대화 상자에 나타나는 개체 유형을 지정할 수 있습니다.  

@@ -19,13 +19,13 @@ ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 363b496524c8b4a919a6163a382d4589cd8a41f3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5319d8caeb5e8cfe2b77ae027e4de5fa34a28494
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹의 FILESTREAM 및 FileTable(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [관련 내용](#RelatedContent)  
   
-##  <a name="Prerequisites"></a> 필수 구성 요소  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   FileTable을 포함하거나 포함하지 않고 FILESTREAM을 사용하는 데이터베이스를 가용성 그룹에 추가하려면 먼저 가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 서버 인스턴스에 FILESTREAM이 설정되었는지 확인합니다. 자세한 내용은 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)을 참조하세요.  
   

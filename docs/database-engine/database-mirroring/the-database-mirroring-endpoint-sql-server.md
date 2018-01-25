@@ -21,13 +21,13 @@ ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: "47"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8d42834b9e77e626c860d54c2548eda64fba43e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e4be5534091e37d58f56ee9928759dbdea22c62
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>데이터베이스 미러링 끝점(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링에 참여하려면 서버 인스턴스에 자체의 전용 *데이터베이스 미러링 끝점*이 필요합니다. 데이터베이스 미러링 끝점은 다른 서버 인스턴스로부터 연결을 받는 데만 사용되는 특별한 용도의 끝점입니다. 지정된 서버 인스턴스에서 다른 모든 서버 인스턴스에 대한 모든 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 연결은 단일 데이터베이스 미러링 끝점을 사용합니다.  

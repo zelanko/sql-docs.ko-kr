@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Configure Peer-to-Peer Topology Wizard
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c49c287e06100f8df17436a67c2c26615f9f895
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bd203d011b2fb45475111081199b8e20b34cdca1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>피어 투 피어 토폴로지 구성 마법사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에서는 피어 투 피어 토폴로지 구성 마법사의 모든 페이지에 대한 정보를 제공합니다.  
@@ -39,6 +39,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>참고 항목  
  [피어 투 피어 토폴로지 관리&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [피어 투 피어 트랜잭션 복제](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [@loopback_detection](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

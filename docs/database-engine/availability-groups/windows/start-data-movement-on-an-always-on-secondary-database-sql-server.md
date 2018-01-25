@@ -16,13 +16,13 @@ ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 caps.latest.revision: "17"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f30364ee428afe8d4cc92ab4b807c829a8e97b8d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0a2f1e376bb44ba9920edf954c4979a397c7ceb1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Always On 보조 데이터베이스에서 데이터 이동 시작(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
          **자세한 내용은 다음을 참조하세요.**  
   
-         [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+         [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
     -   하나 이상의 로그 전달 주 데이터베이스를 가용성 그룹에 추가하는 경우 로그 전달에서 하나 이상의 해당 보조 데이터베이스를 Always On 가용성 그룹으로 마이그레이션할 수 있습니다. 로그 전달 보조 데이터베이스를 마이그레이션하려면 해당 데이터베이스가 주 데이터베이스와 동일한 이름을 사용하고 가용성 그룹에 대한 보조 복제본을 호스팅하는 서버 인스턴스에 있어야 합니다. 또한 주 복제본이 백업에 기본적으로 사용되고 백업 수행 대상이 되도록, 즉 백업 우선 순위가 0보다 크도록 가용성 그룹을 구성해야 합니다. 주 데이터베이스에서 백업 작업이 실행되고 나면 백업 작업을 사용하지 않도록 설정하고, 지정된 보조 데이터베이스에서 복원 작업이 실행되고 나면 복원 작업을 사용하지 않도록 설정해야 합니다.  
   

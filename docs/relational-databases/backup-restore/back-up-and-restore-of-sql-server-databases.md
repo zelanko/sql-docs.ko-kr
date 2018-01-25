@@ -25,15 +25,15 @@ helpviewer_keywords:
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 caps.latest.revision: "91"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2fe7ef3aca47080afb896ddb7e89470fda06e9e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
  SQL Server 백업 및 복원 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 필수 보호 방법을 제공합니다. 치명적인 데이터 손실 위험을 최소화하기 위해서는 데이터베이스를 정기적으로 백업하여 수정된 데이터를 유지해야 합니다. 백업 및 복원 전략을 적절하게 계획하면 다양한 오류로 인해 데이터베이스의 데이터가 손실되는 것을 방지할 수 있습니다. 일련의 백업 복원과 데이터베이스 복구를 통해 전략을 테스트하여 재해에 효과적으로 대처할 수 있습니다.  
   
- 백업을 저장하기 위한 로컬 저장소 외에도 SQL Server는 Windows Azure Blob 저장소 서비스에 대한 백업과 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob 저장소 서비스를 사용하여 저장된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅숏을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+ 백업을 저장하기 위한 로컬 저장소 외에도 SQL Server는 Microsoft Azure Blob Storage Service에 대한 백업과 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob 저장소 서비스를 사용하여 저장된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅숏을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 ##  <a name="why-back-up"></a>백업 이유  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하고 백업에 대한 테스트 복원 절차를 실행한 다음 안전한 오프 사이트 위치에 백업을 저장하여 치명적인 데이터 손실을 방지할 수 있습니다. **백업은 데이터를 보호하는 유일한 방법입니다.**

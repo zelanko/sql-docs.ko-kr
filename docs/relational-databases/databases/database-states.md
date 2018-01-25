@@ -28,15 +28,15 @@ helpviewer_keywords:
 - restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4743b5a903630f267c48c42aced53776e8bc073
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6acde3a545115bc189da2cfdad0297789fea6a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-states"></a>데이터베이스 상태
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스는 항상 하나의 특정한 상태에 있습니다. 예를 들어 ONLINE, OFFLINE 또는 SUSPECT 상태일 수 있습니다. 데이터베이스의 현재 상태를 확인하려면 **sys.databases** 카탈로그 뷰의 [state_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열이나 **DATABASEPROPERTYEX** 함수의 [Status](../../t-sql/functions/databasepropertyex-transact-sql.md) 속성을 선택합니다.  

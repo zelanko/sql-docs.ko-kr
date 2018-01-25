@@ -19,13 +19,13 @@ ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d92b7b233cd5aa6e744c5c1d09875e2603eb327
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dcfb8099213533ca37c467a758d63f456d993a67
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="removing-database-mirroring-sql-server"></a>데이터베이스 미러링 제거(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 소유자는 언제든지 파트너에서 데이터베이스 미러링 세션을 수동으로 중지할 수 있습니다.  

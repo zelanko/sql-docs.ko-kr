@@ -17,15 +17,15 @@ helpviewer_keywords:
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7c21c7ed24c1598ca51e0802d27bfd502d83be0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fce09d60d98c094e3b47440fb900ec7d6523daa6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
  다음 표에서는 미결 트랜잭션을 해결하기 위한 가능한 결과 값 목록을 보여 줍니다.  
   
-|결과 값|설명|  
+|결과 값|Description|  
 |-------------------|-----------------|  
 |0|가정 없음. MS DTC가 미결 트랜잭션을 해결할 수 없으면 복구에 실패합니다.|  
 |1|커밋 가정. 모든 MS DTC 미결 트랜잭션을 커밋된 것으로 가정합니다.|  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ce11b76c47faa36406452c707c8246a3dfd1d7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a6656e904451913580d537ac4e98e351e6195b2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-cursors"></a>SQL Server XTP 커서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
  이 표에서는 **SQL Server XTP 커서** 카운터에 대해 설명합니다.  
   
-|카운터|설명|  
+|카운터|Description|  
 |-------------|-----------------|  
 |**Cursor deletes/sec**|초당 커서 삭제 수입니다(평균).|  
 |**Cursor inserts/sec**|초당 커서 삽입 수입니다(평균).|  

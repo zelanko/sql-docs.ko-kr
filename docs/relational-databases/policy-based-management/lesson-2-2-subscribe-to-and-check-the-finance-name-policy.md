@@ -16,13 +16,13 @@ ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43ecb337ed0e54282b7347287481fd4ce7a84f5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 247af1bcdb8e3d3293792fb52a5d0e8149ce6ccc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-2---subscribe-to-and-check-the-finance-name-policy"></a>2-2단원 - Finance Name 정책 구독 및 확인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 태스크에서는 Finance 데이터베이스에서 Finance 정책 범주를 구독하도록 구성한 다음 Finance Name 정책을 테스트합니다.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 자습서 목록을 보려면 [SQL Server 2016 자습서](../../sql-server/tutorials-for-sql-server-2016.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

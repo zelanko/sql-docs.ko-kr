@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3daaadf50d221b5f5b4fc2f580990a3e849a0c60
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f61f71a62cf148fc7cd5d40b096aa14f7937128c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 취소
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XML 스키마 컬렉션을 만드는 권한은 다음 중 하나를 사용하여 취소할 수 있습니다.  

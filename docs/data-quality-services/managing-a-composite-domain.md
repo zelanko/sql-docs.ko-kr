@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75047e413cbc55d5e5a9431a6c6ab7cc7b92b017
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9a7ebf0d795639f59106afc0573f42d088926fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managing-a-composite-domain"></a>복합 도메인 관리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 복합 도메인을 사용하는 방법에 대해 설명합니다. 단일 도메인이 필드의 데이터를 충분히 표현하지 않아서 단일 도메인을 그룹화해야만 데이터를 표현할 수 있는 경우가 있습니다. 이 경우 복합 도메인을 만듭니다. 복합 도메인은 둘 이상의 단일 도메인으로 구성되며 구문 분석되지 않았지만 단일 복합 값에 포함되어 있는 여러 관련 용어로 구성된 데이터 필드에 매핑됩니다. 값의 각 용어는 다른 단일 값으로 표현됩니다. 단일 도메인을 복합 도메인에 포함한 후 복합 도메인을 데이터 필드에 매핑하고 나면 단일 도메인의 정보를 구축하여 해당 필드의 데이터에 대한 기술 자료의 정보를 구축할 수 있습니다. 복합 도메인은 단일 도메인과 마찬가지로 단일 데이터 필드의 데이터를 의미 체계에 따라 표현한 것입니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 |복합 도메인의 한 도메인 값이 다른 도메인의 값에 영향을 줄 경우 도메인 간 규칙을 만듭니다.|[도메인 간 규칙 만들기](../data-quality-services/create-a-cross-domain-rule.md)|  
 |DQS가 빈도를 보고할 수 있도록 값 조합을 식별합니다.|[복합 도메인의 값 관계 사용](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

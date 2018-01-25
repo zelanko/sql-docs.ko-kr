@@ -20,15 +20,15 @@ helpviewer_keywords:
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a9fb062940b786528ea4e0f19395391a2b84b19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 518387e552f754ecb6be3b43772255c45d32ed03
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="index-disk-space-example"></a>인덱스 디스크 공간 예
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 인덱스를 생성하거나, 다시 작성하거나, 삭제할 때마다 해당 파일 및 파일 그룹에서 이전(원본) 및 새(대상) 구조 모두에 대한 디스크 공간이 필요합니다. 기존 구조는 인덱스 생성 트랜잭션이 커밋된 후 할당 취소됩니다. 또한 분류 작업을 위한 임시 디스크 공간도 추가로 필요할 수 있습니다. 자세한 내용은 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)을 참조하세요.  

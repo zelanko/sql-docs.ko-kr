@@ -21,13 +21,13 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74b2beeb4f74afab2dc7300e51093d3e271f58e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 25e9efc5d7ffb6d4d0c09cc88e19671ed7f7b043
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

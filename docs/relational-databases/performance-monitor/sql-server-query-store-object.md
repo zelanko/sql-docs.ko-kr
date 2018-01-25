@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3bfa37e7f645148daa38f8e79b8c51aaf1613c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 854714fbe12db7e32dc0989a442abbdd23695ef9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 쿼리 저장소 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
  다음 표에서는 **SQLServer:Query Store**카운터에 대해 설명합니다.  
   
-|SQL Server 쿼리 저장소 카운터|설명|  
+|SQL Server 쿼리 저장소 카운터|Description|  
 |-------------------------------------|-----------------|  
 |**Query Store CPU usage**|쿼리 저장소의 CPU 사용량을 나타냅니다.|  
 |**Query Store logical reads**|쿼리 저장소에서 수행된 논리적 읽기 수를 나타냅니다.|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|쿼리 저장소 인스턴스|설명|  
+|쿼리 저장소 인스턴스|Description|  
 |--------------------------|-----------------|  
 |**_Total**|이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 쿼리 저장소의 정보입니다.|  
 |\<데이터베이스 이름>|이 데이터베이스에 대한 쿼리 저장소 정보입니다.|  

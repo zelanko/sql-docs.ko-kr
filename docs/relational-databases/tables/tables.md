@@ -16,15 +16,15 @@ helpviewer_keywords:
 - table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30ba1f01b556fcbb58007b771bb648847ecae8a6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 058ea2dfad2c308bf5cd9b197babebb208c34d3c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tables"></a>테이블
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 |테이블에서 계산 열을 만드는 방법을 설명합니다.|[테이블에서 계산 열 지정](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |열의 기본값을 지정하는 방법을 설명합니다. 다른 값을 제공하지 않으면 이 값이 사용됩니다.|[열의 기본값 지정](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [PRIMARY KEY 및 FOREIGN KEY 제약 조건](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [UNIQUE 제약 조건 및 CHECK 제약 조건](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

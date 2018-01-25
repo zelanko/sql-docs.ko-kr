@@ -23,13 +23,13 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: "55"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab5346433b15163cf6bf9a757923e06d32d0985
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99a526a432e0e7567022891e28129a12d5b09ef3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
  데이터베이스 미러링은 지원되는 모든 데이터베이스 호환성 수준에서 작동합니다. 지원되는 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
   
-##  <a name="Prerequisites"></a> 필수 구성 요소  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   미러링 세션을 설정하려면 파트너 및 미러링 모니터 서버(있는 경우)가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되어야 합니다.  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 -   미러링 세션의 모든 서버 인스턴스에서 같은 마스터 코드 페이지와 데이터 정렬을 사용해야 합니다. 차이가 있으면 미러링 설정 중에 문제가 발생할 수 있습니다.  
   
--   필요에 따라 데이터베이스 장애 조치에 걸리는 시간을 예상하여 현재 시스템 구성이 필요한 성능을 제공하는지 확인합니다. 자세한 내용은 [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)을 참조하세요.  
+-   필요에 따라 데이터베이스 장애 조치에 걸리는 시간을 예상하여 현재 시스템 구성이 필요한 성능을 제공하는지 확인합니다. 자세한 내용은 [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다.  
   
 -   최상의 성능을 위해 미러링 전용 네트워크 어댑터(네트워크 인터페이스 카드)를 사용하십시오.  
   
@@ -116,10 +116,10 @@ ms.lasthandoff: 11/20/2017
   
 2.  비동기 작업이 비즈니스 요구를 만족시킨다고 확신하는 경우 데이터 보호를 향상시키기 위해 동기 작업을 시도할 수 있습니다. 환경에서 동기 미러링이 어떻게 작동하는지 테스트할 때는 먼저 자동 장애 조치 없는 보호 우선 모드를 테스트하는 것이 좋습니다. 이 테스트의 주요 목적은 동기 작업이 데이터베이스 성능에 미치는 영향을 확인하는 것입니다. 자세한 내용은 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)을 참조하세요.  
   
-3.  자동 장애 조치 없는 보호 우선 모드에서 비즈니스 요구를 만족시키며 네트워크 오류로 인해 실패하지 않는다고 확신하기 전에는 자동 장애 조치를 설정하지 마십시오. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)를 다운로드하세요.  
+3.  자동 장애 조치 없는 보호 우선 모드에서 비즈니스 요구를 만족시키며 네트워크 오류로 인해 실패하지 않는다고 확신하기 전에는 자동 장애 조치를 설정하지 마십시오. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

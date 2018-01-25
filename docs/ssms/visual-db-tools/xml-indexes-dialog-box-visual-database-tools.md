@@ -16,13 +16,13 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2c44720dea321d4fee407bd33d6a41ad4cdcee5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f47274fe87b23da05550d05b28af1b003fa9a2bc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **XML 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 XML 데이터 형식의 열에 대한 인덱스를 만들 수 있습니다. 각 XML 열에는 두 개 이상의 XML 인덱스가 있을 수 있지만 첫 번째 작성된 인덱스(기본 인덱스)가 나머지 인덱스(보조 인덱스)의 기준으로 사용됩니다. 기본 XML 인덱스를 삭제하면 보조 인덱스도 함께 삭제됩니다.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e27fceed483f3f66d1f167c5971a536bc4aa6a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d649216f87a35c21430cd2d9b16bd4a4085b485
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 원시 형식의 데이터를 데이터 파일에 대량으로 내보내는 작업에서 파일 저장소를 가장 적게 사용하도록 하기 위해 **bcp** 명령은 각 필드의 이름 앞에 필드 길이를 나타내는 문자를 하나 이상 추가합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
  대량 내보내기한 데이터를 네이티브 데이터 형식이나 문자 형식으로 저장하는 경우 다음 표에서 설명하는 접두사 길이를 사용하십시오.  
   
-|SQL Server<br /><br /> 데이터 형식|네이티브 형식<br /><br /> NOT  NULL|네이티브 형식<br /><br /> NULL|문자 형식<br /><br /> NOT  NULL|문자 형식<br /><br /> NULL|  
+|SQL Server<br /><br /> 데이터 형식|네이티브 형식<br /><br /> NOT NULL|네이티브 형식<br /><br /> NULL|문자 형식<br /><br /> NOT NULL|문자 형식<br /><br /> NULL|  
 |------------------------------|--------------------------------|----------------------------|-----------------------------------|-------------------------------|  
 |**char**|2|2|2|2|  
 |**varchar**|2|2|2|2|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - content models [XML in SQL Server]
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 220f1c00e2a8b88e592eef50239978e49492adf7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aefd4fa6c53971d81943c6a3e66cbc3d0095e516
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="non-deterministic-content-models"></a>비결정적 콘텐츠 모델
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1(서비스 팩 1) 이전에, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 비결정적 콘텐츠 모델이 있는 XML 스키마를 거부했습니다.  

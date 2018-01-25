@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff338e1a2fd9fa170d880d6f7719ce3a08ac599
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b03932c680b2f46485ec633ba31149b3e5d41235
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="job-activity-monitor-filter-settings"></a>작업 활동 모니터(필터 설정)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 작업 활동 모니터에 표시되는 행 수를 줄일 수 있습니다. 하나 또는 여러 개의 사용 가능한 상자에 조건을 입력하여 지정한 값을 만족하는 행만 표시합니다. **상태** 또는 **차단 유형** 과 같은 일부 상자에서는 드롭다운 목록으로 한정된 수의 가능한 값을 제공합니다. **응용 프로그램** 과 같은 기타 상자에서는 어떤 값이든 원하는 만큼 쉼표로 구분된 목록으로 입력할 수 있습니다. 도구 모음 아이콘을 사용하면 범주별 또는 사전순으로 사용 가능한 상자를 정렬할 수 있습니다. 각각에 대해 간단한 설명을 표시할 조건을 클릭합니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
  **마지막 실행 결과**  
  마지막으로 작업을 실행했을 때의 상태로 작업을 필터링합니다.  
   
- **설정**  
+ **Enabled**  
  사용하는 작업만 표시하거나 사용하지 않는 작업만 표시합니다.  
   
  **범주**  

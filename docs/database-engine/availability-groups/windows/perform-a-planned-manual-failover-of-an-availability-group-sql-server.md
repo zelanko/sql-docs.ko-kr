@@ -19,13 +19,13 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e5bb5c28e35464ef46641d33600a53c2d4cb79cc
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: f4df88a913bd97cfdc632fe8e1fb365c5d8e81c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>가용성 그룹의 계획된 수동 장애 조치(Failover) 수행(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 데이터 손실 없이 수동 장애 조치(Failover)를 수행하는 방법(*계획된 수동 장애 조치(Failover)*)에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. AlwaysOn 가용성 그룹 장애 조치(Failover)처럼 계획된 수동 장애 조치는 보조 복제본을 기본 역할로 전환합니다. 동시에 장애 조치(Failover)는 이전 주 복제본을 보조 역할로 전환합니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/28/2017
   
 ###  <a name="Security"></a> 보안 
   
-####  <a name="Permissions"></a> 사용 권한 
+####  <a name="Permissions"></a> Permissions 
  가용성 그룹에서는 ALTER AVAILABILITY GROUP 권한이 필요합니다. CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한도 필요합니다. 
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용 
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/28/2017
 
 [!INCLUDE[Force failover](../../../includes/ss-force-failover-read-scale-out.md)]
 
-## <a name="see-also"></a>참고 항목 
+## <a name="see-also"></a>관련 항목: 
 
  * [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 

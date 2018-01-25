@@ -22,15 +22,15 @@ helpviewer_keywords:
 - parameterized queries [SQL Server]
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f6b291b99b40b320872ccbe8939fbd73699de5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 300fd06c7de6889cf8198aeb803d67398a0776e9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PARAMETERIZATION 데이터베이스 옵션이 SIMPLE로 설정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 쿼리를 매개 변수화하도록 선택할 수 있습니다. 즉, 쿼리에 포함된 모든 리터럴 값은 매개 변수로 대체됩니다. 이 프로세스를 단순 매개 변수화라고 합니다. SIMPLE 매개 변수화가 적용되면 매개 변수화할 쿼리와 매개 변수화하지 않을 쿼리를 제어할 수 없습니다. 그러나 PARAMETERIZATION 데이터베이스 옵션을 FORCED로 설정하여 데이터베이스의 모든 쿼리가 매개 변수화되도록 지정할 수 있습니다. 이 프로세스를 강제 매개 변수화라고 합니다.  

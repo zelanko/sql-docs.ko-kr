@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: MSSQL_ENG014150 error
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9b676d523fb7ca60f1e8f1de742c117e3db02e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f55abe74f8e2be5cd829eee53f9a22265f2e8772
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="user-action"></a>사용자 동작  
  다른 에이전트가 요청 시 또는 예약 시에 실행되는 반면 로그 판독기 에이전트, 큐 판독기 에이전트 및 배포 에이전트는 일반적으로 계속 실행됩니다. 에이전트의 실행을 완료하지 않도록 하려면 에이전트의 상태를 확인하십시오. 자세한 내용은 [Monitor Replication Agents](../../relational-databases/replication/monitor/monitor-replication-agents.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [복제 배포 에이전트](../../relational-databases/replication/agents/replication-distribution-agent.md)   

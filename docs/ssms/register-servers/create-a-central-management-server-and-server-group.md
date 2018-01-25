@@ -16,13 +16,13 @@ ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59a0fecfbf924b2ce4ab4d9e559dac678dfcb661
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f5a0c419e0c59a171011f2dc4d1e7c6d57fca9d1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>중앙 관리 서버 및 서버 그룹 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 중앙 관리 서버로 지정하는 방법에 대해 설명합니다. 중앙 관리 서버는 하나 이상의 중앙 관리 서버 그룹으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스 목록을 저장합니다. 중앙 관리 서버 그룹을 사용하여 수행되는 동작은 서버 그룹의 모든 서버에 적용됩니다. 여기에는 개체 탐색기를 사용하여 서버에 연결하는 동작 및 여러 서버에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 정책 기반 관리 정책을 동시에 실행하는 동작이 포함됩니다.  

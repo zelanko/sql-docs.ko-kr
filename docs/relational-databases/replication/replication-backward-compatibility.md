@@ -21,15 +21,15 @@ helpviewer_keywords:
 - compatibility [SQL Server replication]
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 caps.latest.revision: "56"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4031251e251a40014cdcbf41727876bf85f08efd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ed99a17a18efb268878bf8b76b41a67d43ccfff5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-backward-compatibility"></a>복제의 이전 버전과의 호환성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이전 버전과의 호환성 섹션의 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 버전 간에 기능 변경 내용을 설명합니다. 업그레이드를 계획 중이거나 복제 토폴로지에 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 있는 경우 이전 버전과의 호환성을 이해하는 것이 중요합니다.  

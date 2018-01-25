@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b910314a3320a242f696876e875025a7f85da5a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2939dbbd505021da7a8623c5671ad7bd3063cc7a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server, Broker - DBM Transport 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Broker / DBM Transport** 성능 개체에는 Service Broker 및 데이터베이스 미러링에 대한 네트워킹 정보를 보고하는 성능 카운터가 들어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
-|SQL Server Broker / DBM Transport 카운터|설명|  
+|SQL Server Broker / DBM Transport 카운터|Description|  
 |------------------------------------------------|-----------------|  
 |**Current Bytes for Recv I/O**|이 카운터는 현재 실행 중인 전송 수신 작업에서 읽을 바이트 수를 보고합니다.|  
 |**Current Bytes for Send I/O**|이 카운터는 현재 네트워크로 전송 중인 메시지 조각의 바이트 수를 보고합니다.|  

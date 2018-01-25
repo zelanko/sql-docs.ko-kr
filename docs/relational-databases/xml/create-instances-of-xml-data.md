@@ -22,15 +22,15 @@ helpviewer_keywords:
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec51663f65f5673888ef20ee462078e545848334
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 24a96c4692a8ce096a766fa534a1f939abb60bb4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
@@ -77,7 +77,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   한 요소 또는 한 요소의 상위 항목 요소 중 하나에 적용된 `xml:space` 특성에 기본값이 있습니다.  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 declare @x xml  
@@ -91,7 +91,7 @@ select @x
 <root><child/></root>  
 ```  
   
- 그러나 이 동작을 변경할 수 있습니다. xml DT 인스턴스에 대한 공백을 유지하려면 CONVERT 연산자 및 값 1로 설정된 해당 옵션 *style* 매개 변수를 사용합니다. 예를 들어  
+ 그러나 이 동작을 변경할 수 있습니다. xml DT 인스턴스에 대한 공백을 유지하려면 CONVERT 연산자 및 값 1로 설정된 해당 옵션 *style* 매개 변수를 사용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -139,7 +139,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>SELECT 문에 FOR XML 절 사용  
- SELECT 문에 FOR XML 절을 사용하여 결과를 XML로 반환할 수 있습니다. 예를 들어  
+ SELECT 문에 FOR XML 절을 사용하여 결과를 XML로 반환할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -189,7 +189,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TYPE 지시어를 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 **xml** 데이터 형식 인스턴스를 반환합니다. 또는 **xml** 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 응용 프로그램 코드에서 ADO.NET 공급자는 이 **xml** 데이터 형식 정보가 서버로부터 이진 인코딩으로 전송되도록 요청합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
   
 ## <a name="using-constant-assignments"></a>상수 할당 사용  
- 문자열 상수는 **xml** 데이터 형식의 인스턴스가 예상되는 위치에 사용할 수 있습니다. 이것은 문자열을 XML로 암시적 캐스팅하는 것과 같습니다. 예를 들어  
+ 문자열 상수는 **xml** 데이터 형식의 인스턴스가 예상되는 위치에 사용할 수 있습니다. 이것은 문자열을 XML로 암시적 캐스팅하는 것과 같습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -215,7 +215,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[XML 데이터 검색 및 쿼리](../../relational-databases/xml/retrieve-and-query-xml-data.md)|XML 인스턴스가 데이터베이스에 저장될 때 보존되지 않는 인스턴스의 일부분에 대해 설명합니다.|  
   

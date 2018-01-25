@@ -19,13 +19,13 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fde99df0bca010b8920267b1b41de87fbe38e2bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1532ade775800e7688fca8efa844ba535b95bab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>가용성 복제본 간의 세션 동안 발생 가능한 오류(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 물리적 문제, 운영 체제 문제 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문제로 인해 두 가용성 복제본 사이의 세션에서 오류가 발생할 수 있습니다. 가용성 복제본은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지 아니면 실패했는지 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 자체적으로 세션 제한 시간 메커니즘을 구현합니다. 세션 제한 시간(초)을 지정합니다. 이 제한 시간은 서버 인스턴스가 다른 인스턴스로부터 PING 메시지를 받기까지 기다리는 최대 시간으로, 이 시간이 경과하면 해당 인스턴스의 연결이 끊어진 것으로 간주됩니다. 두 가용성 복제본 사이에서 세션 제한 시간이 발생하면 가용성 복제본은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="responding-to-an-error"></a>오류에 대한 응답  
  오류 유형에 관계없이 오류를 감지하는 서버 인스턴스는 인스턴스의 역할, 세션의 가용성 모드 및 세션 내 다른 연결의 상태를 기반으로 적절하게 오류에 응답합니다. 파트너 손실로 인해 발생하는 상황에 대한 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)를 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  **제한 시간 값을 변경하려면(동기 커밋 가용성 모드 전용)**  
   
 -   [가용성 복제본에 대한 세션 제한 시간 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [sys.availability_replicas&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)에서 **session_timeout**을 쿼리합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

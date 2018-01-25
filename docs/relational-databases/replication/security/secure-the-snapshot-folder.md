@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7bfea98b84a87b9bd35a06f4ce2ae49a69a0105
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4816ea4f6e42fdcabb4fbbbdd8a58650a14b1448
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅숏 폴더 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 스냅숏 폴더는 스냅숏 파일을 저장하는 디렉터리입니다. 스냅숏 저장 전용 디렉터리를 지정하는 것이 좋습니다. 스냅숏 에이전트에 폴더에 대한 쓰기 권한을 부여하고 병합 에이전트 또는 배포 에이전트가 폴더에 액세스할 때 사용하는 Windows 계정에만 읽기 권한을 부여합니다. 에이전트에 연결된 Windows 계정은 원격 컴퓨터에 있는 스냅숏 폴더에 액세스할 수 있는 도메인 계정이어야 합니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  FTP를 통해 스냅숏에 액세스하는 데 필요한 암호를 설정하고 변경하는 방법은 [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)항목의 "FTP 스냅숏 배달" 섹션을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [대체 스냅숏 폴더 위치](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [스냅숏으로 구독 초기화](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

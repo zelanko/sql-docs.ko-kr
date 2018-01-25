@@ -17,13 +17,13 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb0587036168b77e50da5e1ed26cb9eac66a9b9c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="advanced-save-options"></a>저장 고급 옵션
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자를 사용하여 언어 인코딩 스키마를 선택하고 각 줄 끝에 삽입할 문자를 지정할 수 있습니다. **저장 고급 옵션** 대화 상자에 액세스하려면 **파일** 메뉴에서 **.sql** <query name>**저장** 을 클릭하여 **.sql 파일 As** 대화 상자를 열고 **.sql** 단추의 아래쪽 화살표를 클릭한 다음 **.sql with Encoding**을 클릭합니다.  

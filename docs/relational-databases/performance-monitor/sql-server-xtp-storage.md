@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9cb620530972d0b8f1999f70d2a5a3996794cd8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2bb4803233db54eea8d3acfb5cb5e2284cc606fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server XTP 저장소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
  이 표에서는 **SQL Server XTP 저장소** 카운터에 대해 설명합니다.  
   
-|카운터|설명|  
+|카운터|Description|  
 |-------------|-----------------|  
 |**Checkpoints Closed**|온라인 에이전트에 의해 닫힌 검사점 수입니다.|  
 |**Checkpoints Completed**|오프라인 검사점 스레드에서 처리된 검사점 수입니다.|  

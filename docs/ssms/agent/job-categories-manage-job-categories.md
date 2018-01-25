@@ -17,13 +17,13 @@ ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f530257d021d3228649ea5669ce913f5b9e6b509
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 38e0121fb72d109225da097785c68a722f8d82f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-categories---manage-job-categories"></a>작업 범주 - 작업 범주 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **작업 범주** 대화 상자를 사용하여 작업 범주를 추가하거나 삭제할 수 있습니다. 기본 제공 작업 범주는 삭제할 수 없습니다.  

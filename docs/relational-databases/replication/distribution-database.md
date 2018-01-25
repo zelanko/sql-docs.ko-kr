@@ -14,22 +14,22 @@ ms.topic: article
 f1_keywords: sql13.rep.configuredistributionwizard.distributiondatabase.f1
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf405b6615840511309dcc3c9a233bdc12479249
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e409092572a5bc495eafe2da77c91eb99faea029
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distribution-database"></a>배포 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 배포 데이터베이스는 모든 유형의 복제에 대한 메타데이터 및 기록 데이터와 트랜잭션 복제에 대한 트랜잭션을 저장합니다.  
   
  대부분의 경우 배포 데이터베이스는 하나면 충분합니다. 그러나 여러 게시자가 단일 배포자를 사용하는 경우에는 각 게시자에 대해 배포 데이터베이스를 만들어 보십시오. 이렇게 하면 각 배포 데이터베이스를 통한 데이터 흐름이 고유하게 유지됩니다. 배포 구성 마법사를 사용하여 배포자에 대한 배포 데이터베이스를 하나 지정할 수 있습니다. 필요한 경우 **배포자 속성** 대화 상자에서 추가 배포 데이터베이스를 지정하십시오.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **배포 데이터베이스 이름**  
  배포 데이터베이스 이름을 입력합니다. 배포 데이터베이스의 기본 이름은 'distribution'입니다. 이름을 지정할 경우 이름은 최대 128자가 될 수 있으며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 내에서 고유해야 하고 식별자에 대한 규칙을 따라야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  배포 데이터베이스 로그를 배포 데이터베이스에서 별개의 디스크 드라이브에 두어 트랜잭션을 기록하는 데 걸리는 시간을 줄이고 복제 성능을 향상시킬 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [배포 구성](../../relational-databases/replication/configure-distribution.md)   
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  

@@ -19,13 +19,13 @@ ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4819abb1e2f48124443d1b3e3a8a6e9b936d1c02
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b17359520349fddae15a2e13703e98e8234a41a8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="stop-a-query-visual-database-tools"></a>쿼리 중지(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리에 시간이 너무 오래 걸리거나 예상한 결과를 반환하지 않은 경우 아직 완료되지 않았으면 쿼리를 중지할 수 있습니다.  

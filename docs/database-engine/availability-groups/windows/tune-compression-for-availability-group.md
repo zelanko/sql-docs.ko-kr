@@ -15,13 +15,13 @@ ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad722c68fa1cf60e8b253892f093fcdae24b751a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 36179f5848f1e5bd78176fc4dd508de5c31f70bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tune-compression-for-availability-group"></a>가용성 그룹에 대한 압축 조정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 기본적으로 SQL Server는 가용성 그룹에 적절한 데이터 스트림을 압축합니다. 압축은 네트워크 트래픽을 줄이고 CPU 부하를 증가시키며 대기 시간을 유도할 수 있습니다. 압축을 사용하도록 설정하려면 sysadmin 고정 서버 역할이 있는 멤버여야 합니다. 다음 표는 SQL Server가 가용성 그룹 로그 스트림에 대해 압축을 사용하는 경우를 보여 줍니다.

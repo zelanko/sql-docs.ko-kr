@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fffe98d01164f8af7ebe5c59153eb7c0b06c79a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ee5c4c70581b275ce19b597f505a8d577ea88a0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-projects-dqs"></a>데이터 품질 프로젝트(DQS)
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 품질 프로젝트는 기술 자료를 사용하여 *데이터 정리* 및 *데이터 일치* 작업을 수행한 다음 결과 데이터를 SQL Server 데이터베이스 또는 .csv 파일로 내보내 원본 데이터의 품질을 향상시킬 수 있는 수단입니다. 데이터 품질 프로젝트를 정리 프로젝트 또는 일치 프로젝트로 만들어 각 작업을 수행할 수 있습니다. 데이터 정리 및 일치에 대한 정보는 같은 기술 자료에 기본 제공될 수 있으므로 같은 기술 자료를 사용하여 정리 및 일치 프로젝트를 실행할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="ProfilingNotification"></a> 데이터 프로파일링 및 알림  
  데이터 품질 프로젝트에서 정리 및 일치 작업을 실행하는 동안 DQS에 의해 처리되는 데이터의 실시간 통계 및 정보를 확인할 수 있습니다. 데이터 프로파일링을 통해 정리 및 일치 프로세스의 효과를 평가하고 잠재적으로 데이터 정리 또는 일치로 데이터 품질이 개선된 정도를 확인할 수 있습니다. DQS 프로파일링에서는 *완결성* (데이터가 존재하는 정도)과 *정확도* (데이터를 의도된 용도에 맞게 사용할 수 있는 정도)의 두 가지 데이터 품질 차원을 제공합니다. 또한 데이터 프로파일링 정보를 기반으로 데이터 정리 및 데이터 일치 작업을 향상시키기 위해 수행할 수 있는 작업에 대한 알림이 표시됩니다. 데이터 프로파일링 및 알림에 대한 자세한 내용은 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
 |데이터 품질 프로젝트를 열기, 잠금 해제, 이름 바꾸기 및 삭제하는 방법에 대해 설명합니다.|[데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기 및 삭제](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 Integration Services 프로젝트를 여는 방법에 대해 설명합니다.|[Data Quality Client에서 Integration Services 프로젝트 열기](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

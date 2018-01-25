@@ -20,13 +20,13 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: "37"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf871f0b6353d569106768deeeb5cc3e6d65b12d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4980545b408bde4c30047eae60e000f2518eb107
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ ms.lasthandoff: 11/20/2017
   
      대부분의 경우 클라이언트 응용 프로그램은 항상 현재 주 복제본에 연결하려고 하지만 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 활용하기 위해 현재 주 복제본만 사용할 수 있는 것은 아닙니다. 가용성 그룹이 읽기 가능한 보조 복제본을 지원하도록 구성된 경우 보조 노드에서도 변경 데이터를 수집할 수 있습니다.  
   
-     가용성 그룹이 구성된 경우 SECONDARY_ROLE과 연결된 ALLOW_CONNECTIONS 특성을 사용하여 지원되는 보조 액세스 유형을 지정합니다. ALL로 구성된 경우 보조 복제본에 대한 모든 연결이 허용되지만 읽기 전용 액세스가 필요한 연결만 성공합니다. READ_ONLY로 구성된 경우 연결이 성공하려면 보조 데이터베이스에 연결할 때 읽기 전용 의도를 지정해야 합니다. 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)을 참조하세요.  
+     가용성 그룹이 구성된 경우 SECONDARY_ROLE과 연결된 ALLOW_CONNECTIONS 특성을 사용하여 지원되는 보조 액세스 유형을 지정합니다. ALL로 구성된 경우 보조 복제본에 대한 모든 연결이 허용되지만 읽기 전용 액세스가 필요한 연결만 성공합니다. READ_ONLY로 구성된 경우 연결이 성공하려면 보조 데이터베이스에 연결할 때 읽기 전용 의도를 지정해야 합니다. 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
      다음 쿼리를 사용하면 읽기 가능한 보조 복제본에 연결하기 위해 읽기 전용 의도가 필요한지 여부를 확인할 수 있습니다.  
   
@@ -196,7 +196,7 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
 ##  <a name="Prereqs"></a> 복제 사용을 위한 필수 구성 요소, 제한 사항 및 고려 사항  
  이 섹션에서는 필수 구성 요소, 제한 사항 및 권장 사항을 비롯하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하여 복제를 배포할 때의 고려 사항에 대해 설명합니다.  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
   
 -   트랜잭션 복제를 사용할 때 게시 데이터베이스가 가용성 그룹에 있으면 게시자와 배포자 모두 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 실행해야 합니다. 구독자는 낮은 수준의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용할 수 있습니다.  
   
@@ -210,12 +210,12 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
 -   게시자 인스턴스는 Always On 가용성 그룹에 참여하는 데 필요한 모든 사전 요구 사항을 충족합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)에서 지원됩니다.  
   
-### <a name="restrictions"></a>제한 사항  
+### <a name="restrictions"></a>Restrictions  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원되는 복제 조합은 다음과 같습니다.  
   
 |||||  
 |-|-|-|-|  
-||**게시자**|**배포자***\*|**구독자**|  
+||**게시자**|**Distributor***\*|**구독자**|  
 |**트랜잭션**|예<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|아니오|예|  
 |**P2P**|아니오|아니오|아니오|  
 |**병합**|예|아니오|예*|  
@@ -233,7 +233,7 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
 -   로그인, 작업, 연결된 서버를 포함하여 데이터베이스 외부에 있는 메타데이터 및 개체는 보조 복제본에 전파되지 않습니다. 장애 조치(Failover) 후 새로운 주 데이터베이스에 메타데이터 및 개체가 필요한 경우 이를 수동으로 복사해야 합니다. 자세한 내용은 [가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
  **복제**  
   
 -   [Always On 가용성 그룹에 대한 복제 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
@@ -258,7 +258,7 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
 -   [변경 내용 추적 사용&#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 구독자 및 Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

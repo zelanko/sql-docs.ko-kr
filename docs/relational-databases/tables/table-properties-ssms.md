@@ -19,15 +19,15 @@ f1_keywords:
 - sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6df40ee96e268428259bd3c1f198467442dd5747
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4afb3c196e046c7f7517df5489c4c62f10da6ec2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 4.  [저장소 페이지](#Storage)  
   
 ##  <a name="GeneralPage"></a> 일반 페이지  
- **데이터베이스**  
+ **데이터베이스 백업**  
  이 테이블이 포함된 데이터베이스의 이름입니다.  
   
  **Server**  

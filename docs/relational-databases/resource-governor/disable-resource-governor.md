@@ -14,20 +14,20 @@ ms.topic: article
 helpviewer_keywords: Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69ff08716168f02736aa5a4ce8eb340fba637bc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 892d80202fd32afa4aeb9fb0a0b9f96ad2c4e17d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-resource-governor"></a>리소스 관리자 사용 안 함
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자를 사용하지 않도록 설정할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **Resource Governor를 사용하지 않도록 설정하는 데 사용되는 도구:**  [개체 탐색기](#RGOffObjEx), [Resource Governor 속성](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  사용자 트랜잭션에 있을 때에는 **ALTER RESOURCE GOVERNOR** 문을 사용하여 리소스 관리자를 사용하지 않도록 설정할 수 없습니다.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="Permissions"></a> Permissions  
  리소스 관리자를 사용하지 않도록 설정하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="RGOffObjEx"></a> 개체 탐색기를 사용하여 리소스 관리자를 사용하지 않도록 설정  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  **ALTER RESOURCE GOVERNOR DISABLE** 문을 실행합니다.  
   
-### <a name="example-transact-sql"></a>예(Transact-SQL)  
+### <a name="example-transact-sql"></a>예제(Transact-SQL)  
  다음 예에서는 리소스 관리자를 사용하도록 설정합니다.  
   
 ```  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
+ [관리](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 관리자 작업 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

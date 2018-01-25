@@ -16,15 +16,15 @@ helpviewer_keywords:
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a92b8a183c2975e219ef5774cd110e5f53e483a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3500b144cc3afb10c5ac12ee76e49dc11953623
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="online-restore-sql-server"></a>온라인 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 온라인 복원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서만 지원됩니다. 이 버전에서 기본적으로 파일, 페이지 또는 증분 복원은 온라인 상태입니다. 이 항목에서는 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우 및 단순 복구 모델에서 데이터베이스에 읽기 전용 파일 그룹만 있는 경우와 관련된 내용을 다룹니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  최종 로그 복원에 WITH RECOVERY를 사용하여 로그를 복원합니다. 이러면 복원된 데이터가 온라인 상태가 됩니다.  
   
- 롤백에 필요한 데이터가 시작 시 오프라인 상태여서 커밋되지 않은 트랜잭션을 롤백할 수 없는 경우가 있습니다. 이 경우에는 트랜잭션이 지연됩니다. 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)을 참조하세요.  
+ 롤백에 필요한 데이터가 시작 시 오프라인 상태여서 커밋되지 않은 트랜잭션을 롤백할 수 없는 경우가 있습니다. 이 경우에는 트랜잭션이 지연됩니다. 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)에서 존재하지 않는 파일 그룹을 제거하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
 >  데이터베이스가 현재 대량 로그 복구 모델을 사용하고 있을 경우 온라인 복원을 시작하기 전에 전체 복구 모델로 전환하는 것이 좋습니다. 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  

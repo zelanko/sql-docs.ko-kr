@@ -21,13 +21,13 @@ ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
 caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0ff2470ac6875c75c5a4882855536b4d0cf2d55
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6618b08a883ab17f53a6c35aa7a685737696ae17
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>서버 그룹 제거(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버에서 서버 그룹을 제거하는 방법에 대해 설명합니다. 언제든지 서버 그룹을 삭제할 수 있습니다. 서버 그룹이 비어 있지 않으면 삭제한 서버 그룹에 포함된 서버나 서버 그룹도 삭제됩니다. 서버 그룹을 삭제하기 전에 유지할 서버나 서버 그룹을 새 서버 그룹으로 이동합니다.  

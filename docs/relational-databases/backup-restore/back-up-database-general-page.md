@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6096d9cbe627276898de55425c60b98a327de947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: acb78ba1abb462f76dd26cd87062732b386f547e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-general-page"></a>데이터베이스 백업(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **데이터베이스 백업** 대화 상자의 **일반** 페이지를 사용하여 데이터베이스 백업 작업에 대한 설정을 확인하거나 수정할 수 있습니다.  
@@ -45,12 +45,12 @@ ms.lasthandoff: 11/17/2017
   
 -   부분 백업의 경우 PARTIAL 옵션과 함께 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문을 사용해야 합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ### <a name="source"></a>원본  
  **원본** 패널의 옵션은 데이터베이스를 식별하고 백업 작업에 대한 구성 요소 및 백업 유형을 지정합니다.  
   
- **데이터베이스**  
+ **데이터베이스 백업**  
  백업할 데이터베이스를 선택합니다.  
   
  **복구 모델**  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  **백업 유형**  
  지정한 데이터베이스에서 수행할 백업 유형을 선택합니다.  
   
-|백업 유형|사용 가능한 대상|제한 사항|  
+|백업 유형|사용 가능한 대상|Restrictions|  
 |-----------------|-------------------|------------------|  
 |전체|데이터베이스, 파일 및 파일 그룹|**master** 데이터베이스에서는 전체 백업만 가능합니다.<br /><br /> 단순 복구 모델에서는 읽기 전용 파일 그룹에 대해서만 파일 및 파일 그룹 백업을 사용할 수 있습니다.|  
 |차등|데이터베이스, 파일 및 파일 그룹|단순 복구 모델에서는 읽기 전용 파일 그룹에 대해서만 파일 및 파일 그룹 백업을 사용할 수 있습니다.|  
@@ -78,10 +78,10 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|**데이터베이스**|전체 데이터베이스를 백업할지를 지정합니다.|  
+|**데이터베이스 백업**|전체 데이터베이스를 백업할지를 지정합니다.|  
 |**파일 및 파일 그룹**|선택한 파일 및/또는 파일 그룹을 백업할지를 지정합니다.<br /><br /> 이 옵션을 선택하면 **파일 및 파일 그룹 선택** 대화 상자가 열립니다. 백업하려는 파일 그룹이나 파일을 선택하고 **확인**을 클릭하면 **파일 그룹 및 파일** 상자에 선택한 내용이 나타납니다.|  
   
-### <a name="destination"></a>대상  
+### <a name="destination"></a>Destination  
  **대상** 패널의 옵션을 사용하면 백업 작업에 대한 백업 장치 유형을 지정하고 기존 논리적 또는 물리적 백업 장치를 찾을 수 있습니다.  
   
 > [!NOTE]  

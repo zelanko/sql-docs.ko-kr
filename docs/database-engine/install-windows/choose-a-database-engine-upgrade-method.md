@@ -15,12 +15,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c568ec23e5f64e65afb794a7e0c60a0eeb693622
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: fef7f02b15fee27e3e18a5eac23e0ee6ab97959c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 가동 중지와 위험을 최소화하기 위해 이전 릴리스의 SQL Server에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하려는 경우 고려해야 할 몇 가지 방식이 있습니다. 전체 업그레이드를 실행하거나 새 설치로 마이그레이션하거나 롤링 업그레이드를 실행할 수 있습니다. 아래 다이어그램에 따라 적절한 방식을 선택할 수 있습니다. 다이어그램의 각 방식은 아래에서도 설명합니다. 다이어그램의 어느 지점에서 결정해야 하는지 알아보려면 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하십시오.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  또한 Azure SQL 데이터베이스 업그레이드 또는 SQL Server 환경 가상화를 업그레이드 계획에 포함하여 고려할 수 있습니다. 이러한 주제는 이 문서에서 다루지 않지만 다음 링크를 참조할 수 있습니다.
 >   - [Azure Virtual Machines의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL Database*](https://azure.microsoft.com/en-us/services/sql-database/) 
+>   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [Azure(https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)에서 SQL Server 옵션 선택]  
   
 ##  <a name="UpgradeInPlace"></a> 전체 업그레이드  

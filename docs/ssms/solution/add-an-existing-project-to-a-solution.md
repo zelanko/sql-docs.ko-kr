@@ -20,13 +20,13 @@ ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc23e1916ac3c9844f06ff8a379e9f2da0cde025
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad071db3d2a369abe5dc9161e91b837369a475f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>솔루션에 기존 프로젝트 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 기존 솔루션에 하나 이상의 프로젝트를 추가할 수 있습니다. 프로젝트는 둘 이상의 솔루션과 연관될 수 있습니다.  

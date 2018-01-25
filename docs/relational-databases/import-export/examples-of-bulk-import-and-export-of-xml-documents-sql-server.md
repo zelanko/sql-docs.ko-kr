@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: "65"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3ead52966c2c827140d05877596f4275dea9bde4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15e1fe1efcd8b2e0e1afc8ac4d64a26d7e274454
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 -   BULK INSERT  
   
--   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
+-   INSERT ... 로 기본 값 사용  
 
 자세한 내용은 다음 항목을 참조하십시오.
 - [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
@@ -100,7 +100,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>주의  
+#### <a name="remarks"></a>Remarks  
  이 경우 SINGLE_BLOB을 사용하면 XML 인코딩 선언에 지정된 XML 문서의 인코딩과 서버가 적용한 문자열 코드 페이지 간 불일치를 피할 수 있습니다.  
   
  NCLOB 또는 CLOB 데이터 형식을 사용할 경우 코드 페이지 또는 인코딩 충돌이 발생하면 다음 중 하나를 수행해야 합니다.  
@@ -268,7 +268,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 데이터가 데이터베이스에 유지되면 XML 인코딩을 저장하지 않습니다. 그러므로 XML 필드의 원래 인코딩은 XML 데이터를 내보내면 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 데이터를 내보낼 때 UTF-16 인코딩을 사용합니다.  
   
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [bcp 유틸리티](../../tools/bcp-utility.md)   

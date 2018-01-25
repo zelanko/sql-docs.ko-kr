@@ -19,13 +19,13 @@ ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44531e1fd2aabb4b1c0a312d5fe2ba7c045e7ae5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 17005e89a1711440b916815615dc86ef0c680313
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>다이어그램에서 테이블 정렬(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램에서 테이블을 빠르게 정렬하여 각 테이블과 관계를 명확하게 파악할 수 있습니다.  

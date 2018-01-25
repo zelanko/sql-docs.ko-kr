@@ -16,15 +16,15 @@ helpviewer_keywords:
 - interactive resolver [SQL Server replication]
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de21819630240112cfcbfb5425dbb10460eda3a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5bbc5ed6ee2bb4713430e00394869e915ddada9d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 복제 충돌 뷰어 및 대화형 해결 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에는 병합 복제 및 트랜잭션 복제에 대한 복제 충돌 뷰어의 정보와 병합 복제에 대한 대화형 해결 프로그램의 정보가 포함되어 있습니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [필터 정의](../../relational-databases/replication/define-filters.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [병합 게시에 대한 데이터 충돌 보기 및 해결&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [트랜잭션 게시의 데이터 충돌 확인&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
  [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

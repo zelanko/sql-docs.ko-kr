@@ -16,13 +16,13 @@ ms.assetid: d6a677ff-60ad-47ba-a0cb-df4193b165e0
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e7b4cc647a5654a098ab8d3a318dbcfc313a1c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 483e97e8009d087dff347bbf7632f5516b7460bc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-properties-connection-page"></a>SQL Server 에이전트 속성(연결 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 간의 연결 설정을 확인하고 수정할 수 있습니다.  

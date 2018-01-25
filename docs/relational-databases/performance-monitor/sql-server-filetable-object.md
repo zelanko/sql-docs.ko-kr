@@ -16,13 +16,13 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c996bd6928750d77960e3ff35a01ed9829195580
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57a16709c701e8754446287f9d0b74b6e94581b3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, FileTable 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLServer:FileTable** 성능 개체는 FileTable 및 트랜잭션되지 않은 액세스와 관련된 통계에 대한 카운터를 제공합니다.
@@ -61,5 +61,5 @@ ms.lasthandoff: 11/17/2017
 |**Time to get FileTable item BASE**|내부용으로만 사용할 수 있습니다.|
 |**Time update FileTable item BASE**|내부용으로만 사용할 수 있습니다.| 
  
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [리소스 사용 모니터링(시스템 모니터)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

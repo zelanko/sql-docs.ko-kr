@@ -15,12 +15,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 760625b44f96422eabb6f753dab02c47da4f0750
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: a277fd883b517c238052ee0a328fbb0b4feb95ce
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-servicing-updates"></a>SQL Server 서비스 업데이트 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]용 업데이트 설치에 대한 정보를 제공합니다. 이 섹션에서는 다음과 같은 정보를 제공합니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 통해 업데이트를 받으면 무인 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 최신 버전으로 업데이트합니다. 더 많은 유연성이 필요하거나 인터넷 또는 WSUS 액세스가 없을 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center에서 업데이트를 얻어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [설치 마법사에서 SQL Server 설치 &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
 [SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)   
 [실패한 SQL Server 설치 복구](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  

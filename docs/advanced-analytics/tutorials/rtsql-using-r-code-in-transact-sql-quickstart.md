@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e1562fc0cf2cd1c3f037dab1ee275beeaeffeea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c0896ca67df3d8000fae8f3cd3d336b047ee481
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>R 코드를 사용 하 여 transact-sql (SQL 빠른 시작에서 R)
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 
 30분, 설치 제외
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이미 설치 된 다음 중 하나가 지정 된 SQL Server의 인스턴스에 액세스할 수 있어야 합니다.
 
@@ -50,7 +50,7 @@ Azure 가상 컴퓨터 또는 온-프레미스 SQL Server 인스턴스가 될 �
 
 R 스크립트를 포함 하는 SQL 쿼리를 실행 하려면 데이터베이스에 연결 하 고 T-SQL 코드를 실행할 수 있는 다른 응용 프로그램을 사용할 수 있습니다. SQL Server Management Studio (SSMS) 또는 Visual Studio SQL 전문가가 사용할 수 있습니다.
 
-이 자습서에서는 R 내부 SQL Server를 실행 하는 것이 얼마나 쉬운지 표시를 사용 했습니다 새 **Visual Studio Code 확장명이 mssql**합니다. VS Code는 Windows, Linux 또는 macOS 등에서 실행할 수 있는 무료 개발 환경입니다. **mssql*** 확장은 SLq 쿼리를 실행 하기 위한 간단한 확장 합니다. 이 확장을 설치하려면 [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)(Visual Studio Code용 mssql 확장 사용) 문서를 참조하세요.
+이 자습서에서는 R 내부 SQL Server를 실행 하는 것이 얼마나 쉬운지 표시를 사용 했습니다 새 **Visual Studio Code 확장명이 mssql**합니다. VS Code는 Windows, Linux 또는 macOS 등에서 실행할 수 있는 무료 개발 환경입니다. **mssql** 확장은 T-SQL 쿼리를 실행 하기 위한 간단한 확장 합니다. 이 확장을 설치하려면 [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)(Visual Studio Code용 mssql 확장 사용) 문서를 참조하세요.
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>데이터베이스에 연결하고 Hello World 테스트 스크립트 실행
 

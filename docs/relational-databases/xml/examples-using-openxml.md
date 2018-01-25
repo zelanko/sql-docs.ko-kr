@@ -29,15 +29,15 @@ helpviewer_keywords:
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9e77b2c648517d2d48d3537dd5f180b77bc0e979
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ce5f1474f03cad13c45eefe88202d15e706eb7bc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-using-openxml"></a>예제: OPENXML 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](../../relational-databases/xml/specify-metaproperties-in-openxml.md)을 참조하세요.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   *rowpattern*(/ROOT/Customer)은 처리할 <`Customer`> 노드를 식별합니다.  
   
--   *flags* 매개 변수 값은 **1**로 설정되어 특성 중심의 매핑을 나타냅니다. 결과적으로 XML 특성은 *SchemaDeclaration*에 정의된 행 집합의 열에 매핑됩니다.  
+-   *flags* 매개 변수 값은 **1** 로 설정되어 특성 중심의 매핑을 나타냅니다. 결과적으로 XML 특성은 *SchemaDeclaration*에 정의된 행 집합의 열에 매핑됩니다.  
   
 -   WITH 절의 *SchemaDeclaration*에서는 지정된 *ColName* 값이 해당 XML 특성 이름과 일치합니다. 따라서 *ColPattern* 매개 변수는 *SchemaDeclaration*에 지정되지 않습니다.  
   
@@ -448,7 +448,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 예를 들어  
+ 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   다음은 문서의 **Customer** 노드 수를 반환하는 쿼리입니다. WITH 절이 지정되지 않았으므로 OPENXML은 Edge 테이블을 반환합니다. SELECT 문은 Edge 테이블을 쿼리합니다.  
   
@@ -529,7 +529,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>8. 여러 개의 텍스트 노드가 있는 XML 문서 지정  
- XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들어  
+ XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 DECLARE @h int  

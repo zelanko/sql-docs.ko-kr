@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Web synchronization, security architecture
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a582eb3debf641b5704e051e67c49104a83f270c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 94de766b7e039aa2b66d900202fff0d458b0f358
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-architecture-for-web-synchronization"></a>웹 동기화를 위한 보안 아키텍처
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하여 웹 동기화 보안 구성을 세밀하게 제어할 수 있습니다. 이 항목에서는 웹 동기화 구성에 포함할 수 있는 포괄적인 구성 요소 목록과 구성 요소 간 연결에 대한 정보를 제공합니다. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
 |인증 유형|인증 지정 위치|  
 |----------------------------|-------------------------------------------|  
-|Windows 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: **1** 의 **@publisher_security_mode** 매개 변수에 대해 [@job_password](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)매개 변수<br />-   RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>에 대한 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>의 값<br />-   병합 에이전트 명령줄: **-PublisherSecurityMode**에 대해 **1** 값|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 게시자에 연결합니다. 게시자와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하세요.|  
+|Windows 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: **1** 의 **@publisher_security_mode** 매개 변수에 대해 [@job_password](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)매개 변수<br />-   RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>에 대한 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>의 값<br />-   병합 에이전트 명령줄: **-PublisherSecurityMode**에 대해 **1** 값|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 게시자에 연결합니다. 게시자와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하십시오.|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: **SubscriberSecurityMode** 의 **@publisher_security_mode** 매개 변수에 대해 [@job_password](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)매개 변수<br />-   RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>에 대한 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>의 값<br />-   병합 에이전트 명령줄: **-PublisherSecurityMode**에 대해 **0** 값|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@publisher_login** 의 **@publisher_password** 및 [@job_password](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)매개 변수<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A><br /><br /> 병합 에이전트 명령줄: **-PublisherLogin** 및 **-PublisherPassword**|  
   
 ## <a name="f-connection-to-the-distributor"></a>6. 배포자 연결  
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/17/2017
   
 |인증 유형|인증 지정 위치|  
 |----------------------------|-------------------------------------------|  
-|Windows 인증|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 스냅숏 공유에 액세스합니다. 스냅숏 공유와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하세요.|  
+|Windows 인증|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 스냅숏 공유에 액세스합니다. 스냅숏 공유와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하십시오.|  
   
 ## <a name="i-application-pool-account-for-iis"></a>9. IIS의 응용 프로그램 풀 계정  
  이 계정은 IIS를 실행하는 컴퓨터에서 [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)] 에 대해 W3wp.exe 프로세스를 시작하거나 [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]에서 Dllhost.exe 프로세스를 시작하는 데 사용됩니다. 이러한 프로세스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기 및 병합 복제 조정자와 같이 IIS를 실행하는 컴퓨터에 응용 프로그램을 호스팅합니다. 이 계정에는 IIS를 실행하는 컴퓨터에서 다음 복제 DLL에 대한 읽기 및 실행 권한이 있어야 합니다.  
@@ -140,8 +140,8 @@ ms.lasthandoff: 11/17/2017
 |---------------------|------------------------------------|  
 |필요한 사용 권한이 있는 모든 Windows 사용자|인터넷 정보 서비스(IIS) 관리자 |  
   
-## <a name="see-also"></a>관련 항목:  
- [웹 동기화 구성](../../../relational-databases/replication/configure-web-synchronization.md)   
+## <a name="see-also"></a>참고 항목  
+ [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
   

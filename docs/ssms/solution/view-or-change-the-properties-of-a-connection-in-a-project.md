@@ -21,13 +21,13 @@ ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2fbf26947bbf50bb16fc78dbe6af61e45f4c202
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0bc7f0a8d553cbf7f103732d34a7063425f700ed
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>프로젝트의 연결 속성 보기 및 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 프로젝트에 저장된 연결의 속성을 볼 수 있으며 일부 속성은 수정할 수 있습니다.  

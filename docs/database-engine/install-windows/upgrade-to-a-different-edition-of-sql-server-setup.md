@@ -15,12 +15,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1b9a66523d0d56a8e357ef31ee29545ec2fea3c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 58b90e91e05c20716faa72063090696f88af4076
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>다른 SQL Server 버전으로 업그레이드(설치 프로그램)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > **장애 조치 클러스터 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스의 노드 중 하나에서 버전 업그레이드를 실행하는 것으로 충분합니다. 이 노드는 활성 또는 수동 모드로 있을 수 있으며, 엔진은 버전 업그레이드 중에 리소스를 오프라인으로 가져오지 않습니다. 버전 업그레이드 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하거나 다른 노드에 대한 장애 조치(failover)를 다시 시작해야 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
   
 > [!IMPORTANT]  
@@ -76,13 +76,13 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서 업그레이드했다면 위의 단계 외에 다음을 추가로 수행해야 합니다.  
   
--   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 로 프로비전된 사용자는 업그레이드 후에도 프로비전 상태가 유지됩니다. 특히 BUILTIN\Users 그룹은 프로비전 상태로 유지됩니다. 필요에 따라 이러한 계정을 비활성화 또는 제거하거나 다시 프로비전합니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
+-   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 로 프로비전된 사용자는 업그레이드 후에도 프로비전 상태가 유지됩니다. 특히 BUILTIN\Users 그룹은 프로비전 상태로 유지됩니다. 필요에 따라 이러한 계정을 비활성화 또는 제거하거나 다시 프로비전합니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)를 참조하세요.  
   
 -   tempdb 및 model 시스템 데이터베이스에 대한 크기 및 복구 모드는 업그레이드 후에도 변경되지 않은 상태로 유지됩니다. 필요에 따라 이러한 설정을 다시 구성하십시오. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
   
 -   템플릿 데이터베이스는 업그레이드 후에도 컴퓨터에 그대로 유지됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)   
  [이전 버전과의 호환성_삭제됨](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

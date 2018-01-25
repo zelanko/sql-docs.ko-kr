@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQLServer:External Scripts
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66add2dde2f00196aae611fa6757b9098fcea870
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa53d84e29b23d73f73c93641306b11a328fc2e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, 외부 스크립트 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  이 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **외부 스크립트** 카운터를 설명합니다.  
   
-|SQL Server 외부 스크립트 카운터|설명|  
+|SQL Server 외부 스크립트 카운터|Description|  
 |------------------------------------------|-----------------|  
 |**실행 오류**|외부 스크립트 실행 시 발생한 오류 수입니다.|  
 |**묵시적 인증. Logins**|묵시적 인증을 사용하여 인증된 위성 프로세스의 로그인 수입니다.|  

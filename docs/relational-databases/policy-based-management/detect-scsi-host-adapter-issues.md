@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9a5ef035e5aa3bea80d8ceb353b9d0ce7386232
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb948d65acce25be12d9e9743bca5014c08c6e4e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>SCSI 호스트 어댑터 문제 검색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 규칙은 시스템 이벤트 로그에서 EventId 1066을 검사합니다. 이 오류는 SCSI 호스트 어댑터 구성 문제 또는 장치 오작동으로 인해 발생합니다.  

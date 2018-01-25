@@ -18,15 +18,15 @@ helpviewer_keywords:
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: "74"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74cd98740e15437e44fc782cf71389daccd1beea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82b43b985c462d5748079a8e9b6eea84a7fe2a53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔터프라이즈 버전의 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우, 그리고 단순 모델에서 파일 그룹이 읽기 전용인 경우에 대해서만 다룹니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
      메모리 내 OLTP 데이터베이스의 증분 복원에 대한 자세한 내용은 [메모리 액세스에 최적화된 테이블이 포함된 데이터베이스의 증분 백업 및 복원](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)을 참조하세요.  
   
-## <a name="restrictions"></a>제한 사항  
+## <a name="restrictions"></a>Restrictions  
  부분 복원 순서에서 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) 파일 그룹이 제외될 경우 지정 시간 복원은 지원되지 않습니다. 복원 순서를 강제로 계속할 수 있지만 RESTORE 문에서 누락된 FILESTREAM 파일 그룹은 복원되지 않습니다. 지정 시간 복원을 강제로 수행하려면 후속 RESTORE LOG 문에도 지정해야 하는 STOPAT, STOPATMARK 또는 STOPBEFOREMARK 옵션과 함께 CONTINUE_AFTER_ERROR 옵션을 지정합니다. CONTINUE_AFTER_ERROR를 지정하면 부분 복원 순서가 성공하고 FILESTREAM 파일 그룹이 복구 불가능한 상태가 됩니다.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>단순 복구 모델에서의 증분 복원  

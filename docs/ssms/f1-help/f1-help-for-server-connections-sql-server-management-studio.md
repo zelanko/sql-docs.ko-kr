@@ -21,13 +21,13 @@ ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2065b87e92acb3e09e869eeedb7368c33ffb7b0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 402100db161168a91b4153d69578cfbcc1cf5543
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>서버 연결에 대한 F1 도움말(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 **서버에 연결** 대화 상자에 대한 F1 도움말을 제공합니다.  

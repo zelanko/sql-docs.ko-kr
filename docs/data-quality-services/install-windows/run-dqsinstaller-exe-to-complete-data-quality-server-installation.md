@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81df7b3a331cf9ac111f0bf11a413133e0bc5a81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d6d14694ebc822f28c7765d1ed7235b77e4db06c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치한 후 DQSInstaller.exe 파일을 실행해야 합니다. 이 항목에서는 **시작** 화면, **시작** 메뉴, Windows 탐색기 또는 명령 프롬프트에서 DQSInstaller.exe를 실행하는 방법에 대해 설명합니다. DQSInstaller.exe 파일을 실행하기 위해 어떤 방법이나 선택할 수 있습니다.  
   
-##  <a name="Prerequisites"></a> 필수 구성 요소  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   SQL Server를 설치하는 동안 SQL Server 설치 프로그램의 기능 선택 페이지에 있는 **데이터베이스 엔진 서비스** 에서 **Data Quality Services** 를 선택하고 SQL Server 설치를 완료해야 합니다. 자세한 내용은 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)을 참조하세요.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
 3.  데이터베이스 마스터 키에 대한 암호를 입력하라는 메시지가 표시됩니다. 데이터베이스 마스터 키는 나중에 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)에서 참조 데이터 공급자를 설정할 때 DQS_MAIN 데이터베이스에 저장되는 참조 데이터 서비스 공급자 키를 암호화하기 위해 필요합니다.  
   
     > [!IMPORTANT]  
-    >  암호는 8자 이상이어야 하며 다음 4개 범주 중 3개의 문자를 포함해야 합니다. 영어 대문자(A, B, C... Z), 영어 소문자(a, b, c,... z), 숫자(0, 1, 2... 9) 및 영숫자가 아닌 문자 또는 특수 문자(~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). 예를 들면 P@ssword과 같습니다. 현재 암호가 요구 사항을 따르지 않을 경우 설치 프로그램에서 다른 암호를 입력하라는 메시지가 표시됩니다.  
+    >  암호는 8자 이상이어야 하며 다음 4개 범주 중 3개의 문자를 포함해야 합니다. 영어 대문자(A, B, C... Z), 영어 소문자(a, b, c,... z), 숫자(0, 1, 2... 9) 및 영숫자가 아닌 문자 또는 특수 문자(~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). 예를 들어 P@ssword을 참조하십시오. 현재 암호가 요구 사항을 따르지 않을 경우 설치 프로그램에서 다른 암호를 입력하라는 메시지가 표시됩니다.  
   
 4.  암호를 제공하고, 다시 암호를 확인한 다음 Enter 키를 눌러 설치를 계속합니다.  
   
@@ -72,13 +72,13 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="CommandPrompt"></a> 명령 프롬프트에서 DQSInstaller.exe 실행  
  다음 명령줄 매개 변수를 사용하여 명령 프롬프트에서 DQSInstaller.exe를 실행할 수 있습니다.  
   
-|DQSInstaller.exe 매개 변수|설명|예제 구문|  
+|DQSInstaller.exe 매개 변수|Description|예제 구문|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]설치에 사용되는 서버 데이터 정렬입니다.<br /><br /> DQS는 대/소문자를 구분하지 않는 데이터 정렬만 지원합니다. 대/소문자를 구분하는 데이터 정렬을 지정하는 경우 설치 프로그램은 지정된 데이터 정렬의 대/소문자 구분 없는 버전을 사용하려고 합니다. 대/소문자 구분 없는 버전이 없거나 해당 데이터 정렬을 SQL에서 지원하지 않는 경우 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치가 실패합니다.<br /><br /> 서버 데이터 정렬이 지정되지 않는 경우 기본 데이터 정렬 SQL_Latin1_General_CP1_CI_AS가 사용됩니다.|`dqsinstaller.exe –collation <collation_name>`|  
 |-upgradedlls|DQS 데이터베이스(DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA)를 다시 만드는 것을 건너뛰고, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에서 DQS가 사용하는 SQLCLR(SQL 공용 언어 런타임) 어셈블리만 업데이트합니다.<br /><br /> 자세한 내용은 [.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)를 참조하세요.|`dqsinstaller.exe -upgradedlls`|  
-|-exportkbs|모든 기술 자료를 DQS 백업 파일(.dqsb)로 내보냅니다. 또한 모든 기술 자료를 내보내기 위해 사용하려는 전체 경로 및 파일 이름을 지정해야 합니다.<br /><br /> 자세한 내용은 [Dqsinstaller.exe를 사용하여 DQS 기술 자료 내보내기 및 가져오기](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)을 참조하세요.|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> 예를 들면 다음과 같습니다. `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
+|-exportkbs|모든 기술 자료를 DQS 백업 파일(.dqsb)로 내보냅니다. 또한 모든 기술 자료를 내보내기 위해 사용하려는 전체 경로 및 파일 이름을 지정해야 합니다.<br /><br /> 자세한 내용은 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)을 참조하세요.|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> 예를 들면 다음과 같습니다. `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
 |-importkbs|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료한 후 DQS 백업 파일(.dqsb)에서 모든 기술 자료를 가져옵니다. 또한 모든 기술 자료를 가져오기 위해 사용하려는 전체 경로 및 파일 이름을 지정해야 합니다.<br /><br /> 자세한 내용은 [Dqsinstaller.exe를 사용하여 DQS 기술 자료 내보내기 및 가져오기](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)을 참조하세요.|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> 예를 들면 다음과 같습니다. `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
-|-upgrade|DQS 데이터베이스 스키마를 업그레이드합니다. 이전에 구성한 DQS 인스턴스에 SQL Server 업데이트를 설치한 후 이 매개 변수를 사용해야 합니다. 자세한 내용은 [SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)을 참조하세요.|`dqsinstaller.exe -upgrade`|  
+|-upgrade|DQS 데이터베이스 스키마를 업그레이드합니다. 이전에 구성한 DQS 인스턴스에 SQL Server 업데이트를 설치한 후 이 매개 변수를 사용해야 합니다. 자세한 내용은 [Upgrade DQS Databases Schema After Installing SQL Server Update](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)을 참조하세요.|`dqsinstaller.exe -upgrade`|  
 |-uninstall|현재 SQL Server 인스턴스에서 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 제거합니다.<br /><br /> 기존 Data Quality 서버 설치에 있는 모든 기술 자료를 DQS 백업 파일(.dqsb)로 내보낸 후 Data Quality 서버를 제거할 수 있습니다. 자세한 내용은 [Dqsinstaller.exe를 사용하여 DQS 기술 자료 내보내기 및 가져오기](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)을 참조하세요.<br /><br /> **\*\* 중요 \*\*** [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 명령줄 매개 변수를 사용하여 SQL Server 인스턴스에서 `–uninstall` 를 제거하는 경우 제거 프로세스의 일부로 모든 DQS 개체가 삭제됩니다. [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] Data Quality 서버 개체 제거 [에서 설명한 대로](../../sql-server/install/remove-data-quality-server-objects.md)을 제거한 후 이를 수동으로 삭제할 필요가 없습니다.|**Data Quality 서버만 제거하려면**<br /><br /> `dqsinstaller.exe –uninstall`<br /><br /> **모든 기술 자료를 파일로 내보낸 후 Data Quality 서버를 제거하려면**<br /><br /> `dqsinstaller.exe –uninstall <path><filename>`<br /><br /> 예를 들면 다음과 같습니다. `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
   
  **명령 프롬프트에서 DQSInstaller.exe를 실행하려면**  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  필요한 동작은 지정된 명령을 기반으로 수행됩니다. 명령줄 매개 변수를 사용하지 않고 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 설치하기로 한 경우 나머지 단계는 이전 섹션 [시작 화면, 시작 메뉴 또는 Windows 탐색기에서 DQSInstaller.exe 실행](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer)의 2~6단계에 설명된 것과 같습니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
   
 -   해당 작업 프로필에 따라 사용자에게 적합한 DQS 역할을 부여합니다. [사용자에게 DQS 역할 부여](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)를 참조하세요.  
   

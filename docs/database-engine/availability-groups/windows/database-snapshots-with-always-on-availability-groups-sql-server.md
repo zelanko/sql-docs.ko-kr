@@ -18,13 +18,13 @@ ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b092bbae04647359c211c9c44110b5708ab2bbcc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 93c59f495fb5bbfafe07f4ecf29218a59b645e8c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-snapshots-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 있는 데이터베이스 스냅숏(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,13 +20,13 @@ ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abeef005bb624d85af9a62ff5c467087f0bd82bd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7068522fbb73363053151da7140dcfa2ad365aef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>유효성 검사 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
  **결과**  
  다음 하이퍼링크 텍스트 중 하나를 표시합니다. 지정된 유효성 검사 단계의 결과에 대한 자세한 내용을 보려면 하이퍼링크를 클릭하십시오.  
   
-|결과|설명|  
+|결과|Description|  
 |------------|-----------------|  
 |**오류**|유효성 검사 단계가 실패했음을 나타냅니다. 오류 메시지를 보려면 링크를 클릭합니다.|  
 |**건너뜀**|선택 항목에 필요하지 않아 유효성 검사 단계를 건너뛰었음을 나타냅니다. 단계를 건너뛴 이유를 보려면 링크를 클릭합니다.|  

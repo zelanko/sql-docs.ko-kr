@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9db1fe5e47e062e2fa1a4563d54059b0ecfdc0af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6fdf75cd720e6463a41475212beb07ee4a79819
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---advanced-page"></a>서버 속성 - 고급 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 고급 서버 설정을 확인하거나 수정할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [서버 속성 보기 또는 변경&#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>포함  
+## <a name="containment"></a>Containment  
  포함된 데이터베이스 사용  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 포함된 데이터베이스를 허용하는지 여부를 나타냅니다. **True**인 경우 포함된 데이터베이스를 만들거나 복구하거나 연결할 수 있습니다. **False**인 경우 포함된 데이터베이스를 만들거나 복구하거나 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결할 수 없습니다. 포함 속성을 변경하면 데이터베이스 보안에 영향을 줄 수 있습니다. 포함된 데이터베이스를 사용하면 데이터베이스 소유자에게 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 부여할 수 있습니다. 포함된 데이터베이스를 사용하지 않으면 사용자의 연결을 금지할 수 있습니다. 포함 속성의 영향을 이해하려면 [Contained Databases](../../relational-databases/databases/contained-databases.md) 및 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)을 참조하십시오.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 현재 FILESTREAM 지원 수준을 표시합니다. 액세스 수준을 변경하려면 다음 값 중 하나를 선택합니다.  
   
  **사용 안 함**  
- BLOB(Binary Large Object) 데이터를 파일 시스템에 저장할 수 없습니다. 이 값은 기본값입니다.  
+ BLOB(Binary Large Object) 데이터를 파일 시스템에 저장할 수 없습니다. 이것은 기본값입니다.  
   
  **Transact-SQL 액세스 사용**  
  파일 시스템을 통해서가 아니라 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 FILESTREAM 데이터에 액세스할 수 있습니다.  

@@ -20,13 +20,13 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eda664aa9c3c69f8c4d515143b5aa38819ddc31a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef0e3215cccf5cbece0036c79f73a10c25119c4e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="supported-version-and-edition-upgrades"></a>지원되는 버전 및 에디션 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 업그레이드할 수 있습니다. 이 항목에서는 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 지원되는 업그레이드 경로 및 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에 대해 지원되는 버전 업그레이드에 대해 설명합니다.  
@@ -166,7 +166,7 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
   
  \*[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Tools 및 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Advanced Services에도 적용됩니다.  
   
- **[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 장애 조치(failover) 클러스터의 버전 변경은 제한됩니다. 다음과 같은 시나리오는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 장애 조치(Failover) 클러스터에서 지원되지 않습니다.  
+ ** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 장애 조치(failover) 클러스터의 버전 변경은 제한됩니다. 다음과 같은 시나리오는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 장애 조치(Failover) 클러스터에서 지원되지 않습니다.  
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise를 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer, Standard 또는 Evaluation으로 변경  
   
@@ -176,7 +176,7 @@ SQL Server 2016은 다음 버전의 SQL Server에서 업그레이드할 수 있�
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation을 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard로 변경  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
  [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
  

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4613a7ee6306ba86b5748377f20c1cf48117815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscribe-to-publications"></a>게시 구독
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 구독은 게시에 있는 데이터 및 데이터베이스 개체 복사본에 대한 요청입니다. 구독은 어떤 게시를 언제 어디서 받을 것인지를 정의합니다. 구독을 계획하는 경우 에이전트 처리를 수행할 위치를 고려합니다. 선택한 구독 유형에 따라 에이전트가 실행되는 위치가 결정됩니다. 밀어넣기 구독을 사용하면 병합 에이전트 또는 배포 에이전트가 배포자에서 실행되고 끌어오기 구독을 사용하면 에이전트가 구독자에서 실행됩니다. 구독을 만든 후에는 해당 유형을 변경할 수 없습니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="merge-replication-subscription-types"></a>병합 복제 구독 유형  
  모든 복제 유형은 밀어넣기 및 끌어오기 구독을 허용합니다. 병합 복제는 클라이언트 구독과 서버 구독이라는 두 개의 추가 용어를 사용하여 구독을 구분합니다. 클라이언트 구독 유형과 서버 구독 유형은 모두 밀어넣기 및 끌어오기 구독에 사용할 수 있습니다. 클라이언트 구독은 대부분의 구독자에 적합한 반면 서버 구독은 일반적으로 데이터를 다른 구독자에게 다시 게시하는 구독자에 사용됩니다. 선택한 구독 유형은 충돌 해결에도 영향을 줍니다.  
   
-## <a name="non-sql-server-subscribers"></a>SQL Server 이외 구독자  
+## <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
  Oracle 및 IBM DB2는 밀어넣기 구독을 사용하여 스냅숏 및 트랜잭션 게시를 구독할 수 있습니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
   
 ## <a name="creating-subscriptions"></a>구독 만들기  
@@ -94,8 +94,8 @@ ms.lasthandoff: 11/17/2017
   
  [끌어오기 구독 삭제](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구독자 보안 설정](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [구독 만료 및 비활성화](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

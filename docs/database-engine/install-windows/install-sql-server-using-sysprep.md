@@ -15,12 +15,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f8f670c4eb380a5fb4a43d547133c64d616e1b54
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 87615ca4a3601ab92b37e97a8392b392accb1695
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep을 사용하여 SQL Server 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
 - [구성 파일을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요. 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 하드웨어 및 소프트웨어 요구 사항에 대한 자세한 내용은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요. 
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 3. Windows 장애 조치(Failover) 클러스터를 만듭니다. 
   
-4. 모든 노드에서 **/ACTION=PrepareFailoverCluster** 를 사용하여 setup.exe를 실행합니다. 예를 들어  
+4. 모든 노드에서 **/ACTION=PrepareFailoverCluster** 를 사용하여 setup.exe를 실행합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제<br /><br /> 전체 텍스트 기능<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 다음 네이티브 모드:<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 재배포 가능 기능<br /><br /> 공유 기능|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제<br /><br /> 전체 텍스트 기능<br /><br /> 데이터베이스 엔진 서비스<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 다음 네이티브 모드:<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 재배포 가능 기능<br /><br /> 공유 기능|  
   
      기능 이름을 선택하여 강조하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 [SQL Server의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요. 
   
@@ -301,7 +301,7 @@ ms.lasthandoff: 11/20/2017
 10. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 모든 구성 요소가 제거될 때까지 1-9단계를 반복합니다. 
   
 ##  <a name="bk_Modifying_Uninstalling"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 완료된 인스턴스 수정 또는 제거 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 완료된 인스턴스를 제거하거나 기능을 추가 또는 제거하는 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치된 인스턴스에 대한 작업과 프로세스가 비슷합니다. 자세한 내용은 다음 항목을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 완료된 인스턴스를 제거하거나 기능을 추가 또는 제거하는 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치된 인스턴스에 대한 작업과 프로세스가 비슷합니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
 - [SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   

@@ -18,13 +18,13 @@ ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 452b2bc9e11d0f2d1dd06767efe68d48bfdcef8d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c958466070df5f51e69e8aa0d665b65177794dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>데이터베이스 미러링 보안 구성 마법사 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 미러링 보안 구성 마법사는 미러링과 관련된 일부 또는 모든 서버 인스턴스에서 보안 설정을 초기 구성하는 데 사용할 수 있습니다. 이 마법사는 **데이터베이스 속성** 대화 상자의 **미러링** 페이지와 함께 작동합니다.  

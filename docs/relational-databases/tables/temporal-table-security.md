@@ -15,13 +15,13 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 caps.latest.revision: "9"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5470d1d28d874404df4506127f38ee8d19b97d15
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5c86f951c3e6f8d553ea61ed959cac6ade235b54
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-table-security"></a>임시 테이블 보안
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,12 +31,13 @@ ms.lasthandoff: 11/17/2017
 ## <a name="security-principles"></a>보안 원칙  
  다음 표는 temporal 테이블에 적용되는 보안 원칙에 대해 설명합니다.  
   
-|원칙|설명|  
+|원칙|Description|  
 |---------------|-----------------|  
 |system-versioning을 설정/해제하려면 영향을 받는 개체에 대해 가장 높은 권한이 있어야 함|SYSTEM_VERSIONING을 설정 및 해제하려면 현재 및 기록 테이블에 대해 CONTROL 권한이 있어야 합니다.|  
 |기록 데이터는 직접 수정할 수 없음|SYSTEM_VERSIONING이 ON일 경우 사용자가 현재 또는 기록 테이블에 대해 가지고 있는 실제 권한과 상관없이 기록 데이터를 수정할 수 없습니다. 여기에는 데이터 및 스미카 수정이 포함됩니다.|  
 |기록 데이터를 쿼리하려면 기록 테이블에 대해 **SELECT** 권한이 있어야 함|현재 테이블에 대해 **SELECT** 권한이 있는 사용자가 반드시 기록 테이블에 대해 **SELECT** 권한이 있는 것이 아닙니다.|  
-|감사를 수행할 경우 기록 테이블에 특정 방식으로 영향을 미치는 작업이 표시됩니다.|기록 테이블을 정기적으로 감사할 경우 직접적인 데이터 액세스 시도를 모두 캡처할 수 있습니다(성공 여부와 무관).<br /><br /> 임시 쿼리 확장이 포함된**SELECT** 는 기록 테이블이 해당 작업으로 영향을 받았음을 표시합니다.<br /><br /> **CREATE/ALTER** temporal 테이블에 기록 테이블에서도 사용 권한 검사가 실행된다는 정보가 표시됩니다. 감사 파일에는 기록 테이블에 대한 추가 기록이 포함됩니다.<br /><br /> 현재 테이블에 DML 작업을 적용할 경우 기록 테이블이 영향을 받았다는 내용이 표시되지만 additional_info가 필요한 컨텍스트를 제공합니다(DML은 system_versioning의 결과임).|  
+|감사를 수행할 경우 기록 테이블에 특정 방식으로 영향을 미치는 작업이 표시됩니다.|기록 테이블을 정기적으로 감사할 경우 직접적인 데이터 액세스 시도를 모두 캡처할 수 있습니다(성공 여부와 무관).<br /><br /> 임시 쿼리 확장이 포함된**SELECT** 는 기록 테이블이 해당 작업으로 영향을 받았음을 표시합니다.<br /><br /> 
+            **CREATE/ALTER** temporal 테이블에 기록 테이블에서도 사용 권한 검사가 실행된다는 정보가 표시됩니다. 감사 파일에는 기록 테이블에 대한 추가 기록이 포함됩니다.<br /><br /> 현재 테이블에 DML 작업을 적용할 경우 기록 테이블이 영향을 받았다는 내용이 표시되지만 additional_info가 필요한 컨텍스트를 제공합니다(DML은 system_versioning의 결과임).|  
   
 ## <a name="performing-schema-operations"></a>스키마 작업 수행  
  SYSTEM_VERSIONING이 ON으로 설정된 경우에는 스키마 수정 작업이 제한됩니다.  

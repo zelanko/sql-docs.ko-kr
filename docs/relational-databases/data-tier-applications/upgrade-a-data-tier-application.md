@@ -27,15 +27,15 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d374f66debb936b1b57cb631d9e1643cc923fdc4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ea79fb1e120239f25cfab958e92fcd44b79423d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="upgrade-a-data-tier-application"></a>데이터 계층 응용 프로그램 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터 계층 응용 프로그램 업그레이드 마법사 또는 Windows PowerShell 스크립트를 사용하여 현재 배포된 DAC(데이터 계층 응용 프로그램)의 스키마와 속성을 새 DAC 버전에 정의된 스키마와 속성과 일치하도록 변경할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  DAC 업그레이드는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상에서만 수행될 수 있습니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  업그레이드를 시작하기 전에 전체 데이터베이스 백업을 수행하는 것이 좋습니다. 업그레이드할 때 오류가 발생하여 모든 변경 내용을 롤백할 수 없는 경우 백업을 복원해야 할 수 있습니다.  
   
  업그레이드를 시작하기 전에 DAC 패키지 및 업그레이드 동작의 유효성을 검사하기 위해 취해야 하는 조치는 여러 가지가 있습니다. 이러한 검사를 수행하는 방법은 [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md)를 참조하세요.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> 보안  
  보안을 개선하기 위해 SQL Server 인증 로그인은 암호 없이 DAC 패키지에 저장됩니다. 패키지가 배포 또는 업그레이드되면 생성된 암호와 함께 비활성 로그인이 생성됩니다. 로그인을 활성화하려면 ALTER ANY LOGIN 권한이 있는 로그인을 사용하여 로그인하고 ALTER LOGIN을 사용하여 로그인을 활성화하여 사용자에게 알려 줄 수 있는 새 암호를 할당합니다. Windows 인증 로그인의 경우 암호가 SQL Server에서 관리되지 않으므로 이 과정이 필요 없습니다.  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 업그레이드할 수 있습니다. 로그인은 기존 데이터베이스의 소유자여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 업그레이드할 수 있습니다.  
   
 ##  <a name="UsingDACUpgradeWizard"></a> 데이터 계층 응용 프로그램 업그레이드 마법사 사용  
@@ -290,7 +290,7 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   

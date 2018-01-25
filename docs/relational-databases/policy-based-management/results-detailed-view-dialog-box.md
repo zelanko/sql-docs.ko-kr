@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df78363c57e6ba59b4ff2878144c4e99b221e0a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa4a078b2e5e130e8bc4f739dab5b515b37852ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="results-detailed-view-dialog-box"></a>결과 자세히 보기 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **정책 평가** 대화 상자를 사용하여 정책을 실행하고 **평가**를 클릭하면 정책 평가 결과가 이 대화 상자에 표시됩니다. 이 대화 상자는 읽기 전용이며 속성 식에서 실패할 수 있는 부분을 이해하는 데 도움이 됩니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **AndOr**  
  둘 이상의 속성 식이 있는 경우 속성 식이 누적되는지, 아니면 대체되는지를 나타냅니다.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
  **필드**  
  모델링되는 패싯의 속성입니다.  
   
- **연산자**  
+ **같음**  
  식에 대한 연산자(예: **=** 또는 **Like**)입니다.  
   
  **예상 값**  

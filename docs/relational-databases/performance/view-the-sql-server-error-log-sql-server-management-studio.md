@@ -19,15 +19,15 @@ helpviewer_keywords:
 - logs [SQL Server], viewing
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7de82937a4bb622190da96b5668318304f641895
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8823906fc96755dd70862e0a362562b956d2739
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>SQL Server 오류 로그 보기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에는 문제 해결에 사용할 수 있는 사용자 정의 이벤트와 특정 시스템 이벤트가 포함됩니다. 
@@ -48,6 +48,6 @@ ms.lasthandoff: 11/17/2017
  
 5. 확인할 로그 목록이 포함된 **로그 파일 뷰어**가 나타납니다(시간이 약간 걸릴 수 있음).
   
-  ## <a name="see-also"></a>참고 항목
+  ## <a name="see-also"></a>관련 항목:
   자세한 내용은 [MSSQLTips.com](https://www.mssqltips.com/)의 유용한 게시물인 [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)(SQL Server 오류 로그 파일의 위치 식별)을 참조하세요.
 

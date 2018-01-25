@@ -16,13 +16,13 @@ ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9aa7f82cd8a2b31f7bb120cb17cd58f5d5f32e09
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2d0082a5a920c5654859d8c674bcfce07060ec78
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>프록시 계정 속성 - 새 프록시 계정(보안 주체 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 작업 단계에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시 계정을 사용할 수 있는 보안 주체를 확인하거나 변경할 수 있습니다.  

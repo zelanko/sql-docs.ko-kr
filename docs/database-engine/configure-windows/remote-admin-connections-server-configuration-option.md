@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dedicated administrator connections [SQL Server]
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e70740c2a1d9f3d315f6480cbcea05cc1084f1dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 07c3d9d0d5fe44d38c5e163cb3e925519c994f4d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
  다음 표에서는 remote admin connections 옵션에 사용할 수 있는 값을 보여줍니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0|DAC를 사용하여 로컬 연결만 허용됨을 나타냅니다.|  
 |1|DAC를 사용하여 원격 연결이 허용됨을 나타냅니다.|  

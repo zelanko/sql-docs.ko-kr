@@ -16,13 +16,13 @@ ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 864a8798e9778b16eb49592c8f4e2b801ed1749d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a985f6e2796708bcea47178380974d18895218d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---help---online-page"></a>옵션(환경 - 도움말 - 온라인 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **옵션** 대화 상자를 사용하면 F1 도움말을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 검색에 사용할 도움말 원본을 지정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **환경** 폴더를 확장한 다음 **도움말**을 선택하고 **온라인**을 클릭합니다. **온라인** 페이지가 목록에 나타나지 않으면 **옵션** 대화 상자의 **모든 설정 표시** 확인란을 선택합니다.  

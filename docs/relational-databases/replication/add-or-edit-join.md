@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09a75529623523ea12d51263ef6fede558840410
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9aece9102787b048d9a46f32a17013ae057a9da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-join"></a>조인 추가 또는 편집
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **조인 추가** 및 **조인 편집** 대화 상자를 사용하여 병합 게시에 대한 조인 필터를 추가 및 편집할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  조인 필터는 테이블을 무제한 포함할 수 있지만 테이블 수가 많은 필터는 병합 처리 중 성능에 영향을 줄 수 있습니다. 5개 이상의 테이블을 가진 조인 필터를 생성하는 경우 다른 해결책을 고려하는 것이 좋습니다. 크기가 작거나, 변경될 가능성이 없거나, 기본적으로 조회 테이블에 해당하는 테이블은 필터링하지 마십시오. 구독자 간에 분할해야 하는 테이블 사이에서만 조인 필터를 사용합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  이 대화 상자는 3단계로 이루어진 프로세스를 통해 두 테이블 간에 조인 필터를 만듭니다. 조인 필터를 두 개 이상 만들려면 대화 상자를 두 번 이상 완료해야 합니다.  
   
 1.  **필터링된 테이블을 확인하고 조인된 테이블을 선택하십시오.**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   
- [조인 필터](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

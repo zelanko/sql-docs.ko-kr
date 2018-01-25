@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f586f008a1a646698e01e75f3175f7b56f8a311
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 구성 요소인 유틸리티 탐색기는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 모든 개체를 트리 방식으로 표시합니다. 유틸리티 탐색기 내용 창에서는 다양한 방법을 사용하여 SQL Server의 관리되는 인스턴스 상태에 대한 요약 및 자세한 데이터를 통해 볼 수 있습니다. 또한 유틸리티 탐색기는 정책 정의를 보고 관리하기 위한 사용자 인터페이스를 제공합니다. 유틸리티 탐색기의 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 있는 개체에 따라 조금씩 다르지만 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 개체, 데이터 및 정책을 포함합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c3c16fe40753700a0f8e6d89c403b7a96324d366
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4f656b30d3ef8eca1f9af1c80d9659630d45f908
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>데이터베이스 엔진 액세스에 대한 파일 시스템 사용 권한 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 데이터베이스 파일이 저장된 위치에 파일 시스템 즉, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 액세스 권한을 부여하는 방법에 대해 설명합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 사용하려면 Windows 파일 시스템에서 데이터베이스 파일이 저장된 파일 폴더에 액세스할 수 있는 권한이 있어야 합니다. 기본 위치에 대한 사용 권한은 설치 중에 구성됩니다. 데이터베이스 파일을 다른 위치에 저장한 경우 다음 단계를 수행하여 해당 위치에 대한 모든 권한을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 부여해야 할 수 있습니다.  

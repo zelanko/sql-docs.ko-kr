@@ -15,13 +15,13 @@ ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 caps.latest.revision: "2"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 530500f1dafa732f008f3d08de0caaad43ce1021
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6a4ca0d1fc0bf90deffa47e71547b966e25f4b5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO 관리자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,5 +40,5 @@ SQL Server XTP IO 관리자 성능 개체에는 메모리 내 OLTP IO 속도 관
 |**Total Rate Objects Published**|게시된 총 속도 개체 수입니다.|
  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server XTP&#40;메모리 내 OLTP&#41; 성능 카운터](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

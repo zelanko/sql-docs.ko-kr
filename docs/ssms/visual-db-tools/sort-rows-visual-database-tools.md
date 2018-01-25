@@ -18,13 +18,13 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e733f8784fc5178657f4697dc03dde2d18359ec7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e48f10c8bcc1302442a5c30e62c08160eb16e82a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sort-rows-visual-database-tools"></a>행 정렬(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 결과에서 행을 정렬할 수 있습니다. 즉, 해당 값이 결과 집합의 행 순서를 결정하는 특정 열 또는 열 집합의 이름을 지정할 수 있습니다.  

@@ -16,13 +16,13 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 913fb6061bed6eaa47eff5f92d5d1c3064b1731f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 02f030c6336cb90de2d5adf040f9ee170e24187e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="copy-query-results-visual-database-tools"></a>쿼리 결과 복사(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **결과** 창에서 탭으로 구분된 텍스트로 결과 집합을 복사할 수 있습니다. 전체 결과 집합, 연속된 모든 숫자 또는 연속되지 않은 행이나 셀을 복사할 수 있습니다.  

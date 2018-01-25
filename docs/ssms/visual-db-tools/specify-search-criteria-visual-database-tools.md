@@ -27,13 +27,13 @@ ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44e732e599553a3f7adcd2abee8ea6a209aa42cf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d811d773e5cb85f94e32aa27cdf3c746b35089ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 검색 기준을 사용하여 쿼리가 반환하는 행의 수를 제한할 수 있습니다.  

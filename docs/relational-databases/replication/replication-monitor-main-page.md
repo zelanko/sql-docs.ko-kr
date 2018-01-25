@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.main.f1
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 390fc9dbb3202793d1dcd80e253586adf193b6a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 384e72c84aedde0ecbeaf88e1345c6e2c175e36e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-monitor-main-page"></a>복제 모니터, 주 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복제 모니터를 사용하여 복제 토폴로지상에서 게시 및 구독의 상태 및 성능을 추적할 수 있습니다. 다음 항목에서는 보다 자세한 정보를 제공합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [비관리자의 복제 모니터 사용 허용](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

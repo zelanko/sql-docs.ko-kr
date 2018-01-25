@@ -16,15 +16,15 @@ helpviewer_keywords:
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9c15b0e22e91fb3a478a7b91a14292609b81a22
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보내거나 다른 프로그램에서 생성한 텍스트 파일에서 데이터를 대량으로 가져오는 경우 문자 형식을 사용하는 것이 좋습니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## 문자 형식 사용 시 고려 사항<a name="considerations"></a>
 문자 형식을 사용할 때 다음 사항을 고려하십시오.  
   
--   기본적으로 [bcp 유틸리티](../../tools/bcp-utility.md)는 탭 문자로 문자 데이터 필드를 구분하며 줄 바꿈 문자로 레코드를 종료합니다.  다른 종결자를 지정하는 방법에 대한 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
+-   기본적으로 [bcp 유틸리티](../../tools/bcp-utility.md) 는 탭 문자로 문자 데이터 필드를 구분하며 줄 바꿈 문자로 레코드를 종료합니다.  다른 종결자를 지정하는 방법에 대한 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
 -   기본적으로 문자 모드의 데이터를 대량으로 내보내거나 대량으로 가져오기 전에 다음 변환이 수행됩니다.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 문자 형식에 대해 지원되는 명령 옵션은 다음과 같습니다.  
   
-|Command|옵션|설명|  
+|Command|옵션|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|bcp 유틸리티가 문자 데이터를 사용하도록 합니다.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|데이터를 대량 가져올 때 문자 형식을 사용합니다.|  
@@ -218,7 +218,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
   
 -   [네이티브 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   

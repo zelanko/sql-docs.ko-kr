@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: 3b4f7dae-65b5-4d8d-8641-87aba9aa692d
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7dd990ca2e614846596250e088683b723c736799
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5cdd782633ee4a2cf6970c9ce838bd623039a013
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-3---querying-a-hierarchical-table-using-hierarchy-methods"></a>2-3단원 - 계층적 메서드를 사용하여 계층적 테이블 쿼리
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 이제 HumanResources.EmployeeOrg 테이블을 완전히 채웠으므로 이 태스크에서는 일부 계층 메서드를 사용하여 계층을 쿼리하는 방법을 보여 줍니다.  

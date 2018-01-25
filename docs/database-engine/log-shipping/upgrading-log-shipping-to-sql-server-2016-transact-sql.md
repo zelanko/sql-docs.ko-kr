@@ -16,13 +16,13 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c8aaf28bcecf61984bdf524e02031325600a0c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e2aae5c92052e2a08c2b6ab5ef1d48fd8f3f83dd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016으로 로그 전달 업그레이드(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에서 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전, 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서비스 팩, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]누적 업데이트로 업그레이드할 경우 적적한 순서로 로그 전달 서버를 업그레이드하면 로그 전달 재해 복구 솔루션이 보존됩니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [주 인스턴스 업그레이드](#UpgradePrimary)  
   
-##  <a name="Prerequisites"></a> 필수 구성 요소  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
  시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용자의 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [데이터베이스 엔진 업그레이드 계획 및 테스트](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): 릴리스 정보 및 알려진 업그레이드 문제, 업그레이드 전 검사 목록을 검토한 후 업그레이드 계획을 개발하고 테스트합니다.  
   
--   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화할 수 있도록 업그레이드 프로세스를 시작하기 전에 각 노드에 해당 소프트웨어를 설치하세요.  
+-   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
   
 ##  <a name="ProtectData"></a> 업그레이드하기 전에 데이터 보호  
  가능하면 로그 전달 업그레이드 전에 데이터를 보호하는 것이 좋습니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  모든 주 데이터베이스에 대해 전체 데이터베이스 백업을 수행합니다.  
   
-     자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요.  
+     자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)에서 차등 데이터베이스 백업을 만듭니다.  
   
 2.  모든 주 데이터베이스에서 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 명령을 실행합니다.  
   

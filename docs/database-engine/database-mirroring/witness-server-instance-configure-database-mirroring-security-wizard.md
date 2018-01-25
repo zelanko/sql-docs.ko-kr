@@ -16,13 +16,13 @@ ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88e34e85039c15a65f7b0831a12bc09bd0a61cd2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 431241d90b29dad208a1029ed595f889f3596681
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>미러링 모니터 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 세션의 미러링을 모니터링하는 서버 인스턴스에 대한 정보를 지정할 수 있습니다.  
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/20/2017
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **미러링 모니터 서버 인스턴스**  
  **데이터베이스 속성** 대화 상자의 **미러링** 페이지에 미러링 모니터 서버 인스턴스가 이미 지정되어 있으면 해당 인스턴스가 표시됩니다(자세한 내용은 [데이터베이스 속성&#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md) 참조).  
   
  미러링 모니터 서버 인스턴스가 지정되어 있지 않으면 목록 상자에 현재 서버의 이름이 표시됩니다. 주 서버 인스턴스 또는 미러 서버 인스턴스는 미러링 모니터 서버 인스턴스로 지정할 수 없습니다.  
   
- **Connect**  
+ **연결**  
  미러링 모니터 서버 인스턴스가 지정되어 있지 않으면 **연결**을 클릭합니다. 그러면 서버 인스턴스를 지정하고 연결할 수 있는 **서버에 연결** 대화 상자가 표시됩니다.  
   
  인스턴스를 지정했지만 끝점이 있는지 확인할 수 있는 권한을 가진 연결이 없을 경우 **연결**을 클릭합니다. 그러면 서버 인스턴스가 미리 선택되어 있고 변경할 수 없는 **서버에 연결** 대화 상자가 표시됩니다. 충분한 사용 권한을 가진 도메인 계정을 지정하고 서버 인스턴스에 연결합니다.  

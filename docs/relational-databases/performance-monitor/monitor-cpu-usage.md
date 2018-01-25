@@ -25,15 +25,15 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad8ff221557c1ecbfe1d8fe5cf453c7b99e96203
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 873cf5a337f18dc9faa8e095d438de79843fde7d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-cpu-usage"></a>CPU 사용량 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 정기적으로 모니터링하여 CPU 사용량이 정상 범위에 있는지 확인할 수 있습니다. CPU 사용량이 계속 높게 나타나면 CPU 업그레이드 또는 멀티 프로세서 추가가 필요하거나 응용 프로그램 튜닝 또는 디자인이 적절하지 않다는 의미일 수 있습니다. 응용 프로그램을 최적화하면 CPU 사용률을 낮출 수 있습니다.  

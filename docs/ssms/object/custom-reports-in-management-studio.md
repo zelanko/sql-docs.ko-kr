@@ -17,13 +17,13 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 299019dabf0c16863eda99cb2f841dae8bd4ea5b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be381dfcba80135f5c76694ab2f19f2942e0f5a8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio의 사용자 지정 보고서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]의 많은 개체 탐색기 노드에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]에서 만든 표준 보고서 집합이 표시됩니다. 이러한 보고서는 일반적으로 요청되는 서버 정보를 요약합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 서비스 팩 2부터 관리자는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]에서 만든 사용자 지정 보고서를 실행할 수 있습니다.  

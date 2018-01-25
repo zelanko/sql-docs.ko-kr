@@ -18,19 +18,19 @@ helpviewer_keywords:
 - viewing system database data
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: fac90b998c51feb54a0fe496e6d09b3bf59c1129
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7985a4fa9d1fa3dd4fc11553d640c4ef0ad0c6a2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="system-databases"></a>시스템 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 시스템 데이터베이스는 다음과 같습니다.  
   
-|시스템 데이터베이스|설명|  
+|시스템 데이터베이스|Description|  
 |---------------------|-----------------|  
 |[master 데이터베이스](../../relational-databases/databases/master-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 모든 시스템 수준 정보를 기록합니다.|  
 |[msdb 데이터베이스](../../relational-databases/databases/msdb-database.md)|SQL Server 에이전트에서 알림과 작업을 예약하는 데 사용됩니다.|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저 및 기본 제공 함수  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [개체 탐색기에서 시스템 개체 숨기기](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  

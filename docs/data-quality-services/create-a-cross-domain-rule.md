@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb2c2415a8cbe1af6d1cef51f5d9253171dd7bea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c321ea317846b43f2c69d4a64f4bc3daeff9048c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-cross-domain-rule"></a>도메인 간 규칙 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인의 도메인 간 규칙을 만드는 방법에 대해 설명합니다. 도메인 간 규칙은 복합 도메인에 포함된 단일 도메인에서 값 사이의 관계를 테스트합니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 간 규칙이 복합 도메인 전체에서 유효해야 합니다. 도메인 간 규칙은 도메인 값의 유효성 검사, 수정 및 표준화에 사용됩니다.  
@@ -39,12 +39,12 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인 간 규칙을 만들려면 복합 도메인을 만들어 열어 놓아야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  도메인 간 규칙을 만들려면 DQS_MAIN 데이터베이스의 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Create"></a> 도메인 간 규칙 만들기  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - snapshots [SQL Server replication], options
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b5c6fc564df5fef3034b6ed7cb9d32734ce5fcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a370c14b000a7afc9c9917c0e7adcc43063f68e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshot-options"></a>스냅숏 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 스냅숏으로 구독을 초기화할 때 사용할 수 있는 옵션에는 여러 가지가 있습니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 전송합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/transfer-snapshots-through-ftp.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [스냅숏으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
   
   

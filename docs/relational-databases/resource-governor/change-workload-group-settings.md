@@ -16,24 +16,24 @@ helpviewer_keywords:
 - Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18c72fb3a7370f557e9e4dc759234d3ea6ad81f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc35f66a61d5036b645475efe2471c436e0940f4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-workload-group-settings"></a>작업 그룹 설정 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 작업 그룹 설정을 변경할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **작업 그룹에 대한 설정을 변경하려면:**  [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  기본 작업 그룹 및 사용자 정의 작업 그룹의 설정을 변경할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
  인덱스를 만들 때 처음에 부여된 것 이상의 메모리 작업 영역을 사용하여 성능을 높일 수 있습니다. 이 특수 처리는 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 작업 그룹 및 리소스 풀 설정에 따라 제한됩니다.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="Permissions"></a> Permissions  
  작업 그룹 설정을 변경하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="ChgWGProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 설정 변경  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  ALTER RESOURCE GOVERNOR RECONFIGURE 문을 실행합니다.  
   
-### <a name="example-transact-sql"></a>예(Transact-SQL)  
+### <a name="example-transact-sql"></a>예제(Transact-SQL)  
  다음 예에서는 `groupAdhoc`이라는 작업 그룹에 대한 최대 메모리 부여 비율 설정을 변경합니다.  
   
 ```  

@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.monitor.publishersettings.f1
 helpviewer_keywords: Publisher Settings dialog box
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e94949aa3cc20aa0c56e02d817671790e4d9f85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6293fabc344e118f1aac0ff0978bba67e7c0ca27
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-settings"></a>게시자 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **게시자 설정** 대화 상자에서 복제 모니터의 왼쪽 창에 추가된 게시자에 대한 설정을 변경할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **게시자 연결**  
  복제 모니터에서 게시자에 연결하기 위해 사용하는 연결 속성 및 자격 증명을 보고 변경할 수 있는 **서버에 연결** 대화 상자를 시작하려면 클릭합니다.  
   

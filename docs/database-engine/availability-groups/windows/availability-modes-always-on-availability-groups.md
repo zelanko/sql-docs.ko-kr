@@ -22,13 +22,13 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 095b40c8525e83a6d686a0d40d1f6aa1974a3442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ ms.lasthandoff: 11/20/2017
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 및 03|04|예|  
 |02|01|01 및 03|04|예|  
-|03||01 및 02|04|아니요|  
-|04|||01, 02 및 03|아니요|  
+|03||01 및 02|04|아니오|  
+|04|||01, 02 및 03|아니오|  
   
  일반적으로 노드 04는 비동기 커밋 복제본으로서 재해 복구 사이트에 배포됩니다. 노드 04에 대한 장애 조치(Failover)를 수행한 후 노드 01, 02, 03은 비동기 커밋 모드로 유지된다는 점에서 두 사이트 간의 긴 네트워크 지연 시간으로 인해 가용성 그룹의 잠재적 성능이 저하되는 것을 방지할 수 있습니다.  
   

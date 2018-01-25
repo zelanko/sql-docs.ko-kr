@@ -18,13 +18,13 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbbfe6e6d06a71e54b93e90cf42c121fdaab7927
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b92e1a679cfa738620e8e46195b2df14e8ee03ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>운영 문제에 대한 Always On 정책 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,12 +71,12 @@ ms.lasthandoff: 11/20/2017
 |-----------------|-----------|--------------------|-----------|  
 |WSFC 클러스터 상태|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)입니다.|심각|SQL Server 인스턴스|  
 |가용성 그룹 온라인 상태|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)입니다.|심각|가용성 그룹|  
-|가용성 그룹 자동 장애 조치(Failover) 준비|[가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md).|심각|가용성 그룹|  
+|가용성 그룹 자동 장애 조치(Failover) 준비|[Availability group is not ready for automatic failover](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)입니다.|심각|가용성 그룹|  
 |가용성 복제본 데이터 동기화 상태|[Some availability replicas are not synchronizing data](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)입니다.|경고|가용성 그룹|  
 |동기 복제본 데이터 동기화 상태|[Some synchronous replicas are not synchronized](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)입니다.|경고|가용성 그룹|  
-|가용성 복제본 역할 상태|[일부 가용성 복제본에 정상 상태의 역할이 없음](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|경고|가용성 그룹|  
+|가용성 복제본 역할 상태|[Some availability replicas do not have a healthy role](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)입니다.|경고|가용성 그룹|  
 |가용성 복제본 연결 상태|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)입니다.|경고|가용성 그룹|  
-|가용성 복제본 역할 상태|[가용성 복제본에 정상 상태의 역할이 없음](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|심각|가용성 복제본|  
+|가용성 복제본 역할 상태|[Availability replica does not have a healthy role](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)입니다.|심각|가용성 복제본|  
 |가용성 복제본 연결 상태|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)입니다.|심각|가용성 복제본|  
 |가용성 복제본 조인 상태|[가용성 복제본이 조인되어 있지 않습니다](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|경고|가용성 복제본|  
 |가용성 복제본 데이터 동기화 상태|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)입니다.|경고|가용성 복제본|  
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [쿼럼 없이 WSFC 클러스터 강제 시작](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
--   [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [가용성 그룹의 강제 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
 -   [실패한 파일 추가 작업 문제 해결&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   

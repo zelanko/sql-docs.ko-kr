@@ -18,13 +18,13 @@ ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81aa8d84f9ec5546401fc1ae9344ce2cdcee5af1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 79e9dee7e2e1bdd2dd36e5e826a3a8d8455904fb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>저장 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자는 테이블 디자이너에서 다른 테이블에도 영향을 주는 작업 내용을 저장할 때 나타납니다. 이 대화 상자를 사용하면 저장되는 테이블을 확인할 수 있습니다.  

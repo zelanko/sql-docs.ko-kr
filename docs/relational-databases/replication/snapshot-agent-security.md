@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.security.SSA.f1
 helpviewer_keywords: Snapshot Agent Security dialog box
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e2f5d2ba5897a96ee89941eef26c7e37f73bf86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72edcfbbb48b6ce33df6ba9df99ef587a14c4c73
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshot-agent-security"></a>스냅숏 에이전트 보안
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **스냅숏 에이전트 보안** 대화 상자를 사용하여 다음을 지정할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  모든 계정이 유효해야 하며 각 계정에 대해 올바른 암호를 지정해야 합니다. 계정 및 암호의 유효성은 에이전트를 실행할 때 검사합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **Process account**  
  배포자에서 스냅숏 에이전트를 실행하는 Windows 계정을 입력합니다. 지정하는 Windows 계정은 다음과 같은 조건을 갖추어야 합니다.  
   

@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.pubtodist.tran.f1
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35dd5cf9bbcdabe1ee9d0b2097808617b3e243a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 61881b3a08d451a9df4a07d229de82badafb1339
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>구독, 게시자에서 배포자로의 연결 기록(트랜잭션 구독)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **게시자에서 배포자로의 연결 기록** 탭은 상태, 기록, 정보 메시지, 모든 오류 메시지 등 로그 판독기 에이전트에 대한 자세한 정보를 표시합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **보기** 메뉴에서 보려는 로그 판독기 에이전트 세션을 선택한 다음 **로그 판독기 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션의 동작**표에 이 세션에 대한 자세한 정보가 표시됩니다. 선택한 세션이 오류로 인해 종료될 경우 **선택한 세션에 대한 오류 정보 또는 메시지** 라는 텍스트 영역 또한 표시됩니다.  
   
  **보기**  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
  **상태**  
  로그 판독기 에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   오류  
+-   Error  
   
 -   완료  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 11/17/2017
  **선택한 세션에 대한 오류 정보 또는 메시지**  
  선택한 세션의 **상태** 열에 **오류** 값이 표시되는 경우에만 표시됩니다. 이 텍스트 영역은 오류 발생 시 시도한 명령과 자세한 오류 정보를 표시합니다. 오류와 관련된 추가 내용으로 연결되는 링크도 포함되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [복제 에이전트 개요](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

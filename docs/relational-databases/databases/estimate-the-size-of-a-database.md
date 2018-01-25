@@ -22,15 +22,15 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: babdffb8ddb8bddcb017b65a713b0cfd5aaf0964
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fd8ebd7223c44cdfb5b830ae0f9fc5ea08f3266
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-database"></a>데이터베이스 크기 예측
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스를 디자인할 때는 데이터베이스가 데이터로 가득 찰 때 얼마나 커질 수 있는지를 추정해야 합니다. 데이터베이스의 크기를 추정하면 다음을 수행하는 데 필요한 하드웨어 구성을 결정하는 데 도움이 됩니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[테이블 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-table.md)|테이블 및 연결된 인덱스에 데이터를 저장하는 데 필요한 공간을 예측하는 단계와 필요한 계산을 설명합니다.|  
 |[힙 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-heap.md)|힙에 데이터를 저장하는 데 필요한 공간을 예측하는 단계와 필요한 계산을 설명합니다. 힙은 클러스터형 인덱스가 없는 테이블입니다.|  

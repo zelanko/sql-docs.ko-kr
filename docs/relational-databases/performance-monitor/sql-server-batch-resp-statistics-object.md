@@ -16,13 +16,13 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50091709b44fe3314368c9ebfd18aea74216809e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95ca0cdfcfe13e5176e205b6168a6e5117b35c09
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, 일괄 처리 응답 통계 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLServer:Batch Resp Statistics** 성능 개체는 SQL Server 일괄 처리 응답 시간을 추적하는 카운터를 제공합니다.
@@ -59,6 +59,6 @@ ms.lasthandoff: 11/17/2017
 |**Elapsed Time:Requests**|요청의 경과 시간입니다.|  
 |**Elapsed Time:Total(ms)**|일괄 처리의 경과 시간입니다.|  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [SQL Server, Plan Cache 개체](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [리소스 사용 모니터링(시스템 모니터)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

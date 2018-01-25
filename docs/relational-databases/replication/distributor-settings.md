@@ -15,24 +15,24 @@ f1_keywords: sql13.rep.monitor.DistributorSettings.f1
 helpviewer_keywords: Distributor Settings dialog box
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70367b69beb543b6d43b28ebbd6e5e15891b074e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29a5ba0a5fa0d731938c8d62fc53e209ab979b95
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-settings"></a>배포자 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **배포자 설정** 대화 상자에서는 복제 모니터의 왼쪽 창에 추가된 배포자에 대한 설정을 변경할 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **복제 모니터가 시작될 때 자동으로 연결**  
  복제 모니터에서 배포자에 연결하고 상태 정보를 검색하도록 하려면 선택합니다.  
   
- **연결**  
+ **대량 삽입 태스크 편집기**  
  **서버에 연결** 대화 상자를 표시하려면 클릭합니다. 이 대화 상자를 통해 복제 모니터에서 배포자에 연결하기 위해 사용하는 연결 속성 및 자격 증명을 보고 변경할 수 있습니다.  
   
  **이 배포자 및 해당 게시의 상태를 자동으로 새로 고침**  

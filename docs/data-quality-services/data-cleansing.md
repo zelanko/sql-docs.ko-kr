@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 48ab1d80a01cbcaf74f5ba11850ab61f358b24fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a20f02bf8c2e0c39c15e3b8209c43673fe697f28
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="data-cleansing"></a>데이터 정리
+# <a name="data-cleansing"></a>Data Cleansing
   데이터 정리는 데이터 원본의 데이터 품질을 분석하고, 시스템의 제안을 수동으로 승인/거부하고, 데이터를 변경하는 프로세스입니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 정리에는 데이터가 기술 자료의 지식을 준수하는 정도를 분석하는 컴퓨터 기반 프로세스이며, 데이터 정리가 정확히 원하는 대로 수행되는지 보장하기 위해 데이터 관리자가 컴퓨터 기반 프로세스 결과를 검토하고 수정할 수 있게 해주는 대화형 프로세스입니다.  
   
  데이터 관리자는 Integration Services 패키징 프로세스에서 데이터 정리를 수행할 수도 있습니다. 이 경우 데이터 관리자는 기존 기술 자료를 사용하여 데이터 정리를 자동으로 수행하는 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 를 사용합니다. 자세한 내용은 [DQS 정리 변환](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)을 참조하세요.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
 |참조 데이터 서비스의 지식을 사용하여 데이터를 정리하는 방법을 설명합니다.|[참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |복합 도메인을 정리하는 방법을 설명합니다.|[복합 도메인의 데이터 정리](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [데이터 일치](../data-quality-services/data-matching.md)  
   

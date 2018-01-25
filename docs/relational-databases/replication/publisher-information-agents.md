@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af0fc926fff97f6c20331002d92aec47749e9d7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: da6c5ffe47ed35e4389fef6fe5924d1b0ec1ae25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-information-agents"></a>게시자 정보, 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **에이전트** 탭에는 게시자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  이러한 작업에 대한 자세한 내용은 [복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)를 참조하세요.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  에이전트 또는 작업에 대한 정보를 표시하려면 **Agent and Job Types** 드롭다운 메뉴에서 해당 정보를 선택합니다. 자세한 내용 및 에이전트 또는 작업과 관련된 태스크를 보려면 해당 에이전트 또는 작업에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
 -   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 대해 정렬합니다.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   오류  
+-   Error  
   
 -   다시 시도  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   오류  
+-   Error  
   
 -   다시 시도  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   오류  
+-   Error  
   
 -   다시 시도  
   
@@ -179,7 +179,7 @@ ms.lasthandoff: 11/17/2017
  **상태**  
  각 작업의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
--   오류  
+-   Error  
   
 -   다시 시도  
   
@@ -199,7 +199,7 @@ ms.lasthandoff: 11/17/2017
  **마지막 동작**  
  가장 최근의 작업 실행에서 수행된 마지막 동작입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   

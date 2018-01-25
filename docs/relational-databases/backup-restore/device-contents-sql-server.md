@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 208c0d03e893fa50c33ae28e5533163af75a3ff9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 54eb5c1750289784ed7a15016b6047287fdb15a9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="device-contents-sql-server"></a>장치 내용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 백업 정보를 확인할 수 있습니다. 이 정보에는 장치, 미디어, 미디어 세트 및 백업 세트에 대한 설명이 포함됩니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **미디어**  
  백업 정보가 저장되는 디스크 또는 테이프 세트입니다.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |**형식**|수행된 백업 유형입니다. 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
 |**구성 요소**|백업된 구성 요소: 데이터베이스, 파일 또는 *\<비어 있음>*(트랜잭션 로그의 경우)이 될 수 있습니다.|  
 |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
-|**데이터베이스**|백업한 데이터베이스 이름입니다.|  
+|**데이터베이스 백업**|백업한 데이터베이스 이름입니다.|  
 |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  
 |**날짜**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
 |**크기**|백업 세트의 크기를 바이트 단위로 표시한 것입니다.|  

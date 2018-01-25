@@ -16,13 +16,13 @@ ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: "8"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce57b8653579c5b5cde6e48189076b84e68f58fd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d7b7d7d100ba5077d01440eaa5bd0c690fde5945
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>옵션(SQL Server Always On, 대시보드 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

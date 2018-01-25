@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02e8f1043c8b3337953dd300c67ad0d94343eb88
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1312413f12476c9be36ed3595fed82a75fd375fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>고급 병합 복제 충돌 - 해결 프로그램 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 해결 프로그램을 선택할 때는 응용 프로그램에서 충돌 해결의 중요성을 고려하고 우선 순위를 기반으로 하는 기본 충돌 해결 프로그램을 사용할 수 있는지 또는 아티클 해결 프로그램을 사용해야 하는지 여부를 고려해야 합니다.  
@@ -47,9 +47,9 @@ ms.lasthandoff: 11/17/2017
 |논리적 레코드 값의 여러 변경 내용을 충돌로 플래그 지정합니다.|논리적 레코드 수준 추적을 설정한 기본 해결 프로그램을 사용합니다. 논리적 레코드 기능은 사용자 지정 해결 프로그램 또는 비즈니스 논리 처리기를 지원하지 않습니다.|  
 |충돌 결과 데이터가 원본 충돌 데이터와 달라야 합니다.|새 값을 계산하는 아티클 해결 프로그램을 사용합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [논리적 레코드에서 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [고급 병합 복제 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [데이터 다시 게시](../../../relational-databases/replication/republish-data.md)  
   
   

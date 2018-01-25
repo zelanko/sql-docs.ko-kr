@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c58756989760d56c2f7906c0493cefb2b30d2b0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4618510f90d373aaba8a602b3f473cd6ed3a4a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-encryption"></a>백업 암호화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 암호화 옵션에 대해 간략하게 설명합니다. 여기에서는 백업 중의 암호화에 대한 사용법, 이점 및 권장 방법을 살펴봅니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 5.  EKM(확장 키 관리) 공급자와 암호화 키를 통합할 수 있습니다.  
   
   
-##  <a name="Prerequisites"></a> 필수 구성 요소  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
  백업을 암호화하기 위한 사전 요구 사항은 다음과 같습니다.  
   
 1.  **master 데이터베이스용 데이터베이스 마스터 키 만들기:** 데이터베이스 마스터 키는 데이터베이스에 있는 비대칭 키와 인증서의 개인 키를 보호하는 데 사용되는 대칭 키입니다. 자세한 내용은 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)를 참조하세요.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 -   암호화된 백업의 경우 기존 백업 세트 옵션에 추가는 지원되지 않습니다.  
   
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> Permissions  
  **백업을 암호화하거나 암호화된 백업에서 복원하려면:**  
   
  데이터베이스 백업을 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한**VIEW DEFINITION** 권한을 사용합니다.  
@@ -138,7 +138,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
-|항목/태스크|설명|  
+|항목/태스크|Description|  
 |-----------------|-----------------|  
 |[암호화된 백업 만들기](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|암호화된 백업을 만드는 데 필요한 기본 단계에 대해 설명합니다.|  
 |[Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Azure 키 자격 증명 모음에서 키로 보호하는 암호화된 백업을 만드는 예제를 제공합니다.|  

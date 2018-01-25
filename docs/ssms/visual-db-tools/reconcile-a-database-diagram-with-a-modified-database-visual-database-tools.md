@@ -21,13 +21,13 @@ ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c9bd5cf1244a5f895128b6accbb72c54b4b2c65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9943baa610ab167d3421b7f4d68ac81f04dcece
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>수정된 데이터베이스와 데이터베이스 다이어그램 일치(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다이어그램에 일치하도록 데이터베이스를 업데이트할 준비가 되면 데이터베이스 다이어그램을 저장합니다. 그러나 다이어그램을 연 이후에 다른 사용자가 이미 데이터베이스를 업데이트한 경우에는 다른 사용자의 변경 내용이 현재 사용자의 다이어그램에 영향을 줄 수 있습니다. 그 반대의 경우도 마찬가지입니다.  

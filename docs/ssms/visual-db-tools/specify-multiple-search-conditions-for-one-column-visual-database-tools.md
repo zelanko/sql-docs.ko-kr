@@ -21,13 +21,13 @@ ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4495ef2355edcf37993f6fb566d762cd915032
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cd90bbb2b7a07ae4cf2c8224a8b299cec7774593
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>한 열에 여러 검색 조건 지정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 동일한 데이터 열에 여러 개의 검색 조건을 적용해야 하는 경우가 있습니다. 예를 들면 다음과 같습니다.  

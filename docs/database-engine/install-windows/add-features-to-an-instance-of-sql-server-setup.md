@@ -19,19 +19,19 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 9dae46b18a46e4457bfe999f9cfdb71d60ec6651
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 9c95fa0d45f4d4734030e871e09acfe254ca2450
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server 인스턴스에 기능 추가(설치 프로그램)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에 기능을 추가하기 위한 단계별 절차에 대해 설명합니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 또는 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 인스턴스에 고유합니다. 이를 인스턴스 인식 구성 요소 또는 서비스라고도 합니다. 인스턴스 인식 구성 요소 또는 서비스는 자신을 호스팅하는 인스턴스와 같은 버전을 공유하고 해당 인스턴스에만 독점적으로 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 공유 구성 요소(아직 설치되지 않은 경우)와 함께 인스턴스 인식 구성 요소를 추가할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
  명령 프롬프트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 기능을 추가하려면 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  계속하기 전에 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)항목을 검토하십시오.  
   
 > [!NOTE]  
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/20/2017
   
 26. 컴퓨터를 다시 시작합니다. 설치가 완료되면 설치 마법사에 표시되는 메시지를 꼭 읽으십시오. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 구성  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 공격 받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별하여 설치하고 활성화합니다. 자세한 내용은 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  

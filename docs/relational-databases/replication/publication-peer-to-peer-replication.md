@@ -14,28 +14,28 @@ ms.topic: article
 f1_keywords: sql13.rep.p2pwizard.publication.f1
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c36b7f99d6e1fa3f8e11312c508d16b6cb3ae31
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 14c83e8ed92a1dc5274528dd13e4ff80d5dc9285
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-peer-to-peer-replication"></a>게시(피어 투 피어 복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **게시** 페이지는 피어 투 피어 복제에 대해 설정되어 있는 트랜잭션 게시를 표시합니다. 게시는 **게시 속성** 대화 상자의 **구독 옵션** 페이지에서 설정합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **게시자**  
  연결된 서버를 표시합니다. 다른 서버에 연결하려면 **SQL Server 게시자 찾기**를 선택합니다.  
   
  **데이터베이스 및 게시**  
  피어 투 피어 복제에 대해 설정된 게시를 하나 이상 포함하는 서버의 모든 데이터베이스를 표시합니다. 계속하려면 게시를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [피어 투 피어 토폴로지 관리&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [피어 투 피어 트랜잭션 복제](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [@loopback_detection](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

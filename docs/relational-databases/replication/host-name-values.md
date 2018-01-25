@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newsubwizard.hostnamevalue.f1
 ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eaaf642dce054262d08b0b54025104d428e6f4b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b5d1091e49dbfb56117c55dd452a40d671037991
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="hostname-values"></a>HOST_NAME 값
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 매개 변수가 있는 필터가 포함된 병합 게시는 SUSER_SNAME() 함수 및/또는 HOST_NAME() 함수를 사용하여 데이터를 필터링합니다. 함수는 새 게시 마법사 또는 **게시 속성** 대화 상자에서 지정합니다.  
@@ -32,12 +32,12 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  HOST_NAME()을 재정의할 경우 HOST_NAME() 함수에 대한 모든 호출은 사용자가 지정한 값을 반환합니다. 다른 응용 프로그램이 컴퓨터 이름을 반환하는 HOST_NAME()에 종속되지 않아야 합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **구독 속성**  
  **HOST_NAME 값** 열에 각 구독자에 대한 값을 입력하거나 구독자 컴퓨터의 이름인 기본값을 적용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>참고 항목  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [밀어넣기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   

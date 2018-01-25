@@ -15,12 +15,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 14843789252f1e18a728edd13327f28428c7061c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: d31efaf4118ec4b73195b8ee47f35d8d65611af1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>실패한 SQL Server 설치 복구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 복구 작업은 다음 시나리오에서 사용할 수 있습니다.  

@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.newsubwizard.subscribers.f1
 helpviewer_keywords: Subscribers [SQL Server replication]
 ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79f1f87f3aa824bcc98499e5299580b9ccfbd6a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 195906a887d385c670f1ba4de1305f43ace1276d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="subscribers"></a>구독자
+# <a name="subscribers"></a>게시자 속성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 선택한 게시에 대한 구독을 받을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지정합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **구독자**  
  표에서 확인란을 선택하여 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본을 **게시** 페이지에서 선택한 게시에 대한 구독자로 설정할 수 있습니다. 구독자가 나열되어 있지 않은 경우 **구독자 추가** 또는 **SQL Server 구독자 추가**를 클릭합니다.  
   
@@ -71,10 +71,10 @@ ms.lasthandoff: 11/17/2017
   
     -   게시에서 익명 구독을 허용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>참고 항목  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [SQL Server 이외 구독자](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
+ [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: updateable transactional subscriptions, T-SQL
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
 caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53bef20bb061a75fca42b122278d2c583b65b904
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2acb3a117d7bd833c2367e1766a3adbd3d07fa91
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-updatable-subscription-to-transactional-publication"></a>트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -274,7 +274,7 @@ EXEC sp_addsubscription
 GO
 ```
 
-## <a name="see-also"></a>관련 항목: ##
+## <a name="see-also"></a>참고 항목 ##
 
 [트랜잭션 복제를 위한 업데이트 가능 구독](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
 

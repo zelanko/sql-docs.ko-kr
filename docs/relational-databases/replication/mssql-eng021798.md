@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: MSSQL_ENG021798 error
 ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8418f0364cd4dcb9aaf5639222536c55c18e1cf8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d86a467105329bf4d7504be6b765b46084242a20
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mssqleng021798"></a>MSSQL_ENG021798
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   저장 프로시저 **sp_addpublication**은 [sp_addqreader_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)가 실행되기 전에 실행됩니다. 이 조건은 지연 업데이트 구독에 대해 설정된( **@allow_queued_tran** 의 **sp_addpublication**매개 변수 값을 TRUE로 설정) 트랜잭션 게시에 적용됩니다.  
   
- 저장 프로시저 **sp_addlogreader_agent** 와 **sp_addqreader_agent** 는 각각 에이전트 작업을 만들고 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 지정할 수 있게 해줍니다. **sysadmin** 역할의 사용자인 경우 **sp_addlogreader_agent** 와 **sp_addqreader_agent** 가 실행되지 않으면 에이전트 작업이 암시적으로 생성됩니다. 에이전트는 배포자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 컨텍스트에서 실행됩니다. **sysadmin** 역할의 사용자에 **sp_addlogreader_agent** 와 **sp_addqreader_agent** 가 필요한 것은 아니지만 에이전트에 대해 별도의 계정을 지정하는 것이 보안을 위한 최선의 구현 방법입니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을(를) 참조하세요.  
+ 저장 프로시저 **sp_addlogreader_agent** 와 **sp_addqreader_agent** 는 각각 에이전트 작업을 만들고 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 지정할 수 있게 해줍니다. **sysadmin** 역할의 사용자인 경우 **sp_addlogreader_agent** 와 **sp_addqreader_agent** 가 실행되지 않으면 에이전트 작업이 암시적으로 생성됩니다. 에이전트는 배포자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 컨텍스트에서 실행됩니다. **sysadmin** 역할의 사용자에 **sp_addlogreader_agent** 와 **sp_addqreader_agent** 가 필요한 것은 아니지만 에이전트에 대해 별도의 계정을 지정하는 것이 보안을 위한 최선의 구현 방법입니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
 ## <a name="user-action"></a>사용자 동작  
  프로시저를 올바른 순서로 실행하십시오. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)을(를) 참조하세요. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가져온 복제 스크립트를 사용할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에 필요한 저장 프로시저와 매개 변수를 포함하도록 스크립트를 업데이트합니다. 자세한 내용은 [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)를 참조하세요.  

@@ -15,12 +15,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 701ae800a3f3d91429db8726359032f34c9991e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 23e5a84e7bff05edf16ff232fe18289abc33019e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Server Core 설치에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 수 있습니다.   
@@ -29,7 +29,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
  현재 지원되는 운영 체제 목록은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 |요구 사항|설치 방법|  
 |-----------------|--------------------|  
@@ -61,8 +61,8 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 |Distributed  Replay  Client|원격 전용|Server Core에는 이러한 기능을 설치할 수 없습니다. 이러한 구성 요소는 Server Core가 아닌 다른 서버에 설치되고, Server Core에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 연결됩니다.|  
 |SQL  클라이언트 연결 SDK|예||  
 |Microsoft  Sync  Framework|예|Microsoft Sync Framework는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 패키지에 포함되지 않습니다. [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=221788)(http://go.microsoft.com/fwlink/?LinkId=221788) 페이지에서 적절한 버전의 Sync Framework를 다운로드하여 Server Core를 실행하는 컴퓨터에 설치할 수 있습니다.|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|아니요||  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|아니요||  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|아니오||  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|아니오||  
   
 ## <a name="supported-scenarios"></a>지원되는 시나리오  
  다음 표에서는 Server Core에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치하는 데 지원되는 시나리오 매트릭스를 보여 줍니다.  
@@ -91,7 +91,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
 ### <a name="feature-parameters"></a>기능 매개 변수  
   
-|기능 매개 변수|설명|  
+|기능 매개 변수|Description|  
 |-----------------------|-----------------|  
 |SQLENGINE|[!INCLUDE[ssDE](../../includes/ssde-md.md)]만 설치합니다.|  
 |복제|[!INCLUDE[ssDE](../../includes/ssde-md.md)]과 함께 복제 구성 요소를 설치합니다.|  
@@ -104,7 +104,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 
  기능 매개 변수에 대한 다음과 같은 사용 예를 참조하십시오.  
   
-|매개 변수 및 값|설명|  
+|매개 변수 및 값|Description|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|[!INCLUDE[ssDE](../../includes/ssde-md.md)]만 설치합니다.|  
 |/FEATURES=SQLEngine,FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 전체 텍스트를 설치합니다.|  
@@ -328,7 +328,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 2.  **응용 프로그램** 탭에서 **새 작업**을 클릭합니다.  
 3.  **새 태스크 만들기** 대화 상자에서 **열기** 필드에 **cmd** 를 입력한 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [구성 파일을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [버전 및 SQL Server 2017의 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)   

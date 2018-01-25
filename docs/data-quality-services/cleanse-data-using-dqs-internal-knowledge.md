@@ -18,24 +18,24 @@ f1_keywords:
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75eb80e656e390cd6ad931e29b94776630214708
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e837002fb9060fa87bdd2588e8c72570687345
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 품질 프로젝트를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. 데이터 정리는 고품질 데이터 집합에 대해 DQS에 기본 제공된 기술 자료를 사용하여 원본 데이터에서 수행됩니다. 자세한 내용은 [기술 자료 구축](../data-quality-services/building-a-knowledge-base.md)을 참조하세요.  
   
  데이터 정리는 4단계로 수행됩니다. *매핑* 단계에서는 정리할 데이터 원본을 확인하여 기술 자료의 필수 도메인에 매핑하고, *컴퓨터 기반 정리* 단계에서는 DQS에서 정리할 데이터에 기술 자료를 적용하고 원본 데이터에 대한 변경 내용을 제안/적용하며, *대화형 정리* 단계에서는 데이터 관리자가 데이터 변경 내용을 분석한 후 데이터 변경을 허용/거부할 수 있고, 마지막 *내보내기* 단계에서는 정리된 데이터를 내보낼 수 있습니다. 이러한 각 프로세스는 정리 작업 마법사의 개별 페이지에서 수행되므로 여러 페이지를 앞뒤로 이동하고, 프로세스를 다시 실행하고, 특정 정리 프로세스를 닫은 후 프로세스의 같은 단계로 돌아갈 수 있습니다. DQS에서는 원본 데이터 및 정리 결과에 대한 통계를 제공하므로 정보를 바탕으로 데이터 정리에 대한 의사를 결정할 수 있습니다.  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   정리 작업에 대한 적절한 임계값을 지정해야 합니다. 이렇게 하는 방법은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  데이터 정리를 수행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
 ##  <a name="Create"></a> 정리 데이터 품질 프로젝트 만들기  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
  값은 신뢰도 수준에 따라 다음 5개의 탭에 표시됩니다.  
   
-|탭|설명|  
+|탭|Description|  
 |---------|-----------------|  
 |**제안**|DQS에서 신뢰도 수준이 *자동 제안 임계값* 보다 높고 *자동 수정 임계값* 보다 낮은 제안 값을 검색한 도메인 값을 표시합니다.<br /><br /> 제안 값은 원래 값에 대해 **다음으로 수정** 열에 표시됩니다. 상단 표의 값에 대해 **승인** 또는 **거부** 열에 있는 라디오 단추를 클릭하여 해당 값의 모든 인스턴스에 대해 제안을 허용하거나 거부할 수 있습니다. 이 경우 허용된 값은 **수정됨** 탭으로 이동하고, 거부된 값은 **잘못됨** 탭으로 이동합니다.|  
 |**새로 만들기**|DQS에 정보가 부족하여 다른 탭에 매핑할 수 없는 유효한 도메인을 표시합니다. 또한 이 탭에는 신뢰도 수준이 *자동 제안 임계값* 보다 낮지만 유효한 것으로 표시될 수 있는 값도 포함됩니다.<br /><br /> 값이 올바르다고 생각되면 **승인** 열의 라디오 단추를 클릭하고, 그렇지 않으면 **거부** 열의 라디오 단추를 클릭합니다. 허용된 값은 **올바름** 탭으로 이동하고, 거부된 값은 **잘못됨** 탭으로 이동합니다. 올바른 값을 **다음으로 수정** 열의 원래 값에 대한 대체 값으로 직접 입력한 다음 **승인** 열의 라디오 단추를 클릭하여 변경 내용을 적용할 수도 있습니다. 이 경우 값이 **수정됨** 탭으로 이동합니다.|  

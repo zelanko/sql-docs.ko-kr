@@ -16,27 +16,27 @@ f1_keywords:
 - sql13.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14df6bc5a9c41ff22dd5b3d2a4ad456b8c9e02e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 470523ae689891e12b119b03941ceb2f17f2d3ae
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 응용 프로그램 실행
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]을(를) 실행하고 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에 로그온합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  DQSInstaller.exe 파일을 실행하여 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 설치를 완료해야 합니다. 자세한 내용은 [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)를 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  DQS_MAIN 데이터베이스에 대해 세 가지 DQS 역할(dqs_adminstrator, dqs_kb_editor 또는 dqs_kb_operator) 중 하나가 있어야 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에 로그온할 수 있습니다.  
   
 ##  <a name="Run"></a> Data Quality 클라이언트 실행  

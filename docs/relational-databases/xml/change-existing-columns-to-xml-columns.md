@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1773816e8d536415d83a09afc0995f46ceb0b17a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ad32b6c56b01be8b31d6be358faf158248b3fa4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>기존 열을 XML 열로 변경
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] ALTER TABLE 문은 **xml** 데이터 형식을 지원합니다. 예를 들어 모든 문자열 유형 열을 **xml** 데이터 형식으로 변경할 수 있습니다. 이 경우 열에 포함된 문서는 올바른 형식이어야 합니다. 또한 열 유형을 문자열에서 형식화된 xml로 변경할 경우 지정된 XSD 스키마에 대해 열에 있는 문서의 유효성을 검사합니다.  
@@ -38,7 +38,7 @@ ALTER COLUMN Col2 xml
 GO  
 ```  
   
- `xml` 유형 열을 형식화되지 않은 XML에서 형식화된 XML로 변경할 수 있습니다. 예를 들어  
+ `xml` 유형 열을 형식화되지 않은 XML에서 형식화된 XML로 변경할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 xml)  

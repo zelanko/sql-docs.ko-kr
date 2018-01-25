@@ -16,13 +16,13 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 090fd11012ac76b5651170fa05b73ff08cf17dce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 59393ef73eb121fced9a2c7d0232c49d707d1efd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>테이블 반환 개체 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이러한 속성은 **쿼리 및 뷰 디자이너**에서 테이블 반환 개체를 선택하면 속성 창에 나타납니다. 테이블 반환 개체는 뷰, 동의어, 파생 테이블 또는 테이블 반환 함수일 수 있습니다. 다른 설명이 없는 한 이러한 속성은 **속성** 창에서 읽기 전용입니다.  

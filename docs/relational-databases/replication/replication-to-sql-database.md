@@ -16,17 +16,17 @@ helpviewer_keywords:
 - replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8733b33aa97e33daf1a7394d5e0df8fb2d97a6d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c06ca9a84504ca2ce9958e39e352a7ad93c9a56d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="replication-to-sql-database"></a>SQL 데이터베이스에 복제
+# <a name="replication-to-sql-database"></a>SQL Database에 복제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   <a name="includessnoversionincludesssnoversion-mdmd-replication-can-be-configured-to-includesssdsfullincludessssdsfull-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 구성될 수 있습니다.  
@@ -155,7 +155,7 @@ ms.lasthandoff: 11/17/2017
  구독자로 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 논리 서버 이름(예: **N'azuresqldbdns.database.windows.net'**) 및 대상 데이터베이스로 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 이름(예: **AdventureWorks**)을 사용하여 --   [밀어넣기 구독을 만듭니다](../../relational-databases/replication/create-a-push-subscription.md).  
  -  
  -## 참고 항목  
- - [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)   
+ - [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  - [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)   
  - [복제 유형](../../relational-databases/replication/types-of-replication.md)   
  - [모니터링&#40;복제&#41;](../../relational-databases/replication/monitor/monitoring-replication.md)   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cdc286f5ab945e2897e69dcfe7f1a98dec1c4b8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전부터는 **확장된 보호**가 지원됩니다. **인증에 대한 확장된 보호** 는 운영 체제에서 구현하는 네트워크 구성 요소의 기능입니다. **확장된 보호** 는 Windows 7 및 Windows Server 2008 R2에서 지원됩니다. **확장된 보호** 는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제의 경우에는 서비스 팩에 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장된 보호 **를 사용하여 연결하면**의 보안이 강화됩니다.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>데이터베이스 엔진에 대해 확장된 보호 사용  
  **확장된 보호**를 사용하려면 서버와 클라이언트 둘 다에 **확장된 보호**를 지원하는 운영 체제가 설치되어 있어야 하며, 이들 운영 체제에서 **확장된 보호** 를 사용하도록 설정해야 합니다. 운영 체제에 대해 **확장된 보호** 를 사용하도록 설정하는 방법에 대한 자세한 내용은 [인증에 대한 확장된 보호](http://support.microsoft.com/kb/968389)를 참조하십시오.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **** 버전부터는 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. 일부 이전 버전**에 대해서는 향후 업데이트에서** 확장된 보호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 제공될 예정입니다. 서버 컴퓨터에서 **확장된 보호** 를 사용하도록 설정한 후에는 다음 단계를 수행하여 **확장된 보호**를 사용하도록 설정합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **버전부터는** 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. 일부 이전 버전**에 대해서는 향후 업데이트에서** 확장된 보호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 제공될 예정입니다. 서버 컴퓨터에서 **확장된 보호** 를 사용하도록 설정한 후에는 다음 단계를 수행하여 **확장된 보호**를 사용하도록 설정합니다.  
   
 1.  **시작** 메뉴에서 **모든 프로그램**을 선택하고 **Microsoft SQL Server** 를 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   

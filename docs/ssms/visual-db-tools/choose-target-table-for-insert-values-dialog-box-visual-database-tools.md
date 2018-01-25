@@ -18,13 +18,13 @@ ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f73ebe1c3a1c0f1b37b02f7941c217d10780d88
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 69f5728462ca8df633618be59fbcf1eb6f4272ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>값 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 이 대화 상자에서 INSERT VALUES 쿼리로 업데이트할 테이블을 지정할 수 있습니다. 이 대화 상자는 **다이어그램** 창에 두 개 이상의 테이블이 표시되어 있는 상태에서 쿼리 형식을 INSERT VALUES 쿼리로 변경하는 경우에 나타납니다.  

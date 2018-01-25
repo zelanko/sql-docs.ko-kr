@@ -14,20 +14,20 @@ ms.topic: article
 helpviewer_keywords: Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 193efa564c134682bfe8bc8d95387efa6ab73767
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f40ebecdafe32b519908c65ce54468858f18df3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-resource-governor"></a>리소스 관리자 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 리소스 관리자는 기본적으로 해제되어 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자를 사용하도록 설정할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **Resource Governor를 사용하도록 설정하는 데 사용되는 도구:**  [개체 탐색기](#RGOnObjEx), [Resource Governor 속성](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  사용자 트랜잭션에 있을 때에는 **ALTER RESOURCE GOVERNOR** 문을 사용하여 리소스 관리자를 사용하도록 설정할 수 없습니다.  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="Permissions"></a> Permissions  
  리소스 관리자를 사용하도록 설정하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="RGOnObjEx"></a> 개체 탐색기를 사용하여 리소스 관리자를 사용하도록 설정  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  **ALTER RESOURCE GOVERNOR RECONFIGURE** 문을 실행합니다.  
   
-### <a name="example-transact-sql"></a>예(Transact-SQL)  
+### <a name="example-transact-sql"></a>예제(Transact-SQL)  
  다음 예에서는 리소스 관리자를 사용하도록 설정합니다.  
   
 ```  

@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1d9225d46e1331a4dfc62ef20fcd91a6e0f52ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 631b9668bbea31db5b38a0f20eef099f470815b3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="resource-governor"></a>리소스 관리자
+# <a name="resource-governor"></a>관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다.  
   
 ## <a name="benefits-of-resource-governor"></a>리소스 관리자의 이점  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
 |템플릿을 사용하여 리소스 관리자를 구성하는 방법에 대해 설명합니다.|[템플릿을 사용하여 리소스 관리자 구성](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
 |리소스 관리자의 속성을 보는 방법에 대해 설명합니다.|[리소스 관리자 속성 보기](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 인스턴스&#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

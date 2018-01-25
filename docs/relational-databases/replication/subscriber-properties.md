@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.configdistwizard.subscribers.f1
 helpviewer_keywords: Subscriber Properties dialog box
 ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d85bb0e9b2c756c6fa50bb6eeb1fd04c81878100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccced37e2c29aa47c2d5ce67d3adeebba6ec5c58
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscriber-properties"></a>구독자 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **구독자 속성** 대화 상자에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **에이전트에서 구독자 연결**  
  배포 에이전트 및 병합 에이전트가 배포자에서 구독자로 연결하는 컨텍스트로서, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이전 버전에만 적용됩니다.  
   

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96613902dd4167a7bbb8dd41454532129f3093ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8e499aec26a962e6d4e70afcdd81bf021b6e0ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, Memory Node
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **Memory Node** 개체는 NUMA 노드의 서버 메모리 사용량을 모니터링하는 카운터를 제공합니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="memory-node-counters"></a>Memory Node 카운터  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Node** 카운터에 대해 설명합니다.  
   
-|SQL Server Memory Manager 카운터|설명|  
+|SQL Server Memory Manager 카운터|Description|  
 |----------------------------------------|-----------------|  
 |**Database Node Memory(KB)**|서버가 현재 이 노드에서 데이터베이스 페이지에 사용 중인 메모리의 양을 지정합니다.|  
 |**Free Node Memory(KB)**|서버가 이 노드에서 사용하고 있지 않은 메모리의 양을 지정합니다.|  

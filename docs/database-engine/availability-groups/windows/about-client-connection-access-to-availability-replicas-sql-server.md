@@ -22,13 +22,13 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d945149c7bb6dc583f378c0d8823e2eff0e925b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Always On 가용성 그룹에서 보조 역할 즉, 보조 복제본으로 실행되는 동안 읽기 전용 연결을 허용하도록 하나 이상의 가용성 복제본을 구성할 수 있습니다. 주 역할 즉, 주 복제본으로 실행되는 동안 읽기 전용 연결을 허용하거나 제외하도록 각 가용성 복제본을 구성할 수도 있습니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
  읽기 전용 연결 허용  
  모든 보조 데이터베이스는 읽기 액세스 연결에 사용할 수 있습니다. 이 옵션을 선택하면 낮은 버전의 클라이언트가 연결할 수 있습니다.  
   
- 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)을 참조하세요.  
+ 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
 ##  <a name="ConnectAccessForPrimary"></a> 주 역할에서 지원되는 연결 액세스의 유형  
  주 역할은 클라이언트 연결에 대해 다음과 같은 두 가지 대체 방법을 지원합니다.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
   
 |복제본 역할|복제본에서 지원되는 연결 액세스|연결 의도|연결 시도 결과|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|보조|모두|읽기 전용, 읽기/쓰기 또는 연결 의도가 지정되지 않음|성공|  
+|보조|All|읽기 전용, 읽기/쓰기 또는 연결 의도가 지정되지 않음|성공|  
 |보조|없음(기본 보조 동작)|읽기 전용, 읽기/쓰기 또는 연결 의도가 지정되지 않음|실패|  
 |보조|읽기 전용만|읽기 전용|성공|  
 |보조|읽기 전용만|읽기/쓰기 또는 연결 의도가 지정되지 않음|실패|  
@@ -103,8 +103,8 @@ ms.lasthandoff: 11/20/2017
   
 |복제본|커밋 모드|초기 역할|보조 역할에 대한 연결 액세스|주 역할에 대한 연결 액세스|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|동기|주|없음|읽기/쓰기|  
-|Replica2|동기|보조|없음|읽기/쓰기|  
+|Replica1|동기|주|InclusionThresholdSetting|읽기/쓰기|  
+|Replica2|동기|보조|InclusionThresholdSetting|읽기/쓰기|  
 |Replica3|비동기|보조|읽기 전용만|읽기/쓰기|  
 |Replica4|비동기|보조|읽기 전용만|읽기/쓰기|  
   

@@ -16,13 +16,13 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 caps.latest.revision: "4"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d89996523ada4e50d2fd3c0950c1e4dc0668aef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86913554f86a9965906d37f8a7ff683570dfb8ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, 카탈로그 메타데이터 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLServer:Catalog Metadata** 성능 개체는 SQL Server용 카탈로그 메타데이터에 대한 카운터를 제공합니다.
@@ -39,5 +39,5 @@ ms.lasthandoff: 11/17/2017
 
 데이터베이스별로 카운터 인스턴스는 한 개입니다.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [리소스 사용 모니터링(시스템 모니터)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], article processing order
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cb9d8b566766e23bfb17bc93b53d9d222fa3895
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a4476f6aaa996dff5ed88258a2cb9430a62774cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>병합 아티클의 처리 순서 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 병합 게시에 대한 아티클의 기본 처리 순서를 덮어쓸 수 있게 되었습니다. 트리거를 통해 참조 무결성을 정의하고 이러한 트리거가 특정 순서로 발생해야 할 경우 이러한 작업이 유용할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  참조 무결성이 트리거를 통해서 또는 응용 프로그램 수준에서 유지 관리되는 경우 아티클이 처리되는 순서를 지정해야 합니다. 트리거가 있는 예제에서 아티클 순서는 삽입 순서에 따라 지정되므로 **SalesOrderDetail** 전에 **SalesOrderHeader**테이블이 처리되도록 지정합니다. 병합 복제는 삭제 순서를 자동으로 반대로 바꿉니다. 병합 에이전트는 제약 조건 위반이 발생해도 아티클을 계속 처리하고 다른 아티클이 처리된 후 실패한 작업을 모두 다시 시도하므로 병합 복제는 아티클 순서를 지정하지 않아도 실패하지 않습니다. 아티클 순서를 지정하면 다시 시도 및 다시 시도와 연결된 추가 처리 작업이 실행되지 않도록 할 수 있습니다. 헤더 레코드 전에 정보 레코드가 처리되도록 하는 등 순서를 잘못 지정하면 병합 복제는 성공할 때까지 처리를 다시 시도합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [병합 복제를 위한 아티클 옵션](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)  

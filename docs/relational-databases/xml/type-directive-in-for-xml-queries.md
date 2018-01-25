@@ -16,15 +16,15 @@ helpviewer_keywords:
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e30226fae64fab358a113ba82abefca113b2a2ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7ade0766fd94e302d6df6204d64acd94b98522ed
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)을 지원하므로 필요에 따라 TYPE 지시어를 지정하여 FOR XML 쿼리 결과가 **xml** 데이터 형식으로 반환되도록 요청할 수 있습니다. 그러면 서버에서 FOR XML 쿼리 결과를 처리할 수 있습니다. 예를 들어 이 결과에 대해 XQuery 쿼리를 지정하거나 **xml** 유형 변수에 결과를 할당하거나 [중첩 FOR XML 쿼리](../../relational-databases/xml/use-nested-for-xml-queries.md)를 쓸 수 있습니다.  

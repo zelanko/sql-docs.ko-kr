@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Analysis Services 템플릿 사용
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 다양 한 XMLA 스크립트를 신속 하 게 만들 수 있도록 템플릿 제공 DMX 또는 MDX 쿼리 Kpi에서 큐브 또는 테이블 형식 모델, 스크립트 백업 및 복원 작업을 만들고 다양 한 작업을 수행 합니다. 템플릿은 **의** 템플릿 탐색기 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 XMLA 스크립트, DMX 또는 MDX 쿼리를 빠르게 만들고, 큐브 또는 테이블 형식 모델에 KPI를 만들고, 백업 및 복원 작업을 스크립팅하고, 기타 여러 태스크를 수행하는 데 사용할 수 있는 다양한 템플릿을 제공합니다. 템플릿은 **의** 템플릿 탐색기 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에 있습니다.  
   
  이 항목에서는 다차원 모델 및 테이블 형식 모델에 사용할 수 있는 템플릿에 대해 설명하고 메타데이터 탐색기와 템플릿 탐색기를 사용하여 MDX 쿼리와 XMLA 문을 작성하는 방법을 보여 주는 예를 제공합니다.  
   
@@ -214,25 +216,25 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Management|백업|XMLA **백업** 명령을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 파일에 백업하는 방법을 보여 줍니다.|  
 ||취소|XMLA **Cancel** 명령을 사용하여 현재 세션(관리자 또는 서버 관리자 이외의 사용자인 경우), 데이터베이스(관리자인 경우) 또는 인스턴스(서버 관리자인 경우)에서 실행 중인 작업을 모두 취소하는 방법을 보여 줍니다.|  
 ||Create Remote Partition Database|ASSL( **Scripting Language) 데이터베이스 요소와 함께 XMLA** Create [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명령을 사용하여 원격 파티션 저장을 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 및 데이터 원본을 만드는 방법을 보여 줍니다.|  
-||DELETE|XMLA **Delete** 명령을 사용하여 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 삭제하는 방법을 보여 줍니다.|  
+||Delete|XMLA **Delete** 명령을 사용하여 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 삭제하는 방법을 보여 줍니다.|  
 ||Process Dimension|XMLA **Batch** 명령을 **Parallel** 요소 및 **Process** 명령과 결합하고 병렬 일괄 처리 작업을 사용하여 차원 특성을 업데이트하는 방법을 보여 줍니다.|  
 ||Process Partition|XMLA **Batch** 명령을 **Parallel** 요소 및 **Process** 명령과 결합하고 병렬 일괄 처리 작업을 사용하여 파티션을 완전히 처리하는 방법을 보여 줍니다.|  
 ||복원|XMLA **복원** 명령을 사용하여 기존 백업 파일에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 복원하는 방법을 보여 줍니다.|  
 ||동기화|XMLA **동기화** 명령을 사용하여 SynchronizeSecurity 태그에 대한 SkipMembership 옵션으로 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 현재 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the 동기화Security tag.|  
 |XMLA\Schema Rowsets|스키마 행 집합 검색|XMLA **Discover** 메서드를 사용하여 DISCOVER_SCHEMA_ROWSETS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-|XMLA\Server Status|Connections|XMLA **Discover** 메서드를 사용하여 DISCOVER_CONNECTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-||에서|XMLA **Discover** 메서드를 사용하여 DISCOVER_JOBS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+|XMLA\Server Status|연결|XMLA **Discover** 메서드를 사용하여 DISCOVER_CONNECTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+||작업|XMLA **Discover** 메서드를 사용하여 DISCOVER_JOBS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||위치|XMLA **Discover** 메서드를 사용하여 위치 백업 파일의 경로를 지정하며 DISCOVER_LOCATIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||잠금|XMLA **Discover** 메서드를 사용하여 DISCOVER_LOCKS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||Memory Grant|XMLA **Discover** 메서드를 사용하여 DISCOVER_MEMORYGRANT 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||성능 카운터|XMLA **Discover** 메서드를 사용하여 DISCOVER_PERFORMANCE_COUNTERS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||세션|XMLA **Discover** 메서드를 사용하여 DISCOVER_SESSIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||Traces|XMLA **Discover** 메서드를 사용하여 DISCOVER_TRACES 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-||의|XMLA **Discover** 메서드를 사용하여 DISCOVER_TRANSACTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+||트랜잭션|XMLA **Discover** 메서드를 사용하여 DISCOVER_TRANSACTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [MDX&#40;Multidimensional Expression&#41; 참조](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40; DMX &#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [스크립팅 언어 &#40; analysis Services ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

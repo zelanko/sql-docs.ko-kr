@@ -21,13 +21,13 @@ ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 caps.latest.revision: "24"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 379cbd80abd05c738d72795e1313590533af3dd8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc5b70782957f25613b7f1cad25816cfe0df6eea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>암호화된 미러 데이터베이스 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 미러 데이터베이스의 데이터베이스 마스터 키에 대한 자동 암호 해독을 사용하려면 마스터 키를 암호화하는 데 사용한 암호를 미러 서버 인스턴스에 제공해야 합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이후 버전에는 암호를 전송하는 메커니즘이 포함됩니다. 데이터베이스 미러링을 시작하기 전에 **sp_control_dbmasterkey_password** 를 사용하여 데이터베이스 마스터 키에 대한 자격 증명을 만드세요. 미러되는 모든 데이터베이스에 대해 이 프로세스를 반복해야 합니다. 자세한 내용은 [sp_control_dbmasterkey_password&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)를 참조하세요.  

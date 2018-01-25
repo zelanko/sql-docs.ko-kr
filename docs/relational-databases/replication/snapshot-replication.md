@@ -16,15 +16,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d2ce2c53b4aee32b5d280b81d6672f9b5c679798
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b5bf729ba6d120a21bfcdbccf1095aab57153f65
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshot-replication"></a>스냅숏 복제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 스냅숏 복제는 특정 시간에 나타나는 그대로 데이터를 배포하고 데이터 업데이트를 모니터링하지 않습니다. 동기화가 일어나면 전체 스냅숏이 생성되어 구독자에게 전송됩니다.  

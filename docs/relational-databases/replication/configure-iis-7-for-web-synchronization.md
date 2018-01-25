@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd94ea47cdc9d65e2461bd9b2c1f12deacb67d38
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8aab51f8530cfe6ea27315314db996e94734e884
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ ms.lasthandoff: 11/17/2017
 4.  **localhost에 연결**메시지가 표시되면 사용자 이름 및 암호를 입력하여 계속합니다. 웹 사이트에 대한 기본 페이지가 나타납니다.  
   
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>SQL Server 복제 수신기에 대한 사용 권한 설정  
- 구독자 컴퓨터가 IIS를 실행하는 컴퓨터에 연결되면 IIS 구성 시 지정한 인증 유형을 사용하여 해당 구독자가 인증됩니다. IIS에서는 구독자를 인증한 다음 해당 구독자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 권한을 가지고 있는지 여부를 확인합니다. replisapi.dll에 대한 권한을 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 사용자를 제어합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 무단으로 액세스하지 못하도록 하려면 사용 권한을 적절하게 구성해야 합니다.  
+ 구독자 컴퓨터가 IIS를 실행하는 컴퓨터에 연결되면 IIS 구성 시 지정한 인증 유형을 사용하여 해당 구독자가 인증됩니다. IIS에서는 구독자를 인증한 다음 해당 구독자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 권한을 가지고 있는지 여부를 확인합니다. replisapi.dll에 대한 권한을 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 사용자를 제어합니다. Properly configuring permissions is necessary to prevent unauthorized access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 무단으로 액세스하지 못하도록 하려면 사용 권한을 적절하게 구성해야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기를 실행할 계정에 대해 최소 사용 권한을 구성하려면 다음 절차를 완료합니다. 다음 절차의 단계는 IIS 7.0을 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008에 해당됩니다.  
   
@@ -325,7 +325,7 @@ ms.lasthandoff: 11/17/2017
   
     2.  진단 모드에서 서버에 연결합니다. 인증서가 제대로 설치된 경우 **보안 경고** 대화 상자가 나타나지 않습니다. 이 대화 상자가 나타나면 병합 에이전트가 IIS를 실행하는 컴퓨터에 연결할 수 없습니다. 액세스하는 서버에 대한 인증서가 구독자의 인증서 저장소에 신뢰할 수 있는 인증서로 추가되었는지 확인합니다. 인증서를 내보내는 방법은 IIS 설명서를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [병합 복제에 대한 웹 동기화](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
  [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)  
   

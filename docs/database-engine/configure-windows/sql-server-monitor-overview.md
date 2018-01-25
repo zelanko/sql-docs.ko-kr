@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.sqlservermonitor.main.f1
 helpviewer_keywords: SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c14f4123656819308d0dd8e6b197e880f5dc9f37
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7799381dbbcaf57dd0d02d01bc4c27a5c21f624c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 모니터 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 모니터는 모니터링 기능을 수행하지 않지만 이 기능을 수행하는 모듈을 호스팅합니다. SQL Server 모니터 모듈에는 복제 모니터와 데이터베이스 미러링 모니터가 있습니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  SQL Server 모니터와 관련된 메뉴 옵션은 다음과 같습니다.  
   
- **파일**  
+ **최근에 사용한 파일**  
  이 메뉴는 **종료** 명령을 포함합니다.  
   
  **동작**  

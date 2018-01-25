@@ -19,13 +19,13 @@ ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b1e89b785a2f490d15594f7ecc786b40b6c9dec
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5412ede653f8bd6eb67091dd4ebc532b1d7f1b19
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>쿼리 변경 내용 취소(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 정의에 대한 변경 내용을 저장하기 전에 취소할 수 있습니다. 이러한 변경 내용을 저장한 후에는 이전 상태로 되돌릴 수 없습니다.  

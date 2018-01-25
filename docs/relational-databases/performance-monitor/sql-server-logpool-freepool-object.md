@@ -16,13 +16,13 @@ ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 542de5f2333faef289beaddc62c8d86ced05eb93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c75bad21742f0fdfef13685094623d309bda5b42
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, LogPool FreePool 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLServer:LogPool FreePool** 성능 개체는 로그 풀 내 사용 가능한 풀에 대한 통계 카운터를 제공합니다.
@@ -36,6 +36,6 @@ ms.lasthandoff: 11/17/2017
 
 로그 풀 범주별로 카운터 인스턴스는 한 개입니다.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [리소스 사용 모니터링(시스템 모니터)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
 

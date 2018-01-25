@@ -24,13 +24,13 @@ ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4321216ddefa8ac3a3e6335a2432244f342c12da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 014784893728eb72edd754e270330e287fa8d364
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mirroring-states-sql-server"></a>미러링 상태(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 미러링 세션 동안 미러된 데이터베이스는 항상 특정 상태(*미러링 상태*)가 됩니다. 이러한 데이터베이스의 상태는 통신 상태, 데이터 흐름 및 파트너 간의 데이터 차이를 반영합니다. 데이터베이스 미러링 세션은 주 데이터베이스와 같은 상태가 됩니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
  가능한 데이터베이스 미러링 상태는 다음과 같습니다.  
   
-|미러링 상태|설명|  
+|미러링 상태|Description|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|미러 데이터베이스의 내용이 주 데이터베이스의 내용보다 오래된 것입니다. 주 서버에서 로그 레코드를 미러 서버로 보내면 미러 서버에서 변경 내용을 미러 데이터베이스에 적용하여 롤포워드합니다.<br /><br /> 데이터베이스 미러링 세션의 시작 부분에서는 데이터베이스가 SYNCHRONIZING 상태입니다. 주 서버에서 데이터베이스를 제공하고 미러 서버는 계속 동기화를 시도합니다.|  
 |SYNCHRONIZED|미러 서버가 주 서버와 충분히 동기화되면 미러링 상태가 SYNCHRONIZED로 변경됩니다. 주 서버에서 계속 변경 내용을 미러 서버로 보내고 미러 서버에서 계속 변경 내용을 미러 데이터베이스에 적용하면 데이터베이스는 이 상태로 유지됩니다.<br /><br /> 트랜잭션 보안을 FULL로 설정하면 SYNCHRONIZED 상태에서 자동 장애 조치(Failover)와 수동 장애 조치가 모두 지원되며 장애 조치 후 데이터가 손실되지 않습니다.<br /><br /> 트랜잭션 보안을 해제하면 SYNCHRONIZED 상태에서도 항상 일부 데이터가 손실될 수 있습니다.|  

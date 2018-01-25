@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55f89b361e4c210c252a0fc629f7b5664390c056
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fef7b422366598e1974a07e4ee36e0100157dfa2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인의 용어 기반 관계를 만드는 방법에 대해 설명합니다. TBR(용어 기반 관계)을 사용하면 도메인 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 용어 "Inc."를 "Incorporated"로 변경하는 용어 기반 관계를 설정할 수 있습니다. 용어 "Inc."는 도메인에서 발생할 때마다 변경됩니다. "Contoso, Inc."의 인스턴스는 "Contoso, Incorporated"로 변경되고 두 값은 정확한 동의어로 간주됩니다.  
@@ -57,12 +57,12 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  용어 기반 관계를 만들려면 도메인 관리 작업에서 도메인을 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  용어 기반 관계를 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Create"></a> 용어 기반 관계 만들기  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
     6.  **찾기** 입력란에 하나 이상의 자릿수를 입력하여 관계 테이블의 값을 찾습니다. 문자열의 일치 항목이 강조 표시됩니다. 위쪽, 아래쪽 화살표를 사용하여 테이블의 여러 문자열 인스턴스로 이동할 수 있습니다.  
   
-    7.  **맞춤법 검사기**: **값** 또는 **다음으로 수정** 열 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 있는 값을 마우스 오른쪽 단추로 클릭한 후 맞춤법 검사기에서 제안하는 값 중 하나를 선택합니다. 또는 바로 가기 메뉴에서 **추가** 를 클릭하여 원래 값으로 진행할 수도 있습니다. 자세한 내용은 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 및 [Set Domain Properties](../data-quality-services/set-domain-properties.md)를 참조하세요.  
+    7.  **맞춤법 검사기**: **값** 또는 **다음으로 수정** 열 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 있는 값을 마우스 오른쪽 단추로 클릭한 후 맞춤법 검사기에서 제안하는 값 중 하나를 선택합니다. 또는 바로 가기 메뉴에서 **추가** 를 클릭하여 원래 값으로 진행할 수도 있습니다. 자세한 내용은 [DQS 맞춤법 검사기 사용](../data-quality-services/use-the-dqs-speller.md) 및 [도메인 속성 설정](../data-quality-services/set-domain-properties.md)를 참조하세요.  
   
         > [!NOTE]  
         >  맞춤법 검사기를 사용하려면 **도메인 속성** 페이지에서 맞춤법 검사기를 설정하면 됩니다. **도메인 속성** 페이지에서 맞춤법 검사기가 해제된 경우 **용어 기반 관계** 페이지에서 **맞춤법 검사기를 설정/해제합니다** 아이콘을 클릭하여 설정할 수 있습니다.  

@@ -16,13 +16,13 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da5a68bfb9a0a984c7d43b1f2c3c1de01b83c7af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 389caca69e621c979c53e45d4289d72fe17fb3ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-wmi-event-alert"></a>WMI 이벤트 경고 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql_md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]의 서버 이벤트에 대해 WMI 공급자가 모니터링하는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이벤트가 발생할 때 발생하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 경고에 대해 설명합니다.  
